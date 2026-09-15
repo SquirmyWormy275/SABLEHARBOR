@@ -45,13 +45,32 @@ def verify_original(path, expected_sha, expected_bytes, prepared, read):
     """Independently reconstruct ordered store bytes, including zero-byte originals."""
     import json
 
+    record = "DOC-" + sha(path.encode())[:40]
+    if not prepared or not isinstance(prepared[0], dict):
+        raise EditionError("Missing transport original identity")
     first = prepared[0]
+    if first.get("record") != record or first.get("kind") not in {
+        "EXACT_ORIGINAL",
+        "TRANSPORT_MANIFEST",
+    }:
+        raise EditionError("Transport record identity or kind differs from original path")
     if first["kind"] == "EXACT_ORIGINAL":
         content = read(first["record"])
-        if len(prepared) != 1 or len(content) != expected_bytes or sha(content) != expected_sha:
+        if (
+            len(prepared) != 1
+            or not 0 < len(content) <= MAX_BYTES
+            or len(content) != expected_bytes
+            or sha(content) != expected_sha
+        ):
             raise EditionError("Original readback changed")
         return
-    manifest = json.loads(read(first["record"]))
+    for index, part in enumerate(prepared[1:], 1):
+        if part.get("kind") != "BYTE_PART" or part.get("record") != f"{record}-P{index:06d}":
+            raise EditionError("Transport part identity or kind differs from original path")
+    marker = read(first["record"])
+    if not 0 < len(marker) <= MAX_BYTES:
+        raise EditionError("Transport manifest violates store byte bound")
+    manifest = json.loads(marker)
     if (
         manifest.get("transport_format") != "SH-EXACT-BYTE-PARTS-1"
         or manifest.get("source_path") != path
@@ -67,7 +86,11 @@ def verify_original(path, expected_sha, expected_bytes, prepared, read):
     digest, size = hashlib.sha256(), 0
     for part in manifest["parts"]:
         content = read(part["record"])
-        if len(content) != part["bytes"] or sha(content) != part["sha256"]:
+        if (
+            not 0 < len(content) <= MAX_BYTES
+            or len(content) != part["bytes"]
+            or sha(content) != part["sha256"]
+        ):
             raise EditionError("Transport part changed")
         digest.update(content)
         size += len(content)

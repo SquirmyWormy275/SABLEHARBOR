@@ -42,3 +42,37 @@ def test_transport_rejects_population_and_identity_changes(fault):
 def test_adapter_cannot_raise_pinned_store_limit():
     with pytest.raises(EditionError):
         prepare("public/source.bin", b"bytes", limit=MAX_BYTES + 1)
+
+
+def test_exact_original_is_bound_to_original_path_not_only_matching_bytes():
+    content = b"identical source bytes"
+    parts = prepare("first/source.txt", content)
+    stored = {p["record"]: p["content"] for p in parts}
+    with pytest.raises(EditionError, match="identity"):
+        verify_original(
+            "different/source.txt", sha(content), len(content), parts, stored.__getitem__
+        )
+
+
+@pytest.mark.parametrize(
+    "fault", ["missing_all", "unknown_first_kind", "wrong_part_kind", "foreign_record_namespace"]
+)
+def test_transport_record_identity_and_kinds_are_not_reinterpreted(fault):
+    content = b"0123456789abc"
+    parts = prepare("public/source.bin", content, limit=10)
+    stored = {p["record"]: p["content"] for p in parts}
+    if fault == "missing_all":
+        parts = []
+    elif fault == "unknown_first_kind":
+        parts[0]["kind"] = "BUSINESS_EVENT"
+    elif fault == "wrong_part_kind":
+        parts[1]["kind"] = "EXACT_ORIGINAL"
+    else:
+        manifest = json.loads(stored[parts[0]["record"]])
+        original = parts[1]["record"]
+        parts[1]["record"] = "OTHER-DOCUMENT-P000001"
+        manifest["parts"][0]["record"] = parts[1]["record"]
+        stored[parts[1]["record"]] = stored[original]
+        stored[parts[0]["record"]] = encoded(manifest)
+    with pytest.raises(EditionError):
+        verify_original("public/source.bin", sha(content), len(content), parts, stored.__getitem__)
