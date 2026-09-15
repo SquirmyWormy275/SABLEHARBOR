@@ -8,7 +8,7 @@ PYTHONPATH=. .venv/bin/python -m tools.audit_suite.generate_company_activity inc
   --destination /private/new-incident-run
 ```
 
-The maintained runner currently accepts `mover`, `identity-period`, `incident`, `backup`, `training`, `change`, `configuration`, `security-logging`, `provider-intake`, `identity-lifecycle` and `nonhuman-identity`.
+The maintained runner currently accepts `mover`, `identity-period`, `incident`, `backup`, `training`, `change`, `configuration`, `security-logging`, `provider-intake`, `identity-lifecycle`, `nonhuman-identity` and `risk-assessment`.
 Recipe fields follow `TransferRecipe`, `PeriodRecipe`, `IncidentRecipe`, `BackupRecipe`, `TrainingRecipe`, `ChangeRecipe`, `ConfigurationRecipe`, `LoggingRecipe` and `ProviderIntakeRecipe` in the
 corresponding company activity modules. For an identity period, `movers` is a JSON
 array of transfer recipes. Training uses arrays of `TrainingMember` objects in
@@ -51,6 +51,19 @@ an authorization denial; later correction retains the failure and successful new
 copy. The copied dataset's historical payload stays unchanged, with new copy-event
 time and identity in outer provenance. No original human principal becomes a service
 account. This selected-reference activity is also excluded from the V1 multi-job plan.
+
+Risk assessment requires `--source-roots /private/source-roots.json`, an explicit
+private JSON map from `incident`, `provider`, `log` and `change` to four distinct
+absolute company-store paths. It cannot be combined with `--source-root`.
+`RiskAssessmentRecipe` declares `source_groups`, each with exact native reference
+arrays and its selected metadata digest, two `scenarios`, branch IDs and a bounded
+quarter. The generator validates relationships among the nine originals, retains
+their exact bytes and recomputes an assessment omission and later backfill. Recorded
+observations, hypothetical risks and proposed treatments remain distinct. The
+manifest records each selected group's store label, root and metadata digest.
+The V1 multi-job plan does not support this multi-store dependency contract; use
+the explicit standalone command. See
+[the risk source contract](../../enterprise/audit_suite/RISK_ASSESSMENT_ACTIVITY.md).
 
 Provider intake pins the original canonical runtime-site JSON through
 `source_sites_sha256` and requires explicit start, review-due and backfill dates.

@@ -1,8 +1,8 @@
 # Private ordered company activity plans
 
 V1 supports the nine activity kinds documented below. The single-activity operator's
-`identity-lifecycle` and `nonhuman-identity` kinds require selected original references
-and are explicitly excluded from this change-store dependency format.
+`identity-lifecycle`, `nonhuman-identity` and `risk-assessment` kinds require selected
+original references and are explicitly excluded from this change-store dependency format.
 
 `run_company_activity_plan` runs an explicitly authored list of native company operations through the maintained single-activity operator. It creates no engagement, source grant, collection, model invocation, hosted service or world. Generated branches remain independent fictional records; ordering jobs does not establish a coherent operating year or canon approval.
 

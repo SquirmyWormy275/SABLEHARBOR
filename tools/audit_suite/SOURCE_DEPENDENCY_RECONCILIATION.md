@@ -39,3 +39,12 @@ mean the company has no such evidence. A narrow declared population remains narr
 even when all selected quarterly roles are present. Company-year coherence remains
 `NOT_ESTABLISHED`; population acceptance, sampling, testing and effectiveness are
 separate work. Original company records and formal audit history are preserved.
+
+An optional `iam_review_contracts` array checks exact quarterly membership hashes,
+decision-to-member references, selected application rights and listed HR originals.
+All supporting references share the existing 64-source budget; omitted support is
+reported without searching for substitutes. Recorded removal decisions remain
+separate from execution, which this report does not verify. See the
+[native review contract](../../docs/internal/development/audit-suite/AQ_IAM_NATIVE_REVIEW_RECONCILIATION_2026-09-14.md)
+for fields, cutoff semantics and validation evidence. Omitting this optional array
+preserves the previous report shape.

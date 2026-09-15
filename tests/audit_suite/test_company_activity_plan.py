@@ -14,7 +14,7 @@ from tests.audit_suite.test_company_change_activity import recipe as change_reci
 ROOT = Path(__file__).resolve().parents[2]
 
 
-@pytest.mark.parametrize("kind", ["identity-lifecycle", "nonhuman-identity"])
+@pytest.mark.parametrize("kind", ["identity-lifecycle", "nonhuman-identity", "risk-assessment"])
 def test_v1_plan_rejects_selected_identity_dependency_before_creating_output(tmp_path, kind):
     value = {
         "format": runner.FORMAT,

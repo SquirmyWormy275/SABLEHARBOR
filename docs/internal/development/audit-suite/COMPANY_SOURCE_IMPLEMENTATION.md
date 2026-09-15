@@ -157,3 +157,51 @@ Source and Key panels now retain their visited state across ordinary navigation 
 The reviewed non-human/dependency/operator/plan integration passed 97 cases without failures, errors or skips (`integrated-nonhuman-dependency-reviewed-2026-09-14.xml`). Earlier 84-case and 22-case receipts remain separate historical checkpoints. Broader full-period operations, procedure execution and professional/owner acceptance remain open.
 
 The subsequent maintained inventory `source-readiness-maintained-2026-09-14/run-v5-nonhuman/` adds the separately collected service-b branch. It verifies 549 native versions and exact retained originals: 367 documentary and 182 qualified activity versions, with explicit activity references for 25 of 70 controls. Twelve components and three audit snapshots remain independent; copy-output versions are not additional business identities. There are zero unmatched retained originals or unmapped source versions. Previous inventories and reference-v4's own collection remain unchanged.
+
+The isolated repository checkpoint at `f3b4da4` passed 1,051 tests with three skips
+and no failures or errors (1,054 cases, 644.011 seconds). Its private XML receipt is
+`overnight-company-source-2026-09-13/repository-f3b4da4-isolated-2026-09-14.xml`.
+Later changes have separate focused validation; this checkpoint is not a claim
+that every subsequent working-tree revision received a repository-wide run.
+
+The [native IAM review reconciliation](AQ_IAM_NATIVE_REVIEW_RECONCILIATION_2026-09-14.md)
+adds optional exact member, decision, application and HR checks to the existing
+read-only report. Current `reference-v4/dependency-period-v6/` selects 34 originals;
+all four membership hashes and eight population-reference hashes match. Missing-person
+sets are recomputed from explicitly listed support. Event time remains separate
+from availability, and recorded removal decisions do not establish removal execution.
+This remains the declared two-person inventory, without enterprise completeness,
+population acceptance or procedure credit.
+
+The [risk assessment exercise](../../../../enterprise/audit_suite/RISK_ASSESSMENT_ACTIVITY.md)
+consumes nine exact incident, provider, logging and change originals. A configured
+input omission produces an actual assessment discrepancy and later backfill while
+preserving the earlier records. Its aligned private v2 retains 20 originals across
+two branches, with all originals collected through separate engagements and temporary
+grants subsequently revoked. The input ledger distinguishes unknown incident cause,
+nonoperating providers, corrected historical change events, hypothetical future risks
+and proposed treatments. Only SH-ERM-001 activity is represented; no risk acceptance,
+implemented treatment or coherent operating year is inferred. The standalone runner
+accepts an explicit private four-root map; the V1 plan retains its narrower supported
+dependency contract.
+
+The combined risk/IAM/readonly-operator/plan validation passed 125 tests,
+without failures, errors or skips (`integrated-risk-iam-review-2026-09-14.xml`).
+The actual trusted CLI also ran the 34-source IAM plan into a new
+`reference-v4/dependency-period-cli-v6/` report, retaining exact plan/report pins
+and unchanged audit database bytes. Its receipt is `DEPENDENCY_CLI_V6_RECEIPT.json`.
+
+The maintained `source-readiness-maintained-2026-09-14/run-v6-risk/` inventory verifies
+559 originals and retained copies across thirteen components and four independent
+audit snapshots: 367 documentary and 192 qualified activity versions, with activity
+references for 26 of 70 controls. All retained originals match; no source is unmapped.
+An independent read-only verifier checked all selected native and retained bytes and
+preserved the preceding inventory. Its private review receipt records a postpublication
+wrapper return-shape error separately from the successfully verified output. These
+counts do not merge component histories or establish a coherent operating year.
+
+Independent operator review corrected normalized single-source output containment:
+paths containing `..` now fail before recipe reads or staging inside an original
+source directory. Five regressions preserve source bytes and directory timestamps;
+all 72 focused operator, plan and risk checks passed after the fix. Multi-root
+containment already rejected this case.

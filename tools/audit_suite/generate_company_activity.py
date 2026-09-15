@@ -32,6 +32,15 @@ from enterprise.audit_suite.company_provider_intake_activity import ProviderInta
 from enterprise.audit_suite.company_provider_intake_activity import (
     generate_pair as generate_provider_pair,
 )
+from enterprise.audit_suite.company_risk_assessment_activity import (
+    RiskAssessmentRecipe,
+    RiskScenario,
+    RiskSourceGroup,
+    RiskSourceRef,
+)
+from enterprise.audit_suite.company_risk_assessment_activity import (
+    generate_pair as generate_risk_pair,
+)
 from enterprise.audit_suite.company_security_logging_activity import LoggingRecipe
 from enterprise.audit_suite.company_security_logging_activity import (
     generate_pair as generate_logging_pair,
@@ -45,6 +54,7 @@ from enterprise.audit_suite.company_training_activity import (
 from enterprise.audit_suite.company_training_activity import (
     generate_pair as generate_training_pair,
 )
+from enterprise.audit_suite.inference import _json
 from enterprise.audit_suite.private_publication import publish
 
 KINDS = {
@@ -59,8 +69,10 @@ KINDS = {
     "provider-intake": (ProviderIntakeRecipe, generate_provider_pair),
     "identity-lifecycle": (LifecycleRecipe, generate_lifecycle_pair),
     "nonhuman-identity": (NonhumanIdentityRecipe, generate_nonhuman_pair),
+    "risk-assessment": (RiskAssessmentRecipe, generate_risk_pair),
 }
 SOURCE_KINDS = {"configuration", "security-logging", "identity-lifecycle", "nonhuman-identity"}
+MULTI_SOURCE_KINDS = {"risk-assessment"}
 MAX_RECIPE_BYTES = 64 * 1024
 
 
@@ -82,7 +94,51 @@ def _write(path, content):
         stream.write(content)
 
 
-def run(kind, recipe_path, destination, *, repository, source_root=None):
+def _private_bytes(path):
+    _private(path)
+    if path.stat().st_size > MAX_RECIPE_BYTES:
+        raise CompanyStoreError("Activity recipe exceeds bounded size")
+    fd = os.open(path, os.O_RDONLY | os.O_NOFOLLOW)
+    with os.fdopen(fd, "rb") as stream:
+        info = os.fstat(stream.fileno())
+        if not stat.S_ISREG(info.st_mode) or info.st_mode & 0o077 or info.st_nlink != 1:
+            raise CompanyStoreError("Private regular recipe required")
+        raw = stream.read(MAX_RECIPE_BYTES + 1)
+        final = os.fstat(stream.fileno())
+    _private(path)
+    current = path.stat()
+    if any(
+        getattr(info, key) != getattr(other, key)
+        for other in (final, current)
+        for key in ("st_dev", "st_ino", "st_ctime_ns", "st_size")
+    ):
+        raise CompanyStoreError("Private activity input changed during read")
+    if len(raw) > MAX_RECIPE_BYTES:
+        raise CompanyStoreError("Activity recipe exceeds bounded size")
+    return raw
+
+
+def load_source_roots(path):
+    try:
+        value = _json(_private_bytes(Path(path).absolute()))
+        if (
+            not isinstance(value, dict)
+            or not 1 <= len(value) <= 8
+            or any(
+                not isinstance(k, str)
+                or not k
+                or not isinstance(v, str)
+                or not Path(v).is_absolute()
+                for k, v in value.items()
+            )
+        ):
+            raise ValueError("Explicit bounded source-root map required")
+        return {key: Path(value) for key, value in value.items()}
+    except (TypeError, ValueError) as error:
+        raise CompanyStoreError("Invalid explicit source-root map") from error
+
+
+def run(kind, recipe_path, destination, *, repository, source_root=None, source_roots=None):
     recipe_path, destination = Path(recipe_path).absolute(), Path(destination).absolute()
     if kind not in KINDS:
         raise CompanyStoreError("Unknown company activity kind")
@@ -90,40 +146,34 @@ def run(kind, recipe_path, destination, *, repository, source_root=None):
     _private(destination.parent, True)
     if destination.exists() or destination.is_symlink():
         raise CompanyStoreError("New private activity destination required")
+    if source_root is not None and source_roots is not None:
+        raise CompanyStoreError("Choose one explicit source-root contract")
+    if kind in MULTI_SOURCE_KINDS:
+        if not isinstance(source_roots, dict) or not 1 <= len(source_roots) <= 8:
+            raise CompanyStoreError("This activity requires an explicit source-root map")
+        source_roots = {key: Path(value).absolute() for key, value in source_roots.items()}
+        for root in source_roots.values():
+            _private(root, True)
+            _private(root / "company.sqlite3")
+            if destination.resolve().is_relative_to(root.resolve()):
+                raise CompanyStoreError(
+                    "Activity output must be outside every original source root"
+                )
+    elif source_roots is not None:
+        raise CompanyStoreError("Source-root map is supported only for multi-source activity")
     if kind in SOURCE_KINDS:
         if source_root is None:
             raise CompanyStoreError("This activity requires an explicit source root")
         source_root = Path(source_root).absolute()
         _private(source_root, True)
         _private(source_root / "company.sqlite3")
-        if destination.is_relative_to(source_root):
+        if destination.resolve().is_relative_to(source_root.resolve()):
             raise CompanyStoreError("Activity output must be outside its original source root")
     elif source_root is not None:
         raise CompanyStoreError("Source root is supported only for source-dependent activity")
-    if recipe_path.stat().st_size > MAX_RECIPE_BYTES:
-        raise CompanyStoreError("Activity recipe exceeds bounded size")
-    fd = os.open(recipe_path, os.O_RDONLY | os.O_NOFOLLOW)
-    with os.fdopen(fd, "rb") as stream:
-        info = os.fstat(stream.fileno())
-        if not stat.S_ISREG(info.st_mode) or info.st_mode & 0o077 or info.st_nlink != 1:
-            raise CompanyStoreError("Private regular recipe required")
-        raw = stream.read(MAX_RECIPE_BYTES + 1)
-    if len(raw) > MAX_RECIPE_BYTES:
-        raise CompanyStoreError("Activity recipe exceeds bounded size")
+    raw = _private_bytes(recipe_path)
     try:
-
-        def unique_object(pairs):
-            value = {}
-            for key, item in pairs:
-                if key in value:
-                    raise ValueError("Duplicate recipe key")
-                value[key] = item
-            return value
-
-        def reject_constant(_value):
-            raise ValueError("Nonfinite recipe value")
-
-        body = json.loads(raw, object_pairs_hook=unique_object, parse_constant=reject_constant)
+        body = _json(raw)
         if not isinstance(body, dict):
             raise ValueError("Recipe object required")
         cls, generate = KINDS[kind]
@@ -147,17 +197,41 @@ def run(kind, recipe_path, destination, *, repository, source_root=None):
                 raise ValueError("Explicit JSON arrays required")
             body["source_refs"] = tuple(LifecycleSourceRef(**row) for row in body["source_refs"])
             body["branch_ids"] = tuple(body["branch_ids"])
+        if kind == "risk-assessment":
+            if any(
+                not isinstance(body[key], list)
+                for key in ("source_groups", "scenarios", "branch_ids")
+            ):
+                raise ValueError("Explicit JSON arrays required")
+            groups = []
+            for group in body["source_groups"]:
+                if not isinstance(group, dict) or not isinstance(group["source_refs"], list):
+                    raise ValueError("Exact grouped source arrays required")
+                groups.append(
+                    RiskSourceGroup(
+                        **{
+                            **group,
+                            "source_refs": tuple(
+                                RiskSourceRef(**ref) for ref in group["source_refs"]
+                            ),
+                        }
+                    )
+                )
+            body["source_groups"] = tuple(groups)
+            body["scenarios"] = tuple(RiskScenario(**row) for row in body["scenarios"])
+            body["branch_ids"] = tuple(body["branch_ids"])
         recipe = cls(**body)
     except (TypeError, ValueError, KeyError) as error:
         raise CompanyStoreError("Invalid explicit activity recipe") from error
     with tempfile.TemporaryDirectory(prefix=".company-activity-", dir=destination.parent) as temp:
         stage = Path(temp)
-        if kind in {"training", "change", "provider-intake", *SOURCE_KINDS}:
+        if kind in {"training", "change", "provider-intake", *SOURCE_KINDS, *MULTI_SOURCE_KINDS}:
             result = generate(
                 stage / "company",
                 repository=Path(repository),
                 recipe=recipe,
                 **({"source_root": source_root} if kind in SOURCE_KINDS else {}),
+                **({"source_roots": source_roots} if kind in MULTI_SOURCE_KINDS else {}),
             )
             store = CompanyStore(stage / "company")
         else:
@@ -201,6 +275,15 @@ def run(kind, recipe_path, destination, *, repository, source_root=None):
                 "source_store_id": recipe.source_store_id,
                 "source_versions_sha256": recipe.source_versions_sha256,
             }
+        if kind in MULTI_SOURCE_KINDS:
+            manifest["source_inputs"] = {
+                group.id: {
+                    "root": str(source_roots[group.id]),
+                    "source_store_id": group.source_store_id,
+                    "source_versions_sha256": group.source_versions_sha256,
+                }
+                for group in recipe.source_groups
+            }
         _write(stage / "MANIFEST.json", (json.dumps(manifest, indent=2) + "\n").encode())
         publish(stage, destination)
     return manifest
@@ -215,6 +298,9 @@ def main(argv=None):
     parser.add_argument(
         "--source-root", type=Path, help="Existing original company store for dependent activities"
     )
+    parser.add_argument(
+        "--source-roots", type=Path, help="Private JSON map of explicit source groups to roots"
+    )
     args = parser.parse_args(argv)
     result = run(
         args.kind,
@@ -222,6 +308,9 @@ def main(argv=None):
         args.destination,
         repository=args.repository,
         source_root=args.source_root,
+        source_roots=load_source_roots(args.source_roots)
+        if args.source_roots is not None
+        else None,
     )
     print(
         json.dumps(

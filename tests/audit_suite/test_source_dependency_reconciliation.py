@@ -342,3 +342,10 @@ def test_publication_freezes_original_plan_before_caller_mutation(setup, tmp_pat
     retained = json.loads((output / "PLAN.json").read_text())
     assert report["plan_sha256"] == manifest["plan_sha256"] == digest(retained) == expected
     assert digest(plan) != expected
+
+
+def test_legacy_plan_does_not_add_optional_review_section(setup):
+    engine, actor, engagement, plan = prepared(setup)
+    assert "iam_review_contracts" not in plan
+    report = reconcile(engine, actor, engagement, plan)
+    assert "iam_review_reconciliation" not in report

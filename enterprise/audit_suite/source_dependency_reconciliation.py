@@ -348,7 +348,17 @@ def reconcile(engine, actor_id, engagement_id, plan):
     require(
         isinstance(plan, dict)
         and set(plan)
-        == {"registry_sha256", "scope_sha256", "source_refs", "adapters", "period_contracts"},
+        in (
+            {"registry_sha256", "scope_sha256", "source_refs", "adapters", "period_contracts"},
+            {
+                "registry_sha256",
+                "scope_sha256",
+                "source_refs",
+                "adapters",
+                "period_contracts",
+                "iam_review_contracts",
+            },
+        ),
         "Exact reconciliation plan required",
     )
     require(getattr(engine.company_store, "is_federated", False), "Explicit portfolio required")
@@ -419,6 +429,13 @@ def reconcile(engine, actor_id, engagement_id, plan):
         require(isinstance(body, dict), "Selected native JSON object required")
         bodies[source["id"]] = body
     result = analyze(plan, sources, bodies, state["scope"])
+    if "iam_review_contracts" in plan:
+        from .iam_review_reconciliation import checks
+
+        require("SH-IAM-007" in controls, "IAM review contracts outside assigned controls")
+        result["iam_review_reconciliation"] = checks(
+            plan["iam_review_contracts"], sources, bodies, state["scope"]
+        )
     result.update(
         schema="SOURCE_DEPENDENCY_PERIOD_REPORT_V1",
         snapshot_isolation="PER_COMPONENT_NOT_GLOBAL",
