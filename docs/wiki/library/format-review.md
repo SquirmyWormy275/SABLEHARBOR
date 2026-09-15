@@ -6,7 +6,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 130 |
+| COUNTERPART_REVIEW_REQUIRED | 132 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 107 |
@@ -34,6 +34,8 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Invoice](../../finance/evidence/billing/FF-003-v1/INVOICE.md) — SH-FIN-HUMAN-001
 - [FF-003 billing quality review](../../finance/evidence/billing/FF-003-v1/QA.md) — SH-FIN-HUMAN-001
 - [Close, allowance and legal-book reconciliation](../../finance/evidence/close/draft/WORKING_PAPER.md) — SH-FIN-HUMAN-001
+- [Company closeout accounting basis](../../finance/evidence/company-closeout/ACCOUNTING_BASIS_SUCCESSOR.md) — SH-FIN-HUMAN-001
+- [ARU/BST annual tax-base bridge](../../finance/evidence/company-closeout/ARU_BOOK_TO_TAX_METHOD.md) — SH-FIN-HUMAN-001
 - [Authored 2016–2022 tax and cash reconstruction](../../finance/evidence/company-closeout/HISTORICAL_TAX_RECONSTRUCTION.md) — SH-FIN-HUMAN-001
 - [RWH Illinois transaction-tax composition](../../finance/evidence/company-closeout/RWH_TRANSACTION_TAX.md) — SH-FIN-HUMAN-001
 - [Prospective software sales-tax population](../../finance/evidence/company-closeout/SOFTWARE_SALES_TAX.md) — SH-FIN-HUMAN-001
