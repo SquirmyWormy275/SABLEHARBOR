@@ -17,6 +17,18 @@ from tools.audit_suite import generate_company_activity as operator
 FORMAT = "PRIVATE_COMPANY_ACTIVITY_PLAN_V1"
 MAX_PLAN_BYTES = 512 * 1024
 MAX_JOBS = 24
+# V1 derives complete change-store snapshots, not selected identity-reference pins.
+PLAN_KINDS = {
+    "mover",
+    "identity-period",
+    "incident",
+    "backup",
+    "training",
+    "change",
+    "configuration",
+    "security-logging",
+    "provider-intake",
+}
 ID = re.compile(r"[a-z][a-z0-9-]{0,47}\Z")
 
 
@@ -135,7 +147,7 @@ def validate_plan(value):
         identity, kind = job["id"], job["kind"]
         if not isinstance(identity, str) or not ID.fullmatch(identity) or identity in prior:
             raise CompanyStoreError("Distinct safe job IDs required")
-        if not isinstance(kind, str) or kind not in operator.KINDS:
+        if not isinstance(kind, str) or kind not in PLAN_KINDS:
             raise CompanyStoreError("Unknown company activity kind")
         deps = job["depends_on"]
         if (

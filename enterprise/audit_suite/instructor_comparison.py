@@ -189,21 +189,31 @@ def _compare(engine, principal, engagement_id, bindings, *, revision):
         raise DomainError("Explicit nonnegative historical revision required")
     bound = read_binding(engine, principal, engagement_id, bindings)
     snapshot = bound["snapshot"]
-    history = engine.store.history(principal["id"], engagement_id)
-    if revision >= len(history):
+    from .history_inspection import inspect_history
+
+    original = snapshot["engagement"]
+    history = inspect_history(
+        engine.store,
+        principal["id"],
+        engagement_id,
+        revisions=[revision, original["revision"]],
+    )
+    if revision >= history["count"]:
         raise DomainError("Historical revision is unavailable", status=404)
-    selected = history[revision]
+    selected = history["selected"][revision]
     state = selected["state"]
-    current = history[-1]["state"]
+    current = history["latest"]["state"]
     original = snapshot["engagement"]
     if (
-        original["revision"] >= len(history)
-        or digest(history[: original["revision"] + 1]) != original["history_sha256"]
-        or digest(history[original["revision"]]["state"]) != original["state_sha256"]
+        original["revision"] >= history["count"]
+        or history["prefix_sha256"][original["revision"]] != original["history_sha256"]
+        or digest(history["selected"][original["revision"]]["state"]) != original["state_sha256"]
     ):
         raise DomainError("Bound history does not match the engagement chain", status=503)
     mismatch = []
-    bound_controls = {c["id"] for c in history[original["revision"]]["state"].get("controls", [])}
+    bound_controls = {
+        c["id"] for c in history["selected"][original["revision"]]["state"].get("controls", [])
+    }
     if {c["id"] for c in state.get("controls", [])} != bound_controls:
         mismatch.append("SELECTED_CONTROL_SCOPE_DIFFERS_FROM_BOUND_SCOPE")
     if {c["id"] for c in current.get("controls", [])} != bound_controls:
@@ -232,9 +242,9 @@ def _compare(engine, principal, engagement_id, bindings, *, revision):
         "bound_revision": original["revision"],
         "selected_history_revision": revision,
         "selected_state_sha256": digest(state),
-        "selected_history_sha256": digest(history[: revision + 1]),
+        "selected_history_sha256": history["prefix_sha256"][revision],
         "selected_history_tip_sha256": selected["hash"],
-        "current_revision": history[-1]["revision"],
+        "current_revision": history["latest"]["revision"],
         "mismatches": mismatch,
         "grading": "NOT_PERFORMED",
         "professional_validation": "UNVALIDATED",
@@ -250,10 +260,13 @@ def _compare(engine, principal, engagement_id, bindings, *, revision):
         ],
     }
     if not mismatch:
-        result.update(_inventory(snapshot, state, history[: revision + 1]))
+        result.update(_inventory(snapshot, state, history["activity"][: revision + 1]))
     if engine.store.membership(principal["id"], engagement_id) != "instruct":
         raise DomainError("Instructor access changed", status=403)
-    if engine.store.get(principal["id"], engagement_id)["revision"] != history[-1]["revision"]:
+    if (
+        engine.store.get(principal["id"], engagement_id)["revision"]
+        != history["latest"]["revision"]
+    ):
         raise DomainError("Engagement changed during comparison; select again", status=409)
     try:
         validate_routes(engine, snapshot)

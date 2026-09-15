@@ -153,24 +153,26 @@ def test_denial_invalid_revision_tamper_and_final_permission_check(workspace, mo
         compare(
             engine, {"id": args["instructor_id"]}, args["engagement_id"], bindings, revision=True
         )
-    original = engine.store.history
+    from enterprise.audit_suite import history_inspection
 
-    def tampered(*a):
-        result = deepcopy(original(*a))
-        result[0]["state"]["scope"] = {"changed": True}
+    original = history_inspection.inspect_history
+
+    def tampered(*a, **kw):
+        result = deepcopy(original(*a, **kw))
+        result["selected"][0]["state"]["scope"] = {"changed": True}
         return result
 
-    monkeypatch.setattr(engine.store, "history", tampered)
+    monkeypatch.setattr(history_inspection, "inspect_history", tampered)
     with pytest.raises(DomainError) as bad:
         compare(engine, {"id": args["instructor_id"]}, args["engagement_id"], bindings, revision=0)
     assert bad.value.status == 503
 
-    def revoked(*a):
-        result = original(*a)
+    def revoked(*a, **kw):
+        result = original(*a, **kw)
         engine.store.grant(args["engagement_id"], args["instructor_id"], "review")
         return result
 
-    monkeypatch.setattr(engine.store, "history", revoked)
+    monkeypatch.setattr(history_inspection, "inspect_history", revoked)
     with pytest.raises(DomainError) as denied:
         compare(engine, {"id": args["instructor_id"]}, args["engagement_id"], bindings, revision=0)
     assert denied.value.status == 403

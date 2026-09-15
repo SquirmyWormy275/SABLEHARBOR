@@ -11,6 +11,55 @@ from tools.audit_suite import generate_company_activity as operator
 ROOT = Path(__file__).resolve().parents[2]
 
 
+def test_lifecycle_operator_preserves_selected_originals_and_exact_recipe(tmp_path):
+    import hashlib
+
+    from tests.audit_suite.test_company_lifecycle_activity import inputs
+
+    source_root, value = inputs.__wrapped__(tmp_path)
+    recipe_path = tmp_path / "lifecycle.json"
+    raw = json.dumps(asdict(value)).encode()
+    recipe_path.write_bytes(raw)
+    recipe_path.chmod(0o600)
+    original = (source_root / "company.sqlite3").read_bytes()
+    destination = tmp_path / "lifecycle-output"
+    result = operator.run(
+        "identity-lifecycle",
+        recipe_path,
+        destination,
+        repository=ROOT,
+        source_root=source_root,
+    )
+    assert result["counts"] == {"systems": 10, "versions": 24, "grants": 0, "collections": 0}
+    assert result["source_input"]["source_versions_sha256"] == value.source_versions_sha256
+    assert (source_root / "company.sqlite3").read_bytes() == original
+    assert (destination / "RECIPE.json").read_bytes() == raw
+    for name, pin in result["members"].items():
+        assert hashlib.sha256((destination / name).read_bytes()).hexdigest() == pin
+
+
+@pytest.mark.parametrize("field,value", [("branch_ids", "ab"), ("source_refs", [{}])])
+def test_lifecycle_operator_rejects_malformed_nested_recipe(tmp_path, field, value):
+    from tests.audit_suite.test_company_lifecycle_activity import inputs
+
+    source_root, recipe = inputs.__wrapped__(tmp_path)
+    body = asdict(recipe)
+    body[field] = value
+    recipe_path = tmp_path / "lifecycle.json"
+    recipe_path.write_text(json.dumps(body))
+    recipe_path.chmod(0o600)
+    destination = tmp_path / "invalid"
+    with pytest.raises(CompanyStoreError, match="Invalid explicit"):
+        operator.run(
+            "identity-lifecycle",
+            recipe_path,
+            destination,
+            repository=ROOT,
+            source_root=source_root,
+        )
+    assert not destination.exists()
+
+
 def prepare(tmp_path):
     tmp_path.chmod(0o700)
     source = tmp_path / "recipe.json"
@@ -74,8 +123,10 @@ def test_native_activity_generator_adapters(tmp_path, kind, versions):
 
     source = prepare(tmp_path)
     value = {
-        "training": training_recipe, "backup": backup_recipe,
-        "change": change_recipe, "provider-intake": provider_recipe,
+        "training": training_recipe,
+        "backup": backup_recipe,
+        "change": change_recipe,
+        "provider-intake": provider_recipe,
     }[kind]()
     source.write_text(json.dumps(asdict(value)))
     result = operator.run(kind, source, tmp_path / "result", repository=ROOT)
@@ -198,7 +249,10 @@ def test_logging_operator_verifies_original_dependency_and_private_output(tmp_pa
     assert all(not p.stat().st_mode & 0o077 for p in output.rglob("*"))
     with pytest.raises(CompanyStoreError, match="outside"):
         operator.run(
-            "security-logging", source, source_root / "nested", repository=ROOT,
+            "security-logging",
+            source,
+            source_root / "nested",
+            repository=ROOT,
             source_root=source_root,
         )
     assert not (source_root / "nested").exists()

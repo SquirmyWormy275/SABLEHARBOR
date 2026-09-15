@@ -8,7 +8,7 @@ PYTHONPATH=. .venv/bin/python -m tools.audit_suite.generate_company_activity inc
   --destination /private/new-incident-run
 ```
 
-The maintained runner currently accepts `mover`, `identity-period`, `incident`, `backup`, `training`, `change`, `configuration`, `security-logging` and `provider-intake`.
+The maintained runner currently accepts `mover`, `identity-period`, `incident`, `backup`, `training`, `change`, `configuration`, `security-logging`, `provider-intake` and `identity-lifecycle`.
 Recipe fields follow `TransferRecipe`, `PeriodRecipe`, `IncidentRecipe`, `BackupRecipe`, `TrainingRecipe`, `ChangeRecipe`, `ConfigurationRecipe`, `LoggingRecipe` and `ProviderIntakeRecipe` in the
 corresponding company activity modules. For an identity period, `movers` is a JSON
 array of transfer recipes. Training uses arrays of `TrainingMember` objects in
@@ -29,8 +29,18 @@ logging branches, a local source identifier and the local ingestion-lag threshol
 The generator applies a collector filter to an original release-authorization feed,
 reconciles its sequence and hashes, then retains later backfill without erasing the
 initial gap. Publisher sequences and lag requirements belong to the local exercise;
-they do not assert a deployed logging platform or corporate coverage. Other activity
-kinds reject the source-root argument.
+they do not assert a deployed logging platform or corporate coverage.
+
+Identity lifecycle requires an explicit existing identity `--source-root`. Its
+`LifecycleRecipe` uses JSON arrays for `branch_ids` and `source_refs`; every reference
+contains exact `company`, `branch`, `system`, `record`, `version` and `sha256` fields.
+The recipe pins the metadata digest of those selected originals, a separate fictional
+worker, an existing sponsor, bounded lifecycle dates and explicit local requirements.
+Native requests, approvals, grants, probes and revocation records preserve the initial
+cached-session omission and later correction. This is a local data exercise, with no
+canonical hiring or vendor deployment. The V1 multi-job plan does not yet support this
+selected-identity dependency contract; use the explicit single-activity command.
+Kinds without source dependencies reject the source-root argument.
 
 Provider intake pins the original canonical runtime-site JSON through
 `source_sites_sha256` and requires explicit start, review-due and backfill dates.

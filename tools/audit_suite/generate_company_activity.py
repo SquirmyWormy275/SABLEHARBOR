@@ -20,6 +20,10 @@ from enterprise.audit_suite.company_change_activity import generate_pair as gene
 from enterprise.audit_suite.company_configuration_activity import ConfigurationRecipe
 from enterprise.audit_suite.company_configuration_activity import generate as generate_configuration
 from enterprise.audit_suite.company_incident_activity import IncidentRecipe, generate_incident
+from enterprise.audit_suite.company_lifecycle_activity import LifecycleRecipe, LifecycleSourceRef
+from enterprise.audit_suite.company_lifecycle_activity import (
+    generate_pair as generate_lifecycle_pair,
+)
 from enterprise.audit_suite.company_provider_intake_activity import ProviderIntakeRecipe
 from enterprise.audit_suite.company_provider_intake_activity import (
     generate_pair as generate_provider_pair,
@@ -49,8 +53,9 @@ KINDS = {
     "configuration": (ConfigurationRecipe, generate_configuration),
     "security-logging": (LoggingRecipe, generate_logging_pair),
     "provider-intake": (ProviderIntakeRecipe, generate_provider_pair),
+    "identity-lifecycle": (LifecycleRecipe, generate_lifecycle_pair),
 }
-SOURCE_KINDS = {"configuration", "security-logging"}
+SOURCE_KINDS = {"configuration", "security-logging", "identity-lifecycle"}
 MAX_RECIPE_BYTES = 64 * 1024
 
 
@@ -130,6 +135,13 @@ def run(kind, recipe_path, destination, *, repository, source_root=None):
                 if not isinstance(body[key], list):
                     raise ValueError("Explicit JSON arrays required")
                 body[key] = tuple(body[key])
+        if kind == "identity-lifecycle":
+            if not isinstance(body["source_refs"], list) or not isinstance(
+                body["branch_ids"], list
+            ):
+                raise ValueError("Explicit JSON arrays required")
+            body["source_refs"] = tuple(LifecycleSourceRef(**row) for row in body["source_refs"])
+            body["branch_ids"] = tuple(body["branch_ids"])
         recipe = cls(**body)
     except (TypeError, ValueError, KeyError) as error:
         raise CompanyStoreError("Invalid explicit activity recipe") from error
@@ -196,7 +208,7 @@ def main(argv=None):
     parser.add_argument("--destination", type=Path, required=True)
     parser.add_argument("--repository", type=Path, default=Path(__file__).resolve().parents[2])
     parser.add_argument(
-        "--source-root", type=Path, help="Existing original change store for dependent activities"
+        "--source-root", type=Path, help="Existing original company store for dependent activities"
     )
     args = parser.parse_args(argv)
     result = run(

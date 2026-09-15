@@ -74,7 +74,8 @@ def test_all_maintained_kind_schemas_including_provider_are_structurally_support
         return {str: "explicit-value", int: 1, bool: False, float: 1.0}[annotation]
 
     seen = set()
-    for kind, (cls, _) in runner.operator.KINDS.items():
+    for kind in runner.PLAN_KINDS:
+        cls, _ = runner.operator.KINDS[kind]
         recipe = example(cls)
         dependent = kind in runner.operator.SOURCE_KINDS
         jobs = []

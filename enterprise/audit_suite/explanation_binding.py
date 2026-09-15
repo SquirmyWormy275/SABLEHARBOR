@@ -148,8 +148,10 @@ def bind_snapshot(
         raise DomainError("Scoped instructor access required", status=403)
     state = engine.store.get(instructor_id, engagement_id)
     engine.store.get(audited_actor_id, engagement_id)
-    history = engine.store.history(instructor_id, engagement_id)
-    if not history or history[-1]["state"]["revision"] != state["revision"]:
+    from .history_inspection import inspect_history
+
+    history = inspect_history(engine.store, instructor_id, engagement_id)
+    if history["latest"]["state"]["revision"] != state["revision"]:
         raise DomainError("Engagement changed during binding; retry a new snapshot", status=409)
     bound = dict(binding(engine, state))
     portfolio = getattr(engine.company_store, "is_federated", False)
@@ -297,7 +299,7 @@ def bind_snapshot(
             "scope": state["scope"],
             "simulated_at": state["simulated_at"],
             "state_sha256": digest(state),
-            "history_sha256": digest(history),
+            "history_sha256": history["history_sha256"],
         },
         "access_event_watermark": watermark,
         "sources": sources,
