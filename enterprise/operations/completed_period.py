@@ -238,7 +238,7 @@ def make_roster(source):
     groups += [("RWH", name, count) for name, count in workforce["site_functions"].items()]
     index = 0
     for entity, unit, count in groups:
-        for n in range(count):
+        for _n in range(count):
             index += 1
             sid = f"RW-{index:04d}"
             pid = source["industrial_person_links"].get(sid, sid)
@@ -406,7 +406,7 @@ def payroll(source, people):
                 authority_id=batch + "-RELEASE",
                 batch_id=batch,
                 preparer_id="SH-EMP-ESS-0001",
-                reviewer_id="SH-EMP-INTERNAL-AUDIT-0001",
+                reviewer_id="SH-EMP-ESS-0002",
                 approved_on=selected[0]["pay_date"],
                 payment_count=len(selected),
                 net_usd=money(sum(D(r["net_usd"]) for r in selected)),
@@ -594,8 +594,8 @@ def payroll_bridges(source, people, pay):
                 reconstructed_loaded_expense_usd=money(actual),
                 delta_usd=None,
                 treatment=(
-                    "PENDING_SOURCE_EXPENSE_DECOMPOSITION; never add whole payroll "
-                    "to existing operating cost"
+                    "SEE_CURRENT_BOOK_COST_COMPONENTS; payroll is a component of "
+                    "existing paid cost, never additive"
                 ),
             )
         )
@@ -630,7 +630,102 @@ def validate_chains(source, tables):
             previous = event["event_id"]
         if chain["kind"] == "production" and D(q["released_or_accepted_quantity"]):
             raise ValueError("Uranium release lacks accepted custody authority")
+    # Semantic checks survive source+derivative changes; a coherent hash is not performance.
+    maintenance = []
+    for cid, chain in expected.items():
+        steps = events[cid]
+        dated = {e["stage"]: e["performed_on"] for e in steps}
+        if chain["kind"] == "dispatch" and "DISPATCHED" in dated:
+            if (
+                "QUALIFICATION_CHECK" not in dated
+                or dated["QUALIFICATION_CHECK"] > dated["DISPATCHED"]
+            ):
+                raise ValueError("Dispatch precedes qualification check")
+        if chain["kind"] == "maintenance":
+            maintenance.append((chain["asset_id"], dated["DEFECT_REPORTED"], dated.get("RELEASED")))
+    for event in tables["operating_events"]:
+        if expected[event["chain_id"]]["kind"] == "maintenance":
+            continue
+        if event["stage"] not in {
+            "STORED",
+            "RELEASED",
+            "DISPATCHED",
+            "DELIVERED",
+            "PARTIAL_RELEASE",
+        }:
+            continue
+        for asset, start, end in maintenance:
+            if (
+                event["asset_id"] == asset
+                and start <= event["performed_on"]
+                and (end is None or event["performed_on"] < end)
+            ):
+                raise ValueError("Operating asset used during unresolved defect hold")
     return len(expected)
+
+
+def validate_tax_components(source, tables):
+    from .current_records import read_current_tax_contract
+
+    tax_contract = read_current_tax_contract()
+    people = {r["person_id"]: r for r in tables["people"]}
+    pay = {r["pay_id"]: r for r in tables["payroll"]}
+    rows = {}
+    for row in tables["tax_liabilities"]:
+        key = row["pay_id"], row["tax"]
+        if key in rows or row["pay_id"] not in pay:
+            raise ValueError("Duplicate or unknown tax liability component")
+        rows[key] = row
+    journals = defaultdict(lambda: defaultdict(D))
+    for row in tables["journal"]:
+        journals[row["journal_id"]][row["account"]] += D(row["signed_usd"])
+    expected_keys = set()
+    for pid, row in pay.items():
+        person = people[row["person_id"]]
+        calc = withholding(
+            D(row["gross_usd"]),
+            D(row["opening_ytd_wages_usd"]),
+            person["jurisdiction"],
+            row["legal_entity"] == "BST",
+        )
+        ruia = (
+            cents(D(tax_contract["bst_ruia_monthly_base"]) * D(tax_contract["bst_ruia_rate"]))
+            if row["legal_entity"] == "BST" and row["pay_date"].endswith("14")
+            else D(0)
+        )
+        calc["employer_ruia"] = ruia
+        expected_keys.update((pid, k) for k in calc)
+        for key, value in calc.items():
+            evidence = rows.get((pid, key))
+            if evidence is None or D(evidence["amount_usd"]) != value:
+                raise ValueError("Tax liability component does not match payroll calculation")
+            if (
+                evidence["legal_entity"] != row["legal_entity"]
+                or evidence["jurisdiction"] != person["jurisdiction"]
+                or evidence["effective_period"] != row["effective_period"]
+            ):
+                raise ValueError("Tax liability wrong legal entity jurisdiction or period")
+            if (
+                D(evidence["remitted_usd"]) != value
+                or D(evidence["closing_liability_usd"]) != 0
+                or evidence["remitted_on"] != row["pay_date"]
+            ):
+                raise ValueError("Tax remittance rollforward or date mismatch")
+        known = calc["employer_known_taxes"] + ruia
+        if D(row["employer_known_taxes_usd"]) != known:
+            raise ValueError("Employer tax counted incorrectly")
+        if journals[pid]["CASH_TAX_REMITTANCE"] != -(D(row["withholding_usd"]) + known):
+            raise ValueError("Tax remittance GL does not reconcile")
+        if journals[pid]["CASH_BENEFIT_SETTLEMENT"] != -D(
+            row["remaining_benefit_and_employer_obligations_usd"]
+        ):
+            raise ValueError("Benefit payment GL does not reconcile")
+        if journals[pid]["WAGES_EXPENSE"] != D(row["gross_usd"]) or journals[pid][
+            "EMPLOYER_COST_EXPENSE"
+        ] != D(row["employer_burden_usd"]):
+            raise ValueError("Payroll cost journal is duplicated or reversed")
+    if set(rows) != expected_keys:
+        raise ValueError("Tax liability population incomplete or extra")
 
 
 def validate(source, tables):
@@ -652,6 +747,7 @@ def validate(source, tables):
     expected += read("red_wash/source/core_operating_data.json")["workforce_2026"]["total_fte"]
     if len(ids) != expected:
         raise ValueError("Omitted population member")
+    validate_tax_components(source, tables)
     chart_names = {
         r["person_id"]
         for r in read("docs/organization/source/chartbook.json")["nodes"]
@@ -742,9 +838,12 @@ def validate(source, tables):
         "net_usd": money(sum(D(r["net_usd"]) for r in tables["payroll"])),
         "withholding_usd": money(sum(D(r["withholding_usd"]) for r in tables["payroll"])),
         "employer_burden_usd": money(sum(D(r["employer_burden_usd"]) for r in tables["payroll"])),
-        "source_to_enterprise_posting": "PENDING_EXPLICIT_REPLACEMENT_BRIDGE_NOT_ADDITIVE_PAYROLL",
+        "source_to_enterprise_posting": (
+            "COST_COMPONENTS_WITHIN_EXISTING_PAID_SOURCE; NO_ADDITIVE_PAYROLL"
+        ),
         "tax_remittance": (
-            "NEWLY_AUTHORED_SYNTHETIC_PAYMENT; other employer/benefit balance preserved"
+            "NEWLY_AUTHORED_SYNTHETIC_PAYMENT; calculated taxes and benefits paid within "
+            "existing cost envelope"
         ),
         "complete_company_acceptance": False,
     }
@@ -773,11 +872,17 @@ def build(source=None):
     tables["operating_events"], tables["operating_quantities"] = operating_records(source, people)
     tables["dispatch_assignments"] = dispatch_assignments(source, qualifications)
     tables["payroll_source_bridges"] = payroll_bridges(source, people, pay)
+    from .current_records import CURRENT_SOURCE, extend, validate_current
+
+    extend(source, tables)
     totals = validate(source, tables)
+    totals.update(validate_current(source, tables))
     inputs = source["sources"] + [
         SOURCE,
         "enterprise/operations/completed_period.py",
         "geospatial/facilities/population/REGISTER.json",
+        CURRENT_SOURCE,
+        "enterprise/operations/current_records.py",
     ]
     hashes = {p: hashlib.sha256((ROOT / p).read_bytes()).hexdigest() for p in sorted(set(inputs))}
     return dict(
@@ -809,8 +914,36 @@ def visible_rows(rows, *, as_of, known_on):
             ),
         )[:10]
         <= as_of[:10]
+        and (not r.get("effective_to") or as_of[:10] < r["effective_to"][:10])
         and datetime.fromisoformat(r["available_at"]) <= knowledge
     ]
+
+
+def workforce_state(result, *, as_of, known_on):
+    """Apply visible HR/access events without rewriting the August source snapshots."""
+    import copy
+
+    rows = copy.deepcopy(visible_rows(result["tables"]["people"], as_of=as_of, known_on=known_on))
+    access = copy.deepcopy(visible_rows(result["tables"]["access"], as_of=as_of, known_on=known_on))
+    changes = visible_rows(result["tables"]["change_events"], as_of=as_of, known_on=known_on)
+    exited = {r["person_id"] for r in changes if r["action"] == "EXIT"}
+    revoked = {
+        r["person_id"]
+        for r in changes
+        if r.get("revoked_at") and r["revoked_at"][:10] <= as_of[:10]
+    }
+    for row in rows:
+        if row["person_id"] in exited:
+            row["status"] = "EXITED"
+    for row in access:
+        row["status"] = "REVOKED" if row["person_id"] in revoked else "ACTIVE"
+    return {
+        "people": rows,
+        "access": access,
+        "active_employees": sum(r["status"] == "ACTIVE" for r in rows),
+        "active_principals": sum(r["status"] == "ACTIVE" for r in access),
+        "visible_change_events": changes,
+    }
 
 
 def write(result, destination=OUTPUT, check=False):

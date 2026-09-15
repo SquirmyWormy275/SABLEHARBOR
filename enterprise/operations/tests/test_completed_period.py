@@ -76,8 +76,8 @@ def test_west_virginia_and_pennsylvania():
     [
         ("duplicate", "Duplicate population"),
         ("omit", "Omitted population"),
-        ("wrong_entity", "Wrong payroll legal"),
-        ("wrong_period", "Wrong payroll legal"),
+        ("wrong_entity", "[Ww]rong.*legal"),
+        ("wrong_period", "[Ww]rong.*legal"),
         ("pay_twice", "duplicate payroll"),
         ("settlement", "settlement/GL"),
         ("early", "known-on"),

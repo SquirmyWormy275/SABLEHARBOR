@@ -1,0 +1,186 @@
+{
+  "record_id": "SH-CURRENT-COMPANY-202608",
+  "version": "0.1.0",
+  "authority_state": "PROVISIONAL",
+  "acceptance_state": "PENDING_REPOSITORY_ACCEPTANCE",
+  "authorship": "Newly authored September15 retrospective fictional completion under company closeout authority. No future invoice is imported as past evidence.",
+  "effective_period": "2026-08",
+  "available_at": "2026-09-15T00:00:00Z",
+  "core_revenue_usd": "11075500.00",
+  "core_operating_cost_usd": "11968000.00",
+  "source_book_reference": "SHI PRIMARY_USD August2026 synthetic_common_reference; retained current enterprise import LEG_4000/LEG_5000. Unit allocations below decompose its exact paid revenue and cost without extra enterprise revenue or expense.",
+  "commercial_groups": [
+    {
+      "unit": "foundry-field",
+      "customers": 44,
+      "revenue_usd": "10765500.00",
+      "accountable_person": "P004",
+      "deliverable": "Monthly hosted production-workflow subscription and support accepted for defined customer environment",
+      "asset_pool": "SH-POOL-CORE-SOFTWARE",
+      "contract_type": "MONTHLY_SERVICE_SUBSCRIPTION"
+    },
+    {
+      "unit": "atlas-meridian",
+      "customers": 10,
+      "revenue_usd": "150000.00",
+      "accountable_person": "P020",
+      "deliverable": "Bounded model-assisted investigation report; named customer retains operational decision authority",
+      "asset_pool": "SH-POOL-CORE-SOFTWARE",
+      "contract_type": "CONTROLLED_INVESTIGATION_SERVICE"
+    },
+    {
+      "unit": "advisory",
+      "customers": 4,
+      "revenue_usd": "100000.00",
+      "accountable_person": "SH-EMP-ADVISORY-0001",
+      "deliverable": "Fixed-scope Decision packet and client-owned operating-method handover; no phantom carry award or voting interest",
+      "asset_pool": "SH-POOL-CORE-SOFTWARE",
+      "contract_type": "FIXED_FEE_DECISION"
+    }
+  ],
+  "commercial_policy": {
+    "customer_origin": "58 newly authored current Core customer groups; preserved 58group/104site calibration is an anchor, not previously recovered contracts. Stable current IDs are distinct from conditional2027customer IDs; no cross-era identity match inferred.",
+    "sites": 104,
+    "receivable_opening_usd": "0.00",
+    "cash_policy": "Current retained source collects August recognized revenue in August. Newly authored same-month synthetic receipt states decompose that source cash; not external confirmation.",
+    "allocation_policy": "Equal customer amounts within each service group, cents remainder assigned final stable ID. No inherited concentration percentage asserted by this new population.",
+    "acceptance_policy": "Ordinary commercial completion and customer acceptance authored by responsible roles; exceptions preserve correction history. No new general price/carry policy."
+  },
+  "research_projects": [
+    {
+      "project_id": "SH-WIL-202608-VIB",
+      "question": "Can sensor observations distinguish two bench vibration states?",
+      "owner": "P010",
+      "budget_usd": "18000",
+      "spent_materials_usd": "12000",
+      "initial_score": "0.71",
+      "threshold": "0.80",
+      "result": "FAILED_REDESIGN",
+      "next_action": "Repeat under a changed protocol after independent review; no completed future pass",
+      "site": "fort"
+    },
+    {
+      "project_id": "SH-WIL-202608-RF",
+      "question": "Does the test RF receiver retain repeatability after thermal cycling?",
+      "owner": "P012",
+      "budget_usd": "14000",
+      "spent_materials_usd": "8500",
+      "initial_score": "0.84",
+      "threshold": "0.80",
+      "result": "BENCH_PASS_ONLY",
+      "next_action": "Operating owner field qualification remains required",
+      "site": "fort"
+    },
+    {
+      "project_id": "SH-WIL-202608-CHEM",
+      "question": "Which fouling assumptions fail in the monitored AMD sample?",
+      "owner": "P018",
+      "budget_usd": "22000",
+      "spent_materials_usd": "17500",
+      "initial_score": "0.62",
+      "threshold": "0.80",
+      "result": "FAILED_NO_TRANSFER",
+      "next_action": "Preserve sample and failed observation; no commercial sale",
+      "site": "fort"
+    }
+  ],
+  "cradle": {
+    "project_id": "SH-CRD-202608-STREAM17",
+    "host": "Kelly Gang Mining",
+    "host_ownership": "EXTERNAL_UNCHANGED",
+    "legal_operator": "SHI",
+    "accountable_person": "P025",
+    "customer_id": "SH-CURRENT-CRD-BUYER-001",
+    "feed_tonnes": "100",
+    "contained_reo_fraction": "0.03",
+    "recovery_fraction": "0.50",
+    "accepted_product_kg": "1500",
+    "unit_price_usd_per_kg": "40",
+    "revenue_usd": "60000",
+    "materials_and_processing_usd": "10000",
+    "bedford_and_freight_usd": "5000",
+    "host_share_usd": "12000",
+    "direct_labor_person_ids": [
+      "SH-EMP-PROJECT-CRADLE-0005",
+      "SH-EMP-PROJECT-CRADLE-0006",
+      "SH-EMP-PROJECT-CRADLE-0007"
+    ],
+    "direct_margin_basis": "Revenue minus selected three-person full loaded payroll, materials, freight and host participation. Remainder of Cradle payroll stays development cost; no invented enterprise profitability.",
+    "genealogy": "HoststreamS17->sample20260803->run20260805->intermediateS17-A->BedfordblendB202608->refineracceptance20260825->invoice20260831->receipt20260831",
+    "failure_project": {
+      "project_id": "SH-CRD-202608-AMD",
+      "host": "Demotte Reclamation Services",
+      "status": "EXPERIMENTAL_NO_SALES",
+      "material_cost_usd": "18500",
+      "revenue_usd": "0",
+      "disposition": "Retain failed fouling test and affected samples; external host retains stop authority"
+    }
+  },
+  "unemployment": {
+    "state_annual_wage_bases": {
+      "CA": "7000",
+      "PA": "10000",
+      "WV": "9500",
+      "WY": "33800"
+    },
+    "federal_annual_wage_base": "7000",
+    "august_basis": "Every nonrail employee has reconstructed January-July wages above applicable state/FUTA annual base; August incremental taxable wages zero. Annual liabilities and employer experience rates are not certified by this zero incremental result.",
+    "bst_ruia_monthly_base": "2150",
+    "bst_ruia_rate": "0.025",
+    "bst_rate_notice_id": "SH-SYN-RUIA-BST-2026",
+    "bst_rate_notice_origin": "NEWLY_AUTHORED_SYNTHETIC_EXPERIENCE_RATE; 2.5% is model instance inside actual2026permitted0.65%-12%range, no real agency notice claimed."
+  },
+  "benefits": {
+    "policy": "Remaining loaded employer-cost envelope is completed as actual fictional August invoices to benefits/insurance administrators. Allocation is cost reporting, not creation or alteration of retirement vesting, pension formula, control/equity rights, or insurance entitlement. No cash reimbursement or benefit provided disproportionately by rank is assumed.",
+    "components": [
+      {
+        "kind": "HEALTH_AND_WELFARE_ADMINISTRATION",
+        "fraction": "0.60",
+        "provider_id": "SH-SYN-BENEFIT-PROVIDER-001"
+      },
+      {
+        "kind": "EXISTING_EMPLOYER_BENEFIT_CONTRIBUTIONS",
+        "fraction": "0.25",
+        "provider_id": "SH-SYN-BENEFIT-PROVIDER-002"
+      },
+      {
+        "kind": "WORKERS_COMP_AND_EMPLOYER_COVERAGE",
+        "fraction": "0.15",
+        "provider_id": "SH-SYN-INSURANCE-PROVIDER-001"
+      }
+    ],
+    "settled_on": "2026-08-31",
+    "record_state": "NEWLY_AUTHORED_SYNTHETIC_INVOICE_AND_CLEARING",
+    "boundary": "Provider cost allocations are not individual taxable fringe values or a legal opinion on planqualification. Existing employmentbenefits treatment assumed; a newly discovered taxablefringe requires explicit amendedpayroll."
+  },
+  "source_paths": [
+    "config/finance/assumptions/quantitative.yml",
+    "industrial/source/finance.json",
+    "industrial/source/operations.json",
+    "red_wash/source/core_operating_data.json",
+    "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+    "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md"
+  ],
+  "authority_workpapers": [
+    {
+      "url": "https://dws.wyo.gov/dws-division/unemployment-insurance/wyui/unemployment-taxable-wage-base/",
+      "provision": "2026 row33800",
+      "accessed_on": "2026-09-15"
+    },
+    {
+      "url": "https://workforcewv.org/wp-content/uploads/2025/02/Employer-Handbook-Rev.-02.25.pdf",
+      "provision": "Beginning2025 taxablewagebase9500; checked2026currentemployerpage for subsequent published rateinformation",
+      "accessed_on": "2026-09-15"
+    },
+    {
+      "url": "https://www.pa.gov/agencies/dli/resources/for-employers-and-educators/how-to-file/uc-tax/calculating-contributions--penalties-and-interest",
+      "provision": "Employerwagebase10000 and2026employeecontribution",
+      "accessed_on": "2026-09-15"
+    },
+    {
+      "url": "https://rrb.gov/Newsroom/NewsReleases/RetirementUnemploymentInsuranceTaxes",
+      "provision": "December2025 notice of2026RUIA monthly2150 base and experience rates0.65%-12%, no surcharge",
+      "accessed_on": "2026-09-15"
+    }
+  ]
+}

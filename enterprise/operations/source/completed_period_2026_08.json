@@ -178,7 +178,7 @@
     "mine_annual_salary_usd": "85000",
     "platform_annual_salary_usd": "150000",
     "settlement": "Two modeled net-pay batches per legal employer, independent preparer/reviewer identities, direct employee payments; no bank account/routing credentials. Payment status is synthetic, not actual bank confirmation.",
-    "tax_remittance": "Newly authored synthetic remittance of calculated taxes on each payroll date; this is a payment-state reconstruction, not a tax return, agency acknowledgement or real payment. Undecomposed benefit/employer-obligation remainder stays payable until its separate source schedules exist.",
+    "tax_remittance": "Newly authored synthetic remittance of calculated taxes on each payroll date; this is a payment-state reconstruction, not a tax return, agency acknowledgement or real payment. current_company_2026_08.json supplies August unemployment and benefit allocation/payment schedules within the unchanged loaded cost envelope.",
     "local_boundary": "PA employees are newly authored Pittsburgh residents; resident EIT3% and LST52 included. Bedford staff are newly authored Fairmont residents; ordinance920.03(c) nonresident employee charge does not apply to them; resident utility charges are not payroll deductions. These residence facts do not locate either employer parcel."
   },
   "sources": [
@@ -314,7 +314,7 @@
         "CHARGE_LINKED"
       ],
       "start_on": "2026-08-02",
-      "asset_id": "ARU-MH-01",
+      "asset_id": "ARU-MH-03",
       "quantity_unit": "pallet",
       "opening_quantity": "0",
       "received_or_produced_quantity": "54",
@@ -346,7 +346,7 @@
         "CHARGE_LINKED"
       ],
       "start_on": "2026-08-17",
-      "asset_id": "ARU-MH-02",
+      "asset_id": "ARU-MH-04",
       "quantity_unit": "pallet",
       "opening_quantity": "0",
       "received_or_produced_quantity": "12",
@@ -370,8 +370,8 @@
       "surrounding_population": "Two deliberately selected completed-period cases of this activity; not the whole unit transaction population. Full monthly source quantities remain a separate denominator.",
       "case": "NORMAL",
       "stages": [
-        "DISPATCHED",
         "QUALIFICATION_CHECK",
+        "DISPATCHED",
         "DELIVERED",
         "ACCEPTED",
         "BILLING_LINKED"

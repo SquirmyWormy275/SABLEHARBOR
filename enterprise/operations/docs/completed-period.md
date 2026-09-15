@@ -99,22 +99,58 @@ states. Clearing records from the same authoring model are **not independent
 bank confirmation**. Preparer and reviewer identities differ; these source
 records do not prove live runtime review or access enforcement.
 
-The 30% loaded employer burden is a modeling envelope. Known employer FICA or
-RRTA is separately calculated inside it; remaining benefits and employer
-obligations stay explicit payables awaiting detailed UI/RUIA, benefits and
-settlement source schedules. This is not a claim that the balance is all tax,
-that every employer duty is remitted, or that the company can afford payments.
-Unpaid amounts must not be treated as recurring operational cash generation.
+The 30% loaded employer burden remains a modeling envelope. Known employer
+FICA/RRTA and $3,117.50 August BST RUIA are separately calculated inside it.
+January–July reconstructed wages exhaust every nonrail annual unemployment base,
+so August incremental FUTA/state UI is zero. BST's 2.5% experience rate is a newly
+authored synthetic notice within the genuine 2026 permitted range, not a recovered
+RRB notice. Remaining $1,345,337.82 is allocated to health/welfare administration,
+existing employer benefit contributions and workers compensation coverage, with
+three declared provider invoices per employer and modeled August 31 settlement.
+No new voting, vesting, pension or substantive employee rights are created.
+Every calculated withholding component, remittance date, closing liability and GL
+leg reconciles. These are synthetic payment states, not filed returns.
 
-**Do not add the reconstructed payroll expense to existing payroll.** The
-`payroll_source_bridges` table independently recomputes August ARU source-loaded
-payroll and exposes individual-cent versus whole-dollar segment differences:
-ARU −$0.08, BST −$0.19, terminals +$0.18, trucking +$0.33, warehouse −$0.13.
-For SHI, PS and RWH the integration owner must decompose existing embedded
-operating costs and consume an explicit replacement bridge before claiming
-enterprise financial reconciliation. These amounts are source inputs, not
-already posted controlling enterprise balances. Cash-timing and tax payment
-bridges need the same composition; there is no automatic cash/funding plug.
+**Do not add reconstructed payroll expense to existing payroll.**
+`current_book_cost_components` decomposes existing August SHI paid operating cost
+$11,968,000, PS platform SGA $233,333 and RWH production inventory-incurred cost
+$2,329,167. Payroll is a component inside each unchanged source amount. RWH detail
+does not create a second inventory asset or COGS charge. The ARU/BST
+`payroll_source_bridges` independently exposes individual-cent versus whole-dollar
+segment differences: ARU −$0.08, BST −$0.19, terminals +$0.18, trucking +$0.33,
+warehouse −$0.13; retained aggregate source expense is unchanged.
+`current_records.verify_current_finance(edition, legacy_snapshot, anchor_rows)`
+reperforms the component parents and current revenue against the independently
+generated legacy and industrial journals. It posts **zero additional journals**.
+
+## Complete declared August commercial populations
+
+[current_company_2026_08.json](../source/current_company_2026_08.json) and
+[current_records.py](../current_records.py) provide 92 contracts, 88 distinct
+customers and 104 Core customer service environments. The environments are not
+assertions of company-owned physical sites. Every contract joins authority,
+accountable employee, delivery, invoice and settlement-state records.
+
+The newly authored Core commercial schedule has 44 Foundry Field, ten Atlas and
+four Advisory customers. Along with one Cradle materials project, August SHI
+principal revenue totals $11,075,500, independently matching retained book revenue.
+Twenty-nine ARU/BST contracts preserve accepted customer identities and match
+source journal external invoice amounts. Four mine contracts preserve their
+accepted structure and monthly financial allocations. Mine/industrial customer
+cash stays explicitly unallocated where source collection detail does not support
+invoice-level assignment; monthly financial allocation does not establish
+uranium shipment authority or converter acceptance.
+
+Willow has three completed bench experiments with costs and failed/passed bench
+outcomes, zero sales and no inferred field approval. Cradle's selected physical
+materials project records feed, grade, yield, acceptance, price, direct costs and
+three payroll allocations; its direct margin is $500.01 after individual payroll
+rounding. A separate failed Demotte AMD experiment has $18,500 cost and no revenue.
+These five current projects preserve research failures and distinguish sustaining
+services from precommercial research. Corporate is represented by the complete
+SHI employee, payroll, approvals and paid-cost component populations. Current
+invoice sales-tax fields remain unestablished where the tax applicability work
+has not concluded; this table does not infer a blanket exemption.
 
 ## Primary payroll authority and fact bounds
 
@@ -142,8 +178,9 @@ apply to this resident population; resident utility charges are distinct.
 The source identifies [ordinance 2057, section 920.03](https://codelibrary.amlegal.com/codes/fairmont/latest/fairmont_wv/0-0-0-24566).
 All withholding certificates are modeled, with no pretax deferrals, dependents,
 additional withholding or other-employer wages. Changes to those fictional facts
-require recalculation. Individual tax returns and employer-specific unemployment
-rates are not established by these calculations.
+require recalculation. Individual tax returns are not established by these calculations. The separately
+authored BST experience-rate record and zero incremental nonrail bases are
+explicitly scoped August employer workpapers.
 
 ## Access, qualifications and operating chains
 
@@ -153,9 +190,13 @@ this source creates no rank/unit-based restrictions, authorization engine or
 deployed account assertion. September change event SH-HR-2026-09-01 exits ESS-0054 on
 September 4, with late revocation on September 7 preserved and an independent
 review due September 16. August HR snapshots are not rewritten by that event.
-`visible_rows(as_of=..., known_on=...)` keeps effective and availability dates
+`visible_rows(as_of=..., known_on=...)` filters effective intervals and availability dates
 separate; none of these newly authored records is visible in an August known-on
-query. September records are not returned as August events.
+query. September records are not returned as August events. `workforce_state` applies
+visible exit/revocation events: August 31 has 702 employed/702 principals;
+September 5 has 701 employed/702 principals (the late revocation exception);
+September 15 has 701/701. A known-on date before September 15 reveals none of
+these newly authored records.
 
 Three industrial driver assignments demonstrate qualified release, an expired
 qualification blocking dispatch, and replacement by another qualified driver.
@@ -179,36 +220,34 @@ residual, distinct from ordinary ARU freight. These selected chains still need
 full source-month quantity/accounting allocation and independent review before
 being treated as complete seven-line operating evidence.
 
-## Validation receipt and remaining work
+## Validation receipt and bounded residuals
 
-The focused suite contains 21 cases: population/deduplication, independently
-reperformed federal/CA/WV/PA and railroad tax examples, annual wage-base edges,
-omitted/duplicate members, wrong legal book/period, settlement discrepancy,
-missing independent review, source availability, stale exports, leave capacity,
-unqualified assignment, custody quantity changes and duplicate financial posting.
+The focused suites include independent payroll-rate examples, wage-base edges,
+omitted/duplicate people, wrong legal entity/period, per-component tax/remittance
+and GL tampering, benefit settlement, stale derivatives, source availability,
+effective-dated exits, independent approval, qualification-before-dispatch,
+maintenance-held asset use, custody quantity changes, and independent current-book
+cost/revenue reperformance. Review identified chronology, review independence,
+tax-component validation and September effective-state defects in the first
+implementation; this successor corrects them and retains regression cases.
 
-Lane B delivers implementation and authored company inputs for review. SH-C01
-still requires full material client/project/contract/asset/current financial
-populations for all seven units and corporate. SH-C03 requires enterprise payroll
-replacement composition, remaining employer obligation detail and exercised
-runtime access evidence. SH-C07 requires full monthly attribution and the precise
-external uranium custody evidence. Integration records the accepted commit/PR,
-required broad test results, composite manifest and actual Release location.
-The company-readiness gate remains partial until those claims are supported.
+The declared employee/payroll and material commercial/project populations are
+implemented. Full company acceptance remains integration-owned. Material residuals
+are invoice-specific industrial cash allocation, unresolved current sales-tax
+applicability, full physical transaction-month attribution for selected operating
+chains, qualified external uranium custody/converter evidence, and exercised
+runtime access/restore behavior. Asset/facility inventories and corporate treasury
+are joined from the existing sources by the composite edition, rather than
+recreated as a competing database here.
 
-### Local execution evidence, September 15
+The industrial baseline package rebuilt 199 artifacts and 79 tables with identical
+repeat-built archive bytes. The earlier operations suite passed 208 cases. An
+initial system-Python run lacked `xlsxwriter`; supported locked-environment runs
+resolve this environment error. The integration receipt must record the final
+composed-head broad checks, independent review, accepted commit/PR and actual
+Release location. Local generated files remain reviewable inputs until packaging.
 
-The industrial package rebuilt successfully from baseline 78d4fcd: 199 artifacts,
-79 tables, repeat-built archive bytes identical. The operations test suite passed
-208 cases in the project's locked dependency environment; the focused 21 cases,
-Ruff formatting/lint, regenerated-output check and `git diff --check` also passed.
-An initial broader invocation with system Python stopped at collection because
-that interpreter lacked `xlsxwriter`; rerunning with the supported project
-virtual environment resolved the environment error. It was not a product failure.
-Broad maintainer/publication checks remain integration-owned for the composed head.
-
-BST tax treatment assumes the accepted separate railway employer and its railway
-employee population. CT-1/RRTA filing and RUIA are separate from ordinary Form941
-and FUTA. This workpaper calculates declared compensation tiers; it does not
-claim completed employer classification proceedings or filed returns. Changing
-railroad coverage facts requires a new classification and calculation bridge.
+BST CT-1/RRTA and RUIA are separate from ordinary Form 941 and FUTA. The calculation
+assumes the accepted separate railway employer/employee population; changing those
+coverage facts requires a new classification bridge. No tax return, agency
+acknowledgement or real payment is represented as completed by this source.
