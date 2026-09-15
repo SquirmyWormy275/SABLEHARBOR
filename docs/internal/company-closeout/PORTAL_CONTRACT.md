@@ -12,6 +12,14 @@ The closeout does not edit that worktree, its private data or live servers. The 
 in REGISTER.json; no overlapping portal edits are required by this input work.
 The source module is a concurrent dependency, not accepted main by implication.
 
+A later read-only refresh observed portal head
+`0afa29a15af5b345a4929a9324cb8a58f2582641`. Its committed `company_store.py` is
+byte-identical to the rehearsal pin (SHA-256
+`38a1aebcebde53051e306465dc2d807a3cd0e60fb8cc974da2235fa268c88292`). The portal
+has continued developing assistance and backup-monitoring workflows. That work
+remains with its owner; this source compatibility check does not certify those
+additional workflows or inspect their private live records.
+
 ## Existing schema and bounded import
 
 `tools/company_closeout/portal_rehearsal.py` loads the exact Git-committed existing

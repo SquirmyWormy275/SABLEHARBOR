@@ -59,3 +59,11 @@ Full correction retest at clean `854a4aad`:
 final artifact safety scan. This validates the preserved operating forecast
 package; the separately changing company financial successor still requires its
 own final build and acceptance.
+
+At clean `40f3b108`, the complete maintainer pytest command passed **556 tests**
+with three skips. The only reported warning concerns Python 3.12's deprecated
+SQLite datetime adapter. Governance/J2, organization maps and repository hygiene
+also passed; hygiene inspected 5,019 tracked paths. The institutional catalog
+and public-safety checks passed on the immediately preceding generated catalog
+revision. Source/artifact mutation was paused throughout the broad test run.
+Later statutory and current-population integrations require final-head validation.
