@@ -1,0 +1,70 @@
+........................................................................ [ 14%]
+........................................................ss...s.......... [ 28%]
+........................................................................ [ 43%]
+..........F............................................................. [ 57%]
+........................................................................ [ 72%]
+........................................................................ [ 86%]
+.........................F........................................       [100%]
+=================================== FAILURES ===================================
+_______ BillingRecordTests.test_generated_artifacts_and_protected_inputs _______
+
+self = <test_billing_record.BillingRecordTests testMethod=test_generated_artifacts_and_protected_inputs>
+
+    def test_generated_artifacts_and_protected_inputs(self):
+>       billing.validate()
+
+tests/publications/test_billing_record.py:65: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tools/documents/billing_record.py:353: in validate
+    check(sha(ROOT / path) == digest, "Stale input: " + path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False
+message = 'Stale input: tools/documents/build_controlled_publications.py'
+
+    def check(condition, message):
+        if not condition:
+>           raise ValueError(message)
+E           ValueError: Stale input: tools/documents/build_controlled_publications.py
+
+tools/documents/billing_record.py:42: ValueError
+_ test_large_publication_with_changed_bytes_is_rejected[docs/internal/institutional_catalog.sqlite3] _
+
+tmp_path = PosixPath('/tmp/pytest-of-kingoftheeast/pytest-352/test_large_publication_with_ch1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7fd09910aba0>
+relative = PosixPath('docs/internal/institutional_catalog.sqlite3')
+
+    @pytest.mark.parametrize(
+        "relative",
+        [
+            "docs/organization/history/v1.0.0/Sable-Harbor-Organization-Charts.pdf",
+            "docs/internal/institutional_catalog.sqlite3",
+        ],
+    )
+    def test_large_publication_with_changed_bytes_is_rejected(tmp_path, monkeypatch, relative):
+        module = safety_module()
+        relative = Path(relative)
+        payload = bytearray((ROOT / relative).read_bytes())
+        payload[-1] ^= 1
+        destination = tmp_path / relative
+        destination.parent.mkdir(parents=True)
+        destination.write_bytes(payload)
+        monkeypatch.chdir(tmp_path)
+        monkeypatch.setattr(module, "review_files", lambda: [relative])
+        monkeypatch.setattr(sys, "argv", ["check_public_safety.py"])
+>       with pytest.raises(SystemExit, match="unapproved large file exceeds 10 MiB"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'SystemExit'>
+
+/home/kingoftheeast/Projects/SABLEHARBOR-company-closeout/tests/unit/test_j2_archive_boundary.py:87: Failed
+----------------------------- Captured stdout call -----------------------------
+PASS: no tracked/untracked reviewable private benchmark paths, credential markers, or unapproved >10 MiB files
+=============================== warnings summary ===============================
+tests/integration/test_stage1_run_identity.py::test_period_close_evidence_is_immutable_in_orm_and_database
+  /home/kingoftheeast/Projects/SABLEHARBOR-company-closeout/.venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py:952: DeprecationWarning: The default datetime adapter is deprecated as of Python 3.12; see the sqlite3 documentation for suggested replacement recipes
+    cursor.execute(statement, parameters)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/publications/test_billing_record.py::BillingRecordTests::test_generated_artifacts_and_protected_inputs
+FAILED tests/unit/test_j2_archive_boundary.py::test_large_publication_with_changed_bytes_is_rejected[docs/internal/institutional_catalog.sqlite3]

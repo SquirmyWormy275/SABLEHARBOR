@@ -590,17 +590,18 @@
     },
     {
       "clause_path": "docs/legal/gap-instruments/source/uranium-custody.md#9-activation-schedule-and-current-disposition",
-      "current_disposition": "FUTURE_OR_CONDITIONAL_INSTRUMENT_NOT_CURRENT_EXECUTION",
+      "current_disposition": "SCOPED_AUTHORED_SUCCESSOR_REMAINDER_EXPLICIT",
       "field_or_term": "Activation and execution dates",
       "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-U03",
       "original_json_pointer": "/unresolved_fields/2",
       "original_next_action_or_basis": "Remain null until separately accepted future record",
       "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
       "package": "uranium-custody",
-      "rationale": "Keep the represented service/site/external-clearance activation gate. Draft terms and future supporting evidence are not current operations. This remains an affected future claim, not a universal company-close blocker.",
+      "rationale": "Selected external shipment September13 and converter custody September14 are newly authored dated events, available only at the September15 source boundary. The specific advancement is no longer merely planned; other custody contracts and future shipments retain their own activation gates.",
       "source_hashes": {
         "docs/legal/gap-instruments/source/uranium-custody.json": "c93ec8d2da8a22646b656d5e7186d53e9312a2b47172b8811e33a08016a5422e",
-        "docs/legal/gap-instruments/source/uranium-custody.md": "b9076e42c66e71af0178f8b754d182176a3e93b49329c2cfa8c9cddf77452894"
+        "docs/legal/gap-instruments/source/uranium-custody.md": "b9076e42c66e71af0178f8b754d182176a3e93b49329c2cfa8c9cddf77452894",
+        "enterprise/operations/source/september_custody_2026.json": "1a444560f567d4369c68467c05ef0619dac2290ad0dd4a089670245f453c3a4e"
       }
     },
     {
@@ -980,15 +981,16 @@
     },
     {
       "clause_path": "docs/legal/gap-instruments/source/debt-liens.md#5-proposed-payoff-request-to-existing-lenders",
-      "current_disposition": "SOURCE_COMPLETION_REQUIRED_FOR_AFFECTED_INSTRUMENT",
+      "current_disposition": "SCOPED_AUTHORED_SUCCESSOR_REMAINDER_EXPLICIT",
       "field_or_term": "Payoff value date, accrued interest, instruction reference and release instruments",
       "id": "DEBT-U04",
       "original_json_pointer": "/unresolved_fields/3",
       "original_next_action_or_basis": "Obtain exact lender documentation; do not fabricate operational bank details.",
       "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
       "package": "debt-liens",
-      "rationale": "The precise field remains unsupported by this review item. Its next action is retained below; missing evidence does not create a new owner preference or establish real execution. Check later company record sources before use.",
+      "rationale": "The current debt successor supplies internal payoff and settlement references and 18 January\u2013August payment records. The $13.5M old debt payoff is distinct from asset-specific lien release, which remains unsupported. No second cash posting.",
       "source_hashes": {
+        "docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md": "6959a2fada600515b54e889926b8ed255ccdeb7d759f15f2a041e756d7732162",
         "docs/legal/gap-instruments/source/debt-liens.json": "e08aef516cba382287cd78231100dbc5ad2a6f193a864c2331c232c591c9bd03",
         "docs/legal/gap-instruments/source/debt-liens.md": "e9adf8cdc08237c855556d22d30a7649ac64b471c567ce7a54c1aa67613485ef"
       }
@@ -1040,30 +1042,32 @@
     },
     {
       "clause_path": "docs/legal/gap-instruments/source/host-rights.md#7-kelly-gang-mining-deployment-schedule",
-      "current_disposition": "MATERIAL_SOURCE_OR_RIGHTS_BOUNDARY",
+      "current_disposition": "SCOPED_AUTHORED_SUCCESSOR_REMAINDER_EXPLICIT",
       "field_or_term": "Kelly Gang participation percentage and value definition",
       "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-U03",
       "original_json_pointer": "/unresolved_fields/2",
       "original_next_action_or_basis": "Negotiate explicit inputs; do not make permanent lore quantities",
       "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
       "package": "host-rights",
-      "rationale": "This cannot be filled by a template or inferred from rounded financial figures. Preserve the exact unsupported party/right/eligibility field, current source economics and affected claim. No compulsory funding, new investor, collateral, host participation or tax election is invented.",
+      "rationale": "The selected Stream17 run reconciles $60,000 realized value and $12,000 host settlement. The implied 20% is a run-level ratio, not an adopted perpetual rate or contract term. Any broader participation right remains outside this completion.",
       "source_hashes": {
+        "docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md": "6959a2fada600515b54e889926b8ed255ccdeb7d759f15f2a041e756d7732162",
         "docs/legal/gap-instruments/source/host-rights.json": "01a9645efe23f29fb9136275995af6a1e2013caa34e286e08f29ec7bacf93c45",
         "docs/legal/gap-instruments/source/host-rights.md": "4fd81f5dffc2d95ba89c495a3689381648b44a4a8cdfd62750ea028b5bdde9d4"
       }
     },
     {
       "clause_path": "docs/legal/gap-instruments/source/host-rights.md#8-demotte-deployment-schedule",
-      "current_disposition": "MATERIAL_SOURCE_OR_RIGHTS_BOUNDARY",
+      "current_disposition": "SCOPED_AUTHORED_SUCCESSOR_REMAINDER_EXPLICIT",
       "field_or_term": "Demotte host settlement mechanism",
       "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-U04",
       "original_json_pointer": "/unresolved_fields/3",
       "original_next_action_or_basis": "Owner review separate supported commercial proposal",
       "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
       "package": "host-rights",
-      "rationale": "This cannot be filled by a template or inferred from rounded financial figures. Preserve the exact unsupported party/right/eligibility field, current source economics and affected claim. No compulsory funding, new investor, collateral, host participation or tax election is invented.",
+      "rationale": "Demotte's selected failed $18,500 test and zero sale are preserved with bypass and sample hold. No unsupported settlement formula or future payment is adopted.",
       "source_hashes": {
+        "docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md": "6959a2fada600515b54e889926b8ed255ccdeb7d759f15f2a041e756d7732162",
         "docs/legal/gap-instruments/source/host-rights.json": "01a9645efe23f29fb9136275995af6a1e2013caa34e286e08f29ec7bacf93c45",
         "docs/legal/gap-instruments/source/host-rights.md": "4fd81f5dffc2d95ba89c495a3689381648b44a4a8cdfd62750ea028b5bdde9d4"
       }
@@ -1295,14 +1299,14 @@
     },
     {
       "clause_path": "docs/legal/gap-instruments/source/debt-liens.md#2-proposed-term-credit-agreement",
-      "current_disposition": "SOURCE_COMPLETION_REQUIRED_FOR_AFFECTED_INSTRUMENT",
+      "current_disposition": "MATERIAL_SOURCE_OR_RIGHTS_BOUNDARY",
       "field_or_term": "Actual maturity, business-day rule, late interest and prepayment terms",
       "id": "DEBT-U02",
       "original_json_pointer": "/unresolved_fields/1",
       "original_next_action_or_basis": "Negotiate explicit clauses; 60-month model amortization is not independent maturity evidence.",
       "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
       "package": "debt-liens",
-      "rationale": "The precise field remains unsupported by this review item. Its next action is retained below; missing evidence does not create a new owner preference or establish real execution. Check later company record sources before use.",
+      "rationale": "This cannot be filled by a template or inferred from rounded financial figures. Preserve the exact unsupported party/right/eligibility field, current source economics and affected claim. No compulsory funding, new investor, collateral, host participation or tax election is invented.",
       "source_hashes": {
         "docs/legal/gap-instruments/source/debt-liens.json": "e08aef516cba382287cd78231100dbc5ad2a6f193a864c2331c232c591c9bd03",
         "docs/legal/gap-instruments/source/debt-liens.md": "e9adf8cdc08237c855556d22d30a7649ac64b471c567ce7a54c1aa67613485ef"
@@ -1624,15 +1628,16 @@
     },
     {
       "clause_path": "docs/legal/gap-instruments/source/host-rights.md#2-scope-of-grant-and-physical-boundary",
-      "current_disposition": "SOURCE_COMPLETION_REQUIRED_FOR_AFFECTED_INSTRUMENT",
+      "current_disposition": "SCOPED_AUTHORED_SUCCESSOR_REMAINDER_EXPLICIT",
       "field_or_term": "Capture-point/interface exhibits at both hosts",
       "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-U02",
       "original_json_pointer": "/unresolved_fields/1",
       "original_next_action_or_basis": "Host and Cradle prepare source-backed commercial boundary drawings",
       "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
       "package": "host-rights",
-      "rationale": "The precise field remains unsupported by this review item. Its next action is retained below; missing evidence does not create a new owner preference or establish real execution. Check later company record sources before use.",
+      "rationale": "Selected Stream17 capture/interface and Demotte bypass/hold events are authored within the existing host authority and operating cost population. This does not create a complete engineering exhibit or additional host property rights.",
       "source_hashes": {
+        "docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md": "6959a2fada600515b54e889926b8ed255ccdeb7d759f15f2a041e756d7732162",
         "docs/legal/gap-instruments/source/host-rights.json": "01a9645efe23f29fb9136275995af6a1e2013caa34e286e08f29ec7bacf93c45",
         "docs/legal/gap-instruments/source/host-rights.md": "4fd81f5dffc2d95ba89c495a3689381648b44a4a8cdfd62750ea028b5bdde9d4"
       }
@@ -1729,17 +1734,18 @@
     },
     {
       "clause_path": "docs/legal/gap-instruments/source/uranium-custody.md#2-conditions-before-any-service-order",
-      "current_disposition": "FUTURE_OR_CONDITIONAL_INSTRUMENT_NOT_CURRENT_EXECUTION",
+      "current_disposition": "SCOPED_AUTHORED_SUCCESSOR_REMAINDER_EXPLICIT",
       "field_or_term": "Carrier, receiver, actual service and qualification evidence",
       "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-U01",
       "original_json_pointer": "/unresolved_fields/0",
       "original_next_action_or_basis": "Select service/provider and obtain role-specific reviews before activation",
       "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
       "package": "uranium-custody",
-      "rationale": "Keep the represented service/site/external-clearance activation gate. Draft terms and future supporting evidence are not current operations. This remains an affected future claim, not a universal company-close blocker.",
+      "rationale": "The September successor supplies qualified external carrier/receiver/service evidence for one 200lb title-retained converter custody lot. August hold and failed lot remain visible. It grants no finished-uranium authority to ARU/BST and does not adopt the general draft commercial terms.",
       "source_hashes": {
         "docs/legal/gap-instruments/source/uranium-custody.json": "c93ec8d2da8a22646b656d5e7186d53e9312a2b47172b8811e33a08016a5422e",
-        "docs/legal/gap-instruments/source/uranium-custody.md": "b9076e42c66e71af0178f8b754d182176a3e93b49329c2cfa8c9cddf77452894"
+        "docs/legal/gap-instruments/source/uranium-custody.md": "b9076e42c66e71af0178f8b754d182176a3e93b49329c2cfa8c9cddf77452894",
+        "enterprise/ccf/company_closeout/september_shipment_qualification.json": "e551d0bc39661236b42f5623115ae3bc35ee7cfacda596b48bc1dbf9beaff14c"
       }
     },
     {
@@ -1897,7 +1903,7 @@
       "source_hashes": {
         "docs/legal/gap-instruments/source/workforce.json": "cad6e1410ada5a9e86a961eb5c06cbe5e5c0b92e6f547282624ac09e8d9b340e",
         "docs/legal/gap-instruments/source/workforce.md": "6b4b35a48c4c9d304ad9e9a20e64049400aeb801fe386d7968c8479faedc3834",
-        "enterprise/operations/docs/completed-period.md": "27032559eb113988b9a336bb74ca57c6587daf4689073e6a894accb0ac1965a7",
+        "enterprise/operations/docs/completed-period.md": "75413300b97daf54e7474af9b4b1d37c97cde89913f0e8f1649309e3e9f62785",
         "enterprise/operations/source/completed_period_2026_08.json": "b64e0d5d9041feae1816c533abdd99b26fa9c31fef01122614a9ec8a42800a8a"
       }
     }

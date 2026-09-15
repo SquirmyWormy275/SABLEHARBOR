@@ -29,6 +29,7 @@ MATERIAL = {
     "FIN-U03",
     "FIN-U05",
     "DEBT-U01",
+    "DEBT-U02",
     "DEBT-U03",
     "DEBT-U05",
     "SH-LEGAL-DRAFT-HOST-RIGHTS-U03",
@@ -38,6 +39,46 @@ MATERIAL = {
     "TAX-U04",
 }
 FUTURE_PACKAGES = {"colo", "tenure", "uranium-custody", "mark-clearance"}
+
+SCOPED_SUCCESSORS = {
+    "DEBT-U04": (
+        "docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md",
+        "The current debt successor supplies internal payoff and settlement references and "
+        "18 January–August payment records. The $13.5M old debt payoff is distinct from "
+        "asset-specific lien release, which remains unsupported. No second cash posting.",
+    ),
+    "SH-LEGAL-DRAFT-HOST-RIGHTS-U02": (
+        "docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md",
+        "Selected Stream17 capture/interface and Demotte bypass/hold events are authored "
+        "within the existing host authority and operating cost population. This does not "
+        "create a complete engineering exhibit or additional host property rights.",
+    ),
+    "SH-LEGAL-DRAFT-HOST-RIGHTS-U03": (
+        "docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md",
+        "The selected Stream17 run reconciles $60,000 realized value and $12,000 host "
+        "settlement. The implied 20% is a run-level ratio, not an adopted perpetual rate "
+        "or contract term. Any broader participation right remains outside this completion.",
+    ),
+    "SH-LEGAL-DRAFT-HOST-RIGHTS-U04": (
+        "docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md",
+        "Demotte's selected failed $18,500 test and zero sale are preserved with bypass "
+        "and sample hold. No unsupported settlement formula or future payment is adopted.",
+    ),
+    "SH-LEGAL-DRAFT-URANIUM-CUSTODY-U01": (
+        "enterprise/ccf/company_closeout/september_shipment_qualification.json",
+        "The September successor supplies qualified external carrier/receiver/service "
+        "evidence for one 200lb title-retained converter custody lot. August hold and "
+        "failed lot remain visible. It grants no finished-uranium authority to ARU/BST "
+        "and does not adopt the general draft commercial terms.",
+    ),
+    "SH-LEGAL-DRAFT-URANIUM-CUSTODY-U03": (
+        "enterprise/operations/source/september_custody_2026.json",
+        "Selected external shipment September13 and converter custody September14 are "
+        "newly authored dated events, available only at the September15 source boundary. "
+        "The specific advancement is no longer merely planned; other custody contracts "
+        "and future shipments retain their own activation gates.",
+    ),
+}
 
 
 def build(root=ROOT):
@@ -84,6 +125,10 @@ def build(root=ROOT):
                 "borrowing ARU rates or treating missing tax as zero."
             )
             paths += ["docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md"]
+        elif identity in SCOPED_SUCCESSORS:
+            path, explanation = SCOPED_SUCCESSORS[identity]
+            status = "SCOPED_AUTHORED_SUCCESSOR_REMAINDER_EXPLICIT"
+            paths.append(path)
         elif identity in MATERIAL:
             status = "MATERIAL_SOURCE_OR_RIGHTS_BOUNDARY"
             explanation = (
