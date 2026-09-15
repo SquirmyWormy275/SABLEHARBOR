@@ -102,6 +102,7 @@ Generated file inventory. Includes current and historical records; open the sour
 
 ## `docs/internal/development/audit-suite`
 
+- [Explicit backup due-job monitoring operator](../../internal/development/audit-suite/AQ04_BACKUP_MONITOR_OPERATOR.md) — MD
 - [Backup execution and restore exercise — September 14, 2026](../../internal/development/audit-suite/AQ04_BACKUP_RESTORE_SLICE_2026-09-14.md) — MD
 - [Identity period slice and remaining coverage](../../internal/development/audit-suite/AQ04_IDENTITY_PERIOD_SLICE_2026-09-14.md) — MD
 - [Incident and continuity activity slice](../../internal/development/audit-suite/AQ04_INCIDENT_CONTINUITY_SLICE_2026-09-14.md) — MD

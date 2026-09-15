@@ -7,6 +7,7 @@ import shutil
 import tempfile
 from pathlib import Path
 
+from enterprise.audit_suite import company_backup_monitor as monitor
 from enterprise.audit_suite import company_backup_runtime as backup
 from enterprise.audit_suite.operating_source_bridge import encoded, sha
 from enterprise.audit_suite.store import DomainError
@@ -15,6 +16,10 @@ from tools.audit_suite.reconcile_source_dependencies import read_json
 
 BASE = {"expected_runtime_sha256", "expected_revision", "command_id"}
 FIELDS = {
+    "MONITOR": (
+        {"expected_jobs_sha256", "as_of", "recorded_at", "operator_id", "rationale"},
+        set(),
+    ),
     "DATASET": ({"dataset_id", "content_path", "expected_sha256", "event_at"}, {"previous_pin"}),
     "LEASE": (
         {"operation", "enabled", "valid_from", "expires_at", "event_at"},
@@ -153,6 +158,7 @@ def operate(runtime, action_path, output):
     if kind == "DATASET":
         parameters["content"] = backup.checked_bytes(parameters.pop("content_path"))
     method = {
+        "MONITOR": monitor.scan,
         "DATASET": backup.append_dataset,
         "LEASE": backup.record_lease,
         "BACKUP": backup.run_backup,
@@ -187,6 +193,24 @@ def reconcile(runtime, expected_runtime_sha256, as_of, output):
     return result
 
 
+def monitor_inspect(runtime, expected_runtime_sha256, as_of, output):
+    runtime = backup.private(runtime, True)
+    output = output_destination(output, runtime)
+    expected_parent = parent_identity(output)
+    result = monitor.inspect(runtime, expected_runtime_sha256=expected_runtime_sha256, as_of=as_of)
+    publish_receipt(
+        output,
+        {
+            "kind": "MONITOR_INSPECT",
+            "expected_runtime_sha256": expected_runtime_sha256,
+            "as_of": as_of,
+        },
+        result,
+        expected_parent,
+    )
+    return result
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
@@ -201,13 +225,19 @@ def main(argv=None):
     report.add_argument("--runtime", type=Path, required=True)
     report.add_argument("--runtime-sha256", required=True)
     report.add_argument("--as-of", required=True)
-    for sub in [init, operation, report]:
+    monitoring = commands.add_parser("monitor-inspect")
+    monitoring.add_argument("--runtime", type=Path, required=True)
+    monitoring.add_argument("--runtime-sha256", required=True)
+    monitoring.add_argument("--as-of", required=True)
+    for sub in [init, operation, report, monitoring]:
         sub.add_argument("--output", type=Path, required=True)
     args = parser.parse_args(argv)
     if args.command == "initialize":
         result = initialize(args.config, args.destination, args.repository, args.output)
     elif args.command == "operate":
         result = operate(args.runtime, args.action, args.output)
+    elif args.command == "monitor-inspect":
+        result = monitor_inspect(args.runtime, args.runtime_sha256, args.as_of, args.output)
     else:
         result = reconcile(args.runtime, args.runtime_sha256, args.as_of, args.output)
     print(
