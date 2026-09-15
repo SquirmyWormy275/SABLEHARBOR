@@ -377,7 +377,7 @@ def run(plan_path, destination, *, repository):
                 output = destination / "jobs" / job["id"]
                 stage = "RUN_NATIVE_OPERATOR"
                 kwargs = {}
-                if job["kind"] == "risk-assessment":
+                if job["kind"] in operator.MULTI_SOURCE_KINDS:
                     kwargs["source_roots"] = source_roots
                 elif job["kind"] in SELECTED | WHOLE_KINDS:
                     kwargs["source_root"] = source_roots["source"]

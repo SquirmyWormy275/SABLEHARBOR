@@ -16,6 +16,14 @@ from enterprise.audit_suite.company_access_remediation_activity import AccessRem
 from enterprise.audit_suite.company_access_remediation_activity import (
     generate_pair as generate_access_remediation_pair,
 )
+from enterprise.audit_suite.company_access_review_continuation import (
+    AccessReviewContinuationRecipe,
+    AccessReviewSourceRef,
+    ReviewContinuationSourceGroup,
+)
+from enterprise.audit_suite.company_access_review_continuation import (
+    generate as generate_access_review_continuation,
+)
 from enterprise.audit_suite.company_activity import TransferRecipe, generate_pair
 from enterprise.audit_suite.company_activity_period import PeriodRecipe, generate_period
 from enterprise.audit_suite.company_backup_activity import BackupRecipe, generate_backup_pair
@@ -75,6 +83,10 @@ KINDS = {
     "nonhuman-identity": (NonhumanIdentityRecipe, generate_nonhuman_pair),
     "risk-assessment": (RiskAssessmentRecipe, generate_risk_pair),
     "access-remediation": (AccessRemediationRecipe, generate_access_remediation_pair),
+    "access-review-continuation": (
+        AccessReviewContinuationRecipe,
+        generate_access_review_continuation,
+    ),
 }
 SOURCE_KINDS = {
     "configuration",
@@ -83,7 +95,7 @@ SOURCE_KINDS = {
     "nonhuman-identity",
     "access-remediation",
 }
-MULTI_SOURCE_KINDS = {"risk-assessment"}
+MULTI_SOURCE_KINDS = {"risk-assessment", "access-review-continuation"}
 MAX_RECIPE_BYTES = 64 * 1024
 
 
@@ -208,6 +220,24 @@ def run(kind, recipe_path, destination, *, repository, source_root=None, source_
                 raise ValueError("Explicit JSON arrays required")
             body["source_refs"] = tuple(LifecycleSourceRef(**row) for row in body["source_refs"])
             body["branch_ids"] = tuple(body["branch_ids"])
+        if kind == "access-review-continuation":
+            if not isinstance(body["source_groups"], list):
+                raise ValueError("Explicit source group array required")
+            groups = []
+            for group in body["source_groups"]:
+                if not isinstance(group, dict) or not isinstance(group["source_refs"], list):
+                    raise ValueError("Exact grouped source arrays required")
+                groups.append(
+                    ReviewContinuationSourceGroup(
+                        **{
+                            **group,
+                            "source_refs": tuple(
+                                AccessReviewSourceRef(**ref) for ref in group["source_refs"]
+                            ),
+                        }
+                    )
+                )
+            body["source_groups"] = tuple(groups)
         if kind == "risk-assessment":
             if any(
                 not isinstance(body[key], list)

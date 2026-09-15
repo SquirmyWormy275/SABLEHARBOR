@@ -53,3 +53,11 @@ collection, [initialize separate company runtimes](COMPANY_RUNTIME_ACTIVATION.md
 Their access journals can change while the original producer capsules stay sealed.
 Do not point audit grants at a capsule and then claim its original database hash
 still verifies.
+
+
+`access-review-continuation` supports the same three explicit source slots as V2.
+The two removal partitions may capture different selected sets from the same
+verified earlier removal producer; the identity source must be separate.
+Native hashes are supplied before the run, selected metadata is captured once
+and frozen, and every producer remains an explicit dependency. This routing does
+not supply missing intervening-quarter activity or establish a complete population.

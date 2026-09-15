@@ -19,7 +19,13 @@ from .company_activity_plan import (
 from .company_store import CompanyStoreError
 
 FORMAT = "PRIVATE_COMPANY_ACTIVITY_LINKED_PLAN_V2"
-SELECTED = {"identity-lifecycle", "nonhuman-identity", "risk-assessment", "access-remediation"}
+SELECTED = {
+    "identity-lifecycle",
+    "nonhuman-identity",
+    "risk-assessment",
+    "access-remediation",
+    "access-review-continuation",
+}
 KINDS = {
     "mover",
     "identity-period",
@@ -53,6 +59,15 @@ def _pin(value):
 
 def _slots(job):
     recipe = job["recipe"]
+    if job["kind"] == "access-review-continuation":
+        groups = recipe["source_groups"]
+        if len(groups) != 3 or {g["id"] for g in groups} != {
+            "identity",
+            "remediation_initial",
+            "remediation_final",
+        }:
+            raise CompanyStoreError("Three exact access-review source groups required")
+        return {g["id"]: g for g in groups}, recipe["population_at"]
     if job["kind"] == "risk-assessment":
         groups = recipe["source_groups"]
         if len(groups) != 4 or {g["id"] for g in groups} != {
@@ -143,7 +158,16 @@ def validate_plan(value):
             or any(not isinstance(i, str) or i not in inputs for i in mapping.values())
         ):
             raise CompanyStoreError("Exact named source routing required")
-        if len(set(mapping.values())) != len(mapping):
+        if kind == "access-review-continuation":
+            if not (
+                mapping["remediation_initial"]
+                == mapping["remediation_final"]
+                != mapping["identity"]
+            ):
+                raise CompanyStoreError(
+                    "Review needs one identity input and one shared removal input"
+                )
+        elif len(set(mapping.values())) != len(mapping):
             raise CompanyStoreError("Source groups require distinct original stores")
         labels, roots = {}, {}
         for slot, recipe in slots.items():
@@ -269,7 +293,7 @@ def run(plan_path, destination, *, repository):
                 output = destination / "jobs" / job["id"]
                 stage = "RUN_NATIVE_OPERATOR"
                 kwargs = {}
-                if job["kind"] == "risk-assessment":
+                if job["kind"] in operator.MULTI_SOURCE_KINDS:
                     kwargs["source_roots"] = source_roots
                 elif job["kind"] in SELECTED:
                     kwargs["source_root"] = source_roots["source"]

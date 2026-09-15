@@ -495,3 +495,28 @@ or errors (`repository-cfa19ce-isolated-2026-09-14.xml`). That full check covers
 the earlier backend reconciliation/session checkpoint; the later evidence UI,
 intake-classification and period-ledger changes have their separately identified
 focused and browser checks.
+
+
+The [selected-subject access-review continuation](../../../../enterprise/audit_suite/ACCESS_REVIEW_CONTINUATION.md)
+validates sixteen exact parent/removal originals and replays the local entitlement
+operations before deriving a later review population, decision and reconciliation.
+It carries forward verified selected rights; it does not invent intervening
+quarter activity. Prior omitted and unsupported people remain unresolved, and
+missing authorized rights produce an unresolved decision instead of a retention
+approval. Typed event links and computed results distinguish JSON booleans,
+integers and floating-point values.
+
+The maintained operator and V2/V3 workflows support the three explicit source
+partitions. The initial/final removal partitions share the same original removal
+store; identity remains separate. Existing source/capture pins and post-run
+checks remain in force. Sealed three-record output and fresh runtime activation
+passed in routing tests. Prior operator/workflow regressions and the new routes
+passed 79 tests before the final strict native-type followup; the current core
+eight and independent ten cases passed separately. Actual original corpus
+execution is recorded only after its retained run receipts exist.
+
+
+The current combined continuation/operator/ledger check passed 63 tests after
+strict native-type corrections (`period-continuation-integrated.xml`). This
+includes the actual operator → sealed capsule → fresh runtime route, V2/V3
+selection/capture and independent source-chain and ledger cases.

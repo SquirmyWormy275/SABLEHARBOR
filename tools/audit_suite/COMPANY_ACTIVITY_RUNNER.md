@@ -8,7 +8,7 @@ PYTHONPATH=. .venv/bin/python -m tools.audit_suite.generate_company_activity inc
   --destination /private/new-incident-run
 ```
 
-The maintained runner currently accepts `mover`, `identity-period`, `incident`, `backup`, `training`, `change`, `configuration`, `security-logging`, `provider-intake`, `identity-lifecycle`, `nonhuman-identity`, `risk-assessment` and `access-remediation`.
+The maintained runner currently accepts `mover`, `identity-period`, `incident`, `backup`, `training`, `change`, `configuration`, `security-logging`, `provider-intake`, `identity-lifecycle`, `nonhuman-identity`, `risk-assessment` `access-remediation` and `access-review-continuation`.
 Recipe fields follow `TransferRecipe`, `PeriodRecipe`, `IncidentRecipe`, `BackupRecipe`, `TrainingRecipe`, `ChangeRecipe`, `ConfigurationRecipe`, `LoggingRecipe` and `ProviderIntakeRecipe` in the
 corresponding company activity modules. For an identity period, `movers` is a JSON
 array of transfer recipes. Training uses arrays of `TrainingMember` objects in
@@ -110,3 +110,10 @@ local permission state and independently check the resulting authorization.
 Earlier quarterly reviews stay unchanged. Operating verification does not claim
 professional assurance or enterprise population completeness. See the
 [access remediation activity contract](../../enterprise/audit_suite/ACCESS_REMEDIATION_ACTIVITY.md).
+
+
+`access-review-continuation` accepts the exact three-group source-root map described
+in [the native continuation contract](../../enterprise/audit_suite/ACCESS_REVIEW_CONTINUATION.md).
+The identity group has five originals; the initial and final removal groups
+partition eleven originals from the same removal store. It creates three new
+company review records, preserving unsupported cohort members and prior gaps.

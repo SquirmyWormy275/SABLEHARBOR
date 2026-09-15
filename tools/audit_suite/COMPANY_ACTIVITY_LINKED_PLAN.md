@@ -43,3 +43,12 @@ The run retains exact original PLAN bytes, resolved recipes, source-binding rece
 Snapshots and manifest checks are per source, not one global transaction. The runner establishes exact reproduction inputs and bounded local activity execution, not an accepted corporate policy, coherent operating year, risk acceptance, audit sufficiency, or professional validation.
 
 Tests: `tests/audit_suite/test_company_activity_linked_plan.py` covers actual operator sources, nonhuman and four-group risk execution, private mutation/tamper, before-output rejection, immutable failure inventory, per-consumer labels, and later-job invalidation. Resolver tests cover its bounded read-only native/manifest contract separately.
+
+
+The selected `access-review-continuation` kind uses `identity`,
+`remediation_initial` and `remediation_final` slots with cutoff `population_at`.
+The last two slots must route to the same input, with the identity input separate;
+this narrow shared-store exception preserves consistent producer labels and all
+selected native pins. Other grouped consumers retain their existing distinct-store
+requirements. The recipe and [native validation](../../enterprise/audit_suite/ACCESS_REVIEW_CONTINUATION.md)
+require five identity originals and the complete six/five removal-chain partition.
