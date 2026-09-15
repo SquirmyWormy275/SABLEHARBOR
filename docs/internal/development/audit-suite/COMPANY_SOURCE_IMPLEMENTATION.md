@@ -589,8 +589,19 @@ drift, correction or rollback. Reconciliation independently rereads the current
 file. Immutable operations retain before/after hashes and the original approval
 chain, with no inferred deployment approval or ticket closure. The trusted CLI
 preserves private receipts and exact-command replay after receipt-write failure.
-Core, independent review and CLI checks passed 19 tests; actual operation requires
-a separately reviewed, retained execution receipt.
+Core, independent review and CLI checks passed 19 tests. A subsequent reviewed
+local run retained seven native originals from six operations: apply, authored
+drift, independent reconciliation, correction, reconciliation and rollback.
+Every command replay preserved the existing operation and current target. Original
+source bytes and earlier audit histories remained unchanged; the target finished
+at the pinned recovery baseline. Private receipts are indexed in the checkpoint.
+
+The [explicit configuration export](../../../../enterprise/audit_suite/CONFIGURATION_EXPORT.md)
+can retain the current file's exact bytes as an immutable company original,
+separately from operation reports and receipt envelopes. It shares the runtime
+revision and command namespace, preserves the target, and records export context
+in provenance. Sixteen integrated core, independent-review and CLI checks passed;
+an actual export remains a separately recorded company operation.
 
 Evidence context now displays item observations citing the selected exact
 artifact ID and SHA, including correction history and author-recorded locators.
