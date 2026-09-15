@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "method": "Two consecutive complete builds with same committed inputs and environment; complete manifests compared including all PDF and HTML SHA-256 values.",
+  "manifest_sha256": "73a0ed9501c3b5e9f605bf5b1c1b8f96b74cb37570431e50b62f221a45677b58",
+  "identical": true,
+  "pdfs": 56,
+  "html": 56,
+  "pages": 200
+}

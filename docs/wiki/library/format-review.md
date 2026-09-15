@@ -6,11 +6,11 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 98 |
+| COUNTERPART_REVIEW_REQUIRED | 108 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 107 |
-| READER_OR_MAINTENANCE_PAGE | 175 |
+| READER_OR_MAINTENANCE_PAGE | 178 |
 | UNRESOLVED_DOCUMENT_COUNTERPART | 222 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_CHART_PUBLICATION | 40 |
@@ -33,8 +33,14 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Current disposition of the Foundry Field billing proposal](../../finance/evidence/billing-proposal/CURRENT.md) — SH-FIN-HUMAN-001
 - [Invoice](../../finance/evidence/billing/FF-003-v1/INVOICE.md) — SH-FIN-HUMAN-001
 - [FF-003 billing quality review](../../finance/evidence/billing/FF-003-v1/QA.md) — SH-FIN-HUMAN-001
+- [Close, allowance and legal-book reconciliation](../../finance/evidence/close/draft/WORKING_PAPER.md) — SH-FIN-HUMAN-001
+- [Billing, collections and deferred revenue](../../finance/evidence/customer/draft/WORKING_PAPER.md) — SH-FIN-HUMAN-001
+- [Workforce, inventory, fixed assets and debt](../../finance/evidence/supporting-schedules/draft/WORKING_PAPER.md) — SH-FIN-HUMAN-001
 - [Current industrial transaction and tax support](../../finance/evidence/tax-transaction/TRANSACTION_SUPPORT.md) — SH-FIN-HUMAN-001
+- [Transaction cash and conditional tax support](../../finance/evidence/tax-transaction/draft/WORKING_PAPER.md) — SH-FIN-HUMAN-001
+- [Procurement, payables and Treasury](../../finance/evidence/treasury/draft/WORKING_PAPER.md) — SH-FIN-HUMAN-001
 - [Finance and accounting: human evidence completion handoff](../../handoffs/FINANCE_HUMAN_EVIDENCE_COMPLETION.md) — Corporate document-format reconciliation
+- [PR #145 integration evidence](../../internal/company-closeout/PR145_INTEGRATION.md) — Corporate document-format reconciliation
 - [Actionable CCF procedure deltas](../../internal/development/CCF_ACTIONABLE_CONTROL_DELTAS_2026-09-12.md) — Corporate document-format reconciliation
 - [Integrated CCF delivery workflow](../../internal/development/CCF_INTEGRATED_DELIVERY_WORKFLOW_2026-09-12.md) — Corporate document-format reconciliation
 - [A practical first CCF system](../../internal/development/CCF_PILOT_SYSTEM_DESIGN_2026-09-12.md) — Corporate document-format reconciliation
@@ -43,6 +49,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Northern Nevada planning deed and cost boundary](../../legal/evidence/assets-rights/SH-LEGAL-READ-NV-001.md) — SH-FIN-HUMAN-001
 - [Red Wash purchase and closing-rights schedule](../../legal/evidence/assets-rights/SH-LEGAL-READ-RW-001.md) — SH-FIN-HUMAN-001
 - [Campus and operating-site tenure review](../../legal/evidence/assets-rights/SH-LEGAL-READ-TENURE-001.md) — SH-FIN-HUMAN-001
+- [Legal reader draft visual review](../../legal/evidence/assets-rights/drafts/qa/REVIEW.md) — SH-FIN-HUMAN-001
 - [Advisory engagement and outcome terms](../../legal/evidence/commercial/SH-LEGAL-READ-ADV-001.md) — SH-FIN-HUMAN-001
 - [Atlas licensing and amendment evidence](../../legal/evidence/commercial/SH-LEGAL-READ-ATL-001.md) — SH-FIN-HUMAN-001
 - [Colocation orders and SLA review](../../legal/evidence/commercial/SH-LEGAL-READ-COLO-001.md) — SH-FIN-HUMAN-001
@@ -51,6 +58,9 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Advisory carry and workforce instrument boundaries](../../legal/evidence/corporate/SH-LEGAL-READ-CARRY-001.md) — SH-FIN-HUMAN-001
 - [Legal entities and separate books](../../legal/evidence/corporate/SH-LEGAL-READ-ENTITY-001.md) — SH-FIN-HUMAN-001
 - [ARU transition and retention obligations](../../legal/evidence/corporate/SH-LEGAL-READ-HR-001.md) — SH-FIN-HUMAN-001
+- [Complete legal source publication — delivery record](../../legal/full-text/CLOSEOUT.md) — SH-FIN-HUMAN-001
+- [Full-length legal source audit](../../legal/full-text/SOURCE_AUDIT.md) — SH-FIN-HUMAN-001
+- [Commercial and accounting-tax visual review](../../legal/full-text/qa/commercial-tax/REVIEW.md) — SH-FIN-HUMAN-001
 - [Draft instrument index](../../legal/gap-instruments/PACKAGE_INDEX.md) — SH-FIN-HUMAN-001
 - [Case walkthroughs, reconciliations and decision import](../../legal/gap-instruments/PRACTICAL_WORK.md) — SH-FIN-HUMAN-001
 - [Seventeen legal gap packages — drafting and validation record](../../legal/gap-instruments/RESULTS.md) — SH-FIN-HUMAN-001

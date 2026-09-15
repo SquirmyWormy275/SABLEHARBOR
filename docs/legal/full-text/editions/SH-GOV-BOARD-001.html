@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SABLE HARBOR — BOARD AND CAPITAL GOVERNANCE — full source edition</title><style>@page { size: Letter; margin: 0.68in 0.66in 0.68in; }
+* { box-sizing: border-box; }
+html { color: #20282c; background: #edf0f1; }
+body { margin: 0; font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.43; }
+.edition-header { display: flex; justify-content: space-between; align-items: center; gap: 24px; border-bottom: 2px solid #26383d; padding-bottom: 15px; margin-bottom: 14px; }
+.edition-header img { max-width: 245px; max-height: 65px; object-fit: contain; object-position: left center; }
+.edition-header span { color: #515e63; font-size: 8pt; letter-spacing: 0.8px; text-align: right; }
+.edition-note { padding: 10px 12px; border-left: 3px solid #958367; background: #f6f4ef; font-size: 9pt; line-height: 1.4; margin: 0 0 22px; }
+.edition-note p { margin: 0 0 4px; }
+.edition-note p:last-child { margin: 0; }
+h1 { font-size: 23pt; line-height: 1.15; margin: 0 0 18px; font-weight: 600; }
+h2 { font-size: 15pt; line-height: 1.2; margin: 23px 0 9px; }
+h3 { font-size: 12pt; line-height: 1.3; margin: 18px 0 7px; }
+h4,h5,h6 { font-size: 11pt; margin: 15px 0 6px; }
+h1,h2,h3,h4,h5,h6 { break-after: avoid; overflow-wrap: anywhere; }
+p { margin: 0 0 11px; orphans: 3; widows: 3; }
+li { margin: 0 0 5px; orphans: 2; widows: 2; }
+ul,ol { padding-left: 23px; margin: 8px 0 13px; }
+li > p { margin-bottom: 6px; }
+a { color: #294e60; text-decoration: underline; text-underline-offset: 2px; overflow-wrap: anywhere; }
+code { font-family: 'DejaVu Sans Mono', monospace; font-size: 0.88em; overflow-wrap: anywhere; }
+pre { font-size: 9.5pt; white-space: pre-wrap; overflow-wrap: anywhere; background: #f2f4f4; padding: 10px; border: 1px solid #d8dfe0; }
+blockquote { border-left: 2px solid #929fa4; margin: 12px 0; padding: 0 15px; color: #39464b; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0 17px; table-layout: auto; font-size: 10.5pt; line-height: 1.35; }
+thead { display: table-header-group; }
+tfoot { display: table-footer-group; }
+th { background: #e9eef0; font-weight: 600; text-align: left; }
+th,td { padding: 7px 8px; border-bottom: 1px solid #cbd3d6; vertical-align: top; overflow-wrap: anywhere; }
+tr { break-inside: avoid; }
+hr { border: 0; border-top: 1px solid #cbd3d6; margin: 19px 0; }
+article img { max-width: 100%; height: auto; }
+.source-identity { margin-top: 24px; border-top: 1px solid #b7c1c5; padding-top: 10px; font-size: 8pt; color: #516168; overflow-wrap: anywhere; }
+@media screen { body { max-width: 900px; margin: 24px auto; padding: 48px 54px; background: white; box-shadow: 0 2px 16px #18313b12; } }
+@media screen and (max-width: 600px) { body { margin: 0; padding: 22px 18px; } h1 { font-size: 21pt; } .edition-header { gap: 12px; } .edition-header img { max-width: 55%; } table { display: block; overflow-x: auto; } }
+@media print { html { background: white; } a { text-decoration: none; } }
+/* Source metadata uses Markdown soft line breaks; retain those readable lines. */
+article p:has(> strong:first-child) { white-space: pre-line; }
+th,td { min-width: 5em; }
+/* Provenance remains in the editable HTML and manifest; do not create empty PDF tail pages. */
+@media print { .source-identity { display: none; } }
+
+/* Keep the complete closing paragraph on one page in this formation record. */
+article[data-document-id="SH-IND-COR-001"] > p:last-child { break-inside: avoid; }
+article[data-document-id="SH-IND-HR-001"] th:first-child,
+article[data-document-id="SH-IND-HR-001"] td:first-child { min-width: 8em; }
+/* Chromium does not consistently honor widows/orphans; keep ordinary clauses intact. */
+article p { break-inside: avoid; }
+/* Wrap ordinary table words at spaces; long machine paths retain code wrapping. */
+th,td { overflow-wrap: normal; }
+@media screen and (max-width: 600px) {
+  th,td { min-width: 8em; }
+}
+</style></head>
+<body><header class="edition-header"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDE2MDAgNTAwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+PHRpdGxlIGlkPSJ0aXRsZSI+U2FibGUgSGFyYm9yIOKAlCBwcmltYXJ5IGhvcml6b250YWw8L3RpdGxlPjxkZXNjIGlkPSJkZXNjIj5JbmRpdmlkdWFsIHByaW1hcnkgaG9yaXpvbnRhbCBsb2dvIGFzc2V0IGZvciBTYWJsZSBIYXJib3IuPC9kZXNjPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDgwLjAwMCwxMTAuMDAwKSBzY2FsZSgyLjMzMzMzMzMzKSI+PHJlY3QgeD0iOCIgeT0iOCIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjIwIiBmaWxsPSIjMTAxMjE0Ii8+PHJlY3QgeD0iOCIgeT0iOCIgd2lkdGg9IjIwIiBoZWlnaHQ9Ijc0IiBmaWxsPSIjMTAxMjE0Ii8+PHBvbHlnb24gcG9pbnRzPSI4LjAwMCw2Mi4wMDAgNzguMDAwLDYyLjAwMCA2OC4wMDAsODIuMDAwIDguMDAwLDgyLjAwMCIgZmlsbD0iIzEwMTIxNCIvPjxyZWN0IHg9IjE2IiB5PSI5MiIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjIwIiBmaWxsPSIjMTAxMjE0Ii8+PHJlY3QgeD0iOTIiIHk9IjM4IiB3aWR0aD0iMjAiIGhlaWdodD0iNzQiIGZpbGw9IiMxMDEyMTQiLz48cG9seWdvbiBwb2ludHM9IjQyLjAwMCwzOC4wMDAgMTEyLjAwMCwzOC4wMDAgMTEyLjAwMCw1OC4wMDAgNTIuMDAwLDU4LjAwMCIgZmlsbD0iIzEwMTIxNCIvPjxyZWN0IHg9IjU0IiB5PSI1NCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIiBmaWxsPSIjQzQ1MTI0Ii8+PC9nPjxnIGZpbGw9IiMxMDEyMTQiPjxwYXRoIGQ9Ik02NTIgLTI0Qzk5MCAtMjQgMTIwOSAxNTIgMTIwOSA0MjBDMTIwOSA2MzMgMTA3MSA3NjIgNzcyIDgzM0w2MTEgODcxQzQwNiA5MjAgMzI2IDk4MiAzMjYgMTA5MEMzMjYgMTIyNSA0NTMgMTMyMCA2MzMgMTMyMEM4MjEgMTMyMCA5NDMgMTIxNSA5NTQgMTA0NEgxMTY5QzExNjAgMTMzNSA5NTcgMTUxNCA2MzYgMTUxNEMzMTYgMTUxNCAxMDUgMTM0MSAxMDUgMTA3OUMxMDUgODczIDIzNyA3NDggNTM4IDY3N0w3MDEgNjM4QzkwOCA1ODkgOTg3IDUyMyA5ODcgNDA4Qzk4NyAyNjMgODU0IDE3MCA2NTIgMTcwQzQyOSAxNzAgMjk4IDI4NiAyOTcgNDgzSDc1Qzc1IDE2OCAyOTUgLTI0IDY1MiAtMjRaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MzAuMDAwLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTE2IDBIMjUyTDM4OCAzODdIOTg5TDExMjEgMEgxMzYyTDgyNSAxNDkwSDU1N1pNNDU1IDU3NiA1NDggODQwQzU4OSA5NjMgNjMyIDEwOTQgNjkyIDEyODdDNzUxIDEwOTQgNzkzIDk2MyA4MzQgODQwTDkyNCA1NzZaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MDguNTExLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTEzNiAwSDcxMEMxMDYyIDAgMTIzOSAxNjYgMTIzOSA0MTlDMTIzOSA2MzEgMTEwMyA3NDggOTMwIDc3MlY3NzRDMTA4NiA4MjIgMTE4MCA5MjcgMTE4MCAxMDk4QzExODAgMTMzNyAxMDAwIDE0OTAgNjkzIDE0OTBIMTM2Wk0zNTYgMTg3VjY2NUg3MDRDOTAxIDY2NSAxMDEzIDU3MSAxMDEzIDQyMEMxMDEzIDI2OCA4OTggMTg3IDY5NiAxODdaTTM1NiA4NDhWMTMwM0g2OTBDODU5IDEzMDMgOTYwIDEyMTUgOTYwIDEwNzVDOTYwIDkzNSA4NTkgODQ4IDY5MCA4NDhaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1OTIuMDMyLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTEzNiAwSDEwNjNWMTk1SDM1OFYxNDkwSDEzNloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDY3MS45NjYsMjgwLjI0MCkgc2NhbGUoMC4wNTI3MzQzOCwtMC4wNTI3MzQzOCkiLz48cGF0aCBkPSJNMTM2IDBIMTEzOFYxOTVIMzU4VjY2M0gxMDgwVjg1NkgzNThWMTI5NUgxMTM4VjE0OTBIMTM2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzQxLjM1NCwyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjxwYXRoIGQ9Ik0xMzYgMEgzNThWNjY1SDEwOTlWMEgxMzIxVjE0OTBIMTA5OVY4NTlIMzU4VjE0OTBIMTM2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODc4LjM5MiwyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjxwYXRoIGQ9Ik0xNiAwSDI1MkwzODggMzg3SDk4OUwxMTIxIDBIMTM2Mkw4MjUgMTQ5MEg1NTdaTTQ1NSA1NzYgNTQ4IDg0MEM1ODkgOTYzIDYzMiAxMDk0IDY5MiAxMjg3Qzc1MSAxMDk0IDc5MyA5NjMgODM0IDg0MEw5MjQgNTc2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTY2LjAyNiwyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjxwYXRoIGQ9Ik0xMzYgMEgzNThWNTY0SDY4OEM2OTEgNTY0IDY5NSA1NjQgNjk4IDU2NEw5OTUgMEgxMjQ1TDkyMyA2MDFDMTEwOSA2NjggMTIyMiA4MTggMTIyMiAxMDI2QzEyMjIgMTMxMSAxMDIyIDE0OTAgNzAzIDE0OTBIMTM2Wk0zNTggNzUzVjEyOThINjkzQzg4NSAxMjk4IDEwMDMgMTE5NCAxMDAzIDEwMjZDMTAwMyA4NTggODg2IDc1MyA2OTQgNzUzWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTA0OS41NDcsMjgwLjI0MCkgc2NhbGUoMC4wNTI3MzQzOCwtMC4wNTI3MzQzOCkiLz48cGF0aCBkPSJNMTM2IDBINzEwQzEwNjIgMCAxMjM5IDE2NiAxMjM5IDQxOUMxMjM5IDYzMSAxMTAzIDc0OCA5MzAgNzcyVjc3NEMxMDg2IDgyMiAxMTgwIDkyNyAxMTgwIDEwOThDMTE4MCAxMzM3IDEwMDAgMTQ5MCA2OTMgMTQ5MEgxMzZaTTM1NiAxODdWNjY1SDcwNEM5MDEgNjY1IDEwMTMgNTcxIDEwMTMgNDIwQzEwMTMgMjY4IDg5OCAxODcgNjk2IDE4N1pNMzU2IDg0OFYxMzAzSDY5MEM4NTkgMTMwMyA5NjAgMTIxNSA5NjAgMTA3NUM5NjAgOTM1IDg1OSA4NDggNjkwIDg0OFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDExMjkuMjcwLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTc2NiAtMjRDMTE2MyAtMjQgMTQ1MiAyODggMTQ1MiA3NDRDMTQ1MiAxMjAyIDExNjMgMTUxNCA3NjYgMTUxNEMzNjkgMTUxNCA4MSAxMjAyIDgxIDc0NEM4MSAyODkgMzY5IC0yNCA3NjYgLTI0Wk03NjYgMTc5QzUwOSAxNzkgMzA0IDM4MSAzMDQgNzQ0QzMwNCAxMTA5IDUwOSAxMzExIDc2NiAxMzExQzEwMjMgMTMxMSAxMjI5IDExMDkgMTIyOSA3NDRDMTIyOSAzODEgMTAyMyAxNzkgNzY2IDE3OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEyMDkuMjA1LDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTEzNiAwSDM1OFY1NjRINjg4QzY5MSA1NjQgNjk1IDU2NCA2OTggNTY0TDk5NSAwSDEyNDVMOTIzIDYwMUMxMTA5IDY2OCAxMjIyIDgxOCAxMjIyIDEwMjZDMTIyMiAxMzExIDEwMjIgMTQ5MCA3MDMgMTQ5MEgxMzZaTTM1OCA3NTNWMTI5OEg2OTNDODg1IDEyOTggMTAwMyAxMTk0IDEwMDMgMTAyNkMxMDAzIDg1OCA4ODYgNzUzIDY5NCA3NTNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMzAwLjg0NywyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjwvZz48cmVjdCB4PSI0MzAiIHk9IjMwNi4yNCIgd2lkdGg9IjkzOS43NzA4NTkzNzQ5OTk5IiBoZWlnaHQ9IjQiIGZpbGw9IiNDNDUxMjQiLz48L3N2Zz4=" alt="corporate"><span>LEGAL RECORDS<br>FULL SOURCE EDITION</span></header>
+<aside class="edition-note"><p><strong>Draft publication design · exact-file review required</strong></p><p>Complete source text follows. The source’s own status and limitations remain in force; this edition does not establish execution, filing or approval.</p></aside>
+<article id="source-content" data-document-id="SH-GOV-BOARD-001"><h1>SABLE HARBOR — BOARD AND CAPITAL GOVERNANCE</h1>
+<p><strong>Document ID:</strong> <code>SH-GOV-BOARD-001</code>
+<strong>Version:</strong> 1.0.1 | <strong>Effective:</strong> September 2, 2026 | <strong>Revised:</strong> September 6, 2026 | <strong>State:</strong> LOCKED
+<strong>Owner:</strong> Corporate Governance | <strong>Approving body:</strong> Board | <strong>Distribution:</strong> Internal
+<strong>Structured record:</strong> <code>structured/board_and_committees.json</code>
+<strong>Related:</strong> board evolution, committee charters, financing | <strong>Cross-reference:</strong> <code>BOARD_EVOLUTION_2016_2026.md</code>; <code>GOVERNANCE_CONSTITUTION.md</code></p>
+<p><strong>Revision authority:</strong> <a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md#close-001---daniel-mercer">September 6 canon closeout, CLOSE-001</a>.
+Version 1.0.1 reconciles the founder's name following the repository owner's explicit approval.
+The original September 2 effective date and board approval history are retained; this editorial
+revision does not assert a new board meeting or change any director or committee appointment.</p>
+<h2>2026 board</h2>
+<p>Sable Harbor has one nine-member U.S.-style unitary board. The CEO and Chair are separate.</p>
+<table>
+<thead>
+<tr>
+<th>Director</th>
+<th>Capacity</th>
+<th style="text-align:right">Joined</th>
+<th>Institutional contribution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Margaret “Maggie” Kincaid</td>
+<td>Independent Chair (Chair since 2024)</td>
+<td style="text-align:right">2023</td>
+<td>Mining/heavy-industrial operating governance</td>
+</tr>
+<tr>
+<td>Daniel Mercer</td>
+<td>Founder, CEO, director; former Chair</td>
+<td style="text-align:right">2016</td>
+<td>Enterprise coherence and founder conviction without sovereignty</td>
+</tr>
+<tr>
+<td>Priya Raman</td>
+<td>Founder, director</td>
+<td style="text-align:right">2016</td>
+<td>Product and technical substrate</td>
+</tr>
+<tr>
+<td>Jon Bell</td>
+<td>Founder, non-management director</td>
+<td style="text-align:right">2016</td>
+<td>Institutional continuity and commercial skepticism</td>
+</tr>
+<tr>
+<td>Thomas “Tom” Calder</td>
+<td>Independent; Audit &amp; Compliance Chair</td>
+<td style="text-align:right">2022</td>
+<td>Public-company reporting, audit, and controls</td>
+</tr>
+<tr>
+<td>Evan Mercer</td>
+<td>Harrison Vale Partners director</td>
+<td style="text-align:right">2021</td>
+<td>Technology growth, repeatability, software economics</td>
+</tr>
+<tr>
+<td>Marianne Voss</td>
+<td>Wolf Ridge Holdings director</td>
+<td style="text-align:right">2022</td>
+<td>Long-duration industrial capital, assets, and cycles</td>
+</tr>
+<tr>
+<td>Dr. Lilia Maratovna Galiullina</td>
+<td>Independent; Technology &amp; Operations Chair</td>
+<td style="text-align:right">2020</td>
+<td>Applied mathematics, scientific computing, physical reality</td>
+</tr>
+<tr>
+<td>Hendrik “Harry” van der Velde</td>
+<td>Independent; Finance &amp; Investment Chair</td>
+<td style="text-align:right">2019</td>
+<td>Ag-industrial operations, finance, capital discipline, cycle memory</td>
+</tr>
+</tbody>
+</table>
+<p>The founder and CEO is <strong>Daniel Mercer</strong> (<code>DIR-DANIEL</code>). The September 6 decision supersedes
+version 1.0.0's statement that his surname was not supplied. Evan Mercer (<code>DIR-MERCER</code>) remains
+the distinct Harrison Vale director; this naming decision establishes no family relationship.</p>
+<h2>Director biographies</h2>
+<p>Kincaid joined in 2023 after a mining/heavy-industrial operating and governance career and became independent Chair when Daniel voluntarily separated the roles in 2024. Calder joined in 2022 as the independent reporting/control specialist; his mandate is distinct from Harry's capital mandate.</p>
+<p>Evan Mercer is Chicago-connected and joined with Harrison Vale's 2021 financing. He asks whether deployment repeats, margins are durable, product focus holds, and the service/product relationship is disciplined. Voss joined with Wolf Ridge in 2022 and brings physical-asset, commodity, industrial-family-capital, and infrastructure judgment. Evan Mercer asks, “Does this scale?” Voss asks, “Does this survive the cycle?” Neither is a caricature or constituency veto-holder.</p>
+<p>Galiullina was born in Ufa, Bashkir ASSR, Soviet Union, in the mid-1960s working chronology. Her late-Soviet applied-mathematics/computational-science formation survived a post-Soviet transition; she came to the United States around 2001–2002 and built a major second act at the University of Illinois Urbana-Champaign through research/postdoctoral/scientific-computing work and deep ties to computer science, scientific computing, and student science programs. Her posture is that computation helps understand physical reality; it does not replace it.</p>
+<p>Van der Velde is a Dutch immigrant who grew up around DeMotte, Indiana and the agricultural Midwest. He studied feed/animal sciences at Kansas State, began in animal-feed/agricultural operations, accepted an opportunity at Harvard Business School rather than returning permanently to the farm, and moved into major ag-industrial finance/CFO leadership. His final fictional employer remains PROVISIONAL. He was the first substantial independent director in 2019.</p>
+<h2>Evolution</h2>
+<ul>
+<li><strong>2016–2018:</strong> Daniel, Priya, and Jon; Daniel is CEO and Chair.</li>
+<li><strong>2019:</strong> van der Velde adds the first independent capital/industrial voice.</li>
+<li><strong>2020:</strong> Galiullina adds independent scientific/technical depth.</li>
+<li><strong>2021:</strong> Harrison Vale financing brings Evan Mercer.</li>
+<li><strong>2022:</strong> Wolf Ridge brings Voss; Calder adds independent audit/control depth.</li>
+<li><strong>2023:</strong> Kincaid adds mature industrial governance.</li>
+<li><strong>2024:</strong> Daniel voluntarily separates CEO and Chair; Kincaid becomes Chair.</li>
+<li><strong>2025–2026:</strong> five standing committees harden as complexity grows; this structure is not retroactive.</li>
+</ul>
+<h2>Financing record</h2>
+<p>Harrison Vale Partners, a Chicago-anchored vertical enterprise/data/industrial-software growth investor, led approximately $48 million in 2021 after the Crossing-era breakthrough. Proceeds supported repeatability, scaling, productization, security/reliability, and commercial growth. The financing did not cause or rescue the Crossing.</p>
+<p>Wolf Ridge Holdings, Chicago/Midwest permanent or very long-duration industrial capital with roots in family capital, infrastructure, resources, specialty manufacturing, and industrial technology, led approximately $135 million in 2022 at approximately $900 million post-money. There was no founder secondary; working post-round ownership was approximately 66.5% insiders and 33.5% outside capital.</p>
+<p>Terms are genuinely balanced: no founder dictatorship, investor control, ordinary-operations veto, privileged commercial-information channel, or informal pressure through future financing.</p>
+<h2>Standing committees and charters</h2>
+<p>Each committee supports the board and does not displace lawful board or management authority. Committee chairs control agendas and report material conclusions and dissent. Investor-appointed directors act for Sable Harbor, disclose conflicts, and recuse where appropriate.</p>
+<p>Formal separately controlled charters are published under <a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/docs/governance/committees/README.md"><code>committees/</code></a>; the summaries below reconcile to those instruments.</p>
+<h3>Audit &amp; Compliance</h3>
+<p><strong>Members:</strong> Calder (Chair), Galiullina, Kincaid. Oversees financial reporting/control, compliance, whistleblowing, material adverse findings, and independent assurance interfaces. It does not settle the still-OPEN Internal Audit operating model.</p>
+<h3>Finance &amp; Investment</h3>
+<p><strong>Members:</strong> van der Velde (Chair), Voss, Evan Mercer, Daniel Mercer. Oversees capital allocation, liquidity, leverage, guarantees, major investment and acquisition economics, and financial exposure. It applies reserved matters without becoming an operating investment desk.</p>
+<h3>Technology &amp; Operations</h3>
+<p><strong>Members:</strong> Galiullina (Chair), Raman, Kincaid, Evan Mercer. Oversees material technology/model risk, cybersecurity posture, physical operational exposure, asset integrity, reliability, and the boundary between computation and reality.</p>
+<h3>Compensation &amp; Human Capital</h3>
+<p><strong>Members:</strong> Kincaid (Chair), Galiullina, van der Velde. Oversees executive compensation, succession, leadership fitness, human-capital philosophy, and cultural health, including decision-quality and respectful candor.</p>
+<h3>Governance &amp; Nominating</h3>
+<p><strong>Members:</strong> Kincaid (Chair), Calder, Bell. Oversees board composition, independence, conflicts, committee architecture, governance effectiveness, and nominations. It prevents continuity from becoming hereditary power.</p>
+<h2>Conflict integrity</h2>
+<p>Directors steward Sable Harbor, not appointing capital. Actual or apparent conflicts require disclosure, independent consideration, and recusal where appropriate. Harrison Vale and Wolf Ridge receive full board voice but no private operational veto, privileged commercial access, or special channel outside proper governance.</p>
+<h2>Supersession</h2>
+<p>The earlier PROVISIONAL financing/director proposal is retained as historical intellectual record and marked SUPERSEDED. It must not be used as current governance.</p>
+</article>
+<aside class="source-identity"><strong>Edition provenance</strong><br>SH-GOV-BOARD-001<br>Source: <a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md">docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md</a><br>Source revision: 79437a778d4a4d5097a3cdaa36d7d8ab13217536<br>Source SHA-256: dc1e2e3ea6e7ea8d364eae87bd890a8c79a5a577a7554ed371cda3810ea945a8</aside>
+</body></html>

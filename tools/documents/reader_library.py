@@ -270,7 +270,8 @@ def populate(
     for path, record in audited.items():
         evidence = {key: value for key, value in record.items() if key != "source_state_excerpt"}
         db.execute("INSERT INTO reader_counterpart_audit VALUES (?,?,?)",
-                   (path, record["disposition"], json.dumps(evidence, sort_keys=True)))
+                   (path, record["disposition"], json.dumps(evidence, sort_keys=True,
+                                                        ensure_ascii=False, separators=(",", ":"))))
     for path, heading, extension, collection, _, _ in rows:
         if extension != "md":
             continue

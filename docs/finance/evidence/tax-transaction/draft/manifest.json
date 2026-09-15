@@ -1,0 +1,27 @@
+{
+  "artifacts": {
+    "docs/finance/evidence/tax-transaction/draft/WORKING_PAPER.md": "646b1c0a36d3b0e63d0160d9ccd31aa27e38c79dd1309e810c74fcd32a290640",
+    "docs/finance/evidence/tax-transaction/draft/qa/paper-01.png": "855fcb99c7e083256a57e5c0e4028a8035bbbec995961ed277879e983c12f824",
+    "docs/finance/evidence/tax-transaction/draft/qa/workbook-01.png": "ad8af194f834988b620eca1a945b62fa084f51f820aeeabf53fd4a02df128a7b",
+    "docs/finance/evidence/tax-transaction/draft/qa/workbook-02.png": "acc64fbbf577629575dc19f41fce6c180ed7e49f47acdf7de873b429ba54a358",
+    "docs/finance/evidence/tax-transaction/draft/qa/workbook-03.png": "11981825b1b7e2081de3386f949ce2c0c8fec57a5b0354963e695092a8643fc3",
+    "docs/finance/evidence/tax-transaction/draft/qa/workbook-04.png": "7f05c29ec6b4f55770002ddb41f3ac91a847f2b2ce4634fffc36cfeee3e6c54a",
+    "docs/finance/evidence/tax-transaction/draft/qa/workbook-05.png": "bdaac39a9cc11198126dfa33d015bf5c79bef6822c4d896c4da836747d72e8ec",
+    "docs/finance/evidence/tax-transaction/draft/qa/workbook-06.png": "141e4a9b0492a9006b3b1b2fa44e9184ec75f3a11db2ed66e0addfe98b1f13a6",
+    "docs/finance/evidence/tax-transaction/draft/qa/workbook-07.png": "528e9aae156d3bc84c6935f716823ff8ea17644486fb3b9309da5a105ba3fa09",
+    "docs/finance/evidence/tax-transaction/draft/qa/workbook-08.png": "8e1874d0ace04ecac2696b056d7a9170f02423bbe129a34844bff0053d59753f",
+    "docs/finance/evidence/tax-transaction/draft/qa/workbook-09.png": "9314260f99af25b1e5584b4f6ace289a99bee11780b755a7028d9c198b1dc973",
+    "docs/finance/evidence/tax-transaction/draft/render-manifest.json": "727c2e446c44ffca83fe38b850b58c05599e8cccde733e66f67b860c69f887e2",
+    "docs/finance/evidence/tax-transaction/draft/workbook-map.json": "5cf018afac1c10a5dfbb20e9ff654f3019ec99f58bed548123f1d3655b13e894",
+    "docs/finance/evidence/tax-transaction/draft/working-paper.pdf": "f62914ce436b8f527bc12ae07cd010e60b34851c50813718f3aeeb04ed92b3de",
+    "docs/finance/evidence/tax-transaction/draft/working-papers.xlsx": "1e6dc4ca3cc36015b954823dd24697f2da8eae7f1570620670b4993741eeec5d"
+  },
+  "renderer_sha256": "6c941b14b2d8ae30ac5d42c8ed84ebba9c51f2db8f7b51106e065b4e534dafb1",
+  "source_dependencies": {
+    "assets/brand/logos/sable-harbor__primary-horizontal.svg": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076",
+    "docs/finance/evidence/coverage/build.py": "5e3d29fec63a8c631ee2f05d7ef41a81901ff413c0c1b33bde7b9453f8e7abcc",
+    "tools/documents/build_controlled_publications.py": "0552479a76b94d128a39e9f9a4a12b87f4ab876e47926918cda3c5aa0a3d872a"
+  },
+  "source_register_sha256": "45ce6988803f17a314fe6196c2470f1ca7b62087a12b5ef6b7170692b3744fd2",
+  "status": "DRAFT_FOR_EXACT_FILE_REVIEW"
+}

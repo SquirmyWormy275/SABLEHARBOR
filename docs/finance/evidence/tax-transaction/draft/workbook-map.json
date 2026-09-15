@@ -1,0 +1,141 @@
+[
+  {
+    "columns": [
+      "year",
+      "month",
+      "scenario",
+      "stock_consideration_usd",
+      "cash_acquired_usd",
+      "acquisition_investing_cash_usd",
+      "parent_acquisition_capital_usd",
+      "transaction_operating_expense_usd",
+      "net_external_financing_usd",
+      "net_cash_change_usd",
+      "source",
+      "available_at",
+      "created_on",
+      "record_origin",
+      "fact_state",
+      "period_role"
+    ],
+    "first_data_row": 5,
+    "row_count": 1,
+    "sheet": "01 acquisition_cashflow_bridge",
+    "source": "docs/finance/evidence/tax-transaction/source/acquisition_cashflow_bridge.csv",
+    "source_sha256": "3058362e23b9c4448bba01db664d8fc31774e032a49adb5bc0c4a5c62cc826d6"
+  },
+  {
+    "columns": [
+      "year",
+      "month",
+      "entity",
+      "scenario",
+      "preallocation_net_income_usd",
+      "book_only_fee_expense_usd",
+      "book_only_fee_revenue_usd",
+      "postallocation_net_income_usd",
+      "current_tax_change_from_allocation_usd",
+      "deferred_tax_change_from_allocation_usd",
+      "tax_treatment",
+      "available_at",
+      "created_on",
+      "record_origin",
+      "fact_state",
+      "period_role"
+    ],
+    "first_data_row": 5,
+    "row_count": 72,
+    "sheet": "02 enterprise_tax_allocation_b",
+    "source": "docs/finance/evidence/tax-transaction/source/enterprise_tax_allocation_bridge.csv",
+    "source_sha256": "6b2174fe67ae580a8f2fc8d138ab07df96af69920d2467f8a5ce86a3f2840f35"
+  },
+  {
+    "columns": [
+      "amount_usd",
+      "measure"
+    ],
+    "first_data_row": 5,
+    "row_count": 18,
+    "sheet": "03 acquisition_ppa",
+    "source": "docs/finance/evidence/tax-transaction/acquisition_ppa.csv",
+    "source_sha256": "bd024c5ac926ed98ee89876e0bb4f32a3e80c5e0bea47c7bb227ad3c172b8fa0"
+  },
+  {
+    "columns": [
+      "month",
+      "sustaining_additions_usd",
+      "catchup_additions_usd",
+      "phase1_additions_usd",
+      "legacy_depreciation_usd",
+      "new_program_depreciation_usd",
+      "ppe_gross_usd",
+      "ppe_accumulated_depreciation_usd"
+    ],
+    "first_data_row": 5,
+    "row_count": 12,
+    "sheet": "04 aru_2026_assets",
+    "source": "docs/finance/evidence/tax-transaction/aru_2026_assets.csv",
+    "source_sha256": "6039079a477cd1c21d3419631ed8ffd5089f711ad5599be627d1bfa19da34c79"
+  },
+  {
+    "columns": [
+      "month",
+      "opening_term_usd",
+      "term_principal_usd",
+      "term_interest_usd",
+      "closing_term_usd",
+      "lease_principal_usd",
+      "lease_interest_usd",
+      "closing_lease_usd",
+      "debt_issue_amortization_usd",
+      "deferred_debt_issue_cost_usd",
+      "revolver_draw_usd"
+    ],
+    "first_data_row": 5,
+    "row_count": 12,
+    "sheet": "05 aru_2026_debt",
+    "source": "docs/finance/evidence/tax-transaction/aru_2026_debt.csv",
+    "source_sha256": "f4fe40dcd3672ed876be4b539428c92fbeb8ed441f7f4fd1f610529c4ebb2d53"
+  },
+  {
+    "columns": [
+      "month",
+      "book_pretax_income_usd",
+      "cumulative_book_pretax_income_usd",
+      "cumulative_goodwill_tax_deduction_usd",
+      "cumulative_taxable_income_usd",
+      "current_tax_expense_usd",
+      "deferred_tax_expense_usd",
+      "current_tax_cash_paid_usd",
+      "current_tax_settlement_signed_balance_usd",
+      "deferred_tax_asset_reserves_usd",
+      "deferred_tax_asset_interim_loss_usd",
+      "deferred_tax_liability_goodwill_usd",
+      "goodwill_tax_basis_usd",
+      "goodwill_book_basis_usd",
+      "initial_goodwill_excess_excluded_from_opening_dtl_usd"
+    ],
+    "first_data_row": 5,
+    "row_count": 12,
+    "sheet": "06 aru_2026_tax_rollforward",
+    "source": "docs/finance/evidence/tax-transaction/aru_2026_tax_rollforward.csv",
+    "source_sha256": "323a8532e46f3bf9cf3e39bf5666e5745cd842011372b26726df632a77f14ee0"
+  },
+  {
+    "columns": [
+      "year",
+      "entity",
+      "signed_usd",
+      "account",
+      "account_name",
+      "type",
+      "debit_balance_usd",
+      "credit_balance_usd"
+    ],
+    "first_data_row": 5,
+    "row_count": 16,
+    "sheet": "07 aru_acquisition_opening_tri",
+    "source": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+    "source_sha256": "33a28e198a5ce5a5d35f751ca8a3fac6aefc04faba4329b6297c7cd560ca02d5"
+  }
+]

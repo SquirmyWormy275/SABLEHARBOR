@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ATLAS MERIDIAN — COMMERCIAL PRODUCT STANDARD — full source edition</title><style>@page { size: Letter; margin: 0.68in 0.66in 0.68in; }
+* { box-sizing: border-box; }
+html { color: #20282c; background: #edf0f1; }
+body { margin: 0; font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.43; }
+.edition-header { display: flex; justify-content: space-between; align-items: center; gap: 24px; border-bottom: 2px solid #26383d; padding-bottom: 15px; margin-bottom: 14px; }
+.edition-header img { max-width: 245px; max-height: 65px; object-fit: contain; object-position: left center; }
+.edition-header span { color: #515e63; font-size: 8pt; letter-spacing: 0.8px; text-align: right; }
+.edition-note { padding: 10px 12px; border-left: 3px solid #958367; background: #f6f4ef; font-size: 9pt; line-height: 1.4; margin: 0 0 22px; }
+.edition-note p { margin: 0 0 4px; }
+.edition-note p:last-child { margin: 0; }
+h1 { font-size: 23pt; line-height: 1.15; margin: 0 0 18px; font-weight: 600; }
+h2 { font-size: 15pt; line-height: 1.2; margin: 23px 0 9px; }
+h3 { font-size: 12pt; line-height: 1.3; margin: 18px 0 7px; }
+h4,h5,h6 { font-size: 11pt; margin: 15px 0 6px; }
+h1,h2,h3,h4,h5,h6 { break-after: avoid; overflow-wrap: anywhere; }
+p { margin: 0 0 11px; orphans: 3; widows: 3; }
+li { margin: 0 0 5px; orphans: 2; widows: 2; }
+ul,ol { padding-left: 23px; margin: 8px 0 13px; }
+li > p { margin-bottom: 6px; }
+a { color: #294e60; text-decoration: underline; text-underline-offset: 2px; overflow-wrap: anywhere; }
+code { font-family: 'DejaVu Sans Mono', monospace; font-size: 0.88em; overflow-wrap: anywhere; }
+pre { font-size: 9.5pt; white-space: pre-wrap; overflow-wrap: anywhere; background: #f2f4f4; padding: 10px; border: 1px solid #d8dfe0; }
+blockquote { border-left: 2px solid #929fa4; margin: 12px 0; padding: 0 15px; color: #39464b; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0 17px; table-layout: auto; font-size: 10.5pt; line-height: 1.35; }
+thead { display: table-header-group; }
+tfoot { display: table-footer-group; }
+th { background: #e9eef0; font-weight: 600; text-align: left; }
+th,td { padding: 7px 8px; border-bottom: 1px solid #cbd3d6; vertical-align: top; overflow-wrap: anywhere; }
+tr { break-inside: avoid; }
+hr { border: 0; border-top: 1px solid #cbd3d6; margin: 19px 0; }
+article img { max-width: 100%; height: auto; }
+.source-identity { margin-top: 24px; border-top: 1px solid #b7c1c5; padding-top: 10px; font-size: 8pt; color: #516168; overflow-wrap: anywhere; }
+@media screen { body { max-width: 900px; margin: 24px auto; padding: 48px 54px; background: white; box-shadow: 0 2px 16px #18313b12; } }
+@media screen and (max-width: 600px) { body { margin: 0; padding: 22px 18px; } h1 { font-size: 21pt; } .edition-header { gap: 12px; } .edition-header img { max-width: 55%; } table { display: block; overflow-x: auto; } }
+@media print { html { background: white; } a { text-decoration: none; } }
+/* Source metadata uses Markdown soft line breaks; retain those readable lines. */
+article p:has(> strong:first-child) { white-space: pre-line; }
+th,td { min-width: 5em; }
+/* Provenance remains in the editable HTML and manifest; do not create empty PDF tail pages. */
+@media print { .source-identity { display: none; } }
+
+/* Keep the complete closing paragraph on one page in this formation record. */
+article[data-document-id="SH-IND-COR-001"] > p:last-child { break-inside: avoid; }
+article[data-document-id="SH-IND-HR-001"] th:first-child,
+article[data-document-id="SH-IND-HR-001"] td:first-child { min-width: 8em; }
+/* Chromium does not consistently honor widows/orphans; keep ordinary clauses intact. */
+article p { break-inside: avoid; }
+/* Wrap ordinary table words at spaces; long machine paths retain code wrapping. */
+th,td { overflow-wrap: normal; }
+@media screen and (max-width: 600px) {
+  th,td { min-width: 8em; }
+}
+</style></head>
+<body><header class="edition-header"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDE2MDAgNTAwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+PHRpdGxlIGlkPSJ0aXRsZSI+U2FibGUgSGFyYm9yIOKAlCBwcmltYXJ5IGhvcml6b250YWw8L3RpdGxlPjxkZXNjIGlkPSJkZXNjIj5JbmRpdmlkdWFsIHByaW1hcnkgaG9yaXpvbnRhbCBsb2dvIGFzc2V0IGZvciBTYWJsZSBIYXJib3IuPC9kZXNjPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDgwLjAwMCwxMTAuMDAwKSBzY2FsZSgyLjMzMzMzMzMzKSI+PHJlY3QgeD0iOCIgeT0iOCIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjIwIiBmaWxsPSIjMTAxMjE0Ii8+PHJlY3QgeD0iOCIgeT0iOCIgd2lkdGg9IjIwIiBoZWlnaHQ9Ijc0IiBmaWxsPSIjMTAxMjE0Ii8+PHBvbHlnb24gcG9pbnRzPSI4LjAwMCw2Mi4wMDAgNzguMDAwLDYyLjAwMCA2OC4wMDAsODIuMDAwIDguMDAwLDgyLjAwMCIgZmlsbD0iIzEwMTIxNCIvPjxyZWN0IHg9IjE2IiB5PSI5MiIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjIwIiBmaWxsPSIjMTAxMjE0Ii8+PHJlY3QgeD0iOTIiIHk9IjM4IiB3aWR0aD0iMjAiIGhlaWdodD0iNzQiIGZpbGw9IiMxMDEyMTQiLz48cG9seWdvbiBwb2ludHM9IjQyLjAwMCwzOC4wMDAgMTEyLjAwMCwzOC4wMDAgMTEyLjAwMCw1OC4wMDAgNTIuMDAwLDU4LjAwMCIgZmlsbD0iIzEwMTIxNCIvPjxyZWN0IHg9IjU0IiB5PSI1NCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIiBmaWxsPSIjQzQ1MTI0Ii8+PC9nPjxnIGZpbGw9IiMxMDEyMTQiPjxwYXRoIGQ9Ik02NTIgLTI0Qzk5MCAtMjQgMTIwOSAxNTIgMTIwOSA0MjBDMTIwOSA2MzMgMTA3MSA3NjIgNzcyIDgzM0w2MTEgODcxQzQwNiA5MjAgMzI2IDk4MiAzMjYgMTA5MEMzMjYgMTIyNSA0NTMgMTMyMCA2MzMgMTMyMEM4MjEgMTMyMCA5NDMgMTIxNSA5NTQgMTA0NEgxMTY5QzExNjAgMTMzNSA5NTcgMTUxNCA2MzYgMTUxNEMzMTYgMTUxNCAxMDUgMTM0MSAxMDUgMTA3OUMxMDUgODczIDIzNyA3NDggNTM4IDY3N0w3MDEgNjM4QzkwOCA1ODkgOTg3IDUyMyA5ODcgNDA4Qzk4NyAyNjMgODU0IDE3MCA2NTIgMTcwQzQyOSAxNzAgMjk4IDI4NiAyOTcgNDgzSDc1Qzc1IDE2OCAyOTUgLTI0IDY1MiAtMjRaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MzAuMDAwLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTE2IDBIMjUyTDM4OCAzODdIOTg5TDExMjEgMEgxMzYyTDgyNSAxNDkwSDU1N1pNNDU1IDU3NiA1NDggODQwQzU4OSA5NjMgNjMyIDEwOTQgNjkyIDEyODdDNzUxIDEwOTQgNzkzIDk2MyA4MzQgODQwTDkyNCA1NzZaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MDguNTExLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTEzNiAwSDcxMEMxMDYyIDAgMTIzOSAxNjYgMTIzOSA0MTlDMTIzOSA2MzEgMTEwMyA3NDggOTMwIDc3MlY3NzRDMTA4NiA4MjIgMTE4MCA5MjcgMTE4MCAxMDk4QzExODAgMTMzNyAxMDAwIDE0OTAgNjkzIDE0OTBIMTM2Wk0zNTYgMTg3VjY2NUg3MDRDOTAxIDY2NSAxMDEzIDU3MSAxMDEzIDQyMEMxMDEzIDI2OCA4OTggMTg3IDY5NiAxODdaTTM1NiA4NDhWMTMwM0g2OTBDODU5IDEzMDMgOTYwIDEyMTUgOTYwIDEwNzVDOTYwIDkzNSA4NTkgODQ4IDY5MCA4NDhaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1OTIuMDMyLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTEzNiAwSDEwNjNWMTk1SDM1OFYxNDkwSDEzNloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDY3MS45NjYsMjgwLjI0MCkgc2NhbGUoMC4wNTI3MzQzOCwtMC4wNTI3MzQzOCkiLz48cGF0aCBkPSJNMTM2IDBIMTEzOFYxOTVIMzU4VjY2M0gxMDgwVjg1NkgzNThWMTI5NUgxMTM4VjE0OTBIMTM2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzQxLjM1NCwyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjxwYXRoIGQ9Ik0xMzYgMEgzNThWNjY1SDEwOTlWMEgxMzIxVjE0OTBIMTA5OVY4NTlIMzU4VjE0OTBIMTM2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODc4LjM5MiwyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjxwYXRoIGQ9Ik0xNiAwSDI1MkwzODggMzg3SDk4OUwxMTIxIDBIMTM2Mkw4MjUgMTQ5MEg1NTdaTTQ1NSA1NzYgNTQ4IDg0MEM1ODkgOTYzIDYzMiAxMDk0IDY5MiAxMjg3Qzc1MSAxMDk0IDc5MyA5NjMgODM0IDg0MEw5MjQgNTc2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTY2LjAyNiwyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjxwYXRoIGQ9Ik0xMzYgMEgzNThWNTY0SDY4OEM2OTEgNTY0IDY5NSA1NjQgNjk4IDU2NEw5OTUgMEgxMjQ1TDkyMyA2MDFDMTEwOSA2NjggMTIyMiA4MTggMTIyMiAxMDI2QzEyMjIgMTMxMSAxMDIyIDE0OTAgNzAzIDE0OTBIMTM2Wk0zNTggNzUzVjEyOThINjkzQzg4NSAxMjk4IDEwMDMgMTE5NCAxMDAzIDEwMjZDMTAwMyA4NTggODg2IDc1MyA2OTQgNzUzWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTA0OS41NDcsMjgwLjI0MCkgc2NhbGUoMC4wNTI3MzQzOCwtMC4wNTI3MzQzOCkiLz48cGF0aCBkPSJNMTM2IDBINzEwQzEwNjIgMCAxMjM5IDE2NiAxMjM5IDQxOUMxMjM5IDYzMSAxMTAzIDc0OCA5MzAgNzcyVjc3NEMxMDg2IDgyMiAxMTgwIDkyNyAxMTgwIDEwOThDMTE4MCAxMzM3IDEwMDAgMTQ5MCA2OTMgMTQ5MEgxMzZaTTM1NiAxODdWNjY1SDcwNEM5MDEgNjY1IDEwMTMgNTcxIDEwMTMgNDIwQzEwMTMgMjY4IDg5OCAxODcgNjk2IDE4N1pNMzU2IDg0OFYxMzAzSDY5MEM4NTkgMTMwMyA5NjAgMTIxNSA5NjAgMTA3NUM5NjAgOTM1IDg1OSA4NDggNjkwIDg0OFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDExMjkuMjcwLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTc2NiAtMjRDMTE2MyAtMjQgMTQ1MiAyODggMTQ1MiA3NDRDMTQ1MiAxMjAyIDExNjMgMTUxNCA3NjYgMTUxNEMzNjkgMTUxNCA4MSAxMjAyIDgxIDc0NEM4MSAyODkgMzY5IC0yNCA3NjYgLTI0Wk03NjYgMTc5QzUwOSAxNzkgMzA0IDM4MSAzMDQgNzQ0QzMwNCAxMTA5IDUwOSAxMzExIDc2NiAxMzExQzEwMjMgMTMxMSAxMjI5IDExMDkgMTIyOSA3NDRDMTIyOSAzODEgMTAyMyAxNzkgNzY2IDE3OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEyMDkuMjA1LDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTEzNiAwSDM1OFY1NjRINjg4QzY5MSA1NjQgNjk1IDU2NCA2OTggNTY0TDk5NSAwSDEyNDVMOTIzIDYwMUMxMTA5IDY2OCAxMjIyIDgxOCAxMjIyIDEwMjZDMTIyMiAxMzExIDEwMjIgMTQ5MCA3MDMgMTQ5MEgxMzZaTTM1OCA3NTNWMTI5OEg2OTNDODg1IDEyOTggMTAwMyAxMTk0IDEwMDMgMTAyNkMxMDAzIDg1OCA4ODYgNzUzIDY5NCA3NTNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMzAwLjg0NywyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjwvZz48cmVjdCB4PSI0MzAiIHk9IjMwNi4yNCIgd2lkdGg9IjkzOS43NzA4NTkzNzQ5OTk5IiBoZWlnaHQ9IjQiIGZpbGw9IiNDNDUxMjQiLz48L3N2Zz4=" alt="corporate"><span>LEGAL RECORDS<br>FULL SOURCE EDITION</span></header>
+<aside class="edition-note"><p><strong>Draft publication design · exact-file review required</strong></p><p>Complete source text follows. The source’s own status and limitations remain in force; this edition does not establish execution, filing or approval.</p></aside>
+<article id="source-content" data-document-id="SH-ATL-017"><h1>ATLAS MERIDIAN — COMMERCIAL PRODUCT STANDARD</h1>
+<p><strong>Document ID:</strong> <code>SH-ATL-017</code><br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Effective:</strong> September 9, 2026<br />
+<strong>State:</strong> <code>LOCKED DIRECTION</code><br />
+<strong>Owner:</strong> Atlas Meridian Product Organization<br />
+<strong>Related:</strong> <code>SH-ATL-016</code>; <code>SH-ADV-007</code>; product/security/data governance</p>
+<h2>1. Product role</h2>
+<p>Atlas Meridian is both a serious enterprise product and the professional substrate through which Sable Harbor Advisory operates. It is not an internal consulting dashboard, not a thin client portal, and not an autonomous decision authority.</p>
+<p>The product must be valuable enough to stand alone for clients while preserving a deeper Sable Harbor professional plane for proprietary methods, cross-matter learning, quality controls and firm-only capability.</p>
+<h2>2. Product editions</h2>
+<p>Atlas is commercialized through capability editions rather than arbitrary feature crippling.</p>
+<h3>Atlas Meridian Core</h3>
+<p>For clients that need secure evidence intake, case/matter workspaces, provenance, search, controlled agents, decision records and transferable workflows.</p>
+<h3>Atlas Meridian Enterprise</h3>
+<p>Adds enterprise tenancy, advanced entitlements, connectors, API access, evaluation tooling, audit export, workflow orchestration, cross-workspace governance, SSO/SCIM and enterprise administration.</p>
+<h3>Atlas Meridian Professional</h3>
+<p>The Sable Harbor-controlled professional plane used by Advisory. It contains firm-only orchestration, methods, quality tooling, protected cross-matter learning and internal professional controls. It is not generally sold as a client edition.</p>
+<h3>Atlas Meridian Managed</h3>
+<p>A service configuration in which Sable Harbor operates agreed client-plane capabilities on the client's behalf under managed-continuity terms.</p>
+<h2>3. Tenant model</h2>
+<p>Every client receives a logically isolated tenant with:</p>
+<ul>
+<li>client identity and contractual boundary;</li>
+<li>environment segmentation as required;</li>
+<li>workspace/matter isolation;</li>
+<li>role-based and attribute-based access controls;</li>
+<li>source/data classification;</li>
+<li>audit logging;</li>
+<li>retention policy mapping;</li>
+<li>export controls;</li>
+<li>support/administrator roles;</li>
+<li>agent/tool entitlement scopes.</li>
+</ul>
+<p>Cross-client memory is prohibited unless material has been lawfully generalized into Sable Harbor reserved professional IP without client-identifying or confidential content.</p>
+<h2>4. Client front door</h2>
+<p>Atlas is the default digital interface for Advisory matters where technically and contractually appropriate. It supports:</p>
+<ul>
+<li>secure file transfer;</li>
+<li>evidence requests;</li>
+<li>connector ingestion;</li>
+<li>chain-of-custody/provenance;</li>
+<li>issue/question registers;</li>
+<li>work products;</li>
+<li>client review and disposition;</li>
+<li>decisions/actions;</li>
+<li>milestones;</li>
+<li>outcome/value schedules;</li>
+<li>acceptance tests;</li>
+<li>transfer packages;</li>
+<li>support and post-matter continuity.</li>
+</ul>
+<p>Email may remain a communication channel, but material matter evidence and decisions should return to the controlled matter record.</p>
+<h2>5. API and connector architecture</h2>
+<p>Atlas Enterprise supports governed connectors and APIs for authorized sources such as ERP, EAM, GIS, document repositories, data warehouses, operational systems, ticketing, financial systems and other client-approved sources.</p>
+<p>Every connector has:</p>
+<ul>
+<li>owner;</li>
+<li>authentication method;</li>
+<li>source scope;</li>
+<li>permissions;</li>
+<li>refresh cadence;</li>
+<li>data classification;</li>
+<li>transformation lineage;</li>
+<li>failure behavior;</li>
+<li>revocation path;</li>
+<li>export/retention handling.</li>
+</ul>
+<p>A connector does not imply authority to act in the source system.</p>
+<h2>6. Agent packaging</h2>
+<p>A deployable agent package includes:</p>
+<ul>
+<li>stable agent identity;</li>
+<li>version;</li>
+<li>purpose;</li>
+<li>system/policy instructions;</li>
+<li>tool list;</li>
+<li>model/runtime dependency;</li>
+<li>input/output schema;</li>
+<li>data entitlements;</li>
+<li>action permissions;</li>
+<li>human owner;</li>
+<li>stop conditions;</li>
+<li>evaluation suite;</li>
+<li>monitoring;</li>
+<li>change history;</li>
+<li>transfer classification;</li>
+<li>rollback procedure.</li>
+</ul>
+<p>Client-transferred agents must not depend silently on Sable Harbor Professional resources that the client does not license.</p>
+<h2>7. Evaluation framework</h2>
+<p>Atlas includes a client-safe evaluation framework capable of testing:</p>
+<ul>
+<li>factual grounding;</li>
+<li>provenance completeness;</li>
+<li>instruction adherence;</li>
+<li>authority boundaries;</li>
+<li>leakage;</li>
+<li>tool misuse;</li>
+<li>unsafe action attempts;</li>
+<li>temporal accuracy;</li>
+<li>known benchmark scenarios;</li>
+<li>regression after model/tool changes.</li>
+</ul>
+<p>Material production agents cannot be updated solely because a new model appears stronger on generic benchmarks. The relevant client task and control tests must pass.</p>
+<h2>8. Audit and provenance</h2>
+<p>For consequential work, Atlas preserves enough information to reconstruct:</p>
+<ul>
+<li>what source entered the system;</li>
+<li>when it was available;</li>
+<li>what transformation occurred;</li>
+<li>what agent/model/tool processed it;</li>
+<li>what output resulted;</li>
+<li>what human reviewed or adopted it;</li>
+<li>what changed later;</li>
+<li>what was transferred to the client.</li>
+</ul>
+<p>This does not require retaining unrestricted hidden model internals. It requires professional-grade observable lineage.</p>
+<h2>9. Licensing unit</h2>
+<p>Default licensing is <strong>institutional/tenant-based</strong>, not per token and not primarily per seat. Seats and usage may influence bands, but the commercial product is the governed enterprise capability.</p>
+<p>Illustrative annual pricing bands for market testing:</p>
+<table>
+<thead>
+<tr>
+<th>Edition</th>
+<th style="text-align:right">Illustrative annual license</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td style="text-align:right">$150K–$350K</td>
+</tr>
+<tr>
+<td>Enterprise</td>
+<td style="text-align:right">$350K–$1.25M</td>
+</tr>
+<tr>
+<td>Managed</td>
+<td style="text-align:right">Enterprise license + managed service</td>
+</tr>
+</tbody>
+</table>
+<p>Pricing is negotiated for data volume, connector complexity, regulated requirements, dedicated environments, support and model/tool cost. These bands are operating calibration and not a promise to market.</p>
+<h2>10. Implementation charges</h2>
+<p>Implementation is separately priced where substantial configuration, data integration, migration, custom connector work, client-specific agent building or controls engineering is required.</p>
+<p>Simple product onboarding should not be inflated into a large Advisory project. Atlas product specialists may lead ordinary product implementation.</p>
+<h2>11. Support tiers</h2>
+<h3>Standard Support</h3>
+<p>Business-hours support, standard severity response, documentation and scheduled releases.</p>
+<h3>Enterprise Support</h3>
+<p>24x7 Severity 1 intake, faster response targets, named technical success ownership, release planning and enhanced operational review.</p>
+<h3>Mission-Critical Support</h3>
+<p>Contracted for high-consequence environments: dedicated escalation, stricter recovery objectives, controlled upgrade windows, enhanced incident review and architecture support.</p>
+<p>Exact SLAs are set contractually and must reflect actual product capability.</p>
+<h2>12. Availability and continuity</h2>
+<p>Production service commitments define:</p>
+<ul>
+<li>service availability target;</li>
+<li>planned-maintenance treatment;</li>
+<li>RTO/RPO where applicable;</li>
+<li>incident severity;</li>
+<li>notification expectations;</li>
+<li>backup/restore scope;</li>
+<li>disaster recovery;</li>
+<li>support escalation;</li>
+<li>service-credit remedies where contracted.</li>
+</ul>
+<p>Sable Harbor does not promise five-nines availability merely for marketing symmetry.</p>
+<h2>13. Security baseline</h2>
+<p>Atlas product security includes, proportionate to edition/environment:</p>
+<ul>
+<li>encryption in transit/at rest;</li>
+<li>modern identity federation;</li>
+<li>MFA for privileged roles;</li>
+<li>least-privilege entitlements;</li>
+<li>secrets management;</li>
+<li>audit logs;</li>
+<li>tenant isolation testing;</li>
+<li>secure development lifecycle;</li>
+<li>vulnerability management;</li>
+<li>dependency/supply-chain controls;</li>
+<li>incident response;</li>
+<li>data-residency handling where contracted;</li>
+<li>privileged-access review;</li>
+<li>controlled production change.</li>
+</ul>
+<h2>14. Data export and termination</h2>
+<p>Clients can export agreed client-owned data, matter records and transferred capability in documented formats. Termination procedures define:</p>
+<ul>
+<li>export window;</li>
+<li>format;</li>
+<li>credentials/keys;</li>
+<li>connector shutdown;</li>
+<li>retained licensed components;</li>
+<li>client data deletion schedule subject to legal hold/professional-record obligations;</li>
+<li>confirmation of disposition.</li>
+</ul>
+<p>Product lock-in may come from value, not hostage-taking.</p>
+<h2>15. Product/advisory boundary</h2>
+<p>Atlas Product owns:</p>
+<ul>
+<li>product roadmap;</li>
+<li>platform engineering;</li>
+<li>reliability/security of the product;</li>
+<li>generalized feature development;</li>
+<li>customer support/product success;</li>
+<li>product documentation;</li>
+<li>product pricing architecture with enterprise approval.</li>
+</ul>
+<p>Advisory owns:</p>
+<ul>
+<li>professional problem definition;</li>
+<li>matter conclusions;</li>
+<li>client intervention design;</li>
+<li>professional review;</li>
+<li>outcome/value commitments;</li>
+<li>client capability transfer as an engagement obligation.</li>
+</ul>
+<p>A product engineer does not become a consultant merely because they support a client matter. A consultant does not own product roadmap merely because a matter reveals a feature request.</p>
+<h2>16. Generalization review</h2>
+<p>Features discovered through Advisory enter product backlog only after a generalization review confirms:</p>
+<ul>
+<li>commercial relevance beyond one client;</li>
+<li>rights to generalize;</li>
+<li>no confidential leakage;</li>
+<li>fit with Atlas product strategy;</li>
+<li>security/control impact;</li>
+<li>supportability;</li>
+<li>evaluation requirements.</li>
+</ul>
+<h2>17. Release management</h2>
+<p>Material releases preserve:</p>
+<ul>
+<li>version history;</li>
+<li>release notes;</li>
+<li>backward compatibility/known breaks;</li>
+<li>migration path;</li>
+<li>evaluation evidence;</li>
+<li>security review;</li>
+<li>rollback plan;</li>
+<li>customer communication where required.</li>
+</ul>
+<p>Transferred client agents/workflows have independent versioning from the Atlas platform so product upgrades do not silently alter client professional logic.</p>
+<h2>18. Product success measures</h2>
+<p>Atlas is measured on more than ARR. Product health includes:</p>
+<ul>
+<li>active consequential use;</li>
+<li>investigation completion quality;</li>
+<li>provenance completeness;</li>
+<li>client self-sufficiency;</li>
+<li>successful transfer packages;</li>
+<li>agent evaluation pass rates;</li>
+<li>security/reliability;</li>
+<li>support quality;</li>
+<li>time to usable answer/capability;</li>
+<li>expansion without forced service dependency.</li>
+</ul>
+<h2>19. Strategic test</h2>
+<p>Atlas should make Advisory more powerful without making Advisory necessary for routine use. The product succeeds when clients can do more themselves, harder questions surface, and Advisory is engaged because the problem is consequential—not because the software was intentionally crippled.</p>
+</article>
+<aside class="source-identity"><strong>Edition provenance</strong><br>SH-ATL-017<br>Source: <a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/docs/advisory/ATLAS_MERIDIAN_COMMERCIAL_PRODUCT_STANDARD.md">docs/advisory/ATLAS_MERIDIAN_COMMERCIAL_PRODUCT_STANDARD.md</a><br>Source revision: 79437a778d4a4d5097a3cdaa36d7d8ab13217536<br>Source SHA-256: 5c852557be8c42cec41f50be2d01b850027a61ad613c98672f075e15453769d4</aside>
+</body></html>
