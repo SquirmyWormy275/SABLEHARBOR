@@ -536,3 +536,24 @@ The [persistent backup operator](../../../../enterprise/audit_suite/BACKUP_RUNTI
 adds actual scheduled filesystem copies, expiring local leases, explicit retries
 and restore comparisons. Its local run and limits are recorded in the
 [backup implementation note](AQ04_BACKUP_RESTORE_SLICE_2026-09-14.md).
+
+
+A later bounded technical rehearsal used the backup originals already obtained
+through company collection. Two new workpapers reference exact retained evidence
+and the existing continuity procedures. The source database and all 21 originals
+remained unchanged. The rehearsal recorded no independent review, population
+acceptance, task completion or control effectiveness conclusion. Its private
+execution receipt is indexed in the overnight checkpoint; the full-scope AQ-07
+rehearsal remains open.
+
+The [sample execution record](../../../../enterprise/audit_suite/SAMPLE_EXECUTION.md)
+extends traceability from sample selection to explicitly authored item observations.
+Each record pins the procedure, population, selection, workpaper version and actual
+retained support. Corrections append history. Sampled and targeted items retain
+their original basis, and missing support remains explicit. These records confer
+no automatic testing credit or population acceptance.
+
+Review comments can optionally anchor an exact passage in their already pinned
+workpaper version. Server validation checks the precise Unicode offsets and text;
+a later workpaper version does not move the comment. The existing independent
+review and issue-resolution requirements continue to apply.

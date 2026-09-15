@@ -22,6 +22,8 @@ def test_cookie_csrf_origin_and_private_routes(setup):
     assert client.get("/api/bootstrap").json()["capabilities"]["review_feedback"] is True
     capabilities = client.get("/api/bootstrap").json()["capabilities"]
     assert capabilities["review_independent_resolution"] is True
+    assert capabilities["review_passage_anchors"] is True
+    assert capabilities["sample_executions"] is True
     assert client.post("/api/logout").status_code == 403
     assert (
         client.post(

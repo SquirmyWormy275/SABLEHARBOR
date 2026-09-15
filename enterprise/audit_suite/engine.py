@@ -51,6 +51,7 @@ COLLECTIONS = (
     "notes",
     "populations",
     "selections",
+    "sample_executions",
     "calendar",
     "findings",
     "workpapers",
@@ -63,6 +64,8 @@ CAPABILITIES = {
     "experimental_review": False,
     "review_feedback": True,
     "review_independent_resolution": True,
+    "review_passage_anchors": True,
+    "sample_executions": True,
     "voice": False,
 }
 REVIEW_COMMANDS = {"review.comment", "review.resolve"}
@@ -508,6 +511,9 @@ class Engine:
                 "parent_support",
             ):
                 request.pop(key, None)
+        from .sample_execution import input_pins
+
+        state["sample_execution_inputs"] = input_pins(state)
         state["permissions"] = [permission]
         return state
 
@@ -621,6 +627,10 @@ class Engine:
             from .company_collection import collect
 
             collect(self, state, p, stamped, command["command_id"])
+        elif kind in {"sample.execution.record", "sample.execution.correct"}:
+            from .sample_execution import handle as handle_sample_execution
+
+            handle_sample_execution(state, kind, p, stamped, self.artifacts)
         elif kind in TEMPORAL_COMMANDS:
             temporal_handle(self, state, kind, p, stamped)
         elif kind == "scenario.validate":
@@ -1056,6 +1066,11 @@ class Engine:
                         "A version contributor cannot independently review their own work",
                         status=403,
                     )
+                from .review_anchor import normalize_anchor
+
+                anchor = (
+                    {"anchor": normalize_anchor(p["anchor"], reviewed)} if "anchor" in p else {}
+                )
                 state["reviews"].append(
                     {
                         "id": identifier("REVIEW"),
@@ -1066,6 +1081,7 @@ class Engine:
                         "status": "OPEN",
                         "kind": "HUMAN",
                         "history": [],
+                        **anchor,
                         **stamped,
                     }
                 )
