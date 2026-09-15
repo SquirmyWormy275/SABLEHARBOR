@@ -501,7 +501,14 @@ def cost_components(source, current, tables):
                     legal_entity=entity,
                     parent_account=account,
                     parent_source_id=sourceid,
+                    parent_scope="RWH_PS_COMBINED_SOURCE_ENVELOPE"
+                    if entity == "PS"
+                    else "LEGAL_SOURCE_COST",
+                    legal_posting_bridge="enterprise.operations.payroll_legal_bridge.verify"
+                    if entity == "PS"
+                    else None,
                     component="EMPLOYEE_LOADED_COST",
+                    corrected_legal_cost_owner=entity,
                     amount_usd=money(value),
                     source_period_total_usd=money(total),
                     unit=row["unit"],
@@ -521,7 +528,14 @@ def cost_components(source, current, tables):
                 legal_entity=entity,
                 parent_account=account,
                 parent_source_id=sourceid,
+                parent_scope="RWH_PS_COMBINED_SOURCE_ENVELOPE"
+                if entity == "PS"
+                else "LEGAL_SOURCE_COST",
+                legal_posting_bridge="enterprise.operations.payroll_legal_bridge.verify"
+                if entity == "PS"
+                else None,
                 component="REMAINING_NONPAYROLL_COST",
+                corrected_legal_cost_owner="RWH" if entity == "PS" else entity,
                 amount_usd=money(total - used),
                 source_period_total_usd=money(total),
                 unit="unallocated-nonpayroll",
@@ -703,7 +717,8 @@ def verify_current_finance(edition, legacy_snapshot, anchor_rows):
     if invoices != dict(bycontract):
         raise ValueError("Industrial current invoice population differs from source journal")
     return {
-        "status": "RECONCILED_TO_INDEPENDENT_CURRENT_JOURNALS",
+        "status": "RECONCILED_TO_INDEPENDENT_CURRENT_SOURCE_ENVELOPES",
+        "legal_employer_check": "enterprise.operations.payroll_legal_bridge.verify required for PS; group anchor alone is insufficient",
         "core_revenue_usd": money(corerevenue),
         "paid_cost_parent_usd": {k: money(v) for k, v in parents.items()},
         "industrial_external_invoices": len(invoices),

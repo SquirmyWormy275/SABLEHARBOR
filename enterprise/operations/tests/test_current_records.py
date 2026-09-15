@@ -201,3 +201,16 @@ def test_current_august_tax_annotation_is_scoped():
         broken["current_invoices"][0][field] = value
         with pytest.raises(ValueError, match="tax differs"):
             validate_current(read(SOURCE), broken)
+
+
+def test_ps_combined_envelope_is_not_mislabeled_legal_expense(edition):
+    rows = [
+        r for r in edition["tables"]["current_book_cost_components"] if r["legal_entity"] == "PS"
+    ]
+    assert all(r["parent_scope"] == "RWH_PS_COMBINED_SOURCE_ENVELOPE" for r in rows)
+    assert sum(D(r["amount_usd"]) for r in rows if r["corrected_legal_cost_owner"] == "PS") == D(
+        "203125"
+    )
+    assert sum(D(r["amount_usd"]) for r in rows if r["corrected_legal_cost_owner"] == "RWH") == D(
+        "30208"
+    )
