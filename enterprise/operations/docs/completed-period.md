@@ -272,3 +272,25 @@ RWH_PS-2026-00163). The $48,200 remainder is unallocated monthly source timing,
 not a claim that all September services or payments were complete at September 14.
 `verify_source_expense` independently matches the retained journal; no second
 expense or cash posting is made. Original OPEN source bytes remain unchanged.
+
+## Material balance and asset-source population receipt
+
+The generated `lane_receipt.json` indexes all three lane work packages, actual
+table counts, source hashes, reproduction/reperformance contracts, seven business
+line and corporate routes, and precise residuals. `current_balances.py` produces
+six group account rollforwards, 29 customer balances, six supplier pool balances,
+three accepted inventory cost classes and 15 legal-management balance bridges.
+All 149 source industrial facility/track/structure/vehicle/equipment records are
+imported with original period/status; no planned asset becomes active by import.
+Eight new Core equipment carrying components sum to the retained $9 million net
+PPE calibration without a new acquisition, depreciation or tax-basis assertion.
+
+The $80,000 fully reserved ARU-C-025 legacy dispute remains gross of the allowance
+with no new provision or writeoff. Customer opening plus billed minus collected
+equals closing; supplier opening plus purchases/services minus paid equals closing.
+These are newly authored allocations of centralized source pools, with separate
+accepted ARU/BST legal-management shares, not altered contract issuers. All 15
+August legal balance rows were independently rechecked against the finance
+successor's legal trial balance. ARU consumable quantities retain their explicit
+equivalent-unit valuation basis; they must not be relabeled physical stock counts.
+The selected RWH custody lots remain a bounded subset of the full inventory value.

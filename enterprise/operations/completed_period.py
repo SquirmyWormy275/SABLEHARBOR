@@ -729,6 +729,9 @@ def validate_tax_components(source, tables):
 
 
 def validate(source, tables):
+    from .current_balances import validate as validate_balances
+
+    validate_balances(tables)
     validate_chains(source, tables)
     quals = {r["qualification_id"]: r for r in tables["qualifications"]}
     for assignment in tables["dispatch_assignments"]:
@@ -875,6 +878,9 @@ def build(source=None):
     from .current_records import CURRENT_SOURCE, extend, validate_current
 
     extend(source, tables)
+    from .current_balances import extend as extend_balances
+
+    extend_balances(source, tables)
     totals = validate(source, tables)
     totals.update(validate_current(source, tables))
     inputs = source["sources"] + [
@@ -883,6 +889,8 @@ def build(source=None):
         "geospatial/facilities/population/REGISTER.json",
         CURRENT_SOURCE,
         "enterprise/operations/current_records.py",
+        "enterprise/operations/current_balances.py",
+        "enterprise/operations/source/lane_receipt_2026_09_15.json",
     ]
     hashes = {p: hashlib.sha256((ROOT / p).read_bytes()).hexdigest() for p in sorted(set(inputs))}
     return dict(
@@ -948,7 +956,11 @@ def workforce_state(result, *, as_of, known_on):
 
 def write(result, destination=OUTPUT, check=False):
     destination = Path(destination)
-    artifacts = {"records.json": encoded(result)}
+    receipt = read("enterprise/operations/source/lane_receipt_2026_09_15.json")
+    receipt["table_counts"] = {k: len(v) for k, v in result["tables"].items()}
+    receipt["reconciliation_totals"] = result["totals"]
+    receipt["source_hashes"] = result["source_hashes"]
+    artifacts = {"records.json": encoded(result), "lane_receipt.json": encoded(receipt)}
     for name, rows in result["tables"].items():
         import io
 

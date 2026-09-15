@@ -182,5 +182,48 @@
       "provision": "December2025 notice of2026RUIA monthly2150 base and experience rates0.65%-12%, no surcharge",
       "accessed_on": "2026-09-15"
     }
-  ]
+  ],
+  "core_ppe_carrying_components": [
+    {
+      "unit": "foundry-field",
+      "carrying_usd": "5000000.00",
+      "asset_nature": "Owned compute/service equipment"
+    },
+    {
+      "unit": "atlas-meridian",
+      "carrying_usd": "500000.00",
+      "asset_nature": "Owned network and control equipment"
+    },
+    {
+      "unit": "willow",
+      "carrying_usd": "1000000.00",
+      "asset_nature": "Owned research bench equipment"
+    },
+    {
+      "unit": "cradle",
+      "carrying_usd": "1000000.00",
+      "asset_nature": "Owned pilot process equipment; external host facilities excluded"
+    },
+    {
+      "unit": "j2",
+      "carrying_usd": "500000.00",
+      "asset_nature": "Owned analysis and training equipment"
+    },
+    {
+      "unit": "ess",
+      "carrying_usd": "300000.00",
+      "asset_nature": "Owned employee IT equipment"
+    },
+    {
+      "unit": "corporate",
+      "carrying_usd": "600000.00",
+      "asset_nature": "Owned corporate IT and office equipment; no land/building title asserted"
+    },
+    {
+      "unit": "ia",
+      "carrying_usd": "100000.00",
+      "asset_nature": "Owned assurance IT equipment"
+    }
+  ],
+  "core_ppe_basis": "New synthetic carrying-value component register within retained9m legacy netPPE calibration, not an appraisal, grosscost rollforward, new asset acquisition or revised depreciation/tax basis."
 }
