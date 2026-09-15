@@ -185,6 +185,8 @@ def build(allow_working_tree=False, *, company_closeout=False):
     rows = enterprise.read_csv(output / "enterprise/enterprise_journal.csv")
     check = verify_land_adjustment(rows)
     if company_closeout:
+        from enterprise.closeout.receipt_markets import allocate as receipt_markets
+        enterprise.write_csv(output / "receipt_markets.csv", receipt_markets(rows))
         from enterprise.closeout.finance import verify
         check["company_closeout"] = verify(rows)
         check["industrial_sales_tax"] = adjustment.industrial_tax.verify(rows)
