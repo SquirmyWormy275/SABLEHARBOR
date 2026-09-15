@@ -3,7 +3,9 @@
 Prepared September 15, 2026 UTC. SH-C04 implementation extension, pending
 repository acceptance. All company records here are synthetic. This source
 publication describes the generated timing views; it does not certify solvency,
-independent bank evidence, covenant compliance or an adopted parent tax provision.
+independent bank evidence or covenant compliance. The owner adopted corporate tax
+from formation and the exact five-holder register; final monetary integration and
+repository acceptance are identified in the company release receipt.
 
 ## Thirteen-week contract
 
@@ -17,10 +19,11 @@ means this entire view is a newly prepared conditional timing reconstruction,
 not bank evidence retrospectively available September 1.
 
 Population: every cash-account 1000 leg in the composed enterprise journal for
-September, October and November, three scenarios. The initial run selects 333
-cash legs, lists their scenario/journal/line/source IDs and source availability,
-and produces 546 weekly rows over six legal entities plus consolidated, two
-explicit timing cases. One duplicate cash identity fails validation. There are
+September, October and November, three scenarios. The exporter lists every selected scenario/journal/line/source ID and source
+availability, and produces 546 weekly rows over six legal entities plus
+consolidated, two explicit timing cases. The selected cash-leg count follows the
+composed tax and payment population; the initial 333-leg run is historical
+implementation evidence, not a fixed successor population. One duplicate cash identity fails validation. There are
 126 entity/scenario/case/month reconciliations. An omitted cash leg fails its
 month bridge rather than becoming a favorable liquidity assumption.
 
@@ -46,13 +49,15 @@ that negative bank cash was actually permitted or that a modeled obligation was
 paid without funds. Subsidiary transfers remain scheduled; their feasibility
 now depends on fixing the parent shortfall.
 
-In the initial base run, SHI uniform-timing cash stays approximately at the
-scoped $2M model floor (fractional allocation differences reverse at each month
-end). With member cash unavailable, it first shows a negative weekly close in
-week 4 ending September 28 (−$377,105.7912); November 30 closing shortfall is
-−$5,719,577.1334. This sensitivity does **not** overturn the source base-case
-zero-arrears finding. Uniform timing and assumed member receipts cannot prove
-actual daily sufficiency. Parent tax remains a separate unposted sensitivity.
+The original pre-tax timing sensitivity first showed negative SHI cash in week 4
+ending September 28 and a November shortfall. Those amounts are historical
+implementation evidence, not the final tax-adjusted answer. Read the current
+`treasury_13week.csv` and `treasury_month_bridge.csv` from the same frozen edition
+for exact cash, source population and shortfalls. This sensitivity does not
+rewrite the original base-case zero-arrears finding. Uniform timing and assumed
+member receipts cannot prove daily sufficiency. Booked unpaid tax requirements
+also remain separately visible in `sovereignty_tax_requirements.csv`; a cash
+balance does not extinguish a payable.
 
 ## Dated payment/filing checkpoints: not additional journal entries
 
@@ -63,7 +68,7 @@ actual daily sufficiency. Parent tax remains a separate unposted sensitivity.
 | ARU lease principal/interest | October 2026 | $42,466 / $8,973 | Separately modeled in October; no invented lender settlement confirmation |
 | ARU intended 338 election | October 15, 2026 | Eligibility, participation/signatures and submission evidence | Filing-ready source is not submitted; no cash-tax amount inferred from election due date |
 | ARU retention second installment | January 7, 2027 | $250,000 | Outside this 13-week window; remains in commitments navigation |
-| Parent payroll/tax | Period-specific population required | No employee-net-pay/remittance dates supplied by aggregate cash legs | The weekly allocation is not a remittance calendar; join completed workforce sources before claiming payable clearance |
+| Workforce payroll/tax | Completed payroll, retention and tax calendar sources | Regular gross-to-net and July employer-levy accrual are separate populations | The weekly allocation does not prove tax remittance; an accrued/unremitted liability remains outstanding |
 
 The October source term rollforward is $21,750,000 opening − $375,000 principal
 = $21,375,000 closing. The 6.75%, ACT/365 principal-date calculation is in
@@ -81,16 +86,16 @@ fee. The revolver is capacity, not cash. Retained leases are separately modeled.
 The old $13.5M term/revolver payoff belongs to acquisition sources/uses and
 excludes leases. An accounting payoff is not proof of release of collateral.
 
-[Debt/security draft source](../../../legal/gap-instruments/source/debt-liens.json)
-retains exact missing terms: DEBT-U01 lender/grantors/guarantors; U02 contractual
-maturity/business-day/late-interest/prepayment terms; U03 collateral and consents;
-U04 payoff value date and instrument-specific releases; U05 numerical covenants
-and definitions. The model's amortization horizon cannot become a lender-agreed
-maturity. None of the companies is declared a guarantor merely from common
-ownership. No covenant headroom can be certified and no goodwill-removal default
-can be asserted without the governing definition. The affected claim is security
-and covenant enforceability/compliance, not whether the model's principal
-arithmetic balances. Next owner: corporate finance/legal implementation.
+The [current debt and host disposition](../../../internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md)
+supplies the expressly authored existing creditor identity, selected clearing
+records and opening/activity/closing bridges. Earlier generic lender-identity
+review fields no longer remain unanswered. Definitive maturity/prepayment terms,
+numerical covenants, asset-specific collateral and old encumbrance releases
+remain separate material instrument limits, DEBT-R01 and DEBT-R02. The model's
+amortization horizon is not a lender-agreed maturity. Common ownership does not
+make every entity a guarantor. No goodwill-removal default or covenant headroom
+is inferred without the governing definition. Corporate finance/legal owns these
+specific rights questions; supported principal and cash arithmetic remains usable.
 
 ## Investor reading route from the same edition
 
@@ -99,8 +104,11 @@ arithmetic balances. Next owner: corporate finance/legal implementation.
    legal ownership chains, nine-member board, CEO/Chair separation and investor/
    independent roles; never infer new entities from business-line names.
 2. **Ownership and financing history:** 2021-06-18 and 2022-10-28 board minutes,
-   plus `docs/legal/evidence/corporate/SH-LEGAL-READ-CAPITAL-001.md`. Approximate
-   $48M/$135M rounds and 66.5/33.5 ownership are not exact subscriptions.
+   plus `enterprise/closeout/source/capital_register.json` and the dated owner
+   direction. Exact authored subscriptions are $48 million/$135 million, and the
+   approved five-holder schedule totals 100 million equal participating units.
+   `docs/internal/company-closeout/FOUNDER_ADMISSION_BASIS.md` explains the newly
+   authored formation value, zero founder contribution and initial basis.
 3. **Results and revenue quality:** edition legal/unit statements and source
    journal; follow Foundry Field FF-003 separately through billing evidence.
    Customer principal, seller-borne tax, credits and collections have distinct
@@ -112,7 +120,8 @@ arithmetic balances. Next owner: corporate finance/legal implementation.
    external-host rights and planned investment do not equal accepted operating
    buildings or funded construction commitments. Goodwill correction is noncash.
 5. **Liquidity and dependence:** `treasury_13week.csv`, its monthly bridge,
-   `enterprise_funding.csv`, `sovereignty.csv` and `parent_tax_sensitivity.csv`.
+   `enterprise_funding.csv`, `sovereignty.csv`, `sovereignty_tax_requirements.csv`
+   and the composed current/deferred/payment tax workpapers.
    Annual operating cash, all net investment and member money remain distinct;
    report current dependence and reversals without promised attainment year.
 6. **Debt, related parties and downside:** ARU debt/lease source schedule,
@@ -120,22 +129,28 @@ arithmetic balances. Next owner: corporate finance/legal implementation.
    member-cash timing case. A balanced consolidated model is not committed
    funding, an independent bank confirmation or an investment recommendation.
 
-## Exact ownership residual and prepared allocation
+## Approved ownership and contribution states
 
-FIN-U01/U02/U03/U05 in the financing source remain the operative narrow gaps:
-subscriber identities and allocations, class/quantity/price, designation
-thresholds and preference/conversion/anti-dilution/transfer economics. No accepted
-complete subscriber list has been found; lead firms cannot be expanded into a
-syndicate or treated as sole subscribers. The unknowns affect who can be asked
-for how much, whether the agreed participation basis is economic or voting, and
-whether additional paid-in contributions without interests preserve each class's
-rights. They do not block arithmetic preparation or justify new outside investors.
+The owner adopted Daniel 33.25%, Priya 19.95%, Jon 13.30%, Harrison Vale 18.50%
+and Wolf Ridge 15.00%. Each financing lead is expressly authored as its round's
+sole registered subscriber; this is not inferred from the word “led.” The exact
+register preserves existing board roles and grants no new preferences, ordinary
+operating veto or compulsory funding obligation. Substantive designation and
+replacement thresholds and any unlisted side letters remain outside the adopted
+scope; the register does not assert that unknown instruments are absent.
 
-`enterprise/closeout/capital.py` prepares proportional requests only after an
-established participation basis totals one. It preserves supplied rights,
-separates requested/committed/received/issued states and allocates rounding by
-largest remainder with holder-ID tie break. Its test holders are clearly fixtures.
-No request has been sent and no fictional holder settlement has been asserted.
-The remaining operation is to reconcile/adopt the actual rights schedule under
-existing authority, then supply its stable IDs and source to the allocator; no
-rounded back-solve of the historic cap table is allowed.
+`enterprise/closeout/capital_register.py` consumes each final SHI MEMBER_EQUITY
+source event and delegates cash-cent allocation to `capital.py`. The participation
+shares sum to one. Largest-remainder allocation, with holder-ID tie break,
+reconciles each cash request while retaining the source journal's four-decimal
+amount and explicit source-to-cash rounding bridge. Historical $183 million
+subscriptions are paid-in capital history, not additional 2026 cash. Retained
+earnings and initialization corrections remain separate equity components.
+
+The working model's voluntary proportional contributions issue no new units.
+Scenario capacity, commitment, request/authority, due date, receipt and issuance
+remain separate states; month-only modeled receipts do not fabricate a daily
+settlement date or binding capital call. An unavailable holder's shortfall does
+not transfer another holder's cash, change ownership, or authorize borrowing.
+The final edition identifies exact holder-level rollforwards and the tax-adjusted
+funding population. Source implementation and repository acceptance are distinct.
