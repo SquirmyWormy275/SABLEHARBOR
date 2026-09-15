@@ -1,3 +1,5 @@
+import { EvidenceContext } from "./EvidenceContext";
+import { evidenceContextKey, recordedEvidenceContext } from "./evidenceContext";
 import RetainedPanel from "./RetainedPanel";
 import PopulationLineage from "./PopulationLineage";
 import { lineageReference } from "./populationLineage";
@@ -217,6 +219,29 @@ function Login({ onSuccess }: { onSuccess: () => void }) {
     </main>
   );
 }
+function workpaperFields(e: Engagement): Field[] {
+  return [
+    f("title", "Workpaper title"),
+    linked("control_id", "Control", e.controls),
+    select("section", "Section", [
+      "scope",
+      "risk_assessment",
+      "planning",
+      "walkthrough",
+      "populations",
+      "testing",
+      "roll_forward",
+      "findings",
+      "conclusions",
+      "report_draft",
+      "review_notes",
+    ]),
+    f("objective", "Objective", "textarea"),
+    f("procedures", "Nature, timing and extent", "textarea"),
+    f("evidence_ids", "Evidence references"),
+    f("conclusion", "Conclusion and limitations", "textarea"),
+  ];
+}
 type DetailContext = {
   row: Row;
   kind: string;
@@ -244,6 +269,11 @@ export default function App() {
     [uploadKind, setUploadKind] = useState("workpaper"),
     [uploadLink, setUploadLink] = useState(""),
     [experimentalConsent, setExperimentalConsent] = useState(false);
+  const [evidenceHandoff, setEvidenceHandoff] = useState<{
+    key: string;
+    artifactId: string;
+    detail: DetailContext;
+  } | null>(null);
   const uploadRef = useRef<HTMLInputElement>(null);
   const navigationMemory = useRef(createNavigationMemory());
   const draftStore = useRef(createDraftStore());
@@ -301,6 +331,7 @@ export default function App() {
   }
   const clearContext = useCallback(() => {
     pendingSend.current = null;
+    setEvidenceHandoff(null);
     setSourceSelection({ key: "", pins: [] });
     navigationMemory.current.clear();
     draftStore.current.clear();
@@ -413,6 +444,7 @@ export default function App() {
     ]);
     if (authorizedContext.current && authorizedContext.current !== contextKey) {
       ++navigationEpoch.current;
+      setEvidenceHandoff(null);
       setAction(null);
       setDetail(null);
       setMessage("");
@@ -568,6 +600,7 @@ export default function App() {
     initial?: Record<string, unknown>,
     description?: string,
   ) {
+    setEvidenceHandoff(null);
     setAction({ title, kind, fields, initial, description });
   }
   async function create(payload: Record<string, unknown>) {
@@ -2363,35 +2396,11 @@ export default function App() {
                     <div className="actions">
                       <button
                         onClick={() =>
-                          edit("Assemble a workpaper", "workpaper.add", [
-                            f("title", "Workpaper title"),
-                            linked("control_id", "Control", e.controls),
-                            select("section", "Section", [
-                              "scope",
-                              "risk_assessment",
-                              "planning",
-                              "walkthrough",
-                              "populations",
-                              "testing",
-                              "roll_forward",
-                              "findings",
-                              "conclusions",
-                              "report_draft",
-                              "review_notes",
-                            ]),
-                            f("objective", "Objective", "textarea"),
-                            f(
-                              "procedures",
-                              "Nature, timing and extent",
-                              "textarea",
-                            ),
-                            f("evidence_ids", "Evidence references"),
-                            f(
-                              "conclusion",
-                              "Conclusion and limitations",
-                              "textarea",
-                            ),
-                          ])
+                          edit(
+                            "Assemble a workpaper",
+                            "workpaper.add",
+                            workpaperFields(e),
+                          )
                         }
                       >
                         New structured workpaper
@@ -2563,32 +2572,97 @@ export default function App() {
             support={
               e && ["workpaper.add", "workpaper.update"].includes(action.kind)
                 ? (values, onChange, editable) => (
-                    <WorkpaperSupport
-                      engagement={e}
-                      viewerId={bootstrap.viewer.id}
-                      values={values}
-                      onTaskIds={
-                        editable &&
-                        supports(
-                          bootstrap.capabilities,
-                          "workpaper_procedure_links",
-                        )
-                          ? (ids) => onChange({ ...values, task_ids: ids })
-                          : undefined
-                      }
-                      onAppendEvidence={
-                        editable
-                          ? (id) =>
-                              onChange({
-                                ...values,
-                                evidence_ids: appendEvidenceReference(
-                                  values.evidence_ids,
-                                  id,
-                                ).join(", "),
-                              })
-                          : undefined
-                      }
-                    />
+                    <>
+                      {evidenceHandoff && (
+                        <aside className="evidence-context">
+                          <p>
+                            Your existing personal draft is retained. Add the
+                            selected original only after reviewing the restored
+                            draft.
+                          </p>
+                          <p>Selected original: {evidenceHandoff.artifactId}</p>
+                          <button
+                            type="button"
+                            disabled={
+                              !editable ||
+                              busy ||
+                              evidenceHandoff.key !==
+                                evidenceContextKey(
+                                  e,
+                                  bootstrap.viewer.id,
+                                  evidenceHandoff.artifactId,
+                                ) ||
+                              !recordedEvidenceContext(
+                                e,
+                                evidenceHandoff.artifactId,
+                              )?.canDraft
+                            }
+                            onClick={() => {
+                              if (
+                                editable &&
+                                !busy &&
+                                evidenceHandoff.key ===
+                                  evidenceContextKey(
+                                    e,
+                                    bootstrap.viewer.id,
+                                    evidenceHandoff.artifactId,
+                                  ) &&
+                                recordedEvidenceContext(
+                                  e,
+                                  evidenceHandoff.artifactId,
+                                )?.canDraft
+                              )
+                                onChange({
+                                  ...values,
+                                  evidence_ids: appendEvidenceReference(
+                                    values.evidence_ids,
+                                    evidenceHandoff.artifactId,
+                                  ).join(", "),
+                                });
+                            }}
+                          >
+                            Add this original to draft
+                          </button>
+                          {evidenceHandoff.key !==
+                            evidenceContextKey(
+                              e,
+                              bootstrap.viewer.id,
+                              evidenceHandoff.artifactId,
+                            ) && (
+                            <p role="status">
+                              Source context changed. Reopen the current
+                              original before linking it.
+                            </p>
+                          )}
+                        </aside>
+                      )}
+                      <WorkpaperSupport
+                        engagement={e}
+                        viewerId={bootstrap.viewer.id}
+                        values={values}
+                        onTaskIds={
+                          editable &&
+                          supports(
+                            bootstrap.capabilities,
+                            "workpaper_procedure_links",
+                          )
+                            ? (ids) => onChange({ ...values, task_ids: ids })
+                            : undefined
+                        }
+                        onAppendEvidence={
+                          editable
+                            ? (id) =>
+                                onChange({
+                                  ...values,
+                                  evidence_ids: appendEvidenceReference(
+                                    values.evidence_ids,
+                                    id,
+                                  ).join(", "),
+                                })
+                            : undefined
+                        }
+                      />
+                    </>
                   )
                 : undefined
             }
@@ -2599,7 +2673,27 @@ export default function App() {
             }
             action={action}
             busy={busy}
-            onClose={() => setAction(null)}
+            onClose={() => {
+              setAction(null);
+              if (evidenceHandoff && e) {
+                const artifact = e.artifacts.find(
+                  (row) =>
+                    row.id === evidenceHandoff.artifactId &&
+                    row.status === "AVAILABLE",
+                );
+                if (
+                  artifact &&
+                  evidenceHandoff.key ===
+                    evidenceContextKey(e, bootstrap.viewer.id, artifact.id)
+                )
+                  setDetail({ ...evidenceHandoff.detail, row: artifact });
+                else
+                  setNotice(
+                    "Draft retained. The original source context changed; reopen it from current records.",
+                  );
+              }
+              setEvidenceHandoff(null);
+            }}
             onSubmit={async (payload, afterFormalSave) => {
               try {
                 const saved = await act(
@@ -2617,6 +2711,7 @@ export default function App() {
                   renderEpoch === navigationEpoch.current
                 )
                   actionDraft.store.discardObject(actionDraft.key);
+                if (saved) setEvidenceHandoff(null);
                 return Boolean(saved);
               } catch {
                 return false;
@@ -3140,7 +3235,58 @@ export default function App() {
                   Agree, correct or appeal
                 </button>
               )}
-              {detail.kind === "artifact" && download(detail.row)}
+              {detail.kind === "artifact" && (
+                <>
+                  {download(detail.row)}
+                  <EvidenceContext
+                    engagement={e}
+                    artifactId={detail.row.id}
+                    viewerId={bootstrap.viewer.id}
+                    onOpen={(ref) => {
+                      const target = lineageReference(e, { ...ref });
+                      if (target)
+                        setDetail({
+                          row: target.row,
+                          kind: target.kind,
+                          returnTo: detail,
+                          pinnedReference: { ...ref },
+                          ...(ref.version !== undefined
+                            ? { focusVersion: ref.version }
+                            : {}),
+                        });
+                    }}
+                    onStartDraft={
+                      !busy
+                        ? (selection) => {
+                            const context = recordedEvidenceContext(
+                              e,
+                              selection.artifactId,
+                            );
+                            if (!context?.canDraft) return;
+                            const handoff = {
+                              key: evidenceContextKey(
+                                e,
+                                bootstrap.viewer.id,
+                                selection.artifactId,
+                              ),
+                              artifactId: selection.artifactId,
+                              detail,
+                            };
+                            setDetail(null);
+                            edit(
+                              "Assemble a workpaper",
+                              "workpaper.add",
+                              workpaperFields(e),
+                              undefined,
+                              "Your personal draft is restored first. Add the selected original explicitly; no conclusion is supplied.",
+                            );
+                            setEvidenceHandoff(handoff);
+                          }
+                        : undefined
+                    }
+                  />
+                </>
+              )}
               {detail.kind === "population" && (
                 <button
                   onClick={() => {

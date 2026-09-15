@@ -95,7 +95,7 @@ def collect(engine, state, payload, stamped, command_id):
     if name is None:
         name = "company-source-" + digest(identity) + ".json"
     source = {"kind": "COLLECTED_COMPANY_SOURCE", "receipt": receipt, "origin": record["origin"]}
-    manifest = engine.artifacts.retain(
+    manifest = engine.artifacts.retain_company(
         state["id"],
         name,
         record["content"],

@@ -31,3 +31,31 @@ Intelligence does not require a model call on every interaction. Deterministic r
 Success means users can tell what they are investigating, what supports it, what changed and why a next action is relevant, without repeatedly reconstructing context. It does not mean automatic conclusions or dynamic menu rearrangement. Reuse UX/IK/AQ foundations rather than creating competing stores or another dashboard for each feature.
 
 Jobs share the existing `audit_company` lane, worker cap and integrator ownership of shared schemas/dependencies/catalogs. Keep populated contexts, private keys and learner histories in excluded storage. Preserve source/version history and existing permission/publication boundaries. Atlas remains read-only. This queue addition starts no scheduler or execution.
+
+
+## Implemented recorded-evidence context — September 14
+
+Artifact details now show the recorded request purpose, source-declared and
+request-linked controls, related scoped procedure definitions, and exact
+workpaper versions citing the original. Links resolve against the current
+authorized projection. Control relevance does not establish procedure support;
+no filename analysis, hidden Key, model call or automatic conclusion supplies
+these relationships. Users can hide the section and return through exact
+record links without losing their investigation context.
+
+“Open workpaper draft” restores the existing personal new-workpaper draft.
+“Add this original to draft” explicitly appends the selected artifact without
+overwriting text, control selection or conclusions. Closing retains the draft
+and returns to the original only while its source/context pins remain current.
+Scope and permission changes close stale forms; source-binding changes disable
+the handoff. Successful formal saves clear the transient handoff.
+
+Validation: 126 frontend unit tests, production TypeScript/Vite build and full
+mocked-browser suite passed. Browser regression covers existing-draft retention,
+explicit deduplicated attachment, exact return navigation, scope/permission
+changes and source-binding changes. Actual A-viewer read-only checks traversed
+original → request/control/procedure → original and returned to the private
+instructor investigation with focus/search retained. Learner isolation and
+unchanged formal history were verified. Private receipts are under
+`enterprise/generated/audit-suite/company-portfolio-2026-09-14/reference-a-v1-evidence-context-browser/`.
+These are scripted checks, not owner usability or full contextual-journey acceptance.

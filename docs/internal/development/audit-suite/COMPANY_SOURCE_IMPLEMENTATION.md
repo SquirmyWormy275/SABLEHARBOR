@@ -441,3 +441,31 @@ on different ports can remain signed in within one browser. Login/logout APIs,
 HttpOnly/SameSite/secure settings, bearer access and CSRF checks remain in force.
 Twelve focused service tests passed. Existing services were not implicitly
 restarted; upgraded runtimes require sign-in with the existing credentials.
+
+
+The A viewer now runs locally on port 8789 from backend checkpoint `cfa19ce`.
+Its private instructor binding pins revision 889, fifteen exact security-log
+originals and three authored procedure links. The binding remains instructor-authored
+and unvalidated. Actual browser verification checked all 556 originals in the PBC
+file table, 165 authorized systems, exact original download/preview, return focus
+and search continuity. Learner access to the Key was denied, with no hidden
+content fetch. Formal state, history and membership remained unchanged.
+Private receipts and four reviewed screenshots are retained under
+`company-portfolio-2026-09-14/reference-a-v1-browser/`. The original walkthrough
+and B reference viewer remain available separately.
+
+
+New company collections now record their intake as `COLLECTED_COMPANY_SOURCE`;
+query and derivation packets use `COMPANY_SOURCE_DERIVED`. A dedicated trusted
+adapter path supplies this classification after source validation. Generic
+uploads cannot acquire that classification by supplying a source-kind field.
+Native synthetic provenance remains separate. Historical artifact manifests
+retain their original intake labels and bytes; the viewer labels intake and
+native source provenance separately. Fifty-three focused collection, fault-path
+and classification tests passed.
+
+[Recorded evidence context](CONTEXTUAL_WORKSPACE_WORKFLOW.md#implemented-recorded-evidence-context--september-14)
+now connects originals to requests, controls, procedures and exact workpaper
+versions, with explicit personal-draft attachment and safe return navigation.
+All 126 frontend tests, the production build and mocked-browser regressions
+passed; the actual A viewer also passed read-only source-context navigation.

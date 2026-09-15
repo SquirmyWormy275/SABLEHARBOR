@@ -121,7 +121,7 @@ def collect(engine, state, payload, stamped, command_id):
     retained = []
 
     def retain(name, content, source):
-        artifact = engine.artifacts.retain(
+        artifact = engine.artifacts.retain_company(
             state["id"], name, content, source=source, coverage=coverage
         )
         artifact.update(stamped)

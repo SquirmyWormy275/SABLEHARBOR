@@ -18,13 +18,13 @@ def workspace(tmp_path):
 
 def test_collection_recovers_after_artifact_storage_failure(workspace, monkeypatch):
     engine, actor, state = workspace
-    original = engine.artifacts.retain
+    original = engine.artifacts.retain_company
     with monkeypatch.context() as m:
 
         def fail(*args, **kwargs):
             raise DomainError("Injected storage outage")
 
-        m.setattr(engine.artifacts, "retain", fail)
+        m.setattr(engine.artifacts, "retain_company", fail)
         with pytest.raises(DomainError, match="storage outage"):
             engine.command(actor, state["id"], envelope(state))
     assert engine.store.get(actor, state["id"])["revision"] == state["revision"]
@@ -32,7 +32,7 @@ def test_collection_recovers_after_artifact_storage_failure(workspace, monkeypat
     with engine.company_store._db() as db:
         first_receipt = db.execute("SELECT receipt FROM collections").fetchone()[0]
         assert db.execute("SELECT COUNT(*) FROM collections").fetchone()[0] == 1
-    assert engine.artifacts.retain == original
+    assert engine.artifacts.retain_company == original
     result = engine.command(actor, state["id"], envelope(state))
     assert len(result["artifacts"]) == 1
     with engine.company_store._db() as db:

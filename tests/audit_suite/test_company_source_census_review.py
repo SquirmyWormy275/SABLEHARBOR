@@ -51,7 +51,7 @@ def test_retry_after_retention_failure_preserves_source_and_single_committed_rec
 ):
     e, actor, state = workspace
     command = envelope(state)
-    original = e.artifacts.retain
+    original = e.artifacts.retain_company
     calls = 0
 
     def interrupted(*args, **kwargs):
@@ -61,7 +61,7 @@ def test_retry_after_retention_failure_preserves_source_and_single_committed_rec
             raise DomainError("Isolated storage interruption")
         return original(*args, **kwargs)
 
-    monkeypatch.setattr(e.artifacts, "retain", interrupted)
+    monkeypatch.setattr(e.artifacts, "retain_company", interrupted)
     with pytest.raises(DomainError):
         e.command(actor, state["id"], command)
     unchanged = e.store.get(actor, state["id"])
@@ -70,7 +70,7 @@ def test_retry_after_retention_failure_preserves_source_and_single_committed_rec
     with e.company_store._db() as db:
         prior = [dict(r) for r in db.execute("SELECT * FROM versions ORDER BY record")]
         assert db.execute("SELECT COUNT(*) FROM collections").fetchone()[0] == 2
-    monkeypatch.setattr(e.artifacts, "retain", original)
+    monkeypatch.setattr(e.artifacts, "retain_company", original)
     completed = e.command(actor, state["id"], command)
     assert canonical(e.command(actor, state["id"], command)) == canonical(completed)
     assert len(completed["requests"][0]["company_census_collections"]) == 1

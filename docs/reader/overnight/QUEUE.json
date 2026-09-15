@@ -1087,11 +1087,12 @@
         "docs/internal/development/audit-suite/",
         "enterprise/generated/audit-suite/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "Surface relevant authorized relationships, changes, blockers and suggested next actions with reasons and cited records/work. Distinguish declarations from inference and missing evidence from adverse conclusions. Permit user correction/dismissal. Respect unassisted assessment boundaries and log deliberate hints; never use hidden answers to steer learners. Refresh suggestions when versions, access or scope change.",
       "gate": "existing_authority",
       "execution_policy": "Owner authorized execution; bounded implementation may proceed while whole-stage dependencies remain in progress. Existing audit_company execution boundaries apply. Suggestions and search use authorized context, never hidden key data; final usability acceptance requires actual feedback.",
-      "execution_authorized": true
+      "execution_authorized": true,
+      "evidence": "Recorded artifact context shows authorized request purpose, declared controls, related procedure definitions and exact workpaper citations. No hidden/model-derived assistance. 126 frontend tests, mocked browser and actual A read-only navigation pass; broader contextual guidance acceptance remains open."
     },
     {
       "id": "CX-04",
@@ -1114,11 +1115,12 @@
         "docs/internal/development/audit-suite/",
         "enterprise/generated/audit-suite/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "Reuse known scoped context visibly and allow correction; progressively disclose advanced fields, preserve invalid-form entries, explain disabled actions without leaking restricted facts. Provide discoverable keyboard shortcuts and non-hover alternatives. Preview references without losing work; explicit actions preserve accountability.",
       "gate": "existing_authority",
       "execution_policy": "Owner authorized execution; bounded implementation may proceed while whole-stage dependencies remain in progress. Existing audit_company execution boundaries apply. Suggestions and search use authorized context, never hidden key data; final usability acceptance requires actual feedback.",
-      "execution_authorized": true
+      "execution_authorized": true,
+      "evidence": "Artifact-to-personal-draft handoff restores existing text before explicit evidence attachment. Scope/permission/source changes prevent stale linking or return; scripted draft retention and deduplication checks pass. Broader form/keyboard/usability acceptance remains open."
     },
     {
       "id": "CX-05",

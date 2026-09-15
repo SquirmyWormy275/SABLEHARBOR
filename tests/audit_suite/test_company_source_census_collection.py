@@ -172,14 +172,14 @@ def test_revocation_during_retention_does_not_commit_population_or_artifacts(
     workspace, monkeypatch
 ):
     e, actor, state = workspace
-    original = e.artifacts.retain
+    original = e.artifacts.retain_company
 
     def retain(*args, **kwargs):
         artifact = original(*args, **kwargs)
         e.company_store.grant(actor, state["id"], "SH", "branch", "records", active=False)
         return artifact
 
-    monkeypatch.setattr(e.artifacts, "retain", retain)
+    monkeypatch.setattr(e.artifacts, "retain_company", retain)
     with pytest.raises(DomainError):
         e.command(actor, state["id"], envelope(state))
     unchanged = e.store.get(actor, state["id"])

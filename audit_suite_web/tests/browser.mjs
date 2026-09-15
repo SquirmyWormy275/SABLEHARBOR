@@ -556,6 +556,64 @@ try {
   if(await form.getByLabel('Control',{exact:true}).inputValue()!=='CC-1')throw Error('Procedure draft lost scoped control');
   await form.getByRole('button',{name:'Remove procedure T-01',exact:true}).click();
 
+  // Artifact context must restore the personal draft before an explicit source link.
+  await page.keyboard.press("Escape");
+  e.artifacts[0].status="AVAILABLE"; e.requests[0].purpose="Neutral recorded inspection purpose"; e.requests[0].control_id="CC-1"; e.revision++;
+  await page.evaluate(()=>dispatchEvent(new PopStateEvent("popstate")));
+  await page.getByText(`revision ${e.revision}`,{exact:false}).waitFor();
+  await page.keyboard.press("Control+k");
+  await page.getByRole("searchbox",{name:"Search this engagement"}).fill("A-01");
+  await page.getByRole("button",{name:"Search records",exact:true}).click();
+  await page.getByRole("button",{name:"Preview A-01",exact:true}).click();
+  await page.getByText("Neutral recorded inspection purpose",{exact:true}).waitFor();
+  await page.getByRole("button",{name:"Open request PBC-01",exact:true}).click();
+  await page.getByRole("button",{name:"Back to artifact A-01",exact:true}).click();
+  await page.getByRole("button",{name:"Hide recorded context",exact:true}).click();
+  await page.getByRole("button",{name:"Show recorded context",exact:true}).click();
+  await page.getByRole("button",{name:"Open workpaper draft",exact:true}).click();
+  form=page.getByRole("dialog");
+  await form.getByText("Personal draft restored.",{exact:false}).waitFor();
+  if(await form.getByLabel("Workpaper title",{exact:true}).inputValue()!=="Unsent new workpaper")throw Error("Evidence handoff overwrote personal draft");
+  if((await form.getByLabel("Evidence references",{exact:true}).inputValue()).includes("A-01"))throw Error("Evidence automatically promoted into draft");
+  await form.getByRole("button",{name:"Add this original to draft",exact:true}).click();
+  await form.getByRole("button",{name:"Add this original to draft",exact:true}).click();
+  if(await form.getByLabel("Evidence references",{exact:true}).inputValue()!=="A-01")throw Error("Explicit source append duplicated or replaced fields");
+  await form.getByRole("button",{name:"Close (keep draft)",exact:true}).click();
+  await page.getByRole("button",{name:"Open workpaper draft",exact:true}).click();
+  form=page.getByRole("dialog");await form.getByText("Personal draft restored.",{exact:false}).waitFor();
+  if(await form.getByLabel("Workpaper title",{exact:true}).inputValue()!=="Unsent new workpaper" || await form.getByLabel("Evidence references",{exact:true}).inputValue()!=="A-01")throw Error("Draft source/text lost after return");
+
+  for (const authorityChange of ["scope", "permission"]) {
+    const oldScope=e.scope, oldPermissions=e.permissions;
+    if(authorityChange==="scope")e.scope={...e.scope,period_start:"2027-01-02"};else e.permissions=["review"];
+    e.revision++;
+    await page.evaluate(()=>dispatchEvent(new PopStateEvent("popstate")));
+    await page.getByText(`revision ${e.revision}`,{exact:false}).waitFor();
+    await page.waitForFunction(()=>document.querySelectorAll('dialog[open]').length===0);
+    if(await page.getByRole("button",{name:"Add this original to draft",exact:true}).count())throw Error("Changed authority retained a handoff action");
+    if(!JSON.stringify([...personalDrafts.values()]).includes("Unsent new workpaper"))throw Error("Authority change erased persisted draft");
+    e.scope=oldScope;e.permissions=oldPermissions;e.revision++;
+    await page.evaluate(()=>dispatchEvent(new PopStateEvent("popstate")));
+    await page.getByText(`revision ${e.revision}`,{exact:false}).waitFor();
+    await page.keyboard.press("Control+k");
+    await page.getByRole("searchbox",{name:"Search this engagement"}).fill("A-01");
+    await page.getByRole("button",{name:"Search records",exact:true}).click();
+    await page.getByRole("button",{name:"Preview A-01",exact:true}).click();
+    await page.getByRole("button",{name:"Open workpaper draft",exact:true}).click();
+    form=page.getByRole("dialog");await form.getByText("Personal draft restored.",{exact:false}).waitFor();
+    if(await form.getByLabel("Workpaper title",{exact:true}).inputValue()!=="Unsent new workpaper")throw Error("Scoped draft failed restore after original authority returned");
+  }
+  e.company_source_binding={company:"fixture",branch:"changed-source"}; e.revision++;
+  await page.evaluate(()=>dispatchEvent(new PopStateEvent("popstate")));
+  await page.getByText(`revision ${e.revision}`,{exact:false}).waitFor();
+  await form.getByText("Source context changed. Reopen the current original before linking it.",{exact:true}).waitFor();
+  if(!await form.getByRole("button",{name:"Add this original to draft",exact:true}).isDisabled())throw Error("Changed source permitted stale link");
+  await form.getByRole("button",{name:"Close (keep draft)",exact:true}).click();
+  if(await page.getByRole("button",{name:"Open workpaper draft",exact:true}).count())throw Error("Close reopened obsolete artifact context");
+  await page.getByRole("button",{name:"New structured workpaper",exact:true}).click();
+  form=page.getByRole("dialog");await form.getByText("Personal draft restored.",{exact:false}).waitFor();
+  if(await form.getByLabel("Workpaper title",{exact:true}).inputValue()!=="Unsent new workpaper")throw Error("Context change destroyed saved draft");
+
   await form
     .getByRole("button", { name: "Discard unsaved draft", exact: true })
     .click();

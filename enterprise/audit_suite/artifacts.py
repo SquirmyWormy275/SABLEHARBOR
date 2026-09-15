@@ -241,6 +241,41 @@ class Artifacts:
             inspection=inspect_upload(name, data),
         )
 
+    def retain_company(
+        self,
+        engagement_id: str,
+        name: str,
+        data: bytes,
+        *,
+        source: dict,
+        coverage: dict,
+    ) -> dict:
+        """Trusted company adapters only; intake classification is not source assurance.
+
+        Generic uploads must use retain(), regardless of their supplied metadata.
+        The adapter validates source access, exact versions and hashes before this call.
+        """
+        kinds = {
+            "COLLECTED_COMPANY_SOURCE": "COLLECTED_COMPANY_SOURCE",
+            "COMPANY_CENSUS_QUERY": "COMPANY_SOURCE_DERIVED",
+            "COMPANY_CENSUS_DERIVATION": "COMPANY_SOURCE_DERIVED",
+            "COMPANY_POPULATION_QUERY": "COMPANY_SOURCE_DERIVED",
+            "COMPANY_POPULATION_DERIVATION": "COMPANY_SOURCE_DERIVED",
+        }
+        if source.get("kind") not in kinds:
+            raise DomainError("Unsupported trusted company intake kind")
+        return self._retain(
+            engagement_id,
+            name,
+            data,
+            source=source,
+            coverage=coverage,
+            lineage=None,
+            generated=False,
+            inspection=inspect_upload(name, data),
+            intake_origin=kinds[source["kind"]],
+        )
+
     def retain_export(
         self, engagement_id: str, name: str, data: bytes, *, source: dict, coverage: dict
     ) -> dict:
@@ -294,6 +329,7 @@ class Artifacts:
         lineage: list[str] | None,
         generated: bool,
         inspection: dict,
+        intake_origin: str | None = None,
     ) -> dict:
         content_hash = hashlib.sha256(data).hexdigest()
         path = self.root / content_hash
@@ -322,7 +358,7 @@ class Artifacts:
             "mime": inspection["mime"],
             "status": inspection["status"],
             "quarantine_reason": inspection["reason"],
-            "origin": "SYNTHETIC" if generated else "LEARNER_SUBMITTED",
+            "origin": intake_origin or ("SYNTHETIC" if generated else "LEARNER_SUBMITTED"),
             "source": source,
             "coverage": coverage,
             "lineage": lineage or [],
