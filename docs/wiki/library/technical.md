@@ -113,6 +113,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Next source-gap slice: non-human credential lifecycle](../../internal/development/audit-suite/AQ_NEXT_NONHUMAN_IDENTITY_SLICE_2026-09-14.md) — MD
 - [Planned-provider intake and review-queue exercise](../../internal/development/audit-suite/AQ_PLANNED_PROVIDER_INTAKE_SLICE_2026-09-14.md) — MD
 - [SEC-002 local security-log collection exercise](../../internal/development/audit-suite/AQ_SECURITY_LOG_COLLECTION_SLICE_2026-09-14.md) — MD
+- [Explicit local operating-period ledger](../../internal/development/audit-suite/AQ_SHARED_OPERATING_PERIOD_LEDGER_2026-09-14.md) — MD
 - [Selected source dependencies and declared period support](../../internal/development/audit-suite/AQ_SOURCE_DEPENDENCY_PERIOD_RECONCILIATION_2026-09-14.md) — MD
 - [Read-through company source portfolio — September 14, 2026](../../internal/development/audit-suite/AQ_SOURCE_PORTFOLIO_READ_THROUGH_2026-09-14.md) — MD
 - [Explicit source-readiness inventory](../../internal/development/audit-suite/AQ_SOURCE_READINESS_INVENTORY_2026-09-14.md) — MD

@@ -469,3 +469,29 @@ now connects originals to requests, controls, procedures and exact workpaper
 versions, with explicit personal-draft attachment and safe return navigation.
 All 126 frontend tests, the production build and mocked-browser regressions
 passed; the actual A viewer also passed read-only source-context navigation.
+
+
+The [explicit operating-period ledger](AQ_SHARED_OPERATING_PERIOD_LEDGER_2026-09-14.md)
+records a local inventory and individually declared scheduled occurrences before
+the period. Due reports show missing observations independently of received
+source records. Operators can preserve skips, source-backed assertions and later
+corrections with exact predecessor pins and optimistic version checks. The
+ledger does not execute the operation or infer that selected records establish
+inventory relevance, completeness or effectiveness. A separate native business
+adapter must produce and reconcile those results.
+
+The trusted CLI creates only new private ledgers, appends explicit actions to
+existing stores and publishes read-only reports outside source roots. Strict
+input parsing, physical-route binding, separate declaration/occurrence history,
+time visibility and immutable reporting are covered by focused and independent
+review checks. This is a foundation for period coverage, not completion of AQ-04
+or AQ-06.
+
+
+The operating-period foundation passed 39 current focused tests: 24 core,
+eight independent review cases and seven trusted-CLI checks. The isolated full
+repository check at `cfa19ce` passed 1,260 tests with three skips and no failures
+or errors (`repository-cfa19ce-isolated-2026-09-14.xml`). That full check covers
+the earlier backend reconciliation/session checkpoint; the later evidence UI,
+intake-classification and period-ledger changes have their separately identified
+focused and browser checks.
