@@ -34,6 +34,11 @@ def build():
         raise ValueError("Stabilization source changed")
     cash_inventory = production * ending / produced
     cash_cogs = production - cash_inventory
+    indirect = sum(D(v) for v in s["production_indirect_allocations"].values())
+    if indirect > other + repair:
+        raise ValueError("Production indirect allocation exceeds incurred cost population")
+    indirect_inventory = indirect * ending / produced
+    capitalized_cash_inventory = cash_inventory + indirect_inventory
     contributions = D("44312500")
     closing_cash = (
         contributions
@@ -55,17 +60,27 @@ def build():
     book_dda = productive * produced / reserve
     book_dda_inventory = book_dda * ending / produced
     original_dda_inventory = D("687500")
-    book_inventory_delta = book_dda_inventory - original_dda_inventory
+    book_inventory_delta = book_dda_inventory - original_dda_inventory + indirect_inventory
     opening_equity_correction = book_dda - book_inventory_delta
     initial_tax_cost = (
         D(t["cash_consideration_usd"]) + D(t["other_liabilities_usd"]) - D(t["current_assets_usd"])
     )
     tax_classes = {k: initial_tax_cost * v / sum(classes.values()) for k, v in classes.items()}
     cost_depletion = tax_classes["mineral_interest"] * sold / reserve
-    plant_federal = tax_classes["production_plant"]
-    plant_ca = plant_federal / D(10) * D(167) / D(365)
+    if sum(D(v) for v in s["plant_components"].values()) != classes["production_plant"]:
+        raise ValueError("Plant component classes differ from source fairvalue population")
+    plant_cost = tax_classes["production_plant"]
+    equipment = (
+        plant_cost
+        * D(s["plant_components"]["mining_and_milling_equipment"])
+        / classes["production_plant"]
+    )
+    building = plant_cost - equipment
+    building_dda = building / D(39) * D("5.5") / D(12)
+    plant_federal = equipment + building_dda
+    plant_ca = equipment / D(10) * D(167) / D(365) + building_dda
     results = []
-    cash_profit = D(s["sales_usd"]) - cash_cogs - other - repair
+    cash_profit = D(s["sales_usd"]) - cash_cogs - other - repair + indirect_inventory
     for jurisdiction, plant_dda in [("US", plant_federal), ("CA", plant_ca)]:
         dda_inventory = plant_dda * ending / produced
         deducted_dda = plant_dda - dda_inventory
@@ -83,7 +98,8 @@ def build():
                 initial_operating_tax_cost_usd=str(initial_tax_cost),
                 initial_land_basis_usd=str(tax_classes["surface_land"].quantize(Q)),
                 initial_mineral_basis_usd=str(tax_classes["mineral_interest"].quantize(Q)),
-                initial_plant_basis_usd=str(plant_federal.quantize(Q)),
+                initial_plant_basis_usd=str(plant_cost.quantize(Q)),
+                production_indirect_costs_capitalized_usd=str(indirect_inventory.quantize(Q)),
                 production_depreciation_usd=str(plant_dda.quantize(Q)),
                 depreciation_in_closing_inventory_usd=str(dda_inventory.quantize(Q)),
                 depreciation_released_to_cogs_usd=str(deducted_dda.quantize(Q)),
@@ -92,7 +108,9 @@ def build():
                 deduction_depletion_usd=str(depletion.quantize(Q)),
                 taxable_income_usd=str(income.quantize(Q)),
                 loss_before_state_apportionment_usd=str(max(-income, D(0)).quantize(Q)),
-                closing_inventory_tax_basis_usd=str((cash_inventory + dda_inventory).quantize(Q)),
+                closing_inventory_tax_basis_usd=str(
+                    (capitalized_cash_inventory + dda_inventory).quantize(Q)
+                ),
                 closing_operating_tax_basis_usd=str(
                     (initial_tax_cost - plant_dda - depletion + rehab).quantize(Q)
                 ),

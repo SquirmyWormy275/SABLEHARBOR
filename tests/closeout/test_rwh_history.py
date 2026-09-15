@@ -31,4 +31,12 @@ def test_bonus_inventory_and_cost_depletion_do_not_double_deduct():
             - D(row["taxable_income_usd"])
         ) <= D(".0001")
         assert row["aro_basis_included_usd"] == "0"
-    assert D(result["rows"][0]["loss_before_state_apportionment_usd"]) == D("11872092.2277")
+    assert D(result["rows"][0]["loss_before_state_apportionment_usd"]) == D("8098998.0919")
+
+
+def test_production_indirects_capitalize_and_building_is_not_bonus():
+    result = build()
+    fed = result["rows"][0]
+    assert D(fed["production_indirect_costs_capitalized_usd"]) == D("2345625")
+    assert D(fed["production_depreciation_usd"]) < D(fed["initial_plant_basis_usd"])
+    assert D(result["book_inventory_delta_usd"]) > D(result["book_dda_usd"])

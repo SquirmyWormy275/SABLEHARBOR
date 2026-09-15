@@ -34,10 +34,10 @@
   "rehabilitation_usd": "8000000",
   "rehabilitation_service_date": "2026-01-01",
   "closing_trade_payables_usd": "3000000",
-  "book_method": "Retain composite units-of-production for productive acquired plant/mineral estate; exclude separately identified surface land. Rehabilitation remains CIP until January2026. H2depreciation allocated through weighted-average inventory.",
+  "book_method": "Retain composite units-of-production for productive acquired plant/mineral estate; exclude separately identified surface land. Rehabilitation remains CIP untilJanuary2026. H2depreciation and production-benefit indirectcosts flowthroughweighted-averageinventory. Historical3mrepair expense and45cash-unitcalibration receive a dated source correction; incurredcash remainsunchanged.",
   "tax_allocation": "Cost28m plus fixed assumed otherliabilities2.5m less acquiredcurrentassets4.5m gives26m initial operating taxcost. All three non-goodwill operating asset classes are ClassV; allocate26m in proportion to the separately authored42m fair-value class population. AssumedARO16m excluded until economicperformance; no replacement goodwill.",
-  "federal_plant_method": "100%bonus on unrelated purchased productive plant placedinserviceJuly18,2025; no priorusebybuyer, no carryoverbasis, no electionout. Productiondepreciation capitalized under263A and released through weighted-average inventory.",
-  "california_plant_method": "Section167 straightline tenyear productiveplant life; ACT365 firstperiod. No federalbonus conformity inferred.",
+  "federal_plant_method": "ClassVplant22m separates18meligiblemining/millingequipment (unrelatedpurchase,no priorbuyeruse,no carryoverbasis,not structuralproperty,<=20yrrecovery) and4mnonresidentialbuilding. Equipment receives100%bonus; building39yrstraightline/midmonthJuly convention. Bothproductiondepreciation components capitalize under263A and releasethroughweighted-average inventory.",
+  "california_plant_method": "No federalbonus. Equipmentsection167straightline tenyearusefullife/ACT365firstperiod; productionbuilding39yearstraightline withsameJuly-midmonth convention. Separately authored life/componentfacts are not a recoveredcostsegregationreport.",
   "depletion_method": "Costdepletion on units sold from ownproduction; compare22%of mininggrossincome with50%propertyincome ceiling. H2propertyincome beforedepletion is negative, so percentageamountzero and costdepletion governs. No purchasedfinishedinventory sold in this authored opening population.",
   "history_constraint": "Grosssales and detailed costevents are newly authored, not recovered. Existing contributedcash44.3125m,28mpurchase,8mrehabilitation,3mrepairs, endingcash2m,AR4m,prepaid0.5m,tradeAP3m,otherliability2.5m andfinishedinventory125klb constrain the cash/quantity bridge. The687500mobilizationcost is explicit authored precision resolving the earlier openinginventory cash-versus-DD&A calibration; it is not hidden as a taxloss or a new fundingreceipt.",
   "authorities": [
@@ -51,5 +51,17 @@
   "authority_accessed_on": "2026-09-15",
   "limitations": "Full mineral property grossincome/transport adjustments and subsequentyear asset,inventory,ARO anddeferredtax realization are separately required. This source does not submit a return, claim an IRS acknowledgement or establish a taxsharing agreement. Nonproductioncost population is expressly fictional; accepted 2025 external-carrier boundaries remain unchanged.",
   "capacity_test": "At the retained0.17%grade/92%recovery and2000lb/shortton,300000lb requires95907.93shorttons over167days=574.30tpd,below600tpdnameplate. This is an authored finite H2population, not a claimed engineering study or recovered throughput log.",
-  "repair_scope": "The3m knownrepaircost is newly specified as routine repairs/consumable replacement to already operating plant, with no betterment,adaptation or restoration of an entireunitofproperty; the separate8m rehabilitation is capitalized. No samecost is deducted andcapitalized."
+  "repair_scope": "The3m knownrepaircost is newly specified as routine repairs/consumable replacement to already operating plant, with no betterment,adaptation or restoration of an entireunitofproperty; the separate8m rehabilitation is capitalized. No samecost is deducted andcapitalized.",
+  "production_indirect_allocations": {
+    "routine_repairs": "3000000",
+    "site_administration_labor": "200000",
+    "production_mineral_and_property_taxes": "742000",
+    "production_plant_insurance": "1000000",
+    "plant_mobilization_and_security": "687500"
+  },
+  "production_indirect_allocation_basis": "Activity-based newly authored cost classification:200k of800k labor and1m of1.531m admin/insurance directly support mine/plant production; all742k extraction/property taxes and687500plantsecurity/mobilization support production. Remaining600kcommerciallabor/531kcorporateadmin/1.4moutboundsellingfreight are nonproduction.252k sales-basedroyalty follows soldproduct. Full3m routineproductionrepairs are263Ainventorycost despite notcapitalimprovements. Allocation does notchange totalcashcost.",
+  "plant_components": {
+    "mining_and_milling_equipment": "18000000",
+    "production_building_structure": "4000000"
+  }
 }
