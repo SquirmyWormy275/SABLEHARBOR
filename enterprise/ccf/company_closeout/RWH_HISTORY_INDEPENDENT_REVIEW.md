@@ -87,3 +87,13 @@ Primary downloads accessed September15UTC; SHA256:
 
 - `sh-263a.xml`: `2c671ed352e47520454f393f22c992e6a4342a3230c1b4cd47562359501ca26e`
 - `sh-fas151.pdf`: `14a65c68921730175fcc5a5879a74d03223829b29418ad840672f3a85b8c425e`
+
+## Posted successor and duplicate-input retest
+
+Read-only review of `3a4ccfc0`, followed by focused retest at finance `3a0871d5c4821411d384f0debb6da0d3e4574157`: five RWH history/book tests pass. No cash or repair-asset duplication found in this scoped review. Current general-service production support allocation is a subsequent workstream, outside these amounts.
+
+The revised 160 active days support 300,000 lb at approximately599.425 tons/day, below the retained600-ton capacity. Federal H2 depreciation11,171,957.6720 is allocated to idle period468,285.6509, ending inventory4,459,863.3421 and sold production6,243,808.6789 (four-decimal rounding). Federal loss8,294,117.1131 and ending tax inventory12,430,488.3421 are calculated attributes, not cash benefits or demonstrated realization. CA depreciation538,924.4039 has separate timing/basis; its preapportionment loss1,905,807.7045 is not a final state return result.
+
+Book normal production indirect1,942,000 enters inventory; accepted abnormal repair3,000,000 and mobilization687,500 remain period expenses. Tax263A treatment is separately supported. The book opening inventory correction737,430.2135 and accumulated depreciation1,477,832.5123 reduce opening equity740,402.2988 without changing cash. August cash-cost inventory8,385,238.1530 plus DDA inventory867,149.3725 totals9,252,387.5255 before the subsequent mixed-service review.
+
+An independent duplicated-positive1200-leg mutation originally inflated inventory by2,329,167. Finance corrected the helper to reject duplicate native `(entity, year, journal_id, account)` keys and require2026. The corrected guard is present and its regression test passes. Source/quantity balances alone had not detected this corruption; the prior failure remains recorded here.

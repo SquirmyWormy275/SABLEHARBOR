@@ -11,7 +11,7 @@
     "enterprise/operations/source/current_company_2026_08.json": "729e45f44d5240be558bb8d1cfef3bdd527a379a810a342173b2409d7ce0ea74",
     "enterprise/operations/source/completed_period_2026_08.json": "14e7b53177b80d671ed66fdc309c6b2c0e1b0b68567f54da97dd02dca4d1ddf8",
     "enterprise/operations/current_records.py": "8a4333283cf3c8706aed0092c8c0f8cf90b4a8a37fcfc76b447fd19b4f4d2776",
-    "enterprise/operations/completed_period.py": "8c120f029b53b41731c636e6291c2390e56764601cda56c3faa2655b59cbecf5"
+    "enterprise/operations/completed_period.py": "f97600b0122588ac75ae2d553f9ea7306789ec819d7b15b7fce8ba1234a00abf"
   },
   "populations": {
     "current_contracts": {
