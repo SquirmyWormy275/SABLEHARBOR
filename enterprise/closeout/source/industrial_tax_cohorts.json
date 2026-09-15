@@ -1,0 +1,100 @@
+{
+  "document_id": "SH-INDUSTRIAL-TAX-COHORTS-20260915",
+  "state": "PENDING_REPOSITORY_ACCEPTANCE",
+  "origin": "NEWLY_AUTHORED_COMPONENT_PRECISION_WITHIN_EXISTING_PURCHASE_AND_CAPEX",
+  "effective_boundary": "ARU elected new target January 8 2026; RWH unrelated asset purchase July 18 2025. No election submission inferred.",
+  "aru_initial_components": [
+    {
+      "id": "ARU-TRACK-RAIL",
+      "cost_usd": "12000000",
+      "life_years": 7,
+      "ca_life_years": 10,
+      "book_group": "ARU-TRACK"
+    },
+    {
+      "id": "ARU-TRACK-BRIDGES",
+      "cost_usd": "3000000",
+      "life_years": 15,
+      "ca_life_years": 20,
+      "book_group": "ARU-TRACK"
+    },
+    {
+      "id": "ARU-TERMINAL-BUILDINGS",
+      "cost_usd": "12000000",
+      "life_years": 39,
+      "ca_life_years": 39,
+      "building": true,
+      "book_group": "ARU-TERMINAL"
+    },
+    {
+      "id": "ARU-MOBILE-ROAD",
+      "cost_usd": "3000000",
+      "life_years": 5,
+      "ca_life_years": 8,
+      "book_group": "ARU-MOBILE"
+    },
+    {
+      "id": "ARU-MOBILE-RAIL-HANDLING",
+      "cost_usd": "4000000",
+      "life_years": 7,
+      "ca_life_years": 14,
+      "book_group": "ARU-MOBILE"
+    },
+    {
+      "id": "ARU-LEASE-TAX-OWNED",
+      "cost_usd": "2500000",
+      "life_years": 7,
+      "ca_life_years": 14,
+      "book_group": "LEASE"
+    }
+  ],
+  "catchup_classes": {
+    "track_ties_surfacing": [
+      7,
+      10
+    ],
+    "drainage_culverts": [
+      15,
+      20
+    ],
+    "locomotive_overhaul": [
+      7,
+      14
+    ],
+    "yard_shop": [
+      39,
+      39
+    ],
+    "environmental_stormwater": [
+      15,
+      20
+    ],
+    "truck_fleet": [
+      5,
+      8
+    ],
+    "terminal_warehouse_equipment": [
+      7,
+      14
+    ],
+    "dispatch_it": [
+      5,
+      6
+    ],
+    "contingency": [
+      7,
+      14
+    ]
+  },
+  "component_facts": "Initial track allocation separates rail/ties from bridges/culverts; no tunnel or railroad grading basis is included. Initial terminal allocation is structural warehouse property, not bonus equipment. Road vehicles are heavy commercial trucks, not passenger automobiles. Existing leases retain accepted tax ownership. Catchup contingency is newly specified paid replacement handling equipment within the existing spent envelope; no separate new spending. Yard/shop tranche is structural improvement. Interface cost is nonstructural loading/handling equipment and track-side machinery, not a new building. New replacement asset cards are replacement operating equipment; separately named future projects require their declared component mapping before tax deduction.",
+  "ownership": "Preserve accepted synthetic owned-PPE allocation BST55%/ARU45% per cohort, including jointly allocated owned infrastructure; leased tax-owned equipment BST60%/ARU40%. This tax workpaper does not transfer title or change accepted ownership shares.",
+  "ca_method": "Selected section167 straight-line useful lives above with full service month; RWH historical 2025 first period retains separately authored ACT365 convention, subsequent years full annual life charge. No federal bonus conformity inferred.",
+  "federal_method": "Qualifying acquired/new equipment <=20 years receives 100% bonus under adopted 2025 law; used acquired assets satisfy unrelated/no-prior-use/no-carryover-basis facts. Structural buildings use 39-year midmonth. No section179 election; no section168(n) production-property election. Hypothetical ordinary MACRS for Illinois tracks annual 40-percent midquarter test separately from bonus.",
+  "authorities": [
+    "https://www.irs.gov/publications/p946",
+    "https://www.irs.gov/irb/2019-41_IRB",
+    "https://tax.illinois.gov/forms/incometax/currentyear/iit-bit-shared-forms/il-4562-instr.html"
+  ],
+  "authority_accessed_on": "2026-09-15",
+  "future_project_facts": "Within existing planned projects, MINE-CAPACITY adds mining/milling machinery; RAIL-RESILIENCE replaces rail/ties, excluding grading/tunnels; TERMINAL-EXPANSION and WAREHOUSE-CAPACITY add structural buildings; TRUCK-CAPACITY adds heavy commercial road trucks. Actual conditional service dates and paid asset-card amounts govern. No unserved CIP depreciation; each paid tranche remains a distinct cohort."
+}
