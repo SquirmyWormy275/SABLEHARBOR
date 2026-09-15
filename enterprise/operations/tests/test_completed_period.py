@@ -129,7 +129,14 @@ def test_adversarial_mutations(edition, mutation, message):
 def test_knowledge_time_does_not_backdate_newly_authored_history(edition):
     rows = edition["tables"]["people"]
     assert visible_rows(rows, as_of="2026-08-31", known_on="2026-08-31T23:59:59Z") == []
-    assert len(visible_rows(rows, as_of="2026-08-31", known_on="2026-09-15T00:00:00Z")) == 702
+    assert (
+        len(
+            visible_rows(
+                rows, as_of="2026-08-31", known_on=edition["available_at"], allow_preview=True
+            )
+        )
+        == 702
+    )
     with pytest.raises(ValueError, match="timezone"):
         visible_rows(rows, as_of="2026-08-31", known_on="2026-09-15")
 

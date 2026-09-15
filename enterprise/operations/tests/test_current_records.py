@@ -107,9 +107,15 @@ def test_changing_source_asset_to_held_forklift_fails(edition):
 
 
 def test_effective_and_known_on_event_state(edition):
-    august = workforce_state(edition, as_of="2026-08-31", known_on="2026-09-15T23:59:59Z")
-    gap = workforce_state(edition, as_of="2026-09-05", known_on="2026-09-15T23:59:59Z")
-    final = workforce_state(edition, as_of="2026-09-15", known_on="2026-09-15T23:59:59Z")
+    august = workforce_state(
+        edition, as_of="2026-08-31", known_on=edition["available_at"], allow_preview=True
+    )
+    gap = workforce_state(
+        edition, as_of="2026-09-05", known_on=edition["available_at"], allow_preview=True
+    )
+    final = workforce_state(
+        edition, as_of="2026-09-15", known_on=edition["available_at"], allow_preview=True
+    )
     assert (august["active_employees"], august["active_principals"]) == (702, 702)
     assert (gap["active_employees"], gap["active_principals"]) == (701, 702)
     assert (final["active_employees"], final["active_principals"]) == (701, 701)

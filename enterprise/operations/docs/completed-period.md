@@ -335,3 +335,22 @@ residual. `verify_core_asset_balances` joins corrected August LEG_1500/LEG_1590
 from the actual finance successor and rejects the former uncorrected $9 million
 net presentation. No replacement asset, host ownership or additional acquisition
 is created by this component allocation.
+
+## Actual repository availability and preview boundary
+
+Source September 15 midnight values express a declared authored day, not a
+recovered exact creation timestamp. Generated records retain `authored_day`,
+`declared_available_at` and `declared_available_precision=DAY`. Their usable
+`available_at` and repository recording timestamp are at least the deterministic
+UTC committer timestamp of the source HEAD, with the exact commit recorded. No
+wall-clock timestamp is generated. This guard also covers payroll/customer cash
+receipts and September custody events. Historical effective dates stay unchanged.
+
+A dirty checkout produces `DIRTY_WORKING_COPY_PREVIEW_NOT_PUBLISHABLE` records.
+Direct as-of helpers deny those previews by default; `allow_preview=True` is an
+explicit analysis-only option and still enforces the commit-time lower bound.
+A clean committed source remains reviewable rather than automatically accepted
+or publicly released. The composite publication boundary must still be applied.
+The generated lane receipt and manifest expose these same distinctions. Tests
+verify deterministic commit timestamps, the just-before boundary, all generated
+row populations and dirty-preview denial without using nondeterministic time.

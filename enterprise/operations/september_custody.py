@@ -7,6 +7,8 @@ from datetime import datetime
 from decimal import Decimal as D
 from pathlib import Path
 
+from .availability import apply as apply_availability
+from .availability import queryable
 from .completed_period import ROOT, SOURCE, money, read
 from .completed_period import build as august_build
 
@@ -34,7 +36,8 @@ def build(source=None, qualification=None, august=None):
         source["ready_at"] != qualification["ready_at"]
         or source["released_at"] != qualification["events"][1]["event_at"]
         or source["received_at"] != qualification["events"][2]["event_at"]
-        or source["available_at"] != qualification["available_at"]
+        or source.get("declared_available_at", source["available_at"])
+        != qualification.get("declared_available_at", qualification["available_at"])
         or source["drum_id"] != qualification["drum_id"]
         or quantity != D(qualification["material"]["contained_u3o8_lb"])
     ):
@@ -90,7 +93,7 @@ def build(source=None, qualification=None, august=None):
                 acceptance_state=source["acceptance_state"],
             )
         )
-    return dict(
+    result = dict(
         record_id=source["record_id"],
         source=source,
         qualification=qualification,
@@ -113,16 +116,18 @@ def build(source=None, qualification=None, august=None):
             parent=source["expense_parent"],
         ),
     )
+    return apply_availability(result)
 
 
-def as_of(result, *, effective_at, known_on):
+def as_of(result, *, effective_at, known_on, allow_preview=False):
     cutoff, known = datetime.fromisoformat(effective_at), datetime.fromisoformat(known_on)
     if cutoff.tzinfo is None or known.tzinfo is None:
         raise ValueError("Effective and knowledge timestamps require timezone")
     visible = [
         r
         for r in result["events"]
-        if datetime.fromisoformat(r["effective_at"]) <= cutoff
+        if queryable(r, allow_preview)
+        and datetime.fromisoformat(r["effective_at"]) <= cutoff
         and datetime.fromisoformat(r["available_at"]) <= known
     ]
     return visible[-1] if visible else None
@@ -153,6 +158,7 @@ def main():
         SEPTEMBER_SOURCE,
         result["source"]["qualification_path"],
         "enterprise/operations/september_custody.py",
+        "enterprise/operations/availability.py",
         "enterprise/ccf/company_closeout/shipment.py",
     )
     result["source_hashes"] = {

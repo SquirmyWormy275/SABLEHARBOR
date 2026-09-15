@@ -20,7 +20,12 @@ def result():
 
 def test_original_hold_then_separate_known_on_receipt(result):
     assert (
-        as_of(result, effective_at="2026-08-31T23:59:59-06:00", known_on="2026-09-15T00:00:00Z")
+        as_of(
+            result,
+            effective_at="2026-08-31T23:59:59-06:00",
+            known_on=result["repository_source_available_at"],
+            allow_preview=True,
+        )
         is None
     )
     assert (
@@ -28,7 +33,10 @@ def test_original_hold_then_separate_known_on_receipt(result):
         is None
     )
     received = as_of(
-        result, effective_at="2026-09-14T23:59:59-06:00", known_on="2026-09-15T00:00:00Z"
+        result,
+        effective_at="2026-09-14T23:59:59-06:00",
+        known_on=result["repository_source_available_at"],
+        allow_preview=True,
     )
     assert received["event"] == "CONVERTER_CUSTODIAL_RECEIPT"
     roll = result["lot_rollforward"]

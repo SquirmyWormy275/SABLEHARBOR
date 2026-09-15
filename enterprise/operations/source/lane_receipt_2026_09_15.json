@@ -28,14 +28,15 @@
     "enterprise/operations/current_balances.py",
     "enterprise/operations/september_custody.py",
     "enterprise/ccf/company_closeout/shipment.py",
-    "enterprise/operations/invoice_settlement.py"
+    "enterprise/operations/invoice_settlement.py",
+    "enterprise/operations/availability.py"
   ],
   "reproduction_commands": [
     "python -m enterprise.operations.completed_period",
     "python -m enterprise.operations.completed_period --check",
     "python -m enterprise.operations.september_custody",
     "python -m enterprise.operations.september_custody --check",
-    "python -m pytest enterprise/operations/tests/test_completed_period.py enterprise/operations/tests/test_current_records.py enterprise/operations/tests/test_current_balances.py enterprise/operations/tests/test_september_custody.py enterprise/operations/tests/test_invoice_settlement.py -q"
+    "python -m pytest enterprise/operations/tests/test_completed_period.py enterprise/operations/tests/test_current_records.py enterprise/operations/tests/test_current_balances.py enterprise/operations/tests/test_september_custody.py enterprise/operations/tests/test_invoice_settlement.py enterprise/operations/tests/test_availability.py -q"
   ],
   "independent_reperformance": [
     "current_records.verify_current_finance(edition, legacy_snapshot, anchor_rows): original independent legacy and industrial journal source comparison; zero additional journal",
@@ -85,8 +86,8 @@
   "validation_receipt": {
     "recorded_at": "2026-09-15",
     "dependency_environment": "SABLEHARBOR-company-closeout/.venv Python with repository locked dependencies",
-    "focused_cases": 74,
-    "focused_result": "PASS74cases: completed_period21 + current_records21 + current_balances12 + september_custody10 + invoice_settlement10",
+    "focused_cases": 77,
+    "focused_result": "PASS77cases: existing74plus3deterministic repository availability/dirtypreview/recordpopulation tests",
     "ruff": "PASS on all changed generators and tests",
     "august_and_september_regeneration_checks": "PASS; rerun for final integration source_commit",
     "diff_check": "PASS",
@@ -111,5 +112,6 @@
       "source": "enterprise/operations/current_balances.py;enterprise/closeout/finance.py;enterprise/closeout/tax_assets.py"
     }
   ],
-  "invoice_rounding": "ROUND_HALF_UPtocents for weightedallocations; last sortedcustomer receivescentresidual. Aging isdayspastdue, currentincludesnotdueand0-30DPD."
+  "invoice_rounding": "ROUND_HALF_UPtocents for weightedallocations; last sortedcustomer receivescentresidual. Aging isdayspastdue, currentincludesnotdueand0-30DPD.",
+  "availability_policy": "DeclaredSeptember15day retained; generatedavailable/recorded atmax(declaredday,deterministicHEADcommitterUTC). Dirtypreviewnotpublishable andasofdeniedunlessexplicitanalysisoverride. Acceptance/publicationseparate."
 }

@@ -17,6 +17,9 @@ from decimal import ROUND_HALF_UP
 from decimal import Decimal as D
 from pathlib import Path
 
+from .availability import apply as apply_availability
+from .availability import queryable
+
 ROOT = Path(__file__).resolve().parents[2]
 SOURCE = "enterprise/operations/source/completed_period_2026_08.json"
 OUTPUT = ROOT / "enterprise/generated/completed-period-2026-08"
@@ -824,6 +827,10 @@ def validate(source, tables):
             raise ValueError("Leave adds capacity")
     for rows in tables.values():
         for row in rows:
+            if row.get("repository_source_available_at") and datetime.fromisoformat(
+                row["available_at"]
+            ) < datetime.fromisoformat(row["repository_source_available_at"]):
+                raise ValueError("Repository evidence promoted into earlier known-on state")
             if datetime.fromisoformat(row["available_at"]) < datetime.fromisoformat(
                 source["available_at"]
             ):
@@ -886,6 +893,7 @@ def build(source=None):
     inputs = source["sources"] + [
         SOURCE,
         "enterprise/operations/completed_period.py",
+        "enterprise/operations/availability.py",
         "geospatial/facilities/population/REGISTER.json",
         CURRENT_SOURCE,
         TAX_SCOPE_SOURCE,
@@ -895,7 +903,7 @@ def build(source=None):
         "enterprise/operations/source/lane_receipt_2026_09_15.json",
     ]
     hashes = {p: hashlib.sha256((ROOT / p).read_bytes()).hexdigest() for p in sorted(set(inputs))}
-    return dict(
+    result = dict(
         record_id=source["record_id"],
         schema_version=source["schema_version"],
         authority_state=source["authority_state"],
@@ -906,9 +914,10 @@ def build(source=None):
         totals=totals,
         tables=tables,
     )
+    return apply_availability(result)
 
 
-def visible_rows(rows, *, as_of, known_on):
+def visible_rows(rows, *, as_of, known_on, allow_preview=False):
     """Current-effective and known-on are independent axes, both fail closed."""
     knowledge = datetime.fromisoformat(known_on)
     if knowledge.tzinfo is None:
@@ -916,7 +925,8 @@ def visible_rows(rows, *, as_of, known_on):
     return [
         r
         for r in rows
-        if r.get(
+        if queryable(r, allow_preview)
+        and r.get(
             "effective_at",
             r.get(
                 "effective_from",
@@ -929,13 +939,26 @@ def visible_rows(rows, *, as_of, known_on):
     ]
 
 
-def workforce_state(result, *, as_of, known_on):
+def workforce_state(result, *, as_of, known_on, allow_preview=False):
     """Apply visible HR/access events without rewriting the August source snapshots."""
     import copy
 
-    rows = copy.deepcopy(visible_rows(result["tables"]["people"], as_of=as_of, known_on=known_on))
-    access = copy.deepcopy(visible_rows(result["tables"]["access"], as_of=as_of, known_on=known_on))
-    changes = visible_rows(result["tables"]["change_events"], as_of=as_of, known_on=known_on)
+    rows = copy.deepcopy(
+        visible_rows(
+            result["tables"]["people"], as_of=as_of, known_on=known_on, allow_preview=allow_preview
+        )
+    )
+    access = copy.deepcopy(
+        visible_rows(
+            result["tables"]["access"], as_of=as_of, known_on=known_on, allow_preview=allow_preview
+        )
+    )
+    changes = visible_rows(
+        result["tables"]["change_events"],
+        as_of=as_of,
+        known_on=known_on,
+        allow_preview=allow_preview,
+    )
     exited = {r["person_id"] for r in changes if r["action"] == "EXIT"}
     revoked = {
         r["person_id"]
@@ -959,6 +982,12 @@ def workforce_state(result, *, as_of, known_on):
 def write(result, destination=OUTPUT, check=False):
     destination = Path(destination)
     receipt = read("enterprise/operations/source/lane_receipt_2026_09_15.json")
+    receipt["declared_known_on"] = receipt["known_on"]
+    receipt["known_on"] = result["available_at"]
+    receipt["authored_day"] = result["authored_day"]
+    receipt["declared_available_precision"] = "DAY"
+    receipt["publication_state"] = result["publication_state"]
+    receipt["publishable_source_snapshot"] = result["publishable_source_snapshot"]
     receipt["table_counts"] = {k: len(v) for k, v in result["tables"].items()}
     receipt["reconciliation_totals"] = result["totals"]
     receipt["source_hashes"] = result["source_hashes"]
@@ -983,6 +1012,9 @@ def write(result, destination=OUTPUT, check=False):
         .strip(),
         artifacts={p: hashlib.sha256(data).hexdigest() for p, data in artifacts.items()},
         distribution_state="REVIEWABLE_COMPANY_INPUT_PENDING_COMPOSITE_RELEASE",
+        publication_state=result["publication_state"],
+        publishable_source_snapshot=result["publishable_source_snapshot"],
+        repository_source_available_at=result["repository_source_available_at"],
     )
     artifacts["manifest.json"] = encoded(manifest)
     if check:
