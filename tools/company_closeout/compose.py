@@ -50,6 +50,7 @@ def generate(root: Path, available_at: str, version: str, accepted=False):
     sources = [p for p in tracked if p and p not in excluded]
     finance = root / "enterprise/generated/company-closeout-v1"
     workforce = root / "enterprise/generated/completed-period-2026-08"
+    september = root / "enterprise/generated/september-custody-2026"
     identity = json.loads((finance / "identity.json").read_bytes())
     people_manifest = json.loads((workforce / "manifest.json").read_bytes())
     if identity["source_revision"] != revision or people_manifest["source_commit"] != revision:
@@ -62,6 +63,18 @@ def generate(root: Path, available_at: str, version: str, accepted=False):
     for relative, digest in people_manifest["source_hashes"].items():
         if sha((root / relative).read_bytes()) != digest:
             raise EditionError(f"Workforce controlling source changed: {relative}")
+    september_record = json.loads((september / "records.json").read_bytes())
+    if september_record["repository_source_commit"] != revision:
+        raise EditionError("September custody source revision is stale")
+    if accepted and not september_record["publishable_source_snapshot"]:
+        raise EditionError("Accepted package cannot use preview September custody")
+    for relative, digest in september_record["source_hashes"].items():
+        if sha((root / relative).read_bytes()) != digest:
+            raise EditionError(f"September custody source changed: {relative}")
+    if {p.relative_to(september).as_posix() for p in september.rglob("*") if p.is_file()} != {
+        "records.json"
+    }:
+        raise EditionError("Unexpected September custody artifact")
     finance_inventory = json.loads((finance / "manifest.json").read_bytes())
     generated = []
     for directory, inventory in [
@@ -80,6 +93,7 @@ def generate(root: Path, available_at: str, version: str, accepted=False):
         if set(members) != actual:
             raise EditionError("Unexpected or omitted generated package file")
         generated.append(sorted(set(members)))
+    generated[1].append(str((september / "records.json").relative_to(root)))
     components = []
     for cid, role, definition, members in [
         (

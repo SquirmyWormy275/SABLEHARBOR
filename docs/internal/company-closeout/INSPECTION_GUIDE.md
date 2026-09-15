@@ -107,14 +107,25 @@ uv sync --frozen --all-extras
 uv run python -m enterprise.closeout.build
 uv run python -m enterprise.operations.completed_period
 uv run python -m enterprise.operations.completed_period --check
+uv run python -m enterprise.operations.september_custody
+uv run python -m enterprise.operations.september_custody --check
 uv run python -m enterprise.closeout.reperform enterprise/generated/company-closeout-v1
+uv run python -m enterprise.operations.reperform_closeout --output var/company-closeout/company-reperformance.json
 uv run python -m tools.company_closeout.independent_import enterprise/generated/company-closeout-v1/exports
 uv run python -m enterprise.ccf.company_closeout.instruments
 uv run python -m enterprise.ccf.company_closeout.current_applicability --reperform-revenue
 uv run python -m enterprise.ccf.company_closeout.rail_reporting
 uv run python -m enterprise.ccf.company_closeout.shipment
+uv run python -m enterprise.ccf.company_closeout.admin_completion
 uv run python -m enterprise.ccf.company_closeout.restore_rehearsal
 ```
+
+The composite reperformance command requires the August, September and finance
+outputs to identify the same clean source commit. It independently joins current
+invoices, legal balances, asset carrying values, payroll legal-employer expense,
+selected debt payments and September freight to the retained source journals.
+The separate September `records.json` is included in the completed-company-records
+component; it is not omitted merely because its native generator uses another directory.
 
 The release builder uses `tools.company_closeout.compose` to pin the exact generated
 and tracked populations. Supply the release receipt's version and availability

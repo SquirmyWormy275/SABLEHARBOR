@@ -55,6 +55,17 @@ def tree(tmp_path):
             }
         )
     )
+    september = tmp_path / "enterprise/generated/september-custody-2026"
+    september.mkdir(parents=True)
+    (september / "records.json").write_text(
+        json.dumps(
+            {
+                "repository_source_commit": revision,
+                "publishable_source_snapshot": True,
+                "source_hashes": source_hashes,
+            }
+        )
+    )
     return tmp_path
 
 
@@ -63,9 +74,24 @@ def test_explicit_history_exclusion_and_three_populations(tree):
     assert contract["historical_zip_exclusions"] == ["historical.zip"]
     assert len(contract["components"]) == 3
     assert contract["components"][0]["members"][0]["path"] == "source.json"
+    assert any(
+        m["path"].endswith("september-custody-2026/records.json")
+        for m in contract["components"][2]["members"]
+    )
 
 
-@pytest.mark.parametrize("fault", ["source", "derivative", "extra", "revision", "backdate"])
+@pytest.mark.parametrize(
+    "fault",
+    [
+        "source",
+        "derivative",
+        "extra",
+        "revision",
+        "backdate",
+        "september_revision",
+        "september_extra",
+    ],
+)
 def test_stale_or_unavailable_generated_population_rejected(tree, fault):
     finance = tree / "enterprise/generated/company-closeout-v1"
     if fault == "source":
@@ -78,6 +104,13 @@ def test_stale_or_unavailable_generated_population_rejected(tree, fault):
         identity = json.loads((finance / "identity.json").read_bytes())
         identity["source_revision"] = "0" * 40
         (finance / "identity.json").write_text(json.dumps(identity))
+    elif fault == "september_revision":
+        p = tree / "enterprise/generated/september-custody-2026/records.json"
+        record = json.loads(p.read_text())
+        record["repository_source_commit"] = "0" * 40
+        p.write_text(json.dumps(record))
+    elif fault == "september_extra":
+        (tree / "enterprise/generated/september-custody-2026/unmanifested.txt").write_text("extra")
     with pytest.raises(EditionError):
         generate(
             tree, "2026-08-31T00:00:00Z" if fault == "backdate" else "2099-01-01T00:00:00Z", "test"

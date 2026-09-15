@@ -41,5 +41,36 @@ def test_changed_or_duplicate_population_requires_review(rows):
 
 
 def test_service_credit_keeps_its_market_and_revenue_sign():
-    result = allocate([row("BIZ_REVENUE", "1000", month="9", unit="foundry-field")])
+    credit = row("BIZ_REVENUE", "1000", month="9", unit="foundry-field")
+    credit["year"] = "2027"
+    result = allocate([credit])
     assert result[0]["receipts_usd"] == "-1000" and result[0]["market_state"] == "CA"
+
+
+@pytest.mark.parametrize(
+    "year,month,account",
+    [
+        (2032, 1, "LEG_4000"),
+        (2015, 1, "LEG_4000"),
+        (2026, 13, "LEG_4000"),
+        (2025, 9, "LEG_4050"),
+        (2026, 9, "BIZ_REVENUE"),
+    ],
+)
+def test_uncovered_periods_require_new_market_facts(year, month, account):
+    record = row(account, month=str(month))
+    record["year"] = str(year)
+    with pytest.raises(ValueError):
+        allocate([record])
+
+
+def test_balanced_market_reallocation_cannot_change_current_operations():
+    import json
+
+    from enterprise.closeout.receipt_markets import SOURCE
+
+    source = json.loads(SOURCE.read_text())
+    source["august_2026"]["ca_services_usd"] = "11014500.00"
+    source["august_2026"]["wv_cradle_materials_usd"] = "61000.00"
+    with pytest.raises(ValueError, match="current operating source"):
+        allocate([row()], source)
