@@ -1,0 +1,176 @@
+{
+  "document_id": "SH-CAPITAL-REGISTER-20260915",
+  "legal_entity": "SHI",
+  "legal_name": "Sable Harbor, LLC",
+  "authored_day": "2026-09-15",
+  "fact_state": "NEWLY_AUTHORED_SYNTHETIC_HISTORY",
+  "acceptance_state": "PENDING_REPOSITORY_ACCEPTANCE",
+  "authority_source": "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md#sh-voice-cap-01-implementation-return--exact-fictional-holder-register",
+  "holders": [
+    {
+      "holder_id": "SH-HOLDER-DM",
+      "name": "Daniel Mercer",
+      "units": 33250000,
+      "holder_role": "FOUNDER",
+      "unit_class": "EQUAL_PARTICIPATING_COMMON"
+    },
+    {
+      "holder_id": "SH-HOLDER-PR",
+      "name": "Priya Raman",
+      "units": 19950000,
+      "holder_role": "FOUNDER",
+      "unit_class": "EQUAL_PARTICIPATING_COMMON"
+    },
+    {
+      "holder_id": "SH-HOLDER-JB",
+      "name": "Jon Bell",
+      "units": 13300000,
+      "holder_role": "FOUNDER",
+      "unit_class": "EQUAL_PARTICIPATING_COMMON"
+    },
+    {
+      "holder_id": "SH-HOLDER-HV",
+      "name": "Harrison Vale Partners",
+      "units": 18500000,
+      "holder_role": "REGISTERED_INVESTOR",
+      "unit_class": "EQUAL_PARTICIPATING_COMMON"
+    },
+    {
+      "holder_id": "SH-HOLDER-WR",
+      "name": "Wolf Ridge Holdings",
+      "units": 15000000,
+      "holder_role": "REGISTERED_INVESTOR",
+      "unit_class": "EQUAL_PARTICIPATING_COMMON"
+    }
+  ],
+  "subscriptions": [
+    {
+      "subscription_id": "SH-SUB-20210618-HV",
+      "holder_id": "SH-HOLDER-HV",
+      "authorization_date": "2021-06-18",
+      "effective_date": "2021-06-18",
+      "settlement_date": "2021-06-18",
+      "units": 18500000,
+      "consideration_usd": "48000000.00",
+      "price_numerator": "96",
+      "price_denominator": "37",
+      "authority_source": "docs/governance/board-records/2021-06-18_harrison-vale-growth-financing-minutes.md",
+      "settlement_reference": "SYN-SHI-CAPITAL-20210618-HV",
+      "state": "NEWLY_AUTHORED_SYNTHETIC_EXECUTION_AND_RECEIPT"
+    },
+    {
+      "subscription_id": "SH-SUB-20221028-WR",
+      "holder_id": "SH-HOLDER-WR",
+      "authorization_date": "2022-10-28",
+      "effective_date": "2022-10-28",
+      "settlement_date": "2022-10-28",
+      "units": 15000000,
+      "consideration_usd": "135000000.00",
+      "price_numerator": "9",
+      "price_denominator": "1",
+      "authority_source": "docs/governance/board-records/2022-10-28_wolf-ridge-industrial-financing-minutes.md",
+      "settlement_reference": "SYN-SHI-CAPITAL-20221028-WR",
+      "state": "NEWLY_AUTHORED_SYNTHETIC_EXECUTION_AND_RECEIPT"
+    }
+  ],
+  "governing_record": {
+    "record_id": "SH-MEMBER-REGISTER-ADDENDUM-20260915",
+    "scope": "New synthetic register/addendum implements owner-approved equal economic and ordinary unit-vote rights; authorized voluntary paid-in contributions issue no units. Preserves current nine-member board, CEO/Chair separation and investor/independent roles. No operational veto, new preference, conversion, anti-dilution, option pool or privileged information access.",
+    "signatory_role": "SHI authorized corporate records custodian",
+    "record_date": "2026-09-15",
+    "state": "NEWLY_AUTHORED_SYNTHETIC_GOVERNING_RECORD_PENDING_ACCEPTANCE",
+    "side_letter_disposition": "No unlisted side letter is adopted or asserted absent. Substantive designation thresholds remain outside this register."
+  },
+  "founder_basis_boundary": {
+    "units": 66500000,
+    "formation_date": "2016-04-12",
+    "date_precision": "DAY_NEWLY_AUTHORED_SOURCE_PRECISION",
+    "consideration_usd": "0.00",
+    "tax_basis_usd": "0.00",
+    "monetary_capital_opening_usd": "0.00",
+    "state": "COMPLETED_NEWLY_AUTHORED_FORMATION_RECONSTRUCTION",
+    "authority_source": "enterprise/closeout/source/parent_tax.json",
+    "impact": "No historical contributed cash/property/services or enforceable contribution promise; zero monetary opening and initial tax basis. Approved units unchanged; no cash, compensation deduction, intellectual-property asset, goodwill or equity plug."
+  },
+  "cash_boundary": "183000000historical subscription receipts are newly authored precision of accepted rounds; not additional2026cash. Internal synthetic settlement references are not independent bank confirmation. No founder secondary.",
+  "founder_formation": {
+    "record_id": "SH-FOUNDER-ADMISSION-20160412",
+    "effective_date": "2016-04-12",
+    "event_order": "At legal formation, before first operating engagement, asset purchase or corporate service performance; no invented exact intraday clock.",
+    "fact_state": "NEWLY_AUTHORED_SYNTHETIC_HISTORY_NOT_RECOVERED_EXECUTED_ORIGINAL",
+    "member_consents": [
+      "SH-HOLDER-DM",
+      "SH-HOLDER-PR",
+      "SH-HOLDER-JB"
+    ],
+    "consent_state": "NEWLY_AUTHORED_SYNTHETIC_UNANIMOUS_ADMISSION_RECORD",
+    "cash_contributed_usd": "0.00",
+    "property_contributed_usd": "0.00",
+    "services_contribution_usd": "0.00",
+    "enforceable_contribution_promise_usd": "0.00",
+    "unvested_units": 0,
+    "company_owned_preexisting_ip": false,
+    "assigned_preformation_contracts": false,
+    "binding_customer_commitments": false,
+    "binding_financing_commitments": false,
+    "assembled_workforce": false,
+    "transferred_personal_goodwill": false,
+    "company_assets_at_admission_usd": "0.00",
+    "company_liabilities_at_admission_usd": "0.00",
+    "formation_fee_boundary": "Formation/registered-agent administrative services were vendor invoiced to the newly formed company after admission and settled within existing 2016 administrative cost population; no founder-paid cost or waived founder reimbursement. No added annual cost.",
+    "personal_experience_boundary": "Founders retained their personal expertise and Blackridge-derived understanding; no exclusive technology, copyright assignment, transferable customer list or predecessor going business was conveyed for units. Company work product arose only from later company services.",
+    "valuation": {
+      "record_id": "SH-FORMATION-VALUE-20160412",
+      "method": "New synthetic formation-stage rights and assets census, corroborated by absence of enforceable revenue/funding rights; not inferred only from cash balance.",
+      "unit_fair_value_usd": "0.00",
+      "aggregate_fair_value_usd": "0.00",
+      "state": "NEWLY_AUTHORED_INTERNAL_FORMATION_VALUE_ESTIMATE_NOT_INDEPENDENT_APPRAISAL",
+      "reasons": [
+        "No assigned business, tangible property, proprietary product, contract backlog or legally committed future services at admission.",
+        "Professional capability and an untested services thesis were personal; no enterprise asset or binding pipeline was transferred.",
+        "No third-party offer, capital commitment or reasonably supportable positive cashflow attributable to enterprise rights at admission. Later services and 2021/2022 financing cannot be backdated into this measurement."
+      ],
+      "reassessment_trigger": "Any earlier company-owned IP, transferred business, binding customer/funding commitment, nonzero interest value or service vesting condition requires new valuation and section83/basis workpaper; zero result must not silently persist."
+    },
+    "tax_analysis": {
+      "corporate_effective_date": "2016-04-12",
+      "section83_scope": "Tested even if founding participation is considered connected with future services. Units are substantially vested at admission; no substantial risk of forfeiture is authored.",
+      "amount_paid_usd": "0.00",
+      "section83_income_usd": "0.00",
+      "initial_interest_basis_usd": "0.00",
+      "basis_formula": "amount paid plus amount includible under section83; no basis for personal expertise not transferred",
+      "section83b_state": "NOT_APPLICABLE_SUBSTANTIALLY_VESTED_NO_ELECTION_AUTHORED",
+      "company_compensation_expense_usd": "0.00",
+      "additional_current_or_deferred_tax_usd": "0.00"
+    },
+    "authority_accessed_on": "2026-09-15",
+    "primary_authorities": [
+      {
+        "provision": "6DelC18-301(d); original1992(c), recodified1997",
+        "url": "https://legis.delaware.gov/SessionLaws/Chapter?id=21792",
+        "version": "68DelLaws434effectiveOctober1,1992original18-301(c)"
+      },
+      {
+        "provision": "18-301 recodification",
+        "url": "https://legis.delaware.gov/SessionLaws/Chapter?id=19926",
+        "version": "71DelLaws77section24 moves(c)to(d),1997"
+      },
+      {
+        "provision": "6DelC18-501/502",
+        "url": "https://delcode.delaware.gov/title6/c018/sc05/index.html",
+        "version": "18-501unchangedoriginal1992; no promise authored to trigger18-502"
+      },
+      {
+        "provision": "26CFR1.83-4(b)(1)",
+        "url": "https://www.govinfo.gov/content/pkg/CFR-2016-title26-vol2/pdf/CFR-2016-title26-vol2-sec1-83-4.pdf",
+        "version": "2016CFRtitle26volume2pages330-331",
+        "sha256": "21c4c969afddd367e80c6b26148974f742713bf793933f8da21c6df8f65850ce"
+      },
+      {
+        "provision": "Section83 scope/valuation and basis; RevProc2012-29section2",
+        "url": "https://www.irs.gov/irb/2012-28_IRB",
+        "version": "July9,2012 prior toformation; election examples not claimedelection"
+      }
+    ]
+  }
+}

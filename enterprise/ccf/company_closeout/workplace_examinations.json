@@ -1,0 +1,194 @@
+{
+  "document_id": "SH-C05-WORKPLACE-2026-09-15",
+  "schema_version": "1.0.0",
+  "acceptance_state": "PENDING_REPOSITORY_ACCEPTANCE",
+  "fact_origin": "NEWLY_AUTHORED_SYNTHETIC_RETROSPECTIVE_HISTORY",
+  "authored_on": "2026-09-15",
+  "available_on": "2026-09-15",
+  "effective_date": "2026-08-31",
+  "timezone": "America/Denver",
+  "scope": "Complete selected two-place/two-shift examination population on August 31. Excludes every other mine workplace, shift and date; not whole-mine compliance.",
+  "authority_refs": [
+    "msha2025",
+    "msha2026"
+  ],
+  "qualification_records": [
+    {
+      "id": "SH-EXAM-DESIGNATION-0112",
+      "person_id": "RW-0112",
+      "name": "Maya Ortiz",
+      "legal_entity": "RWH",
+      "qualification": "INTERNAL_COMPETENT_PERSON_WORKPLACE_EXAMINATION",
+      "scope": [
+        "maintenance shop access bay",
+        "mill access walkway"
+      ],
+      "effective_on": "2026-01-01",
+      "expires_on": "2026-12-31",
+      "basis": "Newly authored synthetic operator designation after scoped examination training and demonstrated hazard recognition; not a state professional license.",
+      "authorizer_role": "RWH Site General Manager",
+      "authorizer_person_id": "RW-0013"
+    },
+    {
+      "id": "SH-EXAM-DESIGNATION-0113",
+      "person_id": "RW-0113",
+      "name": "Evan Cross",
+      "legal_entity": "RWH",
+      "qualification": "INTERNAL_COMPETENT_PERSON_WORKPLACE_EXAMINATION",
+      "scope": [
+        "maintenance shop access bay",
+        "mill access walkway"
+      ],
+      "effective_on": "2026-01-01",
+      "expires_on": "2026-07-31",
+      "basis": "Newly authored synthetic operator designation; internal periodic review lapsed. Expiry is company designation scope, not a statutory certification period.",
+      "authorizer_role": "RWH Site General Manager",
+      "authorizer_person_id": "RW-0013"
+    }
+  ],
+  "expected_population": [
+    {
+      "date": "2026-08-31",
+      "shift": "DAY",
+      "place": "maintenance shop access bay"
+    },
+    {
+      "date": "2026-08-31",
+      "shift": "DAY",
+      "place": "mill access walkway"
+    },
+    {
+      "date": "2026-08-31",
+      "shift": "NIGHT",
+      "place": "maintenance shop access bay"
+    },
+    {
+      "date": "2026-08-31",
+      "shift": "NIGHT",
+      "place": "mill access walkway"
+    }
+  ],
+  "attempts": [
+    {
+      "id": "SH-EXAM-ATTEMPT-20260831-01",
+      "person_id": "RW-0113",
+      "place": "maintenance shop access bay",
+      "requested_at": "2026-08-31T05:30:00-06:00",
+      "state": "BLOCKED_EXPIRED_DESIGNATION",
+      "authorized_release": false,
+      "reassigned_to": "RW-0112",
+      "response": "Roster check withheld examiner assignment; no workplace release made by expired designee. Renewal training remains open.",
+      "renewal_due": "2026-09-30",
+      "retest_state": "FUTURE_DUE"
+    }
+  ],
+  "examinations": [
+    {
+      "id": "SH-EXAM-20260831-DAY-1",
+      "legal_entity": "RWH",
+      "date": "2026-08-31",
+      "timezone": "America/Denver",
+      "shift": "DAY",
+      "place": "maintenance shop access bay",
+      "examiner": "RW-0112",
+      "examiner_name": "Maya Ortiz",
+      "designation_id": "SH-EXAM-DESIGNATION-0112",
+      "examined_at": "2026-08-31T05:45:00-06:00",
+      "recorded_at": "2026-08-31T06:05:00-06:00",
+      "shift_end": "2026-08-31T12:00:00-06:00",
+      "work_started_at": "2026-08-31T06:00:00-06:00",
+      "condition": "No adverse condition observed in the declared place at examination",
+      "miners_notified_at": null,
+      "corrective_action": null,
+      "corrected_at": null,
+      "released_at": "2026-08-31T05:58:00-06:00",
+      "retest_state": "NOT_APPLICABLE",
+      "incremental_external_cash_usd": 0,
+      "accounting_basis": "Routine internal shift duties within existing employer-cost population; no incremental invoice, payable or production claim authored."
+    },
+    {
+      "id": "SH-EXAM-20260831-DAY-2",
+      "legal_entity": "RWH",
+      "date": "2026-08-31",
+      "timezone": "America/Denver",
+      "shift": "DAY",
+      "place": "mill access walkway",
+      "examiner": "RW-0112",
+      "examiner_name": "Maya Ortiz",
+      "designation_id": "SH-EXAM-DESIGNATION-0112",
+      "examined_at": "2026-08-31T05:45:00-06:00",
+      "recorded_at": "2026-08-31T06:05:00-06:00",
+      "shift_end": "2026-08-31T12:00:00-06:00",
+      "work_started_at": "2026-08-31T06:00:00-06:00",
+      "condition": "Wet residue on mill access walkway; slip hazard, affected passage kept closed",
+      "miners_notified_at": "2026-08-31T05:47:00-06:00",
+      "corrective_action": "Remove residue with existing housekeeping supplies; dry and reinspect before reopening passage",
+      "corrected_at": "2026-08-31T05:55:00-06:00",
+      "released_at": "2026-08-31T05:58:00-06:00",
+      "retest_state": "COMPLETED_PASS",
+      "incremental_external_cash_usd": 0,
+      "accounting_basis": "Routine internal shift duties within existing employer-cost population; no incremental invoice, payable or production claim authored."
+    },
+    {
+      "id": "SH-EXAM-20260831-NIGHT-1",
+      "legal_entity": "RWH",
+      "date": "2026-08-31",
+      "timezone": "America/Denver",
+      "shift": "NIGHT",
+      "place": "maintenance shop access bay",
+      "examiner": "RW-0112",
+      "examiner_name": "Maya Ortiz",
+      "designation_id": "SH-EXAM-DESIGNATION-0112",
+      "examined_at": "2026-08-31T17:45:00-06:00",
+      "recorded_at": "2026-08-31T18:05:00-06:00",
+      "shift_end": "2026-09-01T00:00:00-06:00",
+      "work_started_at": "2026-08-31T18:00:00-06:00",
+      "condition": "No adverse condition observed in the declared place at examination",
+      "miners_notified_at": null,
+      "corrective_action": null,
+      "corrected_at": null,
+      "released_at": "2026-08-31T17:58:00-06:00",
+      "retest_state": "NOT_APPLICABLE",
+      "incremental_external_cash_usd": 0,
+      "accounting_basis": "Routine internal shift duties within existing employer-cost population; no incremental invoice, payable or production claim authored."
+    },
+    {
+      "id": "SH-EXAM-20260831-NIGHT-2",
+      "legal_entity": "RWH",
+      "date": "2026-08-31",
+      "timezone": "America/Denver",
+      "shift": "NIGHT",
+      "place": "mill access walkway",
+      "examiner": "RW-0112",
+      "examiner_name": "Maya Ortiz",
+      "designation_id": "SH-EXAM-DESIGNATION-0112",
+      "examined_at": "2026-08-31T17:45:00-06:00",
+      "recorded_at": "2026-08-31T18:05:00-06:00",
+      "shift_end": "2026-09-01T00:00:00-06:00",
+      "work_started_at": "2026-08-31T18:00:00-06:00",
+      "condition": "No adverse condition observed in the declared place at examination",
+      "miners_notified_at": null,
+      "corrective_action": null,
+      "corrected_at": null,
+      "released_at": "2026-08-31T17:58:00-06:00",
+      "retest_state": "NOT_APPLICABLE",
+      "incremental_external_cash_usd": 0,
+      "accounting_basis": "Routine internal shift duties within existing employer-cost population; no incremental invoice, payable or production claim authored."
+    }
+  ],
+  "review": {
+    "preparer_id": "RW-0112",
+    "reviewer_id": "RW-0119",
+    "reviewer_role": "RWH Environmental review delegate",
+    "performed_on": "2026-09-15",
+    "state": "SYNTHETIC_COMPLETED_INDEPENDENT_REVIEW",
+    "result": "Four expected examination records present; qualified designee and before-work timing agree; one hazard corrected before release; expired assignment withheld.",
+    "real_human_review": "NOT_ASSERTED",
+    "reviewer_name": "Leah Foster"
+  },
+  "retention": {
+    "minimum_exam_record_retention_through": "2027-08-31",
+    "basis": "30 CFR 57.18002(d), at least one year; later hold or accepted longer retention controls",
+    "automatic_deletion_authorized": false
+  }
+}

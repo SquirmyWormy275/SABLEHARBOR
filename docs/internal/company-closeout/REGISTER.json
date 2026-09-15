@@ -1,0 +1,689 @@
+{
+  "document_id": "SH-CODEX-COMPANY-CLOSEOUT-2026-09-15",
+  "version": "0.5.0",
+  "status": "IMPLEMENTATION_IN_PROGRESS_NOT_ACCEPTED",
+  "recorded_on": "2026-09-15",
+  "record_timezone": "UTC",
+  "baseline_commit": "78d4fcdf1df5b8ffc0775b9af22cae1002d456d7",
+  "proposed_completed_period": "2026-08-31",
+  "event_cutoff": "2026-09-14",
+  "event_timezone": "America/Los_Angeles",
+  "scope": "Seven business lines and corporate; current completed-period evidence separate from conditional forecasts.",
+  "directions": "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+  "portal": {
+    "worktree": "SABLEHARBOR-audit-suite",
+    "branch": "build/audit-training-suite",
+    "observed_commit": "548cb5d",
+    "observation": "Owner confirmed this is the active portal workstream on September 15 UTC. Running servers and dirty company activity work observed; reserved paths remain untouched. Company source work uses isolated branches and a pinned module rehearsal, not live private data.",
+    "reserved_paths": [
+      "enterprise/audit_suite/",
+      "audit_suite_web/",
+      "tools/audit_suite/",
+      "docs/internal/development/audit-suite/"
+    ],
+    "latest_observed_commit": "0afa29a15af5b345a4929a9324cb8a58f2582641",
+    "company_store_sha256": "38a1aebcebde53051e306465dc2d807a3cd0e60fb8cc974da2235fa268c88292"
+  },
+  "packages": [
+    {
+      "id": "SH-C01",
+      "title": "Dated company state and completed-period evidence",
+      "lane": "A/B",
+      "status": "IN_PROGRESS",
+      "acceptance_status": "PENDING",
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "enterprise/operations/source/current_company_2026_08.json",
+        "enterprise/operations/docs/completed-period.md"
+      ],
+      "affected_paths": [
+        "enterprise/operations/source/current_company_2026_08.json",
+        "enterprise/operations/docs/completed-period.md",
+        "enterprise/operations/source/lane_receipt_2026_09_15.json"
+      ],
+      "commits_prs": [
+        "39aa95c1",
+        "6ab8dda7",
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
+      ],
+      "evidence": [
+        "enterprise/operations/source/current_company_2026_08.json",
+        "enterprise/operations/docs/completed-period.md",
+        "enterprise/operations/source/lane_receipt_2026_09_15.json"
+      ],
+      "commands_results": [],
+      "reconciliation_totals": {
+        "contracts": 92,
+        "customers": 88,
+        "service_environments": 104,
+        "research_projects": 5,
+        "industrial_assets": 149,
+        "current_working_capital_controls": 7,
+        "legal_balance_bridges": 16,
+        "rwh_inventory_carrying_usd": "9561061.9222",
+        "rwh_group_inventory_elimination_usd": "25176.3198",
+        "inventory_basis": "Production-support successor 17093cd3; final full financial build pending."
+      },
+      "limitations": [
+        "Integration acceptance, final composed-revision validation and indexed Release packaging remain pending."
+      ],
+      "next_owner": "finance and operations lanes"
+    },
+    {
+      "id": "SH-C02",
+      "title": "Accepted financial adjustments",
+      "lane": "A",
+      "status": "IN_PROGRESS",
+      "acceptance_status": "PENDING",
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "enterprise/closeout/finance.py",
+        "docs/finance/evidence/company-closeout/README.md"
+      ],
+      "affected_paths": [
+        "enterprise/closeout/finance.py",
+        "docs/finance/evidence/company-closeout/README.md"
+      ],
+      "commits_prs": [
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
+      ],
+      "evidence": [
+        "enterprise/closeout/finance.py",
+        "docs/finance/evidence/company-closeout/README.md"
+      ],
+      "commands_results": [],
+      "reconciliation_totals": {
+        "core_goodwill_removed_usd": "30000000.00",
+        "direct_cash_delta_usd": "0.00",
+        "protected_aru_book_goodwill_usd": "14762500.00",
+        "protected_aru_tax_goodwill_usd": "13000000.00",
+        "ff003_expense_payable_usd": "152250.00",
+        "ff003_customer_principal_delta_usd": "0.00"
+      },
+      "limitations": [
+        "Integration acceptance, final composed-revision validation and indexed Release packaging remain pending."
+      ],
+      "next_owner": "finance lane"
+    },
+    {
+      "id": "SH-C03",
+      "title": "Workforce payroll and access population",
+      "lane": "B",
+      "status": "IN_PROGRESS",
+      "acceptance_status": "PENDING",
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "enterprise/operations/source/completed_period_2026_08.json",
+        "enterprise/operations/docs/ps-legal-payroll-bridge.md"
+      ],
+      "affected_paths": [
+        "enterprise/operations/source/completed_period_2026_08.json",
+        "enterprise/operations/docs/ps-legal-payroll-bridge.md",
+        "enterprise/operations/source/lane_receipt_2026_09_15.json"
+      ],
+      "commits_prs": [
+        "39aa95c1",
+        "6ab8dda7",
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
+      ],
+      "evidence": [
+        "enterprise/operations/source/completed_period_2026_08.json",
+        "enterprise/operations/docs/ps-legal-payroll-bridge.md",
+        "enterprise/operations/source/lane_receipt_2026_09_15.json"
+      ],
+      "commands_results": [],
+      "reconciliation_totals": {
+        "employees": 702,
+        "positions": 758,
+        "nonemployee_directors": 7,
+        "payroll_events": 1404,
+        "gross_usd": "6259287.81",
+        "withholding_usd": "1704580.70",
+        "net_pay_usd": "4554707.11",
+        "employer_cost_usd": "8137074.52",
+        "august_ps_legal_reclassification_usd": "78125.00",
+        "reclassification_group_cash_and_expense_delta_usd": "0.00",
+        "july_retention_employer_levy_expense_payable_usd": "24266.75"
+      },
+      "limitations": [
+        "Integration acceptance, final composed-revision validation and indexed Release packaging remain pending.",
+        "July employer levy is separately accrued and unremitted; no duplicate original bonus expense or cash is posted. Final legal provision and deposit treatment remain finance integration work."
+      ],
+      "next_owner": "people and operations lane"
+    },
+    {
+      "id": "SH-C04",
+      "title": "Corporate tax capital legal treasury",
+      "lane": "A",
+      "status": "IN_PROGRESS",
+      "acceptance_status": "PENDING",
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md",
+        "docs/finance/evidence/company-closeout/HISTORICAL_TAX_RECONSTRUCTION.md",
+        "docs/finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md",
+        "docs/finance/evidence/company-closeout/SOVEREIGNTY_METHOD.md",
+        "docs/internal/company-closeout/CAPITAL_HISTORY_PROPOSAL.md",
+        "docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md",
+        "docs/internal/company-closeout/ESCROW_DISPOSITIONS.md",
+        "enterprise/ccf/company_closeout/STATE_UNITARY_ANALYSIS.md",
+        "enterprise/closeout/source/receipt_markets.json",
+        "enterprise/closeout/source/capital_register.json",
+        "enterprise/closeout/capital_register.py",
+        "docs/internal/company-closeout/FOUNDER_ADMISSION_BASIS.md"
+      ],
+      "affected_paths": [
+        "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md",
+        "docs/finance/evidence/company-closeout/HISTORICAL_TAX_RECONSTRUCTION.md",
+        "docs/finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md",
+        "docs/finance/evidence/company-closeout/SOVEREIGNTY_METHOD.md",
+        "docs/internal/company-closeout/CAPITAL_HISTORY_PROPOSAL.md",
+        "docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md",
+        "docs/internal/company-closeout/ESCROW_DISPOSITIONS.md",
+        "enterprise/ccf/company_closeout/STATE_UNITARY_ANALYSIS.md",
+        "enterprise/closeout/source/receipt_markets.json",
+        "enterprise/closeout/source/capital_register.json",
+        "enterprise/closeout/capital_register.py",
+        "docs/internal/company-closeout/FOUNDER_ADMISSION_BASIS.md"
+      ],
+      "commits_prs": [
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
+      ],
+      "evidence": [
+        "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md",
+        "docs/finance/evidence/company-closeout/HISTORICAL_TAX_RECONSTRUCTION.md",
+        "docs/finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md",
+        "docs/finance/evidence/company-closeout/SOVEREIGNTY_METHOD.md",
+        "docs/internal/company-closeout/CAPITAL_HISTORY_PROPOSAL.md",
+        "docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md",
+        "docs/internal/company-closeout/ESCROW_DISPOSITIONS.md",
+        "enterprise/ccf/company_closeout/STATE_UNITARY_ANALYSIS.md",
+        "enterprise/closeout/source/receipt_markets.json",
+        "enterprise/closeout/source/capital_register.json",
+        "enterprise/closeout/capital_register.py",
+        "docs/internal/company-closeout/FOUNDER_ADMISSION_BASIS.md"
+      ],
+      "commands_results": [],
+      "reconciliation_totals": {
+        "registered_holders": 5,
+        "participating_units": "100000000",
+        "historical_round_paid_in_usd": "183000000.00",
+        "founder_initial_paid_in_usd": "0.00",
+        "historical_round_amounts_are_not_2026_receipts": true
+      },
+      "limitations": [
+        "Integration acceptance, final composed-revision validation and indexed Release packaging remain pending.",
+        "Full legal-entity/state income-tax and current RWH transaction-tax integration remains in progress; prior generated totals are not final.",
+        "Owner-approved five-holder register and founder admission reconstruction implemented at ea134fa2; final journal integration and repository acceptance remain pending. No owner capital-choice question remains."
+      ],
+      "next_owner": "finance lane"
+    },
+    {
+      "id": "SH-C05",
+      "title": "Activity-based obligations and performed controls",
+      "lane": "C",
+      "status": "IN_PROGRESS",
+      "acceptance_status": "PENDING",
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "enterprise/ccf/company_closeout/README.md",
+        "enterprise/ccf/company_closeout/current_activity_successor.json",
+        "enterprise/ccf/company_closeout/synthetic_permit_instruments_august.json",
+        "enterprise/ccf/company_closeout/rail_reporting_successor.json",
+        "enterprise/ccf/company_closeout/industrial_transaction_tax.json"
+      ],
+      "affected_paths": [
+        "enterprise/ccf/company_closeout/README.md",
+        "enterprise/ccf/company_closeout/current_activity_successor.json",
+        "enterprise/ccf/company_closeout/synthetic_permit_instruments_august.json",
+        "enterprise/ccf/company_closeout/rail_reporting_successor.json",
+        "enterprise/ccf/company_closeout/industrial_transaction_tax.json"
+      ],
+      "commits_prs": [
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
+      ],
+      "evidence": [
+        "enterprise/ccf/company_closeout/README.md",
+        "enterprise/ccf/company_closeout/current_activity_successor.json",
+        "enterprise/ccf/company_closeout/synthetic_permit_instruments_august.json",
+        "enterprise/ccf/company_closeout/rail_reporting_successor.json",
+        "enterprise/ccf/company_closeout/industrial_transaction_tax.json",
+        "enterprise/ccf/company_closeout/CURRENT_RESIDUALS.md",
+        "enterprise/ccf/company_closeout/august_admin_completion.json",
+        "enterprise/ccf/company_closeout/benefit_admin_completion.json",
+        "enterprise/ccf/company_closeout/FRA_EVENT_DAY_AUTHORITY.md",
+        "enterprise/ccf/company_closeout/rail_authority_review.json"
+      ],
+      "commands_results": [],
+      "reconciliation_totals": {
+        "permit_instruments": 14,
+        "permit_occurrences": 204,
+        "historical_rail_events": 14,
+        "native_controls": 166,
+        "native_control_boundaries": 1660,
+        "business_conditional_occurrences": 7560
+      },
+      "limitations": [
+        "Integration acceptance, final composed-revision validation and indexed Release packaging remain pending."
+      ],
+      "next_owner": "obligations and controls lane"
+    },
+    {
+      "id": "SH-C06",
+      "title": "Information policies and bounded runtime",
+      "lane": "C",
+      "status": "IN_PROGRESS",
+      "acceptance_status": "PENDING",
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "docs/internal/company-closeout/PORTAL_CONTRACT.md",
+        "docs/internal/company-closeout/PORTAL_REHEARSAL.json",
+        "docs/internal/company-closeout/REFERENCE_RESTORE_RECEIPT.json"
+      ],
+      "affected_paths": [
+        "docs/internal/company-closeout/PORTAL_CONTRACT.md",
+        "docs/internal/company-closeout/PORTAL_REHEARSAL.json",
+        "docs/internal/company-closeout/REFERENCE_RESTORE_RECEIPT.json"
+      ],
+      "commits_prs": [
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
+      ],
+      "evidence": [
+        "docs/internal/company-closeout/PORTAL_CONTRACT.md",
+        "docs/internal/company-closeout/PORTAL_REHEARSAL.json",
+        "docs/internal/company-closeout/REFERENCE_RESTORE_RECEIPT.json",
+        "docs/internal/company-closeout/PORTAL_TRANSPORT_REHEARSAL.json"
+      ],
+      "commands_results": [],
+      "reconciliation_totals": {},
+      "limitations": [
+        "Integration acceptance, final composed-revision validation and indexed Release packaging remain pending.",
+        "Original pinned CompanyStore exercise covers six public documents; a separate eight-original transport exercise covers empty and oversized files through ten store records. Full-edition integration remains pending. Reference restore and portal restore have distinct scopes. Existing thirteen external readiness gates are not cleared."
+      ],
+      "next_owner": "obligations and controls lane"
+    },
+    {
+      "id": "SH-C07",
+      "title": "Completed operating record chains",
+      "lane": "B",
+      "status": "IN_PROGRESS",
+      "acceptance_status": "PENDING",
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "enterprise/operations/source/september_custody_2026.json",
+        "enterprise/operations/source/lane_receipt_2026_09_15.json"
+      ],
+      "affected_paths": [
+        "enterprise/operations/source/september_custody_2026.json",
+        "enterprise/operations/source/lane_receipt_2026_09_15.json"
+      ],
+      "commits_prs": [
+        "39aa95c1",
+        "6ab8dda7",
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
+      ],
+      "evidence": [
+        "enterprise/operations/source/september_custody_2026.json",
+        "enterprise/operations/source/lane_receipt_2026_09_15.json"
+      ],
+      "commands_results": [],
+      "reconciliation_totals": {},
+      "limitations": [
+        "Integration acceptance, final composed-revision validation and indexed Release packaging remain pending."
+      ],
+      "next_owner": "people and operations lane"
+    },
+    {
+      "id": "SH-C08",
+      "title": "Publication status and source protection",
+      "lane": "D",
+      "status": "ACCEPTED_PR145_AND_PROTECTION_FINAL_EDITION_PENDING",
+      "acceptance_status": "PARTIAL_ACCEPTANCE_PR145_PR165",
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "docs/internal/company-closeout/PR145_INTEGRATION.md",
+        "docs/internal/company-closeout/PR145_VALIDATION.json",
+        "docs/internal/company-closeout/MAIN_PROTECTION.md",
+        "docs/internal/company-closeout/MAIN_PROTECTION_RECEIPT.json"
+      ],
+      "affected_paths": [
+        "docs/internal/company-closeout/PR145_INTEGRATION.md",
+        "docs/internal/company-closeout/PR145_VALIDATION.json",
+        "docs/internal/company-closeout/MAIN_PROTECTION.md",
+        "docs/internal/company-closeout/MAIN_PROTECTION_RECEIPT.json"
+      ],
+      "commits_prs": [
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/145",
+        "c8d628aa84140d63f6b8da8e2cba173c26c9a3b1",
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/165",
+        "667fddbeb2876ef83bc836b21dc4062e943bcb2c",
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
+      ],
+      "evidence": [
+        "docs/internal/company-closeout/PR145_INTEGRATION.md",
+        "docs/internal/company-closeout/PR145_VALIDATION.json",
+        "docs/internal/company-closeout/MAIN_PROTECTION.md",
+        "docs/internal/company-closeout/MAIN_PROTECTION_RECEIPT.json"
+      ],
+      "commands_results": [
+        {
+          "scope": "PR145 reviewed head12fdd3b942672f2f84d8fdd27d7e749afdea2760",
+          "result": "16 successful hosted validation contexts; two intentional publish skips"
+        },
+        {
+          "scope": "Main protection administration",
+          "result": "Applied and API readback verified; exact configuration in MAIN_PROTECTION_RECEIPT.json"
+        }
+      ],
+      "reconciliation_totals": {},
+      "limitations": [
+        "Integration acceptance, final composed-revision validation and indexed Release packaging remain pending."
+      ],
+      "next_owner": "integration owner"
+    },
+    {
+      "id": "SH-C09",
+      "title": "Reject malformed tenant identity",
+      "lane": "C",
+      "status": "IMPLEMENTED_ACCEPTANCE_PENDING",
+      "acceptance_status": "PENDING",
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "enterprise/runtime/security.py",
+        "enterprise/runtime/tests/test_security.py"
+      ],
+      "affected_paths": [
+        "enterprise/runtime/security.py",
+        "enterprise/runtime/tests/test_security.py"
+      ],
+      "commits_prs": [
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
+      ],
+      "evidence": [
+        "enterprise/runtime/security.py",
+        "enterprise/runtime/tests/test_security.py"
+      ],
+      "commands_results": [],
+      "reconciliation_totals": {},
+      "limitations": [
+        "Integration acceptance, final composed-revision validation and indexed Release packaging remain pending."
+      ],
+      "next_owner": "obligations and controls lane"
+    },
+    {
+      "id": "SH-C10",
+      "title": "Composite release and independent inspection",
+      "lane": "D",
+      "status": "IN_PROGRESS",
+      "acceptance_status": "PENDING",
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "docs/internal/company-closeout/INSPECTION_GUIDE.md",
+        "tools/company_closeout/compose.py",
+        "tools/company_closeout/edition.py",
+        "tools/company_closeout/independent_import.py"
+      ],
+      "affected_paths": [
+        "docs/internal/company-closeout/INSPECTION_GUIDE.md",
+        "tools/company_closeout/compose.py",
+        "tools/company_closeout/edition.py",
+        "tools/company_closeout/independent_import.py"
+      ],
+      "commits_prs": [
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
+      ],
+      "evidence": [
+        "docs/internal/company-closeout/INSPECTION_GUIDE.md",
+        "tools/company_closeout/compose.py",
+        "tools/company_closeout/edition.py",
+        "tools/company_closeout/independent_import.py",
+        "enterprise/operations/reperform_closeout.py",
+        "docs/internal/company-closeout/validation/README.md"
+      ],
+      "commands_results": [],
+      "reconciliation_totals": {},
+      "limitations": [
+        "Integration acceptance, final composed-revision validation and indexed Release packaging remain pending."
+      ],
+      "next_owner": "integration owner"
+    }
+  ],
+  "residuals": [
+    {
+      "id": "SH-RES-TAX-INTEGRATION",
+      "nature": "Implementation dependency",
+      "status": "OPEN_AT_WORKING_EDITION",
+      "missing_fact_or_capability": "Final statutory subsidiary current/deferred tax, IL/WV filing perimeter and calendar, ST-1 receipt/accelerated-payment lookback, current/future trader resale disposition, July employer-levy deposit treatment and common-head financial regeneration.",
+      "affected_claim": "Final after-tax legal/consolidated results and funding need.",
+      "sources": [
+        "enterprise/closeout/industrial_tax_assets.py",
+        "enterprise/closeout/STATE_APPORTIONMENT.md"
+      ],
+      "attempts": [
+        "Parent corporate-from-formation direction recorded; period-specific tax research, industrial asset cohorts and state-factor populations prepared."
+      ],
+      "impact": "Intermediate generated totals are not final financial answers.",
+      "bounded_alternatives": [
+        "Finish the existing providers and reperform source-to-journal-to-statement bridges."
+      ],
+      "next_owner_action": "Finance lane, then integration owner.",
+      "unaffected_work": "Corporate-tax choice, exact capital-register approval, goodwill removal direction, operating population and source protection."
+    },
+    {
+      "id": "SH-RES-CAP-RIGHTS",
+      "nature": "Material instrument scope",
+      "status": "OPEN_AT_WORKING_EDITION",
+      "missing_fact_or_capability": "Substantive board designation/replacement thresholds and disposition of any unlisted side letters.",
+      "affected_claim": "A complete enforceability or every-rights representation.",
+      "sources": [
+        "docs/internal/company-closeout/LEGAL_DISPOSITIONS.json",
+        "enterprise/closeout/source/capital_register.json"
+      ],
+      "attempts": [
+        "Accepted board/capital records, financing drafts and exact owner-approved register reconciled; FIN-U03 remains outside the newly approved terms."
+      ],
+      "impact": "Five-holder interests and voluntary equal participation can be modeled; no unsupported threshold or absence of side letters can be asserted.",
+      "bounded_alternatives": [
+        "Retain accepted board roles and explicit unadopted-term disposition; obtain a precise later authority only for a claim requiring additional rights."
+      ],
+      "next_owner_action": "Corporate/legal owner: resolve the particular instrument term before asserting it.",
+      "unaffected_work": "100 million units; 66.5% insiders/33.5% outside; $183 million historical subscriptions; no new units, preferences or compulsory calls."
+    },
+    {
+      "id": "SH-RES-DEBT-RIGHTS",
+      "nature": "Material instrument scope",
+      "status": "OPEN_AT_WORKING_EDITION",
+      "missing_fact_or_capability": "Definitive maturity/prepayment rights, numerical covenants, asset-specific collateral and old-lien releases.",
+      "affected_claim": "Binding availability, covenant compliance and lien-free collateral.",
+      "sources": [
+        "docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md",
+        "enterprise/operations/source/debt_host_2026_08.json"
+      ],
+      "attempts": [
+        "Accepted closing bridge, source debt service and unsigned instruments reviewed; existing creditor administrative identity and all 18 January\u2013August selected cash payments completed."
+      ],
+      "impact": "$13.5 million payoff is evidenced as modeled paid; it does not identify or release encumbrances. Numerical covenant compliance cannot be certified.",
+      "bounded_alternatives": [
+        "Inspect supported principal/interest schedules while preserving draft instrument state; add only specifically authorized substantive terms."
+      ],
+      "next_owner_action": "Legal/Treasury: resolve DEBT-R01 and DEBT-R02 instruments.",
+      "unaffected_work": "Term and lease opening/activity/closing balances, selected settlements and unchanged modeled debt service."
+    },
+    {
+      "id": "SH-RES-HOST-RIGHTS",
+      "nature": "Material instrument scope",
+      "status": "OPEN_AT_WORKING_EDITION",
+      "missing_fact_or_capability": "Duration, termination and notice/venue terms outside accepted bounded host rights.",
+      "affected_claim": "Complete contract enforceability or additional long-term exclusivity.",
+      "sources": [
+        "docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md"
+      ],
+      "attempts": [
+        "Controlling Cradle record, two current deployments and unsigned host packet reviewed; four selected performance/settlement events completed."
+      ],
+      "impact": "Selected Stream 17 and Demotte performance does not grant a perpetual rate or longer term.",
+      "bounded_alternatives": [
+        "Keep actual accepted operator/bypass boundaries; complete a specifically required substantive instrument through applicable authority."
+      ],
+      "next_owner_action": "Legal/Cradle: resolve HOST-R01 before extending the contractual claim.",
+      "unaffected_work": "External host ownership/operating responsibility, selected $60,000 realization/$12,000 settlement and $18,500 failed Demotte test."
+    },
+    {
+      "id": "SH-RES-ESCROW-CLAIMS",
+      "nature": "Unresolved fictional rights/conditions",
+      "status": "OPEN_AT_WORKING_EDITION",
+      "missing_fact_or_capability": "Individual title/deliverable cure, covered loss amounts and unconditional release entitlement.",
+      "affected_claim": "Recovered losses, cured title or available escrow cash.",
+      "sources": [
+        "docs/internal/company-closeout/ESCROW_DISPOSITIONS.md",
+        "enterprise/closeout/source/escrow_register.json"
+      ],
+      "attempts": [
+        "Acquisition consideration and separate release/survival dates reconciled; zero-disbursement history expressly authored."
+      ],
+      "impact": "$6.5 million is an administrative population, not additional SH assets or spendable cash.",
+      "bounded_alternatives": [
+        "Retain claim-dependent balances and future release states; author later performance only when its fictional conditions are established."
+      ],
+      "next_owner_action": "Acquisition legal/environmental owners: evaluate claims and deliverables on their recorded dates.",
+      "unaffected_work": "Original consideration, book acquisition balances and current escrow/holdback administrative rollforwards."
+    },
+    {
+      "id": "SH-RES-CONTROL-OUTCOMES",
+      "nature": "Authentic adverse conditions and future responses",
+      "status": "OPEN_AT_WORKING_EDITION",
+      "missing_fact_or_capability": "Missing RW-0140 lab result; unresolved MW-17 pathway; continuing assurance review and future benefits notice.",
+      "affected_claim": "Zero exposure, clean environmental pathway or future duty already performed.",
+      "sources": [
+        "enterprise/ccf/company_closeout/CURRENT_RESIDUALS.md",
+        "enterprise/ccf/company_closeout/august_admin_completion.json",
+        "enterprise/ccf/company_closeout/benefit_admin_completion.json"
+      ],
+      "attempts": [
+        "204 selected occurrences dispositioned; failures and prospective remediation preserved; administrative instruments and exact plan population completed."
+      ],
+      "impact": "C05-R01\u2013R04 and R07 remain inspectable conditions, with September 18/22/30 and October 15 next actions as specified in their sources.",
+      "bounded_alternatives": [
+        "Retain failure/missing/future states in the accepted cutoff; a later dated evidence successor may record actual fictional response."
+      ],
+      "next_owner_action": "Radiation protection, environmental and benefits accountable roles identified in the source.",
+      "unaffected_work": "Declared applicability census, performed and failed evidence, recovered event-year FRA authority and complete relevant selected populations."
+    },
+    {
+      "id": "SH-RES-CONTROL-SCOPE",
+      "nature": "Declared population boundary",
+      "status": "OPEN_AT_WORKING_EDITION",
+      "missing_fact_or_capability": "Full monthly railway filings, every historical mine workplace/day, full insured-plan administration and fresh review of all 1,660 framework preparation rows.",
+      "affected_claim": "Universal historical control performance or professional framework equivalence.",
+      "sources": [
+        "enterprise/ccf/company_closeout/CURRENT_RESIDUALS.md"
+      ],
+      "attempts": [
+        "Selected 14 rail events, 14 permit instruments, current activity boundaries and 15 native risk gaps reconciled; distinct denominators retained."
+      ],
+      "impact": "Selected company demonstrations do not silently expand into universal compliance.",
+      "bounded_alternatives": [
+        "Use the stated activity/population scope; extend the specific population only if a future claim requires it."
+      ],
+      "next_owner_action": "Obligations/CCF owner: maintain C05-R06/R07/R09 scope boundaries.",
+      "unaffected_work": "Current seven-unit/corporate inspection and the declared performed-control populations."
+    },
+    {
+      "id": "SH-RES-RUNTIME",
+      "nature": "Concurrent software and external evidence dependency",
+      "status": "OPEN_AT_WORKING_EDITION",
+      "missing_fact_or_capability": "Native lifecycle/hold/deletion, indirect HTTP/model surfaces and external deployed-estate evidence beyond the isolated direct-store/reference exercises.",
+      "affected_claim": "Full end-to-end Alexandria/Daedalus operation and all thirteen external readiness gates.",
+      "sources": [
+        "docs/internal/company-closeout/PORTAL_CONTRACT.md",
+        "enterprise/ccf/company_closeout/CURRENT_RESIDUALS.md"
+      ],
+      "attempts": [
+        "Active portal owner/worktree confirmed; source compatibility checked; six-original and eight-original transport rehearsals plus reference restore completed without live worktree edits."
+      ],
+      "impact": "Direct store or reference success cannot certify unexercised HTTP/search/count/export/model surfaces or native hold/deletion.",
+      "bounded_alternatives": [
+        "Deliver the final complete edition and its actual isolated import/restore receipt to the existing runtime workflow; retain exact unexercised claims."
+      ],
+      "next_owner_action": "Active audit-portal owner: native integration and precise gate evidence; integration owner: final full-edition rehearsal.",
+      "unaffected_work": "Company source completion, stable input contract and bounded authorization regression; no parallel portal required."
+    },
+    {
+      "id": "SH-RES-ARTIFACT-ENGINEERING",
+      "nature": "Surviving issue scope",
+      "status": "OPEN_AT_WORKING_EDITION",
+      "missing_fact_or_capability": "Exact original approved HQ image; detailed early rail engineering and broader geographic program beyond accepted carrier disposition; promised appointment histories beyond the census.",
+      "affected_claim": "Exact image identity, unperformed engineering and full appointment-history completion.",
+      "sources": [
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/issues/88",
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/issues/107",
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/issues/108",
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/issues/19"
+      ],
+      "attempts": [
+        "Live issue state refreshed; PR164 accepted 78,145-carrier disposition preserved; six accepted J2 leaders and 237 billets preserved with effective workforce population."
+      ],
+      "impact": "These limits block only the image/engineering/history claims requiring them.",
+      "bounded_alternatives": [
+        "Preserve exact-original recovery track and bounded engineering/history issues; do not recreate a lookalike or revive the closed carrier backlog."
+      ],
+      "next_owner_action": "Existing issue owners retain their precise next actions.",
+      "unaffected_work": "Ordinary company financial/tax inspection, current workforce population and accepted geographic carrier scope."
+    },
+    {
+      "id": "SH-RES-ACCEPTANCE",
+      "nature": "Delivery dependency",
+      "status": "OPEN_AT_WORKING_EDITION",
+      "missing_fact_or_capability": "Final reconciled revision, independent full-package import, PR166 acceptance and retrievable indexed Release.",
+      "affected_claim": "Accepted company edition or completed transition package.",
+      "sources": [
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166",
+        "docs/internal/company-closeout/INSPECTION_GUIDE.md"
+      ],
+      "attempts": [
+        "PR145 and PR165 merged; intermediate broad/native/hosted checks performed; deterministic composite builder and import guards implemented."
+      ],
+      "impact": "Branch files and intermediate receipts are not delivered accepted canon.",
+      "bounded_alternatives": [
+        "Complete final checks and actual merge/package/upload/download verification under the existing process."
+      ],
+      "next_owner_action": "Integration owner.",
+      "unaffected_work": "Already accepted PR145 publication and applied/read-back main protection; branch retirement remains lower-priority #11 work."
+    }
+  ],
+  "tax_history_direction": "OWNER_APPROVED_CORPORATE_FROM_FORMATION_2016_NEWLY_AUTHORED_HISTORY",
+  "issue_snapshot": {
+    "observed_on": "2026-09-15",
+    "open": [
+      11,
+      18,
+      19,
+      21,
+      22,
+      24,
+      34,
+      88,
+      107,
+      108
+    ],
+    "closed_at_baseline": [
+      106
+    ],
+    "accepted_geography": {
+      "pr": 164,
+      "source_commit": "78d4fcdf1df5b8ffc0775b9af22cae1002d456d7",
+      "original_carriers": 78145,
+      "remaining_original_carriers": 0,
+      "batches": 6,
+      "baseline_files": 919,
+      "changed_paths_at_reviewed_boundary": 3190,
+      "dated_events": 79,
+      "site_component_dispositions": 34
+    },
+    "billing_adoption_pr": 138,
+    "publication_pr": 145,
+    "protection_pr": 165
+  },
+  "evidence_boundary": "Working integration inventory through afd90664; PR166 remains draft. Native operating build854a4aad passed 47,060 events/98 tables; broad pytest40f3b108 passed556 with three skips. Statutory tax composition, clean final regeneration and acceptance remain pending. Residuals identify affected claims without reopening settled owner directions.",
+  "capital_register_direction": "OWNER_APPROVED_PROPOSED_FICTIONAL_FIVE_HOLDER_REGISTER_AND_VOLUNTARY_CONTRIBUTIONS"
+}

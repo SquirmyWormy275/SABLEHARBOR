@@ -1,0 +1,84 @@
+{
+  "document_id": "SH-C05-RISK-SUPPLEMENT-2026-09-15",
+  "authored_on": "2026-09-15",
+  "available_on": "2026-09-15",
+  "acceptance_state": "PENDING_REPOSITORY_ACCEPTANCE",
+  "scope": "Dated supplemental primary risk relationships for the 15 native controls with empty risk_ids. Original September 2/11 registry remains historical; this adds no applicability or performed-control claim.",
+  "mappings": [
+    {
+      "control_id": "SH-ADV-001",
+      "risk_id": "SH-RISK-FIN-002",
+      "rationale": "Engagement acceptance establishes authorized scope and terms."
+    },
+    {
+      "control_id": "SH-ADV-002",
+      "risk_id": "SH-RISK-PEO-002",
+      "rationale": "Staffing plans address competence and delivery capacity."
+    },
+    {
+      "control_id": "SH-ADV-003",
+      "risk_id": "SH-RISK-ASS-001",
+      "rationale": "Independent deliverable review prevents unsupported assurance."
+    },
+    {
+      "control_id": "SH-ADV-004",
+      "risk_id": "SH-RISK-PRV-001",
+      "rationale": "Closeout records retention and customer data return."
+    },
+    {
+      "control_id": "SH-CRD-001",
+      "risk_id": "SH-RISK-GOV-001",
+      "rationale": "Host and operator responsibilities need explicit authority."
+    },
+    {
+      "control_id": "SH-CRD-002",
+      "risk_id": "SH-RISK-FIN-001",
+      "rationale": "Measurement and host reconciliation support settlement accounting."
+    },
+    {
+      "control_id": "SH-CRD-003",
+      "risk_id": "SH-RISK-FIN-002",
+      "rationale": "Custody and settlement commitments require support and approval."
+    },
+    {
+      "control_id": "SH-CRD-004",
+      "risk_id": "SH-RISK-GOV-001",
+      "rationale": "External host operating authority must be preserved."
+    },
+    {
+      "control_id": "SH-ETH-001",
+      "risk_id": "SH-RISK-GOV-003",
+      "rationale": "Code distribution and attestation implement conduct policy."
+    },
+    {
+      "control_id": "SH-ETH-002",
+      "risk_id": "SH-RISK-FIN-002",
+      "rationale": "Conflict review addresses compromised commitment authority."
+    },
+    {
+      "control_id": "SH-ETH-003",
+      "risk_id": "SH-RISK-GOV-002",
+      "rationale": "Independent speak-up channels expose withheld governance information."
+    },
+    {
+      "control_id": "SH-ETH-004",
+      "risk_id": "SH-RISK-FIN-001",
+      "rationale": "Fraud and related-party review address misstatement risk."
+    },
+    {
+      "control_id": "SH-PRD-002",
+      "risk_id": "SH-RISK-FIN-002",
+      "rationale": "Nonstandard customer promises require authorized commitment ownership."
+    },
+    {
+      "control_id": "SH-PRD-004",
+      "risk_id": "SH-RISK-ASS-002",
+      "rationale": "Recurring incidents must lead to corrective action."
+    },
+    {
+      "control_id": "SH-SEC-006",
+      "risk_id": "SH-RISK-TECH-003",
+      "rationale": "Incident command and preserved evidence support disruption response."
+    }
+  ]
+}

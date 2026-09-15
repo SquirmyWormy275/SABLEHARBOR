@@ -1,0 +1,1927 @@
+{
+  "available_on": "2026-09-15",
+  "items": [
+    {
+      "clause_path": "docs/legal/gap-instruments/source/debt-liens.md#2-proposed-term-credit-agreement",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "ARU proposed borrower and verified lender execute a 22.5M term facility only with completed authority, facility and funding schedules.",
+      "id": "DEBT-P01",
+      "original_json_pointer": "/proposed_terms/0",
+      "original_next_action_or_basis": "Draft borrower/contract identification; existing model supplies debt economics, not lender evidence.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "debt-liens",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/debt-liens.json": "e08aef516cba382287cd78231100dbc5ad2a6f193a864c2331c232c591c9bd03",
+        "docs/legal/gap-instruments/source/debt-liens.md": "e9adf8cdc08237c855556d22d30a7649ac64b471c567ce7a54c1aa67613485ef"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/debt-liens.md#4-proposed-security-agreement-and-collateral-schedule",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Grant only separately scheduled security upon proper execution; preserve entity-specific exclusions, authority and third-party rights.",
+      "id": "DEBT-P04",
+      "original_json_pointer": "/proposed_terms/3",
+      "original_next_action_or_basis": "New security draft; no present grant, guarantee, filing or perfection assertion.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "debt-liens",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/debt-liens.json": "e08aef516cba382287cd78231100dbc5ad2a6f193a864c2331c232c591c9bd03",
+        "docs/legal/gap-instruments/source/debt-liens.md": "e9adf8cdc08237c855556d22d30a7649ac64b471c567ce7a54c1aa67613485ef"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/financing-documents.md#1-separate-instruments-and-source-boundary",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Separate HV and WR subscriptions become operative only with verified subscribers, completed economics and actual execution.",
+      "id": "FIN-P01",
+      "original_json_pointer": "/proposed_terms/0",
+      "original_next_action_or_basis": "New definitive-draft mechanism; historical board approvals are not recovered signed subscriptions.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "financing-documents",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/financing-documents.json": "9eb62c0dda0fa6f2babf69f5b3989a6d9a7133f176bd1ef56c8a8f59a745b759",
+        "docs/legal/gap-instruments/source/financing-documents.md": "f648e1844ed93a66b81111b86ae98c98e3e901907f138fd5b9e87172adbf3607"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/financing-documents.md#6-common-proposed-payment-amendment-and-failure-provisions",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Require written approved amendments, indexed side letters, authenticated funding records and reconciliation before capital-ledger update.",
+      "id": "FIN-P04",
+      "original_json_pointer": "/proposed_terms/3",
+      "original_next_action_or_basis": "New proposed closing and amendment clauses; no historical side letter asserted.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "financing-documents",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/financing-documents.json": "9eb62c0dda0fa6f2babf69f5b3989a6d9a7133f176bd1ef56c8a8f59a745b759",
+        "docs/legal/gap-instruments/source/financing-documents.md": "f648e1844ed93a66b81111b86ae98c98e3e901907f138fd5b9e87172adbf3607"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/financing-documents.md#5-common-proposed-information-and-conduct-rights",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Preserve accepted board designation boundaries and no ordinary-course investor veto; exact thresholds remain open.",
+      "id": "FIN-P05",
+      "original_json_pointer": "/proposed_terms/4",
+      "original_next_action_or_basis": "Existing board sources govern direction; proposed clauses cannot create new seats or operating rights.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "financing-documents",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/financing-documents.json": "9eb62c0dda0fa6f2babf69f5b3989a6d9a7133f176bd1ef56c8a8f59a745b759",
+        "docs/legal/gap-instruments/source/financing-documents.md": "f648e1844ed93a66b81111b86ae98c98e3e901907f138fd5b9e87172adbf3607"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/formations.md#9-common-proposed-completion-provisions",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Adopt six separate internal consent texts only through each verified approving body, with actual adoption dates and no reconstructed signatures.",
+      "id": "FORM-P01",
+      "original_json_pointer": "/proposed_terms/0",
+      "original_next_action_or_basis": "New proposed document mechanism; existing entity identities and ownership unchanged.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "formations",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/formations.json": "71c341d2e9f32289fbd3e4935254d47b84bdfd8f3a0c81126d2e6e3aa10ab046",
+        "docs/legal/gap-instruments/source/formations.md": "14fd0d40cf42e80b79f1c94f924050909b98e41d3212c3819d4d04f4d1c398c4"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/formations.md#9-common-proposed-completion-provisions",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Accept a subscription only when class, quantity, consideration, authority and contribution evidence are supplied; do not issue an acquired historical interest a second time.",
+      "id": "FORM-P02",
+      "original_json_pointer": "/proposed_terms/1",
+      "original_next_action_or_basis": "Proposed completion safeguard; original nominal subscription amount is not established.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "formations",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/formations.json": "71c341d2e9f32289fbd3e4935254d47b84bdfd8f3a0c81126d2e6e3aa10ab046",
+        "docs/legal/gap-instruments/source/formations.md": "14fd0d40cf42e80b79f1c94f924050909b98e41d3212c3819d4d04f4d1c398c4"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/formations.md#9-common-proposed-completion-provisions",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Maintain entity-specific ownership, authority and separate-book records; cross-reference existing acquisition amounts rather than treating them as formation contributions.",
+      "id": "FORM-P03",
+      "original_json_pointer": "/proposed_terms/2",
+      "original_next_action_or_basis": "Proposed operative clauses implementing the existing industrial formation boundary.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "formations",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/formations.json": "71c341d2e9f32289fbd3e4935254d47b84bdfd8f3a0c81126d2e6e3aa10ab046",
+        "docs/legal/gap-instruments/source/formations.md": "14fd0d40cf42e80b79f1c94f924050909b98e41d3212c3819d4d04f4d1c398c4"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/formations.md#9-common-proposed-completion-provisions",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Record subsequent contributions, guarantees and recapitalizations separately and preserve existing parent governance and operating authority.",
+      "id": "FORM-P04",
+      "original_json_pointer": "/proposed_terms/3",
+      "original_next_action_or_basis": "Proposed administrative clause; no new contribution or guarantee adopted.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "formations",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/formations.json": "71c341d2e9f32289fbd3e4935254d47b84bdfd8f3a0c81126d2e6e3aa10ab046",
+        "docs/legal/gap-instruments/source/formations.md": "14fd0d40cf42e80b79f1c94f924050909b98e41d3212c3819d4d04f4d1c398c4"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/host-rights.md#1-contracting-parties-and-separate-deployments",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Sable Harbor, LLC (SHI) is the proposed contracting party; individual authority remains to be established",
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-T06",
+      "original_json_pointer": "/proposed_terms/5",
+      "original_next_action_or_basis": "Accepted parent legal identity; proposed selection for this instrument",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "host-rights",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/host-rights.json": "01a9645efe23f29fb9136275995af6a1e2013caa34e286e08f29ec7bacf93c45",
+        "docs/legal/gap-instruments/source/host-rights.md": "4fd81f5dffc2d95ba89c495a3689381648b44a4a8cdfd62750ea028b5bdde9d4"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/land.md#2-proposed-settlement-instruction-to-the-internal-closing-coordinator",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Complete transaction-specific settlement/funding instruction only after authority, recipient and counterpart evidence is supported.",
+      "id": "LAND-P01",
+      "original_json_pointer": "/proposed_terms/0",
+      "original_next_action_or_basis": "New proposed instruction; accepted synthetic acquisition retained without claiming payment.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "land",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/land.json": "8e44d16275f79a6930d4288f7abc2c1bea6c68e7da9ab2a11642d2f58b68cf75",
+        "docs/legal/gap-instruments/source/land.md": "9c4ea28e58c3355f61ab29e8df8ce7789c1c7d7305131efdddabbe3d59c9f28e"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/land.md#4-proposed-funding-authorization-form-in-narrative-terms",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Treasury verifies funding/recipient and Finance verifies authority, amount and accounting as separate role reviews.",
+      "id": "LAND-P02",
+      "original_json_pointer": "/proposed_terms/1",
+      "original_next_action_or_basis": "New proposed procedure; no control-operation claim.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "land",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/land.json": "8e44d16275f79a6930d4288f7abc2c1bea6c68e7da9ab2a11642d2f58b68cf75",
+        "docs/legal/gap-instruments/source/land.md": "9c4ea28e58c3355f61ab29e8df8ce7789c1c7d7305131efdddabbe3d59c9f28e"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/land.md#8-exceptions-amendment-and-review",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Provide written owner update within 10 business days of assigning a material settlement evidence gap.",
+      "id": "LAND-P04",
+      "original_json_pointer": "/proposed_terms/3",
+      "original_next_action_or_basis": "New proposed administrative timing; no statutory deadline.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "land",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/land.json": "8e44d16275f79a6930d4288f7abc2c1bea6c68e7da9ab2a11642d2f58b68cf75",
+        "docs/legal/gap-instruments/source/land.md": "9c4ea28e58c3355f61ab29e8df8ce7789c1c7d7305131efdddabbe3d59c9f28e"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/mark-clearance.md#1-instruction-and-protected-decision-boundary",
+      "current_disposition": "FUTURE_OR_CONDITIONAL_INSTRUMENT_NOT_CURRENT_EXECUTION",
+      "field_or_term": "Preserve accepted operating name and approved artwork",
+      "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-T02",
+      "original_json_pointer": "/proposed_terms/1",
+      "original_next_action_or_basis": "Existing name decision; no rebranding authorized",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "mark-clearance",
+      "rationale": "Keep the represented service/site/external-clearance activation gate. Draft terms and future supporting evidence are not current operations. This remains an affected future claim, not a universal company-close blocker.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/mark-clearance.json": "38ed7c3c8c72ae7447af982c72b15e05c1b88028c54886e45f0dd0d797a6f493",
+        "docs/legal/gap-instruments/source/mark-clearance.md": "a5b9b8d1a39b4c2d85111d191052ca89ebcf763176fe625a532aeb03fdca9dec"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/mark-clearance.md#8-present-disposition",
+      "current_disposition": "FUTURE_OR_CONDITIONAL_INSTRUMENT_NOT_CURRENT_EXECUTION",
+      "field_or_term": "No counsel appointment or expenditure from draft instruction alone",
+      "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-T04",
+      "original_json_pointer": "/proposed_terms/3",
+      "original_next_action_or_basis": "Proposed engagement boundary",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "mark-clearance",
+      "rationale": "Keep the represented service/site/external-clearance activation gate. Draft terms and future supporting evidence are not current operations. This remains an affected future claim, not a universal company-close blocker.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/mark-clearance.json": "38ed7c3c8c72ae7447af982c72b15e05c1b88028c54886e45f0dd0d797a6f493",
+        "docs/legal/gap-instruments/source/mark-clearance.md": "a5b9b8d1a39b4c2d85111d191052ca89ebcf763176fe625a532aeb03fdca9dec"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/rw-chronology.md#5-decision-instrument",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Adopt each date correction separately with source and derivative scope",
+      "id": "SH-LEGAL-DRAFT-RW-CHRONOLOGY-T03",
+      "original_json_pointer": "/proposed_terms/2",
+      "original_next_action_or_basis": "Proposed correction procedure",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "rw-chronology",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/rw-chronology.json": "c4ee38d9aab46422a34ef38d19157c47602d636a20c4a0fa5790ab4ac8699b0f",
+        "docs/legal/gap-instruments/source/rw-chronology.md": "2445506da53f889d2177a0805321a3655b1fbfda0dc747c95e7f24b6f638594d"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/rw-title.md#2-instrument-a--limited-confirmatory-assignment",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Item-specific confirmatory assignment preserves membership-interest acquisition structure",
+      "id": "SH-LEGAL-DRAFT-RW-TITLE-T01",
+      "original_json_pointer": "/proposed_terms/0",
+      "original_next_action_or_basis": "Accepted RWH membership-interest acquisition plus proposed instrument mechanics",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "rw-title",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/rw-title.json": "0ace1edc5e69be480615f7ab5c426b15ae1db2311be40b49fce75a76b6045a48",
+        "docs/legal/gap-instruments/source/rw-title.md": "382bebe11df4b42fd8b9bb35b1a7831f4afe7b46d58c298d4ae9dd58fa176b54"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/tax-billing.md#4-proposed-determination-procedure",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Determine jurisdiction and treatment only after transaction parties, supply, delivery/use, price basis and applicable authority are supported.",
+      "id": "BILLTAX-P01",
+      "original_json_pointer": "/proposed_terms/0",
+      "original_next_action_or_basis": "Proposed workpaper; current determination remains unavailable.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "tax-billing",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/tax-billing.json": "5da4a510457570db49e799b95f41a6b1e21f733329d862017df58143d2791b2c",
+        "docs/legal/gap-instruments/source/tax-billing.md": "8a4fcc32efc81c2502158afbf7df05d2bec5cb296c366d82e90f3c7f3fa38e48"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/tax-filing.md#3-proposed-election-cooperation-agreement",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Parties cooperate on complete reviewed acquisition and allocation facts; each seller authority remains separate.",
+      "id": "TAX-P01",
+      "original_json_pointer": "/proposed_terms/0",
+      "original_next_action_or_basis": "Proposed cooperation instrument; no filing or execution claim.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "tax-filing",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/tax-filing.json": "4ad9c3bfad7931dd51ddc5cf4ccb0cfe9a5db677e6fcf2004091d8738b06e99b",
+        "docs/legal/gap-instruments/source/tax-filing.md": "7fb216ef53a5849a317dc9cb0dc8815d725deed5a34aa513685ce5b60c609a52"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/tax-filing.md#5-filing-control-and-delivery-workpaper",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Track preparation, signatures, dispatch, receipt and agency correspondence as separate evidenced events.",
+      "id": "TAX-P03",
+      "original_json_pointer": "/proposed_terms/2",
+      "original_next_action_or_basis": "Proposed internal filing workpaper preserving ARU-CL-07 filing-ready status.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "tax-filing",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/tax-filing.json": "4ad9c3bfad7931dd51ddc5cf4ccb0cfe9a5db677e6fcf2004091d8738b06e99b",
+        "docs/legal/gap-instruments/source/tax-filing.md": "7fb216ef53a5849a317dc9cb0dc8815d725deed5a34aa513685ce5b60c609a52"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/tenure.md#1-instrument-structure-and-parties",
+      "current_disposition": "FUTURE_OR_CONDITIONAL_INSTRUMENT_NOT_CURRENT_EXECUTION",
+      "field_or_term": "Sable Harbor, LLC (SHI) is the proposed contracting party; individual authority remains to be established",
+      "id": "SH-LEGAL-DRAFT-TENURE-T05",
+      "original_json_pointer": "/proposed_terms/4",
+      "original_next_action_or_basis": "Accepted parent legal identity; proposed selection for this instrument",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "tenure",
+      "rationale": "Keep the represented service/site/external-clearance activation gate. Draft terms and future supporting evidence are not current operations. This remains an affected future claim, not a universal company-close blocker.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/tenure.json": "4b3f96161c38bd9a392ec68945cf6974fee3cb2c25b7079269dfd1ac56cd53ab",
+        "docs/legal/gap-instruments/source/tenure.md": "a054ca8350c565ebf24e5fee59f5a75da82c3ec0ec65afc9f61dec3ac8e56631"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/workforce.md#8-separate-fred-tolman-consultancy",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Fred consultancy $225,000 January 7\u2013October 7, without operating authority.",
+      "id": "SH-LEGAL-DRAFT-WORKFORCE-T03",
+      "original_json_pointer": "/proposed_terms/2",
+      "original_next_action_or_basis": "Accepted source economics; full administration clauses proposed.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "workforce",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/workforce.json": "cad6e1410ada5a9e86a961eb5c06cbe5e5c0b92e6f547282624ac09e8d9b340e",
+        "docs/legal/gap-instruments/source/workforce.md": "6b4b35a48c4c9d304ad9e9a20e64049400aeb801fe386d7968c8479faedc3834"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/advisory-contracts.md#10-risk-remedies-and-termination",
+      "current_disposition": "SCOPED_AUTHORED_SUCCESSOR_REMAINDER_EXPLICIT",
+      "field_or_term": "Client legal party, jurisdiction, notices, signatory and liability limits",
+      "id": "SH-LEGAL-DRAFT-ADVISORY-CONTRACTS-U01",
+      "original_json_pointer": "/unresolved_fields/0",
+      "original_next_action_or_basis": "Complete against client identity and approved legal/risk review.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "advisory-contracts",
+      "rationale": "The four current Advisory clients have newly authored legal names, organization jurisdiction, synthetic notice contacts and signatory capacity. This completes ordinary current-party detail without adopting a new liability limit.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/advisory-contracts.json": "1ffabe5c2f64842cc46a9dadb8267954d55f435ff6dcd2272f0c608463d7f3a7",
+        "docs/legal/gap-instruments/source/advisory-contracts.md": "99f62e1d50c430fb7a1bb42f2315c233a13bdfba5c80cde77dcce8d72b91f9b5",
+        "enterprise/operations/source/current_legal_completion_2026_08.json": "3039044f8bfeb9328c107bf198a8789cf702a84516cc77f4807a740272b70f01"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/advisory-contracts.md#5-sow-execution-schedule",
+      "current_disposition": "SCOPED_AUTHORED_SUCCESSOR_REMAINDER_EXPLICIT",
+      "field_or_term": "Matter scope, fees, data schedule and signature",
+      "id": "SH-LEGAL-DRAFT-ADVISORY-CONTRACTS-U02",
+      "original_json_pointer": "/unresolved_fields/1",
+      "original_next_action_or_basis": "Populate a separately approved SOW before performance.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "advisory-contracts",
+      "rationale": "Four current $25,000 SOWs have scoped data schedules and expressly authored August1 execution/authority, August28 delivery and August31 billing/receipt. No extra revenue, perpetual service obligation or unsigned template term is adopted.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/advisory-contracts.json": "1ffabe5c2f64842cc46a9dadb8267954d55f435ff6dcd2272f0c608463d7f3a7",
+        "docs/legal/gap-instruments/source/advisory-contracts.md": "99f62e1d50c430fb7a1bb42f2315c233a13bdfba5c80cde77dcce8d72b91f9b5",
+        "enterprise/operations/source/current_legal_completion_2026_08.json": "3039044f8bfeb9328c107bf198a8789cf702a84516cc77f4807a740272b70f01"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/billing.md#8-acceptance-schedule-and-unresolved-material-fields",
+      "current_disposition": "SUPERSEDED_IN_PART_BY_ACCEPTED_FF003_BILLING",
+      "field_or_term": "Proposal and design acceptance",
+      "id": "SH-LEGAL-DRAFT-BILLING-U04",
+      "original_json_pointer": "/unresolved_fields/3",
+      "original_next_action_or_basis": "Review exact field IDs, version and artifact hashes.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "billing",
+      "rationale": "The accepted FF-003 successor supplies Copperreach Fabrication, Inc., SHI as Foundry Field issuer, January 31 2027 base scenario and seller-borne $152,250 tax on $1,740,000 principal. Scope is issuance only; no later tax remittance, principal collection or income-tax deduction is inferred.",
+      "source_hashes": {
+        "docs/canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md": "4a33e24a78d68f6d1b592e0239e48b6ce98b2f904444841db3d45c474193ed08",
+        "docs/legal/gap-instruments/source/billing.json": "bc26733ecfc5286e4d5d9a2d5d3506961a2912bb135480346242325b7a8f773d",
+        "docs/legal/gap-instruments/source/billing.md": "83d8af1b3d5a73cab067b1d7839bcb2ed2cecfc7656d246951d213327127f28e",
+        "enterprise/closeout/source/adjustments.json": "a4c179284bcdaa5ce5a4d8b365b16860a479cd93fae2bfbb82060060d0660d5a"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/colo.md#9-completion-and-signature-conditions",
+      "current_disposition": "FUTURE_OR_CONDITIONAL_INSTRUMENT_NOT_CURRENT_EXECUTION",
+      "field_or_term": "Test results, signatures and invoice/payment evidence",
+      "id": "SH-LEGAL-DRAFT-COLO-U02",
+      "original_json_pointer": "/unresolved_fields/1",
+      "original_next_action_or_basis": "Complete only from actual approved case records; no automatic acceptance.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "colo",
+      "rationale": "Keep the represented service/site/external-clearance activation gate. Draft terms and future supporting evidence are not current operations. This remains an affected future claim, not a universal company-close blocker.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/colo.json": "13be7a9173e702b4f13fa65e00885ce3a4d9bb73a110ed929334b2082f21b17f",
+        "docs/legal/gap-instruments/source/colo.md": "0590241ee1a7a1d02b6c2262f5ae3bf31ba026fa9266976e146a2be158b33506"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/financing-documents.md#7-completion-schedules",
+      "current_disposition": "OWNER_DIRECTION_RESOLVED_IMPLEMENTATION_RECONCILIATION_REQUIRED",
+      "field_or_term": "Exact subscriber legal entities and allocations",
+      "id": "FIN-U01",
+      "original_json_pointer": "/unresolved_fields/0",
+      "original_next_action_or_basis": "Verify each signing fund/party; lead firm name alone is insufficient.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "financing-documents",
+      "rationale": "The owner expressly adopted the proposed fictional five-holder register: Daniel33.25%, Priya19.95%, Jon13.30%, Harrison18.50%, Wolf15.00%, 100 million equal participating units. Each lead is expressly authored as its round's sole registered subscriber; this is not inferred from 'led'. Exact 2021/2022 subscription economics and voluntary proportional paid-in contributions without new units are approved for implementation. Historical capital-account reconstruction and repository acceptance remain separate. No new preference or substantive designation threshold is adopted.",
+      "source_hashes": {
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md": "400190fc75b2e8ca001dedb9eb99773f677d9ed8462e1bd41ae56ac35aeb9a69",
+        "docs/legal/gap-instruments/source/financing-documents.json": "9eb62c0dda0fa6f2babf69f5b3989a6d9a7133f176bd1ef56c8a8f59a745b759",
+        "docs/legal/gap-instruments/source/financing-documents.md": "f648e1844ed93a66b81111b86ae98c98e3e901907f138fd5b9e87172adbf3607"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/financing-documents.md#7-completion-schedules",
+      "current_disposition": "OWNER_DIRECTION_RESOLVED_IMPLEMENTATION_RECONCILIATION_REQUIRED",
+      "field_or_term": "Class, quantity, unit price and exact cap table",
+      "id": "FIN-U02",
+      "original_json_pointer": "/unresolved_fields/1",
+      "original_next_action_or_basis": "Complete from accepted definitive economics without deriving exact ownership from rounded board totals.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "financing-documents",
+      "rationale": "The owner expressly adopted the proposed fictional five-holder register: Daniel33.25%, Priya19.95%, Jon13.30%, Harrison18.50%, Wolf15.00%, 100 million equal participating units. Each lead is expressly authored as its round's sole registered subscriber; this is not inferred from 'led'. Exact 2021/2022 subscription economics and voluntary proportional paid-in contributions without new units are approved for implementation. Historical capital-account reconstruction and repository acceptance remain separate. No new preference or substantive designation threshold is adopted.",
+      "source_hashes": {
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md": "400190fc75b2e8ca001dedb9eb99773f677d9ed8462e1bd41ae56ac35aeb9a69",
+        "docs/legal/gap-instruments/source/financing-documents.json": "9eb62c0dda0fa6f2babf69f5b3989a6d9a7133f176bd1ef56c8a8f59a745b759",
+        "docs/legal/gap-instruments/source/financing-documents.md": "f648e1844ed93a66b81111b86ae98c98e3e901907f138fd5b9e87172adbf3607"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/financing-documents.md#5-common-proposed-information-and-conduct-rights",
+      "current_disposition": "MATERIAL_SOURCE_OR_RIGHTS_BOUNDARY",
+      "field_or_term": "Board designation threshold and replacement mechanics",
+      "id": "FIN-U03",
+      "original_json_pointer": "/unresolved_fields/2",
+      "original_next_action_or_basis": "Obtain separately accepted rights schedule consistent with governing agreement.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "financing-documents",
+      "rationale": "This cannot be filled by a template or inferred from rounded financial figures. Preserve the exact unsupported party/right/eligibility field, current source economics and affected claim. No compulsory funding, new investor, collateral, host participation or tax election is invented.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/financing-documents.json": "9eb62c0dda0fa6f2babf69f5b3989a6d9a7133f176bd1ef56c8a8f59a745b759",
+        "docs/legal/gap-instruments/source/financing-documents.md": "f648e1844ed93a66b81111b86ae98c98e3e901907f138fd5b9e87172adbf3607"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/financing-documents.md#7-completion-schedules",
+      "current_disposition": "SOURCE_COMPLETION_REQUIRED_FOR_AFFECTED_INSTRUMENT",
+      "field_or_term": "Actual execution and settlement evidence",
+      "id": "FIN-U04",
+      "original_json_pointer": "/unresolved_fields/3",
+      "original_next_action_or_basis": "Complete each round separately; no fabricated receipt or backdated signing.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "financing-documents",
+      "rationale": "The precise field remains unsupported by this review item. Its next action is retained below; missing evidence does not create a new owner preference or establish real execution. Check later company record sources before use.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/financing-documents.json": "9eb62c0dda0fa6f2babf69f5b3989a6d9a7133f176bd1ef56c8a8f59a745b759",
+        "docs/legal/gap-instruments/source/financing-documents.md": "f648e1844ed93a66b81111b86ae98c98e3e901907f138fd5b9e87172adbf3607"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/formations.md#4-shih--proposed-sole-stockholder-and-organization-consent",
+      "current_disposition": "SOURCE_COMPLETION_REQUIRED_FOR_AFFECTED_INSTRUMENT",
+      "field_or_term": "SHIH/PS exact subscription class, quantity and consideration",
+      "id": "FORM-U01",
+      "original_json_pointer": "/unresolved_fields/0",
+      "original_next_action_or_basis": "Obtain accepted organization subscription detail; do not default to a nominal dollar amount.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "formations",
+      "rationale": "The precise field remains unsupported by this review item. Its next action is retained below; missing evidence does not create a new owner preference or establish real execution. Check later company record sources before use.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/formations.json": "71c341d2e9f32289fbd3e4935254d47b84bdfd8f3a0c81126d2e6e3aa10ab046",
+        "docs/legal/gap-instruments/source/formations.md": "14fd0d40cf42e80b79f1c94f924050909b98e41d3212c3819d4d04f4d1c398c4"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/formations.md#9-common-proposed-completion-provisions",
+      "current_disposition": "SOURCE_COMPLETION_REQUIRED_FOR_AFFECTED_INSTRUMENT",
+      "field_or_term": "Entity-specific approving body, signatory capacity and adoption date",
+      "id": "FORM-U02",
+      "original_json_pointer": "/unresolved_fields/1",
+      "original_next_action_or_basis": "Legal identifies the governing authority; complete one consent sheet per company.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "formations",
+      "rationale": "The precise field remains unsupported by this review item. Its next action is retained below; missing evidence does not create a new owner preference or establish real execution. Check later company record sources before use.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/formations.json": "71c341d2e9f32289fbd3e4935254d47b84bdfd8f3a0c81126d2e6e3aa10ab046",
+        "docs/legal/gap-instruments/source/formations.md": "14fd0d40cf42e80b79f1c94f924050909b98e41d3212c3819d4d04f4d1c398c4"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/host-rights.md#1-contracting-parties-and-separate-deployments",
+      "current_disposition": "SOURCE_COMPLETION_REQUIRED_FOR_AFFECTED_INSTRUMENT",
+      "field_or_term": "Individual SHI signatory delegation and host execution authority",
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-U01",
+      "original_json_pointer": "/unresolved_fields/0",
+      "original_next_action_or_basis": "Verify existing authority records; SHI legal identity is accepted and Cradle remains a business",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "host-rights",
+      "rationale": "The precise field remains unsupported by this review item. Its next action is retained below; missing evidence does not create a new owner preference or establish real execution. Check later company record sources before use.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/host-rights.json": "01a9645efe23f29fb9136275995af6a1e2013caa34e286e08f29ec7bacf93c45",
+        "docs/legal/gap-instruments/source/host-rights.md": "4fd81f5dffc2d95ba89c495a3689381648b44a4a8cdfd62750ea028b5bdde9d4"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/land.md#4-proposed-funding-authorization-form-in-narrative-terms",
+      "current_disposition": "SOURCE_COMPLETION_REQUIRED_FOR_AFFECTED_INSTRUMENT",
+      "field_or_term": "Actual instruction authority/date",
+      "id": "LAND-U03",
+      "original_json_pointer": "/unresolved_fields/2",
+      "original_next_action_or_basis": "Complete verified authorization without backdating to acquisition.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "land",
+      "rationale": "The precise field remains unsupported by this review item. Its next action is retained below; missing evidence does not create a new owner preference or establish real execution. Check later company record sources before use.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/land.json": "8e44d16275f79a6930d4288f7abc2c1bea6c68e7da9ab2a11642d2f58b68cf75",
+        "docs/legal/gap-instruments/source/land.md": "9c4ea28e58c3355f61ab29e8df8ce7789c1c7d7305131efdddabbe3d59c9f28e"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/mark-clearance.md#2-scope-of-professional-engagement",
+      "current_disposition": "FUTURE_OR_CONDITIONAL_INSTRUMENT_NOT_CURRENT_EXECUTION",
+      "field_or_term": "Counsel identity, fees and engagement authority",
+      "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-U02",
+      "original_json_pointer": "/unresolved_fields/1",
+      "original_next_action_or_basis": "Appoint qualified adviser only if external commercialization is pursued",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "mark-clearance",
+      "rationale": "Keep the represented service/site/external-clearance activation gate. Draft terms and future supporting evidence are not current operations. This remains an affected future claim, not a universal company-close blocker.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/mark-clearance.json": "38ed7c3c8c72ae7447af982c72b15e05c1b88028c54886e45f0dd0d797a6f493",
+        "docs/legal/gap-instruments/source/mark-clearance.md": "a5b9b8d1a39b4c2d85111d191052ca89ebcf763176fe625a532aeb03fdca9dec"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/rw-chronology.md#5-decision-instrument",
+      "current_disposition": "SOURCE_COMPLETION_REQUIRED_FOR_AFFECTED_INSTRUMENT",
+      "field_or_term": "Post-signature approval scope in RW-CHR-04",
+      "id": "SH-LEGAL-DRAFT-RW-CHRONOLOGY-U02",
+      "original_json_pointer": "/unresolved_fields/1",
+      "original_next_action_or_basis": "Review existing authority record before proposing a historical explanation",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "rw-chronology",
+      "rationale": "The precise field remains unsupported by this review item. Its next action is retained below; missing evidence does not create a new owner preference or establish real execution. Check later company record sources before use.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/rw-chronology.json": "c4ee38d9aab46422a34ef38d19157c47602d636a20c4a0fa5790ab4ac8699b0f",
+        "docs/legal/gap-instruments/source/rw-chronology.md": "2445506da53f889d2177a0805321a3655b1fbfda0dc747c95e7f24b6f638594d"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/rw-title.md#3-instrument-b--counterparty-consent-and-acknowledgment",
+      "current_disposition": "SOURCE_COMPLETION_REQUIRED_FOR_AFFECTED_INSTRUMENT",
+      "field_or_term": "Counterparty/administrator identity, signing authority and delivery evidence",
+      "id": "SH-LEGAL-DRAFT-RW-TITLE-U02",
+      "original_json_pointer": "/unresolved_fields/1",
+      "original_next_action_or_basis": "Complete from actual source record before instrument use",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "rw-title",
+      "rationale": "The precise field remains unsupported by this review item. Its next action is retained below; missing evidence does not create a new owner preference or establish real execution. Check later company record sources before use.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/rw-title.json": "0ace1edc5e69be480615f7ab5c426b15ae1db2311be40b49fce75a76b6045a48",
+        "docs/legal/gap-instruments/source/rw-title.md": "382bebe11df4b42fd8b9bb35b1a7831f4afe7b46d58c298d4ae9dd58fa176b54"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/tax-filing.md#5-filing-control-and-delivery-workpaper",
+      "current_disposition": "SOURCE_COMPLETION_REQUIRED_FOR_AFFECTED_INSTRUMENT",
+      "field_or_term": "Complete authorized signature packet",
+      "id": "TAX-U02",
+      "original_json_pointer": "/unresolved_fields/1",
+      "original_next_action_or_basis": "Obtain appropriate controlled records without public tax identifiers or manufactured signatures.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "tax-filing",
+      "rationale": "The precise field remains unsupported by this review item. Its next action is retained below; missing evidence does not create a new owner preference or establish real execution. Check later company record sources before use.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/tax-filing.json": "4ad9c3bfad7931dd51ddc5cf4ccb0cfe9a5db677e6fcf2004091d8738b06e99b",
+        "docs/legal/gap-instruments/source/tax-filing.md": "7fb216ef53a5849a317dc9cb0dc8815d725deed5a34aa513685ce5b60c609a52"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/tenure.md#4-use-alterations-and-operating-boundaries",
+      "current_disposition": "FUTURE_OR_CONDITIONAL_INSTRUMENT_NOT_CURRENT_EXECUTION",
+      "field_or_term": "Permitted lodging/process uses and professional approvals",
+      "id": "SH-LEGAL-DRAFT-TENURE-U03",
+      "original_json_pointer": "/unresolved_fields/2",
+      "original_next_action_or_basis": "Reconcile site-specific readiness with Facilities and operating owner",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "tenure",
+      "rationale": "Keep the represented service/site/external-clearance activation gate. Draft terms and future supporting evidence are not current operations. This remains an affected future claim, not a universal company-close blocker.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/tenure.json": "4b3f96161c38bd9a392ec68945cf6974fee3cb2c25b7079269dfd1ac56cd53ab",
+        "docs/legal/gap-instruments/source/tenure.md": "a054ca8350c565ebf24e5fee59f5a75da82c3ec0ec65afc9f61dec3ac8e56631"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/uranium-custody.md#9-activation-schedule-and-current-disposition",
+      "current_disposition": "SCOPED_AUTHORED_SUCCESSOR_REMAINDER_EXPLICIT",
+      "field_or_term": "Activation and execution dates",
+      "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-U03",
+      "original_json_pointer": "/unresolved_fields/2",
+      "original_next_action_or_basis": "Remain null until separately accepted future record",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "uranium-custody",
+      "rationale": "Selected external shipment September13 and converter custody September14 are newly authored dated events, available only at the September15 source boundary. The specific advancement is no longer merely planned; other custody contracts and future shipments retain their own activation gates.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/uranium-custody.json": "c93ec8d2da8a22646b656d5e7186d53e9312a2b47172b8811e33a08016a5422e",
+        "docs/legal/gap-instruments/source/uranium-custody.md": "b9076e42c66e71af0178f8b754d182176a3e93b49329c2cfa8c9cddf77452894",
+        "enterprise/operations/source/september_custody_2026.json": "1a444560f567d4369c68467c05ef0619dac2290ad0dd4a089670245f453c3a4e"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/workforce.md#7-individual-retention-schedules",
+      "current_disposition": "SCOPED_AUTHORED_SUCCESSOR_REMAINDER_EXPLICIT",
+      "field_or_term": "Individual signatures, later employment changes and payment evidence",
+      "id": "SH-LEGAL-DRAFT-WORKFORCE-U01",
+      "original_json_pointer": "/unresolved_fields/0",
+      "original_next_action_or_basis": "Preserve accepted employer mapping; verify execution and any later change before adoption.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "workforce",
+      "rationale": "This field concerns the eight ARU/BST retention awards and Fred consultancy, not all regular employees. Current acknowledgments and eight completed-month consultancy deliveries join retained source cash and the July retention wage workpaper. Employer-levy settlement is a separate finance state; January2027 retention and later consultancy events are not prematurely completed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/workforce.json": "cad6e1410ada5a9e86a961eb5c06cbe5e5c0b92e6f547282624ac09e8d9b340e",
+        "docs/legal/gap-instruments/source/workforce.md": "6b4b35a48c4c9d304ad9e9a20e64049400aeb801fe386d7968c8479faedc3834",
+        "enterprise/operations/source/current_legal_completion_2026_08.json": "3039044f8bfeb9328c107bf198a8789cf702a84516cc77f4807a740272b70f01"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/advisory-contracts.md#1-master-professional-services-agreement",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Separate MSA, SOW, outcome, data, transfer and product terms.",
+      "id": "SH-LEGAL-DRAFT-ADVISORY-CONTRACTS-T01",
+      "original_json_pointer": "/proposed_terms/0",
+      "original_next_action_or_basis": "SH-ADV-014 architecture; clauses proposed.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "advisory-contracts",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/advisory-contracts.json": "1ffabe5c2f64842cc46a9dadb8267954d55f435ff6dcd2272f0c608463d7f3a7",
+        "docs/legal/gap-instruments/source/advisory-contracts.md": "99f62e1d50c430fb7a1bb42f2315c233a13bdfba5c80cde77dcce8d72b91f9b5"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/advisory-contracts.md#8-intellectual-property-and-product-separation",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Four IP classes and no hidden continuing dependency.",
+      "id": "SH-LEGAL-DRAFT-ADVISORY-CONTRACTS-T02",
+      "original_json_pointer": "/proposed_terms/1",
+      "original_next_action_or_basis": "SH-ADV-007 accepted direction.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "advisory-contracts",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/advisory-contracts.json": "1ffabe5c2f64842cc46a9dadb8267954d55f435ff6dcd2272f0c608463d7f3a7",
+        "docs/legal/gap-instruments/source/advisory-contracts.md": "99f62e1d50c430fb7a1bb42f2315c233a13bdfba5c80cde77dcce8d72b91f9b5"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/billing.md#6-separate-retrospective-reconciliation-attachment",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Preserve initial $1,740,000 and later source movement totals separately.",
+      "id": "SH-LEGAL-DRAFT-BILLING-T03",
+      "original_json_pointer": "/proposed_terms/2",
+      "original_next_action_or_basis": "Accepted source packet; no duplicate invoice or journal.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "billing",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/billing.json": "bc26733ecfc5286e4d5d9a2d5d3506961a2912bb135480346242325b7a8f773d",
+        "docs/legal/gap-instruments/source/billing.md": "83d8af1b3d5a73cab067b1d7839bcb2ed2cecfc7656d246951d213327127f28e"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/carry.md#2-eligibility-and-prohibition-on-serving-j2-discussions",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "No named grants or individualized serving-J2 contact; applicant initiates after service.",
+      "id": "SH-LEGAL-DRAFT-CARRY-T02",
+      "original_json_pointer": "/proposed_terms/1",
+      "original_next_action_or_basis": "SH-ADV-005 sections 5\u20136.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "carry",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/carry.json": "c2b6f9f8fe1b65494d9a64c74e1813783b4fdbe30368a91b8284622402fadfe1",
+        "docs/legal/gap-instruments/source/carry.md": "f827af31cc408054a32c5cd602c4c378020c55fff06ff84c8851b6acd6f89312"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/carry.md#9-information-records-and-transfer-restrictions",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Notice, correction and calculation records administer source rights.",
+      "id": "SH-LEGAL-DRAFT-CARRY-T03",
+      "original_json_pointer": "/proposed_terms/2",
+      "original_next_action_or_basis": "Proposed operational clauses; no new grant.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "carry",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/carry.json": "c2b6f9f8fe1b65494d9a64c74e1813783b4fdbe30368a91b8284622402fadfe1",
+        "docs/legal/gap-instruments/source/carry.md": "f827af31cc408054a32c5cd602c4c378020c55fff06ff84c8851b6acd6f89312"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/colo.md#1-incorporation-and-purpose",
+      "current_disposition": "FUTURE_OR_CONDITIONAL_INSTRUMENT_NOT_CURRENT_EXECUTION",
+      "field_or_term": "Supplement RT-MSA-001 and existing RT-SO-RENO/RT-SO-BOISE, no competing master.",
+      "id": "SH-LEGAL-DRAFT-COLO-T01",
+      "original_json_pointer": "/proposed_terms/0",
+      "original_next_action_or_basis": "Existing SH-RT-CONTRACT-001.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "colo",
+      "rationale": "Keep the represented service/site/external-clearance activation gate. Draft terms and future supporting evidence are not current operations. This remains an affected future claim, not a universal company-close blocker.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/colo.json": "13be7a9173e702b4f13fa65e00885ce3a4d9bb73a110ed929334b2082f21b17f",
+        "docs/legal/gap-instruments/source/colo.md": "0590241ee1a7a1d02b6c2262f5ae3bf31ba026fa9266976e146a2be158b33506"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/colo.md#6-commencement-and-invoice-verification",
+      "current_disposition": "FUTURE_OR_CONDITIONAL_INSTRUMENT_NOT_CURRENT_EXECUTION",
+      "field_or_term": "Technical acceptance precedes billing except expressly agreed reservation charges.",
+      "id": "SH-LEGAL-DRAFT-COLO-T02",
+      "original_json_pointer": "/proposed_terms/1",
+      "original_next_action_or_basis": "Existing master rule with proposed evidence form.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "colo",
+      "rationale": "Keep the represented service/site/external-clearance activation gate. Draft terms and future supporting evidence are not current operations. This remains an affected future claim, not a universal company-close blocker.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/colo.json": "13be7a9173e702b4f13fa65e00885ce3a4d9bb73a110ed929334b2082f21b17f",
+        "docs/legal/gap-instruments/source/colo.md": "0590241ee1a7a1d02b6c2262f5ae3bf31ba026fa9266976e146a2be158b33506"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/colo.md#7-availability-and-service-credit-certificate",
+      "current_disposition": "FUTURE_OR_CONDITIONAL_INSTRUMENT_NOT_CURRENT_EXECUTION",
+      "field_or_term": "Meter, quote, invoice and credits retain separate status and provenance.",
+      "id": "SH-LEGAL-DRAFT-COLO-T03",
+      "original_json_pointer": "/proposed_terms/2",
+      "original_next_action_or_basis": "Existing Schedules A/B expanded into reviewable completion clauses.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "colo",
+      "rationale": "Keep the represented service/site/external-clearance activation gate. Draft terms and future supporting evidence are not current operations. This remains an affected future claim, not a universal company-close blocker.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/colo.json": "13be7a9173e702b4f13fa65e00885ce3a4d9bb73a110ed929334b2082f21b17f",
+        "docs/legal/gap-instruments/source/colo.md": "0590241ee1a7a1d02b6c2262f5ae3bf31ba026fa9266976e146a2be158b33506"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/debt-liens.md#6-proposed-release-undertaking-and-evidence-receipt",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Obtain payoff statement and instrument-specific release undertaking; verify supported settlement separately from lien release.",
+      "id": "DEBT-P05",
+      "original_json_pointer": "/proposed_terms/4",
+      "original_next_action_or_basis": "New request and undertaking clauses; current internal ARU-CL-03 is not independent lender confirmation.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "debt-liens",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/debt-liens.json": "e08aef516cba382287cd78231100dbc5ad2a6f193a864c2331c232c591c9bd03",
+        "docs/legal/gap-instruments/source/debt-liens.md": "e9adf8cdc08237c855556d22d30a7649ac64b471c567ce7a54c1aa67613485ef"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/financing-documents.md#5-common-proposed-information-and-conduct-rights",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Provide quarterly management financial information within 45 days and annual management information within 120 days after period end.",
+      "id": "FIN-P02",
+      "original_json_pointer": "/proposed_terms/1",
+      "original_next_action_or_basis": "New proposed information-rights deadlines; no audited-statement promise.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "financing-documents",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/financing-documents.json": "9eb62c0dda0fa6f2babf69f5b3989a6d9a7133f176bd1ef56c8a8f59a745b759",
+        "docs/legal/gap-instruments/source/financing-documents.md": "f648e1844ed93a66b81111b86ae98c98e3e901907f138fd5b9e87172adbf3607"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/financing-documents.md#5-common-proposed-information-and-conduct-rights",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Limit confidential information use to investment monitoring and protect J 2, personnel, privileged and third-party restricted material.",
+      "id": "FIN-P03",
+      "original_json_pointer": "/proposed_terms/2",
+      "original_next_action_or_basis": "Proposed investor information safeguards within accepted institutional boundaries.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "financing-documents",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/financing-documents.json": "9eb62c0dda0fa6f2babf69f5b3989a6d9a7133f176bd1ef56c8a8f59a745b759",
+        "docs/legal/gap-instruments/source/financing-documents.md": "f648e1844ed93a66b81111b86ae98c98e3e901907f138fd5b9e87172adbf3607"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/host-rights.md#1-contracting-parties-and-separate-deployments",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Three-year initial term and 90-day prolonged interruption exit",
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-T01",
+      "original_json_pointer": "/proposed_terms/0",
+      "original_next_action_or_basis": "New negotiable proposal; no historic term asserted",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "host-rights",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/host-rights.json": "01a9645efe23f29fb9136275995af6a1e2013caa34e286e08f29ec7bacf93c45",
+        "docs/legal/gap-instruments/source/host-rights.md": "4fd81f5dffc2d95ba89c495a3689381648b44a4a8cdfd62750ea028b5bdde9d4"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/host-rights.md#3-host-command-and-bypass-rights",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Host retains operating command and bypass; Cradle equipment remains Cradle-owned",
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-T02",
+      "original_json_pointer": "/proposed_terms/1",
+      "original_next_action_or_basis": "Cradle closeout",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "host-rights",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/host-rights.json": "01a9645efe23f29fb9136275995af6a1e2013caa34e286e08f29ec7bacf93c45",
+        "docs/legal/gap-instruments/source/host-rights.md": "4fd81f5dffc2d95ba89c495a3689381648b44a4a8cdfd62750ea028b5bdde9d4"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/host-rights.md#8-demotte-deployment-schedule",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Demotte commercial participation choice must be separately accepted",
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-T05",
+      "original_json_pointer": "/proposed_terms/4",
+      "original_next_action_or_basis": "No host percentage supplied by accepted source",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "host-rights",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/host-rights.json": "01a9645efe23f29fb9136275995af6a1e2013caa34e286e08f29ec7bacf93c45",
+        "docs/legal/gap-instruments/source/host-rights.md": "4fd81f5dffc2d95ba89c495a3689381648b44a4a8cdfd62750ea028b5bdde9d4"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/land.md#6-proposed-accounting-instruction",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Resolve the existing settlement clearing only through a supported completing entry; do not debit land twice.",
+      "id": "LAND-P03",
+      "original_json_pointer": "/proposed_terms/2",
+      "original_next_action_or_basis": "Proposed completion clause implementing existing finance bridge.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "land",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/land.json": "8e44d16275f79a6930d4288f7abc2c1bea6c68e7da9ab2a11642d2f58b68cf75",
+        "docs/legal/gap-instruments/source/land.md": "9c4ea28e58c3355f61ab29e8df8ce7789c1c7d7305131efdddabbe3d59c9f28e"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/mark-clearance.md#2-scope-of-professional-engagement",
+      "current_disposition": "FUTURE_OR_CONDITIONAL_INSTRUMENT_NOT_CURRENT_EXECUTION",
+      "field_or_term": "Scope counsel work to actual external use of full composite name",
+      "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-T01",
+      "original_json_pointer": "/proposed_terms/0",
+      "original_next_action_or_basis": "Accepted external-clearance status note",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "mark-clearance",
+      "rationale": "Keep the represented service/site/external-clearance activation gate. Draft terms and future supporting evidence are not current operations. This remains an affected future claim, not a universal company-close blocker.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/mark-clearance.json": "38ed7c3c8c72ae7447af982c72b15e05c1b88028c54886e45f0dd0d797a6f493",
+        "docs/legal/gap-instruments/source/mark-clearance.md": "a5b9b8d1a39b4c2d85111d191052ca89ebcf763176fe625a532aeb03fdca9dec"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/mark-clearance.md#5-requested-advice-and-deliverable",
+      "current_disposition": "FUTURE_OR_CONDITIONAL_INSTRUMENT_NOT_CURRENT_EXECUTION",
+      "field_or_term": "Keep search record, legal advice, launch decision and filing status separate",
+      "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-T03",
+      "original_json_pointer": "/proposed_terms/2",
+      "original_next_action_or_basis": "Proposed evidence/decision instrument",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "mark-clearance",
+      "rationale": "Keep the represented service/site/external-clearance activation gate. Draft terms and future supporting evidence are not current operations. This remains an affected future claim, not a universal company-close blocker.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/mark-clearance.json": "38ed7c3c8c72ae7447af982c72b15e05c1b88028c54886e45f0dd0d797a6f493",
+        "docs/legal/gap-instruments/source/mark-clearance.md": "a5b9b8d1a39b4c2d85111d191052ca89ebcf763176fe625a532aeb03fdca9dec"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/tax-billing.md#4-proposed-determination-procedure",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Perform initial completeness review within 5 business days after receiving a full fact packet.",
+      "id": "BILLTAX-P04",
+      "original_json_pointer": "/proposed_terms/3",
+      "original_next_action_or_basis": "New proposed administrative timing; no tax opinion or filing deadline.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "tax-billing",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/tax-billing.json": "5da4a510457570db49e799b95f41a6b1e21f733329d862017df58143d2791b2c",
+        "docs/legal/gap-instruments/source/tax-billing.md": "8a4fcc32efc81c2502158afbf7df05d2bec5cb296c366d82e90f3c7f3fa38e48"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/tax-filing.md#3-proposed-election-cooperation-agreement",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Identify discrepancies within 5 business days of a complete packet and escalate deadline risks; silence is not consent.",
+      "id": "TAX-P02",
+      "original_json_pointer": "/proposed_terms/1",
+      "original_next_action_or_basis": "New proposed coordination deadline; no extension of official filing rules.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "tax-filing",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/tax-filing.json": "4ad9c3bfad7931dd51ddc5cf4ccb0cfe9a5db677e6fcf2004091d8738b06e99b",
+        "docs/legal/gap-instruments/source/tax-filing.md": "7fb216ef53a5849a317dc9cb0dc8815d725deed5a34aa513685ce5b60c609a52"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/tenure.md#2-proposed-investigation-access-grant",
+      "current_disposition": "FUTURE_OR_CONDITIONAL_INSTRUMENT_NOT_CURRENT_EXECUTION",
+      "field_or_term": "90-day inspection window from future effective date",
+      "id": "SH-LEGAL-DRAFT-TENURE-T02",
+      "original_json_pointer": "/proposed_terms/1",
+      "original_next_action_or_basis": "New proposed duration",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "tenure",
+      "rationale": "Keep the represented service/site/external-clearance activation gate. Draft terms and future supporting evidence are not current operations. This remains an affected future claim, not a universal company-close blocker.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/tenure.json": "4b3f96161c38bd9a392ec68945cf6974fee3cb2c25b7079269dfd1ac56cd53ab",
+        "docs/legal/gap-instruments/source/tenure.md": "a054ca8350c565ebf24e5fee59f5a75da82c3ec0ec65afc9f61dec3ac8e56631"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/tenure.md#8-financial-and-risk-allocation",
+      "current_disposition": "FUTURE_OR_CONDITIONAL_INSTRUMENT_NOT_CURRENT_EXECUTION",
+      "field_or_term": "Each party bears its own investigation costs absent accepted work order",
+      "id": "SH-LEGAL-DRAFT-TENURE-T04",
+      "original_json_pointer": "/proposed_terms/3",
+      "original_next_action_or_basis": "Proposed cost allocation",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "tenure",
+      "rationale": "Keep the represented service/site/external-clearance activation gate. Draft terms and future supporting evidence are not current operations. This remains an affected future claim, not a universal company-close blocker.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/tenure.json": "4b3f96161c38bd9a392ec68945cf6974fee3cb2c25b7079269dfd1ac56cd53ab",
+        "docs/legal/gap-instruments/source/tenure.md": "a054ca8350c565ebf24e5fee59f5a75da82c3ec0ec65afc9f61dec3ac8e56631"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/workforce.md#2-retention-consideration-and-payment",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Eight awards total $500,000 in two $250,000 source installments.",
+      "id": "SH-LEGAL-DRAFT-WORKFORCE-T01",
+      "original_json_pointer": "/proposed_terms/0",
+      "original_next_action_or_basis": "Accepted SH-IND-ARU-HR-001; no payment assertion.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "workforce",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/workforce.json": "cad6e1410ada5a9e86a961eb5c06cbe5e5c0b92e6f547282624ac09e8d9b340e",
+        "docs/legal/gap-instruments/source/workforce.md": "6b4b35a48c4c9d304ad9e9a20e64049400aeb801fe386d7968c8479faedc3834"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/workforce.md#3-service-condition-and-protected-departure",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Protected departures receive service-based pro rata recognition; calendar-day convention proposed.",
+      "id": "SH-LEGAL-DRAFT-WORKFORCE-T02",
+      "original_json_pointer": "/proposed_terms/1",
+      "original_next_action_or_basis": "Source protection retained; calculation convention DRAFT_FOR_REVIEW.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "workforce",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/workforce.json": "cad6e1410ada5a9e86a961eb5c06cbe5e5c0b92e6f547282624ac09e8d9b340e",
+        "docs/legal/gap-instruments/source/workforce.md": "6b4b35a48c4c9d304ad9e9a20e64049400aeb801fe386d7968c8479faedc3834"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/debt-liens.md#2-proposed-term-credit-agreement",
+      "current_disposition": "SCOPED_AUTHORED_SUCCESSOR_REMAINDER_EXPLICIT",
+      "field_or_term": "Lender, verified borrower capacity and any separate guarantors/grantors",
+      "id": "DEBT-U01",
+      "original_json_pointer": "/unresolved_fields/0",
+      "original_next_action_or_basis": "Complete party and authority schedule without assuming group-wide guarantees.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "debt-liens",
+      "rationale": "The existing ARU term-creditor role now has an expressly fictional legal name and administrative account reference; ARU borrower identity and accepted officer capacity are retained. Maturity, prepayment, collateral and numerical covenant terms remain separate unsupported material rights. No new loan or guarantee.",
+      "source_hashes": {
+        "docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md": "6efa0bc534624e311b41b80df7887dd638f5af5e0c9a3131246a3ea1e74ae13c",
+        "docs/legal/gap-instruments/source/debt-liens.json": "e08aef516cba382287cd78231100dbc5ad2a6f193a864c2331c232c591c9bd03",
+        "docs/legal/gap-instruments/source/debt-liens.md": "e9adf8cdc08237c855556d22d30a7649ac64b471c567ce7a54c1aa67613485ef"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/debt-liens.md#5-proposed-payoff-request-to-existing-lenders",
+      "current_disposition": "SCOPED_AUTHORED_SUCCESSOR_REMAINDER_EXPLICIT",
+      "field_or_term": "Payoff value date, accrued interest, instruction reference and release instruments",
+      "id": "DEBT-U04",
+      "original_json_pointer": "/unresolved_fields/3",
+      "original_next_action_or_basis": "Obtain exact lender documentation; do not fabricate operational bank details.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "debt-liens",
+      "rationale": "The current debt successor supplies internal payoff and settlement references and 18 January\u2013August payment records. The $13.5M old debt payoff is distinct from asset-specific lien release, which remains unsupported. No second cash posting.",
+      "source_hashes": {
+        "docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md": "6efa0bc534624e311b41b80df7887dd638f5af5e0c9a3131246a3ea1e74ae13c",
+        "docs/legal/gap-instruments/source/debt-liens.json": "e08aef516cba382287cd78231100dbc5ad2a6f193a864c2331c232c591c9bd03",
+        "docs/legal/gap-instruments/source/debt-liens.md": "e9adf8cdc08237c855556d22d30a7649ac64b471c567ce7a54c1aa67613485ef"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/debt-liens.md#3-proposed-conditions-and-borrower-undertakings",
+      "current_disposition": "MATERIAL_SOURCE_OR_RIGHTS_BOUNDARY",
+      "field_or_term": "Numerical covenants and compliance definitions",
+      "id": "DEBT-U05",
+      "original_json_pointer": "/unresolved_fields/4",
+      "original_next_action_or_basis": "Obtain accepted covenant schedule before any compliance certificate.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "debt-liens",
+      "rationale": "This cannot be filled by a template or inferred from rounded financial figures. Preserve the exact unsupported party/right/eligibility field, current source economics and affected claim. No compulsory funding, new investor, collateral, host participation or tax election is invented.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/debt-liens.json": "e08aef516cba382287cd78231100dbc5ad2a6f193a864c2331c232c591c9bd03",
+        "docs/legal/gap-instruments/source/debt-liens.md": "e9adf8cdc08237c855556d22d30a7649ac64b471c567ce7a54c1aa67613485ef"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/formations.md#10-review-delivery-schedule",
+      "current_disposition": "REAL_EXTERNAL_EVIDENCE_OUTSIDE_SYNTHETIC_ASSIGNMENT",
+      "field_or_term": "Original certificates and governmental records",
+      "id": "FORM-U03",
+      "original_json_pointer": "/unresolved_fields/2",
+      "original_next_action_or_basis": "Obtain appropriate independent records if required; no government replicas are produced.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "formations",
+      "rationale": "The assignment authorizes labeled synthetic records, not real incorporation, parcel acquisition or government issuance. Retain that external-evidence limit without making a real-world filing a prerequisite for fictional books.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/formations.json": "71c341d2e9f32289fbd3e4935254d47b84bdfd8f3a0c81126d2e6e3aa10ab046",
+        "docs/legal/gap-instruments/source/formations.md": "14fd0d40cf42e80b79f1c94f924050909b98e41d3212c3819d4d04f4d1c398c4"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/formations.md#7-aru--proposed-acquired-share-and-board-record-acknowledgment",
+      "current_disposition": "SOURCE_COMPLETION_REQUIRED_FOR_AFFECTED_INSTRUMENT",
+      "field_or_term": "Exact acquired share or unit certificates",
+      "id": "FORM-U04",
+      "original_json_pointer": "/unresolved_fields/3",
+      "original_next_action_or_basis": "Use accepted ownership percentages until original instrument identifiers are supported.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "formations",
+      "rationale": "The precise field remains unsupported by this review item. Its next action is retained below; missing evidence does not create a new owner preference or establish real execution. Check later company record sources before use.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/formations.json": "71c341d2e9f32289fbd3e4935254d47b84bdfd8f3a0c81126d2e6e3aa10ab046",
+        "docs/legal/gap-instruments/source/formations.md": "14fd0d40cf42e80b79f1c94f924050909b98e41d3212c3819d4d04f4d1c398c4"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/host-rights.md#7-kelly-gang-mining-deployment-schedule",
+      "current_disposition": "SCOPED_AUTHORED_SUCCESSOR_REMAINDER_EXPLICIT",
+      "field_or_term": "Kelly Gang participation percentage and value definition",
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-U03",
+      "original_json_pointer": "/unresolved_fields/2",
+      "original_next_action_or_basis": "Negotiate explicit inputs; do not make permanent lore quantities",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "host-rights",
+      "rationale": "The selected Stream17 run reconciles $60,000 realized value and $12,000 host settlement. The implied 20% is a run-level ratio, not an adopted perpetual rate or contract term. Any broader participation right remains outside this completion.",
+      "source_hashes": {
+        "docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md": "6efa0bc534624e311b41b80df7887dd638f5af5e0c9a3131246a3ea1e74ae13c",
+        "docs/legal/gap-instruments/source/host-rights.json": "01a9645efe23f29fb9136275995af6a1e2013caa34e286e08f29ec7bacf93c45",
+        "docs/legal/gap-instruments/source/host-rights.md": "4fd81f5dffc2d95ba89c495a3689381648b44a4a8cdfd62750ea028b5bdde9d4"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/host-rights.md#8-demotte-deployment-schedule",
+      "current_disposition": "SCOPED_AUTHORED_SUCCESSOR_REMAINDER_EXPLICIT",
+      "field_or_term": "Demotte host settlement mechanism",
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-U04",
+      "original_json_pointer": "/unresolved_fields/3",
+      "original_next_action_or_basis": "Owner review separate supported commercial proposal",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "host-rights",
+      "rationale": "Demotte's selected failed $18,500 test and zero sale are preserved with bypass and sample hold. No unsupported settlement formula or future payment is adopted.",
+      "source_hashes": {
+        "docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md": "6efa0bc534624e311b41b80df7887dd638f5af5e0c9a3131246a3ea1e74ae13c",
+        "docs/legal/gap-instruments/source/host-rights.json": "01a9645efe23f29fb9136275995af6a1e2013caa34e286e08f29ec7bacf93c45",
+        "docs/legal/gap-instruments/source/host-rights.md": "4fd81f5dffc2d95ba89c495a3689381648b44a4a8cdfd62750ea028b5bdde9d4"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/host-rights.md#9-responsibility-insurance-and-exit",
+      "current_disposition": "SOURCE_COMPLETION_REQUIRED_FOR_AFFECTED_INSTRUMENT",
+      "field_or_term": "Term dates, currencies, law,forum,insurance evidence",
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-U05",
+      "original_json_pointer": "/unresolved_fields/4",
+      "original_next_action_or_basis": "Complete definitive schedule before execution",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "host-rights",
+      "rationale": "The precise field remains unsupported by this review item. Its next action is retained below; missing evidence does not create a new owner preference or establish real execution. Check later company record sources before use.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/host-rights.json": "01a9645efe23f29fb9136275995af6a1e2013caa34e286e08f29ec7bacf93c45",
+        "docs/legal/gap-instruments/source/host-rights.md": "4fd81f5dffc2d95ba89c495a3689381648b44a4a8cdfd62750ea028b5bdde9d4"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/land.md#2-proposed-settlement-instruction-to-the-internal-closing-coordinator",
+      "current_disposition": "SOURCE_COMPLETION_REQUIRED_FOR_AFFECTED_INSTRUMENT",
+      "field_or_term": "Settlement counterpart and funding source",
+      "id": "LAND-U01",
+      "original_json_pointer": "/unresolved_fields/0",
+      "original_next_action_or_basis": "Obtain accepted transaction evidence before classifying as cash, debt, payable or contribution.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "land",
+      "rationale": "The precise field remains unsupported by this review item. Its next action is retained below; missing evidence does not create a new owner preference or establish real execution. Check later company record sources before use.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/land.json": "8e44d16275f79a6930d4288f7abc2c1bea6c68e7da9ab2a11642d2f58b68cf75",
+        "docs/legal/gap-instruments/source/land.md": "9c4ea28e58c3355f61ab29e8df8ce7789c1c7d7305131efdddabbe3d59c9f28e"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/land.md#3-evidence-and-control-schedule",
+      "current_disposition": "SOURCE_COMPLETION_REQUIRED_FOR_AFFECTED_INSTRUMENT",
+      "field_or_term": "Settlement adjustments and actual recipient support",
+      "id": "LAND-U02",
+      "original_json_pointer": "/unresolved_fields/1",
+      "original_next_action_or_basis": "Obtain source-specific statement; blank is not zero.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "land",
+      "rationale": "The precise field remains unsupported by this review item. Its next action is retained below; missing evidence does not create a new owner preference or establish real execution. Check later company record sources before use.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/land.json": "8e44d16275f79a6930d4288f7abc2c1bea6c68e7da9ab2a11642d2f58b68cf75",
+        "docs/legal/gap-instruments/source/land.md": "9c4ea28e58c3355f61ab29e8df8ce7789c1c7d7305131efdddabbe3d59c9f28e"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/mark-clearance.md#3-schedule-a--client-use-instructions",
+      "current_disposition": "FUTURE_OR_CONDITIONAL_INSTRUMENT_NOT_CURRENT_EXECUTION",
+      "field_or_term": "Actual external markets, services, channels and dates",
+      "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-U01",
+      "original_json_pointer": "/unresolved_fields/0",
+      "original_next_action_or_basis": "Business owner provides specific use instructions",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "mark-clearance",
+      "rationale": "Keep the represented service/site/external-clearance activation gate. Draft terms and future supporting evidence are not current operations. This remains an affected future claim, not a universal company-close blocker.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/mark-clearance.json": "38ed7c3c8c72ae7447af982c72b15e05c1b88028c54886e45f0dd0d797a6f493",
+        "docs/legal/gap-instruments/source/mark-clearance.md": "a5b9b8d1a39b4c2d85111d191052ca89ebcf763176fe625a532aeb03fdca9dec"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/mark-clearance.md#5-requested-advice-and-deliverable",
+      "current_disposition": "FUTURE_OR_CONDITIONAL_INSTRUMENT_NOT_CURRENT_EXECUTION",
+      "field_or_term": "Search results, advice and launch/filingdecision",
+      "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-U03",
+      "original_json_pointer": "/unresolved_fields/2",
+      "original_next_action_or_basis": "Complete future evidence and sign-off; do not fabricate clearance",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "mark-clearance",
+      "rationale": "Keep the represented service/site/external-clearance activation gate. Draft terms and future supporting evidence are not current operations. This remains an affected future claim, not a universal company-close blocker.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/mark-clearance.json": "38ed7c3c8c72ae7447af982c72b15e05c1b88028c54886e45f0dd0d797a6f493",
+        "docs/legal/gap-instruments/source/mark-clearance.md": "a5b9b8d1a39b4c2d85111d191052ca89ebcf763176fe625a532aeb03fdca9dec"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/tax-filing.md#5-filing-control-and-delivery-workpaper",
+      "current_disposition": "SOURCE_COMPLETION_REQUIRED_FOR_AFFECTED_INSTRUMENT",
+      "field_or_term": "Actual submission and subsequent status",
+      "id": "TAX-U03",
+      "original_json_pointer": "/unresolved_fields/2",
+      "original_next_action_or_basis": "Obtain source evidence; current state remains internal filing-ready.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "tax-filing",
+      "rationale": "The precise field remains unsupported by this review item. Its next action is retained below; missing evidence does not create a new owner preference or establish real execution. Check later company record sources before use.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/tax-filing.json": "4ad9c3bfad7931dd51ddc5cf4ccb0cfe9a5db677e6fcf2004091d8738b06e99b",
+        "docs/legal/gap-instruments/source/tax-filing.md": "7fb216ef53a5849a317dc9cb0dc8815d725deed5a34aa513685ce5b60c609a52"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/advisory-contracts.md#4-fees-invoices-and-changes",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Source pricing patterns retained as optional schedule selections, no client invoice.",
+      "id": "SH-LEGAL-DRAFT-ADVISORY-CONTRACTS-T03",
+      "original_json_pointer": "/proposed_terms/2",
+      "original_next_action_or_basis": "SH-ADV-009; no actual fee selected.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "advisory-contracts",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/advisory-contracts.json": "1ffabe5c2f64842cc46a9dadb8267954d55f435ff6dcd2272f0c608463d7f3a7",
+        "docs/legal/gap-instruments/source/advisory-contracts.md": "99f62e1d50c430fb7a1bb42f2315c233a13bdfba5c80cde77dcce8d72b91f9b5"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/carry.md#4-annual-economic-calculation",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "20% pool, 10,000 notional units, five-year 20% annual vesting.",
+      "id": "SH-LEGAL-DRAFT-CARRY-T01",
+      "original_json_pointer": "/proposed_terms/0",
+      "original_next_action_or_basis": "SH-ADV-005 accepted direction.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "carry",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/carry.json": "c2b6f9f8fe1b65494d9a64c74e1813783b4fdbe30368a91b8284622402fadfe1",
+        "docs/legal/gap-instruments/source/carry.md": "f827af31cc408054a32c5cd602c4c378020c55fff06ff84c8851b6acd6f89312"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/debt-liens.md#2-proposed-term-credit-agreement",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Carry 6.75% and ACT/365 with 375000 quarterly principal beginning 2026-04-07 as model-derived draft terms.",
+      "id": "DEBT-P02",
+      "original_json_pointer": "/proposed_terms/1",
+      "original_next_action_or_basis": "Existing transaction accounting and finance source; actual lender acceptance remains unverified.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "debt-liens",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/debt-liens.json": "e08aef516cba382287cd78231100dbc5ad2a6f193a864c2331c232c591c9bd03",
+        "docs/legal/gap-instruments/source/debt-liens.md": "e9adf8cdc08237c855556d22d30a7649ac64b471c567ce7a54c1aa67613485ef"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/host-rights.md#6-settlement-and-supporting-accounts",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Monthly statement within 20 days; undisputed payment 30 days after receipt",
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-T03",
+      "original_json_pointer": "/proposed_terms/2",
+      "original_next_action_or_basis": "Proposed settlement timing only",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "host-rights",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/host-rights.json": "01a9645efe23f29fb9136275995af6a1e2013caa34e286e08f29ec7bacf93c45",
+        "docs/legal/gap-instruments/source/host-rights.md": "4fd81f5dffc2d95ba89c495a3689381648b44a4a8cdfd62750ea028b5bdde9d4"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/rw-chronology.md#6-accounting-preservation-schedule",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Preserve selected July 18, 2025 close and consideration",
+      "id": "SH-LEGAL-DRAFT-RW-CHRONOLOGY-T02",
+      "original_json_pointer": "/proposed_terms/1",
+      "original_next_action_or_basis": "Accepted Red Wash transaction canon",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "rw-chronology",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/rw-chronology.json": "c4ee38d9aab46422a34ef38d19157c47602d636a20c4a0fa5790ab4ac8699b0f",
+        "docs/legal/gap-instruments/source/rw-chronology.md": "2445506da53f889d2177a0805321a3655b1fbfda0dc747c95e7f24b6f638594d"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/rw-title.md#6-instrument-d--escrow-claim-notice",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Escrow notice and joint release require supported claim/balance record",
+      "id": "SH-LEGAL-DRAFT-RW-TITLE-T03",
+      "original_json_pointer": "/proposed_terms/2",
+      "original_next_action_or_basis": "Existing 36-month $3M escrow; no release evidence",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "rw-title",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/rw-title.json": "0ace1edc5e69be480615f7ab5c426b15ae1db2311be40b49fce75a76b6045a48",
+        "docs/legal/gap-instruments/source/rw-title.md": "382bebe11df4b42fd8b9bb35b1a7831f4afe7b46d58c298d4ae9dd58fa176b54"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/rw-title.md#8-consideration-and-escrow-reconciliation",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Separate escrow and holdback within $28M consideration",
+      "id": "SH-LEGAL-DRAFT-RW-TITLE-T04",
+      "original_json_pointer": "/proposed_terms/3",
+      "original_next_action_or_basis": "Accepted transaction accounting",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "rw-title",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/rw-title.json": "0ace1edc5e69be480615f7ab5c426b15ae1db2311be40b49fce75a76b6045a48",
+        "docs/legal/gap-instruments/source/rw-title.md": "382bebe11df4b42fd8b9bb35b1a7831f4afe7b46d58c298d4ae9dd58fa176b54"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/uranium-custody.md#5-service-orders-price-and-invoicing",
+      "current_disposition": "FUTURE_OR_CONDITIONAL_INSTRUMENT_NOT_CURRENT_EXECUTION",
+      "field_or_term": "30-day undisputed invoice payment and remediable commercial cure",
+      "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-T02",
+      "original_json_pointer": "/proposed_terms/1",
+      "original_next_action_or_basis": "New negotiable terms only",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "uranium-custody",
+      "rationale": "Keep the represented service/site/external-clearance activation gate. Draft terms and future supporting evidence are not current operations. This remains an affected future claim, not a universal company-close blocker.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/uranium-custody.json": "c93ec8d2da8a22646b656d5e7186d53e9312a2b47172b8811e33a08016a5422e",
+        "docs/legal/gap-instruments/source/uranium-custody.md": "b9076e42c66e71af0178f8b754d182176a3e93b49329c2cfa8c9cddf77452894"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/carry.md#4-annual-economic-calculation",
+      "current_disposition": "SOURCE_COMPLETION_REQUIRED_FOR_AFFECTED_INSTRUMENT",
+      "field_or_term": "Annual capital, holdback and participant fields",
+      "id": "SH-LEGAL-DRAFT-CARRY-U02",
+      "original_json_pointer": "/unresolved_fields/1",
+      "original_next_action_or_basis": "Populate only through approved annual calculation and post-service grant; no serving-person examples.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "carry",
+      "rationale": "The precise field remains unsupported by this review item. Its next action is retained below; missing evidence does not create a new owner preference or establish real execution. Check later company record sources before use.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/carry.json": "c2b6f9f8fe1b65494d9a64c74e1813783b4fdbe30368a91b8284622402fadfe1",
+        "docs/legal/gap-instruments/source/carry.md": "f827af31cc408054a32c5cd602c4c378020c55fff06ff84c8851b6acd6f89312"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/debt-liens.md#2-proposed-term-credit-agreement",
+      "current_disposition": "MATERIAL_SOURCE_OR_RIGHTS_BOUNDARY",
+      "field_or_term": "Actual maturity, business-day rule, late interest and prepayment terms",
+      "id": "DEBT-U02",
+      "original_json_pointer": "/unresolved_fields/1",
+      "original_next_action_or_basis": "Negotiate explicit clauses; 60-month model amortization is not independent maturity evidence.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "debt-liens",
+      "rationale": "This cannot be filled by a template or inferred from rounded financial figures. Preserve the exact unsupported party/right/eligibility field, current source economics and affected claim. No compulsory funding, new investor, collateral, host participation or tax election is invented.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/debt-liens.json": "e08aef516cba382287cd78231100dbc5ad2a6f193a864c2331c232c591c9bd03",
+        "docs/legal/gap-instruments/source/debt-liens.md": "e9adf8cdc08237c855556d22d30a7649ac64b471c567ce7a54c1aa67613485ef"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/financing-documents.md#7-completion-schedules",
+      "current_disposition": "MATERIAL_SOURCE_OR_RIGHTS_BOUNDARY",
+      "field_or_term": "Preference, conversion, anti-dilution, option-pool and transfer terms",
+      "id": "FIN-U05",
+      "original_json_pointer": "/unresolved_fields/4",
+      "original_next_action_or_basis": "Obtain explicit acceptance if proposed; no standard term implied.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "financing-documents",
+      "rationale": "This cannot be filled by a template or inferred from rounded financial figures. Preserve the exact unsupported party/right/eligibility field, current source economics and affected claim. No compulsory funding, new investor, collateral, host participation or tax election is invented.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/financing-documents.json": "9eb62c0dda0fa6f2babf69f5b3989a6d9a7133f176bd1ef56c8a8f59a745b759",
+        "docs/legal/gap-instruments/source/financing-documents.md": "f648e1844ed93a66b81111b86ae98c98e3e901907f138fd5b9e87172adbf3607"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/rw-title.md#7-joint-release-direction-and-disputed-balances",
+      "current_disposition": "SCOPED_AUTHORED_SUCCESSOR_REMAINDER_EXPLICIT",
+      "field_or_term": "Escrow current balance and claims/releases",
+      "id": "SH-LEGAL-DRAFT-RW-TITLE-U03",
+      "original_json_pointer": "/unresolved_fields/2",
+      "original_next_action_or_basis": "Obtain supported administrator ledger; preserve unknowns",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "rw-title",
+      "rationale": "The current register expressly authors no disbursements through August31 in the existing $3M Red Wash escrow and separately funded $500,000 holdback. Administrator names/references are new fictional precision. Claim eligibility, title cure and deliverable release remain separate; no recovery asset or extra cash.",
+      "source_hashes": {
+        "docs/internal/company-closeout/ESCROW_DISPOSITIONS.md": "f58a09abcd781652c003ad60becb54a115da1ca57ee2285c47a4e09fea68962b",
+        "docs/legal/gap-instruments/source/rw-title.json": "0ace1edc5e69be480615f7ab5c426b15ae1db2311be40b49fce75a76b6045a48",
+        "docs/legal/gap-instruments/source/rw-title.md": "382bebe11df4b42fd8b9bb35b1a7831f4afe7b46d58c298d4ae9dd58fa176b54"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/tax-billing.md#3-required-fact-schedule",
+      "current_disposition": "SUPERSEDED_IN_PART_BY_ACCEPTED_FF003_BILLING",
+      "field_or_term": "Price inclusion and exemption/resale basis if claimed",
+      "id": "BILLTAX-U03",
+      "original_json_pointer": "/unresolved_fields/2",
+      "original_next_action_or_basis": "Obtain controlling contract term and applicable evidence; no default.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "tax-billing",
+      "rationale": "The accepted FF-003 successor supplies Copperreach Fabrication, Inc., SHI as Foundry Field issuer, January 31 2027 base scenario and seller-borne $152,250 tax on $1,740,000 principal. Scope is issuance only; no later tax remittance, principal collection or income-tax deduction is inferred.",
+      "source_hashes": {
+        "docs/canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md": "4a33e24a78d68f6d1b592e0239e48b6ce98b2f904444841db3d45c474193ed08",
+        "docs/legal/gap-instruments/source/tax-billing.json": "5da4a510457570db49e799b95f41a6b1e21f733329d862017df58143d2791b2c",
+        "docs/legal/gap-instruments/source/tax-billing.md": "8a4fcc32efc81c2502158afbf7df05d2bec5cb296c366d82e90f3c7f3fa38e48",
+        "enterprise/closeout/source/adjustments.json": "a4c179284bcdaa5ce5a4d8b365b16860a479cd93fae2bfbb82060060d0660d5a"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/tenure.md#8-financial-and-risk-allocation",
+      "current_disposition": "FUTURE_OR_CONDITIONAL_INSTRUMENT_NOT_CURRENT_EXECUTION",
+      "field_or_term": "Rent/price, deposit, tax treatment and commencement dates",
+      "id": "SH-LEGAL-DRAFT-TENURE-U02",
+      "original_json_pointer": "/unresolved_fields/1",
+      "original_next_action_or_basis": "Owner reviews separately sourced commercial schedule",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "tenure",
+      "rationale": "Keep the represented service/site/external-clearance activation gate. Draft terms and future supporting evidence are not current operations. This remains an affected future claim, not a universal company-close blocker.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/tenure.json": "4b3f96161c38bd9a392ec68945cf6974fee3cb2c25b7079269dfd1ac56cd53ab",
+        "docs/legal/gap-instruments/source/tenure.md": "a054ca8350c565ebf24e5fee59f5a75da82c3ec0ec65afc9f61dec3ac8e56631"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/uranium-custody.md#8-insurance-responsibility-and-termination",
+      "current_disposition": "FUTURE_OR_CONDITIONAL_INSTRUMENT_NOT_CURRENT_EXECUTION",
+      "field_or_term": "Prices, liability caps, insurance, retention and law/forum",
+      "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-U02",
+      "original_json_pointer": "/unresolved_fields/1",
+      "original_next_action_or_basis": "Complete service-specific commercial/legal schedule",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "uranium-custody",
+      "rationale": "Keep the represented service/site/external-clearance activation gate. Draft terms and future supporting evidence are not current operations. This remains an affected future claim, not a universal company-close blocker.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/uranium-custody.json": "c93ec8d2da8a22646b656d5e7186d53e9312a2b47172b8811e33a08016a5422e",
+        "docs/legal/gap-instruments/source/uranium-custody.md": "b9076e42c66e71af0178f8b754d182176a3e93b49329c2cfa8c9cddf77452894"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/billing.md#2-proposed-invoice-face-and-identities",
+      "current_disposition": "SUPERSEDED_IN_PART_BY_ACCEPTED_FF003_BILLING",
+      "field_or_term": "Use only Copperreach and Foundry Field display fields from SH-FIN-BILL-PROP-001.",
+      "id": "SH-LEGAL-DRAFT-BILLING-T01",
+      "original_json_pointer": "/proposed_terms/0",
+      "original_next_action_or_basis": "Sole proposed dataset at e4995ba; no new identities.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "billing",
+      "rationale": "The accepted FF-003 successor supplies Copperreach Fabrication, Inc., SHI as Foundry Field issuer, January 31 2027 base scenario and seller-borne $152,250 tax on $1,740,000 principal. Scope is issuance only; no later tax remittance, principal collection or income-tax deduction is inferred.",
+      "source_hashes": {
+        "docs/canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md": "4a33e24a78d68f6d1b592e0239e48b6ce98b2f904444841db3d45c474193ed08",
+        "docs/legal/gap-instruments/source/billing.json": "bc26733ecfc5286e4d5d9a2d5d3506961a2912bb135480346242325b7a8f773d",
+        "docs/legal/gap-instruments/source/billing.md": "83d8af1b3d5a73cab067b1d7839bcb2ed2cecfc7656d246951d213327127f28e",
+        "enterprise/closeout/source/adjustments.json": "a4c179284bcdaa5ce5a4d8b365b16860a479cd93fae2bfbb82060060d0660d5a"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/billing.md#8-acceptance-schedule-and-unresolved-material-fields",
+      "current_disposition": "SUPERSEDED_IN_PART_BY_ACCEPTED_FF003_BILLING",
+      "field_or_term": "Retain proposal null customer legal-name and invoice issuer-presentation fields, known SHI identity, unestablished tax and absent payment instructions.",
+      "id": "SH-LEGAL-DRAFT-BILLING-T02",
+      "original_json_pointer": "/proposed_terms/1",
+      "original_next_action_or_basis": "BILL-DEC-001/002/003 and proposal field boundaries.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "billing",
+      "rationale": "The accepted FF-003 successor supplies Copperreach Fabrication, Inc., SHI as Foundry Field issuer, January 31 2027 base scenario and seller-borne $152,250 tax on $1,740,000 principal. Scope is issuance only; no later tax remittance, principal collection or income-tax deduction is inferred.",
+      "source_hashes": {
+        "docs/canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md": "4a33e24a78d68f6d1b592e0239e48b6ce98b2f904444841db3d45c474193ed08",
+        "docs/legal/gap-instruments/source/billing.json": "bc26733ecfc5286e4d5d9a2d5d3506961a2912bb135480346242325b7a8f773d",
+        "docs/legal/gap-instruments/source/billing.md": "83d8af1b3d5a73cab067b1d7839bcb2ed2cecfc7656d246951d213327127f28e",
+        "enterprise/closeout/source/adjustments.json": "a4c179284bcdaa5ce5a4d8b365b16860a479cd93fae2bfbb82060060d0660d5a"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/billing.md#8-acceptance-schedule-and-unresolved-material-fields",
+      "current_disposition": "SUPERSEDED_IN_PART_BY_ACCEPTED_FF003_BILLING",
+      "field_or_term": "BILL-DEC-001 customer legal name",
+      "id": "SH-LEGAL-DRAFT-BILLING-U01",
+      "original_json_pointer": "/unresolved_fields/0",
+      "original_next_action_or_basis": "Owner disposition of sole proposal field; do not infer entity suffix.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "billing",
+      "rationale": "The accepted FF-003 successor supplies Copperreach Fabrication, Inc., SHI as Foundry Field issuer, January 31 2027 base scenario and seller-borne $152,250 tax on $1,740,000 principal. Scope is issuance only; no later tax remittance, principal collection or income-tax deduction is inferred.",
+      "source_hashes": {
+        "docs/canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md": "4a33e24a78d68f6d1b592e0239e48b6ce98b2f904444841db3d45c474193ed08",
+        "docs/legal/gap-instruments/source/billing.json": "bc26733ecfc5286e4d5d9a2d5d3506961a2912bb135480346242325b7a8f773d",
+        "docs/legal/gap-instruments/source/billing.md": "83d8af1b3d5a73cab067b1d7839bcb2ed2cecfc7656d246951d213327127f28e",
+        "enterprise/closeout/source/adjustments.json": "a4c179284bcdaa5ce5a4d8b365b16860a479cd93fae2bfbb82060060d0660d5a"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/billing.md#8-acceptance-schedule-and-unresolved-material-fields",
+      "current_disposition": "SUPERSEDED_IN_PART_BY_ACCEPTED_FF003_BILLING",
+      "field_or_term": "BILL-DEC-002 invoice-specific issuer presentation/assignment",
+      "id": "SH-LEGAL-DRAFT-BILLING-U02",
+      "original_json_pointer": "/unresolved_fields/1",
+      "original_next_action_or_basis": "Retain known SHI Sable Harbor, LLC identity; review the proposed invoice presentation field separately.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "billing",
+      "rationale": "The accepted FF-003 successor supplies Copperreach Fabrication, Inc., SHI as Foundry Field issuer, January 31 2027 base scenario and seller-borne $152,250 tax on $1,740,000 principal. Scope is issuance only; no later tax remittance, principal collection or income-tax deduction is inferred.",
+      "source_hashes": {
+        "docs/canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md": "4a33e24a78d68f6d1b592e0239e48b6ce98b2f904444841db3d45c474193ed08",
+        "docs/legal/gap-instruments/source/billing.json": "bc26733ecfc5286e4d5d9a2d5d3506961a2912bb135480346242325b7a8f773d",
+        "docs/legal/gap-instruments/source/billing.md": "83d8af1b3d5a73cab067b1d7839bcb2ed2cecfc7656d246951d213327127f28e",
+        "enterprise/closeout/source/adjustments.json": "a4c179284bcdaa5ce5a4d8b365b16860a479cd93fae2bfbb82060060d0660d5a"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/tax-billing.md#3-required-fact-schedule",
+      "current_disposition": "SUPERSEDED_IN_PART_BY_ACCEPTED_FF003_BILLING",
+      "field_or_term": "Customer party, delivery/use and component allocation",
+      "id": "BILLTAX-U01",
+      "original_json_pointer": "/unresolved_fields/0",
+      "original_next_action_or_basis": "Obtain accepted transaction-specific facts; billing address alone is insufficient.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "tax-billing",
+      "rationale": "The accepted FF-003 successor supplies Copperreach Fabrication, Inc., SHI as Foundry Field issuer, January 31 2027 base scenario and seller-borne $152,250 tax on $1,740,000 principal. Scope is issuance only; no later tax remittance, principal collection or income-tax deduction is inferred.",
+      "source_hashes": {
+        "docs/canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md": "4a33e24a78d68f6d1b592e0239e48b6ce98b2f904444841db3d45c474193ed08",
+        "docs/legal/gap-instruments/source/tax-billing.json": "5da4a510457570db49e799b95f41a6b1e21f733329d862017df58143d2791b2c",
+        "docs/legal/gap-instruments/source/tax-billing.md": "8a4fcc32efc81c2502158afbf7df05d2bec5cb296c366d82e90f3c7f3fa38e48",
+        "enterprise/closeout/source/adjustments.json": "a4c179284bcdaa5ce5a4d8b365b16860a479cd93fae2bfbb82060060d0660d5a"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/tax-billing.md#7-proposed-approval-and-implementation-clauses",
+      "current_disposition": "SUPERSEDED_IN_PART_BY_ACCEPTED_FF003_BILLING",
+      "field_or_term": "Any revised tax amount, customer consideration and ledger effect",
+      "id": "BILLTAX-U05",
+      "original_json_pointer": "/unresolved_fields/4",
+      "original_next_action_or_basis": "Requires accepted scenario and reconciled successor; no posting in this draft.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "tax-billing",
+      "rationale": "The accepted FF-003 successor supplies Copperreach Fabrication, Inc., SHI as Foundry Field issuer, January 31 2027 base scenario and seller-borne $152,250 tax on $1,740,000 principal. Scope is issuance only; no later tax remittance, principal collection or income-tax deduction is inferred.",
+      "source_hashes": {
+        "docs/canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md": "4a33e24a78d68f6d1b592e0239e48b6ce98b2f904444841db3d45c474193ed08",
+        "docs/legal/gap-instruments/source/tax-billing.json": "5da4a510457570db49e799b95f41a6b1e21f733329d862017df58143d2791b2c",
+        "docs/legal/gap-instruments/source/tax-billing.md": "8a4fcc32efc81c2502158afbf7df05d2bec5cb296c366d82e90f3c7f3fa38e48",
+        "enterprise/closeout/source/adjustments.json": "a4c179284bcdaa5ce5a4d8b365b16860a479cd93fae2bfbb82060060d0660d5a"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/rw-chronology.md#2-schedule-a--competing-assertions",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Display both pre-close date assertions until a scoped decision resolves their identity",
+      "id": "SH-LEGAL-DRAFT-RW-CHRONOLOGY-T01",
+      "original_json_pointer": "/proposed_terms/0",
+      "original_next_action_or_basis": "Proposed representation control; existing sources disagree",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "rw-chronology",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/rw-chronology.json": "c4ee38d9aab46422a34ef38d19157c47602d636a20c4a0fa5790ab4ac8699b0f",
+        "docs/legal/gap-instruments/source/rw-chronology.md": "2445506da53f889d2177a0805321a3655b1fbfda0dc747c95e7f24b6f638594d"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/rw-chronology.md#4-event-identity-examination",
+      "current_disposition": "SOURCE_COMPLETION_REQUIRED_FOR_AFFECTED_INSTRUMENT",
+      "field_or_term": "RW-CHR-01 through RW-CHR-04 event identity and dates",
+      "id": "SH-LEGAL-DRAFT-RW-CHRONOLOGY-U01",
+      "original_json_pointer": "/unresolved_fields/0",
+      "original_next_action_or_basis": "Transaction owner proposes scoped decision using paired sources; owner accepts or retains uncertainty",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "rw-chronology",
+      "rationale": "The precise field remains unsupported by this review item. Its next action is retained below; missing evidence does not create a new owner preference or establish real execution. Check later company record sources before use.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/rw-chronology.json": "c4ee38d9aab46422a34ef38d19157c47602d636a20c4a0fa5790ab4ac8699b0f",
+        "docs/legal/gap-instruments/source/rw-chronology.md": "2445506da53f889d2177a0805321a3655b1fbfda0dc747c95e7f24b6f638594d"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/debt-liens.md#3-proposed-conditions-and-borrower-undertakings",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Deliver quarterly debt reconciliation within 45 days and material payment/collateral discrepancy notice within 5 business days.",
+      "id": "DEBT-P03",
+      "original_json_pointer": "/proposed_terms/2",
+      "original_next_action_or_basis": "New proposed reporting terms, not source-established lender obligations.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "debt-liens",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/debt-liens.json": "e08aef516cba382287cd78231100dbc5ad2a6f193a864c2331c232c591c9bd03",
+        "docs/legal/gap-instruments/source/debt-liens.md": "e9adf8cdc08237c855556d22d30a7649ac64b471c567ce7a54c1aa67613485ef"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/host-rights.md#7-kelly-gang-mining-deployment-schedule",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Stream 17 exclusive recovery right and capture-point title",
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-T04",
+      "original_json_pointer": "/proposed_terms/3",
+      "original_next_action_or_basis": "Accepted Cradle closeout; precise exhibit unresolved",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "host-rights",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/host-rights.json": "01a9645efe23f29fb9136275995af6a1e2013caa34e286e08f29ec7bacf93c45",
+        "docs/legal/gap-instruments/source/host-rights.md": "4fd81f5dffc2d95ba89c495a3689381648b44a4a8cdfd62750ea028b5bdde9d4"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/rw-title.md#4-instrument-c--predecessor-name-easement-correction",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Easement correction cannot expand property,route or use without separate amendment",
+      "id": "SH-LEGAL-DRAFT-RW-TITLE-T02",
+      "original_json_pointer": "/proposed_terms/1",
+      "original_next_action_or_basis": "Proposed scope restriction; no mine spur accepted",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "rw-title",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/rw-title.json": "0ace1edc5e69be480615f7ab5c426b15ae1db2311be40b49fce75a76b6045a48",
+        "docs/legal/gap-instruments/source/rw-title.md": "382bebe11df4b42fd8b9bb35b1a7831f4afe7b46d58c298d4ae9dd58fa176b54"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/tenure.md#2-proposed-investigation-access-grant",
+      "current_disposition": "FUTURE_OR_CONDITIONAL_INSTRUMENT_NOT_CURRENT_EXECUTION",
+      "field_or_term": "Separate investigation access from definitive tenancy/acquisition; no automatic conversion",
+      "id": "SH-LEGAL-DRAFT-TENURE-T01",
+      "original_json_pointer": "/proposed_terms/0",
+      "original_next_action_or_basis": "Proposed instrument architecture",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "tenure",
+      "rationale": "Keep the represented service/site/external-clearance activation gate. Draft terms and future supporting evidence are not current operations. This remains an affected future claim, not a universal company-close blocker.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/tenure.json": "4b3f96161c38bd9a392ec68945cf6974fee3cb2c25b7079269dfd1ac56cd53ab",
+        "docs/legal/gap-instruments/source/tenure.md": "a054ca8350c565ebf24e5fee59f5a75da82c3ec0ec65afc9f61dec3ac8e56631"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/tenure.md#5-sacramento-site-schedule--sh-site-0001",
+      "current_disposition": "FUTURE_OR_CONDITIONAL_INSTRUMENT_NOT_CURRENT_EXECUTION",
+      "field_or_term": "Preserve three stable site IDs, modelled geometry and null occupancy dates",
+      "id": "SH-LEGAL-DRAFT-TENURE-T03",
+      "original_json_pointer": "/proposed_terms/2",
+      "original_next_action_or_basis": "Accepted facility models and closeouts",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "tenure",
+      "rationale": "Keep the represented service/site/external-clearance activation gate. Draft terms and future supporting evidence are not current operations. This remains an affected future claim, not a universal company-close blocker.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/tenure.json": "4b3f96161c38bd9a392ec68945cf6974fee3cb2c25b7079269dfd1ac56cd53ab",
+        "docs/legal/gap-instruments/source/tenure.md": "a054ca8350c565ebf24e5fee59f5a75da82c3ec0ec65afc9f61dec3ac8e56631"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/uranium-custody.md#6-evidence-custody-and-correction-protocol",
+      "current_disposition": "FUTURE_OR_CONDITIONAL_INSTRUMENT_NOT_CURRENT_EXECUTION",
+      "field_or_term": "Separate custody, title, assay and financial evidence",
+      "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-T04",
+      "original_json_pointer": "/proposed_terms/3",
+      "original_next_action_or_basis": "Accepted sale/custody source structure",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "uranium-custody",
+      "rationale": "Keep the represented service/site/external-clearance activation gate. Draft terms and future supporting evidence are not current operations. This remains an affected future claim, not a universal company-close blocker.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/uranium-custody.json": "c93ec8d2da8a22646b656d5e7186d53e9312a2b47172b8811e33a08016a5422e",
+        "docs/legal/gap-instruments/source/uranium-custody.md": "b9076e42c66e71af0178f8b754d182176a3e93b49329c2cfa8c9cddf77452894"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/debt-liens.md#4-proposed-security-agreement-and-collateral-schedule",
+      "current_disposition": "MATERIAL_SOURCE_OR_RIGHTS_BOUNDARY",
+      "field_or_term": "Collateral assets, existing encumbrances and required consents",
+      "id": "DEBT-U03",
+      "original_json_pointer": "/unresolved_fields/2",
+      "original_next_action_or_basis": "Complete asset-specific grantor schedule and qualified legal review before execution.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "debt-liens",
+      "rationale": "This cannot be filled by a template or inferred from rounded financial figures. Preserve the exact unsupported party/right/eligibility field, current source economics and affected claim. No compulsory funding, new investor, collateral, host participation or tax election is invented.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/debt-liens.json": "e08aef516cba382287cd78231100dbc5ad2a6f193a864c2331c232c591c9bd03",
+        "docs/legal/gap-instruments/source/debt-liens.md": "e9adf8cdc08237c855556d22d30a7649ac64b471c567ce7a54c1aa67613485ef"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/host-rights.md#2-scope-of-grant-and-physical-boundary",
+      "current_disposition": "SCOPED_AUTHORED_SUCCESSOR_REMAINDER_EXPLICIT",
+      "field_or_term": "Capture-point/interface exhibits at both hosts",
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-U02",
+      "original_json_pointer": "/unresolved_fields/1",
+      "original_next_action_or_basis": "Host and Cradle prepare source-backed commercial boundary drawings",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "host-rights",
+      "rationale": "Selected Stream17 capture/interface and Demotte bypass/hold events are authored within the existing host authority and operating cost population. This does not create a complete engineering exhibit or additional host property rights.",
+      "source_hashes": {
+        "docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md": "6efa0bc534624e311b41b80df7887dd638f5af5e0c9a3131246a3ea1e74ae13c",
+        "docs/legal/gap-instruments/source/host-rights.json": "01a9645efe23f29fb9136275995af6a1e2013caa34e286e08f29ec7bacf93c45",
+        "docs/legal/gap-instruments/source/host-rights.md": "4fd81f5dffc2d95ba89c495a3689381648b44a4a8cdfd62750ea028b5bdde9d4"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/land.md#7-title-possession-and-construction-reservations",
+      "current_disposition": "REAL_EXTERNAL_EVIDENCE_OUTSIDE_SYNTHETIC_ASSIGNMENT",
+      "field_or_term": "Exact real title or parcel evidence",
+      "id": "LAND-U04",
+      "original_json_pointer": "/unresolved_fields/3",
+      "original_next_action_or_basis": "No real assertion authorized; retain synthetic geometry/no APN unless appropriately resolved.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "land",
+      "rationale": "The assignment authorizes labeled synthetic records, not real incorporation, parcel acquisition or government issuance. Retain that external-evidence limit without making a real-world filing a prerequisite for fictional books.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/land.json": "8e44d16275f79a6930d4288f7abc2c1bea6c68e7da9ab2a11642d2f58b68cf75",
+        "docs/legal/gap-instruments/source/land.md": "9c4ea28e58c3355f61ab29e8df8ce7789c1c7d7305131efdddabbe3d59c9f28e"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/rw-title.md#5-schedule-a--item-specific-work-sheets",
+      "current_disposition": "SOURCE_COMPLETION_REQUIRED_FOR_AFFECTED_INSTRUMENT",
+      "field_or_term": "Native easement/contract identifiers and legal descriptions",
+      "id": "SH-LEGAL-DRAFT-RW-TITLE-U01",
+      "original_json_pointer": "/unresolved_fields/0",
+      "original_next_action_or_basis": "Retrieve underlying instruments; do not infer from illustrative maps",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "rw-title",
+      "rationale": "The precise field remains unsupported by this review item. Its next action is retained below; missing evidence does not create a new owner preference or establish real execution. Check later company record sources before use.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/rw-title.json": "0ace1edc5e69be480615f7ab5c426b15ae1db2311be40b49fce75a76b6045a48",
+        "docs/legal/gap-instruments/source/rw-title.md": "382bebe11df4b42fd8b9bb35b1a7831f4afe7b46d58c298d4ae9dd58fa176b54"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/tenure.md#1-instrument-structure-and-parties",
+      "current_disposition": "FUTURE_OR_CONDITIONAL_INSTRUMENT_NOT_CURRENT_EXECUTION",
+      "field_or_term": "Property counterparty, legal interest and description for each site",
+      "id": "SH-LEGAL-DRAFT-TENURE-U01",
+      "original_json_pointer": "/unresolved_fields/0",
+      "original_next_action_or_basis": "Select actual/synthetic accepted parcel and verify grantor authority before definitive instrument",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "tenure",
+      "rationale": "Keep the represented service/site/external-clearance activation gate. Draft terms and future supporting evidence are not current operations. This remains an affected future claim, not a universal company-close blocker.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/tenure.json": "4b3f96161c38bd9a392ec68945cf6974fee3cb2c25b7079269dfd1ac56cd53ab",
+        "docs/legal/gap-instruments/source/tenure.md": "a054ca8350c565ebf24e5fee59f5a75da82c3ec0ec65afc9f61dec3ac8e56631"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/uranium-custody.md#1-parties-purpose-and-nonactivation",
+      "current_disposition": "FUTURE_OR_CONDITIONAL_INSTRUMENT_NOT_CURRENT_EXECUTION",
+      "field_or_term": "Conditional future contract; service inactive until provider-specific activation",
+      "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-T01",
+      "original_json_pointer": "/proposed_terms/0",
+      "original_next_action_or_basis": "Existing OPEN_GATED product-custody boundary",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "uranium-custody",
+      "rationale": "Keep the represented service/site/external-clearance activation gate. Draft terms and future supporting evidence are not current operations. This remains an affected future claim, not a universal company-close blocker.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/uranium-custody.json": "c93ec8d2da8a22646b656d5e7186d53e9312a2b47172b8811e33a08016a5422e",
+        "docs/legal/gap-instruments/source/uranium-custody.md": "b9076e42c66e71af0178f8b754d182176a3e93b49329c2cfa8c9cddf77452894"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/uranium-custody.md#2-conditions-before-any-service-order",
+      "current_disposition": "FUTURE_OR_CONDITIONAL_INSTRUMENT_NOT_CURRENT_EXECUTION",
+      "field_or_term": "No affiliate preference, no inherited ordinary-inbound rates/qualification",
+      "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-T03",
+      "original_json_pointer": "/proposed_terms/2",
+      "original_next_action_or_basis": "Accepted Red Wash and Taylor boundaries",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "uranium-custody",
+      "rationale": "Keep the represented service/site/external-clearance activation gate. Draft terms and future supporting evidence are not current operations. This remains an affected future claim, not a universal company-close blocker.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/uranium-custody.json": "c93ec8d2da8a22646b656d5e7186d53e9312a2b47172b8811e33a08016a5422e",
+        "docs/legal/gap-instruments/source/uranium-custody.md": "b9076e42c66e71af0178f8b754d182176a3e93b49329c2cfa8c9cddf77452894"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/colo.md#2-reno-order-completion-schedule",
+      "current_disposition": "FUTURE_OR_CONDITIONAL_INSTRUMENT_NOT_CURRENT_EXECUTION",
+      "field_or_term": "Provider legal entity, enclosure, quote and start date",
+      "id": "SH-LEGAL-DRAFT-COLO-U01",
+      "original_json_pointer": "/unresolved_fields/0",
+      "original_next_action_or_basis": "Obtain and verify site-specific order response.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "colo",
+      "rationale": "Keep the represented service/site/external-clearance activation gate. Draft terms and future supporting evidence are not current operations. This remains an affected future claim, not a universal company-close blocker.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/colo.json": "13be7a9173e702b4f13fa65e00885ce3a4d9bb73a110ed929334b2082f21b17f",
+        "docs/legal/gap-instruments/source/colo.md": "0590241ee1a7a1d02b6c2262f5ae3bf31ba026fa9266976e146a2be158b33506"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/uranium-custody.md#2-conditions-before-any-service-order",
+      "current_disposition": "SCOPED_AUTHORED_SUCCESSOR_REMAINDER_EXPLICIT",
+      "field_or_term": "Carrier, receiver, actual service and qualification evidence",
+      "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-U01",
+      "original_json_pointer": "/unresolved_fields/0",
+      "original_next_action_or_basis": "Select service/provider and obtain role-specific reviews before activation",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "uranium-custody",
+      "rationale": "The September successor supplies qualified external carrier/receiver/service evidence for one 200lb title-retained converter custody lot. August hold and failed lot remain visible. It grants no finished-uranium authority to ARU/BST and does not adopt the general draft commercial terms.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/uranium-custody.json": "c93ec8d2da8a22646b656d5e7186d53e9312a2b47172b8811e33a08016a5422e",
+        "docs/legal/gap-instruments/source/uranium-custody.md": "b9076e42c66e71af0178f8b754d182176a3e93b49329c2cfa8c9cddf77452894",
+        "enterprise/ccf/company_closeout/september_shipment_qualification.json": "e551d0bc39661236b42f5623115ae3bc35ee7cfacda596b48bc1dbf9beaff14c"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/tax-billing.md#5-calculation-schedule-with-no-assumed-rate",
+      "current_disposition": "SUPERSEDED_IN_PART_BY_ACCEPTED_FF003_BILLING",
+      "field_or_term": "Keep unknown rates, tax bases and calculated tax null; do not assign zero/exempt/inclusive defaults.",
+      "id": "BILLTAX-P02",
+      "original_json_pointer": "/proposed_terms/1",
+      "original_next_action_or_basis": "Proposed implementation of existing missing-field boundary.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "tax-billing",
+      "rationale": "The accepted FF-003 successor supplies Copperreach Fabrication, Inc., SHI as Foundry Field issuer, January 31 2027 base scenario and seller-borne $152,250 tax on $1,740,000 principal. Scope is issuance only; no later tax remittance, principal collection or income-tax deduction is inferred.",
+      "source_hashes": {
+        "docs/canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md": "4a33e24a78d68f6d1b592e0239e48b6ce98b2f904444841db3d45c474193ed08",
+        "docs/legal/gap-instruments/source/tax-billing.json": "5da4a510457570db49e799b95f41a6b1e21f733329d862017df58143d2791b2c",
+        "docs/legal/gap-instruments/source/tax-billing.md": "8a4fcc32efc81c2502158afbf7df05d2bec5cb296c366d82e90f3c7f3fa38e48",
+        "enterprise/closeout/source/adjustments.json": "a4c179284bcdaa5ce5a4d8b365b16860a479cd93fae2bfbb82060060d0660d5a"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/tax-billing.md#7-proposed-approval-and-implementation-clauses",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Adopt any tax-bearing scenario through explicit field/amount acceptance, financial successor reconciliation and separate visual review.",
+      "id": "BILLTAX-P03",
+      "original_json_pointer": "/proposed_terms/2",
+      "original_next_action_or_basis": "Proposed change procedure; original released invoice remains unchanged.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "tax-billing",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/tax-billing.json": "5da4a510457570db49e799b95f41a6b1e21f733329d862017df58143d2791b2c",
+        "docs/legal/gap-instruments/source/tax-billing.md": "8a4fcc32efc81c2502158afbf7df05d2bec5cb296c366d82e90f3c7f3fa38e48"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/tax-filing.md#7-alternative-outcome-and-correction-clauses",
+      "current_disposition": "DRAFT_TERM_NOT_ADOPTED_NOT_AN_EXECUTED_OBLIGATION",
+      "field_or_term": "Use a separately identified alternative basis analysis if intended election cannot be supported; preserve stock purchase.",
+      "id": "TAX-P04",
+      "original_json_pointer": "/proposed_terms/3",
+      "original_next_action_or_basis": "Proposed review response implementing existing conditional tax boundary.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "tax-filing",
+      "rationale": "The draft remains a proposal. Accepted facts in its stated basis retain their original authority; this disposition adds no term, right or deadline. The selected company edition does not rely on this proposed clause as executed.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/tax-filing.json": "4ad9c3bfad7931dd51ddc5cf4ccb0cfe9a5db677e6fcf2004091d8738b06e99b",
+        "docs/legal/gap-instruments/source/tax-filing.md": "7fb216ef53a5849a317dc9cb0dc8815d725deed5a34aa513685ce5b60c609a52"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/billing.md#4-amount-integrity-and-no-implied-tax-election",
+      "current_disposition": "SUPERSEDED_IN_PART_BY_ACCEPTED_FF003_BILLING",
+      "field_or_term": "BILL-DEC-003 tax treatment",
+      "id": "SH-LEGAL-DRAFT-BILLING-U03",
+      "original_json_pointer": "/unresolved_fields/2",
+      "original_next_action_or_basis": "Retain absence until separate approved scenario; no amount rewrite.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "billing",
+      "rationale": "The accepted FF-003 successor supplies Copperreach Fabrication, Inc., SHI as Foundry Field issuer, January 31 2027 base scenario and seller-borne $152,250 tax on $1,740,000 principal. Scope is issuance only; no later tax remittance, principal collection or income-tax deduction is inferred.",
+      "source_hashes": {
+        "docs/canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md": "4a33e24a78d68f6d1b592e0239e48b6ce98b2f904444841db3d45c474193ed08",
+        "docs/legal/gap-instruments/source/billing.json": "bc26733ecfc5286e4d5d9a2d5d3506961a2912bb135480346242325b7a8f773d",
+        "docs/legal/gap-instruments/source/billing.md": "83d8af1b3d5a73cab067b1d7839bcb2ed2cecfc7656d246951d213327127f28e",
+        "enterprise/closeout/source/adjustments.json": "a4c179284bcdaa5ce5a4d8b365b16860a479cd93fae2bfbb82060060d0660d5a"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/carry.md#10-reorganization-amendment-and-execution",
+      "current_disposition": "MATERIAL_SOURCE_OR_RIGHTS_BOUNDARY",
+      "field_or_term": "Sponsor approval, jurisdiction and legal/tax mechanics",
+      "id": "SH-LEGAL-DRAFT-CARRY-U01",
+      "original_json_pointer": "/unresolved_fields/0",
+      "original_next_action_or_basis": "Qualified review before plan execution.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "carry",
+      "rationale": "This cannot be filled by a template or inferred from rounded financial figures. Preserve the exact unsupported party/right/eligibility field, current source economics and affected claim. No compulsory funding, new investor, collateral, host participation or tax election is invented.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/carry.json": "c2b6f9f8fe1b65494d9a64c74e1813783b4fdbe30368a91b8284622402fadfe1",
+        "docs/legal/gap-instruments/source/carry.md": "f827af31cc408054a32c5cd602c4c378020c55fff06ff84c8851b6acd6f89312"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/tax-billing.md#4-proposed-determination-procedure",
+      "current_disposition": "SUPERSEDED_IN_PART_BY_ACCEPTED_FF003_BILLING",
+      "field_or_term": "Applicable jurisdiction, tax treatment and dated rate",
+      "id": "BILLTAX-U02",
+      "original_json_pointer": "/unresolved_fields/1",
+      "original_next_action_or_basis": "Qualified review uses official authority after facts are supported.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "tax-billing",
+      "rationale": "The accepted FF-003 successor supplies Copperreach Fabrication, Inc., SHI as Foundry Field issuer, January 31 2027 base scenario and seller-borne $152,250 tax on $1,740,000 principal. Scope is issuance only; no later tax remittance, principal collection or income-tax deduction is inferred.",
+      "source_hashes": {
+        "docs/canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md": "4a33e24a78d68f6d1b592e0239e48b6ce98b2f904444841db3d45c474193ed08",
+        "docs/legal/gap-instruments/source/tax-billing.json": "5da4a510457570db49e799b95f41a6b1e21f733329d862017df58143d2791b2c",
+        "docs/legal/gap-instruments/source/tax-billing.md": "8a4fcc32efc81c2502158afbf7df05d2bec5cb296c366d82e90f3c7f3fa38e48",
+        "enterprise/closeout/source/adjustments.json": "a4c179284bcdaa5ce5a4d8b365b16860a479cd93fae2bfbb82060060d0660d5a"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/tax-billing.md#8-parent-tax-classification-boundary",
+      "current_disposition": "OWNER_DIRECTION_RESOLVED_IMPLEMENTATION_RECONCILIATION_REQUIRED",
+      "field_or_term": "Parent federal tax classification where relevant",
+      "id": "BILLTAX-U04",
+      "original_json_pointer": "/unresolved_fields/3",
+      "original_next_action_or_basis": "Obtain separate governing source; do not borrow ARU 25%model or S/QSub assumptions.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "tax-billing",
+      "rationale": "C-corporation tax treatment of the Delaware LLC from formation is selected. The history is newly authored; use the adopted tax workpaper rather than borrowing ARU rates or treating missing tax as zero.",
+      "source_hashes": {
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md": "400190fc75b2e8ca001dedb9eb99773f677d9ed8462e1bd41ae56ac35aeb9a69",
+        "docs/legal/gap-instruments/source/tax-billing.json": "5da4a510457570db49e799b95f41a6b1e21f733329d862017df58143d2791b2c",
+        "docs/legal/gap-instruments/source/tax-billing.md": "8a4fcc32efc81c2502158afbf7df05d2bec5cb296c366d82e90f3c7f3fa38e48"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/tax-filing.md#4-eligibility-and-authority-review-schedule",
+      "current_disposition": "MATERIAL_SOURCE_OR_RIGHTS_BOUNDARY",
+      "field_or_term": "Independently supported tax eligibility and authority",
+      "id": "TAX-U01",
+      "original_json_pointer": "/unresolved_fields/0",
+      "original_next_action_or_basis": "Qualified reviewer verifies applicable target/seller/buyer and QSub facts.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "tax-filing",
+      "rationale": "This cannot be filled by a template or inferred from rounded financial figures. Preserve the exact unsupported party/right/eligibility field, current source economics and affected claim. No compulsory funding, new investor, collateral, host participation or tax election is invented.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/tax-filing.json": "4ad9c3bfad7931dd51ddc5cf4ccb0cfe9a5db677e6fcf2004091d8738b06e99b",
+        "docs/legal/gap-instruments/source/tax-filing.md": "7fb216ef53a5849a317dc9cb0dc8815d725deed5a34aa513685ce5b60c609a52"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/tax-filing.md#7-alternative-outcome-and-correction-clauses",
+      "current_disposition": "MATERIAL_SOURCE_OR_RIGHTS_BOUNDARY",
+      "field_or_term": "Approved alternative basis outcome if election unavailable",
+      "id": "TAX-U04",
+      "original_json_pointer": "/unresolved_fields/3",
+      "original_next_action_or_basis": "Prepare separately reviewed financial successor; do not reuse elected tax basis unqualified.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "tax-filing",
+      "rationale": "This cannot be filled by a template or inferred from rounded financial figures. Preserve the exact unsupported party/right/eligibility field, current source economics and affected claim. No compulsory funding, new investor, collateral, host participation or tax election is invented.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/tax-filing.json": "4ad9c3bfad7931dd51ddc5cf4ccb0cfe9a5db677e6fcf2004091d8738b06e99b",
+        "docs/legal/gap-instruments/source/tax-filing.md": "7fb216ef53a5849a317dc9cb0dc8815d725deed5a34aa513685ce5b60c609a52"
+      }
+    },
+    {
+      "clause_path": "docs/legal/gap-instruments/source/workforce.md#4-authority-and-continued-employment-terms",
+      "current_disposition": "SCOPED_CURRENT_PAYROLL_SUCCESSOR_AVAILABLE",
+      "field_or_term": "Employment jurisdiction and payroll treatment",
+      "id": "SH-LEGAL-DRAFT-WORKFORCE-U02",
+      "original_json_pointer": "/unresolved_fields/1",
+      "original_next_action_or_basis": "Complete qualified review without inventing employee private data.",
+      "original_status": "PENDING_REVIEW_NOT_ACCEPTED",
+      "package": "workforce",
+      "rationale": "The retrospective August census/payroll defines legal employer, jurisdiction, withholding assumptions and known-on dates. It supplies that declared population only; consult its exact financial replacement bridge and limitations.",
+      "source_hashes": {
+        "docs/legal/gap-instruments/source/workforce.json": "cad6e1410ada5a9e86a961eb5c06cbe5e5c0b92e6f547282624ac09e8d9b340e",
+        "docs/legal/gap-instruments/source/workforce.md": "6b4b35a48c4c9d304ad9e9a20e64049400aeb801fe386d7968c8479faedc3834",
+        "enterprise/operations/docs/completed-period.md": "5ceba4a24bb436bafeb2a44c0314c86c0febfebb615f0f9fe66f58e45aae1677",
+        "enterprise/operations/source/completed_period_2026_08.json": "14e7b53177b80d671ed66fdc309c6b2c0e1b0b68567f54da97dd02dca4d1ddf8"
+      }
+    }
+  ],
+  "package_count": 17,
+  "population_count": 125,
+  "prepared_on": "2026-09-15",
+  "record_id": "SH-C04-LEGAL-DISPOSITION-2026-09-15",
+  "schema_version": "1.0.0",
+  "scope": "Complete existing review-item population; not certification of every legal instrument",
+  "source_path": "docs/legal/gap-instruments/review-support/decisions.json",
+  "source_sha256": "42cd29aa93d64f1f57eecd85d92afe418eefc13f729a4d5468b37b95585b9cd8",
+  "status": "RECONCILIATION_NOT_BLANKET_ADOPTION"
+}

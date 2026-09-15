@@ -1,0 +1,15 @@
+{
+  "document_id":"SH-MINE-SUPPORT-COST-20260915",
+  "state":"PENDING_REPOSITORY_ACCEPTANCE",
+  "origin":"NEWLY_AUTHORED_ACTIVITY_ALLOCATION_AND_EXPLICIT_NORMAL_COST_ESTIMATE",
+  "august_ps_production_cost_usd":"82875",
+  "august_ps_total_cost_usd":"203125",
+  "ps_production_share":"0.408",
+  "rwh_site_other_production_share":"0.5",
+  "bond_monthly_component_usd":"10000",
+  "site_activity":"The existing surety continuation component supports the production permit boundary. Half the remaining actual site G&A pays mine production coordination, supplies administration and local compliance support; half pays corporate, commercial and general administrative work. These are newly authored activity dispositions of existing cost, not new purchases or inferred independent vendor confirmation.",
+  "period_boundary":"August PS share is independently derived from twelve current work-allocation records. January-July reconstruction and September2026-2031 forecasts separately adopt that mix as an explicit normal production-support estimate, not recovered historical timesheets or a guarantee of unchanged future staffing. Revisions to the mix require a versioned workpaper and sensitivity.",
+  "fee_boundary":"The accepted platform fee remains unchanged. Legal RWH inventory capitalizes its production share of the actual platform fee plus site costs. Consolidation replaces embedded service charge with the provider's corresponding production cost; no extra reimbursement agreement or intercompany cash is invented.",
+  "cost_method":"Additional support pool uses monthly weighted-average units alongside retained annual normal-cost production calibration. Opening H2 normal support remains in its existing reconstructed inventory; no second opening capitalization. Reviewers can isolate every added cost layer and reversal. Tax production-benefit classification is separately documented.",
+  "sensitivity":"The estimate is not precise returned-tax certification. Export per-month allocated cost and remaining general expense so alternative supported activity percentages can be reperformed without changing total incurred cost or cash."
+}

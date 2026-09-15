@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "prepared_on": "2026-09-15",
+  "origin": "NEWLY_AUTHORED_FICTIONAL_OPTIONS_NOT_RECOVERED_HISTORY",
+  "authority": "SH-VOICE-TAX-01 resolves C corporation direction; options implement effective history only",
+  "legal_entity": "SHI",
+  "legal_name": "Sable Harbor, LLC",
+  "options": [
+    {
+      "id": "TAX-HISTORY-INITIAL-2016",
+      "status": "PROVISIONAL_IMPLEMENTATION_OPTION_PENDING_RECONCILIATION",
+      "formation_date": "2016-04-12",
+      "formation_date_source_precision": "2016 year only; April 12 is newly authored precision for this option",
+      "corporate_effective_date": "2016-04-12",
+      "election_prepared_date": "2016-04-14",
+      "modeled_submission_date": "2016-04-18",
+      "modeled_acknowledgement_date": null,
+      "submission_state": "FICTIONAL_HISTORY_OPTION_ONLY_NOT_ADOPTED_OR_REAL_SUBMISSION",
+      "rationale": "Initial corporate treatment makes both accepted institutional rounds corporate-tax-period funding without introducing a 2026 conversion transaction. The date is an explicit authored premise, not selected by voice or recovered.",
+      "historic_return_boundary": "2016 short period then calendar years; 2016-2025 income, basis, returns and tax settlement require authored reconstruction",
+      "pre_2026_nol": "UNKNOWN; zero and $10M post-2017 balances are sensitivity inputs only"
+    },
+    {
+      "id": "TAX-HISTORY-PROSPECTIVE-2026",
+      "status": "PROVISIONAL_IMPLEMENTATION_OPTION_PENDING_RECONCILIATION",
+      "formation_date": "2016",
+      "corporate_effective_date": "2026-10-01",
+      "election_prepared_date": "2026-09-15",
+      "modeled_submission_date": "2026-09-16",
+      "modeled_acknowledgement_date": null,
+      "submission_state": "PLANNED_FICTIONAL_OPTION_NO_EXECUTION",
+      "rationale": "Prospective October 1 separates a completed September monthly accounting boundary and allows preparation after the owner's decision, within the ordinary future-election window. This is not an owner-selected effective date.",
+      "historic_return_boundary": "Pre-effective default/elected status must be reconstructed; modeled corporate portion October-December 2026, then calendar years",
+      "transition_basis": "UNKNOWN; the September 30 deemed contribution cannot use book calibration as tax basis",
+      "pre_2026_nol": "No parent corporate carryforward assumed from pre-election owner losses"
+    }
+  ],
+  "sensitivity_contract": {
+    "federal_rate": "0.21",
+    "post_2017_nol_limit": "0.80",
+    "california_rate": "0.0884",
+    "california_minimum_annual": "800",
+    "california_apportionment_cases": ["0", "1"],
+    "initial_option_opening_federal_nol_cases": ["0", "10000000"],
+    "state_opening_nol": "0 sensitivity only",
+    "ff003_income_tax_deductibility_cases": ["deductible", "addback"],
+    "valuation_allowance": "Full allowance on modeled NOL DTA; future profitability/realizability not established",
+    "other_book_tax_differences": "zero for sensitivity only; fixed-asset, research, interest and intercompany tax characterization remain unreconciled",
+    "state_tax_federal_deduction": "current accrued California tax deducted in federal sensitivity",
+    "cash_settlement": "not modeled as paid; provision sensitivity is not cash evidence",
+    "limitations": "Not an adopted provision or GAAP tax opinion. No combined report, federal group, credits, pre-2018 losses, section 382 capacity or automatic transition nonrecognition assumed. California combined-report applicability remains separate. Future years hold reviewed law constant as scenario premise."
+  }
+}

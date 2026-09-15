@@ -1,0 +1,69 @@
+{
+  "record_id": "SH-PS-PRODUCTION-SUPPORT-202608",
+  "state": "NEWLY_AUTHORED_SYNTHETIC_RECONSTRUCTION_PENDING_ACCEPTANCE",
+  "authored_day": "2026-09-15",
+  "effective_period": "2026-08",
+  "basis": "New synthetic August task summaries allocated across existing worked hours. Same task mix applied to paid leave and employer burden; no extra capacity, expense, cash or changed service fee. Production benefit is a cost assignment input, not a tax capitalization conclusion. Other work comprises selling and general corporate duties. No automatic historical or forecast extension.",
+  "people": [
+    {
+      "source_person_id": "RW-0001",
+      "activity": "President: production governance and investment oversight; other corporate governance",
+      "production_fraction": ".20"
+    },
+    {
+      "source_person_id": "RW-0002",
+      "activity": "COO/RWH CEO: production scheduling, mine performance and operational decisions",
+      "production_fraction": ".80"
+    },
+    {
+      "source_person_id": "RW-0003",
+      "activity": "Production planning and mine scheduling",
+      "production_fraction": ".80"
+    },
+    {
+      "source_person_id": "RW-0004",
+      "activity": "Procurement and production supplier coordination",
+      "production_fraction": ".80"
+    },
+    {
+      "source_person_id": "RW-0005",
+      "activity": "Maintenance planning and reliability analysis",
+      "production_fraction": ".75"
+    },
+    {
+      "source_person_id": "RW-0006",
+      "activity": "Metallurgical reporting and production quality analysis",
+      "production_fraction": ".75"
+    },
+    {
+      "source_person_id": "RW-0007",
+      "activity": "Operating systems support shared with commercial platform",
+      "production_fraction": ".50"
+    },
+    {
+      "source_person_id": "RW-0008",
+      "activity": "People administration and production crew scheduling",
+      "production_fraction": ".25"
+    },
+    {
+      "source_person_id": "RW-0009",
+      "activity": "Sales and customer relationship administration",
+      "production_fraction": "0"
+    },
+    {
+      "source_person_id": "RW-0010",
+      "activity": "Commercial contract administration",
+      "production_fraction": "0"
+    },
+    {
+      "source_person_id": "RW-0011",
+      "activity": "Corporate financial reporting and treasury",
+      "production_fraction": "0"
+    },
+    {
+      "source_person_id": "RW-0012",
+      "activity": "Corporate governance and general administration",
+      "production_fraction": "0"
+    }
+  ]
+}

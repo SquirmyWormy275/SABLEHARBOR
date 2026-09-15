@@ -72,8 +72,18 @@ Generated file inventory. Includes current and historical records; open the sour
 
 ## `docs/internal/company-closeout`
 
+- [Exact historical capitalization — reviewable authoring proposal](../../internal/company-closeout/CAPITAL_HISTORY_PROPOSAL.md) — MD
+- [Debt and selected host evidence — August 2026](../../internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md) — MD
+- [Current acquisition escrow and holdback register](../../internal/company-closeout/ESCROW_DISPOSITIONS.md) — MD
+- [Founder admission and monetary opening](../../internal/company-closeout/FOUNDER_ADMISSION_BASIS.md) — MD
+- [Company edition inspection and reproduction](../../internal/company-closeout/INSPECTION_GUIDE.md) — MD · [formatted PDF](../../finance/publications/SH-COMPANY-INSPECTION-20260915_v1.0.0.pdf)
 - [Main source protection](../../internal/company-closeout/MAIN_PROTECTION.md) — MD
+- [Company edition to existing audit portal](../../internal/company-closeout/PORTAL_CONTRACT.md) — MD
 - [PR #145 integration evidence](../../internal/company-closeout/PR145_INTEGRATION.md) — MD
+
+## `docs/internal/company-closeout/validation`
+
+- [Integration validation history](../../internal/company-closeout/validation/README.md) — MD
 
 ## `docs/internal/development`
 
@@ -136,6 +146,11 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `enterprise`
 
 - [Enterprise operating and financial models](../../../enterprise/README.md) — MD
+
+## `enterprise/closeout`
+
+- [Conditional mine utility ROT continuation](../../../enterprise/closeout/INDUSTRIAL_TAX_FUTURE.md) — MD
+- [State receipt apportionment — company closeout](../../../enterprise/closeout/STATE_APPORTIONMENT.md) — MD
 
 ## `evidence/closeout`
 

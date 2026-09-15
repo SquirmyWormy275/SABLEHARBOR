@@ -1,0 +1,28 @@
+{
+  "backup_history_equality": true,
+  "checks": {
+    "future_denials": 6,
+    "originals": 6,
+    "restored_revoked_denials": 6,
+    "revoked_denials": 6,
+    "ungranted_denials": 6
+  },
+  "edition_verification": {
+    "components": 1,
+    "members": 6,
+    "result": "PASS"
+  },
+  "limits": [
+    "No live portal or private company source was modified",
+    "No engagement, audit opinion, instructor key or grading material was created",
+    "Document import is not a complete company year or external confirmation",
+    "Immutable CompanyStore lacks class-based deletion/hold; that gate remains open",
+    "HTTP indirect-disclosure and model inference evaluations remain separate"
+  ],
+  "portal_commit": "548cb5d2be82ec11877e298c2c8d00aa1e555b7f",
+  "portal_module_path": "enterprise/audit_suite/company_store.py",
+  "portal_module_sha256": "38a1aebcebde53051e306465dc2d807a3cd0e60fb8cc974da2235fa268c88292",
+  "result": "PASS",
+  "schema_version": "1.0.0",
+  "scope": "Actual isolated CompanyStore import/read/revocation/SQLite restore of public repository originals"
+}
