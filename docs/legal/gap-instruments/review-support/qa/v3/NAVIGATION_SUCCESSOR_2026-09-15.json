@@ -22,8 +22,15 @@
       "path": "tools/legal_gaps/validate_practical_work.py",
       "historical_revision": "1d86f78944c95d3fdde72c4dcc31cd9b50c2ada9",
       "historical_sha256": "9d8682a15cc655ae7ed124ff459d769a0547270f17d1316eb886e40fbb363861",
-      "current_sha256": "1627c7b0777134e36ad2f86759b9aa050fb8a8622f40601518e3064d71c491b9",
+      "current_sha256": "82395518433d6e1e08120d11d5222ef096e689c9737a453ef0de00531767528c",
       "scope": "Verify historical QA bytes against original Git revision and explicit successor navigation sources against reviewed current hashes."
+    },
+    {
+      "path": "docs/reader/usability/RESULTS.json",
+      "historical_revision": "1d86f78944c95d3fdde72c4dcc31cd9b50c2ada9",
+      "historical_sha256": "db7f50a06446ebcef37c850092a4055bd699e9c969a367df9c0ba58d70116932",
+      "current_sha256": "fa46e0aa648043f178f4be5085cb01ad731957181c00009a63d04b092d17f997",
+      "scope": "Reperform all six reader routes after the full-text links change; exact PDF/workbook contents still verified."
     }
   ]
 }

@@ -22,7 +22,7 @@ def validate():
     assert sha(BASE / "review-support/qa/v3/REVIEW.json") == successor["historical_receipt_sha256"]
     updates = {r["path"]: r for r in successor["records"]}
     assert set(updates) == {"docs/reader/transactions/README.md", "docs/reader/transactions/build.py",
-                            "tools/legal_gaps/validate_practical_work.py"}
+                            "tools/legal_gaps/validate_practical_work.py", "docs/reader/usability/RESULTS.json"}
     for group in ("input_hashes", "evidence_hashes"):
         assert receipt[group], "Empty review coverage"
         for relative, digest in receipt[group].items():
