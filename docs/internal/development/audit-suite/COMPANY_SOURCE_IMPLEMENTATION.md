@@ -603,6 +603,15 @@ revision and command namespace, preserves the target, and records export context
 in provenance. Sixteen integrated core, independent-review and CLI checks passed;
 an actual export remains a separately recorded company operation.
 
+The [persistent security-event workflow](../../../../enterprise/audit_suite/SECURITY_EVENT_RUNTIME.md)
+consumes existing logging originals and an independent publisher checkpoint.
+It separates intake, rule-based local triage, explicit handoff and retained-source
+inspection. Reconciliation preserves the full declared subject population,
+including subjects not yet handled. An acknowledgment ticket does not establish
+response completion, and inspection does not establish remediation or incident
+closure. Sixteen integrated core, independent-review and CLI checks passed.
+Paired actual operations require separate reviewed execution receipts.
+
 Evidence context now displays item observations citing the selected exact
 artifact ID and SHA, including correction history and author-recorded locators.
 Procedure and workpaper navigation requires matching server-provided version
