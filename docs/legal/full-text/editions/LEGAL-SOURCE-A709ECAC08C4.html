@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fort and Bedford concept programs — full source edition</title><style>@page { size: Letter; margin: 0.68in 0.66in 0.68in; }
+* { box-sizing: border-box; }
+html { color: #20282c; background: #edf0f1; }
+body { margin: 0; font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.43; }
+.edition-header { display: flex; justify-content: space-between; align-items: center; gap: 24px; border-bottom: 2px solid #26383d; padding-bottom: 15px; margin-bottom: 14px; }
+.edition-header img { max-width: 245px; max-height: 65px; object-fit: contain; object-position: left center; }
+.edition-header span { color: #515e63; font-size: 8pt; letter-spacing: 0.8px; text-align: right; }
+.edition-note { padding: 10px 12px; border-left: 3px solid #958367; background: #f6f4ef; font-size: 9pt; line-height: 1.4; margin: 0 0 22px; }
+.edition-note p { margin: 0 0 4px; }
+.edition-note p:last-child { margin: 0; }
+h1 { font-size: 23pt; line-height: 1.15; margin: 0 0 18px; font-weight: 600; }
+h2 { font-size: 15pt; line-height: 1.2; margin: 23px 0 9px; }
+h3 { font-size: 12pt; line-height: 1.3; margin: 18px 0 7px; }
+h4,h5,h6 { font-size: 11pt; margin: 15px 0 6px; }
+h1,h2,h3,h4,h5,h6 { break-after: avoid; overflow-wrap: anywhere; }
+p { margin: 0 0 11px; orphans: 3; widows: 3; }
+li { margin: 0 0 5px; orphans: 2; widows: 2; }
+ul,ol { padding-left: 23px; margin: 8px 0 13px; }
+li > p { margin-bottom: 6px; }
+a { color: #294e60; text-decoration: underline; text-underline-offset: 2px; overflow-wrap: anywhere; }
+code { font-family: 'DejaVu Sans Mono', monospace; font-size: 0.88em; overflow-wrap: anywhere; }
+pre { font-size: 9.5pt; white-space: pre-wrap; overflow-wrap: anywhere; background: #f2f4f4; padding: 10px; border: 1px solid #d8dfe0; }
+blockquote { border-left: 2px solid #929fa4; margin: 12px 0; padding: 0 15px; color: #39464b; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0 17px; table-layout: auto; font-size: 10.5pt; line-height: 1.35; }
+thead { display: table-header-group; }
+tfoot { display: table-footer-group; }
+th { background: #e9eef0; font-weight: 600; text-align: left; }
+th,td { padding: 7px 8px; border-bottom: 1px solid #cbd3d6; vertical-align: top; overflow-wrap: anywhere; }
+tr { break-inside: avoid; }
+hr { border: 0; border-top: 1px solid #cbd3d6; margin: 19px 0; }
+article img { max-width: 100%; height: auto; }
+.source-identity { margin-top: 24px; border-top: 1px solid #b7c1c5; padding-top: 10px; font-size: 8pt; color: #516168; overflow-wrap: anywhere; }
+@media screen { body { max-width: 900px; margin: 24px auto; padding: 48px 54px; background: white; box-shadow: 0 2px 16px #18313b12; } }
+@media screen and (max-width: 600px) { body { margin: 0; padding: 22px 18px; } h1 { font-size: 21pt; } .edition-header { gap: 12px; } .edition-header img { max-width: 55%; } table { display: block; overflow-x: auto; } }
+@media print { html { background: white; } a { text-decoration: none; } }
+/* Source metadata uses Markdown soft line breaks; retain those readable lines. */
+article p:has(> strong:first-child) { white-space: pre-line; }
+th,td { min-width: 5em; }
+/* Provenance remains in the editable HTML and manifest; do not create empty PDF tail pages. */
+@media print { .source-identity { display: none; } }
+
+/* Keep the complete closing paragraph on one page in this formation record. */
+article[data-document-id="SH-IND-COR-001"] > p:last-child { break-inside: avoid; }
+article[data-document-id="SH-IND-HR-001"] th:first-child,
+article[data-document-id="SH-IND-HR-001"] td:first-child { min-width: 8em; }
+/* Chromium does not consistently honor widows/orphans; keep ordinary clauses intact. */
+article p { break-inside: avoid; }
+/* Wrap ordinary table words at spaces; long machine paths retain code wrapping. */
+th,td { overflow-wrap: normal; }
+@media screen and (max-width: 600px) {
+  th,td { min-width: 8em; }
+}
+</style></head>
+<body><header class="edition-header"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDE2MDAgNTAwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+PHRpdGxlIGlkPSJ0aXRsZSI+U2FibGUgSGFyYm9yIOKAlCBwcmltYXJ5IGhvcml6b250YWw8L3RpdGxlPjxkZXNjIGlkPSJkZXNjIj5JbmRpdmlkdWFsIHByaW1hcnkgaG9yaXpvbnRhbCBsb2dvIGFzc2V0IGZvciBTYWJsZSBIYXJib3IuPC9kZXNjPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDgwLjAwMCwxMTAuMDAwKSBzY2FsZSgyLjMzMzMzMzMzKSI+PHJlY3QgeD0iOCIgeT0iOCIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjIwIiBmaWxsPSIjMTAxMjE0Ii8+PHJlY3QgeD0iOCIgeT0iOCIgd2lkdGg9IjIwIiBoZWlnaHQ9Ijc0IiBmaWxsPSIjMTAxMjE0Ii8+PHBvbHlnb24gcG9pbnRzPSI4LjAwMCw2Mi4wMDAgNzguMDAwLDYyLjAwMCA2OC4wMDAsODIuMDAwIDguMDAwLDgyLjAwMCIgZmlsbD0iIzEwMTIxNCIvPjxyZWN0IHg9IjE2IiB5PSI5MiIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjIwIiBmaWxsPSIjMTAxMjE0Ii8+PHJlY3QgeD0iOTIiIHk9IjM4IiB3aWR0aD0iMjAiIGhlaWdodD0iNzQiIGZpbGw9IiMxMDEyMTQiLz48cG9seWdvbiBwb2ludHM9IjQyLjAwMCwzOC4wMDAgMTEyLjAwMCwzOC4wMDAgMTEyLjAwMCw1OC4wMDAgNTIuMDAwLDU4LjAwMCIgZmlsbD0iIzEwMTIxNCIvPjxyZWN0IHg9IjU0IiB5PSI1NCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIiBmaWxsPSIjQzQ1MTI0Ii8+PC9nPjxnIGZpbGw9IiMxMDEyMTQiPjxwYXRoIGQ9Ik02NTIgLTI0Qzk5MCAtMjQgMTIwOSAxNTIgMTIwOSA0MjBDMTIwOSA2MzMgMTA3MSA3NjIgNzcyIDgzM0w2MTEgODcxQzQwNiA5MjAgMzI2IDk4MiAzMjYgMTA5MEMzMjYgMTIyNSA0NTMgMTMyMCA2MzMgMTMyMEM4MjEgMTMyMCA5NDMgMTIxNSA5NTQgMTA0NEgxMTY5QzExNjAgMTMzNSA5NTcgMTUxNCA2MzYgMTUxNEMzMTYgMTUxNCAxMDUgMTM0MSAxMDUgMTA3OUMxMDUgODczIDIzNyA3NDggNTM4IDY3N0w3MDEgNjM4QzkwOCA1ODkgOTg3IDUyMyA5ODcgNDA4Qzk4NyAyNjMgODU0IDE3MCA2NTIgMTcwQzQyOSAxNzAgMjk4IDI4NiAyOTcgNDgzSDc1Qzc1IDE2OCAyOTUgLTI0IDY1MiAtMjRaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MzAuMDAwLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTE2IDBIMjUyTDM4OCAzODdIOTg5TDExMjEgMEgxMzYyTDgyNSAxNDkwSDU1N1pNNDU1IDU3NiA1NDggODQwQzU4OSA5NjMgNjMyIDEwOTQgNjkyIDEyODdDNzUxIDEwOTQgNzkzIDk2MyA4MzQgODQwTDkyNCA1NzZaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MDguNTExLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTEzNiAwSDcxMEMxMDYyIDAgMTIzOSAxNjYgMTIzOSA0MTlDMTIzOSA2MzEgMTEwMyA3NDggOTMwIDc3MlY3NzRDMTA4NiA4MjIgMTE4MCA5MjcgMTE4MCAxMDk4QzExODAgMTMzNyAxMDAwIDE0OTAgNjkzIDE0OTBIMTM2Wk0zNTYgMTg3VjY2NUg3MDRDOTAxIDY2NSAxMDEzIDU3MSAxMDEzIDQyMEMxMDEzIDI2OCA4OTggMTg3IDY5NiAxODdaTTM1NiA4NDhWMTMwM0g2OTBDODU5IDEzMDMgOTYwIDEyMTUgOTYwIDEwNzVDOTYwIDkzNSA4NTkgODQ4IDY5MCA4NDhaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1OTIuMDMyLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTEzNiAwSDEwNjNWMTk1SDM1OFYxNDkwSDEzNloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDY3MS45NjYsMjgwLjI0MCkgc2NhbGUoMC4wNTI3MzQzOCwtMC4wNTI3MzQzOCkiLz48cGF0aCBkPSJNMTM2IDBIMTEzOFYxOTVIMzU4VjY2M0gxMDgwVjg1NkgzNThWMTI5NUgxMTM4VjE0OTBIMTM2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzQxLjM1NCwyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjxwYXRoIGQ9Ik0xMzYgMEgzNThWNjY1SDEwOTlWMEgxMzIxVjE0OTBIMTA5OVY4NTlIMzU4VjE0OTBIMTM2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODc4LjM5MiwyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjxwYXRoIGQ9Ik0xNiAwSDI1MkwzODggMzg3SDk4OUwxMTIxIDBIMTM2Mkw4MjUgMTQ5MEg1NTdaTTQ1NSA1NzYgNTQ4IDg0MEM1ODkgOTYzIDYzMiAxMDk0IDY5MiAxMjg3Qzc1MSAxMDk0IDc5MyA5NjMgODM0IDg0MEw5MjQgNTc2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTY2LjAyNiwyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjxwYXRoIGQ9Ik0xMzYgMEgzNThWNTY0SDY4OEM2OTEgNTY0IDY5NSA1NjQgNjk4IDU2NEw5OTUgMEgxMjQ1TDkyMyA2MDFDMTEwOSA2NjggMTIyMiA4MTggMTIyMiAxMDI2QzEyMjIgMTMxMSAxMDIyIDE0OTAgNzAzIDE0OTBIMTM2Wk0zNTggNzUzVjEyOThINjkzQzg4NSAxMjk4IDEwMDMgMTE5NCAxMDAzIDEwMjZDMTAwMyA4NTggODg2IDc1MyA2OTQgNzUzWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTA0OS41NDcsMjgwLjI0MCkgc2NhbGUoMC4wNTI3MzQzOCwtMC4wNTI3MzQzOCkiLz48cGF0aCBkPSJNMTM2IDBINzEwQzEwNjIgMCAxMjM5IDE2NiAxMjM5IDQxOUMxMjM5IDYzMSAxMTAzIDc0OCA5MzAgNzcyVjc3NEMxMDg2IDgyMiAxMTgwIDkyNyAxMTgwIDEwOThDMTE4MCAxMzM3IDEwMDAgMTQ5MCA2OTMgMTQ5MEgxMzZaTTM1NiAxODdWNjY1SDcwNEM5MDEgNjY1IDEwMTMgNTcxIDEwMTMgNDIwQzEwMTMgMjY4IDg5OCAxODcgNjk2IDE4N1pNMzU2IDg0OFYxMzAzSDY5MEM4NTkgMTMwMyA5NjAgMTIxNSA5NjAgMTA3NUM5NjAgOTM1IDg1OSA4NDggNjkwIDg0OFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDExMjkuMjcwLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTc2NiAtMjRDMTE2MyAtMjQgMTQ1MiAyODggMTQ1MiA3NDRDMTQ1MiAxMjAyIDExNjMgMTUxNCA3NjYgMTUxNEMzNjkgMTUxNCA4MSAxMjAyIDgxIDc0NEM4MSAyODkgMzY5IC0yNCA3NjYgLTI0Wk03NjYgMTc5QzUwOSAxNzkgMzA0IDM4MSAzMDQgNzQ0QzMwNCAxMTA5IDUwOSAxMzExIDc2NiAxMzExQzEwMjMgMTMxMSAxMjI5IDExMDkgMTIyOSA3NDRDMTIyOSAzODEgMTAyMyAxNzkgNzY2IDE3OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEyMDkuMjA1LDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTEzNiAwSDM1OFY1NjRINjg4QzY5MSA1NjQgNjk1IDU2NCA2OTggNTY0TDk5NSAwSDEyNDVMOTIzIDYwMUMxMTA5IDY2OCAxMjIyIDgxOCAxMjIyIDEwMjZDMTIyMiAxMzExIDEwMjIgMTQ5MCA3MDMgMTQ5MEgxMzZaTTM1OCA3NTNWMTI5OEg2OTNDODg1IDEyOTggMTAwMyAxMTk0IDEwMDMgMTAyNkMxMDAzIDg1OCA4ODYgNzUzIDY5NCA3NTNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMzAwLjg0NywyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjwvZz48cmVjdCB4PSI0MzAiIHk9IjMwNi4yNCIgd2lkdGg9IjkzOS43NzA4NTkzNzQ5OTk5IiBoZWlnaHQ9IjQiIGZpbGw9IiNDNDUxMjQiLz48L3N2Zz4=" alt="corporate"><span>LEGAL RECORDS<br>FULL SOURCE EDITION</span></header>
+<aside class="edition-note"><p><strong>Draft publication design · exact-file review required</strong></p><p>Complete source text follows. The source’s own status and limitations remain in force; this edition does not establish execution, filing or approval.</p></aside>
+<article id="source-content" data-document-id="LEGAL-SOURCE-A709ECAC08C4"><h1>Fort and Bedford concept programs</h1>
+<p><a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/geospatial/facilities/source/research_campuses.json">Structured source</a> extends the Sacramento local-metric plan standard. Both sites are accepted operating concepts; <strong>the footprints, floor configurations, capacities and plans here are proposed models, not records of existing construction</strong>. Actual population, occupancy dates, tenure, measured floor areas and construction milestones remain null. The <a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/geospatial/facilities/coverage/COVERAGE_MATRIX.md">coverage matrix</a> retains geographic issue #106 and detailed-plan issue #107 boundaries.</p>
+<table>
+<thead>
+<tr>
+<th>Site</th>
+<th style="text-align:right">Illustrative envelope</th>
+<th style="text-align:right">Buildings / floors</th>
+<th style="text-align:right">Gross / assignable / support m²</th>
+<th style="text-align:right">Day peak</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The Fort, SH-SITE-0003</td>
+<td style="text-align:right">250 × 243 m = 15.01 acres</td>
+<td style="text-align:right">3 / 4</td>
+<td style="text-align:right">4,392 / 2,808 / 1,584</td>
+<td style="text-align:right">32</td>
+</tr>
+<tr>
+<td>Bedford, SH-SITE-0005</td>
+<td style="text-align:right">250 × 283 m = 17.48 acres</td>
+<td style="text-align:right">4 / 4</td>
+<td style="text-align:right">4,032 / 2,484 / 1,548</td>
+<td style="text-align:right">28</td>
+</tr>
+</tbody>
+</table>
+<p>Dimensions select practical concept bays inside accepted acreage ranges. Large assignable technical areas provide clear work envelopes for prototypes, material custody and refurbishment rather than office density. Support includes end service bays, wet/MEP space and continuous 3 m personnel circulation. A detailed engineer must reconcile structure, hazard zoning, exits, sanitary demand, containment and process ventilation to the actual work before either model can become a design for construction. Neither model allocates equipment throughput or installation capacity.</p>
+<h2>The Fort</h2>
+<p>The <a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md">accepted Willow closeout</a> establishes the three named sheds and outdoor Museum.</p>
+<p>The Big Shed is a 60 × 30 m single-level research building with varied fabrication, test, instrumentation, RF and integration workspaces. Its 20-person day allocation includes movement between benches, write-up desks and experiment debriefing. The Small Shed places reception and administration at the southern visitor edge. Its 36 × 24 m footprint carries administration below and six temporary guest rooms above. The lodging is a modest visiting-staff component; it is neither permanent housing nor an extra resident workforce. The White Shed's 36 × 24 m single floor segregates intake, quarantine, secure storage and field-gear staging. Equipment reaches the research floor only after controlled release.</p>
+<p>The Museum is an outdoor working collection, preserving <code>SH-FAC-FORT-MUSEUM</code>. It creates no fourth building. Hardstand supports active staging independently of the collection. The service yard and utilities sit along the controlled eastern route; visitors arrive in the south. A pedestrian route connects administration to research without crossing the receiving apron. A perimeter route reserves emergency/service access; turning, pavement and fire appliance requirements remain engineering dependencies. Stormwater buffers and a separately gated reserve occupy the northern boundary.</p>
+<p>The day scenario places 20 people in Big, eight in Small's administration and four in White: 24 conditional workers plus eight visitors. A separate night scenario places six visitors in Small's lodging and zero in the other floors. These scenarios must not be added. Twenty assigned desks, six touchdown places, 38 meeting places, 34 technical work positions and six beds are activity capacities, not a population total. The 24-worker reference comes from the population bridge's conditional Willow assumption, not a September 2026 staffing claim. Thirty parking spaces and 12 bicycle spaces support the design scenario with explicit, unverified mode-share assumptions.</p>
+<h2>Bedford</h2>
+<p>The <a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/docs/canon/CRADLE_CLOSEOUT_2026-09-06.md">Cradle closeout</a> places Bedford in Fairmont on a fictional 15–20 acre redeveloped industrial brownfield. It supersedes Belle/Kanawha as Bedford's intended geography. Bedford remains separate from the Demotte host installation and Kelly Gang Mining's Stream 17 host. No host treatment assets, mine liabilities or host employees move into this site model.</p>
+<p>Four proposed structures separate analytical/process development; field-unit assembly and refurbishment; intermediate upgrading/blending; and material receipt/outbound logistics. The assembly/refurbishment hall is 48 × 30 m; the other structures are 36 × 24 m. All have one modelled level. Their functions follow accepted canon while their building identities and geometry are explicit implementation assumptions. No new installed chemical process, rail siding, river berth or commercial individual-REE separation operation is created.</p>
+<p>Incoming lots remain held and traceable before transfer to upgrading. Released product has separate dispatch staging. Analytical samples move under custody; routine visitors cannot pass through the material yard. Returned or fouled deployment units go to isolated inspection before clean assembly. External delivery access approaches from the east; staff and visitors use the southern edge. Utilities and containment have a reserved zone rather than invented treatment plant equipment. Brownfield, flood, contamination and utility evidence remain required before a real parcel could be selected.</p>
+<p>The simultaneous floor allocations are 12 analytical, six assembly, six upgrading and four materials: 18 conditional workers plus ten visitors. Rotation between field deployment and Bedford is not a second workforce. Ten assigned desks, eight meeting places, eight training places and 48 technical positions serve alternative activities; they do not increase the 28-person peak. Twenty-six parking and ten bicycle spaces are planning allowances.</p>
+<h2>Horizons and publications</h2>
+<p>2031 and 2036 retain the same attendance capacity unless a justified demand decision activates the land reserve. Reserve acreage alone does not authorize employees, buildings or funding. Construction dates remain null. Both sites have independently saved floor sources in the JSON; the shared renderer produces separate vector, PNG and PDF derivatives for every level and building program. Geographic stable IDs are retained; map families are <code>SH-MAP-WIL</code> and <code>SH-MAP-CRD</code>, with local successor numbering beginning at 020. The central manifest allocates and indexes those maps.</p>
+</article>
+<aside class="source-identity"><strong>Edition provenance</strong><br>LEGAL-SOURCE-A709ECAC08C4<br>Source: <a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/geospatial/facilities/RESEARCH_CAMPUSES.md">geospatial/facilities/RESEARCH_CAMPUSES.md</a><br>Source revision: 79437a778d4a4d5097a3cdaa36d7d8ab13217536<br>Source SHA-256: 094ea7bb3bc9dd920f29dbe7ef0062880b399c46443cc5c32661589a8e51239a</aside>
+</body></html>

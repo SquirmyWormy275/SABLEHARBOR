@@ -1,0 +1,36 @@
+{
+  "record_id": "SH-LEGAL-V3-NAVIGATION-SUCCESSOR-2026-09-15",
+  "authority": "Owner-approved PR145 full publications and September15 closeout integration",
+  "state": "REVIEWED_IMPLEMENTATION_PENDING_MERGE",
+  "historical_receipt_sha256": "177c3e64fa7dc00df005a42c29d1e1d9192cd31cb2db711dc3e6bbf8be7321e1",
+  "records": [
+    {
+      "path": "docs/reader/transactions/README.md",
+      "historical_revision": "1d86f78944c95d3fdde72c4dcc31cd9b50c2ada9",
+      "historical_sha256": "ecee864180bed42a59dbc18d1f789aa7f650f520edac0e37d9f8a23ac58463f9",
+      "current_sha256": "c483271d91fb8cdaaf99ba9343073f982d377d5ea3fbf703cc900ba5bc2ec60c",
+      "scope": "Add full-text publication reading route; no original practical workbook, source data or visual evidence changes"
+    },
+    {
+      "path": "docs/reader/transactions/build.py",
+      "historical_revision": "1d86f78944c95d3fdde72c4dcc31cd9b50c2ada9",
+      "historical_sha256": "c367d485c4400238344af2b273e5091cbbe21d022a2985502c2fd1a7c28ee490",
+      "current_sha256": "f7684c65114f3d51260e33e727127f6072e6185fc664b7efbb94d3ad9487a48b",
+      "scope": "Add full-text publication reading route; no original practical workbook, source data or visual evidence changes"
+    },
+    {
+      "path": "tools/legal_gaps/validate_practical_work.py",
+      "historical_revision": "1d86f78944c95d3fdde72c4dcc31cd9b50c2ada9",
+      "historical_sha256": "9d8682a15cc655ae7ed124ff459d769a0547270f17d1316eb886e40fbb363861",
+      "current_sha256": "82395518433d6e1e08120d11d5222ef096e689c9737a453ef0de00531767528c",
+      "scope": "Verify historical QA bytes against original Git revision and explicit successor navigation sources against reviewed current hashes."
+    },
+    {
+      "path": "docs/reader/usability/RESULTS.json",
+      "historical_revision": "1d86f78944c95d3fdde72c4dcc31cd9b50c2ada9",
+      "historical_sha256": "db7f50a06446ebcef37c850092a4055bd699e9c969a367df9c0ba58d70116932",
+      "current_sha256": "fa46e0aa648043f178f4be5085cb01ad731957181c00009a63d04b092d17f997",
+      "scope": "Reperform all six reader routes after the full-text links change; exact PDF/workbook contents still verified."
+    }
+  ]
+}

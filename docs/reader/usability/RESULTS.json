@@ -79,7 +79,7 @@
       "links_followed": 3,
       "input_hashes": {
         "README.md": "4337d93605cd90f3a0a357242deca21c0defaf13c721e8e492845d36dbd4cb98",
-        "docs/reader/transactions/README.md": "ecee864180bed42a59dbc18d1f789aa7f650f520edac0e37d9f8a23ac58463f9",
+        "docs/reader/transactions/README.md": "c483271d91fb8cdaaf99ba9343073f982d377d5ea3fbf703cc900ba5bc2ec60c",
         "docs/legal/gap-instruments/REVIEW_WORKFLOW.md": "8b54945de408dbdf77e8c2cde4efa16fb2ff2c283ed930c8f952d1f057cf3494",
         "docs/legal/gap-instruments/review-support/decisions.xlsx": "36394a1a6b2c13f1e4a721d904f6b5a956015610302b284b3121d72e2dd6823a"
       },
@@ -128,7 +128,7 @@
       "input_hashes": {
         "docs/wiki/Home.md": "4f9e6a2eb40175a86969a5db41b86c1117182e07beacf66e344886fecd1fcf5f",
         "docs/wiki/departments/finance.md": "fca680a08382eec752cff2d1ae1d2befd1f0d58a65e7c6586f2914e060d8747b",
-        "docs/finance/READER_EXERCISES.md": "027e27b616be6ad4ebe913293851b15c42427d3ed0bb94becb961c4b6ab8bf93"
+        "docs/finance/READER_EXERCISES.md": "211b2dba54cdb5334cc3eb3668293ac58f87786fa50029a042708e95505362c0"
       }
     },
     {

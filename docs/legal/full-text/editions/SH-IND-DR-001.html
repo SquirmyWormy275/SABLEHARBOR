@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Industrial closeout — corporate, Pale Sun, Red Wash and ARU — full source edition</title><style>@page { size: Letter; margin: 0.68in 0.66in 0.68in; }
+* { box-sizing: border-box; }
+html { color: #20282c; background: #edf0f1; }
+body { margin: 0; font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.43; }
+.edition-header { display: flex; justify-content: space-between; align-items: center; gap: 24px; border-bottom: 2px solid #26383d; padding-bottom: 15px; margin-bottom: 14px; }
+.edition-header img { max-width: 245px; max-height: 65px; object-fit: contain; object-position: left center; }
+.edition-header span { color: #515e63; font-size: 8pt; letter-spacing: 0.8px; text-align: right; }
+.edition-note { padding: 10px 12px; border-left: 3px solid #958367; background: #f6f4ef; font-size: 9pt; line-height: 1.4; margin: 0 0 22px; }
+.edition-note p { margin: 0 0 4px; }
+.edition-note p:last-child { margin: 0; }
+h1 { font-size: 23pt; line-height: 1.15; margin: 0 0 18px; font-weight: 600; }
+h2 { font-size: 15pt; line-height: 1.2; margin: 23px 0 9px; }
+h3 { font-size: 12pt; line-height: 1.3; margin: 18px 0 7px; }
+h4,h5,h6 { font-size: 11pt; margin: 15px 0 6px; }
+h1,h2,h3,h4,h5,h6 { break-after: avoid; overflow-wrap: anywhere; }
+p { margin: 0 0 11px; orphans: 3; widows: 3; }
+li { margin: 0 0 5px; orphans: 2; widows: 2; }
+ul,ol { padding-left: 23px; margin: 8px 0 13px; }
+li > p { margin-bottom: 6px; }
+a { color: #294e60; text-decoration: underline; text-underline-offset: 2px; overflow-wrap: anywhere; }
+code { font-family: 'DejaVu Sans Mono', monospace; font-size: 0.88em; overflow-wrap: anywhere; }
+pre { font-size: 9.5pt; white-space: pre-wrap; overflow-wrap: anywhere; background: #f2f4f4; padding: 10px; border: 1px solid #d8dfe0; }
+blockquote { border-left: 2px solid #929fa4; margin: 12px 0; padding: 0 15px; color: #39464b; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0 17px; table-layout: auto; font-size: 10.5pt; line-height: 1.35; }
+thead { display: table-header-group; }
+tfoot { display: table-footer-group; }
+th { background: #e9eef0; font-weight: 600; text-align: left; }
+th,td { padding: 7px 8px; border-bottom: 1px solid #cbd3d6; vertical-align: top; overflow-wrap: anywhere; }
+tr { break-inside: avoid; }
+hr { border: 0; border-top: 1px solid #cbd3d6; margin: 19px 0; }
+article img { max-width: 100%; height: auto; }
+.source-identity { margin-top: 24px; border-top: 1px solid #b7c1c5; padding-top: 10px; font-size: 8pt; color: #516168; overflow-wrap: anywhere; }
+@media screen { body { max-width: 900px; margin: 24px auto; padding: 48px 54px; background: white; box-shadow: 0 2px 16px #18313b12; } }
+@media screen and (max-width: 600px) { body { margin: 0; padding: 22px 18px; } h1 { font-size: 21pt; } .edition-header { gap: 12px; } .edition-header img { max-width: 55%; } table { display: block; overflow-x: auto; } }
+@media print { html { background: white; } a { text-decoration: none; } }
+/* Source metadata uses Markdown soft line breaks; retain those readable lines. */
+article p:has(> strong:first-child) { white-space: pre-line; }
+th,td { min-width: 5em; }
+/* Provenance remains in the editable HTML and manifest; do not create empty PDF tail pages. */
+@media print { .source-identity { display: none; } }
+
+/* Keep the complete closing paragraph on one page in this formation record. */
+article[data-document-id="SH-IND-COR-001"] > p:last-child { break-inside: avoid; }
+article[data-document-id="SH-IND-HR-001"] th:first-child,
+article[data-document-id="SH-IND-HR-001"] td:first-child { min-width: 8em; }
+/* Chromium does not consistently honor widows/orphans; keep ordinary clauses intact. */
+article p { break-inside: avoid; }
+/* Wrap ordinary table words at spaces; long machine paths retain code wrapping. */
+th,td { overflow-wrap: normal; }
+@media screen and (max-width: 600px) {
+  th,td { min-width: 8em; }
+}
+</style></head>
+<body><header class="edition-header"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDE2MDAgNTAwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+PHRpdGxlIGlkPSJ0aXRsZSI+U2FibGUgSGFyYm9yIOKAlCBwcmltYXJ5IGhvcml6b250YWw8L3RpdGxlPjxkZXNjIGlkPSJkZXNjIj5JbmRpdmlkdWFsIHByaW1hcnkgaG9yaXpvbnRhbCBsb2dvIGFzc2V0IGZvciBTYWJsZSBIYXJib3IuPC9kZXNjPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDgwLjAwMCwxMTAuMDAwKSBzY2FsZSgyLjMzMzMzMzMzKSI+PHJlY3QgeD0iOCIgeT0iOCIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjIwIiBmaWxsPSIjMTAxMjE0Ii8+PHJlY3QgeD0iOCIgeT0iOCIgd2lkdGg9IjIwIiBoZWlnaHQ9Ijc0IiBmaWxsPSIjMTAxMjE0Ii8+PHBvbHlnb24gcG9pbnRzPSI4LjAwMCw2Mi4wMDAgNzguMDAwLDYyLjAwMCA2OC4wMDAsODIuMDAwIDguMDAwLDgyLjAwMCIgZmlsbD0iIzEwMTIxNCIvPjxyZWN0IHg9IjE2IiB5PSI5MiIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjIwIiBmaWxsPSIjMTAxMjE0Ii8+PHJlY3QgeD0iOTIiIHk9IjM4IiB3aWR0aD0iMjAiIGhlaWdodD0iNzQiIGZpbGw9IiMxMDEyMTQiLz48cG9seWdvbiBwb2ludHM9IjQyLjAwMCwzOC4wMDAgMTEyLjAwMCwzOC4wMDAgMTEyLjAwMCw1OC4wMDAgNTIuMDAwLDU4LjAwMCIgZmlsbD0iIzEwMTIxNCIvPjxyZWN0IHg9IjU0IiB5PSI1NCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIiBmaWxsPSIjQzQ1MTI0Ii8+PC9nPjxnIGZpbGw9IiMxMDEyMTQiPjxwYXRoIGQ9Ik02NTIgLTI0Qzk5MCAtMjQgMTIwOSAxNTIgMTIwOSA0MjBDMTIwOSA2MzMgMTA3MSA3NjIgNzcyIDgzM0w2MTEgODcxQzQwNiA5MjAgMzI2IDk4MiAzMjYgMTA5MEMzMjYgMTIyNSA0NTMgMTMyMCA2MzMgMTMyMEM4MjEgMTMyMCA5NDMgMTIxNSA5NTQgMTA0NEgxMTY5QzExNjAgMTMzNSA5NTcgMTUxNCA2MzYgMTUxNEMzMTYgMTUxNCAxMDUgMTM0MSAxMDUgMTA3OUMxMDUgODczIDIzNyA3NDggNTM4IDY3N0w3MDEgNjM4QzkwOCA1ODkgOTg3IDUyMyA5ODcgNDA4Qzk4NyAyNjMgODU0IDE3MCA2NTIgMTcwQzQyOSAxNzAgMjk4IDI4NiAyOTcgNDgzSDc1Qzc1IDE2OCAyOTUgLTI0IDY1MiAtMjRaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MzAuMDAwLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTE2IDBIMjUyTDM4OCAzODdIOTg5TDExMjEgMEgxMzYyTDgyNSAxNDkwSDU1N1pNNDU1IDU3NiA1NDggODQwQzU4OSA5NjMgNjMyIDEwOTQgNjkyIDEyODdDNzUxIDEwOTQgNzkzIDk2MyA4MzQgODQwTDkyNCA1NzZaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MDguNTExLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTEzNiAwSDcxMEMxMDYyIDAgMTIzOSAxNjYgMTIzOSA0MTlDMTIzOSA2MzEgMTEwMyA3NDggOTMwIDc3MlY3NzRDMTA4NiA4MjIgMTE4MCA5MjcgMTE4MCAxMDk4QzExODAgMTMzNyAxMDAwIDE0OTAgNjkzIDE0OTBIMTM2Wk0zNTYgMTg3VjY2NUg3MDRDOTAxIDY2NSAxMDEzIDU3MSAxMDEzIDQyMEMxMDEzIDI2OCA4OTggMTg3IDY5NiAxODdaTTM1NiA4NDhWMTMwM0g2OTBDODU5IDEzMDMgOTYwIDEyMTUgOTYwIDEwNzVDOTYwIDkzNSA4NTkgODQ4IDY5MCA4NDhaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1OTIuMDMyLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTEzNiAwSDEwNjNWMTk1SDM1OFYxNDkwSDEzNloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDY3MS45NjYsMjgwLjI0MCkgc2NhbGUoMC4wNTI3MzQzOCwtMC4wNTI3MzQzOCkiLz48cGF0aCBkPSJNMTM2IDBIMTEzOFYxOTVIMzU4VjY2M0gxMDgwVjg1NkgzNThWMTI5NUgxMTM4VjE0OTBIMTM2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzQxLjM1NCwyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjxwYXRoIGQ9Ik0xMzYgMEgzNThWNjY1SDEwOTlWMEgxMzIxVjE0OTBIMTA5OVY4NTlIMzU4VjE0OTBIMTM2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODc4LjM5MiwyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjxwYXRoIGQ9Ik0xNiAwSDI1MkwzODggMzg3SDk4OUwxMTIxIDBIMTM2Mkw4MjUgMTQ5MEg1NTdaTTQ1NSA1NzYgNTQ4IDg0MEM1ODkgOTYzIDYzMiAxMDk0IDY5MiAxMjg3Qzc1MSAxMDk0IDc5MyA5NjMgODM0IDg0MEw5MjQgNTc2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTY2LjAyNiwyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjxwYXRoIGQ9Ik0xMzYgMEgzNThWNTY0SDY4OEM2OTEgNTY0IDY5NSA1NjQgNjk4IDU2NEw5OTUgMEgxMjQ1TDkyMyA2MDFDMTEwOSA2NjggMTIyMiA4MTggMTIyMiAxMDI2QzEyMjIgMTMxMSAxMDIyIDE0OTAgNzAzIDE0OTBIMTM2Wk0zNTggNzUzVjEyOThINjkzQzg4NSAxMjk4IDEwMDMgMTE5NCAxMDAzIDEwMjZDMTAwMyA4NTggODg2IDc1MyA2OTQgNzUzWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTA0OS41NDcsMjgwLjI0MCkgc2NhbGUoMC4wNTI3MzQzOCwtMC4wNTI3MzQzOCkiLz48cGF0aCBkPSJNMTM2IDBINzEwQzEwNjIgMCAxMjM5IDE2NiAxMjM5IDQxOUMxMjM5IDYzMSAxMTAzIDc0OCA5MzAgNzcyVjc3NEMxMDg2IDgyMiAxMTgwIDkyNyAxMTgwIDEwOThDMTE4MCAxMzM3IDEwMDAgMTQ5MCA2OTMgMTQ5MEgxMzZaTTM1NiAxODdWNjY1SDcwNEM5MDEgNjY1IDEwMTMgNTcxIDEwMTMgNDIwQzEwMTMgMjY4IDg5OCAxODcgNjk2IDE4N1pNMzU2IDg0OFYxMzAzSDY5MEM4NTkgMTMwMyA5NjAgMTIxNSA5NjAgMTA3NUM5NjAgOTM1IDg1OSA4NDggNjkwIDg0OFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDExMjkuMjcwLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTc2NiAtMjRDMTE2MyAtMjQgMTQ1MiAyODggMTQ1MiA3NDRDMTQ1MiAxMjAyIDExNjMgMTUxNCA3NjYgMTUxNEMzNjkgMTUxNCA4MSAxMjAyIDgxIDc0NEM4MSAyODkgMzY5IC0yNCA3NjYgLTI0Wk03NjYgMTc5QzUwOSAxNzkgMzA0IDM4MSAzMDQgNzQ0QzMwNCAxMTA5IDUwOSAxMzExIDc2NiAxMzExQzEwMjMgMTMxMSAxMjI5IDExMDkgMTIyOSA3NDRDMTIyOSAzODEgMTAyMyAxNzkgNzY2IDE3OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEyMDkuMjA1LDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTEzNiAwSDM1OFY1NjRINjg4QzY5MSA1NjQgNjk1IDU2NCA2OTggNTY0TDk5NSAwSDEyNDVMOTIzIDYwMUMxMTA5IDY2OCAxMjIyIDgxOCAxMjIyIDEwMjZDMTIyMiAxMzExIDEwMjIgMTQ5MCA3MDMgMTQ5MEgxMzZaTTM1OCA3NTNWMTI5OEg2OTNDODg1IDEyOTggMTAwMyAxMTk0IDEwMDMgMTAyNkMxMDAzIDg1OCA4ODYgNzUzIDY5NCA3NTNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMzAwLjg0NywyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjwvZz48cmVjdCB4PSI0MzAiIHk9IjMwNi4yNCIgd2lkdGg9IjkzOS43NzA4NTkzNzQ5OTk5IiBoZWlnaHQ9IjQiIGZpbGw9IiNDNDUxMjQiLz48L3N2Zz4=" alt="corporate"><span>LEGAL RECORDS<br>FULL SOURCE EDITION</span></header>
+<aside class="edition-note"><p><strong>Draft publication design · exact-file review required</strong></p><p>Complete source text follows. The source’s own status and limitations remain in force; this edition does not establish execution, filing or approval.</p></aside>
+<article id="source-content" data-document-id="SH-IND-DR-001"><h1>Industrial closeout — corporate, Pale Sun, Red Wash and ARU</h1>
+<p><strong>Record ID:</strong> SH-IND-DR-001 | <strong>Version:</strong> 1.0.0
+<strong>Decision effective date:</strong> 2026-09-05 | <strong>Available on:</strong> 2026-09-05
+<strong>Created at:</strong> 2026-09-05T22:16:52-07:00 | <strong>Cutoff:</strong> 2026-09-05T23:59:59-07:00
+<strong>Record origin:</strong> Author-adopted fictional canon and derived implementation
+<strong>State:</strong> LOCKED_DERIVED_IMPLEMENTATION, subject to the domain boundaries below
+<strong>Baseline reviewed:</strong> <code>dd505286d7a66d25a2929981150d028935f27fbe</code></p>
+<p>This closeout implements the adopted industrial handoff after checking its assumptions against the repository, arithmetic and official external sources. It closes the listed fictional decisions. It does not transform reconstructed documents into historical originals, declare real permits or tax filings complete, or turn future operating forecasts into observed results. Publication and validation status belong to the delivery record, not this in-world decision register.</p>
+<h2>Source and fact-state rule</h2>
+<p>The unchanged corporate-lore v0.3, base decision register, September 3 headquarters architecture and board v1.0.0 remain the historical foundation. The September 6 editorial canon-decision addendum confirms Daniel Mercer, already named in the founding narrative. That later editorial record remains controlling for current repository interpretation; it is not backdated into the September 5 participant knowledge state. This addendum supersedes earlier OPEN or provisional labels only for the industrial subjects explicitly resolved below. It does not reopen the Original Eight, create relatives for Evan Mercer or Walt Mercer, or convert named research capabilities into corporations.</p>
+<p>Author-adopted fictional decisions control fictional identities, intent and agreed case assumptions. Real law, mathematics and real geography control those domains even where the handoff says otherwise. A later narrative cannot make an equation balance, create an IRS election, move a real town, or manufacture transport authority.</p>
+<table>
+<thead>
+<tr>
+<th>State</th>
+<th>Meaning in this package</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LOCKED_CANON</td>
+<td>Previously adopted fictional fact or headline assumption, with its controlling source preserved</td>
+</tr>
+<tr>
+<td>LOCKED_DERIVED_IMPLEMENTATION</td>
+<td>New consistent detail adopted under the user's implementation authority; its derivation is disclosed</td>
+</tr>
+<tr>
+<td>SYNTHETIC_RECONSTRUCTED</td>
+<td>Authored evidence record representing the fictional company's work; never an authentic historical original</td>
+</tr>
+<tr>
+<td>REFERENCE_ONLY / EXTERNAL_RESEARCH</td>
+<td>Official outside information, cited with retrieval timing; not fictional company evidence</td>
+</tr>
+<tr>
+<td>OPEN_GATED</td>
+<td>A future permission, qualification, filing confirmation or operating decision is still required</td>
+</tr>
+<tr>
+<td>FORECAST / CONTRACTUAL_FUTURE_OBLIGATION</td>
+<td>Prospective value or duty; no claim that the later outcome occurred</td>
+</tr>
+<tr>
+<td>HISTORICAL / SUPERSEDED</td>
+<td>Preserved prior version, not the current instruction for its superseded fields</td>
+</tr>
+</tbody>
+</table>
+<h2>Accepted decisions</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Current decision</th>
+<th>Controlling implementation and limits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IND-001</td>
+<td>Legal chain is Sable Harbor, LLC → Sable Harbor Industrial Holdings, Inc. → Pale Sun Inc. → Red Wash Mining, LLC; SHIH also owns American Resource Utility, Inc. → Blood, Sweat &amp; Tears Railway Company. Each subsidiary interest is 100%</td>
+<td><a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/industrial/source/entities.json">Entities</a>, <a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md">formation record</a>. Delaware parent/holding/platform; Wyoming mine, ARU and railway. SHI key is not an Inc. suffix. Sacramento is headquarters, not Delaware's jurisdiction</td>
+</tr>
+<tr>
+<td>IND-002</td>
+<td>The LLC preserves the accepted contractual board and delegation architecture; holding-company legal implementation does not create a second enterprise executive team or alter seats</td>
+<td>Existing board v1.0.0 remains pinned. Corporate legal/tax identity and operating authority are distinct</td>
+</tr>
+<tr>
+<td>IND-003</td>
+<td>SHIH formation 2024-12-02; PS formation 2025-01-13; RWH formed 2007-09-29 and acquired by NMI 2010-12-18</td>
+<td>Exact dates are derived case details, not registry findings. Parent founding remains year-precision 2016</td>
+</tr>
+<tr>
+<td>IND-004</td>
+<td>Evan Vilander is Pale Sun President from 2025-11-03; Mari Varela is PS COO and RWH CEO; Cole remains site superintendent with temporary stop authority</td>
+<td><a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/industrial/corporate/LEADERSHIP_AND_AUTHORITY.md">Leadership and authority</a>. Cole's surname remains unestablished. Walt Sutter remains external; Martin Shaw is transaction lead and Henry Norwood is NMI seller principal</td>
+</tr>
+<tr>
+<td>IND-005</td>
+<td>Pale Sun/Red Wash remains 140 FTE: 12 platform, 128 mine; Mari occupies one platform billet with dual titles</td>
+<td>No duplicate COO/CEO FTE, extra Cole general manager, or new enterprise total. Existing mine plan is preserved</td>
+</tr>
+<tr>
+<td>IND-006</td>
+<td>Vilander's BTC career, recruitment assessment, J2 Judgment Officer work and uranium thread are the origin of Pale Sun</td>
+<td><a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/industrial/pale_sun/01_VILANDER_BIOGRAPHY.md">Biography</a>, <a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/industrial/pale_sun/02_BTC_RECRUITMENT_AND_ASSESSMENT.md">assessment</a>, <a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/industrial/pale_sun/03_URANIUM_PROBLEM_BOOK.md">Problem Book</a>. Human institutional authorship and reconstructive provenance are explicit</td>
+</tr>
+<tr>
+<td>IND-007</td>
+<td>Cedar Junction, Juniper Mesa and Salt Rim are three failed investigations preceding Pale Sun formation; each has dated evidence, competing explanations, dissent and kill criteria</td>
+<td><a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/industrial/pale_sun/05_FALSE_START_CEDAR_JUNCTION.md">Cedar Junction</a>, <a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/industrial/pale_sun/06_FALSE_START_JUNIPER_MESA.md">Juniper Mesa</a>, <a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/industrial/pale_sun/07_FALSE_START_SALT_RIM.md">Salt Rim</a>. Invented locations/companies/experts are labeled synthetic. Investigation estimates are not PS booked expenditure</td>
+</tr>
+<tr>
+<td>IND-008</td>
+<td>Alexandria preserves evidence and disagreement; supervisor, Judgment Table, Orientation and corporate sponsor retain human institutional responsibility</td>
+<td><a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/industrial/pale_sun/04_ALEXANDRIA_AND_ESCALATION_RECORD.md">Escalation record</a>. Present navigation vocabulary is a retrospective mapping, not a claim that current software operated in 2021</td>
+</tr>
+<tr>
+<td>IND-009</td>
+<td>Red Wash closed 2025-07-18 for $28M cash; NMI/Norwood deal remains separate from ARU/Tolman</td>
+<td><a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/industrial/transaction/01_RW_TRANSACTION_FILE.md">RW transaction</a> and <a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md">RW R2 canon</a>. $3M escrow and $0.5M holdback are included in $28M, giving $24.5M direct seller payment; no transaction debt or goodwill in the selected RW case</td>
+</tr>
+<tr>
+<td>IND-010</td>
+<td>ARU was discovered 2025-10-17 through the Red Wash dependency problem, with no pre-existing commercial relationship; all 2025 Red Wash movements used qualified external carriers</td>
+<td>Discovery is a catalyst, not a justification for loss-making railway ownership. <a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/industrial/transaction/02_ARU_LOI_AND_SELLER_FILE.md">LOI</a> and <a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/industrial/transaction/03_ARU_DILIGENCE_MEMORANDUM.md">diligence</a> establish the independent industrial case</td>
+</tr>
+<tr>
+<td>IND-011</td>
+<td>ARU closes 2026-01-07 at $62M EV, $49.5M seller equity including $1.5M seller excess cash, and $48M buyer stock consideration</td>
+<td><a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/industrial/transaction/04_ARU_APPROVAL_AND_PURCHASE_AGREEMENT.md">Approval/SPA</a>, <a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md">closing</a>. Direct seller payment $45M plus $3M ARU escrow. Old debt refinance $13.5M; new term debt $22.5M; parent $39M before $1.2M fees. Leases $2.5M remain. Never copy RW's escrow/holdback ledger into ARU</td>
+</tr>
+<tr>
+<td>IND-012</td>
+<td>Four eligible individual pre-close ARU shareholders sell 100%: Fred Tolman 60%, Adele Tolman 20%, Nora Ashcombe 10%, Seth Kettering 10%; no rollover</td>
+<td>Names/eligibility are derived synthetic assumptions. Nora is day-one President/COO; Fred has nine-month $225k consultancy with no operating veto. Eight named leaders share $500k retention, within the existing employee census</td>
+</tr>
+<tr>
+<td>IND-013</td>
+<td>ARU has 131 FTE: 58 railway, 27 terminal, 24 trucking, 12 warehouse, 10 corporate. Fourteen named leaders occupy those billets</td>
+<td><a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/industrial/source/finance.json">Finance source</a> and <a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/industrial/corporate/LEADERSHIP_AND_AUTHORITY.md">leadership</a>. Fred is external. This current selected case supersedes a legacy 111-person scale illustration without silently rewriting the old enterprise model</td>
+</tr>
+<tr>
+<td>IND-014</td>
+<td>Railway predecessor founded 1898; 1954 rescue/name; 1991 ARU organization and railway ownership; 2008 QSub election assumed</td>
+<td><a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/industrial/source/chronology.json">Chronology</a> distinguishes dates from registry/tax evidence. No assertion of actual corporate or IRS records</td>
+</tr>
+<tr>
+<td>IND-015</td>
+<td>Intended joint §338(h)(10) treatment uses a corporate buyer, valid S seller and assumed valid wholly owned pre-close QSub; tax qualification and actual filing remain evidenced conditions</td>
+<td><a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/industrial/transaction/07_ARU_TAX_STRUCTURE_MEMORANDUM.md">Tax memo</a>. Filing-ready is not filed. October 15, 2026 is the tracked election deadline; economic Jan1–6 stub does not redefine federal deemed-sale timing. Finance models identifiable deferred taxes explicitly</td>
+</tr>
+<tr>
+<td>IND-016</td>
+<td>ARU transaction, PPA, debt, working capital, customers/contracts, payroll, statements and 2026 forecasts share one numerical source and generated reconciliation</td>
+<td><a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/industrial/source/finance.json">Finance source</a>. Derived parameters and forecast uncertainty are disclosed. No copied independent PPA schedule in this register</td>
+</tr>
+<tr>
+<td>IND-017</td>
+<td>The handoff's Wyoming geographic assertions are corrected with cited real anchors; Taylor and the railway/property corridor are fictional modeled geometry</td>
+<td><a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/industrial/source/operations.json">Operations source</a>. RW current anchor 42.22,-108.18 and Taylor 42.12,-108.10. Approximate map geometry and provisional inspection positions do not certify legal rights, engineering, land ownership or a direct mine connection</td>
+</tr>
+<tr>
+<td>IND-018</td>
+<td>Taylor may support ordinary industrial logistics; ARU/BS&amp;T uranium custody remains OPEN_GATED</td>
+<td><a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md">Current RW bridge</a>. An owned terminal, general carrier exemption or DOE membership concept is not a blanket uranium qualification</td>
+</tr>
+<tr>
+<td>IND-019</td>
+<td>Federal/downstream strategy distinguishes historical procurement, current program eligibility, awarded prime contracts and plausible partnerships</td>
+<td><a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/industrial/pale_sun/10_FEDERAL_AND_DOWNSTREAM_BRIEF.md">Official-source brief</a>. No fabricated federal award, consortium membership, HALEU processing plant or government agency</td>
+</tr>
+<tr>
+<td>IND-020</td>
+<td>Every reconstructed evidence document declares event date, availability, actual creation time, cutoff and fact state; earlier participant snapshots cannot inherit later retrospectives automatically</td>
+<td><a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/industrial/source/chronology.json">Chronology document index</a>. Participant publication uses a separate public allowlist. Raw handoff and private evaluation materials are not participant evidence</td>
+</tr>
+<tr>
+<td>IND-021</td>
+<td>Existing chart artwork and briefing exports are historical bytes; current organization SVGs and current narrative show the industrial closeout</td>
+<td><a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/docs/organization/README.md">Organization index</a>. A preserved image with an earlier date does not control current names or legal state. The renderer consumes structured entities and preserves current authored pages</td>
+</tr>
+</tbody>
+</table>
+<h2>Numerical and operational boundaries retained</h2>
+<p>Red Wash's established mining economics, technical basis, 140-FTE envelope and operating safeguards remain the selected mine case. The old $15M transport screen is unbooked. It is not silently converted into ARU purchase consideration, terminal construction or uranium-custody capital.</p>
+<p>ARU's independent 2025 baseline must show the railway's maintenance burden together with profitable nonrail businesses, customer and renewal risk, payroll coverage, environmental and claim reserves, and a complete EV-to-cash-to-equity reconciliation. Finance and operations source files control their respective generated schedules. Legal, book and tax perimeters must be reconciled explicitly; intercompany revenue is eliminated once rather than counted as new outside economic activity.</p>
+<p>The reconstruction deliberately retains qualifications that have not been earned: direct uranium custody, final engineered corridor/rights certification, actual tax filing confirmation, collection of future escrow/retention amounts, future forecasts as actual results, and unrelated Advisory/enterprise structure. An open permission is not a reason to leave completed synthetic corporate work marked provisional; an accepted fictional decision is not a reason to claim the permission exists.</p>
+<h2>Provenance and historical compatibility</h2>
+<p>The root handoff provenance archive controls the exact original ZIP/Markdown hashes. The received Markdown checksum and separately stated artwork checksum require independent verification; a malformed artwork string is corrected using the actual verified bytes, not padded by guesswork. The reconstructed institutional documents cite their own evidence sequence and external sources. They do not copy the raw handoff into a participant evidence pack.</p>
+<p>The old Red Wash v1.0.0 source and closeout remain historical. Current Red Wash interpretation uses the <code>_R2</code> closeout and v1.1.0 sources. Pinned base finance/lore/board artifacts remain unchanged. Conflicting live work was reviewed at PR heads before integration; a branch, unmerged PR, draft map, local modification or later timestamp alone does not establish current canon.</p>
+</article>
+<aside class="source-identity"><strong>Edition provenance</strong><br>SH-IND-DR-001<br>Source: <a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md">docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md</a><br>Source revision: 79437a778d4a4d5097a3cdaa36d7d8ab13217536<br>Source SHA-256: 0b21f22c2a8ffe55fa4e43898834ddc38389e42efe2e9c11ff48c7418dad8be7</aside>
+</body></html>

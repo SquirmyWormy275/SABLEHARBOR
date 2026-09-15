@@ -73,6 +73,7 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `docs/internal/company-closeout`
 
 - [Main source protection](../../internal/company-closeout/MAIN_PROTECTION.md) — MD
+- [PR #145 integration evidence](../../internal/company-closeout/PR145_INTEGRATION.md) — MD
 
 ## `docs/internal/development`
 
