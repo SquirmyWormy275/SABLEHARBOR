@@ -46,6 +46,34 @@ def validate(data, tables, root=ROOT, legacy_rows=None):
             ids = {r[key] for r in tables[table] if r["unit"] == boundary["unit"]}
             if len(boundary[field]) != len(ids) or set(boundary[field]) != ids:
                 raise ValueError("Contract/project assigned to wrong boundary")
+    service_tax = data.get("august_core_transaction_tax")
+    if service_tax:
+        expected = {
+            r["contract_id"]: r
+            for r in tables["current_contracts"]
+            if r["unit"] in {"foundry-field", "atlas-meridian", "advisory"}
+        }
+        supplied = service_tax["customers"]
+        if len(supplied) != 58 or {r["contract_id"] for r in supplied} != set(expected):
+            raise ValueError("Current service tax population incomplete")
+        for row in supplied:
+            contract = expected[row["contract_id"]]
+            if row["customer_id"] != contract["customer_id"] or D(row["principal_usd"]) != D(
+                contract["monthly_fee_usd"]
+            ):
+                raise ValueError("Current tax issuer/principal mismatch")
+            if (
+                row["billing_jurisdiction"] != "US-CA"
+                or row["august_service_use_jurisdiction"] != "US-CA"
+                or row["tangible_property_delivered"]
+                or D(row["sales_tax_usd"]) != 0
+            ):
+                raise ValueError("Service tax factual premise changed; review required")
+        if (
+            service_tax["event_period"] != "2026-08"
+            or service_tax["known_on"] < data["authored_on"]
+        ):
+            raise ValueError("Current service tax period/availability invalid")
     privacy = data["privacy"]
     if (
         sum(r["jurisdiction"] == "CA" for r in tables["people"])

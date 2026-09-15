@@ -393,3 +393,15 @@ Actual product classification, exclusions and user-location sourcing must be
 reconciled before extending the forecast tax composition. The chaptered primary
 text/status were retrieved directly after browser failures; their hashes and
 exact scope are retained. This does not change August or duplicate FF-003.
+
+The current successor also completes **58 current Core contracts' August
+California billing/use facts**: 44 hosted Foundry Field services, ten Atlas
+investigations and four Advisory engagements. These are explicitly new fictional
+facts, not recovered customer addresses or 2027 identities. Their 104 logical
+service environments do not create physical facilities. No tangible product or
+storage medium is delivered. The bounded August service/electronic-delivery tax
+screen records zero incremental California sales tax and preserves principal and
+cash. Changed use jurisdiction, tangible delivery, amount or period forces renewed
+review; this treatment does not persist past the 2027 legal change by default.
+The other 34 material/industrial contracts remain separately classified rather
+than receiving this service conclusion through a shared issuer or tax field.
