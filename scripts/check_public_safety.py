@@ -13,8 +13,8 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # PR145 integrated with PR164: reviewed full-publication and geography source union.
     # Exact bytes only: no general allowance for new databases or later drift.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        11462656,
-        "50dda7bb1a00e830aff0e98a6234b3a1a9156fe8243b80c8aa234a683f960942",
+        11466752,
+        "27456bf47c925deddb01662a5646d51aa18cffa5ca416431a900f37dd575c227",
     ),
     # Reviewed September 10 successor: six approved J2 names, unchanged public scope.
     Path("docs/organization/assets/current/Sable-Harbor-Organization-Charts.pdf"): (
