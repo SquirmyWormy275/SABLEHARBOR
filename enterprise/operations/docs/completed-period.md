@@ -371,3 +371,23 @@ Cradle refiner and SPOT trader alone carry the two selected resale certificates.
 Customer principal, AR and cash do not increase. `tax_usd` identifies the
 associated tax; `customer_tax_charge_usd` remains zero for these industrial rows.
 Tax liability posting belongs to the finance successor, not this invoice export.
+
+### Independent composite reperformance
+
+From the pinned source checkout, run:
+
+```sh
+python -m enterprise.operations.reperform_closeout --source-commit SOURCE_COMMIT --output /tmp/company-reperformance.json
+```
+
+Defaults consume the existing completed-period, company-closeout-v1 finance and
+September-custody generated directories; `--completed-dir`, `--finance-dir` and
+`--september-dir` select extracted equivalents. All three components must identify
+the same selected source commit and a clean source snapshot. The command verifies
+manifest artifacts, source hashes and CSV/JSON populations, independently rebuilds
+the legacy/industrial source journals, and runs current finance, legal trade
+balances, gross/net Core assets, PS paid-on-behalf payroll, September freight and
+debt/host checks. It writes only the requested receipt, with exact input hashes,
+counts and reconciliation results. A mixed-revision or stale package fails before
+it can produce a PASS receipt. This is implementation/record reperformance, not a
+professional audit opinion or proof of external deployment.
