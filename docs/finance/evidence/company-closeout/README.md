@@ -165,3 +165,15 @@ sensitivity retain their historical review purpose. Parent current/deferred/VA
 journals and modeled cash now feed funding, statements and exports. Tax basis,
 older history and California combined-report reservations remain explicit;
 neither the former unresolved preference nor a blanket zero-tax claim controls.
+
+## August legal-employer allocation successor
+
+The old RWH/PS allocation placed only the $125,000 monthly platform fee expense
+on PS, while the completed August payroll establishes $203,125 PS employer cost.
+A scoped August 2026 correction moves $78,125 existing expense from RWH to PS:
+`CO-PAYROLL-PS-202608` debits PS5100/credits PS2150; reciprocal
+`CO-PAYROLL-RWH-202608` debits RWH1150/credits RWH5100. This records the amount
+paid on PS's behalf. Native reciprocal eliminations remove the clearing balances.
+Group expense and cash remain unchanged; the platform service fee is unchanged.
+The correction does not assert a completed payroll population in every other month.
+The independent completed-period population check joins the new legal-account legs.

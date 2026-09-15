@@ -141,6 +141,7 @@ def build(allow_working_tree=False, *, company_closeout=False):
         from enterprise.closeout.finance import CloseoutAdjustment
         adjustment = CloseoutAdjustment(source)
         adjustment.legacy_equipment_correction = True
+        adjustment.payroll_legal_correction = True
         from enterprise.closeout.software_sales_tax import SoftwareTax
         adjustment.software_tax=SoftwareTax(operating)
         policy.update(model_id="SH-COMPANY-CLOSEOUT-V1", schema_version="6.0.0",
@@ -216,7 +217,7 @@ def build(allow_working_tree=False, *, company_closeout=False):
             for r in records
             if int(r["year"]) == 2026 and not r["source_id"].startswith("RT-")
             and r["source_id"] != "SH-VOICE-GW-01"
-            and not (company_closeout and (r["source_id"].startswith(("CO-TAX-", "CO-ASSET-")) or r["source_type"] == "MEMBER_EQUITY"))
+            and not (company_closeout and (r["source_id"].startswith(("CO-TAX-", "CO-ASSET-", "CO-PAYROLL-")) or r["source_type"] == "MEMBER_EQUITY"))
         )
 
     if history(before) != history(rows):

@@ -42,6 +42,7 @@ class CloseoutAdjustment(RuntimeAdjustment):
         self.parent_tax = None
         self.software_tax = None
         self.legacy_equipment_correction = False
+        self.payroll_legal_correction = False
         self.adjustments = load()
         self.input_hash = hashlib.sha256((self.input_hash + SOURCE.read_text()).encode()).hexdigest()
 
@@ -71,6 +72,12 @@ class CloseoutAdjustment(RuntimeAdjustment):
     def post_month(self, books, year, month):
         super().post_month(books, year, month)
         self._post(books, year, month)
+        if self.payroll_legal_correction and (year,month)==(2026,8):
+            if any(r['source_id']=='CO-PAYROLL-PS-202608' for r in books.rows):raise ValueError('Duplicate PS employer payroll correction')
+            books.post('PS',2026,8,[('5100',D(78125)),('2150',D(-78125))],'CO-PAYROLL-PS-202608',
+                'PS legal employer cost paid on its behalf by RWH; no new group cost or cash',kind='COMPANY_PAYROLL_ALLOCATION')
+            books.post('RWH',2026,8,[('1150',D(78125)),('5100',D(-78125))],'CO-PAYROLL-RWH-202608',
+                'Reclassify existing paid PS employee cost from RWH to PS; reimbursement clearing only',kind='COMPANY_PAYROLL_ALLOCATION')
         if self.legacy_equipment_correction and 2026<=year<=2029:
             # Four-decimal annual/month residual rule retires original cost exactly in December2029.
             annual=D('9000000')/D(7)
