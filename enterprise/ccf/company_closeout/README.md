@@ -46,8 +46,9 @@ for every event, independent of whether corrective action was recorded.
 
 [NRC's Wyoming record](https://www.nrc.gov/agreement-states/wyoming) confirms the
 September 30, 2018 transfer for the identified milling/byproduct scope. It does not
-validate fictional license WYSML-094 or its specific conditions. All 14 permits
-still need instrument-specific obligations, due populations and evidence joins.
+validate fictional license WYSML-094 or its specific conditions. At the initial review, all 14 permits
+needed instrument-specific obligations, due populations and evidence joins. The
+August synthetic-instrument successor below now supplies its explicitly bounded scope.
 The MW-17/Cell 1 investigation remains unresolved; a trend is not a final liability
 finding. No framework has been made universally applicable.
 
@@ -327,3 +328,68 @@ python -m unittest enterprise.ccf.company_closeout.test_shipment -v
 The operations lane consumes `shipment.validate(data)` and the eight check records,
 then joins custody quantities and the separately supported September expense
 allocation. This qualification module posts no financial entries.
+
+## Current activity and historical rail reporting successors
+
+`current_activity_successor.json` joins the current August source, replacing the
+older matrix's unresolved current populations where specified: **92 contracts,
+88 customers, 104 service environments, five projects, 702 employees and 1,404
+payroll events**. Eight business/corporate boundaries preserve each exact ID.
+These current contracts are distinct from the older conditional contract counts.
+The module rejects stale source hashes and changed or duplicated population IDs.
+
+The SHI CCPA factual screen now uses **$104,900,000 of 2025 retained primary-book
+revenue across 12 legs**, recomputed independently of the August commercial
+allocator. It exceeds the adjusted $26,625,000 threshold. The newly authored
+profile states the California business and personal-information processing facts;
+407 California employee records tie to HR. Subsidiaries retain separate legal
+applicability analysis. Two synthetic privacy requests retain a late correction
+and a documented partial deletion/retention response. Neither the 790 notice
+recipient records nor 88 business contacts are extra employees.
+
+The existing benefit administrator's scope is completed as a fictional fully
+insured arrangement within its existing cost envelope. Enrollment-only sponsor
+data is distinguished from the covered group health plan and from ordinary
+customer services, whose declared August population contains no clinical PHI.
+This is not blanket HIPAA applicability or an assertion of insurer compliance.
+
+```sh
+python -m enterprise.ccf.company_closeout.current_applicability --reperform-revenue
+python -m enterprise.ccf.company_closeout.rail_reporting
+python -m unittest enterprise.ccf.company_closeout.test_rail_reporting -v
+```
+
+The current applicability command needs the integrated C03 `current_records`
+source/generator. `--repository PATH` supports a read-only integration checkout;
+it invokes supported generators in memory and checks their populations and hashes.
+
+`rail_reporting_successor.json` adds expressly authored repair/clearing/claim,
+clinical and filing facts for all 14 historical cases. **Nine events generate 11
+selected incident-form records**: eight modeled on-time submissions and one late
+submission; five cases have no Part 225 group trigger under the authored facts.
+These are incident records, not complete monthly summary reports or proof of
+actual FRA submission. Form names describe the reporting family; no government
+identifier or acknowledgment is impersonated.
+
+The 2021 late filing remains a failure. The $600,000 2024 claim remains open and
+is not treated as rail repair or automatically as property damage. Public/private
+crossing status does not remove the crossing reporting group. Medical causation
+and reportability are separate from allocation of liability. Two contained spills
+retain independent environmental/state permit screening.
+
+The primary annual editions, 2018 threshold rule, 2020 method rule and current
+225.9/225.11 source notes are recorded. Exact historical eCFR pages failed; an API
+attempt returned HTTP 406. The 2021/2023 thresholds have a US DOT published table,
+and 2025 $12,400 is explicitly inferred from FRA's 2026 notice ($12,600, a $200
+increase). Original annual notices and full event-day amendment reconciliation
+remain narrowly identified legal-review residuals. Fictional performance has been
+completed without presenting those residuals as resolved professional conclusions.
+
+### Enacted future digital-tax change
+
+The current successor records [California SB 122, Chapter 23](https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB122),
+approved June 29, 2026. Its software provisions become operative January 1, 2027.
+Actual product classification, exclusions and user-location sourcing must be
+reconciled before extending the forecast tax composition. The chaptered primary
+text/status were retrieved directly after browser failures; their hashes and
+exact scope are retained. This does not change August or duplicate FF-003.
