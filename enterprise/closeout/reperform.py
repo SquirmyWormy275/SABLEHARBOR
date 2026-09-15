@@ -31,9 +31,42 @@ def compare_protected(rows, predecessor, reviewed_source_ids=()):
     actual, expected = population(rows), population(predecessor)
     if actual != expected:
         raise ValueError(
-            f"ARU/BST protected legal population changed; added={list((actual - expected).items())[:4]}; removed={list((expected - actual).items())[:4]}"
+            "ARU/BST protected legal population changed; "
+            f"added={list((actual - expected).items())[:4]}; "
+            f"removed={list((expected - actual).items())[:4]}"
         )
     return sum(actual.values())
+
+
+def retention_closed_predecessor(predecessor, totals):
+    """Reconstruct only the known July expense's January closing consequences.
+
+    The levy remains unpaid. Its expense closes once in January 2027; equity
+    carries that balance afterward without a second annual adjustment. Preserve
+    every original acquisition, cash, payable and unrelated closing leg.
+    """
+    expected = [dict(row) for row in predecessor]
+    for scenario in ("base", "downside", "expansion"):
+        for entity, value in totals.items():
+            for account, delta in (("5000", -value), ("3100", value)):
+                candidates = [
+                    row
+                    for row in expected
+                    if (
+                        row["scenario"],
+                        row["entity"],
+                        int(row["year"]),
+                        int(row["month"]),
+                        row["account"],
+                        row["source_id"],
+                    )
+                    == (scenario, entity, 2027, 0, account, "CLOSE-2026-CORPORATE")
+                ]
+                if len(candidates) != 1:
+                    raise ValueError("Missing or duplicate predecessor retention closing leg")
+                row = candidates[0]
+                row["signed_usd"] = str(D(row["signed_usd"]) + delta)
+    return expected
 
 
 def run(out):
@@ -68,7 +101,7 @@ def run(out):
     if sorted(actual_additions) != sorted(expected_additions):
         raise ValueError("Retention levy additions differ from independently reconstructed awards")
     result["protected_aru_bst_legal_legs"] = compare_protected(
-        rows, predecessor, SOURCE_IDS.values()
+        rows, retention_closed_predecessor(predecessor, levy.totals), SOURCE_IDS.values()
     )
     funding = defaultdict(D)
     for row in predecessor:
