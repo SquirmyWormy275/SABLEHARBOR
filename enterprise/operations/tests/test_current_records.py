@@ -166,3 +166,18 @@ def test_duplicate_industrial_invoice_and_benefit_identity_fail(edition):
         tables["benefit_settlements"][0][field] = value
         with pytest.raises(ValueError, match="Benefit payment"):
             validate_current(read(SOURCE), tables)
+
+
+@pytest.mark.parametrize(
+    "table,field,value",
+    [
+        ("current_authorities", "authorized_on", "2026-09-01"),
+        ("current_authorities", "legal_entity", "BST"),
+        ("current_deliveries", "evidence_id", "MISSING"),
+    ],
+)
+def test_authority_and_performance_links_fail_closed(edition, table, field, value):
+    tables = copy.deepcopy(edition["tables"])
+    tables[table][0][field] = value
+    with pytest.raises(ValueError):
+        validate_current(read(SOURCE), tables)

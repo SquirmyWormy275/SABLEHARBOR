@@ -214,9 +214,9 @@ quarantine, an unqualified dispatch request and environmental follow-up remain.
 
 The uranium example intentionally holds both assay-passed and rejected material:
 existing RW-CUST-002/003 still require packaging/carrier qualification evidence.
-No external carrier, legal permission or converter acceptance is invented to
-complete a diagram. Completed source-to-converter transport remains a C07
-residual, distinct from ordinary ARU freight. These selected chains still need
+The separately dated September successor supplies supported newly authored
+external carrier qualification and converter custody receipt; it changes neither
+this August hold nor ordinary ARU freight authority. These selected chains still need
 full source-month quantity/accounting allocation and independent review before
 being treated as complete seven-line operating evidence.
 
@@ -235,7 +235,7 @@ The declared employee/payroll and material commercial/project populations are
 implemented. Full company acceptance remains integration-owned. Material residuals
 are invoice-specific industrial cash allocation, unresolved current sales-tax
 applicability, full physical transaction-month attribution for selected operating
-chains, qualified external uranium custody/converter evidence, and exercised
+chains, whole-population uranium custody beyond the selected September successor, and exercised
 runtime access/restore behavior. Asset/facility inventories and corporate treasury
 are joined from the existing sources by the composite edition, rather than
 recreated as a competing database here.
@@ -251,3 +251,24 @@ BST CT-1/RRTA and RUIA are separate from ordinary Form 941 and FUTA. The calcula
 assumes the accepted separate railway employer/employee population; changing those
 coverage facts requires a new classification bridge. No tax return, agency
 acknowledgement or real payment is represented as completed by this source.
+
+## September selected custody successor
+
+`python -m enterprise.operations.september_custody` and its `--check` mode build
+`enterprise/generated/september-custody-2026/records.json`. The September input
+links [shipment qualification](../../ccf/company_closeout/september_shipment_qualification.json)
+and invokes its primary-authority-backed numeric/training validator. The passed
+August lot's 200 lb U3O8 equivalent advances to a qualified external motor carrier
+on September 13 and a fictional external converter's custodial receiving bay on
+September 14. The failed 200 lb lot remains quarantined. Title stays RWH; no new
+sale, revenue or inventory valuation change is posted, and no ARU/BST uranium
+carriage is implied. Available-on remains September 15, so the successor cannot
+appear in an August or earlier known-on query.
+
+A newly authored $1,800 selected specialist freight/handling invoice and September
+14 payment are a component of the retained September $50,000 RWH external freight,
+assay and handling envelope (account 5100, source RW-FINANCE-SELECTED, journal
+RWH_PS-2026-00163). The $48,200 remainder is unallocated monthly source timing,
+not a claim that all September services or payments were complete at September 14.
+`verify_source_expense` independently matches the retained journal; no second
+expense or cash posting is made. Original OPEN source bytes remain unchanged.

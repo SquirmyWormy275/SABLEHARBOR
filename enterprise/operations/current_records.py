@@ -161,6 +161,8 @@ def commercial(source, current, tables):
     receipts = []
     projects = []
     sites = []
+    authorities = []
+    evidence = []
 
     def add(cid, pid, entity, unit, amount, owner, deliverable, kind, asset, origin, paid=True):
         customers.append(
@@ -191,6 +193,23 @@ def commercial(source, current, tables):
                 source_origin=origin,
             )
         )
+        authorities.append(
+            stamp(
+                source,
+                authority_id=cid + "-AUTH",
+                contract_id=cid,
+                legal_entity=entity,
+                unit=unit,
+                accountable_person_id=owner,
+                reviewer_person_id="SH-EMP-ESS-0002",
+                authorized_on="2026-08-01",
+                scope="August ordinary service/materials schedule within retained source revenue",
+                amount_usd=money(amount),
+                new_material_rights=False,
+                state="NEWLY_AUTHORED_SYNTHETIC_INTERNAL_AUTHORIZATION",
+                source_origin=origin,
+            )
+        )
         did = cid + "-PERFORM-202608"
         iid = cid + "-INV-202608"
         deliveries.append(
@@ -210,6 +229,25 @@ def commercial(source, current, tables):
                 else "BOOKED_SOURCE_WITH_CUSTODY_EVIDENCE_OPEN",
                 evidence_id=did + "-EVIDENCE",
                 deliverable=deliverable,
+            )
+        )
+        evidence.append(
+            stamp(
+                source,
+                evidence_id=did + "-EVIDENCE",
+                delivery_id=did,
+                contract_id=cid,
+                legal_entity=entity,
+                unit=unit,
+                performed_on="2026-08-28",
+                reviewed_on="2026-08-31",
+                population_unit="ONE_MONTHLY_CONTRACT_DELIVERABLE",
+                deliverable=deliverable,
+                source_origin=origin,
+                evidence_basis="Newly authored counterpart monthly acceptance for synthetic service"
+                if paid
+                else "Retained monthly accounting source; custody evidence separately gated",
+                independent_external_confirmation=False,
             )
         )
         invoices.append(
@@ -392,6 +430,8 @@ def commercial(source, current, tables):
         row["name"] = actual_names.get(row["customer_id"], row["name"])
         unique.setdefault(row["customer_id"], row)
     return dict(
+        current_authorities=authorities,
+        current_delivery_evidence=evidence,
         current_customers=list(unique.values()),
         current_contracts=contracts,
         current_deliveries=deliveries,
@@ -487,6 +527,26 @@ def validate_current(source, tables):
     ):
         raise ValueError("Current source revenue does not reconcile")
     bycontract = {r["contract_id"]: r for r in contracts}
+    authorities = {r["authority_id"]: r for r in tables["current_authorities"]}
+    evidence = {r["evidence_id"]: r for r in tables["current_delivery_evidence"]}
+    if len(authorities) != len(contracts) or len(evidence) != len(contracts):
+        raise ValueError("Authority or performance evidence population incomplete")
+    for delivery in tables["current_deliveries"]:
+        record = evidence.get(delivery["evidence_id"])
+        if record is None or record["delivery_id"] != delivery["delivery_id"]:
+            raise ValueError("Delivery evidence relationship missing")
+    for invoice in invoices:
+        authority = authorities.get(invoice["authority_id"])
+        if (
+            authority is None
+            or authority["contract_id"] != invoice["contract_id"]
+            or authority["legal_entity"] != invoice["legal_entity"]
+            or authority["authorized_on"] > "2026-08-28"
+            or authority["reviewer_person_id"] not in people
+            or authority["reviewer_person_id"] == authority["accountable_person_id"]
+            or D(authority["amount_usd"]) != D(invoice["principal_usd"])
+        ):
+            raise ValueError("Missing late or mismatched current authority")
     for row in invoices:
         parent = bycontract[row["contract_id"]]
         if any(row[k] != parent[k] for k in ("legal_entity", "customer_id", "unit")):
