@@ -49,6 +49,8 @@ class CloseoutAdjustment(RuntimeAdjustment):
     account_types = (
         RuntimeAdjustment.account_types
         | {
+            "CO_STATE_MIN_EXP": "expense",
+            "CO_STATE_MIN_PAY": "liability",
             "CO_RWH_ROT_EXP": "expense",
             "CO_RWH_ROT_PAY": "liability",
             "CO_FF_TAX_EXP": "expense",
@@ -63,6 +65,7 @@ class CloseoutAdjustment(RuntimeAdjustment):
         super().__init__(data)
         self.parent_tax = None
         self.industrial_tax = None
+        self.state_minimum = None
         self.software_tax = None
         self.legacy_equipment_correction = False
         self.payroll_legal_correction = False
@@ -106,6 +109,8 @@ class CloseoutAdjustment(RuntimeAdjustment):
                 "Authored 2023 placed-in-service equipment: omitted 36 months book depreciation; noncash opening correction",
                 kind="COMPANY_ASSET_CORRECTION",
             )
+        if self.state_minimum is not None:
+            self.state_minimum.post_opening(books)
         if self.parent_tax is not None:
             self.parent_tax.post_opening(books)
 
@@ -155,6 +160,8 @@ class CloseoutAdjustment(RuntimeAdjustment):
             self.software_tax.post_month(books, year, month)
         if self.industrial_tax is not None:
             self.industrial_tax.post_month(books, year, month)
+        if self.state_minimum is not None:
+            self.state_minimum.post_month(books, year, month)
         if self.parent_tax is not None:
             self.parent_tax.post_month(books, year, month)
 
