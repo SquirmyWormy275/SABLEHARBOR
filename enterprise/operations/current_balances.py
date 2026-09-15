@@ -191,18 +191,40 @@ def extend(source, tables):
                 )
             )
     current = read("enterprise/operations/source/current_company_2026_08.json")
-    tables["current_core_asset_carrying_components"] = [
-        stamp(
-            source,
-            asset_id=f"SH-CORE-ASSET-POOL-{i + 1:02d}",
-            legal_entity="SHI",
-            unit=row["unit"],
-            asset_nature=row["asset_nature"],
-            carrying_usd=row["carrying_usd"],
-            basis=current["core_ppe_basis"],
+    cohort = current["core_ppe_book_cohort"]
+    total_cost = D(cohort["gross_cost_usd"])
+    accumulated = (
+        D(cohort["opening_accumulated_depreciation_2026_usd"])
+        + D(cohort["monthly_2026_depreciation_usd"]) * cohort["elapsed_current_year_months"]
+    )
+    asset_components = []
+    used = D(0)
+    for i, row in enumerate(current["core_ppe_carrying_components"]):
+        gross = D(row["gross_cost_usd"])
+        depreciation = (
+            (accumulated * gross / total_cost).quantize(D(".0001"), rounding=ROUND_HALF_UP)
+            if i < len(current["core_ppe_carrying_components"]) - 1
+            else accumulated - used
         )
-        for i, row in enumerate(current["core_ppe_carrying_components"])
-    ]
+        used += depreciation
+        asset_components.append(
+            stamp(
+                source,
+                asset_id=f"SH-CORE-ASSET-POOL-{i + 1:02d}",
+                legal_entity="SHI",
+                unit=row["unit"],
+                asset_nature=row["asset_nature"],
+                gross_cost_usd=money(gross),
+                accumulated_depreciation_usd=format(depreciation, ".4f"),
+                net_carrying_usd=format(gross - depreciation, ".4f"),
+                cohort_id=cohort["cohort_id"],
+                placed_in_service=cohort["placed_in_service"],
+                cost_account=cohort["cost_account"],
+                accumulated_depreciation_account=cohort["accumulated_depreciation_account"],
+                basis=current["core_ppe_basis"],
+            )
+        )
+    tables["current_core_asset_carrying_components"] = asset_components
     assets = []
     operations = read("industrial/source/operations.json")
     for population in (
@@ -249,10 +271,20 @@ def validate(tables):
     controls = {r["control_id"]: r for r in tables["current_balance_controls"]}
     if len(controls) != 6:
         raise ValueError("Working capital control population incomplete")
-    if sum(D(r["carrying_usd"]) for r in tables["current_core_asset_carrying_components"]) != D(
+    if sum(D(r["gross_cost_usd"]) for r in tables["current_core_asset_carrying_components"]) != D(
         "9000000"
     ):
-        raise ValueError("Core asset carrying components differ from retained source")
+        raise ValueError("Core asset gross components differ from retained source")
+    for row in tables["current_core_asset_carrying_components"]:
+        if D(row["gross_cost_usd"]) - D(row["accumulated_depreciation_usd"]) != D(
+            row["net_carrying_usd"]
+        ):
+            raise ValueError("Core gross accumulated depreciation net bridge mismatch")
+    if sum(
+        D(r["accumulated_depreciation_usd"])
+        for r in tables["current_core_asset_carrying_components"]
+    ) != D("4714285.7139"):
+        raise ValueError("Core accumulated depreciation differs from finance cohort")
     for table in (
         "current_balance_controls",
         "current_receivable_customers",
@@ -370,4 +402,28 @@ def verify_legal_balances(tables, legal_trial_balance_rows):
     return {
         "legal_balance_rows": len(tables["current_legal_balance_bridges"]),
         "additional_journal_usd": "0.00",
+    }
+
+
+def verify_core_asset_balances(tables, legal_trial_balance_rows):
+    selected = {
+        r["account"]: D(r["signed_usd"])
+        for r in legal_trial_balance_rows
+        if r["scenario"] == "base"
+        and r["entity"] == "SHI"
+        and str(r["year"]) == "2026"
+        and str(r["month"]) == "8"
+    }
+    gross = sum(D(r["gross_cost_usd"]) for r in tables["current_core_asset_carrying_components"])
+    accumulated = sum(
+        D(r["accumulated_depreciation_usd"])
+        for r in tables["current_core_asset_carrying_components"]
+    )
+    if selected.get("LEG_1500") != gross or selected.get("LEG_1590") != -accumulated:
+        raise ValueError("Core PPE gross/net differs from corrected finance successor")
+    return {
+        "gross_usd": str(gross),
+        "accumulated_depreciation_usd": str(accumulated),
+        "net_usd": str(gross - accumulated),
+        "additional_operations_journal_usd": "0.00",
     }

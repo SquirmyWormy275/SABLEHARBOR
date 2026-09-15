@@ -4,6 +4,7 @@ from collections import defaultdict
 from decimal import Decimal as D
 
 CURRENT_SOURCE = "enterprise/operations/source/current_company_2026_08.json"
+TAX_SCOPE_SOURCE = "enterprise/ccf/company_closeout/current_activity_successor.json"
 
 
 def allocate(total, count):
@@ -421,6 +422,30 @@ def commercial(source, current, tables):
             "distinct from physical-production month",
             paid=False,
         )
+    tax_scope = read(TAX_SCOPE_SOURCE)["august_core_transaction_tax"]
+    tax_customers = {r["customer_id"]: r for r in tax_scope["customers"]}
+    if len(tax_customers) != 58 or tax_scope["event_period"] != "2026-08":
+        raise ValueError("Current tax applicability population or period changed")
+    for invoice in invoices:
+        tax = tax_customers.get(invoice["customer_id"])
+        if tax is None:
+            continue
+        if (
+            tax["contract_id"] != invoice["contract_id"]
+            or D(tax["principal_usd"]) != D(invoice["principal_usd"])
+            or tax["tangible_property_delivered"]
+            or tax["august_service_use_jurisdiction"] != "US-CA"
+            or tax["sales_tax_usd"] != "0.00"
+        ):
+            raise ValueError("Current transaction differs from scoped tax facts")
+        invoice.update(
+            tax_usd=tax["sales_tax_usd"],
+            invoice_tax_basis=tax["reason"],
+            tax_authority_id=tax_scope["id"],
+            billing_jurisdiction=tax["billing_jurisdiction"],
+            service_use_jurisdiction=tax["august_service_use_jurisdiction"],
+            tax_effective_period=tax_scope["event_period"],
+        )
     actual_names = {r["customer_id"]: r["legal_name"] for r in finance["customers"]}
     actual_names.update(
         {r["contract_id"] + "-BUYER": r["buyer"] for r in mine["contract_book_2026"]}
@@ -527,6 +552,18 @@ def validate_current(source, tables):
     ):
         raise ValueError("Current source revenue does not reconcile")
     bycontract = {r["contract_id"]: r for r in contracts}
+    tax_source = read(TAX_SCOPE_SOURCE)["august_core_transaction_tax"]
+    tax_by_customer = {r["customer_id"]: r for r in tax_source["customers"]}
+    for invoice in invoices:
+        if invoice["customer_id"] in tax_by_customer:
+            tax = tax_by_customer[invoice["customer_id"]]
+            if (
+                invoice.get("tax_usd") != tax["sales_tax_usd"]
+                or invoice.get("tax_effective_period") != "2026-08"
+                or invoice.get("service_use_jurisdiction") != "US-CA"
+                or invoice.get("tax_authority_id") != tax_source["id"]
+            ):
+                raise ValueError("Current invoice tax differs from applicable service scope")
     authorities = {r["authority_id"]: r for r in tables["current_authorities"]}
     evidence = {r["evidence_id"]: r for r in tables["current_delivery_evidence"]}
     if len(authorities) != len(contracts) or len(evidence) != len(contracts):

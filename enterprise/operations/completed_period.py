@@ -875,7 +875,7 @@ def build(source=None):
     tables["operating_events"], tables["operating_quantities"] = operating_records(source, people)
     tables["dispatch_assignments"] = dispatch_assignments(source, qualifications)
     tables["payroll_source_bridges"] = payroll_bridges(source, people, pay)
-    from .current_records import CURRENT_SOURCE, extend, validate_current
+    from .current_records import CURRENT_SOURCE, TAX_SCOPE_SOURCE, extend, validate_current
 
     extend(source, tables)
     from .current_balances import extend as extend_balances
@@ -888,6 +888,7 @@ def build(source=None):
         "enterprise/operations/completed_period.py",
         "geospatial/facilities/population/REGISTER.json",
         CURRENT_SOURCE,
+        TAX_SCOPE_SOURCE,
         "enterprise/operations/current_records.py",
         "enterprise/operations/current_balances.py",
         "enterprise/operations/invoice_settlement.py",

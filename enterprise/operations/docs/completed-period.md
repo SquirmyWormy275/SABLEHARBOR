@@ -147,9 +147,9 @@ three payroll allocations; its direct margin is $500.01 after individual payroll
 rounding. A separate failed Demotte AMD experiment has $18,500 cost and no revenue.
 These five current projects preserve research failures and distinguish sustaining
 services from precommercial research. Corporate is represented by the complete
-SHI employee, payroll, approvals and paid-cost component populations. Current
-invoice sales-tax fields remain unestablished where the tax applicability work
-has not concluded; this table does not infer a blanket exemption.
+SHI employee, payroll, approvals and paid-cost component populations. The 58 current Core service invoices now carry the controls lane’s California
+August zero-tax disposition and location/use facts. The remaining 34 industrial
+and materials invoices require their own scope; no blanket exemption is inferred.
 
 ## Primary payroll authority and fact bounds
 
@@ -281,8 +281,10 @@ six group account rollforwards, 29 customer balances, six supplier pool balances
 three accepted inventory cost classes and 15 legal-management balance bridges.
 All 149 source industrial facility/track/structure/vehicle/equipment records are
 imported with original period/status; no planned asset becomes active by import.
-Eight new Core equipment carrying components sum to the retained $9 million net
-PPE calibration without a new acquisition, depreciation or tax-basis assertion.
+Eight Core equipment components allocate the existing $9 million gross cost.
+The finance successor’s newly authored January 2023 service cohort supplies
+$4,714,285.7139 August accumulated book depreciation and $4,285,714.2861 net
+carrying value. Operations does not post a second depreciation adjustment.
 
 The $80,000 fully reserved ARU-C-025 legacy dispute remains gross of the allowance
 with no new provision or writeoff. Customer opening plus billed minus collected
@@ -313,3 +315,23 @@ written off or treated as cash. August source collections remain $3,829,683 ARU
 group and $2,993,750 RWH. Weighted amounts round HALF_UP to cents, with the final
 sorted customer receiving the residual. The authored dates and clearing references
 complete the fiction and are not independent bank confirmation. No new GL is posted.
+
+## Current Core tax and corrected PPE integration
+
+The 58 current Core customer invoices consume the controls source
+`current_activity_successor.json#august_core_transaction_tax`: California billing
+and service-use facts, no tangible property supplied, and the August service tax
+disposition. The fields cannot automatically carry forward into 2027 or affect
+the separate accepted FF-003 decision. Wrong period or altered tax amounts fail
+validation. The other 34 industrial/material transactions retain their separate
+applicability requirements.
+
+The Core asset component table now distinguishes gross cost, accumulated
+depreciation and net carrying amount. Finance owns the source correction and
+monthly journals under `LEGACY-OWNED-EQUIPMENT-9M` (January 1, 2023 placed in
+service; 84-month book life). Component accumulated depreciation is allocated
+by gross cost to four decimal places with the last component receiving the
+residual. `verify_core_asset_balances` joins corrected August LEG_1500/LEG_1590
+from the actual finance successor and rejects the former uncorrected $9 million
+net presentation. No replacement asset, host ownership or additional acquisition
+is created by this component allocation.

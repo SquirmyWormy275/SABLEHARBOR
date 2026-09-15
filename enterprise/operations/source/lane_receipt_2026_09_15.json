@@ -19,7 +19,8 @@
     "enterprise/operations/source/completed_period_2026_08.json",
     "enterprise/operations/source/current_company_2026_08.json",
     "enterprise/operations/source/september_custody_2026.json",
-    "enterprise/ccf/company_closeout/september_shipment_qualification.json"
+    "enterprise/ccf/company_closeout/september_shipment_qualification.json",
+    "enterprise/ccf/company_closeout/current_activity_successor.json"
   ],
   "generator_paths": [
     "enterprise/operations/completed_period.py",
@@ -39,7 +40,8 @@
   "independent_reperformance": [
     "current_records.verify_current_finance(edition, legacy_snapshot, anchor_rows): original independent legacy and industrial journal source comparison; zero additional journal",
     "current_balances.verify_legal_balances(tables, legal_trial_balance_rows): all15August legal tradeAR/AP/inventory bridges match finance successor",
-    "september_custody.verify_source_expense(result, anchor_rows): SeptemberRWH50000externalfreight envelope,1800selectedpaidcomponent,48200unallocatedmonthlytiming,zero additiveexpense"
+    "september_custody.verify_source_expense(result, anchor_rows): SeptemberRWH50000externalfreight envelope,1800selectedpaidcomponent,48200unallocatedmonthlytiming,zero additiveexpense",
+    "current_balances.verify_core_asset_balances(tables, legal_trial_balance_rows): requiredfinalcorrectedfinancejoin forLEG1500gross9m/LEG1590accumulated4714285.7139/net4285714.2861; sourcecomponent testsrejectold9mnet."
   ],
   "inspection_routes": {
     "foundry-field": "44currentcontracts ->authority/deliveryevidence/invoices/receipts ->SHI11075500totalrevenue source ->FF100staff ->Coreequipmentpool",
@@ -49,7 +51,7 @@
     "cradle": "1materialscontract plus selectedfailedresearch ->mass/yield/acceptedvalue/directmargin ->16staff ->pilot equipment; host ownership external",
     "pale-sun": "4retainedRWHcustomercontracts ->booked revenue/customerbalance/inventorysource ->PS12/RWH128staff ->selectedheld/qualifiedcustodychain and permit controls",
     "aru": "29retainedARU/BSTcontracts ->92populationjoined delivery/invoice records ->25groupcustomer balances/6supplierpool rows across industrialgroups ->149sourceassetrecords ->131staff ->warehouse/dispatch/maintenancechains",
-    "corporate": "SHIlegalbook paidcost11968000 decomposition ->ESS/IA/J2/corporate payroll/approvals ->tradeAR/AP/inventoryzero source bridge ->9000000carrying assetcomponents; financing/tax/treasury remain finance integration"
+    "corporate": "SHIlegalbook paidcost11968000 decomposition ->ESS/IA/J2/corporate payroll/approvals ->tradeAR/AP/inventoryzero source bridge ->9000000gross assetcomponents/4285714.2861netafterbookDDA; financing/tax/treasury remain finance integration"
   },
   "residuals": [
     {
@@ -63,7 +65,7 @@
     {
       "id": "B-RES-03",
       "affected_claim": "Currentinvoice salestax treatment",
-      "missing": "Applicability requires activity/location-specific controls decision; null tax fields are not exemptions.",
+      "missing": "58currentCoreCAservices have explicitly adopted scopedzero-tax annotations from controls. Remaining34industrial/materialcontracts retain ownproduct/sourcing review; no blanketexemption.",
       "source": "enterprise/operations/source/current_company_2026_08.json",
       "next_owner": "controls/finance",
       "unaffected": "Accepted2027FF003 remains separate forecastoverlay; currentprincipal andsourcebookreconcile."
@@ -75,14 +77,6 @@
       "source": "enterprise/operations/completed_period.py workforce_state",
       "next_owner": "runtime/integration",
       "unaffected": "Deterministicknown-on/effectivestate and qualificationguards tested."
-    },
-    {
-      "id": "B-RES-05",
-      "affected_claim": "CorePPE acquisition/depreciation history",
-      "missing": "9000000carrying components preserve legacy netcalibration, not grosscost/depreciation/taxbasis reconstruction or valuation opinion.",
-      "source": "SHI PRIMARY_USD legacy1500",
-      "next_owner": "finance/estimates",
-      "unaffected": "No additionalassets or replacementgoodwill; completecarryingcomponent sum."
     }
   ],
   "artifact_root": "enterprise/generated/completed-period-2026-08",
@@ -91,15 +85,17 @@
   "validation_receipt": {
     "recorded_at": "2026-09-15",
     "dependency_environment": "SABLEHARBOR-company-closeout/.venv Python with repository locked dependencies",
-    "focused_cases": 72,
-    "focused_result": "PASS; completed_period21 + current_records20 + current_balances11 + september_custody10 + invoice_settlement10",
+    "focused_cases": 74,
+    "focused_result": "PASS74cases: completed_period21 + current_records21 + current_balances12 + september_custody10 + invoice_settlement10",
     "ruff": "PASS on all changed generators and tests",
     "august_and_september_regeneration_checks": "PASS; rerun for final integration source_commit",
     "diff_check": "PASS",
     "independent_legal_balance_reperformance": "PASS15rows against finance successor full legal_monthly_trial_balances.csv",
     "independent_review": "Controls lane reproduced original chronologic, tax-component, IA approval and effective-state defects; corrected21+20 suites independently passed. Final balance and custody source integration requires composite review.",
     "historical_broad_operations_suite": "224casesPASS before later bounded additions; final composed-head broadchecks remain integration-owned",
-    "limitations": "These are implementation and synthetic source checks, not audit opinion, independent bank confirmation or deployment evidence."
+    "limitations": "These are implementation and synthetic source checks, not audit opinion, independent bank confirmation or deployment evidence.",
+    "core_ppe_finance_reperformance": "PASSagainstfreshcorrectedfinancefullbuild: gross9000000.00 accumulated4714285.7139 net4285714.2861, zeroadditionaloperationsjournal",
+    "independent_finance_legal_artifact_sha256": "e0e97555484b8b84db26730287dea8fba33c3e047cde6751bd04ba1cb7db6953"
   },
   "completed_resolutions": [
     {
@@ -107,6 +103,12 @@
       "status": "IMPLEMENTED_PENDING_INTEGRATION_ACCEPTANCE",
       "result": "113datedindustrialcustomerinvoices,113agingrows,29receipts; actualAugustinvoiceIDs/issuers/principals bind33currentindustrialinvoices. Historicinvoice dates and receiptallocation newlyauthored; customerpools nowweighted byactualbillings, not prior equalallocation. $80kfullyreserveddisputeand700k/300kolderDPDbuckets retained. No independentbankconfirmationclaimed.",
       "source": "enterprise/operations/invoice_settlement.py"
+    },
+    {
+      "id": "B-RES-05",
+      "status": "IMPLEMENTED_AND_REPERFORMED_PENDING_INTEGRATION_ACCEPTANCE",
+      "result": "Eight assetcomponents nowgross9m; finance-authored2023cohort bookopeningaccumulated3857142.8571 plus8monthly107142.8571 givesAugustaccumulated4714285.7139/net4285714.2861. OperationsaddsnoDDAjournal; verify_core_asset_balances rejectsolduncorrectedfinance.",
+      "source": "enterprise/operations/current_balances.py;enterprise/closeout/finance.py;enterprise/closeout/tax_assets.py"
     }
   ],
   "invoice_rounding": "ROUND_HALF_UPtocents for weightedallocations; last sortedcustomer receivescentresidual. Aging isdayspastdue, currentincludesnotdueand0-30DPD."

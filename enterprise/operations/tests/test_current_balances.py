@@ -20,7 +20,7 @@ def test_complete_declared_balance_populations(tables):
         sum(D(r["closing_allowance_usd"]) for r in tables["current_receivable_customers"]) == 80000
     )
     assert (
-        sum(D(r["carrying_usd"]) for r in tables["current_core_asset_carrying_components"])
+        sum(D(r["gross_cost_usd"]) for r in tables["current_core_asset_carrying_components"])
         == 9000000
     )
     expected = {
@@ -42,7 +42,7 @@ def test_complete_declared_balance_populations(tables):
         ("current_supplier_balances", "payments_usd", "1"),
         ("current_inventory_classes", "closing_quantity", "1"),
         ("current_legal_balance_bridges", "effective_period", "2027-08"),
-        ("current_core_asset_carrying_components", "carrying_usd", "1"),
+        ("current_core_asset_carrying_components", "gross_cost_usd", "1"),
     ],
 )
 def test_balance_mutations_fail(tables, table, field, value):
@@ -88,3 +88,20 @@ def test_legal_balance_reperformance_rejects_wrong_current_book(tables):
     rows[0]["signed_usd"] = "1"
     with pytest.raises(ValueError, match="independent legal"):
         verify_legal_balances(tables, rows)
+
+
+def test_core_asset_net_bridge_and_old_uncorrected_finance_rejected(tables):
+    from enterprise.operations.current_balances import verify_core_asset_balances
+
+    rows = [
+        dict(entity="SHI", scenario="base", year="2026", month="8", account=a, signed_usd=v)
+        for a, v in (("LEG_1500", "9000000"), ("LEG_1590", "-4714285.7139"))
+    ]
+    assert D(verify_core_asset_balances(tables, rows)["net_usd"]) == D("4285714.2861")
+    rows[1]["signed_usd"] = "0"
+    with pytest.raises(ValueError, match="corrected finance"):
+        verify_core_asset_balances(tables, rows)
+    broken = copy.deepcopy(tables)
+    broken["current_core_asset_carrying_components"][0]["net_carrying_usd"] = "5000000"
+    with pytest.raises(ValueError, match="net bridge"):
+        validate(broken)

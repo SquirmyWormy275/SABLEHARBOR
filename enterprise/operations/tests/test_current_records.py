@@ -181,3 +181,17 @@ def test_authority_and_performance_links_fail_closed(edition, table, field, valu
     tables[table][0][field] = value
     with pytest.raises(ValueError):
         validate_current(read(SOURCE), tables)
+
+
+def test_current_august_tax_annotation_is_scoped():
+    edition = build()
+    invoices = edition["tables"]["current_invoices"]
+    scoped = [r for r in invoices if r.get("tax_authority_id")]
+    assert len(scoped) == 58
+    assert all(r["tax_usd"] == "0.00" and r["tax_effective_period"] == "2026-08" for r in scoped)
+    assert len([r for r in invoices if r["tax_usd"] is None]) == 34
+    for field, value in (("tax_usd", "1.00"), ("tax_effective_period", "2027-08")):
+        broken = copy.deepcopy(edition["tables"])
+        broken["current_invoices"][0][field] = value
+        with pytest.raises(ValueError, match="tax differs"):
+            validate_current(read(SOURCE), broken)

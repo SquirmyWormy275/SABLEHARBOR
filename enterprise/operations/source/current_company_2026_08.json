@@ -186,44 +186,59 @@
   "core_ppe_carrying_components": [
     {
       "unit": "foundry-field",
-      "carrying_usd": "5000000.00",
-      "asset_nature": "Owned compute/service equipment"
+      "asset_nature": "Owned compute/service equipment",
+      "gross_cost_usd": "5000000.00"
     },
     {
       "unit": "atlas-meridian",
-      "carrying_usd": "500000.00",
-      "asset_nature": "Owned network and control equipment"
+      "asset_nature": "Owned network and control equipment",
+      "gross_cost_usd": "500000.00"
     },
     {
       "unit": "willow",
-      "carrying_usd": "1000000.00",
-      "asset_nature": "Owned research bench equipment"
+      "asset_nature": "Owned research bench equipment",
+      "gross_cost_usd": "1000000.00"
     },
     {
       "unit": "cradle",
-      "carrying_usd": "1000000.00",
-      "asset_nature": "Owned pilot process equipment; external host facilities excluded"
+      "asset_nature": "Owned pilot process equipment; external host facilities excluded",
+      "gross_cost_usd": "1000000.00"
     },
     {
       "unit": "j2",
-      "carrying_usd": "500000.00",
-      "asset_nature": "Owned analysis and training equipment"
+      "asset_nature": "Owned analysis and training equipment",
+      "gross_cost_usd": "500000.00"
     },
     {
       "unit": "ess",
-      "carrying_usd": "300000.00",
-      "asset_nature": "Owned employee IT equipment"
+      "asset_nature": "Owned employee IT equipment",
+      "gross_cost_usd": "300000.00"
     },
     {
       "unit": "corporate",
-      "carrying_usd": "600000.00",
-      "asset_nature": "Owned corporate IT and office equipment; no land/building title asserted"
+      "asset_nature": "Owned corporate IT and office equipment; no land/building title asserted",
+      "gross_cost_usd": "600000.00"
     },
     {
       "unit": "ia",
-      "carrying_usd": "100000.00",
-      "asset_nature": "Owned assurance IT equipment"
+      "asset_nature": "Owned assurance IT equipment",
+      "gross_cost_usd": "100000.00"
     }
   ],
-  "core_ppe_basis": "New synthetic carrying-value component register within retained9m legacy netPPE calibration, not an appraisal, grosscost rollforward, new asset acquisition or revised depreciation/tax basis."
+  "core_ppe_basis": "New synthetic component allocation of existing9m gross owned equipment; finance successor LEGACY-OWNED-EQUIPMENT-9M cohort placed2023-01-01 supplies book depreciation correction. No new asset acquisition or host facility ownership.",
+  "core_ppe_book_cohort": {
+    "cohort_id": "LEGACY-OWNED-EQUIPMENT-9M",
+    "source_path": "enterprise/closeout/tax_assets.py",
+    "book_posting_path": "enterprise/closeout/finance.py",
+    "placed_in_service": "2023-01-01",
+    "life_months": 84,
+    "gross_cost_usd": "9000000.0000",
+    "opening_accumulated_depreciation_2026_usd": "3857142.8571",
+    "monthly_2026_depreciation_usd": "107142.8571",
+    "as_of": "2026-08-31",
+    "elapsed_current_year_months": 8,
+    "cost_account": "LEG_1500",
+    "accumulated_depreciation_account": "LEG_1590",
+    "basis": "Finance-authored existing equipment vintage and noncash opening/monthly book correction; fourdecimal annual residual policy stays finance-owned. Asset split uses grossweights andlastcomponentresidual."
+  }
 }
