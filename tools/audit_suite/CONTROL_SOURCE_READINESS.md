@@ -1,5 +1,14 @@
 # Control-source readiness implementation gaps
 
+The latest explicit inventory, `source-readiness-maintained-2026-09-14/run-v4-lifecycle/`,
+adds the separately collected lifecycle-b branch to reference-v4. It verifies 532
+originals and retained copies: 367 documentary and 165 qualified activity versions,
+with explicit activity references for 24 of 70 controls. The other 46 have none in
+this selection. Eleven source components and two separate audit snapshots are
+combined for inspection only; this does not create a coherent company year or
+alter reference-v4's own 520-original collection. Earlier inventories below preserve
+their original selections and counts.
+
 The maintained [explicit-config inventory](../../docs/internal/development/audit-suite/AQ_SOURCE_READINESS_INVENTORY_2026-09-14.md)
 covers the current 70-control corporate SOC 2 + HIPAA scope. Its reference-v3 run
 verifies 457 original source versions and retained copies across 115 systems:

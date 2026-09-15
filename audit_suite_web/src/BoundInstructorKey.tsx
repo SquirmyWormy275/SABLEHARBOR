@@ -1,6 +1,7 @@
+import { boundRetainedArtifacts } from "./boundRetainedSources";
 import { InstructorComparison } from "./InstructorComparison";
 import { useEffect, useState } from "react";
-import { request, type Engagement } from "./api";
+import { request, type Engagement, type Row } from "./api";
 import {
   validateBoundResponse,
   sourceTimeline,
@@ -10,6 +11,7 @@ import {
 export default function BoundInstructorKey(props: {
   engagement: Engagement;
   viewerId: string;
+  onPreview?: (artifact: Row) => void;
 }) {
   return (
     <BoundExplorer
@@ -25,9 +27,11 @@ export default function BoundInstructorKey(props: {
 }
 function BoundExplorer({
   engagement: e,
+  onPreview,
 }: {
   engagement: Engagement;
   viewerId: string;
+  onPreview?: (artifact: Row) => void;
 }) {
   const [response, setResponse] = useState<BoundResponse | null>(null),
     [error, setError] = useState(""),
@@ -195,6 +199,34 @@ function BoundExplorer({
             {source.retained_audit_artifact_ids.join(", ") || "None recorded"}.
             A retained copy does not imply current source-system access.
           </p>
+          {onPreview && (
+            <div aria-label="Retained bound originals">
+              {boundRetainedArtifacts(e, source).map((artifact) => (
+                <button
+                  key={artifact.id}
+                  type="button"
+                  onClick={() => {
+                    const exact = boundRetainedArtifacts(e, source).find(
+                      (row) => row.id === artifact.id,
+                    );
+                    if (exact) onPreview(exact);
+                  }}
+                >
+                  Inspect retained original {artifact.id}
+                </button>
+              ))}
+              {boundRetainedArtifacts(e, source).length === 0 && (
+                <p>
+                  No exact retained original is currently available for
+                  inspection. No newer source version is substituted.
+                </p>
+              )}
+              <p>
+                These links open current authorized audit copies. Captured
+                source-system access does not grant access now.
+              </p>
+            </div>
+          )}
           <p>{source.fact_verification}</p>
         </article>
       )}

@@ -223,6 +223,7 @@ type DetailContext = {
   returnTo?: DetailContext;
   focusVersion?: number;
   pinnedReference?: Row;
+  returnToBoundSource?: boolean;
 };
 export default function App() {
   const [bootstrap, setBootstrap] = useState<Bootstrap | null>(null),
@@ -447,6 +448,11 @@ export default function App() {
     };
     setDetail((previous) => {
       if (!previous) return null;
+      if (
+        previous.returnToBoundSource &&
+        !engagement.permissions?.includes("instruct")
+      )
+        return null;
       const rows = (collections[previous.kind] ?? []).filter(
         (row) => row.id === previous.row.id,
       );
@@ -2253,6 +2259,23 @@ export default function App() {
                         <BoundInstructorKey
                           engagement={e}
                           viewerId={bootstrap.viewer.id}
+                          onPreview={(artifact) => {
+                            if (!e.permissions?.includes("instruct")) return;
+                            const ref = {
+                              id: artifact.id,
+                              collection: "artifacts",
+                              sha256: artifact.sha256,
+                              version: artifact.version,
+                            };
+                            const target = lineageReference(e, ref);
+                            if (target)
+                              setDetail({
+                                kind: "artifact",
+                                row: target.row,
+                                pinnedReference: ref,
+                                returnToBoundSource: true,
+                              });
+                          }}
                         />
                       )}
                     {e.permissions?.includes("instruct") &&
@@ -2594,6 +2617,11 @@ export default function App() {
             title={str(detail.row.title ?? detail.row.name ?? detail.row.id)}
             onClose={() => setDetail(null)}
           >
+            {detail.returnToBoundSource && (
+              <button type="button" onClick={() => setDetail(null)}>
+                Back to bound source
+              </button>
+            )}
             {detail.returnTo && (
               <button
                 type="button"
