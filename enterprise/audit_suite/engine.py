@@ -529,6 +529,8 @@ class Engine:
         kind = command.get("kind", "")
         if kind.startswith("scenario.custom.") or kind == "company.activate":
             permissions = {"instruct"}
+        if kind == "review.resolve" and "disposition" in command.get("payload", {}):
+            permissions = {"learn", "review", "instruct"}
         if kind in {"review.prepare", "review.experimental"}:
             permissions = {"learn", "review", "instruct"}
         replay = self.store.preflight(actor, engagement_id, command, permissions=permissions)
@@ -1063,18 +1065,79 @@ class Engine:
                 )
             else:
                 row = find(state, "reviews", p.get("id", p.get("review_id")))
-                workpaper = find(state, "workpapers", row["workpaper_id"])
-                latest = workpaper["versions"][-1]
-                row["history"].append(
-                    {
+                explicit_feedback = "disposition" in p
+                disposition = p.get("disposition")
+                if explicit_feedback and disposition not in (
+                    "agree",
+                    "disagree",
+                    "correct",
+                    "missing_context",
+                    "human_review",
+                ):
+                    raise DomainError("Choose a supported review response disposition")
+                response = require_text(p, "response")
+                if row.get("kind") == "EXPERIMENTAL_AI":
+                    if not explicit_feedback:
+                        raise DomainError("Experimental suggestions require explicit feedback")
+                    if "input_digest" in p and p["input_digest"] != row.get("input_digest"):
+                        raise DomainError("Review input digest changed", status=409)
+                    selected = (
+                        row.get("input_layers", {})
+                        .get("observable_layer", {})
+                        .get("workpaper_ids", [])
+                    )
+                    papers = [find(state, "workpapers", paper_id) for paper_id in selected]
+                    row.setdefault("appeals", []).append(
+                        {
+                            "disposition": disposition,
+                            "response": response,
+                            "input_digest": row.get("input_digest"),
+                            "review_result_digest": digest(row.get("result")),
+                            "response_workpaper_versions": [
+                                {
+                                    "workpaper_id": paper["id"],
+                                    "version": paper["versions"][-1]["version"],
+                                    "digest": digest(paper["versions"][-1]),
+                                }
+                                for paper in papers
+                            ],
+                            "professional_acceptance": "NOT_ASSERTED",
+                            **stamped,
+                        }
+                    )
+                    # Feedback never changes the suggestion, acceptance or original input pins.
+                else:
+                    if row.get("kind", "HUMAN") != "HUMAN" or not row.get("workpaper_id"):
+                        raise DomainError("Only human comments or AI suggestions accept responses")
+                    workpaper = find(state, "workpapers", row["workpaper_id"])
+                    latest = workpaper["versions"][-1]
+                    if "response_workpaper_version" in p and (
+                        type(p["response_workpaper_version"]) is not int
+                        or p["response_workpaper_version"] != latest["version"]
+                    ):
+                        raise DomainError("Response workpaper version changed", status=409)
+                    entry = {
                         "status": row["status"],
-                        "response": require_text(p, "response"),
+                        "response": response,
                         "response_workpaper_version": latest["version"],
                         "response_workpaper_version_digest": digest(latest),
                         **stamped,
                     }
-                )
-                row["status"] = "RESOLVED"
+                    if explicit_feedback:
+                        entry.update(
+                            disposition=disposition, professional_acceptance="NOT_ASSERTED"
+                        )
+                    row.setdefault("history", []).append(entry)
+                    # Omitted disposition preserves the existing independently role-gated action.
+                    if not explicit_feedback:
+                        row["status"] = "RESOLVED"
+                if explicit_feedback:
+                    row["latest_response_disposition"] = disposition
+                    row["feedback_status"] = (
+                        "HUMAN_REVIEW_REQUESTED"
+                        if disposition == "human_review"
+                        else "FEEDBACK_RECORDED"
+                    )
         elif kind == "survey.submit":
             state["surveys"].append(
                 {

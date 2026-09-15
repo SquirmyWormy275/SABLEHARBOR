@@ -171,3 +171,23 @@ also appear in the finding's references. Only the last two categories permit
 list is valid; the model is never required to invent a defect. Explicit quotes
 inside rationale/claim/uncertainty/follow-up are verified too. Older stored
 `observations` remain readable and are not rewritten into invented typed findings.
+
+## Explicit review feedback
+
+`review.resolve` with an explicit `disposition` records feedback: `agree`,
+`disagree`, `correct`, `missing_context` or `human_review`. Current learners may
+respond, as may reviewers and instructors. A human comment retains its issue
+status and appends the response to history with exact current workpaper version
+and digest. An experimental suggestion retains its original result, input pins
+and `SUGGESTIONS_ONLY` status; feedback is appended to appeals with the response's
+workpaper pins. The current feedback status and disposition are separate fields.
+Neither agreement nor a claimed correction establishes acceptance or closes an
+issue. Prepared input rows cannot receive feedback.
+
+An optional `input_digest` for experimental suggestions or
+`response_workpaper_version` for human comments rejects stale explicit pins.
+The command's existing expected engagement revision remains required. For
+compatibility, a human review command without disposition remains an independent
+resolution action restricted to review/instruct permission. Historical entries
+are not rewritten. Focused authorization, replay, stale-input and preservation
+tests cover both routes.
