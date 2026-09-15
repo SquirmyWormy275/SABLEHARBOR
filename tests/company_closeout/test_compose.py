@@ -45,11 +45,20 @@ def tree(tmp_path):
     )
     people = tmp_path / "enterprise/generated/completed-period-2026-08"
     people.mkdir(parents=True)
-    (people / "records.json").write_text('{"population": []}')
+    (people / "records.json").write_text(
+        json.dumps(
+            {
+                "population": [],
+                "repository_source_commit": revision,
+                "publishable_source_snapshot": True,
+            }
+        )
+    )
     (people / "manifest.json").write_text(
         json.dumps(
             {
                 "source_commit": revision,
+                "publishable_source_snapshot": True,
                 "source_hashes": source_hashes,
                 "artifacts": {"records.json": sha((people / "records.json").read_bytes())},
             }
@@ -115,3 +124,25 @@ def test_stale_or_unavailable_generated_population_rejected(tree, fault):
         generate(
             tree, "2026-08-31T00:00:00Z" if fault == "backdate" else "2099-01-01T00:00:00Z", "test"
         )
+
+
+@pytest.mark.parametrize(
+    "fault", ["manifest_preview", "record_preview", "missing_clean_flag", "record_revision"]
+)
+def test_accepted_workforce_requires_clean_consistent_source_provenance(tree, fault):
+    people = tree / "enterprise/generated/completed-period-2026-08"
+    manifest = json.loads((people / "manifest.json").read_text())
+    records = json.loads((people / "records.json").read_text())
+    if fault == "manifest_preview":
+        manifest["publishable_source_snapshot"] = False
+    elif fault == "record_preview":
+        records["publishable_source_snapshot"] = False
+    elif fault == "missing_clean_flag":
+        manifest.pop("publishable_source_snapshot")
+    else:
+        records["repository_source_commit"] = "0" * 40
+    (people / "records.json").write_text(json.dumps(records))
+    manifest["artifacts"]["records.json"] = sha((people / "records.json").read_bytes())
+    (people / "manifest.json").write_text(json.dumps(manifest))
+    with pytest.raises(EditionError, match="Workforce|workforce"):
+        generate(tree, "2099-01-01T00:00:00Z", "test", accepted=True)

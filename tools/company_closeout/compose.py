@@ -55,6 +55,17 @@ def generate(root: Path, available_at: str, version: str, accepted=False):
     people_manifest = json.loads((workforce / "manifest.json").read_bytes())
     if identity["source_revision"] != revision or people_manifest["source_commit"] != revision:
         raise EditionError("Generated package source revision is stale; regenerate at this head")
+    people_records = json.loads((workforce / "records.json").read_bytes())
+    if (
+        not isinstance(people_records, dict)
+        or people_records.get("repository_source_commit") != revision
+    ):
+        raise EditionError("Workforce records and manifest source revision differ")
+    if accepted and (
+        people_manifest.get("publishable_source_snapshot") is not True
+        or people_records.get("publishable_source_snapshot") is not True
+    ):
+        raise EditionError("Accepted package cannot use preview or unverified workforce provenance")
     if accepted and identity["dirty_development_build"]:
         raise EditionError("Accepted package cannot use a development finance build")
     for relative, digest in identity["source_files"].items():

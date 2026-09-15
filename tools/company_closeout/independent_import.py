@@ -53,6 +53,9 @@ def inspect(directory: Path):
         for name, columns in schema.items():
             if not re.fullmatch("[A-Za-z_][A-Za-z_0-9]*", name):
                 raise ValueError("Unsafe table identifier")
+            actual_columns = [r[1] for r in db.execute(f'PRAGMA table_info("{name}")')]
+            if actual_columns != columns:
+                raise ValueError("SQL column identity differs from declared export schema")
             with (directory / "tables" / f"{name}.csv").open(newline="") as stream:
                 reader = csv.DictReader(stream)
                 if reader.fieldnames != columns:
@@ -138,6 +141,9 @@ def inspect(directory: Path):
                     raise ValueError("Unexpected unit objects or tables")
                 for table in declared:
                     fields = schema[table]
+                    actual_columns = [r[1] for r in db.execute(f'PRAGMA table_info("{table}")')]
+                    if actual_columns != fields:
+                        raise ValueError("Unit SQL column identity differs from declared schema")
                     routing = next(
                         x for x in ("reporting_unit", "unit", "home_unit") if x in fields
                     )

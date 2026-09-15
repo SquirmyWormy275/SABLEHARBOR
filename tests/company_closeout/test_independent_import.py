@@ -95,3 +95,12 @@ def test_executable_sql_object_rejected_even_with_new_hash(exports):
     rehash(exports)
     with pytest.raises(ValueError, match="executable object"):
         inspect(exports)
+
+
+@pytest.mark.parametrize("relative", ["enterprise.sqlite3", "units/foundry-field/evidence.sqlite3"])
+def test_sql_column_identity_cannot_drift_behind_matching_row_values(exports, relative):
+    with sqlite3.connect(exports / relative) as db:
+        db.execute("ALTER TABLE records RENAME COLUMN record_id TO wrong_identity")
+    rehash(exports)
+    with pytest.raises(ValueError, match="SQL column"):
+        inspect(exports)
