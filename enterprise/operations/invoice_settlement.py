@@ -6,6 +6,27 @@ from decimal import ROUND_HALF_UP
 from decimal import Decimal as D
 
 
+def rwh_monthly_contract_amounts(month):
+    from industrial.tools.build_financials import alloc
+
+    from .completed_period import read
+
+    mine = read("red_wash/source/core_operating_data.json")
+    contracts = mine["contract_book_2026"]
+    values = [D(r["pounds"]) * D(r["price_usd_lb"]) for r in contracts]
+    total = D(alloc(mine["finance_2026"]["revenue_usd"], [1] * 12)[month - 1])
+    used, result = D(0), {}
+    for index, row in enumerate(contracts):
+        value = (
+            (total * values[index] / sum(values)).quantize(D(".01"))
+            if index < len(contracts) - 1
+            else total - used
+        )
+        result[row["contract_id"]] = value
+        used += value
+    return result
+
+
 def extend(source, tables):
     from .completed_period import money, stamp
 
@@ -50,15 +71,53 @@ def extend(source, tables):
             (parent_id + "-OPEN-61-90", "2026-04-15", "2026-06-15", old61, D(0), True),
             (parent_id + "-DISPUTE", "2026-04-01", "2026-05-15", allowance, allowance, True),
         ]
+        sale_details = {}
+        if b["financial_group"] == "RWH_PS":
+            contract_id = linked[0]["contract_id"]
+            july = rwh_monthly_contract_amounts(7)[contract_id]
+            june = rwh_monthly_contract_amounts(6)[contract_id]
+            june_open = other_open - july
+            if not D(0) <= june_open <= june or allowance or old31 or old61:
+                raise ValueError(
+                    "RWH opening AR cannot be reconstructed within June/July sale capacity"
+                )
+            specs = []
+            for period, issued, due, outstanding, face in [
+                ("2026-06", "2026-06-30", "2026-07-30", june_open, june),
+                ("2026-07", "2026-07-31", "2026-08-30", july, july),
+            ]:
+                invoice_id = parent_id + "-OPEN-" + period.replace("-", "")
+                specs.append((invoice_id, issued, due, outstanding, D(0), True))
+                sale_details[invoice_id] = dict(
+                    sale_period=period,
+                    source_contract_id=contract_id,
+                    invoice_face_usd=money(face),
+                    collected_before_august_usd=money(face - outstanding),
+                    sale_period_basis=(
+                        "Native monthly contract revenue allocation; "
+                        "invoice date does not establish tax rate"
+                    ),
+                )
         specs += [
             (r["invoice_id"], r["issued_on"], "2026-09-30", D(r["principal_usd"]), D(0), False)
             for r in linked
         ]
+        if b["financial_group"] == "RWH_PS":
+            for row in linked:
+                sale_details[row["invoice_id"]] = dict(
+                    sale_period="2026-08",
+                    source_contract_id=row["contract_id"],
+                    invoice_face_usd=row["principal_usd"],
+                    collected_before_august_usd="0.00",
+                    sale_period_basis="Current August monthly contract allocation",
+                )
         for invoice_id, issued, due, amount, reserve, opening in specs:
             if amount == 0:
                 continue
             # Retain aged balances/dispute; collect the ordinary opening first.
-            eligible = invoice_id.endswith("OPEN-CURRENT") or not opening
+            eligible = (
+                invoice_id.endswith("OPEN-CURRENT") or "-OPEN-2026" in invoice_id or not opening
+            )
             paid = min(amount, to_collect) if eligible else D(0)
             to_collect -= paid
             closing = amount - paid
@@ -77,7 +136,10 @@ def extend(source, tables):
                     financial_group=b["financial_group"],
                     issued_on=issued,
                     due_on=due,
-                    amount_usd=money(amount),
+                    amount_usd=sale_details.get(invoice_id, {}).get(
+                        "invoice_face_usd", money(amount)
+                    ),
+                    **sale_details.get(invoice_id, {}),
                     opening_outstanding_usd=money(amount if opening else D(0)),
                     august_billed_usd=money(D(0) if opening else amount),
                     paid_august_usd=money(paid),
@@ -183,6 +245,25 @@ def validate(tables):
         raise ValueError("Duplicate cash receipt")
     current = {r["invoice_id"]: r for r in tables["current_invoices"]}
     for invoice in invoice_by_id.values():
+        if invoice["financial_group"] == "RWH_PS" and D(invoice["opening_outstanding_usd"]):
+            period = invoice.get("sale_period")
+            if period not in {"2026-06", "2026-07"}:
+                raise ValueError("RWH opening invoice lacks supported sale period")
+            if invoice["customer_id"] != invoice["source_contract_id"] + "-BUYER":
+                raise ValueError("RWH historical source contract/customer mismatch")
+            capacity = rwh_monthly_contract_amounts(int(period[-2:]))[invoice["source_contract_id"]]
+            if (
+                D(invoice["amount_usd"]) != capacity
+                or D(invoice["invoice_face_usd"]) != capacity
+                or D(invoice["collected_before_august_usd"]) + D(invoice["opening_outstanding_usd"])
+                != capacity
+                or not D(0) <= D(invoice["opening_outstanding_usd"]) <= capacity
+            ):
+                raise ValueError(
+                    "RWH historical invoice exceeds native sale or collection capacity"
+                )
+            if invoice["issued_on"][:7] != period:
+                raise ValueError("RWH invoice date conflicts with explicit sale period")
         if D(invoice["august_billed_usd"]):
             parent = current.get(invoice["invoice_id"])
             if (
@@ -192,6 +273,21 @@ def validate(tables):
                 or D(parent["principal_usd"]) != D(invoice["august_billed_usd"])
             ):
                 raise ValueError("Invoice ledger differs from current contract invoice")
+    rwh_open = [
+        r
+        for r in invoice_by_id.values()
+        if r["financial_group"] == "RWH_PS" and D(r["opening_outstanding_usd"])
+    ]
+    expected_sales = {
+        (contract + "-BUYER", month)
+        for contract in rwh_monthly_contract_amounts(7)
+        for month in ("2026-06", "2026-07")
+    }
+    if (
+        len(rwh_open) != 8
+        or {(r["customer_id"], r["sale_period"]) for r in rwh_open} != expected_sales
+    ):
+        raise ValueError("RWH historical invoice sale-period population changed")
     for receipt in tables["current_customer_cash_allocations"]:
         invoice = invoice_by_id.get(receipt["invoice_id"])
         if (

@@ -391,3 +391,16 @@ debt/host checks. It writes only the requested receipt, with exact input hashes,
 counts and reconciliation results. A mixed-revision or stale package fails before
 it can produce a PASS receipt. This is implementation/record reperformance, not a
 professional audit opinion or proof of external deployment.
+
+### RWH opening invoice sale-period correction
+
+The earlier ordinary opening pool dated July 1 exceeded one native month's sales
+for each RWH customer. It is superseded by eight June/July invoice records,
+retaining the four August invoice identities and all AR/cash totals. Each
+historical invoice's face amount equals its native monthly contract allocation;
+`collected_before_august_usd` bridges that face amount to the July closing
+outstanding amount. Explicit `sale_period` controls the tax-period join; an
+invoice date alone is insufficient. August collections apply oldest-first:
+$1,281,252 to June sales and $1,712,498 to July sales, with August sales unpaid.
+These remain authored subledger allocations, not proof of physical shipment.
+The resulting company ledger has 117 invoices and 33 receipt allocations.

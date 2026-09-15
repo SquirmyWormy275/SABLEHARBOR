@@ -15,8 +15,8 @@ def tables():
 
 def test_dated_ledger_aging_and_source_collection_totals(tables):
     ledger = tables["current_customer_invoice_ledger"]
-    assert len(ledger) == 113
-    assert len(tables["current_customer_cash_allocations"]) == 29
+    assert len(ledger) == 117
+    assert len(tables["current_customer_cash_allocations"]) == 33
     assert sum(D(r["closing_allowance_usd"]) for r in ledger) == 80000
     totals = defaultdict(D)
     for r in tables["current_customer_cash_allocations"]:
@@ -63,5 +63,30 @@ def test_duplicate_or_omitted_evidence_fails(tables, table):
             broken[table].append(broken[table][0])
         else:
             broken[table].pop()
+        with pytest.raises(ValueError):
+            validate(broken)
+
+
+def test_rwh_opening_sales_split_cannot_exceed_native_monthly_revenue(tables):
+    rows = [
+        r for r in tables["current_customer_invoice_ledger"] if r["financial_group"] == "RWH_PS"
+    ]
+    assert len(rows) == 12
+    cash = defaultdict(D)
+    for row in rows:
+        cash[row["sale_period"]] += D(row["paid_august_usd"])
+        assert D(row["opening_outstanding_usd"]) <= D(row["invoice_face_usd"])
+    assert dict(cash) == {"2026-06": D("1281252"), "2026-07": D("1712498"), "2026-08": D("0")}
+    for field, value in [
+        ("sale_period", "2026-07"),
+        ("invoice_face_usd", "99999999"),
+        ("collected_before_august_usd", "0"),
+    ]:
+        broken = copy.deepcopy(tables)
+        next(
+            r
+            for r in broken["current_customer_invoice_ledger"]
+            if r.get("sale_period") == "2026-06"
+        )[field] = value
         with pytest.raises(ValueError):
             validate(broken)
