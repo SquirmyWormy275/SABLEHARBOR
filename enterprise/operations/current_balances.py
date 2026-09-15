@@ -6,6 +6,28 @@ from decimal import ROUND_HALF_UP
 from decimal import Decimal as D
 
 
+def mine_cost_layers():
+    from enterprise.closeout.rwh_book import current_inventory_bridge
+    from industrial.planning.enterprise import load_anchor
+
+    row = current_inventory_bridge(load_anchor())[7]
+    result = {}
+    for account, kind, cogs_key in (
+        ("1200", "cash", "corrected_cash_cost_cogs_usd"),
+        ("1210", "dda", "corrected_dda_cogs_usd"),
+    ):
+        opening = D(row[f"opening_{kind}_inventory_usd"])
+        closing = D(row[f"corrected_{kind}_inventory_usd"])
+        cogs = D(row[cogs_key])
+        result[account] = dict(
+            opening_signed_usd=format(opening, ".4f"),
+            debit_activity_usd=format(closing - opening + cogs, ".4f"),
+            credit_activity_usd=format(cogs, ".4f"),
+            closing_signed_usd=format(closing, ".4f"),
+        )
+    return result
+
+
 def extend(source, tables):
     from industrial.planning.enterprise import load_anchor
 
@@ -19,8 +41,11 @@ def extend(source, tables):
     for row in journal:
         grouped[row["entity"]].append(row)
     controls, customers, suppliers, inventory = [], [], [], []
+    mine_layers = mine_cost_layers()
     for group, rows in grouped.items():
-        for account in ("1100", "1200", "2000"):
+        for account in (
+            ("1100", "1200", "1210", "2000") if group == "RWH_PS" else ("1100", "1200", "2000")
+        ):
             opening = sum(
                 D(r["signed_usd"]) for r in rows if r["account"] == account and int(r["month"]) <= 7
             )
@@ -43,6 +68,14 @@ def extend(source, tables):
                     basis="Retained group journal; legal management allocation shown separately",
                 )
             )
+            if group == "RWH_PS" and account in mine_layers:
+                controls[-1].update(mine_layers[account])
+                controls[-1]["basis"] = (
+                    "Corrected mine book carrying source: enterprise/closeout/rwh_book.py; "
+                    "cash-production and DD&A cost layers share one physical stock population. "
+                    "Activity includes four-decimal carrying rollforward rounding."
+                )
+                controls[-1]["source_correction_id"] = "CO-RWH-BOOK-202608"
             if account == "1100":
                 candidates = sorted(
                     {
@@ -156,7 +189,9 @@ def extend(source, tables):
     legal = []
     for row in controls:
         account = row["account"]
-        key = {"1100": "receivables", "1200": "inventory", "2000": "payables"}[account]
+        key = {"1100": "receivables", "1200": "inventory", "1210": "inventory", "2000": "payables"}[
+            account
+        ]
         if row["financial_group"] == "ARU_GROUP":
             from industrial.tools.build_financials import usd
 
@@ -172,7 +207,9 @@ def extend(source, tables):
                     control_id=row["control_id"],
                     legal_entity=entity,
                     account=account,
-                    closing_signed_usd=money(value),
+                    closing_signed_usd=format(value, ".4f")
+                    if entity == "RWH" and account in mine_layers
+                    else money(value),
                     basis="Accepted legal-management balance allocation; customer/supplier "
                     "centralized pool remains separately identified",
                 )
@@ -248,6 +285,20 @@ def extend(source, tables):
                     active_at_cutoff="RETAIN_SOURCE_STATUS_NOT_AUTOMATIC_ACTIVATION",
                 )
             )
+    tables["current_mine_inventory_cost_layers"] = [
+        stamp(
+            source,
+            cost_layer_id=f"RWH-CURRENT-INVENTORY-{account}-202608",
+            control_id=f"SH-CURRENT-RWH_PS-{account}-202608",
+            legal_entity="RWH",
+            account=account,
+            cost_layer="CASH_PRODUCTION_COST" if account == "1200" else "CAPITALIZED_DDA",
+            physical_population="Same mine inventory; cost layer is not additional quantity",
+            source_path="enterprise/closeout/rwh_book.py#current_inventory_bridge",
+            **values,
+        )
+        for account, values in mine_layers.items()
+    ]
     tables.update(
         current_balance_controls=controls,
         current_receivable_customers=customers,
@@ -269,8 +320,26 @@ def validate(tables):
     from .completed_period import read
 
     controls = {r["control_id"]: r for r in tables["current_balance_controls"]}
-    if len(controls) != 6:
+    if len(controls) != 7 or len(tables["current_balance_controls"]) != 7:
         raise ValueError("Working capital control population incomplete")
+    expected_layers = mine_cost_layers()
+    layers = tables["current_mine_inventory_cost_layers"]
+    if len(layers) != 2 or {r["account"] for r in layers} != set(expected_layers):
+        raise ValueError("Mine inventory cost-layer population incomplete")
+    for row in layers:
+        if row["legal_entity"] != "RWH" or row["effective_period"] != "2026-08":
+            raise ValueError("Mine inventory cost-layer scope mismatch")
+        expected = expected_layers[row["account"]]
+        control = controls[row["control_id"]]
+        legal = [
+            r
+            for r in tables["current_legal_balance_bridges"]
+            if r["legal_entity"] == "RWH" and r["account"] == row["account"]
+        ]
+        if len(legal) != 1 or legal[0]["closing_signed_usd"] != expected["closing_signed_usd"]:
+            raise ValueError("Mine legal carrying differs from corrected source")
+        if any(row[k] != v or control[k] != v for k, v in expected.items()):
+            raise ValueError("Mine inventory carrying differs from corrected source")
     if sum(D(r["gross_cost_usd"]) for r in tables["current_core_asset_carrying_components"]) != D(
         "9000000"
     ):

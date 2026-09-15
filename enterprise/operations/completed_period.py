@@ -960,6 +960,9 @@ def build(source=None):
         "enterprise/operations/source/debt_host_2026_08.json",
         "enterprise/operations/current_records.py",
         "enterprise/operations/current_balances.py",
+        "enterprise/closeout/rwh_book.py",
+        "enterprise/closeout/rwh_history.py",
+        "enterprise/closeout/source/rwh_tax_history.json",
         "enterprise/operations/invoice_settlement.py",
         "enterprise/operations/source/lane_receipt_2026_09_15.json",
     ]

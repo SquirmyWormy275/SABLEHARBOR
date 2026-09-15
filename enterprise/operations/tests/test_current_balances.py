@@ -27,7 +27,8 @@ def test_complete_declared_balance_populations(tables):
         ("ARU", "1100"): D("3830400"),
         ("BST", "1100"): D("2249600"),
         ("RWH", "1100"): D("4366668"),
-        ("RWH", "1200"): D("7613976"),
+        ("RWH", "1200"): D("8385238.1530"),
+        ("RWH", "1210"): D("867149.3725"),
     }
     for row in tables["current_legal_balance_bridges"]:
         key = row["legal_entity"], row["account"]
@@ -105,3 +106,19 @@ def test_core_asset_net_bridge_and_old_uncorrected_finance_rejected(tables):
     broken["current_core_asset_carrying_components"][0]["net_carrying_usd"] = "5000000"
     with pytest.raises(ValueError, match="net bridge"):
         validate(broken)
+
+
+def test_mine_cost_layers_are_one_stock_and_both_required(tables):
+    layers = tables["current_mine_inventory_cost_layers"]
+    assert len(layers) == 2
+    assert sum(D(r["closing_signed_usd"]) for r in layers) == D("9252387.5255")
+    for mutation in ("omit", "balanced_wrong"):
+        broken = copy.deepcopy(tables)
+        if mutation == "omit":
+            broken["current_mine_inventory_cost_layers"].pop()
+        else:
+            r = broken["current_mine_inventory_cost_layers"][0]
+            r["opening_signed_usd"] = str(D(r["opening_signed_usd"]) + 1)
+            r["closing_signed_usd"] = str(D(r["closing_signed_usd"]) + 1)
+        with pytest.raises(ValueError, match="Mine"):
+            validate(broken)
