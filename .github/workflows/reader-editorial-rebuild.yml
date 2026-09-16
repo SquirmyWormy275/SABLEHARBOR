@@ -1,0 +1,117 @@
+name: Refresh editorial reader records for PR 167
+
+on:
+  pull_request:
+    types: [synchronize, reopened]
+    paths:
+      - .github/workflows/reader-editorial-rebuild.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: reader-editorial-rebuild-167
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    if: >-
+      github.event.pull_request.number == 167 &&
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.event.pull_request.head.ref == 'docs/human-reader-cleanup-2026-09-15'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    env:
+      EDITORIAL_BRANCH: docs/human-reader-cleanup-2026-09-15
+      EXPECTED_HEAD: ${{ github.event.pull_request.head.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install existing reader dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+          python -m pip install -r tools/documents/requirements.txt -r tools/reader/requirements.txt -r tools/legal_gaps/requirements-review.txt
+      - name: Reperform reader routes and record the current result
+        run: |
+          python - <<'PY'
+          import hashlib, json, os, subprocess, sys
+          from pathlib import Path
+          results = Path('docs/reader/usability/RESULTS.json')
+          successor = Path('docs/legal/gap-instruments/review-support/qa/v3/NAVIGATION_SUCCESSOR_2026-09-15.json')
+          receipt = successor.with_name('REVIEW.json')
+          digest = lambda payload: hashlib.sha256(payload).hexdigest()
+          original_receipt = receipt.read_bytes()
+          prior_successor = successor.read_bytes()
+          data = json.loads(prior_successor)
+          record = next(r for r in data['records'] if r['path'] == str(results))
+          prior_result = results.read_bytes()
+          assert digest(prior_result) == record['current_sha256'], 'Prior result differs from its recorded successor'
+          assert digest(original_receipt) == data['historical_receipt_sha256']
+          subprocess.run([sys.executable, 'tools/reader/usability.py'], check=True)
+          subprocess.run([sys.executable, 'tools/reader/usability.py', '--check'], check=True)
+          current_result = results.read_bytes()
+          actual = json.loads(current_result)
+          assert len(actual['tasks']) == 6 and all(t['result'] == 'PASS' for t in actual['tasks'])
+          if current_result != prior_result:
+              record['current_sha256'] = digest(current_result)
+              record['scope'] = 'Reperform all six reader routes after the full-text links and editorial home-page changes; exact PDF/workbook contents still verified. Original practical-work QA remains historical.'
+              record['editorial_refresh'] = {
+                  'pull_request': 167,
+                  'source_revision': os.environ['EXPECTED_HEAD'],
+                  'workflow_run_id': os.environ['GITHUB_RUN_ID'],
+                  'previous_successor_sha256': digest(prior_successor),
+                  'previous_result_sha256': digest(prior_result),
+                  'method': 'Run the unchanged tools/reader/usability.py, then its --check replay. All six declared routes and their promised document contents passed.',
+                  'limits': 'Automated route and content check only. No new manual design review, owner acceptance, historical QA revision, or live Wiki publication.'
+              }
+              successor.write_text(json.dumps(data, indent=2) + '\n')
+          assert receipt.read_bytes() == original_receipt, 'Historical review changed'
+          print('Reader routes replayed; original QA receipt preserved.')
+          PY
+          python tools/legal_gaps/validate_practical_work.py
+      - name: Regenerate and check existing catalogs
+        run: |
+          python tools/documents/build_institutional_catalog.py
+          python scripts/validate_institutional_catalog.py
+          python scripts/validate_reader_navigation.py --check-regeneration
+          git diff --check
+      - name: Commit only refreshed reader records
+        run: |
+          python - <<'PY'
+          import subprocess
+          allowed = {
+              'docs/internal/institutional_catalog.json',
+              'docs/internal/institutional_catalog.sqlite3',
+              'docs/wiki/Library.md',
+              'docs/reader/usability/RESULTS.json',
+              'docs/legal/gap-instruments/review-support/qa/v3/NAVIGATION_SUCCESSOR_2026-09-15.json',
+          }
+          for command in (['git', 'diff', '--name-only', '-z'], ['git', 'ls-files', '--others', '--exclude-standard', '-z']):
+              paths = subprocess.check_output(command).decode().split('\0')
+              unexpected = [p for p in paths if p and p not in allowed
+                            and not (p.startswith('docs/wiki/library/') and p.endswith('.md'))]
+              if unexpected:
+                  raise SystemExit('Unexpected generated paths: ' + repr(unexpected))
+          PY
+          git add -- docs/internal/institutional_catalog.json docs/internal/institutional_catalog.sqlite3 docs/wiki/Library.md docs/wiki/library docs/reader/usability/RESULTS.json docs/legal/gap-instruments/review-support/qa/v3/NAVIGATION_SUCCESSOR_2026-09-15.json
+          if git diff --cached --quiet; then
+            echo 'Reader records already current.'
+            exit 0
+          fi
+          remote_head=$(git ls-remote origin "refs/heads/$EDITORIAL_BRANCH" | cut -f1)
+          if [ "$remote_head" != "$EXPECTED_HEAD" ]; then
+            echo 'Editorial branch moved; refusing to overwrite it.'
+            exit 1
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Refresh reader-route results and preserve historical review evidence'
+          git push origin "HEAD:refs/heads/$EDITORIAL_BRANCH"
