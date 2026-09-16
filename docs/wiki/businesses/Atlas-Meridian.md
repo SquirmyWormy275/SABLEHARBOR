@@ -6,8 +6,6 @@
 
 Atlas Meridian is software for investigating operating data, reviewing evidence and managing client work. It provides client workspaces and supports Advisory delivery while retaining a dedicated product organization and separately contracted licenses.
 
-**Reviewed:** September 12, 2026 · Fictional enterprise; source records control.
-
 ## Reading guide
 
 Read Atlas Meridian as an investigation product with a client-work context. Its commercial records explain how access, delivery and economics fit together; they do not give software the authority to decide a matter.
@@ -16,15 +14,15 @@ Read Atlas Meridian as an investigation product with a client-work context. Its 
 
 [Current business dossier](../../../docs/business-lines/ATLAS_MERIDIAN.md) · [Letterhead dossier PDF](../../../docs/business-lines/publications/SH-BIZ-ATLAS-MERIDIAN-001_v1.1.0.pdf)
 
-Atlas is a parent-book product business, distinct from Advisory, J2 and the geographic atlas. A dedicated physical working base remains unresolved.
+Atlas is recorded on the parent’s books and remains distinct from Advisory, J2 and the geographic atlas. It uses shared accommodation in Tucson and Sacramento, with deployed work through the existing business teams. See the [location directory](../Locations.md).
 
 ## Organization and people
 
 [![Atlas Meridian existing organization chart](../../../docs/organization/assets/current/atlas-meridian.png)](../../../docs/organization/charts/atlas-meridian.md)
 
-[Read the chart’s text roster, relationship key and source qualifications](../../../docs/organization/charts/atlas-meridian.md). Grouped functions are not automatically reporting lines, separate companies or additional employees.
+[Chart and text roster](../../../docs/organization/charts/atlas-meridian.md).
 
-[Named people and recorded roles](../../../docs/organization/charts/people-atlas-meridian.md) — the current chart preserves unknown joining years rather than inventing them.
+[Named people and recorded roles](../../../docs/organization/charts/people-atlas-meridian.md).
 
 ## Operating, legal and control records
 
@@ -32,7 +30,6 @@ Atlas is a parent-book product business, distinct from Advisory, J2 and the geog
 |---|---|
 | [Product standard](../../../docs/advisory/ATLAS_MERIDIAN_COMMERCIAL_PRODUCT_STANDARD.md) | Read editions, licensing, tenant boundaries, connectors, evaluation, support and export requirements. |
 | [Professional platform](../../../docs/advisory/ATLAS_MERIDIAN_PROFESSIONAL_PLATFORM.md) | See which responsibilities belong to Product and which belong to the Advisory matter team. |
-| [September 9 decisions](../../../docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md) | Use ATL-201–209 for current commercial direction; these supersede older open pricing and edition wording. |
 | [Runtime estate](../../../enterprise/runtime/README.md) | Follow the current hosting, implementation and provider evidence, including readiness limits. |
 
 ## Finance and accounting practice
@@ -63,5 +60,3 @@ Commercial calibration is an operating policy. It does not establish executed co
 - [Foundry Field](Foundry-Field.md)
 - [Judgment](../departments/judgment.md)
 - [Enterprise Technology Services](../departments/technology.md)
-
-Related reading describes useful connections, not additional reporting lines.

@@ -31,5 +31,3 @@ Plans and synthetic restoration results do not establish enterprise-wide recover
 - [Enterprise Technology Services](../departments/technology.md)
 - [Enterprise security capability](../departments/security.md)
 - [Internal Audit](../departments/internal-audit.md)
-
-Related reading describes useful connections, not additional reporting lines.

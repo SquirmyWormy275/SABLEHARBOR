@@ -42,5 +42,3 @@ Runtime qualification, raw-source entitlements, retention/deletion schedules and
 - [Judgment](judgment.md)
 - [Enterprise Technology Services](technology.md)
 - [Enterprise security capability](security.md)
-
-Related reading describes useful connections, not additional reporting lines.

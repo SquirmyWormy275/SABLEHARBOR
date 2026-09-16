@@ -31,5 +31,3 @@ Institutional founding and formalization dates do not establish parcel tenure or
 - [Glasshouse, Wallaby and failed experiments](Project-History.md)
 - [Company history and The Crossing](History.md)
 - [Facilities and workplace services](../departments/facilities.md)
-
-Related reading describes useful connections, not additional reporting lines.
