@@ -1,0 +1,80 @@
+name: Rebuild indexes for editorial PR 167
+
+on:
+  pull_request:
+    types: [synchronize, reopened]
+    paths:
+      - .github/workflows/reader-editorial-rebuild.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: reader-editorial-rebuild-167
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    if: >-
+      github.event.pull_request.number == 167 &&
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.event.pull_request.head.ref == 'docs/human-reader-cleanup-2026-09-15'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    env:
+      EDITORIAL_BRANCH: docs/human-reader-cleanup-2026-09-15
+      EXPECTED_HEAD: ${{ github.event.pull_request.head.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install existing reader dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+          python -m pip install -r tools/documents/requirements.txt -r tools/reader/requirements.txt
+      - name: Regenerate and check the existing catalogs
+        run: |
+          python tools/documents/build_institutional_catalog.py
+          python scripts/validate_institutional_catalog.py
+          python scripts/validate_reader_navigation.py --check-regeneration
+          git diff --check
+      - name: Commit only derived reader indexes to the editorial branch
+        run: |
+          python - <<'PY'
+          import subprocess
+          paths = subprocess.check_output(['git', 'diff', '--name-only', '-z']).decode().split('\0')
+          allowed = {
+              'docs/internal/institutional_catalog.json',
+              'docs/internal/institutional_catalog.sqlite3',
+              'docs/wiki/Library.md',
+          }
+          unexpected = [p for p in paths if p and p not in allowed
+                        and not (p.startswith('docs/wiki/library/') and p.endswith('.md'))]
+          if unexpected:
+              raise SystemExit('Generator changed unexpected paths: ' + repr(unexpected))
+          untracked = subprocess.check_output(['git', 'ls-files', '--others', '--exclude-standard', '-z']).decode().split('\0')
+          unexpected = [p for p in untracked if p
+                        and not (p.startswith('docs/wiki/library/') and p.endswith('.md'))]
+          if unexpected:
+              raise SystemExit('Generator created unexpected files: ' + repr(unexpected))
+          PY
+          git add -- docs/internal/institutional_catalog.json docs/internal/institutional_catalog.sqlite3 docs/wiki/Library.md docs/wiki/library
+          if git diff --cached --quiet; then
+            echo 'Reader indexes already match the edited source files.'
+            exit 0
+          fi
+          remote_head=$(git ls-remote origin "refs/heads/$EDITORIAL_BRANCH" | cut -f1)
+          if [ "$remote_head" != "$EXPECTED_HEAD" ]; then
+            echo 'Editorial branch moved during generation; refusing to overwrite it.'
+            exit 1
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Regenerate reader indexes for the editorial pass'
+          git push origin "HEAD:refs/heads/$EDITORIAL_BRANCH"
