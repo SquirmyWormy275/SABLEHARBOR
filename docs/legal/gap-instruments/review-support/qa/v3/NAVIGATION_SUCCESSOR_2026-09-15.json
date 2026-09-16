@@ -29,16 +29,16 @@
       "path": "docs/reader/usability/RESULTS.json",
       "historical_revision": "1d86f78944c95d3fdde72c4dcc31cd9b50c2ada9",
       "historical_sha256": "db7f50a06446ebcef37c850092a4055bd699e9c969a367df9c0ba58d70116932",
-      "current_sha256": "dddfca38877c36e1c07ccfcebb6de567e367ec7aa2e59b9fe8cbd0bd6f6a1474",
-      "scope": "Reperform all six reader routes after the full-text links and editorial home-page changes; exact PDF/workbook contents still verified. Original practical-work QA remains historical.",
+      "current_sha256": "d9c781cf405e2a0577694e6c5b31d73e316e1b7c0773a1ef758be655f0e5486d",
+      "scope": "Reperform six reading and document-content routes after the human-facing navigation and location cleanup. Original practical-work QA remains historical.",
       "editorial_refresh": {
         "pull_request": 167,
-        "source_revision": "66547aefd0014c4e73146e8b12223723d6bfe069",
-        "workflow_run_id": "35043619287",
-        "previous_successor_sha256": "f2149218884c7a5e4f3bac7d8653be31708bfd6082919acc198f33817ac697a7",
-        "previous_result_sha256": "fa46e0aa648043f178f4be5085cb01ad731957181c00009a63d04b092d17f997",
-        "method": "Run the unchanged tools/reader/usability.py, then its --check replay. All six declared routes and their promised document contents passed.",
-        "limits": "Automated route and content check only. No new manual design review, owner acceptance, historical QA revision, or live Wiki publication."
+        "source_revision": "93cdc4c957467ecd7d798369b5f6c785c2f6cfaa",
+        "workflow_run_id": "35044943454",
+        "previous_successor_sha256": "ac30e57dae89b25e8f93d73ae63e3decb929eb2455385bb2697214bd29aa3ffc",
+        "previous_result_sha256": "dddfca38877c36e1c07ccfcebb6de567e367ec7aa2e59b9fe8cbd0bd6f6a1474",
+        "method": "Run unchanged tools/reader/usability.py and its --check replay; all six declared routes and document contents passed.",
+        "limits": "Automated route/content checks, not a new manual design approval, historical QA revision, or live Wiki publication."
       }
     }
   ]
