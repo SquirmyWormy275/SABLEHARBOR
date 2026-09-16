@@ -127,7 +127,6 @@ jobs:
           prior = subprocess.check_output(['git', 'show', f'{baseline}:{catalog}'])
           assert hashlib.sha256(prior).hexdigest() == '18a68105642fa09664c980fe5b4acd048235483008be305081ffe2be8f2fc089'
           changed = set(subprocess.check_output(['git', 'diff', baseline, '--name-only']).decode().splitlines())
-          # Markdown and current route QA are the only permitted reader-record changes.
           allowed = {p for p in changed if p.endswith('.md') or p in {
               'docs/reader/usability/RESULTS.json',
               'docs/legal/gap-instruments/review-support/qa/v3/NAVIGATION_SUCCESSOR_2026-09-15.json'}}
@@ -135,6 +134,8 @@ jobs:
               'reader_file', 'reader_publication_pair', 'reader_format_review', 'reader_search',
               'reader_evidence_link', 'reader_evidence_package', 'reader_counterpart_audit',
               'reader_text', 'reader_evidence_artifact')
+          reader_keys = {'reader_file': 'path', 'reader_search': 'path',
+              'reader_text': 'path', 'reader_format_review': 'source_path'}
           report = {}
           with tempfile.TemporaryDirectory() as directory:
               old_path = Path(directory) / 'prior.sqlite3'
@@ -150,10 +151,14 @@ jobs:
                       assert columns == [c[0] for c in b.description]
                       delta = set(a.fetchall()) ^ set(b.fetchall())
                       if delta:
-                          assert 'path' in columns, (table, 'Non-reader table changed')
-                          affected = {row[columns.index('path')] for row in delta}
+                          assert table in reader_keys, (table, 'Source/evidence table changed')
+                          key = reader_keys[table]
+                          assert key in columns, (table, columns)
+                          affected = {row[columns.index(key)] for row in delta}
                           assert affected <= allowed, (table, sorted(affected - allowed))
                           report[table] = sorted(affected)
+                          if table == 'reader_format_review':
+                              print('Format-review changes:', json.dumps(sorted(delta)))
                       else:
                           report[table] = 'unchanged'
           payload = catalog.read_bytes()
