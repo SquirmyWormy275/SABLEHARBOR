@@ -2,9 +2,9 @@
 
 <img src="../../assets/brand/logos/sable-harbor__reverse-horizontal.png" alt="Sable Harbor" width="360">
 
-**Reviewed:** September 12, 2026 · **Status:** repository reading layer; linked source records control.
+**Reviewed:** September 12, 2026 · **Status:** reader's guide; the linked source records remain authoritative.
 
-Sable Harbor develops industrial software, operates resource businesses, and provides professional services. This Wiki explains the businesses and corporate functions, their people, operating work, finances and places. Each business, department and history article includes in-depth source text. The reading rooms contain complete supporting records, with links between them inside the Wiki.
+Sable Harbor develops industrial software, operates resource businesses, and provides professional services. This Wiki introduces its businesses and corporate functions: who works there, what they do, how the finances work, and where operations take place. Business, department, and history articles include the supporting source text, so you can follow the details without leaving the Wiki.
 
 [Start here](Start-Here.md) · [Practical exercises](../reader/exercises/README.md) · [Document library](Library.md) · [Reading glossary](Glossary.md) · [Open questions](Open-Questions.md)
 
@@ -12,24 +12,24 @@ Sable Harbor develops industrial software, operates resource businesses, and pro
 
 ## Start your reading
 
-Start with a business or department below. Use **In-depth reading** for the operating dossier, authority or history on that page, and **On this page** to jump through longer articles. The [full-text reading room](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Reading) collects 198 supporting records across the enterprise. Each edition links to its exact repository source. The [start guide](Start-Here.md) explains the reading routes, downloads and status language.
+Choose a business or department below. Its **In-depth reading** section contains the detailed operating, authority, or history records. Use **On this page** to move through a long article. The [full-text reading room](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Reading) collects 198 supporting records, each linked to the repository version used for publication. The [start guide](Start-Here.md) explains the downloads and document status labels.
 
-For practical work, read the [acquisition exercise](../reader/exercises/ACQUISITION.md), [invoice exercise](../reader/exercises/INVOICE.md) or [contract review exercise](../reader/exercises/CONTRACTS.md) directly in the Wiki. Downloads such as Excel, PDF and SQLite remain linked to their original files or releases.
+For practical work, try the [acquisition exercise](../reader/exercises/ACQUISITION.md), [invoice exercise](../reader/exercises/INVOICE.md), or [contract review exercise](../reader/exercises/CONTRACTS.md). You can read the instructions in the Wiki and download the linked Excel, PDF, or SQLite files as needed.
 
 ## Find records for a task
 
-The [three practical exercises](../reader/exercises/README.md) provide a step-by-step entry to acquisition accounting, invoice tracing, and contract review using accepted records.
+The [three practical exercises](../reader/exercises/README.md) walk through acquisition accounting, invoice tracing, and contract review using the accepted records.
 
 | I want to… | Open first | Then inspect |
 |---|---|---|
-| Reconcile an invoice, revenue balance or cash shortfall | [Accounting exercises](../finance/READER_EXERCISES.md) | Named workbook sheets and evidence files for one release, unit and period. |
-| Test a control and follow an exception | [CCF example procedures](../../enterprise/ccf/PROCEDURES.md) | The evidence population, original result, waiver and independent re-performance. |
-| Prepare a SOC-oriented evidence request or framework comparison | [Assessment workbench](../../enterprise/ccf/assurance/README.md) | Local Excel/HTML workpapers, source inventory and unresolved review tasks; these are preparation records, not an assurance opinion. |
-| Review a purchase or an operating investment | [Industrial case guide](../../industrial/CASE_GUIDE.md) | Transaction instruments, operating constraints and the selected scenario's financial schedules. |
-| Understand who decides and who reviews | [Department directory](departments/README.md) | Existing organization charts, authority documents and dated Board records. |
-| Visit or inspect the campus concept | [Selected V08 visitor map](../../geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.png) | [PDF](../../geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.pdf) for a visitor overview; [facility index](../../geospatial/maps/facilities/ARTIFACT_INDEX.md) for individual site, building and floor plans. |
+| Reconcile an invoice, revenue balance, or cash shortfall | [Accounting exercises](../finance/READER_EXERCISES.md) | The named workbook sheets and supporting files for the same release, unit, and period. |
+| Test a control and follow an exception | [CCF example procedures](../../enterprise/ccf/PROCEDURES.md) | The records tested, original result, waiver, and independent retest. |
+| Prepare a SOC-oriented evidence request or compare frameworks | [Assessment workbench](../../enterprise/ccf/assurance/README.md) | Excel/HTML workpapers for local use, a source inventory, and unfinished review tasks. These help plan an assessment; they are not an assurance opinion. |
+| Review a purchase or an operating investment | [Industrial case guide](../../industrial/CASE_GUIDE.md) | Transaction documents, operating constraints, and financial schedules for the selected scenario. |
+| Understand who decides and who reviews | [Department directory](departments/README.md) | Organization charts, authority documents, and dated Board records. |
+| Visit or inspect the campus concept | [Selected V08 visitor map](../../geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.png) | The [PDF](../../geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.pdf) for a visitor overview, or the [facility index](../../geospatial/maps/facilities/ARTIFACT_INDEX.md) for site, building, and floor plans. |
 
-For additional exercises and expected deliverables, use the [full use-case guide](../reader/USE_CASES.md). For files by subject or format, use the [document library](Library.md).
+The [full exercise guide](../reader/USE_CASES.md) includes more exercises and explains what to produce. Use the [document library](Library.md) to find files by subject or format.
 
 ## Businesses
 
@@ -45,7 +45,7 @@ For additional exercises and expected deliverables, use the [full use-case guide
 
 [![Business lines and their work](../organization/assets/current/business-lines.png)](../organization/charts/business-lines.md)
 
-These are business-line relationships. Use the [legal ownership chart](../organization/charts/industrial-ownership.md) when studying legal entities and consolidation.
+This chart shows business-line relationships. For legal entities and consolidation, use the [legal ownership chart](../organization/charts/industrial-ownership.md).
 
 ## Departments and institutions
 
@@ -60,24 +60,24 @@ These are business-line relationships. Use the [legal ownership chart](../organi
 | J2 | [Directorate](departments/j2.md), [Headquarters](departments/j2-headquarters.md), [Contact](departments/contact.md), [Judgment](departments/judgment.md), [Orientation](departments/orientation.md), [Education](departments/education.md), [JAG](departments/jag.md) |
 | Institutional records and systems | [Alexandria](departments/alexandria.md) |
 
-Directory groupings aid navigation; they do not create departments or reporting lines. Internal Audit retains independent functional accountability. J2 remains outside ESS.
+These groups make the directory easier to browse; they are not an organization chart. Internal Audit retains independent functional accountability, and J2 remains outside ESS. Follow the linked charts for reporting relationships.
 
 ## Places, records, and history
 
-- [Locations and facilities](../../geospatial/facilities/README.md) — Individual context maps, site plans, buildings, and floors, with status and source evidence.
-- [Organization charts](../organization/README.md) — Business, people, institution, external-party, and historical charts.
-- [Legal and transaction records](../reader/transactions/README.md) — Source-linked commercial, corporate, acquisition and host-rights records, with missing evidence and accounting links.
-- [Accounting evidence packages](../finance/evidence/coverage/README.md) — Five scoped families with complete selected rows and reconciliation results.
-- [Controlled document index](../CONTROLLED_DOCUMENT_INDEX.md) — Formal source/publication entry points.
-- [History and external subjects](subjects/README.md) — Nine guided routes through people, former programs, host relationships and separate cases.
-- [Corporate history and canon files](library/history.md) — Browse dated decisions and their supersession context.
-- [Historical and external relationships](../business-lines/HISTORICAL_AND_EXTERNAL_BOUNDARIES.md) — Distinguish former programs, host operators, and counterparties from current businesses.
-- [Approved identity assets](../../assets/brand/README.md) — Find current marks and approved source-art exceptions.
+- [Locations and facilities](../../geospatial/facilities/README.md) — Context maps, site plans, buildings, and floors, with their status and supporting evidence.
+- [Organization charts](../organization/README.md) — Businesses, people, institutions, external parties, and historical relationships.
+- [Legal and transaction records](../reader/transactions/README.md) — Commercial, corporate, acquisition, and host-rights documents, with accounting links and missing evidence identified.
+- [Accounting evidence packages](../finance/evidence/coverage/README.md) — Five groups of records. Each contains the complete set of rows and reconciliation results for its stated scope.
+- [Controlled document index](../CONTROLLED_DOCUMENT_INDEX.md) — Formal company documents and their published editions.
+- [History and external subjects](subjects/README.md) — Nine guides to people, former programs, host relationships, and separate cases.
+- [Corporate history and canon files](library/history.md) — Dated decisions, including notes on which later decisions replace them.
+- [Historical and external relationships](../business-lines/HISTORICAL_AND_EXTERNAL_BOUNDARIES.md) — How former programs, host operators, and counterparties differ from current businesses.
+- [Approved identity assets](../../assets/brand/README.md) — Current logos and the original artwork that must be preserved.
 
 ## How to read
 
-Markdown opens directly in GitHub. PDFs provide formatted documents. Download Excel workbooks to inspect schedules and calculations. Complete release packages contain additional operating records, databases and, where supplied, offline browsers; follow the [download guide](../reader/USE_CASES.md#downloads-and-tools).
+Read Markdown directly on GitHub. Open PDFs for formatted documents, and download Excel workbooks to inspect schedules and calculations. Release packages contain additional operating records, databases, and, where supplied, offline browsers. The [download guide](../reader/USE_CASES.md#downloads-and-tools) explains how to open them.
 
-The [library](Library.md) indexes the underlying files without moving them or creating duplicate source documents. It includes history; current subject pages and each source's status explain what controls. Some figures are conditional scenarios or reconstructions, not observed history. The [source guide](../reader/SOURCES_AND_FORMATS.md) explains these distinctions and the three-form document requirement.
+The [library](Library.md) points to the original files rather than keeping separate copies. It includes historical material, so check each record's date and status before treating it as current. Some figures are conditional scenarios or reconstructions, not observed history. The [source guide](../reader/SOURCES_AND_FORMATS.md) explains these distinctions and why documents are maintained in three forms.
 
-[Wiki coverage](../reader/WIKI_COVERAGE.json) records seven business pages, 23 department/institution/capability pages and nine historical, external or cross-cutting subject pages.
+The Wiki has seven business guides, 23 department, institution, and capability guides, and nine guides to historical, external, or company-wide subjects. The [coverage record](../reader/WIKI_COVERAGE.json) lists them.
