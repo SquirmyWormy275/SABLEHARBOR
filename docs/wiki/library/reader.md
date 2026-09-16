@@ -57,7 +57,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Reading glossary](../Glossary.md) — MD
 - [Explore Sable Harbor](../Home.md) — MD
 - [Open questions](../Open-Questions.md) — MD
-- [Wiki reading layer](../README.md) — MD
+- [Wiki source and publishing](../README.md) — MD
 - [Start here](../Start-Here.md) — MD
 
 ## `docs/wiki/businesses`
