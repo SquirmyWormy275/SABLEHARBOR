@@ -117,6 +117,8 @@ class WikiExportTests(unittest.TestCase):
         source = self.reading_plan(["Purpose"])
         for name in (
             "Library.md",
+            "Locations.md",
+            "Records-and-Decisions.md",
             "businesses/README.md",
             "departments/README.md",
             "subjects/README.md",
@@ -139,6 +141,14 @@ class WikiExportTests(unittest.TestCase):
         self.assertEqual(source.read_bytes(), original)
         self.assertIn("source file.md", manifest["reading_sources"])
         self.assertEqual(manifest["expanded_articles"], ["Home.md"])
+        self.assertIn(
+            "<details>\n<summary>Supporting records and decision history</summary>", home
+        )
+        self.assertNotIn("<details open", home)
+        self.assertIn("/wiki/Records-and-Decisions", home)
+        sidebar = (output / "_Sidebar.md").read_text()
+        self.assertIn("[Locations and facilities](Locations)", sidebar)
+        self.assertIn("[Records and decisions](Records-and-Decisions)", sidebar)
         self.assertEqual(audit_export(output)["errors"], [])
 
     def test_changed_section_fails_before_publication(self):
