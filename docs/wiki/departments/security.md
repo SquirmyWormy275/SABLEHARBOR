@@ -41,5 +41,3 @@ Security doctrine and deterministic reference checks do not establish deployed e
 - [Risk & Compliance](risk-compliance.md)
 - [Alexandria institutional environment](alexandria.md)
 - [Continuity and crisis responsibilities](../subjects/Continuity.md)
-
-Related reading describes useful connections, not additional reporting lines.

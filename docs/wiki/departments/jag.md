@@ -38,5 +38,3 @@ Six active five-person teams describe the accepted establishment. That count doe
 - [Contact](contact.md)
 - [J2 Education](education.md)
 - [J2 Headquarters](j2-headquarters.md)
-
-Related reading describes useful connections, not additional reporting lines.

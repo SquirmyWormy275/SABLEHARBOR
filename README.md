@@ -6,6 +6,8 @@ Sable Harbor is a fictional company built to explore how businesses work: how th
 
 **[Read the Wiki](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki)** · **[Start here](docs/wiki/Start-Here.md)** · **[Choose an exercise](docs/reader/exercises/README.md)** · **[Find a document](docs/wiki/Library.md)** · **[Contribute](CONTRIBUTING.md)**
 
+[Locations and facilities](docs/wiki/Locations.md) · [Records and decisions](docs/wiki/Records-and-Decisions.md)
+
 ## Choose what you want to do
 
 On a narrow screen, scroll the table sideways to see every column.

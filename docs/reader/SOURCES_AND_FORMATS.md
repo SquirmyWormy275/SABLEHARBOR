@@ -4,6 +4,8 @@
 
 ## Read the company, then inspect the evidence
 
+[Records and decisions](../wiki/Records-and-Decisions.md) is the central guide to source authority and change history. Ordinary business articles explain the company without repeating that history.
+
 The [wiki](../wiki/Home.md) explains subjects and links to the actual records. The [document library](../wiki/Library.md) is the detailed file inventory. Use an existing document's title, date, status, and successor references before relying on it. A historical record remains useful evidence of what the case represented at that time.
 
 The repository's [authority rules](../../MAINTAINERS.md) govern conflicts. Current canon and accepted dated decisions control their stated scope. The wiki, rendered documents, financial outputs, and database indexes are representations; they do not establish facts independently.

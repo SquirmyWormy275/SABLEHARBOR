@@ -17,6 +17,7 @@ Use this page to check where a company fact came from, what changed, and which r
 | Corporate departments and headquarters | [Headquarters decisions](../canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md), with later location changes described below. |
 | Pale Sun, Red Wash and ARU | [Industrial decisions](../canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md) and [legal structure](../../industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md). |
 | Sites, offices and historical occupancy | [September 13 geographic decisions](../canon/GEOGRAPHIC_COMPLETION_2026-09-13.md) and [Klein/Fort occupancy history](../canon/KLEIN_FORT_OCCUPANCY_2026-09-13.md). |
+| Atlas Meridian commercial terms | [September 9 commercial decisions](../canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md), including the replacements for older edition and pricing questions. |
 | Hosting and the owned data-center project | [Runtime decisions](../canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md). Provider selection, construction and operation are separate states. |
 | Organization charts | [Source traceability](../organization/CANON_TRACEABILITY_MATRIX.md), [display data](../organization/source/chartbook.json) and [preserved chart history](../organization/CHART_MIGRATION.md). |
 | Source documents and published editions | [Controlled-document index](../CONTROLLED_DOCUMENT_INDEX.md) and [source and format guide](../reader/SOURCES_AND_FORMATS.md). |

@@ -6,8 +6,6 @@
 
 Willow builds and tests industrial prototypes, sensors, software and experimental processes at the Pittsburgh-area Fort. Its outputs include experiments, failed-test records, prototypes and qualified transfers to operating owners.
 
-**Reviewed:** September 12, 2026 · Fictional enterprise; source records control.
-
 ## Reading guide
 
 Follow an experiment from its question and budget to a useful transfer or a recorded failure. The important handoff is to an operating owner who can qualify, maintain and use the result.
@@ -22,9 +20,9 @@ Willow is an internal parent-book program and cost center, not a subsidiary or a
 
 [![Willow existing organization chart](../../../docs/organization/assets/current/willow-fort.png)](../../../docs/organization/charts/willow-fort.md)
 
-[Read the chart’s text roster, relationship key and source qualifications](../../../docs/organization/charts/willow-fort.md). Grouped functions are not automatically reporting lines, separate companies or additional employees.
+[Chart and text roster](../../../docs/organization/charts/willow-fort.md).
 
-[Named people and recorded roles](../../../docs/organization/charts/people-willow-team.md) — the current chart preserves unknown joining years rather than inventing them.
+[Named people and recorded roles](../../../docs/organization/charts/people-willow-team.md).
 
 ## Operating, legal and control records
 
@@ -65,5 +63,3 @@ Exact Fort parcels, measured floor areas and historical occupancy remain unresol
 - [Glasshouse, Wallaby and failed experiments](../subjects/Project-History.md)
 - [Finance](../departments/finance.md)
 - [Enterprise Technology Services](../departments/technology.md)
-
-Related reading describes useful connections, not additional reporting lines.

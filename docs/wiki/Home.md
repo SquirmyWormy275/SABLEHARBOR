@@ -2,9 +2,7 @@
 
 <img src="../../assets/brand/logos/sable-harbor__reverse-horizontal.png" alt="Sable Harbor" width="360">
 
-**Reviewed:** September 12, 2026 · **Status:** reader's guide; the linked source records remain authoritative.
-
-Sable Harbor develops industrial software, operates resource businesses, and provides professional services. This Wiki introduces its businesses and corporate functions: who works there, what they do, how the finances work, and where operations take place. Business, department, and history articles include the supporting source text, so you can follow the details without leaving the Wiki.
+Sable Harbor develops industrial software, operates resource businesses, and provides professional services. This Wiki introduces its businesses and corporate functions: who works there, what they do, how the finances work, and where operations take place. Each article explains the subject first. Supporting records are available at the end when you need to inspect them.
 
 [Start here](Start-Here.md) · [Practical exercises](../reader/exercises/README.md) · [Document library](Library.md) · [Reading glossary](Glossary.md) · [Open questions](Open-Questions.md)
 
@@ -12,7 +10,7 @@ Sable Harbor develops industrial software, operates resource businesses, and pro
 
 ## Start your reading
 
-Choose a business or department below. Its **In-depth reading** section contains the detailed operating, authority, or history records. Use **On this page** to move through a long article. The [full-text reading room](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Reading) collects 198 supporting records, each linked to the repository version used for publication. The [start guide](Start-Here.md) explains the downloads and document status labels.
+Choose a business or department below. Use **On this page** to move through an article. The optional **Supporting records and decision history** section at the end contains the original documents; the [records guide](Records-and-Decisions.md) brings the decision history together in one place. The [start guide](Start-Here.md) explains the downloads.
 
 For practical work, try the [acquisition exercise](../reader/exercises/ACQUISITION.md), [invoice exercise](../reader/exercises/INVOICE.md), or [contract review exercise](../reader/exercises/CONTRACTS.md). You can read the instructions in the Wiki and download the linked Excel, PDF, or SQLite files as needed.
 
@@ -64,13 +62,13 @@ These groups make the directory easier to browse; they are not an organization c
 
 ## Places, records, and history
 
-- [Locations and facilities](../../geospatial/facilities/README.md) — Context maps, site plans, buildings, and floors, with their status and supporting evidence.
+- [Locations and facilities](Locations.md) — Offices, operating sites, shared accommodation, maps and floor plans.
 - [Organization charts](../organization/README.md) — Businesses, people, institutions, external parties, and historical relationships.
 - [Legal and transaction records](../reader/transactions/README.md) — Commercial, corporate, acquisition, and host-rights documents, with accounting links and missing evidence identified.
 - [Accounting evidence packages](../finance/evidence/coverage/README.md) — Five groups of records. Each contains the complete set of rows and reconciliation results for its stated scope.
 - [Controlled document index](../CONTROLLED_DOCUMENT_INDEX.md) — Formal company documents and their published editions.
 - [History and external subjects](subjects/README.md) — Nine guides to people, former programs, host relationships, and separate cases.
-- [Corporate history and canon files](library/history.md) — Dated decisions, including notes on which later decisions replace them.
+- [Records and decisions](Records-and-Decisions.md) — Supporting sources, approval history and the decisions that replaced older records.
 - [Historical and external relationships](../business-lines/HISTORICAL_AND_EXTERNAL_BOUNDARIES.md) — How former programs, host operators, and counterparties differ from current businesses.
 - [Approved identity assets](../../assets/brand/README.md) — Current logos and the original artwork that must be preserved.
 

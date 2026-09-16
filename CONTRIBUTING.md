@@ -13,6 +13,10 @@ Write as a knowledgeable colleague explaining the company to another person. Sta
 - Make links useful: say what readers will find or do there. Preserve existing addresses and section anchors when editing titles.
 - Preserve substance. Do not change names, figures, dates, ownership, reporting lines, decision states, quoted source wording, code identifiers, or immutable release files as part of a prose cleanup. Edit generated wording in its source or generator, not in the output.
 
+Keep the company explanation separate from its design history. State the current fact directly; put approval codes, supersession chains and detailed provenance in the existing registers, reached through [Records and decisions](docs/wiki/Records-and-Decisions.md). A useful source link is not a requirement to repeat the whole chain. Keep qualifications that matter to accounting, control testing or operations next to the relevant claim.
+
+Before copying an “unknown” location, check later decisions. Distinguish a business’s office from its operating site, incorporation jurisdiction and proposed facilities. Record the city or shared accommodation that is known without inventing a street address.
+
 Before submitting, read the changed passages aloud. Remove sentences that merely announce the document's seriousness, repeat its status, or describe the act of documenting instead of the subject. Keep the detail someone needs to understand the work or check a conclusion.
 
 ## Start with a defined change

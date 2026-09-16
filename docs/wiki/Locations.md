@@ -26,7 +26,7 @@ Foundry Field works across Reno, Sacramento and customer sites. Atlas Meridian w
 | [Cradle / Bedford](businesses/Cradle.md) | The Fairmont / White Hall area of West Virginia. Bedford supports research, development, assembly and intermediate upgrading on a selected 15.27-acre fictional redevelopment site. |
 | Cradle's external hosts | Kelly Gang Mining hosts Stream 17 in Tasmania; Demotte Reclamation Services hosts the separate mine-water recovery deployment in north-central West Virginia. These are host operations, not Sable Harbor-owned mines or treatment companies. |
 
-Red Wash is road-served; it has no mine railway spur. Uranium transport remains subject to its custody and release requirements. The former Carbon County siting is historical, not the current mine location.
+Red Wash is road-served; it has no mine railway spur. Uranium transport remains subject to its custody and release requirements.
 
 ## Hosting and construction
 

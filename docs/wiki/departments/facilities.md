@@ -42,5 +42,3 @@ Exact site and occupancy evidence remains open under issue #106. The original Se
 - [People & Culture](people-culture.md)
 - [Continuity and crisis responsibilities](../subjects/Continuity.md)
 - [Willow](../businesses/Willow.md)
-
-Related reading describes useful connections, not additional reporting lines.

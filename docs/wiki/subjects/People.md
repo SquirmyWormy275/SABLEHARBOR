@@ -32,5 +32,3 @@ Joining years, appointment dates, board membership, employment and authorized bi
 - [J2 — Judgment & Junction](../departments/j2.md)
 - [People & Culture](../departments/people-culture.md)
 - [Company history and The Crossing](History.md)
-
-Related reading describes useful connections, not additional reporting lines.
