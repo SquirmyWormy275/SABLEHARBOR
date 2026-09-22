@@ -101,6 +101,7 @@ def build(output, fin, op, legacy, operating, policy, adjustment):
                 factors=factors,
                 settlement=settlement,
                 iterations=iterations,
+                reviewed_native_journal=before["journal_rows"],
             )
             export(output, workpapers, posting)
             return fin, successor, parent, workpapers
