@@ -1,0 +1,8 @@
+{
+  "normalizer": "tools/documents/requirements.txt",
+  "legal-tools": "tools/legal_gaps/requirements.txt",
+  "route-0": "tools/reader/requirements.txt",
+  "route-1": "tools/organization/requirements.txt",
+  "route-2": "geospatial/requirements.txt",
+  "route-3": "docs/legal/full-text/requirements.txt"
+}
