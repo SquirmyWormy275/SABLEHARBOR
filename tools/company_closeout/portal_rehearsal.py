@@ -7,9 +7,13 @@ from __future__ import annotations
 
 import argparse
 import importlib.util
+import io
 import json
+import os
 import sqlite3
 import subprocess
+import sys
+import tarfile
 from datetime import timedelta
 from itertools import zip_longest
 from pathlib import Path
@@ -18,7 +22,106 @@ from .edition import EditionError, encoded, sha, timestamp, verify
 from .transport import MAX_BYTES, prepare, verify_original
 
 
-def exercise(edition: Path, portal: Path, revision: str, destination: Path) -> dict:
+def review_plan(destination, contract, originals, records, review_paths=None):
+    """Select one smallest original per component, preserving the full population declaration."""
+    lookup = {(system, record): digest for system, record, _available, digest in records}
+    selected = []
+    if review_paths is not None:
+        known = {row[1] for row in originals}
+        if (
+            not review_paths
+            or len(set(review_paths)) != len(review_paths)
+            or not set(review_paths) <= known
+        ):
+            raise EditionError("Review paths must identify distinct existing edition originals")
+    for component in contract["components"]:
+        candidates = [row for row in originals if row[0] == component["id"]]
+        if not candidates:
+            raise EditionError("Selected review component has no original population")
+        if review_paths is not None:
+            choices = [r for r in candidates if r[1] in review_paths]
+        else:
+            choices = [min(candidates, key=lambda r: (r[4] == 0, r[4], r[1]))]
+        for system, path, available, digest, size, parts in choices:
+            selected.append(
+                dict(
+                    system=system,
+                    path=path,
+                    available_at=available,
+                    sha256=digest,
+                    bytes=size,
+                    parts=[{**part, "sha256": lookup[system, part["record"]]} for part in parts],
+                )
+            )
+    plan = dict(
+        destination=str(destination.resolve()),
+        edition_id=contract["edition_id"],
+        components=[c["id"] for c in contract["components"]],
+        selected=selected,
+        available_at=max((r[2] for r in originals), key=timestamp),
+        selection_rule=(
+            "Explicit operator-selected paths; bounded API exercise, not audit sampling"
+            if review_paths is not None
+            else (
+                "One minimum-byte nonempty original per component where available; "
+                "ties lexical path; bounded API exercise, not audit sampling"
+            )
+        ),
+        surrounding_population=[
+            dict(
+                component=c["id"],
+                members=len(c["members"]),
+                population_definition=c["population_definition"],
+                fact_status=c["fact_status"],
+            )
+            for c in contract["components"]
+        ],
+    )
+    return plan
+
+
+def selected_review(portal, commit, destination, contract, originals, records, review_paths=None):
+    plan = review_plan(destination, contract, originals, records, review_paths)
+    snapshot = destination / "pinned-portal-code"
+    snapshot.mkdir()
+    archive = subprocess.check_output(["git", "-C", str(portal), "archive", commit])
+    with tarfile.open(fileobj=io.BytesIO(archive)) as source:
+        source.extractall(snapshot, filter="data")
+    plan_path = destination / "SELECTED_REVIEW_PLAN.json"
+    plan_path.write_bytes(encoded(plan))
+    output = destination / "SELECTED_REVIEW_RECEIPT.json"
+    worker = Path(__file__).with_name("portal_engagement.py").resolve()
+    command = [sys.executable, str(worker), str(plan_path.resolve()), str(output.resolve())]
+    completed = subprocess.run(
+        command,
+        cwd=snapshot,
+        env={**os.environ, "PYTHONPATH": str(snapshot.resolve())},
+        capture_output=True,
+        text=True,
+    )
+    (destination / "SELECTED_REVIEW.log").write_text(completed.stdout + completed.stderr)
+    if completed.returncode:
+        raise EditionError("Selected portal engagement failed; inspect SELECTED_REVIEW.log")
+    result = json.loads(output.read_bytes())
+    result.update(
+        portal_commit=commit,
+        adapter_sha256=sha(worker.read_bytes()),
+        pinned_portal_archive_sha256=sha(archive),
+        command=command,
+    )
+    output.write_bytes(encoded(result))
+    return result
+
+
+def exercise(
+    edition: Path,
+    portal: Path,
+    revision: str,
+    destination: Path,
+    *,
+    review=False,
+    review_paths=None,
+) -> dict:
     verified = verify(edition)
     module_path = "enterprise/audit_suite/company_store.py"
     source = subprocess.check_output(
@@ -215,6 +318,14 @@ def exercise(edition: Path, portal: Path, revision: str, destination: Path) -> d
             "HTTP indirect-disclosure and model inference evaluations remain separate",
         ],
     }
+    if review:
+        result["selected_engagement_review"] = selected_review(
+            portal, commit, destination, contract, originals, records, review_paths
+        )
+        result["limits"][1] = (
+            "Synthetic software-role engagement only; no audit opinion, "
+            "instructor key or grading material"
+        )
     (destination / "RECEIPT.json").write_bytes(encoded(result))
     return result
 
@@ -225,8 +336,28 @@ def main():
     parser.add_argument("--portal", type=Path, required=True)
     parser.add_argument("--revision", required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--review-engagement", action="store_true")
+    parser.add_argument(
+        "--review-member",
+        action="append",
+        help="Exact edition member path; repeat for an explicit selection",
+    )
     args = parser.parse_args()
-    print(json.dumps(exercise(args.edition, args.portal, args.revision, args.output), indent=2))
+    if args.review_member and not args.review_engagement:
+        parser.error("--review-member requires --review-engagement")
+    print(
+        json.dumps(
+            exercise(
+                args.edition,
+                args.portal,
+                args.revision,
+                args.output,
+                review=args.review_engagement,
+                review_paths=args.review_member,
+            ),
+            indent=2,
+        )
+    )
 
 
 if __name__ == "__main__":
