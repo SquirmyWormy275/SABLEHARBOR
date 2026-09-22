@@ -49,19 +49,45 @@ def _validate_inputs(result, parent, current, deferred, opening, settlement):
     scenarios, years = ("base", "downside", "expansion"), range(2026, 2032)
     members = ("SHI", "SHIH", "PS", "ARU", "BST")
     fields = ("scenario", "taxpayer", "jurisdiction", "year")
-    federal = {(s, e, "US", y) for s in scenarios for e in ("SHIH", "PS", "ARU", "BST") for y in years}
-    states = {(s, e, j, y) for s in scenarios for e in members for j in ("CA", "IL", "WV") for y in years}
+    federal = {
+        (s, e, "US", y) for s in scenarios for e in ("SHIH", "PS", "ARU", "BST") for y in years
+    }
+    states = {
+        (s, e, j, y) for s in scenarios for e in members for j in ("CA", "IL", "WV") for y in years
+    }
     _population(current["federal"], fields, federal, "federal")
     _population(current["states"], fields, states, "state")
-    _population(parent.rows, ("scenario", "year"), {(s, y) for s in scenarios for y in years}, "parent")
-    deferred_keys = states | {(s, e, "US", y) for s in scenarios for e in ("SHI", "PS", "ARU", "BST") for y in years}
+    _population(
+        parent.rows, ("scenario", "year"), {(s, y) for s in scenarios for y in years}, "parent"
+    )
+    deferred_keys = states | {
+        (s, e, "US", y) for s in scenarios for e in ("SHI", "PS", "ARU", "BST") for y in years
+    }
     _population(deferred, fields, deferred_keys, "deferred")
-    opening_keys = {(s, e, j, 2026) for s in scenarios for e, j in (("SHI", "US"), ("PS", "US"), ("SHI", "CA"), ("PS", "IL"), ("SHI", "WV"))}
+    opening_keys = {
+        (s, e, j, 2026)
+        for s in scenarios
+        for e, j in (("SHI", "US"), ("PS", "US"), ("SHI", "CA"), ("PS", "IL"), ("SHI", "WV"))
+    }
     _population(opening, fields, opening_keys, "opening")
-    monthly = {(s, g, y, m) for s in scenarios for g in ("ARU_GROUP", "RWH_PS") for y in years for m in range(1, 13)}
-    _population(settlement["rows"], ("scenario", "source_group", "year", "month"), monthly, "settlement")
-    for rows, fields, label in ((result["journal_rows"], ("scenario", "journal_id", "line_no"), "journal leg"),
-                                (settlement["payments"], ("scenario", "source_group", "year", "month", "source_journal_id"), "payment")):
+    monthly = {
+        (s, g, y, m)
+        for s in scenarios
+        for g in ("ARU_GROUP", "RWH_PS")
+        for y in years
+        for m in range(1, 13)
+    }
+    _population(
+        settlement["rows"], ("scenario", "source_group", "year", "month"), monthly, "settlement"
+    )
+    for rows, fields, label in (
+        (result["journal_rows"], ("scenario", "journal_id", "line_no"), "journal leg"),
+        (
+            settlement["payments"],
+            ("scenario", "source_group", "year", "month", "source_journal_id"),
+            "payment",
+        ),
+    ):
         seen = set()
         for row in rows:
             key = tuple(row[f] for f in fields)
@@ -80,9 +106,20 @@ def _validate_inputs(result, parent, current, deferred, opening, settlement):
         value = D(row["gross_source_tax_cash_paid_usd"])
         if not value.is_finite() or value < 0 or value != paid_by_month[key]:
             raise ValueError("Statutory payment detail differs from monthly settlement")
-    native = {(r["scenario"], r["entity"], int(r["year"]), int(r["month"])) for r in result["journal_rows"]
-              if r["source_id"].startswith("LEGAL-") and r["entity"] in ("ARU", "BST", "PS", "RWH") and int(r["month"]) > 0}
-    expected_native = {(s, e, y, m) for s in scenarios for e in ("ARU", "BST", "PS", "RWH") for y in years for m in range(1, 13)}
+    native = {
+        (r["scenario"], r["entity"], int(r["year"]), int(r["month"]))
+        for r in result["journal_rows"]
+        if r["source_id"].startswith("LEGAL-")
+        and r["entity"] in ("ARU", "BST", "PS", "RWH")
+        and int(r["month"]) > 0
+    }
+    expected_native = {
+        (s, e, y, m)
+        for s in scenarios
+        for e in ("ARU", "BST", "PS", "RWH")
+        for y in years
+        for m in range(1, 13)
+    }
     if native != expected_native:
         raise ValueError("Incomplete statutory native legal monthly population")
     for row in deferred + opening:
@@ -294,8 +331,28 @@ class StatutoryPosting:
             ]
             residual = -sum(v for _, v in lines)
             if residual:
-                if (year, month) != (2026, 1) or entity not in ("ARU", "BST"):
-                    raise ValueError("Unexplained native deferred-tax replacement difference")
+                acquired = (year, month) == (2026, 1) and entity in ("ARU", "BST")
+                # Native forecast assigns the group's deferred expense to ARU,
+                # while an acquired BST DTA can be written off in BST's asset
+                # allocation. Reverse that exact cross-entity presentation via
+                # each entity's expense; the counterpart must independently net.
+                pair = [self.native[scenario, e, year, month] for e in ("ARU", "BST")]
+                pair_residual = sum(
+                    sum(n[a] for a in ("5501", "2250", "1800", "1801")) for n in pair
+                )
+                bst = pair[1]
+                allocated_writeoff = (
+                    entity in ("ARU", "BST")
+                    and year >= 2027
+                    and pair_residual == 0
+                    and bst["1800"] < 0
+                    and bst["5501"] == bst["2250"] == bst["1801"] == 0
+                    and abs(residual) == -bst["1800"]
+                )
+                if not (acquired or allocated_writeoff):
+                    raise ValueError(
+                        f"Unexplained native deferred-tax replacement difference: {scenario}/{entity}/{year}/{month}: {residual}"
+                    )
                 lines.append(("CO_SUB_TAX_DEFERRED", residual))
             self._post(
                 books,
