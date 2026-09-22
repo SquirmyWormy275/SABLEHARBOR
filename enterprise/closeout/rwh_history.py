@@ -39,7 +39,21 @@ def build():
         raise ValueError("Production indirect allocation exceeds incurred cost population")
     indirect_inventory = indirect * ending / produced
     capitalized_cash_inventory = cash_inventory + indirect_inventory
-    contributions = D("44312500")
+    capital = json.loads(SOURCE.with_name("capital_register.json").read_text())[
+        "historical_industrial_contribution"
+    ]
+    contributions = D(capital["amount_usd"])
+    if capital["event_id"] != s["capital_history_event_id"] or contributions != D("44312500"):
+        raise ValueError("Historical industrial capital differs from accepted modeled amount")
+    downstream = capital["downstream"]
+    purchase = sum(
+        D(r["amount_usd"]) for r in downstream if r["kind"] == "ACCEPTED_ACQUISITION_CONSIDERATION"
+    )
+    operating_cash = sum(
+        D(r["amount_usd"]) for r in downstream if r["kind"] == "POST_CONTROL_OPERATING_CAPITAL"
+    )
+    if purchase != D(t["cash_consideration_usd"]) or purchase + operating_cash != contributions:
+        raise ValueError("Historical purchase and post-control cash funding do not reconcile")
     closing_cash = (
         contributions
         - D(t["cash_consideration_usd"])
@@ -141,6 +155,10 @@ def build():
         opening_equity_correction_usd=str(opening_equity_correction.quantize(Q)),
         cash_inventory_usd=str(cash_inventory),
         source_contributed_cash_usd=str(contributions),
+        cash_bridge_perimeter="PS_RWH_COMBINED_ACQUISITION_AND_OPERATIONS_NOT_DIRECT_RWH_BANK",
+        ps_seller_cash_usd=str(D(t["cash_consideration_usd"])),
+        post_control_rwh_cash_funding_usd=str(contributions - D(t["cash_consideration_usd"])),
+        capital_history_event_id=s["capital_history_event_id"],
         adopted_initial_goodwill_usd="0",
         book_correction_posting_state="PREPARED_NOT_POSTED_PENDING_FORWARD_INVENTORY_CARRYING_COMPOSITION",
     )
