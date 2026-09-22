@@ -980,3 +980,25 @@ file identity, exact bytes and current state are rechecked before commit. Twenty
 focused tests passed, including interrupted-copy, exact-replay, withdrawal,
 document-version, metadata-bound and publication-race cases. Actual paired company
 execution and collection remain separate reviewed steps.
+
+
+### Persistent local service identity continuity
+
+The [nonhuman runtime](../../../../enterprise/audit_suite/NONHUMAN_RUNTIME.md)
+replays exact prior-quarter originals before admitting their identity state into
+an adjacent, independently declared period. Credential rotation, consumer updates,
+actual local byte copies, stale-credential denials and separate quarterly reviews
+persist in a transactional company store. Review reconciliation uses the declared
+due inventory; successful copying cannot substitute for a missing review.
+
+Thirty focused and independent tests passed, including source metadata tampering,
+registered custody, bounded SQL reads, native history replay and writer/reader
+quota agreement. These tests establish implementation behavior; paired prospective
+company operations and ordinary audit collection remain separate steps.
+
+The policy-delivery runtime also passed seven independent review tests (29 total).
+Its reviewed paired local execution completed 23 steps, retaining 12 and 10 native
+originals respectively, with exact delivered/read-return byte checks and historical
+replay. Missing, late and withdrawn distributions remain distinguishable. Source
+authority journals were empty at completion; this is company operation evidence,
+not completed audit collection or human acknowledgment.

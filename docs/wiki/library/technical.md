@@ -194,6 +194,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Explicit investigation handoffs](../../../enterprise/audit_suite/INVESTIGATION_HANDOFFS.md) — MD
 - [Local worker lifecycle sources](../../../enterprise/audit_suite/LIFECYCLE_ACTIVITY.md) — MD
 - [Local non-human credential lifecycle](../../../enterprise/audit_suite/NONHUMAN_IDENTITY_ACTIVITY.md) — MD
+- [Persistent local nonhuman identity operations](../../../enterprise/audit_suite/NONHUMAN_RUNTIME.md) — MD
 - [Personal saved views](../../../enterprise/audit_suite/PERSONAL_VIEWS.md) — MD
 - [Local policy distribution runtime](../../../enterprise/audit_suite/POLICY_DELIVERY_RUNTIME.md) — MD
 - [Protected portfolio source snapshots](../../../enterprise/audit_suite/PORTFOLIO_EXPLANATION.md) — MD
