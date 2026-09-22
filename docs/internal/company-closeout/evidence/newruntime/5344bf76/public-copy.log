@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/tmp/sh-company-public-copy-runtime/tools/company_closeout/public_copy_disposal.py", line 153, in <module>
+    main()
+  File "/tmp/sh-company-public-copy-runtime/tools/company_closeout/public_copy_disposal.py", line 60, in main
+    require(manifest["status"] == "ACCEPTED", "Expected accepted edition")
+  File "/tmp/sh-company-public-copy-runtime/tools/company_closeout/public_copy_disposal.py", line 40, in require
+    raise ValueError(reason)
+ValueError: Expected accepted edition

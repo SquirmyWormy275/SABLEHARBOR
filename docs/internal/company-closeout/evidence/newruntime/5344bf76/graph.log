@@ -1,0 +1,13 @@
+
+> sable-harbor-audit-workroom@0.1.0 test
+> vitest run src/instructorGraph.test.ts
+
+
+ RUN  v4.1.11 /tmp/sh-portal-runtime-review-5344bf76/audit_suite_web
+
+
+ Test Files  1 passed (1)
+      Tests  6 passed (6)
+   Start at  09:37:43
+   Duration  130ms (transform 39ms, setup 0ms, import 48ms, tests 4ms, environment 0ms)
+

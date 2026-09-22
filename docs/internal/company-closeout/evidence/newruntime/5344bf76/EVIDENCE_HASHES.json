@@ -1,0 +1,18 @@
+{
+  "README.md": "23e981b9dbc5f210d3ceb20aeacb485b880bb17dc0ee0ae088d7f77f56c8c1e6",
+  "PUBLIC_COPY_RECEIPT.json": "bdc8fd3c6f1c752d557b3245f7a31a379d488150a42148d19fab3854e140bd71",
+  "adapter-tests.log": "bee91bf40f2d13cc6ddaf7f74702bf69ccba06fc7300b31651e91608a143c370",
+  "adapter-results.xml": "5b70dd99138747d2f3afb99dd9fb19edaebde543505d507408bad644171dedca",
+  "public-copy-final.log": "fdf4e6ae9169cec18ec207e2052d78b7dda861ac492e87497db4b5b22a2be7fc",
+  "NEUTRAL_RECEIPT.json": "e5e32a9b2c04ccbbbc7be75bd575d3ccb334369fa46153918e7f9ea9afa3b6bc",
+  "public-copy-retest.log": "91fbc3313909afb175d7d52a88308dfd9bc20bebab0743a2e457e37d07ea2921",
+  "public-copy.log": "bf95d25737aecd62dcd7d6285ba26339bd20b44a03facd1918e208f259f399d1",
+  "graph.log": "2c364d951ca5e243346438013e5c5b17cb73f60223ac6bfdda4b607438e0c2ca",
+  "http-results.xml": "74270f8663f01d4affe46510e209e305b95a69da46be694e9385e5b7076d5ba1",
+  "http.log": "0dca9af148f601007b07e159fcb476d99610f361ec905d6b1809630deeeda8d6",
+  "results.xml": "0ac67566d1bc719007933b679b5d4765b0ac9a267f3e649f67a5a0a1fd0bd98f",
+  "pytest.log": "fc8e486cbbb0bf8aa87227af1718b1be36a4a858565ad091e5f1b2cdfcae2766",
+  "installed.txt": "ccd35610a3900a373e330fe6e745ac02cd85102bc8b2da624c9ae95e78d39e43",
+  "source-hashes.json": "7eb35c3004e04e1f68738970db6947a2c2e97e38b760336c70c2266ba862ba85",
+  "REVIEW.md": "202d564551fcaedac373394436155667bdd44e8b76756fe94c1480326abe3d65"
+}
