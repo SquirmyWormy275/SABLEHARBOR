@@ -6,7 +6,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 159 |
+| COUNTERPART_REVIEW_REQUIRED | 160 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 106 |
@@ -61,6 +61,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Audit-suite organization bridge and reconciliation proposal](../../internal/development/audit-suite/ORGANIZATION_RECONCILIATION_2026-09-13.md) — Corporate document-format reconciliation
 - [Private-runtime browser sessions](../../internal/development/audit-suite/SERVICE_SESSION_ISOLATION_2026-09-14.md) — Corporate document-format reconciliation
 - [Audit workspace UX professionalization](../../internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md) — Corporate document-format reconciliation
+- [Explicit personal visit checkpoints](../../internal/development/audit-suite/VISIT_CHECKPOINTS.md) — Corporate document-format reconciliation
 - [ARU share purchase, closing and tax bridge](../../legal/evidence/assets-rights/SH-LEGAL-READ-ARU-001.md) — SH-FIN-HUMAN-001
 - [Cradle host rights and material title](../../legal/evidence/assets-rights/SH-LEGAL-READ-HOST-001.md) — SH-FIN-HUMAN-001
 - [Northern Nevada planning deed and cost boundary](../../legal/evidence/assets-rights/SH-LEGAL-READ-NV-001.md) — SH-FIN-HUMAN-001

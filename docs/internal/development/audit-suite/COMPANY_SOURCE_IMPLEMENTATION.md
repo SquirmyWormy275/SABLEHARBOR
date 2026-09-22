@@ -1036,3 +1036,48 @@ Explicit producer filenames remain controlling. Unknown systems still undergo JS
 validation; malformed JSON and invalid text remain quarantined. Fifteen focused
 collection tests passed. Previously quarantined artifacts are preserved and do not
 become available through this change.
+
+
+### Expanded retained-original technical work and Key navigation
+
+Supplemental company collection now includes a further 27 and 26 exact originals
+from policy delivery, persistent service identity and independent period declarations.
+All 53 byte comparisons and temporary-grant revocations were independently checked;
+prior workrooms and protected archives remained unchanged. These selected references
+are additional workroom records, not a unique enterprise-transaction census.
+
+The preceding supplemental workrooms completed 38 and 47 technical procedure
+commands respectively, covering nine and ten control groups with 37 and 39 selected
+item observations. Independent verification matched every command intent and the
+complete immutable history. Populations remain provisional; the two and seven local
+technical findings remain open. Task states, original evidence, controls and reviews
+were unchanged. Quarantined content was excluded and its limitation recorded.
+
+The opt-in version 2 Key archive now preserves all 1,110 original definitions and
+all earlier links while adding 4,714 exact authored inspection-target relationships.
+Its 12,959 nodes and 11,973 edges describe authored references, not causal proof.
+The prior archive remained byte-for-byte intact. Actual browser checks covered
+explicit target traversal/back navigation, relative timing, narrow layout and
+learner access denial; formal workroom state/history remained unchanged.
+
+### Keyboard access and explicit personal change checkpoints
+
+Compiled-App checks found and corrected modal Tab/Shift+Tab escape and a submission
+error displayed behind the active form. Dialogs now keep focus within visible enabled
+controls, expose their heading and retain accessible submission errors with draft
+text. The targeted keyboard fixture and existing full browser suite passed. Measured
+representative focus contrast was 4.05:1; tested text/status contrast was at least
+6.28:1. This is a bounded scripted check, not a complete accessibility audit.
+
+[Personal visit checkpoints](VISIT_CHECKPOINTS.md) add explicit comparison points
+for six authorized record types, with private replacement history and exact-reference
+navigation. Scope, permission or source changes withhold the entire comparison when
+necessary. Saving never acknowledges reading or completes audit work. The service,
+UI and inert companion-backup integration passed 93 backend tests and 235 frontend
+tests, including a compiled-App retry/redaction/version-navigation journey.
+
+A separate seven-sample read-only baseline measured local navigation/search medians
+of approximately 50–100 ms under concurrent repository tests and preservation scans.
+The first full-history comparison exceeded the 30-second client timeout; no successful
+comparison percentile is claimed. These measurements identify a performance limit,
+not an accepted responsiveness target or owner usability approval.

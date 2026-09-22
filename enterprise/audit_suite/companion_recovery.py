@@ -195,6 +195,7 @@ def backup(
     instructor_access_root=None,
     instructor_releases=None,
     personal_views=None,
+    visit_checkpoints=None,
     investigation_handoffs=None,
     work_guidance=None,
     instructor_key_views=None,
@@ -208,6 +209,7 @@ def backup(
         and instructor_access_root is None
         and instructor_releases is None
         and personal_views is None
+        and visit_checkpoints is None
         and investigation_handoffs is None
         and work_guidance is None
         and instructor_key_views is None
@@ -259,6 +261,13 @@ def backup(
         validate_snapshot(snapshot)
         members["investigation-handoffs.json"] = _json(snapshot)
         captures["investigation_handoffs"] = datetime.now(UTC).isoformat()
+    if visit_checkpoints is not None:
+        from .visit_checkpoints import validate_snapshot
+
+        snapshot = visit_checkpoints.snapshot()
+        validate_snapshot(snapshot)
+        members["visit-checkpoints.json"] = _json(snapshot)
+        captures["visit_checkpoints"] = datetime.now(UTC).isoformat()
     if work_guidance is not None:
         from .work_guidance import validate_archive
 
@@ -281,6 +290,9 @@ def backup(
         members["instructor-assessments.json"] = _json(snapshot)
         captures["instructor_assessments"] = datetime.now(UTC).isoformat()
     manifest = {
+        "visit_checkpoints_restore_mode": "ARCHIVE_ONLY_NOT_OPERATIONALLY_REHYDRATED"
+        if visit_checkpoints is not None
+        else "NOT_INCLUDED",
         "instructor_assessments_restore_mode": "ARCHIVE_ONLY_NOT_OPERATIONALLY_REHYDRATED"
         if instructor_assessments is not None
         else "NOT_INCLUDED",
@@ -340,6 +352,7 @@ def restore(source: Path, destination: Path, *, engine=None, principal_map=None)
         "head.json",
         "instructor-releases.json",
         "personal_views.json",
+        "visit-checkpoints.json",
         "investigation-handoffs.json",
         "work-guidance.json",
         "instructor-key-views.json",
@@ -391,6 +404,14 @@ def restore(source: Path, destination: Path, *, engine=None, principal_map=None)
             validate_snapshot(strict_json(members["investigation-handoffs.json"]))
         except (ValueError, TypeError, KeyError) as error:
             raise DomainError("Invalid investigation handoff archive") from error
+    if "visit-checkpoints.json" in members:
+        from .inference import _json as strict_json
+        from .visit_checkpoints import validate_snapshot
+
+        try:
+            validate_snapshot(strict_json(members["visit-checkpoints.json"]))
+        except (ValueError, TypeError, KeyError) as error:
+            raise DomainError("Invalid personal checkpoint archive") from error
     if "work-guidance.json" in members:
         from .inference import _json as strict_json
         from .work_guidance import validate_archive
@@ -488,6 +509,8 @@ def restore(source: Path, destination: Path, *, engine=None, principal_map=None)
                 stage / "investigation-handoffs-ARCHIVE-ONLY.json",
                 members["investigation-handoffs.json"],
             )
+        if "visit-checkpoints.json" in members:
+            _write(stage / "visit-checkpoints-ARCHIVE-ONLY.json", members["visit-checkpoints.json"])
         if "work-guidance.json" in members:
             _write(stage / "work-guidance-ARCHIVE-ONLY.json", members["work-guidance.json"])
         if "instructor-key-views.json" in members:
@@ -517,6 +540,9 @@ def restore(source: Path, destination: Path, *, engine=None, principal_map=None)
             else "NOT_INCLUDED",
             "original_hashed_personal_view_content_preserved": view_tables is not None,
             "credentials_or_grants_restored": False,
+            "visit_checkpoints": "ARCHIVE_ONLY_NOT_OPERATIONALLY_REHYDRATED"
+            if "visit-checkpoints.json" in members
+            else "NOT_INCLUDED",
             "instructor_assessments": "ARCHIVE_ONLY_NOT_OPERATIONALLY_REHYDRATED"
             if "instructor-assessments.json" in members
             else "NOT_INCLUDED",

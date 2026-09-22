@@ -33,6 +33,7 @@ import { recordSequence } from "./recordSequence";
 import { BackgroundWork } from "./BackgroundWork";
 import { InvestigationContexts } from "./InvestigationContexts";
 import { SavedViews } from "./SavedViews";
+import { VisitCheckpoint } from "./VisitCheckpoint";
 import { InvestigationHandoffs } from "./InvestigationHandoffs";
 import type {
   SavedViewNavigation,
@@ -891,6 +892,25 @@ export default function App() {
         onRestore={restoreSavedView}
       />
     ) : null;
+  const checkpointPanel =
+    e && !setup && bootstrap.capabilities.visit_checkpoints ? (
+      <VisitCheckpoint
+        engagement={e}
+        viewerId={bootstrap.viewer.id}
+        onPreview={(reference, row) => {
+          rememberContextPreviewOpener();
+          setDetail({
+            kind: reference.kind,
+            row,
+            savedAtRevision: e.revision,
+            ...(reference.kind === "workpaper" &&
+            typeof reference.version === "number"
+              ? { focusVersion: reference.version }
+              : {}),
+          });
+        }}
+      />
+    ) : null;
   const handoffsPanel =
     e && !setup && bootstrap.capabilities.investigation_handoffs ? (
       <InvestigationHandoffs
@@ -1501,6 +1521,7 @@ export default function App() {
           <div id="main" tabIndex={-1}>
             <div data-retained-contexts hidden={!!detail} inert={!!detail}>
               {savedViewsPanel}
+              {checkpointPanel}
               {handoffsPanel}
             </div>
             {e && !setup && bootstrap.capabilities.workspace_contexts && (
@@ -3142,6 +3163,7 @@ export default function App() {
             onClose={() => setDetail(null)}
           >
             {savedViewsPanel}
+            {checkpointPanel}
             {handoffsPanel}
             {detail.returnToBoundSource && (
               <button type="button" onClick={() => setDetail(null)}>

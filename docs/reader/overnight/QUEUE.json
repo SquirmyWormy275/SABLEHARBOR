@@ -585,6 +585,12 @@
           "status": "Actual full collection and supported technical procedures completed in both branches",
           "scope": "605/632 originals;70controls/409 unchanged tasks;three provisional population/selection/workpaper sets each;open technical findings",
           "acceptance": "All applicable audit procedures and professional review are not complete"
+        },
+        {
+          "date": "2026-09-22",
+          "scope": "Supplemental retained-original technical procedures",
+          "validation": "Actual A/B38/47commands,9/10controlgroups,37/39item observations; independent intent/history verification passed.",
+          "acceptance": "Provisional populations and2/7OPEN technicalfindings; tasks/originals/reviews unchanged; no full-control or professional credit."
         }
       ]
     },
@@ -696,6 +702,12 @@
           "status": "Implemented selectable authored relationship groups, exact incoming/outgoing traversal and trigger-relative timing",
           "validation": "1110 explanations/12959 nodes/7259 edges resolved;225 frontend tests/build/maintained browser PASS; real full-archive browser and learner403 PASS",
           "acceptance": "Preserved authored links only; narrative gaps and human/professional acceptance remain explicit"
+        },
+        {
+          "date": "2026-09-22",
+          "scope": "Versioned exact authored inspection-target relationships",
+          "validation": "New private1110-source archive adds4714typedlinks; all prior source bytes/links preserved; actualbrowser traversal/access isolation passed.",
+          "acceptance": "Authored references only, no proof of inspection/availability/corroboration; old archive and boundkeys unchanged."
         }
       ]
     },
@@ -916,6 +928,12 @@
           "status": "Full-workroom desktop and390px navigation checked for learner and instructor;archive relationship display checked",
           "validation": "Ten workspace destinations each;no document overflow or browser errors in completed runs",
           "acceptance": "Scripted validation only;owner visual/usability acceptance remains pending"
+        },
+        {
+          "date": "2026-09-22",
+          "scope": "Compiled-App keyboard focus and in-form errors",
+          "validation": "Modal Tab/Shift+Tab/closed-details/focusreturn and in-form409 retention passed; representative focuscontrast4.05:1.",
+          "acceptance": "Scripted representative checks, not complete accessibility audit or human acceptance."
         }
       ]
     },
@@ -978,6 +996,12 @@
           "validation": "Six completed browser stages,147 measured actions,140 requests; no unexpected HTTP failures or browser errors",
           "acceptance": "Automated technical evidence only; human usability and professional acceptance remain pending",
           "result": "Actual handoff exposed lost draft/focus on preview; retained inert forms and same-context focus restoration fixed it, with permanent regression."
+        },
+        {
+          "date": "2026-09-22",
+          "scope": "Explicit personal visit checkpoints",
+          "validation": "Six authorizedrecordtypes, privateversionhistory, exactcomparison/redaction/retry/preview and inertbackup;93backend/235frontendtests passed.",
+          "acceptance": "No automatic visitcapture or read/test acknowledgment; broader continuity and human acceptance remain open."
         }
       ]
     },
@@ -1184,7 +1208,15 @@
       "gate": "existing_authority",
       "execution_policy": "Owner authorized execution; bounded implementation may proceed while whole-stage dependencies remain in progress. Existing audit_company execution boundaries apply. Suggestions and search use authorized context, never hidden key data; final usability acceptance requires actual feedback.",
       "execution_authorized": true,
-      "evidence": "Recorded artifact context shows authorized request purpose, declared controls, related procedure definitions and exact workpaper citations. No hidden/model-derived assistance. 126 frontend tests, mocked browser and actual A read-only navigation pass; broader contextual guidance acceptance remains open. Instructor policy plus private opt-in gate deterministic administrative suggestions. Explicit disclosures and exact-pin review/dismissal retain rationale; policy/source/scope/access changes invalidate context, with inert companion recovery. No Key/model input or automatic audit action. Actual user evaluation remains separate."
+      "evidence": "Recorded artifact context shows authorized request purpose, declared controls, related procedure definitions and exact workpaper citations. No hidden/model-derived assistance. 126 frontend tests, mocked browser and actual A read-only navigation pass; broader contextual guidance acceptance remains open. Instructor policy plus private opt-in gate deterministic administrative suggestions. Explicit disclosures and exact-pin review/dismissal retain rationale; policy/source/scope/access changes invalidate context, with inert companion recovery. No Key/model input or automatic audit action. Actual user evaluation remains separate.",
+      "technical_checkpoints": [
+        {
+          "date": "2026-09-22",
+          "scope": "Explicit authorized record-change comparison",
+          "validation": "No hiddenKey/native read; unavailable prior target or changed context withholds all details/counts; compiled isolationjourney passed.",
+          "acceptance": "Deterministic pin differences, no adverse conclusion or automatic professional reassessment."
+        }
+      ]
     },
     {
       "id": "CX-04",

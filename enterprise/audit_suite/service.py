@@ -221,11 +221,13 @@ def create_app(
         jobs = BackgroundJobs(job_root, engine, max_workers=2, max_pending=32)
     contexts = None
     personal_views = None
+    visit_checkpoints = None
     handoffs = None
     work_guidance = None
     if workspace_contexts:
         from .investigation_handoffs import InvestigationHandoffs
         from .personal_views import PersonalViews
+        from .visit_checkpoints import VisitCheckpoints
         from .work_guidance import WorkGuidance
         from .workspace_context import WorkspaceContexts
 
@@ -235,6 +237,9 @@ def create_app(
         view_root = engine.store.root / "personal-views"
         view_root.mkdir(mode=0o700, exist_ok=True)
         personal_views = PersonalViews(view_root, engine)
+        visit_root = engine.store.root / "visit-checkpoints"
+        visit_root.mkdir(mode=0o700, exist_ok=True)
+        visit_checkpoints = VisitCheckpoints(visit_root, engine)
         handoff_root = engine.store.root / "investigation-handoffs"
         handoff_root.mkdir(mode=0o700, exist_ok=True)
         handoffs = InvestigationHandoffs(handoff_root, engine)
@@ -267,6 +272,7 @@ def create_app(
     app.state.instructor_key_views = key_views
     app.state.workspace_contexts = contexts
     app.state.personal_views = personal_views
+    app.state.visit_checkpoints = visit_checkpoints
     app.state.investigation_handoffs = handoffs
     app.state.work_guidance = work_guidance
     app.state.background_jobs = jobs
@@ -368,6 +374,7 @@ def create_app(
             work_status=True,
             workspace_contexts=contexts is not None,
             personal_views=personal_views is not None,
+            visit_checkpoints=visit_checkpoints is not None,
             investigation_handoffs=handoffs is not None,
             work_guidance=work_guidance is not None,
             background_jobs=jobs is not None,
@@ -877,6 +884,47 @@ def create_app(
         if personal_views is None:
             raise DomainError("Personal views are not configured", status=503)
         return personal_views
+
+    def enabled_visit_checkpoints():
+        if visit_checkpoints is None:
+            raise DomainError("Personal checkpoints are not configured", status=503)
+        return visit_checkpoints
+
+    @app.get("/api/engagements/{engagement_id}/visit-checkpoint")
+    async def visit_checkpoint_status(engagement_id: str, request: Request):
+        principal = actor(request)
+        return await asyncio.to_thread(
+            enabled_visit_checkpoints().status, principal["id"], engagement_id
+        )
+
+    @app.get("/api/engagements/{engagement_id}/visit-checkpoint/history")
+    async def visit_checkpoint_history(engagement_id: str, request: Request):
+        principal = actor(request)
+        return await asyncio.to_thread(
+            enabled_visit_checkpoints().history, principal["id"], engagement_id
+        )
+
+    @app.post("/api/engagements/{engagement_id}/visit-checkpoint")
+    async def visit_checkpoint_capture(engagement_id: str, request: Request):
+        principal = actor(request, mutation=True)
+        body = await json_body(request)
+        limits.check("visit-checkpoints", principal["id"], 120)
+        if set(body) != {"command_id", "expected_version", "expected_engagement_revision"}:
+            raise DomainError("Choose the exact personal checkpoint and workspace revision")
+        return await asyncio.to_thread(
+            enabled_visit_checkpoints().capture, principal["id"], engagement_id, **body
+        )
+
+    @app.post("/api/engagements/{engagement_id}/visit-checkpoint/compare")
+    async def visit_checkpoint_compare(engagement_id: str, request: Request):
+        principal = actor(request, mutation=True)
+        body = await json_body(request)
+        limits.check("visit-checkpoints", principal["id"], 120)
+        if set(body) != {"expected_version", "expected_engagement_revision"}:
+            raise DomainError("Choose the exact personal checkpoint and workspace revision")
+        return await asyncio.to_thread(
+            enabled_visit_checkpoints().compare, principal["id"], engagement_id, **body
+        )
 
     @app.get("/api/engagements/{engagement_id}/saved-views")
     async def personal_view_list(engagement_id: str, request: Request):
