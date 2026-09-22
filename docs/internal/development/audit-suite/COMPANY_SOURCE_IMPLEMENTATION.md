@@ -1002,3 +1002,37 @@ originals respectively, with exact delivered/read-return byte checks and histori
 replay. Missing, late and withdrawn distributions remain distinguishable. Source
 authority journals were empty at completion; this is company operation evidence,
 not completed audit collection or human acknowledgment.
+
+
+### Versioned authored inspection links
+
+The protected archive builder accepts `--migration-version 2` to index the scenario
+executor's exact `INSPECT:<artifact ID>` actions as `AUTHORED_INSPECTION_TARGET`
+relationships. These identify an authored intended inspection; they do not establish
+that evidence was available, an inspection occurred, or a conclusion was supported.
+Only an exact existing artifact target qualifies. Narrative mentions, case changes,
+extra whitespace and references to other node types remain unlinked.
+
+The default migration remains version 1. Version 2 uses the same structural Key
+schema with explicit migration metadata and requires a new private archive path.
+Original scenario bytes, source hashes, earlier archives, saved-view pins and bound
+learner comparisons remain intact. A new archive must be selected explicitly; no
+running service is automatically rebound to it.
+
+
+### Verified local continuations and future raw-source intake
+
+Paired service-identity execution retained 14 and 15 runtime originals plus one
+independent period declaration per branch. Independent read-only verification
+matched all 21 operation originals to their declared command intents and confirmed
+two exact byte copies per branch. The incomplete branch retains two stale-consumer
+denials and its missing Q4 review. Earlier sources remained unchanged and authority
+journals were empty before audit collection. Policy delivery independently verified
+22 originals and five exact mailbox copies, with unchanged source and runtime files.
+
+Future collection now assigns a text filename to four known unnamed raw-byte
+systems: privileged objects, policy documents, nonhuman sources and copied datasets.
+Explicit producer filenames remain controlling. Unknown systems still undergo JSON
+validation; malformed JSON and invalid text remain quarantined. Fifteen focused
+collection tests passed. Previously quarantined artifacts are preserved and do not
+become available through this change.

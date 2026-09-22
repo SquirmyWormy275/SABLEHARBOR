@@ -38,6 +38,45 @@ def test_only_exact_action_reference_becomes_edge():
     assert key["review"]["unlinked_path_actions"] == 1
 
 
+def test_versioned_inspection_reference_preserves_original_and_default_migration():
+    value = neutral("MM-13.03.V01")
+    value["playable_paths"][0]["actions"] = [
+        "INSPECT:A1",
+        "inspect:A1",
+        "INSPECT: A1",
+        "INSPECT:E1",
+        "inspect A1",
+        "E1",
+    ]
+    raw = json.dumps(value).encode()
+    old = instructor_key.migrate_definition(raw)
+    new = instructor_key.migrate_definition(raw, migration_version=2)
+    assert "migration_version" not in old
+    assert new["migration_version"] == 2
+    assert new["explanation"] == old["explanation"] == value
+    assert new["source"] == old["source"]
+    edges = [e for e in new["graph"]["edges"] if e["relation"] == "AUTHORED_INSPECTION_TARGET"]
+    assert edges == [
+        {
+            "from": f"path:{value['playable_paths'][0]['id']}",
+            "to": "artifact:A1",
+            "relation": "AUTHORED_INSPECTION_TARGET",
+            "source_pointer": "/playable_paths/0/actions/0",
+        }
+    ]
+    assert new["review"]["unlinked_path_actions"] == old["review"]["unlinked_path_actions"] - 1
+    assert new["review"]["grading"] == "NOT_RUN"
+    assert new["review"]["causal_validation"] == "NOT_RUN"
+
+
+@pytest.mark.parametrize("version", [True, 2.0, "2", 0, 3])
+def test_migration_version_is_explicit_and_typed(version):
+    with pytest.raises(DomainError, match="migration version"):
+        instructor_key.migrate_definition(
+            json.dumps(neutral("MM-13.03.V01")).encode(), migration_version=version
+        )
+
+
 def test_missing_reference_rejected_by_existing_corpus_validator():
     value = neutral("MM-13.03.V01")
     value["actor_knowledge"][0]["knows_fact_ids"] = ["ABSENT"]
@@ -98,3 +137,26 @@ def test_archive_corruption_is_detected(archive_inputs):
     archive.write_bytes(archive.read_bytes() + b"corrupt")
     with pytest.raises(DomainError, match="Archive digest"):
         instructor_key.verify_archive(output)
+
+
+def test_successor_archive_does_not_rewrite_prior_archive(archive_inputs):
+    definitions, output = archive_inputs
+    source = next(definitions.glob("*.json"))
+    value = json.loads(source.read_bytes())
+    value["playable_paths"][0]["actions"] = ["INSPECT:A1"]
+    source.write_text(json.dumps(value))
+    instructor_key.build_archive(definitions, output)
+    original = {
+        str(p.relative_to(output)): p.read_bytes() for p in output.rglob("*") if p.is_file()
+    }
+    successor = output.with_name("successor-key")
+    receipt = instructor_key.build_archive(definitions, successor, migration_version=2)
+    assert receipt["migration_version"] == 2
+    assert receipt["reread_verification"]["status"] == "PASS"
+    assert instructor_key.verify_archive(output)["status"] == "PASS"
+    assert original == {
+        str(p.relative_to(output)): p.read_bytes() for p in output.rglob("*") if p.is_file()
+    }
+    assert (output / "sources" / source.name).read_bytes() == (
+        successor / "sources" / source.name
+    ).read_bytes()

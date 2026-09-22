@@ -18,8 +18,10 @@ from .corpus import obligations, validate_variant
 from .store import DomainError, digest
 
 
-def migrate_definition(raw: bytes) -> dict:
+def migrate_definition(raw: bytes, *, migration_version: int = 1) -> dict:
     """Return a protected explanation pinned to original bytes and canonical content."""
+    if type(migration_version) is not int or migration_version not in (1, 2):
+        raise DomainError("Supported exact migration version required")
     try:
         source = json.loads(raw)
     except (ValueError, UnicodeError) as exc:
@@ -72,19 +74,36 @@ def migrate_definition(raw: bytes) -> dict:
                     }
                 )
     unlinked_actions = 0
+    dual_references = 0
     for index, path in enumerate(source["playable_paths"]):
         for offset, action in enumerate(path["actions"]):
             targets = by_id.get(action, []) if isinstance(action, str) else []
-            if len(targets) == 1:
+            references = [(targets[0], "EXACT_ACTION_REFERENCE")] if len(targets) == 1 else []
+            if migration_version == 2 and isinstance(action, str) and action.startswith("INSPECT:"):
+                # The corpus executor defines this exact command grammar. It names
+                # an artifact, not an inferred fact, corroboration or completed action.
+                artifact_id = action.split(":", 1)[1]
+                targets = [
+                    n["id"]
+                    for n in nodes
+                    if n["kind"] == "artifact"
+                    and isinstance(n.get("source_id"), str)
+                    and n["source_id"] == artifact_id
+                ]
+                if len(targets) == 1:
+                    if references:
+                        dual_references += 1
+                    references.append((targets[0], "AUTHORED_INSPECTION_TARGET"))
+            for target, relation in references:
                 edges.append(
                     {
                         "from": f"path:{path['id']}",
-                        "to": targets[0],
-                        "relation": "EXACT_ACTION_REFERENCE",
+                        "to": target,
+                        "relation": relation,
                         "source_pointer": f"/playable_paths/{index}/actions/{offset}",
                     }
                 )
-            else:
+            if not references:
                 unlinked_actions += 1
     # Existing source contract does not encode these typed relationships. Narrative text
     # is preserved below but cannot silently supply missing reviewed graph edges.
@@ -99,9 +118,11 @@ def migrate_definition(raw: bytes) -> dict:
     ]
     if unlinked_actions:
         gaps.append("NARRATIVE_PATH_ACTIONS_REQUIRE_REFERENCE_REVIEW")
+    if dual_references:
+        gaps.append("DUAL_LITERAL_AND_INSPECTION_REFERENCES_REQUIRE_REVIEW")
     if source["rubric"]["professional_validation"] != "EXPERT_REVIEWED":
         gaps.append("PROFESSIONAL_RUBRIC_NOT_EXPERT_REVIEWED")
-    return {
+    result = {
         "schema": "PRIVATE_INSTRUCTOR_KEY_V1",
         "audience": "INSTRUCTOR_ONLY",
         "company_store_import": "PROHIBITED",
@@ -127,6 +148,9 @@ def migrate_definition(raw: bytes) -> dict:
             "gaps": gaps,
         },
     }
+    if migration_version == 2:
+        result["migration_version"] = 2
+    return result
 
 
 def _private_write(path: Path, raw: bytes) -> None:
@@ -141,13 +165,15 @@ def _json(value: object) -> bytes:
     return (json.dumps(value, indent=2, ensure_ascii=False) + "\n").encode()
 
 
-def build_archive(definitions: Path, output: Path) -> dict:
+def build_archive(definitions: Path, output: Path, *, migration_version: int = 1) -> dict:
     """Build all required definitions in a NEW protected generated directory.
 
     Failed partial attempts remain private and lack a completion receipt. Retry in a new
     directory. No company/runtime database connection is made by this module.
     """
     definitions, output = Path(definitions).absolute(), Path(output).absolute()
+    if type(migration_version) is not int or migration_version not in (1, 2):
+        raise DomainError("Supported exact migration version required")
     protected = "private-corpus" in output.parts or (
         "enterprise/generated/audit-suite/overnight-company-source-2026-09-13/" in output.as_posix()
     )
@@ -163,7 +189,7 @@ def build_archive(definitions: Path, output: Path) -> dict:
         if path.resolve() != path or not stat.S_ISREG(path.stat().st_mode):
             raise DomainError("Definition must be a regular nonsymlink source")
         raw = path.read_bytes()
-        key = migrate_definition(raw)
+        key = migrate_definition(raw, migration_version=migration_version)
         if key["id"] in seen or path.stem != key["id"]:
             raise DomainError("Duplicate or mismatched source identity")
         seen.add(key["id"])
@@ -211,6 +237,8 @@ def build_archive(definitions: Path, output: Path) -> dict:
         "gap_counts": dict(gaps),
         "entries": entries,
     }
+    if migration_version == 2:
+        index["migration_version"] = 2
     _private_write(output / "index.json", _json(index))
     archive = output / "instructor-keys.zip"
     with archive.open("xb") as stream:
@@ -231,6 +259,8 @@ def build_archive(definitions: Path, output: Path) -> dict:
         "index_sha256": hashlib.sha256((output / "index.json").read_bytes()).hexdigest(),
         "company_store_import": "PROHIBITED",
     }
+    if migration_version == 2:
+        receipt["migration_version"] = 2
     _private_write(output / "receipt.json", _json(receipt))
     receipt["reread_verification"] = verify_archive(output)
     _private_write(output / "verification.json", _json(receipt["reread_verification"]))
