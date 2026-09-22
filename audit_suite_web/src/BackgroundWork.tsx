@@ -1,3 +1,4 @@
+import { QueuedConsultation } from "./ConsultationProvenance";
 import { useEffect, useRef, useState } from "react";
 import { ApiError, request } from "./api";
 import type { Engagement } from "./api";
@@ -184,6 +185,11 @@ function WorkList({
                       {inputs[job.id].expected_revision}
                     </p>
                     <blockquote>{inputs[job.id].payload.content}</blockquote>
+                    {inputs[job.id].payload.consultation && (
+                      <QueuedConsultation
+                        value={inputs[job.id].payload.consultation!}
+                      />
+                    )}
                     {inputs[job.id].payload.source_records?.length ? (
                       <>
                         <p>Explicit source pins retained with this question:</p>
@@ -198,8 +204,9 @@ function WorkList({
                       </>
                     ) : (
                       <p>
-                        No explicit source pins; the original command uses
-                        automatic bounded source sampling.
+                        {inputs[job.id].payload.consultation
+                          ? "No original source records were selected for this consultation."
+                          : "No explicit source pins; the original command uses automatic bounded source sampling."}
                       </p>
                     )}
                   </>

@@ -16,6 +16,14 @@ import { lineageReference } from "./populationLineage";
 import SourceRecordCensus from "./SourceRecordCensus";
 import { ConversationProvenance } from "./ConversationProvenance";
 import { MeetingSourceContext } from "./MeetingSourceContext";
+import { MeetingConsultation } from "./MeetingConsultation";
+import { ConsultationProvenance } from "./ConsultationProvenance";
+import {
+  sameConsultation,
+  validConsultation,
+  resolveConsultationMessage,
+} from "./companyConsultation";
+import type { Consultation, MessagePin } from "./companyConsultation";
 import { samePins, type SourcePin } from "./meetingSources";
 import { compatibleWorkpaperValues, supports } from "./compatibility";
 import { recordSequence } from "./recordSequence";
@@ -265,6 +273,7 @@ type DetailContext = {
   sequence?: string[];
   returnTo?: DetailContext;
   focusVersion?: number;
+  focusMessage?: MessagePin;
   savedAtRevision?: number;
   pinnedReference?: Row;
   returnToBoundSource?: boolean;
@@ -302,6 +311,10 @@ export default function App() {
     key: string;
     pins: SourcePin[];
   }>({ key: "", pins: [] });
+  const [consultationSelection, setConsultationSelection] = useState<{
+    key: string;
+    value: Consultation | null;
+  }>({ key: "", value: null });
   const activeMeeting =
     engagement?.meetings.find((m) => m.id === meetingId) ??
     engagement?.meetings.find((m) => m.kind === "kickoff") ??
@@ -323,6 +336,11 @@ export default function App() {
       old.key === sourceSelectionKey
         ? old
         : { key: sourceSelectionKey, pins: [] },
+    );
+    setConsultationSelection((old) =>
+      old.key === sourceSelectionKey
+        ? old
+        : { key: sourceSelectionKey, value: null },
     );
   }, [sourceSelectionKey]);
   const pendingSend = useRef<{
@@ -351,6 +369,7 @@ export default function App() {
     pendingSend.current = null;
     setEvidenceHandoff(null);
     setSourceSelection({ key: "", pins: [] });
+    setConsultationSelection({ key: "", value: null });
     navigationMemory.current.clear();
     draftStore.current.clear();
     authorizedContext.current = "";
@@ -523,6 +542,11 @@ export default function App() {
         !workpaperVersions(rows[0]).some(
           (version) => version.version === previous.focusVersion,
         )
+      )
+        return null;
+      if (
+        previous.focusMessage &&
+        !resolveConsultationMessage(engagement, previous.focusMessage)
       )
         return null;
       return { ...previous, row: rows[0] };
@@ -907,6 +931,15 @@ export default function App() {
     bootstrap.capabilities.company_message_sources
       ? sourceSelection.pins
       : [];
+  const selectedConsultation =
+    consultationSelection.key === sourceSelectionKey &&
+    bootstrap.capabilities.company_consultations &&
+    e &&
+    activeMeeting &&
+    consultationSelection.value &&
+    validConsultation(e, activeMeeting.id, consultationSelection.value)
+      ? consultationSelection.value
+      : null;
   const messages = Array.isArray(activeMeeting?.messages)
     ? (activeMeeting.messages as Row[])
     : [];
@@ -966,6 +999,23 @@ export default function App() {
                   message={m}
                   onPreview={(kind, row) => setDetail({ kind, row })}
                 />
+                <ConsultationProvenance
+                  engagement={e}
+                  message={m}
+                  onPreview={(kind, row, ref) => {
+                    if (ref)
+                      setDetail({
+                        kind,
+                        row,
+                        focusMessage: {
+                          meeting_id: row.id,
+                          message_id: String(ref.message_id),
+                          sha256: String(ref.sha256),
+                        },
+                        savedAtRevision: e.revision,
+                      });
+                  }}
+                />
                 {m.role === "assistant" && (
                   <SpeakButton
                     engagement={e.id}
@@ -998,6 +1048,10 @@ export default function App() {
                     pending.sourceContext !== sourceContext ||
                     pending.command.payload.meeting_id !== activeMeeting.id ||
                     pending.command.payload.content !== message ||
+                    !sameConsultation(
+                      pending.command.payload.consultation,
+                      selectedConsultation,
+                    ) ||
                     !samePins(
                       pending.command.payload.source_records ?? [],
                       selectedSources,
@@ -1015,6 +1069,9 @@ export default function App() {
                   payload: {
                     meeting_id: activeMeeting.id,
                     content: message,
+                    ...(selectedConsultation
+                      ? { consultation: structuredClone(selectedConsultation) }
+                      : {}),
                     ...(selectedSources.length
                       ? { source_records: structuredClone(selectedSources) }
                       : {}),
@@ -1031,6 +1088,15 @@ export default function App() {
                   const job = await submitMeetingJob(e.id, envelope);
                   if (renderEpoch !== navigationEpoch.current) return;
                   pendingSend.current = null;
+                  setConsultationSelection((current) =>
+                    current.key === sourceSelectionKey &&
+                    sameConsultation(
+                      current.value,
+                      envelope.payload.consultation,
+                    )
+                      ? { key: sourceSelectionKey, value: null }
+                      : current,
+                  );
                   setMessage((current) =>
                     current === envelope.payload.content ? "" : current,
                   );
@@ -1060,11 +1126,20 @@ export default function App() {
                 const saved = await act("meeting.message", {
                   meeting_id: activeMeeting.id,
                   content: message,
+                  ...(selectedConsultation
+                    ? { consultation: structuredClone(selectedConsultation) }
+                    : {}),
                   ...(selectedSources.length
                     ? { source_records: structuredClone(selectedSources) }
                     : {}),
                 });
                 if (saved && renderEpoch === navigationEpoch.current) {
+                  setConsultationSelection((current) =>
+                    current.key === sourceSelectionKey &&
+                    sameConsultation(current.value, selectedConsultation)
+                      ? { key: sourceSelectionKey, value: null }
+                      : current,
+                  );
                   setMessage((current) => (current === message ? "" : current));
                   setSourceSelection((current) =>
                     current.key === sourceSelectionKey &&
@@ -1099,6 +1174,20 @@ export default function App() {
                   }
                 />
               )}
+            {bootstrap.capabilities.company_consultations &&
+              Boolean(activeMeeting.person_id) && (
+                <MeetingConsultation
+                  key={sourceSelectionKey}
+                  engagement={e}
+                  viewerId={bootstrap.viewer.id}
+                  targetMeetingId={activeMeeting.id}
+                  value={selectedConsultation}
+                  onChange={(value) =>
+                    setConsultationSelection({ key: sourceSelectionKey, value })
+                  }
+                  disabled={busy}
+                />
+              )}
             <VoiceInput
               engagement={e.id}
               enabled={!!e.capabilities.voice}
@@ -1125,6 +1214,11 @@ export default function App() {
                         if (
                           (message &&
                             message !== pending.command.payload.content) ||
+                          (selectedConsultation &&
+                            !sameConsultation(
+                              selectedConsultation,
+                              pending.command.payload.consultation,
+                            )) ||
                           (selectedSources.length &&
                             !samePins(
                               selectedSources,
@@ -1140,6 +1234,25 @@ export default function App() {
                           (m) => m.id === pending.command.payload.meeting_id,
                         );
                         if (!target) return;
+                        if (
+                          pending.command.payload.consultation &&
+                          !validConsultation(
+                            e,
+                            target.id,
+                            pending.command.payload.consultation,
+                          )
+                        ) {
+                          setError(
+                            "The original consultation references are no longer available. Inspect the retained queued input before creating a new request.",
+                          );
+                          return;
+                        }
+                        setConsultationSelection({
+                          key: meetingSourceKey(target),
+                          value: structuredClone(
+                            pending.command.payload.consultation ?? null,
+                          ),
+                        });
                         setMeetingId(target.id);
                         setMessage(pending.command.payload.content);
                         setSourceSelection({
@@ -2994,6 +3107,32 @@ export default function App() {
                 </button>
               </nav>
             )}
+            {detail.focusMessage &&
+              (() => {
+                const match = resolveConsultationMessage(
+                  e,
+                  detail.focusMessage,
+                );
+                return match ? (
+                  <section aria-label="Exact referenced conversation message">
+                    <h3>Exact referenced message</h3>
+                    <p>
+                      {detail.focusMessage.message_id} · SHA256{" "}
+                      {detail.focusMessage.sha256}
+                    </p>
+                    <Badge>
+                      {human(match.message.claim_type ?? "statement")}
+                    </Badge>
+                    <blockquote>{str(match.message.content)}</blockquote>
+                    <p>
+                      The original exchange is retained. This reference does not
+                      establish whether a company statement is correct.
+                    </p>
+                  </section>
+                ) : (
+                  <p>Referenced message is no longer available.</p>
+                );
+              })()}
             <div className="actions">
               {detail.kind === "workpaper" && (
                 <section>

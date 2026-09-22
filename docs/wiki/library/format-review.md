@@ -6,7 +6,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 143 |
+| COUNTERPART_REVIEW_REQUIRED | 144 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 106 |
@@ -127,6 +127,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Persistent local backup byte operations](../../../enterprise/audit_suite/BACKUP_RUNTIME.md) — Corporate document-format reconciliation
 - [Local configuration change and release source pair](../../../enterprise/audit_suite/CHANGE_ACTIVITY.md) — Corporate document-format reconciliation
 - [Private companion recovery](../../../enterprise/audit_suite/COMPANION_RECOVERY.md) — Corporate document-format reconciliation
+- [Attributed company consultation and correction requests](../../../enterprise/audit_suite/COMPANY_CONSULTATION.md) — Corporate document-format reconciliation
 - [Company runtime activation contract](../../../enterprise/audit_suite/COMPANY_RUNTIME_ACTIVATION.md) — Corporate document-format reconciliation
 - [Selected-source ownership and migration register](../../../enterprise/audit_suite/COMPANY_SOURCE_REGISTER.md) — Corporate document-format reconciliation
 - [Configuration inventory and drift from original release records](../../../enterprise/audit_suite/CONFIGURATION_ACTIVITY.md) — Corporate document-format reconciliation

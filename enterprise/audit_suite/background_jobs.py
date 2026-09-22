@@ -19,6 +19,10 @@ from .store import DomainError, canonical, digest
 PERMISSIONS = {"learn", "instruct"}
 COMMAND_KINDS = frozenset({"meeting.message", "company.census.collect"})
 ERRORS = {
+    "CONSULTATION_DELAYED": "The referred meeting is scheduled for a later simulated time. "
+    "Inspect its schedule and explicitly resubmit after advancing the clock.",
+    "INVALID_CONSULTATION": "The exact consultation references or request are invalid. "
+    "Reload the current conversation before submitting a new request.",
     "REVISION_CONFLICT": "Engagement changed. Inspect its state and submit a new command.",
     "ACCESS_DENIED": "Access changed. Restore authorized access before deciding whether to retry.",
     "INTERRUPTED": (
@@ -356,6 +360,8 @@ class BackgroundJobs:
                 status, error, revision = "COMPLETED", None, result["revision"]
             except DomainError as exc:
                 if exc.code in {
+                    "CONSULTATION_DELAYED",
+                    "INVALID_CONSULTATION",
                     "SOURCE_CONTEXT_UNAVAILABLE",
                     "INVALID_SOURCE_SELECTION",
                     "INFERENCE_TIMEOUT",

@@ -675,3 +675,40 @@ The successor register retained its predecessor manifest and unchanged earlier
 audit histories. Accepted synthetic finance files and historical source locks
 were checked as read-only references; no finance records were imported or changed.
 The inventory does not establish complete operating history or evidence sufficiency.
+
+## Retained handoff rehearsal and attributed company consultation
+
+The exact corrected-evidence investigation now has a separate executed technical
+coordination handoff. Its synthetic preparer offered the retained workpaper v1 to
+the existing synthetic reviewer, who explicitly accepted and completed the
+coordination request. All 13 audit events, source versions, memberships and
+original bytes remained unchanged during execution. Exact replay, stale-version
+rejection, nonparticipant denial and an inert companion restore passed. The
+private receipt is `source-impact-rehearsal-preparation-2026-09-21/handoff-v1/result/RECEIPT.json`.
+A full compiled-App check used the recorded participant projections to inspect
+that exact historical version on desktop and narrow screens. This is a scripted
+projection fixture, not live HTTP acceptance, human review or professional
+assurance; later independent inspection distinguishes SQLite reader sidecars
+from unchanged logical records.
+
+[Company consultation](../../../../enterprise/audit_suite/COMPANY_CONSULTATION.md)
+adds explicit learner-requested referrals and correction requests through the
+existing meeting command and durable job path. Server-generated hashes pin the
+original question and optional prior company reply. A referral addresses a
+different current scoped contact; a correction request requires an exact prior
+reply and may address the same contact. Original statements remain unchanged.
+The responding contact records an attributed answer, clarification, correction
+or inability to establish the fact. That relation is not verification of truth.
+Only explicitly selected originals within the auditor/contact access intersection
+supply source support; omitted support remains unknown. Current authority,
+source identity, scheduled time and engagement state are checked before model
+work and again before committing the reply. The existing attributed note path
+retains the relation independently of its generated summary.
+
+The composer, historical-message preview and queued-input inspector retain exact
+consultation pins. Ambiguous submissions reuse the original command, while
+changed recipients or authority clear the selection. Backend and browser checks
+use mock providers and synthetic HTTP fixtures: this implementation checkpoint
+makes no claim that a real company conversation or qualified assessment occurred.
+The isolated repository run at commit `8f9b8eab` passed 1,573 tests with three skips;
+subsequent handoff, register and consultation changes have separate focused checks.

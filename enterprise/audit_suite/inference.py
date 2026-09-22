@@ -296,8 +296,25 @@ def validate_result(role: str, value: dict, context: dict) -> dict:
         "observations",
         "proposed_actions",
         "findings",
+        "consultation_relation",
     }:
         raise _error("Unexpected model output fields")
+    consultation = context.get("consultation")
+    if consultation is not None:
+        from .company_consultation import RELATIONS
+
+        if (
+            role != "persona"
+            or value.get("consultation_relation") not in RELATIONS
+            or (
+                value.get("consultation_relation") == "CORRECTS"
+                and consultation.get("has_prior_response") is not True
+            )
+            or value.get("proposed_actions")
+        ):
+            raise _error("Invalid attributed consultation reply relation")
+    elif "consultation_relation" in value:
+        raise _error("Consultation relation requires an authorized consultation context")
     _verify_findings(role, value, context)
     _validate_actions(role, value.get("proposed_actions", []), context)
     allowed = set(context.get("source_ids", []))
@@ -453,6 +470,10 @@ def _response_schema(role: str, source_ids: list[str], context: dict) -> dict:
             "items": obj({"text": text, "source_refs": refs, "limitation": text}),
         },
     }
+    if role == "persona" and context.get("consultation") is not None:
+        from .company_consultation import RELATIONS
+
+        properties["consultation_relation"] = {"type": "string", "enum": list(RELATIONS)}
     if role == "experimental_reviewer":
         properties["findings"] = {
             "type": "array",
@@ -643,6 +664,17 @@ class LocalInference:
                 "REQUIRES_REVIEW may use null source_ref and empty excerpt text when no observed "
                 "passage exists. Empty findings is valid: never invent a defect or quotation. "
                 "Do not repeat findings in observations. Other fields remain as specified. "
+            )
+        elif role == "persona" and context.get("consultation") is not None:
+            prompt += (
+                "Also return required consultation_relation: ANSWERS, CLARIFIES, CORRECTS "
+                "or CANNOT_ESTABLISH. CORRECTS requires the supplied exact prior company response. "
+                "This relation is your attributed statement, not a verified correction or "
+                "professional conclusion. The question is learner-authored; never claim the "
+                "original company contact initiated the referral. Historical statements are "
+                "not newly verified source facts. If support is not supplied, preserve unknowns. "
+                "Only text, source_refs, claims, observations, proposed_actions and "
+                "consultation_relation are allowed. Return no proposed actions. "
             )
         else:
             prompt += (

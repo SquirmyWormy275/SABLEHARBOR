@@ -1,3 +1,4 @@
+import type { Consultation } from "./companyConsultation";
 import type { CensusQuery } from "./sourceCensus";
 import type { SourcePin } from "./meetingSources";
 import { request } from "./api";
@@ -15,6 +16,7 @@ export type BackgroundInput = {
     meeting_id?: string;
     content?: string;
     source_records?: SourcePin[];
+    consultation?: Consultation;
     request_id?: string;
     system_id?: string;
     query?: CensusQuery;
@@ -61,6 +63,7 @@ export function submitMeetingJob(
       meeting_id: string;
       content: string;
       source_records?: SourcePin[];
+      consultation?: Consultation;
     };
   },
 ) {

@@ -144,6 +144,11 @@ def exchange_note(meeting, user_message, company_message, result, stamped):
         "classification": "ATTRIBUTED_EXCHANGE_STATEMENT" if refs else "UNATTRIBUTED_PROPOSAL",
         "source_refs": refs,
         "confirmation": "UNCONFIRMED_EXTRACTION",
+        **(
+            {"consultation": copy.deepcopy(company_message["consultation"])}
+            if "consultation" in company_message
+            else {}
+        ),
         "history": [],
         **stamped,
     }
@@ -224,6 +229,7 @@ class Engine:
             "workpaper_procedure_links": True,
             "company_sources": self.company_store is not None,
             "company_message_sources": self.company_store is not None,
+            "company_consultations": self.company_store is not None,
             "company_source_census": self.company_store is not None,
             "company_populations": self.company_store is not None
             and getattr(self.company_store, "capabilities", {}).get("company_populations", True),
@@ -514,6 +520,9 @@ class Engine:
         from .sample_execution import input_pins
 
         state["sample_execution_inputs"] = input_pins(state)
+        from .company_consultation import input_pins as consultation_inputs
+
+        state["company_consultation_inputs"] = consultation_inputs(state)
         state["permissions"] = [permission]
         return state
 
@@ -700,6 +709,20 @@ class Engine:
                 from .company_persona import validate_selection
 
                 validate_selection(self, actor, state, meeting["person_id"], p["source_records"])
+            consultation_prepared = inference_result.get("consultation_prepared")
+            if "consultation" in p:
+                from . import company_consultation
+
+                if consultation_prepared is None:
+                    raise DomainError("Consultation result unavailable")
+                company_consultation.revalidate(
+                    self,
+                    actor,
+                    state,
+                    p,
+                    consultation_prepared,
+                    inference_result.get("consultation_source_manifest", []),
+                )
             user_message = {
                 "id": inference_result.get("message_ids", {}).get("user") or identifier("MSG"),
                 "role": "user",
@@ -718,6 +741,13 @@ class Engine:
                 "model": inference_result.get("model"),
                 **stamped,
             }
+            if "consultation" in p:
+                user_message["consultation"] = company_consultation.stored(consultation_prepared)
+                company_message["consultation"] = company_consultation.stored(
+                    consultation_prepared,
+                    result=inference_result,
+                    manifest=inference_result.get("consultation_source_manifest", []),
+                )
             actions = inference_result.get("proposed_actions", [])
             from .inference import _validate_actions
 
@@ -1284,6 +1314,11 @@ class Engine:
             raise DomainError("Kickoff and scoped generation must precede company dialogue")
         text = require_text(p, "content", maximum=8000)
         meeting = find(state, "meetings", p.get("meeting_id"))
+        consultation = None
+        if "consultation" in p:
+            from . import company_consultation
+
+            consultation = company_consultation.prepare(self, actor_id, state, p)
         if meeting.get("scheduled_at") and datetime.fromisoformat(
             scoped_datetime(meeting["scheduled_at"], state["scope"]).replace("Z", "+00:00")
         ) > datetime.fromisoformat(state["simulated_at"].replace("Z", "+00:00")):
@@ -1311,11 +1346,20 @@ class Engine:
                 raise DomainError(
                     "Explicit source selection cannot be null", code="INVALID_SOURCE_SELECTION"
                 )
-            sources.extend(
-                company_sources(
-                    self, actor_id, state, person["id"], selected_records=p.get("source_records")
+            if consultation is not None and "source_records" not in p:
+                from .company_persona import _notice
+
+                sources.append(_notice())
+            else:
+                sources.extend(
+                    company_sources(
+                        self,
+                        actor_id,
+                        state,
+                        person["id"],
+                        selected_records=p.get("source_records"),
+                    )
                 )
-            )
         elif "source_records" in p:
             raise DomainError(
                 "Explicit originals require company-source collection mode",
@@ -1392,6 +1436,8 @@ class Engine:
                                     }
                                 )
                         break
+        if consultation is not None:
+            sources.extend(company_consultation.context_sources(consultation))
         context = {
             **self._action_context(state, meeting),
             "allowed_roles": ["persona"],
@@ -1405,6 +1451,18 @@ class Engine:
                 "then supplies separate actual receipts."
             ),
         }
+        if consultation is not None:
+            context["allowed_actions"] = []
+            context["consultation"] = {
+                "kind": consultation["requested"]["kind"],
+                "has_prior_response": consultation["response"] is not None,
+                "request_authorship": "LEARNER_REQUESTED_COMPANY_CONSULTATION",
+                "boundary": "Historical statements are attributed context. "
+                "They are not newly verified facts. "
+                "Choose the explicit reply relation; a correction remains your company statement. "
+                "Unsupported facts remain unknown. "
+                "Do not claim nonexistent sources or staff absence.",
+            }
         if self.inference_config is None:
             raise DomainError(
                 "Company dialogue requires the configured local inference runtime",
@@ -1417,12 +1475,33 @@ class Engine:
         messages.append({"role": "user", "content": text})
         provider = LocalInference(self.inference_config)
         result = provider.generate("persona", context, messages)
+        if consultation is not None:
+            company_consultation.validate_reply(result, consultation)
+            company_consultation.revalidate(
+                self,
+                actor_id,
+                state,
+                p,
+                consultation,
+                company_consultation.source_manifest(sources),
+            )
         message_ids = {"user": identifier("MSG"), "company": identifier("MSG")}
         result["message_ids"] = message_ids
         result["extracted_notes"] = provider.generate(
             "note_extraction",
             {
                 "allowed_roles": ["note_extraction"],
+                **(
+                    {
+                        "attributed_consultation": {
+                            **consultation["requested"],
+                            "relation": result["consultation_relation"],
+                            "authority": "ATTRIBUTED_STATEMENT_NOT_VERIFIED_CORRECTION",
+                        }
+                    }
+                    if consultation is not None
+                    else {}
+                ),
                 "source_ids": list(message_ids.values()),
                 "sources": [
                     {"id": message_ids["user"], "text": text, "speaker_role": "LEARNER"},
@@ -1441,11 +1520,18 @@ class Engine:
                         "Summarize the exchange as attributed statements, preserving uncertainty. "
                         "Each material claim must cite its actual message ID. Preserve the learner "
                         "and company speakers separately. Do not infer no-change from silence. "
-                        "Do not treat a company claim as verified evidence."
+                        "Do not treat a company claim as verified evidence. "
+                        "If an attributed consultation relation is supplied, retain its "
+                        "explicit historical-question/response linkage and speaker distinction."
                     ),
                 }
             ],
         )
+        if consultation is not None:
+            manifest = company_consultation.source_manifest(sources)
+            company_consultation.revalidate(self, actor_id, state, p, consultation, manifest)
+            result["consultation_prepared"] = consultation
+            result["consultation_source_manifest"] = manifest
         return result
 
     def _export(self, state: dict, p: dict, stamped: dict) -> None:

@@ -177,6 +177,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Persistent local backup byte operations](../../../enterprise/audit_suite/BACKUP_RUNTIME.md) — MD
 - [Local configuration change and release source pair](../../../enterprise/audit_suite/CHANGE_ACTIVITY.md) — MD
 - [Private companion recovery](../../../enterprise/audit_suite/COMPANION_RECOVERY.md) — MD
+- [Attributed company consultation and correction requests](../../../enterprise/audit_suite/COMPANY_CONSULTATION.md) — MD
 - [Company runtime activation contract](../../../enterprise/audit_suite/COMPANY_RUNTIME_ACTIVATION.md) — MD
 - [Selected-source ownership and migration register](../../../enterprise/audit_suite/COMPANY_SOURCE_REGISTER.md) — MD
 - [Configuration inventory and drift from original release records](../../../enterprise/audit_suite/CONFIGURATION_ACTIVITY.md) — MD
