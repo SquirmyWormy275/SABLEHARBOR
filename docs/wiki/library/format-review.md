@@ -6,15 +6,15 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 109 |
+| COUNTERPART_REVIEW_REQUIRED | 144 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 107 |
-| READER_OR_MAINTENANCE_PAGE | 178 |
+| READER_OR_MAINTENANCE_PAGE | 182 |
 | UNRESOLVED_DOCUMENT_COUNTERPART | 222 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_CHART_PUBLICATION | 40 |
-| VERIFIED_DOCUMENT_PAIR | 131 |
+| VERIFIED_DOCUMENT_PAIR | 135 |
 | VERIFIED_IDENTICAL_SOURCE_PUBLICATION | 3 |
 
 ## Records requiring counterpart reconciliation
@@ -34,13 +34,32 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Invoice](../../finance/evidence/billing/FF-003-v1/INVOICE.md) — SH-FIN-HUMAN-001
 - [FF-003 billing quality review](../../finance/evidence/billing/FF-003-v1/QA.md) — SH-FIN-HUMAN-001
 - [Close, allowance and legal-book reconciliation](../../finance/evidence/close/draft/WORKING_PAPER.md) — SH-FIN-HUMAN-001
+- [Company closeout accounting basis](../../finance/evidence/company-closeout/ACCOUNTING_BASIS_SUCCESSOR.md) — SH-FIN-HUMAN-001
+- [ARU/BST annual tax-base bridge](../../finance/evidence/company-closeout/ARU_BOOK_TO_TAX_METHOD.md) — SH-FIN-HUMAN-001
+- [Authored 2016–2022 tax and cash reconstruction](../../finance/evidence/company-closeout/HISTORICAL_TAX_RECONSTRUCTION.md) — SH-FIN-HUMAN-001
+- [Illinois loss-limit authority update](../../finance/evidence/company-closeout/ILLINOIS_NOL_2026_SUCCESSOR.md) — SH-FIN-HUMAN-001
+- [Industrial native income-tax settlement adapter](../../finance/evidence/company-closeout/INDUSTRIAL_TAX_SETTLEMENT.md) — SH-FIN-HUMAN-001
+- [RWH Illinois transaction-tax composition](../../finance/evidence/company-closeout/RWH_TRANSACTION_TAX.md) — SH-FIN-HUMAN-001
+- [Prospective software sales-tax population](../../finance/evidence/company-closeout/SOFTWARE_SALES_TAX.md) — SH-FIN-HUMAN-001
+- [Statutory financial reperformance receipt](../../finance/evidence/company-closeout/STATUTORY_REPERFORMANCE_2026-09-22.md) — SH-FIN-HUMAN-001
+- [Entity filing calendar and performance boundary](../../finance/evidence/company-closeout/TAX_FILING_CALENDAR.md) — SH-FIN-HUMAN-001
+- [Parent tax history and filing boundaries](../../finance/evidence/company-closeout/TAX_HISTORY.md) — SH-FIN-HUMAN-001
+- [Treasury timing, debt/security and investor reading route](../../finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md) — SH-FIN-HUMAN-001
 - [Billing, collections and deferred revenue](../../finance/evidence/customer/draft/WORKING_PAPER.md) — SH-FIN-HUMAN-001
 - [Workforce, inventory, fixed assets and debt](../../finance/evidence/supporting-schedules/draft/WORKING_PAPER.md) — SH-FIN-HUMAN-001
 - [Current industrial transaction and tax support](../../finance/evidence/tax-transaction/TRANSACTION_SUPPORT.md) — SH-FIN-HUMAN-001
 - [Transaction cash and conditional tax support](../../finance/evidence/tax-transaction/draft/WORKING_PAPER.md) — SH-FIN-HUMAN-001
 - [Procurement, payables and Treasury](../../finance/evidence/treasury/draft/WORKING_PAPER.md) — SH-FIN-HUMAN-001
 - [Finance and accounting: human evidence completion handoff](../../handoffs/FINANCE_HUMAN_EVIDENCE_COMPLETION.md) — Corporate document-format reconciliation
+- [Independent capital export and selected-review route](../../internal/company-closeout/CAPITAL_EXPORT_REVIEW_2026-09-22.md) — Corporate document-format reconciliation
+- [Exact historical capitalization — reviewable authoring proposal](../../internal/company-closeout/CAPITAL_HISTORY_PROPOSAL.md) — Corporate document-format reconciliation
+- [Debt and selected host evidence — August 2026](../../internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md) — Corporate document-format reconciliation
+- [Current acquisition escrow and holdback register](../../internal/company-closeout/ESCROW_DISPOSITIONS.md) — Corporate document-format reconciliation
+- [Founder admission and monetary opening](../../internal/company-closeout/FOUNDER_ADMISSION_BASIS.md) — Corporate document-format reconciliation
+- [Industrial opening capital: authored 2025 contribution history](../../internal/company-closeout/INDUSTRIAL_CAPITAL_HISTORY_2026-09-22.md) — Corporate document-format reconciliation
 - [Main source protection](../../internal/company-closeout/MAIN_PROTECTION.md) — Corporate document-format reconciliation
+- [Company edition to existing audit portal](../../internal/company-closeout/PORTAL_CONTRACT.md) — Corporate document-format reconciliation
+- [Selected-edition portal review rehearsal](../../internal/company-closeout/PORTAL_SELECTED_REVIEW.md) — Corporate document-format reconciliation
 - [PR #145 integration evidence](../../internal/company-closeout/PR145_INTEGRATION.md) — Corporate document-format reconciliation
 - [Actionable CCF procedure deltas](../../internal/development/CCF_ACTIONABLE_CONTROL_DELTAS_2026-09-12.md) — Corporate document-format reconciliation
 - [Integrated CCF delivery workflow](../../internal/development/CCF_INTEGRATED_DELIVERY_WORKFLOW_2026-09-12.md) — Corporate document-format reconciliation
@@ -112,12 +131,28 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Conditional future Red Wash product custody and carrier agreement](../../legal/gap-instruments/source/uranium-custody.md) — SH-FIN-HUMAN-001
 - [ARU individual retention agreements and Tolman consultancy](../../legal/gap-instruments/source/workforce.md) — SH-FIN-HUMAN-001
 - [Closeout evidence releases](../../releases/CLOSEOUT_EVIDENCE_RELEASES.md) — Corporate document-format reconciliation
+- [Company edition releases](../../releases/COMPANY_EDITION_RELEASES.md) — Corporate document-format reconciliation
 - [Facility atlas controlled releases](../../releases/FACILITY_ATLAS_RELEASES.md) — Corporate document-format reconciliation
 - [Geographic evidence releases](../../releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) — Corporate document-format reconciliation
+- [ARU acquisition cost classification](../../../enterprise/ccf/company_closeout/ARU_TRANSACTION_COST_TAX.md) — Corporate document-format reconciliation
+- [Current C05/C06 evidence and residual receipt](../../../enterprise/ccf/company_closeout/CURRENT_RESIDUALS.md) — Corporate document-format reconciliation
+- [FRA event-day authority closeout](../../../enterprise/ccf/company_closeout/FRA_EVENT_DAY_AUTHORITY.md) — Corporate document-format reconciliation
+- [Unpaid historical receipt-tax consequences](../../../enterprise/ccf/company_closeout/ROT_PENALTY_WORKPAPER.md) — Corporate document-format reconciliation
+- [Current receipt-based ROT duties](../../../enterprise/ccf/company_closeout/ROT_RECEIPTS_2026.md) — Corporate document-format reconciliation
+- [Independent review: initial Red Wash historical tax source](../../../enterprise/ccf/company_closeout/RWH_HISTORY_INDEPENDENT_REVIEW.md) — Corporate document-format reconciliation
+- [State-tax computational handoff](../../../enterprise/ccf/company_closeout/STATE_TAX_IMPLEMENTATION_ADDENDUM.md) — Corporate document-format reconciliation
+- [State unitary operating-group determination](../../../enterprise/ccf/company_closeout/STATE_UNITARY_ANALYSIS.md) — Corporate document-format reconciliation
+- [Independent statutory tax workpaper review](../../../enterprise/ccf/company_closeout/STATUTORY_TAX_INDEPENDENT_REVIEW_2026-09-22.md) — Corporate document-format reconciliation
+- [Subsidiary and state income-tax implementation contract](../../../enterprise/ccf/company_closeout/SUBSIDIARY_TAX_PERIMETER_RESEARCH.md) — Corporate document-format reconciliation
+- [Filing and receipt calendar supplement](../../../enterprise/ccf/company_closeout/TAX_CALENDAR_SUPPLEMENT.md) — Corporate document-format reconciliation
 - [Evidence collection and scheduling](../../../enterprise/ccf/operations/COLLECTION.md) — Corporate document-format reconciliation
 - [Bounded control test contracts](../../../enterprise/ccf/operations/CONTROL_TEST_CONTRACTS.md) — Corporate document-format reconciliation
 - [GitHub pull-request review source](../../../enterprise/ccf/operations/GITHUB_SOURCE.md) — Corporate document-format reconciliation
 - [Protected CCF workflow API](../../../enterprise/ccf/operations/SERVICE.md) — Corporate document-format reconciliation
+- [Conditional mine utility ROT continuation](../../../enterprise/closeout/INDUSTRIAL_TAX_FUTURE.md) — Corporate document-format reconciliation
+- [State receipt apportionment — company closeout](../../../enterprise/closeout/STATE_APPORTIONMENT.md) — Corporate document-format reconciliation
+- [August 2026 people and operating reconstruction](../../../enterprise/operations/docs/completed-period.md) — SH-FIN-HUMAN-001
+- [August Pale Sun legal-employer allocation](../../../enterprise/operations/docs/ps-legal-payroll-bridge.md) — SH-FIN-HUMAN-001
 - [Klein shop and Fort continuity — proposed decision](../../../geospatial/chronology/CONTINUITY_PROPOSAL.md) — Corporate document-format reconciliation
 - [Geographic continuation boundary](../../../geospatial/docs/NEXT_CHAT_HANDOFF.md) — Corporate document-format reconciliation
 - [Geographic program closeout matrix](../../../geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md) — Corporate document-format reconciliation

@@ -1,0 +1,411 @@
+{
+  "document_id": "SH-C05-PERFORMANCE-2026-09-15",
+  "version": "1.0.0",
+  "acceptance_state": "PENDING_REPOSITORY_ACCEPTANCE",
+  "fact_origin": "NEWLY_AUTHORED_SYNTHETIC_INTERNAL_REVIEW",
+  "authored_on": "2026-09-15",
+  "available_on": "2026-09-15",
+  "scenario": "completed_source_review",
+  "scope": "14 new internal condition schedules; one completed environmental source review plus two documentary reviews. Does not assert historical August performance or regulator-issued permit amendments.",
+  "conditions": [
+    {
+      "id": "RW-PER-001-IC-01",
+      "permit_id": "RW-PER-001",
+      "legal_entity": "RWH",
+      "condition": "Approved plan footprint, monitoring and material-change evaluation",
+      "condition_authority": "NEW_SYNTHETIC_INTERNAL_CONDITION_NOT_REGULATOR_ISSUED_TERM",
+      "effective_on": "2026-09-15",
+      "frequency": "MONTHLY_INTERNAL_DESK_REVIEW",
+      "first_due": "2026-09-30",
+      "owner_role": "RWH Mine Manager",
+      "expected_first_period_count": 1,
+      "current_review_state": "PERFORMED_WITH_EXCEPTION",
+      "evidence_ids": [
+        "SH-ENV-REVIEW-20260915"
+      ],
+      "external_compliance": "NOT_DETERMINED",
+      "exception": "Complete instrument conditions and actual occurrence populations remain unavailable; monthly internal review is not the underlying statutory frequency.",
+      "next_action": "Owner resolve instrument-specific conditions and join source performance records by first review due date."
+    },
+    {
+      "id": "RW-PER-002-IC-01",
+      "permit_id": "RW-PER-002",
+      "legal_entity": "RWH",
+      "condition": "Decision mitigation and action scope; not a recurring operating permit",
+      "condition_authority": "NEW_SYNTHETIC_INTERNAL_CONDITION_NOT_REGULATOR_ISSUED_TERM",
+      "effective_on": "2026-09-15",
+      "frequency": "MONTHLY_INTERNAL_DESK_REVIEW",
+      "first_due": "2026-09-30",
+      "owner_role": "RWH Environmental Manager",
+      "expected_first_period_count": 1,
+      "current_review_state": "PERFORMED_WITH_EXCEPTION",
+      "evidence_ids": [
+        "SH-PERMIT-DESK-002"
+      ],
+      "external_compliance": "NOT_DETERMINED",
+      "exception": "Complete instrument conditions and actual occurrence populations remain unavailable; monthly internal review is not the underlying statutory frequency.",
+      "next_action": "Owner resolve instrument-specific conditions and join source performance records by first review due date."
+    },
+    {
+      "id": "RW-PER-003-IC-01",
+      "permit_id": "RW-PER-003",
+      "legal_entity": "RWH",
+      "condition": "Disturbance, reclamation and annual reporting/bond review",
+      "condition_authority": "NEW_SYNTHETIC_INTERNAL_CONDITION_NOT_REGULATOR_ISSUED_TERM",
+      "effective_on": "2026-09-15",
+      "frequency": "MONTHLY_INTERNAL_DESK_REVIEW",
+      "first_due": "2026-09-30",
+      "owner_role": "RWH Environmental Manager",
+      "expected_first_period_count": 1,
+      "current_review_state": "MISSING_EVIDENCE",
+      "evidence_ids": [],
+      "external_compliance": "NOT_DETERMINED",
+      "exception": "Complete instrument conditions and actual occurrence populations remain unavailable; monthly internal review is not the underlying statutory frequency.",
+      "next_action": "Owner resolve instrument-specific conditions and join source performance records by first review due date."
+    },
+    {
+      "id": "RW-PER-004-IC-01",
+      "permit_id": "RW-PER-004",
+      "legal_entity": "RWH",
+      "condition": "License conditions, radiation monitoring, product accountability and incident classification",
+      "condition_authority": "NEW_SYNTHETIC_INTERNAL_CONDITION_NOT_REGULATOR_ISSUED_TERM",
+      "effective_on": "2026-09-15",
+      "frequency": "MONTHLY_INTERNAL_DESK_REVIEW",
+      "first_due": "2026-09-30",
+      "owner_role": "RWH Radiation Safety Officer",
+      "expected_first_period_count": 1,
+      "current_review_state": "MISSING_EVIDENCE",
+      "evidence_ids": [],
+      "external_compliance": "NOT_DETERMINED",
+      "exception": "Complete instrument conditions and actual occurrence populations remain unavailable; monthly internal review is not the underlying statutory frequency.",
+      "next_action": "Owner resolve instrument-specific conditions and join source performance records by first review due date."
+    },
+    {
+      "id": "RW-PER-005-IC-01",
+      "permit_id": "RW-PER-005",
+      "legal_entity": "RWH",
+      "condition": "Emission sources, limits, inspections and permit-specific testing",
+      "condition_authority": "NEW_SYNTHETIC_INTERNAL_CONDITION_NOT_REGULATOR_ISSUED_TERM",
+      "effective_on": "2026-09-15",
+      "frequency": "MONTHLY_INTERNAL_DESK_REVIEW",
+      "first_due": "2026-09-30",
+      "owner_role": "RWH Environmental Manager",
+      "expected_first_period_count": 1,
+      "current_review_state": "MISSING_EVIDENCE",
+      "evidence_ids": [],
+      "external_compliance": "NOT_DETERMINED",
+      "exception": "Complete instrument conditions and actual occurrence populations remain unavailable; monthly internal review is not the underlying statutory frequency.",
+      "next_action": "Owner resolve instrument-specific conditions and join source performance records by first review due date."
+    },
+    {
+      "id": "RW-PER-006-IC-01",
+      "permit_id": "RW-PER-006",
+      "legal_entity": "RWH",
+      "condition": "Outfall-specific inspections, sampling and corrective action",
+      "condition_authority": "NEW_SYNTHETIC_INTERNAL_CONDITION_NOT_REGULATOR_ISSUED_TERM",
+      "effective_on": "2026-09-15",
+      "frequency": "MONTHLY_INTERNAL_DESK_REVIEW",
+      "first_due": "2026-09-30",
+      "owner_role": "RWH Environmental Manager",
+      "expected_first_period_count": 1,
+      "current_review_state": "MISSING_EVIDENCE",
+      "evidence_ids": [],
+      "external_compliance": "NOT_DETERMINED",
+      "exception": "Complete instrument conditions and actual occurrence populations remain unavailable; monthly internal review is not the underlying statutory frequency.",
+      "next_action": "Owner resolve instrument-specific conditions and join source performance records by first review due date."
+    },
+    {
+      "id": "RW-PER-007-IC-01",
+      "permit_id": "RW-PER-007",
+      "legal_entity": "RWH",
+      "condition": "Well-specific sampling, QA/QC, trend and action-level evaluation; preserve MW-17 uncertainty",
+      "condition_authority": "NEW_SYNTHETIC_INTERNAL_CONDITION_NOT_REGULATOR_ISSUED_TERM",
+      "effective_on": "2026-09-15",
+      "frequency": "MONTHLY_INTERNAL_DESK_REVIEW",
+      "first_due": "2026-09-30",
+      "owner_role": "RWH Environmental Manager",
+      "expected_first_period_count": 1,
+      "current_review_state": "PERFORMED_WITH_EXCEPTION",
+      "evidence_ids": [
+        "SH-ENV-REVIEW-20260915"
+      ],
+      "external_compliance": "NOT_DETERMINED",
+      "exception": "Complete instrument conditions and actual occurrence populations remain unavailable; monthly internal review is not the underlying statutory frequency.",
+      "next_action": "Owner resolve instrument-specific conditions and join source performance records by first review due date."
+    },
+    {
+      "id": "RW-PER-008-IC-01",
+      "permit_id": "RW-PER-008",
+      "legal_entity": "RWH",
+      "condition": "Cell/underdrain condition, freeboard and seepage monitoring; investigate with MW-17",
+      "condition_authority": "NEW_SYNTHETIC_INTERNAL_CONDITION_NOT_REGULATOR_ISSUED_TERM",
+      "effective_on": "2026-09-15",
+      "frequency": "MONTHLY_INTERNAL_DESK_REVIEW",
+      "first_due": "2026-09-30",
+      "owner_role": "RWH Mill Manager",
+      "expected_first_period_count": 1,
+      "current_review_state": "PERFORMED_WITH_EXCEPTION",
+      "evidence_ids": [
+        "SH-ENV-REVIEW-20260915"
+      ],
+      "external_compliance": "NOT_DETERMINED",
+      "exception": "Complete instrument conditions and actual occurrence populations remain unavailable; monthly internal review is not the underlying statutory frequency.",
+      "next_action": "Owner resolve instrument-specific conditions and join source performance records by first review due date."
+    },
+    {
+      "id": "RW-PER-009-IC-01",
+      "permit_id": "RW-PER-009",
+      "legal_entity": "RWH",
+      "condition": "Workplace examinations, incident classification, qualifications and noise exposure",
+      "condition_authority": "NEW_SYNTHETIC_INTERNAL_CONDITION_NOT_REGULATOR_ISSUED_TERM",
+      "effective_on": "2026-09-15",
+      "frequency": "MONTHLY_INTERNAL_DESK_REVIEW",
+      "first_due": "2026-09-30",
+      "owner_role": "RWH Safety Manager",
+      "expected_first_period_count": 1,
+      "current_review_state": "PERFORMED_WITH_EXCEPTION",
+      "evidence_ids": [
+        "SH-C05-WORKPLACE-2026-09-15"
+      ],
+      "external_compliance": "NOT_DETERMINED",
+      "exception": "Selected four-examination population completed; expired designation blocked and renewal remains future due. Whole-mine workplace population remains excluded.",
+      "next_action": "Owner resolve instrument-specific conditions and join source performance records by first review due date."
+    },
+    {
+      "id": "RW-PER-010-IC-01",
+      "permit_id": "RW-PER-010",
+      "legal_entity": "RWH",
+      "condition": "Magazine security, inventory and authorized trained handling",
+      "condition_authority": "NEW_SYNTHETIC_INTERNAL_CONDITION_NOT_REGULATOR_ISSUED_TERM",
+      "effective_on": "2026-09-15",
+      "frequency": "MONTHLY_INTERNAL_DESK_REVIEW",
+      "first_due": "2026-09-30",
+      "owner_role": "RWH Mine Manager",
+      "expected_first_period_count": 1,
+      "current_review_state": "MISSING_EVIDENCE",
+      "evidence_ids": [],
+      "external_compliance": "NOT_DETERMINED",
+      "exception": "Complete instrument conditions and actual occurrence populations remain unavailable; monthly internal review is not the underlying statutory frequency.",
+      "next_action": "Owner resolve instrument-specific conditions and join source performance records by first review due date."
+    },
+    {
+      "id": "RW-PER-011-IC-01",
+      "permit_id": "RW-PER-011",
+      "legal_entity": "RWH",
+      "condition": "Registration and shipment-specific classification, packaging, training and carrier authorization",
+      "condition_authority": "NEW_SYNTHETIC_INTERNAL_CONDITION_NOT_REGULATOR_ISSUED_TERM",
+      "effective_on": "2026-09-15",
+      "frequency": "MONTHLY_INTERNAL_DESK_REVIEW",
+      "first_due": "2026-09-30",
+      "owner_role": "RWH Logistics Manager",
+      "expected_first_period_count": 1,
+      "current_review_state": "PERFORMED_WITH_EXCEPTION",
+      "evidence_ids": [
+        "SH-PERMIT-DESK-011"
+      ],
+      "external_compliance": "NOT_DETERMINED",
+      "exception": "Complete instrument conditions and actual occurrence populations remain unavailable; monthly internal review is not the underlying statutory frequency.",
+      "next_action": "Owner resolve instrument-specific conditions and join source performance records by first review due date."
+    },
+    {
+      "id": "RW-PER-012-IC-01",
+      "permit_id": "RW-PER-012",
+      "legal_entity": "RWH",
+      "condition": "Permit-specific diversion/withdrawal limits and measuring records",
+      "condition_authority": "NEW_SYNTHETIC_INTERNAL_CONDITION_NOT_REGULATOR_ISSUED_TERM",
+      "effective_on": "2026-09-15",
+      "frequency": "MONTHLY_INTERNAL_DESK_REVIEW",
+      "first_due": "2026-09-30",
+      "owner_role": "RWH Environmental Manager",
+      "expected_first_period_count": 1,
+      "current_review_state": "MISSING_EVIDENCE",
+      "evidence_ids": [],
+      "external_compliance": "NOT_DETERMINED",
+      "exception": "Complete instrument conditions and actual occurrence populations remain unavailable; monthly internal review is not the underlying statutory frequency.",
+      "next_action": "Owner resolve instrument-specific conditions and join source performance records by first review due date."
+    },
+    {
+      "id": "RW-PER-013-IC-01",
+      "permit_id": "RW-PER-013",
+      "legal_entity": "RWH",
+      "condition": "Obligation measurement and surety sufficiency; balance is not proof of bond receipt",
+      "condition_authority": "NEW_SYNTHETIC_INTERNAL_CONDITION_NOT_REGULATOR_ISSUED_TERM",
+      "effective_on": "2026-09-15",
+      "frequency": "MONTHLY_INTERNAL_DESK_REVIEW",
+      "first_due": "2026-09-30",
+      "owner_role": "RWH Finance Controller",
+      "expected_first_period_count": 1,
+      "current_review_state": "MISSING_EVIDENCE",
+      "evidence_ids": [],
+      "external_compliance": "NOT_DETERMINED",
+      "exception": "Complete instrument conditions and actual occurrence populations remain unavailable; monthly internal review is not the underlying statutory frequency.",
+      "next_action": "Owner resolve instrument-specific conditions and join source performance records by first review due date."
+    },
+    {
+      "id": "RW-PER-014-IC-01",
+      "permit_id": "RW-PER-014",
+      "legal_entity": "RWH",
+      "condition": "Applicable tailings category, work practices and monitoring/reporting",
+      "condition_authority": "NEW_SYNTHETIC_INTERNAL_CONDITION_NOT_REGULATOR_ISSUED_TERM",
+      "effective_on": "2026-09-15",
+      "frequency": "MONTHLY_INTERNAL_DESK_REVIEW",
+      "first_due": "2026-09-30",
+      "owner_role": "RWH Environmental Manager",
+      "expected_first_period_count": 1,
+      "current_review_state": "MISSING_EVIDENCE",
+      "evidence_ids": [],
+      "external_compliance": "NOT_DETERMINED",
+      "exception": "Complete instrument conditions and actual occurrence populations remain unavailable; monthly internal review is not the underlying statutory frequency.",
+      "next_action": "Owner resolve instrument-specific conditions and join source performance records by first review due date."
+    }
+  ],
+  "authorities": [
+    {
+      "id": "blm2025",
+      "provision": "43 CFR 3809.401(b)(4)",
+      "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title43-vol2/pdf/CFR-2025-title43-vol2-part3800-subpart3809.pdf",
+      "edition": "2025-10-01",
+      "accessed_on": "2026-09-15",
+      "sha256": "1d2d5a9331ee316cf6f68d14f8089c4836331744db77da0ab57f52c9558b56a1",
+      "review": "Monitoring-plan content read. Internal trend trigger is newly authored and is not a legal limit. 2026 amendment crosscheck remains open."
+    },
+    {
+      "id": "msha2025",
+      "provision": "30 CFR 57.18002",
+      "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title30-vol1/pdf/CFR-2025-title30-vol1-part57.pdf",
+      "edition": "2025-07-01",
+      "accessed_on": "2026-09-15",
+      "sha256": "547dfc8ad88a86ff96d3f3194560b368aa3e780409dd83f50f0ee04c06dbc3dc",
+      "review": "Working-place examination timing, competent designation, adverse-condition response and record fields; no whole-mine compliance conclusion."
+    },
+    {
+      "id": "msha2026",
+      "provision": "91 FR 46967-46969, MSHA collection notice",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-07-27/pdf/2026-15135.pdf",
+      "edition": "2026-07-27",
+      "accessed_on": "2026-09-15",
+      "sha256": "980458eb4acbc52995fffd7c466d2849900507e28439004499fcd0b5c73615dc",
+      "review": "Contemporaneous agency description corroborates examination/record duties, not a new rule or substitute for actual examination evidence."
+    }
+  ],
+  "environmental_review": {
+    "id": "SH-ENV-REVIEW-20260915",
+    "event_at": "2026-09-15T02:00:00+00:00",
+    "available_at": "2026-09-15T02:00:00+00:00",
+    "preparer_role": "RWH Environmental Manager",
+    "reviewer_role": "RWH Radiation Safety Officer",
+    "person_assignment": "EXISTING_HR_STABLE_IDS_NEWLY_AUTHORED_SCOPED_REVIEW_ROLES",
+    "independent_review_state": "SYNTHETIC_COMPLETED_INDEPENDENT_REVIEW",
+    "source_available_on": "2026-09-05",
+    "source_authorship_boundary": "Existing September 5 synthetic retrospective calibration; no inference that laboratory evidence was available in August.",
+    "result": {
+      "source_path": "red_wash/generated/environmental_monitoring.csv",
+      "generator_source_hashes": {
+        "red_wash/tools/build_red_wash_package.py": "acb05a0cf48ae4a32fff24b9e52c36b8e0e13a25e3199c523188d1d5cc64e686",
+        "red_wash/source/core_operating_data.json": "eb5601f3a519ac175bef07744fa3c23939734f80b5774efeed4800aa73e8aa3f",
+        "red_wash/source/aru_bst_bridge.json": "7154036322bf3f7f235c822b443eaf56f94070a4d87a4ecd58ef37e76db2916e",
+        "red_wash/source/external_source_register.csv": "989c7fae3110dc6308f56da9f7831a2881be1295e8dfe08de686c51cdc71b7f7"
+      },
+      "source_sha256": "769e6e3d807c67d9089237a1f21f71103aee6f12c937cebe7fced38dceb52c1b",
+      "population_count": 180,
+      "period_station_units": 180,
+      "period_start": "2019-Q1",
+      "period_end": "2026-Q2",
+      "quarter_2026_q3_status": "FUTURE_DUE_NOT_COMPLETE_AT_AUGUST_CUTOFF",
+      "observations": [
+        {
+          "station": "MW-04",
+          "baseline_2019_mean_uranium_mg_l": "0.01205",
+          "latest_period": "2026-Q2",
+          "latest_uranium_mg_l": "0.012",
+          "delta_mg_l": "-0.00005",
+          "internal_trend_flag": false
+        },
+        {
+          "station": "MW-09",
+          "baseline_2019_mean_uranium_mg_l": "0.012325",
+          "latest_period": "2026-Q2",
+          "latest_uranium_mg_l": "0.0124",
+          "delta_mg_l": "0.000075",
+          "internal_trend_flag": false
+        },
+        {
+          "station": "MW-12",
+          "baseline_2019_mean_uranium_mg_l": "0.01135",
+          "latest_period": "2026-Q2",
+          "latest_uranium_mg_l": "0.0134",
+          "delta_mg_l": "0.00205",
+          "internal_trend_flag": false
+        },
+        {
+          "station": "MW-17",
+          "baseline_2019_mean_uranium_mg_l": "0.01235",
+          "latest_period": "2026-Q2",
+          "latest_uranium_mg_l": "0.0232",
+          "delta_mg_l": "0.01085",
+          "internal_trend_flag": true
+        },
+        {
+          "station": "MW-21",
+          "baseline_2019_mean_uranium_mg_l": "0.0120",
+          "latest_period": "2026-Q2",
+          "latest_uranium_mg_l": "0.0106",
+          "delta_mg_l": "-0.0014",
+          "internal_trend_flag": false
+        },
+        {
+          "station": "TAIL-UD-1",
+          "baseline_2019_mean_uranium_mg_l": "0.012175",
+          "latest_period": "2026-Q2",
+          "latest_uranium_mg_l": "0.0121",
+          "delta_mg_l": "-0.000075",
+          "internal_trend_flag": false
+        }
+      ],
+      "threshold_basis": "New synthetic internal investigation trigger: latest minus 2019 annual mean > 0.005 mg/L. Not a statutory limit, background finding or permit exceedance.",
+      "outcome": "INVESTIGATION_REQUIRED",
+      "liability_conclusion": "NOT_DETERMINED"
+    },
+    "interpretation": "MW-17 latest uranium is 0.0232 mg/L against 2019 mean 0.01235 mg/L: +0.01085 mg/L. The internal trigger is exceeded. TAIL-UD-1 latest does not exceed that trigger, which does not establish absence of seepage or a hydraulic connection.",
+    "corrective_action": {
+      "id": "SH-ENV-CA-20260915",
+      "state": "OPEN",
+      "owner_role": "RWH Environmental Manager",
+      "due_on": "2026-09-30",
+      "action": "Joint groundwater/Cell 1 underdrain investigation: recover raw lab/QA and hydraulic evidence, evaluate license-specific action levels and reportability; preserve both source series. No final release pathway or liability determined.",
+      "prospective_retest_on": "2026-10-15",
+      "retest_state": "FUTURE_DUE"
+    },
+    "preparer_id": "RW-0119",
+    "reviewer_id": "RW-0112",
+    "reviewer_reperformance": {
+      "method": "Independent explicit arithmetic of four source baseline values and latest value; no professional audit opinion.",
+      "mw17_2019_uranium_mg_l": [
+        "0.0128",
+        "0.0119",
+        "0.0120",
+        "0.0127"
+      ],
+      "sum_mg_l": "0.0494",
+      "mean_mg_l": "0.01235",
+      "latest_minus_mean_mg_l": "0.01085",
+      "conclusion": "Escalate; preserve unresolved pathway and liability."
+    }
+  },
+  "documentary_reviews": [
+    {
+      "id": "SH-PERMIT-DESK-002",
+      "event_on": "2026-09-15",
+      "result": "FONSI is a decision supporting the plan scope; existing program describes mitigation but not completed mitigation checks. Do not relabel FONSI as annual permit renewal.",
+      "evidence_path": "red_wash/regulatory/REGULATORY_PERMIT_AND_ENVIRONMENTAL_FILE.md",
+      "outcome": "PERFORMED_WITH_EXCEPTION"
+    },
+    {
+      "id": "SH-PERMIT-DESK-011",
+      "event_on": "2026-09-15",
+      "result": "Existing qualified external-carrier boundary retained. ARU/BS&T ordinary acid-input service is not uranium carriage authority. Shipment-specific hazmat certification and carrier qualification remain required.",
+      "evidence_path": "red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md",
+      "outcome": "PERFORMED_WITH_EXCEPTION"
+    }
+  ]
+}

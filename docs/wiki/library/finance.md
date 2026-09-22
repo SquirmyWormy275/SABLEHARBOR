@@ -188,6 +188,23 @@ Generated file inventory. Includes current and historical records; open the sour
 - [working-paper](../../finance/evidence/close/draft/working-paper.pdf) — PDF
 - [working-papers](../../finance/evidence/close/draft/working-papers.xlsx) — XLSX
 
+## `docs/finance/evidence/company-closeout`
+
+- [Company closeout accounting basis](../../finance/evidence/company-closeout/ACCOUNTING_BASIS_SUCCESSOR.md) — MD
+- [Adopted corporate history and statutory provision successor](../../finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md) — MD · [formatted PDF](../../finance/publications/SH-COMPANY-PARENT-TAX-20260915_v2.0.0.pdf)
+- [ARU/BST annual tax-base bridge](../../finance/evidence/company-closeout/ARU_BOOK_TO_TAX_METHOD.md) — MD
+- [Authored 2016–2022 tax and cash reconstruction](../../finance/evidence/company-closeout/HISTORICAL_TAX_RECONSTRUCTION.md) — MD
+- [Illinois loss-limit authority update](../../finance/evidence/company-closeout/ILLINOIS_NOL_2026_SUCCESSOR.md) — MD
+- [Industrial native income-tax settlement adapter](../../finance/evidence/company-closeout/INDUSTRIAL_TAX_SETTLEMENT.md) — MD
+- [Company finance successor — September 15, 2026](../../finance/evidence/company-closeout/README.md) — MD
+- [RWH Illinois transaction-tax composition](../../finance/evidence/company-closeout/RWH_TRANSACTION_TAX.md) — MD
+- [Prospective software sales-tax population](../../finance/evidence/company-closeout/SOFTWARE_SALES_TAX.md) — MD
+- [Continuing sovereignty reporting](../../finance/evidence/company-closeout/SOVEREIGNTY_METHOD.md) — MD · [formatted PDF](../../finance/publications/SH-COMPANY-SOVEREIGNTY-20260915_v1.0.0.pdf)
+- [Statutory financial reperformance receipt](../../finance/evidence/company-closeout/STATUTORY_REPERFORMANCE_2026-09-22.md) — MD
+- [Entity filing calendar and performance boundary](../../finance/evidence/company-closeout/TAX_FILING_CALENDAR.md) — MD
+- [Parent tax history and filing boundaries](../../finance/evidence/company-closeout/TAX_HISTORY.md) — MD
+- [Treasury timing, debt/security and investor reading route](../../finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md) — MD
+
 ## `docs/finance/evidence/coverage`
 
 - [Finance evidence: scope and source access](../../finance/evidence/coverage/README.md) — MD
@@ -236,6 +253,10 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `docs/finance/publications`
 
 - [Current business-unit evidence export contract — SH-AUDIT-UNIT-EXPORT-001_v1.0.0](../../finance/publications/SH-AUDIT-UNIT-EXPORT-001_v1.0.0.pdf) — PDF
+- [Company edition inspection and reproduction — SH-COMPANY-INSPECTION-20260915_v1.0.0](../../finance/publications/SH-COMPANY-INSPECTION-20260915_v1.0.0.pdf) — PDF
+- [SH-COMPANY-PARENT-TAX-20260915 v1.0.0](../../finance/publications/SH-COMPANY-PARENT-TAX-20260915_v1.0.0.pdf) — PDF
+- [Adopted corporate history and statutory provision successor — SH-COMPANY-PARENT-TAX-20260915_v2.0.0](../../finance/publications/SH-COMPANY-PARENT-TAX-20260915_v2.0.0.pdf) — PDF
+- [Continuing sovereignty reporting — SH-COMPANY-SOVEREIGNTY-20260915_v1.0.0](../../finance/publications/SH-COMPANY-SOVEREIGNTY-20260915_v1.0.0.pdf) — PDF
 - [Business-driven enterprise financial model — SH-FIN-BUSINESS-001_v1.0.0](../../finance/publications/SH-FIN-BUSINESS-001_v1.0.0.pdf) — PDF
 
 ## `docs/legal`
@@ -597,10 +618,12 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Tier 1 Advisory policy integration](../../../enterprise/operations/docs/advisory-policy.md) — MD
 - [Commercial operations and contract economics](../../../enterprise/operations/docs/commercial.md) — MD
+- [August 2026 people and operating reconstruction](../../../enterprise/operations/docs/completed-period.md) — MD
 - [Synthetic control execution and evidence](../../../enterprise/operations/docs/controls.md) — MD
 - [Credit and Treasury operating histories](../../../enterprise/operations/docs/credit.md) — MD
 - [Workforce and management development](../../../enterprise/operations/docs/management.md) — MD
 - [Advisory matter operating histories](../../../enterprise/operations/docs/matters.md) — MD
+- [August Pale Sun legal-employer allocation](../../../enterprise/operations/docs/ps-legal-payroll-bridge.md) — MD
 - [Research, captured material and industrial operating detail](../../../enterprise/operations/docs/research.md) — MD
 
 ## `enterprise/operations/publications`

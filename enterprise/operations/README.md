@@ -10,6 +10,14 @@ All new operating histories are public synthetic 2027–2031 scenarios. A passin
 build means that records, accounting and disclosed outcomes reconcile. It does
 not mean every scenario is funded, every schedule is feasible or every control passed.
 
+## Completed-period company input
+
+The [August 2026 reconstruction](docs/completed-period.md) adds a separately
+versioned employee, payroll, access and selected operating-chain input. It remains
+pending composite financial reconciliation and repository acceptance. Its
+September 15 authorship is separate from August effective dates and does not
+change the forecast population or earlier release bytes.
+
 ## Run and review
 
 ```bash

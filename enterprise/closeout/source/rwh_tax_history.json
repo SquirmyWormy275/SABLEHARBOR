@@ -1,0 +1,79 @@
+{
+  "document_id": "SH-RWH-H2-HISTORY-20260915",
+  "acceptance_state": "PENDING_REPOSITORY_ACCEPTANCE",
+  "origin": "NEWLY_AUTHORED_CONSTRAINED_SYNTHETIC_HISTORY",
+  "period": "2025-07-18/2025-12-31",
+  "acquired_current_assets": {
+    "receivables": "4000000",
+    "prepayments": "500000",
+    "finished_inventory": "0"
+  },
+  "operating_asset_classes": {
+    "surface_land": "2000000",
+    "mineral_interest": "18000000",
+    "production_plant": "22000000"
+  },
+  "produced_lb": "300000",
+  "sold_lb": "175000",
+  "sales_usd": "12600000",
+  "production_cash_costs": {
+    "mine_labor": "4000000",
+    "energy": "3000000",
+    "consumables": "3000000",
+    "external_operations": "3500000"
+  },
+  "nonproduction_cash_costs": {
+    "commercial_and_site_labor": "800000",
+    "royalties": "252000",
+    "mineral_and_property_taxes": "742000",
+    "external_logistics": "1400000",
+    "administration_and_insurance": "1531000",
+    "mobilization_and_security": "687500"
+  },
+  "repair_cost_usd": "3000000",
+  "rehabilitation_usd": "8000000",
+  "rehabilitation_service_date": "2026-01-01",
+  "closing_trade_payables_usd": "3000000",
+  "book_method": "USGAAP-oriented accrual inventorypolicy: retainedcomposite units-of-production for productiveestate, excludingland; normalproductionoverhead allocatedthroughweighted-average inventory. The controlling3mrepair/stabilization expense remains H2periodP&L, newlyspecified abnormalpostcloseshakedown/idlefacilityrepaircost;687500abnormalmobilizationalsoexpense. Onlynormal1.942m siteadmin/propertytax/plantinsurance entersbookinventory. Tax263Aallocationis separate anddoesnotdeterminebookcost.",
+  "tax_allocation": "Cost28m plus fixed assumed otherliabilities2.5m less acquiredcurrentassets4.5m gives26m initial operating taxcost. All three non-goodwill operating asset classes are ClassV; allocate26m in proportion to the separately authored42m fair-value class population. AssumedARO16m excluded until economicperformance; no replacement goodwill.",
+  "federal_plant_method": "ClassVplant22m separates18meligiblemining/millingequipment (unrelatedpurchase,no priorbuyeruse,no carryoverbasis,not structuralproperty,<=20yrrecovery) and4mnonresidentialbuilding. Equipment receives100%bonus; building39yrstraightline/midmonthJuly convention. Allocate both allowances between the defined idle window and active production under idle_allowance_method; only active production allowances enter inventory.",
+  "california_plant_method": "No federalbonus. Equipmentsection167straightline tenyearusefullife/ACT365firstperiod; productionbuilding39yearstraightline withsameJuly-midmonth convention. Separately authored life/componentfacts are not a recoveredcostsegregationreport.",
+  "depletion_method": "Costdepletion on units sold from ownproduction; compare22%of mininggrossincome with50%propertyincome ceiling. H2propertyincome beforedepletion is negative, so percentageamountzero and costdepletion governs. No purchasedfinishedinventory sold in this authored opening population.",
+  "history_constraint": "Gross sales and detailed cost events are newly authored, not recovered. The prior44.3125M noncash opening capital reconstruction is completed by expressly newly authored2025 voluntary contribution history in SH-CAP-2025-INDUSTRIAL-44312500, enterprise/closeout/source/capital_register.json. This is a PS/RWH combined acquisition-and-operating cash bridge: PS pays28M seller consideration and funds16.3125M into RWH after control; it is not a44.3125M direct RWH bank receipt or RWH buying its own interests. The28M purchase,8M rehabilitation,3M repairs, endingcash2M, AR4M,prepaid0.5M,tradeAP3M,otherliability2.5M and125klb inventory constrain the bridge. The687500 mobilization cost is explicit authored precision. There is no new2026 posting or amount beyond the existing modeled capital.",
+  "authorities": [
+    "https://www.irs.gov/publications/p551",
+    "https://www.irs.gov/publications/p946",
+    "https://www.irs.gov/pub/irs-pdf/p5653.pdf",
+    "https://www.irs.gov/irb/2014-22_IRB",
+    "https://uscode.house.gov/view.xhtml?req=(title:26%20section:613%20edition:prelim)",
+    "https://www.irs.gov/irb/2018-22_IRB",
+    "https://www.govinfo.gov/content/pkg/CFR-2025-title26-vol4/xml/CFR-2025-title26-vol4-sec1-263A-1.xml"
+  ],
+  "authority_accessed_on": "2026-09-15",
+  "limitations": "Full mineral property grossincome/transport adjustments and subsequentyear asset,inventory,ARO anddeferredtax realization are separately required. This source does not submit a return, claim an IRS acknowledgement or establish a taxsharing agreement. Nonproductioncost population is expressly fictional; accepted 2025 external-carrier boundaries remain unchanged.",
+  "capacity_test": "300000 pounds over 160 active days requires approximately 599.42 short tons per active day at retained grade/recovery, below 600 nameplate. This demanding near-capacity reconstruction is explicit, not an independent engineering validation.",
+  "repair_scope": "The3m repairs/stabilization are abnormalpost-close shakedown andidlefacilitycosts maintainingalreadyoperatingequipment, notbetterment/adaptation/restorationofanentireunitofproperty. TheirbookH2expense classification isretained; separate8mrehabilitation capitalized. Taxproduction-benefitallocationis evaluatedseparately. Newlyauthored seven-day maintenanceoutage fits300kproductionbelow600tpdnameplate over167days.",
+  "production_indirect_allocations": {
+    "routine_repairs": "3000000",
+    "site_administration_labor": "200000",
+    "production_mineral_and_property_taxes": "742000",
+    "production_plant_insurance": "1000000",
+    "plant_mobilization_and_security": "687500"
+  },
+  "production_indirect_allocation_basis": "Activity-based newly authored cost classification:200k of800k labor and1m of1.531m admin/insurance directly support mine/plant production; all742k extraction/property taxes and687500plantsecurity/mobilization support production. Remaining600kcommerciallabor/531kcorporateadmin/1.4moutboundsellingfreight are nonproduction.252k sales-basedroyalty follows soldproduct. Full3m routineproductionrepairs are263Ainventorycost despite notcapitalimprovements. Allocation does notchange totalcashcost.",
+  "plant_components": {
+    "mining_and_milling_equipment": "18000000",
+    "production_building_structure": "4000000"
+  },
+  "book_normal_production_indirect_usd": "1942000",
+  "book_abnormal_period_costs": {
+    "repair_and_shakedown": "3000000",
+    "abnormal_mobilization_and_security": "687500"
+  },
+  "book_authority": "FASB Statement151 https://storage.fasb.org/fas151.pdf supplies primaryhistoricalnormal-capacity/abnormalcost principle; supersededbyCodification, notrepresented ascurrentoperativeASCtext. This is anexplicitmodelaccountingpolicy, nota verifiedfullUSGAAPopinion. Bookclassificationof3mperiodexpense preservescontrollingR2canon; normalindirectallocationupdatesderivedopeningcalibration only.",
+  "owned_days": 167,
+  "whole_pool_idle_days": 7,
+  "idle_allowance_method": "Newly authored whole equipment/building pool shutdown for seven of 167 owned days, excluding ordinary interruptions. Select reasonable equipment-days allocation under 26 CFR 1.263A-1(f): seven/167 of total first-year cost-recovery allowance, including bonus, is idle current expense under (e)(3)(iii)(E); active allowance enters production inventory. This is a selected allocation method, not a statutory seven-day formula. Full asset basis reduction is unchanged.",
+  "capital_history_source": "enterprise/closeout/source/capital_register.json#historical_industrial_contribution",
+  "capital_history_event_id": "SH-CAP-2025-INDUSTRIAL-44312500"
+}

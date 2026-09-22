@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="cfr.xsl"?>
+<CFRGRANULE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CFRMergedXML.xsd">
+    <FDSYS>
+        <CFRTITLE>49</CFRTITLE>
+        <CFRTITLETEXT>Transportation</CFRTITLETEXT>
+        <VOL>4</VOL>
+        <DATE>2025-10-01</DATE>
+        <COVERONLY>false</COVERONLY>
+        <ORIGINALDATE>2025-10-01</ORIGINALDATE>
+        <ANCESTORS>
+            <PARENT HEADING="Title 49" SEQ="3">Transportation</PARENT>
+            <PARENT HEADING="Subtitle B" SEQ="2">Other Regulations Relating to Transportation (Continued)</PARENT>
+            <PARENT HEADING="CHAPTER II" SEQ="1">FEDERAL RAILROAD ADMINISTRATION, DEPARTMENT OF TRANSPORTATION</PARENT>
+            <PARENT HEADING="PART 225" SEQ="0">RAILROAD ACCIDENTS/INCIDENTS: REPORTS CLASSIFICATION, AND INVESTIGATIONS</PARENT>
+        </ANCESTORS>
+    </FDSYS>
+    <SECTION>
+        <SECTNO>§ 225.11</SECTNO>
+        <SUBJECT>Reporting of accidents/incidents.</SUBJECT>
+        <P>(a) Each railroad subject to this part shall submit to FRA a monthly report of all railroad accidents/incidents described below:</P>
+        <P>(1) Highway-rail grade crossing accidents/incidents described in § 225.19;</P>
+        <P>(2) Rail equipment accidents/incidents described in § 225.19; and</P>
+        <P>(3) Death, injury and occupational illness accidents/incidents described in § 225.19.</P>
+        <P>
+            (b) The report shall be made on the forms prescribed in § 225.21 in hard copy or, alternatively, by means of optical media or electronic submission via the Internet, as prescribed in § 225.37, and shall be submitted within 30 days after expiration of the month during which the accidents/incidents occurred. Reports shall be completed as required by the current FRA Guide. A copy of the FRA Guide may be obtained from the U.S. Department of Transportation, Federal Railroad Administration, Office of Safety Analysis, RRS-22, Mail Stop 25 West Building 3rd Floor, Room W33-107, 1200 New Jersey Avenue, SE., Washington, DC 20590 or downloaded from FRA's Office of Safety Analysis Web site at 
+            <E T="03">http://safetydata.fra.dot.gov/officeofsafety/,</E>
+             and click on “Click Here for Changes in Railroad Accident/Incident Recordkeeping and Reporting.”
+        </P>
+        <CITA>[75 FR 68905, Nov. 9, 2010]</CITA>
+    </SECTION>
+</CFRGRANULE>

@@ -11,3 +11,12 @@ red_wash/history/v1.0.0/** -text whitespace=-blank-at-eol
 # Preserve exact source hashes while treating CRLF as a record terminator.
 docs/legal/gap-instruments/period-close/*.csv -text whitespace=cr-at-eol
 docs/legal/gap-instruments/period-close/source/*.csv -text whitespace=cr-at-eol
+
+# Exact downloaded primary-authority snapshots retain original publisher whitespace.
+# These six files are byte-hash checked by the rail authority reperformer.
+enterprise/ccf/company_closeout/authority_snapshots/CFR-2025-title49-vol4-sec225-11.xml -text whitespace=-blank-at-eol
+enterprise/ccf/company_closeout/authority_snapshots/CFR-2025-title49-vol4-sec225-19.xml -text whitespace=-blank-at-eol
+enterprise/ccf/company_closeout/authority_snapshots/CFR-2025-title49-vol4-sec225-9.xml -text whitespace=-blank-at-eol
+enterprise/ccf/company_closeout/authority_snapshots/FRA_THRESHOLD_2021.html.txt -text whitespace=-blank-at-eol
+enterprise/ccf/company_closeout/authority_snapshots/FRA_THRESHOLD_2023.html.txt -text whitespace=-blank-at-eol
+enterprise/ccf/company_closeout/authority_snapshots/FRA_THRESHOLD_2025.html.txt -text whitespace=-blank-at-eol

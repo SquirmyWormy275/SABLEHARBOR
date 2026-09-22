@@ -1,0 +1,57 @@
+{
+  "source_commit": "f5e919e7c39c9df7300be0ec7408cfba414c6725",
+  "status": "INTERMEDIATE_VALIDATION_NOT_ACCEPTED_EDITION",
+  "observed_on": "2026-09-22",
+  "tests": {
+    "passed": 749,
+    "skipped": 3,
+    "collected": 752
+  },
+  "financial_build": {
+    "result": "PASS",
+    "statutory_iterations": 4
+  },
+  "retained_logs": [
+    {
+      "path": "statutory-build-20260922-final.txt",
+      "sha256": "8b792461440cf3483cb142733bb112c42a9eda366d004db3d899091a10f590bf"
+    },
+    {
+      "path": "pytest-f5e919e7.txt",
+      "sha256": "89606134a2f8f928ffe7e9401948d22c914f586e1acbb03d502835ec61744c91"
+    },
+    {
+      "path": "pytest-collection-f5e919e7.txt",
+      "sha256": "fa59fc65d491b68b7e13b56cde78eb4296c1d4da67bf483bde39b66708155940",
+      "normalization": "Trailing empty lines removed; collection content unchanged."
+    },
+    {
+      "path": "finance-reperformance-f5e919e7.json",
+      "sha256": "351fa0b4b987cb2fcd7a9cf2f12b288373e3daa011dd338745e75c262e526f9c"
+    },
+    {
+      "path": "independent-import-f5e919e7.json",
+      "sha256": "01796cfabb5176661a86cc8557e81973f8b8efabf135f506e8cc060bc3bae2ae"
+    },
+    {
+      "path": "company-reperformance-f5e919e7.json",
+      "sha256": "fa348fc48818a86f278cf8ef30dc89f367f801c7a83538de0bed914da810dc74"
+    }
+  ],
+  "independent_import": {
+    "result": "PASS",
+    "rows": 1024896,
+    "journal_lines": 124350,
+    "journal_entries": 54022
+  },
+  "workbook": {
+    "result": "PASS",
+    "independent_cell_readbacks": 4488,
+    "visual_review": "LibreOffice cover and legal balances PDF pages inspected; source hashes and adverse amounts visible, no clipping."
+  },
+  "limitations": [
+    "Later capital CSV serialization/source-pin and parent state-cash deduction corrections require final-head regeneration.",
+    "Governance source pairing identified stale parent tax publication; publication/catalog regeneration remains required.",
+    "No repository acceptance, portal production deployment or professional audit opinion inferred."
+  ]
+}

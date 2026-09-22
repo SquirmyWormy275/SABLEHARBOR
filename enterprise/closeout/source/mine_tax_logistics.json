@@ -1,0 +1,15 @@
+{
+  "record_id": "SH-MINE-TAX-LOGISTICS-2026-09-15",
+  "fact_status": "NEWLY_AUTHORED_SYNTHETIC_ACTIVITY_AND_ESTIMATE",
+  "scope": "2026 source and explicitly conditional 2027-2031 continuation; no historical invoice recovery claim",
+  "inbound_account_5200": "External origin linehaul of production reagents, consumables and replacement parts to the mine",
+  "inbound_account_5150": "ARU/BST service of ordinary inbound production supplies; excludes closeout inventory correction entries and finished uranium carriage",
+  "current_2026_freight_assay_handling_usd": "600000",
+  "ordinary_assay_fraction": "0.20",
+  "outbound_fraction": "0.80",
+  "split_method": "Selected management estimate: ordinary mill assay/quality work20%, external licensed outbound transport/handling80%; disclose zero-to-full freight netback sensitivity",
+  "book_boundary": "Retained management-accrual freight/assay period expense convention; tax production-benefit capitalization tracked separately, no GAAP claim",
+  "future_idle_boundary": "Zero production does not establish all cost-recovery assets idle; no future whole-pool idle allowance exclusion inferred",
+  "tax_authority": ["26 CFR1.263A-1(e)(3) production indirect costs", "26 USC613 and26 CFR1.613-4 mining gross income and ordinary treatment processes"],
+  "cash_effect": "No new cost or payment; reclassification of existing source expense for tax only"
+}

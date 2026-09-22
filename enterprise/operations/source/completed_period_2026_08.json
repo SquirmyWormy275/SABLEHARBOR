@@ -1,0 +1,613 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "SH-OPS-COMPLETED-2026-08",
+  "edition": "company-2026-08-v0.1.0",
+  "authority_state": "PROVISIONAL",
+  "acceptance_state": "PENDING_REPOSITORY_ACCEPTANCE",
+  "authority": "SH-CODEX-COMPANY-CLOSEOUT-2026-09-15; delegated ordinary fictional completion, plus September 13 billing adoption. No recovered payroll or government acknowledgement is claimed.",
+  "effective_period": "2026-08",
+  "effective_through": "2026-08-31",
+  "available_at": "2026-09-15T00:00:00Z",
+  "recorded_at": "2026-09-15T00:00:00Z",
+  "fact_state": "NEWLY_AUTHORED_SYNTHETIC_RECONSTRUCTION",
+  "scenario": "completed-period-reconstruction",
+  "timezone": "America/Los_Angeles",
+  "scope": "Complete declared employee reconstruction for August; external contractors and company transaction populations require their separate registers. This is a versioned extension of enterprise.operations, not a second company database.",
+  "population_basis": "431 Core employees is newly selected ordinary fictional precision anchored to the old 431-person Core calibration but includes Cradle and disjoint J2/ESS/IA allocations here. The old calibration did not include Cradle in 431 and did not establish current J2 occupancy. This successor therefore explicitly changes perimeter; it does not recover an old census. Add 12 PS + 128 RWH + 73 ARU + 58 BST; named employees overlap these populations.",
+  "core_groups": [
+    {
+      "unit": "foundry-field",
+      "occupied": 100,
+      "jurisdiction": "CA",
+      "annual_salary_usd": "120000",
+      "named_people": [
+        "P002",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P017"
+      ]
+    },
+    {
+      "unit": "atlas-meridian",
+      "occupied": 24,
+      "jurisdiction": "CA",
+      "annual_salary_usd": "135000",
+      "named_people": [
+        "P020"
+      ]
+    },
+    {
+      "unit": "advisory",
+      "occupied": 20,
+      "jurisdiction": "CA",
+      "annual_salary_usd": "125000",
+      "named_people": []
+    },
+    {
+      "unit": "willow",
+      "occupied": 20,
+      "jurisdiction": "PA",
+      "annual_salary_usd": "115000",
+      "named_people": [
+        "P010",
+        "P012",
+        "P013",
+        "P014",
+        "P015",
+        "P016",
+        "P018",
+        "P019"
+      ]
+    },
+    {
+      "unit": "project-cradle",
+      "occupied": 16,
+      "jurisdiction": "WV",
+      "annual_salary_usd": "100000",
+      "named_people": [
+        "P025",
+        "P026",
+        "P027",
+        "P028"
+      ]
+    },
+    {
+      "unit": "ess",
+      "occupied": 54,
+      "jurisdiction": "CA",
+      "annual_salary_usd": "100000",
+      "named_people": []
+    },
+    {
+      "unit": "internal-audit",
+      "occupied": 8,
+      "jurisdiction": "CA",
+      "annual_salary_usd": "130000",
+      "named_people": []
+    },
+    {
+      "unit": "corporate",
+      "occupied": 8,
+      "jurisdiction": "CA",
+      "annual_salary_usd": "180000",
+      "named_people": [
+        "P001",
+        "P011"
+      ]
+    }
+  ],
+  "j2_groups": [
+    {
+      "unit": "J2-CONTACT",
+      "occupied": 58,
+      "authorized": 78,
+      "jurisdiction": "CA",
+      "annual_salary_usd": "120000",
+      "named_people": [
+        "P065"
+      ]
+    },
+    {
+      "unit": "J2-JUDGMENT",
+      "occupied": 32,
+      "authorized": 42,
+      "jurisdiction": "CA",
+      "annual_salary_usd": "120000",
+      "named_people": [
+        "P066"
+      ]
+    },
+    {
+      "unit": "J2-ORIENTATION",
+      "occupied": 18,
+      "authorized": 24,
+      "jurisdiction": "CA",
+      "annual_salary_usd": "120000",
+      "named_people": [
+        "P067"
+      ]
+    },
+    {
+      "unit": "J2-JAG",
+      "occupied": 22,
+      "authorized": 30,
+      "jurisdiction": "CA",
+      "annual_salary_usd": "120000",
+      "named_people": []
+    },
+    {
+      "unit": "J2-EDUCATION",
+      "occupied": 27,
+      "authorized": 35,
+      "jurisdiction": "CA",
+      "annual_salary_usd": "120000",
+      "named_people": [
+        "P068"
+      ]
+    },
+    {
+      "unit": "J2-HQ",
+      "occupied": 24,
+      "authorized": 28,
+      "jurisdiction": "CA",
+      "annual_salary_usd": "120000",
+      "named_people": [
+        "P063",
+        "P064"
+      ]
+    }
+  ],
+  "industrial_person_links": {
+    "RW-0001": "P021",
+    "RW-0002": "P022",
+    "RW-0013": "P023"
+  },
+  "payroll": {
+    "frequency": "SEMIMONTHLY",
+    "pay_dates": [
+      "2026-08-14",
+      "2026-08-31"
+    ],
+    "federal_form": "2026 W-4: single, Step 2 unchecked; Steps 3/4 zero; fictional reconstruction of certificates, not actual signed forms",
+    "state_forms": "CA DE4 single/zero; WV IT104 one-earner/one-job zero exemptions; PA residency workpaper assumes Pittsburgh residents in Hazelwood study area. Bedford staff are residents within Fairmont municipal limits; no nonresident employee fee is imposed on these resident employees.",
+    "compensation_basis": "Salary covering a 40-hour week; nonexempt treatment is preserved unless separately supported. August modeled time is 168 paid hours, including paid leave, no overtime worked; no exemption is inferred from title.",
+    "ytd_basis": "January-July gross is seven times August monthly gross in this authored reconstruction; no bonus or other employer compensation assumed. ARU/BST equity acquisition preserves legal employer, so calendar-year wage bases are not reset on January 7.",
+    "employer_burden_rate": "0.30",
+    "mine_annual_salary_usd": "85000",
+    "platform_annual_salary_usd": "150000",
+    "settlement": "Two modeled net-pay batches per legal employer, independent preparer/reviewer identities, direct employee payments; no bank account/routing credentials. Payment status is synthetic, not actual bank confirmation.",
+    "tax_remittance": "Newly authored synthetic remittance of calculated taxes on each payroll date; this is a payment-state reconstruction, not a tax return, agency acknowledgement or real payment. current_company_2026_08.json supplies August unemployment and benefit allocation/payment schedules within the unchanged loaded cost envelope.",
+    "local_boundary": "PA employees are newly authored Pittsburgh residents; resident EIT3% and LST52 included. Bedford staff are newly authored Fairmont residents; ordinance920.03(c) nonresident employee charge does not apply to them; resident utility charges are not payroll deductions. These residence facts do not locate either employer parcel."
+  },
+  "sources": [
+    "docs/organization/source/chartbook.json",
+    "docs/structured/j2_leadership_2026-09-10.json",
+    "geospatial/facilities/population/policy.json",
+    "industrial/source/entities.json",
+    "industrial/source/finance.json",
+    "red_wash/source/core_operating_data.json",
+    "docs/canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md"
+  ],
+  "events": [
+    {
+      "event_id": "SH-HR-2026-09-01",
+      "person_id": "SH-EMP-ESS-0054",
+      "action": "EXIT",
+      "effective_at": "2026-09-04T17:00:00-07:00",
+      "revocation_due_at": "2026-09-04T17:00:00-07:00",
+      "revoked_at": "2026-09-07T09:00:00-07:00",
+      "response": "Session tokens revoked; late revocation retained, independent access review due September 16. No assertion of real access or detected misuse."
+    },
+    {
+      "event_id": "SH-HR-2026-08-LEAVE",
+      "person_id": "SH-EMP-ESS-0053",
+      "action": "PAID_LEAVE",
+      "hours": "16",
+      "effective_at": "2026-08-20T08:00:00-07:00"
+    }
+  ],
+  "authority_workpapers": [
+    {
+      "authority_id": "US-WH",
+      "url": "https://www.irs.gov/publications/p15t",
+      "version": "2026 Worksheet 1A and standard annual single schedule",
+      "accessed_on": "2026-09-15",
+      "facts_tested": "Authored August2026 US-resident employee wages, no pretax deferrals or fringe compensation; statutory schedules independently researched.",
+      "conclusion": "Semimonthly gross annualized x24; subtract $8600; apply standard single schedule; divide by24. No credit/additional adjustment."
+    },
+    {
+      "authority_id": "US-FICA",
+      "url": "https://www.irs.gov/publications/p15",
+      "version": "2026 section 9",
+      "accessed_on": "2026-09-15",
+      "facts_tested": "Authored August2026 US-resident employee wages, no pretax deferrals or fringe compensation; statutory schedules independently researched.",
+      "conclusion": "Employee and employer 6.2% social security to $184500, Medicare1.45%, employee additional0.9% over200000. Exclude BST from FICA and use railroad tiers."
+    },
+    {
+      "authority_id": "US-RRTA",
+      "url": "https://www.rrb.gov/sites/default/files/2025-12/_G-34%20%2812-25%29.pdf",
+      "version": "RRB reminders2026",
+      "accessed_on": "2026-09-15",
+      "facts_tested": "Authored August2026 US-resident employee wages, no pretax deferrals or fringe compensation; statutory schedules independently researched.",
+      "conclusion": "BST TierI equivalent SS/Medicare; TierII employee4.9%, employer13.1%, base137100; RUIA employer experience rate remains separate."
+    },
+    {
+      "authority_id": "CA-WH",
+      "url": "https://edd.ca.gov/siteassets/files/pdf_pub_ctr/26methb.pdf",
+      "version": "2026 MethodB tables1/3/4/17",
+      "accessed_on": "2026-09-15",
+      "facts_tested": "Authored August2026 US-resident employee wages, no pretax deferrals or fringe compensation; statutory schedules independently researched.",
+      "conclusion": "Single zero allowances; $238 semimonthly standard deduction; low-income exclusion787; table17 exact tax."
+    },
+    {
+      "authority_id": "CA-SDI",
+      "url": "https://edd.ca.gov/en/Payroll_Taxes/Rates_and_Withholding",
+      "version": "2026",
+      "accessed_on": "2026-09-15",
+      "facts_tested": "Authored August2026 US-resident employee wages, no pretax deferrals or fringe compensation; statutory schedules independently researched.",
+      "conclusion": "SDI1.3% all covered wages; employer-specific UI not invented."
+    },
+    {
+      "authority_id": "PA-WH",
+      "url": "https://www.pa.gov/content/dam/copapwp-pagov/en/budget/documents/for-commonwealth-agencies-and-employees/for-agencies/payroll/payroll-memo-26-01-federal-withholding-state-unemployment-tax-2026.pdf",
+      "version": "Payroll memo26-01",
+      "accessed_on": "2026-09-15",
+      "facts_tested": "Authored August2026 US-resident employee wages, no pretax deferrals or fringe compensation; statutory schedules independently researched.",
+      "conclusion": "PA withholding3.07%, employee unemployment0.07%."
+    },
+    {
+      "authority_id": "PA-LOCAL",
+      "url": "https://www.pittsburghpa.gov/City-Government/Finance-Budget/Taxes",
+      "version": "accessed2026-09-15",
+      "accessed_on": "2026-09-15",
+      "facts_tested": "Authored August2026 US-resident employee wages, no pretax deferrals or fringe compensation; statutory schedules independently researched.",
+      "conclusion": "Pittsburgh resident EIT3%; LST52 annual, no modeled exemption. Residence is newly authored; actual Fort parcel remains unestablished."
+    },
+    {
+      "authority_id": "WV-WH",
+      "url": "https://tax.wv.gov/Documents/Withholding/it100.2a.pdf",
+      "version": "March2026, optional one-earner, table3",
+      "accessed_on": "2026-09-15",
+      "facts_tested": "Authored August2026 US-resident employee wages, no pretax deferrals or fringe compensation; statutory schedules independently researched.",
+      "conclusion": "Semimonthly single/no exemptions: apply table3 to gross. WV municipal-fee applicability remains separately open."
+    },
+    {
+      "authority_id": "WY-WH",
+      "url": "https://www.wyo.gov/about-wyoming",
+      "version": "accessed2026-09-15",
+      "accessed_on": "2026-09-15",
+      "facts_tested": "Authored August2026 US-resident employee wages, no pretax deferrals or fringe compensation; statutory schedules independently researched.",
+      "conclusion": "Wyoming has no individual income tax; does not remove unemployment or other employer duties."
+    },
+    {
+      "authority_id": "WV-LOCAL",
+      "url": "https://codelibrary.amlegal.com/codes/fairmont/latest/fairmont_wv/0-0-0-24566",
+      "version": "2026-02 code; ordinance2057 passed2024-12-10;920.03(c)",
+      "accessed_on": "2026-09-15",
+      "facts_tested": "Newly authored employee residency within Fairmont limits; employer remains in Fairmont-area canon with precise parcel unresolved",
+      "conclusion": "Two-dollar weekly employee fee applies to nonresidents working inside city. Declared residents do not meet nonresident condition; resident utility-account fees are not payroll withholding."
+    }
+  ],
+  "authored_names": {
+    "RW-0112": "Maya Ortiz",
+    "RW-0113": "Evan Cross",
+    "RW-0119": "Leah Foster",
+    "SH-EMP-ADVISORY-0001": "Rowan Bell"
+  },
+  "operating_chains": [
+    {
+      "chain_id": "SH-CHAIN-202608-WAREHOUSE-01",
+      "kind": "warehouse",
+      "legal_entity": "ARU",
+      "unit": "WAREHOUSE",
+      "responsible_person_id": "P042",
+      "parent_source_id": "WHS-2025-005",
+      "population_id": "SH-POP-202608-WAREHOUSE-SELECTED",
+      "surrounding_population": "Two deliberately selected completed-period cases of this activity; not the whole unit transaction population. Full monthly source quantities remain a separate denominator.",
+      "case": "NORMAL",
+      "stages": [
+        "RECEIVED",
+        "COUNTED",
+        "STORED",
+        "RELEASED",
+        "CHARGE_LINKED"
+      ],
+      "start_on": "2026-08-02",
+      "asset_id": "ARU-MH-03",
+      "quantity_unit": "pallet",
+      "opening_quantity": "0",
+      "received_or_produced_quantity": "54",
+      "released_or_accepted_quantity": "54",
+      "closing_quantity": "0",
+      "accounting_treatment": "SOURCE_ATTRIBUTION_ONLY_NO_ADDITIONAL_POSTING",
+      "authority_scope": "NEWLY_AUTHORED_INTERNAL_COMPANY_RECORD; external operating permits and transport authority require obligations register",
+      "exception_response": "Completed selected chain",
+      "carrier": "ARU_ORDINARY_FREIGHT_NOT_URANIUM",
+      "financial_effect_usd": "0.00",
+      "financial_effect_basis": "Adds evidence attribution to existing monthly source; no incremental invoice, cash receipt, inventory or expense. Completion against full financial/physical monthly population remains separately gated."
+    },
+    {
+      "chain_id": "SH-CHAIN-202608-WAREHOUSE-02",
+      "kind": "warehouse",
+      "legal_entity": "ARU",
+      "unit": "WAREHOUSE",
+      "responsible_person_id": "P042",
+      "parent_source_id": "WHS-2025-005",
+      "population_id": "SH-POP-202608-WAREHOUSE-SELECTED",
+      "surrounding_population": "Two deliberately selected completed-period cases of this activity; not the whole unit transaction population. Full monthly source quantities remain a separate denominator.",
+      "case": "EXCEPTION",
+      "stages": [
+        "RECEIVED",
+        "COUNT_DISCREPANCY",
+        "QUARANTINED",
+        "PARTIAL_RELEASE",
+        "CLAIM_OPEN",
+        "CHARGE_LINKED"
+      ],
+      "start_on": "2026-08-17",
+      "asset_id": "ARU-MH-04",
+      "quantity_unit": "pallet",
+      "opening_quantity": "0",
+      "received_or_produced_quantity": "12",
+      "released_or_accepted_quantity": "10",
+      "closing_quantity": "2",
+      "accounting_treatment": "SOURCE_ATTRIBUTION_ONLY_NO_ADDITIONAL_POSTING",
+      "authority_scope": "NEWLY_AUTHORED_INTERNAL_COMPANY_RECORD; external operating permits and transport authority require obligations register",
+      "exception_response": "Preserve original failure and no automatic successful retest",
+      "carrier": "ARU_ORDINARY_FREIGHT_NOT_URANIUM",
+      "financial_effect_usd": "0.00",
+      "financial_effect_basis": "Adds evidence attribution to existing monthly source; no incremental invoice, cash receipt, inventory or expense. Completion against full financial/physical monthly population remains separately gated."
+    },
+    {
+      "chain_id": "SH-CHAIN-202608-DISPATCH-01",
+      "kind": "dispatch",
+      "legal_entity": "ARU",
+      "unit": "TRUCKING",
+      "responsible_person_id": "P041",
+      "parent_source_id": "TRK-2025-004",
+      "population_id": "SH-POP-202608-DISPATCH-SELECTED",
+      "surrounding_population": "Two deliberately selected completed-period cases of this activity; not the whole unit transaction population. Full monthly source quantities remain a separate denominator.",
+      "case": "NORMAL",
+      "stages": [
+        "QUALIFICATION_CHECK",
+        "DISPATCHED",
+        "DELIVERED",
+        "ACCEPTED",
+        "BILLING_LINKED"
+      ],
+      "start_on": "2026-08-02",
+      "asset_id": "ARU-TR-01",
+      "quantity_unit": "trip",
+      "opening_quantity": "0",
+      "received_or_produced_quantity": "1",
+      "released_or_accepted_quantity": "1",
+      "closing_quantity": "0",
+      "accounting_treatment": "SOURCE_ATTRIBUTION_ONLY_NO_ADDITIONAL_POSTING",
+      "authority_scope": "NEWLY_AUTHORED_INTERNAL_COMPANY_RECORD; external operating permits and transport authority require obligations register",
+      "exception_response": "Completed selected chain",
+      "carrier": "ARU_ORDINARY_FREIGHT_NOT_URANIUM",
+      "financial_effect_usd": "0.00",
+      "financial_effect_basis": "Adds evidence attribution to existing monthly source; no incremental invoice, cash receipt, inventory or expense. Completion against full financial/physical monthly population remains separately gated."
+    },
+    {
+      "chain_id": "SH-CHAIN-202608-DISPATCH-02",
+      "kind": "dispatch",
+      "legal_entity": "ARU",
+      "unit": "TRUCKING",
+      "responsible_person_id": "P041",
+      "parent_source_id": "TRK-2025-004",
+      "population_id": "SH-POP-202608-DISPATCH-SELECTED",
+      "surrounding_population": "Two deliberately selected completed-period cases of this activity; not the whole unit transaction population. Full monthly source quantities remain a separate denominator.",
+      "case": "EXCEPTION",
+      "stages": [
+        "REQUESTED",
+        "QUALIFICATION_EXPIRED",
+        "DISPATCH_BLOCKED",
+        "REASSIGNED",
+        "DELIVERED",
+        "BILLING_LINKED"
+      ],
+      "start_on": "2026-08-17",
+      "asset_id": "ARU-TR-02",
+      "quantity_unit": "trip",
+      "opening_quantity": "0",
+      "received_or_produced_quantity": "1",
+      "released_or_accepted_quantity": "1",
+      "closing_quantity": "0",
+      "accounting_treatment": "SOURCE_ATTRIBUTION_ONLY_NO_ADDITIONAL_POSTING",
+      "authority_scope": "NEWLY_AUTHORED_INTERNAL_COMPANY_RECORD; external operating permits and transport authority require obligations register",
+      "exception_response": "Preserve original failure and no automatic successful retest",
+      "carrier": "ARU_ORDINARY_FREIGHT_NOT_URANIUM",
+      "financial_effect_usd": "0.00",
+      "financial_effect_basis": "Adds evidence attribution to existing monthly source; no incremental invoice, cash receipt, inventory or expense. Completion against full financial/physical monthly population remains separately gated."
+    },
+    {
+      "chain_id": "SH-CHAIN-202608-MAINTENANCE-01",
+      "kind": "maintenance",
+      "legal_entity": "ARU",
+      "unit": "WAREHOUSE",
+      "responsible_person_id": "P042",
+      "parent_source_id": "EXTSUP-2026",
+      "population_id": "SH-POP-202608-MAINTENANCE-SELECTED",
+      "surrounding_population": "Two deliberately selected completed-period cases of this activity; not the whole unit transaction population. Full monthly source quantities remain a separate denominator.",
+      "case": "NORMAL",
+      "stages": [
+        "DEFECT_REPORTED",
+        "WORK_ORDER",
+        "PARTS_LABOR",
+        "INSPECTED",
+        "RELEASED",
+        "COST_LINKED"
+      ],
+      "start_on": "2026-08-02",
+      "asset_id": "ARU-MH-01",
+      "quantity_unit": "job",
+      "opening_quantity": "0",
+      "received_or_produced_quantity": "1",
+      "released_or_accepted_quantity": "1",
+      "closing_quantity": "0",
+      "accounting_treatment": "SOURCE_ATTRIBUTION_ONLY_NO_ADDITIONAL_POSTING",
+      "authority_scope": "NEWLY_AUTHORED_INTERNAL_COMPANY_RECORD; external operating permits and transport authority require obligations register",
+      "exception_response": "Completed selected chain",
+      "carrier": "ARU_ORDINARY_FREIGHT_NOT_URANIUM",
+      "financial_effect_usd": "0.00",
+      "financial_effect_basis": "Adds evidence attribution to existing monthly source; no incremental invoice, cash receipt, inventory or expense. Completion against full financial/physical monthly population remains separately gated."
+    },
+    {
+      "chain_id": "SH-CHAIN-202608-MAINTENANCE-02",
+      "kind": "maintenance",
+      "legal_entity": "ARU",
+      "unit": "WAREHOUSE",
+      "responsible_person_id": "P042",
+      "parent_source_id": "EXTSUP-2026",
+      "population_id": "SH-POP-202608-MAINTENANCE-SELECTED",
+      "surrounding_population": "Two deliberately selected completed-period cases of this activity; not the whole unit transaction population. Full monthly source quantities remain a separate denominator.",
+      "case": "EXCEPTION",
+      "stages": [
+        "DEFECT_REPORTED",
+        "WORK_ORDER",
+        "PARTS_LABOR",
+        "INSPECTION_FAILED",
+        "HELD",
+        "COST_LINKED"
+      ],
+      "start_on": "2026-08-17",
+      "asset_id": "ARU-MH-02",
+      "quantity_unit": "job",
+      "opening_quantity": "0",
+      "received_or_produced_quantity": "1",
+      "released_or_accepted_quantity": "0",
+      "closing_quantity": "1",
+      "accounting_treatment": "SOURCE_ATTRIBUTION_ONLY_NO_ADDITIONAL_POSTING",
+      "authority_scope": "NEWLY_AUTHORED_INTERNAL_COMPANY_RECORD; external operating permits and transport authority require obligations register",
+      "exception_response": "Preserve original failure and no automatic successful retest",
+      "carrier": "ARU_ORDINARY_FREIGHT_NOT_URANIUM",
+      "financial_effect_usd": "0.00",
+      "financial_effect_basis": "Adds evidence attribution to existing monthly source; no incremental invoice, cash receipt, inventory or expense. Completion against full financial/physical monthly population remains separately gated."
+    },
+    {
+      "chain_id": "SH-CHAIN-202608-PRODUCTION-01",
+      "kind": "production",
+      "legal_entity": "RWH",
+      "unit": "mill_metallurgy",
+      "responsible_person_id": "P023",
+      "parent_source_id": "SH-PS-RW-TOR-001",
+      "population_id": "SH-POP-202608-PRODUCTION-SELECTED",
+      "surrounding_population": "Two deliberately selected completed-period cases of this activity; not the whole unit transaction population. Full monthly source quantities remain a separate denominator.",
+      "case": "QUALIFIED_ASSAY_WITH_OPEN_EXTERNAL_AUTHORITY",
+      "stages": [
+        "PRODUCED",
+        "ASSAY_PASSED",
+        "DRUM_SEALED",
+        "SHIPMENT_AUTHORITY_EVIDENCE_MISSING",
+        "HELD_NO_REVENUE"
+      ],
+      "start_on": "2026-08-02",
+      "asset_id": "SH-OPS-PRODUCTION-ASSET-01",
+      "quantity_unit": "lb_U3O8",
+      "opening_quantity": "0",
+      "received_or_produced_quantity": "200",
+      "released_or_accepted_quantity": "0",
+      "closing_quantity": "200",
+      "accounting_treatment": "SOURCE_ATTRIBUTION_ONLY_NO_ADDITIONAL_POSTING",
+      "authority_scope": "NEWLY_AUTHORED_INTERNAL_COMPANY_RECORD; external operating permits and transport authority require obligations register",
+      "exception_response": "RW-CUST-002/003 remain OPEN; no carrier selected or converter acceptance invented. Normal completed transport chain remains a precise C07 residual.",
+      "carrier": "EXTERNAL_LICENSED_CARRIER_ID_PENDING_AUTHORITY_LINK",
+      "financial_effect_usd": "0.00",
+      "financial_effect_basis": "Adds evidence attribution to existing monthly source; no incremental invoice, cash receipt, inventory or expense. Completion against full financial/physical monthly population remains separately gated."
+    },
+    {
+      "chain_id": "SH-CHAIN-202608-PRODUCTION-02",
+      "kind": "production",
+      "legal_entity": "RWH",
+      "unit": "mill_metallurgy",
+      "responsible_person_id": "P023",
+      "parent_source_id": "SH-PS-RW-TOR-001",
+      "population_id": "SH-POP-202608-PRODUCTION-SELECTED",
+      "surrounding_population": "Two deliberately selected completed-period cases of this activity; not the whole unit transaction population. Full monthly source quantities remain a separate denominator.",
+      "case": "EXCEPTION",
+      "stages": [
+        "PRODUCED",
+        "ASSAY_FAILED",
+        "QUARANTINED",
+        "NO_SHIPMENT",
+        "NO_REVENUE"
+      ],
+      "start_on": "2026-08-17",
+      "asset_id": "SH-OPS-PRODUCTION-ASSET-02",
+      "quantity_unit": "lb_U3O8",
+      "opening_quantity": "0",
+      "received_or_produced_quantity": "200",
+      "released_or_accepted_quantity": "0",
+      "closing_quantity": "200",
+      "accounting_treatment": "SOURCE_ATTRIBUTION_ONLY_NO_ADDITIONAL_POSTING",
+      "authority_scope": "NEWLY_AUTHORED_INTERNAL_COMPANY_RECORD; external operating permits and transport authority require obligations register",
+      "exception_response": "Preserve original failure and no automatic successful retest",
+      "carrier": "EXTERNAL_LICENSED_CARRIER_ID_PENDING_AUTHORITY_LINK",
+      "financial_effect_usd": "0.00",
+      "financial_effect_basis": "Adds evidence attribution to existing monthly source; no incremental invoice, cash receipt, inventory or expense. Completion against full financial/physical monthly population remains separately gated."
+    },
+    {
+      "chain_id": "SH-CHAIN-202608-ENVIRONMENT-01",
+      "kind": "environment",
+      "legal_entity": "RWH",
+      "unit": "environmental_permitting",
+      "responsible_person_id": "RW-0119",
+      "parent_source_id": "SH-PS-RW-TOR-001",
+      "population_id": "SH-POP-202608-ENVIRONMENT-SELECTED",
+      "surrounding_population": "Two deliberately selected completed-period cases of this activity; not the whole unit transaction population. Full monthly source quantities remain a separate denominator.",
+      "case": "NORMAL",
+      "stages": [
+        "OBSERVED",
+        "THRESHOLD_CHECK",
+        "WITHIN_INTERNAL_ACTION_LEVEL",
+        "REVIEWED"
+      ],
+      "start_on": "2026-08-02",
+      "asset_id": "SH-OPS-ENVIRONMENT-ASSET-01",
+      "quantity_unit": "sample",
+      "opening_quantity": "0",
+      "received_or_produced_quantity": "1",
+      "released_or_accepted_quantity": "1",
+      "closing_quantity": "0",
+      "accounting_treatment": "SOURCE_ATTRIBUTION_ONLY_NO_ADDITIONAL_POSTING",
+      "authority_scope": "NEWLY_AUTHORED_INTERNAL_COMPANY_RECORD; external operating permits and transport authority require obligations register",
+      "exception_response": "Completed selected chain",
+      "carrier": "ARU_ORDINARY_FREIGHT_NOT_URANIUM",
+      "financial_effect_usd": "0.00",
+      "financial_effect_basis": "Adds evidence attribution to existing monthly source; no incremental invoice, cash receipt, inventory or expense. Completion against full financial/physical monthly population remains separately gated."
+    },
+    {
+      "chain_id": "SH-CHAIN-202608-ENVIRONMENT-02",
+      "kind": "environment",
+      "legal_entity": "RWH",
+      "unit": "environmental_permitting",
+      "responsible_person_id": "RW-0119",
+      "parent_source_id": "SH-PS-RW-TOR-001",
+      "population_id": "SH-POP-202608-ENVIRONMENT-SELECTED",
+      "surrounding_population": "Two deliberately selected completed-period cases of this activity; not the whole unit transaction population. Full monthly source quantities remain a separate denominator.",
+      "case": "EXCEPTION",
+      "stages": [
+        "OBSERVED",
+        "ACTION_LEVEL_EXCEEDED",
+        "CORRECTIVE_WORK",
+        "RETEST_DUE"
+      ],
+      "start_on": "2026-08-17",
+      "asset_id": "SH-OPS-ENVIRONMENT-ASSET-02",
+      "quantity_unit": "sample",
+      "opening_quantity": "0",
+      "received_or_produced_quantity": "1",
+      "released_or_accepted_quantity": "0",
+      "closing_quantity": "1",
+      "accounting_treatment": "SOURCE_ATTRIBUTION_ONLY_NO_ADDITIONAL_POSTING",
+      "authority_scope": "NEWLY_AUTHORED_INTERNAL_COMPANY_RECORD; external operating permits and transport authority require obligations register",
+      "exception_response": "Preserve original failure and no automatic successful retest",
+      "carrier": "ARU_ORDINARY_FREIGHT_NOT_URANIUM",
+      "financial_effect_usd": "0.00",
+      "financial_effect_basis": "Adds evidence attribution to existing monthly source; no incremental invoice, cash receipt, inventory or expense. Completion against full financial/physical monthly population remains separately gated."
+    }
+  ]
+}

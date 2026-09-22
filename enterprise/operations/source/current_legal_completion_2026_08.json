@@ -1,0 +1,87 @@
+{
+  "record_id": "SH-CURRENT-LEGAL-COMPLETION-202608",
+  "authored_day": "2026-09-15",
+  "fact_state": "NEWLY_AUTHORED_SYNTHETIC_RECONSTRUCTION",
+  "scope": "Four existing August Advisory SOWs and eight existing ARU/BST retention awards, plus eight completed-month Fred consultancy delivery acknowledgments. No unsigned gap-template substantive terms adopted.",
+  "advisory": [
+    {
+      "customer_id": "SH-CURRENT-ADVISORY-001",
+      "legal_name": "Blue Mesa Precision, LLC",
+      "organization_jurisdiction": "US-CA",
+      "client_signatory_name": "Mara Holt",
+      "client_signatory_role": "Managing Member",
+      "notice_contact": "contracts@blue-mesa-precision.example",
+      "matter": "Decision packet for production-workflow handover responsibility and exception review",
+      "data_schedule": "Client-supplied synthetic process diagrams and nonpersonal throughput aggregates; client-specific work product delivered to client; reusable methods retain accepted class boundary"
+    },
+    {
+      "customer_id": "SH-CURRENT-ADVISORY-002",
+      "legal_name": "Orchard Point Systems, Inc.",
+      "organization_jurisdiction": "US-CA",
+      "client_signatory_name": "Elias Ward",
+      "client_signatory_role": "President",
+      "notice_contact": "contracts@orchard-point-systems.example",
+      "matter": "Decision packet for service incident ownership and escalation procedure",
+      "data_schedule": "Synthetic incident categories and aggregate response intervals; no employee-level or personal-memory material; client-specific procedure delivered without continuing dependency"
+    },
+    {
+      "customer_id": "SH-CURRENT-ADVISORY-003",
+      "legal_name": "Alder Ridge Fabrication, LLC",
+      "organization_jurisdiction": "US-CA",
+      "client_signatory_name": "Celia Marsh",
+      "client_signatory_role": "Managing Member",
+      "notice_contact": "contracts@alder-ridge-fabrication.example",
+      "matter": "Decision packet for acceptance handoffs and quality exception decisions",
+      "data_schedule": "Synthetic specification summaries and deidentified defect-category counts; client-owned decision record and reusable-method distinction preserved"
+    },
+    {
+      "customer_id": "SH-CURRENT-ADVISORY-004",
+      "legal_name": "Clearbrook Logistics, LLC",
+      "organization_jurisdiction": "US-CA",
+      "client_signatory_name": "Jonah Reed",
+      "client_signatory_role": "Managing Member",
+      "notice_contact": "contracts@clearbrook-logistics.example",
+      "matter": "Decision packet for customer service commitments and exception communication",
+      "data_schedule": "Synthetic contract obligation summaries with no passenger or driver personal data; accepted operating-method handover, no outsourced management authority"
+    }
+  ],
+  "advisory_execution": {
+    "executed_on": "2026-08-01",
+    "scope_notice_sent_on": "2026-08-01",
+    "scope_notice_acknowledged_on": "2026-08-01",
+    "delivery_accepted_on": "2026-08-28",
+    "shi_notice_contact": "advisory-contracts@sableharbor.example",
+    "authority_basis": "Existing current_authorities August1 scope/amount and accountable employee; delegated signature limited to that completed SOW, not a new general corporate power",
+    "notice_scope": "Synthetic operational delivery/contract contact, not selected service-of-process or exclusive notice clause",
+    "signature_state": "NEWLY_AUTHORED_SYNTHETIC_COUNTERPART_ACKNOWLEDGMENT",
+    "liability_limit_state": "NOT_SELECTED_NO_TEMPLATE_LIMIT_ADOPTED"
+  },
+  "retention": {
+    "accepted_instrument_ref": "ARU-CL-04",
+    "employee_acknowledged_on": "2026-01-07",
+    "employer_acknowledged_on": "2026-01-07",
+    "service_review_on": "2026-07-07",
+    "service_review_owner_person_id": "P033",
+    "reviewed_through": "2026-08-31",
+    "current_service_state": "CONTINUED_EMPLOYMENT_NO_SELECTED_PROTECTED_DEPARTURE_EVENT",
+    "first_gross_installment_settled_on": "2026-07-07",
+    "second_installment_due_on": "2027-01-07",
+    "second_installment_state": "FUTURE_DUE_CONDITIONAL_SERVICE_NOT_PAID",
+    "net_pay_tax_boundary": "July gross250000 now decomposed in retention_payroll_ytd into173951.75net and76048.25employee withholding;24266.75employerlevy separately controlled by finance successor. No January2027payment inferred.",
+    "employer_record_signatory_person_id": "P033",
+    "signatory_scope": "Leah Denning records employer acceptance of eight already adopted closing retention instruments as buyer human-capital administrator; no new award or unsigned draft clause adopted.",
+    "instrument_source": "industrial/transaction/06_ARU_TRANSITION_AND_RETENTION.md"
+  },
+  "consultancy": {
+    "consultant_id": "SH-NONEMP-FRED-TOLMAN",
+    "name": "Fred Tolman",
+    "legal_customer": "ARU",
+    "accepted_instrument_ref": "ARU-CL-04",
+    "synthetic_acknowledged_on": "2026-01-07",
+    "accepting_person_id": "P029",
+    "last_completed_period": "2026-08",
+    "contract_end": "2026-10-07",
+    "future_deliverables_state": "SEPTEMBER_AND_OCTOBER_NOT_ASSERTED_COMPLETE",
+    "authority": "KNOWLEDGE_TRANSFER_ONLY_NO_LINE_OR_CONTRACT_AUTHORITY"
+  }
+}

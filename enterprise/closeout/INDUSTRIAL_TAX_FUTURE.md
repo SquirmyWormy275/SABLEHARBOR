@@ -1,0 +1,15 @@
+# Conditional mine utility ROT continuation
+
+Pending repository acceptance. `FutureIndustrialTax(result)` consumes the same legal company `journal_rows` as the2026 provider; exposes `.rows`, `.allocation_rows`, `.post_month(books, year, month)` and `.verify(rows)`. Finance owns integration and regeneration. Its separate `SH-RWH-FUTURE-IL-ROT-` namespace leaves2026 and FF003 verification/populations distinct.
+
+The authored2027–2031 continuation allocates each native scenario/month's actual forecast revenue over the four retained contract value weights. Three utility own-use allocations accrue seller expense/payable at the held7.25% planning rate. The trader allocation remains separately identified for resale review; this provider does not declare it tax-exempt. Renewal/mix continuation is a scenario fact, not an executed contract through2031. The inherited Illinois converter destination and seller contractual burden remain scoped to the retained utility population.
+
+The [Illinois Department of Revenue explanation](https://tax.illinois.gov/research/taxinformation/sales/rot.html), accessed September15,2026, supports the retail own-use and destination distinction; source2026 local-rate evidence remains in the hash-bound industrial transaction-tax source. Holding that rate in future scenarios does not assert future law. A relevant rate, contract or destination change requires a source successor.
+
+Revenue recognition, customer collection, statutory receipt reporting and tax remittance remain separate. These rows are accrual estimates, not completed invoices, receipt evidence or filed returns. Payment-plan state explicitly requires collection timing and accelerated-payment lookback review. Tax remains unpaid; no cash, customer AR or contribution is added. Finance must retain the liability and its liquidity consequences, rather than calling this indefinite deferral self-funding. FF003 has no remittance added.
+
+Allocation uses half-up cents for each contract and puts the rounding residual on the last sorted contract, so all four principals equal rounded monthly source revenue. Each utility tax is rounded once to cents. Opening month0 balances are excluded; duplicate/missing revenue, wrong scenarios/periods and duplicate/reversed/wrong-entity balanced overlays are rejected.
+
+Independent actual export reperform produced540 utility accruals and720 allocation rows. Base2027 expense/payable is2,524,874.88; base2031 is2,791,421.89. All15 annual scenario totals and the exact input CSV hash are in `industrial_tax_future_reperformance.json`. These totals depend on the identified pre-integration export and must be regenerated after accepted source changes. Initially, the strict period check rejected month0 revenue carryforwards; the corrected implementation explicitly excludes opening balances and a regression test preserves this distinction.
+
+Validation: `python -m pytest -q tests/closeout/test_industrial_tax_future.py` (12 passed); Ruff E4/E7/E9/F/I and `git diff --check` passed. No shared finance hook or catalog was edited by this lane.

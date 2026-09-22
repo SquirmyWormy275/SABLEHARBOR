@@ -1,0 +1,36 @@
+{
+  "record_id": "SH-COMPANY-RECEIPT-MARKETS-20260915",
+  "version": "1.0.0",
+  "status": "NEWLY_AUTHORED_SYNTHETIC_FACTS_PENDING_ACCEPTANCE",
+  "authored_on": "2026-09-15",
+  "scope": "SHI external revenue and separately identified shared-service revenue; no subsidiary or consolidated tax-group conclusion",
+  "source_precision": "New customer-benefit/delivery territory facts complete the retained populations; not recovered historical customer addresses, inferred from headquarters, or extrapolated from the 75 software subscriptions.",
+  "rules": {
+    "SHI-SERVICE-MARKET": {
+      "state": "CA",
+      "facts": "For the represented 2016-2026 historical Core service population and 2027-2031 Foundry Field, Atlas and Advisory conditional populations, the customer receives the contracted benefit at its California business operation. These customer operations are distinct from SHI employee locations and the customer's place of incorporation. No service benefit outside California is modeled in this bounded successor."
+    },
+    "SHI-CRADLE-DESTINATION": {
+      "state": "WV",
+      "facts": "The represented Cradle materials receipts follow delivery to the West Virginia refiner, consistent with the current industrial transaction-tax source. This destination is separately authored for the retained September-December 2026 and 2027-2031 conditional material receipts; it does not make the host or mine a SHI-owned site."
+    },
+    "SHI-PRE2026-CONTROL": {
+      "state": "CA",
+      "facts": "The retained 2016-2025 aggregate SHI revenue control is authored as California-benefit service revenue. Research/testing activity at other sites does not create additional recognized product revenue within that aggregate. This is a new historical scope fact, not a recovered invoice census."
+    }
+  },
+  "august_2026": {
+    "source": "enterprise/operations/source/current_company_2026_08.json",
+    "total_shi_revenue_usd": "11075500.00",
+    "ca_services_usd": "11015500.00",
+    "wv_cradle_materials_usd": "60000.00",
+    "interpretation": "Current 58 service contracts and one Cradle material contract decompose one retained LEG_4000 aggregate; do not add Cradle to it again."
+  },
+  "january_july_2026": "Remaining retained aggregate controls are newly authored California-benefit service receipts. No separately recognized Cradle material receipt is asserted in those seven control months.",
+  "intercompany": "SHARED_REV is separately retained as an allocation receipt with recipient entity from the source ID. The tax-group provider decides its inclusion/elimination; it is never external customer revenue by default.",
+  "limitations": [
+    "These are factual market assumptions for the synthetic edition, not a legal sourcing, nexus, unitary, throwback or apportionment conclusion.",
+    "No new customer, revenue, cash, tax rate, tax election or ownership interest is created.",
+    "Historical and current customer identities are not equated with forecast customer IDs."
+  ]
+}

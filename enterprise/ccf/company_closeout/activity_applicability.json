@@ -1,0 +1,1265 @@
+{
+  "document_id": "SH-C05-ACTIVITY-2026-09-15",
+  "version": "1.0.0",
+  "acceptance_state": "PENDING_REPOSITORY_ACCEPTANCE",
+  "authored_on": "2026-09-15",
+  "available_on": "2026-09-15",
+  "scope": "Seven-unit and corporate activity applicability review; complete declared boundary rows below, not a universal legal compliance opinion or complete statutory occurrence population.",
+  "required_units": [
+    "foundry-field",
+    "atlas-meridian",
+    "advisory",
+    "willow",
+    "project-cradle",
+    "pale-sun",
+    "american-resource-utility",
+    "corporate"
+  ],
+  "population_unit": "activity/duty boundary; not persons, due occurrences or control assertions",
+  "records": [
+    {
+      "id": "APP-FF-DELIVERY",
+      "business_unit": "foundry-field",
+      "legal_entities": [
+        "SHI"
+      ],
+      "activity": "Deployments and subscription performance",
+      "sites": [
+        "Customer-scoped service environments"
+      ],
+      "jurisdictions": [
+        "Contract jurisdiction per customer"
+      ],
+      "source_path": "enterprise/business/source/contracts.json",
+      "source_sha256": "9b965f656ed6b801d2faf50829b7d83337749ce98eccc4ac8ea60768ed75e79f",
+      "selector": {
+        "unit": "foundry-field"
+      },
+      "population_definition": "All Foundry Field contracts in conditional source",
+      "population_count": 60,
+      "population_units": "declared source records",
+      "applicability": "APPLICABLE_CONDITIONAL_ACTIVITY",
+      "performance": "FUTURE_DUE",
+      "duty": "Match contract/version, customer acceptance, service period, invoice and seller tax liability; approval is not settlement.",
+      "accountable_role": "Foundry Field delivery and Revenue accounting",
+      "authority_refs": [
+        "INTERNAL-SOURCE"
+      ],
+      "ccf_refs": [
+        "SH-REV-003"
+      ],
+      "effective_scope": "2027-2031",
+      "scenario": "CONDITIONAL_FORECAST",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Import the 60-record contract source using scenario/effective dates; join completed-month source contracts separately. No future invoice in 2026 actual view.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-FF-TAX",
+      "business_unit": "foundry-field",
+      "legal_entities": [
+        "SHI"
+      ],
+      "activity": "Seller-borne FF-003 tax issuance",
+      "sites": [
+        "Copperreach customer transaction"
+      ],
+      "jurisdictions": [
+        "Accepted synthetic tax planning scope"
+      ],
+      "source_path": "docs/canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md",
+      "source_sha256": "4a33e24a78d68f6d1b592e0239e48b6ce98b2f904444841db3d45c474193ed08",
+      "selector": {},
+      "population_definition": "One accepted forecast FF-003 issuance decision",
+      "population_count": 1,
+      "population_units": "declared source records",
+      "applicability": "APPLICABLE_ACCEPTED_MODEL",
+      "performance": "FUTURE_DUE",
+      "duty": "Retain $152250 expense/payable under approved 8.75% planning assumption separately from $1740000 customer principal; no remittance inferred.",
+      "accountable_role": "SHI Controller",
+      "authority_refs": [
+        "INTERNAL-SOURCE"
+      ],
+      "ccf_refs": [
+        "SH-REV-003"
+      ],
+      "effective_scope": "2027-01-31",
+      "scenario": "base",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": "2027-01-31",
+      "due_basis": "SOURCE_SUPPORTED_OR_INTERNAL_REVIEW",
+      "next_action": "Consume accepted successor adjustment once; statutory payment due date remains separately unsupported.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-ATL-LICENSE",
+      "business_unit": "atlas-meridian",
+      "legal_entities": [
+        "SHI"
+      ],
+      "activity": "Independent institutional product licenses",
+      "sites": [
+        "Client workspace; Sable Harbor professional plane"
+      ],
+      "jurisdictions": [
+        "Contract jurisdiction per license"
+      ],
+      "source_path": "enterprise/business/source/contracts.json",
+      "source_sha256": "9b965f656ed6b801d2faf50829b7d83337749ce98eccc4ac8ea60768ed75e79f",
+      "selector": {
+        "unit": "atlas-meridian"
+      },
+      "population_definition": "All Atlas license contracts in conditional source",
+      "population_count": 15,
+      "population_units": "declared source records",
+      "applicability": "APPLICABLE_CONDITIONAL_ACTIVITY",
+      "performance": "FUTURE_DUE",
+      "duty": "Verify separate license rights before transferring product components; Advisory acceptance never grants Atlas license automatically.",
+      "accountable_role": "Atlas product licensing owner",
+      "authority_refs": [
+        "INTERNAL-SOURCE"
+      ],
+      "ccf_refs": [
+        "SH-REV-003"
+      ],
+      "effective_scope": "2027-2031",
+      "scenario": "CONDITIONAL_FORECAST",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Accountable owner joins complete source occurrence and independent review evidence; missing records cannot be treated as a performed control.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-ADV-MATTER",
+      "business_unit": "advisory",
+      "legal_entities": [
+        "SHI"
+      ],
+      "activity": "Management/operating transformation engagements",
+      "sites": [
+        "Client workplaces and client workspaces"
+      ],
+      "jurisdictions": [
+        "Jurisdiction determined by engagement"
+      ],
+      "source_path": "enterprise/business/source/engagements.json",
+      "source_sha256": "d2c300727685a07fce77972e05a4fb8bbc92c4e365ba597fee8ae990bd3de92b",
+      "selector": {
+        "unit": "advisory"
+      },
+      "population_definition": "All Advisory matters in conditional source",
+      "population_count": 120,
+      "population_units": "declared source records",
+      "applicability": "APPLICABLE_CONDITIONAL_ACTIVITY",
+      "performance": "FUTURE_DUE",
+      "duty": "Retain scope, outcome baseline, acceptance authority, conflicts/confidentiality, professional-service boundary and transferable deliverables; hours do not establish outcome acceptance.",
+      "accountable_role": "Advisory matter principal",
+      "authority_refs": [
+        "INTERNAL-SOURCE"
+      ],
+      "ccf_refs": [
+        "SH-REV-003"
+      ],
+      "effective_scope": "2027-2031",
+      "scenario": "CONDITIONAL_FORECAST",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Accountable owner joins complete source occurrence and independent review evidence; missing records cannot be treated as a performed control.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-ATL-EVALUATION",
+      "business_unit": "atlas-meridian",
+      "legal_entities": [
+        "SHI"
+      ],
+      "activity": "Design-partner evaluation and transferable workflow engagements",
+      "sites": [
+        "Client workplaces and client workspaces"
+      ],
+      "jurisdictions": [
+        "Jurisdiction determined by engagement"
+      ],
+      "source_path": "enterprise/business/source/engagements.json",
+      "source_sha256": "d2c300727685a07fce77972e05a4fb8bbc92c4e365ba597fee8ae990bd3de92b",
+      "selector": {
+        "unit": "atlas-meridian"
+      },
+      "population_definition": "All Atlas evaluation engagements in conditional source",
+      "population_count": 40,
+      "population_units": "declared source records",
+      "applicability": "APPLICABLE_CONDITIONAL_ACTIVITY",
+      "performance": "FUTURE_DUE",
+      "duty": "Retain scoped evaluation question, source rights, versioned candidate, acceptance and independent license boundary; design-partner work is not a production launch or default client entitlement.",
+      "accountable_role": "Atlas evaluation owner",
+      "authority_refs": [
+        "INTERNAL-SOURCE"
+      ],
+      "ccf_refs": [
+        "SH-REV-003"
+      ],
+      "effective_scope": "2027-2031",
+      "scenario": "CONDITIONAL_FORECAST",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Accountable owner joins complete source occurrence and independent review evidence; missing records cannot be treated as a performed control.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-ADV-REGULATED",
+      "business_unit": "advisory",
+      "legal_entities": [
+        "SHI"
+      ],
+      "activity": "Intake review of potentially regulated professional activity",
+      "sites": [
+        "Each accepted engagement"
+      ],
+      "jurisdictions": [
+        "Customer and service jurisdiction"
+      ],
+      "source_path": "docs/advisory/SABLE_HARBOR_ADVISORY_FIRM_MANUAL_2026-09-09.md",
+      "source_sha256": "94af91f6ce315b8ea16cc87bd3f7501b9b99412924bc24b54e9c83580bd8a233",
+      "selector": {},
+      "population_definition": "Actual professional services/transactions requiring qualification classification",
+      "population_count": null,
+      "population_units": "duty occurrence population not established",
+      "applicability": "FACT_DEPENDENT_SCREEN_REQUIRED",
+      "performance": "NOT_RUN",
+      "duty": "Screen actual legal, securities, investment, engineering or other licensed services at intake; Advisory name and phantom carry do not themselves establish registration or license.",
+      "accountable_role": "Advisory contracting and legal reviewer",
+      "authority_refs": [
+        "INTERNAL-SOURCE"
+      ],
+      "ccf_refs": [],
+      "effective_scope": "2026-08-31",
+      "scenario": "CURRENT_SOURCE_REVIEW",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Read executed scope and remuneration before identifying governing primary professional authority; no blanket SEC/adviser or bar-license conclusion is made.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-WIL-RESEARCH",
+      "business_unit": "willow",
+      "legal_entities": [
+        "SHI"
+      ],
+      "activity": "Bounded experiments/prototypes/transfer",
+      "sites": [
+        "Pittsburgh-area Fort"
+      ],
+      "jurisdictions": [
+        "Pennsylvania; local parcel-specific duties"
+      ],
+      "source_path": "enterprise/business/source/projects.json",
+      "source_sha256": "884831d6c4a406cf330ca21ae5fce7869430aba4e5dd684c03e871f45dd8899e",
+      "selector": {},
+      "population_definition": "Four source research projects; conditional work does not invent sales",
+      "population_count": 4,
+      "population_units": "declared source records",
+      "applicability": "APPLICABLE_CONDITIONAL_ACTIVITY",
+      "performance": "FUTURE_DUE",
+      "duty": "Preserve failed attempts, budget stop/continue gates, receiving owner, qualification and maintenance responsibility; research approval does not authorize mine/rail/customer production.",
+      "accountable_role": "Willow experimental authority",
+      "authority_refs": [
+        "INTERNAL-SOURCE"
+      ],
+      "ccf_refs": [
+        "SH-TRN-004"
+      ],
+      "effective_scope": "2027-2031",
+      "scenario": "CONDITIONAL_FORECAST",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Accountable owner joins complete source occurrence and independent review evidence; missing records cannot be treated as a performed control.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-WIL-WORKPLACE",
+      "business_unit": "willow",
+      "legal_entities": [
+        "SHI"
+      ],
+      "activity": "Fort laboratory/shop work",
+      "sites": [
+        "Big Shed, Small Shed, White Shed, Museum/yard"
+      ],
+      "jurisdictions": [
+        "Pennsylvania"
+      ],
+      "source_path": "docs/business-lines/WILLOW.md",
+      "source_sha256": "239d4a7d70db0a7885c30cd7ba226a459ff419a48566ec9742c76a7267111115",
+      "selector": {},
+      "population_definition": "Exposures, equipment, chemicals and assignments at each active place",
+      "population_count": null,
+      "population_units": "duty occurrence population not established",
+      "applicability": "APPLICABLE_ACTIVITY_SCREEN",
+      "performance": "MISSING_EVIDENCE",
+      "duty": "Identify laboratory/shop hazards, chemicals, training and emergency arrangements by occupied place; preserve nonpublic-site boundary and do not infer mine regulation from research.",
+      "accountable_role": "Fort operating owner",
+      "authority_refs": [
+        "INTERNAL-SOURCE"
+      ],
+      "ccf_refs": [],
+      "effective_scope": "2026-08-31",
+      "scenario": "CURRENT_SOURCE_REVIEW",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Join actual chemical/equipment/occupancy census to occupational, environmental and local obligations; qualified source review required before selecting specific legal controls.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-CRD-HOST",
+      "business_unit": "project-cradle",
+      "legal_entities": [
+        "SHI"
+      ],
+      "activity": "Side-stream mineral/water recovery and downstream sale",
+      "sites": [
+        "Kelly Gang Stream 17",
+        "Demotte",
+        "Bedford"
+      ],
+      "jurisdictions": [
+        "Host/site-specific jurisdictions; Bedford West Virginia"
+      ],
+      "source_path": "docs/business-lines/PROJECT_CRADLE.md",
+      "source_sha256": "7bc25bd32bb5e0bdf81dc01bb341ca5a488801f5348a829a0fffc835ea8b8fca",
+      "selector": {},
+      "population_definition": "Three distinct host/facility responsibility boundaries",
+      "population_count": 3,
+      "population_units": "declared source records",
+      "applicability": "APPLICABLE_ACCEPTED_ARCHITECTURE",
+      "performance": "MISSING_EVIDENCE",
+      "duty": "Host retains primary treatment/compliance/stop authority; Cradle owns its module and contracted recovery boundary. Retain bypass, accepted assay, captured title, inventory, downstream acceptance and host-share settlement.",
+      "accountable_role": "Cradle operating leader and accountable host representative",
+      "authority_refs": [
+        "INTERNAL-SOURCE"
+      ],
+      "ccf_refs": [
+        "SH-AST-002"
+      ],
+      "effective_scope": "2026-08-31",
+      "scenario": "CURRENT_SOURCE_REVIEW",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Join operating chain and contract condition by site; mine-water volume is not mineral tonnes; unaccepted material cannot be booked as paid sale.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-CRD-ENV",
+      "business_unit": "project-cradle",
+      "legal_entities": [
+        "SHI"
+      ],
+      "activity": "Waste, water, chemicals and transport responsibility",
+      "sites": [
+        "Demotte external treatment plant",
+        "Bedford processing/analytical facility"
+      ],
+      "jurisdictions": [
+        "Site discharge and carrier jurisdictions"
+      ],
+      "source_path": "enterprise/business/source/recovery.json",
+      "source_sha256": "2f61f31ef3d49e611523b947095e19aa037ef72bfb122280da9f686887bb238c",
+      "selector": {},
+      "population_definition": "Two separate recovery process scenarios",
+      "population_count": 2,
+      "population_units": "declared source records",
+      "applicability": "APPLICABLE_ACTIVITY_SCREEN",
+      "performance": "MISSING_EVIDENCE",
+      "duty": "Resolve waste/product classification, discharge/change authorization, sample/lot custody, and transport qualifications for actual chemistry and activity. Host permit does not transfer operator authority to SHI.",
+      "accountable_role": "Cradle environment and logistics owner",
+      "authority_refs": [
+        "INTERNAL-SOURCE"
+      ],
+      "ccf_refs": [],
+      "effective_scope": "2027-2031 scenario; accepted responsibility boundary current",
+      "scenario": "CONDITIONAL_FORECAST",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Obtain host contract/permit allocation and material characterization; no guessed hazardous-waste class, discharge limit or finished-uranium carriage authority.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-PS-PERMITS",
+      "business_unit": "pale-sun",
+      "legal_entities": [
+        "PS",
+        "RWH"
+      ],
+      "activity": "Underground uranium mining, milling, tailings and shipment",
+      "sites": [
+        "Red Wash"
+      ],
+      "jurisdictions": [
+        "Wyoming; federal-land scope where represented"
+      ],
+      "source_path": "red_wash/source/core_operating_data.json",
+      "source_sha256": "eb5601f3a519ac175bef07744fa3c23939734f80b5774efeed4800aa73e8aa3f",
+      "selector": {
+        "key": "permit_register"
+      },
+      "population_definition": "All permit/authority source entries; occurrence details in linked census",
+      "population_count": 14,
+      "population_units": "declared source records",
+      "applicability": "APPLICABLE_SOURCE_REPRESENTED",
+      "performance": "PARTIALLY_PERFORMED_WITH_EXCEPTIONS",
+      "duty": "Use the fourteen permit dispositions, internal condition schedules and bounded environmental/workplace chains; preserve Wyoming source-material jurisdiction and mine legal operator.",
+      "accountable_role": "RWH operating/environment/safety managers",
+      "authority_refs": [
+        "msha2025",
+        "msha2026",
+        "blm2025"
+      ],
+      "ccf_refs": [],
+      "effective_scope": "2026-08-31",
+      "scenario": "CURRENT_SOURCE_REVIEW",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Link obligation_census.json, permit_condition_performance.json and workplace_examinations.json; resolve instrument-specific occurrence populations without replacing regulators with internal schedules.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-ARU-RAIL",
+      "business_unit": "american-resource-utility",
+      "legal_entities": [
+        "ARU",
+        "BST"
+      ],
+      "activity": "Rail transport and safety events",
+      "sites": [
+        "Wyoming rail/terminal network"
+      ],
+      "jurisdictions": [
+        "Wyoming and applicable federal rail scope"
+      ],
+      "source_path": "industrial/source/operations.json",
+      "source_sha256": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b",
+      "selector": {
+        "key": "safety_events"
+      },
+      "population_definition": "All historical rail source safety events",
+      "population_count": 14,
+      "population_units": "declared source records",
+      "applicability": "APPLICABLE_EVENT_SCREEN",
+      "performance": "PARTIALLY_REVIEWED_MISSING_FILING_EVIDENCE",
+      "duty": "Keep each crossing/equipment/injury/environment/rules event disposition separate; rail reportability depends on event-year definitions and qualifying facts. Preserve open $600000 claim and source corrective actions.",
+      "accountable_role": "BST Safety/Compliance and ARU Safety/Environment",
+      "authority_refs": [
+        "FRA-22519-2023"
+      ],
+      "ccf_refs": [],
+      "effective_scope": "2026-08-31",
+      "scenario": "CURRENT_SOURCE_REVIEW",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Use individual event-year authority IDs in obligation_census.json; threshold is not Group I crossing gate and claim amount is not equipment repair cost.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-ARU-WAREHOUSE",
+      "business_unit": "american-resource-utility",
+      "legal_entities": [
+        "ARU",
+        "BST"
+      ],
+      "activity": "Warehousing, transload and commercial custody",
+      "sites": [
+        "Twelve source industrial facilities"
+      ],
+      "jurisdictions": [
+        "Wyoming; contract and shipment jurisdiction"
+      ],
+      "source_path": "industrial/source/operations.json",
+      "source_sha256": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b",
+      "selector": {
+        "key": "facilities"
+      },
+      "population_definition": "All industrial facilities in operating source",
+      "population_count": 12,
+      "population_units": "declared source records",
+      "applicability": "APPLICABLE_SOURCE_REPRESENTED",
+      "performance": "MISSING_EVIDENCE",
+      "duty": "Join facility, receipt quantity/condition, trained crew, equipment release, storage, delivery, claim and charge. Pallet-month billing is not physical receipt evidence.",
+      "accountable_role": "ARU terminal operations and BST rail authority",
+      "authority_refs": [
+        "INTERNAL-SOURCE"
+      ],
+      "ccf_refs": [],
+      "effective_scope": "2026-08-31",
+      "scenario": "CURRENT_SOURCE_REVIEW",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Integrate completed C07 chains; resolve per-site workplace/environment duties and maintain qualified external uranium carrier boundary.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-FOUNDRY-FIELD-ACCESS",
+      "business_unit": "foundry-field",
+      "legal_entities": [
+        "SHI"
+      ],
+      "activity": "People/client/operating record access and evidence disclosure",
+      "sites": [
+        "Native unit source repositories/workspaces"
+      ],
+      "jurisdictions": [
+        "Data subject, contract and processing jurisdiction"
+      ],
+      "source_path": "docs/business-lines/BUSINESS_FINANCE_AND_ALEXANDRIA_INTERFACES.md",
+      "source_sha256": "64ac68cf1ce4255ef957ba5b6226e05116d2575d95fb94768ce1bf7605e40058",
+      "selector": {},
+      "population_definition": "Every unit record/derivative disclosure event; no event count inferred from document count",
+      "population_count": null,
+      "population_units": "duty occurrence population not established",
+      "applicability": "APPLICABLE_INTERNAL_POLICY",
+      "performance": "PARTIALLY_EXERCISED_REFERENCE_ONLY",
+      "duty": "Apply information-nature restrictions, tenant/purpose entitlement, lineage and known-on controls before direct or indirect disclosure; no client access from rank or commercial relationship alone.",
+      "accountable_role": "Unit source owner and Alexandria information steward",
+      "authority_refs": [
+        "INTERNAL-SOURCE"
+      ],
+      "ccf_refs": [],
+      "effective_scope": "2026-08-31",
+      "scenario": "CURRENT_SOURCE_REVIEW",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Link central privacy/retention duty APP-CORP-PRIVACY and APP-CORP-RETENTION; use existing runtime; public document import is not proof of all indirect surfaces.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-ATLAS-MERIDIAN-ACCESS",
+      "business_unit": "atlas-meridian",
+      "legal_entities": [
+        "SHI"
+      ],
+      "activity": "People/client/operating record access and evidence disclosure",
+      "sites": [
+        "Native unit source repositories/workspaces"
+      ],
+      "jurisdictions": [
+        "Data subject, contract and processing jurisdiction"
+      ],
+      "source_path": "docs/business-lines/BUSINESS_FINANCE_AND_ALEXANDRIA_INTERFACES.md",
+      "source_sha256": "64ac68cf1ce4255ef957ba5b6226e05116d2575d95fb94768ce1bf7605e40058",
+      "selector": {},
+      "population_definition": "Every unit record/derivative disclosure event; no event count inferred from document count",
+      "population_count": null,
+      "population_units": "duty occurrence population not established",
+      "applicability": "APPLICABLE_INTERNAL_POLICY",
+      "performance": "PARTIALLY_EXERCISED_REFERENCE_ONLY",
+      "duty": "Apply information-nature restrictions, tenant/purpose entitlement, lineage and known-on controls before direct or indirect disclosure; no client access from rank or commercial relationship alone.",
+      "accountable_role": "Unit source owner and Alexandria information steward",
+      "authority_refs": [
+        "INTERNAL-SOURCE"
+      ],
+      "ccf_refs": [],
+      "effective_scope": "2026-08-31",
+      "scenario": "CURRENT_SOURCE_REVIEW",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Link central privacy/retention duty APP-CORP-PRIVACY and APP-CORP-RETENTION; use existing runtime; public document import is not proof of all indirect surfaces.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-ADVISORY-ACCESS",
+      "business_unit": "advisory",
+      "legal_entities": [
+        "SHI"
+      ],
+      "activity": "People/client/operating record access and evidence disclosure",
+      "sites": [
+        "Native unit source repositories/workspaces"
+      ],
+      "jurisdictions": [
+        "Data subject, contract and processing jurisdiction"
+      ],
+      "source_path": "docs/business-lines/BUSINESS_FINANCE_AND_ALEXANDRIA_INTERFACES.md",
+      "source_sha256": "64ac68cf1ce4255ef957ba5b6226e05116d2575d95fb94768ce1bf7605e40058",
+      "selector": {},
+      "population_definition": "Every unit record/derivative disclosure event; no event count inferred from document count",
+      "population_count": null,
+      "population_units": "duty occurrence population not established",
+      "applicability": "APPLICABLE_INTERNAL_POLICY",
+      "performance": "PARTIALLY_EXERCISED_REFERENCE_ONLY",
+      "duty": "Apply information-nature restrictions, tenant/purpose entitlement, lineage and known-on controls before direct or indirect disclosure; no client access from rank or commercial relationship alone.",
+      "accountable_role": "Unit source owner and Alexandria information steward",
+      "authority_refs": [
+        "INTERNAL-SOURCE"
+      ],
+      "ccf_refs": [],
+      "effective_scope": "2026-08-31",
+      "scenario": "CURRENT_SOURCE_REVIEW",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Link central privacy/retention duty APP-CORP-PRIVACY and APP-CORP-RETENTION; use existing runtime; public document import is not proof of all indirect surfaces.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-WILLOW-ACCESS",
+      "business_unit": "willow",
+      "legal_entities": [
+        "SHI"
+      ],
+      "activity": "People/client/operating record access and evidence disclosure",
+      "sites": [
+        "Native unit source repositories/workspaces"
+      ],
+      "jurisdictions": [
+        "Data subject, contract and processing jurisdiction"
+      ],
+      "source_path": "docs/business-lines/BUSINESS_FINANCE_AND_ALEXANDRIA_INTERFACES.md",
+      "source_sha256": "64ac68cf1ce4255ef957ba5b6226e05116d2575d95fb94768ce1bf7605e40058",
+      "selector": {},
+      "population_definition": "Every unit record/derivative disclosure event; no event count inferred from document count",
+      "population_count": null,
+      "population_units": "duty occurrence population not established",
+      "applicability": "APPLICABLE_INTERNAL_POLICY",
+      "performance": "PARTIALLY_EXERCISED_REFERENCE_ONLY",
+      "duty": "Apply information-nature restrictions, tenant/purpose entitlement, lineage and known-on controls before direct or indirect disclosure; no client access from rank or commercial relationship alone.",
+      "accountable_role": "Unit source owner and Alexandria information steward",
+      "authority_refs": [
+        "INTERNAL-SOURCE"
+      ],
+      "ccf_refs": [],
+      "effective_scope": "2026-08-31",
+      "scenario": "CURRENT_SOURCE_REVIEW",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Link central privacy/retention duty APP-CORP-PRIVACY and APP-CORP-RETENTION; use existing runtime; public document import is not proof of all indirect surfaces.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-PROJECT-CRADLE-ACCESS",
+      "business_unit": "project-cradle",
+      "legal_entities": [
+        "SHI"
+      ],
+      "activity": "People/client/operating record access and evidence disclosure",
+      "sites": [
+        "Native unit source repositories/workspaces"
+      ],
+      "jurisdictions": [
+        "Data subject, contract and processing jurisdiction"
+      ],
+      "source_path": "docs/business-lines/BUSINESS_FINANCE_AND_ALEXANDRIA_INTERFACES.md",
+      "source_sha256": "64ac68cf1ce4255ef957ba5b6226e05116d2575d95fb94768ce1bf7605e40058",
+      "selector": {},
+      "population_definition": "Every unit record/derivative disclosure event; no event count inferred from document count",
+      "population_count": null,
+      "population_units": "duty occurrence population not established",
+      "applicability": "APPLICABLE_INTERNAL_POLICY",
+      "performance": "PARTIALLY_EXERCISED_REFERENCE_ONLY",
+      "duty": "Apply information-nature restrictions, tenant/purpose entitlement, lineage and known-on controls before direct or indirect disclosure; no client access from rank or commercial relationship alone.",
+      "accountable_role": "Unit source owner and Alexandria information steward",
+      "authority_refs": [
+        "INTERNAL-SOURCE"
+      ],
+      "ccf_refs": [],
+      "effective_scope": "2026-08-31",
+      "scenario": "CURRENT_SOURCE_REVIEW",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Link central privacy/retention duty APP-CORP-PRIVACY and APP-CORP-RETENTION; use existing runtime; public document import is not proof of all indirect surfaces.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-PALE-SUN-ACCESS",
+      "business_unit": "pale-sun",
+      "legal_entities": [
+        "PS",
+        "RWH"
+      ],
+      "activity": "People/client/operating record access and evidence disclosure",
+      "sites": [
+        "Native unit source repositories/workspaces"
+      ],
+      "jurisdictions": [
+        "Data subject, contract and processing jurisdiction"
+      ],
+      "source_path": "docs/business-lines/BUSINESS_FINANCE_AND_ALEXANDRIA_INTERFACES.md",
+      "source_sha256": "64ac68cf1ce4255ef957ba5b6226e05116d2575d95fb94768ce1bf7605e40058",
+      "selector": {},
+      "population_definition": "Every unit record/derivative disclosure event; no event count inferred from document count",
+      "population_count": null,
+      "population_units": "duty occurrence population not established",
+      "applicability": "APPLICABLE_INTERNAL_POLICY",
+      "performance": "PARTIALLY_EXERCISED_REFERENCE_ONLY",
+      "duty": "Apply information-nature restrictions, tenant/purpose entitlement, lineage and known-on controls before direct or indirect disclosure; no client access from rank or commercial relationship alone.",
+      "accountable_role": "Unit source owner and Alexandria information steward",
+      "authority_refs": [
+        "INTERNAL-SOURCE"
+      ],
+      "ccf_refs": [],
+      "effective_scope": "2026-08-31",
+      "scenario": "CURRENT_SOURCE_REVIEW",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Link central privacy/retention duty APP-CORP-PRIVACY and APP-CORP-RETENTION; use existing runtime; public document import is not proof of all indirect surfaces.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-AMERICAN-RESOURCE-UTILITY-ACCESS",
+      "business_unit": "american-resource-utility",
+      "legal_entities": [
+        "ARU",
+        "BST"
+      ],
+      "activity": "People/client/operating record access and evidence disclosure",
+      "sites": [
+        "Native unit source repositories/workspaces"
+      ],
+      "jurisdictions": [
+        "Data subject, contract and processing jurisdiction"
+      ],
+      "source_path": "docs/business-lines/BUSINESS_FINANCE_AND_ALEXANDRIA_INTERFACES.md",
+      "source_sha256": "64ac68cf1ce4255ef957ba5b6226e05116d2575d95fb94768ce1bf7605e40058",
+      "selector": {},
+      "population_definition": "Every unit record/derivative disclosure event; no event count inferred from document count",
+      "population_count": null,
+      "population_units": "duty occurrence population not established",
+      "applicability": "APPLICABLE_INTERNAL_POLICY",
+      "performance": "PARTIALLY_EXERCISED_REFERENCE_ONLY",
+      "duty": "Apply information-nature restrictions, tenant/purpose entitlement, lineage and known-on controls before direct or indirect disclosure; no client access from rank or commercial relationship alone.",
+      "accountable_role": "Unit source owner and Alexandria information steward",
+      "authority_refs": [
+        "INTERNAL-SOURCE"
+      ],
+      "ccf_refs": [],
+      "effective_scope": "2026-08-31",
+      "scenario": "CURRENT_SOURCE_REVIEW",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Link central privacy/retention duty APP-CORP-PRIVACY and APP-CORP-RETENTION; use existing runtime; public document import is not proof of all indirect surfaces.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-CORP-PRIVACY",
+      "business_unit": "corporate",
+      "legal_entities": [
+        "SHI",
+        "SHIH",
+        "PS",
+        "RWH",
+        "ARU",
+        "BST"
+      ],
+      "activity": "Employment/client/vendor personal information and licensed data",
+      "sites": [
+        "Sacramento HQ and unit workplaces; provider boundaries"
+      ],
+      "jurisdictions": [
+        "California plus person/location/contract-specific jurisdictions"
+      ],
+      "source_path": "industrial/source/entities.json",
+      "source_sha256": "799a24baf3240d50c5d6a80ac0f9ddb9d023b7a36de058ec12546aac60caee29",
+      "selector": {},
+      "population_definition": "Legal entity/data-role/threshold assessment; not employee count alone",
+      "population_count": null,
+      "population_units": "duty occurrence population not established",
+      "applicability": "FACT_DEPENDENT_SCREEN_REQUIRED",
+      "performance": "NOT_RUN",
+      "duty": "Apply accepted confidentiality now; determine CCPA business/service-provider/contractor status from actual control, processing and preceding-year threshold facts. No revenue forecast or combined group automatically proves legal scope.",
+      "accountable_role": "Privacy owner with legal reviewer",
+      "authority_refs": [
+        "CCPA-2026-REG",
+        "CCPA-THRESHOLD-2025"
+      ],
+      "ccf_refs": [],
+      "effective_scope": "2026-08-31",
+      "scenario": "CURRENT_SOURCE_REVIEW",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Collect 2025 gross revenue and covered consumer/household/sale-sharing facts per legal business; classify processing roles and contracts before legal notice/request/audit obligations. Separate effective requirements and phased deadlines.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-CORP-HIPAA",
+      "business_unit": "corporate",
+      "legal_entities": [
+        "SHI",
+        "SHIH",
+        "PS",
+        "RWH",
+        "ARU",
+        "BST"
+      ],
+      "activity": "Potential healthcare records or healthcare-client service",
+      "sites": [
+        "Any healthcare-client or benefit-plan boundary"
+      ],
+      "jurisdictions": [
+        "US HIPAA covered-function scope"
+      ],
+      "source_path": "docs/business-lines/BUSINESS_FINANCE_AND_ALEXANDRIA_INTERFACES.md",
+      "source_sha256": "64ac68cf1ce4255ef957ba5b6226e05116d2575d95fb94768ce1bf7605e40058",
+      "selector": {},
+      "population_definition": "Covered-entity/business-associate functions and PHI flows",
+      "population_count": null,
+      "population_units": "duty occurrence population not established",
+      "applicability": "NO_TRIGGER_ESTABLISHED_NOT_NONAPPLICABLE",
+      "performance": "NOT_RUN",
+      "duty": "HIPAA requires covered-entity or business-associate activity facts; ordinary employee information and software business names do not establish that status.",
+      "accountable_role": "Privacy owner and benefit-plan/service owner",
+      "authority_refs": [
+        "HIPAA-HHS-20260915"
+      ],
+      "ccf_refs": [],
+      "effective_scope": "2026-08-31",
+      "scenario": "CURRENT_SOURCE_REVIEW",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Identify covered health plan/provider/service and PHI before applying HIPAA control boundaries; preserve CCF baseline as preparation, not universal company applicability.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-CORP-PAYROLL",
+      "business_unit": "corporate",
+      "legal_entities": [
+        "SHI",
+        "PS",
+        "RWH",
+        "ARU",
+        "BST"
+      ],
+      "activity": "Employee wages, deductions, employer costs and settlement",
+      "sites": [
+        "Effective workplace for each worker"
+      ],
+      "jurisdictions": [
+        "US federal and each employee work jurisdiction"
+      ],
+      "source_path": "industrial/source/entities.json",
+      "source_sha256": "799a24baf3240d50c5d6a80ac0f9ddb9d023b7a36de058ec12546aac60caee29",
+      "selector": {},
+      "population_definition": "All actual legal-employer payroll events; link C03 HR/payroll population",
+      "population_count": null,
+      "population_units": "duty occurrence population not established",
+      "applicability": "APPLICABLE_EMPLOYER_ACTIVITY",
+      "performance": "MISSING_FILING_AND_DEPOSIT_EVIDENCE",
+      "duty": "Reconcile gross-to-net/employer liabilities/GL/settlement; classify ordinary payroll versus railroad employment taxes, reporting forms and lookback-based deposit schedule. Return filing and deposit are different events.",
+      "accountable_role": "Payroll Controller",
+      "authority_refs": [
+        "PAYROLL-IRS-20260915"
+      ],
+      "ccf_refs": [],
+      "effective_scope": "2026-08-31",
+      "scenario": "CURRENT_SOURCE_REVIEW",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Join C03 source IDs. BST RRTA/CT-1 and RUIA scope must remain separate from FICA/FUTA. SHIH holding identity alone does not prove a payroll population. Period-specific forms and account lookback determine dates.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-CORP-WAGE-RECORDS",
+      "business_unit": "corporate",
+      "legal_entities": [
+        "SHI",
+        "PS",
+        "RWH",
+        "ARU",
+        "BST"
+      ],
+      "activity": "Hours, pay basis, deductions, leave and worker classification",
+      "sites": [
+        "Every legal employer/workplace"
+      ],
+      "jurisdictions": [
+        "US FLSA coverage and state wage law"
+      ],
+      "source_path": "industrial/source/entities.json",
+      "source_sha256": "799a24baf3240d50c5d6a80ac0f9ddb9d023b7a36de058ec12546aac60caee29",
+      "selector": {},
+      "population_definition": "Covered worker records by exemption/classification; current HR count is not FLSA coverage decision",
+      "population_count": null,
+      "population_units": "duty occurrence population not established",
+      "applicability": "APPLICABLE_ACTIVITY_SCREEN",
+      "performance": "MISSING_EVIDENCE",
+      "duty": "Keep worker, hours, rates, earnings, additions/deductions, pay period and payment records according to supported classification; salaried title does not prove overtime exemption.",
+      "accountable_role": "People and Payroll Controller",
+      "authority_refs": [
+        "FLSA-2025-516"
+      ],
+      "ccf_refs": [],
+      "effective_scope": "2026-08-31",
+      "scenario": "CURRENT_SOURCE_REVIEW",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Map job duties/coverage and state rules before rates/exemptions; preserve railroad distinctions. Annual source edition read; period-specific amendments require check before professional conclusion.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-CORP-TAX",
+      "business_unit": "corporate",
+      "legal_entities": [
+        "SHI",
+        "SHIH",
+        "PS",
+        "RWH",
+        "ARU",
+        "BST"
+      ],
+      "activity": "Entity/income/acquisition and state-local filing duties",
+      "sites": [
+        "Delaware formation; California HQ; Wyoming operators; other actual work sites"
+      ],
+      "jurisdictions": [
+        "Federal; Delaware; California; Wyoming; activity-derived states"
+      ],
+      "source_path": "industrial/source/entities.json",
+      "source_sha256": "799a24baf3240d50c5d6a80ac0f9ddb9d023b7a36de058ec12546aac60caee29",
+      "selector": {},
+      "population_definition": "Period by legal taxpayer/jurisdiction, separate from financial consolidation",
+      "population_count": null,
+      "population_units": "duty occurrence population not established",
+      "applicability": "APPLICABLE_CLASSIFICATION_WORK",
+      "performance": "NOT_RUN",
+      "duty": "Implement selected SHI corporate-tax direction while retaining LLC; preserve subsidiary/acquisition classifications. Determine return group separately from financial group and distinguish preparation, submission and acknowledgement.",
+      "accountable_role": "Tax Controller",
+      "authority_refs": [
+        "INTERNAL-SOURCE"
+      ],
+      "ccf_refs": [],
+      "effective_scope": "2026-08-31",
+      "scenario": "CURRENT_SOURCE_REVIEW",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Consume finance C04 election/history/provision register; this matrix introduces no effective date, filing group or tax rate.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-CORP-FINANCE",
+      "business_unit": "corporate",
+      "legal_entities": [
+        "SHI",
+        "SHIH",
+        "PS",
+        "RWH",
+        "ARU",
+        "BST"
+      ],
+      "activity": "Debt, contributions, commitments and disclosure",
+      "sites": [
+        "Legal treasury books"
+      ],
+      "jurisdictions": [
+        "Governing agreement and taxpayer jurisdictions"
+      ],
+      "source_path": "docs/business-lines/BUSINESS_FINANCE_AND_ALEXANDRIA_INTERFACES.md",
+      "source_sha256": "64ac68cf1ce4255ef957ba5b6226e05116d2575d95fb94768ce1bf7605e40058",
+      "selector": {},
+      "population_definition": "Every material obligation/funding event and approved disclosure",
+      "population_count": null,
+      "population_units": "duty occurrence population not established",
+      "applicability": "APPLICABLE_INTERNAL_POLICY",
+      "performance": "MISSING_COMPLETE_SETTLEMENT_POPULATION",
+      "duty": "Authority, amount, period, availability, receipt and rights must reconcile; no compulsory contribution from scenario capacity; negative liquidity and unpaid obligations remain visible.",
+      "accountable_role": "CFO and Controller",
+      "authority_refs": [
+        "INTERNAL-SOURCE"
+      ],
+      "ccf_refs": [],
+      "effective_scope": "2026-08-31",
+      "scenario": "CURRENT_SOURCE_REVIEW",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Join C02/C04 adjustment and capital sources; financing receipts are not operating generation; unknown covenants or consents stay unknown.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-CORP-RETENTION",
+      "business_unit": "corporate",
+      "legal_entities": [
+        "SHI",
+        "SHIH",
+        "PS",
+        "RWH",
+        "ARU",
+        "BST"
+      ],
+      "activity": "Source, derivative, personal memory, hold and restore",
+      "sites": [
+        "Alexandria and unit repositories"
+      ],
+      "jurisdictions": [
+        "Record-class statutory/contractual and accepted policy scope"
+      ],
+      "source_path": "docs/j2/alexandria/INFORMATION_ACCESS_AND_DISCLOSURE.md",
+      "source_sha256": "d286201998a94058c9c1c16165537a9e612b6bd84cb29442d052f68da869c752",
+      "selector": {},
+      "population_definition": "Record class \u00d7 source/derivative \u00d7 disclosure/hold state",
+      "population_count": null,
+      "population_units": "duty occurrence population not established",
+      "applicability": "APPLICABLE_INTERNAL_POLICY",
+      "performance": "PARTIALLY_EXERCISED_REFERENCE_ONLY",
+      "duty": "Determine justified record-class retention, hold/disposal and derivative revocation; held bytes stay protected after restore; no default personal-memory sharing or model self-promotion.",
+      "accountable_role": "Information steward and legal hold owner",
+      "authority_refs": [
+        "INTERNAL-SOURCE"
+      ],
+      "ccf_refs": [],
+      "effective_scope": "2026-08-31",
+      "scenario": "CURRENT_SOURCE_REVIEW",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Use C06/C09 reference tests and existing portal evidence; unresolved retention periods and real deployment remain separate gates.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-RENO-ACTIVATION",
+      "business_unit": "corporate",
+      "legal_entities": [
+        "SHI"
+      ],
+      "activity": "Planned provider contracting, security and restore obligations",
+      "sites": [
+        "Reno selected colocation"
+      ],
+      "jurisdictions": [
+        "Nevada"
+      ],
+      "source_path": "enterprise/services/source/runtime_sites_2026-09-11.json",
+      "source_sha256": "fa216f629762503865fd9f1a3207e87691cd484cec9885bf25ce045b4525519c",
+      "selector": {
+        "site_id": "RUNTIME-RENO-COLO"
+      },
+      "population_definition": "One selected site; zero executed contracts and zero operating activations in this source",
+      "population_count": 1,
+      "population_units": "declared source records",
+      "applicability": "PLANNED_NOT_ACTIVATED",
+      "performance": "NO_OCCURRENCE_IN_DECLARED_SOURCE",
+      "duty": "Before activation reconcile legal provider, contract/security/SLA obligations, capacity reservation, access, backup/restore and acceptance. Provider public claim is not company performance evidence.",
+      "accountable_role": "Runtime procurement and accountable system owner",
+      "authority_refs": [
+        "INTERNAL-SOURCE"
+      ],
+      "ccf_refs": [],
+      "effective_scope": "2026-08-31",
+      "scenario": "CURRENT_SOURCE_REVIEW",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Preserve selected-provider design and thirteen external evidence gates; no site operation or contract obligation inferred from provider selection.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-BOISE-ACTIVATION",
+      "business_unit": "corporate",
+      "legal_entities": [
+        "SHI"
+      ],
+      "activity": "Planned provider contracting, security and restore obligations",
+      "sites": [
+        "Boise selected colocation"
+      ],
+      "jurisdictions": [
+        "Idaho"
+      ],
+      "source_path": "enterprise/services/source/runtime_sites_2026-09-11.json",
+      "source_sha256": "fa216f629762503865fd9f1a3207e87691cd484cec9885bf25ce045b4525519c",
+      "selector": {
+        "site_id": "RUNTIME-BOISE-DR"
+      },
+      "population_definition": "One selected site; zero executed contracts and zero operating activations in this source",
+      "population_count": 1,
+      "population_units": "declared source records",
+      "applicability": "PLANNED_NOT_ACTIVATED",
+      "performance": "NO_OCCURRENCE_IN_DECLARED_SOURCE",
+      "duty": "Before activation reconcile legal provider, contract/security/SLA obligations, capacity reservation, access, backup/restore and acceptance. Provider public claim is not company performance evidence.",
+      "accountable_role": "Runtime procurement and accountable system owner",
+      "authority_refs": [
+        "INTERNAL-SOURCE"
+      ],
+      "ccf_refs": [],
+      "effective_scope": "2026-08-31",
+      "scenario": "CURRENT_SOURCE_REVIEW",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Preserve selected-provider design and thirteen external evidence gates; no site operation or contract obligation inferred from provider selection.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    },
+    {
+      "id": "APP-OWNED-SITE-ACTIVATION",
+      "business_unit": "corporate",
+      "legal_entities": [
+        "SHI"
+      ],
+      "activity": "Future owned runtime facility construction/commissioning",
+      "sites": [
+        "Owned campus concept"
+      ],
+      "jurisdictions": [
+        "Site-specific construction/environment/workplace scope"
+      ],
+      "source_path": "enterprise/services/source/runtime_sites_2026-09-11.json",
+      "source_sha256": "fa216f629762503865fd9f1a3207e87691cd484cec9885bf25ce045b4525519c",
+      "selector": {
+        "site_id": "RUNTIME-NN-OWNED-DC"
+      },
+      "population_definition": "One future-owned-facility source; zero operating activations in this source",
+      "population_count": 1,
+      "population_units": "duty occurrence population not established",
+      "applicability": "PLANNED_NOT_ACTIVATED",
+      "performance": "NO_OCCURRENCE_IN_DECLARED_SOURCE",
+      "duty": "No operating-estate claim before permitting, construction, qualification and acceptance; planned staff and capacity are not occupied workplaces or funds.",
+      "accountable_role": "Runtime facilities owner",
+      "authority_refs": [
+        "INTERNAL-SOURCE"
+      ],
+      "ccf_refs": [],
+      "effective_scope": "2026-08-31",
+      "scenario": "CURRENT_SOURCE_REVIEW",
+      "timezone": "UTC",
+      "available_on": "2026-09-15",
+      "due_date": null,
+      "due_basis": "OCCURRENCE_OR_STATUTORY_DATE_NOT_ESTABLISHED",
+      "next_action": "Use existing readiness design and actual site evidence when available; no new universal framework or automatic facility purchase.",
+      "exception": "Source review is not professional compliance certification; per-record performance and legal scope remain distinct."
+    }
+  ],
+  "primary_authority_reviews": [
+    {
+      "id": "PAYROLL-IRS-20260915",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/employment-tax-due-dates",
+      "version": "IRS employer reporting/deposit guidance, accessed 2026-09-15",
+      "accessed_on": "2026-09-15",
+      "sha256": "6b1cfe6d72dcb39fb72dbc396c57c30387a24987c0158ae34e5b89adf3074213",
+      "reviewed_conclusion": "Employers report wage taxes; RRTA compensation uses CT-1. Deposit deadlines differ from return deadlines and depend on lookback and liability. No filing-state inference.",
+      "limit": "Dynamic agency primary guidance; exact annual forms and selected employer facts still control."
+    },
+    {
+      "id": "CCPA-2026-REG",
+      "url": "https://cppa.ca.gov/regulations/pdf/ccpa_statute_eff_20260101.pdf",
+      "version": "11 CCR CCPA regulations effective 2026-01-01, \u00a7\u00a77000,7050-7053; phased articles retain own timing",
+      "accessed_on": "2026-09-15",
+      "sha256": "8d57eba97a7fe13346b7827d0131e1ab84dc110c6ff20daa6fa6ec4a4329d0fe",
+      "reviewed_conclusion": "The downloaded file is regulations despite its filename. Processing roles, scope, contracting and phased risk/audit/ADMT duties need activity-specific application.",
+      "limit": "No CCPA business threshold, cybersecurity audit or ADMT applicability conclusion made for SH."
+    },
+    {
+      "id": "CCPA-THRESHOLD-2025",
+      "url": "https://cppa.ca.gov/regulations/cpi_adjustment.html",
+      "version": "CPPA CPI monetary adjustments effective 2025-01-01, posted 2024-12-17",
+      "accessed_on": "2026-09-15",
+      "sha256": "ea9fd8d88b36a88370b236b4271d13b122bc55289520da7a050d3b7d656c6d5f",
+      "reviewed_conclusion": "Agency lists the adjusted gross annual revenue threshold as $26625000. Prior-calendar-year revenue and other business-definition conditions are not substituted with 2027 forecast income.",
+      "limit": "Other alternative thresholds and controlled-entity scope require fact review; this is not a safe-harbor determination."
+    },
+    {
+      "id": "FLSA-2025-516",
+      "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title29-vol3/pdf/CFR-2025-title29-vol3-part516.pdf",
+      "version": "29 CFR Part 516, 2025 annual edition, \u00a7\u00a7516.2-516.6 and exemption-specific Subpart B",
+      "accessed_on": "2026-09-15",
+      "sha256": "c4eb4bf43bd942b14e16ed33411c0324ce5bd529c972d3ddb3d285fafe1130b2",
+      "reviewed_conclusion": "Read record fields and distinct retention categories for wages/hours and supporting records; exemption-specific rules remain separate.",
+      "limit": "DOL fact sheet browser access was 403 twice; GovInfo primary text retrieved instead. Event-year amendments and employment exemptions still need review."
+    },
+    {
+      "id": "HIPAA-HHS-20260915",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/covered-entities/index.html",
+      "version": "Agency covered-entities/business-associates guidance accessed 2026-09-15",
+      "accessed_on": "2026-09-15",
+      "sha256": null,
+      "source_state": "BROWSER_PRIMARY_PAGE_READ_DIRECT_DOWNLOAD_FORBIDDEN",
+      "reviewed_conclusion": "Covered-entity/business-associate activity and PHI facts determine HIPAA boundary; do not apply by a software or employer name.",
+      "limit": "No SH covered-entity or business-associate status determination; exact regulatory provision review required before executable HIPAA conclusion."
+    }
+  ],
+  "required_boundary_ids": [
+    "APP-FF-DELIVERY",
+    "APP-FF-TAX",
+    "APP-ATL-LICENSE",
+    "APP-ADV-MATTER",
+    "APP-ATL-EVALUATION",
+    "APP-ADV-REGULATED",
+    "APP-WIL-RESEARCH",
+    "APP-WIL-WORKPLACE",
+    "APP-CRD-HOST",
+    "APP-CRD-ENV",
+    "APP-PS-PERMITS",
+    "APP-ARU-RAIL",
+    "APP-ARU-WAREHOUSE",
+    "APP-FOUNDRY-FIELD-ACCESS",
+    "APP-ATLAS-MERIDIAN-ACCESS",
+    "APP-ADVISORY-ACCESS",
+    "APP-WILLOW-ACCESS",
+    "APP-PROJECT-CRADLE-ACCESS",
+    "APP-PALE-SUN-ACCESS",
+    "APP-AMERICAN-RESOURCE-UTILITY-ACCESS",
+    "APP-CORP-PRIVACY",
+    "APP-CORP-HIPAA",
+    "APP-CORP-PAYROLL",
+    "APP-CORP-WAGE-RECORDS",
+    "APP-CORP-TAX",
+    "APP-CORP-FINANCE",
+    "APP-CORP-RETENTION",
+    "APP-RENO-ACTIVATION",
+    "APP-BOISE-ACTIVATION",
+    "APP-OWNED-SITE-ACTIVATION"
+  ],
+  "cross_references": {
+    "permit_and_rail": "obligation_census.json",
+    "performed_sample": "permit_condition_performance.json",
+    "workplace_sample": "workplace_examinations.json",
+    "integration": "README.md"
+  }
+}

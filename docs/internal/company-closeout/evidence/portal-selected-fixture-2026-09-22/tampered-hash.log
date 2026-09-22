@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/tmp/sh-portal-edition-review/tools/company_closeout/portal_engagement.py", line 182, in <module>
+    result = run(plan)
+             ^^^^^^^^^
+  File "/tmp/sh-portal-edition-review/tools/company_closeout/portal_engagement.py", line 70, in run
+    raise ValueError("Retained source bytes differ from edition transport")
+ValueError: Retained source bytes differ from edition transport

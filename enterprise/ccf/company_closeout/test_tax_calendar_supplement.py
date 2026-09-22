@@ -1,0 +1,66 @@
+import json
+from datetime import date
+from decimal import Decimal as D
+
+import pytest
+
+from .tax_calendar_supplement import SOURCE, build, business_day, history
+
+
+def test_history_source_totals():
+    rows, bridge = history()
+    assert len(rows) == 24
+    assert sum(D(r['sales_usd']) for r in rows) == D('12600000')
+    assert sum(D(r['receipts_usd']) for r in rows) == D('8600000')
+    assert sum(D(r['closing_ar_usd']) for r in rows if r['month'] == 12) == D('4000000')
+    assert bridge['utility_accrued_rot_usd'] == '646624.38'
+    assert bridge['utility_receipt_rot_usd'] == '441346.80'
+    assert bridge['accelerated_threshold_exceeded']
+    assert bridge['total_h2_cash_collections_usd'] == '12600000'
+    assert bridge['acquired_ar_new_revenue_usd'] == '0'
+    assert all(r['accrued_rot_usd'] is None for r in rows if not r['utility_own_use'])
+
+
+@pytest.mark.parametrize('change', ['duplicate', 'sales', 'receipts'])
+def test_history_population_rejected(change):
+    source = json.loads(SOURCE.read_text())
+    if change == 'duplicate':
+        source['historical_months'][0] = source['historical_months'][1]
+    else:
+        source['historical_months'][0][change + '_usd'] = '1'
+    with pytest.raises(ValueError):
+        history(source)
+
+
+def test_calendar_dates_and_performance():
+    rows = build()['calendar']
+    assert len(rows) == 427 and len({r['calendar_id'] for r in rows}) == 427
+    august = next(r for r in rows if r['form'] == 'ST-1' and r['tax_year'] == 2026 and r['month'] == 8)
+    assert august['ordinary_due_on'] == '2026-09-21'
+    assert august['due_state'] == 'FUTURE_DUE'
+    assert august['performance_state'] == 'NOT_SUBMITTED_UNPAID'
+    assert all(r['payment_cash_posted_usd'] == '0' for r in rows)
+    assert not any(r['entity'] == 'RWH' and r['form'].startswith('IL-1120') for r in rows)
+    assert business_day(date(2026, 9, 7)) == date(2026, 9, 8)
+
+
+def test_registration_after_actual_mine_closing():
+    source = json.loads(SOURCE.read_text())
+    assert source["accounts"][0]["registration_effective"] == "2025-07-19"
+    assert source["corrected_at"] == "2026-09-22T06:14:19Z"
+
+
+@pytest.mark.parametrize("fault", ["opening", "collections", "period", "negative", "month"])
+def test_acquired_ar_bridge_rejects_changed_facts(fault):
+    source = json.loads(SOURCE.read_text())
+    acquired = source["acquired_receivables"]
+    if fault in {"opening", "collections"}:
+        acquired[{"opening": "opening_acquired_ar_usd", "collections": "collections_usd"}[fault]] = "4000001"
+    elif fault == "period":
+        acquired["collection_period"] = "2025-07-07/2025-12-31"
+    elif fault == "negative":
+        acquired["monthly_allocation_usd"].update({"7": "-1", "8": "1000001"})
+    else:
+        acquired["monthly_allocation_usd"]["6"] = acquired["monthly_allocation_usd"].pop("7")
+    with pytest.raises(ValueError, match="Acquired"):
+        history(source)
