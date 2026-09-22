@@ -193,6 +193,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Local non-human credential lifecycle](../../../enterprise/audit_suite/NONHUMAN_IDENTITY_ACTIVITY.md) — MD
 - [Personal saved views](../../../enterprise/audit_suite/PERSONAL_VIEWS.md) — MD
 - [Protected portfolio source snapshots](../../../enterprise/audit_suite/PORTFOLIO_EXPLANATION.md) — MD
+- [Local privileged-session runtime](../../../enterprise/audit_suite/PRIVILEGED_RUNTIME.md) — MD
 - [Procedure trace metadata readiness](../../../enterprise/audit_suite/PROCEDURE_TRACE_READINESS.md) — MD
 - [Explicit local recovery-period runner](../../../enterprise/audit_suite/RECOVERY_PERIOD_RUNNER.md) — MD
 - [Repository documentary sync](../../../enterprise/audit_suite/REPOSITORY_DOCUMENT_SYNC.md) — MD

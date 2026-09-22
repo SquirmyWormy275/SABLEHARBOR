@@ -6,7 +6,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 153 |
+| COUNTERPART_REVIEW_REQUIRED | 154 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 106 |
@@ -143,6 +143,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Local non-human credential lifecycle](../../../enterprise/audit_suite/NONHUMAN_IDENTITY_ACTIVITY.md) — Corporate document-format reconciliation
 - [Personal saved views](../../../enterprise/audit_suite/PERSONAL_VIEWS.md) — Corporate document-format reconciliation
 - [Protected portfolio source snapshots](../../../enterprise/audit_suite/PORTFOLIO_EXPLANATION.md) — Corporate document-format reconciliation
+- [Local privileged-session runtime](../../../enterprise/audit_suite/PRIVILEGED_RUNTIME.md) — Corporate document-format reconciliation
 - [Procedure trace metadata readiness](../../../enterprise/audit_suite/PROCEDURE_TRACE_READINESS.md) — Corporate document-format reconciliation
 - [Explicit local recovery-period runner](../../../enterprise/audit_suite/RECOVERY_PERIOD_RUNNER.md) — Corporate document-format reconciliation
 - [Repository documentary sync](../../../enterprise/audit_suite/REPOSITORY_DOCUMENT_SYNC.md) — Corporate document-format reconciliation
