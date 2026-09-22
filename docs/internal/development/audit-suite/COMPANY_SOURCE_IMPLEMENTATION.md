@@ -1222,3 +1222,43 @@ reconciliation separately retains 52 ledger slots and eight other native schedul
 slots, including missing, late and unallocated observations. None establishes
 continuous annual operation. Further conditional-duty examinations and the private
 acceptance index remain in progress; unperformed work is not silently waived.
+
+### Documentary design and recovery duties
+
+Eight policy-design examinations now retain exact comparisons for policy delivery,
+assurance scope, record timestamps and raw/derived record separation. They remain
+IN_PROGRESS/LIMITATION where the examination covered policies but not the other
+required sources. The work credits the existing dated scope and effective-date
+provisions without inventing a prescribed registry schema or physical separation
+requirement.
+
+Eight recovery conditional-duty examinations separately reconcile exact declared
+backup and restore occurrences, monitor results, tickets, source datasets and
+retained object bytes. They preserve missing jobs, failed attempts, late versions
+and changed-checkpoint comparisons. Calculated data age starts from the underlying
+source dataset event; recorded copy duration is not an independent timing test.
+The conclusions remain IN_PROGRESS/LIMITATION because broader site recovery,
+application usability and accepted recovery objectives were not established.
+
+Both batches used ordinary attributed commands with exact replay and independent
+verification of event history, prior workpapers, retained artifacts and company
+source preservation. Neither batch performed new company operations or supplied
+professional acceptance. Exact receipts remain in the private execution checkpoint.
+
+Source-portfolio integration also identified a concrete capacity gap: the selected
+B source union requires 34 components. The loader now permits at most 64 while
+retaining exact routes, distinct namespaces, private paths and immutable binding
+checks. Focused tests cover 34- and 64-component routing, collection and revocation,
+rejection outside the bound, duplicate routes and changed bindings. This permits
+explicit successor portfolios; it does not rebind populated workrooms or merge
+company histories into a claimed coherent operating year.
+
+Twelve additional design examinations of privileged access, nonhuman identities,
+backup and restore design, retention and document control are now
+COMPLETE/LIMITATION. Every authored design attribute was examined against pinned
+retained sources. This credits performance of the procedure, not an adequate
+design, operating effectiveness, annual execution or a broader task. Independent
+verification checked all 24 commands, historical records and 33 source roots.
+The private successor review index records 16 completed procedures with limitations,
+63 partial procedures and 2,375 unstarted task instances across six isolated
+workrooms; those instances are not one corporate audit population.

@@ -48,7 +48,7 @@ authorize publication, deployment, a real assurance opinion or writes to Atlas.
 ## Private review index
 
 The interim local package is
-`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/acceptance-working-packet-v1/`.
+`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/acceptance-working-packet-v2/`.
 Its `INDEX.md` links the task register, unchanged queue acceptance criteria and
 hashed supporting receipts. `PROCEDURES.html` provides offline search, workroom,
 status and procedure filters, pagination and exact workpaper/sample version
@@ -61,3 +61,9 @@ independent controls. Prepared conditional-duty next actions remain distinct fro
 performed work. Later task-only revisions may reuse a historical source inventory
 only after exact artifact metadata comparison; neither inventory revisions nor
 prior audit conclusions are rewritten.
+
+The successor index preserves the earlier package and its known mutable-context
+reference drift. Scope and source-ownership references now point to immutable
+commit snapshots. Six workroom revisions and exact artifact metadata are checked
+before each package is created. Offline browser checks do not replace review of
+the procedures or owner acceptance of the audit workspace.
