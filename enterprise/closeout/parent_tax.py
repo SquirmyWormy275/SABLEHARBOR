@@ -22,7 +22,8 @@ TAX_TYPES = {
 
 
 class ParentTax:
-    def __init__(self, result, legacy, operating=None, history=None):
+    def __init__(self, result, legacy, operating=None, history=None, state_cash_paid=None):
+        state_cash_paid = state_cash_paid or {}
         self.source = json.loads(SOURCE.read_text())
         self.rows = []
         self.monthly = {}
@@ -131,15 +132,22 @@ class ParentTax:
                 ).quantize(Q)
                 ca = D(800)
                 state_reserve = ca_exposure - ca
+                settled_state_tax = D(state_cash_paid.get((scenario, "SHI", year), ca))
+                if not settled_state_tax.is_finite() or settled_state_tax < 0:
+                    raise ValueError("Invalid parent settled state income tax")
                 # ATI adds back interest; DDA already removed in this reserved deduction calculation.
                 ati = max(
-                    federal_common - ca + interest + asset["federal_depreciation"] + research_amort,
+                    federal_common
+                    - settled_state_tax
+                    + interest
+                    + asset["federal_depreciation"]
+                    + research_amort,
                     D(0),
                 )
                 limit = ati * D(".30")
                 interest_used = min(interest + interest_cf, limit)
                 interest_cf += interest - interest_used
-                fed_before = federal_common - ca + interest - interest_used
+                fed_before = federal_common - settled_state_tax + interest - interest_used
                 nol_used = min(fnol, max(fed_before, D(0)) * D(".80"))
                 fnol += max(-fed_before, D(0)) - nol_used
                 fed = ((max(fed_before, D(0)) - nol_used) * D(".21")).quantize(Q)
@@ -188,6 +196,7 @@ class ParentTax:
                     closing_california_nol_usd=str(snol),
                     federal_current_usd=str(fed),
                     california_current_usd=str(ca),
+                    federal_state_cash_deduction_usd=str(settled_state_tax),
                     california_unallocated_reserve_usd=str(state_reserve),
                     current_expense_usd=str(fed + ca + state_reserve),
                     gross_dta_usd=str(dta),

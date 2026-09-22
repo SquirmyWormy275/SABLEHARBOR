@@ -7,7 +7,7 @@ from enterprise.closeout.parent_tax import ParentTax
 from industrial.planning.enterprise import Books
 
 
-def tax():
+def tax(state_cash_paid=None):
     result = {"monthly_rows": [], "journal_rows": [], "legal_trial_balance_rows": []}
     for case in ["base", "downside", "expansion"]:
         for year in range(2026, 2032):
@@ -30,6 +30,7 @@ def tax():
     return ParentTax(
         result,
         legacy,
+        state_cash_paid=state_cash_paid,
         history=dict(
             federal_nol=D(0),
             california_nol=D(0),
@@ -128,3 +129,17 @@ def test_unpaid_transaction_tax_deduction_waits_for_payment():
     assert D(rows[2027]["unpaid_transaction_tax_addback_usd"]) == 90
     assert D(rows[2028]["unpaid_transaction_tax_addback_usd"]) == -90
     assert rows[2027]["gross_dta_usd"] == rows[2027]["valuation_allowance_usd"]
+
+
+def test_parent_federal_deduction_uses_all_settled_state_jurisdictions():
+    original = tax()
+    revised = tax({("base", "SHI", 2029): D("835.6504")})
+
+    def selected(t):
+        return next(r for r in t.rows if (r["scenario"], r["year"]) == ("base", 2029))
+
+    assert D(selected(revised)["federal_state_cash_deduction_usd"]) == D("835.6504")
+    assert D(selected(revised)["closing_federal_nol_usd"]) - D(
+        selected(original)["closing_federal_nol_usd"]
+    ) == D("35.6504")
+    assert D(selected(revised)["federal_current_usd"]) == 0

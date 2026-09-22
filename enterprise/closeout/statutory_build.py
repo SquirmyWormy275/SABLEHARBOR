@@ -53,7 +53,7 @@ def build(output, fin, op, legacy, operating, policy, adjustment):
         adjustment.future_industrial_tax = FutureIndustrialTax(seed)
         adjustment.rwh_book = RwhBook(seed, fin, anchor)
         before = books()
-        parent = ParentTax(before, legacy, operating)
+        parent = ParentTax(before, legacy, operating, state_cash_paid=state_paid)
         assets = assets_build(fin)
         mine = mine_build(before, adjustment.rwh_book, assets, fin, interest_deductions)
         aru = aru_build(before["journal_rows"], fin)
@@ -104,7 +104,7 @@ def build(output, fin, op, legacy, operating, policy, adjustment):
             adjustment.statutory_tax = posting
             successor = books()
             for row in posting.payment_rows:
-                if row["jurisdiction"] != "US" and row["taxpayer"] != "SHI":
+                if row["jurisdiction"] != "US":
                     next_state_paid[row["scenario"], row["taxpayer"], row["year"]] += D(
                         row["paid_usd"]
                     )
