@@ -191,7 +191,7 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `docs/finance/evidence/company-closeout`
 
 - [Company closeout accounting basis](../../finance/evidence/company-closeout/ACCOUNTING_BASIS_SUCCESSOR.md) — MD
-- [Adopted parent corporate-tax history and provision](../../finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md) — MD · [formatted PDF](../../finance/publications/SH-COMPANY-PARENT-TAX-20260915_v1.0.0.pdf)
+- [Adopted corporate history and statutory provision successor](../../finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md) — MD · [formatted PDF](../../finance/publications/SH-COMPANY-PARENT-TAX-20260915_v2.0.0.pdf)
 - [ARU/BST annual tax-base bridge](../../finance/evidence/company-closeout/ARU_BOOK_TO_TAX_METHOD.md) — MD
 - [Authored 2016–2022 tax and cash reconstruction](../../finance/evidence/company-closeout/HISTORICAL_TAX_RECONSTRUCTION.md) — MD
 - [Illinois loss-limit authority update](../../finance/evidence/company-closeout/ILLINOIS_NOL_2026_SUCCESSOR.md) — MD
@@ -253,7 +253,8 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Current business-unit evidence export contract — SH-AUDIT-UNIT-EXPORT-001_v1.0.0](../../finance/publications/SH-AUDIT-UNIT-EXPORT-001_v1.0.0.pdf) — PDF
 - [Company edition inspection and reproduction — SH-COMPANY-INSPECTION-20260915_v1.0.0](../../finance/publications/SH-COMPANY-INSPECTION-20260915_v1.0.0.pdf) — PDF
-- [Adopted parent corporate-tax history and provision — SH-COMPANY-PARENT-TAX-20260915_v1.0.0](../../finance/publications/SH-COMPANY-PARENT-TAX-20260915_v1.0.0.pdf) — PDF
+- [SH-COMPANY-PARENT-TAX-20260915 v1.0.0](../../finance/publications/SH-COMPANY-PARENT-TAX-20260915_v1.0.0.pdf) — PDF
+- [Adopted corporate history and statutory provision successor — SH-COMPANY-PARENT-TAX-20260915_v2.0.0](../../finance/publications/SH-COMPANY-PARENT-TAX-20260915_v2.0.0.pdf) — PDF
 - [Continuing sovereignty reporting — SH-COMPANY-SOVEREIGNTY-20260915_v1.0.0](../../finance/publications/SH-COMPANY-SOVEREIGNTY-20260915_v1.0.0.pdf) — PDF
 - [Business-driven enterprise financial model — SH-FIN-BUSINESS-001_v1.0.0](../../finance/publications/SH-FIN-BUSINESS-001_v1.0.0.pdf) — PDF
 

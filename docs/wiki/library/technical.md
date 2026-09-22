@@ -72,14 +72,21 @@ Generated file inventory. Includes current and historical records; open the sour
 
 ## `docs/internal/company-closeout`
 
+- [Independent capital export and selected-review route](../../internal/company-closeout/CAPITAL_EXPORT_REVIEW_2026-09-22.md) — MD
 - [Exact historical capitalization — reviewable authoring proposal](../../internal/company-closeout/CAPITAL_HISTORY_PROPOSAL.md) — MD
 - [Debt and selected host evidence — August 2026](../../internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md) — MD
 - [Current acquisition escrow and holdback register](../../internal/company-closeout/ESCROW_DISPOSITIONS.md) — MD
 - [Founder admission and monetary opening](../../internal/company-closeout/FOUNDER_ADMISSION_BASIS.md) — MD
+- [Industrial opening capital: authored 2025 contribution history](../../internal/company-closeout/INDUSTRIAL_CAPITAL_HISTORY_2026-09-22.md) — MD
 - [Company edition inspection and reproduction](../../internal/company-closeout/INSPECTION_GUIDE.md) — MD · [formatted PDF](../../finance/publications/SH-COMPANY-INSPECTION-20260915_v1.0.0.pdf)
 - [Main source protection](../../internal/company-closeout/MAIN_PROTECTION.md) — MD
 - [Company edition to existing audit portal](../../internal/company-closeout/PORTAL_CONTRACT.md) — MD
+- [Selected-edition portal review rehearsal](../../internal/company-closeout/PORTAL_SELECTED_REVIEW.md) — MD
 - [PR #145 integration evidence](../../internal/company-closeout/PR145_INTEGRATION.md) — MD
+
+## `docs/internal/company-closeout/evidence/portal-neutral-2026-09-22`
+
+- [Portal neutral software reperformance — September 22, 2026 UTC](../../internal/company-closeout/evidence/portal-neutral-2026-09-22/README.md) — MD
 
 ## `docs/internal/company-closeout/validation`
 
@@ -132,6 +139,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Business-driven finance releases](../../releases/BUSINESS_FINANCE_RELEASES.md) — MD
 - [Business operations releases](../../releases/BUSINESS_OPERATIONS_RELEASES.md) — MD
 - [Closeout evidence releases](../../releases/CLOSEOUT_EVIDENCE_RELEASES.md) — MD
+- [Company edition releases](../../releases/COMPANY_EDITION_RELEASES.md) — MD
 - [Facility atlas controlled releases](../../releases/FACILITY_ATLAS_RELEASES.md) — MD
 - [Facility spatial releases](../../releases/FACILITY_SPATIAL_RELEASES.md) — MD
 - [Facility planning workbench releases](../../releases/FACILITY_WORKBENCH_RELEASES.md) — MD
