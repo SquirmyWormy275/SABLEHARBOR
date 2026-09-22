@@ -103,7 +103,8 @@
         "enterprise/closeout/finance.py",
         "docs/finance/evidence/company-closeout/README.md",
         "docs/internal/company-closeout/evidence/integration-f5e919e7/receipt.json",
-        "docs/releases/COMPANY_EDITION_RELEASES.md"
+        "docs/releases/COMPANY_EDITION_RELEASES.md",
+        "docs/finance/evidence/company-closeout/STATUTORY_REPERFORMANCE_2026-09-22.md"
       ],
       "commands_results": [
         {
@@ -253,7 +254,8 @@
         "enterprise/closeout/statutory_reconciliation.py",
         "enterprise/closeout/capital_export.py",
         "docs/internal/company-closeout/evidence/integration-f5e919e7/receipt.json",
-        "docs/releases/COMPANY_EDITION_RELEASES.md"
+        "docs/releases/COMPANY_EDITION_RELEASES.md",
+        "docs/finance/evidence/company-closeout/STATUTORY_REPERFORMANCE_2026-09-22.md"
       ],
       "commands_results": [
         {
@@ -959,6 +961,26 @@
       "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
     },
     {
+      "path": "enterprise/ccf/company_closeout/activity_applicability.json",
+      "sha256": "c0e8f9fb788b843deea99e7311c61c2456f6a5ff7062eebee0cd50f66ea4c70e",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/aru_transaction_costs.json",
+      "sha256": "a267c7350c4f11a0d4c6f3210c4e4ee3bc351ac31beda3a5a060c65da35a6eaf",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/august_admin_completion.json",
+      "sha256": "82542d6cd123321bf2140ea6fe9753d19ca3eb0264a8ca8caf17dd210d615410",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/benefit_admin_completion.json",
+      "sha256": "01fc00989928e72a3c506367d48992526c816fb1e70a74786b635a9f43962421",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
       "path": "enterprise/ccf/company_closeout/current_activity_successor.json",
       "sha256": "367d2807bf96dfdc21aa8353e2b7e2a6709bc5ed08a5be7af06acf1c12c2a696",
       "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
@@ -969,9 +991,24 @@
       "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
     },
     {
+      "path": "enterprise/ccf/company_closeout/obligation_census.json",
+      "sha256": "4f3ea9b9d7269d15ae1c8086af28691e65130c17ba346a857f117120183146ac",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/permit_condition_performance.json",
+      "sha256": "ec4469c516bcc1535d37faed2fc02053fa2a0d7b60cb9371bf2a16e90c58acff",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
       "path": "enterprise/ccf/company_closeout/rail_reporting_successor.json",
       "sha256": "0f0efca0d6dc30863de043a601c09d18586568cea894b46082fd32ad5de5d725",
       "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/risk_mapping_supplement.json",
+      "sha256": "efce86cca05175dec9a5a4c64950408cf85679393a8f1ac8cd4ad0f63afb99af",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
     },
     {
       "path": "enterprise/ccf/company_closeout/rot_penalty_workpaper.py",
@@ -984,9 +1021,29 @@
       "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
     },
     {
+      "path": "enterprise/ccf/company_closeout/september_shipment_qualification.json",
+      "sha256": "e551d0bc39661236b42f5623115ae3bc35ee7cfacda596b48bc1dbf9beaff14c",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/state_unitary_facts.json",
+      "sha256": "aefd568f9b7609fd7bfba926fc87f12db5c52bc0ee3d09fa73fb8a750b338ea2",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
       "path": "enterprise/ccf/company_closeout/synthetic_permit_instruments_august.json",
       "sha256": "bbe61244e531b7a419a82fb6bb4317d3b1a9ca540a6781aba8e6424c7b087d51",
       "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/tax_calendar_supplement.json",
+      "sha256": "2776cb19a85fdf0a48db0c017139b4b9f05ab1c9202b36c8329ffb50edc66f54",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/workplace_examinations.json",
+      "sha256": "d9fb3896294d6aa769211ada3d5d3299b44ef56622e38f55271b60a9bd04581a",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
     },
     {
       "path": "enterprise/closeout/capital_export.py",
@@ -1014,14 +1071,69 @@
       "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
     },
     {
+      "path": "enterprise/closeout/source/adjustments.json",
+      "sha256": "a4c179284bcdaa5ce5a4d8b365b16860a479cd93fae2bfbb82060060d0660d5a",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/closeout/source/california_qualifications.json",
+      "sha256": "efa11289c544cd3cb3e2d8f4cc0e0c3381d766c7ffa40d364e74a02cf8b36ccd",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
       "path": "enterprise/closeout/source/capital_register.json",
       "sha256": "8993b8e1457571d2ee937bef370f0cd26957e1e95945a85083544f547b08a15c",
       "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
     },
     {
+      "path": "enterprise/closeout/source/escrow_register.json",
+      "sha256": "4e626802499cdf7702cbd4bbfa2851a55baa0ec24b8b06e82941fe8642538a13",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/closeout/source/industrial_tax_cohorts.json",
+      "sha256": "1d1c1e32600eae77a38deb2722eb68a9c6002bd80954ddc86f3d9e7cd07c360f",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/closeout/source/industrial_tax_future.json",
+      "sha256": "3a32618a9e32076cf4d04992db6d562ad6536769fcf4c32dd6421724d13bae85",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/closeout/source/mine_support_allocation.json",
+      "sha256": "27604974c0d8d89286f3ad6a7d41704e1d0b9c76dc43198cc2ec3e5c2f5289e3",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/closeout/source/mine_tax_logistics.json",
+      "sha256": "7f03ca5585d20dbdafb8323fe6cbea195143ff91237570258563420d605d1146",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/closeout/source/parent_tax.json",
+      "sha256": "d63924c52367dda229758aec676629f5aa6dc9ca9ab9b394d372556345a90da2",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
       "path": "enterprise/closeout/source/receipt_markets.json",
       "sha256": "1cc39ab42298a64914da366c039e48cc85cd3b3f4c597ad6f1ad380640823e08",
       "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/closeout/source/rwh_tax_history.json",
+      "sha256": "3587f1cf9bab2e5790e20ae382be88e91546200c9b4f2019ebbad6c884e12d03",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/closeout/source/software_sales_tax.json",
+      "sha256": "2bb7a00ec0692916f6c4733507537afde7134af24d117061f2a07ac119deaaaf",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/closeout/source/state_apportionment.json",
+      "sha256": "32b3cc6b40e73467fc314ef5d98f118c3cc4fca053187c2d3ad9b10a2de25274",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
     },
     {
       "path": "enterprise/closeout/source/statutory_policy.json",
@@ -1069,9 +1181,29 @@
       "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
     },
     {
+      "path": "enterprise/operations/source/current_legal_completion_2026_08.json",
+      "sha256": "3039044f8bfeb9328c107bf198a8789cf702a84516cc77f4807a740272b70f01",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/operations/source/debt_host_2026_08.json",
+      "sha256": "644d8e442888082dcf2ad8fc0f1fb27d0458f9548150de203c404fdad2420bf0",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
       "path": "enterprise/operations/source/lane_receipt_2026_09_15.json",
       "sha256": "bc27f4a631154e975f58ce246ed0070b5d3c3addd9675e9de6d262768901dfc0",
       "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/operations/source/production_support_2026_08.json",
+      "sha256": "90642b883f00910db83604d40d25845b4225d2424956aac0c37687f68b256d11",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/operations/source/retention_payroll_2026.json",
+      "sha256": "21ab87590fbac1e7e51c7ec472257e6ba0cd95db38cd111ac77fad01e683c3f0",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
     },
     {
       "path": "enterprise/operations/source/september_custody_2026.json",

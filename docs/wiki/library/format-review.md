@@ -6,7 +6,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 143 |
+| COUNTERPART_REVIEW_REQUIRED | 144 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 107 |
@@ -41,6 +41,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Industrial native income-tax settlement adapter](../../finance/evidence/company-closeout/INDUSTRIAL_TAX_SETTLEMENT.md) — SH-FIN-HUMAN-001
 - [RWH Illinois transaction-tax composition](../../finance/evidence/company-closeout/RWH_TRANSACTION_TAX.md) — SH-FIN-HUMAN-001
 - [Prospective software sales-tax population](../../finance/evidence/company-closeout/SOFTWARE_SALES_TAX.md) — SH-FIN-HUMAN-001
+- [Statutory financial reperformance receipt](../../finance/evidence/company-closeout/STATUTORY_REPERFORMANCE_2026-09-22.md) — SH-FIN-HUMAN-001
 - [Entity filing calendar and performance boundary](../../finance/evidence/company-closeout/TAX_FILING_CALENDAR.md) — SH-FIN-HUMAN-001
 - [Parent tax history and filing boundaries](../../finance/evidence/company-closeout/TAX_HISTORY.md) — SH-FIN-HUMAN-001
 - [Treasury timing, debt/security and investor reading route](../../finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md) — SH-FIN-HUMAN-001

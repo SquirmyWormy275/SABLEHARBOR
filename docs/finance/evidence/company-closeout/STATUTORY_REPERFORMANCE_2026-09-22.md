@@ -1,7 +1,7 @@
 # Statutory financial reperformance receipt
 
-**Prepared:** September 22, 2026 UTC  
-**Reviewed source:** `de542b83cbcb96d447b5b608faf88fea95a75bc3`  
+**Prepared:** September 22, 2026 UTC
+**Reviewed source:** `de542b83cbcb96d447b5b608faf88fea95a75bc3`
 **Scope:** Clean company-closeout acceptance candidate; this receipt does not itself establish repository acceptance or an external filing.
 
 ## Results

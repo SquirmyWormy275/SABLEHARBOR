@@ -200,6 +200,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [RWH Illinois transaction-tax composition](../../finance/evidence/company-closeout/RWH_TRANSACTION_TAX.md) — MD
 - [Prospective software sales-tax population](../../finance/evidence/company-closeout/SOFTWARE_SALES_TAX.md) — MD
 - [Continuing sovereignty reporting](../../finance/evidence/company-closeout/SOVEREIGNTY_METHOD.md) — MD · [formatted PDF](../../finance/publications/SH-COMPANY-SOVEREIGNTY-20260915_v1.0.0.pdf)
+- [Statutory financial reperformance receipt](../../finance/evidence/company-closeout/STATUTORY_REPERFORMANCE_2026-09-22.md) — MD
 - [Entity filing calendar and performance boundary](../../finance/evidence/company-closeout/TAX_FILING_CALENDAR.md) — MD
 - [Parent tax history and filing boundaries](../../finance/evidence/company-closeout/TAX_HISTORY.md) — MD
 - [Treasury timing, debt/security and investor reading route](../../finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md) — MD

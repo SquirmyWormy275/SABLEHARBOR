@@ -13,8 +13,8 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # Company closeout public-source catalog successor; original artifacts remain preserved.
     # Exact bytes only: no general allowance for new databases or later drift.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        12015616,
-        "adf4abfeaa67c874d6d35927cc487e6b1633b65100e0345b84b191b1ecc639c7",
+        12023808,
+        "640215a64160cbf2991a664f2650174dcdd46e23438eb017806721d94c43da6d",
     ),
     # Reviewed September 10 successor: six approved J2 names, unchanged public scope.
     Path("docs/organization/assets/current/Sable-Harbor-Organization-Charts.pdf"): (
