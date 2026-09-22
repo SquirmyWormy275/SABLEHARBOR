@@ -32,6 +32,108 @@ def federal_valuation(nol, interest, pool):
     return dta, dtl, dta - realized, realized
 
 
+def opening(parent, mine, assets, current, history, historical_rot):
+    """Pre-2026 SHI/PS differences only; ARU enters on its acquisition date."""
+    rows = []
+    parent_book = D(9000000) * (D(1) - D(3) / 7)
+    parent_us = D(9000000) - D(7200000) - D(1800000) / 7 * D("2.5")
+    parent_il = D(9000000) - D(9000000) / 7 * D("2.5")
+    h = history["source"]
+    rw_book = D(50000000) - D(history["book_dda_usd"])
+    rw_book_inventory = D(6312500) + D(history["book_inventory_delta_usd"])
+    mineral = D(history["rows"][0]["initial_mineral_basis_usd"]) - D(
+        history["rows"][0]["deduction_depletion_usd"]
+    )
+    inventory_cash = D(history["cash_inventory_usd"]) + sum(
+        D(v) for v in h["production_indirect_allocations"].values()
+    ) * D(125000) / D(h["produced_lb"])
+    for scenario in ("base", "downside", "expansion"):
+        op = next(r for r in current["historical_state_openings"] if r["scenario"] == scenario)
+        for jurisdiction in ("US", "CA", "IL", "WV"):
+            asset = assets["totals"][scenario, "PS", jurisdiction, 2025]
+            tax = asset["closing_tax_basis_usd"] + mineral + D(26000000) * D(2) / 42
+            dda_stock = (
+                asset["tax_depreciation_usd"]
+                * (D(h["owned_days"]) - D(h["whole_pool_idle_days"]))
+                / D(h["owned_days"])
+                * D(125000)
+                / D(h["produced_lb"])
+            )
+            deductible = (
+                max(inventory_cash + dda_stock - rw_book_inventory, D(0))
+                + D(16467716)
+                + D(historical_rot)
+            )
+            taxable = max(rw_book - tax, D(0))
+            parent_difference = max(
+                parent_book
+                - (
+                    {"US": parent_us, "WV": parent_us, "IL": parent_il, "CA": parent_book}[
+                        jurisdiction
+                    ]
+                ),
+                D(0),
+            )
+            if jurisdiction == "US":
+                rw_nol = D(
+                    next(
+                        r
+                        for r in mine
+                        if r["scenario"] == scenario
+                        and r["jurisdiction"] == "US"
+                        and r["year"] == 2026
+                    )["opening_2026_loss_before_state_apportionment_usd"]
+                )
+                populations = (
+                    (
+                        "SHI",
+                        (parent.opening_nol + D(12000000)) * D(".21"),
+                        parent_difference * D(".21"),
+                    ),
+                    ("PS", (rw_nol + deductible) * D(".21"), taxable * D(".21")),
+                )
+            else:
+                rate = {"CA": D(".0884"), "IL": D(".095"), "WV": D(".065")}[jurisdiction]
+                entity = "PS" if jurisdiction == "IL" else "SHI"
+                share = (
+                    D(12600000) / D(117500000)
+                    if jurisdiction == "IL"
+                    else D(104900000) / D(117500000)
+                    if jurisdiction == "CA"
+                    else D(0)
+                )
+                nol = D(
+                    op["il_ps_opening_2026_nol_usd"]
+                    if jurisdiction == "IL"
+                    else op["ca_shi_opening_2026_nol_usd"]
+                    if jurisdiction == "CA"
+                    else "0"
+                )
+                populations = (
+                    (
+                        entity,
+                        (nol + deductible * share) * rate,
+                        (taxable + parent_difference) * share * rate,
+                    ),
+                )
+            for entity, dta, dtl in populations:
+                rows.append(
+                    dict(
+                        scenario=scenario,
+                        year=2026,
+                        month=0,
+                        taxpayer=entity,
+                        jurisdiction=jurisdiction,
+                        gross_dta_usd=str(dta.quantize(Q)),
+                        valuation_allowance_usd=str(dta.quantize(Q)),
+                        gross_dtl_usd=str(dtl.quantize(Q)),
+                        net_deferred_asset_usd=str((-dtl).quantize(Q)),
+                        method="HISTORICAL_OPENING_CORRECTION;FULL_VA;NO_ACQUISITION_GOODWILL_CHANGE",
+                    )
+                )
+    return rows
+
+
 def build(result, parent, mine, assets, current, factors):
     balances = defaultdict(lambda: defaultdict(D))
     seen = set()
