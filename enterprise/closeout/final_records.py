@@ -11,6 +11,7 @@ import json
 from datetime import UTC, datetime
 
 from enterprise.ccf.company_closeout import information_policy
+from enterprise.closeout import advisory_legal, debt_administration
 from enterprise.closeout import successor_records as previous
 from enterprise.operations import completed_period, j2_personnel_completion
 from enterprise.operations.availability import apply, repository_context
@@ -96,7 +97,21 @@ def collect(context=None):
         policy_source: previous.file_hash(policy_source)
     }
 
-    def add(table, identifier, entity, unit, source, payload, pins, start, end=""):
+    def add(
+        table,
+        identifier,
+        entity,
+        unit,
+        source,
+        payload,
+        pins,
+        start,
+        end="",
+        *,
+        authored="2026-09-22T00:00:00Z",
+    ):
+        row_available = max(datetime.fromisoformat(available), datetime.fromisoformat(authored))
+        row_available = row_available.astimezone(UTC).isoformat()
         for path, value in pins.items():
             previous.require(previous.file_hash(path) == value, "Stale final source: " + path)
         # Payloads carry their own known-on guard too; callers cannot bypass the
@@ -111,9 +126,9 @@ def collect(context=None):
                 effective_from=start,
                 effective_to=end,
                 effective_precision="DAY",
-                available_at=available,
-                recorded_at=available,
-                authored_day="2026-09-22",
+                available_at=row_available,
+                recorded_at=row_available,
+                authored_day=authored[:10],
                 fact_state="NEWLY_AUTHORED_SYNTHETIC_SUCCESSOR",
                 record_origin="PUBLIC_SYNTHETIC_DIEGETIC",
                 scenario="",
@@ -187,7 +202,72 @@ def collect(context=None):
             policy_pins,
             "2026-09-22",
         )
+    _legal_tables(add, context)
     return tables
+
+
+def _legal_tables(add, context):
+    debt = debt_administration.build(context=context)
+    source = str(debt_administration.SOURCE.relative_to(ROOT))
+    authored = json.loads(debt_administration.SOURCE.read_text())["authored_at"]
+    pins = debt["source_hashes"] | {
+        "enterprise/closeout/debt_administration.py": previous.file_hash(
+            "enterprise/closeout/debt_administration.py"
+        )
+    }
+    previous.require(
+        debt["additional_cash_usd"] == debt["additional_journal_usd"] == "0.00",
+        "Legal administration cannot add monetary postings",
+    )
+    for name, rows in [
+        ("final_debt_asset_identifiers", debt["assets"]),
+        ("final_debt_fixture_sites", debt["fixture_sites"]),
+        ("final_debt_filings", debt["filings"]),
+        ("final_debt_payoff_releases", debt["payoff_releases"]),
+    ]:
+        for row in rows:
+            payload = dict(row)
+            if name == "final_debt_filings":
+                payload.update(
+                    fee_allocation=debt["fee_allocation"],
+                    fee_allocation_role="SHARED_SOURCE_COMPONENT_NOT_PER_FILING_CHARGE",
+                    priority_policy=debt["priority_policy"],
+                    search=debt["search"],
+                )
+            add(
+                name,
+                row["record_id"],
+                "ARU",
+                "american-resource-utility",
+                source,
+                payload,
+                pins,
+                "2026-09-22",
+                authored=authored,
+            )
+    carry = advisory_legal.build(context=context)
+    source = str(advisory_legal.SOURCE.relative_to(ROOT))
+    pins = carry["source_hashes"] | {
+        source: carry["source_sha256"],
+        "enterprise/closeout/advisory_legal.py": previous.file_hash(
+            "enterprise/closeout/advisory_legal.py"
+        ),
+    }
+    previous.require(
+        carry["issued_units"] == carry["participant_count"] == 0,
+        "Current sponsor census cannot create awards",
+    )
+    add(
+        "final_advisory_carry_disposition",
+        carry["document_id"],
+        "SHI",
+        "advisory",
+        source,
+        carry,
+        pins,
+        carry["effective_date"],
+        authored=carry["authored_at"],
+    )
 
 
 def validate_tables(tables, context=None):
