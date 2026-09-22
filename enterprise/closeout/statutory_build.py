@@ -84,7 +84,6 @@ def build(output, fin, op, legacy, operating, policy, adjustment):
                 "requested_cash_usd": str(sum(map(D, plan["monthly"].values()))),
             }
         )
-        print(f"Statutory cash iteration {iteration}: converged={plan == prior_plan}", flush=True)
         next_state_paid = defaultdict(D)
         if prior_plan is not None:
             adjustment.statutory_tax = posting
@@ -105,6 +104,10 @@ def build(output, fin, op, legacy, operating, policy, adjustment):
             and next_interest_deductions == interest_deductions
         )
         iterations[-1]["converged"] = converged
+        iterations[-1]["interest_deductions_stable"] = (
+            next_interest_deductions == interest_deductions
+        )
+        print(f"Statutory cash iteration {iteration}: converged={converged}", flush=True)
         iterations[-1]["settled_state_deductions_stable"] = dict(next_state_paid) == state_paid
         if converged:
             from .statutory_replay import verify as verify_statutory
