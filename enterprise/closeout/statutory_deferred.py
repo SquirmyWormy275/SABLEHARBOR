@@ -24,7 +24,11 @@ def federal_valuation(nol, interest, pool):
     rate = D(".21")
     dta = (nol + interest + pool["deductible"] + pool["reserve"]) * rate
     dtl = pool["taxable"] * rate
-    realized = min(nol * rate, pool["scheduled_taxable"] * rate * D(".8"))
+    # A closing taxable-difference stock is not a net year-by-year reversal
+    # schedule. Other deductible differences can consume the same capacity.
+    # The management basis therefore reserves NOL benefit as well until that
+    # net schedule substantiates realization; no future-profit plug is used.
+    realized = D(0)
     return dta, dtl, dta - realized, realized
 
 
@@ -164,7 +168,7 @@ def build(result, parent, mine, assets, current, factors):
                             (pool["reserve"] * rate).quantize(Q)
                         ),
                         recognized_nol_dta_usd=str(realized.quantize(Q)),
-                        method="SCHEDULED_NONLAND_DTL_80PCT_CAP;ARO_CONTINGENCY_FULL_VA;NO_FORECAST_PROFIT_SUPPORT",
+                        method="FULL_VA;NET_REVERSAL_YEAR_CAPACITY_NOT_ESTABLISHED;NO_FORECAST_PROFIT_SUPPORT;MANAGEMENT_BASIS",
                     )
                 )
             for jurisdiction, rate in (("CA", D(".0884")), ("IL", D(".095")), ("WV", D(".065"))):

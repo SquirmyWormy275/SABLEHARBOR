@@ -10,7 +10,7 @@ def test_late_aro_is_fully_reserved_despite_earlier_asset_dtl():
         taxable=D(10000000), scheduled_taxable=D(9000000), deductible=D(0), reserve=D(16000000)
     )
     dta, dtl, va, recognized = federal_valuation(D(20000000), D(0), pool)
-    assert recognized == D(9000000) * D(".21") * D(".8")
+    assert recognized == 0
     assert va >= D(16000000) * D(".21")
     assert dta - va == recognized
     assert dtl == D(2100000)
