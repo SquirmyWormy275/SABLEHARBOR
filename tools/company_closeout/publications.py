@@ -11,7 +11,7 @@ COMPANY_DOCS = [
     ("docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md", "docs/governance/publications/SH-COMPANY-DIRECTIONS-20260915_v1.2.0.pdf", "corporate"),
     ("docs/internal/company-closeout/INSPECTION_GUIDE.md", "docs/finance/publications/SH-COMPANY-INSPECTION-20260915_v1.0.0.pdf", "corporate"),
     ("docs/finance/evidence/company-closeout/SOVEREIGNTY_METHOD.md", "docs/finance/publications/SH-COMPANY-SOVEREIGNTY-20260915_v1.0.0.pdf", "corporate"),
-    ("docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md", "docs/finance/publications/SH-COMPANY-PARENT-TAX-20260915_v1.0.0.pdf", "corporate"),
+    ("docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md", "docs/finance/publications/SH-COMPANY-PARENT-TAX-20260915_v2.0.0.pdf", "corporate"),
 ]
 
 
