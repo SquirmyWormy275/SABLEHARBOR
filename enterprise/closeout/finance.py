@@ -6,6 +6,7 @@ from decimal import Decimal as D
 from pathlib import Path
 
 from enterprise.closeout.parent_tax import TAX_TYPES
+from enterprise.closeout.rot_penalties import TYPES as PENALTY_TYPES
 from enterprise.closeout.statutory_posting import TYPES as STATUTORY_TYPES
 from enterprise.runtime.finance import RuntimeAdjustment
 
@@ -62,11 +63,13 @@ class CloseoutAdjustment(RuntimeAdjustment):
         }
         | TAX_TYPES
         | STATUTORY_TYPES
+        | PENALTY_TYPES
     )
 
     def __init__(self, data=None):
         super().__init__(data)
         self.retention_tax = None
+        self.rot_penalties = None
         self.rwh_book = None
         self.parent_tax = None
         self.statutory_tax = None
@@ -121,6 +124,8 @@ class CloseoutAdjustment(RuntimeAdjustment):
             self.rwh_book.post_opening(books)
         if self.historical_rot is not None:
             self.historical_rot.post_opening(books)
+        if self.rot_penalties is not None:
+            self.rot_penalties.post_opening(books)
         if self.state_minimum is not None:
             self.state_minimum.post_opening(books)
         if self.statutory_tax is not None:
@@ -172,6 +177,8 @@ class CloseoutAdjustment(RuntimeAdjustment):
             )
         if self.software_tax is not None:
             self.software_tax.post_month(books, year, month)
+        if self.rot_penalties is not None:
+            self.rot_penalties.post_month(books, year, month)
         if self.retention_tax is not None:
             self.retention_tax.post_month(books, year, month)
         if self.rwh_book is not None:

@@ -34,6 +34,9 @@ def federal_valuation(nol, interest, pool):
 
 def opening(parent, mine, assets, current, history, historical_rot):
     """Pre-2026 SHI/PS differences only; ARU enters on its acquisition date."""
+    from enterprise.ccf.company_closeout.rot_penalty_workpaper import build as penalty_workpaper
+
+    historical_interest = D(penalty_workpaper("2025-12-31")["totals"]["interest_usd"])
     rows = []
     parent_book = D(9000000) * (D(1) - D(3) / 7)
     parent_us = D(9000000) - D(7200000) - D(1800000) / 7 * D("2.5")
@@ -90,7 +93,11 @@ def opening(parent, mine, assets, current, history, historical_rot):
                         (parent.opening_nol + D(12000000)) * D(".21"),
                         parent_difference * D(".21"),
                     ),
-                    ("PS", (rw_nol + deductible) * D(".21"), taxable * D(".21")),
+                    (
+                        "PS",
+                        (rw_nol + deductible + historical_interest) * D(".21"),
+                        taxable * D(".21"),
+                    ),
                 )
             else:
                 rate = {"CA": D(".0884"), "IL": D(".095"), "WV": D(".065")}[jurisdiction]
@@ -112,7 +119,12 @@ def opening(parent, mine, assets, current, history, historical_rot):
                 populations = (
                     (
                         entity,
-                        (nol + deductible * share) * rate,
+                        (
+                            nol
+                            + (deductible + (historical_interest if jurisdiction == "IL" else D(0)))
+                            * share
+                        )
+                        * rate,
                         (taxable + parent_difference) * share * rate,
                     ),
                 )
@@ -313,6 +325,13 @@ def build(result, parent, mine, assets, current, factors):
                         reserve = max(-b["2200"], D(0)) + max(-b["2300"], D(0))
                         inventory = D(0)
                     difference = book - tax
+                    if jurisdiction in ("IL", "WV"):
+                        interest_carry = D(
+                            pr["interest_carryforward_usd"]
+                            if entity == "SHI"
+                            else federal[scenario, entity, year]["interest_carryforward_usd"]
+                        )
+                        temporary += interest_carry
                     pools[entity] = dict(
                         taxable=max(difference, D(0)) + max(-temporary, D(0)),
                         deductible=max(-difference, D(0)) + max(temporary, D(0)),

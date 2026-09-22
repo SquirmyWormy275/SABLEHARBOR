@@ -10,7 +10,8 @@ from enterprise.closeout.rwh_history import build as history_build
 Q = D(".0001")
 
 
-def build(result, book, assets, forecast_result):
+def build(result, book, assets, forecast_result, interest_deductions=None):
+    interest_deductions = interest_deductions or {}
     history = history_build()
     s = history["source"]
     logistics = json.loads(
@@ -153,12 +154,21 @@ def build(result, book, assets, forecast_result):
                 inventory_income_adjustment = difference - previous_difference
                 native_income_tax = a["5500"] + a["5501"] + a["CO_STATE_MIN_EXP"]
                 unpaid_transaction_tax = a["CO_RWH_ROT_EXP"]
+                interest_expense = a["CO_ROT_INTEREST_EXP"]
+                interest_deducted = (
+                    interest_expense
+                    if jurisdiction == "CA"
+                    else D(interest_deductions.get((scenario, year), interest_expense))
+                )
                 common = (
                     a["_NET"]
                     + native_income_tax
                     + a["5300"]
                     + a["5600"]
                     + unpaid_transaction_tax
+                    + a["CO_ROT_PENALTY_EXP"]
+                    + interest_expense
+                    - interest_deducted
                     + inventory_income_adjustment
                 )
                 before_depletion = common - dda_cogs - current_idle
@@ -185,6 +195,9 @@ def build(result, book, assets, forecast_result):
                         ),
                         book_dda_expense_added_back_usd=str(a["5300"]),
                         aro_accretion_added_back_usd=str(a["5600"]),
+                        nondeductible_penalties_usd=str(a["CO_ROT_PENALTY_EXP"]),
+                        business_interest_expense_usd=str(interest_expense),
+                        interest_deducted_in_workpaper_usd=str(interest_deducted),
                         unpaid_rot_added_back_usd=str(unpaid_transaction_tax),
                         cash_inventory_income_adjustment_usd=str(
                             inventory_income_adjustment.quantize(Q)

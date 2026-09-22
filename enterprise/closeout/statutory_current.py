@@ -107,14 +107,34 @@ def build(parent, aru, mine, factors, journal_rows, state_cash_paid=None):
                 if entity == "PS"
                 else D(0)
             )
-            interest_cf = D(0)
+            historical_interest = D(0)
+            if entity == "PS":
+                from enterprise.ccf.company_closeout.rot_penalty_workpaper import (
+                    build as penalty_workpaper,
+                )
+
+                historical_interest = D(penalty_workpaper("2025-12-31")["totals"]["interest_usd"])
+            interest_cf = historical_interest
             for year in range(2026, 2032):
                 if entity == "SHIH":
                     base = holding[scenario, year]
                     interest = deduction = ati = D(0)
                 elif entity == "PS":
-                    base = D(rw[scenario, "US", year]["income_before_nol_usd"])
-                    interest = deduction = ati = D(0)
+                    mr = rw[scenario, "US", year]
+                    base = D(mr["income_before_nol_usd"])
+                    interest = D(mr.get("business_interest_expense_usd", 0))
+                    already = D(mr.get("interest_deducted_in_workpaper_usd", 0))
+                    base += already
+                    ati = max(
+                        base
+                        + D(mr.get("tax_dda_cogs_usd", 0))
+                        + D(mr.get("idle_depreciation_deduction_usd", 0))
+                        + D(mr.get("depletion_deduction_usd", 0)),
+                        D(0),
+                    )
+                    deduction = min(interest + interest_cf, ati * D(".30"))
+                    interest_cf += interest - deduction
+                    base -= deduction
                 else:
                     source = ar[scenario, entity, "US", year]
                     base = D(source["income_before_interest_limit_usd"]) - (
@@ -164,6 +184,10 @@ def build(parent, aru, mine, factors, journal_rows, state_cash_paid=None):
         ca_mine_2025 = -D(
             rw[scenario, "CA", 2026]["opening_2026_loss_before_state_apportionment_usd"]
         )
+        from enterprise.ccf.company_closeout.rot_penalty_workpaper import build as penalty_workpaper
+
+        historical_interest = D(penalty_workpaper("2025-12-31")["totals"]["interest_usd"])
+        ca_mine_2025 -= historical_interest
         ca_group_2025 = ca_parent_2025 + ca_mine_2025
         ca_loss = max(-ca_group_2025 * D("104900000") / D("117500000"), D(0))
         ca_parent_opening = parent.opening_state_nol - max(-ca_parent_2025, D(0)) + ca_loss

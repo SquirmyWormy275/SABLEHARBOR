@@ -27,6 +27,10 @@ def build(output, fin, op, legacy, operating, policy, adjustment):
     iterations = []
     prior_plan = None
     state_paid = {}
+    interest_deductions = {}
+    from .rot_penalties import RotPenalties
+
+    adjustment.rot_penalties = RotPenalties()
     for iteration in range(1, 9):
         adjustment.parent_tax = None
         adjustment.statutory_tax = None
@@ -51,7 +55,7 @@ def build(output, fin, op, legacy, operating, policy, adjustment):
         before = books()
         parent = ParentTax(before, legacy, operating)
         assets = assets_build(fin)
-        mine = mine_build(before, adjustment.rwh_book, assets, fin)
+        mine = mine_build(before, adjustment.rwh_book, assets, fin, interest_deductions)
         aru = aru_build(before["journal_rows"], fin)
         factors = factors_build(before, fin, anchor)
         current = current_build(parent, aru, mine, factors, before["journal_rows"], state_paid)
@@ -90,7 +94,16 @@ def build(output, fin, op, legacy, operating, policy, adjustment):
                     next_state_paid[row["scenario"], row["taxpayer"], row["year"]] += D(
                         row["paid_usd"]
                     )
-        converged = plan == prior_plan and dict(next_state_paid) == state_paid
+        next_interest_deductions = {
+            (r["scenario"], r["year"]): D(r["interest_deducted_usd"])
+            for r in current["federal"]
+            if r["taxpayer"] == "PS"
+        }
+        converged = (
+            plan == prior_plan
+            and dict(next_state_paid) == state_paid
+            and next_interest_deductions == interest_deductions
+        )
         iterations[-1]["converged"] = converged
         iterations[-1]["settled_state_deductions_stable"] = dict(next_state_paid) == state_paid
         if converged:
@@ -99,6 +112,9 @@ def build(output, fin, op, legacy, operating, policy, adjustment):
             replay = verify_statutory(posting, successor["journal_rows"])
             workpapers = dict(
                 implementation_replay=replay,
+                rot_penalty_monthly=adjustment.rot_penalties.rows,
+                rot_penalty_opening=adjustment.rot_penalties.opening,
+                rot_penalty_cutoff=adjustment.rot_penalties.cutoff,
                 current=current,
                 deferred=deferred,
                 opening=opening,
@@ -114,6 +130,7 @@ def build(output, fin, op, legacy, operating, policy, adjustment):
             return fin, successor, parent, workpapers
         prior_plan = plan
         state_paid = dict(next_state_paid)
+        interest_deductions = next_interest_deductions
         fin = forecast.build(
             output / "industrial/forecast",
             operating_rows=op["operating_rows"],
