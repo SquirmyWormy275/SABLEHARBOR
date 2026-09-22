@@ -106,6 +106,9 @@ def build(allow_working_tree=False, *, company_closeout=False):
             for p in sorted((ROOT / "enterprise/closeout").rglob("*")):
                 if p.suffix in {".py", ".json"}:
                     result[str(p.relative_to(ROOT))] = hashlib.sha256(p.read_bytes()).hexdigest()
+            for p in sorted((ROOT / "enterprise/ccf/company_closeout").rglob("*")):
+                if p.suffix in {".py", ".json"}:
+                    result[str(p.relative_to(ROOT))] = hashlib.sha256(p.read_bytes()).hexdigest()
             for rel in ["industrial/planning/enterprise.py", "industrial/planning/forecast.py"]:
                 p = ROOT / rel
                 result[rel] = hashlib.sha256(p.read_bytes()).hexdigest()
