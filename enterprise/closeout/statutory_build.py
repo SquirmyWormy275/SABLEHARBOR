@@ -76,8 +76,23 @@ def build(output, fin, op, legacy, operating, policy, adjustment):
             "annual": {k: str(D(v).quantize(D(1))) for k, v in posting.annual_override.items()},
             "monthly": {k: str(D(v).quantize(D(1))) for k, v in posting.payment_override.items()},
         }
+        plan_delta = (
+            max(
+                (
+                    abs(D(value) - D(prior_plan[population][key]))
+                    for population, values in plan.items()
+                    for key, value in values.items()
+                ),
+                default=D(0),
+            )
+            if prior_plan is not None
+            else None
+        )
         iterations.append(
             {
+                "maximum_cash_plan_change_usd": str(plan_delta)
+                if plan_delta is not None
+                else "N/A",
                 "iteration": iteration,
                 "converged": plan == prior_plan,
                 "annual_current_usd": str(sum(map(D, plan["annual"].values()))),
@@ -104,6 +119,27 @@ def build(output, fin, op, legacy, operating, policy, adjustment):
             and next_interest_deductions == interest_deductions
         )
         iterations[-1]["converged"] = converged
+        iterations[-1]["maximum_state_deduction_change_usd"] = str(
+            max(
+                (
+                    abs(next_state_paid.get(k, D(0)) - state_paid.get(k, D(0)))
+                    for k in set(next_state_paid) | set(state_paid)
+                ),
+                default=D(0),
+            )
+        )
+        iterations[-1]["maximum_interest_deduction_change_usd"] = str(
+            max(
+                (
+                    abs(next_interest_deductions.get(k, D(0)) - interest_deductions.get(k, D(0)))
+                    for k in set(next_interest_deductions) | set(interest_deductions)
+                ),
+                default=D(0),
+            )
+        )
+        (output / "statutory_iteration_progress.json").write_text(
+            json.dumps(iterations, indent=2) + "\n"
+        )
         iterations[-1]["interest_deductions_stable"] = (
             next_interest_deductions == interest_deductions
         )
