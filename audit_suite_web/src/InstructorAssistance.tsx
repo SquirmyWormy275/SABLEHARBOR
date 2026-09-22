@@ -11,6 +11,8 @@ import {
   type Pointer,
 } from "./instructorAssistance";
 import "./instructorAssistance.css";
+import { DebriefDocument, DebriefExport } from "./DebriefDocument";
+import type { SelectedDebrief } from "./instructorDebrief";
 type Metadata = {
   release_id: string;
   status: string;
@@ -23,7 +25,12 @@ type Metadata = {
 type Content = {
   release_id: string;
   release_sha256: string;
-  content: { stage: string; text: string; pointers: Pointer[] };
+  content: {
+    stage: string;
+    text: string;
+    pointers: Pointer[];
+    document?: SelectedDebrief;
+  };
   pre_release_revision: number;
   understanding: string;
 };
@@ -565,7 +572,24 @@ function AssistancePanel({
           aria-label="Opened instructor assistance"
         >
           <h3>{content.content.stage}</h3>
-          <blockquote>{content.content.text}</blockquote>
+          {content.content.stage === "EXPLANATION" &&
+          content.content.document ? (
+            <>
+              <DebriefDocument
+                document={content.content.document}
+                engagement={e}
+                onOpenPointer={onOpenPointer}
+              />
+              <DebriefExport
+                engagement={e}
+                viewerId={actor}
+                releaseId={content.release_id}
+                releaseSha256={content.release_sha256}
+              />
+            </>
+          ) : (
+            <blockquote>{content.content.text}</blockquote>
+          )}
           {content.content.pointers.map((p) => (
             <p key={p.kind + p.id}>
               {p.kind === "task" ? "Procedure" : "Original"}:{" "}

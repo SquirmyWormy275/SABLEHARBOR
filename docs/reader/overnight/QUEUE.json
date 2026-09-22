@@ -722,7 +722,7 @@
       "gate": "existing_authority",
       "execution_policy": "Owner authorized execution. This bounded implementation does not establish completed dependency acceptance. Keep populated keys and learner records private; shared schema and catalog changes belong to the integrator. Qualified review and user acceptance remain separate.",
       "execution_authorized": true,
-      "evidence": "Initial HINT/POINTER implementation uses a separate private release store, named current learner, exact preview/confirmation pins and explicit delivery/acknowledgment/revocation history. It does not alter task results, infer understanding, expose the whole Key or feed company/model contexts. Companion recovery preserves an inert private archive; operational rehydration, full explanations, portable debriefs and qualified calibration remain open. No real learner release has been performed."
+      "evidence": "HINT/POINTER and selected EXPLANATION releases use a separate private store, named current learner, exact historical/source pins and full preview/confirmation. Ordered selected issues/procedures, annotations and prompts render interactively; deterministic ZIP exports have separate byte/member preview, explicit confirmation and browser SHA256 verification. Immutable corrections preserve prior documents. Focused backend, HTTP and browser tests cover isolation, stale authority, exact retries and inert recovery. Assistance does not establish individual performance, understanding or professional acceptance. Operational rehydration and qualified calibration remain open; no actual learner release was performed."
     },
     {
       "id": "IK-06",

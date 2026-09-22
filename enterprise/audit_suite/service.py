@@ -6,6 +6,7 @@ import asyncio
 import csv
 import hashlib
 import io
+import re
 import time
 from collections import OrderedDict
 from datetime import UTC, datetime
@@ -356,6 +357,7 @@ def create_app(
             background_jobs=jobs is not None,
             bound_instructor_keys=bool(protected_bindings),
             instructor_releases=releases is not None,
+            instructor_debriefs=releases is not None,
             instructor_reference_library=instructor_key_root is not None,
         )
         result["background_command_kinds"] = jobs.supported_commands() if jobs is not None else []
@@ -515,6 +517,18 @@ def create_app(
         principal, store = release_store(request)
         return await asyncio.to_thread(store.options, principal, engagement_id)
 
+    @app.get("/api/engagements/{engagement_id}/instructor-releases/debrief-options")
+    async def debrief_options(engagement_id: str, request: Request):
+        principal, store = release_store(request)
+        return await asyncio.to_thread(store.debrief_options, principal, engagement_id)
+
+    @app.post("/api/engagements/{engagement_id}/instructor-releases/debrief-preview")
+    async def debrief_preview(engagement_id: str, request: Request):
+        principal, store = release_store(request, mutation=True)
+        return await asyncio.to_thread(
+            store.debrief_preview, principal, engagement_id, await json_body(request)
+        )
+
     @app.post("/api/engagements/{engagement_id}/instructor-releases/preview")
     async def release_preview(engagement_id: str, request: Request):
         principal, store = release_store(request, mutation=True)
@@ -554,6 +568,43 @@ def create_app(
         if payload.get("release_id") != release_id:
             raise DomainError("Exact release identity required")
         return await asyncio.to_thread(store.acknowledge, principal, engagement_id, payload)
+
+    @app.post("/api/engagements/{engagement_id}/assistance/{release_id}/export-preview")
+    async def debrief_export_preview(engagement_id: str, release_id: str, request: Request):
+        principal, store = release_store(request, mutation=True)
+        limits.check("debrief-export", principal, 12)
+        return await asyncio.to_thread(
+            store.export_preview, principal, engagement_id, release_id, await json_body(request)
+        )
+
+    @app.post("/api/engagements/{engagement_id}/assistance/{release_id}/export")
+    async def debrief_export(engagement_id: str, release_id: str, request: Request):
+        principal, store = release_store(request, mutation=True)
+        limits.check("debrief-export", principal, 12)
+        result = await asyncio.to_thread(
+            store.export_confirm, principal, engagement_id, release_id, await json_body(request)
+        )
+        raw, filename, expected = result.get("bytes"), result.get("filename"), result.get("sha256")
+        if (
+            not isinstance(raw, bytes)
+            or not 0 < len(raw) <= 20 * 1024 * 1024
+            or not isinstance(filename, str)
+            or re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]{0,170}\.zip", filename) is None
+            or hashlib.sha256(raw).hexdigest() != expected
+        ):
+            raise DomainError("Debrief export integrity check failed", status=503)
+        return Response(
+            raw,
+            media_type="application/zip",
+            headers={
+                "Content-Disposition": f'attachment; filename="{filename}"',
+                "Content-Length": str(len(raw)),
+                "X-Content-SHA256": expected,
+                "Cache-Control": "no-store, private",
+                "Pragma": "no-cache",
+                "X-Content-Type-Options": "nosniff",
+            },
+        )
 
     @app.get("/api/engagements/{engagement_id}/instructor-binding")
     async def instructor_binding(engagement_id: str, request: Request):

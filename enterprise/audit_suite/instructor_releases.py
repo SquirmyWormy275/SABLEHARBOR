@@ -16,6 +16,7 @@ from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
 from .explanation_binding import verify_snapshot
+from .instructor_debrief import DebriefMixin, validate_document, validate_export_preview
 from .portfolio_explanation import validate_routes
 from .store import DomainError, canonical, digest, identifier
 
@@ -52,7 +53,7 @@ def basis(state):
     return {k: state.get(k) for k in ("scope", "company_source_binding", "evidence_acquisition")}
 
 
-class InstructorReleases:
+class InstructorReleases(DebriefMixin):
     def __init__(self, private_root: Path, engine, bindings):
         require(
             Path(private_root).is_absolute() and ".." not in Path(private_root).parts,
@@ -250,6 +251,14 @@ class InstructorReleases:
             db.execute("SELECT count(*) FROM documents").fetchone()[0] < MAX_ROWS,
             "Release draft limit reached",
         )
+        require(
+            db.execute(
+                "SELECT coalesce(sum(length(CAST(content AS BLOB))),0) FROM documents"
+            ).fetchone()[0]
+            + len(canonical(value).encode())
+            <= 8 * 1024 * 1024,
+            "Release document aggregate limit",
+        )
         db.execute(
             "INSERT INTO documents VALUES(?,?,?,?)",
             (value["id"], kind, canonical(value), digest(value)),
@@ -363,6 +372,8 @@ class InstructorReleases:
                 409,
             )
         self._pointers(state, value["content"]["pointers"], verify_bytes=verify_bytes)
+        if value["content"]["stage"] == "EXPLANATION":
+            self._debrief_check(state, value["content"], verify_bytes=verify_bytes)
         require(
             self._key(value["instructor_id"], value["engagement_id"])
             == value["key_manifest_sha256"],
@@ -425,6 +436,14 @@ class InstructorReleases:
             verify_bytes=False,
             row_index=context["row_index"],
         )
+
+        if value["content"]["stage"] == "EXPLANATION":
+            self._debrief_check(
+                context["state"],
+                value["content"],
+                verify_bytes=False,
+                row_index=context["row_index"],
+            )
 
     def _metadata_finish(self, context):
         # No authority or file-integrity cache survives this request.
@@ -751,6 +770,19 @@ class InstructorReleases:
     def snapshot(self):
         """Trusted operator only; sensitive drafts included; no operational restore."""
         with self._db() as db:
+            require(
+                sum(
+                    db.execute(
+                        "SELECT coalesce(sum(length(CAST(content AS BLOB))),0) FROM " + table
+                    ).fetchone()[0]
+                    for table in ("documents", "events")
+                )
+                + db.execute(
+                    "SELECT coalesce(sum(length(CAST(result AS BLOB))),0) FROM commands"
+                ).fetchone()[0]
+                <= 24 * 1024 * 1024,
+                "Release archive input limit",
+            )
             value = {
                 "format": "PRIVATE_INSTRUCTOR_RELEASE_ARCHIVE_V1",
                 "tables": {
@@ -787,7 +819,7 @@ def _validate_snapshot(value):
     for row in tables["documents"]:
         fields(row, ("id", "kind", "content", "sha"))
         require(
-            row["kind"] in {"PREVIEW", "RELEASE"} and row["id"] not in documents,
+            row["kind"] in {"PREVIEW", "RELEASE", "EXPORT_PREVIEW"} and row["id"] not in documents,
             "Unique typed release document required",
         )
         body = json.loads(row["content"])
@@ -797,6 +829,13 @@ def _validate_snapshot(value):
             and body["id"] == row["id"],
             "Release document integrity failure",
         )
+        if (
+            row["kind"] != "EXPORT_PREVIEW"
+            and body.get("content", {}).get("stage") == "EXPLANATION"
+        ):
+            validate_document(body["content"]["document"])
+        if row["kind"] == "EXPORT_PREVIEW":
+            validate_export_preview(body)
         documents[row["id"]] = (row["kind"], body)
     previous = ZERO
     actions = {}
@@ -821,8 +860,8 @@ def _validate_snapshot(value):
         prior = actions.setdefault(event["release_id"], [])
         action = event["action"]
         require(
-            action in {"RELEASED", "DELIVERED", "ACKNOWLEDGED", "REVOKED"}
-            and action not in prior
+            action in {"RELEASED", "DELIVERED", "ACKNOWLEDGED", "REVOKED", "EXPORTED"}
+            and (action == "EXPORTED" or action not in prior)
             and "REVOKED" not in prior,
             "Invalid assistance lifecycle",
         )
@@ -831,8 +870,69 @@ def _validate_snapshot(value):
             require(event["actor"] == body["recipient_id"], "Wrong assistance recipient")
         if action == "ACKNOWLEDGED":
             require("DELIVERED" in prior, "Acknowledgement before delivery")
+        if action == "EXPORTED":
+            require(
+                event["actor"] in {body["recipient_id"], body["instructor_id"]}
+                and body["content"]["stage"] == "EXPLANATION",
+                "Invalid export actor/stage",
+            )
+            details = event["details"]
+            fields(details, ("preview_id", "sha256", "bytes"))
+            require(
+                details["preview_id"] in documents
+                and documents[details["preview_id"]][0] == "EXPORT_PREVIEW",
+                "Export preview missing",
+            )
+            export = documents[details["preview_id"]][1]
+            require(
+                export["release_id"] == body["id"]
+                and export["actor_id"] == event["actor"]
+                and export["sha256"] == details["sha256"]
+                and type(details["bytes"]) is int
+                and export["bytes"] == details["bytes"],
+                "Export receipt differs",
+            )
         prior.append(action)
     for kind, body in documents.values():
+        if kind == "EXPORT_PREVIEW":
+            require(
+                body["release_id"] in documents and documents[body["release_id"]][0] == "RELEASE",
+                "Export release missing",
+            )
+            release = documents[body["release_id"]][1]
+            require(
+                digest(release) == body["release_sha256"]
+                and release["engagement_id"] == body["engagement_id"]
+                and body["actor_id"] in {release["instructor_id"], release["recipient_id"]}
+                and release["content"]["stage"] == "EXPLANATION",
+                "Export source differs",
+            )
+        if kind in {"PREVIEW", "RELEASE"} and body["content"]["stage"] == "EXPLANATION":
+            document = body["content"]["document"]
+            require(
+                document["key_manifest_sha256"] == body["key_manifest_sha256"]
+                and document["learner"]["actor_id"] == body["recipient_id"]
+                and document["learner"]["revision"] <= body["revision"],
+                "Debrief envelope differs",
+            )
+            predecessor = document["predecessor"]
+            if predecessor:
+                require(
+                    predecessor["release_id"] in documents
+                    and documents[predecessor["release_id"]][0] == "RELEASE",
+                    "Correction predecessor missing",
+                )
+                old = documents[predecessor["release_id"]][1]
+                require(
+                    digest(old) == predecessor["release_sha256"]
+                    and old["content"]["stage"] == "EXPLANATION"
+                    and document["version"] == old["content"]["document"]["version"] + 1
+                    and all(
+                        old[k] == body[k]
+                        for k in ("engagement_id", "recipient_id", "instructor_id")
+                    ),
+                    "Correction lineage differs",
+                )
         if kind == "RELEASE":
             require(
                 body["preview_id"] in documents and documents[body["preview_id"]][0] == "PREVIEW",

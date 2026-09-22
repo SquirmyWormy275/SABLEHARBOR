@@ -1596,9 +1596,8 @@ class Engine:
             )
         snapshot = self.learner_snapshot(state)
         manifests = list(snapshot["artifacts"])
-        history = self.store.history(stamped["actor"], state["id"])
-        history = copy.deepcopy(history)
-        for entry in history:
+
+        def public_entry(entry):
             entry["state"] = self.learner_snapshot(entry["state"])
             if entry.get("command", {}).get("kind", "").startswith("scenario.custom."):
                 entry["command"] = {"kind": "private_authoring", "payload": "WITHHELD"}
@@ -1613,6 +1612,23 @@ class Engine:
             entry["projection"] = (
                 "LEARNER; original full-state hash retained, not a hash of this projection"
             )
+            return entry
+
+        from .artifacts import MAX_EXPANDED
+        from .history_export import history_json
+
+        snapshot_bytes = canonical(snapshot).encode()
+        budget = (
+            MAX_EXPANDED - sum(m["bytes"] for m in manifests) - len(snapshot_bytes) - 1024 * 1024
+        )
+        history_bytes = history_json(
+            self.store,
+            stamped["actor"],
+            state["id"],
+            revision=state["revision"],
+            max_bytes=budget,
+            project=public_entry,
+        )
 
         # The export snapshot precedes its own export event; that boundary is explicit.
         buf = io.BytesIO(
@@ -1621,8 +1637,8 @@ class Engine:
             )
         )
         with zipfile.ZipFile(buf, "a", zipfile.ZIP_DEFLATED) as archive:
-            archive.writestr("engagement.json", canonical(snapshot))
-            archive.writestr("history.json", canonical(history))
+            archive.writestr("engagement.json", snapshot_bytes)
+            archive.writestr("history.json", history_bytes)
             links = "".join(
                 f"<li><a href='files/{html.escape(m['id'])}/{html.escape(m['name'])}'>"
                 f"{html.escape(m['name'])}</a> — {html.escape(m['sha256'])}</li>"

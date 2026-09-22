@@ -17,8 +17,6 @@ def build(engine, state: dict, actor: str) -> dict:
     """Retain a private review ZIP; the caller appends its manifest transactionally."""
     if engine.store.membership(actor, state["id"]) not in {"review", "instruct"}:
         raise DomainError("Reviewer membership required", status=403)
-    history = engine.store.history(actor, state["id"])
-    history = [row for row in history if row["revision"] <= state["revision"]]
     included, withheld = [], []
     for manifest in state["artifacts"]:
         if manifest.get("engagement_id") != state["id"]:
@@ -132,9 +130,21 @@ def build(engine, state: dict, actor: str) -> dict:
     additions = {
         **private_files,
         "engagement.json": canonical(state).encode(),
-        "history.json": canonical(history).encode(),
         "reviewer-appendix.json": canonical(limits).encode(),
     }
+    from .history_export import history_json
+
+    # Reserve index/manifest framing before reading any history. The original
+    # archive contract stays complete-or-rejected, with no omitted old states.
+    budget = (
+        MAX_EXPANDED
+        - sum(m["bytes"] for m in included)
+        - sum(map(len, additions.values()))
+        - 1024 * 1024
+    )
+    additions["history.json"] = history_json(
+        engine.store, actor, state["id"], revision=state["revision"], max_bytes=budget
+    )
     links = "".join(
         f"<li><a href='{html.escape(name, quote=True)}'>{html.escape(name)}</a></li>"
         for name in additions

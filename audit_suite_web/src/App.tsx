@@ -18,6 +18,7 @@ import { ConversationProvenance } from "./ConversationProvenance";
 import { MeetingSourceContext } from "./MeetingSourceContext";
 import { MeetingConsultation } from "./MeetingConsultation";
 import { WorkGuidance } from "./WorkGuidance";
+import { InstructorDebrief } from "./InstructorDebrief";
 import { RequestReadBatch } from "./RequestReadBatch";
 import { ConsultationProvenance } from "./ConsultationProvenance";
 import {
@@ -2646,6 +2647,13 @@ export default function App() {
                 </RetainedPanel>
                 {section === "review" && (
                   <>
+                    <InstructorDebrief
+                      engagement={e}
+                      viewerId={bootstrap.viewer.id}
+                      supported={
+                        bootstrap.capabilities.instructor_debriefs === true
+                      }
+                    />
                     <InstructorAssistance
                       engagement={e}
                       viewerId={bootstrap.viewer.id}

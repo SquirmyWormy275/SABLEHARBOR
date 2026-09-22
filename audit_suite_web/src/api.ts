@@ -239,3 +239,78 @@ export function newWorkpaperVersion(row: Row): Record<string, unknown> {
 export function requestHasDelivery(row: Row): boolean {
   return Array.isArray(row.artifact_ids) && row.artifact_ids.length > 0;
 }
+
+/** Explicit private export: verify bounded bytes before creating a download. */
+export async function requestDownload(
+  path: string,
+  body: unknown,
+  expected: { sha256: string; bytes: number; maxBytes: number },
+): Promise<Blob> {
+  if (
+    !/^[a-f0-9]{64}$/.test(expected.sha256) ||
+    !Number.isSafeInteger(expected.bytes) ||
+    expected.bytes < 1 ||
+    !Number.isSafeInteger(expected.maxBytes) ||
+    expected.maxBytes < 1 ||
+    expected.maxBytes > 32 * 1024 * 1024 ||
+    expected.bytes > expected.maxBytes
+  )
+    throw Error("Invalid export size or digest pins.");
+  const response = await fetch(path, {
+    method: "POST",
+    credentials: "same-origin",
+    headers: { "X-CSRF-Token": csrf, "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+  if (!response.ok) {
+    let message = `Export request failed (${response.status}).`;
+    try {
+      const value = await response.json();
+      message =
+        typeof value.error === "string"
+          ? value.error
+          : typeof value.detail === "string"
+            ? value.detail
+            : message;
+    } catch {
+      /* Non-JSON error. */
+    }
+    throw new ApiError(message, response.status);
+  }
+  if (
+    response.headers.get("content-type")?.split(";")[0] !== "application/zip" ||
+    response.headers.get("x-content-sha256") !== expected.sha256 ||
+    !response.body
+  ) {
+    await response.body?.cancel();
+    throw Error("Export does not match the exact preview.");
+  }
+  const reader = response.body.getReader(),
+    bytes = new Uint8Array(expected.bytes);
+  let offset = 0;
+  try {
+    for (;;) {
+      const chunk = await reader.read();
+      if (chunk.done) break;
+      if (offset + chunk.value.length > expected.bytes)
+        throw Error("Export exceeds preview byte limit.");
+      bytes.set(chunk.value, offset);
+      offset += chunk.value.length;
+    }
+  } catch (error) {
+    await reader.cancel().catch(() => undefined);
+    throw error;
+  } finally {
+    reader.releaseLock();
+  }
+  if (offset !== expected.bytes)
+    throw Error("Export length differs from preview.");
+  const hash = Array.from(
+    new Uint8Array(await crypto.subtle.digest("SHA-256", bytes)),
+  )
+    .map((n) => n.toString(16).padStart(2, "0"))
+    .join("");
+  if (hash !== expected.sha256)
+    throw Error("Export digest differs from preview.");
+  return new Blob([bytes], { type: "application/zip" });
+}

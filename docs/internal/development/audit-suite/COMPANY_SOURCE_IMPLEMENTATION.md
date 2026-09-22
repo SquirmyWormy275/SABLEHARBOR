@@ -569,9 +569,19 @@ erased. No actual learner release was made during implementation.
 
 Companion backup preserves sensitive preview drafts and assistance history as a
 verified private archive. Restoration is inert: it does not recreate an active
-release service, credentials, grants or recipient mappings. Full explanation
-selection, portable debriefs, operational rehydration and qualified calibration
-remain open parts of IK-05/IK-06.
+release service, credentials, grants or recipient mappings.
+
+[Selected explanation debriefs](../../../../enterprise/audit_suite/INSTRUCTOR_DEBRIEF.md)
+now add ordered instructor-authored issue/procedure sections, annotated exact
+originals and discussion prompts. The instructor selects a named learner and
+historical shared-state revision, previews the complete document, then confirms.
+Immutable corrections retain earlier releases. Portable exports require their own
+file/byte preview and explicit confirmation; the browser verifies exact size and
+SHA256 before download. Neither historical state nor assistance receipts establish
+individual performance or understanding. Focused backend, HTTP and browser checks
+cover selection isolation, changed authority, exact retries, attachments and inert
+recovery. No actual learner release was made. Operational rehydration and qualified
+calibration remain open parts of IK-05/IK-06.
 
 An explicit [backup monitoring scan](AQ04_BACKUP_MONITOR_OPERATOR.md) subsequently
 ran against the existing local backup runtime. It added four native originals
@@ -749,3 +759,16 @@ The narrow detail layout now wraps narrative text while containing wide tables i
 their own horizontal scroll area. Checks at 320, 390 and 1,400 pixels retain all
 columns. The actual recorded-projection workpaper fixture verifies that the modal
 fits its viewport and the historical version remains unchanged.
+
+
+### Bounded complete history exports
+
+Ordinary and private reviewer exports now stream and verify each historical event
+instead of materializing every prior full state. The canonical history payload and
+learner redaction remain unchanged. Complete history must fit the remaining archive
+budget; an oversized prefix is rejected without retaining a partial archive. A
+100 MiB raw-event ceiling is checked before JSON decoding, connections close on
+success and failure, and access is rechecked before returning history bytes. The
+existing final ZIP inspection independently checks actual expanded member sizes.
+This does not make very large engagements exportable as a single bounded archive;
+it prevents them from exhausting memory before reporting the size limitation.
