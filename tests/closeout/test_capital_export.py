@@ -58,6 +58,8 @@ def test_round_cash_is_distinct_from_initialization_and_industrial_reconstructio
     assert len(summary) == 3 and len(details) == 15
     for row in summary:
         assert Decimal(row["historical_subscription_paid_in_usd"]) == 183000000
+        assert Decimal(row["historical_industrial_contribution_paid_in_usd"]) == 44312500
+        assert Decimal(row["total_historical_paid_in_usd"]) == 227312500
         assert Decimal(row["historical_2016_2022_pretax_result_usd"]) == -174200000
         assert Decimal(row["corrected_core_initialization_equity_usd"]) == 8800000
         assert Decimal(row["industrial_noncash_reconstruction_usd"]) == 44312500
@@ -80,3 +82,10 @@ def test_missing_noncash_capital_cannot_be_hidden_in_a_new_round():
     rows = [r for r in opening() if r["source_id"] != "OPEN-MEMBER-BASIS"]
     with pytest.raises(ValueError, match="noncash reconstruction"):
         opening_bridge(rows, build_register())
+
+
+def test_historical_receipt_must_match_existing_reconstruction():
+    register = build_register()
+    register["historical_contribution_receipts_usd"] = "44312501"
+    with pytest.raises(ValueError, match="historical contribution"):
+        opening_bridge(opening(), register)

@@ -59,16 +59,20 @@ def opening_bridge(journal, register):
         if (len(industrial) != 1 or len(subsidiary) != 1
                 or D(industrial[0]["signed_usd"]) != D(subsidiary[0]["signed_usd"])):
             raise ValueError("Industrial noncash reconstruction differs from subsidiary opening capital")
+        if components["INDUSTRIAL_NONCASH_RECONSTRUCTION"] != D(register["historical_contribution_receipts_usd"]):
+            raise ValueError("Authored historical contribution differs from opening reconstruction")
         total = sum(components.values(), D(0))
         summary.append(dict(
             scenario=scenario, legal_entity="SHI", historical_subscription_paid_in_usd=str(subscriptions),
+            historical_industrial_contribution_paid_in_usd=register["historical_contribution_receipts_usd"],
+            total_historical_paid_in_usd=register["total_historical_paid_in_usd"],
             historical_2016_2022_pretax_result_usd=str(operating_result),
             corrected_core_initialization_equity_usd=str(corrected_core),
             industrial_noncash_reconstruction_usd=str(components["INDUSTRIAL_NONCASH_RECONSTRUCTION"]),
             legacy_subsequent_retained_result_usd=str(components["LEGACY_SUBSEQUENT_RETAINED_RESULT"]),
             dated_opening_corrections_usd=str(components["DATED_OPENING_CORRECTION"]),
             total_parent_opening_equity_usd=str(total), additional_ledger_cash_or_equity_posted_usd="0",
-            classification="Source bridge; noncash industrial reconstruction is not another historical round receipt or allocated holder cash",
+            classification="Source bridge; 2026 noncash reconstruction represents the separately authored 2025 holder contribution, counted once; no additional current receipt",
         ))
     return summary, details
 
@@ -90,6 +94,8 @@ def export(output, successor):
                                 for key, value in allocation.items()})
     populations = {
         "capital_unit_history": result["register"]["unit_history"],
+        "capital_historical_contribution_holders": result["register"]["historical_industrial_contribution"]["holder_rows"],
+        "capital_historical_downstream_funding": result["register"]["historical_industrial_contribution"]["downstream"],
         "capital_funding_events": events,
         "capital_holder_allocations": allocations,
         "capital_holder_rollforward": result["holder_rollforward"],
@@ -101,4 +107,6 @@ def export(output, successor):
     (output / "capital_register.json").write_text(json.dumps(result, indent=2) + "\n")
     return {"population_counts": {name: len(rows) for name, rows in populations.items()},
             "historical_subscription_paid_in_usd": result["register"]["verified_subscription_receipts_usd"],
+            "historical_industrial_contribution_paid_in_usd": result["register"]["historical_contribution_receipts_usd"],
+            "total_historical_paid_in_usd": result["register"]["total_historical_paid_in_usd"],
             "total_units": result["register"]["total_units"], "additional_ledger_postings": 0}
