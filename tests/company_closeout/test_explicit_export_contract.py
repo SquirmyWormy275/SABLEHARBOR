@@ -20,7 +20,7 @@ def test_explicit_contract_preserves_enterprise_export(tmp_path):
     rows = {"records": [{"id": "CURRENT-1", "entity": "SHI", "unit": "corporate"}]}
     write_packages(tmp_path, rows, {"source": "synthetic-test"}, schema=SCHEMA, scope=SCOPE)
     with sqlite3.connect(tmp_path / "enterprise.sqlite3") as db:
-        assert db.execute('SELECT entity,id,unit FROM records').fetchall() == [
+        assert db.execute("SELECT entity,id,unit FROM records").fetchall() == [
             ("SHI", "CURRENT-1", "corporate")
         ]
 
