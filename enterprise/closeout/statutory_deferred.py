@@ -195,7 +195,7 @@ def build(result, parent, mine, assets, current, factors):
     federal = _index(
         current["federal"],
         ("scenario", "taxpayer", "year"),
-        {(s, e, y) for s in scenarios for e in ("PS", "ARU", "BST") for y in years},
+        {(s, e, y) for s in scenarios for e in ("SHIH", "PS", "ARU", "BST") for y in years},
         "federal",
     )
     state_scope = {
@@ -306,6 +306,8 @@ def build(result, parent, mine, assets, current, factors):
                         if entity == "ARU":
                             book += D(13000000)
                             tax += max(D(13000000) - D(13000000) / 180 * 12 * (year - 2025), D(0))
+                            # Separate900kfacilitative AGUB successor, no bookGW addition.
+                            tax += max(D(900000) - D(60000) * (year - 2025), D(0))
                         land_difference = D(0)
                         temporary = max(-b["2110"], D(0)) + max(-b["CO_PAYROLL_EMP_TAX_PAY"], D(0))
                         reserve = max(-b["2200"], D(0)) + max(-b["2300"], D(0))

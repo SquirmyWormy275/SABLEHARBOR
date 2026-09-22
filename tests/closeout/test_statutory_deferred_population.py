@@ -59,7 +59,7 @@ def population():
                         signed_usd=str(y - 2025),
                     )
                 )
-            for e in ("PS", "ARU", "BST"):
+            for e in ("SHIH", "PS", "ARU", "BST"):
                 current["federal"].append(
                     dict(
                         scenario=s,

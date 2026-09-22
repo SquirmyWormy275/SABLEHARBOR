@@ -7,6 +7,7 @@ This module calculates liabilities; it does not imply return submission/payment.
 from collections import defaultdict
 from decimal import Decimal as D
 
+from enterprise.closeout.acquisition_tax_costs import build as acquisition_costs
 from enterprise.closeout.cost_recovery import schedule
 from enterprise.closeout.tax_limits import illinois_nol_used
 
@@ -70,7 +71,11 @@ def build(parent, aru, mine, factors, journal_rows):
     }
     if set(ar) != expected or len(rw) != 72 or len(pa) != 18 or len(sf) != 288:
         raise ValueError("Incomplete statutory current-tax population")
+    acquisition = acquisition_costs()
+    fee = D(acquisition["additional_class_vii_usd"])
+    amort = D(acquisition["annual_additional_amortization_usd"])
     holding = defaultdict(D)
+    fee_book = defaultdict(D)
     for r in journal_rows:
         if (
             r["entity"] == "SHIH"
@@ -86,10 +91,16 @@ def build(parent, aru, mine, factors, journal_rows):
                 "CO_STATE_MIN_EXP",
             ):
                 holding[r["scenario"], int(r["year"])] -= D(r["signed_usd"])
+                if r["account"] == "5800" and int(r["year"]) == 2026:
+                    fee_book[r["scenario"]] += D(r["signed_usd"])
+    for scenario in ("base", "downside", "expansion"):
+        if fee_book[scenario] != fee:
+            raise ValueError("Acquisition fee book population differs from capitalized source")
+        holding[scenario, 2026] += fee
     federal, states, openings = [], [], []
     federal_by_key = {}
     for scenario in ("base", "downside", "expansion"):
-        for entity in ("PS", "ARU", "BST"):
+        for entity in ("SHIH", "PS", "ARU", "BST"):
             nol = (
                 D(rw[scenario, "US", 2026]["opening_2026_loss_before_state_apportionment_usd"])
                 if entity == "PS"
@@ -97,17 +108,23 @@ def build(parent, aru, mine, factors, journal_rows):
             )
             interest_cf = D(0)
             for year in range(2026, 2032):
-                if entity == "PS":
+                if entity == "SHIH":
+                    base = holding[scenario, year]
+                    interest = deduction = ati = D(0)
+                elif entity == "PS":
                     base = D(rw[scenario, "US", year]["income_before_nol_usd"])
                     interest = deduction = ati = D(0)
                 else:
                     source = ar[scenario, entity, "US", year]
-                    base = D(source["income_before_interest_limit_usd"])
+                    base = D(source["income_before_interest_limit_usd"]) - (
+                        amort if entity == "ARU" else D(0)
+                    )
                     interest = D(source["eligible_interest_expense_usd"])
                     ati = max(
                         base
                         + D(source["tax_depreciation_allowance_usd"])
-                        + D(source["tax_goodwill_amortization_usd"]),
+                        + D(source["tax_goodwill_amortization_usd"])
+                        + (amort if entity == "ARU" else D(0)),
                         D(0),
                     )
                     deduction = min(interest + interest_cf, ati * D(".30"))
@@ -198,7 +215,11 @@ def build(parent, aru, mine, factors, journal_rows):
                         if jurisdiction == "CA"
                         else D(federal_by_key[scenario, entity, year]["interest_deducted_usd"])
                     )
-                    group += D(r["income_before_interest_limit_usd"]) - deduction
+                    group += (
+                        D(r["income_before_interest_limit_usd"])
+                        - deduction
+                        - (amort if entity == "ARU" else D(0))
+                    )
                 for entity in MEMBERS:
                     f = sf[scenario, jurisdiction, entity, year]
                     apportioned = group * D(f["member_factor"])
@@ -234,4 +255,9 @@ def build(parent, aru, mine, factors, journal_rows):
                             payment_state="JOIN_SEPARATE_SETTLEMENT_POPULATION",
                         )
                     )
-    return dict(federal=federal, states=states, historical_state_openings=openings)
+    return dict(
+        federal=federal,
+        states=states,
+        historical_state_openings=openings,
+        acquisition_cost_basis=acquisition,
+    )

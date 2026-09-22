@@ -80,7 +80,18 @@ def source():
         {"rows": aru},
         mine,
         factors,
-        [],
+        [
+            dict(
+                scenario=s,
+                entity="SHIH",
+                year=2026,
+                month=1,
+                account="5800",
+                account_type="expense",
+                signed_usd="900000",
+            )
+            for s in ("base", "downside", "expansion")
+        ],
     )
 
 
@@ -93,7 +104,7 @@ def test_separate_federal_taxpayers_do_not_pool_mine_losses():
     )
     assert D(a["interest_deducted_usd"]) == D(30000000)
     assert D(a["interest_carryforward_usd"]) == D(20000000)
-    assert D(a["current_tax_usd"]) == D(14700000)
+    assert D(a["current_tax_usd"]) == D(14687400)
     m = next(
         x
         for x in r["federal"]
