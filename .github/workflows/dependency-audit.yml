@@ -1,0 +1,36 @@
+name: Dependency advisory audit
+on:
+  pull_request:
+    paths:
+      - pyproject.toml
+      - uv.lock
+      - tools/documents/requirements.txt
+      - .github/workflows/dependency-audit.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4, repository pin
+      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1, repository pin
+        with:
+          version: '0.12.4'
+      - run: uv sync --frozen --all-extras
+      - name: Audit installed third-party dependencies
+        run: |
+          audit_site="$(uv run python -c 'import sysconfig; print(sysconfig.get_path("purelib"))')"
+          uvx --from pip-audit==2.9.0 pip-audit --path "$audit_site" --skip-editable --progress-spinner off --format json --output dependency-audit.json
+      - name: Audit standalone publication normalizer
+        if: always()
+        run: uvx --from pip-audit==2.9.0 pip-audit -r tools/documents/requirements.txt --progress-spinner off --format json --output normalizer-audit.json
+      - name: Retain advisory results, including failures
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # repository pin
+        with:
+          name: dependency-advisory-audit
+          path: |
+            dependency-audit.json
+            normalizer-audit.json
+          if-no-files-found: error
