@@ -1,4 +1,5 @@
 import { InstructorKeyViews } from "./InstructorKeyViews";
+import { InstructorRelationshipExplorer } from "./InstructorRelationshipExplorer";
 import {
   validateArchiveFilters,
   type ArchiveKeyFilters,
@@ -374,6 +375,12 @@ function ArchiveExplorer({
             <summary>Missing information and review limits</summary>
             <Value value={detail.key.review.gaps} />
           </details>
+          <InstructorRelationshipExplorer
+            key={detail.key.id + ":" + detail.key.source.raw_sha256}
+            graph={detail.key.graph}
+            explanation={detail.key.explanation}
+            renderValue={(value) => <Value value={value} />}
+          />
           {Object.entries({
             Mechanism: detail.key.explanation.mechanism,
             Facts: detail.key.explanation.facts,

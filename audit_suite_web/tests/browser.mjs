@@ -209,10 +209,10 @@ try {
         mechanism: { cause: "Synthetic reference preservation" },
         facts: [{ id: "F1", statement: "Neutral archived fact" }],
         actor_knowledge: [
-          { role_ref: "Neutral owner", beliefs: ["Authored statement only"] },
+          { role_ref: "Neutral owner", beliefs: ["Authored statement only"], knows_fact_ids: ["F1"] },
         ],
         artifacts: [{ id: "A1", name: "neutral.txt" }],
-        events: [{ id: "E1", trigger: "REQUEST" }],
+        events: [{ id: "E1", trigger: "REQUEST", offset_business_days: 0 }],
         playable_paths: [
           { id: "P1", rationale: "Alternative neutral procedure" },
         ],
@@ -223,8 +223,13 @@ try {
         },
       },
       graph: {
-        nodes: [{ id: "fact:F1" }],
-        edges: [],
+        nodes: [
+          { id: "fact:F1", kind: "fact", source_pointer: "/facts/0" },
+          { id: "actor:0", kind: "actor", source_pointer: "/actor_knowledge/0" },
+          { id: "event:E1", kind: "event", source_pointer: "/events/0" },
+          { id: "path:P1", kind: "path", source_pointer: "/playable_paths/0" },
+        ],
+        edges: [{ from: "actor:0", to: "fact:F1", relation: "AUTHORED_KNOWLEDGE", source_pointer: "/actor_knowledge/0/knows_fact_ids/0" }],
         edge_semantics: "AUTHORED_REFERENCES_ONLY_NOT_CORROBORATION",
       },
     },
@@ -744,7 +749,7 @@ try {
     !(await explanation.textContent()).includes("NOT_BOUND")
   )
     throw Error("Instructor source limitations missing");
-  await explanation.getByText("Facts", { exact: true }).click();
+  await explanation.locator("summary").getByText("Facts", { exact: true }).click();
   await explanation
     .getByText("Neutral archived fact", { exact: true })
     .waitFor();
@@ -754,6 +759,20 @@ try {
   await explanation
     .getByText("Further neutral inquiry", { exact: true })
     .waitFor();
+  const relationships = explanation.getByRole("region", { name: "Authored relationship explorer" });
+  await relationships.getByRole("button", { name: "actor:0", exact: true }).click();
+  const selectedNode = relationships.getByRole("article", { name: "Selected authored node" });
+  await selectedNode.getByRole("button", { name: "fact:F1", exact: true }).click();
+  await selectedNode.getByRole("heading", { name: "fact:F1", exact: true }).waitFor();
+  await relationships.getByLabel("Find a relationship node").fill("no-match");
+  await selectedNode.getByText("The selected node is outside the current search.", { exact: false }).waitFor();
+  await selectedNode.getByRole("button", { name: "Back through relationships" }).click();
+  await selectedNode.getByRole("heading", { name: "actor:0", exact: true }).waitFor();
+  await relationships.getByLabel("Find a relationship node").fill("");
+  await relationships.getByText("Event timing by trigger", { exact: true }).click();
+  await relationships.getByText("REQUEST · 0 business days from this trigger", { exact: true }).waitFor();
+  await relationships.getByRole("button", { name: "path:P1", exact: true }).click();
+  await selectedNode.getByText("No explicit links were authored for this node.", { exact: false }).waitFor();
   await instructor.getByLabel("Search source ID or review gap").fill("absent");
   await instructor
     .getByText("No matching archived explanations.", { exact: false })

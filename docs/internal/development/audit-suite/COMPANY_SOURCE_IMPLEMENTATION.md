@@ -937,3 +937,29 @@ confirmed native history, unchanged source inputs and zero audit-access journals
 The authored monthly schedule does not establish approved RPOs, production failover
 or continuous enterprise coverage. These new operations are separate from the
 605/632-original collection and require their own explicit collection profile.
+
+### Navigable authored relationships
+
+The protected instructor archive now groups facts, actors, events, artifacts and
+discovery paths into selectable nodes. Selecting a node exposes its exact authored
+source, incoming/outgoing references and a back trail. Search preserves the current
+selection and identifies when it falls outside the filter. Trigger-relative event
+timing retains source order; it does not invent a shared calendar or assert that
+an event occurred. Unmapped narrative paths remain explicitly unlinked.
+
+The display projection resolved all 1,110 preserved explanations, 12,959 nodes and
+7,259 explicit edges without inventing relationships. Six new unit cases cover
+pointer resolution, malformed graphs, unsupported semantics and timing. All 225
+frontend unit tests, the build and the maintained desktop/narrow browser checks
+passed. A real-backend browser also exercised the full archive, exact source
+selection, relationship traversal/backtracking, filtering and trigger timing;
+a learner request was denied. The archive remains unbound reference material,
+separate from the six checks bound to each active workroom.
+
+Separate full-workroom browser checks opened all ten destinations in both
+70-control/409-task branches, verified narrow layout and completed exact historical
+instructor comparisons. The full repository suite at frozen `6558459f` passed
+1,929 tests with three skips; that result excludes the later data-quality,
+access-review-successor and relationship-explorer additions, whose focused results
+are recorded separately. Automated navigation does not substitute for owner
+usability acceptance or qualified professional review.

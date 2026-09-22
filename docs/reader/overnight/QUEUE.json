@@ -579,6 +579,12 @@
           "date": "2026-09-22",
           "status": "Full-profile collection and supported-procedure preparation passed on disposable stores; actual reviewed collection running",
           "scope": "70controls and409tasks perprofile, initially empty evidence; no task completion or effectiveness inferred"
+        },
+        {
+          "date": "2026-09-22",
+          "status": "Actual full collection and supported technical procedures completed in both branches",
+          "scope": "605/632 originals;70controls/409 unchanged tasks;three provisional population/selection/workpaper sets each;open technical findings",
+          "acceptance": "All applicable audit procedures and professional review are not complete"
         }
       ]
     },
@@ -683,7 +689,15 @@
       "gate": "existing_authority",
       "execution_policy": "Queued, not started. READY is conditional on completed dependencies and the recorded execution authorization. Keep populated keys and learner records private. Integrator owns shared schema, dependency and catalog changes. IK-06 requires actual professional review and owner acceptance, not inferred approval.",
       "execution_authorized": true,
-      "evidence": " Bound Key now has an authored-issue/control index, explicitly linked expectations, ten-source pages and scoped timeline. Dedicated keyboard/role-isolation browser verification and actual retained-source roundtrip passed. Saved Key views and broader debrief remain open. Protected instructor-only saved filters now cover existing bound and archive explorers with exact Key/source/context pins, explicit restore, stale metadata redaction, exact retry/CAS and inert companion recovery. Restoring filters does not fetch original/detail or perform comparison. Broader authored dimensions and qualified usability remain separate."
+      "evidence": " Bound Key now has an authored-issue/control index, explicitly linked expectations, ten-source pages and scoped timeline. Dedicated keyboard/role-isolation browser verification and actual retained-source roundtrip passed. Saved Key views and broader debrief remain open. Protected instructor-only saved filters now cover existing bound and archive explorers with exact Key/source/context pins, explicit restore, stale metadata redaction, exact retry/CAS and inert companion recovery. Restoring filters does not fetch original/detail or perform comparison. Broader authored dimensions and qualified usability remain separate.",
+      "technical_checkpoints": [
+        {
+          "date": "2026-09-22",
+          "status": "Implemented selectable authored relationship groups, exact incoming/outgoing traversal and trigger-relative timing",
+          "validation": "1110 explanations/12959 nodes/7259 edges resolved;225 frontend tests/build/maintained browser PASS; real full-archive browser and learner403 PASS",
+          "acceptance": "Preserved authored links only; narrative gaps and human/professional acceptance remain explicit"
+        }
+      ]
     },
     {
       "id": "IK-04",
@@ -719,6 +733,12 @@
           "validation": "Six completed browser stages,147 measured actions,140 requests; no unexpected HTTP failures or browser errors",
           "acceptance": "Automated technical evidence only; human usability and professional acceptance remain pending",
           "result": "Authored historical assessment and learner denial verified; no automatic grade or individual submission inferred."
+        },
+        {
+          "date": "2026-09-22",
+          "status": "Six-check protected snapshots bound to exact full-workroom history, with31/32 retained originals",
+          "validation": "Independent bytes/history verification and real historical browser comparison PASS;temporary source grants revoked",
+          "acceptance": "UNVALIDATED authored expectations;no automated grade or learner release"
         }
       ]
     },
@@ -885,11 +905,19 @@
         "docs/internal/development/audit-suite/",
         "enterprise/generated/audit-suite/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "Apply coherent components, typography, density, tables, statuses, dates, forms, empty/error states and confirmations. Verify keyboard/focus/contrast and graph alternatives. Inspect actual exports for standalone readability, references, limits and review history. Keep exact visual acceptance distinct from engineering validation.",
       "gate": "existing_authority",
       "execution_policy": "Locked design direction; queued, not started. Complete dependencies before execution. Preserve private data and prior scope boundaries. Owner usability and exact visual acceptance cannot be inferred from scripted checks.",
-      "execution_authorized": true
+      "execution_authorized": true,
+      "technical_checkpoints": [
+        {
+          "date": "2026-09-22",
+          "status": "Full-workroom desktop and390px navigation checked for learner and instructor;archive relationship display checked",
+          "validation": "Ten workspace destinations each;no document overflow or browser errors in completed runs",
+          "acceptance": "Scripted validation only;owner visual/usability acceptance remains pending"
+        }
+      ]
     },
     {
       "id": "UX-05",
