@@ -772,3 +772,33 @@ success and failure, and access is rechecked before returning history bytes. The
 existing final ZIP inspection independently checks actual expanded member sizes.
 This does not make very large engagements exportable as a single bounded archive;
 it prevents them from exhausting memory before reporting the size limitation.
+
+
+### Protected saved Key filters and expanded source selection
+
+[Saved Key filters](../../../../enterprise/audit_suite/INSTRUCTOR_KEY_VIEWS.md)
+now persist existing bound-source and archive filter states in a separate private
+instructor store. Save and restore are explicit; restore verifies the exact Key,
+current scope and source context. Changed context hides saved titles, queries and
+selected IDs. Restoring archive filters does not fetch scenario detail, download an
+original or start a comparison. Companion recovery retains only an inert private
+archive and recreates no Key authority. This closes persistence for the existing
+filters, not broader authored dimensions or qualified usability acceptance.
+
+The private source ownership register now has an explicit version 4 successor.
+It preserves the previous A/B selections and adds configuration, backup and both
+security-response runtimes with their declared upstream component. Its selected
+inventory contains 1,211 profile references to 831 unique physical versions; the
+359 legacy documentary dispositions remain unresolved operating history. The new
+selection is a custody/inventory expansion, not evidence of a coherent company year.
+Read-only validation found no native database changes and preserved both selected
+collection engagements and complete event chains. Older profiles and version 3
+remain unchanged.
+
+A private reference-year contract retains all 70 corporate SOC 2/HIPAA controls,
+each authored procedure/test/cadence, additional duties, qualified owner routes and
+exact historical A/B source references. Every procedure starts NOT_ASSESSED;
+business populations and supported intervals require actual source analysis.
+Missing selected support does not imply a missing business process. The contract
+permits supported alternatives and explicit incomplete results without silently
+removing procedures or inventing operational dates, employment, BIA/RPO or PHI.

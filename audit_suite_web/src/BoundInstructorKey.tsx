@@ -1,3 +1,8 @@
+import { InstructorKeyViews } from "./InstructorKeyViews";
+import {
+  validateBoundFilters,
+  type BoundKeyFilters,
+} from "./instructorKeyViews";
 import "./boundKeyNavigation.css";
 import {
   boundSourcePage,
@@ -18,6 +23,7 @@ import {
 export default function BoundInstructorKey(props: {
   engagement: Engagement;
   viewerId: string;
+  savedViewsEnabled?: boolean;
   onPreview?: (artifact: Row) => void;
 }) {
   return (
@@ -27,6 +33,9 @@ export default function BoundInstructorKey(props: {
         props.engagement.id,
         props.engagement.permissions,
         props.engagement.revision,
+        props.engagement.scope,
+        props.engagement.company_source_binding,
+        props.engagement.evidence_acquisition,
       ])}
       {...props}
     />
@@ -34,10 +43,13 @@ export default function BoundInstructorKey(props: {
 }
 function BoundExplorer({
   engagement: e,
+  viewerId,
+  savedViewsEnabled = false,
   onPreview,
 }: {
   engagement: Engagement;
   viewerId: string;
+  savedViewsEnabled?: boolean;
   onPreview?: (artifact: Row) => void;
 }) {
   const [response, setResponse] = useState<BoundResponse | null>(null),
@@ -149,6 +161,31 @@ function BoundExplorer({
           ))}
         </ul>
       </details>
+      <InstructorKeyViews
+        engagement={e}
+        viewerId={viewerId}
+        enabled={savedViewsEnabled}
+        kind="BOUND"
+        keyPin={b.manifest_sha256}
+        filters={{
+          query,
+          issue_id: issueId || null,
+          scope_to_issue: scopeToIssue,
+          source: source
+            ? { id: source.id, version: source.version, sha256: source.sha256 }
+            : null,
+          page: sources.page,
+        }}
+        validate={(value) => validateBoundFilters(value as BoundKeyFilters, s)}
+        onRestore={(value) => {
+          const v = validateBoundFilters(value as BoundKeyFilters, s);
+          setQuery(v.query);
+          setIssueId(v.issue_id ?? "");
+          setScopeToIssue(v.scope_to_issue);
+          setSelected(v.source?.id ?? "");
+          setPage(v.page);
+        }}
+      />
       <InstructorComparison engagement={e} bound={response} />
       <section aria-label="Authored issue index" className="bound-key-index">
         <h3>Authored issues</h3>

@@ -2623,6 +2623,7 @@ export default function App() {
                   {e.permissions?.includes("instruct") &&
                     bootstrap.capabilities.bound_instructor_keys && (
                       <BoundInstructorKey
+                        savedViewsEnabled={bootstrap.capabilities.instructor_key_views === true}
                         engagement={e}
                         viewerId={bootstrap.viewer.id}
                         onPreview={(artifact) => {
@@ -2687,6 +2688,8 @@ export default function App() {
                         "instructor_reference_library",
                       ) && (
                         <InstructorKey
+                          viewerId={bootstrap.viewer.id}
+                          savedViewsEnabled={bootstrap.capabilities.instructor_key_views === true}
                           key={bootstrap.viewer.id + ":" + e.id}
                           engagement={e}
                         />

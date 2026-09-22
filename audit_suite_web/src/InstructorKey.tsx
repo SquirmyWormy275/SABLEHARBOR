@@ -1,3 +1,8 @@
+import { InstructorKeyViews } from "./InstructorKeyViews";
+import {
+  validateArchiveFilters,
+  type ArchiveKeyFilters,
+} from "./instructorKeyViews";
 import { useEffect, useRef, useState } from "react";
 import { request, type Engagement } from "./api";
 import {
@@ -37,11 +42,36 @@ function Value({ value }: { value: unknown }) {
     );
   return <span>{String(value)}</span>;
 }
-/** Protected source library; no hidden content is persisted or sent to a model. */
-export default function InstructorKey({
+/** Protected source library; saved filter metadata uses the separate instructor-only store. */
+type InstructorKeyProps = {
+  engagement: Engagement;
+  viewerId?: string;
+  savedViewsEnabled?: boolean;
+};
+export default function InstructorKey(props: InstructorKeyProps) {
+  return (
+    <ArchiveExplorer
+      key={JSON.stringify([
+        props.viewerId,
+        props.engagement.id,
+        props.engagement.permissions,
+        props.engagement.revision,
+        props.engagement.scope,
+        props.engagement.company_source_binding,
+        props.engagement.evidence_acquisition,
+      ])}
+      {...props}
+    />
+  );
+}
+function ArchiveExplorer({
   engagement,
+  viewerId = "",
+  savedViewsEnabled = false,
 }: {
   engagement: Engagement;
+  viewerId?: string;
+  savedViewsEnabled?: boolean;
 }) {
   const [index, setIndex] = useState<InstructorIndex | null>(null),
     [detail, setDetail] = useState<InstructorDetail | null>(null),
@@ -94,7 +124,17 @@ export default function InstructorKey({
     return () => {
       ++sequence.current;
     };
-  }, [engagement.id, allowed]);
+  }, [
+    engagement.id,
+    allowed,
+    viewerId,
+    engagement.revision,
+    JSON.stringify([
+      engagement.scope,
+      engagement.company_source_binding,
+      engagement.evidence_acquisition,
+    ]),
+  ]);
   async function inspect(entry: KeyEntry) {
     if (!index || !allowed) return;
     const current = ++sequence.current;
@@ -126,7 +166,10 @@ export default function InstructorKey({
     ? filterKeys(index.entries, { query, selector, option, review })
     : [];
   return (
-    <section className="instructor-key" aria-label="Protected instructor source archive">
+    <section
+      className="instructor-key"
+      aria-label="Protected instructor source archive"
+    >
       <h2>Instructor source archive</h2>
       <p>
         <strong>NOT_BOUND · archived authored explanations.</strong> These
@@ -146,6 +189,46 @@ export default function InstructorKey({
             Archive: <code>{index.archive.sha256}</code>. Migrated{" "}
             {index.migrated} / required {index.required}.
           </p>
+          <InstructorKeyViews
+            engagement={engagement}
+            viewerId={viewerId}
+            enabled={savedViewsEnabled}
+            kind="ARCHIVE"
+            keyPin={index.archive.sha256}
+            filters={{
+              query,
+              selector,
+              option,
+              review,
+              page,
+              scenario:
+                selected && index.entries.find((x) => x.id === selected)
+                  ? {
+                      id: selected,
+                      key_sha256: index.entries.find((x) => x.id === selected)!
+                        .key_sha256,
+                    }
+                  : null,
+            }}
+            validate={(value) =>
+              validateArchiveFilters(value as ArchiveKeyFilters, index)
+            }
+            onRestore={(value) => {
+              const v = validateArchiveFilters(
+                value as ArchiveKeyFilters,
+                index,
+              );
+              sequence.current++;
+              setLoading(false);
+              setDetail(null);
+              setQuery(v.query);
+              setSelector(v.selector);
+              setOption(v.option);
+              setReview(v.review);
+              setPage(v.page);
+              setSelected(v.scenario?.id ?? "");
+            }}
+          />
           <div className="actions">
             <label>
               Search source ID or review gap

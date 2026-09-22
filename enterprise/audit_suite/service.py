@@ -249,6 +249,16 @@ def create_app(
         release_root.mkdir(mode=0o700, exist_ok=True)
         releases = InstructorReleases(release_root, engine, protected_bindings)
     app.state.instructor_releases = releases
+    key_views = None
+    if protected_bindings or instructor_key_root is not None:
+        from .instructor_key_views import InstructorKeyViews
+
+        key_view_root = engine.store.root / "instructor-key-views"
+        key_view_root.mkdir(mode=0o700, exist_ok=True)
+        key_views = InstructorKeyViews(
+            key_view_root, engine, protected_bindings, archive_root=instructor_key_root
+        )
+    app.state.instructor_key_views = key_views
     app.state.workspace_contexts = contexts
     app.state.personal_views = personal_views
     app.state.investigation_handoffs = handoffs
@@ -358,6 +368,7 @@ def create_app(
             bound_instructor_keys=bool(protected_bindings),
             instructor_releases=releases is not None,
             instructor_debriefs=releases is not None,
+            instructor_key_views=key_views is not None,
             instructor_reference_library=instructor_key_root is not None,
         )
         result["background_command_kinds"] = jobs.supported_commands() if jobs is not None else []
@@ -496,6 +507,41 @@ def create_app(
         limits.check("instructor-comparison", principal["id"], 60)
         return await asyncio.to_thread(
             compare, engine, principal, engagement_id, protected_bindings, revision=revision
+        )
+
+    def key_view_store(request: Request, *, mutation=False):
+        principal = actor(request, mutation=mutation)
+        if key_views is None:
+            raise DomainError("Saved instructor Key views are not configured", status=503)
+        limits.check("instructor-key-views", principal["id"], 120)
+        return principal["id"], key_views
+
+    @app.get("/api/engagements/{engagement_id}/instructor-key-views")
+    async def key_view_list(engagement_id: str, kind: str, request: Request):
+        principal, store = key_view_store(request)
+        if (
+            list(request.query_params.keys()) != ["kind"]
+            or len(request.query_params.getlist("kind")) != 1
+        ):
+            raise DomainError("Choose one saved Key view kind")
+        return await asyncio.to_thread(store.listing, principal, engagement_id, kind)
+
+    @app.post("/api/engagements/{engagement_id}/instructor-key-views")
+    async def key_view_save(engagement_id: str, request: Request):
+        principal, store = key_view_store(request, mutation=True)
+        if request.query_params:
+            raise DomainError("Saved Key views use the current authenticated context")
+        body = await json_body(request)
+        return await asyncio.to_thread(store.save, principal, engagement_id, body)
+
+    @app.post("/api/engagements/{engagement_id}/instructor-key-views/{view_id}/{operation}")
+    async def key_view_action(engagement_id: str, view_id: str, operation: str, request: Request):
+        principal, store = key_view_store(request, mutation=True)
+        if request.query_params or operation not in {"restore", "delete"}:
+            raise DomainError("Invalid saved Key view operation")
+        body = await json_body(request)
+        return await asyncio.to_thread(
+            getattr(store, operation), principal, engagement_id, view_id, body
         )
 
     def release_store(request: Request, *, mutation=False):
