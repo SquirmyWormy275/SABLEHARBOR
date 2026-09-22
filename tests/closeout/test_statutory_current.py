@@ -162,3 +162,27 @@ def test_only_settled_state_tax_reduces_federal_base():
     assert D(row(baseline)["closing_nol_usd"]) == 0
     assert D(row(paid)["closing_nol_usd"]) == 800
     assert D(row(paid)["state_income_tax_paid_deduction_usd"]) == 800
+
+
+def test_acquisition_cost_addback_requires_existing_book_expense():
+    args = list(source())
+    args[-1] = [dict(r) for r in args[-1]]
+    args[-1][0]["signed_usd"] = "899999"
+    with pytest.raises(ValueError, match="Acquisition fee book population"):
+        build(*args)
+
+
+def test_acquisition_basis_successor_preserves_original_allocation():
+    result = build(*source())
+    bridge = result["acquisition_cost_basis"]
+    assert D(bridge["original_tax_goodwill_usd"]) == 13000000
+    assert D(bridge["additional_class_vii_usd"]) == 900000
+    assert D(bridge["book_goodwill_usd"]) == 14762500
+    assert D(bridge["successor_agub_usd"]) - D(bridge["unchanged_classes_i_vi_usd"]) == D(
+        bridge["successor_tax_goodwill_usd"]
+    )
+    assert D(bridge["annual_additional_amortization_usd"]) == 60000
+    assert D(bridge["additional_book_cash_usd"]) == 0
+    assert all(
+        D(r["income_before_nol_usd"]) == 0 for r in result["federal"] if r["taxpayer"] == "SHIH"
+    )
