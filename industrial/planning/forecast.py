@@ -851,6 +851,10 @@ def post_tax(book, state, month, index, source, output):
     )
     taxable = max(taxable_before_nol - utilized, 0)
     current = money(D(taxable) * D(str(policy["rate_pct"])) / 100)
+    override = source.get("company_statutory_current_override")
+    if override is not None:
+        key = f"{book.scenario}/{book.entity}/{book.year}"
+        current = money(D(override["annual_usd"][key]) * month / 12)
     delta = current - state["tax_previous_expense"]
     book.pair(
         month,
@@ -859,7 +863,9 @@ def post_tax(book, state, month, index, source, output):
         delta,
         f"TAX-{book.year}{month:02}",
         "CURRENT_TAX",
-        "Cumulative annual taxable result with explicit NOL utilization ceiling",
+        "Company statutory annual provision installment; native planning tax-base columns are historical comparison only"
+        if override is not None
+        else "Cumulative annual taxable result with explicit NOL utilization ceiling",
     )
     state["tax_previous_expense"] = current
     nol_closing = state["tax_opening_nol"] - utilized + max(-taxable_before_nol, 0)
@@ -1148,10 +1154,27 @@ def capital_schedule(rows, source):
     return plans, projects
 
 
-def build(output=OUT, operating_rows=None, source=None):
+def build(output=OUT, operating_rows=None, source=None, statutory_current_override=None):
     from industrial.planning.transactions import procurement_costs
 
     source = source_data(source)
+    if statutory_current_override is not None:
+        expected = {
+            f"{s}/{e}/{y}"
+            for s in ("base", "downside", "expansion")
+            for e in ("ARU_GROUP", "RWH_PS")
+            for y in range(2027, 2032)
+        }
+        if set(statutory_current_override) != expected:
+            raise ValueError("Incomplete company statutory tax override population")
+        values = {key: D(str(value)) for key, value in statutory_current_override.items()}
+        if any(not value.is_finite() or value < 0 for value in values.values()):
+            raise ValueError("Invalid company statutory tax override amount")
+        source["company_statutory_current_override"] = {
+            "annual_usd": {key: str(value) for key, value in sorted(values.items())},
+            "method": "RECONCILED_STATUTORY_CURRENT_TAX;CUMULATIVE_MONTHLY_ACCRUAL;NATIVE_PAYMENT_PRIORITY_AND_FINITE_FUNDING",
+            "available_not_before": "2026-09-22",
+        }
     rows = prepare_rows(operating_rows, source)
     capital_plans, growth_projects = capital_schedule(rows, source)
     historical = json.loads(OLD_SOURCE.read_text())

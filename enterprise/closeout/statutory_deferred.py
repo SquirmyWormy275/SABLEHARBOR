@@ -34,8 +34,13 @@ def federal_valuation(nol, interest, pool):
 
 def build(result, parent, mine, assets, current, factors):
     balances = defaultdict(lambda: defaultdict(D))
+    seen = set()
     for r in result["legal_trial_balance_rows"]:
         if int(r["month"]) == 12:
+            identity = (r["scenario"], r["entity"], int(r["year"]), r["account"])
+            if identity in seen:
+                raise ValueError("Duplicate deferred legal trial-balance account")
+            seen.add(identity)
             balances[r["scenario"], r["entity"], int(r["year"])][r["account"]] += D(r["signed_usd"])
     required = {
         (s, e, y)
