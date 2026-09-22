@@ -137,7 +137,7 @@ def native(db, ref, at=None):
     return dict(row)
 
 
-def _insert(db, config, system, record, raw, at, command_id):
+def _insert(db, config, system, record, raw, at, command_id, *, source_admission=None):
     require(
         isinstance(raw, bytes) and 0 < len(raw) <= MAX_BYTES,
         "Bounded nonempty source bytes required",
@@ -164,6 +164,9 @@ def _insert(db, config, system, record, raw, at, command_id):
         "declaration": config["declaration_ref"],
         "runtime_id": config["runtime_id"],
     }
+    if source_admission is not None:
+        require(isinstance(source_admission, dict), "Typed source admission required")
+        provenance["source_admission"] = source_admission
     content_sha = sha(raw)
     fingerprint = sha(
         _json([key, prior, at, at, "AUTHORED_TRAINING_SOURCE", provenance, content_sha]).encode()
