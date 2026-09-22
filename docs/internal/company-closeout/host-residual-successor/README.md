@@ -24,7 +24,7 @@ The complete represented escrow/holdback population is three records totaling $6
 
 - Red Wash $3M escrow: a future 36-month release condition, not a missed current payment. Groundwater/Cell 1 and predecessor-title concerns can remain open without preventing inspection.
 - Red Wash $500k holdback: an authentic unresolved deliverable condition. To assert release entitlement, the reviewer still needs the precise deliverable, supporting evidence and authorized determination. No arbitrary new deadline or cure is inserted.
-- ARU $3M escrow: futureJuly7, 2027 release subject to claims. Five-year environmental survival is separate. The existing $600k closing claim and potential covered adverse development do not automatically establish an indemnity receivable or entitlement to all escrow cash.
+- ARU $3M escrow: future July 7, 2027 release subject to claims. Five-year environmental survival is separate. The existing $600k closing claim and potential covered adverse development do not automatically establish an indemnity receivable or entitlement to all escrow cash.
 
 The Red Wash instrument requires a claim notice, factual basis, estimated amount and supporting evidence. Missing claim merits affect a specific recovery/cure claim; they do not require making the fiction failure-free. Full legal enforceability, adequacy of coverage, unconditional release or recovered-loss recognition remain outside the supported claim. No escrow administrator response is invented here.
 
