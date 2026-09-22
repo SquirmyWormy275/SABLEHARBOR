@@ -17,12 +17,12 @@ def test_complete_current_population_and_august_bridge():
 
 def test_due_partition_avoids_duplicate_penalty_base():
     r=build()
-    assert r['totals']=={'principal_usd':'1243161.07','due_principal_usd':'1147309.29','late_payment_usd':'98129.14','late_filing_usd':'1750.00','interest_usd':'24302.73'}
+    assert r['totals']=={'principal_usd':'1243161.07','due_principal_usd':'1147309.29','late_payment_usd':'109190.92','late_filing_usd':'1750.00','interest_usd':'30143.36'}
     august=[x for x in r['duties'] if x['month']==8]
     assert sum(D(x['principal_usd']) for x in august if x['form']=='RR-3')==D('71847.16')
     assert august[-1]['due_on']=='2026-09-21' and august[-1]['state']=='FUTURE_DUE'
     assert august[-1]['late_payment_usd']=='0.00'
-    assert all(D(x['principal_usd'])==0 for x in r['duties'] if x['month']<8 and x['form']=='RR-3')
+    assert all(D(x['principal_usd'])>0 and x['installment_method']=='OPTION_1_CURRENT_MONTH' for x in r['duties'] if x['month']<8 and x['form']=='RR-3')
 
 
 def test_future_projection_requires_explicit_rate():

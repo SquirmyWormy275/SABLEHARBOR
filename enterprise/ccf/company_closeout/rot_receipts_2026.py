@@ -100,7 +100,10 @@ def build(cutoff='2026-09-14', *, planning_interest_rate=None):
         month=row['month']
         liability=D(row['receipt_tax_usd'])
         prior=sum(D(r['receipt_rot_usd']) for r in historical if r['month']==month and r['utility_own_use'])
-        installment=money(prior/D(4))
+        # Ownership changed July18,2025; that does not establish preclose zero tax.
+        # Use permitted current-month method until a complete prior month exists.
+        method = 'OPTION_1_CURRENT_MONTH' if month <= 7 else 'OPTION_2_COMPLETE_PRIOR_MONTH'
+        installment=money(liability*D('.225')) if month<=7 else money(prior/D(4))
         parts=[(business_day(date(2026,month,day)), min(installment,max(liability-installment*i,D(0))), 'RR-3') for i,day in enumerate((7,15,22,calendar.monthrange(2026,month)[1]))]
         monthly_due=business_day(date(2026,month+1,20))
         parts.append((monthly_due,liability-sum(p[1] for p in parts),'ST-1-REMAINDER'))
@@ -112,6 +115,6 @@ def build(cutoff='2026-09-14', *, planning_interest_rate=None):
                 elapsed=max(0,(min(end,date(year,12,31))-max(due,date(year-1,12,31))).days)
                 interest+=principal*(D('.07') if year<=2026 else future)*elapsed/D(366 if calendar.isleap(year) else 365)
             filing=money(min(D(250),liability*D('.02'))) if form=='ST-1-REMAINDER' and end>monthly_due else D(0)
-            duties.append(dict(duty_id=f'SH-RWH-ROT-DUE-2026{month:02d}-{index}',month=month,form=form,due_on=due.isoformat(),principal_usd=str(principal),due_principal_usd=str(principal if end>=due else D(0)),late_payment_usd=str(penalty),late_filing_usd=str(filing),interest_usd=str(money(interest)),cash_paid_usd='0',state='DUE_UNPAID' if end>=due else 'FUTURE_DUE'))
+            duties.append(dict(duty_id=f'SH-RWH-ROT-DUE-2026{month:02d}-{index}',month=month,form=form,installment_method=method,due_on=due.isoformat(),principal_usd=str(principal),due_principal_usd=str(principal if end>=due else D(0)),late_payment_usd=str(penalty),late_filing_usd=str(filing),interest_usd=str(money(interest)),cash_paid_usd='0',state='DUE_UNPAID' if end>=due else 'FUTURE_DUE'))
     totals={f:str(sum(D(r[f]) for r in duties)) for f in ('principal_usd','due_principal_usd','late_payment_usd','late_filing_usd','interest_usd')}
     return dict(authored_on='2026-09-22',cutoff=cutoff,scope='JAN_AUG_2026_RECEIPTS_ONLY;NO_ADDITIONAL_TAX_EXPENSE_OR_CASH',receipts=receipts,monthly=monthly,duties=duties,totals=totals)
