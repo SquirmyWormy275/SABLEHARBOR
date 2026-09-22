@@ -14,7 +14,9 @@
   "availability": "No earlier than the actual clean source commit; approval utterance time is not inferred from authorship",
   "proposal": {
     "path": "docs/internal/company-closeout/host-residual-successor/TERMS_PROPOSAL.md",
-    "sha256": "f39d63633379369c34dc5941f11efcd44024f9da1a799dfb26e693a3470a604c"
+    "sha256": "59ac337adc9db12d8426c69b536f53609bd2b8351fbde462799eef0ecf651c67",
+    "prior_draft_sha256": "f39d63633379369c34dc5941f11efcd44024f9da1a799dfb26e693a3470a604c",
+    "integration_note": "Pins owner-linked integrated proposal from PR169; prior draft differs only by spaces in end September 30 and Existing $18,500. No substantive term changed."
   },
   "supersession": "Prospective duration, exclusivity, exit and common terms only. Does not amend historical August performance or establish missing historical term endpoints.",
   "common_terms": {

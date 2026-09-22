@@ -15,3 +15,5 @@ The structured source pins the exact reviewed proposal. All eight common terms a
 `ruff check --config 'include=["*.py"]' --select E4,E7,E9,F,I enterprise/ccf/company_closeout/host_terms.py tests/ccf/test_host_terms_adoption.py` — passed after import sorting.
 
 `git diff --check` — passed. No frozen source, publication, catalog or existing register changed. Full maintainer/catalog/publication checks remain integration-owner work on the final accepted successor.
+
+Date-only work orders in this bounded validation contract start at 00:00 UTC. Received acceptance must be no later than that boundary; a same-day late receipt is rejected. This is a conservative software boundary for the empty prospective order register, not evidence of an actual order or approval.

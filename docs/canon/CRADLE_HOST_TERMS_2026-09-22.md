@@ -1,6 +1,6 @@
 # Cradle host terms — approved alternative B
 
-**Record:** SH-HOST-B-ADOPTION-20260922. **Prepared:** September 22, 2026. **Canon state:** PROVISIONAL pending repository acceptance; conversation authority is OWNER_APPROVED_DIRECTION.
+**Record:** SH-HOST-B-ADOPTION-20260922. **Prepared:** September 22, 2026. **State:** OWNER_APPROVED_DIRECTION; LOCKED within the stated scope on repository acceptance. Conversation authority is not yet repository acceptance.
 
 The owner reviewed the complete prospective host question/proposal and replied: **“Adopt B and its common terms”.** No exact utterance timestamp was supplied. The structured [adoption and execution source](../../enterprise/ccf/company_closeout/source/host_terms_adoption.json) pins the reviewed proposal bytes. This records the decision and its delegated fictional implementation; repository acceptance, source availability and prospective activation remain distinct.
 
