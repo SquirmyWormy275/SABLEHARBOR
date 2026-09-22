@@ -32,7 +32,14 @@ def pin(root, paths):
     return result
 
 
-def generate(root: Path, available_at: str, version: str, accepted=False):
+def generate(
+    root: Path,
+    available_at: str,
+    version: str,
+    accepted=False,
+    acceptance_pr=None,
+    adoption_path=None,
+):
     timestamp(available_at)
     revision = subprocess.check_output(
         ["git", "-C", str(root), "rev-parse", "HEAD"], text=True
@@ -109,7 +116,7 @@ def generate(root: Path, available_at: str, version: str, accepted=False):
     for cid, role, definition, members in [
         (
             "repository-source",
-            "ACCEPTED_SOURCE" if accepted else "NEWLY_AUTHORED_SYNTHETIC_HISTORY",
+            "MIXED_SOURCE_ARCHIVE",
             "Exact tracked public repository snapshot except inventoried historical ZIP packages. "
             "Includes controlling and superseded sources, code, schemas, publications, "
             "catalogs and "
@@ -187,6 +194,14 @@ def generate(root: Path, available_at: str, version: str, accepted=False):
         "required_components": [c["id"] for c in components],
         "components": components,
     }
+    if accepted:
+        from .acceptance import collect
+
+        if acceptance_pr is None or adoption_path is None:
+            raise EditionError("Accepted edition requires merged PR and scoped adoption source")
+        contract["acceptance_receipt"] = collect(root, revision, acceptance_pr, adoption_path)
+    elif acceptance_pr is not None or adoption_path is not None:
+        raise EditionError("Review candidate cannot assert repository acceptance")
     validate_contract(contract)
     return contract
 
@@ -197,11 +212,20 @@ if __name__ == "__main__":
     parser.add_argument("--available-at", required=True)
     parser.add_argument("--version", required=True)
     parser.add_argument("--accepted", action="store_true")
+    parser.add_argument("--acceptance-pr", type=int)
+    parser.add_argument("--adoption-path")
     parser.add_argument("--output", required=True, type=Path)
     args = parser.parse_args()
     if args.output.exists():
         raise EditionError("New immutable contract filename required")
-    contract = generate(args.root.resolve(), args.available_at, args.version, args.accepted)
+    contract = generate(
+        args.root.resolve(),
+        args.available_at,
+        args.version,
+        args.accepted,
+        args.acceptance_pr,
+        args.adoption_path,
+    )
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_bytes(encoded(contract))
     print(

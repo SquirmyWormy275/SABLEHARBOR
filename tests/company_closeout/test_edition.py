@@ -154,6 +154,30 @@ def test_archive_rejects_unmanifested_or_linked_material(source, tmp_path, extra
 def test_accepted_claim_rejects_dirty_source(source, tmp_path):
     root, path, contract = source
     contract["status"] = "ACCEPTED_SCOPED_EDITION"
+    revision = subprocess.check_output(
+        ["git", "-C", str(root), "rev-parse", "HEAD"], text=True
+    ).strip()
+    scope = dict(
+        status="LOCKED_ON_REPOSITORY_ACCEPTANCE",
+        adopted_sources=[dict(contract["components"][0]["members"][0], scope="Selected rows")],
+        preserved_states=["Fictional failures remain failed"],
+        work_packages=[dict(id=f"SH-C{i:02d}") for i in range(1, 11)],
+    )
+    (root / "scope.json").write_bytes(encoded(scope))
+    scope_hash = sha((root / "scope.json").read_bytes())
+    contract["components"][0]["members"].append(dict(path="scope.json", sha256=scope_hash))
+    contract["source_commit_required"] = revision
+    contract["acceptance_receipt"] = dict(
+        source_commit=revision,
+        merge_commit=revision,
+        pr_number=166,
+        pr_url="https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166",
+        accepted_at="2026-09-14T00:00:00Z",
+        observed_at="2026-09-15T00:00:00Z",
+        adoption_path="scope.json",
+        adoption_sha256=scope_hash,
+        **{k: scope[k] for k in ("adopted_sources", "preserved_states", "work_packages")},
+    )
     path.write_bytes(encoded(contract))
     with pytest.raises(EditionError, match="clean"):
         build(root, path, tmp_path / "result")

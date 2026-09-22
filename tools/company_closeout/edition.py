@@ -51,6 +51,7 @@ def validate_contract(contract: dict) -> None:
         seen.add(item["id"])
         if item["fact_status"] not in {
             "ACCEPTED_SOURCE",
+            "MIXED_SOURCE_ARCHIVE",
             "CONDITIONAL_FORECAST",
             "NEWLY_AUTHORED_SYNTHETIC_HISTORY",
             "REFERENCE_SOFTWARE_EXERCISE",
@@ -75,6 +76,9 @@ def validate_contract(contract: dict) -> None:
                 raise EditionError("Exact source pin required")
     if seen != set(contract["required_components"]):
         raise EditionError("Omitted or additional declared component population")
+    from .acceptance import validate
+
+    validate(contract)
 
 
 def build(root: Path, contract_path: Path, destination: Path) -> dict:
@@ -111,6 +115,10 @@ def build(root: Path, contract_path: Path, destination: Path) -> dict:
     )
     if contract["status"] == "ACCEPTED_SCOPED_EDITION" and dirty:
         raise EditionError("Accepted edition requires a clean source checkout")
+    if contract["status"] == "ACCEPTED_SCOPED_EDITION":
+        from .acceptance import verify_live
+
+        verify_live(contract, root)
     receipt = {
         "schema_version": "1.0.0",
         "edition_id": contract["edition_id"],
@@ -181,6 +189,9 @@ def verify(directory: Path) -> dict:
         data = p.read_bytes()
         if len(data) != member["bytes"] or sha(data) != member["sha256"]:
             raise EditionError("Payload changed")
+    from .acceptance import verify_packaged_scope
+
+    verify_packaged_scope(contract, directory / "content")
     return {"result": "PASS", "members": len(actual), "components": len(contract["components"])}
 
 
