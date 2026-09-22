@@ -105,11 +105,22 @@ def build(output, fin, op, legacy, operating, policy, adjustment):
     raise ValueError("Statutory cash/payment feedback did not converge in eight iterations")
 
 
+def serializable(value):
+    if isinstance(value, dict):
+        return {
+            "/".join(map(str, k)) if isinstance(k, tuple) else str(k): serializable(v)
+            for k, v in value.items()
+        }
+    if isinstance(value, (list, tuple)):
+        return [serializable(v) for v in value]
+    return str(value) if isinstance(value, D) else value
+
+
 def export(output, workpapers, posting):
     """Keep computations, native settlement evidence and requested cash distinct."""
     for name, value in workpapers.items():
         (output / f"statutory_{name}.json").write_text(
-            json.dumps(value, indent=2, default=str) + "\n"
+            json.dumps(serializable(value), indent=2) + "\n"
         )
         if isinstance(value, list):
             enterprise.write_csv(output / f"statutory_{name}.csv", value)
