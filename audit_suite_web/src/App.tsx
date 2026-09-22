@@ -1942,6 +1942,24 @@ export default function App() {
                           <SourceImpact
                             key={e.id + ":impact"}
                             engagement={e}
+                            viewerId={bootstrap.viewer.id}
+                            dispositionsEnabled={
+                              bootstrap.capabilities
+                                .source_impact_dispositions === true
+                            }
+                            onState={(next) => {
+                              if (
+                                renderEpoch === navigationEpoch.current &&
+                                next.id === e.id
+                              )
+                                setEngagement((current) =>
+                                  current &&
+                                  current.id === next.id &&
+                                  current.revision <= next.revision
+                                    ? normalize(next)
+                                    : current,
+                                );
+                            }}
                             onPreview={(kind, row, reference) =>
                               setDetail({
                                 kind,
@@ -2623,8 +2641,12 @@ export default function App() {
                   {e.permissions?.includes("instruct") &&
                     bootstrap.capabilities.bound_instructor_keys && (
                       <BoundInstructorKey
-                        assessmentsEnabled={bootstrap.capabilities.instructor_assessments === true}
-                        savedViewsEnabled={bootstrap.capabilities.instructor_key_views === true}
+                        assessmentsEnabled={
+                          bootstrap.capabilities.instructor_assessments === true
+                        }
+                        savedViewsEnabled={
+                          bootstrap.capabilities.instructor_key_views === true
+                        }
                         engagement={e}
                         viewerId={bootstrap.viewer.id}
                         onPreview={(artifact) => {
@@ -2690,7 +2712,9 @@ export default function App() {
                       ) && (
                         <InstructorKey
                           viewerId={bootstrap.viewer.id}
-                          savedViewsEnabled={bootstrap.capabilities.instructor_key_views === true}
+                          savedViewsEnabled={
+                            bootstrap.capabilities.instructor_key_views === true
+                          }
                           key={bootstrap.viewer.id + ":" + e.id}
                           engagement={e}
                         />

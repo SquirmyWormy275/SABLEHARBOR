@@ -52,6 +52,7 @@ COLLECTIONS = (
     "populations",
     "selections",
     "sample_executions",
+    "source_impact_dispositions",
     "calendar",
     "findings",
     "workpapers",
@@ -234,6 +235,8 @@ class Engine:
             "company_source_census": self.company_store is not None,
             "company_populations": self.company_store is not None
             and getattr(self.company_store, "capabilities", {}).get("company_populations", True),
+            "source_impact_dispositions": self.company_store is not None
+            and getattr(self.company_store, "capabilities", {}).get("source_impact", True),
             "company_source_impact": self.company_store is not None
             and getattr(self.company_store, "capabilities", {}).get("source_impact", True),
             "custom_authoring": inference_config is not None,
@@ -530,6 +533,9 @@ class Engine:
                 "parent_support",
             ):
                 request.pop(key, None)
+        from .source_impact_disposition import project as project_dispositions
+
+        state["source_impact_dispositions"] = project_dispositions(state, self)
         from .sample_execution import input_pins
 
         state["sample_execution_inputs"] = input_pins(state)
@@ -572,7 +578,15 @@ class Engine:
             permissions = {"learn", "review", "instruct"}
         replay = self.store.preflight(actor, engagement_id, command, permissions=permissions)
         if replay is not None:
-            return self._project(actor, replay)
+            result = self._project(actor, replay)
+            if command["kind"] == "source.impact.disposition.record":
+                from .source_impact_disposition import project as project_dispositions
+
+                current = self.get(actor, engagement_id)
+                result["source_impact_dispositions"] = project_dispositions(
+                    replay, self, current_context=current
+                )
+            return result
         inference_result = None
         if kind in {"meeting.message", "review.prepare", "review.experimental"} or kind.startswith(
             "scenario.custom."
@@ -678,6 +692,10 @@ class Engine:
             from .company_collection import collect
 
             collect(self, state, p, stamped, command["command_id"])
+        elif kind == "source.impact.disposition.record":
+            from .source_impact_disposition import handle as handle_disposition
+
+            handle_disposition(self, state, p, stamped)
         elif kind in {"sample.execution.record", "sample.execution.correct"}:
             from .sample_execution import handle as handle_sample_execution
 

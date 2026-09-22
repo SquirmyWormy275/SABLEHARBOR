@@ -199,6 +199,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Local quarterly risk-input assessment](../../../enterprise/audit_suite/RISK_ASSESSMENT_ACTIVITY.md) — MD
 - [Explicit sampled-item procedure trace](../../../enterprise/audit_suite/SAMPLE_EXECUTION.md) — MD
 - [Persistent local security-event intake](../../../enterprise/audit_suite/SECURITY_EVENT_RUNTIME.md) — MD
+- [Explicit source-impact reassessment dispositions](../../../enterprise/audit_suite/SOURCE_IMPACT_DISPOSITIONS.md) — MD
 - [Exact recorded source-impact relationships](../../../enterprise/audit_suite/SOURCE_IMPACT_REFERENCES.md) — MD
 - [Local role-based training source pair](../../../enterprise/audit_suite/TRAINING_ACTIVITY.md) — MD
 - [Private reasoned work guidance](../../../enterprise/audit_suite/WORK_GUIDANCE.md) — MD

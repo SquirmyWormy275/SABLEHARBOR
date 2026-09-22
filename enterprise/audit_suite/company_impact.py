@@ -322,11 +322,19 @@ def references(state, artifact_id):
     return result
 
 
-def report(engine, actor_id, engagement_id):
+def report(engine, actor_id, engagement_id, *, artifact_id=None):
     """Compare exact retained originals with later observed versions, per source only."""
     from .store import DomainError
 
     state = engine.store.get(actor_id, engagement_id)
+    if artifact_id is not None:
+        matches = [
+            a
+            for a in state.get("artifacts", [])
+            if a.get("id") == artifact_id and a.get("audience", "LEARNER") == "LEARNER"
+        ]
+        if not isinstance(artifact_id, str) or len(matches) != 1:
+            raise DomainError("Selected retained original unavailable", status=404)
     bound = dict(binding(engine, state))
     federated = getattr(engine.company_store, "is_federated", False)
     started_at = datetime.now(UTC).isoformat()
@@ -346,6 +354,8 @@ def report(engine, actor_id, engagement_id):
         )
 
     for artifact in state.get("artifacts", []):
+        if artifact_id is not None and artifact["id"] != artifact_id:
+            continue
         source = artifact.get("source", {})
         if source.get("kind") != "COLLECTED_COMPANY_SOURCE":
             continue

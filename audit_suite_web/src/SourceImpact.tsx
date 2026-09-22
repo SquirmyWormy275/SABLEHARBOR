@@ -1,3 +1,6 @@
+import SourceImpactDisposition, {
+  SourceImpactDispositionHistory,
+} from "./SourceImpactDisposition";
 import {
   impactContext,
   impactReference,
@@ -10,8 +13,14 @@ import { request, str, type Engagement, type Row } from "./api";
 export default function SourceImpact({
   engagement: e,
   onPreview,
+  viewerId = "",
+  dispositionsEnabled = false,
+  onState,
 }: {
   engagement: Engagement;
+  viewerId?: string;
+  dispositionsEnabled?: boolean;
+  onState?: (state: Engagement) => void;
   onPreview: (kind: string, row: Row, reference?: Row) => void;
 }) {
   const [stored, setStored] = useState<{
@@ -129,6 +138,10 @@ export default function SourceImpact({
         {busy ? "Checking source versions…" : "Check source changes"}
       </button>
       {error && <p role="alert">{error}</p>}
+      <SourceImpactDispositionHistory
+        engagement={e}
+        enabled={dispositionsEnabled}
+      />
       {result && (
         <>
           <p>
@@ -212,6 +225,15 @@ export default function SourceImpact({
                       </ul>
                     </div>
                   )}
+                {onState && (
+                  <SourceImpactDisposition
+                    engagement={e}
+                    viewerId={viewerId}
+                    artifactId={str(r.artifact_id)}
+                    enabled={dispositionsEnabled}
+                    onState={onState}
+                  />
+                )}
                 <p>
                   Review these directly linked records before deciding whether
                   further work is needed:

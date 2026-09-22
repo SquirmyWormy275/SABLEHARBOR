@@ -825,3 +825,19 @@ metadata digest and physical routing identity. Original bytes, typed dependency,
 consumer command and revision commit together. Explicit replay rechecks both
 producer and consumer originals and the retained receipt. It creates no audit
 artifact or source grant; collection remains a separate authorized audit action.
+
+
+### Explicit source-change reassessment
+
+[Source-impact dispositions](../../../../enterprise/audit_suite/SOURCE_IMPACT_DISPOSITIONS.md)
+record a deliberate acknowledgment, reassessment need, selected-work exclusion or
+link to existing follow-up work. The author selects the exact retained original,
+workpaper version, sampled-item observation or other recorded impact reference.
+Current source/context and work pins are checked again before an ordinary audit
+command appends the decision. Corrections require the exact predecessor and retain
+all previous decisions. Original test results and retained source bytes do not
+change. The interface requires an explicit comparison and selection, preserves
+ambiguous transport retries, and labels recorded history separately from a fresh
+source check. Changed source/scope or unavailable exact targets redact historical
+content. HTTP, native-source and browser checks cover these boundaries; integrated
+workflow and human usability acceptance remain separate.

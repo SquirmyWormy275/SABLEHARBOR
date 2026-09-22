@@ -726,6 +726,22 @@ def create_app(
 
         return await asyncio.to_thread(report, engine, principal["id"], engagement_id)
 
+    @app.get("/api/engagements/{engagement_id}/company/impact/disposition-inputs")
+    async def source_impact_disposition_inputs(engagement_id: str, request: Request):
+        principal = actor(request)
+        if (
+            set(request.query_params) != {"artifact_id"}
+            or len(request.query_params.getlist("artifact_id")) != 1
+            or not request.query_params["artifact_id"].strip()
+        ):
+            raise DomainError("Choose one retained source artifact")
+        limits.check("source-impact-disposition", principal["id"], 60)
+        from .source_impact_disposition import inputs
+
+        return await asyncio.to_thread(
+            inputs, engine, principal["id"], engagement_id, request.query_params["artifact_id"]
+        )
+
     @app.get("/api/engagements/{engagement_id}/company/systems")
     async def company_systems(engagement_id: str, request: Request):
         from .company_collection import binding
