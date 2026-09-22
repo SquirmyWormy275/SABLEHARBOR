@@ -40,3 +40,9 @@ def test_calendar_dates_and_performance():
     assert all(r['payment_cash_posted_usd'] == '0' for r in rows)
     assert not any(r['entity'] == 'RWH' and r['form'].startswith('IL-1120') for r in rows)
     assert business_day(date(2026, 9, 7)) == date(2026, 9, 8)
+
+
+def test_registration_after_actual_mine_closing():
+    source = json.loads(SOURCE.read_text())
+    assert source["accounts"][0]["registration_effective"] == "2025-07-19"
+    assert source["corrected_at"] == "2026-09-22T06:14:19Z"

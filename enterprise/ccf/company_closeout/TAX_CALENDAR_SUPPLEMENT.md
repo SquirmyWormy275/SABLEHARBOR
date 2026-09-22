@@ -25,3 +25,7 @@ The historical lookback and account/notice precision are now supplied. Exact acc
 ## Validation and limits
 
 Five tests independently check sales/collections/closingAR, duplicate/changed histories, tax computation, exact unique obligation population, weekend/holiday roll and distinct future/performance states. `tax_calendar_reperformance.json` retains totals. Final package imports should call the generator, not treat this receipt as current after source changes. Taxable bases, payments, penalties and accepted release integration remain finance/integration responsibilities.
+
+## Dated timing correction
+
+Correction recorded2026-09-22T06:14:19Z (September21 LosAngeles): the original source usedJuly8 registration after an erroneousJuly7 mine closing. Accepted RWH closing isJuly18,2025; modeled account registration is corrected toJuly19 and July sales occur only on/afterJuly18. No sales, collections or tax totals change. This later correction is not earlier-available evidence.

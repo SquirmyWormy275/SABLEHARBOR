@@ -1,6 +1,6 @@
 {
   "document_id": "SH-C05-TAX-CALENDAR-SUPPLEMENT-20260915",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "acceptance_state": "PENDING_REPOSITORY_ACCEPTANCE",
   "origin": "NEWLY_AUTHORED_SYNTHETIC_ADMINISTRATIVE_HISTORY_NOT_REAL_TAX_AGENCY_EVIDENCE",
   "event_cutoff": "2026-09-14",
@@ -38,13 +38,13 @@
       "receipts_usd": "1800000"
     }
   ],
-  "historical_scope": "Newly authored H2 monthly schedule within source12.6M sales/8.6M receipts/4MclosingAR; no new sale/cash. Four2026contract valueweights are explicit historical allocation precision, not recovered2025 customer invoices. No trader certificate inferred. July sales occurafterJul7close; receiver jurisdiction retained Metropolis outside businessdistrict, no newsite/operator.",
+  "historical_scope": "Newly authored H2 monthly schedule within source12.6M sales/8.6M receipts/4MclosingAR; no new sale/cash. Four2026contract valueweights are explicit historical allocation precision, not recovered2025 customer invoices. No trader certificate inferred. July sales occurafterJul18close; receiver jurisdiction retained Metropolis outside businessdistrict, no newsite/operator.",
   "accounts": [
     {
       "account_id": "SYN-TAX-RWH-IL-ROT",
       "entity": "RWH",
       "tax_type": "ROT",
-      "registration_effective": "2025-07-08",
+      "registration_effective": "2025-07-19",
       "state": "AUTHORED_MODELED_ACCOUNT_REGISTRATION",
       "filing_frequency": "MONTHLY",
       "source_boundary": "Postclosing account administration; no assertion about previous operator filing",
@@ -82,5 +82,7 @@
   "authority_accessed_on": "2026-09-15",
   "rate_conclusion": "H22025 ordinaryMetropolis6.25% inferred from primaryJuly2026before-rate6.25% and interveningJuly2025/January2026change schedules; businessdistrict expresslyexcluded. July2026increase7.25% doesnotbackapply.",
   "payroll_boundary": "People/finance retain federal/state payroll deposit liabilities/calendar; this source doesnot classify Julybonus levy as corporate incomeestimate.",
-  "settlement_boundary": "No remittance or agency acceptance invented; pastdueunpaid taxes remainfailure. Treasury amount/payment journals must come from finance, not thiscalendar. No 2026 accepted invoice receiptdates changed."
+  "settlement_boundary": "No remittance or agency acceptance invented; pastdueunpaid taxes remainfailure. Treasury amount/payment journals must come from finance, not thiscalendar. No 2026 accepted invoice receiptdates changed.",
+  "corrected_at": "2026-09-22T06:14:19Z",
+  "correction": "Correct post-acquisition account date fromJuly8 toJuly19; acceptedRWHclosingJuly18, distinctARUJanuary7. Originalauthorshipdate retained as history; correctionnotavailablebeforecorrected_at."
 }
