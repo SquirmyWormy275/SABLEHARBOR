@@ -12,6 +12,7 @@ from urllib.parse import unquote, urlsplit
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import fitz
 from dependency_successors import accepted_dependency_successor
+from toolchain_successor import historical_toolchain_successor
 from formatting import cell as display_cell
 from formatting import heading as display_heading
 from markdown_it import MarkdownIt
@@ -130,11 +131,15 @@ def validate():
             successor = None
             if not matches and document_id is not None:
                 successor = accepted_dependency_successor(ROOT, document_id, item)
+            if not matches and successor is None and any(
+                item is original_input for original_input in manifest['inputs']
+            ):
+                successor = historical_toolchain_successor(ROOT, item)
             check(matches or successor is not None, f'Stale {item["path"]}')
             if successor:
                 print(
                     f'DEPENDENCY SUCCESSOR {successor}: {document_id}; '
-                    'historical pin retained; accepted current source audited'
+                    'historical pin retained; exact current dependency successor verified'
                 )
     for path in [HERE/'review.html', *sorted((HERE/'editions').glob('*.html'))]:
         parser = HTML()

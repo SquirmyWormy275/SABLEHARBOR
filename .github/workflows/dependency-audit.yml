@@ -4,7 +4,7 @@ on:
     paths:
       - pyproject.toml
       - uv.lock
-      - '**/requirements.txt'
+      - '**/*requirements*.txt'
       - .github/workflows/dependency-audit.yml
   workflow_dispatch:
 permissions:
@@ -33,7 +33,11 @@ jobs:
             tools/reader/requirements.txt \
             tools/organization/requirements.txt \
             geospatial/requirements.txt \
-            docs/legal/full-text/requirements.txt
+            docs/legal/full-text/requirements.txt \
+            tools/wiki/requirements.txt \
+            tools/wiki/visual/requirements.txt \
+            tools/legal_gaps/requirements-review.txt \
+            tools/documents/reader-preview-requirements.txt
           do
             audit_name="${requirements//\//_}"
             printf '%s\n' "$requirements" > "requirements-audits/$audit_name.source.txt"
