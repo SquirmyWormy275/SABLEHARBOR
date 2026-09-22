@@ -1159,3 +1159,32 @@ unfinished. Existing workflow software and receipts are reused. Partial technica
 observations are being reconciled to exact authored procedures for explicit,
 evidence-supported task updates; the earlier helper-level task freeze is not a
 permanent prohibition on supported simulated conclusions.
+
+## Paired integration and substantive reconciliation
+
+The consolidated paired technical journey now covers independent company file
+operations, ordinary collection, explicit inspections, provisional sampling,
+manual partial conclusions, a separate reviewer, historical workpaper restore,
+private handoff/checkpoint, protected assessment and selected debrief export.
+Its 36 scripted audit commands and 12 native operations are distinct from the
+58 measured browser actions and 70 responses. Six additional protected-route
+denials passed. A reproduced asynchronous saved-view focus defect was fixed;
+closing the restored preview now returns focus to its initiating button in both
+paired workrooms. This remains automated technical evidence, not owner feedback.
+
+Separately, 29 reviewed ordinary task updates now record performed subsets as
+IN_PROGRESS/LIMITATION across six existing workrooms. Independent verification
+checked exact historical transitions, retained originals, roles and all 60 source
+stores. The other task instances were not automatically concluded. Additional
+report reconciliation, design inspection and exact conditional-duty reasoning
+remain substantive work; a generic unperformed label is not an owner blocker.
+
+The selected-source period refresh verified 1,518 artifact references, 1,136
+distinct native identity pins and 1,385 retained paths. It preserves documentary
+origins, unavailable support and unknown dates. These counts and event extents
+do not establish a corporate population or continuous operating coverage.
+
+The frozen `3f4ca8f9` repository suite passed 2,086 tests with three skips. Newer
+recorded-inspection and focus changes have separate focused and actual browser
+checks; they are not attributed to that earlier full-suite result. Exact private
+receipts and preserved failed attempts remain indexed in the execution checkpoint.
