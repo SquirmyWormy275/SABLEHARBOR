@@ -20,6 +20,8 @@ jobs:
       - run: uv run python scripts/validate_repository_hygiene.py
       - run: uv run python tools/documents/approval_guard.py
       - run: uv run python scripts/check_public_safety.py
+      - name: Install PDF inspection dependency
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
       - name: Required organization, brand and company source checks
         run: |
           uv run python scripts/validate_governance_j2.py

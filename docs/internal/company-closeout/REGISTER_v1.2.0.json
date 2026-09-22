@@ -412,7 +412,8 @@
         "docs/internal/company-closeout/REFERENCE_RESTORE_RECEIPT.json",
         "docs/internal/company-closeout/final-completion-2026-09-22/RUNTIME_DEPENDENCY.json",
         "docs/internal/company-closeout/final-completion-2026-09-22/WORKING_COPY_RESTORE_RECEIPT.json",
-        "docs/j2/alexandria/COMPANY_INFORMATION_POLICY_IMPLEMENTATION_2026-09-22.md"
+        "docs/j2/alexandria/COMPANY_INFORMATION_POLICY_IMPLEMENTATION_2026-09-22.md",
+        "enterprise/ccf/company_closeout/workspace_artifact.py"
       ],
       "affected_paths": [
         "docs/internal/company-closeout/PORTAL_CONTRACT.md",
@@ -434,7 +435,8 @@
         "docs/internal/company-closeout/final-completion-2026-09-22/RUNTIME_DEPENDENCY.json",
         "docs/internal/company-closeout/final-completion-2026-09-22/WORKING_COPY_RESTORE_RECEIPT.json",
         "docs/j2/alexandria/COMPANY_INFORMATION_POLICY_IMPLEMENTATION_2026-09-22.md",
-        "docs/releases/COMPANY_EDITION_RELEASES.md"
+        "docs/releases/COMPANY_EDITION_RELEASES.md",
+        "docs/internal/company-closeout/workspace-artifact-2026-09-22/RECEIPT.json"
       ],
       "commands_results": [
         {
@@ -443,19 +445,14 @@
         }
       ],
       "reconciliation_totals": {
-        "pinned_portal_neutral_tests_passed": 36,
-        "candidate_original_files": 5689,
-        "candidate_transport_records": 5746,
-        "selected_material_review_originals": 7
+        "final_counts": "Actual accepted-edition original/transport/table counts recorded in Release receipts; earlier5689/5746candidate counts are historical only."
       },
       "limitations": [
         "Synthetic authored/reconstructed evidence; no actual external filing, bank confirmation or professional opinion. Final accepted-revision validation and delivery are evidenced by the indexed Release receipt.",
-        "Native company-record hold/disposal reconciliation after an older portal restore remains unimplemented. Reference hold/deletion suppression and portal credential/session recovery are separate evidence.",
-        "Full search/snippet/citation/count/graph/tool/memory/export and model-inference census is unexercised beyond named tested endpoints. Thirteen external readiness gates remain unchanged.",
-        "Pinned neutral portal run passed 36 tests. Full-edition selected material rehearsal is separately identified in final Release evidence; no active portal worktree or private data was changed."
+        "Declared local working-copy lifecycle and mediated disclosure surfaces are exercised; complete live Alexandria, actual model inference, authoritative-original destruction and thirteen external readiness gates are outside this finite runtime claim."
       ],
       "next_owner": "Integration owner for successor acceptance, common-head reproduction and release; exact residual owners retain stated claims.",
-      "current_disposition": "Bounded local inspection policy, human-review/retention/export boundaries and actual oldbackup/current-state replay exercised. Two deleted copies suppressed, held content private, revoked grants denied across declared surfaces. Controlled exact-runtime archive makes repetition portable. No live service, physical estate, universal lifecycle or actual model-inference claim."
+      "current_disposition": "Bounded local inspection policy, human-review/retention/export boundaries and actual oldbackup/current-state replay exercised. Two deleted copies suppressed, held content private, revoked grants denied across declared surfaces. Controlled exact-runtime archive makes repetition portable. No live service, physical estate, universal lifecycle or actual model-inference claim. Actual authorized working excerpt is exported with enforced nonauthoritative marking, source provenance and no promotion."
     },
     {
       "id": "SH-C07",
@@ -653,13 +650,11 @@
         }
       ],
       "reconciliation_totals": {
-        "candidate_original_files": 5689,
-        "candidate_transport_records": 5746,
-        "selected_material_review_originals": 7
+        "final_counts": "Actual accepted-edition original/transport/table counts recorded in Release receipts; earlier5689/5746candidate counts are historical only."
       },
       "limitations": [
         "Synthetic authored/reconstructed evidence; no actual external filing, bank confirmation or professional opinion. Final accepted-revision validation and delivery are evidenced by the indexed Release receipt.",
-        "Edition supports declared inspection routes; unresolved native portal lifecycle and full indirect-disclosure coverage prevent a complete end-to-end IT readiness claim."
+        "Declared local working-copy lifecycle and mediated disclosure surfaces are exercised; complete live Alexandria, actual model inference, authoritative-original destruction and thirteen external readiness gates are outside this finite runtime claim."
       ],
       "next_owner": "Integration owner for successor acceptance, common-head reproduction and release; exact residual owners retain stated claims.",
       "current_disposition": "Complete118table enterprise/perunit exports and indexed controlled publication successor, independent import and exact acceptance-bound edition. Original98tables and260rows/11earlier successor tables preserved;1493rows/9final tables added."
@@ -686,7 +681,7 @@
       "status": "RESOLVED_PROSPECTIVE_FRAMEWORK_ON_ACCEPTANCE",
       "disposition": "Approved B and common terms are implemented in two separately executed synthetic frameworks. Zero accepted prospective work orders means no active access, guaranteed economics or new cash. Historical endpoints are not backfilled.",
       "affected_claim": "Complete contract enforceability or additional long-term exclusivity.",
-      "next_owner_action": "Legal/Cradle: resolve HOST-R01 before extending the contractual claim.",
+      "next_owner_action": "Cradle and host accountable signers: maintain accepted optionBframeworks; approve any future individual work orders separately. No current terms choice remains open; historical endpoints retain their own evidence boundaries.",
       "evidence": "docs/canon/CRADLE_HOST_TERMS_2026-09-22.md"
     },
     {
@@ -745,7 +740,7 @@
       "id": "SH-RES-ACTUAL-TRADEMARK",
       "status": "REAL_EXTERNAL_CLEARANCE_UNESTABLISHED",
       "affected_claim": "Actual commercial trademark clearance; not synthetic operating-company evidence.",
-      "disposition": "Source author records documented same-name application and primary clearance route; no clean legal opinion invented.",
+      "disposition": "Source author records documented same-name App Store software listing and primary clearance route; no clean legal opinion invented.",
       "next_owner_action": "Actual counsel/owner only if real commercial use is pursued.",
       "evidence": "docs/canon/ADVISORY_LEGAL_IMPLEMENTATION_2026-09-22.md"
     },
@@ -763,7 +758,7 @@
     "status": "Issue closure follows actual acceptance and issue criterion; final release receipt records live disposition, not this premerge proposal.",
     "evidence": "docs/wiki/Open-Questions.md"
   },
-  "evidence_boundary": "Final scoped adoption is conditional on actual merged PR166 and indexed Release receipt. Effective August and September evidence periods remain distinct from September22 source authoring and actual repository acceptance. No frozen predecessor is restated.",
+  "evidence_boundary": "Final scoped adoption is conditional on the actual merged version1.2successor PR and indexed Release receipt. Effective August/September periods remain distinct from later source authoring and actual repository acceptance. No frozen predecessor is restated.",
   "capital_register_direction": "OWNER_APPROVED_PROPOSED_FICTIONAL_FIVE_HOLDER_REGISTER_AND_VOLUNTARY_CONTRIBUTIONS",
   "updated_on": "2026-09-22",
   "acceptance_condition": "Actual reviewed successor merge, clean accepted-source regeneration, independent import/reperformance, bounded runtime demonstrations and separately versioned retrievable release; actual receipt supplies exact PR, source commit and publication identity.",
@@ -785,7 +780,7 @@
     {
       "path": ".github/workflows/source-integrity.yml",
       "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
-      "sha256": "32ef8eed5ba0a376fa0b0165779d11f0cf1d4dbf41fa6497d78fdda07bc48930"
+      "sha256": "e83a1ee7c96529ccfa2bd21fde75a3f87920cd0d31f71b36bfead80cb614a6d3"
     },
     {
       "path": "docs/canon/ADVISORY_LEGAL_IMPLEMENTATION_2026-09-22.md",
@@ -1432,12 +1427,12 @@
     {
       "path": "tests/ccf/test_information_policy.py",
       "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
-      "sha256": "9f6fedc37d8328481792a19627e1563245ccdcd57ae6fb5f50ed5b82f69ca00d"
+      "sha256": "2c8ec4b51cf1cc87c48b3f7712f2f33971bd1aa15c2f77ce4f3956d8841833c5"
     },
     {
       "path": "tests/ccf/test_workspace_artifact.py",
       "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
-      "sha256": "81c4b7148e4a0c4d6829e399e7685ca6cfd555db43ef3f00ff4f48e536b52992"
+      "sha256": "8b0301855110b7dedda4c3168f78659087ce8d43cc2e9219b726b816a1b68974"
     },
     {
       "path": "tests/closeout/test_advisory_legal.py",
@@ -1515,6 +1510,20 @@
       "id": "SH-HOST-B-ADOPTION-20260922",
       "quote": "Adopt B and its common terms",
       "source": "docs/canon/CRADLE_HOST_TERMS_2026-09-22.md"
+    }
+  ],
+  "implementation_retests": [
+    {
+      "finding": "Initial publication catalog rejected missing Document ID label; corrected source metadata and regenerated approved renderer output.",
+      "result": "PASS"
+    },
+    {
+      "finding": "Initial hosted SQLite formatting gate rejected two new tests; formatted with repository Ruff.",
+      "result": "RETEST_REQUIRED"
+    },
+    {
+      "finding": "Expanded required organization validation needed pdfinfo on hosted runner; added existing poppler-utils dependency.",
+      "result": "RETEST_REQUIRED"
     }
   ]
 }
