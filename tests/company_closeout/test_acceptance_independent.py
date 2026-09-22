@@ -1,5 +1,6 @@
 """Independent direct-builder acceptance tests using a real clean Git fixture."""
 import json
+import os
 import subprocess
 
 import pytest
@@ -18,7 +19,7 @@ def fixture(tmp_path, monkeypatch):
     (root / 'scope.json').write_text(json.dumps(scope))
     subprocess.run(['git', 'init', '-q', str(root)], check=True)
     subprocess.run(['git', '-C', str(root), 'add', '.'], check=True)
-    subprocess.run(['git', '-C', str(root), '-c', 'user.name=Test', '-c', 'user.email=test@example.invalid', 'commit', '-qm', 'fixture'], check=True)
+    subprocess.run(['git', '-C', str(root), '-c', 'user.name=Test', '-c', 'user.email=test@example.invalid', 'commit', '-qm', 'fixture'], check=True, env={**os.environ, 'GIT_AUTHOR_DATE': '2026-09-22T06:00:00Z', 'GIT_COMMITTER_DATE': '2026-09-22T06:00:00Z'})
     revision = original(['git', '-C', str(root), 'rev-parse', 'HEAD'], text=True).strip()
     api = dict(merged=True, state='closed', base=dict(ref='main', repo=dict(full_name=acceptance.REPOSITORY)),
                html_url=f'https://github.com/{acceptance.REPOSITORY}/pull/166', merge_commit_sha=revision,
@@ -68,3 +69,14 @@ def test_direct_builder_and_packaged_scope_preserve_pending_states(tmp_path, mon
     contract['acceptance_receipt']['work_packages'][0]['disposition'] = 'UNBOUNDED_ALL_PASSED'
     with pytest.raises(edition.EditionError, match='contradicts'):
         acceptance.verify_packaged_scope(contract, output / 'content')
+
+
+def test_direct_builder_rejects_availability_before_source_commit(tmp_path, monkeypatch):
+    root, path, contract, _, calls = fixture(tmp_path, monkeypatch)
+    contract['components'][0]['available_at'] = '2026-09-22T01:00:00Z'
+    path.write_bytes(edition.encoded(contract))
+    before = len(calls)
+    with pytest.raises(edition.EditionError, match='source'):
+        edition.build(root, path, tmp_path / 'package')
+    assert len(calls) == before
+    assert not (tmp_path / 'package').exists()
