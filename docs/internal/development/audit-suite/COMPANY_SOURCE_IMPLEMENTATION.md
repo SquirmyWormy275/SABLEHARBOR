@@ -963,3 +963,20 @@ instructor comparisons. The full repository suite at frozen `6558459f` passed
 access-review-successor and relationship-explorer additions, whose focused results
 are recorded separately. Automated navigation does not substitute for owner
 usability acceptance or qualified professional review.
+
+### Explicit local document distribution
+
+The [policy-delivery runtime](../../../../enterprise/audit_suite/POLICY_DELIVERY_RUNTIME.md)
+admits exact committed document bytes and preserves literal source metadata. It
+copies those bytes into private local mailboxes, verifies read-return bytes and
+records simulated recipient assertions separately. Reconciliation distinguishes
+missing, late, prior-version and withdrawn distributions against a declared
+recipient inventory. None of these operations establishes human acknowledgment,
+understanding, workforce completeness or a new policy approval.
+
+Durable intent precedes the actual filesystem copy. Interrupted attempts remain
+uncommitted and cannot be silently adopted as delivery; native command history,
+file identity, exact bytes and current state are rechecked before commit. Twenty-two
+focused tests passed, including interrupted-copy, exact-replay, withdrawal,
+document-version, metadata-bound and publication-race cases. Actual paired company
+execution and collection remain separate reviewed steps.
