@@ -780,17 +780,17 @@
     {
       "path": ".github/workflows/source-integrity.yml",
       "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
-      "sha256": "e83a1ee7c96529ccfa2bd21fde75a3f87920cd0d31f71b36bfead80cb614a6d3"
+      "sha256": "d83e61aab3006acb4b259bde687640d4177690c01b8b69a7cebb7b85970eff82"
     },
     {
       "path": "docs/canon/ADVISORY_LEGAL_IMPLEMENTATION_2026-09-22.md",
       "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
-      "sha256": "c0e884d227142b57ce8dd8a6422b179a503516a6e2cab1e81fcfb822a1912d73"
+      "sha256": "b5fedfc6f2c30359afd68d6552ea0733df116d8725e60cabb4fca21ae582ef9e"
     },
     {
       "path": "docs/canon/ARU_ADMINISTRATIVE_COMPLETION_2026-09-22.md",
       "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
-      "sha256": "e53c2cde7b6235b8afd969a78a86bee8e3f173445556f4a376ca7c10b67da6b3"
+      "sha256": "5ceebdf60aedeef73f654a822c677ae00b8b464180dc9f6ebef8a5eb18273fb5"
     },
     {
       "path": "docs/canon/ARU_SECURED_FINANCING_SUCCESSOR_2026-09-22.md",
@@ -847,7 +847,7 @@
     {
       "path": "docs/governance/publication_manifest.json",
       "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
-      "sha256": "7dfebc9df7b8195b39f242aa414937259e2fde1e22149cee252c378305bedaba",
+      "sha256": "4edb5fdf1644d2c650ea703a26b7a06addb827a883eff1254a910ead0d7d9cba",
       "predecessor_sha256": "5a2debe9139fcf4008f32abc30cf4277f799f68983590cc08b126aa05f7907fe",
       "supersession": "Version1.2 current scoped source/publication only; earlier editions remain unchanged."
     },
@@ -869,7 +869,7 @@
     {
       "path": "docs/internal/company-closeout/FINAL_RECORDS_IMPORT_CONTRACT_2026-09-22.md",
       "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
-      "sha256": "ba517939ebe15720164824e42e72d3d9dc1b3fa23cac2ad87d64d548ca33bd57"
+      "sha256": "a6f44e1e62b30f0ac28ae7a8cbcff3018ac839cac97737dc5e25f8b6e134d1a0"
     },
     {
       "path": "docs/internal/company-closeout/FOUNDER_ADMISSION_BASIS.md",
@@ -899,7 +899,7 @@
     {
       "path": "docs/internal/company-closeout/INSPECTION_GUIDE_v1.2.0.md",
       "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
-      "sha256": "0700a8321b7fb7d512361115b1ee0574c8489f952fde6881edaa9fd256b4097e"
+      "sha256": "039c5645cd475dd39948f349b26ff208a6271e3eeee66a87e68b84674b635895"
     },
     {
       "path": "docs/internal/company-closeout/MAIN_PROTECTION.md",
@@ -1426,7 +1426,7 @@
     {
       "path": "scripts/check_public_safety.py",
       "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
-      "sha256": "593ed7a67c1057f39e913fb3c3ecd421786eed3a4885e30004761a865bc7b048",
+      "sha256": "6ce4d97217cd16deec51c7608f008a7419a3eeedb47f76de295a2236b5e63a61",
       "predecessor_sha256": "5842d442306194d81e03b6a8641643990b419b4fa517232c108d860f335efd6f",
       "supersession": "Version1.2 current scoped source/publication only; earlier editions remain unchanged."
     },
@@ -1534,6 +1534,10 @@
     {
       "finding": "J2 Document ID field shared a paragraph with metadata, producing an invalid catalog identity. Split metadata into separate fields and regenerated the approved publication/catalog.",
       "result": "All146catalog identifiers checked for whitespace; five new exact IDs confirmed. No financial change."
+    },
+    {
+      "finding": "Required base-to-head whitespace check rejected Markdown hard-break spaces in four new documents. Replaced with explicit paragraph breaks, regenerated publications/catalog and moved the same whitespace guard earlier in CI.",
+      "result": "Local base-to-head diff check passes; actual hosted successor result is retained in the release validation evidence."
     }
   ]
 }

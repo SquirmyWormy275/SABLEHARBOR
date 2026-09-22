@@ -1,6 +1,7 @@
 # Final company records — enterprise import contract
 
-**Contract:** SH-FINAL-RECORDS-20260922 v1.0.0  
+**Contract:** SH-FINAL-RECORDS-20260922 v1.0.0
+
 **Target edition:** 1.2.0, pending accepted source, final validation and publication. This contract extends the existing enterprise CSV/SQLite distribution. It creates no second database and does not modify frozen predecessor schema or edition bytes.
 
 ## Exact table populations

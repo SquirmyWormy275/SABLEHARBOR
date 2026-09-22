@@ -1,9 +1,13 @@
 # ARU — dated security administration completion
 
-**Document ID:** SH-ARU-ADMIN-COMPLETION-20260922  
-**Version:** 1.0.0  
-**State:** OWNER_APPROVED_DIRECTION_PENDING_REPOSITORY_ACCEPTANCE  
-**Owner:** ARU Treasury / Corporate Legal  
+**Document ID:** SH-ARU-ADMIN-COMPLETION-20260922
+
+**Version:** 1.0.0
+
+**State:** OWNER_APPROVED_DIRECTION_PENDING_REPOSITORY_ACCEPTANCE
+
+**Owner:** ARU Treasury / Corporate Legal
+
 **Prepared:** September 22, 2026 UTC
 
 ## Authority and precise successor

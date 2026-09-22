@@ -1022,7 +1022,7 @@
       "source": "docs/internal/company-closeout/INSPECTION_GUIDE_v1.2.0.md",
       "publication": "docs/finance/publications/SH-COMPANY-INSPECTION-20260922_v1.2.0.pdf",
       "sha256": "3645477a2ce2629d92f7af8a149dfefb60fccf14cc78dc0b6683032db3a20062",
-      "source_sha256": "0700a8321b7fb7d512361115b1ee0574c8489f952fde6881edaa9fd256b4097e",
+      "source_sha256": "039c5645cd475dd39948f349b26ff208a6271e3eeee66a87e68b84674b635895",
       "brand": "corporate",
       "normalizer": "qpdf"
     },
@@ -1038,7 +1038,7 @@
       "source": "docs/canon/ARU_ADMINISTRATIVE_COMPLETION_2026-09-22.md",
       "publication": "docs/legal/publications/SH-ARU-ADMIN-20260922_v1.0.0.pdf",
       "sha256": "7b21e31925351db1d7301e10813fc908784ce1486e7fa2f6e7a7ae0f5eea53bc",
-      "source_sha256": "e53c2cde7b6235b8afd969a78a86bee8e3f173445556f4a376ca7c10b67da6b3",
+      "source_sha256": "5ceebdf60aedeef73f654a822c677ae00b8b464180dc9f6ebef8a5eb18273fb5",
       "brand": "corporate",
       "normalizer": "qpdf"
     },
@@ -1046,7 +1046,7 @@
       "source": "docs/canon/ADVISORY_LEGAL_IMPLEMENTATION_2026-09-22.md",
       "publication": "docs/legal/publications/SH-ADVISORY-LEGAL-20260922_v1.0.0.pdf",
       "sha256": "736a9e48d0ca1c3cf0f5f94fc99ae0ba60ae57e687bf19e70ee52d388a99e93a",
-      "source_sha256": "c0e884d227142b57ce8dd8a6422b179a503516a6e2cab1e81fcfb822a1912d73",
+      "source_sha256": "b5fedfc6f2c30359afd68d6552ea0733df116d8725e60cabb4fca21ae582ef9e",
       "brand": "corporate",
       "normalizer": "qpdf"
     },

@@ -1,6 +1,7 @@
 # Company edition 1.2.0 — inspection route
 
-**Document ID:** SH-COMPANY-INSPECTION-20260922-V12  
+**Document ID:** SH-COMPANY-INSPECTION-20260922-V12
+
 **Status:** Prepared for review; source acceptance, final validation, packaging and publication pending. The final release receipt must identify the accepted merge, adopted source register, dependency pins, actual package hashes and cutoff. This guide does not itself accept or publish an edition. Editions 1.0.0 and 1.1.0 retain their bytes and historical claims.
 
 ## Declared company scope

@@ -1,9 +1,13 @@
 # Advisory — synthetic legal implementation
 
-**Document ID:** SH-ADV-CARRY-EXECUTION-20260922  
-**Version:** 1.0.0  
-**State:** OWNER_APPROVED_DIRECTION_PENDING_REPOSITORY_ACCEPTANCE  
-**Prepared:** September 22, 2026 UTC  
+**Document ID:** SH-ADV-CARRY-EXECUTION-20260922
+
+**Version:** 1.0.0
+
+**State:** OWNER_APPROVED_DIRECTION_PENDING_REPOSITORY_ACCEPTANCE
+
+**Prepared:** September 22, 2026 UTC
+
 **Owner:** Office of General Counsel / Finance / People and Culture / Advisory
 
 ## Dated authority and exact scope
