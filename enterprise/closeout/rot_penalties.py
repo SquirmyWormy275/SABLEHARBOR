@@ -4,6 +4,7 @@ from calendar import monthrange
 from decimal import Decimal as D
 
 from enterprise.ccf.company_closeout.rot_penalty_workpaper import build
+from enterprise.ccf.company_closeout.rot_receipts_2026 import build as current_receipts
 
 TYPES = {
     "CO_ROT_PENALTY_EXP": "expense",
@@ -16,7 +17,9 @@ TYPES = {
 class RotPenalties:
     def __init__(self):
         self.opening = build("2025-12-31")
-        self.cutoff = build("2026-09-14")
+        self.historical_cutoff = build("2026-09-14")
+        self.current_cutoff = current_receipts("2026-09-14")
+        self.cutoff = self.combine(self.historical_cutoff, self.current_cutoff)
         self.rows = []
         previous = self.amounts(self.opening)
         for year in range(2026, 2032):
@@ -25,7 +28,10 @@ class RotPenalties:
                 result = build(
                     as_of, **({"planning_interest_rate": D(".07")} if year > 2026 else {})
                 )
-                current = self.amounts(result)
+                current_workpaper = current_receipts(
+                    as_of, **({"planning_interest_rate": D(".07")} if year > 2026 else {})
+                )
+                current = self.amounts(self.combine(result, current_workpaper))
                 self.rows.append(
                     dict(
                         year=year,
@@ -36,7 +42,7 @@ class RotPenalties:
                         closing_penalty_usd=str(current[0]),
                         closing_interest_usd=str(current[1]),
                         cash_paid_usd="0",
-                        scope="H2_2025_RECEIPT_TAX_ONLY",
+                        scope="H2_2025_AND_JAN_AUG_2026_RECEIPT_TAX;DISJOINT_DUE_POPULATIONS",
                         fact_state="AUTHORED_COMPLETED_PERIOD"
                         if (year, month) <= (2026, 8)
                         else "CONDITIONAL_UNPAID_SCENARIO",
@@ -46,6 +52,16 @@ class RotPenalties:
                     )
                 )
                 previous = current
+
+    @staticmethod
+    def combine(history, current):
+        return {
+            "totals": {
+                k: str(D(history["totals"][k]) + D(current["totals"][k]))
+                for k in ("late_filing_usd", "late_payment_usd", "interest_usd")
+            },
+            "scope": "DISJOINT_H2_2025_AND_JAN_AUG_2026_RECEIPT_DUTIES",
+        }
 
     @staticmethod
     def amounts(result):
@@ -62,7 +78,7 @@ class RotPenalties:
             month,
             entries,
             source_id,
-            "Unpaid H2 receipt-tax penalty/interest; no payment or regulator assessment inferred",
+            "Unpaid historical/current receipt-tax penalty/interest; no payment or regulator assessment inferred",
             kind="COMPANY_ROT_PENALTY_SUCCESSOR",
         )
 

@@ -162,6 +162,8 @@ def build(output, fin, op, legacy, operating, policy, adjustment):
                 rot_penalty_monthly=adjustment.rot_penalties.rows,
                 rot_penalty_opening=adjustment.rot_penalties.opening,
                 rot_penalty_cutoff=adjustment.rot_penalties.cutoff,
+                rot_historical_cutoff=adjustment.rot_penalties.historical_cutoff,
+                rot_current_receipt_duties=adjustment.rot_penalties.current_cutoff,
                 current=current,
                 deferred=deferred,
                 opening=opening,
