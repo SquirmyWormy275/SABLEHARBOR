@@ -42,7 +42,7 @@ def verify(journal_rows, parent_rows, current, deferred, opening, settlement):
     periods = defaultdict(lambda: defaultdict(D))
     receipts = defaultdict(D)
     cash = defaultdict(D)
-    native_ppa = defaultdict(D)
+    native_deferred_bridge = defaultdict(D)
     seen = set()
     for r in journal_rows:
         identity = r['scenario'], r['journal_id'], r['line_no']
@@ -52,8 +52,8 @@ def verify(journal_rows, parent_rows, current, deferred, opening, settlement):
         s, e, y, m = r['scenario'], r['entity'], int(r['year']), int(r['month'])
         a, v, source = r['account'], D(r['signed_usd']), r['source_id']
         periods[s,e,y,m][a] += v
-        if source.startswith('LEGAL-') and y == 2026 and m == 1 and e in ('ARU','BST') and a == '1800':
-            native_ppa[s,e] += v
+        if source.startswith('LEGAL-') and m > 0 and e in ('ARU','BST') and a in ('1800','1801','2250','5501'):
+            native_deferred_bridge[s,e,y] += v
         if source.startswith('CO-STAT-') and a == '1000':
             if e != 'SHI' or v >= 0:
                 raise ValueError('Statutory duplicate industrial cash or refund')
@@ -84,8 +84,7 @@ def verify(journal_rows, parent_rows, current, deferred, opening, settlement):
                 previous = initial[s,e,2026] if y == 2026 else gross[s,e,y-1]
                 final = gross[s,e,y]
                 expected_deferred = sum(sign*(final[f]-previous[f]) for f,sign in (('gross_dta_usd',-1),('valuation_allowance_usd',1),('gross_dtl_usd',1)))
-                if y == 2026:
-                    expected_deferred += native_ppa[s,e]
+                expected_deferred += native_deferred_bridge[s,e,y]
                 equal(sum(periods[s,e,y,m]['CO_SUB_TAX_DEFERRED'] for m in range(1,13)), expected_deferred, f'deferred expense {s}/{e}/{y}')
                 for j in ('US','CA','IL','WV'):
                     suffix = 'FED' if j == 'US' else j

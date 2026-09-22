@@ -69,3 +69,14 @@ def test_extra_industrial_cash_rejected():
     args[0].extend([dict(scenario='base',entity='ARU',year=2026,month=1,account=a,signed_usd=v,source_id='CO-STAT-BAD',journal_id='BAD',line_no=n) for n,(a,v) in enumerate([('1000','-1'),('CO_SUB_TAX_PREPAID_FED','1')])])
     with pytest.raises(ValueError,match='cash'):
         verify(*args)
+
+
+def test_native_cross_entity_deferred_bridge_is_retained():
+    args = fixture()
+    for entity, value in [('ARU',D(-450000)),('BST',D(450000))]:
+        for line,(account,amount,source) in enumerate([('1800',value,'LEGAL-DEFERRED-MOVE'),('1800',-value,'CO-STAT-DEFERRED-REPLACE'),('CO_SUB_TAX_DEFERRED',value,'CO-STAT-DEFERRED-REPLACE')]):
+            args[0].append(dict(scenario='base',entity=entity,year=2027,month=1,account=account,signed_usd=str(amount),source_id=source,journal_id=entity+'-BRIDGE',line_no=line))
+    assert verify(*args)['status']=='PASS'
+    args[0][-1]['signed_usd']='0'
+    with pytest.raises(ValueError,match='deferred expense'):
+        verify(*args)
