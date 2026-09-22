@@ -105,8 +105,9 @@ def build(allow_working_tree=False, *, company_closeout=False):
             for p in sorted((ROOT / "enterprise/closeout").rglob("*")):
                 if p.suffix in {".py", ".json"}:
                     result[str(p.relative_to(ROOT))] = hashlib.sha256(p.read_bytes()).hexdigest()
-            p = ROOT / "industrial/planning/enterprise.py"
-            result[str(p.relative_to(ROOT))] = hashlib.sha256(p.read_bytes()).hexdigest()
+            for rel in ["industrial/planning/enterprise.py", "industrial/planning/forecast.py"]:
+                p = ROOT / rel
+                result[rel] = hashlib.sha256(p.read_bytes()).hexdigest()
             return result
     source_snapshot = snapshot()
     initial = model.export(source)["source_sha256"]
@@ -168,22 +169,10 @@ def build(allow_working_tree=False, *, company_closeout=False):
         adjustment_provider=adjustment,
     )
     if company_closeout:
-        from enterprise.closeout.industrial_tax import IndustrialTax
-        adjustment.industrial_tax = IndustrialTax(successor)
-        from enterprise.closeout.industrial_tax_future import FutureIndustrialTax
-        adjustment.future_industrial_tax = FutureIndustrialTax(successor)
-        from enterprise.closeout.rwh_book import RwhBook
-        adjustment.rwh_book = RwhBook(successor, fin, enterprise.load_anchor())
-        successor = enterprise.build(output / "enterprise", forecast_result=fin, legacy_result=legacy,
-            source=policy, core_provider=operating, adjustment_provider=adjustment)
-        from enterprise.closeout.parent_tax import ParentTax
-        tax = ParentTax(successor, legacy, operating)
-        enterprise.write_csv(output / "before_parent_tax_statements.csv", successor["annual_rows"])
-        enterprise.write_csv(output / "before_parent_tax_monthly.csv", successor["monthly_rows"])
-        adjustment.parent_tax = tax
-        adjustment.input_hash = hashlib.sha256((adjustment.input_hash + tax.input_hash).encode()).hexdigest()
-        successor = enterprise.build(output / "enterprise", forecast_result=fin,
-            legacy_result=legacy, source=policy, core_provider=operating, adjustment_provider=adjustment)
+        from enterprise.closeout.statutory_build import build as statutory_build
+        fin, successor, tax, statutory_workpapers = statutory_build(
+            output, fin, op, legacy, operating, policy, adjustment
+        )
         (output / "retention_employer_tax.json").write_text(json.dumps(adjustment.retention_tax.receipt(), indent=2) + "\n")
         enterprise.write_csv(output / "rwh_book_carrying.csv", adjustment.rwh_book.rows)
         enterprise.write_csv(output / "rwh_historical_tax.csv", adjustment.rwh_book.history["rows"])
@@ -269,7 +258,7 @@ def build(allow_working_tree=False, *, company_closeout=False):
             if int(r["year"]) == 2026 and not r["source_id"].startswith("RT-")
             and r["source_id"] != "SH-VOICE-GW-01"
             and not (company_closeout and r["entity"] == "ELIM" and int(r["year"]) == 2026 and int(r["month"]) == 8 and r["source_id"] == "1150" and r["source_type"] == "BALANCE_ELIMINATION" and r["account"] in {"1150", "2150"})
-            and not (company_closeout and (r["source_id"].startswith(("CO-TAX-", "CO-ASSET-", "CO-PAYROLL-", "SH-RWH-IL-ROT-", "CO-STATE-", "CO-RWH-BOOK-", "CO-RETENTION-EMP-TAX-", "CO-H2-ROT-")) or r["source_type"] == "MEMBER_EQUITY"))
+            and not (company_closeout and (r["source_id"].startswith(("CO-TAX-", "CO-ASSET-", "CO-PAYROLL-", "SH-RWH-IL-ROT-", "CO-STATE-", "CO-RWH-BOOK-", "CO-RETENTION-EMP-TAX-", "CO-H2-ROT-", "CO-STAT-")) or r["source_type"] == "MEMBER_EQUITY"))
         )
 
     if history(before) != history(rows):

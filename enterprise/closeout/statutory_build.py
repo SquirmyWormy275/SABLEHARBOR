@@ -1,0 +1,132 @@
+"""Reperform statutory sources and feed finite cash requests into the native model."""
+
+import json
+from decimal import Decimal as D
+
+from industrial.planning import enterprise, forecast
+
+from .aru_tax_workpapers import build as aru_build
+from .industrial_tax import IndustrialTax
+from .industrial_tax_assets import build as assets_build
+from .industrial_tax_future import FutureIndustrialTax
+from .industrial_tax_settlement import build as settlement_build
+from .parent_tax import ParentTax
+from .rwh_book import RwhBook
+from .rwh_tax_workpapers import build as mine_build
+from .state_apportionment import build as factors_build
+from .statutory_current import build as current_build
+from .statutory_deferred import build as deferred_build
+from .statutory_deferred import opening as opening_build
+from .statutory_posting import StatutoryPosting
+
+
+def build(output, fin, op, legacy, operating, policy, adjustment):
+    """Solve the bounded tax/payment feedback; fail rather than publish unconverged cash."""
+    anchor = enterprise.load_anchor()
+    iterations = []
+    prior_plan = None
+    for iteration in range(1, 9):
+        adjustment.parent_tax = None
+        adjustment.statutory_tax = None
+        adjustment.industrial_tax = None
+        adjustment.future_industrial_tax = None
+        adjustment.rwh_book = None
+
+        def books():
+            return enterprise.build(
+                output / "enterprise",
+                forecast_result=fin,
+                legacy_result=legacy,
+                source=policy,
+                core_provider=operating,
+                adjustment_provider=adjustment,
+            )
+
+        seed = books()
+        adjustment.industrial_tax = IndustrialTax(seed)
+        adjustment.future_industrial_tax = FutureIndustrialTax(seed)
+        adjustment.rwh_book = RwhBook(seed, fin, anchor)
+        before = books()
+        parent = ParentTax(before, legacy, operating)
+        assets = assets_build(fin)
+        mine = mine_build(before, adjustment.rwh_book, assets, fin)
+        aru = aru_build(before["journal_rows"], fin)
+        factors = factors_build(before, fin, anchor)
+        current = current_build(parent, aru, mine, factors, before["journal_rows"])
+        deferred = deferred_build(before, parent, mine, assets, current, factors)
+        opening = opening_build(
+            parent,
+            mine,
+            assets,
+            current,
+            adjustment.rwh_book.history,
+            adjustment.historical_rot.bridge["utility_accrued_rot_usd"],
+        )
+        settlement = settlement_build(before["journal_rows"], fin)
+        posting = StatutoryPosting(before, parent, current, deferred, opening, settlement)
+        # The native cash model posts whole dollars. Compare exactly at that boundary,
+        # retaining four-decimal tax computations in the underlying workpapers.
+        plan = {
+            "annual": {k: str(D(v).quantize(D(1))) for k, v in posting.annual_override.items()},
+            "monthly": {k: str(D(v).quantize(D(1))) for k, v in posting.payment_override.items()},
+        }
+        iterations.append(
+            {
+                "iteration": iteration,
+                "converged": plan == prior_plan,
+                "annual_current_usd": str(sum(map(D, plan["annual"].values()))),
+                "requested_cash_usd": str(sum(map(D, plan["monthly"].values()))),
+            }
+        )
+        print(f"Statutory cash iteration {iteration}: converged={plan == prior_plan}", flush=True)
+        if plan == prior_plan:
+            adjustment.statutory_tax = posting
+            successor = books()
+            workpapers = dict(
+                current=current,
+                deferred=deferred,
+                opening=opening,
+                assets=assets,
+                mine=mine,
+                aru=aru,
+                factors=factors,
+                settlement=settlement,
+                iterations=iterations,
+            )
+            export(output, workpapers, posting)
+            return fin, successor, parent, workpapers
+        prior_plan = plan
+        fin = forecast.build(
+            output / "industrial/forecast",
+            operating_rows=op["operating_rows"],
+            statutory_current_override=plan["annual"],
+            statutory_payment_override=plan["monthly"],
+        )
+    raise ValueError("Statutory cash/payment feedback did not converge in eight iterations")
+
+
+def export(output, workpapers, posting):
+    """Keep computations, native settlement evidence and requested cash distinct."""
+    for name, value in workpapers.items():
+        (output / f"statutory_{name}.json").write_text(
+            json.dumps(value, indent=2, default=str) + "\n"
+        )
+        if isinstance(value, list):
+            enterprise.write_csv(output / f"statutory_{name}.csv", value)
+        elif isinstance(value, dict):
+            for population, rows in value.items():
+                if isinstance(rows, list) and rows and isinstance(rows[0], dict):
+                    enterprise.write_csv(output / f"statutory_{name}_{population}.csv", rows)
+    enterprise.write_csv(output / "statutory_payment_allocations.csv", posting.payment_rows)
+    (output / "statutory_requested_cash.json").write_text(
+        json.dumps(
+            {
+                "annual_current": posting.annual_override,
+                "monthly_requested_cash": posting.payment_override,
+                "state": "CONDITIONAL_REQUESTS_ACTUAL_SETTLEMENT_SEPARATE",
+                "interim_method": "Estimated annual statutory provision allocated monthly; future inputs remain conditional",
+            },
+            indent=2,
+        )
+        + "\n"
+    )

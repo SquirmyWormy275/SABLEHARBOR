@@ -6,6 +6,7 @@ from decimal import Decimal as D
 from pathlib import Path
 
 from enterprise.closeout.parent_tax import TAX_TYPES
+from enterprise.closeout.statutory_posting import TYPES as STATUTORY_TYPES
 from enterprise.runtime.finance import RuntimeAdjustment
 
 SOURCE = Path(__file__).parent / "source/adjustments.json"
@@ -60,6 +61,7 @@ class CloseoutAdjustment(RuntimeAdjustment):
             "CO_SOFTWARE_TAX_PAY": "liability",
         }
         | TAX_TYPES
+        | STATUTORY_TYPES
     )
 
     def __init__(self, data=None):
@@ -67,6 +69,7 @@ class CloseoutAdjustment(RuntimeAdjustment):
         self.retention_tax = None
         self.rwh_book = None
         self.parent_tax = None
+        self.statutory_tax = None
         self.industrial_tax = None
         self.future_industrial_tax = None
         self.historical_rot = None
@@ -120,7 +123,9 @@ class CloseoutAdjustment(RuntimeAdjustment):
             self.historical_rot.post_opening(books)
         if self.state_minimum is not None:
             self.state_minimum.post_opening(books)
-        if self.parent_tax is not None:
+        if self.statutory_tax is not None:
+            self.statutory_tax.post_opening(books)
+        elif self.parent_tax is not None:
             self.parent_tax.post_opening(books)
 
     def post_month(self, books, year, month):
@@ -175,9 +180,11 @@ class CloseoutAdjustment(RuntimeAdjustment):
             self.industrial_tax.post_month(books, year, month)
         if self.future_industrial_tax is not None:
             self.future_industrial_tax.post_month(books, year, month)
-        if self.state_minimum is not None:
+        if self.state_minimum is not None and self.statutory_tax is None:
             self.state_minimum.post_month(books, year, month)
-        if self.parent_tax is not None:
+        if self.statutory_tax is not None:
+            self.statutory_tax.post_month(books, year, month)
+        elif self.parent_tax is not None:
             self.parent_tax.post_month(books, year, month)
 
 
