@@ -1188,3 +1188,37 @@ The frozen `3f4ca8f9` repository suite passed 2,086 tests with three skips. Newe
 recorded-inspection and focus changes have separate focused and actual browser
 checks; they are not attributed to that earlier full-suite result. Exact private
 receipts and preserved failed attempts remain indexed in the execution checkpoint.
+
+### Subsequent report, access and design examinations
+
+Six additional procedures now have attributed workpapers and ordinary task
+updates. Four selected-report reconciliation procedures are COMPLETE/LIMITATION:
+their exact source, transformation, exclusion and quality checks were performed,
+including retained invalid and corrected outputs. Two governance design procedures
+remain IN_PROGRESS/LIMITATION after examining the retained charters and committee
+records. These dispositions describe procedure performance, not control effectiveness
+or acceptance of corporate population completeness.
+
+Two privileged-object observations were corrected after ordinary collection made
+the same source bytes readable. The quarantined copies and prior unavailable
+observations remain historical. Separately, three already-collected backup tickets
+were added to successor workpapers and sample observations; open tickets, failed
+attempts and missing occurrences remain unresolved. These corrections required no
+new company operations and supplied no automatic review or testing credit.
+
+Sixteen design and implementation examinations of configuration, identity creation,
+security logging and training completion now record their performed comparisons
+and calculations. Their IN_PROGRESS/LIMITATION conclusions distinguish selected
+local operations from enterprise coverage, identity proofing, clock synchronization,
+manager notification and other unperformed clauses. A correction and an expiring
+exception remain alternative disposition paths; an unexamined alternative is not
+automatically a deficiency.
+
+The explicit successor source inventory verifies 1,520 retained references with
+the same 1,136 distinct native identity pins and 1,385 physical paths. The two new
+references are readable copies of existing bytes, not independent corroboration.
+The earlier inventory remains pinned to its historical revisions. Declared-period
+reconciliation separately retains 52 ledger slots and eight other native schedule
+slots, including missing, late and unallocated observations. None establishes
+continuous annual operation. Further conditional-duty examinations and the private
+acceptance index remain in progress; unperformed work is not silently waived.

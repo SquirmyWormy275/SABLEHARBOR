@@ -44,3 +44,20 @@ not a reason to leave other engineering or substantive work unfinished.
 Keep private scenarios, inspection records, assessments, credentials and populated
 exports in excluded private storage. Preparing a local acceptance packet does not
 authorize publication, deployment, a real assurance opinion or writes to Atlas.
+
+## Private review index
+
+The interim local package is
+`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/acceptance-working-packet-v1/`.
+Its `INDEX.md` links the task register, unchanged queue acceptance criteria and
+hashed supporting receipts. `PROCEDURES.html` provides offline search, workroom,
+status and procedure filters, pagination and exact workpaper/sample version
+references. It makes no network requests and cannot change audit records.
+
+This is an explicitly versioned working snapshot, not completion of the queue.
+The 2,454 task instances include six isolated workrooms with different selected
+source portfolios; the count is not a single corporate population or 2,454
+independent controls. Prepared conditional-duty next actions remain distinct from
+performed work. Later task-only revisions may reuse a historical source inventory
+only after exact artifact metadata comparison; neither inventory revisions nor
+prior audit conclusions are rewritten.
