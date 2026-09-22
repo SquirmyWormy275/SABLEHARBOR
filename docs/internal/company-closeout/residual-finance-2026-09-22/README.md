@@ -178,3 +178,31 @@ in a dated decision. Implementation then creates a separately versioned current 
 its synthetic approvals, obligations and source-to-book bridges. Existing financial releases,
 unsigned design packets and their hashes remain discoverable and unchanged. A prospective
 rights schedule must not be mislabeled a recovered historical agreement.
+
+## Implemented administrative register and asset screen
+
+`python -m enterprise.closeout.finance_administration` emits the two stable payoff
+component records, their shared existing internal settlement reference, the exact model
+maturity state, seven-document Secretary source inventory, and the entire 149-record
+industrial asset screen. It emits **zero new journal entries and zero cash**. The source
+inventory reports no side-letter document located in its seven listed capital/governance
+and financing records; it does not turn that result into a historical absence warranty.
+
+The collateral research screen identifies **57 records with an explicit ARU owner**:
+7 facilities, 6 facility track components and 44 road-equipment records. A further
+14 owned handling-equipment records identify ARU by asset ID and ARU facility; their
+legal owner needs title confirmation. The remaining 78 records are excluded from the
+ARU-only candidate scope. These are **register records, not 71 independently valued
+properties**: facility and track components overlap physically. The screen preserves
+source status and service dates; it does not backdate new July 2026 track to acquisition,
+turn planned equipment into current assets, assert a clear lien search or grant security.
+Every record has `pledged=false` and no collateral value. The leased railcar population
+and BST/RWH assets remain outside the ARU-only proposal.
+
+Verification: six focused tests cover principal mismatch, duplicated/omitted asset
+population, wrong facility ownership, explicit-versus-derived title and zero incremental
+posting. Source arithmetic remains independently reproducible by `reperform.py`.
+Initial local test failures identified a string-versus-integer settlement-source field
+and six ARU-owned facility track records omitted from the initial expected count; both
+were corrected against source facts. No source population or expected economic amount
+was changed to suppress a failure.
