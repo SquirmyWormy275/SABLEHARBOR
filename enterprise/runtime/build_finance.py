@@ -251,18 +251,11 @@ def build(allow_working_tree=False, *, company_closeout=False):
     )
 
     if company_closeout:
-        # The new reciprocal payroll clearing has one precisely bounded derived elimination.
-        for scenario in ["base", "downside", "expansion"]:
-            for account, delta in [("1150", D(-78125)), ("2150", D(78125))]:
-                def elimination_value(population):
-                    selected = [r for r in population if r["scenario"] == scenario and r["entity"] == "ELIM"
-                        and int(r["year"]) == 2026 and int(r["month"]) == 8 and r["source_id"] == "1150"
-                        and r["source_type"] == "BALANCE_ELIMINATION" and r["account"] == account]
-                    if len(selected) != 1:
-                        raise ValueError("Payroll clearing elimination population differs")
-                    return D(selected[0]["signed_usd"])
-                if elimination_value(rows) - elimination_value(before) != delta:
-                    raise ValueError("Payroll clearing elimination differs from reciprocal 78125 correction")
+        from enterprise.closeout.preserved_history import verify as verify_preserved_history
+        check["preserved_history"] = verify_preserved_history(
+            before, rows, statutory_workpapers["settlement"],
+            reviewed_native_rows=statutory_workpapers["reviewed_native_journal"],
+        )
 
     def history(records):
         return sorted(
@@ -270,7 +263,7 @@ def build(allow_working_tree=False, *, company_closeout=False):
             for r in records
             if int(r["year"]) == 2026 and not r["source_id"].startswith("RT-")
             and r["source_id"] != "SH-VOICE-GW-01"
-            and not (company_closeout and r["entity"] == "ELIM" and int(r["year"]) == 2026 and int(r["month"]) == 8 and r["source_id"] == "1150" and r["source_type"] == "BALANCE_ELIMINATION" and r["account"] in {"1150", "2150"})
+            and not (company_closeout and r["entity"] == "ELIM" and int(r["year"]) == 2026 and r["source_id"] == "1150" and r["source_type"] == "BALANCE_ELIMINATION" and r["account"] in {"1150", "2150"})
             and not (company_closeout and (r["source_id"].startswith(("CO-TAX-", "CO-ASSET-", "CO-PAYROLL-", "SH-RWH-IL-ROT-", "CO-STATE-", "CO-RWH-BOOK-", "CO-RETENTION-EMP-TAX-", "CO-H2-ROT-", "CO-STAT-")) or r["source_type"] == "MEMBER_EQUITY"))
         )
 

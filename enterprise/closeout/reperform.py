@@ -100,8 +100,12 @@ def run(out):
     ]
     if sorted(actual_additions) != sorted(expected_additions):
         raise ValueError("Retention levy additions differ from independently reconstructed awards")
-    result["protected_aru_bst_legal_legs"] = compare_protected(
-        rows, retention_closed_predecessor(predecessor, levy.totals), SOURCE_IDS.values()
+    from enterprise.closeout.preserved_history import verify as verify_preserved_history
+
+    result["preserved_history"] = verify_preserved_history(
+        predecessor, rows,
+        json.loads((out / "statutory_settlement.json").read_text()),
+        reviewed_native_rows=json.loads((out / "statutory_reviewed_native_journal.json").read_text()),
     )
     funding = defaultdict(D)
     for row in predecessor:
