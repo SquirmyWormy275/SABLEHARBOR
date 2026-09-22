@@ -242,13 +242,19 @@ def create_app(
         guidance_root.mkdir(mode=0o700, exist_ok=True)
         work_guidance = WorkGuidance(guidance_root, engine)
     releases = None
+    assessments = None
     if protected_bindings:
+        from .instructor_assessments import InstructorAssessments
         from .instructor_releases import InstructorReleases
 
         release_root = engine.store.root / "instructor-releases"
         release_root.mkdir(mode=0o700, exist_ok=True)
         releases = InstructorReleases(release_root, engine, protected_bindings)
+        assessment_root = engine.store.root / "instructor-assessments"
+        assessment_root.mkdir(mode=0o700, exist_ok=True)
+        assessments = InstructorAssessments(assessment_root, engine, protected_bindings)
     app.state.instructor_releases = releases
+    app.state.instructor_assessments = assessments
     key_views = None
     if protected_bindings or instructor_key_root is not None:
         from .instructor_key_views import InstructorKeyViews
@@ -369,6 +375,7 @@ def create_app(
             instructor_releases=releases is not None,
             instructor_debriefs=releases is not None,
             instructor_key_views=key_views is not None,
+            instructor_assessments=assessments is not None,
             instructor_reference_library=instructor_key_root is not None,
         )
         result["background_command_kinds"] = jobs.supported_commands() if jobs is not None else []
@@ -507,6 +514,46 @@ def create_app(
         limits.check("instructor-comparison", principal["id"], 60)
         return await asyncio.to_thread(
             compare, engine, principal, engagement_id, protected_bindings, revision=revision
+        )
+
+    def assessment_store(request: Request, *, mutation=False):
+        principal = actor(request, mutation=mutation)
+        if assessments is None:
+            raise DomainError("Instructor assessments are not configured", status=503)
+        limits.check("instructor-assessments", principal["id"], 60)
+        return principal["id"], assessments
+
+    @app.get("/api/engagements/{engagement_id}/instructor-assessments/options")
+    async def assessment_options(engagement_id: str, revision: int, request: Request):
+        principal, store = assessment_store(request)
+        if (
+            set(request.query_params) != {"revision"}
+            or len(request.query_params.getlist("revision")) != 1
+        ):
+            raise DomainError("Choose one recorded work revision")
+        return await asyncio.to_thread(store.options, principal, engagement_id, revision)
+
+    @app.get("/api/engagements/{engagement_id}/instructor-assessments")
+    async def assessment_history(engagement_id: str, request: Request):
+        principal, store = assessment_store(request)
+        if request.query_params:
+            raise DomainError("Assessments use the current authenticated context")
+        return await asyncio.to_thread(store.listing, principal, engagement_id)
+
+    @app.get("/api/engagements/{engagement_id}/instructor-assessments/{assessment_id}")
+    async def assessment_read(engagement_id: str, assessment_id: str, request: Request):
+        principal, store = assessment_store(request)
+        if request.query_params:
+            raise DomainError("Assessments use the current authenticated context")
+        return await asyncio.to_thread(store.read, principal, engagement_id, assessment_id)
+
+    @app.post("/api/engagements/{engagement_id}/instructor-assessments")
+    async def assessment_save(engagement_id: str, request: Request):
+        principal, store = assessment_store(request, mutation=True)
+        if request.query_params:
+            raise DomainError("Assessments use the current authenticated context")
+        return await asyncio.to_thread(
+            store.save, principal, engagement_id, await json_body(request)
         )
 
     def key_view_store(request: Request, *, mutation=False):

@@ -802,3 +802,26 @@ business populations and supported intervals require actual source analysis.
 Missing selected support does not imply a missing business process. The contract
 permits supported alternatives and explicit incomplete results without silently
 removing procedures or inventing operational dates, employment, BIA/RPO or PHI.
+
+
+### Authored assessment history
+
+[Instructor assessments](../../../../enterprise/audit_suite/INSTRUCTOR_ASSESSMENTS.md)
+separate six authored dimensions—discovery, evidence, testing, judgment,
+documentation and follow-through—from the deterministic comparison inventory.
+An instructor explicitly selects the historical shared-state revision, issues,
+expectations and exact linked work references, then authors qualitative judgments
+and rationales. Defensible alternatives, reasoned overrides and scenario-defect
+flags retain their selected expectations/issues and support. No score, automatic
+grade, individual submission, learner understanding or professional qualification
+is inferred. Corrections create immutable new versions and preserve their exact
+predecessor. Changed authority, Key or source context redacts protected content;
+companion recovery retains only an inert private archive. No actual instructor
+assessment or learner release was created during implementation.
+
+The [native backup admission contract](../../../../enterprise/audit_suite/BACKUP_SOURCE_ADMISSION.md)
+links a declared dataset to exact configuration-export bytes, producer definition,
+metadata digest and physical routing identity. Original bytes, typed dependency,
+consumer command and revision commit together. Explicit replay rechecks both
+producer and consumer originals and the retained receipt. It creates no audit
+artifact or source grant; collection remains a separate authorized audit action.

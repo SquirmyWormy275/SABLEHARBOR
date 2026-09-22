@@ -198,6 +198,7 @@ def backup(
     investigation_handoffs=None,
     work_guidance=None,
     instructor_key_views=None,
+    instructor_assessments=None,
 ):
     """Capture selected live companion objects; never starts/retries jobs."""
     destination = _new(destination)
@@ -210,6 +211,7 @@ def backup(
         and investigation_handoffs is None
         and work_guidance is None
         and instructor_key_views is None
+        and instructor_assessments is None
     ):
         raise DomainError("Select at least one companion")
     members, captures = {}, {}
@@ -271,7 +273,17 @@ def backup(
         validate_archive(snapshot)
         members["instructor-key-views.json"] = _json(snapshot)
         captures["instructor_key_views"] = datetime.now(UTC).isoformat()
+    if instructor_assessments is not None:
+        from .instructor_assessments import validate_archive
+
+        snapshot = instructor_assessments.snapshot()
+        validate_archive(snapshot)
+        members["instructor-assessments.json"] = _json(snapshot)
+        captures["instructor_assessments"] = datetime.now(UTC).isoformat()
     manifest = {
+        "instructor_assessments_restore_mode": "ARCHIVE_ONLY_NOT_OPERATIONALLY_REHYDRATED"
+        if instructor_assessments is not None
+        else "NOT_INCLUDED",
         "instructor_key_views_restore_mode": "ARCHIVE_ONLY_NOT_OPERATIONALLY_REHYDRATED"
         if instructor_key_views is not None
         else "NOT_INCLUDED",
@@ -331,6 +343,7 @@ def restore(source: Path, destination: Path, *, engine=None, principal_map=None)
         "investigation-handoffs.json",
         "work-guidance.json",
         "instructor-key-views.json",
+        "instructor-assessments.json",
     }
     names = set(manifest.get("members", {}))
     if (
@@ -394,6 +407,14 @@ def restore(source: Path, destination: Path, *, engine=None, principal_map=None)
             validate_archive(strict_json(members["instructor-key-views.json"]))
         except (ValueError, TypeError, KeyError) as error:
             raise DomainError("Invalid saved instructor Key view archive") from error
+    if "instructor-assessments.json" in members:
+        from .inference import _json as strict_json
+        from .instructor_assessments import validate_archive
+
+        try:
+            validate_archive(strict_json(members["instructor-assessments.json"]))
+        except (ValueError, TypeError, KeyError) as error:
+            raise DomainError("Invalid instructor assessment archive") from error
     tables = bodies.get("contexts", {}).get("tables")
     view_tables = bodies.get("personal_views", {}).get("tables")
     owners = {r["actor"] for r in tables["contexts"]} if tables is not None else set()
@@ -474,6 +495,11 @@ def restore(source: Path, destination: Path, *, engine=None, principal_map=None)
                 stage / "instructor-key-views-ARCHIVE-ONLY.json",
                 members["instructor-key-views.json"],
             )
+        if "instructor-assessments.json" in members:
+            _write(
+                stage / "instructor-assessments-ARCHIVE-ONLY.json",
+                members["instructor-assessments.json"],
+            )
         if "access.jsonl" in members:
             log_root = stage / "instructor-access-archive"
             log_root.mkdir(mode=0o700)
@@ -491,6 +517,9 @@ def restore(source: Path, destination: Path, *, engine=None, principal_map=None)
             else "NOT_INCLUDED",
             "original_hashed_personal_view_content_preserved": view_tables is not None,
             "credentials_or_grants_restored": False,
+            "instructor_assessments": "ARCHIVE_ONLY_NOT_OPERATIONALLY_REHYDRATED"
+            if "instructor-assessments.json" in members
+            else "NOT_INCLUDED",
             "instructor_key_views": "ARCHIVE_ONLY_NOT_OPERATIONALLY_REHYDRATED"
             if "instructor-key-views.json" in members
             else "NOT_INCLUDED",

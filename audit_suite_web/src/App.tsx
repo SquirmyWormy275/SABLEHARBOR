@@ -2623,6 +2623,7 @@ export default function App() {
                   {e.permissions?.includes("instruct") &&
                     bootstrap.capabilities.bound_instructor_keys && (
                       <BoundInstructorKey
+                        assessmentsEnabled={bootstrap.capabilities.instructor_assessments === true}
                         savedViewsEnabled={bootstrap.capabilities.instructor_key_views === true}
                         engagement={e}
                         viewerId={bootstrap.viewer.id}

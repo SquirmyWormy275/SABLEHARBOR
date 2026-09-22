@@ -3,6 +3,8 @@
 from .bound_instructor import read_binding
 from .expectation_links import inventory as task_inventory
 from .instructor_access import InstructorAccessLog
+from .instructor_work_links import index as work_index
+from .instructor_work_links import selected as selected_work
 from .portfolio_explanation import same_route, validate_routes
 from .store import DomainError, digest
 from .workpaper_links import validate_task_ids
@@ -46,6 +48,7 @@ def _inventory(snapshot, state, history):
             else "NO_EXACT_RETAINED_LINK_RECORDED",
         }
     issues = {i["id"]: i for i in snapshot["authored"]["issues"]}
+    indexed_work = work_index(state, {a["id"]: a["sha256"] for a in artifacts})
     results = []
     for expectation in snapshot["authored"]["expectations"]:
         selected_issues = [issues[i] for i in expectation["issue_ids"]]
@@ -105,10 +108,12 @@ def _inventory(snapshot, state, history):
                             recorded_status=review.get("status"),
                         )
                     )
+        explicit_tasks = task_inventory(expectation, controls, artifact_ids, state)
         results.append(
             {
                 "expectation_id": expectation["id"],
-                **task_inventory(expectation, controls, artifact_ids, state),
+                **explicit_tasks,
+                **selected_work(indexed_work, artifact_ids, explicit_tasks),
                 "issue_ids": expectation["issue_ids"],
                 "control_ids": controls,
                 "source_ids": source_ids,

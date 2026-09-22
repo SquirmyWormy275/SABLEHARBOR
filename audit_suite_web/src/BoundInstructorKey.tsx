@@ -24,6 +24,7 @@ export default function BoundInstructorKey(props: {
   engagement: Engagement;
   viewerId: string;
   savedViewsEnabled?: boolean;
+  assessmentsEnabled?: boolean;
   onPreview?: (artifact: Row) => void;
 }) {
   return (
@@ -45,11 +46,13 @@ function BoundExplorer({
   engagement: e,
   viewerId,
   savedViewsEnabled = false,
+  assessmentsEnabled = false,
   onPreview,
 }: {
   engagement: Engagement;
   viewerId: string;
   savedViewsEnabled?: boolean;
+  assessmentsEnabled?: boolean;
   onPreview?: (artifact: Row) => void;
 }) {
   const [response, setResponse] = useState<BoundResponse | null>(null),
@@ -186,7 +189,12 @@ function BoundExplorer({
           setPage(v.page);
         }}
       />
-      <InstructorComparison engagement={e} bound={response} />
+      <InstructorComparison
+        engagement={e}
+        bound={response}
+        viewerId={viewerId}
+        assessmentsEnabled={assessmentsEnabled}
+      />
       <section aria-label="Authored issue index" className="bound-key-index">
         <h3>Authored issues</h3>
         <p>

@@ -1,3 +1,4 @@
+import { InstructorAssessments } from "./InstructorAssessments";
 import { useEffect, useRef, useState } from "react";
 import { request, str, type Engagement, type Row } from "./api";
 import type { BoundResponse } from "./boundInstructorKey";
@@ -26,9 +27,13 @@ type Inventory = {
 export function InstructorComparison({
   engagement: e,
   bound,
+  viewerId = "",
+  assessmentsEnabled = false,
 }: {
   engagement: Engagement;
   bound: BoundResponse;
+  viewerId?: string;
+  assessmentsEnabled?: boolean;
 }) {
   const [revision, setRevision] = useState(String(e.revision));
   const [result, setResult] = useState<Inventory | null>(null);
@@ -312,6 +317,20 @@ export function InstructorComparison({
                 ))}
               </details>
             </>
+          )}
+          {result.status === "DETERMINISTIC_LINK_INVENTORY_ONLY" && (
+            <InstructorAssessments
+              engagement={e}
+              viewerId={viewerId}
+              enabled={assessmentsEnabled}
+              bound={bound}
+              history={{
+                revision: result.selected_history_revision,
+                state_sha256: result.selected_state_sha256,
+                history_sha256: result.selected_history_sha256,
+                event_sha256: result.selected_history_tip_sha256,
+              }}
+            />
           )}
           <details>
             <summary>Selected history pins and limits</summary>
