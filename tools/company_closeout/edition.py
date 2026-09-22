@@ -116,6 +116,13 @@ def build(root: Path, contract_path: Path, destination: Path) -> dict:
     if contract["status"] == "ACCEPTED_SCOPED_EDITION" and dirty:
         raise EditionError("Accepted edition requires a clean source checkout")
     if contract["status"] == "ACCEPTED_SCOPED_EDITION":
+        recorded_at = timestamp(
+            subprocess.check_output(
+                ["git", "-C", str(root), "show", "-s", "--format=%cI", "HEAD"], text=True
+            ).strip()
+        )
+        if any(timestamp(c["available_at"]) < recorded_at for c in contract["components"]):
+            raise EditionError("Accepted availability precedes source commit recording")
         from .acceptance import verify_live
 
         verify_live(contract, root)
