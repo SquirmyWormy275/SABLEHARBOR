@@ -285,6 +285,20 @@ class StatutoryPosting:
             raise ValueError("Statutory cash allocation does not reconcile source payments")
         payer_entries = []
         for (entity, jurisdiction), paid in allocation.items():
+            if paid:
+                self.payment_rows.append(
+                    dict(
+                        scenario=books.scenario,
+                        taxpayer=entity,
+                        jurisdiction=jurisdiction,
+                        year=year,
+                        month=month,
+                        paid_usd=str(paid),
+                        payer=payer,
+                        state="MODELED_SOURCE_SETTLEMENT",
+                        source_group=group,
+                    )
+                )
             account = (
                 "CO_SUB_TAX_PREPAID_FED"
                 if jurisdiction == "US"
@@ -419,6 +433,21 @@ class StatutoryPosting:
                         else f"CO_SUB_TAX_PREPAID_{jurisdiction}"
                     )
                     payer = "SHI"
+                    self.payment_rows.append(
+                        dict(
+                            scenario=scenario,
+                            taxpayer=entity,
+                            jurisdiction=jurisdiction,
+                            year=year,
+                            month=month,
+                            paid_usd=str(amount),
+                            payer=payer,
+                            state="AUTHORED_CURRENT_PAYMENT"
+                            if year == 2026
+                            else "CONDITIONAL_FORECAST_PAYMENT",
+                            source_group="PARENT",
+                        )
+                    )
                     if entity == payer:
                         books.post(
                             payer,

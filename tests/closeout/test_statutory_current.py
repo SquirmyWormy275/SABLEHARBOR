@@ -146,3 +146,19 @@ def test_missing_or_duplicate_source_workpaper_rejected():
     a["rows"].append(a["rows"][0].copy())
     with pytest.raises(ValueError, match="Duplicate"):
         build(p, a, m, f, j)
+
+
+def test_only_settled_state_tax_reduces_federal_base():
+    baseline = build(*source())
+    paid = build(*source(), state_cash_paid={("base", "SHIH", 2027): D(800)})
+
+    def row(result):
+        return next(
+            r
+            for r in result["federal"]
+            if (r["scenario"], r["taxpayer"], r["year"]) == ("base", "SHIH", 2027)
+        )
+
+    assert D(row(baseline)["closing_nol_usd"]) == 0
+    assert D(row(paid)["closing_nol_usd"]) == 800
+    assert D(row(paid)["state_income_tax_paid_deduction_usd"]) == 800

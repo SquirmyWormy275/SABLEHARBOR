@@ -57,7 +57,8 @@ def parent_il_depreciation(parent, scenario, year):
     return total
 
 
-def build(parent, aru, mine, factors, journal_rows):
+def build(parent, aru, mine, factors, journal_rows, state_cash_paid=None):
+    state_cash_paid = state_cash_paid or {}
     ar = _index(aru["rows"], ("scenario", "taxpayer", "jurisdiction", "year"))
     rw = _index(mine, ("scenario", "jurisdiction", "year"))
     pa = _index(parent.rows, ("scenario", "year"))
@@ -130,6 +131,10 @@ def build(parent, aru, mine, factors, journal_rows):
                     deduction = min(interest + interest_cf, ati * D(".30"))
                     interest_cf += interest - deduction
                     base -= deduction
+                state_deduction = D(state_cash_paid.get((scenario, entity, year), 0))
+                if not state_deduction.is_finite() or state_deduction < 0:
+                    raise ValueError("Invalid actual state income-tax cash deduction")
+                base -= state_deduction
                 used = min(nol, max(base, D(0)) * D(".80"))
                 opening = nol
                 nol += max(-base, D(0)) - used
@@ -147,6 +152,7 @@ def build(parent, aru, mine, factors, journal_rows):
                     interest_carryforward_usd=str(interest_cf.quantize(Q)),
                     ati_usd=str(ati.quantize(Q)),
                     current_tax_usd=str(((max(base, D(0)) - used) * D(".21")).quantize(Q)),
+                    state_income_tax_paid_deduction_usd=str(state_deduction),
                     filing_state="MODELED_WORKPAPER_NOT_SUBMITTED",
                     payment_state="JOIN_SEPARATE_SETTLEMENT_POPULATION",
                 )

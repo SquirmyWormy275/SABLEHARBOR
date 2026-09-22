@@ -1,6 +1,7 @@
 """Reperform statutory sources and feed finite cash requests into the native model."""
 
 import json
+from collections import defaultdict
 from decimal import Decimal as D
 
 from industrial.planning import enterprise, forecast
@@ -25,6 +26,7 @@ def build(output, fin, op, legacy, operating, policy, adjustment):
     anchor = enterprise.load_anchor()
     iterations = []
     prior_plan = None
+    state_paid = {}
     for iteration in range(1, 9):
         adjustment.parent_tax = None
         adjustment.statutory_tax = None
@@ -52,7 +54,7 @@ def build(output, fin, op, legacy, operating, policy, adjustment):
         mine = mine_build(before, adjustment.rwh_book, assets, fin)
         aru = aru_build(before["journal_rows"], fin)
         factors = factors_build(before, fin, anchor)
-        current = current_build(parent, aru, mine, factors, before["journal_rows"])
+        current = current_build(parent, aru, mine, factors, before["journal_rows"], state_paid)
         deferred = deferred_build(before, parent, mine, assets, current, factors)
         opening = opening_build(
             parent,
@@ -79,9 +81,16 @@ def build(output, fin, op, legacy, operating, policy, adjustment):
             }
         )
         print(f"Statutory cash iteration {iteration}: converged={plan == prior_plan}", flush=True)
-        if plan == prior_plan:
+        next_state_paid = defaultdict(D)
+        if prior_plan is not None:
             adjustment.statutory_tax = posting
             successor = books()
+            for row in posting.payment_rows:
+                if row["jurisdiction"] != "US" and row["taxpayer"] != "SHI":
+                    next_state_paid[row["scenario"], row["taxpayer"], row["year"]] += D(
+                        row["paid_usd"]
+                    )
+        if plan == prior_plan and dict(next_state_paid) == state_paid:
             workpapers = dict(
                 current=current,
                 deferred=deferred,
@@ -96,6 +105,7 @@ def build(output, fin, op, legacy, operating, policy, adjustment):
             export(output, workpapers, posting)
             return fin, successor, parent, workpapers
         prior_plan = plan
+        state_paid = dict(next_state_paid)
         fin = forecast.build(
             output / "industrial/forecast",
             operating_rows=op["operating_rows"],
