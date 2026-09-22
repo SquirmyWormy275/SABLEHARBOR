@@ -48,3 +48,19 @@ def test_registration_after_actual_mine_closing():
     source = json.loads(SOURCE.read_text())
     assert source["accounts"][0]["registration_effective"] == "2025-07-19"
     assert source["corrected_at"] == "2026-09-22T06:14:19Z"
+
+
+@pytest.mark.parametrize("fault", ["opening", "collections", "period", "negative", "month"])
+def test_acquired_ar_bridge_rejects_changed_facts(fault):
+    source = json.loads(SOURCE.read_text())
+    acquired = source["acquired_receivables"]
+    if fault in {"opening", "collections"}:
+        acquired[{"opening": "opening_acquired_ar_usd", "collections": "collections_usd"}[fault]] = "4000001"
+    elif fault == "period":
+        acquired["collection_period"] = "2025-07-07/2025-12-31"
+    elif fault == "negative":
+        acquired["monthly_allocation_usd"].update({"7": "-1", "8": "1000001"})
+    else:
+        acquired["monthly_allocation_usd"]["6"] = acquired["monthly_allocation_usd"].pop("7")
+    with pytest.raises(ValueError, match="Acquired"):
+        history(source)

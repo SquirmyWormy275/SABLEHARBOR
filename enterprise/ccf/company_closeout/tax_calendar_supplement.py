@@ -39,7 +39,18 @@ def history(source=None):
     if sum(D(r["sales_usd"]) for r in s["historical_months"]) != D("12600000") or sum(D(r["receipts_usd"]) for r in s["historical_months"]) != D("8600000"):
         raise ValueError("H2 source sales/receipts changed")
     acquired = s["acquired_receivables"]
-    if sum(D(v) for v in acquired["monthly_allocation_usd"].values()) != D("4000000") or D(acquired["closing_acquired_ar_usd"]) != 0:
+    monthly = acquired["monthly_allocation_usd"]
+    opening = D(acquired["opening_acquired_ar_usd"])
+    collected = D(acquired["collections_usd"])
+    closing = D(acquired["closing_acquired_ar_usd"])
+    if (
+        set(monthly) != {str(m) for m in range(7, 13)}
+        or any(D(v) < 0 for v in monthly.values())
+        or sum(D(v) for v in monthly.values()) != collected
+        or opening != D("4000000") or collected != D("4000000")
+        or opening - collected != closing or closing != 0
+        or acquired["collection_period"] != "2025-07-18/2025-12-31"
+    ):
         raise ValueError("Acquired receivable collection bridge changed")
     balances, rows = {c: D(0) for c in weights}, []
     for month in s["historical_months"]:
