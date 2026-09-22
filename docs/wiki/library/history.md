@@ -7,6 +7,8 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `docs/canon`
 
 - [SABLE HARBOR — ADVISORY / ATLAS MERIDIAN CLOSEOUT](../../canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md) — MD · [formatted PDF](../../advisory/publications/SH-ADV-ATL-DR-001_v1.0.0.pdf)
+- [Advisory — synthetic legal implementation](../../canon/ADVISORY_LEGAL_IMPLEMENTATION_2026-09-22.md) — MD · [formatted PDF](../../legal/publications/SH-ADVISORY-LEGAL-20260922_v1.0.0.pdf)
+- [ARU — dated security administration completion](../../canon/ARU_ADMINISTRATIVE_COMPLETION_2026-09-22.md) — MD · [formatted PDF](../../legal/publications/SH-ARU-ADMIN-20260922_v1.0.0.pdf)
 - [ARU secured financing successor — September 22, 2026](../../canon/ARU_SECURED_FINANCING_SUCCESSOR_2026-09-22.md) — MD · [formatted PDF](../../finance/publications/SH-ARU-SECURED-20260922_v1.0.0.pdf)
 - [Business development direction and implementation boundary](../../canon/BUSINESS_DEVELOPMENT_DIRECTION_2026-09-09.md) — MD · [formatted PDF](../../governance/publications/SH-CANON-BIZ-20260909-001_v1.0.0.pdf)
 - [SABLE HARBOR — CANON CHANGELOG v0.2](../../canon/CANON_CHANGELOG_v0.2.md) — MD
@@ -32,6 +34,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Industrial closeout — corporate, Pale Sun, Red Wash and ARU](../../canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md) — MD
 - [Industrial planning and enterprise successor authority](../../canon/INDUSTRIAL_PLANNING_SUCCESSOR_2026-09-06.md) — MD · [formatted PDF](../../../industrial/planning/publications/SH-IND-PLAN-DEC-002_v2.0.0.pdf)
 - [J2 leadership appointments — September 10, 2026](../../canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md) — MD · [formatted PDF](../../j2/publications/SH-J2-PPL-20260910_v1.0.0.pdf)
+- [J2 personnel completion — September 22, 2026](../../canon/J2_PERSONNEL_COMPLETION_2026-09-22.md) — MD · [formatted PDF](../../governance/publications/SH-J2-PERSONNEL-20260922_v1.0.0.pdf)
 - [Kelly Gang Mining — approved visual identity](../../canon/KELLY_GANG_MINING_VISUAL_IDENTITY_2026-09-07.md) — MD
 - [Klein shop and Fort occupancy continuity](../../canon/KLEIN_FORT_OCCUPANCY_2026-09-13.md) — MD
 - [Klein — name and historical identity](../../canon/KLEIN_NAME_AND_IDENTITY_2026-09-07.md) — MD

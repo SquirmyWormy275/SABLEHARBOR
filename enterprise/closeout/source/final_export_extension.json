@@ -1,0 +1,582 @@
+{
+  "version": "1.0.0",
+  "predecessor_extension_sha256": "43c8411cd8310ed7f95d0810cd350a75e2dfa193e20b5f3f60a69a99e52cf6e2",
+  "population_scope": "702 completed August employees; not September active headcount. Policy subject inclusion creates no grants. Ten names/history profiles overlay existing people only. Source availability is maximum of authorship and clean source commit; dirty previews not publishable. Dated ARU administration adds 64 asset identifiers, two fixture sites, three synthetic filings and two scoped releases. One Advisory sponsor disposition preserves zero grants. The $250 service cost is one shared existing-budget component, not additional cash or a journal entry.",
+  "schema": {
+    "final_personnel_profiles": [
+      "record_id",
+      "record_type",
+      "entity",
+      "unit",
+      "effective_from",
+      "effective_to",
+      "effective_precision",
+      "available_at",
+      "recorded_at",
+      "authored_day",
+      "fact_state",
+      "record_origin",
+      "scenario",
+      "source_path",
+      "source_sha256",
+      "source_hashes_json",
+      "source_commit",
+      "publication_state",
+      "acceptance_status",
+      "payload_json",
+      "additional_cash_usd"
+    ],
+    "final_completed_people": [
+      "record_id",
+      "record_type",
+      "entity",
+      "unit",
+      "effective_from",
+      "effective_to",
+      "effective_precision",
+      "available_at",
+      "recorded_at",
+      "authored_day",
+      "fact_state",
+      "record_origin",
+      "scenario",
+      "source_path",
+      "source_sha256",
+      "source_hashes_json",
+      "source_commit",
+      "publication_state",
+      "acceptance_status",
+      "payload_json",
+      "additional_cash_usd"
+    ],
+    "final_information_policy_classes": [
+      "record_id",
+      "record_type",
+      "entity",
+      "unit",
+      "effective_from",
+      "effective_to",
+      "effective_precision",
+      "available_at",
+      "recorded_at",
+      "authored_day",
+      "fact_state",
+      "record_origin",
+      "scenario",
+      "source_path",
+      "source_sha256",
+      "source_hashes_json",
+      "source_commit",
+      "publication_state",
+      "acceptance_status",
+      "payload_json",
+      "additional_cash_usd"
+    ],
+    "final_information_policy_subjects": [
+      "record_id",
+      "record_type",
+      "entity",
+      "unit",
+      "effective_from",
+      "effective_to",
+      "effective_precision",
+      "available_at",
+      "recorded_at",
+      "authored_day",
+      "fact_state",
+      "record_origin",
+      "scenario",
+      "source_path",
+      "source_sha256",
+      "source_hashes_json",
+      "source_commit",
+      "publication_state",
+      "acceptance_status",
+      "payload_json",
+      "additional_cash_usd"
+    ],
+    "final_debt_asset_identifiers": [
+      "record_id",
+      "record_type",
+      "entity",
+      "unit",
+      "effective_from",
+      "effective_to",
+      "effective_precision",
+      "available_at",
+      "recorded_at",
+      "authored_day",
+      "fact_state",
+      "record_origin",
+      "scenario",
+      "source_path",
+      "source_sha256",
+      "source_hashes_json",
+      "source_commit",
+      "publication_state",
+      "acceptance_status",
+      "payload_json",
+      "additional_cash_usd"
+    ],
+    "final_debt_fixture_sites": [
+      "record_id",
+      "record_type",
+      "entity",
+      "unit",
+      "effective_from",
+      "effective_to",
+      "effective_precision",
+      "available_at",
+      "recorded_at",
+      "authored_day",
+      "fact_state",
+      "record_origin",
+      "scenario",
+      "source_path",
+      "source_sha256",
+      "source_hashes_json",
+      "source_commit",
+      "publication_state",
+      "acceptance_status",
+      "payload_json",
+      "additional_cash_usd"
+    ],
+    "final_debt_filings": [
+      "record_id",
+      "record_type",
+      "entity",
+      "unit",
+      "effective_from",
+      "effective_to",
+      "effective_precision",
+      "available_at",
+      "recorded_at",
+      "authored_day",
+      "fact_state",
+      "record_origin",
+      "scenario",
+      "source_path",
+      "source_sha256",
+      "source_hashes_json",
+      "source_commit",
+      "publication_state",
+      "acceptance_status",
+      "payload_json",
+      "additional_cash_usd"
+    ],
+    "final_debt_payoff_releases": [
+      "record_id",
+      "record_type",
+      "entity",
+      "unit",
+      "effective_from",
+      "effective_to",
+      "effective_precision",
+      "available_at",
+      "recorded_at",
+      "authored_day",
+      "fact_state",
+      "record_origin",
+      "scenario",
+      "source_path",
+      "source_sha256",
+      "source_hashes_json",
+      "source_commit",
+      "publication_state",
+      "acceptance_status",
+      "payload_json",
+      "additional_cash_usd"
+    ],
+    "final_advisory_carry_disposition": [
+      "record_id",
+      "record_type",
+      "entity",
+      "unit",
+      "effective_from",
+      "effective_to",
+      "effective_precision",
+      "available_at",
+      "recorded_at",
+      "authored_day",
+      "fact_state",
+      "record_origin",
+      "scenario",
+      "source_path",
+      "source_sha256",
+      "source_hashes_json",
+      "source_commit",
+      "publication_state",
+      "acceptance_status",
+      "payload_json",
+      "additional_cash_usd"
+    ]
+  },
+  "scope": {
+    "final_personnel_profiles": {
+      "allowed_values": {
+        "entity": [
+          "SHI"
+        ],
+        "unit": [
+          "CORPORATE"
+        ],
+        "scenario": [
+          ""
+        ],
+        "fact_state": [
+          "NEWLY_AUTHORED_SYNTHETIC_SUCCESSOR"
+        ],
+        "record_origin": [
+          "PUBLIC_SYNTHETIC_DIEGETIC"
+        ]
+      },
+      "routing_fields": [
+        "unit",
+        "entity"
+      ],
+      "allowed_routes": [
+        [
+          "CORPORATE",
+          "SHI"
+        ]
+      ]
+    },
+    "final_completed_people": {
+      "allowed_values": {
+        "entity": [
+          "ARU",
+          "BST",
+          "PS",
+          "RWH",
+          "SHI"
+        ],
+        "unit": [
+          "CORPORATE",
+          "advisory",
+          "american-resource-utility",
+          "atlas-meridian",
+          "foundry-field",
+          "pale-sun",
+          "project-cradle",
+          "willow"
+        ],
+        "scenario": [
+          ""
+        ],
+        "fact_state": [
+          "NEWLY_AUTHORED_SYNTHETIC_SUCCESSOR"
+        ],
+        "record_origin": [
+          "PUBLIC_SYNTHETIC_DIEGETIC"
+        ]
+      },
+      "routing_fields": [
+        "unit",
+        "entity"
+      ],
+      "allowed_routes": [
+        [
+          "CORPORATE",
+          "SHI"
+        ],
+        [
+          "foundry-field",
+          "SHI"
+        ],
+        [
+          "atlas-meridian",
+          "SHI"
+        ],
+        [
+          "advisory",
+          "SHI"
+        ],
+        [
+          "willow",
+          "SHI"
+        ],
+        [
+          "project-cradle",
+          "SHI"
+        ],
+        [
+          "pale-sun",
+          "PS"
+        ],
+        [
+          "pale-sun",
+          "RWH"
+        ],
+        [
+          "american-resource-utility",
+          "ARU"
+        ],
+        [
+          "american-resource-utility",
+          "BST"
+        ]
+      ]
+    },
+    "final_information_policy_classes": {
+      "allowed_values": {
+        "entity": [
+          "SHI"
+        ],
+        "unit": [
+          "CORPORATE"
+        ],
+        "scenario": [
+          ""
+        ],
+        "fact_state": [
+          "NEWLY_AUTHORED_SYNTHETIC_SUCCESSOR"
+        ],
+        "record_origin": [
+          "PUBLIC_SYNTHETIC_DIEGETIC"
+        ]
+      },
+      "routing_fields": [
+        "unit",
+        "entity"
+      ],
+      "allowed_routes": [
+        [
+          "CORPORATE",
+          "SHI"
+        ]
+      ]
+    },
+    "final_information_policy_subjects": {
+      "allowed_values": {
+        "entity": [
+          "ARU",
+          "BST",
+          "PS",
+          "RWH",
+          "SHI"
+        ],
+        "unit": [
+          "CORPORATE",
+          "advisory",
+          "american-resource-utility",
+          "atlas-meridian",
+          "foundry-field",
+          "pale-sun",
+          "project-cradle",
+          "willow"
+        ],
+        "scenario": [
+          ""
+        ],
+        "fact_state": [
+          "NEWLY_AUTHORED_SYNTHETIC_SUCCESSOR"
+        ],
+        "record_origin": [
+          "PUBLIC_SYNTHETIC_DIEGETIC"
+        ]
+      },
+      "routing_fields": [
+        "unit",
+        "entity"
+      ],
+      "allowed_routes": [
+        [
+          "CORPORATE",
+          "SHI"
+        ],
+        [
+          "foundry-field",
+          "SHI"
+        ],
+        [
+          "atlas-meridian",
+          "SHI"
+        ],
+        [
+          "advisory",
+          "SHI"
+        ],
+        [
+          "willow",
+          "SHI"
+        ],
+        [
+          "project-cradle",
+          "SHI"
+        ],
+        [
+          "pale-sun",
+          "PS"
+        ],
+        [
+          "pale-sun",
+          "RWH"
+        ],
+        [
+          "american-resource-utility",
+          "ARU"
+        ],
+        [
+          "american-resource-utility",
+          "BST"
+        ]
+      ]
+    },
+    "final_debt_asset_identifiers": {
+      "allowed_values": {
+        "entity": [
+          "ARU"
+        ],
+        "unit": [
+          "american-resource-utility"
+        ],
+        "scenario": [
+          ""
+        ],
+        "fact_state": [
+          "NEWLY_AUTHORED_SYNTHETIC_SUCCESSOR"
+        ],
+        "record_origin": [
+          "PUBLIC_SYNTHETIC_DIEGETIC"
+        ]
+      },
+      "routing_fields": [
+        "unit",
+        "entity"
+      ],
+      "allowed_routes": [
+        [
+          "american-resource-utility",
+          "ARU"
+        ]
+      ]
+    },
+    "final_debt_fixture_sites": {
+      "allowed_values": {
+        "entity": [
+          "ARU"
+        ],
+        "unit": [
+          "american-resource-utility"
+        ],
+        "scenario": [
+          ""
+        ],
+        "fact_state": [
+          "NEWLY_AUTHORED_SYNTHETIC_SUCCESSOR"
+        ],
+        "record_origin": [
+          "PUBLIC_SYNTHETIC_DIEGETIC"
+        ]
+      },
+      "routing_fields": [
+        "unit",
+        "entity"
+      ],
+      "allowed_routes": [
+        [
+          "american-resource-utility",
+          "ARU"
+        ]
+      ]
+    },
+    "final_debt_filings": {
+      "allowed_values": {
+        "entity": [
+          "ARU"
+        ],
+        "unit": [
+          "american-resource-utility"
+        ],
+        "scenario": [
+          ""
+        ],
+        "fact_state": [
+          "NEWLY_AUTHORED_SYNTHETIC_SUCCESSOR"
+        ],
+        "record_origin": [
+          "PUBLIC_SYNTHETIC_DIEGETIC"
+        ]
+      },
+      "routing_fields": [
+        "unit",
+        "entity"
+      ],
+      "allowed_routes": [
+        [
+          "american-resource-utility",
+          "ARU"
+        ]
+      ]
+    },
+    "final_debt_payoff_releases": {
+      "allowed_values": {
+        "entity": [
+          "ARU"
+        ],
+        "unit": [
+          "american-resource-utility"
+        ],
+        "scenario": [
+          ""
+        ],
+        "fact_state": [
+          "NEWLY_AUTHORED_SYNTHETIC_SUCCESSOR"
+        ],
+        "record_origin": [
+          "PUBLIC_SYNTHETIC_DIEGETIC"
+        ]
+      },
+      "routing_fields": [
+        "unit",
+        "entity"
+      ],
+      "allowed_routes": [
+        [
+          "american-resource-utility",
+          "ARU"
+        ]
+      ]
+    },
+    "final_advisory_carry_disposition": {
+      "allowed_values": {
+        "entity": [
+          "SHI"
+        ],
+        "unit": [
+          "advisory"
+        ],
+        "scenario": [
+          ""
+        ],
+        "fact_state": [
+          "NEWLY_AUTHORED_SYNTHETIC_SUCCESSOR"
+        ],
+        "record_origin": [
+          "PUBLIC_SYNTHETIC_DIEGETIC"
+        ]
+      },
+      "routing_fields": [
+        "unit",
+        "entity"
+      ],
+      "allowed_routes": [
+        [
+          "advisory",
+          "SHI"
+        ]
+      ]
+    }
+  },
+  "population_counts": {
+    "final_personnel_profiles": 10,
+    "final_completed_people": 702,
+    "final_information_policy_classes": 7,
+    "final_information_policy_subjects": 702,
+    "final_debt_asset_identifiers": 64,
+    "final_debt_fixture_sites": 2,
+    "final_debt_filings": 3,
+    "final_debt_payoff_releases": 2,
+    "final_advisory_carry_disposition": 1
+  }
+}

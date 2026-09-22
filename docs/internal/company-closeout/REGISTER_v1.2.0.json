@@ -1,0 +1,1543 @@
+{
+  "document_id": "SH-COMPANY-FINAL-COMPLETION-20260922",
+  "version": "1.2.0",
+  "status": "LOCKED_ON_REPOSITORY_ACCEPTANCE",
+  "recorded_on": "2026-09-22",
+  "record_timezone": "UTC",
+  "baseline_commit": "7ce2ed5c0751ca596a5540bd8afbc0072ef99016",
+  "proposed_completed_period": "2026-08-31",
+  "event_cutoff": "2026-09-14",
+  "event_timezone": "America/Los_Angeles",
+  "scope": "Seven business lines and corporate; August completed month and operating events through September14, separately dated September22 personnel/legal/policy successors and conditional forecasts. Version1.2 adds final named current-office profiles, scoped security administration, Advisory zero-award plan, explicit policy/subject populations, actual isolated older-working-copy restore, and portable controlled runtime dependency. No additional financial postings or change to original operating cutoff.",
+  "directions": "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+  "portal": {
+    "worktree": "SABLEHARBOR-audit-suite",
+    "branch": "build/audit-training-suite",
+    "observed_commit": "548cb5d",
+    "observation": "Owner confirmed this is the active portal workstream on September 15 UTC. Running servers and dirty company activity work observed; reserved paths remain untouched. Company source work uses isolated branches and a pinned module rehearsal, not live private data.",
+    "reserved_paths": [
+      "enterprise/audit_suite/",
+      "audit_suite_web/",
+      "tools/audit_suite/",
+      "docs/internal/development/audit-suite/"
+    ],
+    "latest_observed_commit": "6f095bef",
+    "exercised_commit": "5344bf76413ffe2cd378b957dbb5f7d56d04ea19",
+    "controlled_dependency": "docs/internal/company-closeout/final-completion-2026-09-22/RUNTIME_DEPENDENCY.json"
+  },
+  "packages": [
+    {
+      "id": "SH-C01",
+      "title": "Dated company state and completed-period evidence",
+      "lane": "A/B",
+      "status": "IMPLEMENTED_FOR_SCOPED_ACCEPTANCE",
+      "acceptance_status": "CONDITIONAL_ON_ACTUAL_SUCCESSOR_PR_MERGE_AND_RELEASE",
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "enterprise/closeout/final_records.py",
+        "enterprise/operations/docs/completed-period.md",
+        "enterprise/operations/source/current_company_2026_08.json"
+      ],
+      "affected_paths": [
+        "enterprise/operations/source/current_company_2026_08.json",
+        "enterprise/operations/docs/completed-period.md",
+        "enterprise/operations/source/lane_receipt_2026_09_15.json"
+      ],
+      "commits_prs": [
+        "39aa95c1",
+        "6ab8dda7",
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
+      ],
+      "evidence": [
+        "docs/internal/company-closeout/evidence/integration-f5e919e7/receipt.json",
+        "docs/releases/COMPANY_EDITION_RELEASES.md",
+        "enterprise/closeout/final_records.py",
+        "enterprise/operations/docs/completed-period.md",
+        "enterprise/operations/source/current_company_2026_08.json",
+        "enterprise/operations/source/lane_receipt_2026_09_15.json"
+      ],
+      "commands_results": [
+        {
+          "scope": "Predecessor acceptance evidence remains in unchanged1.0/1.1registers/releases; final acceptedrevision results supplied by newRelease VALIDATION.json",
+          "result": "PENDING_FINAL_ACCEPTED_REVISION"
+        }
+      ],
+      "reconciliation_totals": {
+        "contracts": 92,
+        "customers": 88,
+        "service_environments": 104,
+        "research_projects": 5,
+        "industrial_assets": 149,
+        "current_working_capital_controls": 7,
+        "legal_balance_bridges": 16,
+        "rwh_inventory_carrying_usd": "9561061.9222",
+        "rwh_group_inventory_elimination_usd": "25176.3198",
+        "inventory_basis": "Production-support successor and common-head f5e919e7 composite reperformance; source history remains explicit."
+      },
+      "limitations": [
+        "Synthetic authored/reconstructed evidence; no actual external filing, bank confirmation or professional opinion. Final accepted-revision validation and delivery are evidenced by the indexed Release receipt."
+      ],
+      "next_owner": "Integration owner for successor acceptance, common-head reproduction and release; exact residual owners retain stated claims.",
+      "current_disposition": "Complete declared operating populations preserved; final August personnel names join only existing IDs. September successors remain separately dated."
+    },
+    {
+      "id": "SH-C02",
+      "title": "Accepted financial adjustments",
+      "lane": "A",
+      "status": "IMPLEMENTED_FOR_SCOPED_ACCEPTANCE",
+      "acceptance_status": "CONDITIONAL_ON_ACTUAL_SUCCESSOR_PR_MERGE_AND_RELEASE",
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "docs/finance/evidence/company-closeout/README.md",
+        "enterprise/closeout/exports.py",
+        "enterprise/closeout/finance.py"
+      ],
+      "affected_paths": [
+        "enterprise/closeout/finance.py",
+        "docs/finance/evidence/company-closeout/README.md"
+      ],
+      "commits_prs": [
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
+      ],
+      "evidence": [
+        "docs/finance/evidence/company-closeout/README.md",
+        "docs/finance/evidence/company-closeout/STATUTORY_REPERFORMANCE_2026-09-22.md",
+        "docs/internal/company-closeout/evidence/integration-f5e919e7/receipt.json",
+        "docs/releases/COMPANY_EDITION_RELEASES.md",
+        "enterprise/closeout/exports.py",
+        "enterprise/closeout/finance.py"
+      ],
+      "commands_results": [
+        {
+          "scope": "Predecessor acceptance evidence remains in unchanged1.0/1.1registers/releases; final acceptedrevision results supplied by newRelease VALIDATION.json",
+          "result": "PENDING_FINAL_ACCEPTED_REVISION"
+        }
+      ],
+      "reconciliation_totals": {
+        "core_goodwill_removed_usd": "30000000.00",
+        "direct_cash_delta_usd": "0.00",
+        "protected_aru_book_goodwill_usd": "14762500.00",
+        "protected_aru_tax_goodwill_usd": "13000000.00",
+        "ff003_expense_payable_usd": "152250.00",
+        "ff003_customer_principal_delta_usd": "0.00"
+      },
+      "limitations": [
+        "Synthetic authored/reconstructed evidence; no actual external filing, bank confirmation or professional opinion. Final accepted-revision validation and delivery are evidenced by the indexed Release receipt."
+      ],
+      "next_owner": "Integration owner for successor acceptance, common-head reproduction and release; exact residual owners retain stated claims.",
+      "current_disposition": "Accepted financial composition preserved exactly once; new nonmonetary tables create no accounting entries. The250administrative allocation is within existing expense, not an extra cash charge."
+    },
+    {
+      "id": "SH-C03",
+      "title": "Workforce payroll and access population",
+      "lane": "B",
+      "status": "IMPLEMENTED_FOR_SCOPED_ACCEPTANCE",
+      "acceptance_status": "CONDITIONAL_ON_ACTUAL_SUCCESSOR_PR_MERGE_AND_RELEASE",
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "docs/canon/J2_PERSONNEL_COMPLETION_2026-09-22.md",
+        "enterprise/operations/docs/ps-legal-payroll-bridge.md",
+        "enterprise/operations/j2_administrative_history.py",
+        "enterprise/operations/j2_personnel_completion.py",
+        "enterprise/operations/orientation_commissions.py",
+        "enterprise/operations/source/completed_period_2026_08.json",
+        "enterprise/operations/source/j2_administrative_history_2026_09_22.json",
+        "enterprise/operations/source/orientation_commissions_2026_09_22.json",
+        "enterprise/operations/tests/test_j2_administrative_history.py",
+        "enterprise/operations/tests/test_orientation_commissions.py"
+      ],
+      "affected_paths": [
+        "enterprise/operations/source/completed_period_2026_08.json",
+        "enterprise/operations/docs/ps-legal-payroll-bridge.md",
+        "enterprise/operations/source/lane_receipt_2026_09_15.json",
+        "enterprise/operations/j2_administrative_history.py",
+        "enterprise/operations/orientation_commissions.py",
+        "enterprise/operations/source/j2_administrative_history_2026_09_22.json",
+        "enterprise/operations/source/orientation_commissions_2026_09_22.json",
+        "enterprise/operations/tests/test_j2_administrative_history.py",
+        "enterprise/operations/tests/test_orientation_commissions.py"
+      ],
+      "commits_prs": [
+        "39aa95c1",
+        "6ab8dda7",
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
+      ],
+      "evidence": [
+        "docs/canon/J2_PERSONNEL_COMPLETION_2026-09-22.md",
+        "docs/internal/company-closeout/evidence/integration-f5e919e7/receipt.json",
+        "docs/releases/COMPANY_EDITION_RELEASES.md",
+        "enterprise/operations/docs/ps-legal-payroll-bridge.md",
+        "enterprise/operations/j2_administrative_history.py",
+        "enterprise/operations/j2_personnel_completion.py",
+        "enterprise/operations/orientation_commissions.py",
+        "enterprise/operations/source/completed_period_2026_08.json",
+        "enterprise/operations/source/j2_administrative_history_2026_09_22.json",
+        "enterprise/operations/source/lane_receipt_2026_09_15.json",
+        "enterprise/operations/source/orientation_commissions_2026_09_22.json",
+        "enterprise/operations/tests/test_j2_administrative_history.py",
+        "enterprise/operations/tests/test_orientation_commissions.py"
+      ],
+      "commands_results": [
+        {
+          "scope": "Predecessor acceptance evidence remains in unchanged1.0/1.1registers/releases; final acceptedrevision results supplied by newRelease VALIDATION.json",
+          "result": "PENDING_FINAL_ACCEPTED_REVISION"
+        }
+      ],
+      "reconciliation_totals": {
+        "employees": 702,
+        "positions": 758,
+        "nonemployee_directors": 7,
+        "payroll_events": 1404,
+        "gross_usd": "6259287.81",
+        "withholding_usd": "1704580.70",
+        "net_pay_usd": "4554707.11",
+        "employer_cost_usd": "8137074.52",
+        "august_ps_legal_reclassification_usd": "78125.00",
+        "reclassification_group_cash_and_expense_delta_usd": "0.00",
+        "july_retention_employer_levy_expense_payable_usd": "24266.75"
+      },
+      "limitations": [
+        "Synthetic authored/reconstructed evidence; no actual external filing, bank confirmation or professional opinion. Final accepted-revision validation and delivery are evidenced by the indexed Release receipt."
+      ],
+      "next_owner": "Integration owner for successor acceptance, common-head reproduction and release; exact residual owners retain stated claims.",
+      "current_disposition": "Four missing current-office names, ten profiles,22bounded history episodes and ten reviews supplement accepted181occupied/237J2billets and18Orientationcommissions. The702August person/policy subject populations are not September active-employment or live access claims."
+    },
+    {
+      "id": "SH-C04",
+      "title": "Corporate tax capital legal treasury",
+      "lane": "A",
+      "status": "IMPLEMENTED_FOR_SCOPED_ACCEPTANCE",
+      "acceptance_status": "CONDITIONAL_ON_ACTUAL_SUCCESSOR_PR_MERGE_AND_RELEASE",
+      "controlling_sources": [
+        "docs/canon/ADVISORY_LEGAL_IMPLEMENTATION_2026-09-22.md",
+        "docs/canon/ARU_ADMINISTRATIVE_COMPLETION_2026-09-22.md",
+        "docs/canon/ARU_SECURED_FINANCING_SUCCESSOR_2026-09-22.md",
+        "docs/canon/CAPITAL_DESIGNATION_RIGHTS_2026-09-22.md",
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "docs/canon/CRADLE_HOST_TERMS_2026-09-22.md",
+        "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md",
+        "docs/finance/evidence/company-closeout/HISTORICAL_TAX_RECONSTRUCTION.md",
+        "docs/finance/evidence/company-closeout/SOVEREIGNTY_METHOD.md",
+        "docs/finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md",
+        "docs/internal/company-closeout/CAPITAL_HISTORY_PROPOSAL.md",
+        "docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md",
+        "docs/internal/company-closeout/ESCROW_DISPOSITIONS.md",
+        "docs/internal/company-closeout/FOUNDER_ADMISSION_BASIS.md",
+        "docs/internal/company-closeout/INDUSTRIAL_CAPITAL_HISTORY_2026-09-22.md",
+        "docs/legal/host-successor/DEMOTTE_B_2026-09-22.md",
+        "docs/legal/host-successor/KGM_B_2026-09-22.md",
+        "docs/legal/host-successor/VALIDATION.md",
+        "enterprise/ccf/company_closeout/STATE_UNITARY_ANALYSIS.md",
+        "enterprise/ccf/company_closeout/host_terms.py",
+        "enterprise/ccf/company_closeout/source/host_terms_adoption.json",
+        "enterprise/closeout/capital_export.py",
+        "enterprise/closeout/capital_register.py",
+        "enterprise/closeout/capital_rights.py",
+        "enterprise/closeout/debt_rights.py",
+        "enterprise/closeout/finance_administration.py",
+        "enterprise/closeout/source/aru_secured_terms.json",
+        "enterprise/closeout/source/capital_designation_rights.json",
+        "enterprise/closeout/source/capital_register.json",
+        "enterprise/closeout/source/receipt_markets.json",
+        "enterprise/closeout/statutory_build.py",
+        "enterprise/closeout/statutory_posting.py",
+        "enterprise/closeout/statutory_reconciliation.py"
+      ],
+      "affected_paths": [
+        "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md",
+        "docs/finance/evidence/company-closeout/HISTORICAL_TAX_RECONSTRUCTION.md",
+        "docs/finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md",
+        "docs/finance/evidence/company-closeout/SOVEREIGNTY_METHOD.md",
+        "docs/internal/company-closeout/CAPITAL_HISTORY_PROPOSAL.md",
+        "docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md",
+        "docs/internal/company-closeout/ESCROW_DISPOSITIONS.md",
+        "enterprise/ccf/company_closeout/STATE_UNITARY_ANALYSIS.md",
+        "enterprise/closeout/source/receipt_markets.json",
+        "enterprise/closeout/source/capital_register.json",
+        "enterprise/closeout/capital_register.py",
+        "docs/internal/company-closeout/FOUNDER_ADMISSION_BASIS.md",
+        "docs/internal/company-closeout/INDUSTRIAL_CAPITAL_HISTORY_2026-09-22.md",
+        "enterprise/closeout/statutory_build.py",
+        "enterprise/closeout/statutory_posting.py",
+        "enterprise/closeout/statutory_reconciliation.py",
+        "enterprise/closeout/capital_export.py",
+        "docs/canon/ARU_SECURED_FINANCING_SUCCESSOR_2026-09-22.md",
+        "docs/canon/CAPITAL_DESIGNATION_RIGHTS_2026-09-22.md",
+        "docs/canon/CRADLE_HOST_TERMS_2026-09-22.md",
+        "docs/legal/host-successor/DEMOTTE_B_2026-09-22.md",
+        "docs/legal/host-successor/KGM_B_2026-09-22.md",
+        "docs/legal/host-successor/VALIDATION.md",
+        "enterprise/ccf/company_closeout/host_terms.py",
+        "enterprise/ccf/company_closeout/source/host_terms_adoption.json",
+        "enterprise/closeout/capital_rights.py",
+        "enterprise/closeout/debt_rights.py",
+        "enterprise/closeout/finance_administration.py",
+        "enterprise/closeout/source/aru_secured_terms.json",
+        "enterprise/closeout/source/capital_designation_rights.json"
+      ],
+      "commits_prs": [
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
+      ],
+      "evidence": [
+        "docs/canon/ADVISORY_LEGAL_IMPLEMENTATION_2026-09-22.md",
+        "docs/canon/ARU_ADMINISTRATIVE_COMPLETION_2026-09-22.md",
+        "docs/canon/ARU_SECURED_FINANCING_SUCCESSOR_2026-09-22.md",
+        "docs/canon/CAPITAL_DESIGNATION_RIGHTS_2026-09-22.md",
+        "docs/canon/CRADLE_HOST_TERMS_2026-09-22.md",
+        "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md",
+        "docs/finance/evidence/company-closeout/HISTORICAL_TAX_RECONSTRUCTION.md",
+        "docs/finance/evidence/company-closeout/SOVEREIGNTY_METHOD.md",
+        "docs/finance/evidence/company-closeout/STATUTORY_REPERFORMANCE_2026-09-22.md",
+        "docs/finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md",
+        "docs/internal/company-closeout/CAPITAL_HISTORY_PROPOSAL.md",
+        "docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md",
+        "docs/internal/company-closeout/ESCROW_DISPOSITIONS.md",
+        "docs/internal/company-closeout/FOUNDER_ADMISSION_BASIS.md",
+        "docs/internal/company-closeout/INDUSTRIAL_CAPITAL_HISTORY_2026-09-22.md",
+        "docs/internal/company-closeout/evidence/integration-f5e919e7/receipt.json",
+        "docs/legal/host-successor/DEMOTTE_B_2026-09-22.md",
+        "docs/legal/host-successor/KGM_B_2026-09-22.md",
+        "docs/legal/host-successor/VALIDATION.md",
+        "docs/releases/COMPANY_EDITION_RELEASES.md",
+        "enterprise/ccf/company_closeout/STATE_UNITARY_ANALYSIS.md",
+        "enterprise/ccf/company_closeout/host_terms.py",
+        "enterprise/ccf/company_closeout/source/host_terms_adoption.json",
+        "enterprise/closeout/capital_export.py",
+        "enterprise/closeout/capital_register.py",
+        "enterprise/closeout/capital_rights.py",
+        "enterprise/closeout/debt_rights.py",
+        "enterprise/closeout/finance_administration.py",
+        "enterprise/closeout/source/aru_secured_terms.json",
+        "enterprise/closeout/source/capital_designation_rights.json",
+        "enterprise/closeout/source/capital_register.json",
+        "enterprise/closeout/source/receipt_markets.json",
+        "enterprise/closeout/statutory_build.py",
+        "enterprise/closeout/statutory_posting.py",
+        "enterprise/closeout/statutory_reconciliation.py"
+      ],
+      "commands_results": [
+        {
+          "scope": "Predecessor acceptance evidence remains in unchanged1.0/1.1registers/releases; final acceptedrevision results supplied by newRelease VALIDATION.json",
+          "result": "PENDING_FINAL_ACCEPTED_REVISION"
+        }
+      ],
+      "reconciliation_totals": {
+        "registered_holders": 5,
+        "participating_units": "100000000",
+        "historical_round_paid_in_usd": "183000000.00",
+        "founder_initial_paid_in_usd": "0.00",
+        "historical_round_amounts_are_not_2026_receipts": true,
+        "historical_industrial_contribution_paid_in_usd": "44312500.00",
+        "total_historical_paid_in_usd": "227312500.00"
+      },
+      "limitations": [
+        "Synthetic authored/reconstructed evidence; no actual external filing, bank confirmation or professional opinion. Final accepted-revision validation and delivery are evidenced by the indexed Release receipt."
+      ],
+      "next_owner": "Integration owner for successor acceptance, common-head reproduction and release; exact residual owners retain stated claims.",
+      "current_disposition": "Approved capital/tax/goodwill/host/debt choices preserved;64asset identifiers,2fixture schedules,3synthetic filing routes,2scoped oldfacility releases and zero-award Advisory sponsorplan implemented. Real filing/perfection/priority/trademark clearance is not asserted."
+    },
+    {
+      "id": "SH-C05",
+      "title": "Activity-based obligations and performed controls",
+      "lane": "C",
+      "status": "IMPLEMENTED_FOR_SCOPED_ACCEPTANCE",
+      "acceptance_status": "CONDITIONAL_ON_ACTUAL_SUCCESSOR_PR_MERGE_AND_RELEASE",
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "enterprise/ccf/company_closeout/README.md",
+        "enterprise/ccf/company_closeout/current_activity_successor.json",
+        "enterprise/ccf/company_closeout/industrial_transaction_tax.json",
+        "enterprise/ccf/company_closeout/rail_reporting_successor.json",
+        "enterprise/ccf/company_closeout/synthetic_permit_instruments_august.json"
+      ],
+      "affected_paths": [
+        "enterprise/ccf/company_closeout/README.md",
+        "enterprise/ccf/company_closeout/current_activity_successor.json",
+        "enterprise/ccf/company_closeout/synthetic_permit_instruments_august.json",
+        "enterprise/ccf/company_closeout/rail_reporting_successor.json",
+        "enterprise/ccf/company_closeout/industrial_transaction_tax.json"
+      ],
+      "commits_prs": [
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
+      ],
+      "evidence": [
+        "docs/internal/company-closeout/evidence/integration-f5e919e7/receipt.json",
+        "docs/releases/COMPANY_EDITION_RELEASES.md",
+        "enterprise/ccf/company_closeout/CURRENT_RESIDUALS.md",
+        "enterprise/ccf/company_closeout/FRA_EVENT_DAY_AUTHORITY.md",
+        "enterprise/ccf/company_closeout/README.md",
+        "enterprise/ccf/company_closeout/ROT_RECEIPTS_2026.md",
+        "enterprise/ccf/company_closeout/august_admin_completion.json",
+        "enterprise/ccf/company_closeout/benefit_admin_completion.json",
+        "enterprise/ccf/company_closeout/current_activity_successor.json",
+        "enterprise/ccf/company_closeout/industrial_transaction_tax.json",
+        "enterprise/ccf/company_closeout/rail_authority_review.json",
+        "enterprise/ccf/company_closeout/rail_reporting_successor.json",
+        "enterprise/ccf/company_closeout/rot_receipts_2026.py",
+        "enterprise/ccf/company_closeout/synthetic_permit_instruments_august.json",
+        "enterprise/ccf/company_closeout/tax_calendar_supplement.py",
+        "enterprise/closeout/statutory_reconciliation.py"
+      ],
+      "commands_results": [
+        {
+          "scope": "Predecessor acceptance evidence remains in unchanged1.0/1.1registers/releases; final acceptedrevision results supplied by newRelease VALIDATION.json",
+          "result": "PENDING_FINAL_ACCEPTED_REVISION"
+        }
+      ],
+      "reconciliation_totals": {
+        "permit_instruments": 14,
+        "permit_occurrences": 204,
+        "historical_rail_events": 14,
+        "native_controls": 166,
+        "native_control_boundaries": 1660,
+        "business_conditional_occurrences": 7560
+      },
+      "limitations": [
+        "Synthetic authored/reconstructed evidence; no actual external filing, bank confirmation or professional opinion. Final accepted-revision validation and delivery are evidenced by the indexed Release receipt.",
+        "Native framework preparation retains 1,660 pending local reviews; current activity evidence and forecast control populations have separate denominators. Failed, missing, not-run and future-due occurrences are preserved."
+      ],
+      "next_owner": "Integration owner for successor acceptance, common-head reproduction and release; exact residual owners retain stated claims.",
+      "current_disposition": "Existing applicability/performance populations and adverse/future findings preserved; no blanket adoption of1660pending framework rows or new clean-regulatory-outcome claim."
+    },
+    {
+      "id": "SH-C06",
+      "title": "Information policies and bounded runtime",
+      "lane": "C",
+      "status": "IMPLEMENTED_FOR_SCOPED_ACCEPTANCE",
+      "acceptance_status": "CONDITIONAL_ON_ACTUAL_SUCCESSOR_PR_MERGE_AND_RELEASE",
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "docs/internal/company-closeout/PORTAL_CONTRACT.md",
+        "docs/internal/company-closeout/PORTAL_REHEARSAL.json",
+        "docs/internal/company-closeout/REFERENCE_RESTORE_RECEIPT.json",
+        "docs/internal/company-closeout/final-completion-2026-09-22/RUNTIME_DEPENDENCY.json",
+        "docs/internal/company-closeout/final-completion-2026-09-22/WORKING_COPY_RESTORE_RECEIPT.json",
+        "docs/j2/alexandria/COMPANY_INFORMATION_POLICY_IMPLEMENTATION_2026-09-22.md",
+        "enterprise/ccf/company_closeout/workspace_artifact.py"
+      ],
+      "affected_paths": [
+        "docs/internal/company-closeout/PORTAL_CONTRACT.md",
+        "docs/internal/company-closeout/PORTAL_REHEARSAL.json",
+        "docs/internal/company-closeout/REFERENCE_RESTORE_RECEIPT.json"
+      ],
+      "commits_prs": [
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
+      ],
+      "evidence": [
+        "docs/internal/company-closeout/PORTAL_CONTRACT.md",
+        "docs/internal/company-closeout/PORTAL_REHEARSAL.json",
+        "docs/internal/company-closeout/PORTAL_SELECTED_REVIEW.md",
+        "docs/internal/company-closeout/PORTAL_TRANSPORT_REHEARSAL.json",
+        "docs/internal/company-closeout/REFERENCE_RESTORE_RECEIPT.json",
+        "docs/internal/company-closeout/evidence/integration-f5e919e7/receipt.json",
+        "docs/internal/company-closeout/evidence/portal-edition-f5e919e7/RECEIPT.json",
+        "docs/internal/company-closeout/evidence/portal-neutral-2026-09-22/receipt.json",
+        "docs/internal/company-closeout/final-completion-2026-09-22/RUNTIME_DEPENDENCY.json",
+        "docs/internal/company-closeout/final-completion-2026-09-22/WORKING_COPY_RESTORE_RECEIPT.json",
+        "docs/j2/alexandria/COMPANY_INFORMATION_POLICY_IMPLEMENTATION_2026-09-22.md",
+        "docs/releases/COMPANY_EDITION_RELEASES.md",
+        "docs/internal/company-closeout/workspace-artifact-2026-09-22/RECEIPT.json"
+      ],
+      "commands_results": [
+        {
+          "scope": "Predecessor acceptance evidence remains in unchanged1.0/1.1registers/releases; final acceptedrevision results supplied by newRelease VALIDATION.json",
+          "result": "PENDING_FINAL_ACCEPTED_REVISION"
+        }
+      ],
+      "reconciliation_totals": {
+        "final_counts": "Actual accepted-edition original/transport/table counts recorded in Release receipts; earlier5689/5746candidate counts are historical only."
+      },
+      "limitations": [
+        "Synthetic authored/reconstructed evidence; no actual external filing, bank confirmation or professional opinion. Final accepted-revision validation and delivery are evidenced by the indexed Release receipt.",
+        "Declared local working-copy lifecycle and mediated disclosure surfaces are exercised; complete live Alexandria, actual model inference, authoritative-original destruction and thirteen external readiness gates are outside this finite runtime claim."
+      ],
+      "next_owner": "Integration owner for successor acceptance, common-head reproduction and release; exact residual owners retain stated claims.",
+      "current_disposition": "Bounded local inspection policy, human-review/retention/export boundaries and actual oldbackup/current-state replay exercised. Two deleted copies suppressed, held content private, revoked grants denied across declared surfaces. Controlled exact-runtime archive makes repetition portable. No live service, physical estate, universal lifecycle or actual model-inference claim. Actual authorized working excerpt is exported with enforced nonauthoritative marking, source provenance and no promotion."
+    },
+    {
+      "id": "SH-C07",
+      "title": "Completed operating record chains",
+      "lane": "B",
+      "status": "IMPLEMENTED_FOR_SCOPED_ACCEPTANCE",
+      "acceptance_status": "CONDITIONAL_ON_ACTUAL_SUCCESSOR_PR_MERGE_AND_RELEASE",
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "enterprise/operations/docs/completed-period.md",
+        "enterprise/operations/source/lane_receipt_2026_09_15.json",
+        "enterprise/operations/source/september_custody_2026.json"
+      ],
+      "affected_paths": [
+        "enterprise/operations/source/september_custody_2026.json",
+        "enterprise/operations/source/lane_receipt_2026_09_15.json"
+      ],
+      "commits_prs": [
+        "39aa95c1",
+        "6ab8dda7",
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
+      ],
+      "evidence": [
+        "docs/internal/company-closeout/evidence/integration-f5e919e7/receipt.json",
+        "docs/releases/COMPANY_EDITION_RELEASES.md",
+        "enterprise/operations/docs/completed-period.md",
+        "enterprise/operations/source/lane_receipt_2026_09_15.json",
+        "enterprise/operations/source/september_custody_2026.json"
+      ],
+      "commands_results": [
+        {
+          "scope": "Predecessor acceptance evidence remains in unchanged1.0/1.1registers/releases; final acceptedrevision results supplied by newRelease VALIDATION.json",
+          "result": "PENDING_FINAL_ACCEPTED_REVISION"
+        }
+      ],
+      "reconciliation_totals": {},
+      "limitations": [
+        "Synthetic authored/reconstructed evidence; no actual external filing, bank confirmation or professional opinion. Final accepted-revision validation and delivery are evidenced by the indexed Release receipt."
+      ],
+      "next_owner": "Integration owner for successor acceptance, common-head reproduction and release; exact residual owners retain stated claims.",
+      "current_disposition": "Existing completed warehouse/dispatch/maintenance/production/environmental chains preserved with quantities, custody, qualifications, failures and accounts. No forecast promoted to actual."
+    },
+    {
+      "id": "SH-C08",
+      "title": "Publication status and source protection",
+      "lane": "D",
+      "status": "IMPLEMENTED_FOR_SCOPED_ACCEPTANCE",
+      "acceptance_status": "CONDITIONAL_ON_ACTUAL_SUCCESSOR_PR_MERGE_AND_RELEASE",
+      "controlling_sources": [
+        ".github/workflows/source-integrity.yml",
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "docs/internal/company-closeout/MAIN_PROTECTION.md",
+        "docs/internal/company-closeout/MAIN_PROTECTION_RECEIPT.json",
+        "docs/internal/company-closeout/PR145_INTEGRATION.md",
+        "docs/internal/company-closeout/PR145_VALIDATION.json",
+        "docs/internal/company-closeout/final-completion-2026-09-22/BRANCH_RETIREMENT.json"
+      ],
+      "affected_paths": [
+        "docs/internal/company-closeout/PR145_INTEGRATION.md",
+        "docs/internal/company-closeout/PR145_VALIDATION.json",
+        "docs/internal/company-closeout/MAIN_PROTECTION.md",
+        "docs/internal/company-closeout/MAIN_PROTECTION_RECEIPT.json"
+      ],
+      "commits_prs": [
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/145",
+        "c8d628aa84140d63f6b8da8e2cba173c26c9a3b1",
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/165",
+        "667fddbeb2876ef83bc836b21dc4062e943bcb2c",
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
+      ],
+      "evidence": [
+        ".github/workflows/source-integrity.yml",
+        "docs/internal/company-closeout/MAIN_PROTECTION.md",
+        "docs/internal/company-closeout/MAIN_PROTECTION_RECEIPT.json",
+        "docs/internal/company-closeout/PR145_INTEGRATION.md",
+        "docs/internal/company-closeout/PR145_VALIDATION.json",
+        "docs/internal/company-closeout/evidence/integration-f5e919e7/receipt.json",
+        "docs/internal/company-closeout/final-completion-2026-09-22/BRANCH_RETIREMENT.json",
+        "docs/releases/COMPANY_EDITION_RELEASES.md"
+      ],
+      "commands_results": [
+        {
+          "scope": "Predecessor acceptance evidence remains in unchanged1.0/1.1registers/releases; final acceptedrevision results supplied by newRelease VALIDATION.json",
+          "result": "PENDING_FINAL_ACCEPTED_REVISION"
+        }
+      ],
+      "reconciliation_totals": {},
+      "limitations": [
+        "Synthetic authored/reconstructed evidence; no actual external filing, bank confirmation or professional opinion. Final accepted-revision validation and delivery are evidenced by the indexed Release receipt."
+      ],
+      "next_owner": "Integration owner for successor acceptance, common-head reproduction and release; exact residual owners retain stated claims.",
+      "current_disposition": "Approved publication designs preserved;35merged remote branches safely retired,67explicitlyretained. Required source integrity expanded to domain checks; forcepush/deletion protections preserved. Actual release and hosted results govern final delivery."
+    },
+    {
+      "id": "SH-C09",
+      "title": "Reject malformed tenant identity",
+      "lane": "C",
+      "status": "IMPLEMENTED_FOR_SCOPED_ACCEPTANCE",
+      "acceptance_status": "CONDITIONAL_ON_ACTUAL_SUCCESSOR_PR_MERGE_AND_RELEASE",
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "enterprise/ccf/company_closeout/information_policy.py",
+        "enterprise/runtime/security.py",
+        "enterprise/runtime/tests/test_security.py",
+        "tests/ccf/test_information_policy.py"
+      ],
+      "affected_paths": [
+        "enterprise/runtime/security.py",
+        "enterprise/runtime/tests/test_security.py"
+      ],
+      "commits_prs": [
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
+      ],
+      "evidence": [
+        "docs/internal/company-closeout/evidence/integration-f5e919e7/receipt.json",
+        "docs/releases/COMPANY_EDITION_RELEASES.md",
+        "enterprise/ccf/company_closeout/information_policy.py",
+        "enterprise/runtime/security.py",
+        "enterprise/runtime/tests/test_security.py",
+        "tests/ccf/test_information_policy.py"
+      ],
+      "commands_results": [
+        {
+          "scope": "Predecessor acceptance evidence remains in unchanged1.0/1.1registers/releases; final acceptedrevision results supplied by newRelease VALIDATION.json",
+          "result": "PENDING_FINAL_ACCEPTED_REVISION"
+        }
+      ],
+      "reconciliation_totals": {},
+      "limitations": [
+        "Synthetic authored/reconstructed evidence; no actual external filing, bank confirmation or professional opinion. Final accepted-revision validation and delivery are evidenced by the indexed Release receipt.",
+        "Reference-policy implementation and regression only; no live production deployment or breach asserted."
+      ],
+      "next_owner": "Integration owner for successor acceptance, common-head reproduction and release; exact residual owners retain stated claims.",
+      "current_disposition": "Accepted malformed-tenant reference fix preserved; current information policy additionally rejects malformedpurpose/action/grant/lifecycle metadata and substring permission bypass."
+    },
+    {
+      "id": "SH-C10",
+      "title": "Composite release and independent inspection",
+      "lane": "D",
+      "status": "IMPLEMENTED_FOR_SCOPED_ACCEPTANCE",
+      "acceptance_status": "CONDITIONAL_ON_ACTUAL_SUCCESSOR_PR_MERGE_AND_RELEASE",
+      "controlling_sources": [
+        "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+        "docs/internal/company-closeout/FINAL_RECORDS_IMPORT_CONTRACT_2026-09-22.md",
+        "docs/internal/company-closeout/INSPECTION_GUIDE.md",
+        "docs/internal/company-closeout/INSPECTION_GUIDE_v1.1.0.md",
+        "docs/internal/company-closeout/INSPECTION_GUIDE_v1.2.0.md",
+        "docs/internal/company-closeout/SUCCESSOR_RECORDS_IMPORT_CONTRACT_2026-09-22.md",
+        "enterprise/closeout/exports.py",
+        "enterprise/closeout/source/successor_export_extension.json",
+        "enterprise/closeout/successor_records.py",
+        "enterprise/operations/exports.py",
+        "tools/company_closeout/compose.py",
+        "tools/company_closeout/edition.py",
+        "tools/company_closeout/independent_import.py"
+      ],
+      "affected_paths": [
+        "docs/internal/company-closeout/INSPECTION_GUIDE.md",
+        "tools/company_closeout/compose.py",
+        "tools/company_closeout/edition.py",
+        "tools/company_closeout/independent_import.py",
+        "docs/internal/company-closeout/INSPECTION_GUIDE_v1.1.0.md",
+        "docs/internal/company-closeout/SUCCESSOR_RECORDS_IMPORT_CONTRACT_2026-09-22.md",
+        "enterprise/closeout/exports.py",
+        "enterprise/closeout/source/successor_export_extension.json",
+        "enterprise/closeout/successor_records.py",
+        "enterprise/operations/exports.py"
+      ],
+      "commits_prs": [
+        "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
+      ],
+      "evidence": [
+        "docs/internal/company-closeout/FINAL_RECORDS_IMPORT_CONTRACT_2026-09-22.md",
+        "docs/internal/company-closeout/INSPECTION_GUIDE.md",
+        "docs/internal/company-closeout/INSPECTION_GUIDE_v1.1.0.md",
+        "docs/internal/company-closeout/INSPECTION_GUIDE_v1.2.0.md",
+        "docs/internal/company-closeout/SUCCESSOR_RECORDS_IMPORT_CONTRACT_2026-09-22.md",
+        "docs/internal/company-closeout/evidence/integration-f5e919e7/receipt.json",
+        "docs/internal/company-closeout/evidence/portal-edition-f5e919e7/RECEIPT.json",
+        "docs/internal/company-closeout/validation/README.md",
+        "docs/releases/COMPANY_EDITION_RELEASES.md",
+        "enterprise/closeout/exports.py",
+        "enterprise/closeout/source/successor_export_extension.json",
+        "enterprise/closeout/successor_records.py",
+        "enterprise/operations/exports.py",
+        "enterprise/operations/reperform_closeout.py",
+        "tools/company_closeout/compose.py",
+        "tools/company_closeout/edition.py",
+        "tools/company_closeout/independent_import.py"
+      ],
+      "commands_results": [
+        {
+          "scope": "Predecessor acceptance evidence remains in unchanged1.0/1.1registers/releases; final acceptedrevision results supplied by newRelease VALIDATION.json",
+          "result": "PENDING_FINAL_ACCEPTED_REVISION"
+        }
+      ],
+      "reconciliation_totals": {
+        "final_counts": "Actual accepted-edition original/transport/table counts recorded in Release receipts; earlier5689/5746candidate counts are historical only."
+      },
+      "limitations": [
+        "Synthetic authored/reconstructed evidence; no actual external filing, bank confirmation or professional opinion. Final accepted-revision validation and delivery are evidenced by the indexed Release receipt.",
+        "Declared local working-copy lifecycle and mediated disclosure surfaces are exercised; complete live Alexandria, actual model inference, authoritative-original destruction and thirteen external readiness gates are outside this finite runtime claim."
+      ],
+      "next_owner": "Integration owner for successor acceptance, common-head reproduction and release; exact residual owners retain stated claims.",
+      "current_disposition": "Complete118table enterprise/perunit exports and indexed controlled publication successor, independent import and exact acceptance-bound edition. Original98tables and260rows/11earlier successor tables preserved;1493rows/9final tables added."
+    }
+  ],
+  "residuals": [
+    {
+      "id": "SH-RES-TAX-INTEGRATION",
+      "status": "RESOLVED_FOR_ADOPTED_METHOD",
+      "disposition": "Accepted-source build, 90 independent annual taxpayer checks and source/statement/export reconciliation passed. A hypothetical alternative preclosing prior-year minimum is not established and is not used by the adopted current-month method.",
+      "affected_claim": "Final after-tax legal/consolidated results and funding need.",
+      "next_owner_action": "Maintain published evidence; future corrections require a separately versioned successor."
+    },
+    {
+      "id": "SH-RES-CAP-RIGHTS",
+      "status": "RESOLVED_CURRENT_SCHEDULE_ON_ACCEPTANCE",
+      "disposition": "Approved half-original-unit thresholds, own-seat replacement and five-holder current assent are implemented. Historical absence of side letters and every earlier right are not asserted.",
+      "affected_claim": "A complete enforceability or every-rights representation.",
+      "next_owner_action": "Corporate/legal owner: resolve the particular instrument term before asserting it.",
+      "evidence": "docs/canon/CAPITAL_DESIGNATION_RIGHTS_2026-09-22.md"
+    },
+    {
+      "id": "SH-RES-HOST-RIGHTS",
+      "status": "RESOLVED_PROSPECTIVE_FRAMEWORK_ON_ACCEPTANCE",
+      "disposition": "Approved B and common terms are implemented in two separately executed synthetic frameworks. Zero accepted prospective work orders means no active access, guaranteed economics or new cash. Historical endpoints are not backfilled.",
+      "affected_claim": "Complete contract enforceability or additional long-term exclusivity.",
+      "next_owner_action": "Cradle and host accountable signers: maintain accepted optionBframeworks; approve any future individual work orders separately. No current terms choice remains open; historical endpoints retain their own evidence boundaries.",
+      "evidence": "docs/canon/CRADLE_HOST_TERMS_2026-09-22.md"
+    },
+    {
+      "id": "SH-RES-ESCROW-CLAIMS",
+      "status": "PRESERVED_ADVERSE_OR_CONDITIONAL_FACT",
+      "disposition": "Unreleased balances, unadjudicated claims and future conditions remain inspectable facts. No cash availability, recovery or title cure is inferred; a complete claims-merits assertion remains unsupported.",
+      "affected_claim": "Recovered losses, cured title or available escrow cash.",
+      "next_owner_action": "Acquisition legal/environmental owners: evaluate claims and deliverables on their recorded dates.",
+      "evidence": "docs/internal/company-closeout/host-residual-successor/dispositions.json"
+    },
+    {
+      "id": "SH-RES-CONTROL-OUTCOMES",
+      "status": "PRESERVED_ADVERSE_OR_FUTURE_FACT",
+      "disposition": "Failed, missing and future events retain their cutoff states and response owners. Clean outcomes are not a condition for an honest edition; no later event is backdated into the frozen September14 cutoff.",
+      "affected_claim": "Zero exposure, clean environmental pathway or future duty already performed.",
+      "next_owner_action": "Radiation protection, environmental and benefits accountable roles identified in the source."
+    },
+    {
+      "id": "SH-RES-CONTROL-SCOPE",
+      "status": "PRESERVED_DECLARED_LIMIT",
+      "disposition": "Original affected claim, evidence and next owner remain in REGISTER.json.",
+      "affected_claim": "Universal historical control performance or professional framework equivalence.",
+      "next_owner_action": "Obligations/CCF owner: maintain C05-R06/R07/R09 scope boundaries."
+    },
+    {
+      "id": "SH-RES-DEBT-RIGHTS",
+      "status": "RESOLVED_SYNTHETIC_ADMINISTRATION",
+      "disposition": "Approved capital/tax/goodwill/host/debt choices preserved;64asset identifiers,2fixture schedules,3synthetic filing routes,2scoped oldfacility releases and zero-award Advisory sponsorplan implemented. Real filing/perfection/priority/trademark clearance is not asserted.",
+      "affected_claim": "Real external filing, legal opinion or first-priority collateral is outside synthetic execution.",
+      "next_owner_action": "Treasury/legal maintain prospective reporting and collateral changes against the accepted schedule."
+    },
+    {
+      "id": "SH-RES-RUNTIME",
+      "status": "BOUNDED_INSPECTION_IMPLEMENTED",
+      "disposition": "Bounded local inspection policy, human-review/retention/export boundaries and actual oldbackup/current-state replay exercised. Two deleted copies suppressed, held content private, revoked grants denied across declared surfaces. Controlled exact-runtime archive makes repetition portable. No live service, physical estate, universal lifecycle or actual model-inference claim.",
+      "affected_claim": "All native authoritative-original disposal, actual model behavior, physical/external deployment and complete Alexandria product.",
+      "next_owner_action": "Active runtime owner maintains live deployment and product extensions; package consumers use explicit controlled dependency for isolated repetition."
+    },
+    {
+      "id": "SH-RES-HQ-ORIGINAL",
+      "status": "UNAVAILABLE_EXACT_ARTIFACT",
+      "affected_claim": "Exact approved HQ image identity; not financial/operating inspection.",
+      "disposition": "65279unique rasterfilessearched,0matches0errors; immutable requiredhash2bf5a1209b9c3ece435271f2fbf5a3c827bbbccf242ea4ee60535749ccee9d92. No recreation substituted.",
+      "next_owner_action": "Owner/artworkcustodian supplies original archive/location; exacthashverification required.",
+      "evidence": "docs/internal/company-closeout/final-completion-2026-09-22/IMAGE_RECOVERY.json"
+    },
+    {
+      "id": "SH-RES-ENGINEERING",
+      "status": "PRESERVED_ENGINEERING_EXTENSION",
+      "affected_claim": "Historical alignments, profiles, landaccess and detailedsite engineering; outside finite company financial/operating inspection.",
+      "disposition": "All78145original carriers completed; later engineering/source-domain scope remains precise in datedcriterionmatrix.",
+      "next_owner_action": "Geographic/engineering owner continues #107/#108 at accepted precision.",
+      "evidence": "docs/internal/company-closeout/GEOGRAPHIC_108_CURRENT_DISPOSITION_2026-09-22.md"
+    },
+    {
+      "id": "SH-RES-ACTUAL-TRADEMARK",
+      "status": "REAL_EXTERNAL_CLEARANCE_UNESTABLISHED",
+      "affected_claim": "Actual commercial trademark clearance; not synthetic operating-company evidence.",
+      "disposition": "Source author records documented same-name App Store software listing and primary clearance route; no clean legal opinion invented.",
+      "next_owner_action": "Actual counsel/owner only if real commercial use is pursued.",
+      "evidence": "docs/canon/ADVISORY_LEGAL_IMPLEMENTATION_2026-09-22.md"
+    },
+    {
+      "id": "SH-RES-ACCEPTANCE",
+      "status": "PENDING_ACTUAL_SUCCESSOR_DELIVERY",
+      "affected_claim": "Accepted1.2companyedition",
+      "disposition": "Acceptance/publication is established only by actual merge/release receipt; earlier editions remain delivered.",
+      "next_owner_action": "Integration owner completes review, acceptedrevision validation, packaging, runtime repetition and verifiedretrieval."
+    }
+  ],
+  "tax_history_direction": "OWNER_APPROVED_CORPORATE_FROM_FORMATION_2016_NEWLY_AUTHORED_HISTORY",
+  "issue_snapshot": {
+    "observed_on": "2026-09-22",
+    "status": "Issue closure follows actual acceptance and issue criterion; final release receipt records live disposition, not this premerge proposal.",
+    "evidence": "docs/wiki/Open-Questions.md"
+  },
+  "evidence_boundary": "Final scoped adoption is conditional on the actual merged version1.2successor PR and indexed Release receipt. Effective August/September periods remain distinct from later source authoring and actual repository acceptance. No frozen predecessor is restated.",
+  "capital_register_direction": "OWNER_APPROVED_PROPOSED_FICTIONAL_FIVE_HOLDER_REGISTER_AND_VOLUNTARY_CONTRIBUTIONS",
+  "updated_on": "2026-09-22",
+  "acceptance_condition": "Actual reviewed successor merge, clean accepted-source regeneration, independent import/reperformance, bounded runtime demonstrations and separately versioned retrievable release; actual receipt supplies exact PR, source commit and publication identity.",
+  "preserved_states": [
+    "Only this decision and explicitly identified authored successor scopes are adopted. Original source/evidence availability, effective periods and forecast status remain distinct from actual repository acceptance.",
+    "Pending implementation/repository-acceptance labels are superseded only for each explicitly adopted source and scope on the actual successor merge. Unrelated OPEN/PROVISIONAL records remain; future synthetic duties and actual filing/perfection states are not converted by repository acceptance.",
+    "All immutable historical finance releases and pinned bytes remain preserved; the current successor alone removes the unsupported $30 million Core initialization goodwill. Original ARU book goodwill $14,762,500 and tax goodwill $13 million remain distinct from separately supported $900,000 capitalized acquisition costs.",
+    "1,660 native framework preparation rows retain PENDING_LOCAL_REVIEW. Fictional failures, unpaid taxes, adverse economics, missing evidence, future duties, conditional forecasts and uncommitted funding remain visible.",
+    "Bounded local inspection policy, human-review/retention/export boundaries and actual oldbackup/current-state replay exercised. Two deleted copies suppressed, held content private, revoked grants denied across declared surfaces. Controlled exact-runtime archive makes repetition portable. No live service, physical estate, universal lifecycle or actual model-inference claim. Current J2 names/profiles are now completed at stated scope; exact-image and engineering limits remain separately identified.",
+    "The $44.3125 million historical contribution trail is newly authored completion of the existing industrial opening assumption under delegated authority and approved voluntary proportional funding; it is not recovered evidence or a second current cash posting.",
+    "No real registration, government filing, payment, third-party signature, compulsory funding, guarantee or private evaluator material is adopted. The only newly approved instrument rights are those in the three September 22 scoped canon successors. Ordinary delegated synthetic administrative completion includes the two expressly authored old-facility releases, asset/title/fixture identification and three modeled filing routes. These are not real external acts or legal opinions."
+  ],
+  "adopted_sources": [
+    {
+      "path": ".github/workflows/ccf-preparation.yml",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "2ae0a1f4f817877a04ba53ec5dc764c966485883998e541df3e538bec6ce9d20"
+    },
+    {
+      "path": ".github/workflows/source-integrity.yml",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "d83e61aab3006acb4b259bde687640d4177690c01b8b69a7cebb7b85970eff82"
+    },
+    {
+      "path": "docs/canon/ADVISORY_LEGAL_IMPLEMENTATION_2026-09-22.md",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "b5fedfc6f2c30359afd68d6552ea0733df116d8725e60cabb4fca21ae582ef9e"
+    },
+    {
+      "path": "docs/canon/ARU_ADMINISTRATIVE_COMPLETION_2026-09-22.md",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "5ceebdf60aedeef73f654a822c677ae00b8b464180dc9f6ebef8a5eb18273fb5"
+    },
+    {
+      "path": "docs/canon/ARU_SECURED_FINANCING_SUCCESSOR_2026-09-22.md",
+      "sha256": "ef4db41f4993af597f4268023b95bc2296e678d418d394494ee777208629120e",
+      "scope": "Scoped September 22 administrative/qualification and explicitly owner-approved rights successor, including validated export/publication implementation. No new monetary posting, real execution, perfection/priority assertion, or unrelated right is adopted."
+    },
+    {
+      "path": "docs/canon/CAPITAL_DESIGNATION_RIGHTS_2026-09-22.md",
+      "sha256": "aa85a59da20a0a8027fa6712111048ac5e736829041df354e009a8b5b71e238d",
+      "scope": "Scoped September 22 administrative/qualification and explicitly owner-approved rights successor, including validated export/publication implementation. No new monetary posting, real execution, perfection/priority assertion, or unrelated right is adopted."
+    },
+    {
+      "path": "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+      "sha256": "400190fc75b2e8ca001dedb9eb99773f677d9ed8462e1bd41ae56ac35aeb9a69",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "docs/canon/CRADLE_HOST_TERMS_2026-09-22.md",
+      "sha256": "d2e43a683e9d770fb3fac58251bd4bf417481e4e7b61ca3dc760485f64c26be0",
+      "scope": "Scoped September 22 administrative/qualification and explicitly owner-approved rights successor, including validated export/publication implementation. No new monetary posting, real execution, perfection/priority assertion, or unrelated right is adopted."
+    },
+    {
+      "path": "docs/canon/J2_PERSONNEL_COMPLETION_2026-09-22.md",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "83bcc1938de72bebb2de85dbe8bf384d31f33180213f360be31e4253f828629d",
+      "predecessor_sha256": "c40374c555eac6a41a03fb3fb3373a60337900521c1ae6872698bd85770232fb",
+      "supersession": "Version1.2 current scoped source/publication only; earlier editions remain unchanged."
+    },
+    {
+      "path": "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md",
+      "sha256": "e16949da85e3a13ee709a3c3b26c4ac7396f3cb60d519aa848f3cc53450f8673",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "docs/finance/evidence/company-closeout/HISTORICAL_TAX_RECONSTRUCTION.md",
+      "sha256": "e54e3e730905e3855e30a0791e362719cd2d57a6e1f2493790550ce4df7ecb1c",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "docs/finance/evidence/company-closeout/README.md",
+      "sha256": "e46f636376e6215b759fe18b56e40b483ecebfdec1e77f29ca7aa1d79ab4f0e8",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "docs/finance/evidence/company-closeout/SOVEREIGNTY_METHOD.md",
+      "sha256": "0989e11455965413e6a1e37fc75804254c5996d5d095c4bf2f640ff17ec75b5f",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "docs/finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md",
+      "sha256": "e3fb9a83c133df06792a9adf54c93d4213ab5e51e71e4eb348f67d66f1006683",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "docs/governance/publication_manifest.json",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "4edb5fdf1644d2c650ea703a26b7a06addb827a883eff1254a910ead0d7d9cba",
+      "predecessor_sha256": "5a2debe9139fcf4008f32abc30cf4277f799f68983590cc08b126aa05f7907fe",
+      "supersession": "Version1.2 current scoped source/publication only; earlier editions remain unchanged."
+    },
+    {
+      "path": "docs/internal/company-closeout/CAPITAL_HISTORY_PROPOSAL.md",
+      "sha256": "022fd9931a515c4e65eb799cea2f0c6640759c273d2fbade5625e62f4c182666",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "docs/internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md",
+      "sha256": "6efa0bc534624e311b41b80df7887dd638f5af5e0c9a3131246a3ea1e74ae13c",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "docs/internal/company-closeout/ESCROW_DISPOSITIONS.md",
+      "sha256": "f58a09abcd781652c003ad60becb54a115da1ca57ee2285c47a4e09fea68962b",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "docs/internal/company-closeout/FINAL_RECORDS_IMPORT_CONTRACT_2026-09-22.md",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "a6f44e1e62b30f0ac28ae7a8cbcff3018ac839cac97737dc5e25f8b6e134d1a0"
+    },
+    {
+      "path": "docs/internal/company-closeout/FOUNDER_ADMISSION_BASIS.md",
+      "sha256": "58e9b930bab55428d61c210122303e01a56a65f07ff01295f0f277201e934cee",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "docs/internal/company-closeout/GEOGRAPHIC_108_CURRENT_DISPOSITION_2026-09-22.md",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "e975664deb11b1cc90fe67cadd02ef49442411f7b0c04a7328dfed214b2238a0"
+    },
+    {
+      "path": "docs/internal/company-closeout/INDUSTRIAL_CAPITAL_HISTORY_2026-09-22.md",
+      "sha256": "6955c475be523d9103e3839a562e7b9ef5fb14af8443a674eb3cd40a04640491",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "docs/internal/company-closeout/INSPECTION_GUIDE.md",
+      "sha256": "2b1063f4f07cced37b690fc8bea45baf72c321c48f63794eb6a63be190317f4f",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "docs/internal/company-closeout/INSPECTION_GUIDE_v1.1.0.md",
+      "sha256": "414d4789c894b550d3e0e9a992c2eccbf09ceee7f563ef27279f5ca312ed8c16",
+      "scope": "Scoped September 22 administrative/qualification and explicitly owner-approved rights successor, including validated export/publication implementation. No new monetary posting, real execution, perfection/priority assertion, or unrelated right is adopted."
+    },
+    {
+      "path": "docs/internal/company-closeout/INSPECTION_GUIDE_v1.2.0.md",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "039c5645cd475dd39948f349b26ff208a6271e3eeee66a87e68b84674b635895"
+    },
+    {
+      "path": "docs/internal/company-closeout/MAIN_PROTECTION.md",
+      "sha256": "cd69128040d47fcb4094bbeb82220ef814fa732f45823d4b0bf858cecf90a65b",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "docs/internal/company-closeout/MAIN_PROTECTION_RECEIPT.json",
+      "sha256": "047b9cbf15e78af21a265a9717857c0d068d7c42511d10db7e5f4e34bf940a17",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "docs/internal/company-closeout/PORTAL_CONTRACT.md",
+      "sha256": "adc7145e514d8d06e3edc85c50d52e5c04dd1df7643e689da3fc8a0cb1d787b3",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "docs/internal/company-closeout/PORTAL_REHEARSAL.json",
+      "sha256": "d1a030980be1aadee631cdbd1168a86e2baba1643336da68e27931bd00726009",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "docs/internal/company-closeout/PR145_INTEGRATION.md",
+      "sha256": "01f67254cdd82da9914aac4ee0547ff70358f7409e3afa43f93d022fbfdf94e5",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "docs/internal/company-closeout/PR145_VALIDATION.json",
+      "sha256": "f935d11fa6717325577a7b42c2145a058288915f446435ba035b2bd71d9007f0",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "docs/internal/company-closeout/REFERENCE_RESTORE_RECEIPT.json",
+      "sha256": "c6d920d7f906d0e956e76ff5b1a8f212f91fc4f14ca7f34abf5da190c981f8a5",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "docs/internal/company-closeout/SUCCESSOR_RECORDS_IMPORT_CONTRACT_2026-09-22.md",
+      "sha256": "a8c6b1e83a18e1b94fb5416e51f84d3597bb1a6ae32ce30e26ae39edd4fe388d",
+      "scope": "Scoped September 22 administrative/qualification and explicitly owner-approved rights successor, including validated export/publication implementation. No new monetary posting, real execution, perfection/priority assertion, or unrelated right is adopted."
+    },
+    {
+      "path": "docs/internal/company-closeout/final-completion-2026-09-22/BRANCH_RETIREMENT.json",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "109c1446506901f63462e84bb1563dc1c59d98dc54e116442db5a800e27c37bd"
+    },
+    {
+      "path": "docs/internal/company-closeout/final-completion-2026-09-22/IMAGE_RECOVERY.json",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "eac0c1380541024e45332e40d010f888a05d8613a8bec040e9bff8921480b363"
+    },
+    {
+      "path": "docs/internal/company-closeout/final-completion-2026-09-22/README.md",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "aeac6458bbae013a037fa1de32e18c41802fe1ffee5154d8399b8f9ae0114980"
+    },
+    {
+      "path": "docs/internal/company-closeout/final-completion-2026-09-22/RUNTIME_DEPENDENCY.json",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "91703852658c8c05e8a96be34aa5dc04f92d009635c4ef0657814437120d0cb0"
+    },
+    {
+      "path": "docs/internal/company-closeout/final-completion-2026-09-22/WORKING_COPY_RESTORE_RECEIPT.json",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "33c503d11e1242f5a41e2bae202025b5f9f6eca5d185affb08d6933418babf78"
+    },
+    {
+      "path": "docs/internal/company-closeout/workspace-artifact-2026-09-22/EXAMPLE.json",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "81a6781651989b7e0f4599f4578565d1e9d308de81051f5af592bf25a32a5089"
+    },
+    {
+      "path": "docs/internal/company-closeout/workspace-artifact-2026-09-22/README.md",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "9332e4737302f08b364898b882df8d76a6c97bc50ea21b9524f5ca07b30a7716"
+    },
+    {
+      "path": "docs/internal/company-closeout/workspace-artifact-2026-09-22/RECEIPT.json",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "004955f8d9bb180333d626028b2de405fd9767482163b73cda1c381418847b12"
+    },
+    {
+      "path": "docs/j2/alexandria/COMPANY_INFORMATION_POLICY_IMPLEMENTATION_2026-09-22.md",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "19874379ae0fb8a79775d4d5f02b64421c27872206e25de98735d57bba29ead3"
+    },
+    {
+      "path": "docs/legal/host-successor/DEMOTTE_B_2026-09-22.md",
+      "sha256": "73c05bc639981a42b0eaeafa28c7a72fe5a9c74a6dc778812cb4e90ed408ba1a",
+      "scope": "Scoped September 22 administrative/qualification and explicitly owner-approved rights successor, including validated export/publication implementation. No new monetary posting, real execution, perfection/priority assertion, or unrelated right is adopted."
+    },
+    {
+      "path": "docs/legal/host-successor/KGM_B_2026-09-22.md",
+      "sha256": "e53263cda8eb4eb2747f623e10e46f483948c69e38cdb99a70e51a8f3ad41b5d",
+      "scope": "Scoped September 22 administrative/qualification and explicitly owner-approved rights successor, including validated export/publication implementation. No new monetary posting, real execution, perfection/priority assertion, or unrelated right is adopted."
+    },
+    {
+      "path": "docs/legal/host-successor/VALIDATION.md",
+      "sha256": "574ec9bf3f4d2ce9962e2de3d4a050a0dcdbb382f9911eb7e72d5d3defc742d1",
+      "scope": "Scoped September 22 administrative/qualification and explicitly owner-approved rights successor, including validated export/publication implementation. No new monetary posting, real execution, perfection/priority assertion, or unrelated right is adopted."
+    },
+    {
+      "path": "docs/releases/COMPANY_EDITION_RELEASES.md",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "0310d910bd01424fd94d92f16d1d04c33c1d1e236a111524b494942c8c68f402"
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/README.md",
+      "sha256": "c3d93d9bc090b5b0d0cc17f3edcfd643be64d2015454ccccae8c83db36f538fe",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/STATE_UNITARY_ANALYSIS.md",
+      "sha256": "a9709e8f72b654b4465a49cdff3eb9193ab9eba44cf338a3c6db4e0a03d43a04",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/activity_applicability.json",
+      "sha256": "c0e8f9fb788b843deea99e7311c61c2456f6a5ff7062eebee0cd50f66ea4c70e",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/aru_transaction_costs.json",
+      "sha256": "a267c7350c4f11a0d4c6f3210c4e4ee3bc351ac31beda3a5a060c65da35a6eaf",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/august_admin_completion.json",
+      "sha256": "82542d6cd123321bf2140ea6fe9753d19ca3eb0264a8ca8caf17dd210d615410",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/benefit_admin_completion.json",
+      "sha256": "01fc00989928e72a3c506367d48992526c816fb1e70a74786b635a9f43962421",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/current_activity_successor.json",
+      "sha256": "367d2807bf96dfdc21aa8353e2b7e2a6709bc5ed08a5be7af06acf1c12c2a696",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/host_terms.py",
+      "sha256": "79b70f4f89078f344d722d0c819ae9e2be0dbfd42990b5809ab8528c6bd1944b",
+      "scope": "Scoped September 22 administrative/qualification and explicitly owner-approved rights successor, including validated export/publication implementation. No new monetary posting, real execution, perfection/priority assertion, or unrelated right is adopted."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/industrial_transaction_tax.json",
+      "sha256": "0416985a0beac5584493d3a0046a7a113134bdaa1c4693e5a25df91b012d98ef",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/information_policy.py",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "428e6f480b1e0fe191928d9b4780a0d58422d1acd461517896ccf7c6e395ac3f"
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/obligation_census.json",
+      "sha256": "4f3ea9b9d7269d15ae1c8086af28691e65130c17ba346a857f117120183146ac",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/permit_condition_performance.json",
+      "sha256": "ec4469c516bcc1535d37faed2fc02053fa2a0d7b60cb9371bf2a16e90c58acff",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/rail_reporting_successor.json",
+      "sha256": "0f0efca0d6dc30863de043a601c09d18586568cea894b46082fd32ad5de5d725",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/risk_mapping_supplement.json",
+      "sha256": "efce86cca05175dec9a5a4c64950408cf85679393a8f1ac8cd4ad0f63afb99af",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/rot_penalty_workpaper.py",
+      "sha256": "e3d618f98747ba83410e828c3f6e541f8044db92f6569d606bae39d3a8115cf8",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/rot_receipts_2026.py",
+      "sha256": "d3ad79c83032b4ae758ce145b90263404e481c898ba3389def81c53cdf48f1a6",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/september_shipment_qualification.json",
+      "sha256": "e551d0bc39661236b42f5623115ae3bc35ee7cfacda596b48bc1dbf9beaff14c",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/source/host_terms_adoption.json",
+      "sha256": "db23d9e061a5661bf52a98fbfb7c141c97ee87cb60a0de95167f211f889ce33d",
+      "scope": "Scoped September 22 administrative/qualification and explicitly owner-approved rights successor, including validated export/publication implementation. No new monetary posting, real execution, perfection/priority assertion, or unrelated right is adopted."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/source/information_policy_2026_09_22.json",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "3239b1991137e69d8e3161da695024247ba1859139b41c5dc3ad449acb3cf395"
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/state_unitary_facts.json",
+      "sha256": "aefd568f9b7609fd7bfba926fc87f12db5c52bc0ee3d09fa73fb8a750b338ea2",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/synthetic_permit_instruments_august.json",
+      "sha256": "bbe61244e531b7a419a82fb6bb4317d3b1a9ca540a6781aba8e6424c7b087d51",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/tax_calendar_supplement.json",
+      "sha256": "2776cb19a85fdf0a48db0c017139b4b9f05ab1c9202b36c8329ffb50edc66f54",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/workplace_examinations.json",
+      "sha256": "d9fb3896294d6aa769211ada3d5d3299b44ef56622e38f55271b60a9bd04581a",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/workspace_artifact.py",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "a9bb93c110970aa1ac8912814cf11d91280a98cc3120ef638d345bf0ccc27b3e"
+    },
+    {
+      "path": "enterprise/closeout/advisory_legal.py",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "e34f0010dc07f164a868167c99c89b4735f3720b3d277085d3a53ecda91f7e7f"
+    },
+    {
+      "path": "enterprise/closeout/capital_export.py",
+      "sha256": "7239d419efe5cd260ff40a7cb98093cf25cc41d1688d631ec3469e17ab454eb6",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/closeout/capital_register.py",
+      "sha256": "b026bbdfdba2bc3b33a9867795ea791a8f714770d291819cc0fcb90525f9c213",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/closeout/capital_rights.py",
+      "sha256": "d425f7b55b2410db064bedde4e6f1409e9533db85c592a8d9116efe299d854fa",
+      "scope": "Scoped September 22 administrative/qualification and explicitly owner-approved rights successor, including validated export/publication implementation. No new monetary posting, real execution, perfection/priority assertion, or unrelated right is adopted."
+    },
+    {
+      "path": "enterprise/closeout/debt_administration.py",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "b7f235d5608cbc7db0ddddeaf451565021d58918d484f6d580c580e1d8c55879"
+    },
+    {
+      "path": "enterprise/closeout/debt_rights.py",
+      "sha256": "ac144448da1dfc31ba51b4f2e84e9cad2abad1fc200b00507d10e6f40995326b",
+      "scope": "Scoped September 22 administrative/qualification and explicitly owner-approved rights successor, including validated export/publication implementation. No new monetary posting, real execution, perfection/priority assertion, or unrelated right is adopted."
+    },
+    {
+      "path": "enterprise/closeout/exports.py",
+      "sha256": "99b8df568262f939ace67de02d4e80aac8ae48d10bdac632313436b841341f02",
+      "scope": "Scoped September 22 administrative/qualification and explicitly owner-approved rights successor, including validated export/publication implementation. No new monetary posting, real execution, perfection/priority assertion, or unrelated right is adopted.",
+      "predecessor_sha256": "08febadf4eb0a77490f678e708a848c6a905b309566a3ed9b33f0b4ae94c2002",
+      "supersession": "Version1.2current scoped successor only; historical accepted source and release bytes preserved."
+    },
+    {
+      "path": "enterprise/closeout/final_records.py",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "341ece1825548684176405bf8a11e5d342071e28b14920253fe1eb082bddee94"
+    },
+    {
+      "path": "enterprise/closeout/finance.py",
+      "sha256": "66e87d1d91886f5f7121fc6b812b6834bd9dd577dd04e2854a8a9f99beabfece",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/closeout/finance_administration.py",
+      "sha256": "3ff0071bcd2eeb247bf1f13b2dd3c37ade180b4693403a7e09d74f6b5261ae81",
+      "scope": "Scoped September 22 administrative/qualification and explicitly owner-approved rights successor, including validated export/publication implementation. No new monetary posting, real execution, perfection/priority assertion, or unrelated right is adopted."
+    },
+    {
+      "path": "enterprise/closeout/parent_tax.py",
+      "sha256": "30924283a46b43c7383c5f00c3169eff99a0d37253da7fa062d6051cac10938b",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/closeout/preserved_history.py",
+      "sha256": "1ffc3c1c5849f2bc35a0c35ffaee090e93a70d1517eb826b33ccf8517333b830",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/closeout/source/adjustments.json",
+      "sha256": "a4c179284bcdaa5ce5a4d8b365b16860a479cd93fae2bfbb82060060d0660d5a",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/closeout/source/advisory_carry_execution_2026_09_22.json",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "6f8955af737c204214badb59caa95e45ab2fd9e72ab7364fc3d51543b5926d4a"
+    },
+    {
+      "path": "enterprise/closeout/source/aru_secured_terms.json",
+      "sha256": "e1434c8b35130b36767d57c5826cf403b12ede458615517b7c64fb135ca42edc",
+      "scope": "Scoped September 22 administrative/qualification and explicitly owner-approved rights successor, including validated export/publication implementation. No new monetary posting, real execution, perfection/priority assertion, or unrelated right is adopted."
+    },
+    {
+      "path": "enterprise/closeout/source/california_qualifications.json",
+      "sha256": "efa11289c544cd3cb3e2d8f4cc0e0c3381d766c7ffa40d364e74a02cf8b36ccd",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/closeout/source/capital_designation_rights.json",
+      "sha256": "988e6fec6584ac8917f24e5201096eb5ae2367214187758a1b2833f0d987ad99",
+      "scope": "Scoped September 22 administrative/qualification and explicitly owner-approved rights successor, including validated export/publication implementation. No new monetary posting, real execution, perfection/priority assertion, or unrelated right is adopted."
+    },
+    {
+      "path": "enterprise/closeout/source/capital_register.json",
+      "sha256": "8993b8e1457571d2ee937bef370f0cd26957e1e95945a85083544f547b08a15c",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/closeout/source/debt_administration_2026_09_22.json",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "5be69b102dbb0f97abe76fe4e95ef2b8ea011e5e6faae35060047b45f9925dd0"
+    },
+    {
+      "path": "enterprise/closeout/source/escrow_register.json",
+      "sha256": "4e626802499cdf7702cbd4bbfa2851a55baa0ec24b8b06e82941fe8642538a13",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/closeout/source/final_export_extension.json",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "42cc101aeef4d3de86d2fb5ac78c7f3f9c2bff087132a3a4b8a78923a9c5a325"
+    },
+    {
+      "path": "enterprise/closeout/source/industrial_tax_cohorts.json",
+      "sha256": "1d1c1e32600eae77a38deb2722eb68a9c6002bd80954ddc86f3d9e7cd07c360f",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/closeout/source/industrial_tax_future.json",
+      "sha256": "3a32618a9e32076cf4d04992db6d562ad6536769fcf4c32dd6421724d13bae85",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/closeout/source/mine_support_allocation.json",
+      "sha256": "27604974c0d8d89286f3ad6a7d41704e1d0b9c76dc43198cc2ec3e5c2f5289e3",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/closeout/source/mine_tax_logistics.json",
+      "sha256": "7f03ca5585d20dbdafb8323fe6cbea195143ff91237570258563420d605d1146",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/closeout/source/parent_tax.json",
+      "sha256": "d63924c52367dda229758aec676629f5aa6dc9ca9ab9b394d372556345a90da2",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/closeout/source/receipt_markets.json",
+      "sha256": "1cc39ab42298a64914da366c039e48cc85cd3b3f4c597ad6f1ad380640823e08",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/closeout/source/rwh_tax_history.json",
+      "sha256": "3587f1cf9bab2e5790e20ae382be88e91546200c9b4f2019ebbad6c884e12d03",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/closeout/source/software_sales_tax.json",
+      "sha256": "2bb7a00ec0692916f6c4733507537afde7134af24d117061f2a07ac119deaaaf",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/closeout/source/state_apportionment.json",
+      "sha256": "32b3cc6b40e73467fc314ef5d98f118c3cc4fca053187c2d3ad9b10a2de25274",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/closeout/source/statutory_policy.json",
+      "sha256": "1a13482bf5705c0b7066c32cead07eef3c7946d7fdf34e99663b98119c8dc1c9",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/closeout/source/successor_export_extension.json",
+      "sha256": "43c8411cd8310ed7f95d0810cd350a75e2dfa193e20b5f3f60a69a99e52cf6e2",
+      "scope": "Scoped September 22 administrative/qualification and explicitly owner-approved rights successor, including validated export/publication implementation. No new monetary posting, real execution, perfection/priority assertion, or unrelated right is adopted."
+    },
+    {
+      "path": "enterprise/closeout/statutory_build.py",
+      "sha256": "eaaa6e85e9f1887d4dda808c60a13b9ce0ae22216466078e88bfb649a653814a",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/closeout/statutory_posting.py",
+      "sha256": "8e5ae82c0fabf49cad5053f79a93f5d859ede92f05d2d19da9798ebe003768dc",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/closeout/statutory_reconciliation.py",
+      "sha256": "8a58784f07dd9d18953cfdd36c30cf683c66de1787f610aecd3a8b4c93d3ab00",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/closeout/successor_records.py",
+      "sha256": "5e845464d62ad04e0239886aa64d0be13c5a84e71a4179d5016316c8ac493848",
+      "scope": "Scoped September 22 administrative/qualification and explicitly owner-approved rights successor, including validated export/publication implementation. No new monetary posting, real execution, perfection/priority assertion, or unrelated right is adopted."
+    },
+    {
+      "path": "enterprise/operations/completed_period.py",
+      "sha256": "9d6de93d032a6e0b80839f9cccff583f2f60038626b31094750b695b47acf3f5",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/operations/docs/completed-period.md",
+      "sha256": "5ceba4a24bb436bafeb2a44c0314c86c0febfebb615f0f9fe66f58e45aae1677",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/operations/docs/ps-legal-payroll-bridge.md",
+      "sha256": "c14ef58e5f82d650dcad4b0eabb5012c0f4a972d2d1b6cfd776f9c409d3e5554",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/operations/exports.py",
+      "sha256": "e85cbea242e0b26afbc521c85c9714843576f9b986a6a3b133ce28634a51cf18",
+      "scope": "Scoped September 22 administrative/qualification and explicitly owner-approved rights successor, including validated export/publication implementation. No new monetary posting, real execution, perfection/priority assertion, or unrelated right is adopted."
+    },
+    {
+      "path": "enterprise/operations/j2_administrative_history.py",
+      "sha256": "680a87862626d4478f2b20fd69f2c4d832539fdf5fdef1aba6929dd3f0a29183",
+      "scope": "Scoped September 22 administrative/qualification and explicitly owner-approved rights successor, including validated export/publication implementation. No new monetary posting, real execution, perfection/priority assertion, or unrelated right is adopted."
+    },
+    {
+      "path": "enterprise/operations/j2_personnel_completion.py",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "8e6a0488d9dbc758c859c90696def43580b670948887ea346037e39656096f8b"
+    },
+    {
+      "path": "enterprise/operations/orientation_commissions.py",
+      "sha256": "48d757d072500519ade3de42d0e52df670ece6cc7b4dd4a316de91a287e58cb2",
+      "scope": "Scoped September 22 administrative/qualification and explicitly owner-approved rights successor, including validated export/publication implementation. No new monetary posting, real execution, perfection/priority assertion, or unrelated right is adopted."
+    },
+    {
+      "path": "enterprise/operations/source/completed_period_2026_08.json",
+      "sha256": "14e7b53177b80d671ed66fdc309c6b2c0e1b0b68567f54da97dd02dca4d1ddf8",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/operations/source/current_company_2026_08.json",
+      "sha256": "729e45f44d5240be558bb8d1cfef3bdd527a379a810a342173b2409d7ce0ea74",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/operations/source/current_legal_completion_2026_08.json",
+      "sha256": "3039044f8bfeb9328c107bf198a8789cf702a84516cc77f4807a740272b70f01",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/operations/source/debt_host_2026_08.json",
+      "sha256": "644d8e442888082dcf2ad8fc0f1fb27d0458f9548150de203c404fdad2420bf0",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/operations/source/j2_administrative_history_2026_09_22.json",
+      "sha256": "45ae980dfdd478493c8844268e71315f31bc9e64801fe393ab729b4e5fc5c27e",
+      "scope": "Scoped September 22 administrative/qualification and explicitly owner-approved rights successor, including validated export/publication implementation. No new monetary posting, real execution, perfection/priority assertion, or unrelated right is adopted."
+    },
+    {
+      "path": "enterprise/operations/source/j2_personnel_completion_2026_09_22.json",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "146089730a2dd3de887129815b207ead4608327026f7a67720f895460d89a7da"
+    },
+    {
+      "path": "enterprise/operations/source/lane_receipt_2026_09_15.json",
+      "sha256": "bc27f4a631154e975f58ce246ed0070b5d3c3addd9675e9de6d262768901dfc0",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/operations/source/orientation_commissions_2026_09_22.json",
+      "sha256": "227c663c4afd2065912020443f19b7fe377f989adf287f5610f38941618fc490",
+      "scope": "Scoped September 22 administrative/qualification and explicitly owner-approved rights successor, including validated export/publication implementation. No new monetary posting, real execution, perfection/priority assertion, or unrelated right is adopted."
+    },
+    {
+      "path": "enterprise/operations/source/production_support_2026_08.json",
+      "sha256": "90642b883f00910db83604d40d25845b4225d2424956aac0c37687f68b256d11",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/operations/source/retention_payroll_2026.json",
+      "sha256": "21ab87590fbac1e7e51c7ec472257e6ba0cd95db38cd111ac77fad01e683c3f0",
+      "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/operations/source/september_custody_2026.json",
+      "sha256": "1a444560f567d4369c68467c05ef0619dac2290ad0dd4a089670245f453c3a4e",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/operations/tests/test_j2_administrative_history.py",
+      "sha256": "48b125f77d93f109f7b16c6512a9dc28c08de0e5f6e753e131f8671bf7ca8790",
+      "scope": "Scoped September 22 administrative/qualification and explicitly owner-approved rights successor, including validated export/publication implementation. No new monetary posting, real execution, perfection/priority assertion, or unrelated right is adopted."
+    },
+    {
+      "path": "enterprise/operations/tests/test_j2_personnel_completion.py",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "14560e302fde0d60ae58d5683c1743abb38d1859fee90413e585080324e7875a"
+    },
+    {
+      "path": "enterprise/operations/tests/test_orientation_commissions.py",
+      "sha256": "a6b63098bbd9fe33a8b8ee13b99ac66c070ce719fef80c9bd1b47adec28d63c4",
+      "scope": "Scoped September 22 administrative/qualification and explicitly owner-approved rights successor, including validated export/publication implementation. No new monetary posting, real execution, perfection/priority assertion, or unrelated right is adopted."
+    },
+    {
+      "path": "enterprise/runtime/security.py",
+      "sha256": "7f80307e4a730c6e1b6760d650ff3d49f1b5bdf458bc7f3afca59ce6efa757fb",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "enterprise/runtime/tests/test_security.py",
+      "sha256": "67875e3e97be0b6e4610366231ca0e81b9967ef51963384d037e77b5c5987805",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "scripts/check_public_safety.py",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "6ce4d97217cd16deec51c7608f008a7419a3eeedb47f76de295a2236b5e63a61",
+      "predecessor_sha256": "5842d442306194d81e03b6a8641643990b419b4fa517232c108d860f335efd6f",
+      "supersession": "Version1.2 current scoped source/publication only; earlier editions remain unchanged."
+    },
+    {
+      "path": "tests/ccf/test_information_policy.py",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "2c8ec4b51cf1cc87c48b3f7712f2f33971bd1aa15c2f77ce4f3956d8841833c5"
+    },
+    {
+      "path": "tests/ccf/test_workspace_artifact.py",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "8b0301855110b7dedda4c3168f78659087ce8d43cc2e9219b726b816a1b68974"
+    },
+    {
+      "path": "tests/closeout/test_advisory_legal.py",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "6733885a4c65ee6787608e128aa0fc41da865f1d96867c7956321b6837cbd621"
+    },
+    {
+      "path": "tests/closeout/test_debt_administration.py",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "9248a5435f16cd3b335095177596d88b3b0e78042c7781e48d2149287c9f0386"
+    },
+    {
+      "path": "tests/closeout/test_final_records.py",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "7863e9f5106b19e0e1d4c0a338c00e71cc7d3029526195035a2d2a06868751df"
+    },
+    {
+      "path": "tests/company_closeout/test_working_copy_restore.py",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "38fa038c1865d02bddb88d2d3c8a1c64392512375fe328b056e052dcb859daec"
+    },
+    {
+      "path": "tools/company_closeout/compose.py",
+      "sha256": "9d4c481f81928abd09765ac74c12262ad80d721b54e5339f54347d50959ea7fd",
+      "scope": "Scoped September 22 administrative/qualification and explicitly owner-approved rights successor, including validated export/publication implementation. No new monetary posting, real execution, perfection/priority assertion, or unrelated right is adopted.",
+      "predecessor_sha256": "6849e5761098ab427c8606855dd8b30f0cfd504345090297c02c5b427dfab679",
+      "supersession": "Version 1.1.0 composition only: describes separately scoped corporate successor tables and dates. Original version 1.0.0 generator/source/package bytes remain in their accepted commit and release."
+    },
+    {
+      "path": "tools/company_closeout/edition.py",
+      "sha256": "fb0f903cad7f9f2d10ede0ff94273140f6e2a2d4286f1b9c0ab5ee7f7cfcab7d",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "tools/company_closeout/independent_import.py",
+      "sha256": "6f5e8c4422db81aa93d6193a88f511c8e6a44b853a2305f1f8938cecbb0ec44e",
+      "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
+    },
+    {
+      "path": "tools/company_closeout/publications.py",
+      "sha256": "0773877a14e9ee0d4f5342b7773e2ad52138120e00dbca81d9f5e1b60eb9f6d2",
+      "scope": "Scoped September 22 administrative/qualification and explicitly owner-approved rights successor, including validated export/publication implementation. No new monetary posting, real execution, perfection/priority assertion, or unrelated right is adopted.",
+      "predecessor_sha256": "675957d15903a3b517d1ba3e2dcd4a21941d4b33ffe1b6aeabe9770809aa85bf",
+      "supersession": "Version1.2current scoped successor only; historical accepted source and release bytes preserved."
+    },
+    {
+      "path": "tools/company_closeout/working_copy_rehearsal.py",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "3acec06e4438bb62b01390e517ad49bd2ac1712e3deb2571c777776e370b3856"
+    },
+    {
+      "path": "tools/company_closeout/working_copy_restore.py",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "d33b8154a04f506d93b75905483874d615a8b9de238dc399389b8b2d0b5a945f"
+    }
+  ],
+  "predecessor": {
+    "register": "docs/internal/company-closeout/REGISTER_v1.1.0.json",
+    "edition": "1.1.0",
+    "accepted_source": "7ce2ed5c0751ca596a5540bd8afbc0072ef99016",
+    "acceptance_pr": 170
+  },
+  "approved_successors": [
+    {
+      "id": "SH-CAP-RIGHTS-20260922",
+      "quote": "Adopt the half-original-units proposal",
+      "source": "docs/canon/CAPITAL_DESIGNATION_RIGHTS_2026-09-22.md"
+    },
+    {
+      "id": "SH-ARU-SECURED-TERMS-20260922",
+      "quote": "Use ARU-owned collateral; prepare its schedule",
+      "source": "docs/canon/ARU_SECURED_FINANCING_SUCCESSOR_2026-09-22.md"
+    },
+    {
+      "id": "SH-HOST-B-ADOPTION-20260922",
+      "quote": "Adopt B and its common terms",
+      "source": "docs/canon/CRADLE_HOST_TERMS_2026-09-22.md"
+    }
+  ],
+  "implementation_retests": [
+    {
+      "finding": "Initial publication catalog rejected missing Document ID label; corrected source metadata and regenerated approved renderer output.",
+      "result": "PASS"
+    },
+    {
+      "finding": "Initial hosted SQLite formatting gate rejected two new tests; formatted with repository Ruff.",
+      "result": "RETEST_REQUIRED"
+    },
+    {
+      "finding": "Expanded required organization validation needed pdfinfo on hosted runner; added existing poppler-utils dependency.",
+      "result": "RETEST_REQUIRED"
+    },
+    {
+      "finding": "J2 Document ID field shared a paragraph with metadata, producing an invalid catalog identity. Split metadata into separate fields and regenerated the approved publication/catalog.",
+      "result": "All146catalog identifiers checked for whitespace; five new exact IDs confirmed. No financial change."
+    },
+    {
+      "finding": "Required base-to-head whitespace check rejected Markdown hard-break spaces in four new documents. Replaced with explicit paragraph breaks, regenerated publications/catalog and moved the same whitespace guard earlier in CI.",
+      "result": "Local base-to-head diff check passes; actual hosted successor result is retained in the release validation evidence."
+    }
+  ]
+}

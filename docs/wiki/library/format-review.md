@@ -6,15 +6,15 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 153 |
+| COUNTERPART_REVIEW_REQUIRED | 155 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 107 |
-| READER_OR_MAINTENANCE_PAGE | 185 |
+| READER_OR_MAINTENANCE_PAGE | 187 |
 | UNRESOLVED_DOCUMENT_COUNTERPART | 222 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_CHART_PUBLICATION | 40 |
-| VERIFIED_DOCUMENT_PAIR | 141 |
+| VERIFIED_DOCUMENT_PAIR | 146 |
 | VERIFIED_IDENTICAL_SOURCE_PUBLICATION | 3 |
 
 ## Records requiring counterpart reconciliation
@@ -56,7 +56,9 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Debt and selected host evidence — August 2026](../../internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md) — Corporate document-format reconciliation
 - [Company edition dependency remediation — September 22, 2026](../../internal/company-closeout/DEPENDENCY_REMEDIATION_2026-09-22.md) — Corporate document-format reconciliation
 - [Current acquisition escrow and holdback register](../../internal/company-closeout/ESCROW_DISPOSITIONS.md) — Corporate document-format reconciliation
+- [Final company records — enterprise import contract](../../internal/company-closeout/FINAL_RECORDS_IMPORT_CONTRACT_2026-09-22.md) — Corporate document-format reconciliation
 - [Founder admission and monetary opening](../../internal/company-closeout/FOUNDER_ADMISSION_BASIS.md) — Corporate document-format reconciliation
+- [Geographic issue #108 — current criterion disposition](../../internal/company-closeout/GEOGRAPHIC_108_CURRENT_DISPOSITION_2026-09-22.md) — Corporate document-format reconciliation
 - [Industrial opening capital: authored 2025 contribution history](../../internal/company-closeout/INDUSTRIAL_CAPITAL_HISTORY_2026-09-22.md) — Corporate document-format reconciliation
 - [J2 administrative appointment history — September 22, 2026](../../internal/company-closeout/J2_ADMINISTRATIVE_HISTORY_2026-09-22.md) — Corporate document-format reconciliation
 - [Main source protection](../../internal/company-closeout/MAIN_PROTECTION.md) — Corporate document-format reconciliation

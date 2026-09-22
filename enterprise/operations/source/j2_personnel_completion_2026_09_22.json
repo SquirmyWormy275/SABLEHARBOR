@@ -1,0 +1,837 @@
+{
+  "document_id": "SH-J2-PERSONNEL-COMPLETION-20260922",
+  "version": "1.0.0",
+  "repository_state": "PENDING_ACCEPTANCE",
+  "authored_day": "2026-09-22",
+  "authority": {
+    "owner_instruction": "OK. Finish everything.",
+    "scope": "Delegated ordinary fictional completion of remaining issue19 names and necessary histories; not individual historical utterances selecting these names",
+    "source_type": "CURRENT_OWNER_CONVERSATION",
+    "recorded_by": "Codex implementation; acceptance by repository process"
+  },
+  "fact_status": "NEWLY_AUTHORED_SYNTHETIC_PERSONNEL_SUCCESSOR",
+  "source_hashes": {
+    "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md": "05ee1d4bbcad3ff2de9f623de0b57373acaaf611c0b161664a9f3e36b1066509",
+    "enterprise/operations/source/j2_administrative_history_2026_09_22.json": "45ae980dfdd478493c8844268e71315f31bc9e64801fe393ab729b4e5fc5c27e",
+    "enterprise/operations/source/orientation_commissions_2026_09_22.json": "227c663c4afd2065912020443f19b7fe377f989adf287f5610f38941618fc490",
+    "enterprise/operations/source/completed_period_2026_08.json": "14e7b53177b80d671ed66fdc309c6b2c0e1b0b68567f54da97dd02dca4d1ddf8",
+    "docs/organization/source/chartbook.json": "6471a6362517f97574c775b73b94ac48d6060d81cee605eb661811425ed75866",
+    "docs/j2/J2_ESTABLISHMENT.md": "826bbe8b359d73938c69f8bbd984114fd3b73109bbb9e8af7f003f6b39590c82"
+  },
+  "profiles": [
+    {
+      "profile_id": "SH-J2-PERSONNEL-P063",
+      "person_id": "P063",
+      "name": "Jonathan Goldstryker",
+      "name_origin": "PRESERVED_ACCEPTED_NAME",
+      "role_id": "ROLE-37",
+      "title": "Head of J2",
+      "legal_entity": "SHI",
+      "unit": "CORPORATE",
+      "current_population_effective_from": "2026-08-01",
+      "company_joined_year": 2020,
+      "joined_year_origin": "PRESERVED_ACCEPTED_YEAR",
+      "joined_precision": "YEAR",
+      "office_appointment_date": "2026-01-05",
+      "administrative_record_id": "SH-J2-ADMIN-P063",
+      "career_episodes": [
+        {
+          "episode_id": "P063-CAREER-01",
+          "start": "2010",
+          "start_precision": "YEAR",
+          "end": "2019",
+          "end_precision": "YEAR",
+          "organization": "Applied research coordination at a fictional technical-services practice",
+          "organization_scope": "FICTIONAL_EXTERNAL_CAREER_ONLY_NOT_GROUP_ENTITY",
+          "duties": "Led multidisciplinary inquiry planning, source handoffs and research quality reviews without operating-line command",
+          "verification": "NEWLY_AUTHORED_SYNTHETIC_PERSONNEL_ACCOUNT_NO_EXTERNAL_CONFIRMATION"
+        },
+        {
+          "episode_id": "P063-CAREER-02",
+          "start": "2020",
+          "start_precision": "YEAR",
+          "end": "2026-01-05",
+          "end_precision": "DAY_EXCLUSIVE",
+          "organization": "Sable Harbor, LLC",
+          "organization_scope": "SHI_EXISTING_EMPLOYER",
+          "duties": "Institutional research and professional-standards coordination; function description, not an additional current office or invented earlier executive title",
+          "verification": "NEWLY_AUTHORED_SYNTHETIC_PERSONNEL_ACCOUNT_NO_EXTERNAL_CONFIRMATION"
+        }
+      ],
+      "biography": "Jonathan Goldstryker brings experience in professional boundary stewardship; cross-arm prioritization; protected escalation. Before Sable Harbor, this person worked in the fictional research setting described in the career record. At Sable Harbor, the work developed through institutional research and professional-standards coordination. The current office is Head of J2; its authority remains the existing J2 doctrine.",
+      "qualification_review": {
+        "record_id": "P063-ROLE-REVIEW",
+        "completed_on": "2025-12-18",
+        "reviewer_role": "J2_PROFESSIONAL_STANDARDS_REVIEW_WITH_HR_RECORD_CUSTODY",
+        "reviewer_is_subject": false,
+        "competencies": [
+          "Professional boundary stewardship",
+          "cross-arm prioritization",
+          "protected escalation"
+        ],
+        "evidence": [
+          "bounded_work_sample",
+          "source_and_uncertainty_exercise",
+          "authority_boundary_case",
+          "independent_review_note"
+        ],
+        "outcome": "SUFFICIENT_FOR_EXISTING_OFFICE",
+        "origin": "NEWLY_AUTHORED_SYNTHETIC_INTERNAL_REVIEW",
+        "external_credential_or_license_claim": false,
+        "commission_record_id": null,
+        "reviewer_person_id": "P064",
+        "reviewer_capacity": "Existing SHI colleague conducting internal professional skills review; no hiring, promotion, pay or line authority conferred",
+        "observations": {
+          "bounded_work_sample": "Reviewed a synthetic work sample against these role competencies: Professional boundary stewardship, cross-arm prioritization, protected escalation",
+          "source_and_uncertainty_exercise": "Subject separated recorded source facts from inference and identified a missing corroborating record before giving a conclusion.",
+          "authority_boundary_case": "Subject routed a hypothetical operating decision to its accountable line owner; no J2 veto or execution authority claimed.",
+          "independent_review_note": "Reviewer found the bounded internal role skills sufficient; no degree, license, external employer verification or wider professional certification inferred."
+        }
+      },
+      "professional_limits": {
+        "new_post": false,
+        "new_employee": false,
+        "new_payroll_usd": "0.00",
+        "new_authority": false,
+        "degree_license_or_real_employer_confirmation_claimed": false
+      },
+      "historical_gaps_disposition": "Bounded professional history completed; exact hire days, private family background and exhaustive daily earlier-career chronology are outside the finite issue19 scope, not asserted missing qualification evidence."
+    },
+    {
+      "profile_id": "SH-J2-PERSONNEL-P064",
+      "person_id": "P064",
+      "name": "Amanda Chenahot",
+      "name_origin": "PRESERVED_ACCEPTED_NAME",
+      "role_id": "ROLE-38",
+      "title": "Deputy Head of J2",
+      "legal_entity": "SHI",
+      "unit": "CORPORATE",
+      "current_population_effective_from": "2026-08-01",
+      "company_joined_year": 2021,
+      "joined_year_origin": "PRESERVED_ACCEPTED_YEAR",
+      "joined_precision": "YEAR",
+      "office_appointment_date": "2026-01-05",
+      "administrative_record_id": "SH-J2-ADMIN-P064",
+      "career_episodes": [
+        {
+          "episode_id": "P064-CAREER-01",
+          "start": "2012",
+          "start_precision": "YEAR",
+          "end": "2020",
+          "end_precision": "YEAR",
+          "organization": "Program integration at a fictional engineering research consortium",
+          "organization_scope": "FICTIONAL_EXTERNAL_CAREER_ONLY_NOT_GROUP_ENTITY",
+          "duties": "Maintained project dependency records and facilitated independent challenge of delivery assumptions",
+          "verification": "NEWLY_AUTHORED_SYNTHETIC_PERSONNEL_ACCOUNT_NO_EXTERNAL_CONFIRMATION"
+        },
+        {
+          "episode_id": "P064-CAREER-02",
+          "start": "2021",
+          "start_precision": "YEAR",
+          "end": "2026-01-05",
+          "end_precision": "DAY_EXCLUSIVE",
+          "organization": "Sable Harbor, LLC",
+          "organization_scope": "SHI_EXISTING_EMPLOYER",
+          "duties": "Cross-arm research coordination and professional-services planning; function description, not an additional current office or invented earlier executive title",
+          "verification": "NEWLY_AUTHORED_SYNTHETIC_PERSONNEL_ACCOUNT_NO_EXTERNAL_CONFIRMATION"
+        }
+      ],
+      "biography": "Amanda Chenahot brings experience in resource arbitration; documented handoffs; preservation of dissent. Before Sable Harbor, this person worked in the fictional research setting described in the career record. At Sable Harbor, the work developed through cross-arm research coordination and professional-services planning. The current office is Deputy Head of J2; its authority remains the existing J2 doctrine.",
+      "qualification_review": {
+        "record_id": "P064-ROLE-REVIEW",
+        "completed_on": "2025-12-18",
+        "reviewer_role": "J2_PROFESSIONAL_STANDARDS_REVIEW_WITH_HR_RECORD_CUSTODY",
+        "reviewer_is_subject": false,
+        "competencies": [
+          "Resource arbitration",
+          "documented handoffs",
+          "preservation of dissent"
+        ],
+        "evidence": [
+          "bounded_work_sample",
+          "source_and_uncertainty_exercise",
+          "authority_boundary_case",
+          "independent_review_note"
+        ],
+        "outcome": "SUFFICIENT_FOR_EXISTING_OFFICE",
+        "origin": "NEWLY_AUTHORED_SYNTHETIC_INTERNAL_REVIEW",
+        "external_credential_or_license_claim": false,
+        "commission_record_id": null,
+        "reviewer_person_id": "P063",
+        "reviewer_capacity": "Existing SHI colleague conducting internal professional skills review; no hiring, promotion, pay or line authority conferred",
+        "observations": {
+          "bounded_work_sample": "Reviewed a synthetic work sample against these role competencies: Resource arbitration, documented handoffs, preservation of dissent",
+          "source_and_uncertainty_exercise": "Subject separated recorded source facts from inference and identified a missing corroborating record before giving a conclusion.",
+          "authority_boundary_case": "Subject routed a hypothetical operating decision to its accountable line owner; no J2 veto or execution authority claimed.",
+          "independent_review_note": "Reviewer found the bounded internal role skills sufficient; no degree, license, external employer verification or wider professional certification inferred."
+        }
+      },
+      "professional_limits": {
+        "new_post": false,
+        "new_employee": false,
+        "new_payroll_usd": "0.00",
+        "new_authority": false,
+        "degree_license_or_real_employer_confirmation_claimed": false
+      },
+      "historical_gaps_disposition": "Bounded professional history completed; exact hire days, private family background and exhaustive daily earlier-career chronology are outside the finite issue19 scope, not asserted missing qualification evidence."
+    },
+    {
+      "profile_id": "SH-J2-PERSONNEL-P065",
+      "person_id": "P065",
+      "name": "Mara Hammer",
+      "name_origin": "PRESERVED_ACCEPTED_NAME",
+      "role_id": "ROLE-40",
+      "title": "Head of Contact",
+      "legal_entity": "SHI",
+      "unit": "CORPORATE",
+      "current_population_effective_from": "2026-08-01",
+      "company_joined_year": 2021,
+      "joined_year_origin": "PRESERVED_ACCEPTED_YEAR",
+      "joined_precision": "YEAR",
+      "office_appointment_date": "2026-01-05",
+      "administrative_record_id": "SH-J2-ADMIN-P065",
+      "career_episodes": [
+        {
+          "episode_id": "P065-CAREER-01",
+          "start": "2011",
+          "start_precision": "YEAR",
+          "end": "2020",
+          "end_precision": "YEAR",
+          "organization": "Lawful field and open-source research at a fictional specialist research bureau",
+          "organization_scope": "FICTIONAL_EXTERNAL_CAREER_ONLY_NOT_GROUP_ENTITY",
+          "duties": "Designed collection plans, recorded consent and source limitations, and maintained custody of research materials",
+          "verification": "NEWLY_AUTHORED_SYNTHETIC_PERSONNEL_ACCOUNT_NO_EXTERNAL_CONFIRMATION"
+        },
+        {
+          "episode_id": "P065-CAREER-02",
+          "start": "2021",
+          "start_precision": "YEAR",
+          "end": "2026-01-05",
+          "end_precision": "DAY_EXCLUSIVE",
+          "organization": "Sable Harbor, LLC",
+          "organization_scope": "SHI_EXISTING_EMPLOYER",
+          "duties": "Collection-method design and source-management work; function description, not an additional current office or invented earlier executive title",
+          "verification": "NEWLY_AUTHORED_SYNTHETIC_PERSONNEL_ACCOUNT_NO_EXTERNAL_CONFIRMATION"
+        }
+      ],
+      "biography": "Mara Hammer brings experience in lawful collection; consent boundaries; provenance and evidence custody. Before Sable Harbor, this person worked in the fictional research setting described in the career record. At Sable Harbor, the work developed through collection-method design and source-management work. The current office is Head of Contact; its authority remains the existing J2 doctrine.",
+      "qualification_review": {
+        "record_id": "P065-ROLE-REVIEW",
+        "completed_on": "2025-12-18",
+        "reviewer_role": "J2_PROFESSIONAL_STANDARDS_REVIEW_WITH_HR_RECORD_CUSTODY",
+        "reviewer_is_subject": false,
+        "competencies": [
+          "Lawful collection",
+          "consent boundaries",
+          "provenance and evidence custody"
+        ],
+        "evidence": [
+          "bounded_work_sample",
+          "source_and_uncertainty_exercise",
+          "authority_boundary_case",
+          "independent_review_note"
+        ],
+        "outcome": "SUFFICIENT_FOR_EXISTING_OFFICE",
+        "origin": "NEWLY_AUTHORED_SYNTHETIC_INTERNAL_REVIEW",
+        "external_credential_or_license_claim": false,
+        "commission_record_id": null,
+        "reviewer_person_id": "P063",
+        "reviewer_capacity": "Existing SHI colleague conducting internal professional skills review; no hiring, promotion, pay or line authority conferred",
+        "observations": {
+          "bounded_work_sample": "Reviewed a synthetic work sample against these role competencies: Lawful collection, consent boundaries, provenance and evidence custody",
+          "source_and_uncertainty_exercise": "Subject separated recorded source facts from inference and identified a missing corroborating record before giving a conclusion.",
+          "authority_boundary_case": "Subject routed a hypothetical operating decision to its accountable line owner; no J2 veto or execution authority claimed.",
+          "independent_review_note": "Reviewer found the bounded internal role skills sufficient; no degree, license, external employer verification or wider professional certification inferred."
+        }
+      },
+      "professional_limits": {
+        "new_post": false,
+        "new_employee": false,
+        "new_payroll_usd": "0.00",
+        "new_authority": false,
+        "degree_license_or_real_employer_confirmation_claimed": false
+      },
+      "historical_gaps_disposition": "Bounded professional history completed; exact hire days, private family background and exhaustive daily earlier-career chronology are outside the finite issue19 scope, not asserted missing qualification evidence."
+    },
+    {
+      "profile_id": "SH-J2-PERSONNEL-P066",
+      "person_id": "P066",
+      "name": "Anika Trish",
+      "name_origin": "PRESERVED_ACCEPTED_NAME",
+      "role_id": "ROLE-49",
+      "title": "Head of Judgment",
+      "legal_entity": "SHI",
+      "unit": "CORPORATE",
+      "current_population_effective_from": "2026-08-01",
+      "company_joined_year": 2021,
+      "joined_year_origin": "PRESERVED_ACCEPTED_YEAR",
+      "joined_precision": "YEAR",
+      "office_appointment_date": "2026-01-05",
+      "administrative_record_id": "SH-J2-ADMIN-P066",
+      "career_episodes": [
+        {
+          "episode_id": "P066-CAREER-01",
+          "start": "2012",
+          "start_precision": "YEAR",
+          "end": "2020",
+          "end_precision": "YEAR",
+          "organization": "Operational analysis at a fictional industrial research practice",
+          "organization_scope": "FICTIONAL_EXTERNAL_CAREER_ONLY_NOT_GROUP_ENTITY",
+          "duties": "Investigated conflicting operational accounts, tested hypotheses and documented unresolved uncertainty",
+          "verification": "NEWLY_AUTHORED_SYNTHETIC_PERSONNEL_ACCOUNT_NO_EXTERNAL_CONFIRMATION"
+        },
+        {
+          "episode_id": "P066-CAREER-02",
+          "start": "2021",
+          "start_precision": "YEAR",
+          "end": "2026-01-05",
+          "end_precision": "DAY_EXCLUSIVE",
+          "organization": "Sable Harbor, LLC",
+          "organization_scope": "SHI_EXISTING_EMPLOYER",
+          "duties": "Problem-framing and judgment-case work; function description, not an additional current office or invented earlier executive title",
+          "verification": "NEWLY_AUTHORED_SYNTHETIC_PERSONNEL_ACCOUNT_NO_EXTERNAL_CONFIRMATION"
+        }
+      ],
+      "biography": "Anika Trish brings experience in question framing; contrary evidence; uncertainty and case closure. Before Sable Harbor, this person worked in the fictional research setting described in the career record. At Sable Harbor, the work developed through problem-framing and judgment-case work. The current office is Head of Judgment; its authority remains the existing J2 doctrine.",
+      "qualification_review": {
+        "record_id": "P066-ROLE-REVIEW",
+        "completed_on": "2025-12-18",
+        "reviewer_role": "J2_PROFESSIONAL_STANDARDS_REVIEW_WITH_HR_RECORD_CUSTODY",
+        "reviewer_is_subject": false,
+        "competencies": [
+          "Question framing",
+          "contrary evidence",
+          "uncertainty and case closure"
+        ],
+        "evidence": [
+          "bounded_work_sample",
+          "source_and_uncertainty_exercise",
+          "authority_boundary_case",
+          "independent_review_note"
+        ],
+        "outcome": "SUFFICIENT_FOR_EXISTING_OFFICE",
+        "origin": "NEWLY_AUTHORED_SYNTHETIC_INTERNAL_REVIEW",
+        "external_credential_or_license_claim": false,
+        "commission_record_id": null,
+        "reviewer_person_id": "P063",
+        "reviewer_capacity": "Existing SHI colleague conducting internal professional skills review; no hiring, promotion, pay or line authority conferred",
+        "observations": {
+          "bounded_work_sample": "Reviewed a synthetic work sample against these role competencies: Question framing, contrary evidence, uncertainty and case closure",
+          "source_and_uncertainty_exercise": "Subject separated recorded source facts from inference and identified a missing corroborating record before giving a conclusion.",
+          "authority_boundary_case": "Subject routed a hypothetical operating decision to its accountable line owner; no J2 veto or execution authority claimed.",
+          "independent_review_note": "Reviewer found the bounded internal role skills sufficient; no degree, license, external employer verification or wider professional certification inferred."
+        }
+      },
+      "professional_limits": {
+        "new_post": false,
+        "new_employee": false,
+        "new_payroll_usd": "0.00",
+        "new_authority": false,
+        "degree_license_or_real_employer_confirmation_claimed": false
+      },
+      "historical_gaps_disposition": "Bounded professional history completed; exact hire days, private family background and exhaustive daily earlier-career chronology are outside the finite issue19 scope, not asserted missing qualification evidence."
+    },
+    {
+      "profile_id": "SH-J2-PERSONNEL-P067",
+      "person_id": "P067",
+      "name": "Grant Kohrs",
+      "name_origin": "PRESERVED_ACCEPTED_NAME",
+      "role_id": "ROLE-54",
+      "title": "Head of Orientation",
+      "legal_entity": "SHI",
+      "unit": "CORPORATE",
+      "current_population_effective_from": "2026-08-01",
+      "company_joined_year": 2020,
+      "joined_year_origin": "PRESERVED_ACCEPTED_YEAR",
+      "joined_precision": "YEAR",
+      "office_appointment_date": "2026-01-05",
+      "administrative_record_id": "SH-J2-ADMIN-P067",
+      "career_episodes": [
+        {
+          "episode_id": "P067-CAREER-01",
+          "start": "2010",
+          "start_precision": "YEAR",
+          "end": "2019",
+          "end_precision": "YEAR",
+          "organization": "Systems research at a fictional public-interest analysis institute",
+          "organization_scope": "FICTIONAL_EXTERNAL_CAREER_ONLY_NOT_GROUP_ENTITY",
+          "duties": "Compared model assumptions to field observations and wrote decision briefs separating evidence from inference",
+          "verification": "NEWLY_AUTHORED_SYNTHETIC_PERSONNEL_ACCOUNT_NO_EXTERNAL_CONFIRMATION"
+        },
+        {
+          "episode_id": "P067-CAREER-02",
+          "start": "2020",
+          "start_precision": "YEAR",
+          "end": "2021-02-02",
+          "end_precision": "DAY_EXCLUSIVE",
+          "organization": "Sable Harbor, LLC",
+          "organization_scope": "SHI_EXISTING_EMPLOYER",
+          "duties": "Orientation selection and supervised apprenticeship; detailed A&S and apprenticeship dates remain in OO-ADM-001",
+          "verification": "ACCEPTED_COMMISSION_SOURCE_PLUS_NEWLY_AUTHORED_CAREER_CONTEXT"
+        },
+        {
+          "episode_id": "P067-CAREER-03",
+          "start": "2021-02-02",
+          "start_precision": "DAY",
+          "end": "2026-01-05",
+          "end_precision": "DAY_EXCLUSIVE",
+          "organization": "Sable Harbor, LLC",
+          "organization_scope": "SHI_EXISTING_EMPLOYER",
+          "duties": "Commissioned Orientation Officer: enterprise inquiry, supervised decision-room observation and research; no line command or voting board seat",
+          "verification": "ACCEPTED_COMMISSION_TERM_AND_NEWLY_AUTHORED_PRIOR_ASSIGNMENT_CONTEXT"
+        }
+      ],
+      "biography": "Grant Kohrs brings experience in calibration; professional independence; distinction between observation and command. Before Sable Harbor, this person worked in the fictional research setting described in the career record. At Sable Harbor, the work developed through orientation selection and supervised apprenticeship. The current office is Head of Orientation; its authority remains the existing J2 doctrine.",
+      "qualification_review": {
+        "record_id": "P067-ROLE-REVIEW",
+        "completed_on": "2025-12-18",
+        "reviewer_role": "J2_PROFESSIONAL_STANDARDS_REVIEW_WITH_HR_RECORD_CUSTODY",
+        "reviewer_is_subject": false,
+        "competencies": [
+          "Calibration",
+          "professional independence",
+          "distinction between observation and command"
+        ],
+        "evidence": [
+          "bounded_work_sample",
+          "source_and_uncertainty_exercise",
+          "authority_boundary_case",
+          "independent_review_note"
+        ],
+        "outcome": "SUFFICIENT_FOR_EXISTING_OFFICE",
+        "origin": "NEWLY_AUTHORED_SYNTHETIC_INTERNAL_REVIEW",
+        "external_credential_or_license_claim": false,
+        "commission_record_id": "OO-ADM-001",
+        "reviewer_person_id": "P063",
+        "reviewer_capacity": "Existing SHI colleague conducting internal professional skills review; no hiring, promotion, pay or line authority conferred",
+        "observations": {
+          "bounded_work_sample": "Reviewed a synthetic work sample against these role competencies: Calibration, professional independence, distinction between observation and command",
+          "source_and_uncertainty_exercise": "Subject separated recorded source facts from inference and identified a missing corroborating record before giving a conclusion.",
+          "authority_boundary_case": "Subject routed a hypothetical operating decision to its accountable line owner; no J2 veto or execution authority claimed.",
+          "independent_review_note": "Reviewer found the bounded internal role skills sufficient; no degree, license, external employer verification or wider professional certification inferred."
+        }
+      },
+      "professional_limits": {
+        "new_post": false,
+        "new_employee": false,
+        "new_payroll_usd": "0.00",
+        "new_authority": false,
+        "degree_license_or_real_employer_confirmation_claimed": false
+      },
+      "historical_gaps_disposition": "Bounded professional history completed; exact hire days, private family background and exhaustive daily earlier-career chronology are outside the finite issue19 scope, not asserted missing qualification evidence."
+    },
+    {
+      "profile_id": "SH-J2-PERSONNEL-P068",
+      "person_id": "P068",
+      "name": "Brett Calder",
+      "name_origin": "PRESERVED_ACCEPTED_NAME",
+      "role_id": "ROLE-58",
+      "title": "Head of Education",
+      "legal_entity": "SHI",
+      "unit": "CORPORATE",
+      "current_population_effective_from": "2026-08-01",
+      "company_joined_year": 2021,
+      "joined_year_origin": "PRESERVED_ACCEPTED_YEAR",
+      "joined_precision": "YEAR",
+      "office_appointment_date": "2026-01-05",
+      "administrative_record_id": "SH-J2-ADMIN-P068",
+      "career_episodes": [
+        {
+          "episode_id": "P068-CAREER-01",
+          "start": "2012",
+          "start_precision": "YEAR",
+          "end": "2020",
+          "end_precision": "YEAR",
+          "organization": "Instructional design at a fictional professional learning provider",
+          "organization_scope": "FICTIONAL_EXTERNAL_CAREER_ONLY_NOT_GROUP_ENTITY",
+          "duties": "Built case exercises and assessment rubrics; separated teaching support from decisions owned by subject-matter professions",
+          "verification": "NEWLY_AUTHORED_SYNTHETIC_PERSONNEL_ACCOUNT_NO_EXTERNAL_CONFIRMATION"
+        },
+        {
+          "episode_id": "P068-CAREER-02",
+          "start": "2021",
+          "start_precision": "YEAR",
+          "end": "2026-01-05",
+          "end_precision": "DAY_EXCLUSIVE",
+          "organization": "Sable Harbor, LLC",
+          "organization_scope": "SHI_EXISTING_EMPLOYER",
+          "duties": "Internal learning design, faculty coordination and assessment support; function description, not an additional current office or invented earlier executive title",
+          "verification": "NEWLY_AUTHORED_SYNTHETIC_PERSONNEL_ACCOUNT_NO_EXTERNAL_CONFIRMATION"
+        }
+      ],
+      "biography": "Brett Calder brings experience in assessment integrity; instructional design; accountable qualification ownership. Before Sable Harbor, this person worked in the fictional research setting described in the career record. At Sable Harbor, the work developed through internal learning design, faculty coordination and assessment support. The current office is Head of Education; its authority remains the existing J2 doctrine.",
+      "qualification_review": {
+        "record_id": "P068-ROLE-REVIEW",
+        "completed_on": "2025-12-18",
+        "reviewer_role": "J2_PROFESSIONAL_STANDARDS_REVIEW_WITH_HR_RECORD_CUSTODY",
+        "reviewer_is_subject": false,
+        "competencies": [
+          "Assessment integrity",
+          "instructional design",
+          "accountable qualification ownership"
+        ],
+        "evidence": [
+          "bounded_work_sample",
+          "source_and_uncertainty_exercise",
+          "authority_boundary_case",
+          "independent_review_note"
+        ],
+        "outcome": "SUFFICIENT_FOR_EXISTING_OFFICE",
+        "origin": "NEWLY_AUTHORED_SYNTHETIC_INTERNAL_REVIEW",
+        "external_credential_or_license_claim": false,
+        "commission_record_id": null,
+        "reviewer_person_id": "P063",
+        "reviewer_capacity": "Existing SHI colleague conducting internal professional skills review; no hiring, promotion, pay or line authority conferred",
+        "observations": {
+          "bounded_work_sample": "Reviewed a synthetic work sample against these role competencies: Assessment integrity, instructional design, accountable qualification ownership",
+          "source_and_uncertainty_exercise": "Subject separated recorded source facts from inference and identified a missing corroborating record before giving a conclusion.",
+          "authority_boundary_case": "Subject routed a hypothetical operating decision to its accountable line owner; no J2 veto or execution authority claimed.",
+          "independent_review_note": "Reviewer found the bounded internal role skills sufficient; no degree, license, external employer verification or wider professional certification inferred."
+        }
+      },
+      "professional_limits": {
+        "new_post": false,
+        "new_employee": false,
+        "new_payroll_usd": "0.00",
+        "new_authority": false,
+        "degree_license_or_real_employer_confirmation_claimed": false
+      },
+      "historical_gaps_disposition": "Bounded professional history completed; exact hire days, private family background and exhaustive daily earlier-career chronology are outside the finite issue19 scope, not asserted missing qualification evidence."
+    },
+    {
+      "profile_id": "SH-J2-PERSONNEL-SH-EMP-J2-HQ-0003",
+      "person_id": "SH-EMP-J2-HQ-0003",
+      "name": "Miriam Solano",
+      "name_origin": "NEWLY_AUTHORED_NAME_FOR_EXISTING_EMPLOYEE",
+      "role_id": "ROLE-39",
+      "title": "Chief of Staff",
+      "legal_entity": "SHI",
+      "unit": "CORPORATE",
+      "current_population_effective_from": "2026-08-01",
+      "company_joined_year": 2019,
+      "joined_year_origin": "NEWLY_AUTHORED_YEAR_PRECISION",
+      "joined_precision": "YEAR",
+      "office_appointment_date": "2026-08-01",
+      "administrative_record_id": "SH-J2-ADMIN-ROLE-39",
+      "career_episodes": [
+        {
+          "episode_id": "SH-EMP-J2-HQ-0003-CAREER-01",
+          "start": "2010",
+          "start_precision": "YEAR",
+          "end": "2018",
+          "end_precision": "YEAR",
+          "organization": "Research administration at a fictional cooperative research center",
+          "organization_scope": "FICTIONAL_EXTERNAL_CAREER_ONLY_NOT_GROUP_ENTITY",
+          "duties": "Coordinated records, workload and procurement requests without acquiring line approval powers",
+          "verification": "NEWLY_AUTHORED_SYNTHETIC_PERSONNEL_ACCOUNT_NO_EXTERNAL_CONFIRMATION"
+        },
+        {
+          "episode_id": "SH-EMP-J2-HQ-0003-CAREER-02",
+          "start": "2019",
+          "start_precision": "YEAR",
+          "end": "2026-08-01",
+          "end_precision": "DAY_EXCLUSIVE",
+          "organization": "Sable Harbor, LLC",
+          "organization_scope": "SHI_EXISTING_EMPLOYER",
+          "duties": "J2 professional-services and scheduling coordination; function description, not an additional current office or invented earlier executive title",
+          "verification": "NEWLY_AUTHORED_SYNTHETIC_PERSONNEL_ACCOUNT_NO_EXTERNAL_CONFIRMATION"
+        }
+      ],
+      "biography": "Miriam Solano brings experience in continuity records; workload coordination; authority boundaries. Before Sable Harbor, this person worked in the fictional research setting described in the career record. At Sable Harbor, the work developed through j2 professional-services and scheduling coordination. The current office is Chief of Staff; its authority remains the existing J2 doctrine.",
+      "qualification_review": {
+        "record_id": "SH-EMP-J2-HQ-0003-ROLE-REVIEW",
+        "completed_on": "2026-07-20",
+        "reviewer_role": "J2_PROFESSIONAL_STANDARDS_REVIEW_WITH_HR_RECORD_CUSTODY",
+        "reviewer_is_subject": false,
+        "competencies": [
+          "Continuity records",
+          "workload coordination",
+          "authority boundaries"
+        ],
+        "evidence": [
+          "bounded_work_sample",
+          "source_and_uncertainty_exercise",
+          "authority_boundary_case",
+          "independent_review_note"
+        ],
+        "outcome": "SUFFICIENT_FOR_EXISTING_OFFICE",
+        "origin": "NEWLY_AUTHORED_SYNTHETIC_INTERNAL_REVIEW",
+        "external_credential_or_license_claim": false,
+        "commission_record_id": null,
+        "reviewer_person_id": "P063",
+        "reviewer_capacity": "Existing SHI colleague conducting internal professional skills review; no hiring, promotion, pay or line authority conferred",
+        "observations": {
+          "bounded_work_sample": "Reviewed a synthetic work sample against these role competencies: Continuity records, workload coordination, authority boundaries",
+          "source_and_uncertainty_exercise": "Subject separated recorded source facts from inference and identified a missing corroborating record before giving a conclusion.",
+          "authority_boundary_case": "Subject routed a hypothetical operating decision to its accountable line owner; no J2 veto or execution authority claimed.",
+          "independent_review_note": "Reviewer found the bounded internal role skills sufficient; no degree, license, external employer verification or wider professional certification inferred."
+        }
+      },
+      "professional_limits": {
+        "new_post": false,
+        "new_employee": false,
+        "new_payroll_usd": "0.00",
+        "new_authority": false,
+        "degree_license_or_real_employer_confirmation_claimed": false
+      },
+      "historical_gaps_disposition": "Bounded professional history completed; exact hire days, private family background and exhaustive daily earlier-career chronology are outside the finite issue19 scope, not asserted missing qualification evidence."
+    },
+    {
+      "profile_id": "SH-J2-PERSONNEL-SH-EMP-J2-CONTACT-0002",
+      "person_id": "SH-EMP-J2-CONTACT-0002",
+      "name": "Owen Faraday",
+      "name_origin": "NEWLY_AUTHORED_NAME_FOR_EXISTING_EMPLOYEE",
+      "role_id": "ROLE-41",
+      "title": "Deputy Head of Contact",
+      "legal_entity": "SHI",
+      "unit": "CORPORATE",
+      "current_population_effective_from": "2026-08-01",
+      "company_joined_year": 2020,
+      "joined_year_origin": "NEWLY_AUTHORED_YEAR_PRECISION",
+      "joined_precision": "YEAR",
+      "office_appointment_date": "2026-08-01",
+      "administrative_record_id": "SH-J2-ADMIN-ROLE-41",
+      "career_episodes": [
+        {
+          "episode_id": "SH-EMP-J2-CONTACT-0002-CAREER-01",
+          "start": "2011",
+          "start_precision": "YEAR",
+          "end": "2019",
+          "end_precision": "YEAR",
+          "organization": "Source operations at a fictional field-research partnership",
+          "organization_scope": "FICTIONAL_EXTERNAL_CAREER_ONLY_NOT_GROUP_ENTITY",
+          "duties": "Maintained lawful collection workflows and reviewed documented source permissions",
+          "verification": "NEWLY_AUTHORED_SYNTHETIC_PERSONNEL_ACCOUNT_NO_EXTERNAL_CONFIRMATION"
+        },
+        {
+          "episode_id": "SH-EMP-J2-CONTACT-0002-CAREER-02",
+          "start": "2020",
+          "start_precision": "YEAR",
+          "end": "2026-08-01",
+          "end_precision": "DAY_EXCLUSIVE",
+          "organization": "Sable Harbor, LLC",
+          "organization_scope": "SHI_EXISTING_EMPLOYER",
+          "duties": "Contact collection planning and source-quality review; function description, not an additional current office or invented earlier executive title",
+          "verification": "NEWLY_AUTHORED_SYNTHETIC_PERSONNEL_ACCOUNT_NO_EXTERNAL_CONFIRMATION"
+        }
+      ],
+      "biography": "Owen Faraday brings experience in collection permission; source protection; method-selection review. Before Sable Harbor, this person worked in the fictional research setting described in the career record. At Sable Harbor, the work developed through contact collection planning and source-quality review. The current office is Deputy Head of Contact; its authority remains the existing J2 doctrine.",
+      "qualification_review": {
+        "record_id": "SH-EMP-J2-CONTACT-0002-ROLE-REVIEW",
+        "completed_on": "2026-07-20",
+        "reviewer_role": "J2_PROFESSIONAL_STANDARDS_REVIEW_WITH_HR_RECORD_CUSTODY",
+        "reviewer_is_subject": false,
+        "competencies": [
+          "Collection permission",
+          "source protection",
+          "method-selection review"
+        ],
+        "evidence": [
+          "bounded_work_sample",
+          "source_and_uncertainty_exercise",
+          "authority_boundary_case",
+          "independent_review_note"
+        ],
+        "outcome": "SUFFICIENT_FOR_EXISTING_OFFICE",
+        "origin": "NEWLY_AUTHORED_SYNTHETIC_INTERNAL_REVIEW",
+        "external_credential_or_license_claim": false,
+        "commission_record_id": null,
+        "reviewer_person_id": "P063",
+        "reviewer_capacity": "Existing SHI colleague conducting internal professional skills review; no hiring, promotion, pay or line authority conferred",
+        "observations": {
+          "bounded_work_sample": "Reviewed a synthetic work sample against these role competencies: Collection permission, source protection, method-selection review",
+          "source_and_uncertainty_exercise": "Subject separated recorded source facts from inference and identified a missing corroborating record before giving a conclusion.",
+          "authority_boundary_case": "Subject routed a hypothetical operating decision to its accountable line owner; no J2 veto or execution authority claimed.",
+          "independent_review_note": "Reviewer found the bounded internal role skills sufficient; no degree, license, external employer verification or wider professional certification inferred."
+        }
+      },
+      "professional_limits": {
+        "new_post": false,
+        "new_employee": false,
+        "new_payroll_usd": "0.00",
+        "new_authority": false,
+        "degree_license_or_real_employer_confirmation_claimed": false
+      },
+      "historical_gaps_disposition": "Bounded professional history completed; exact hire days, private family background and exhaustive daily earlier-career chronology are outside the finite issue19 scope, not asserted missing qualification evidence."
+    },
+    {
+      "profile_id": "SH-J2-PERSONNEL-SH-EMP-J2-JUDGMENT-0002",
+      "person_id": "SH-EMP-J2-JUDGMENT-0002",
+      "name": "Nadia Ivers",
+      "name_origin": "NEWLY_AUTHORED_NAME_FOR_EXISTING_EMPLOYEE",
+      "role_id": "ROLE-50",
+      "title": "Deputy Head of Judgment",
+      "legal_entity": "SHI",
+      "unit": "CORPORATE",
+      "current_population_effective_from": "2026-08-01",
+      "company_joined_year": 2021,
+      "joined_year_origin": "NEWLY_AUTHORED_YEAR_PRECISION",
+      "joined_precision": "YEAR",
+      "office_appointment_date": "2026-08-01",
+      "administrative_record_id": "SH-J2-ADMIN-ROLE-50",
+      "career_episodes": [
+        {
+          "episode_id": "SH-EMP-J2-JUDGMENT-0002-CAREER-01",
+          "start": "2013",
+          "start_precision": "YEAR",
+          "end": "2020",
+          "end_precision": "YEAR",
+          "organization": "Evidence analysis at a fictional organizational research laboratory",
+          "organization_scope": "FICTIONAL_EXTERNAL_CAREER_ONLY_NOT_GROUP_ENTITY",
+          "duties": "Reconciled conflicting narratives and preserved alternative explanations in reviewable case files",
+          "verification": "NEWLY_AUTHORED_SYNTHETIC_PERSONNEL_ACCOUNT_NO_EXTERNAL_CONFIRMATION"
+        },
+        {
+          "episode_id": "SH-EMP-J2-JUDGMENT-0002-CAREER-02",
+          "start": "2021",
+          "start_precision": "YEAR",
+          "end": "2026-08-01",
+          "end_precision": "DAY_EXCLUSIVE",
+          "organization": "Sable Harbor, LLC",
+          "organization_scope": "SHI_EXISTING_EMPLOYER",
+          "duties": "Judgment case analysis and peer review; function description, not an additional current office or invented earlier executive title",
+          "verification": "NEWLY_AUTHORED_SYNTHETIC_PERSONNEL_ACCOUNT_NO_EXTERNAL_CONFIRMATION"
+        }
+      ],
+      "biography": "Nadia Ivers brings experience in problem ownership; competing hypotheses; bounded escalation. Before Sable Harbor, this person worked in the fictional research setting described in the career record. At Sable Harbor, the work developed through judgment case analysis and peer review. The current office is Deputy Head of Judgment; its authority remains the existing J2 doctrine.",
+      "qualification_review": {
+        "record_id": "SH-EMP-J2-JUDGMENT-0002-ROLE-REVIEW",
+        "completed_on": "2026-07-20",
+        "reviewer_role": "J2_PROFESSIONAL_STANDARDS_REVIEW_WITH_HR_RECORD_CUSTODY",
+        "reviewer_is_subject": false,
+        "competencies": [
+          "Problem ownership",
+          "competing hypotheses",
+          "bounded escalation"
+        ],
+        "evidence": [
+          "bounded_work_sample",
+          "source_and_uncertainty_exercise",
+          "authority_boundary_case",
+          "independent_review_note"
+        ],
+        "outcome": "SUFFICIENT_FOR_EXISTING_OFFICE",
+        "origin": "NEWLY_AUTHORED_SYNTHETIC_INTERNAL_REVIEW",
+        "external_credential_or_license_claim": false,
+        "commission_record_id": null,
+        "reviewer_person_id": "P063",
+        "reviewer_capacity": "Existing SHI colleague conducting internal professional skills review; no hiring, promotion, pay or line authority conferred",
+        "observations": {
+          "bounded_work_sample": "Reviewed a synthetic work sample against these role competencies: Problem ownership, competing hypotheses, bounded escalation",
+          "source_and_uncertainty_exercise": "Subject separated recorded source facts from inference and identified a missing corroborating record before giving a conclusion.",
+          "authority_boundary_case": "Subject routed a hypothetical operating decision to its accountable line owner; no J2 veto or execution authority claimed.",
+          "independent_review_note": "Reviewer found the bounded internal role skills sufficient; no degree, license, external employer verification or wider professional certification inferred."
+        }
+      },
+      "professional_limits": {
+        "new_post": false,
+        "new_employee": false,
+        "new_payroll_usd": "0.00",
+        "new_authority": false,
+        "degree_license_or_real_employer_confirmation_claimed": false
+      },
+      "historical_gaps_disposition": "Bounded professional history completed; exact hire days, private family background and exhaustive daily earlier-career chronology are outside the finite issue19 scope, not asserted missing qualification evidence."
+    },
+    {
+      "profile_id": "SH-J2-PERSONNEL-SH-EMP-J2-ORIENTATION-0002",
+      "person_id": "SH-EMP-J2-ORIENTATION-0002",
+      "name": "Leila Soren",
+      "name_origin": "NEWLY_AUTHORED_NAME_FOR_EXISTING_EMPLOYEE",
+      "role_id": "ROLE-55",
+      "title": "Deputy Head of Orientation",
+      "legal_entity": "SHI",
+      "unit": "CORPORATE",
+      "current_population_effective_from": "2026-08-01",
+      "company_joined_year": 2019,
+      "joined_year_origin": "NEWLY_AUTHORED_YEAR_PRECISION",
+      "joined_precision": "YEAR",
+      "office_appointment_date": "2026-08-01",
+      "administrative_record_id": "SH-J2-ADMIN-ROLE-55",
+      "career_episodes": [
+        {
+          "episode_id": "SH-EMP-J2-ORIENTATION-0002-CAREER-01",
+          "start": "2010",
+          "start_precision": "YEAR",
+          "end": "2018",
+          "end_precision": "YEAR",
+          "organization": "Knowledge-systems analysis at a fictional research library consortium",
+          "organization_scope": "FICTIONAL_EXTERNAL_CAREER_ONLY_NOT_GROUP_ENTITY",
+          "duties": "Mapped uncertainty in technical records and explained source limits to research teams",
+          "verification": "NEWLY_AUTHORED_SYNTHETIC_PERSONNEL_ACCOUNT_NO_EXTERNAL_CONFIRMATION"
+        },
+        {
+          "episode_id": "SH-EMP-J2-ORIENTATION-0002-CAREER-02",
+          "start": "2019",
+          "start_precision": "YEAR",
+          "end": "2021-02-02",
+          "end_precision": "DAY_EXCLUSIVE",
+          "organization": "Sable Harbor, LLC",
+          "organization_scope": "SHI_EXISTING_EMPLOYER",
+          "duties": "Enterprise research before Orientation selection and apprenticeship; detailed A&S and apprenticeship dates remain in OO-ADM-002",
+          "verification": "ACCEPTED_COMMISSION_SOURCE_PLUS_NEWLY_AUTHORED_CAREER_CONTEXT"
+        },
+        {
+          "episode_id": "SH-EMP-J2-ORIENTATION-0002-CAREER-03",
+          "start": "2021-02-02",
+          "start_precision": "DAY",
+          "end": "2026-08-01",
+          "end_precision": "DAY_EXCLUSIVE",
+          "organization": "Sable Harbor, LLC",
+          "organization_scope": "SHI_EXISTING_EMPLOYER",
+          "duties": "Commissioned Orientation Officer: enterprise inquiry, supervised decision-room observation and research; no line command or voting board seat",
+          "verification": "ACCEPTED_COMMISSION_TERM_AND_NEWLY_AUTHORED_PRIOR_ASSIGNMENT_CONTEXT"
+        }
+      ],
+      "biography": "Leila Soren brings experience in epistemic calibration; independence; professional transition planning. Before Sable Harbor, this person worked in the fictional research setting described in the career record. At Sable Harbor, the work developed through enterprise research before orientation selection and apprenticeship. The current office is Deputy Head of Orientation; its authority remains the existing J2 doctrine.",
+      "qualification_review": {
+        "record_id": "SH-EMP-J2-ORIENTATION-0002-ROLE-REVIEW",
+        "completed_on": "2026-07-20",
+        "reviewer_role": "J2_PROFESSIONAL_STANDARDS_REVIEW_WITH_HR_RECORD_CUSTODY",
+        "reviewer_is_subject": false,
+        "competencies": [
+          "Epistemic calibration",
+          "independence",
+          "professional transition planning"
+        ],
+        "evidence": [
+          "bounded_work_sample",
+          "source_and_uncertainty_exercise",
+          "authority_boundary_case",
+          "independent_review_note"
+        ],
+        "outcome": "SUFFICIENT_FOR_EXISTING_OFFICE",
+        "origin": "NEWLY_AUTHORED_SYNTHETIC_INTERNAL_REVIEW",
+        "external_credential_or_license_claim": false,
+        "commission_record_id": "OO-ADM-002",
+        "reviewer_person_id": "P063",
+        "reviewer_capacity": "Existing SHI colleague conducting internal professional skills review; no hiring, promotion, pay or line authority conferred",
+        "observations": {
+          "bounded_work_sample": "Reviewed a synthetic work sample against these role competencies: Epistemic calibration, independence, professional transition planning",
+          "source_and_uncertainty_exercise": "Subject separated recorded source facts from inference and identified a missing corroborating record before giving a conclusion.",
+          "authority_boundary_case": "Subject routed a hypothetical operating decision to its accountable line owner; no J2 veto or execution authority claimed.",
+          "independent_review_note": "Reviewer found the bounded internal role skills sufficient; no degree, license, external employer verification or wider professional certification inferred."
+        }
+      },
+      "professional_limits": {
+        "new_post": false,
+        "new_employee": false,
+        "new_payroll_usd": "0.00",
+        "new_authority": false,
+        "degree_license_or_real_employer_confirmation_claimed": false
+      },
+      "historical_gaps_disposition": "Bounded professional history completed; exact hire days, private family background and exhaustive daily earlier-career chronology are outside the finite issue19 scope, not asserted missing qualification evidence."
+    }
+  ],
+  "coverage": {
+    "required_named_offices": 10,
+    "prior_accepted_names": 6,
+    "new_names_existing_people": 4,
+    "authorized_j2_billets": 237,
+    "occupied_j2_billets": 181,
+    "orientation_commissions": 18,
+    "other_named_identity_required_for_declared_scope": 0,
+    "other_staff_identification": "Existing stable employee IDs suffice for remaining payroll/access/qualification populations; no extra named personnel requirement created"
+  },
+  "supersession": "After acceptance replaces only remaining four missing names and bounded leadership career/qualification-history gap in issue19; predecessor sources/releases retain original bytes and historical unresolved labels",
+  "additional_cash_usd": "0.00"
+}

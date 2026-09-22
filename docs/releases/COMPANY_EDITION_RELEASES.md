@@ -8,6 +8,12 @@ scope, decisions and residuals. The [inspection guide](../internal/company-close
 provides source, import and reperformance routes. [PR #166](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166)
 contains the company source integration; its actual merged state governs acceptance.
 
+## Version 1.2.0 final company successor
+
+The [1.2.0 register](../internal/company-closeout/REGISTER_v1.2.0.json) and [inspection guide](../internal/company-closeout/INSPECTION_GUIDE_v1.2.0.md) define the final scoped successor. The reserved tag is `sable-harbor-company-edition-v1.2.0`; its complete ZIP and actual acceptance/validation/runtime receipts must be published at the [release location](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/sable-harbor-company-edition-v1.2.0) before this contract is delivery evidence.
+
+The successor adds 1,493 nonmonetary rows across nine explicit tables, for 118 enterprise tables. It completes the current J2 personnel profiles, scoped synthetic debt administration and Advisory zero-award plan, company information-policy populations, and actual older-working-copy restore with current revocation/deletion/hold state. The [controlled runtime dependency](../internal/company-closeout/final-completion-2026-09-22/RUNTIME_DEPENDENCY.json) supplies the previously local-only pin to authorized inspectors. Public company data remains independently importable. The complete source, publication and finance package is regenerated and independently checked at its own accepted merge; no earlier release asset is replaced.
+
 ## Version 1.1.0 successor delivery contract
 
 The reserved successor tag is `sable-harbor-company-edition-v1.1.0`, with complete package `sable-harbor-company-edition-v1.1.0.zip` and separately generated release/validation/portal receipts and checksums. [Release location](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/sable-harbor-company-edition-v1.1.0) becomes delivery evidence only when actual bytes and receipts are published.

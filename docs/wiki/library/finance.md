@@ -256,6 +256,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Current business-unit evidence export contract — SH-AUDIT-UNIT-EXPORT-001_v1.0.0](../../finance/publications/SH-AUDIT-UNIT-EXPORT-001_v1.0.0.pdf) — PDF
 - [Company edition inspection and reproduction — SH-COMPANY-INSPECTION-20260915_v1.0.0](../../finance/publications/SH-COMPANY-INSPECTION-20260915_v1.0.0.pdf) — PDF
 - [Company edition 1.1.0 — inspection route — SH-COMPANY-INSPECTION-20260922_v1.1.0](../../finance/publications/SH-COMPANY-INSPECTION-20260922_v1.1.0.pdf) — PDF
+- [Company edition 1.2.0 — inspection route — SH-COMPANY-INSPECTION-20260922_v1.2.0](../../finance/publications/SH-COMPANY-INSPECTION-20260922_v1.2.0.pdf) — PDF
 - [SH-COMPANY-PARENT-TAX-20260915 v1.0.0](../../finance/publications/SH-COMPANY-PARENT-TAX-20260915_v1.0.0.pdf) — PDF
 - [Adopted corporate history and statutory provision successor — SH-COMPANY-PARENT-TAX-20260915_v2.0.0](../../finance/publications/SH-COMPANY-PARENT-TAX-20260915_v2.0.0.pdf) — PDF
 - [Continuing sovereignty reporting — SH-COMPANY-SOVEREIGNTY-20260915_v1.0.0](../../finance/publications/SH-COMPANY-SOVEREIGNTY-20260915_v1.0.0.pdf) — PDF
@@ -619,6 +620,11 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Cradle host terms — approved alternative B — SH-HOST-B-ADOPTION-20260922_v1.0.0](../../legal/host-successor/publications/SH-HOST-B-ADOPTION-20260922_v1.0.0.pdf) — PDF
 - [Demotte Reclamation Services — separate Cradle work-order instrument — SH-HOST-DEMOTTE-B-20260922_v1.0.0](../../legal/host-successor/publications/SH-HOST-DEMOTTE-B-20260922_v1.0.0.pdf) — PDF
 - [Kelly Gang Mining — separate Cradle work-order instrument — SH-HOST-KGM-B-20260922_v1.0.0](../../legal/host-successor/publications/SH-HOST-KGM-B-20260922_v1.0.0.pdf) — PDF
+
+## `docs/legal/publications`
+
+- [Advisory — synthetic legal implementation — SH-ADVISORY-LEGAL-20260922_v1.0.0](../../legal/publications/SH-ADVISORY-LEGAL-20260922_v1.0.0.pdf) — PDF
+- [ARU — dated security administration completion — SH-ARU-ADMIN-20260922_v1.0.0](../../legal/publications/SH-ARU-ADMIN-20260922_v1.0.0.pdf) — PDF
 
 ## `enterprise/business`
 

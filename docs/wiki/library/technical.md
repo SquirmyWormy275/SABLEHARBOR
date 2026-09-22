@@ -77,10 +77,13 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Debt and selected host evidence — August 2026](../../internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md) — MD
 - [Company edition dependency remediation — September 22, 2026](../../internal/company-closeout/DEPENDENCY_REMEDIATION_2026-09-22.md) — MD
 - [Current acquisition escrow and holdback register](../../internal/company-closeout/ESCROW_DISPOSITIONS.md) — MD
+- [Final company records — enterprise import contract](../../internal/company-closeout/FINAL_RECORDS_IMPORT_CONTRACT_2026-09-22.md) — MD
 - [Founder admission and monetary opening](../../internal/company-closeout/FOUNDER_ADMISSION_BASIS.md) — MD
+- [Geographic issue #108 — current criterion disposition](../../internal/company-closeout/GEOGRAPHIC_108_CURRENT_DISPOSITION_2026-09-22.md) — MD
 - [Industrial opening capital: authored 2025 contribution history](../../internal/company-closeout/INDUSTRIAL_CAPITAL_HISTORY_2026-09-22.md) — MD
 - [Company edition inspection and reproduction](../../internal/company-closeout/INSPECTION_GUIDE.md) — MD · [formatted PDF](../../finance/publications/SH-COMPANY-INSPECTION-20260915_v1.0.0.pdf)
 - [Company edition 1.1.0 — inspection route](../../internal/company-closeout/INSPECTION_GUIDE_v1.1.0.md) — MD · [formatted PDF](../../finance/publications/SH-COMPANY-INSPECTION-20260922_v1.1.0.pdf)
+- [Company edition 1.2.0 — inspection route](../../internal/company-closeout/INSPECTION_GUIDE_v1.2.0.md) — MD · [formatted PDF](../../finance/publications/SH-COMPANY-INSPECTION-20260922_v1.2.0.pdf)
 - [J2 administrative appointment history — September 22, 2026](../../internal/company-closeout/J2_ADMINISTRATIVE_HISTORY_2026-09-22.md) — MD
 - [Main source protection](../../internal/company-closeout/MAIN_PROTECTION.md) — MD
 - [Orientation commission history — September 22, 2026](../../internal/company-closeout/ORIENTATION_COMMISSIONS_2026-09-22.md) — MD
@@ -99,6 +102,10 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Portal neutral software reperformance — September 22, 2026 UTC](../../internal/company-closeout/evidence/portal-neutral-2026-09-22/README.md) — MD
 
+## `docs/internal/company-closeout/final-completion-2026-09-22`
+
+- [Final company completion evidence — September 22, 2026](../../internal/company-closeout/final-completion-2026-09-22/README.md) — MD
+
 ## `docs/internal/company-closeout/host-residual-successor`
 
 - [Host rights and escrow residual successor](../../internal/company-closeout/host-residual-successor/README.md) — MD
@@ -112,6 +119,10 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `docs/internal/company-closeout/validation`
 
 - [Integration validation history](../../internal/company-closeout/validation/README.md) — MD
+
+## `docs/internal/company-closeout/workspace-artifact-2026-09-22`
+
+- [Non-authoritative workspace output — bounded issue #34 implementation](../../internal/company-closeout/workspace-artifact-2026-09-22/README.md) — MD
 
 ## `docs/internal/development`
 

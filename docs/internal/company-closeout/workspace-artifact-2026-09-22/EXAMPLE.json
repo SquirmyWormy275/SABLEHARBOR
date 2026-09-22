@@ -1,0 +1,27 @@
+{
+  "format": "SH-WORKSPACE-ARTIFACT-1",
+  "marking": "SYNTHETIC_NON_AUTHORITATIVE_WORKSPACE_ARTIFACT",
+  "notice": "Working excerpt only. Not an institutional judgment, approved policy, or promoted source.",
+  "institutional_authority": false,
+  "promotion_allowed": false,
+  "artifact_kind": "DETERMINISTIC_SOURCE_EXCERPT_NOT_MODEL_OUTPUT",
+  "owner_id": "SYN-WORKSPACE-REVIEWER-001",
+  "tenant": "SH-SYNTHETIC-EXERCISE",
+  "purpose": "inspection",
+  "effective_at": "2026-09-22T18:55:32.897998+00:00",
+  "observed_at": "2026-09-22T18:55:32.907618+00:00",
+  "source": {
+    "record_id": "SH-DEMO-DAEDALUS-DOCTRINE",
+    "repository_path": "docs/j2/alexandria/DAEDALUS_OPERATING_DOCTRINE.md",
+    "version": "1.0.0",
+    "sha256": "7c3a1e30b3aa0dd0f5993557d16cd6170e6df5fde080f98482f3216e7240dd3e",
+    "available_at": "2026-09-22T10:52:46-07:00",
+    "effective_at": "2026-09-02T00:00:00+00:00"
+  },
+  "excerpt": "# DAEDALUS OPERATING DOCTRINE AND AI AUTHORITY BOUNDARIES\n\n**Document ID:** `SH-J2-DAEDALUS-001` | **Version:** 1.0.0 | **State:** LOCKED ARCHITECTURAL DIRECTION\n**Owner:** J2 Headquarters / Daedalus doctrine | **Related:** human authorship, disclosure, personal workspace | **Cross-reference:** `AI_AUTHORITY_AND_HUMAN_AUTHORSHIP.md`; `DAEDALUS_PERSONAL_INSTANCE_AND_WORKSPACE.md`\n\nDaedalus is the personally provisioned AI agent around Alexandria—not Alexandria and not Pinakes door ten. It may traverse, retrieve/pull, hold, compare, trace/lineage, historically reconstruct, visualize, synthesize, challenge, explore, converse, form labeled opinions, and recommend investigation. It may say, “I think you're wrong, and here is why.” Its rule is **intellectual aggression without institutional authority**.\n\n## Hard boundaries\n\n1. **No authoritative write.** No write path into Alexandria's institutional record.\n2. **No self-promotion.** A synthesis/opinion never automatically becomes Canon, Judgment, Semaphore, EIB, or institutional position.\n3. **No institutional authority.** It cannot say Sable Harbor judges something unless quoting an actual human-authored record.\n\nJudgment Officers author judgments; Orientation Officers author Semaphore and Canon changes; Orientation owns EIB publication. There is no hidden approve-an-AI-draft conveyor. Daedalus synthetic reports, timelines, comparisons, visualizations, and research notes may persist in a user's workspace but remain clearly marked synthetic, non-authoritative, and outside Alexandria; a human may independently use them in authored work.\n\nEach user has credentials, individual context, and segregated persistent memory. No cross-user conversation, working-set, copied-material, synthesis, or memory access. Global system/model/skill updates may change behavior without merging content. Users may deliberately share content-free techniques, skills, settings, Markdown skill files, and workflow templates—never private memory or Alex",
+  "excerpt_sha256": "7808cc4db55407f4425ddfc463af907be6287edee024ec0049641d87584289f2",
+  "transformation": "First 2000 Unicode characters of the exact UTF-8 source; no summarization or inference",
+  "access": "Owner-specific working copy; every mediated read/export rechecks current source permissions",
+  "canonical_source_modified": false,
+  "model_invoked": false
+}

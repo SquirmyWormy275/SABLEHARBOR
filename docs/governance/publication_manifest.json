@@ -1019,6 +1019,46 @@
       "normalizer": "pypdf"
     },
     {
+      "source": "docs/internal/company-closeout/INSPECTION_GUIDE_v1.2.0.md",
+      "publication": "docs/finance/publications/SH-COMPANY-INSPECTION-20260922_v1.2.0.pdf",
+      "sha256": "3645477a2ce2629d92f7af8a149dfefb60fccf14cc78dc0b6683032db3a20062",
+      "source_sha256": "039c5645cd475dd39948f349b26ff208a6271e3eeee66a87e68b84674b635895",
+      "brand": "corporate",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "docs/canon/J2_PERSONNEL_COMPLETION_2026-09-22.md",
+      "publication": "docs/governance/publications/SH-J2-PERSONNEL-20260922_v1.0.0.pdf",
+      "sha256": "557bad6c8872b213e7dd7b9af1791fc1578dd6fdbaa1225e8f3fa6d27a632a49",
+      "source_sha256": "83bcc1938de72bebb2de85dbe8bf384d31f33180213f360be31e4253f828629d",
+      "brand": "corporate",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "docs/canon/ARU_ADMINISTRATIVE_COMPLETION_2026-09-22.md",
+      "publication": "docs/legal/publications/SH-ARU-ADMIN-20260922_v1.0.0.pdf",
+      "sha256": "7b21e31925351db1d7301e10813fc908784ce1486e7fa2f6e7a7ae0f5eea53bc",
+      "source_sha256": "5ceebdf60aedeef73f654a822c677ae00b8b464180dc9f6ebef8a5eb18273fb5",
+      "brand": "corporate",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "docs/canon/ADVISORY_LEGAL_IMPLEMENTATION_2026-09-22.md",
+      "publication": "docs/legal/publications/SH-ADVISORY-LEGAL-20260922_v1.0.0.pdf",
+      "sha256": "736a9e48d0ca1c3cf0f5f94fc99ae0ba60ae57e687bf19e70ee52d388a99e93a",
+      "source_sha256": "b5fedfc6f2c30359afd68d6552ea0733df116d8725e60cabb4fca21ae582ef9e",
+      "brand": "corporate",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "docs/j2/alexandria/COMPANY_INFORMATION_POLICY_IMPLEMENTATION_2026-09-22.md",
+      "publication": "docs/governance/publications/SH-INFORMATION-POLICY-20260922_v1.0.0.pdf",
+      "sha256": "0b6bbe2b6e3037420943e9b826a4ec62ee8de0394408c28a7414b3894290cbb0",
+      "source_sha256": "19874379ae0fb8a79775d4d5f02b64421c27872206e25de98735d57bba29ead3",
+      "brand": "corporate",
+      "normalizer": "qpdf"
+    },
+    {
       "source": "docs/internal/company-closeout/INSPECTION_GUIDE_v1.1.0.md",
       "publication": "docs/finance/publications/SH-COMPANY-INSPECTION-20260922_v1.1.0.pdf",
       "sha256": "766b90c734bcea453c3c4f7225acd0ebcd416a408753d949a90d371bce4f5df7",

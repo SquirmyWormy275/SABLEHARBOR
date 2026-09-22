@@ -8,10 +8,13 @@ jobs:
   integrity:
     name: Source integrity / required
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4, resolved 2026-09-15
         with:
           fetch-depth: 0
+      - name: Check patch whitespace
+        run: git diff --check "${{ github.event.pull_request.base.sha || 'HEAD' }}" HEAD
       - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1, existing repository pin
         with:
           version: '0.12.4'
@@ -19,5 +22,18 @@ jobs:
       - run: uv run python scripts/validate_repository_hygiene.py
       - run: uv run python tools/documents/approval_guard.py
       - run: uv run python scripts/check_public_safety.py
-      - name: Check patch whitespace
-        run: git diff --check "${{ github.event.pull_request.base.sha || 'HEAD' }}" HEAD
+      - name: Install PDF inspection dependency
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - name: Required organization, brand and company source checks
+        run: |
+          uv run python scripts/validate_governance_j2.py
+          uv run python scripts/validate_organization_maps.py
+          uv run python scripts/validate_institutional_catalog.py
+          uv run python scripts/validate_business_records.py
+      - name: Required company accounting and disclosure regressions
+        run: uv run python -m pytest tests/closeout tests/company_closeout tests/ccf/test_information_policy.py enterprise/runtime/tests/test_security.py -q
+      - name: Required finance and export reconciliation
+        run: |
+          uv run python -m enterprise.closeout.build
+          uv run python -m enterprise.closeout.reperform enterprise/generated/company-closeout-v1
+          uv run python -m tools.company_closeout.independent_import enterprise/generated/company-closeout-v1/exports
