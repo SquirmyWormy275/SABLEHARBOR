@@ -17,6 +17,8 @@ import SourceRecordCensus from "./SourceRecordCensus";
 import { ConversationProvenance } from "./ConversationProvenance";
 import { MeetingSourceContext } from "./MeetingSourceContext";
 import { MeetingConsultation } from "./MeetingConsultation";
+import { WorkGuidance } from "./WorkGuidance";
+import { RequestReadBatch } from "./RequestReadBatch";
 import { ConsultationProvenance } from "./ConsultationProvenance";
 import {
   sameConsultation,
@@ -1698,7 +1700,36 @@ export default function App() {
                       <WorkStatus
                         key={e.id}
                         engagement={e}
-                        onPreview={(kind, row) => setDetail({ kind, row })}
+                        onPreview={(kind, row, reference) =>
+                          setDetail({
+                            kind,
+                            row,
+                            ...(kind === "workpaper" &&
+                            typeof reference?.version === "number"
+                              ? { focusVersion: reference.version }
+                              : {}),
+                            savedAtRevision: e.revision,
+                          })
+                        }
+                      />
+                    )}
+                    {bootstrap.capabilities.work_guidance && (
+                      <WorkGuidance
+                        engagement={e}
+                        viewerId={bootstrap.viewer.id}
+                        busy={busy}
+                        onCommand={act}
+                        onPreview={(kind, row, pin) =>
+                          setDetail({
+                            kind,
+                            row,
+                            ...(kind === "workpaper" &&
+                            typeof pin.version === "number"
+                              ? { focusVersion: pin.version }
+                              : {}),
+                            savedAtRevision: e.revision,
+                          })
+                        }
                       />
                     )}
                     <TemporalCoverage
@@ -1882,6 +1913,25 @@ export default function App() {
                     />
                   </RetainedPanel>
                 )}
+                <RetainedPanel active={section === "pbc"}>
+                  <RequestReadBatch
+                    engagement={e}
+                    viewerId={bootstrap.viewer.id}
+                    onState={(next) => {
+                      if (
+                        renderEpoch === navigationEpoch.current &&
+                        next.id === e.id
+                      )
+                        setEngagement((current) =>
+                          current &&
+                          current.id === next.id &&
+                          current.revision <= next.revision
+                            ? normalize(next)
+                            : current,
+                        );
+                    }}
+                  />
+                </RetainedPanel>
                 {section === "pbc" && (
                   <>
                     {bootstrap.capabilities.company_sources && (

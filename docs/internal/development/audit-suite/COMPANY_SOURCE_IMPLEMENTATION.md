@@ -712,3 +712,40 @@ use mock providers and synthetic HTTP fixtures: this implementation checkpoint
 makes no claim that a real company conversation or qualified assessment occurred.
 The isolated repository run at commit `8f9b8eab` passed 1,573 tests with three skips;
 subsequent handoff, register and consultation changes have separate focused checks.
+
+## Explicit guidance, administrative batching and trace readiness
+
+Administrative guidance has two independent gates: an instructor-recorded
+`assistance.configure` policy, disabled by default, and each viewer's private
+opt-in. Changing the policy records a new epoch and requires fresh opt-in.
+Learners cannot inject the policy through engagement configuration. The controls
+workspace records explicit disclosures for a chosen exact control, then permits
+reasoned personal review or dismissal of exact suggestions. Suggestions derive
+only from authorized recorded work relationships; they perform no source
+discovery, model call, hidden-Key inspection or formal audit conclusion.
+Current context and policy are rechecked before storage. Separate companion
+recovery retains inactive history and never reactivates assistance.
+
+The PBC workspace now supports explicit batches of at most 20 request read
+notifications. Users preview selected rows versus the current filtered snapshot,
+including excluded IDs, before confirmation. Each ordinary command preserves its
+own optimistic revision and outcome. A failure or outside revision change stops
+the remainder. An uncertain response retries only the exact original command;
+remaining requests require a new preview. This does not issue or accept requests,
+collect evidence, close reviews or complete tests.
+
+[Procedure trace readiness](../../../../enterprise/audit_suite/PROCEDURE_TRACE_READINESS.md)
+adds retained sample-execution relationships to the existing recorded-work report.
+Exact historical workpaper, population, selection, procedure and evidence metadata
+pins remain inspectable. Corrections contribute one current trace per lineage,
+with old observations separately retained. Invalid or ambiguous relationships
+produce unavailable counts, never a passing result. Population reliability,
+source query and period qualifiers remain recorded assertions; the report neither
+rereads original bytes nor establishes period completeness or professional
+sufficiency. The bounded correction journey supplies two retained traces and one
+current lineage in a private read-only report.
+
+The narrow detail layout now wraps narrative text while containing wide tables in
+their own horizontal scroll area. Checks at 320, 390 and 1,400 pixels retain all
+columns. The actual recorded-projection workpaper fixture verifies that the modal
+fits its viewport and the historical version remains unchanged.

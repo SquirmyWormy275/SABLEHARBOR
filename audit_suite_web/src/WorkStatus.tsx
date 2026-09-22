@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { request, str, type Engagement, type Row } from "./api";
 import { sourceReference } from "./sourceReferences";
+import { ProcedureTraceReadiness } from "./ProcedureTraceReadiness";
+import { resolveTraceReference, type TraceReadiness } from "./traceReadiness";
+import type { ContextLink } from "./investigationContext";
 const explanations: Record<string, string> = {
   NO_ISSUED_REQUEST: "No issued request is linked to this control.",
   OUTSTANDING_RESPONSE:
@@ -37,7 +40,7 @@ export function WorkStatus({
   onPreview,
 }: {
   engagement: Engagement;
-  onPreview: (kind: string, row: Row) => void;
+  onPreview: (kind: string, row: Row, reference?: ContextLink) => void;
 }) {
   const [report, setReport] = useState<Report | null>(null),
     [selected, setSelected] = useState(""),
@@ -96,12 +99,31 @@ export function WorkStatus({
       str((c.control as Row)?.id) === selected,
   );
   function reference(ref: Row) {
-    const target = sourceReference(e, {
-      ...ref,
-      collection: collections[str(ref.kind)],
-    });
+    const exact: ContextLink | undefined =
+      ref.kind === "workpaper" &&
+      typeof ref.version === "number" &&
+      typeof ref.version_digest === "string"
+        ? {
+            kind: "workpaper",
+            id: ref.id,
+            version: ref.version,
+            sha256: ref.version_digest,
+          }
+        : undefined;
+    const exactRow = exact ? resolveTraceReference(e, exact) : null;
+    const target = exact
+      ? exactRow
+        ? { kind: exact.kind, row: exactRow }
+        : null
+      : sourceReference(e, {
+          ...ref,
+          collection: collections[str(ref.kind)],
+        });
     return target ? (
-      <button type="button" onClick={() => onPreview(target.kind, target.row)}>
+      <button
+        type="button"
+        onClick={() => onPreview(target.kind, target.row, exact)}
+      >
         Open {target.kind} {ref.id}
         {ref.version !== undefined
           ? ` · linked version ${str(ref.version)}`
@@ -202,6 +224,13 @@ export function WorkStatus({
                             Legacy links have no workpaper version provenance.
                           </p>
                         )}
+                      <ProcedureTraceReadiness
+                        engagement={e}
+                        data={
+                          p.sample_trace_readiness as TraceReadiness | undefined
+                        }
+                        onPreview={onPreview}
+                      />
                     </li>
                   ))}
                 </ul>

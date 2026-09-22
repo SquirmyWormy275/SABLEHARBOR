@@ -64,3 +64,15 @@ Pass `instructor_releases=existing_release_store` to `backup`. The existing priv
 Restore verifies the member bytes and the maintained release snapshot validator, then writes only `instructor-releases-ARCHIVE-ONLY.json`. It never creates `releases.sqlite3`, invokes the release-store constructor, remaps recipients, restores current key bindings, grants access or republishes hints. Original IDs and authority references remain historical archive data. The receipt explicitly records `ARCHIVE_ONLY_NOT_OPERATIONALLY_REHYDRATED` and `release_principals_or_bindings_rehydrated: false`.
 
 An operational release migration requiring explicit new-principal mapping and fresh role/key/scope checks is not implemented by this archive slice. Do not point a live release service at the archive or treat recovery as authorization to deliver its contents. Existing context ownership restoration and inert background-job semantics remain separate.
+
+## Personal administrative work guidance
+
+`backup(..., work_guidance=instance)` includes the validated immutable private
+`work-guidance.json` history. Restore writes
+`work-guidance-ARCHIVE-ONLY.json` and records
+`ARCHIVE_ONLY_NOT_OPERATIONALLY_REHYDRATED`. It creates no active guidance
+SQLite store, personal opt-in, dismissal state, instructor policy, credentials or
+grants. A fresh workspace must obtain current instructor permission and a new
+explicit personal opt-in. Disclosures and decisions in the retained archive remain
+historical events. This is an explicitly selected companion with its own snapshot
+time, not a globally atomic restore.

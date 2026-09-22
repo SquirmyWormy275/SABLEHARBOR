@@ -57,3 +57,25 @@ Both destination parents must already be private mode-0700 directories. Restore 
 Scope accepts an IANA timezone (UTC by default). Date-only fieldwork starts, target dates and meetings mean 09:00 in that timezone; daylight-saving changes preserve the local hour. Explicit-offset timestamps retain their instant. The calendar renders the selected zone even when the clock stores a canonical UTC timestamp. Date-only evidence availability starts at local midnight.
 
 Uploads remain capped at 25 MiB each. App-produced review ZIPs use a separate internal retention path capped at 100 MiB compressed and expanded, including full history and indexes, with bounded entry counts and member-integrity checks. Oversized packages fail explicitly; histories are never silently truncated to fit. The internal export path is not exposed as an upload option.
+
+### Explicit administrative batches and guidance
+
+The PBC workspace has a retained, collapsed **Mark received requests read** panel.
+It distinguishes selected rows from the current filtered snapshot, previews exact
+eligible and excluded IDs, and refuses more than 20 selected IDs. Confirmation
+uses one ordinary `pbc.read` command per eligible request. Each result has its own
+revision and outcome; external changes or a failed item stop the remainder.
+An uncertain network outcome offers only the same command envelope for retry.
+Confirming that retry does not automatically resume the remaining items. Reading
+notifications does not accept evidence, issue requests, collect sources or change
+testing conclusions. Changing selection or filters requires a new preview.
+
+The controls workspace offers administrative work guidance only when configured
+by the local service. The instructor must first record an explicit assistance
+policy, and each viewer must separately opt in. Clean/Messy mode does not grant
+assistance. An explicit control selection and disclosure action records which
+suggestions were shown. Suggestions use authorized recorded relationships;
+private Key answers and models are not involved. Personal review/dismissal reasons
+apply to exact context pins and do not change audit work. Policy, access, scope or
+relevant source changes invalidate prior context. Separate companion recovery
+preserves inactive guidance history, without restoring an active opt-in.

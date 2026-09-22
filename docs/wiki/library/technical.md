@@ -189,12 +189,14 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Local non-human credential lifecycle](../../../enterprise/audit_suite/NONHUMAN_IDENTITY_ACTIVITY.md) — MD
 - [Personal saved views](../../../enterprise/audit_suite/PERSONAL_VIEWS.md) — MD
 - [Protected portfolio source snapshots](../../../enterprise/audit_suite/PORTFOLIO_EXPLANATION.md) — MD
+- [Procedure trace metadata readiness](../../../enterprise/audit_suite/PROCEDURE_TRACE_READINESS.md) — MD
 - [Repository documentary sync](../../../enterprise/audit_suite/REPOSITORY_DOCUMENT_SYNC.md) — MD
 - [Local quarterly risk-input assessment](../../../enterprise/audit_suite/RISK_ASSESSMENT_ACTIVITY.md) — MD
 - [Explicit sampled-item procedure trace](../../../enterprise/audit_suite/SAMPLE_EXECUTION.md) — MD
 - [Persistent local security-event intake](../../../enterprise/audit_suite/SECURITY_EVENT_RUNTIME.md) — MD
 - [Exact recorded source-impact relationships](../../../enterprise/audit_suite/SOURCE_IMPACT_REFERENCES.md) — MD
 - [Local role-based training source pair](../../../enterprise/audit_suite/TRAINING_ACTIVITY.md) — MD
+- [Private reasoned work guidance](../../../enterprise/audit_suite/WORK_GUIDANCE.md) — MD
 
 ## `evidence/closeout`
 

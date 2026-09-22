@@ -1466,3 +1466,23 @@ section[aria-label="Bound instructor explanation"] dd {
 
 .background-work-panel { margin: 16px 32px; overflow-wrap: anywhere; }
 @media (max-width: 700px) { .background-work-panel { margin: 12px; } }
+
+/* Detail sections are flex items; their tables must not set the modal's width. */
+.modal .actions > section {
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+}
+.table-tools .search,
+.table-tools .search input {
+  min-width: 0;
+}
+@media (max-width: 760px) {
+  .record-table::before {
+    content: "Scroll within wide tables to view every column.";
+    display: block;
+    padding: 10px 12px 0;
+    color: var(--muted);
+    font-size: 0.75rem;
+  }
+}

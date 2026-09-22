@@ -66,6 +66,7 @@ CAPABILITIES = {
     "review_independent_resolution": True,
     "review_passage_anchors": True,
     "sample_executions": True,
+    "work_guidance_policy": True,
     "voice": False,
 }
 REVIEW_COMMANDS = {"review.comment", "review.resolve"}
@@ -359,6 +360,13 @@ class Engine:
         )
         title = require_text(payload, "title", maximum=200)
         configuration = payload.get("configuration", {})
+        if isinstance(configuration, dict) and {
+            "work_guidance_allowed",
+            "work_guidance_policy_revision",
+        } & set(configuration):
+            raise DomainError(
+                "Assistance policy requires an explicit instructor command", status=403
+            )
         validate_configuration(configuration, mode)
         scope = validate_scope(payload.get("scope", {}), discipline, repository=self.repository)
         org = snapshot(self.repository, as_of=scope["period_start"])
@@ -491,6 +499,11 @@ class Engine:
     def _project(self, actor: str, state: dict) -> dict:
         permission = self.store.membership(actor, state["id"])
         state["capabilities"] = self.capabilities
+        policy = state.get("configuration", {})
+        state["work_guidance_policy"] = {
+            "allowed": policy.get("work_guidance_allowed") is True,
+            "version": policy.get("work_guidance_policy_revision", 0),
+        }
         if state.get("scope", {}).get("temporal_basis") and all(
             c.get("owner_ids") and c.get("implementation_version")
             for c in state.get("controls", [])
@@ -548,7 +561,10 @@ class Engine:
         ):
             permissions = {"review", "instruct"}
         kind = command.get("kind", "")
-        if kind.startswith("scenario.custom.") or kind == "company.activate":
+        if kind.startswith("scenario.custom.") or kind in {
+            "company.activate",
+            "assistance.configure",
+        }:
             permissions = {"instruct"}
         if kind == "review.resolve" and "disposition" in command.get("payload", {}):
             permissions = {"learn", "review", "instruct"}
@@ -620,7 +636,33 @@ class Engine:
         from .temporal_workflow import COMMANDS as TEMPORAL_COMMANDS
         from .temporal_workflow import handle as temporal_handle
 
-        if kind == "company.activate":
+        if kind == "assistance.configure":
+            if (
+                set(p) != {"work_guidance_allowed", "rationale"}
+                or type(p.get("work_guidance_allowed")) is not bool
+            ):
+                raise DomainError("Explicit guidance permission and rationale required")
+            if state["phase"] not in {"CONFIGURING", "READY", "KICKOFF", "ACTIVE"}:
+                raise DomainError("Assistance policy cannot change during generation")
+            rationale = require_text(p, "rationale", maximum=2000)
+            configuration = state.setdefault("configuration", {})
+            previous = configuration.get("work_guidance_allowed") is True
+            version = state["revision"] + 1
+            configuration.update(
+                work_guidance_allowed=p["work_guidance_allowed"],
+                work_guidance_policy_revision=version,
+            )
+            state.setdefault("assistance_policy_history", []).append(
+                {
+                    "kind": "ADMINISTRATIVE_WORK_GUIDANCE",
+                    "previous_allowed": previous,
+                    "allowed": p["work_guidance_allowed"],
+                    "policy_version": version,
+                    "rationale": rationale,
+                    **stamped,
+                }
+            )
+        elif kind == "company.activate":
             from .company_collection import activate
 
             activate(self, state, p, stamped)

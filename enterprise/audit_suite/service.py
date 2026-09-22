@@ -221,9 +221,11 @@ def create_app(
     contexts = None
     personal_views = None
     handoffs = None
+    work_guidance = None
     if workspace_contexts:
         from .investigation_handoffs import InvestigationHandoffs
         from .personal_views import PersonalViews
+        from .work_guidance import WorkGuidance
         from .workspace_context import WorkspaceContexts
 
         context_root = engine.store.root / "workspace-contexts"
@@ -235,6 +237,9 @@ def create_app(
         handoff_root = engine.store.root / "investigation-handoffs"
         handoff_root.mkdir(mode=0o700, exist_ok=True)
         handoffs = InvestigationHandoffs(handoff_root, engine)
+        guidance_root = engine.store.root / "work-guidance"
+        guidance_root.mkdir(mode=0o700, exist_ok=True)
+        work_guidance = WorkGuidance(guidance_root, engine)
     releases = None
     if protected_bindings:
         from .instructor_releases import InstructorReleases
@@ -246,6 +251,7 @@ def create_app(
     app.state.workspace_contexts = contexts
     app.state.personal_views = personal_views
     app.state.investigation_handoffs = handoffs
+    app.state.work_guidance = work_guidance
     app.state.background_jobs = jobs
     app.state.generation_jobs = {}
     app.add_middleware(BodyLimit)
@@ -346,6 +352,7 @@ def create_app(
             workspace_contexts=contexts is not None,
             personal_views=personal_views is not None,
             investigation_handoffs=handoffs is not None,
+            work_guidance=work_guidance is not None,
             background_jobs=jobs is not None,
             bound_instructor_keys=bool(protected_bindings),
             instructor_releases=releases is not None,
@@ -898,6 +905,35 @@ def create_app(
             expected_engagement_revision=body["expected_engagement_revision"],
             command_id=body["command_id"],
         )
+
+    def enabled_work_guidance():
+        if work_guidance is None:
+            raise DomainError("Personal work guidance is not configured", status=503)
+        return work_guidance
+
+    @app.get("/api/engagements/{engagement_id}/work-guidance")
+    async def guidance_status(engagement_id: str, request: Request):
+        principal = actor(request)
+        return await asyncio.to_thread(
+            enabled_work_guidance().status, principal["id"], engagement_id
+        )
+
+    @app.post("/api/engagements/{engagement_id}/work-guidance/{operation}")
+    async def guidance_action(engagement_id: str, operation: str, request: Request):
+        principal = actor(request, mutation=True)
+        body = await json_body(request)
+        limits.check("work_guidance", principal["id"], 120)
+        common = {"expected_engagement_revision", "command_id"}
+        extra = {
+            "preference": {"enabled", "rationale", "expected_version"},
+            "reveal": {"context_ref"},
+            "decision": {"candidate_id", "candidate_sha256", "action", "rationale"},
+        }
+        if operation not in extra or set(body) != common | extra[operation]:
+            raise DomainError("Exact personal guidance operation required")
+        guide = enabled_work_guidance()
+        methods = {"preference": guide.opt_in, "reveal": guide.reveal, "decision": guide.decide}
+        return await asyncio.to_thread(methods[operation], principal["id"], engagement_id, **body)
 
     def enabled_jobs():
         if jobs is None:

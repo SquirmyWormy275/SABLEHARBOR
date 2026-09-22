@@ -196,6 +196,7 @@ def backup(
     instructor_releases=None,
     personal_views=None,
     investigation_handoffs=None,
+    work_guidance=None,
 ):
     """Capture selected live companion objects; never starts/retries jobs."""
     destination = _new(destination)
@@ -206,6 +207,7 @@ def backup(
         and instructor_releases is None
         and personal_views is None
         and investigation_handoffs is None
+        and work_guidance is None
     ):
         raise DomainError("Select at least one companion")
     members, captures = {}, {}
@@ -253,7 +255,17 @@ def backup(
         validate_snapshot(snapshot)
         members["investigation-handoffs.json"] = _json(snapshot)
         captures["investigation_handoffs"] = datetime.now(UTC).isoformat()
+    if work_guidance is not None:
+        from .work_guidance import validate_archive
+
+        snapshot = work_guidance.snapshot()
+        validate_archive(snapshot)
+        members["work-guidance.json"] = _json(snapshot)
+        captures["work_guidance"] = datetime.now(UTC).isoformat()
     manifest = {
+        "work_guidance_restore_mode": "ARCHIVE_ONLY_NOT_OPERATIONALLY_REHYDRATED"
+        if work_guidance is not None
+        else "NOT_INCLUDED",
         "schema": "PRIVATE_COMPANION_V1",
         "component_captured_at": captures,
         "globally_atomic": False,
@@ -305,6 +317,7 @@ def restore(source: Path, destination: Path, *, engine=None, principal_map=None)
         "instructor-releases.json",
         "personal_views.json",
         "investigation-handoffs.json",
+        "work-guidance.json",
     }
     names = set(manifest.get("members", {}))
     if (
@@ -352,6 +365,14 @@ def restore(source: Path, destination: Path, *, engine=None, principal_map=None)
             validate_snapshot(strict_json(members["investigation-handoffs.json"]))
         except (ValueError, TypeError, KeyError) as error:
             raise DomainError("Invalid investigation handoff archive") from error
+    if "work-guidance.json" in members:
+        from .inference import _json as strict_json
+        from .work_guidance import validate_archive
+
+        try:
+            validate_archive(strict_json(members["work-guidance.json"]))
+        except (ValueError, TypeError, KeyError) as error:
+            raise DomainError("Invalid personal guidance archive") from error
     tables = bodies.get("contexts", {}).get("tables")
     view_tables = bodies.get("personal_views", {}).get("tables")
     owners = {r["actor"] for r in tables["contexts"]} if tables is not None else set()
@@ -425,6 +446,8 @@ def restore(source: Path, destination: Path, *, engine=None, principal_map=None)
                 stage / "investigation-handoffs-ARCHIVE-ONLY.json",
                 members["investigation-handoffs.json"],
             )
+        if "work-guidance.json" in members:
+            _write(stage / "work-guidance-ARCHIVE-ONLY.json", members["work-guidance.json"])
         if "access.jsonl" in members:
             log_root = stage / "instructor-access-archive"
             log_root.mkdir(mode=0o700)
@@ -443,6 +466,9 @@ def restore(source: Path, destination: Path, *, engine=None, principal_map=None)
             "original_hashed_personal_view_content_preserved": view_tables is not None,
             "credentials_or_grants_restored": False,
             "jobs": "ARCHIVE_ONLY",
+            "work_guidance": "ARCHIVE_ONLY_NOT_OPERATIONALLY_REHYDRATED"
+            if "work-guidance.json" in members
+            else "NOT_INCLUDED",
             "investigation_handoffs": "ARCHIVE_ONLY_NOT_OPERATIONALLY_REHYDRATED"
             if "investigation-handoffs.json" in members
             else "NOT_INCLUDED",

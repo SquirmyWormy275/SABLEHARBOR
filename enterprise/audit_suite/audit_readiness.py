@@ -6,6 +6,7 @@ qualification checks. Recorded completion and collected files are not effectiven
 
 from collections import Counter
 
+from .procedure_trace_readiness import summarize as trace_readiness
 from .store import DomainError, digest
 
 REFERENCE_COLLECTIONS = {
@@ -123,6 +124,7 @@ def summarize(projection):
     artifact_by_id = {a["id"]: a for a in artifacts}
     workpapers = projection.get("workpapers", [])
     populations = projection.get("populations", [])
+    trace_report = trace_readiness(projection)
     reports = []
     for control in controls:
         cid = control["id"]
@@ -322,6 +324,7 @@ def summarize(projection):
                     if explicit
                     else "NOT_RECORDED",
                     "testing_verified": "NOT_ASSESSED",
+                    "sample_trace_readiness": trace_report["by_task"][task["id"]],
                 }
             )
         reports.append(
@@ -360,6 +363,8 @@ def summarize(projection):
         "engagement_revision": projection["revision"],
         "scope_sha256": digest(projection["scope"]),
         "status": "OBSERVABLE_ADMINISTRATIVE_PROGRESS_ONLY",
+        "sample_trace_report_status": trace_report["status"],
+        "sample_trace_unavailable_count": trace_report["unavailable_count"],
         "controls": reports,
         "denominators": {
             "scoped_controls": len(controls),
