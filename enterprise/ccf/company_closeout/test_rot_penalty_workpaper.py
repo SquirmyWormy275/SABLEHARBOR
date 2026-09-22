@@ -24,3 +24,13 @@ def test_due_date_and_thirty_day_boundary():
 def test_unresearched_interest_period_rejected():
     with pytest.raises(ValueError, match='authority'):
         build('2027-01-01')
+
+
+def test_explicit_projection_does_not_reprice_history():
+    historical = build('2026-12-31')['rows'][1]
+    projected = build('2027-12-31', planning_interest_rate=Decimal('.07'))['rows'][1]
+    assert Decimal(projected['interest_usd']) - Decimal(historical['interest_usd']) == Decimal('5029.30')
+    assert projected['state'] == 'CONDITIONAL_UNPAID_PLANNING_RATE'
+    leap = build('2028-12-31', planning_interest_rate=Decimal('.07'))['rows'][1]
+    assert abs(Decimal(leap['interest_usd']) - Decimal(projected['interest_usd']) - Decimal('5029.30')) <= Decimal('.01')
+    assert build('2026-12-31', planning_interest_rate=Decimal('.10'))['totals'] == build('2026-12-31')['totals']
