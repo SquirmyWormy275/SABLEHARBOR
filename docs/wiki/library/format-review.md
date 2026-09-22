@@ -6,7 +6,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 152 |
+| COUNTERPART_REVIEW_REQUIRED | 153 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 106 |
@@ -152,6 +152,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Explicit source-impact reassessment dispositions](../../../enterprise/audit_suite/SOURCE_IMPACT_DISPOSITIONS.md) — Corporate document-format reconciliation
 - [Exact recorded source-impact relationships](../../../enterprise/audit_suite/SOURCE_IMPACT_REFERENCES.md) — Corporate document-format reconciliation
 - [Local role-based training source pair](../../../enterprise/audit_suite/TRAINING_ACTIVITY.md) — Corporate document-format reconciliation
+- [Local package inventory, rule scans and rescans](../../../enterprise/audit_suite/VULNERABILITY_RUNTIME.md) — Corporate document-format reconciliation
 - [Private reasoned work guidance](../../../enterprise/audit_suite/WORK_GUIDANCE.md) — Corporate document-format reconciliation
 - [Evidence collection and scheduling](../../../enterprise/ccf/operations/COLLECTION.md) — Corporate document-format reconciliation
 - [Bounded control test contracts](../../../enterprise/ccf/operations/CONTROL_TEST_CONTRACTS.md) — Corporate document-format reconciliation
