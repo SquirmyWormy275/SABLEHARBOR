@@ -134,34 +134,99 @@ def opening(parent, mine, assets, current, history, historical_rot):
     return rows
 
 
-def build(result, parent, mine, assets, current, factors):
+def _index(rows, fields, expected, label):
+    indexed = {}
+    for row in rows:
+        key = tuple(row[field] for field in fields)
+        if key in indexed:
+            raise ValueError(f"Duplicate deferred-tax {label} source")
+        indexed[key] = row
+    if set(indexed) != expected:
+        raise ValueError(f"Incomplete or unexpected deferred-tax {label} population")
+    return indexed
+
+
+def _year_end_balances(result):
     balances = defaultdict(lambda: defaultdict(D))
     seen = set()
-    for r in result["legal_trial_balance_rows"]:
-        if int(r["month"]) == 12:
-            identity = (r["scenario"], r["entity"], int(r["year"]), r["account"])
-            if identity in seen:
-                raise ValueError("Duplicate deferred legal trial-balance account")
-            seen.add(identity)
-            balances[r["scenario"], r["entity"], int(r["year"])][r["account"]] += D(r["signed_usd"])
+    for row in result["legal_trial_balance_rows"]:
+        if int(row["month"]) != 12:
+            continue
+        key = row["scenario"], row["entity"], int(row["year"]), row["account"]
+        if key in seen:
+            raise ValueError("Duplicate year-end legal-book deferred-tax account")
+        seen.add(key)
+        balances[key[:3]][key[3]] = D(row["signed_usd"])
+    source = defaultdict(D)
+    journal_seen = set()
+    for row in result["journal_rows"]:
+        identity = row["scenario"], row["journal_id"], row["line_no"]
+        if identity in journal_seen:
+            raise ValueError("Duplicate deferred-tax source journal leg")
+        journal_seen.add(identity)
+        for year in range(max(2026, int(row["year"])), 2032):
+            source[row["scenario"], row["entity"], year, row["account"]] += D(row["signed_usd"])
+    for key in set(source) | seen:
+        if source[key].quantize(Q) != balances[key[:3]].get(key[3], D(0)).quantize(Q):
+            raise ValueError(f"Year-end deferred-tax account differs from source journal: {key}")
+    return balances
+
+
+def build(result, parent, mine, assets, current, factors):
+    scenarios = ("base", "downside", "expansion")
+    years = range(2026, 2032)
+    jurisdictions = ("US", "CA", "IL", "WV")
+    members = ("SHI", "SHIH", "PS", "ARU", "BST")
+    balances = _year_end_balances(result)
     required = {
-        (s, e, y)
-        for s in ("base", "downside", "expansion")
-        for e in ("SHI", "PS", "RWH", "ARU", "BST")
-        for y in range(2026, 2032)
+        (s, e, y) for s in scenarios for e in ("SHI", "PS", "RWH", "ARU", "BST") for y in years
     }
     if not required.issubset(balances):
         raise ValueError("Incomplete year-end legal-book deferred-tax population")
-    m = {(r["scenario"], r["jurisdiction"], r["year"]): r for r in mine}
-    p = {(r["scenario"], r["year"]): r for r in parent.rows}
-    federal = {(r["scenario"], r["taxpayer"], r["year"]): r for r in current["federal"]}
-    states = {
-        (r["scenario"], r["jurisdiction"], r["taxpayer"], r["year"]): r for r in current["states"]
+    m = _index(
+        mine,
+        ("scenario", "jurisdiction", "year"),
+        {(s, j, y) for s in scenarios for j in jurisdictions for y in years},
+        "mine",
+    )
+    p = _index(
+        parent.rows, ("scenario", "year"), {(s, y) for s in scenarios for y in years}, "parent"
+    )
+    federal = _index(
+        current["federal"],
+        ("scenario", "taxpayer", "year"),
+        {(s, e, y) for s in scenarios for e in ("PS", "ARU", "BST") for y in years},
+        "federal",
+    )
+    state_scope = {
+        (s, j, e, y) for s in scenarios for j in ("CA", "IL", "WV") for e in members for y in years
     }
-    factor = {
-        (r["scenario"], r["jurisdiction"], r["member"], r["year"]): D(r["member_factor"])
-        for r in factors
+    states = _index(
+        current["states"], ("scenario", "jurisdiction", "taxpayer", "year"), state_scope, "state"
+    )
+    factor_rows = _index(
+        factors,
+        ("scenario", "jurisdiction", "member", "year"),
+        state_scope | {(s, "PA", "SHI", y) for s in scenarios for y in years},
+        "factor",
+    )
+    factor = {key: D(row["member_factor"]) for key, row in factor_rows.items()}
+    if any(not value.is_finite() or not 0 <= value <= 1 for value in factor.values()):
+        raise ValueError("Invalid deferred-tax member factor")
+    expected_assets = {
+        (s, e, j, y)
+        for s in scenarios
+        for e in ("PS", "ARU", "BST")
+        for j in jurisdictions
+        for y in years
     }
+    actual_assets = {key for key in assets["totals"] if 2026 <= key[3] <= 2031}
+    if actual_assets != expected_assets:
+        raise ValueError("Incomplete or unexpected deferred-tax asset basis population")
+    for key in expected_assets:
+        value = D(assets["totals"][key]["closing_tax_basis_usd"])
+        if not value.is_finite() or value < 0:
+            raise ValueError("Invalid deferred-tax closing asset basis")
     rows = []
     for scenario in ("base", "downside", "expansion"):
         parent_temporary = D(0)
