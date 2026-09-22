@@ -1,7 +1,8 @@
 # Current C05/C06 evidence and residual receipt
 
-Document ID: SH-C05-C06-RESIDUAL-20260915; version 1.2.0.
-Prepared September 15, 2026 UTC; PENDING_REPOSITORY_ACCEPTANCE.
+Document ID: SH-C05-C06-RESIDUAL-20260915; version 1.3.0.
+Updated September 22, 2026 UTC; PENDING_REPOSITORY_ACCEPTANCE.
+Event cutoff remains September14; later authorship does not make prospective event-time duties performed.
 Status incorporates administrative successor `bb660b20`, recovered FRA authority `146ee4ca`, state factors `d3f7b6b1` and conditional utility ROT `0534f761`.
 This is the current navigation successor to the README's historical residual table;
 it does not delete earlier gap findings or change their event-time truth.
@@ -38,6 +39,11 @@ it does not delete earlier gap findings or change their event-time truth.
   import/read/revoke/restore for six originals, six denials in each tested category,
   and equality of content/history tables. That receipt is a six-original rehearsal,
   not proof of importing the final complete edition.
+- The separate September22 neutral portal receipt at committed `8f9b8eab` records
+  36 passing software tests: preparer/reviewer separation, selected HTTP access,
+  retained workpapers and older-backup credential/session revocation recovery.
+  It is not a frozen-company-edition run. The separate one-row selected-review
+  adapter fixture is also not that final run; read its selection/export receipt.
 
 ## Current residuals by nature and affected claim
 
@@ -50,11 +56,11 @@ it does not delete earlier gap findings or change their event-time truth.
 | C05-R05 | Selected authority gap resolved | Original FRA2021/2023/2025 notices recovered with publisher/effective/archive dates and hashes. A 33-document Federal Register amendment screen reconciles 225.9/.11/.19 for all14 selected events; 2026September30 amendments remain future. | Retain rail_authority_review.json and snapshots; broader railway duties and full monthly filing populations remain outside this selected conclusion. |
 | C05-R06 | Declared scope exclusion | Four workplace exams cover two places/two shifts on Aug31, not every August mine workplace/day. 204 selected permit occurrences do not claim every possible instrument condition or historical period. | Expand only if the edition claims those additional populations; otherwise retain explicit selected scope. |
 | C05-R07 | Future duty and selected plan scope | 702 enrollment/waiver records (612 covered, 90 waived) and 1,404 selected notice deliveries are supplied. Covered leaver continuation election notice due September22 remains future. Full SPD/SBC, annual plan filing and insurer clinical performance are outside selected administrative claim. | Benefits administrator performs due notice; reconcile any later claim expansion to the exact insured plan and participant population. |
-| C05-R08 | Active finance integration | State member receipt factors and conditional2027–2031 utility ROT are implemented in enterprise/closeout; statutory subsidiary taxable bases, member NOLs, IL/WV filing calendars and final current/deferred/cash bridges require finance's integrated successor. Utility receipt-to-ST1 timing/accelerated lookback, separate trader resale scope and July employer-levy deposit state must remain explicit. See SUBSIDIARY_TAX_PERIMETER_RESEARCH.md; the accrual provider does not establish payment. | Finance owns providers/calendars; the three owner choices are settled. No new broad approval is required for ordinary factual completion. |
+| C05-R08 | Final financial integration and bounded prior-history uncertainty | Tax calendar supplement, H2 and January–August2026 receipt-duty/penalty populations, statutory member factors and current/deferred providers are implemented. January–July2026 uses the permitted current-month installment method; complete preclosing prior-year returns are not available to prove whether the alternative method lowers exposure. Final after-tax journal/statement/export acceptance requires the current common-head build and independent reconciliation. | Finance/integration owns final source-total and posting-replay receipts. rot_receipts_2026.py and ROT_RECEIPTS_2026.md preserve the withdrawn zero-prior inference and corrected method; no principal or cash is reposted. |
 | C05-R09 | Reference framework scope | 1,660 preparation rows remain PENDING_LOCAL_REVIEW; 70/86 operational selections are documented reference scopes, not fresh professional framework-equivalence acceptance. | CCF/runtime owner reviews only the edition's represented boundaries. The completed 15 mappings are not still missing. |
 | C06-R01 | Software integration capability | CompanyStore is immutable and lacks class-based deletion/hold; its restore exercise therefore does not prove deletion/hold lifecycle enforcement. Reference fixture does exercise suppression/held access separately. | Runtime owner implements and exercises native lifecycle or keeps the end-to-end claim bounded. |
-| C06-R02 | Unexercised integration surfaces | HTTP search/snippets/counts/graphs/tools/exports and model-specific inference/prompt-injection evaluation are not established by direct store calls. | Runtime owner runs surface-specific tests with final company edition; deterministic reference authorization is separate evidence. |
-| C06-R03 | Final edition reproduction | Existing six-original pinned548cb5d store rehearsal and separate eight-original transport rehearsal cover bounded inputs, not the final expanded edition. Later module compatibility observations do not enlarge those performed populations. | Integration owner rebuilds accepted edition, independently imports it and records exact counts/hashes plus current restore/revocation receipt. |
+| C06-R02 | Remaining indirect-disclosure surfaces | The neutral36-test receipt exercises named HTTP authentication, source metadata, collection and future-evidence boundaries. It does not establish the complete search/snippet/citation/count/graph/tool/memory/export census or model inference/prompt-injection behavior. | Runtime owner tests each claimed surface with the final edition; retain named exercised endpoints separately from the unexercised census. |
+| C06-R03 | Final edition reproduction | Six-original import, eight-original transport, neutral36-test workflow and one-row selected-review fixtures are supplied, each with its own pin and scope. None is the final expanded frozen-edition import and selected material-record review. Engagement review/export occurs after the adapter backup checkpoint and is not covered by that earlier backup equality claim. | Integration owner runs the final full-edition import/restore and selected-record collection→preparation→independent review→export, retaining exact member selection, hashes and counts. |
 | C06-R04 | Genuine external deployment limit | Original readiness gates requiring ACTUAL_COLLECTED_EVIDENCE are unchanged. Local reference and isolated pinned-store execution do not establish a deployed Alexandria/Daedalus estate. | Runtime owner retains exact gate owners/evidence requirements; no real facility purchase or live deployment is necessary to validate the declared local scope. |
 | C09-R01 | Acceptance/integration | Source fix is tested on the closeout branch; active dirty portal was not modified. | Integration owner records accepted revision and runtime owner adopts/tests any live successor. No production breach asserted. |
 
@@ -82,3 +88,16 @@ They are newly authored retrospective synthetic records. The original 204-row
 review retains historical states and joins these dated successors. It is not
 rewritten as though evidence had existed before its authorship. Missing badge and
 MW17 response states remain visible.
+
+## September22 runtime evidence distinctions
+
+The reference receipt `docs/internal/company-closeout/REFERENCE_RESTORE_RECEIPT.json`
+exercises its own older-snapshot hold/deletion suppression fixture.
+`docs/internal/company-closeout/evidence/portal-neutral-2026-09-22/receipt.json`
+records the separate36-test portal workflow/recovery run.
+`docs/internal/company-closeout/PORTAL_SELECTED_REVIEW.md` and its linked fixture
+receipt delimit the one-row engagement adapter exercise. Native company-record
+hold/disposal reconciliation remains unimplemented in the inspected portal
+recovery path; neither personal-view history nor credential revocation fills it.
+The thirteen external readiness gates remain unchanged. C09 is a tested bounded
+reference authorization correction, not evidence of a deployed production fix.
