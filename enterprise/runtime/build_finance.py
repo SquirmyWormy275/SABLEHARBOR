@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import json
 import subprocess
+from datetime import datetime, timezone
 from decimal import Decimal as D
 from enterprise.operations.model import OperatingModel
 from enterprise.operations.build import enterprise_policy
@@ -155,8 +156,14 @@ def build(allow_working_tree=False, *, company_closeout=False):
         adjustment.historical_rot = HistoricalRot()
         from enterprise.closeout.software_sales_tax import SoftwareTax
         adjustment.software_tax=SoftwareTax(operating)
+        recorded_at = datetime.fromisoformat(subprocess.check_output(
+            ["git", "show", "-s", "--format=%cI", revision], cwd=ROOT, text=True
+        ).strip()).astimezone(timezone.utc)
+        available_day = max("2026-09-15", recorded_at.date().isoformat())
         policy.update(model_id="SH-COMPANY-CLOSEOUT-V1", schema_version="6.0.0",
-                      knowledge_cutoff="2026-09-15", created_on="2026-09-15")
+                      knowledge_cutoff=available_day, created_on=available_day)
+        policy["source_recorded_at"] = recorded_at.isoformat()
+        policy["effective_period_boundary"] = "Completed August 2026 and separately dated September events; conditional future scenarios remain distinct"
         policy["canonical_sources"] += ["enterprise/closeout/source/adjustments.json"]
         policy["legacy_adapter"]["calibration_boundary"] = "Preserved legacy calibration; dated successor removes $30M unsupported Core goodwill against initialization equity. ARU allocation remains separate."
         policy["core"]["tax_boundary"] = "Owner adopted corporate-from-formation history; parent provision follows separately versioned closeout tax workpapers; historical sources retain omission disclosures."
@@ -173,6 +180,9 @@ def build(allow_working_tree=False, *, company_closeout=False):
         fin, successor, tax, statutory_workpapers = statutory_build(
             output, fin, op, legacy, operating, policy, adjustment
         )
+        from enterprise.closeout.capital_export import export as capital_export
+        capital_receipt = capital_export(output, successor)
+        (output / "capital_export_receipt.json").write_text(json.dumps(capital_receipt, indent=2) + "\n")
         (output / "retention_employer_tax.json").write_text(json.dumps(adjustment.retention_tax.receipt(), indent=2) + "\n")
         enterprise.write_csv(output / "rwh_book_carrying.csv", adjustment.rwh_book.rows)
         enterprise.write_csv(output / "rwh_historical_tax.csv", adjustment.rwh_book.history["rows"])
