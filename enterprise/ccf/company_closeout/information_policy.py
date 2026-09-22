@@ -30,6 +30,8 @@ def _text(value):
 
 
 def validate_record(row):
+    if not isinstance(row, dict):
+        raise ValueError('Record object required')
     classes = {r['class_id']: r for r in policy()['record_classes']}
     for key in ('record_id', 'tenant', 'class_id', 'owner_id', 'source_version', 'source_sha256', 'available_at', 'effective_at'):
         if not _text(row.get(key)):
@@ -46,18 +48,58 @@ def validate_record(row):
         instant(row['review_due'])
     if row['class_id'] == 'PERSONAL_MEMORY' and not _text(row.get('memory_owner')):
         raise ValueError('Memory owner required')
-    if not isinstance(row.get('purposes'), list) or not row['purposes']:
+    if not isinstance(row.get('purposes'), list) or not row['purposes'] or not all(_text(p) for p in row['purposes']):
         raise ValueError('Purpose population required')
+    if len(row['purposes']) != len(set(row['purposes'])):
+        raise ValueError('Duplicate purpose')
+    sources = row.get('sources', [])
+    if not isinstance(sources, list) or not all(_text(k) for k in sources):
+        raise ValueError('Source list required')
+    if len(sources) != len(set(sources)):
+        raise ValueError('Duplicate source')
+    for flag in ('deleted', 'restore_suppressed', 'legal_hold', 'immutable_release'):
+        if flag in row and type(row[flag]) is not bool:
+            raise ValueError('Boolean lifecycle flag required')
+    grants = row.get('grants', [])
+    if not isinstance(grants, list):
+        raise ValueError('Grant list required')
+    for grant in grants:
+        if not isinstance(grant, dict) or not all(_text(grant.get(k)) for k in ('subject_id', 'purpose', 'start')):
+            raise ValueError('Malformed grant')
+        actions = grant.get('actions')
+        if not isinstance(actions, list) or not actions or not all(_text(a) for a in actions):
+            raise ValueError('Explicit action list required')
+        if len(actions) != len(set(actions)) or not set(actions) <= DISCLOSURES | {'existence', 'search', 'memory'}:
+            raise ValueError('Invalid grant actions')
+        if grant['purpose'] not in row['purposes']:
+            raise ValueError('Grant purpose outside record scope')
+        start = instant(grant['start'])
+        if grant.get('end') is not None and instant(grant['end']) <= start:
+            raise ValueError('Invalid grant interval')
+        if 'revoked' in grant and type(grant['revoked']) is not bool:
+            raise ValueError('Boolean grant revocation required')
     return row
 
 
 def decide(records, record_id, subject, action, now, *, revoked_ids=(), tombstones=()):
     """All user-visible surfaces share the same transitive-source decision; no counts leak."""
-    at = instant(now)
+    if not isinstance(records, dict) or not isinstance(subject, dict) or not _text(record_id) or not _text(action):
+        return 'DENY'
+    if not all(_text(subject.get(k)) for k in ('id', 'tenant', 'purpose')):
+        return 'DENY'
+    try:
+        at = instant(now)
+    except (ValueError, TypeError, AttributeError):
+        return 'DENY'
     if action in FORBIDDEN or action not in DISCLOSURES | {'existence', 'search', 'memory'}:
         return 'DENY'
     if not _text(subject.get('id')) or not _text(subject.get('tenant')) or subject.get('revoked'):
         return 'DENY'
+    if 'revoked' in subject and type(subject['revoked']) is not bool:
+        return 'DENY'
+    for population in (revoked_ids, tombstones):
+        if not isinstance(population, (list, tuple, set, frozenset)) or not all(_text(k) for k in population):
+            return 'DENY'
     if subject['id'] in revoked_ids:
         return 'DENY'
     visiting = set()
@@ -86,7 +128,11 @@ def decide(records, record_id, subject, action, now, *, revoked_ids=(), tombston
         permitted = all(allowed(parent) for parent in row.get('sources', []))
         visiting.remove(key)
         return permitted
-    if not allowed(record_id):
+    try:
+        permitted = allowed(record_id)
+    except (ValueError, TypeError, KeyError, AttributeError):
+        return 'DENY'
+    if not permitted:
         return 'DENY'
     return 'EXISTS_RESTRICTED' if action == 'existence' else 'ALLOW'
 

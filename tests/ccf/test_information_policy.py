@@ -141,3 +141,53 @@ def test_prompt_payload_cannot_change_policy_or_promote_memory():
     records['r']['grants'] = []
     for action in ['read', 'answer', 'tool_result', 'count', 'promote']:
         assert decide(records, 'r', dict(subject(), id='CEO'), action, NOW) == 'DENY'
+
+
+@pytest.mark.parametrize('value', [None, '', ' ', 1, True, [], {}, ['inspection']])
+def test_missing_or_wrong_type_subject_purpose_denied_even_for_public_record(value):
+    records = {'r': row(kind='PUBLIC_WORKING_COPY')}
+    caller = subject()
+    caller['purpose'] = value
+    assert decide(records, 'r', caller, 'read', NOW) == 'DENY'
+    caller.pop('purpose')
+    assert decide(records, 'r', caller, 'read', NOW) == 'DENY'
+
+
+@pytest.mark.parametrize('value', [None, '', 'inspection', [], [None], [''], [' '], [1], [True], [{}], [['inspection']], ['inspection', 'inspection']])
+def test_invalid_record_purpose_population_never_authorizes(value):
+    records = {'r': row(kind='PUBLIC_WORKING_COPY')}
+    records['r']['purposes'] = value
+    assert decide(records, 'r', subject(), 'read', NOW) == 'DENY'
+    records['r'].pop('purposes')
+    assert decide(records, 'r', subject(), 'read', NOW) == 'DENY'
+
+
+@pytest.mark.parametrize('actions', ['thread', 'read', {'read': True}, [], [None], ['read', 'read'], ['promote']])
+def test_action_substring_or_malformed_grant_list_cannot_authorize(actions):
+    records = {'r': row()}
+    records['r']['grants'][0]['actions'] = actions
+    assert decide(records, 'r', subject(), 'read', NOW) == 'DENY'
+
+
+@pytest.mark.parametrize('field,value', [('sources', ''), ('sources', {}), ('sources', [None]), ('grants', {}), ('grants', 'read'), ('deleted', 0), ('restore_suppressed', None)])
+def test_malformed_metadata_fails_closed(field, value):
+    records = {'r': row(kind='PUBLIC_WORKING_COPY')}
+    records['r'][field] = value
+    assert decide(records, 'r', subject(), 'read', NOW) == 'DENY'
+
+
+@pytest.mark.parametrize('value', [None, '', 'person', 0, [None], {}])
+def test_invalid_revocation_checkpoint_population_denied(value):
+    records = {'r': row()}
+    assert decide(records, 'r', subject(), 'read', NOW, revoked_ids=value) == 'DENY'
+    assert decide(records, 'r', subject(), 'read', NOW, tombstones=value) == 'DENY'
+
+
+def test_malformed_outer_inputs_and_timestamp_denied_valid_access_preserved():
+    records = {'r': row()}
+    assert decide(records, 'r', subject(), 'read', NOW) == 'ALLOW'
+    for bad in [None, [], 'subject', 1]:
+        assert decide(records, 'r', bad, 'read', NOW) == 'DENY'
+        assert decide(bad, 'r', subject(), 'read', NOW) == 'DENY'
+    for bad in [None, [], 1, '2026-09-22T18:00:00', 'not a date']:
+        assert decide(records, 'r', subject(), 'read', bad) == 'DENY'
