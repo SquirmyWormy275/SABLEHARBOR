@@ -1,44 +1,38 @@
-# Adopted parent corporate-tax history and provision
+# Adopted corporate history and statutory provision successor
 
-**Document ID:** SH-COMPANY-PARENT-TAX-2026-09-15
-**Version:** 1.0.0
-**Prepared:** September 15, 2026 UTC
-**Status:** Reviewable implementation; repository acceptance follows the company release process.
+**Document ID:** SH-COMPANY-PARENT-TAX-2026-09-15  
+**Version:** 2.0.0  
+**Current workpaper authored:** September 22, 2026 UTC  
+**Acceptance:** Pending repository acceptance of the company edition.
 
-## Adopted history and legal identity
+## Controlling direction and scope
 
-The owner adopted corporate-from-formation history for **Sable Harbor, LLC**, retaining its Delaware LLC identity. The source supplies formation at year precision in 2016. The successor expressly authors April 12, 2016 formation/election effectiveness, April 14 preparation, April 18 modeled Form 8832 submission and May 20 modeled acknowledgement. These are synthetic history, not recovered documents or real IRS actions. No federal consolidated-return election or legal conversion is inferred.
+The owner adopted corporate taxation of the existing Delaware Sable Harbor, LLC and subsequently adopted a newly authored corporate-from-formation history. Legal identity, headquarters and ownership chain remain intact. The dated decision is `docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md`; formation/election precision is `source/parent_tax.json`. Formation/effective date April12,2016, preparation April14, modeled submission April18 and acknowledgment May20 are expressly authored fictional events, not recovered IRS records or real filings.
 
-The election and period distinctions are recorded in `enterprise/closeout/source/parent_tax.json` and the central company-closeout decision. The generated filing register distinguishes preparation, submission, acknowledgement and future duties. Subsidiaries retain their own legal identities and conditional acquisition-election states.
+The current computation contract is `source/statutory_policy.json`. It supersedes the earlier separate-parent California reserve and aggregate deferred-liability realization simplifications in `source/parent_tax.json`, retaining that source's adopted history. Earlier memoranda remain in Git history; frozen financial releases retain their omission disclosures.
 
-## Historical reconstruction and opening bridge
+The edition uses the dated management-accrual basis in `ACCOUNTING_BASIS_SUCCESSOR.md`. It does not claim GAAP compliance or an audit opinion. The 2026 monthly income-tax provision uses an estimated annual statutory rate and annual source assumptions; conditional later-month inputs remain conditional. Accounting date is distinct from evidence availability.
 
-`HISTORICAL_TAX_RECONSTRUCTION.md`, `historical_tax.py` and the generated annual/event schedules reconstruct 2016–2022 revenue, specified cost components, the existing 2021/2022 financing, the existing debt draw and equipment purchase. Solved cash constraints are labeled separately from recovered facts and newly authored events. A cash-use residual is not automatically a tax loss.
+## Historical and acquisition bridges
 
-The reconstructed 2016–2025 federal/state tax cash is **$1,037,879.0800**. One opening 2026 journal corrects historical cash and retained earnings by that amount. The reconstructed federal NOL entering 2026 is **$200,846,857.1429**, including the separately supported 2023–2025 cash-cost losses, tax depreciation, 2022 research-pool amortization and $2,400 paid California minimum-tax deduction. Historical returns/payment events are synthetic, with their evidence states retained.
+`historical_tax.py`, `tax_assets.py` and `rwh_history.py` reconstruct labeled fictional annual activity, asset cohorts, cash and tax adjustments. Parent historical tax cash is1,037,879.08; supported opening federal NOL is200,846,857.1429 before subsequent current-period changes. The2022 domestic research cohort remains on its adopted amortization schedule. Original initialization is distinguished from historical contributions and accumulated operating results.
 
-The 2022 domestic research pool is $40 million: $4 million amortization in 2022, $8 million annually in 2023–2026, and $4 million in 2027. The model continues the existing amortization schedule; it does not claim an acceleration election. Current domestic research follows section 174A; no foreign research expenditure is authored. The remaining opening research basis is $12 million.
+Core goodwill is reduced by exactly30,000,000 against initialization equity, with no cash, deduction or replacement asset. The separate9,000,000 equipment cohort's book depreciation correction follows its authored2023 service date. Neither correction changes ARU's original14,762,500 book goodwill or13,000,000 tax-goodwill allocation.
 
-## Assets, goodwill and deferred tax
+The separate900,000 existing ARU facilitative transaction expense is capitalized for the conditional338 tax architecture. `acquisition_tax_costs.py` preserves original68,000,000 AGUB and55,000,000 non-goodwill allocation, adds900,000 residualClassVII basis and60,000 annual amortization. It does not add book goodwill or cash. The no-election alternative remains stock-basis treatment in the acquisition source memorandum. Original acquired587,500 DTA remains discoverable in the native PPA; subsequent valuation replacement affects expense, not historical opening equity.
 
-`parent_tax_assets.csv` contains source-derived equipment cohorts, separate federal/California deductions and closing bases. The original $9 million equipment cohort is newly assigned a January 2023 service date and seven-year life. Its omitted book depreciation is corrected separately: opening accumulated depreciation **$3,857,142.8571**, followed by monthly depreciation through 2029. This correction is noncash and does not duplicate payroll or production cash costs.
+## Filing populations and tax calculation
 
-The **$30 million unsupported Core goodwill correction** is a separate source-initialization equity correction with no inferred tax basis, deduction or deferred tax. ARU's distinct initial $14,762,500 book goodwill, $13 million conditional tax goodwill and acquisition reserve DTA remain protected; subsidiary statutory remeasurement requires its own bridge.
+Five federal taxpayers are separate: SHI, SHIH, PS including disregarded RWH, ARU and BST. Financial consolidation does not establish a federal consolidated return. The adopted state unitary matrix supports CA/IL/WV combined reporting with member-specific factors and losses. PA's selected SHI receipt factor is zero; this does not remove Pennsylvania employment obligations.
 
-Gross deferred assets, liabilities and valuation allowances remain visible. The parent recognizes NOL realization only to the extent supported by same-jurisdiction asset-liability reversals and applicable utilization limits. Unsupported future profitability does not justify recognizing a benefit. The historical research pool, disallowed interest and unremitted transaction taxes have separately tracked temporary differences.
+`statutory_current.py` composes72 industrial/holding federal annual rows and270 member-state rows, alongside18 parent federal rows. `state_apportionment.py` supplies288 factor records. Source-specific cost recovery, research, interest limitation, acquisition timing, inventory absorption, depletion, unpaid transaction tax and conditional retention awards are reconciled before losses are used. CA suspension and Illinois year-specific loss limits are applied to their proper populations.
 
-## Current implemented computation and remaining state perimeter
+`statutory_deferred.py` provides360 current annual gross-DTA/DTL/valuation rows and15 historical opening rows. All gross DTAs have a full valuation allowance. Gross DTLs remain recognized; a closing DTL stock is not represented as a demonstrated year-by-year net reversal schedule. ARO, inventory and other competing deductions cannot silently support multiple benefits. Federal benefit of future state-tax differences is not claimed without a supporting realization schedule.
 
-`parent_tax.py` computes separate-parent federal tax at 21%, post-2017 NOL utilization at 80%, and section 163(j) interest limitation using depreciation **and research amortization** addbacks to adjusted taxable income. It reverses book-only shared-service allocations and separately bridges allowances, inventory impairment, depreciation and research deductions.
+## Payment and publication contract
 
-Unpaid FF003 and software transaction-tax liabilities are added back until payment, consistent with the modeled economic-performance method. No recurring-item exception is asserted. Payment reverses the temporary difference; customer principal and seller tax remain separate. The FF003 payable remains $152,250 with no inferred remittance.
+`statutory_posting.py` reverses native planning tax representations once and posts the statutory successor. Existing2026 industrial cash remains paid cash, with separate taxpayer prepayment assets where appropriate; no refund is invented. Each jurisdiction's credit applies only to that jurisdiction and taxpayer. Actual modeled state-tax cash feeds federal deductions; an unpaid provision is not a payment.
 
-The current California calculation is explicitly a **separate-parent reserve workpaper**, not an adopted all-company combined return. It models the parent $800 minimum and separately identifies exposure above that amount. It does not establish that SHI historical NOLs can offset another member's income. CA/IL/WV unitary perimeter, member-specific NOLs, relevant PA sourcing and subsidiary statutory provisions require the separately researched company-state successor. Until that composition is implemented and reconciled, the edition cannot claim a complete company-wide statutory provision.
+`statutory_build.py` reuses the native forecast's finite payment/funding engine, iterating annual current tax, monthly requests and settled-tax deductions to the whole-dollar cash boundary. Failure to converge blocks publication. Requests, payments, arrears, gross prepayments and liabilities remain separate. The resulting source workpapers, iteration receipt and payment allocations are emitted under `enterprise/generated/company-closeout-v1/statutory_*` by the same build as statements and seven-unit exports.
 
-The generated `parent_tax_provision.csv` is the numerical authority for the selected source revision. At the clean September successor revision `93a8e6b9`, base federal current tax is zero for 2026–2029, $143,319.3120 for 2030 and $74,862.1860 for 2031; later accepted state/entity changes may alter these figures. Scheduled cash is an authored conditional plan, not evidence of real payment. No fixed member-funding total or sovereignty attainment date is enforced.
-
-## Reproduction and authority
-
-Run the supported company-closeout finance builder from a clean Git checkout. It rebuilds source adjustments, legal books, statements, provision/history/asset schedules and existing-schema exports. `tests/closeout` covers the adopted history, duplicate provisions, equipment basis, unpaid-tax timing, goodwill, FF003 and transaction-tax composition. The release manifest records the exact commit, source hashes and acceptance boundary.
-
-Primary provisions and dated references are retained in the source tax files and historical workpaper, including IRS Form 8832/1120/8990/4562 guidance, section 174/174A transition guidance and period-specific FTB instructions. The controls `SUBSIDIARY_TAX_PERIMETER_RESEARCH.md` supplies the additional state/entity authority contract. Earlier memorandum versions are preserved in Git history; their former $7,200 estimate and missing-history descriptions are superseded by the reconstruction above.
+Final accepted amounts must be read from the clean edition's generated workpapers and identity manifest. This memorandum does not promote an intermediate build, submitted-return state or future cash assumption into accepted history.

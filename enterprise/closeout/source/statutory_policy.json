@@ -1,0 +1,20 @@
+{
+  "record_id": "SH-STATUTORY-POLICY-20260922",
+  "authored_on": "2026-09-22",
+  "acceptance_state": "PENDING_REPOSITORY_ACCEPTANCE",
+  "basis": "SYNTHETIC_MANAGEMENT_ACCRUAL_NOT_GAAP_AUDIT_OPINION",
+  "scope": "2026 monthly management estimates and conditional2027–2031 scenarios; source availability remains later than historical accounting periods",
+  "supersedes": {
+    "enterprise/closeout/source/parent_tax.json": "Retains adopted formation/election/history and federal assumptions. Replaces separate-parent California reserve/payment simplification and aggregate-DTL-stock realization policy with this unitary statutory successor; no retroactive source-byte rewrite.",
+    "industrial/source/finance.json": "Retains acquisition terms, original PPA and historical source entries. Replaces planning income-tax rate outputs only within the separately versioned company-closeout successor."
+  },
+  "federal_returns": ["SHI", "SHIH", "PS_WITH_RWH_DISREGARDED", "ARU", "BST"],
+  "federal_consolidation_election": "NONE_AUTHORED",
+  "combined_state_members": ["SHI", "SHIH", "PS_WITH_RWH_DISREGARDED", "ARU", "BST"],
+  "state_perimeters": "CA/IL/WV factual unitary source and member-specific apportionment/NOL; PA SHI destination factor0, employment obligations separate",
+  "valuation": "All gross deferred tax assets fully reserved; gross deferred liabilities retained. No reliance on aggregate closing DTL stock or future profits as demonstrated net reversal capacity.",
+  "acquisition": "Original ARU14,762,500 book goodwill and13,000,000 tax goodwill remain separately identifiable. Existing900,000 facilitative expense adds separate conditional338 ClassVII tax basis, not a book asset or new cash. Original587,500 acquired DTA remains source history; subsequent valuation replacement runs through expense.",
+  "interim": "Annual estimated statutory provision allocated across12months with December residual; interim figures depend on explicitly conditional annual assumptions and are not filed-return amounts or actual future evidence.",
+  "cash": "2026 existing industrial payments retained as taxpayer/jurisdiction prepayments; no automatic refund. Future statutory installment requests use native finite funding and settlement, separately from accrual. State income-tax deduction follows modeled settled cash.",
+  "prohibited_netting": "No cross-taxpayer or cross-jurisdiction prepayment netting; no unpaid-tax cash saving presented as internal funding; no tax basis inferred from30M Core goodwill correction."
+}
