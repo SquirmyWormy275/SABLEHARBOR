@@ -4,9 +4,9 @@ shapely==2.1.2
 pyproj==3.7.2
 matplotlib==3.10.8
 numpy==2.3.5
-pypdf==6.10.0
+pypdf==6.16.1
 Pillow==12.3.0
-pytest==8.4.2
+pytest==9.0.3
 scipy==1.17.0
 rasterio==1.4.3
 jsonschema==4.26.0

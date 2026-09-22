@@ -1,0 +1,55 @@
+name: Dependency advisory audit
+on:
+  pull_request:
+    paths:
+      - pyproject.toml
+      - uv.lock
+      - '**/*requirements*.txt'
+      - .github/workflows/dependency-audit.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4, repository pin
+      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1, repository pin
+        with:
+          version: '0.12.4'
+      - run: uv sync --frozen --all-extras
+      - name: Audit installed third-party dependencies
+        run: |
+          audit_site="$(uv run python -c 'import sysconfig; print(sysconfig.get_path("purelib"))')"
+          uvx --from pip-audit==2.9.0 pip-audit --path "$audit_site" --skip-editable --progress-spinner off --format json --output dependency-audit.json
+      - name: Audit standalone tool requirements
+        if: always()
+        run: |
+          mkdir -p requirements-audits
+          audit_status=0
+          for requirements in \
+            tools/documents/requirements.txt \
+            tools/legal_gaps/requirements.txt \
+            tools/reader/requirements.txt \
+            tools/organization/requirements.txt \
+            geospatial/requirements.txt \
+            docs/legal/full-text/requirements.txt \
+            tools/wiki/requirements.txt \
+            tools/wiki/visual/requirements.txt \
+            tools/legal_gaps/requirements-review.txt \
+            tools/documents/reader-preview-requirements.txt
+          do
+            audit_name="${requirements//\//_}"
+            printf '%s\n' "$requirements" > "requirements-audits/$audit_name.source.txt"
+            uvx --from pip-audit==2.9.0 pip-audit -r "$requirements" --progress-spinner off --format json --output "requirements-audits/$audit_name.json" || audit_status=1
+          done
+          exit "$audit_status"
+      - name: Retain advisory results, including failures
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # repository pin
+        with:
+          name: dependency-advisory-audit
+          path: |
+            dependency-audit.json
+            requirements-audits/
+          if-no-files-found: error

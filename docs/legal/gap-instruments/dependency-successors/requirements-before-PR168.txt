@@ -1,6 +1,6 @@
-PyMuPDF==1.26.7
+PyMuPDF==1.26.6
 playwright==1.62.0
 markdown-it-py==4.2.0
 openpyxl==3.1.5
-pytest==9.0.3
+pytest==8.4.2
 Pillow==12.3.0
