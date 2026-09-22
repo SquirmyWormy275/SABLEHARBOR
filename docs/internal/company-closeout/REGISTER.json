@@ -264,6 +264,10 @@
         {
           "scope": "Clean f5e919e7 financial/completed/September builds and independent reperformance",
           "result": "PASS; 1,024,896 exported rows; 124,350 journal lines; 54,022 entries. Later source changes require final common-head reproduction."
+        },
+        {
+          "scope": "de542b83 statutory build after parent state-cash deduction correction",
+          "result": "PASS; five bounded iterations; final accepted revision requires regeneration."
         }
       ],
       "reconciliation_totals": {
@@ -372,17 +376,25 @@
         "docs/internal/company-closeout/evidence/portal-neutral-2026-09-22/receipt.json",
         "docs/internal/company-closeout/PORTAL_SELECTED_REVIEW.md",
         "docs/internal/company-closeout/evidence/integration-f5e919e7/receipt.json",
-        "docs/releases/COMPANY_EDITION_RELEASES.md"
+        "docs/releases/COMPANY_EDITION_RELEASES.md",
+        "docs/internal/company-closeout/evidence/portal-edition-f5e919e7/RECEIPT.json"
       ],
       "commands_results": [
         {
           "scope": "Intermediate clean f5e919e7; later changes require final-head checks",
           "command": ".venv/bin/python -m pytest -q",
           "result": "749 passed, 3 skipped; 752 collected"
+        },
+        {
+          "scope": "Full candidate edition at f5e919e7, pinned portal8f9b8eab, isolated actual software exercise",
+          "result": "PASS:5689 original files reassembled;5746 transport records each deny ungranted,future,revoked and restored-revoked access; backup history equality; seven material originals collected/prepared/reviewed/exported with self-review denied. Final accepted edition receipt remains separate."
         }
       ],
       "reconciliation_totals": {
-        "pinned_portal_neutral_tests_passed": 36
+        "pinned_portal_neutral_tests_passed": 36,
+        "candidate_original_files": 5689,
+        "candidate_transport_records": 5746,
+        "selected_material_review_originals": 7
       },
       "limitations": [
         "Synthetic authored/reconstructed evidence; no actual external filing, bank confirmation or professional opinion. Final accepted-revision validation and delivery are evidenced by the indexed Release receipt.",
@@ -562,16 +574,25 @@
         "enterprise/operations/reperform_closeout.py",
         "docs/internal/company-closeout/validation/README.md",
         "docs/internal/company-closeout/evidence/integration-f5e919e7/receipt.json",
-        "docs/releases/COMPANY_EDITION_RELEASES.md"
+        "docs/releases/COMPANY_EDITION_RELEASES.md",
+        "docs/internal/company-closeout/evidence/portal-edition-f5e919e7/RECEIPT.json"
       ],
       "commands_results": [
         {
           "scope": "Intermediate clean f5e919e7; later changes require final-head checks",
           "command": ".venv/bin/python -m pytest -q",
           "result": "749 passed, 3 skipped; 752 collected"
+        },
+        {
+          "scope": "Full candidate edition at f5e919e7, pinned portal8f9b8eab, isolated actual software exercise",
+          "result": "PASS:5689 original files reassembled;5746 transport records each deny ungranted,future,revoked and restored-revoked access; backup history equality; seven material originals collected/prepared/reviewed/exported with self-review denied. Final accepted edition receipt remains separate."
         }
       ],
-      "reconciliation_totals": {},
+      "reconciliation_totals": {
+        "candidate_original_files": 5689,
+        "candidate_transport_records": 5746,
+        "selected_material_review_originals": 7
+      },
       "limitations": [
         "Synthetic authored/reconstructed evidence; no actual external filing, bank confirmation or professional opinion. Final accepted-revision validation and delivery are evidenced by the indexed Release receipt.",
         "Edition supports declared inspection routes; unresolved native portal lifecycle and full indirect-disclosure coverage prevent a complete end-to-end IT readiness claim."
@@ -732,7 +753,8 @@
       ],
       "attempts": [
         "Active portal owner/worktree confirmed; source compatibility checked; six-original and eight-original transport rehearsals plus reference restore completed without live worktree edits.",
-        "36 neutral portal tests passed at pinned 8f9b8eab, including distinct preparer/reviewer and credential/session recovery; public receipt retained."
+        "36 neutral portal tests passed at pinned 8f9b8eab, including distinct preparer/reviewer and credential/session recovery; public receipt retained.",
+        "Full f5e919e7 candidate edition imported/reassembled/restored with seven material-source review/export paths passing; this does not implement missing native hold/disposal."
       ],
       "impact": "Direct store or reference success cannot certify unexercised HTTP/search/count/export/model surfaces or native hold/deletion.",
       "bounded_alternatives": [
@@ -838,7 +860,7 @@
     },
     {
       "path": "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md",
-      "sha256": "e866a004a9796c8ab0074a082c64fc6c0aefe6a19f0f21545fe0f476d1ea6198",
+      "sha256": "e16949da85e3a13ee709a3c3b26c4ac7396f3cb60d519aa848f3cc53450f8673",
       "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
     },
     {

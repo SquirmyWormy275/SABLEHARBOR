@@ -1,8 +1,8 @@
 # Adopted corporate history and statutory provision successor
 
-**Document ID:** SH-COMPANY-PARENT-TAX-2026-09-15  
-**Version:** 2.0.0  
-**Current workpaper authored:** September 22, 2026 UTC  
+**Document ID:** SH-COMPANY-PARENT-TAX-2026-09-15
+**Version:** 2.0.0
+**Current workpaper authored:** September 22, 2026 UTC
 **Acceptance:** Pending repository acceptance of the company edition.
 
 ## Controlling direction and scope

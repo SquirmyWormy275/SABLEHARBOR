@@ -1046,7 +1046,7 @@
       "source": "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md",
       "publication": "docs/finance/publications/SH-COMPANY-PARENT-TAX-20260915_v2.0.0.pdf",
       "sha256": "f2e0820fec778c0367e9089c050e76b706e88b8c557e76503d759537be5bbcc2",
-      "source_sha256": "e866a004a9796c8ab0074a082c64fc6c0aefe6a19f0f21545fe0f476d1ea6198",
+      "source_sha256": "e16949da85e3a13ee709a3c3b26c4ac7396f3cb60d519aa848f3cc53450f8673",
       "brand": "corporate",
       "normalizer": "qpdf"
     }

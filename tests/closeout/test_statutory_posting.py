@@ -89,7 +89,10 @@ def inputs():
         tax(s, e, "US", y) for s in scenarios for e in ("SHIH", "PS", "ARU", "BST") for y in years
     ]
     deferred = states + [
-        tax(s, e, "US", y) for s in scenarios for e in ("SHI", "SHIH", "PS", "ARU", "BST") for y in years
+        tax(s, e, "US", y)
+        for s in scenarios
+        for e in ("SHI", "SHIH", "PS", "ARU", "BST")
+        for y in years
     ]
     opening = [
         tax(s, e, j, 2026)

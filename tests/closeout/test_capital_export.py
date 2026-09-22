@@ -94,12 +94,15 @@ def test_historical_receipt_must_match_existing_reconstruction():
 def test_supplemental_csv_preserves_machine_readable_holder_rights(tmp_path, monkeypatch):
     import csv
     import json
+
     from enterprise.closeout import capital_export
 
     register = build_register()
-    monkeypatch.setattr(capital_export, "register_build", lambda journal: {
-        "register": register, "events": [], "holder_rollforward": []
-    })
+    monkeypatch.setattr(
+        capital_export,
+        "register_build",
+        lambda journal: {"register": register, "events": [], "holder_rollforward": []},
+    )
     capital_export.export(tmp_path, {"journal_rows": opening()})
     with (tmp_path / "capital_historical_contribution_holders.csv").open() as stream:
         rows = list(csv.DictReader(stream))
