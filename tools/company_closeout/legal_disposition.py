@@ -41,6 +41,13 @@ MATERIAL = {
 FUTURE_PACKAGES = {"colo", "tenure", "uranium-custody", "mark-clearance"}
 
 SCOPED_SUCCESSORS = {
+    "FIN-P01": (
+        "enterprise/closeout/source/capital_register.json",
+        "The explicitly authored five-holder register supplies the separate 2021 and 2022 "
+        "subscriptions, sole registered subscribers, units and $183 million historical "
+        "paid-in amounts. This supersedes missing subscriber/economic details only; "
+        "the general draft execution clauses and unlisted side letters are not adopted.",
+    ),
     "SH-LEGAL-DRAFT-ADVISORY-CONTRACTS-U01": (
         "enterprise/operations/source/current_legal_completion_2026_08.json",
         "The four current Advisory clients have newly authored legal names, "
@@ -168,10 +175,15 @@ def build(root=ROOT):
                 "its round's sole registered subscriber; this is not inferred from 'led'. "
                 "Exact 2021/2022 subscription economics and voluntary proportional paid-in "
                 "contributions without new units are approved for implementation. Historical "
-                "capital-account reconstruction and repository acceptance remain separate. "
+                "capital-account reconstruction is supplied by the dated register and founder "
+                "admission basis; repository acceptance remains separate. "
                 "No new preference or substantive designation threshold is adopted."
             )
-            paths += ["docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md"]
+            paths += [
+                "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+                "enterprise/closeout/source/capital_register.json",
+                "docs/internal/company-closeout/FOUNDER_ADMISSION_BASIS.md",
+            ]
         elif identity in SCOPED_SUCCESSORS:
             path, explanation = SCOPED_SUCCESSORS[identity]
             status = "SCOPED_AUTHORED_SUCCESSOR_REMAINDER_EXPLICIT"
@@ -227,7 +239,8 @@ def build(root=ROOT):
         "record_id": "SH-C04-LEGAL-DISPOSITION-2026-09-15",
         "schema_version": "1.0.0",
         "prepared_on": "2026-09-15",
-        "available_on": "2026-09-15",
+        "updated_on": "2026-09-22",
+        "available_on": "2026-09-22",
         "status": "RECONCILIATION_NOT_BLANKET_ADOPTION",
         "source_path": str(source.relative_to(root)),
         "source_sha256": sha(source.read_bytes()),
