@@ -89,9 +89,13 @@
     {
       "id": "SH-RES-ARTIFACT-ENGINEERING",
       "status": "PRESERVED_DECLARED_LIMIT",
-      "disposition": "Original affected claim, evidence and next owner remain in REGISTER.json.",
+      "disposition": "Exact-original artwork and engineering limits remain. The dated J2 successors complete ten current-office administrative episodes and 18 occupied Orientation admissions/standard commissions. Personal names for anonymous offices, biographies and broader earlier history remain distinct issue #19 claims. Frozen edition 1.0.0 does not contain these later successors.",
       "affected_claim": "Exact image identity, unperformed engineering and full appointment-history completion.",
-      "next_owner_action": "Existing issue owners retain their precise next actions."
+      "next_owner_action": "Existing issue owners retain their precise next actions.",
+      "evidence": [
+        "docs/internal/company-closeout/J2_ADMINISTRATIVE_HISTORY_2026-09-22.md",
+        "docs/internal/company-closeout/ORIENTATION_COMMISSIONS_2026-09-22.md"
+      ]
     },
     {
       "id": "SH-RES-ACCEPTANCE",
@@ -101,5 +105,10 @@
       "next_owner_action": "Maintain published evidence; future corrections require a separately versioned successor."
     }
   ],
-  "delivery_status": "IMPLEMENTATION_PENDING_REPOSITORY_ACCEPTANCE"
+  "delivery_status": "CONDITIONAL_ON_PR_169_MERGE",
+  "acceptance": {
+    "pr": "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/169",
+    "condition": "Merged following required validation; branch presence alone is not acceptance.",
+    "scope": "Administrative source reconciliations, bounded implementation/evidence and current-status navigation. Unselected capital, debt and host proposals remain OPEN; full runtime and distinct issue criteria remain open."
+  }
 }

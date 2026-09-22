@@ -1,6 +1,6 @@
 # Company closeout continuation — September 22, 2026
 
-**State:** OPEN; implementation pending repository acceptance. This dated successor updates work disposition; it grants no new corporate, creditor, host or information rights. Its [structured register](RESIDUAL_CLOSEOUT_2026-09-22.json) retains every original residual identifier and links the published evidence. The original [company register](REGISTER.json) and edition 1.0.0 remain historical source records with their original bytes.
+**State:** OPEN residuals. Administrative successor acceptance is conditional on the actual merge of [PR #169](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/169) after validation; the branch alone is not acceptance. This dated successor updates work disposition; it grants no new corporate, creditor, host or information rights. Its [structured register](RESIDUAL_CLOSEOUT_2026-09-22.json) retains every original residual identifier and links the published evidence. The original [company register](REGISTER.json) and edition 1.0.0 remain historical source records with their original bytes.
 
 ## Delivered baseline
 
@@ -26,6 +26,8 @@ Consequently, `SH-RES-ACCEPTANCE` is delivered for the declared scope and `SH-RE
 The [capital and debt decision packet](residual-finance-2026-09-22/README.md) completes the source arithmetic and states the remaining choices with quantified consequences. It does not reopen the adopted five-holder percentages or create new debt. Owner selection of new material rights remains pending.
 
 The [host proposal and administrative dispositions](host-residual-successor/README.md) reconcile the three escrow/holdback records totaling $6.5 million and preserve their unreleased conditions. Prospective duration, exit and common terms remain pending owner selection.
+
+[J2 administrative history](J2_ADMINISTRATIVE_HISTORY_2026-09-22.md) supplies ten explicitly authored current-office episodes for six accepted named leaders and four existing anonymous occupants. It preserves 181 occupied / 237 authorized billets and adds no employees, payroll or powers. The [Orientation successor](ORIENTATION_COMMISSIONS_2026-09-22.md) completes the 18 current occupants’ admissions and standard six-year commissions, with 19 selection attempts preserving one nonselection. Names, biographies and broader earlier history remain scoped separately.
 
 ## Additional exercised runtime scope
 
