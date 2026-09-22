@@ -29,3 +29,5 @@ Five tests independently check sales/collections/closingAR, duplicate/changed hi
 ## Dated timing correction
 
 Correction recorded2026-09-22T06:14:19Z (September21 LosAngeles): the original source usedJuly8 registration after an erroneousJuly7 mine closing. Accepted RWH closing isJuly18,2025; modeled account registration is corrected toJuly19 and July sales occur only on/afterJuly18. No sales, collections or tax totals change. This later correction is not earlier-available evidence.
+
+The later cash-scope bridge explicitly separates4M acquired receivables collected in H2 from8.6M post-close sales receipts. Together they match12.6M collections in the financial history; closing acquiredAR iszero and newAR is4M. The former collections do not create new sales or a second ROTexpense. Original seller tax performance and possible assumed/successor liabilities require the separate acquisition closing-tax scope; no paid-tax, waiver or indemnity conclusion is manufactured.

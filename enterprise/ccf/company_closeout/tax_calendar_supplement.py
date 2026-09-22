@@ -38,6 +38,9 @@ def history(source=None):
         raise ValueError("Missing/duplicate H2 period")
     if sum(D(r["sales_usd"]) for r in s["historical_months"]) != D("12600000") or sum(D(r["receipts_usd"]) for r in s["historical_months"]) != D("8600000"):
         raise ValueError("H2 source sales/receipts changed")
+    acquired = s["acquired_receivables"]
+    if sum(D(v) for v in acquired["monthly_allocation_usd"].values()) != D("4000000") or D(acquired["closing_acquired_ar_usd"]) != 0:
+        raise ValueError("Acquired receivable collection bridge changed")
     balances, rows = {c: D(0) for c in weights}, []
     for month in s["historical_months"]:
         allocations = {}
@@ -62,6 +65,8 @@ def history(source=None):
     accrual = sum(D(r["accrued_rot_usd"]) for r in rows if r["utility_own_use"])
     collected = sum(D(r["receipt_rot_usd"]) for r in rows if r["utility_own_use"])
     return rows, dict(sales_usd="12600000", receipts_usd="8600000", closing_ar_usd=str(sum(balances.values())),
+                      acquired_ar_collections_usd="4000000", total_h2_cash_collections_usd="12600000",
+                      acquired_ar_new_revenue_usd="0", acquired_ar_new_rot_expense_usd="0",
                       utility_accrued_rot_usd=str(accrual), utility_receipt_rot_usd=str(collected),
                       threshold_monthly_lower_bound_usd=str(collected / 12), accelerated_threshold_exceeded=collected / 12 >= D(20000),
                       trader_tax_state="NOT_AUTOMATICALLY_EXEMPT_SEPARATE_CERTIFICATE_OR_TAX_REVIEW", cash_posted_usd="0")

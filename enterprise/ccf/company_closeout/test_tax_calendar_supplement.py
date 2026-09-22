@@ -16,6 +16,8 @@ def test_history_source_totals():
     assert bridge['utility_accrued_rot_usd'] == '646624.38'
     assert bridge['utility_receipt_rot_usd'] == '441346.80'
     assert bridge['accelerated_threshold_exceeded']
+    assert bridge['total_h2_cash_collections_usd'] == '12600000'
+    assert bridge['acquired_ar_new_revenue_usd'] == '0'
     assert all(r['accrued_rot_usd'] is None for r in rows if not r['utility_own_use'])
 
 

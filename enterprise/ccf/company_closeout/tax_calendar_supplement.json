@@ -84,5 +84,24 @@
   "payroll_boundary": "People/finance retain federal/state payroll deposit liabilities/calendar; this source doesnot classify Julybonus levy as corporate incomeestimate.",
   "settlement_boundary": "No remittance or agency acceptance invented; pastdueunpaid taxes remainfailure. Treasury amount/payment journals must come from finance, not thiscalendar. No 2026 accepted invoice receiptdates changed.",
   "corrected_at": "2026-09-22T06:14:19Z",
-  "correction": "Correct post-acquisition account date fromJuly8 toJuly19; acceptedRWHclosingJuly18, distinctARUJanuary7. Originalauthorshipdate retained as history; correctionnotavailablebeforecorrected_at."
+  "correction": "Correct post-acquisition account date fromJuly8 toJuly19; acceptedRWHclosingJuly18, distinctARUJanuary7. Originalauthorshipdate retained as history; correctionnotavailablebeforecorrected_at.",
+  "acquired_receivables": {
+    "opening_acquired_ar_usd": "4000000",
+    "collections_usd": "4000000",
+    "closing_acquired_ar_usd": "0",
+    "collection_period": "2025-07-18/2025-12-31",
+    "monthly_allocation_usd": {
+      "7": "0",
+      "8": "1000000",
+      "9": "1000000",
+      "10": "1000000",
+      "11": "1000000",
+      "12": "0"
+    },
+    "cash_population": "Separate acquired-ARcollections4M plus postcloseretailreceipts8.6M equals financialH2cashcollections12.6M. Noadditional revenue.",
+    "tax_character": "Collectionofpurchasedreceivable isnot a newretailsale; originalseller retailtaxobligation remains tiedtooriginalsale. No newRWH ROTexpense merelybecausepurchasedARcollected.",
+    "liability_boundary": "No conclusionthat predecessorpaidtax or successorliability/assumedtaxliabilities areabsent. Definitiveclosingtaxallocation/clearance remainsacquisitionlegalreview; no indemnity/waiver authored.",
+    "origin": "NEWLY_AUTHORED_RECEIVABLE_COLLECTION_PRECISION_WITHIN_ACCEPTED4MACQUIREDAR",
+    "authored_at": "2026-09-22T06:14:19Z"
+  }
 }
