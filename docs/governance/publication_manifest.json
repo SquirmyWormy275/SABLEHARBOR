@@ -1021,7 +1021,7 @@
     {
       "source": "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
       "publication": "docs/governance/publications/SH-COMPANY-DIRECTIONS-20260915_v1.2.0.pdf",
-      "sha256": "8c73463a0a12e3315be592ed1e54e59715605411f272a58382b0288f9d6f3c28",
+      "sha256": "625e81b8f59e79c5573def36a87fa03d454574fd943c75d097828f899078125e",
       "source_sha256": "400190fc75b2e8ca001dedb9eb99773f677d9ed8462e1bd41ae56ac35aeb9a69",
       "brand": "corporate",
       "normalizer": "qpdf"
@@ -1029,24 +1029,24 @@
     {
       "source": "docs/internal/company-closeout/INSPECTION_GUIDE.md",
       "publication": "docs/finance/publications/SH-COMPANY-INSPECTION-20260915_v1.0.0.pdf",
-      "sha256": "9eecad5139e745b820fc9df22970c5a470b044e9ee966ac2dd866bfa72c1946c",
-      "source_sha256": "0752fe7ca44a3838bbdda0df3426bab1fb2d2df3f4a15e3bfe9ba31cc812ae3f",
+      "sha256": "9e0c2e83681b11e0f16480ecccb890ebe559173006b2959f812c03cdb75ba4e0",
+      "source_sha256": "a75b5c42461b6e520068b5f63ac7b7843f4b15101820a6f8481adcf5851d5a6c",
       "brand": "corporate",
       "normalizer": "qpdf"
     },
     {
       "source": "docs/finance/evidence/company-closeout/SOVEREIGNTY_METHOD.md",
       "publication": "docs/finance/publications/SH-COMPANY-SOVEREIGNTY-20260915_v1.0.0.pdf",
-      "sha256": "ac9887209bca40196bca885c602e3efd537db504db9b52a1770548381c5a6b11",
+      "sha256": "2900528d8f8d7fd1cc6bb06593038ec48b22e99df73d129fec487009760e46ee",
       "source_sha256": "0989e11455965413e6a1e37fc75804254c5996d5d095c4bf2f640ff17ec75b5f",
       "brand": "corporate",
       "normalizer": "qpdf"
     },
     {
       "source": "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md",
-      "publication": "docs/finance/publications/SH-COMPANY-PARENT-TAX-20260915_v1.0.0.pdf",
-      "sha256": "eea802de1b3b770e5efa305cabb356fda160b607eafd4c76916dfed52e60a502",
-      "source_sha256": "fbd32653ff9e93f53c2f282476acf65e4be834278c3481cc081f1d510438b899",
+      "publication": "docs/finance/publications/SH-COMPANY-PARENT-TAX-20260915_v2.0.0.pdf",
+      "sha256": "8a2a4c8b19a094127a255732b234f6a3211df70c8f8d89be68534b285bd6ba2f",
+      "source_sha256": "0a0f7eef4890ce90909f51f4e10a64de1fac15a4a6b69b79346eb94b5ef457e9",
       "brand": "corporate",
       "normalizer": "qpdf"
     }
