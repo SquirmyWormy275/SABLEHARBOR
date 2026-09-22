@@ -3,7 +3,24 @@
 import hashlib
 import json
 
-from .store import DomainError, canonical, digest
+from .store import DomainError, canonical
+
+
+def _update_object(hasher, fields):
+    """Hash a canonical object from already-canonical value bytes, never stored JSON.
+
+    Top-level names are fixed strings. Values have been parsed and canonicalized
+    using Store.canonical, so joining them with its exact object separators is
+    identical to canonicalizing the entire object a second time.
+    """
+    hasher.update(b"{")
+    for index, name in enumerate(sorted(fields)):
+        if index:
+            hasher.update(b",")
+        hasher.update(canonical(name).encode())
+        hasher.update(b":")
+        hasher.update(fields[name])
+    hasher.update(b"}")
 
 
 def inspect_history(store, actor, engagement_id, *, revisions=()):
@@ -39,17 +56,29 @@ def inspect_history(store, actor, engagement_id, *, revisions=()):
                 "command": json.loads(row["command"]),
                 "command_id": row["command_id"],
             }
+            # The large parsed state is canonicalized once. Reuse those exact
+            # bytes for event integrity and the public history/prefix digest.
+            fields = {name: canonical(value).encode() for name, value in record.items()}
+            event_hash = hashlib.sha256()
+            _update_object(event_hash, fields)
             if (
                 row["revision"] != count
                 or previous != row["previous_hash"]
-                or digest(record) != row["hash"]
-                or digest(record["command"]) != row["request_hash"]
+                or event_hash.hexdigest() != row["hash"]
+                or hashlib.sha256(fields["command"]).hexdigest() != row["request_hash"]
             ):
                 raise DomainError("History integrity failure", code="INTEGRITY", status=500)
             entry = {**record, "hash": row["hash"], "revision": count}
             if count:
                 rolling.update(b",")
-            rolling.update(canonical(entry).encode())
+            _update_object(
+                rolling,
+                {
+                    **fields,
+                    "hash": canonical(row["hash"]).encode(),
+                    "revision": canonical(count).encode(),
+                },
+            )
             if count in wanted:
                 selected[count] = entry
                 prefix = rolling.copy()
