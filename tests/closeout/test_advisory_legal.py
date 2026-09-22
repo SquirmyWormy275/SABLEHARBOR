@@ -35,6 +35,7 @@ def fixture():
         former_j2_end="2026-09-20",
         participant_initiated_contact="2026-09-21",
         grant_date="2026-09-22",
+        service_start="2026-09-22",
         no_serving_promise_attestation=True,
         eligibility_gate="Orientation",
         units=100,
@@ -66,3 +67,16 @@ def test_invalid_or_unqualified_documentation(key, value):
     r[key] = value
     with pytest.raises(ValueError):
         a.validate_grant(r)
+
+
+def test_negative_outstanding_does_not_expand_pool():
+    with pytest.raises(ValueError, match="outstanding"):
+        a.validate_grant(fixture(), outstanding_units=-100)
+
+
+@pytest.mark.parametrize("key", ["participant_id", "service_start", "employment_classification"])
+def test_missing_participant_facts(key):
+    row = fixture()
+    row[key] = ""
+    with pytest.raises(ValueError):
+        a.validate_grant(row)

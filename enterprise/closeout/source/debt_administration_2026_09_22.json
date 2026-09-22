@@ -12,7 +12,8 @@
     "enterprise/closeout/source/aru_secured_terms.json": "e1434c8b35130b36767d57c5826cf403b12ede458615517b7c64fb135ca42edc",
     "industrial/source/operations.json": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b",
     "industrial/source/finance.json": "0d4461abfcdb138da36db503ff0cfea7c47ea7fd7109494126514225fd43e38c",
-    "enterprise/operations/source/debt_host_2026_08.json": "644d8e442888082dcf2ad8fc0f1fb27d0458f9548150de203c404fdad2420bf0"
+    "enterprise/operations/source/debt_host_2026_08.json": "644d8e442888082dcf2ad8fc0f1fb27d0458f9548150de203c404fdad2420bf0",
+    "geospatial/geojson/industrial_facilities.geojson": "d2aa49d58441878d6169f7ed20d50b59fbc28f9087c62b930f97d039de52438d"
   },
   "assets": [
     {
@@ -1119,7 +1120,42 @@
       ],
       "record_owner_name": "American Resource Utility, Inc.",
       "record_owner_basis": "Existing source owner; newly authored case recording reference, not fee-simple title opinion",
-      "real_cadastral_identity": false
+      "real_cadastral_identity": false,
+      "boundary_schedule": {
+        "schedule_id": "SYN-SW-ARU-SITE-1",
+        "source_path": "geospatial/geojson/industrial_facilities.geojson",
+        "source_feature_id": "IND-FAC-TAY-TERMINAL",
+        "crs": "EPSG:4326;longitude,latitude",
+        "geometry": {
+          "coordinates": [
+            [
+              [
+                -108.11011563220013,
+                42.11905990695307
+              ],
+              [
+                -108.10488436779987,
+                42.11905990695307
+              ],
+              [
+                -108.10488436779987,
+                42.122940093046935
+              ],
+              [
+                -108.11011563220013,
+                42.122940093046935
+              ],
+              [
+                -108.11011563220013,
+                42.11905990695307
+              ]
+            ]
+          ],
+          "type": "Polygon"
+        },
+        "basis": "Rectangular site envelope derived from stated acreage and declared aspect ratio; not a cadastral boundary or surveyed property.",
+        "adopted_case_description": "Newly authored incorporation of this exact existing case polygon as the synthetic recording attachment; no real cadastral or surveyed title representation"
+      }
     },
     {
       "record_id": "SYN-FIXTURE-SITE-FAC-TAY-WAREHOUSE",
@@ -1135,7 +1171,42 @@
       ],
       "record_owner_name": "American Resource Utility, Inc.",
       "record_owner_basis": "Existing source owner; newly authored case recording reference, not fee-simple title opinion",
-      "real_cadastral_identity": false
+      "real_cadastral_identity": false,
+      "boundary_schedule": {
+        "schedule_id": "SYN-SW-ARU-SITE-2",
+        "source_path": "geospatial/geojson/industrial_facilities.geojson",
+        "source_feature_id": "IND-FAC-TAY-WAREHOUSE",
+        "crs": "EPSG:4326;longitude,latitude",
+        "geometry": {
+          "coordinates": [
+            [
+              [
+                -108.10663629434602,
+                42.123786387905305
+              ],
+              [
+                -108.10336370565399,
+                42.123786387905305
+              ],
+              [
+                -108.10336370565399,
+                42.126213612094695
+              ],
+              [
+                -108.10663629434602,
+                42.126213612094695
+              ],
+              [
+                -108.10663629434602,
+                42.123786387905305
+              ]
+            ]
+          ],
+          "type": "Polygon"
+        },
+        "basis": "Rectangular site envelope derived from stated acreage and declared aspect ratio; not a cadastral boundary or surveyed property.",
+        "adopted_case_description": "Newly authored incorporation of this exact existing case polygon as the synthetic recording attachment; no real cadastral or surveyed title representation"
+      }
     }
   ],
   "filings": [
@@ -1307,7 +1378,22 @@
     "source_annual_opex_usd": 200000,
     "additional_journal_usd": "0.00",
     "additional_cash_usd": "0.00",
-    "cash_state": "September monthly aggregate model only; no independent bank payment assertion"
+    "cash_state": "September monthly aggregate model only; no independent bank payment assertion",
+    "advance_receipt": {
+      "record_id": "SYN-ARU-ADMIN-FEE-ADVANCE-20260922",
+      "paid_at": "2026-09-22T17:55:00Z",
+      "payer": "SYN-ARU-LEGAL-ADMIN-SERVICE-001",
+      "capacity": "Newly authored ordinary administrative service provider, advancing all applicable charges within the250USDall-in existing expense component",
+      "recipients": [
+        "Wyoming Secretary of State case filing office",
+        "Sweetwater County case title/recording office"
+      ],
+      "state": "SYNTHETIC_FEES_TENDERED_AND_ACCEPTED_BEFORE_CASE_SUBMISSIONS",
+      "billing_reference": "SYN-ARU-LEGAL-ADMIN-20260922",
+      "additional_company_cash_usd": "0.00",
+      "independent_bank_confirmation": false,
+      "limitation": "Provider disbursement record, not additional company payment or statutory fee tariff"
+    }
   },
   "primary_authorities": [
     {

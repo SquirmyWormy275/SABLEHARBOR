@@ -21,6 +21,12 @@ def require(value, message):
 
 def validate_grant(grant, *, outstanding_units=0):
     policy = json.loads(SOURCE.read_text())
+    require(
+        isinstance(outstanding_units, int)
+        and not isinstance(outstanding_units, bool)
+        and 0 <= outstanding_units <= 10000,
+        "Invalid outstanding units",
+    )
     require(set(policy["required_grant_fields"]) <= set(grant), "Incomplete grant documentation")
     require(
         date.fromisoformat(grant["former_j2_end"])
@@ -34,6 +40,17 @@ def validate_grant(grant, *, outstanding_units=0):
         "Headquarters alone is not a gate",
     )
     require(grant["eligibility_evidence"], "Missing qualifying service evidence")
+    require(
+        all(
+            isinstance(grant[k], str) and grant[k].strip()
+            for k in ["participant_id", "service_start", "employment_classification"]
+        ),
+        "Missing participant or employment facts",
+    )
+    require(
+        date.fromisoformat(grant["service_start"]) >= date.fromisoformat(grant["grant_date"]),
+        "Backdated grant vesting service",
+    )
     require(
         isinstance(grant["units"], int)
         and not isinstance(grant["units"], bool)

@@ -50,6 +50,7 @@ def build(*, source=None, as_of="2026-09-22T23:59:59Z", context=None):
     require(len({r["identifier"] for r in assets}) == 64, "Duplicate asset identifier")
     for row in assets:
         native = approved[row["asset_id"]]
+        require(row["source_population"] == native["population"], "Source asset class changed")
         require(
             row["owner"] == "ARU" and row["facility_id"] == native["facility_id"],
             "Wrong owner or location",
@@ -84,13 +85,39 @@ def build(*, source=None, as_of="2026-09-22T23:59:59Z", context=None):
             and row["record_owner_name"] == "American Resource Utility, Inc.",
             "Fixture identity/rights",
         )
+    geo = json.loads((ROOT / "geospatial/geojson/industrial_facilities.geojson").read_text())
+    features = {f["properties"]["id"]: f for f in geo["features"]}
+    for row in data["fixture_sites"]:
+        attachment = row["boundary_schedule"]
+        require(
+            attachment["geometry"] == features[row["facility_id"]]["geometry"]
+            and attachment["schedule_id"] == row["synthetic_record_reference"],
+            "Missing or changed source-grounded fixture boundary",
+        )
+    advance = data["fee_allocation"]["advance_receipt"]
+    require(
+        advance["state"] == "SYNTHETIC_FEES_TENDERED_AND_ACCEPTED_BEFORE_CASE_SUBMISSIONS"
+        and advance["additional_company_cash_usd"] == "0.00"
+        and not advance["independent_bank_confirmation"],
+        "Fee advancement boundary",
+    )
     routes = {"SOS_GOODS": 14, "SWEETWATER_TITLES": 44, "SWEETWATER_FIXTURES": 6}
     require(
         len(data["filings"]) == 3 and {r["route"] for r in data["filings"]} == set(routes),
         "Filing population",
     )
     for row in data["filings"]:
+        require(stamp(advance["paid_at"]) <= stamp(row["submitted_at"]), "Unpaid filing fees")
         expected = {a["asset_id"] for a in assets if a["filing_route"] == row["route"]}
+        if row["route"] == "SWEETWATER_TITLES":
+            require(
+                all(
+                    a["title_lien_noted_at"] == row["acknowledged_at"]
+                    for a in assets
+                    if a["asset_id"] in expected
+                ),
+                "Missing or premature title notation",
+            )
         require(
             len(row["asset_ids"]) == routes[row["route"]] and set(row["asset_ids"]) == expected,
             "Filing collateral scope",

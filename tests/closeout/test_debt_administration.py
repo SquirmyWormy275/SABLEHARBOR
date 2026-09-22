@@ -48,3 +48,14 @@ def test_adverse_source_mutations_fail(mutation):
     mutation(s)
     with pytest.raises(ValueError):
         d.build(source=s, context=C)
+
+
+def test_fixture_attachment_and_fee_timing_are_required():
+    row = source()
+    row["fixture_sites"][0]["boundary_schedule"]["geometry"]["coordinates"][0][0][0] += 0.01
+    with pytest.raises(ValueError, match="boundary"):
+        d.build(source=row, context=C)
+    row = source()
+    row["fee_allocation"]["advance_receipt"]["paid_at"] = "2026-09-22T18:01:00Z"
+    with pytest.raises(ValueError, match="Unpaid filing"):
+        d.build(source=row, context=C)
