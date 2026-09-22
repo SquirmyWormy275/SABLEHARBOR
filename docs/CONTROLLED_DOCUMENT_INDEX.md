@@ -12,7 +12,8 @@ Facility delivery: [controlled release, source commit and checksums](releases/FA
 [Financial reconciliation](finance/evidence/company-closeout/README.md) ·
 [Current workforce and operating records](../enterprise/operations/docs/completed-period.md) ·
 [Obligations and controls](../enterprise/ccf/company_closeout/README.md) ·
-[Existing portal input contract](internal/company-closeout/PORTAL_CONTRACT.md).
+[Existing portal input contract](internal/company-closeout/PORTAL_CONTRACT.md) ·
+[Company edition release index](releases/COMPANY_EDITION_RELEASES.md).
 
 The dated register distinguishes implemented, validated and accepted scope. PR #145
 is merged with its approved designs preserved; [its receipt](internal/company-closeout/PR145_INTEGRATION.md)
