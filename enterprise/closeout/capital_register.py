@@ -70,6 +70,128 @@ def validate_formation(source):
         raise ValueError("Founder monetary opening differs from formation evidence")
 
 
+def historical_industrial_contribution(source, holders):
+    """Complete the accepted aggregate model without changing capital or rights."""
+    from datetime import date
+
+    event = source["historical_industrial_contribution"]
+    native = json.loads((ROOT / "industrial/source/finance.json").read_text())
+    entities = {
+        r["entity_id"]: r
+        for r in json.loads((ROOT / "industrial/source/entities.json").read_text())["entities"]
+    }
+    amount = D(event["amount_usd"])
+    if (
+        event["fact_state"] != "NEWLY_AUTHORED_SYNTHETIC_HISTORY_NOT_RECOVERED_PAYMENT"
+        or event["settlement_state"] != "NEWLY_AUTHORED_SYNTHETIC_SETTLED_HISTORY"
+        or event["contribution_mechanism"]
+        != "VOLUNTARY_ADDITIONAL_PAID_IN_CAPITAL_WITHOUT_NEW_INTERESTS"
+    ):
+        raise ValueError("Historical contribution evidence or mechanism state changed")
+    if amount != D(44312500) or amount != D(
+        native["opening_red_wash_2026_scenario"]["contributed_equity"]
+    ):
+        raise ValueError("Historical contribution changes accepted industrial model amount")
+    if (
+        event["new_units"] != 0
+        or event["rights_changed"] is not False
+        or event["compulsory_call"] is not False
+    ):
+        raise ValueError("Historical contribution cannot change rights or compel funding")
+    if (
+        D(event["new_2026_cash_or_equity_posting_usd"]) != 0
+        or event["independent_bank_confirmation"] is not False
+    ):
+        raise ValueError("Historical source cannot create current cash or bank confirmation")
+    dates = [
+        date.fromisoformat(event[k])
+        for k in ("governing_authority_date", "request_date", "acceptance_date", "receipt_date")
+    ]
+    if dates != sorted(dates) or any(d.year != 2025 for d in dates):
+        raise ValueError("Historical authority/request/acceptance/settlement chronology differs")
+    expected = {r["holder_id"]: r for r in proportional_request(amount, holders)}
+    actual = {r["holder_id"]: r for r in event["holders"]}
+    if set(actual) != set(expected) or len(event["holders"]) != len(expected):
+        raise ValueError("Historical contribution holder population incomplete or duplicated")
+    rows = []
+    for holder_id, row in actual.items():
+        allocation = expected[holder_id]
+        if row["acceptance_state"] != "VOLUNTARILY_ACCEPTED_SYNTHETIC_HISTORY":
+            raise ValueError(
+                "Unaccepted holder cannot be represented as historical settled capital"
+            )
+        if any(
+            D(row[k]) != D(allocation["requested_usd"])
+            for k in ("requested_usd", "accepted_usd", "received_usd")
+        ):
+            raise ValueError("Historical holder allocation differs from proportional source")
+        if (
+            D(row["participation_share"]) != D(allocation["participation_share"])
+            or row["new_units"] != 0
+        ):
+            raise ValueError("Historical holder participation or units changed")
+        if not all(
+            row.get(k)
+            for k in ("request_id", "acceptance_id", "receipt_id", "settlement_reference")
+        ):
+            raise ValueError("Historical execution identifiers missing")
+        rows.append(
+            dict(
+                row,
+                event_id=event["event_id"],
+                legal_entity="SHI",
+                request_date=event["request_date"],
+                acceptance_date=event["acceptance_date"],
+                receipt_date=event["receipt_date"],
+                authority_id=event["governing_authority_id"],
+                units_before=allocation["units"],
+                units_after=allocation["units"],
+                rights_before=allocation["rights_before"],
+                rights_after=allocation["rights_before"],
+                fact_state=event["fact_state"],
+                available_at="2026-09-22T00:00:00Z",
+            )
+        )
+    for field in ("request_id", "acceptance_id", "receipt_id", "settlement_reference"):
+        if len({r[field] for r in rows}) != 5:
+            raise ValueError("Historical execution identifiers duplicated")
+    downstream = event["downstream"]
+    expected_legs = {
+        ("SHI", "SHIH"): amount,
+        ("SHIH", "PS"): amount,
+        ("PS", "NMI_CLOSING_AGENT"): D(28000000),
+        ("PS", "RWH"): D(16312500),
+    }
+    if (
+        len(downstream) != 4
+        or {(r["payer"], r["recipient"]): D(r["amount_usd"]) for r in downstream} != expected_legs
+    ):
+        raise ValueError("Historical purchase/funding downstream population differs")
+    prior = event["receipt_date"]
+    for leg in downstream:
+        effective = leg["effective_date"]
+        if effective < prior:
+            raise ValueError("Downstream funding predates received cash")
+        for entity in (leg["payer"], leg["recipient"]):
+            if entity in {"SHIH", "PS"} and effective < entities[entity]["formed_on"]:
+                raise ValueError("Downstream funding predates legal entity formation")
+        if (
+            leg["recipient"] in {"RWH", "NMI_CLOSING_AGENT"}
+            and effective != entities["RWH"]["ownership_effective_on"]
+        ):
+            raise ValueError("Closing consideration or RWH funding violates control-transfer date")
+        prior = effective
+    return dict(
+        event_id=event["event_id"],
+        amount_usd=str(amount.quantize(D(".01"))),
+        holder_rows=rows,
+        downstream=downstream,
+        additional_2026_postings_usd="0.00",
+        available_at="2026-09-22T00:00:00Z",
+        fact_state=event["fact_state"],
+    )
+
+
 def build_register():
     source = json.loads(SOURCE.read_text())
     validate_formation(source)
@@ -153,7 +275,14 @@ def build_register():
                 fact_state="NEWLY_AUTHORED_SYNTHETIC_HISTORY",
             )
         )
+    from enterprise.operations.availability import apply, repository_context
+
+    history = historical_industrial_contribution(source, holders)
+    apply(history, repository_context(ROOT))
     return dict(
+        historical_industrial_contribution=history,
+        historical_contribution_receipts_usd=history["amount_usd"],
+        total_historical_paid_in_usd="227312500.00",
         unit_history=unit_history,
         source=source,
         holders=holders,
@@ -238,6 +367,8 @@ def build(journal_rows):
     historical_opening = {
         r["holder_id"]: D(r["recorded_subscription_cash_usd"]) for r in register["unit_history"]
     }
+    for row in register["historical_industrial_contribution"]["holder_rows"]:
+        historical_opening[row["holder_id"]] += D(row["received_usd"])
     cumulative = defaultdict(D)
     rollforward = []
     for (scenario, year, month, source_id), legs in sorted(grouped.items()):
@@ -301,6 +432,11 @@ def build(journal_rows):
         Path(__file__).with_name("capital.py"),
         ROOT / "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
         ROOT / "docs/internal/company-closeout/FOUNDER_ADMISSION_BASIS.md",
+        ROOT / "docs/internal/company-closeout/INDUSTRIAL_CAPITAL_HISTORY_2026-09-22.md",
+        ROOT / "industrial/source/finance.json",
+        ROOT / "industrial/source/entities.json",
+        ROOT / "industrial/planning/source/enterprise.json",
+        ROOT / "enterprise/operations/availability.py",
     ]
     return dict(
         register=register,

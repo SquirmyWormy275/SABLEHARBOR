@@ -92,7 +92,7 @@
     "authority_source": "enterprise/closeout/source/parent_tax.json",
     "impact": "No historical contributed cash/property/services or enforceable contribution promise; zero monetary opening and initial tax basis. Approved units unchanged; no cash, compensation deduction, intellectual-property asset, goodwill or equity plug."
   },
-  "cash_boundary": "183000000historical subscription receipts are newly authored precision of accepted rounds; not additional2026cash. Internal synthetic settlement references are not independent bank confirmation. No founder secondary.",
+  "cash_boundary": "183000000 historical subscription receipts remain separate from44312500 newly authored completion of existing industrial contributed-capital model: totalhistoricalpaidin227312500. No additional2026cash/equitypostings, newunits or externalfinancingamount. Syntheticsettlementreferences are not independentbankconfirmation.",
   "founder_formation": {
     "record_id": "SH-FOUNDER-ADMISSION-20160412",
     "effective_date": "2016-04-12",
@@ -172,5 +172,136 @@
         "version": "July9,2012 prior toformation; election examples not claimedelection"
       }
     ]
+  },
+  "historical_industrial_contribution": {
+    "event_id": "SH-CAP-2025-INDUSTRIAL-44312500",
+    "authored_day": "2026-09-22",
+    "fact_state": "NEWLY_AUTHORED_SYNTHETIC_HISTORY_NOT_RECOVERED_PAYMENT",
+    "acceptance_state": "PENDING_REPOSITORY_ACCEPTANCE",
+    "effective_period": "2025-07",
+    "source_scope": "Completes holder allocation, voluntary acceptance and settlement chronology of existing44312500 provisional industrial contributed-capital model; preserves noncash2026opening reconstruction and183Mround receipts separately.",
+    "authority_source": "docs/internal/company-closeout/INDUSTRIAL_CAPITAL_HISTORY_2026-09-22.md",
+    "governing_authority_id": "SYN-SHI-20250707-VOLUNTARY-CONTRIBUTION-AUTHORITY",
+    "governing_authority_date": "2025-07-07",
+    "governing_authority_state": "NEWLY_AUTHORED_SYNTHETIC_UNANIMOUS_HOLDER_CONSENT_AND_TREASURY_AUTHORIZATION",
+    "request_date": "2025-07-07",
+    "acceptance_date": "2025-07-09",
+    "receipt_date": "2025-07-10",
+    "amount_usd": "44312500.00",
+    "contribution_mechanism": "VOLUNTARY_ADDITIONAL_PAID_IN_CAPITAL_WITHOUT_NEW_INTERESTS",
+    "compulsory_call": false,
+    "new_units": 0,
+    "rights_changed": false,
+    "new_2026_cash_or_equity_posting_usd": "0.00",
+    "settlement_state": "NEWLY_AUTHORED_SYNTHETIC_SETTLED_HISTORY",
+    "independent_bank_confirmation": false,
+    "holders": [
+      {
+        "holder_id": "SH-HOLDER-DM",
+        "participation_share": "0.3325",
+        "requested_usd": "14733906.25",
+        "accepted_usd": "14733906.25",
+        "received_usd": "14733906.25",
+        "request_id": "SH-CAP-2025-INDUSTRIAL-44312500-REQUEST-SH-HOLDER-DM",
+        "acceptance_id": "SH-CAP-2025-INDUSTRIAL-44312500-ACCEPT-SH-HOLDER-DM",
+        "receipt_id": "SH-CAP-2025-INDUSTRIAL-44312500-RECEIPT-SH-HOLDER-DM",
+        "settlement_reference": "SYN-SHI-CAPITAL-20250710-SH-HOLDER-DM",
+        "new_units": 0,
+        "acceptance_state": "VOLUNTARILY_ACCEPTED_SYNTHETIC_HISTORY"
+      },
+      {
+        "holder_id": "SH-HOLDER-PR",
+        "participation_share": "0.1995",
+        "requested_usd": "8840343.75",
+        "accepted_usd": "8840343.75",
+        "received_usd": "8840343.75",
+        "request_id": "SH-CAP-2025-INDUSTRIAL-44312500-REQUEST-SH-HOLDER-PR",
+        "acceptance_id": "SH-CAP-2025-INDUSTRIAL-44312500-ACCEPT-SH-HOLDER-PR",
+        "receipt_id": "SH-CAP-2025-INDUSTRIAL-44312500-RECEIPT-SH-HOLDER-PR",
+        "settlement_reference": "SYN-SHI-CAPITAL-20250710-SH-HOLDER-PR",
+        "new_units": 0,
+        "acceptance_state": "VOLUNTARILY_ACCEPTED_SYNTHETIC_HISTORY"
+      },
+      {
+        "holder_id": "SH-HOLDER-JB",
+        "participation_share": "0.133",
+        "requested_usd": "5893562.50",
+        "accepted_usd": "5893562.50",
+        "received_usd": "5893562.50",
+        "request_id": "SH-CAP-2025-INDUSTRIAL-44312500-REQUEST-SH-HOLDER-JB",
+        "acceptance_id": "SH-CAP-2025-INDUSTRIAL-44312500-ACCEPT-SH-HOLDER-JB",
+        "receipt_id": "SH-CAP-2025-INDUSTRIAL-44312500-RECEIPT-SH-HOLDER-JB",
+        "settlement_reference": "SYN-SHI-CAPITAL-20250710-SH-HOLDER-JB",
+        "new_units": 0,
+        "acceptance_state": "VOLUNTARILY_ACCEPTED_SYNTHETIC_HISTORY"
+      },
+      {
+        "holder_id": "SH-HOLDER-HV",
+        "participation_share": "0.185",
+        "requested_usd": "8197812.50",
+        "accepted_usd": "8197812.50",
+        "received_usd": "8197812.50",
+        "request_id": "SH-CAP-2025-INDUSTRIAL-44312500-REQUEST-SH-HOLDER-HV",
+        "acceptance_id": "SH-CAP-2025-INDUSTRIAL-44312500-ACCEPT-SH-HOLDER-HV",
+        "receipt_id": "SH-CAP-2025-INDUSTRIAL-44312500-RECEIPT-SH-HOLDER-HV",
+        "settlement_reference": "SYN-SHI-CAPITAL-20250710-SH-HOLDER-HV",
+        "new_units": 0,
+        "acceptance_state": "VOLUNTARILY_ACCEPTED_SYNTHETIC_HISTORY"
+      },
+      {
+        "holder_id": "SH-HOLDER-WR",
+        "participation_share": "0.15",
+        "requested_usd": "6646875.00",
+        "accepted_usd": "6646875.00",
+        "received_usd": "6646875.00",
+        "request_id": "SH-CAP-2025-INDUSTRIAL-44312500-REQUEST-SH-HOLDER-WR",
+        "acceptance_id": "SH-CAP-2025-INDUSTRIAL-44312500-ACCEPT-SH-HOLDER-WR",
+        "receipt_id": "SH-CAP-2025-INDUSTRIAL-44312500-RECEIPT-SH-HOLDER-WR",
+        "settlement_reference": "SYN-SHI-CAPITAL-20250710-SH-HOLDER-WR",
+        "new_units": 0,
+        "acceptance_state": "VOLUNTARILY_ACCEPTED_SYNTHETIC_HISTORY"
+      }
+    ],
+    "downstream": [
+      {
+        "event_id": "SH-CAP-2025-INDUSTRIAL-44312500-SHIH",
+        "payer": "SHI",
+        "recipient": "SHIH",
+        "effective_date": "2025-07-11",
+        "amount_usd": "44312500.00",
+        "kind": "INTERNAL_CAPITAL_TRANSFER"
+      },
+      {
+        "event_id": "SH-CAP-2025-INDUSTRIAL-44312500-PS",
+        "payer": "SHIH",
+        "recipient": "PS",
+        "effective_date": "2025-07-14",
+        "amount_usd": "44312500.00",
+        "kind": "INTERNAL_CAPITAL_TRANSFER"
+      },
+      {
+        "event_id": "SH-CAP-2025-INDUSTRIAL-44312500-PURCHASE",
+        "payer": "PS",
+        "recipient": "NMI_CLOSING_AGENT",
+        "effective_date": "2025-07-18",
+        "amount_usd": "28000000.00",
+        "kind": "ACCEPTED_ACQUISITION_CONSIDERATION",
+        "order": "AFTER_CONTROL_TRANSFER_AT_CLOSING;grossconsiderationincludesexistingescrow/holdback_notaddedtwice"
+      },
+      {
+        "event_id": "SH-CAP-2025-INDUSTRIAL-44312500-RWH",
+        "payer": "PS",
+        "recipient": "RWH",
+        "effective_date": "2025-07-18",
+        "amount_usd": "16312500.00",
+        "kind": "POST_CONTROL_OPERATING_CAPITAL",
+        "order": "AFTER_RWH_OWNERSHIP_EFFECTIVE;beforepostcloseuse"
+      }
+    ],
+    "downstream_boundary": "PSinvestmentbasis44312500 equals28Macceptedpurchaseconsiderationplus16.3125Mpostclosefunding. This is not a claim that RWHbank directlyreceived44.3125Mand paiditsownsharepurchase. Existinggrossminecashreconstruction uses28Mpurchaseonbehalf asfunding/use attribution; disclose netoperatingcashcapital16.3125M. Internaltransfers are not further externalcontributions.",
+    "source_reconstruction": "industrial/planning/source/enterprise.json#opening_bridge.mine_historical_parent_basis",
+    "source_model": "industrial/source/finance.json#opening_red_wash_2026_scenario",
+    "original_model_commit": "c792dfcdfaa9b48168cadd3bb9c26d113c24af34",
+    "original_bridge_commit": "fc354cb8c2b849ff40a5abf6015c7313c04d34ca"
   }
 }

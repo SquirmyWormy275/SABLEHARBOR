@@ -123,8 +123,60 @@ def test_founder_opening_zero_requires_complete_formation_facts():
     result = build(journal())
     assert (
         sum(D(r["historical_monetary_opening_usd"]) for r in result["holder_rollforward"])
-        == 183000000
+        == 227312500
     )
     assert sum(D(r["closing_paid_in_capital_usd"]) for r in result["holder_rollforward"]) == D(
-        "183000123.46"
+        "227312623.46"
     )
+
+
+def test_industrial_history_five_holder_cash_and_no_duplicate_units():
+    register = build_register()
+    history = register["historical_industrial_contribution"]
+    assert register["verified_subscription_receipts_usd"] == "183000000.00"
+    assert register["total_historical_paid_in_usd"] == "227312500.00"
+    assert sum(D(r["received_usd"]) for r in history["holder_rows"]) == 44312500
+    assert all(r["units_before"] == r["units_after"] for r in history["holder_rows"])
+    assert all(r["rights_before"] == r["rights_after"] for r in history["holder_rows"])
+    assert history["available_at"] >= history["repository_source_available_at"]
+    assert history["authored_day"] == "2026-09-22"
+    assert history["additional_2026_postings_usd"] == "0.00"
+
+
+@pytest.mark.parametrize(
+    "mutation",
+    [
+        "extra_cash",
+        "duplicate_holder",
+        "new_units",
+        "compulsory",
+        "before_acceptance",
+        "before_control",
+        "duplicate_receipt",
+        "wrong_split",
+    ],
+)
+def test_industrial_history_adverse_states_rejected(mutation):
+    from enterprise.closeout.capital_register import historical_industrial_contribution
+
+    register = build_register()
+    source = deepcopy(register["source"])
+    event = source["historical_industrial_contribution"]
+    if mutation == "extra_cash":
+        event["amount_usd"] = "44312501"
+    elif mutation == "duplicate_holder":
+        event["holders"].append(dict(event["holders"][0]))
+    elif mutation == "new_units":
+        event["holders"][0]["new_units"] = 1
+    elif mutation == "compulsory":
+        event["compulsory_call"] = True
+    elif mutation == "before_acceptance":
+        event["receipt_date"] = "2025-07-08"
+    elif mutation == "before_control":
+        event["downstream"][-1]["effective_date"] = "2025-07-17"
+    elif mutation == "duplicate_receipt":
+        event["holders"][1]["receipt_id"] = event["holders"][0]["receipt_id"]
+    else:
+        event["downstream"][-1]["amount_usd"] = "16312501"
+    with pytest.raises(ValueError):
+        historical_industrial_contribution(source, register["holders"])
