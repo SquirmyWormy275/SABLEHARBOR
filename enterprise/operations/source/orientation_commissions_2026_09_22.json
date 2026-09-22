@@ -1,0 +1,2067 @@
+{
+  "document_id": "SH-OO-COMMISSIONS-2026-09-22",
+  "version": "1.0.0",
+  "repository_state": "PENDING_ACCEPTANCE",
+  "authored_day": "2026-09-22",
+  "fact_status": "NEWLY_AUTHORED_SYNTHETIC_HISTORY",
+  "scope": "All18 occupied August2026 Orientation positions, not all24 authorized billets or an all-time candidate/mentor census",
+  "authority": "Owner company-closeout ordinary fictional completion; dated September22 continuation; existing profession restrictions unchanged",
+  "historical_doctrine_note": "Historical authored procedures are consistent with accepted current doctrine; this does not claim the September2026 publication existed in2020 or supply a founding date",
+  "source_hashes": {
+    "docs/j2/ORIENTATION_OFFICER_PROFESSION.md": "5369a4ce36fec0091ddfd734449d6cd3caa8679cbe111863b89bc55134acdaf6",
+    "docs/j2/J2_ESTABLISHMENT.md": "826bbe8b359d73938c69f8bbd984114fd3b73109bbb9e8af7f003f6b39590c82",
+    "docs/structured/j2_leadership_2026-09-10.json": "c0efd4edf47ab7f5da4a0e3129cddc93af89035252b5a8ea16facd660b6cba54",
+    "enterprise/operations/source/completed_period_2026_08.json": "14e7b53177b80d671ed66fdc309c6b2c0e1b0b68567f54da97dd02dca4d1ddf8",
+    "enterprise/operations/source/j2_administrative_history_2026_09_22.json": "45ae980dfdd478493c8844268e71315f31bc9e64801fe393ab729b4e5fc5c27e",
+    "docs/organization/source/chartbook.json": "6471a6362517f97574c775b73b94ac48d6060d81cee605eb661811425ed75866",
+    "industrial/source/finance.json": "0d4461abfcdb138da36db503ff0cfea7c47ea7fd7109494126514225fd43e38c",
+    "red_wash/source/core_operating_data.json": "eb5601f3a519ac175bef07744fa3c23939734f80b5774efeed4800aa73e8aa3f",
+    "geospatial/facilities/population/REGISTER.json": "203f71aaf75128f0aa3b0b649e9400173fe366fc9a3e6dd528a6a1b176d013d7"
+  },
+  "population": {
+    "authorized": 24,
+    "occupied": 18,
+    "vacant": 6,
+    "new_people": 0,
+    "new_payroll_usd": "0.00"
+  },
+  "supporting_role_scope": "Historical recommender, mentor and council roles are supporting evidence for these18 admissions only; no current named holder is backdated and no extra current headcount or permanent governance body is created",
+  "records": [
+    {
+      "person_id": "P067",
+      "name": "Grant Kohrs",
+      "position_id": "SH-POS-SH-EMP-J2-ORIENTATION-0001",
+      "record_id": "OO-ADM-001",
+      "origin": "NEWLY_AUTHORED_FICTIONAL_HISTORY",
+      "recommendations": [
+        {
+          "record_id": "OO-ADM-001-REC-SENIOR",
+          "perspective": "senior",
+          "date": "2020-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_001_SENIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-001-REC-PEER",
+          "perspective": "peer",
+          "date": "2020-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_001_PEER",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-001-REC-JUNIOR",
+          "perspective": "junior",
+          "date": "2020-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_001_JUNIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        }
+      ],
+      "packet": {
+        "record_id": "OO-ADM-001-PACKET",
+        "reviewed_on": "2020-01-09",
+        "components": [
+          "background_records",
+          "prior_work",
+          "writing_sample",
+          "written_problems",
+          "interview"
+        ],
+        "outcome": "INVITE_TO_AS",
+        "reviewer_role": "HISTORICAL_ORIENTATION_ADMISSIONS_REVIEWER",
+        "current_named_holder_not_inferred": true
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "start": "2020-01-13",
+          "end": "2020-01-18",
+          "outcome": "PASSED_TO_APPRENTICESHIP",
+          "evidence_id": "OO-ADM-001-AS-FINAL",
+          "finding": "Separated observation, inference and uncertainty; requested missing source before consequential recommendation"
+        }
+      ],
+      "apprenticeship": {
+        "start": "2020-02-01",
+        "end": "2021-01-31",
+        "supervisor_role": "HISTORICAL_EXPERIENCED_ORIENTATION_MENTOR",
+        "evidence_id": "OO-ADM-001-APP",
+        "reviews": [
+          "2020-05-01",
+          "2020-08-01",
+          "2020-11-01",
+          "2021-01-31"
+        ],
+        "outcome": "RECOMMENDED_FOR_COUNCIL",
+        "finding": "Supervised live orientation, field exposure, EIB and Education work reviewed; no unsupervised line authority"
+      },
+      "council": {
+        "decision_on": "2021-02-01",
+        "decision": "ADMIT",
+        "record_id": "OO-ADM-001-COUNCIL",
+        "body": "ADMISSIONS_COUNCIL",
+        "reviewer_roles": [
+          "HISTORICAL_ORIENTATION_PROFESSION_REVIEWER",
+          "HISTORICAL_EDUCATION_ASSESSMENT_REVIEWER"
+        ],
+        "candidate_is_reviewer": false,
+        "appointment_to_permanent_governance_body": false
+      },
+      "commission": {
+        "start": "2021-02-02",
+        "end_exclusive": "2027-02-02",
+        "standard_years": 6,
+        "renewals": [],
+        "waivers": [],
+        "pin_id": "OO-PIN-HIST-2021-01",
+        "acknowledgement_on": "2021-02-02",
+        "record_id": "OO-ADM-001-COMMISSION",
+        "restrictions": [
+          "PERMANENT_NO_LATER_LINE_EXECUTIVE_AUTHORITY",
+          "NO_SERVING_VOTING_BOARD_SEAT",
+          "NONEXECUTIVE_BOARD_ONLY_AFTER_FIVE_YEAR_COOLING_AND_DISCLOSURE"
+        ]
+      },
+      "assignment": {
+        "post": "HEAD_OF_ORIENTATION",
+        "start": "2026-08-01",
+        "end_exclusive": "2026-09-01",
+        "authority": "ORIENTATION_OBSERVATION_NOT_LINE_COMMAND",
+        "grade": "HEAD",
+        "voting_board_seat": false,
+        "line_executive_role": false
+      },
+      "transition": {
+        "state": "PLANNED_FUTURE_DUE_NOT_COMPLETED",
+        "review_due": "2026-10-01",
+        "no_automatic_renewal": true
+      }
+    },
+    {
+      "person_id": "SH-EMP-J2-ORIENTATION-0002",
+      "name": null,
+      "position_id": "SH-POS-SH-EMP-J2-ORIENTATION-0002",
+      "record_id": "OO-ADM-002",
+      "origin": "NEWLY_AUTHORED_FICTIONAL_HISTORY",
+      "recommendations": [
+        {
+          "record_id": "OO-ADM-002-REC-SENIOR",
+          "perspective": "senior",
+          "date": "2020-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_002_SENIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-002-REC-PEER",
+          "perspective": "peer",
+          "date": "2020-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_002_PEER",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-002-REC-JUNIOR",
+          "perspective": "junior",
+          "date": "2020-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_002_JUNIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        }
+      ],
+      "packet": {
+        "record_id": "OO-ADM-002-PACKET",
+        "reviewed_on": "2020-01-09",
+        "components": [
+          "background_records",
+          "prior_work",
+          "writing_sample",
+          "written_problems",
+          "interview"
+        ],
+        "outcome": "INVITE_TO_AS",
+        "reviewer_role": "HISTORICAL_ORIENTATION_ADMISSIONS_REVIEWER",
+        "current_named_holder_not_inferred": true
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "start": "2020-01-13",
+          "end": "2020-01-18",
+          "outcome": "PASSED_TO_APPRENTICESHIP",
+          "evidence_id": "OO-ADM-002-AS-FINAL",
+          "finding": "Separated observation, inference and uncertainty; requested missing source before consequential recommendation"
+        }
+      ],
+      "apprenticeship": {
+        "start": "2020-02-01",
+        "end": "2021-01-31",
+        "supervisor_role": "HISTORICAL_EXPERIENCED_ORIENTATION_MENTOR",
+        "evidence_id": "OO-ADM-002-APP",
+        "reviews": [
+          "2020-05-01",
+          "2020-08-01",
+          "2020-11-01",
+          "2021-01-31"
+        ],
+        "outcome": "RECOMMENDED_FOR_COUNCIL",
+        "finding": "Supervised live orientation, field exposure, EIB and Education work reviewed; no unsupervised line authority"
+      },
+      "council": {
+        "decision_on": "2021-02-01",
+        "decision": "ADMIT",
+        "record_id": "OO-ADM-002-COUNCIL",
+        "body": "ADMISSIONS_COUNCIL",
+        "reviewer_roles": [
+          "HISTORICAL_ORIENTATION_PROFESSION_REVIEWER",
+          "HISTORICAL_EDUCATION_ASSESSMENT_REVIEWER"
+        ],
+        "candidate_is_reviewer": false,
+        "appointment_to_permanent_governance_body": false
+      },
+      "commission": {
+        "start": "2021-02-02",
+        "end_exclusive": "2027-02-02",
+        "standard_years": 6,
+        "renewals": [],
+        "waivers": [],
+        "pin_id": "OO-PIN-HIST-2021-02",
+        "acknowledgement_on": "2021-02-02",
+        "record_id": "OO-ADM-002-COMMISSION",
+        "restrictions": [
+          "PERMANENT_NO_LATER_LINE_EXECUTIVE_AUTHORITY",
+          "NO_SERVING_VOTING_BOARD_SEAT",
+          "NONEXECUTIVE_BOARD_ONLY_AFTER_FIVE_YEAR_COOLING_AND_DISCLOSURE"
+        ]
+      },
+      "assignment": {
+        "post": "DEPUTY_HEAD_OF_ORIENTATION",
+        "start": "2026-08-01",
+        "end_exclusive": "2026-09-01",
+        "authority": "ORIENTATION_OBSERVATION_NOT_LINE_COMMAND",
+        "grade": "DEPUTY",
+        "voting_board_seat": false,
+        "line_executive_role": false
+      },
+      "transition": {
+        "state": "PLANNED_FUTURE_DUE_NOT_COMPLETED",
+        "review_due": "2026-10-01",
+        "no_automatic_renewal": true
+      }
+    },
+    {
+      "person_id": "SH-EMP-J2-ORIENTATION-0003",
+      "name": null,
+      "position_id": "SH-POS-SH-EMP-J2-ORIENTATION-0003",
+      "record_id": "OO-ADM-003",
+      "origin": "NEWLY_AUTHORED_FICTIONAL_HISTORY",
+      "recommendations": [
+        {
+          "record_id": "OO-ADM-003-REC-SENIOR",
+          "perspective": "senior",
+          "date": "2020-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_003_SENIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-003-REC-PEER",
+          "perspective": "peer",
+          "date": "2020-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_003_PEER",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-003-REC-JUNIOR",
+          "perspective": "junior",
+          "date": "2020-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_003_JUNIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        }
+      ],
+      "packet": {
+        "record_id": "OO-ADM-003-PACKET",
+        "reviewed_on": "2020-01-09",
+        "components": [
+          "background_records",
+          "prior_work",
+          "writing_sample",
+          "written_problems",
+          "interview"
+        ],
+        "outcome": "INVITE_TO_AS",
+        "reviewer_role": "HISTORICAL_ORIENTATION_ADMISSIONS_REVIEWER",
+        "current_named_holder_not_inferred": true
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "start": "2020-01-13",
+          "end": "2020-01-18",
+          "outcome": "PASSED_TO_APPRENTICESHIP",
+          "evidence_id": "OO-ADM-003-AS-FINAL",
+          "finding": "Separated observation, inference and uncertainty; requested missing source before consequential recommendation"
+        }
+      ],
+      "apprenticeship": {
+        "start": "2020-02-01",
+        "end": "2021-01-31",
+        "supervisor_role": "HISTORICAL_EXPERIENCED_ORIENTATION_MENTOR",
+        "evidence_id": "OO-ADM-003-APP",
+        "reviews": [
+          "2020-05-01",
+          "2020-08-01",
+          "2020-11-01",
+          "2021-01-31"
+        ],
+        "outcome": "RECOMMENDED_FOR_COUNCIL",
+        "finding": "Supervised live orientation, field exposure, EIB and Education work reviewed; no unsupervised line authority"
+      },
+      "council": {
+        "decision_on": "2021-02-01",
+        "decision": "ADMIT",
+        "record_id": "OO-ADM-003-COUNCIL",
+        "body": "ADMISSIONS_COUNCIL",
+        "reviewer_roles": [
+          "HISTORICAL_ORIENTATION_PROFESSION_REVIEWER",
+          "HISTORICAL_EDUCATION_ASSESSMENT_REVIEWER"
+        ],
+        "candidate_is_reviewer": false,
+        "appointment_to_permanent_governance_body": false
+      },
+      "commission": {
+        "start": "2021-02-02",
+        "end_exclusive": "2027-02-02",
+        "standard_years": 6,
+        "renewals": [],
+        "waivers": [],
+        "pin_id": "OO-PIN-HIST-2021-03",
+        "acknowledgement_on": "2021-02-02",
+        "record_id": "OO-ADM-003-COMMISSION",
+        "restrictions": [
+          "PERMANENT_NO_LATER_LINE_EXECUTIVE_AUTHORITY",
+          "NO_SERVING_VOTING_BOARD_SEAT",
+          "NONEXECUTIVE_BOARD_ONLY_AFTER_FIVE_YEAR_COOLING_AND_DISCLOSURE"
+        ]
+      },
+      "assignment": {
+        "post": "ENTERPRISE_QUESTIONS",
+        "start": "2026-08-01",
+        "end_exclusive": "2026-09-01",
+        "authority": "ORIENTATION_OBSERVATION_NOT_LINE_COMMAND",
+        "grade": "ORIENTATION_OFFICER",
+        "voting_board_seat": false,
+        "line_executive_role": false
+      },
+      "transition": {
+        "state": "PLANNED_FUTURE_DUE_NOT_COMPLETED",
+        "review_due": "2026-10-01",
+        "no_automatic_renewal": true
+      }
+    },
+    {
+      "person_id": "SH-EMP-J2-ORIENTATION-0004",
+      "name": null,
+      "position_id": "SH-POS-SH-EMP-J2-ORIENTATION-0004",
+      "record_id": "OO-ADM-004",
+      "origin": "NEWLY_AUTHORED_FICTIONAL_HISTORY",
+      "recommendations": [
+        {
+          "record_id": "OO-ADM-004-REC-SENIOR",
+          "perspective": "senior",
+          "date": "2021-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_004_SENIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-004-REC-PEER",
+          "perspective": "peer",
+          "date": "2021-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_004_PEER",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-004-REC-JUNIOR",
+          "perspective": "junior",
+          "date": "2021-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_004_JUNIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        }
+      ],
+      "packet": {
+        "record_id": "OO-ADM-004-PACKET",
+        "reviewed_on": "2021-01-09",
+        "components": [
+          "background_records",
+          "prior_work",
+          "writing_sample",
+          "written_problems",
+          "interview"
+        ],
+        "outcome": "INVITE_TO_AS",
+        "reviewer_role": "HISTORICAL_ORIENTATION_ADMISSIONS_REVIEWER",
+        "current_named_holder_not_inferred": true
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "start": "2021-01-13",
+          "end": "2021-01-18",
+          "outcome": "PASSED_TO_APPRENTICESHIP",
+          "evidence_id": "OO-ADM-004-AS-FINAL",
+          "finding": "Separated observation, inference and uncertainty; requested missing source before consequential recommendation"
+        }
+      ],
+      "apprenticeship": {
+        "start": "2021-02-01",
+        "end": "2022-01-31",
+        "supervisor_role": "HISTORICAL_EXPERIENCED_ORIENTATION_MENTOR",
+        "evidence_id": "OO-ADM-004-APP",
+        "reviews": [
+          "2021-05-01",
+          "2021-08-01",
+          "2021-11-01",
+          "2022-01-31"
+        ],
+        "outcome": "RECOMMENDED_FOR_COUNCIL",
+        "finding": "Supervised live orientation, field exposure, EIB and Education work reviewed; no unsupervised line authority"
+      },
+      "council": {
+        "decision_on": "2022-02-01",
+        "decision": "ADMIT",
+        "record_id": "OO-ADM-004-COUNCIL",
+        "body": "ADMISSIONS_COUNCIL",
+        "reviewer_roles": [
+          "HISTORICAL_ORIENTATION_PROFESSION_REVIEWER",
+          "HISTORICAL_EDUCATION_ASSESSMENT_REVIEWER"
+        ],
+        "candidate_is_reviewer": false,
+        "appointment_to_permanent_governance_body": false
+      },
+      "commission": {
+        "start": "2022-02-02",
+        "end_exclusive": "2028-02-02",
+        "standard_years": 6,
+        "renewals": [],
+        "waivers": [],
+        "pin_id": "OO-PIN-HIST-2022-01",
+        "acknowledgement_on": "2022-02-02",
+        "record_id": "OO-ADM-004-COMMISSION",
+        "restrictions": [
+          "PERMANENT_NO_LATER_LINE_EXECUTIVE_AUTHORITY",
+          "NO_SERVING_VOTING_BOARD_SEAT",
+          "NONEXECUTIVE_BOARD_ONLY_AFTER_FIVE_YEAR_COOLING_AND_DISCLOSURE"
+        ]
+      },
+      "assignment": {
+        "post": "ENTERPRISE_QUESTIONS",
+        "start": "2026-08-01",
+        "end_exclusive": "2026-09-01",
+        "authority": "ORIENTATION_OBSERVATION_NOT_LINE_COMMAND",
+        "grade": "ORIENTATION_OFFICER",
+        "voting_board_seat": false,
+        "line_executive_role": false
+      },
+      "transition": {
+        "state": "PLANNED_FUTURE_DUE_NOT_COMPLETED",
+        "review_due": "2027-10-01",
+        "no_automatic_renewal": true
+      }
+    },
+    {
+      "person_id": "SH-EMP-J2-ORIENTATION-0005",
+      "name": null,
+      "position_id": "SH-POS-SH-EMP-J2-ORIENTATION-0005",
+      "record_id": "OO-ADM-005",
+      "origin": "NEWLY_AUTHORED_FICTIONAL_HISTORY",
+      "recommendations": [
+        {
+          "record_id": "OO-ADM-005-REC-SENIOR",
+          "perspective": "senior",
+          "date": "2021-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_005_SENIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-005-REC-PEER",
+          "perspective": "peer",
+          "date": "2021-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_005_PEER",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-005-REC-JUNIOR",
+          "perspective": "junior",
+          "date": "2021-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_005_JUNIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        }
+      ],
+      "packet": {
+        "record_id": "OO-ADM-005-PACKET",
+        "reviewed_on": "2021-01-09",
+        "components": [
+          "background_records",
+          "prior_work",
+          "writing_sample",
+          "written_problems",
+          "interview"
+        ],
+        "outcome": "INVITE_TO_AS",
+        "reviewer_role": "HISTORICAL_ORIENTATION_ADMISSIONS_REVIEWER",
+        "current_named_holder_not_inferred": true
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "start": "2021-01-13",
+          "end": "2021-01-18",
+          "outcome": "PASSED_TO_APPRENTICESHIP",
+          "evidence_id": "OO-ADM-005-AS-FINAL",
+          "finding": "Separated observation, inference and uncertainty; requested missing source before consequential recommendation"
+        }
+      ],
+      "apprenticeship": {
+        "start": "2021-02-01",
+        "end": "2022-01-31",
+        "supervisor_role": "HISTORICAL_EXPERIENCED_ORIENTATION_MENTOR",
+        "evidence_id": "OO-ADM-005-APP",
+        "reviews": [
+          "2021-05-01",
+          "2021-08-01",
+          "2021-11-01",
+          "2022-01-31"
+        ],
+        "outcome": "RECOMMENDED_FOR_COUNCIL",
+        "finding": "Supervised live orientation, field exposure, EIB and Education work reviewed; no unsupervised line authority"
+      },
+      "council": {
+        "decision_on": "2022-02-01",
+        "decision": "ADMIT",
+        "record_id": "OO-ADM-005-COUNCIL",
+        "body": "ADMISSIONS_COUNCIL",
+        "reviewer_roles": [
+          "HISTORICAL_ORIENTATION_PROFESSION_REVIEWER",
+          "HISTORICAL_EDUCATION_ASSESSMENT_REVIEWER"
+        ],
+        "candidate_is_reviewer": false,
+        "appointment_to_permanent_governance_body": false
+      },
+      "commission": {
+        "start": "2022-02-02",
+        "end_exclusive": "2028-02-02",
+        "standard_years": 6,
+        "renewals": [],
+        "waivers": [],
+        "pin_id": "OO-PIN-HIST-2022-02",
+        "acknowledgement_on": "2022-02-02",
+        "record_id": "OO-ADM-005-COMMISSION",
+        "restrictions": [
+          "PERMANENT_NO_LATER_LINE_EXECUTIVE_AUTHORITY",
+          "NO_SERVING_VOTING_BOARD_SEAT",
+          "NONEXECUTIVE_BOARD_ONLY_AFTER_FIVE_YEAR_COOLING_AND_DISCLOSURE"
+        ]
+      },
+      "assignment": {
+        "post": "ENTERPRISE_QUESTIONS",
+        "start": "2026-08-01",
+        "end_exclusive": "2026-09-01",
+        "authority": "ORIENTATION_OBSERVATION_NOT_LINE_COMMAND",
+        "grade": "ORIENTATION_OFFICER",
+        "voting_board_seat": false,
+        "line_executive_role": false
+      },
+      "transition": {
+        "state": "PLANNED_FUTURE_DUE_NOT_COMPLETED",
+        "review_due": "2027-10-01",
+        "no_automatic_renewal": true
+      }
+    },
+    {
+      "person_id": "SH-EMP-J2-ORIENTATION-0006",
+      "name": null,
+      "position_id": "SH-POS-SH-EMP-J2-ORIENTATION-0006",
+      "record_id": "OO-ADM-006",
+      "origin": "NEWLY_AUTHORED_FICTIONAL_HISTORY",
+      "recommendations": [
+        {
+          "record_id": "OO-ADM-006-REC-SENIOR",
+          "perspective": "senior",
+          "date": "2021-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_006_SENIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-006-REC-PEER",
+          "perspective": "peer",
+          "date": "2021-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_006_PEER",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-006-REC-JUNIOR",
+          "perspective": "junior",
+          "date": "2021-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_006_JUNIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        }
+      ],
+      "packet": {
+        "record_id": "OO-ADM-006-PACKET",
+        "reviewed_on": "2021-01-09",
+        "components": [
+          "background_records",
+          "prior_work",
+          "writing_sample",
+          "written_problems",
+          "interview"
+        ],
+        "outcome": "INVITE_TO_AS",
+        "reviewer_role": "HISTORICAL_ORIENTATION_ADMISSIONS_REVIEWER",
+        "current_named_holder_not_inferred": true
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "start": "2021-01-13",
+          "end": "2021-01-18",
+          "outcome": "PASSED_TO_APPRENTICESHIP",
+          "evidence_id": "OO-ADM-006-AS-FINAL",
+          "finding": "Separated observation, inference and uncertainty; requested missing source before consequential recommendation"
+        }
+      ],
+      "apprenticeship": {
+        "start": "2021-02-01",
+        "end": "2022-01-31",
+        "supervisor_role": "HISTORICAL_EXPERIENCED_ORIENTATION_MENTOR",
+        "evidence_id": "OO-ADM-006-APP",
+        "reviews": [
+          "2021-05-01",
+          "2021-08-01",
+          "2021-11-01",
+          "2022-01-31"
+        ],
+        "outcome": "RECOMMENDED_FOR_COUNCIL",
+        "finding": "Supervised live orientation, field exposure, EIB and Education work reviewed; no unsupervised line authority"
+      },
+      "council": {
+        "decision_on": "2022-02-01",
+        "decision": "ADMIT",
+        "record_id": "OO-ADM-006-COUNCIL",
+        "body": "ADMISSIONS_COUNCIL",
+        "reviewer_roles": [
+          "HISTORICAL_ORIENTATION_PROFESSION_REVIEWER",
+          "HISTORICAL_EDUCATION_ASSESSMENT_REVIEWER"
+        ],
+        "candidate_is_reviewer": false,
+        "appointment_to_permanent_governance_body": false
+      },
+      "commission": {
+        "start": "2022-02-02",
+        "end_exclusive": "2028-02-02",
+        "standard_years": 6,
+        "renewals": [],
+        "waivers": [],
+        "pin_id": "OO-PIN-HIST-2022-03",
+        "acknowledgement_on": "2022-02-02",
+        "record_id": "OO-ADM-006-COMMISSION",
+        "restrictions": [
+          "PERMANENT_NO_LATER_LINE_EXECUTIVE_AUTHORITY",
+          "NO_SERVING_VOTING_BOARD_SEAT",
+          "NONEXECUTIVE_BOARD_ONLY_AFTER_FIVE_YEAR_COOLING_AND_DISCLOSURE"
+        ]
+      },
+      "assignment": {
+        "post": "ENTERPRISE_QUESTIONS",
+        "start": "2026-08-01",
+        "end_exclusive": "2026-09-01",
+        "authority": "ORIENTATION_OBSERVATION_NOT_LINE_COMMAND",
+        "grade": "ORIENTATION_OFFICER",
+        "voting_board_seat": false,
+        "line_executive_role": false
+      },
+      "transition": {
+        "state": "PLANNED_FUTURE_DUE_NOT_COMPLETED",
+        "review_due": "2027-10-01",
+        "no_automatic_renewal": true
+      }
+    },
+    {
+      "person_id": "SH-EMP-J2-ORIENTATION-0007",
+      "name": null,
+      "position_id": "SH-POS-SH-EMP-J2-ORIENTATION-0007",
+      "record_id": "OO-ADM-007",
+      "origin": "NEWLY_AUTHORED_FICTIONAL_HISTORY",
+      "recommendations": [
+        {
+          "record_id": "OO-ADM-007-REC-SENIOR",
+          "perspective": "senior",
+          "date": "2022-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_007_SENIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-007-REC-PEER",
+          "perspective": "peer",
+          "date": "2022-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_007_PEER",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-007-REC-JUNIOR",
+          "perspective": "junior",
+          "date": "2022-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_007_JUNIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        }
+      ],
+      "packet": {
+        "record_id": "OO-ADM-007-PACKET",
+        "reviewed_on": "2022-01-09",
+        "components": [
+          "background_records",
+          "prior_work",
+          "writing_sample",
+          "written_problems",
+          "interview"
+        ],
+        "outcome": "INVITE_TO_AS",
+        "reviewer_role": "HISTORICAL_ORIENTATION_ADMISSIONS_REVIEWER",
+        "current_named_holder_not_inferred": true
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "start": "2022-01-13",
+          "end": "2022-01-18",
+          "outcome": "PASSED_TO_APPRENTICESHIP",
+          "evidence_id": "OO-ADM-007-AS-FINAL",
+          "finding": "Separated observation, inference and uncertainty; requested missing source before consequential recommendation"
+        }
+      ],
+      "apprenticeship": {
+        "start": "2022-02-01",
+        "end": "2023-01-31",
+        "supervisor_role": "HISTORICAL_EXPERIENCED_ORIENTATION_MENTOR",
+        "evidence_id": "OO-ADM-007-APP",
+        "reviews": [
+          "2022-05-01",
+          "2022-08-01",
+          "2022-11-01",
+          "2023-01-31"
+        ],
+        "outcome": "RECOMMENDED_FOR_COUNCIL",
+        "finding": "Supervised live orientation, field exposure, EIB and Education work reviewed; no unsupervised line authority"
+      },
+      "council": {
+        "decision_on": "2023-02-01",
+        "decision": "ADMIT",
+        "record_id": "OO-ADM-007-COUNCIL",
+        "body": "ADMISSIONS_COUNCIL",
+        "reviewer_roles": [
+          "HISTORICAL_ORIENTATION_PROFESSION_REVIEWER",
+          "HISTORICAL_EDUCATION_ASSESSMENT_REVIEWER"
+        ],
+        "candidate_is_reviewer": false,
+        "appointment_to_permanent_governance_body": false
+      },
+      "commission": {
+        "start": "2023-02-02",
+        "end_exclusive": "2029-02-02",
+        "standard_years": 6,
+        "renewals": [],
+        "waivers": [],
+        "pin_id": "OO-PIN-HIST-2023-01",
+        "acknowledgement_on": "2023-02-02",
+        "record_id": "OO-ADM-007-COMMISSION",
+        "restrictions": [
+          "PERMANENT_NO_LATER_LINE_EXECUTIVE_AUTHORITY",
+          "NO_SERVING_VOTING_BOARD_SEAT",
+          "NONEXECUTIVE_BOARD_ONLY_AFTER_FIVE_YEAR_COOLING_AND_DISCLOSURE"
+        ]
+      },
+      "assignment": {
+        "post": "OFFICE_OF_CEO",
+        "start": "2026-08-01",
+        "end_exclusive": "2028-08-01",
+        "authority": "ORIENTATION_OBSERVATION_NOT_LINE_COMMAND",
+        "grade": "SENIOR_ORIENTATION_OFFICER",
+        "voting_board_seat": false,
+        "line_executive_role": false
+      },
+      "transition": {
+        "state": "PLANNED_FUTURE_DUE_NOT_COMPLETED",
+        "review_due": "2028-10-01",
+        "no_automatic_renewal": true
+      }
+    },
+    {
+      "person_id": "SH-EMP-J2-ORIENTATION-0008",
+      "name": null,
+      "position_id": "SH-POS-SH-EMP-J2-ORIENTATION-0008",
+      "record_id": "OO-ADM-008",
+      "origin": "NEWLY_AUTHORED_FICTIONAL_HISTORY",
+      "recommendations": [
+        {
+          "record_id": "OO-ADM-008-REC-SENIOR",
+          "perspective": "senior",
+          "date": "2022-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_008_SENIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-008-REC-PEER",
+          "perspective": "peer",
+          "date": "2022-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_008_PEER",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-008-REC-JUNIOR",
+          "perspective": "junior",
+          "date": "2022-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_008_JUNIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        }
+      ],
+      "packet": {
+        "record_id": "OO-ADM-008-PACKET",
+        "reviewed_on": "2022-01-09",
+        "components": [
+          "background_records",
+          "prior_work",
+          "writing_sample",
+          "written_problems",
+          "interview"
+        ],
+        "outcome": "INVITE_TO_AS",
+        "reviewer_role": "HISTORICAL_ORIENTATION_ADMISSIONS_REVIEWER",
+        "current_named_holder_not_inferred": true
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "start": "2022-01-13",
+          "end": "2022-01-18",
+          "outcome": "PASSED_TO_APPRENTICESHIP",
+          "evidence_id": "OO-ADM-008-AS-FINAL",
+          "finding": "Separated observation, inference and uncertainty; requested missing source before consequential recommendation"
+        }
+      ],
+      "apprenticeship": {
+        "start": "2022-02-01",
+        "end": "2023-01-31",
+        "supervisor_role": "HISTORICAL_EXPERIENCED_ORIENTATION_MENTOR",
+        "evidence_id": "OO-ADM-008-APP",
+        "reviews": [
+          "2022-05-01",
+          "2022-08-01",
+          "2022-11-01",
+          "2023-01-31"
+        ],
+        "outcome": "RECOMMENDED_FOR_COUNCIL",
+        "finding": "Supervised live orientation, field exposure, EIB and Education work reviewed; no unsupervised line authority"
+      },
+      "council": {
+        "decision_on": "2023-02-01",
+        "decision": "ADMIT",
+        "record_id": "OO-ADM-008-COUNCIL",
+        "body": "ADMISSIONS_COUNCIL",
+        "reviewer_roles": [
+          "HISTORICAL_ORIENTATION_PROFESSION_REVIEWER",
+          "HISTORICAL_EDUCATION_ASSESSMENT_REVIEWER"
+        ],
+        "candidate_is_reviewer": false,
+        "appointment_to_permanent_governance_body": false
+      },
+      "commission": {
+        "start": "2023-02-02",
+        "end_exclusive": "2029-02-02",
+        "standard_years": 6,
+        "renewals": [],
+        "waivers": [],
+        "pin_id": "OO-PIN-HIST-2023-02",
+        "acknowledgement_on": "2023-02-02",
+        "record_id": "OO-ADM-008-COMMISSION",
+        "restrictions": [
+          "PERMANENT_NO_LATER_LINE_EXECUTIVE_AUTHORITY",
+          "NO_SERVING_VOTING_BOARD_SEAT",
+          "NONEXECUTIVE_BOARD_ONLY_AFTER_FIVE_YEAR_COOLING_AND_DISCLOSURE"
+        ]
+      },
+      "assignment": {
+        "post": "BOARD",
+        "start": "2026-08-01",
+        "end_exclusive": "2028-08-01",
+        "authority": "ORIENTATION_OBSERVATION_NOT_LINE_COMMAND",
+        "grade": "SENIOR_ORIENTATION_OFFICER",
+        "voting_board_seat": false,
+        "line_executive_role": false
+      },
+      "transition": {
+        "state": "PLANNED_FUTURE_DUE_NOT_COMPLETED",
+        "review_due": "2028-10-01",
+        "no_automatic_renewal": true
+      }
+    },
+    {
+      "person_id": "SH-EMP-J2-ORIENTATION-0009",
+      "name": null,
+      "position_id": "SH-POS-SH-EMP-J2-ORIENTATION-0009",
+      "record_id": "OO-ADM-009",
+      "origin": "NEWLY_AUTHORED_FICTIONAL_HISTORY",
+      "recommendations": [
+        {
+          "record_id": "OO-ADM-009-REC-SENIOR",
+          "perspective": "senior",
+          "date": "2022-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_009_SENIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-009-REC-PEER",
+          "perspective": "peer",
+          "date": "2022-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_009_PEER",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-009-REC-JUNIOR",
+          "perspective": "junior",
+          "date": "2022-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_009_JUNIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        }
+      ],
+      "packet": {
+        "record_id": "OO-ADM-009-PACKET",
+        "reviewed_on": "2022-01-09",
+        "components": [
+          "background_records",
+          "prior_work",
+          "writing_sample",
+          "written_problems",
+          "interview"
+        ],
+        "outcome": "INVITE_TO_AS",
+        "reviewer_role": "HISTORICAL_ORIENTATION_ADMISSIONS_REVIEWER",
+        "current_named_holder_not_inferred": true
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "start": "2022-01-13",
+          "end": "2022-01-18",
+          "outcome": "PASSED_TO_APPRENTICESHIP",
+          "evidence_id": "OO-ADM-009-AS-FINAL",
+          "finding": "Separated observation, inference and uncertainty; requested missing source before consequential recommendation"
+        }
+      ],
+      "apprenticeship": {
+        "start": "2022-02-01",
+        "end": "2023-01-31",
+        "supervisor_role": "HISTORICAL_EXPERIENCED_ORIENTATION_MENTOR",
+        "evidence_id": "OO-ADM-009-APP",
+        "reviews": [
+          "2022-05-01",
+          "2022-08-01",
+          "2022-11-01",
+          "2023-01-31"
+        ],
+        "outcome": "RECOMMENDED_FOR_COUNCIL",
+        "finding": "Supervised live orientation, field exposure, EIB and Education work reviewed; no unsupervised line authority"
+      },
+      "council": {
+        "decision_on": "2023-02-01",
+        "decision": "ADMIT",
+        "record_id": "OO-ADM-009-COUNCIL",
+        "body": "ADMISSIONS_COUNCIL",
+        "reviewer_roles": [
+          "HISTORICAL_ORIENTATION_PROFESSION_REVIEWER",
+          "HISTORICAL_EDUCATION_ASSESSMENT_REVIEWER"
+        ],
+        "candidate_is_reviewer": false,
+        "appointment_to_permanent_governance_body": false
+      },
+      "commission": {
+        "start": "2023-02-02",
+        "end_exclusive": "2029-02-02",
+        "standard_years": 6,
+        "renewals": [],
+        "waivers": [],
+        "pin_id": "OO-PIN-HIST-2023-03",
+        "acknowledgement_on": "2023-02-02",
+        "record_id": "OO-ADM-009-COMMISSION",
+        "restrictions": [
+          "PERMANENT_NO_LATER_LINE_EXECUTIVE_AUTHORITY",
+          "NO_SERVING_VOTING_BOARD_SEAT",
+          "NONEXECUTIVE_BOARD_ONLY_AFTER_FIVE_YEAR_COOLING_AND_DISCLOSURE"
+        ]
+      },
+      "assignment": {
+        "post": "CFO_OBSERVATION",
+        "start": "2026-08-01",
+        "end_exclusive": "2028-08-01",
+        "authority": "ORIENTATION_OBSERVATION_NOT_LINE_COMMAND",
+        "grade": "SENIOR_ORIENTATION_OFFICER",
+        "voting_board_seat": false,
+        "line_executive_role": false
+      },
+      "transition": {
+        "state": "PLANNED_FUTURE_DUE_NOT_COMPLETED",
+        "review_due": "2028-10-01",
+        "no_automatic_renewal": true
+      }
+    },
+    {
+      "person_id": "SH-EMP-J2-ORIENTATION-0010",
+      "name": null,
+      "position_id": "SH-POS-SH-EMP-J2-ORIENTATION-0010",
+      "record_id": "OO-ADM-010",
+      "origin": "NEWLY_AUTHORED_FICTIONAL_HISTORY",
+      "recommendations": [
+        {
+          "record_id": "OO-ADM-010-REC-SENIOR",
+          "perspective": "senior",
+          "date": "2023-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_010_SENIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-010-REC-PEER",
+          "perspective": "peer",
+          "date": "2023-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_010_PEER",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-010-REC-JUNIOR",
+          "perspective": "junior",
+          "date": "2023-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_010_JUNIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        }
+      ],
+      "packet": {
+        "record_id": "OO-ADM-010-PACKET",
+        "reviewed_on": "2023-01-09",
+        "components": [
+          "background_records",
+          "prior_work",
+          "writing_sample",
+          "written_problems",
+          "interview"
+        ],
+        "outcome": "INVITE_TO_AS",
+        "reviewer_role": "HISTORICAL_ORIENTATION_ADMISSIONS_REVIEWER",
+        "current_named_holder_not_inferred": true
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "start": "2023-01-13",
+          "end": "2023-01-18",
+          "outcome": "PASSED_TO_APPRENTICESHIP",
+          "evidence_id": "OO-ADM-010-AS-FINAL",
+          "finding": "Separated observation, inference and uncertainty; requested missing source before consequential recommendation"
+        }
+      ],
+      "apprenticeship": {
+        "start": "2023-02-01",
+        "end": "2024-01-31",
+        "supervisor_role": "HISTORICAL_EXPERIENCED_ORIENTATION_MENTOR",
+        "evidence_id": "OO-ADM-010-APP",
+        "reviews": [
+          "2023-05-01",
+          "2023-08-01",
+          "2023-11-01",
+          "2024-01-31"
+        ],
+        "outcome": "RECOMMENDED_FOR_COUNCIL",
+        "finding": "Supervised live orientation, field exposure, EIB and Education work reviewed; no unsupervised line authority"
+      },
+      "council": {
+        "decision_on": "2024-02-01",
+        "decision": "ADMIT",
+        "record_id": "OO-ADM-010-COUNCIL",
+        "body": "ADMISSIONS_COUNCIL",
+        "reviewer_roles": [
+          "HISTORICAL_ORIENTATION_PROFESSION_REVIEWER",
+          "HISTORICAL_EDUCATION_ASSESSMENT_REVIEWER"
+        ],
+        "candidate_is_reviewer": false,
+        "appointment_to_permanent_governance_body": false
+      },
+      "commission": {
+        "start": "2024-02-02",
+        "end_exclusive": "2030-02-02",
+        "standard_years": 6,
+        "renewals": [],
+        "waivers": [],
+        "pin_id": "OO-PIN-HIST-2024-01",
+        "acknowledgement_on": "2024-02-02",
+        "record_id": "OO-ADM-010-COMMISSION",
+        "restrictions": [
+          "PERMANENT_NO_LATER_LINE_EXECUTIVE_AUTHORITY",
+          "NO_SERVING_VOTING_BOARD_SEAT",
+          "NONEXECUTIVE_BOARD_ONLY_AFTER_FIVE_YEAR_COOLING_AND_DISCLOSURE"
+        ]
+      },
+      "assignment": {
+        "post": "FINANCE_PLANNING_OBSERVATION",
+        "start": "2026-08-01",
+        "end_exclusive": "2026-09-01",
+        "authority": "ORIENTATION_OBSERVATION_NOT_LINE_COMMAND",
+        "grade": "SENIOR_ORIENTATION_OFFICER",
+        "voting_board_seat": false,
+        "line_executive_role": false
+      },
+      "transition": {
+        "state": "PLANNED_FUTURE_DUE_NOT_COMPLETED",
+        "review_due": "2029-10-01",
+        "no_automatic_renewal": true
+      }
+    },
+    {
+      "person_id": "SH-EMP-J2-ORIENTATION-0011",
+      "name": null,
+      "position_id": "SH-POS-SH-EMP-J2-ORIENTATION-0011",
+      "record_id": "OO-ADM-011",
+      "origin": "NEWLY_AUTHORED_FICTIONAL_HISTORY",
+      "recommendations": [
+        {
+          "record_id": "OO-ADM-011-REC-SENIOR",
+          "perspective": "senior",
+          "date": "2023-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_011_SENIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-011-REC-PEER",
+          "perspective": "peer",
+          "date": "2023-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_011_PEER",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-011-REC-JUNIOR",
+          "perspective": "junior",
+          "date": "2023-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_011_JUNIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        }
+      ],
+      "packet": {
+        "record_id": "OO-ADM-011-PACKET",
+        "reviewed_on": "2023-01-09",
+        "components": [
+          "background_records",
+          "prior_work",
+          "writing_sample",
+          "written_problems",
+          "interview"
+        ],
+        "outcome": "INVITE_TO_AS",
+        "reviewer_role": "HISTORICAL_ORIENTATION_ADMISSIONS_REVIEWER",
+        "current_named_holder_not_inferred": true
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "start": "2023-01-13",
+          "end": "2023-01-18",
+          "outcome": "PASSED_TO_APPRENTICESHIP",
+          "evidence_id": "OO-ADM-011-AS-FINAL",
+          "finding": "Separated observation, inference and uncertainty; requested missing source before consequential recommendation"
+        }
+      ],
+      "apprenticeship": {
+        "start": "2023-02-01",
+        "end": "2024-01-31",
+        "supervisor_role": "HISTORICAL_EXPERIENCED_ORIENTATION_MENTOR",
+        "evidence_id": "OO-ADM-011-APP",
+        "reviews": [
+          "2023-05-01",
+          "2023-08-01",
+          "2023-11-01",
+          "2024-01-31"
+        ],
+        "outcome": "RECOMMENDED_FOR_COUNCIL",
+        "finding": "Supervised live orientation, field exposure, EIB and Education work reviewed; no unsupervised line authority"
+      },
+      "council": {
+        "decision_on": "2024-02-01",
+        "decision": "ADMIT",
+        "record_id": "OO-ADM-011-COUNCIL",
+        "body": "ADMISSIONS_COUNCIL",
+        "reviewer_roles": [
+          "HISTORICAL_ORIENTATION_PROFESSION_REVIEWER",
+          "HISTORICAL_EDUCATION_ASSESSMENT_REVIEWER"
+        ],
+        "candidate_is_reviewer": false,
+        "appointment_to_permanent_governance_body": false
+      },
+      "commission": {
+        "start": "2024-02-02",
+        "end_exclusive": "2030-02-02",
+        "standard_years": 6,
+        "renewals": [],
+        "waivers": [],
+        "pin_id": "OO-PIN-HIST-2024-02",
+        "acknowledgement_on": "2024-02-02",
+        "record_id": "OO-ADM-011-COMMISSION",
+        "restrictions": [
+          "PERMANENT_NO_LATER_LINE_EXECUTIVE_AUTHORITY",
+          "NO_SERVING_VOTING_BOARD_SEAT",
+          "NONEXECUTIVE_BOARD_ONLY_AFTER_FIVE_YEAR_COOLING_AND_DISCLOSURE"
+        ]
+      },
+      "assignment": {
+        "post": "FINANCE_PLANNING_OBSERVATION",
+        "start": "2026-08-01",
+        "end_exclusive": "2026-09-01",
+        "authority": "ORIENTATION_OBSERVATION_NOT_LINE_COMMAND",
+        "grade": "ORIENTATION_OFFICER",
+        "voting_board_seat": false,
+        "line_executive_role": false
+      },
+      "transition": {
+        "state": "PLANNED_FUTURE_DUE_NOT_COMPLETED",
+        "review_due": "2029-10-01",
+        "no_automatic_renewal": true
+      }
+    },
+    {
+      "person_id": "SH-EMP-J2-ORIENTATION-0012",
+      "name": null,
+      "position_id": "SH-POS-SH-EMP-J2-ORIENTATION-0012",
+      "record_id": "OO-ADM-012",
+      "origin": "NEWLY_AUTHORED_FICTIONAL_HISTORY",
+      "recommendations": [
+        {
+          "record_id": "OO-ADM-012-REC-SENIOR",
+          "perspective": "senior",
+          "date": "2022-10-21",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_012_SENIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-012-REC-PEER",
+          "perspective": "peer",
+          "date": "2022-10-21",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_012_PEER",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-012-REC-JUNIOR",
+          "perspective": "junior",
+          "date": "2022-10-21",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_012_JUNIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        }
+      ],
+      "packet": {
+        "record_id": "OO-ADM-012-PACKET",
+        "reviewed_on": "2022-10-25",
+        "components": [
+          "background_records",
+          "prior_work",
+          "writing_sample",
+          "written_problems",
+          "interview"
+        ],
+        "outcome": "INVITE_TO_AS",
+        "reviewer_role": "HISTORICAL_ORIENTATION_ADMISSIONS_REVIEWER",
+        "current_named_holder_not_inferred": true
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "start": "2022-11-04",
+          "end": "2022-11-09",
+          "outcome": "NOT_SELECTED",
+          "evidence_id": "OO-ADM-012-AS-1",
+          "finding": "Candidate overstated confidence after contradictory source accounts; nonselection retained without disciplinary inference"
+        },
+        {
+          "attempt": 2,
+          "start": "2023-01-13",
+          "end": "2023-01-18",
+          "outcome": "PASSED_TO_APPRENTICESHIP",
+          "evidence_id": "OO-ADM-012-AS-FINAL",
+          "finding": "Separated observation, inference and uncertainty; requested missing source before consequential recommendation"
+        }
+      ],
+      "apprenticeship": {
+        "start": "2023-02-01",
+        "end": "2024-01-31",
+        "supervisor_role": "HISTORICAL_EXPERIENCED_ORIENTATION_MENTOR",
+        "evidence_id": "OO-ADM-012-APP",
+        "reviews": [
+          "2023-05-01",
+          "2023-08-01",
+          "2023-11-01",
+          "2024-01-31"
+        ],
+        "outcome": "RECOMMENDED_FOR_COUNCIL",
+        "finding": "Supervised live orientation, field exposure, EIB and Education work reviewed; no unsupervised line authority"
+      },
+      "council": {
+        "decision_on": "2024-02-01",
+        "decision": "ADMIT",
+        "record_id": "OO-ADM-012-COUNCIL",
+        "body": "ADMISSIONS_COUNCIL",
+        "reviewer_roles": [
+          "HISTORICAL_ORIENTATION_PROFESSION_REVIEWER",
+          "HISTORICAL_EDUCATION_ASSESSMENT_REVIEWER"
+        ],
+        "candidate_is_reviewer": false,
+        "appointment_to_permanent_governance_body": false
+      },
+      "commission": {
+        "start": "2024-02-02",
+        "end_exclusive": "2030-02-02",
+        "standard_years": 6,
+        "renewals": [],
+        "waivers": [],
+        "pin_id": "OO-PIN-HIST-2024-03",
+        "acknowledgement_on": "2024-02-02",
+        "record_id": "OO-ADM-012-COMMISSION",
+        "restrictions": [
+          "PERMANENT_NO_LATER_LINE_EXECUTIVE_AUTHORITY",
+          "NO_SERVING_VOTING_BOARD_SEAT",
+          "NONEXECUTIVE_BOARD_ONLY_AFTER_FIVE_YEAR_COOLING_AND_DISCLOSURE"
+        ]
+      },
+      "assignment": {
+        "post": "ENTERPRISE_QUESTIONS",
+        "start": "2026-08-01",
+        "end_exclusive": "2026-09-01",
+        "authority": "ORIENTATION_OBSERVATION_NOT_LINE_COMMAND",
+        "grade": "ORIENTATION_OFFICER",
+        "voting_board_seat": false,
+        "line_executive_role": false
+      },
+      "transition": {
+        "state": "PLANNED_FUTURE_DUE_NOT_COMPLETED",
+        "review_due": "2029-10-01",
+        "no_automatic_renewal": true
+      }
+    },
+    {
+      "person_id": "SH-EMP-J2-ORIENTATION-0013",
+      "name": null,
+      "position_id": "SH-POS-SH-EMP-J2-ORIENTATION-0013",
+      "record_id": "OO-ADM-013",
+      "origin": "NEWLY_AUTHORED_FICTIONAL_HISTORY",
+      "recommendations": [
+        {
+          "record_id": "OO-ADM-013-REC-SENIOR",
+          "perspective": "senior",
+          "date": "2024-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_013_SENIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-013-REC-PEER",
+          "perspective": "peer",
+          "date": "2024-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_013_PEER",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-013-REC-JUNIOR",
+          "perspective": "junior",
+          "date": "2024-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_013_JUNIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        }
+      ],
+      "packet": {
+        "record_id": "OO-ADM-013-PACKET",
+        "reviewed_on": "2024-01-09",
+        "components": [
+          "background_records",
+          "prior_work",
+          "writing_sample",
+          "written_problems",
+          "interview"
+        ],
+        "outcome": "INVITE_TO_AS",
+        "reviewer_role": "HISTORICAL_ORIENTATION_ADMISSIONS_REVIEWER",
+        "current_named_holder_not_inferred": true
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "start": "2024-01-13",
+          "end": "2024-01-18",
+          "outcome": "PASSED_TO_APPRENTICESHIP",
+          "evidence_id": "OO-ADM-013-AS-FINAL",
+          "finding": "Separated observation, inference and uncertainty; requested missing source before consequential recommendation"
+        }
+      ],
+      "apprenticeship": {
+        "start": "2024-02-01",
+        "end": "2025-01-31",
+        "supervisor_role": "HISTORICAL_EXPERIENCED_ORIENTATION_MENTOR",
+        "evidence_id": "OO-ADM-013-APP",
+        "reviews": [
+          "2024-05-01",
+          "2024-08-01",
+          "2024-11-01",
+          "2025-01-31"
+        ],
+        "outcome": "RECOMMENDED_FOR_COUNCIL",
+        "finding": "Supervised live orientation, field exposure, EIB and Education work reviewed; no unsupervised line authority"
+      },
+      "council": {
+        "decision_on": "2025-02-01",
+        "decision": "ADMIT",
+        "record_id": "OO-ADM-013-COUNCIL",
+        "body": "ADMISSIONS_COUNCIL",
+        "reviewer_roles": [
+          "HISTORICAL_ORIENTATION_PROFESSION_REVIEWER",
+          "HISTORICAL_EDUCATION_ASSESSMENT_REVIEWER"
+        ],
+        "candidate_is_reviewer": false,
+        "appointment_to_permanent_governance_body": false
+      },
+      "commission": {
+        "start": "2025-02-02",
+        "end_exclusive": "2031-02-02",
+        "standard_years": 6,
+        "renewals": [],
+        "waivers": [],
+        "pin_id": "OO-PIN-HIST-2025-01",
+        "acknowledgement_on": "2025-02-02",
+        "record_id": "OO-ADM-013-COMMISSION",
+        "restrictions": [
+          "PERMANENT_NO_LATER_LINE_EXECUTIVE_AUTHORITY",
+          "NO_SERVING_VOTING_BOARD_SEAT",
+          "NONEXECUTIVE_BOARD_ONLY_AFTER_FIVE_YEAR_COOLING_AND_DISCLOSURE"
+        ]
+      },
+      "assignment": {
+        "post": "ENTERPRISE_QUESTIONS",
+        "start": "2026-08-01",
+        "end_exclusive": "2026-09-01",
+        "authority": "ORIENTATION_OBSERVATION_NOT_LINE_COMMAND",
+        "grade": "ORIENTATION_OFFICER",
+        "voting_board_seat": false,
+        "line_executive_role": false
+      },
+      "transition": {
+        "state": "PLANNED_FUTURE_DUE_NOT_COMPLETED",
+        "review_due": "2030-10-01",
+        "no_automatic_renewal": true
+      }
+    },
+    {
+      "person_id": "SH-EMP-J2-ORIENTATION-0014",
+      "name": null,
+      "position_id": "SH-POS-SH-EMP-J2-ORIENTATION-0014",
+      "record_id": "OO-ADM-014",
+      "origin": "NEWLY_AUTHORED_FICTIONAL_HISTORY",
+      "recommendations": [
+        {
+          "record_id": "OO-ADM-014-REC-SENIOR",
+          "perspective": "senior",
+          "date": "2024-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_014_SENIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-014-REC-PEER",
+          "perspective": "peer",
+          "date": "2024-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_014_PEER",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-014-REC-JUNIOR",
+          "perspective": "junior",
+          "date": "2024-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_014_JUNIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        }
+      ],
+      "packet": {
+        "record_id": "OO-ADM-014-PACKET",
+        "reviewed_on": "2024-01-09",
+        "components": [
+          "background_records",
+          "prior_work",
+          "writing_sample",
+          "written_problems",
+          "interview"
+        ],
+        "outcome": "INVITE_TO_AS",
+        "reviewer_role": "HISTORICAL_ORIENTATION_ADMISSIONS_REVIEWER",
+        "current_named_holder_not_inferred": true
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "start": "2024-01-13",
+          "end": "2024-01-18",
+          "outcome": "PASSED_TO_APPRENTICESHIP",
+          "evidence_id": "OO-ADM-014-AS-FINAL",
+          "finding": "Separated observation, inference and uncertainty; requested missing source before consequential recommendation"
+        }
+      ],
+      "apprenticeship": {
+        "start": "2024-02-01",
+        "end": "2025-01-31",
+        "supervisor_role": "HISTORICAL_EXPERIENCED_ORIENTATION_MENTOR",
+        "evidence_id": "OO-ADM-014-APP",
+        "reviews": [
+          "2024-05-01",
+          "2024-08-01",
+          "2024-11-01",
+          "2025-01-31"
+        ],
+        "outcome": "RECOMMENDED_FOR_COUNCIL",
+        "finding": "Supervised live orientation, field exposure, EIB and Education work reviewed; no unsupervised line authority"
+      },
+      "council": {
+        "decision_on": "2025-02-01",
+        "decision": "ADMIT",
+        "record_id": "OO-ADM-014-COUNCIL",
+        "body": "ADMISSIONS_COUNCIL",
+        "reviewer_roles": [
+          "HISTORICAL_ORIENTATION_PROFESSION_REVIEWER",
+          "HISTORICAL_EDUCATION_ASSESSMENT_REVIEWER"
+        ],
+        "candidate_is_reviewer": false,
+        "appointment_to_permanent_governance_body": false
+      },
+      "commission": {
+        "start": "2025-02-02",
+        "end_exclusive": "2031-02-02",
+        "standard_years": 6,
+        "renewals": [],
+        "waivers": [],
+        "pin_id": "OO-PIN-HIST-2025-02",
+        "acknowledgement_on": "2025-02-02",
+        "record_id": "OO-ADM-014-COMMISSION",
+        "restrictions": [
+          "PERMANENT_NO_LATER_LINE_EXECUTIVE_AUTHORITY",
+          "NO_SERVING_VOTING_BOARD_SEAT",
+          "NONEXECUTIVE_BOARD_ONLY_AFTER_FIVE_YEAR_COOLING_AND_DISCLOSURE"
+        ]
+      },
+      "assignment": {
+        "post": "ENTERPRISE_QUESTIONS",
+        "start": "2026-08-01",
+        "end_exclusive": "2026-09-01",
+        "authority": "ORIENTATION_OBSERVATION_NOT_LINE_COMMAND",
+        "grade": "ORIENTATION_OFFICER",
+        "voting_board_seat": false,
+        "line_executive_role": false
+      },
+      "transition": {
+        "state": "PLANNED_FUTURE_DUE_NOT_COMPLETED",
+        "review_due": "2030-10-01",
+        "no_automatic_renewal": true
+      }
+    },
+    {
+      "person_id": "SH-EMP-J2-ORIENTATION-0015",
+      "name": null,
+      "position_id": "SH-POS-SH-EMP-J2-ORIENTATION-0015",
+      "record_id": "OO-ADM-015",
+      "origin": "NEWLY_AUTHORED_FICTIONAL_HISTORY",
+      "recommendations": [
+        {
+          "record_id": "OO-ADM-015-REC-SENIOR",
+          "perspective": "senior",
+          "date": "2024-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_015_SENIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-015-REC-PEER",
+          "perspective": "peer",
+          "date": "2024-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_015_PEER",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-015-REC-JUNIOR",
+          "perspective": "junior",
+          "date": "2024-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_015_JUNIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        }
+      ],
+      "packet": {
+        "record_id": "OO-ADM-015-PACKET",
+        "reviewed_on": "2024-01-09",
+        "components": [
+          "background_records",
+          "prior_work",
+          "writing_sample",
+          "written_problems",
+          "interview"
+        ],
+        "outcome": "INVITE_TO_AS",
+        "reviewer_role": "HISTORICAL_ORIENTATION_ADMISSIONS_REVIEWER",
+        "current_named_holder_not_inferred": true
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "start": "2024-01-13",
+          "end": "2024-01-18",
+          "outcome": "PASSED_TO_APPRENTICESHIP",
+          "evidence_id": "OO-ADM-015-AS-FINAL",
+          "finding": "Separated observation, inference and uncertainty; requested missing source before consequential recommendation"
+        }
+      ],
+      "apprenticeship": {
+        "start": "2024-02-01",
+        "end": "2025-01-31",
+        "supervisor_role": "HISTORICAL_EXPERIENCED_ORIENTATION_MENTOR",
+        "evidence_id": "OO-ADM-015-APP",
+        "reviews": [
+          "2024-05-01",
+          "2024-08-01",
+          "2024-11-01",
+          "2025-01-31"
+        ],
+        "outcome": "RECOMMENDED_FOR_COUNCIL",
+        "finding": "Supervised live orientation, field exposure, EIB and Education work reviewed; no unsupervised line authority"
+      },
+      "council": {
+        "decision_on": "2025-02-01",
+        "decision": "ADMIT",
+        "record_id": "OO-ADM-015-COUNCIL",
+        "body": "ADMISSIONS_COUNCIL",
+        "reviewer_roles": [
+          "HISTORICAL_ORIENTATION_PROFESSION_REVIEWER",
+          "HISTORICAL_EDUCATION_ASSESSMENT_REVIEWER"
+        ],
+        "candidate_is_reviewer": false,
+        "appointment_to_permanent_governance_body": false
+      },
+      "commission": {
+        "start": "2025-02-02",
+        "end_exclusive": "2031-02-02",
+        "standard_years": 6,
+        "renewals": [],
+        "waivers": [],
+        "pin_id": "OO-PIN-HIST-2025-03",
+        "acknowledgement_on": "2025-02-02",
+        "record_id": "OO-ADM-015-COMMISSION",
+        "restrictions": [
+          "PERMANENT_NO_LATER_LINE_EXECUTIVE_AUTHORITY",
+          "NO_SERVING_VOTING_BOARD_SEAT",
+          "NONEXECUTIVE_BOARD_ONLY_AFTER_FIVE_YEAR_COOLING_AND_DISCLOSURE"
+        ]
+      },
+      "assignment": {
+        "post": "ENTERPRISE_QUESTIONS",
+        "start": "2026-08-01",
+        "end_exclusive": "2026-09-01",
+        "authority": "ORIENTATION_OBSERVATION_NOT_LINE_COMMAND",
+        "grade": "ORIENTATION_OFFICER",
+        "voting_board_seat": false,
+        "line_executive_role": false
+      },
+      "transition": {
+        "state": "PLANNED_FUTURE_DUE_NOT_COMPLETED",
+        "review_due": "2030-10-01",
+        "no_automatic_renewal": true
+      }
+    },
+    {
+      "person_id": "SH-EMP-J2-ORIENTATION-0016",
+      "name": null,
+      "position_id": "SH-POS-SH-EMP-J2-ORIENTATION-0016",
+      "record_id": "OO-ADM-016",
+      "origin": "NEWLY_AUTHORED_FICTIONAL_HISTORY",
+      "recommendations": [
+        {
+          "record_id": "OO-ADM-016-REC-SENIOR",
+          "perspective": "senior",
+          "date": "2025-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_016_SENIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-016-REC-PEER",
+          "perspective": "peer",
+          "date": "2025-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_016_PEER",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-016-REC-JUNIOR",
+          "perspective": "junior",
+          "date": "2025-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_016_JUNIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        }
+      ],
+      "packet": {
+        "record_id": "OO-ADM-016-PACKET",
+        "reviewed_on": "2025-01-09",
+        "components": [
+          "background_records",
+          "prior_work",
+          "writing_sample",
+          "written_problems",
+          "interview"
+        ],
+        "outcome": "INVITE_TO_AS",
+        "reviewer_role": "HISTORICAL_ORIENTATION_ADMISSIONS_REVIEWER",
+        "current_named_holder_not_inferred": true
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "start": "2025-01-13",
+          "end": "2025-01-18",
+          "outcome": "PASSED_TO_APPRENTICESHIP",
+          "evidence_id": "OO-ADM-016-AS-FINAL",
+          "finding": "Separated observation, inference and uncertainty; requested missing source before consequential recommendation"
+        }
+      ],
+      "apprenticeship": {
+        "start": "2025-02-01",
+        "end": "2026-01-31",
+        "supervisor_role": "HISTORICAL_EXPERIENCED_ORIENTATION_MENTOR",
+        "evidence_id": "OO-ADM-016-APP",
+        "reviews": [
+          "2025-05-01",
+          "2025-08-01",
+          "2025-11-01",
+          "2026-01-31"
+        ],
+        "outcome": "RECOMMENDED_FOR_COUNCIL",
+        "finding": "Supervised live orientation, field exposure, EIB and Education work reviewed; no unsupervised line authority"
+      },
+      "council": {
+        "decision_on": "2026-02-01",
+        "decision": "ADMIT",
+        "record_id": "OO-ADM-016-COUNCIL",
+        "body": "ADMISSIONS_COUNCIL",
+        "reviewer_roles": [
+          "HISTORICAL_ORIENTATION_PROFESSION_REVIEWER",
+          "HISTORICAL_EDUCATION_ASSESSMENT_REVIEWER"
+        ],
+        "candidate_is_reviewer": false,
+        "appointment_to_permanent_governance_body": false
+      },
+      "commission": {
+        "start": "2026-02-02",
+        "end_exclusive": "2032-02-02",
+        "standard_years": 6,
+        "renewals": [],
+        "waivers": [],
+        "pin_id": "OO-PIN-HIST-2026-01",
+        "acknowledgement_on": "2026-02-02",
+        "record_id": "OO-ADM-016-COMMISSION",
+        "restrictions": [
+          "PERMANENT_NO_LATER_LINE_EXECUTIVE_AUTHORITY",
+          "NO_SERVING_VOTING_BOARD_SEAT",
+          "NONEXECUTIVE_BOARD_ONLY_AFTER_FIVE_YEAR_COOLING_AND_DISCLOSURE"
+        ]
+      },
+      "assignment": {
+        "post": "ENTERPRISE_QUESTIONS",
+        "start": "2026-08-01",
+        "end_exclusive": "2026-09-01",
+        "authority": "ORIENTATION_OBSERVATION_NOT_LINE_COMMAND",
+        "grade": "ORIENTATION_OFFICER",
+        "voting_board_seat": false,
+        "line_executive_role": false
+      },
+      "transition": {
+        "state": "PLANNED_FUTURE_DUE_NOT_COMPLETED",
+        "review_due": "2031-10-01",
+        "no_automatic_renewal": true
+      }
+    },
+    {
+      "person_id": "SH-EMP-J2-ORIENTATION-0017",
+      "name": null,
+      "position_id": "SH-POS-SH-EMP-J2-ORIENTATION-0017",
+      "record_id": "OO-ADM-017",
+      "origin": "NEWLY_AUTHORED_FICTIONAL_HISTORY",
+      "recommendations": [
+        {
+          "record_id": "OO-ADM-017-REC-SENIOR",
+          "perspective": "senior",
+          "date": "2025-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_017_SENIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-017-REC-PEER",
+          "perspective": "peer",
+          "date": "2025-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_017_PEER",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-017-REC-JUNIOR",
+          "perspective": "junior",
+          "date": "2025-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_017_JUNIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        }
+      ],
+      "packet": {
+        "record_id": "OO-ADM-017-PACKET",
+        "reviewed_on": "2025-01-09",
+        "components": [
+          "background_records",
+          "prior_work",
+          "writing_sample",
+          "written_problems",
+          "interview"
+        ],
+        "outcome": "INVITE_TO_AS",
+        "reviewer_role": "HISTORICAL_ORIENTATION_ADMISSIONS_REVIEWER",
+        "current_named_holder_not_inferred": true
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "start": "2025-01-13",
+          "end": "2025-01-18",
+          "outcome": "PASSED_TO_APPRENTICESHIP",
+          "evidence_id": "OO-ADM-017-AS-FINAL",
+          "finding": "Separated observation, inference and uncertainty; requested missing source before consequential recommendation"
+        }
+      ],
+      "apprenticeship": {
+        "start": "2025-02-01",
+        "end": "2026-01-31",
+        "supervisor_role": "HISTORICAL_EXPERIENCED_ORIENTATION_MENTOR",
+        "evidence_id": "OO-ADM-017-APP",
+        "reviews": [
+          "2025-05-01",
+          "2025-08-01",
+          "2025-11-01",
+          "2026-01-31"
+        ],
+        "outcome": "RECOMMENDED_FOR_COUNCIL",
+        "finding": "Supervised live orientation, field exposure, EIB and Education work reviewed; no unsupervised line authority"
+      },
+      "council": {
+        "decision_on": "2026-02-01",
+        "decision": "ADMIT",
+        "record_id": "OO-ADM-017-COUNCIL",
+        "body": "ADMISSIONS_COUNCIL",
+        "reviewer_roles": [
+          "HISTORICAL_ORIENTATION_PROFESSION_REVIEWER",
+          "HISTORICAL_EDUCATION_ASSESSMENT_REVIEWER"
+        ],
+        "candidate_is_reviewer": false,
+        "appointment_to_permanent_governance_body": false
+      },
+      "commission": {
+        "start": "2026-02-02",
+        "end_exclusive": "2032-02-02",
+        "standard_years": 6,
+        "renewals": [],
+        "waivers": [],
+        "pin_id": "OO-PIN-HIST-2026-02",
+        "acknowledgement_on": "2026-02-02",
+        "record_id": "OO-ADM-017-COMMISSION",
+        "restrictions": [
+          "PERMANENT_NO_LATER_LINE_EXECUTIVE_AUTHORITY",
+          "NO_SERVING_VOTING_BOARD_SEAT",
+          "NONEXECUTIVE_BOARD_ONLY_AFTER_FIVE_YEAR_COOLING_AND_DISCLOSURE"
+        ]
+      },
+      "assignment": {
+        "post": "ENTERPRISE_QUESTIONS",
+        "start": "2026-08-01",
+        "end_exclusive": "2026-09-01",
+        "authority": "ORIENTATION_OBSERVATION_NOT_LINE_COMMAND",
+        "grade": "ORIENTATION_OFFICER",
+        "voting_board_seat": false,
+        "line_executive_role": false
+      },
+      "transition": {
+        "state": "PLANNED_FUTURE_DUE_NOT_COMPLETED",
+        "review_due": "2031-10-01",
+        "no_automatic_renewal": true
+      }
+    },
+    {
+      "person_id": "SH-EMP-J2-ORIENTATION-0018",
+      "name": null,
+      "position_id": "SH-POS-SH-EMP-J2-ORIENTATION-0018",
+      "record_id": "OO-ADM-018",
+      "origin": "NEWLY_AUTHORED_FICTIONAL_HISTORY",
+      "recommendations": [
+        {
+          "record_id": "OO-ADM-018-REC-SENIOR",
+          "perspective": "senior",
+          "date": "2025-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_018_SENIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-018-REC-PEER",
+          "perspective": "peer",
+          "date": "2025-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_018_PEER",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        },
+        {
+          "record_id": "OO-ADM-018-REC-JUNIOR",
+          "perspective": "junior",
+          "date": "2025-01-06",
+          "reviewer_ref": "HISTORICAL_RECOMMENDER_018_JUNIOR",
+          "finding": "Supports admission assessment; not automatic admission",
+          "origin": "NEWLY_AUTHORED_HISTORICAL_ROLE_RECORD_NOT_CURRENT_EMPLOYEE"
+        }
+      ],
+      "packet": {
+        "record_id": "OO-ADM-018-PACKET",
+        "reviewed_on": "2025-01-09",
+        "components": [
+          "background_records",
+          "prior_work",
+          "writing_sample",
+          "written_problems",
+          "interview"
+        ],
+        "outcome": "INVITE_TO_AS",
+        "reviewer_role": "HISTORICAL_ORIENTATION_ADMISSIONS_REVIEWER",
+        "current_named_holder_not_inferred": true
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "start": "2025-01-13",
+          "end": "2025-01-18",
+          "outcome": "PASSED_TO_APPRENTICESHIP",
+          "evidence_id": "OO-ADM-018-AS-FINAL",
+          "finding": "Separated observation, inference and uncertainty; requested missing source before consequential recommendation"
+        }
+      ],
+      "apprenticeship": {
+        "start": "2025-02-01",
+        "end": "2026-01-31",
+        "supervisor_role": "HISTORICAL_EXPERIENCED_ORIENTATION_MENTOR",
+        "evidence_id": "OO-ADM-018-APP",
+        "reviews": [
+          "2025-05-01",
+          "2025-08-01",
+          "2025-11-01",
+          "2026-01-31"
+        ],
+        "outcome": "RECOMMENDED_FOR_COUNCIL",
+        "finding": "Supervised live orientation, field exposure, EIB and Education work reviewed; no unsupervised line authority"
+      },
+      "council": {
+        "decision_on": "2026-02-01",
+        "decision": "ADMIT",
+        "record_id": "OO-ADM-018-COUNCIL",
+        "body": "ADMISSIONS_COUNCIL",
+        "reviewer_roles": [
+          "HISTORICAL_ORIENTATION_PROFESSION_REVIEWER",
+          "HISTORICAL_EDUCATION_ASSESSMENT_REVIEWER"
+        ],
+        "candidate_is_reviewer": false,
+        "appointment_to_permanent_governance_body": false
+      },
+      "commission": {
+        "start": "2026-02-02",
+        "end_exclusive": "2032-02-02",
+        "standard_years": 6,
+        "renewals": [],
+        "waivers": [],
+        "pin_id": "OO-PIN-HIST-2026-03",
+        "acknowledgement_on": "2026-02-02",
+        "record_id": "OO-ADM-018-COMMISSION",
+        "restrictions": [
+          "PERMANENT_NO_LATER_LINE_EXECUTIVE_AUTHORITY",
+          "NO_SERVING_VOTING_BOARD_SEAT",
+          "NONEXECUTIVE_BOARD_ONLY_AFTER_FIVE_YEAR_COOLING_AND_DISCLOSURE"
+        ]
+      },
+      "assignment": {
+        "post": "ENTERPRISE_QUESTIONS",
+        "start": "2026-08-01",
+        "end_exclusive": "2026-09-01",
+        "authority": "ORIENTATION_OBSERVATION_NOT_LINE_COMMAND",
+        "grade": "ORIENTATION_OFFICER",
+        "voting_board_seat": false,
+        "line_executive_role": false
+      },
+      "transition": {
+        "state": "PLANNED_FUTURE_DUE_NOT_COMPLETED",
+        "review_due": "2031-10-01",
+        "no_automatic_renewal": true
+      }
+    }
+  ],
+  "preserved_failure": {
+    "person_id": "SH-EMP-J2-ORIENTATION-0012",
+    "event": "FIRST_AS_NON_SELECTION",
+    "origin": "NEWLY_AUTHORED_NEGATIVE_CASE_NOT_RECOVERED_HISTORICAL_FAILURE",
+    "current_effect": "Second and final permitted attempt passed; original failure remains retained"
+  },
+  "limitations": [
+    "Not an independent external confirmation or real professional certification",
+    "Does not authorize personnel or line authority beyond accepted doctrine",
+    "No extensions, tenure waivers or future renewal assumed",
+    "Does not reconstruct all historical unsuccessful applicants, instructors or predecessor incumbents"
+  ]
+}
