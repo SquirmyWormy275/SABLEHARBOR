@@ -174,6 +174,7 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Local access-remediation continuation](../../../enterprise/audit_suite/ACCESS_REMEDIATION_ACTIVITY.md) — MD
 - [Declared-subject access review continuation](../../../enterprise/audit_suite/ACCESS_REVIEW_CONTINUATION.md) — MD
+- [Adjacent declared-subject access review](../../../enterprise/audit_suite/ACCESS_REVIEW_SUCCESSOR.md) — MD
 - [Persistent local backup byte operations](../../../enterprise/audit_suite/BACKUP_RUNTIME.md) — MD
 - [Exact native configuration admission to backup datasets](../../../enterprise/audit_suite/BACKUP_SOURCE_ADMISSION.md) — MD
 - [Local configuration change and release source pair](../../../enterprise/audit_suite/CHANGE_ACTIVITY.md) — MD
@@ -184,6 +185,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Configuration inventory and drift from original release records](../../../enterprise/audit_suite/CONFIGURATION_ACTIVITY.md) — MD
 - [Explicit persistent configuration export](../../../enterprise/audit_suite/CONFIGURATION_EXPORT.md) — MD
 - [Persistent local configuration runtime](../../../enterprise/audit_suite/CONFIGURATION_RUNTIME.md) — MD
+- [Local dataset quality and correction](../../../enterprise/audit_suite/DATA_QUALITY_RUNTIME.md) — MD
 - [Local disposal runtime](../../../enterprise/audit_suite/DISPOSAL_RUNTIME.md) — MD
 - [Per-control legacy documentary custody](../../../enterprise/audit_suite/DOCUMENTARY_CUSTODY.md) — MD
 - [Instructor-authored assessment history](../../../enterprise/audit_suite/INSTRUCTOR_ASSESSMENTS.md) — MD

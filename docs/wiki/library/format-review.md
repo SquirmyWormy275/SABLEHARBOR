@@ -6,7 +6,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 155 |
+| COUNTERPART_REVIEW_REQUIRED | 157 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 106 |
@@ -124,6 +124,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Geographic evidence releases](../../releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) — Corporate document-format reconciliation
 - [Local access-remediation continuation](../../../enterprise/audit_suite/ACCESS_REMEDIATION_ACTIVITY.md) — Corporate document-format reconciliation
 - [Declared-subject access review continuation](../../../enterprise/audit_suite/ACCESS_REVIEW_CONTINUATION.md) — Corporate document-format reconciliation
+- [Adjacent declared-subject access review](../../../enterprise/audit_suite/ACCESS_REVIEW_SUCCESSOR.md) — Corporate document-format reconciliation
 - [Persistent local backup byte operations](../../../enterprise/audit_suite/BACKUP_RUNTIME.md) — Corporate document-format reconciliation
 - [Exact native configuration admission to backup datasets](../../../enterprise/audit_suite/BACKUP_SOURCE_ADMISSION.md) — Corporate document-format reconciliation
 - [Local configuration change and release source pair](../../../enterprise/audit_suite/CHANGE_ACTIVITY.md) — Corporate document-format reconciliation
@@ -134,6 +135,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Configuration inventory and drift from original release records](../../../enterprise/audit_suite/CONFIGURATION_ACTIVITY.md) — Corporate document-format reconciliation
 - [Explicit persistent configuration export](../../../enterprise/audit_suite/CONFIGURATION_EXPORT.md) — Corporate document-format reconciliation
 - [Persistent local configuration runtime](../../../enterprise/audit_suite/CONFIGURATION_RUNTIME.md) — Corporate document-format reconciliation
+- [Local dataset quality and correction](../../../enterprise/audit_suite/DATA_QUALITY_RUNTIME.md) — Corporate document-format reconciliation
 - [Local disposal runtime](../../../enterprise/audit_suite/DISPOSAL_RUNTIME.md) — Corporate document-format reconciliation
 - [Per-control legacy documentary custody](../../../enterprise/audit_suite/DOCUMENTARY_CUSTODY.md) — Corporate document-format reconciliation
 - [Instructor-authored assessment history](../../../enterprise/audit_suite/INSTRUCTOR_ASSESSMENTS.md) — Corporate document-format reconciliation

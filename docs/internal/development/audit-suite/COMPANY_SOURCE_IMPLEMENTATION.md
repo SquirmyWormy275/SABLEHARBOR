@@ -899,3 +899,41 @@ execution, model consultation quality, professional rubric calibration or owner
 acceptance. The complete repository suite at frozen commit `1c3b4705` passed
 1,834 tests with three skips; later features have their own focused checks and are
 not silently included in that historical result.
+
+### Dataset correction and adjacent review continuity
+
+The [data-quality runtime](../../../../enterprise/audit_suite/DATA_QUALITY_RUNTIME.md)
+validates a bounded nonpersonal dataset against independently declared record IDs,
+an event window and reference entities. Joins and totals are computed from the
+retained rows. Invalid, duplicate and missing records leave totals explicitly
+partial and unreliable. Exact row-hash corrections append a new raw version,
+preserve earlier inputs and outputs, and require a fresh transformation. Historical
+command retries cannot rewind a later transformation. Twenty-seven focused checks
+passed; local rule compliance does not establish business truth or source acceptance.
+
+The [access-review successor](../../../../enterprise/audit_suite/ACCESS_REVIEW_SUCCESSOR.md)
+verifies the original sixteen-record identity/remediation chain and its three-record
+review before producing one adjacent quarterly review. It preserves the declared
+subject, unresolved cohort and absence of intervening activity. Twelve focused
+checks passed. A later quarter cannot be produced by silently skipping the prior
+review or converting a limited cohort into a workforce census.
+
+### Expanded collection and retained procedure observations
+
+Two private full-control workrooms collected 605 and 632 exact company originals
+through ordinary scoped source access. All temporary learner grants were revoked.
+The retained originals were independently compared with their company source bytes.
+Both workrooms retain 70 controls and 409 tasks; collection alone changes no task
+conclusion. A subsequent technical procedure exercise added three provisional
+populations, manual selections and workpapers per branch, with open technical
+review comments and findings. Its six local recovery/configuration checks do not
+represent completion of all audit procedures or a professional assessment.
+
+A separate company-owned March–December exercise executed 46 and 47 explicit steps
+against thirteen declared local recovery occurrences per branch. The second branch
+retains a failed attempt, an explicit retry and one missed September checkpoint.
+Each branch performed three byte-level restores. Independent read-only verification
+confirmed native history, unchanged source inputs and zero audit-access journals.
+The authored monthly schedule does not establish approved RPOs, production failover
+or continuous enterprise coverage. These new operations are separate from the
+605/632-original collection and require their own explicit collection profile.
