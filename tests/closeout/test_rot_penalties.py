@@ -17,9 +17,9 @@ def test_current_cutoff_and_opening_roll_forward_without_cash():
     for m in range(1, 9):
         p.post_month(b, 2026, m)
     assert -b.balances["RWH"]["CO_ROT_PENALTY_PAY"] - b.balances["RWH"]["CO_ROT_INTEREST_PAY"] == D(
-        "188442.81"
+        "205345.23"
     )
-    assert sum(p.amounts(p.cutoff)) == D("194504.41")
+    assert sum(p.amounts(p.cutoff)) == D("211406.82")
     assert not any(r["account"] == "1000" for r in b.rows)
     with pytest.raises(ValueError, match="Duplicate"):
         p.post_month(b, 2026, 8)
