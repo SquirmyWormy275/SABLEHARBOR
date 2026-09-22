@@ -75,3 +75,11 @@ def test_unapproved_terms_population_and_filing_states_rejected(change):
         source["handling_owner_confirmations"].pop()
     with pytest.raises(ValueError):
         build(source=source)
+
+
+def test_vehicle_route_does_not_infer_certificate_jurisdiction_from_incorporation():
+    rows = build()["collateral"]
+    road = [r for r in rows if r["population"] == "road_equipment"]
+    assert len(road) == 44
+    assert all("SUBJECT_TO_TITLE_JURISDICTION_CONFIRMATION" in r["filing_route"] for r in road)
+    assert all(r["perfection"] == "NOT_ESTABLISHED" for r in road)

@@ -118,7 +118,7 @@ def build(*, as_of="2026-09-22", source=None, operations=None):
         if pop == "handling_equipment" and status != "serviceable; planned replacement reserve":
             raise ValueError("Handling status scope needs review")
         route = {
-            "road_equipment": "WY_COUNTY_CLERK_TITLE_LIEN_ROUTE_TITLE_DOCUMENTS_PENDING",
+            "road_equipment": "CANDIDATE_WY_COUNTY_CLERK_ROUTE_SUBJECT_TO_TITLE_JURISDICTION_CONFIRMATION",
             "track_segments": "WY_FIXTURE_REAL_PROPERTY_RECORD_ROUTE_PARCEL_DESCRIPTION_PENDING",
             "handling_equipment": "WY_SECRETARY_OF_STATE_ARTICLE9_GENERAL_FILING_PREPARATION",
         }[pop]

@@ -166,15 +166,22 @@ def collect_tables(model, result):
     return tables
 
 
-def write_packages(output, tables, identity, *, schema_draft=False):
+def write_packages(
+    output, tables, identity, *, schema_draft=False, schema=None, scope=None
+):
     output = Path(output)
+    if (schema is None) != (scope is None):
+        raise ValueError("Explicit export schema and scope must be provided together")
+    if schema_draft and schema is not None:
+        raise ValueError("Draft inference cannot replace an explicit export contract")
     if schema_draft:
         schema = {name: columns(rows) for name, rows in sorted(tables.items())}
         scope = proposed_scope(tables)
         write_json(output / "proposed_export_schema.json", schema)
         write_json(output / "proposed_export_scope.json", scope)
     else:
-        schema, scope = json.loads(SCHEMA.read_text()), json.loads(SCOPE.read_text())
+        if schema is None:
+            schema, scope = json.loads(SCHEMA.read_text()), json.loads(SCOPE.read_text())
         validate_schema(tables, schema, scope)
     for name, rows in sorted(tables.items()):
         csv_table(output / "tables" / f"{name}.csv", rows, schema[name])

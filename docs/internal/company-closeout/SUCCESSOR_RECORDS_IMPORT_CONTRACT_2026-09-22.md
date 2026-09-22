@@ -29,6 +29,8 @@ Each row has a stable `record_id`, `record_type`, legal `entity`, reporting `uni
 
 Payloads retain native IDs and exact primitive types. Join administrative and commission records to people by `person_id` and positions by `position_id`; payoff records to native principal by component/source reference; asset screens and grants by `asset_id`; rights/assents to the five-holder register by `holder_id`; hosts to site and instrument IDs. Never join anonymous people by display name or equate an administrative asset review date with original in-service date. Related source IDs in nested payloads are not duplicate financial postings.
 
+The envelope value `CORPORATE` maps explicitly to the composite manifest’s `corporate` coverage label; this is not a general case-insensitive join rule.
+
 J2 and holding-company governance populations stay in the parent enterprise package under CORPORATE/SHI. ARU/BST-related records route to the existing american-resource-utility extract, the explicit RWH asset-source row to pale-sun, and host frameworks to project-cradle. Unknown ownership stays explicit. No new grants, classification permissions or routes are inferred from rows.
 
 ## Integration API

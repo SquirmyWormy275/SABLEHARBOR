@@ -6,7 +6,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 151 |
+| COUNTERPART_REVIEW_REQUIRED | 153 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 107 |
@@ -14,7 +14,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 | UNRESOLVED_DOCUMENT_COUNTERPART | 222 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_CHART_PUBLICATION | 40 |
-| VERIFIED_DOCUMENT_PAIR | 135 |
+| VERIFIED_DOCUMENT_PAIR | 141 |
 | VERIFIED_IDENTICAL_SOURCE_PUBLICATION | 3 |
 
 ## Records requiring counterpart reconciliation
@@ -65,6 +65,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Selected-edition portal review rehearsal](../../internal/company-closeout/PORTAL_SELECTED_REVIEW.md) — Corporate document-format reconciliation
 - [PR #145 integration evidence](../../internal/company-closeout/PR145_INTEGRATION.md) — Corporate document-format reconciliation
 - [Company closeout continuation — September 22, 2026](../../internal/company-closeout/RESIDUAL_CLOSEOUT_2026-09-22.md) — Corporate document-format reconciliation
+- [Current successor records — enterprise import contract](../../internal/company-closeout/SUCCESSOR_RECORDS_IMPORT_CONTRACT_2026-09-22.md) — Corporate document-format reconciliation
 - [Committed portal runtime review — 2026-09-22](../../internal/company-closeout/evidence/newruntime/5344bf76/REVIEW.md) — Corporate document-format reconciliation
 - [HOST-R01 — precise prospective terms for decision](../../internal/company-closeout/host-residual-successor/TERMS_PROPOSAL.md) — Corporate document-format reconciliation
 - [Pending implementation text — recommended current-rights bundle](../../internal/company-closeout/residual-finance-2026-09-22/PENDING_INSTRUMENT.md) — Corporate document-format reconciliation
@@ -137,6 +138,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Sacramento, Fort and Bedford proposed site tenure and access instrument](../../legal/gap-instruments/source/tenure.md) — SH-FIN-HUMAN-001
 - [Conditional future Red Wash product custody and carrier agreement](../../legal/gap-instruments/source/uranium-custody.md) — SH-FIN-HUMAN-001
 - [ARU individual retention agreements and Tolman consultancy](../../legal/gap-instruments/source/workforce.md) — SH-FIN-HUMAN-001
+- [Approved host successor — validation receipt](../../legal/host-successor/VALIDATION.md) — SH-FIN-HUMAN-001
 - [Closeout evidence releases](../../releases/CLOSEOUT_EVIDENCE_RELEASES.md) — Corporate document-format reconciliation
 - [Company edition releases](../../releases/COMPANY_EDITION_RELEASES.md) — Corporate document-format reconciliation
 - [Facility atlas controlled releases](../../releases/FACILITY_ATLAS_RELEASES.md) — Corporate document-format reconciliation

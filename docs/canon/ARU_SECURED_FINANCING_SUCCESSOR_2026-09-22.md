@@ -1,6 +1,7 @@
 # ARU secured financing successor — September 22, 2026
 
-**Document ID:** SH-ARU-SECURED-TERMS-20260922. **Version:** 1.0.0.
+**Document ID:** SH-ARU-SECURED-TERMS-20260922
+**Version:** 1.0.0
 **State:** OWNER_APPROVED_DIRECTION; LOCKED within the following scope on repository acceptance.
 **Owner:** ARU / SHIH Treasury and Legal. **Prospective effective day:** September 22, 2026.
 
@@ -72,15 +73,18 @@ Current official [Wyoming Title 34.1](https://wyoleg.gov/statutes/compress/title
 was read September 22, 2026; the source records its retrieved SHA-256 and provisions.
 Section 9-108 requires identifiable collateral; 9-203 requires value, debtor rights and
 an authenticated grant; 1-204 includes a preexisting claim as value. ARU is a Wyoming
-corporation, making 9-307(e)/9-301 relevant to its filing jurisdiction. Vehicle title rules
-under 9-311 and county filing under 9-501 differ from ordinary Secretary-of-State filing.
+corporation, making 9-307(e)/9-301 relevant to its filing jurisdiction. Certificate-of-title jurisdiction under 9-303 and title rules under 9-311 must be
+confirmed separately; incorporation alone does not determine vehicle title jurisdiction.
+The Wyoming county-title route is only a candidate until the governing certificate is
+confirmed. County filing under 9-501 differs from ordinary Secretary-of-State filing.
 Fixture filings need the additional real-property information in 9-502; priority is separate.
 
 Applied fictional facts: existing debt, limited identified assets, represented ownership,
 and synthetic authentication support the **modeled grant**, subject to the stated rights.
 They do not establish perfection or priority. The implementation prepares the internal
-asset/filing-route schedule only: ordinary handling-goods route, vehicle county/title
-route, and fixture real-property-record route remain distinct. Submission is NOT_SUBMITTED,
+asset/filing-route schedule only: ordinary handling-goods route, candidate Wyoming vehicle county/title
+route subject to certificate-jurisdiction confirmation, and fixture real-property-record
+route remain distinct. Submission is NOT_SUBMITTED,
 acknowledgement NONE, perfection/priority NOT_ESTABLISHED. Vehicle title evidence and
 fixture parcel/record-owner descriptions remain exact filing-preparation dependencies;
 no fabricated VIN, cadastral description, filing number or first-priority assurance is used.

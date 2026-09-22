@@ -115,3 +115,19 @@ def test_same_day_receipt_after_date_only_start_is_late():
     data["accepted_work_orders"] = [row]
     with pytest.raises(ValueError, match="before operation"):
         validate(data)
+
+
+def test_order_cannot_precede_executed_instrument_and_delegation():
+    data = source()
+    row = order()
+    row["acceptance_received_at"] = "2026-09-01T00:00:00Z"
+    data["accepted_work_orders"] = [row]
+    with pytest.raises(ValueError, match="predates instrument"):
+        validate(data)
+
+
+def test_mandatory_law_preservation_cannot_be_removed():
+    data = source()
+    data["common_terms"]["mandatory_law_preserved"] = False
+    with pytest.raises(ValueError, match="approved term"):
+        validate(data)

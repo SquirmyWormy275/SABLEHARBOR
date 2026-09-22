@@ -1,6 +1,7 @@
 # Prospective capital designation rights — September 22, 2026
 
-**Document ID:** SH-CAP-RIGHTS-20260922. **Version:** 1.0.0.
+**Document ID:** SH-CAP-RIGHTS-20260922
+**Version:** 1.0.0
 **State:** OWNER_APPROVED_DIRECTION; LOCKED within the following scope on repository acceptance.
 **Owner:** Corporate Governance. **Legal entity:** Sable Harbor, LLC (SHI).
 

@@ -252,8 +252,10 @@ Generated file inventory. Includes current and historical records; open the sour
 
 ## `docs/finance/publications`
 
+- [ARU secured financing successor — September 22, 2026 — SH-ARU-SECURED-20260922_v1.0.0](../../finance/publications/SH-ARU-SECURED-20260922_v1.0.0.pdf) — PDF
 - [Current business-unit evidence export contract — SH-AUDIT-UNIT-EXPORT-001_v1.0.0](../../finance/publications/SH-AUDIT-UNIT-EXPORT-001_v1.0.0.pdf) — PDF
 - [Company edition inspection and reproduction — SH-COMPANY-INSPECTION-20260915_v1.0.0](../../finance/publications/SH-COMPANY-INSPECTION-20260915_v1.0.0.pdf) — PDF
+- [Company edition 1.1.0 — inspection route — SH-COMPANY-INSPECTION-20260922_v1.1.0](../../finance/publications/SH-COMPANY-INSPECTION-20260922_v1.1.0.pdf) — PDF
 - [SH-COMPANY-PARENT-TAX-20260915 v1.0.0](../../finance/publications/SH-COMPANY-PARENT-TAX-20260915_v1.0.0.pdf) — PDF
 - [Adopted corporate history and statutory provision successor — SH-COMPANY-PARENT-TAX-20260915_v2.0.0](../../finance/publications/SH-COMPANY-PARENT-TAX-20260915_v2.0.0.pdf) — PDF
 - [Continuing sovereignty reporting — SH-COMPANY-SOVEREIGNTY-20260915_v1.0.0](../../finance/publications/SH-COMPANY-SOVEREIGNTY-20260915_v1.0.0.pdf) — PDF
@@ -605,6 +607,18 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Follow a transaction into the books](../../legal/gap-instruments/walkthroughs/README.md) — MD
 - [walkthroughs](../../legal/gap-instruments/walkthroughs/walkthroughs.xlsx) — XLSX
+
+## `docs/legal/host-successor`
+
+- [Demotte Reclamation Services — separate Cradle work-order instrument](../../legal/host-successor/DEMOTTE_B_2026-09-22.md) — MD · [formatted PDF](../../legal/host-successor/publications/SH-HOST-DEMOTTE-B-20260922_v1.0.0.pdf)
+- [Kelly Gang Mining — separate Cradle work-order instrument](../../legal/host-successor/KGM_B_2026-09-22.md) — MD · [formatted PDF](../../legal/host-successor/publications/SH-HOST-KGM-B-20260922_v1.0.0.pdf)
+- [Approved host successor — validation receipt](../../legal/host-successor/VALIDATION.md) — MD
+
+## `docs/legal/host-successor/publications`
+
+- [Cradle host terms — approved alternative B — SH-HOST-B-ADOPTION-20260922_v1.0.0](../../legal/host-successor/publications/SH-HOST-B-ADOPTION-20260922_v1.0.0.pdf) — PDF
+- [Demotte Reclamation Services — separate Cradle work-order instrument — SH-HOST-DEMOTTE-B-20260922_v1.0.0](../../legal/host-successor/publications/SH-HOST-DEMOTTE-B-20260922_v1.0.0.pdf) — PDF
+- [Kelly Gang Mining — separate Cradle work-order instrument — SH-HOST-KGM-B-20260922_v1.0.0](../../legal/host-successor/publications/SH-HOST-KGM-B-20260922_v1.0.0.pdf) — PDF
 
 ## `enterprise/business`
 

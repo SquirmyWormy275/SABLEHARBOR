@@ -70,6 +70,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [SABLE HARBOR BOARD OF DIRECTORS — SH-BRD-MIN-2024-02-15_v1.0.0](../../governance/publications/SH-BRD-MIN-2024-02-15_v1.0.0.pdf) — PDF
 - [Business development direction and implementation boundary — SH-CANON-BIZ-20260909-001_v1.0.0](../../governance/publications/SH-CANON-BIZ-20260909-001_v1.0.0.pdf) — PDF
 - [Decision Register Addendum - Canon Closeout Decisions — SH-CANON-CLOSEOUT-20260906-001_v1.0.0](../../governance/publications/SH-CANON-CLOSEOUT-20260906-001_v1.0.0.pdf) — PDF
+- [Prospective capital designation rights — September 22, 2026 — SH-CAP-RIGHTS-20260922_v1.0.0](../../governance/publications/SH-CAP-RIGHTS-20260922_v1.0.0.pdf) — PDF
 - [SH-COMPANY-DIRECTIONS-20260915 v1.1.0](../../governance/publications/SH-COMPANY-DIRECTIONS-20260915_v1.1.0.pdf) — PDF
 - [Company closeout owner directions — SH-COMPANY-DIRECTIONS-20260915_v1.2.0](../../governance/publications/SH-COMPANY-DIRECTIONS-20260915_v1.2.0.pdf) — PDF
 - [SABLE HARBOR — CORPORATE HEADQUARTERS CLOSEOUT — SH-CORP-HQ-20260903_v1.0.1](../../governance/publications/SH-CORP-HQ-20260903_v1.0.1.pdf) — PDF

@@ -2,7 +2,7 @@
 
 [Start here](Start-Here.md) · [Reading glossary](Glossary.md) · [Wiki home](Home.md)
 
-The [September 22 continuation](../internal/company-closeout/RESIDUAL_CLOSEOUT_2026-09-22.md) records the current residual work after publication of company edition 1.0.0. The [original company register](../internal/company-closeout/REGISTER.json) preserves its adoption scope and historical pending states. Ten issues were open at refresh; completion follows
+The [edition 1.1.0 register](../internal/company-closeout/REGISTER_v1.1.0.json) records the later owner-approved designation, ARU collateral and Cradle host B successors, subject to actual acceptance and release. The [September 22 continuation](../internal/company-closeout/RESIDUAL_CLOSEOUT_2026-09-22.md) records the current residual work after publication of company edition 1.0.0. The [original company register](../internal/company-closeout/REGISTER.json) preserves its adoption scope and historical pending states. Ten issues were open at refresh; completion follows
 their actual criteria and accepted evidence. The earlier September 12 snapshot is
 preserved in [Git history](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/78d4fcdf1df5b8ffc0775b9af22cae1002d456d7/docs/wiki/Open-Questions.md).
 
@@ -23,7 +23,7 @@ preserved in [Git history](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7
 
 The owner also adopted the exact fictional five-holder register and voluntary
 proportional contributions without new units. The [dated direction](../canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md)
-settles that choice; capital-account implementation is accepted and published in edition 1.0.0. Additional material instrument rights remain separately identified in the continuation register.
+settles that choice; capital-account implementation is accepted and published in edition 1.0.0. The subsequently approved designation, ARU secured and host B terms have separate dated successors; filing/perfection, historical rights and runtime limits remain explicit.
 
 ## Accepted successors to older status claims
 

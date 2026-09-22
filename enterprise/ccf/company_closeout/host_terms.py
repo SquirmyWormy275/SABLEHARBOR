@@ -34,6 +34,7 @@ def validate(data=None, *, root=ROOT):
         "guaranteed_feed": False,
         "permanent_host_rate": None,
         "real_execution": False,
+        "mandatory_law_preserved": True,
     }.items():
         require(terms[key] == expected, f"approved term {key}")
     instruments = data["instruments"]
@@ -88,6 +89,11 @@ def validate(data=None, *, root=ROOT):
             "order authority",
         )
         received = datetime.fromisoformat(order["acceptance_received_at"])
+        executed = datetime.fromisoformat(instrument["synthetic_execution_recorded_at"])
+        require(
+            received.tzinfo is not None and executed.tzinfo is not None and received >= executed,
+            "acceptance predates instrument and delegation",
+        )
         require(
             received.tzinfo is not None
             and received.astimezone(UTC) <= datetime.combine(start, time.min, tzinfo=UTC),

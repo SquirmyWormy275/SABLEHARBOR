@@ -1,0 +1,22 @@
+{
+  "document_id": "SH-RIGHTS-INTEGRATION-REVIEW-20260922",
+  "review_kind": "Independent agent source review and integration reperformance; not a professional opinion or human control review",
+  "reviewed_scope": "September 22 capital, ARU collateral/debt, Cradle host B and successor-export implementation",
+  "independent_reviews": [
+    {"reviewer": "obligations_controls lane", "scope": "Capital and debt sources authored in the finance lane", "focused_tests_passed": 23},
+    {"reviewer": "finance lane", "scope": "Successor-export adapter, shared writer hook and host validator authored in other lanes", "focused_tests_passed": 28}
+  ],
+  "findings": [
+    {"id": "REV-01", "finding": "Vehicle title routing must not infer certificate jurisdiction from Wyoming incorporation.", "correction": "Wyoming county-title route is a candidate subject to certificate-jurisdiction confirmation; grant population unchanged.", "regression": "test_vehicle_route_does_not_infer_certificate_jurisdiction_from_incorporation", "status": "CORRECTED_AND_RETESTED"},
+    {"id": "REV-02", "finding": "Host-order receipt could precede the instrument and representative delegation.", "correction": "Require received acceptance no earlier than synthetic instrument execution and no later than date-only UTC operation start.", "regression": "test_order_cannot_precede_executed_instrument_and_delegation", "status": "CORRECTED_AND_RETESTED"},
+    {"id": "REV-03", "finding": "Mandatory-law preservation was present in the source but not enforced by the validator.", "correction": "Require the approved safeguard to remain true.", "regression": "test_mandatory_law_preservation_cannot_be_removed", "status": "CORRECTED_AND_RETESTED"}
+  ],
+  "integration_failures_retained": [
+    {"failure": "Eight host tests rejected the predecessor proposal hash after two spacing corrections in the owner-linked integrated proposal.", "correction": "Pin the exact owner-linked proposal; retain prior hash and format-only explanation. No source check weakened.", "retest": "23 initial integration tests passed."},
+    {"failure": "Targeted Ruff found overlong host validator/test lines.", "correction": "Format the affected new files; later focused tests pass."},
+    {"failure": "Catalog builder rejected a new controlled guide lacking its Document ID metadata.", "correction": "Supply explicit separate Document ID/version fields for new controlled sources and regenerate PDFs/catalog."}
+  ],
+  "latest_focused_reperformance": {"scope": "Host, debt and successor records after review corrections", "passed": 39, "failed": 0},
+  "remaining_validation": "Full final-head and actual accepted-revision build/import/portal/release evidence is recorded separately in the Release receipt and VALIDATION.json.",
+  "preserved_limits": ["No existing accepted host orders or new cash/units/journals.", "Perfection, priority and historical releases are not established by this review.", "Public synthetic source and deterministic regression scope only; no hidden evaluator answers."]
+}

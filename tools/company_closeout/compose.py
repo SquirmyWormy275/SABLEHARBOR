@@ -127,12 +127,15 @@ def generate(
         ),
         (
             "financial-successor",
-            "CONDITIONAL_FORECAST",
+            "MIXED_SOURCE_ARCHIVE",
             "Existing composed financial calibration and three conditional scenario populations, "
             "including seven-unit CSV/SQLite exports. Row-level period/scenario/source "
             "roles control; "
             "2027–2031 forecast activity is never September 2026 actual activity. Repeated formats "
-            "and unit extracts are representations of the same populations, not additive members.",
+            "and unit extracts are representations of the same populations, not additive members. "
+            "The explicitly scoped company successor tables retain their own historical/current/"
+            "prospective fact status and September 22 source-availability boundary; they are "
+            "not forecast transactions or additional financial journal lines.",
             generated[0],
         ),
         (
@@ -165,8 +168,9 @@ def generate(
         "status": "ACCEPTED_SCOPED_EDITION" if accepted else "REVIEW_CANDIDATE",
         "source_commit_required": revision,
         "scope": "Seven business lines and corporate: August completed-period packaging, "
-        "September events through September 14 America/Los_Angeles, and separately "
-        "identified forecasts.",
+        "September operating events through September 14 America/Los_Angeles, separately "
+        "dated September 22 corporate and qualification successors (including prospective "
+        "host terms), and separately identified forecasts.",
         "limitations": [
             "Synthetic company evidence, not actual registration, filings, payments or "
             "an audit opinion.",
