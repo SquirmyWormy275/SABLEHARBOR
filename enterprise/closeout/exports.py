@@ -26,7 +26,7 @@ def build(output, operating, successor, op, fin, bridge, identity):
         extras={"industrial_operations": op["operating_rows"], "replacement_bridge": bridge},
     )
     tables = exports.collect_tables(operating, successor)
-    from enterprise.closeout import successor_records
+    from enterprise.closeout import final_records as successor_records
 
     additions = successor_records.collect()
     if set(tables) & set(additions):

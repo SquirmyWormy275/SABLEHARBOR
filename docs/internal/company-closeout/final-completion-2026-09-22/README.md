@@ -14,7 +14,7 @@ This is a trusted local operator boundary. The adapter's policy context must com
 
 ## Repository administration
 
-`BRANCH_RETIREMENT.json` records 35 exact remote refs retired after fresh tip, ancestry, unique-object, local-worktree and open-PR checks. Every retired object remains reachable from accepted main; a single atomic push used exact SHA leases. Sixty-seven remote refs remain explicitly retained for active work, unique objects, historical preservation or unavailable ownership proof. Local worktrees were not deleted. Main protection remains in force; automatic branch deletion stays disabled to preserve active parallel work. The CCF workflow's existing checkout v4, setup-uv v6 and upload-artifact v4 actions are now pinned to their September 22 resolved commits, without changing their major versions or workload.
+`BRANCH_RETIREMENT.json` records 35 exact remote refs retired after fresh tip, ancestry, unique-object, local-worktree and open-PR checks. Every retired object remains reachable from accepted main; a single atomic push used exact SHA leases. Sixty-seven remote refs remain explicitly retained for active work, unique objects, historical preservation or unavailable ownership proof. Local worktrees were not deleted. Main protection remains in force; automatic branch deletion stays disabled to preserve active parallel work. The always-required Source integrity job now also executes organization/brand/governance validation, company accounting/disclosure regressions, a fresh financial build, independent financial reperformance and export import. This avoids path-filtered domain checks being absent from a required-status gate. Its successful hosted result is required before merging this successor. The CCF workflow's existing checkout v4, setup-uv v6 and upload-artifact v4 actions are now pinned to their September 22 resolved commits, without changing their major versions or workload.
 
 ## Exact-image and geographic boundaries
 
@@ -35,3 +35,5 @@ python -m tools.company_closeout.working_copy_rehearsal \
 ```
 
 The output parent must be private; the destination must not exist. Never publish its private SQLite stores or working payloads. Retain only public receipts and selected synthetic evidence. A final release receipt supersedes pending implementation labels only after actual source acceptance, validation, packaging and retrieval.
+
+The exact pinned runtime is delivered through the [controlled dependency](RUNTIME_DEPENDENCY.json). Its private source archive closes the previously local-only dependency gap without publishing private historical development material.
