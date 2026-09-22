@@ -646,3 +646,32 @@ work. Explicit companion recovery preserves historical bytes and records any
 authorized principal remapping separately. Operational backup support does not
 mean every existing workspace has already been backed up. Assignment handoff,
 complete journey acceptance and owner usability evaluation remain separate gates.
+
+A fresh technical correction journey subsequently exercised source collection,
+a provisional record-version population, one targeted item, an initial observation
+and workpaper, an anchored reviewer challenge, a separately retained correction,
+an author response and explicit resolution by a distinct synthetic reviewer-role
+principal. The response alone left the issue open. All twelve commands passed
+exact replay and stale-revision checks, with earlier sources and nine selected
+audit histories preserved. Saved-view reload and explicit principal-mapped
+companion restoration preserved the original workpaper version. A desktop/narrow
+check of the compiled workspace using the authorized retained projection and
+recorded restore response passed. This was a bounded technical journey with one
+untested population member; it is not a full-scope audit or qualified review.
+
+[Explicit investigation handoffs](../../../../enterprise/audit_suite/INVESTIGATION_HANDOFFS.md)
+share an authored question and chosen exact references between two authorized
+audit-workspace members. Recipient acceptance and a coordination response retain
+authorship and history. Changing shared authority hides the content; completing
+the handoff does not complete a procedure or resolve an audit review. Private
+drafts and investigations are never copied into an offer automatically. Companion
+recovery retains a verified inert archive without reviving offers or permissions.
+
+The [selected-source ownership and migration register](../../../../enterprise/audit_suite/COMPANY_SOURCE_REGISTER.md)
+separates current registered owners, provisional documentary custody and historical
+control assignments. Its actual A/B baseline run verified 359 original-to-company
+documentary copies and preserved unknown event dates and historical ownership.
+The successor register retained its predecessor manifest and unchanged earlier
+audit histories. Accepted synthetic finance files and historical source locks
+were checked as read-only references; no finance records were imported or changed.
+The inventory does not establish complete operating history or evidence sufficiency.

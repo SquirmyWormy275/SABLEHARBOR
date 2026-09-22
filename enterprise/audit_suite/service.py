@@ -220,7 +220,9 @@ def create_app(
         jobs = BackgroundJobs(job_root, engine, max_workers=2, max_pending=32)
     contexts = None
     personal_views = None
+    handoffs = None
     if workspace_contexts:
+        from .investigation_handoffs import InvestigationHandoffs
         from .personal_views import PersonalViews
         from .workspace_context import WorkspaceContexts
 
@@ -230,6 +232,9 @@ def create_app(
         view_root = engine.store.root / "personal-views"
         view_root.mkdir(mode=0o700, exist_ok=True)
         personal_views = PersonalViews(view_root, engine)
+        handoff_root = engine.store.root / "investigation-handoffs"
+        handoff_root.mkdir(mode=0o700, exist_ok=True)
+        handoffs = InvestigationHandoffs(handoff_root, engine)
     releases = None
     if protected_bindings:
         from .instructor_releases import InstructorReleases
@@ -240,6 +245,7 @@ def create_app(
     app.state.instructor_releases = releases
     app.state.workspace_contexts = contexts
     app.state.personal_views = personal_views
+    app.state.investigation_handoffs = handoffs
     app.state.background_jobs = jobs
     app.state.generation_jobs = {}
     app.add_middleware(BodyLimit)
@@ -339,6 +345,7 @@ def create_app(
             work_status=True,
             workspace_contexts=contexts is not None,
             personal_views=personal_views is not None,
+            investigation_handoffs=handoffs is not None,
             background_jobs=jobs is not None,
             bound_instructor_keys=bool(protected_bindings),
             instructor_releases=releases is not None,
@@ -806,6 +813,90 @@ def create_app(
             view_id,
             expected_version=body["expected_version"],
             expected_engagement_revision=body["expected_engagement_revision"],
+        )
+
+    def enabled_handoffs():
+        if handoffs is None:
+            raise DomainError("Investigation handoffs are not configured", status=503)
+        return handoffs
+
+    @app.get("/api/engagements/{engagement_id}/handoffs/members")
+    async def handoff_members(engagement_id: str, request: Request):
+        principal = actor(request)
+        return await asyncio.to_thread(enabled_handoffs().directory, principal["id"], engagement_id)
+
+    @app.get("/api/engagements/{engagement_id}/handoffs")
+    async def handoff_list(engagement_id: str, request: Request):
+        principal = actor(request)
+        return {
+            "handoffs": await asyncio.to_thread(
+                enabled_handoffs().listing, principal["id"], engagement_id
+            )
+        }
+
+    @app.post("/api/engagements/{engagement_id}/handoffs/link")
+    async def handoff_link(engagement_id: str, request: Request):
+        principal = actor(request, mutation=True)
+        body = await json_body(request)
+        limits.check("handoffs", principal["id"], 120)
+        if set(body) != {"recipient_id", "kind", "id", "version"}:
+            raise DomainError("Choose an exact shared investigation reference")
+        return await asyncio.to_thread(
+            enabled_handoffs().make_reference,
+            principal["id"],
+            engagement_id,
+            recipient_id=body["recipient_id"],
+            kind=body["kind"],
+            record_id=body["id"],
+            version=body["version"],
+        )
+
+    @app.post("/api/engagements/{engagement_id}/handoffs")
+    async def handoff_offer(engagement_id: str, request: Request):
+        principal = actor(request, mutation=True)
+        body = await json_body(request)
+        limits.check("handoffs", principal["id"], 120)
+        if set(body) != {"payload", "expected_engagement_revision", "command_id"}:
+            raise DomainError("Invalid investigation handoff offer")
+        return await asyncio.to_thread(
+            enabled_handoffs().offer,
+            principal["id"],
+            engagement_id,
+            body["payload"],
+            expected_engagement_revision=body["expected_engagement_revision"],
+            command_id=body["command_id"],
+        )
+
+    @app.get("/api/engagements/{engagement_id}/handoffs/{handoff_id}")
+    async def handoff_read(engagement_id: str, handoff_id: str, request: Request):
+        principal = actor(request)
+        return await asyncio.to_thread(
+            enabled_handoffs().read, principal["id"], engagement_id, handoff_id
+        )
+
+    @app.post("/api/engagements/{engagement_id}/handoffs/{handoff_id}/transition")
+    async def handoff_transition(engagement_id: str, handoff_id: str, request: Request):
+        principal = actor(request, mutation=True)
+        body = await json_body(request)
+        limits.check("handoffs", principal["id"], 120)
+        if set(body) != {
+            "action",
+            "response",
+            "expected_version",
+            "expected_engagement_revision",
+            "command_id",
+        }:
+            raise DomainError("Invalid investigation handoff transition")
+        return await asyncio.to_thread(
+            enabled_handoffs().transition,
+            principal["id"],
+            engagement_id,
+            handoff_id,
+            action=body["action"],
+            response=body["response"],
+            expected_version=body["expected_version"],
+            expected_engagement_revision=body["expected_engagement_revision"],
+            command_id=body["command_id"],
         )
 
     def enabled_jobs():

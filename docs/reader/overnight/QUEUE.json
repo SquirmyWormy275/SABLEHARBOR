@@ -429,7 +429,7 @@
       "gate": "existing_authority",
       "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
       "execution_authorized": true,
-      "evidence": "Immutable company stores, grants, recovery and read-through source portfolios implemented. New independent change records and configuration checks consume pinned upstream originals. Broader company-system coverage remains in progress. Eleven freshcompany runtimes nowretain all381 nativeversions fromsealedproducer capsules with originalfields intact and initiallyempty authority/journals. Runtimecollection canchangejournals withoutinvalidatingsealedcapsules; ordinaryEngine/federation integration verified."
+      "evidence": "Immutable company stores, grants, recovery and read-through source portfolios implemented. New independent change records and configuration checks consume pinned upstream originals. Broader company-system coverage remains in progress. Eleven freshcompany runtimes nowretain all381 nativeversions fromsealedproducer capsules with originalfields intact and initiallyempty authority/journals. Runtimecollection canchangejournals withoutinvalidatingsealedcapsules; ordinaryEngine/federation integration verified. A selected-source ownership register now separates registered current owners, provisional documentary custody, historical control routes, exact native identities/time/version, and explicit typed relationships across the A/B baseline. Finance acceptance/source locks remain read-only references. New standalone operations are outside this inventory unless selected explicitly; this does not establish a coherent whole operating year."
     },
     {
       "id": "AQ-03",
@@ -456,7 +456,7 @@
       "gate": "existing_authority",
       "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
       "execution_authorized": true,
-      "evidence": "All359 legacy originals migrated into70 scoped-owner documentary archives with exact bytes, unknown event dates and explicit provisional custody. Source scope-epoch completeness is under review. No claim of completed operating-history reconstruction. Separate pre-audit repository sync now retains eight exact committed company documents with proposed documentary mappings, original authority/custody pins, unknown event dates and ingestion-only availability. No finance-pinned source was imported or changed; zero grants or collections were created."
+      "evidence": "The versioned migration register reconciles all 359 selected legacy documentary originals to exact company copies, preserving unknown event dates and historical ownership, source branch identities and unresolved dispositions. Successor manifests preserve predecessor packages; accepted finance artifacts and historical locks are verified without import or rewriting. Engineering reconciliation is separate from historical fact resolution and operating-history sufficiency."
     },
     {
       "id": "AQ-04",
@@ -909,7 +909,7 @@
       "gate": "existing_authority",
       "execution_policy": "Owner authorized execution; retain dependency acceptance gates and existing audit_company execution boundaries. Preserve private data and assessment history. User acceptance cannot be inferred from scripted checks.",
       "execution_authorized": true,
-      "evidence": "Personal saved investigation questions, next steps and exact record pins persist with optimistic versions, dirty-edit protection and explicit reset. Actual browser verifies reload and unchanged formal history. Broader handoff acceptance remains incomplete. Private personal saved views now retain explicit section, framework/query, table query/sort/page, scroll hint and exact selected record/version. Restore rechecks current permissions, source context and engagement revision; changed context is redacted. Companion recovery preserves immutable history with explicit authorized owner mapping. Shared-question assignment/handoff and owner resume evaluation remain open."
+      "evidence": "Personal investigations and saved views preserve explicitly authored questions, next steps, exact record versions, filters, table position and scroll hints with current-authority restore checks. Private companion recovery preserves saved-view history and explicit ownership mapping. Participant-only investigation handoffs now retain authored questions, exact shared links, recipient acceptance/decline and explicit coordination responses; private drafts are not copied automatically. Handoff archives restore inertly. Full owner resume/handoff usability acceptance remains open."
     },
     {
       "id": "UX-07",
@@ -960,7 +960,7 @@
       "gate": "existing_authority",
       "execution_policy": "Owner authorized execution; retain dependency acceptance gates and existing audit_company execution boundaries. Preserve private data and assessment history. User acceptance cannot be inferred from scripted checks.",
       "execution_authorized": true,
-      "evidence": " Explicit review feedback now preserves disposition and version/input pins without closing human issues or accepting AI suggestions. Current-role checks and an explicit backend capability protect older local servers; learner keyboard flow and backend authorization/replay tests pass. Optional exact-passage review anchors preserve Unicode offsets and quoted text in the selected historical workpaper version. Later edits do not rebase prior comments; existing independent resolution requirements remain in force. Exact-original evidence context now shows recorded sample item observations, locators and correction history. Human-readable navigation opens only the matching server-pinned task/workpaper version. Actual retained observations passed read-only desktop/narrow verification with original and audit history pins unchanged."
+      "evidence": "A fresh bounded technical source-correction journey completed twelve replay/CAS-checked commands through exact collection, provisional population, targeted observation, pinned workpaper challenge, separate workpaper/trace correction, author response and distinct synthetic reviewer-role resolution. Earlier versions, source bytes and nine selected prior audit histories were preserved. Compiled workspace projection checks passed desktop/narrow. This is one targeted record-version with one untested member, not full-scope or qualified review."
     },
     {
       "id": "UX-09",

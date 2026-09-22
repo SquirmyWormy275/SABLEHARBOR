@@ -195,6 +195,7 @@ def backup(
     instructor_access_root=None,
     instructor_releases=None,
     personal_views=None,
+    investigation_handoffs=None,
 ):
     """Capture selected live companion objects; never starts/retries jobs."""
     destination = _new(destination)
@@ -204,6 +205,7 @@ def backup(
         and instructor_access_root is None
         and instructor_releases is None
         and personal_views is None
+        and investigation_handoffs is None
     ):
         raise DomainError("Select at least one companion")
     members, captures = {}, {}
@@ -244,11 +246,21 @@ def backup(
         validate_snapshot(snapshot)
         members["instructor-releases.json"] = _json(snapshot)
         captures["instructor_releases"] = datetime.now(UTC).isoformat()
+    if investigation_handoffs is not None:
+        from .investigation_handoffs import validate_snapshot
+
+        snapshot = investigation_handoffs.snapshot()
+        validate_snapshot(snapshot)
+        members["investigation-handoffs.json"] = _json(snapshot)
+        captures["investigation_handoffs"] = datetime.now(UTC).isoformat()
     manifest = {
         "schema": "PRIVATE_COMPANION_V1",
         "component_captured_at": captures,
         "globally_atomic": False,
         "jobs_restore_mode": "ARCHIVE_ONLY",
+        "investigation_handoffs_restore_mode": "ARCHIVE_ONLY_NOT_OPERATIONALLY_REHYDRATED"
+        if investigation_handoffs is not None
+        else "NOT_INCLUDED",
         "personal_views_restore_mode": "EXPLICIT_OWNER_MAPPING_CURRENT_AUTHORITY"
         if personal_views is not None
         else "NOT_INCLUDED",
@@ -292,6 +304,7 @@ def restore(source: Path, destination: Path, *, engine=None, principal_map=None)
         "head.json",
         "instructor-releases.json",
         "personal_views.json",
+        "investigation-handoffs.json",
     }
     names = set(manifest.get("members", {}))
     if (
@@ -331,6 +344,14 @@ def restore(source: Path, destination: Path, *, engine=None, principal_map=None)
             validate_snapshot(strict_json(members["instructor-releases.json"]))
         except (ValueError, TypeError, KeyError) as error:
             raise DomainError("Invalid private release archive") from error
+    if "investigation-handoffs.json" in members:
+        from .inference import _json as strict_json
+        from .investigation_handoffs import validate_snapshot
+
+        try:
+            validate_snapshot(strict_json(members["investigation-handoffs.json"]))
+        except (ValueError, TypeError, KeyError) as error:
+            raise DomainError("Invalid investigation handoff archive") from error
     tables = bodies.get("contexts", {}).get("tables")
     view_tables = bodies.get("personal_views", {}).get("tables")
     owners = {r["actor"] for r in tables["contexts"]} if tables is not None else set()
@@ -399,6 +420,11 @@ def restore(source: Path, destination: Path, *, engine=None, principal_map=None)
             )
         if "jobs.json" in members:
             _write(stage / "jobs-ARCHIVE-ONLY.json", members["jobs.json"])
+        if "investigation-handoffs.json" in members:
+            _write(
+                stage / "investigation-handoffs-ARCHIVE-ONLY.json",
+                members["investigation-handoffs.json"],
+            )
         if "access.jsonl" in members:
             log_root = stage / "instructor-access-archive"
             log_root.mkdir(mode=0o700)
@@ -417,6 +443,9 @@ def restore(source: Path, destination: Path, *, engine=None, principal_map=None)
             "original_hashed_personal_view_content_preserved": view_tables is not None,
             "credentials_or_grants_restored": False,
             "jobs": "ARCHIVE_ONLY",
+            "investigation_handoffs": "ARCHIVE_ONLY_NOT_OPERATIONALLY_REHYDRATED"
+            if "investigation-handoffs.json" in members
+            else "NOT_INCLUDED",
             "instructor_releases": (
                 "ARCHIVE_ONLY_NOT_OPERATIONALLY_REHYDRATED"
                 if "instructor-releases.json" in members

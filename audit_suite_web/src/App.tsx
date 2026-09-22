@@ -22,6 +22,7 @@ import { recordSequence } from "./recordSequence";
 import { BackgroundWork } from "./BackgroundWork";
 import { InvestigationContexts } from "./InvestigationContexts";
 import { SavedViews } from "./SavedViews";
+import { InvestigationHandoffs } from "./InvestigationHandoffs";
 import type {
   SavedViewNavigation,
   SavedViewReferenceDescriptor,
@@ -836,6 +837,25 @@ export default function App() {
         onRestore={restoreSavedView}
       />
     ) : null;
+  const handoffsPanel =
+    e && !setup && bootstrap.capabilities.investigation_handoffs ? (
+      <InvestigationHandoffs
+        engagement={e}
+        viewerId={bootstrap.viewer.id}
+        enabled={true}
+        selectedReference={selectedViewReference}
+        onPreview={(kind, row, reference) =>
+          setDetail({
+            kind,
+            row,
+            savedAtRevision: e.revision,
+            ...(kind === "workpaper" && typeof reference?.version === "number"
+              ? { focusVersion: reference.version }
+              : {}),
+          })
+        }
+      />
+    ) : null;
   const controlLink = (row: Row) => {
     const id = str(row.control_id);
     const control = e?.controls.find((c) => c.id === id);
@@ -1336,6 +1356,7 @@ export default function App() {
           )}
           <div id="main" tabIndex={-1}>
             {!detail && savedViewsPanel}
+            {!detail && handoffsPanel}
             {e && !setup && bootstrap.capabilities.workspace_contexts && (
               <InvestigationContexts
                 engagement={e}
@@ -2891,6 +2912,7 @@ export default function App() {
             onClose={() => setDetail(null)}
           >
             {savedViewsPanel}
+            {handoffsPanel}
             {detail.returnToBoundSource && (
               <button type="button" onClick={() => setDetail(null)}>
                 Back to bound source
