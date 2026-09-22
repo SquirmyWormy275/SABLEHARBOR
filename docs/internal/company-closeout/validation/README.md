@@ -92,3 +92,40 @@ or actual acceptance. Accepted packaging now requires the exact actual merged
 revision and a preserved, hash-bound scoped adoption record. Seventy-three
 packaging tests passed after these corrections. Package hashes remain integrity
 evidence, not proof of professional conclusions or blanket canon adoption.
+
+## Integrated statutory and capital reconciliation — September 22
+
+At clean `f5e919e7c39c9df7300be0ec7408cfba414c6725`, the company financial build
+converged in four bounded iterations. Independent standard-library CSV/SQLite
+import passed over 1,024,896 rows, 124,350 journal lines and 54,022 entries.
+The complete maintainer pytest run passed 749 tests with three skips (752 collected). The same-head completed-period
+and September builds and composite reperformance passed. Workbook readback
+verified 4,488 cells; LibreOffice rendering of its cover and legal balance page
+showed legible headings, source hashes, adverse results and unclipped amounts.
+These are intermediate receipts before the final publication/source-pin fixes.
+
+Earlier full builds exposed a paired $450,000 ARU/BST native deferred-tax
+allocation omitted from independent reconciliation, and an obsolete payroll-only
+elimination guard. The correction recognizes the exact zero-group native pair
+and separately verifies the $131,343 RWH payment for PS plus $78,125 payroll
+current-account bridge. No historical cash was reposted. Independent preservation
+now verifies 2,700 original 2026 native legs and the revised forecast seed, rather
+than freezing forecasts to their superseded pretax cash plan. The successful
+run also independently reconstructed 1,241 closing and 408 elimination legs.
+
+The current receipt-tax workpaper initially treated missing preclosing records
+as zero prior liability. That inference was withdrawn: acquisition did not create
+a new operator. The supported current-month installment method now carries
+$136,207.67 current-2026 penalty/interest at August 31, plus $69,137.56 for the
+separate H2-2025 population. No principal or cash was posted twice.
+
+The capital review confirms $183 million round receipts plus an expressly authored
+$44.3125 million 2025 voluntary contribution history, totaling $227.3125 million.
+The existing 2026 noncash opening reconstruction represents that same history,
+not another cash event. Independent review caught nested rights fields serialized
+as Python text in the new supplemental CSV; the exporter now applies JSON
+serialization consistently across all capital populations.
+
+Governance validation at this intermediate revision correctly rejected the stale
+parent-tax publication source hash. Final supported publication and catalog
+regeneration is required before acceptance; no source-lock check was relaxed.

@@ -103,7 +103,10 @@ def export(output, successor):
         "capital_opening_equity_components": details,
     }
     for name, rows in populations.items():
-        write_csv(output / f"{name}.csv", rows)
+        write_csv(output / f"{name}.csv", [
+            {key: json.dumps(value, sort_keys=True) if isinstance(value, (dict, list)) else value
+             for key, value in row.items()} for row in rows
+        ])
     (output / "capital_register.json").write_text(json.dumps(result, indent=2) + "\n")
     return {"population_counts": {name: len(rows) for name, rows in populations.items()},
             "historical_subscription_paid_in_usd": result["register"]["verified_subscription_receipts_usd"],

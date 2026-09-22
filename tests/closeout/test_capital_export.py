@@ -89,3 +89,22 @@ def test_historical_receipt_must_match_existing_reconstruction():
     register["historical_contribution_receipts_usd"] = "44312501"
     with pytest.raises(ValueError, match="historical contribution"):
         opening_bridge(opening(), register)
+
+
+def test_supplemental_csv_preserves_machine_readable_holder_rights(tmp_path, monkeypatch):
+    import csv
+    import json
+    from enterprise.closeout import capital_export
+
+    register = build_register()
+    monkeypatch.setattr(capital_export, "register_build", lambda journal: {
+        "register": register, "events": [], "holder_rollforward": []
+    })
+    capital_export.export(tmp_path, {"journal_rows": opening()})
+    with (tmp_path / "capital_historical_contribution_holders.csv").open() as stream:
+        rows = list(csv.DictReader(stream))
+    expected = register["historical_industrial_contribution"]["holder_rows"]
+    assert len(rows) == len(expected) == 5
+    for actual, source in zip(rows, expected, strict=True):
+        assert json.loads(actual["rights_before"]) == source["rights_before"]
+        assert json.loads(actual["rights_after"]) == source["rights_after"]

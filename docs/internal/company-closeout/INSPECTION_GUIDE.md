@@ -75,7 +75,7 @@ complete monthly mine and railway compliance populations.
 
 ## Financial and completed-period joins
 
-The financial component also contains `capital_register.json`, six `capital_*.csv`
+The financial component also contains `capital_register.json`, eight `capital_*.csv`
 schedules and the `statutory_*.json`/CSV workpapers beside the existing exports.
 These are supplemental company workpapers, not additional rows to add to the
 ledger or copies implicitly included in every unit's SQLite database. Join funding
