@@ -61,7 +61,10 @@ def _validate_inputs(result, parent, current, deferred, opening, settlement):
         parent.rows, ("scenario", "year"), {(s, y) for s in scenarios for y in years}, "parent"
     )
     deferred_keys = states | {
-        (s, e, "US", y) for s in scenarios for e in ("SHI", "PS", "ARU", "BST") for y in years
+        (s, e, "US", y)
+        for s in scenarios
+        for e in ("SHI", "SHIH", "PS", "ARU", "BST")
+        for y in years
     }
     _population(deferred, fields, deferred_keys, "deferred")
     opening_keys = {

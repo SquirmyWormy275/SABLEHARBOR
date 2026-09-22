@@ -321,8 +321,16 @@ def build(result, parent, mine, assets, current, factors):
                         inventory=inventory,
                     )
                 jurisdiction_pools[jurisdiction] = pools
-            for entity in ("SHI", "PS", "ARU", "BST"):
-                pool = jurisdiction_pools["US"][entity]
+            for entity in ("SHI", "SHIH", "PS", "ARU", "BST"):
+                pool = jurisdiction_pools["US"].get(
+                    entity,
+                    {
+                        "deductible": D(0),
+                        "reserve": D(0),
+                        "taxable": D(0),
+                        "scheduled_taxable": D(0),
+                    },
+                )
                 f = pr if entity == "SHI" else federal[scenario, entity, year]
                 nol = D(f["closing_federal_nol_usd"] if entity == "SHI" else f["closing_nol_usd"])
                 interest = D(f["interest_carryforward_usd"])

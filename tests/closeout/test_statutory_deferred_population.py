@@ -115,7 +115,7 @@ def selected(args, name):
 def test_complete_population_and_elimination_inventory():
     args = population()
     rows = build(*args)
-    assert len(rows) == 342
+    assert len(rows) == 360
     first = next(
         r
         for r in rows
