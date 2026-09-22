@@ -601,22 +601,38 @@ function SampleWorkspace({
             <p>{String(t.purpose)}</p>
             <p>{String(t.procedure)}</p>
             <p>
-              Population {String(t.population_status)} · Independent review{" "}
-              {String(t.independent_review)} · Automatic testing credit: false
+              Population {String(t.population_status ?? "UNKNOWN")} ·
+              Independent review {String(t.independent_review)} · Automatic
+              testing credit: false
             </p>
             {((t.items as Item[]) ?? []).map((i) => (
-              <article key={i.item_id}>
+              <article key={i.item_id} className="sample-execution-observation">
                 <h4>
                   {i.item_id} · {i.status}
                 </h4>
                 <p>{i.observation}</p>
-                {i.evidence.map((r, n) => (
-                  <p key={n}>
-                    {r.artifact_id} · {r.locator}
-                    <br />
-                    SHA256: {r.sha256}
-                  </p>
-                ))}
+                {i.evidence.length ? (
+                  <details className="sample-evidence-references">
+                    <summary>Evidence references ({i.evidence.length})</summary>
+                    <ol>
+                      {i.evidence.map((r, n) => (
+                        <li key={n}>
+                          <p>
+                            <strong>{r.artifact_id}</strong>
+                            {sourceLabels.get(r.artifact_id) !==
+                              r.artifact_id &&
+                              sourceLabels.has(r.artifact_id) &&
+                              ` · ${sourceLabels.get(r.artifact_id)}`}
+                          </p>
+                          <p>{r.locator}</p>
+                          <p>SHA256: {r.sha256}</p>
+                        </li>
+                      ))}
+                    </ol>
+                  </details>
+                ) : (
+                  <p>No evidence references recorded.</p>
+                )}
               </article>
             ))}
             <details>

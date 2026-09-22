@@ -52,6 +52,8 @@ const fixture = {
     correctable_executions: [],
   },
 };
+const longLocator =
+  "row one; " + "Exact native record and field location. ".repeat(20);
 for (let n = 0; n < 560; n++) {
   fixture.artifacts.push({ id: "EX" + n, name: "Named original " + n });
   fixture.sample_execution_inputs.artifacts.push({
@@ -140,7 +142,7 @@ try {
     .waitFor({ state: "attached" });
   await page.getByLabel("Find retained support", { exact: true }).fill("");
   await page.getByLabel("Retained support", { exact: true }).selectOption("A");
-  await page.getByLabel("Exact author-supplied locator").fill("row one");
+  await page.getByLabel("Exact author-supplied locator").fill(longLocator);
   if (process.env.AUDIT_UI_CAPTURE_ROOT) {
     for (const width of [1400, 390]) {
       await page.setViewportSize({ width, height: 1000 });
@@ -171,6 +173,61 @@ try {
   assert.equal(sent.payload.items[0].status, "OBSERVED");
   assert.equal(sent.payload.task_digest, "t-server");
   await page.getByText("X2 · revision 1 · T", { exact: true }).click();
+  await page
+    .getByText(
+      "Population UNKNOWN · Independent review NOT_PERFORMED · Automatic testing credit: false",
+      { exact: true },
+    )
+    .waitFor();
+  const references = page.locator(".sample-evidence-references");
+  const summary = references.locator("summary");
+  assert.equal(await summary.innerText(), "Evidence references (1)");
+  for (const width of [1400, 390]) {
+    await page.setViewportSize({ width, height: 844 });
+    assert.equal(
+      await page.getByText(longLocator, { exact: true }).isVisible(),
+      false,
+    );
+    assert.equal(
+      await page
+        .getByText("Recorded amount was10.", { exact: true })
+        .isVisible(),
+      true,
+    );
+    const collapsedHeight = await references.evaluate(
+      (el) => el.getBoundingClientRect().height,
+    );
+    await summary.focus();
+    await page.keyboard.press("Enter");
+    assert.equal(
+      await page.getByText(longLocator, { exact: true }).isVisible(),
+      true,
+    );
+    assert.match(await references.innerText(), /A · retained.csv/);
+    assert.match(await references.innerText(), /SHA256: a-server/);
+    assert.ok(
+      (await references.evaluate((el) => el.getBoundingClientRect().height)) >
+        collapsedHeight,
+    );
+    assert.equal(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth <= innerWidth,
+      ),
+      true,
+    );
+    await summary.focus();
+    await page.keyboard.press("Space");
+    assert.equal(await references.getAttribute("open"), null);
+    assert.deepEqual(await page.evaluate(() => window.sent), sent);
+    if (process.env.AUDIT_UI_CAPTURE_ROOT) {
+      const path = join(
+        process.env.AUDIT_UI_CAPTURE_ROOT,
+        `sample-history-${width}.png`,
+      );
+      await page.screenshot({ path, fullPage: true });
+      await chmod(path, 0o600);
+    }
+  }
   await page.getByRole("button", { name: "Correct this execution" }).click();
   assert.equal(
     await page.getByLabel("Execution selection", { exact: true }).isDisabled(),
@@ -215,7 +272,7 @@ try {
     true,
   );
   console.log(
-    "PASS actual form keyboard record, manual support validation, authoritative pins, leaf correction/history, permission reset and narrow layout",
+    "PASS actual form keyboard record, manual support validation, authoritative pins, expandable exact evidence references, leaf correction/history, permission reset and narrow layout",
   );
 } finally {
   await browser.close();

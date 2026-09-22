@@ -27,6 +27,25 @@
   overflow-wrap: anywhere;
 }
 
+.sample-execution-observation {
+  border-top: 1px solid var(--line);
+  padding: 0.75rem 0;
+}
+.sample-execution-observation h4 {
+  margin: 0.25rem 0;
+  overflow-wrap: anywhere;
+}
+.sample-evidence-references summary {
+  cursor: pointer;
+}
+.sample-evidence-references ol {
+  padding-left: 1.5rem;
+}
+.sample-evidence-references li + li {
+  border-top: 1px solid var(--line);
+  padding-top: 0.25rem;
+}
+
 .sample-entry-grid {
   display: grid;
   grid-template-columns: minmax(260px, 0.85fr) minmax(320px, 1.15fr);
