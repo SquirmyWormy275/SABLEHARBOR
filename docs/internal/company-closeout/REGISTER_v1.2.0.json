@@ -815,7 +815,9 @@
     {
       "path": "docs/canon/J2_PERSONNEL_COMPLETION_2026-09-22.md",
       "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
-      "sha256": "c40374c555eac6a41a03fb3fb3373a60337900521c1ae6872698bd85770232fb"
+      "sha256": "83bcc1938de72bebb2de85dbe8bf384d31f33180213f360be31e4253f828629d",
+      "predecessor_sha256": "c40374c555eac6a41a03fb3fb3373a60337900521c1ae6872698bd85770232fb",
+      "supersession": "Version1.2 current scoped source/publication only; earlier editions remain unchanged."
     },
     {
       "path": "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md",
@@ -845,7 +847,9 @@
     {
       "path": "docs/governance/publication_manifest.json",
       "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
-      "sha256": "5a2debe9139fcf4008f32abc30cf4277f799f68983590cc08b126aa05f7907fe"
+      "sha256": "7dfebc9df7b8195b39f242aa414937259e2fde1e22149cee252c378305bedaba",
+      "predecessor_sha256": "5a2debe9139fcf4008f32abc30cf4277f799f68983590cc08b126aa05f7907fe",
+      "supersession": "Version1.2 current scoped source/publication only; earlier editions remain unchanged."
     },
     {
       "path": "docs/internal/company-closeout/CAPITAL_HISTORY_PROPOSAL.md",
@@ -1422,7 +1426,9 @@
     {
       "path": "scripts/check_public_safety.py",
       "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
-      "sha256": "5842d442306194d81e03b6a8641643990b419b4fa517232c108d860f335efd6f"
+      "sha256": "593ed7a67c1057f39e913fb3c3ecd421786eed3a4885e30004761a865bc7b048",
+      "predecessor_sha256": "5842d442306194d81e03b6a8641643990b419b4fa517232c108d860f335efd6f",
+      "supersession": "Version1.2 current scoped source/publication only; earlier editions remain unchanged."
     },
     {
       "path": "tests/ccf/test_information_policy.py",
@@ -1524,6 +1530,10 @@
     {
       "finding": "Expanded required organization validation needed pdfinfo on hosted runner; added existing poppler-utils dependency.",
       "result": "RETEST_REQUIRED"
+    },
+    {
+      "finding": "J2 Document ID field shared a paragraph with metadata, producing an invalid catalog identity. Split metadata into separate fields and regenerated the approved publication/catalog.",
+      "result": "All146catalog identifiers checked for whitespace; five new exact IDs confirmed. No financial change."
     }
   ]
 }

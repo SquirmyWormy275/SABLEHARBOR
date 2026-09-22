@@ -1029,8 +1029,8 @@
     {
       "source": "docs/canon/J2_PERSONNEL_COMPLETION_2026-09-22.md",
       "publication": "docs/governance/publications/SH-J2-PERSONNEL-20260922_v1.0.0.pdf",
-      "sha256": "8c711e137047f783c8a3e31234c2f807e0e466e99732efff8658b22fc364be04",
-      "source_sha256": "c40374c555eac6a41a03fb3fb3373a60337900521c1ae6872698bd85770232fb",
+      "sha256": "557bad6c8872b213e7dd7b9af1791fc1578dd6fdbaa1225e8f3fa6d27a632a49",
+      "source_sha256": "83bcc1938de72bebb2de85dbe8bf384d31f33180213f360be31e4253f828629d",
       "brand": "corporate",
       "normalizer": "qpdf"
     },

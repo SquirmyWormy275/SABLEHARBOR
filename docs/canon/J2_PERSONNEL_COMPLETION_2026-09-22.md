@@ -1,6 +1,14 @@
 # J2 personnel completion — September 22, 2026
 
-**Document ID:** SH-J2-PERSONNEL-COMPLETION-20260922. **Repository status:** Pending acceptance. **Intended accepted canon state:** LOCKED for the finite scope below. **Authority:** The owner's current instruction, “OK. Finish everything,” continuing the company-closeout delegation for supported fictional completion. These specific names and career details are implementation selections under that delegation, not separately quoted historical owner selections.
+**Document ID:** SH-J2-PERSONNEL-COMPLETION-20260922
+
+**Version:** 1.0.0
+
+**Repository status:** Pending acceptance.
+
+**Intended accepted canon state:** LOCKED for the finite scope below.
+
+**Authority:** The owner's current instruction, “OK. Finish everything,” continuing the company-closeout delegation for supported fictional completion. These specific names and career details are implementation selections under that delegation, not separately quoted historical owner selections.
 
 ## Decision and exact scope
 
