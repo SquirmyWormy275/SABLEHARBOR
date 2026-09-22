@@ -4,6 +4,12 @@ from __future__ import annotations
 
 from .store import DomainError, digest
 
+# These native systems retain raw object/document bytes, not JSON envelopes.
+# Text intake still inspects the exact bytes; unknown systems keep JSON validation.
+_UNNAMED_TEXT_SYSTEMS = frozenset(
+    {"privileged_object", "policy_document", "nonhuman_source", "copied_dataset"}
+)
+
 
 def binding(engine, state):
     if engine.company_store is None:
@@ -93,7 +99,8 @@ def collect(engine, state, payload, stamped, command_id):
     # Keep their exact values in the receipt, independently of the download name.
     name = record["provenance"].get("name")
     if name is None:
-        name = "company-source-" + digest(identity) + ".json"
+        suffix = ".txt" if record["system"] in _UNNAMED_TEXT_SYSTEMS else ".json"
+        name = "company-source-" + digest(identity) + suffix
     source = {"kind": "COLLECTED_COMPANY_SOURCE", "receipt": receipt, "origin": record["origin"]}
     manifest = engine.artifacts.retain_company(
         state["id"],
