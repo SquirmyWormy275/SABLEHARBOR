@@ -3,6 +3,9 @@
 **Document ID:** SH-COMPANY-INSPECTION-2026-09-15
 **Version:** 1.0.0
 Prepared September 15, 2026 UTC.
+Execution/provenance instructions updated September 22, 2026 UTC. The completed
+period and September event cutoff below remain unchanged; new evidence is not
+backdated to this guide's original preparation date.
 This guide defines the package route. The [register](REGISTER.json) and final release
 receipt determine accepted scope; this working guide is not a delivery receipt.
 
@@ -153,11 +156,22 @@ component; it is not omitted merely because its native generator uses another di
 
 The release builder uses `tools.company_closeout.compose` to pin the exact generated
 and tracked populations. Supply the release receipt's version and availability
-timestamp and a new contract filename; `--accepted` is used only after actual
-repository acceptance. `tools.company_closeout.edition` builds a new immutable
+timestamp and a new contract filename. `--accepted` requires `--acceptance-pr`
+and `--adoption-path`: the builder verifies actual merged PR evidence through the
+repository API and requires the exact merge commit as the clean source revision.
+The scoped adoption source pins accepted implementation sources and explicitly
+preserves pending framework reviews, draft rights, failures and future duties.
+The public source archive retains mixed source states; acceptance never labels
+every included historical or proposed document controlling canon.
+
+`tools.company_closeout.edition` builds a new immutable
 directory and deterministic ZIP. It refuses stale hashes, a mismatched source
 revision, omitted/extra members, symlinks, private components and contradictory
-acceptance metadata. Do not replace an existing archive under the same version.
+acceptance metadata. It rechecks merge evidence when building an accepted package;
+offline verification checks the retained receipt and packaged adoption scope.
+The receipt identifies its actual API observation date. Offline hashes alone do
+not independently prove a remote merge or professional acceptance. Do not replace
+an existing archive under the same version.
 
 ```sh
 uv run python -m tools.company_closeout.edition --output /new/edition --contract /new/CONTRACT.json --zip /new/company-edition.zip

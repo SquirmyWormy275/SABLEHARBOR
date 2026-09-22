@@ -20,6 +20,12 @@ has continued developing assistance and backup-monitoring workflows. That work
 remains with its owner; this source compatibility check does not certify those
 additional workflows or inspect their private live records.
 
+The September 22 UTC execution refresh observed head `4113ae7d`, with uncommitted
+security-event/runtime work still owned by that workflow. The committed
+`company_store.py` retains the exact hash above. This preserves the pinned import
+interface's byte compatibility; it does not establish operation or acceptance of
+the portal's newer security-event workflows.
+
 ## Existing schema and bounded import
 
 `tools/company_closeout/portal_rehearsal.py` loads the exact Git-committed existing
