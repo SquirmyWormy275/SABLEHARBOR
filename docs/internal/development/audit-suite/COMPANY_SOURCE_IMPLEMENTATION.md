@@ -841,3 +841,61 @@ ambiguous transport retries, and labels recorded history separately from a fresh
 source check. Changed source/scope or unavailable exact targets redact historical
 content. HTTP, native-source and browser checks cover these boundaries; integrated
 workflow and human usability acceptance remain separate.
+
+### Company-owned package scans and privileged sessions
+
+The [package-manifest runtime](../../../../enterprise/audit_suite/VULNERABILITY_RUNTIME.md)
+now maintains an explicit local asset/package inventory and attributed exact-version
+rules. A package change does not clear a finding: a selected rescan records the new
+observation, while unscanned assets retain their prior observation. Time-limited
+local exceptions preserve detection and expose expiry. Paired private executions
+have independent receipt and native-history verification. These are company-owned
+local operations, without an audit engagement or evidence delivery. They do not
+establish installed-host inventory, real CVE coverage or corporate remediation SLAs.
+
+The [privileged-session runtime](../../../../enterprise/audit_suite/PRIVILEGED_RUNTIME.md)
+uses exact existing fictional lifecycle originals to admit a bounded read right
+over a new nonpersonal byte object. Explicit leases, sessions, reads, revocation,
+expiry cleanup and scheduled reconciliation retain their own native history.
+Expiry denies a read even before explicit cleanup; reconciliation can expose a
+session awaiting cleanup or a missing declared occurrence. Retained implementation,
+source metadata and command history are checked before inspection and mutation.
+Twenty-six focused tests cover eligibility, actual reads, replay, tampering and
+bounded loading. This adds a local source capability; it does not create host
+accounts, establish enterprise privileged-account completeness or approve a control.
+
+The [disposal runtime](../../../../enterprise/audit_suite/DISPOSAL_RUNTIME.md)
+creates and removes only its own new nonpersonal fixture copies. Independent active
+and backup inventory, explicit local authorization, retention dates and holds
+constrain real unlink operations. Durable intent and verified inode quarantine
+precede deletion; interrupted retries recheck current holds and authorization.
+An unexplained missing copy retains a distinct uncertain outcome. Aborted
+quarantined bytes remain inspectable, and exact completed replay cannot delete a
+replacement. Thirty-five focused tests passed. Native originals retain metadata
+and hashes without the disposed payload. Logical unlink does not establish secure
+erasure or acceptance of a corporate/legal retention policy.
+
+### Integrated context and reviewer journey
+
+A separate private, real-backend technical workroom exercised investigation
+save/resume, exact historical work previews, personal views, participant handoffs,
+instructor assessment, selected debrief export and append-only source reassessment.
+Six completed browser stages recorded 147 instrumented actions and 140 requests
+with no unexpected HTTP failures or browser errors. Desktop and narrow layouts,
+protected-route denial and inert companion restoration were checked. The retained
+manifest independently verifies 126 evidence files, including earlier failed
+attempts. These counts describe automated verification, not human usability.
+
+That journey exposed a real interaction defect: opening a work preview unmounted
+the underlying handoff and saved-view forms, losing unsaved text and opener focus.
+Those forms now remain mounted, hidden and inert while the preview is open. Closing
+the preview restores focus only to a still-valid opener in the same current
+context. A permanent browser regression and the resumed actual journey passed.
+
+Population, selection, workpaper and review setup in this small workroom was
+helper-authored; only the two reassessment dispositions changed formal audit state
+during the browser journey. This verification does not claim full-scope procedure
+execution, model consultation quality, professional rubric calibration or owner
+acceptance. The complete repository suite at frozen commit `1c3b4705` passed
+1,834 tests with three skips; later features have their own focused checks and are
+not silently included in that historical result.

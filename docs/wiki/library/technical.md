@@ -184,6 +184,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Configuration inventory and drift from original release records](../../../enterprise/audit_suite/CONFIGURATION_ACTIVITY.md) — MD
 - [Explicit persistent configuration export](../../../enterprise/audit_suite/CONFIGURATION_EXPORT.md) — MD
 - [Persistent local configuration runtime](../../../enterprise/audit_suite/CONFIGURATION_RUNTIME.md) — MD
+- [Local disposal runtime](../../../enterprise/audit_suite/DISPOSAL_RUNTIME.md) — MD
 - [Per-control legacy documentary custody](../../../enterprise/audit_suite/DOCUMENTARY_CUSTODY.md) — MD
 - [Instructor-authored assessment history](../../../enterprise/audit_suite/INSTRUCTOR_ASSESSMENTS.md) — MD
 - [Selected instructor debriefs](../../../enterprise/audit_suite/INSTRUCTOR_DEBRIEF.md) — MD
