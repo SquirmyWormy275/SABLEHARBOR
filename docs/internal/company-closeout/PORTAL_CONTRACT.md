@@ -91,3 +91,21 @@ external-deployment claim. The backup is after revocation; older-backup replay,
 retention/deletion/hold and indirect disclosure require separate evidence. The
 CCF reference restore harness exercises its own scoped older-snapshot reconciliation,
 not an unimplemented full portal deletion capability.
+
+## Additional isolated portal workflow evidence
+
+The [September 22 neutral reperformance](evidence/portal-neutral-2026-09-22/README.md)
+ran 36 tests at exact committed portal source
+`8f9b8eabed3af1d2c050afc9bfe8935fd41f48ae`, in a separate clean checkout with
+locked dependencies and temporary stores. It exercised independent review,
+versioned workpapers, HTTP authentication/metadata and future-evidence denial,
+and actual backup recovery that denies older revoked credentials and sessions.
+The receipt pins commands, module hashes, outcomes and limits. This additional
+workflow pin does not replace the byte-compatible CompanyStore import pin.
+
+These neutral fixtures are software evidence; they do not assert review of the
+final company edition or human control effectiveness. Company-record legal-hold
+and disposal reconciliation after an older backup remains unimplemented in the
+inspected portal recovery path. The full indirect-disclosure surface census also
+remains separate from the named tested HTTP endpoints. The active portal owner
+retains those paths and live work; no active service or private source was changed.

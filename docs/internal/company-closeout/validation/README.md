@@ -67,3 +67,28 @@ also passed; hygiene inspected 5,019 tracked paths. The institutional catalog
 and public-safety checks passed on the immediately preceding generated catalog
 revision. Source/artifact mutation was paused throughout the broad test run.
 Later statutory and current-population integrations require final-head validation.
+
+## September 22 integration checks and clean-checkout correction
+
+At clean `88cec5ee786716e708a81c8ca595d77620ad17d2`, the full maintainer pytest
+command passed 656 tests with three skips. Collection independently counted 659
+cases. The sole warning was the existing Python 3.12 SQLite datetime-adapter
+deprecation. Governance/J2, catalog, organization and repository-hygiene checks
+passed; hygiene inspected 5,071 tracked paths. The changed inspection PDF was
+visually checked and its source/publication hash pairing validated. Later tax
+journal integration still requires final-revision generation and validation.
+
+Hosted validation at the earlier `67377e34` revision exposed a clean-checkout
+ARU workpaper dependency on an ignored generated debt CSV. Commit `358d7305`
+reconstructs that native source in a temporary directory through the existing
+locked generator, without trusting a stale working cache. Twenty focused tests
+passed in a detached clean checkout with no generated finance directory before
+or after execution. Reader coverage also detected a newly added Illinois tax
+source missing from the old catalog; the supported generator incorporated it.
+
+Acceptance review added negative checks for an unmerged PR, wrong merge/source,
+changed or omitted adoption scope and source availability before its recording
+or actual acceptance. Accepted packaging now requires the exact actual merged
+revision and a preserved, hash-bound scoped adoption record. Seventy-three
+packaging tests passed after these corrections. Package hashes remain integrity
+evidence, not proof of professional conclusions or blanket canon adoption.
