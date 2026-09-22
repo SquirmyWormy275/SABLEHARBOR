@@ -46,11 +46,12 @@ def collect(root: Path, revision: str, number: int, adoption_path: str):
     if path.is_symlink() or not path.is_file():
         raise EditionError("Missing scoped adoption source")
     scope = json.loads(path.read_bytes())
+    packages = scope.get("packages", scope.get("work_packages", []))
     if (
         scope.get("status") != "LOCKED_ON_REPOSITORY_ACCEPTANCE"
         or not scope.get("adopted_sources")
         or not scope.get("preserved_states")
-        or {p["id"] for p in scope.get("work_packages", [])}
+        or {p["id"] for p in packages}
         != {f"SH-C{i:02d}" for i in range(1, 11)}
     ):
         raise EditionError("Incomplete scoped adoption source")
@@ -70,7 +71,7 @@ def collect(root: Path, revision: str, number: int, adoption_path: str):
         adoption_sha256=sha(path.read_bytes()),
         adopted_sources=scope["adopted_sources"],
         preserved_states=scope["preserved_states"],
-        work_packages=scope["work_packages"],
+        work_packages=packages,
         observed_at=datetime.now(timezone.utc).isoformat(),
     )
 
@@ -137,6 +138,7 @@ def verify_packaged_scope(contract, content):
         return
     receipt = contract["acceptance_receipt"]
     scope = json.loads((content / receipt["adoption_path"]).read_bytes())
+    scope["work_packages"] = scope.get("packages", scope.get("work_packages", []))
     if scope.get("status") != "LOCKED_ON_REPOSITORY_ACCEPTANCE" or any(
         scope.get(key) != receipt[key]
         for key in ("adopted_sources", "preserved_states", "work_packages")
