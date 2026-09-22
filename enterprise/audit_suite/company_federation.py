@@ -10,6 +10,7 @@ from .company_store import CompanyStore, CompanyStoreError, _id
 from .store import DomainError, digest
 
 SCHEMA = "COMPANY_SOURCE_PORTFOLIO_V1"
+MAX_COMPONENTS = 64
 QUALIFICATION = "QUALIFIED_SOURCE_PORTFOLIO_NOT_COHERENT_OPERATING_YEAR"
 CAPABILITIES = {
     "source_discovery": True,
@@ -79,7 +80,7 @@ def load_profile(path: Path, profile_id: str):
         selected = profile["components"]
         if (
             not isinstance(selected, list)
-            or not 1 <= len(selected) <= 32
+            or not 1 <= len(selected) <= MAX_COMPONENTS
             or any(not isinstance(c, str) for c in selected)
             or len(set(selected)) != len(selected)
             or profile["qualification"] != QUALIFICATION
