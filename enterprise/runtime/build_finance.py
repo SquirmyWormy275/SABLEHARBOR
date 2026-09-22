@@ -264,7 +264,7 @@ def build(allow_working_tree=False, *, company_closeout=False):
             if int(r["year"]) == 2026 and not r["source_id"].startswith("RT-")
             and r["source_id"] != "SH-VOICE-GW-01"
             and not (company_closeout and r["entity"] == "ELIM" and int(r["year"]) == 2026 and r["source_id"] == "1150" and r["source_type"] == "BALANCE_ELIMINATION" and r["account"] in {"1150", "2150"})
-            and not (company_closeout and (r["source_id"].startswith(("CO-TAX-", "CO-ASSET-", "CO-PAYROLL-", "SH-RWH-IL-ROT-", "CO-STATE-", "CO-RWH-BOOK-", "CO-RETENTION-EMP-TAX-", "CO-H2-ROT-", "CO-STAT-")) or r["source_type"] == "MEMBER_EQUITY"))
+            and not (company_closeout and (r["source_id"].startswith(("CO-TAX-", "CO-ASSET-", "CO-PAYROLL-", "SH-RWH-IL-ROT-", "CO-STATE-", "CO-RWH-BOOK-", "CO-RETENTION-EMP-TAX-", "CO-H2-ROT-", "CO-STAT-", "CO-ROT-PENALTY-")) or r["source_type"] == "MEMBER_EQUITY"))
         )
 
     if history(before) != history(rows):
