@@ -1,0 +1,125 @@
+{
+  "document_id": "SH-HOST-RESIDUAL-SUCCESSOR-20260922",
+  "version": "0.1.0",
+  "source_baseline": "812676c2",
+  "authored_on": "2026-09-22",
+  "status": "PENDING_REPOSITORY_ACCEPTANCE",
+  "event_cutoff_preserved": "2026-09-14 America/Los_Angeles",
+  "availability": "No earlier than actual clean source commit; newly authored review and administrative precision, not evidence available at the historic event date",
+  "sources": [
+    {
+      "path": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+      "sha256": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa"
+    },
+    {
+      "path": "docs/legal/gap-instruments/source/host-rights.md",
+      "sha256": "4fd81f5dffc2d95ba89c495a3689381648b44a4a8cdfd62750ea028b5bdde9d4"
+    },
+    {
+      "path": "enterprise/operations/source/debt_host_2026_08.json",
+      "sha256": "644d8e442888082dcf2ad8fc0f1fb27d0458f9548150de203c404fdad2420bf0"
+    },
+    {
+      "path": "enterprise/closeout/source/escrow_register.json",
+      "sha256": "4e626802499cdf7702cbd4bbfa2851a55baa0ec24b8b06e82941fe8642538a13"
+    },
+    {
+      "path": "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md",
+      "sha256": "5ee3715b0b5b08ba2fd259504ff7455da005d3d2e3701668945aa1ca90477808"
+    },
+    {
+      "path": "industrial/transaction/04_ARU_APPROVAL_AND_PURCHASE_AGREEMENT.md",
+      "sha256": "3b40effe8efb1d4a69216180d508dad90f7fc6a778679b39ee2ed5371d0de9eb"
+    },
+    {
+      "path": "industrial/source/chronology.json",
+      "sha256": "53fe564b06301176a3a8322aedb82fee5a61c82caeae3d333e0a2c520b3eedc5"
+    }
+  ],
+  "administrative_contacts": [
+    {
+      "host_id": "KGM",
+      "accepted_host_name": "Kelly Gang Mining",
+      "site_id": "SH-SITE-0023",
+      "host_role_id": "KGM_HOST_OPERATING_OWNER",
+      "cradle_role": "Cradle deployment owner",
+      "cradle_reviewer_person_id": "P025",
+      "internal_correspondence_queue": "SH-HOST-RECORDS-KGM-001",
+      "scope": "Existing Stream17 technical and selected settlement record routing; no appointment of an external legal signatory, contractual service address or new host authority",
+      "capture_record": "SH-HOST-S17-202608-01",
+      "settlement_records": [
+        "SH-HOST-S17-202608-02",
+        "SH-HOST-S17-202608-03"
+      ]
+    },
+    {
+      "host_id": "DEMOTTE",
+      "accepted_host_name": "Demotte Reclamation Services",
+      "site_id": "SH-SITE-0027",
+      "host_role_id": "DEMOTTE_HOST_OPERATING_OWNER",
+      "cradle_role": "Cradle deployment owner",
+      "cradle_reviewer_person_id": "P025",
+      "internal_correspondence_queue": "SH-HOST-RECORDS-DEM-001",
+      "scope": "Existing Gen1 slipstream, bypass and held sample record routing; no appointment of external legal signatory or service address",
+      "exception_record": "SH-HOST-DEM-202608-01"
+    }
+  ],
+  "dispositions": [
+    {
+      "id": "HOST-R01-ADMIN",
+      "state": "ORDINARY_RECORD_ROUTING_COMPLETED",
+      "claim": "Responsible existing roles, separate host populations and internal routing now indexed; internal routing is not effective legal service."
+    },
+    {
+      "id": "HOST-R01-CAPTURE",
+      "state": "PARTLY_RESOLVED_IN_ACCEPTED_SOURCE",
+      "claim": "Stream17 August3 capture outlet S17-A confirmation exists; exact drawing requirement in unsigned September12 form is a proposed condition, not an accepted historical breach. Demotte August held sample and no-sale case does not establish commercial title transfer."
+    },
+    {
+      "id": "HOST-R01-HISTORY",
+      "state": "BOUNDED_CURRENT_RIGHTS_KNOWN_DURATION_UNESTABLISHED",
+      "claim": "Accepted operating authority, bypass, Stream17 designated-stream exclusivity during its agreement term and capture title support current represented performance. Exact historical term endpoints, general termination and legal forum are not recovered; no perpetual exclusivity or unqualified enforceability conclusion."
+    },
+    {
+      "id": "HOST-R01-PROSPECTIVE",
+      "state": "PROPOSAL_REQUIRES_PRECISE_OWNER_TERM_ADOPTION",
+      "claim": "TERMS_PROPOSAL.md specifies two prospective alternatives without permanent participation rate, new cash, historic amendment or compensation change."
+    },
+    {
+      "id": "ESC-RW-001",
+      "state": "AUTHENTIC_UNRELEASED_FUTURE_CONDITION",
+      "amount_usd": "3000000.00",
+      "claim": "36-month environmental/title escrow ends July18,2028 subject to claims; no current release, claim recovery or clean environmental conclusion needed to reconcile balance."
+    },
+    {
+      "id": "HOLD-RW-001",
+      "state": "AUTHENTIC_UNRELEASED_UNVERIFIED_DELIVERABLE",
+      "amount_usd": "500000.00",
+      "claim": "Funded holdback remains unreleased. Exact deliverable satisfaction or release entitlement is unresolved; do not invent cure merely to close the register."
+    },
+    {
+      "id": "ESC-ARU-001",
+      "state": "AUTHENTIC_UNRELEASED_FUTURE_CONDITION",
+      "amount_usd": "3000000.00",
+      "claim": "July7,2027 general scheduled release subject to claims; separate Jan7,2031 environmental survival. Existing600000 claim accrual does not create recoverable escrow asset."
+    }
+  ],
+  "financial_effects": {
+    "new_expense_usd": "0",
+    "new_cash_usd": "0",
+    "new_asset_usd": "0",
+    "new_liability_usd": "0",
+    "escrow_administrative_total_usd": "6500000.00",
+    "available_escrow_cash_to_SH_usd": "0",
+    "selected_stream17_realization_usd": "60000",
+    "selected_stream17_host_participation_usd": "12000",
+    "selected_demotte_failed_test_usd": "18500",
+    "selected_demotte_sale_usd": "0"
+  },
+  "preserved": [
+    "No historical source, released package, generated ledger or catalog is edited.",
+    "Missing badge, MW17 pathway and future responses remain as-at-cutoff states.",
+    "No perpetual rate, minimum volume, compensation or new signatory/government approval is authored.",
+    "A proposed future agreement is not proof of historical execution or a retrospectively cured exception."
+  ]
+}

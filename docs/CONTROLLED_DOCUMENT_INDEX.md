@@ -7,7 +7,8 @@ Facility delivery: [controlled release, source commit and checksums](releases/FA
 
 ## September 15 company closeout successor
 
-[Current company register](internal/company-closeout/REGISTER.json) ·
+[Current residual closeout](internal/company-closeout/RESIDUAL_CLOSEOUT_2026-09-22.md) ·
+[Edition 1.0.0 adoption register](internal/company-closeout/REGISTER.json) ·
 [Owner directions, including corporate taxation from formation](canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md) ·
 [Financial reconciliation](finance/evidence/company-closeout/README.md) ·
 [Current workforce and operating records](../enterprise/operations/docs/completed-period.md) ·

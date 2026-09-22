@@ -2,9 +2,7 @@
 
 [Start here](Start-Here.md) · [Reading glossary](Glossary.md) · [Wiki home](Home.md)
 
-The [company closeout register](../internal/company-closeout/REGISTER.json) is the
-current source for this September 15, 2026 status view. It separates implemented,
-validated and accepted work. Ten issues were open at refresh; completion follows
+The [September 22 continuation](../internal/company-closeout/RESIDUAL_CLOSEOUT_2026-09-22.md) records the current residual work after publication of company edition 1.0.0. The [original company register](../internal/company-closeout/REGISTER.json) preserves its adoption scope and historical pending states. Ten issues were open at refresh; completion follows
 their actual criteria and accepted evidence. The earlier September 12 snapshot is
 preserved in [Git history](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/78d4fcdf1df5b8ffc0775b9af22cae1002d456d7/docs/wiki/Open-Questions.md).
 
@@ -13,8 +11,8 @@ preserved in [Git history](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7
 | Issue | Current disposition | Evidence route |
 |---|---|---|
 | [#11](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/11) | PR #165 is merged; main protection is applied and verified. Required source checks/PRs, force-push and deletion protection are active. Branch retirement remains separately reviewed; active portal branches stay reserved. | [Administration](../internal/company-closeout/MAIN_PROTECTION.md) |
-| [#18](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/18) | Owner chose corporate taxation from formation for the existing Delaware LLC. Corporate-from-formation history and statutory successor are implemented for scoped edition acceptance; separate external execution limits remain. The C-corporation preference is settled. | [Owner directions](../canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md), [tax workpaper](../finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md) |
-| [#19](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/19) | Six leaders and 237 billets remain accepted. Retrospective company population work does not automatically complete every appointment-history promise. | [Completed-period workforce](../../enterprise/operations/docs/completed-period.md) |
+| [#18](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/18) | Owner chose corporate taxation from formation for the existing Delaware LLC. Corporate-from-formation history and the statutory successor were accepted through PR #166 and published in edition 1.0.0; separate external execution limits remain. The C-corporation preference is settled. | [Owner directions](../canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md), [tax workpaper](../finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md) |
+| [#19](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/19) | Six leaders and 237 billets remain accepted. PR #169 adds ten administrative office histories and 18 current Orientation commission chains on acceptance; anonymous names, biographies and broader history remain separate. | [Completed-period workforce](../../enterprise/operations/docs/completed-period.md) |
 | [#21](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/21) | Existing portal remains active. Company-source import/restore rehearsals have bounded evidence; external deployment readiness is separate. | [Portal input contract](../internal/company-closeout/PORTAL_CONTRACT.md) |
 | [#22](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/22) | Malformed tenant identity fix and direct authorization tests do not establish all production or indirect disclosure boundaries. | [Reference policy](../../enterprise/runtime/security.py) |
 | [#24](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/24) | Reference restore evidence distinguishes held/deleted content and revoked access; complete integrated portal retention enforcement remains separately scoped. | [Controls and restore](../../enterprise/ccf/company_closeout/README.md) |
@@ -25,8 +23,7 @@ preserved in [Git history](https://github.com/SquirmyWormy275/SABLEHARBOR/blob/7
 
 The owner also adopted the exact fictional five-holder register and voluntary
 proportional contributions without new units. The [dated direction](../canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md)
-settles that choice; capital-account implementation and repository acceptance
-remain separately recorded in the company register.
+settles that choice; capital-account implementation is accepted and published in edition 1.0.0. Additional material instrument rights remain separately identified in the continuation register.
 
 ## Accepted successors to older status claims
 

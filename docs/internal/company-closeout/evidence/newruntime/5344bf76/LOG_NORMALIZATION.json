@@ -1,0 +1,8 @@
+{
+  "file": "graph.log",
+  "reason": "Remove extra EOF blank line required by git diff --check; test output content unchanged.",
+  "raw_sha256": "2c364d951ca5e243346438013e5c5b17cb73f60223ac6bfdda4b607438e0c2ca",
+  "stored_sha256": "d886c490f193c757a9f491de36d7ddfa147113610328ba252fc638854f86663a",
+  "restore_original_by_appending_hex": "0a",
+  "failed_check": "https://github.com/SquirmyWormy275/SABLEHARBOR/actions/runs/35757007407"
+}

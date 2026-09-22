@@ -80,14 +80,32 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Founder admission and monetary opening](../../internal/company-closeout/FOUNDER_ADMISSION_BASIS.md) — MD
 - [Industrial opening capital: authored 2025 contribution history](../../internal/company-closeout/INDUSTRIAL_CAPITAL_HISTORY_2026-09-22.md) — MD
 - [Company edition inspection and reproduction](../../internal/company-closeout/INSPECTION_GUIDE.md) — MD · [formatted PDF](../../finance/publications/SH-COMPANY-INSPECTION-20260915_v1.0.0.pdf)
+- [J2 administrative appointment history — September 22, 2026](../../internal/company-closeout/J2_ADMINISTRATIVE_HISTORY_2026-09-22.md) — MD
 - [Main source protection](../../internal/company-closeout/MAIN_PROTECTION.md) — MD
+- [Orientation commission history — September 22, 2026](../../internal/company-closeout/ORIENTATION_COMMISSIONS_2026-09-22.md) — MD
 - [Company edition to existing audit portal](../../internal/company-closeout/PORTAL_CONTRACT.md) — MD
 - [Selected-edition portal review rehearsal](../../internal/company-closeout/PORTAL_SELECTED_REVIEW.md) — MD
 - [PR #145 integration evidence](../../internal/company-closeout/PR145_INTEGRATION.md) — MD
+- [Company closeout continuation — September 22, 2026](../../internal/company-closeout/RESIDUAL_CLOSEOUT_2026-09-22.md) — MD
+
+## `docs/internal/company-closeout/evidence/newruntime/5344bf76`
+
+- [Public edition copy disposal — observed September 22, 2026](../../internal/company-closeout/evidence/newruntime/5344bf76/README.md) — MD
+- [Committed portal runtime review — 2026-09-22](../../internal/company-closeout/evidence/newruntime/5344bf76/REVIEW.md) — MD
 
 ## `docs/internal/company-closeout/evidence/portal-neutral-2026-09-22`
 
 - [Portal neutral software reperformance — September 22, 2026 UTC](../../internal/company-closeout/evidence/portal-neutral-2026-09-22/README.md) — MD
+
+## `docs/internal/company-closeout/host-residual-successor`
+
+- [Host rights and escrow residual successor](../../internal/company-closeout/host-residual-successor/README.md) — MD
+- [HOST-R01 — precise prospective terms for decision](../../internal/company-closeout/host-residual-successor/TERMS_PROPOSAL.md) — MD
+
+## `docs/internal/company-closeout/residual-finance-2026-09-22`
+
+- [Pending implementation text — recommended current-rights bundle](../../internal/company-closeout/residual-finance-2026-09-22/PENDING_INSTRUMENT.md) — MD
+- [Capital rights and ARU debt: source completion and decision-ready terms](../../internal/company-closeout/residual-finance-2026-09-22/README.md) — MD
 
 ## `docs/internal/company-closeout/validation`
 
