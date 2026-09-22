@@ -6,7 +6,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 132 |
+| COUNTERPART_REVIEW_REQUIRED | 136 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 107 |
@@ -37,6 +37,8 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Company closeout accounting basis](../../finance/evidence/company-closeout/ACCOUNTING_BASIS_SUCCESSOR.md) — SH-FIN-HUMAN-001
 - [ARU/BST annual tax-base bridge](../../finance/evidence/company-closeout/ARU_BOOK_TO_TAX_METHOD.md) — SH-FIN-HUMAN-001
 - [Authored 2016–2022 tax and cash reconstruction](../../finance/evidence/company-closeout/HISTORICAL_TAX_RECONSTRUCTION.md) — SH-FIN-HUMAN-001
+- [Illinois loss-limit authority update](../../finance/evidence/company-closeout/ILLINOIS_NOL_2026_SUCCESSOR.md) — SH-FIN-HUMAN-001
+- [Industrial native income-tax settlement adapter](../../finance/evidence/company-closeout/INDUSTRIAL_TAX_SETTLEMENT.md) — SH-FIN-HUMAN-001
 - [RWH Illinois transaction-tax composition](../../finance/evidence/company-closeout/RWH_TRANSACTION_TAX.md) — SH-FIN-HUMAN-001
 - [Prospective software sales-tax population](../../finance/evidence/company-closeout/SOFTWARE_SALES_TAX.md) — SH-FIN-HUMAN-001
 - [Entity filing calendar and performance boundary](../../finance/evidence/company-closeout/TAX_FILING_CALENDAR.md) — SH-FIN-HUMAN-001
@@ -132,7 +134,9 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Independent review: initial Red Wash historical tax source](../../../enterprise/ccf/company_closeout/RWH_HISTORY_INDEPENDENT_REVIEW.md) — Corporate document-format reconciliation
 - [State-tax computational handoff](../../../enterprise/ccf/company_closeout/STATE_TAX_IMPLEMENTATION_ADDENDUM.md) — Corporate document-format reconciliation
 - [State unitary operating-group determination](../../../enterprise/ccf/company_closeout/STATE_UNITARY_ANALYSIS.md) — Corporate document-format reconciliation
+- [Independent statutory tax workpaper review](../../../enterprise/ccf/company_closeout/STATUTORY_TAX_INDEPENDENT_REVIEW_2026-09-22.md) — Corporate document-format reconciliation
 - [Subsidiary and state income-tax implementation contract](../../../enterprise/ccf/company_closeout/SUBSIDIARY_TAX_PERIMETER_RESEARCH.md) — Corporate document-format reconciliation
+- [Filing and receipt calendar supplement](../../../enterprise/ccf/company_closeout/TAX_CALENDAR_SUPPLEMENT.md) — Corporate document-format reconciliation
 - [Evidence collection and scheduling](../../../enterprise/ccf/operations/COLLECTION.md) — Corporate document-format reconciliation
 - [Bounded control test contracts](../../../enterprise/ccf/operations/CONTROL_TEST_CONTRACTS.md) — Corporate document-format reconciliation
 - [GitHub pull-request review source](../../../enterprise/ccf/operations/GITHUB_SOURCE.md) — Corporate document-format reconciliation

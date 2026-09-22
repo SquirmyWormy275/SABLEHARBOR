@@ -68,7 +68,9 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Independent review: initial Red Wash historical tax source](../../../enterprise/ccf/company_closeout/RWH_HISTORY_INDEPENDENT_REVIEW.md) — MD
 - [State-tax computational handoff](../../../enterprise/ccf/company_closeout/STATE_TAX_IMPLEMENTATION_ADDENDUM.md) — MD
 - [State unitary operating-group determination](../../../enterprise/ccf/company_closeout/STATE_UNITARY_ANALYSIS.md) — MD
+- [Independent statutory tax workpaper review](../../../enterprise/ccf/company_closeout/STATUTORY_TAX_INDEPENDENT_REVIEW_2026-09-22.md) — MD
 - [Subsidiary and state income-tax implementation contract](../../../enterprise/ccf/company_closeout/SUBSIDIARY_TAX_PERIMETER_RESEARCH.md) — MD
+- [Filing and receipt calendar supplement](../../../enterprise/ccf/company_closeout/TAX_CALENDAR_SUPPLEMENT.md) — MD
 
 ## `enterprise/ccf/operations`
 
