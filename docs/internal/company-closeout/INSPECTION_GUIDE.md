@@ -75,6 +75,16 @@ complete monthly mine and railway compliance populations.
 
 ## Financial and completed-period joins
 
+The financial component also contains `capital_register.json`, six `capital_*.csv`
+schedules and the `statutory_*.json`/CSV workpapers beside the existing exports.
+These are supplemental company workpapers, not additional rows to add to the
+ledger or copies implicitly included in every unit's SQLite database. Join funding
+by `scenario`, `source_id` and `event_id`, and holders by `holder_id`; preserve the
+source-to-cash rounding bridge. Join tax by scenario, taxpayer, jurisdiction and
+year. Filing/settlement states and interentity payer roles remain distinct from
+financial consolidation. The manifest inventories these exact supplemental bytes.
+
+
 The finance export directory is
 `content/enterprise/generated/company-closeout-v1/exports`. Its
 `export_schema.json` defines the existing table columns. `enterprise.sqlite3`

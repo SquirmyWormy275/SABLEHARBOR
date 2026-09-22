@@ -1,7 +1,7 @@
 # Company edition releases
 
 **Prepared:** September 22, 2026 UTC  
-**Current state:** Release preparation; no company edition is published by this entry alone.
+**Publication state:** The release receipt records actual publication and acceptance; this index specifies the controlled delivery contract.
 
 The [company closeout register](../internal/company-closeout/REGISTER.json) controls
 scope, decisions and residuals. The [inspection guide](../internal/company-closeout/INSPECTION_GUIDE.md)
