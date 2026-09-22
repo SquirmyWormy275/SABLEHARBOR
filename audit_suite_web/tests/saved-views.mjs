@@ -32,7 +32,7 @@ window.fetch=async(path,options={})=>{
 const all=Array.from({length:80},(_,n)=>({id:n?'W'+n:'W',title:'Report '+String(n).padStart(3,'0'),version:2,versions:[{version:1},{version:2}]}));
 function App(){const[revision,setRevision]=useState(1),[rows,setRows]=useState(all);window.advance=()=>{window.revision++;setRevision(window.revision)};window.shrink=()=>setRows(all.slice(0,2));
 const e={id:'E',revision,permissions:['learn'],scope:{programs:['SOC2']},workpapers:all};
-return <TableWorkspace><SavedViews engagement={e} viewerId='L' enabled={true} selectedReference={{kind:'workpaper',id:'W',version:1}} getNavigation={()=>({section:'review',query:'global',framework:'all',scroll_top:window.scrollCapture,secret:'DO NOT STORE'})} onRestore={(nav,row)=>window.restored.push({nav,id:row?.id})}/><Table memoryKey='workpapers' rows={rows} columns={[{key:'title',label:'Title'}]}/></TableWorkspace>}
+return <TableWorkspace><SavedViews engagement={e} viewerId='L' enabled={true} selectedReference={{kind:'workpaper',id:'W',version:1}} getNavigation={()=>({section:'review',query:'global',framework:'all',scroll_top:window.scrollCapture,secret:'DO NOT STORE'})} onRestore={(nav,row,opener)=>window.restored.push({nav,id:row?.id,opener:opener?.textContent,connected:opener?.isConnected})}/><Table memoryKey='workpapers' rows={rows} columns={[{key:'title',label:'Title'}]}/></TableWorkspace>}
 createRoot(document.getElementById('app')).render(<App/>);`,
     resolveDir: repo,
     loader: "tsx",
@@ -85,8 +85,15 @@ try {
   });
   assert.equal(saved.user.secret, undefined);
   await page.getByLabel("Search records").fill("absent");
+  await page.evaluate(() => (window.mode = "delay"));
   await page.getByRole("button", { name: "Restore view", exact: true }).click();
+  await page.waitForFunction(() => typeof window.finish === "function");
+  // Disabling the restore button may move browser focus to body while awaiting.
+  await page.evaluate(() => { document.activeElement?.blur(); window.finish(); });
   await page.waitForFunction(() => window.restored.length === 1);
+  assert.equal(await page.evaluate(() => window.restored[0].opener), "Restore view");
+  assert.equal(await page.evaluate(() => window.restored[0].connected), true);
+  await page.evaluate(() => (window.mode = "normal"));
   assert.equal(await page.getByLabel("Search records").inputValue(), "Report");
   await page.getByText("Page 3 of 4", { exact: true }).waitFor();
   assert.equal(

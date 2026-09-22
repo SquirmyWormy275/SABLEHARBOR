@@ -25,7 +25,11 @@ export type SavedViewsProps = {
     "section" | "query" | "framework" | "scroll_top"
   >;
   selectedReference?: SavedViewReferenceDescriptor | null;
-  onRestore: (navigation: SavedViewNavigation, resolvedRow: Row | null) => void;
+  onRestore: (
+    navigation: SavedViewNavigation,
+    resolvedRow: Row | null,
+    opener: HTMLButtonElement,
+  ) => void;
 };
 export function SavedViews(props: SavedViewsProps) {
   if (
@@ -200,7 +204,7 @@ function SavedViewsPanel({
       await load();
     });
   }
-  function restore(view: SavedView) {
+  function restore(view: SavedView, opener: HTMLButtonElement) {
     const startingNavigation = navigationIdentity();
     void run(async (current) => {
       const response = await request<SavedView>(
@@ -221,7 +225,7 @@ function SavedViewsPanel({
         const { id, ...table } = restored.navigation.table;
         memory.restore(id, table);
       }
-      onRestore(restored.navigation, restored.row);
+      onRestore(restored.navigation, restored.row, opener);
       if (current())
         setNotice(
           "Saved navigation restored. Table pages and scroll may be limited by the current records and viewport.",
@@ -359,7 +363,7 @@ function SavedViewsPanel({
             )}
             <button
               disabled={busy || !view.restorable}
-              onClick={() => restore(view)}
+              onClick={(event) => restore(view, event.currentTarget)}
             >
               Restore view
             </button>

@@ -352,8 +352,7 @@ export default function App() {
     });
     return () => cancelAnimationFrame(frame);
   }, [detail, sourceContext]);
-  function rememberContextPreviewOpener() {
-    const element = document.activeElement;
+  function rememberContextPreviewOpener(element = document.activeElement) {
     if (
       element instanceof HTMLElement &&
       element.closest("[data-retained-contexts]")
@@ -830,14 +829,18 @@ export default function App() {
                 : null,
         }
       : null;
-  function restoreSavedView(location: SavedViewNavigation, row: Row | null) {
+  function restoreSavedView(
+    location: SavedViewNavigation,
+    row: Row | null,
+    opener: HTMLButtonElement,
+  ) {
     if (
       !e ||
       currentEngagement.current !== e.id ||
       renderEpoch !== navigationEpoch.current
     )
       return;
-    if (location.reference && row) rememberContextPreviewOpener();
+    if (location.reference && row) rememberContextPreviewOpener(opener);
     savePosition();
     setSection(location.section as Section);
     setQuery(location.query);
