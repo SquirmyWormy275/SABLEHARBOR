@@ -304,6 +304,10 @@ export default function App() {
     artifactId: string;
     detail: DetailContext;
   } | null>(null);
+  const contextPreviewOpener = useRef<{
+    element: HTMLElement;
+    context: string;
+  } | null>(null);
   const uploadRef = useRef<HTMLInputElement>(null);
   const navigationMemory = useRef(createNavigationMemory());
   const draftStore = useRef(createDraftStore());
@@ -331,6 +335,28 @@ export default function App() {
     engagement?.evidence_acquisition,
     engagement?.simulated_at,
   ]);
+  useEffect(() => {
+    if (detail) return;
+    const opener = contextPreviewOpener.current;
+    contextPreviewOpener.current = null;
+    if (opener?.context !== sourceContext) return;
+    const frame = requestAnimationFrame(() => {
+      if (
+        opener.element.isConnected &&
+        !opener.element.closest("[hidden], [inert]")
+      )
+        opener.element.focus({ preventScroll: true });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [detail, sourceContext]);
+  function rememberContextPreviewOpener() {
+    const element = document.activeElement;
+    if (
+      element instanceof HTMLElement &&
+      element.closest("[data-retained-contexts]")
+    )
+      contextPreviewOpener.current = { element, context: sourceContext };
+  }
   const meetingSourceKey = (meeting: Row | undefined) =>
     JSON.stringify([sourceContext, meeting?.id, meeting?.person_id]);
   const sourceSelectionKey = meetingSourceKey(activeMeeting);
@@ -808,6 +834,7 @@ export default function App() {
       renderEpoch !== navigationEpoch.current
     )
       return;
+    if (location.reference && row) rememberContextPreviewOpener();
     savePosition();
     setSection(location.section as Section);
     setQuery(location.query);
@@ -871,7 +898,8 @@ export default function App() {
         viewerId={bootstrap.viewer.id}
         enabled={true}
         selectedReference={selectedViewReference}
-        onPreview={(kind, row, reference) =>
+        onPreview={(kind, row, reference) => {
+          rememberContextPreviewOpener();
           setDetail({
             kind,
             row,
@@ -879,8 +907,8 @@ export default function App() {
             ...(kind === "workpaper" && typeof reference?.version === "number"
               ? { focusVersion: reference.version }
               : {}),
-          })
-        }
+          });
+        }}
       />
     ) : null;
   const controlLink = (row: Row) => {
@@ -1471,8 +1499,10 @@ export default function App() {
             />
           )}
           <div id="main" tabIndex={-1}>
-            {!detail && savedViewsPanel}
-            {!detail && handoffsPanel}
+            <div data-retained-contexts hidden={!!detail} inert={!!detail}>
+              {savedViewsPanel}
+              {handoffsPanel}
+            </div>
             {e && !setup && bootstrap.capabilities.workspace_contexts && (
               <InvestigationContexts
                 engagement={e}
