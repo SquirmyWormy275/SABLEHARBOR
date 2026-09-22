@@ -8,6 +8,12 @@ scope, decisions and residuals. The [inspection guide](../internal/company-close
 provides source, import and reperformance routes. [PR #166](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166)
 contains the company source integration; its actual merged state governs acceptance.
 
+## Version 1.1.0 successor delivery contract
+
+The reserved successor tag is `sable-harbor-company-edition-v1.1.0`, with complete package `sable-harbor-company-edition-v1.1.0.zip` and separately generated release/validation/portal receipts and checksums. [Release location](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/sable-harbor-company-edition-v1.1.0) becomes delivery evidence only when actual bytes and receipts are published.
+
+The [1.1.0 adoption register](../internal/company-closeout/REGISTER_v1.1.0.json) and [inspection route](../internal/company-closeout/INSPECTION_GUIDE_v1.1.0.md) supersede only the specified current scope. They add the September 22 owner-approved rights and current-population histories, including 260 rows in 11 existing-database extension tables. Operating cutoffs and historical finance package bytes remain unchanged; rights/history dates and actual availability stay distinct. The complete successor must be regenerated, independently imported and exercised at its own accepted merge. Version 1.0.0 is not overwritten or relabeled.
+
 ## Version 1.0.0 delivery contract
 
 The reserved tag is `sable-harbor-company-edition-v1.0.0`. Publication requires the

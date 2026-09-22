@@ -26,11 +26,19 @@ def build(output, operating, successor, op, fin, bridge, identity):
         extras={"industrial_operations": op["operating_rows"], "replacement_bridge": bridge},
     )
     tables = exports.collect_tables(operating, successor)
+    from enterprise.closeout import successor_records
+
+    additions = successor_records.collect()
+    if set(tables) & set(additions):
+        raise ValueError("Successor export population collides with existing tables")
+    successor_records.validate_tables(additions)
+    tables.update(additions)
+    schema, scope = successor_records.contracts()
     target = output / "exports"
     if target.exists():
         shutil.rmtree(target)
     target.mkdir()
-    counts = exports.write_packages(target, tables, identity)
+    counts = exports.write_packages(target, tables, identity, schema=schema, scope=scope)
     exports.write_json(
         target / "coverage.json",
         {

@@ -1019,6 +1019,54 @@
       "normalizer": "pypdf"
     },
     {
+      "source": "docs/internal/company-closeout/INSPECTION_GUIDE_v1.1.0.md",
+      "publication": "docs/finance/publications/SH-COMPANY-INSPECTION-20260922_v1.1.0.pdf",
+      "sha256": "766b90c734bcea453c3c4f7225acd0ebcd416a408753d949a90d371bce4f5df7",
+      "source_sha256": "414d4789c894b550d3e0e9a992c2eccbf09ceee7f563ef27279f5ca312ed8c16",
+      "brand": "corporate",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "docs/canon/ARU_SECURED_FINANCING_SUCCESSOR_2026-09-22.md",
+      "publication": "docs/finance/publications/SH-ARU-SECURED-20260922_v1.0.0.pdf",
+      "sha256": "71ffff97264023957b7fc1c8cd600237b4bf7af812b10bc1c816da1badb2fc3d",
+      "source_sha256": "ef4db41f4993af597f4268023b95bc2296e678d418d394494ee777208629120e",
+      "brand": "corporate",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "docs/canon/CAPITAL_DESIGNATION_RIGHTS_2026-09-22.md",
+      "publication": "docs/governance/publications/SH-CAP-RIGHTS-20260922_v1.0.0.pdf",
+      "sha256": "187e57d357c14cdf554b7c6e7e1d13193198c0f4b1c3dddd9cfcb655dac81310",
+      "source_sha256": "aa85a59da20a0a8027fa6712111048ac5e736829041df354e009a8b5b71e238d",
+      "brand": "corporate",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "docs/canon/CRADLE_HOST_TERMS_2026-09-22.md",
+      "publication": "docs/legal/host-successor/publications/SH-HOST-B-ADOPTION-20260922_v1.0.0.pdf",
+      "sha256": "110e1f4111d4574bd9220d5f2f3deb65e71ed4d0beab410bd4a535719db14535",
+      "source_sha256": "d2e43a683e9d770fb3fac58251bd4bf417481e4e7b61ca3dc760485f64c26be0",
+      "brand": "corporate",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "docs/legal/host-successor/KGM_B_2026-09-22.md",
+      "publication": "docs/legal/host-successor/publications/SH-HOST-KGM-B-20260922_v1.0.0.pdf",
+      "sha256": "8f8eeac79a688f95706a98d21b75cd6609100f54abcfd67a4472b7c64250c5ce",
+      "source_sha256": "e53263cda8eb4eb2747f623e10e46f483948c69e38cdb99a70e51a8f3ad41b5d",
+      "brand": "corporate",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "docs/legal/host-successor/DEMOTTE_B_2026-09-22.md",
+      "publication": "docs/legal/host-successor/publications/SH-HOST-DEMOTTE-B-20260922_v1.0.0.pdf",
+      "sha256": "49c5e335eac5daa7aac8fe0255fc318fbb446ceca4f19091eb3df030baeb8209",
+      "source_sha256": "73c05bc639981a42b0eaeafa28c7a72fe5a9c74a6dc778812cb4e90ed408ba1a",
+      "brand": "corporate",
+      "normalizer": "qpdf"
+    },
+    {
       "source": "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
       "publication": "docs/governance/publications/SH-COMPANY-DIRECTIONS-20260915_v1.2.0.pdf",
       "sha256": "625e81b8f59e79c5573def36a87fa03d454574fd943c75d097828f899078125e",

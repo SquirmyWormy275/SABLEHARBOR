@@ -1,0 +1,255 @@
+{
+  "document_id": "SH-ARU-SECURED-TERMS-20260922",
+  "version": "1.0.0",
+  "authority": {
+    "owner_quote": "Use ARU-owned collateral; prepare its schedule",
+    "session_date": "2026-09-22",
+    "utterance_timestamp": null,
+    "scope": "Collateral variant B with reviewed common maturity/repayment, par prepayment, no default uplift or financial maintenance covenant, reporting; no other-entity guarantees; old-lien releases separate",
+    "repository_state": "OWNER_APPROVED_DIRECTION_PENDING_ACCEPTANCE"
+  },
+  "effective_date": "2026-09-22",
+  "date_precision": "DAY_NEWLY_AUTHORED_SYNTHETIC_PROSPECTIVE_AMENDMENT",
+  "borrower": "ARU",
+  "creditor_party_id": "SH-LENDER-ARU-TERM-001",
+  "creditor_name": "High Plains Infrastructure Credit, LLC",
+  "existing_facility_id": "SH-DEBT-ARU-TERM-20260107",
+  "terms": {
+    "original_principal_usd": 22500000,
+    "ordinary_interest_pct": "6.75",
+    "day_count": "ACT/365",
+    "quarterly_principal_usd": 375000,
+    "first_principal_date": "2026-04-07",
+    "maturity": "2031-01-07",
+    "balloon": "All then-unpaid principal",
+    "voluntary_prepayment": "PAR_PLUS_ACCRUED_ORDINARY_INTEREST_BALLOON_FIRST_NO_REBORROWING",
+    "prepayment_premium_pct": "0",
+    "default_rate_uplift_pct": "0",
+    "automatic_interest_capitalization": false,
+    "financial_maintenance_covenants": [],
+    "quarterly_reporting_days": 45,
+    "material_dispute_notice_business_days": 5,
+    "guarantors": [],
+    "new_borrowing_usd": 0,
+    "cross_entity_collateral": false
+  },
+  "synthetic_execution": {
+    "state": "NEWLY_AUTHORED_SYNTHETIC_EXECUTED_AMENDMENT_AND_LIMITED_SECURITY_GRANT",
+    "date": "2026-09-22",
+    "grantor_signatory": "Nora Ashcombe",
+    "grantor_capacity": "ARU President and COO; newly authored ARU and SHIH approval for this selected amendment",
+    "creditor_signatory": "Dana Keene",
+    "creditor_capacity": "Newly authored specific written delegation to execute this amendment for existing creditor; prior credit-record-administrator role alone was insufficient",
+    "authority_records": [
+      "SYN-ARU-SECURITY-CONSENT-20260922",
+      "SYN-SHIH-ARU-SECURITY-APPROVAL-20260922",
+      "SYN-LENDER-ARU-AMENDMENT-DELEGATION-20260922"
+    ],
+    "real_signature_or_filing_claimed": false,
+    "ownership_continuity_confirmation": "Newly authored September22 officer confirmation that each listed existing good remains owned by ARU at grant; source conditions and service dates retained, no unlisted replacement or disposal inferred. This is synthetic completion, not recovered title or lien search."
+  },
+  "collateral_ids": [
+    "ARU-MH-01",
+    "ARU-MH-02",
+    "ARU-MH-03",
+    "ARU-MH-04",
+    "ARU-MH-05",
+    "ARU-MH-06",
+    "ARU-MH-07",
+    "ARU-MH-08",
+    "ARU-MH-09",
+    "ARU-MH-10",
+    "ARU-MH-11",
+    "ARU-MH-12",
+    "ARU-MH-13",
+    "ARU-MH-14",
+    "ARU-TLR-01",
+    "ARU-TLR-02",
+    "ARU-TLR-03",
+    "ARU-TLR-04",
+    "ARU-TLR-05",
+    "ARU-TLR-06",
+    "ARU-TLR-07",
+    "ARU-TLR-08",
+    "ARU-TLR-09",
+    "ARU-TLR-10",
+    "ARU-TLR-11",
+    "ARU-TLR-12",
+    "ARU-TLR-13",
+    "ARU-TLR-14",
+    "ARU-TLR-15",
+    "ARU-TLR-16",
+    "ARU-TLR-17",
+    "ARU-TLR-18",
+    "ARU-TLR-19",
+    "ARU-TLR-20",
+    "ARU-TLR-21",
+    "ARU-TLR-22",
+    "ARU-TLR-23",
+    "ARU-TLR-24",
+    "ARU-TLR-25",
+    "ARU-TLR-26",
+    "ARU-TR-01",
+    "ARU-TR-02",
+    "ARU-TR-03",
+    "ARU-TR-04",
+    "ARU-TR-05",
+    "ARU-TR-06",
+    "ARU-TR-07",
+    "ARU-TR-08",
+    "ARU-TR-09",
+    "ARU-TR-10",
+    "ARU-TR-11",
+    "ARU-TR-12",
+    "ARU-TR-13",
+    "ARU-TR-14",
+    "ARU-TR-15",
+    "ARU-TR-16",
+    "ARU-TR-17",
+    "ARU-TR-18",
+    "YARD-FAC-TAY-TERMINAL-legacygeneral",
+    "YARD-FAC-TAY-TERMINAL-legacyteam",
+    "YARD-FAC-TAY-TERMINAL-phase1generalA",
+    "YARD-FAC-TAY-TERMINAL-phase1generalB",
+    "YARD-FAC-TAY-TERMINAL-phase1liquid",
+    "YARD-FAC-TAY-WAREHOUSE-warehouse"
+  ],
+  "handling_owner_confirmations": [
+    {
+      "asset_id": "ARU-MH-01",
+      "owner": "ARU",
+      "basis": "NEWLY_AUTHORED_OFFICER_OWNERSHIP_CONFIRMATION_OF_EXISTING_OWNED_SOURCE_GOOD_AT_ARU_FACILITY",
+      "date": "2026-09-22",
+      "acquisition_or_new_asset": false
+    },
+    {
+      "asset_id": "ARU-MH-02",
+      "owner": "ARU",
+      "basis": "NEWLY_AUTHORED_OFFICER_OWNERSHIP_CONFIRMATION_OF_EXISTING_OWNED_SOURCE_GOOD_AT_ARU_FACILITY",
+      "date": "2026-09-22",
+      "acquisition_or_new_asset": false
+    },
+    {
+      "asset_id": "ARU-MH-03",
+      "owner": "ARU",
+      "basis": "NEWLY_AUTHORED_OFFICER_OWNERSHIP_CONFIRMATION_OF_EXISTING_OWNED_SOURCE_GOOD_AT_ARU_FACILITY",
+      "date": "2026-09-22",
+      "acquisition_or_new_asset": false
+    },
+    {
+      "asset_id": "ARU-MH-04",
+      "owner": "ARU",
+      "basis": "NEWLY_AUTHORED_OFFICER_OWNERSHIP_CONFIRMATION_OF_EXISTING_OWNED_SOURCE_GOOD_AT_ARU_FACILITY",
+      "date": "2026-09-22",
+      "acquisition_or_new_asset": false
+    },
+    {
+      "asset_id": "ARU-MH-05",
+      "owner": "ARU",
+      "basis": "NEWLY_AUTHORED_OFFICER_OWNERSHIP_CONFIRMATION_OF_EXISTING_OWNED_SOURCE_GOOD_AT_ARU_FACILITY",
+      "date": "2026-09-22",
+      "acquisition_or_new_asset": false
+    },
+    {
+      "asset_id": "ARU-MH-06",
+      "owner": "ARU",
+      "basis": "NEWLY_AUTHORED_OFFICER_OWNERSHIP_CONFIRMATION_OF_EXISTING_OWNED_SOURCE_GOOD_AT_ARU_FACILITY",
+      "date": "2026-09-22",
+      "acquisition_or_new_asset": false
+    },
+    {
+      "asset_id": "ARU-MH-07",
+      "owner": "ARU",
+      "basis": "NEWLY_AUTHORED_OFFICER_OWNERSHIP_CONFIRMATION_OF_EXISTING_OWNED_SOURCE_GOOD_AT_ARU_FACILITY",
+      "date": "2026-09-22",
+      "acquisition_or_new_asset": false
+    },
+    {
+      "asset_id": "ARU-MH-08",
+      "owner": "ARU",
+      "basis": "NEWLY_AUTHORED_OFFICER_OWNERSHIP_CONFIRMATION_OF_EXISTING_OWNED_SOURCE_GOOD_AT_ARU_FACILITY",
+      "date": "2026-09-22",
+      "acquisition_or_new_asset": false
+    },
+    {
+      "asset_id": "ARU-MH-09",
+      "owner": "ARU",
+      "basis": "NEWLY_AUTHORED_OFFICER_OWNERSHIP_CONFIRMATION_OF_EXISTING_OWNED_SOURCE_GOOD_AT_ARU_FACILITY",
+      "date": "2026-09-22",
+      "acquisition_or_new_asset": false
+    },
+    {
+      "asset_id": "ARU-MH-10",
+      "owner": "ARU",
+      "basis": "NEWLY_AUTHORED_OFFICER_OWNERSHIP_CONFIRMATION_OF_EXISTING_OWNED_SOURCE_GOOD_AT_ARU_FACILITY",
+      "date": "2026-09-22",
+      "acquisition_or_new_asset": false
+    },
+    {
+      "asset_id": "ARU-MH-11",
+      "owner": "ARU",
+      "basis": "NEWLY_AUTHORED_OFFICER_OWNERSHIP_CONFIRMATION_OF_EXISTING_OWNED_SOURCE_GOOD_AT_ARU_FACILITY",
+      "date": "2026-09-22",
+      "acquisition_or_new_asset": false
+    },
+    {
+      "asset_id": "ARU-MH-12",
+      "owner": "ARU",
+      "basis": "NEWLY_AUTHORED_OFFICER_OWNERSHIP_CONFIRMATION_OF_EXISTING_OWNED_SOURCE_GOOD_AT_ARU_FACILITY",
+      "date": "2026-09-22",
+      "acquisition_or_new_asset": false
+    },
+    {
+      "asset_id": "ARU-MH-13",
+      "owner": "ARU",
+      "basis": "NEWLY_AUTHORED_OFFICER_OWNERSHIP_CONFIRMATION_OF_EXISTING_OWNED_SOURCE_GOOD_AT_ARU_FACILITY",
+      "date": "2026-09-22",
+      "acquisition_or_new_asset": false
+    },
+    {
+      "asset_id": "ARU-MH-14",
+      "owner": "ARU",
+      "basis": "NEWLY_AUTHORED_OFFICER_OWNERSHIP_CONFIRMATION_OF_EXISTING_OWNED_SOURCE_GOOD_AT_ARU_FACILITY",
+      "date": "2026-09-22",
+      "acquisition_or_new_asset": false
+    }
+  ],
+  "grant_scope": "Only ARU owned interests in listed existing equipment and track goods/fixtures, as represented; no fee-simple land/building mortgage, general all-assets grant, after-acquired goods sweep, guarantee, customer or leased property",
+  "excluded_context_facilities": [
+    "FAC-TAY-TERMINAL",
+    "FAC-TAY-WAREHOUSE",
+    "FAC-TAY-TRUCK",
+    "FAC-RAW-TERMINAL",
+    "FAC-RAW-WAREHOUSE",
+    "FAC-RAW-TRUCK",
+    "FAC-ARU-OFFICE"
+  ],
+  "original_operations_sha256": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b",
+  "filing_states": {
+    "preparation": "INTERNAL_SCHEDULE_AND_FILING_ROUTE_PREPARED",
+    "submission": "NOT_SUBMITTED",
+    "acknowledgement": "NONE",
+    "perfection": "NOT_ESTABLISHED",
+    "priority": "NOT_ESTABLISHED",
+    "old_lien_release": "NOT_ESTABLISHED_SEPARATE_HISTORICAL_RESIDUAL"
+  },
+  "primary_authority": {
+    "url": "https://wyoleg.gov/statutes/compress/title34.1.pdf",
+    "access_date": "2026-09-22",
+    "sha256": "6fd5bb045cd623e57eb199fb587d897d8b3a4d01152fb6092e369445ef977344",
+    "provisions": [
+      "34.1-1-204",
+      "34.1-9-108",
+      "34.1-9-203",
+      "34.1-9-301",
+      "34.1-9-303",
+      "34.1-9-307(e)",
+      "34.1-9-311",
+      "34.1-9-334",
+      "34.1-9-501",
+      "34.1-9-502"
+    ],
+    "version_scope": "Current official code retrieved for prospective September22,2026 instrument; no earlier retroactive legal opinion"
+  },
+  "no_additional_journal_or_cash": true
+}

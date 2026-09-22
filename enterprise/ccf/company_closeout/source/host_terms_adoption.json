@@ -1,0 +1,122 @@
+{
+  "document_id": "SH-HOST-B-ADOPTION-20260922",
+  "version": "1.0.0",
+  "fact_status": "AUTHORED_SYNTHETIC_RECORD",
+  "repository_status": "PENDING_REPOSITORY_ACCEPTANCE",
+  "owner_direction": "OWNER_APPROVED_DIRECTION",
+  "approval": {
+    "date": "2026-09-22",
+    "exact_quote": "Adopt B and its common terms",
+    "utterance_time": "NOT_SUPPLIED",
+    "scope": "Alternative B and all eight common terms in the pinned proposal; not alternative A"
+  },
+  "authored_at": "2026-09-22T17:12:06Z",
+  "availability": "No earlier than the actual clean source commit; approval utterance time is not inferred from authorship",
+  "proposal": {
+    "path": "docs/internal/company-closeout/host-residual-successor/TERMS_PROPOSAL.md",
+    "sha256": "59ac337adc9db12d8426c69b536f53609bd2b8351fbde462799eef0ecf651c67",
+    "prior_draft_sha256": "f39d63633379369c34dc5941f11efcd44024f9da1a799dfb26e693a3470a604c",
+    "integration_note": "Pins owner-linked integrated proposal from PR169; prior draft differs only by spaces in end September 30 and Existing $18,500. No substantive term changed."
+  },
+  "supersession": "Prospective duration, exclusivity, exit and common terms only. Does not amend historical August performance or establish missing historical term endpoints.",
+  "common_terms": {
+    "maximum_order_days": 90,
+    "early_exit_received_notice_days": 30,
+    "statement_after_month_end_days": 20,
+    "undisputed_payment_after_received_statement_days": 30,
+    "automatic_renewal": false,
+    "continuous_access_between_orders": false,
+    "guaranteed_feed": false,
+    "permanent_host_rate": null,
+    "mandatory_law_preserved": true,
+    "real_execution": false,
+    "common_terms_incorporated": "TERMS_PROPOSAL.md: Common terms proposed with either alternative, paragraphs 1 through 8, in full"
+  },
+  "instruments": [
+    {
+      "instrument_id": "SH-CRADLE-KGM-B-20260922",
+      "host_id": "KGM",
+      "host_name": "Kelly Gang Mining",
+      "site_id": "SH-SITE-0023",
+      "SH_legal_party": "Sable Harbor, LLC",
+      "SH_legal_entity_id": "SHI",
+      "SH_business": "Cradle",
+      "execution_state": "SYNTHETIC_EXECUTION_AUTHORED_PENDING_REPOSITORY_ACCEPTANCE",
+      "synthetic_execution_recorded_at": "2026-09-22T17:12:06Z",
+      "framework_eligible_from": "2026-10-01",
+      "active_access_state": "NO_ACCEPTED_WORK_ORDER",
+      "SH_representative": {
+        "person_id": "P025",
+        "name": "Kenji Arakawa",
+        "appointment": "Newly authored narrow delegation to execute this instrument and compliant work orders for SHI; not inferred from operating title"
+      },
+      "host_representative": {
+        "person_id": "SYN-HOST-KGM-REP-001",
+        "name": "Mara Ellison",
+        "appointment": "Newly authored fictional host contracting representative for this instrument and compliant work orders; external nonemployee, not an addition to SH workforce"
+      },
+      "operating_role_preserved": "KGM_HOST_OPERATING_OWNER",
+      "internal_routing_queue": "SH-HOST-RECORDS-KGM-001",
+      "commercial_receipt_channel": "SYN-CONTRACT-RECEIPTS-KGM-001",
+      "notice_method": "Synthetic designated receipt register: actual documented receipt by the appointed representative, UTC timestamp plus host-local date; internal routing alone is not receipt or legal service",
+      "governing_law": "Tasmania, Australia",
+      "forum": "Nonexclusive competent courts in Tasmania, Australia",
+      "exclusive_forum": false,
+      "exclusivity": "Designated Stream 17 run/material during the accepted active work order only",
+      "capture_boundary": "Existing selected S17-A interface; changed installation requires accepted interface revision",
+      "common_terms_reference": "SH-HOST-B-ADOPTION-20260922",
+      "execution_evidence": "SYN-EXEC-KGM-20260922",
+      "execution_assertion": "Newly authored fictional mutual assent and narrow representative appointment only; no actual signature, contact, government action or payment"
+    },
+    {
+      "instrument_id": "SH-CRADLE-DEMOTTE-B-20260922",
+      "host_id": "DEMOTTE",
+      "host_name": "Demotte Reclamation Services",
+      "site_id": "SH-SITE-0027",
+      "SH_legal_party": "Sable Harbor, LLC",
+      "SH_legal_entity_id": "SHI",
+      "SH_business": "Cradle",
+      "execution_state": "SYNTHETIC_EXECUTION_AUTHORED_PENDING_REPOSITORY_ACCEPTANCE",
+      "synthetic_execution_recorded_at": "2026-09-22T17:12:06Z",
+      "framework_eligible_from": "2026-10-01",
+      "active_access_state": "NO_ACCEPTED_WORK_ORDER",
+      "SH_representative": {
+        "person_id": "P025",
+        "name": "Kenji Arakawa",
+        "appointment": "Newly authored narrow delegation to execute this instrument and compliant work orders for SHI; not inferred from operating title"
+      },
+      "host_representative": {
+        "person_id": "SYN-HOST-DEMOTTE-REP-001",
+        "name": "Daniel Mercer",
+        "appointment": "Newly authored fictional host contracting representative for this instrument and compliant work orders; external nonemployee, not an addition to SH workforce"
+      },
+      "operating_role_preserved": "DEMOTTE_HOST_OPERATING_OWNER",
+      "internal_routing_queue": "SH-HOST-RECORDS-DEM-001",
+      "commercial_receipt_channel": "SYN-CONTRACT-RECEIPTS-DEMOTTE-001",
+      "notice_method": "Synthetic designated receipt register: actual documented receipt by the appointed representative, UTC timestamp plus host-local date; internal routing alone is not receipt or legal service",
+      "governing_law": "West Virginia, United States",
+      "forum": "Nonexclusive competent courts in West Virginia, United States",
+      "exclusive_forum": false,
+      "exclusivity": "No new exclusive grant",
+      "capture_boundary": "No commercial title from held samples; sale-capable order must specify capture/title point before release",
+      "common_terms_reference": "SH-HOST-B-ADOPTION-20260922",
+      "execution_evidence": "SYN-EXEC-DEMOTTE-20260922",
+      "execution_assertion": "Newly authored fictional mutual assent and narrow representative appointment only; no actual signature, contact, government action or payment"
+    }
+  ],
+  "accepted_work_orders": [],
+  "financial_effects": {
+    "new_cash_usd": "0",
+    "new_expense_usd": "0",
+    "new_asset_usd": "0",
+    "new_liability_usd": "0",
+    "new_revenue_usd": "0"
+  },
+  "historical_preserved": {
+    "stream17_realized_usd": "60000",
+    "stream17_host_payment_usd": "12000",
+    "demotte_failed_test_usd": "18500",
+    "demotte_sales_usd": "0",
+    "event_cutoff": "2026-09-14 America/Los_Angeles"
+  }
+}
