@@ -4,5 +4,9 @@
   "route-0": "tools/reader/requirements.txt",
   "route-1": "tools/organization/requirements.txt",
   "route-2": "geospatial/requirements.txt",
-  "route-3": "docs/legal/full-text/requirements.txt"
+  "route-3": "docs/legal/full-text/requirements.txt",
+  "route-4": "tools/wiki/requirements.txt",
+  "route-5": "tools/wiki/visual/requirements.txt",
+  "route-6": "tools/legal_gaps/requirements-review.txt",
+  "route-7": "tools/documents/reader-preview-requirements.txt"
 }

@@ -1,0 +1,1 @@
+{"dependencies": [{"name": "playwright", "version": "1.58.0", "vulns": []}, {"name": "markdown-it-py", "version": "4.2.0", "vulns": []}, {"name": "greenlet", "version": "3.5.6", "vulns": []}, {"name": "mdurl", "version": "0.1.2", "vulns": []}, {"name": "pyee", "version": "13.0.1", "vulns": []}, {"name": "typing-extensions", "version": "4.16.0", "vulns": []}], "fixes": []}
