@@ -909,7 +909,7 @@
       "gate": "existing_authority",
       "execution_policy": "Owner authorized execution; retain dependency acceptance gates and existing audit_company execution boundaries. Preserve private data and assessment history. User acceptance cannot be inferred from scripted checks.",
       "execution_authorized": true,
-      "evidence": "Personal saved investigation questions, next steps and exact record pins persist with optimistic versions, dirty-edit protection and explicit reset. Actual browser verifies reload and unchanged formal history. Broader handoff acceptance remains incomplete."
+      "evidence": "Personal saved investigation questions, next steps and exact record pins persist with optimistic versions, dirty-edit protection and explicit reset. Actual browser verifies reload and unchanged formal history. Broader handoff acceptance remains incomplete. Private personal saved views now retain explicit section, framework/query, table query/sort/page, scroll hint and exact selected record/version. Restore rechecks current permissions, source context and engagement revision; changed context is redacted. Companion recovery preserves immutable history with explicit authorized owner mapping. Shared-question assignment/handoff and owner resume evaluation remain open."
     },
     {
       "id": "UX-07",
@@ -935,7 +935,7 @@
       "gate": "existing_authority",
       "execution_policy": "Owner authorized execution; retain dependency acceptance gates and existing audit_company execution boundaries. Preserve private data and assessment history. User acceptance cannot be inferred from scripted checks.",
       "execution_authorized": true,
-      "evidence": "Read-only source-impact comparisons now validate original physical source, portfolio alias/store/registry and retained artifact hashes, recheck authority, and distinguish unavailable comparisons from unchanged sources. Explicit downstream links, correction/withdrawal source claims and per-source read intervals remain qualified; no globally atomic snapshot or automatic invalidation is asserted. Administrative work status remains separate from effectiveness."
+      "evidence": "Read-only source-impact comparisons now validate original physical source, portfolio alias/store/registry and retained artifact hashes, recheck authority, and distinguish unavailable comparisons from unchanged sources. Explicit downstream links, correction/withdrawal source claims and per-source read intervals remain qualified; no globally atomic snapshot or automatic invalidation is asserted. Administrative work status remains separate from effectiveness. Exact source-impact relationships now include retained sampled-item observations and correction chains, pinned HUMAN review versions/passages, and actual finding/remediation evidence fields. The viewer opens exact historical workpaper versions and rejects stale responses. Source comparisons remain read-only; explicit reassessment disposition and integrated journey acceptance remain open."
     },
     {
       "id": "UX-08",

@@ -17,8 +17,265 @@ def _direct(row, artifact_id):
     )
 
 
+MAX_REFERENCE_ENTRIES = 200_000
+
+
+def _reference_guard(state):
+    """Bound the complete traversal; overflow never returns a partial reference list."""
+    from .store import DomainError
+
+    remaining = MAX_REFERENCE_ENTRIES
+
+    def visit(row, depth=0):
+        nonlocal remaining
+        if depth > 5:
+            raise DomainError(
+                "Impact reference nesting limit exceeded", code="IMPACT_REFERENCE_LIMIT_EXCEEDED"
+            )
+        for key in (
+            "versions",
+            "items",
+            "evidence",
+            "remediations",
+            "evidence_ids",
+            "artifact_ids",
+            "observable_artifact_ids",
+        ):
+            values = row.get(key, [])
+            if not isinstance(values, list) or len(values) > 20000:
+                raise DomainError(
+                    "Impact reference data unavailable", code="IMPACT_REFERENCES_UNAVAILABLE"
+                )
+            remaining -= len(values)
+            if remaining < 0:
+                raise DomainError(
+                    "Impact reference limit exceeded", code="IMPACT_REFERENCE_LIMIT_EXCEEDED"
+                )
+            for value in values:
+                if key in ("versions", "items", "evidence", "remediations") and not isinstance(
+                    value, dict
+                ):
+                    raise DomainError(
+                        "Malformed impact references", code="IMPACT_REFERENCES_UNAVAILABLE"
+                    )
+                if isinstance(value, dict):
+                    visit(value, depth + 1)
+
+    for name in (
+        "artifacts",
+        "workpapers",
+        "populations",
+        "tasks",
+        "selections",
+        "sample_executions",
+        "reviews",
+        "findings",
+    ):
+        rows = state.get(name, [])
+        if not isinstance(rows, list) or len(rows) > 20000:
+            raise DomainError(
+                "Impact reference limit exceeded", code="IMPACT_REFERENCE_LIMIT_EXCEEDED"
+            )
+        remaining -= len(rows)
+        seen = set()
+        for row in rows:
+            if not isinstance(row, dict) or not isinstance(row.get("id"), str) or row["id"] in seen:
+                raise DomainError(
+                    "Ambiguous impact reference identity", code="IMPACT_REFERENCES_UNAVAILABLE"
+                )
+            seen.add(row["id"])
+            visit(row)
+        if remaining < 0:
+            raise DomainError(
+                "Impact reference limit exceeded", code="IMPACT_REFERENCE_LIMIT_EXCEEDED"
+            )
+
+
+def _exact_references(state, artifact_id):
+    from .review_anchor import normalize_anchor
+    from .store import DomainError, digest
+
+    result = []
+    artifacts = {a["id"]: a for a in state.get("artifacts", [])}
+    artifact = artifacts.get(artifact_id)
+    evidence_sha = artifact.get("sha256") if artifact else None
+    if (
+        not isinstance(evidence_sha, str)
+        or len(evidence_sha) != 64
+        or any(c not in "0123456789abcdef" for c in evidence_sha)
+        or artifact.get("audience", "LEARNER") != "LEARNER"
+    ):
+        evidence_sha = None
+    papers = {}
+    for paper in state.get("workpapers", []):
+        versions = paper.get("versions", [])
+        numbers = [v.get("version") for v in versions]
+        if any(type(n) is not int or n <= 0 for n in numbers) or len(set(numbers)) != len(numbers):
+            raise DomainError(
+                "Ambiguous retained workpaper versions", code="IMPACT_REFERENCES_UNAVAILABLE"
+            )
+        for version in versions:
+            papers[paper["id"], version["version"]] = (
+                version,
+                max(numbers),
+                _direct(version, artifact_id),
+            )
+    traces = {r["id"]: r for r in state.get("sample_executions", [])}
+    successors = {}
+    for trace in traces.values():
+        ids = [item.get("item_id") for item in trace.get("items", [])]
+        if (
+            any(not isinstance(i, str) for i in ids)
+            or len(set(ids)) != len(ids)
+            or not isinstance(trace.get("predecessor_id"), (str, type(None)))
+        ):
+            raise DomainError("Ambiguous execution identity", code="IMPACT_REFERENCES_UNAVAILABLE")
+    for trace in traces.values():
+        predecessor_id = trace.get("predecessor_id")
+        if predecessor_id:
+            predecessor = traces.get(predecessor_id)
+            if (
+                predecessor is None
+                or predecessor_id in successors
+                or trace.get("predecessor_digest") != digest(predecessor)
+                or type(trace.get("revision")) is not int
+                or type(predecessor.get("revision")) is not int
+                or trace["revision"] != predecessor["revision"] + 1
+                or any(
+                    trace.get(k) != predecessor.get(k)
+                    for k in (
+                        "task_id",
+                        "selection_id",
+                        "selection_digest",
+                        "population_id",
+                        "population_digest",
+                        "scope_digest",
+                        "company_source_binding",
+                        "evidence_acquisition",
+                    )
+                )
+                or {i.get("item_id") for i in trace.get("items", [])}
+                != {i.get("item_id") for i in predecessor.get("items", [])}
+            ):
+                raise DomainError(
+                    "Unverifiable execution correction chain", code="IMPACT_REFERENCES_UNAVAILABLE"
+                )
+            successors[predecessor_id] = trace["id"]
+    for trace in traces.values():
+        if (
+            type(trace.get("revision")) is not int
+            or trace["revision"] <= 0
+            or (not trace.get("predecessor_id") and trace["revision"] != 1)
+        ):
+            raise DomainError("Invalid execution revision", code="IMPACT_REFERENCES_UNAVAILABLE")
+        item_ids = [i.get("item_id") for i in trace.get("items", [])]
+        if any(not isinstance(i, str) for i in item_ids) or len(set(item_ids)) != len(item_ids):
+            raise DomainError("Ambiguous execution items", code="IMPACT_REFERENCES_UNAVAILABLE")
+        for item in trace.get("items", []):
+            matched = [
+                r
+                for r in item.get("evidence", [])
+                if isinstance(r, dict)
+                and r.get("artifact_id") == artifact_id
+                and isinstance(evidence_sha, str)
+                and r.get("sha256") == evidence_sha
+            ]
+            if not matched:
+                continue
+            current_context = (
+                trace.get("scope_digest") == digest(state.get("scope", {}))
+                and trace.get("company_source_binding") == state.get("company_source_binding")
+                and trace.get("evidence_acquisition") == state.get("evidence_acquisition")
+            )
+            result.append(
+                {
+                    "collection": "sample_executions",
+                    "id": trace["id"],
+                    "version": trace["revision"],
+                    "item_id": item["item_id"],
+                    "task_id": trace.get("task_id"),
+                    "selection_id": trace.get("selection_id"),
+                    "population_id": trace.get("population_id"),
+                    "relation": "EXACT_ITEM_EVIDENCE_ID_AND_SHA256",
+                    "artifact_sha256": evidence_sha,
+                    "predecessor_id": trace.get("predecessor_id"),
+                    "successor_id": successors.get(trace["id"]),
+                    "trace_status": "HISTORICAL_CORRECTED"
+                    if trace["id"] in successors
+                    else "CURRENT_LEAF",
+                    "context_status": "CURRENT"
+                    if current_context
+                    else "HISTORICAL_SCOPE_OR_SOURCE_CONTEXT",
+                    "locators": [r.get("locator") for r in matched],
+                    "locator_validation": "AUTHOR_SUPPLIED_NOT_CONTENT_MATCH_VERIFIED",
+                }
+            )
+    for review in state.get("reviews", []):
+        number = review.get("workpaper_version")
+        if review.get("kind") != "HUMAN" or type(number) is not int:
+            continue
+        if not isinstance(review.get("workpaper_id"), str):
+            continue
+        entry = papers.get((review.get("workpaper_id"), number))
+        if not entry:
+            continue
+        version, latest, linked = entry
+        if not linked or review.get("workpaper_version_digest") != digest(version):
+            continue
+        anchor = review.get("anchor")
+        if anchor is not None:
+            try:
+                checked = normalize_anchor(
+                    {k: v for k, v in anchor.items() if k != "offset_unit"}, version
+                )
+            except (DomainError, AttributeError):
+                continue
+            if checked != anchor:
+                continue
+        result.append(
+            {
+                "collection": "reviews",
+                "id": review["id"],
+                "relation": "EXACT_REVIEWED_WORKPAPER_VERSION",
+                "workpaper_id": review["workpaper_id"],
+                "version": number,
+                "workpaper_version_digest": review["workpaper_version_digest"],
+                "version_status": "CURRENT" if number == latest else "HISTORICAL",
+                "review_scope": "EXACT_PASSAGE"
+                if anchor is not None
+                else "WHOLE_WORKPAPER_VERSION",
+                **({"anchor": dict(anchor)} if anchor is not None else {}),
+            }
+        )
+    for finding in state.get("findings", []):
+        if artifact_id in finding.get("evidence_ids", []):
+            result.append(
+                {
+                    "collection": "findings",
+                    "id": finding["id"],
+                    "relation": "DIRECT_EVIDENCE_ID",
+                    "reference_scope": "FINDING",
+                }
+            )
+        for remediation in finding.get("remediations", []):
+            if artifact_id in remediation.get("evidence_ids", []) and isinstance(
+                remediation.get("id"), str
+            ):
+                result.append(
+                    {
+                        "collection": "findings",
+                        "id": finding["id"],
+                        "relation": "DIRECT_REMEDIATION_EVIDENCE_ID",
+                        "remediation_id": remediation["id"],
+                        "reference_scope": "REMEDIATION_NOT_ORIGINAL_FINDING",
+                    }
+                )
+    return result
+
+
 def references(state, artifact_id):
     """Known typed ID fields only; matching narrative or control IDs are not links."""
+    _reference_guard(state)
     result, populations = [], {}
     for workpaper in state.get("workpapers", []):
         for version in workpaper.get("versions", []):
@@ -61,6 +318,7 @@ def references(state, artifact_id):
                     else "EXACT_REFERENCED_POPULATION_VERSION",
                 }
             )
+    result.extend(_exact_references(state, artifact_id))
     return result
 
 

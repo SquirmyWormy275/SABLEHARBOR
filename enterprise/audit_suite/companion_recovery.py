@@ -15,12 +15,16 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 from .instructor_access import MAX_LOG_BYTES, InstructorAccessLog
+from .personal_views_recovery import TABLES as VIEW_TABLES
+from .personal_views_recovery import restore_tables as restore_views
+from .personal_views_recovery import validate as validate_views
 from .private_publication import publish
 from .store import DomainError, canonical, digest
 from .workspace_context import WorkspaceContexts
 
 MAX_BYTES = 128 * 1024 * 1024
 TABLES = {
+    "personal_views": VIEW_TABLES,
     "contexts": {
         "contexts": ("id", "actor", "engagement", "version", "status", "content", "sha256"),
         "history": ("context", "version", "content", "sha256"),
@@ -98,6 +102,17 @@ def _validate(kind, body):
             not isinstance(row, dict) or set(row) != set(columns) for row in tables[table]
         ):
             raise DomainError("Invalid companion table")
+    if kind == "personal_views":
+        try:
+            if (
+                not isinstance(body["captured_at"], str)
+                or datetime.fromisoformat(body["captured_at"]).tzinfo is None
+            ):
+                raise ValueError("Missing capture timestamp")
+            validate_views(tables)
+        except (ValueError, TypeError, KeyError) as exc:
+            raise DomainError("Invalid personal-view snapshot") from exc
+        return
     if kind == "contexts":
         history = {}
         for row in tables["history"]:
@@ -179,6 +194,7 @@ def backup(
     jobs=None,
     instructor_access_root=None,
     instructor_releases=None,
+    personal_views=None,
 ):
     """Capture selected live companion objects; never starts/retries jobs."""
     destination = _new(destination)
@@ -187,10 +203,15 @@ def backup(
         and jobs is None
         and instructor_access_root is None
         and instructor_releases is None
+        and personal_views is None
     ):
         raise DomainError("Select at least one companion")
     members, captures = {}, {}
-    for kind, instance in [("contexts", contexts), ("jobs", jobs)]:
+    for kind, instance in [
+        ("contexts", contexts),
+        ("jobs", jobs),
+        ("personal_views", personal_views),
+    ]:
         if instance is None:
             continue
         with instance._db() as db:
@@ -228,6 +249,9 @@ def backup(
         "component_captured_at": captures,
         "globally_atomic": False,
         "jobs_restore_mode": "ARCHIVE_ONLY",
+        "personal_views_restore_mode": "EXPLICIT_OWNER_MAPPING_CURRENT_AUTHORITY"
+        if personal_views is not None
+        else "NOT_INCLUDED",
         "instructor_releases_restore_mode": (
             "ARCHIVE_ONLY_NOT_OPERATIONALLY_REHYDRATED"
             if instructor_releases is not None
@@ -257,13 +281,17 @@ def restore(source: Path, destination: Path, *, engine=None, principal_map=None)
     source = Path(source).absolute()
     _private(source, True)
     destination = _new(destination)
-    manifest = json.loads(_read(source / "MANIFEST.json"))
+    manifest_raw = _read(source / "MANIFEST.json")
+    manifest = json.loads(manifest_raw)
+    if destination.is_relative_to(source) or source.is_relative_to(destination):
+        raise DomainError("Separate companion source and restoration roots required")
     allowed = {
         "contexts.json",
         "jobs.json",
         "access.jsonl",
         "head.json",
         "instructor-releases.json",
+        "personal_views.json",
     }
     names = set(manifest.get("members", {}))
     if (
@@ -286,7 +314,12 @@ def restore(source: Path, destination: Path, *, engine=None, principal_map=None)
     bodies = {}
     for kind in TABLES:
         if kind + ".json" in members:
-            bodies[kind] = json.loads(members[kind + ".json"])
+            if kind == "personal_views":
+                from .inference import _json as strict_json
+
+                bodies[kind] = strict_json(members[kind + ".json"])
+            else:
+                bodies[kind] = json.loads(members[kind + ".json"])
             _validate(kind, bodies[kind])
     if "access.jsonl" in members:
         InstructorAccessLog._verify(members["access.jsonl"], json.loads(members["head.json"]))
@@ -299,15 +332,18 @@ def restore(source: Path, destination: Path, *, engine=None, principal_map=None)
         except (ValueError, TypeError, KeyError) as error:
             raise DomainError("Invalid private release archive") from error
     tables = bodies.get("contexts", {}).get("tables")
-    if tables is not None:
-        owners = {r["actor"] for r in tables["contexts"]}
+    view_tables = bodies.get("personal_views", {}).get("tables")
+    owners = {r["actor"] for r in tables["contexts"]} if tables is not None else set()
+    owners |= {r["actor"] for r in view_tables["views"]} if view_tables is not None else set()
+    if tables is not None or view_tables is not None:
         if (
             engine is None
             or not isinstance(principal_map, dict)
             or set(principal_map) != owners
+            or any(not isinstance(v, str) or not v for v in principal_map.values())
             or len(set(principal_map.values())) != len(owners)
         ):
-            raise DomainError("Exact distinct context owner mapping required")
+            raise DomainError("Exact distinct companion owner mapping required")
     with tempfile.TemporaryDirectory(
         prefix="companion-restore-", dir=destination.parent
     ) as temporary:
@@ -345,6 +381,18 @@ def restore(source: Path, destination: Path, *, engine=None, principal_map=None)
                             f"INSERT INTO {table} VALUES({placeholders})",
                             tuple(row[c] for c in columns),
                         )
+        restored_views = None
+        view_authority = []
+        if view_tables is not None:
+            view_root = stage / "personal-views"
+            view_root.mkdir(mode=0o700)
+            restored_views, view_authority = restore_views(
+                view_root,
+                engine,
+                view_tables,
+                principal_map,
+                hashlib.sha256(manifest_raw).hexdigest(),
+            )
         if "instructor-releases.json" in members:
             _write(
                 stage / "instructor-releases-ARCHIVE-ONLY.json", members["instructor-releases.json"]
@@ -358,11 +406,15 @@ def restore(source: Path, destination: Path, *, engine=None, principal_map=None)
                 _write(log_root / name, members[name])
         receipt = {
             "schema": "PRIVATE_COMPANION_RESTORE_V1",
-            "source_manifest_sha256": hashlib.sha256(_read(source / "MANIFEST.json")).hexdigest(),
+            "source_manifest_sha256": hashlib.sha256(manifest_raw).hexdigest(),
             "restored_at": datetime.now(UTC).isoformat(),
             "component_captured_at": manifest["component_captured_at"],
             "globally_atomic": False,
-            "principal_map": principal_map if tables else {},
+            "principal_map": principal_map if tables is not None or view_tables is not None else {},
+            "personal_views": "OPERATIONAL_EXPLICIT_OWNER_MAPPING_CURRENT_AUTHORITY"
+            if view_tables is not None
+            else "NOT_INCLUDED",
+            "original_hashed_personal_view_content_preserved": view_tables is not None,
             "credentials_or_grants_restored": False,
             "jobs": "ARCHIVE_ONLY",
             "instructor_releases": (
@@ -379,5 +431,14 @@ def restore(source: Path, destination: Path, *, engine=None, principal_map=None)
             for actor, engagement, permissions in authorized:
                 if sorted(restored._state(actor, engagement).get("permissions", [])) != permissions:
                     raise DomainError("Context restore authority changed", status=403)
+        for actor, engagement, basis in view_authority:
+            if restored_views._state(actor, engagement)[1] != basis:
+                raise DomainError("Saved-view restore authority changed", status=403)
+        if (
+            _read(source / "MANIFEST.json") != manifest_raw
+            or {p.name for p in source.iterdir()} != names | {"MANIFEST.json"}
+            or any(_read(source / name) != raw for name, raw in members.items())
+        ):
+            raise DomainError("Companion source changed before publication")
         publish(stage, destination)
     return receipt

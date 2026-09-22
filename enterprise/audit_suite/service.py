@@ -219,12 +219,17 @@ def create_app(
         job_root.mkdir(mode=0o700, exist_ok=True)
         jobs = BackgroundJobs(job_root, engine, max_workers=2, max_pending=32)
     contexts = None
+    personal_views = None
     if workspace_contexts:
+        from .personal_views import PersonalViews
         from .workspace_context import WorkspaceContexts
 
         context_root = engine.store.root / "workspace-contexts"
         context_root.mkdir(mode=0o700, exist_ok=True)
         contexts = WorkspaceContexts(context_root, engine)
+        view_root = engine.store.root / "personal-views"
+        view_root.mkdir(mode=0o700, exist_ok=True)
+        personal_views = PersonalViews(view_root, engine)
     releases = None
     if protected_bindings:
         from .instructor_releases import InstructorReleases
@@ -234,6 +239,7 @@ def create_app(
         releases = InstructorReleases(release_root, engine, protected_bindings)
     app.state.instructor_releases = releases
     app.state.workspace_contexts = contexts
+    app.state.personal_views = personal_views
     app.state.background_jobs = jobs
     app.state.generation_jobs = {}
     app.add_middleware(BodyLimit)
@@ -332,6 +338,7 @@ def create_app(
         result["capabilities"].update(
             work_status=True,
             workspace_contexts=contexts is not None,
+            personal_views=personal_views is not None,
             background_jobs=jobs is not None,
             bound_instructor_keys=bool(protected_bindings),
             instructor_releases=releases is not None,
@@ -690,6 +697,115 @@ def create_app(
             context_id,
             expected_version=body["expected_version"],
             command_id=body["command_id"],
+        )
+
+    def enabled_personal_views():
+        if personal_views is None:
+            raise DomainError("Personal views are not configured", status=503)
+        return personal_views
+
+    @app.get("/api/engagements/{engagement_id}/saved-views")
+    async def personal_view_list(engagement_id: str, request: Request):
+        principal = actor(request)
+        return {
+            "views": await asyncio.to_thread(
+                enabled_personal_views().listing, principal["id"], engagement_id
+            )
+        }
+
+    @app.post("/api/engagements/{engagement_id}/saved-views/link")
+    async def personal_view_link(engagement_id: str, request: Request):
+        principal = actor(request, mutation=True)
+        body = await json_body(request)
+        limits.check("saved-views", principal["id"], 120)
+        if set(body) != {"kind", "id", "version"}:
+            raise DomainError("Choose an exact existing saved-view reference")
+        return await asyncio.to_thread(
+            enabled_personal_views().make_reference,
+            principal["id"],
+            engagement_id,
+            kind=body["kind"],
+            record_id=body["id"],
+            version=body["version"],
+        )
+
+    @app.post("/api/engagements/{engagement_id}/saved-views")
+    async def personal_view_create(engagement_id: str, request: Request):
+        principal = actor(request, mutation=True)
+        body = await json_body(request)
+        limits.check("saved-views", principal["id"], 120)
+        if set(body) != {"command_id", "payload", "expected_engagement_revision"}:
+            raise DomainError("Invalid personal view create request")
+        return await asyncio.to_thread(
+            enabled_personal_views().create,
+            principal["id"],
+            engagement_id,
+            body["payload"],
+            expected_engagement_revision=body["expected_engagement_revision"],
+            command_id=body["command_id"],
+        )
+
+    @app.get("/api/engagements/{engagement_id}/saved-views/{view_id}")
+    async def personal_view_read(engagement_id: str, view_id: str, request: Request):
+        principal = actor(request)
+        return await asyncio.to_thread(
+            enabled_personal_views().read, principal["id"], engagement_id, view_id
+        )
+
+    @app.put("/api/engagements/{engagement_id}/saved-views/{view_id}")
+    async def personal_view_save(engagement_id: str, view_id: str, request: Request):
+        principal = actor(request, mutation=True)
+        body = await json_body(request)
+        limits.check("saved-views", principal["id"], 120)
+        if set(body) != {
+            "command_id",
+            "payload",
+            "expected_version",
+            "expected_engagement_revision",
+        }:
+            raise DomainError("Invalid personal view update request")
+        return await asyncio.to_thread(
+            enabled_personal_views().save,
+            principal["id"],
+            engagement_id,
+            view_id,
+            body["payload"],
+            expected_version=body["expected_version"],
+            expected_engagement_revision=body["expected_engagement_revision"],
+            command_id=body["command_id"],
+        )
+
+    @app.post("/api/engagements/{engagement_id}/saved-views/{view_id}/clear")
+    async def personal_view_clear(engagement_id: str, view_id: str, request: Request):
+        principal = actor(request, mutation=True)
+        body = await json_body(request)
+        limits.check("saved-views", principal["id"], 120)
+        if set(body) != {"command_id", "expected_version", "expected_engagement_revision"}:
+            raise DomainError("Invalid personal view clear request")
+        return await asyncio.to_thread(
+            enabled_personal_views().clear,
+            principal["id"],
+            engagement_id,
+            view_id,
+            expected_version=body["expected_version"],
+            expected_engagement_revision=body["expected_engagement_revision"],
+            command_id=body["command_id"],
+        )
+
+    @app.post("/api/engagements/{engagement_id}/saved-views/{view_id}/restore")
+    async def personal_view_restore(engagement_id: str, view_id: str, request: Request):
+        principal = actor(request, mutation=True)
+        body = await json_body(request)
+        limits.check("saved-views", principal["id"], 120)
+        if set(body) != {"expected_version", "expected_engagement_revision"}:
+            raise DomainError("Invalid personal view restore request")
+        return await asyncio.to_thread(
+            enabled_personal_views().restore,
+            principal["id"],
+            engagement_id,
+            view_id,
+            expected_version=body["expected_version"],
+            expected_engagement_revision=body["expected_engagement_revision"],
         )
 
     def enabled_jobs():

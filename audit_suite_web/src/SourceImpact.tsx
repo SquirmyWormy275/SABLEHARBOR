@@ -1,35 +1,100 @@
 import {
   impactContext,
+  impactReference,
+  impactTraceLinks,
   validateImpact,
   type ImpactReport,
 } from "./sourceImpact";
 import { useRef, useEffect, useState } from "react";
 import { request, str, type Engagement, type Row } from "./api";
-import { sourceReference } from "./sourceReferences";
 export default function SourceImpact({
   engagement: e,
   onPreview,
 }: {
   engagement: Engagement;
-  onPreview: (kind: string, row: Row) => void;
+  onPreview: (kind: string, row: Row, reference?: Row) => void;
 }) {
-  const [result, setResult] = useState<ImpactReport | null>(null);
+  const [stored, setStored] = useState<{
+    report: ImpactReport;
+    context: string;
+  } | null>(null);
+  const context = impactContext(e);
+  const result = stored?.context === context ? stored.report : null;
   const [error, setError] = useState(""),
     [busy, setBusy] = useState(false);
   const epoch = useRef(0);
-  function openReference(ref: Row) {
-    const target = sourceReference(e, ref);
+  function openReference(ref: Row, artifactId = str(ref.id)) {
+    const target = impactReference(e, ref, artifactId);
+    if (target?.kind === "sample_execution")
+      return (
+        <details>
+          <summary>
+            Inspect exact item {str(ref.item_id)} in trace {str(ref.id)}
+          </summary>
+          <p>
+            {str(ref.trace_status)} · {str(ref.context_status)}
+          </p>
+          <p>
+            Execution revision {str(ref.version)} · predecessor{" "}
+            {str(ref.predecessor_id) || "none"} · successor{" "}
+            {str(ref.successor_id) || "none"}
+          </p>
+          <p>Recorded observation: {str(target.item?.observation)}</p>
+          <p>
+            Recorded result: {str(target.item?.status)}. This does not change
+            the result.
+          </p>
+          <p>
+            Evidence SHA256: <code>{str(ref.artifact_sha256)}</code>
+          </p>
+          <p>
+            Author-supplied locators, not independently verified matches:{" "}
+            {Array.isArray(ref.locators)
+              ? ref.locators.map(str).join("; ")
+              : "none"}
+          </p>
+          {impactTraceLinks(e, target.row).map((link) => (
+            <span key={str(link.collection)}>
+              {openReference(link, artifactId)}
+            </span>
+          ))}
+          <p>
+            Related work opens only when its current server-provided digest
+            matches the trace. Historical context is not replaced with newer
+            work.
+          </p>
+        </details>
+      );
     return target ? (
-      <button type="button" onClick={() => onPreview(target.kind, target.row)}>
-        Open {target.kind} {str(ref.id)}
-      </button>
+      <span>
+        <button
+          type="button"
+          onClick={() => onPreview(target.kind, target.row, target.reference)}
+        >
+          Open {target.kind} {str(ref.id)}
+        </button>
+        {target.workpaper && (
+          <button
+            type="button"
+            onClick={() =>
+              onPreview("workpaper", target.workpaper!.row, {
+                id: target.workpaper!.row.id,
+                collection: "workpapers",
+                version: target.workpaper!.version,
+              })
+            }
+          >
+            Open reviewed workpaper version {target.workpaper.version}
+          </button>
+        )}
+      </span>
     ) : (
       <span>Linked record is unavailable in this workspace.</span>
     );
   }
   useEffect(() => {
     epoch.current++;
-    setResult(null);
+    setStored(null);
     setError("");
     setBusy(false);
     return () => {
@@ -40,12 +105,13 @@ export default function SourceImpact({
     const current = ++epoch.current;
     setBusy(true);
     setError("");
-    setResult(null);
+    setStored(null);
     try {
       const value = await request<ImpactReport>(
         `/api/engagements/${encodeURIComponent(e.id)}/company/impact`,
       );
-      if (current === epoch.current) setResult(validateImpact(value, e));
+      if (current === epoch.current)
+        setStored({ report: validateImpact(value, e), context });
     } catch (err) {
       if (current === epoch.current) setError((err as Error).message);
     } finally {
@@ -157,7 +223,26 @@ export default function SourceImpact({
                       {ref.version !== undefined
                         ? ` · version ${str(ref.version)}`
                         : ""}
-                      {openReference(ref)}
+                      {Boolean(ref.version_status) && (
+                        <p>
+                          {str(ref.version_status)} retained workpaper version ·{" "}
+                          {str(ref.review_scope)}
+                        </p>
+                      )}
+                      {Boolean(ref.reference_scope) && (
+                        <p>
+                          {str(ref.reference_scope)}
+                          {ref.remediation_id
+                            ? ` · ${str(ref.remediation_id)}`
+                            : ""}
+                        </p>
+                      )}
+                      {Boolean(ref.anchor) && (
+                        <blockquote>
+                          {str((ref.anchor as Row).excerpt)}
+                        </blockquote>
+                      )}
+                      {openReference(ref, str(r.artifact_id))}
                     </li>
                   ))}
                 </ul>

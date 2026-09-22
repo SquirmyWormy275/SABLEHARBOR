@@ -42,15 +42,15 @@ Run from the repository root with private, owned JSON inputs and new private out
 ```bash
 .venv/bin/python -m tools.audit_suite.company_security_event_runtime initialize \
   --configuration /private/initialize.json --destination /private/new-runtime \
-  --output /private/new-initialize-receipt.json
+  --output /private/new-initialize-receipt
 .venv/bin/python -m tools.audit_suite.company_security_event_runtime operate \
   --runtime /private/new-runtime --action /private/action.json \
-  --output /private/new-operation-receipt.json
+  --output /private/new-operation-receipt
 .venv/bin/python -m tools.audit_suite.company_security_event_runtime inspect \
   --runtime /private/new-runtime --runtime-sha256 EXACT_DEFINITION_SHA256 \
-  --output /private/new-inspection-receipt.json
+  --output /private/new-inspection-receipt
 ```
 
 Initialization JSON has exactly `source_root`, `source_pins`, `expected_source_metadata_sha256`, `as_of`, `runtime_id`, `period_start`, `period_end`, and `local_rules`. The CLI supplies the repository path (override with `--repository` only on initialization). An action file has exactly `{kind,parameters}`: `kind` is an action listed above; `parameters` contains exactly `expected_runtime_sha256`, `expected_revision`, `expected_state_sha256`, `command_id`, `operator_id`, `event_at`, and `payload`. Runtime/state pins come from the verified initialization or preceding result, not a guessed digest or a freshly substituted state after a conflict. Receipt format is `COMPANY_SECURITY_EVENT_OPERATOR_RECEIPT_V1`.
 
-Receipts must be new private files outside the runtime/source trees. Runtime mutation and separate receipt publication are not globally atomic. `RUNTIME_CREATED_RECEIPT_NOT_PUBLISHED` means preserve the created runtime, hash its exact `RUNTIME.json`, and inspect it; never initialize over it. `OPERATION_COMMITTED_RECEIPT_NOT_PUBLISHED` means retain the exact original action file and replay **that unchanged action** into a new receipt destination. Do not replace its command ID, revision, state pin, timestamp or payload: that would be a new operation, not receipt recovery. Source/state conflicts require explicit review; they do not authorize automatic retry against newer state.
+Receipts are new private directories containing REQUEST.json, RESULT.json and MANIFEST.json, outside the runtime/source trees. Runtime mutation and separate receipt publication are not globally atomic. `RUNTIME_CREATED_RECEIPT_NOT_PUBLISHED` means preserve the created runtime, hash its exact `RUNTIME.json`, and inspect it; never initialize over it. `OPERATION_COMMITTED_RECEIPT_NOT_PUBLISHED` means retain the exact original action file and replay **that unchanged action** into a new receipt destination. Do not replace its command ID, revision, state pin, timestamp or payload: that would be a new operation, not receipt recovery. Source/state conflicts require explicit review; they do not authorize automatic retry against newer state.

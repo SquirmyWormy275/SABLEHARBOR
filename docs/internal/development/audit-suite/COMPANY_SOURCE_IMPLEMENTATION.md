@@ -600,8 +600,14 @@ The [explicit configuration export](../../../../enterprise/audit_suite/CONFIGURA
 can retain the current file's exact bytes as an immutable company original,
 separately from operation reports and receipt envelopes. It shares the runtime
 revision and command namespace, preserves the target, and records export context
-in provenance. Sixteen integrated core, independent-review and CLI checks passed;
-an actual export remains a separately recorded company operation.
+in provenance. Sixteen integrated core, independent-review and CLI checks passed.
+A reviewed actual export retained the exact current file without changing the
+target. A fresh technical engagement subsequently collected eight runtime
+originals and seven upstream approval-chain originals across ten systems.
+Future export retrieval was denied before an explicit clock advance; exact
+replay, original-byte equality, temporary-grant revocation and preservation of
+earlier audit histories passed. The collection ended at revision 38 and grants
+no testing or professional acceptance credit.
 
 The [persistent security-event workflow](../../../../enterprise/audit_suite/SECURITY_EVENT_RUNTIME.md)
 consumes existing logging originals and an independent publisher checkpoint.
@@ -610,7 +616,14 @@ inspection. Reconciliation preserves the full declared subject population,
 including subjects not yet handled. An acknowledgment ticket does not establish
 response completion, and inspection does not establish remediation or incident
 closure. Sixteen integrated core, independent-review and CLI checks passed.
-Paired actual operations require separate reviewed execution receipts.
+Paired actual operations subsequently passed separate reviewed execution:
+intake, triage, required handoffs, retained-source inspection and final
+reconciliation completed for the declared subjects. Exact command replays added
+no duplicate operations. Source capsules and earlier audits remained unchanged;
+no source-access grants, audit mutations, model calls or external actions were
+performed. These are local response workflows, not incident closure or proof of
+whole-period effectiveness. Private execution receipts are indexed in the
+checkpoint.
 
 Evidence context now displays item observations citing the selected exact
 artifact ID and SHA, including correction history and author-recorded locators.
@@ -618,3 +631,18 @@ Procedure and workpaper navigation requires matching server-provided version
 pins. Actual retained backup observations passed desktop and narrow-screen
 verification against the authorized projection without altering audit history
 or original evidence. This adds context, not independent review or testing credit.
+
+[Exact source-impact relationships](../../../../enterprise/audit_suite/SOURCE_IMPACT_REFERENCES.md)
+now include sampled items, correction history, pinned human review comments and
+explicit finding/remediation evidence. The viewer preserves historical workpaper
+versions and shows unavailable or changed references without substituting newer
+records. Impact is a reason for explicit review; it does not change a conclusion.
+
+[Personal saved views](../../../../enterprise/audit_suite/PERSONAL_VIEWS.md) retain
+explicit navigation and exact selected-record pins in a separate private store.
+Current authority, scope and source context govern every restore. Saved filters,
+table position and scroll hints do not pin a whole population or alter formal
+work. Explicit companion recovery preserves historical bytes and records any
+authorized principal remapping separately. Operational backup support does not
+mean every existing workspace has already been backed up. Assignment handoff,
+complete journey acceptance and owner usability evaluation remain separate gates.

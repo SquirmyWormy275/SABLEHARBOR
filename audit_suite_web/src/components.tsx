@@ -42,6 +42,23 @@ function RecordTable({ rows, columns, onOpen, memoryKey }: TableProps) {
     [sort, setSort] = useState(
       columns.some((c) => c.key === initial.sort) ? initial.sort : "",
     );
+  const [restored, setRestored] = useState<{
+    page: number;
+    sort: string;
+  } | null>(() => (memory && memoryKey ? memory.restoration(memoryKey) : null));
+  useEffect(() => {
+    if (!memory || !memoryKey) return;
+    return memory.subscribe(memoryKey, (value) => {
+      setQuery(value.query);
+      setPage(value.page);
+      setSort(columns.some((c) => c.key === value.sort) ? value.sort : "");
+      setRestored({ page: value.page, sort: value.sort });
+    });
+  }, [memory, memoryKey, columns]);
+  function dismissRestoreNotice() {
+    setRestored(null);
+    if (memory && memoryKey) memory.dismissRestoration(memoryKey);
+  }
   const filtered = rows
     .filter((r) =>
       columns.some((c) =>
@@ -61,6 +78,15 @@ function RecordTable({ rows, columns, onOpen, memoryKey }: TableProps) {
   }, [memory, memoryKey, query, currentPage, sort]);
   return (
     <div className="record-table">
+      {restored && (
+        <p role="status">
+          Saved table navigation restored.
+          {restored.page !== currentPage &&
+            ` Page adjusted from ${restored.page + 1} to ${currentPage + 1} for current visible records.`}
+          {restored.sort !== sort &&
+            " Saved sort column is unavailable; showing original order."}
+        </p>
+      )}
       <div className="table-tools">
         <label className="search">
           Search records
@@ -69,6 +95,7 @@ function RecordTable({ rows, columns, onOpen, memoryKey }: TableProps) {
             value={query}
             maxLength={1000}
             onChange={(e) => {
+              dismissRestoreNotice();
               setQuery(e.target.value);
               setPage(0);
             }}
@@ -85,6 +112,7 @@ function RecordTable({ rows, columns, onOpen, memoryKey }: TableProps) {
                 <th key={c.key}>
                   <button
                     onClick={() => {
+                      dismissRestoreNotice();
                       setSort(c.key);
                       setPage(0);
                     }}
@@ -136,6 +164,7 @@ function RecordTable({ rows, columns, onOpen, memoryKey }: TableProps) {
               Search: “{query}”.{" "}
               <button
                 onClick={() => {
+                  dismissRestoreNotice();
                   setQuery("");
                   setPage(0);
                 }}
@@ -151,7 +180,10 @@ function RecordTable({ rows, columns, onOpen, memoryKey }: TableProps) {
       <div className="pagination">
         <button
           disabled={currentPage === 0}
-          onClick={() => setPage(currentPage - 1)}
+          onClick={() => {
+            dismissRestoreNotice();
+            setPage(currentPage - 1);
+          }}
         >
           Previous
         </button>
@@ -160,7 +192,10 @@ function RecordTable({ rows, columns, onOpen, memoryKey }: TableProps) {
         </span>
         <button
           disabled={currentPage + 1 >= pages}
-          onClick={() => setPage(currentPage + 1)}
+          onClick={() => {
+            dismissRestoreNotice();
+            setPage(currentPage + 1);
+          }}
         >
           Next
         </button>

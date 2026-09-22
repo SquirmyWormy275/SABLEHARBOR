@@ -21,6 +21,12 @@ import { compatibleWorkpaperValues, supports } from "./compatibility";
 import { recordSequence } from "./recordSequence";
 import { BackgroundWork } from "./BackgroundWork";
 import { InvestigationContexts } from "./InvestigationContexts";
+import { SavedViews } from "./SavedViews";
+import type {
+  SavedViewNavigation,
+  SavedViewReferenceDescriptor,
+} from "./savedViews";
+import { selectedVersion } from "./investigationContext";
 import { WorkStatus } from "./WorkStatus";
 import { submitMeetingJob } from "./backgroundWork";
 import { WorkpaperSupport } from "./WorkpaperSupport";
@@ -258,6 +264,7 @@ type DetailContext = {
   sequence?: string[];
   returnTo?: DetailContext;
   focusVersion?: number;
+  savedAtRevision?: number;
   pinnedReference?: Row;
   returnToBoundSource?: boolean;
 };
@@ -491,6 +498,11 @@ export default function App() {
     };
     setDetail((previous) => {
       if (!previous) return null;
+      if (
+        previous.savedAtRevision !== undefined &&
+        previous.savedAtRevision !== engagement.revision
+      )
+        return null;
       if (
         previous.returnToBoundSource &&
         !engagement.permissions?.includes("instruct")
@@ -739,6 +751,91 @@ export default function App() {
       : undefined;
   const e = engagement;
   const renderEpoch = navigationEpoch.current;
+  const savedReferenceSections: Record<string, Section> = {
+    control: "controls",
+    task: "controls",
+    artifact: "pbc",
+    population: "populations",
+    selection: "populations",
+    workpaper: "review",
+  };
+  const selectedViewReference: SavedViewReferenceDescriptor | null =
+    detail && Object.hasOwn(savedReferenceSections, detail.kind)
+      ? {
+          kind: detail.kind as SavedViewReferenceDescriptor["kind"],
+          id: detail.row.id,
+          version:
+            detail.kind === "workpaper"
+              ? (detail.focusVersion ??
+                selectedVersion("workpaper", detail.row))
+              : typeof detail.row.version === "number"
+                ? detail.row.version
+                : null,
+        }
+      : null;
+  function restoreSavedView(location: SavedViewNavigation, row: Row | null) {
+    if (
+      !e ||
+      currentEngagement.current !== e.id ||
+      renderEpoch !== navigationEpoch.current
+    )
+      return;
+    savePosition();
+    setSection(location.section as Section);
+    setQuery(location.query);
+    setFramework(location.framework);
+    setDetail(
+      location.reference && row
+        ? {
+            kind: location.reference.kind,
+            row,
+            savedAtRevision: e.revision,
+            ...(location.reference.kind === "workpaper" &&
+            typeof location.reference.version === "number"
+              ? { focusVersion: location.reference.version }
+              : {}),
+          }
+        : null,
+    );
+    history.pushState(
+      {},
+      "",
+      workspaceLink({
+        engagement: e.id,
+        section: location.section as Section,
+      }),
+    );
+    requestAnimationFrame(() => {
+      if (
+        renderEpoch === navigationEpoch.current &&
+        currentEngagement.current === e.id
+      )
+        window.scrollTo(0, location.scroll_top);
+    });
+  }
+  const savedViewsPanel =
+    e && !setup && bootstrap.capabilities.personal_views ? (
+      <SavedViews
+        engagement={e}
+        viewerId={bootstrap.viewer.id}
+        enabled={true}
+        selectedReference={selectedViewReference}
+        getNavigation={() => {
+          const targetSection = selectedViewReference
+            ? savedReferenceSections[selectedViewReference.kind]
+            : section;
+          return {
+            section: targetSection,
+            query: targetSection === section ? query : "",
+            framework: targetSection === section ? framework : "all",
+            scroll_top: detail
+              ? 0
+              : Math.min(1000000, Math.max(0, Math.round(window.scrollY))),
+          };
+        }}
+        onRestore={restoreSavedView}
+      />
+    ) : null;
   const controlLink = (row: Row) => {
     const id = str(row.control_id);
     const control = e?.controls.find((c) => c.id === id);
@@ -1238,6 +1335,7 @@ export default function App() {
             />
           )}
           <div id="main" tabIndex={-1}>
+            {!detail && savedViewsPanel}
             {e && !setup && bootstrap.capabilities.workspace_contexts && (
               <InvestigationContexts
                 engagement={e}
@@ -1659,7 +1757,16 @@ export default function App() {
                           <SourceImpact
                             key={e.id + ":impact"}
                             engagement={e}
-                            onPreview={(kind, row) => setDetail({ kind, row })}
+                            onPreview={(kind, row, reference) =>
+                              setDetail({
+                                kind,
+                                row,
+                                ...(kind === "workpaper" &&
+                                typeof reference?.version === "number"
+                                  ? { focusVersion: reference.version }
+                                  : {}),
+                              })
+                            }
                           />
                         )}
                       </>
@@ -2783,6 +2890,7 @@ export default function App() {
             title={str(detail.row.title ?? detail.row.name ?? detail.row.id)}
             onClose={() => setDetail(null)}
           >
+            {savedViewsPanel}
             {detail.returnToBoundSource && (
               <button type="button" onClick={() => setDetail(null)}>
                 Back to bound source
