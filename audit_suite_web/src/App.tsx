@@ -1468,7 +1468,7 @@ export default function App() {
               </span>
             </div>
           )}
-          {error && (
+          {error && !action && (
             <div className="alert error" role="alert">
               <span>{error}</span>
               <button onClick={() => (e ? void open(e.id) : void load())}>
@@ -2984,6 +2984,7 @@ export default function App() {
                 : action.kind + action.title
             }
             draft={actionDraft}
+            submitError={error}
             support={
               e && ["workpaper.add", "workpaper.update"].includes(action.kind)
                 ? (values, onChange, editable) => (

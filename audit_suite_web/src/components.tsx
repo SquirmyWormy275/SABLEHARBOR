@@ -2,7 +2,7 @@ import { useDurableDraft } from "./useDurableDraft";
 import { useTableMemory } from "./TableWorkspace";
 import { formDraftFields } from "./durableDraft";
 import type { DraftStore, DraftKey, DraftLookup } from "./draftContext";
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useId, useRef, useState, type ReactNode } from "react";
 import { human, str, type Row } from "./api";
 export function Badge({ children }: { children: ReactNode }) {
   return <span className="badge">{children}</span>;
@@ -231,6 +231,7 @@ export function Modal({
   wide?: boolean;
 }) {
   const ref = useRef<HTMLDialogElement>(null);
+  const titleId = useId();
   useEffect(() => {
     const dialog = ref.current!;
     const opener =
@@ -247,13 +248,68 @@ export function Modal({
     <dialog
       ref={ref}
       className={wide ? "modal modal-wide" : "modal"}
+      aria-labelledby={titleId}
+      tabIndex={-1}
+      onKeyDown={(event) => {
+        const dialog = event.currentTarget;
+        if (
+          event.key !== "Tab" ||
+          event.altKey ||
+          event.ctrlKey ||
+          event.metaKey ||
+          (event.target as HTMLElement).closest("dialog") !== dialog
+        )
+          return;
+        const candidates = Array.from(
+          dialog.querySelectorAll<HTMLElement>(
+            "a[href],button,input,select,textarea,summary,[tabindex]",
+          ),
+        ).filter(
+          (el) =>
+            el.tabIndex >= 0 &&
+            !el.matches(":disabled") &&
+            !el.closest("[inert]") &&
+            !Array.from(dialog.querySelectorAll("details:not([open])")).some(
+              (details) =>
+                details.contains(el) &&
+                !details.querySelector(":scope > summary")?.contains(el),
+            ) &&
+            el.getClientRects().length > 0 &&
+            getComputedStyle(el).visibility === "visible",
+        );
+        // Positive tabindex order precedes ordinary document-order stops.
+        candidates.sort(
+          (a, b) => (a.tabIndex || Infinity) - (b.tabIndex || Infinity),
+        );
+        const first = candidates[0],
+          last = candidates.at(-1);
+        if (!first) {
+          event.preventDefault();
+          dialog.focus();
+          return;
+        }
+        if (
+          event.shiftKey &&
+          (document.activeElement === first ||
+            document.activeElement === dialog)
+        ) {
+          event.preventDefault();
+          last?.focus();
+        } else if (
+          !event.shiftKey &&
+          (document.activeElement === last || document.activeElement === dialog)
+        ) {
+          event.preventDefault();
+          first.focus();
+        }
+      }}
       onCancel={(e) => {
         e.preventDefault();
         onClose();
       }}
     >
       <div className="modal-title">
-        <h2>{title}</h2>
+        <h2 id={titleId}>{title}</h2>
         <button aria-label="Close dialog" onClick={onClose}>
           ✕
         </button>
@@ -269,6 +325,7 @@ export function ActionForm({
   onClose,
   draft,
   onDraftCleanupFailure,
+  submitError,
   support,
 }: {
   action: Action;
@@ -284,6 +341,7 @@ export function ActionForm({
     afterFormalSave?: () => Promise<boolean>,
   ) => Promise<boolean | void>;
   onDraftCleanupFailure?: () => void;
+  submitError?: string;
   support?: (
     values: Record<string, unknown>,
     onChange: (values: Record<string, unknown>) => void,
@@ -384,6 +442,11 @@ export function ActionForm({
                   saved personal drafts.
                 </>
               )}
+            </p>
+          )}
+          {submitError && (
+            <p role="alert" className="error">
+              {submitError}
             </p>
           )}
           {draft && durable.error && <p role="alert">{durable.error}</p>}
