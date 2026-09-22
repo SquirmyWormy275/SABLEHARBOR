@@ -1,0 +1,31 @@
+{
+  "artifact": "sacramento-hq-exterior-candidate-v1.png",
+  "sha256": "3296663d8c7be71bca8aee5fad953a6a96b1ecf03a4b021a8dce48f9295afaf3",
+  "bytes": 2730619,
+  "dimensions_px": [
+    1672,
+    941
+  ],
+  "generation_mode": "BUILT_IN_IMAGE_GEN",
+  "state": "NEW_RENDER_CANDIDATE_PENDING_OWNER_VISUAL_REVIEW_AND_REPOSITORY_ACCEPTANCE",
+  "prompt": "PROMPT.txt",
+  "review": "SOURCE_REVIEW.json",
+  "not_original_recovery": true,
+  "visual_checks": {
+    "sign_text": "PASS: SABLE HARBOR / HEADQUARTERS / SACRAMENTO, CALIFORNIA",
+    "people": "NONE_VISIBLE",
+    "material_language": "PASS: glass/darkmetal/concrete/warmwood",
+    "location_disallowed_landmarks": "NONE_VISIBLE",
+    "front_building_heights": "Corporate three / Education two visible",
+    "rear_building_heights": "PARTIALLY_OCCLUDED_NOT_INDEPENDENTLY_MEASURABLE",
+    "composition": "Corporate left, Education right, two rear volumes and central quad; interpretation of approved local arrangement, not a scaled verification",
+    "historic_assets": "R01 andV08originalsunchanged;missingoldhashnotrecovered"
+  },
+  "new_illustrative_detail": [
+    "Windowgrid/facadedetail",
+    "Connectiondetail",
+    "Reflectingpoolshapeandposition",
+    "Plants/stone/lighting/camera"
+  ],
+  "publication_claim": false
+}
