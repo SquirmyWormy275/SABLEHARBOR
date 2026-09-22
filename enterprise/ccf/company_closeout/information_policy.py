@@ -86,7 +86,9 @@ def decide(records, record_id, subject, action, now, *, revoked_ids=(), tombston
         permitted = all(allowed(parent) for parent in row.get('sources', []))
         visiting.remove(key)
         return permitted
-    return 'ALLOW' if allowed(record_id) else 'DENY'
+    if not allowed(record_id):
+        return 'DENY'
+    return 'EXISTS_RESTRICTED' if action == 'existence' else 'ALLOW'
 
 
 def disposal_decision(records, record_id, request, now):
