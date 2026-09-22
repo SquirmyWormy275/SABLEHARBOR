@@ -873,15 +873,22 @@ def post_tax(book, state, month, index, source, output):
         state["nol"] = nol_closing
     # Reassess unpaid estimated tax without manufacturing a refund.
     credit = max(-book.balance["2700"], 0)
-    for row in [r for r in state["obligations"] if r["account"] == "2700"]:
-        row["amount"] = min(row["amount"], credit)
-        credit -= row["amount"]
-    if month in source["tax"]["payment_months"]:
+    payment_override = source.get("company_statutory_payment_override")
+    if payment_override is None:
+        for row in [r for r in state["obligations"] if r["account"] == "2700"]:
+            row["amount"] = min(row["amount"], credit)
+            credit -= row["amount"]
+    if payment_override is not None or month in source["tax"]["payment_months"]:
+        requested = (
+            money(D(payment_override[f"{book.scenario}/{book.entity}/{book.year}/{month}"]))
+            if payment_override is not None
+            else credit
+        )
         add_due(
             state,
             index,
             "2700",
-            credit,
+            requested,
             f"TAX-CASH-{book.year}{month:02}",
             "TAX_PAYMENT",
             priority=2,
@@ -1154,7 +1161,13 @@ def capital_schedule(rows, source):
     return plans, projects
 
 
-def build(output=OUT, operating_rows=None, source=None, statutory_current_override=None):
+def build(
+    output=OUT,
+    operating_rows=None,
+    source=None,
+    statutory_current_override=None,
+    statutory_payment_override=None,
+):
     from industrial.planning.transactions import procurement_costs
 
     source = source_data(source)
@@ -1174,6 +1187,24 @@ def build(output=OUT, operating_rows=None, source=None, statutory_current_overri
             "annual_usd": {key: str(value) for key, value in sorted(values.items())},
             "method": "RECONCILED_STATUTORY_CURRENT_TAX;CUMULATIVE_MONTHLY_ACCRUAL;NATIVE_PAYMENT_PRIORITY_AND_FINITE_FUNDING",
             "available_not_before": "2026-09-22",
+        }
+    if statutory_payment_override is not None:
+        expected = {
+            f"{s}/{e}/{y}/{m}"
+            for s in ("base", "downside", "expansion")
+            for e in ("ARU_GROUP", "RWH_PS")
+            for y in range(2027, 2032)
+            for m in range(1, 13)
+        }
+        if statutory_current_override is None or set(statutory_payment_override) != expected:
+            raise ValueError(
+                "Statutory payment override requires complete current and payment populations"
+            )
+        values = {k: D(str(v)) for k, v in statutory_payment_override.items()}
+        if any(not v.is_finite() or v < 0 for v in values.values()):
+            raise ValueError("Invalid statutory payment request")
+        source["company_statutory_payment_override"] = {
+            k: str(v) for k, v in sorted(values.items())
         }
     rows = prepare_rows(operating_rows, source)
     capital_plans, growth_projects = capital_schedule(rows, source)

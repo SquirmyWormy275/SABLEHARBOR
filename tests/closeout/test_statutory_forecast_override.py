@@ -34,3 +34,19 @@ def test_default_native_planning_rate_remains_unchanged():
 def test_override_cannot_omit_entities_years_or_cases(tmp_path):
     with pytest.raises(ValueError, match="population"):
         build(tmp_path, statutory_current_override={"base/RWH_PS/2027": "1"})
+
+
+def test_external_minimum_payment_request_can_exceed_interim_accrual():
+    source = source_data()
+    source["company_statutory_current_override"] = {"annual_usd": {"base/RWH_PS/2027": "800"}}
+    source["company_statutory_payment_override"] = {
+        f"base/RWH_PS/2027/{m}": ("800" if m == 4 else "0") for m in range(1, 13)
+    }
+    book = Book("base", "RWH_PS", 2027, {"1000": 1000, "3000": -1000}, source)
+    state = {"nol": 0, "goodwill_amortization": 0, "obligations": []}
+    for month in range(1, 6):
+        post_tax(book, state, month, month, source, [])
+    assert len(state["obligations"]) == 1
+    assert state["obligations"][0]["amount"] == 800
+    assert state["obligations"][0]["due"] == 4
+    assert book.balance["1000"] == 1000
