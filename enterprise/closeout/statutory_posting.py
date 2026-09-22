@@ -34,8 +34,72 @@ def _part(amount, month):
     return part if month < 12 else D(amount) - 11 * part
 
 
+def _population(rows, fields, expected, label):
+    seen = set()
+    for row in rows:
+        key = tuple(row[f] for f in fields)
+        if key in seen:
+            raise ValueError(f"Duplicate statutory {label} input")
+        seen.add(key)
+    if seen != expected:
+        raise ValueError(f"Incomplete or unexpected statutory {label} population")
+
+
+def _validate_inputs(result, parent, current, deferred, opening, settlement):
+    scenarios, years = ("base", "downside", "expansion"), range(2026, 2032)
+    members = ("SHI", "SHIH", "PS", "ARU", "BST")
+    fields = ("scenario", "taxpayer", "jurisdiction", "year")
+    federal = {(s, e, "US", y) for s in scenarios for e in ("SHIH", "PS", "ARU", "BST") for y in years}
+    states = {(s, e, j, y) for s in scenarios for e in members for j in ("CA", "IL", "WV") for y in years}
+    _population(current["federal"], fields, federal, "federal")
+    _population(current["states"], fields, states, "state")
+    _population(parent.rows, ("scenario", "year"), {(s, y) for s in scenarios for y in years}, "parent")
+    deferred_keys = states | {(s, e, "US", y) for s in scenarios for e in ("SHI", "PS", "ARU", "BST") for y in years}
+    _population(deferred, fields, deferred_keys, "deferred")
+    opening_keys = {(s, e, j, 2026) for s in scenarios for e, j in (("SHI", "US"), ("PS", "US"), ("SHI", "CA"), ("PS", "IL"), ("SHI", "WV"))}
+    _population(opening, fields, opening_keys, "opening")
+    monthly = {(s, g, y, m) for s in scenarios for g in ("ARU_GROUP", "RWH_PS") for y in years for m in range(1, 13)}
+    _population(settlement["rows"], ("scenario", "source_group", "year", "month"), monthly, "settlement")
+    for rows, fields, label in ((result["journal_rows"], ("scenario", "journal_id", "line_no"), "journal leg"),
+                                (settlement["payments"], ("scenario", "source_group", "year", "month", "source_journal_id"), "payment")):
+        seen = set()
+        for row in rows:
+            key = tuple(row[f] for f in fields)
+            if key in seen:
+                raise ValueError(f"Duplicate statutory {label} input")
+            seen.add(key)
+    paid_by_month = defaultdict(D)
+    for row in settlement["payments"]:
+        key = tuple(row[f] for f in ("scenario", "source_group", "year", "month"))
+        value = D(row["paid_usd"])
+        if key not in monthly or not value.is_finite() or value <= 0:
+            raise ValueError("Invalid statutory payment input")
+        paid_by_month[key] += value
+    for row in settlement["rows"]:
+        key = tuple(row[f] for f in ("scenario", "source_group", "year", "month"))
+        value = D(row["gross_source_tax_cash_paid_usd"])
+        if not value.is_finite() or value < 0 or value != paid_by_month[key]:
+            raise ValueError("Statutory payment detail differs from monthly settlement")
+    native = {(r["scenario"], r["entity"], int(r["year"]), int(r["month"])) for r in result["journal_rows"]
+              if r["source_id"].startswith("LEGAL-") and r["entity"] in ("ARU", "BST", "PS", "RWH") and int(r["month"]) > 0}
+    expected_native = {(s, e, y, m) for s in scenarios for e in ("ARU", "BST", "PS", "RWH") for y in years for m in range(1, 13)}
+    if native != expected_native:
+        raise ValueError("Incomplete statutory native legal monthly population")
+    for row in deferred + opening:
+        for field in ("gross_dta_usd", "valuation_allowance_usd", "gross_dtl_usd"):
+            value = D(row[field])
+            if not value.is_finite() or value < 0:
+                raise ValueError("Invalid statutory gross deferred amount")
+        if D(row["valuation_allowance_usd"]) > D(row["gross_dta_usd"]):
+            raise ValueError("Statutory valuation allowance exceeds gross DTA")
+    for row in current["federal"] + current["states"]:
+        if not D(row["current_tax_usd"]).is_finite() or D(row["current_tax_usd"]) < 0:
+            raise ValueError("Invalid statutory current tax amount")
+
+
 class StatutoryPosting:
     def __init__(self, result, parent, current, deferred, opening, settlement):
+        _validate_inputs(result, parent, current, deferred, opening, settlement)
         self.parent, self.current, self.deferred, self.opening, self.settlement = (
             parent,
             current,
@@ -232,7 +296,7 @@ class StatutoryPosting:
             if residual:
                 if (year, month) != (2026, 1) or entity not in ("ARU", "BST"):
                     raise ValueError("Unexplained native deferred-tax replacement difference")
-                lines.append(("3100", residual))
+                lines.append(("CO_SUB_TAX_DEFERRED", residual))
             self._post(
                 books,
                 entity,
@@ -240,7 +304,7 @@ class StatutoryPosting:
                 month,
                 lines,
                 f"CO-STAT-DEFERRED-REPLACE-{entity}-{year}-{month}",
-                "Separate valuation successor removes native planning deferred balances; protected acquisition source retained",
+                "Subsequent valuation successor replaces native deferred balances through expense; original acquisition allocation and goodwill retained",
             )
         for entity in ("SHI", "SHIH", "PS", "ARU", "BST"):
             parts = {
