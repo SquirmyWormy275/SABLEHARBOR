@@ -90,8 +90,15 @@ def build(output, fin, op, legacy, operating, policy, adjustment):
                     next_state_paid[row["scenario"], row["taxpayer"], row["year"]] += D(
                         row["paid_usd"]
                     )
-        if plan == prior_plan and dict(next_state_paid) == state_paid:
+        converged = plan == prior_plan and dict(next_state_paid) == state_paid
+        iterations[-1]["converged"] = converged
+        iterations[-1]["settled_state_deductions_stable"] = dict(next_state_paid) == state_paid
+        if converged:
+            from .statutory_replay import verify as verify_statutory
+
+            replay = verify_statutory(posting, successor["journal_rows"])
             workpapers = dict(
+                implementation_replay=replay,
                 current=current,
                 deferred=deferred,
                 opening=opening,
