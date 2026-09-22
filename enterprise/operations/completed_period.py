@@ -974,6 +974,7 @@ def build(source=None):
         "enterprise/closeout/source/mine_support_allocation.json",
         "enterprise/closeout/rwh_history.py",
         "enterprise/closeout/source/rwh_tax_history.json",
+        "enterprise/closeout/source/capital_register.json",
         "enterprise/operations/invoice_settlement.py",
         "enterprise/operations/source/lane_receipt_2026_09_15.json",
     ]
