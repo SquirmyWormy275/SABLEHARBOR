@@ -9,6 +9,8 @@ import { ReviewFeedback } from "./ReviewFeedback";
 import OriginalComparison from "./OriginalComparison";
 import { FEEDBACK_DISPOSITIONS } from "./reviewFeedback";
 import { EvidenceContext } from "./EvidenceContext";
+import { ArtifactInspections } from "./ArtifactInspections";
+import { inspectionSubmission } from "./artifactInspection";
 import { evidenceContextKey, recordedEvidenceContext } from "./evidenceContext";
 import RetainedPanel from "./RetainedPanel";
 import PopulationLineage from "./PopulationLineage";
@@ -3137,7 +3139,9 @@ export default function App() {
                   action.kind,
                   compatibleWorkpaperValues(
                     action.kind,
-                    payload,
+                    action.kind === "artifact.inspection.record"
+                      ? inspectionSubmission(payload)
+                      : payload,
                     bootstrap.capabilities,
                   ),
                   afterFormalSave,
@@ -3744,6 +3748,45 @@ export default function App() {
               {detail.kind === "artifact" && (
                 <>
                   {download(detail.row)}
+                  <ArtifactInspections
+                    engagement={e}
+                    artifactId={detail.row.id}
+                    onRecord={
+                      !busy
+                        ? (pins) =>
+                            edit(
+                              "Record an inspection",
+                              "artifact.inspection.record",
+                              [
+                                f(
+                                  "locator",
+                                  "Passage, page or section inspected",
+                                ),
+                                f(
+                                  "observation",
+                                  "What you observed",
+                                  "textarea",
+                                ),
+                                {
+                                  ...linked(
+                                    "task_id",
+                                    "Related procedure (optional)",
+                                    e.tasks.filter(
+                                      (t) =>
+                                        t.status !== "NOT_APPLICABLE" &&
+                                        t.status !== "EXCLUDED" &&
+                                        t.applicable !== false,
+                                    ),
+                                  ),
+                                  required: false,
+                                },
+                              ],
+                              pins,
+                              `Original ${String(pins.artifact_id)} · version ${String(pins.version ?? "not separately recorded")} · SHA-256 ${String(pins.sha256)}. This is your attributed inspection note, not an automatic test result.`,
+                            )
+                        : undefined
+                    }
+                  />
                   <EvidenceContext
                     engagement={e}
                     artifactId={detail.row.id}

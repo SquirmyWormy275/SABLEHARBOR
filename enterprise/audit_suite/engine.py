@@ -52,6 +52,7 @@ COLLECTIONS = (
     "populations",
     "selections",
     "sample_executions",
+    "artifact_inspections",
     "source_impact_dispositions",
     "calendar",
     "findings",
@@ -67,6 +68,7 @@ CAPABILITIES = {
     "review_independent_resolution": True,
     "review_passage_anchors": True,
     "sample_executions": True,
+    "artifact_inspections": True,
     "work_guidance_policy": True,
     "voice": False,
 }
@@ -524,6 +526,12 @@ class Engine:
             state["artifacts"] = [
                 m for m in state["artifacts"] if m.get("audience", "LEARNER") == "LEARNER"
             ]
+        artifact_ids = {a["id"] for a in state.get("artifacts", [])}
+        state["artifact_inspections"] = [
+            row
+            for row in state.get("artifact_inspections", [])
+            if row.get("artifact_id") in artifact_ids
+        ]
         for request in state.get("requests", []):
             for key in (
                 "plan_unit",
@@ -696,6 +704,10 @@ class Engine:
             from .source_impact_disposition import handle as handle_disposition
 
             handle_disposition(self, state, p, stamped)
+        elif kind == "artifact.inspection.record":
+            from .artifact_inspection import handle as handle_inspection
+
+            handle_inspection(state, p, stamped, self.artifacts, command["command_id"])
         elif kind in {"sample.execution.record", "sample.execution.correct"}:
             from .sample_execution import handle as handle_sample_execution
 

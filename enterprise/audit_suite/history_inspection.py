@@ -89,7 +89,12 @@ def inspect_history(store, actor, engagement_id, *, revisions=()):
                     "actor": row["actor"],
                     "recorded_at": row["recorded_at"],
                     "command_id": row["command_id"],
-                    "command": {"kind": record["command"].get("kind")},
+                    "command": (
+                        record["command"]
+                        if record["command"].get("kind") == "artifact.inspection.record"
+                        and len(fields["command"]) <= 32768
+                        else {"kind": record["command"].get("kind")}
+                    ),
                     "hash": row["hash"],
                     "revision": count,
                 }

@@ -178,7 +178,10 @@ def _inventory(snapshot, state, history):
         for h in history
         if h["actor"] == actor
     ]
+    from .artifact_inspection import inventory as inspection_inventory
+
     return {
+        "inspection": inspection_inventory(state, history, actor),
         "sources": list(sources.values()),
         "expectations": results,
         "audited_actor_activity": activity,
@@ -253,7 +256,7 @@ def _compare(engine, principal, engagement_id, bindings, *, revision):
         "mismatches": mismatch,
         "grading": "NOT_PERFORMED",
         "professional_validation": "UNVALIDATED",
-        "inspection": "NOT_OBSERVABLE_NO_DOWNLOAD_EVENT_LOG",
+        "inspection": {"status": "UNAVAILABLE_SELECTED_CONTEXT_MISMATCH"},
         "submission": "NOT_INFERRED_FROM_REVISION",
         "limits": [
             "Source links match retained metadata; native bytes are not reread by this report.",

@@ -6,7 +6,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 161 |
+| COUNTERPART_REVIEW_REQUIRED | 163 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 106 |
@@ -52,6 +52,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Company-source implementation checkpoint](../../internal/development/audit-suite/COMPANY_SOURCE_IMPLEMENTATION.md) — Corporate document-format reconciliation
 - [Intelligent contextual workspace](../../internal/development/audit-suite/CONTEXTUAL_WORKSPACE_WORKFLOW.md) — Corporate document-format reconciliation
 - [Audit-suite contribution and state formats](../../internal/development/audit-suite/CONTRIBUTING_AND_STATE_FORMATS.md) — Corporate document-format reconciliation
+- [Audit-suite execution closeout](../../internal/development/audit-suite/EXECUTION_CLOSEOUT.md) — Corporate document-format reconciliation
 - [Explicit instructor assistance release core](../../internal/development/audit-suite/IK05_EXPLICIT_RELEASE_CORE.md) — Corporate document-format reconciliation
 - [Streamed instructor history inspection](../../internal/development/audit-suite/IK_STREAMED_HISTORY_INSPECTION_2026-09-14.md) — Corporate document-format reconciliation
 - [Audit training suite implementation direction](../../internal/development/audit-suite/IMPLEMENTATION_DIRECTION_2026-09-13.md) — Corporate document-format reconciliation
@@ -60,6 +61,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Local audit-training delivery](../../internal/development/audit-suite/LOCAL_DELIVERY.md) — Corporate document-format reconciliation
 - [Navigation continuity foundation](../../internal/development/audit-suite/NAVIGATION_FOUNDATION_IMPLEMENTATION.md) — Corporate document-format reconciliation
 - [Audit-suite organization bridge and reconciliation proposal](../../internal/development/audit-suite/ORGANIZATION_RECONCILIATION_2026-09-13.md) — Corporate document-format reconciliation
+- [Explicit evidence inspection records](../../internal/development/audit-suite/RECORDED_INSPECTIONS.md) — Corporate document-format reconciliation
 - [Private-runtime browser sessions](../../internal/development/audit-suite/SERVICE_SESSION_ISOLATION_2026-09-14.md) — Corporate document-format reconciliation
 - [Audit workspace UX professionalization](../../internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md) — Corporate document-format reconciliation
 - [Explicit personal visit checkpoints](../../internal/development/audit-suite/VISIT_CHECKPOINTS.md) — Corporate document-format reconciliation

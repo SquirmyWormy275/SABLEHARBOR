@@ -620,11 +620,19 @@
         "docs/internal/development/audit-suite/",
         "enterprise/generated/audit-suite/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "Assemble traceability matrix, migration/recovery receipts, source inventory, rehearsal results and open findings. Obtain qualified review of applicability and evidence sufficiency and owner usability acceptance. Report engineering, substantive review and professional acceptance separately. Qualified review evaluates realism and evidence sufficiency in both modes. Software checks alone cannot establish professional realism or an assurance opinion.",
       "gate": "existing_authority",
       "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
-      "execution_authorized": true
+      "execution_authorized": true,
+      "technical_checkpoints": [
+        {
+          "date": "2026-09-22",
+          "scope": "Finite closeout reconciliation",
+          "status": "Consolidating existing technical evidence against exact acceptance; dependencies remain incomplete",
+          "acceptance": "Prior READY was not acceptance readiness. Qualified review and owner usability decisions remain unrecorded; authorized engineering continues."
+        }
+      ]
     },
     {
       "id": "IK-01",
@@ -763,6 +771,13 @@
           "status": "Six-check protected snapshots bound to exact full-workroom history, with31/32 retained originals",
           "validation": "Independent bytes/history verification and real historical browser comparison PASS;temporary source grants revoked",
           "acceptance": "UNVALIDATED authored expectations;no automated grade or learner release"
+        },
+        {
+          "date": "2026-09-22",
+          "scope": "Explicit original inspection assertions and historical attribution",
+          "status": "Implemented ordinary exact-pin inspection command, immutable author records and historical command-payload matching",
+          "validation": "77 focused integration and251frontend tests; explicit compiledApp form/error/role/narrow journey passed.",
+          "acceptance": "Self-reported inspection only; no passive-download inference, automatic testing credit or retrospective invented access."
         }
       ]
     },
@@ -821,11 +836,19 @@
         "docs/internal/development/audit-suite/",
         "enterprise/generated/audit-suite/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "Exercise matched Clean/Messy engagements, overlapping issues, missing/inaccessible evidence, alternative procedures, unsupported findings, time-dependent discoverability and corrected rubrics. Clean explains supported operation and appropriately handled exceptions; Messy explains causal failures. Verify reproducible debriefs and access isolation. Obtain qualified review of realism, sufficiency and grading fairness plus owner usability acceptance; retain ambiguity and unresolved review status.",
       "gate": "existing_authority",
       "execution_policy": "Queued, not started. READY is conditional on completed dependencies and the recorded execution authorization. Keep populated keys and learner records private. Integrator owns shared schema, dependency and catalog changes. IK-06 requires actual professional review and owner acceptance, not inferred approval.",
-      "execution_authorized": true
+      "execution_authorized": true,
+      "technical_checkpoints": [
+        {
+          "date": "2026-09-22",
+          "scope": "Finite closeout reconciliation",
+          "status": "Consolidating existing technical evidence against exact acceptance; dependencies remain incomplete",
+          "acceptance": "Prior READY was not acceptance readiness. Qualified review and owner usability decisions remain unrecorded; authorized engineering continues."
+        }
+      ]
     },
     {
       "id": "UX-01",
@@ -979,11 +1002,19 @@
         "docs/internal/development/audit-suite/",
         "enterprise/generated/audit-suite/"
       ],
-      "state": "READY",
+      "state": "IN_PROGRESS",
       "acceptance": "Exercise resuming yesterday's audit; company incomplete support and correction; population reconciliation/sample testing/exception documentation; reviewer challenge and reference traversal; instructor missed-issue debrief. Record navigation time, repeated entry, lost context, failures and help needed. Separate scripted checks from actual user evaluation; resolve findings and obtain owner acceptance without invented scores.",
       "gate": "existing_authority",
       "execution_policy": "Locked design direction; queued, not started. Complete dependencies before execution. Preserve private data and prior scope boundaries. Owner usability and exact visual acceptance cannot be inferred from scripted checks.",
-      "execution_authorized": true
+      "execution_authorized": true,
+      "technical_checkpoints": [
+        {
+          "date": "2026-09-22",
+          "scope": "Finite closeout reconciliation",
+          "status": "Consolidating existing technical evidence against exact acceptance; dependencies remain incomplete",
+          "acceptance": "Prior READY was not acceptance readiness. Qualified review and owner usability decisions remain unrecorded; authorized engineering continues."
+        }
+      ]
     },
     {
       "id": "UX-06",

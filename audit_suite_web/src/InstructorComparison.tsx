@@ -3,6 +3,10 @@ import { useEffect, useRef, useState } from "react";
 import { request, str, type Engagement, type Row } from "./api";
 import type { BoundResponse } from "./boundInstructorKey";
 import { validExpectationTaskLinks } from "./expectationTaskLinks";
+import {
+  inspectionInventory,
+  type InspectionInventory,
+} from "./inspectionInventory";
 
 type Inventory = {
   status: "DETERMINISTIC_LINK_INVENTORY_ONLY" | "CONTEXT_MISMATCH";
@@ -23,6 +27,10 @@ type Inventory = {
   expectations?: Row[];
   audited_actor_activity?: Row[];
   shared_workspace_activity_count?: number;
+  inspection?:
+    | InspectionInventory
+    | string
+    | { status: "UNAVAILABLE_SELECTED_CONTEXT_MISMATCH" };
 };
 export function InstructorComparison({
   engagement: e,
@@ -36,6 +44,7 @@ export function InstructorComparison({
   assessmentsEnabled?: boolean;
 }) {
   const [revision, setRevision] = useState(String(e.revision));
+  const [inspectionPage, setInspectionPage] = useState(0);
   const [result, setResult] = useState<Inventory | null>(null);
   const [selected, setSelected] = useState("");
   const [busy, setBusy] = useState(false);
@@ -99,7 +108,14 @@ export function InstructorComparison({
         throw Error(
           "The protected history or binding changed. Refresh before comparing.",
         );
+      if (value.status === "DETERMINISTIC_LINK_INVENTORY_ONLY")
+        inspectionInventory(
+          value.inspection,
+          value.selected_history_revision,
+          value.audited_actor_id,
+        );
       setResult(value);
+      setInspectionPage(0);
       setSelected("");
     } catch (err) {
       if (current === epoch.current) setError((err as Error).message);
@@ -110,6 +126,12 @@ export function InstructorComparison({
   const expectation = result?.expectations?.find(
     (x) => x.expectation_id === selected,
   );
+  const inspected =
+    result?.status === "DETERMINISTIC_LINK_INVENTORY_ONLY" &&
+    typeof result.inspection === "object" &&
+    result.inspection.status === "SELF_REPORTED_INSPECTION"
+      ? result.inspection
+      : null;
   function records(label: string, rows: Row[] = []) {
     return (
       <details>
@@ -228,6 +250,53 @@ export function InstructorComparison({
                   ))}
                 </select>
               </label>
+              {inspected && (
+                <section aria-label="Recorded inspection links">
+                  <h3>Recorded inspections</h3>
+                  <p>
+                    {inspected.audited_actor_count} attributed to the audited
+                    actor · {inspected.other_actor_count} by other actors ·{" "}
+                    {inspected.unresolved_record_count} unresolved links.
+                  </p>
+                  <p>
+                    These are authored inspection notes tied to exact originals
+                    and command history. They do not prove reading,
+                    understanding or adequate testing. No record does not
+                    establish that a file was never inspected.
+                  </p>
+                  {records(
+                    "Exact original inspection records",
+                    inspected.records.slice(
+                      inspectionPage * 100,
+                      (inspectionPage + 1) * 100,
+                    ),
+                  )}
+                  {inspected.records.length > 100 && (
+                    <div className="actions">
+                      <button
+                        type="button"
+                        disabled={inspectionPage === 0}
+                        onClick={() => setInspectionPage((p) => p - 1)}
+                      >
+                        Previous inspection links
+                      </button>
+                      <span>
+                        Page {inspectionPage + 1} of{" "}
+                        {Math.ceil(inspected.records.length / 100)}
+                      </span>
+                      <button
+                        type="button"
+                        disabled={
+                          (inspectionPage + 1) * 100 >= inspected.records.length
+                        }
+                        onClick={() => setInspectionPage((p) => p + 1)}
+                      >
+                        Next inspection links
+                      </button>
+                    </div>
+                  )}
+                </section>
+              )}
               {expectation && (
                 <section aria-label="Expectation links">
                   <h3>{selected}</h3>

@@ -2,6 +2,13 @@
 
 The owner authorized execution of the overnight queue, preserving company canon, source locks, history and design intent. Work is in progress. This document describes implemented mechanics, not completion of all queued jobs or professional acceptance.
 
+The [execution closeout](EXECUTION_CLOSEOUT.md) defines the finite remaining work:
+exact procedure reconciliation, recorded inspection links, one combined paired
+journey, company-period reconciliation and a consolidated acceptance packet. The
+sections below retain successive implementation checkpoints; an earlier “queued”
+or “not yet implemented” statement is historical when a later section records its
+implementation. The structured queue controls current job status.
+
 ## Independent source ownership and migration
 
 `company_store.py` retains private company/branch/system/record identities independently of engagements. Immutable versions preserve source bytes, provenance, event/availability timestamps and separately recorded import time. Explicit scoped grants govern discovery and exact retrieval; collections retain receipts. Corrections do not rewrite earlier source versions. The local operator CLI supports registration, grants, discovery, exact collection and verified backup/restore into new private directories. Restore revokes copied grants.
@@ -1128,3 +1135,27 @@ versions passed, with separate-principal isolation and exact original preview.
 Formal history and all 18 company source roots remained unchanged. Changed/redacted
 comparisons are covered by separate tests; no formal changes were fabricated for
 this unchanged-data walkthrough. Neither automated journey supplies owner acceptance.
+
+### Attributed original inspection and exact task reconciliation
+
+[Explicit inspection records](RECORDED_INSPECTIONS.md) now retain an author's exact
+original/version/hash, passage, observation and optional active procedure through
+the ordinary command API. Current original bytes are checked twice; hidden,
+quarantined, future, changed and invalidly linked originals are rejected. Recording
+an inspection leaves task results and grades unchanged. Historical comparison
+matches the exact recorded command payload and actor, separates other actors, and
+preserves missing records as unknown rather than uninspected.
+
+The scoped integration run passed 77 tests, followed by 26 final focused command
+tests; 251 frontend tests passed. The compiled-App journey verified explicit
+submission, frozen pins, retained text after rejection, attributed display, reload,
+reviewer/legacy-capability gating and narrow layout. Formal audit/paired integration
+is part of the consolidated closeout journey, not inferred from these fixtures.
+
+A finite review of all 29 audit/company/Key/UX/context jobs identified remaining
+substantive procedure reconciliation and combined acceptance work. Three prematurely
+READY jobs now show IN_PROGRESS while their dependencies and actual review remain
+unfinished. Existing workflow software and receipts are reused. Partial technical
+observations are being reconciled to exact authored procedures for explicit,
+evidence-supported task updates; the earlier helper-level task freeze is not a
+permanent prohibition on supported simulated conclusions.
