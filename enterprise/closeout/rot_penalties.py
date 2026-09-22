@@ -96,3 +96,64 @@ class RotPenalties:
                 ],
                 f"CO-ROT-PENALTY-{year}{month:02d}",
             )
+
+    def verify(self, journal_rows):
+        from collections import Counter
+
+        fields = ("scenario", "entity", "year", "month", "source_id", "account", "signed_usd")
+        expected = []
+        opening_penalty, opening_interest = self.amounts(self.opening)
+        for scenario in ("base", "downside", "expansion"):
+            entries = [
+                (
+                    2026,
+                    0,
+                    "CO-ROT-PENALTY-OPEN",
+                    [
+                        ("3100", opening_penalty + opening_interest),
+                        ("CO_ROT_PENALTY_PAY", -opening_penalty),
+                        ("CO_ROT_INTEREST_PAY", -opening_interest),
+                    ],
+                )
+            ]
+            for row in self.rows:
+                p, i = D(row["penalty_activity_usd"]), D(row["interest_activity_usd"])
+                entries.append(
+                    (
+                        row["year"],
+                        row["month"],
+                        f"CO-ROT-PENALTY-{row['year']}{row['month']:02d}",
+                        [
+                            ("CO_ROT_PENALTY_EXP", p),
+                            ("CO_ROT_INTEREST_EXP", i),
+                            ("CO_ROT_PENALTY_PAY", -p),
+                            ("CO_ROT_INTEREST_PAY", -i),
+                        ],
+                    )
+                )
+            for year, month, source_id, legs in entries:
+                for account, amount in legs:
+                    if amount:
+                        expected.append(
+                            (
+                                scenario,
+                                "RWH",
+                                str(year),
+                                str(month),
+                                source_id,
+                                account,
+                                str(amount.quantize(D(".0001"))),
+                            )
+                        )
+        actual = [
+            tuple(str(r[k]) for k in fields)
+            for r in journal_rows
+            if r["source_id"].startswith("CO-ROT-PENALTY-")
+        ]
+        if Counter(expected) != Counter(actual):
+            raise ValueError("ROT penalty source-to-journal population differs")
+        return {
+            "source_legs_verified": len(expected),
+            "cash_posted_usd": "0",
+            "principal_reposted_usd": "0",
+        }

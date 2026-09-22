@@ -110,8 +110,16 @@ def build(output, fin, op, legacy, operating, policy, adjustment):
             from .statutory_replay import verify as verify_statutory
 
             replay = verify_statutory(posting, successor["journal_rows"])
+            from .statutory_reconciliation import verify as reconcile_statutory
+
+            reconciliation = reconcile_statutory(
+                successor["journal_rows"], parent.rows, current, deferred, opening, settlement
+            )
+            penalty_check = adjustment.rot_penalties.verify(successor["journal_rows"])
             workpapers = dict(
                 implementation_replay=replay,
+                independent_reconciliation=reconciliation,
+                rot_penalty_reconciliation=penalty_check,
                 rot_penalty_monthly=adjustment.rot_penalties.rows,
                 rot_penalty_opening=adjustment.rot_penalties.opening,
                 rot_penalty_cutoff=adjustment.rot_penalties.cutoff,
