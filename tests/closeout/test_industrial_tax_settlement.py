@@ -98,7 +98,7 @@ def test_complete_payment_population_preserves_payer_and_no_new_cash(monkeypatch
         for r in result["payments"]
         if r["source_group"] == "ARU_GROUP"
     )
-    assert all(r["available_at"] >= "2026-09-21T00:00:00Z" for r in result["rows"])
+    assert all(r["available_at"] >= "2026-09-22T00:00:00Z" for r in result["rows"])
     january = next(
         r for r in result["rows"] if r["source_group"] == "ARU_GROUP" and r["month"] == 1
     )

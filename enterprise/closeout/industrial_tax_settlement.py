@@ -177,8 +177,8 @@ def build(journal_rows, forecast):
     from enterprise.operations.availability import apply
 
     for row in output + payments:
-        row["available_at"] = "2026-09-21T00:00:00Z"
-        row["authored_day"] = "2026-09-21"
+        row["available_at"] = "2026-09-22T00:00:00Z"
+        row["authored_day"] = "2026-09-22"
         row["record_origin"] = "SOURCE_REPERFORMANCE_NEWLY_AUTHORED_ADAPTER"
     result = dict(
         rows=output,

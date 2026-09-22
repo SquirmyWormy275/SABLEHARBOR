@@ -4,6 +4,7 @@ import calendar
 import csv
 import hashlib
 import json
+import tempfile
 from collections import defaultdict
 from decimal import ROUND_HALF_UP
 from decimal import Decimal as D
@@ -19,13 +20,22 @@ def money(value):
     return str(D(value).quantize(Q))
 
 
+def current_debt_schedule():
+    """Rebuild the locked native schedule without relying on a generated cache."""
+    from industrial.tools.build_financials import build as build_native
+
+    with tempfile.TemporaryDirectory(prefix="sh-tax-debt-source-") as directory:
+        output = Path(directory)
+        build_native(output=output)
+        with (output / "aru_2026_debt_leases.csv").open(newline="") as stream:
+            return list(csv.DictReader(stream))
+
+
 def financing_components(forecast):
     source = json.loads((ROOT / "industrial/source/finance.json").read_text())
     policy = json.loads((ROOT / "industrial/planning/source/forecast.json").read_text())["debt"]
     t = source["transaction"]
-    current = list(
-        csv.DictReader((ROOT / "industrial/generated/finance/aru_2026_debt_leases.csv").open())
-    )
+    current = current_debt_schedule()
     if len(current) != 12 or {int(r["month"]) for r in current} != set(range(1, 13)):
         raise ValueError("Current debt component population incomplete")
     rows = {}
@@ -296,7 +306,9 @@ def build(journal_rows, forecast, *, expected_groups=None):
         ROOT / "enterprise/closeout/source/industrial_tax_cohorts.json",
         ROOT / "industrial/source/finance.json",
         ROOT / "industrial/planning/source/forecast.json",
-        ROOT / "industrial/generated/finance/aru_2026_debt_leases.csv",
+        ROOT / "industrial/tools/build_financials.py",
+        ROOT / "industrial/source/operations.json",
+        ROOT / "red_wash/source/core_operating_data.json",
     ]
     return dict(
         accounting_basis="Accrual synthetic management books; "

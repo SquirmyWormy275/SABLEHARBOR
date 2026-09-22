@@ -54,3 +54,10 @@ Omitting an entire group fails before tax calculations. Explicit smaller review
 scopes require the `expected_groups` keyword and are labeled partial; they cannot
 silently become full-release evidence. Both CO_TAX and CO_SUB_TAX income-tax
 expense namespaces are rejected as recursive provider inputs.
+
+
+September 22 UTC reproducibility correction: the current debt schedule is rebuilt
+from the native source generator in an isolated temporary directory. A previously
+cached `industrial/generated/finance` CSV is neither an input nor a prerequisite.
+The source generator and finance/operations inputs are pinned; the independent
+monthly reconciliation to legal account 5400 remains required.

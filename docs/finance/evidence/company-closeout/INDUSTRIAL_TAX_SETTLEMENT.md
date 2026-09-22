@@ -1,8 +1,8 @@
 # Industrial native income-tax settlement adapter
 
-Implemented/reviewed September 21, 2026 UTC. Historical source accounting periods
+Implemented/reviewed September 22, 2026 UTC (September 21 America/Los_Angeles). Historical source accounting periods
 and the declared company cutoff are unchanged. New adapter output is available no
-earlier than September 21 and the clean source commit timestamp, with dirty previews
+earlier than September 22 UTC and the clean source commit timestamp, with dirty previews
 labeled nonpublishable by the existing availability contract.
 
 `enterprise.closeout.industrial_tax_settlement.build(journal_rows, forecast)` consumes

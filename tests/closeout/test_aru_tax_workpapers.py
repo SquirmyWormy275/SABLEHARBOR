@@ -151,3 +151,17 @@ def test_final_subsidiary_income_tax_accounts_rejected(account):
     rows[1]["account"] = account
     with pytest.raises(ValueError, match="before income-tax"):
         build(rows, forecast)
+
+
+def test_current_debt_schedule_has_no_generated_tree_dependency(tmp_path, monkeypatch):
+    from enterprise.closeout import aru_tax_workpapers as workpapers
+
+    # ROOT points at an empty tree: the helper must invoke the source-owned
+    # native builder into its own temporary output, never read ROOT/generated.
+    monkeypatch.setattr(workpapers, "ROOT", tmp_path)
+    rows = workpapers.current_debt_schedule()
+    assert len(rows) == 12
+    assert {int(r["month"]) for r in rows} == set(range(1, 13))
+    january = next(r for r in rows if int(r["month"]) == 1)
+    assert D(january["term_interest_usd"]) == 104024
+    assert not (tmp_path / "industrial/generated").exists()
