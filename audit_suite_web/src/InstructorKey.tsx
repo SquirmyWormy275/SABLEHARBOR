@@ -1,5 +1,6 @@
 import { InstructorKeyViews } from "./InstructorKeyViews";
 import { InstructorRelationshipExplorer } from "./InstructorRelationshipExplorer";
+import { InstructorOriginalInspection } from "./InstructorOriginals";
 import {
   validateArchiveFilters,
   type ArchiveKeyFilters,
@@ -375,6 +376,13 @@ function ArchiveExplorer({
             <summary>Missing information and review limits</summary>
             <Value value={detail.key.review.gaps} />
           </details>
+          {index && (
+            <InstructorOriginalInspection
+              key={detail.key.id + ":originals"}
+              index={index}
+              initialId={detail.key.id}
+            />
+          )}
           <InstructorRelationshipExplorer
             key={detail.key.id + ":" + detail.key.source.raw_sha256}
             graph={detail.key.graph}

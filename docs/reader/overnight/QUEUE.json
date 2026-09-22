@@ -591,6 +591,12 @@
           "scope": "Supplemental retained-original technical procedures",
           "validation": "Actual A/B38/47commands,9/10controlgroups,37/39item observations; independent intent/history verification passed.",
           "acceptance": "Provisional populations and2/7OPEN technicalfindings; tasks/originals/reviews unchanged; no full-control or professional credit."
+        },
+        {
+          "date": "2026-09-22",
+          "scope": "Policy and persistent service-identity retained-original procedures",
+          "status": "A8/B10 ordinary commands; two groups and seven item observations each",
+          "acceptance": "Provisional local populations; two OPEN technical gaps in incomplete branch; originals, tasks, controls and reviews unchanged. Professional acceptance remains separate."
         }
       ]
     },
@@ -708,6 +714,12 @@
           "scope": "Versioned exact authored inspection-target relationships",
           "validation": "New private1110-source archive adds4714typedlinks; all prior source bytes/links preserved; actualbrowser traversal/access isolation passed.",
           "acceptance": "Authored references only, no proof of inspection/availability/corroboration; old archive and boundkeys unchanged."
+        },
+        {
+          "date": "2026-09-22",
+          "scope": "Protected side-by-side exact original inspection",
+          "validation": "38 backend integration/243 frontend tests; compiled1110-entry browser including stale/close/role/narrow cases; actual1110-source archive HTTP and two exact byte reads with learner403 passed.",
+          "acceptance": "Explicit source choices, no inferred revision lineage or scenario activation; qualified calibration and user acceptance remain separate."
         }
       ]
     },
@@ -894,7 +906,15 @@
       "gate": "existing_authority",
       "execution_policy": "Locked design direction; queued, not started. Complete dependencies before execution. Preserve private data and prior scope boundaries. Owner usability and exact visual acceptance cannot be inferred from scripted checks.",
       "execution_authorized": true,
-      "evidence": "Durable background owner questions retain exact original source pins through ambiguous submission retries and queued-input inspection. Matching-only composer clearing preserves newer text/selections; explicit restore refuses to overwrite a newer composition. Older walkthrough capabilities now use clearly labeled volatile drafts and omit unsupported payload fields. Companion recovery retains inert job history; full-stage acceptance remains incomplete. Streamed instructor history preserves exact 815-event hashes at about 111 MiB peak RSS; actual protected revision 814 browser comparison completed in 31.554 seconds with unchanged formal history. Read-only 146-system browser checks now verify source selection, Key search and pending comparison survive ordinary panel navigation; lazy private panels and accessible loading statuses preserve context without eager Key access."
+      "evidence": "Durable background owner questions retain exact original source pins through ambiguous submission retries and queued-input inspection. Matching-only composer clearing preserves newer text/selections; explicit restore refuses to overwrite a newer composition. Older walkthrough capabilities now use clearly labeled volatile drafts and omit unsupported payload fields. Companion recovery retains inert job history; full-stage acceptance remains incomplete. Streamed instructor history preserves exact 815-event hashes at about 111 MiB peak RSS; actual protected revision 814 browser comparison completed in 31.554 seconds with unchanged formal history. Read-only 146-system browser checks now verify source selection, Key search and pending comparison survive ordinary panel navigation; lazy private panels and accessible loading statuses preserve context without eager Key access.",
+      "technical_checkpoints": [
+        {
+          "date": "2026-09-22",
+          "scope": "History serialization reuse",
+          "validation": "Independent exact digest/prefix/state preservation, legacy JSON, complete-tail integrity and final authority/revision checks passed; one instrumented998-event run33.43s to23.19s.",
+          "acceptance": "Single measurement, not percentile/SLA. Full-state retention bounded; compact activity metadata grows with events."
+        }
+      ]
     },
     {
       "id": "UX-04",
@@ -1002,6 +1022,12 @@
           "scope": "Explicit personal visit checkpoints",
           "validation": "Six authorizedrecordtypes, privateversionhistory, exactcomparison/redaction/retry/preview and inertbackup;93backend/235frontendtests passed.",
           "acceptance": "No automatic visitcapture or read/test acknowledgment; broader continuity and human acceptance remain open."
+        },
+        {
+          "date": "2026-09-22",
+          "scope": "Populated exact-copy checkpoint walkthrough",
+          "validation": "Revision997/605original workroom copy; two explicit captures, exact replay/replacement/history,1093unchanged record comparisons and exactoriginalpreview; desktop/narrow/focus passed.",
+          "acceptance": "Original/copy formal data and18source roots unchanged; copy sessions and dedicated companions changed only; changed/redacted cases covered by separate tests."
         }
       ]
     },

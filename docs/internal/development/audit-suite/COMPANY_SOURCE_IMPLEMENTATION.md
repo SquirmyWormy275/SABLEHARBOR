@@ -1081,3 +1081,50 @@ of approximately 50–100 ms under concurrent repository tests and preservation 
 The first full-history comparison exceeded the 30-second client timeout; no successful
 comparison percentile is claimed. These measurements identify a performance limit,
 not an accepted responsiveness target or owner usability approval.
+
+### History comparison and policy/identity procedure continuation
+
+History inspection now canonicalizes each parsed state once and reuses those bytes
+for event integrity and public history hashes. It still validates the entire chain,
+including unselected later events, then rechecks current authority and revision.
+Legacy noncanonical JSON retains the same parsed-value behavior and exact digest.
+Independent review and 2,000 canonical-envelope comparisons found no digest change.
+A single instrumented run on the 998-event workroom fell from 33.43 to 23.19 seconds;
+this is not a controlled percentile or browser responsiveness guarantee. Retained
+full states are bounded; compact activity metadata still grows with event count.
+
+The policy/service-identity workrooms subsequently completed eight and ten technical
+commands: two provisional populations, two selections, two workpapers and seven
+item observations each. The incomplete branch retains two OPEN local-gap findings.
+Due-time omissions, late delivery, withdrawal and credential denials remain distinct
+observations. Neither these commands nor successful copies complete control tests,
+establish human acknowledgment, or resolve unperformed enterprise-wide procedures.
+
+The isolated repository run at `3cbe2d6d` finished with 2,027 tests passing and three
+skipped. Later intake, Key, keyboard, checkpoint and history changes have separately
+recorded focused/integration checks; that earlier full run does not cover them.
+
+### Protected original inspection and populated checkpoint verification
+
+The [instructor original inspector](INSTRUCTOR_ORIGINAL_INSPECTION.md) displays two
+explicitly selected archived definitions with exact byte verification and retained
+source pins. Bounded search covers the full archive without changing the selected
+source. Closing inspection clears both originals and aborts pending reads; changing
+scope, identity, role or revision also clears the protected workspace. No variant
+ordering is treated as a predecessor relationship or scenario activation.
+
+Thirty-eight backend integration tests and all 243 frontend tests passed. The
+compiled browser fixture exercised 1,110 synthetic entries, corrupt/delayed
+responses, close/context/role clearing, keyboard navigation and 390px layout. A
+separate local HTTP check read the actual 1,110-source private archive and verified
+two selected originals byte for byte, denied learner access, and preserved every
+archive file. Its authorization workroom was an isolated minimal fixture, not a
+full populated audit journey.
+
+The personal checkpoint feature additionally passed an actual browser/API journey
+using an isolated exact copy of the 605-original, revision-997 workroom. Two explicit
+captures, exact retry, replacement history and comparison of 1,093 unchanged record
+versions passed, with separate-principal isolation and exact original preview.
+Formal history and all 18 company source roots remained unchanged. Changed/redacted
+comparisons are covered by separate tests; no formal changes were fabricated for
+this unchanged-data walkthrough. Neither automated journey supplies owner acceptance.

@@ -115,7 +115,7 @@ class InstructorAccessLog:
                 raise ValueError("Invalid audit pin")
             if outcome != "SUCCESS" and any(pins.values()):
                 raise ValueError("Failed access cannot assert inspected source pins")
-            if operation not in {None, "INDEX", "DETAIL", "BOUND_SNAPSHOT"}:
+            if operation not in {None, "INDEX", "DETAIL", "BOUND_SNAPSHOT", "ORIGINAL"}:
                 raise ValueError("Invalid audit operation")
             self._paths()
             path, head_path = self.root / "access.jsonl", self.root / "head.json"

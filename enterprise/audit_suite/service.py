@@ -302,7 +302,11 @@ def create_app(
                 return JSONResponse({"error": "Invalid origin"}, status_code=403)
         response = await call_next(request)
         response.headers["X-Content-Type-Options"] = "nosniff"
-        response.headers["Cache-Control"] = "no-store"
+        response.headers["Cache-Control"] = (
+            "no-store, private"
+            if "/instructor-key/" in request.url.path and request.url.path.endswith("/original")
+            else "no-store"
+        )
         response.headers["Referrer-Policy"] = "no-referrer"
         response.headers["Permissions-Policy"] = "camera=(), microphone=(self)"
         response.headers["Content-Security-Policy"] = (
@@ -470,6 +474,96 @@ def create_app(
             source_sha256=source_pin,
         )
         return value
+
+    def instructor_original(principal, engagement_id, scenario_id):
+        import base64
+        import hashlib
+        import json
+        import re
+
+        from .instructor_access import InstructorAccessLog
+        from .instructor_original import read_original
+        from .store import digest
+
+        log = InstructorAccessLog(engine.store.root / "instructor-key-access")
+        try:
+            if engine.store.membership(principal["id"], engagement_id) != "instruct":
+                raise DomainError("Instructor membership required", status=403)
+            if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]{0,127}", scenario_id):
+                raise DomainError("Instructor reference not found", status=404)
+            if instructor_key_root is None:
+                raise DomainError("Instructor reference library is not configured", status=503)
+            if not any(entry["id"] == scenario_id for entry in initial_keys[1]["entries"]):
+                raise DomainError("Instructor reference not found", status=404)
+            # Bound the selected source before the archive verification reads it.
+            root = Path(instructor_key_root).absolute()
+            original = read_original(root, scenario_id)
+            root, index, receipt, archive_pin, _ = verified_keys()
+            entries = [entry for entry in index["entries"] if entry["id"] == scenario_id]
+            if len(entries) != 1:
+                raise DomainError("Instructor reference not found", status=404)
+            entry = entries[0]
+            try:
+                if entry["source"] != f"sources/{scenario_id}.json":
+                    raise ValueError
+                if hashlib.sha256(original).hexdigest() != entry["raw_sha256"]:
+                    raise ValueError
+                if digest(json.loads(original)) != entry["canonical_sha256"]:
+                    raise ValueError
+                if read_original(root, scenario_id) != original:
+                    raise ValueError
+            except Exception as error:
+                raise DomainError(
+                    "Instructor original integrity check failed", status=503
+                ) from error
+            if verified_keys()[3] != archive_pin:
+                raise DomainError("Instructor original integrity check failed", status=503)
+            if engine.store.membership(principal["id"], engagement_id) != "instruct":
+                raise DomainError("Instructor membership required", status=403)
+            value = {
+                "status": "UNBOUND_REFERENCE_LIBRARY",
+                "binding": {"status": "NOT_BOUND", "engagement_id": engagement_id},
+                "archive": {"sha256": receipt["archive_sha256"]},
+                "scenario_id": scenario_id,
+                "key_sha256": entry["key_sha256"],
+                "raw_sha256": entry["raw_sha256"],
+                "canonical_sha256": entry["canonical_sha256"],
+                "encoding": "base64",
+                "media_type": "application/json",
+                "byte_count": len(original),
+                "content_base64": base64.b64encode(original).decode("ascii"),
+            }
+        except Exception as error:
+            status = error.status if isinstance(error, DomainError) else 500
+            log.append(
+                actor=principal["id"],
+                engagement=engagement_id,
+                target=scenario_id,
+                operation="ORIGINAL",
+                outcome={401: "DENIED", 403: "DENIED", 404: "NOT_FOUND", 503: "UNAVAILABLE"}.get(
+                    status, "ERROR"
+                ),
+                http_status=status,
+            )
+            raise
+        log.append(
+            actor=principal["id"],
+            engagement=engagement_id,
+            target=scenario_id,
+            operation="ORIGINAL",
+            outcome="SUCCESS",
+            http_status=200,
+            archive_sha256=value["archive"]["sha256"],
+            key_sha256=entry["key_sha256"],
+            source_sha256=entry["raw_sha256"],
+        )
+        return value
+
+    @app.get("/api/engagements/{engagement_id}/instructor-key/{scenario_id}/original")
+    async def instructor_key_original(engagement_id: str, scenario_id: str, request: Request):
+        return await asyncio.to_thread(
+            instructor_original, actor(request), engagement_id, scenario_id
+        )
 
     @app.get("/api/engagements/{engagement_id}/drafts/{action}/{object_id}")
     async def get_personal_draft(engagement_id: str, action: str, object_id: str, request: Request):

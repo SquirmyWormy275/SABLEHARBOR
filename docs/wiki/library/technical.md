@@ -128,6 +128,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Streamed instructor history inspection](../../internal/development/audit-suite/IK_STREAMED_HISTORY_INSPECTION_2026-09-14.md) — MD
 - [Audit training suite implementation direction](../../internal/development/audit-suite/IMPLEMENTATION_DIRECTION_2026-09-13.md) — MD
 - [Instructor investigation and debrief workflow](../../internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md) — MD
+- [Protected instructor original inspection](../../internal/development/audit-suite/INSTRUCTOR_ORIGINAL_INSPECTION.md) — MD
 - [Local audit-training delivery](../../internal/development/audit-suite/LOCAL_DELIVERY.md) — MD
 - [Navigation continuity foundation](../../internal/development/audit-suite/NAVIGATION_FOUNDATION_IMPLEMENTATION.md) — MD
 - [Audit-suite organization bridge and reconciliation proposal](../../internal/development/audit-suite/ORGANIZATION_RECONCILIATION_2026-09-13.md) — MD
