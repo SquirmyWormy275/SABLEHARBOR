@@ -76,6 +76,10 @@ def validate_contract(contract: dict) -> None:
                 raise EditionError("Exact source pin required")
     if seen != set(contract["required_components"]):
         raise EditionError("Omitted or additional declared component population")
+    members = {m["path"]: m["sha256"] for c in contract["components"] for m in c["members"]}
+    for dependency in contract.get("dependency_provenance", {}).get("source_files", []):
+        if members.get(dependency["path"]) != dependency["sha256"]:
+            raise EditionError("Dependency provenance differs from packaged source")
     from .acceptance import validate
 
     validate(contract)

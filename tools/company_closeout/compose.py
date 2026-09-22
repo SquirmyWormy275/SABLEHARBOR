@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import json
 import subprocess
+import sys
 from pathlib import Path
 
 from .edition import EditionError, encoded, sha, timestamp, validate_contract
@@ -191,6 +192,23 @@ def generate(
             "no latest-version fallback into an earlier known-on view.",
         ],
         "historical_zip_exclusions": excluded,
+        "dependency_provenance": {
+            "python_version": sys.version,
+            "source_files": pin(
+                root,
+                [
+                    p
+                    for p in sources
+                    if Path(p).name
+                    in {"uv.lock", "pyproject.toml", "package-lock.json", "package.json"}
+                    or (Path(p).name.startswith("requirements") and p.endswith(".txt"))
+                    or (p.startswith(".github/workflows/") and p.endswith((".yml", ".yaml")))
+                ],
+            ),
+            "scope": "Exact dependency, lock and workflow source bytes included in the public "
+            "archive; actual generator Python recorded. This is build provenance, not a claim "
+            "that every dependency is vulnerability-free or every workflow was executed.",
+        },
         "required_components": [c["id"] for c in components],
         "components": components,
     }

@@ -75,6 +75,16 @@ def test_wrong_source_revision_rejected(source, tmp_path):
         build(root, path, tmp_path / "edition")
 
 
+def test_dependency_provenance_cannot_disagree_with_packaged_bytes(source, tmp_path):
+    root, path, contract = source
+    contract["dependency_provenance"] = {
+        "source_files": [{"path": "rows.csv", "sha256": "0" * 64}]
+    }
+    path.write_bytes(encoded(contract))
+    with pytest.raises(EditionError, match="Dependency provenance"):
+        build(root, path, tmp_path / "edition")
+
+
 def test_manifest_revision_cannot_override_pinned_source(source, tmp_path):
     root, path, contract = source
     contract["source_commit_required"] = subprocess.check_output(
