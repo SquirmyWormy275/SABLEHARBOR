@@ -80,12 +80,14 @@ def test_unpaid_tax_cannot_improve_cash_available_or_net_across_entities():
             balance("ARU", "CO_SUB_TAX_PAY_CA", -1000),
             balance("ARU", "CO_SUB_TAX_PAY_IL", 500),
             balance("ARU", "CO_SUB_TAX_PAY_WV", -250),
+            balance("RWH", "CO_ROT_PENALTY_PAY", -1250),
+            balance("RWH", "CO_ROT_INTEREST_PAY", -100),
             balance("ARU", "CO_PAYROLL_EMP_TAX_PAY", -16065),
             balance("BST", "CO_PAYROLL_EMP_TAX_PAY", -8201.75),
         ]
     )
-    assert totals["base", 2027] == D("177766.75")
-    assert len(detail) == 8
-    assert cash(200000, 0, 0, totals["base", 2027], 100000, 0, 0)[0] == D("22233.25")
+    assert totals["base", 2027] == D("179116.75")
+    assert len(detail) == 10
+    assert cash(200000, 0, 0, totals["base", 2027], 100000, 0, 0)[0] == D("20883.25")
     with pytest.raises(ValueError, match="Duplicate"):
         tax_requirements([balance("SHI", "CO_FF_TAX_PAY", -152250)] * 2)
