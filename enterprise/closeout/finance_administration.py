@@ -98,9 +98,13 @@ def build(finance=None, operations=None, forecast=None):
             {
                 "path": path,
                 "sha256": hashlib.sha256((ROOT / path).read_bytes()).hexdigest(),
-                "review_scope": "Capital/governance and financing terms in this exact source population",
+                "review_scope": (
+                    "Capital/governance and financing terms in this exact source population"
+                ),
                 "side_letter_document_identified": False,
-                "conclusion": "NO_SIDE_LETTER_DOCUMENT_LOCATED_IN_SELECTED_POPULATION_NOT_HISTORICAL_ABSENCE",
+                "conclusion": (
+                    "NO_SIDE_LETTER_DOCUMENT_LOCATED_IN_SELECTED_POPULATION_NOT_HISTORICAL_ABSENCE"
+                ),
             }
         )
     return {
@@ -135,7 +139,10 @@ def build(finance=None, operations=None, forecast=None):
         "asset_screen": rows,
         "additional_journal_count": 0,
         "additional_cash_usd": 0,
-        "limits": "No new instrument, grant, guarantee, lender receipt, release, title confirmation, asset activation or value assertion. No decision-dependent term adopted.",
+        "limits": (
+            "No new instrument, grant, guarantee, lender receipt, release, title confirmation, "
+            "asset activation or value assertion. No decision-dependent term adopted."
+        ),
     }
 
 
