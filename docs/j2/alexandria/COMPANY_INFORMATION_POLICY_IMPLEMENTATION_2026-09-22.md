@@ -1,6 +1,10 @@
 # Company information policy implementation
 
-**ID:** SH-INFORMATION-POLICY-20260922. **Prepared:** September 22, 2026. **Authority:** owner instruction to finish the company closeout, implementing accepted Alexandria/Daedalus doctrine. **Status:** implementation pending repository acceptance. No real deployment or general professional compliance opinion is asserted.
+**Document ID:** SH-INFORMATION-POLICY-20260922
+
+**Version:** 1.0.0
+
+**Prepared:** September 22, 2026. **Authority:** owner instruction to finish the company closeout, implementing accepted Alexandria/Daedalus doctrine. **Status:** implementation pending repository acceptance. No real deployment or general professional compliance opinion is asserted.
 
 ## Scope and policy
 

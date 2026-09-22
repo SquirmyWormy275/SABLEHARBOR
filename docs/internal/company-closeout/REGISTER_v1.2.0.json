@@ -848,6 +848,11 @@
       "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
     },
     {
+      "path": "docs/governance/publication_manifest.json",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "5a2debe9139fcf4008f32abc30cf4277f799f68983590cc08b126aa05f7907fe"
+    },
+    {
       "path": "docs/internal/company-closeout/CAPITAL_HISTORY_PROPOSAL.md",
       "sha256": "022fd9931a515c4e65eb799cea2f0c6640759c273d2fbade5625e62f4c182666",
       "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
@@ -963,9 +968,24 @@
       "sha256": "33c503d11e1242f5a41e2bae202025b5f9f6eca5d185affb08d6933418babf78"
     },
     {
+      "path": "docs/internal/company-closeout/workspace-artifact-2026-09-22/EXAMPLE.json",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "81a6781651989b7e0f4599f4578565d1e9d308de81051f5af592bf25a32a5089"
+    },
+    {
+      "path": "docs/internal/company-closeout/workspace-artifact-2026-09-22/README.md",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "9332e4737302f08b364898b882df8d76a6c97bc50ea21b9524f5ca07b30a7716"
+    },
+    {
+      "path": "docs/internal/company-closeout/workspace-artifact-2026-09-22/RECEIPT.json",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "004955f8d9bb180333d626028b2de405fd9767482163b73cda1c381418847b12"
+    },
+    {
       "path": "docs/j2/alexandria/COMPANY_INFORMATION_POLICY_IMPLEMENTATION_2026-09-22.md",
       "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
-      "sha256": "add56213a243e41b5aeb399c07609a91b17f3deb7c88ffc344476e65adb6051a"
+      "sha256": "19874379ae0fb8a79775d4d5f02b64421c27872206e25de98735d57bba29ead3"
     },
     {
       "path": "docs/legal/host-successor/DEMOTTE_B_2026-09-22.md",
@@ -1101,6 +1121,11 @@
       "path": "enterprise/ccf/company_closeout/workplace_examinations.json",
       "sha256": "d9fb3896294d6aa769211ada3d5d3299b44ef56622e38f55271b60a9bd04581a",
       "scope": "Expressly authored company successor facts, source populations and implementation assumptions only, with their stated effective/availability/scenario periods. Preserve failed, missing, future, conditional and material-rights states. Later statutory_policy.json controls its explicit parent-tax supersession. No adoption of unselected tax alternatives, unexecuted rights, native framework pending reviews or real external action."
+    },
+    {
+      "path": "enterprise/ccf/company_closeout/workspace_artifact.py",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "a9bb93c110970aa1ac8912814cf11d91280a98cc3120ef638d345bf0ccc27b3e"
     },
     {
       "path": "enterprise/closeout/advisory_legal.py",
@@ -1400,9 +1425,19 @@
       "scope": "Identified company successor implementation and expressly authored synthetic facts within this source; original effective/availability/scenario roles and the register preserved_states govern. No adoption of unrelated draft rights, pending framework reviews or real external execution."
     },
     {
+      "path": "scripts/check_public_safety.py",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "5842d442306194d81e03b6a8641643990b419b4fa517232c108d860f335efd6f"
+    },
+    {
       "path": "tests/ccf/test_information_policy.py",
       "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
       "sha256": "9f6fedc37d8328481792a19627e1563245ccdcd57ae6fb5f50ed5b82f69ca00d"
+    },
+    {
+      "path": "tests/ccf/test_workspace_artifact.py",
+      "scope": "Final1.2explicitcompany completion scope; precise effective/availability/synthetic/runtime bounds remain in this source. No unrelated draft right, private payload or actual external act adopted.",
+      "sha256": "81c4b7148e4a0c4d6829e399e7685ca6cfd555db43ef3f00ff4f48e536b52992"
     },
     {
       "path": "tests/closeout/test_advisory_legal.py",

@@ -95,8 +95,10 @@ Generated file inventory. Includes current and historical records; open the sour
 - [SABLE HARBOR — ASSUMPTION OF RISK RECORD — SH-GOV-RISK-001_v1.0.0](../../governance/publications/SH-GOV-RISK-001_v1.0.0.pdf) — PDF
 - [ASSUMPTION OF RISK DOCTRINE — SH-GOV-RISK-DOCTRINE-001_v1.0.0](../../governance/publications/SH-GOV-RISK-DOCTRINE-001_v1.0.0.pdf) — PDF
 - [SABLE HARBOR MANAGEMENT SYSTEM (SHMS) — SH-GOV-SHMS-001_v1.0.0](../../governance/publications/SH-GOV-SHMS-001_v1.0.0.pdf) — PDF
+- [Company information policy implementation — SH-INFORMATION-POLICY-20260922_v1.0.0](../../governance/publications/SH-INFORMATION-POLICY-20260922_v1.0.0.pdf) — PDF
 - [SABLE HARBOR — ENTERPRISE TECHNOLOGY SERVICES DOCTRINE — SH-ITS-001_v1.0.0](../../governance/publications/SH-ITS-001_v1.0.0.pdf) — PDF
 - [J2 ESTABLISHMENT — SH-J2-EST-001_v1.0.0](../../governance/publications/SH-J2-EST-001_v1.0.0.pdf) — PDF
+- [J2 personnel completion — September 22, 2026 — SH-J2-PERSONNEL-20260922_v1.0.0](../../governance/publications/SH-J2-PERSONNEL-20260922_v1.0.0.pdf) — PDF
 - [SABLE HARBOR — PEOPLE & CULTURE DOCTRINE — SH-PNC-001_v1.0.0](../../governance/publications/SH-PNC-001_v1.0.0.pdf) — PDF
 - [SH-PS-RW-LOG-001 v1.0.0](../../governance/publications/SH-PS-RW-LOG-001_v1.0.0.pdf) — PDF
 - [ARU/BS&T interface and dependency record — SH-PS-RW-LOG-001_v1.1.0](../../governance/publications/SH-PS-RW-LOG-001_v1.1.0.pdf) — PDF
@@ -126,6 +128,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [AI AUTHORITY AND HUMAN AUTHORSHIP](../../j2/alexandria/AI_AUTHORITY_AND_HUMAN_AUTHORSHIP.md) — MD · [formatted PDF](../../j2/publications/SH-J2-ALX-AI-001_v1.0.0.pdf)
 - [ALEXANDRIA CHARTER: TEMPORAL INTEGRITY, PROVENANCE, AND LINEAGE](../../j2/alexandria/ALEXANDRIA_CHARTER.md) — MD · [formatted PDF](../../j2/publications/SH-J2-ALX-001_v1.0.1.pdf)
 - [CANON — INSTITUTIONAL KNOWLEDGE CORPUS](../../j2/alexandria/CANON_INSTITUTIONAL_KNOWLEDGE.md) — MD · [formatted PDF](../../j2/publications/SH-J2-CANON-001_v1.0.0.pdf)
+- [Company information policy implementation](../../j2/alexandria/COMPANY_INFORMATION_POLICY_IMPLEMENTATION_2026-09-22.md) — MD · [formatted PDF](../../governance/publications/SH-INFORMATION-POLICY-20260922_v1.0.0.pdf)
 - [DAEDALUS OPERATING DOCTRINE AND AI AUTHORITY BOUNDARIES](../../j2/alexandria/DAEDALUS_OPERATING_DOCTRINE.md) — MD · [formatted PDF](../../j2/publications/SH-J2-DAEDALUS-001_v1.0.0.pdf)
 - [DAEDALUS PERSONAL INSTANCE AND INVESTIGATIVE WORKSPACE](../../j2/alexandria/DAEDALUS_PERSONAL_INSTANCE_AND_WORKSPACE.md) — MD · [formatted PDF](../../j2/publications/SH-J2-DAEDALUS-PERSONAL-001_v1.0.1.pdf)
 - [ALEXANDRIA INFORMATION ACCESS AND DISCLOSURE](../../j2/alexandria/INFORMATION_ACCESS_AND_DISCLOSURE.md) — MD · [formatted PDF](../../j2/publications/SH-J2-ALX-DISCLOSE-001_v1.0.0.pdf)
