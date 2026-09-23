@@ -13,16 +13,20 @@ not an accepted full-scope audit. A later, separately verified batch of 24
 additional-duty task instances advanced the actual workrooms to A revision 1834
 and B revision 1960. A subsequent, separately verified batch of 34
 additional-duty task instances advanced them to A revision 1868 and B revision
-1994. The two batches used reviewed source plans, exact pre-change captures,
-disposable rehearsals, 116 ordinary command transitions in total, and
-independent raw-event and preservation checks over the unchanged 60 company
-source roots. The newer work has not yet been incorporated into a successor
-indexed packet.
+1994. A third, separately verified documentary-source batch advanced them to
+A revision 1876 and B revision 2002. These three batches used reviewed source
+plans, exact pre-change captures, disposable rehearsals, 132 ordinary command
+transitions in total, and independent raw-event and preservation checks over
+the unchanged 60 company source roots. The newer work has not yet been
+incorporated into a successor indexed packet.
 
 In the indexed packet, per workroom, 79 tasks are `COMPLETE`, 132 are
 `IN_PROGRESS`, and 198 remain `NOT_STARTED`. The two verified later batches
-change those actual-workroom counts to 85 `COMPLETE`, 155 `IN_PROGRESS`, and
-169 `NOT_STARTED` per profile, without broader task credit. Of the indexed 198,
+change those actual-workroom counts to 89 `COMPLETE`, 155 `IN_PROGRESS`, and
+165 `NOT_STARTED` per profile, without broader task credit. The documentary
+batch completes examination of eight exact legal-source task instances across
+the two profiles with `LIMITATION`; it does not establish a live HIPAA
+obligation, processing of PHI, or effective operation. Of the indexed 198,
 196 are additional SOC 2/HIPAA duties and two are
 scope or qualified-review dependencies. The unstarted duties have no linked
 workpaper or sample trace in this snapshot. They require clause-level
