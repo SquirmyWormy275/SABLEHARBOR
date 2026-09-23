@@ -145,7 +145,10 @@ class Exporter:
     def contents(text: str) -> str:
         counts = {}
         rows = []
-        tokens = MARKDOWN.parse(text)
+        # Keep the article contents short; source sections remain addressable
+        # inside the optional appendix and on their full reading pages.
+        primary = text.split("<!-- supporting-records:start -->", 1)[0]
+        tokens = MARKDOWN.parse(primary)
         for i, token in enumerate(tokens):
             if token.type != "heading_open":
                 continue
@@ -208,21 +211,25 @@ class Exporter:
             f"### Source: {label}\n\n"
             f"[Full reading edition](https://github.com/{REPOSITORY}/wiki/{quote(self.names[source])}) · "
             f"[Repository source]({self.source_link(source)})\n\n"
-            "Source wording follows. Its dates, qualifications and supersession scope apply; "
-            "this reading edition does not resolve open decisions.\n\n" + body + "\n"
+            + body + "\n"
         )
 
     def article(self, page: Path) -> str:
         result = self.rewrite(page)
         entries = self.reading["articles"].get(page.relative_to(self.wiki).as_posix(), [])
         if entries:
-            chapter = "\n## In-depth reading\n\n" + "\n".join(self.excerpt(e) for e in entries) + "\n"
-            # Keep the identity and overview first, followed by substantive source text.
-            match = re.search(r"^## (?:Read and use the records|Organization and people|Organization and identity|Operating, legal and control records)", result, re.M)
-            if match:
-                result = result[:match.start()] + chapter + result[match.start():]
-            else:
-                result += chapter
+            # Preserve the old section address and every excerpt. Reading the
+            # business must not require reading its entire approval history.
+            result += (
+                "\n## In-depth reading\n\n"
+                "<!-- supporting-records:start -->\n"
+                "<details>\n<summary>Supporting records and decision history</summary>\n\n"
+                f"[Records and decisions](https://github.com/{REPOSITORY}/wiki/Records-and-Decisions)\n\n"
+                "Original source text follows. Read each record's date and any later "
+                "replacement alongside it.\n\n"
+                + "\n".join(self.excerpt(entry) for entry in entries)
+                + "\n</details>\n<!-- supporting-records:end -->\n"
+            )
         return result
 
     def reading_pages(self) -> dict[str, str]:
@@ -358,7 +365,9 @@ class Exporter:
             "- [Business directory](businesses--README)",
             "- [Department directory](departments--README)",
             "- [History and subjects](subjects--README)",
+            "- [Locations and facilities](Locations)",
             "- [Document library](Library)",
+            "- [Records and decisions](Records-and-Decisions)",
             *(["- [Full-text reading room](Reading)"] if self.records else []),
             "",
         ]
@@ -380,6 +389,7 @@ class Exporter:
             content["_Footer.md"] = (
                 "Sable Harbor · A fictional enterprise archive · "
                 "[Start here](Start-Here) · [Reading room](Reading) · "
+                "[Records and decisions](Records-and-Decisions) · "
                 "[Open questions](Open-Questions)\n"
             ) if (self.wiki / "Start-Here.md").exists() else "[Wiki home](Home)\n"
         content, aliases = self.polish_titles(content)

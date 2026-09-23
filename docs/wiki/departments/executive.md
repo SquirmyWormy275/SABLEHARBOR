@@ -40,5 +40,3 @@ The executive architecture does not fill unnamed offices or approve every invest
 - [Enterprise Support Services](ess.md)
 - [J2 — Judgment & Junction](j2.md)
 - [Finance](finance.md)
-
-Related reading describes useful connections, not additional reporting lines.

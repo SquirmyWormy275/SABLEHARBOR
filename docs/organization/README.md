@@ -2,6 +2,8 @@
 
 **40 chart families · 57 pages · Revision 1.1.0 · September 10, 2026**
 
+For current office and operating locations, use the [location directory](../wiki/Locations.md). The later accommodation decisions place Foundry Field across Reno and Sacramento and Atlas Meridian across Tucson and Sacramento; their unrecorded-location labels in this dated chart edition are stale. Pale Sun’s Red Wash mine is in Sweetwater County, Wyoming. The [supporting notes](../wiki/Records-and-Decisions.md#locations) distinguish that mine from a separate Pale Sun office.
+
 [![Business lines](assets/current/business-lines.png)](charts/business-lines.md)
 
 [Complete chart book](assets/current/Sable-Harbor-Organization-Charts.pdf) · [All displayed wording](DISPLAY_INVENTORY.md) · [Unresolved and excluded records](UNRESOLVED_AND_EXCLUDED.md)

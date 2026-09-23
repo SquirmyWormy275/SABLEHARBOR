@@ -40,5 +40,3 @@ The runtime estate is an accepted synthetic design. Supplier acceptance, install
 - [Alexandria institutional environment](alexandria.md)
 - [Procurement and vendor support](procurement.md)
 - [Continuity and crisis responsibilities](../subjects/Continuity.md)
-
-Related reading describes useful connections, not additional reporting lines.

@@ -6,8 +6,6 @@
 
 Sable Harbor Advisory investigates business problems, builds client intelligence capabilities and improves operations. Intelligence Advisory, Intelligence Capability and Operational Excellence draw from one common professional bench. Work is organized into client matters with defined acceptance, review and transfer obligations.
 
-**Reviewed:** September 12, 2026 · Fictional enterprise; source records control.
-
 ## Reading guide
 
 Follow a matter from acceptance through investigation, delivery and its economics. Keep the client engagement, the people doing the work and the authority to make a consequential decision distinct.
@@ -22,7 +20,7 @@ Advisory remains a business line of the existing Sable Harbor contracting entity
 
 [![Sable Harbor Advisory existing organization chart](../../../docs/organization/assets/current/advisory.png)](../../../docs/organization/charts/advisory.md)
 
-[Read the chart’s text roster, relationship key and source qualifications](../../../docs/organization/charts/advisory.md). Grouped functions are not automatically reporting lines, separate companies or additional employees.
+[Chart and text roster](../../../docs/organization/charts/advisory.md).
 
 The chart shows practice and function membership. It does not name an appointed President or create one.
 
@@ -67,5 +65,3 @@ Parent tax treatment, external legal execution of carry arrangements and commerc
 - [Office of the General Counsel](../departments/legal.md)
 - [J2 Education](../departments/education.md)
 - [Finance](../departments/finance.md)
-
-Related reading describes useful connections, not additional reporting lines.
