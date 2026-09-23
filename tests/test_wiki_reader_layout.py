@@ -1,4 +1,5 @@
 """The reader can inspect every source without it interrupting the article."""
+
 from pathlib import Path
 
 import pytest

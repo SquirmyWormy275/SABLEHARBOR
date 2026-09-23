@@ -141,9 +141,7 @@ class WikiExportTests(unittest.TestCase):
         self.assertEqual(source.read_bytes(), original)
         self.assertIn("source file.md", manifest["reading_sources"])
         self.assertEqual(manifest["expanded_articles"], ["Home.md"])
-        self.assertIn(
-            "<details>\n<summary>Supporting records and decision history</summary>", home
-        )
+        self.assertIn("<details>\n<summary>Supporting records and decision history</summary>", home)
         self.assertNotIn("<details open", home)
         self.assertIn("/wiki/Records-and-Decisions", home)
         sidebar = (output / "_Sidebar.md").read_text()
