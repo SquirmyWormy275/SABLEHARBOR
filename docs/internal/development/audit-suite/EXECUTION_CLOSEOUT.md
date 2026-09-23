@@ -47,23 +47,29 @@ authorize publication, deployment, a real assurance opinion or writes to Atlas.
 
 ## Private review index
 
-The interim local package is
-`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/acceptance-working-packet-v2/`.
+The consolidated local review snapshot is
+`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-v3/`.
 Its `INDEX.md` links the task register, unchanged queue acceptance criteria and
 hashed supporting receipts. `PROCEDURES.html` provides offline search, workroom,
 status and procedure filters, pagination and exact workpaper/sample version
-references. It makes no network requests and cannot change audit records.
+references. `FINDINGS.html` links recorded findings to their retained originals.
+Both pages make no network requests and cannot change audit records.
 
-This is an explicitly versioned working snapshot, not completion of the queue.
-The 2,454 task instances include six isolated workrooms with different selected
-source portfolios; the count is not a single corporate population or 2,454
-independent controls. Prepared conditional-duty next actions remain distinct from
+This is an explicitly versioned working snapshot, not completion of the queue
+or a live view of later commands. Its 818 task instances cover two consolidated
+workrooms, with 409 procedures each; they are not 818 independent controls.
+The earlier `acceptance-working-packet-v2/` retains the separate six-workroom
+history and its 2,454 task instances. Prior audit conclusions were not imported
+into the consolidated workrooms. Prepared conditional-duty next actions remain distinct from
 performed work. Later task-only revisions may reuse a historical source inventory
 only after exact artifact metadata comparison; neither inventory revisions nor
 prior audit conclusions are rewritten.
 
-The successor index preserves the earlier package and its known mutable-context
-reference drift. Scope and source-ownership references now point to immutable
-commit snapshots. Six workroom revisions and exact artifact metadata are checked
-before each package is created. Offline browser checks do not replace review of
-the procedures or owner acceptance of the audit workspace.
+The successor index preserves earlier packages and their historical revisions.
+Scope and source-ownership references point to immutable commit snapshots. The
+two selected revisions, task/work references, findings and exact artifact metadata
+were checked against the pinned execution receipts. Desktop, narrow-layout and
+keyboard checks passed for offline browsing and four isolated learner/operator
+preview sessions; preservation checks confirmed browsing did not change original
+audits or company sources. These checks do not replace review of the procedures
+or owner acceptance of the audit workspace.

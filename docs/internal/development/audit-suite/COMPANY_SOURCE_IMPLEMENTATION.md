@@ -1318,3 +1318,25 @@ keyboard use without issuing audit commands or network requests. Later execution
 require a separately versioned snapshot. The execution checkpoint retains the
 packet, browser and independent verification receipts; populated material remains
 outside Git.
+
+The later `integrated-review-packet-v3` preserves a separately verified snapshot
+with recorded-finding navigation alongside the procedure index. Exact task,
+workpaper, sample and original references were reconciled against both workrooms.
+Four isolated learner/operator browser journeys and final preservation checks
+confirmed that review navigation left original company sources and audit records
+unchanged. Later executions remain separate from this frozen snapshot. Sample
+execution histories now lead with task titles and support title and purpose
+search while retaining exact identifiers in the expanded details; the build,
+251 frontend tests and an isolated browser check passed.
+
+Backup execution and monitoring can now consume a pinned native local data-loss
+criterion with distinct author and reviewer records. The criterion remains an
+explicitly scoped simulation rule, not an accepted enterprise BIA, RPO or RTO.
+Checks preserve the original producer time for admitted upstream data, distinguish
+an unestablished starting interval from measured checkpoint age, and retain missing
+or failed attempts when a later attempt succeeds. The implementation is committed
+locally at `53c77c4161268c81c22acf02a1339205e54b9f86`; repository validation passed
+with 2,154 Python tests and three skips. Prospective operation preparations and
+disposable rehearsals do not themselves establish company execution or repair a
+historical audit period. Their actual execution, when performed, requires separate
+native records and verification receipts in the private execution index.
