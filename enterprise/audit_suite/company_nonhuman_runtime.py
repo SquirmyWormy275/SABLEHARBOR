@@ -11,6 +11,7 @@ from . import company_nonhuman_identity_activity as seed
 from .company_backup_runtime import checked_bytes, database, exact_pin, native, private, require
 from .company_lifecycle_activity import FIELDS, LifecycleSourceRef, read_inputs
 from .company_nonhuman_identity_activity import LocalCopyIdentity, NonhumanIdentityRecipe
+from .company_nonhuman_risk_criterion import resolve as resolve_local_risk_criterion
 from .company_operating_period import QUALIFICATION as PERIOD_QUALIFICATION
 from .company_operating_period import SYSTEM as PERIOD_SYSTEM
 from .company_operating_period import _plan
@@ -37,6 +38,7 @@ MAX_NATIVE_BYTES = 32 * 1024 * 1024
 def _code():
     names = (
         "company_nonhuman_runtime.py",
+        "company_nonhuman_risk_criterion.py",
         "company_nonhuman_identity_activity.py",
         "company_backup_runtime.py",
         "company_lifecycle_activity.py",
@@ -751,6 +753,7 @@ def initialize(
     declaration_root,
     declaration_pin,
     as_of,
+    local_risk_criterion=None,
 ):
     destination = Path(destination)
     repository = Path(repository)
@@ -836,6 +839,22 @@ def initialize(
         "source_sha256": pins,
         "qualification": QUALIFICATION,
     }
+    if local_risk_criterion is not None:
+        cfg["local_risk_criterion"] = resolve_local_risk_criterion(
+            decode(encoded(local_risk_criterion)),
+            scope={k: cfg[k] for k in ["identity_id", "workload_id", "dataset_id", "target_id"]},
+            plan=plan,
+            author=owner,
+            reviewer=reviewer,
+            as_of=at,
+        )
+    if "local_risk_criterion" in cfg:
+        criterion_root = Path(cfg["local_risk_criterion"]["dependency"]["root"])
+        require(
+            not destination.is_relative_to(criterion_root)
+            and not criterion_root.is_relative_to(destination),
+            "Criterion and runtime must be separate roots",
+        )
     encoded_cfg = encoded(cfg)
     require(
         len(encoded_cfg) <= MAX_ROW_BYTES and len(raw) <= MAX_ROW_BYTES,
@@ -918,6 +937,17 @@ def _config(root, expected):
 
 
 def _source_check(cfg, at):
+    if "local_risk_criterion" in cfg:
+        retained = cfg["local_risk_criterion"]
+        current = resolve_local_risk_criterion(
+            retained["dependency"],
+            scope={k: cfg[k] for k in ["identity_id", "workload_id", "dataset_id", "target_id"]},
+            plan=cfg["plan"],
+            author=cfg["operator_id"],
+            reviewer=cfg["reviewer_id"],
+            as_of=at,
+        )
+        require(encoded(current) == encoded(retained), "Retained local risk criterion changed")
     digest, raw, dataset_id, _, imported_digest = _sources(
         Path(cfg["prior_root"]),
         _recipe(cfg["prior_recipe"]),

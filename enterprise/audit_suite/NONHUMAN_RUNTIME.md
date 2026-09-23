@@ -37,3 +37,42 @@ Initialization publishes a new private staged company store. Operation state, im
 The four registered source systems and custody owners must match the definition. Native/body metadata, command history and current-state scalars are bounded in SQL before materialization; corrupt noninteger native versions/state revisions fail before fetch. Writer bounds mirror reader limits. Limits are 128 commands, 512 KiB per native body/state/receipt, 32 MiB aggregate native content/receipts, and bounded scalar/provenance metadata. Initialization validates original selected sources under separate bounded read quotas. Reaching a command quota does not invalidate exact replay of a previously accepted command.
 
 No old sources, source authority journals or audit state are modified. No whole-year control completeness, actual vendor operation, accepted policy, human comprehension or professional assurance is inferred from these local operations.
+
+## Optional approved local risk criterion
+
+`initialize(..., local_risk_criterion={"root": absolute_private_root,
+"native": exact_native6, "metadata_sha256": digest})` optionally binds a prospective
+local rule. The digest is SHA-256 of canonical JSON of the complete native SQL row
+excluding `content`; native6 separately binds the original bytes. Omission preserves
+the existing local-only behavior and makes no approval assertion.
+Existing runtime originals remain bound to their frozen implementation hashes;
+this optional input does not migrate them to a newer implementation.
+
+The original must belong to the new declaration's company and branch, in
+`local_nonhuman_risk_decisions`, with registered custody matching the scoped operator.
+Its exact JSON schema is `format`, `status`, `scope`, `author_id`, `reviewer_id`,
+`approved_at`, `effective_from`, `effective_to_exclusive`, `storage`, `rights`,
+`rotation_rules`, `review_rules`, and `rationale`. Format is
+`LOCAL_NONHUMAN_RISK_CRITERION_V1`; status must be
+`LOCAL_SIMULATION_RULE_APPROVED`. The author and distinct reviewer must match the
+runtime's scoped operator and operating reviewer. This is an explicitly authored
+fictional local decision, not authenticated human action or enterprise acceptance.
+
+`scope` has exactly `identity_id`, `workload_id`, `dataset_id`, and `target_id` matching
+the validated original chain. Storage is `INERT_NATIVE_COPY_NO_SECRET_MATERIAL`;
+rights are the ordered READ dataset and WRITE target records (`action`, `object_id`).
+Rotation and review rule lists exactly reproduce the respective declaration slots'
+`id`, `due_at`, `window_start`, `window_end_exclusive`, and `depends_on`, in declared
+order. An empty or changed cadence is rejected. Canonical approval time must equal
+the source event; source availability must precede initialization, approval precedes
+effectiveness, and effectiveness covers the complete declared period. Rationale is
+1–2,000 characters. The source is bounded to 32 KiB content and 16 KiB metadata before
+materialization.
+
+The dependency and validated criterion are retained in the immutable runtime
+original. Initialization, inspect, execute, and exact replay recheck its bytes,
+metadata, custody, subject, rules and chronology. Final command rechecks occur
+inside the native transaction, so detected source changes roll back state, receipt
+and originals. No existing decision, source, definition or historical missed
+occurrence is rewritten. An operating `REVIEW` action itself is not approval of a
+risk standard; this optional dependency supplies the separately authored local rule.
