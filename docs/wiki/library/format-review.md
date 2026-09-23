@@ -6,15 +6,15 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 155 |
+| COUNTERPART_REVIEW_REQUIRED | 157 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 107 |
-| READER_OR_MAINTENANCE_PAGE | 187 |
-| UNRESOLVED_DOCUMENT_COUNTERPART | 222 |
+| READER_OR_MAINTENANCE_PAGE | 188 |
+| UNRESOLVED_DOCUMENT_COUNTERPART | 221 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_CHART_PUBLICATION | 40 |
-| VERIFIED_DOCUMENT_PAIR | 146 |
+| VERIFIED_DOCUMENT_PAIR | 147 |
 | VERIFIED_IDENTICAL_SOURCE_PUBLICATION | 3 |
 
 ## Records requiring counterpart reconciliation
@@ -22,6 +22,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENCE_COMPLETION.md). Other corporate records require scoped format review before any batch rendering. Existing approved visuals are retained; this queue does not authorize automatic publication.
 
 - [Contributing to Sable Harbor](../../../CONTRIBUTING.md) — Corporate document-format reconciliation
+- [SABLE HARBOR HEADQUARTERS — IMAGE SOURCE MANIFEST](../../../assets/headquarters/CANONICAL_HEADQUARTERS_IMAGE_MANIFEST.md) — Corporate document-format reconciliation
 - [SABLE HARBOR CONTROLLED DOCUMENT INDEX](../../CONTROLLED_DOCUMENT_INDEX.md) — Corporate document-format reconciliation
 - [Branch and Pull Request Register](../../audit/BRANCH_AND_PR_REGISTER.md) — SH-FIN-HUMAN-001
 - [Repository completion batch — September 13, 2026](../../audit/COMPLETION_BATCH_2026-09-13.md) — SH-FIN-HUMAN-001
@@ -145,6 +146,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Company edition releases](../../releases/COMPANY_EDITION_RELEASES.md) — Corporate document-format reconciliation
 - [Facility atlas controlled releases](../../releases/FACILITY_ATLAS_RELEASES.md) — Corporate document-format reconciliation
 - [Geographic evidence releases](../../releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) — Corporate document-format reconciliation
+- [Headquarters image releases](../../releases/HEADQUARTERS_IMAGE_RELEASES.md) — Corporate document-format reconciliation
 - [ARU acquisition cost classification](../../../enterprise/ccf/company_closeout/ARU_TRANSACTION_COST_TAX.md) — Corporate document-format reconciliation
 - [Current C05/C06 evidence and residual receipt](../../../enterprise/ccf/company_closeout/CURRENT_RESIDUALS.md) — Corporate document-format reconciliation
 - [FRA event-day authority closeout](../../../enterprise/ccf/company_closeout/FRA_EVENT_DAY_AUTHORITY.md) — Corporate document-format reconciliation
