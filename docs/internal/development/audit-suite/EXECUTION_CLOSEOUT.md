@@ -31,10 +31,12 @@ its six independently sampled raw rows passed separate spot checks. Those
 technical checks do not broaden the substantive audit conclusions.
 
 In the indexed packet, per workroom, 79 tasks are `COMPLETE`, 132 are
-`IN_PROGRESS`, and 198 remain `NOT_STARTED`. The two verified later batches
+`IN_PROGRESS`, and 198 remain `NOT_STARTED`. The first three verified later batches
 change those actual-workroom counts to 89 `COMPLETE`, 155 `IN_PROGRESS`, and
 165 `NOT_STARTED` per profile, without broader task credit. The 36-task fourth
-batch updates already partial tasks and does not change these counts. The documentary
+batch moves 18 tasks per profile from `NOT_STARTED` to `IN_PROGRESS`, making
+the latest verified counts 89 `COMPLETE`, 173 `IN_PROGRESS`, and 147
+`NOT_STARTED` per profile. The documentary
 batch completes examination of eight exact legal-source task instances across
 the two profiles with `LIMITATION`; it does not establish a live HIPAA
 obligation, processing of PHI, or effective operation. Of the indexed 198,
