@@ -4,6 +4,8 @@
 **Scope:** Current unresolved canon, deliberately deferred work, and repository/publication closeout.  
 **Status:** Tracking index only; not a decision register.
 
+**Later disposition:** The September 22 [headquarters visual withdrawal](../canon/HEADQUARTERS_VISUAL_WITHDRAWAL_2026-09-22.md) supersedes the #88 image-recovery and publication rows below. Those rows describe this index's September 9 snapshot, not a current requirement.
+
 Current authority remains in the accepted repository canon and dated addenda, the controlled document index, and applicable canonical Markdown sources. The [September 6 closeout](../canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md) resolves Daniel's full name as Daniel Mercer and adopts the Semaphore, AR/VR, and packaging decisions below. Merged PR #97 records repository integration; the linked GitHub issues record actual closure. A draft branch or chat approval alone is not closeout.
 
 The [September 9 Advisory Tier 1 addendum](../canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md), merged through PR #113, resolves the previously open Advisory operating-name/form direction, carry operating architecture, Education/J2HQ carry gates, matter-pricing policy and Atlas commercial product calibration. Older September 8 OPEN language remains historical and does not override the later addendum within its explicit supersession scope.

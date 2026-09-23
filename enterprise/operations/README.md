@@ -91,5 +91,5 @@ cash is Core requested cash before enterprise Treasury/tax, not a consolidated
 financing revision. Control exercises do not establish production effectiveness.
 
 Legal/tax elections, permanent appointments, production Alexandria/Daedalus access
-and retention, exact geography and the approved headquarters image remain separately
-gated decisions. Earlier releases remain immutable and separately interpretable.
+and retention, and exact geography remain separately gated decisions. Earlier releases
+remain immutable and separately interpretable.
