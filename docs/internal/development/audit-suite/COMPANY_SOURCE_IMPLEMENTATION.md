@@ -1291,3 +1291,30 @@ payload preservation, correction history, permission changes and narrow layouts
 passed the focused browser check; 11 focused unit tests and the TypeScript/build
 checks passed. Existing preview bundles remain preserved. These checks establish
 technical behavior, not owner usability acceptance.
+
+### Fresh examinations in the consolidated workrooms
+
+The first four examination batches now have separately verified execution in
+the consolidated workrooms: selected recovery/retention and governance design,
+report transformation, and identity operations. Together they recorded 88 ordinary
+commands and exact retries without changing company originals, earlier audit
+history or source authority journals. The resulting snapshots are revisions
+1,221 and 1,333, each with 16 task-linked workpapers and four sample traces.
+
+Across the two workrooms, 24 tasks record completed examinations and eight retain
+specific unperformed clauses; 786 remain unstarted. Completion can carry a
+limitation or an adverse result. Populations remain provisional, and technical
+verification does not supply independent professional review, management
+acceptance or a complete operating year. Missing declared occurrences and
+unresolved source criteria remain distinct from successful local operations.
+
+The private `integrated-review-packet-v2` snapshot indexes all 818 task instances
+at those exact revisions. It separates current dispositions and rationales from
+historical preparation, links exact workpaper/sample versions, and keeps detailed
+references behind keyboard-accessible disclosures. Independent verification
+reconciled the index with current records and pinned receipts; offline desktop
+and narrow-layout checks covered search, filters, pagination, empty states and
+keyboard use without issuing audit commands or network requests. Later executions
+require a separately versioned snapshot. The execution checkpoint retains the
+packet, browser and independent verification receipts; populated material remains
+outside Git.
