@@ -13,8 +13,8 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # Company closeout, reader-guide and HQ-image successor; earlier bytes remain in Git.
     # Exact bytes only: no general allowance for new databases or later drift.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        12400640,
-        "efa646e28acff7d548eaae30e004e6f7627f5e477b37b9e743de686636c698b1",
+        12398592,
+        "9b93da086efa2e4db0f3a1f838c733459d5ef6bcf0ee6ec6f68789e2ca6cdde5",
     ),
     # Reviewed September 10 successor: six approved J2 names, unchanged public scope.
     Path("docs/organization/assets/current/Sable-Harbor-Organization-Charts.pdf"): (
