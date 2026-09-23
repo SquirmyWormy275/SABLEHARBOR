@@ -6,15 +6,15 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 157 |
+| COUNTERPART_REVIEW_REQUIRED | 158 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 107 |
-| READER_OR_MAINTENANCE_PAGE | 190 |
-| UNRESOLVED_DOCUMENT_COUNTERPART | 221 |
+| READER_OR_MAINTENANCE_PAGE | 189 |
+| UNRESOLVED_DOCUMENT_COUNTERPART | 220 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_CHART_PUBLICATION | 40 |
-| VERIFIED_DOCUMENT_PAIR | 147 |
+| VERIFIED_DOCUMENT_PAIR | 146 |
 | VERIFIED_IDENTICAL_SOURCE_PUBLICATION | 3 |
 
 ## Records requiring counterpart reconciliation
@@ -22,13 +22,14 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENCE_COMPLETION.md). Other corporate records require scoped format review before any batch rendering. Existing approved visuals are retained; this queue does not authorize automatic publication.
 
 - [Contributing to Sable Harbor](../../../CONTRIBUTING.md) — Corporate document-format reconciliation
-- [SABLE HARBOR HEADQUARTERS — IMAGE SOURCE MANIFEST](../../../assets/headquarters/CANONICAL_HEADQUARTERS_IMAGE_MANIFEST.md) — Corporate document-format reconciliation
+- [Withdrawn visual source record](../../../assets/headquarters/CANONICAL_HEADQUARTERS_IMAGE_MANIFEST.md) — Corporate document-format reconciliation
 - [SABLE HARBOR CONTROLLED DOCUMENT INDEX](../../CONTROLLED_DOCUMENT_INDEX.md) — Corporate document-format reconciliation
 - [Branch and Pull Request Register](../../audit/BRANCH_AND_PR_REGISTER.md) — SH-FIN-HUMAN-001
 - [Repository completion batch — September 13, 2026](../../audit/COMPLETION_BATCH_2026-09-13.md) — SH-FIN-HUMAN-001
 - [Outstanding issue review — September 12, 2026](../../audit/ISSUE_CLOSEOUT_2026-09-12.md) — SH-FIN-HUMAN-001
 - [Foundry Field FF-003 billing adoption](../../canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md) — Corporate document-format reconciliation
 - [Geographic and occupancy completion — September 13, 2026](../../canon/GEOGRAPHIC_COMPLETION_2026-09-13.md) — Corporate document-format reconciliation
+- [Headquarters exterior visual withdrawn](../../canon/HEADQUARTERS_VISUAL_WITHDRAWAL_2026-09-22.md) — Corporate document-format reconciliation
 - [Klein shop and Fort occupancy continuity](../../canon/KLEIN_FORT_OCCUPANCY_2026-09-13.md) — Corporate document-format reconciliation
 - [Accounting, finance and audit practice](../../finance/READER_EXERCISES.md) — SH-FIN-HUMAN-001
 - [Current disposition of the Foundry Field billing proposal](../../finance/evidence/billing-proposal/CURRENT.md) — SH-FIN-HUMAN-001
@@ -52,6 +53,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Transaction cash and conditional tax support](../../finance/evidence/tax-transaction/draft/WORKING_PAPER.md) — SH-FIN-HUMAN-001
 - [Procurement, payables and Treasury](../../finance/evidence/treasury/draft/WORKING_PAPER.md) — SH-FIN-HUMAN-001
 - [Finance and accounting: human evidence completion handoff](../../handoffs/FINANCE_HUMAN_EVIDENCE_COMPLETION.md) — Corporate document-format reconciliation
+- [Open Canon and Post-Merge Hygiene Issue Index](../../internal/OPEN_CANON_AND_HYGIENE_ISSUE_INDEX.md) — Corporate document-format reconciliation
 - [Independent capital export and selected-review route](../../internal/company-closeout/CAPITAL_EXPORT_REVIEW_2026-09-22.md) — Corporate document-format reconciliation
 - [Exact historical capitalization — reviewable authoring proposal](../../internal/company-closeout/CAPITAL_HISTORY_PROPOSAL.md) — Corporate document-format reconciliation
 - [Debt and selected host evidence — August 2026](../../internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md) — Corporate document-format reconciliation
@@ -146,7 +148,6 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Company edition releases](../../releases/COMPANY_EDITION_RELEASES.md) — Corporate document-format reconciliation
 - [Facility atlas controlled releases](../../releases/FACILITY_ATLAS_RELEASES.md) — Corporate document-format reconciliation
 - [Geographic evidence releases](../../releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) — Corporate document-format reconciliation
-- [Headquarters image releases](../../releases/HEADQUARTERS_IMAGE_RELEASES.md) — Corporate document-format reconciliation
 - [ARU acquisition cost classification](../../../enterprise/ccf/company_closeout/ARU_TRANSACTION_COST_TAX.md) — Corporate document-format reconciliation
 - [Current C05/C06 evidence and residual receipt](../../../enterprise/ccf/company_closeout/CURRENT_RESIDUALS.md) — Corporate document-format reconciliation
 - [FRA event-day authority closeout](../../../enterprise/ccf/company_closeout/FRA_EVENT_DAY_AUTHORITY.md) — Corporate document-format reconciliation

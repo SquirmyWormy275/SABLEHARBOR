@@ -97,10 +97,9 @@ The transaction and interface PDFs are generated representations. The canonical 
 - [Enterprise authority, capital, and executive rhythm](governance/ENTERPRISE_AUTHORITY_CAPITAL_AND_EXECUTIVE_RHYTHM.md)
 - [SHMS doctrine](governance/SABLE_HARBOR_MANAGEMENT_SYSTEM.md) - LOCKED; [development framework](governance/SABLE_HARBOR_MANAGEMENT_SYSTEM_FRAMEWORK.md) retained as superseded history
 - [Structured headquarters closeout record](structured/corporate_headquarters_closeout_2026-09-03.json)
-- [Current Sacramento headquarters exterior decision](canon/HEADQUARTERS_IMAGE_SUCCESSOR_2026-09-22.md), [controlled PDF](governance/publications/SH-CORP-HQ-IMAGE-20260922_v1.0.0.pdf), [source PNG](../assets/headquarters/exterior/2026-09-22/sacramento-hq-exterior.png), [structured companion](structured/corporate_headquarters_image_successor_2026-09-22.json) and [image lineage manifest](../assets/headquarters/CANONICAL_HEADQUARTERS_IMAGE_MANIFEST.md). The September 3 hash identifies unrecovered historical pixels; the current PNG has its own exact hash.
-- [Current image release index](releases/HEADQUARTERS_IMAGE_RELEASES.md) — complete distributable version, manifest, checksums and retrieval route.
+- [Headquarters exterior visual withdrawal](canon/HEADQUARTERS_VISUAL_WITHDRAWAL_2026-09-22.md) — no current exterior image or image-recovery requirement.
 - GitHub issue #87 - CLOSED after SHMS doctrine development
-- GitHub issue #88 — the September 22 owner direction adopts a new current exterior image and supersedes the old exact-original ingestion criterion for current presentation; current publication, source and checksum evidence determine closure.
+- GitHub issue #88 — CLOSED after the owner withdrew the exterior-image requirement.
 - GitHub issue #89 — CLOSED after historical OPEN issue-state reconciliation
 
 ## Repository maintenance and post-merge hygiene
@@ -235,7 +234,7 @@ The v0.3 lore, base decision register, original lineage and other finance-pinned
 - [Scoped implementation direction](canon/BUSINESS_DEVELOPMENT_DIRECTION_2026-09-09.md)
 - [Generated-records lifecycle](governance/GENERATED_RECORDS_LIFECYCLE.md)
 
-The current publication manifest includes the headquarters/ESS/People/IT/authority/SHMS/J2-establishment sources and the four 2021–2026 board approval records. The September 22 image successor adds the current exterior PNG and its own controlled PDF. The September 3 exact source remains unrecovered historical evidence and is not labeled as the new file.
+The current publication manifest includes the headquarters/ESS/People/IT/authority/SHMS/J2-establishment sources and the four 2021–2026 board approval records. The later exterior-image publication was withdrawn and is absent from the current manifest.
 
 ## Runtime estate design — accepted PR #119
 

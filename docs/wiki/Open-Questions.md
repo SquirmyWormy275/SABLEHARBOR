@@ -15,7 +15,7 @@ The [company edition 1.2.0](https://github.com/SquirmyWormy275/SABLEHARBOR/relea
 
 ## Recently closed boundaries
 
-[#11](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/11) is closed after main protection, required checks, reviewed branch retirement and verified automatic merged-branch deletion. Unique and active unmerged branches remain intentionally retained. Issues [#19](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/19), [#21](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/21), [#22](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/22) and [#24](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/24) are closed at their documented workforce, portal-input, reference-authorization and restore scopes. Their receipts preserve external-deployment and broader runtime limits. [#88](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/88) is closed: the [current Sacramento HQ PNG](../../assets/headquarters/exterior/2026-09-22/sacramento-hq-exterior.png) and controlled PDF are accepted and [released](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/sable-harbor-hq-image-v1.0.0). The September 3 original binary remains unrecovered historical evidence; the new image does not claim identical bytes.
+[#11](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/11) is closed after main protection, required checks, reviewed branch retirement and verified automatic merged-branch deletion. Unique and active unmerged branches remain intentionally retained. Issues [#19](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/19), [#21](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/21), [#22](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/22) and [#24](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/24) are closed at their documented workforce, portal-input, reference-authorization and restore scopes. Their receipts preserve external-deployment and broader runtime limits.
 
 The owner also adopted the exact fictional five-holder register and voluntary
 proportional contributions without new units. The [dated direction](../canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md)
@@ -26,8 +26,7 @@ settles that choice; capital-account implementation is accepted and published in
 PR #164 dispositioned all **78,145 original carriers** in six batches over the
 reviewed 919-file boundary, with 79 dated events and 34 site/component dispositions.
 Issue #106 is closed at accepted precision. This does not close every engineering
-extension in #107/#108. The current HQ visual has a separate accepted successor;
-the older exact binary remains unrecovered.
+extension in #107/#108.
 
 [PR #138 billing adoption](../canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md) is
 accepted. FF-003 is a January 2027 base conditional forecast, not September 2026

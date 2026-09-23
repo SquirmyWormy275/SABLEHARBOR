@@ -74,7 +74,6 @@ Generated file inventory. Includes current and historical records; open the sour
 - [SH-COMPANY-DIRECTIONS-20260915 v1.1.0](../../governance/publications/SH-COMPANY-DIRECTIONS-20260915_v1.1.0.pdf) — PDF
 - [Company closeout owner directions — SH-COMPANY-DIRECTIONS-20260915_v1.2.0](../../governance/publications/SH-COMPANY-DIRECTIONS-20260915_v1.2.0.pdf) — PDF
 - [SABLE HARBOR — CORPORATE HEADQUARTERS CLOSEOUT — SH-CORP-HQ-20260903_v1.0.1](../../governance/publications/SH-CORP-HQ-20260903_v1.0.1.pdf) — PDF
-- [Sacramento headquarters exterior image successor — SH-CORP-HQ-IMAGE-20260922_v1.0.0](../../governance/publications/SH-CORP-HQ-IMAGE-20260922_v1.0.0.pdf) — PDF
 - [ABSTENTION AND INFORMATION-DEFICIENCY DOCTRINE — SH-GOV-ABSTAIN-001_v1.0.0](../../governance/publications/SH-GOV-ABSTAIN-001_v1.0.0.pdf) — PDF
 - [RESERVED MATTERS, ESCALATION, AND SUBSIDIARY AUTONOMY — SH-GOV-AUTH-001_v1.0.0](../../governance/publications/SH-GOV-AUTH-001_v1.0.0.pdf) — PDF
 - [SABLE HARBOR — ENTERPRISE AUTHORITY, CAPITAL, AND EXECUTIVE RHYTHM — SH-GOV-AUTH-002_v1.0.1](../../governance/publications/SH-GOV-AUTH-002_v1.0.1.pdf) — PDF

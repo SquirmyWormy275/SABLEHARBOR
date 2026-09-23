@@ -270,7 +270,7 @@ Open the [review workbook](closeout-evidence.xlsx). [Case events](case-events.js
 
 The commands and reference cases were actually executed. These observations establish the behavior of the named reference implementation for the stated synthetic fixtures, and reproduce the existing geographic classifications. They do not establish deployed Alexandria operation, real source licenses, an approved retention schedule, model-wide leakage safety or new geographic facts.
 
-The 11 issue requirements remain visible in the workbook and issue-requirements.json. Legal execution and pending publications stay with their owners. Names, appointment dates, occupancy dates and retention periods require accepted decisions; the missing headquarters image requires the exact original bytes. No signature, external assurance report, independent review or closure decision is manufactured by this package.
+The 11 issue requirements remain visible in the workbook and issue-requirements.json as the dated source snapshot. The later headquarters exterior-image requirement was withdrawn; see docs/canon/HEADQUARTERS_VISUAL_WITHDRAWAL_2026-09-22.md. Legal execution and other pending publications stay with their owners. No signature, external assurance report, independent review or closure decision is manufactured by this package.
 
 ## Reproduce
 
