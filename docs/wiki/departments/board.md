@@ -40,5 +40,3 @@ Board membership is not an employee census. An oversight remit does not prove th
 - [Corporate Secretary](corporate-secretary.md)
 - [Internal Audit](internal-audit.md)
 - [Founders, early colleagues and later people](../subjects/People.md)
-
-Related reading describes useful connections, not additional reporting lines.

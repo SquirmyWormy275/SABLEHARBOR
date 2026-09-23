@@ -1,5 +1,7 @@
 # Sable Harbor geospatial framework
 
+[Current locations](../docs/wiki/Locations.md) describes the offices and operating sites. For the decisions behind the maps, use [Records and decisions](../docs/wiki/Records-and-Decisions.md#locations). The package editions below retain their own dates and scope.
+
 [R02 facility drill-down atlas](maps/index.html) · [Campus and floor programme](facilities/README.md) · [Individual plans](maps/facilities/ARTIFACT_INDEX.md)
 
 Facility successor v0.2.0 preserves the approved R01 Sacramento four-building/ten-floor baseline. Its original facility subpackage contains 58 sheets across 16 sites; the [accepted runtime bridge](facilities/RUNTIME_BRIDGE.json) reuses twelve existing runtime plates and adds three location packages, one proposed building and one floor. Combined totals are 19 locations, 18 buildings, 25 floors and 70 facility/runtime plates in 210 SVG/PNG/PDF assets, plus eleven preserved rc4 map records: 81 maps. Accepted runtime main is `b83e4be2182a5e4143808a3dab5f8d929a133caf`; final integration QA, CI and release gates remain pending.
@@ -12,8 +14,8 @@ Open the [eleven-sheet atlas](maps/SABLE_HARBOR_Geographic_Framework_Atlas_v0.1.
 
 The enterprise Geo package is a combined view. `sources/catalog.json` governs its enterprise object/provenance register. The accepted `industrial/source/operations.json`, `industrial/source/entities.json` and `industrial/source/geography/network.geojson` govern industrial identities and geometry. `scripts/sync_industrial.py` consumes those sources and rejects unreviewed source-hash drift. It does not edit industrial or finance inputs.
 
-- Bedford: Fairmont-area Cradle center, 15–20 acres; exact parcel unfinished. Belle/Kanawha is historical editorial siting, not an operating site or relocation.
-- The Fort: Willow's Pittsburgh-area 10–20 acre compound, with Big Shed research, Small Shed administration/temporary lodging, White Shed controlled intake/storage and the Museum working yard. Klein is the historical precursor. Exact shop/Fort occupancy linkage remains open.
+- Bedford: Cradle’s Fairmont / White Hall-area center. The September 13 decision selects a 15.27-acre fictional redevelopment footprint. Belle/Kanawha is historical siting, not a current operation; the selected footprint is not a real property conveyance.
+- The Fort: Willow’s Hazelwood, Pittsburgh compound, with Big Shed research, Small Shed administration/temporary lodging, White Shed intake/storage and the Museum working yard. The September 13 decision selects a 10.65-acre fictional footprint and preserves the staged 2024 move. The earlier Klein shop remains a distinct historical premise.
 - Kelly Gang Mining: external Tasmanian Stream 17 host. Demotte Reclamation Services: separate north-central WV AMD host. Host geography and equipment/recovery rights do not create Sable Harbor ownership of the host.
 - Red Wash: 42.22 N, 108.18 W, Sweetwater County. Taylor: accepted candidate A at 42.12 N, 108.10 W. BS&T: 33.3485 mainline + 4.0000 East Materials + 2.6515 Mineral Transfer = 40.0000 route-miles. Truck-only mine access: nine modeled miles; no mine spur.
 - The industrial case supplies 12 facilities, 31 track-register segments, 26 structures and ten history events. The 1898/1954 physical alignments remain unlocated; current geometry is not backdated into those epochs. All 2025 Red Wash transport remains external-carrier. Uranium custody remains OPEN_GATED.

@@ -41,5 +41,3 @@ Generated workpapers and reference test plans are not performed assurance. A pas
 - [Risk & Compliance](risk-compliance.md)
 - [Finance](finance.md)
 - [Continuity and crisis responsibilities](../subjects/Continuity.md)
-
-Related reading describes useful connections, not additional reporting lines.

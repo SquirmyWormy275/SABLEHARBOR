@@ -40,5 +40,3 @@ Drafts and documented operating choices do not establish signatures, elections, 
 - [Risk & Compliance](risk-compliance.md)
 - [Sable Harbor Advisory](../businesses/Advisory.md)
 - [Board and committees](board.md)
-
-Related reading describes useful connections, not additional reporting lines.

@@ -30,5 +30,3 @@ Host relationships do not establish ownership of the host site. Precise footprin
 - [Office of the General Counsel](../departments/legal.md)
 - [Facilities and workplace services](../departments/facilities.md)
 - [Other external and personal relationships](External-Counterparties.md)
-
-Related reading describes useful connections, not additional reporting lines.

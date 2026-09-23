@@ -6,8 +6,6 @@
 
 Cradle recovers rare-earth materials from designated industrial side streams and mine water for specialist downstream sale. Its work connects external host deployments with the separate Bedford development, refurbishment, analytical and upgrading facility.
 
-**Reviewed:** September 12, 2026 · Fictional enterprise; source records control.
-
 ## Reading guide
 
 Follow a material stream from the host site through recovery and onward processing. Host rights, technical results and the economics of a useful recovered output answer different questions in that chain.
@@ -22,9 +20,9 @@ Cradle is an early commercial parent-book business. Kelly Gang Mining and Demott
 
 [![Project Cradle existing organization chart](../../../docs/organization/assets/current/project-cradle.png)](../../../docs/organization/charts/project-cradle.md)
 
-[Read the chart’s text roster, relationship key and source qualifications](../../../docs/organization/charts/project-cradle.md). Grouped functions are not automatically reporting lines, separate companies or additional employees.
+[Chart and text roster](../../../docs/organization/charts/project-cradle.md).
 
-[Named people and recorded roles](../../../docs/organization/charts/people-cradle.md) — the current chart preserves unknown joining years rather than inventing them.
+[Named people and recorded roles](../../../docs/organization/charts/people-cradle.md).
 
 ## Operating, legal and control records
 
@@ -65,5 +63,3 @@ External host records do not establish ownership of the host sites. Exact footpr
 - [Safety and environmental governance](../departments/safety-environment.md)
 - [Quality and technical standards](../departments/quality-standards.md)
 - [Willow](Willow.md)
-
-Related reading describes useful connections, not additional reporting lines.

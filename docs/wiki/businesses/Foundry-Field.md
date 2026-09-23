@@ -6,8 +6,6 @@
 
 Foundry Field is software for production tracking, maintenance, reconciliations and operating exceptions. Foundry supplies the underlying representation of records, relationships, provenance and authority. Foundry Field packages that capability for customer operating work.
 
-**Reviewed:** September 12, 2026 · Fictional enterprise; source records control.
-
 ## Reading guide
 
 Start with the operating loop: record production, reconcile what happened and make exceptions visible to the responsible operator. Then trace the commercial and deployment records behind a customer engagement.
@@ -16,15 +14,15 @@ Start with the operating loop: record production, reconcile what happened and ma
 
 [Current business dossier](../../../docs/business-lines/FOUNDRY_FIELD.md) · [Letterhead dossier PDF](../../../docs/business-lines/publications/SH-BIZ-FOUNDRY-FIELD-001_v1.1.0.pdf)
 
-It is a commercial product business recorded on the parent’s SHI books. A dedicated working base is unresolved; the Sacramento product floor is a proposed campus allocation, not proof of current occupancy.
+Foundry Field is recorded on the parent’s SHI books. Its team uses shared offices in Reno and Sacramento, alongside customer-embedded and mobile field work. The Sacramento product-floor drawing is a fit-out proposal, not an additional completed facility. See the [location directory](../Locations.md) for the current working bases.
 
 ## Organization and people
 
 [![Foundry Field existing organization chart](../../../docs/organization/assets/current/foundry-field.png)](../../../docs/organization/charts/foundry-field.md)
 
-[Read the chart’s text roster, relationship key and source qualifications](../../../docs/organization/charts/foundry-field.md). Grouped functions are not automatically reporting lines, separate companies or additional employees.
+[Chart and text roster](../../../docs/organization/charts/foundry-field.md).
 
-[Named people and recorded roles](../../../docs/organization/charts/people-foundry-field.md) — the current chart preserves unknown joining years rather than inventing them.
+[Named people and recorded roles](../../../docs/organization/charts/people-foundry-field.md).
 
 ## Operating, legal and control records
 
@@ -62,5 +60,3 @@ Conditional revenue and deployment scenarios do not prove executed customer term
 - [Finance](../departments/finance.md)
 - [Company history and The Crossing](../subjects/History.md)
 - [Atlas Meridian](Atlas-Meridian.md)
-
-Related reading describes useful connections, not additional reporting lines.
