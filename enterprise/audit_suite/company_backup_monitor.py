@@ -169,6 +169,7 @@ def inspect(runtime, *, expected_runtime_sha256, as_of):
     root = backup.private(Path(runtime), True)
     cfg = backup._config(root, expected_runtime_sha256)
     cutoff = backup._time(as_of)
+    backup._criterion_check(cfg, cutoff)
     declaration_sha = _declaration(root, cfg)
     with backup.database(root) as db:
         backup._bound_config(db, cfg, expected_runtime_sha256)
@@ -179,6 +180,7 @@ def inspect(runtime, *, expected_runtime_sha256, as_of):
             and _declaration(root, cfg) == declaration_sha,
             "Monitor inputs changed during inspection",
         )
+    backup._criterion_check(cfg, cutoff)
     return {
         **result,
         "runtime_revision": revision,

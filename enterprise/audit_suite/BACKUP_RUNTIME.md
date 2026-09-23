@@ -66,3 +66,62 @@ Initialization configuration has exactly `declaration_root`, `declaration_ref`, 
 Each new receipt directory contains REQUEST.json, RESULT.json and a hash manifest. Receipt paths must be outside the runtime; initialization receipts also remain outside the declaration store. The operator pins the receipt parent directory before acting, rechecks it and anchors writes to its open directory descriptor. This implementation uses Linux's `/proc/self/fd` view.
 
 A command that records a failed backup exits successfully with `status=RECEIPT_WRITTEN` and `result_status=FAILED`. Inspect the result status; a successfully written receipt does not mean a successful backup. If publication fails after a committed command, `OPERATION_COMMITTED_RECEIPT_NOT_PUBLISHED` instructs exact action replay with a new output directory. The native command journal prevents duplicate operations. If initialization completed but its receipt publication failed, `RUNTIME_CREATED_RECEIPT_NOT_PUBLISHED` requires preserving the runtime, inspecting RUNTIME.json and using its exact file SHA256 for reconciliation. Initialization cannot be replayed over an existing runtime. Neither recovery deletes company history.
+
+## Optional prospective local data-loss criterion
+
+`initialize(..., local_data_loss_criterion={"root": absolute_private_root,
+"native": exact_native6, "metadata_sha256": full_versions_row_without_content_sha})`
+can bind an explicitly authored `local_backup_risk_decisions` original. This is
+`LOCAL_SIMULATION_RULE_APPROVED`, never enterprise RPO/BIA acceptance. The body
+uses `LOCAL_BACKUP_DATA_LOSS_CRITERION_V1`, exact `scope` (`service_id`, sorted
+`dataset_ids`), distinct scoped `author_id`/`reviewer_id`, canonical `approved_at`,
+`effective_from`/`effective_to_exclusive`, integer `max_age_seconds`,
+`checkpoint_interval_seconds`, `publication_allowance_seconds`, and a nonblank
+rationale of at most 2,000 characters. Fixed retention/isolation values are
+`RETAIN_ALL_LOCAL_EXERCISE_ORIGINALS_NO_DELETION` and
+`PRIVATE_LOCAL_STORE_NOT_PRODUCTION_ISOLATION`.
+
+Approval must be available before the period declaration. Every dataset needs
+an initial checkpoint at period start, exact declared cadence/due allowance,
+and coverage through the final boundary. Interval plus normal publication
+allowance must fit the local maximum. The optional dependency and helper code
+pin are retained in the immutable definition. Content, full native metadata
+(including import time), registered custody, scope and physical root are checked
+before/after initialization, commands, replay and monitor/reconciliation reads.
+A final dependency failure rolls back the SQL operation. An interrupted owned
+copy remains subject to the existing explicit-intent recovery boundary; no
+orphan adoption is added. Omission preserves the historical definition format
+and behavior; `approved_bia_targets` remains `NOT_ESTABLISHED` in either case.
+
+`company_backup_criterion.evaluate(runtime, expected_runtime_sha256=..., as_of=...)`
+provides a bounded read-only proof. Only successful jobs with exact retained
+source/object identity and re-read owned file bytes count. JSON_RECORDS copies
+also undergo the maintained parser. Failed jobs never establish a checkpoint.
+For each instant, evaluation uses the freshest checkpoint available by that
+instant; a subsequently published older checkpoint cannot regress it. Returned
+intervals explicitly include `UNESTABLISHED` startup before the first successful
+publication, plus age breaches, due slots without success, failed attempts, and
+normal-publication-allowance violations as separate facts. It cannot claim the
+whole period was protected by silently excluding startup. All times are the
+explicit logical simulation clock; local measured copy duration is separate.
+Byte/record parsing does not establish application recovery, actual production
+data loss, geographic isolation, management acceptance or overall effectiveness.
+
+An interval marked `BREACH` means its maximum age exceeds the target, not that
+its entire duration does. `breach_after` marks the strict `age > maximum`
+threshold within that interval; equality itself is permitted. Fresh evaluation
+pins all bounded inspected native bytes and full metadata, then re-reads them
+before returning so metadata-only changes cannot pass a revision-only guard.
+
+Omission preserves schema and semantics for newly initialized criterion-free
+runtimes. Previously pinned runtimes still require their historical frozen
+implementation; this change performs no migration or implicit repinning.
+
+For a dataset admitted from another native store, its checkpoint is the producer
+`source_admission.metadata.event_at`, never the later consumer admission time.
+Evaluation verifies the retained producer native6, byte hash, original/definition
+metadata digest and exact consumer linkage before using that time. The result
+labels this `RETAINED_ADMISSION_PRODUCER_CHECKPOINT_NOT_FRESH_UPSTREAM_READ` and
+returns the producer pin; it does not claim to have reopened the upstream store.
+Malformed admission metadata fails closed. Re-admitting old bytes therefore
+cannot reset their age or make a stale checkpoint satisfy the local criterion.

@@ -196,6 +196,13 @@ def _config(root, expected):
     return decode(raw)
 
 
+def _criterion_check(cfg, at):
+    if "local_data_loss_criterion" in cfg:
+        from .company_backup_criterion import check
+
+        check(cfg, at)
+
+
 def _bound_config(db, cfg, expected):
     rows = db.execute("SELECT * FROM versions WHERE system='runtime_definition'").fetchall()
     require(len(rows) == 1, "Exactly one native runtime definition required")
@@ -219,6 +226,7 @@ def initialize(
     bindings,
     datasets,
     service_id="SVC-compute",
+    local_data_loss_criterion=None,
 ):
     """Bind exactly all declaration slots; copy no authority or ledger execution assertions."""
     destination, repository = Path(destination), Path(repository)
@@ -346,6 +354,33 @@ def initialize(
         "targets": "NOT_SUPPLIED_NO_APPROVED_BIA_OR_RPO_RTO_ASSERTED",
         "deployment": "NOT_ESTABLISHED",
     }
+    if local_data_loss_criterion is not None:
+        from .company_backup_criterion import resolve
+
+        require(
+            isinstance(local_data_loss_criterion, dict)
+            and isinstance(local_data_loss_criterion.get("root"), str),
+            "Explicit local criterion dependency required",
+        )
+        criterion_root = private(Path(local_data_loss_criterion["root"]), True)
+        require(
+            not destination.resolve().is_relative_to(criterion_root)
+            and not criterion_root.is_relative_to(destination.resolve()),
+            "Runtime and criterion roots must be separate",
+        )
+        config["local_data_loss_criterion"] = resolve(
+            local_data_loss_criterion,
+            scope={"service_id": service_id, "dataset_ids": sorted(dataset_map)},
+            plan=plan,
+            author=operator,
+            reviewer=reviewer,
+            as_of=plan["declared_at"],
+        )
+        name = "enterprise/audit_suite/company_backup_criterion.py"
+        pins[name] = sha((repository / name).read_bytes())
+        name = "enterprise/audit_suite/company_backup_monitor.py"
+        pins[name] = sha((repository / name).read_bytes())
+        _criterion_check(config, plan["declared_at"])
     with tempfile.TemporaryDirectory(
         prefix=".backup-runtime-", dir=destination.parent
     ) as directory:
@@ -395,6 +430,7 @@ def initialize(
             all(sha((repository / key).read_bytes()) == value for key, value in pins.items()),
             "Pinned definition sources changed before publication",
         )
+        _criterion_check(config, plan["declared_at"])
         publish(stage, destination)
     return {
         "runtime_sha256": sha(raw),
@@ -476,6 +512,7 @@ def _execute(root, expected_runtime_sha256, expected_revision, command_id, at, p
         "Exact expected runtime revision required",
     )
     at = _time(at)
+    _criterion_check(cfg, at)
     fingerprint = sha(
         encoded(
             {
@@ -493,6 +530,7 @@ def _execute(root, expected_runtime_sha256, expected_revision, command_id, at, p
         ).fetchone()
         if prior:
             require(prior["input_digest"] == fingerprint, "Changed operation replay rejected")
+            _criterion_check(cfg, at)
             return decode(prior["receipt"])
         revision, previous_at = db.execute(
             "SELECT revision,last_event_at FROM backup_runtime_state"
@@ -510,6 +548,7 @@ def _execute(root, expected_runtime_sha256, expected_revision, command_id, at, p
             _config(root, expected_runtime_sha256) == cfg,
             "Runtime definition changed during operation",
         )
+        _criterion_check(cfg, at)
         receipt = {
             "command_id": command_id,
             "revision": revision + 1,
@@ -958,6 +997,7 @@ def reconcile(runtime, *, expected_runtime_sha256, as_of):
     """Independent expected-job census from declaration, not observed job membership."""
     cfg = _config(Path(runtime), expected_runtime_sha256)
     at = _time(as_of)
+    _criterion_check(cfg, at)
     require(at >= cfg["plan"]["declared_at"], "Declaration not yet available")
     require(
         sha(checked_bytes(Path(runtime) / "DECLARATION.json", 2 * 1024 * 1024))
@@ -1000,6 +1040,7 @@ def reconcile(runtime, *, expected_runtime_sha256, as_of):
                 "prior_failed_attempts": sum(j["status"] == "FAILED" for j in jobs),
             }
         )
+    _criterion_check(cfg, at)
     return {
         "declaration_ref": cfg["declaration_ref"],
         "runtime_sha256": expected_runtime_sha256,
