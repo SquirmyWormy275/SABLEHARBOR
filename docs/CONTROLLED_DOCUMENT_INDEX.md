@@ -97,9 +97,10 @@ The transaction and interface PDFs are generated representations. The canonical 
 - [Enterprise authority, capital, and executive rhythm](governance/ENTERPRISE_AUTHORITY_CAPITAL_AND_EXECUTIVE_RHYTHM.md)
 - [SHMS doctrine](governance/SABLE_HARBOR_MANAGEMENT_SYSTEM.md) - LOCKED; [development framework](governance/SABLE_HARBOR_MANAGEMENT_SYSTEM_FRAMEWORK.md) retained as superseded history
 - [Structured headquarters closeout record](structured/corporate_headquarters_closeout_2026-09-03.json)
-- [Canonical Sacramento headquarters image manifest](../assets/headquarters/CANONICAL_HEADQUARTERS_IMAGE_MANIFEST.md) — approved reference identified by SHA-256; binary ingestion pending
+- [Current Sacramento headquarters exterior decision](canon/HEADQUARTERS_IMAGE_SUCCESSOR_2026-09-22.md), [controlled PDF](governance/publications/SH-CORP-HQ-IMAGE-20260922_v1.0.0.pdf), [source PNG](../assets/headquarters/exterior/2026-09-22/sacramento-hq-exterior.png), [structured companion](structured/corporate_headquarters_image_successor_2026-09-22.json) and [image lineage manifest](../assets/headquarters/CANONICAL_HEADQUARTERS_IMAGE_MANIFEST.md). The September 3 hash identifies unrecovered historical pixels; the current PNG has its own exact hash.
+- [Current image release index](releases/HEADQUARTERS_IMAGE_RELEASES.md) — complete distributable version, manifest, checksums and retrieval route.
 - GitHub issue #87 - CLOSED after SHMS doctrine development
-- GitHub issue #88 — complete controlled PDF/office publications, manifests/checksums, and canonical headquarters-image binary ingestion under the three-representation rule
+- GitHub issue #88 — the September 22 owner direction adopts a new current exterior image and supersedes the old exact-original ingestion criterion for current presentation; current publication, source and checksum evidence determine closure.
 - GitHub issue #89 — CLOSED after historical OPEN issue-state reconciliation
 
 ## Repository maintenance and post-merge hygiene
@@ -234,7 +235,7 @@ The v0.3 lore, base decision register, original lineage and other finance-pinned
 - [Scoped implementation direction](canon/BUSINESS_DEVELOPMENT_DIRECTION_2026-09-09.md)
 - [Generated-records lifecycle](governance/GENERATED_RECORDS_LIFECYCLE.md)
 
-The current publication manifest includes the headquarters/ESS/People/IT/authority/SHMS/J2-establishment sources and the four 2021–2026 board approval records. The exact approved Sacramento HQ image remains an independently tracked asset-ingestion gap (#88); publication of its doctrine does not supply the missing binary.
+The current publication manifest includes the headquarters/ESS/People/IT/authority/SHMS/J2-establishment sources and the four 2021–2026 board approval records. The September 22 image successor adds the current exterior PNG and its own controlled PDF. The September 3 exact source remains unrecovered historical evidence and is not labeled as the new file.
 
 ## Runtime estate design — accepted PR #119
 

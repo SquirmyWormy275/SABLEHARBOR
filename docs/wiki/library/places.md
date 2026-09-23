@@ -6,7 +6,11 @@ Generated file inventory. Includes current and historical records; open the sour
 
 ## `assets/headquarters`
 
-- [SABLE HARBOR HEADQUARTERS — CANONICAL IMAGE MANIFEST](../../../assets/headquarters/CANONICAL_HEADQUARTERS_IMAGE_MANIFEST.md) — MD
+- [SABLE HARBOR HEADQUARTERS — IMAGE SOURCE MANIFEST](../../../assets/headquarters/CANONICAL_HEADQUARTERS_IMAGE_MANIFEST.md) — MD
+
+## `assets/headquarters/exterior/2026-09-22`
+
+- [Sacramento HQ — current exterior source artwork](../../../assets/headquarters/exterior/2026-09-22/README.md) — MD
 
 ## `docs/facilities`
 

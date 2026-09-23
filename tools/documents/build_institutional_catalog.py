@@ -103,6 +103,12 @@ def main() -> None:
             raise SystemExit(f"controlled source hash drift: {source}")
         if publication_sha256 != artifact["sha256"]:
             raise SystemExit(f"controlled publication hash drift: {artifact['publication']}")
+        for source_asset in artifact.get("source_assets", []):
+            asset_path = (ROOT / source_asset["path"]).resolve()
+            if not asset_path.is_relative_to(ROOT.resolve()) or not asset_path.is_file():
+                raise SystemExit(f"controlled image missing or outside repository: {source_asset['path']}")
+            if hashlib.sha256(asset_path.read_bytes()).hexdigest() != source_asset["sha256"]:
+                raise SystemExit(f"controlled image hash drift: {source_asset['path']}")
 
         text = source_path.read_text()
         title_match = re.search(r"^#\s+(.+)$", text, re.M)
