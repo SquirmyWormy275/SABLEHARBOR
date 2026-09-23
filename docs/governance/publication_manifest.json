@@ -1019,6 +1019,20 @@
       "normalizer": "pypdf"
     },
     {
+      "source": "docs/canon/HEADQUARTERS_IMAGE_SUCCESSOR_2026-09-22.md",
+      "publication": "docs/governance/publications/SH-CORP-HQ-IMAGE-20260922_v1.0.0.pdf",
+      "sha256": "3940e636b719441945223cbc7409e60c0993f231e0c7fd8e7958c24e70f60a71",
+      "source_sha256": "2bf3c29c87b98db44055c6dfec73682f64441fa463ccd1bbd14c602b44c8654d",
+      "brand": "corporate",
+      "normalizer": "qpdf",
+      "source_assets": [
+        {
+          "path": "assets/headquarters/exterior/2026-09-22/sacramento-hq-exterior.png",
+          "sha256": "3296663d8c7be71bca8aee5fad953a6a96b1ecf03a4b021a8dce48f9295afaf3"
+        }
+      ]
+    },
+    {
       "source": "docs/internal/company-closeout/INSPECTION_GUIDE_v1.2.0.md",
       "publication": "docs/finance/publications/SH-COMPANY-INSPECTION-20260922_v1.2.0.pdf",
       "sha256": "3645477a2ce2629d92f7af8a149dfefb60fccf14cc78dc0b6683032db3a20062",

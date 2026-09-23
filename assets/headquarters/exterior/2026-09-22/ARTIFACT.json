@@ -1,5 +1,5 @@
 {
-  "artifact": "sacramento-hq-exterior-candidate-v1.png",
+  "artifact": "sacramento-hq-exterior.png",
   "sha256": "3296663d8c7be71bca8aee5fad953a6a96b1ecf03a4b021a8dce48f9295afaf3",
   "bytes": 2730619,
   "dimensions_px": [
@@ -7,7 +7,8 @@
     941
   ],
   "generation_mode": "BUILT_IN_IMAGE_GEN",
-  "state": "NEW_RENDER_CANDIDATE_PENDING_OWNER_VISUAL_REVIEW_AND_REPOSITORY_ACCEPTANCE",
+  "state_on_repository_acceptance": "APPROVED_CURRENT_EXTERIOR_SOURCE_ARTWORK",
+  "controlling_decision": "docs/canon/HEADQUARTERS_IMAGE_SUCCESSOR_2026-09-22.md",
   "prompt": "PROMPT.txt",
   "review": "SOURCE_REVIEW.json",
   "not_original_recovery": true,
@@ -27,5 +28,5 @@
     "Reflectingpoolshapeandposition",
     "Plants/stone/lighting/camera"
   ],
-  "publication_claim": false
+  "publication_claim_on_acceptance": "CURRENT_EXTERIOR_VISUAL_REFERENCE"
 }

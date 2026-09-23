@@ -6,8 +6,12 @@ artwork, PDF normalization and existing publication manifest schema.
 """
 
 from tools.documents import build_controlled_publications as predecessor
+from tools.company_closeout.headquarters_publication import (
+    SOURCE as HQ_SOURCE, PUBLICATION as HQ_PUBLICATION, render_with_artwork, bind_artwork,
+)
 
 COMPANY_DOCS = [
+    (HQ_SOURCE, HQ_PUBLICATION, "corporate"),
     ("docs/internal/company-closeout/INSPECTION_GUIDE_v1.2.0.md", "docs/finance/publications/SH-COMPANY-INSPECTION-20260922_v1.2.0.pdf", "corporate"),
     ("docs/canon/J2_PERSONNEL_COMPLETION_2026-09-22.md", "docs/governance/publications/SH-J2-PERSONNEL-20260922_v1.0.0.pdf", "corporate"),
     ("docs/canon/ARU_ADMINISTRATIVE_COMPLETION_2026-09-22.md", "docs/legal/publications/SH-ARU-ADMIN-20260922_v1.0.0.pdf", "corporate"),
@@ -28,11 +32,15 @@ COMPANY_DOCS = [
 
 def main():
     previous = predecessor.DOCS
+    original_render = predecessor.render_pdf
     try:
         predecessor.DOCS = [*previous, *COMPANY_DOCS]
+        predecessor.render_pdf = render_with_artwork(original_render)
         predecessor.main()
+        bind_artwork()
     finally:
         predecessor.DOCS = previous
+        predecessor.render_pdf = original_render
 
 
 if __name__ == "__main__":

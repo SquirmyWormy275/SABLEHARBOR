@@ -1,5 +1,7 @@
 {
-  "state": "NEW_IMAGE_CANDIDATE_NOT_ACCEPTED_CANON",
+  "state_at_initial_review": "NEW_IMAGE_CANDIDATE_NOT_ACCEPTED_CANON",
+  "current_decision": "docs/canon/HEADQUARTERS_IMAGE_SUCCESSOR_2026-09-22.md",
+  "adoption_reconciliation": "All 14 other reviewed source hashes still match the adoption checkout. The image manifest changed under this same successor to index the new approved PNG; its prior hash below remains the original review input.",
   "reviewed_source_commit": "8753aea7c31c07cd90d782936d6a7f97b34a612d",
   "scope": "Relevant headquarters visual/campus/geography authorities and all four R01 sheets plus V08 visually inspected. Not a claim every repository document was substantively audited.",
   "source_hashes": {

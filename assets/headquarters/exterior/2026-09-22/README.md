@@ -1,8 +1,8 @@
-# Sacramento HQ — newly rendered exterior candidate
+# Sacramento HQ — current exterior source artwork
 
-The owner requested a subagent review of current relevant data and a new image on September 22, 2026. This is that **new candidate**, generated with the built-in imagegen tool. It is not the missing September 3 approved binary, does not match or supersede its recorded hash, and does not close exact-original recovery issue #88. Owner visual selection and repository acceptance remain separate.
+The owner requested a subagent review of current relevant data and a new image on September 22, 2026, then directed Codex to fix the image after it was delivered. This is the exact newly generated source artwork adopted as the current exterior visual reference by [the dated successor decision](../../../../docs/canon/HEADQUARTERS_IMAGE_SUCCESSOR_2026-09-22.md) when accepted into the repository. It is not the missing September 3 binary and does not match its historical hash.
 
-![New exterior candidate](sacramento-hq-exterior-candidate-v1.png)
+![Current Sacramento HQ exterior](sacramento-hq-exterior.png)
 
 [Exact prompt](PROMPT.txt) · [Reviewed source hashes and reconciliation](SOURCE_REVIEW.json) · [Image hash and inspection](ARTIFACT.json).
 
@@ -18,4 +18,4 @@ The September 3 source supplies twilight, glass/metal/concrete/warm wood, landsc
 
 This is separate cinematic artwork, not a replacement R01 technical sheet or V08 visitor map. Their locked bytes and visual system remain unchanged. No Capitol, San Jose setting, dramatic terrain, campus rail line, large data-center plant or people were introduced. No real property, construction, visitor access or external authorization is established by this rendering.
 
-Image synthesis is nondeterministic. Preserve these candidate pixels and their hash; publication must not regenerate a lookalike. This branch stores the reviewed candidate and provenance only. Any future approval must identify these exact bytes and its scope, without pretending that the unavailable original was recovered.
+Image synthesis is nondeterministic. Preserve these exact pixels and their hash; publication must not regenerate a lookalike. The original candidate commit remains in Git history. The September 3 image approval remains historical, with its bytes unrecovered; the current visual uses the new artwork under the dated decision.
