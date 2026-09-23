@@ -1,5 +1,27 @@
 # Audit-suite execution closeout
 
+The current private technical snapshot is
+`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-final-v1/`
+at A revision 1810 and B revision 1936. Its frozen basis, 68 pinned inputs,
+all 818 task instances, linked workpapers and sample traces, and 16 recorded
+findings passed independent packet checks. The corrected offline browser run
+passed desktop and narrow-layout, keyboard, filter and exact-data checks;
+the preceding screenshot-timeout failure is retained separately. The 12 most
+recent local findings passed independent raw-event and company-source
+preservation checks. These results establish a versioned technical snapshot,
+not an accepted full-scope audit.
+
+Per workroom, 79 tasks are `COMPLETE`, 132 are `IN_PROGRESS`, and 198 remain
+`NOT_STARTED`. Of the 198, 196 are additional SOC 2/HIPAA duties and two are
+scope or qualified-review dependencies. The unstarted duties have no linked
+workpaper or sample trace in this snapshot. They require clause-level
+examination and applicability decisions; conditional wording alone does not
+justify `NOT_APPLICABLE`. The 236-identity operating execution baseline is
+independently covered, but that does not discharge these additional duties or
+the remaining clauses of partial tasks. The private
+`final-not-started-analysis-v1/` and `additional-duty-execution-strategy-v1/`
+records identify the next bounded work without claiming it was performed.
+
 Execution remains authorized and in progress. Finish the accepted scope through
 these five deliverables; do not expand the feature list merely to create another
 checkpoint. [QUEUE.json](../../../reader/overnight/QUEUE.json) retains the individual
@@ -47,8 +69,8 @@ authorize publication, deployment, a real assurance opinion or writes to Atlas.
 
 ## Private review index
 
-The consolidated local review snapshot is
-`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-v3/`.
+The latest consolidated local review snapshot is
+`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-final-v1/`.
 Its `INDEX.md` links the task register, unchanged queue acceptance criteria and
 hashed supporting receipts. `PROCEDURES.html` provides offline search, workroom,
 status and procedure filters, pagination and exact workpaper/sample version
@@ -65,7 +87,8 @@ performed work. Later task-only revisions may reuse a historical source inventor
 only after exact artifact metadata comparison; neither inventory revisions nor
 prior audit conclusions are rewritten.
 
-The successor index preserves earlier packages and their historical revisions.
+The earlier `integrated-review-packet-v3/` remains a historical snapshot. The
+successor index preserves earlier packages and their historical revisions.
 Scope and source-ownership references point to immutable commit snapshots. The
 two selected revisions, task/work references, findings and exact artifact metadata
 were checked against the pinned execution receipts. Desktop, narrow-layout and
