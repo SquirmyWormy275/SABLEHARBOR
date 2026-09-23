@@ -1262,3 +1262,32 @@ verification checked all 24 commands, historical records and 33 source roots.
 The private successor review index records 16 completed procedures with limitations,
 63 partial procedures and 2,375 unstarted task instances across six isolated
 workrooms; those instances are not one corporate audit population.
+
+### Consolidated source portfolios and original navigation
+
+Two new workrooms now collect the selected source union directly through the
+ordinary company interfaces. Their 30- and 34-component registries retain distinct
+routes and source identities. The collection contains 732 and 792 retained
+references respectively, representing 1,136 distinct native identities across the
+two portfolios. Additional references are not additional independent originals.
+No previous workpaper or audit conclusion was imported.
+
+Independent verification checked 2,466 successful commands and exact replay
+records, four expected access denials, every retained original, revoked temporary
+grants, unchanged company records and preservation of 19 historical audit stores.
+The collection snapshot left all 409 procedures in each new workroom unstarted;
+subsequent examinations require their own attributed commands and verification.
+
+The independently checked source inventory preserves selected event extents and
+unknown dates without interpolating annual coverage. An original-reference
+crosswalk connects the earlier declared-occurrence registers to the same exact
+originals in the new workrooms. It supplies navigation, not new occurrence matching,
+revised historical conclusions or corporate-period completeness. Exact private
+plans, inventories and verification receipts remain in the execution checkpoint.
+
+The sample-execution history now keeps observations visible while exact evidence
+references expand on demand. Keyboard expansion/collapse, exact citations, command
+payload preservation, correction history, permission changes and narrow layouts
+passed the focused browser check; 11 focused unit tests and the TypeScript/build
+checks passed. Existing preview bundles remain preserved. These checks establish
+technical behavior, not owner usability acceptance.
