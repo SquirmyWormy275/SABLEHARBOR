@@ -1,6 +1,6 @@
 # Audit-suite execution closeout
 
-The current private technical snapshot is
+The latest indexed private review packet is
 `enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-final-v1/`
 at A revision 1810 and B revision 1936. Its frozen basis, 68 pinned inputs,
 all 818 task instances, linked workpapers and sample traces, and 16 recorded
@@ -9,10 +9,18 @@ passed desktop and narrow-layout, keyboard, filter and exact-data checks;
 the preceding screenshot-timeout failure is retained separately. The 12 most
 recent local findings passed independent raw-event and company-source
 preservation checks. These results establish a versioned technical snapshot,
-not an accepted full-scope audit.
+not an accepted full-scope audit. A later, separately verified batch of 24
+additional-duty task instances advanced the actual workrooms to A revision 1834
+and B revision 1960. Its reviewed source plan, exact pre-change capture,
+disposable rehearsal, 48 ordinary command transitions, unchanged 60 company
+source roots, and actual raw-event transitions passed independent checks. The
+new work has not yet been incorporated into a successor indexed packet.
 
-Per workroom, 79 tasks are `COMPLETE`, 132 are `IN_PROGRESS`, and 198 remain
-`NOT_STARTED`. Of the 198, 196 are additional SOC 2/HIPAA duties and two are
+In the indexed packet, per workroom, 79 tasks are `COMPLETE`, 132 are
+`IN_PROGRESS`, and 198 remain `NOT_STARTED`. The verified later batch changes
+those actual-workroom counts to 85 `COMPLETE`, 138 `IN_PROGRESS`, and 186
+`NOT_STARTED` per profile, without broader task credit. Of the indexed 198,
+196 are additional SOC 2/HIPAA duties and two are
 scope or qualified-review dependencies. The unstarted duties have no linked
 workpaper or sample trace in this snapshot. They require clause-level
 examination and applicability decisions; conditional wording alone does not
@@ -69,7 +77,7 @@ authorize publication, deployment, a real assurance opinion or writes to Atlas.
 
 ## Private review index
 
-The latest consolidated local review snapshot is
+The latest consolidated indexed review snapshot is
 `enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-final-v1/`.
 Its `INDEX.md` links the task register, unchanged queue acceptance criteria and
 hashed supporting receipts. `PROCEDURES.html` provides offline search, workroom,
