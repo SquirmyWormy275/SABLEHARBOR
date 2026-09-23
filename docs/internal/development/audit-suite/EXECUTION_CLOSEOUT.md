@@ -20,10 +20,21 @@ transitions in total, and independent raw-event and preservation checks over
 the unchanged 60 company source roots. The newer work has not yet been
 incorporated into a successor indexed packet.
 
+A fourth, separately verified batch examined 36 additional partial task
+instances and advanced the original workrooms to A revision 1912 and B
+revision 2038. Its 72 ordinary workpaper/task commands passed a cloned
+rehearsal, exact pre-change capture, and independent raw-event, actor,
+timestamp, source-route and 60-root preservation checks. The independently
+reviewed historical supplement also checked 930 earlier event rows across 62
+ranges for the previously missing typed-time and learner-authority assertions;
+its six independently sampled raw rows passed separate spot checks. Those
+technical checks do not broaden the substantive audit conclusions.
+
 In the indexed packet, per workroom, 79 tasks are `COMPLETE`, 132 are
 `IN_PROGRESS`, and 198 remain `NOT_STARTED`. The two verified later batches
 change those actual-workroom counts to 89 `COMPLETE`, 155 `IN_PROGRESS`, and
-165 `NOT_STARTED` per profile, without broader task credit. The documentary
+165 `NOT_STARTED` per profile, without broader task credit. The 36-task fourth
+batch updates already partial tasks and does not change these counts. The documentary
 batch completes examination of eight exact legal-source task instances across
 the two profiles with `LIMITATION`; it does not establish a live HIPAA
 obligation, processing of PHI, or effective operation. Of the indexed 198,
