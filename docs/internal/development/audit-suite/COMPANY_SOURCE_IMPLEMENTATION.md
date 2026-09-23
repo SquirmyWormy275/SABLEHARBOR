@@ -1340,3 +1340,26 @@ with 2,154 Python tests and three skips. Prospective operation preparations and
 disposable rehearsals do not themselves establish company execution or repair a
 historical audit period. Their actual execution, when performed, requires separate
 native records and verification receipts in the private execution index.
+
+### Prospective company operations and period boundaries
+
+The declared 2028 nonhuman-identity, controlled-record review, backup and restore
+operations have now executed in their company source stores. Separate read-only
+verification checked native records, replay history and scoped results. Failed or
+missing attempts remain visible alongside later successful operations. Local
+criterion approval and recorded technical review do not establish enterprise
+recovery objectives, qualified human sign-off or canonical approval.
+
+The private `prospective-company-source-register-v1` indexes 23 source stores and
+205 exact native version identities, with metadata, content hashes, dates and
+the four independent execution receipts. All 205 records fall outside the selected
+2027 business period. Twenty seed records were available by the current collection
+cutoff but still concern 2028; the other 185 became available after that cutoff.
+The register therefore does not repair historical coverage or establish a complete
+company population. Its per-store captures are not one atomic enterprise snapshot.
+
+This register creates no audit collection or access grant. A later engagement must
+obtain eligible originals through the ordinary company source interfaces. Its
+metadata index is navigation to company-owned evidence, not a preloaded audit
+evidence set. Exact paths, scoped results and preservation qualifications remain
+in the excluded execution index.
