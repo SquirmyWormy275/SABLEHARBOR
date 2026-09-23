@@ -111,6 +111,20 @@ function SampleWorkspace({
   const traces = (
     Array.isArray(e.sample_executions) ? e.sample_executions : []
   ) as Record<string, unknown>[];
+  const historyQuery = historySearch.trim().toLowerCase();
+  const matchingTraces = traces.filter((t) =>
+    [
+      t.id,
+      t.task_id,
+      taskLabels.get(String(t.task_id)),
+      t.selection_id,
+      t.workpaper_id,
+      t.purpose,
+    ]
+      .join(" ")
+      .toLowerCase()
+      .includes(historyQuery),
+  );
   return (
     <section className="sample-executions" aria-label="Sample execution traces">
       <h2>Sample execution traces</h2>
@@ -542,24 +556,8 @@ function SampleWorkspace({
         />
       </label>
       <p>
-        Showing{" "}
-        {Math.min(
-          historyPage * 20 + 20,
-          traces.filter((t) =>
-            JSON.stringify([t.id, t.task_id, t.selection_id, t.workpaper_id])
-              .toLowerCase()
-              .includes(historySearch.toLowerCase()),
-          ).length,
-        )}{" "}
-        of{" "}
-        {
-          traces.filter((t) =>
-            JSON.stringify([t.id, t.task_id, t.selection_id, t.workpaper_id])
-              .toLowerCase()
-              .includes(historySearch.toLowerCase()),
-          ).length
-        }{" "}
-        matching revisions.
+        Showing {Math.min(historyPage * 20 + 20, matchingTraces.length)} of{" "}
+        {matchingTraces.length} matching revisions.
       </p>
       <button
         disabled={historyPage === 0}
@@ -568,31 +566,22 @@ function SampleWorkspace({
         Previous executions
       </button>
       <button
-        disabled={
-          (historyPage + 1) * 20 >=
-          traces.filter((t) =>
-            JSON.stringify([t.id, t.task_id, t.selection_id, t.workpaper_id])
-              .toLowerCase()
-              .includes(historySearch.toLowerCase()),
-          ).length
-        }
+        disabled={(historyPage + 1) * 20 >= matchingTraces.length}
         onClick={() => setHistoryPage(historyPage + 1)}
       >
         Next executions
       </button>
-      {traces
-        .filter((t) =>
-          JSON.stringify([t.id, t.task_id, t.selection_id, t.workpaper_id])
-            .toLowerCase()
-            .includes(historySearch.toLowerCase()),
-        )
+      {matchingTraces
         .slice(historyPage * 20, historyPage * 20 + 20)
         .map((t) => (
           <details key={String(t.id)}>
             <summary>
-              {String(t.id)} · revision {String(t.revision)} ·{" "}
-              {String(t.task_id)}
+              {taskLabels.get(String(t.task_id)) ?? String(t.task_id)} ·
+              revision {String(t.revision)}
             </summary>
+            <p>
+              Execution {String(t.id)} · Task {String(t.task_id)}
+            </p>
             <p>
               Selection {String(t.selection_id)} · Workpaper{" "}
               {String(t.workpaper_id)} version {String(t.workpaper_version)} ·
