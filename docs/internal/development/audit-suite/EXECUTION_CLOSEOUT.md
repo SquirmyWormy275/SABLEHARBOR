@@ -424,6 +424,51 @@ bound Key and historical A1939/B2066 audits remained unchanged. BCM-002/003
 tasks remain `NOT_STARTED`/`NOT_RUN`; this selected local slice grants no
 full-year, control-effectiveness, professional, task or grade credit.
 
+The paired [CFG-002 local procedure run](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-cfg002-ordinary-procedures-run-v2/RESULT.json)
+followed an independently reviewed plan, a copy-only API smoke, and a gated
+rehearsal. The first gated rehearsal failed during final verification when a
+transient copied SQLite WAL disappeared between listing and `stat`; its
+[independent failure review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-cfg002-ordinary-procedures-rehearsal-failure-independent-v1/REVIEW.json)
+(SHA-256 `bc19edddfbdb699561fcf42cbb93912482db618c3084d8bbe3a04917afe2e8e5`)
+keeps that output failed and preserved. A new-only runner quiesced the copied
+databases and passed a separate rehearsal before the actual private run.
+The [independent actual postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-cfg002-ordinary-procedures-actual-independent-postreview-v2/REVIEW.json)
+(SHA-256 `5b971fa1c14d20dee9f752ae7d2747695fafc4ec5664dcdf8e72f287fe6d7315`)
+verified A96→100/B69→73, four ordinary commands and 13 exact native/receipt/
+retained-byte joins per branch. The one local APPLY shows a pre-operation
+configuration mismatch and matching post-operation bytes against the locally
+approved object; B's upstream approved chain remains the A source. Original
+workrooms, native roots, bound Key and historical audits remained unchanged.
+All six CFG-002 tasks per branch remain `NOT_STARTED`/`NOT_RUN`;
+there is no enterprise drift, full-period, task, grade or professional credit.
+
+The current [paired 818-row task screen](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-all409-task-source-screen-v3/SUMMARY.json)
+passed [independent review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-all409-task-source-screen-independent-review-v3/REVIEW.json)
+(SHA-256 `ac4420f96db4441b8e3ec5e7433d5db13bdf23eb54f91086c7e5f32cb243fb39`).
+At A100/B73, each branch has 409 uncredited tasks: 36 have an explicit
+selected-workroom source association, 373 do not, and only three have a
+task-specific recorded procedure. Association is not evidence sufficiency.
+The [native coverage plan](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-unmatched373-company-native-coverage-plan-v2/PLAN.md)
+and its [independent review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-unmatched373-company-native-coverage-independent-review-v2/REVIEW.json)
+(SHA-256 `f09117919331a3a2ca36963f4d9ad9135461af47f9fd9a6db00c38a0d235e1f4`)
+separate 84 tasks per branch with existing portfolio native references, four
+with a separate local SEC-006 source, 283 needing further source discovery or
+period-coherent company activity, and two owner service-scope decisions.
+
+The first 18-control batch design was [marked CHANGES_REQUIRED](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-existing-native-ordinary-collection-batch-independent-review-v1/REVIEW.json)
+(SHA-256 `5109c4bd936a54e0a38a74adb425f98d9fe274e7d9a7e850c796135d6102953d`):
+its new engagements bound only nine additional company components and could
+not later absorb the four B2/BCM/CFG components. The corrected
+[13-component integrated design](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-existing-native-batch-plan-v3/PLAN.md)
+passed [independent static review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-existing-native-batch-independent-review-v3/REVIEW.json)
+(SHA-256 `8dd2d89db34b28f28a272f9865d594cf40bb989efd13c6363374c1ab4614ec97`).
+It requires a fresh zero-evidence A/B pair with all 13 source components
+bound before activation, ordinary recollection of B2 originals, replay of
+BCM/CFG work, and then additional native collection. This is a reviewed
+design, not an executed integrated audit; old Key and audit artifacts cannot
+be transplanted. Full-period population, qualified review and owner acceptance
+remain open.
+
 The queue's job `state`, acceptance criteria and attributed checkpoints must be read
 together. Historical `*_scope_update` entries record what was authorized at the time;
 their `QUEUED_NOT_STARTED` labels do not reset later job progress. Conversely, a
