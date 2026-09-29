@@ -89,6 +89,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Main source protection](../../internal/company-closeout/MAIN_PROTECTION.md) — MD
 - [Orientation commission history — September 22, 2026](../../internal/company-closeout/ORIENTATION_COMMISSIONS_2026-09-22.md) — MD
 - [Company edition to existing audit portal](../../internal/company-closeout/PORTAL_CONTRACT.md) — MD
+- [August 2026 period population handoff to the audit portal](../../internal/company-closeout/PORTAL_PERIOD_SOURCE_HANDOFF_2026-09-28.md) — MD
 - [Selected-edition portal review rehearsal](../../internal/company-closeout/PORTAL_SELECTED_REVIEW.md) — MD
 - [PR #145 integration evidence](../../internal/company-closeout/PR145_INTEGRATION.md) — MD
 - [Company closeout continuation — September 22, 2026](../../internal/company-closeout/RESIDUAL_CLOSEOUT_2026-09-22.md) — MD
