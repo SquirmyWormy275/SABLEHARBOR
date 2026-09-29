@@ -1,8 +1,8 @@
 # Company closeout — synthetic scope and external execution
 
-**Document ID:** SH-COMPANY-SCOPE-20260929-18  
-**Prepared:** September 29, 2026, America/Los_Angeles  
-**State:** PROPOSED; LOCKED SCOPE DISPOSITION only after owner-provenance review and repository acceptance  
+**Document ID:** SH-COMPANY-SCOPE-20260929-18
+**Prepared:** September 29, 2026, America/Los_Angeles
+**State:** PROPOSED; LOCKED SCOPE DISPOSITION only after owner-provenance review and repository acceptance
 **Scope:** Issue #18 disposition only; no change to the frozen company edition
 
 ## Authority and decision boundary
