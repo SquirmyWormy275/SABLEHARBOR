@@ -7,6 +7,7 @@ import json
 import os
 from pathlib import Path
 
+from .company_rights_producer import RightsUnavailable
 from .store import DomainError, Store
 
 
@@ -198,7 +199,7 @@ def main(argv=None):
             ssl_certfile=str(args.tls_cert) if args.tls_cert else None,
             ssl_keyfile=str(args.tls_key) if args.tls_key else None,
         )
-    except (DomainError, OSError) as exc:
+    except (DomainError, RightsUnavailable, OSError) as exc:
         parser.error(str(exc))
 
 

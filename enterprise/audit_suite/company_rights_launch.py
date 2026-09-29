@@ -24,7 +24,7 @@ from .company_rights_producer import (
     VerifiedCaseContext,
     pinned_git_source_reader,
 )
-from .store import DomainError, Store
+from .store import DomainError, Store, canonical
 
 ROOT = Path(__file__).resolve().parents[2]
 POLICY_PATH = "enterprise/ccf/company_closeout/source/information_policy_2026_09_22.json"
@@ -203,6 +203,45 @@ def _case_for_context(
     return authority["case_clock_approval"]["case_as_of"]
 
 
+def _exact_staged(producer: CompanyRightsProducer, authority: dict, binding: dict) -> None:
+    roles = {row["role"]: row["person_id"] for row in authority["person_bindings"]}
+    expected_bindings = sorted(
+        (
+            principal,
+            binding["engagement_id"],
+            roles[role],
+            authority["engagement"]["tenant"],
+            authority["engagement"]["purpose"],
+        )
+        for role, principal in binding["principals"].items()
+    )
+    expected_records = sorted(
+        (
+            row["record_id"], row["repository_path"], row["source_sha256"], canonical(row)
+        )
+        for row in authority["records"]
+    )
+    with producer._locked():
+        with producer._db(producer.rights_db) as db:
+            current_bindings = sorted(
+                tuple(row) for row in db.execute(
+                    "SELECT principal,engagement,person_id,tenant,purpose FROM bindings"
+                )
+            )
+            current_records = sorted(
+                tuple(row) for row in db.execute(
+                    "SELECT record_id,repository_path,source_sha256,policy_row FROM records"
+                )
+            )
+            if (
+                producer._revision(db) != len(expected_bindings) + len(expected_records)
+                or current_bindings != expected_bindings
+                or current_records != expected_records
+            ):
+                raise RightsUnavailable("Exact staged rehearsal rights population unavailable")
+    producer.checkpoint()
+
+
 def _checked_source(config: dict) -> None:
     try:
         current = subprocess.run(
@@ -232,7 +271,9 @@ def _checked_source(config: dict) -> None:
         raise DomainError("Exact clean company source and policy required", status=503) from exc
 
 
-def reviewed_company_factories(config_file: Path, config_sha256: str):
+def reviewed_company_factories(
+    config_file: Path, config_sha256: str, *, require_staged: bool = True
+):
     """Return trusted factories for `service.create_app` at a clean source commit.
 
     The accepted 702-person census is verified through its existing generator.
@@ -258,19 +299,25 @@ def reviewed_company_factories(config_file: Path, config_sha256: str):
     except (ImportError, KeyError, TypeError, ValueError) as exc:
         raise DomainError("Accepted company person/policy source unavailable", status=503) from exc
     source = pinned_git_source_reader(ROOT, config["source_commit"])
-    if "rehearsal_authority_sha256" in config:
+    rehearsal = "rehearsal_authority_sha256" in config
+    if rehearsal:
         _rehearsal(config, source)
-
-        def approved_case(context: VerifiedCaseContext) -> str:
-            _checked_source(config)
-            authority, binding = _rehearsal(config, source)
-            return _case_for_context(authority, binding, context)
-    else:
-        approved_case = None
 
     def rights_factory(engine):
         _checked_source(config)
-        return CompanyRightsProducer(
+        producer_ref = None
+
+        def approved_case(context: VerifiedCaseContext) -> str:
+            if _private_config(config_file, config_sha256) != config:
+                raise RightsUnavailable("Protected launch configuration changed")
+            _checked_source(config)
+            authority, binding = _rehearsal(config, source)
+            if producer_ref is None:
+                raise RightsUnavailable("Protected producer unavailable")
+            _exact_staged(producer_ref, authority, binding)
+            return _case_for_context(authority, binding, context)
+
+        producer = CompanyRightsProducer(
             store=engine.store,
             rights_root=Path(config["rights_root"]),
             checkpoint_root=Path(config["checkpoint_root"]),
@@ -281,8 +328,13 @@ def reviewed_company_factories(config_file: Path, config_sha256: str):
             validate_record=information_policy.validate_record,
             decide=information_policy.decide,
             known_person_ids=frozenset(people),
-            case_as_of=approved_case,
+            case_as_of=approved_case if rehearsal else None,
         )
+        producer_ref = producer
+        if rehearsal and require_staged:
+            authority, binding = _rehearsal(config, source)
+            _exact_staged(producer, authority, binding)
+        return producer
 
     native_factory = None
     if "native_manifest_file" in config:
@@ -311,7 +363,9 @@ def stage_reviewed_company_authority(
     _checked_source(config)
     source = pinned_git_source_reader(ROOT, config["source_commit"])
     authority, binding = _rehearsal(config, source)
-    rights_factory, _ = reviewed_company_factories(config_file, config_sha256)
+    rights_factory, _ = reviewed_company_factories(
+        config_file, config_sha256, require_staged=False
+    )
     store = Store(private_root)
     producer = rights_factory(SimpleNamespace(store=store))
     roles = {row["role"]: row["person_id"] for row in authority["person_bindings"]}

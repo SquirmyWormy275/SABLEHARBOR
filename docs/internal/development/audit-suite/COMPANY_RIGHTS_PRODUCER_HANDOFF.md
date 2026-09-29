@@ -265,8 +265,10 @@ python -m enterprise.audit_suite stage-company-rights \
 
 The command prints source commit, authority hash, engagement, counts, rights
 revision and checkpoint epoch. It refuses a nonempty rights store and checks
-membership before writing. If staging fails after a write, use fresh disposable
-rights/checkpoint roots; a partial stage is not an accepted receipt. The
+membership before writing. Protected startup and each case-time decision also
+require the exact staged two bindings and four source rows; extra or partial
+rights populations fail closed. If staging fails after a write, use fresh
+disposable rights/checkpoint roots; a partial stage is not an accepted receipt. The
 server-only resolver rechecks the accepted source and private binding hash on
 every decision and requires the same verified principal, person, engagement,
 tenant and purpose. Learner `clock.advance` and HTTP fields cannot alter it.
