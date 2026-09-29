@@ -1,0 +1,85 @@
+{
+  "base_2027_01_train_hours_before_after": [
+    15.104543029083313,
+    15.072371699481497
+  ],
+  "candidate_geojson_sha256": "2d3358d9dd7d117954b7d36879626659117cb9387b1350b4541abccb726228ad",
+  "candidate_report_sha256": "7592f356a9d13878a61960d735fba61924119c8efac226544c133f85d59b4750",
+  "downside_2027_03_conditional_capacity_cars": 1008,
+  "forecast_datasets": {
+    "assets": {
+      "economic_rows_equal": true,
+      "rows": 13867,
+      "successor_export_sha256": "71d91634e84ba1d14c40b9c8d28996a94820263d71a0f209f890a77643dbb3a6"
+    },
+    "contract_revenue": {
+      "economic_rows_equal": true,
+      "rows": 5220,
+      "successor_export_sha256": "77f4e73106847e85933be3f92cd67d67fac3b5073bc4c0c87a3f47859ac3b930"
+    },
+    "debt": {
+      "economic_rows_equal": true,
+      "rows": 180,
+      "successor_export_sha256": "900b3189d6998977b69844d196ee0d86a567ecba055e25aacdea824ea019245c"
+    },
+    "eliminations": {
+      "economic_rows_equal": true,
+      "rows": 180,
+      "successor_export_sha256": "4b69863445854ee905b8261e4f72676314182bf0f7f5f693a7341650673a02c2"
+    },
+    "funding": {
+      "economic_rows_equal": true,
+      "rows": 360,
+      "successor_export_sha256": "8fc37bb3080c1a84a953ce5ab3127b5959abfb4e371cdaba2856e828822caccd"
+    },
+    "intercompany": {
+      "economic_rows_equal": true,
+      "rows": 3240,
+      "successor_export_sha256": "3028ae44fb8985bd16124279926f734e7e41d5b9935c4a0ca2054dc8bc2a41d9"
+    },
+    "inventory": {
+      "economic_rows_equal": true,
+      "rows": 180,
+      "successor_export_sha256": "07d2f879fe4bf803f91e3949feb261b2f1469690f86185a3e1eff901c2ddab65"
+    },
+    "journal": {
+      "economic_rows_equal": true,
+      "rows": 123716,
+      "successor_export_sha256": "a9a2df43da4dee196e54bcdebbd2e1688fa8d33f1eccbd9f7247c79aa9ff797d"
+    },
+    "monthly_statements": {
+      "economic_rows_equal": true,
+      "rows": 360,
+      "successor_export_sha256": "f99bf00f43fd5a9f8b53496ef65e2df4a095bffa5039e02fccf0f99f977e8303"
+    },
+    "opening_balances": {
+      "economic_rows_equal": true,
+      "rows": 494,
+      "successor_export_sha256": "4899b1603658f6bfd2eb08da94e97673a07b90f126cf170665216514d979469d"
+    },
+    "payments": {
+      "economic_rows_equal": true,
+      "rows": 12941,
+      "successor_export_sha256": "5f570ecf951466e23727ae80744e7db8efc2f1dba4c80e1acc0b253856ac14ba"
+    },
+    "tax": {
+      "economic_rows_equal": true,
+      "rows": 360,
+      "successor_export_sha256": "6e76e678989edf6e4441a60fedf05cd8a4e2070102a683d59699961a3245e247"
+    },
+    "trial_balances": {
+      "economic_rows_equal": true,
+      "rows": 10350,
+      "successor_export_sha256": "f43173fda0814aaf8cee8adeda9440559d2558821813427c1861c533076da41b"
+    }
+  },
+  "modeled_journal_cash_tax_delta_usd": 0,
+  "only_operating_differences": [
+    "available_at",
+    "capacity.rail.train_hours_daily"
+  ],
+  "planning_months": 180,
+  "scope": "Complete three-route geometry with inherited branch switching; no proposed leads or new rights/costs placed in service. Metadata availability advances to successor date.",
+  "source_selector_sha256": "3aa95c1764a144dc3611acca29f2982c59b44863766810532c6ef42faa3c1b80",
+  "status": "INDEPENDENT_REPERFORM_PASSED"
+}

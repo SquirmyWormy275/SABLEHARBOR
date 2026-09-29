@@ -26,8 +26,8 @@ MOUNTAIN = ZoneInfo("America/Denver")
 UTC = UTC
 
 
-def load() -> dict:
-    return json.loads((SOURCE / "operations.json").read_text())
+def load(source_dir: Path = SOURCE) -> dict:
+    return json.loads((source_dir / "operations.json").read_text())
 
 
 def write_json(path: Path, value: object) -> None:
@@ -294,7 +294,7 @@ def economics(data: dict) -> dict:
     }
 
 
-def validate(data: dict) -> dict:
+def validate(data: dict, source_dir: Path = SOURCE) -> dict:
     interface = data["interface"]
     calculated = economics(data)
     checks = {}
@@ -304,7 +304,7 @@ def validate(data: dict) -> dict:
         if not result:
             raise ValueError(f"Operations reconciliation failed: {name}")
 
-    network = json.loads((SOURCE / "geography/network.geojson").read_text())
+    network = json.loads((source_dir / "geography/network.geojson").read_text())
     rails = [f for f in network["features"] if f["id"].startswith("BST-")]
     measured = sum(line_miles(f["geometry"]["coordinates"]) for f in rails)
     check("measured unique railroad centerline is 40 miles", abs(measured - 40) < 0.0001)
@@ -480,7 +480,7 @@ def validate(data: dict) -> dict:
         data["capacity_model"]["required_tractive_effort_lb"]
         < data["capacity_model"]["available_tractive_effort_lb"],
     )
-    finance = json.loads((SOURCE / "finance.json").read_text())
+    finance = json.loads((source_dir / "finance.json").read_text())
     employees = {e["employee_id"]: e for e in finance["employees"]}
     facilities = {f["id"]: f for f in data["facilities"]}
     assignments = data["contract_facility_assignments"]
@@ -613,7 +613,7 @@ def validate(data: dict) -> dict:
         == data["claims"]["total_adverse_case_usd"]
         == 1300000,
     )
-    screen = json.loads((SOURCE / "geography/spatial_screen.json").read_text())
+    screen = json.loads((source_dir / "geography/spatial_screen.json").read_text())
     check(
         "no inherited waterbody crossing introduced",
         all(r["overlap_metres"] < 0.001 for r in screen["waterbody_overlaps"]),
@@ -621,12 +621,12 @@ def validate(data: dict) -> dict:
     for name, digest in screen["input_sha256"].items():
         check(
             f"spatial screen input {name}",
-            hashlib.sha256((SOURCE / "geography" / name).read_bytes()).hexdigest() == digest,
+            hashlib.sha256((source_dir / "geography" / name).read_bytes()).hexdigest() == digest,
         )
     for path, digest in data["geography"]["source_file_sha256"].items():
         check(
             f"pinned geography {path}",
-            hashlib.sha256((SOURCE / path).read_bytes()).hexdigest() == digest,
+            hashlib.sha256((source_dir / path).read_bytes()).hexdigest() == digest,
         )
     return {
         "passed": True,
@@ -686,10 +686,16 @@ class SVG:
         path.write_text("\n".join(self.items + ["</svg>"]) + "\n")
 
 
-def regional_map(out: Path, data: dict) -> None:
+def regional_map(out: Path, data: dict, source_dir: Path = SOURCE) -> None:
+    successor = data.get("successor_known_on_utc")
+    routes = data["geography"]
     svg = SVG(
         "BS&T / TAYLOR / RED WASH",
-        "Controlled operating geography · 40.000 route-miles · September 5, 2026 case cutoff",
+        (
+            "Controlled operating geography · 40.000 route-miles · September 29, 2026 successor"
+            if successor else
+            "Controlled operating geography · 40.000 route-miles · September 5, 2026 case cutoff"
+        ),
     )
     lon0, lat0 = -108.1, 42.0
     metres_lon = math.pi * 6371008.8 / 180 * math.cos(math.radians(lat0))
@@ -718,7 +724,7 @@ def regional_map(out: Path, data: dict) -> None:
         ("wamsutter_highways.geojson", "#c8b18b", 2),
         ("wamsutter_fra_rail.geojson", "#7e888c", 2),
     ]:
-        for feature in json.loads((SOURCE / "geography" / file).read_text())["features"]:
+        for feature in json.loads((source_dir / "geography" / file).read_text())["features"]:
             for line in reference_lines(feature["geometry"]):
                 visible = [
                     screen(p) for p in line if -108.43 < p[0] < -107.82 and 41.66 < p[1] < 42.29
@@ -730,7 +736,7 @@ def regional_map(out: Path, data: dict) -> None:
                         weight,
                         fill="#d7e4e7" if file == "wyoming_waterbodies.geojson" else "none",
                     )
-    network = json.loads((SOURCE / "geography/network.geojson").read_text())
+    network = json.loads((source_dir / "geography/network.geojson").read_text())
     for feature in network["features"]:
         road = feature["id"] == "ROAD-RW-01"
         svg.path(
@@ -763,9 +769,9 @@ def regional_map(out: Path, data: dict) -> None:
     svg.text(78 + five_mile_pixels - 12, 798, "5 mi", "small")
     notes = [
         "NETWORK AND CUSTODY",
-        "33.3485 mi Wamsutter–Taylor main",
-        "4.0000 mi East Materials branch",
-        "2.6515 mi Mineral Transfer branch",
+        f"{routes['mainline_route_miles']:.4f} mi Wamsutter–Taylor main",
+        f"{routes['branches'][0]['miles']:.4f} mi East Materials branch",
+        f"{routes['branches'][1]['miles']:.4f} mi Mineral Transfer branch",
         "Parallel yard tracks excluded from route miles",
         "",
         "Solid navy: synthetic railway",
@@ -818,7 +824,13 @@ def historical_map(out: Path, data: dict) -> None:
     """Show construction epochs without inventing an old georeferenced survey."""
     svg = SVG(
         "BS&T · HISTORICAL ROUTE DEVELOPMENT",
-        "1898 coal origin · 1954 rescue · later industrial extensions · September 5, 2026 case cutoff",  # noqa: E501 — literal SVG/document text
+        (
+            "1898 coal origin · 1954 rescue · later industrial extensions · "
+            "September 29, 2026 successor"
+            if data.get("successor_known_on_utc") else
+            "1898 coal origin · 1954 rescue · later industrial extensions · "
+            "September 5, 2026 case cutoff"
+        ),
     )
     epochs = {r["epoch"]: r for r in data["geography"]["historical_route_epochs"]}
     colors = {"old": "#8b684c", "main": "#1f5261", "east": "#ba803d", "mineral": "#548375"}
@@ -853,8 +865,8 @@ def historical_map(out: Path, data: dict) -> None:
     svg.path([(1064, 283), (1140, 285), (1200, 250)], colors["mineral"], 6)
     svg.dot(1041, 570, 6)
     svg.dot(1077, 248, 6)
-    svg.text(927, 196, "1972 East +4.0000 mi", "small")
-    svg.text(927, 222, "1986 Mineral +2.6515 mi", "small")
+    svg.text(927, 196, f"1972 East +{epochs['1972']['added_route_miles']:.4f} mi", "small")
+    svg.text(927, 222, f"1986 Mineral +{epochs['1986']['added_route_miles']:.4f} mi", "small")
     svg.text(1157, 335, "Mineral", "small")
     svg.text(1160, 430, "East", "small")
     svg.text(1050, 612, "Current total: 40.0000 mi", "small")
@@ -863,8 +875,8 @@ def historical_map(out: Path, data: dict) -> None:
     notes = [
         "Dashed brown: unlocated coal-era reconstruction. Navy: derived 1968 mainline. Ochre: 1972 East. Green: 1986 Mineral.",  # noqa: E501 — literal SVG/document text
         "The 14–16-mile range belongs to the surviving 1954 estate; it is not a precise 1898 length or a surveyed old boundary.",  # noqa: E501 — literal SVG/document text
-        "1968 net route growth is about 17.35–19.35 miles; gross new construction and realigned old mileage are not established.",  # noqa: E501 — literal SVG/document text
-        "1972 total: 37.3485 miles. 1986, 1991 and current total: 40.0000. Parallel yard tracks add no unique route-miles.",  # noqa: E501 — literal SVG/document text
+        f"1968 net route growth is about {epochs['1968']['net_route_growth_from_1954_low']:.2f}–{epochs['1968']['net_route_growth_from_1954_high']:.2f} miles; gross new construction and realigned old mileage are not established.",  # noqa: E501 — literal SVG/document text
+        f"1972 total: {epochs['1972']['route_miles']:.4f} miles. 1986, 1991 and current total: 40.0000. Parallel yard tracks add no unique route-miles.",  # noqa: E501 — literal SVG/document text
         "Red Wash is absent from every rail epoch: ordinary mine receipts use trucks, and direct uranium custody remains gated.",  # noqa: E501 — literal SVG/document text
     ]
     for index, note in enumerate(notes):
@@ -1088,7 +1100,7 @@ def csv_table(path: Path, rows: list) -> None:
             )
 
 
-def geography_outputs(out: Path, data: dict) -> None:
+def geography_outputs(out: Path, data: dict, source_dir: Path = SOURCE) -> None:
     """Emit portable GIS layers, keeping synthetic envelopes distinct from parcels."""
     out.mkdir(exist_ok=True)
     features = []
@@ -1135,7 +1147,7 @@ def geography_outputs(out: Path, data: dict) -> None:
             ],
         },
     )
-    network = json.loads((SOURCE / "geography/network.geojson").read_text())
+    network = json.loads((source_dir / "geography/network.geojson").read_text())
     write_json(out / "network.geojson", network)
     route_by_id = {f["id"]: f for f in network["features"]}
     facility_by_id = {f["id"]: f for f in data["facilities"]}
@@ -1198,9 +1210,11 @@ def geography_outputs(out: Path, data: dict) -> None:
     )
 
 
-def build(out: Path = DEFAULT_OUT) -> dict:
-    data = load()
-    result = validate(data)
+def build(out: Path = DEFAULT_OUT, source_dir: Path = SOURCE) -> dict:
+    if source_dir.resolve() != SOURCE.resolve() and out.resolve() == DEFAULT_OUT.resolve():
+        raise ValueError("Successor sources require a separate output directory")
+    data = load(source_dir)
+    result = validate(data, source_dir)
     out.mkdir(parents=True, exist_ok=True)
     maps = out / "maps"
     maps.mkdir(exist_ok=True)
@@ -1241,11 +1255,11 @@ def build(out: Path = DEFAULT_OUT) -> dict:
         ]
     ]
     write_json(out / "service_calendar_cases.json", cases)
-    regional_map(maps, data)
+    regional_map(maps, data, source_dir)
     historical_map(maps, data)
     site_map(maps, data)
     underground_map(maps, data)
-    geography_outputs(out / "geography", data)
+    geography_outputs(out / "geography", data, source_dir)
     db = out / "operations.sqlite3"
     if db.exists():
         db.unlink()
@@ -1263,8 +1277,8 @@ def build(out: Path = DEFAULT_OUT) -> dict:
         con.execute("VACUUM")
     write_json(out / "validation.json", result)
     manifest = {
-        "document_id": "SH-IND-OPS-001",
-        "source_sha256": hashlib.sha256((SOURCE / "operations.json").read_bytes()).hexdigest(),
+        "document_id": data["document_id"],
+        "source_sha256": hashlib.sha256((source_dir / "operations.json").read_bytes()).hexdigest(),
         "cutoff": data["cutoff"],
         "generated": {
             str(p.relative_to(out)): hashlib.sha256(p.read_bytes()).hexdigest()
@@ -1284,20 +1298,21 @@ def build(out: Path = DEFAULT_OUT) -> dict:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out", type=Path, default=DEFAULT_OUT)
+    parser.add_argument("--source-dir", type=Path, default=SOURCE)
     parser.add_argument("--validate-only", action="store_true")
     parser.add_argument("--verify-geography", action="store_true")
     args = parser.parse_args()
     if args.verify_geography:
         print(json.dumps(geography_verification(), sort_keys=True))
     elif args.validate_only:
-        result = validate(load())
+        result = validate(load(args.source_dir), args.source_dir)
         print(
             json.dumps(
                 {"passed": result["passed"], "checks": result["check_count"]}, sort_keys=True
             )
         )
     else:
-        print(json.dumps(build(args.out), sort_keys=True))
+        print(json.dumps(build(args.out, args.source_dir), sort_keys=True))
 
 
 if __name__ == "__main__":
