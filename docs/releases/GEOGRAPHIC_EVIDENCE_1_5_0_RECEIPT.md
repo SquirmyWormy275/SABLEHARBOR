@@ -58,3 +58,12 @@ right of way or title, field engineering, precise external customer parcels,
 construction, in-service proposed leads or uranium custody. Those states
 remain unestablished or separately gated in the controlling sources. The
 fictional 1954 case remains visibly provisional.
+
+The scope document was authored before PR #187 merged and retains its
+prospective “pending” wording as historical bytes. The
+[accepted-state addendum](../canon/GEOGRAPHIC_SYNTHETIC_SCOPE_ACCEPTANCE_2026-09-29.md)
+pins that merge and supersedes only those pre-acceptance status sentences;
+its substantive limits remain controlling. The complete 1.5 asset was built
+from the accepted #187 commit before this indexed publication receipt. The
+release page and this later accepted addendum carry its publication and
+acceptance-state updates without changing the frozen asset or 1.4 base.
