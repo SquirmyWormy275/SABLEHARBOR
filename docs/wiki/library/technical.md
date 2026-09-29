@@ -99,6 +99,13 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Company closeout continuation — September 22, 2026](../../internal/company-closeout/RESIDUAL_CLOSEOUT_2026-09-22.md) — MD
 - [Current successor records — enterprise import contract](../../internal/company-closeout/SUCCESSOR_RECORDS_IMPORT_CONTRACT_2026-09-22.md) — MD
 
+## `docs/internal/company-closeout/daedalus-rehearsal-2026-09-29`
+
+- [Synthetic withheld comparison note](../../internal/company-closeout/daedalus-rehearsal-2026-09-29/DENIED_NOTE.md) — MD
+- [Synthetic payroll-release review note](../../internal/company-closeout/daedalus-rehearsal-2026-09-29/LOWER_TRUST_NOTICE.md) — MD
+- [Daedalus selected-company-record rehearsal source](../../internal/company-closeout/daedalus-rehearsal-2026-09-29/README.md) — MD
+- [Selected payroll-release IAM-007 case view](../../internal/company-closeout/daedalus-rehearsal-2026-09-29/SELECTED_IAM_CASE.md) — MD
+
 ## `docs/internal/company-closeout/evidence/newruntime/5344bf76`
 
 - [Public edition copy disposal — observed September 22, 2026](../../internal/company-closeout/evidence/newruntime/5344bf76/README.md) — MD

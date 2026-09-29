@@ -18,7 +18,7 @@
     "geospatial/finalization/DECISIONS.json": "54a9db4e09573711ed6acc313e08350215600c1ba6a8039e3f3f9e59723b2674",
     "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md": "f3966c6afbba4a57c394f9662de3ab6bc15ab5df22b5ff3d2df9157203acbf78",
     "enterprise/services/source/runtime_sites_2026-09-11.json": "fa216f629762503865fd9f1a3207e87691cd484cec9885bf25ce045b4525519c",
-    "docs/organization/source/chartbook.json": "6471a6362517f97574c775b73b94ac48d6060d81cee605eb661811425ed75866",
+    "docs/organization/source/chartbook.json": "6ba4f1ed1a14581455a62c3e79a29ca59dbaf1270dfb0db850c0376c15507b49",
     "industrial/source/operations.json": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b",
     "industrial/source/entities.json": "799a24baf3240d50c5d6a80ac0f9ddb9d023b7a36de058ec12546aac60caee29",
     "enterprise/services/source/components.json": "0d5e1fefa3e3286cae725a4b04241725fc2590dff4ccbdc7fde41a24740a0cd2",
@@ -53,15 +53,15 @@
     "catalog_objects": 186,
     "service_components": 49,
     "runtime_sites": 3,
-    "census_appearances": 907,
-    "coverage_records": 594,
+    "census_appearances": 912,
+    "coverage_records": 599,
     "classes": {
       "1": 2,
       "2": 16,
       "3": 6,
       "4": 62,
       "5": 19,
-      "6": 448,
+      "6": 453,
       "7": 5,
       "8": 36
     }
@@ -12822,6 +12822,501 @@
       "actual_occupancy": null
     },
     {
+      "id": "ORG:AS-P001",
+      "name": "Lila Kestrel",
+      "class": 6,
+      "classification": "distributed/nonphysical/reference",
+      "parent_id": null,
+      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "source_type": "SUPPLEMENTAL_CENSUS",
+      "canon_status": "SOURCE_RECORD_ONLY",
+      "status": "nonphysical",
+      "tenure": "unknown",
+      "occupancy_start": null,
+      "occupancy_end": null,
+      "relevant_date": null,
+      "date_precision": "UNKNOWN",
+      "precision": "UNLOCATED",
+      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
+      "provenance": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P001: Lila Kestrel, Chief of Enterprise Support Services, effective 2026-09-13"
+        }
+      ],
+      "detail_issue": null,
+      "geometry_issue": null,
+      "required_artifacts": [
+        "disposition"
+      ],
+      "package_required": false,
+      "actual_floor_count": null,
+      "actual_occupancy": null
+    },
+    {
+      "id": "ORG:AS-P002",
+      "name": "Adrian Lowe",
+      "class": 6,
+      "classification": "distributed/nonphysical/reference",
+      "parent_id": null,
+      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "source_type": "SUPPLEMENTAL_CENSUS",
+      "canon_status": "SOURCE_RECORD_ONLY",
+      "status": "nonphysical",
+      "tenure": "unknown",
+      "occupancy_start": null,
+      "occupancy_end": null,
+      "relevant_date": null,
+      "date_precision": "UNKNOWN",
+      "precision": "UNLOCATED",
+      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
+      "provenance": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P002: Adrian Lowe, Chief Financial Officer, effective 2026-09-13"
+        }
+      ],
+      "detail_issue": null,
+      "geometry_issue": null,
+      "required_artifacts": [
+        "disposition"
+      ],
+      "package_required": false,
+      "actual_floor_count": null,
+      "actual_occupancy": null
+    },
+    {
+      "id": "ORG:AS-P003",
+      "name": "Helena Ward",
+      "class": 6,
+      "classification": "distributed/nonphysical/reference",
+      "parent_id": null,
+      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "source_type": "SUPPLEMENTAL_CENSUS",
+      "canon_status": "SOURCE_RECORD_ONLY",
+      "status": "nonphysical",
+      "tenure": "unknown",
+      "occupancy_start": null,
+      "occupancy_end": null,
+      "relevant_date": null,
+      "date_precision": "UNKNOWN",
+      "precision": "UNLOCATED",
+      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
+      "provenance": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P003: Helena Ward, General Counsel, effective 2026-09-13"
+        }
+      ],
+      "detail_issue": null,
+      "geometry_issue": null,
+      "required_artifacts": [
+        "disposition"
+      ],
+      "package_required": false,
+      "actual_floor_count": null,
+      "actual_occupancy": null
+    },
+    {
+      "id": "ORG:AS-P004",
+      "name": "Nina Rowan",
+      "class": 6,
+      "classification": "distributed/nonphysical/reference",
+      "parent_id": null,
+      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "source_type": "SUPPLEMENTAL_CENSUS",
+      "canon_status": "SOURCE_RECORD_ONLY",
+      "status": "nonphysical",
+      "tenure": "unknown",
+      "occupancy_start": null,
+      "occupancy_end": null,
+      "relevant_date": null,
+      "date_precision": "UNKNOWN",
+      "precision": "UNLOCATED",
+      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
+      "provenance": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P004: Nina Rowan, Corporate Secretary, effective 2026-09-13"
+        }
+      ],
+      "detail_issue": null,
+      "geometry_issue": null,
+      "required_artifacts": [
+        "disposition"
+      ],
+      "package_required": false,
+      "actual_floor_count": null,
+      "actual_occupancy": null
+    },
+    {
+      "id": "ORG:AS-P005",
+      "name": "Martin Ives",
+      "class": 6,
+      "classification": "distributed/nonphysical/reference",
+      "parent_id": null,
+      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "source_type": "SUPPLEMENTAL_CENSUS",
+      "canon_status": "SOURCE_RECORD_ONLY",
+      "status": "nonphysical",
+      "tenure": "unknown",
+      "occupancy_start": null,
+      "occupancy_end": null,
+      "relevant_date": null,
+      "date_precision": "UNKNOWN",
+      "precision": "UNLOCATED",
+      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
+      "provenance": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P005: Martin Ives, Head of Risk and Compliance, effective 2026-09-13"
+        }
+      ],
+      "detail_issue": null,
+      "geometry_issue": null,
+      "required_artifacts": [
+        "disposition"
+      ],
+      "package_required": false,
+      "actual_floor_count": null,
+      "actual_occupancy": null
+    },
+    {
+      "id": "ORG:AS-P006",
+      "name": "Sofia Hart",
+      "class": 6,
+      "classification": "distributed/nonphysical/reference",
+      "parent_id": null,
+      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "source_type": "SUPPLEMENTAL_CENSUS",
+      "canon_status": "SOURCE_RECORD_ONLY",
+      "status": "nonphysical",
+      "tenure": "unknown",
+      "occupancy_start": null,
+      "occupancy_end": null,
+      "relevant_date": null,
+      "date_precision": "UNKNOWN",
+      "precision": "UNLOCATED",
+      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
+      "provenance": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P006: Sofia Hart, Head of People and Culture, effective 2026-09-13"
+        }
+      ],
+      "detail_issue": null,
+      "geometry_issue": null,
+      "required_artifacts": [
+        "disposition"
+      ],
+      "package_required": false,
+      "actual_floor_count": null,
+      "actual_occupancy": null
+    },
+    {
+      "id": "ORG:AS-P007",
+      "name": "Elliot Tran",
+      "class": 6,
+      "classification": "distributed/nonphysical/reference",
+      "parent_id": null,
+      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "source_type": "SUPPLEMENTAL_CENSUS",
+      "canon_status": "SOURCE_RECORD_ONLY",
+      "status": "nonphysical",
+      "tenure": "unknown",
+      "occupancy_start": null,
+      "occupancy_end": null,
+      "relevant_date": null,
+      "date_precision": "UNKNOWN",
+      "precision": "UNLOCATED",
+      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
+      "provenance": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P007: Elliot Tran, Head of Enterprise Technology Services, effective 2026-09-13"
+        }
+      ],
+      "detail_issue": null,
+      "geometry_issue": null,
+      "required_artifacts": [
+        "disposition"
+      ],
+      "package_required": false,
+      "actual_floor_count": null,
+      "actual_occupancy": null
+    },
+    {
+      "id": "ORG:AS-P008",
+      "name": "Dana West",
+      "class": 6,
+      "classification": "distributed/nonphysical/reference",
+      "parent_id": null,
+      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "source_type": "SUPPLEMENTAL_CENSUS",
+      "canon_status": "SOURCE_RECORD_ONLY",
+      "status": "nonphysical",
+      "tenure": "unknown",
+      "occupancy_start": null,
+      "occupancy_end": null,
+      "relevant_date": null,
+      "date_precision": "UNKNOWN",
+      "precision": "UNLOCATED",
+      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
+      "provenance": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P008: Dana West, Chief Information Security Officer, effective 2026-09-13"
+        }
+      ],
+      "detail_issue": null,
+      "geometry_issue": null,
+      "required_artifacts": [
+        "disposition"
+      ],
+      "package_required": false,
+      "actual_floor_count": null,
+      "actual_occupancy": null
+    },
+    {
+      "id": "ORG:AS-P009",
+      "name": "Rowan Price",
+      "class": 6,
+      "classification": "distributed/nonphysical/reference",
+      "parent_id": null,
+      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "source_type": "SUPPLEMENTAL_CENSUS",
+      "canon_status": "SOURCE_RECORD_ONLY",
+      "status": "nonphysical",
+      "tenure": "unknown",
+      "occupancy_start": null,
+      "occupancy_end": null,
+      "relevant_date": null,
+      "date_precision": "UNKNOWN",
+      "precision": "UNLOCATED",
+      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
+      "provenance": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P009: Rowan Price, Head of Internal Audit, effective 2026-09-13"
+        }
+      ],
+      "detail_issue": null,
+      "geometry_issue": null,
+      "required_artifacts": [
+        "disposition"
+      ],
+      "package_required": false,
+      "actual_floor_count": null,
+      "actual_occupancy": null
+    },
+    {
+      "id": "ORG:AS-P010",
+      "name": "Cameron Shore",
+      "class": 6,
+      "classification": "distributed/nonphysical/reference",
+      "parent_id": null,
+      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "source_type": "SUPPLEMENTAL_CENSUS",
+      "canon_status": "SOURCE_RECORD_ONLY",
+      "status": "nonphysical",
+      "tenure": "unknown",
+      "occupancy_start": null,
+      "occupancy_end": null,
+      "relevant_date": null,
+      "date_precision": "UNKNOWN",
+      "precision": "UNLOCATED",
+      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
+      "provenance": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P010: Cameron Shore, President of Sable Harbor Advisory, effective 2026-09-13"
+        }
+      ],
+      "detail_issue": null,
+      "geometry_issue": null,
+      "required_artifacts": [
+        "disposition"
+      ],
+      "package_required": false,
+      "actual_floor_count": null,
+      "actual_occupancy": null
+    },
+    {
+      "id": "ORG:AS-P011",
+      "name": "Clara Bennett",
+      "class": 6,
+      "classification": "distributed/nonphysical/reference",
+      "parent_id": null,
+      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "source_type": "SUPPLEMENTAL_CENSUS",
+      "canon_status": "SOURCE_RECORD_ONLY",
+      "status": "nonphysical",
+      "tenure": "unknown",
+      "occupancy_start": null,
+      "occupancy_end": null,
+      "relevant_date": null,
+      "date_precision": "UNKNOWN",
+      "precision": "UNLOCATED",
+      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
+      "provenance": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P011: Clara Bennett, Corporate Controller, effective 2026-09-13"
+        }
+      ],
+      "detail_issue": null,
+      "geometry_issue": null,
+      "required_artifacts": [
+        "disposition"
+      ],
+      "package_required": false,
+      "actual_floor_count": null,
+      "actual_occupancy": null
+    },
+    {
+      "id": "ORG:AS-P012",
+      "name": "Victor Lane",
+      "class": 6,
+      "classification": "distributed/nonphysical/reference",
+      "parent_id": null,
+      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "source_type": "SUPPLEMENTAL_CENSUS",
+      "canon_status": "SOURCE_RECORD_ONLY",
+      "status": "nonphysical",
+      "tenure": "unknown",
+      "occupancy_start": null,
+      "occupancy_end": null,
+      "relevant_date": null,
+      "date_precision": "UNKNOWN",
+      "precision": "UNLOCATED",
+      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
+      "provenance": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P012: Victor Lane, Facilities and Workplace Lead, effective 2026-09-13"
+        }
+      ],
+      "detail_issue": null,
+      "geometry_issue": null,
+      "required_artifacts": [
+        "disposition"
+      ],
+      "package_required": false,
+      "actual_floor_count": null,
+      "actual_occupancy": null
+    },
+    {
+      "id": "ORG:AS-P013",
+      "name": "Erin Cross",
+      "class": 6,
+      "classification": "distributed/nonphysical/reference",
+      "parent_id": null,
+      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "source_type": "SUPPLEMENTAL_CENSUS",
+      "canon_status": "SOURCE_RECORD_ONLY",
+      "status": "nonphysical",
+      "tenure": "unknown",
+      "occupancy_start": null,
+      "occupancy_end": null,
+      "relevant_date": null,
+      "date_precision": "UNKNOWN",
+      "precision": "UNLOCATED",
+      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
+      "provenance": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P013: Erin Cross, Procurement and Supplier Risk Lead, effective 2026-09-13"
+        }
+      ],
+      "detail_issue": null,
+      "geometry_issue": null,
+      "required_artifacts": [
+        "disposition"
+      ],
+      "package_required": false,
+      "actual_floor_count": null,
+      "actual_occupancy": null
+    },
+    {
+      "id": "ORG:AS-P014",
+      "name": "Omar Vale",
+      "class": 6,
+      "classification": "distributed/nonphysical/reference",
+      "parent_id": null,
+      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "source_type": "SUPPLEMENTAL_CENSUS",
+      "canon_status": "SOURCE_RECORD_ONLY",
+      "status": "nonphysical",
+      "tenure": "unknown",
+      "occupancy_start": null,
+      "occupancy_end": null,
+      "relevant_date": null,
+      "date_precision": "UNKNOWN",
+      "precision": "UNLOCATED",
+      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
+      "provenance": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P014: Omar Vale, Data Governance and Records Lead, effective 2026-09-13"
+        }
+      ],
+      "detail_issue": null,
+      "geometry_issue": null,
+      "required_artifacts": [
+        "disposition"
+      ],
+      "package_required": false,
+      "actual_floor_count": null,
+      "actual_occupancy": null
+    },
+    {
+      "id": "ORG:AS-P015",
+      "name": "Evie Quinn",
+      "class": 6,
+      "classification": "distributed/nonphysical/reference",
+      "parent_id": null,
+      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "source_type": "SUPPLEMENTAL_CENSUS",
+      "canon_status": "SOURCE_RECORD_ONLY",
+      "status": "nonphysical",
+      "tenure": "unknown",
+      "occupancy_start": null,
+      "occupancy_end": null,
+      "relevant_date": null,
+      "date_precision": "UNKNOWN",
+      "precision": "UNLOCATED",
+      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
+      "provenance": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P015: Evie Quinn, Enterprise Safety and Environmental Governance Lead, effective 2026-09-13"
+        }
+      ],
+      "detail_issue": null,
+      "geometry_issue": null,
+      "required_artifacts": [
+        "disposition"
+      ],
+      "package_required": false,
+      "actual_floor_count": null,
+      "actual_occupancy": null
+    },
+    {
       "id": "ORG:CORP-CONT",
       "name": "Continuity & Crisis Coordination",
       "class": 6,
@@ -13655,336 +14150,6 @@
         {
           "path": "docs/canon/SABLE_HARBOR_CONTINUITY_AUDIT_v0.2.md",
           "line": 258
-        }
-      ],
-      "detail_issue": null,
-      "geometry_issue": null,
-      "required_artifacts": [
-        "disposition"
-      ],
-      "package_required": false,
-      "actual_floor_count": null,
-      "actual_occupancy": null
-    },
-    {
-      "id": "ORG:ROLE-27",
-      "name": "Chief of ESS",
-      "class": 6,
-      "classification": "distributed/nonphysical/reference",
-      "parent_id": null,
-      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
-      "source_type": "SUPPLEMENTAL_CENSUS",
-      "canon_status": "SOURCE_RECORD_ONLY",
-      "status": "nonphysical",
-      "tenure": "unknown",
-      "occupancy_start": null,
-      "occupancy_end": null,
-      "relevant_date": null,
-      "date_precision": "UNKNOWN",
-      "precision": "UNLOCATED",
-      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
-      "provenance": [
-        {
-          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-          "line": 29,
-          "evidence": "The **Chief of ESS** is the administrative head of the umbrella, not the substantive superior of every corporate officer housed within it. The role coordinates shared administration, budget mechanics, facilities, staffing support, service quality, and cross-functional coherence."
-        }
-      ],
-      "detail_issue": null,
-      "geometry_issue": null,
-      "required_artifacts": [
-        "disposition"
-      ],
-      "package_required": false,
-      "actual_floor_count": null,
-      "actual_occupancy": null
-    },
-    {
-      "id": "ORG:ROLE-28",
-      "name": "Chief Financial Officer",
-      "class": 6,
-      "classification": "distributed/nonphysical/reference",
-      "parent_id": null,
-      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
-      "source_type": "SUPPLEMENTAL_CENSUS",
-      "canon_status": "SOURCE_RECORD_ONLY",
-      "status": "nonphysical",
-      "tenure": "unknown",
-      "occupancy_start": null,
-      "occupancy_end": null,
-      "relevant_date": null,
-      "date_precision": "UNKNOWN",
-      "precision": "UNLOCATED",
-      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
-      "provenance": [
-        {
-          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-          "line": 31,
-          "evidence": "Membership in ESS does **not** imply that the CFO, General Counsel, senior People & Culture leader, technology leader, CISO, or other substantive officer loses direct standing with the CEO or Board where the office's responsibilities require it. The Chief of ESS cannot convert administrative coordination into generalized approval authority."
-        }
-      ],
-      "detail_issue": null,
-      "geometry_issue": null,
-      "required_artifacts": [
-        "disposition"
-      ],
-      "package_required": false,
-      "actual_floor_count": null,
-      "actual_occupancy": null
-    },
-    {
-      "id": "ORG:ROLE-29",
-      "name": "General Counsel",
-      "class": 6,
-      "classification": "distributed/nonphysical/reference",
-      "parent_id": null,
-      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
-      "source_type": "SUPPLEMENTAL_CENSUS",
-      "canon_status": "SOURCE_RECORD_ONLY",
-      "status": "nonphysical",
-      "tenure": "unknown",
-      "occupancy_start": null,
-      "occupancy_end": null,
-      "relevant_date": null,
-      "date_precision": "UNKNOWN",
-      "precision": "UNLOCATED",
-      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
-      "provenance": [
-        {
-          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-          "line": 35,
-          "evidence": "The General Counsel has direct standing with the Chief Executive Officer and Board when professional duties require it. OGC owns legal advice and Corporate Secretary mechanics; it does not become a substitute management chain."
-        }
-      ],
-      "detail_issue": null,
-      "geometry_issue": null,
-      "required_artifacts": [
-        "disposition"
-      ],
-      "package_required": false,
-      "actual_floor_count": null,
-      "actual_occupancy": null
-    },
-    {
-      "id": "ORG:ROLE-30",
-      "name": "Corporate Secretary",
-      "class": 6,
-      "classification": "distributed/nonphysical/reference",
-      "parent_id": null,
-      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
-      "source_type": "SUPPLEMENTAL_CENSUS",
-      "canon_status": "SOURCE_RECORD_ONLY",
-      "status": "nonphysical",
-      "tenure": "unknown",
-      "occupancy_start": null,
-      "occupancy_end": null,
-      "relevant_date": null,
-      "date_precision": "UNKNOWN",
-      "precision": "UNLOCATED",
-      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
-      "provenance": [
-        {
-          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-          "line": 13,
-          "evidence": "- Office of the General Counsel, including Corporate Secretary;"
-        }
-      ],
-      "detail_issue": null,
-      "geometry_issue": null,
-      "required_artifacts": [
-        "disposition"
-      ],
-      "package_required": false,
-      "actual_floor_count": null,
-      "actual_occupancy": null
-    },
-    {
-      "id": "ORG:ROLE-31",
-      "name": "Head of Risk & Compliance",
-      "class": 6,
-      "classification": "distributed/nonphysical/reference",
-      "parent_id": null,
-      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
-      "source_type": "SUPPLEMENTAL_CENSUS",
-      "canon_status": "SOURCE_RECORD_ONLY",
-      "status": "nonphysical",
-      "tenure": "unknown",
-      "occupancy_start": null,
-      "occupancy_end": null,
-      "relevant_date": null,
-      "date_precision": "UNKNOWN",
-      "precision": "UNLOCATED",
-      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
-      "provenance": [
-        {
-          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-          "line": 14,
-          "evidence": "- Risk & Compliance;"
-        }
-      ],
-      "detail_issue": null,
-      "geometry_issue": null,
-      "required_artifacts": [
-        "disposition"
-      ],
-      "package_required": false,
-      "actual_floor_count": null,
-      "actual_occupancy": null
-    },
-    {
-      "id": "ORG:ROLE-32",
-      "name": "Head of People & Culture",
-      "class": 6,
-      "classification": "distributed/nonphysical/reference",
-      "parent_id": null,
-      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
-      "source_type": "SUPPLEMENTAL_CENSUS",
-      "canon_status": "SOURCE_RECORD_ONLY",
-      "status": "nonphysical",
-      "tenure": "unknown",
-      "occupancy_start": null,
-      "occupancy_end": null,
-      "relevant_date": null,
-      "date_precision": "UNKNOWN",
-      "precision": "UNLOCATED",
-      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
-      "provenance": [
-        {
-          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-          "line": 16,
-          "evidence": "- People & Culture;"
-        }
-      ],
-      "detail_issue": null,
-      "geometry_issue": null,
-      "required_artifacts": [
-        "disposition"
-      ],
-      "package_required": false,
-      "actual_floor_count": null,
-      "actual_occupancy": null
-    },
-    {
-      "id": "ORG:ROLE-33",
-      "name": "Head of Enterprise Technology Services",
-      "class": 6,
-      "classification": "distributed/nonphysical/reference",
-      "parent_id": null,
-      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
-      "source_type": "SUPPLEMENTAL_CENSUS",
-      "canon_status": "SOURCE_RECORD_ONLY",
-      "status": "nonphysical",
-      "tenure": "unknown",
-      "occupancy_start": null,
-      "occupancy_end": null,
-      "relevant_date": null,
-      "date_precision": "UNKNOWN",
-      "precision": "UNLOCATED",
-      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
-      "provenance": [
-        {
-          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-          "line": 17,
-          "evidence": "- Enterprise Technology Services;"
-        }
-      ],
-      "detail_issue": null,
-      "geometry_issue": null,
-      "required_artifacts": [
-        "disposition"
-      ],
-      "package_required": false,
-      "actual_floor_count": null,
-      "actual_occupancy": null
-    },
-    {
-      "id": "ORG:ROLE-34",
-      "name": "Chief Information Security Officer",
-      "class": 6,
-      "classification": "distributed/nonphysical/reference",
-      "parent_id": null,
-      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
-      "source_type": "SUPPLEMENTAL_CENSUS",
-      "canon_status": "SOURCE_RECORD_ONLY",
-      "status": "nonphysical",
-      "tenure": "unknown",
-      "occupancy_start": null,
-      "occupancy_end": null,
-      "relevant_date": null,
-      "date_precision": "UNKNOWN",
-      "precision": "UNLOCATED",
-      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
-      "provenance": [
-        {
-          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-          "line": 45,
-          "evidence": "The CISO maintains an independent security authority boundary proportionate to material security obligations and does not become a generalized veto office."
-        }
-      ],
-      "detail_issue": null,
-      "geometry_issue": null,
-      "required_artifacts": [
-        "disposition"
-      ],
-      "package_required": false,
-      "actual_floor_count": null,
-      "actual_occupancy": null
-    },
-    {
-      "id": "ORG:ROLE-35",
-      "name": "Head of Internal Audit",
-      "class": 6,
-      "classification": "distributed/nonphysical/reference",
-      "parent_id": null,
-      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
-      "source_type": "SUPPLEMENTAL_CENSUS",
-      "canon_status": "SOURCE_RECORD_ONLY",
-      "status": "nonphysical",
-      "tenure": "unknown",
-      "occupancy_start": null,
-      "occupancy_end": null,
-      "relevant_date": null,
-      "date_precision": "UNKNOWN",
-      "precision": "UNLOCATED",
-      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
-      "provenance": [
-        {
-          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-          "line": 49,
-          "evidence": "Internal Audit is structurally separate from OGC, Risk & Compliance, Finance, Technology Services, J2, and management control ownership. Internal Audit reports **functionally to the Board Audit & Compliance Committee**. Administrative matters may flow through the CEO/ESS environment only where they do not impair audit independence."
-        }
-      ],
-      "detail_issue": null,
-      "geometry_issue": null,
-      "required_artifacts": [
-        "disposition"
-      ],
-      "package_required": false,
-      "actual_floor_count": null,
-      "actual_occupancy": null
-    },
-    {
-      "id": "ORG:ROLE-36",
-      "name": "President of Sable Harbor Advisory",
-      "class": 6,
-      "classification": "distributed/nonphysical/reference",
-      "parent_id": null,
-      "reason": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
-      "source_type": "SUPPLEMENTAL_CENSUS",
-      "canon_status": "SOURCE_RECORD_ONLY",
-      "status": "nonphysical",
-      "tenure": "unknown",
-      "occupancy_start": null,
-      "occupancy_end": null,
-      "relevant_date": null,
-      "date_precision": "UNKNOWN",
-      "precision": "UNLOCATED",
-      "fictionality": "SYNTHETIC_ENTERPRISE_RECORD",
-      "provenance": [
-        {
-          "path": "docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md",
-          "line": 51,
-          "evidence": "Advisory is an operating business led by a President of Sable Harbor Advisory. The President owns the business line, subject to Sable Harbor's existing corporate governance, delegated authority, reserved matters, legal structure, and Board/CEO authority. The individual is `OPEN`."
         }
       ],
       "detail_issue": null,
@@ -22724,6 +22889,96 @@
     },
     {
       "source_path": "docs/organization/source/chartbook.json",
+      "section": "nodes",
+      "source_id": "AS-P001",
+      "coverage_id": "ORG:AS-P001"
+    },
+    {
+      "source_path": "docs/organization/source/chartbook.json",
+      "section": "nodes",
+      "source_id": "AS-P002",
+      "coverage_id": "ORG:AS-P002"
+    },
+    {
+      "source_path": "docs/organization/source/chartbook.json",
+      "section": "nodes",
+      "source_id": "AS-P003",
+      "coverage_id": "ORG:AS-P003"
+    },
+    {
+      "source_path": "docs/organization/source/chartbook.json",
+      "section": "nodes",
+      "source_id": "AS-P004",
+      "coverage_id": "ORG:AS-P004"
+    },
+    {
+      "source_path": "docs/organization/source/chartbook.json",
+      "section": "nodes",
+      "source_id": "AS-P005",
+      "coverage_id": "ORG:AS-P005"
+    },
+    {
+      "source_path": "docs/organization/source/chartbook.json",
+      "section": "nodes",
+      "source_id": "AS-P006",
+      "coverage_id": "ORG:AS-P006"
+    },
+    {
+      "source_path": "docs/organization/source/chartbook.json",
+      "section": "nodes",
+      "source_id": "AS-P007",
+      "coverage_id": "ORG:AS-P007"
+    },
+    {
+      "source_path": "docs/organization/source/chartbook.json",
+      "section": "nodes",
+      "source_id": "AS-P008",
+      "coverage_id": "ORG:AS-P008"
+    },
+    {
+      "source_path": "docs/organization/source/chartbook.json",
+      "section": "nodes",
+      "source_id": "AS-P009",
+      "coverage_id": "ORG:AS-P009"
+    },
+    {
+      "source_path": "docs/organization/source/chartbook.json",
+      "section": "nodes",
+      "source_id": "AS-P010",
+      "coverage_id": "ORG:AS-P010"
+    },
+    {
+      "source_path": "docs/organization/source/chartbook.json",
+      "section": "nodes",
+      "source_id": "AS-P011",
+      "coverage_id": "ORG:AS-P011"
+    },
+    {
+      "source_path": "docs/organization/source/chartbook.json",
+      "section": "nodes",
+      "source_id": "AS-P012",
+      "coverage_id": "ORG:AS-P012"
+    },
+    {
+      "source_path": "docs/organization/source/chartbook.json",
+      "section": "nodes",
+      "source_id": "AS-P013",
+      "coverage_id": "ORG:AS-P013"
+    },
+    {
+      "source_path": "docs/organization/source/chartbook.json",
+      "section": "nodes",
+      "source_id": "AS-P014",
+      "coverage_id": "ORG:AS-P014"
+    },
+    {
+      "source_path": "docs/organization/source/chartbook.json",
+      "section": "nodes",
+      "source_id": "AS-P015",
+      "coverage_id": "ORG:AS-P015"
+    },
+    {
+      "source_path": "docs/organization/source/chartbook.json",
       "section": "register_only",
       "source_id": "CORP-HQ",
       "coverage_id": "SH-SITE-0001"
@@ -22883,66 +23138,6 @@
       "section": "register_only",
       "source_id": "P062",
       "coverage_id": "ORG:P062"
-    },
-    {
-      "source_path": "docs/organization/source/chartbook.json",
-      "section": "register_only",
-      "source_id": "ROLE-27",
-      "coverage_id": "ORG:ROLE-27"
-    },
-    {
-      "source_path": "docs/organization/source/chartbook.json",
-      "section": "register_only",
-      "source_id": "ROLE-28",
-      "coverage_id": "ORG:ROLE-28"
-    },
-    {
-      "source_path": "docs/organization/source/chartbook.json",
-      "section": "register_only",
-      "source_id": "ROLE-29",
-      "coverage_id": "ORG:ROLE-29"
-    },
-    {
-      "source_path": "docs/organization/source/chartbook.json",
-      "section": "register_only",
-      "source_id": "ROLE-30",
-      "coverage_id": "ORG:ROLE-30"
-    },
-    {
-      "source_path": "docs/organization/source/chartbook.json",
-      "section": "register_only",
-      "source_id": "ROLE-31",
-      "coverage_id": "ORG:ROLE-31"
-    },
-    {
-      "source_path": "docs/organization/source/chartbook.json",
-      "section": "register_only",
-      "source_id": "ROLE-32",
-      "coverage_id": "ORG:ROLE-32"
-    },
-    {
-      "source_path": "docs/organization/source/chartbook.json",
-      "section": "register_only",
-      "source_id": "ROLE-33",
-      "coverage_id": "ORG:ROLE-33"
-    },
-    {
-      "source_path": "docs/organization/source/chartbook.json",
-      "section": "register_only",
-      "source_id": "ROLE-34",
-      "coverage_id": "ORG:ROLE-34"
-    },
-    {
-      "source_path": "docs/organization/source/chartbook.json",
-      "section": "register_only",
-      "source_id": "ROLE-35",
-      "coverage_id": "ORG:ROLE-35"
-    },
-    {
-      "source_path": "docs/organization/source/chartbook.json",
-      "section": "register_only",
-      "source_id": "ROLE-36",
-      "coverage_id": "ORG:ROLE-36"
     },
     {
       "source_path": "docs/organization/source/chartbook.json",

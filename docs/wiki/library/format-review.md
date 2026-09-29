@@ -6,12 +6,12 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 298 |
+| COUNTERPART_REVIEW_REQUIRED | 302 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 102 |
-| READER_OR_MAINTENANCE_PAGE | 201 |
-| UNRESOLVED_DOCUMENT_COUNTERPART | 219 |
+| READER_OR_MAINTENANCE_PAGE | 202 |
+| UNRESOLVED_DOCUMENT_COUNTERPART | 218 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_DOCUMENT_PAIR | 148 |
 | VERIFIED_IDENTICAL_SOURCE_PUBLICATION | 3 |
@@ -73,6 +73,9 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [PR #145 integration evidence](../../internal/company-closeout/PR145_INTEGRATION.md) — Corporate document-format reconciliation
 - [Company closeout continuation — September 22, 2026](../../internal/company-closeout/RESIDUAL_CLOSEOUT_2026-09-22.md) — Corporate document-format reconciliation
 - [Current successor records — enterprise import contract](../../internal/company-closeout/SUCCESSOR_RECORDS_IMPORT_CONTRACT_2026-09-22.md) — Corporate document-format reconciliation
+- [Synthetic withheld comparison note](../../internal/company-closeout/daedalus-rehearsal-2026-09-29/DENIED_NOTE.md) — Corporate document-format reconciliation
+- [Synthetic payroll-release review note](../../internal/company-closeout/daedalus-rehearsal-2026-09-29/LOWER_TRUST_NOTICE.md) — Corporate document-format reconciliation
+- [Selected payroll-release IAM-007 case view](../../internal/company-closeout/daedalus-rehearsal-2026-09-29/SELECTED_IAM_CASE.md) — Corporate document-format reconciliation
 - [Committed portal runtime review — 2026-09-22](../../internal/company-closeout/evidence/newruntime/5344bf76/REVIEW.md) — Corporate document-format reconciliation
 - [HOST-R01 — precise prospective terms for decision](../../internal/company-closeout/host-residual-successor/TERMS_PROPOSAL.md) — Corporate document-format reconciliation
 - [Pending implementation text — recommended current-rights bundle](../../internal/company-closeout/residual-finance-2026-09-22/PENDING_INSTRUMENT.md) — Corporate document-format reconciliation
@@ -296,6 +299,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Geographic continuation boundary](../../../geospatial/docs/NEXT_CHAT_HANDOFF.md) — Corporate document-format reconciliation
 - [Geographic program closeout matrix](../../../geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md) — Corporate document-format reconciliation
 - [Time, ownership and operating state](../../../geospatial/docs/TEMPORAL_MODEL.md) — Corporate document-format reconciliation
+- [Headcount, occupancy and space program](../../../geospatial/facilities/PROGRAM.md) — Corporate document-format reconciliation
 - [Facility coverage matrix](../../../geospatial/facilities/coverage/COVERAGE_MATRIX.md) — Corporate document-format reconciliation
 - [Headcount, occupancy and space bridge](../../../geospatial/facilities/population/BRIDGE.md) — Corporate document-format reconciliation
 - [Geographic completion authority — September 13, 2026](../../../geospatial/finalization/AUTHORIZATION.md) — Corporate document-format reconciliation

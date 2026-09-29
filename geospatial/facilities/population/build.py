@@ -396,7 +396,7 @@ def bridge(data):
         "| Runtime owned-operation conditional additions | 2 facilities / 6 guards | Separate future requirement, no current occupancy |",
         "| Actual 2026 company headcount / attendance / seats | Unknown | Not inferred by adding the above rows |",
         "",
-        "The September 13 branch chart has 69 person displays for 67 unique identities: 66 current and Rachel Kim, a former employee. Fifteen current appointments are delegated source additions pending accepted merge; the accepted pre-change source has 44 employee identities and seven directors. Daniel Mercer and Priya Raman each appear twice. Sixteen register-only identities remain external, historical, unconfirmed or superseded; they are not employees created by this bridge.",
+        "The September 13 chart successor has 69 person displays for 67 unique identities: 66 current and Rachel Kim, a former employee. Fifteen current appointments were authored as delegated source additions; the accepted pre-change source had 44 employee identities and seven directors. Daniel Mercer and Priya Raman each appear twice. Sixteen register-only identities remain external, historical, unconfirmed or superseded; they are not employees created by this bridge.",
         "",
         "Each entity/function/role has a nonadditive view with unknown capacity fields. Unique people control the identity total; the six disjoint J2 groups control billet authorization. Chart membership is not a workplace assignment. Other authorized offices remain role evidence, not incremental headcount. No workplace is assigned from a person’s joining year.",
         "",

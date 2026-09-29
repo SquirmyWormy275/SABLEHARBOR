@@ -15,8 +15,8 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # 148 publication pairs, 12 evidence
     # packages. Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        13533184,
-        "1d3d6ec1605570306a139ac4f3a016af737385748e4a6980c515e8c778d340d6",
+        13545472,
+        "4fad19f6e9384700612d7d82ba2a522622af1336b8abf8043e7104b461c1af67",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.
