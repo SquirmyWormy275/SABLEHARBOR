@@ -111,7 +111,7 @@
     {
       "record_id": "SH-DAE-REHEARSAL-VIEW-001",
       "repository_path": "docs/internal/company-closeout/daedalus-rehearsal-2026-09-29/SELECTED_IAM_CASE.md",
-      "source_sha256": "97f2c5b5eb491c14de7a3b79c61546aed6e0cdb496430cb216fc68eb6a079f64",
+      "source_sha256": "9e3c4b7fc5440316d7155dd5f299ce912382770d40148878acf59a2e122a8524",
       "source_version": "0.1.0",
       "tenant": "SH",
       "owner_id": "SH-EMP-ESS-0005",
@@ -144,7 +144,7 @@
     {
       "record_id": "SH-DAE-REHEARSAL-NOTICE-001",
       "repository_path": "docs/internal/company-closeout/daedalus-rehearsal-2026-09-29/LOWER_TRUST_NOTICE.md",
-      "source_sha256": "cc9b2718034ddf09c3a3cdb9392cce2a3822fccbe0bf0db24254a812c4e9bf70",
+      "source_sha256": "b8514f57f0e40e56e938db8b99934c0c7be28020e208e0b62265bc2492ded737",
       "source_version": "0.1.0",
       "tenant": "SH",
       "owner_id": "SH-EMP-ESS-0005",
@@ -177,7 +177,7 @@
     {
       "record_id": "SH-DAE-REHEARSAL-DENIED-001",
       "repository_path": "docs/internal/company-closeout/daedalus-rehearsal-2026-09-29/DENIED_NOTE.md",
-      "source_sha256": "f69b2cff0102eb7899239f6e2a978b1d6534e5bf3623a885ece97bca2652196a",
+      "source_sha256": "d12f9ffe7bf7886af0988fa6c076d5928db1d5bad3c60425a16622b72e80bc99",
       "source_version": "0.1.0",
       "tenant": "SH",
       "owner_id": "SH-EMP-ESS-0005",

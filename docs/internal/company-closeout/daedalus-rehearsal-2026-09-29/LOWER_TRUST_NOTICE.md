@@ -1,7 +1,9 @@
 # Synthetic payroll-release review note
 
-**Record ID:** SH-DAE-REHEARSAL-NOTICE-001  
-**Source state:** Newly authored fictional, lower-trust inspection input  
+**Record ID:** SH-DAE-REHEARSAL-NOTICE-001
+
+**Source state:** Newly authored fictional, lower-trust inspection input
+
 **Case period:** 2027 Q1; available in the simulated case on April 1, 2027
 
 The selected payroll-release IAM-007 source describes two scoped human service-role accounts. Its March review has a recorded decision for the prepare account and a missing owner decision and independent verification for the approve account. The missing decision remains an exception; this note does not cure it.
