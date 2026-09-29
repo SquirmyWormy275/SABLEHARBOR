@@ -24,12 +24,14 @@ def test_date_only_temporal_scope_uses_declared_timezone():
     from datetime import datetime
 
     effective = current(state)["versions"][0]["effective"]
-    assert datetime.fromisoformat(effective["start"]).timestamp() == datetime.fromisoformat(
-        "2027-01-01T07:00:00+00:00"
-    ).timestamp()
-    assert datetime.fromisoformat(effective["end"]).timestamp() == datetime.fromisoformat(
-        "2028-01-01T07:00:00+00:00"
-    ).timestamp()
+    assert (
+        datetime.fromisoformat(effective["start"]).timestamp()
+        == datetime.fromisoformat("2027-01-01T07:00:00+00:00").timestamp()
+    )
+    assert (
+        datetime.fromisoformat(effective["end"]).timestamp()
+        == datetime.fromisoformat("2028-01-01T07:00:00+00:00").timestamp()
+    )
 
 
 @pytest.mark.parametrize("other", ["Approved by NeutralReviewer", {"actor": "NeutralReviewer"}])
@@ -201,19 +203,27 @@ def test_portable_demonstration_cannot_release_before_its_actual_source_date():
     try:
         plan = compose(
             {"requests": [{"id": "R1", "artifact_recipes": [source, demo]}]},
-            {"definition": {"id": "NEUTRAL", "binding_contract": {
-                "portable_evidence_transform": contract,
-            }}},
-            {"id": "C1", "assignment": {
-                "primary_person_id": "P1", "custodian_person_id": "P2",
-            }},
+            {
+                "definition": {
+                    "id": "NEUTRAL",
+                    "binding_contract": {
+                        "portable_evidence_transform": contract,
+                    },
+                }
+            },
+            {
+                "id": "C1",
+                "assignment": {
+                    "primary_person_id": "P1",
+                    "custodian_person_id": "P2",
+                },
+            },
             {"boundary_id": "unit", "period_start": "2027-01-01", "period_end": "2027-12-31"},
             {"P1": "Neutral owner", "P2": "Neutral custodian"},
         )
     except DomainError:
         return  # A future/out-of-scope demonstration may instead fail closed.
     transformed = next(
-        row for row in plan["requests"][0]["artifact_recipes"]
-        if row["name"].startswith("initial-")
+        row for row in plan["requests"][0]["artifact_recipes"] if row["name"].startswith("initial-")
     )
     assert transformed["available_by"] >= demo["available_by"]

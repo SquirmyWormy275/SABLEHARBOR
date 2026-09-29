@@ -116,9 +116,7 @@ class NativeRecordClosure:
         if expected is None or hashlib.sha256(native["content"]).hexdigest() != identity[5]:
             raise RightsUnavailable("Native source has no reviewed policy closure")
         record_id, path = expected
-        snapshot = self.producer.snapshot(
-            session_token=session_token, engagement_id=engagement_id
-        )
+        snapshot = self.producer.snapshot(session_token=session_token, engagement_id=engagement_id)
         policy_row = snapshot["records"].get(record_id)
         if (
             policy_row is None

@@ -68,17 +68,13 @@ def test_private_launch_config_requires_exact_hash_and_private_regular_file(tmp_
         {"unexpected_grant": "allow"},
     ],
 )
-def test_private_launch_config_rejects_extra_authority_or_incomplete_closure(
-    tmp_path, changes
-):
+def test_private_launch_config_rejects_extra_authority_or_incomplete_closure(tmp_path, changes):
     path, digest = _write_config(tmp_path, **changes)
     with pytest.raises(DomainError):
         _private_config(path, digest)
 
 
-@pytest.mark.parametrize(
-    "option", ["--company-rights-config", "--company-rights-config-sha256"]
-)
+@pytest.mark.parametrize("option", ["--company-rights-config", "--company-rights-config-sha256"])
 def test_cli_rejects_unpaired_protected_launch_option(tmp_path, option):
     web_root = tmp_path / "web"
     web_root.mkdir()
@@ -87,8 +83,14 @@ def test_cli_rejects_unpaired_protected_launch_option(tmp_path, option):
     with pytest.raises(SystemExit):
         main(
             [
-                "serve", "--private-root", str(tmp_path / "state"),
-                "--web-root", str(web_root), "--local-http", option, value,
+                "serve",
+                "--private-root",
+                str(tmp_path / "state"),
+                "--web-root",
+                str(web_root),
+                "--local-http",
+                option,
+                value,
             ]
         )
 
@@ -107,8 +109,12 @@ def test_case_clock_requires_exact_server_authenticated_person_engagement_and_pu
         "principals": {"auditor": "P-A", "record_owner": "P-O"},
     }
     context = VerifiedCaseContext(
-        principal_id="P-A", session_id="S-1", engagement_id="E-1",
-        person_id="SH-EMP-INTERNAL-AUDIT-0001", tenant="SH", purpose="inspection",
+        principal_id="P-A",
+        session_id="S-1",
+        engagement_id="E-1",
+        person_id="SH-EMP-INTERNAL-AUDIT-0001",
+        tenant="SH",
+        purpose="inspection",
     )
     assert _case_for_context(authority, binding, context) == "2027-04-02T00:00:00+00:00"
     for changed in (
@@ -173,8 +179,10 @@ def test_reviewed_rehearsal_stages_only_exact_authority_and_protects_http(tmp_pa
         stage_reviewed_company_authority(config_file, config_sha, tmp_path / "portal")
 
     app = create_app(
-        tmp_path / "portal", allowed_hosts=["testserver"],
-        company_rights_factory=factory, company_native_rights_factory=native,
+        tmp_path / "portal",
+        allowed_hosts=["testserver"],
+        company_rights_factory=factory,
+        company_native_rights_factory=native,
     )
     client = TestClient(app, base_url="https://testserver")
     login = client.post("/api/session", json={"credential": auditor["credential"]})

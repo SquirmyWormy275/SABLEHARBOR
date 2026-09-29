@@ -1740,11 +1740,8 @@ def create_app(
                     else datetime.now(UTC).isoformat()
                 )
                 if (
-                    company_rights.producer.case_as_of is not None
-                    and final_time != case_time
-                ) or engine.company_store.read_version(
-                    *args, **kwargs
-                )["content"] != data:
+                    company_rights.producer.case_as_of is not None and final_time != case_time
+                ) or engine.company_store.read_version(*args, **kwargs)["content"] != data:
                     raise RightsUnavailable("Collected source changed")
                 company_native_rights.authorize_version(
                     session_token=token,
@@ -1762,9 +1759,7 @@ def create_app(
         return Response(
             data,
             media_type="application/octet-stream",
-            headers={
-                "Content-Disposition": f"attachment; filename*=UTF-8''{quote(filename)}"
-            },
+            headers={"Content-Disposition": f"attachment; filename*=UTF-8''{quote(filename)}"},
         )
 
     @app.post("/api/engagements/{engagement_id}/voice/transcribe")

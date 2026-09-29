@@ -35,18 +35,37 @@ def test_task_gap_command_route_replay_projection_and_permissions(tmp_path):
         configuration={"selections": []},
     )
     state["controls"] = [{"id": "C1", "title": "Declared local logging control"}]
-    state["tasks"] = [{
-        "id": "T1", "control_id": "C1", "title": "Inspect collection and clock gaps",
-        "status": "NOT_STARTED", "conclusion": "NOT_RUN", "history": [],
-    }]
-    state["artifacts"] = [{
-        "id": "A1", "sha256": source_sha, "bytes": len(original),
-        "status": "AVAILABLE", "audience": "LEARNER",
-        "source": {"receipt": {"source": {
-            "company": "SH", "branch": "local", "system": "security_logs",
-            "record": "R1", "version": 1, "sha256": source_sha,
-        }}},
-    }]
+    state["tasks"] = [
+        {
+            "id": "T1",
+            "control_id": "C1",
+            "title": "Inspect collection and clock gaps",
+            "status": "NOT_STARTED",
+            "conclusion": "NOT_RUN",
+            "history": [],
+        }
+    ]
+    state["artifacts"] = [
+        {
+            "id": "A1",
+            "sha256": source_sha,
+            "bytes": len(original),
+            "status": "AVAILABLE",
+            "audience": "LEARNER",
+            "source": {
+                "receipt": {
+                    "source": {
+                        "company": "SH",
+                        "branch": "local",
+                        "system": "security_logs",
+                        "record": "R1",
+                        "version": 1,
+                        "sha256": source_sha,
+                    }
+                }
+            },
+        }
+    ]
     state = engine.store.create(author["id"], state, "create-task-gap-http-test")
     engine.store.grant(state["id"], reviewer["id"], "review")
     client = TestClient(app, base_url="https://testserver")
@@ -94,7 +113,8 @@ def test_task_gap_command_route_replay_projection_and_permissions(tmp_path):
     assert client.get(base, headers=outsider_headers).status_code in (403, 404)
     assert client.get(base).status_code == 401
     rejected = client.post(
-        base + "/commands", headers=reviewer_headers,
+        base + "/commands",
+        headers=reviewer_headers,
         json={**command, "command_id": "reviewer-write", "expected_revision": saved["revision"]},
     )
     assert rejected.status_code == 403

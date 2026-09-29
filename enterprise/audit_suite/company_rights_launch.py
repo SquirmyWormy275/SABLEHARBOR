@@ -68,12 +68,14 @@ def _private_data(path: Path, expected_sha256: str):
 def _private_config(path: Path, expected_sha256: str) -> dict:
     config = _private_data(path, expected_sha256)
     required = {
-        "version", "source_commit", "policy_sha256", "policy_module_sha256",
-        "rights_root", "checkpoint_root",
+        "version",
+        "source_commit",
+        "policy_sha256",
+        "policy_module_sha256",
+        "rights_root",
+        "checkpoint_root",
     }
-    rehearsal = {
-        "rehearsal_authority_sha256", "rehearsal_binding_file", "rehearsal_binding_sha256"
-    }
+    rehearsal = {"rehearsal_authority_sha256", "rehearsal_binding_file", "rehearsal_binding_sha256"}
     optional = {"native_manifest_file", "native_manifest_sha256"} | rehearsal
     if (
         not isinstance(config, dict)
@@ -96,13 +98,9 @@ def _private_config(path: Path, expected_sha256: str) -> dict:
     ):
         raise DomainError("Native closure hash required", status=503)
     for key in ("rehearsal_authority_sha256", "rehearsal_binding_sha256"):
-        if key in config and (
-            not isinstance(config[key], str) or not _SHA.fullmatch(config[key])
-        ):
+        if key in config and (not isinstance(config[key], str) or not _SHA.fullmatch(config[key])):
             raise DomainError("Exact rehearsal source and binding hashes required", status=503)
-    for key in (
-        "rights_root", "checkpoint_root", "native_manifest_file", "rehearsal_binding_file"
-    ):
+    for key in ("rights_root", "checkpoint_root", "native_manifest_file", "rehearsal_binding_file"):
         if key in config and (
             not isinstance(config[key], str) or not Path(config[key]).is_absolute()
         ):
@@ -121,9 +119,7 @@ def _rehearsal(config: dict, source) -> tuple[dict, dict]:
         binding = _private_data(
             Path(config["rehearsal_binding_file"]), config["rehearsal_binding_sha256"]
         )
-        roles = {
-            row["role"]: row["person_id"] for row in authority["person_bindings"]
-        }
+        roles = {row["role"]: row["person_id"] for row in authority["person_bindings"]}
         records = authority["records"]
         clock = authority["case_clock_approval"]
         if (
@@ -137,8 +133,7 @@ def _rehearsal(config: dict, source) -> tuple[dict, dict]:
             or len(authority["person_bindings"]) != 2
             or clock["approved_by_person_id"] != roles["record_owner"]
             or clock["learner_may_advance"] is not False
-            or authority["grant_authorization"]["approved_by_person_id"]
-            != roles["record_owner"]
+            or authority["grant_authorization"]["approved_by_person_id"] != roles["record_owner"]
             or authority["grant_authorization"]["reviewed_person_id"] != roles["auditor"]
             or not authority["record_population"]["complete_for_scope"]
             or len(records) != len(authority["record_population"]["expected_record_ids"])
@@ -166,9 +161,7 @@ def _rehearsal(config: dict, source) -> tuple[dict, dict]:
         if instant.utcoffset() is None:
             raise ValueError("Approved case clock lacks timezone")
         for pinned in (authority["person_population"], authority["case_source"]):
-            if hashlib.sha256(source(pinned["source_path"])).hexdigest() != pinned[
-                "source_sha256"
-            ]:
+            if hashlib.sha256(source(pinned["source_path"])).hexdigest() != pinned["source_sha256"]:
                 raise ValueError("Rehearsal dependency source changed")
         for row in records:
             if (
@@ -185,17 +178,14 @@ def _rehearsal(config: dict, source) -> tuple[dict, dict]:
     return authority, binding
 
 
-def _case_for_context(
-    authority: dict, binding: dict, context: VerifiedCaseContext
-) -> str:
+def _case_for_context(authority: dict, binding: dict, context: VerifiedCaseContext) -> str:
     roles = {row["role"]: row["person_id"] for row in authority["person_bindings"]}
     if (
         context.engagement_id != binding["engagement_id"]
         or context.tenant != authority["engagement"]["tenant"]
         or context.purpose != authority["engagement"]["purpose"]
         or not any(
-            context.principal_id == binding["principals"][role]
-            and context.person_id == person
+            context.principal_id == binding["principals"][role] and context.person_id == person
             for role, person in roles.items()
         )
     ):
@@ -216,20 +206,20 @@ def _exact_staged(producer: CompanyRightsProducer, authority: dict, binding: dic
         for role, principal in binding["principals"].items()
     )
     expected_records = sorted(
-        (
-            row["record_id"], row["repository_path"], row["source_sha256"], canonical(row)
-        )
+        (row["record_id"], row["repository_path"], row["source_sha256"], canonical(row))
         for row in authority["records"]
     )
     with producer._locked():
         with producer._db(producer.rights_db) as db:
             current_bindings = sorted(
-                tuple(row) for row in db.execute(
+                tuple(row)
+                for row in db.execute(
                     "SELECT principal,engagement,person_id,tenant,purpose FROM bindings"
                 )
             )
             current_records = sorted(
-                tuple(row) for row in db.execute(
+                tuple(row)
+                for row in db.execute(
                     "SELECT record_id,repository_path,source_sha256,policy_row FROM records"
                 )
             )
@@ -246,11 +236,17 @@ def _checked_source(config: dict) -> None:
     try:
         current = subprocess.run(
             ["git", "-C", str(ROOT), "rev-parse", "HEAD"],
-            capture_output=True, check=True, timeout=10, text=True,
+            capture_output=True,
+            check=True,
+            timeout=10,
+            text=True,
         ).stdout.strip()
         dirty = subprocess.run(
             ["git", "-C", str(ROOT), "status", "--porcelain"],
-            capture_output=True, check=True, timeout=10, text=True,
+            capture_output=True,
+            check=True,
+            timeout=10,
+            text=True,
         ).stdout
         if current != config["source_commit"] or dirty:
             raise ValueError("Source checkout is not the exact clean configured commit")
@@ -263,7 +259,9 @@ def _checked_source(config: dict) -> None:
                 raise ValueError("Accepted policy bytes changed")
             pinned = subprocess.run(
                 ["git", "-C", str(ROOT), "show", f"{current}:{path}"],
-                capture_output=True, check=True, timeout=10,
+                capture_output=True,
+                check=True,
+                timeout=10,
             ).stdout
             if hashlib.sha256(pinned).hexdigest() != config[field]:
                 raise ValueError("Accepted policy commit pin changed")
@@ -363,9 +361,7 @@ def stage_reviewed_company_authority(
     _checked_source(config)
     source = pinned_git_source_reader(ROOT, config["source_commit"])
     authority, binding = _rehearsal(config, source)
-    rights_factory, _ = reviewed_company_factories(
-        config_file, config_sha256, require_staged=False
-    )
+    rights_factory, _ = reviewed_company_factories(config_file, config_sha256, require_staged=False)
     store = Store(private_root)
     producer = rights_factory(SimpleNamespace(store=store))
     roles = {row["role"]: row["person_id"] for row in authority["person_bindings"]}

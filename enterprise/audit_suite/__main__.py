@@ -33,7 +33,8 @@ def main(argv=None):
     serve.add_argument("--company-registry", type=Path)
     serve.add_argument("--company-profile")
     serve.add_argument(
-        "--company-rights-config", type=Path,
+        "--company-rights-config",
+        type=Path,
         help="Private, hash-pinned protected company rights configuration",
     )
     serve.add_argument("--company-rights-config-sha256")
@@ -82,11 +83,15 @@ def main(argv=None):
         if args.command == "stage-company-rights":
             from .company_rights_launch import stage_reviewed_company_authority
 
-            print(json.dumps(stage_reviewed_company_authority(
-                args.company_rights_config,
-                args.company_rights_config_sha256,
-                args.private_root,
-            )))
+            print(
+                json.dumps(
+                    stage_reviewed_company_authority(
+                        args.company_rights_config,
+                        args.company_rights_config_sha256,
+                        args.private_root,
+                    )
+                )
+            )
             return
         if args.command == "backup":
             from .recovery import backup

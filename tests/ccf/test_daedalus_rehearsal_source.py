@@ -73,7 +73,14 @@ def test_narrow_grants_case_clock_and_transitive_restriction():
     assert records[notice]["sources"] == [view]
     for person in (auditor, owner):
         for action in (
-            "read", "search", "snippet", "count", "citation", "tool_result", "answer", "export"
+            "read",
+            "search",
+            "snippet",
+            "count",
+            "citation",
+            "tool_result",
+            "answer",
+            "export",
         ):
             assert decide(records, base, person, action, now) == "ALLOW"
             assert decide(records, view, person, action, now) == "ALLOW"

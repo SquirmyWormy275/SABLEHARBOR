@@ -30,17 +30,27 @@ def protected_company(tmp_path):
     raw = b"PRIVATE-SYNTHETIC-COMPANY-RECORD\n"
     producer_holder = {}
     closure_file = tmp_path / "native-closure.json"
-    closure_file.write_text(json.dumps({
-        "version": 1,
-        "source_commit": "a" * 40,
-        "policy_sha256": hashlib.sha256(policy.read_bytes()).hexdigest(),
-        "records": [{
-            "company": "SH", "branch": "base", "system": "identity",
-            "record": "REC-1", "version": 1,
-            "sha256": hashlib.sha256(raw).hexdigest(),
-            "policy_record_id": "REC-1", "repository_path": "docs/company.txt",
-        }],
-    }))
+    closure_file.write_text(
+        json.dumps(
+            {
+                "version": 1,
+                "source_commit": "a" * 40,
+                "policy_sha256": hashlib.sha256(policy.read_bytes()).hexdigest(),
+                "records": [
+                    {
+                        "company": "SH",
+                        "branch": "base",
+                        "system": "identity",
+                        "record": "REC-1",
+                        "version": 1,
+                        "sha256": hashlib.sha256(raw).hexdigest(),
+                        "policy_record_id": "REC-1",
+                        "repository_path": "docs/company.txt",
+                    }
+                ],
+            }
+        )
+    )
 
     def factory(engine):
         producer = CompanyRightsProducer(
@@ -78,8 +88,12 @@ def protected_company(tmp_path):
         discipline="IT",
         mode="CLEAN",
         simulated_at="2027-06-01T00:00:00Z",
-        scope={"boundaries": ["corporate"], "period_start": "2027-01-01",
-               "period_end": "2027-12-31", "timezone": "UTC"},
+        scope={
+            "boundaries": ["corporate"],
+            "period_start": "2027-01-01",
+            "period_end": "2027-12-31",
+            "timezone": "UTC",
+        },
         configuration={"selections": []},
     )
     state["requests"] = [{"id": "R1", "status": "ISSUED", "artifact_ids": []}]
@@ -88,7 +102,10 @@ def protected_company(tmp_path):
     company = engine.company_store
     company.register_system("SH", "base", "identity", "owner")
     company.append_version(
-        "SH", "base", "identity", "REC-1",
+        "SH",
+        "base",
+        "identity",
+        "REC-1",
         expected_version=0,
         command_id="import",
         event_at="2026-09-01T00:00:00Z",
@@ -104,11 +121,16 @@ def protected_company(tmp_path):
     assert login.status_code == 200
     producer = producer_holder["producer"]
     producer.bind_person(
-        principal_id=person["id"], engagement_id=state["id"],
-        person_id="PERSON-1", tenant="SH", purpose="inspection", expected_revision=0,
+        principal_id=person["id"],
+        engagement_id=state["id"],
+        person_id="PERSON-1",
+        tenant="SH",
+        purpose="inspection",
+        expected_revision=0,
     )
     producer.put_record(
-        row("REC-1", "docs/company.txt", raw, None), expected_revision=1,
+        row("REC-1", "docs/company.txt", raw, None),
+        expected_revision=1,
     )
     return app, client, engine, state, producer, raw, login.json()["csrf_token"]
 
@@ -125,8 +147,12 @@ def _collect(client, state, csrf):
             "command_id": "collect",
             "expected_revision": state["revision"],
             "kind": "company.collect",
-            "payload": {"system_id": "identity", "record_id": "REC-1",
-                        "version": 1, "request_id": "R1"},
+            "payload": {
+                "system_id": "identity",
+                "record_id": "REC-1",
+                "version": 1,
+                "request_id": "R1",
+            },
         },
     )
 
@@ -156,17 +182,26 @@ def test_native_collection_does_not_bypass_absent_record_grant(protected_company
 def test_retained_download_rechecks_deleted_company_record(protected_company):
     _, client, engine, state, producer, raw, _ = protected_company
     producer.put_record(
-        row("REC-1", "docs/company.txt", raw, ["read", "export"]), expected_revision=2,
+        row("REC-1", "docs/company.txt", raw, ["read", "export"]),
+        expected_revision=2,
     )
     # Model a source already collected into retained audit evidence before the
     # protected HTTP path is enabled or while the record was still permitted.
-    saved = engine.command(state["created_by"], state["id"], {
-        "command_id": "collect-prior",
-        "expected_revision": state["revision"],
-        "kind": "company.collect",
-        "payload": {"system_id": "identity", "record_id": "REC-1",
-                    "version": 1, "request_id": "R1"},
-    })
+    saved = engine.command(
+        state["created_by"],
+        state["id"],
+        {
+            "command_id": "collect-prior",
+            "expected_revision": state["revision"],
+            "kind": "company.collect",
+            "payload": {
+                "system_id": "identity",
+                "record_id": "REC-1",
+                "version": 1,
+                "request_id": "R1",
+            },
+        },
+    )
     artifact_id = saved["artifacts"][0]["id"]
     url = _root(state) + f"/artifacts/{artifact_id}/download"
     before = client.get(url)
@@ -182,17 +217,30 @@ def test_retained_download_rechecks_deleted_company_record(protected_company):
 def test_native_closure_rejects_wrong_version_bytes_path_and_changed_manifest(protected_company):
     app, client, engine, state, producer, raw, _ = protected_company
     producer.put_record(
-        row("REC-1", "docs/company.txt", raw, ["read", "export"]), expected_revision=2,
+        row("REC-1", "docs/company.txt", raw, ["read", "export"]),
+        expected_revision=2,
     )
     token = next(iter(client.cookies.values()))
     native = engine.company_store.read_version(
-        state["created_by"], state["id"], "SH", "base", "identity", "REC-1",
-        version=1, as_of="2026-09-29T00:00:00+00:00",
+        state["created_by"],
+        state["id"],
+        "SH",
+        "base",
+        "identity",
+        "REC-1",
+        version=1,
+        as_of="2026-09-29T00:00:00+00:00",
     )
     closure = app.state.company_native_rights
-    assert closure.authorize_version(
-        session_token=token, engagement_id=state["id"], native=native, action="export",
-    ) == "REC-1"
+    assert (
+        closure.authorize_version(
+            session_token=token,
+            engagement_id=state["id"],
+            native=native,
+            action="export",
+        )
+        == "REC-1"
+    )
     for changed in (
         {**native, "version": 2},
         {**native, "record": "REC-OTHER"},
@@ -201,8 +249,10 @@ def test_native_closure_rejects_wrong_version_bytes_path_and_changed_manifest(pr
     ):
         with pytest.raises(RightsUnavailable):
             closure.authorize_version(
-                session_token=token, engagement_id=state["id"],
-                native=changed, action="export",
+                session_token=token,
+                engagement_id=state["id"],
+                native=changed,
+                action="export",
             )
     path = closure.manifest_file
     original = path.read_bytes()
@@ -212,8 +262,10 @@ def test_native_closure_rejects_wrong_version_bytes_path_and_changed_manifest(pr
         path.write_text(json.dumps(altered))
         with pytest.raises(RightsUnavailable, match="manifest changed"):
             closure.authorize_version(
-                session_token=token, engagement_id=state["id"],
-                native=native, action="export",
+                session_token=token,
+                engagement_id=state["id"],
+                native=native,
+                action="export",
             )
     finally:
         path.write_bytes(original)
@@ -222,22 +274,42 @@ def test_native_closure_rejects_wrong_version_bytes_path_and_changed_manifest(pr
 def test_retained_company_export_rechecks_native_grant_and_person_revocation(protected_company):
     _, client, engine, state, producer, raw, _ = protected_company
     producer.put_record(
-        row("REC-1", "docs/company.txt", raw, ["read", "export"]), expected_revision=2,
+        row("REC-1", "docs/company.txt", raw, ["read", "export"]),
+        expected_revision=2,
     )
-    saved = engine.command(state["created_by"], state["id"], {
-        "command_id": "collect-prior", "expected_revision": state["revision"],
-        "kind": "company.collect",
-        "payload": {"system_id": "identity", "record_id": "REC-1", "version": 1,
-                    "request_id": "R1"},
-    })
+    saved = engine.command(
+        state["created_by"],
+        state["id"],
+        {
+            "command_id": "collect-prior",
+            "expected_revision": state["revision"],
+            "kind": "company.collect",
+            "payload": {
+                "system_id": "identity",
+                "record_id": "REC-1",
+                "version": 1,
+                "request_id": "R1",
+            },
+        },
+    )
     url = _root(state) + f"/artifacts/{saved['artifacts'][0]['id']}/download"
     assert client.get(url).status_code == 200
     engine.company_store.grant(
-        state["created_by"], state["id"], "SH", "base", "identity", active=False,
+        state["created_by"],
+        state["id"],
+        "SH",
+        "base",
+        "identity",
+        active=False,
     )
     assert client.get(url).status_code == 403
     engine.company_store.grant(
-        state["created_by"], state["id"], "SH", "base", "identity", active=True,
+        state["created_by"],
+        state["id"],
+        "SH",
+        "base",
+        "identity",
+        active=True,
     )
     producer.set_person_revoked("PERSON-1", revoked=True)
     assert client.get(url).status_code == 403
