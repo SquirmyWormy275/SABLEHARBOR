@@ -135,6 +135,62 @@ to the earlier queue SHA-256 `85998a2294336adacb47028a9f84ae28918a17a97a91ac9342
 at repository HEAD `6a5a2a517d9b3ca54462121b8d8d83617de1d322`; this later checkpoint
 does not change its bytes or conclusions.
 
+A later [read-only gap adjudication](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/selected-2027-missing-occurrence-gap-v1/GAP.json)
+(SHA-256 `44c64cb2b9c87432132bc4f726e7f2166211946781eb51e77d05ba4bf8157dd9`)
+checked the three missing selected-period occurrences against their declarations,
+native histories and author intents. IAM007 Q4 has no Q4 review, branch B deliberately
+omitted the September B09 backup despite a source dataset, and branch B has no Q4
+nonhuman review. None was backfilled or converted to a completed operation.
+
+For `TASK-SH-POL-003-corporate-ACTION-H-ADDRESSABLE`, the independently checked
+[selected-original readout](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/pol003-selected-content-read-v1/READOUT.json)
+(review SHA-256 `9e4f0bf89690dac8a5259617c08f95b01ffbc705846c6a87613477cea8fd2246`)
+found a generic local procedure and a single `EXC-01` exception package in the five
+route-hinted files per branch. A [bounded authorized-source scan](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/pol003-authorized-source-discovery-v1/DISCOVERY.json)
+(SHA-256 `812f6df66b4b7829234e395ec4f288df235615e0d79fe36a6dec7fb36f4ebb0b`)
+joined every currently authorized native version at the A/B as-of to an ordinary
+collected artifact and found no 22-entry addressable-measure decision register in
+that portfolio. The task remains `NOT_STARTED/NOT_RUN`; future or unregistered
+sources and professional HIPAA applicability are outside these checks.
+
+The [four-task exact-clause screen](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-exact-clause-screen-v1/SCREEN.json)
+(SHA-256 `802be28d42f769196f07bb7b33b7a99846a8180a8a075a892fe2f6ab6215ea82`)
+found no supportable transition among the selected unplanned HIPAA and integrity
+tasks. The newly committed prospective [restore-use probe](../../../../enterprise/audit_suite/company_backup_use_probe.py)
+has an isolated native operation, isolated `CompanyStore` source collection
+(no audit created) and separate read-only verification (receipt SHA-256
+`41adba6d026547b957eb6d3ebe6f7ee4f2326740128b94cddaae6ef5cce51f61`,
+verification SHA-256 `244709acd655b2464dd0fb7db9c7548a0417fb165923d04508ad98e836ce1eac`).
+No accepted expected-use contract exists for the historical `CONFIG-BYTES` source,
+so this implementation does not add A/B company evidence or SH-POL-001 task credit.
+
+Two user-interface corrections are committed: the offline private reviewer ZIP
+now links its included native files (`83ed1467`), and the active workspace rail
+exposes `aria-current="page"` through reviewer and learner deep links, keyboard
+navigation and browser history (`de7c515b`). Their focused and browser checks
+passed; actual owner visual/usability acceptance remains unrecorded. A full
+backend `tests/audit_suite` run passed at this checkpoint; the later restore-use
+module also passed its focused and backup-runtime regression suites.
+
+The historical [paired B2 Key case](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-paired-b2-key-validation-v2/MANIFEST.json)
+passed [independent technical review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-paired-b2-key-validation-v2-independent-review-v1/REVIEW.json)
+(SHA-256 `f7c70524ec6a7d7d4ae0951b98e6e1c17ef017bf99a8579a240be9422a8cddae`).
+It verifies the selected native-to-collection-to-retained chain at bound A997/B1047
+and shows Messy B's open backup failure ticket was not linked to the B2 issue.
+A new-only unbound [ticket-link draft](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-ticket-key-draft-v1/MANIFEST.json)
+passed [independent review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-ticket-key-draft-independent-review-v1/REVIEW.json)
+(SHA-256 `312527981747c57ac1078e033283b8db0ddaf23c1f01a02afd19dd65e4e1886f`):
+only the existing ticket source ID was appended to B2, and isolated issue-view
+navigation then included it. The existing bound Key was not rewritten. A B1095
+successor proposal passed technical review, but the historical Key workroom's
+instructor and learner identities are expired. An independently reviewed
+[copy-local prepare preflight](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-key-b1095-fresh-principal-independent-review-v2/REVIEW.json)
+(SHA-256 `97c430c8e6edcdea8aba42dabc97e78d5ce15b4a7e63a7da4ad7c9a81a19fa2e`)
+used newly provisioned identities in a separate copy and preserved all 1,096
+historical events and 32 retained source bytes. It did not bind or release a Key:
+native-source isolation/rebinding is unresolved, and qualified grading calibration
+and owner acceptance remain separate gates.
+
 The queue's job `state`, acceptance criteria and attributed checkpoints must be read
 together. Historical `*_scope_update` entries record what was authorized at the time;
 their `QUEUED_NOT_STARTED` labels do not reset later job progress. Conversely, a
