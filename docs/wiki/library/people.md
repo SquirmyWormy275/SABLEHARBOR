@@ -22,6 +22,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [SABLE HARBOR — CORPORATE DOCUMENT STANDARD v0.1](../../governance/CORPORATE_DOCUMENT_STANDARD_v0.1.md) — MD
 - [DECISION QUALITY AND AFTER-ACTION LEARNING](../../governance/DECISION_QUALITY_AND_AFTER_ACTION_LEARNING.md) — MD · [formatted PDF](../../governance/publications/SH-GOV-LEARN-001_v1.0.0.pdf)
 - [SABLE HARBOR — ENTERPRISE AUTHORITY, CAPITAL, AND EXECUTIVE RHYTHM](../../governance/ENTERPRISE_AUTHORITY_CAPITAL_AND_EXECUTIVE_RHYTHM.md) — MD · [formatted PDF](../../governance/publications/SH-GOV-AUTH-002_v1.0.1.pdf)
+- [Enterprise coordination and review addendum](../../governance/ENTERPRISE_COORDINATION_2026-09-13.md) — MD · [formatted PDF](../../governance/publications/SH-ENTERPRISE-COORD-20260913_v1.0.0.pdf)
 - [ENTERPRISE SUPPORT SERVICES AND INDEPENDENCE DOCTRINE](../../governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md) — MD · [formatted PDF](../../governance/publications/SH-GOV-ESS-001_v1.1.0.pdf)
 - [SABLE HARBOR — ENTERPRISE TECHNOLOGY SERVICES DOCTRINE](../../governance/ENTERPRISE_TECHNOLOGY_SERVICES_DOCTRINE.md) — MD · [formatted PDF](../../governance/publications/SH-ITS-001_v1.0.0.pdf)
 - [Generated institutional records lifecycle](../../governance/GENERATED_RECORDS_LIFECYCLE.md) — MD · [formatted PDF](../../governance/publications/SH-GOV-GEN-001_v1.0.0.pdf)
@@ -74,6 +75,8 @@ Generated file inventory. Includes current and historical records; open the sour
 - [SH-COMPANY-DIRECTIONS-20260915 v1.1.0](../../governance/publications/SH-COMPANY-DIRECTIONS-20260915_v1.1.0.pdf) — PDF
 - [Company closeout owner directions — SH-COMPANY-DIRECTIONS-20260915_v1.2.0](../../governance/publications/SH-COMPANY-DIRECTIONS-20260915_v1.2.0.pdf) — PDF
 - [SABLE HARBOR — CORPORATE HEADQUARTERS CLOSEOUT — SH-CORP-HQ-20260903_v1.0.1](../../governance/publications/SH-CORP-HQ-20260903_v1.0.1.pdf) — PDF
+- [Enterprise coordination and review addendum — SH-ENTERPRISE-COORD-20260913_v1.0.0](../../governance/publications/SH-ENTERPRISE-COORD-20260913_v1.0.0.pdf) — PDF
+- [Dated enterprise appointments and workforce identity reconciliation — SH-ENTERPRISE-PPL-20260913_v1.0.0](../../governance/publications/SH-ENTERPRISE-PPL-20260913_v1.0.0.pdf) — PDF
 - [ABSTENTION AND INFORMATION-DEFICIENCY DOCTRINE — SH-GOV-ABSTAIN-001_v1.0.0](../../governance/publications/SH-GOV-ABSTAIN-001_v1.0.0.pdf) — PDF
 - [RESERVED MATTERS, ESCALATION, AND SUBSIDIARY AUTONOMY — SH-GOV-AUTH-001_v1.0.0](../../governance/publications/SH-GOV-AUTH-001_v1.0.0.pdf) — PDF
 - [SABLE HARBOR — ENTERPRISE AUTHORITY, CAPITAL, AND EXECUTIVE RHYTHM — SH-GOV-AUTH-002_v1.0.1](../../governance/publications/SH-GOV-AUTH-002_v1.0.1.pdf) — PDF
@@ -282,3 +285,7 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `docs/organization/history/v1.0.0`
 
 - [Sable-Harbor-Organization-Charts](../../organization/history/v1.0.0/Sable-Harbor-Organization-Charts.pdf) — PDF
+
+## `docs/organization/history/v1.1.0`
+
+- [Sable-Harbor-Organization-Charts](../../organization/history/v1.1.0/Sable-Harbor-Organization-Charts.pdf) — PDF

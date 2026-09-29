@@ -1,10 +1,10 @@
 {
   "schemaVersion": "1.0.0",
-  "canonicalDate": "2026-09-10",
-  "registerVersion": "1.1.0",
-  "status": "source-backed-approved-chart-book",
+  "canonicalDate": "2026-09-13",
+  "registerVersion": "1.2.0",
+  "status": "delegated-source-successor-engineering-review-pending-owner-acceptance",
   "visualMaster": "docs/organization/assets/current/Sable-Harbor-Organization-Charts.pdf",
-  "visualMasterSha256": "352dfa4f1247f6089d340b19940f75758a666dce14f239fb38b1c2a300aaa38b",
+  "visualMasterSha256": "7cf4607406ed56bd7cafdbcaecd136ba53ba7df21706f2fa7080056f908fcdf9",
   "displaySource": "docs/organization/source/chartbook.json",
   "charts": [
     {
@@ -15,11 +15,11 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/business-lines.png",
-          "sha256": "f66ce0d5d6dc217da145dd8fca481188a301b414ac814f7d60abccea821b2837"
+          "sha256": "73fa88173befefe1e5f81c6123d866bd35ccea6e309d6289423a83bebeb1bb86"
         },
         {
           "path": "docs/organization/assets/current/business-lines.svg",
-          "sha256": "2b57e39b8f5cf4f645d55b420586e4b752b7ab09af596be395feca88925edb3a"
+          "sha256": "2d3207e5af33c1c8c72b6c8a1c7be87c7562e70018e89cb4de37925b2e053df2"
         }
       ],
       "node_ids": [
@@ -53,11 +53,11 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/industrial-ownership.png",
-          "sha256": "d7fcc6cf23ff2f2163fefb567d8188c5c6009bd55984a06a7eeb367002021a80"
+          "sha256": "07a9e6e2cf3110973db66db372bfcb8ef4130ffa35dd8baae276590cc6cca33c"
         },
         {
           "path": "docs/organization/assets/current/industrial-ownership.svg",
-          "sha256": "d87ba37b8b9b995cb3d29476de1fef24350273500f8320b837d51b41d3026798"
+          "sha256": "2704e328db90eed3c06f8ceb2981c0902121b7cf36709e4d982552dd76c66e9f"
         }
       ],
       "node_ids": [
@@ -112,11 +112,11 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/people-board.png",
-          "sha256": "23bdc102b758e0a84edcc24611efe8e122d4ef2c0091bf2642cb3284c55de0fe"
+          "sha256": "f83acc96ec94b8b737ebebf4d42036914239f2aea6e05ca6230be541dc803151"
         },
         {
           "path": "docs/organization/assets/current/people-board.svg",
-          "sha256": "4aa1f22067453e812cafac8a4403c67e3a7c903aadbaa0ece86a33845c512031"
+          "sha256": "bbdcc275fc53d2ce5effd95abfef7e681e5457b1a204bdfbc245139dff927769"
         }
       ],
       "node_ids": [
@@ -149,11 +149,11 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/advisory.png",
-          "sha256": "dea6c4a1efda84f612144529b0fd60b4640b0c36ff897446af7c2513d26c5b3f"
+          "sha256": "2c340c376310a3911d171f6376e4efa4b2cf2398219e7319122f1d7d77114522"
         },
         {
           "path": "docs/organization/assets/current/advisory.svg",
-          "sha256": "90a6d2c6227e0218ee0314a9c785c7fca2e56aa9e40de505d027a048385f3f68"
+          "sha256": "0823eae1ed146e2ff500de909cd488d61f227f4d0e3b163f399bf1892734d54c"
         }
       ],
       "node_ids": [
@@ -182,19 +182,19 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/aru-facilities.png",
-          "sha256": "4b10b4e691be64ce5e40f62d4a80d543870b8844ee707bd3af2bc1e1fb72ab6d"
+          "sha256": "9909eaa09443f216afd5cc8f5b9cd3018e4d2bd133b5036426d1ced4ba6acffb"
         },
         {
           "path": "docs/organization/assets/current/aru-facilities.svg",
-          "sha256": "9b5653a3a598bfea80f73589ccb48c0cf8d7d4ae4ed10dd1108626ad7a1e190a"
+          "sha256": "934ce70051ced973335276bf0a60fd49311991ce8b283d445088008165684fd0"
         },
         {
           "path": "docs/organization/assets/current/aru-facilities-02.png",
-          "sha256": "28dd031ec8f3259734db48368bd09c68d8ec42b6b7eba1fadb65ae7e9ba1587b"
+          "sha256": "02a6f1a5bcfe714efa33f05a50d5909b1106ef9839cd8222626b6394aab70408"
         },
         {
           "path": "docs/organization/assets/current/aru-facilities-02.svg",
-          "sha256": "4cb0d43c9a40e98cc62568bac6a0feb4de60cf81daffffee80654563af7aaad3"
+          "sha256": "1690295385988a81c83d1bc01d54bb6c750bc2a11d31d645c7fc567b1c4878af"
         }
       ],
       "node_ids": [
@@ -225,11 +225,11 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/aru-services.png",
-          "sha256": "cee4eb4bbc1cf9a230543c0f2ead84d153cf391bf969ff3fca53bd677f8e92b5"
+          "sha256": "90dd9a91ce5578a141a70b87d814d25a421cdbfd5ebe7edfc11e5f0574332fbc"
         },
         {
           "path": "docs/organization/assets/current/aru-services.svg",
-          "sha256": "89c8de405b0789946ca3f36b7f8349254213f8b83e0172b35667c923aed365a1"
+          "sha256": "0bc486370b6019c08d630a58459b04da1fbe737ba7c138d22b980fa993dbf2ed"
         }
       ],
       "node_ids": [
@@ -258,19 +258,19 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/atlas-meridian.png",
-          "sha256": "623a9c2b4e92221f98e6f46deac256ad72687041a88691787fbd82617169a849"
+          "sha256": "b0095b031f1ecd39ff24c1936a02a9274d9c3dc6f749251f64f0b010dc5234b8"
         },
         {
           "path": "docs/organization/assets/current/atlas-meridian.svg",
-          "sha256": "2de2e6719ec640e4a5e74a447f23ebaa1f482320b8e07041ecb3f7a008f5eee0"
+          "sha256": "d8fc5be5e6641e13b0a06e552e3ff6956a58eec79a391042f7450aaea216e829"
         },
         {
           "path": "docs/organization/assets/current/atlas-meridian-02.png",
-          "sha256": "632476a39e610e4a979e34eb90dedcd5259237e7f75243e11e0f960bfa137558"
+          "sha256": "210ee2dfccf7c0ced2b4e0626c38afb856ea47a3e088097783b7fe53757d9548"
         },
         {
           "path": "docs/organization/assets/current/atlas-meridian-02.svg",
-          "sha256": "f6d4746c756b413b5223a6f1557f7d4655d2ebd3a4309874b5547e8f7c91e267"
+          "sha256": "fbb3a231458503ccf0b9402401c7933c2990cd021782483d2ca04b49e32103dc"
         }
       ],
       "node_ids": [
@@ -302,19 +302,19 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/bst-network.png",
-          "sha256": "04cfdc20b15266c266f2b38ff33882da790f90d8e32ebb9a3adf7c206df9b431"
+          "sha256": "9828e7410e8288f16b504d987ed9ee9072520aa7689656a189cddb1539a9e4f4"
         },
         {
           "path": "docs/organization/assets/current/bst-network.svg",
-          "sha256": "b7dba8dd414f7c642533f25c0d06ee109b1dce0920fefa7dcc9da4fdd7545dac"
+          "sha256": "4f860ab3e8e87ac4ec4a807272611abfd396746159d3473d55fbc9e93d11e640"
         },
         {
           "path": "docs/organization/assets/current/bst-network-02.png",
-          "sha256": "e5ec5b1e550d95a6cf0c116cfeb4d36f75ad9b880d1b518434ebbd47f97251d9"
+          "sha256": "758f9195a7b5a9324e378a5c5633586cc25be4be57cf674bfbca4b49295708a5"
         },
         {
           "path": "docs/organization/assets/current/bst-network-02.svg",
-          "sha256": "2593b50991c473032fbdbb1887918a0436c998a36cf46afd7a5bba52a1470f69"
+          "sha256": "7df8c485a20e33b137bf64e213c68fc71f8b05a4419b9be0bc452905731ac2b1"
         }
       ],
       "node_ids": [
@@ -346,19 +346,19 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/corporate-alexandria.png",
-          "sha256": "1170f20a08d2512094c395b8cde53d998d14741f07ca0f3974faf3d5680f1c88"
+          "sha256": "3d7f1a917a73e6a766cfea6908b6f42be9d63da071ae9d6057dd966ff0f41614"
         },
         {
           "path": "docs/organization/assets/current/corporate-alexandria.svg",
-          "sha256": "facc40c0d557cda0b2e11c727b705424b9d281de2e395cd8eae29aba9dd92c89"
+          "sha256": "6814adbb75149be626961947b73e37d530ffcf243aa6c04652e3a2fdc1115948"
         },
         {
           "path": "docs/organization/assets/current/corporate-alexandria-02.png",
-          "sha256": "cae1186157d67099ac34eb59a3c0d217d35bf5594bd6cecaae2c9fa4a3aafe50"
+          "sha256": "7a450045593a248d48fad0670cae935ecb18206012b652d6390dec67a3372628"
         },
         {
           "path": "docs/organization/assets/current/corporate-alexandria-02.svg",
-          "sha256": "0b0a3b9043c7a825d5b2f2a12cf0a7c47763cf2b52dae93aba2e35ad16355261"
+          "sha256": "f40cc141e17aeda87e8834a82d2185d3d076d9136b226a682d626f0746cd5175"
         }
       ],
       "node_ids": [
@@ -394,19 +394,19 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/corporate-board-committees.png",
-          "sha256": "814ae23b69ecaff36572f5359b17ac17216bb804df6098ea468952a0c2e86158"
+          "sha256": "b56916be3fd430e86d794ed43a8a7eb64f6755d18a158d316e72f91def471f72"
         },
         {
           "path": "docs/organization/assets/current/corporate-board-committees.svg",
-          "sha256": "480589233fc3ae9bb2549d43b71ce4e68954547a2de63d6475ea755d5df7fa18"
+          "sha256": "af75f0f1c322c9923cbda153ec5f2ea9e68b0ae9905f58b1d600eb68a84c6e3f"
         },
         {
           "path": "docs/organization/assets/current/corporate-board-committees-02.png",
-          "sha256": "012b0694dc2a866e7c1506b9df18298959ed643132ffeb2b402d28a58c2b6f05"
+          "sha256": "fccdeca4183883ab9ae476010d6c3987fc67c58887292ce33d202c9a3dd423e2"
         },
         {
           "path": "docs/organization/assets/current/corporate-board-committees-02.svg",
-          "sha256": "7a7ca4fcfd351bc2ebd7507dcce4e44242c235ea0da70d38ae657524d640512c"
+          "sha256": "25508274e51406fd533f9a7c2824049858c0b04c5346c3c909ea0b73807b097b"
         }
       ],
       "node_ids": [
@@ -443,19 +443,19 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/corporate-contact-disciplines.png",
-          "sha256": "817252686ecab68ae31aea96808d3b17cac0b6009336d58761f98218ea269c00"
+          "sha256": "478bd77b6426d757a06a1f7bd6ca04f558a6ddd5c321c7166f4016439e2dc707"
         },
         {
           "path": "docs/organization/assets/current/corporate-contact-disciplines.svg",
-          "sha256": "237e4d2eab159f5437a8bebe1f06cb3589e240bf3c93aeee4ee38fb29e2964cb"
+          "sha256": "4d8b5dc69007dcb20b44c967385c23b81de85afd69b30d227a12ab0611a8ec8e"
         },
         {
           "path": "docs/organization/assets/current/corporate-contact-disciplines-02.png",
-          "sha256": "76be92674c09fd8a77c6383095f33c1b2a6c57a6fe9aa65187f590b97df9c893"
+          "sha256": "99658a787788260496f9a0830456424f7fbd254d6582db4c13085d6128a27f7a"
         },
         {
           "path": "docs/organization/assets/current/corporate-contact-disciplines-02.svg",
-          "sha256": "23d31f53654c99b658ced359eaa8508c47163f1e15c3460e290fcc872b40107f"
+          "sha256": "c3c6e45b5a91c587520aca69ae5c0b564829168acc8a0659ef1f0e9135702ca9"
         }
       ],
       "node_ids": [
@@ -487,11 +487,11 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/corporate-education-programs.png",
-          "sha256": "320398d250a39940101c3dda241258c83752c0b00de45e665118ee78a5d43c03"
+          "sha256": "353eb43bef06ebf7817052a56e93b3eafbd1830cc10911d182a35b9cdedbfdb1"
         },
         {
           "path": "docs/organization/assets/current/corporate-education-programs.svg",
-          "sha256": "41798205006380eda1da129317bc9db2a4ff621c20e6f69f73eb3281cf387726"
+          "sha256": "8744b66069f1d2e3e6488123b4bb22215f071342f17499e928d490a5ab864e36"
         }
       ],
       "node_ids": [
@@ -520,19 +520,19 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/corporate-enterprise-support.png",
-          "sha256": "4bdfcbab590276344d80f452632c4579ced74452bd5286eefbae83bc697ae20b"
+          "sha256": "427c86886d4202b9af6e0d3f34aee704570303e30c5590ca7f71418ae59844fc"
         },
         {
           "path": "docs/organization/assets/current/corporate-enterprise-support.svg",
-          "sha256": "23749acf4ed33b1660720067664ca2064f077061eb12f38df5dd67a9146c5468"
+          "sha256": "4996fd718dbfd185a1ea4f49252b54e68e69fe3653d75e24475e528983f21e9b"
         },
         {
           "path": "docs/organization/assets/current/corporate-enterprise-support-02.png",
-          "sha256": "c41d57acf11d260d3c577fc48bb3a0a86e8ed887ab46b90709ea9016cee07696"
+          "sha256": "5f8ecacf139b09da2eb4b24973a42ec34473d9e4c91ca340c36864df07f4b92f"
         },
         {
           "path": "docs/organization/assets/current/corporate-enterprise-support-02.svg",
-          "sha256": "0ed0c32c2d471334563aa058f93b20a255097bb2424a674192efe3301d625fae"
+          "sha256": "6634f907d27ba3ec74af8f93525f19c03ad5b5f3615ed8ad113893556768c927"
         }
       ],
       "node_ids": [
@@ -570,19 +570,19 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/corporate-headquarters.png",
-          "sha256": "b06e4309422cc658a37e3d958c61077865a1b8308be6f48f8d0b4e7c6b53ff5f"
+          "sha256": "7a370a4662108ca69c17a18eb56490e0d7bd43c6b98e63f7ad16d8e4fbcd09f2"
         },
         {
           "path": "docs/organization/assets/current/corporate-headquarters.svg",
-          "sha256": "3a7d44eee13aa8c0b9526e323f272ebc23916e6e561a9f1a9a3e7b36deb84aa0"
+          "sha256": "956e2d8bd92ea0cd9c981003cde51d8ee29bc92f81433e590a2e8efb5f764b9c"
         },
         {
           "path": "docs/organization/assets/current/corporate-headquarters-02.png",
-          "sha256": "38c5e62ffb7a7398ad4df792cfd956f5b1bdf2d417b356d1306bd511b06ac06f"
+          "sha256": "1c8e957aa6698027d9ba38dc562d044d28917862dfea2f158b9e9818a86267df"
         },
         {
           "path": "docs/organization/assets/current/corporate-headquarters-02.svg",
-          "sha256": "d7a83051413ea6733d3276eaaffe5b7a93e48938aaf7129ebe53cea0c10fb436"
+          "sha256": "67889c757da0c429335d119c859dea37c3af169d5ade9a38fb8cb3e96851937d"
         }
       ],
       "node_ids": [
@@ -618,19 +618,19 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/corporate-j2.png",
-          "sha256": "e219d704ae60818d4d2a8a85c78b9aeb13008941d7133026b50cad7df388bd5f"
+          "sha256": "2d164dc9d478dd027a04ed5b4eb9784a737a9ae8b17f5bee6c94874b4a5c1dc5"
         },
         {
           "path": "docs/organization/assets/current/corporate-j2.svg",
-          "sha256": "82bfb9a7565a98755d1d742d581cf1c136f962ae943665987181f10154b18ec1"
+          "sha256": "61b0c7e4e3167f5d8282b5757673f9e1682f5a1f109370fcd43a07e689ca2013"
         },
         {
           "path": "docs/organization/assets/current/corporate-j2-02.png",
-          "sha256": "bf9da29f570ffcb3a1112a8fc26bbcb3ba36c86a79b93b6042ae070a433c951f"
+          "sha256": "e9a2e72841261bbafa557dda2a9f8622b4cf29b305e72329fde075c77252d2cc"
         },
         {
           "path": "docs/organization/assets/current/corporate-j2-02.svg",
-          "sha256": "4df4621407e5a0a11c63bfd70701ead06046acf2c0dac5e0f99f46d18270e435"
+          "sha256": "ba39d07e1e42b4ee3a3af79ae8c65fc58195d982c7ab177fb91ca9502816d426"
         }
       ],
       "node_ids": [
@@ -669,19 +669,19 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/corporate-pinakes-portals.png",
-          "sha256": "3002664603213c0902fd100ad46101425e426ab0acbf3c93520aec48330dd60d"
+          "sha256": "8b61b44230f22a0c14b2796a6629725a0af0c34f4e65ca448f8b6a363f441e96"
         },
         {
           "path": "docs/organization/assets/current/corporate-pinakes-portals.svg",
-          "sha256": "4566e02fb0c6e2c26e3a17fb9b3d141644b99d9b037284d78485170e07ac30c7"
+          "sha256": "d20a8322187b8445b2386c5ab948c4a1520f9265af691ccbbf17ba6514918243"
         },
         {
           "path": "docs/organization/assets/current/corporate-pinakes-portals-02.png",
-          "sha256": "a76047aa7ffbca469b05ec658c2d63d887ba9c6a1d9f47c01efe8bab48fc751f"
+          "sha256": "db1d7a8d1efbca82861aa9c43773cc37bfde4390f3e6817a68aedf16bfc6250a"
         },
         {
           "path": "docs/organization/assets/current/corporate-pinakes-portals-02.svg",
-          "sha256": "a36c6ea88d3affe78f6397d76118e61d46cdb0a3b72a9c48b0edb1c2d47b4731"
+          "sha256": "67cd271d09a174061216e44ab74827cfcde31894da71a0c61456939d606cd6a7"
         }
       ],
       "node_ids": [
@@ -715,19 +715,19 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/corporate-technology-capabilities.png",
-          "sha256": "1a11db5464d4cfa8b8cb044efdb43148de1837d2233a9b623e6ed90c4a83b604"
+          "sha256": "09bafdf7414582fd1a1cb48399503e8b375362bccdc32be213789c176ddc8261"
         },
         {
           "path": "docs/organization/assets/current/corporate-technology-capabilities.svg",
-          "sha256": "bc763e7dab37e08dc26674792591e58c2e34870fe854efac5af1a70fb4febbe1"
+          "sha256": "87eae68813fe73d58a3fbe6826f9556152890bc7176e47f09d09fec3b0347f4d"
         },
         {
           "path": "docs/organization/assets/current/corporate-technology-capabilities-02.png",
-          "sha256": "183f3c01607ed295b8319c01425b455348ad1b59b2629771782467e0fde927bc"
+          "sha256": "4579994ae8a3fa37d3c04f20bc341668350dcd7c46081504323d20c143571621"
         },
         {
           "path": "docs/organization/assets/current/corporate-technology-capabilities-02.svg",
-          "sha256": "dee866df12eaba45629d36df6e2530558deafa4e37c6c4be5d07c1aea4028c53"
+          "sha256": "cb78b9807cd27600c70ebee021343babe8fc8430afe0ac0d770998f66ce82026"
         }
       ],
       "node_ids": [
@@ -759,11 +759,11 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/foundry-field.png",
-          "sha256": "1e7d7b049f3f1e8667efcb375179231dbfde49ea7584fccf4711dcbc8fb78637"
+          "sha256": "30d0563e944793863c11d089aed02b440dc87f949988482011e0b9bd7d4cdd02"
         },
         {
           "path": "docs/organization/assets/current/foundry-field.svg",
-          "sha256": "d8cafc519514d463d4015c9faaaf362d36f099b757450251a6ced1c2a56fff34"
+          "sha256": "0a53b3b77644bf113447ce10d626ff5fb134e6ba776f96c3c6d69fe72ecae1a4"
         }
       ],
       "node_ids": [
@@ -792,11 +792,11 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/pale-sun-red-wash.png",
-          "sha256": "2de631660d5ab3bc1e6e42991cca8839288d3cb853d3a41245f76710edca3666"
+          "sha256": "affce3023f56d5c492ae3b6cfca38bb5bd13a1f9b23f968b324ede1bd80d7be2"
         },
         {
           "path": "docs/organization/assets/current/pale-sun-red-wash.svg",
-          "sha256": "beab73d05b7374510baa17b9f07a12b46ee732c2972b4ffd298e80c4eb81ad94"
+          "sha256": "b0aefb7c725708b20a49ef722e5c3bdab10b63c306b8208014f714fcdc54a3ff"
         }
       ],
       "node_ids": [
@@ -825,11 +825,11 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/people-aru-leadership.png",
-          "sha256": "0ba77ac065e23e125a206f78e4967aa29143f5dca14b8ad99df6e93d643ead3f"
+          "sha256": "8eb70fbfe04ff8a82da33881a0d487594e33aec8be2c668a6930b79862f44862"
         },
         {
           "path": "docs/organization/assets/current/people-aru-leadership.svg",
-          "sha256": "869b200d73b0291ac8a61d25558dc37173e7f7ba30e29920186e9d00a530d2ce"
+          "sha256": "04115bd87a8081131840476809f5b58ff8e58100f0dabd405bcceee42bb390f4"
         }
       ],
       "node_ids": [
@@ -857,11 +857,11 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/people-aru-operations.png",
-          "sha256": "866edb20deb2f7d09550cf3f5e73ab5bf5df480e230a1b24faf4150bae6202d9"
+          "sha256": "5eaf9dab9608093b65cdf61ffb9b26d1f399e16570759994a2583e5b00bf19ff"
         },
         {
           "path": "docs/organization/assets/current/people-aru-operations.svg",
-          "sha256": "00a8f654501d436f3bf9a749d0b3da1fcbe90cd3d8b8dad028713443ecd7be78"
+          "sha256": "a3c0454dc84a8688b59e01b645f1252cbb8445a5449c0810db3e45e3dbe86df7"
         }
       ],
       "node_ids": [
@@ -887,11 +887,11 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/people-atlas-meridian.png",
-          "sha256": "258726d00b76ba61009ff36f3b997ea71b2fe1c4f05cd37aa1053176bb281e25"
+          "sha256": "61141f06ab212c53f6fe06480094338af13800ca343a5540f079c943fb3b90a3"
         },
         {
           "path": "docs/organization/assets/current/people-atlas-meridian.svg",
-          "sha256": "ced3115e49af62aed4fd77e8b7df1b52795e6d6db3e93d20239d05428898d028"
+          "sha256": "288c3d71a3de3ff5f4fe684991a8190c1db33b7f679b3817dbc23be1a824c9f7"
         }
       ],
       "node_ids": [
@@ -915,43 +915,43 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/people-board-committees.png",
-          "sha256": "fadd9bf661c79f75fea0370880423a55b280c62465e1a1b27c63d016e6e0fc03"
+          "sha256": "a2149b583048aa1fbc5b02019fa16962349f91a4ce8df54ccd357de2ac087cd3"
         },
         {
           "path": "docs/organization/assets/current/people-board-committees.svg",
-          "sha256": "667096dc97919143e8069c5cf3ecd48b659ce5e252a0d1db222b291cb08d8cf8"
+          "sha256": "a34acef1f88b4f2a8c7113e3647f3e351453bd1cdb196ba1f230f9931ee7995c"
         },
         {
           "path": "docs/organization/assets/current/people-board-committees-02.png",
-          "sha256": "4e70c73418b85ff1625c87a3ec04b28952761c73030b94c422b8fce66cc8d3ec"
+          "sha256": "1beaf74d9da5483d9dbf2add197c9c808b2d40616b2ceaa99027c40e84e82edc"
         },
         {
           "path": "docs/organization/assets/current/people-board-committees-02.svg",
-          "sha256": "91fefb653db58c8a10e86c1e48d6305f913fcb46e39706398518f01ca90ce3c6"
+          "sha256": "8eae4d9e3c7af864ad9bccdcd49dd91582e94dd7b4bb4d20ddbaf40e1d08b5c4"
         },
         {
           "path": "docs/organization/assets/current/people-board-committees-03.png",
-          "sha256": "088a7b7038f5379a847ff8fdd8da7f0e296d56c2dde53e3288b54131bb5eb69f"
+          "sha256": "8711da86c389db5de4c77909ae2fb260b2c9dc7acf524e997c8f774d47796e79"
         },
         {
           "path": "docs/organization/assets/current/people-board-committees-03.svg",
-          "sha256": "ee018594e3c5b8d22ac2701579715c8e5b53c174ddcb96de8db20336b4f4b0d7"
+          "sha256": "f488359850295d9e853c7141a38d64276ac4cc17f42ad922e7d517173753db21"
         },
         {
           "path": "docs/organization/assets/current/people-board-committees-04.png",
-          "sha256": "b6f337339a9aca9c75ba7535697fd006373243226f4898c4b19dbaad0c29114d"
+          "sha256": "0052d3b6ebf1cae5a6aeb9fb16bce87da4379bb4b0df31e549ca931e725511bf"
         },
         {
           "path": "docs/organization/assets/current/people-board-committees-04.svg",
-          "sha256": "f2173f23a45f2e1724eb4dce8b4598a82f7575403d330455f38b35490878960b"
+          "sha256": "2cc43a806aa82ab4092a882fcc65aeb950d313043649984fdeb321b797074e87"
         },
         {
           "path": "docs/organization/assets/current/people-board-committees-05.png",
-          "sha256": "af042a6ff32a33a0ef8b4ca27953c9a6ba5aec364619aed3195634a5f4751154"
+          "sha256": "613866687d001f3c9533e095a7d2cecd5c2556e40b6d7972a2d1799ea18e74b0"
         },
         {
           "path": "docs/organization/assets/current/people-board-committees-05.svg",
-          "sha256": "0472021ae5a5b39f7c3f3058eab3b1a1d7f5946867e7aed3a5f0501839cc6bfb"
+          "sha256": "933258d271b676e0042503c1591eb0f863cd8c409d26980650dc3da02e4d9d05"
         }
       ],
       "node_ids": [
@@ -987,11 +987,11 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/people-bst.png",
-          "sha256": "3d9c359ef0de8047bfa6e414e634c058a41d875e2ffe3dc0dba9c3f3d8c66b40"
+          "sha256": "3818a395e219f79fa7b5aff801c4a08eeea5b373943e4304c85a1d0962e7a324"
         },
         {
           "path": "docs/organization/assets/current/people-bst.svg",
-          "sha256": "db1f76252612da985b066e1f4f68d04c9343dda51ee391e94eaa9f2cd4cc0427"
+          "sha256": "b6f17f59e64238c56633e4c521d06b19993bcdab9bc9f954a5c7b2478cbf21b1"
         }
       ],
       "node_ids": [
@@ -1018,11 +1018,11 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/people-cradle.png",
-          "sha256": "300e7b35edff0c3b772f17c68024d90269f98c9654220e826fe3d9b6232e0501"
+          "sha256": "d55fd1bb8c2bb32a46dc7329e61a7cda7c5ac632fc0841dd9a37bc9dbf6d4ce9"
         },
         {
           "path": "docs/organization/assets/current/people-cradle.svg",
-          "sha256": "5eeb5f3bb8e5091a6223ee1f313d2e2468d20546ad7a4880d5a245173cfd1f42"
+          "sha256": "6097e12e5dc2c3e85b27e762662e895d976208ff2c70eabaf6c140e852a13325"
         }
       ],
       "node_ids": [
@@ -1049,11 +1049,35 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/people-enterprise.png",
-          "sha256": "c3c7267a939145fdda0e564f69a552af6c90c4b7a14b6dd8c18cf3325adc5d2e"
+          "sha256": "b504a7118be2a0cea0c2bf6e4ef7bcd04f22b413e5d574e9fbb55d96ae6c11f6"
         },
         {
           "path": "docs/organization/assets/current/people-enterprise.svg",
-          "sha256": "6d317cedcc484e127a8492c25e3e38221c6069c652a3b12fac26c2137a614565"
+          "sha256": "a8d6bbc20332450ef06c5c18e2f2ccc31fb321100bfa962356c7d3270ba900d9"
+        },
+        {
+          "path": "docs/organization/assets/current/people-enterprise-02.png",
+          "sha256": "ee02ae3d9e321eaea0f05920f10a6160c3ee2f2976477dec423a7782798627ee"
+        },
+        {
+          "path": "docs/organization/assets/current/people-enterprise-02.svg",
+          "sha256": "1e3e7a7593c2089bff55ed3b88791339a50b6589ef8a1341b9a71119aab30b9c"
+        },
+        {
+          "path": "docs/organization/assets/current/people-enterprise-03.png",
+          "sha256": "405afa3c3af3467861f16dcb70da7e1b805fb62cafed43c8c986a0996ce6c922"
+        },
+        {
+          "path": "docs/organization/assets/current/people-enterprise-03.svg",
+          "sha256": "ea53b7a204a353a183b7993101b419831d67348eff8e40c44bb7d6b4512da1a0"
+        },
+        {
+          "path": "docs/organization/assets/current/people-enterprise-04.png",
+          "sha256": "34b203701f90c40cdd14a1b50061bac944d1e80aea0698190db1fcf267ade953"
+        },
+        {
+          "path": "docs/organization/assets/current/people-enterprise-04.svg",
+          "sha256": "f23f200482f6961f1cbd00f6c24e4905b9acac0e6fa788fe50aea060e58b19f0"
         }
       ],
       "node_ids": [
@@ -1064,16 +1088,35 @@
         "P006",
         "P007",
         "P011",
-        "P063"
+        "P063",
+        "AS-P001",
+        "AS-P002",
+        "AS-P003",
+        "AS-P004",
+        "AS-P005",
+        "AS-P006",
+        "AS-P007",
+        "AS-P008",
+        "AS-P009",
+        "AS-P010",
+        "AS-P011",
+        "AS-P012",
+        "AS-P013",
+        "AS-P014",
+        "AS-P015"
       ],
       "sources": [
         "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
         "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
-        "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md"
+        "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+        "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md"
       ],
       "edgeMeaning": "Named role membership only; no person-to-person reporting relationship is inferred.",
       "publicationPages": [
-        41
+        41,
+        58,
+        59,
+        60
       ],
       "asset": "docs/organization/assets/current/people-enterprise.svg"
     },
@@ -1085,11 +1128,11 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/people-foundry-field.png",
-          "sha256": "20e1de191a1caa1f1a3f463dc7e054c1b8b1fd983995c381afb0c0732ae51745"
+          "sha256": "ee6c3869d5cc28d6d576c0d69deb280db84927074d17ecafd381a04700e9c0cb"
         },
         {
           "path": "docs/organization/assets/current/people-foundry-field.svg",
-          "sha256": "cb931e3494d611f7efe766d85311e640c7506cc1ca364dcfae9f9ca40ea0261f"
+          "sha256": "d3b60c1a3ed30ae5726f2fa0cbf30eea6e3db2bcf27689bcd3fc46ec3f9baf8e"
         }
       ],
       "node_ids": [
@@ -1119,11 +1162,11 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/people-pale-sun-red-wash.png",
-          "sha256": "f62928b1612aa66bb8c38fcc51f662bb516456396ed609e138720fa149b8b469"
+          "sha256": "2dbe3ee5a92f60b3bdfae5585487d55a25cbd8f5c107d1fa37372f88a74d3bb3"
         },
         {
           "path": "docs/organization/assets/current/people-pale-sun-red-wash.svg",
-          "sha256": "ea77858ccd627d3740b5891bae41009091f88bbba0b14a90b027ee3f76365cc3"
+          "sha256": "7511ef82dd4a49f6a0abfe816c2f45bbf0bffd5fd704fddd9a2e048f93d504e3"
         }
       ],
       "node_ids": [
@@ -1150,11 +1193,11 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/people-willow-leadership.png",
-          "sha256": "bf937ff508642c2fc9023cabec6d63d1169e29cdc2fd79c839bb4959bbdf0960"
+          "sha256": "8fbf4c5d0663a71f456edb7b9189caf16a64f5c95a79bfc691da17c1adbc0f6a"
         },
         {
           "path": "docs/organization/assets/current/people-willow-leadership.svg",
-          "sha256": "fdf9e80f45f9195d41684d34d1405bec3dae68eda558b8a131a9b18f69010fb0"
+          "sha256": "9510b16d5b48df935205d27216a860d6ddf4df713a4d327ccadf0e2848658e89"
         }
       ],
       "node_ids": [
@@ -1179,11 +1222,11 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/people-willow-team.png",
-          "sha256": "f16e1535eedb83992b95521f30db3dc88301332523f54c2bfe20a6cf8b131ef0"
+          "sha256": "cebd6901147a433a0c28294c5940aca6ab7b566c57318b4cd2dad9b170523a90"
         },
         {
           "path": "docs/organization/assets/current/people-willow-team.svg",
-          "sha256": "bcda370005f20d6733699c07056e9a12d1a0f8bdcf9091bd287b62cfcfb361ac"
+          "sha256": "d72b869f1348d1b60b387c0b0d7523268b12980c77b0a10036ee7fe86489811a"
         }
       ],
       "node_ids": [
@@ -1215,11 +1258,11 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/project-cradle.png",
-          "sha256": "f440c026a91b5f9ccebee9c09868d3e15e9b2592ea57af7079185914b01d80e4"
+          "sha256": "a5b6ed5627af4e51e7fdb4ca551fe06157cc6e572d1160f0083bd34064288401"
         },
         {
           "path": "docs/organization/assets/current/project-cradle.svg",
-          "sha256": "b0010d852f208a4c0f64410576f9f57068ea83c3ab3ac6bb1c9501995bebf942"
+          "sha256": "cf2142c7e195dfd221b2f07ddc9d3de4e5ac3319a2f562a70da005b38380a989"
         }
       ],
       "node_ids": [
@@ -1245,11 +1288,11 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/willow-fort.png",
-          "sha256": "400ab9cebf8e8aa6bf7c5ca3a8cbec8d58e9ba874c321fec6106a3b580db625e"
+          "sha256": "bb9bb51d33dd6e3e1d4499c017d490978114bb15384249489015f468b54d93f1"
         },
         {
           "path": "docs/organization/assets/current/willow-fort.svg",
-          "sha256": "9155ec8b196b6c1f9d639b572ea146e8b58dd25f01c159c531e4540b4445f1ad"
+          "sha256": "576b8e2e56879276f897a7a47b55062820efdedc6274e967534db84b5205dfa6"
         }
       ],
       "node_ids": [
@@ -1277,11 +1320,11 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/external-cradle-hosts.png",
-          "sha256": "bdb070015738717f79e6e26b5e1d7dd815bbf5b0c7fd3632a9aadb145e93c113"
+          "sha256": "1e3985aca92e3471da3601d952157d56b5539c5ae2d264f6b6d35c63616cbe49"
         },
         {
           "path": "docs/organization/assets/current/external-cradle-hosts.svg",
-          "sha256": "3a70d9429bda98707daf17e156eaf8e26ef4b83332feb22f1812c4bd97c3903c"
+          "sha256": "2b6a079571b04b3fdba59c403e0828833fdb68534c9434d10654c025fa69d78b"
         }
       ],
       "node_ids": [
@@ -1305,11 +1348,11 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/external-investors.png",
-          "sha256": "6a80e9f63b922c326e002836cb84138dd3adefdf28c76054fd9ad8705b02328e"
+          "sha256": "223f8432e5917c0ae4b89f5331078395e0c9588ccbf629dc34d02c074835df88"
         },
         {
           "path": "docs/organization/assets/current/external-investors.svg",
-          "sha256": "cf10760ffdc9cbae18ea9da256bb7e02be73caae59192def35e259e7cb174428"
+          "sha256": "ada8bf530fce7854848e631954302e0bb66b15b84375016919461fea6fa7a112"
         }
       ],
       "node_ids": [
@@ -1333,11 +1376,11 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/historical-opportunities.png",
-          "sha256": "894d5fdaa4b93a448592667829ee2e8c598bed41964823daa784287f99bc5a9e"
+          "sha256": "6a2e70dddb59f3f0727f6cb3bea2a2fcd4bf52422f1522a205f0671d1023dad3"
         },
         {
           "path": "docs/organization/assets/current/historical-opportunities.svg",
-          "sha256": "5bd39d79f80f10b1c6b51bebd609e9b15b76f06bffacb6fc271156dfa0b4d4b2"
+          "sha256": "65ea4bcf1886646e414989ea14307fbd8485e0f01dec050757f5f731d62a80f5"
         }
       ],
       "node_ids": [
@@ -1365,11 +1408,11 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/people-original-eight.png",
-          "sha256": "ca4440b4f7be5a168c1ae3a57a000f27ae7a66ec678e5c7d0f8a59428bcbfc71"
+          "sha256": "89f8831094300d3ee4aade26d595a7525a8230bf4a88cc6156a7ea7ec55716bb"
         },
         {
           "path": "docs/organization/assets/current/people-original-eight.svg",
-          "sha256": "932eaa109cf902d20f577991ff2c87e9f2b6756e93bcbf5bb15801016662e71f"
+          "sha256": "0261e36d0ade5651e5ec6dc42834f1df047448100efe4d5618fa915c2d97ba38"
         }
       ],
       "node_ids": [
@@ -1400,19 +1443,19 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/research-artifacts.png",
-          "sha256": "77ce5b21040402e34bac9b7b7c3e7a6df86519b176cbcba44628c341b9a28e5d"
+          "sha256": "bda8641538622bd76fad1411a4c46fcda4d84f79e01dbe19d4bb3cf57f7c0c60"
         },
         {
           "path": "docs/organization/assets/current/research-artifacts.svg",
-          "sha256": "3bace551073f9e692408c44446479f24756326c6a75f0a4f99514e54f78350ea"
+          "sha256": "1c9537b2b554c40d86565165f6b5b72c8613fcafa8990d67c3651962ab813fff"
         },
         {
           "path": "docs/organization/assets/current/research-artifacts-02.png",
-          "sha256": "17c89e8aeee7344a97920e348d834814a324d61e4c45080156be5c802c84ecb4"
+          "sha256": "8084460c9fce401f0713ff70adeb46c49644fe8821f8980b2068aa9d483c5527"
         },
         {
           "path": "docs/organization/assets/current/research-artifacts-02.svg",
-          "sha256": "6fef28c19999298056960279f9683ab57b5c7e8e0ca80f556cad3b975067a2ae"
+          "sha256": "57626639ce23a4b4bfcaf1d18ae01d91274924a3b1a007f2ae0af950c1aa081a"
         }
       ],
       "node_ids": [
@@ -1442,19 +1485,19 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/research-history.png",
-          "sha256": "558ae422e06d367336f2f41f333e11920c0e6707b88b59da4e20897018cf5c9a"
+          "sha256": "5b3c88613155d75b318e6ee5c9595b8f9f739cc50d3cf6d92085efea5a572f35"
         },
         {
           "path": "docs/organization/assets/current/research-history.svg",
-          "sha256": "f877adf960c5cc2ce26d11c64d4c15e6f644e173347206fcaf174c7198f70130"
+          "sha256": "39c84f38bd316c2fd94d8715f0065045704832920a600acb256194d2bb41c6e4"
         },
         {
           "path": "docs/organization/assets/current/research-history-02.png",
-          "sha256": "19c87eb17f86bb5581ba8aa8ca9b85c215fa81244948ea1aa5c90a7cf02a42eb"
+          "sha256": "0543da83f24ce6bb31037ce3084a5b16c59a7e249e06f9bdfddd3acad2063f24"
         },
         {
           "path": "docs/organization/assets/current/research-history-02.svg",
-          "sha256": "aa897f358cb34f4ded33769e05f6eb933501b8fe402598b73ab1a89c585a4167"
+          "sha256": "a6b1ed5d87e43b72286084f6615f1cda3d175b6d27d094fcdc9210c643696608"
         }
       ],
       "node_ids": [
@@ -1488,11 +1531,11 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/external-counterparties.png",
-          "sha256": "552c41ba58bcda4b955de0fc881d331465b44f337308ff2703fc72e696d7eac6"
+          "sha256": "c77d56e7a9a4c7156c77aaf4205b507aa8a594681b00f6d885f57e11f554db6c"
         },
         {
           "path": "docs/organization/assets/current/external-counterparties.svg",
-          "sha256": "35b436bbf9c09740cb153a904c79a1e677e32c5171471bc60af358c24004f5f1"
+          "sha256": "4cf6c119409efbb2a580e4131314616c2518e8c4cc6e961797e8b8b651a0e0ea"
         }
       ],
       "node_ids": [
@@ -1523,11 +1566,11 @@
       "assets": [
         {
           "path": "docs/organization/assets/current/people-j2.png",
-          "sha256": "4feebeaccc9288bf2543608edc232d4bf666b8f436e65548ec67a6cc73371ae8"
+          "sha256": "043897f39771c334ea542c55111a18f978f8a3d62545fefe7119a869c72c4990"
         },
         {
           "path": "docs/organization/assets/current/people-j2.svg",
-          "sha256": "63f534f85aab7871a1689521de922c84a6bc26e9d09eb949dff3c01a693b95cd"
+          "sha256": "38dcc700c26f1c5d9924a7fa7c52b1218e5f0c1f5864d5aa0f6f9bd39e49b854"
         }
       ],
       "node_ids": [

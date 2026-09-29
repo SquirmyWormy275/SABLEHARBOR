@@ -1,0 +1,44 @@
+.evidence-context {
+  border: 1px solid var(--line, #c7d2dc);
+  border-radius: 0.65rem;
+  padding: 1rem;
+  min-width: 0;
+}
+.evidence-context-heading {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.evidence-context h3,
+.evidence-context h4 {
+  margin: 0.5rem 0;
+}
+.evidence-context section {
+  margin-block: 1rem;
+}
+.evidence-context p,
+.evidence-context button,
+.evidence-context li {
+  overflow-wrap: anywhere;
+}
+.evidence-context-pin {
+  font-size: 0.85rem;
+}
+.evidence-context ul {
+  padding-inline-start: 1.3rem;
+}
+@media (max-width: 600px) {
+  .evidence-context {
+    padding: 0.65rem;
+  }
+  .evidence-context-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .evidence-context button {
+    max-width: 100%;
+    white-space: normal;
+  }
+}

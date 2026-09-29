@@ -33,6 +33,14 @@ ccf-service = [
     "gunicorn>=26.2,<27 ; python_full_version >= '3.12'",
     "pyjwt[crypto]>=2.12.2,<3",
 ]
+audit-suite = [
+    "fastapi>=0.115,<1",
+    "httpx>=0.27,<1",
+    "openpyxl>=3.1,<4",
+    "pymupdf==1.26.7",
+    "python-multipart>=0.0.20,<1",
+    "uvicorn>=0.30,<1",
+]
 
 [project.scripts]
 shfin = "sable_harbor.cli:app"
@@ -48,7 +56,7 @@ addopts = "-q"
 [tool.ruff]
 line-length = 100
 target-version = "py311"
-include = ["src/**/*.py", "tests/**/*.py"]
+include = ["src/**/*.py", "tests/**/*.py", "enterprise/audit_suite/**/*.py", "tools/audit_suite/**/*.py"]
 extend-exclude = ["blackridge", "geospatial"]
 
 [tool.ruff.lint]

@@ -21,6 +21,8 @@ def field(text: str, name: str, default: str = "") -> str:
 
 
 def category(path: str) -> str:
+    if path == "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md":
+        return "enterprise appointment decision"
     if path.startswith("enterprise/runtime/"):
         return "runtime estate implementation"
     if path == "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md":

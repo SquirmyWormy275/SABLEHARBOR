@@ -1,0 +1,11 @@
+# Bounded mover source collection
+
+The `company_activity.TransferRecipe` / `generate_pair` API creates one explicitly fictional employee transfer independently of any audit. It reuses a current canonical employee identifier and existing scoped operational contacts. It does not amend personnel canon or accept proposed appointments.
+
+The bounded source inventory is HR, a directory, one application, site access and the operational reconciliation record. It implements the old/new-rights comparison and connected-system reconciliation described by SH-IAM-003. People custody is sourced through the existing organizational bridge; this does not demonstrate the separate screening requirements in SH-PPL-002. Source and code hashes are retained with each operational version. One selected omitted application revocation produces an observable cross-system discrepancy. The reconciliation record is a management observation, not an audit finding or hidden expected answer.
+
+`tests/audit_suite/test_company_activity_collection.py` uses actual Engine creation, company activation, kickoff, PBC creation/issue, clock advancement and company collection. It collects originals that existed before engagement creation, checks every collected byte hash against the company version, checks that no prepared world exists, exercises future-source and revoked-grant denials, and verifies event history. A second paired run swaps engagement mode labels to verify that source contents, rather than Clean/Messy labels, determine the collected rights. No result is automatically graded or approved.
+
+The dedicated private source and audit receipts are under `enterprise/generated/audit-suite/company-activity-2026-09-14/`. Existing operating-company-v1/v2 and the owner's live walkthrough are not used or modified. Collection grants in the isolated exercise are revoked after collection. Historical source rows are preserved.
+
+This is one employee, one transfer and three declared access systems. It establishes neither a complete corporate system inventory nor whole-control operating effectiveness, People screening coverage, professional independence, or rubric validity. Local model conversations are outside this deterministic collection check. Public tests use neutral local records; private execution receipts are retained separately.

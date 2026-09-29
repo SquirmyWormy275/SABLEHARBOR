@@ -14,8 +14,8 @@ SPEC.loader.exec_module(MODULE)
 def test_current_bridge_reconciles():
     data = MODULE.build()
     assert not MODULE.validate(data)
-    assert data["totals"]["current_named_people"] == 51
-    assert data["totals"]["current_named_employees"] == 44
+    assert data["totals"]["current_named_people"] == 66
+    assert data["totals"]["current_named_employees"] == 59
     assert data["j2"]["unnamed_authorized_billets"] == 231
 
 
@@ -82,7 +82,7 @@ def test_runtime_requirement_is_not_payroll():
     assert rt["site_roving_positions"] == 4
     assert rt["owned_conditional_facilities_fte"] == 2
     assert rt["owned_conditional_guard_positions"] == 6
-    assert data["totals"]["current_named_employees"] == 44
+    assert data["totals"]["current_named_employees"] == 59
     rt["actual_runtime_employees"] = 20
     assert "runtime proposed workforce conflated with actual" in MODULE.validate(data)
 

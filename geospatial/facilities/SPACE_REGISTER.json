@@ -2864,7 +2864,7 @@
     "internal_users_compute_assumption": 900,
     "compute_users_are_employee_census": false,
     "enterprise_total_addition": null,
-    "overlap_rule": "Do not add proposed roles to 44 named employees, J2 237, conditional ESS 48/54 or legacy 7.1 service-workload FTE. Construction lead 0.5 is included capacity; specialist 2 is purchased project capacity, not extra payroll.",
+    "overlap_rule": "Do not add proposed roles to named employee identities, J2 237, conditional ESS 48/54 or legacy 7.1 service-workload FTE. Construction lead 0.5 is included capacity; specialist 2 is purchased project capacity, not extra payroll.",
     "conditional_seat_allocation": {
       "id": "SH-FAC-RT-SEATS-001",
       "status": "CONDITIONAL_PLANNING_ALLOCATION_NOT_OCCUPANCY",

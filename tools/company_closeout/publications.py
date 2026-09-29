@@ -8,6 +8,8 @@ artwork, PDF normalization and existing publication manifest schema.
 from tools.documents import build_controlled_publications as predecessor
 
 COMPANY_DOCS = [
+    ("docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md", "docs/governance/publications/SH-ENTERPRISE-PPL-20260913_v1.0.0.pdf", "corporate"),
+    ("docs/governance/ENTERPRISE_COORDINATION_2026-09-13.md", "docs/governance/publications/SH-ENTERPRISE-COORD-20260913_v1.0.0.pdf", "corporate"),
     ("docs/internal/company-closeout/INSPECTION_GUIDE_v1.2.0.md", "docs/finance/publications/SH-COMPANY-INSPECTION-20260922_v1.2.0.pdf", "corporate"),
     ("docs/canon/J2_PERSONNEL_COMPLETION_2026-09-22.md", "docs/governance/publications/SH-J2-PERSONNEL-20260922_v1.0.0.pdf", "corporate"),
     ("docs/canon/ARU_ADMINISTRATIVE_COMPLETION_2026-09-22.md", "docs/legal/publications/SH-ARU-ADMIN-20260922_v1.0.0.pdf", "corporate"),

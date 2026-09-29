@@ -9,6 +9,7 @@ from pathlib import Path
 
 from enterprise.operations import exports
 from enterprise.operations.availability import repository_context
+from enterprise.operations.historical_pins import verify as verify_source_pin
 
 ROOT = Path(__file__).resolve().parents[2]
 EXTENSION = ROOT / "enterprise/closeout/source/successor_export_extension.json"
@@ -74,7 +75,7 @@ def collect(context=None):
         pins = dict(hashes or {})
         pins[source] = file_hash(source)
         for path, expected in pins.items():
-            require(file_hash(path) == expected, "Stale provider source: " + path)
+            verify_source_pin(ROOT, path, expected, failure="Stale provider source: ")
         available = (
             max(floor, datetime.fromisoformat(authored))
             .astimezone(UTC)

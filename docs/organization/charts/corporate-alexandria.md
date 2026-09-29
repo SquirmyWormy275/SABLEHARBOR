@@ -1,6 +1,6 @@
 # Alexandria systems and publications
 
-**SH-ORG-CORP-ALEXANDRIA · 2026-09-10 · v1.1.0**
+**SH-ORG-CORP-ALEXANDRIA · 2026-09-13 · v1.2.0**
 
 System and publication relationships; these cards are not legal entities or reporting departments.
 

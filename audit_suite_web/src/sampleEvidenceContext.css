@@ -1,0 +1,28 @@
+.sample-evidence-context {
+  margin-top: 1rem;
+  min-width: 0;
+}
+.sample-evidence-context input {
+  width: 100%;
+  max-width: 100%;
+}
+.sample-evidence-context article {
+  border-top: 1px solid var(--line);
+  padding: 0.8rem 0;
+}
+.sample-evidence-context h5 {
+  font-size: 1rem;
+  margin: 0.4rem 0;
+}
+.sample-evidence-context p {
+  overflow-wrap: anywhere;
+}
+.sample-evidence-context .sample-observation-text {
+  white-space: pre-wrap;
+}
+.sample-evidence-context button {
+  margin: 0.25rem 0.3rem 0.25rem 0;
+}
+.sample-evidence-context details {
+  margin: 0.5rem 0;
+}

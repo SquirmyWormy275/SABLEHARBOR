@@ -1,6 +1,6 @@
 # Business lines
 
-**SH-ORG-BUSINESS-LINES · 2026-09-10 · v1.1.0**
+**SH-ORG-BUSINESS-LINES · 2026-09-13 · v1.2.0**
 
 Business-line membership. Legal ownership is shown separately.
 

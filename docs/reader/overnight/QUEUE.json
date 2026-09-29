@@ -1,7 +1,7 @@
 {
   "id": "SH-READER-OVERNIGHT-001",
   "base_sha": "44e42d37782986fd353e89c1eb2e1f896cdf2918",
-  "status": "DESIGN_REVIEW_PENDING",
+  "status": "IN_PROGRESS",
   "max_parallel_agents": 3,
   "integration_owner": "main agent",
   "decision_defaults": {
@@ -20,8 +20,9 @@
       "sha256": "0aeadf88197eb5ba18e0365b7f6510a90aa86f235b50fcba1177b3ed83930dc0"
     },
     {
-      "path": "docs/organization/source/chartbook.json",
-      "sha256": "6471a6362517f97574c775b73b94ac48d6060d81cee605eb661811425ed75866"
+      "path": "docs/organization/history/v1.1.0/chartbook.json",
+      "sha256": "6471a6362517f97574c775b73b94ac48d6060d81cee605eb661811425ed75866",
+      "preservation_basis": "Byte-identical predecessor retained for the September13 organization successor; original review hash unchanged."
     },
     {
       "path": "docs/finance/evidence/SH-FIN-HUMAN-001/packet.pdf",
@@ -377,6 +378,1209 @@
       "acceptance": "Main agent exclusively regenerates shared catalog/links and reconciles financial, legal and reader coverage. For every scoped record require MD, applicable PDF/XLSX and native database linkage or a supported exemption/missing/proposal disposition. Run accounting rollups, source/period/ID checks, manifest/link integrity and required CI; inspect every changed page/sheet. Merge nonvisual batches after gates; hold new designs and proposed canon for review. Do not mark a family complete merely because it has an index or example.",
       "gate": "existing_authority",
       "evidence": "Source, ledger, link, publication and preservation checks recorded in RESULTS.md; PR #142 supplies final CI/merge evidence. Saved visual packages remain in exact-file owner review."
+    },
+    {
+      "id": "AQ-01",
+      "lane": "audit_company",
+      "title": "Freeze scope and inventory current company history",
+      "depends_on": [],
+      "inputs": [
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/IMPLEMENTATION_DIRECTION_2026-09-13.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "enterprise/operations/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "COMPLETE",
+      "acceptance": "Inventory systems, people, services, assets, obligations, periods and existing records. Map every scoped control and procedure to required source records; distinguish policy/design, operating records, populations and independent corroboration. Record gaps rather than treating file counts as sufficiency. Inventory the shared enterprise baseline for both Clean and Messy modes; distinguish operating-condition variants from baseline realism.",
+      "gate": "existing_authority",
+      "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
+      "execution_authorized": true,
+      "evidence": "Private enterprise/generated/company-source-inventory/aq01-2026-09-13/INVENTORY_v2.json and OPERATING_TABLE_BRIDGE_CENSUS.json; tools/audit_suite/COMPANY_SOURCE_INVENTORY.md. 70 controls,409 tasks,359 prepared requests,597 source pins; inventory identifies gaps, does not claim sufficiency."
+    },
+    {
+      "id": "AQ-02",
+      "lane": "audit_company",
+      "title": "Establish company-owned source systems",
+      "depends_on": [
+        "AQ-01"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/IMPLEMENTATION_DIRECTION_2026-09-13.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "enterprise/operations/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "Persistent record stores for identity/HR, tickets and changes, infrastructure/security operations, incidents, vendors, governance/risk, continuity and relevant finance records. Define stable IDs, owners, access, relationships, record versions and event time. Use existing company systems where present; implementation need not introduce external SaaS. Both modes use the same depth of persistent source systems, causal record relationships and version/history mechanics.",
+      "gate": "existing_authority",
+      "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
+      "execution_authorized": true,
+      "evidence": "Immutable company stores, grants, recovery and read-through source portfolios implemented. New independent change records and configuration checks consume pinned upstream originals. Broader company-system coverage remains in progress. Eleven freshcompany runtimes nowretain all381 nativeversions fromsealedproducer capsules with originalfields intact and initiallyempty authority/journals. Runtimecollection canchangejournals withoutinvalidatingsealedcapsules; ordinaryEngine/federation integration verified. A selected-source ownership register now separates registered current owners, provisional documentary custody, historical control routes, exact native identities/time/version, and explicit typed relationships across the A/B baseline. Finance acceptance/source locks remain read-only references. New standalone operations are outside this inventory unless selected explicitly; this does not establish a coherent whole operating year."
+    },
+    {
+      "id": "AQ-03",
+      "lane": "audit_company",
+      "title": "Migrate existing history retroactively",
+      "depends_on": [
+        "AQ-02"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/IMPLEMENTATION_DIRECTION_2026-09-13.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "enterprise/operations/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "Import manifest binds old artifacts to canonical records, preserves originals and synthetic origin, and records conflicts or unresolved provenance. Reconcile cross-system names, dates, assets and financial locks. Never convert rubric answers into operational facts. Existing engagements remain readable and are not silently rewritten. Preserve coherent source lineage and branch identity; do not migrate hidden rubric answers into either company operational history.",
+      "gate": "existing_authority",
+      "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
+      "execution_authorized": true,
+      "evidence": "The versioned migration register reconciles all 359 selected legacy documentary originals to exact company copies, preserving unknown event dates and historical ownership, source branch identities and unresolved dispositions. Successor manifests preserve predecessor packages; accepted finance artifacts and historical locks are verified without import or rewriting. Engineering reconciliation is separate from historical fact resolution and operating-history sufficiency."
+    },
+    {
+      "id": "AQ-04",
+      "lane": "audit_company",
+      "title": "Complete period-based company operations",
+      "depends_on": [
+        "AQ-03"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/IMPLEMENTATION_DIRECTION_2026-09-13.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "enterprise/operations/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "Build missing operational history through explicit company activities and dependencies: joiners/leavers, approvals, reviews, changes, alerts, incidents, backup/restore exercises and vendor actions. Records reflect frequency, period, scope, responsible personnel and genuine simulated exceptions. Company activity can run without an audit. Clean controls operate as designed with supported reviews and properly handled exceptions. Messy introduces selected causal operating failures and explainable discrepancies within the same company model. Both retain full-period operational depth; no separate planted evidence package.",
+      "gate": "existing_authority",
+      "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
+      "execution_authorized": true,
+      "evidence": "Independent mover, bounded four-quarter identity, incident, backup, training, change and configuration exercises create native history before audit collection. Configuration consumes original release records, preserves earlier drift and later correction. Explicit recipe runner validates source pins/native hashes and creates no audits or grants. Full coherent company-period coverage remains incomplete. The separate fictional worker lifecycle now retains 24 native records from exact prior identity originals; paired collection preserves a cached-session revocation omission and later correction without canonical employment changes. Full coherent company-period coverage remains incomplete. IAM006 now has 35 native versions for one local workload, credential change and quarter-end review; actual denied/successful byte copies and temporary-grant collection are verified. This remains a bounded independent exercise. ERM001 aligned risk v2 consumes nine exact existing incident/provider/log/change originals, preserves computed omission/backfill and collects all 20 branch versions; hypothetical risks and proposed treatments remain qualified. Existing-source V2 routing now verifies exact manifests/native references and consumer cutoffs; actual lifecycle/nonhuman run produced59 originals with unchanged fresh operator inputs. That V2 checkpoint excluded future producer-output metadata capture; V3 below adds the explicit capture contract. V3 producer routing now freezes explicitly captured metadata with exact caller content references; an actual11-job run produced381 nativeversions across174 pairedsystems with8 inputedges. A preserved successor aligns six selectedreference-b groups. Full company-year coverage remains open. IAM007 access-remediation now retains 22 new continuation versions from five exact Q2 review/application/HR sources. Real local permission state drives independent operating probes and preserves failed execution before correction, with unresolved population omissions and earlier quarter records unchanged. Standalone operator and V2/V3 routing verified; not full-period closure. A counterpart V3 run now selects 189 versions with eight verified A dependencies, including actual blocked-attempt logging and prevented-attempt risk observations; all retained B files remain unchanged. This aligns selected dependencies but does not establish whole-year coverage. Explicit local operating-period ledger now separates due/missing/skipped occurrences from selected-source operator assertions; it does not execute business operations or establish full-year sufficiency. Native access-review continuation now derives three selected-subject review originals from a fully verified sixteen-original removal chain; no intervening-quarter activity is invented. Persistent local backup adapter now executes declared byte-copy and restore occurrences with explicit leases, historical failures and exact correction lineage. Its denominator comes from an immutable period declaration; local copy completion is not control effectiveness. Thirty focused tests pass. Actual local execution now retains21 nativeversions across8systems from7explicitdeclared occurrences:6latestcopycompleted and1missing, with the prior failed attempt preserved. This does not establish full-period effectiveness. Explicit native backup monitoring now scans the independent declared schedule using the same runtime transaction/revision, reuses exact prior failure tickets, and records missing-job tickets without automatic closure. Read-only inspection and reviewed CLI execution remain separate; this does not establish continuous monitoring or full-period review. Actual monitoring subsequently created four native originals in the existing local runtime, preserving the prior 21 originals and operation history. A separate fresh technical collection retrieved all 25 originals across 11 systems, denied future monitor records before explicit clock advancement and revoked temporary grants; earlier audits remain unchanged. Missing-job and prior failure tickets remain open. Persistent data-only configuration runtime now validates seven original change records and supports independent file inspection, explicit drift/correction/rollback and native reconciliation with exact command replay. Nineteen integrated tests pass; actual execution is separately gated by a reviewed local plan, and whole-period coverage remains open. Actual reviewed configuration execution now retains seven native originals from six local operations and exact replays, including observed drift, correction and rollback. Current files, upstream originals and earlier audits were verified as qualified in retained receipts. A separate raw-byte export implementation passed sixteen integrated checks; it does not rewrite prior operation records. Persistent SEC006 event workflow now consumes exact logging sources and independent publisher checkpoints, separating intake, computed local triage, supported handoff and source inspection. Reconciliation retains missing subjects; ACK and inspection do not establish remediation or incident closure. Sixteen integrated checks pass; actual paired execution requires separate receipts. Native dataset admission now atomically retains configuration-export bytes and exact producer definition/native/metadata dependencies in the backup command transaction; replay validates retained consumer and producer originals. This supplies a cross-runtime dependency mechanism, not whole-period execution or approved recovery targets.",
+      "technical_checkpoints": [
+        {
+          "date": "2026-09-22",
+          "implementation": "Bounded package-manifest scan/rescan and protected local privileged-session runtimes",
+          "actual_operations": "Paired private company operations and independent native-history verification complete; no audit or grants created by producers",
+          "limits": "Exact selected local objects only; neither installed software nor enterprise privileged-account completeness or annual coverage is established"
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Selected local 2027 company-period source reconciliation; private register v3 manifest SHA-256 fac3fb11a124d2f766e84eee24c2727c344e718a24269a47b3701f89e4856b1f",
+          "validation": "Independent review SHA-256 faf8e149a88490f4babb70c0cd4bb79e0cf1975fb58f6d6bf2c512c2b435d89e verifies 36 declared due, 33 observed, three missing (IAM007 Q4, backup B09, nonhuman B Q4), and 28 separate 2028 slots excluded. Native originals and source cutoffs are branch-specific.",
+          "limits": "Read-only reconciliation only; no new company operation, coherent company-year denominator, accepted policy frequency or control effectiveness."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Source-backed adjudication of the three missing selected 2027 occurrences",
+          "validation": "Private gap receipt SHA-256 44c64cb2b9c87432132bc4f726e7f2166211946781eb51e77d05ba4bf8157dd9 checks declared Q4 IAM007 without a review, branch-B omitted B09 despite available September source, and branch-B Q4 nonhuman review absent from command/native history.",
+          "limits": "These remain actual missing local scenario events. No counterfactual completion was produced, and the selected register still cannot establish a coherent enterprise year or effectiveness."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Prospective native parsed restore-use contract and probe",
+          "validation": "Commit 5a15cea5 and isolated company-source receipt SHA-256 41adba6d026547b957eb6d3ebe6f7ee4f2326740128b94cddaae6ef5cce51f61, with separate read-only verification SHA-256 244709acd655b2464dd0fb7db9c7548a0417fb165923d04508ad98e836ce1eac, prove exact restored-copy parsed read and isolated CompanyStore source collection in a fresh local runtime (no audit created).",
+          "limits": "No accepted CONFIG-BYTES expected-use contract, actual A/B company operation, application/BIA usability acceptance or enterprise period coverage."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Prospective local logging-clock observation companion",
+          "validation": "Commit 82cbb61f and isolated native source receipt SHA-256 d564aaa7e4d2f03bc68c693f9c28670053ef3fce37a150b5f6c4d42c2e769429 show exact pinned device/reference samples, integer-microsecond offset comparison, one threshold alert, a distinct missed slot and CompanyStore source collection. The existing three source roots remained byte-identical in the proof.",
+          "limits": "Reference trust, threshold and cadence are local unapproved inputs; no real device deployment, enterprise clock synchronization, Security Operations review, A/B source transition or SH-SEC-002 audit credit."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Prospective local software-install source exercise for the CC6.8 missing-operation path",
+          "validation": "Commit 408a54e1, isolated run receipt SHA-256 7b6044460e8a88dde9ec838e6ba6b243a1e38fa8576879cc27657552eee10da9, and independent read-only review SHA-256 86e446ac08cf393b5b0680a7e26eaa3df7d46cf5b8f611d547377cc7eb7399e9 verify 12 new native versions and 12 ordinary retained-byte collections from a separate private CompanyStore. The local rule evaluates exact inert digest, asset and simulated exception time; approval, deny, detection/response, scoped exception, retry, expiry denial and untested declared asset are retained. Five focused/collection regression tests and Ruff passed.",
+          "limits": "A prospective fictional local exercise only: no executable was created/run, no deployed endpoint/Reno/Boise/provider operation, no accepted representative asset population, no 2027 period performance, no A/B company operation and no SH-CFG-002 CC6.8 task credit."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Selected 2027 company-native period close from exact existing operations",
+          "validation": "Independent native postreview SHA-256 c745638fb8386aa4865a088586e4e899de99ce9ad65616f70c94a15df131f7c3 verified two new company roots with A19/B21 version-one records, nine preserved input roots/65 files, and 36 due/33 observed/3 B missing occurrences. Observed is 25 completed backup/restore operations, 7 nonhuman native operations and 1 source-backed IAM007 Q3 assertion, not 33 executed operations. Fictional 2028 event/availability time is distinct from actual 2026 import time.",
+          "limits": "Five selected local partitions only; BCM002 B09, IAM006 Q4 and IAM007 Q4 remain missing in B. Six separate 2028 declarations/28 slots excluded. No audit collection by the producer, coherent enterprise year, approved recovery target, effectiveness or task credit."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Fresh ordinary audit collection of selected 2027 company-close records",
+          "validation": "Independent collection postreview SHA-256 822d77e84c64be040245b59f64d33e3d403856013d975b2bc9c5c77f18667dfe verified two zero-evidence new engagements at rev30/34, exact A19/B21 native/collection-receipt/retained-byte joins, PBC and temporary grant/revocation flow, preserved original new company roots and unchanged historical A1939/B2066 audits. Read-only 36-row downstream reconciliation SHA-256 688b35fa1a06f72581a37dcc62b654c1c83d83c05fdf7f4197d2ddbd65e7535c.",
+          "limits": "Forty artifacts are 36 occurrence records, including three negative documents of missing operations, plus four definition/reconciliation records. They do not constitute 40 performed operations, full-year depth, population completeness, task credit or a control conclusion."
+        }
+      ]
+    },
+    {
+      "id": "AQ-05",
+      "lane": "audit_company",
+      "title": "Connect audit collection to company systems and people",
+      "depends_on": [
+        "AQ-02",
+        "AQ-03"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/IMPLEMENTATION_DIRECTION_2026-09-13.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "enterprise/operations/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "PBC requests route to responsible roles; authorized agents inspect records and produce reproducible source exports. Handle permission denials, delays, missing support, corrections and follow-ups. Every retained audit copy traces to an actual source record/version or attributed response; absent evidence remains absent. Disable prepared-evidence delivery for this operating mode. Separate company truth, employee knowledge and auditor knowledge. Both modes use the same authorized collection mechanics; role-bounded staff can consult colleagues and correct statements with history. Neither mode supplies hidden answers.",
+      "gate": "existing_authority",
+      "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
+      "execution_authorized": true,
+      "evidence": "Fresh reference-v4 rehearsal collected all 520 originals across 146 systems and ten explicit source components; maintained inventory verifies exact native/retained hashes and 815 history events. No prepared audit world or model was used. Existing owner-routed collection and explicit conversations preserve source authority and qualifiers. The linked activity-plan runner produces native originals before any audit. Independent reference exercises do not establish a coherent company year. Persistent backup runtime collection now retained all21 preexisting originals across8systems in a separate technical engagement; failedattempt, future/revoked denial, exactreplay and temporarygrantrevocation verified. No procedurecredit or professionalacceptance. Explicit learner-requested company referrals/correction requests now retain server-pinned original question/reply, scoped contact/source authority and attributed correction relation through existing meeting/jobs; mocked backend and full-App retry/context checks pass. No real-model or qualified semantic acceptance is implied."
+    },
+    {
+      "id": "AQ-06",
+      "lane": "audit_company",
+      "title": "Reconcile populations and evidence sufficiency",
+      "depends_on": [
+        "AQ-04",
+        "AQ-05"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/IMPLEMENTATION_DIRECTION_2026-09-13.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "enterprise/operations/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "For every scoped procedure, verify source provenance, population completeness/accuracy, extraction filters, period coverage, sample traceability, approval chronology and corroboration. Maintain a gap register with owner, disposition and retest. Preserve independent population review gates where required. Both modes require population reconciliation, sampling and evidence-based conclusions; mode labels never prove effectiveness or failure. Support defensible alternative procedures.",
+      "gate": "existing_authority",
+      "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
+      "execution_authorized": true,
+      "evidence": "Reference-v4 explicit inventory verifies 520 unique source versions and retained originals: 367 documentary and 153 qualified activity, with explicit activity references for 21 of 70 controls and none for 49 in this selection. Earlier eight-component inventory preserves its distinct 478-original/482-copy counts. Source-record census import remains provisional; source counts and exact procedure/version links do not establish business completeness, period coherence, sufficiency or professional acceptance. Read-only dependency/period reconciliation verifies eight exact LOG/CFG links and four genuine IAM quarterly role sets for only two declared people. Explicit source roles, inventory mismatches and unplanned intervals remain qualified; the subsequent optional IAM row checks reconcile exact membership/decision/selected application/HR references without verifying removal execution or enterprise completeness. Company-year coherence remains unestablished. Maintained run-v6-risk verifies559 original/retained versions (367 documentary/192 qualified activity),13 components/four independent audit snapshots,26 of70 activity references and zero unmatched/unmapped originals. Source counts do not establish sufficiency. Fresh reference-v5 independently verifies the same 559 selected originals in one new engagement across 13 components and 165 systems, with all 893 history events and command replays verified. All runtime native rows and sealed capsules remain unchanged; authorized collection journals are separate. Different exercise periods and populations still do not establish a coherent operating year. Optional local removal observations reconcile parent/source/state/probe links without whole-review closure. Fresh A audit independently verifies 556 originals, 890 history events and 26/70 explicit activity references; both inventories remain qualified. Independent due-occurrence report preserves exact prior assertion/source pins, skipped dependencies, corrections, and as-of visibility; typed business population acceptance remains separate. Typed continuation validation preserves omitted/unsupported cohort members and missing authorized rights as unresolved; retained-state carry-forward is not whole-period population acceptance. Explicit item-level procedure records now pin immutable sample/population, exact workpaper version and verified retained support. Corrections preserve original observations and sampled/targeted basis; manual observation status confers no automatic testing credit. Bounded backup technical workpapers do not close full-scope rehearsal or sufficiency gates. Authorized per-procedure trace metadata links exact historical population/selection/workpaper/task/evidence pins and counts current correction leaves. The actual bounded journey reports two retained traces/one current lineage without state mutation. Reliability and period declarations remain qualified; full-period populations, independent completeness/accuracy and substantive sufficiency remain unassessed. Read-only source register version4 explicitly adds later configuration/backup/security-response runtimes:1211 profile references/831 unique physical versions, preserving359 documentary dispositions and prior profiles. A private70-control reference-year contract retains unassessed business populations and period coverage; no source count grants testing credit.",
+      "technical_checkpoints": [
+        {
+          "date": "2026-09-22",
+          "scope": "Exact authored procedure reconciliation across six private workrooms",
+          "validation": "29 ordinary task updates and exact replays; independent historical transition and60source-store preservation verification passed.",
+          "acceptance": "Only performed subsets marked IN_PROGRESS/LIMITATION; remaining task-specific and conditional-duty work continues."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Exact ordinary-collection join for the selected local 2027 due-occurrence register",
+          "validation": "Independent review SHA-256 faf8e149a88490f4babb70c0cd4bb79e0cf1975fb58f6d6bf2c512c2b435d89e verifies all 33 observed slots against 35 exact native occurrence records, one ordinary A1938/B2064 collected artifact per selected record, and retained artifact SHA/bytes.",
+          "acceptance": "The three missing slots remain missing; selected record/collection identity does not establish population completeness, period coherence, substantive sufficiency or professional acceptance. The verified packet remains frozen to prior queue SHA-256 85998a2294336adacb47028a9f84ae28918a17a97a91ac9342f353278c019743 at HEAD 6a5a2a517d9b3ca54462121b8d8d83617de1d322."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Selected SH-POL-003 addressable-measure task source sufficiency",
+          "validation": "Independent selected-original content review SHA-256 9e4f0bf89690dac8a5259617c08f95b01ffbc705846c6a87613477cea8fd2246 confirms the five A/B route-hinted retained files comprise a generic local procedure and one EXC-01 exception package; each workbook and the CSV has one data row. Read-only authorized-portfolio discovery SHA-256 812f6df66b4b7829234e395ec4f288df235615e0d79fe36a6dec7fb36f4ebb0b reconciles 732/792 native versions to exact collected artifacts and finds no 22-entry register.",
+          "acceptance": "The exact HIPAA addressable task remains NOT_STARTED/NOT_RUN. This is bounded to current authorized sources at the selected as-of; future/unregistered sources, applicability and professional sufficiency remain open."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Four exact unplanned HIPAA/integrity task pairs screened against current native sources",
+          "validation": "Read-only screen SHA-256 802be28d42f769196f07bb7b33b7a99846a8180a8a075a892fe2f6ab6215ea82 found no complete performed clause. Native restore bytes do not prove parsed or application usability; an isolated prospective parsed probe passed separately under SHA-256 41adba6d026547b957eb6d3ebe6f7ee4f2326740128b94cddaae6ef5cce51f61.",
+          "acceptance": "No A1938/B2064 task, workpaper or source mutation and no HIPAA procedure credit. An accepted scenario-specific expected-use contract, ordinary A/B audit collection and substantive review remain open."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Attributable task-level gap and retest-link record in the audit workroom",
+          "validation": "Commits 7ff72887 and a44a14c0 add task.gap.record with exact retained-byte and optional native source pins, scoped assigned owner, explicit cause/disposition, append-only predecessor, exact existing workpaper retest link, learner source-isolation projection and an accessible preview/retry UI. Focused backend, 261 frontend, production build and two browser journeys passed.",
+          "acceptance": "A recorded gap is an authored observation, not source evidence, a task conclusion or professional sufficiency. No historical A1938/B2064 gap was backfilled; period and clause-level reconciliation remain open."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Retrospective SH-POL-003 source-gap command in isolated A/B audit copies",
+          "validation": "Independent read-only review SHA-256 69e28e2d7754056c934f7b9980be027300f6d82953d1c5573bad3d1f79bb45a5 verified each copied workroom gained exactly one ordinary OPEN/INSUFFICIENT_SOURCE task.gap.record event; original A1938/B2064 database and 661/721 retained artifact byte hashes remained unchanged. Exact command replay and learner projections passed in the author run.",
+          "acceptance": "This is a disposable retrospective rehearsal. It supplies no actual-workroom gap record, source evidence, HIPAA applicability, performed procedure or task credit; original workroom annotation requires its own safeguarded execution and review."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Actual A/B audit-workroom SH-POL-003 source-insufficiency gap observations",
+          "validation": "After sealed proposal SHA-256 35391278dcaa0ab49d7f7bc45794b257ab0d6534f2ab7d1866fd0be535404357, verified non-reflink database backups and independent pre-execution review SHA-256 28d55119cb8c6147d630fa9418bd7f5bfe53401980e4880223dd0c8aaa1b3dc6, ordinary task.gap.record commands advanced original A1938 to A1939 and B2064 to B2065 sequentially. Independent A/B postreviews SHA-256 c2a667e74c073538e934747afe28f23665b4f397b285e51e4a7790fdaa599a75 and 5a399cd1c2bd47ddbcc382cb20cd9e5ebd3fb715d48e155d981462be70870773 verified one raw gap event each, unchanged task status/conclusion, 661/721 retained artifacts, 237 company source files and backup integrity.",
+          "acceptance": "The current originals now have OPEN/INSUFFICIENT_SOURCE SH-POL-003 annotations; both exact tasks remain NOT_STARTED/NOT_RUN. The historical A1938/B2064 packet predates these commands; the independently reviewed A1939/B2066 v3/v4 packet includes the observations. The gaps do not create company evidence, establish HIPAA applicability, perform the addressable-measure test or grant audit credit."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Selected 2027 IAM007 Q4 missing-operation annotation in current B original",
+          "validation": "The read-only selected-period screen separated B access-review-continuation-b REVIEW-Q4 from a collected Q4 successor in a different branch and found B09 backup/nonhuman Q4 already named in existing FAIL work. A sealed B-only proposal and verified non-reflink B2065 backup passed independent pre-execution review; one ordinary task.gap.record advanced B2065 to B2066. Independent postreview SHA-256 1252ab39a0389c6c0ae78c05209eabb32fcceacc241ed6ab7936712443913afa verified one raw event, unchanged IAM007 IN_PROGRESS/FAIL task, A1939, 721 retained artifacts, 237 company-source files and backup integrity.",
+          "acceptance": "One OPEN/MISSING_OPERATION observation covers only the selected B branch review slot. No B09/nonhuman duplicate gap, A-side gap, performed review, enterprise Q4 effectiveness conclusion, task credit or source mutation. The A1938/B2064 packet remains historical; current originals and independently reviewed v3/v4 packet are A1939/B2066."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Independently reviewed A1939/B2066 private reviewer packet with task-gap navigation",
+          "validation": "Private successor packet manifest SHA-256 c618d3bbbb8c87d6a7a566518b51a71f5a95f9e15574da9acf42f2cdb48b40eb and independent REVIEW.json SHA-256 e750ba85d68f4d37a8d45b3df2abc145bfd6b59eb8cf1b9f2ea67506f4ba589d verify exact A1939/B2066 database/event tips, 818 task instances, three gap event/receipt joins, 16 separate findings, 1,382 retained artifact byte hashes, 112 receipt pins and 237 company source files. Separate offline browser review passed three gap-to-task links, cause search, mobile width and zero network/page errors; builder rejects optimized Python.",
+          "acceptance": "The successor packet is a private static technical review snapshot. Gaps remain authored observations, not source evidence, task credit, HIPAA applicability, findings or professional conclusions. File distribution has no built-in identity gate; selected portfolio completeness, owner usability and qualified reviewer acceptance remain open."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Selected 2027 fresh close evidence and exact due-occurrence reconciliation",
+          "validation": "After independent native and collection postreviews SHA-256 c745638fb8386aa4865a088586e4e899de99ce9ad65616f70c94a15df131f7c3 and 822d77e84c64be040245b59f64d33e3d403856013d975b2bc9c5c77f18667dfe, read-only downstream report SHA-256 688b35fa1a06f72581a37dcc62b654c1c83d83c05fdf7f4197d2ddbd65e7535c joins each of 36 selected due rows to a native close version, ordinary receipt, fresh audit artifact and retained bytes, while comparing the historical A1938/B2064 register. The three B missing operations remain missing despite collected negative close records.",
+          "acceptance": "SH-POL-003 remains NOT_STARTED/NOT_RUN in both historical originals and B IAM007 Q4 remains IN_PROGRESS/FAIL with an OPEN/MISSING_OPERATION annotation. No blanket procedure credit, HIPAA applicability, independent full-population completeness, enterprise-year coverage or professional conclusion."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Latest private A1939/B2066 packet source-journal rebase",
+          "validation": "V4 packet manifest SHA-256 84bde92c34462710d596c802b5952d4c94c926a31a4e4a0090fc387186cb70a3 and final independent technical/browser PASS SHA-256 0a9b8b18096bf576ec555c86d13acb2d5cbbfc0f2588755c24770e55f5c7e291 verify four authorized source SQLite journal transitions across 60 roots, 1,528 unchanged native business versions, 237 unchanged non-SQLite files and core audit bytes unchanged from the reviewed v3 packet. The same 818 task rows, three authored gaps, 16 findings and 1,382 historical retained artifacts remain indexed.",
+          "acceptance": "Historical A1938/B2064 predates the gap commands; independently reviewed v3/v4 A1939/B2066 includes them. The rebase made no audit command, task/grade credit, company business operation or professional/owner acceptance; separate fresh close and paired engagements are not indexed into this packet."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Selected February 2027 BCM-002/003 ordinary population and procedure reconciliation in separate copied paired workrooms",
+          "validation": "Independent actual-run review enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-bcm-ordinary-procedures-run-independent-review-v1/REVIEW.json SHA-256 f42dc13679d7cef34bda1ae7c25bbe27f71bc66dee80075554503c77fea0fc78 verified A90→96/B63→69 with six ordinary commands per side, provisional B1/B2/B3 declaration population and selection, distinct BCM-003 R1/R2 workpaper/sample, 20 native/collection-receipt/retained-byte source joins per branch, and unchanged original workrooms, native roots, bound Key and historical A1939/B2066 audits. Messy B has no B3 backup job; first B2 failed, retry completed and failure ticket remains OPEN. R1 matches an older selected backup while differing from current bytes; R2 matches current bytes.",
+          "acceptance": "Both BCM-002/003 TOE tasks remain NOT_STARTED/NOT_RUN. This selected local slice does not establish full-year population completeness, control effectiveness, independent professional acceptance, task or grade credit."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Paired CFG-002 local before/after ordinary procedure on separate private copied workrooms",
+          "validation": "Independent actual postreview SHA-256 5b971fa1c14d20dee9f752ae7d2747695fafc4ec5664dcdf8e72f287fe6d7315 verified A96→100/B69→73, four ordinary commands per side, 13 exact native/receipt/retained-byte joins per side, pre-APPLY mismatch versus local approval and post-APPLY equality, unchanged original workrooms/native roots/Key, and no release or grade. Failed first rehearsal was preserved and independently classified FAIL under SHA-256 bc19edddfbdb699561fcf42cbb93912482db618c3084d8bbe3a04917afe2e8e5; new-only v3 runner passed rehearsal and actual gates.",
+          "acceptance": "All six CFG-002 tasks per branch remain NOT_STARTED/NOT_RUN. This one local data-only APPLY does not establish enterprise baseline coverage, continuous drift detection, full-year effectiveness, professional acceptance or task credit."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Current A100/B73 818-task source/action screen and native coverage gap routing",
+          "validation": "Independent task-screen review SHA-256 ac4420f96db4441b8e3ec5e7433d5db13bdf23eb54f91086c7e5f32cb243fb39 verified 409 tasks per branch, 31/32 exact native-to-retained joins, 36 source-associated tasks and three with task-specific procedure links each. Independent native-coverage review SHA-256 f09117919331a3a2ca36963f4d9ad9135461af47f9fd9a6db00c38a0d235e1f4 routes 373 unmatched tasks per branch: 84 to existing portfolio native references, four to separate local SEC006, 283 to further source discovery/conditional period-coherent activity, and two to owner scope facts.",
+          "acceptance": "Source association is not sufficiency; all 409 tasks per branch remain NOT_STARTED/NOT_RUN. Selected-workroom absence is not proof of company-wide absence or inapplicability."
+        }
+      ]
+    },
+    {
+      "id": "AQ-07",
+      "lane": "audit_company",
+      "title": "Run a fresh full-scope audit rehearsal",
+      "depends_on": [
+        "AQ-06"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/IMPLEMENTATION_DIRECTION_2026-09-13.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "enterprise/operations/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "Start with no collected evidence. Execute collection, sampling, all applicable procedures, workpapers, findings, remediation and separate review. Record justified not-applicable procedures and unresolved limitations. Demonstrate missing and contradictory evidence paths; no forced passing conclusions. Exercise matched isolated Clean/Messy branches from one company baseline, starting without collected evidence. Verify equal system depth, causal propagation of selected differences, continuity across engagements and supported alternative investigative routes.",
+      "gate": "existing_authority",
+      "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
+      "execution_authorized": true,
+      "technical_checkpoints": [
+        {
+          "date": "2026-09-22",
+          "status": "Full-profile collection and supported-procedure preparation passed on disposable stores; actual reviewed collection running",
+          "scope": "70controls and409tasks perprofile, initially empty evidence; no task completion or effectiveness inferred"
+        },
+        {
+          "date": "2026-09-22",
+          "status": "Actual full collection and supported technical procedures completed in both branches",
+          "scope": "605/632 originals;70controls/409 unchanged tasks;three provisional population/selection/workpaper sets each;open technical findings",
+          "acceptance": "All applicable audit procedures and professional review are not complete"
+        },
+        {
+          "date": "2026-09-22",
+          "scope": "Supplemental retained-original technical procedures",
+          "validation": "Actual A/B38/47commands,9/10controlgroups,37/39item observations; independent intent/history verification passed.",
+          "acceptance": "Provisional populations and2/7OPEN technicalfindings; tasks/originals/reviews unchanged; no full-control or professional credit."
+        },
+        {
+          "date": "2026-09-22",
+          "scope": "Policy and persistent service-identity retained-original procedures",
+          "status": "A8/B10 ordinary commands; two groups and seven item observations each",
+          "acceptance": "Provisional local populations; two OPEN technical gaps in incomplete branch; originals, tasks, controls and reviews unchanged. Professional acceptance remains separate."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Actual fresh isolated Clean/Messy B2 technical journey from zero retained evidence",
+          "validation": "Independent postreview SHA-256 922b850c9539ab849c35b9578c5921ffd1daf6812d9e8ff6d7f067e226f70be8 verified separate copied native roots/new engagements, 31/32 ordinary native/retained joins, A/B rev90/63 event chains, eight inspections each and provisional population/selection/sample/workpaper records. Clean first B2 and retry completed; Messy first failed then retry completed with OPEN ticket. R1 older bytes differ from current and R2 bytes match in both. A had 22 historical PBC groups, four empty ACKNOWLEDGED; B had eight SUBMITTED groups.",
+          "acceptance": "Selected synthetic technical slice only; original source roots and historical audits unchanged. All applicable procedures, full-year operating depth, independent population completeness, qualified review, owner acceptance and task/grade credit remain open."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Reviewed disposable rehearsal followed by separate actual private paired BCM-002/003 ordinary-procedure run",
+          "validation": "Sealed v2 runner and independent rehearsal gate preceded actual independent postreview enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-bcm-ordinary-procedures-run-independent-review-v1/REVIEW.json SHA-256 f42dc13679d7cef34bda1ae7c25bbe27f71bc66dee80075554503c77fea0fc78. Byte-copied A/B workrooms advanced A90→96/B63→69 through six ordinary commands each: B1/B2/B3 population/selection, BCM-002 workpaper/sample, and distinct BCM-003 R1/R2 workpaper/sample. All 40 selected source joins and raw event/intent/result histories passed. B B3 remains absent, B B2 failure ticket OPEN, R1 older-checkpoint chronology explicit; original paired workrooms, native roots, Key and A1939/B2066 preserved.",
+          "acceptance": "BCM-002/003 tasks remain NOT_STARTED/NOT_RUN; no Key release, assessment, grade, task credit, full-year or professional/control-effectiveness conclusion. The broader AQ-07 full-scope acceptance remains IN_PROGRESS."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Reviewed actual paired CFG-002 local procedure after preserved failed rehearsal",
+          "validation": "V3 gated actual run RESULT SHA-256 248cd4df9d095f293952c8b078fb95c7862be8e9501bf986ad7e6d3a775e1dc6 and independent postreview SHA-256 5b971fa1c14d20dee9f752ae7d2747695fafc4ec5664dcdf8e72f287fe6d7315 verify copied A100/B73, four commands and 13 exact company-source joins per branch; v2 failed rehearsal remains preserved and cannot unlock actual mode.",
+          "acceptance": "A bounded local observation only. No task/grade/release credit, enterprise-year conclusion or qualified audit acceptance."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Integrated 13-component full-portfolio fresh-pair execution design",
+          "validation": "The first nine-component batch was independently CHANGES_REQUIRED SHA-256 5109c4bd936a54e0a38a74adb425f98d9fe274e7d9a7e850c796135d6102953d because the frozen binding omitted four B2/BCM/CFG components. Corrected integrated plan v3 independent static PASS SHA-256 8dd2d89db34b28f28a272f9865d594cf40bb989efd13c6363374c1ab4614ec97 pins 13 components per branch, 175/178 exact native versions, ordinary B2 recollection and BCM/CFG replay, then 18-control collection. Current A100/B73 all-task screen independent PASS SHA-256 ac4420f96db4441b8e3ec5e7433d5db13bdf23eb54f91086c7e5f32cb243fb39.",
+          "acceptance": "Design only; new integrated engagements, collection, procedures, independent postreview, full-period coverage and professional/owner acceptance are not yet complete. Historical A100/B73 remains a bounded four-component technical pair."
+        }
+      ]
+    },
+    {
+      "id": "AQ-08",
+      "lane": "audit_company",
+      "title": "Release the audit-ready training universe",
+      "depends_on": [
+        "AQ-07"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/IMPLEMENTATION_DIRECTION_2026-09-13.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "enterprise/operations/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "Assemble traceability matrix, migration/recovery receipts, source inventory, rehearsal results and open findings. Obtain qualified review of applicability and evidence sufficiency and owner usability acceptance. Report engineering, substantive review and professional acceptance separately. Qualified review evaluates realism and evidence sufficiency in both modes. Software checks alone cannot establish professional realism or an assurance opinion.",
+      "gate": "existing_authority",
+      "execution_policy": "READY requires completed dependencies. Shared schemas, dependencies and catalog changes belong to the integrator. Keep populated sources, migration manifests and audit records in excluded private storage. No remote publication or deployment under this addition.",
+      "execution_authorized": true,
+      "technical_checkpoints": [
+        {
+          "date": "2026-09-22",
+          "scope": "Finite closeout reconciliation",
+          "status": "Consolidating existing technical evidence against exact acceptance; dependencies remain incomplete",
+          "acceptance": "Prior READY was not acceptance readiness. Qualified review and owner usability decisions remain unrecorded; authorized engineering continues."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Latest A1939/B2066 private packet after original-root source-journal rebase",
+          "validation": "Packet manifest SHA-256 84bde92c34462710d596c802b5952d4c94c926a31a4e4a0090fc387186cb70a3 and final independent technical/browser PASS SHA-256 0a9b8b18096bf576ec555c86d13acb2d5cbbfc0f2588755c24770e55f5c7e291 preserve the reviewed v3 core: 112 receipt pins, 818 task instances, three gap observations, 16 findings and 1,382 retained artifact hashes, with 60 company roots and four authorized SQLite journal transitions rechecked.",
+          "acceptance": "Private static snapshot only; source rebase grants no audit credit. Fresh paired B2 and selected-2027 close engagements are separate outputs, not indexed A1939/B2066 rows. Offline file distribution lacks an identity gate; full scope, qualified review and owner usability acceptance remain open."
+        }
+      ]
+    },
+    {
+      "id": "IK-01",
+      "lane": "audit_company",
+      "title": "Structured explanation model and existing-corpus inventory/migration",
+      "depends_on": [
+        "AQ-01"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "Inventory every existing scenario; map authored material to the model, preserve original pins and identify missing or ambiguous explanations. No silent invented rubric answers or bulk completeness claim from schema validity. Validate causal links and shared issue identity.",
+      "gate": "existing_authority",
+      "execution_policy": "Queued, not started. READY is conditional on completed dependencies and the recorded execution authorization. Keep populated keys and learner records private. Integrator owns shared schema, dependency and catalog changes. IK-06 requires actual professional review and owner acceptance, not inferred approval.",
+      "execution_authorized": true
+    },
+    {
+      "id": "IK-02",
+      "lane": "audit_company",
+      "title": "Protected key service and version boundaries",
+      "depends_on": [
+        "IK-01",
+        "AQ-02"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "Enforce instructor authorization server-side for every key route and export. Learner services and company-agent contexts never receive hidden truth/rubrics. Log access, reveals and exports; pin exact versions. Explicit instructor-authorized debrief releases expose only selected content. Test direct requests, cross-engagement access, client payloads and agent-context leaks.",
+      "gate": "existing_authority",
+      "execution_policy": "Queued, not started. READY is conditional on completed dependencies and the recorded execution authorization. Keep populated keys and learner records private. Integrator owns shared schema, dependency and catalog changes. IK-06 requires actual professional review and owner acceptance, not inferred approval.",
+      "execution_authorized": true
+    },
+    {
+      "id": "IK-03",
+      "lane": "audit_company",
+      "title": "Interactive instructor explorer",
+      "depends_on": [
+        "IK-02"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "Deliver hierarchical navigation, saved filters/search, synchronized timeline and relationship map, side-by-side original/version inspection and alternative discovery-path exploration. Timeline reflects what existed and was discoverable then. Use progressive disclosure, keyboard access and text/table alternatives; verify usability against the full corpus rather than a small demo.",
+      "gate": "existing_authority",
+      "execution_policy": "Queued, not started. READY is conditional on completed dependencies and the recorded execution authorization. Keep populated keys and learner records private. Integrator owns shared schema, dependency and catalog changes. IK-06 requires actual professional review and owner acceptance, not inferred approval.",
+      "execution_authorized": true,
+      "evidence": " Bound Key now has an authored-issue/control index, explicitly linked expectations, ten-source pages and scoped timeline. Dedicated keyboard/role-isolation browser verification and actual retained-source roundtrip passed. Saved Key views and broader debrief remain open. Protected instructor-only saved filters now cover existing bound and archive explorers with exact Key/source/context pins, explicit restore, stale metadata redaction, exact retry/CAS and inert companion recovery. Restoring filters does not fetch original/detail or perform comparison. Broader authored dimensions and qualified usability remain separate.",
+      "technical_checkpoints": [
+        {
+          "date": "2026-09-22",
+          "status": "Implemented selectable authored relationship groups, exact incoming/outgoing traversal and trigger-relative timing",
+          "validation": "1110 explanations/12959 nodes/7259 edges resolved;225 frontend tests/build/maintained browser PASS; real full-archive browser and learner403 PASS",
+          "acceptance": "Preserved authored links only; narrative gaps and human/professional acceptance remain explicit"
+        },
+        {
+          "date": "2026-09-22",
+          "scope": "Versioned exact authored inspection-target relationships",
+          "validation": "New private1110-source archive adds4714typedlinks; all prior source bytes/links preserved; actualbrowser traversal/access isolation passed.",
+          "acceptance": "Authored references only, no proof of inspection/availability/corroboration; old archive and boundkeys unchanged."
+        },
+        {
+          "date": "2026-09-22",
+          "scope": "Protected side-by-side exact original inspection",
+          "validation": "38 backend integration/243 frontend tests; compiled1110-entry browser including stale/close/role/narrow cases; actual1110-source archive HTTP and two exact byte reads with learner403 passed.",
+          "acceptance": "Explicit source choices, no inferred revision lineage or scenario activation; qualified calibration and user acceptance remain separate."
+        }
+      ]
+    },
+    {
+      "id": "IK-04",
+      "lane": "audit_company",
+      "title": "Evidence-linked learner comparison and assessment",
+      "depends_on": [
+        "IK-03",
+        "AQ-05",
+        "AQ-06"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "Link actual requests, inspection events, selections, tests, workpapers, conclusions and reviews to expectations. Assess discovery, evidence, testing, judgment, documentation and follow-through separately. Distinguish not requested, unavailable, uninspected, inadequately tested, misinterpreted and insufficiently documented; separate out-of-scope issues. File opens and keywords do not prove understanding. Support instructor acceptance of defensible alternatives, reasoned overrides, scenario-defect flags and assessment history.",
+      "gate": "existing_authority",
+      "execution_policy": "Queued, not started. READY is conditional on completed dependencies and the recorded execution authorization. Keep populated keys and learner records private. Integrator owns shared schema, dependency and catalog changes. IK-06 requires actual professional review and owner acceptance, not inferred approval.",
+      "execution_authorized": true,
+      "evidence": "Protected historical linkage inventory and instructor UI implemented: explicit selected revision/state/history pins, exact retained-source metadata and workpaper links, audited-actor commands separated from shared work. Actual bound-workroom browser and learner denial pass. No submission, inspection, missed-issue inference or grading; full assessment/calibration remains incomplete. Separate instructor-authored assessment history now records six qualitative dimensions, exact historical inventory/work references, defensible alternatives, reasoned overrides and scenario-defect flags. Same-author corrections preserve immutable predecessors; no automatic grade, understanding or individual submission is inferred. Current Key/source/authority checks and inert companion recovery protect content. Qualified calibration and actual instructor acceptance remain open.",
+      "technical_checkpoints": [
+        {
+          "date": "2026-09-22",
+          "scope": "Private real-backend single-control technical journey; helper-seeded formal setup",
+          "validation": "Six completed browser stages,147 measured actions,140 requests; no unexpected HTTP failures or browser errors",
+          "acceptance": "Automated technical evidence only; human usability and professional acceptance remain pending",
+          "result": "Authored historical assessment and learner denial verified; no automatic grade or individual submission inferred."
+        },
+        {
+          "date": "2026-09-22",
+          "status": "Six-check protected snapshots bound to exact full-workroom history, with31/32 retained originals",
+          "validation": "Independent bytes/history verification and real historical browser comparison PASS;temporary source grants revoked",
+          "acceptance": "UNVALIDATED authored expectations;no automated grade or learner release"
+        },
+        {
+          "date": "2026-09-22",
+          "scope": "Explicit original inspection assertions and historical attribution",
+          "status": "Implemented ordinary exact-pin inspection command, immutable author records and historical command-payload matching",
+          "validation": "77 focused integration and251frontend tests; explicit compiledApp form/error/role/narrow journey passed.",
+          "acceptance": "Self-reported inspection only; no passive-download inference, automatic testing credit or retrospective invented access."
+        },
+        {
+          "date": "2026-09-22",
+          "scope": "Explicit original inspection and historical actor attribution",
+          "validation": "Prospective command/API/UI tests plus two exact learner-authored records per paired technical workroom; historical payload, actor and event pins independently matched.",
+          "acceptance": "Author assertions only; absent records do not prove no inspection. No reading, understanding or grade inferred."
+        }
+      ]
+    },
+    {
+      "id": "IK-05",
+      "lane": "audit_company",
+      "title": "Progressive reveal and debrief builder",
+      "depends_on": [
+        "IK-04"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "Provide staged hints, source/procedure pointers, evidence and full explanations; record assistance separately from unassisted performance. Assemble selected issues, annotated evidence and prompts into interactive and portable debriefs with pinned provenance. If AI assistance is enabled, suggestions cite actual learner work and rubric versions, remain distinguishable from human decisions and cannot silently determine grades.",
+      "gate": "existing_authority",
+      "execution_policy": "Owner authorized execution. This bounded implementation does not establish completed dependency acceptance. Keep populated keys and learner records private; shared schema and catalog changes belong to the integrator. Qualified review and user acceptance remain separate.",
+      "execution_authorized": true,
+      "evidence": "HINT/POINTER and selected EXPLANATION releases use a separate private store, named current learner, exact historical/source pins and full preview/confirmation. Ordered selected issues/procedures, annotations and prompts render interactively; deterministic ZIP exports have separate byte/member preview, explicit confirmation and browser SHA256 verification. Immutable corrections preserve prior documents. Focused backend, HTTP and browser tests cover isolation, stale authority, exact retries and inert recovery. Assistance does not establish individual performance, understanding or professional acceptance. Operational rehydration and qualified calibration remain open; no actual learner release was performed.",
+      "technical_checkpoints": [
+        {
+          "date": "2026-09-22",
+          "scope": "Private real-backend single-control technical journey; helper-seeded formal setup",
+          "validation": "Six completed browser stages,147 measured actions,140 requests; no unexpected HTTP failures or browser errors",
+          "acceptance": "Automated technical evidence only; human usability and professional acceptance remain pending",
+          "result": "Selected debrief preview/confirmation, verified ZIP and inert companion restore exercised."
+        }
+      ]
+    },
+    {
+      "id": "IK-06",
+      "lane": "audit_company",
+      "title": "Paired-mode validation and qualified calibration",
+      "depends_on": [
+        "IK-05",
+        "AQ-07"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "Exercise matched Clean/Messy engagements, overlapping issues, missing/inaccessible evidence, alternative procedures, unsupported findings, time-dependent discoverability and corrected rubrics. Clean explains supported operation and appropriately handled exceptions; Messy explains causal failures. Verify reproducible debriefs and access isolation. Obtain qualified review of realism, sufficiency and grading fairness plus owner usability acceptance; retain ambiguity and unresolved review status.",
+      "gate": "existing_authority",
+      "execution_policy": "Queued, not started. READY is conditional on completed dependencies and the recorded execution authorization. Keep populated keys and learner records private. Integrator owns shared schema, dependency and catalog changes. IK-06 requires actual professional review and owner acceptance, not inferred approval.",
+      "execution_authorized": true,
+      "technical_checkpoints": [
+        {
+          "date": "2026-09-22",
+          "scope": "Finite closeout reconciliation",
+          "status": "Consolidating existing technical evidence against exact acceptance; dependencies remain incomplete",
+          "acceptance": "Prior READY was not acceptance readiness. Qualified review and owner usability decisions remain unrecorded; authorized engineering continues."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Historical B2 paired-mode Key case and versioned ticket-link correction",
+          "validation": "Independent paired A997/B1047 case review SHA-256 f7c70524ec6a7d7d4ae0951b98e6e1c17ef017bf99a8579a240be9422a8cddae verified native/receipt/retained joins and the branch-B OPEN failure-ticket link gap. Independent draft review SHA-256 312527981747c57ac1078e033283b8db0ddaf23c1f01a02afd19dd65e4e1886f verifies one B2-only source link and isolated issue-view visibility. A B1095 successor proposal passed technical review SHA-256 1277223fa762bfa0abc02df6c1fa9a22ae42a01b5d7eb101b577b8796bec9b84 but original identities are expired. A copy-local Store API provisioning/prepare preflight passed independent review SHA-256 97c430c8e6edcdea8aba42dabc97e78d5ce15b4a7e63a7da4ad7c9a81a19fa2e.",
+          "acceptance": "Historical bound Keys and active service binding remain unchanged; copy-local prepare is not a bind or release. Native-source isolation/rebinding, qualified grading calibration and owner usability acceptance remain open."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Isolated new-engagement clone-source collection feasibility for corrected B2 Key",
+          "validation": "Independent collection review SHA-256 1743cd7dd7dfe511e39fdcf0051111d5fc67aa572c8e88e27b2085f308efff15 verifies distinct EID ENG-b4ae647a4ac35a18acba21a5, 52-event/51-command history, 32 ordinary native-to-retained joins under new registry digest, eight PBC request groups, 21 clone-only grants revoked, 25 original file pins and historical B1095 tip unchanged.",
+          "acceptance": "The isolated cloned stores are derivative rehearsal sources, not live company originals. New-ID Key authoring and binding remain unperformed; historical B1095 cannot be rebound, and no learner release, grading calibration, full-year sufficiency or owner acceptance follows."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Isolated new-engagement six-check Key bind over selected clone-source collection",
+          "validation": "Independent unbound-plan review SHA-256 8eb6264f7a35bc436900e8d05a1c13161ac970f0244c9979c56c9f69c0d6900a and bind postreview SHA-256 d5eaa206309640dd87439f9cb4f5a25764f83eff9932129f7111306777939067 verified 32 cloned native/retained source links, the B2 OPEN ticket, exact 21 temporary instructor grant/revoke pairs, post-revocation instructor comparison, learner 403, and unchanged B1095/original source pins.",
+          "acceptance": "Private bound Key for distinct EID ENG-b4ae647a4ac35a18acba21a5 only. No active service mount, learner release, grade, professional validation, live-source/full-year sufficiency, qualified calibration or owner usability acceptance. Historical B1095 remains unchanged."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Original-root B2 ordinary collection and six-check private Key bind",
+          "validation": "Independent collection review SHA-256 8ef8a324056d12c1cc986c48fd8b6b59aae986ddd806ae1fb38b9aa66cce8600 verified EID ENG-31cb484132351ecbcde7c908 rev51, 32 original-source/receipt/retained links, eight PBC groups, 21 revoked collection grants and OPEN B2 ticket. Independent bind postreview SHA-256 e2cb538b46ae611455cc1e97bb757bb1cea4f80fbef5824175e4514e2b716471 verified 32 bound links/six checks, 21 later temporary instructor grant/revoke pairs, unchanged 57 native business versions/historical Key/workroom, post-revocation instructor comparison and learner 403.",
+          "acceptance": "Scoped original company access and collection journals changed; business bytes did not. This is a private synthetic local Key, not an active service, learner release, grade, audit conclusion, full-year sufficiency, qualified calibration or owner acceptance."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Fresh paired A/B six-check private Key bind following zero-evidence journey",
+          "validation": "Fresh paired journey independent PASS SHA-256 922b850c9539ab849c35b9578c5921ffd1daf6812d9e8ff6d7f067e226f70be8 and paired Key bind independent PASS SHA-256 f5486e0afbc50ca22ff3d9b3444ddedae0fa48b65c340980e585d8b6ad798b87 verify A/B rev90/63, 31/32 bound retained/native links, six checks per profile, B OPEN failure ticket linked, 18/21 temporary instructor grant/revoke pairs, instructor success and learner 403. Eight copied native SQLite access journals changed; no new business versions/collections, original fresh audit workrooms or historical A1939/B2066/source roots changed.",
+          "acceptance": "Private deterministic instructor link inventory, not a professional audit conclusion. No service mount, learner Key release, grading, task credit, full-year sufficiency, qualified realism/grading calibration or owner usability acceptance."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Instructor-only bound-Key preview without assessment, release or debrief writeback",
+          "validation": "CLI --disable-instructor-writeback leaves default writeback behavior unchanged but, when selected, creates no instructor assessment/release/debrief stores and returns 503 from their GET/POST routes. Final independent code review SHA-256 698e8a6f89093f2cdb488b1c40c9b81538a1f3bcc3a3da73c840440f056760b8 and exact paired A/B disposable route QA SHA-256 ae18053f77770293bab8cdf3372cacca6ec31f53935fb7baacb8689d327480c1 verify bound instructor comparison 200, learner and other real engagement denial 403, false writeback capabilities and no store directories. Nineteen focused tests, Ruff and diff check passed.",
+          "acceptance": "Private TestClient preview only, with no actual service mount, learner Key release, assessment/grade, task credit, professional calibration or owner acceptance. Disabled routes remain mounted but return 503 by the accepted local API contract."
+        }
+      ]
+    },
+    {
+      "id": "UX-01",
+      "lane": "audit_company",
+      "title": "Navigation, terminology and role-oriented work queues",
+      "depends_on": [
+        "AQ-01"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md",
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "Map existing screens and terminology; implement coherent work paths and explicit engagement/branch/period/role/time orientation. Separate company, auditor and instructor responsibilities. Show actionable work versus external waits, consistent states and reliable contextual links/back navigation. Validate role permissions and preserved context.",
+      "gate": "existing_authority",
+      "execution_policy": "Locked design direction; queued, not started. Complete dependencies before execution. Preserve private data and prior scope boundaries. Owner usability and exact visual acceptance cannot be inferred from scripted checks.",
+      "execution_authorized": true
+    },
+    {
+      "id": "UX-02",
+      "lane": "audit_company",
+      "title": "Evidence inspection and workpaper testing workspace",
+      "depends_on": [
+        "UX-01",
+        "AQ-05"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md",
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "Side-by-side procedure/sample/source/draft inspection, precise evidence references, autosave and version recovery; preserve filters and position. Trace replacement evidence without changing prior snapshots. Administrative batch actions expose per-item outcomes; no automatic effectiveness conclusions. Verify complete testing and review journeys.",
+      "gate": "existing_authority",
+      "execution_policy": "Locked design direction; queued, not started. Complete dependencies before execution. Preserve private data and prior scope boundaries. Owner usability and exact visual acceptance cannot be inferred from scripted checks.",
+      "execution_authorized": true,
+      "evidence": "Versioned workpapers now retain explicit same-control procedure IDs; omission preserves links and explicit empty list clears them. Actual isolated browser verified draft recovery, version-one links, version-two clearing and historical reporting while tasks remained NOT_STARTED/NOT_RUN. Exact original preview and deduplicated evidence references remain available beside drafts. Whole-stage testing/review journey remains incomplete. Side-by-side retained-original component now supports bounded per-side search, exactbyte/hash verification and preserved selection. Dedicated current-context/error/keyboard/mobile tests pass; actual workspace comparison verified exact displayed hashes, search retention, panel return and narrow layout."
+    },
+    {
+      "id": "UX-03",
+      "lane": "audit_company",
+      "title": "Responsive background work and reliable recovery",
+      "depends_on": [
+        "UX-02"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md",
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "Measure normal navigation and long-running generation/conversation; keep other work usable. Persist pending/completed/failed state, drafts and results across navigation/reconnection. Demonstrate safe retry and ambiguous-response recovery without duplicate actions. Report measured performance and limitations on the target machine.",
+      "gate": "existing_authority",
+      "execution_policy": "Locked design direction; queued, not started. Complete dependencies before execution. Preserve private data and prior scope boundaries. Owner usability and exact visual acceptance cannot be inferred from scripted checks.",
+      "execution_authorized": true,
+      "evidence": "Durable background owner questions retain exact original source pins through ambiguous submission retries and queued-input inspection. Matching-only composer clearing preserves newer text/selections; explicit restore refuses to overwrite a newer composition. Older walkthrough capabilities now use clearly labeled volatile drafts and omit unsupported payload fields. Companion recovery retains inert job history; full-stage acceptance remains incomplete. Streamed instructor history preserves exact 815-event hashes at about 111 MiB peak RSS; actual protected revision 814 browser comparison completed in 31.554 seconds with unchanged formal history. Read-only 146-system browser checks now verify source selection, Key search and pending comparison survive ordinary panel navigation; lazy private panels and accessible loading statuses preserve context without eager Key access. Bootstrap now queries authorized seven-field engagement summaries without decoding complete current states in Python; 27 focused tests passed. A read-only target-machine microbenchmark against the current A1938/B2064 private workrooms (one visible engagement each, 13.7/15.0 MB current-state JSON) measured warm median listing-path time of 81.89/88.21 ms before and 8.75/9.74 ms with the seven-field summary path, with exact projection parity and unchanged revisions. Python tracemalloc peak was 49.85/54.44 MiB before and 0.01 MiB for the summary calls; this excludes native SQLite allocations. Private receipt bootstrap-navigation-measurement-v1/RECEIPT.json SHA-256 944c29d31a74c08d8b16e046ee5defe94d6d848d905b5349767bcf3ca4cf7b1a. This measures only local listing calls, not HTTP navigation, concurrency or full-stage acceptance.",
+      "technical_checkpoints": [
+        {
+          "date": "2026-09-22",
+          "scope": "History serialization reuse",
+          "validation": "Independent exact digest/prefix/state preservation, legacy JSON, complete-tail integrity and final authority/revision checks passed; one instrumented998-event run33.43s to23.19s.",
+          "acceptance": "Single measurement, not percentile/SLA. Full-state retention bounded; compact activity metadata grows with events."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Bootstrap engagement summary projection",
+          "validation": "Authorized SQLite projection preserves bootstrap response shape, engagement order, identity expiry and membership revocation; 27 targeted tests and Ruff passed.",
+          "acceptance": "No target-machine latency benchmark or full navigation/reconnection acceptance claimed; SQLite still parses each accessible current state."
+        }
+      ]
+    },
+    {
+      "id": "UX-04",
+      "lane": "audit_company",
+      "title": "Consistent visual system, accessibility and professional exports",
+      "depends_on": [
+        "UX-03",
+        "IK-03"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md",
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "Apply coherent components, typography, density, tables, statuses, dates, forms, empty/error states and confirmations. Verify keyboard/focus/contrast and graph alternatives. Inspect actual exports for standalone readability, references, limits and review history. Keep exact visual acceptance distinct from engineering validation.",
+      "gate": "existing_authority",
+      "execution_policy": "Locked design direction; queued, not started. Complete dependencies before execution. Preserve private data and prior scope boundaries. Owner usability and exact visual acceptance cannot be inferred from scripted checks.",
+      "execution_authorized": true,
+      "technical_checkpoints": [
+        {
+          "date": "2026-09-22",
+          "status": "Full-workroom desktop and390px navigation checked for learner and instructor;archive relationship display checked",
+          "validation": "Ten workspace destinations each;no document overflow or browser errors in completed runs",
+          "acceptance": "Scripted validation only;owner visual/usability acceptance remains pending"
+        },
+        {
+          "date": "2026-09-22",
+          "scope": "Compiled-App keyboard focus and in-form errors",
+          "validation": "Modal Tab/Shift+Tab/closed-details/focusreturn and in-form409 retention passed; representative focuscontrast4.05:1.",
+          "acceptance": "Scripted representative checks, not complete accessibility audit or human acceptance."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Standalone reviewer ZIP native-artifact navigation",
+          "validation": "Commit 83ed1467 links exact included files from the offline index, including URL-special filenames. Focused export tests, frontend suite/build and desktop/narrow browser checks passed; private receipt SHA-256 8547a710b73e2053201e03e0f3751f7ff72d81791af09304bbeb32d388bf12be.",
+          "acceptance": "Engineering export-readability correction only; withheld files remain excluded, and actual reviewer/owner visual acceptance is unrecorded."
+        }
+      ]
+    },
+    {
+      "id": "UX-05",
+      "lane": "audit_company",
+      "title": "End-to-end usability evaluation and refinement",
+      "depends_on": [
+        "UX-04",
+        "AQ-07",
+        "IK-05"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md",
+        "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "Exercise resuming yesterday's audit; company incomplete support and correction; population reconciliation/sample testing/exception documentation; reviewer challenge and reference traversal; instructor missed-issue debrief. Record navigation time, repeated entry, lost context, failures and help needed. Separate scripted checks from actual user evaluation; resolve findings and obtain owner acceptance without invented scores.",
+      "gate": "existing_authority",
+      "execution_policy": "Locked design direction; queued, not started. Complete dependencies before execution. Preserve private data and prior scope boundaries. Owner usability and exact visual acceptance cannot be inferred from scripted checks.",
+      "execution_authorized": true,
+      "technical_checkpoints": [
+        {
+          "date": "2026-09-22",
+          "scope": "Finite closeout reconciliation",
+          "status": "Consolidating existing technical evidence against exact acceptance; dependencies remain incomplete",
+          "acceptance": "Prior READY was not acceptance readiness. Qualified review and owner usability decisions remain unrecorded; authorized engineering continues."
+        },
+        {
+          "date": "2026-09-22",
+          "scope": "One paired company-operation, audit, review, context and protected debrief journey",
+          "validation": "36 scripted audit commands,12 native operations and58 separately measured browser actions with70responses; six additional protected-route denials. Async saved-view focus defect fixed and both real-backend regressions pass.",
+          "acceptance": "Bounded technical exercise. Exact prior populated-workroom evidence reused; actual owner usability acceptance remains separate."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Programmatic current-location cue across record deep links and browser navigation",
+          "validation": "Commit de7c515b exposes aria-current on the active workspace section; reviewer and learner deep-link, keyboard route-change and browser-history regressions passed with 256 frontend tests/build and the desktop/narrow browser suite. Private receipt SHA-256 eb0f7210a2f5343a7784652c5dd8bbe56aed5b5d0c309951f11d4e6fae544a90.",
+          "acceptance": "Bounded scripted accessibility check only; broader usability evaluation and owner acceptance remain open."
+        }
+      ]
+    },
+    {
+      "id": "UX-06",
+      "lane": "audit_company",
+      "title": "Session continuity and contextual handoffs",
+      "depends_on": [
+        "UX-03"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "Preserve open documents, scroll positions, filters, drafts, bookmarks, investigation questions and relevant context across resume. Show changes since last visit. Transfer assignments and unresolved questions without losing authorship; enforce recipient access and do not expose another user's private notes by default.",
+      "gate": "existing_authority",
+      "execution_policy": "Owner authorized execution; retain dependency acceptance gates and existing audit_company execution boundaries. Preserve private data and assessment history. User acceptance cannot be inferred from scripted checks.",
+      "execution_authorized": true,
+      "evidence": "Personal investigations and saved views preserve explicitly authored questions, next steps, exact record versions, filters, table position and scroll hints with current-authority restore checks. Private companion recovery preserves saved-view history and explicit ownership mapping. Participant-only investigation handoffs now retain authored questions, exact shared links, recipient acceptance/decline and explicit coordination responses; private drafts are not copied automatically. Handoff archives restore inertly. Full owner resume/handoff usability acceptance remains open. Actual bounded technical handoff accepted/completed with exact historical workpaper v1; all 13 audit events/source originals preserved, outsider denied, inert restore verified. Recorded-projection full-App desktop/narrow checks pass; human/live HTTP acceptance remains separate.",
+      "technical_checkpoints": [
+        {
+          "date": "2026-09-22",
+          "scope": "Private real-backend single-control technical journey; helper-seeded formal setup",
+          "validation": "Six completed browser stages,147 measured actions,140 requests; no unexpected HTTP failures or browser errors",
+          "acceptance": "Automated technical evidence only; human usability and professional acceptance remain pending",
+          "result": "Actual handoff exposed lost draft/focus on preview; retained inert forms and same-context focus restoration fixed it, with permanent regression."
+        },
+        {
+          "date": "2026-09-22",
+          "scope": "Explicit personal visit checkpoints",
+          "validation": "Six authorizedrecordtypes, privateversionhistory, exactcomparison/redaction/retry/preview and inertbackup;93backend/235frontendtests passed.",
+          "acceptance": "No automatic visitcapture or read/test acknowledgment; broader continuity and human acceptance remain open."
+        },
+        {
+          "date": "2026-09-22",
+          "scope": "Populated exact-copy checkpoint walkthrough",
+          "validation": "Revision997/605original workroom copy; two explicit captures, exact replay/replacement/history,1093unchanged record comparisons and exactoriginalpreview; desktop/narrow/focus passed.",
+          "acceptance": "Original/copy formal data and18source roots unchanged; copy sessions and dedicated companions changed only; changed/redacted cases covered by separate tests."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Source/acquisition-switch draft continuity in the audit workroom",
+          "validation": "Commit e61d29bf; private receipt SHA-256 a28a3e1ff2e7502a65defd76c345c284a71fcb366d196a7c15620adad7bf9821. Eight focused backend tests, 256 frontend tests, production build, full desktop/narrow browser and a 34-action fixture journey passed. Volatile authored text is retained; stale source links/formal submission are blocked until explicit carry-forward and new selection. Exact-match legacy drafts expose narrative only under current authorization and keep old linked IDs withheld.",
+          "limits": "Fixture journey and technical draft safety only; no live audit draft or company source changed, no owner usability acceptance or full long-investigation acceptance."
+        }
+      ]
+    },
+    {
+      "id": "UX-07",
+      "lane": "audit_company",
+      "title": "Change-impact tracking and precise work states",
+      "depends_on": [
+        "UX-02",
+        "AQ-06"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "Compare scope, population and evidence versions; trace affected samples, procedures, workpapers and conclusions. Mark potentially affected work for reassessment without automatic invalidation or rewriting history. Distinguish received, inspected, tested, concluded and reviewed; unknown, not applicable, not tested and failed remain separate. Explain count denominators/exclusions and distinguish event, collection and simulation times. Severity, effectiveness and evidence confidence are separate dimensions.",
+      "gate": "existing_authority",
+      "execution_policy": "Owner authorized execution; retain dependency acceptance gates and existing audit_company execution boundaries. Preserve private data and assessment history. User acceptance cannot be inferred from scripted checks.",
+      "execution_authorized": true,
+      "evidence": "Read-only source-impact comparisons now validate original physical source, portfolio alias/store/registry and retained artifact hashes, recheck authority, and distinguish unavailable comparisons from unchanged sources. Explicit downstream links, correction/withdrawal source claims and per-source read intervals remain qualified; no globally atomic snapshot or automatic invalidation is asserted. Administrative work status remains separate from effectiveness. Exact source-impact relationships now include retained sampled-item observations and correction chains, pinned HUMAN review versions/passages, and actual finding/remediation evidence fields. The viewer opens exact historical workpaper versions and rejects stale responses. Source comparisons remain read-only. Explicit source.impact.disposition.record now appends an attributed decision against an exact retained original or linked work version, with fresh source/context pins, immutable successor history and optional distinct existing reassessment-work link. It does not change results, applicability or professional clearance. Integrated journey and user acceptance remain open.",
+      "technical_checkpoints": [
+        {
+          "date": "2026-09-22",
+          "scope": "Private real-backend single-control technical journey; helper-seeded formal setup",
+          "validation": "Six completed browser stages,147 measured actions,140 requests; no unexpected HTTP failures or browser errors",
+          "acceptance": "Automated technical evidence only; human usability and professional acceptance remain pending",
+          "result": "Two append-only reassessment records preserve exact predecessor and historical target; original test records unchanged."
+        }
+      ]
+    },
+    {
+      "id": "UX-08",
+      "lane": "audit_company",
+      "title": "Review conversations and working-to-formal record transitions",
+      "depends_on": [
+        "UX-07"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "Anchor comments to exact passages and source versions; preserve responses, revisions, open points and explicit resolution acceptance. Separate scratch notes, hypotheses and provisional calculations from formal workpapers/findings through deliberate promotion. Distinguish company statements, auditor observations and reviewer judgments. Agent extraction cannot silently promote speculation into a finding.",
+      "gate": "existing_authority",
+      "execution_policy": "Owner authorized execution; retain dependency acceptance gates and existing audit_company execution boundaries. Preserve private data and assessment history. User acceptance cannot be inferred from scripted checks.",
+      "execution_authorized": true,
+      "evidence": "A fresh bounded technical source-correction journey completed twelve replay/CAS-checked commands through exact collection, provisional population, targeted observation, pinned workpaper challenge, separate workpaper/trace correction, author response and distinct synthetic reviewer-role resolution. Earlier versions, source bytes and nine selected prior audit histories were preserved. Compiled workspace projection checks passed desktop/narrow. This is one targeted record-version with one untested member, not full-scope or qualified review."
+    },
+    {
+      "id": "UX-09",
+      "lane": "audit_company",
+      "title": "Attention, bulk-action and unavailable-state refinement",
+      "depends_on": [
+        "UX-06",
+        "UX-08"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "Group routine updates and prioritize explained changes/blockers. Clearly distinguish selected rows from all filtered results, preview bulk consequences and report per-item partial failures. Distinguish no activity, empty search, missing evidence, denied access, pending response and technical failure with appropriate next actions, without leaking restricted record existence.",
+      "gate": "existing_authority",
+      "execution_policy": "Owner authorized execution; retain dependency acceptance gates and existing audit_company execution boundaries. Preserve private data and assessment history. User acceptance cannot be inferred from scripted checks.",
+      "execution_authorized": true,
+      "evidence": "A concrete request-read batch previews selected rows versus filtered snapshot and exact eligible/excluded IDs, capped at 20. Sequential ordinary pbc.read commands retain per-item outcomes; ambiguous exact retry does not resume remaining items, and conflicts stop execution. No batch conclusions or collection. Scripted checks pass; owner efficiency acceptance remains open."
+    },
+    {
+      "id": "UX-10",
+      "lane": "audit_company",
+      "title": "Long-investigation and corrected-evidence usability evaluation",
+      "depends_on": [
+        "UX-09",
+        "UX-05"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "Exercise a tested access population, drafted finding, reviewer challenge, corrected source and handoff. Verify impact traceability, resume, changed hypotheses, safe batch selection and pending/unavailable distinctions. Measure effort and errors against recorded baselines. Retain tentative and historical work appropriately; record actual user evaluation separately from scripted checks and obtain owner acceptance.",
+      "gate": "existing_authority",
+      "execution_policy": "Owner authorized execution; retain dependency acceptance gates and existing audit_company execution boundaries. Preserve private data and assessment history. User acceptance cannot be inferred from scripted checks.",
+      "execution_authorized": true,
+      "technical_checkpoints": [
+        {
+          "date": "2026-09-22",
+          "scope": "Private real-backend single-control technical journey; helper-seeded formal setup",
+          "validation": "Six completed browser stages,147 measured actions,140 requests; no unexpected HTTP failures or browser errors",
+          "acceptance": "Automated technical evidence only; human usability and professional acceptance remain pending",
+          "result": "Exact historical work navigation, resume and corrected-source conversation exercised in bounded technical workroom."
+        }
+      ]
+    },
+    {
+      "id": "CX-01",
+      "lane": "audit_company",
+      "title": "Permission-aware context model and investigation state",
+      "depends_on": [
+        "AQ-02",
+        "UX-01"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/CONTEXTUAL_WORKSPACE_WORKFLOW.md",
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md",
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "Persist and expose the context contract with provenance, staleness and explicit context switching. Keep engagement/branch boundaries and user intent inspectable. Demonstrate no hidden-key, future-record, cross-role or cross-engagement leakage, including inferred context and caches.",
+      "gate": "existing_authority",
+      "execution_policy": "Owner authorized execution; bounded implementation may proceed while whole-stage dependencies remain in progress. Existing audit_company execution boundaries apply. Suggestions and search use authorized context, never hidden key data; final usability acceptance requires actual feedback.",
+      "execution_authorized": true,
+      "evidence": "Saved context records bind scope, company source, acquisition settings and current permissions. Changed or unrecorded basis requires explicit review before links reopen; original text/pins remain intact. Focused backend and mocked-browser isolation checks pass; comprehensive journey acceptance remains incomplete."
+    },
+    {
+      "id": "CX-02",
+      "lane": "audit_company",
+      "title": "Stable navigation, unified search and list-preview-workspace flow",
+      "depends_on": [
+        "CX-01",
+        "UX-02"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/CONTEXTUAL_WORKSPACE_WORKFLOW.md",
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md",
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "Consolidate overlapping destinations; use consistent object summaries, contextual actions, permission-aware grouped search and previews. Preserve filters, position and drafts across deep links/back navigation; support next/previous inspection and saved role/engagement workspaces with reset. Keep navigation stable rather than adaptively moving controls.",
+      "gate": "existing_authority",
+      "execution_policy": "Owner authorized execution; bounded implementation may proceed while whole-stage dependencies remain in progress. Existing audit_company execution boundaries apply. Suggestions and search use authorized context, never hidden key data; final usability acceptance requires actual feedback.",
+      "execution_authorized": true,
+      "evidence": "Stable navigation, authorized grouped search, record previews, bounded list context, durable drafts and personal saved investigations implemented. Actual investigation reload and preview pass; full navigation acceptance remains incomplete."
+    },
+    {
+      "id": "CX-03",
+      "lane": "audit_company",
+      "title": "Evidence-linked contextual guidance",
+      "depends_on": [
+        "CX-02",
+        "UX-07",
+        "IK-02"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/CONTEXTUAL_WORKSPACE_WORKFLOW.md",
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md",
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "Surface relevant authorized relationships, changes, blockers and suggested next actions with reasons and cited records/work. Distinguish declarations from inference and missing evidence from adverse conclusions. Permit user correction/dismissal. Respect unassisted assessment boundaries and log deliberate hints; never use hidden answers to steer learners. Refresh suggestions when versions, access or scope change.",
+      "gate": "existing_authority",
+      "execution_policy": "Owner authorized execution; bounded implementation may proceed while whole-stage dependencies remain in progress. Existing audit_company execution boundaries apply. Suggestions and search use authorized context, never hidden key data; final usability acceptance requires actual feedback.",
+      "execution_authorized": true,
+      "evidence": "Recorded artifact context shows authorized request purpose, declared controls, related procedure definitions and exact workpaper citations. No hidden/model-derived assistance. 126 frontend tests, mocked browser and actual A read-only navigation pass; broader contextual guidance acceptance remains open. Instructor policy plus private opt-in gate deterministic administrative suggestions. Explicit disclosures and exact-pin review/dismissal retain rationale; policy/source/scope/access changes invalidate context, with inert companion recovery. No Key/model input or automatic audit action. Actual user evaluation remains separate.",
+      "technical_checkpoints": [
+        {
+          "date": "2026-09-22",
+          "scope": "Explicit authorized record-change comparison",
+          "validation": "No hiddenKey/native read; unavailable prior target or changed context withholds all details/counts; compiled isolationjourney passed.",
+          "acceptance": "Deterministic pin differences, no adverse conclusion or automatic professional reassessment."
+        }
+      ]
+    },
+    {
+      "id": "CX-04",
+      "lane": "audit_company",
+      "title": "Efficient contextual forms and accessible actions",
+      "depends_on": [
+        "CX-02",
+        "UX-09"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/CONTEXTUAL_WORKSPACE_WORKFLOW.md",
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md",
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "Reuse known scoped context visibly and allow correction; progressively disclose advanced fields, preserve invalid-form entries, explain disabled actions without leaking restricted facts. Provide discoverable keyboard shortcuts and non-hover alternatives. Preview references without losing work; explicit actions preserve accountability.",
+      "gate": "existing_authority",
+      "execution_policy": "Owner authorized execution; bounded implementation may proceed while whole-stage dependencies remain in progress. Existing audit_company execution boundaries apply. Suggestions and search use authorized context, never hidden key data; final usability acceptance requires actual feedback.",
+      "execution_authorized": true,
+      "evidence": "Artifact-to-personal-draft handoff restores existing text before explicit evidence attachment. Scope/permission/source changes prevent stale linking or return; scripted draft retention and deduplication checks pass. Broader form/keyboard/usability acceptance remains open."
+    },
+    {
+      "id": "CX-05",
+      "lane": "audit_company",
+      "title": "Contextual journey and isolation validation",
+      "depends_on": [
+        "CX-03",
+        "CX-04",
+        "UX-10"
+      ],
+      "inputs": [
+        "docs/internal/development/audit-suite/CONTEXTUAL_WORKSPACE_WORKFLOW.md",
+        "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md",
+        "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md"
+      ],
+      "write_scope": [
+        "enterprise/audit_suite/",
+        "audit_suite_web/",
+        "tools/audit_suite/",
+        "tests/audit_suite/",
+        "docs/internal/development/audit-suite/",
+        "enterprise/generated/audit-suite/"
+      ],
+      "state": "IN_PROGRESS",
+      "acceptance": "Exercise unfamiliar investigation, evidence correction, role/context switch, access revocation, stale suggestion, contradictory support, empty filtered search and model unavailability. Verify deep links/back navigation/draft retention, recommendation provenance, cache isolation and no covert key assistance. Measure navigation/entry burden and obtain actual user feedback; record scripted versus human acceptance separately.",
+      "gate": "existing_authority",
+      "execution_policy": "Owner authorized execution; bounded implementation may proceed while whole-stage dependencies remain in progress. Existing audit_company execution boundaries apply. Suggestions and search use authorized context, never hidden key data; final usability acceptance requires actual feedback.",
+      "execution_authorized": true,
+      "technical_checkpoints": [
+        {
+          "date": "2026-09-22",
+          "scope": "Private real-backend single-control technical journey; helper-seeded formal setup",
+          "validation": "Six completed browser stages,147 measured actions,140 requests; no unexpected HTTP failures or browser errors",
+          "acceptance": "Automated technical evidence only; human usability and professional acceptance remain pending",
+          "result": "Role denial, narrow/desktop layouts, retained drafts and explicit context navigation verified; broader model-quality/human journeys remain distinct."
+        },
+        {
+          "date": "2026-09-22",
+          "scope": "Paired saved-context and historical-work inspection",
+          "validation": "Exact old workpaper restore, retained private handoff/checkpoint, learner/instructor access separation and390pixel layout passed in the consolidated journey.",
+          "acceptance": "No actual model call or human feedback; remaining broader acceptance criteria remain in force."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Same-engagement company-source and evidence-acquisition context isolation",
+          "validation": "Commit df8342eb; private receipt SHA-256 cceeef37c37013b0c2354692ca64b2707fd8b164555b92269595df29e4246037. Search, list and table filters reset on source/acquisition switch while ordinary revision navigation retains them. A 13-action compiled-App journey issued nine GETs and no mutations/errors. Commit e61d29bf then blocked stale draft links and old-basis formal submission in the 34-action draft fixture.",
+          "limits": "Scripted/fixture technical checks, not actual owner feedback, model availability assessment, or full CX-05 journey acceptance."
+        }
+      ]
     }
   ],
   "scope_update": {
@@ -398,5 +1602,106 @@
     "compatibility_base_sha": "035304bf8860e9bc393ae73382a3e60501a23757",
     "source_pr": 142,
     "source_delivery": "Source changes are delivered through PR #142; its GitHub merge record supplies repository acceptance."
-  }
+  },
+  "audit_scope_update": {
+    "date": "2026-09-13",
+    "owner_instruction": "Awesome. Can you add all of that to our overnight workflow queue?",
+    "workflow": "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md",
+    "status": "QUEUED_NOT_STARTED",
+    "jobs": [
+      "AQ-01",
+      "AQ-02",
+      "AQ-03",
+      "AQ-04",
+      "AQ-05",
+      "AQ-06",
+      "AQ-07",
+      "AQ-08"
+    ],
+    "interpretation": "Add all eight company-source readiness stages including retroactive migration; this update does not start execution or a scheduler. Prior reader job states, source baseline and execution receipts remain historical.",
+    "completion_boundary": "AQ-08 requires actual qualified substantive review and owner usability acceptance; neither may be inferred from automated checks. Preserve fictional provenance, frozen assets, financial locks and historical audit snapshots. Atlas remains read-only."
+  },
+  "audit_mode_clarification": {
+    "status": "QUEUED_NOT_STARTED",
+    "owner_instruction": "Right. Add that to the workflow queue",
+    "principle": "Clean and Messy share enterprise realism, source-system depth and professional audit effort; mode changes operating conditions rather than delivering different preassembled answer sets.",
+    "applies_to": [
+      "AQ-01",
+      "AQ-02",
+      "AQ-03",
+      "AQ-04",
+      "AQ-05",
+      "AQ-06",
+      "AQ-07",
+      "AQ-08"
+    ],
+    "authority": "docs/internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md#shared-realism-and-cleanmessy-operating-conditions"
+  },
+  "instructor_key_scope_update": {
+    "date": "2026-09-13",
+    "owner_instruction": "ok. add it to the queue",
+    "status": "QUEUED_NOT_STARTED",
+    "workflow": "docs/internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md",
+    "jobs": [
+      "IK-01",
+      "IK-02",
+      "IK-03",
+      "IK-04",
+      "IK-05",
+      "IK-06"
+    ],
+    "interpretation": "Add the robust instructor investigation, interactive key, learner comparison and debrief workflow; preserve all existing jobs and historical execution receipts. This does not start execution."
+  },
+  "ux_scope_update": {
+    "owner_instruction": "ok. lock that and come up with more",
+    "status": "LOCKED_DIRECTION_QUEUED_NOT_STARTED",
+    "workflow": "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md",
+    "jobs": [
+      "UX-01",
+      "UX-02",
+      "UX-03",
+      "UX-04",
+      "UX-05"
+    ],
+    "interpretation": "Lock the preceding UX priorities; new suggestions remain proposals unless adopted. No execution or scheduler started."
+  },
+  "ux_second_scope_update": {
+    "owner_instruction": "ok. lock it. Give me one more round of polish and refinement that we can do to make this efficient and easy to navigate",
+    "status": "LOCKED_DIRECTION_QUEUED_NOT_STARTED",
+    "workflow": "docs/internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md",
+    "jobs": [
+      "UX-06",
+      "UX-07",
+      "UX-08",
+      "UX-09",
+      "UX-10"
+    ],
+    "interpretation": "Adopt the preceding continuity, impact, review, handoff, attention, bulk-action and state refinements. Subsequent proposals remain proposals."
+  },
+  "context_scope_update": {
+    "owner_instructions": [
+      "YES! CONTEXT CONTEXT CONTEXT!!!!! Make this intelligent!!!!!!!!!!!!!",
+      "add everything else you mentioned too"
+    ],
+    "status": "LOCKED_DIRECTION_QUEUED_NOT_STARTED",
+    "workflow": "docs/internal/development/audit-suite/CONTEXTUAL_WORKSPACE_WORKFLOW.md",
+    "jobs": [
+      "CX-01",
+      "CX-02",
+      "CX-03",
+      "CX-04",
+      "CX-05"
+    ],
+    "interpretation": "Adopt all final navigation/efficiency proposals and the contextual workspace requirements. Covers stable navigation, unified search, previews, consistent summaries, contextual actions, saved workspaces, shortcuts, progressive forms, navigation acceptance checks and consolidation of overlapping screens. No execution started."
+  },
+  "audit_execution": {
+    "status": "IN_PROGRESS",
+    "owner_instruction": "Only stop if there is a REAL problem or blocker. Iterate faithfully from company canon, history, architecture and locked decisions; create where needed.",
+    "started_at": "2026-09-14T06:29:38.622168+00:00",
+    "worktree": "SABLEHARBOR-audit-suite",
+    "branch": "build/audit-training-suite",
+    "boundaries": "Local integrated implementation; preserve immutable sources and private records. Atlas read-only. No inferred professional acceptance or remote deployment.",
+    "checkpoint_note": "Company source foundation, retrospective documentary migration, original operating-table bridge, live browser collection, protected reference-key explorer and context/navigation foundation implemented. Full queued acceptance remains in progress."
+  },
+  "historical_reader_status": "DESIGN_REVIEW_PENDING"
 }

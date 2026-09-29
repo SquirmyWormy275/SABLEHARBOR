@@ -10,16 +10,21 @@ FORBIDDEN = ("ghp_", "github_pat_", "sk-proj-", "BEGIN PRIVATE KEY")
 MAX_BYTES = 10 * 1024 * 1024
 ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # Tracked convenience catalog retained by GENERATED_RECORDS_LIFECYCLE.md.
-    # September 29 geographic release-index successor adds an accepted-state
-    # canon addendum and delivery receipt. Reader generation reports 1,443
-    # files, 146 verified publication pairs and 12 evidence packages. No later
-    # database drift allowed.
+    # September 29 portal/main integration plus accepted legal and geographic
+    # successors and the portal rights handoff: 1,543 reader files,
+    # 148 publication pairs, 12 evidence
+    # packages. Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        12562432,
-        "7baab4b410ee0c36c5745ed65b711c673a7c570c810cc2fcc01498c59788c2e7",
+        13594624,
+        "06c49daa4bff1fecae7781065cd56f05a84e22ce29e1bea3d21985d83944b817",
     ),
-    # Reviewed September 10 successor: six approved J2 names, unchanged public scope.
+    # September 13 locally reviewed organization-chart successor; owner visual
+    # acceptance remains separate. Preserve the previous version in history.
     Path("docs/organization/assets/current/Sable-Harbor-Organization-Charts.pdf"): (
+        12419501,
+        "7cf4607406ed56bd7cafdbcaecd136ba53ba7df21706f2fa7080056f908fcdf9",
+    ),
+    Path("docs/organization/history/v1.1.0/Sable-Harbor-Organization-Charts.pdf"): (
         12412796,
         "352dfa4f1247f6089d340b19940f75758a666dce14f239fb38b1c2a300aaa38b",
     ),

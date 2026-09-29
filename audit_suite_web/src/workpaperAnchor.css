@@ -1,0 +1,26 @@
+.passage-anchor {
+  min-width: 0;
+  max-width: 100%;
+}
+.passage-anchor textarea {
+  width: 100%;
+  min-height: 8rem;
+  box-sizing: border-box;
+}
+.passage-anchor blockquote {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin: 0.7rem 0;
+  border-left: 3px solid #648b91;
+  padding-left: 0.7rem;
+}
+.passage-anchor fieldset {
+  min-width: 0;
+}
+.passage-anchor label {
+  display: block;
+}
+.passage-anchor .passage-pin {
+  overflow-wrap: anywhere;
+  font-size: 0.8rem;
+}

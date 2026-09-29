@@ -1,6 +1,6 @@
 # Sable Harbor organization charts
 
-**40 chart families · 57 pages · Revision 1.1.0 · September 10, 2026**
+**40 chart families · 60 pages · Revision 1.2.0 · September 13, 2026**
 
 For current office and operating locations, use the [location directory](../wiki/Locations.md). The later accommodation decisions place Foundry Field across Reno and Sacramento and Atlas Meridian across Tucson and Sacramento; their unrecorded-location labels in this dated chart edition are stale. Pale Sun’s Red Wash mine is in Sweetwater County, Wyoming. The [supporting notes](../wiki/Records-and-Decisions.md#locations) distinguish that mine from a separate Pale Sun office.
 
@@ -60,3 +60,5 @@ Business and asset cards show name, location and actual work. People cards show 
 [Display source](source/chartbook.json) · [Chart register](ORGANIZATION_MAP_REGISTER.json) · [Governance](CHART_GOVERNANCE.md) · [Source traceability](CANON_TRACEABILITY_MATRIX.md) · [Migration and preserved history](CHART_MIGRATION.md) · [Pinned-source exceptions](SOURCE_LOCK_EXCEPTIONS.md)
 
 Install `tools/organization/requirements.txt`, then run `python scripts/build_organization_charts.py`. The exporter reproduces page artwork and supporting records from the approved vector PDF and validates every card against the display source. It leaves the visual master and historical publications unchanged. Changes to a chart require an updated visual master and matching sourced display data.
+
+The [September 13 delegated appointments](../canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md) add fifteen dated occupants of existing functions. The successor has engineering review pending owner acceptance; the approved predecessor remains preserved in `history/v1.1.0/`. Current branch membership includes 59 employee identities and seven directors, not a payroll census.

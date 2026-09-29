@@ -5,15 +5,15 @@
     "catalog_objects": 186,
     "service_components": 49,
     "runtime_sites": 3,
-    "census_appearances": 907,
-    "coverage_records": 594,
+    "census_appearances": 912,
+    "coverage_records": 599,
     "classes": {
       "1": 2,
       "2": 16,
       "3": 6,
       "4": 62,
       "5": 19,
-      "6": 448,
+      "6": 453,
       "7": 5,
       "8": 36
     }

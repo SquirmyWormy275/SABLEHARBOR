@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "publication_revision": "1.1.0",
-  "as_of": "2026-09-10",
+  "publication_revision": "1.2.0",
+  "as_of": "2026-09-13",
   "visual_master": "docs/organization/assets/current/Sable-Harbor-Organization-Charts.pdf",
-  "visual_master_sha256": "352dfa4f1247f6089d340b19940f75758a666dce14f239fb38b1c2a300aaa38b",
-  "visual_master_git_blob": "fcd6c37f0cafc46cbdaa303d5eba8f584a25c6d9",
+  "visual_master_sha256": "7cf4607406ed56bd7cafdbcaecd136ba53ba7df21706f2fa7080056f908fcdf9",
+  "visual_master_git_blob": "bac371de533a44204de1ca972a2a7160e008a730",
   "nodes": [
     {
       "id": "SHI",
@@ -4199,6 +4199,351 @@
       "notes": [
         "Exact appointment and commission dates are not established by the company joining year."
       ]
+    },
+    {
+      "id": "AS-P001",
+      "person_id": "AS-P001",
+      "type": "person",
+      "name": "Lila Kestrel",
+      "title": "Chief of Enterprise Support Services",
+      "joined_year": null,
+      "source_record_id": "AS-P001",
+      "role_id": "ROLE-27",
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P001: Lila Kestrel, Chief of Enterprise Support Services, effective 2026-09-13"
+        }
+      ],
+      "status": "current_employee",
+      "title_state": "DELEGATED_FICTIONAL_APPOINTMENT_PENDING_ACCEPTANCE",
+      "year_basis": "Company joining year not established; appointment date is not a joining year",
+      "notes": [
+        "Dated fictional source addition; branch acceptance remains pending. No incremental position or occupied workplace."
+      ]
+    },
+    {
+      "id": "AS-P002",
+      "person_id": "AS-P002",
+      "type": "person",
+      "name": "Adrian Lowe",
+      "title": "Chief Financial Officer",
+      "joined_year": null,
+      "source_record_id": "AS-P002",
+      "role_id": "ROLE-28",
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P002: Adrian Lowe, Chief Financial Officer, effective 2026-09-13"
+        }
+      ],
+      "status": "current_employee",
+      "title_state": "DELEGATED_FICTIONAL_APPOINTMENT_PENDING_ACCEPTANCE",
+      "year_basis": "Company joining year not established; appointment date is not a joining year",
+      "notes": [
+        "Dated fictional source addition; branch acceptance remains pending. No incremental position or occupied workplace."
+      ]
+    },
+    {
+      "id": "AS-P003",
+      "person_id": "AS-P003",
+      "type": "person",
+      "name": "Helena Ward",
+      "title": "General Counsel",
+      "joined_year": null,
+      "source_record_id": "AS-P003",
+      "role_id": "ROLE-29",
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P003: Helena Ward, General Counsel, effective 2026-09-13"
+        }
+      ],
+      "status": "current_employee",
+      "title_state": "DELEGATED_FICTIONAL_APPOINTMENT_PENDING_ACCEPTANCE",
+      "year_basis": "Company joining year not established; appointment date is not a joining year",
+      "notes": [
+        "Dated fictional source addition; branch acceptance remains pending. No incremental position or occupied workplace."
+      ]
+    },
+    {
+      "id": "AS-P004",
+      "person_id": "AS-P004",
+      "type": "person",
+      "name": "Nina Rowan",
+      "title": "Corporate Secretary",
+      "joined_year": null,
+      "source_record_id": "AS-P004",
+      "role_id": "ROLE-30",
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P004: Nina Rowan, Corporate Secretary, effective 2026-09-13"
+        }
+      ],
+      "status": "current_employee",
+      "title_state": "DELEGATED_FICTIONAL_APPOINTMENT_PENDING_ACCEPTANCE",
+      "year_basis": "Company joining year not established; appointment date is not a joining year",
+      "notes": [
+        "Dated fictional source addition; branch acceptance remains pending. No incremental position or occupied workplace."
+      ]
+    },
+    {
+      "id": "AS-P005",
+      "person_id": "AS-P005",
+      "type": "person",
+      "name": "Martin Ives",
+      "title": "Head of Risk and Compliance",
+      "joined_year": null,
+      "source_record_id": "AS-P005",
+      "role_id": "ROLE-31",
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P005: Martin Ives, Head of Risk and Compliance, effective 2026-09-13"
+        }
+      ],
+      "status": "current_employee",
+      "title_state": "DELEGATED_FICTIONAL_APPOINTMENT_PENDING_ACCEPTANCE",
+      "year_basis": "Company joining year not established; appointment date is not a joining year",
+      "notes": [
+        "Dated fictional source addition; branch acceptance remains pending. No incremental position or occupied workplace."
+      ]
+    },
+    {
+      "id": "AS-P006",
+      "person_id": "AS-P006",
+      "type": "person",
+      "name": "Sofia Hart",
+      "title": "Head of People and Culture",
+      "joined_year": null,
+      "source_record_id": "AS-P006",
+      "role_id": "ROLE-32",
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P006: Sofia Hart, Head of People and Culture, effective 2026-09-13"
+        }
+      ],
+      "status": "current_employee",
+      "title_state": "DELEGATED_FICTIONAL_APPOINTMENT_PENDING_ACCEPTANCE",
+      "year_basis": "Company joining year not established; appointment date is not a joining year",
+      "notes": [
+        "Dated fictional source addition; branch acceptance remains pending. No incremental position or occupied workplace."
+      ]
+    },
+    {
+      "id": "AS-P007",
+      "person_id": "AS-P007",
+      "type": "person",
+      "name": "Elliot Tran",
+      "title": "Head of Enterprise Technology Services",
+      "joined_year": null,
+      "source_record_id": "AS-P007",
+      "role_id": "ROLE-33",
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P007: Elliot Tran, Head of Enterprise Technology Services, effective 2026-09-13"
+        }
+      ],
+      "status": "current_employee",
+      "title_state": "DELEGATED_FICTIONAL_APPOINTMENT_PENDING_ACCEPTANCE",
+      "year_basis": "Company joining year not established; appointment date is not a joining year",
+      "notes": [
+        "Dated fictional source addition; branch acceptance remains pending. No incremental position or occupied workplace."
+      ]
+    },
+    {
+      "id": "AS-P008",
+      "person_id": "AS-P008",
+      "type": "person",
+      "name": "Dana West",
+      "title": "Chief Information Security Officer",
+      "joined_year": null,
+      "source_record_id": "AS-P008",
+      "role_id": "ROLE-34",
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P008: Dana West, Chief Information Security Officer, effective 2026-09-13"
+        }
+      ],
+      "status": "current_employee",
+      "title_state": "DELEGATED_FICTIONAL_APPOINTMENT_PENDING_ACCEPTANCE",
+      "year_basis": "Company joining year not established; appointment date is not a joining year",
+      "notes": [
+        "Dated fictional source addition; branch acceptance remains pending. No incremental position or occupied workplace."
+      ]
+    },
+    {
+      "id": "AS-P009",
+      "person_id": "AS-P009",
+      "type": "person",
+      "name": "Rowan Price",
+      "title": "Head of Internal Audit",
+      "joined_year": null,
+      "source_record_id": "AS-P009",
+      "role_id": "ROLE-35",
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P009: Rowan Price, Head of Internal Audit, effective 2026-09-13"
+        }
+      ],
+      "status": "current_employee",
+      "title_state": "DELEGATED_FICTIONAL_APPOINTMENT_PENDING_ACCEPTANCE",
+      "year_basis": "Company joining year not established; appointment date is not a joining year",
+      "notes": [
+        "Dated fictional source addition; branch acceptance remains pending. No incremental position or occupied workplace."
+      ]
+    },
+    {
+      "id": "AS-P010",
+      "person_id": "AS-P010",
+      "type": "person",
+      "name": "Cameron Shore",
+      "title": "President of Sable Harbor Advisory",
+      "joined_year": null,
+      "source_record_id": "AS-P010",
+      "role_id": "ROLE-36",
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P010: Cameron Shore, President of Sable Harbor Advisory, effective 2026-09-13"
+        }
+      ],
+      "status": "current_employee",
+      "title_state": "DELEGATED_FICTIONAL_APPOINTMENT_PENDING_ACCEPTANCE",
+      "year_basis": "Company joining year not established; appointment date is not a joining year",
+      "notes": [
+        "Dated fictional source addition; branch acceptance remains pending. No incremental position or occupied workplace."
+      ]
+    },
+    {
+      "id": "AS-P011",
+      "person_id": "AS-P011",
+      "type": "person",
+      "name": "Clara Bennett",
+      "title": "Corporate Controller",
+      "joined_year": null,
+      "source_record_id": "AS-P011",
+      "role_id": "AS-ROLE-CONTROLLER",
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P011: Clara Bennett, Corporate Controller, effective 2026-09-13"
+        }
+      ],
+      "status": "current_employee",
+      "title_state": "DELEGATED_FICTIONAL_APPOINTMENT_PENDING_ACCEPTANCE",
+      "year_basis": "Company joining year not established; appointment date is not a joining year",
+      "notes": [
+        "Dated fictional source addition; branch acceptance remains pending. No incremental position or occupied workplace."
+      ]
+    },
+    {
+      "id": "AS-P012",
+      "person_id": "AS-P012",
+      "type": "person",
+      "name": "Victor Lane",
+      "title": "Facilities and Workplace Lead",
+      "joined_year": null,
+      "source_record_id": "AS-P012",
+      "role_id": "AS-ROLE-FACILITIES",
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P012: Victor Lane, Facilities and Workplace Lead, effective 2026-09-13"
+        }
+      ],
+      "status": "current_employee",
+      "title_state": "DELEGATED_FICTIONAL_APPOINTMENT_PENDING_ACCEPTANCE",
+      "year_basis": "Company joining year not established; appointment date is not a joining year",
+      "notes": [
+        "Dated fictional source addition; branch acceptance remains pending. No incremental position or occupied workplace."
+      ]
+    },
+    {
+      "id": "AS-P013",
+      "person_id": "AS-P013",
+      "type": "person",
+      "name": "Erin Cross",
+      "title": "Procurement and Supplier Risk Lead",
+      "joined_year": null,
+      "source_record_id": "AS-P013",
+      "role_id": "AS-ROLE-PROCUREMENT",
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P013: Erin Cross, Procurement and Supplier Risk Lead, effective 2026-09-13"
+        }
+      ],
+      "status": "current_employee",
+      "title_state": "DELEGATED_FICTIONAL_APPOINTMENT_PENDING_ACCEPTANCE",
+      "year_basis": "Company joining year not established; appointment date is not a joining year",
+      "notes": [
+        "Dated fictional source addition; branch acceptance remains pending. No incremental position or occupied workplace."
+      ]
+    },
+    {
+      "id": "AS-P014",
+      "person_id": "AS-P014",
+      "type": "person",
+      "name": "Omar Vale",
+      "title": "Data Governance and Records Lead",
+      "joined_year": null,
+      "source_record_id": "AS-P014",
+      "role_id": "AS-ROLE-DATA",
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P014: Omar Vale, Data Governance and Records Lead, effective 2026-09-13"
+        }
+      ],
+      "status": "current_employee",
+      "title_state": "DELEGATED_FICTIONAL_APPOINTMENT_PENDING_ACCEPTANCE",
+      "year_basis": "Company joining year not established; appointment date is not a joining year",
+      "notes": [
+        "Dated fictional source addition; branch acceptance remains pending. No incremental position or occupied workplace."
+      ]
+    },
+    {
+      "id": "AS-P015",
+      "person_id": "AS-P015",
+      "type": "person",
+      "name": "Evie Quinn",
+      "title": "Enterprise Safety and Environmental Governance Lead",
+      "joined_year": null,
+      "source_record_id": "AS-P015",
+      "role_id": "AS-ROLE-ENVIRONMENT",
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P015: Evie Quinn, Enterprise Safety and Environmental Governance Lead, effective 2026-09-13"
+        }
+      ],
+      "status": "current_employee",
+      "title_state": "DELEGATED_FICTIONAL_APPOINTMENT_PENDING_ACCEPTANCE",
+      "year_basis": "Company joining year not established; appointment date is not a joining year",
+      "notes": [
+        "Dated fictional source addition; branch acceptance remains pending. No incremental position or occupied workplace."
+      ]
     }
   ],
   "charts": [
@@ -6695,7 +7040,22 @@
         "P006",
         "P007",
         "P011",
-        "P063"
+        "P063",
+        "AS-P001",
+        "AS-P002",
+        "AS-P003",
+        "AS-P004",
+        "AS-P005",
+        "AS-P006",
+        "AS-P007",
+        "AS-P008",
+        "AS-P009",
+        "AS-P010",
+        "AS-P011",
+        "AS-P012",
+        "AS-P013",
+        "AS-P014",
+        "AS-P015"
       ],
       "pages": [
         {
@@ -6774,16 +7134,169 @@
               ]
             }
           ]
+        },
+        {
+          "page": 58,
+          "cards": [
+            {
+              "node_id": "AS-P001",
+              "bounds": [
+                64.0,
+                260.0,
+                485.33331298828125,
+                398.0
+              ]
+            },
+            {
+              "node_id": "AS-P002",
+              "bounds": [
+                509.33331298828125,
+                260.0,
+                930.6666259765625,
+                398.0
+              ]
+            },
+            {
+              "node_id": "AS-P003",
+              "bounds": [
+                954.6666870117188,
+                260.0,
+                1376.0,
+                398.0
+              ]
+            },
+            {
+              "node_id": "AS-P004",
+              "bounds": [
+                64.0,
+                450.0,
+                485.33331298828125,
+                588.0
+              ]
+            },
+            {
+              "node_id": "AS-P005",
+              "bounds": [
+                509.33331298828125,
+                450.0,
+                930.6666259765625,
+                588.0
+              ]
+            },
+            {
+              "node_id": "AS-P006",
+              "bounds": [
+                954.6666870117188,
+                450.0,
+                1376.0,
+                588.0
+              ]
+            }
+          ]
+        },
+        {
+          "page": 59,
+          "cards": [
+            {
+              "node_id": "AS-P007",
+              "bounds": [
+                64.0,
+                260.0,
+                485.33331298828125,
+                398.0
+              ]
+            },
+            {
+              "node_id": "AS-P008",
+              "bounds": [
+                509.33331298828125,
+                260.0,
+                930.6666259765625,
+                398.0
+              ]
+            },
+            {
+              "node_id": "AS-P009",
+              "bounds": [
+                954.6666870117188,
+                260.0,
+                1376.0,
+                398.0
+              ]
+            },
+            {
+              "node_id": "AS-P010",
+              "bounds": [
+                64.0,
+                450.0,
+                485.33331298828125,
+                588.0
+              ]
+            },
+            {
+              "node_id": "AS-P011",
+              "bounds": [
+                509.33331298828125,
+                450.0,
+                930.6666259765625,
+                588.0
+              ]
+            },
+            {
+              "node_id": "AS-P012",
+              "bounds": [
+                954.6666870117188,
+                450.0,
+                1376.0,
+                588.0
+              ]
+            }
+          ]
+        },
+        {
+          "page": 60,
+          "cards": [
+            {
+              "node_id": "AS-P013",
+              "bounds": [
+                64.0,
+                260.0,
+                485.33331298828125,
+                398.0
+              ]
+            },
+            {
+              "node_id": "AS-P014",
+              "bounds": [
+                509.33331298828125,
+                260.0,
+                930.6666259765625,
+                398.0
+              ]
+            },
+            {
+              "node_id": "AS-P015",
+              "bounds": [
+                954.6666870117188,
+                260.0,
+                1376.0,
+                398.0
+              ]
+            }
+          ]
         }
       ],
       "sources": [
         "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
         "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
-        "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md"
+        "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+        "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md"
       ],
       "notes": [
         "Joining years refer to the company. Unrecorded years remain explicit.",
-        "“Year not recorded” means the exact joining year is not established in the sources."
+        "“Year not recorded” means the exact joining year is not established in the sources.",
+        "September 13 delegated appointments fill existing support offices; employment start years and occupied workplaces remain unestablished.",
+        "Internal Audit retains Board Audit & Compliance oversight; J2 remains outside ESS. Membership is not an operating approval delegation."
       ]
     },
     {
@@ -8321,296 +8834,6 @@
       "notes": [
         "Discarded concept replaced by Mari Varela. Not a separate current person."
       ]
-    },
-    {
-      "id": "ROLE-27",
-      "name": "Chief of ESS",
-      "status": "UNNAMED_ROLE",
-      "reason": "No named occupant and joining year established; excluded from people cards.",
-      "sources": [
-        {
-          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-          "line": 29,
-          "evidence": "The **Chief of ESS** is the administrative head of the umbrella, not the substantive superior of every corporate officer housed within it. The role coordinates shared administration, budget mechanics, facilities, staffing support, service quality, and cross-functional coherence."
-        }
-      ],
-      "detail": {
-        "title": "Chief of ESS",
-        "unit": "Sable Harbor headquarters",
-        "count": null,
-        "name": null,
-        "joined_year": null,
-        "state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
-        "display_scope": "role_register_only_until_named",
-        "sources": [
-          {
-            "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-            "line": 29,
-            "evidence": "The **Chief of ESS** is the administrative head of the umbrella, not the substantive superior of every corporate officer housed within it. The role coordinates shared administration, budget mechanics, facilities, staffing support, service quality, and cross-functional coherence."
-          }
-        ]
-      }
-    },
-    {
-      "id": "ROLE-28",
-      "name": "Chief Financial Officer",
-      "status": "UNNAMED_ROLE",
-      "reason": "No named occupant and joining year established; excluded from people cards.",
-      "sources": [
-        {
-          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-          "line": 31,
-          "evidence": "Membership in ESS does **not** imply that the CFO, General Counsel, senior People & Culture leader, technology leader, CISO, or other substantive officer loses direct standing with the CEO or Board where the office's responsibilities require it. The Chief of ESS cannot convert administrative coordination into generalized approval authority."
-        }
-      ],
-      "detail": {
-        "title": "Chief Financial Officer",
-        "unit": "Sable Harbor headquarters",
-        "count": null,
-        "name": null,
-        "joined_year": null,
-        "state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
-        "display_scope": "role_register_only_until_named",
-        "sources": [
-          {
-            "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-            "line": 31,
-            "evidence": "Membership in ESS does **not** imply that the CFO, General Counsel, senior People & Culture leader, technology leader, CISO, or other substantive officer loses direct standing with the CEO or Board where the office's responsibilities require it. The Chief of ESS cannot convert administrative coordination into generalized approval authority."
-          }
-        ]
-      }
-    },
-    {
-      "id": "ROLE-29",
-      "name": "General Counsel",
-      "status": "UNNAMED_ROLE",
-      "reason": "No named occupant and joining year established; excluded from people cards.",
-      "sources": [
-        {
-          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-          "line": 35,
-          "evidence": "The General Counsel has direct standing with the Chief Executive Officer and Board when professional duties require it. OGC owns legal advice and Corporate Secretary mechanics; it does not become a substitute management chain."
-        }
-      ],
-      "detail": {
-        "title": "General Counsel",
-        "unit": "Sable Harbor headquarters",
-        "count": null,
-        "name": null,
-        "joined_year": null,
-        "state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
-        "display_scope": "role_register_only_until_named",
-        "sources": [
-          {
-            "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-            "line": 35,
-            "evidence": "The General Counsel has direct standing with the Chief Executive Officer and Board when professional duties require it. OGC owns legal advice and Corporate Secretary mechanics; it does not become a substitute management chain."
-          }
-        ]
-      }
-    },
-    {
-      "id": "ROLE-30",
-      "name": "Corporate Secretary",
-      "status": "UNNAMED_ROLE",
-      "reason": "No named occupant and joining year established; excluded from people cards.",
-      "sources": [
-        {
-          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-          "line": 13,
-          "evidence": "- Office of the General Counsel, including Corporate Secretary;"
-        }
-      ],
-      "detail": {
-        "title": "Corporate Secretary",
-        "unit": "Sable Harbor headquarters",
-        "count": null,
-        "name": null,
-        "joined_year": null,
-        "state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
-        "display_scope": "role_register_only_until_named",
-        "sources": [
-          {
-            "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-            "line": 13,
-            "evidence": "- Office of the General Counsel, including Corporate Secretary;"
-          }
-        ]
-      }
-    },
-    {
-      "id": "ROLE-31",
-      "name": "Head of Risk & Compliance",
-      "status": "UNNAMED_ROLE",
-      "reason": "No named occupant and joining year established; excluded from people cards.",
-      "sources": [
-        {
-          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-          "line": 14,
-          "evidence": "- Risk & Compliance;"
-        }
-      ],
-      "detail": {
-        "title": "Head of Risk & Compliance",
-        "unit": "Sable Harbor headquarters",
-        "count": null,
-        "name": null,
-        "joined_year": null,
-        "state": "PROPOSED_ROLE_LABEL; function exists, exact office title unresolved",
-        "display_scope": "role_register_only_until_named",
-        "sources": [
-          {
-            "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-            "line": 14,
-            "evidence": "- Risk & Compliance;"
-          }
-        ]
-      }
-    },
-    {
-      "id": "ROLE-32",
-      "name": "Head of People & Culture",
-      "status": "UNNAMED_ROLE",
-      "reason": "No named occupant and joining year established; excluded from people cards.",
-      "sources": [
-        {
-          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-          "line": 16,
-          "evidence": "- People & Culture;"
-        }
-      ],
-      "detail": {
-        "title": "Head of People & Culture",
-        "unit": "Sable Harbor headquarters",
-        "count": null,
-        "name": null,
-        "joined_year": null,
-        "state": "PROPOSED_ROLE_LABEL; function exists, exact office title unresolved",
-        "display_scope": "role_register_only_until_named",
-        "sources": [
-          {
-            "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-            "line": 16,
-            "evidence": "- People & Culture;"
-          }
-        ]
-      }
-    },
-    {
-      "id": "ROLE-33",
-      "name": "Head of Enterprise Technology Services",
-      "status": "UNNAMED_ROLE",
-      "reason": "No named occupant and joining year established; excluded from people cards.",
-      "sources": [
-        {
-          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-          "line": 17,
-          "evidence": "- Enterprise Technology Services;"
-        }
-      ],
-      "detail": {
-        "title": "Head of Enterprise Technology Services",
-        "unit": "Sable Harbor headquarters",
-        "count": null,
-        "name": null,
-        "joined_year": null,
-        "state": "PROPOSED_ROLE_LABEL; function exists, exact office title unresolved",
-        "display_scope": "role_register_only_until_named",
-        "sources": [
-          {
-            "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-            "line": 17,
-            "evidence": "- Enterprise Technology Services;"
-          }
-        ]
-      }
-    },
-    {
-      "id": "ROLE-34",
-      "name": "Chief Information Security Officer",
-      "status": "UNNAMED_ROLE",
-      "reason": "No named occupant and joining year established; excluded from people cards.",
-      "sources": [
-        {
-          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-          "line": 45,
-          "evidence": "The CISO maintains an independent security authority boundary proportionate to material security obligations and does not become a generalized veto office."
-        }
-      ],
-      "detail": {
-        "title": "Chief Information Security Officer",
-        "unit": "Sable Harbor headquarters",
-        "count": null,
-        "name": null,
-        "joined_year": null,
-        "state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
-        "display_scope": "role_register_only_until_named",
-        "sources": [
-          {
-            "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-            "line": 45,
-            "evidence": "The CISO maintains an independent security authority boundary proportionate to material security obligations and does not become a generalized veto office."
-          }
-        ]
-      }
-    },
-    {
-      "id": "ROLE-35",
-      "name": "Head of Internal Audit",
-      "status": "UNNAMED_ROLE",
-      "reason": "No named occupant and joining year established; excluded from people cards.",
-      "sources": [
-        {
-          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-          "line": 49,
-          "evidence": "Internal Audit is structurally separate from OGC, Risk & Compliance, Finance, Technology Services, J2, and management control ownership. Internal Audit reports **functionally to the Board Audit & Compliance Committee**. Administrative matters may flow through the CEO/ESS environment only where they do not impair audit independence."
-        }
-      ],
-      "detail": {
-        "title": "Head of Internal Audit",
-        "unit": "Sable Harbor headquarters",
-        "count": null,
-        "name": null,
-        "joined_year": null,
-        "state": "PROPOSED_ROLE_LABEL; function exists, exact office title unresolved",
-        "display_scope": "role_register_only_until_named",
-        "sources": [
-          {
-            "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-            "line": 49,
-            "evidence": "Internal Audit is structurally separate from OGC, Risk & Compliance, Finance, Technology Services, J2, and management control ownership. Internal Audit reports **functionally to the Board Audit & Compliance Committee**. Administrative matters may flow through the CEO/ESS environment only where they do not impair audit independence."
-          }
-        ]
-      }
-    },
-    {
-      "id": "ROLE-36",
-      "name": "President of Sable Harbor Advisory",
-      "status": "UNNAMED_ROLE",
-      "reason": "No named occupant and joining year established; excluded from people cards.",
-      "sources": [
-        {
-          "path": "docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md",
-          "line": 51,
-          "evidence": "Advisory is an operating business led by a President of Sable Harbor Advisory. The President owns the business line, subject to Sable Harbor's existing corporate governance, delegated authority, reserved matters, legal structure, and Board/CEO authority. The individual is `OPEN`."
-        }
-      ],
-      "detail": {
-        "title": "President of Sable Harbor Advisory",
-        "unit": "Advisory",
-        "count": 1,
-        "name": null,
-        "joined_year": null,
-        "state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
-        "display_scope": "role_register_only_until_named",
-        "sources": [
-          {
-            "path": "docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md",
-            "line": 51,
-            "evidence": "Advisory is an operating business led by a President of Sable Harbor Advisory. The President owns the business line, subject to Sable Harbor's existing corporate governance, delegated authority, reserved matters, legal structure, and Board/CEO authority. The individual is `OPEN`."
-          }
-        ]
-      }
     },
     {
       "id": "ROLE-39",
@@ -14243,5 +14466,6 @@
         }
       ]
     }
-  ]
+  ],
+  "publication_status": "delegated-source-successor-engineering-review-pending-owner-acceptance"
 }

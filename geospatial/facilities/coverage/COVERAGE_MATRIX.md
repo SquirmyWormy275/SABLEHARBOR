@@ -7,7 +7,7 @@ Source: current main dff38f04131b8f10cd62b543becb71aec5a7080a. Build command: `p
 The 186 geographic catalog objects remain authoritative geographic IDs. `ORG:`, `SERVICE:` and `GEOMETRY:` keys are census-disposition keys, not newly allocated site IDs. All newly designed building IDs must be allocated by the facility program.
 # Counts
 
-{"catalog_objects": 186, "census_appearances": 907, "classes": {"1": 2, "2": 16, "3": 6, "4": 62, "5": 19, "6": 448, "7": 5, "8": 36}, "coverage_records": 594, "runtime_sites": 3, "service_components": 49}
+{"catalog_objects": 186, "census_appearances": 912, "classes": {"1": 2, "2": 16, "3": 6, "4": 62, "5": 19, "6": 453, "7": 5, "8": 36}, "coverage_records": 599, "runtime_sites": 3, "service_components": 49}
 
 # Required design queue
 

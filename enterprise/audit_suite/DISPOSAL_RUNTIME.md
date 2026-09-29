@@ -1,0 +1,34 @@
+# Local disposal runtime
+
+`company_disposal_runtime` implements a bounded SH-REC-004 exercise using real unlink operations on **new copies created by this runtime**. It accepts bytes, never caller-selected deletion paths. It cannot target existing audit artifacts, company originals, source history, or arbitrary host files. No network, service route, audit command, model, population acceptance, or control conclusion is involved.
+
+The qualification is `LOCAL_FIXTURE_UNLINK_NOT_SECURE_ERASE_OR_APPROVED_LEGAL_RETENTION`. This does not establish secure erasure, legal hold release, approved corporate retention, physical-media sanitization, production deployment, or an enterprise inventory. Content may still exist in the caller's original input, memory, backups outside this declared inventory, or filesystem storage. Only metadata and SHA-256 hashes enter the runtime's native originals; disposed payload bytes are not retained there.
+
+## Declaration and API
+
+`initialize(new_destination, repository=..., declaration_root=..., declaration_pin=..., copies=..., as_of=...)` requires an exact existing native operating-period declaration for SH-REC-004. Its inventory IDs must exactly match the supplied copies and its operator must match the scoped canon assignment. Each copy has exactly `id`, `kind` (`ACTIVE` or `BACKUP`), `content` (nonempty bytes, at most 64 KiB), `not_before`, and `holds` (explicit local hold IDs). There are at most 32 copies. Supply only nonpersonal, disposable fixture bytes. Initialization must occur between declaration availability and the declared period start.
+
+The new private destination contains `company.sqlite3`, `RUNTIME.json`, and a private `copies/` directory with internally generated filenames. Native systems are `disposal_definition` and `disposal_operation`, registered to the declared operator. The definition pins the original declaration's native identity and metadata, initial file device/inode/hash/length, independent inventory, local retention dates, and maintained implementation source files. These source-file hashes are not loaded-binary attestation or a claim about every Python dependency.
+
+All subsequent methods take `expected_runtime_sha256`. Mutation methods require the exact configured `operator_id`, `expected_revision`, and an explicit logical event time. The operator is a trusted local invocation assertion, not a login, manager approval, or legal authority assertion.
+
+- `control(..., command_id, action, payload, event_at)` records `AUTHORIZE`, `HOLD`, or `ABORT_PENDING`. Authorization payload is `{authorization_id, copy_ids, expires_at, rationale}`. Hold payload is `{copy_id, hold_id, active, rationale}`. Abort payload is `{rationale}`. An authorization is an immutable, bounded local selection with an exclusive expiry. Hold removal is explicitly local and does not claim legal release.
+- `dispose(..., command_id, authorization_id, copy_ids, event_at)` durably records the exact selection and initial file identities before any unlink. It then records progress separately for each selected copy and a final observation. Exact completed replay returns the retained historical observation without another operation; changed envelopes or reused command identities fail.
+- `retry_pending(..., intent_sha256, retry_at)` requires the exact current pending intent, current revision and a **strictly later** explicit logical time. It accepts no new selection. Current holds, retention dates, and authorization expiry are checked before each remaining unlink. The clock is supplied by the trusted operator; the module does not independently establish wall-clock truth.
+- `inspect(..., as_of)` is read-only. It reports every declared active/backup copy, current path presence and identity match, recorded status, holds, pending intent, and bounded internal directory contents. Missing or replaced files are visible rather than silently adopted. Inspection is not a completed scheduled occurrence or testing credit.
+
+## Interruption and retry
+
+A SQLite transaction cannot undo a filesystem unlink. The durable intent precedes any rename or unlink. Each progress record and its native original commit atomically with the runtime revision. A failure preserves the pending intent and records a failure observation where the database remains available. A process interruption or storage failure may leave only the intent; automatic retry is forbidden.
+
+Before unlink, the module moves a verified copy to a generated private quarantine name, verifies its retained device/inode/hash again, and rejects a replacement at the original path. Retrying cannot adopt a newly created same-byte file. The private directory itself is pinned and opened with an anchored descriptor; aliases and directory replacements fail closed. Maintained writers cooperate through an exclusive runtime lock. This is not a sandbox against an arbitrary same-UID process deliberately racing the final unlink syscall; keep the new private runtime under one trusted operator's exclusive control.
+
+A copy missing after a retained intent has outcome `MISSING_AFTER_RETAINED_INTENT` and recorded status `MISSING_UNATTRIBUTED`, not `UNLINKED`. The aggregate result is `COMPLETED_WITH_UNATTRIBUTED_MISSING_COPY`; it does not claim that this process completed every unlink. That observation can be retained even after authorization expires because it performs no new deletion. A new hold or expiry blocks other still-present copies. Already committed progress is never erased. `ABORT_PENDING` stops continuation without undoing deletions or suppressing the earlier intent/progress; any remaining quarantined bytes remain visible for inspection and are not automatically adopted by another command.
+
+History validation recomputes exact control/intent/progress transitions, validates command uniqueness, CAS, immutable native identity, bytes, provenance, event and availability timestamps, command digests, and current state. Bounded SQL checks precede history loading. Source declaration and implementation pins are rechecked at operation boundaries. Native receipts remain compatible with ordinary current-grant company discovery/read/collection, including future and revoked-access denial. No grants or collections are created by this runtime itself.
+
+## Validation
+
+`uv run --extra audit-suite pytest tests/audit_suite/test_company_disposal_runtime.py`
+
+Tests use new temporary fixtures only. They cover actual unlink and retained metadata, remaining backup copies, exact replay/CAS, current holds and exclusive authorization expiry, interruption before and after unlink, failed quarantine unlink, same-byte inode replacement, aliased directories, command collisions, fully re-pinned malformed intent state, source/code tampering, and ordinary native collection after deletion.

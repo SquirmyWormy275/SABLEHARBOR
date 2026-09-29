@@ -31,16 +31,6 @@ These records are deliberately outside current people/entity cards. They include
 | P060 | Richard Halden | superseded_never_accepted | excluded_superseded |
 | P061 | Evelyn Teller | superseded_alias_concept | excluded_superseded |
 | P062 | Ev Rourke | superseded_alias_concept | excluded_superseded |
-| ROLE-27 | Chief of ESS | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
-| ROLE-28 | Chief Financial Officer | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
-| ROLE-29 | General Counsel | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
-| ROLE-30 | Corporate Secretary | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
-| ROLE-31 | Head of Risk & Compliance | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
-| ROLE-32 | Head of People & Culture | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
-| ROLE-33 | Head of Enterprise Technology Services | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
-| ROLE-34 | Chief Information Security Officer | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
-| ROLE-35 | Head of Internal Audit | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
-| ROLE-36 | President of Sable Harbor Advisory | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
 | ROLE-39 | Chief of Staff | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
 | ROLE-41 | Deputy Head of Contact | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |
 | ROLE-42 | Collection Director | UNNAMED_ROLE | No named occupant and joining year established; excluded from people cards. |

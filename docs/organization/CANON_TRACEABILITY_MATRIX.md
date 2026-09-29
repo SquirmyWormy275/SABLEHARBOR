@@ -11,3 +11,5 @@
 | Presentation | [Owner-approved design](../canon/ORG_CHART_DESIGN_AND_CLEANUP_2026-09-09.md) |
 
 The [display source](source/chartbook.json) and [complete inventory](DISPLAY_INVENTORY.md) provide record-level evidence. Each [chart page](README.md) carries its own sources and qualifications. Historical or external inclusion does not create a current subsidiary or employee. Unnamed offices and commercial configurations remain outside people cards. Pinned snapshot sources retain their original bytes under the [source-lock exceptions](SOURCE_LOCK_EXCEPTIONS.md).
+
+Current branch enterprise occupants: [September 13 decision](../canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md), [structured roster](../structured/enterprise_leadership_2026-09-13.json), and [coordination addendum](../governance/ENTERPRISE_COORDINATION_2026-09-13.md). These additions remain pending accepted merge.

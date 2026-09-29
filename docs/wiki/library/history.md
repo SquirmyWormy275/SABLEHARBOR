@@ -29,6 +29,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [SABLE HARBOR — DECISION REGISTER](../../canon/DECISION_REGISTER_v0.3.1.md) — MD
 - [Demotte Reclamation Services — name and visual identity](../../canon/DEMOTTE_RECLAMATION_NAME_AND_IDENTITY_2026-09-07.md) — MD
 - [Emberline — approved visual identity](../../canon/EMBERLINE_VISUAL_IDENTITY_2026-09-07.md) — MD
+- [Dated enterprise appointments and workforce identity reconciliation](../../canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md) — MD · [formatted PDF](../../governance/publications/SH-ENTERPRISE-PPL-20260913_v1.0.0.pdf)
 - [Foundry Field evidence packet: exact-file acceptance](../../canon/FINANCE_HUMAN_EVIDENCE_001_ACCEPTANCE_2026-09-11.md) — MD
 - [Foundry Field FF-003 billing adoption](../../canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md) — MD
 - [Geographic and occupancy completion — September 13, 2026](../../canon/GEOGRAPHIC_COMPLETION_2026-09-13.md) — MD

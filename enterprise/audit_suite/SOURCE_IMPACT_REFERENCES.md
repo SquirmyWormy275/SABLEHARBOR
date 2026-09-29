@@ -1,0 +1,27 @@
+# Exact recorded source-impact relationships
+
+`company_impact.references(state, artifact_id)` retains the existing list contract and the shapes of workpaper, population, task and selection reference rows. Additional rows describe only recorded typed relationships. Matching a title, control ID or narrative is never an edge. This function does not mutate source records, audit work, review dispositions or conclusions.
+
+## New relationship rows
+
+- `sample_executions`: one row per exact retained artifact ID/SHA and execution item. It includes execution `id`, revision in `version`, `item_id`, recorded task/selection/population IDs, `artifact_sha256`, predecessor/successor IDs and `trace_status` (`CURRENT_LEAF` or `HISTORICAL_CORRECTED`). `context_status` separately distinguishes current scope/source binding from historical context; a historical-context leaf is not current work merely because no correction exists. Correction links require exact predecessor digests, consecutive integer revisions, unchanged procedure/sample/population/context identity and the same item set. Locators remain explicitly `AUTHOR_SUPPLIED_NOT_CONTENT_MATCH_VERIFIED`.
+- `reviews`: HUMAN comments only, through an exact retained workpaper ID/version and matching `workpaper_version_digest`, where that version explicitly references the artifact. `version_status` distinguishes latest from historical retained versions. A selected passage must reproduce the stored normalized anchor against that exact version; no nearest-match or current-version substitution is attempted. Legacy comments without anchors are explicitly `WHOLE_WORKPAPER_VERSION`. A workpaper citation plus passage anchor does not prove that a particular sentence depends on that source.
+- `findings`: only the actual `evidence_ids` field is used. Remediation evidence adds a separate row with its `remediation_id` and `REMEDIATION_NOT_ORIGINAL_FINDING` scope. The existing finding schema has no exact workpaper-version relationship, so no such relationship is invented. Finding title/control matches and untyped workpaper IDs are ignored.
+
+An unverified review pin or passage produces no asserted exact link. A missing/mismatched artifact SHA produces no sampled-item link. Existing legacy ID-only workpaper references remain ID-only; this change does not upgrade them to byte verification. No original bytes are read by the relationship function: the source-impact report's separate source comparison and collection integrity checks remain responsible for those claims.
+
+## Bounds and ambiguity
+
+The complete traversal is limited to 20,000 entries per selected collection/nested list, 200,000 aggregate visited entries and five nested reference levels. Duplicate collection IDs, ambiguous workpaper versions, malformed reference containers, invalid trace revisions or unverifiable/forked correction chains fail closed with `IMPACT_REFERENCES_UNAVAILABLE`. Traversal overflow raises `IMPACT_REFERENCE_LIMIT_EXCEEDED`. Neither case returns a truncated list claiming completeness. This is a read-only report failure; it does not block unrelated state reads or mutate committed work.
+
+The caller must supply authorized engagement state. These links do not add source permissions or expose a private instructor key. UI consumers should use the typed collection/ID/version and current authorization to navigate, show historical context, and treat impact as a reason for explicit review—not automatic invalidation, reassessment disposition or assurance credit.
+
+Tests: `test_company_impact_exact.py` covers exact artifact hashes/items, historical corrections, scope labels, HUMAN version/passages, AI and wrong-pin exclusion, real finding/remediation fields, immutable inputs, ambiguous/forked chains, malformed input and explicit traversal limits. Existing `test_company_impact.py` and `test_company_impact_federation.py` retain their compatibility, correction, access and source-route checks.
+
+## Workroom navigation
+
+`SourceImpact` resolves each relationship against the currently authorized engagement. Historical HUMAN comments open their retained workpaper version, with the selected passage shown beside the relationship. Sample execution items expand inline with their exact retained artifact SHA, recorded observation and correction predecessor/successor; author-supplied locators are not presented as verified content matches. Related task, selection/population and workpaper buttons require matching server-issued `sample_execution_inputs` digests, rather than reconstructed JavaScript canonical hashes. Missing current pins leave the historical item readable without substituting a newer object.
+
+Finding remediation references remain visibly separate from evidence for the original finding. Duplicate IDs, absent retained versions and mismatched pins disable navigation. A context/revision change hides the previous report synchronously; late asynchronous responses cannot restore it. `onPreview(kind, row, reference?)` carries the exact version to the existing workpaper detail viewer. This adds no command, private Key access or automatic reassessment.
+
+Frontend checks: `sourceImpact.test.ts` covers typed relationships and unavailable/ambiguous pins; `tests/source-impact-navigation.mjs` exercises the actual component in Chromium, including historical workpaper callbacks, inline trace details, remediation labels and stale response suppression.
