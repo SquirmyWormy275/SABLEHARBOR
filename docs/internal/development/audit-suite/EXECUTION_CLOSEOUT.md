@@ -1,13 +1,15 @@
 # Audit-suite execution closeout
 
 The latest indexed private review packet is
-`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-refresh-run-post-cc91-actual-v1/`
-at A revision 1938 and B revision 2064. Its independently checked basis pins 106 receipts and
-indexes all 818 task instances, linked workpapers and sample traces, and 16
-recorded findings. The local read-only refresh and independent output review
-passed. A separate offline browser check passed exact-data, filter, keyboard,
-desktop/narrow-layout and no-HTTP checks. This is a versioned technical
-snapshot, not an accepted full-scope audit. The prior
+`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-refresh-run-post-gaps-a1939-b2066-v3/`
+at A revision 1939 and B revision 2066. Independent review
+(`REVIEW.json` SHA-256 `e750ba85d68f4d37a8d45b3df2abc145bfd6b59eb8cf1b9f2ea67506f4ba589d`)
+verified 112 receipt pins, all 818 task instances, linked workpapers and sample
+traces, 16 recorded findings, three learner-visible authored gaps, 1,382 retained
+artifact hashes and 237 company source files. Its offline browser check passed
+the three gap-to-task links, cause search, mobile layout and no-HTTP assertions.
+This is a versioned technical snapshot, not an accepted full-scope audit. The
+A1938/B2064 indexed packet remains frozen and independently reviewed; the prior
 `integrated-review-packet-refresh-run-actual-v1/` at A1934/B2060 remains an
 unchanged historical packet with 90 pinned receipts. The earlier
 `integrated-review-packet-final-v1/` at A revision 1810/B revision 1936 passed
@@ -315,7 +317,7 @@ together. Historical `*_scope_update` entries record what was authorized at the 
 their `QUEUED_NOT_STARTED` labels do not reset later job progress. Conversely, a
 working command, passing fixture or earlier paired journey does not close a broader
 acceptance criterion. The counts above describe named historical checkpoints, not a
-live query. The current packet pins A1938/B2064 and cannot include later commands.
+live query. The current packet pins A1939/B2066 and cannot include later commands.
 
 ## Supported simulated conclusions
 
@@ -351,12 +353,13 @@ authorize publication, deployment, a real assurance opinion or writes to Atlas.
 ## Private review index
 
 The latest consolidated indexed review snapshot is
-`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-refresh-run-post-cc91-actual-v1/`.
+`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-refresh-run-post-gaps-a1939-b2066-v3/`.
 Its `INDEX.md` links the task register, unchanged queue acceptance criteria and
 hashed supporting receipts. `PROCEDURES.html` provides offline search, workroom,
 status and procedure filters, pagination and exact workpaper/sample version
-references. `FINDINGS.html` links recorded findings to their retained originals.
-Both pages make no network requests and cannot change audit records.
+references. `TASK-GAPS.html` provides learner-visible authored observations with
+cause search and exact task links; `FINDINGS.html` keeps recorded findings separate.
+The pages make no network requests and cannot change audit records.
 
 This is an explicitly versioned working snapshot, not completion of the queue
 or a live view of later commands. Its 818 task instances cover two consolidated
@@ -395,3 +398,17 @@ The author packet's frozen `REFRESH-RECEIPT.json` still says independent review
 was pending when written; the later independent receipts are separate.
 These checks do not replace review of the procedures or owner
 acceptance of the audit workspace.
+
+The A1939/B2066 successor preserves that earlier reviewed packet. Its builder
+rejects optimized Python before reading inputs or emitting output. The
+independent successor review (`REVIEW.json` SHA-256
+`e750ba85d68f4d37a8d45b3df2abc145bfd6b59eb8cf1b9f2ea67506f4ba589d`)
+checked all 12 packet file hashes, 112 indexed receipt pins, the exact A/B
+database and event tips, 818 task and linked-work rows, three authored gap
+events and receipts, 1,382 retained artifact byte hashes, 237 company source
+files and unchanged 16 findings. Its separate offline browser receipt passed
+gap-to-task links, two `INSUFFICIENT_SOURCE` and one `MISSING_OPERATION` cause
+matches, mobile width and zero external requests or page errors. The static
+packet has no file-level identity gate; access and distribution remain private.
+These authored gaps do not supply source evidence, task credit, HIPAA
+applicability, a finding or a professional audit conclusion.
