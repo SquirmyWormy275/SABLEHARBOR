@@ -33,7 +33,11 @@ jobs:
           export TMPDIR="$RUNNER_TEMP"
           printf 'TMPDIR=%s\n' "$TMPDIR" >> "$GITHUB_ENV"
           sudo apt-get update -qq
-          sudo apt-get install -y bubblewrap
+          sudo apt-get install -y bubblewrap apparmor-profiles apparmor-utils
+          sudo install -m 0644 \
+            /usr/share/apparmor/extra-profiles/bwrap-userns-restrict \
+            /etc/apparmor.d/bwrap-userns-restrict
+          sudo apparmor_parser -r /etc/apparmor.d/bwrap-userns-restrict
           command -v bwrap
           bwrap --unshare-all --die-with-parent --new-session --clearenv \
             --ro-bind /usr /usr --symlink usr/lib /lib --symlink usr/lib /lib64 \
