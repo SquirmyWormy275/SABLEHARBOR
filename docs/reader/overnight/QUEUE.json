@@ -656,6 +656,12 @@
           "scope": "Latest private A1939/B2066 packet source-journal rebase",
           "validation": "V4 packet manifest SHA-256 84bde92c34462710d596c802b5952d4c94c926a31a4e4a0090fc387186cb70a3 and final independent technical/browser PASS SHA-256 0a9b8b18096bf576ec555c86d13acb2d5cbbfc0f2588755c24770e55f5c7e291 verify four authorized source SQLite journal transitions across 60 roots, 1,528 unchanged native business versions, 237 unchanged non-SQLite files and core audit bytes unchanged from the reviewed v3 packet. The same 818 task rows, three authored gaps, 16 findings and 1,382 historical retained artifacts remain indexed.",
           "acceptance": "Historical A1938/B2064 predates the gap commands; independently reviewed v3/v4 A1939/B2066 includes them. The rebase made no audit command, task/grade credit, company business operation or professional/owner acceptance; separate fresh close and paired engagements are not indexed into this packet."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Selected February 2027 BCM-002/003 ordinary population and procedure reconciliation in separate copied paired workrooms",
+          "validation": "Independent actual-run review enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-bcm-ordinary-procedures-run-independent-review-v1/REVIEW.json SHA-256 f42dc13679d7cef34bda1ae7c25bbe27f71bc66dee80075554503c77fea0fc78 verified A90→96/B63→69 with six ordinary commands per side, provisional B1/B2/B3 declaration population and selection, distinct BCM-003 R1/R2 workpaper/sample, 20 native/collection-receipt/retained-byte source joins per branch, and unchanged original workrooms, native roots, bound Key and historical A1939/B2066 audits. Messy B has no B3 backup job; first B2 failed, retry completed and failure ticket remains OPEN. R1 matches an older selected backup while differing from current bytes; R2 matches current bytes.",
+          "acceptance": "Both BCM-002/003 TOE tasks remain NOT_STARTED/NOT_RUN. This selected local slice does not establish full-year population completeness, control effectiveness, independent professional acceptance, task or grade credit."
         }
       ]
     },
@@ -713,6 +719,12 @@
           "scope": "Actual fresh isolated Clean/Messy B2 technical journey from zero retained evidence",
           "validation": "Independent postreview SHA-256 922b850c9539ab849c35b9578c5921ffd1daf6812d9e8ff6d7f067e226f70be8 verified separate copied native roots/new engagements, 31/32 ordinary native/retained joins, A/B rev90/63 event chains, eight inspections each and provisional population/selection/sample/workpaper records. Clean first B2 and retry completed; Messy first failed then retry completed with OPEN ticket. R1 older bytes differ from current and R2 bytes match in both. A had 22 historical PBC groups, four empty ACKNOWLEDGED; B had eight SUBMITTED groups.",
           "acceptance": "Selected synthetic technical slice only; original source roots and historical audits unchanged. All applicable procedures, full-year operating depth, independent population completeness, qualified review, owner acceptance and task/grade credit remain open."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Reviewed disposable rehearsal followed by separate actual private paired BCM-002/003 ordinary-procedure run",
+          "validation": "Sealed v2 runner and independent rehearsal gate preceded actual independent postreview enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-bcm-ordinary-procedures-run-independent-review-v1/REVIEW.json SHA-256 f42dc13679d7cef34bda1ae7c25bbe27f71bc66dee80075554503c77fea0fc78. Byte-copied A/B workrooms advanced A90→96/B63→69 through six ordinary commands each: B1/B2/B3 population/selection, BCM-002 workpaper/sample, and distinct BCM-003 R1/R2 workpaper/sample. All 40 selected source joins and raw event/intent/result histories passed. B B3 remains absent, B B2 failure ticket OPEN, R1 older-checkpoint chronology explicit; original paired workrooms, native roots, Key and A1939/B2066 preserved.",
+          "acceptance": "BCM-002/003 tasks remain NOT_STARTED/NOT_RUN; no Key release, assessment, grade, task credit, full-year or professional/control-effectiveness conclusion. The broader AQ-07 full-scope acceptance remains IN_PROGRESS."
         }
       ]
     },

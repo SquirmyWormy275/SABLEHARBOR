@@ -402,6 +402,21 @@ bookends; they do not establish 40 completed operations, a complete year or
 control effectiveness. The six separate 2028 declarations and 28 slots
 remain excluded.
 
+The sealed [paired BCM procedure runner](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-bcm-ordinary-procedures-runner-proposal-v2/MANIFEST.json)
+then ran a reviewed disposable rehearsal and a separate private actual run
+against byte-copied Key-bound A/B workrooms. [Independent actual-run postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-bcm-ordinary-procedures-run-independent-review-v1/REVIEW.json)
+(SHA-256 `f42dc13679d7cef34bda1ae7c25bbe27f71bc66dee80075554503c77fea0fc78`)
+verified six ordinary commands per branch (A90→96, B63→69), provisional
+B1/B2/B3 declaration reconciliation, and distinct BCM-003 R1/R2 workpaper
+and sample records. Each branch's 20 selected source versions joined exact
+native records, collection receipts and retained bytes. Messy B has no B3
+backup job; its first B2 attempt failed, its retry completed and the failure
+ticket remained OPEN. R1 matched its older selected backup but differed from
+current bytes; R2 matched current bytes. Original workrooms, company roots,
+bound Key and historical A1939/B2066 audits remained unchanged. BCM-002/003
+tasks remain `NOT_STARTED`/`NOT_RUN`; this selected local slice grants no
+full-year, control-effectiveness, professional, task or grade credit.
+
 The queue's job `state`, acceptance criteria and attributed checkpoints must be read
 together. Historical `*_scope_update` entries record what was authorized at the time;
 their `QUEUED_NOT_STARTED` labels do not reset later job progress. Conversely, a
