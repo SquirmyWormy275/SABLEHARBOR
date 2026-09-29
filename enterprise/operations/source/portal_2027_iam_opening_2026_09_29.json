@@ -1,0 +1,71 @@
+{
+  "record_id": "SH-PORTAL-IAM-Q1-2027-SOURCE-v0.1",
+  "version": "0.1.0",
+  "state": "PROVISIONAL_BOUNDED_SOURCE_INPUT",
+  "authored_day": "2026-09-29",
+  "authoring_timezone": "UTC",
+  "scenario": "FICTIONAL_2027_ENGAGEMENT_CANDIDATE",
+  "fact_status": "UNVERIFIED_2027_OPENING_NOT_COMPLETED_ACTUAL",
+  "access_scope": "PUBLIC_SYNTHETIC",
+  "accepted_august_release": {
+    "tag": "sable-harbor-company-edition-v1.2.0",
+    "source_commit": "ddca0d93b16c743e90ce5ac3f9cc74fb74ec6d1f",
+    "records_sha256": "5dd78a2bc6c6a08f333a7a6a0d09f7a310e3f2bd0fe027926c6b120a7b4a795e",
+    "receipt_sha256": "bc0b66500d682c1ea1705601bc1fc1b45e1c6e166d3d28b308df9c729c53767e",
+    "source_available_at": "2026-09-22T23:26:06Z",
+    "release_published_at": "2026-09-22T23:50:07Z"
+  },
+  "source_paths": {
+    "august_roster_and_event": "enterprise/operations/source/completed_period_2026_08.json",
+    "august_roster_and_event_sha256": "14e7b53177b80d671ed66fdc309c6b2c0e1b0b68567f54da97dd02dca4d1ddf8",
+    "iam_procedure": "enterprise/ccf/assurance/design_data/control_procedures.json",
+    "iam_procedure_sha256": "258f5c868e16f3dc197594857dc86a4f2b3ef11e3e5a36dd0a80a9fc6d40c679"
+  },
+  "bridge": {
+    "august_as_of": "2026-08-31",
+    "known_september_as_of": "2026-09-15",
+    "known_september_event_ids": ["SH-HR-2026-09-01"],
+    "unreconciled_start": "2026-09-16",
+    "unreconciled_end_exclusive": "2027-01-01",
+    "september_december_jml_population_complete": false,
+    "unrepresented_jml_count": null,
+    "explanation": "The accepted August edition supports one September exit and its late revocation. No complete September-December HR, directory, application or physical-access change ledger is accepted. No no-event assertion is made."
+  },
+  "opening": {
+    "as_of": "2027-01-01T00:00:00Z",
+    "candidate_basis": "August declared person-principal pairs less the single supported September exit",
+    "candidate_is_confirmed_active": false,
+    "confirmed_active_person_count": null,
+    "confirmed_active_account_count": null,
+    "complete_service_inventory": false,
+    "complete_entitlement_inventory": false,
+    "privileged_account_population": null
+  },
+  "q1_iam_007": {
+    "control_id": "SH-IAM-007",
+    "start": "2027-01-01T00:00:00Z",
+    "end_exclusive": "2027-04-01T00:00:00Z",
+    "time_basis": "UTC case window; local review due time is not established",
+    "procedure_state": "DRAFT_CCF_PROCEDURE_NOT_ACCEPTED_COMPANY_CALENDAR",
+    "procedure_cadence": "Quarterly for privileged access; other rights use risk-approved cadence",
+    "company_due_at": null,
+    "privileged_review_due_count": null,
+    "nonprivileged_review_due_count": null,
+    "complete_2027_jml_population": false,
+    "known_2027_jml_event_ids": [],
+    "unrepresented_2027_jml_count": null,
+    "performance_source_ids": [],
+    "performance_state": "NOT_RUN_NO_ACCEPTED_2027_COMPANY_SOURCE",
+    "missing_performance_count": null
+  },
+  "case_branches": {
+    "A": {"baseline": "COMMON_CANDIDATE_ONLY", "company_delta_state": "NOT_AUTHORED"},
+    "B": {"baseline": "COMMON_CANDIDATE_ONLY", "company_delta_state": "NOT_AUTHORED"}
+  },
+  "excluded": [
+    "Seven nonemployee directors are not employee-principal pairs in the August roster",
+    "2027-2031 operating forecasts are not completed 2027 JML or IAM events",
+    "The August company principal is not an independently verified directory, application or site account",
+    "Portal case artifacts and audit selections are not company source JML or review performance"
+  ]
+}
