@@ -35,6 +35,9 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y bubblewrap
           command -v bwrap
+          bwrap --unshare-all --die-with-parent --new-session --clearenv \
+            --ro-bind /usr /usr --symlink usr/lib /lib --symlink usr/lib /lib64 \
+            --proc /proc --dev /dev --tmpfs /tmp /usr/bin/true
           uv run python -m pytest -q tests/audit_suite/test_parser_sandbox.py::test_actual_isolated_pdf_xlsx_and_decoded_text
       - run: uv run python -m pytest -p tools.ci.shard --durations=20 --junitxml=test-results.xml
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
