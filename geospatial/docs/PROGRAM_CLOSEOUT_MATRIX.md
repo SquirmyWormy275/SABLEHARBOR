@@ -1,8 +1,10 @@
 # Geographic program closeout matrix
 
-Current review: September 13, 2026. The [delegated geographic addendum](../../docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md) resolves site and occupancy choices at explicit accepted precision. The [final review](../finalization/README.md) supplies the supporting evidence. Earlier dated increments below are historical release records.
+The [September 28 source successor](../successor_20260928/README.md) inventories the 1,415 changed paths after the 1.4.0 geographic source boundary, reviews all nine changed controlling canon documents for geographic effect, and targets twelve site-adjacent company sources. Its pinned boundary is accepted main `3dd5e15f58d39b28291782bde5bf4dbf3744a03e`. It does not resolve #107 engineering or close #108.
 
-Issue #106 has implementation evidence for all 34 site/component records, including three screened selected footprints. Closure requires the accepted merge and qualified publication. Issue #107 still requires detailed railway/site engineering beyond the existing grade-only synthetic screening. Issue #108 retains that whole-program dependency; source-carrier completion alone is not whole-program closure. Actual land rights, external execution and uranium custody are not established by this package.
+The September 13 geographic review below records the [delegated geographic addendum](../../docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md), site and occupancy choices at explicit accepted precision, and the [final review](../finalization/README.md). Later [headquarters visual withdrawal](../../docs/canon/HEADQUARTERS_VISUAL_WITHDRAWAL_2026-09-22.md) supersedes only the exterior-image scope. Earlier dated increments below are historical release records.
+
+Issue #106 is closed at its accepted precision for all 34 site/component records, including three screened selected footprints. Issue #107 still requires detailed railway/site engineering beyond the existing grade-only synthetic screening. Issue #108 retains that whole-program dependency; source-carrier completion alone is not whole-program closure. Actual land rights, external execution and uranium custody are not established by this package.
 
 The baseline census is fully dispositioned: 78,145 carriers across six disjoint batches. The source ledger covers all 919 original files and 3,190 changed paths through accepted main `dff38f0`, including full-text review of all 17 controlling canon deltas. Its other rows explicitly distinguish domain records, implementation and derived publications; they are not represented as comprehensive legal or financial audits. The final visual review verifies 135 unique embedded images and 290 appearances against the container inventory.
 
@@ -58,8 +60,8 @@ Historical requirement headings are identifiers, not authority for superseded na
 | 43 | THIRD EXECUTION PHASE | IMPLEMENTED_AT_ACCEPTED_PRECISION | Accepted current railway/industrial estate and chronology integrated; survey/design extensions remain #107. |
 | 44 | FOURTH EXECUTION PHASE | IMPLEMENTED_AT_ACCEPTED_PRECISION | Enterprise histories and bounded site precision integrated across catalog, docket and map products. |
 | 45 | FIFTH EXECUTION PHASE | IMPLEMENTED_AT_ACCEPTED_PRECISION | Offline historical and source research readers implemented with executable browser qualification. |
-| 46 | RELEASE PACKAGE | DELIVERY_QUALIFICATION_REQUIRED | Version 1.4 adds final decisions and source review. Clean integration, native/browser tests, sealed release and publication receipts are required; #107 engineering prevents claiming full-program completion. |
-| 47 | DEFINITION OF DONE | PROGRAM_REMAINDER | Version 1.4 adds final decisions and source review. Clean integration, native/browser tests, sealed release and publication receipts are required; #107 engineering prevents claiming full-program completion. |
+| 46 | RELEASE PACKAGE | DELIVERED_AT_ACCEPTED_PRECISION | Geographic evidence 1.4.0 is sealed and published with integration, native/browser validation and acceptance receipts. The September 28 source successor is a review increment, not a new complete geographic release. |
+| 47 | DEFINITION OF DONE | PROGRAM_REMAINDER | The published 1.4.0 package satisfies its stated scope; #107 detailed engineering and the explicitly bounded whole-program evidence remain before #108 can close. |
 | 48 | DO-NOT-DO LIST | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 49 | IMMEDIATE START INSTRUCTION | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 
