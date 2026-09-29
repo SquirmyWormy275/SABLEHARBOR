@@ -176,8 +176,11 @@ def _scan_zip(data: bytes, label: str, failures: list[str], depth: int = 0) -> N
         failures.append(f"nested archive depth exceeded in {label}")
         return
     with zipfile.ZipFile(io.BytesIO(data)) as archive:
+        _scan_bytes(archive.comment, f"{label}!archive-comment", failures)
         for info in archive.infolist():
             member = info.filename.lower()
+            _scan_bytes(info.filename.encode(), f"{label}!member-name", failures)
+            _scan_bytes(info.comment, f"{label}!{info.filename}:comment", failures)
             if any(marker in member for marker in FORBIDDEN_ARCHIVE_MEMBERS):
                 failures.append(f"unexpected executable/embedded object {info.filename} in {label}")
             payload = archive.read(info)
@@ -235,14 +238,14 @@ def scan_generated_artifacts(root: Path) -> list[str]:
     for path in paths:
         data = path.read_bytes()
         suffix = path.suffix.lower()
-        # Opaque SQLite page bytes can accidentally resemble an email address or SSN.
-        # Scan their high-signal byte markers here, then inspect schema and every
-        # textual cell below for semantic fields, credentials, paths, and PII.
+        # Opaque SQLite pages and compressed archive bytes can accidentally resemble
+        # PII. Scan high-signal markers here, then inspect SQLite text or every
+        # decompressed archive member and its names/comments below for PII.
         _scan_bytes(
             data,
             str(path),
             failures,
-            scan_pii_shapes=suffix not in {".sqlite", ".db", ".sqlite3"},
+            scan_pii_shapes=suffix not in {".sqlite", ".db", ".sqlite3", ".zip", ".xlsx", ".xlsm"},
         )
         if suffix in {".zip", ".xlsx", ".xlsm"}:
             try:
