@@ -19,6 +19,7 @@ jobs:
     env:
       SHFIN_TEST_SHARDS: "3"
       SHFIN_TEST_SHARD: ${{ matrix.shard }}
+      TMPDIR: ${{ runner.temp }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -28,6 +29,12 @@ jobs:
           enable-cache: true
           version: "0.12.4"
       - run: uv sync --frozen --all-extras
+      - name: Prepare isolated artifact parser
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y bubblewrap
+          command -v bwrap
+          uv run python -m pytest -q tests/audit_suite/test_parser_sandbox.py::test_actual_isolated_pdf_xlsx_and_decoded_text
       - run: uv run python -m pytest -p tools.ci.shard --durations=20 --junitxml=test-results.xml
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         if: always()
