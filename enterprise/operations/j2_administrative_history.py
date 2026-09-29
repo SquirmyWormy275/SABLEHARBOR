@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 from copy import deepcopy
 from datetime import date, datetime
@@ -11,6 +10,7 @@ from pathlib import Path
 
 from .availability import apply, queryable, repository_context
 from .completed_period import make_roster
+from .historical_pins import verify as verify_source_pin
 
 ROOT = Path(__file__).resolve().parents[2]
 SOURCE = "enterprise/operations/source/j2_administrative_history_2026_09_22.json"
@@ -43,10 +43,7 @@ def validate(data, root=ROOT):
     require(data["repository_state"] == "PENDING_ACCEPTANCE", "Source cannot self-accept")
     require(set(data["source_hashes"]) == REQUIRED_SOURCES, "Source hash population incomplete")
     for path, expected in data["source_hashes"].items():
-        require(
-            hashlib.sha256((root / path).read_bytes()).hexdigest() == expected,
-            "Changed controlling source: " + path,
-        )
+        verify_source_pin(root, path, expected, failure="Changed controlling source: ")
     accepted = json.loads((root / "docs/structured/j2_leadership_2026-09-10.json").read_text())
     prior = {row["person_id"]: row for row in accepted["people"]}
     source = json.loads(

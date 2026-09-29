@@ -15,6 +15,7 @@ from enterprise.closeout import advisory_legal, debt_administration
 from enterprise.closeout import successor_records as previous
 from enterprise.operations import completed_period, j2_personnel_completion
 from enterprise.operations.availability import apply, repository_context
+from enterprise.operations.historical_pins import verify as verify_source_pin
 
 ROOT = previous.ROOT
 EXTENSION = ROOT / "enterprise/closeout/source/final_export_extension.json"
@@ -113,7 +114,7 @@ def collect(context=None):
         row_available = max(datetime.fromisoformat(available), datetime.fromisoformat(authored))
         row_available = row_available.astimezone(UTC).isoformat()
         for path, value in pins.items():
-            previous.require(previous.file_hash(path) == value, "Stale final source: " + path)
+            verify_source_pin(ROOT, path, value, failure="Stale final source: ")
         # Payloads carry their own known-on guard too; callers cannot bypass the
         # envelope by querying an earlier source availability embedded in JSON.
         payload = apply(payload, context)
