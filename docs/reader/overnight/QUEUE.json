@@ -520,6 +520,18 @@
           "scope": "Prospective local software-install source exercise for the CC6.8 missing-operation path",
           "validation": "Commit 408a54e1, isolated run receipt SHA-256 7b6044460e8a88dde9ec838e6ba6b243a1e38fa8576879cc27657552eee10da9, and independent read-only review SHA-256 86e446ac08cf393b5b0680a7e26eaa3df7d46cf5b8f611d547377cc7eb7399e9 verify 12 new native versions and 12 ordinary retained-byte collections from a separate private CompanyStore. The local rule evaluates exact inert digest, asset and simulated exception time; approval, deny, detection/response, scoped exception, retry, expiry denial and untested declared asset are retained. Five focused/collection regression tests and Ruff passed.",
           "limits": "A prospective fictional local exercise only: no executable was created/run, no deployed endpoint/Reno/Boise/provider operation, no accepted representative asset population, no 2027 period performance, no A/B company operation and no SH-CFG-002 CC6.8 task credit."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Selected 2027 company-native period close from exact existing operations",
+          "validation": "Independent native postreview SHA-256 c745638fb8386aa4865a088586e4e899de99ce9ad65616f70c94a15df131f7c3 verified two new company roots with A19/B21 version-one records, nine preserved input roots/65 files, and 36 due/33 observed/3 B missing occurrences. Observed is 25 completed backup/restore operations, 7 nonhuman native operations and 1 source-backed IAM007 Q3 assertion, not 33 executed operations. Fictional 2028 event/availability time is distinct from actual 2026 import time.",
+          "limits": "Five selected local partitions only; BCM002 B09, IAM006 Q4 and IAM007 Q4 remain missing in B. Six separate 2028 declarations/28 slots excluded. No audit collection by the producer, coherent enterprise year, approved recovery target, effectiveness or task credit."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Fresh ordinary audit collection of selected 2027 company-close records",
+          "validation": "Independent collection postreview SHA-256 822d77e84c64be040245b59f64d33e3d403856013d975b2bc9c5c77f18667dfe verified two zero-evidence new engagements at rev30/34, exact A19/B21 native/collection-receipt/retained-byte joins, PBC and temporary grant/revocation flow, preserved original new company roots and unchanged historical A1939/B2066 audits. Read-only 36-row downstream reconciliation SHA-256 688b35fa1a06f72581a37dcc62b654c1c83d83c05fdf7f4197d2ddbd65e7535c.",
+          "limits": "Forty artifacts are 36 occurrence records, including three negative documents of missing operations, plus four definition/reconciliation records. They do not constitute 40 performed operations, full-year depth, population completeness, task credit or a control conclusion."
         }
       ]
     },
@@ -619,19 +631,31 @@
           "date": "2026-09-29",
           "scope": "Actual A/B audit-workroom SH-POL-003 source-insufficiency gap observations",
           "validation": "After sealed proposal SHA-256 35391278dcaa0ab49d7f7bc45794b257ab0d6534f2ab7d1866fd0be535404357, verified non-reflink database backups and independent pre-execution review SHA-256 28d55119cb8c6147d630fa9418bd7f5bfe53401980e4880223dd0c8aaa1b3dc6, ordinary task.gap.record commands advanced original A1938 to A1939 and B2064 to B2065 sequentially. Independent A/B postreviews SHA-256 c2a667e74c073538e934747afe28f23665b4f397b285e51e4a7790fdaa599a75 and 5a399cd1c2bd47ddbcc382cb20cd9e5ebd3fb715d48e155d981462be70870773 verified one raw gap event each, unchanged task status/conclusion, 661/721 retained artifacts, 237 company source files and backup integrity.",
-          "acceptance": "The current originals now have OPEN/INSUFFICIENT_SOURCE SH-POL-003 annotations; both exact tasks remain NOT_STARTED/NOT_RUN. The indexed A1938/B2064 packet predates these commands. The gaps do not create company evidence, establish HIPAA applicability, perform the addressable-measure test or grant audit credit."
+          "acceptance": "The current originals now have OPEN/INSUFFICIENT_SOURCE SH-POL-003 annotations; both exact tasks remain NOT_STARTED/NOT_RUN. The historical A1938/B2064 packet predates these commands; the independently reviewed A1939/B2066 v3/v4 packet includes the observations. The gaps do not create company evidence, establish HIPAA applicability, perform the addressable-measure test or grant audit credit."
         },
         {
           "date": "2026-09-29",
           "scope": "Selected 2027 IAM007 Q4 missing-operation annotation in current B original",
           "validation": "The read-only selected-period screen separated B access-review-continuation-b REVIEW-Q4 from a collected Q4 successor in a different branch and found B09 backup/nonhuman Q4 already named in existing FAIL work. A sealed B-only proposal and verified non-reflink B2065 backup passed independent pre-execution review; one ordinary task.gap.record advanced B2065 to B2066. Independent postreview SHA-256 1252ab39a0389c6c0ae78c05209eabb32fcceacc241ed6ab7936712443913afa verified one raw event, unchanged IAM007 IN_PROGRESS/FAIL task, A1939, 721 retained artifacts, 237 company-source files and backup integrity.",
-          "acceptance": "One OPEN/MISSING_OPERATION observation covers only the selected B branch review slot. No B09/nonhuman duplicate gap, A-side gap, performed review, enterprise Q4 effectiveness conclusion, task credit or source mutation. The indexed A1938/B2064 packet remains historical; current originals are A1939/B2066."
+          "acceptance": "One OPEN/MISSING_OPERATION observation covers only the selected B branch review slot. No B09/nonhuman duplicate gap, A-side gap, performed review, enterprise Q4 effectiveness conclusion, task credit or source mutation. The A1938/B2064 packet remains historical; current originals and independently reviewed v3/v4 packet are A1939/B2066."
         },
         {
           "date": "2026-09-29",
           "scope": "Independently reviewed A1939/B2066 private reviewer packet with task-gap navigation",
           "validation": "Private successor packet manifest SHA-256 c618d3bbbb8c87d6a7a566518b51a71f5a95f9e15574da9acf42f2cdb48b40eb and independent REVIEW.json SHA-256 e750ba85d68f4d37a8d45b3df2abc145bfd6b59eb8cf1b9f2ea67506f4ba589d verify exact A1939/B2066 database/event tips, 818 task instances, three gap event/receipt joins, 16 separate findings, 1,382 retained artifact byte hashes, 112 receipt pins and 237 company source files. Separate offline browser review passed three gap-to-task links, cause search, mobile width and zero network/page errors; builder rejects optimized Python.",
           "acceptance": "The successor packet is a private static technical review snapshot. Gaps remain authored observations, not source evidence, task credit, HIPAA applicability, findings or professional conclusions. File distribution has no built-in identity gate; selected portfolio completeness, owner usability and qualified reviewer acceptance remain open."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Selected 2027 fresh close evidence and exact due-occurrence reconciliation",
+          "validation": "After independent native and collection postreviews SHA-256 c745638fb8386aa4865a088586e4e899de99ce9ad65616f70c94a15df131f7c3 and 822d77e84c64be040245b59f64d33e3d403856013d975b2bc9c5c77f18667dfe, read-only downstream report SHA-256 688b35fa1a06f72581a37dcc62b654c1c83d83c05fdf7f4197d2ddbd65e7535c joins each of 36 selected due rows to a native close version, ordinary receipt, fresh audit artifact and retained bytes, while comparing the historical A1938/B2064 register. The three B missing operations remain missing despite collected negative close records.",
+          "acceptance": "SH-POL-003 remains NOT_STARTED/NOT_RUN in both historical originals and B IAM007 Q4 remains IN_PROGRESS/FAIL with an OPEN/MISSING_OPERATION annotation. No blanket procedure credit, HIPAA applicability, independent full-population completeness, enterprise-year coverage or professional conclusion."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Latest private A1939/B2066 packet source-journal rebase",
+          "validation": "V4 packet manifest SHA-256 84bde92c34462710d596c802b5952d4c94c926a31a4e4a0090fc387186cb70a3 and final independent technical/browser PASS SHA-256 0a9b8b18096bf576ec555c86d13acb2d5cbbfc0f2588755c24770e55f5c7e291 verify four authorized source SQLite journal transitions across 60 roots, 1,528 unchanged native business versions, 237 unchanged non-SQLite files and core audit bytes unchanged from the reviewed v3 packet. The same 818 task rows, three authored gaps, 16 findings and 1,382 historical retained artifacts remain indexed.",
+          "acceptance": "Historical A1938/B2064 predates the gap commands; independently reviewed v3/v4 A1939/B2066 includes them. The rebase made no audit command, task/grade credit, company business operation or professional/owner acceptance; separate fresh close and paired engagements are not indexed into this packet."
         }
       ]
     },
@@ -683,6 +707,12 @@
           "scope": "Policy and persistent service-identity retained-original procedures",
           "status": "A8/B10 ordinary commands; two groups and seven item observations each",
           "acceptance": "Provisional local populations; two OPEN technical gaps in incomplete branch; originals, tasks, controls and reviews unchanged. Professional acceptance remains separate."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Actual fresh isolated Clean/Messy B2 technical journey from zero retained evidence",
+          "validation": "Independent postreview SHA-256 922b850c9539ab849c35b9578c5921ffd1daf6812d9e8ff6d7f067e226f70be8 verified separate copied native roots/new engagements, 31/32 ordinary native/retained joins, A/B rev90/63 event chains, eight inspections each and provisional population/selection/sample/workpaper records. Clean first B2 and retry completed; Messy first failed then retry completed with OPEN ticket. R1 older bytes differ from current and R2 bytes match in both. A had 22 historical PBC groups, four empty ACKNOWLEDGED; B had eight SUBMITTED groups.",
+          "acceptance": "Selected synthetic technical slice only; original source roots and historical audits unchanged. All applicable procedures, full-year operating depth, independent population completeness, qualified review, owner acceptance and task/grade credit remain open."
         }
       ]
     },
@@ -717,6 +747,12 @@
           "scope": "Finite closeout reconciliation",
           "status": "Consolidating existing technical evidence against exact acceptance; dependencies remain incomplete",
           "acceptance": "Prior READY was not acceptance readiness. Qualified review and owner usability decisions remain unrecorded; authorized engineering continues."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Latest A1939/B2066 private packet after original-root source-journal rebase",
+          "validation": "Packet manifest SHA-256 84bde92c34462710d596c802b5952d4c94c926a31a4e4a0090fc387186cb70a3 and final independent technical/browser PASS SHA-256 0a9b8b18096bf576ec555c86d13acb2d5cbbfc0f2588755c24770e55f5c7e291 preserve the reviewed v3 core: 112 receipt pins, 818 task instances, three gap observations, 16 findings and 1,382 retained artifact hashes, with 60 company roots and four authorized SQLite journal transitions rechecked.",
+          "acceptance": "Private static snapshot only; source rebase grants no audit credit. Fresh paired B2 and selected-2027 close engagements are separate outputs, not indexed A1939/B2066 rows. Offline file distribution lacks an identity gate; full scope, qualified review and owner usability acceptance remain open."
         }
       ]
     },
@@ -957,6 +993,24 @@
           "scope": "Isolated new-engagement six-check Key bind over selected clone-source collection",
           "validation": "Independent unbound-plan review SHA-256 8eb6264f7a35bc436900e8d05a1c13161ac970f0244c9979c56c9f69c0d6900a and bind postreview SHA-256 d5eaa206309640dd87439f9cb4f5a25764f83eff9932129f7111306777939067 verified 32 cloned native/retained source links, the B2 OPEN ticket, exact 21 temporary instructor grant/revoke pairs, post-revocation instructor comparison, learner 403, and unchanged B1095/original source pins.",
           "acceptance": "Private bound Key for distinct EID ENG-b4ae647a4ac35a18acba21a5 only. No active service mount, learner release, grade, professional validation, live-source/full-year sufficiency, qualified calibration or owner usability acceptance. Historical B1095 remains unchanged."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Original-root B2 ordinary collection and six-check private Key bind",
+          "validation": "Independent collection review SHA-256 8ef8a324056d12c1cc986c48fd8b6b59aae986ddd806ae1fb38b9aa66cce8600 verified EID ENG-31cb484132351ecbcde7c908 rev51, 32 original-source/receipt/retained links, eight PBC groups, 21 revoked collection grants and OPEN B2 ticket. Independent bind postreview SHA-256 e2cb538b46ae611455cc1e97bb757bb1cea4f80fbef5824175e4514e2b716471 verified 32 bound links/six checks, 21 later temporary instructor grant/revoke pairs, unchanged 57 native business versions/historical Key/workroom, post-revocation instructor comparison and learner 403.",
+          "acceptance": "Scoped original company access and collection journals changed; business bytes did not. This is a private synthetic local Key, not an active service, learner release, grade, audit conclusion, full-year sufficiency, qualified calibration or owner acceptance."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Fresh paired A/B six-check private Key bind following zero-evidence journey",
+          "validation": "Fresh paired journey independent PASS SHA-256 922b850c9539ab849c35b9578c5921ffd1daf6812d9e8ff6d7f067e226f70be8 and paired Key bind independent PASS SHA-256 f5486e0afbc50ca22ff3d9b3444ddedae0fa48b65c340980e585d8b6ad798b87 verify A/B rev90/63, 31/32 bound retained/native links, six checks per profile, B OPEN failure ticket linked, 18/21 temporary instructor grant/revoke pairs, instructor success and learner 403. Eight copied native SQLite access journals changed; no new business versions/collections, original fresh audit workrooms or historical A1939/B2066/source roots changed.",
+          "acceptance": "Private deterministic instructor link inventory, not a professional audit conclusion. No service mount, learner Key release, grading, task credit, full-year sufficiency, qualified realism/grading calibration or owner usability acceptance."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Instructor-only bound-Key preview without assessment, release or debrief writeback",
+          "validation": "CLI --disable-instructor-writeback leaves default writeback behavior unchanged but, when selected, creates no instructor assessment/release/debrief stores and returns 503 from their GET/POST routes. Final independent code review SHA-256 698e8a6f89093f2cdb488b1c40c9b81538a1f3bcc3a3da73c840440f056760b8 and exact paired A/B disposable route QA SHA-256 ae18053f77770293bab8cdf3372cacca6ec31f53935fb7baacb8689d327480c1 verify bound instructor comparison 200, learner and other real engagement denial 403, false writeback capabilities and no store directories. Nineteen focused tests, Ruff and diff check passed.",
+          "acceptance": "Private TestClient preview only, with no actual service mount, learner Key release, assessment/grade, task credit, professional calibration or owner acceptance. Disabled routes remain mounted but return 503 by the accepted local API contract."
         }
       ]
     },

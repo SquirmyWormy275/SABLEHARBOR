@@ -33,6 +33,11 @@ def main(argv=None):
     serve.add_argument("--company-profile")
     serve.add_argument("--instructor-key-root", type=Path)
     serve.add_argument("--instructor-bindings", type=Path)
+    serve.add_argument(
+        "--disable-instructor-writeback",
+        action="store_true",
+        help="Show bound instructor Keys without enabling assessments, releases, or debriefs",
+    )
     serve.add_argument("--background-jobs", action="store_true")
     serve.add_argument("--workspace-contexts", action="store_true")
     serve.add_argument("--corpus-root", type=Path)
@@ -145,6 +150,7 @@ def main(argv=None):
             company_profile=args.company_profile,
             instructor_key_root=args.instructor_key_root,
             instructor_bindings=args.instructor_bindings,
+            enable_instructor_writeback=not args.disable_instructor_writeback,
             background_jobs=args.background_jobs,
             workspace_contexts=args.workspace_contexts,
             corpus_root=args.corpus_root,

@@ -132,6 +132,7 @@ def create_app(
     company_profile: str | None = None,
     instructor_key_root: Path | None = None,
     instructor_bindings: Path | None = None,
+    enable_instructor_writeback: bool = True,
     background_jobs: bool = False,
     workspace_contexts: bool = False,
 ) -> FastAPI:
@@ -249,15 +250,16 @@ def create_app(
     releases = None
     assessments = None
     if protected_bindings:
-        from .instructor_assessments import InstructorAssessments
-        from .instructor_releases import InstructorReleases
+        if enable_instructor_writeback:
+            from .instructor_assessments import InstructorAssessments
+            from .instructor_releases import InstructorReleases
 
-        release_root = engine.store.root / "instructor-releases"
-        release_root.mkdir(mode=0o700, exist_ok=True)
-        releases = InstructorReleases(release_root, engine, protected_bindings)
-        assessment_root = engine.store.root / "instructor-assessments"
-        assessment_root.mkdir(mode=0o700, exist_ok=True)
-        assessments = InstructorAssessments(assessment_root, engine, protected_bindings)
+            release_root = engine.store.root / "instructor-releases"
+            release_root.mkdir(mode=0o700, exist_ok=True)
+            releases = InstructorReleases(release_root, engine, protected_bindings)
+            assessment_root = engine.store.root / "instructor-assessments"
+            assessment_root.mkdir(mode=0o700, exist_ok=True)
+            assessments = InstructorAssessments(assessment_root, engine, protected_bindings)
     app.state.instructor_releases = releases
     app.state.instructor_assessments = assessments
     key_views = None

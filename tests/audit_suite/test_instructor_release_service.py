@@ -118,3 +118,94 @@ def test_unconfigured_assistance_has_no_store(tmp_path):
     )
     assert client.get("/api/engagements/ENG-missing/assistance", headers=headers).status_code == 503
     assert not (app.state.engine.store.root / "instructor-releases").exists()
+
+
+def test_bound_instructor_preview_disables_writeback_without_disabling_key(tmp_path):
+    engine, args = base_workspace.__wrapped__(tmp_path)
+    engine.store.command(
+        args["instructor_id"],
+        args["engagement_id"],
+        {
+            "command_id": "preview-fixture-metadata",
+            "expected_revision": 0,
+            "kind": "fixture.metadata",
+            "payload": {},
+        },
+        lambda state, command, actor: {
+            **state,
+            "title": "Preview fixture",
+            "discipline": "COMPLIANCE",
+            "mode": "CLEAN",
+            "phase": "ACTIVE",
+        },
+        permissions={"instruct"},
+    )
+    config, receipt = configured(engine, args)
+    teacher = engine.store.provision("Preview instructor", ["instructor"])
+    learner = engine.store.provision("Preview learner", ["learner"])
+    engine.store.grant(args["engagement_id"], teacher["id"], "instruct")
+    engine.store.grant(args["engagement_id"], learner["id"], "learn")
+    app = create_app(
+        engine.store.root,
+        instructor_bindings=config,
+        enable_instructor_writeback=False,
+        allowed_hosts=["testserver"],
+    )
+    app.state.engine.company_bindings = engine.company_bindings
+    client = TestClient(app, base_url="https://testserver")
+    base = f"/api/engagements/{args['engagement_id']}"
+    th = {"Authorization": "Bearer " + teacher["credential"]}
+    lh = {"Authorization": "Bearer " + learner["credential"]}
+    bootstrap = client.get("/api/bootstrap", headers=th)
+    assert bootstrap.status_code == 200, bootstrap.text
+    capabilities = bootstrap.json()["capabilities"]
+    assert capabilities["bound_instructor_keys"] is True
+    assert capabilities["instructor_releases"] is False
+    assert capabilities["instructor_debriefs"] is False
+    assert capabilities["instructor_assessments"] is False
+    assert app.state.instructor_releases is None
+    assert app.state.instructor_assessments is None
+    assert not (engine.store.root / "instructor-releases").exists()
+    assert not (engine.store.root / "instructor-assessments").exists()
+    bound = client.get(base + "/instructor-binding", headers=th)
+    assert bound.status_code == 200
+    assert bound.json()["binding"]["manifest_sha256"] == receipt["manifest_sha256"]
+    comparison = client.get(base + "/instructor-comparison?revision=1", headers=th)
+    assert comparison.status_code == 200
+    assert comparison.json()["grading"] == "NOT_PERFORMED"
+    assert client.get(base + "/instructor-binding", headers=lh).status_code == 403
+    assert client.get(base + "/instructor-comparison?revision=1", headers=lh).status_code == 403
+    assert (
+        client.get("/api/engagements/ENG-foreign/instructor-binding", headers=th).status_code
+        == 403
+    )
+    assert (
+        client.get(
+            "/api/engagements/ENG-foreign/instructor-comparison?revision=0", headers=th
+        ).status_code
+        == 403
+    )
+    for path in (
+        "/instructor-releases",
+        "/instructor-releases/options",
+        "/instructor-releases/debrief-options",
+        "/assistance",
+        "/assistance/REL-test",
+        "/instructor-assessments",
+        "/instructor-assessments/options?revision=1",
+        "/instructor-assessments/ASM-test",
+    ):
+        assert client.get(base + path, headers=th).status_code == 503
+    for path in (
+        "/instructor-releases/preview",
+        "/instructor-releases/debrief-preview",
+        "/instructor-releases",
+        "/instructor-releases/REL-test/revoke",
+        "/assistance/REL-test/acknowledge",
+        "/assistance/REL-test/export-preview",
+        "/assistance/REL-test/export",
+        "/instructor-assessments",
+    ):
+        assert client.post(base + path, headers=th, json={}).status_code == 503
+    assert not (engine.store.root / "instructor-releases").exists()
+    assert not (engine.store.root / "instructor-assessments").exists()

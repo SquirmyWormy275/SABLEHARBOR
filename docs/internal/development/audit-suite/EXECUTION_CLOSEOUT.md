@@ -1,14 +1,21 @@
 # Audit-suite execution closeout
 
 The latest indexed private review packet is
-`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-refresh-run-post-gaps-a1939-b2066-v3/`
-at A revision 1939 and B revision 2066. Independent review
-(`REVIEW.json` SHA-256 `e750ba85d68f4d37a8d45b3df2abc145bfd6b59eb8cf1b9f2ea67506f4ba589d`)
-verified 112 receipt pins, all 818 task instances, linked workpapers and sample
-traces, 16 recorded findings, three learner-visible authored gaps, 1,382 retained
-artifact hashes and 237 company source files. Its offline browser check passed
-the three gap-to-task links, cause search, mobile layout and no-HTTP assertions.
-This is a versioned technical snapshot, not an accepted full-scope audit. The
+`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-refresh-run-post-original-journals-a1939-b2066-v4/`
+at A revision 1939 and B revision 2066. Its [final independent technical and
+browser review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-refresh-run-post-original-journals-a1939-b2066-v4-independent-v1/FINAL-REVIEW.json)
+(SHA-256 `0a9b8b18096bf576ec555c86d13acb2d5cbbfc0f2588755c24770e55f5c7e291`)
+verified the source-journal rebase after authorized original-root B2 collection
+and Key binding. The core audit packet remains byte-identical to the prior
+[independently reviewed v3](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-refresh-run-post-gaps-a1939-b2066-v3-independent-v1/REVIEW.json)
+(SHA-256 `e750ba85d68f4d37a8d45b3df2abc145bfd6b59eb8cf1b9f2ea67506f4ba589d`):
+112 receipt pins, all 818 task instances, linked workpapers and sample traces,
+16 recorded findings, three learner-visible authored gaps and 1,382 retained
+artifact hashes. V4 rechecked 60 company source roots, four authorized SQLite
+journal transitions, 1,528 unchanged native business versions and 237 unchanged
+non-SQLite source files. Its offline browser check passed; private file
+distribution has no built-in identity gate. This is a versioned technical
+snapshot, not an accepted full-scope audit. The
 A1938/B2064 indexed packet remains frozen and independently reviewed; the prior
 `integrated-review-packet-refresh-run-actual-v1/` at A1934/B2060 remains an
 unchanged historical packet with 90 pinned receipts. The earlier
@@ -122,8 +129,8 @@ intents, original hashes, failures and verification receipts.
 | Procedure reconciliation — AQ-06/AQ-07 | Ordinary `task.update` supports attributed status, conclusion and rationale; [scope reconciliation](../../../../enterprise/audit_suite/scope_reconciliation.py) preserves prior work when scope changes. These mechanisms do not perform the authored tests. | Account for every scoped task and conditional duty against exact originals, workpapers, population units and performed checks. Execute supportable remaining clauses and record limitations or unperformed steps. Retain per-task dispositions and exact ordinary-command references; no blanket PASS or automatic N/A. |
 | Recorded inspections — IK-04/UX-02 | [Explicit inspection records](RECORDED_INSPECTIONS.md), API/UI submission and historical actor/payload linkage are implemented. [Focused tests](../../../../tests/audit_suite/test_artifact_inspection.py) cover immutable records, rejected inputs, exact retries and historical comparison. | Reuse those records in the selected paired case and acceptance index. Preserve missing historical assertions as unknown; do not backfill a claimed inspection from a download or treat an assertion as proof of understanding, adequate testing or a conclusion. |
 | Combined paired journey — AQ-07/IK-06/UX-10/CX-05 | The [paired technical journey](COMPANY_SOURCE_IMPLEMENTATION.md#paired-integration-and-substantive-reconciliation) already exercises collection, inspection, sampling, partial conclusions, separate review, restored work, handoff, assessment and debrief. | Reconcile the existing case matrix and stage receipts to the full queued scenarios, including alternative investigations and corrected/missing support. Retain measured interaction burden, exports and access/context checks; fix reproduced defects. Scripted coverage does not supply qualified calibration or actual owner feedback. |
-| Company-period reconciliation — AQ-04/AQ-06 | The [declared operating-period ledger](AQ_SHARED_OPERATING_PERIOD_LEDGER_2026-09-14.md) and [source inventory](AQ_SOURCE_READINESS_INVENTORY_2026-09-14.md) distinguish declared denominators from observed records. The independently reviewed [selected local 2027 register](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/company-period-reconciliation-2027-selected-v3/REGISTER.md) accounts for 36 due, 33 observed and three missing occurrences across distinct IAM007, backup/restore and nonhuman branch schedules. All 33 observed slots join exact ordinary collections of 35 selected native occurrence records; 28 slots in six separate 2028 declarations are excluded. | Keep the three missing occurrences visible. Expand only through exact company-owned operations and declared denominators, then independently assess source populations, period coherence, approvals and control effectiveness. The selected register does not establish a complete company year. |
-| Acceptance packet — AQ-08 | The new A1938/B2064 private packet indexes CC3.1 and CC9.1 limits, 106 pinned receipts, 818 task rows and 16 findings. Independent BASIS and output review plus offline browser checks covered task/work/finding rows, retained audit artifact bytes, receipt pins, filters, keyboard navigation and narrow layout. It remains an immutable snapshot. | Reconcile the indexed technical results with the full queued scope, source ownership, migration/recovery, paired behavior and unresolved decisions. Record qualified substantive review and actual owner usability acceptance separately; the packet does not supply either. |
+| Company-period reconciliation — AQ-04/AQ-06 | The [declared operating-period ledger](AQ_SHARED_OPERATING_PERIOD_LEDGER_2026-09-14.md) and [source inventory](AQ_SOURCE_READINESS_INVENTORY_2026-09-14.md) distinguish declared denominators from observed records. The independently reviewed [historical selected 2027 register](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/company-period-reconciliation-2027-selected-v3/REGISTER.md) accounts for 36 due, 33 observed and three missing occurrences across distinct IAM007, backup/restore and nonhuman branch schedules. All 33 observed slots join exact ordinary collections of 35 selected native occurrence records; 28 slots in six separate 2028 declarations are excluded. A later [company-native close](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/selected-2027-company-period-close-native-postreview-independent-v6/REVIEW.json) emitted A19/B21 source versions, and [fresh ordinary collection](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/selected-2027-period-close-fresh-collection-independent-postreview-v1/REVIEW.json) retained all 40 close records in new engagements. A [read-only downstream join](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/selected-2027-period-close-downstream-reconciliation-v1/RECONCILIATION.json) kept the three missing operations explicit. | The 40 close artifacts include 36 occurrence records, of which three document missing operations, plus four definition/reconciliation records. They do not mean 40 completed operations. Expand only through exact company-owned operations and declared denominators, then independently assess source populations, period coherence, approvals and control effectiveness. The selected work does not establish a complete company year. |
+| Acceptance packet — AQ-08 | The latest A1939/B2066 private v4 packet indexes 112 pinned receipts, 818 task rows, three authored gaps and 16 findings. Independent v3 core and v4 source-journal/browser reviews covered task/work/finding rows, retained audit artifact bytes, company journal changes, filters, keyboard navigation and narrow layout. It remains an immutable snapshot; the separately reviewed fresh paired and period-close engagements are outside it. | Reconcile the indexed technical results with the full queued scope, source ownership, migration/recovery, paired behavior and unresolved decisions. Record qualified substantive review and actual owner usability acceptance separately; the packet does not supply either. |
 
 The selected 2027 register is an author read-only artifact (manifest SHA-256
 `fac3fb11a124d2f766e84eee24c2727c344e718a24269a47b3701f89e4856b1f`),
@@ -201,8 +208,9 @@ task-linked retest workpaper version. Successors retain the earlier gap, and
 learner projections hide gaps tied to instructor-only artifacts. The backend
 focused suite, 261 frontend tests, build and two browser journeys passed. This
 is an attributed observation path, not automatic evidence, a conclusion or
-professional clearance. The indexed A1938/B2064 packet predates the later
-task-gap commands and remains a frozen historical snapshot.
+professional clearance. The historical A1938/B2064 packet predates the later
+task-gap commands; the independently reviewed A1939/B2066 v3 and v4 packets
+include the three subsequent authored observations.
 
 A separate [disposable retrospective rehearsal](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-pol003-retrospective-task-gap-disposable-v1/MANIFEST.json)
 (manifest SHA-256 `5ceddc78841f3092f7b32a88753d00c85e96789ed14efeeff15445dff58eb783`)
@@ -230,8 +238,9 @@ SH-POL-003 task remains `NOT_STARTED/NOT_RUN`. Independent raw-event checks
 found only revision, event and gap state changes. Both backups passed integrity
 and hash checks, and all 661/721 retained artifacts and 237 company-source
 files remained unchanged. No source was mounted or operated by the gap commands,
-and no HIPAA applicability or procedure credit was inferred. The indexed packet
-has not yet been refreshed to these later revisions.
+and no HIPAA applicability or procedure credit was inferred. The independently
+reviewed A1939/B2066 v3 packet includes these two observations; v4 preserves
+that audit content while re-pinning later authorized company access journals.
 
 The selected 2027 due-occurrence reconciliation then distinguished three
 genuine B-side omissions. The B09 backup and nonhuman Q4 review already appear
@@ -246,8 +255,8 @@ verified the single event, unchanged `IN_PROGRESS/FAIL` task, intact non-reflink
 backup, 721 retained artifacts and 237 company-source pins; A remained at
 1939. This is one selected fictional branch's missing operation, not an
 enterprise Q4 effectiveness conclusion or additional audit credit. The current
-original workrooms are A1939/B2066; the latest indexed packet still predates
-both gap additions.
+original workrooms are A1939/B2066; the independently reviewed v3 and v4
+packets include this B gap and the two SH-POL-003 gaps.
 
 Two user-interface corrections are committed: the offline private reviewer ZIP
 now links its included native files (`83ed1467`), and the active workspace rail
@@ -312,12 +321,96 @@ output: no active service mount, learner release, grade, professional validation
 live-source claim or full-year sufficiency follows. Bind-time learner denial
 does not imply the same source was inaccessible during historical collection.
 
+A separate original-root B2 path used four local company source roots in a new
+engagement `ENG-31cb484132351ecbcde7c908`. Its [independent collection
+postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-original-root-collection-run-v2-independent-v1/REVIEW.json)
+(SHA-256 `8ef8a324056d12c1cc986c48fd8b6b59aae986ddd806ae1fb38b9aa66cce8600`)
+verified 32 original-source/ordinary-receipt/retained-byte links, eight PBC
+groups, 21 collection-time grant/revoke pairs, the OPEN B2 failure ticket and
+an unbound six-check plan at audit revision 51. A later private
+[Key bind](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-original-root-key-bind-independent-postreview-v4/REVIEW.json)
+(independent postreview SHA-256
+`e2cb538b46ae611455cc1e97bb757bb1cea4f80fbef5824175e4514e2b716471`)
+bound those 32 links and six checks, then revoked 21 temporary instructor
+grants. Instructor comparison succeeded after revocation; learner comparison
+returned 403. The authorized original company access/collection journals
+changed, while 57 native business versions, the historical B1095 Key and the
+original audit workroom were preserved. The earlier failed bind attempt is
+retained separately. This is a synthetic local, private Key binding: no active
+service mount, learner release, grade, professional validation or full-year
+effectiveness follows.
+
+An actual [fresh paired B2 journey](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-paired-fresh-journey-run-v1-independent-postreview-v1/REVIEW.json)
+(independent postreview SHA-256
+`922b850c9539ab849c35b9578c5921ffd1daf6812d9e8ff6d7f067e226f70be8`)
+started two distinct private A/B engagements with no retained audit evidence,
+then ordinarily collected 31/32 selected native versions from separate copied
+company roots. At A/B revisions 90/63, both retained eight inspections and
+provisional population, selection, sample and workpaper records. Clean B2's
+first attempt and retry completed; Messy B2's first attempt failed, its retry
+completed and the failure ticket remained OPEN. R1's older bytes differed
+from current bytes in both branches; R2's matched. The historical PBC flows
+are different: A has 22 groups, four empty ACKNOWLEDGED, while B has eight
+SUBMITTED groups. A subsequent [paired private Key bind](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-paired-fresh-private-key-bind-run-v2-independent-postreview-v1/REVIEW.json)
+(independent postreview SHA-256
+`f5486e0afbc50ca22ff3d9b3444ddedae0fa48b65c340980e585d8b6ad798b87`)
+bound six checks per profile to the 31/32 retained source links; Messy's B2
+Key links the OPEN ticket. Eighteen A and 21 B instructor grant/revoke pairs
+changed only the copied company access journals. Instructor comparisons
+succeeded, learner comparisons returned 403, and the original fresh audit
+workrooms, original source roots and historical A1939/B2066 audits remained
+unchanged. These selected, isolated technical journeys grant no task/grade
+credit, audit conclusion, professional calibration, owner acceptance, learner
+release or active service mount.
+
+The workroom now supports an instructor-only private preview through
+`serve --disable-instructor-writeback`; the default release and assessment
+behavior remains unchanged. With this switch, no assessment, release or
+debrief store is created, their routes return 503, and the bound Key and
+instructor comparison remain available. [Independent code review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-paired-fresh-private-preview-independent-review-v2/REVIEW.json)
+(SHA-256 `698e8a6f89093f2cdb488b1c40c9b81538a1f3bcc3a3da73c840440f056760b8`)
+and exact [A/B disposable route QA](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-paired-fresh-private-preview-route-qa-v5/RECEIPT.json)
+(SHA-256 `ae18053f77770293bab8cdf3372cacca6ec31f53935fb7baacb8689d327480c1`)
+verified instructor comparison 200, learner and other-engagement denial 403,
+and disabled assessment/release/debrief routes 503. Nineteen focused tests,
+Ruff and diff checks passed. This used private TestClient copies: no actual
+service mount, learner Key release, assessment, grade or professional review.
+
+The selected 2027 company period was then closed into two new native source
+roots with A19/B21 version-one records. [Independent native postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/selected-2027-company-period-close-native-postreview-independent-v6/REVIEW.json)
+(SHA-256 `c745638fb8386aa4865a088586e4e899de99ce9ad65616f70c94a15df131f7c3`)
+verified 36 selected due occurrences, 33 observed and three genuinely missing
+in B: BCM002 B09, IAM006 Q4 and IAM007 Q4. The observed set comprises 25
+completed backup/restore operations, seven nonhuman native operations and one
+source-backed IAM007 Q3 assertion, not 33 performed native operations. Its
+fictional January 2028 source time is distinct from the actual September 2026
+import time. This producer created no audit evidence or task credit.
+
+Two fresh zero-evidence audit engagements then collected all 40 close records
+through ordinary PBC, temporary source grants and `company.collect` commands.
+[Independent collection postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/selected-2027-period-close-fresh-collection-independent-postreview-v1/REVIEW.json)
+(SHA-256 `822d77e84c64be040245b59f64d33e3d403856013d975b2bc9c5c77f18667dfe`)
+verified exact A19/B21 native/receipt/retained-byte joins at fresh revisions
+30/34, with all grants revoked and historical A1939/B2066 audits unchanged.
+The [read-only downstream reconciliation](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/selected-2027-period-close-downstream-reconciliation-v1/RECONCILIATION.json)
+(SHA-256 `688b35fa1a06f72581a37dcc62b654c1c83d83c05fdf7f4197d2ddbd65e7535c`)
+joins each selected due row to its close record and retained artifact, compares
+the frozen historical A1938/B2064 register and preserves the three missing
+operations. The 40 collected records include 36 occurrence documents (three
+negative missing-operation records) and four definition/reconciliation
+bookends; they do not establish 40 completed operations, a complete year or
+control effectiveness. The six separate 2028 declarations and 28 slots
+remain excluded.
+
 The queue's job `state`, acceptance criteria and attributed checkpoints must be read
 together. Historical `*_scope_update` entries record what was authorized at the time;
 their `QUEUED_NOT_STARTED` labels do not reset later job progress. Conversely, a
 working command, passing fixture or earlier paired journey does not close a broader
 acceptance criterion. The counts above describe named historical checkpoints, not a
-live query. The current packet pins A1939/B2066 and cannot include later commands.
+live query. The latest independently reviewed v4 packet pins A1939/B2066 and
+authorized original-root company journal snapshots. The fresh paired B2 and
+selected-period close engagements above are separate private outputs, not
+additional indexed audit rows in that packet.
 
 ## Supported simulated conclusions
 
