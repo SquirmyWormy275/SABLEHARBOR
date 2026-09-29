@@ -31,9 +31,12 @@ def test_material_source_meaning_and_exact_bytes():
         for path in review.FINDINGS
     )
     for path in review.FINDINGS:
+        accepted_bytes = subprocess.check_output(
+            ["git", "show", f"{review.THROUGH}:{path}"], cwd=review.ROOT
+        )
         assert (
             rows[path]["through_sha256"]
-            == hashlib.sha256((review.ROOT / path).read_bytes()).hexdigest()
+            == hashlib.sha256(accepted_bytes).hexdigest()
         )
     assert (
         "40 total route-miles"
