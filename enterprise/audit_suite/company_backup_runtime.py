@@ -34,6 +34,8 @@ SYSTEMS = (
     "backup_object",
     "restore_job",
     "restored_dataset",
+    "restore_use_contract",
+    "restore_use_probe",
     "failure_ticket",
 )
 
@@ -329,6 +331,7 @@ def initialize(
     pins = dict(org["source_sha256"])
     for relative in (
         "enterprise/audit_suite/company_backup_runtime.py",
+        "enterprise/audit_suite/company_backup_use_probe.py",
         "enterprise/audit_suite/company_store.py",
         "enterprise/audit_suite/company_operating_period.py",
         "enterprise/audit_suite/inference.py",

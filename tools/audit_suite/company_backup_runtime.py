@@ -9,6 +9,7 @@ from pathlib import Path
 
 from enterprise.audit_suite import company_backup_monitor as monitor
 from enterprise.audit_suite import company_backup_runtime as backup
+from enterprise.audit_suite import company_backup_use_probe as use_probe
 from enterprise.audit_suite.operating_source_bridge import encoded, sha
 from enterprise.audit_suite.store import DomainError
 from tools.audit_suite.company_operating_period import new_destination
@@ -39,6 +40,14 @@ FIELDS = {
             "rationale",
         },
         {"prior_attempt_pin"},
+    ),
+    "USE_CONTRACT": (
+        {"occurrence_id", "source_pin", "reader", "rationale", "event_at"},
+        {"previous_pin"},
+    ),
+    "USE_PROBE": (
+        {"contract_pin", "restore_job_pin", "restored_dataset_pin", "event_at"},
+        set(),
     ),
 }
 
@@ -165,6 +174,8 @@ def operate(runtime, action_path, output):
         "LEASE": backup.record_lease,
         "BACKUP": backup.run_backup,
         "RESTORE": backup.run_restore,
+        "USE_CONTRACT": use_probe.record_use_contract,
+        "USE_PROBE": use_probe.run_restore_use_probe,
     }[kind]
     result = method(runtime, **parameters)
     try:

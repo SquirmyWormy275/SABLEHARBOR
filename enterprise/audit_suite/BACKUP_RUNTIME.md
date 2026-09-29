@@ -30,6 +30,8 @@ Every mutation takes `runtime`, `expected_runtime_sha256`, `expected_revision` a
 - `record_lease(..., operation, enabled: bool, valid_from, expires_at, event_at, previous_pin=None)` records local adapter permission for BACKUP_WRITE or RESTORE_READ. The half-open validity window and latest available lease are enforced by the adapter. These are local synthetic leases, not cloud credentials or physical isolation controls.
 - `run_backup(..., occurrence_id, source_pin, lease_pin, attempted_at, rationale, prior_attempt_pin=None)` executes the chosen declared occurrence. The source must be the latest available exact dataset version at that instant.
 - `run_restore(..., occurrence_id, backup_pin, comparison_source_pin, lease_pin, attempted_at, rationale, prior_attempt_pin=None)` restores an explicitly selected historical backup. The comparison source must be the explicitly pinned current dataset at the operation instant. Selection rationale is operator supplied; no risk or criticality rationale is generated.
+- `record_use_contract(..., occurrence_id, source_pin, reader, rationale, event_at, previous_pin=None)` records a versioned prospective local expectation for one declared restore slot. A reader selects one JSON object field or one field of a named JSON record and compares it with a bounded scalar. The operator and separate review contact come from the pinned runtime assignment; recording the contact is not approval.
+- `run_restore_use_probe(..., contract_pin, restore_job_pin, restored_dataset_pin, event_at)` rereads the actual persisted restored copy, parses it through that exact reader, and records a native pass or fail. The contract must predate the restore, and the restore job, restored dataset, and comparison source must match exact native pins. A failed parsed comparison remains a failed observation; tampered copy bytes or mismatched pins fail closed without a probe row.
 
 A native pin is exactly `{company, branch, system, record, version, sha256}`. Returned receipts identify new dataset/lease/job/object pins and the new runtime revision. Prior-attempt pins preserve correction lineage. Changing an input, revision, timestamp or rationale under an existing command ID is rejected; exact replay returns its historical receipt without rerunning the copy.
 
@@ -125,3 +127,10 @@ labels this `RETAINED_ADMISSION_PRODUCER_CHECKPOINT_NOT_FRESH_UPSTREAM_READ` and
 returns the producer pin; it does not claim to have reopened the upstream store.
 Malformed admission metadata fails closed. Re-admitting old bytes therefore
 cannot reset their age or make a stale checkpoint satisfy the local criterion.
+
+## Prospective parsed restore-use probes
+
+`restore_use_contract` and `restore_use_probe` are ordinary collectable native systems in newly initialized backup runtimes. The operator CLI action kinds are `USE_CONTRACT` and `USE_PROBE`. Exact command replay returns the prior receipt without re-reading or adding a version. Both records retain the operator, distinct operating review contact, `review_performed: false`, and `LOCAL_PARSED_RESTORE_USE_PROBE_NOT_APPLICATION_OR_BIA_ACCEPTANCE`. A matching JSON field is a bounded local parsed-read observation; it does not establish application function, BIA/RPO/RTO acceptance, actual ePHI usability, or qualified review.
+These native rows carry the backup-control provenance; they do not automatically satisfy the SH-POL-001 HIPAA task or create its audit route hint, which still requires separate scoped collection, mapping, and substantive review.
+
+There is no accepted expected-use contract for the existing `CONFIG-BYTES` reference recovery source. Its historical restore jobs and audit workrooms remain untouched. A new prospective contract and separate source-root execution are prerequisites before that scenario can produce a restore-use probe.
