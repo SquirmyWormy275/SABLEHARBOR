@@ -747,6 +747,10 @@ Generated file inventory. Includes current and historical records; open the sour
 - [False start 3 — Salt Rim and the expert-deference failure — SH-PS-FS-003_v1.0.0](../../../industrial/publications/SH-PS-FS-003_v1.0.0.pdf) — PDF
 - [Uranium thread: the original Problem Book — SH-PS-JO-001_v1.0.0](../../../industrial/publications/SH-PS-JO-001_v1.0.0.pdf) — PDF
 
+## `industrial/successors/rail_2026_09_29`
+
+- [September 29 railway operating-source successor](../../../industrial/successors/rail_2026_09_29/README.md) — MD
+
 ## `industrial/transaction`
 
 - [Red Wash acquisition — transaction and authority file](../../../industrial/transaction/01_RW_TRANSACTION_FILE.md) — MD · [formatted PDF](../../../industrial/publications/SH-IND-RW-TXN-001_v1.0.0.pdf)

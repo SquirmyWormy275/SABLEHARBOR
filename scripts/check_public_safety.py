@@ -10,12 +10,12 @@ FORBIDDEN = ("ghp_", "github_pat_", "sk-proj-", "BEGIN PRIVATE KEY")
 MAX_BYTES = 10 * 1024 * 1024
 ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # Tracked convenience catalog retained by GENERATED_RECORDS_LIFECYCLE.md.
-    # September 29 reader-index successor covers the August portal handoff and
-    # current legal/geospatial source guides; prior exact bytes remain in Git history.
+    # September 29 reader-index successor includes the accepted portal-period
+    # handoff and both rail source/sensitivity receipts; prior bytes remain in Git.
     # Exact bytes only: no general allowance for new databases or later drift.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        12437504,
-        "f478e88263350ffce835526d17d6aa3965d95ced0230084a1326a50cf62e5d8e",
+        12464128,
+        "9494403db644b76a6f4265a309b296d6f63dd297439f0858c24cee81302ac048",
     ),
     # Reviewed September 10 successor: six approved J2 names, unchanged public scope.
     Path("docs/organization/assets/current/Sable-Harbor-Organization-Charts.pdf"): (
