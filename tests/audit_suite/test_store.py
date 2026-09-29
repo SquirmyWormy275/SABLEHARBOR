@@ -30,6 +30,43 @@ def reduce(state, command, actor):
     return {**state, "note": command["payload"]["text"], "note_actor": actor}
 
 
+def test_connect_context_commits_or_rolls_back_and_always_closes(tmp_path):
+    store = Store(tmp_path / "private")
+    with store.connect() as committed:
+        committed.execute("CREATE TABLE lifetime_probe (value INTEGER)")
+        committed.execute("INSERT INTO lifetime_probe VALUES (1)")
+    with pytest.raises(sqlite3.ProgrammingError, match="closed"):
+        committed.execute("SELECT 1")
+
+    with pytest.raises(RuntimeError, match="rollback"):
+        with store.connect() as rolled_back:
+            rolled_back.execute("INSERT INTO lifetime_probe VALUES (2)")
+            raise RuntimeError("rollback")
+    with pytest.raises(sqlite3.ProgrammingError, match="closed"):
+        rolled_back.execute("SELECT 1")
+
+    with store.connect() as check:
+        assert [row["value"] for row in check.execute("SELECT value FROM lifetime_probe")] == [1]
+
+
+def test_connect_context_releases_wal_and_shm_on_final_close(tmp_path):
+    store = Store(tmp_path / "private")
+    wal = store.db_path.with_name(store.db_path.name + "-wal")
+    shm = store.db_path.with_name(store.db_path.name + "-shm")
+
+    with store.connect() as db:
+        assert db.execute("PRAGMA journal_mode").fetchone()[0] == "wal"
+        db.execute("CREATE TABLE wal_probe (value INTEGER)")
+        db.execute("INSERT INTO wal_probe VALUES (1)")
+        assert wal.is_file() and shm.is_file()
+
+    with pytest.raises(sqlite3.ProgrammingError, match="closed"):
+        db.execute("SELECT 1")
+    assert not wal.exists() and not shm.exists()
+    with store.connect() as check:
+        assert check.execute("SELECT value FROM wal_probe").fetchone()[0] == 1
+
+
 def test_isolation_revocation_and_csrf(context):
     store, a, b, state = context
     assert store.listing(b["id"]) == []
