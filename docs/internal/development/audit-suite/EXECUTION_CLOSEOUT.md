@@ -1,13 +1,15 @@
 # Audit-suite execution closeout
 
 The latest indexed private review packet is
-`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-refresh-run-actual-v1/`
-at A revision 1934 and B revision 2060. Its frozen basis pins 90 receipts and
+`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-refresh-run-post-cc91-actual-v1/`
+at A revision 1938 and B revision 2064. Its independently checked basis pins 106 receipts and
 indexes all 818 task instances, linked workpapers and sample traces, and 16
 recorded findings. The local read-only refresh and independent output review
 passed. A separate offline browser check passed exact-data, filter, keyboard,
 desktop/narrow-layout and no-HTTP checks. This is a versioned technical
-snapshot, not an accepted full-scope audit. The earlier
+snapshot, not an accepted full-scope audit. The prior
+`integrated-review-packet-refresh-run-actual-v1/` at A1934/B2060 remains an
+unchanged historical packet with 90 pinned receipts. The earlier
 `integrated-review-packet-final-v1/` at A revision 1810/B revision 1936 passed
 independent packet and offline browser checks; its 68 pinned inputs and the
 preceding screenshot-timeout failure remain historical. The 12 most recent
@@ -50,7 +52,7 @@ receipts, independent raw-event verification and final proof review matched the
 four exact transitions and found all 60 company source roots unchanged. The two
 CC3.1 tasks are now `IN_PROGRESS/LIMITATION`: accepted service-commitment linkage
 and the authored vague-objective challenge remain unperformed. The indexed
-A1934/B2060 packet predates these four commands.
+A1934/B2060 packet predates these four commands; the A1938/B2064 packet includes them.
 
 A subsequent CC9.1 dependency and continuity examination added one bounded
 `LIMITATION` workpaper and one task note in each original workroom, advancing A
@@ -65,7 +67,8 @@ they do not grant CC9.1 audit credit. The proof is retained privately in
 `additional-duty-dependency-continuity-cc91-actual-proof-independent-v1/`
 (`REVIEW.json` SHA-256
 `327a9811450b0815b32f3455b1afa83b99f2c1f860f7c6689c662b51d32bd2d0`).
-The indexed A1934/B2060 packet also predates these four commands.
+The indexed A1938/B2064 packet includes these four commands and their bounded
+limits; the prior A1934/B2060 packet predates them.
 
 In the earlier A1810/B1936 packet, per workroom, 79 tasks are `COMPLETE`, 132 are
 `IN_PROGRESS`, and 198 remain `NOT_STARTED`. The first three verified later batches
@@ -118,14 +121,14 @@ intents, original hashes, failures and verification receipts.
 | Recorded inspections — IK-04/UX-02 | [Explicit inspection records](RECORDED_INSPECTIONS.md), API/UI submission and historical actor/payload linkage are implemented. [Focused tests](../../../../tests/audit_suite/test_artifact_inspection.py) cover immutable records, rejected inputs, exact retries and historical comparison. | Reuse those records in the selected paired case and acceptance index. Preserve missing historical assertions as unknown; do not backfill a claimed inspection from a download or treat an assertion as proof of understanding, adequate testing or a conclusion. |
 | Combined paired journey — AQ-07/IK-06/UX-10/CX-05 | The [paired technical journey](COMPANY_SOURCE_IMPLEMENTATION.md#paired-integration-and-substantive-reconciliation) already exercises collection, inspection, sampling, partial conclusions, separate review, restored work, handoff, assessment and debrief. | Reconcile the existing case matrix and stage receipts to the full queued scenarios, including alternative investigations and corrected/missing support. Retain measured interaction burden, exports and access/context checks; fix reproduced defects. Scripted coverage does not supply qualified calibration or actual owner feedback. |
 | Company-period reconciliation — AQ-04/AQ-06 | The [declared operating-period ledger](AQ_SHARED_OPERATING_PERIOD_LEDGER_2026-09-14.md) and [source inventory](AQ_SOURCE_READINESS_INVENTORY_2026-09-14.md) distinguish declared denominators from observed records. | Refresh the source/period register from completed operations first. Run additional declared fictional operations only for an exact procedural need. Account for due/observed/missing/excluded occurrences, native history and ordinary collection; do not infer a complete period from observed runs or fabricate audit-only evidence. |
-| Acceptance packet — AQ-08 | A new A1934/B2060 private packet now indexes later verified work. Independent output and offline browser checks covered current task/work/finding rows, retained audit artifact bytes, pinned receipts and limits, filters, keyboard navigation and narrow layout. It remains an immutable snapshot. | Reconcile the indexed technical results with the full queued scope, source ownership, migration/recovery, paired behavior and unresolved decisions. Record qualified substantive review and actual owner usability acceptance separately; the packet does not supply either. |
+| Acceptance packet — AQ-08 | The new A1938/B2064 private packet indexes CC3.1 and CC9.1 limits, 106 pinned receipts, 818 task rows and 16 findings. Independent BASIS and output review plus offline browser checks covered task/work/finding rows, retained audit artifact bytes, receipt pins, filters, keyboard navigation and narrow layout. It remains an immutable snapshot. | Reconcile the indexed technical results with the full queued scope, source ownership, migration/recovery, paired behavior and unresolved decisions. Record qualified substantive review and actual owner usability acceptance separately; the packet does not supply either. |
 
 The queue's job `state`, acceptance criteria and attributed checkpoints must be read
 together. Historical `*_scope_update` entries record what was authorized at the time;
 their `QUEUED_NOT_STARTED` labels do not reset later job progress. Conversely, a
 working command, passing fixture or earlier paired journey does not close a broader
 acceptance criterion. The counts above describe named historical checkpoints, not a
-live query. The refreshed packet pins A1934/B2060 and cannot include later commands.
+live query. The current packet pins A1938/B2064 and cannot include later commands.
 
 ## Supported simulated conclusions
 
@@ -161,7 +164,7 @@ authorize publication, deployment, a real assurance opinion or writes to Atlas.
 ## Private review index
 
 The latest consolidated indexed review snapshot is
-`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-refresh-run-actual-v1/`.
+`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-refresh-run-post-cc91-actual-v1/`.
 Its `INDEX.md` links the task register, unchanged queue acceptance criteria and
 hashed supporting receipts. `PROCEDURES.html` provides offline search, workroom,
 status and procedure filters, pagination and exact workpaper/sample version
@@ -178,20 +181,30 @@ performed work. Later task-only revisions may reuse a historical source inventor
 only after exact artifact metadata comparison; neither inventory revisions nor
 prior audit conclusions are rewritten.
 
-The earlier `integrated-review-packet-v3/` remains a historical snapshot. The
-successor index preserves earlier packages and their historical revisions.
+The earlier `integrated-review-packet-v3/` and A1934/B2060
+`integrated-review-packet-refresh-run-actual-v1/` remain historical snapshots.
+The successor index preserves earlier packages and their historical revisions.
 Scope and source-ownership references point to immutable commit snapshots. The
 earlier indexed packet's two selected revisions, task/work references,
 findings and exact artifact metadata were checked against its pinned execution
 receipts. Desktop, narrow-layout and keyboard checks passed for that earlier
 offline browser and four isolated learner/operator preview sessions;
 preservation checks confirmed browsing did not change original audits or
-company sources. The successor's independent output review passed against
-A1934/B2060 and its pinned receipt set; its separate offline browser check
-passed at desktop and narrow widths with exact-data and no-HTTP assertions.
-Their receipts are in private `integrated-review-packet-refresh-output-independent-v1/`
-and `integrated-review-packet-refresh-browser-independent-v1/`. The frozen
-packet author's `REFRESH-RECEIPT.json` still says independent review was
-pending when it was written; the later independent receipts are separate.
+company sources. The A1938/B2064 successor's emitted BASIS passed independent
+read-only review of 106 receipt pins and four A/B rounds of state, event,
+authority, ACCESS and retained artifact-byte observations (`REVIEW.json`
+SHA-256 `d22e64bda419901524eb1e7b06bdbba556534edd594caa13bd39f7ddaa2f920b`).
+Its packet output passed independent review of all 22 packet file hashes,
+818 task rows and 16 findings (`REVIEW.json` SHA-256
+`80cfc35c12dd7eb52ac287dfca81c8338ac46a101bf4b37409d7c4faae1ec6d0`).
+The separate offline browser check passed exact-data, filter, keyboard,
+desktop/narrow-layout and no-HTTP assertions (`RECEIPT.json` SHA-256
+`da4710460f500bc555692977d33b05c49a7e6b929e7604f6f10296696ea430c1`).
+These receipts are retained privately in
+`integrated-review-packet-refresh-basis-output-independent-v1/`,
+`integrated-review-packet-refresh-output-independent-v5/` and
+`integrated-review-packet-refresh-browser-post-cc91-independent-v1/`.
+The author packet's frozen `REFRESH-RECEIPT.json` still says independent review
+was pending when written; the later independent receipts are separate.
 These checks do not replace review of the procedures or owner
 acceptance of the audit workspace.
