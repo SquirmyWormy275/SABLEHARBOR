@@ -106,21 +106,22 @@ def evaluate(url: str, model_id: str, model_path: Path, fixture: dict) -> dict:
         # These marker checks independently verify that no denied source reached
         # the model, even if the model later produces a safe-looking answer.
         denied = [
-            row for row in probe["resources"]
-            if authorize(row, principal, "answer", now) != "ALLOW"
+            row for row in probe["resources"] if authorize(row, principal, "answer", now) != "ALLOW"
         ]
         if any(row["id"] in prompt_text or row["payload"] in prompt_text for row in denied):
             raise AssertionError("Denied source entered model context")
         answer = ask(url, model_id, context)
         failures = [f"missing: {item}" for item in probe["required"] if item not in answer]
         failures += [f"forbidden: {item}" for item in probe["forbidden"] if item in answer]
-        results.append({
-            "probe": probe["id"],
-            "authorized_source_ids": [item["id"] for item in context["authorized_sources"]],
-            "answer": answer,
-            "outcome": "PASS" if not failures else "FAIL",
-            "failures": failures,
-        })
+        results.append(
+            {
+                "probe": probe["id"],
+                "authorized_source_ids": [item["id"] for item in context["authorized_sources"]],
+                "answer": answer,
+                "outcome": "PASS" if not failures else "FAIL",
+                "failures": failures,
+            }
+        )
     return {
         "marking": "SYNTHETIC_NON_AUTHORITATIVE_MODEL_EVALUATION",
         "scope": (
@@ -147,10 +148,9 @@ def main() -> None:
     parser.add_argument("--output", required=True, type=Path)
     args = parser.parse_args()
     source_root = Path(__file__).resolve().parents[2]
-    if (
-        args.fixture_file.resolve().is_relative_to(source_root)
-        or args.output.resolve().is_relative_to(source_root)
-    ):
+    if args.fixture_file.resolve().is_relative_to(
+        source_root
+    ) or args.output.resolve().is_relative_to(source_root):
         raise ValueError("Private evaluation inputs and outputs must stay outside this repository")
     result = evaluate(
         args.endpoint,
