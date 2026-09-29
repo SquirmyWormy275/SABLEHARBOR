@@ -31,6 +31,11 @@ RADIUS_PROXY_M = 10000.0
 CUT_FILL_BOUND_M = 12.0
 
 
+def _report(value: float) -> float:
+    """Keep exported precision stable across equivalent GEOS/HiGHS builds."""
+    return round(float(value), 3)
+
+
 def _load(name: str):
     return json.loads((ROOT / SOURCES[name]).read_text())
 
@@ -136,21 +141,23 @@ def build() -> dict:
             {
                 "route_id": route_id,
                 "status": "PROPOSED_PRELIMINARY_ENGINEERING_SCREEN",
-                "mainline_junction_chainage_m": float(main_station),
-                "mainline_junction_formation_m": junction_elevation,
+                "mainline_junction_chainage_m": _report(main_station),
+                "mainline_junction_formation_m": _report(junction_elevation),
                 "source_branch_start_formation_m": stations[0]["formation_m"],
-                "source_junction_elevation_gap_m": stations[0]["formation_m"] - junction_elevation,
-                "successor_junction_elevation_gap_m": formation[0] - junction_elevation,
-                "maximum_sampled_formation_grade_pct": float(max(abs(grades)) * 100),
-                "maximum_adjacent_grade_change_percentage_points": float(max(changes) * 100),
-                "maximum_discrete_curvature_fraction": float(max(changes / proxies)),
-                "maximum_cut_m": float(max(ground - formation)),
-                "maximum_fill_m": float(max(formation - ground)),
+                "source_junction_elevation_gap_m": _report(
+                    stations[0]["formation_m"] - junction_elevation
+                ),
+                "successor_junction_elevation_gap_m": _report(formation[0] - junction_elevation),
+                "maximum_sampled_formation_grade_pct": _report(max(abs(grades)) * 100),
+                "maximum_adjacent_grade_change_percentage_points": _report(max(changes) * 100),
+                "maximum_discrete_curvature_fraction": _report(max(changes / proxies)),
+                "maximum_cut_m": _report(max(ground - formation)),
+                "maximum_fill_m": _report(max(formation - ground)),
                 "stations": [
                     {
                         "chainage_m": s["chainage_m"],
                         "ground_m": s["ground_m"],
-                        "proposed_formation_m": elevation,
+                        "proposed_formation_m": _report(elevation),
                     }
                     for s, elevation in zip(stations, formation)
                 ],
@@ -169,6 +176,7 @@ def build() -> dict:
         "maximum_sampled_grade_pct": GRADE_LIMIT * 100,
         "discrete_vertical_radius_proxy_m": RADIUS_PROXY_M,
         "maximum_absolute_cut_or_fill_m": CUT_FILL_BOUND_M,
+        "derived_report_rounding": "0.001 in displayed units; optimizer and constraint checks use full precision",
         "branches": successors,
         "decision_boundary": "Proposed synthetic engineering derivative, not an accepted alteration of pinned industrial source, surveyed alignment, continuous turnout design or operating approval.",
     }

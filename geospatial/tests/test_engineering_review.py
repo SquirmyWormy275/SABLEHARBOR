@@ -67,7 +67,7 @@ def test_preliminary_successor_fixes_real_junction_gap_and_grade_breaks():
     old = {p["route_id"]: p for p in review.build()["profiles"]}
     new = {b["route_id"]: b for b in transitions.build()["branches"]}
     assert set(new) == {"BST-EAST", "BST-MINERAL"}
-    assert new["BST-EAST"]["source_junction_elevation_gap_m"] == pytest.approx(3.667064, abs=1e-5)
+    assert new["BST-EAST"]["source_junction_elevation_gap_m"] == pytest.approx(3.667, abs=0.001)
     for route in new:
         candidate = new[route]
         assert candidate["status"] == "PROPOSED_PRELIMINARY_ENGINEERING_SCREEN"

@@ -30,8 +30,7 @@ It does not turn a grade-break measurement into a designed vertical curve.
 
 ## Preliminary branch-transition successor
 
-Run the following command to regenerate
-[`VERTICAL_TRANSITION_SCREEN.json`](VERTICAL_TRANSITION_SCREEN.json). The
+Regenerate [`VERTICAL_TRANSITION_SCREEN.json`](VERTICAL_TRANSITION_SCREEN.json) with:
 
 ```bash
 uv run --with-requirements geospatial/requirements.txt python -m geospatial.engineering_review.build_transitions
@@ -52,13 +51,14 @@ points**; Mineral falls from **1.010** to **0.537**. Both pass the declared
 preliminary constraints. The pinned industrial source profiles remain visible
 for comparison. The proposed station elevations are a reproducible derivative,
 not an amendment to the existing operational route, turnout or profile canon.
+Derived output values are rounded to 0.001 in their displayed units for
+cross-platform review; constraints are checked at full precision first.
 In particular, turnout tangent matching at each switch still requires a
 track-design package; elevation continuity alone is insufficient.
 
 ## Track, site and rights interface
 
-Run the following command to regenerate
-[`TRACK_SITE_INTERFACE_SCREEN.json`](TRACK_SITE_INTERFACE_SCREEN.json). It
+Regenerate [`TRACK_SITE_INTERFACE_SCREEN.json`](TRACK_SITE_INTERFACE_SCREEN.json) with:
 
 ```bash
 uv run --with-requirements geospatial/requirements.txt python -m geospatial.engineering_review.build_interfaces

@@ -15,6 +15,13 @@ from shapely.ops import transform
 ROOT = Path(__file__).resolve().parents[2]
 OUTPUT = Path(__file__).with_name("TRACK_SITE_INTERFACE_SCREEN.json")
 TO_UTM = Transformer.from_crs(4326, 26913, always_xy=True).transform
+
+
+def _report_m(value: float) -> float:
+    """Report millimeter precision while avoiding cross-platform GEOS noise."""
+    return round(float(value), 3)
+
+
 SOURCES = {
     "operations": "industrial/source/operations.json",
     "routes": "industrial/source/geography/network.geojson",
@@ -96,8 +103,10 @@ def build() -> dict:
                 "source_yard_track_count": facility["track_count"],
                 "yard_track_ids": [t["id"] for t in site_tracks],
                 "nearest_route_id": nearest[0][1],
-                "envelope_to_nearest_route_m": nearest[0][0],
-                "minimum_yard_track_to_route_m": minimum_yard_gap,
+                "envelope_to_nearest_route_m": _report_m(nearest[0][0]),
+                "minimum_yard_track_to_route_m": (
+                    _report_m(minimum_yard_gap) if minimum_yard_gap is not None else None
+                ),
                 "mapped_route_join_state": (
                     "NO_RAIL_TRACK_IN_SOURCE"
                     if minimum_yard_gap is None
@@ -117,6 +126,7 @@ def build() -> dict:
             for name, path in SOURCES.items()
         },
         "projection": "EPSG:26913",
+        "derived_distance_rounding_m": 0.001,
         "route_miles_from_11_register_segments": route_lengths,
         "yard_track_count": len(yard_track),
         "yard_track_miles_not_route_miles": sum(t["length_miles"] for t in yard_track),
