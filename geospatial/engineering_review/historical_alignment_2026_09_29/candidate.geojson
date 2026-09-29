@@ -1,0 +1,68 @@
+{
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            -107.96562715205644,
+            41.6744965783547
+          ],
+          [
+            -108.0,
+            41.64
+          ],
+          [
+            -108.05,
+            41.58
+          ],
+          [
+            -108.14,
+            41.5
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "HYP-BST-1954-SURVIVOR",
+      "properties": {
+        "accepted_extent_high_miles": 16,
+        "accepted_extent_low_miles": 14,
+        "accepted_geometry": null,
+        "candidate_miles": 15.084857685308943,
+        "classification": "PROPOSED_NEWLY_AUTHORED_FICTIONAL_HYPOTHESIS_NOT_RECOVERED_HISTORY",
+        "historical_role": "1954-survivor-placement-hypothesis",
+        "not_current_asset_or_right": true,
+        "record_id": "SH-GEO-BST-HIST-CANDIDATE-20260929-001",
+        "scenario_id": "HYP-BST-1953-1954-SOUTHWEST-01"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            -108.05,
+            41.58
+          ],
+          [
+            -108.16,
+            41.52
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "HYP-BST-MINE-ONLY-ABANDONED",
+      "properties": {
+        "accepted_geometry": null,
+        "candidate_miles": 7.04739774310322,
+        "classification": "PROPOSED_NEWLY_AUTHORED_FICTIONAL_HYPOTHESIS_NOT_RECOVERED_HISTORY",
+        "date_precision": "interval-only",
+        "historical_role": "mine-only-trackage-abandonment-hypothesis",
+        "not_current_asset_or_right": true,
+        "record_id": "SH-GEO-BST-HIST-CANDIDATE-20260929-001",
+        "scenario_id": "HYP-BST-1953-1954-SOUTHWEST-01"
+      },
+      "type": "Feature"
+    }
+  ],
+  "type": "FeatureCollection"
+}
