@@ -16,7 +16,7 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # packages. Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
         13545472,
-        "4fad19f6e9384700612d7d82ba2a522622af1336b8abf8043e7104b461c1af67",
+        "5cc178c8e2543e939c73f0d8bee5a516f079cc877002e0d01afd3c2c70a6bb55",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.

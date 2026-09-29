@@ -63,10 +63,13 @@ def build():
     appointments = read(paths["enterprise_appointments"])
     for appointment in appointments["people"]:
         person = by_person[appointment["person_id"]]
-        person.update(appointment_date=appointment["appointment_date"],
-            employment_start=None, source_acceptance=appointments["repository_acceptance_status"],
+        person.update(
+            appointment_date=appointment["appointment_date"],
+            employment_start=None,
+            source_acceptance=appointments["repository_acceptance_status"],
             workplace_assignment_status="UNASSIGNED_NOT_OCCUPIED",
-            forecast_position_id=appointment["forecast_position_id"])
+            forecast_position_id=appointment["forecast_position_id"],
+        )
     people = sorted(by_person.values(), key=lambda x: x["person_id"])
     excluded = [
         {k: n[k] for k in ("id", "name", "status", "sources")}
