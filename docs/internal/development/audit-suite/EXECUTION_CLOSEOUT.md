@@ -209,8 +209,21 @@ instructor and learner identities are expired. An independently reviewed
 (SHA-256 `97c430c8e6edcdea8aba42dabc97e78d5ce15b4a7e63a7da4ad7c9a81a19fa2e`)
 used newly provisioned identities in a separate copy and preserved all 1,096
 historical events and 32 retained source bytes. It did not bind or release a Key:
-native-source isolation/rebinding is unresolved, and qualified grading calibration
-and owner acceptance remain separate gates.
+native-source isolation/rebinding was unresolved at that preflight. Qualified
+grading calibration and owner acceptance remain separate gates.
+
+An independently reviewed [new-engagement source collection](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-new-engagement-collection-run-v1/MANIFEST.json)
+(independent [review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-new-engagement-collection-independent-review-v1/REVIEW.json)
+SHA-256 `1743cd7dd7dfe511e39fdcf0051111d5fc67aa572c8e88e27b2085f308efff15`)
+resolved the *isolated rehearsal* source-binding feasibility without altering B1095.
+A distinct EID `ENG-b4ae647a4ac35a18acba21a5` activated a new registry over four
+private cloned company stores and collected 32 selected native versions through
+eight ordinary PBC request groups. The independent check joined the 52-event
+chain, 32 request/collection/retained/native/original bytes, 25 unchanged original
+source files, and 21 revoked clone grants. The new registry and source IDs are
+intentionally different from B1095's pinned binding. These cloned derivatives
+are not live physical company originals; no Key is bound or released, and the
+selected collection is not full-year or professional sufficiency.
 
 The queue's job `state`, acceptance criteria and attributed checkpoints must be read
 together. Historical `*_scope_update` entries record what was authorized at the time;
