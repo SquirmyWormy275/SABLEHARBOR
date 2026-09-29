@@ -660,7 +660,7 @@ adds a separate prospective company-native exercise for the selected planned
 Reno and Boise boundaries. Its [isolated independent review](../../../../enterprise/generated/audit-suite/company-contract-draft-2026-09-29/independent-review-v1/REVIEW.json)
 (SHA-256 `780439abadfb5d985279f53717503a12027c563c6cad03d55842eeaa9ed89a9d`)
 verified 12 exact native versions, Clean HOLD, Messy QUARANTINED and one
-continuing exception across five event rows. The approved code passed focused
+continuing exception across five event rows. The integrated code passed focused
 CompanyStore tests and Ruff after integration; the private run was copied by
 ordinary bytes with exact hashes, separate inodes and zero shared Btrfs
 extents. The exercise has no signed agreement, legal approval, external
