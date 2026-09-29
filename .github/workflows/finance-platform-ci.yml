@@ -19,7 +19,6 @@ jobs:
     env:
       SHFIN_TEST_SHARDS: "3"
       SHFIN_TEST_SHARD: ${{ matrix.shard }}
-      TMPDIR: ${{ runner.temp }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -31,6 +30,8 @@ jobs:
       - run: uv sync --frozen --all-extras
       - name: Prepare isolated artifact parser
         run: |
+          export TMPDIR="$RUNNER_TEMP"
+          printf 'TMPDIR=%s\n' "$TMPDIR" >> "$GITHUB_ENV"
           sudo apt-get update -qq
           sudo apt-get install -y bubblewrap
           command -v bwrap
