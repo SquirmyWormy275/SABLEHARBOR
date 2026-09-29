@@ -19,6 +19,7 @@ def test_candidate_reproduces_without_promoting_accepted_unknowns() -> None:
     report_sha = build.digest(build.HERE / "report.json")
     assert result["candidate_1954_survivor_miles"] == pytest.approx(15.0848576853)
     assert result["candidate_prefailure_total_miles"] == pytest.approx(22.1322554284)
+    assert result["status"] == "PROVISIONAL_SYNTHETIC_RECONSTRUCTION_NOT_RECOVERED_HISTORY"
     assert result["current_route_overlap_screen_m"] < 0.1
     assert result["accepted_1898_original_extent_miles"] is None
     assert result["accepted_1898_geometry"] is None

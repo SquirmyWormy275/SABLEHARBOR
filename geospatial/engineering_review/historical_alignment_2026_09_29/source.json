@@ -2,8 +2,8 @@
   "schema_version": "1.0",
   "record_id": "SH-GEO-BST-HIST-CANDIDATE-20260929-001",
   "recorded_date_utc": "2026-09-29",
-  "status": "PROPOSED_NEWLY_AUTHORED_FICTIONAL_HYPOTHESIS_NOT_RECOVERED_HISTORY",
-  "authority_scope": "Owner-selected #107B historical-geometry work; this candidate is review material and does not replace accepted historical unknowns",
+  "status": "PROVISIONAL_SYNTHETIC_RECONSTRUCTION_NOT_RECOVERED_HISTORY",
+  "authority_scope": "Owner-selected #107B work on existing issue criteria, not owner selection of these coordinates; this README records the dated provisional boundary without superseding accepted source-evidence unknowns",
   "accepted_sources": {
     "industrial/source/operations.json": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b",
     "industrial/source/chronology.json": "53fe564b06301176a3a8322aedb82fee5a61c82caeae3d333e0a2c520b3eedc5",

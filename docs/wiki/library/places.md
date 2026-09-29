@@ -62,6 +62,10 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Railway engineering source review — 28 September 2026](../../../geospatial/engineering_review/README.md) — MD
 
+## `geospatial/engineering_review/historical_alignment_2026_09_29`
+
+- [Early BS&T alignment: fictional alternative, September 29, 2026](../../../geospatial/engineering_review/historical_alignment_2026_09_29/README.md) — MD
+
 ## `geospatial/facilities`
 
 - [Facility planning and atlas closeout — R02 / v0.2.0 / September 11, 2026](../../../geospatial/facilities/CLOSEOUT_2026-09-11.md) — MD

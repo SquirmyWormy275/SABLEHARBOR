@@ -2,9 +2,11 @@
 
 **Record ID:** SH-GEO-BST-HIST-CANDIDATE-20260929-001
 
-**Status:** PROPOSED_NEWLY_AUTHORED_FICTIONAL_HYPOTHESIS_NOT_RECOVERED_HISTORY
+**Status:** PROVISIONAL_SYNTHETIC_RECONSTRUCTION_NOT_RECOVERED_HISTORY
 
-This is a bounded #107B review alternative, not controlling historical geometry. The accepted case still has an unknown 1898 original extent, an unlocated 14–16-mile 1954 survivor, and no located abandoned linework. No survey, map, land instrument, government rail record, or real-world construction is represented by the proposed coordinates. The September 29 authored date is the knowledge date of this alternative, not an 1898 or 1954 evidence date.
+This is a bounded #107B review alternative, not controlling historical geometry. The owner authorized work on #107's existing scope but did not select these particular coordinates. The accepted case still has an unknown 1898 original extent, an unlocated 14–16-mile 1954 survivor, and no located abandoned linework. No survey, map, land instrument, government rail record, or real-world construction is represented by the proposed coordinates. The September 29 authored date is the knowledge date of this alternative, not an 1898 or 1954 evidence date.
+
+**Dated authority boundary, September 29, 2026 UTC:** Owner #107B authorizes work on the original issue criteria; it does not select the 15.084858-mile survivor or 7.047398-mile abandoned coordinates. This `PROVISIONAL` derived case creates no accepted historical survey, real title/ROW, current operating asset, revenue, capital, or financing entry. It does not supersede the accepted unlocated-history state. Consumers may review it only as a labeled synthetic scenario layer with its knowledge date and source hash; they must not substitute it for a recovered-source layer. A later reviewed decision would have to specify any narrower fictional-visualization supersession explicitly.
 
 The accepted industrial chronology fixes the 1898 predecessor event, 1953 failure at year precision, July 1, 1954 rescue, October 14, 1968 Taylor main completion, and later 1972/1986 branches. A lower-authority September 5 reconciliation describes roughly 22 pre-failure miles, abandonment of mine-only trackage, and 14–16 survivor miles. Those words bound a possible narrative but provide **no historical coordinates**. [`source.json`](source.json) pins each source and marks every new station as authored fiction.
 
