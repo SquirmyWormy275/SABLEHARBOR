@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "record_id": "SH-GEO-BST-HISTORY-CASE-20260929-001",
+  "authored_at_utc": "2026-09-29T14:29:52Z",
+  "repository_available_at": null,
+  "repository_accepted_at": null,
+  "state": "PROVISIONAL_DERIVED_SYNTHETIC_HISTORY_CASE",
+  "authority": "Owner #107B/#108B execution direction and delegated supported fictional completion; the owner did not choose these coordinates",
+  "selection": {
+    "candidate_scenario_id": "HYP-BST-1953-1954-SOUTHWEST-01",
+    "use": "SELECTED_FOR_SEPARATE_FICTIONAL_HISTORY_CASE_MAP_ONLY",
+    "historical_evidence_state": "NOT_RECOVERED",
+    "current_operating_network_effect": "NONE",
+    "finance_tax_cash_effect": "NONE",
+    "property_right_effect": "NONE"
+  },
+  "accepted_history_preserved": {
+    "1898_extent_miles": null,
+    "1898_surveyed_geometry": null,
+    "1954_survivor_source_range_miles": [14, 16],
+    "1954_recovered_geometry": null,
+    "abandoned_recovered_geometry": null,
+    "real_title_or_right_of_way_instrument": null
+  },
+  "historical_time_interpretation": {
+    "1953_parent_failure": "YEAR_PRECISION_ONLY",
+    "1954_rescue": "1954-07-01_SYNTHETIC_ACCEPTED_EVENT",
+    "abandonment_date": null,
+    "abandonment_window": "1953 failure through 1954 rescue; source does not supply exact retirement date",
+    "survivor_retirement_date": null,
+    "1968_modern_main_completion": "1968-10-14",
+    "temporal_case_use": "1954 rescue-stage illustrative snapshot only; no continuous occupancy or operating interval inferred"
+  },
+  "input_sha256": {
+    "geospatial/engineering_review/historical_alignment_2026_09_29/source.json": "82534ace4479b75366e9fd7e1c547f99499f9490de27f1f33f78814e38ee4ec4",
+    "geospatial/engineering_review/historical_alignment_2026_09_29/candidate.geojson": "6bea90deaad1fe4ffcf82aa81aa8df45e725f664ecc1712837aa0cf389ca1063",
+    "geospatial/engineering_review/historical_alignment_2026_09_29/report.json": "87de9e8b04f8f0c77498fa8719a6c6598c786f0b06910eae2ea4c696ee8368da",
+    "industrial/source/operations.json": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b",
+    "industrial/source/chronology.json": "53fe564b06301176a3a8322aedb82fee5a61c82caeae3d333e0a2c520b3eedc5",
+    "industrial/successors/rail_2026_09_29/source.json": "3aa95c1764a144dc3611acca29f2982c59b44863766810532c6ef42faa3c1b80",
+    "industrial/successors/rail_2026_09_29/reperform-result.json": "868ea3f17d063021b3a574a33b8ddc019a657e6521e3431a4963db5a8379a5c4"
+  }
+}
