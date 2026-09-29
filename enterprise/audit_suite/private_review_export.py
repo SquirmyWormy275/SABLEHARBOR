@@ -7,8 +7,9 @@ import html
 import io
 import json
 import zipfile
+from urllib.parse import quote
 
-from .artifacts import MAX_EXPANDED
+from .artifacts import MAX_EXPANDED, safe_name
 from .generation import epoch_directory, read_plan, read_world, run_directory
 from .store import DomainError, canonical
 
@@ -145,15 +146,31 @@ def build(engine, state: dict, actor: str) -> dict:
     additions["history.json"] = history_json(
         engine.store, actor, state["id"], revision=state["revision"], max_bytes=budget
     )
-    links = "".join(
+    appendix_links = "".join(
         f"<li><a href='{html.escape(name, quote=True)}'>{html.escape(name)}</a></li>"
         for name in additions
     )
+    artifact_links = "".join(
+        "<li><a href='"
+        + html.escape(
+            "files/"
+            + quote(safe_name(manifest["id"]), safe="")
+            + "/"
+            + quote(safe_name(manifest["name"]), safe=""),
+            quote=True,
+        )
+        + "'>"
+        + html.escape(manifest["name"])
+        + "</a> ("
+        + html.escape(manifest["id"])
+        + ")</li>"
+        for manifest in included
+    )
     additions["index.html"] = (
-        "<!doctype html><meta charset='utf-8'>"
+        "<!doctype html><html lang='en'><head><meta charset='utf-8'>"
         "<meta http-equiv='Content-Security-Policy' "
         "content=\"default-src 'none'; base-uri 'none'; form-action 'none'\">"
-        "<title>Private training review</title>"
+        "<title>Private training review</title></head><body>"
         f"<h1>{html.escape(state['title'])}</h1>"
         "<p><strong>Snapshot:</strong> engagement "
         f"{html.escape(str(state['id']))}, revision "
@@ -168,7 +185,13 @@ def build(engine, state: dict, actor: str) -> dict:
         "and delivery definitions. These are distinct from delivered evidence. "
         "private/review-inputs contains the actual five-layer instructor model results, "
         "source pins and explicit context omissions where review was requested.</p>"
-        "<p><a href='manifest.json'>Exact native-file manifest</a></p><ul>" + links + "</ul>"
+        "<h2>Included native artifacts</h2>"
+        "<p>These links open the retained files included in this snapshot. "
+        "The manifest records each file's identity and hash.</p><ul>"
+        + artifact_links + "</ul>"
+        "<h2>Review records and private appendices</h2>"
+        "<p><a href='manifest.json'>Exact native-file manifest</a></p><ul>"
+        + appendix_links + "</ul></body></html>"
     ).encode()
     if sum(m["bytes"] for m in included) + sum(map(len, additions.values())) > MAX_EXPANDED:
         raise DomainError("Private review exceeds bounded archive limit")
