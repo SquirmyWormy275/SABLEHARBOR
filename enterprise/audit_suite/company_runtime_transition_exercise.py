@@ -20,15 +20,21 @@ from .company_store import CompanyStore, CompanyStoreError, _id, _time
 from .operating_source_bridge import encoded, sha
 from .private_publication import publish
 
-SCHEMA = "SH_FICTIONAL_2027_RUNTIME_TRANSITION_V1"
+SCHEMA = "SH_FICTIONAL_2027_RUNTIME_TRANSITION_V2"
 COMPANY = "SABLE-HARBOR-REFERENCE"
 QUALIFICATION = "AUTHORED_FUTURE_IN_UNIVERSE_SOURCE_NO_REAL_DEPLOYMENT_OR_AUDIT_CREDIT"
 DECISION = "docs/internal/development/audit-suite/FICTIONAL_2027_SCENARIO_DECISIONS_2026-09-29.md"
 DECISION_SHA256 = "15198cd0bcc1de1c8872d4310ff7f1eef8fc89a5250d24af15f4ec19f8e78496"
 SITES = "enterprise/services/source/runtime_sites_2026-09-11.json"
+CONTRACT_SPEC = "enterprise/audit_suite/runtime_transition_contract_spec_v2.json"
+CONTRACT_SPEC_SHA256 = "05c41b08b861fa5d9fe17425544b374cbf1cf380720e48d68b8df141eb65ce5f"
 SOURCE_PATHS = (
     DECISION,
     SITES,
+    CONTRACT_SPEC,
+    "industrial/source/entities.json",
+    "enterprise/runtime/docs/CONTRACT_DOSSIER.md",
+    "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
     "docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md",
     "docs/internal/development/CCF_ASSURANCE_SCOPE_PROPOSAL_2026-09-11.md",
     "enterprise/services/source/services.json",
@@ -42,6 +48,9 @@ SITE_IDS = {"RENO": "RUNTIME-RENO-COLO", "BOISE": "RUNTIME-BOISE-DR"}
 PROVIDER_IDS = {"RENO": "CP-SWITCH", "BOISE": "CP-IDACORE"}
 CONTRACT_IDS = {"RENO": "RT-SO-RENO", "BOISE": "RT-SO-BOISE"}
 SYSTEM_OWNERS = {
+    "contract_authority": "AS-P002",
+    "contract_approval": "AS-P013",
+    "counterparty_acceptance": "AS-P013",
     "provider_contract": "AS-P013",
     "site_installation": "AS-P007",
     "site_commissioning": "AS-P007",
@@ -53,6 +62,9 @@ EXCEPTION_ID = "EXC-TRANSITION-BOISE-KEY-BYPASS-01"
 FIXTURE_SHA256 = sha(encoded({"marker": "NONPERSONAL_PAYLOAD_FREE_RECOVERY", "version": 1}))
 DENOMINATORS = {
     "selected_sites": 2,
+    "fictional_contract_delegations": 1,
+    "contract_approvals": 2,
+    "counterparty_acceptances": 2,
     "provider_contracts": 2,
     "site_installations": 2,
     "final_commissioning_decisions": 2,
@@ -67,7 +79,57 @@ def _step(system, record, version, site, at, status, *, lag=0, depends=None):
 
 COMMON = (
     _step(
-        "provider_contract", "C-RENO", 1, "RENO", "2027-02-15T10:00:00+00:00", "EXECUTED_SIMULATED"
+        "contract_authority",
+        "DA-SHI-2027-RUNTIME",
+        1,
+        "RENO",
+        "2027-01-15T10:00:00+00:00",
+        "DELEGATED_SIMULATED",
+    ),
+    _step(
+        "contract_approval",
+        "AP-RENO",
+        1,
+        "RENO",
+        "2027-02-10T10:00:00+00:00",
+        "APPROVED_SIMULATED",
+        depends="DA-SHI-2027-RUNTIME",
+    ),
+    _step(
+        "counterparty_acceptance",
+        "VA-RENO",
+        1,
+        "RENO",
+        "2027-02-12T10:00:00+00:00",
+        "ACCEPTED_SIMULATED",
+        depends="AP-RENO",
+    ),
+    _step(
+        "provider_contract",
+        "C-RENO",
+        1,
+        "RENO",
+        "2027-02-15T10:00:00+00:00",
+        "EXECUTED_SIMULATED",
+        depends="VA-RENO",
+    ),
+    _step(
+        "contract_approval",
+        "AP-BOISE",
+        1,
+        "BOISE",
+        "2027-03-01T10:00:00+00:00",
+        "APPROVED_SIMULATED",
+        depends="DA-SHI-2027-RUNTIME",
+    ),
+    _step(
+        "counterparty_acceptance",
+        "VA-BOISE",
+        1,
+        "BOISE",
+        "2027-03-03T10:00:00+00:00",
+        "ACCEPTED_SIMULATED",
+        depends="AP-BOISE",
     ),
     _step(
         "provider_contract",
@@ -76,6 +138,7 @@ COMMON = (
         "BOISE",
         "2027-03-05T10:00:00+00:00",
         "EXECUTED_SIMULATED",
+        depends="VA-BOISE",
     ),
     _step(
         "site_installation",
@@ -230,7 +293,7 @@ def _new_private(destination: Path) -> Path:
     return destination
 
 
-def _source_context(repository: Path) -> tuple[dict, dict]:
+def _source_context(repository: Path) -> tuple[dict, dict, dict]:
     pins = {}
     for name in SOURCE_PATHS:
         path = repository / name
@@ -239,6 +302,37 @@ def _source_context(repository: Path) -> tuple[dict, dict]:
         pins[name] = _digest(path)
     if pins[DECISION] != DECISION_SHA256:
         raise CompanyStoreError("Owner scenario decision changed")
+    if pins[CONTRACT_SPEC] != CONTRACT_SPEC_SHA256:
+        raise CompanyStoreError("Fictional contract authority specification changed")
+    spec = json.loads((repository / CONTRACT_SPEC).read_text())
+    if (
+        spec["schema"] != "SH_FICTIONAL_2027_PROVIDER_CONTRACT_SPEC_V2"
+        or spec["contracting_entity"]["id"] != "SHI"
+        or spec["contracting_entity"]["legal_name"] != "Sable Harbor, LLC"
+        or spec["fictional_delegation"]["delegate_person_id"] != "AS-P002"
+        or spec["master_terms"]["real_signed_instrument"] is not False
+    ):
+        raise CompanyStoreError("Contract identity or qualification differs")
+    entities = json.loads((repository / "industrial/source/entities.json").read_text())
+    if (
+        len(
+            [
+                row
+                for row in entities["entities"]
+                if row["entity_id"] == "SHI" and row["legal_name"] == "Sable Harbor, LLC"
+            ]
+        )
+        != 1
+    ):
+        raise CompanyStoreError("Canonical contracting entity differs")
+    appointments = (repository / "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md").read_text()
+    if any(
+        role not in appointments for role in ("AS-P002", "AS-P003", "AS-P007", "AS-P008", "AS-P013")
+    ):
+        raise CompanyStoreError("Required fictional contract actors absent")
+    lore = (repository / "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md").read_text()
+    if "founder, CEO, and director Daniel" not in lore:
+        raise CompanyStoreError("Fictional CEO identity differs")
     source = json.loads((repository / SITES).read_text())
     sites = {}
     for role, site_id in SITE_IDS.items():
@@ -272,16 +366,43 @@ def _source_context(repository: Path) -> tuple[dict, dict]:
             "source_contract_executed_2026": False,
             "source_pointer": SITES + "#/sites/" + str(source["sites"].index(site)),
         }
+        order = spec["site_orders"][role]
+        if (
+            order["order_id"] != CONTRACT_IDS[role]
+            or order["provider_id"] != PROVIDER_IDS[role]
+            or order["facility_id"] != site["facility_id"]
+            or order["monthly_usd_per_committed_usable_it_kw"] * order["usable_it_kw"]
+            != order["monthly_base_usd"]
+            or order["monthly_base_usd"] * order["initial_term_months_after_acceptance"]
+            != order["initial_base_commitment_usd"]
+        ):
+            raise CompanyStoreError("Fictional order identity or bounded terms differ")
+    if (
+        sum(order["initial_base_commitment_usd"] for order in spec["site_orders"].values())
+        != spec["fictional_delegation"]["maximum_base_commitment_usd"]
+    ):
+        raise CompanyStoreError("Fictional contract delegation amount differs")
     services = json.loads((repository / "enterprise/services/source/services.json").read_text())
     if not {"SVC-compute", "SVC-identity", "SVC-siem", "SVC-backup"} <= {
         row[0] for row in services["services"]
     }:
         raise CompanyStoreError("Shared service inventory changed")
     pins["enterprise/audit_suite/company_runtime_transition_exercise.py"] = _digest(Path(__file__))
-    return pins, sites
+    return pins, sites, spec
 
 
 def _checks(system: str, status: str, site: str) -> dict:
+    if system == "contract_authority":
+        return {
+            x: "PASS" for x in ("named_issuer", "named_delegate", "bounded_scope", "fictional_only")
+        }
+    if system == "contract_approval":
+        return {x: "PASS" for x in ("legal", "procurement", "technology", "security")}
+    if system == "counterparty_acceptance":
+        return {
+            x: "PASS"
+            for x in ("persona_identity", "bounded_terms", "prior_approval", "fictional_only")
+        }
     if system == "provider_contract":
         return {
             "site_scope": "PASS",
@@ -320,7 +441,12 @@ def _checks(system: str, status: str, site: str) -> dict:
 
 
 def _body(
-    scenario: str, step: tuple, sites: dict, previous: str | None, dependency: str | None
+    scenario: str,
+    step: tuple,
+    sites: dict,
+    spec: dict,
+    previous: str | None,
+    dependency: str | None,
 ) -> dict:
     system, record, version, site, at, status, lag, depends = step
     available = datetime.fromisoformat(at) + timedelta(minutes=lag)
@@ -330,6 +456,7 @@ def _body(
         or record in {"RX-BOISE", "RL-BOISE"}
         or (record == "CM-BOISE" and version == 2)
     )
+    contract = spec["site_orders"][site]
     return {
         "schema": SCHEMA,
         "scenario": scenario,
@@ -355,6 +482,35 @@ def _body(
         "local_ready_marker_valid": False if system == "exception_event" else None,
         "fictional_in_universe_contract_executed": system == "provider_contract",
         "fictional_in_universe_operating_release": system == "site_release",
+        "fictional_delegation_decision": (
+            spec["fictional_delegation"] if system == "contract_authority" else None
+        ),
+        "fictional_contract_approval": (
+            spec["approval_events"][site] if system == "contract_approval" else None
+        ),
+        "fictional_counterparty_acceptance": (
+            {
+                **spec["counterparty_acceptance_events"][site],
+                "counterparty_id": contract["scenario_counterparty_id"],
+                "acceptor_role_id": contract["scenario_acceptor_role_id"],
+            }
+            if system == "counterparty_acceptance"
+            else None
+        ),
+        "fictional_executed_terms": (
+            {
+                "contracting_entity": spec["contracting_entity"],
+                "master_terms": spec["master_terms"],
+                "site_order": contract,
+                "sable_harbor_signatory_person_id": "AS-P002",
+                "counterparty_acceptor_role_id": contract["scenario_acceptor_role_id"],
+                "approval_record": f"AP-{site}",
+                "counterparty_acceptance_record": f"VA-{site}",
+                "real_signed_instrument": False,
+            }
+            if system == "provider_contract"
+            else None
+        ),
         "fictional_contract_scope_summary": (
             {
                 "site_service_order_id": sites[site]["contract_id"],
@@ -363,7 +519,7 @@ def _body(
                 "provider_service": "COLOCATION_FACILITY_POWER_COOLING_PHYSICAL_ACCESS",
                 "sable_harbor_retained": "EQUIPMENT_STACK_IDENTITY_KEYS_BACKUP_OVERSIGHT",
                 "recovery_independence_required": site == "BOISE",
-                "exact_signed_terms": "NOT_RETAINED_IN_THIS_BOUNDED_EXERCISE",
+                "exact_signed_terms": "BOUNDED_IN_PINNED_FICTIONAL_SPEC",
             }
             if system == "provider_contract"
             else None
@@ -381,7 +537,7 @@ def _body(
             "AS-P002" if system == "provider_contract" else None
         ),
         "signatory_authority_status": (
-            "PROPOSED_IN_UNIVERSE_ROLE_PENDING_INDEPENDENT_REVIEW"
+            "FICTIONAL_SCENARIO_DELEGATION_ONLY_NOT_REAL"
             if system == "provider_contract"
             else "NOT_APPLICABLE"
         ),
@@ -414,6 +570,9 @@ def _write(path: Path, value: dict) -> None:
 def _observed_counts(steps: tuple) -> dict:
     latest = {(step[0], step[1]): step for step in steps}
     accepted = {
+        "contract_authority": {"DELEGATED_SIMULATED"},
+        "contract_approval": {"APPROVED_SIMULATED"},
+        "counterparty_acceptance": {"ACCEPTED_SIMULATED"},
         "provider_contract": {"EXECUTED_SIMULATED"},
         "site_installation": {"INSTALLED_SIMULATED"},
         "site_commissioning": {"PASS", "PASS_AFTER_CORRECTION"},
@@ -430,6 +589,9 @@ def _observed_counts(steps: tuple) -> dict:
 
     return {
         "selected_sites": len(SITE_IDS),
+        "fictional_contract_delegations": passing("contract_authority"),
+        "contract_approvals": passing("contract_approval"),
+        "counterparty_acceptances": passing("counterparty_acceptance"),
         "provider_contracts": passing("provider_contract"),
         "site_installations": passing("site_installation"),
         "final_commissioning_decisions": passing("site_commissioning"),
@@ -448,7 +610,7 @@ def create(destination: Path, *, repository: Path, clean_branch: str, messy_bran
     branches = {"CLEAN": _id(clean_branch), "MESSY": _id(messy_branch)}
     if branches["CLEAN"] == branches["MESSY"]:
         raise CompanyStoreError("Distinct branch identities required")
-    pins, sites = _source_context(repository)
+    pins, sites, spec = _source_context(repository)
     observed = {scenario: _observed_counts(steps) for scenario, steps in EVENTS.items()}
     if any(
         {key: counts[key] for key in DENOMINATORS} != DENOMINATORS for counts in observed.values()
@@ -475,9 +637,28 @@ def create(destination: Path, *, repository: Path, clean_branch: str, messy_bran
             for step in steps:
                 system, record, version, site, at, status, lag, depends = step
                 dependency = latest[depends]["sha256"] if depends else None
-                body = _body(scenario, step, sites, previous, dependency)
+                body = _body(scenario, step, sites, spec, previous, dependency)
                 if depends and _time(at) <= latest[depends]["event_at"]:
                     raise CompanyStoreError("Transition dependency chronology invalid")
+                if system == "contract_approval" and (
+                    depends != "DA-SHI-2027-RUNTIME"
+                    or latest[depends]["body_status"] != "DELEGATED_SIMULATED"
+                ):
+                    raise CompanyStoreError("Fictional contract approval lacks delegation")
+                if system == "counterparty_acceptance" and (
+                    depends != f"AP-{site}"
+                    or latest[depends]["body_status"] != "APPROVED_SIMULATED"
+                ):
+                    raise CompanyStoreError("Fictional counterparty acceptance lacks approval")
+                if system == "provider_contract" and (
+                    latest["DA-SHI-2027-RUNTIME"]["body_status"] != "DELEGATED_SIMULATED"
+                    or latest[f"AP-{site}"]["body_status"] != "APPROVED_SIMULATED"
+                    or latest[f"VA-{site}"]["body_status"] != "ACCEPTED_SIMULATED"
+                    or depends != f"VA-{site}"
+                ):
+                    raise CompanyStoreError(
+                        "Fictional contract authority or acceptance chain invalid"
+                    )
                 if system == "site_release":
                     if site == "RENO" and latest["CM-RENO"]["body_status"] != "PASS":
                         raise CompanyStoreError("Reno release lacks passed commissioning")
@@ -580,12 +761,12 @@ def verify(destination: Path, *, repository: Path | None = None) -> dict:
         or manifest["company_db_sha256"] != _digest(root / "company.sqlite3")
         or manifest["module_sha256"] != _digest(Path(__file__))
         or manifest["schema"] != SCHEMA + "_MANIFEST"
-        or manifest["native_version_count"] != 22
+        or manifest["native_version_count"] != 32
         or manifest["audit_task_credit"] is not False
     ):
         raise CompanyStoreError("Transition manifest pin mismatch")
     repository = Path(repository).resolve() if repository else Path(__file__).resolve().parents[2]
-    pins, sites = _source_context(repository)
+    pins, sites, spec = _source_context(repository)
     observed = {scenario: _observed_counts(steps) for scenario, steps in EVENTS.items()}
     if any(
         {key: counts[key] for key in DENOMINATORS} != DENOMINATORS for counts in observed.values()
@@ -626,7 +807,7 @@ def verify(destination: Path, *, repository: Path | None = None) -> dict:
         if db.execute("PRAGMA quick_check").fetchone()[0] != "ok":
             raise CompanyStoreError("Native transition database integrity failure")
         if (
-            db.execute("SELECT COUNT(*) FROM versions").fetchone()[0] != 22
+            db.execute("SELECT COUNT(*) FROM versions").fetchone()[0] != 32
             or db.execute("SELECT COUNT(*) FROM grants").fetchone()[0] != 0
             or db.execute("SELECT COUNT(*) FROM collections").fetchone()[0] != 0
         ):
@@ -680,7 +861,7 @@ def verify(destination: Path, *, repository: Path | None = None) -> dict:
                 }:
                     raise CompanyStoreError("Native transition provenance differs")
                 dependency = latest[depends]["sha256"] if depends else None
-                expected = _body(scenario, step, sites, previous, dependency)
+                expected = _body(scenario, step, sites, spec, previous, dependency)
                 if (
                     json.loads(row["content"]) != expected
                     or row["event_at"] != expected["event_at"]

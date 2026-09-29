@@ -8,6 +8,7 @@ from pathlib import Path
 
 import pytest
 
+from enterprise.audit_suite import company_runtime_transition_exercise as transition
 from enterprise.audit_suite.company_runtime_transition_exercise import (
     COMPANY,
     DECISION_SHA256,
@@ -28,7 +29,7 @@ def _build(tmp_path):
 
 def test_exact_contract_commission_recovery_and_exception_history(tmp_path):
     root = _build(tmp_path)
-    assert verify(root, repository=REPOSITORY)["native_version_count"] == 22
+    assert verify(root, repository=REPOSITORY)["native_version_count"] == 32
     receipt = json.loads((root / "RECEIPT.json").read_text())
     assert (
         receipt["source_pins"][
@@ -38,6 +39,9 @@ def test_exact_contract_commission_recovery_and_exception_history(tmp_path):
     )
     assert receipt["local_denominators"] == {
         "selected_sites": 2,
+        "fictional_contract_delegations": 1,
+        "contract_approvals": 2,
+        "counterparty_acceptances": 2,
         "provider_contracts": 2,
         "site_installations": 2,
         "final_commissioning_decisions": 2,
@@ -63,7 +67,7 @@ def test_exact_contract_commission_recovery_and_exception_history(tmp_path):
     ) as db:
         db.row_factory = sqlite3.Row
         rows = db.execute("SELECT * FROM versions ORDER BY branch,event_at").fetchall()
-        assert len(rows) == 22
+        assert len(rows) == 32
         assert all(r["event_at"] > r["imported_at"] for r in rows)
         assert db.execute("SELECT COUNT(*) FROM grants").fetchone()[0] == 0
         assert db.execute("SELECT COUNT(*) FROM collections").fetchone()[0] == 0
@@ -75,6 +79,21 @@ def test_exact_contract_commission_recovery_and_exception_history(tmp_path):
             and b["business_associate_role"] == "UNDETERMINED_SEPARATE_SCENARIO"
             for b in bodies.values()
         )
+        for branch in ("TRANS-CLEAN", "TRANS-MESSY"):
+            delegation = bodies[(branch, "DA-SHI-2027-RUNTIME", 1)]
+            approval = bodies[(branch, "AP-RENO", 1)]
+            counterparty = bodies[(branch, "VA-RENO", 1)]
+            executed = bodies[(branch, "C-RENO", 1)]
+            assert delegation["fictional_delegation_decision"]["delegate_person_id"] == "AS-P002"
+            assert approval["depends_on_record"] == "DA-SHI-2027-RUNTIME"
+            assert counterparty["depends_on_record"] == "AP-RENO"
+            assert executed["depends_on_record"] == "VA-RENO"
+            assert executed["fictional_executed_terms"]["contracting_entity"] == {
+                "id": "SHI",
+                "legal_name": "Sable Harbor, LLC",
+                "source": "industrial/source/entities.json#entity_id=SHI",
+            }
+            assert executed["fictional_executed_terms"]["real_signed_instrument"] is False
         clean = bodies[("TRANS-CLEAN", "RL-BOISE", 1)]
         messy = bodies[("TRANS-MESSY", "RL-BOISE", 1)]
         assert clean["event_at"] == "2027-07-28T14:00:00.000000+00:00"
@@ -155,3 +174,26 @@ def test_resealed_false_real_operation_and_bypass_cure_rejected(tmp_path):
     manifest_path.write_text(json.dumps(manifest, sort_keys=True, indent=2) + "\n")
     with pytest.raises(CompanyStoreError, match="Native transition source identity differs"):
         verify(root, repository=REPOSITORY)
+
+
+def test_execution_cannot_skip_approval_or_counterparty_acceptance(tmp_path, monkeypatch):
+    common = list(transition.COMMON)
+    index = next(i for i, step in enumerate(common) if step[1] == "VA-RENO")
+    broken = list(common[index])
+    broken[-1] = "DA-SHI-2027-RUNTIME"
+    common[index] = tuple(broken)
+    monkeypatch.setattr(
+        transition,
+        "EVENTS",
+        {
+            "CLEAN": tuple(common) + transition.CLEAN[len(transition.COMMON) :],
+            "MESSY": tuple(common) + transition.MESSY[len(transition.COMMON) :],
+        },
+    )
+    with pytest.raises(CompanyStoreError, match="counterparty acceptance lacks approval"):
+        create(
+            tmp_path / "invalid-acceptance",
+            repository=REPOSITORY,
+            clean_branch="TRANS-CLEAN",
+            messy_branch="TRANS-MESSY",
+        )
