@@ -58,6 +58,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [CHAT-DERIVED CANON LEDGER — J2 / ALEXANDRIA](../../internal/CHAT_CANON_LEDGER_J2_ALEXANDRIA.md) — MD
 - [SABLE HARBOR — PHASE 2 COVERAGE AUDIT](../../internal/COVERAGE_AUDIT_PHASE2.md) — MD · [formatted PDF](../../internal/COVERAGE_AUDIT_PHASE2.pdf)
 - [SABLE HARBOR — PHASE 2 COVERAGE AUDIT — COVERAGE_AUDIT_PHASE2](../../internal/COVERAGE_AUDIT_PHASE2.pdf) — PDF
+- [Daedalus local-model boundary receipt — September 28, 2026](../../internal/DAEDALUS_MODEL_BOUNDARY_RECEIPT_2026-09-28.md) — MD
 - [ALEXANDRIA INSTITUTIONAL CATALOG — QUERY GUIDE](../../internal/INSTITUTIONAL_CATALOG_QUERY_GUIDE.md) — MD · [formatted PDF](../../internal/INSTITUTIONAL_CATALOG_QUERY_GUIDE.pdf)
 - [ALEXANDRIA INSTITUTIONAL CATALOG — QUERY GUIDE — INSTITUTIONAL_CATALOG_QUERY_GUIDE](../../internal/INSTITUTIONAL_CATALOG_QUERY_GUIDE.pdf) — PDF
 - [Open Canon and Post-Merge Hygiene Issue Index](../../internal/OPEN_CANON_AND_HYGIENE_ISSUE_INDEX.md) — MD
