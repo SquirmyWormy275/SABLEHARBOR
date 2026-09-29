@@ -674,6 +674,12 @@
           "scope": "Current A100/B73 818-task source/action screen and native coverage gap routing",
           "validation": "Independent task-screen review SHA-256 ac4420f96db4441b8e3ec5e7433d5db13bdf23eb54f91086c7e5f32cb243fb39 verified 409 tasks per branch, 31/32 exact native-to-retained joins, 36 source-associated tasks and three with task-specific procedure links each. Independent native-coverage review SHA-256 f09117919331a3a2ca36963f4d9ad9135461af47f9fd9a6db00c38a0d235e1f4 routes 373 unmatched tasks per branch: 84 to existing portfolio native references, four to separate local SEC006, 283 to further source discovery/conditional period-coherent activity, and two to owner scope facts.",
           "acceptance": "Source association is not sufficiency; all 409 tasks per branch remain NOT_STARTED/NOT_RUN. Selected-workroom absence is not proof of company-wide absence or inapplicability."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Fresh 13-component A/B source binding, zero-evidence bootstrap, and independently preserved whole-state recovery checkpoint",
+          "validation": "Integrated P1 independent postreview SHA-256 badd73686b81ff1cfd94690d01aa20ce3ace3f15a20ef9baa3c479a5b04cd461 verified fresh A/B rev2 with 409 untouched tasks each, all 13 source components bound before activation, 353 selected native versions and 52 ordinary-byte backed-up/copied roots. Independently reviewed SQLite sidecar quiescence SHA-256 fbbbee6abdf21d3b25adcd158db57ba626428e1580fa2f8490dd37edfd4524e7 restored exact 203-file inventory. Whole-P1 checkpoint independent PASS SHA-256 9ae3e485e0850a6a847956e5a9644347a491a984132d28a5584b3342c68e74a2 verified identical private byte snapshot and 54 SQLite quick_checks. Audit Store context closure fix commit 3abd5c0f passed 39 focused tests.",
+          "acceptance": "Technical source binding and recovery basis only. No company-wide population sufficiency, task credit, instructor Key, control effectiveness, full-period or professional acceptance."
         }
       ]
     },
@@ -749,6 +755,12 @@
           "scope": "Integrated 13-component full-portfolio fresh-pair execution design",
           "validation": "The first nine-component batch was independently CHANGES_REQUIRED SHA-256 5109c4bd936a54e0a38a74adb425f98d9fe274e7d9a7e850c796135d6102953d because the frozen binding omitted four B2/BCM/CFG components. Corrected integrated plan v3 independent static PASS SHA-256 8dd2d89db34b28f28a272f9865d594cf40bb989efd13c6363374c1ab4614ec97 pins 13 components per branch, 175/178 exact native versions, ordinary B2 recollection and BCM/CFG replay, then 18-control collection. Current A100/B73 all-task screen independent PASS SHA-256 ac4420f96db4441b8e3ec5e7433d5db13bdf23eb54f91086c7e5f32cb243fb39.",
           "acceptance": "Design only; new integrated engagements, collection, procedures, independent postreview, full-period coverage and professional/owner acceptance are not yet complete. Historical A100/B73 remains a bounded four-component technical pair."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Actual ordinary B2 company-source recollection on the fresh 13-component bound A/B engagements",
+          "validation": "Gated P2 RESULT SHA-256 f7c1b90cf079244c1dab3a2c62e3953fba96d073679a55e5923cc773ada13f33 and independent actual postreview SHA-256 86a045d0e984062ef6a649f18fedb931ba8dd64cd7e57e04b5acba644acec7ed verified A2→78/B2→51, 22/8 PBC requests, 31/32 native→ordinary collection receipt→retained-byte joins, 18/21 scoped grants all inactive with 36/42 access events, full event chains and expected Clean/Messy B2/B3/R1/R2 chronology. Pre-P2 whole-state snapshot, 26 original company roots, three preservation trees and historical A1939/B2066 hashes/tips remained unchanged; no WAL/SHM.",
+          "acceptance": "Bounded B2 collection only. All 409 tasks per branch remain NOT_STARTED/NOT_RUN; no new Key, learner release, grade, full-period operating conclusion or qualified professional acceptance. P3 investigation and remaining integrated phases require separate execution and review."
         }
       ]
     },

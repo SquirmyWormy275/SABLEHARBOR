@@ -457,10 +457,42 @@ passed [independent static review](../../../../enterprise/generated/audit-suite/
 (SHA-256 `8dd2d89db34b28f28a272f9865d594cf40bb989efd13c6363374c1ab4614ec97`).
 It requires a fresh zero-evidence A/B pair with all 13 source components
 bound before activation, ordinary recollection of B2 originals, replay of
-BCM/CFG work, and then additional native collection. This is a reviewed
-design, not an executed integrated audit; old Key and audit artifacts cannot
-be transplanted. Full-period population, qualified review and owner acceptance
-remain open.
+BCM/CFG work, and then additional native collection. The first two execution
+phases below are complete; old Key and audit artifacts cannot be transplanted.
+Full-period population, qualified review and owner acceptance remain open.
+
+The new [integrated A/B bootstrap](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-full-portfolio-bootstrap-run-v1/RESULT.json)
+passed [independent postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-full-portfolio-bootstrap-independent-postreview-v1/REVIEW.json)
+(SHA-256 `badd73686b81ff1cfd94690d01aa20ce3ace3f15a20ef9baa3c479a5b04cd461`).
+It created separate A/B engagements with all 13 company components bound before
+activation, 409 untouched tasks per side, zero requests/evidence/Key, and
+revision 2 after ordinary activation and kickoff. Twenty-six original native
+roots were backed up and copied by ordinary bytes into 52 disjoint private
+roots; 353 planned native versions were verified. The earlier A100/B73 pair,
+bound Key and historical audits remained unchanged. A read-only SQLite check
+later created empty WAL/SHM sidecars in the new audit workrooms. Their bytes
+were preserved, then a tested quiescence restored the exact reviewed 203-file
+inventory without changing either database; [independent postcheck](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-p1-sidecar-quiescence-independent-postreview-v1/REVIEW.json)
+passed (SHA-256 `fbbbee6abdf21d3b25adcd158db57ba626428e1580fa2f8490dd37edfd4524e7`).
+A separate [whole-state P1 checkpoint](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-full-portfolio-pre-p2-checkpoint-run-v2/CHECKPOINT-RESULT.json)
+passed [independent review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-full-portfolio-pre-p2-checkpoint-independent-postreview-v2/REVIEW.json)
+(SHA-256 `9ae3e485e0850a6a847956e5a9644347a491a984132d28a5584b3342c68e74a2`):
+all 203 files match, 54 copied SQLite databases pass integrity checks, and the
+copy has no shared Btrfs extents. `Store.connect()` now closes on context exit
+(commit `3abd5c0f`); 39 focused store, history and recovery tests pass.
+
+The active pair's [ordinary B2 collection](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p2-b2-ordinary-collection-run-v1/RESULT.json)
+passed [independent actual postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p2-b2-ordinary-collection-independent-postreview-v1/REVIEW.json)
+(SHA-256 `86a045d0e984062ef6a649f18fedb931ba8dd64cd7e57e04b5acba644acec7ed`).
+The same bound engagements advanced A2→78/B2→51 through 22/8 PBC requests,
+31/32 ordinary company collections, and 18/21 scoped grants that were all
+revoked. All 63 selected native versions join collection receipts and retained
+bytes. Messy B retains the failed first B2 attempt, completed retry, OPEN
+failure ticket and missing B3 backup; R1 remains an older differing restore
+and R2 matches current bytes. The pre-P2 checkpoint and original sources are
+unchanged. All 818 tasks remain `NOT_STARTED`/`NOT_RUN`; P3 investigation,
+new instructor Key, BCM/CFG replay, other control collection, full-period
+procedures and professional acceptance remain open.
 
 The queue's job `state`, acceptance criteria and attributed checkpoints must be read
 together. Historical `*_scope_update` entries record what was authorized at the time;
