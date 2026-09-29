@@ -14,8 +14,8 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # current legal/geospatial source guides; prior exact bytes remain in Git history.
     # Exact bytes only: no general allowance for new databases or later drift.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        12425216,
-        "3835072c6799dbfe6aed1ba7f8a18d5719b664113aaef49afc59611da7d6ad66",
+        12437504,
+        "f478e88263350ffce835526d17d6aa3965d95ced0230084a1326a50cf62e5d8e",
     ),
     # Reviewed September 10 successor: six approved J2 names, unchanged public scope.
     Path("docs/organization/assets/current/Sable-Harbor-Organization-Charts.pdf"): (
