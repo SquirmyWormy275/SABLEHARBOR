@@ -33,6 +33,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Foundry Field evidence packet: exact-file acceptance](../../canon/FINANCE_HUMAN_EVIDENCE_001_ACCEPTANCE_2026-09-11.md) — MD
 - [Foundry Field FF-003 billing adoption](../../canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md) — MD
 - [Geographic and occupancy completion — September 13, 2026](../../canon/GEOGRAPHIC_COMPLETION_2026-09-13.md) — MD
+- [Geographic closeout — synthetic edition scope](../../canon/GEOGRAPHIC_SYNTHETIC_SCOPE_DISPOSITION_2026-09-29.md) — MD
 - [Headquarters exterior visual withdrawn](../../canon/HEADQUARTERS_VISUAL_WITHDRAWAL_2026-09-22.md) — MD
 - [Industrial closeout — corporate, Pale Sun, Red Wash and ARU](../../canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md) — MD
 - [Industrial planning and enterprise successor authority](../../canon/INDUSTRIAL_PLANNING_SUCCESSOR_2026-09-06.md) — MD · [formatted PDF](../../../industrial/planning/publications/SH-IND-PLAN-DEC-002_v2.0.0.pdf)

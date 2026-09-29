@@ -1,11 +1,15 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "record_id": "SH-GEO-BST-HISTORY-CASE-20260929-001",
+  "supersedes_source_sha256": "33dcadb3c185d5c07125d92af9b3cea3bed6585b610f480d5cbf66214db78deb",
+  "prior_source_accepted_commit": "bcdf3ade1d83d04774da9a914deb269442ee52f6",
+  "prior_source_repository_available_at_utc": "2026-09-29T15:22:18Z",
+  "attribution_correction": "geospatial/successors/rail_history_2026_09_29/ATTRIBUTION_CORRECTION_2026-09-29.md",
   "authored_at_utc": "2026-09-29T14:29:52Z",
   "repository_available_at": null,
   "repository_accepted_at": null,
   "state": "PROVISIONAL_DERIVED_SYNTHETIC_HISTORY_CASE",
-  "authority": "Owner #107B/#108B execution direction and delegated supported fictional completion; the owner did not choose these coordinates",
+  "authority": "Owner selected #107B and directed synthetic company closeout; the separate #108 finite boundary is an implementation interpretation without a selected option. The owner did not choose these coordinates",
   "selection": {
     "candidate_scenario_id": "HYP-BST-1953-1954-SOUTHWEST-01",
     "use": "SELECTED_FOR_SEPARATE_FICTIONAL_HISTORY_CASE_MAP_ONLY",
