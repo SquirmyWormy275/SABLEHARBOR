@@ -78,6 +78,13 @@ independently covered, but that does not discharge these additional duties or
 the remaining clauses of partial tasks. The private
 `final-not-started-analysis-v1/` and `additional-duty-execution-strategy-v1/`
 records identify the next bounded work without claiming it was performed.
+The independently checked private `additional-duty-post-cc31-throughput-graph-v1/`
+indexes all 317 non-complete tasks per profile at A1936/B2062. Sixty-six
+task IDs per profile have historical selected-source examinations that still
+need current clause and source review; 251 lack an exact selected-source plan.
+The graph admits no execution batch or new task credit. Sharing a source scan
+requires a reviewed ordered task vector, separate workpapers and conclusions,
+and independent raw-event and source-preservation proof for every transition.
 
 Execution remains authorized and in progress. Finish the accepted scope through
 these five deliverables; do not expand the feature list merely to create another
