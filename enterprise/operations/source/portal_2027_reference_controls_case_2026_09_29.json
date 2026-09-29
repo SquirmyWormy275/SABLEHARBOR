@@ -1,0 +1,482 @@
+{
+  "accepted_august_release": {
+    "receipt_sha256": "bc0b66500d682c1ea1705601bc1fc1b45e1c6e166d3d28b308df9c729c53767e",
+    "records_sha256": "5dd78a2bc6c6a08f333a7a6a0d09f7a310e3f2bd0fe027926c6b120a7b4a795e",
+    "source_commit": "ddca0d93b16c743e90ce5ac3f9cc74fb74ec6d1f",
+    "tag": "sable-harbor-company-edition-v1.2.0"
+  },
+  "access_scope": "PUBLIC_SYNTHETIC",
+  "authored_at": "2026-09-29T06:22:26Z",
+  "branch_inputs": {
+    "A": {
+      "common_source": true,
+      "company_delta_state": "NOT_AUTHORED"
+    },
+    "B": {
+      "common_source": true,
+      "company_delta_state": "NOT_AUTHORED"
+    }
+  },
+  "exception_tickets": [
+    {
+      "disposition_event_id": "SH-REFCTRL-EV-BKP-02-LATE",
+      "failure": "no scheduled local backup job observed in window",
+      "opened_at": "2027-01-13T00:05:00Z",
+      "fictional_available_at": "2027-01-13T00:10:00Z",
+      "original_miss_retained": true,
+      "ticket_id": "SH-REFCTRL-TKT-BKP-02",
+      "trigger_due_id": "SH-REFCTRL-2027-BKP-02"
+    },
+    {
+      "disposition_event_id": "SH-REFCTRL-EV-REST-01-RETEST",
+      "failure": "restore checksum mismatch",
+      "opened_at": "2027-01-20T10:30:00Z",
+      "fictional_available_at": "2027-01-20T10:35:00Z",
+      "original_failure_retained": true,
+      "ticket_id": "SH-REFCTRL-TKT-REST-01",
+      "trigger_due_id": "SH-REFCTRL-2027-REST-01"
+    },
+    {
+      "disposition_event_id": "SH-REFCTRL-EV-DISP-BACKUP-RETRY",
+      "failure": "backup fixture unlink failed",
+      "opened_at": "2027-03-15T10:45:00Z",
+      "fictional_available_at": "2027-03-15T10:50:00Z",
+      "original_failure_retained": true,
+      "ticket_id": "SH-REFCTRL-TKT-DISP-BACKUP",
+      "trigger_due_id": "SH-REFCTRL-2027-DISP-BACKUP"
+    },
+    {
+      "disposition_event_id": "SH-REFCTRL-EV-PRIV-REVIEW-LATE",
+      "failure": "quarterly local privileged review absent at Q1 cutoff",
+      "opened_at": "2027-04-01T00:05:00Z",
+      "fictional_available_at": "2027-04-01T00:10:00Z",
+      "original_miss_retained": true,
+      "ticket_id": "SH-REFCTRL-TKT-PRIV-REVIEW",
+      "trigger_due_id": "SH-REFCTRL-2027-PRIV-REVIEW"
+    }
+  ],
+  "fact_status": "MODELED_FUTURE_EVENTS_NOT_2026_ACTUAL_OR_REAL_DEPLOYMENT",
+  "exercise_briefings": [
+    {
+      "briefing_id": "SH-REFCTRL-BRF-OPERATOR",
+      "person_id": "SH-EMP-ESS-0003",
+      "case_scope": "local nonpersonal fixture procedures only; no enterprise qualification claim",
+      "modeled_completed_at": "2027-01-01T00:30:00Z",
+      "fictional_available_at": "2027-01-01T00:45:00Z",
+      "reviewed_by": "SH-EMP-ESS-0004"
+    },
+    {
+      "briefing_id": "SH-REFCTRL-BRF-REVIEWER",
+      "person_id": "SH-EMP-ESS-0004",
+      "case_scope": "local nonpersonal fixture review only; no enterprise qualification claim",
+      "modeled_completed_at": "2027-01-01T00:35:00Z",
+      "fictional_available_at": "2027-01-01T00:50:00Z",
+      "reviewed_by": "SH-EMP-ESS-0003"
+    }
+  ],
+  "inventory": {
+    "modeled_opened_at": "2027-01-01T01:00:00Z",
+    "fictional_available_at": "2027-01-01T01:15:00Z",
+    "copies": [
+      {
+        "copy_id": "SH-REFCTRL-COPY-ACTIVE",
+        "dataset_id": "SH-REFCTRL-DS-001",
+        "kind": "ACTIVE_LOCAL_FIXTURE"
+      },
+      {
+        "copy_id": "SH-REFCTRL-COPY-BACKUP",
+        "dataset_id": "SH-REFCTRL-DS-001",
+        "kind": "BACKUP_LOCAL_FIXTURE"
+      }
+    ],
+    "datasets": [
+      {
+        "classification": "NONPERSONAL_LOCAL_FIXTURE",
+        "dataset_id": "SH-REFCTRL-DS-001",
+        "fixture_payload": {
+          "dataset_id": "SH-REFCTRL-DS-001",
+          "schema": "SH-REFCTRL-NONPERSONAL-FIXTURE-v1",
+          "value": "reference configuration bytes only; no personal or customer data"
+        },
+        "fixture_sha256": "f22e20bfa6bca8a789be399919ff16947beba6b8948a36afe617153063f84634",
+        "owner_person_id": "SH-EMP-ESS-0003"
+      }
+    ],
+    "nonhuman_accounts": [
+      {
+        "account_id": "SH-REFCTRL-SVC-001",
+        "account_state": "MODELED_LOCAL_EXERCISE_ONLY",
+        "credential_version_at_opening": 1,
+        "owner_person_id": "SH-EMP-ESS-0003",
+        "workload": "local fixture backup/recovery"
+      }
+    ],
+    "privileged_grants": [
+      {
+        "account_id": "SH-REFCTRL-SVC-001",
+        "effective_at": "2027-01-01T00:00:00Z",
+        "expires_at": "2027-04-01T00:00:00Z",
+        "grant_id": "SH-REFCTRL-GRANT-001",
+        "owner_person_id": "SH-EMP-ESS-0003",
+        "purpose": "maintain nonpersonal fixture only",
+        "reviewer_person_id": "SH-EMP-ESS-0004",
+        "right": "LOCAL_FIXTURE_MAINTENANCE",
+        "scope": "SH-REFCTRL-LOCAL-LAB-01",
+        "state": "MODELED_CASE_GRANT_NOT_LIVE"
+      }
+    ]
+  },
+  "limits": [
+    "Complete only for explicitly declared local Q1 reference fixture; not complete enterprise 2027 population or annual SOC 2 control test.",
+    "All 2027 events are newly authored fictional future model events with future fictional availability; no actual software or host deployment is asserted.",
+    "Source event records are synthetic company assertions, not independent bank/provider/system confirmation or audit workpapers.",
+    "A later retry or review never erases an original missed window or failed result.",
+    "No real policy, contract, customer service, regulatory filing, or hidden A/B grading truth is created."
+  ],
+  "local_authorization": {
+    "approved_by": "SH-EMP-ESS-0004",
+    "approved_at": "2026-12-31T23:50:00Z",
+    "authority_scope": "nonpersonal local reference fixture and selected Q1 due schedule only",
+    "authorization_id": "SH-REFCTRL-PLAN-2027-Q1",
+    "corporate_policy_status": "LOCAL_CASE_RULE_NOT_ENTERPRISE_POLICY",
+    "fictional_available_at": "2027-01-01T00:15:00Z",
+    "independent_review_basis": "distinct selected local reviewer; not external assurance",
+    "modeled_effective_at": "2027-01-01T00:00:00Z",
+    "prepared_by": "SH-EMP-ESS-0003",
+    "restore_basis": "one local checksum exercise, no corporate recovery objective",
+    "retention_basis": "local nonpersonal fixture disposition on 2027-03-15, no corporate retention schedule",
+    "risk_rotation_basis": "one local credential rotation due 2027-02-15",
+    "rpo_basis": "three selected local backup windows on January 10, 12, and 14; no continuous Q1 schedule or approved corporate BIA/RPO"
+  },
+  "performed_events": [
+    {
+      "actor_person_id": "SH-EMP-ESS-0003",
+      "detail": {
+        "copied_sha256": "f22e20bfa6bca8a789be399919ff16947beba6b8948a36afe617153063f84634",
+        "copy_id": "SH-REFCTRL-COPY-BACKUP"
+      },
+      "due_id": "SH-REFCTRL-2027-BKP-01",
+      "event_at": "2027-01-10T10:00:00Z",
+      "event_id": "SH-REFCTRL-EV-BKP-01",
+      "fictional_available_at": "2027-01-10T10:15:00Z",
+      "result": "SUCCESS",
+      "reviewer_person_id": "SH-EMP-ESS-0004",
+      "source_kind": "NEWLY_AUTHORED_SYNTHETIC_COMPANY_EXERCISE_EVENT_NOT_REAL_DEPLOYMENT"
+    },
+    {
+      "actor_person_id": "SH-EMP-ESS-0003",
+      "detail": {
+        "copied_sha256": "f22e20bfa6bca8a789be399919ff16947beba6b8948a36afe617153063f84634",
+        "copy_id": "SH-REFCTRL-COPY-BACKUP"
+      },
+      "due_id": "SH-REFCTRL-2027-BKP-03",
+      "event_at": "2027-01-14T10:00:00Z",
+      "event_id": "SH-REFCTRL-EV-BKP-03",
+      "fictional_available_at": "2027-01-14T10:15:00Z",
+      "result": "SUCCESS",
+      "reviewer_person_id": "SH-EMP-ESS-0004",
+      "source_kind": "NEWLY_AUTHORED_SYNTHETIC_COMPANY_EXERCISE_EVENT_NOT_REAL_DEPLOYMENT"
+    },
+    {
+      "actor_person_id": "SH-EMP-ESS-0003",
+      "detail": {
+        "expected_sha256": "f22e20bfa6bca8a789be399919ff16947beba6b8948a36afe617153063f84634",
+        "reason": "checksum mismatch in nonpersonal local fixture",
+        "recovered_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "due_id": "SH-REFCTRL-2027-REST-01",
+      "event_at": "2027-01-20T10:00:00Z",
+      "event_id": "SH-REFCTRL-EV-REST-01",
+      "fictional_available_at": "2027-01-20T10:15:00Z",
+      "result": "FAIL",
+      "reviewer_person_id": "SH-EMP-ESS-0004",
+      "source_kind": "NEWLY_AUTHORED_SYNTHETIC_COMPANY_EXERCISE_EVENT_NOT_REAL_DEPLOYMENT"
+    },
+    {
+      "actor_person_id": "SH-EMP-ESS-0003",
+      "detail": {
+        "credential_version_after": 2,
+        "credential_version_before": 1,
+        "scope": "local fixture only"
+      },
+      "due_id": "SH-REFCTRL-2027-NH-ROT",
+      "event_at": "2027-02-15T10:00:00Z",
+      "event_id": "SH-REFCTRL-EV-NH-ROT",
+      "fictional_available_at": "2027-02-15T10:15:00Z",
+      "result": "SUCCESS",
+      "reviewer_person_id": "SH-EMP-ESS-0004",
+      "source_kind": "NEWLY_AUTHORED_SYNTHETIC_COMPANY_EXERCISE_EVENT_NOT_REAL_DEPLOYMENT"
+    },
+    {
+      "actor_person_id": "SH-EMP-ESS-0003",
+      "detail": {
+        "copy_state": "deleted local fixture",
+        "hold_checked": true,
+        "hold_present": false,
+        "retention_checked": true
+      },
+      "due_id": "SH-REFCTRL-2027-DISP-ACTIVE",
+      "event_at": "2027-03-15T10:00:00Z",
+      "event_id": "SH-REFCTRL-EV-DISP-ACTIVE",
+      "fictional_available_at": "2027-03-15T10:15:00Z",
+      "result": "SUCCESS",
+      "reviewer_person_id": "SH-EMP-ESS-0004",
+      "source_kind": "NEWLY_AUTHORED_SYNTHETIC_COMPANY_EXERCISE_EVENT_NOT_REAL_DEPLOYMENT"
+    },
+    {
+      "actor_person_id": "SH-EMP-ESS-0003",
+      "detail": {
+        "hold_checked": true,
+        "hold_present": false,
+        "reason": "local backup fixture unlink failed",
+        "retention_checked": true
+      },
+      "due_id": "SH-REFCTRL-2027-DISP-BACKUP",
+      "event_at": "2027-03-15T10:15:00Z",
+      "event_id": "SH-REFCTRL-EV-DISP-BACKUP",
+      "fictional_available_at": "2027-03-15T10:30:00Z",
+      "result": "FAIL",
+      "reviewer_person_id": "SH-EMP-ESS-0004",
+      "source_kind": "NEWLY_AUTHORED_SYNTHETIC_COMPANY_EXERCISE_EVENT_NOT_REAL_DEPLOYMENT"
+    },
+    {
+      "actor_person_id": "SH-EMP-ESS-0003",
+      "detail": {
+        "owner_reconfirmed": true,
+        "permissions_reviewed": true,
+        "service_account_id": "SH-REFCTRL-SVC-001"
+      },
+      "due_id": "SH-REFCTRL-2027-NH-REVIEW",
+      "event_at": "2027-03-31T09:00:00Z",
+      "event_id": "SH-REFCTRL-EV-NH-REVIEW",
+      "fictional_available_at": "2027-03-31T09:15:00Z",
+      "result": "SUCCESS",
+      "reviewer_person_id": "SH-EMP-ESS-0004",
+      "source_kind": "NEWLY_AUTHORED_SYNTHETIC_COMPANY_EXERCISE_EVENT_NOT_REAL_DEPLOYMENT"
+    }
+  ],
+  "period": {
+    "case_cutoff": "2027-04-01T00:00:00Z",
+    "end_exclusive": "2027-04-01T00:00:00Z",
+    "start": "2027-01-01T00:00:00Z",
+    "timezone": "UTC"
+  },
+  "record_id": "SH-REFCTRL-2027-Q1-SOURCE-v0.1",
+  "remediation_events": [
+    {
+      "actor_person_id": "SH-EMP-ESS-0003",
+      "detail": {
+        "copied_sha256": "f22e20bfa6bca8a789be399919ff16947beba6b8948a36afe617153063f84634",
+        "ticket_id": "SH-REFCTRL-TKT-BKP-02"
+      },
+      "due_id": "SH-REFCTRL-2027-BKP-02",
+      "event_at": "2027-01-13T09:00:00Z",
+      "event_id": "SH-REFCTRL-EV-BKP-02-LATE",
+      "fictional_available_at": "2027-01-13T09:15:00Z",
+      "result": "SUCCESS_LATE",
+      "reviewer_person_id": "SH-EMP-ESS-0004",
+      "source_kind": "NEWLY_AUTHORED_SYNTHETIC_COMPANY_EXERCISE_EVENT_NOT_REAL_DEPLOYMENT"
+    },
+    {
+      "actor_person_id": "SH-EMP-ESS-0003",
+      "detail": {
+        "expected_sha256": "f22e20bfa6bca8a789be399919ff16947beba6b8948a36afe617153063f84634",
+        "recovered_sha256": "f22e20bfa6bca8a789be399919ff16947beba6b8948a36afe617153063f84634",
+        "ticket_id": "SH-REFCTRL-TKT-REST-01"
+      },
+      "due_id": "SH-REFCTRL-2027-REST-01",
+      "event_at": "2027-01-22T10:00:00Z",
+      "event_id": "SH-REFCTRL-EV-REST-01-RETEST",
+      "fictional_available_at": "2027-01-22T10:15:00Z",
+      "result": "PASS_RETEST",
+      "reviewer_person_id": "SH-EMP-ESS-0004",
+      "source_kind": "NEWLY_AUTHORED_SYNTHETIC_COMPANY_EXERCISE_EVENT_NOT_REAL_DEPLOYMENT"
+    },
+    {
+      "actor_person_id": "SH-EMP-ESS-0003",
+      "detail": {
+        "copy_state": "deleted local fixture",
+        "ticket_id": "SH-REFCTRL-TKT-DISP-BACKUP"
+      },
+      "due_id": "SH-REFCTRL-2027-DISP-BACKUP",
+      "event_at": "2027-03-17T10:00:00Z",
+      "event_id": "SH-REFCTRL-EV-DISP-BACKUP-RETRY",
+      "fictional_available_at": "2027-03-17T10:15:00Z",
+      "result": "PASS_RETEST",
+      "reviewer_person_id": "SH-EMP-ESS-0004",
+      "source_kind": "NEWLY_AUTHORED_SYNTHETIC_COMPANY_EXERCISE_EVENT_NOT_REAL_DEPLOYMENT"
+    },
+    {
+      "actor_person_id": "SH-EMP-ESS-0003",
+      "detail": {
+        "action": "local grant disabled after missed review",
+        "grant_id": "SH-REFCTRL-GRANT-001",
+        "ticket_id": "SH-REFCTRL-TKT-PRIV-REVIEW"
+      },
+      "due_id": null,
+      "event_at": "2027-04-01T00:10:00Z",
+      "event_id": "SH-REFCTRL-EV-PRIV-REVOKE",
+      "fictional_available_at": "2027-04-01T00:25:00Z",
+      "result": "COMPENSATING_RESPONSE",
+      "reviewer_person_id": "SH-EMP-ESS-0004",
+      "source_kind": "NEWLY_AUTHORED_SYNTHETIC_COMPANY_EXERCISE_EVENT_NOT_REAL_DEPLOYMENT"
+    },
+    {
+      "actor_person_id": "SH-EMP-ESS-0003",
+      "detail": {
+        "grant_id": "SH-REFCTRL-GRANT-001",
+        "original_miss_retained": true,
+        "ticket_id": "SH-REFCTRL-TKT-PRIV-REVIEW"
+      },
+      "due_id": "SH-REFCTRL-2027-PRIV-REVIEW",
+      "event_at": "2027-04-02T10:00:00Z",
+      "event_id": "SH-REFCTRL-EV-PRIV-REVIEW-LATE",
+      "fictional_available_at": "2027-04-02T10:15:00Z",
+      "result": "SUCCESS_LATE",
+      "reviewer_person_id": "SH-EMP-ESS-0004",
+      "source_kind": "NEWLY_AUTHORED_SYNTHETIC_COMPANY_EXERCISE_EVENT_NOT_REAL_DEPLOYMENT"
+    }
+  ],
+  "repository_acceptance_at": null,
+  "repository_available_at": null,
+  "scenario": "FICTIONAL_2027_Q1_LOCAL_REFERENCE_EXERCISE",
+  "schedule": [
+    {
+      "authority_id": "SH-REFCTRL-PLAN-2027-Q1",
+      "control_id": "SH-IAM-006",
+      "due_at": "2027-02-15T12:00:00Z",
+      "due_id": "SH-REFCTRL-2027-NH-ROT",
+      "object_id": "SH-REFCTRL-SVC-001",
+      "window_end_exclusive": "2027-02-16T00:00:00Z",
+      "window_start": "2027-02-15T00:00:00Z"
+    },
+    {
+      "authority_id": "SH-REFCTRL-PLAN-2027-Q1",
+      "control_id": "SH-IAM-006",
+      "due_at": "2027-03-31T12:00:00Z",
+      "due_id": "SH-REFCTRL-2027-NH-REVIEW",
+      "object_id": "SH-REFCTRL-SVC-001",
+      "window_end_exclusive": "2027-04-01T00:00:00Z",
+      "window_start": "2027-03-31T00:00:00Z"
+    },
+    {
+      "authority_id": "SH-REFCTRL-PLAN-2027-Q1",
+      "control_id": "SH-BCM-002",
+      "due_at": "2027-01-10T12:00:00Z",
+      "due_id": "SH-REFCTRL-2027-BKP-01",
+      "object_id": "SH-REFCTRL-DS-001",
+      "window_end_exclusive": "2027-01-11T00:00:00Z",
+      "window_start": "2027-01-10T00:00:00Z"
+    },
+    {
+      "authority_id": "SH-REFCTRL-PLAN-2027-Q1",
+      "control_id": "SH-BCM-002",
+      "due_at": "2027-01-12T12:00:00Z",
+      "due_id": "SH-REFCTRL-2027-BKP-02",
+      "object_id": "SH-REFCTRL-DS-001",
+      "window_end_exclusive": "2027-01-13T00:00:00Z",
+      "window_start": "2027-01-12T00:00:00Z"
+    },
+    {
+      "authority_id": "SH-REFCTRL-PLAN-2027-Q1",
+      "control_id": "SH-BCM-002",
+      "due_at": "2027-01-14T12:00:00Z",
+      "due_id": "SH-REFCTRL-2027-BKP-03",
+      "object_id": "SH-REFCTRL-DS-001",
+      "window_end_exclusive": "2027-01-15T00:00:00Z",
+      "window_start": "2027-01-14T00:00:00Z"
+    },
+    {
+      "authority_id": "SH-REFCTRL-PLAN-2027-Q1",
+      "control_id": "SH-BCM-003",
+      "due_at": "2027-01-20T12:00:00Z",
+      "due_id": "SH-REFCTRL-2027-REST-01",
+      "object_id": "SH-REFCTRL-DS-001",
+      "window_end_exclusive": "2027-01-21T00:00:00Z",
+      "window_start": "2027-01-20T00:00:00Z"
+    },
+    {
+      "authority_id": "SH-REFCTRL-PLAN-2027-Q1",
+      "control_id": "SH-IAM-005",
+      "due_at": "2027-03-31T12:00:00Z",
+      "due_id": "SH-REFCTRL-2027-PRIV-REVIEW",
+      "object_id": "SH-REFCTRL-GRANT-001",
+      "window_end_exclusive": "2027-04-01T00:00:00Z",
+      "window_start": "2027-03-31T00:00:00Z"
+    },
+    {
+      "authority_id": "SH-REFCTRL-PLAN-2027-Q1",
+      "control_id": "SH-REC-004",
+      "due_at": "2027-03-15T12:00:00Z",
+      "due_id": "SH-REFCTRL-2027-DISP-ACTIVE",
+      "object_id": "SH-REFCTRL-COPY-ACTIVE",
+      "window_end_exclusive": "2027-03-16T00:00:00Z",
+      "window_start": "2027-03-15T00:00:00Z"
+    },
+    {
+      "authority_id": "SH-REFCTRL-PLAN-2027-Q1",
+      "control_id": "SH-REC-004",
+      "due_at": "2027-03-15T12:00:00Z",
+      "due_id": "SH-REFCTRL-2027-DISP-BACKUP",
+      "object_id": "SH-REFCTRL-COPY-BACKUP",
+      "window_end_exclusive": "2027-03-16T00:00:00Z",
+      "window_start": "2027-03-15T00:00:00Z"
+    }
+  ],
+  "scope": {
+    "company_2027_annual_control_effectiveness": null,
+    "company_wide_population_complete": false,
+    "complete_selected_population": true,
+    "customer_data": false,
+    "environment_id": "SH-REFCTRL-LOCAL-LAB-01",
+    "excluded": [
+      "Reno/Boise host operations and provider contracts",
+      "other company systems, accounts, datasets and sites",
+      "SH-IAM-007 payroll-release service",
+      "private A/B local exercise declarations and outcomes"
+    ],
+    "hosted_production": false,
+    "legal_entity_id": "SHI",
+    "personal_data": false,
+    "physical_site_id": null,
+    "real_deployment": false,
+    "scope_id": "SH-REFCTRL-2027-Q1",
+    "service_reference_ids": [
+      "SVC-identity",
+      "SVC-backup",
+      "SVC-compute"
+    ]
+  },
+  "selected_personnel": [
+    {
+      "case_role": "LOCAL_EXERCISE_OPERATOR",
+      "legal_employer": "SHI",
+      "modeled_2027_assignment": "PROSPECTIVE_CASE_ONLY_NOT_EMPLOYMENT_CONTINUITY_PROOF",
+      "person_id": "SH-EMP-ESS-0003",
+      "unit_at_august": "ess"
+    },
+    {
+      "case_role": "LOCAL_EXERCISE_REVIEWER",
+      "legal_employer": "SHI",
+      "modeled_2027_assignment": "PROSPECTIVE_CASE_ONLY_NOT_EMPLOYMENT_CONTINUITY_PROOF",
+      "person_id": "SH-EMP-ESS-0004",
+      "unit_at_august": "ess"
+    }
+  ],
+  "source_pins": {
+    "august_roster": {
+      "path": "enterprise/operations/source/completed_period_2026_08.json",
+      "sha256": "14e7b53177b80d671ed66fdc309c6b2c0e1b0b68567f54da97dd02dca4d1ddf8"
+    },
+    "ccf_procedures": {
+      "path": "enterprise/ccf/assurance/design_data/control_procedures.json",
+      "sha256": "258f5c868e16f3dc197594857dc86a4f2b3ef11e3e5a36dd0a80a9fc6d40c679"
+    },
+    "common_boundary": {
+      "path": "enterprise/operations/portal_2027_common_boundary/opening_v0.1.json",
+      "sha256": "8b492a52f8d10903d05d767766992b730524008a1e96d469d4449ebb8762791b"
+    }
+  },
+  "state": "PROVISIONAL_NEWLY_AUTHORED_FICTIONAL_COMPANY_EXERCISE",
+  "version": "0.1.0"
+}
