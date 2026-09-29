@@ -580,8 +580,69 @@ passed [independent postcopy review](../../../../enterprise/generated/audit-suit
 All 439 active files match the ordinary-byte snapshot, all 54 SQLite databases
 pass integrity checks, and Btrfs reports zero shared extents. The earlier
 checkpoints, private Key clone, protected roots and historical audits remain
-unchanged. P5C/D have analysis-only isolated drafts, not live collection or
-task credit.
+unchanged.
+
+The [P5C provider/training collection](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5c-provider-training-run-v1/RESULT.json)
+passed [independent actual postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5c-provider-training-independent-postreview-v1/REVIEW.json)
+(SHA-256 `5d23ef30a2e97c0945294cf435ff55fbd838fc3c84919fd3aeb326ffce10a6e6`).
+Five PBC groups per side and 103 ordinary request-linked collections advanced
+the same engagements A272→333/B246→308. The receipts join 75 distinct full
+company-native source tuples to retained bytes; 75 new content-addressed files
+were created. All 29 temporary grants were revoked. Messy B retains the
+provider omission/backfill and late-training chronology, without asserting an
+operating provider, accepted contract, or full-year effectiveness. The
+[post-P5C whole-state checkpoint](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p5c-whole-state-checkpoint-run-v2/CHECKPOINT-RESULT.json)
+passed [independent postcopy review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p5c-whole-state-checkpoint-independent-postreview-v2/REVIEW.json)
+(SHA-256 `3ed92d4d398b9cc831511ff19a25422db691976f3de46faefeb9b52f4f09b711`):
+all 514 files match with separate inodes, 54 SQLite checks pass, and Btrfs
+reports zero shared extents. A preserved v1 proposal failed a dry preflight
+because it expected a nonexistent review field; corrected v2 passed before the
+actual copy. No audit task or Key state changed.
+
+The [P5D risk/configuration collection](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5d-risk-config-run-v1/RESULT.json)
+passed [independent actual postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5d-risk-config-independent-postreview-v1/REVIEW.json)
+(SHA-256 `cebeb60b2dc7f04ad75581b038dff1ec9f2c345669b62657b6996b6986561bc0`).
+Two PBC groups per side and 24 ordinary request-linked collections advanced
+A333→349/B308→324, with 24 distinct native-to-receipt-to-retained joins and
+24 new retained files. All 14 temporary grants were revoked. B's risk input
+omission/backfill and local configuration inventory timeout 50→40 are distinct
+source histories. The inventory association belongs to CFG-001; it does not
+prove CFG-002 APPLY or a deployed enterprise inventory. The
+[post-P5D whole-state checkpoint](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p5d-whole-state-checkpoint-run-v1/CHECKPOINT-RESULT.json)
+passed [independent postcopy review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p5d-whole-state-checkpoint-independent-postreview-v1/REVIEW.json)
+(SHA-256 `eb042c1470ada3927ae62d78714f2e7530ebb683a99220af12b7d751eee197b4`):
+all 538 files match with separate inodes, 54 SQLite checks pass, and Btrfs
+reports zero shared extents. Every one of the 409 tasks per branch remains
+`NOT_STARTED`/`NOT_RUN`; the active pair has no bound Key, grade or release.
+
+The [P6 task triage](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p6-task-clause-triage-v1/TASKS.json)
+passed [independent review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p6-task-clause-triage-independent-review-v1/REVIEW.json)
+for 84 exact P5 task IDs per side. Its [IAM, incident and logging procedure
+support matrix](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p6-iam-incident-procedure-support-v3/TASK_MATRIX.json)
+passed [independent review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p6-iam-incident-procedure-support-independent-review-v3/REVIEW.json)
+(SHA-256 `13d7dd7268807a67652c39da02a3df3e94c6b24b5d4621a6007bc5b4f0fc7f9b`).
+It maps 57 exact tasks per side across 11 controls to 301 source-to-retained
+edges and separates six Q4 references nominally after 2027. The
+[provider, training, risk and configuration matrix](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p6-provider-training-risk-config-procedure-support-v2/TASK_MATRIX.json)
+passed [independent review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p6-provider-training-risk-config-procedure-support-independent-review-v2/REVIEW.json)
+(SHA-256 `aa335757608ce5ffa8de64d8291f4f47457ae89454d8e9147d8262cdb41454c4`),
+mapping the other 27 exact tasks per side across seven controls to 127 further
+source-to-retained edges. Both matrices record population, contract, site,
+management-description and PHI/legal fact gates. All nominal 2027 records
+are future authored simulations relative to September 29, 2026; neither
+calendar placement nor source association makes them current operating
+evidence. These are read-only procedure plans, not performed task tests or
+substantive conclusions.
+
+A separately committed [prospective data-flow exercise](../../../../enterprise/audit_suite/DATA_FLOW_EXERCISE.md)
+emits 13 immutable company-native metadata versions with a Clean blocked path
+and a Messy queued-then-quarantined marker. Its [independent isolated review](../../../../enterprise/generated/audit-suite/data-flow-prospective-reference-2026-09-29-independent-review-v2/REVIEW.json)
+(SHA-256 `4ae1e319439272e30635a4d7849c4d7e5c5a30aa6f5abbcecc343dfef21626cf`)
+verified one continuing Messy exception across five event rows. The exercise
+is outside the active pair's frozen registry, has no actual data transfer or
+PHI, and supplies no 2027 operating or audit task credit. Its
+[gap packet](../../../../enterprise/audit_suite/DATA_FLOW_GAP_DECISION_PACKET.md)
+identifies the service-owner, legal, retention and period facts still needed.
 
 The active pair's 13-component company-source binding is frozen at activation.
 New native systems needed for the remaining controls cannot be silently added
@@ -597,7 +658,7 @@ their `QUEUED_NOT_STARTED` labels do not reset later job progress. Conversely, a
 working command, passing fixture or earlier paired journey does not close a broader
 acceptance criterion. The counts above describe named historical checkpoints, not a
 live query. The latest independently reviewed v4 packet pins A1939/B2066 and
-authorized original-root company journal snapshots. The integrated A175/B147
+authorized original-root company journal snapshots. The integrated A349/B324
 pair, private Key clone and selected-period close engagements above are separate
 private outputs, not additional indexed audit rows in that packet.
 

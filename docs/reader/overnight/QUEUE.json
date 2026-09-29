@@ -697,7 +697,25 @@
           "date": "2026-09-29",
           "scope": "Integrated P5B logging/incident native collection and independently preserved whole-state checkpoint",
           "validation": "Independent P5B actual postreview SHA-256 c732fe268d28563c45ccde05facb6683eff6785316608ff947e7629f6fe70b2a verifies A175→272/B147→246, 176 ordinary native→request receipt→retained joins from 68 distinct source identities, 67 new content-addressed files, 20 revoked scoped grants/40 access events per side, B omission/backfill and escalation/corrective chronology, and 409 untouched tasks per side. Independent checkpoint postcopy review SHA-256 ca07ebf8f029b94738f436478a421dccc3c4c2b2a83f2bf0a7feaa09f3091b75 verifies 439 identical active/snapshot files, 54 SQLite checks, zero Btrfs shared extents and protected history unchanged.",
-          "acceptance": "Collection and recovery proof only. P5C/D remain unexecuted; no clause completion, full-year operating effectiveness, professional acceptance, Key bind, learner release or grade."
+          "acceptance": "At this historical checkpoint, P5C/D remained unexecuted. This is collection and recovery proof only; no clause completion, full-year operating effectiveness, professional acceptance, Key bind, learner release or grade."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Integrated P5C provider/training and P5D risk/configuration native collections with independently preserved whole-state checkpoints",
+          "validation": "P5C independent actual postreview SHA-256 5d23ef30a2e97c0945294cf435ff55fbd838fc3c84919fd3aeb326ffce10a6e6 verified A272→333/B246→308, 103 request-linked native-to-retained joins over 75 full source tuples, 29 revoked grants and B provider/training chronology. Post-P5C checkpoint independent review SHA-256 3ed92d4d398b9cc831511ff19a25422db691976f3de46faefeb9b52f4f09b711 verified 514 copied files and zero Btrfs sharing. P5D independent actual postreview SHA-256 cebeb60b2dc7f04ad75581b038dff1ec9f2c345669b62657b6996b6986561bc0 verified A333→349/B308→324, 24 native-to-retained joins, 14 revoked grants and B risk/config chronology. Post-P5D checkpoint independent review SHA-256 eb042c1470ada3927ae62d78714f2e7530ebb683a99220af12b7d751eee197b4 verified 538 copied files, 54 SQLite checks and zero Btrfs sharing.",
+          "acceptance": "The same bound 13-component pair now has verified source associations for the selected P5 tranches, but all 409 tasks per branch remain NOT_STARTED/NOT_RUN. No complete population, full-year operation, PHI/BA fact, qualified conclusion, Key bind, grade or release follows."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Exact P6 task triage and IAM/incident/logging plus provider/training/risk/configuration procedure-support mapping",
+          "validation": "Independent 84-task triage review SHA-256 c14ab2d5af2dc74706c04850fbb1c74bfb9ec4157a8e9e8e07fb5efce7dbea62 verified exact untouched task hashes per side. IAM/incident/logging temporal successor independent review SHA-256 13d7dd7268807a67652c39da02a3df3e94c6b24b5d4621a6007bc5b4f0fc7f9b verified 57 tasks per side and 301 native-to-retained edges, including six nominal after-period Q4 references. Provider/training/risk/configuration temporal successor independent review SHA-256 aa335757608ce5ffa8de64d8291f4f47457ae89454d8e9147d8262cdb41454c4 verified the other 27 tasks per side and 127 native-to-retained edges. Both preserve population, contract, site, management-description and PHI/legal fact gates, and mark all nominal 2027 sources future simulated relative to 2026-09-29.",
+          "acceptance": "All 84 mapped tasks per side remain NOT_STARTED/NOT_RUN. Read-only procedure support is not performed testing or actual operating evidence as of packet date. No workpaper, sample, task conclusion, Key, grade or release was issued; 325 other tasks per side and qualified substantive review remain open."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Prospective metadata-only data-flow company source and final source-registry gate",
+          "validation": "Isolated data-flow exercise V2 independent review SHA-256 4ae1e319439272e30635a4d7849c4d7e5c5a30aa6f5abbcecc343dfef21626cf verified 13 immutable company-native versions, Clean blocked and Messy queued-then-quarantined paths, one continuing open exception across five event rows, no transfer or PHI, and no active audit mutation. The same reviewed code was integrated into the repo and 13 focused exercise/CompanyStore tests plus Ruff passed. Read-only final-registry plan SHA-256 c1095b561fe8a3df86f089c12973bf0aaab49bf742c279f2758557334f03839e records that the current 13-component A/B binding is frozen.",
+          "acceptance": "The exercise is future simulated and outside the active pair. Actual PHI/BA/contract/retention facts and deployed operation remain unasserted. A source-complete registry and fresh zero-evidence Clean/Messy pair are required for final full-scope rehearsal; no source transplant or task credit."
         }
       ]
     },
@@ -1749,7 +1767,7 @@
     "worktree": "SABLEHARBOR-audit-suite",
     "branch": "build/audit-training-suite",
     "boundaries": "Local integrated implementation; preserve immutable sources and private records. Atlas read-only. No inferred professional acceptance or remote deployment.",
-    "checkpoint_note": "Company source foundation, retrospective documentary migration, original operating-table bridge, live browser collection, protected reference-key explorer and context/navigation foundation implemented. Full queued acceptance remains in progress."
+    "checkpoint_note": "The integrated 13-component Clean/Messy pair reached independently reviewed A349/B324 after P5A-D company-native collections; a 538-file ordinary-byte checkpoint passed independent review. All 409 tasks per branch remain NOT_STARTED/NOT_RUN. Exact P6 procedure mapping has begun; source-complete final-pair replay, performed task testing, qualified substantive review and owner usability acceptance remain open. Atlas is read-only."
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"
 }
