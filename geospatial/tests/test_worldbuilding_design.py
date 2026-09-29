@@ -24,6 +24,8 @@ def test_proposed_design_has_explicit_source_mileage_and_access_boundary():
     bridge = report["candidate_measurement_bridge"]
     assert bridge["candidate_geodesic_route_miles"] == pytest.approx(40.193028, abs=1e-6)
     assert bridge["projected_branch_length_increase_m"] == pytest.approx(310.775, abs=0.001)
+    assert bridge["source_branch_plan_tortuosity_slack_m"] == pytest.approx(46.568, abs=0.001)
+    assert bridge["candidate_increase_beyond_all_source_chord_slack_m"] > 264
     assert "UNCHANGED_ACCEPTED" in bridge["source_40_mile_status"]
     rows = {row["id"]: row for row in report["candidate_alignments"]}
     assert len(rows) == len(geometry["features"]) == 8

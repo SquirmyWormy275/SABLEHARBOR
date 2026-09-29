@@ -136,7 +136,7 @@ to Red Wash is introduced.
 
 | Treatment | Consequence before adoption |
 | --- | --- |
-| Preserve the accepted **40.000000** geodesic route-miles | Re-engineer portions of the proposed branch geometry to remove **0.193028** geodesic route-mile (about **310.775 projected metres**) elsewhere. Repeat grade, curvature, water/road, structure, route-mile and site checks. A bookkeeping relabeling cannot shorten a physical line. |
+| Preserve the accepted **40.000000** geodesic route-miles | Redesign the curves and route geometry to remove **0.193028** geodesic route-mile (about **310.775 projected metres**) while repeating grade, curvature, water/road, structure, route-mile and site checks. The two source branches have only **46.568 projected metres** of total slack above their endpoint chords; even perfectly straightening both would leave **264.206 m** of this candidate increase. The present endpoints/junctions or another substantive geometry assumption therefore need reconsideration. A bookkeeping relabeling cannot shorten a physical line. |
 | Adopt the curves' **40.193028** geodesic route-miles | Amend the controlling industrial route/segment source, rechain branch mileposts and five structure placements, and reperform dispatch/capacity, maintenance, capital and downstream finance or geographic exports that consume exact mileage. Do not silently add the curves to a frozen release. |
 
 Neither treatment is selected by this derivative. The two new leads plus four

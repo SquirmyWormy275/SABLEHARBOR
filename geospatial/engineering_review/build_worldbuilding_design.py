@@ -315,6 +315,7 @@ def build():
     projected_candidate_branch_m = 0.0
     geodesic_source_branch_m = 0.0
     geodesic_candidate_branch_m = 0.0
+    source_branch_chord_slack_m = 0.0
     with rasterio.open(ROOT / SOURCES["dem"]) as dem:
         if str(dem.crs) != "EPSG:26913":
             raise ValueError("Pinned DEM projection changed")
@@ -353,12 +354,17 @@ def build():
             projected_candidate_branch_m += line.length
             geodesic_source_branch_m += GEOD.geometry_length(transform(TO_WGS84, source_line))
             geodesic_candidate_branch_m += GEOD.geometry_length(transform(TO_WGS84, line))
+            source_chord_m = Point(source_line.coords[0]).distance(Point(source_line.coords[-1]))
+            source_slack_m = source_line.length - source_chord_m
+            source_branch_chord_slack_m += source_slack_m
             row = {
                 "id": route,
                 "role": "PROPOSED_HORIZONTAL_AND_VERTICAL_ROUTE_SUCCESSOR",
                 "source_projected_length_m": _report(source_line.length),
                 "candidate_projected_length_m": _report(line.length),
                 "candidate_minus_source_projected_m": _report(line.length - source_line.length),
+                "source_endpoint_chord_m": _report(source_chord_m),
+                "source_plan_tortuosity_slack_m": _report(source_slack_m),
                 "main_junction_chainage_m": _report(junction),
                 "curve_runout_source_m": runout,
                 "curve_minimum_sampled_radius_m": _report(radius),
@@ -565,6 +571,12 @@ def build():
             "projected_branch_length_increase_m": _report(
                 projected_candidate_branch_m - projected_source_branch_m
             ),
+            "source_branch_plan_tortuosity_slack_m": _report(source_branch_chord_slack_m),
+            "candidate_increase_beyond_all_source_chord_slack_m": _report(
+                projected_candidate_branch_m
+                - projected_source_branch_m
+                - source_branch_chord_slack_m
+            ),
             "candidate_geodesic_route_miles": _report(
                 40 + (geodesic_candidate_branch_m - geodesic_source_branch_m) / 1609.344, 6
             ),
@@ -596,6 +608,7 @@ def build():
         ],
         "decision_effects": [
             "Branch candidate lengths differ from accepted route lengths; operating route-mile, milepost, structure and scenario source cannot silently adopt them.",
+            "The source branch endpoint chords leave less than 47 projected metres of total plan-length slack; straightening both source branches cannot absorb the candidate's 310.775-metre increase while their current endpoints stay fixed.",
             "Two proposed leads and four terminal ladder curves join source tracks; source 31-track register has no lead or ladder geometry and is not amended by this screen.",
             "Synthetic facility envelopes are not parcels. Exterior lead portions have no real title, easement, lease, construction or interchange instrument.",
             "Pinned DEM and waterbody intersection screens do not establish subsurface, flood, wetlands, drainage, utilities, road clearances, earthwork volume or structural design.",
