@@ -1097,6 +1097,12 @@
           "scope": "Populated exact-copy checkpoint walkthrough",
           "validation": "Revision997/605original workroom copy; two explicit captures, exact replay/replacement/history,1093unchanged record comparisons and exactoriginalpreview; desktop/narrow/focus passed.",
           "acceptance": "Original/copy formal data and18source roots unchanged; copy sessions and dedicated companions changed only; changed/redacted cases covered by separate tests."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Source/acquisition-switch draft continuity in the audit workroom",
+          "validation": "Commit e61d29bf; private receipt SHA-256 a28a3e1ff2e7502a65defd76c345c284a71fcb366d196a7c15620adad7bf9821. Eight focused backend tests, 256 frontend tests, production build, full desktop/narrow browser and a 34-action fixture journey passed. Volatile authored text is retained; stale source links/formal submission are blocked until explicit carry-forward and new selection. Exact-match legacy drafts expose narrative only under current authorization and keep old linked IDs withheld.",
+          "limits": "Fixture journey and technical draft safety only; no live audit draft or company source changed, no owner usability acceptance or full long-investigation acceptance."
         }
       ]
     },
@@ -1381,6 +1387,12 @@
           "scope": "Paired saved-context and historical-work inspection",
           "validation": "Exact old workpaper restore, retained private handoff/checkpoint, learner/instructor access separation and390pixel layout passed in the consolidated journey.",
           "acceptance": "No actual model call or human feedback; remaining broader acceptance criteria remain in force."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Same-engagement company-source and evidence-acquisition context isolation",
+          "validation": "Commit df8342eb; private receipt SHA-256 cceeef37c37013b0c2354692ca64b2707fd8b164555b92269595df29e4246037. Search, list and table filters reset on source/acquisition switch while ordinary revision navigation retains them. A 13-action compiled-App journey issued nine GETs and no mutations/errors. Commit e61d29bf then blocked stale draft links and old-basis formal submission in the 34-action draft fixture.",
+          "limits": "Scripted/fixture technical checks, not actual owner feedback, model availability assessment, or full CX-05 journey acceptance."
         }
       ]
     }
