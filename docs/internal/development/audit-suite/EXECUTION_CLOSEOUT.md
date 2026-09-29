@@ -124,6 +124,11 @@ checkpoint. [QUEUE.json](../../../reader/overnight/QUEUE.json) retains the indiv
 acceptance criteria. The private execution index retains exact workrooms, command
 intents, original hashes, failures and verification receipts.
 
+The [September 29 delivery timeline](DELIVERY_TIMELINE_2026-09-29.md) sets
+week-2, week-10, week-14, week-18 and week-20 engineering gates for a
+source-faithful fictional rehearsal, with week-24 contingency. It does not
+date real-world Type 2 readiness or external acceptance.
+
 | Deliverable / queue criteria | Tracked implementation to reuse | Remaining work and finish evidence |
 |---|---|---|
 | Procedure reconciliation — AQ-06/AQ-07 | Ordinary `task.update` supports attributed status, conclusion and rationale; [scope reconciliation](../../../../enterprise/audit_suite/scope_reconciliation.py) preserves prior work when scope changes. These mechanisms do not perform the authored tests. | Account for every scoped task and conditional duty against exact originals, workpapers, population units and performed checks. Execute supportable remaining clauses and record limitations or unperformed steps. Retain per-task dispositions and exact ordinary-command references; no blanket PASS or automatic N/A. |
