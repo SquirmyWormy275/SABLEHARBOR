@@ -66,6 +66,8 @@ def bound(tmp_path):
 def test_exact_native_bytes_and_dependency_atomic_replay(bound):
     target, source, action = bound
     original_db = (source[0] / "company.sqlite3").read_bytes()
+    with backup.database(target[0]) as db:
+        registered_systems = {tuple(row) for row in db.execute("SELECT * FROM systems")}
     result = admission.admit_dataset(target[0], **action)
     with backup.database(target[0]) as db:
         row = backup.native(db, result["source_pin"])
@@ -73,7 +75,7 @@ def test_exact_native_bytes_and_dependency_atomic_replay(bound):
         assert decode(row["provenance"])["source_admission"] == result["dependency"]
         assert db.execute("SELECT revision FROM backup_runtime_state").fetchone()[0] == 1
         assert db.execute("SELECT count(*) FROM backup_runtime_commands").fetchone()[0] == 1
-        assert db.execute("SELECT count(*) FROM systems").fetchone()[0] == 8
+        assert {tuple(row) for row in db.execute("SELECT * FROM systems")} == registered_systems
     retained = state(target[0])
     assert admission.admit_dataset(target[0], **action) == result
     assert state(target[0]) == retained
