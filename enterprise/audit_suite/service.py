@@ -9,6 +9,7 @@ import io
 import re
 import time
 from collections import OrderedDict
+from collections.abc import Callable
 from datetime import UTC, datetime
 from pathlib import Path
 from urllib.parse import quote, urlsplit
@@ -18,6 +19,8 @@ from fastapi.responses import FileResponse, JSONResponse, Response
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 
 from .artifacts import MAX_BYTES
+from .company_rights_http import CompanyRightsHTTP
+from .company_rights_producer import CompanyRightsProducer, RightsUnavailable
 from .engine import Engine, find
 from .store import DomainError
 
@@ -135,6 +138,7 @@ def create_app(
     enable_instructor_writeback: bool = True,
     background_jobs: bool = False,
     workspace_contexts: bool = False,
+    company_rights_factory: Callable[[Engine], CompanyRightsProducer] | None = None,
 ) -> FastAPI:
     if company_bindings is not None and company_root is None and company_registry is None:
         raise DomainError("Company root or registry required with bindings")
@@ -202,6 +206,14 @@ def create_app(
         company_profile=company_profile,
         **({"repository": repository} if repository else {}),
     )
+    company_rights = None
+    if company_rights_factory is not None:
+        producer = company_rights_factory(engine)
+        if not isinstance(producer, CompanyRightsProducer) or producer.store is not engine.store:
+            raise DomainError(
+                "Trusted company-rights producer must use this portal store", status=503
+            )
+        company_rights = CompanyRightsHTTP(producer)
     # Cookies are scoped by host/path, not port. Separate local workrooms must
     # not overwrite each other's browser sessions. This is a stable namespace,
     # not a secret or an authorization decision; Store still validates tokens.
@@ -213,6 +225,7 @@ def create_app(
         title="Sable Harbor audit training", docs_url=None, redoc_url=None, openapi_url=None
     )
     app.state.engine = engine
+    app.state.company_rights = company_rights
     jobs = None
     if background_jobs:
         from .background_jobs import BackgroundJobs
@@ -306,7 +319,13 @@ def create_app(
         response.headers["X-Content-Type-Options"] = "nosniff"
         response.headers["Cache-Control"] = (
             "no-store, private"
-            if "/instructor-key/" in request.url.path and request.url.path.endswith("/original")
+            if (
+                "/company/rights/" in request.url.path
+                or (
+                    "/instructor-key/" in request.url.path
+                    and request.url.path.endswith("/original")
+                )
+            )
             else "no-store"
         )
         response.headers["Referrer-Policy"] = "no-referrer"
@@ -844,6 +863,112 @@ def create_app(
         return await asyncio.to_thread(
             inputs, engine, principal["id"], engagement_id, request.query_params["artifact_id"]
         )
+
+    def rights_session(request: Request):
+        # This boundary requires a browser session established by this portal.
+        # The shared operator bearer credential carries no company person ID.
+        if request.headers.get("authorization"):
+            raise DomainError("Authenticated company browser session required", status=401)
+        token = request.cookies.get(session_cookie_name, "")
+        if not token:
+            raise DomainError("Authenticated company browser session required", status=401)
+        if company_rights is None:
+            raise DomainError("Company record rights are not configured", status=503)
+        return token
+
+    async def rights_read(request: Request, engagement_id: str, record_id: str, action: str):
+        if request.query_params:
+            raise DomainError("Company record read accepts no query overrides")
+        token = rights_session(request)
+        try:
+            return await asyncio.to_thread(
+                company_rights.direct,
+                token=token,
+                engagement_id=engagement_id,
+                record_id=record_id,
+                action=action,
+            )
+        except RightsUnavailable as exc:
+            raise DomainError("Company record unavailable", status=403) from exc
+
+    @app.get("/api/engagements/{engagement_id}/company/rights/records/{record_id}")
+    async def company_rights_record(engagement_id: str, record_id: str, request: Request):
+        content = await rights_read(request, engagement_id, record_id, "read")
+        return Response(
+            content,
+            media_type="application/octet-stream",
+            headers={
+                "X-Content-SHA256": hashlib.sha256(content).hexdigest(),
+                "Cache-Control": "no-store, private",
+            },
+        )
+
+    @app.get("/api/engagements/{engagement_id}/company/rights/records/{record_id}/snippet")
+    async def company_rights_snippet(engagement_id: str, record_id: str, request: Request):
+        content = await rights_read(request, engagement_id, record_id, "snippet")
+        try:
+            snippet = content.decode("utf-8")[:160]
+        except UnicodeDecodeError as exc:
+            raise DomainError("Company snippet unavailable", status=403) from exc
+        return JSONResponse(
+            {"record_id": record_id, "snippet": snippet},
+            headers={"Cache-Control": "no-store, private"},
+        )
+
+    @app.get("/api/engagements/{engagement_id}/company/rights/records/{record_id}/export")
+    async def company_rights_export(engagement_id: str, record_id: str, request: Request):
+        content = await rights_read(request, engagement_id, record_id, "export")
+        digest = hashlib.sha256(content).hexdigest()
+        return Response(
+            content,
+            media_type="application/octet-stream",
+            headers={
+                "X-Content-SHA256": digest,
+                "Content-Disposition": f'attachment; filename="company-record-{digest[:16]}.bin"',
+                "Cache-Control": "no-store, private",
+            },
+        )
+
+    async def rights_population(request: Request, engagement_id: str, action: str):
+        query = request.query_params
+        permitted = {"q", "offset", "limit"} if action == "search" else {"q"}
+        if set(query) - permitted or len(query.multi_items()) != len(query):
+            raise DomainError("Only bounded company search parameters are accepted")
+        phrase = query.get("q", "")
+        if not isinstance(phrase, str) or len(phrase) > 160 or (action == "search" and not phrase):
+            raise DomainError("Bounded company search text required")
+        token = rights_session(request)
+        try:
+            return await asyncio.to_thread(
+                company_rights.visible,
+                token=token,
+                engagement_id=engagement_id,
+                action=action,
+                query=phrase,
+            )
+        except RightsUnavailable as exc:
+            raise DomainError("Company record population unavailable", status=403) from exc
+
+    @app.get("/api/engagements/{engagement_id}/company/rights/search")
+    async def company_rights_search(engagement_id: str, request: Request):
+        records = await rights_population(request, engagement_id, "search")
+        try:
+            offset = int(request.query_params.get("offset", "0"))
+            limit = int(request.query_params.get("limit", "100"))
+        except ValueError as exc:
+            raise DomainError("Invalid company search page") from exc
+        if not 0 <= offset <= 10000 or not 1 <= limit <= 100:
+            raise DomainError("Invalid company search page")
+        page = records[offset : offset + limit]
+        return {
+            "records": [{"record_id": record_id} for record_id in page],
+            "next_offset": offset + limit if offset + limit < len(records) else None,
+        }
+
+    @app.get("/api/engagements/{engagement_id}/company/rights/count")
+    async def company_rights_count(engagement_id: str, request: Request):
+        records = await rights_population(request, engagement_id, "count")
+        return {"count": len(records)}
 
     @app.get("/api/engagements/{engagement_id}/company/systems")
     async def company_systems(engagement_id: str, request: Request):
