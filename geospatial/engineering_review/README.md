@@ -87,3 +87,129 @@ geotechnical/drainage design, parcel/title/access instrument or exact external
 client footprint was recovered here. Issue #107's detailed engineering
 acceptance remains open. The report is a bounded, checkable input to that work,
 and preserves the no-mine-spur and uranium custody gates.
+
+## Subsequent synthetic worldbuilding design candidate
+
+The later [`WORLD_BUILDING_DESIGN.json`](WORLD_BUILDING_DESIGN.json) and
+[`WORLD_BUILDING_DESIGN.geojson`](WORLD_BUILDING_DESIGN.geojson) form a **proposed
+case**, separate from the operating source above. Regenerate them with:
+
+```bash
+uv run --with-requirements geospatial/requirements.txt python -m geospatial.engineering_review.build_worldbuilding_design
+uv run --with-requirements geospatial/requirements.txt python -m pytest -q geospatial/tests/test_worldbuilding_design.py
+```
+
+The generator pins eight exact source files, including the accepted track and
+facility populations, screening DEM, local roads and waterbody polygons. It
+solves a continuous-grade (C1 piecewise-quadratic) profile for the 769-station
+mainline and for each proposed curve. Formation grade is at most 1.8%; a
+10,000 m vertical curvature proxy applies to the main/branches, 2,000 m to the
+two local leads and 1,000 m to the four terminal ladder connections. These are
+authored preliminary design assumptions, not a cited railroad standard or
+construction certification. The main candidate changes the accepted source
+formation by at most **0.615 m** and has maximum screened cut/fill of
+**6.683/5.738 m**. The candidate holds the mainline endpoints, so it does not
+silently change the accepted 40-mile source.
+
+The East and Mineral branch curves enter tangent to the source mainline and
+rejoin their source branches at 1,200 m and 800 m. Their sampled minimum plan
+radii are **153.054 m** and **162.210 m**. The accepted waterbody polygon
+intersection stays zero, and the six East and three Mineral local-road
+crossing IDs are preserved. Reconciliation of the **26** source structures
+finds no source-coordinate displacement; the five on affected branches need
+new milepost assignments if those curves are adopted. This is a plan/profile
+screen only: switch hardware, clearances, earthwork, drainage, load rating,
+utilities and field survey remain unproved.
+
+Two additional curves connect the source mainline to one existing track each
+at Taylor Terminal and Warehouse. The terminal lead is **506.186 m**, of
+which **467.299 m** is outside the synthetic terminal envelope. The warehouse
+lead is **717.268 m**, with **711.047 m** outside its envelope. Four separate
+yard-ladder curves join the other terminal tracks to the proposed terminal
+lead without mutually crossing. Their outside-envelope lengths are retained
+per feature in the JSON; they are not summed as a unique property footprint.
+The five terminal and one warehouse tracks thus have a **candidate physical
+topology**, while the accepted 31-track source remains unchanged. No rail spur
+to Red Wash is introduced.
+
+### Exact source choices exposed by the candidate
+
+| Treatment | Consequence before adoption |
+| --- | --- |
+| Preserve the accepted **40.000000** geodesic route-miles | Redesign the curves and route geometry to remove **0.193028** geodesic route-mile (about **310.775 projected metres**) while repeating grade, curvature, water/road, structure, route-mile and site checks. The two source branches have only **46.568 projected metres** of total slack above their endpoint chords; even perfectly straightening both would leave **264.206 m** of this candidate increase. A wider mainline geometry change is needed; the fixed-control candidate below demonstrates one without moving endpoints or junction coordinates. A bookkeeping relabeling cannot shorten a physical line. |
+| Adopt the curves' **40.193028** geodesic route-miles | Amend the controlling industrial route/segment source, rechain branch mileposts and five structure placements, and reperform dispatch/capacity, maintenance, capital and downstream finance or geographic exports that consume exact mileage. Do not silently add the curves to a frozen release. |
+
+Neither treatment is selected by this derivative. The two new leads plus four
+yard ladder curves also need an explicit track-register, asset, operating and
+capital treatment before a source successor could represent them as in use.
+The existing site envelopes are acreage-based synthetic rectangles, not
+property lines. The outside-envelope route, interentity ARU/BS&T connection,
+UP interface where applicable, and any real title/easement/road crossing
+rights still have no instrument in this package. The terrain and waterbody
+screen cannot establish those rights or a finished site plan.
+
+The 1898 coal-era line, the 14–16-mile 1954 survivor and abandoned/relocated
+segments retain null geometry with explicit source/derived classifications.
+There is no recovered contemporary linework that could locate them. The
+proposed modern curves do not backdate the line. Exact external customer
+footprints likewise remain governed by their accepted restricted/unknown
+precision rather than being invented to fill a map.
+
+### Recommended fixed-control, exact-40-mile alternative
+
+The subsequent [`COMPENSATED_40_MILE_CANDIDATE.json`](COMPENSATED_40_MILE_CANDIDATE.json)
+and [`COMPENSATED_40_MILE_CANDIDATE.geojson`](COMPENSATED_40_MILE_CANDIDATE.geojson)
+show that the 40-mile treatment above is **geometrically feasible at the
+declared worldbuilding precision** without moving accepted site/end points,
+branch junction coordinates or any of the 26 structure coordinates. Regenerate
+and test the fixed-control case with:
+
+```bash
+uv run --with-requirements geospatial/requirements.txt python -m geospatial.engineering_review.build_compensated
+uv run --with-requirements geospatial/requirements.txt python -m pytest -q geospatial/tests/test_compensated_rail_design.py
+```
+
+The generator identifies 25 fixed controls and smoothly shortens ten
+mainline spans between them. The single root-solved scale shortens the
+mainline by **310.648 m geodesic** (**310.770 m projected**), exactly
+offsetting the two proposed branch curves. It retains every original
+local-road crossing ID, zero overlap with pinned waterbody polygons and a
+simple mainline. The mainline's minimum sampled plan radius is **814.022 m**
+versus **672.097 m** in the accepted source. Its C1 profile meets the declared
+1.8% grade and 12 m cut/fill screen; the branch, lead and ladder profiles
+also remain feasible. The Taylor lead and ladder geometry is recomputed from
+this shorter mainline, rather than leaving a disconnected old switch point.
+
+| Route | Accepted source miles | Fixed-control candidate miles |
+| --- | ---: | ---: |
+| BST-MAIN | 33.348476764 | 33.155448786 |
+| BST-EAST | 4.000000000 | 4.136588436 |
+| BST-MINERAL | 2.651523236 | 2.707962778 |
+| **Unique route total** | **40.000000000** | **40.000000000** |
+
+The reported total uses unrounded projected geometry in the generator. The
+distributable GeoJSON rounds longitude/latitude to ten decimals; independent
+reimport measures within **0.00000001 mile** (about 1.6 cm) of 40 miles.
+
+This is the recommended **synthetic design source path**, not an accepted
+operating amendment. The three per-route lengths, all affected segment
+boundaries and structure mileposts still need a dated source successor and
+downstream reconciliation. An isolated **mainline-only** sensitivity in the
+existing planning calculator, holding accepted branch hours fixed, showed
+179 of 180 monthly train-hour cells change and March 2027 downside
+conditional expanded rail capacity change **1,008→1,344 cars**. That is not
+the complete-route result. Both proposed branches lengthen by a combined
+0.193027977 mile. Preserving the accepted branch-speed and switching-time
+basis increases daily branch time from 1.500000 to 1.525737064 hours. With
+all three route lengths adopted, all 180 monthly train-hour cells change,
+but March 2027 downside conditional expanded capacity remains **1,008 cars**:
+four failure-speed trips require 24.008643 hours, above the 24-hour modeled
+ceiling. This distinction must be retained in downstream planning. The
+pinned industrial source and finance-release bytes remain unchanged here.
+Full adoption must reperform operating, finance, export and publication
+consumers from a separately versioned source.
+
+The geometry still does not establish real title, survey, an executed
+interentity connection, local lead construction, historic early linework or
+external customer parcels. The outside-envelope access lengths and required
+track-register treatment remain explicit in both candidate reports.
