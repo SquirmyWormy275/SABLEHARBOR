@@ -6,15 +6,14 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 167 |
+| COUNTERPART_REVIEW_REQUIRED | 306 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
-| READER_MAINTENANCE_NO_LETTERHEAD | 107 |
-| READER_OR_MAINTENANCE_PAGE | 200 |
-| UNRESOLVED_DOCUMENT_COUNTERPART | 220 |
+| READER_MAINTENANCE_NO_LETTERHEAD | 102 |
+| READER_OR_MAINTENANCE_PAGE | 203 |
+| UNRESOLVED_DOCUMENT_COUNTERPART | 218 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
-| VERIFIED_CHART_PUBLICATION | 40 |
-| VERIFIED_DOCUMENT_PAIR | 146 |
+| VERIFIED_DOCUMENT_PAIR | 148 |
 | VERIFIED_IDENTICAL_SOURCE_PUBLICATION | 3 |
 
 ## Records requiring counterpart reconciliation
@@ -76,12 +75,52 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [PR #145 integration evidence](../../internal/company-closeout/PR145_INTEGRATION.md) — Corporate document-format reconciliation
 - [Company closeout continuation — September 22, 2026](../../internal/company-closeout/RESIDUAL_CLOSEOUT_2026-09-22.md) — Corporate document-format reconciliation
 - [Current successor records — enterprise import contract](../../internal/company-closeout/SUCCESSOR_RECORDS_IMPORT_CONTRACT_2026-09-22.md) — Corporate document-format reconciliation
+- [Synthetic withheld comparison note](../../internal/company-closeout/daedalus-rehearsal-2026-09-29/DENIED_NOTE.md) — Corporate document-format reconciliation
+- [Synthetic payroll-release review note](../../internal/company-closeout/daedalus-rehearsal-2026-09-29/LOWER_TRUST_NOTICE.md) — Corporate document-format reconciliation
+- [Selected payroll-release IAM-007 case view](../../internal/company-closeout/daedalus-rehearsal-2026-09-29/SELECTED_IAM_CASE.md) — Corporate document-format reconciliation
 - [Committed portal runtime review — 2026-09-22](../../internal/company-closeout/evidence/newruntime/5344bf76/REVIEW.md) — Corporate document-format reconciliation
 - [HOST-R01 — precise prospective terms for decision](../../internal/company-closeout/host-residual-successor/TERMS_PROPOSAL.md) — Corporate document-format reconciliation
 - [Pending implementation text — recommended current-rights bundle](../../internal/company-closeout/residual-finance-2026-09-22/PENDING_INSTRUMENT.md) — Corporate document-format reconciliation
 - [Actionable CCF procedure deltas](../../internal/development/CCF_ACTIONABLE_CONTROL_DELTAS_2026-09-12.md) — Corporate document-format reconciliation
 - [Integrated CCF delivery workflow](../../internal/development/CCF_INTEGRATED_DELIVERY_WORKFLOW_2026-09-12.md) — Corporate document-format reconciliation
 - [A practical first CCF system](../../internal/development/CCF_PILOT_SYSTEM_DESIGN_2026-09-12.md) — Corporate document-format reconciliation
+- [Explicit backup due-job monitoring operator](../../internal/development/audit-suite/AQ04_BACKUP_MONITOR_OPERATOR.md) — Corporate document-format reconciliation
+- [Backup execution and restore exercise — September 14, 2026](../../internal/development/audit-suite/AQ04_BACKUP_RESTORE_SLICE_2026-09-14.md) — Corporate document-format reconciliation
+- [Identity period slice and remaining coverage](../../internal/development/audit-suite/AQ04_IDENTITY_PERIOD_SLICE_2026-09-14.md) — Corporate document-format reconciliation
+- [Incident and continuity activity slice](../../internal/development/audit-suite/AQ04_INCIDENT_CONTINUITY_SLICE_2026-09-14.md) — Corporate document-format reconciliation
+- [Bounded mover source collection](../../internal/development/audit-suite/AQ04_MOVER_SOURCE_COLLECTION_2026-09-14.md) — Corporate document-format reconciliation
+- [Selected local access-remediation observations](../../internal/development/audit-suite/AQ_ACCESS_REMEDIATION_RECONCILIATION_2026-09-14.md) — Corporate document-format reconciliation
+- [Explicit producer metadata capture](../../internal/development/audit-suite/AQ_EXPLICIT_PRODUCER_METADATA_CAPTURE_2026-09-14.md) — Corporate document-format reconciliation
+- [Optional IAM007 native review reconciliation](../../internal/development/audit-suite/AQ_IAM_NATIVE_REVIEW_RECONCILIATION_2026-09-14.md) — Corporate document-format reconciliation
+- [Exact selected-source prerequisite for linked activity plans](../../internal/development/audit-suite/AQ_LINKED_ACTIVITY_SOURCE_RESOLVER_2026-09-14.md) — Corporate document-format reconciliation
+- [Next source-gap slice: non-human credential lifecycle](../../internal/development/audit-suite/AQ_NEXT_NONHUMAN_IDENTITY_SLICE_2026-09-14.md) — Corporate document-format reconciliation
+- [Planned-provider intake and review-queue exercise](../../internal/development/audit-suite/AQ_PLANNED_PROVIDER_INTAKE_SLICE_2026-09-14.md) — Corporate document-format reconciliation
+- [SEC-002 local security-log collection exercise](../../internal/development/audit-suite/AQ_SECURITY_LOG_COLLECTION_SLICE_2026-09-14.md) — Corporate document-format reconciliation
+- [Explicit local operating-period ledger](../../internal/development/audit-suite/AQ_SHARED_OPERATING_PERIOD_LEDGER_2026-09-14.md) — Corporate document-format reconciliation
+- [Selected source dependencies and declared period support](../../internal/development/audit-suite/AQ_SOURCE_DEPENDENCY_PERIOD_RECONCILIATION_2026-09-14.md) — Corporate document-format reconciliation
+- [Read-through company source portfolio — September 14, 2026](../../internal/development/audit-suite/AQ_SOURCE_PORTFOLIO_READ_THROUGH_2026-09-14.md) — Corporate document-format reconciliation
+- [Explicit source-readiness inventory](../../internal/development/audit-suite/AQ_SOURCE_READINESS_INVENTORY_2026-09-14.md) — Corporate document-format reconciliation
+- [One-system source-record census](../../internal/development/audit-suite/AQ_SOURCE_RECORD_CENSUS_2026-09-14.md) — Corporate document-format reconciliation
+- [Company source and recovery review — September 14, 2026](../../internal/development/audit-suite/AQ_SOURCE_RECOVERY_REVIEW_2026-09-14.md) — Corporate document-format reconciliation
+- [Company-source audit readiness workflow queue](../../internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md) — Corporate document-format reconciliation
+- [Portal company-rights producer handoff](../../internal/development/audit-suite/COMPANY_RIGHTS_PRODUCER_HANDOFF.md) — Corporate document-format reconciliation
+- [Company-source implementation checkpoint](../../internal/development/audit-suite/COMPANY_SOURCE_IMPLEMENTATION.md) — Corporate document-format reconciliation
+- [Intelligent contextual workspace](../../internal/development/audit-suite/CONTEXTUAL_WORKSPACE_WORKFLOW.md) — Corporate document-format reconciliation
+- [Audit-suite contribution and state formats](../../internal/development/audit-suite/CONTRIBUTING_AND_STATE_FORMATS.md) — Corporate document-format reconciliation
+- [Audit-suite execution closeout](../../internal/development/audit-suite/EXECUTION_CLOSEOUT.md) — Corporate document-format reconciliation
+- [Explicit instructor assistance release core](../../internal/development/audit-suite/IK05_EXPLICIT_RELEASE_CORE.md) — Corporate document-format reconciliation
+- [Streamed instructor history inspection](../../internal/development/audit-suite/IK_STREAMED_HISTORY_INSPECTION_2026-09-14.md) — Corporate document-format reconciliation
+- [Audit training suite implementation direction](../../internal/development/audit-suite/IMPLEMENTATION_DIRECTION_2026-09-13.md) — Corporate document-format reconciliation
+- [Instructor investigation and debrief workflow](../../internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md) — Corporate document-format reconciliation
+- [Protected instructor original inspection](../../internal/development/audit-suite/INSTRUCTOR_ORIGINAL_INSPECTION.md) — Corporate document-format reconciliation
+- [Local audit-training delivery](../../internal/development/audit-suite/LOCAL_DELIVERY.md) — Corporate document-format reconciliation
+- [Navigation continuity foundation](../../internal/development/audit-suite/NAVIGATION_FOUNDATION_IMPLEMENTATION.md) — Corporate document-format reconciliation
+- [Audit-suite organization bridge and reconciliation proposal](../../internal/development/audit-suite/ORGANIZATION_RECONCILIATION_2026-09-13.md) — Corporate document-format reconciliation
+- [Explicit evidence inspection records](../../internal/development/audit-suite/RECORDED_INSPECTIONS.md) — Corporate document-format reconciliation
+- [Private-runtime browser sessions](../../internal/development/audit-suite/SERVICE_SESSION_ISOLATION_2026-09-14.md) — Corporate document-format reconciliation
+- [Prospective local software-install source exercise](../../internal/development/audit-suite/SOFTWARE_INSTALL_EXERCISE.md) — Corporate document-format reconciliation
+- [Audit workspace UX professionalization](../../internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md) — Corporate document-format reconciliation
+- [Explicit personal visit checkpoints](../../internal/development/audit-suite/VISIT_CHECKPOINTS.md) — Corporate document-format reconciliation
 - [External execution fact test for issue #18](../../legal/EXTERNAL_EXECUTION_FACT_TEST_2026-09-29.md) — SH-FIN-HUMAN-001
 - [ARU share purchase, closing and tax bridge](../../legal/evidence/assets-rights/SH-LEGAL-READ-ARU-001.md) — SH-FIN-HUMAN-001
 - [Cradle host rights and material title](../../legal/evidence/assets-rights/SH-LEGAL-READ-HOST-001.md) — SH-FIN-HUMAN-001
@@ -150,11 +189,96 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Conditional future Red Wash product custody and carrier agreement](../../legal/gap-instruments/source/uranium-custody.md) — SH-FIN-HUMAN-001
 - [ARU individual retention agreements and Tolman consultancy](../../legal/gap-instruments/source/workforce.md) — SH-FIN-HUMAN-001
 - [Approved host successor — validation receipt](../../legal/host-successor/VALIDATION.md) — SH-FIN-HUMAN-001
+- [Organization chart source traceability](../../organization/CANON_TRACEABILITY_MATRIX.md) — Corporate document-format reconciliation
+- [Organization chart governance](../../organization/CHART_GOVERNANCE.md) — Corporate document-format reconciliation
+- [Organization chart migration](../../organization/CHART_MIGRATION.md) — Corporate document-format reconciliation
+- [Complete chart wording](../../organization/DISPLAY_INVENTORY.md) — Corporate document-format reconciliation
+- [Unresolved and excluded records](../../organization/UNRESOLVED_AND_EXCLUDED.md) — Corporate document-format reconciliation
+- [Sable Harbor Advisory](../../organization/charts/advisory.md) — Corporate document-format reconciliation
+- [ARU operating facilities](../../organization/charts/aru-facilities.md) — Corporate document-format reconciliation
+- [ARU businesses and services](../../organization/charts/aru-services.md) — Corporate document-format reconciliation
+- [Atlas Meridian](../../organization/charts/atlas-meridian.md) — Corporate document-format reconciliation
+- [BS&T railway and facilities](../../organization/charts/bst-network.md) — Corporate document-format reconciliation
+- [Business lines](../../organization/charts/business-lines.md) — Corporate document-format reconciliation
+- [Alexandria systems and publications](../../organization/charts/corporate-alexandria.md) — Corporate document-format reconciliation
+- [Board committees](../../organization/charts/corporate-board-committees.md) — Corporate document-format reconciliation
+- [Contact collection disciplines](../../organization/charts/corporate-contact-disciplines.md) — Corporate document-format reconciliation
+- [J2 Education programs](../../organization/charts/corporate-education-programs.md) — Corporate document-format reconciliation
+- [Enterprise support services](../../organization/charts/corporate-enterprise-support.md) — Corporate document-format reconciliation
+- [Corporate headquarters](../../organization/charts/corporate-headquarters.md) — Corporate document-format reconciliation
+- [J2 organization](../../organization/charts/corporate-j2.md) — Corporate document-format reconciliation
+- [Pinakes portals](../../organization/charts/corporate-pinakes-portals.md) — Corporate document-format reconciliation
+- [Enterprise technology capabilities](../../organization/charts/corporate-technology-capabilities.md) — Corporate document-format reconciliation
+- [Business origins and former counterparties](../../organization/charts/external-counterparties.md) — Corporate document-format reconciliation
+- [Project Cradle — external hosts](../../organization/charts/external-cradle-hosts.md) — Corporate document-format reconciliation
+- [External investors](../../organization/charts/external-investors.md) — Corporate document-format reconciliation
+- [Foundry and Foundry Field](../../organization/charts/foundry-field.md) — Corporate document-format reconciliation
+- [Historical opportunities](../../organization/charts/historical-opportunities.md) — Corporate document-format reconciliation
+- [Industrial ownership](../../organization/charts/industrial-ownership.md) — Corporate document-format reconciliation
+- [Pale Sun and Red Wash](../../organization/charts/pale-sun-red-wash.md) — Corporate document-format reconciliation
+- [American Resource Utility Leadership](../../organization/charts/people-aru-leadership.md) — Corporate document-format reconciliation
+- [American Resource Utility Operations](../../organization/charts/people-aru-operations.md) — Corporate document-format reconciliation
+- [Atlas Meridian Product Leadership](../../organization/charts/people-atlas-meridian.md) — Corporate document-format reconciliation
+- [Board Committees](../../organization/charts/people-board-committees.md) — Corporate document-format reconciliation
+- [Board and Chief Executive](../../organization/charts/people-board.md) — Corporate document-format reconciliation
+- [Blood, Sweat & Tears Railway](../../organization/charts/people-bst.md) — Corporate document-format reconciliation
+- [Project Cradle Team](../../organization/charts/people-cradle.md) — Corporate document-format reconciliation
+- [Enterprise Leadership](../../organization/charts/people-enterprise.md) — Corporate document-format reconciliation
+- [Foundry and Customer Delivery](../../organization/charts/people-foundry-field.md) — Corporate document-format reconciliation
+- [J2 Leadership](../../organization/charts/people-j2.md) — Corporate document-format reconciliation
+- [The Original Eight](../../organization/charts/people-original-eight.md) — Corporate document-format reconciliation
+- [Pale Sun and Red Wash Leadership](../../organization/charts/people-pale-sun-red-wash.md) — Corporate document-format reconciliation
+- [Willow and Advanced Programs](../../organization/charts/people-willow-leadership.md) — Corporate document-format reconciliation
+- [Willow Research Team](../../organization/charts/people-willow-team.md) — Corporate document-format reconciliation
+- [Project Cradle](../../organization/charts/project-cradle.md) — Corporate document-format reconciliation
+- [Research artifacts](../../organization/charts/research-artifacts.md) — Corporate document-format reconciliation
+- [Research history](../../organization/charts/research-history.md) — Corporate document-format reconciliation
+- [Willow and the Fort](../../organization/charts/willow-fort.md) — Corporate document-format reconciliation
 - [Closeout evidence releases](../../releases/CLOSEOUT_EVIDENCE_RELEASES.md) — Corporate document-format reconciliation
 - [Company edition releases](../../releases/COMPANY_EDITION_RELEASES.md) — Corporate document-format reconciliation
 - [Facility atlas controlled releases](../../releases/FACILITY_ATLAS_RELEASES.md) — Corporate document-format reconciliation
 - [Geographic evidence 1.5.0 — accepted delivery receipt](../../releases/GEOGRAPHIC_EVIDENCE_1_5_0_RECEIPT.md) — Corporate document-format reconciliation
 - [Geographic evidence releases](../../releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) — Corporate document-format reconciliation
+- [Local access-remediation continuation](../../../enterprise/audit_suite/ACCESS_REMEDIATION_ACTIVITY.md) — Corporate document-format reconciliation
+- [Declared-subject access review continuation](../../../enterprise/audit_suite/ACCESS_REVIEW_CONTINUATION.md) — Corporate document-format reconciliation
+- [Adjacent declared-subject access review](../../../enterprise/audit_suite/ACCESS_REVIEW_SUCCESSOR.md) — Corporate document-format reconciliation
+- [Persistent local backup byte operations](../../../enterprise/audit_suite/BACKUP_RUNTIME.md) — Corporate document-format reconciliation
+- [Exact native configuration admission to backup datasets](../../../enterprise/audit_suite/BACKUP_SOURCE_ADMISSION.md) — Corporate document-format reconciliation
+- [Local configuration change and release source pair](../../../enterprise/audit_suite/CHANGE_ACTIVITY.md) — Corporate document-format reconciliation
+- [Private companion recovery](../../../enterprise/audit_suite/COMPANION_RECOVERY.md) — Corporate document-format reconciliation
+- [Attributed company consultation and correction requests](../../../enterprise/audit_suite/COMPANY_CONSULTATION.md) — Corporate document-format reconciliation
+- [Company runtime activation contract](../../../enterprise/audit_suite/COMPANY_RUNTIME_ACTIVATION.md) — Corporate document-format reconciliation
+- [Selected-source ownership and migration register](../../../enterprise/audit_suite/COMPANY_SOURCE_REGISTER.md) — Corporate document-format reconciliation
+- [Configuration inventory and drift from original release records](../../../enterprise/audit_suite/CONFIGURATION_ACTIVITY.md) — Corporate document-format reconciliation
+- [Explicit persistent configuration export](../../../enterprise/audit_suite/CONFIGURATION_EXPORT.md) — Corporate document-format reconciliation
+- [Persistent local configuration runtime](../../../enterprise/audit_suite/CONFIGURATION_RUNTIME.md) — Corporate document-format reconciliation
+- [Local dataset quality and correction](../../../enterprise/audit_suite/DATA_QUALITY_RUNTIME.md) — Corporate document-format reconciliation
+- [Local disposal runtime](../../../enterprise/audit_suite/DISPOSAL_RUNTIME.md) — Corporate document-format reconciliation
+- [Per-control legacy documentary custody](../../../enterprise/audit_suite/DOCUMENTARY_CUSTODY.md) — Corporate document-format reconciliation
+- [Instructor-authored assessment history](../../../enterprise/audit_suite/INSTRUCTOR_ASSESSMENTS.md) — Corporate document-format reconciliation
+- [Selected instructor debriefs](../../../enterprise/audit_suite/INSTRUCTOR_DEBRIEF.md) — Corporate document-format reconciliation
+- [Protected saved Key filters](../../../enterprise/audit_suite/INSTRUCTOR_KEY_VIEWS.md) — Corporate document-format reconciliation
+- [Explicit investigation handoffs](../../../enterprise/audit_suite/INVESTIGATION_HANDOFFS.md) — Corporate document-format reconciliation
+- [Local worker lifecycle sources](../../../enterprise/audit_suite/LIFECYCLE_ACTIVITY.md) — Corporate document-format reconciliation
+- [Local logging clock companion](../../../enterprise/audit_suite/LOGGING_CLOCK_RUNTIME.md) — Corporate document-format reconciliation
+- [Local non-human credential lifecycle](../../../enterprise/audit_suite/NONHUMAN_IDENTITY_ACTIVITY.md) — Corporate document-format reconciliation
+- [Persistent local nonhuman identity operations](../../../enterprise/audit_suite/NONHUMAN_RUNTIME.md) — Corporate document-format reconciliation
+- [Personal saved views](../../../enterprise/audit_suite/PERSONAL_VIEWS.md) — Corporate document-format reconciliation
+- [Local policy distribution runtime](../../../enterprise/audit_suite/POLICY_DELIVERY_RUNTIME.md) — Corporate document-format reconciliation
+- [Protected portfolio source snapshots](../../../enterprise/audit_suite/PORTFOLIO_EXPLANATION.md) — Corporate document-format reconciliation
+- [Local privileged-session runtime](../../../enterprise/audit_suite/PRIVILEGED_RUNTIME.md) — Corporate document-format reconciliation
+- [Procedure trace metadata readiness](../../../enterprise/audit_suite/PROCEDURE_TRACE_READINESS.md) — Corporate document-format reconciliation
+- [Explicit local recovery-period runner](../../../enterprise/audit_suite/RECOVERY_PERIOD_RUNNER.md) — Corporate document-format reconciliation
+- [Repository documentary sync](../../../enterprise/audit_suite/REPOSITORY_DOCUMENT_SYNC.md) — Corporate document-format reconciliation
+- [Local quarterly risk-input assessment](../../../enterprise/audit_suite/RISK_ASSESSMENT_ACTIVITY.md) — Corporate document-format reconciliation
+- [Explicit sampled-item procedure trace](../../../enterprise/audit_suite/SAMPLE_EXECUTION.md) — Corporate document-format reconciliation
+- [Persistent local security-event intake](../../../enterprise/audit_suite/SECURITY_EVENT_RUNTIME.md) — Corporate document-format reconciliation
+- [Explicit source-impact reassessment dispositions](../../../enterprise/audit_suite/SOURCE_IMPACT_DISPOSITIONS.md) — Corporate document-format reconciliation
+- [Exact recorded source-impact relationships](../../../enterprise/audit_suite/SOURCE_IMPACT_REFERENCES.md) — Corporate document-format reconciliation
+- [Recorded procedure gaps](../../../enterprise/audit_suite/TASK_GAPS.md) — Corporate document-format reconciliation
+- [Local role-based training source pair](../../../enterprise/audit_suite/TRAINING_ACTIVITY.md) — Corporate document-format reconciliation
+- [Local package inventory, rule scans and rescans](../../../enterprise/audit_suite/VULNERABILITY_RUNTIME.md) — Corporate document-format reconciliation
+- [Private reasoned work guidance](../../../enterprise/audit_suite/WORK_GUIDANCE.md) — Corporate document-format reconciliation
 - [ARU acquisition cost classification](../../../enterprise/ccf/company_closeout/ARU_TRANSACTION_COST_TAX.md) — Corporate document-format reconciliation
 - [Current C05/C06 evidence and residual receipt](../../../enterprise/ccf/company_closeout/CURRENT_RESIDUALS.md) — Corporate document-format reconciliation
 - [FRA event-day authority closeout](../../../enterprise/ccf/company_closeout/FRA_EVENT_DAY_AUTHORITY.md) — Corporate document-format reconciliation
@@ -178,7 +302,9 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Geographic continuation boundary](../../../geospatial/docs/NEXT_CHAT_HANDOFF.md) — Corporate document-format reconciliation
 - [Geographic program closeout matrix](../../../geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md) — Corporate document-format reconciliation
 - [Time, ownership and operating state](../../../geospatial/docs/TEMPORAL_MODEL.md) — Corporate document-format reconciliation
+- [Headcount, occupancy and space program](../../../geospatial/facilities/PROGRAM.md) — Corporate document-format reconciliation
 - [Facility coverage matrix](../../../geospatial/facilities/coverage/COVERAGE_MATRIX.md) — Corporate document-format reconciliation
+- [Headcount, occupancy and space bridge](../../../geospatial/facilities/population/BRIDGE.md) — Corporate document-format reconciliation
 - [Geographic completion authority — September 13, 2026](../../../geospatial/finalization/AUTHORIZATION.md) — Corporate document-format reconciliation
 - [Source interpretation and geographic crosswalk](../../../geospatial/finalization/SOURCE_REVIEW.md) — Corporate document-format reconciliation
 - [Geographic decision register v0.1](../../../geospatial/registers/GEOGRAPHIC_DECISION_REGISTER_v0.1.md) — Corporate document-format reconciliation
@@ -188,6 +314,18 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Open geographic questions v0.1](../../../geospatial/reports/OPEN_CONFLICTS.md) — Corporate document-format reconciliation
 - [Rail and geographic criteria — September 29, 2026 review](../../../geospatial/successors/RAIL_GEO_107_108_DISPOSITION_2026-09-29.md) — Corporate document-format reconciliation
 - [Early-rail case authority attribution correction](../../../geospatial/successors/rail_history_2026_09_29/ATTRIBUTION_CORRECTION_2026-09-29.md) — Corporate document-format reconciliation
+- [Local change/release source slice](../../../tools/audit_suite/CHANGE_RELEASE_SOURCE_SLICE.md) — Corporate document-format reconciliation
+- [Existing-source linked activity plan V2](../../../tools/audit_suite/COMPANY_ACTIVITY_LINKED_PLAN.md) — Corporate document-format reconciliation
+- [Private ordered company activity plans](../../../tools/audit_suite/COMPANY_ACTIVITY_PLAN_RUNNER.md) — Corporate document-format reconciliation
+- [Selected producer routing V3](../../../tools/audit_suite/COMPANY_ACTIVITY_PRODUCER_PLAN.md) — Corporate document-format reconciliation
+- [Independent company activity runner](../../../tools/audit_suite/COMPANY_ACTIVITY_RUNNER.md) — Corporate document-format reconciliation
+- [Initialize company source runtimes](../../../tools/audit_suite/COMPANY_RUNTIME_ACTIVATION.md) — Corporate document-format reconciliation
+- [Company source inventory](../../../tools/audit_suite/COMPANY_SOURCE_INVENTORY.md) — Corporate document-format reconciliation
+- [Configuration source extension](../../../tools/audit_suite/CONFIGURATION_SOURCE_SLICE.md) — Corporate document-format reconciliation
+- [Control-source readiness implementation gaps](../../../tools/audit_suite/CONTROL_SOURCE_READINESS.md) — Corporate document-format reconciliation
+- [Local operator commands](../../../tools/audit_suite/OPERATOR_COMMANDS.md) — Corporate document-format reconciliation
+- [Repository company documents: first bounded ingestion](../../../tools/audit_suite/REPOSITORY_DOCUMENTARY_SYNC.md) — Corporate document-format reconciliation
+- [Explicit source dependency and period reconciliation](../../../tools/audit_suite/SOURCE_DEPENDENCY_RECONCILIATION.md) — Corporate document-format reconciliation
 
 ## Dated counterpart dispositions
 

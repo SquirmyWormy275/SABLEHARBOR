@@ -243,3 +243,12 @@ PR #119 merged at `b83e4be2182a5e4143808a3dab5f8d929a133caf`; preparation-time p
 [Runtime implementation index](../enterprise/runtime/README.md) links the source model, calculated results, contracts, architecture and assurance scope. Thirteen runtime controlled PDFs and the distinct seven-sheet successor workbook are indexed with the [runtime release record](releases/RUNTIME_ESTATE_RELEASES.md). The explicit controlled-publication mappings generate `enterprise/runtime/publications/SH-RT-*_v1.0.0.pdf`. These are synthetic design publications; no provider execution or operational acceptance is asserted.
 
 - [Facility planning workbench and delivery](releases/FACILITY_WORKBENCH_RELEASES.md): offline capacity scenarios, source-change impacts, readiness and evidence intake.
+
+## September 13 enterprise appointments and coordination
+
+- [Dated appointment decision](canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md) and [controlled publication](governance/publications/SH-ENTERPRISE-PPL-20260913_v1.0.0.pdf)
+- [Coordination and review addendum](governance/ENTERPRISE_COORDINATION_2026-09-13.md) and [controlled publication](governance/publications/SH-ENTERPRISE-COORD-20260913_v1.0.0.pdf)
+- [Structured people roster](structured/enterprise_leadership_2026-09-13.json) and [166 control contact routes](structured/enterprise_control_coordination_2026-09-13.json)
+- [Workforce identity reconciliation, 2027–2031](../enterprise/business/identity/2026-09-13/README.md)
+
+Fifteen delegated fictional occupants fill existing modeled positions; payroll and occupied seats are not added. The v1.1.0 organization master/source remain preserved, and the v1.2.0 successor has engineering review without a claim of owner pixel acceptance. Branch acceptance remains pending.

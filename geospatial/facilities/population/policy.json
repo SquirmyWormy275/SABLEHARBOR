@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "record_id": "SH-FAC-POPULATION-001",
-  "as_of": "2026-09-11",
+  "as_of": "2026-09-13",
   "status": "SOURCED_BRIDGE_WITH_LABELLED_PLANNING_ASSUMPTIONS",
   "horizons": [
     2026,
@@ -18,7 +18,9 @@
     "legacy_finance": "docs/finance/SABLE_HARBOR_CORPORATE_FUNDAMENTALS_AND_2026_OPERATING_MODEL_v0.1.md",
     "services": "enterprise/services/source/components.json",
     "runtime": "enterprise/services/source/runtime_capital_plan_2026-09-11.json",
-    "campus": "geospatial/facilities/source/campus.json"
+    "campus": "geospatial/facilities/source/campus.json",
+    "enterprise_appointments": "docs/structured/enterprise_leadership_2026-09-13.json",
+    "enterprise_appointment_decision": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md"
   },
   "j2_billet_groups": [
     {
@@ -74,7 +76,7 @@
     "named_population": "Deduplicate by person_id across every chart; named population is a source coverage count, not a payroll census.",
     "roles": "Unnamed offices and role-family counts overlap establishments; never add role-register counts to J2 or enterprise totals.",
     "employment": "Former, external, unconfirmed and superseded identities are excluded from current totals. Nonemployee directors remain a separate visitor demand category.",
-    "workforce": "Known industrial population and named employees overlap. Never add 44 named employees to the 271 industrial population or 237 J2 billets.",
+    "workforce": "Known industrial population and named employees overlap. Never add named employee identities to the 271 industrial population or 237 J2 billets.",
     "attendance": "Assigned workforce, residents, cohort peaks, shifts and maximum simultaneous attendance require explicit schedules; no authorization-to-desk equivalence.",
     "seats": "Meeting/training/resident capacities are activity capacities, not additional people. Peak scenario must allocate one person once across simultaneous activities.",
     "forecast": "2027 conditional workforce is retained separately; not actual 2026 payroll, and not an automatic 2031 or 2036 forecast.",

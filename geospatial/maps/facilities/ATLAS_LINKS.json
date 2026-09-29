@@ -32,7 +32,7 @@
   "pdf": "geospatial/maps/SABLE_HARBOR_Facility_Atlas_v0.2.0.pdf",
   "pdf_pages": 151,
   "source_sha256": {
-    "geospatial/facilities/coverage/COVERAGE_MATRIX.json": "f9f4d06cb2d01f517d0f1563bc7f5784d464caa994dc792330722d515cac1b82",
+    "geospatial/facilities/coverage/COVERAGE_MATRIX.json": "d888330676791e89faa89b59432e8ca47b4e50182e9397087137269529862ef7",
     "geospatial/maps/facilities/MANIFEST.json": "4b414666a926d772382058a8242766274edcfb4662a8f204f012b0f6da58a144",
     "geospatial/facilities/source/campus.json": "0efd4854069ff20acb4032e02b021afebcb955990f1d684b51428624e281d950",
     "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
@@ -5367,6 +5367,116 @@
       "classification": "distributed/nonphysical/reference"
     },
     {
+      "id": "coverage:ORG:AS-P001",
+      "kind": "coverage",
+      "title": "Lila Kestrel",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference"
+    },
+    {
+      "id": "source:docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+      "kind": "source",
+      "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md"
+    },
+    {
+      "id": "coverage:ORG:AS-P002",
+      "kind": "coverage",
+      "title": "Adrian Lowe",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference"
+    },
+    {
+      "id": "coverage:ORG:AS-P003",
+      "kind": "coverage",
+      "title": "Helena Ward",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference"
+    },
+    {
+      "id": "coverage:ORG:AS-P004",
+      "kind": "coverage",
+      "title": "Nina Rowan",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference"
+    },
+    {
+      "id": "coverage:ORG:AS-P005",
+      "kind": "coverage",
+      "title": "Martin Ives",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference"
+    },
+    {
+      "id": "coverage:ORG:AS-P006",
+      "kind": "coverage",
+      "title": "Sofia Hart",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference"
+    },
+    {
+      "id": "coverage:ORG:AS-P007",
+      "kind": "coverage",
+      "title": "Elliot Tran",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference"
+    },
+    {
+      "id": "coverage:ORG:AS-P008",
+      "kind": "coverage",
+      "title": "Dana West",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference"
+    },
+    {
+      "id": "coverage:ORG:AS-P009",
+      "kind": "coverage",
+      "title": "Rowan Price",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference"
+    },
+    {
+      "id": "coverage:ORG:AS-P010",
+      "kind": "coverage",
+      "title": "Cameron Shore",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference"
+    },
+    {
+      "id": "coverage:ORG:AS-P011",
+      "kind": "coverage",
+      "title": "Clara Bennett",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference"
+    },
+    {
+      "id": "coverage:ORG:AS-P012",
+      "kind": "coverage",
+      "title": "Victor Lane",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference"
+    },
+    {
+      "id": "coverage:ORG:AS-P013",
+      "kind": "coverage",
+      "title": "Erin Cross",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference"
+    },
+    {
+      "id": "coverage:ORG:AS-P014",
+      "kind": "coverage",
+      "title": "Omar Vale",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference"
+    },
+    {
+      "id": "coverage:ORG:AS-P015",
+      "kind": "coverage",
+      "title": "Evie Quinn",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference"
+    },
+    {
       "id": "coverage:ORG:CORP-CONT",
       "kind": "coverage",
       "title": "Continuity & Crisis Coordination",
@@ -5559,76 +5669,6 @@
       "kind": "coverage",
       "title": "Superseded identity (see historical source)",
       "status": "superseded_alias_concept",
-      "classification": "distributed/nonphysical/reference"
-    },
-    {
-      "id": "coverage:ORG:ROLE-27",
-      "kind": "coverage",
-      "title": "Chief of ESS",
-      "status": "nonphysical",
-      "classification": "distributed/nonphysical/reference"
-    },
-    {
-      "id": "coverage:ORG:ROLE-28",
-      "kind": "coverage",
-      "title": "Chief Financial Officer",
-      "status": "nonphysical",
-      "classification": "distributed/nonphysical/reference"
-    },
-    {
-      "id": "coverage:ORG:ROLE-29",
-      "kind": "coverage",
-      "title": "General Counsel",
-      "status": "nonphysical",
-      "classification": "distributed/nonphysical/reference"
-    },
-    {
-      "id": "coverage:ORG:ROLE-30",
-      "kind": "coverage",
-      "title": "Corporate Secretary",
-      "status": "nonphysical",
-      "classification": "distributed/nonphysical/reference"
-    },
-    {
-      "id": "coverage:ORG:ROLE-31",
-      "kind": "coverage",
-      "title": "Head of Risk & Compliance",
-      "status": "nonphysical",
-      "classification": "distributed/nonphysical/reference"
-    },
-    {
-      "id": "coverage:ORG:ROLE-32",
-      "kind": "coverage",
-      "title": "Head of People & Culture",
-      "status": "nonphysical",
-      "classification": "distributed/nonphysical/reference"
-    },
-    {
-      "id": "coverage:ORG:ROLE-33",
-      "kind": "coverage",
-      "title": "Head of Enterprise Technology Services",
-      "status": "nonphysical",
-      "classification": "distributed/nonphysical/reference"
-    },
-    {
-      "id": "coverage:ORG:ROLE-34",
-      "kind": "coverage",
-      "title": "Chief Information Security Officer",
-      "status": "nonphysical",
-      "classification": "distributed/nonphysical/reference"
-    },
-    {
-      "id": "coverage:ORG:ROLE-35",
-      "kind": "coverage",
-      "title": "Head of Internal Audit",
-      "status": "nonphysical",
-      "classification": "distributed/nonphysical/reference"
-    },
-    {
-      "id": "coverage:ORG:ROLE-36",
-      "kind": "coverage",
-      "title": "President of Sable Harbor Advisory",
-      "status": "nonphysical",
       "classification": "distributed/nonphysical/reference"
     },
     {
@@ -12647,6 +12687,66 @@
     },
     {
       "source": "atlas",
+      "target": "coverage:ORG:AS-P001"
+    },
+    {
+      "source": "atlas",
+      "target": "coverage:ORG:AS-P002"
+    },
+    {
+      "source": "atlas",
+      "target": "coverage:ORG:AS-P003"
+    },
+    {
+      "source": "atlas",
+      "target": "coverage:ORG:AS-P004"
+    },
+    {
+      "source": "atlas",
+      "target": "coverage:ORG:AS-P005"
+    },
+    {
+      "source": "atlas",
+      "target": "coverage:ORG:AS-P006"
+    },
+    {
+      "source": "atlas",
+      "target": "coverage:ORG:AS-P007"
+    },
+    {
+      "source": "atlas",
+      "target": "coverage:ORG:AS-P008"
+    },
+    {
+      "source": "atlas",
+      "target": "coverage:ORG:AS-P009"
+    },
+    {
+      "source": "atlas",
+      "target": "coverage:ORG:AS-P010"
+    },
+    {
+      "source": "atlas",
+      "target": "coverage:ORG:AS-P011"
+    },
+    {
+      "source": "atlas",
+      "target": "coverage:ORG:AS-P012"
+    },
+    {
+      "source": "atlas",
+      "target": "coverage:ORG:AS-P013"
+    },
+    {
+      "source": "atlas",
+      "target": "coverage:ORG:AS-P014"
+    },
+    {
+      "source": "atlas",
+      "target": "coverage:ORG:AS-P015"
+    },
+    {
+      "source": "atlas",
       "target": "coverage:ORG:ATL-EDITION-1"
     },
     {
@@ -13352,46 +13452,6 @@
     {
       "source": "atlas",
       "target": "coverage:ORG:PS"
-    },
-    {
-      "source": "atlas",
-      "target": "coverage:ORG:ROLE-27"
-    },
-    {
-      "source": "atlas",
-      "target": "coverage:ORG:ROLE-28"
-    },
-    {
-      "source": "atlas",
-      "target": "coverage:ORG:ROLE-29"
-    },
-    {
-      "source": "atlas",
-      "target": "coverage:ORG:ROLE-30"
-    },
-    {
-      "source": "atlas",
-      "target": "coverage:ORG:ROLE-31"
-    },
-    {
-      "source": "atlas",
-      "target": "coverage:ORG:ROLE-32"
-    },
-    {
-      "source": "atlas",
-      "target": "coverage:ORG:ROLE-33"
-    },
-    {
-      "source": "atlas",
-      "target": "coverage:ORG:ROLE-34"
-    },
-    {
-      "source": "atlas",
-      "target": "coverage:ORG:ROLE-35"
-    },
-    {
-      "source": "atlas",
-      "target": "coverage:ORG:ROLE-36"
     },
     {
       "source": "atlas",
@@ -15134,6 +15194,66 @@
       "target": "source:industrial/source/operations.json"
     },
     {
+      "source": "coverage:ORG:AS-P001",
+      "target": "source:docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md"
+    },
+    {
+      "source": "coverage:ORG:AS-P002",
+      "target": "source:docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md"
+    },
+    {
+      "source": "coverage:ORG:AS-P003",
+      "target": "source:docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md"
+    },
+    {
+      "source": "coverage:ORG:AS-P004",
+      "target": "source:docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md"
+    },
+    {
+      "source": "coverage:ORG:AS-P005",
+      "target": "source:docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md"
+    },
+    {
+      "source": "coverage:ORG:AS-P006",
+      "target": "source:docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md"
+    },
+    {
+      "source": "coverage:ORG:AS-P007",
+      "target": "source:docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md"
+    },
+    {
+      "source": "coverage:ORG:AS-P008",
+      "target": "source:docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md"
+    },
+    {
+      "source": "coverage:ORG:AS-P009",
+      "target": "source:docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md"
+    },
+    {
+      "source": "coverage:ORG:AS-P010",
+      "target": "source:docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md"
+    },
+    {
+      "source": "coverage:ORG:AS-P011",
+      "target": "source:docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md"
+    },
+    {
+      "source": "coverage:ORG:AS-P012",
+      "target": "source:docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md"
+    },
+    {
+      "source": "coverage:ORG:AS-P013",
+      "target": "source:docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md"
+    },
+    {
+      "source": "coverage:ORG:AS-P014",
+      "target": "source:docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md"
+    },
+    {
+      "source": "coverage:ORG:AS-P015",
+      "target": "source:docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md"
+    },
+    {
       "source": "coverage:ORG:ATL-EDITION-1",
       "target": "source:docs/advisory/ATLAS_MERIDIAN_COMMERCIAL_PRODUCT_STANDARD.md"
     },
@@ -16048,46 +16168,6 @@
     {
       "source": "coverage:ORG:PS",
       "target": "source:industrial/source/entities.json"
-    },
-    {
-      "source": "coverage:ORG:ROLE-27",
-      "target": "source:docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md"
-    },
-    {
-      "source": "coverage:ORG:ROLE-28",
-      "target": "source:docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md"
-    },
-    {
-      "source": "coverage:ORG:ROLE-29",
-      "target": "source:docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md"
-    },
-    {
-      "source": "coverage:ORG:ROLE-30",
-      "target": "source:docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md"
-    },
-    {
-      "source": "coverage:ORG:ROLE-31",
-      "target": "source:docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md"
-    },
-    {
-      "source": "coverage:ORG:ROLE-32",
-      "target": "source:docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md"
-    },
-    {
-      "source": "coverage:ORG:ROLE-33",
-      "target": "source:docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md"
-    },
-    {
-      "source": "coverage:ORG:ROLE-34",
-      "target": "source:docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md"
-    },
-    {
-      "source": "coverage:ORG:ROLE-35",
-      "target": "source:docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md"
-    },
-    {
-      "source": "coverage:ORG:ROLE-36",
-      "target": "source:docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md"
     },
     {
       "source": "coverage:ORG:ROLE-39",
@@ -18087,6 +18167,7 @@
     "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md",
     "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md",
     "docs/canon/DECISION_REGISTER_v0.3.1.md",
+    "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
     "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
     "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
     "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
@@ -22390,6 +22471,156 @@
       "geometry_precision": "UNLOCATED"
     },
     {
+      "coverage_id": "ORG:AS-P001",
+      "anchor": "record-ORG:AS-P001",
+      "targets": [],
+      "context_map_ids": [],
+      "disposition": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference",
+      "geometry_precision": "UNLOCATED"
+    },
+    {
+      "coverage_id": "ORG:AS-P002",
+      "anchor": "record-ORG:AS-P002",
+      "targets": [],
+      "context_map_ids": [],
+      "disposition": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference",
+      "geometry_precision": "UNLOCATED"
+    },
+    {
+      "coverage_id": "ORG:AS-P003",
+      "anchor": "record-ORG:AS-P003",
+      "targets": [],
+      "context_map_ids": [],
+      "disposition": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference",
+      "geometry_precision": "UNLOCATED"
+    },
+    {
+      "coverage_id": "ORG:AS-P004",
+      "anchor": "record-ORG:AS-P004",
+      "targets": [],
+      "context_map_ids": [],
+      "disposition": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference",
+      "geometry_precision": "UNLOCATED"
+    },
+    {
+      "coverage_id": "ORG:AS-P005",
+      "anchor": "record-ORG:AS-P005",
+      "targets": [],
+      "context_map_ids": [],
+      "disposition": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference",
+      "geometry_precision": "UNLOCATED"
+    },
+    {
+      "coverage_id": "ORG:AS-P006",
+      "anchor": "record-ORG:AS-P006",
+      "targets": [],
+      "context_map_ids": [],
+      "disposition": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference",
+      "geometry_precision": "UNLOCATED"
+    },
+    {
+      "coverage_id": "ORG:AS-P007",
+      "anchor": "record-ORG:AS-P007",
+      "targets": [],
+      "context_map_ids": [],
+      "disposition": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference",
+      "geometry_precision": "UNLOCATED"
+    },
+    {
+      "coverage_id": "ORG:AS-P008",
+      "anchor": "record-ORG:AS-P008",
+      "targets": [],
+      "context_map_ids": [],
+      "disposition": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference",
+      "geometry_precision": "UNLOCATED"
+    },
+    {
+      "coverage_id": "ORG:AS-P009",
+      "anchor": "record-ORG:AS-P009",
+      "targets": [],
+      "context_map_ids": [],
+      "disposition": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference",
+      "geometry_precision": "UNLOCATED"
+    },
+    {
+      "coverage_id": "ORG:AS-P010",
+      "anchor": "record-ORG:AS-P010",
+      "targets": [],
+      "context_map_ids": [],
+      "disposition": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference",
+      "geometry_precision": "UNLOCATED"
+    },
+    {
+      "coverage_id": "ORG:AS-P011",
+      "anchor": "record-ORG:AS-P011",
+      "targets": [],
+      "context_map_ids": [],
+      "disposition": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference",
+      "geometry_precision": "UNLOCATED"
+    },
+    {
+      "coverage_id": "ORG:AS-P012",
+      "anchor": "record-ORG:AS-P012",
+      "targets": [],
+      "context_map_ids": [],
+      "disposition": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference",
+      "geometry_precision": "UNLOCATED"
+    },
+    {
+      "coverage_id": "ORG:AS-P013",
+      "anchor": "record-ORG:AS-P013",
+      "targets": [],
+      "context_map_ids": [],
+      "disposition": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference",
+      "geometry_precision": "UNLOCATED"
+    },
+    {
+      "coverage_id": "ORG:AS-P014",
+      "anchor": "record-ORG:AS-P014",
+      "targets": [],
+      "context_map_ids": [],
+      "disposition": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference",
+      "geometry_precision": "UNLOCATED"
+    },
+    {
+      "coverage_id": "ORG:AS-P015",
+      "anchor": "record-ORG:AS-P015",
+      "targets": [],
+      "context_map_ids": [],
+      "disposition": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
+      "status": "nonphysical",
+      "classification": "distributed/nonphysical/reference",
+      "geometry_precision": "UNLOCATED"
+    },
+    {
       "coverage_id": "ORG:CORP-CONT",
       "anchor": "record-ORG:CORP-CONT",
       "targets": [],
@@ -22636,106 +22867,6 @@
       "context_map_ids": [],
       "disposition": "Superseded identity retained by source ID and locator; never accepted as a current occupant or physical property.",
       "status": "superseded_alias_concept",
-      "classification": "distributed/nonphysical/reference",
-      "geometry_precision": "UNLOCATED"
-    },
-    {
-      "coverage_id": "ORG:ROLE-27",
-      "anchor": "record-ORG:ROLE-27",
-      "targets": [],
-      "context_map_ids": [],
-      "disposition": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
-      "status": "nonphysical",
-      "classification": "distributed/nonphysical/reference",
-      "geometry_precision": "UNLOCATED"
-    },
-    {
-      "coverage_id": "ORG:ROLE-28",
-      "anchor": "record-ORG:ROLE-28",
-      "targets": [],
-      "context_map_ids": [],
-      "disposition": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
-      "status": "nonphysical",
-      "classification": "distributed/nonphysical/reference",
-      "geometry_precision": "UNLOCATED"
-    },
-    {
-      "coverage_id": "ORG:ROLE-29",
-      "anchor": "record-ORG:ROLE-29",
-      "targets": [],
-      "context_map_ids": [],
-      "disposition": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
-      "status": "nonphysical",
-      "classification": "distributed/nonphysical/reference",
-      "geometry_precision": "UNLOCATED"
-    },
-    {
-      "coverage_id": "ORG:ROLE-30",
-      "anchor": "record-ORG:ROLE-30",
-      "targets": [],
-      "context_map_ids": [],
-      "disposition": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
-      "status": "nonphysical",
-      "classification": "distributed/nonphysical/reference",
-      "geometry_precision": "UNLOCATED"
-    },
-    {
-      "coverage_id": "ORG:ROLE-31",
-      "anchor": "record-ORG:ROLE-31",
-      "targets": [],
-      "context_map_ids": [],
-      "disposition": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
-      "status": "nonphysical",
-      "classification": "distributed/nonphysical/reference",
-      "geometry_precision": "UNLOCATED"
-    },
-    {
-      "coverage_id": "ORG:ROLE-32",
-      "anchor": "record-ORG:ROLE-32",
-      "targets": [],
-      "context_map_ids": [],
-      "disposition": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
-      "status": "nonphysical",
-      "classification": "distributed/nonphysical/reference",
-      "geometry_precision": "UNLOCATED"
-    },
-    {
-      "coverage_id": "ORG:ROLE-33",
-      "anchor": "record-ORG:ROLE-33",
-      "targets": [],
-      "context_map_ids": [],
-      "disposition": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
-      "status": "nonphysical",
-      "classification": "distributed/nonphysical/reference",
-      "geometry_precision": "UNLOCATED"
-    },
-    {
-      "coverage_id": "ORG:ROLE-34",
-      "anchor": "record-ORG:ROLE-34",
-      "targets": [],
-      "context_map_ids": [],
-      "disposition": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
-      "status": "nonphysical",
-      "classification": "distributed/nonphysical/reference",
-      "geometry_precision": "UNLOCATED"
-    },
-    {
-      "coverage_id": "ORG:ROLE-35",
-      "anchor": "record-ORG:ROLE-35",
-      "targets": [],
-      "context_map_ids": [],
-      "disposition": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
-      "status": "nonphysical",
-      "classification": "distributed/nonphysical/reference",
-      "geometry_precision": "UNLOCATED"
-    },
-    {
-      "coverage_id": "ORG:ROLE-36",
-      "anchor": "record-ORG:ROLE-36",
-      "targets": [],
-      "context_map_ids": [],
-      "disposition": "Person, function, organization, role, equipment or scope record does not itself establish a distinct building. Shared workplace assignment is handled by the population bridge.",
-      "status": "nonphysical",
       "classification": "distributed/nonphysical/reference",
       "geometry_precision": "UNLOCATED"
     },
@@ -24711,7 +24842,7 @@
     }
   ],
   "counts": {
-    "coverage_records": 594,
+    "coverage_records": 599,
     "sites": 19,
     "buildings": 18,
     "floors": 25,

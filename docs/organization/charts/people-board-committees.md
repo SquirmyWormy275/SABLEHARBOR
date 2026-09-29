@@ -1,6 +1,6 @@
 # Board Committees
 
-**SH-ORG-PEOPLE-BOARD-COMMITTEES · 2026-09-10 · v1.1.0**
+**SH-ORG-PEOPLE-BOARD-COMMITTEES · 2026-09-13 · v1.2.0**
 
 Membership of the five standing Board committees; each group identifies its documented Chair.
 

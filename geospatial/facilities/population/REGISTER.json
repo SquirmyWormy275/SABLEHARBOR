@@ -1,24 +1,476 @@
 {
   "record_id": "SH-FAC-POPULATION-001",
-  "as_of": "2026-09-11",
+  "as_of": "2026-09-13",
   "schema_version": "1.0.0",
   "source_revision": {
-    "chart_publication": "1.1.0",
-    "chart_as_of": "2026-09-10",
+    "chart_publication": "1.2.0",
+    "chart_as_of": "2026-09-13",
     "source_sha256": {
+      "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md": "1707ed7021576048ca5f1904ca5e94d484e8f7e2992da5c9e04965421f79a751",
       "docs/finance/SABLE_HARBOR_CORPORATE_FUNDAMENTALS_AND_2026_OPERATING_MODEL_v0.1.md": "e17edf45e95ce6be032708fc04cfe7a45e6490332fd1f55610ab8b4587b4776a",
       "docs/j2/J2_ESTABLISHMENT.md": "826bbe8b359d73938c69f8bbd984114fd3b73109bbb9e8af7f003f6b39590c82",
-      "docs/organization/source/chartbook.json": "6471a6362517f97574c775b73b94ac48d6060d81cee605eb661811425ed75866",
+      "docs/organization/source/chartbook.json": "6ba4f1ed1a14581455a62c3e79a29ca59dbaf1270dfb0db850c0376c15507b49",
+      "docs/structured/enterprise_leadership_2026-09-13.json": "90ec45642cc50219544910e60e4bf6d28b810302c62f29c5936bf965501d673d",
       "docs/structured/j2_leadership_2026-09-10.json": "c0efd4edf47ab7f5da4a0e3129cddc93af89035252b5a8ea16facd660b6cba54",
       "enterprise/business/source/policy.json": "60cf3dbb7401a798b427a34d9ce4ac807bab91fd6e289e88f041e70f2127ab90",
       "enterprise/services/source/components.json": "0d5e1fefa3e3286cae725a4b04241725fc2590dff4ccbdc7fde41a24740a0cd2",
       "enterprise/services/source/runtime_capital_plan_2026-09-11.json": "b70546497ea380ff99c00e2b4a3dcd498869d172c5e6696f05aaa709d93b5bbd",
-      "geospatial/facilities/population/policy.json": "2264f25476be4957a71916941147b7d9acc6ab10b374153a0d2b86ba29c7185c",
+      "geospatial/facilities/population/policy.json": "5aa105dca744bf097173b77e4741987b4cb4859d75aecffa35e4f23545009826",
       "geospatial/facilities/source/campus.json": "0efd4854069ff20acb4032e02b021afebcb955990f1d684b51428624e281d950",
       "industrial/source/entities.json": "799a24baf3240d50c5d6a80ac0f9ddb9d023b7a36de058ec12546aac60caee29"
     }
   },
   "people": [
+    {
+      "person_id": "AS-P001",
+      "name": "Lila Kestrel",
+      "status": "current_employee",
+      "display_ids": [
+        "AS-P001"
+      ],
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P001: Lila Kestrel, Chief of Enterprise Support Services, effective 2026-09-13"
+        }
+      ],
+      "joining_records": [
+        {
+          "display_id": "AS-P001",
+          "year": null,
+          "basis": "Company joining year not established; appointment date is not a joining year",
+          "not_an_occupancy_date": true
+        }
+      ],
+      "counting_weight": 1,
+      "workplace_assignment": null,
+      "workplace_assignment_status": "UNASSIGNED_NOT_OCCUPIED",
+      "appointment_date": "2026-09-13",
+      "employment_start": null,
+      "source_acceptance": "DELEGATED_IMPLEMENTATION_PENDING_ACCEPTED_MERGE",
+      "forecast_position_id": "SYN-ESS-001"
+    },
+    {
+      "person_id": "AS-P002",
+      "name": "Adrian Lowe",
+      "status": "current_employee",
+      "display_ids": [
+        "AS-P002"
+      ],
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P002: Adrian Lowe, Chief Financial Officer, effective 2026-09-13"
+        }
+      ],
+      "joining_records": [
+        {
+          "display_id": "AS-P002",
+          "year": null,
+          "basis": "Company joining year not established; appointment date is not a joining year",
+          "not_an_occupancy_date": true
+        }
+      ],
+      "counting_weight": 1,
+      "workplace_assignment": null,
+      "workplace_assignment_status": "UNASSIGNED_NOT_OCCUPIED",
+      "appointment_date": "2026-09-13",
+      "employment_start": null,
+      "source_acceptance": "DELEGATED_IMPLEMENTATION_PENDING_ACCEPTED_MERGE",
+      "forecast_position_id": "SYN-ESS-002"
+    },
+    {
+      "person_id": "AS-P003",
+      "name": "Helena Ward",
+      "status": "current_employee",
+      "display_ids": [
+        "AS-P003"
+      ],
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P003: Helena Ward, General Counsel, effective 2026-09-13"
+        }
+      ],
+      "joining_records": [
+        {
+          "display_id": "AS-P003",
+          "year": null,
+          "basis": "Company joining year not established; appointment date is not a joining year",
+          "not_an_occupancy_date": true
+        }
+      ],
+      "counting_weight": 1,
+      "workplace_assignment": null,
+      "workplace_assignment_status": "UNASSIGNED_NOT_OCCUPIED",
+      "appointment_date": "2026-09-13",
+      "employment_start": null,
+      "source_acceptance": "DELEGATED_IMPLEMENTATION_PENDING_ACCEPTED_MERGE",
+      "forecast_position_id": "SYN-ESS-003"
+    },
+    {
+      "person_id": "AS-P004",
+      "name": "Nina Rowan",
+      "status": "current_employee",
+      "display_ids": [
+        "AS-P004"
+      ],
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P004: Nina Rowan, Corporate Secretary, effective 2026-09-13"
+        }
+      ],
+      "joining_records": [
+        {
+          "display_id": "AS-P004",
+          "year": null,
+          "basis": "Company joining year not established; appointment date is not a joining year",
+          "not_an_occupancy_date": true
+        }
+      ],
+      "counting_weight": 1,
+      "workplace_assignment": null,
+      "workplace_assignment_status": "UNASSIGNED_NOT_OCCUPIED",
+      "appointment_date": "2026-09-13",
+      "employment_start": null,
+      "source_acceptance": "DELEGATED_IMPLEMENTATION_PENDING_ACCEPTED_MERGE",
+      "forecast_position_id": "SYN-ESS-004"
+    },
+    {
+      "person_id": "AS-P005",
+      "name": "Martin Ives",
+      "status": "current_employee",
+      "display_ids": [
+        "AS-P005"
+      ],
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P005: Martin Ives, Head of Risk and Compliance, effective 2026-09-13"
+        }
+      ],
+      "joining_records": [
+        {
+          "display_id": "AS-P005",
+          "year": null,
+          "basis": "Company joining year not established; appointment date is not a joining year",
+          "not_an_occupancy_date": true
+        }
+      ],
+      "counting_weight": 1,
+      "workplace_assignment": null,
+      "workplace_assignment_status": "UNASSIGNED_NOT_OCCUPIED",
+      "appointment_date": "2026-09-13",
+      "employment_start": null,
+      "source_acceptance": "DELEGATED_IMPLEMENTATION_PENDING_ACCEPTED_MERGE",
+      "forecast_position_id": "SYN-ESS-005"
+    },
+    {
+      "person_id": "AS-P006",
+      "name": "Sofia Hart",
+      "status": "current_employee",
+      "display_ids": [
+        "AS-P006"
+      ],
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P006: Sofia Hart, Head of People and Culture, effective 2026-09-13"
+        }
+      ],
+      "joining_records": [
+        {
+          "display_id": "AS-P006",
+          "year": null,
+          "basis": "Company joining year not established; appointment date is not a joining year",
+          "not_an_occupancy_date": true
+        }
+      ],
+      "counting_weight": 1,
+      "workplace_assignment": null,
+      "workplace_assignment_status": "UNASSIGNED_NOT_OCCUPIED",
+      "appointment_date": "2026-09-13",
+      "employment_start": null,
+      "source_acceptance": "DELEGATED_IMPLEMENTATION_PENDING_ACCEPTED_MERGE",
+      "forecast_position_id": "SYN-ESS-006"
+    },
+    {
+      "person_id": "AS-P007",
+      "name": "Elliot Tran",
+      "status": "current_employee",
+      "display_ids": [
+        "AS-P007"
+      ],
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P007: Elliot Tran, Head of Enterprise Technology Services, effective 2026-09-13"
+        }
+      ],
+      "joining_records": [
+        {
+          "display_id": "AS-P007",
+          "year": null,
+          "basis": "Company joining year not established; appointment date is not a joining year",
+          "not_an_occupancy_date": true
+        }
+      ],
+      "counting_weight": 1,
+      "workplace_assignment": null,
+      "workplace_assignment_status": "UNASSIGNED_NOT_OCCUPIED",
+      "appointment_date": "2026-09-13",
+      "employment_start": null,
+      "source_acceptance": "DELEGATED_IMPLEMENTATION_PENDING_ACCEPTED_MERGE",
+      "forecast_position_id": "SYN-ESS-007"
+    },
+    {
+      "person_id": "AS-P008",
+      "name": "Dana West",
+      "status": "current_employee",
+      "display_ids": [
+        "AS-P008"
+      ],
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P008: Dana West, Chief Information Security Officer, effective 2026-09-13"
+        }
+      ],
+      "joining_records": [
+        {
+          "display_id": "AS-P008",
+          "year": null,
+          "basis": "Company joining year not established; appointment date is not a joining year",
+          "not_an_occupancy_date": true
+        }
+      ],
+      "counting_weight": 1,
+      "workplace_assignment": null,
+      "workplace_assignment_status": "UNASSIGNED_NOT_OCCUPIED",
+      "appointment_date": "2026-09-13",
+      "employment_start": null,
+      "source_acceptance": "DELEGATED_IMPLEMENTATION_PENDING_ACCEPTED_MERGE",
+      "forecast_position_id": "SYN-ESS-008"
+    },
+    {
+      "person_id": "AS-P009",
+      "name": "Rowan Price",
+      "status": "current_employee",
+      "display_ids": [
+        "AS-P009"
+      ],
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P009: Rowan Price, Head of Internal Audit, effective 2026-09-13"
+        }
+      ],
+      "joining_records": [
+        {
+          "display_id": "AS-P009",
+          "year": null,
+          "basis": "Company joining year not established; appointment date is not a joining year",
+          "not_an_occupancy_date": true
+        }
+      ],
+      "counting_weight": 1,
+      "workplace_assignment": null,
+      "workplace_assignment_status": "UNASSIGNED_NOT_OCCUPIED",
+      "appointment_date": "2026-09-13",
+      "employment_start": null,
+      "source_acceptance": "DELEGATED_IMPLEMENTATION_PENDING_ACCEPTED_MERGE",
+      "forecast_position_id": "SYN-INTERNAL-AUDIT-001"
+    },
+    {
+      "person_id": "AS-P010",
+      "name": "Cameron Shore",
+      "status": "current_employee",
+      "display_ids": [
+        "AS-P010"
+      ],
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P010: Cameron Shore, President of Sable Harbor Advisory, effective 2026-09-13"
+        }
+      ],
+      "joining_records": [
+        {
+          "display_id": "AS-P010",
+          "year": null,
+          "basis": "Company joining year not established; appointment date is not a joining year",
+          "not_an_occupancy_date": true
+        }
+      ],
+      "counting_weight": 1,
+      "workplace_assignment": null,
+      "workplace_assignment_status": "UNASSIGNED_NOT_OCCUPIED",
+      "appointment_date": "2026-09-13",
+      "employment_start": null,
+      "source_acceptance": "DELEGATED_IMPLEMENTATION_PENDING_ACCEPTED_MERGE",
+      "forecast_position_id": "SYN-ADVISORY-001"
+    },
+    {
+      "person_id": "AS-P011",
+      "name": "Clara Bennett",
+      "status": "current_employee",
+      "display_ids": [
+        "AS-P011"
+      ],
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P011: Clara Bennett, Corporate Controller, effective 2026-09-13"
+        }
+      ],
+      "joining_records": [
+        {
+          "display_id": "AS-P011",
+          "year": null,
+          "basis": "Company joining year not established; appointment date is not a joining year",
+          "not_an_occupancy_date": true
+        }
+      ],
+      "counting_weight": 1,
+      "workplace_assignment": null,
+      "workplace_assignment_status": "UNASSIGNED_NOT_OCCUPIED",
+      "appointment_date": "2026-09-13",
+      "employment_start": null,
+      "source_acceptance": "DELEGATED_IMPLEMENTATION_PENDING_ACCEPTED_MERGE",
+      "forecast_position_id": "SYN-ESS-009"
+    },
+    {
+      "person_id": "AS-P012",
+      "name": "Victor Lane",
+      "status": "current_employee",
+      "display_ids": [
+        "AS-P012"
+      ],
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P012: Victor Lane, Facilities and Workplace Lead, effective 2026-09-13"
+        }
+      ],
+      "joining_records": [
+        {
+          "display_id": "AS-P012",
+          "year": null,
+          "basis": "Company joining year not established; appointment date is not a joining year",
+          "not_an_occupancy_date": true
+        }
+      ],
+      "counting_weight": 1,
+      "workplace_assignment": null,
+      "workplace_assignment_status": "UNASSIGNED_NOT_OCCUPIED",
+      "appointment_date": "2026-09-13",
+      "employment_start": null,
+      "source_acceptance": "DELEGATED_IMPLEMENTATION_PENDING_ACCEPTED_MERGE",
+      "forecast_position_id": "SYN-ESS-010"
+    },
+    {
+      "person_id": "AS-P013",
+      "name": "Erin Cross",
+      "status": "current_employee",
+      "display_ids": [
+        "AS-P013"
+      ],
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P013: Erin Cross, Procurement and Supplier Risk Lead, effective 2026-09-13"
+        }
+      ],
+      "joining_records": [
+        {
+          "display_id": "AS-P013",
+          "year": null,
+          "basis": "Company joining year not established; appointment date is not a joining year",
+          "not_an_occupancy_date": true
+        }
+      ],
+      "counting_weight": 1,
+      "workplace_assignment": null,
+      "workplace_assignment_status": "UNASSIGNED_NOT_OCCUPIED",
+      "appointment_date": "2026-09-13",
+      "employment_start": null,
+      "source_acceptance": "DELEGATED_IMPLEMENTATION_PENDING_ACCEPTED_MERGE",
+      "forecast_position_id": "SYN-ESS-011"
+    },
+    {
+      "person_id": "AS-P014",
+      "name": "Omar Vale",
+      "status": "current_employee",
+      "display_ids": [
+        "AS-P014"
+      ],
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P014: Omar Vale, Data Governance and Records Lead, effective 2026-09-13"
+        }
+      ],
+      "joining_records": [
+        {
+          "display_id": "AS-P014",
+          "year": null,
+          "basis": "Company joining year not established; appointment date is not a joining year",
+          "not_an_occupancy_date": true
+        }
+      ],
+      "counting_weight": 1,
+      "workplace_assignment": null,
+      "workplace_assignment_status": "UNASSIGNED_NOT_OCCUPIED",
+      "appointment_date": "2026-09-13",
+      "employment_start": null,
+      "source_acceptance": "DELEGATED_IMPLEMENTATION_PENDING_ACCEPTED_MERGE",
+      "forecast_position_id": "SYN-ESS-012"
+    },
+    {
+      "person_id": "AS-P015",
+      "name": "Evie Quinn",
+      "status": "current_employee",
+      "display_ids": [
+        "AS-P015"
+      ],
+      "sources": [
+        {
+          "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+          "section": "Dated appointments",
+          "evidence": "AS-P015: Evie Quinn, Enterprise Safety and Environmental Governance Lead, effective 2026-09-13"
+        }
+      ],
+      "joining_records": [
+        {
+          "display_id": "AS-P015",
+          "year": null,
+          "basis": "Company joining year not established; appointment date is not a joining year",
+          "not_an_occupancy_date": true
+        }
+      ],
+      "counting_weight": 1,
+      "workplace_assignment": null,
+      "workplace_assignment_status": "UNASSIGNED_NOT_OCCUPIED",
+      "appointment_date": "2026-09-13",
+      "employment_start": null,
+      "source_acceptance": "DELEGATED_IMPLEMENTATION_PENDING_ACCEPTED_MERGE",
+      "forecast_position_id": "SYN-ESS-013"
+    },
     {
       "person_id": "P001",
       "name": "Daniel Mercer",
@@ -9642,496 +10094,6 @@
         }
       ],
       "unit_kind": "entity_or_function",
-      "current_named_employees": null,
-      "authorized_positions": null,
-      "confirmed_vacancies": null,
-      "remote_distributed_field_deployed": null,
-      "resident_occupants": null,
-      "visitors_customers_trainees_peak": null,
-      "shift_population": null,
-      "maximum_concurrent_attendance": null,
-      "seat_assignment_source": "geospatial/facilities/source/campus.json",
-      "assigned_desks": null,
-      "shared_desks": null,
-      "touchdown_seats": null,
-      "training_seats": null,
-      "meeting_seats": null,
-      "special_use_capacity": null,
-      "horizons": [
-        {
-          "year": 2026,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_NO_EMPLOYMENT_CENSUS",
-          "net_assignable_area_m2": null
-        },
-        {
-          "year": 2031,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_PLANNING_CAPACITY",
-          "net_assignable_area_m2": null
-        },
-        {
-          "year": 2036,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_PLANNING_CAPACITY",
-          "net_assignable_area_m2": null
-        }
-      ],
-      "rollup_rule": "NONADDITIVE_VIEW; normalized people and J2 groups control counts, site program controls physical capacity"
-    },
-    {
-      "id": "ROLE-27",
-      "name": "Chief of ESS",
-      "status": "UNNAMED_ROLE",
-      "sources": [
-        {
-          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-          "line": 29,
-          "evidence": "The **Chief of ESS** is the administrative head of the umbrella, not the substantive superior of every corporate officer housed within it. The role coordinates shared administration, budget mechanics, facilities, staffing support, service quality, and cross-functional coherence."
-        }
-      ],
-      "unit_kind": "role_record",
-      "current_named_employees": null,
-      "authorized_positions": null,
-      "confirmed_vacancies": null,
-      "remote_distributed_field_deployed": null,
-      "resident_occupants": null,
-      "visitors_customers_trainees_peak": null,
-      "shift_population": null,
-      "maximum_concurrent_attendance": null,
-      "seat_assignment_source": "geospatial/facilities/source/campus.json",
-      "assigned_desks": null,
-      "shared_desks": null,
-      "touchdown_seats": null,
-      "training_seats": null,
-      "meeting_seats": null,
-      "special_use_capacity": null,
-      "horizons": [
-        {
-          "year": 2026,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_NO_EMPLOYMENT_CENSUS",
-          "net_assignable_area_m2": null
-        },
-        {
-          "year": 2031,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_PLANNING_CAPACITY",
-          "net_assignable_area_m2": null
-        },
-        {
-          "year": 2036,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_PLANNING_CAPACITY",
-          "net_assignable_area_m2": null
-        }
-      ],
-      "rollup_rule": "NONADDITIVE_VIEW; normalized people and J2 groups control counts, site program controls physical capacity"
-    },
-    {
-      "id": "ROLE-28",
-      "name": "Chief Financial Officer",
-      "status": "UNNAMED_ROLE",
-      "sources": [
-        {
-          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-          "line": 31,
-          "evidence": "Membership in ESS does **not** imply that the CFO, General Counsel, senior People & Culture leader, technology leader, CISO, or other substantive officer loses direct standing with the CEO or Board where the office's responsibilities require it. The Chief of ESS cannot convert administrative coordination into generalized approval authority."
-        }
-      ],
-      "unit_kind": "role_record",
-      "current_named_employees": null,
-      "authorized_positions": null,
-      "confirmed_vacancies": null,
-      "remote_distributed_field_deployed": null,
-      "resident_occupants": null,
-      "visitors_customers_trainees_peak": null,
-      "shift_population": null,
-      "maximum_concurrent_attendance": null,
-      "seat_assignment_source": "geospatial/facilities/source/campus.json",
-      "assigned_desks": null,
-      "shared_desks": null,
-      "touchdown_seats": null,
-      "training_seats": null,
-      "meeting_seats": null,
-      "special_use_capacity": null,
-      "horizons": [
-        {
-          "year": 2026,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_NO_EMPLOYMENT_CENSUS",
-          "net_assignable_area_m2": null
-        },
-        {
-          "year": 2031,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_PLANNING_CAPACITY",
-          "net_assignable_area_m2": null
-        },
-        {
-          "year": 2036,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_PLANNING_CAPACITY",
-          "net_assignable_area_m2": null
-        }
-      ],
-      "rollup_rule": "NONADDITIVE_VIEW; normalized people and J2 groups control counts, site program controls physical capacity"
-    },
-    {
-      "id": "ROLE-29",
-      "name": "General Counsel",
-      "status": "UNNAMED_ROLE",
-      "sources": [
-        {
-          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-          "line": 35,
-          "evidence": "The General Counsel has direct standing with the Chief Executive Officer and Board when professional duties require it. OGC owns legal advice and Corporate Secretary mechanics; it does not become a substitute management chain."
-        }
-      ],
-      "unit_kind": "role_record",
-      "current_named_employees": null,
-      "authorized_positions": null,
-      "confirmed_vacancies": null,
-      "remote_distributed_field_deployed": null,
-      "resident_occupants": null,
-      "visitors_customers_trainees_peak": null,
-      "shift_population": null,
-      "maximum_concurrent_attendance": null,
-      "seat_assignment_source": "geospatial/facilities/source/campus.json",
-      "assigned_desks": null,
-      "shared_desks": null,
-      "touchdown_seats": null,
-      "training_seats": null,
-      "meeting_seats": null,
-      "special_use_capacity": null,
-      "horizons": [
-        {
-          "year": 2026,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_NO_EMPLOYMENT_CENSUS",
-          "net_assignable_area_m2": null
-        },
-        {
-          "year": 2031,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_PLANNING_CAPACITY",
-          "net_assignable_area_m2": null
-        },
-        {
-          "year": 2036,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_PLANNING_CAPACITY",
-          "net_assignable_area_m2": null
-        }
-      ],
-      "rollup_rule": "NONADDITIVE_VIEW; normalized people and J2 groups control counts, site program controls physical capacity"
-    },
-    {
-      "id": "ROLE-30",
-      "name": "Corporate Secretary",
-      "status": "UNNAMED_ROLE",
-      "sources": [
-        {
-          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-          "line": 13,
-          "evidence": "- Office of the General Counsel, including Corporate Secretary;"
-        }
-      ],
-      "unit_kind": "role_record",
-      "current_named_employees": null,
-      "authorized_positions": null,
-      "confirmed_vacancies": null,
-      "remote_distributed_field_deployed": null,
-      "resident_occupants": null,
-      "visitors_customers_trainees_peak": null,
-      "shift_population": null,
-      "maximum_concurrent_attendance": null,
-      "seat_assignment_source": "geospatial/facilities/source/campus.json",
-      "assigned_desks": null,
-      "shared_desks": null,
-      "touchdown_seats": null,
-      "training_seats": null,
-      "meeting_seats": null,
-      "special_use_capacity": null,
-      "horizons": [
-        {
-          "year": 2026,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_NO_EMPLOYMENT_CENSUS",
-          "net_assignable_area_m2": null
-        },
-        {
-          "year": 2031,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_PLANNING_CAPACITY",
-          "net_assignable_area_m2": null
-        },
-        {
-          "year": 2036,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_PLANNING_CAPACITY",
-          "net_assignable_area_m2": null
-        }
-      ],
-      "rollup_rule": "NONADDITIVE_VIEW; normalized people and J2 groups control counts, site program controls physical capacity"
-    },
-    {
-      "id": "ROLE-31",
-      "name": "Head of Risk & Compliance",
-      "status": "UNNAMED_ROLE",
-      "sources": [
-        {
-          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-          "line": 14,
-          "evidence": "- Risk & Compliance;"
-        }
-      ],
-      "unit_kind": "role_record",
-      "current_named_employees": null,
-      "authorized_positions": null,
-      "confirmed_vacancies": null,
-      "remote_distributed_field_deployed": null,
-      "resident_occupants": null,
-      "visitors_customers_trainees_peak": null,
-      "shift_population": null,
-      "maximum_concurrent_attendance": null,
-      "seat_assignment_source": "geospatial/facilities/source/campus.json",
-      "assigned_desks": null,
-      "shared_desks": null,
-      "touchdown_seats": null,
-      "training_seats": null,
-      "meeting_seats": null,
-      "special_use_capacity": null,
-      "horizons": [
-        {
-          "year": 2026,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_NO_EMPLOYMENT_CENSUS",
-          "net_assignable_area_m2": null
-        },
-        {
-          "year": 2031,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_PLANNING_CAPACITY",
-          "net_assignable_area_m2": null
-        },
-        {
-          "year": 2036,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_PLANNING_CAPACITY",
-          "net_assignable_area_m2": null
-        }
-      ],
-      "rollup_rule": "NONADDITIVE_VIEW; normalized people and J2 groups control counts, site program controls physical capacity"
-    },
-    {
-      "id": "ROLE-32",
-      "name": "Head of People & Culture",
-      "status": "UNNAMED_ROLE",
-      "sources": [
-        {
-          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-          "line": 16,
-          "evidence": "- People & Culture;"
-        }
-      ],
-      "unit_kind": "role_record",
-      "current_named_employees": null,
-      "authorized_positions": null,
-      "confirmed_vacancies": null,
-      "remote_distributed_field_deployed": null,
-      "resident_occupants": null,
-      "visitors_customers_trainees_peak": null,
-      "shift_population": null,
-      "maximum_concurrent_attendance": null,
-      "seat_assignment_source": "geospatial/facilities/source/campus.json",
-      "assigned_desks": null,
-      "shared_desks": null,
-      "touchdown_seats": null,
-      "training_seats": null,
-      "meeting_seats": null,
-      "special_use_capacity": null,
-      "horizons": [
-        {
-          "year": 2026,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_NO_EMPLOYMENT_CENSUS",
-          "net_assignable_area_m2": null
-        },
-        {
-          "year": 2031,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_PLANNING_CAPACITY",
-          "net_assignable_area_m2": null
-        },
-        {
-          "year": 2036,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_PLANNING_CAPACITY",
-          "net_assignable_area_m2": null
-        }
-      ],
-      "rollup_rule": "NONADDITIVE_VIEW; normalized people and J2 groups control counts, site program controls physical capacity"
-    },
-    {
-      "id": "ROLE-33",
-      "name": "Head of Enterprise Technology Services",
-      "status": "UNNAMED_ROLE",
-      "sources": [
-        {
-          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-          "line": 17,
-          "evidence": "- Enterprise Technology Services;"
-        }
-      ],
-      "unit_kind": "role_record",
-      "current_named_employees": null,
-      "authorized_positions": null,
-      "confirmed_vacancies": null,
-      "remote_distributed_field_deployed": null,
-      "resident_occupants": null,
-      "visitors_customers_trainees_peak": null,
-      "shift_population": null,
-      "maximum_concurrent_attendance": null,
-      "seat_assignment_source": "geospatial/facilities/source/campus.json",
-      "assigned_desks": null,
-      "shared_desks": null,
-      "touchdown_seats": null,
-      "training_seats": null,
-      "meeting_seats": null,
-      "special_use_capacity": null,
-      "horizons": [
-        {
-          "year": 2026,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_NO_EMPLOYMENT_CENSUS",
-          "net_assignable_area_m2": null
-        },
-        {
-          "year": 2031,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_PLANNING_CAPACITY",
-          "net_assignable_area_m2": null
-        },
-        {
-          "year": 2036,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_PLANNING_CAPACITY",
-          "net_assignable_area_m2": null
-        }
-      ],
-      "rollup_rule": "NONADDITIVE_VIEW; normalized people and J2 groups control counts, site program controls physical capacity"
-    },
-    {
-      "id": "ROLE-34",
-      "name": "Chief Information Security Officer",
-      "status": "UNNAMED_ROLE",
-      "sources": [
-        {
-          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-          "line": 45,
-          "evidence": "The CISO maintains an independent security authority boundary proportionate to material security obligations and does not become a generalized veto office."
-        }
-      ],
-      "unit_kind": "role_record",
-      "current_named_employees": null,
-      "authorized_positions": null,
-      "confirmed_vacancies": null,
-      "remote_distributed_field_deployed": null,
-      "resident_occupants": null,
-      "visitors_customers_trainees_peak": null,
-      "shift_population": null,
-      "maximum_concurrent_attendance": null,
-      "seat_assignment_source": "geospatial/facilities/source/campus.json",
-      "assigned_desks": null,
-      "shared_desks": null,
-      "touchdown_seats": null,
-      "training_seats": null,
-      "meeting_seats": null,
-      "special_use_capacity": null,
-      "horizons": [
-        {
-          "year": 2026,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_NO_EMPLOYMENT_CENSUS",
-          "net_assignable_area_m2": null
-        },
-        {
-          "year": 2031,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_PLANNING_CAPACITY",
-          "net_assignable_area_m2": null
-        },
-        {
-          "year": 2036,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_PLANNING_CAPACITY",
-          "net_assignable_area_m2": null
-        }
-      ],
-      "rollup_rule": "NONADDITIVE_VIEW; normalized people and J2 groups control counts, site program controls physical capacity"
-    },
-    {
-      "id": "ROLE-35",
-      "name": "Head of Internal Audit",
-      "status": "UNNAMED_ROLE",
-      "sources": [
-        {
-          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
-          "line": 49,
-          "evidence": "Internal Audit is structurally separate from OGC, Risk & Compliance, Finance, Technology Services, J2, and management control ownership. Internal Audit reports **functionally to the Board Audit & Compliance Committee**. Administrative matters may flow through the CEO/ESS environment only where they do not impair audit independence."
-        }
-      ],
-      "unit_kind": "role_record",
-      "current_named_employees": null,
-      "authorized_positions": null,
-      "confirmed_vacancies": null,
-      "remote_distributed_field_deployed": null,
-      "resident_occupants": null,
-      "visitors_customers_trainees_peak": null,
-      "shift_population": null,
-      "maximum_concurrent_attendance": null,
-      "seat_assignment_source": "geospatial/facilities/source/campus.json",
-      "assigned_desks": null,
-      "shared_desks": null,
-      "touchdown_seats": null,
-      "training_seats": null,
-      "meeting_seats": null,
-      "special_use_capacity": null,
-      "horizons": [
-        {
-          "year": 2026,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_NO_EMPLOYMENT_CENSUS",
-          "net_assignable_area_m2": null
-        },
-        {
-          "year": 2031,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_PLANNING_CAPACITY",
-          "net_assignable_area_m2": null
-        },
-        {
-          "year": 2036,
-          "proposed_future_positions": null,
-          "status": "UNRESOLVED_PLANNING_CAPACITY",
-          "net_assignable_area_m2": null
-        }
-      ],
-      "rollup_rule": "NONADDITIVE_VIEW; normalized people and J2 groups control counts, site program controls physical capacity"
-    },
-    {
-      "id": "ROLE-36",
-      "name": "President of Sable Harbor Advisory",
-      "status": "UNNAMED_ROLE",
-      "sources": [
-        {
-          "path": "docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md",
-          "line": 51,
-          "evidence": "Advisory is an operating business led by a President of Sable Harbor Advisory. The President owns the business line, subject to Sable Harbor's existing corporate governance, delegated authority, reserved matters, legal structure, and Board/CEO authority. The individual is `OPEN`."
-        }
-      ],
-      "unit_kind": "role_record",
       "current_named_employees": null,
       "authorized_positions": null,
       "confirmed_vacancies": null,
@@ -21490,7 +21452,7 @@
     "internal_users_compute_assumption": 900,
     "compute_users_are_employee_census": false,
     "enterprise_total_addition": null,
-    "overlap_rule": "Do not add proposed roles to 44 named employees, J2 237, conditional ESS 48/54 or legacy 7.1 service-workload FTE. Construction lead 0.5 is included capacity; specialist 2 is purchased project capacity, not extra payroll.",
+    "overlap_rule": "Do not add proposed roles to named employee identities, J2 237, conditional ESS 48/54 or legacy 7.1 service-workload FTE. Construction lead 0.5 is included capacity; specialist 2 is purchased project capacity, not extra payroll.",
     "conditional_seat_allocation": {
       "id": "SH-FAC-RT-SEATS-001",
       "status": "CONDITIONAL_PLANNING_ALLOCATION_NOT_OCCUPANCY",
@@ -21574,11 +21536,11 @@
     "authorized": 591
   },
   "totals": {
-    "person_display_records": 54,
-    "unique_display_people": 52,
-    "current_named_employees": 44,
+    "person_display_records": 69,
+    "unique_display_people": 67,
+    "current_named_employees": 59,
     "current_named_nonemployee_directors": 7,
-    "current_named_people": 51,
+    "current_named_people": 66,
     "former_display_people": 1,
     "excluded_register_people": 16,
     "actual_company_headcount": null,
@@ -21590,7 +21552,7 @@
     "named_population": "Deduplicate by person_id across every chart; named population is a source coverage count, not a payroll census.",
     "roles": "Unnamed offices and role-family counts overlap establishments; never add role-register counts to J2 or enterprise totals.",
     "employment": "Former, external, unconfirmed and superseded identities are excluded from current totals. Nonemployee directors remain a separate visitor demand category.",
-    "workforce": "Known industrial population and named employees overlap. Never add 44 named employees to the 271 industrial population or 237 J2 billets.",
+    "workforce": "Known industrial population and named employees overlap. Never add named employee identities to the 271 industrial population or 237 J2 billets.",
     "attendance": "Assigned workforce, residents, cohort peaks, shifts and maximum simultaneous attendance require explicit schedules; no authorization-to-desk equivalence.",
     "seats": "Meeting/training/resident capacities are activity capacities, not additional people. Peak scenario must allocate one person once across simultaneous activities.",
     "forecast": "2027 conditional workforce is retained separately; not actual 2026 payroll, and not an automatic 2031 or 2036 forecast.",

@@ -1,0 +1,25 @@
+{
+  "record_id": "AUDIT-SUITE-ORG-PROPOSAL-20260913",
+  "owner_design_status": "DELEGATED_FICTIONAL_ROLE_COMPLETION",
+  "repository_acceptance_status": "PROPOSED_NOT_ACCEPTED_CANON",
+  "effective_from": "2026-09-13",
+  "authority": "Submitted audit-suite handover sections 3.1, 3.3 and 22; this proposal is not a Board ratification",
+  "change_type": "NAME_EXISTING_FUNCTION_NOT_ASSERTED_NEW_HIRE",
+  "people": [
+    {"person_id":"AS-P001","name":"Lila Kestrel","title":"Chief of Enterprise Support Services","org_role_id":"ROLE-27","department":"ESS","forecast_group":"ess","reporting":"CEO administration; no substantive authority over independent functions"},
+    {"person_id":"AS-P002","name":"Adrian Lowe","title":"Chief Financial Officer","org_role_id":"ROLE-28","department":"Finance","forecast_group":"ess","reporting":"CEO and Board under Finance authority; ESS administrative coordination only"},
+    {"person_id":"AS-P003","name":"Helena Ward","title":"General Counsel","org_role_id":"ROLE-29","department":"Office of General Counsel","forecast_group":"ess","reporting":"Direct professional standing with CEO and Board"},
+    {"person_id":"AS-P004","name":"Nina Rowan","title":"Corporate Secretary","org_role_id":"ROLE-30","department":"Office of General Counsel","forecast_group":"ess","reporting":"Office of General Counsel; Board secretariat duties"},
+    {"person_id":"AS-P005","name":"Martin Ives","title":"Head of Risk and Compliance","org_role_id":"ROLE-31","department":"Risk and Compliance","forecast_group":"ess","reporting":"Management challenge and coordination; no operating command"},
+    {"person_id":"AS-P006","name":"Sofia Hart","title":"Head of People and Culture","org_role_id":"ROLE-32","department":"People and Culture","forecast_group":"ess","reporting":"Enterprise people profession; manager duties remain with management"},
+    {"person_id":"AS-P007","name":"Elliot Tran","title":"Head of Enterprise Technology Services","org_role_id":"ROLE-33","department":"Enterprise Technology Services","forecast_group":"ess","reporting":"Shared technology; product engineering remains with business owners"},
+    {"person_id":"AS-P008","name":"Dana West","title":"Chief Information Security Officer","org_role_id":"ROLE-34","department":"Enterprise Security","forecast_group":"ess","reporting":"Independent security authority; no generalized veto"},
+    {"person_id":"AS-P009","name":"Rowan Price","title":"Head of Internal Audit","org_role_id":"ROLE-35","department":"Internal Audit","forecast_group":"internal-audit","reporting":"Functionally to Board Audit and Compliance Committee; administrative CEO support only"},
+    {"person_id":"AS-P010","name":"Cameron Shore","title":"President of Sable Harbor Advisory","org_role_id":"ROLE-36","department":"Advisory","forecast_group":"advisory","reporting":"Advisory common professional bench; not J2"},
+    {"person_id":"AS-P011","name":"Clara Bennett","title":"Corporate Controller","org_role_id":"AS-ROLE-CONTROLLER","department":"Finance","forecast_group":"ess","reporting":"CFO; distinct from ARU controller Tessa Rourke"},
+    {"person_id":"AS-P012","name":"Victor Lane","title":"Facilities and Workplace Lead","org_role_id":"AS-ROLE-FACILITIES","department":"Facilities","forecast_group":"ess","reporting":"ESS administrative services; no site commissioning authority"},
+    {"person_id":"AS-P013","name":"Erin Cross","title":"Procurement and Supplier Risk Lead","org_role_id":"AS-ROLE-PROCUREMENT","department":"Procurement","forecast_group":"ess","reporting":"ESS procurement support; contract and risk approval remain separately delegated"},
+    {"person_id":"AS-P014","name":"Omar Vale","title":"Data Governance and Records Lead","org_role_id":"AS-ROLE-DATA","department":"Data Governance","forecast_group":"ess","reporting":"Enterprise Technology Services with legal and business data-owner duties retained"},
+    {"person_id":"AS-P015","name":"Evie Quinn","title":"Enterprise Safety and Environmental Governance Lead","org_role_id":"AS-ROLE-ENVIRONMENT","department":"Safety and Environment","forecast_group":"ess","reporting":"ESS professional support; site operating authority remains local"}
+  ]
+}

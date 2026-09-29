@@ -1,0 +1,13 @@
+# Streamed instructor history inspection
+
+`history_inspection.inspect_history` verifies the event chain in one authorized SQLite read transaction. It retains requested revision states (at most 16), the latest state, and compact actor/command-kind/command-ID/time/hash metadata. It does not retain the complete historical state list. Final authorization and current revision are checked again after the transaction.
+
+The rolling digest uses the exact canonical JSON representation of the existing public history list: opening bracket, comma-separated canonical event records, closing bracket. Prefix digest copies therefore equal `digest(history[:revision + 1])`, including Unicode and the original retained event fields. Event-chain hashes and hashes of retained command envelopes are checked; this does not reconstruct unavailable external request inputs. The current state must match the history tip. The ordinary `Store.history` endpoint and stored schema remain unchanged.
+
+`explanation_binding` uses the full streamed digest. `instructor_comparison` requests the bound and selected historical states and their prefix digests, then uses compact activity metadata for actor attribution. Existing authorization, source routing, context mismatch and no-grading boundaries remain.
+
+Validation: 27 focused history/binding/comparison/portfolio tests passed, followed by one added regression proving both key capture and comparison work when public history materialization is prohibited. Tests include exact Unicode/prefix equality, corrupted event/request/chain hashes, current-state mismatch, revoked access and final authorization recheck. Ruff passed for all changed Python files.
+
+The explicit private reference-v4 benchmark inspected 815 events through revision 814 and retained revisions 0 and 814. It matched the preexisting key snapshot and receipt history digest exactly. One read-only helper invocation took 32.78 seconds with peak process RSS 113,380 KiB (about 111 MiB). The previous full key capture was observed at roughly 18 GiB RSS, but that was a larger operation rather than a controlled equivalent benchmark; no speedup ratio is asserted. The helper remains proportional to history bytes in CPU/I/O, and ordinary history consumers still materialize their lists.
+
+Private evidence: `enterprise/generated/audit-suite/company-portfolio-2026-09-14/reference-v4/HISTORY_STREAM_BENCHMARK.json` and `benchmark-history.py`. Historical key/collection receipts were preserved. No source version, audit command, model call or live service restart was performed for this benchmark. Browser/server performance after an explicit restart requires separate measurement.

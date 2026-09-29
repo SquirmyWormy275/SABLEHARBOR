@@ -1,0 +1,308 @@
+import json
+from dataclasses import asdict
+from pathlib import Path
+
+import pytest
+
+from enterprise.audit_suite.company_store import CompanyStoreError
+from tests.audit_suite.test_company_activity import recipe
+from tools.audit_suite import generate_company_activity as operator
+
+ROOT = Path(__file__).resolve().parents[2]
+
+
+def test_nonhuman_operator_preserves_originals_and_rejects_changed_input_pin(tmp_path):
+    import hashlib
+
+    from tests.audit_suite.test_company_nonhuman_identity_activity import inputs
+
+    source_root, value = inputs.__wrapped__(tmp_path)
+    recipe_path = tmp_path / "nonhuman.json"
+    raw = json.dumps(asdict(value)).encode()
+    recipe_path.write_bytes(raw)
+    recipe_path.chmod(0o600)
+    original = (source_root / "company.sqlite3").read_bytes()
+    destination = tmp_path / "nonhuman-output"
+    result = operator.run(
+        "nonhuman-identity",
+        recipe_path,
+        destination,
+        repository=ROOT,
+        source_root=source_root,
+    )
+    assert result["counts"] == {"systems": 16, "versions": 35, "grants": 0, "collections": 0}
+    assert result["source_input"]["source_versions_sha256"] == value.source_versions_sha256
+    assert (source_root / "company.sqlite3").read_bytes() == original
+    assert (destination / "RECIPE.json").read_bytes() == raw
+    for name, pin in result["members"].items():
+        assert hashlib.sha256((destination / name).read_bytes()).hexdigest() == pin
+    body = asdict(value)
+    body["source_versions_sha256"] = "0" * 64
+    recipe_path.write_text(json.dumps(body))
+    with pytest.raises(CompanyStoreError):
+        operator.run(
+            "nonhuman-identity",
+            recipe_path,
+            tmp_path / "changed-pin",
+            repository=ROOT,
+            source_root=source_root,
+        )
+    assert not (tmp_path / "changed-pin").exists()
+    assert (source_root / "company.sqlite3").read_bytes() == original
+
+
+def test_lifecycle_operator_preserves_selected_originals_and_exact_recipe(tmp_path):
+    import hashlib
+
+    from tests.audit_suite.test_company_lifecycle_activity import inputs
+
+    source_root, value = inputs.__wrapped__(tmp_path)
+    recipe_path = tmp_path / "lifecycle.json"
+    raw = json.dumps(asdict(value)).encode()
+    recipe_path.write_bytes(raw)
+    recipe_path.chmod(0o600)
+    original = (source_root / "company.sqlite3").read_bytes()
+    destination = tmp_path / "lifecycle-output"
+    result = operator.run(
+        "identity-lifecycle",
+        recipe_path,
+        destination,
+        repository=ROOT,
+        source_root=source_root,
+    )
+    assert result["counts"] == {"systems": 10, "versions": 24, "grants": 0, "collections": 0}
+    assert result["source_input"]["source_versions_sha256"] == value.source_versions_sha256
+    assert (source_root / "company.sqlite3").read_bytes() == original
+    assert (destination / "RECIPE.json").read_bytes() == raw
+    for name, pin in result["members"].items():
+        assert hashlib.sha256((destination / name).read_bytes()).hexdigest() == pin
+
+
+@pytest.mark.parametrize("field,value", [("branch_ids", "ab"), ("source_refs", [{}])])
+def test_lifecycle_operator_rejects_malformed_nested_recipe(tmp_path, field, value):
+    from tests.audit_suite.test_company_lifecycle_activity import inputs
+
+    source_root, recipe = inputs.__wrapped__(tmp_path)
+    body = asdict(recipe)
+    body[field] = value
+    recipe_path = tmp_path / "lifecycle.json"
+    recipe_path.write_text(json.dumps(body))
+    recipe_path.chmod(0o600)
+    destination = tmp_path / "invalid"
+    with pytest.raises(CompanyStoreError, match="Invalid explicit"):
+        operator.run(
+            "identity-lifecycle",
+            recipe_path,
+            destination,
+            repository=ROOT,
+            source_root=source_root,
+        )
+    assert not destination.exists()
+
+
+def prepare(tmp_path):
+    tmp_path.chmod(0o700)
+    source = tmp_path / "recipe.json"
+    source.write_text(json.dumps(asdict(recipe())))
+    source.chmod(0o600)
+    return source
+
+
+def test_operator_generates_private_sources_without_audit_or_grants(tmp_path):
+    source = prepare(tmp_path)
+    result = operator.run("mover", source, tmp_path / "result", repository=ROOT)
+    assert result["counts"] == {"systems": 10, "versions": 20, "grants": 0, "collections": 0}
+    assert (tmp_path / "result" / "RECIPE.json").read_bytes() == source.read_bytes()
+    assert not list((tmp_path / "result").rglob("engagements.sqlite3"))
+    assert all(not p.stat().st_mode & 0o077 for p in (tmp_path / "result").rglob("*"))
+    with pytest.raises(CompanyStoreError, match="New private"):
+        operator.run("mover", source, tmp_path / "result", repository=ROOT)
+
+
+def test_bad_recipe_and_generator_failure_never_leave_destination(tmp_path, monkeypatch):
+    source = prepare(tmp_path)
+    bad = json.loads(source.read_text())
+    bad["unexpected"] = "not accepted"
+    source.write_text(json.dumps(bad))
+    with pytest.raises(CompanyStoreError, match="Invalid explicit"):
+        operator.run("mover", source, tmp_path / "bad", repository=ROOT)
+    assert not (tmp_path / "bad").exists()
+    source.write_text(json.dumps(asdict(recipe())))
+
+    def fail(store, **kwargs):
+        store.register_system("CO", "branch", "system", "owner")
+        raise RuntimeError("injected partial generation")
+
+    monkeypatch.setitem(operator.KINDS, "mover", (operator.TransferRecipe, fail))
+    with pytest.raises(RuntimeError, match="partial generation"):
+        operator.run("mover", source, tmp_path / "failed", repository=ROOT)
+    assert not (tmp_path / "failed").exists()
+    assert not list(tmp_path.glob(".company-activity-*"))
+
+
+def test_public_or_aliased_recipe_denied_before_output(tmp_path):
+    source = prepare(tmp_path)
+    source.chmod(0o644)
+    with pytest.raises(CompanyStoreError, match="Private regular"):
+        operator.run("mover", source, tmp_path / "public", repository=ROOT)
+    source.chmod(0o600)
+    alias = tmp_path / "alias.json"
+    alias.symlink_to(source)
+    with pytest.raises(CompanyStoreError, match="aliases"):
+        operator.run("mover", alias, tmp_path / "aliased", repository=ROOT)
+
+
+@pytest.mark.parametrize(
+    "kind,versions", [("training", 29), ("backup", 51), ("change", 32), ("provider-intake", 46)]
+)
+def test_native_activity_generator_adapters(tmp_path, kind, versions):
+    from tests.audit_suite.test_company_backup_activity import recipe as backup_recipe
+    from tests.audit_suite.test_company_change_activity import recipe as change_recipe
+    from tests.audit_suite.test_company_provider_intake_activity import recipe as provider_recipe
+    from tests.audit_suite.test_company_training_activity import recipe as training_recipe
+
+    source = prepare(tmp_path)
+    value = {
+        "training": training_recipe,
+        "backup": backup_recipe,
+        "change": change_recipe,
+        "provider-intake": provider_recipe,
+    }[kind]()
+    source.write_text(json.dumps(asdict(value)))
+    result = operator.run(kind, source, tmp_path / "result", repository=ROOT)
+    assert result["counts"]["versions"] == versions
+    assert result["counts"]["grants"] == result["counts"]["collections"] == 0
+    import hashlib
+
+    for name, expected in result["members"].items():
+        assert hashlib.sha256((tmp_path / "result" / name).read_bytes()).hexdigest() == expected
+
+
+@pytest.mark.parametrize(
+    "raw",
+    [
+        '{"company_id":"first","company_id":"second"}',
+        '{"company_id":NaN}',
+        '{"company_id":Infinity}',
+    ],
+)
+def test_ambiguous_or_nonfinite_recipe_rejected_before_generation(tmp_path, monkeypatch, raw):
+    source = prepare(tmp_path)
+    source.write_text(raw)
+
+    def forbidden(*args, **kwargs):
+        pytest.fail("Invalid JSON must never reach recipe construction")
+
+    monkeypatch.setitem(operator.KINDS, "mover", (forbidden, forbidden))
+    with pytest.raises(CompanyStoreError, match="Invalid explicit"):
+        operator.run("mover", source, tmp_path / "result", repository=ROOT)
+    assert not (tmp_path / "result").exists()
+
+
+def test_training_manifest_pins_every_published_file(tmp_path):
+    from tests.audit_suite.test_company_training_activity import recipe as training_recipe
+
+    source = prepare(tmp_path)
+    source.write_text(json.dumps(asdict(training_recipe())))
+    result = operator.run("training", source, tmp_path / "result", repository=ROOT)
+    published = {
+        str(p.relative_to(tmp_path / "result"))
+        for p in (tmp_path / "result").rglob("*")
+        if p.is_file() and p.name != "MANIFEST.json"
+    }
+    assert "company/SOURCE_RECEIPT.json" in published
+    assert set(result["members"]) == published
+
+
+def test_recipe_growth_after_size_check_is_still_bounded(tmp_path, monkeypatch):
+    source = prepare(tmp_path)
+    original_open = operator.os.open
+
+    def grow_before_open(path, flags, *args, **kwargs):
+        if Path(path) == source:
+            with source.open("ab") as stream:
+                stream.write(b" " * operator.MAX_RECIPE_BYTES)
+        return original_open(path, flags, *args, **kwargs)
+
+    monkeypatch.setattr(operator.os, "open", grow_before_open)
+    with pytest.raises(CompanyStoreError, match="bounded size"):
+        operator.run("mover", source, tmp_path / "result", repository=ROOT)
+    assert not (tmp_path / "result").exists()
+
+
+def test_configuration_operator_reads_pinned_change_sources_without_mutation(tmp_path):
+    import hashlib
+
+    from tests.audit_suite.test_company_configuration_activity import inputs
+
+    source_root, recipe_value, _ = inputs.__wrapped__(tmp_path)
+    source = tmp_path / "configuration-recipe.json"
+    source.write_text(json.dumps(asdict(recipe_value)))
+    source.chmod(0o600)
+    original = (source_root / "company.sqlite3").read_bytes()
+    result = operator.run(
+        "configuration",
+        source,
+        tmp_path / "configuration-output",
+        repository=ROOT,
+        source_root=source_root,
+    )
+    assert result["counts"] == {"systems": 6, "versions": 12, "grants": 0, "collections": 0}
+    assert result["source_input"]["source_versions_sha256"] == recipe_value.source_versions_sha256
+    assert (source_root / "company.sqlite3").read_bytes() == original
+    for name, expected in result["members"].items():
+        assert (
+            hashlib.sha256((tmp_path / "configuration-output" / name).read_bytes()).hexdigest()
+            == expected
+        )
+    with pytest.raises(CompanyStoreError, match="outside"):
+        operator.run(
+            "configuration",
+            source,
+            source_root / "nested-output",
+            repository=ROOT,
+            source_root=source_root,
+        )
+    assert not (source_root / "nested-output").exists()
+
+
+def test_logging_operator_verifies_original_dependency_and_private_output(tmp_path):
+    import hashlib
+
+    from tests.audit_suite.test_company_security_logging_activity import inputs
+
+    source_root, recipe_value = inputs.__wrapped__(tmp_path)
+    source = tmp_path / "logging-recipe.json"
+    source.write_text(json.dumps(asdict(recipe_value)))
+    source.chmod(0o600)
+    before = (source_root / "company.sqlite3").read_bytes()
+    output = tmp_path / "logging-output"
+    result = operator.run(
+        "security-logging", source, output, repository=ROOT, source_root=source_root
+    )
+    assert result["counts"] == {"systems": 20, "versions": 32, "grants": 0, "collections": 0}
+    assert result["source_input"]["source_versions_sha256"] == recipe_value.source_versions_sha256
+    assert (source_root / "company.sqlite3").read_bytes() == before
+    assert not list(output.rglob("engagements.sqlite3"))
+    for name, expected in result["members"].items():
+        assert hashlib.sha256((output / name).read_bytes()).hexdigest() == expected
+    assert all(not p.stat().st_mode & 0o077 for p in output.rglob("*"))
+    with pytest.raises(CompanyStoreError, match="outside"):
+        operator.run(
+            "security-logging",
+            source,
+            source_root / "nested",
+            repository=ROOT,
+            source_root=source_root,
+        )
+    assert not (source_root / "nested").exists()
+
+
+@pytest.mark.parametrize("kind", ["configuration", "security-logging"])
+def test_source_dependency_must_be_explicit_and_kind_specific(tmp_path, kind):
+    source = prepare(tmp_path)
+    with pytest.raises(CompanyStoreError, match="explicit source root"):
+        operator.run(kind, source, tmp_path / "cfg", repository=ROOT)
+    with pytest.raises(CompanyStoreError, match="only for source-dependent"):
+        operator.run("mover", source, tmp_path / "mover", repository=ROOT, source_root=tmp_path)
+    assert not (tmp_path / "cfg").exists() and not (tmp_path / "mover").exists()

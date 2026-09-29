@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import hashlib
 import json
 from copy import deepcopy
 from datetime import date, datetime
@@ -10,6 +9,7 @@ from pathlib import Path
 
 from .availability import apply, queryable, repository_context
 from .completed_period import make_roster
+from .historical_pins import verify as verify_source_pin
 
 ROOT = Path(__file__).resolve().parents[2]
 SOURCE = "enterprise/operations/source/j2_personnel_completion_2026_09_22.json"
@@ -42,9 +42,7 @@ def validate(data):
     require(data["repository_state"] == "PENDING_ACCEPTANCE", "Source may not self-accept")
     require(set(data["source_hashes"]) == PINS, "Incomplete source population")
     for path, pin in data["source_hashes"].items():
-        require(
-            hashlib.sha256((ROOT / path).read_bytes()).hexdigest() == pin, "Source changed: " + path
-        )
+        verify_source_pin(ROOT, path, pin, failure="Source changed: ")
     admin = {
         r["person_id"]: r
         for r in read("enterprise/operations/source/j2_administrative_history_2026_09_22.json")[

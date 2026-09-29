@@ -1019,6 +1019,22 @@
       "normalizer": "pypdf"
     },
     {
+      "source": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+      "publication": "docs/governance/publications/SH-ENTERPRISE-PPL-20260913_v1.0.0.pdf",
+      "sha256": "ea61b15fb4d130ce5c345e243c2459d4b6d0bcc6be2580d6a1b25eb3c1adf022",
+      "source_sha256": "1707ed7021576048ca5f1904ca5e94d484e8f7e2992da5c9e04965421f79a751",
+      "brand": "corporate",
+      "normalizer": "qpdf"
+    },
+    {
+      "source": "docs/governance/ENTERPRISE_COORDINATION_2026-09-13.md",
+      "publication": "docs/governance/publications/SH-ENTERPRISE-COORD-20260913_v1.0.0.pdf",
+      "sha256": "d903685a75cb3096ffdc183a086fdbca3d999f7b8b16683789c59fd85cae8439",
+      "source_sha256": "3f358e1a89ba640ab35be53682388e7d9604c0f5627dfeb5a176a6de1e7c2da9",
+      "brand": "corporate",
+      "normalizer": "qpdf"
+    },
+    {
       "source": "docs/internal/company-closeout/INSPECTION_GUIDE_v1.2.0.md",
       "publication": "docs/finance/publications/SH-COMPANY-INSPECTION-20260922_v1.2.0.pdf",
       "sha256": "3645477a2ce2629d92f7af8a149dfefb60fccf14cc78dc0b6683032db3a20062",

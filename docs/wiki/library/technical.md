@@ -17,6 +17,10 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [PULL REQUEST TEMPLATE](../../../.github/PULL_REQUEST_TEMPLATE.md) — MD
 
+## `audit_suite_web`
+
+- [Audit workroom browser](../../../audit_suite_web/README.md) — MD
+
 ## `db`
 
 - [Sable Harbor database and SQL index](../../../db/README.md) — MD
@@ -95,6 +99,13 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Company closeout continuation — September 22, 2026](../../internal/company-closeout/RESIDUAL_CLOSEOUT_2026-09-22.md) — MD
 - [Current successor records — enterprise import contract](../../internal/company-closeout/SUCCESSOR_RECORDS_IMPORT_CONTRACT_2026-09-22.md) — MD
 
+## `docs/internal/company-closeout/daedalus-rehearsal-2026-09-29`
+
+- [Synthetic withheld comparison note](../../internal/company-closeout/daedalus-rehearsal-2026-09-29/DENIED_NOTE.md) — MD
+- [Synthetic payroll-release review note](../../internal/company-closeout/daedalus-rehearsal-2026-09-29/LOWER_TRUST_NOTICE.md) — MD
+- [Daedalus selected-company-record rehearsal source](../../internal/company-closeout/daedalus-rehearsal-2026-09-29/README.md) — MD
+- [Selected payroll-release IAM-007 case view](../../internal/company-closeout/daedalus-rehearsal-2026-09-29/SELECTED_IAM_CASE.md) — MD
+
 ## `docs/internal/company-closeout/evidence/newruntime/5344bf76`
 
 - [Public edition copy disposal — observed September 22, 2026](../../internal/company-closeout/evidence/newruntime/5344bf76/README.md) — MD
@@ -156,6 +167,46 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Third-party services — executable implementation record](../../internal/development/THIRD_PARTY_SERVICES_IMPLEMENTATION_2026-09-09.md) — MD
 - [Third-party services and internal operations — reconciliation pass](../../internal/development/THIRD_PARTY_SERVICES_RECONCILIATION_2026-09-09.md) — MD
 
+## `docs/internal/development/audit-suite`
+
+- [Explicit backup due-job monitoring operator](../../internal/development/audit-suite/AQ04_BACKUP_MONITOR_OPERATOR.md) — MD
+- [Backup execution and restore exercise — September 14, 2026](../../internal/development/audit-suite/AQ04_BACKUP_RESTORE_SLICE_2026-09-14.md) — MD
+- [Identity period slice and remaining coverage](../../internal/development/audit-suite/AQ04_IDENTITY_PERIOD_SLICE_2026-09-14.md) — MD
+- [Incident and continuity activity slice](../../internal/development/audit-suite/AQ04_INCIDENT_CONTINUITY_SLICE_2026-09-14.md) — MD
+- [Bounded mover source collection](../../internal/development/audit-suite/AQ04_MOVER_SOURCE_COLLECTION_2026-09-14.md) — MD
+- [Selected local access-remediation observations](../../internal/development/audit-suite/AQ_ACCESS_REMEDIATION_RECONCILIATION_2026-09-14.md) — MD
+- [Explicit producer metadata capture](../../internal/development/audit-suite/AQ_EXPLICIT_PRODUCER_METADATA_CAPTURE_2026-09-14.md) — MD
+- [Optional IAM007 native review reconciliation](../../internal/development/audit-suite/AQ_IAM_NATIVE_REVIEW_RECONCILIATION_2026-09-14.md) — MD
+- [Exact selected-source prerequisite for linked activity plans](../../internal/development/audit-suite/AQ_LINKED_ACTIVITY_SOURCE_RESOLVER_2026-09-14.md) — MD
+- [Next source-gap slice: non-human credential lifecycle](../../internal/development/audit-suite/AQ_NEXT_NONHUMAN_IDENTITY_SLICE_2026-09-14.md) — MD
+- [Planned-provider intake and review-queue exercise](../../internal/development/audit-suite/AQ_PLANNED_PROVIDER_INTAKE_SLICE_2026-09-14.md) — MD
+- [SEC-002 local security-log collection exercise](../../internal/development/audit-suite/AQ_SECURITY_LOG_COLLECTION_SLICE_2026-09-14.md) — MD
+- [Explicit local operating-period ledger](../../internal/development/audit-suite/AQ_SHARED_OPERATING_PERIOD_LEDGER_2026-09-14.md) — MD
+- [Selected source dependencies and declared period support](../../internal/development/audit-suite/AQ_SOURCE_DEPENDENCY_PERIOD_RECONCILIATION_2026-09-14.md) — MD
+- [Read-through company source portfolio — September 14, 2026](../../internal/development/audit-suite/AQ_SOURCE_PORTFOLIO_READ_THROUGH_2026-09-14.md) — MD
+- [Explicit source-readiness inventory](../../internal/development/audit-suite/AQ_SOURCE_READINESS_INVENTORY_2026-09-14.md) — MD
+- [One-system source-record census](../../internal/development/audit-suite/AQ_SOURCE_RECORD_CENSUS_2026-09-14.md) — MD
+- [Company source and recovery review — September 14, 2026](../../internal/development/audit-suite/AQ_SOURCE_RECOVERY_REVIEW_2026-09-14.md) — MD
+- [Company-source audit readiness workflow queue](../../internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md) — MD
+- [Portal company-rights producer handoff](../../internal/development/audit-suite/COMPANY_RIGHTS_PRODUCER_HANDOFF.md) — MD
+- [Company-source implementation checkpoint](../../internal/development/audit-suite/COMPANY_SOURCE_IMPLEMENTATION.md) — MD
+- [Intelligent contextual workspace](../../internal/development/audit-suite/CONTEXTUAL_WORKSPACE_WORKFLOW.md) — MD
+- [Audit-suite contribution and state formats](../../internal/development/audit-suite/CONTRIBUTING_AND_STATE_FORMATS.md) — MD
+- [Audit-suite execution closeout](../../internal/development/audit-suite/EXECUTION_CLOSEOUT.md) — MD
+- [Explicit instructor assistance release core](../../internal/development/audit-suite/IK05_EXPLICIT_RELEASE_CORE.md) — MD
+- [Streamed instructor history inspection](../../internal/development/audit-suite/IK_STREAMED_HISTORY_INSPECTION_2026-09-14.md) — MD
+- [Audit training suite implementation direction](../../internal/development/audit-suite/IMPLEMENTATION_DIRECTION_2026-09-13.md) — MD
+- [Instructor investigation and debrief workflow](../../internal/development/audit-suite/INSTRUCTOR_KEY_WORKFLOW_QUEUE.md) — MD
+- [Protected instructor original inspection](../../internal/development/audit-suite/INSTRUCTOR_ORIGINAL_INSPECTION.md) — MD
+- [Local audit-training delivery](../../internal/development/audit-suite/LOCAL_DELIVERY.md) — MD
+- [Navigation continuity foundation](../../internal/development/audit-suite/NAVIGATION_FOUNDATION_IMPLEMENTATION.md) — MD
+- [Audit-suite organization bridge and reconciliation proposal](../../internal/development/audit-suite/ORGANIZATION_RECONCILIATION_2026-09-13.md) — MD
+- [Explicit evidence inspection records](../../internal/development/audit-suite/RECORDED_INSPECTIONS.md) — MD
+- [Private-runtime browser sessions](../../internal/development/audit-suite/SERVICE_SESSION_ISOLATION_2026-09-14.md) — MD
+- [Prospective local software-install source exercise](../../internal/development/audit-suite/SOFTWARE_INSTALL_EXERCISE.md) — MD
+- [Audit workspace UX professionalization](../../internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md) — MD
+- [Explicit personal visit checkpoints](../../internal/development/audit-suite/VISIT_CHECKPOINTS.md) — MD
+
 ## `docs/internal/validation`
 
 - [September 6 canon closeout - validation and delivery evidence](../../internal/validation/CANON_CLOSEOUT_2026-09-06.md) — MD
@@ -194,6 +245,49 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Enterprise operating and financial models](../../../enterprise/README.md) — MD
 
+## `enterprise/audit_suite`
+
+- [Local access-remediation continuation](../../../enterprise/audit_suite/ACCESS_REMEDIATION_ACTIVITY.md) — MD
+- [Declared-subject access review continuation](../../../enterprise/audit_suite/ACCESS_REVIEW_CONTINUATION.md) — MD
+- [Adjacent declared-subject access review](../../../enterprise/audit_suite/ACCESS_REVIEW_SUCCESSOR.md) — MD
+- [Persistent local backup byte operations](../../../enterprise/audit_suite/BACKUP_RUNTIME.md) — MD
+- [Exact native configuration admission to backup datasets](../../../enterprise/audit_suite/BACKUP_SOURCE_ADMISSION.md) — MD
+- [Local configuration change and release source pair](../../../enterprise/audit_suite/CHANGE_ACTIVITY.md) — MD
+- [Private companion recovery](../../../enterprise/audit_suite/COMPANION_RECOVERY.md) — MD
+- [Attributed company consultation and correction requests](../../../enterprise/audit_suite/COMPANY_CONSULTATION.md) — MD
+- [Company runtime activation contract](../../../enterprise/audit_suite/COMPANY_RUNTIME_ACTIVATION.md) — MD
+- [Selected-source ownership and migration register](../../../enterprise/audit_suite/COMPANY_SOURCE_REGISTER.md) — MD
+- [Configuration inventory and drift from original release records](../../../enterprise/audit_suite/CONFIGURATION_ACTIVITY.md) — MD
+- [Explicit persistent configuration export](../../../enterprise/audit_suite/CONFIGURATION_EXPORT.md) — MD
+- [Persistent local configuration runtime](../../../enterprise/audit_suite/CONFIGURATION_RUNTIME.md) — MD
+- [Local dataset quality and correction](../../../enterprise/audit_suite/DATA_QUALITY_RUNTIME.md) — MD
+- [Local disposal runtime](../../../enterprise/audit_suite/DISPOSAL_RUNTIME.md) — MD
+- [Per-control legacy documentary custody](../../../enterprise/audit_suite/DOCUMENTARY_CUSTODY.md) — MD
+- [Instructor-authored assessment history](../../../enterprise/audit_suite/INSTRUCTOR_ASSESSMENTS.md) — MD
+- [Selected instructor debriefs](../../../enterprise/audit_suite/INSTRUCTOR_DEBRIEF.md) — MD
+- [Protected saved Key filters](../../../enterprise/audit_suite/INSTRUCTOR_KEY_VIEWS.md) — MD
+- [Explicit investigation handoffs](../../../enterprise/audit_suite/INVESTIGATION_HANDOFFS.md) — MD
+- [Local worker lifecycle sources](../../../enterprise/audit_suite/LIFECYCLE_ACTIVITY.md) — MD
+- [Local logging clock companion](../../../enterprise/audit_suite/LOGGING_CLOCK_RUNTIME.md) — MD
+- [Local non-human credential lifecycle](../../../enterprise/audit_suite/NONHUMAN_IDENTITY_ACTIVITY.md) — MD
+- [Persistent local nonhuman identity operations](../../../enterprise/audit_suite/NONHUMAN_RUNTIME.md) — MD
+- [Personal saved views](../../../enterprise/audit_suite/PERSONAL_VIEWS.md) — MD
+- [Local policy distribution runtime](../../../enterprise/audit_suite/POLICY_DELIVERY_RUNTIME.md) — MD
+- [Protected portfolio source snapshots](../../../enterprise/audit_suite/PORTFOLIO_EXPLANATION.md) — MD
+- [Local privileged-session runtime](../../../enterprise/audit_suite/PRIVILEGED_RUNTIME.md) — MD
+- [Procedure trace metadata readiness](../../../enterprise/audit_suite/PROCEDURE_TRACE_READINESS.md) — MD
+- [Explicit local recovery-period runner](../../../enterprise/audit_suite/RECOVERY_PERIOD_RUNNER.md) — MD
+- [Repository documentary sync](../../../enterprise/audit_suite/REPOSITORY_DOCUMENT_SYNC.md) — MD
+- [Local quarterly risk-input assessment](../../../enterprise/audit_suite/RISK_ASSESSMENT_ACTIVITY.md) — MD
+- [Explicit sampled-item procedure trace](../../../enterprise/audit_suite/SAMPLE_EXECUTION.md) — MD
+- [Persistent local security-event intake](../../../enterprise/audit_suite/SECURITY_EVENT_RUNTIME.md) — MD
+- [Explicit source-impact reassessment dispositions](../../../enterprise/audit_suite/SOURCE_IMPACT_DISPOSITIONS.md) — MD
+- [Exact recorded source-impact relationships](../../../enterprise/audit_suite/SOURCE_IMPACT_REFERENCES.md) — MD
+- [Recorded procedure gaps](../../../enterprise/audit_suite/TASK_GAPS.md) — MD
+- [Local role-based training source pair](../../../enterprise/audit_suite/TRAINING_ACTIVITY.md) — MD
+- [Local package inventory, rule scans and rescans](../../../enterprise/audit_suite/VULNERABILITY_RUNTIME.md) — MD
+- [Private reasoned work guidance](../../../enterprise/audit_suite/WORK_GUIDANCE.md) — MD
+
 ## `enterprise/closeout`
 
 - [Conditional mine utility ROT continuation](../../../enterprise/closeout/INDUSTRIAL_TAX_FUTURE.md) — MD
@@ -202,6 +296,21 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `evidence/closeout`
 
 - [Closeout evidence](../../../evidence/closeout/README.md) — MD
+
+## `tools/audit_suite`
+
+- [Local change/release source slice](../../../tools/audit_suite/CHANGE_RELEASE_SOURCE_SLICE.md) — MD
+- [Existing-source linked activity plan V2](../../../tools/audit_suite/COMPANY_ACTIVITY_LINKED_PLAN.md) — MD
+- [Private ordered company activity plans](../../../tools/audit_suite/COMPANY_ACTIVITY_PLAN_RUNNER.md) — MD
+- [Selected producer routing V3](../../../tools/audit_suite/COMPANY_ACTIVITY_PRODUCER_PLAN.md) — MD
+- [Independent company activity runner](../../../tools/audit_suite/COMPANY_ACTIVITY_RUNNER.md) — MD
+- [Initialize company source runtimes](../../../tools/audit_suite/COMPANY_RUNTIME_ACTIVATION.md) — MD
+- [Company source inventory](../../../tools/audit_suite/COMPANY_SOURCE_INVENTORY.md) — MD
+- [Configuration source extension](../../../tools/audit_suite/CONFIGURATION_SOURCE_SLICE.md) — MD
+- [Control-source readiness implementation gaps](../../../tools/audit_suite/CONTROL_SOURCE_READINESS.md) — MD
+- [Local operator commands](../../../tools/audit_suite/OPERATOR_COMMANDS.md) — MD
+- [Repository company documents: first bounded ingestion](../../../tools/audit_suite/REPOSITORY_DOCUMENTARY_SYNC.md) — MD
+- [Explicit source dependency and period reconciliation](../../../tools/audit_suite/SOURCE_DEPENDENCY_RECONCILIATION.md) — MD
 
 ## `tools/ci`
 

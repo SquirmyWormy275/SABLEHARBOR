@@ -1,0 +1,60 @@
+.workpaper-support {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--border, #879399);
+  border-radius: 0.5rem;
+}
+.support-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  gap: 1rem;
+}
+.support-columns > section {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.workpaper-support label {
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 0.8rem;
+}
+.workpaper-support select {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+.support-metadata {
+  display: grid;
+  grid-template-columns: minmax(5rem, 0.6fr) minmax(0, 1fr);
+  gap: 0.35rem 0.7rem;
+  font-size: 0.85rem;
+}
+.support-metadata dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.support-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.support-reference {
+  font-size: 0.85rem;
+  overflow-wrap: anywhere;
+}
+.support-preview {
+  max-height: 24rem;
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  padding: 0.75rem;
+  background: #f1f4f3;
+  color: #172a2b;
+}
+@media (max-width: 760px) {
+  .support-columns,
+  .support-metadata {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

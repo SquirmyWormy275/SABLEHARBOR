@@ -1,0 +1,83 @@
+.sample-executions {
+  min-width: 0;
+  margin-top: 1.5rem;
+}
+.sample-executions label {
+  display: block;
+  margin: 0.6rem 0;
+}
+.sample-executions select,
+.sample-executions textarea,
+.sample-executions input {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+.sample-executions fieldset {
+  min-width: 0;
+  margin: 0.7rem 0;
+}
+.sample-executions pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.sample-executions p,
+.sample-executions small,
+.sample-executions summary {
+  overflow-wrap: anywhere;
+}
+
+.sample-execution-observation {
+  border-top: 1px solid var(--line);
+  padding: 0.75rem 0;
+}
+.sample-execution-observation h4 {
+  margin: 0.25rem 0;
+  overflow-wrap: anywhere;
+}
+.sample-evidence-references summary {
+  cursor: pointer;
+}
+.sample-evidence-references ol {
+  padding-left: 1.5rem;
+}
+.sample-evidence-references li + li {
+  border-top: 1px solid var(--line);
+  padding-top: 0.25rem;
+}
+
+.sample-entry-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.85fr) minmax(320px, 1.15fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+.sample-entry-context,
+.sample-entry-items {
+  min-width: 0;
+}
+.sample-entry-context > summary {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+}
+.sample-entry-items h4 {
+  margin: 0 0 0.75rem;
+}
+.sample-entry-items textarea {
+  min-height: 6rem;
+}
+.sample-executions form {
+  max-width: 1200px;
+}
+.sample-executions form > fieldset {
+  padding: 1rem;
+}
+.sample-executions button {
+  margin: 0.2rem 0.25rem 0.2rem 0;
+}
+@media (max-width: 850px) {
+  .sample-entry-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

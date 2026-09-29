@@ -631,6 +631,10 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Business-driven enterprise finance successor](../../../enterprise/business/README.md) — MD
 
+## `enterprise/business/identity/2026-09-13`
+
+- [Workforce identity bridge, September 13, 2026](../../../enterprise/business/identity/2026-09-13/README.md) — MD
+
 ## `enterprise/operations`
 
 - [Business operations successor](../../../enterprise/operations/README.md) — MD

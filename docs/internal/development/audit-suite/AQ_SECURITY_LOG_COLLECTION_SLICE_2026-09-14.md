@@ -1,0 +1,48 @@
+# SEC-002 local security-log collection exercise
+
+`company_security_logging_activity.py` adds an independently generated, bounded source family for SH-SEC-002. The catalog requires logging/detection coverage and collection-gap monitoring; the authored procedure specifically names required source/detection inventory, ingestion and clock gaps, severity/ownership routing, representative detections and collection-loss alerts. This slice exercises source inventory, ingestion reconciliation and alert routing for one local release-authorization source. It does not implement or establish the whole control.
+
+The producer reads the existing qualified configuration-release store through a read-only transaction and verifies its pinned native-version membership. It selects the explicit branch containing `OVERRIDE_USED` followed by `ALLOWED` release-gate decisions, validates exact artifact/test/peer-review references where present, and preserves the original gate bytes and hashes. The original release store is neither modified nor copied into an asserted combined company history.
+
+`LoggingRecipe` requires company/source-store identifiers, exact upstream version pin, selected upstream branch, two new output branches and a local source identifier. Its ingestion-lag threshold defaults to 120 seconds as a local exercise rule and is retained in the expanded recipe; an operator can supply another supported value. `generate_pair(destination, repository=..., source_root=..., recipe=...)` publishes only a new private store outside the original source tree. It creates no audits, grants, models, deployed services or accepted corporate policy. Input and output bounds, company/branch identities, original hashes and support availability are checked before publication.
+
+Both output branches have the same declared source inventory, native originals and publisher events. The publisher sequence and hash chain are explicitly assigned by this local exercise, not asserted to exist in the original upstream system. One collector configuration includes both decisions; the other incorrectly excludes `OVERRIDE_USED`. The actual filter function therefore ingests two events in one branch and only sequence 2 in the other. Independent publisher checkpoints and computed collector reconciliation expose the missing sequence and exact event-hash relationship.
+
+The representative override detection generates a severity-routed alert from the actual received event, with the existing scoped security owner attached. The omission branch initially receives a collection-loss alert instead. A later configuration version removes the filter and backfills the missing original. The later reconciliation retains a link to the unchanged initial gap report; it does not erase the missed detection interval. Backfilled override detection and its response acknowledgment occur later. Native timestamps preserve the 25,800-second source-to-arrival delay in the actual retained fixture.
+
+Hash checks cover both altered event bodies and false claimed event hashes. A false collector hash cannot reconcile clean merely because the recomputed body matches the publisher. Duplicate collected sequences and invalid publisher chains fail explicitly. Publisher/collector hash sets, initial gap, configuration versions, late ingestion, alert records, response tickets and a separately scoped operating review record are retained as inspectable native JSON originals.
+
+Current organization data resolves SH-SEC-002 to owner AS-P008 and operating reviewer AS-P007. These are scoped local exercise roles, not new employment history, Board appointments or professional qualification assertions. The input source's canonical service/site references remain design/provider-selection references, not deployed Reno/Boise operations. No PHI activity is asserted. The lag threshold and severity labels are local exercise rules; clock synchronization and actual clock skew are not measured. Other material-system inventories, retention policy enforcement, detection libraries and corporate monitoring coverage remain outside this slice.
+
+The actual private run lives under ignored `enterprise/generated/audit-suite/company-security-logging-2026-09-14/`. Its `v1` store contains 32 source versions across 20 registered systems: 15 versions in the complete-collection branch and 17 in the omission/backfill branch. `RECIPE.json`, `RECEIPT.json`, and `v1/SOURCE_RECEIPT.json` retain inputs, provenance and source hashes. Earlier change/configuration stores remain intact.
+
+`collection-v1` contains two new isolated SH-SEC-002 audits with identical dates, scope and audit mode. Standard activation, kickoff, issued PBC, discovery and collection commands consume the preexisting originals. All 32 originals are checked against exact source hashes; original configuration version 1 remains alongside version 2. Future-source and revoked-access attempts fail, ordinary retries do not duplicate audit mutations, and temporary native grants are revoked after collection. The two collected histories preserve the initial sequence gap and subsequent backfill difference despite sharing the same audit mode. No prepared world, population, workpaper, finding or test-completion credit is generated.
+
+The technical test/collection receipts are not an independent professional rubric review or an assertion of operational effectiveness. They establish only the documented local source mechanics, immutable original retrieval and bounded command behavior.
+
+## Explicit blocked-attempt source support
+
+`LoggingRecipe.source_scenario` now defaults to `OVERRIDE_THEN_ALLOWED`, retaining
+existing override-source behavior. `BLOCKED_THEN_ALLOWED` selects the actual
+blocked gate followed by the allowed corrected gate from the same qualified
+change source. It requires exactly the later allowed native release, with an
+exact gate reference and valid availability chronology. A blocked gate cannot
+be relabeled as an override or as a completed proposed release.
+
+Both collector branches still consume the same two publisher originals and
+hash chain. The omission filter excludes the actual `BLOCKED` decision in this
+scenario. A received blocked event produces `BLOCKED-OBS-1`, rule
+`LOCAL-AUTHORIZATION-BLOCKED`, with `LOCAL_EXERCISE_INFORMATIONAL` severity.
+This is an observation of the exercised preventive gate, not an override,
+high-privilege incident or professional control conclusion. The same publisher
+reconciliation detects the missing event; correction/backfill produces the
+observation later while retaining the original collection gap and timing.
+There are 32 versions across 20 systems, matching the existing bounded depth.
+Collection-loss severity remains the explicit local collection rule.
+
+Source membership is checked again after generation before publication. New
+scenario tests exercise actual blocked-source ingestion, delayed observation,
+invalid scenario/branch rejection and a changed-source publication failure.
+Existing override tests continue to exercise the default. Previous actual v1
+receipts remain historical; this extension alone creates no new source run,
+company runtime or audit.

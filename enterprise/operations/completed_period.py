@@ -11,6 +11,7 @@ import argparse
 import csv
 import hashlib
 import json
+import re
 from collections import Counter, defaultdict
 from datetime import datetime
 from decimal import ROUND_HALF_UP
@@ -783,11 +784,23 @@ def validate(source, tables):
     if len(ids) != expected:
         raise ValueError("Omitted population member")
     validate_tax_components(source, tables)
-    chart_names = {
-        r["person_id"]
-        for r in read("docs/organization/source/chartbook.json")["nodes"]
-        if r.get("type") == "person" and r.get("status") == "current_employee"
-    }
+    chart_names = set()
+    for person in read("docs/organization/source/chartbook.json")["nodes"]:
+        if person.get("type") != "person" or person.get("status") != "current_employee":
+            continue
+        appointment_dates = set()
+        for record in person.get("sources", []):
+            match = re.search(r"\beffective (\d{4}-\d{2}-\d{2})\b", record.get("evidence", ""))
+            if match:
+                appointment_dates.add(match.group(1))
+        if len(appointment_dates) > 1 or (
+            person.get("title_state") == "DELEGATED_FICTIONAL_APPOINTMENT_PENDING_ACCEPTANCE"
+            and not appointment_dates
+        ):
+            raise ValueError("Named appointment has ambiguous effective date")
+        if appointment_dates and min(appointment_dates) > source["effective_through"]:
+            continue
+        chart_names.add(person["person_id"])
     if not chart_names <= set(ids):
         raise ValueError("Accepted named leadership omitted")
     if sum(g["authorized"] for g in source["j2_groups"]) != 237:

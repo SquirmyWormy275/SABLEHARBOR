@@ -13,6 +13,7 @@ for manifest_path, key, path_key in [
     ('red_wash/history/v1.0.0/manifest.json', 'files', 'path'),
     ('docs/organization/history/v0.3.0/manifest.json', 'artifacts', 'preserved_path'),
     ('docs/organization/history/v0.4.0/manifest.json', 'artifacts', 'preserved_path'),
+    ('docs/organization/history/v1.1.0/manifest.json', 'artifacts', 'preserved_path'),
 ]:
     manifest = R / manifest_path
     if not manifest.is_file():
