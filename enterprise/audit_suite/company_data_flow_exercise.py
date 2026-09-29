@@ -15,8 +15,9 @@ from .operating_source_bridge import encoded, sha
 from .organization import snapshot
 from .private_publication import publish
 
-SCHEMA = "SH_PROSPECTIVE_DATA_FLOW_EXERCISE_V1"
+SCHEMA = "SH_PROSPECTIVE_DATA_FLOW_EXERCISE_V2"
 QUALIFICATION = "LOCAL_METADATA_ONLY_NONPERSONAL_FIXTURE_NO_PHI_OR_DEPLOYED_SITE"
+EXCEPTION_ID = "EXC-FLOW-01-AUTHORITY-AND-ROUTE"
 COMPANY = "SABLE-HARBOR-REFERENCE"
 OWNER = "AS-P014"
 CONTROL_IDS = ("SH-DAT-001", "SH-DAT-002", "SH-DAT-003", "SH-REC-001", "SH-REC-004")
@@ -195,6 +196,7 @@ def _event_body(scenario: str, ordinal: int, event: tuple) -> dict:
         "retention_schedule": "UNAPPROVED",
         "legal_hold_disposition": "UNDETERMINED",
         "exception_open": exception,
+        "exception_id": EXCEPTION_ID if exception else None,
         "qualification": QUALIFICATION,
     }
 
@@ -274,6 +276,13 @@ def create(destination: Path, *, repository: Path, clean_branch: str, messy_bran
                 records[scenario].append(ref)
                 previous_sha = ref["sha256"]
                 previous_state = body["after"]
+        exception_rows = {}
+        for scenario in ("CLEAN", "MESSY"):
+            bodies = [
+                _event_body(scenario, ordinal, event)
+                for ordinal, event in enumerate(EVENTS[scenario], 1)
+            ]
+            exception_rows[scenario] = [body for body in bodies if body["exception_open"]]
         receipt = {
             "schema": SCHEMA,
             "status": "PROSPECTIVE_COMPANY_NATIVE_EXERCISE_NO_AUDIT_CREDIT",
@@ -281,7 +290,17 @@ def create(destination: Path, *, repository: Path, clean_branch: str, messy_bran
             "branches": branch_ids,
             "records": records,
             "final_states": {"CLEAN": "BLOCKED", "MESSY": "QUARANTINED"},
-            "open_exception_counts": {"CLEAN": 0, "MESSY": 5},
+            "open_exception_ids": {
+                scenario: sorted({row["exception_id"] for row in exception_rows[scenario]})
+                for scenario in ("CLEAN", "MESSY")
+            },
+            "open_exception_counts": {
+                scenario: len({row["exception_id"] for row in exception_rows[scenario]})
+                for scenario in ("CLEAN", "MESSY")
+            },
+            "exception_event_row_counts": {
+                scenario: len(exception_rows[scenario]) for scenario in ("CLEAN", "MESSY")
+            },
             "source_pins": pins,
             "proposed_custody": assignments,
             "qualification": QUALIFICATION,
@@ -344,7 +363,9 @@ def verify(destination: Path) -> dict:
         or receipt["qualification"] != QUALIFICATION
         or receipt["company"] != COMPANY
         or receipt["final_states"] != {"CLEAN": "BLOCKED", "MESSY": "QUARANTINED"}
-        or receipt["open_exception_counts"] != {"CLEAN": 0, "MESSY": 5}
+        or receipt["open_exception_ids"] != {"CLEAN": [], "MESSY": [EXCEPTION_ID]}
+        or receipt["open_exception_counts"] != {"CLEAN": 0, "MESSY": 1}
+        or receipt["exception_event_row_counts"] != {"CLEAN": 0, "MESSY": 5}
         or set(receipt["branches"]) != set(EVENTS)
         or receipt["branches"]["CLEAN"] == receipt["branches"]["MESSY"]
     ):
@@ -376,6 +397,7 @@ def verify(destination: Path) -> dict:
             if len(refs) != 1 + len(EVENTS[scenario]):
                 raise CompanyStoreError("Incomplete scenario source chain")
             previous_sha, previous_state = None, "NEW"
+            observed_exception_ids = []
             for index, ref in enumerate(refs):
                 expected_system = "flow_definition" if index == 0 else "flow_event"
                 expected_record = "FLOW-01" if index == 0 else f"FLOW-01-E{index:02d}"
@@ -466,10 +488,18 @@ def verify(destination: Path) -> dict:
                         or body["before"] != previous_state
                     ):
                         raise CompanyStoreError("Causal flow trace differs")
+                    if body["exception_open"]:
+                        observed_exception_ids.append(body["exception_id"])
                     previous_state = body["after"]
                 previous_sha = row["sha256"]
             if previous_state != receipt["final_states"][scenario]:
                 raise CompanyStoreError("Final flow state differs")
+            if (
+                sorted(set(observed_exception_ids)) != receipt["open_exception_ids"][scenario]
+                or len(set(observed_exception_ids)) != receipt["open_exception_counts"][scenario]
+                or len(observed_exception_ids) != receipt["exception_event_row_counts"][scenario]
+            ):
+                raise CompanyStoreError("Exception identities or event-row counts differ")
     return {
         "status": "PASS_READONLY_PROSPECTIVE_NATIVE_FLOW_VERIFICATION",
         "manifest_sha256": _file_sha(root / "MANIFEST.json"),

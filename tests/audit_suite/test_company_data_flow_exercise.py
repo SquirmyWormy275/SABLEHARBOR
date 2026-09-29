@@ -27,7 +27,12 @@ def test_company_native_clean_and_messy_causality_and_timestamp_separation(tmp_p
     assert verify(root)["native_version_count"] == 13
     receipt = json.loads((root / "RECEIPT.json").read_text())
     assert receipt["final_states"] == {"CLEAN": "BLOCKED", "MESSY": "QUARANTINED"}
-    assert receipt["open_exception_counts"] == {"CLEAN": 0, "MESSY": 5}
+    assert receipt["open_exception_ids"] == {
+        "CLEAN": [],
+        "MESSY": ["EXC-FLOW-01-AUTHORITY-AND-ROUTE"],
+    }
+    assert receipt["open_exception_counts"] == {"CLEAN": 0, "MESSY": 1}
+    assert receipt["exception_event_row_counts"] == {"CLEAN": 0, "MESSY": 5}
     with sqlite3.connect(
         (root / "company.sqlite3").as_uri() + "?mode=ro&immutable=1", uri=True
     ) as db:
@@ -45,6 +50,9 @@ def test_company_native_clean_and_messy_causality_and_timestamp_separation(tmp_p
             r["data_bytes"] == 0 and r["actual_transfer"] is False and r["deployed_site"] is False
             for r in events
         )
+        assert {
+            e["exception_id"] for e in events if e["scenario"] == "MESSY" and e["exception_open"]
+        } == {"EXC-FLOW-01-AUTHORITY-AND-ROUTE"}
         assert [
             e["outcome"]
             for e in events
@@ -158,4 +166,17 @@ def test_resealed_false_transfer_does_not_pass_causal_verification(tmp_path):
     ).hexdigest()
     manifest_path.write_text(json.dumps(manifest, sort_keys=True, indent=2) + "\n")
     with pytest.raises(CompanyStoreError, match="Causal flow trace differs"):
+        verify(root)
+
+
+def test_resealed_five_distinct_exception_claim_is_rejected(tmp_path):
+    root = _build(tmp_path)
+    receipt_path, manifest_path = root / "RECEIPT.json", root / "MANIFEST.json"
+    receipt = json.loads(receipt_path.read_text())
+    receipt["open_exception_counts"]["MESSY"] = 5
+    receipt_path.write_text(json.dumps(receipt, sort_keys=True, indent=2) + "\n")
+    manifest = json.loads(manifest_path.read_text())
+    manifest["receipt_sha256"] = hashlib.sha256(receipt_path.read_bytes()).hexdigest()
+    manifest_path.write_text(json.dumps(manifest, sort_keys=True, indent=2) + "\n")
+    with pytest.raises(CompanyStoreError, match="Exercise scope or state receipt differs"):
         verify(root)
