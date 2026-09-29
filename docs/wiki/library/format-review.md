@@ -6,7 +6,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 304 |
+| COUNTERPART_REVIEW_REQUIRED | 306 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 102 |
@@ -29,6 +29,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Company closeout — synthetic scope and external execution](../../canon/COMPANY_SYNTHETIC_SCOPE_DISPOSITION_2026-09-29.md) — Corporate document-format reconciliation
 - [Foundry Field FF-003 billing adoption](../../canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md) — Corporate document-format reconciliation
 - [Geographic and occupancy completion — September 13, 2026](../../canon/GEOGRAPHIC_COMPLETION_2026-09-13.md) — Corporate document-format reconciliation
+- [Geographic synthetic scope — accepted-state addendum](../../canon/GEOGRAPHIC_SYNTHETIC_SCOPE_ACCEPTANCE_2026-09-29.md) — Corporate document-format reconciliation
 - [Geographic closeout — synthetic edition scope](../../canon/GEOGRAPHIC_SYNTHETIC_SCOPE_DISPOSITION_2026-09-29.md) — Corporate document-format reconciliation
 - [Headquarters exterior visual withdrawn](../../canon/HEADQUARTERS_VISUAL_WITHDRAWAL_2026-09-22.md) — Corporate document-format reconciliation
 - [Klein shop and Fort occupancy continuity](../../canon/KLEIN_FORT_OCCUPANCY_2026-09-13.md) — Corporate document-format reconciliation
@@ -236,6 +237,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Closeout evidence releases](../../releases/CLOSEOUT_EVIDENCE_RELEASES.md) — Corporate document-format reconciliation
 - [Company edition releases](../../releases/COMPANY_EDITION_RELEASES.md) — Corporate document-format reconciliation
 - [Facility atlas controlled releases](../../releases/FACILITY_ATLAS_RELEASES.md) — Corporate document-format reconciliation
+- [Geographic evidence 1.5.0 — accepted delivery receipt](../../releases/GEOGRAPHIC_EVIDENCE_1_5_0_RECEIPT.md) — Corporate document-format reconciliation
 - [Geographic evidence releases](../../releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) — Corporate document-format reconciliation
 - [Local access-remediation continuation](../../../enterprise/audit_suite/ACCESS_REMEDIATION_ACTIVITY.md) — Corporate document-format reconciliation
 - [Declared-subject access review continuation](../../../enterprise/audit_suite/ACCESS_REVIEW_CONTINUATION.md) — Corporate document-format reconciliation
