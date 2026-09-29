@@ -602,6 +602,12 @@
           "scope": "Attributable task-level gap and retest-link record in the audit workroom",
           "validation": "Commits 7ff72887 and a44a14c0 add task.gap.record with exact retained-byte and optional native source pins, scoped assigned owner, explicit cause/disposition, append-only predecessor, exact existing workpaper retest link, learner source-isolation projection and an accessible preview/retry UI. Focused backend, 261 frontend, production build and two browser journeys passed.",
           "acceptance": "A recorded gap is an authored observation, not source evidence, a task conclusion or professional sufficiency. No historical A1938/B2064 gap was backfilled; period and clause-level reconciliation remain open."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Retrospective SH-POL-003 source-gap command in isolated A/B audit copies",
+          "validation": "Independent read-only review SHA-256 69e28e2d7754056c934f7b9980be027300f6d82953d1c5573bad3d1f79bb45a5 verified each copied workroom gained exactly one ordinary OPEN/INSUFFICIENT_SOURCE task.gap.record event; original A1938/B2064 database and 661/721 retained artifact byte hashes remained unchanged. Exact command replay and learner projections passed in the author run.",
+          "acceptance": "This is a disposable retrospective rehearsal. It supplies no actual-workroom gap record, source evidence, HIPAA applicability, performed procedure or task credit; original workroom annotation requires its own safeguarded execution and review."
         }
       ]
     },
@@ -921,6 +927,12 @@
           "scope": "Isolated new-engagement clone-source collection feasibility for corrected B2 Key",
           "validation": "Independent collection review SHA-256 1743cd7dd7dfe511e39fdcf0051111d5fc67aa572c8e88e27b2085f308efff15 verifies distinct EID ENG-b4ae647a4ac35a18acba21a5, 52-event/51-command history, 32 ordinary native-to-retained joins under new registry digest, eight PBC request groups, 21 clone-only grants revoked, 25 original file pins and historical B1095 tip unchanged.",
           "acceptance": "The isolated cloned stores are derivative rehearsal sources, not live company originals. New-ID Key authoring and binding remain unperformed; historical B1095 cannot be rebound, and no learner release, grading calibration, full-year sufficiency or owner acceptance follows."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Isolated new-engagement six-check Key bind over selected clone-source collection",
+          "validation": "Independent unbound-plan review SHA-256 8eb6264f7a35bc436900e8d05a1c13161ac970f0244c9979c56c9f69c0d6900a and bind postreview SHA-256 d5eaa206309640dd87439f9cb4f5a25764f83eff9932129f7111306777939067 verified 32 cloned native/retained source links, the B2 OPEN ticket, exact 21 temporary instructor grant/revoke pairs, post-revocation instructor comparison, learner 403, and unchanged B1095/original source pins.",
+          "acceptance": "Private bound Key for distinct EID ENG-b4ae647a4ac35a18acba21a5 only. No active service mount, learner release, grade, professional validation, live-source/full-year sufficiency, qualified calibration or owner usability acceptance. Historical B1095 remains unchanged."
         }
       ]
     },

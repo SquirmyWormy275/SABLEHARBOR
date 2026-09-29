@@ -185,6 +185,19 @@ is an attributed observation path, not automatic evidence, a conclusion or
 professional clearance. The frozen A1938/B2064 workrooms have no backfilled
 task-gap commands.
 
+A separate [disposable retrospective rehearsal](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-pol003-retrospective-task-gap-disposable-v1/MANIFEST.json)
+(manifest SHA-256 `5ceddc78841f3092f7b32a88753d00c85e96789ed14efeeff15445dff58eb783`)
+recorded one `OPEN/INSUFFICIENT_SOURCE` SH-POL-003 observation in each *copied*
+audit workroom. The A/B commands advanced only the copies from 1938/2064 to
+1939/2065; their exact replays, learner projections and unchanged task
+`NOT_STARTED/NOT_RUN` states passed the author's checks. Original event tips,
+database hashes and retained artifact bytes stayed unchanged. No company source
+was mounted, and the observation supplies neither HIPAA applicability nor
+procedure credit. A separate [independent read-only review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-pol003-retrospective-task-gap-independent-review-v1/REVIEW.json)
+(SHA-256 `69e28e2d7754056c934f7b9980be027300f6d82953d1c5573bad3d1f79bb45a5`)
+checked both original database hashes and 661/721 retained artifact hashes,
+event-chain deltas and task projections. It found no original audit mutation.
+
 Two user-interface corrections are committed: the offline private reviewer ZIP
 now links its included native files (`83ed1467`), and the active workspace rail
 exposes `aria-current="page"` through reviewer and learner deep links, keyboard
@@ -222,8 +235,31 @@ eight ordinary PBC request groups. The independent check joined the 52-event
 chain, 32 request/collection/retained/native/original bytes, 25 unchanged original
 source files, and 21 revoked clone grants. The new registry and source IDs are
 intentionally different from B1095's pinned binding. These cloned derivatives
-are not live physical company originals; no Key is bound or released, and the
-selected collection is not full-year or professional sufficiency.
+are not live physical company originals; no Key was bound at this collection
+checkpoint, and the selected collection is not full-year or professional sufficiency.
+
+An [unbound six-check Key plan](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-new-engagement-key-plan-seal-v2/MANIFEST.json)
+for that distinct EID passed [independent review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-new-engagement-key-independent-review-v2/REVIEW.json)
+(SHA-256 `8eb6264f7a35bc436900e8d05a1c13161ac970f0244c9979c56c9f69c0d6900a`).
+Its exact 159-file seal covers 32 new source/artifact/retained links, six
+issue-to-task links, and the branch-B OPEN backup failure ticket in B2. The
+original source pins and historical B1095 tip remain unchanged. This is still
+an unbound, private plan at that checkpoint; instructor native-source access,
+Key comparison, learner isolation at bind time, qualified grading calibration
+and owner acceptance had not been established by it.
+
+A subsequent private [bind run](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-new-engagement-key-bind-run-v1/MANIFEST.json)
+passed [independent postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-new-engagement-key-bind-independent-postreview-v1/REVIEW.json)
+(SHA-256 `d5eaa206309640dd87439f9cb4f5a25764f83eff9932129f7111306777939067`).
+The exact reviewed runner bound all 32 selected cloned native versions and
+retained audit copies to six checks, including the B2 OPEN failure ticket.
+Twenty-one temporary clone-only instructor grants were revoked; instructor
+comparison still resolved the bound Key afterward, while the learner request
+returned 403. The historical B1095 tip, 25 original native pins, collected
+workroom and unbound plan stayed unchanged. The binding exists only in private
+output: no active service mount, learner release, grade, professional validation,
+live-source claim or full-year sufficiency follows. Bind-time learner denial
+does not imply the same source was inaccessible during historical collection.
 
 The queue's job `state`, acceptance criteria and attributed checkpoints must be read
 together. Historical `*_scope_update` entries record what was authorized at the time;
