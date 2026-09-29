@@ -13,7 +13,11 @@ from tools.evidence.inventory import fingerprints, tree
 ROOT = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).resolve().parent
 FROM = "3dd5e15f58d39b28291782bde5bf4dbf3744a03e"
-THROUGH = "54dd6a46bd386475e7d5ea170d7419f80ae89d0a"
+THROUGH = "e4ed29b2b6410e4c736b90dddef37a735487dada"
+
+CANON_FINDINGS = {
+    "docs/canon/COMPANY_SYNTHETIC_SCOPE_DISPOSITION_2026-09-29.md": "Full-text review: the new controlling issue #18 scope record distinguishes the synthetic company edition from unestablished real tax/legal execution. It changes no site, occupancy, railway, parcel, right of way, client footprint or rail-design authority. Its future external transaction boundary cannot establish real rail land rights."
+}
 
 FINDINGS = {
     "enterprise/operations/source/portal_2027_common_boundary_2026_09_29.json": "SHI local identity/recovery reference scope names Reno, Boise and northern Nevada runtime designs but confirms no 2027 operating host, contract or new occupied site. A design site ID does not create a parcel.",
@@ -31,6 +35,8 @@ FINDINGS = {
 
 
 def disposition(path: str) -> tuple[str, str]:
+    if path in CANON_FINDINGS:
+        return "CONTROLLING_CANON_FULL_TEXT_GEOGRAPHIC_REVIEW", CANON_FINDINGS[path]
     if path in FINDINGS:
         return "TARGETED_GEOGRAPHIC_SOURCE_REVIEW", FINDINGS[path]
     if path.startswith("docs/canon/"):
@@ -59,10 +65,10 @@ def disposition(path: str) -> tuple[str, str]:
 def build() -> dict:
     before, after = tree(ROOT, FROM), tree(ROOT, THROUGH)
     paths = sorted(p for p in before.keys() | after.keys() if before.get(p) != after.get(p))
-    if len(paths) != 81 or not set(FINDINGS) <= set(paths):
+    if len(paths) != 83 or not set(FINDINGS) <= set(paths):
         raise ValueError("Pinned changed-path or targeted-source population differs")
-    if any(p.startswith("docs/canon/") for p in paths):
-        raise ValueError("Controlling canon delta unexpectedly present")
+    if {p for p in paths if p.startswith("docs/canon/")} != set(CANON_FINDINGS):
+        raise ValueError("Controlling canon delta lacks full geographic review")
     oids = sorted({oid for p in paths for oid in (before.get(p), after.get(p)) if oid})
     hashes = {}
     for index in range(0, len(oids), 64):
@@ -89,12 +95,12 @@ def build() -> dict:
         "from_accepted_main": FROM,
         "through_accepted_main": THROUGH,
         "review_date_utc": "2026-09-29",
-        "scope": "All changed paths and exact blob/SHA-256 identities; targeted geographic-authority review of eleven material sources; no new canon delta. Other-domain rows retain explicit classification limits.",
+        "scope": "All changed paths and exact blob/SHA-256 identities; targeted geographic-authority review of eleven material sources and full-text geographic review of the one changed controlling canon source. Other-domain rows retain explicit classification limits.",
         "rows": rows,
         "summary": {
             "changed_paths": len(rows),
             "targeted_geographic_sources": levels["TARGETED_GEOGRAPHIC_SOURCE_REVIEW"],
-            "changed_controlling_canon": 0,
+            "changed_controlling_canon": levels["CONTROLLING_CANON_FULL_TEXT_GEOGRAPHIC_REVIEW"],
             "levels": dict(sorted(levels.items())),
         },
         "limits": [

@@ -1,6 +1,6 @@
 # Rail and geographic criteria — September 29, 2026 review
 
-**Reviewed accepted main:** `54dd6a46bd386475e7d5ea170d7419f80ae89d0a`
+**Reviewed accepted main:** `e4ed29b2b6410e4c736b90dddef37a735487dada`
 **State:** Reviewable source/engineering increment. Neither #107 nor #108 is
 closed by this document. Earlier fixed releases and source bytes are retained.
 
@@ -32,7 +32,7 @@ for a synthetic company, but the record may not claim either without evidence.
 | Original semantic discovery population | [Accepted 1.4 final review](../finalization/README.md) | **Complete at accepted precision:** 78,145 original carriers, zero outstanding. The obsolete 8,961-carrier historical remainder is not revived. |
 | Raster/visual material | [Final visual/source review](../finalization/README.md) | **Delivered at declared coverage:** 97 baseline PNGs, 109 containers/353 PDF pages and 135 unique embedded-image reviews. Later raster additions require their own relevance review; no universal OCR claim. |
 | Asset/occupancy histories, events and maps | [Accepted chronology](../chronology/README.md) and 1.4 map edition | **Delivered at accepted precision:** 34 histories, 79 events and the historical/map readers. Unknown exact days, parcels and early recovered alignments remain unknown. The new fictional map does not replace the accepted source-evidence view. |
-| Subsequent accepted source changes | [September 28 successor](../successor_20260928/README.md) and [next 81-path ledger](../successor_20260929/README.md) | **Pinned through `54dd6a46`.** All 81 changed paths are inventoried with exact blob/SHA identities; eleven geographic-material sources receive targeted review; no controlling canon changed in that interval. Other-domain classification is not a universal substantive audit. A later accepted geographic source requires a subsequent review boundary. |
+| Subsequent accepted source changes | [September 28 successor](../successor_20260928/README.md) and [next 83-path ledger](../successor_20260929/README.md) | **Pinned through `e4ed29b2`.** All 83 changed paths are inventoried with exact blob/SHA identities; eleven geographic-material sources receive targeted review and the one changed controlling canon source receives full-text geographic review. Other-domain classification is not a universal substantive audit. A later accepted geographic source requires a subsequent review boundary. |
 | Whole-program definition of done | This matrix and #107 rows | **Open under the existing issue wording.** The published 1.4 package passes its own scope, but #107 detailed engineering, real/access and external-footprint precision remain. The source-review increments do not turn the whole program complete. |
 
 ## Reperformance and release boundary

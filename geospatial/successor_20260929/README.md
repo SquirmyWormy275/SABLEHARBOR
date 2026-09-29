@@ -1,15 +1,18 @@
 # September 29 accepted-source geographic delta
 
 This issue #108 review pins accepted main `3dd5e15f58d39b28291782bde5bf4dbf3744a03e`
-through `54dd6a46bd386475e7d5ea170d7419f80ae89d0a`. It inventories
-**all 81 changed Git paths**, their old/new blob IDs and SHA-256 digests, and
-assigns a geographic-authority boundary to each. There were **no changed
-controlling canon documents** in this interval. Eleven material sources
-received targeted geographic review, including the newly accepted 40-mile
-operating selector, provisional early alignment, and five public 2027 portal
-company sources. The other paths retain native source, engineering candidate,
-publication, implementation or owning-domain labels. This is not a universal
-legal, tax or IT audit.
+through `e4ed29b2b6410e4c736b90dddef37a735487dada`. It inventories
+**all 83 changed Git paths**, their old/new blob IDs and SHA-256 digests, and
+assigns a geographic-authority boundary to each. The one changed controlling
+canon document, `COMPANY_SYNTHETIC_SCOPE_DISPOSITION_2026-09-29.md`, received
+full-text geographic review: it retires issue #18's real-world execution
+criterion from the synthetic company closeout without changing a site,
+occupancy, rail line, property right or client footprint. Eleven other
+material sources received targeted geographic review, including the newly
+accepted 40-mile operating selector, provisional early alignment, and five
+public 2027 portal company sources. The other paths retain native source,
+engineering candidate, publication, implementation or owning-domain labels.
+This is not a universal legal, tax or IT audit.
 
 The modern rail selector preserves the 40-mile total, 11 route-segment IDs,
 26 structure IDs and nine-mile truck-only mine road. Its accepted downstream
@@ -22,7 +25,7 @@ create a physical site by naming one.
 The accepted 78,145 original geographic carriers remain fully dispositioned;
 this is a **later source interval**, not a revived carrier backlog. Detailed
 rail/site engineering and real-right boundaries still belong to #107. Sources
-accepted after `54dd6a46` need another explicit review before a claim of
+accepted after `e4ed29b2` need another explicit review before a claim of
 complete current geographic source coverage.
 
 ```bash

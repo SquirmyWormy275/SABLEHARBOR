@@ -1,4 +1,4 @@
-"""Pin the next accepted 81-path geographic source interval exactly."""
+"""Pin the next accepted 83-path geographic source interval exactly."""
 
 import gzip
 import hashlib
@@ -15,12 +15,12 @@ def test_exact_changed_path_population_and_artifact():
         cwd=review.ROOT,
         text=True,
     ).splitlines()
-    assert len(paths) == len(set(paths)) == 81
+    assert len(paths) == len(set(paths)) == 83
     assert [r["source_path"] for r in result["rows"]] == sorted(paths)
     saved = json.loads(gzip.decompress((review.HERE / "SOURCE_DELTA.json.gz").read_bytes()))
     assert saved == result
     assert json.loads((review.HERE / "SUMMARY.json").read_text()) == result["summary"]
-    assert result["summary"]["changed_controlling_canon"] == 0
+    assert result["summary"]["changed_controlling_canon"] == 1
 
 
 def test_material_source_meaning_and_exact_bytes():
@@ -34,10 +34,7 @@ def test_material_source_meaning_and_exact_bytes():
         accepted_bytes = subprocess.check_output(
             ["git", "show", f"{review.THROUGH}:{path}"], cwd=review.ROOT
         )
-        assert (
-            rows[path]["through_sha256"]
-            == hashlib.sha256(accepted_bytes).hexdigest()
-        )
+        assert rows[path]["through_sha256"] == hashlib.sha256(accepted_bytes).hexdigest()
     assert (
         "40 total route-miles"
         in rows["industrial/successors/rail_2026_09_29/source.json"]["geographic_finding"]
@@ -54,7 +51,10 @@ def test_material_source_meaning_and_exact_bytes():
             "geographic_finding"
         ]
     )
-    assert all(not path.startswith("docs/canon/") for path in rows)
+    canon = "docs/canon/COMPANY_SYNTHETIC_SCOPE_DISPOSITION_2026-09-29.md"
+    assert set(path for path in rows if path.startswith("docs/canon/")) == {canon}
+    assert rows[canon]["review_level"] == "CONTROLLING_CANON_FULL_TEXT_GEOGRAPHIC_REVIEW"
+    assert "no site" in rows[canon]["geographic_finding"]
 
 
 def test_compressed_output_reproduces_byte_for_byte(tmp_path, monkeypatch):

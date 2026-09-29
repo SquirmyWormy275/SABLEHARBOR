@@ -1,8 +1,9 @@
 {
-  "changed_controlling_canon": 0,
-  "changed_paths": 81,
+  "changed_controlling_canon": 1,
+  "changed_paths": 83,
   "levels": {
-    "DOCUMENT_OR_PUBLICATION_BOUNDARY": 13,
+    "CONTROLLING_CANON_FULL_TEXT_GEOGRAPHIC_REVIEW": 1,
+    "DOCUMENT_OR_PUBLICATION_BOUNDARY": 14,
     "GEOGRAPHIC_ENGINEERING_OR_DERIVATIVE": 31,
     "IMPLEMENTATION_OR_TEST_BOUNDARY": 13,
     "OWNING_DOMAIN_SOURCE_OR_DERIVATIVE": 13,
