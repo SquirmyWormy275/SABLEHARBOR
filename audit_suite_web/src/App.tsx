@@ -1409,6 +1409,7 @@ export default function App() {
                 key={id}
                 disabled={!e || setup}
                 className={e && section === id && !setup ? "active" : ""}
+                aria-current={e && section === id && !setup ? "page" : undefined}
                 onClick={() => navigate(id)}
               >
                 <span>{String(i + 1).padStart(2, "0")}</span>

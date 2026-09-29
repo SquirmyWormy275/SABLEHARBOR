@@ -241,6 +241,9 @@ try {
   let failNextDraftSave = false;
   const personalDrafts = new Map();
   let conflictNextPersonalDraft = false;
+  let viewer = {
+    id: "fixture", display_name: "Layout fixture trainer", roles: ["trainer", "reviewer"],
+  };
   await page.route("**/api/**", (route) => {
     const path = new URL(route.request().url()).pathname;
     if (path.includes("/drafts/")) {
@@ -343,11 +346,7 @@ try {
       body: JSON.stringify(
         path === "/api/bootstrap"
           ? {
-              viewer: {
-                id: "fixture",
-                display_name: "Layout fixture trainer",
-                roles: ["trainer", "reviewer"],
-              },
+              viewer,
               csrf_token: "fixture",
               engagements: [e],
               capabilities: e.capabilities,
@@ -388,6 +387,27 @@ try {
     )
       throw Error(`Overflow ${view}`);
   }
+  // Current location must remain programmatic across a record deep link,
+  // keyboard route change and browser-history return.
+  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=controls&kind=controls&object=CC-1`);
+  await page.getByRole("dialog").waitFor();
+  const rail = page.getByRole("navigation", { name: "Engagement workspace" });
+  const controlsNav = rail.getByRole("button", { name: /Controls & tracker/ });
+  const evidenceNav = rail.getByRole("button", { name: /PBC & evidence/ });
+  if ((await controlsNav.getAttribute("aria-current")) !== "page")
+    throw Error("Deep-linked control did not identify the current workspace section");
+  await page.keyboard.press("Escape");
+  await evidenceNav.focus();
+  await page.keyboard.press("Enter");
+  if ((await evidenceNav.getAttribute("aria-current")) !== "page" ||
+      (await controlsNav.getAttribute("aria-current")) !== null)
+    throw Error("Keyboard route change did not update the current workspace section");
+  await page.goBack();
+  await page.getByRole("dialog").waitFor();
+  if ((await controlsNav.getAttribute("aria-current")) !== "page" ||
+      (await evidenceNav.getAttribute("aria-current")) !== null)
+    throw Error("History return did not restore the deep-linked current section");
+  await page.keyboard.press("Escape");
   // Table navigation retains only search/sort/page, never row data.
   await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=controls`);
   const controlTable = page
@@ -1253,6 +1273,28 @@ try {
   await lineageDialog.getByText('Showing explicitly linked workpaper version 1. Other versions are not substituted.',{exact:true}).waitFor();const versionsTable=lineageDialog.locator('.record-table');await versionsTable.getByText('Exact first-version work',{exact:true}).waitFor();if(await versionsTable.getByText('Later version not explicitly linked',{exact:true}).count())throw Error('Lineage substituted a newer workpaper version');
   await lineageDialog.getByRole('button',{name:'Back to population POP-LINEAGE',exact:true}).click();await lineageDialog.getByRole('button',{name:'Back to selection SEL-LINEAGE',exact:true}).click();await page.keyboard.press('Escape');if(await selectionsTable.getByRole('searchbox').inputValue()!=='SEL-LINEAGE')throw Error('Lineage lost initiating selection filter');
   await selectionsTable.getByRole('searchbox').fill('SEL-UNAVAILABLE');await selectionsTable.getByRole('button',{name:'SEL-UNAVAILABLE',exact:true}).click();await page.getByRole('dialog').getByText(/exact population POP-LINEAGE version 99 is unavailable/).waitFor();if(await page.getByRole('dialog').getByRole('button',{name:'Open population POP-LINEAGE version 1',exact:true}).count())throw Error('Missing historical population silently rebased');await page.keyboard.press('Escape');await page.getByRole('button',{name:/Meetings · MRL/}).click();if(await page.getByLabel('Ask the owner').inputValue()!=='Keep this investigation question while tracing evidence')throw Error('Lineage navigation erased current question');
+  // The learner route carries the same current-location cue without relying
+  // on instructor/reviewer capabilities from the earlier fixture journey.
+  viewer = { id: "learner-fixture", display_name: "Layout fixture learner", roles: ["learner"] };
+  e.permissions = ["learn"];
+  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=notes&kind=notes&object=N-01`);
+  await page.getByRole("dialog").waitFor();
+  const learnerRail = page.getByRole("navigation", { name: "Engagement workspace" });
+  const notesNav = learnerRail.getByRole("button", { name: /Notes/ });
+  const reviewNav = learnerRail.getByRole("button", { name: /Workpapers & review/ });
+  if ((await notesNav.getAttribute("aria-current")) !== "page")
+    throw Error("Learner deep link did not identify the current section");
+  await page.keyboard.press("Escape");
+  await reviewNav.focus();
+  await page.keyboard.press("Enter");
+  if ((await reviewNav.getAttribute("aria-current")) !== "page" ||
+      (await notesNav.getAttribute("aria-current")) !== null)
+    throw Error("Learner keyboard navigation did not update current section");
+  await page.goBack();
+  await page.getByRole("dialog").waitFor();
+  if ((await notesNav.getAttribute("aria-current")) !== "page")
+    throw Error("Learner history return did not restore the deep-linked section");
+  await page.keyboard.press("Escape");
   if (errors.length) throw Error(errors.join("\n"));
   await writeFile(
     `${output}/browser-receipt.json`,
@@ -1293,6 +1335,10 @@ try {
           "no learner component/request/private DOM",
         ],
         navigation_checks: [
+          "current section exposed on a record deep link",
+          "keyboard route change updates the exposed current section",
+          "browser-history return restores the deep-linked current section",
+          "learner role repeats deep-link, keyboard route and history current-location checks",
           "program filter survives browser back",
           "notes search survives section navigation",
           "scope orientation",
