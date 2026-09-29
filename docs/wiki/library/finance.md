@@ -647,6 +647,14 @@ Generated file inventory. Includes current and historical records; open the sour
 - [August Pale Sun legal-employer allocation](../../../enterprise/operations/docs/ps-legal-payroll-bridge.md) — MD
 - [Research, captured material and industrial operating detail](../../../enterprise/operations/docs/research.md) — MD
 
+## `enterprise/operations/portal_2027_common_boundary`
+
+- [Prospective 2027 common company boundary](../../../enterprise/operations/portal_2027_common_boundary/README.md) — MD
+
+## `enterprise/operations/portal_2027_reference_controls`
+
+- [Q1 2027 local reference-controls case (provisional)](../../../enterprise/operations/portal_2027_reference_controls/README.md) — MD
+
 ## `enterprise/operations/publications`
 
 - [operating-review-v1.0.0](../../../enterprise/operations/publications/operating-review-v1.0.0.xlsx) — XLSX

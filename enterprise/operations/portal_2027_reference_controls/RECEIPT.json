@@ -1,0 +1,81 @@
+{
+  "receipt_id": "SH-REFCTRL-2027-Q1-REVIEW-2026-09-29",
+  "state": "REVIEWABLE_PROVISIONAL_SOURCE_NOT_ACCEPTED",
+  "base_commit": "2c7a5e085fc885e5862d0f2ce8ab37e37b93148a",
+  "review_commit": null,
+  "source_path": "enterprise/operations/source/portal_2027_reference_controls_case_2026_09_29.json",
+  "source_sha256": "ab4c1c653f641099308f54c2086bc6a3b98ec9a6f01ffece7bec31a49e476c4a",
+  "derived_path": "enterprise/operations/portal_2027_reference_controls/q1_v0.1.json",
+  "derived_sha256": "d4f92bc610e8846823396be5173d4107c2eca068b6a55761ad7b73f96bcdf1ac",
+  "accepted_august_release": {
+    "tag": "sable-harbor-company-edition-v1.2.0",
+    "source_commit": "ddca0d93b16c743e90ce5ac3f9cc74fb74ec6d1f",
+    "records_sha256": "5dd78a2bc6c6a08f333a7a6a0d09f7a310e3f2bd0fe027926c6b120a7b4a795e",
+    "receipt_sha256": "bc0b66500d682c1ea1705601bc1fc1b45e1c6e166d3d28b308df9c729c53767e"
+  },
+  "population": {
+    "scope": "one newly authored fictional local nonpersonal SHI Q1 2027 case; nine expressly selected due windows only",
+    "people": 2,
+    "briefings": 2,
+    "datasets": 1,
+    "nonhuman_accounts": 1,
+    "privileged_grants": 1,
+    "copies": 2,
+    "due": 9,
+    "timely_observed": 7,
+    "timely_success": 5,
+    "timely_failed": 2,
+    "missing": 2,
+    "exception_tickets": 4,
+    "later_responses": 5,
+    "company_wide_2027_due": null
+  },
+  "temporal_boundary": {
+    "authored_at": "2026-09-29T06:22:26Z",
+    "modeled_plan_approved_at": "2026-12-31T23:50:00Z",
+    "modeled_plan_effective_at": "2027-01-01T00:00:00Z",
+    "plan_fictional_available_at": "2027-01-01T00:15:00Z",
+    "case_cutoff": "2027-04-01T00:00:00Z",
+    "repository_available_at": null,
+    "repository_acceptance_at": null
+  },
+  "validation": {
+    "case_tests": "21 passed",
+    "company_closeout_tests": "passed",
+    "business_records": "passed",
+    "governance_j2": "passed",
+    "institutional_catalog_validator": "passed before reader regeneration",
+    "organization_maps": "passed",
+    "repository_hygiene": "passed",
+    "approval_guard": "passed",
+    "public_safety": "passed",
+    "byte_pinned_cli_check": "passed",
+    "ruff": "passed",
+    "full_pytest": "passed on final staged case source; one SQLAlchemy/Python 3.12 deprecation warning"
+  },
+  "shared_reader_drift_for_integration_owner": {
+    "regenerate_command": "python tools/documents/build_institutional_catalog.py",
+    "uncommitted_paths_to_regenerate_once": [
+      "docs/internal/institutional_catalog.sqlite3",
+      "docs/wiki/Library.md",
+      "docs/wiki/library/finance.md",
+      "docs/wiki/library/format-review.md"
+    ],
+    "expected_counts": {
+      "markdown_files_before": 932,
+      "markdown_files_after": 933,
+      "finance_library_before": 471,
+      "finance_library_after": 472,
+      "reader_or_maintenance_before": 194,
+      "reader_or_maintenance_after": 195
+    },
+    "ownership": "integration owner will combine case sources and regenerate shared reader once"
+  },
+  "limits": [
+    "The future 2027 event assertions are modeled fiction authored in 2026, not current performance evidence or real deployment.",
+    "The source is provisional until a containing accepted commit binds first repository availability; it must not be queried as accepted known-on company evidence beforehand.",
+    "A/B local exercise declarations and outcomes are excluded; both portal branches may consume the same company case without a hidden answer.",
+    "The three backup windows are a selected discrete population, not a continuous Q1 RPO schedule or corporate effectiveness conclusion.",
+    "Other systems, sites, people, contracts, controls, and company-wide 2027 due/performance denominators remain outside this case."
+  ]
+}
