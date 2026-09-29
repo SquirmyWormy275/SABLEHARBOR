@@ -667,6 +667,20 @@ extents. The exercise has no signed agreement, legal approval, external
 communication, PHI/BA operation, deployed provider or audit credit; its 2027
 events are future simulation relative to the actual 2026 insertion time.
 
+The [prospective SH-ENG-005 emergency-change exercise](../../../../enterprise/audit_suite/EMERGENCY_CHANGE_EXERCISE.md)
+keeps the existing ordinary change path's `NOT_EXERCISED` status intact. Its
+[independent V2 review](../../../../enterprise/generated/audit-suite/eng005-prospective-2026-09-29/independent-review-v2/REVIEW.json)
+(SHA-256 `371380b9b1db92e5a9d483bb43f9b90cbc534c257a853a4629c90261b95ef5c1`)
+verified 19 native versions: Clean blocks without verified emergency authority;
+Messy records an invalid local bypass of an in-memory fixture, observation and
+rollback with one exception still open. The proposed contacts are not
+corporate emergency approvers. The source is outside the active pair, its
+2027 clocks are future simulation, and there is no deployed change or audit
+task credit. After integration, 13 focused and predecessor change tests and
+Ruff passed. The private output was copied by ordinary bytes with exact
+hashes, separate inodes and zero shared Btrfs extents; the failed CLI V1 and
+original V1 run remain preserved.
+
 The active pair's 13-component company-source binding is frozen at activation.
 New native systems needed for the remaining controls cannot be silently added
 to that engagement. A [read-only final-registry gate](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq07-final-source-complete-registry-readonly-plan-v1/PLAN.md)

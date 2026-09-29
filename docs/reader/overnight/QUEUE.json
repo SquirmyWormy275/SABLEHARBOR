@@ -719,6 +719,12 @@
         },
         {
           "date": "2026-09-29",
+          "scope": "Prospective SH-ENG-005 local emergency-change source and independent review",
+          "validation": "Independent V2 review SHA-256 371380b9b1db92e5a9d483bb43f9b90cbc534c257a853a4629c90261b95ef5c1 verified 35 canon/source pins, 19 native versions, Clean authority block, Messy invalid in-memory bypass then rollback with one exception open, 2027 authored clocks versus actual 2026 import, and zero grants/collections. After integration 13 focused/prior change tests and Ruff passed; private ordinary-byte copy matched exact hashes and modes, distinct inodes and zero Btrfs shared extents. Failed CLI attempt and V1 run remain preserved.",
+          "acceptance": "Local prospective technical source only, outside the frozen P1 pair. Proposed contacts are not accepted emergency approvers; no production deployment, real 2027 operation, full incident/change population, audit procedure/task credit, Key, grade or release."
+        },
+        {
+          "date": "2026-09-29",
           "scope": "Prospective planned-provider contract draft gate and independent review",
           "validation": "Independent isolated review SHA-256 780439abadfb5d985279f53717503a12027c563c6cad03d55842eeaa9ed89a9d verified 39 canon and organization pins, 12 native versions, Clean HOLD, Messy QUARANTINED and one open exception across five event rows. Post-integration 12 focused CompanyStore/exercise tests, Ruff and native verify passed. The private run and review were copied by ordinary bytes with exact hashes, separate inodes and zero Btrfs shared extents.",
           "acceptance": "Draft-only planned Reno/Boise provider exercise outside the current pair. No signed contract, actual PHI/BA role, legal approval, external communication, deployment, cure, termination, real 2027 operation or audit task credit. Actual party/obligation/authority facts remain gated."
