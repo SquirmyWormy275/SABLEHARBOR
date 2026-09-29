@@ -136,7 +136,7 @@ to Red Wash is introduced.
 
 | Treatment | Consequence before adoption |
 | --- | --- |
-| Preserve the accepted **40.000000** geodesic route-miles | Redesign the curves and route geometry to remove **0.193028** geodesic route-mile (about **310.775 projected metres**) while repeating grade, curvature, water/road, structure, route-mile and site checks. The two source branches have only **46.568 projected metres** of total slack above their endpoint chords; even perfectly straightening both would leave **264.206 m** of this candidate increase. The present endpoints/junctions or another substantive geometry assumption therefore need reconsideration. A bookkeeping relabeling cannot shorten a physical line. |
+| Preserve the accepted **40.000000** geodesic route-miles | Redesign the curves and route geometry to remove **0.193028** geodesic route-mile (about **310.775 projected metres**) while repeating grade, curvature, water/road, structure, route-mile and site checks. The two source branches have only **46.568 projected metres** of total slack above their endpoint chords; even perfectly straightening both would leave **264.206 m** of this candidate increase. A wider mainline geometry change is needed; the fixed-control candidate below demonstrates one without moving endpoints or junction coordinates. A bookkeeping relabeling cannot shorten a physical line. |
 | Adopt the curves' **40.193028** geodesic route-miles | Amend the controlling industrial route/segment source, rechain branch mileposts and five structure placements, and reperform dispatch/capacity, maintenance, capital and downstream finance or geographic exports that consume exact mileage. Do not silently add the curves to a frozen release. |
 
 Neither treatment is selected by this derivative. The two new leads plus four
@@ -154,3 +154,57 @@ There is no recovered contemporary linework that could locate them. The
 proposed modern curves do not backdate the line. Exact external customer
 footprints likewise remain governed by their accepted restricted/unknown
 precision rather than being invented to fill a map.
+
+### Recommended fixed-control, exact-40-mile alternative
+
+The subsequent [`COMPENSATED_40_MILE_CANDIDATE.json`](COMPENSATED_40_MILE_CANDIDATE.json)
+and [`COMPENSATED_40_MILE_CANDIDATE.geojson`](COMPENSATED_40_MILE_CANDIDATE.geojson)
+show that the 40-mile treatment above is **geometrically feasible at the
+declared worldbuilding precision** without moving accepted site/end points,
+branch junction coordinates or any of the 26 structure coordinates. Regenerate
+and test the fixed-control case with:
+
+```bash
+uv run --with-requirements geospatial/requirements.txt python -m geospatial.engineering_review.build_compensated
+uv run --with-requirements geospatial/requirements.txt python -m pytest -q geospatial/tests/test_compensated_rail_design.py
+```
+
+The generator identifies 25 fixed controls and smoothly shortens ten
+mainline spans between them. The single root-solved scale shortens the
+mainline by **310.648 m geodesic** (**310.770 m projected**), exactly
+offsetting the two proposed branch curves. It retains every original
+local-road crossing ID, zero overlap with pinned waterbody polygons and a
+simple mainline. The mainline's minimum sampled plan radius is **814.022 m**
+versus **672.097 m** in the accepted source. Its C1 profile meets the declared
+1.8% grade and 12 m cut/fill screen; the branch, lead and ladder profiles
+also remain feasible. The Taylor lead and ladder geometry is recomputed from
+this shorter mainline, rather than leaving a disconnected old switch point.
+
+| Route | Accepted source miles | Fixed-control candidate miles |
+| --- | ---: | ---: |
+| BST-MAIN | 33.348476764 | 33.155448786 |
+| BST-EAST | 4.000000000 | 4.136588436 |
+| BST-MINERAL | 2.651523236 | 2.707962778 |
+| **Unique route total** | **40.000000000** | **40.000000000** |
+
+The reported total uses unrounded projected geometry in the generator. The
+distributable GeoJSON rounds longitude/latitude to ten decimals; independent
+reimport measures within **0.00000001 mile** (about 1.6 cm) of 40 miles.
+
+This is the recommended **synthetic design source path**, not an accepted
+operating amendment. The three per-route lengths, all affected segment
+boundaries and structure mileposts still need a dated source successor and
+downstream reconciliation. A one-field sensitivity in the existing planning
+calculator showed 179 of 180 monthly train-hour cells change; downside
+March 2027 conditional expanded rail capacity changes **1,008→1,344 cars**
+when the shorter mainline allows a fourth daily trip within the modeled
+24 combined roster-hour ceiling under one failed locomotive. That is a
+material scenario effect, not a cosmetic map update. The pinned industrial
+source and finance-release bytes remain unchanged here. Full adoption must
+reperform operating, finance, export and publication consumers from a
+separately versioned source.
+
+The geometry still does not establish real title, survey, an executed
+interentity connection, local lead construction, historic early linework or
+external customer parcels. The outside-envelope access lengths and required
+track-register treatment remain explicit in both candidate reports.

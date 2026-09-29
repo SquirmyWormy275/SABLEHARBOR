@@ -21,6 +21,7 @@
     "dem": "0ea3719bb01c73e6e4ccaf1c21defa609a945ae7342ce58409479f574ba19b96"
   },
   "projection": "EPSG:26913",
+  "geojson_coordinate_decimal_places": 10,
   "status": "PROPOSED_DERIVED_SYNTHETIC_ENGINEERING_NOT_ACCEPTED_OPERATING_SOURCE",
   "authored_case_parameters": {
     "BST-EAST": {

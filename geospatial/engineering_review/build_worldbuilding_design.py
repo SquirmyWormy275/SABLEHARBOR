@@ -77,7 +77,7 @@ def _geojson_line(line: LineString):
     geographic = transform(TO_WGS84, line)
     return {
         "type": "LineString",
-        "coordinates": [[_report(lon, 9), _report(lat, 9)] for lon, lat in geographic.coords],
+        "coordinates": [[_report(lon, 10), _report(lat, 10)] for lon, lat in geographic.coords],
     }
 
 
@@ -547,6 +547,7 @@ def build():
             for name, path in SOURCES.items()
         },
         "projection": "EPSG:26913",
+        "geojson_coordinate_decimal_places": 10,
         "status": "PROPOSED_DERIVED_SYNTHETIC_ENGINEERING_NOT_ACCEPTED_OPERATING_SOURCE",
         "authored_case_parameters": CASES,
         "authored_terminal_ladder_parameters": [
