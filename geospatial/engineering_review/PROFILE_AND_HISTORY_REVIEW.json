@@ -1,0 +1,183 @@
+{
+  "schema": "rail-engineering-source-review-v1",
+  "source_sha256": {
+    "epochs": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b",
+    "network": "9ce4036c230ee1a52d08a38a74bb6701fbc9de979306d6061e2861027992fa86",
+    "abandoned": "b3049ad7a1062091e169bd352424d59721a26b8b6229942aef26d11b0c6a96e1",
+    "main_profile": "bf57f866ca9289227f23c17cc01733c942cbcdf1d3025999f5bb853a4101e982",
+    "branch_profiles": "b1aad8b21f726c4012cb89a7e955dd3d621c0c6d32176fc990d0d1697ca7fbcf"
+  },
+  "source_paths": {
+    "epochs": "industrial/source/operations.json",
+    "network": "geospatial/geojson/rail_network.geojson",
+    "abandoned": "geospatial/geojson/rail_abandoned.geojson",
+    "main_profile": "industrial/source/geography/candidate_comparison.json",
+    "branch_profiles": "industrial/source/geography/derived_ground_profiles.json"
+  },
+  "current_route_miles": {
+    "BST-MAIN": 33.348476763611366,
+    "BST-EAST": 3.999999999999637,
+    "BST-MINERAL": 2.651523236389135
+  },
+  "historical_epochs": [
+    {
+      "epoch": "1898",
+      "history_id": "HIST-1898",
+      "effective_date": "1898-04-06",
+      "source_extent_state": "UNKNOWN_EARLY_ALIGNMENT",
+      "route_miles": null,
+      "surviving_route_miles_low": null,
+      "surviving_route_miles_high": null,
+      "georeferenced_alignment_available": false,
+      "geometry_basis": "UNLOCATED_SOURCE_CLAIM"
+    },
+    {
+      "epoch": "1954",
+      "history_id": "HIST-1954",
+      "effective_date": "1954-07-01",
+      "source_extent_state": "RECONSTRUCTED_RANGE_UNLOCATED",
+      "route_miles": null,
+      "surviving_route_miles_low": 14,
+      "surviving_route_miles_high": 16,
+      "georeferenced_alignment_available": false,
+      "geometry_basis": "UNLOCATED_SOURCE_CLAIM"
+    },
+    {
+      "epoch": "1968",
+      "history_id": "HIST-1968",
+      "effective_date": "1968-10-14",
+      "source_extent_state": "DERIVED_CASE_ENGINEERING_HISTORY",
+      "route_miles": 33.34847676361104,
+      "surviving_route_miles_low": null,
+      "surviving_route_miles_high": null,
+      "georeferenced_alignment_available": true,
+      "geometry_basis": "ACCEPTED_LATER_SYNTHETIC_ROUTE_CASE"
+    },
+    {
+      "epoch": "1972",
+      "history_id": "HIST-1972",
+      "effective_date": "1972-05-08",
+      "source_extent_state": "DERIVED_CASE_ENGINEERING_HISTORY",
+      "route_miles": 37.34847676361104,
+      "surviving_route_miles_low": null,
+      "surviving_route_miles_high": null,
+      "georeferenced_alignment_available": true,
+      "geometry_basis": "ACCEPTED_LATER_SYNTHETIC_ROUTE_CASE"
+    },
+    {
+      "epoch": "1986",
+      "history_id": "HIST-1986",
+      "effective_date": "1986-09-19",
+      "source_extent_state": "DERIVED_CASE_ENGINEERING_HISTORY",
+      "route_miles": 40,
+      "surviving_route_miles_low": null,
+      "surviving_route_miles_high": null,
+      "georeferenced_alignment_available": true,
+      "geometry_basis": "ACCEPTED_LATER_SYNTHETIC_ROUTE_CASE"
+    },
+    {
+      "epoch": "1991",
+      "history_id": "HIST-1991",
+      "effective_date": "1991-01-02",
+      "source_extent_state": "DERIVED_CASE_ENGINEERING_HISTORY",
+      "route_miles": 40,
+      "surviving_route_miles_low": null,
+      "surviving_route_miles_high": null,
+      "georeferenced_alignment_available": true,
+      "geometry_basis": "ACCEPTED_LATER_SYNTHETIC_ROUTE_CASE"
+    },
+    {
+      "epoch": "2026",
+      "history_id": null,
+      "effective_date": "2026-09-05",
+      "source_extent_state": "CURRENT_SYNTHETIC_ENGINEERED_ALIGNMENT",
+      "route_miles": 40,
+      "surviving_route_miles_low": null,
+      "surviving_route_miles_high": null,
+      "georeferenced_alignment_available": true,
+      "geometry_basis": "ACCEPTED_LATER_SYNTHETIC_ROUTE_CASE"
+    }
+  ],
+  "unlocated_alignment_population": [
+    {
+      "object": "1898 coal-era line",
+      "geometry": null,
+      "basis": "UNKNOWN_EARLY_ALIGNMENT"
+    },
+    {
+      "object": "1954 surviving 14\u201316-mile estate",
+      "geometry": null,
+      "basis": "RECONSTRUCTED_RANGE_UNLOCATED"
+    },
+    {
+      "object": "abandoned/relocated historical track",
+      "geometry": null,
+      "basis": "NO_ACCEPTED_LINEWORK"
+    }
+  ],
+  "net_1954_to_1968_route_growth_miles": {
+    "low": 17.34847676361104,
+    "high": 19.34847676361104
+  },
+  "profiles": [
+    {
+      "route_id": "BST-MAIN",
+      "model": "CONSTRAINED_L1",
+      "station_count": 769,
+      "profile_chainage_end_m": 53690.53255437367,
+      "maximum_sampled_formation_grade_pct": 1.8000000000002732,
+      "maximum_adjacent_grade_change_percentage_points": 0.699095475969988,
+      "largest_grade_break_chainage_m": 21602.05020742378,
+      "maximum_cut_m": 6.873473543410455,
+      "maximum_fill_m": 5.89108866820925,
+      "grade_constraint_pct": 1.8,
+      "vertical_curve_design_status": "CONSTRAINED_PRELIMINARY_SCREEN_NOT_CERTIFIED"
+    },
+    {
+      "route_id": "BST-EAST",
+      "model": "GRADE_ONLY_L1",
+      "station_count": 81,
+      "profile_chainage_end_m": 6439.840674585454,
+      "maximum_sampled_formation_grade_pct": 1.8000000000002718,
+      "maximum_adjacent_grade_change_percentage_points": 3.4479080352721816,
+      "largest_grade_break_chainage_m": 1210.2257623872804,
+      "maximum_cut_m": 4.921271029345917,
+      "maximum_fill_m": 4.549932629055547,
+      "grade_constraint_pct": 1.7999999999999998,
+      "vertical_curve_design_status": "NOT_MODELED"
+    },
+    {
+      "route_id": "BST-MINERAL",
+      "model": "GRADE_ONLY_L1",
+      "station_count": 81,
+      "profile_chainage_end_m": 4268.949001175368,
+      "maximum_sampled_formation_grade_pct": 1.3637359585338893,
+      "maximum_adjacent_grade_change_percentage_points": 1.009756048693839,
+      "largest_grade_break_chainage_m": 4107.828794913999,
+      "maximum_cut_m": 0.0,
+      "maximum_fill_m": 0.0,
+      "grade_constraint_pct": 1.7999999999999998,
+      "vertical_curve_design_status": "NOT_MODELED"
+    },
+    {
+      "route_id": "ROAD-RW-01",
+      "model": "GRADE_ONLY_L1",
+      "station_count": 101,
+      "profile_chainage_end_m": 14490.142000511514,
+      "maximum_sampled_formation_grade_pct": 3.798699035400784,
+      "maximum_adjacent_grade_change_percentage_points": 6.076215250034231,
+      "largest_grade_break_chainage_m": 11051.91732089944,
+      "maximum_cut_m": 0.0,
+      "maximum_fill_m": 0.0,
+      "grade_constraint_pct": 6.0,
+      "vertical_curve_design_status": "NOT_MODELED"
+    }
+  ],
+  "limitations": [
+    "The 1898, 1954 and abandoned alignments remain unlocated; a 15-mile current segment does not identify the 14\u201316 surviving miles.",
+    "Profile chainage is projected, whereas accepted route miles are geodesic; they are separate measures.",
+    "Adjacent sampled-grade change is a screening observation, not vertical-curve length, radius or ride-quality design.",
+    "The East, Mineral and Red Wash road sources constrain grade only. Abrupt grade breaks have no designed transition.",
+    "No cross sections, earthwork volumes, geotechnical/drainage/structure design, construction approval, parcel/title/access instrument or client-site footprint is established."
+  ]
+}
