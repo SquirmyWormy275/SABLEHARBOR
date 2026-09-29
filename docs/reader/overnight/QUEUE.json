@@ -680,6 +680,18 @@
           "scope": "Fresh 13-component A/B source binding, zero-evidence bootstrap, and independently preserved whole-state recovery checkpoint",
           "validation": "Integrated P1 independent postreview SHA-256 badd73686b81ff1cfd94690d01aa20ce3ace3f15a20ef9baa3c479a5b04cd461 verified fresh A/B rev2 with 409 untouched tasks each, all 13 source components bound before activation, 353 selected native versions and 52 ordinary-byte backed-up/copied roots. Independently reviewed SQLite sidecar quiescence SHA-256 fbbbee6abdf21d3b25adcd158db57ba626428e1580fa2f8490dd37edfd4524e7 restored exact 203-file inventory. Whole-P1 checkpoint independent PASS SHA-256 9ae3e485e0850a6a847956e5a9644347a491a984132d28a5584b3342c68e74a2 verified identical private byte snapshot and 54 SQLite quick_checks. Audit Store context closure fix commit 3abd5c0f passed 39 focused tests.",
           "acceptance": "Technical source binding and recovery basis only. No company-wide population sufficiency, task credit, instructor Key, control effectiveness, full-period or professional acceptance."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Integrated P3/P4 learner investigation, BCM/CFG local procedures and first P5A native collection on the same 13-component A/B pair",
+          "validation": "Independent P3 review SHA-256 5b8afc3a876e75e3409f478b80a4d21d3a88e0ae11ca4e9f12bbe53d96475471; P4 BCM/CFG reviews SHA-256 55eb6211a51073117e068beb3b72ffd343d2fc73584ea308d5fe4ae53caef8a3 and b1e5d2df1ec8f8440a3fa00bafec89372bfd9037cae9ba0d8afbf47392be3875; P5A collection independent postreview SHA-256 ce8724d33f2cbedbd08294b16bbf7760b403f435456b019607da1ba5bb26981c. Live pair A175/B147 has 125 new request-linked native/retained joins, 42 revoked temporary grants, exact prior-source preservation and 409 untouched tasks per side.",
+          "acceptance": "P3/P4 observations and P5A source associations are bounded technical work. Full task-clause testing, P5B-D, company-year completeness, missing-operation adjudication, professional assurance and owner acceptance remain open; no task credit, Key release or grade."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Post-P5A whole-state ordinary-byte recovery checkpoint after transient diagnostic wrong-path SQLite file",
+          "validation": "Independent postcopy review SHA-256 17ce40131cdf9f4052a4846e9303df2e54d94dfc751d4964e96254b924a4fca0 verified all 372 active/snapshot file hashes, 54 SQLite quick_checks, disjoint inodes and zero Btrfs shared extents, A175/B147 event tips, untouched protected sources/Key/historical audits. Failed v1 preflight SHA-256 69a3ac497addfb8f2e53b2d614aafa696172ebf25604185ddd2b45bafde0d4d6 and root reconciliation SHA-256 6cc4476995a3843a6808c776fc42e185dda19d2133c07e6da691072321418a32 preserve and resolve the transient zero-byte file.",
+          "acceptance": "Recovery checkpoint only. No P5B-D run, task credit, Key bind, grade, learner release, full-year or professional assurance conclusion."
         }
       ]
     },
@@ -761,6 +773,12 @@
           "scope": "Actual ordinary B2 company-source recollection on the fresh 13-component bound A/B engagements",
           "validation": "Gated P2 RESULT SHA-256 f7c1b90cf079244c1dab3a2c62e3953fba96d073679a55e5923cc773ada13f33 and independent actual postreview SHA-256 86a045d0e984062ef6a649f18fedb931ba8dd64cd7e57e04b5acba644acec7ed verified A2→78/B2→51, 22/8 PBC requests, 31/32 native→ordinary collection receipt→retained-byte joins, 18/21 scoped grants all inactive with 36/42 access events, full event chains and expected Clean/Messy B2/B3/R1/R2 chronology. Pre-P2 whole-state snapshot, 26 original company roots, three preservation trees and historical A1939/B2066 hashes/tips remained unchanged; no WAL/SHM.",
           "acceptance": "Bounded B2 collection only. All 409 tasks per branch remain NOT_STARTED/NOT_RUN; no new Key, learner release, grade, full-period operating conclusion or qualified professional acceptance. P3 investigation and remaining integrated phases require separate execution and review."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Fresh integrated 13-component same-engagement Clean/Messy continuation through P5A",
+          "validation": "P2 A78/B51 native collection, P3 A90/B63 recorded investigation, P4 A100/B73 BCM/CFG procedure records and P5A A175/B147 IAM/nonhuman collection each passed independent actual postreview. P5A review SHA-256 ce8724d33f2cbedbd08294b16bbf7760b403f435456b019607da1ba5bb26981c verifies 125 current-native request-linked receipts, 120 new content-addressed byte paths, full audit event chains, grant cleanup, protected roots and no sidecars.",
+          "acceptance": "The same-company paired technical journey continues, but all 818 new-pair task instances remain NOT_STARTED/NOT_RUN. Neither six-check private instructor clone nor collected sources establish task effectiveness, complete 2027 period, actual PHI processing, learner release, assessment, owner acceptance or qualified SOC 2/HIPAA conclusion."
         }
       ]
     },
@@ -1059,6 +1077,12 @@
           "scope": "Instructor-only bound-Key preview without assessment, release or debrief writeback",
           "validation": "CLI --disable-instructor-writeback leaves default writeback behavior unchanged but, when selected, creates no instructor assessment/release/debrief stores and returns 503 from their GET/POST routes. Final independent code review SHA-256 698e8a6f89093f2cdb488b1c40c9b81538a1f3bcc3a3da73c840440f056760b8 and exact paired A/B disposable route QA SHA-256 ae18053f77770293bab8cdf3372cacca6ec31f53935fb7baacb8689d327480c1 verify bound instructor comparison 200, learner and other real engagement denial 403, false writeback capabilities and no store directories. Nineteen focused tests, Ruff and diff check passed.",
           "acceptance": "Private TestClient preview only, with no actual service mount, learner Key release, assessment/grade, task credit, professional calibration or owner acceptance. Disabled routes remain mounted but return 503 by the accepted local API contract."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Private integrated six-check Key successor bound to a separate same-source A/B clone",
+          "validation": "Independent bind postreview SHA-256 9255752378b8b4d24eb37a4ce4f4e28ed1196bab99fdbb210170764032a896b6 verified current A/B engagements and native B2 source IDs, instructor comparison, learner 403 isolation and revoked instructor grants; active P1 remained unbound.",
+          "acceptance": "Private technical expectations only; no learner release, grade, task credit, full paired-mode calibration or qualified owner/professional acceptance."
         }
       ]
     },

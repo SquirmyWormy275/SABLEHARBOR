@@ -457,8 +457,9 @@ passed [independent static review](../../../../enterprise/generated/audit-suite/
 (SHA-256 `8dd2d89db34b28f28a272f9865d594cf40bb989efd13c6363374c1ab4614ec97`).
 It requires a fresh zero-evidence A/B pair with all 13 source components
 bound before activation, ordinary recollection of B2 originals, replay of
-BCM/CFG work, and then additional native collection. The first two execution
-phases below are complete; old Key and audit artifacts cannot be transplanted.
+BCM/CFG work, and then additional native collection. P1 through P4 and the
+first P5 collection tranche below have run; old Key and audit artifacts cannot
+be transplanted.
 Full-period population, qualified review and owner acceptance remain open.
 
 The new [integrated A/B bootstrap](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-full-portfolio-bootstrap-run-v1/RESULT.json)
@@ -494,15 +495,81 @@ unchanged. All 818 tasks remain `NOT_STARTED`/`NOT_RUN`; P3 investigation,
 new instructor Key, BCM/CFG replay, other control collection, full-period
 procedures and professional acceptance remain open.
 
+The integrated pair's [P3 learner investigation](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p3-b2-learner-investigation-run-v1/RESULT.json)
+passed [independent actual postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p3-b2-learner-independent-postreview-v1/REVIEW.json)
+(SHA-256 `5b8afc3a876e75e3409f478b80a4d21d3a88e0ae11ca4e9f12bbe53d96475471`).
+The same engagements advanced A78→90/B51→63 through eight recorded inspections
+and four provisional population, selection, workpaper and sample commands per
+side. All 63 B2 source joins remained exact; neither task credit nor Key access
+was added. The [post-P3 whole-state checkpoint](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p3-whole-state-checkpoint-independent-postreview-v1/REVIEW.json)
+(SHA-256 `57d1f0fbcdb1f772614ffdf415afd58aedfed488ad7cf3ebb0d4097e5bb8d3d9`)
+verified 252 copied files, 54 SQLite databases and zero Btrfs shared extents.
+
+An instructor-only [six-check Key successor bind](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p3-private-key-bind-run-v1/RESULT.json)
+passed [independent postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p3-private-key-bind-independent-postreview-v1/REVIEW.json)
+(SHA-256 `9255752378b8b4d24eb37a4ce4f4e28ed1196bab99fdbb210170764032a896b6`)
+on a separate ordinary-byte private clone. It references the current A/B source
+IDs, retains A31/B32 B2 source links and denies learner access. The active
+engagements remain unbound; the six technical expectations are not validated
+audit conclusions, a release or a grade.
+
+The active pair's [P4 BCM run](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p4-bcm-ordinary-run-v2/RESULT.json)
+passed [independent actual postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p4-bcm-ordinary-actual-independent-postreview-v2/REVIEW.json)
+(SHA-256 `55eb6211a51073117e068beb3b72ffd343d2fc73584ea308d5fe4ae53caef8a3`).
+Six ordinary commands per side advanced A90→96/B63→69 with separate B1/B2/B3
+and R1/R2 population, selection, workpaper and sample records. Messy B's first
+B2 failure ticket stays OPEN and B3 has an explicit missing-operation monitor;
+R1 remains older than current bytes while R2 matches. The [P4 CFG-002 local
+before/after run](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p4-cfg-ordinary-run-v1/RESULT.json)
+passed [independent actual postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p4-cfg-ordinary-actual-independent-postreview-v1/REVIEW.json)
+(SHA-256 `b1e5d2df1ec8f8440a3fa00bafec89372bfd9037cae9ba0d8afbf47392be3875`),
+advancing A96→100/B69→73 through four commands per side. It preserves the
+pre-APPLY 30-versus-40 timeout discrepancy and verifies the post-APPLY local
+40-second value, without asserting enterprise-wide change effectiveness. The
+[post-CFG whole-state checkpoint](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-cfg-whole-state-checkpoint-independent-postreview-v1/REVIEW.json)
+(SHA-256 `52c2cd9134bb6ce7aba07749796aedc5d7cd156e1260a8d2a5cdfc96326f06e6`)
+verified 252 copied files, all 54 databases and zero Btrfs shared extents.
+
+The [P5 native-coverage analysis](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5-native-collection-analysis-plan-v1/PLAN.md)
+passed [independent review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5-native-collection-independent-analysis-review-v1/REVIEW.json)
+(SHA-256 `0722f78cae3c3f87d95e425bba941ebbbcff9b2db01aa24f80f44630a2712d57`).
+It maps 18 controls and 84 still-uncredited tasks per side to 144/146 existing
+native versions across IAM/nonhuman, logging/incident, provider/training and
+risk/configuration tranches. The first [P5A IAM/nonhuman collection](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5a-iam-nonhuman-run-v1/RESULT.json)
+passed [independent actual postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5a-iam-nonhuman-independent-postreview-v1/REVIEW.json)
+(SHA-256 `ce8724d33f2cbedbd08294b16bbf7760b403f435456b019607da1ba5bb26981c`).
+The same active pair advanced A100→175/B73→147 through A75/B74 ordinary
+commands, six new PBC groups per side and 125 request-linked native collection
+receipts. Every receipt joins current native bytes and retained artifact bytes;
+content-addressed storage adds 120 files because some distinct receipts have
+identical content hashes. All 42 temporary grants were revoked. The A/B
+engagements still have 409 `NOT_STARTED`/`NOT_RUN` tasks each, no bound Key,
+grade or release. B IAM
+negative chronology, P5B–D, broader source discovery, full-year procedures and
+qualified acceptance remain open. Six PRIV Q4 source events dated 2028-01-01
+are post-period references, not proof of 2027 operation.
+
+The [post-P5A whole-state checkpoint](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p5a-whole-state-checkpoint-run-v2/CHECKPOINT-RESULT.json)
+passed [independent postcopy review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p5a-whole-state-checkpoint-independent-postreview-v2/REVIEW.json)
+(SHA-256 `17ce40131cdf9f4052a4846e9303df2e54d94dfc751d4964e96254b924a4fca0`):
+all 372 active files match the ordinary-byte snapshot, all 54 SQLite databases
+pass integrity checks, and Btrfs reports zero shared extents. A failed first
+preflight found a transient zero-byte wrong-path SQLite file created during a
+read-only inspection. Its [failure receipt](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p5a-whole-state-checkpoint-rehearsal-preflight-failure-v1/RECEIPT.json)
+was preserved; [independent root reconciliation](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5a-post-incident-root-reconciliation-v1/RECEIPT.json)
+verified the reviewed 372-file inventory and A175/B147 tips after the exact
+stray file was removed. The successful v2 run changed no active workroom,
+protected source, private Key or task conclusion.
+
 The queue's job `state`, acceptance criteria and attributed checkpoints must be read
 together. Historical `*_scope_update` entries record what was authorized at the time;
 their `QUEUED_NOT_STARTED` labels do not reset later job progress. Conversely, a
 working command, passing fixture or earlier paired journey does not close a broader
 acceptance criterion. The counts above describe named historical checkpoints, not a
 live query. The latest independently reviewed v4 packet pins A1939/B2066 and
-authorized original-root company journal snapshots. The fresh paired B2 and
-selected-period close engagements above are separate private outputs, not
-additional indexed audit rows in that packet.
+authorized original-root company journal snapshots. The integrated A175/B147
+pair, private Key clone and selected-period close engagements above are separate
+private outputs, not additional indexed audit rows in that packet.
 
 ## Supported simulated conclusions
 
