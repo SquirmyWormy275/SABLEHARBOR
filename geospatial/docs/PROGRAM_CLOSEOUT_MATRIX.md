@@ -60,8 +60,8 @@ Historical requirement headings are identifiers, not authority for superseded na
 | 43 | THIRD EXECUTION PHASE | IMPLEMENTED_AT_ACCEPTED_PRECISION | Accepted current railway/industrial estate and chronology integrated; survey/design extensions remain #107. |
 | 44 | FOURTH EXECUTION PHASE | IMPLEMENTED_AT_ACCEPTED_PRECISION | Enterprise histories and bounded site precision integrated across catalog, docket and map products. |
 | 45 | FIFTH EXECUTION PHASE | IMPLEMENTED_AT_ACCEPTED_PRECISION | Offline historical and source research readers implemented with executable browser qualification. |
-| 46 | RELEASE PACKAGE | DELIVERY_QUALIFICATION_REQUIRED | Version 1.4 adds final decisions and source review. Clean integration, native/browser tests, sealed release and publication receipts are required; #107 engineering prevents claiming full-program completion. |
-| 47 | DEFINITION OF DONE | PROGRAM_REMAINDER | Version 1.4 adds final decisions and source review. Clean integration, native/browser tests, sealed release and publication receipts are required; #107 engineering prevents claiming full-program completion. |
+| 46 | RELEASE PACKAGE | DELIVERED_AT_ACCEPTED_PRECISION | Geographic evidence 1.4.0 is sealed and published with integration, native/browser validation and acceptance receipts. The September 28 source successor is a review increment, not a new complete geographic release. |
+| 47 | DEFINITION OF DONE | PROGRAM_REMAINDER | The published 1.4.0 package satisfies its stated scope; #107 detailed engineering and the explicitly bounded whole-program evidence remain before #108 can close. |
 | 48 | DO-NOT-DO LIST | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 49 | IMMEDIATE START INSTRUCTION | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 
