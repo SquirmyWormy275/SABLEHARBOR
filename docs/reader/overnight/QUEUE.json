@@ -662,6 +662,18 @@
           "scope": "Selected February 2027 BCM-002/003 ordinary population and procedure reconciliation in separate copied paired workrooms",
           "validation": "Independent actual-run review enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-bcm-ordinary-procedures-run-independent-review-v1/REVIEW.json SHA-256 f42dc13679d7cef34bda1ae7c25bbe27f71bc66dee80075554503c77fea0fc78 verified A90→96/B63→69 with six ordinary commands per side, provisional B1/B2/B3 declaration population and selection, distinct BCM-003 R1/R2 workpaper/sample, 20 native/collection-receipt/retained-byte source joins per branch, and unchanged original workrooms, native roots, bound Key and historical A1939/B2066 audits. Messy B has no B3 backup job; first B2 failed, retry completed and failure ticket remains OPEN. R1 matches an older selected backup while differing from current bytes; R2 matches current bytes.",
           "acceptance": "Both BCM-002/003 TOE tasks remain NOT_STARTED/NOT_RUN. This selected local slice does not establish full-year population completeness, control effectiveness, independent professional acceptance, task or grade credit."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Paired CFG-002 local before/after ordinary procedure on separate private copied workrooms",
+          "validation": "Independent actual postreview SHA-256 5b971fa1c14d20dee9f752ae7d2747695fafc4ec5664dcdf8e72f287fe6d7315 verified A96→100/B69→73, four ordinary commands per side, 13 exact native/receipt/retained-byte joins per side, pre-APPLY mismatch versus local approval and post-APPLY equality, unchanged original workrooms/native roots/Key, and no release or grade. Failed first rehearsal was preserved and independently classified FAIL under SHA-256 bc19edddfbdb699561fcf42cbb93912482db618c3084d8bbe3a04917afe2e8e5; new-only v3 runner passed rehearsal and actual gates.",
+          "acceptance": "All six CFG-002 tasks per branch remain NOT_STARTED/NOT_RUN. This one local data-only APPLY does not establish enterprise baseline coverage, continuous drift detection, full-year effectiveness, professional acceptance or task credit."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Current A100/B73 818-task source/action screen and native coverage gap routing",
+          "validation": "Independent task-screen review SHA-256 ac4420f96db4441b8e3ec5e7433d5db13bdf23eb54f91086c7e5f32cb243fb39 verified 409 tasks per branch, 31/32 exact native-to-retained joins, 36 source-associated tasks and three with task-specific procedure links each. Independent native-coverage review SHA-256 f09117919331a3a2ca36963f4d9ad9135461af47f9fd9a6db00c38a0d235e1f4 routes 373 unmatched tasks per branch: 84 to existing portfolio native references, four to separate local SEC006, 283 to further source discovery/conditional period-coherent activity, and two to owner scope facts.",
+          "acceptance": "Source association is not sufficiency; all 409 tasks per branch remain NOT_STARTED/NOT_RUN. Selected-workroom absence is not proof of company-wide absence or inapplicability."
         }
       ]
     },
@@ -725,6 +737,18 @@
           "scope": "Reviewed disposable rehearsal followed by separate actual private paired BCM-002/003 ordinary-procedure run",
           "validation": "Sealed v2 runner and independent rehearsal gate preceded actual independent postreview enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-bcm-ordinary-procedures-run-independent-review-v1/REVIEW.json SHA-256 f42dc13679d7cef34bda1ae7c25bbe27f71bc66dee80075554503c77fea0fc78. Byte-copied A/B workrooms advanced A90→96/B63→69 through six ordinary commands each: B1/B2/B3 population/selection, BCM-002 workpaper/sample, and distinct BCM-003 R1/R2 workpaper/sample. All 40 selected source joins and raw event/intent/result histories passed. B B3 remains absent, B B2 failure ticket OPEN, R1 older-checkpoint chronology explicit; original paired workrooms, native roots, Key and A1939/B2066 preserved.",
           "acceptance": "BCM-002/003 tasks remain NOT_STARTED/NOT_RUN; no Key release, assessment, grade, task credit, full-year or professional/control-effectiveness conclusion. The broader AQ-07 full-scope acceptance remains IN_PROGRESS."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Reviewed actual paired CFG-002 local procedure after preserved failed rehearsal",
+          "validation": "V3 gated actual run RESULT SHA-256 248cd4df9d095f293952c8b078fb95c7862be8e9501bf986ad7e6d3a775e1dc6 and independent postreview SHA-256 5b971fa1c14d20dee9f752ae7d2747695fafc4ec5664dcdf8e72f287fe6d7315 verify copied A100/B73, four commands and 13 exact company-source joins per branch; v2 failed rehearsal remains preserved and cannot unlock actual mode.",
+          "acceptance": "A bounded local observation only. No task/grade/release credit, enterprise-year conclusion or qualified audit acceptance."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Integrated 13-component full-portfolio fresh-pair execution design",
+          "validation": "The first nine-component batch was independently CHANGES_REQUIRED SHA-256 5109c4bd936a54e0a38a74adb425f98d9fe274e7d9a7e850c796135d6102953d because the frozen binding omitted four B2/BCM/CFG components. Corrected integrated plan v3 independent static PASS SHA-256 8dd2d89db34b28f28a272f9865d594cf40bb989efd13c6363374c1ab4614ec97 pins 13 components per branch, 175/178 exact native versions, ordinary B2 recollection and BCM/CFG replay, then 18-control collection. Current A100/B73 all-task screen independent PASS SHA-256 ac4420f96db4441b8e3ec5e7433d5db13bdf23eb54f91086c7e5f32cb243fb39.",
+          "acceptance": "Design only; new integrated engagements, collection, procedures, independent postreview, full-period coverage and professional/owner acceptance are not yet complete. Historical A100/B73 remains a bounded four-component technical pair."
         }
       ]
     },
