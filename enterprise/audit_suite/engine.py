@@ -53,6 +53,7 @@ COLLECTIONS = (
     "selections",
     "sample_executions",
     "artifact_inspections",
+    "task_gaps",
     "source_impact_dispositions",
     "calendar",
     "findings",
@@ -279,6 +280,9 @@ class Engine:
         projected["artifacts"] = [
             m for m in projected.get("artifacts", []) if m.get("audience", "LEARNER") == "LEARNER"
         ]
+        from .task_gap import project as project_task_gaps
+
+        projected["task_gaps"] = project_task_gaps(projected)
         return projected
 
     def provider_status(self) -> dict:
@@ -518,6 +522,9 @@ class Engine:
             for row in state.get("artifact_inspections", [])
             if row.get("artifact_id") in artifact_ids
         ]
+        from .task_gap import project as project_task_gaps
+
+        state["task_gaps"] = project_task_gaps(state)
         for request in state.get("requests", []):
             for key in (
                 "plan_unit",
@@ -690,6 +697,10 @@ class Engine:
             from .source_impact_disposition import handle as handle_disposition
 
             handle_disposition(self, state, p, stamped)
+        elif kind == "task.gap.record":
+            from .task_gap import handle as handle_task_gap
+
+            handle_task_gap(self, state, p, stamped)
         elif kind == "artifact.inspection.record":
             from .artifact_inspection import handle as handle_inspection
 
