@@ -655,6 +655,18 @@ PHI, and supplies no 2027 operating or audit task credit. Its
 [gap packet](../../../../enterprise/audit_suite/DATA_FLOW_GAP_DECISION_PACKET.md)
 identifies the service-owner, legal, retention and period facts still needed.
 
+The [provider contract draft gate](../../../../enterprise/audit_suite/CONTRACT_DRAFT_EXERCISE.md)
+adds a separate prospective company-native exercise for the selected planned
+Reno and Boise boundaries. Its [isolated independent review](../../../../enterprise/generated/audit-suite/company-contract-draft-2026-09-29/independent-review-v1/REVIEW.json)
+(SHA-256 `780439abadfb5d985279f53717503a12027c563c6cad03d55842eeaa9ed89a9d`)
+verified 12 exact native versions, Clean HOLD, Messy QUARANTINED and one
+continuing exception across five event rows. The approved code passed focused
+CompanyStore tests and Ruff after integration; the private run was copied by
+ordinary bytes with exact hashes, separate inodes and zero shared Btrfs
+extents. The exercise has no signed agreement, legal approval, external
+communication, PHI/BA operation, deployed provider or audit credit; its 2027
+events are future simulation relative to the actual 2026 insertion time.
+
 The active pair's 13-component company-source binding is frozen at activation.
 New native systems needed for the remaining controls cannot be silently added
 to that engagement. A [read-only final-registry gate](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq07-final-source-complete-registry-readonly-plan-v1/PLAN.md)
