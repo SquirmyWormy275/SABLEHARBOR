@@ -231,6 +231,22 @@ files remained unchanged. No source was mounted or operated by the gap commands,
 and no HIPAA applicability or procedure credit was inferred. The indexed packet
 has not yet been refreshed to these later revisions.
 
+The selected 2027 due-occurrence reconciliation then distinguished three
+genuine B-side omissions. The B09 backup and nonhuman Q4 review already appear
+in B's bounded `IN_PROGRESS/FAIL` work and were not duplicated. A separate
+IAM007 Q4 review slot for the selected `access-review-continuation-b` branch
+was absent; the collected Q4 successor belongs to another branch. After an
+[independently reviewed, backed-up B-only command](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/selected-2027-iam007-q4-b-execution-v1/RECEIPT.json),
+B advanced 2065→2066 with one `OPEN/MISSING_OPERATION` task gap. The
+[independent postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/selected-2027-iam007-q4-b-post-execution-independent-v1/REVIEW.json)
+(SHA-256 `1252ab39a0389c6c0ae78c05209eabb32fcceacc241ed6ab7936712443913afa`)
+verified the single event, unchanged `IN_PROGRESS/FAIL` task, intact non-reflink
+backup, 721 retained artifacts and 237 company-source pins; A remained at
+1939. This is one selected fictional branch's missing operation, not an
+enterprise Q4 effectiveness conclusion or additional audit credit. The current
+original workrooms are A1939/B2066; the latest indexed packet still predates
+both gap additions.
+
 Two user-interface corrections are committed: the offline private reviewer ZIP
 now links its included native files (`83ed1467`), and the active workspace rail
 exposes `aria-current="page"` through reviewer and learner deep links, keyboard
