@@ -1,3 +1,4 @@
+import html
 import io
 import json
 import zipfile
@@ -38,8 +39,14 @@ def test_private_export_preserves_bytes_and_excludes_unrelated_files(tmp_path):
         assert archive.read(f"files/{manifest['id']}/original.csv") == original
         assert json.loads(archive.read("private/world.json"))["variants"]
         assert "private/credentials.json" not in archive.namelist()
-        assert "&lt;Training&gt;" in archive.read("index.html").decode()
-        assert json.loads(archive.read("reviewer-appendix.json"))["overall_grade"] == "NOT_PROVIDED"
+        index = archive.read("index.html").decode()
+        appendix = json.loads(archive.read("reviewer-appendix.json"))
+        assert "&lt;Training&gt;" in index
+        assert f"engagement {state['id']}, revision {appendix['revision']}" in index
+        assert appendix["revision"] == state["revision"]
+        assert appendix["cutoff"] in html.unescape(index)
+        assert "Later changes are not included" in index
+        assert appendix["overall_grade"] == "NOT_PROVIDED"
         assert len(json.loads(archive.read("history.json"))) == 1
     learner = store.provision("Learner", ["learner"])
     other = store.create(learner["id"], {"title": "Other", "scope": {}, "artifacts": []}, "new")
