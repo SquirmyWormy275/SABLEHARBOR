@@ -1,0 +1,83 @@
+{
+  "record_id": "SH-PORTAL-IAM007-PAYROLL-RELEASE-Q1-2027-v0.1",
+  "version": "0.1.0",
+  "state": "PROVISIONAL_NEWLY_AUTHORED_FICTIONAL_CASE",
+  "authored_at": "2026-09-29T05:44:16Z",
+  "available_at": "2026-09-29T05:48:37Z",
+  "repository_acceptance_at": null,
+  "scenario": "FICTIONAL_2027_ENGAGEMENT_COMMON_BASELINE",
+  "fact_status": "MODELED_FUTURE_CASE_EVENTS_NOT_2026_ACTUAL",
+  "access_scope": "PUBLIC_SYNTHETIC",
+  "fictional_completion_authority": "Owner's September 13 billing adoption delegates reasonable missing fictional accounting/legal/company details consistent with canon; this prospective case detail remains PROVISIONAL until repository acceptance and claims no real grant or review.",
+  "source_release": "sable-harbor-company-edition-v1.2.0",
+  "source_commit": "ddca0d93b16c743e90ce5ac3f9cc74fb74ec6d1f",
+  "source_records_sha256": "5dd78a2bc6c6a08f333a7a6a0d09f7a310e3f2bd0fe027926c6b120a7b4a795e",
+  "source_receipt_sha256": "bc0b66500d682c1ea1705601bc1fc1b45e1c6e166d3d28b308df9c729c53767e",
+  "legal_operator": "SHI",
+  "unit": "ess",
+  "control_id": "SH-IAM-007",
+  "scope": "Two fictional ESS payroll-batch preparation/release role assignments on the SH-ESS-PAYROLL-RELEASE authorization register. This is not the whole payroll application, all company accounts, or the 701-person candidate census.",
+  "service_id": "SH-ESS-PAYROLL-RELEASE",
+  "source_function": "Accepted August 2026 synthetic payroll batch approvals assign the same distinct preparer and reviewer for all ten legal-employer/date batches; 2027 role grants and service register are newly authored scenario facts, not recovered IAM records.",
+  "august_source_approval_count": 10,
+  "prior_period_bridge": {
+    "known_exit_event_id": "SH-HR-2026-09-01",
+    "known_exit_is_in_selected_role_scope": false,
+    "september_december_complete_company_jml": false,
+    "september_december_selected_role_continuity": "UNKNOWN; newly authored 2027-01-01 grants establish this case scope without asserting uninterrupted prior access",
+    "unrepresented_jml_count": null
+  },
+  "period": {
+    "start": "2027-01-01T00:00:00Z",
+    "end_exclusive": "2027-04-01T00:00:00Z",
+    "time_basis": "UTC synthetic case calendar"
+  },
+  "newly_authored_role_grants": [
+    {
+      "event_id": "SH-IAM007-Q1-2027-GRANT-PREPARE",
+      "effective_at": "2027-01-01T00:00:00Z",
+      "person_id": "SH-EMP-ESS-0001",
+      "declared_company_principal_id": "SH-IAM-SH-EMP-ESS-0001",
+      "service_account_id": "SH-ESS-PAYROLL-RELEASE-PREPARE-0001",
+      "right": "PREPARE_PAYROLL_BATCH",
+      "privileged_for_scope": true,
+      "source_approval_field": "preparer_id",
+      "event_status": "MODELED_CASE_GRANT_NOT_REAL_DEPLOYMENT"
+    },
+    {
+      "event_id": "SH-IAM007-Q1-2027-GRANT-APPROVE",
+      "effective_at": "2027-01-01T00:00:00Z",
+      "person_id": "SH-EMP-ESS-0002",
+      "declared_company_principal_id": "SH-IAM-SH-EMP-ESS-0002",
+      "service_account_id": "SH-ESS-PAYROLL-RELEASE-APPROVE-0002",
+      "right": "APPROVE_PAYROLL_BATCH",
+      "privileged_for_scope": true,
+      "source_approval_field": "reviewer_id",
+      "event_status": "MODELED_CASE_GRANT_NOT_REAL_DEPLOYMENT"
+    }
+  ],
+  "other_selected_scope_q1_jml_events": [],
+  "selected_scope_event_population": "NEWLY_AUTHORED_TWO_GRANTS_AND_NO_OTHER_SELECTED_ROLE_CHANGE_SCENARIO_ASSUMPTION",
+  "other_services_and_entitlements": "UNESTABLISHED_OUTSIDE_DECLARED_FUNCTION",
+  "review_requirement": {
+    "campaign_id": "SH-IAM007-SH-ESS-PAYROLL-RELEASE-2027-Q1",
+    "cadence": "QUARTERLY_FOR_SELECTED_PRIVILEGED_ROLE_ACCOUNTS",
+    "source_status": "NEWLY_AUTHORED_PROVISIONAL_COMPANY_CASE_RULE",
+    "due_at": "2027-03-31T23:59:59Z",
+    "expected_decision_unit": "one scoped role-account decision",
+    "independent_reviewer_required": true,
+    "owner_decision_source_ids": [],
+    "removal_verification_source_ids": [],
+    "exception_source_ids": []
+  },
+  "case_branches": {
+    "A": {"common_source": true, "company_delta_state": "NOT_AUTHORED"},
+    "B": {"common_source": true, "company_delta_state": "NOT_AUTHORED"}
+  },
+  "limits": [
+    "No real or in-universe completed 2027 grants or access review are claimed as of authoring.",
+    "This case source is a narrowly authored 2027 scenario, not completed September 2026 operating evidence.",
+    "Application directory exports, other payroll system users, other services, and entire-company privileged rights remain outside this declared source scope.",
+    "A/B case-specific deltas and audit decisions require separate governed sources; this public common baseline does not reveal or decide them."
+  ]
+}

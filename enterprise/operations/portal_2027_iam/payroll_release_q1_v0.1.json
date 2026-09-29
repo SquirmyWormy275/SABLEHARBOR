@@ -1,0 +1,101 @@
+{
+  "accepted_august_approval_count": 10,
+  "accepted_august_approval_ids": [
+    "SH-PAYBATCH-ARU-202608-1",
+    "SH-PAYBATCH-ARU-202608-2",
+    "SH-PAYBATCH-BST-202608-1",
+    "SH-PAYBATCH-BST-202608-2",
+    "SH-PAYBATCH-PS-202608-1",
+    "SH-PAYBATCH-PS-202608-2",
+    "SH-PAYBATCH-RWH-202608-1",
+    "SH-PAYBATCH-RWH-202608-2",
+    "SH-PAYBATCH-SHI-202608-1",
+    "SH-PAYBATCH-SHI-202608-2"
+  ],
+  "accepted_august_source_commit": "ddca0d93b16c743e90ce5ac3f9cc74fb74ec6d1f",
+  "case_branches": {
+    "A": {
+      "common_source": true,
+      "company_delta_state": "NOT_AUTHORED"
+    },
+    "B": {
+      "common_source": true,
+      "company_delta_state": "NOT_AUTHORED"
+    }
+  },
+  "control_id": "SH-IAM-007",
+  "fact_status": "MODELED_FUTURE_CASE_EVENTS_NOT_2026_ACTUAL",
+  "fictional_completion_authority": "Owner's September 13 billing adoption delegates reasonable missing fictional accounting/legal/company details consistent with canon; this prospective case detail remains PROVISIONAL until repository acceptance and claims no real grant or review.",
+  "legal_operator": "SHI",
+  "limits": [
+    "No real or in-universe completed 2027 grants or access review are claimed as of authoring.",
+    "This case source is a narrowly authored 2027 scenario, not completed September 2026 operating evidence.",
+    "Application directory exports, other payroll system users, other services, and entire-company privileged rights remain outside this declared source scope.",
+    "A/B case-specific deltas and audit decisions require separate governed sources; this public common baseline does not reveal or decide them."
+  ],
+  "period": {
+    "end_exclusive": "2027-04-01T00:00:00Z",
+    "start": "2027-01-01T00:00:00Z",
+    "time_basis": "UTC synthetic case calendar"
+  },
+  "prior_period_bridge": {
+    "known_exit_event_id": "SH-HR-2026-09-01",
+    "known_exit_is_in_selected_role_scope": false,
+    "september_december_complete_company_jml": false,
+    "september_december_selected_role_continuity": "UNKNOWN; newly authored 2027-01-01 grants establish this case scope without asserting uninterrupted prior access",
+    "unrepresented_jml_count": null
+  },
+  "q1_review_schedule": {
+    "actual_q1_performance_conclusion": null,
+    "campaign_id": "SH-IAM007-SH-ESS-PAYROLL-RELEASE-2027-Q1",
+    "case_cutoff_without_successor_evidence": "TWO_DECISIONS_WOULD_LACK_SOURCE",
+    "due_at": "2027-03-31T23:59:59Z",
+    "due_state_at_authoring": "FUTURE_DUE_NOT_RUN",
+    "independent_reviewer_required": true,
+    "selected_privileged_role_accounts_due": 2,
+    "source_status": "NEWLY_AUTHORED_PROVISIONAL_COMPANY_CASE_RULE",
+    "supplied_owner_decision_sources": 0,
+    "supplied_removal_verification_sources": 0,
+    "unit": "one scoped role-account decision"
+  },
+  "q1_selected_scope_jml": {
+    "declared_2027_grant_count": 2,
+    "declared_other_change_count": 0,
+    "events": [
+      {
+        "declared_company_principal_id": "SH-IAM-SH-EMP-ESS-0001",
+        "effective_at": "2027-01-01T00:00:00Z",
+        "event_id": "SH-IAM007-Q1-2027-GRANT-PREPARE",
+        "event_status": "MODELED_CASE_GRANT_NOT_REAL_DEPLOYMENT",
+        "person_id": "SH-EMP-ESS-0001",
+        "privileged_for_scope": true,
+        "right": "PREPARE_PAYROLL_BATCH",
+        "service_account_id": "SH-ESS-PAYROLL-RELEASE-PREPARE-0001",
+        "source_approval_field": "preparer_id"
+      },
+      {
+        "declared_company_principal_id": "SH-IAM-SH-EMP-ESS-0002",
+        "effective_at": "2027-01-01T00:00:00Z",
+        "event_id": "SH-IAM007-Q1-2027-GRANT-APPROVE",
+        "event_status": "MODELED_CASE_GRANT_NOT_REAL_DEPLOYMENT",
+        "person_id": "SH-EMP-ESS-0002",
+        "privileged_for_scope": true,
+        "right": "APPROVE_PAYROLL_BATCH",
+        "service_account_id": "SH-ESS-PAYROLL-RELEASE-APPROVE-0002",
+        "source_approval_field": "reviewer_id"
+      }
+    ],
+    "source_state": "NEWLY_AUTHORED_TWO_GRANTS_AND_NO_OTHER_SELECTED_ROLE_CHANGE_SCENARIO_ASSUMPTION",
+    "universal_company_jml_count": null
+  },
+  "record_id": "SH-PORTAL-IAM007-PAYROLL-RELEASE-Q1-2027-LEDGER-v0.1",
+  "repository_acceptance_at": null,
+  "scenario": "FICTIONAL_2027_ENGAGEMENT_COMMON_BASELINE",
+  "scope": "Two fictional ESS payroll-batch preparation/release role assignments on the SH-ESS-PAYROLL-RELEASE authorization register. This is not the whole payroll application, all company accounts, or the 701-person candidate census.",
+  "service_id": "SH-ESS-PAYROLL-RELEASE",
+  "source_authored_at": "2026-09-29T05:44:16Z",
+  "source_available_at": "2026-09-29T05:48:37Z",
+  "source_record_id": "SH-PORTAL-IAM007-PAYROLL-RELEASE-Q1-2027-v0.1",
+  "source_state": "PROVISIONAL_NEWLY_AUTHORED_FICTIONAL_CASE",
+  "unit": "ess"
+}
