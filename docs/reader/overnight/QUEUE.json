@@ -496,6 +496,12 @@
           "scope": "Selected local 2027 company-period source reconciliation; private register v3 manifest SHA-256 fac3fb11a124d2f766e84eee24c2727c344e718a24269a47b3701f89e4856b1f",
           "validation": "Independent review SHA-256 faf8e149a88490f4babb70c0cd4bb79e0cf1975fb58f6d6bf2c512c2b435d89e verifies 36 declared due, 33 observed, three missing (IAM007 Q4, backup B09, nonhuman B Q4), and 28 separate 2028 slots excluded. Native originals and source cutoffs are branch-specific.",
           "limits": "Read-only reconciliation only; no new company operation, coherent company-year denominator, accepted policy frequency or control effectiveness."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Source-backed adjudication of the three missing selected 2027 occurrences",
+          "validation": "Private gap receipt SHA-256 44c64cb2b9c87432132bc4f726e7f2166211946781eb51e77d05ba4bf8157dd9 checks declared Q4 IAM007 without a review, branch-B omitted B09 despite available September source, and branch-B Q4 nonhuman review absent from command/native history.",
+          "limits": "These remain actual missing local scenario events. No counterfactual completion was produced, and the selected register still cannot establish a coherent enterprise year or effectiveness."
         }
       ]
     },
@@ -566,6 +572,12 @@
           "scope": "Exact ordinary-collection join for the selected local 2027 due-occurrence register",
           "validation": "Independent review SHA-256 faf8e149a88490f4babb70c0cd4bb79e0cf1975fb58f6d6bf2c512c2b435d89e verifies all 33 observed slots against 35 exact native occurrence records, one ordinary A1938/B2064 collected artifact per selected record, and retained artifact SHA/bytes.",
           "acceptance": "The three missing slots remain missing; selected record/collection identity does not establish population completeness, period coherence, substantive sufficiency or professional acceptance. The verified packet remains frozen to prior queue SHA-256 85998a2294336adacb47028a9f84ae28918a17a97a91ac9342f353278c019743 at HEAD 6a5a2a517d9b3ca54462121b8d8d83617de1d322."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Selected SH-POL-003 addressable-measure task source sufficiency",
+          "validation": "Independent selected-original content review SHA-256 9e4f0bf89690dac8a5259617c08f95b01ffbc705846c6a87613477cea8fd2246 confirms the five A/B route-hinted retained files comprise a generic local procedure and one EXC-01 exception package; each workbook and the CSV has one data row. Read-only authorized-portfolio discovery SHA-256 812f6df66b4b7829234e395ec4f288df235615e0d79fe36a6dec7fb36f4ebb0b reconciles 732/792 native versions to exact collected artifacts and finds no 22-entry register.",
+          "acceptance": "The exact HIPAA addressable task remains NOT_STARTED/NOT_RUN. This is bounded to current authorized sources at the selected as-of; future/unregistered sources, applicability and professional sufficiency remain open."
         }
       ]
     },
@@ -1009,6 +1021,12 @@
           "scope": "Compiled-App keyboard focus and in-form errors",
           "validation": "Modal Tab/Shift+Tab/closed-details/focusreturn and in-form409 retention passed; representative focuscontrast4.05:1.",
           "acceptance": "Scripted representative checks, not complete accessibility audit or human acceptance."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Standalone reviewer ZIP native-artifact navigation",
+          "validation": "Commit 83ed1467 links exact included files from the offline index, including URL-special filenames. Focused export tests, frontend suite/build and desktop/narrow browser checks passed; private receipt SHA-256 8547a710b73e2053201e03e0f3751f7ff72d81791af09304bbeb32d388bf12be.",
+          "acceptance": "Engineering export-readability correction only; withheld files remain excluded, and actual reviewer/owner visual acceptance is unrecorded."
         }
       ]
     },
@@ -1051,6 +1069,12 @@
           "scope": "One paired company-operation, audit, review, context and protected debrief journey",
           "validation": "36 scripted audit commands,12 native operations and58 separately measured browser actions with70responses; six additional protected-route denials. Async saved-view focus defect fixed and both real-backend regressions pass.",
           "acceptance": "Bounded technical exercise. Exact prior populated-workroom evidence reused; actual owner usability acceptance remains separate."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Programmatic current-location cue across record deep links and browser navigation",
+          "validation": "Commit de7c515b exposes aria-current on the active workspace section; reviewer and learner deep-link, keyboard route-change and browser-history regressions passed with 256 frontend tests/build and the desktop/narrow browser suite. Private receipt SHA-256 eb0f7210a2f5343a7784652c5dd8bbe56aed5b5d0c309951f11d4e6fae544a90.",
+          "acceptance": "Bounded scripted accessibility check only; broader usability evaluation and owner acceptance remain open."
         }
       ]
     },
