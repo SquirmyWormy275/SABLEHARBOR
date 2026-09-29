@@ -31,7 +31,9 @@ def test_candidate_reproduces_without_promoting_accepted_unknowns() -> None:
     assert build.digest(build.HERE / "report.json") == report_sha
 
 
-def test_out_of_range_or_current_rights_fail(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+def test_out_of_range_or_current_rights_fail(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
     source = json.loads((build.HERE / "source.json").read_text())
     source["hypothesis"]["surviving_1954_centerline_lon_lat"][-1] = [-108.06, 41.57]
     source["hypothesis"]["fictional_west_service_point_lon_lat"] = [-108.06, 41.57]

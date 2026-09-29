@@ -27,9 +27,9 @@ def write(path: Path, value: object) -> None:
 
 
 def geodesic_miles(coords: list[list[float]]) -> float:
-    return sum(
-        GEOD.inv(*a, *b)[2] for a, b in zip(coords, coords[1:], strict=False)
-    ) / METRES_PER_MILE
+    return (
+        sum(GEOD.inv(*a, *b)[2] for a, b in zip(coords, coords[1:], strict=False)) / METRES_PER_MILE
+    )
 
 
 def build() -> dict:
@@ -45,11 +45,17 @@ def build() -> dict:
     if (
         epochs["1898"]["route_miles"] is not None
         or epochs["1954"]["route_miles"] is not None
-        or [epochs["1954"]["surviving_route_miles_low"], epochs["1954"]["surviving_route_miles_high"]]
+        or [
+            epochs["1954"]["surviving_route_miles_low"],
+            epochs["1954"]["surviving_route_miles_high"],
+        ]
         != source["accepted_history_preserved"]["1954_surviving_miles_interval"]
-        or epochs["1968"]["effective_date"] != source["accepted_history_preserved"]["1968_main_completion"]
-        or epochs["1972"]["effective_date"] != source["accepted_history_preserved"]["1972_east_branch_completion"]
-        or epochs["1986"]["effective_date"] != source["accepted_history_preserved"]["1986_mineral_branch_completion"]
+        or epochs["1968"]["effective_date"]
+        != source["accepted_history_preserved"]["1968_main_completion"]
+        or epochs["1972"]["effective_date"]
+        != source["accepted_history_preserved"]["1972_east_branch_completion"]
+        or epochs["1986"]["effective_date"]
+        != source["accepted_history_preserved"]["1986_mineral_branch_completion"]
     ):
         raise ValueError("Accepted historical chronology or uncertainty changed")
     candidate = source["hypothesis"]
@@ -57,7 +63,11 @@ def build() -> dict:
     abandoned = candidate["abandoned_mine_only_centerline_lon_lat"]
     if survivor[0] != accepted["geography"]["wamsutter_junction_lon_lat"]:
         raise ValueError("Later Wamsutter anchor changed")
-    if abandoned[0] not in survivor or survivor[-1] != candidate["fictional_west_service_point_lon_lat"] or abandoned[-1] != candidate["fictional_coal_works_lon_lat"]:
+    if (
+        abandoned[0] not in survivor
+        or survivor[-1] != candidate["fictional_west_service_point_lon_lat"]
+        or abandoned[-1] != candidate["fictional_coal_works_lon_lat"]
+    ):
         raise ValueError("Fictional historical topology is disconnected")
     survivor_miles = geodesic_miles(survivor)
     abandoned_miles = geodesic_miles(abandoned)
@@ -67,7 +77,9 @@ def build() -> dict:
         raise ValueError("Candidate pre-failure estate is not roughly 22 miles")
     if candidate["current_operating_right_or_asset"] or candidate["real_title_or_survey_evidence"]:
         raise ValueError("Historical hypothesis cannot grant current rights or survey authority")
-    counties = json.loads((ROOT / "industrial/source/geography/wyoming_counties.geojson").read_text())
+    counties = json.loads(
+        (ROOT / "industrial/source/geography/wyoming_counties.geojson").read_text()
+    )
     sweetwater = next(f for f in counties["features"] if f["properties"].get("GEOID") == "56037")
     county = shape(sweetwater["geometry"])
     if not all(county.covers(Point(*p)) for p in survivor + abandoned):
@@ -80,13 +92,18 @@ def build() -> dict:
         for f in modern["features"]
         if f["properties"].get("source_route_id") in {"BST-MAIN", "BST-EAST", "BST-MINERAL"}
     ]
-    old_lines = [transform(PROJECT.transform, LineString(coords)) for coords in (survivor, abandoned)]
-    overlap = sum(old.intersection(now.buffer(0.05)).length for old in old_lines for now in current_lines)
+    old_lines = [
+        transform(PROJECT.transform, LineString(coords)) for coords in (survivor, abandoned)
+    ]
+    overlap = sum(
+        old.intersection(now.buffer(0.05)).length for old in old_lines for now in current_lines
+    )
     if overlap > 10:
         raise ValueError("Historical candidate back-projects a modern active alignment")
     features = [
         {
-            "type": "Feature", "id": "HYP-BST-1954-SURVIVOR",
+            "type": "Feature",
+            "id": "HYP-BST-1954-SURVIVOR",
             "geometry": {"type": "LineString", "coordinates": survivor},
             "properties": {
                 "scenario_id": candidate["scenario_id"],
@@ -101,7 +118,8 @@ def build() -> dict:
             },
         },
         {
-            "type": "Feature", "id": "HYP-BST-MINE-ONLY-ABANDONED",
+            "type": "Feature",
+            "id": "HYP-BST-MINE-ONLY-ABANDONED",
             "geometry": {"type": "LineString", "coordinates": abandoned},
             "properties": {
                 "scenario_id": candidate["scenario_id"],
