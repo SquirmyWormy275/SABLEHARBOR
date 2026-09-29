@@ -1368,6 +1368,8 @@ export default function App() {
         e?.id,
         e?.permissions,
         e?.scope,
+        e?.company_source_binding,
+        e?.evidence_acquisition,
       ])}
     >
       <div className="app">

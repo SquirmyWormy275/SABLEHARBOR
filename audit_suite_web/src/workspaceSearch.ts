@@ -144,5 +144,7 @@ export function searchContext(e: Engagement, viewerId: string) {
     e.id,
     e.scope,
     [...(e.permissions ?? [])].sort(),
+    e.company_source_binding,
+    e.evidence_acquisition,
   ]);
 }

@@ -74,6 +74,31 @@ it("preserves independent list filters across refresh and returns copies", () =>
   expect(m.restore("controls").query).toBe("access");
   expect(m.restore("pbc").scrollTop).toBe(20);
 });
+it.each(["source", "acquisition"])(
+  "clears list filters on %s context switch while retaining ordinary revision navigation",
+  (change) => {
+    const m = createNavigationMemory(),
+      e = fixture();
+    e.company_source_binding = { company: "Sable Harbor", branch: "clean" };
+    e.evidence_acquisition = { mode: "company_source" };
+    m.activate(e, viewer);
+    m.save("controls", { query: "access", framework: "SOC2", scrollTop: 160 });
+    m.activate({ ...e, revision: 2 }, viewer);
+    expect(m.restore("controls").query).toBe("access");
+    const changed = {
+      ...e,
+      ...(change === "source"
+        ? { company_source_binding: { company: "Sable Harbor", branch: "messy" } }
+        : { evidence_acquisition: { mode: "retained_copy" } }),
+    };
+    m.activate(changed, viewer);
+    expect(m.restore("controls")).toEqual({
+      query: "",
+      framework: "all",
+      scrollTop: 0,
+    });
+  },
+);
 it.each(["engagement", "scope", "permissions", "viewer", "roles", "logout"])(
   "discards filters on %s change",
   (change) => {

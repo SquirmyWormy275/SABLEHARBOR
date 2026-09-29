@@ -121,6 +121,8 @@ export function createNavigationMemory() {
         e.id,
         [...(e.permissions ?? [])].sort(),
         e.scope,
+        e.company_source_binding,
+        e.evidence_acquisition,
       ]);
       if (next !== identity) {
         views.clear();

@@ -74,6 +74,23 @@ it("isolates engagement/viewer/scope/permissions and does not mutate input", () 
   b.permissions = [];
   expect(searchContext(a, "a")).not.toBe(searchContext(b, "a"));
 });
+it("resets submitted search on source or acquisition context switch but retains it across ordinary revisions", () => {
+  const original = fixture();
+  original.company_source_binding = { company: "Sable Harbor", branch: "clean" };
+  original.evidence_acquisition = { mode: "company_source" };
+  const retained = { ...original, revision: 2 };
+  const changedSource = {
+    ...original,
+    company_source_binding: { company: "Sable Harbor", branch: "messy" },
+  };
+  const changedAcquisition = {
+    ...original,
+    evidence_acquisition: { mode: "retained_copy" },
+  };
+  expect(searchContext(retained, "a")).toBe(searchContext(original, "a"));
+  expect(searchContext(changedSource, "a")).not.toBe(searchContext(original, "a"));
+  expect(searchContext(changedAcquisition, "a")).not.toBe(searchContext(original, "a"));
+});
 it("re-resolves rows and refuses deleted or duplicate record identities", () => {
   const e = fixture(),
     hit = searchWorkspace(e, "access")[0].hits[0];
