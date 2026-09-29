@@ -203,7 +203,7 @@ the complete-route result. Both proposed branches lengthen by a combined
 basis increases daily branch time from 1.500000 to 1.525737064 hours. With
 all three route lengths adopted, all 180 monthly train-hour cells change,
 but March 2027 downside conditional expanded capacity remains **1,008 cars**:
-four failure-speed trips require 24.008646 hours, above the 24-hour modeled
+four failure-speed trips require 24.008643 hours, above the 24-hour modeled
 ceiling. This distinction must be retained in downstream planning. The
 pinned industrial source and finance-release bytes remain unchanged here.
 Full adoption must reperform operating, finance, export and publication
