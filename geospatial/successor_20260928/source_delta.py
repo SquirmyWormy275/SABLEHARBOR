@@ -118,7 +118,7 @@ def build() -> dict:
             "targeted_domain": levels["TARGETED_DOMAIN_GEOGRAPHIC_REVIEW"],
             "review_levels": dict(sorted(levels.items())),
         },
-        "remaining": "Detailed rail/site engineering under issue 107 and any geography-relevant sources accepted after the pinned through revision require their own review; this ledger alone does not close issue 108.",
+        "remaining": "Detailed rail/site engineering under issue 107 remains. This ledger, its tests and navigation are derivatives of the pinned review, not new geographic source facts. Later independently accepted substantive geographic sources require review; this ledger alone does not close issue 108.",
     }
 
 

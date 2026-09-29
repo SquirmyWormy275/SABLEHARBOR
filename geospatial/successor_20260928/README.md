@@ -46,7 +46,9 @@ financial, legal, operational or full geographic semantic audit.
 This fixed review addresses the accepted canon-delta population and makes the
 later company-source boundary inspectable. It does **not** deliver detailed
 railway profiles/transitions, land/access instruments, construction/site design,
-or the remaining #107 engineering criterion. Geographic sources accepted after
-the pinned through revision require another delta review. Issue #108 therefore
+or the remaining #107 engineering criterion. This ledger, its tests and the
+matrix navigation are derivatives of the pinned review, not new geographic
+source facts. Later independently accepted substantive geographic sources
+require another delta review. Issue #108 therefore
 remains open under its whole-program acceptance criterion; this receipt is not
 a claim of completion or a new release package.
