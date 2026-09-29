@@ -40,7 +40,7 @@ jobs:
           sudo apparmor_parser -r /etc/apparmor.d/bwrap-userns-restrict
           command -v bwrap
           bwrap --unshare-all --die-with-parent --new-session --clearenv \
-            --ro-bind /usr /usr --symlink usr/lib /lib --symlink usr/lib /lib64 \
+            --ro-bind /usr /usr --ro-bind-try /lib /lib --ro-bind-try /lib64 /lib64 \
             --proc /proc --dev /dev --tmpfs /tmp /usr/bin/true
           uv run python -m pytest -q tests/audit_suite/test_parser_sandbox.py::test_actual_isolated_pdf_xlsx_and_decoded_text
       - run: uv run python -m pytest -p tools.ci.shard --durations=20 --junitxml=test-results.xml
