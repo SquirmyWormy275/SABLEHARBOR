@@ -181,6 +181,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [One-system source-record census](../../internal/development/audit-suite/AQ_SOURCE_RECORD_CENSUS_2026-09-14.md) — MD
 - [Company source and recovery review — September 14, 2026](../../internal/development/audit-suite/AQ_SOURCE_RECOVERY_REVIEW_2026-09-14.md) — MD
 - [Company-source audit readiness workflow queue](../../internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md) — MD
+- [Portal company-rights producer handoff](../../internal/development/audit-suite/COMPANY_RIGHTS_PRODUCER_HANDOFF.md) — MD
 - [Company-source implementation checkpoint](../../internal/development/audit-suite/COMPANY_SOURCE_IMPLEMENTATION.md) — MD
 - [Intelligent contextual workspace](../../internal/development/audit-suite/CONTEXTUAL_WORKSPACE_WORKFLOW.md) — MD
 - [Audit-suite contribution and state formats](../../internal/development/audit-suite/CONTRIBUTING_AND_STATE_FORMATS.md) — MD
