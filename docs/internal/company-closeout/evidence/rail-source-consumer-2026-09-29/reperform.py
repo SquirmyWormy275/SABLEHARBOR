@@ -42,6 +42,37 @@ def changed_paths(before: object, after: object, prefix: str = "") -> list[str]:
     return [prefix] if before != after else []
 
 
+def compare_rows(before: list[dict], after: list[dict]) -> dict:
+    if len(before) != len(after) or len(before) != 180:
+        raise ValueError("Unexpected planning population")
+    changes = []
+    for left, right in zip(before, after, strict=True):
+        if (left["scenario"], left["period"]) != (right["scenario"], right["period"]):
+            raise ValueError("Scenario-period drift")
+        paths = changed_paths(left, right)
+        if paths:
+            changes.append(
+                {
+                    "scenario": left["scenario"],
+                    "period": left["period"],
+                    "changed_paths": paths,
+                    "conditional_capacity_before_cars": left["capacity"]["conditional_total_rail_capacity_cars"],
+                    "conditional_capacity_after_cars": right["capacity"]["conditional_total_rail_capacity_cars"],
+                }
+            )
+    return {
+        "train_hours_changed_months": sum(
+            ".capacity.rail.train_hours_daily" in row["changed_paths"] for row in changes
+        ),
+        "only_train_hours_changed_months": sum(
+            row["changed_paths"] == [".capacity.rail.train_hours_daily"] for row in changes
+        ),
+        "other_changed_months": [
+            row for row in changes if row["changed_paths"] != [".capacity.rail.train_hours_daily"]
+        ],
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -60,28 +91,42 @@ def main() -> None:
         raise ValueError("Candidate does not retain 40 route-miles")
 
     source = load_source()
-    before_main = source["rail"]["mainline_miles"]
-    successor = copy.deepcopy(source)
-    successor["rail"]["mainline_miles"] = routes["BST-MAIN"]
+    operations = json.loads((ROOT / "industrial/source/operations.json").read_text())
+    branch_basis = operations["capacity_model"]["daily_branch_basis"]
+    if "15 mph" not in branch_basis:
+        raise ValueError("Accepted branch-speed basis changed")
+    branch_speed_mph = 15
+    original_branch_miles = sum(r["miles"] for r in operations["geography"]["branches"])
+    candidate_branch_miles = routes["BST-EAST"] + routes["BST-MINERAL"]
+    switching_hours = (
+        source["rail"]["branch_hours_daily"]
+        - 2 * original_branch_miles / branch_speed_mph
+    )
+    if abs(switching_hours - 0.613130235148) > 1e-9:
+        raise ValueError("Accepted branch switching basis changed")
+    mainline_only = copy.deepcopy(source)
+    mainline_only["rail"]["mainline_miles"] = routes["BST-MAIN"]
+    full_network = copy.deepcopy(mainline_only)
+    full_network["rail"]["branch_hours_daily"] = (
+        switching_hours + 2 * candidate_branch_miles / branch_speed_mph
+    )
     before = calculate(source)
-    after = calculate(successor)
-    if len(before) != len(after) or len(before) != 180:
-        raise ValueError("Unexpected planning population")
-    changes = []
-    for left, right in zip(before, after, strict=True):
-        if (left["scenario"], left["period"]) != (right["scenario"], right["period"]):
-            raise ValueError("Scenario-period drift")
-        paths = changed_paths(left, right)
-        if paths:
-            changes.append(
-                {
-                    "scenario": left["scenario"],
-                    "period": left["period"],
-                    "changed_paths": paths,
-                    "conditional_capacity_before_cars": left["capacity"]["conditional_total_rail_capacity_cars"],
-                    "conditional_capacity_after_cars": right["capacity"]["conditional_total_rail_capacity_cars"],
-                }
-            )
+    mainline_rows = calculate(mainline_only)
+    after = calculate(full_network)
+    mainline_comparison = compare_rows(before, mainline_rows)
+    full_comparison = compare_rows(before, after)
+    if (
+        mainline_comparison["train_hours_changed_months"] != 180
+        or mainline_comparison["only_train_hours_changed_months"] != 179
+        or len(mainline_comparison["other_changed_months"]) != 1
+        or mainline_comparison["other_changed_months"][0]["conditional_capacity_before_cars"]
+        != 1008
+        or mainline_comparison["other_changed_months"][0]["conditional_capacity_after_cars"]
+        != 1344
+        or full_comparison["only_train_hours_changed_months"] != 180
+        or full_comparison["other_changed_months"]
+    ):
+        raise ValueError("Candidate operating consequence changed; review the model")
 
     with tempfile.TemporaryDirectory(prefix="rail-40-forecast-") as directory:
         old_forecast = forecast_build(Path(directory) / "before", operating_rows=before)
@@ -98,22 +143,19 @@ def main() -> None:
     result = {
         "candidate_sha256": hashlib.sha256(raw).hexdigest(),
         "candidate_status": candidate["status"],
-        "source_mainline_miles": before_main,
+        "source_mainline_miles": source["rail"]["mainline_miles"],
         "candidate_route_miles": routes,
         "planning_months": len(before),
-        "train_hours_changed_months": sum(
-            ".capacity.rail.train_hours_daily" in row["changed_paths"] for row in changes
-        ),
-        "only_train_hours_changed_months": sum(
-            row["changed_paths"] == [".capacity.rail.train_hours_daily"] for row in changes
-        ),
-        "other_changed_months": [
-            row for row in changes if row["changed_paths"] != [".capacity.rail.train_hours_daily"]
-        ],
+        "branch_speed_mph": branch_speed_mph,
+        "branch_switching_hours_preserved": switching_hours,
+        "source_branch_hours_daily": source["rail"]["branch_hours_daily"],
+        "full_network_branch_hours_daily": full_network["rail"]["branch_hours_daily"],
+        "full_network_comparison": full_comparison,
+        "mainline_only_sensitivity": mainline_comparison,
         "forecast_datasets": datasets,
         "forecast_summary_equal": old_forecast["summary"]["scenarios"]
         == new_forecast["summary"]["scenarios"],
-        "scope": "Proposed geometry-only mainline length sensitivity; no candidate lead placed in service, new asset, price, cost, cash or legal right authored",
+        "scope": "Proposed geometry-only full three-route sensitivity preserves accepted branch switching at 15 mph; no candidate lead placed in service, new asset, price, cost, cash or legal right authored",
     }
     print(json.dumps(result, indent=2, sort_keys=True))
     if not all(row["equal"] for row in datasets.values()):
