@@ -1,0 +1,206 @@
+{
+  "document_id": "SH-DAE-REHEARSAL-AUTH-20260929",
+  "version": "0.1.0",
+  "state": "PROVISIONAL",
+  "authored_on": "2026-09-29",
+  "fact_status": "NEWLY_AUTHORED_SYNTHETIC_REHEARSAL_AUTHORITY",
+  "scenario": "BOUNDED_LOCAL_DAEDALUS_REHEARSAL_NOT_REAL_DEPLOYMENT",
+  "authority": "Owner-authorized synthetic company closeout and accepted information-access doctrine; repository acceptance of this scoped source is still required",
+  "scope": "One disposable 2027 Q1 inspection engagement for the accepted selected-service IAM-007 case. No general company entitlement, real account, external identity federation, broad Daedalus feature activation, or completed control result is asserted.",
+  "source_commit_rule": "Use one accepted Git commit that contains this source and every pinned referenced file; a dirty working tree or an authored date is not publication evidence.",
+  "policy_source": {
+    "source_path": "enterprise/ccf/company_closeout/source/information_policy_2026_09_22.json",
+    "source_sha256": "3239b1991137e69d8e3161da695024247ba1859139b41c5dc3ad449acb3cf395"
+  },
+  "person_population": {
+    "source_path": "enterprise/operations/source/completed_period_2026_08.json",
+    "source_sha256": "14e7b53177b80d671ed66fdc309c6b2c0e1b0b68567f54da97dd02dca4d1ddf8",
+    "population_count": 702,
+    "meaning": "Complete August employee IDs for identity validation only; this does not claim all 702 are active in the 2027 case or grant them access."
+  },
+  "case_source": {
+    "source_path": "enterprise/operations/source/portal_2027_payroll_release_q1_successor_2026_09_29.json",
+    "source_sha256": "2752e4fd77ddc9296e16e87e412179ce04ab61fdd6d8f2eaf6a08d7ec490dc4d",
+    "record_id": "SH-PORTAL-IAM007-PAYROLL-RELEASE-Q1-2027-v0.2",
+    "basis": "Preserves the missing approve-account decision and the selected two-account denominator."
+  },
+  "engagement": {
+    "external_case_id": "SH-DAE-Q1-2027-INSPECTION-REHEARSAL",
+    "tenant": "SH",
+    "purpose": "inspection",
+    "branch": "common",
+    "creation": "Create a fresh private portal Store engagement and bind its actual generated ID server-side; this source does not preclaim an existing workroom ID."
+  },
+  "person_bindings": [
+    {
+      "role": "auditor",
+      "person_id": "SH-EMP-INTERNAL-AUDIT-0001",
+      "case_source_role": "INDEPENDENT_SECOND_LINE_VALIDATOR",
+      "scope": "This selected fictional auditor may inspect the two expressly granted rehearsal records only."
+    },
+    {
+      "role": "record_owner",
+      "person_id": "SH-EMP-ESS-0005",
+      "case_source_role": "SCOPED_SERVICE_OWNER_AND_GRANT_APPROVER",
+      "scope": "This selected fictional owner approves this narrow rehearsal grant and may inspect the same two records; their role alone creates no grant."
+    }
+  ],
+  "grant_authorization": {
+    "record_id": "SH-DAE-REHEARSAL-GRANT-001",
+    "approved_by_person_id": "SH-EMP-ESS-0005",
+    "reviewed_person_id": "SH-EMP-INTERNAL-AUDIT-0001",
+    "approved_on": "2026-09-29",
+    "fictional_execution_state": "EXPLICITLY_AUTHORED_FOR_LOCAL_REHEARSAL_PENDING_REPOSITORY_ACCEPTANCE",
+    "basis": "The accepted 2027 selected-service case names the owner and independent validator. This grant is newly authored, record-specific, and requires accepted source and private operator realization; no rank or CompanyStore system grant supplies it."
+  },
+  "case_clock_approval": {
+    "record_id": "SH-DAE-REHEARSAL-CLOCK-001",
+    "approved_by_person_id": "SH-EMP-ESS-0005",
+    "approved_on": "2026-09-29",
+    "case_as_of": "2027-04-02T00:00:00+00:00",
+    "time_basis": "UTC fictional case progression after the April 1 missing-decision escalation",
+    "learner_may_advance": false,
+    "implementation": "A server-only resolver must bind this exact source/version and actual private engagement ID to the authenticated portal session; Store.simulated_at and request fields cannot substitute.",
+    "fictional_execution_state": "APPROVED_REHEARSAL_PROGRESSION_PENDING_REPOSITORY_ACCEPTANCE"
+  },
+  "record_population": {
+    "complete_for_scope": true,
+    "expected_record_ids": [
+      "SH-DAE-REHEARSAL-BASE-001",
+      "SH-DAE-REHEARSAL-VIEW-001",
+      "SH-DAE-REHEARSAL-NOTICE-001",
+      "SH-DAE-REHEARSAL-DENIED-001"
+    ],
+    "included": "One accepted selected-service source, its docs-indexed inspection view, one lower-trust derivative note, and one withheld comparison canary.",
+    "excluded": "All other company records, audit workroom artifacts, historical versions, personal memory, private evaluator truth, and any unmodeled company person/grant."
+  },
+  "records": [
+    {
+      "record_id": "SH-DAE-REHEARSAL-BASE-001",
+      "repository_path": "enterprise/operations/source/portal_2027_payroll_release_q1_successor_2026_09_29.json",
+      "source_sha256": "2752e4fd77ddc9296e16e87e412179ce04ab61fdd6d8f2eaf6a08d7ec490dc4d",
+      "source_version": "0.2.0",
+      "tenant": "SH",
+      "owner_id": "SH-EMP-ESS-0005",
+      "class_id": "WORKING_OPERATIONS",
+      "effective_at": "2027-01-01T00:00:00+00:00",
+      "available_at": "2027-04-01T01:05:00+00:00",
+      "purposes": ["inspection"],
+      "restriction_reason": "BOUNDED_SELECTED_SERVICE_INSPECTION",
+      "restriction_authority": "SH-DAE-REHEARSAL-GRANT-001",
+      "challenge_route": "Information Governance",
+      "review_due": "2027-06-30T00:00:00+00:00",
+      "sources": [],
+      "grants": [
+        {
+          "subject_id": "SH-EMP-INTERNAL-AUDIT-0001",
+          "purpose": "inspection",
+          "actions": ["read", "search", "snippet", "count", "citation", "tool_result", "answer", "export"],
+          "start": "2027-04-01T02:00:00+00:00",
+          "end": null
+        },
+        {
+          "subject_id": "SH-EMP-ESS-0005",
+          "purpose": "inspection",
+          "actions": ["read", "search", "snippet", "count", "citation", "tool_result", "answer", "export"],
+          "start": "2027-04-01T02:00:00+00:00",
+          "end": null
+        }
+      ]
+    },
+    {
+      "record_id": "SH-DAE-REHEARSAL-VIEW-001",
+      "repository_path": "docs/internal/company-closeout/daedalus-rehearsal-2026-09-29/SELECTED_IAM_CASE.md",
+      "source_sha256": "97f2c5b5eb491c14de7a3b79c61546aed6e0cdb496430cb216fc68eb6a079f64",
+      "source_version": "0.1.0",
+      "tenant": "SH",
+      "owner_id": "SH-EMP-ESS-0005",
+      "class_id": "WORKING_OPERATIONS",
+      "effective_at": "2027-04-01T01:05:00+00:00",
+      "available_at": "2027-04-01T01:05:00+00:00",
+      "purposes": ["inspection"],
+      "restriction_reason": "DERIVATIVE_SELECTED_SERVICE_INSPECTION_VIEW",
+      "restriction_authority": "SH-DAE-REHEARSAL-GRANT-001",
+      "challenge_route": "Information Governance",
+      "review_due": "2027-06-30T00:00:00+00:00",
+      "sources": ["SH-DAE-REHEARSAL-BASE-001"],
+      "grants": [
+        {
+          "subject_id": "SH-EMP-INTERNAL-AUDIT-0001",
+          "purpose": "inspection",
+          "actions": ["read", "search", "snippet", "count", "citation", "tool_result", "answer", "export"],
+          "start": "2027-04-01T02:00:00+00:00",
+          "end": null
+        },
+        {
+          "subject_id": "SH-EMP-ESS-0005",
+          "purpose": "inspection",
+          "actions": ["read", "search", "snippet", "count", "citation", "tool_result", "answer", "export"],
+          "start": "2027-04-01T02:00:00+00:00",
+          "end": null
+        }
+      ]
+    },
+    {
+      "record_id": "SH-DAE-REHEARSAL-NOTICE-001",
+      "repository_path": "docs/internal/company-closeout/daedalus-rehearsal-2026-09-29/LOWER_TRUST_NOTICE.md",
+      "source_sha256": "cc9b2718034ddf09c3a3cdb9392cce2a3822fccbe0bf0db24254a812c4e9bf70",
+      "source_version": "0.1.0",
+      "tenant": "SH",
+      "owner_id": "SH-EMP-ESS-0005",
+      "class_id": "WORKING_OPERATIONS",
+      "effective_at": "2027-04-01T02:00:00+00:00",
+      "available_at": "2027-04-01T02:00:00+00:00",
+      "purposes": ["inspection"],
+      "restriction_reason": "LOWER_TRUST_DERIVATIVE_INSPECTION_INPUT",
+      "restriction_authority": "SH-DAE-REHEARSAL-GRANT-001",
+      "challenge_route": "Information Governance",
+      "review_due": "2027-06-30T00:00:00+00:00",
+      "sources": ["SH-DAE-REHEARSAL-VIEW-001"],
+      "grants": [
+        {
+          "subject_id": "SH-EMP-INTERNAL-AUDIT-0001",
+          "purpose": "inspection",
+          "actions": ["read", "search", "snippet", "count", "citation", "tool_result", "answer", "export"],
+          "start": "2027-04-01T02:00:00+00:00",
+          "end": null
+        },
+        {
+          "subject_id": "SH-EMP-ESS-0005",
+          "purpose": "inspection",
+          "actions": ["read", "search", "snippet", "count", "citation", "tool_result", "answer", "export"],
+          "start": "2027-04-01T02:00:00+00:00",
+          "end": null
+        }
+      ]
+    },
+    {
+      "record_id": "SH-DAE-REHEARSAL-DENIED-001",
+      "repository_path": "docs/internal/company-closeout/daedalus-rehearsal-2026-09-29/DENIED_NOTE.md",
+      "source_sha256": "f69b2cff0102eb7899239f6e2a978b1d6534e5bf3623a885ece97bca2652196a",
+      "source_version": "0.1.0",
+      "tenant": "SH",
+      "owner_id": "SH-EMP-ESS-0005",
+      "class_id": "WORKING_OPERATIONS",
+      "effective_at": "2027-04-01T02:00:00+00:00",
+      "available_at": "2027-04-01T02:00:00+00:00",
+      "purposes": ["inspection"],
+      "restriction_reason": "WITHHELD_COMPARISON_INPUT",
+      "restriction_authority": "SH-DAE-REHEARSAL-GRANT-001",
+      "challenge_route": "Information Governance",
+      "review_due": "2027-06-30T00:00:00+00:00",
+      "sources": [],
+      "grants": []
+    }
+  ],
+  "retention_and_restore": {
+    "source_release": "Preserve exact accepted public source bytes; do not rewrite immutable predecessor company releases.",
+    "rights_checkpoint": "Private independent checkpoint outside both portal engagement and Operational backup roots; tombstone/revocation must defeat older restore.",
+    "artifact_output": "Non-authoritative and subject to current transitive source rights on every replay and export."
+  },
+  "limitations": [
+    "This source proposes a narrowly authored in-universe synthetic rehearsal authorization. It is not an assertion that an actual employee, identity provider, case progression, or model deployment has already operated.",
+    "No authorization from role or inclusion in the 702-person August population is inferred; the two subject grants above are explicit and confined to this exercise.",
+    "The lower-trust note and denied canary are public synthetic test inputs, not hidden assessment truth or evidence that the missing 2027 IAM decision was cured."
+  ]
+}
