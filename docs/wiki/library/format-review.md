@@ -6,11 +6,11 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 159 |
+| COUNTERPART_REVIEW_REQUIRED | 161 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 107 |
-| READER_OR_MAINTENANCE_PAGE | 189 |
+| READER_OR_MAINTENANCE_PAGE | 191 |
 | UNRESOLVED_DOCUMENT_COUNTERPART | 220 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_CHART_PUBLICATION | 40 |
@@ -68,6 +68,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Main source protection](../../internal/company-closeout/MAIN_PROTECTION.md) — Corporate document-format reconciliation
 - [Orientation commission history — September 22, 2026](../../internal/company-closeout/ORIENTATION_COMMISSIONS_2026-09-22.md) — Corporate document-format reconciliation
 - [Company edition to existing audit portal](../../internal/company-closeout/PORTAL_CONTRACT.md) — Corporate document-format reconciliation
+- [August 2026 period population handoff to the audit portal](../../internal/company-closeout/PORTAL_PERIOD_SOURCE_HANDOFF_2026-09-28.md) — Corporate document-format reconciliation
 - [Selected-edition portal review rehearsal](../../internal/company-closeout/PORTAL_SELECTED_REVIEW.md) — Corporate document-format reconciliation
 - [PR #145 integration evidence](../../internal/company-closeout/PR145_INTEGRATION.md) — Corporate document-format reconciliation
 - [Company closeout continuation — September 22, 2026](../../internal/company-closeout/RESIDUAL_CLOSEOUT_2026-09-22.md) — Corporate document-format reconciliation
@@ -78,6 +79,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Actionable CCF procedure deltas](../../internal/development/CCF_ACTIONABLE_CONTROL_DELTAS_2026-09-12.md) — Corporate document-format reconciliation
 - [Integrated CCF delivery workflow](../../internal/development/CCF_INTEGRATED_DELIVERY_WORKFLOW_2026-09-12.md) — Corporate document-format reconciliation
 - [A practical first CCF system](../../internal/development/CCF_PILOT_SYSTEM_DESIGN_2026-09-12.md) — Corporate document-format reconciliation
+- [External execution fact test for issue #18](../../legal/EXTERNAL_EXECUTION_FACT_TEST_2026-09-29.md) — SH-FIN-HUMAN-001
 - [ARU share purchase, closing and tax bridge](../../legal/evidence/assets-rights/SH-LEGAL-READ-ARU-001.md) — SH-FIN-HUMAN-001
 - [Cradle host rights and material title](../../legal/evidence/assets-rights/SH-LEGAL-READ-HOST-001.md) — SH-FIN-HUMAN-001
 - [Northern Nevada planning deed and cost boundary](../../legal/evidence/assets-rights/SH-LEGAL-READ-NV-001.md) — SH-FIN-HUMAN-001

@@ -265,6 +265,7 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `docs/legal`
 
 - [SABLE HARBOR ADVISORY — OPERATING NAME AND EXTERNAL CLEARANCE STATUS](../../legal/ADVISORY_NAME_AND_EXTERNAL_CLEARANCE_STATUS_2026-09-09.md) — MD
+- [External execution fact test for issue #18](../../legal/EXTERNAL_EXECUTION_FACT_TEST_2026-09-29.md) — MD
 - [MOCK DEED — SABLE HARBOR NORTHERN NEVADA DATA CENTER](../../legal/MOCK_DEED_NORTHERN_NEVADA_DATA_CENTER_2026-09-04.md) — MD · [formatted PDF](../../../enterprise/runtime/publications/SH-RT-DEED-001_v1.0.0.pdf)
 - [Preliminary Name and Mark Screen](../../legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md) — MD
 

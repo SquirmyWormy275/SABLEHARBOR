@@ -58,6 +58,10 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Site-selection evidence and current limits](../../../geospatial/docs/SITE_SELECTION_EVIDENCE.md) — MD
 - [Time, ownership and operating state](../../../geospatial/docs/TEMPORAL_MODEL.md) — MD
 
+## `geospatial/engineering_review`
+
+- [Railway engineering source review — 28 September 2026](../../../geospatial/engineering_review/README.md) — MD
+
 ## `geospatial/facilities`
 
 - [Facility planning and atlas closeout — R02 / v0.2.0 / September 11, 2026](../../../geospatial/facilities/CLOSEOUT_2026-09-11.md) — MD
@@ -477,3 +481,7 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `geospatial/sources/canon_snapshot/red_wash/logistics`
 
 - [ARU/BS&T Interface and Dependency Record](../../../geospatial/sources/canon_snapshot/red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md) — MD
+
+## `geospatial/successor_20260928`
+
+- [Geographic source successor — September 28, 2026](../../../geospatial/successor_20260928/README.md) — MD
