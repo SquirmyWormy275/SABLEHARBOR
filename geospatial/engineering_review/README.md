@@ -87,3 +87,70 @@ geotechnical/drainage design, parcel/title/access instrument or exact external
 client footprint was recovered here. Issue #107's detailed engineering
 acceptance remains open. The report is a bounded, checkable input to that work,
 and preserves the no-mine-spur and uranium custody gates.
+
+## Subsequent synthetic worldbuilding design candidate
+
+The later [`WORLD_BUILDING_DESIGN.json`](WORLD_BUILDING_DESIGN.json) and
+[`WORLD_BUILDING_DESIGN.geojson`](WORLD_BUILDING_DESIGN.geojson) form a **proposed
+case**, separate from the operating source above. Regenerate them with:
+
+```bash
+uv run --with-requirements geospatial/requirements.txt python -m geospatial.engineering_review.build_worldbuilding_design
+uv run --with-requirements geospatial/requirements.txt python -m pytest -q geospatial/tests/test_worldbuilding_design.py
+```
+
+The generator pins eight exact source files, including the accepted track and
+facility populations, screening DEM, local roads and waterbody polygons. It
+solves a continuous-grade (C1 piecewise-quadratic) profile for the 769-station
+mainline and for each proposed curve. Formation grade is at most 1.8%; a
+10,000 m vertical curvature proxy applies to the main/branches, 2,000 m to the
+two local leads and 1,000 m to the four terminal ladder connections. These are
+authored preliminary design assumptions, not a cited railroad standard or
+construction certification. The main candidate changes the accepted source
+formation by at most **0.615 m** and has maximum screened cut/fill of
+**6.683/5.738 m**. The candidate holds the mainline endpoints, so it does not
+silently change the accepted 40-mile source.
+
+The East and Mineral branch curves enter tangent to the source mainline and
+rejoin their source branches at 1,200 m and 800 m. Their sampled minimum plan
+radii are **153.054 m** and **162.210 m**. The accepted waterbody polygon
+intersection stays zero, and the six East and three Mineral local-road
+crossing IDs are preserved. Reconciliation of the **26** source structures
+finds no source-coordinate displacement; the five on affected branches need
+new milepost assignments if those curves are adopted. This is a plan/profile
+screen only: switch hardware, clearances, earthwork, drainage, load rating,
+utilities and field survey remain unproved.
+
+Two additional curves connect the source mainline to one existing track each
+at Taylor Terminal and Warehouse. The terminal lead is **506.186 m**, of
+which **467.299 m** is outside the synthetic terminal envelope. The warehouse
+lead is **717.268 m**, with **711.047 m** outside its envelope. Four separate
+yard-ladder curves join the other terminal tracks to the proposed terminal
+lead without mutually crossing. Their outside-envelope lengths are retained
+per feature in the JSON; they are not summed as a unique property footprint.
+The five terminal and one warehouse tracks thus have a **candidate physical
+topology**, while the accepted 31-track source remains unchanged. No rail spur
+to Red Wash is introduced.
+
+### Exact source choices exposed by the candidate
+
+| Treatment | Consequence before adoption |
+| --- | --- |
+| Preserve the accepted **40.000000** geodesic route-miles | Re-engineer portions of the proposed branch geometry to remove **0.193028** geodesic route-mile (about **310.775 projected metres**) elsewhere. Repeat grade, curvature, water/road, structure, route-mile and site checks. A bookkeeping relabeling cannot shorten a physical line. |
+| Adopt the curves' **40.193028** geodesic route-miles | Amend the controlling industrial route/segment source, rechain branch mileposts and five structure placements, and reperform dispatch/capacity, maintenance, capital and downstream finance or geographic exports that consume exact mileage. Do not silently add the curves to a frozen release. |
+
+Neither treatment is selected by this derivative. The two new leads plus four
+yard ladder curves also need an explicit track-register, asset, operating and
+capital treatment before a source successor could represent them as in use.
+The existing site envelopes are acreage-based synthetic rectangles, not
+property lines. The outside-envelope route, interentity ARU/BS&T connection,
+UP interface where applicable, and any real title/easement/road crossing
+rights still have no instrument in this package. The terrain and waterbody
+screen cannot establish those rights or a finished site plan.
+
+The 1898 coal-era line, the 14–16-mile 1954 survivor and abandoned/relocated
+segments retain null geometry with explicit source/derived classifications.
+There is no recovered contemporary linework that could locate them. The
+proposed modern curves do not backdate the line. Exact external customer
+footprints likewise remain governed by their accepted restricted/unknown
+precision rather than being invented to fill a map.
