@@ -703,6 +703,32 @@ eventual full-scope rehearsal. The current pair remains a bounded, reviewed
 technical journey; neither its growing artifact set nor a future Key clone is
 a final assurance packet.
 
+The [read-only service-scope gate packet](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-service-scope-gates-decision-packet-v1/DECISION_PACKET.md)
+(SHA-256 `46399c98edf4bc4baba94c3cfe9b3a9f9defe51dbab67374ed819cd6954639fa`)
+separates two exact active tasks per branch. `TASK-GATE-SERVICE-FACTS`
+requires management-accepted entity, service, flows, agreements, population,
+execution owners and period. `TASK-GATE-QUALIFIED-REVIEW` instead requires
+attributable qualified source and independent assurance review; the earlier
+route plan's broad `OWNER_SERVICE_SCOPE` label must not merge those roles.
+Approved reference scope supports further provisional fictional design without
+another broad scope approval. Neither task can be closed by a proposed service
+label, draft provider clause, future-authored 2027 event or agent assertion.
+
+The [read-only paired registry preflight](../../../../enterprise/audit_suite/source_registry_preflight.py)
+passed [independent V3 review](../../../../enterprise/generated/audit-suite/source-complete-registry-readonly-preflight-independent-review-2026-09-29-v3/REVIEW.json)
+(SHA-256 `66a45ca163c97f0991eb9c77c920cf504608e8c86b9b4c27cc471db218585a4f`)
+as a **baseline diagnostic only**. It reconciles 70 controls and 409 task
+IDs per side against the earlier route screen, frozen A349/B324 state and
+13-component source registries. Per side it flags 283 documentary/activity
+discovery routes, 88 bounded native collection leads and two service-scope
+gates; 304 A and 292 B task rows have reference component leads outside the
+current registry. Its `source_complete=false` is deliberate and cannot
+certify a final expanded registry. The corrected reader rejects active
+WAL/SHM/journal sidecars before immutable SQLite reads and checks stable
+bytes, identity and mode afterward. Twelve focused tests, Ruff and exact
+report rerun passed; no engagement or registry changed. Historical V1
+provisional and V2 changes-required reviews remain preserved.
+
 The queue's job `state`, acceptance criteria and attributed checkpoints must be read
 together. Historical `*_scope_update` entries record what was authorized at the time;
 their `QUEUED_NOT_STARTED` labels do not reset later job progress. Conversely, a

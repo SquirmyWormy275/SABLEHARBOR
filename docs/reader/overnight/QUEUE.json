@@ -719,6 +719,12 @@
         },
         {
           "date": "2026-09-29",
+          "scope": "Read-only paired source-registry baseline preflight and exact service-scope gate separation",
+          "validation": "Independent V3 bounded-diagnostic review SHA-256 66a45ca163c97f0991eb9c77c920cf504608e8c86b9b4c27cc471db218585a4f verified 70 controls/409 tasks per side, 283 documentary/activity discovery routes, 88 bounded native leads, 2 service-scope gates, A304/B292 task rows with candidate components outside the current 13-component registry, exact report rerun, private inputs and unchanged 538-file active P1. A real uncheckpointed WAL regression and mode-drift test led to corrected sidecar-free, stable-byte immutable reads; 12 tests and Ruff passed. Service-scope decision packet SHA-256 46399c98edf4bc4baba94c3cfe9b3a9f9defe51dbab67374ed819cd6954639fa distinguishes management facts from qualified source/assurance review.",
+          "acceptance": "Baseline census only: source_complete=false is hardcoded and cannot certify the eventual final registry. Both exact scope-gate tasks per side remain NOT_STARTED/NOT_RUN; approved reference scope permits provisional fictional design, while accepted service facts and independent qualified review remain separate. No activation, task credit, Key, grade or release."
+        },
+        {
+          "date": "2026-09-29",
           "scope": "Prospective 22-item HIPAA addressable pending docket and independent review",
           "validation": "Independent review SHA-256 5796cf3bee5075defb743401dad3831448cb5687c7f06d5df9dcba3021143c7d checked 223 assertions across 50 native versions, one-to-one 22 source locators per branch, Clean pending hold, Messy omission/invalid blanket-waiver marker/backfill with one unresolved exception, 2027 authored clocks versus actual 2026 import, and no grants or collections. Corrected HANDOFF-V2 SHA-256 3a41ce41b307be313bb4bd2f92558703a36941b664e74747013bc07ab4c4f010 explicitly keeps actual HIPAA applicability UNDETERMINED; V1 preserved. After integration 12 focused exercise/CompanyStore tests, Ruff and native verify passed; copied private bytes match with distinct inodes and zero Btrfs sharing.",
           "acceptance": "Pending locator intake only, not a 22-decision register or resolution of SH-POL-003's OPEN/INSUFFICIENT_SOURCE gap. No actual HIPAA applicability, environmental determination, approved substitution, implemented safeguard, real 2027 operation, current-pair source collection or audit task credit."
