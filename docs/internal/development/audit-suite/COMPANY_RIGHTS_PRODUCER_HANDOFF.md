@@ -58,7 +58,8 @@ the exact outcome and cross-repo gateway smoke pins.
 The follow-on `company_rights_http.py` adapter is mounted by
 `service.create_app(company_rights_factory=...)`. The trusted factory receives
 that app's `Engine` and must return a producer using the identical portal
-`Store`; there is no CLI or default factory. The new `/company/rights/` route
+`Store`; the protected CLI option is described below and there is no default
+factory. The new `/company/rights/` route
 family requires this portal's authenticated browser cookie. Bearer credentials,
 request parameters and model arguments cannot supply a company person,
 tenant, purpose or decision time. Missing configuration, mapping, record,
@@ -182,15 +183,58 @@ unmapped artifact IDs have the same protected 403 response. The manifest is
 an explicit bounded closure, not an assertion that every historical native
 version in a workroom has been classified.
 
-There is still no operator-reviewed live person/engagement binding, record
-grant schedule, accepted 2027 case-clock approval ledger, or protected launch
-configuration. The factories are opt-in server hooks; a test fixture or system
+There is still no staged person/engagement binding or record grant in a private
+runtime. The factories and launch option are opt-in server hooks; a test fixture or system
 grant cannot supply those missing authorities. Private Operational must be
 launched against this producer with reviewed inputs and separately exercise
 model prompts, person isolation, revocation and older restore before #34 can
 claim live company access. Private gateway acceptance is at
 `131e60bf7b73bf8b6d3cafae0c61d30ba3917c46`; the public integration remains
 pending until its own source branch is accepted.
+
+## Exact protected launch configuration
+
+The successor `serve` command accepts `--company-rights-config` together with
+`--company-rights-config-sha256`. Both are required, and ordinary serving stays
+ordinary when both are absent. The protected config is a mode-0600 JSON file
+under a mode-0700 private directory **outside the Git checkout**. Its complete
+schema is:
+
+```json
+{
+  "version": 1,
+  "source_commit": "<exact clean accepted public commit>",
+  "policy_sha256": "<SHA-256 of accepted information-policy JSON>",
+  "policy_module_sha256": "<SHA-256 of accepted policy Python module>",
+  "rights_root": "/absolute/private/rights-root",
+  "checkpoint_root": "/absolute/independent/checkpoint-root",
+  "native_manifest_file": "/absolute/private/exact-native-closure.json",
+  "native_manifest_sha256": "<SHA-256 of exact native closure>"
+}
+```
+
+The two native manifest fields are optional as a pair. The loader requires an
+exact clean checked-out commit, pinned policy data and code, and the accepted
+702-person census. It instantiates the actual accepted validator/decider, and
+checks those imports come from this checkout. Both private roots must already
+exist and remain independent. It creates no person binding, grant, record row,
+case-clock resolver, or native closure entry. Such an empty protected instance
+therefore denies all company disclosure. The command is:
+
+```sh
+python -m enterprise.audit_suite serve \
+  --private-root /absolute/private/portal-state \
+  --web-root /absolute/path/to/built-workroom \
+  --local-http \
+  --company-rights-config /absolute/private/company-rights-launch.json \
+  --company-rights-config-sha256 <exact-config-sha256>
+```
+
+`--local-http` is for loopback development only; use the existing TLS flags for
+an actual protected local service. Operator staging of principal-to-person
+bindings, approved case progression, and exact record grants is a separate
+explicit step based on accepted source. A source record in the repository does
+not itself populate the private rights database or authorize a browser user.
 
 Isolated validation: focused producer, HTTP, company service and service tests
 passed (37 tests). A separate cross-repo smoke with public accepted policy

@@ -31,6 +31,11 @@ def main(argv=None):
     serve.add_argument("--company-bindings", type=Path)
     serve.add_argument("--company-registry", type=Path)
     serve.add_argument("--company-profile")
+    serve.add_argument(
+        "--company-rights-config", type=Path,
+        help="Private, hash-pinned protected company rights configuration",
+    )
+    serve.add_argument("--company-rights-config-sha256")
     serve.add_argument("--instructor-key-root", type=Path)
     serve.add_argument("--instructor-bindings", type=Path)
     serve.add_argument(
@@ -133,6 +138,16 @@ def main(argv=None):
             raise DomainError("TLS key must be a private regular file")
         if not (args.web_root / "index.html").is_file():
             raise DomainError("Build the web workroom before serving")
+        if bool(args.company_rights_config) != bool(args.company_rights_config_sha256):
+            raise DomainError("Protected company config path and exact SHA-256 required together")
+        company_rights_factory = None
+        company_native_rights_factory = None
+        if args.company_rights_config:
+            from .company_rights_launch import reviewed_company_factories
+
+            company_rights_factory, company_native_rights_factory = reviewed_company_factories(
+                args.company_rights_config, args.company_rights_config_sha256
+            )
         import uvicorn
 
         from .service import create_app
@@ -155,6 +170,8 @@ def main(argv=None):
             workspace_contexts=args.workspace_contexts,
             corpus_root=args.corpus_root,
             program_pack=args.program_pack,
+            company_rights_factory=company_rights_factory,
+            company_native_rights_factory=company_native_rights_factory,
         )
         uvicorn.run(
             app,
