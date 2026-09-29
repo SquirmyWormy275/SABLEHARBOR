@@ -276,6 +276,21 @@ def test_hidden_artifact_gap_does_not_leak_to_learner(workspace):
     )
     assert len(result["task_gaps"]) == 1
     assert engine.get(learner, state["id"])["task_gaps"] == []
+    result = engine.command(
+        instructor,
+        state["id"],
+        command(
+            result,
+            payload(
+                instructor,
+                predecessor_id=result["task_gaps"][0]["id"],
+                narrative="A visible-looking follow-up still inherits the restricted gap context.",
+            ),
+            "hidden-gap-successor",
+        ),
+    )
+    assert len(result["task_gaps"]) == 2
+    assert engine.get(learner, state["id"])["task_gaps"] == []
     assert engine.learner_snapshot(engine.store.get(instructor, state["id"]))["task_gaps"] == []
     assert "hidden-gap" not in str(engine.get(learner, state["id"])["task_gaps"])
 
