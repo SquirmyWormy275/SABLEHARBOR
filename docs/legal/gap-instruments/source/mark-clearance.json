@@ -1,0 +1,86 @@
+{
+  "gap_id": "LEGAL-GAP-MARK-CLEARANCE",
+  "document_id": "SH-LEGAL-DRAFT-MARK-CLEARANCE",
+  "title": "Sable Harbor Advisory counsel instruction, search record and launch decision form",
+  "status": "DRAFT_FOR_REVIEW",
+  "prepared": "2026-09-12",
+  "owner_role": "Advisory business owner with enterprise Legal",
+  "approval": null,
+  "effective_date": null,
+  "source_paths": [
+    "docs/legal/ADVISORY_NAME_AND_EXTERNAL_CLEARANCE_STATUS_2026-09-09.md",
+    "docs/legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md"
+  ],
+  "proposed_terms": [
+    {
+      "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-T01",
+      "term": "Scope counsel work to actual external use of full composite name",
+      "basis": "Accepted external-clearance status note"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-T02",
+      "term": "Preserve accepted operating name and approved artwork",
+      "basis": "Existing name decision; no rebranding authorized"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-T03",
+      "term": "Keep search record, legal advice, launch decision and filing status separate",
+      "basis": "Proposed evidence/decision instrument"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-T04",
+      "term": "No counsel appointment or expenditure from draft instruction alone",
+      "basis": "Proposed engagement boundary"
+    }
+  ],
+  "unresolved_fields": [
+    {
+      "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-U01",
+      "field": "Actual external markets, services, channels and dates",
+      "next_action": "Business owner provides specific use instructions"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-U02",
+      "field": "Counsel identity, fees and engagement authority",
+      "next_action": "Appoint qualified adviser only if external commercialization is pursued"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-MARK-CLEARANCE-U03",
+      "field": "Search results, advice and launch/filingdecision",
+      "next_action": "Complete future evidence and sign-off; do not fabricate clearance"
+    }
+  ],
+  "financial_schedules": [
+    {
+      "name": "Unapproved clearance engagement",
+      "columns": [
+        "cost_item",
+        "amount",
+        "currency",
+        "approval"
+      ],
+      "rows": [
+        [
+          "professional fees",
+          null,
+          null,
+          "not authorized"
+        ],
+        [
+          "third-party search costs",
+          null,
+          null,
+          "not authorized"
+        ],
+        [
+          "filing fees",
+          null,
+          null,
+          "no filing selected"
+        ]
+      ]
+    }
+  ],
+  "version": "0.1.0",
+  "approval_status": "NOT_ACCEPTED"
+}

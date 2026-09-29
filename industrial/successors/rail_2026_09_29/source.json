@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "record_id": "SH-IND-RAIL-SUCCESSOR-20260929-001",
+  "known_on_utc": "2026-09-29T04:36:11Z",
+  "original_operating_cutoff": "2026-09-05",
+  "status": "NEWLY_AUTHORED_SYNTHETIC_GEOMETRY_SUCCESSOR",
+  "scope": "Retrospective geometry and milepost correction to the represented 40-mile operating network; no new track, rights, equipment, service, cost, or revenue",
+  "original_operations_sha256": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b",
+  "original_network_sha256": "bd6ea938ec59f50c79ee0a23fb5aa2817dcb1bb98fce8a951a073d0152a406f5",
+  "candidate_report_sha256": "7592f356a9d13878a61960d735fba61924119c8efac226544c133f85d59b4750",
+  "candidate_geojson_sha256": "2d3358d9dd7d117954b7d36879626659117cb9387b1350b4541abccb726228ad",
+  "candidate_acceptance_commit": "baad8dbb82c21d72b8115ce8c9ace929d339ff71",
+  "route_miles": {
+    "BST-MAIN": 33.155448786,
+    "BST-EAST": 4.136588436,
+    "BST-MINERAL": 2.707962778
+  },
+  "boundary_basis": "Newly authored maintenance-district stations on the proposed corrected centerlines. The old endpoints can miss the new centerline by 69.403 m and are not projected into asset boundaries. Stable asset IDs are retained as crosswalk keys; an ID suffix is historical, not its current milepost.",
+  "track_boundary_miles": {
+    "BST-MAIN": [0, 4, 10, 14.848836813, 22, 25.840193312, 30, 33.155448786],
+    "BST-EAST": [0, 2, 4.136588436],
+    "BST-MINERAL": [0, 1.25, 2.707962778]
+  },
+  "branch_speed_mph": 15,
+  "proposed_leads_and_ladders": "Excluded from operating route, asset, capital and collateral populations until separately accepted and placed in service",
+  "historical_1898_1954_extent": "Unchanged: 1898 unknown; 1954 14-16-mile survivor range unlocated"
+}

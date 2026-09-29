@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Runtime Infrastructure Finance and Headcount Reconciliation — 2026-09-11 — full source edition</title><style>@page { size: Letter; margin: 0.68in 0.66in 0.68in; }
+* { box-sizing: border-box; }
+html { color: #20282c; background: #edf0f1; }
+body { margin: 0; font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.43; }
+.edition-header { display: flex; justify-content: space-between; align-items: center; gap: 24px; border-bottom: 2px solid #26383d; padding-bottom: 15px; margin-bottom: 14px; }
+.edition-header img { max-width: 245px; max-height: 65px; object-fit: contain; object-position: left center; }
+.edition-header span { color: #515e63; font-size: 8pt; letter-spacing: 0.8px; text-align: right; }
+.edition-note { padding: 10px 12px; border-left: 3px solid #958367; background: #f6f4ef; font-size: 9pt; line-height: 1.4; margin: 0 0 22px; }
+.edition-note p { margin: 0 0 4px; }
+.edition-note p:last-child { margin: 0; }
+h1 { font-size: 23pt; line-height: 1.15; margin: 0 0 18px; font-weight: 600; }
+h2 { font-size: 15pt; line-height: 1.2; margin: 23px 0 9px; }
+h3 { font-size: 12pt; line-height: 1.3; margin: 18px 0 7px; }
+h4,h5,h6 { font-size: 11pt; margin: 15px 0 6px; }
+h1,h2,h3,h4,h5,h6 { break-after: avoid; overflow-wrap: anywhere; }
+p { margin: 0 0 11px; orphans: 3; widows: 3; }
+li { margin: 0 0 5px; orphans: 2; widows: 2; }
+ul,ol { padding-left: 23px; margin: 8px 0 13px; }
+li > p { margin-bottom: 6px; }
+a { color: #294e60; text-decoration: underline; text-underline-offset: 2px; overflow-wrap: anywhere; }
+code { font-family: 'DejaVu Sans Mono', monospace; font-size: 0.88em; overflow-wrap: anywhere; }
+pre { font-size: 9.5pt; white-space: pre-wrap; overflow-wrap: anywhere; background: #f2f4f4; padding: 10px; border: 1px solid #d8dfe0; }
+blockquote { border-left: 2px solid #929fa4; margin: 12px 0; padding: 0 15px; color: #39464b; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0 17px; table-layout: auto; font-size: 10.5pt; line-height: 1.35; }
+thead { display: table-header-group; }
+tfoot { display: table-footer-group; }
+th { background: #e9eef0; font-weight: 600; text-align: left; }
+th,td { padding: 7px 8px; border-bottom: 1px solid #cbd3d6; vertical-align: top; overflow-wrap: anywhere; }
+tr { break-inside: avoid; }
+hr { border: 0; border-top: 1px solid #cbd3d6; margin: 19px 0; }
+article img { max-width: 100%; height: auto; }
+.source-identity { margin-top: 24px; border-top: 1px solid #b7c1c5; padding-top: 10px; font-size: 8pt; color: #516168; overflow-wrap: anywhere; }
+@media screen { body { max-width: 900px; margin: 24px auto; padding: 48px 54px; background: white; box-shadow: 0 2px 16px #18313b12; } }
+@media screen and (max-width: 600px) { body { margin: 0; padding: 22px 18px; } h1 { font-size: 21pt; } .edition-header { gap: 12px; } .edition-header img { max-width: 55%; } table { display: block; overflow-x: auto; } }
+@media print { html { background: white; } a { text-decoration: none; } }
+/* Source metadata uses Markdown soft line breaks; retain those readable lines. */
+article p:has(> strong:first-child) { white-space: pre-line; }
+th,td { min-width: 5em; }
+/* Provenance remains in the editable HTML and manifest; do not create empty PDF tail pages. */
+@media print { .source-identity { display: none; } }
+
+/* Keep the complete closing paragraph on one page in this formation record. */
+article[data-document-id="SH-IND-COR-001"] > p:last-child { break-inside: avoid; }
+article[data-document-id="SH-IND-HR-001"] th:first-child,
+article[data-document-id="SH-IND-HR-001"] td:first-child { min-width: 8em; }
+/* Chromium does not consistently honor widows/orphans; keep ordinary clauses intact. */
+article p { break-inside: avoid; }
+/* Wrap ordinary table words at spaces; long machine paths retain code wrapping. */
+th,td { overflow-wrap: normal; }
+@media screen and (max-width: 600px) {
+  th,td { min-width: 8em; }
+}
+</style></head>
+<body><header class="edition-header"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDE2MDAgNTAwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+PHRpdGxlIGlkPSJ0aXRsZSI+U2FibGUgSGFyYm9yIOKAlCBwcmltYXJ5IGhvcml6b250YWw8L3RpdGxlPjxkZXNjIGlkPSJkZXNjIj5JbmRpdmlkdWFsIHByaW1hcnkgaG9yaXpvbnRhbCBsb2dvIGFzc2V0IGZvciBTYWJsZSBIYXJib3IuPC9kZXNjPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDgwLjAwMCwxMTAuMDAwKSBzY2FsZSgyLjMzMzMzMzMzKSI+PHJlY3QgeD0iOCIgeT0iOCIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjIwIiBmaWxsPSIjMTAxMjE0Ii8+PHJlY3QgeD0iOCIgeT0iOCIgd2lkdGg9IjIwIiBoZWlnaHQ9Ijc0IiBmaWxsPSIjMTAxMjE0Ii8+PHBvbHlnb24gcG9pbnRzPSI4LjAwMCw2Mi4wMDAgNzguMDAwLDYyLjAwMCA2OC4wMDAsODIuMDAwIDguMDAwLDgyLjAwMCIgZmlsbD0iIzEwMTIxNCIvPjxyZWN0IHg9IjE2IiB5PSI5MiIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjIwIiBmaWxsPSIjMTAxMjE0Ii8+PHJlY3QgeD0iOTIiIHk9IjM4IiB3aWR0aD0iMjAiIGhlaWdodD0iNzQiIGZpbGw9IiMxMDEyMTQiLz48cG9seWdvbiBwb2ludHM9IjQyLjAwMCwzOC4wMDAgMTEyLjAwMCwzOC4wMDAgMTEyLjAwMCw1OC4wMDAgNTIuMDAwLDU4LjAwMCIgZmlsbD0iIzEwMTIxNCIvPjxyZWN0IHg9IjU0IiB5PSI1NCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIiBmaWxsPSIjQzQ1MTI0Ii8+PC9nPjxnIGZpbGw9IiMxMDEyMTQiPjxwYXRoIGQ9Ik02NTIgLTI0Qzk5MCAtMjQgMTIwOSAxNTIgMTIwOSA0MjBDMTIwOSA2MzMgMTA3MSA3NjIgNzcyIDgzM0w2MTEgODcxQzQwNiA5MjAgMzI2IDk4MiAzMjYgMTA5MEMzMjYgMTIyNSA0NTMgMTMyMCA2MzMgMTMyMEM4MjEgMTMyMCA5NDMgMTIxNSA5NTQgMTA0NEgxMTY5QzExNjAgMTMzNSA5NTcgMTUxNCA2MzYgMTUxNEMzMTYgMTUxNCAxMDUgMTM0MSAxMDUgMTA3OUMxMDUgODczIDIzNyA3NDggNTM4IDY3N0w3MDEgNjM4QzkwOCA1ODkgOTg3IDUyMyA5ODcgNDA4Qzk4NyAyNjMgODU0IDE3MCA2NTIgMTcwQzQyOSAxNzAgMjk4IDI4NiAyOTcgNDgzSDc1Qzc1IDE2OCAyOTUgLTI0IDY1MiAtMjRaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MzAuMDAwLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTE2IDBIMjUyTDM4OCAzODdIOTg5TDExMjEgMEgxMzYyTDgyNSAxNDkwSDU1N1pNNDU1IDU3NiA1NDggODQwQzU4OSA5NjMgNjMyIDEwOTQgNjkyIDEyODdDNzUxIDEwOTQgNzkzIDk2MyA4MzQgODQwTDkyNCA1NzZaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MDguNTExLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTEzNiAwSDcxMEMxMDYyIDAgMTIzOSAxNjYgMTIzOSA0MTlDMTIzOSA2MzEgMTEwMyA3NDggOTMwIDc3MlY3NzRDMTA4NiA4MjIgMTE4MCA5MjcgMTE4MCAxMDk4QzExODAgMTMzNyAxMDAwIDE0OTAgNjkzIDE0OTBIMTM2Wk0zNTYgMTg3VjY2NUg3MDRDOTAxIDY2NSAxMDEzIDU3MSAxMDEzIDQyMEMxMDEzIDI2OCA4OTggMTg3IDY5NiAxODdaTTM1NiA4NDhWMTMwM0g2OTBDODU5IDEzMDMgOTYwIDEyMTUgOTYwIDEwNzVDOTYwIDkzNSA4NTkgODQ4IDY5MCA4NDhaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1OTIuMDMyLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTEzNiAwSDEwNjNWMTk1SDM1OFYxNDkwSDEzNloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDY3MS45NjYsMjgwLjI0MCkgc2NhbGUoMC4wNTI3MzQzOCwtMC4wNTI3MzQzOCkiLz48cGF0aCBkPSJNMTM2IDBIMTEzOFYxOTVIMzU4VjY2M0gxMDgwVjg1NkgzNThWMTI5NUgxMTM4VjE0OTBIMTM2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzQxLjM1NCwyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjxwYXRoIGQ9Ik0xMzYgMEgzNThWNjY1SDEwOTlWMEgxMzIxVjE0OTBIMTA5OVY4NTlIMzU4VjE0OTBIMTM2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODc4LjM5MiwyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjxwYXRoIGQ9Ik0xNiAwSDI1MkwzODggMzg3SDk4OUwxMTIxIDBIMTM2Mkw4MjUgMTQ5MEg1NTdaTTQ1NSA1NzYgNTQ4IDg0MEM1ODkgOTYzIDYzMiAxMDk0IDY5MiAxMjg3Qzc1MSAxMDk0IDc5MyA5NjMgODM0IDg0MEw5MjQgNTc2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTY2LjAyNiwyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjxwYXRoIGQ9Ik0xMzYgMEgzNThWNTY0SDY4OEM2OTEgNTY0IDY5NSA1NjQgNjk4IDU2NEw5OTUgMEgxMjQ1TDkyMyA2MDFDMTEwOSA2NjggMTIyMiA4MTggMTIyMiAxMDI2QzEyMjIgMTMxMSAxMDIyIDE0OTAgNzAzIDE0OTBIMTM2Wk0zNTggNzUzVjEyOThINjkzQzg4NSAxMjk4IDEwMDMgMTE5NCAxMDAzIDEwMjZDMTAwMyA4NTggODg2IDc1MyA2OTQgNzUzWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTA0OS41NDcsMjgwLjI0MCkgc2NhbGUoMC4wNTI3MzQzOCwtMC4wNTI3MzQzOCkiLz48cGF0aCBkPSJNMTM2IDBINzEwQzEwNjIgMCAxMjM5IDE2NiAxMjM5IDQxOUMxMjM5IDYzMSAxMTAzIDc0OCA5MzAgNzcyVjc3NEMxMDg2IDgyMiAxMTgwIDkyNyAxMTgwIDEwOThDMTE4MCAxMzM3IDEwMDAgMTQ5MCA2OTMgMTQ5MEgxMzZaTTM1NiAxODdWNjY1SDcwNEM5MDEgNjY1IDEwMTMgNTcxIDEwMTMgNDIwQzEwMTMgMjY4IDg5OCAxODcgNjk2IDE4N1pNMzU2IDg0OFYxMzAzSDY5MEM4NTkgMTMwMyA5NjAgMTIxNSA5NjAgMTA3NUM5NjAgOTM1IDg1OSA4NDggNjkwIDg0OFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDExMjkuMjcwLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTc2NiAtMjRDMTE2MyAtMjQgMTQ1MiAyODggMTQ1MiA3NDRDMTQ1MiAxMjAyIDExNjMgMTUxNCA3NjYgMTUxNEMzNjkgMTUxNCA4MSAxMjAyIDgxIDc0NEM4MSAyODkgMzY5IC0yNCA3NjYgLTI0Wk03NjYgMTc5QzUwOSAxNzkgMzA0IDM4MSAzMDQgNzQ0QzMwNCAxMTA5IDUwOSAxMzExIDc2NiAxMzExQzEwMjMgMTMxMSAxMjI5IDExMDkgMTIyOSA3NDRDMTIyOSAzODEgMTAyMyAxNzkgNzY2IDE3OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEyMDkuMjA1LDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTEzNiAwSDM1OFY1NjRINjg4QzY5MSA1NjQgNjk1IDU2NCA2OTggNTY0TDk5NSAwSDEyNDVMOTIzIDYwMUMxMTA5IDY2OCAxMjIyIDgxOCAxMjIyIDEwMjZDMTIyMiAxMzExIDEwMjIgMTQ5MCA3MDMgMTQ5MEgxMzZaTTM1OCA3NTNWMTI5OEg2OTNDODg1IDEyOTggMTAwMyAxMTk0IDEwMDMgMTAyNkMxMDAzIDg1OCA4ODYgNzUzIDY5NCA3NTNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMzAwLjg0NywyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjwvZz48cmVjdCB4PSI0MzAiIHk9IjMwNi4yNCIgd2lkdGg9IjkzOS43NzA4NTkzNzQ5OTk5IiBoZWlnaHQ9IjQiIGZpbGw9IiNDNDUxMjQiLz48L3N2Zz4=" alt="corporate"><span>LEGAL RECORDS<br>FULL SOURCE EDITION</span></header>
+<aside class="edition-note"><p><strong>Draft publication design · exact-file review required</strong></p><p>Complete source text follows. The source’s own status and limitations remain in force; this edition does not establish execution, filing or approval.</p></aside>
+<article id="source-content" data-document-id="SH-RT-FINANCE-001"><h1>Runtime Infrastructure Finance and Headcount Reconciliation — 2026-09-11</h1>
+<p><strong>Document ID:</strong> SH-RT-FINANCE-001
+<strong>Version:</strong> 1.0.0
+<strong>Prepared:</strong> 2026-09-11
+<strong>Owner:</strong> Enterprise Technology Services with Legal, Finance, Procurement and Facilities
+<strong>Authority:</strong> Owner-authorized PR119 runtime mandate, pending repository acceptance
+<strong>Structured companion:</strong> <code>enterprise/services/source/runtime_sites_2026-09-11.json</code>; <code>runtime_capital_plan_2026-09-11.json</code></p>
+<p><strong>State:</strong> planning reconciliation; does not assert invoices, funded appropriations, occupied positions, executed contracts, or operating controls.</p>
+<h2>Scope</h2>
+<p>This reconciliation prevents the Reno primary colocation, Boise recovery environment, and Northern Nevada owned-data-center program from being silently omitted or double-counted in enterprise finance/headcount planning.</p>
+<h2>Capital and operating layers</h2>
+<h3>A. Northern Nevada land and owned-site program</h3>
+<p>Planning-universe land closing: <strong>2026-09-04</strong>, $3.0M planning consideration. Phase-I owned-site planning envelope is <strong>$15.5M before production IT hardware</strong>, including land. Therefore the incremental Phase-I construction/site envelope after land is approximately $12.5M in the planning case. Range: $10–20M total before IT hardware.</p>
+<p>Do not recognize the full $15.5M as spent on 2026-09-11. At this date only the synthetic land acquisition is treated as completed in the planning universe; design/predevelopment authorizations are commitments/forecast until actual planning events are entered.</p>
+<h3>B. Reno primary colocation</h3>
+<p>Budget as a transition operating service, not as owned-building CAPEX. Until quotes are executed, maintain a sensitivity envelope rather than a supplier amount. The service order must separately price committed kW, cabinets/cage, cross-connects, carriers, remote hands, receiving/storage, installation, taxes, escalators, and expansion reservations.</p>
+<h3>C. Boise recovery colocation</h3>
+<p>Budget independently from Reno. Recovery cost is not a duplicate full production estate: compute may be reduced, but protected durable data, keys, network/recovery tooling, and tested operating capability remain required. Boise must not be netted against Reno provider credits.</p>
+<h3>D. IT hardware</h3>
+<p>Servers, GPUs, storage, network, HSMs, backup appliances, spares, and refresh remain separate from land/building/colo facility costs. Existing synthetic hardware prices are comparison inputs until procurement quotes exist.</p>
+<h2>2026 planning bridge</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>2026-09-11 state</th>
+<th>Planning treatment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Northern Nevada 7.5-acre planning parcel</td>
+<td>acquired in fictional planning universe</td>
+<td>$3.0M planning capital event</td>
+</tr>
+<tr>
+<td>Survey/geotech/environmental/title geometry</td>
+<td>in progress/authorized</td>
+<td>authorized scope; $200,000 combined study forecast, no invoice</td>
+</tr>
+<tr>
+<td>Utility/fiber studies</td>
+<td>in progress/authorized</td>
+<td>included in the $200,000 study forecast; no invoice</td>
+</tr>
+<tr>
+<td>Reno colo contract</td>
+<td>not executed</td>
+<td>no vendor payable; maintain quote envelope</td>
+</tr>
+<tr>
+<td>Boise recovery contract</td>
+<td>not executed</td>
+<td>no vendor payable; maintain quote envelope</td>
+</tr>
+<tr>
+<td>Vertical construction</td>
+<td>not started</td>
+<td>zero construction completion/spend asserted</td>
+</tr>
+<tr>
+<td>Critical plant</td>
+<td>not ordered/commissioned</td>
+<td>zero installed owned capacity</td>
+</tr>
+</tbody>
+</table>
+<h2>Headcount reconciliation</h2>
+<p>Enterprise Technology Services remains accountable for platform, network, storage, SRE, identity, security engineering, key management, AI infrastructure, and vendor/facility coordination. J2 owns Alexandria information authority; Technology does not acquire J2 content authority by operating infrastructure.</p>
+<p>Do not automatically add every fractional workload-model FTE as a new employee. Reuse must identify actual capacity; new positions require People/Finance approval. Conversely, colocation does not eliminate Sable Harbor technical staffing.</p>
+<h3>Planning role pools</h3>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Colo phase</th>
+<th>Owned-site build</th>
+<th>Owned-site operating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Platform/SRE</td>
+<td>required</td>
+<td>required</td>
+<td>required</td>
+</tr>
+<tr>
+<td>Network engineering</td>
+<td>required</td>
+<td>design/commissioning surge</td>
+<td>required</td>
+</tr>
+<tr>
+<td>Storage/data infrastructure</td>
+<td>required</td>
+<td>required</td>
+<td>required</td>
+</tr>
+<tr>
+<td>Security engineering/SOC</td>
+<td>required</td>
+<td>required</td>
+<td>required</td>
+</tr>
+<tr>
+<td>Identity/PAM/key/HSM</td>
+<td>required</td>
+<td>required</td>
+<td>required</td>
+</tr>
+<tr>
+<td>AI infrastructure</td>
+<td>required</td>
+<td>required</td>
+<td>required</td>
+</tr>
+<tr>
+<td>Facilities engineering</td>
+<td>vendor-supported / fractional internal owner</td>
+<td><strong>project requirement</strong></td>
+<td>24x7 on-call coverage; dedicated staffing scales with plant</td>
+</tr>
+<tr>
+<td>Physical security</td>
+<td>Sable Harbor oversight + provider building layer</td>
+<td>design/build requirement</td>
+<td>Sable Harbor site operation</td>
+</tr>
+<tr>
+<td>Procurement/vendor management</td>
+<td>required</td>
+<td>required</td>
+<td>required</td>
+</tr>
+<tr>
+<td>Finance asset/project accounting</td>
+<td>required</td>
+<td>capital-program requirement</td>
+<td>depreciation/asset lifecycle</td>
+</tr>
+</tbody>
+</table>
+<p>The prior synthetic model's roughly 7.1 FTE direct Alexandria technical allocation remains a workload allocation, not seven incremental hires. The owned-site program adds a facilities/security burden that must be separately authorized as construction approaches.</p>
+<h2>Accounting controls</h2>
+<ul>
+<li>Land, building, site improvements, critical plant, IT hardware, software, colocation, maintenance, utilities, and labor use separate cost objects.</li>
+<li>Eligible construction costs accumulate in CIP as incurred; transfer to the applicable in-service component and start depreciation only under the accepted readiness policy. Land is nondepreciable.</li>
+<li>Construction in progress is distinct from operating property, plant, and equipment.</li>
+<li>Supplier deposits and prepaid colo are not capital assets merely because paid upfront.</li>
+<li>Incentives/abatements are not booked until eligibility and approval are evidenced.</li>
+<li>No old vendor/facilities allowance is treated as displaced without explicit evidence.</li>
+<li>Monthly forecast-to-actual and committed-to-spend reconciliation is required once real procurement begins.</li>
+</ul>
+<h2>Decision gates</h2>
+<p>Finance must approve: land/planning-universe accounting treatment; predevelopment envelope; construction authorization; long-lead equipment authorization; production IT procurement; and migration. Each gate must show sources, quotes, contingency, cash timing, capitalization treatment, headcount effect, and sensitivity to delayed demand.</p>
+<h2>Executable development successor</h2>
+<p>The original runtime capital source now contains explicit study/design/contingency phasing, workload drivers and role requirements consumed by <code>enterprise/runtime/planning.py</code>. Its balanced $3M land adjustment uses unresolved settlement clearing and claims no paid cash, loan or accepted vendor payable. Gross unfunded requests are separately exported. The <code>enterprise/runtime/build_finance.py</code> successor posts the land overlay and conditional 2027–2031 runtime requests through enterprise statements, preserves other 2026 journals and independently verifies the exact bridge. The seven-sheet runtime workbook includes consolidated enterprise rows. These remain development outputs pending clean-source reproduction and release acceptance.</p>
+</article>
+<aside class="source-identity"><strong>Edition provenance</strong><br>SH-RT-FINANCE-001<br>Source: <a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/docs/finance/RUNTIME_INFRASTRUCTURE_FINANCE_RECONCILIATION_2026-09-11.md">docs/finance/RUNTIME_INFRASTRUCTURE_FINANCE_RECONCILIATION_2026-09-11.md</a><br>Source revision: 79437a778d4a4d5097a3cdaa36d7d8ab13217536<br>Source SHA-256: 20558ea7ecde58914b7ccd44dc866f56c754b5eabd053eff01b43e7684aa40c8</aside>
+</body></html>

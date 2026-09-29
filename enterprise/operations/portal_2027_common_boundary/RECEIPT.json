@@ -1,0 +1,54 @@
+{
+  "base_accepted_commit": "17c1e02b531436f2e698efeddec63552b69e0475",
+  "document_id": "SH-PORTAL-2027-COMMON-BOUNDARY-REVIEW-RECEIPT-v0.1",
+  "limits": [
+    "Private A/B local exercise declarations are not company due events or operating evidence.",
+    "No executed Reno/Boise host contracts, commissioned owned site or confirmed January 2027 system inventory.",
+    "No approved RPO/BIA, retention/hold schedule or full nonhuman/privileged-account census.",
+    "No IAM007 payroll case, company-wide calendar, A/B private truth or audit conclusion."
+  ],
+  "period": {
+    "end_exclusive": "2028-01-01T00:00:00Z",
+    "role": "prospective scenario, not completed history",
+    "start": "2027-01-01T00:00:00Z"
+  },
+  "scope": {
+    "case_branches": "shared A/B source only; no deltas",
+    "company_due_count": null,
+    "company_missing_count": null,
+    "company_observed_count": null,
+    "conditional_duty_rules": 5,
+    "confirmed_2027_operating_systems": null,
+    "legal_entities": 1,
+    "service_designs": 3,
+    "site_designs": 3
+  },
+  "sha256": {
+    "export": "8b492a52f8d10903d05d767766992b730524008a1e96d469d4449ebb8762791b",
+    "generator": "6e53521eec3247b3edc47e64d04e413003d37ad951f087d7b34505b5da725d1e",
+    "readme": "c987200b324ffdfa6719c30cd9dcb6285b40786e7c72c8ca7c1852f8855f39d9",
+    "source": "f224d46f54244cb3555200b9a9a7af7250d9a9f9214b389f63644f864d471cd1",
+    "tests": "5650abac2be95e71bec6c0451b2d79d699410584d51d03cd71ac9102df0fda4c"
+  },
+  "source_paths": {
+    "export": "enterprise/operations/portal_2027_common_boundary/opening_v0.1.json",
+    "generator": "tools/company_closeout/portal_2027_common_boundary.py",
+    "readme": "enterprise/operations/portal_2027_common_boundary/README.md",
+    "source": "enterprise/operations/source/portal_2027_common_boundary_2026_09_29.json",
+    "tests": "tests/company_closeout/test_portal_2027_common_boundary.py"
+  },
+  "source_status": "2026 design facts pinned by hash; source authoring time separate from future effective period; repository availability and acceptance null until governed integration",
+  "state": "PENDING_REPOSITORY_REVIEW_NOT_ACCEPTED_EDITION",
+  "validation": {
+    "company_closeout_tests": "PASS",
+    "focused_adversarial_tests": "12 PASS",
+    "full_pytest": "PASS_EXIT_0_FIVE_SKIPPED_ONE_SQLALCHEMY_DEPRECATION_WARNING",
+    "git_diff_check": "PASS",
+    "governance_j2": "PASS",
+    "institutional_catalog": "PASS",
+    "organization_maps": "PASS_UV_WITH_PYMUPDF",
+    "repository_hygiene": "PASS",
+    "ruff": "PASS",
+    "source_export_regeneration": "PASS"
+  }
+}

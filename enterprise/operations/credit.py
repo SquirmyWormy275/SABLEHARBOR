@@ -413,7 +413,7 @@ def validate(model):
     }
 
 
-def allocate_treasury(model, enterprise_result):
+def allocate_treasury(model, enterprise_result, *, additional_deferrable_source_types=()):
     """Attribute existing funded/arrears amounts; never create money or alter legal journals."""
     names = ("treasury_obligations", "treasury_obligation_history", "treasury_reconciliation")
     for name in names:
@@ -442,7 +442,7 @@ def allocate_treasury(model, enterprise_result):
                 if r["source_id"].startswith(("CORE-ARREARS-PAID-", "BUSINESS-ARREARS-PAID-")):
                     continue
                 if flow != "OPERATING" and not (
-                    r["source_type"] == "BUSINESS_DRIVEN_FORECAST"
+                    r["source_type"] in {"BUSINESS_DRIVEN_FORECAST", *additional_deferrable_source_types}
                     or r["source_id"] == "CORE-PRINCIPAL"
                 ):
                     continue

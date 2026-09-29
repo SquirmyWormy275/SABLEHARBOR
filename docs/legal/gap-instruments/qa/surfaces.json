@@ -1,0 +1,1080 @@
+{
+  "status": "AWAITING_MANUAL_REVIEW",
+  "surfaces": [
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/advisory-contracts.pdf",
+        "sha256": "b39ec29f9c47d026de04ccb3bb9a0a91ccb3d4147ce5a99c86c010d9a1871067"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/advisory-contracts-001.png",
+          "sha256": "d00deb8ad22dae4759e5e153d5b24dc8196c35ff387029c8ef2af0a1c9830812",
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "path": "docs/legal/gap-instruments/qa/advisory-contracts-005.png",
+          "sha256": "090d16cdf152b09683871338ed25c5baf3f81896ab922dc0a2323a28752b7242",
+          "pages": [
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/advisory-contracts.xlsx",
+        "sha256": "71830e1d6ed8b8c72004b1ddc519d331c1b0216ff8e550d5a86e403be81cbb1e"
+      },
+      "sheets": [
+        "Read first",
+        "01 Source capability milestone"
+      ],
+      "method": "LibreOffice native workbook PDF export",
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/advisory-contracts-workbook-001.png",
+          "sha256": "5dd5805cebbb4ccdaab6eaeffee6716cadfc026311cfd1e687aa94a9b3b43a02",
+          "pages": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/billing.pdf",
+        "sha256": "1454d08a5d73d68bc8bddceede45bc4b48994fbbb34fde51a3af06d54e96fe25"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/billing-001.png",
+          "sha256": "be2b0f311f53b6a583af76bf58716e8cb7fe471c04618209a4454e3640aa5ea2",
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "path": "docs/legal/gap-instruments/qa/billing-005.png",
+          "sha256": "f342a755c87fd4023a922b61ef4b2beb52c80039291bb06f1f8aefabe1176eb5",
+          "pages": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/billing.xlsx",
+        "sha256": "517c99eff78cf17dc5c0f0a82e06662d07b55f39b64380b5053a2052c4f76128"
+      },
+      "sheets": [
+        "Read first",
+        "01 Source invoice and later re"
+      ],
+      "method": "LibreOffice native workbook PDF export",
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/billing-workbook-001.png",
+          "sha256": "dbe413d4e5b4f68cd19571d45114345792724caeac1a35b551104f1c65875c95",
+          "pages": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/carry.pdf",
+        "sha256": "b889dbf6b3d2caa8103017feee23c77fd03071c618a45f10f93ecfcada19995c"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/carry-001.png",
+          "sha256": "c844f7b824c567876be812158eddd77d0edf3969fdf624208f41971ca64e3dbf",
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "path": "docs/legal/gap-instruments/qa/carry-005.png",
+          "sha256": "84831b930dbb057a02c337c5a5c3fa7c7ed63dbe52b8054621f9081fd50df617",
+          "pages": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/carry.xlsx",
+        "sha256": "cce5c891deefee4c231a7234e277249682a0a507086dbaa3afc946a33bd00d37"
+      },
+      "sheets": [
+        "Read first",
+        "01 Plan constants; no particip"
+      ],
+      "method": "LibreOffice native workbook PDF export",
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/carry-workbook-001.png",
+          "sha256": "03d34a547742c4ab576d5857f22135f9fd2f5d6138732ba9242906e7c879834f",
+          "pages": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/colo.pdf",
+        "sha256": "f6ca1709d8853c22135e49ca0bc9a0c70aca9f3d2dfa27fe50b1d869b5917027"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/colo-001.png",
+          "sha256": "6dc9e2a047ce7366285729439ffecbf9fc634421c9e7fe90ea879357e2d185d5",
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "path": "docs/legal/gap-instruments/qa/colo-005.png",
+          "sha256": "08e437be0ab5a065a7818d8b8b34cfaa1f7afcf286dc28b3891a60b4b310f7ea",
+          "pages": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/colo.xlsx",
+        "sha256": "11cf8fcd7680b0cd777089b5e32adc8d58fa84e60e6365a34abb22e05b2a4217"
+      },
+      "sheets": [
+        "Read first",
+        "01 Source pricing sensitivitie"
+      ],
+      "method": "LibreOffice native workbook PDF export",
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/colo-workbook-001.png",
+          "sha256": "d9279894bd34d1c5e7298155c45ac8419098c1f856e49e3bbbc04cf76fe89dae",
+          "pages": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/debt-liens.pdf",
+        "sha256": "59aaae8c3f5048079fe5b993f35fab239a75e0572d734fbc1f9fa2e2c99b5bdf"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/debt-liens-001.png",
+          "sha256": "e3e88728c07131ca4d1268934b12e603f7d0eda33fdcaa4da6ae9e607c0869da",
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "path": "docs/legal/gap-instruments/qa/debt-liens-005.png",
+          "sha256": "9f1347934ecbb6da817f35f6f0628cf99ddbb251af0a1ab6e5cfa0d06d7ade91",
+          "pages": [
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/debt-liens.xlsx",
+        "sha256": "77ccd92e8c7014d8ad5c532988fdc81bd1ff712eb95e8925bcf5691eff1d96cd"
+      },
+      "sheets": [
+        "Read first",
+        "01 Closing sources and uses \u2014 ",
+        "02 Modeled closing principal",
+        "03 Source-model term and revol"
+      ],
+      "method": "LibreOffice native workbook PDF export",
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/debt-liens-workbook-001.png",
+          "sha256": "1c0e411ea17fc97018ef680134a882b5f55819f3731f4f2c99f3b8b981b2f889",
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/financing-documents.pdf",
+        "sha256": "dbec54bba2adff2e60de770a9ae36e88b344214d0bb7905fcc80b08d6b5d8e61"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/financing-documents-001.png",
+          "sha256": "35e9183c5367b3f0901aebe64fc0995254e8664c696ed63286cf329993fd944c",
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "path": "docs/legal/gap-instruments/qa/financing-documents-005.png",
+          "sha256": "01b0246474b5f3e038e0098dadb32361ffb7f5368ce927af8d5278288d52850f",
+          "pages": [
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/financing-documents.xlsx",
+        "sha256": "fde18bc6873cb6dab1aa9300e6e4def4c50873953a7f8f0d9738b8c1202b86ff"
+      },
+      "sheets": [
+        "Read first",
+        "01 Separate board financing mo"
+      ],
+      "method": "LibreOffice native workbook PDF export",
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/financing-documents-workbook-001.png",
+          "sha256": "3c6bb28f70f661445e97e8bcb572696eadd9851a8d1e2df288ae20d5e284096d",
+          "pages": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/formations.pdf",
+        "sha256": "5cd9b56d086833bf9336cc3b37fab24626700ca88b8a1b4696834908e23c44c0"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/formations-001.png",
+          "sha256": "4456dcc6ae88df473bddf9bb0472a458fa876a5a0ad347169520772784cf3ad5",
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "path": "docs/legal/gap-instruments/qa/formations-005.png",
+          "sha256": "398a6b311d17cc22f25140f6bbf272510b6c6d302420854585abcc385d389464",
+          "pages": [
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/formations.xlsx",
+        "sha256": "7ba1591b7b2a6e48bbc8fb156a9dc789d687598da04ee8327190e62749c7e79a"
+      },
+      "sheets": [
+        "Read first",
+        "01 Accepted subsidiary ownersh",
+        "02 Pre-close ARU holders \u2014 sep"
+      ],
+      "method": "LibreOffice native workbook PDF export",
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/formations-workbook-001.png",
+          "sha256": "d2425b987c1311165cbd4e0682a83a029856befa2b5c5764eba86aeaa0c89956",
+          "pages": [
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/host-rights.pdf",
+        "sha256": "c6bcc46b6479b0334ff530b77acd0d37483ea5735acb5bccb3ec3743f72f1e95"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/host-rights-001.png",
+          "sha256": "a69df4aefe72a292be1b6964a83dad8654e529df6389215628dab471733c31eb",
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "path": "docs/legal/gap-instruments/qa/host-rights-005.png",
+          "sha256": "fc1b818ca6299f837c54bd34c0fffffb651a3c12985e932cc5728c168acf86bf",
+          "pages": [
+            5,
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/host-rights.xlsx",
+        "sha256": "56f497399842db385f1f59ea07ea270bbc3713e60e3b0dd6db23564078f53bf4"
+      },
+      "sheets": [
+        "Read first",
+        "01 Host settlement variables"
+      ],
+      "method": "LibreOffice native workbook PDF export",
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/host-rights-workbook-001.png",
+          "sha256": "4af2cf011da137e59f5452c21a711ce7a4045b4aa28ac333047a1565b2b83136",
+          "pages": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/land.pdf",
+        "sha256": "45086344d7cca1400d43bce2b4a6aec5d99597aab9f86681865d04f0d3f9dff6"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/land-001.png",
+          "sha256": "a046ccb7ab21bf3246778970f6a3850df4461f14a8c45275bb89af26cc14b337",
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "path": "docs/legal/gap-instruments/qa/land-005.png",
+          "sha256": "b13e1da1e59b4708e47fc871d78e893c3f53dd67dc66ec9847672f9736c4b9ab",
+          "pages": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/land.xlsx",
+        "sha256": "656ee5c15227f35ed7eb7ce74e17681a4744ff4f60efa662bb775e65acf98a6f"
+      },
+      "sheets": [
+        "Read first",
+        "01 Land and development perime",
+        "02 Existing balanced land over"
+      ],
+      "method": "LibreOffice native workbook PDF export",
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/land-workbook-001.png",
+          "sha256": "eb3f5e11c578b437cdb9bd461301ab97b8178b6135a7ecaa1bc73e734844fb8e",
+          "pages": [
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/mark-clearance.pdf",
+        "sha256": "b345750e052d3bf5754be3cb88ab9bab364772cb9533c768420c94771311a06b"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/mark-clearance-001.png",
+          "sha256": "4e1032c2f7e6d16c6ce346726de29faa78095b96507028931058a05aa89b1019",
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "path": "docs/legal/gap-instruments/qa/mark-clearance-005.png",
+          "sha256": "e9d5eb36c1f90a10ce35b864fe9d88463201000c3b9a4005114d21bbd08968af",
+          "pages": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/mark-clearance.xlsx",
+        "sha256": "fb61ed8d7ac7b0126b0e6213e2e44daa35812f13344e008a5685c5cc7c346bbe"
+      },
+      "sheets": [
+        "Read first",
+        "01 Unapproved clearance engage"
+      ],
+      "method": "LibreOffice native workbook PDF export",
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/mark-clearance-workbook-001.png",
+          "sha256": "ca4ac8df6241b1069a27e4c69a0cf1a52cb82d677199ecab9eb41c2fdf145db5",
+          "pages": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/rw-chronology.pdf",
+        "sha256": "c469cbad13ad32e683aa690b108ecfefb5400c940e3660d6b8edf8b1e0de8da6"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/rw-chronology-001.png",
+          "sha256": "9c07d98f0d092316c2043ffe07a19022d3c6e8112e35b58e7c0903f013f2046b",
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "path": "docs/legal/gap-instruments/qa/rw-chronology-005.png",
+          "sha256": "6eb5e5c157eed046fe1e43b07a76424aa4b76350c9be32480debcf777486ceca",
+          "pages": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/rw-chronology.xlsx",
+        "sha256": "887db11b0ba36bbda9941737c7f7faa226234883d08b4e2018d20e66032b40b2"
+      },
+      "sheets": [
+        "Read first",
+        "01 Preserved acquisition amoun"
+      ],
+      "method": "LibreOffice native workbook PDF export",
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/rw-chronology-workbook-001.png",
+          "sha256": "5d5622e42654c0a156cc80e941c58f15a316cd1a68ce7c1d6f8bbc06447be340",
+          "pages": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/rw-title.pdf",
+        "sha256": "482eddfac946de9aff5a0edb9fa723e5afc876da903f0b9f241e2a6e61df0783"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/rw-title-001.png",
+          "sha256": "b0a7c5d30674f4f7521571c6e8d4d9ea275da0b19bdd90498088f9533227b8c5",
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "path": "docs/legal/gap-instruments/qa/rw-title-005.png",
+          "sha256": "9d9676018344a2e5a35aca93413da1e79d00ddf12a5854907419f6b5c302fd08",
+          "pages": [
+            5,
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/rw-title.xlsx",
+        "sha256": "d8ddcc28106788490d0e4999cbeb676cbc988d3cb309331b84a65235ebece203"
+      },
+      "sheets": [
+        "Read first",
+        "01 Accepted consideration allo"
+      ],
+      "method": "LibreOffice native workbook PDF export",
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/rw-title-workbook-001.png",
+          "sha256": "3784af15b12c433ceda1c24362ef53954cf94f5ff5a203b4f4d7be45d78e64f3",
+          "pages": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/tax-billing.pdf",
+        "sha256": "6afad8981c8200f5ad6144e3a181ebc7e7e199b5a011849e746e1c41873d6e4c"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/tax-billing-001.png",
+          "sha256": "5fc4ed244bae5529901f6828014a293557bda8a44b46795830fe7d4e9984e118",
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "path": "docs/legal/gap-instruments/qa/tax-billing-005.png",
+          "sha256": "f55a592411a7ecb25c95568158c6c26c7fa42561b9b5f942d3a19ca8ae1cd9eb",
+          "pages": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/tax-billing.xlsx",
+        "sha256": "6c54df2946a3e57df098a75c8ea4b798f579e50c132db9a39db490f1cb8985e9"
+      },
+      "sheets": [
+        "Read first",
+        "01 Foundry Field tax determina"
+      ],
+      "method": "LibreOffice native workbook PDF export",
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/tax-billing-workbook-001.png",
+          "sha256": "52f17817624427ff97a6f3bf981ea24e54807f7fe5ff74a80165adf9603e7803",
+          "pages": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/tax-filing.pdf",
+        "sha256": "cb849b9f48716f05bfc680722b640b1d3442be860ed14ae3426a8dddc184742b"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/tax-filing-001.png",
+          "sha256": "2fa8a36a84ce212d54c69cbb90308afbfbd022aa8e013585041d40b7f3e8ab57",
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "path": "docs/legal/gap-instruments/qa/tax-filing-005.png",
+          "sha256": "6936384fb976b88aba3068c5f6d3fa400feeb78d98ee68739ad827440b70ef03",
+          "pages": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/tax-filing.xlsx",
+        "sha256": "e73c6f75498297cb72bf96ba94c38f2566fae1b3f96ee3c18447eee68f2e7957"
+      },
+      "sheets": [
+        "Read first",
+        "01 Conditional acquisition tax"
+      ],
+      "method": "LibreOffice native workbook PDF export",
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/tax-filing-workbook-001.png",
+          "sha256": "a793ce0e578acec803a883b75c78a711bbfa97ac7ffd1ad3a85d32df4c8419d4",
+          "pages": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/tenure.pdf",
+        "sha256": "18b65645ff158127f06be3786248a236cf7b819b8038b84e305db545f284633d"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/tenure-001.png",
+          "sha256": "d27e7794313fdf97a2d45ece4983ed60c1bbc307663e837f3a607c65814d2456",
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "path": "docs/legal/gap-instruments/qa/tenure-005.png",
+          "sha256": "20dad3645b0ce452d661253e047e9ed6824e2ec25d5b56a0cc715090cdce9cc1",
+          "pages": [
+            5,
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/tenure.xlsx",
+        "sha256": "a9a1e23c54bc12c72600d592c27ea2772fe690aafb724a33ccf66a33e79490c2"
+      },
+      "sheets": [
+        "Read first",
+        "01 Uncommitted site considerat"
+      ],
+      "method": "LibreOffice native workbook PDF export",
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/tenure-workbook-001.png",
+          "sha256": "dfa48dfc1502e1c6f331544e161e1bbd654aafc4386491a1d7069f3811be5974",
+          "pages": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/uranium-custody.pdf",
+        "sha256": "080efcb8e7ebda54b4f2985b1335056f1ba6bcdcddfb58b1a85cebe67183bcf7"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/uranium-custody-001.png",
+          "sha256": "30abbe04da3f228cc55be7f51de6bdef1e0a98d4d1b99fe693344f6740e042d8",
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "path": "docs/legal/gap-instruments/qa/uranium-custody-005.png",
+          "sha256": "709635bc4c5bff6ed5686eee361c20b6d6c0c762ce0bc764c8763905b606abe7",
+          "pages": [
+            5,
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/uranium-custody.xlsx",
+        "sha256": "94f0ef2693665a51c0df127cfdd7103164aab3b4995502acc4df469bae86b9e3"
+      },
+      "sheets": [
+        "Read first",
+        "01 Unactivated service economi"
+      ],
+      "method": "LibreOffice native workbook PDF export",
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/uranium-custody-workbook-001.png",
+          "sha256": "c8167f85cd0b0a6240f59518d5855b302a68575c3f0f5253d3d1e50447c3e12f",
+          "pages": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/workforce.pdf",
+        "sha256": "997d653337b5f05d5c6c0d304a7fc9b66c86f80ff64ae9cd6d5ecf3fe0f9f782"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/workforce-001.png",
+          "sha256": "6f5cd88e0838ca3d860a18c517417201c9ca3eed84b4183bbb30359b65cc7278",
+          "pages": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "path": "docs/legal/gap-instruments/qa/workforce-005.png",
+          "sha256": "c8447388106500a7aa4657c09602692acd63cd4cebaec0fd636581ea24b719a2",
+          "pages": [
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/workforce.xlsx",
+        "sha256": "500db938b19706eed4558be4915598e979b79f55a3f68a2818f6aff1390fd8eb"
+      },
+      "sheets": [
+        "Read first",
+        "01 Eight individual retention ",
+        "02 Separate consultancy"
+      ],
+      "method": "LibreOffice native workbook PDF export",
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/workforce-workbook-001.png",
+          "sha256": "bb971e151365707f3e319c0c7085eb813a4c0077774f388936cfdc931fa9b5ea",
+          "pages": [
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/review.html",
+        "sha256": "26f34c1799471cbb4a2dc57c041a21a116e1e37fc011a1252a80a1a8697cd910"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/review-html.png",
+          "sha256": "51822526067050632e993ec4c75c6fdcd2d1f2ec0786b29a9067c200a800b213",
+          "pages": [
+            "HTML full scroll"
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/advisory-contracts.html",
+        "sha256": "65a5bcc2de119592e7d0dac95a22bb26cd2a04483cd8fac9be6b43334607efb4"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/advisory-contracts-html.png",
+          "sha256": "d58136d4f2fc1c7a1c6f39840301ffc8b1dbc8e3f84486033cb6727a82d01307",
+          "pages": [
+            "HTML full scroll"
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/billing.html",
+        "sha256": "6101ed6dc3ffb798fa405d2cc9f4d1882fad3a7ceee185a228835a389a04e753"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/billing-html.png",
+          "sha256": "766d178ca9acb0a033d44229ca0b89267783f5c4415a9d492e3bc9a0d0c2e9cc",
+          "pages": [
+            "HTML full scroll"
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/carry.html",
+        "sha256": "6cd6725bd2b5d703c8b722385b9757e68e134dcf58c1404d861fff2d35939148"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/carry-html.png",
+          "sha256": "9c5985193310b7783dfea44fa0e93d890d656db40e83aa582cd1fbfb7854baa0",
+          "pages": [
+            "HTML full scroll"
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/colo.html",
+        "sha256": "22312cd55385a51d6a2d424622557f58cc36a0d5aa062430969c136938a9603a"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/colo-html.png",
+          "sha256": "3bc8ed01ac072a0832b2a63cdec4b159773ea8181e50428a7b99873e3789838f",
+          "pages": [
+            "HTML full scroll"
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/debt-liens.html",
+        "sha256": "aad02016ee7c5f11782068829ea5bc36538bf53b6d63391556855eb2b9f96815"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/debt-liens-html.png",
+          "sha256": "0db6c3967357319803d6032e4d127dac890f27defcce78e0014611323cab070b",
+          "pages": [
+            "HTML full scroll"
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/financing-documents.html",
+        "sha256": "1b742ffd63e71b9ddd4785bf43dfcb17ea685751a905d14afc3c7700e5db99fe"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/financing-documents-html.png",
+          "sha256": "60f9a3e8fef0d0e7483e8f1801d3f85f9ea43d27d8b7288aacfba51084e1450f",
+          "pages": [
+            "HTML full scroll"
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/formations.html",
+        "sha256": "bf33753a3759dbec86c2611e1e069aa76b199ee3e70976a9e5d65db44215c17e"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/formations-html.png",
+          "sha256": "b771ab83b8fc89b3e77291688ac8d929d155e5882263a17aaea5eecba355fc64",
+          "pages": [
+            "HTML full scroll"
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/host-rights.html",
+        "sha256": "b430e269258cea1104c1717e615b91678e87dcfe2631b71fd519e740dd30279a"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/host-rights-html.png",
+          "sha256": "90f06c8d5572be4ceb77c580a2f7baa4c6a003f69ee740744585d3750770516c",
+          "pages": [
+            "HTML full scroll"
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/land.html",
+        "sha256": "fcafbf086fcb90137083f6d0b1d624d68e9ba4d4f8d98c2cd3a1738171b34131"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/land-html.png",
+          "sha256": "badf0a9e4e4aa9d9898ca8d9e550cd3e7cec8fc7d72a7f68da3df88f8c22b0b1",
+          "pages": [
+            "HTML full scroll"
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/mark-clearance.html",
+        "sha256": "e48f5b8d532217fcdaf891ca58373ea476665d06ac16fac2677ea7676b6228d5"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/mark-clearance-html.png",
+          "sha256": "3df2b325cd3e57443e0b30a441f4327087af27080f5caef97ee9afe0ae58f020",
+          "pages": [
+            "HTML full scroll"
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/rw-chronology.html",
+        "sha256": "9a6ec9a60b113dc5c345a5e4ec3f72f7d8318e16fe0ce9f764eb88692de4663a"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/rw-chronology-html.png",
+          "sha256": "0ae5961cad5ea975689a058a00c3863268ac00ed0442735f60914512f4aa4eb9",
+          "pages": [
+            "HTML full scroll"
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/rw-title.html",
+        "sha256": "5f1b108cd375e3af6ed8b380a14d89ac5702e696106f9326042b11dd5dd33e1a"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/rw-title-html.png",
+          "sha256": "93245f00f6e42a8913b1b99d1a1f23aa82b88be502b008768f1e459b3cc3bec5",
+          "pages": [
+            "HTML full scroll"
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/tax-billing.html",
+        "sha256": "02adac1a57fe62df378f7d39af7cd38d491b2c1e2a849f5debac938359062b7d"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/tax-billing-html.png",
+          "sha256": "e0a18f72bc125c6b57bc6636bdb926d3722c6cd20745177d289b7336295f10f1",
+          "pages": [
+            "HTML full scroll"
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/tax-filing.html",
+        "sha256": "98ca70d4b329ee12af44383a497933938ff5ac13a81b56f44779ed0d17385f1d"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/tax-filing-html.png",
+          "sha256": "fbdabe18948d154e511ddfb899ce9306116eeca1eba5715faae6ae922d660c84",
+          "pages": [
+            "HTML full scroll"
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/tenure.html",
+        "sha256": "4b33ff0de750f1fe7d53366e7614f3696e7041017976f2dd53d9e2cd685fd19e"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/tenure-html.png",
+          "sha256": "3e3d020e0ce8439080f66c6d282cb46f55b11747e075523a0d3570f167506249",
+          "pages": [
+            "HTML full scroll"
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/uranium-custody.html",
+        "sha256": "e754034d6696151f0e136104e72161b9475bc7fdb6b572c112dca7268c054671"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/uranium-custody-html.png",
+          "sha256": "0e16f9e499f694b5da5365e66fd62fca9984d1cb9a8e5f4566bb91f515b492f1",
+          "pages": [
+            "HTML full scroll"
+          ]
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "path": "docs/legal/gap-instruments/editions/workforce.html",
+        "sha256": "5c7b20d746166f53c72c969ca823218374205fb1e7ce438e29ec47ef9d393f79"
+      },
+      "contacts": [
+        {
+          "path": "docs/legal/gap-instruments/qa/workforce-html.png",
+          "sha256": "5f6fed22c0febed25abfe28f82c72f0a52decfd8ad9be1168c8fbaec232f6fd0",
+          "pages": [
+            "HTML full scroll"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-8.4.2, pluggy-1.6.0 -- /tmp/sh-portal-neutral-review/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /tmp/sh-portal-neutral-review
+configfile: pyproject.toml
+plugins: anyio-4.15.1
+collecting ... collected 36 items
+
+tests/audit_suite/test_acceptance_commands.py::test_human_export_keeps_workpaper_versions_and_independent_review PASSED [  2%]
+tests/audit_suite/test_acceptance_commands.py::test_remediation_plan_preserves_original_condition_without_automatic_retest PASSED [  5%]
+tests/audit_suite/test_acceptance_commands.py::test_retest_dates_fail_atomically_and_later_result_preserves_history PASSED [  8%]
+tests/audit_suite/test_acceptance_commands.py::test_learner_cannot_generate_private_reviewer_edition PASSED [ 11%]
+tests/audit_suite/test_company_source_census_review.py::test_malformed_and_unrepresentable_query_gets_typed_rejection[version_policy-value0] PASSED [ 13%]
+tests/audit_suite/test_company_source_census_review.py::test_malformed_and_unrepresentable_query_gets_typed_rejection[unknown_event_policy-value1] PASSED [ 16%]
+tests/audit_suite/test_company_source_census_review.py::test_malformed_and_unrepresentable_query_gets_typed_rejection[event_window-value2] PASSED [ 19%]
+tests/audit_suite/test_company_source_census_review.py::test_malformed_and_unrepresentable_query_gets_typed_rejection[event_window-value3] PASSED [ 22%]
+tests/audit_suite/test_company_source_census_review.py::test_denver_dst_half_open_day_is_23_hours_not_fixed_utc_day PASSED [ 25%]
+tests/audit_suite/test_company_source_census_review.py::test_retry_after_retention_failure_preserves_source_and_single_committed_receipt PASSED [ 27%]
+tests/audit_suite/test_company_source_census_review.py::test_review_only_actor_and_revoked_actor_cannot_collect_or_replay PASSED [ 30%]
+tests/audit_suite/test_company_source_census_review.py::test_branch_and_metadata_quota_fail_without_partial_census PASSED [ 33%]
+tests/audit_suite/test_company_source_census_review.py::test_engine_malformed_query_is_400_not_source_authority_error[change0] PASSED [ 36%]
+tests/audit_suite/test_company_source_census_review.py::test_engine_malformed_query_is_400_not_source_authority_error[change1] PASSED [ 38%]
+tests/audit_suite/test_company_source_census_review.py::test_engine_malformed_query_is_400_not_source_authority_error[change2] PASSED [ 41%]
+tests/audit_suite/test_company_source_census_review.py::test_engine_valid_query_denied_source_remains_403 PASSED [ 44%]
+tests/audit_suite/test_company_service.py::test_company_http_auth_clock_csrf_and_retained_original PASSED [ 47%]
+tests/audit_suite/test_company_service.py::test_private_binding_config_exact_schema PASSED [ 50%]
+tests/audit_suite/test_recovery.py::test_restore_preserves_native_files_failures_and_invalidates_old_access PASSED [ 52%]
+tests/audit_suite/test_recovery.py::test_corrupt_backup_does_not_restore PASSED [ 55%]
+tests/audit_suite/test_company_operator.py::test_operator_discovery_collection_no_stdout_data PASSED [ 58%]
+tests/audit_suite/test_company_operator.py::test_recovery_preserves_sources_and_revokes_every_grant PASSED [ 61%]
+tests/audit_suite/test_company_operator.py::test_backup_and_output_aliases_rejected PASSED [ 63%]
+tests/audit_suite/test_personal_views_recovery.py::test_exact_histories_owner_mapping_current_permissions_and_second_restore PASSED [ 66%]
+tests/audit_suite/test_personal_views_recovery.py::test_changed_basis_remains_redacted_and_unauthorized_map_never_publishes PASSED [ 69%]
+tests/audit_suite/test_personal_views_recovery.py::test_typed_snapshot_corruption_rejected[orphan] PASSED [ 72%]
+tests/audit_suite/test_personal_views_recovery.py::test_typed_snapshot_corruption_rejected[owner] PASSED [ 75%]
+tests/audit_suite/test_personal_views_recovery.py::test_typed_snapshot_corruption_rejected[bool_version] PASSED [ 77%]
+tests/audit_suite/test_personal_views_recovery.py::test_typed_snapshot_corruption_rejected[command_owner] PASSED [ 80%]
+tests/audit_suite/test_personal_views_recovery.py::test_typed_snapshot_corruption_rejected[missing_command] PASSED [ 83%]
+tests/audit_suite/test_personal_views_recovery.py::test_typed_snapshot_corruption_rejected[missing_history] PASSED [ 86%]
+tests/audit_suite/test_personal_views_recovery.py::test_typed_snapshot_corruption_rejected[extra_table] PASSED [ 88%]
+tests/audit_suite/test_personal_views_recovery.py::test_typed_snapshot_corruption_rejected[untyped_title] PASSED [ 91%]
+tests/audit_suite/test_personal_views_recovery.py::test_clear_remains_available_at_edit_quota_and_snapshot_is_valid PASSED [ 94%]
+tests/audit_suite/test_personal_views_recovery.py::test_changed_companion_and_revoked_restore_authority_do_not_publish PASSED [ 97%]
+tests/audit_suite/test_personal_views_recovery.py::test_rehashed_orphan_snapshot_rejected_by_actual_restore PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.12/site-packages/fastapi/testclient.py:1
+  /tmp/sh-portal-neutral-review/.venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+.venv/lib/python3.12/site-packages/starlette/testclient.py:53
+  /tmp/sh-portal-neutral-review/.venv/lib/python3.12/site-packages/starlette/testclient.py:53: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/kingoftheeast/Projects/SABLEHARBOR-closeout-operations/docs/internal/company-closeout/evidence/portal-neutral-2026-09-22/pytest.xml -
+======================= 36 passed, 2 warnings in 19.59s ========================

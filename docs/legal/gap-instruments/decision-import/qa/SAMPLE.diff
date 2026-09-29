@@ -1,0 +1,11 @@
+--- docs/legal/gap-instruments/source/debt-liens.json
++++ proposed/docs/legal/gap-instruments/source/debt-liens.json
+@@ -21,7 +21,7 @@
+     },
+     {
+       "id": "DEBT-P03",
+-      "term": "Deliver quarterly debt reconciliation within 45 days and material payment/collateral discrepancy notice within 5 business days.",
++      "term": "Deliver quarterly debt reconciliation within 60 days and material payment/collateral discrepancy notice within 5 business days.",
+       "basis": "New proposed reporting terms, not source-established lender obligations."
+     },
+     {

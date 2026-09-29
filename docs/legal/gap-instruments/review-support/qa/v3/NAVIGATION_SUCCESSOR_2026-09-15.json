@@ -1,0 +1,45 @@
+{
+  "record_id": "SH-LEGAL-V3-NAVIGATION-SUCCESSOR-2026-09-15",
+  "authority": "Owner-approved PR145 full publications and September15 closeout integration",
+  "state": "REVIEWED_IMPLEMENTATION_PENDING_MERGE",
+  "historical_receipt_sha256": "177c3e64fa7dc00df005a42c29d1e1d9192cd31cb2db711dc3e6bbf8be7321e1",
+  "records": [
+    {
+      "path": "docs/reader/transactions/README.md",
+      "historical_revision": "1d86f78944c95d3fdde72c4dcc31cd9b50c2ada9",
+      "historical_sha256": "ecee864180bed42a59dbc18d1f789aa7f650f520edac0e37d9f8a23ac58463f9",
+      "current_sha256": "c483271d91fb8cdaaf99ba9343073f982d377d5ea3fbf703cc900ba5bc2ec60c",
+      "scope": "Add full-text publication reading route; no original practical workbook, source data or visual evidence changes"
+    },
+    {
+      "path": "docs/reader/transactions/build.py",
+      "historical_revision": "1d86f78944c95d3fdde72c4dcc31cd9b50c2ada9",
+      "historical_sha256": "c367d485c4400238344af2b273e5091cbbe21d022a2985502c2fd1a7c28ee490",
+      "current_sha256": "f7684c65114f3d51260e33e727127f6072e6185fc664b7efbb94d3ad9487a48b",
+      "scope": "Add full-text publication reading route; no original practical workbook, source data or visual evidence changes"
+    },
+    {
+      "path": "tools/legal_gaps/validate_practical_work.py",
+      "historical_revision": "1d86f78944c95d3fdde72c4dcc31cd9b50c2ada9",
+      "historical_sha256": "9d8682a15cc655ae7ed124ff459d769a0547270f17d1316eb886e40fbb363861",
+      "current_sha256": "82395518433d6e1e08120d11d5222ef096e689c9737a453ef0de00531767528c",
+      "scope": "Verify historical QA bytes against original Git revision and explicit successor navigation sources against reviewed current hashes."
+    },
+    {
+      "path": "docs/reader/usability/RESULTS.json",
+      "historical_revision": "1d86f78944c95d3fdde72c4dcc31cd9b50c2ada9",
+      "historical_sha256": "db7f50a06446ebcef37c850092a4055bd699e9c969a367df9c0ba58d70116932",
+      "current_sha256": "d9c781cf405e2a0577694e6c5b31d73e316e1b7c0773a1ef758be655f0e5486d",
+      "scope": "Reperform six reading and document-content routes after the human-facing navigation and location cleanup. Original practical-work QA remains historical.",
+      "editorial_refresh": {
+        "pull_request": 167,
+        "source_revision": "93cdc4c957467ecd7d798369b5f6c785c2f6cfaa",
+        "workflow_run_id": "35044943454",
+        "previous_successor_sha256": "ac30e57dae89b25e8f93d73ae63e3decb929eb2455385bb2697214bd29aa3ffc",
+        "previous_result_sha256": "dddfca38877c36e1c07ccfcebb6de567e367ec7aa2e59b9fe8cbd0bd6f6a1474",
+        "method": "Run unchanged tools/reader/usability.py and its --check replay; all six declared routes and document contents passed.",
+        "limits": "Automated route/content checks, not a new manual design approval, historical QA revision, or live Wiki publication."
+      }
+    }
+  ]
+}

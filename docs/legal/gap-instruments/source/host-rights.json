@@ -1,0 +1,105 @@
+{
+  "gap_id": "LEGAL-GAP-HOST-RIGHTS",
+  "document_id": "SH-LEGAL-DRAFT-HOST-RIGHTS",
+  "title": "Cradle host recovery agreement with Kelly Gang Mining and Demotte schedules",
+  "status": "DRAFT_FOR_REVIEW",
+  "prepared": "2026-09-12",
+  "owner_role": "Cradle business leader with enterprise Legal and Finance",
+  "approval": null,
+  "effective_date": null,
+  "source_paths": [
+    "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+    "geospatial/registers/SITE_REGISTER.csv",
+    "geospatial/facilities/RESEARCH_CAMPUSES.md",
+    "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md"
+  ],
+  "proposed_terms": [
+    {
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-T01",
+      "term": "Three-year initial term and 90-day prolonged interruption exit",
+      "basis": "New negotiable proposal; no historic term asserted"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-T02",
+      "term": "Host retains operating command and bypass; Cradle equipment remains Cradle-owned",
+      "basis": "Cradle closeout"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-T03",
+      "term": "Monthly statement within 20 days; undisputed payment 30 days after receipt",
+      "basis": "Proposed settlement timing only"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-T04",
+      "term": "Stream 17 exclusive recovery right and capture-point title",
+      "basis": "Accepted Cradle closeout; precise exhibit unresolved"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-T05",
+      "term": "Demotte commercial participation choice must be separately accepted",
+      "basis": "No host percentage supplied by accepted source"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-T06",
+      "term": "Sable Harbor, LLC (SHI) is the proposed contracting party; individual authority remains to be established",
+      "basis": "Accepted parent legal identity; proposed selection for this instrument"
+    }
+  ],
+  "unresolved_fields": [
+    {
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-U01",
+      "field": "Individual SHI signatory delegation and host execution authority",
+      "next_action": "Verify existing authority records; SHI legal identity is accepted and Cradle remains a business"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-U02",
+      "field": "Capture-point/interface exhibits at both hosts",
+      "next_action": "Host and Cradle prepare source-backed commercial boundary drawings"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-U03",
+      "field": "Kelly Gang participation percentage and value definition",
+      "next_action": "Negotiate explicit inputs; do not make permanent lore quantities"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-U04",
+      "field": "Demotte host settlement mechanism",
+      "next_action": "Owner review separate supported commercial proposal"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-HOST-RIGHTS-U05",
+      "field": "Term dates, currencies, law,forum,insurance evidence",
+      "next_action": "Complete definitive schedule before execution"
+    }
+  ],
+  "financial_schedules": [
+    {
+      "name": "Host settlement variables",
+      "columns": [
+        "host",
+        "eligible_realized_value",
+        "participation_rate",
+        "host_amount",
+        "status"
+      ],
+      "rows": [
+        [
+          "Kelly Gang Mining",
+          null,
+          null,
+          null,
+          "negotiated participation; inputs unresolved"
+        ],
+        [
+          "Demotte Reclamation Services",
+          null,
+          null,
+          null,
+          "mechanism unresolved; no inherited Kelly Gang rate"
+        ]
+      ]
+    }
+  ],
+  "version": "0.1.0",
+  "approval_status": "NOT_ACCEPTED"
+}

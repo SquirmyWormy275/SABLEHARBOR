@@ -1,0 +1,196 @@
+{
+  "result": "PASS",
+  "observed_at": "2026-09-22T18:50:33.753661+00:00",
+  "portal_commit": "5344bf76413ffe2cd378b957dbb5f7d56d04ea19",
+  "package_sha256": "774dadd50fa57be0d5b342b6470b933e83f8b5e705082b82236f64e98f25dff4",
+  "working_copy_backup_sha256": "72129d94486f71c6ce6e7041c6ea7eb90840f78bff1264d5545e9f356cad745c",
+  "initial_checkpoint": {
+    "revision": 0,
+    "sha256": "f2a420c0374b9d997ce2ece66d0df81cf54882def9e72ea78d45e25db6d4d8da"
+  },
+  "current_checkpoint": {
+    "revision": 13,
+    "sha256": "94f10ffbc50efe231340e08c08b1be1cb1295beceae779fd52cf7327236f0270"
+  },
+  "restored": {
+    "format": "SH-WORKING-COPY-RESTORE-1",
+    "backup_sha256": "72129d94486f71c6ce6e7041c6ea7eb90840f78bff1264d5545e9f356cad745c",
+    "current_checkpoint": {
+      "revision": 12,
+      "sha256": "ad50c0d0902e4504a3f6243a7f95946910b215d450308a5ede2c8e0d1a016f33"
+    },
+    "members": [
+      {
+        "bytes": 15699,
+        "file": "5047db6baf213a2eba2154b122ae9961e690346c5a914bcd828d89aed75a2a64.bin",
+        "id": "CAPITAL",
+        "sha256": "8993b8e1457571d2ee937bef370f0cd26957e1e95945a85083544f547b08a15c",
+        "disposition": "SUPPRESSED_DELETED"
+      },
+      {
+        "bytes": 1264,
+        "file": "0121ed0dc4dc4d78027858e64b00421115965b4945a3430445612af876e221cf.bin",
+        "id": "EQUITY",
+        "sha256": "f167ea5d5862ee32a129f54aba4fc3b6ab4668e09464ac139784e701c45f5efb",
+        "disposition": "SUPPRESSED_DELETED"
+      },
+      {
+        "bytes": 4803,
+        "file": "5537d5061f74e2b52403506d1e2043e2698433a7b9fee838e98fd0a57e3f0071.bin",
+        "id": "PAYROLL_BACKUP",
+        "sha256": "0367e6b042abe687831cca968e8a416ad4e794c9e5b3d716c5d6d3600d8a445e",
+        "disposition": "RESTORED"
+      }
+    ]
+  },
+  "held_restore": {
+    "format": "SH-WORKING-COPY-RESTORE-1",
+    "backup_sha256": "72129d94486f71c6ce6e7041c6ea7eb90840f78bff1264d5545e9f356cad745c",
+    "current_checkpoint": {
+      "revision": 13,
+      "sha256": "94f10ffbc50efe231340e08c08b1be1cb1295beceae779fd52cf7327236f0270"
+    },
+    "members": [
+      {
+        "bytes": 15699,
+        "file": "5047db6baf213a2eba2154b122ae9961e690346c5a914bcd828d89aed75a2a64.bin",
+        "id": "CAPITAL",
+        "sha256": "8993b8e1457571d2ee937bef370f0cd26957e1e95945a85083544f547b08a15c",
+        "disposition": "SUPPRESSED_DELETED"
+      },
+      {
+        "bytes": 1264,
+        "file": "0121ed0dc4dc4d78027858e64b00421115965b4945a3430445612af876e221cf.bin",
+        "id": "EQUITY",
+        "sha256": "f167ea5d5862ee32a129f54aba4fc3b6ab4668e09464ac139784e701c45f5efb",
+        "disposition": "SUPPRESSED_DELETED"
+      },
+      {
+        "bytes": 4803,
+        "file": "5537d5061f74e2b52403506d1e2043e2698433a7b9fee838e98fd0a57e3f0071.bin",
+        "id": "PAYROLL_BACKUP",
+        "sha256": "0367e6b042abe687831cca968e8a416ad4e794c9e5b3d716c5d6d3600d8a445e",
+        "disposition": "PRESERVED_RESTRICTED_HOLD"
+      }
+    ]
+  },
+  "checks": {
+    "older_checkpoint": {
+      "result": "DENIED",
+      "reason": "Missing or stale current checkpoint"
+    },
+    "deleted_CAPITAL_read": {
+      "result": "DENIED",
+      "reason": "Record unavailable"
+    },
+    "deleted_EQUITY_read": {
+      "result": "DENIED",
+      "reason": "Record unavailable"
+    },
+    "deleted_CAPITAL_snippet": {
+      "result": "DENIED",
+      "reason": "Record unavailable"
+    },
+    "deleted_EQUITY_snippet": {
+      "result": "DENIED",
+      "reason": "Record unavailable"
+    },
+    "deleted_CAPITAL_citation": {
+      "result": "DENIED",
+      "reason": "Record unavailable"
+    },
+    "deleted_EQUITY_citation": {
+      "result": "DENIED",
+      "reason": "Record unavailable"
+    },
+    "deleted_CAPITAL_export": {
+      "result": "DENIED",
+      "reason": "Record unavailable"
+    },
+    "deleted_EQUITY_export": {
+      "result": "DENIED",
+      "reason": "Record unavailable"
+    },
+    "deleted_CAPITAL_vector": {
+      "result": "DENIED",
+      "reason": "Record unavailable"
+    },
+    "deleted_EQUITY_vector": {
+      "result": "DENIED",
+      "reason": "Record unavailable"
+    },
+    "deleted_CAPITAL_count": {
+      "result": "DENIED",
+      "reason": "Record unavailable"
+    },
+    "deleted_EQUITY_count": {
+      "result": "DENIED",
+      "reason": "Record unavailable"
+    },
+    "deleted_CAPITAL_graph": {
+      "result": "DENIED",
+      "reason": "Record unavailable"
+    },
+    "deleted_EQUITY_graph": {
+      "result": "DENIED",
+      "reason": "Record unavailable"
+    },
+    "deleted_CAPITAL_tool_result": {
+      "result": "DENIED",
+      "reason": "Record unavailable"
+    },
+    "deleted_EQUITY_tool_result": {
+      "result": "DENIED",
+      "reason": "Record unavailable"
+    },
+    "deleted_CAPITAL_answer": {
+      "result": "DENIED",
+      "reason": "Record unavailable"
+    },
+    "deleted_EQUITY_answer": {
+      "result": "DENIED",
+      "reason": "Record unavailable"
+    },
+    "deleted_CAPITAL_search": {
+      "result": "DENIED",
+      "reason": "Record unavailable"
+    },
+    "deleted_EQUITY_search": {
+      "result": "DENIED",
+      "reason": "Record unavailable"
+    },
+    "deleted_CAPITAL_personal_memory": {
+      "result": "DENIED",
+      "reason": "Record unavailable"
+    },
+    "deleted_EQUITY_personal_memory": {
+      "result": "DENIED",
+      "reason": "Record unavailable"
+    },
+    "revoked_after_restore": {
+      "result": "DENIED",
+      "reason": "Stale access checkpoint"
+    },
+    "revoked_after_fresh_restore": {
+      "result": "DENIED",
+      "reason": "Not authorized"
+    },
+    "later_hold_denies_read": {
+      "result": "DENIED",
+      "reason": "Record unavailable"
+    },
+    "preserved_held_hash": "0367e6b042abe687831cca968e8a416ad4e794c9e5b3d716c5d6d3600d8a445e"
+  },
+  "source_hashes": {
+    "tools/company_closeout/working_copy_rehearsal.py": "3acec06e4438bb62b01390e517ad49bd2ac1712e3deb2571c777776e370b3856",
+    "tools/company_closeout/working_copy_restore.py": "d33b8154a04f506d93b75905483874d615a8b9de238dc399389b8b2d0b5a945f",
+    "enterprise/ccf/company_closeout/information_policy.py": "428e6f480b1e0fe191928d9b4780a0d58422d1acd461517896ccf7c6e395ac3f"
+  },
+  "limits": [
+    "Trusted local authenticated-operator adapter; no live portal deployment or HTTP boundary claim",
+    "CompanyStore originals and prior releases remain immutable; only separately declared working copies restored",
+    "Current portal journal and grant state must survive outside old backup; missing/stale checkpoint denies restore",
+    "No secure erasure, real legal hold release, professional opinion or model-inference effectiveness assertion",
+    "Logical May2027 fixture dates; actual observation is later-authored software evidence, not September2026 operations"
+  ]
+}

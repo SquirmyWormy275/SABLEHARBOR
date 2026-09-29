@@ -1,0 +1,71 @@
+{
+  "document_id": "SH-CAP-RIGHTS-20260922",
+  "version": "1.0.0",
+  "entity": "SHI",
+  "effective_date": "2026-09-22",
+  "date_precision": "DAY_NO_UTTERANCE_TIMESTAMP",
+  "authority": {
+    "owner_quote": "Adopt the half-original-units proposal",
+    "session_date": "2026-09-22",
+    "state": "OWNER_APPROVED_DIRECTION_REPOSITORY_ACCEPTANCE_PENDING",
+    "scope": "Prospective half-original unit thresholds, own-seat replacement, all five holders approving current rights schedule; no change in existing holdings or nine-member board"
+  },
+  "implementation_state": "NEWLY_AUTHORED_SYNTHETIC_ADOPTION_NOT_REAL_SIGNATURE",
+  "synthetic_member_assents": [
+    {
+      "holder_id": "SH-HOLDER-DM",
+      "date": "2026-09-22",
+      "state": "NEWLY_AUTHORED_SYNTHETIC_ASSENT_CURRENT_SCHEDULE_ONLY"
+    },
+    {
+      "holder_id": "SH-HOLDER-PR",
+      "date": "2026-09-22",
+      "state": "NEWLY_AUTHORED_SYNTHETIC_ASSENT_CURRENT_SCHEDULE_ONLY"
+    },
+    {
+      "holder_id": "SH-HOLDER-JB",
+      "date": "2026-09-22",
+      "state": "NEWLY_AUTHORED_SYNTHETIC_ASSENT_CURRENT_SCHEDULE_ONLY"
+    },
+    {
+      "holder_id": "SH-HOLDER-HV",
+      "date": "2026-09-22",
+      "state": "NEWLY_AUTHORED_SYNTHETIC_ASSENT_CURRENT_SCHEDULE_ONLY"
+    },
+    {
+      "holder_id": "SH-HOLDER-WR",
+      "date": "2026-09-22",
+      "state": "NEWLY_AUTHORED_SYNTHETIC_ASSENT_CURRENT_SCHEDULE_ONLY"
+    }
+  ],
+  "designations": [
+    {
+      "holder_id": "SH-HOLDER-HV",
+      "original_units": 18500000,
+      "threshold_units": 9250000,
+      "director_id": "DIR-MERCER"
+    },
+    {
+      "holder_id": "SH-HOLDER-WR",
+      "original_units": 15000000,
+      "threshold_units": 7500000,
+      "director_id": "DIR-VOSS"
+    }
+  ],
+  "threshold_rule": "AT_LEAST_HALF_ORIGINAL_UNITS_ADJUST_ONLY_SPLITS_OR_CONSOLIDATIONS",
+  "replacement_rule": "Eligible holder may replace only its own nominee by written notice to Secretary, subject governing qualifications/conflicts; no independent-seat replacement",
+  "eligibility_loss": "Designation entitlement ceases; existing governing vacancy/removal and nomination process controls, no automatic founder appointment or board-size reduction",
+  "current_rights_integration": "All five synthetic assents confirm this current schedule within its designation scope. No unlisted side-letter designation variation is adopted; no assertion that every historical promise was absent or waiver of unrelated rights.",
+  "preserved": {
+    "units": 100000000,
+    "board_seats": 9,
+    "independent_directors": 4,
+    "new_preferences": false,
+    "new_observer_seats": false,
+    "operational_veto": false,
+    "compulsory_contributions": false,
+    "new_units": 0,
+    "additional_cash_usd": 0
+  },
+  "supersession": "Prospectively resolves only designation thresholds/replacement and current assent scope excluded by September15 capital register. Historical financing source bytes and appointments remain unchanged; no recovered2021/2022 instrument claim."
+}

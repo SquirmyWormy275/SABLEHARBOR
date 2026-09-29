@@ -1,0 +1,244 @@
+{
+  "backup_history_equality": true,
+  "checks": {
+    "future_denials": 5746,
+    "originals": 5689,
+    "originals_reassembled": 5689,
+    "restored_revoked_denials": 5746,
+    "revoked_denials": 5746,
+    "transport_records": 5746,
+    "ungranted_denials": 5746
+  },
+  "edition_verification": {
+    "components": 3,
+    "members": 5689,
+    "result": "PASS"
+  },
+  "existing_store_max_record_bytes": 26214400,
+  "limits": [
+    "No live portal or private company source was modified",
+    "Synthetic software-role engagement only; no audit opinion, instructor key or grading material",
+    "Document import is not a complete company year or external confirmation",
+    "Multipart and empty originals require the explicit transport reconstruction adapter",
+    "Immutable CompanyStore lacks class-based deletion/hold; that gate remains open",
+    "HTTP indirect-disclosure and model inference evaluations remain separate"
+  ],
+  "portal_commit": "8f9b8eabed3af1d2c050afc9bfe8935fd41f48ae",
+  "portal_module_path": "enterprise/audit_suite/company_store.py",
+  "portal_module_sha256": "38a1aebcebde53051e306465dc2d807a3cd0e60fb8cc974da2235fa268c88292",
+  "result": "PASS",
+  "schema_version": "1.0.0",
+  "scope": "Actual isolated CompanyStore import/read/revocation/SQLite restore of public repository originals",
+  "selected_engagement_review": {
+    "adapter_sha256": "066b0f9ba352eecfcbe5c8123bf8cdeb5b02e9417939bad7ef4ff0df3838bed2",
+    "command": [
+      "/tmp/sh-portal-neutral-review/.venv/bin/python",
+      "/home/kingoftheeast/Projects/SABLEHARBOR-company-closeout/tools/company_closeout/portal_engagement.py",
+      "/home/kingoftheeast/Projects/SABLEHARBOR-company-closeout/var/company-closeout/portal-rc-f5e919e7/SELECTED_REVIEW_PLAN.json",
+      "/home/kingoftheeast/Projects/SABLEHARBOR-company-closeout/var/company-closeout/portal-rc-f5e919e7/SELECTED_REVIEW_RECEIPT.json"
+    ],
+    "edition_id": "SH-COMPANY-2026-09-15",
+    "engagement_id": "ENG-1ef392f94d053e524e3cfca9",
+    "export_artifact_id": "ART-31cda7bb26b71ae29773c881",
+    "export_sha256": "367a7c1be766a3a77d75d043d07ef486b1fa269b972144fcc36c8093a6e17540",
+    "hold_disposal_status": "NOT_EXERCISED;EXISTING_STORE_LACKS_CLASS_BASED_HOLD_DISPOSAL",
+    "independent_review_version_bound": true,
+    "pinned_portal_archive_sha256": "cf6997891e9be859a40e3a619d6860b853c9c9f74850c0370a50f50bec71e71b",
+    "portal_commit": "8f9b8eabed3af1d2c050afc9bfe8935fd41f48ae",
+    "preparer_id": "USER-01ea74e6a8c3eba54e60b95f",
+    "rejected_self_review_atomic": true,
+    "result": "PASS",
+    "retained": [
+      {
+        "artifact_id": "ART-19c53794555abcf67e5e840f",
+        "artifact_name": "company-source-3f4810b4dcfb5fd79d21a146fc7f83e12e59f809e2650f50adb5a17e7d455341.json",
+        "sha256": "8993b8e1457571d2ee937bef370f0cd26957e1e95945a85083544f547b08a15c",
+        "source_path": "enterprise/closeout/source/capital_register.json",
+        "source_record": "DOC-92b0d006e821a5d714d69bca01fb967de0cf0864",
+        "source_sha256": "8993b8e1457571d2ee937bef370f0cd26957e1e95945a85083544f547b08a15c",
+        "system": "repository-source"
+      },
+      {
+        "artifact_id": "ART-790c406ecb9109d9ea676d00",
+        "artifact_name": "company-source-ae63d7032dd689413a50d6ed0e35d5a5d9d23c8afaef7fa6ea341c1bb6a96a9f.json",
+        "sha256": "f167ea5d5862ee32a129f54aba4fc3b6ab4668e09464ac139784e701c45f5efb",
+        "source_path": "enterprise/generated/company-closeout-v1/capital_opening_equity_bridge.csv",
+        "source_record": "DOC-2f0fa8c51fa7adee9502ff8ffb747e78373f4772",
+        "source_sha256": "f167ea5d5862ee32a129f54aba4fc3b6ab4668e09464ac139784e701c45f5efb",
+        "system": "financial-successor"
+      },
+      {
+        "artifact_id": "ART-4ed923a19fd3899d74feba64",
+        "artifact_name": "company-source-fddf12a7460bc27834ba9f39ee4eecfe20aca10fc009af1d1a39f5a49f25d92c.json",
+        "sha256": "3630c33d3455b115f0aaa5ae7c891a056b0283871604a5d14173725f4f4ef32a",
+        "source_path": "enterprise/generated/company-closeout-v1/enterprise/enterprise_annual_statements.csv",
+        "source_record": "DOC-82b077039dd10f41a25fd3912169149cfef8a4de",
+        "source_sha256": "3630c33d3455b115f0aaa5ae7c891a056b0283871604a5d14173725f4f4ef32a",
+        "system": "financial-successor"
+      },
+      {
+        "artifact_id": "ART-abef542007faf4b8f24b3a27",
+        "artifact_name": "company-source-cc56ed72a8421db657840a83d096fd4f2ee7de38149e71d86da9e31bd37221d1.json",
+        "sha256": "b1493c2125a07fa4eb95a8159baf645fbe7b823601000ddf060a72d32c053059",
+        "source_path": "enterprise/generated/company-closeout-v1/statutory_current_federal.csv",
+        "source_record": "DOC-82dd07dbf3d8374b00e585eb30ac777628701ff5",
+        "source_sha256": "b1493c2125a07fa4eb95a8159baf645fbe7b823601000ddf060a72d32c053059",
+        "system": "financial-successor"
+      },
+      {
+        "artifact_id": "ART-aee4604a734cd545f72d4016",
+        "artifact_name": "company-source-e1ffc0a16995c09ef17d60817e121abc5c7fae4663bdde22166f4f942ee77945.json",
+        "sha256": "2b9cd7a64b25b66825d5b78442a1f5a11c6e60a74e7add291b8e8de81a353fe7",
+        "source_path": "enterprise/generated/completed-period-2026-08/current_customer_invoice_ledger.csv",
+        "source_record": "DOC-c81445d82a9b25887aae19a900af51f6a564d27c",
+        "source_sha256": "2b9cd7a64b25b66825d5b78442a1f5a11c6e60a74e7add291b8e8de81a353fe7",
+        "system": "completed-company-records"
+      },
+      {
+        "artifact_id": "ART-41e2b77543519e46379d7c69",
+        "artifact_name": "company-source-77e540ba16921ab6a7455c3944fd06915d7096d7a8c73464aaf4e78825e8071a.json",
+        "sha256": "423dc932882c11f18406cb14dfc26e4516a5e82430c310ee2c000d3f1c890774",
+        "source_path": "enterprise/generated/completed-period-2026-08/operating_events.csv",
+        "source_record": "DOC-c7303e01b4674f07aa532bbd01fdf5dae77743ec",
+        "source_sha256": "423dc932882c11f18406cb14dfc26e4516a5e82430c310ee2c000d3f1c890774",
+        "system": "completed-company-records"
+      },
+      {
+        "artifact_id": "ART-0da95dd075f22dc494a8b052",
+        "artifact_name": "company-source-df58f91fc47e19cea7351155f2e15a3348a81d1df08aaeb597a01f4eecc8e45c.json",
+        "sha256": "1271fde4b3db400ac5bfe44a45ac423017eb011e1ad4d3e42e9e9b9ec8c2eae5",
+        "source_path": "enterprise/generated/completed-period-2026-08/payroll_source_bridges.csv",
+        "source_record": "DOC-06fbc6bf87ddd99acd12f6925050dc954501bb82",
+        "source_sha256": "1271fde4b3db400ac5bfe44a45ac423017eb011e1ad4d3e42e9e9b9ec8c2eae5",
+        "system": "completed-company-records"
+      }
+    ],
+    "review_status": "SOFTWARE_ROLE_EXERCISE;LIMITATION;NOT_AUDIT_OPINION",
+    "reviewer_id": "USER-f49613ad2bb0189dc6c6d787",
+    "selected": [
+      {
+        "available_at": "2026-09-22T08:00:00Z",
+        "bytes": 15699,
+        "parts": [
+          {
+            "kind": "EXACT_ORIGINAL",
+            "record": "DOC-92b0d006e821a5d714d69bca01fb967de0cf0864",
+            "sha256": "8993b8e1457571d2ee937bef370f0cd26957e1e95945a85083544f547b08a15c"
+          }
+        ],
+        "path": "enterprise/closeout/source/capital_register.json",
+        "sha256": "8993b8e1457571d2ee937bef370f0cd26957e1e95945a85083544f547b08a15c",
+        "system": "repository-source"
+      },
+      {
+        "available_at": "2026-09-22T08:00:00Z",
+        "bytes": 1264,
+        "parts": [
+          {
+            "kind": "EXACT_ORIGINAL",
+            "record": "DOC-2f0fa8c51fa7adee9502ff8ffb747e78373f4772",
+            "sha256": "f167ea5d5862ee32a129f54aba4fc3b6ab4668e09464ac139784e701c45f5efb"
+          }
+        ],
+        "path": "enterprise/generated/company-closeout-v1/capital_opening_equity_bridge.csv",
+        "sha256": "f167ea5d5862ee32a129f54aba4fc3b6ab4668e09464ac139784e701c45f5efb",
+        "system": "financial-successor"
+      },
+      {
+        "available_at": "2026-09-22T08:00:00Z",
+        "bytes": 38759,
+        "parts": [
+          {
+            "kind": "EXACT_ORIGINAL",
+            "record": "DOC-82b077039dd10f41a25fd3912169149cfef8a4de",
+            "sha256": "3630c33d3455b115f0aaa5ae7c891a056b0283871604a5d14173725f4f4ef32a"
+          }
+        ],
+        "path": "enterprise/generated/company-closeout-v1/enterprise/enterprise_annual_statements.csv",
+        "sha256": "3630c33d3455b115f0aaa5ae7c891a056b0283871604a5d14173725f4f4ef32a",
+        "system": "financial-successor"
+      },
+      {
+        "available_at": "2026-09-22T08:00:00Z",
+        "bytes": 13815,
+        "parts": [
+          {
+            "kind": "EXACT_ORIGINAL",
+            "record": "DOC-82dd07dbf3d8374b00e585eb30ac777628701ff5",
+            "sha256": "b1493c2125a07fa4eb95a8159baf645fbe7b823601000ddf060a72d32c053059"
+          }
+        ],
+        "path": "enterprise/generated/company-closeout-v1/statutory_current_federal.csv",
+        "sha256": "b1493c2125a07fa4eb95a8159baf645fbe7b823601000ddf060a72d32c053059",
+        "system": "financial-successor"
+      },
+      {
+        "available_at": "2026-09-22T08:00:00Z",
+        "bytes": 93793,
+        "parts": [
+          {
+            "kind": "EXACT_ORIGINAL",
+            "record": "DOC-c81445d82a9b25887aae19a900af51f6a564d27c",
+            "sha256": "2b9cd7a64b25b66825d5b78442a1f5a11c6e60a74e7add291b8e8de81a353fe7"
+          }
+        ],
+        "path": "enterprise/generated/completed-period-2026-08/current_customer_invoice_ledger.csv",
+        "sha256": "2b9cd7a64b25b66825d5b78442a1f5a11c6e60a74e7add291b8e8de81a353fe7",
+        "system": "completed-company-records"
+      },
+      {
+        "available_at": "2026-09-22T08:00:00Z",
+        "bytes": 34415,
+        "parts": [
+          {
+            "kind": "EXACT_ORIGINAL",
+            "record": "DOC-c7303e01b4674f07aa532bbd01fdf5dae77743ec",
+            "sha256": "423dc932882c11f18406cb14dfc26e4516a5e82430c310ee2c000d3f1c890774"
+          }
+        ],
+        "path": "enterprise/generated/completed-period-2026-08/operating_events.csv",
+        "sha256": "423dc932882c11f18406cb14dfc26e4516a5e82430c310ee2c000d3f1c890774",
+        "system": "completed-company-records"
+      },
+      {
+        "available_at": "2026-09-22T08:00:00Z",
+        "bytes": 4803,
+        "parts": [
+          {
+            "kind": "EXACT_ORIGINAL",
+            "record": "DOC-06fbc6bf87ddd99acd12f6925050dc954501bb82",
+            "sha256": "1271fde4b3db400ac5bfe44a45ac423017eb011e1ad4d3e42e9e9b9ec8c2eae5"
+          }
+        ],
+        "path": "enterprise/generated/completed-period-2026-08/payroll_source_bridges.csv",
+        "sha256": "1271fde4b3db400ac5bfe44a45ac423017eb011e1ad4d3e42e9e9b9ec8c2eae5",
+        "system": "completed-company-records"
+      }
+    ],
+    "selection_rule": "Explicit operator-selected paths; bounded API exercise, not audit sampling",
+    "self_review_denied": true,
+    "source_available_at": "2026-09-22T08:00:00Z",
+    "surrounding_population": [
+      {
+        "component": "repository-source",
+        "fact_status": "MIXED_SOURCE_ARCHIVE",
+        "members": 5106,
+        "population_definition": "Exact tracked public repository snapshot except inventoried historical ZIP packages. Includes controlling and superseded sources, code, schemas, publications, catalogs and artwork; each source retains its own acceptance, period and fact status. Source files are not additional transaction or person populations."
+      },
+      {
+        "component": "financial-successor",
+        "fact_status": "CONDITIONAL_FORECAST",
+        "members": 529,
+        "population_definition": "Existing composed financial calibration and three conditional scenario populations, including seven-unit CSV/SQLite exports. Row-level period/scenario/source roles control; 2027\u20132031 forecast activity is never September 2026 actual activity. Repeated formats and unit extracts are representations of the same populations, not additive members."
+      },
+      {
+        "component": "completed-company-records",
+        "fact_status": "NEWLY_AUTHORED_SYNTHETIC_HISTORY",
+        "members": 54,
+        "population_definition": "Declared August 2026 workforce, payroll and current operating populations with a separate September change/custody ledger through September 14. Authored evidence is available only from this edition's declared known-on boundary, regardless of event date."
+      }
+    ],
+    "workpaper_versions": 2
+  },
+  "transport_contract": "SH-EXACT-BYTE-PARTS-1"
+}

@@ -165,9 +165,45 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Draft visual and numerical review](../../finance/evidence/SH-FIN-HUMAN-001/qa/REVIEW.md) — MD
 
+## `docs/finance/evidence/billing-proposal`
+
+- [Current disposition of the Foundry Field billing proposal](../../finance/evidence/billing-proposal/CURRENT.md) — MD
+- [Proposed billing details — Foundry Field invoice FF-003](../../finance/evidence/billing-proposal/README.md) — MD
+
+## `docs/finance/evidence/billing/FF-003-v1`
+
+- [Invoice](../../finance/evidence/billing/FF-003-v1/INVOICE.md) — MD
+- [FF-003 billing quality review](../../finance/evidence/billing/FF-003-v1/QA.md) — MD
+- [Foundry Field — Copperreach billing record](../../finance/evidence/billing/FF-003-v1/README.md) — MD
+- [billing](../../finance/evidence/billing/FF-003-v1/billing.xlsx) — XLSX
+- [invoice](../../finance/evidence/billing/FF-003-v1/invoice.pdf) — PDF
+
 ## `docs/finance/evidence/close`
 
 - [Close, allowance and legal-book reconciliation](../../finance/evidence/close/README.md) — MD
+
+## `docs/finance/evidence/close/draft`
+
+- [Close, allowance and legal-book reconciliation](../../finance/evidence/close/draft/WORKING_PAPER.md) — MD
+- [working-paper](../../finance/evidence/close/draft/working-paper.pdf) — PDF
+- [working-papers](../../finance/evidence/close/draft/working-papers.xlsx) — XLSX
+
+## `docs/finance/evidence/company-closeout`
+
+- [Company closeout accounting basis](../../finance/evidence/company-closeout/ACCOUNTING_BASIS_SUCCESSOR.md) — MD
+- [Adopted corporate history and statutory provision successor](../../finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md) — MD · [formatted PDF](../../finance/publications/SH-COMPANY-PARENT-TAX-20260915_v2.0.0.pdf)
+- [ARU/BST annual tax-base bridge](../../finance/evidence/company-closeout/ARU_BOOK_TO_TAX_METHOD.md) — MD
+- [Authored 2016–2022 tax and cash reconstruction](../../finance/evidence/company-closeout/HISTORICAL_TAX_RECONSTRUCTION.md) — MD
+- [Illinois loss-limit authority update](../../finance/evidence/company-closeout/ILLINOIS_NOL_2026_SUCCESSOR.md) — MD
+- [Industrial native income-tax settlement adapter](../../finance/evidence/company-closeout/INDUSTRIAL_TAX_SETTLEMENT.md) — MD
+- [Company finance successor — September 15, 2026](../../finance/evidence/company-closeout/README.md) — MD
+- [RWH Illinois transaction-tax composition](../../finance/evidence/company-closeout/RWH_TRANSACTION_TAX.md) — MD
+- [Prospective software sales-tax population](../../finance/evidence/company-closeout/SOFTWARE_SALES_TAX.md) — MD
+- [Continuing sovereignty reporting](../../finance/evidence/company-closeout/SOVEREIGNTY_METHOD.md) — MD · [formatted PDF](../../finance/publications/SH-COMPANY-SOVEREIGNTY-20260915_v1.0.0.pdf)
+- [Statutory financial reperformance receipt](../../finance/evidence/company-closeout/STATUTORY_REPERFORMANCE_2026-09-22.md) — MD
+- [Entity filing calendar and performance boundary](../../finance/evidence/company-closeout/TAX_FILING_CALENDAR.md) — MD
+- [Parent tax history and filing boundaries](../../finance/evidence/company-closeout/TAX_HISTORY.md) — MD
+- [Treasury timing, debt/security and investor reading route](../../finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md) — MD
 
 ## `docs/finance/evidence/coverage`
 
@@ -177,27 +213,59 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Billing, collections and deferred revenue](../../finance/evidence/customer/README.md) — MD
 
+## `docs/finance/evidence/customer/draft`
+
+- [Billing, collections and deferred revenue](../../finance/evidence/customer/draft/WORKING_PAPER.md) — MD
+- [working-paper](../../finance/evidence/customer/draft/working-paper.pdf) — PDF
+- [working-papers](../../finance/evidence/customer/draft/working-papers.xlsx) — XLSX
+
 ## `docs/finance/evidence/supporting-schedules`
 
 - [Workforce, inventory, fixed assets and debt](../../finance/evidence/supporting-schedules/README.md) — MD
+
+## `docs/finance/evidence/supporting-schedules/draft`
+
+- [Workforce, inventory, fixed assets and debt](../../finance/evidence/supporting-schedules/draft/WORKING_PAPER.md) — MD
+- [working-paper](../../finance/evidence/supporting-schedules/draft/working-paper.pdf) — PDF
+- [working-papers](../../finance/evidence/supporting-schedules/draft/working-papers.xlsx) — XLSX
 
 ## `docs/finance/evidence/tax-transaction`
 
 - [Transaction cash and conditional tax support](../../finance/evidence/tax-transaction/README.md) — MD
 - [Current industrial transaction and tax support](../../finance/evidence/tax-transaction/TRANSACTION_SUPPORT.md) — MD
 
+## `docs/finance/evidence/tax-transaction/draft`
+
+- [Transaction cash and conditional tax support](../../finance/evidence/tax-transaction/draft/WORKING_PAPER.md) — MD
+- [working-paper](../../finance/evidence/tax-transaction/draft/working-paper.pdf) — PDF
+- [working-papers](../../finance/evidence/tax-transaction/draft/working-papers.xlsx) — XLSX
+
 ## `docs/finance/evidence/treasury`
 
 - [Procurement, payables and Treasury](../../finance/evidence/treasury/README.md) — MD
 
+## `docs/finance/evidence/treasury/draft`
+
+- [Procurement, payables and Treasury](../../finance/evidence/treasury/draft/WORKING_PAPER.md) — MD
+- [working-paper](../../finance/evidence/treasury/draft/working-paper.pdf) — PDF
+- [working-papers](../../finance/evidence/treasury/draft/working-papers.xlsx) — XLSX
+
 ## `docs/finance/publications`
 
+- [ARU secured financing successor — September 22, 2026 — SH-ARU-SECURED-20260922_v1.0.0](../../finance/publications/SH-ARU-SECURED-20260922_v1.0.0.pdf) — PDF
 - [Current business-unit evidence export contract — SH-AUDIT-UNIT-EXPORT-001_v1.0.0](../../finance/publications/SH-AUDIT-UNIT-EXPORT-001_v1.0.0.pdf) — PDF
+- [Company edition inspection and reproduction — SH-COMPANY-INSPECTION-20260915_v1.0.0](../../finance/publications/SH-COMPANY-INSPECTION-20260915_v1.0.0.pdf) — PDF
+- [Company edition 1.1.0 — inspection route — SH-COMPANY-INSPECTION-20260922_v1.1.0](../../finance/publications/SH-COMPANY-INSPECTION-20260922_v1.1.0.pdf) — PDF
+- [Company edition 1.2.0 — inspection route — SH-COMPANY-INSPECTION-20260922_v1.2.0](../../finance/publications/SH-COMPANY-INSPECTION-20260922_v1.2.0.pdf) — PDF
+- [SH-COMPANY-PARENT-TAX-20260915 v1.0.0](../../finance/publications/SH-COMPANY-PARENT-TAX-20260915_v1.0.0.pdf) — PDF
+- [Adopted corporate history and statutory provision successor — SH-COMPANY-PARENT-TAX-20260915_v2.0.0](../../finance/publications/SH-COMPANY-PARENT-TAX-20260915_v2.0.0.pdf) — PDF
+- [Continuing sovereignty reporting — SH-COMPANY-SOVEREIGNTY-20260915_v1.0.0](../../finance/publications/SH-COMPANY-SOVEREIGNTY-20260915_v1.0.0.pdf) — PDF
 - [Business-driven enterprise financial model — SH-FIN-BUSINESS-001_v1.0.0](../../finance/publications/SH-FIN-BUSINESS-001_v1.0.0.pdf) — PDF
 
 ## `docs/legal`
 
 - [SABLE HARBOR ADVISORY — OPERATING NAME AND EXTERNAL CLEARANCE STATUS](../../legal/ADVISORY_NAME_AND_EXTERNAL_CLEARANCE_STATUS_2026-09-09.md) — MD
+- [External execution fact test for issue #18](../../legal/EXTERNAL_EXECUTION_FACT_TEST_2026-09-29.md) — MD
 - [MOCK DEED — SABLE HARBOR NORTHERN NEVADA DATA CENTER](../../legal/MOCK_DEED_NORTHERN_NEVADA_DATA_CENTER_2026-09-04.md) — MD · [formatted PDF](../../../enterprise/runtime/publications/SH-RT-DEED-001_v1.0.0.pdf)
 - [Preliminary Name and Mark Screen](../../legal/PRELIMINARY_NAME_AND_MARK_SCREEN.md) — MD
 
@@ -210,6 +278,18 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Red Wash purchase and closing-rights schedule](../../legal/evidence/assets-rights/SH-LEGAL-READ-RW-001.md) — MD
 - [Campus and operating-site tenure review](../../legal/evidence/assets-rights/SH-LEGAL-READ-TENURE-001.md) — MD
 
+## `docs/legal/evidence/assets-rights/drafts`
+
+- [SH-LEGAL-READ-ARU-001](../../legal/evidence/assets-rights/drafts/SH-LEGAL-READ-ARU-001.pdf) — PDF
+- [SH-LEGAL-READ-HOST-001](../../legal/evidence/assets-rights/drafts/SH-LEGAL-READ-HOST-001.pdf) — PDF
+- [SH-LEGAL-READ-NV-001](../../legal/evidence/assets-rights/drafts/SH-LEGAL-READ-NV-001.pdf) — PDF
+- [SH-LEGAL-READ-RW-001](../../legal/evidence/assets-rights/drafts/SH-LEGAL-READ-RW-001.pdf) — PDF
+- [SH-LEGAL-READ-TENURE-001](../../legal/evidence/assets-rights/drafts/SH-LEGAL-READ-TENURE-001.pdf) — PDF
+
+## `docs/legal/evidence/assets-rights/drafts/qa`
+
+- [Legal reader draft visual review](../../legal/evidence/assets-rights/drafts/qa/REVIEW.md) — MD
+
 ## `docs/legal/evidence/commercial`
 
 - [Commercial contracts and service obligations](../../legal/evidence/commercial/README.md) — MD
@@ -217,6 +297,13 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Atlas licensing and amendment evidence](../../legal/evidence/commercial/SH-LEGAL-READ-ATL-001.md) — MD
 - [Colocation orders and SLA review](../../legal/evidence/commercial/SH-LEGAL-READ-COLO-001.md) — MD
 - [Taylor–Red Wash service terms](../../legal/evidence/commercial/SH-LEGAL-READ-IC-001.md) — MD
+
+## `docs/legal/evidence/commercial/drafts`
+
+- [SH-LEGAL-READ-ADV-001](../../legal/evidence/commercial/drafts/SH-LEGAL-READ-ADV-001.pdf) — PDF
+- [SH-LEGAL-READ-ATL-001](../../legal/evidence/commercial/drafts/SH-LEGAL-READ-ATL-001.pdf) — PDF
+- [SH-LEGAL-READ-COLO-001](../../legal/evidence/commercial/drafts/SH-LEGAL-READ-COLO-001.pdf) — PDF
+- [SH-LEGAL-READ-IC-001](../../legal/evidence/commercial/drafts/SH-LEGAL-READ-IC-001.pdf) — PDF
 
 ## `docs/legal/evidence/corporate`
 
@@ -226,9 +313,319 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Legal entities and separate books](../../legal/evidence/corporate/SH-LEGAL-READ-ENTITY-001.md) — MD
 - [ARU transition and retention obligations](../../legal/evidence/corporate/SH-LEGAL-READ-HR-001.md) — MD
 
+## `docs/legal/evidence/corporate/drafts`
+
+- [SH-LEGAL-READ-CAPITAL-001](../../legal/evidence/corporate/drafts/SH-LEGAL-READ-CAPITAL-001.pdf) — PDF
+- [SH-LEGAL-READ-CARRY-001](../../legal/evidence/corporate/drafts/SH-LEGAL-READ-CARRY-001.pdf) — PDF
+- [SH-LEGAL-READ-ENTITY-001](../../legal/evidence/corporate/drafts/SH-LEGAL-READ-ENTITY-001.pdf) — PDF
+- [SH-LEGAL-READ-HR-001](../../legal/evidence/corporate/drafts/SH-LEGAL-READ-HR-001.pdf) — PDF
+
 ## `docs/legal/evidence/proposals`
 
 - [Legal and billing fields awaiting evidence or review](../../legal/evidence/proposals/README.md) — MD
+
+## `docs/legal/full-text`
+
+- [Complete legal source publication — delivery record](../../legal/full-text/CLOSEOUT.md) — MD
+- [Full-length legal source editions](../../legal/full-text/README.md) — MD
+- [Full-length legal source audit](../../legal/full-text/SOURCE_AUDIT.md) — MD
+
+## `docs/legal/full-text/editions`
+
+- [LEGAL-SOURCE-16BD06943F32](../../legal/full-text/editions/LEGAL-SOURCE-16BD06943F32.pdf) — PDF
+- [LEGAL-SOURCE-273909FD1A3E](../../legal/full-text/editions/LEGAL-SOURCE-273909FD1A3E.pdf) — PDF
+- [LEGAL-SOURCE-46256BC2255E](../../legal/full-text/editions/LEGAL-SOURCE-46256BC2255E.pdf) — PDF
+- [LEGAL-SOURCE-508081AAD2B2](../../legal/full-text/editions/LEGAL-SOURCE-508081AAD2B2.pdf) — PDF
+- [LEGAL-SOURCE-7FFDC6FBB585](../../legal/full-text/editions/LEGAL-SOURCE-7FFDC6FBB585.pdf) — PDF
+- [LEGAL-SOURCE-801955F60F74](../../legal/full-text/editions/LEGAL-SOURCE-801955F60F74.pdf) — PDF
+- [LEGAL-SOURCE-920F33E127C0](../../legal/full-text/editions/LEGAL-SOURCE-920F33E127C0.pdf) — PDF
+- [LEGAL-SOURCE-9E57D6909035](../../legal/full-text/editions/LEGAL-SOURCE-9E57D6909035.pdf) — PDF
+- [LEGAL-SOURCE-A709ECAC08C4](../../legal/full-text/editions/LEGAL-SOURCE-A709ECAC08C4.pdf) — PDF
+- [LEGAL-SOURCE-F1F0AD5F06DC](../../legal/full-text/editions/LEGAL-SOURCE-F1F0AD5F06DC.pdf) — PDF
+- [LEGAL-SOURCE-FCEBAA48286F](../../legal/full-text/editions/LEGAL-SOURCE-FCEBAA48286F.pdf) — PDF
+- [SH-ADV-003](../../legal/full-text/editions/SH-ADV-003.pdf) — PDF
+- [SH-ADV-005](../../legal/full-text/editions/SH-ADV-005.pdf) — PDF
+- [SH-ADV-007](../../legal/full-text/editions/SH-ADV-007.pdf) — PDF
+- [SH-ADV-009](../../legal/full-text/editions/SH-ADV-009.pdf) — PDF
+- [SH-ADV-014](../../legal/full-text/editions/SH-ADV-014.pdf) — PDF
+- [SH-ADV-017](../../legal/full-text/editions/SH-ADV-017.pdf) — PDF
+- [SH-ATL-017](../../legal/full-text/editions/SH-ATL-017.pdf) — PDF
+- [SH-BRD-CONSENT-2026-09-02](../../legal/full-text/editions/SH-BRD-CONSENT-2026-09-02.pdf) — PDF
+- [SH-BRD-MIN-2021-06-18](../../legal/full-text/editions/SH-BRD-MIN-2021-06-18.pdf) — PDF
+- [SH-BRD-MIN-2022-10-28](../../legal/full-text/editions/SH-BRD-MIN-2022-10-28.pdf) — PDF
+- [SH-BRD-MIN-2024-02-15](../../legal/full-text/editions/SH-BRD-MIN-2024-02-15.pdf) — PDF
+- [SH-CANON-WIL-KLEIN-20260906-001](../../legal/full-text/editions/SH-CANON-WIL-KLEIN-20260906-001.pdf) — PDF
+- [SH-CORP-HQ-20260903](../../legal/full-text/editions/SH-CORP-HQ-20260903.pdf) — PDF
+- [SH-CRD-CLOSEOUT-20260906](../../legal/full-text/editions/SH-CRD-CLOSEOUT-20260906.pdf) — PDF
+- [SH-GOV-AUTH-001](../../legal/full-text/editions/SH-GOV-AUTH-001.pdf) — PDF
+- [SH-GOV-BOARD-001](../../legal/full-text/editions/SH-GOV-BOARD-001.pdf) — PDF
+- [SH-GOV-COM-AUDIT-001](../../legal/full-text/editions/SH-GOV-COM-AUDIT-001.pdf) — PDF
+- [SH-GOV-COM-COMP-001](../../legal/full-text/editions/SH-GOV-COM-COMP-001.pdf) — PDF
+- [SH-GOV-COM-FIN-001](../../legal/full-text/editions/SH-GOV-COM-FIN-001.pdf) — PDF
+- [SH-GOV-COM-GOVNOM-001](../../legal/full-text/editions/SH-GOV-COM-GOVNOM-001.pdf) — PDF
+- [SH-GOV-COM-TECHOPS-001](../../legal/full-text/editions/SH-GOV-COM-TECHOPS-001.pdf) — PDF
+- [SH-GOV-ESS-001](../../legal/full-text/editions/SH-GOV-ESS-001.pdf) — PDF
+- [SH-IND-ARU-CLOSE-001](../../legal/full-text/editions/SH-IND-ARU-CLOSE-001.pdf) — PDF
+- [SH-IND-ARU-DD-001](../../legal/full-text/editions/SH-IND-ARU-DD-001.pdf) — PDF
+- [SH-IND-ARU-HR-001](../../legal/full-text/editions/SH-IND-ARU-HR-001.pdf) — PDF
+- [SH-IND-ARU-LOI-001](../../legal/full-text/editions/SH-IND-ARU-LOI-001.pdf) — PDF
+- [SH-IND-ARU-SPA-001](../../legal/full-text/editions/SH-IND-ARU-SPA-001.pdf) — PDF
+- [SH-IND-ARU-TAX-001](../../legal/full-text/editions/SH-IND-ARU-TAX-001.pdf) — PDF
+- [SH-IND-COR-001](../../legal/full-text/editions/SH-IND-COR-001.pdf) — PDF
+- [SH-IND-DR-001](../../legal/full-text/editions/SH-IND-DR-001.pdf) — PDF
+- [SH-IND-FIN-DRV-001](../../legal/full-text/editions/SH-IND-FIN-DRV-001.pdf) — PDF
+- [SH-IND-FIN-TXN-001](../../legal/full-text/editions/SH-IND-FIN-TXN-001.pdf) — PDF
+- [SH-IND-HR-001](../../legal/full-text/editions/SH-IND-HR-001.pdf) — PDF
+- [SH-IND-IC-001](../../legal/full-text/editions/SH-IND-IC-001.pdf) — PDF
+- [SH-IND-IC-PRC-001](../../legal/full-text/editions/SH-IND-IC-PRC-001.pdf) — PDF
+- [SH-IND-RW-TXN-001](../../legal/full-text/editions/SH-IND-RW-TXN-001.pdf) — PDF
+- [SH-IND-SAF-001](../../legal/full-text/editions/SH-IND-SAF-001.pdf) — PDF
+- [SH-J2-PPL-20260910](../../legal/full-text/editions/SH-J2-PPL-20260910.pdf) — PDF
+- [SH-LEGAL-ADV-001](../../legal/full-text/editions/SH-LEGAL-ADV-001.pdf) — PDF
+- [SH-PNC-001](../../legal/full-text/editions/SH-PNC-001.pdf) — PDF
+- [SH-PS-RW-TOR-001](../../legal/full-text/editions/SH-PS-RW-TOR-001.pdf) — PDF
+- [SH-RT-CONTRACT-001](../../legal/full-text/editions/SH-RT-CONTRACT-001.pdf) — PDF
+- [SH-RT-DEC-001](../../legal/full-text/editions/SH-RT-DEC-001.pdf) — PDF
+- [SH-RT-DEED-001](../../legal/full-text/editions/SH-RT-DEED-001.pdf) — PDF
+- [SH-RT-FINANCE-001](../../legal/full-text/editions/SH-RT-FINANCE-001.pdf) — PDF
+
+## `docs/legal/full-text/qa/commercial-tax`
+
+- [Commercial and accounting-tax visual review](../../legal/full-text/qa/commercial-tax/REVIEW.md) — MD
+
+## `docs/legal/full-text/qa/corporate-workforce`
+
+- [Corporate and workforce edition review](../../legal/full-text/qa/corporate-workforce/README.md) — MD
+
+## `docs/legal/gap-instruments`
+
+- [Draft instrument index](../../legal/gap-instruments/PACKAGE_INDEX.md) — MD
+- [Case walkthroughs, reconciliations and decision import](../../legal/gap-instruments/PRACTICAL_WORK.md) — MD
+- [Legal gap instruments — draft review](../../legal/gap-instruments/README.md) — MD
+- [Seventeen legal gap packages — drafting and validation record](../../legal/gap-instruments/RESULTS.md) — MD
+- [Legal review bundle releases](../../legal/gap-instruments/REVIEW_RELEASES.md) — MD
+- [Review, trace and use the legal documents](../../legal/gap-instruments/REVIEW_WORKFLOW.md) — MD
+- [Comparing legal draft revisions](../../legal/gap-instruments/revision-policy.md) — MD
+
+## `docs/legal/gap-instruments/accounting`
+
+- [Contract clauses and accounting evidence](../../legal/gap-instruments/accounting/LINKS.md) — MD
+- [Contract clauses and accounting evidence](../../legal/gap-instruments/accounting/README.md) — MD
+- [links](../../legal/gap-instruments/accounting/links.xlsx) — XLSX
+
+## `docs/legal/gap-instruments/case-briefs`
+
+- [Owner approval — close and evidence-review tranche](../../legal/gap-instruments/case-briefs/ACCEPTANCE.md) — MD
+- [Choose a case and start working](../../legal/gap-instruments/case-briefs/README.md) — MD
+- [Account for the ARU acquisition](../../legal/gap-instruments/case-briefs/SH-CASE-ARU-01.md) — MD
+- [SH-CASE-ARU-01](../../legal/gap-instruments/case-briefs/SH-CASE-ARU-01.pdf) — PDF
+- [Close one ARU reporting period](../../legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.md) — MD
+- [SH-CASE-CLOSE-01](../../legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.pdf) — PDF
+- [Resolve a disputed Foundry Field invoice](../../legal/gap-instruments/case-briefs/SH-CASE-FF-01.md) — MD
+- [SH-CASE-FF-01](../../legal/gap-instruments/case-briefs/SH-CASE-FF-01.pdf) — PDF
+- [Practice five separate reconciliations](../../legal/gap-instruments/case-briefs/SH-CASE-RECON-01.md) — MD
+- [SH-CASE-RECON-01](../../legal/gap-instruments/case-briefs/SH-CASE-RECON-01.pdf) — PDF
+- [Trace the Red Wash closure obligation](../../legal/gap-instruments/case-briefs/SH-CASE-RW-01.md) — MD
+- [SH-CASE-RW-01](../../legal/gap-instruments/case-briefs/SH-CASE-RW-01.pdf) — PDF
+
+## `docs/legal/gap-instruments/case-briefs/qa`
+
+- [Independent agent cold-start review — ARU January 2027](../../legal/gap-instruments/case-briefs/qa/COLD_START.md) — MD
+
+## `docs/legal/gap-instruments/case-briefs/qa/cold-start`
+
+- [completed](../../legal/gap-instruments/case-briefs/qa/cold-start/completed.xlsx) — XLSX
+- [evidence-update-corrected](../../legal/gap-instruments/case-briefs/qa/cold-start/evidence-update-corrected.xlsx) — XLSX
+
+## `docs/legal/gap-instruments/case-briefs/qa/cold-start/evidence-proposal`
+
+- [Proposed evidence events](../../legal/gap-instruments/case-briefs/qa/cold-start/evidence-proposal/PROPOSAL.md) — MD
+- [tracker](../../legal/gap-instruments/case-briefs/qa/cold-start/evidence-proposal/tracker.xlsx) — XLSX
+
+## `docs/legal/gap-instruments/case-briefs/qa/cold-start/history-before-context-refresh`
+
+- [evidence-update-corrected](../../legal/gap-instruments/case-briefs/qa/cold-start/history-before-context-refresh/evidence-update-corrected.xlsx) — XLSX
+
+## `docs/legal/gap-instruments/case-briefs/qa/cold-start/history-before-context-refresh/evidence-proposal`
+
+- [Proposed evidence events](../../legal/gap-instruments/case-briefs/qa/cold-start/history-before-context-refresh/evidence-proposal/PROPOSAL.md) — MD
+- [tracker](../../legal/gap-instruments/case-briefs/qa/cold-start/history-before-context-refresh/evidence-proposal/tracker.xlsx) — XLSX
+
+## `docs/legal/gap-instruments/decision-import`
+
+- [Import a completed decision workbook](../../legal/gap-instruments/decision-import/README.md) — MD
+
+## `docs/legal/gap-instruments/dependencies`
+
+- [Pinned review dependency](../../legal/gap-instruments/dependencies/README.md) — MD
+
+## `docs/legal/gap-instruments/dependency-successors`
+
+- [Historical legal dependency: accepted Klein/Fort successor](../../legal/gap-instruments/dependency-successors/README.md) — MD
+
+## `docs/legal/gap-instruments/editions`
+
+- [advisory-contracts](../../legal/gap-instruments/editions/advisory-contracts.pdf) — PDF
+- [advisory-contracts](../../legal/gap-instruments/editions/advisory-contracts.xlsx) — XLSX
+- [billing](../../legal/gap-instruments/editions/billing.pdf) — PDF
+- [billing](../../legal/gap-instruments/editions/billing.xlsx) — XLSX
+- [carry](../../legal/gap-instruments/editions/carry.pdf) — PDF
+- [carry](../../legal/gap-instruments/editions/carry.xlsx) — XLSX
+- [colo](../../legal/gap-instruments/editions/colo.pdf) — PDF
+- [colo](../../legal/gap-instruments/editions/colo.xlsx) — XLSX
+- [debt-liens](../../legal/gap-instruments/editions/debt-liens.pdf) — PDF
+- [debt-liens](../../legal/gap-instruments/editions/debt-liens.xlsx) — XLSX
+- [financing-documents](../../legal/gap-instruments/editions/financing-documents.pdf) — PDF
+- [financing-documents](../../legal/gap-instruments/editions/financing-documents.xlsx) — XLSX
+- [formations](../../legal/gap-instruments/editions/formations.pdf) — PDF
+- [formations](../../legal/gap-instruments/editions/formations.xlsx) — XLSX
+- [host-rights](../../legal/gap-instruments/editions/host-rights.pdf) — PDF
+- [host-rights](../../legal/gap-instruments/editions/host-rights.xlsx) — XLSX
+- [land](../../legal/gap-instruments/editions/land.pdf) — PDF
+- [land](../../legal/gap-instruments/editions/land.xlsx) — XLSX
+- [mark-clearance](../../legal/gap-instruments/editions/mark-clearance.pdf) — PDF
+- [mark-clearance](../../legal/gap-instruments/editions/mark-clearance.xlsx) — XLSX
+- [rw-chronology](../../legal/gap-instruments/editions/rw-chronology.pdf) — PDF
+- [rw-chronology](../../legal/gap-instruments/editions/rw-chronology.xlsx) — XLSX
+- [rw-title](../../legal/gap-instruments/editions/rw-title.pdf) — PDF
+- [rw-title](../../legal/gap-instruments/editions/rw-title.xlsx) — XLSX
+- [tax-billing](../../legal/gap-instruments/editions/tax-billing.pdf) — PDF
+- [tax-billing](../../legal/gap-instruments/editions/tax-billing.xlsx) — XLSX
+- [tax-filing](../../legal/gap-instruments/editions/tax-filing.pdf) — PDF
+- [tax-filing](../../legal/gap-instruments/editions/tax-filing.xlsx) — XLSX
+- [tenure](../../legal/gap-instruments/editions/tenure.pdf) — PDF
+- [tenure](../../legal/gap-instruments/editions/tenure.xlsx) — XLSX
+- [uranium-custody](../../legal/gap-instruments/editions/uranium-custody.pdf) — PDF
+- [uranium-custody](../../legal/gap-instruments/editions/uranium-custody.xlsx) — XLSX
+- [workforce](../../legal/gap-instruments/editions/workforce.pdf) — PDF
+- [workforce](../../legal/gap-instruments/editions/workforce.xlsx) — XLSX
+
+## `docs/legal/gap-instruments/evidence-tracking`
+
+- [Evidence request follow-through](../../legal/gap-instruments/evidence-tracking/README.md) — MD
+- [tracker](../../legal/gap-instruments/evidence-tracking/tracker.xlsx) — XLSX
+
+## `docs/legal/gap-instruments/period-close`
+
+- [ARU Group — January 2027 period close](../../legal/gap-instruments/period-close/README.md) — MD
+- [Public worked close — ARU Group, January 2027](../../legal/gap-instruments/period-close/WORKED.md) — MD
+- [blank](../../legal/gap-instruments/period-close/blank.xlsx) — XLSX
+- [worked](../../legal/gap-instruments/period-close/worked.xlsx) — XLSX
+
+## `docs/legal/gap-instruments/practice`
+
+- [Public worked legal and accounting practice](../../legal/gap-instruments/practice/README.md) — MD
+
+## `docs/legal/gap-instruments/practice/acquisition`
+
+- [ARU acquisition accounting](../../legal/gap-instruments/practice/acquisition/TASK.md) — MD
+- [ARU acquisition accounting](../../legal/gap-instruments/practice/acquisition/WORKED.md) — MD
+- [blank](../../legal/gap-instruments/practice/acquisition/blank.xlsx) — XLSX
+- [worked](../../legal/gap-instruments/practice/acquisition/worked.xlsx) — XLSX
+
+## `docs/legal/gap-instruments/practice/debt`
+
+- [ARU debt reconciliation](../../legal/gap-instruments/practice/debt/TASK.md) — MD
+- [ARU debt reconciliation](../../legal/gap-instruments/practice/debt/WORKED.md) — MD
+- [blank](../../legal/gap-instruments/practice/debt/blank.xlsx) — XLSX
+- [worked](../../legal/gap-instruments/practice/debt/worked.xlsx) — XLSX
+
+## `docs/legal/gap-instruments/practice/legal-due-diligence`
+
+- [Taylor–Red Wash legal due diligence](../../legal/gap-instruments/practice/legal-due-diligence/TASK.md) — MD
+- [Taylor–Red Wash legal due diligence](../../legal/gap-instruments/practice/legal-due-diligence/WORKED.md) — MD
+- [blank](../../legal/gap-instruments/practice/legal-due-diligence/blank.xlsx) — XLSX
+- [worked](../../legal/gap-instruments/practice/legal-due-diligence/worked.xlsx) — XLSX
+
+## `docs/legal/gap-instruments/practice/revenue-dispute`
+
+- [Foundry Field revenue and credit dispute](../../legal/gap-instruments/practice/revenue-dispute/TASK.md) — MD
+- [Foundry Field revenue and credit dispute](../../legal/gap-instruments/practice/revenue-dispute/WORKED.md) — MD
+- [blank](../../legal/gap-instruments/practice/revenue-dispute/blank.xlsx) — XLSX
+- [worked](../../legal/gap-instruments/practice/revenue-dispute/worked.xlsx) — XLSX
+
+## `docs/legal/gap-instruments/qa`
+
+- [Exact-artifact visual QA](../../legal/gap-instruments/qa/README.md) — MD
+
+## `docs/legal/gap-instruments/reconciliations`
+
+- [Reconciliation practice](../../legal/gap-instruments/reconciliations/README.md) — MD
+- [Public worked reconciliations](../../legal/gap-instruments/reconciliations/WORKED.md) — MD
+- [blank](../../legal/gap-instruments/reconciliations/blank.xlsx) — XLSX
+- [worked](../../legal/gap-instruments/reconciliations/worked.xlsx) — XLSX
+
+## `docs/legal/gap-instruments/review-support`
+
+- [Consolidated review decisions](../../legal/gap-instruments/review-support/DECISIONS.md) — MD
+- [decisions](../../legal/gap-instruments/review-support/decisions.xlsx) — XLSX
+
+## `docs/legal/gap-instruments/review-support/qa`
+
+- [Review-tool quality record](../../legal/gap-instruments/review-support/qa/README.md) — MD
+
+## `docs/legal/gap-instruments/review-support/qa/v4`
+
+- [Legal instrument revision comparison](../../legal/gap-instruments/review-support/qa/v4/PRESERVATION.md) — MD
+
+## `docs/legal/gap-instruments/review-support/qa/v4.2`
+
+- [Legal instrument revision comparison](../../legal/gap-instruments/review-support/qa/v4.2/PRESERVATION.md) — MD
+
+## `docs/legal/gap-instruments/source`
+
+- [Advisory master services agreement and matter schedules](../../legal/gap-instruments/source/advisory-contracts.md) — MD
+- [Foundry Field proposed billing instrument and reconciliation attachment](../../legal/gap-instruments/source/billing.md) — MD
+- [Advisory contractual phantom carry plan — proposed instrument](../../legal/gap-instruments/source/carry.md) — MD
+- [Colocation site-order, acceptance and invoice schedules](../../legal/gap-instruments/source/colo.md) — MD
+- [ARU credit, security and payoff document drafts](../../legal/gap-instruments/source/debt-liens.md) — MD
+- [Harrison Vale and Wolf Ridge subscription and rights drafts](../../legal/gap-instruments/source/financing-documents.md) — MD
+- [Industrial company consents and subscription record drafts](../../legal/gap-instruments/source/formations.md) — MD
+- [Cradle host recovery agreement with Kelly Gang Mining and Demotte schedules](../../legal/gap-instruments/source/host-rights.md) — MD
+- [Northern Nevada land settlement and funding instruction draft](../../legal/gap-instruments/source/land.md) — MD
+- [Sable Harbor Advisory counsel instruction, search record and launch decision form](../../legal/gap-instruments/source/mark-clearance.md) — MD
+- [Red Wash chronology reconciliation and proposed correction instrument](../../legal/gap-instruments/source/rw-chronology.md) — MD
+- [Red Wash supplemental assignment, consent and title-cure escrow instruments](../../legal/gap-instruments/source/rw-title.md) — MD
+- [Foundry Field tax determination and invoice-change workpaper draft](../../legal/gap-instruments/source/tax-billing.md) — MD
+- [ARU election cooperation and filing-status workpaper draft](../../legal/gap-instruments/source/tax-filing.md) — MD
+- [Sacramento, Fort and Bedford proposed site tenure and access instrument](../../legal/gap-instruments/source/tenure.md) — MD
+- [Conditional future Red Wash product custody and carrier agreement](../../legal/gap-instruments/source/uranium-custody.md) — MD
+- [ARU individual retention agreements and Tolman consultancy](../../legal/gap-instruments/source/workforce.md) — MD
+
+## `docs/legal/gap-instruments/source-impact`
+
+- [What needs rechecking when a source changes?](../../legal/gap-instruments/source-impact/README.md) — MD
+
+## `docs/legal/gap-instruments/source-impact/baseline-reconciliation-381e4ae`
+
+- [Baseline reconciliation: CI import portability](../../legal/gap-instruments/source-impact/baseline-reconciliation-381e4ae/DISPOSITION.md) — MD
+- [Source-change impact report](../../legal/gap-instruments/source-impact/baseline-reconciliation-381e4ae/REPORT.md) — MD
+
+## `docs/legal/gap-instruments/source-impact/sample-audit`
+
+- [Source-change impact report](../../legal/gap-instruments/source-impact/sample-audit/REPORT.md) — MD
+
+## `docs/legal/gap-instruments/walkthroughs`
+
+- [Follow a transaction into the books](../../legal/gap-instruments/walkthroughs/README.md) — MD
+- [walkthroughs](../../legal/gap-instruments/walkthroughs/walkthroughs.xlsx) — XLSX
+
+## `docs/legal/host-successor`
+
+- [Demotte Reclamation Services — separate Cradle work-order instrument](../../legal/host-successor/DEMOTTE_B_2026-09-22.md) — MD · [formatted PDF](../../legal/host-successor/publications/SH-HOST-DEMOTTE-B-20260922_v1.0.0.pdf)
+- [Kelly Gang Mining — separate Cradle work-order instrument](../../legal/host-successor/KGM_B_2026-09-22.md) — MD · [formatted PDF](../../legal/host-successor/publications/SH-HOST-KGM-B-20260922_v1.0.0.pdf)
+- [Approved host successor — validation receipt](../../legal/host-successor/VALIDATION.md) — MD
+
+## `docs/legal/host-successor/publications`
+
+- [Cradle host terms — approved alternative B — SH-HOST-B-ADOPTION-20260922_v1.0.0](../../legal/host-successor/publications/SH-HOST-B-ADOPTION-20260922_v1.0.0.pdf) — PDF
+- [Demotte Reclamation Services — separate Cradle work-order instrument — SH-HOST-DEMOTTE-B-20260922_v1.0.0](../../legal/host-successor/publications/SH-HOST-DEMOTTE-B-20260922_v1.0.0.pdf) — PDF
+- [Kelly Gang Mining — separate Cradle work-order instrument — SH-HOST-KGM-B-20260922_v1.0.0](../../legal/host-successor/publications/SH-HOST-KGM-B-20260922_v1.0.0.pdf) — PDF
+
+## `docs/legal/publications`
+
+- [Advisory — synthetic legal implementation — SH-ADVISORY-LEGAL-20260922_v1.0.0](../../legal/publications/SH-ADVISORY-LEGAL-20260922_v1.0.0.pdf) — PDF
+- [ARU — dated security administration completion — SH-ARU-ADMIN-20260922_v1.0.0](../../legal/publications/SH-ARU-ADMIN-20260922_v1.0.0.pdf) — PDF
 
 ## `enterprise/business`
 
@@ -246,11 +643,21 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Tier 1 Advisory policy integration](../../../enterprise/operations/docs/advisory-policy.md) — MD
 - [Commercial operations and contract economics](../../../enterprise/operations/docs/commercial.md) — MD
+- [August 2026 people and operating reconstruction](../../../enterprise/operations/docs/completed-period.md) — MD
 - [Synthetic control execution and evidence](../../../enterprise/operations/docs/controls.md) — MD
 - [Credit and Treasury operating histories](../../../enterprise/operations/docs/credit.md) — MD
 - [Workforce and management development](../../../enterprise/operations/docs/management.md) — MD
 - [Advisory matter operating histories](../../../enterprise/operations/docs/matters.md) — MD
+- [August Pale Sun legal-employer allocation](../../../enterprise/operations/docs/ps-legal-payroll-bridge.md) — MD
 - [Research, captured material and industrial operating detail](../../../enterprise/operations/docs/research.md) — MD
+
+## `enterprise/operations/portal_2027_common_boundary`
+
+- [Prospective 2027 common company boundary](../../../enterprise/operations/portal_2027_common_boundary/README.md) — MD
+
+## `enterprise/operations/portal_2027_reference_controls`
+
+- [Q1 2027 local reference-controls case (provisional)](../../../enterprise/operations/portal_2027_reference_controls/README.md) — MD
 
 ## `enterprise/operations/publications`
 
@@ -351,6 +758,10 @@ Generated file inventory. Includes current and historical records; open the sour
 - [False start 2 — Juniper Mesa uranium property — SH-PS-FS-002_v1.0.0](../../../industrial/publications/SH-PS-FS-002_v1.0.0.pdf) — PDF
 - [False start 3 — Salt Rim and the expert-deference failure — SH-PS-FS-003_v1.0.0](../../../industrial/publications/SH-PS-FS-003_v1.0.0.pdf) — PDF
 - [Uranium thread: the original Problem Book — SH-PS-JO-001_v1.0.0](../../../industrial/publications/SH-PS-JO-001_v1.0.0.pdf) — PDF
+
+## `industrial/successors/rail_2026_09_29`
+
+- [September 29 railway operating-source successor](../../../industrial/successors/rail_2026_09_29/README.md) — MD
 
 ## `industrial/transaction`
 

@@ -1,0 +1,19 @@
+{
+  "id": "SH-LEGAL-VALIDATOR-SUCCESSOR-2026-09-22",
+  "state": "PENDING_PR168_ACCEPTANCE",
+  "scope": "Exact validation-code successor for patched toolchain provenance. Original review receipt, sources, PDF/artwork and acceptance hashes remain immutable. This is maintenance review, not a new design approval.",
+  "entries": [
+    {
+      "path": "tools/legal_gaps/validate.py",
+      "before_sha256": "e8d36db3f769429893d0815c864cc8c76ab2cd3c5b19ff92ed975af525ea4d83",
+      "after_sha256": "300f4562494342b46555a0b5d1feedc3ba5050902e577f19bb9b50947de5fae6",
+      "baseline_snapshot": "docs/legal/gap-instruments/dependency-successors/validate.py.before-PR168.txt"
+    },
+    {
+      "path": "tools/legal_gaps/validate_close_review_v43.py",
+      "before_sha256": "a531963dd486973b09729ec012febfb42816d1c430b78e15f3d434a969c57f2c",
+      "after_sha256": "e7de94bf26047f501f61dc89025f0814e8a015acea2410c436d860e218bbebe9",
+      "baseline_snapshot": "docs/legal/gap-instruments/dependency-successors/validate_close_review_v43.py.before-PR168.txt"
+    }
+  ]
+}

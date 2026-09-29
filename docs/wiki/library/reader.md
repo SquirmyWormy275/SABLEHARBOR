@@ -22,6 +22,7 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `docs/reader/overnight`
 
 - [Overnight accounting, legal and reader delivery](../../reader/overnight/RESULTS.md) — MD
+- [Accounting and legal design review](../../reader/overnight/REVIEW.md) — MD
 - [Overnight reader and evidence work](../../reader/overnight/START.md) — MD
 
 ## `docs/reader/reconciliation`
@@ -49,13 +50,16 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `docs/reader/usability`
 
 - [Practical reading routes: verification record](../../reader/usability/README.md) — MD
+- [Reader task checks](../../reader/usability/REVIEW_2026-09-13.md) — MD
 
 ## `docs/wiki`
 
 - [Reading glossary](../Glossary.md) — MD
 - [Explore Sable Harbor](../Home.md) — MD
+- [Locations and facilities](../Locations.md) — MD
 - [Open questions](../Open-Questions.md) — MD
-- [Wiki reading layer](../README.md) — MD
+- [Wiki source and publishing](../README.md) — MD
+- [Records and decisions](../Records-and-Decisions.md) — MD
 - [Start here](../Start-Here.md) — MD
 
 ## `docs/wiki/businesses`

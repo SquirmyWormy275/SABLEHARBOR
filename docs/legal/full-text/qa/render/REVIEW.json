@@ -1,0 +1,723 @@
+{
+  "status": "MANUAL_REVIEW_PASS",
+  "records": [
+    {
+      "id": "SH-IND-RW-TXN-001",
+      "pdf_sha256": "7b58c7fed46556ebfe9258ca01414494a353672015e9fab1b1d986ef991708b5",
+      "html_sha256": "05729462e9d09c1d6730be5ff07e222df0e37a6b7666dddf27ba5871c43d7ef3",
+      "pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/render/SH-IND-RW-TXN-001-page-01.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/render/SH-IND-RW-TXN-001-page-02.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        }
+      ],
+      "views": [
+        {
+          "width": 1280,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/SH-IND-RW-TXN-001-html-1280.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/SH-IND-RW-TXN-001-html-390.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        }
+      ]
+    },
+    {
+      "id": "SH-IND-ARU-LOI-001",
+      "pdf_sha256": "53f2ea6210e1672d7fac21ae689e18334058ca4b1ad389a564e77d0764c10b99",
+      "html_sha256": "baf8e654816a74b49d6c32ab4e5cd8c2e2b01ee0ccdd6e2eb67d24826e6f656c",
+      "pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-LOI-001-page-01.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-LOI-001-page-02.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        }
+      ],
+      "views": [
+        {
+          "width": 1280,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-LOI-001-html-1280.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-LOI-001-html-390.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        }
+      ]
+    },
+    {
+      "id": "SH-IND-ARU-DD-001",
+      "pdf_sha256": "2f3138cbf0a160d6eb0d30a06b2389e7009e9ff6f42caa7244c2974adfde8f3f",
+      "html_sha256": "c8d3142859b4eadd08a5ea7123f22009b50a4e72916994c25f0307c918449a34",
+      "pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-DD-001-page-01.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-DD-001-page-02.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 3,
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-DD-001-page-03.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        }
+      ],
+      "views": [
+        {
+          "width": 1280,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-DD-001-html-1280.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-DD-001-html-390.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        }
+      ]
+    },
+    {
+      "id": "SH-IND-ARU-SPA-001",
+      "pdf_sha256": "52d89a9277c9256f3e372d963b5e69d4528cc25bab6856e199c90c24bc40afcd",
+      "html_sha256": "3b4b48b4717673465da04e713ff9dfac8936b82e275447040c970afe906d7ece",
+      "pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-SPA-001-page-01.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-SPA-001-page-02.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        }
+      ],
+      "views": [
+        {
+          "width": 1280,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-SPA-001-html-1280.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-SPA-001-html-390.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        }
+      ]
+    },
+    {
+      "id": "SH-IND-ARU-CLOSE-001",
+      "pdf_sha256": "ec357cecda12dae00f2fd2faf93119e9d73b7cf8a559e9728db96505dc3b4845",
+      "html_sha256": "deb631e6beb4b167dcf98733b5f6c038a8d8ca7bc1d6b4aef6bde3ada1549088",
+      "pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-CLOSE-001-page-01.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-CLOSE-001-page-02.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 3,
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-CLOSE-001-page-03.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        }
+      ],
+      "views": [
+        {
+          "width": 1280,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-CLOSE-001-html-1280.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/SH-IND-ARU-CLOSE-001-html-390.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        }
+      ]
+    },
+    {
+      "id": "LEGAL-SOURCE-16BD06943F32",
+      "pdf_sha256": "5ddf4b3f540a1d4dcc2e040846cedb76d74732b97c7b79ce59cac4cb917e5594",
+      "html_sha256": "2c9d76ef2114833a9813a760b31bc64c7ca27b32a72de66af6bbd3c49276f859",
+      "pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-16BD06943F32-page-01.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-16BD06943F32-page-02.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 3,
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-16BD06943F32-page-03.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 4,
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-16BD06943F32-page-04.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 5,
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-16BD06943F32-page-05.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        }
+      ],
+      "views": [
+        {
+          "width": 1280,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-16BD06943F32-html-1280.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-16BD06943F32-html-390.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        }
+      ]
+    },
+    {
+      "id": "SH-IND-DR-001",
+      "pdf_sha256": "941000830565527f5e1cd64e6e9dfe659da905e3b0e3a7f3b702d7144125efc9",
+      "html_sha256": "857d4044257a9c75d0808059d8f864ddfb0b1286c6a794031378d53b5d699481",
+      "pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/render/SH-IND-DR-001-page-01.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/render/SH-IND-DR-001-page-02.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 3,
+          "image": "docs/legal/full-text/qa/render/SH-IND-DR-001-page-03.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 4,
+          "image": "docs/legal/full-text/qa/render/SH-IND-DR-001-page-04.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 5,
+          "image": "docs/legal/full-text/qa/render/SH-IND-DR-001-page-05.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        }
+      ],
+      "views": [
+        {
+          "width": 1280,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/SH-IND-DR-001-html-1280.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/SH-IND-DR-001-html-390.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        }
+      ]
+    },
+    {
+      "id": "SH-PS-RW-TOR-001",
+      "pdf_sha256": "3a9cddaa1bec2594e651cc26565391229dc70ebe5546fb7903a788de745f2655",
+      "html_sha256": "967998229d622558c12b09f975885df2659740dbb8dccd10e210f5da80d10114",
+      "pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/render/SH-PS-RW-TOR-001-page-01.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/render/SH-PS-RW-TOR-001-page-02.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 3,
+          "image": "docs/legal/full-text/qa/render/SH-PS-RW-TOR-001-page-03.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 4,
+          "image": "docs/legal/full-text/qa/render/SH-PS-RW-TOR-001-page-04.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 5,
+          "image": "docs/legal/full-text/qa/render/SH-PS-RW-TOR-001-page-05.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 6,
+          "image": "docs/legal/full-text/qa/render/SH-PS-RW-TOR-001-page-06.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 7,
+          "image": "docs/legal/full-text/qa/render/SH-PS-RW-TOR-001-page-07.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        }
+      ],
+      "views": [
+        {
+          "width": 1280,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/SH-PS-RW-TOR-001-html-1280.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/SH-PS-RW-TOR-001-html-390.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        }
+      ]
+    },
+    {
+      "id": "SH-CRD-CLOSEOUT-20260906",
+      "pdf_sha256": "8c462186bbcad9665a1f66b7c4cfdbb8e3a129c6d437166bea0695318a342ad3",
+      "html_sha256": "1b8174497dd51baa0c6b4c43afd2474574cb05b53f4ab48eb70c03caf9728ca8",
+      "pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/render/SH-CRD-CLOSEOUT-20260906-page-01.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/render/SH-CRD-CLOSEOUT-20260906-page-02.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 3,
+          "image": "docs/legal/full-text/qa/render/SH-CRD-CLOSEOUT-20260906-page-03.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 4,
+          "image": "docs/legal/full-text/qa/render/SH-CRD-CLOSEOUT-20260906-page-04.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 5,
+          "image": "docs/legal/full-text/qa/render/SH-CRD-CLOSEOUT-20260906-page-05.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 6,
+          "image": "docs/legal/full-text/qa/render/SH-CRD-CLOSEOUT-20260906-page-06.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 7,
+          "image": "docs/legal/full-text/qa/render/SH-CRD-CLOSEOUT-20260906-page-07.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        }
+      ],
+      "views": [
+        {
+          "width": 1280,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/SH-CRD-CLOSEOUT-20260906-html-1280.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/SH-CRD-CLOSEOUT-20260906-html-390.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        }
+      ]
+    },
+    {
+      "id": "SH-CANON-WIL-KLEIN-20260906-001",
+      "pdf_sha256": "67b7bc4e081da0ead831f385c926fa7f9b9015fa8a94ce44911e6e8f31802aef",
+      "html_sha256": "a60c23532c01c2f757e8700c207a96946a067f9ba2178187eb8ec051b981e848",
+      "pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/render/SH-CANON-WIL-KLEIN-20260906-001-page-01.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/render/SH-CANON-WIL-KLEIN-20260906-001-page-02.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 3,
+          "image": "docs/legal/full-text/qa/render/SH-CANON-WIL-KLEIN-20260906-001-page-03.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 4,
+          "image": "docs/legal/full-text/qa/render/SH-CANON-WIL-KLEIN-20260906-001-page-04.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 5,
+          "image": "docs/legal/full-text/qa/render/SH-CANON-WIL-KLEIN-20260906-001-page-05.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        }
+      ],
+      "views": [
+        {
+          "width": 1280,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/SH-CANON-WIL-KLEIN-20260906-001-html-1280.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/SH-CANON-WIL-KLEIN-20260906-001-html-390.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        }
+      ]
+    },
+    {
+      "id": "SH-RT-DEED-001",
+      "pdf_sha256": "5d618a620817894a1c9dccdeee6136593a4934890ba69e73592eb97b71c62ef6",
+      "html_sha256": "d55e892c7b8048c7c835cb7a8d67094ede02deea89ff18b004d09a805bb428db",
+      "pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/render/SH-RT-DEED-001-page-01.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/render/SH-RT-DEED-001-page-02.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        }
+      ],
+      "views": [
+        {
+          "width": 1280,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/SH-RT-DEED-001-html-1280.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/SH-RT-DEED-001-html-390.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        }
+      ]
+    },
+    {
+      "id": "SH-RT-DEC-001",
+      "pdf_sha256": "0e3ad815e65931905c326d5a567293436d1e7dccb77e60b2513eecc304cee563",
+      "html_sha256": "6a56e358fce74d29fef132a3886efb652d50887da904b01a4b8d519fd35620f3",
+      "pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/render/SH-RT-DEC-001-page-01.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/render/SH-RT-DEC-001-page-02.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 3,
+          "image": "docs/legal/full-text/qa/render/SH-RT-DEC-001-page-03.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        }
+      ],
+      "views": [
+        {
+          "width": 1280,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/SH-RT-DEC-001-html-1280.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/SH-RT-DEC-001-html-390.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        }
+      ]
+    },
+    {
+      "id": "LEGAL-SOURCE-920F33E127C0",
+      "pdf_sha256": "7c158fd35f8b93b8cd3b2d1a3f98a6508c578e32179e9b04529250208f7767ff",
+      "html_sha256": "6f683ba2d69cf67a06229a653a42a715ad1410be674290604bd68915cbb9968a",
+      "pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-920F33E127C0-page-01.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-920F33E127C0-page-02.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 3,
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-920F33E127C0-page-03.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        }
+      ],
+      "views": [
+        {
+          "width": 1280,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-920F33E127C0-html-1280.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-920F33E127C0-html-390.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        }
+      ]
+    },
+    {
+      "id": "LEGAL-SOURCE-A709ECAC08C4",
+      "pdf_sha256": "2a6aca2e9eccf2d063ba112cd8572cb5c89b9981d6863d9150f642d8aeac1c46",
+      "html_sha256": "eace372c964764f864dd60b029a550f4c54933dc1b93683ae6ee64e448c2643f",
+      "pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-A709ECAC08C4-page-01.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-A709ECAC08C4-page-02.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 3,
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-A709ECAC08C4-page-03.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        }
+      ],
+      "views": [
+        {
+          "width": 1280,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-A709ECAC08C4-html-1280.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-A709ECAC08C4-html-390.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        }
+      ]
+    },
+    {
+      "id": "LEGAL-SOURCE-273909FD1A3E",
+      "pdf_sha256": "7b09dffca97c7933df7d2dee5f405fb925fab1f7d229433d500019023bb6fa54",
+      "html_sha256": "ecd16359e1e9e9fe9060e16051d455ca4490bfd5239b5065313caba681850ae3",
+      "pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-273909FD1A3E-page-01.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-273909FD1A3E-page-02.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        },
+        {
+          "page": 3,
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-273909FD1A3E-page-03.png",
+          "result": "PASS",
+          "finding": "Read at 1.5x PDF resolution: complete legible page, aligned tables and headings, no clipping or orphan word."
+        }
+      ],
+      "views": [
+        {
+          "width": 1280,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-273909FD1A3E-html-1280.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "broken": 0,
+          "image": "docs/legal/full-text/qa/render/LEGAL-SOURCE-273909FD1A3E-html-390.png",
+          "result": "PASS",
+          "finding": "Desktop/mobile viewport inspected; source metadata and body readable. Wider mobile tables scroll within the page."
+        }
+      ]
+    }
+  ],
+  "reviewer": "legal_full_render",
+  "method": "Every PDF page opened at 1.5x via view_image; all 30 desktop/mobile first-viewport captures inspected; complete PDF reading supplies body-content/layout review. Independent validator checks all source blocks and full document bounds.",
+  "counts": {
+    "sources": 15,
+    "pdf_pages": 55,
+    "html_viewports": 30
+  },
+  "corrections": [
+    "Preserved source metadata soft line breaks.",
+    "Removed non-source provenance-only PDF tail pages; provenance remains in HTML and manifests.",
+    "Kept clauses together to remove orphan words; widened table cells and used ordinary word wrapping.",
+    "Mobile tables retain readable columns with internal horizontal scrolling."
+  ]
+}

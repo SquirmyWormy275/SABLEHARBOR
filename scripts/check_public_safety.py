@@ -9,12 +9,20 @@ from sable_harbor.exports.safety import scan_generated_artifacts
 FORBIDDEN = ("ghp_", "github_pat_", "sk-proj-", "BEGIN PRIVATE KEY")
 MAX_BYTES = 10 * 1024 * 1024
 ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
-    # September13 locally reviewed successor; owner visual acceptance remains separate.
+    # Tracked convenience catalog retained by GENERATED_RECORDS_LIFECYCLE.md.
+    # September 29 portal/main integration retains all 148 publication pairs
+    # and adds the portal source index without broadening the size policy.
+    # Exact bytes only; later drift requires another row and hash review.
+    Path("docs/internal/institutional_catalog.sqlite3"): (
+        13475840,
+        "2fb1f7b2a0e23b6b3dca9718d2b01e37306a1e95c13033226f6bb1c5bb32411a",
+    ),
+    # September 13 locally reviewed organization-chart successor; owner visual
+    # acceptance remains separate. Preserve the previous version in history.
     Path("docs/organization/assets/current/Sable-Harbor-Organization-Charts.pdf"): (
         12419501,
         "7cf4607406ed56bd7cafdbcaecd136ba53ba7df21706f2fa7080056f908fcdf9",
     ),
-    # Byte-identical September10 predecessor preserved by the new successor.
     Path("docs/organization/history/v1.1.0/Sable-Harbor-Organization-Charts.pdf"): (
         12412796,
         "352dfa4f1247f6089d340b19940f75758a666dce14f239fb38b1c2a300aaa38b",
@@ -24,11 +32,11 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
         12421998,
         "c1589fbd0c0bfcb2a823cc4e582b580510f3d1408a933ddb09188aa217f62665",
     ),
-    # Reviewed PR119 runtime successor; public references and synthetic parcel.
-    # Native QGIS and source/geometry CI: run 34641354582 at 07bda1b.
+    # PR164 delegated site decisions and final public geographic source review.
+    # All 60 original spatial tables preserve their rows; three screened footprints form one new layer.
     Path("geospatial/master/sable_harbor_master_v0.1.gpkg"): (
-        40 * 1024 * 1024,
-        "dbad2c303e9b325a7e98da96c278f619c639ffe51e6514e39be9104c819f75d8",
+        40099840,
+        "2749c22b257be1519713b3e6d4011ad1f9b6a2483c509f152ae505b00739f688",
     ),
     # Byte-identical preservation copy of the already approved public database below.
     Path("geospatial/sources/canon_snapshot/blackridge/data/public/databases/blackridge_m00_v0.1.0.sqlite3"): (

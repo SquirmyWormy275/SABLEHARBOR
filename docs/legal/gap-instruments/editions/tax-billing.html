@@ -1,0 +1,209 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Foundry Field tax determination and invoice-change workpaper draft</title><style>@page { size: Letter; margin: 0.68in 0.66in 0.68in; }
+* { box-sizing: border-box; }
+html { color: #20282c; background: #edf0f1; }
+body { margin: 0; font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.43; }
+.edition-header { display: flex; justify-content: space-between; align-items: center; gap: 24px; border-bottom: 2px solid #26383d; padding-bottom: 15px; margin-bottom: 14px; }
+.edition-header img { max-width: 245px; max-height: 65px; object-fit: contain; object-position: left center; }
+.edition-header span { color: #515e63; font-size: 8pt; letter-spacing: 0.8px; text-align: right; }
+.edition-note { padding: 10px 12px; border-left: 3px solid #958367; background: #f6f4ef; font-size: 9pt; line-height: 1.4; margin: 0 0 22px; }
+.edition-note p { margin: 0 0 4px; }
+.edition-note p:last-child { margin: 0; }
+h1 { font-size: 23pt; line-height: 1.15; margin: 0 0 18px; font-weight: 600; }
+h2 { font-size: 15pt; line-height: 1.2; margin: 23px 0 9px; }
+h3 { font-size: 12pt; line-height: 1.3; margin: 18px 0 7px; }
+h4,h5,h6 { font-size: 11pt; margin: 15px 0 6px; }
+h1,h2,h3,h4,h5,h6 { break-after: avoid; overflow-wrap: anywhere; }
+p { margin: 0 0 11px; orphans: 3; widows: 3; }
+li { margin: 0 0 5px; orphans: 2; widows: 2; }
+ul,ol { padding-left: 23px; margin: 8px 0 13px; }
+li > p { margin-bottom: 6px; }
+a { color: #294e60; text-decoration: underline; text-underline-offset: 2px; overflow-wrap: anywhere; }
+code { font-family: 'DejaVu Sans Mono', monospace; font-size: 0.88em; overflow-wrap: anywhere; }
+pre { font-size: 9.5pt; white-space: pre-wrap; overflow-wrap: anywhere; background: #f2f4f4; padding: 10px; border: 1px solid #d8dfe0; }
+blockquote { border-left: 2px solid #929fa4; margin: 12px 0; padding: 0 15px; color: #39464b; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0 17px; table-layout: auto; font-size: 10.5pt; line-height: 1.35; }
+thead { display: table-header-group; }
+tfoot { display: table-footer-group; }
+th { background: #e9eef0; font-weight: 600; text-align: left; }
+th,td { padding: 7px 8px; border-bottom: 1px solid #cbd3d6; vertical-align: top; overflow-wrap: anywhere; }
+tr { break-inside: avoid; }
+hr { border: 0; border-top: 1px solid #cbd3d6; margin: 19px 0; }
+article img { max-width: 100%; height: auto; }
+.source-identity { margin-top: 24px; border-top: 1px solid #b7c1c5; padding-top: 10px; font-size: 8pt; color: #516168; overflow-wrap: anywhere; }
+@media screen { body { max-width: 900px; margin: 24px auto; padding: 48px 54px; background: white; box-shadow: 0 2px 16px #18313b12; } }
+@media screen and (max-width: 600px) { body { margin: 0; padding: 22px 18px; } h1 { font-size: 21pt; } .edition-header { gap: 12px; } .edition-header img { max-width: 55%; } table { display: block; overflow-x: auto; } }
+@media print { html { background: white; } a { text-decoration: none; } }
+/* Source metadata uses Markdown soft line breaks; retain those readable lines. */
+/* Source metadata already uses explicit Markdown hard breaks. */
+th,td { min-width: 5em; }
+/* Provenance remains in the editable HTML and manifest; do not create empty PDF tail pages. */
+@media print { .source-identity { display: none; } }
+
+/* Keep the complete closing paragraph on one page in this formation record. */
+article[data-document-id="SH-IND-COR-001"] > p:last-child { break-inside: avoid; }
+article[data-document-id="SH-IND-HR-001"] th:first-child,
+article[data-document-id="SH-IND-HR-001"] td:first-child { min-width: 8em; }
+/* Chromium does not consistently honor widows/orphans; keep ordinary clauses intact. */
+article p { break-inside: avoid; }
+/* Wrap ordinary table words at spaces; long machine paths retain code wrapping. */
+th,td { overflow-wrap: normal; }
+@media screen and (max-width: 600px) {
+  th,td { min-width: 8em; }
+}
+/* Corporate document standard SH-GOV-DOC-001. */
+.edition-header { border-bottom-color: #C45124; }
+.edition-note { border-left-color: #C45124; background: #F4F1EA; }
+@media screen { body { box-shadow: none; } }
+
+/* Keep reference lists and fillable completion forms intact. */
+.references, .execution-form { break-inside: avoid; }
+</style></head><body>
+<header class="edition-header"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDE2MDAgNTAwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+PHRpdGxlIGlkPSJ0aXRsZSI+U2FibGUgSGFyYm9yIOKAlCBwcmltYXJ5IGhvcml6b250YWw8L3RpdGxlPjxkZXNjIGlkPSJkZXNjIj5JbmRpdmlkdWFsIHByaW1hcnkgaG9yaXpvbnRhbCBsb2dvIGFzc2V0IGZvciBTYWJsZSBIYXJib3IuPC9kZXNjPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDgwLjAwMCwxMTAuMDAwKSBzY2FsZSgyLjMzMzMzMzMzKSI+PHJlY3QgeD0iOCIgeT0iOCIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjIwIiBmaWxsPSIjMTAxMjE0Ii8+PHJlY3QgeD0iOCIgeT0iOCIgd2lkdGg9IjIwIiBoZWlnaHQ9Ijc0IiBmaWxsPSIjMTAxMjE0Ii8+PHBvbHlnb24gcG9pbnRzPSI4LjAwMCw2Mi4wMDAgNzguMDAwLDYyLjAwMCA2OC4wMDAsODIuMDAwIDguMDAwLDgyLjAwMCIgZmlsbD0iIzEwMTIxNCIvPjxyZWN0IHg9IjE2IiB5PSI5MiIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjIwIiBmaWxsPSIjMTAxMjE0Ii8+PHJlY3QgeD0iOTIiIHk9IjM4IiB3aWR0aD0iMjAiIGhlaWdodD0iNzQiIGZpbGw9IiMxMDEyMTQiLz48cG9seWdvbiBwb2ludHM9IjQyLjAwMCwzOC4wMDAgMTEyLjAwMCwzOC4wMDAgMTEyLjAwMCw1OC4wMDAgNTIuMDAwLDU4LjAwMCIgZmlsbD0iIzEwMTIxNCIvPjxyZWN0IHg9IjU0IiB5PSI1NCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIiBmaWxsPSIjQzQ1MTI0Ii8+PC9nPjxnIGZpbGw9IiMxMDEyMTQiPjxwYXRoIGQ9Ik02NTIgLTI0Qzk5MCAtMjQgMTIwOSAxNTIgMTIwOSA0MjBDMTIwOSA2MzMgMTA3MSA3NjIgNzcyIDgzM0w2MTEgODcxQzQwNiA5MjAgMzI2IDk4MiAzMjYgMTA5MEMzMjYgMTIyNSA0NTMgMTMyMCA2MzMgMTMyMEM4MjEgMTMyMCA5NDMgMTIxNSA5NTQgMTA0NEgxMTY5QzExNjAgMTMzNSA5NTcgMTUxNCA2MzYgMTUxNEMzMTYgMTUxNCAxMDUgMTM0MSAxMDUgMTA3OUMxMDUgODczIDIzNyA3NDggNTM4IDY3N0w3MDEgNjM4QzkwOCA1ODkgOTg3IDUyMyA5ODcgNDA4Qzk4NyAyNjMgODU0IDE3MCA2NTIgMTcwQzQyOSAxNzAgMjk4IDI4NiAyOTcgNDgzSDc1Qzc1IDE2OCAyOTUgLTI0IDY1MiAtMjRaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MzAuMDAwLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTE2IDBIMjUyTDM4OCAzODdIOTg5TDExMjEgMEgxMzYyTDgyNSAxNDkwSDU1N1pNNDU1IDU3NiA1NDggODQwQzU4OSA5NjMgNjMyIDEwOTQgNjkyIDEyODdDNzUxIDEwOTQgNzkzIDk2MyA4MzQgODQwTDkyNCA1NzZaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MDguNTExLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTEzNiAwSDcxMEMxMDYyIDAgMTIzOSAxNjYgMTIzOSA0MTlDMTIzOSA2MzEgMTEwMyA3NDggOTMwIDc3MlY3NzRDMTA4NiA4MjIgMTE4MCA5MjcgMTE4MCAxMDk4QzExODAgMTMzNyAxMDAwIDE0OTAgNjkzIDE0OTBIMTM2Wk0zNTYgMTg3VjY2NUg3MDRDOTAxIDY2NSAxMDEzIDU3MSAxMDEzIDQyMEMxMDEzIDI2OCA4OTggMTg3IDY5NiAxODdaTTM1NiA4NDhWMTMwM0g2OTBDODU5IDEzMDMgOTYwIDEyMTUgOTYwIDEwNzVDOTYwIDkzNSA4NTkgODQ4IDY5MCA4NDhaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1OTIuMDMyLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTEzNiAwSDEwNjNWMTk1SDM1OFYxNDkwSDEzNloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDY3MS45NjYsMjgwLjI0MCkgc2NhbGUoMC4wNTI3MzQzOCwtMC4wNTI3MzQzOCkiLz48cGF0aCBkPSJNMTM2IDBIMTEzOFYxOTVIMzU4VjY2M0gxMDgwVjg1NkgzNThWMTI5NUgxMTM4VjE0OTBIMTM2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzQxLjM1NCwyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjxwYXRoIGQ9Ik0xMzYgMEgzNThWNjY1SDEwOTlWMEgxMzIxVjE0OTBIMTA5OVY4NTlIMzU4VjE0OTBIMTM2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODc4LjM5MiwyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjxwYXRoIGQ9Ik0xNiAwSDI1MkwzODggMzg3SDk4OUwxMTIxIDBIMTM2Mkw4MjUgMTQ5MEg1NTdaTTQ1NSA1NzYgNTQ4IDg0MEM1ODkgOTYzIDYzMiAxMDk0IDY5MiAxMjg3Qzc1MSAxMDk0IDc5MyA5NjMgODM0IDg0MEw5MjQgNTc2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTY2LjAyNiwyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjxwYXRoIGQ9Ik0xMzYgMEgzNThWNTY0SDY4OEM2OTEgNTY0IDY5NSA1NjQgNjk4IDU2NEw5OTUgMEgxMjQ1TDkyMyA2MDFDMTEwOSA2NjggMTIyMiA4MTggMTIyMiAxMDI2QzEyMjIgMTMxMSAxMDIyIDE0OTAgNzAzIDE0OTBIMTM2Wk0zNTggNzUzVjEyOThINjkzQzg4NSAxMjk4IDEwMDMgMTE5NCAxMDAzIDEwMjZDMTAwMyA4NTggODg2IDc1MyA2OTQgNzUzWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTA0OS41NDcsMjgwLjI0MCkgc2NhbGUoMC4wNTI3MzQzOCwtMC4wNTI3MzQzOCkiLz48cGF0aCBkPSJNMTM2IDBINzEwQzEwNjIgMCAxMjM5IDE2NiAxMjM5IDQxOUMxMjM5IDYzMSAxMTAzIDc0OCA5MzAgNzcyVjc3NEMxMDg2IDgyMiAxMTgwIDkyNyAxMTgwIDEwOThDMTE4MCAxMzM3IDEwMDAgMTQ5MCA2OTMgMTQ5MEgxMzZaTTM1NiAxODdWNjY1SDcwNEM5MDEgNjY1IDEwMTMgNTcxIDEwMTMgNDIwQzEwMTMgMjY4IDg5OCAxODcgNjk2IDE4N1pNMzU2IDg0OFYxMzAzSDY5MEM4NTkgMTMwMyA5NjAgMTIxNSA5NjAgMTA3NUM5NjAgOTM1IDg1OSA4NDggNjkwIDg0OFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDExMjkuMjcwLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTc2NiAtMjRDMTE2MyAtMjQgMTQ1MiAyODggMTQ1MiA3NDRDMTQ1MiAxMjAyIDExNjMgMTUxNCA3NjYgMTUxNEMzNjkgMTUxNCA4MSAxMjAyIDgxIDc0NEM4MSAyODkgMzY5IC0yNCA3NjYgLTI0Wk03NjYgMTc5QzUwOSAxNzkgMzA0IDM4MSAzMDQgNzQ0QzMwNCAxMTA5IDUwOSAxMzExIDc2NiAxMzExQzEwMjMgMTMxMSAxMjI5IDExMDkgMTIyOSA3NDRDMTIyOSAzODEgMTAyMyAxNzkgNzY2IDE3OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEyMDkuMjA1LDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTEzNiAwSDM1OFY1NjRINjg4QzY5MSA1NjQgNjk1IDU2NCA2OTggNTY0TDk5NSAwSDEyNDVMOTIzIDYwMUMxMTA5IDY2OCAxMjIyIDgxOCAxMjIyIDEwMjZDMTIyMiAxMzExIDEwMjIgMTQ5MCA3MDMgMTQ5MEgxMzZaTTM1OCA3NTNWMTI5OEg2OTNDODg1IDEyOTggMTAwMyAxMTk0IDEwMDMgMTAyNkMxMDAzIDg1OCA4ODYgNzUzIDY5NCA3NTNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMzAwLjg0NywyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjwvZz48cmVjdCB4PSI0MzAiIHk9IjMwNi4yNCIgd2lkdGg9IjkzOS43NzA4NTkzNzQ5OTk5IiBoZWlnaHQ9IjQiIGZpbGw9IiNDNDUxMjQiLz48L3N2Zz4=" alt="Sable Harbor"><span>LEGAL &amp; CORPORATE RECORDS<br>DRAFT INSTRUMENT · 12 SEPTEMBER 2026</span></header>
+<aside class="edition-note"><strong>Draft for exact-file review</strong><br>Proposed language. Accepted source facts retain their original status. No execution, filing, payment or clearance is established by this edition.</aside>
+<article id="source-content"><h1>Foundry Field tax determination and invoice-change workpaper draft</h1>
+<p><strong>Document ID:</strong> SH-LEGAL-DRAFT-TAX-BILLING<br />
+<strong>Gap:</strong> LEGAL-GAP-TAX-BILLING<br />
+<strong>Version:</strong> 0.1.0<br />
+<strong>Prepared:</strong> 2026-09-12<br />
+<strong>Status:</strong> DRAFT_FOR_REVIEW — internal tax workpaper and proposed review procedure<br />
+<strong>Owner:</strong> Finance / Tax Review / Legal<br />
+<strong>Effective date and approval:</strong> not established for proposed procedure or tax treatment; no tax determination is adopted.</p>
+<h2>1. Transaction selected for review</h2>
+<p>The selected record is invoice <code>INV-base-FF-003-TERM-0</code>, customer <code>SYN-CUSTOMER-003</code>, contract <code>FF-003</code>, term <code>0</code>, business unit <code>foundry-field</code>, accounting entity <code>SHI</code>, in the base 2027 scenario. The <a href="../../../finance/evidence/SH-FIN-HUMAN-001/source.json">accepted packet source</a> preserves the released fields. The <a href="../../../canon/FINANCE_HUMAN_EVIDENCE_001_ACCEPTANCE_2026-09-11.md">acceptance record</a> applies to the exact existing human-readable packet; its acceptance does not supply absent tax facts.</p>
+<p>The released invoice amount is $1,740,000. The source does not provide an independent tax-master determination, exact customer billing address, complete legal billing identity, tax registration or an adopted rate. The <a href="../../evidence/proposals/decision-register.json">existing billing proposal</a> routes field decisions separately. A proposed fictional address, if later accepted, would not alone establish taxable situs, taxability, nexus, exemption or amount due.</p>
+<p>The issuer's accounting key maps to Sable Harbor, LLC in the <a href="../../../../industrial/source/entities.json">entity register</a>. That accepted identity is not a resolution of every parent tax election or an instruction that the invoice should display a particular issuer field. The workpaper must keep entity identity, invoice presentation, sales/use-tax treatment and parent federal tax classification separate.</p>
+<h2>2. Intended workpaper conclusion</h2>
+<p>The current conclusion is <strong>UNDETERMINED — required transaction facts and treatment evidence unavailable</strong>. It is not zero-rated, exempt, tax-inclusive or taxable at a guessed rate. The released amount remains unchanged. A participant may complete the evidence inventory and proposed review procedure without fabricating a numerical tax result.</p>
+<p>This workpaper uses the California tax authority only as a possible research starting point, because Sacramento headquarters does not determine every customer transaction's jurisdiction. CDTFA's sales/use-tax program distinguishes California sales tax and use tax and provides official guidance routes. The applicable jurisdiction, transaction classification and facts must be established before choosing relevant guidance or a rate. <a href="https://cdtfa.ca.gov/taxes-and-fees/sutprograms.htm">CDTFA Sales and Use Tax in California</a>, reviewed September 12, 2026. No conclusion about this invoice's taxability follows from that general reference.</p>
+<h2>3. Required fact schedule</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Present source support</th>
+<th>Required next evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Invoice and scenario identity</td>
+<td>Exact IDs above</td>
+<td>Confirm selected released version before review</td>
+</tr>
+<tr>
+<td>Accounting entity</td>
+<td>SHI linkage; accepted parent legal identity</td>
+<td>Resolve instrument-level issuer presentation separately if needed</td>
+</tr>
+<tr>
+<td>Customer legal party</td>
+<td>Native synthetic customer ID only</td>
+<td>Accepted legal-party record; no inferred company from a site label</td>
+</tr>
+<tr>
+<td>Delivery/use location</td>
+<td>Not established by this selected packet</td>
+<td>Contract-specific delivery and use facts appropriate to the selected transaction</td>
+</tr>
+<tr>
+<td>Supply components</td>
+<td>Source contract/version records</td>
+<td>Identify each actual promised item and allocation basis</td>
+</tr>
+<tr>
+<td>Tax jurisdiction and obligation</td>
+<td>Unestablished</td>
+<td>Qualified review against complete transaction facts</td>
+</tr>
+<tr>
+<td>Rate and effective period</td>
+<td>Unestablished</td>
+<td>Applicable dated authority after jurisdiction and treatment are determined</td>
+</tr>
+<tr>
+<td>Exemption or resale basis</td>
+<td>No independent support supplied</td>
+<td>Applicable certificate or other accepted basis, if claimed</td>
+</tr>
+<tr>
+<td>Tax inclusion in price</td>
+<td>Not established</td>
+<td>Controlling contract term or separately accepted scenario decision</td>
+</tr>
+<tr>
+<td>Parent federal tax classification</td>
+<td>Not fully resolved here</td>
+<td>Separate governing tax records; do not borrow ARU assumptions</td>
+</tr>
+</tbody>
+</table>
+<p>A field marked unavailable would remain a null value in a financial derivative, with a readable explanation. It would not be stored as numeric zero merely because a spreadsheet requires a cell. A document that supports a customer's identity may not support its tax treatment; the reviewer would record the claim and evidence relationship explicitly.</p>
+<h2>4. Proposed determination procedure</h2>
+<p>The preparer would first freeze the selected transaction identity and list all relevant contract versions, credits and invoice movements. The preparer would separate source facts from proposed scenario additions and identify whether the requested review concerns original billing, a later credit, a writeoff or a recovery. These events can have different factual questions; a single undifferentiated “tax adjustment” would not be sufficient.</p>
+<p>A qualified reviewer would identify the relevant jurisdictional framework only after delivery, use, parties and supply are established. The workpaper would record the official authority, applicable period, factual assumptions and conclusion for each component. It would not classify all Foundry Field activity from the business name or reuse another customer's determination without testing the factual match. This is a proposed internal process, not a legal or tax opinion.</p>
+<p>If a supply contains multiple components, the reviewer would identify the accepted contract allocation or mark it unresolved. No percentage allocation is proposed simply to obtain a desirable tax amount. The reviewer would distinguish a stated contract price from a tax base and document whether an adopted treatment changes customer consideration, company expense or neither. An unresolved price-inclusion term would block a final calculation.</p>
+<p>The determination would state its scope, effective period, supporting facts and conditions for reuse. It would also state what change requires review, such as an accepted contract amendment or a changed delivery fact. A commercial manager's approval of a credit would not replace the tax determination, and a tax reviewer would not silently amend the customer's commercial bargain.</p>
+<h2>5. Calculation schedule with no assumed rate</h2>
+<table>
+<thead>
+<tr>
+<th>Calculation field</th>
+<th>Value for this draft</th>
+<th>Treatment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Released invoice amount</td>
+<td>$1,740,000</td>
+<td>Existing source amount, unchanged</td>
+</tr>
+<tr>
+<td>Taxable component allocation</td>
+<td>Unavailable</td>
+<td>Requires supported classification and allocation</td>
+</tr>
+<tr>
+<td>Applicable tax rate</td>
+<td>Unavailable</td>
+<td>No default rate or zero</td>
+</tr>
+<tr>
+<td>Tax-exclusive versus tax-inclusive basis</td>
+<td>Unavailable</td>
+<td>Requires controlling price term</td>
+</tr>
+<tr>
+<td>Calculated tax</td>
+<td>Not calculated</td>
+<td>Missing inputs prevent a supported result</td>
+</tr>
+<tr>
+<td>Revised customer amount</td>
+<td>Not calculated</td>
+<td>No adopted change to released amount</td>
+</tr>
+<tr>
+<td>Proposed posting</td>
+<td>None</td>
+<td>No new journal authorized</td>
+</tr>
+</tbody>
+</table>
+<p>For a future approved scenario, the workpaper would show each component's accepted base, dated rate, rounding convention and resulting amount. A tax-exclusive and a tax-inclusive calculation would not be mixed. Any formula would be applied only after the relevant inputs are accepted and would preserve the original invoice as a historical record. This draft deliberately supplies no illustrative tax percentage that might later be mistaken for a default.</p>
+<p>The calculation reviewer would recompute totals independently and reconcile them to the proposed invoice and ledger effect. Differences would be explained by component and cause. A tax amount would not be inserted into the existing $1,740,000 total merely to make a rendered invoice look complete. Publication polish does not settle whether the original price included tax.</p>
+<h2>6. Credits, writeoff and recovery review</h2>
+<p>The selected packet contains a July service credit and an August amendment credit, with later movements in a written-off claim. The proposed tax review would trace each event by its source ID and contract version before concluding whether a tax adjustment is relevant. A credit affecting a written-off claim does not automatically create a cash refund, and a recovery already included in collected amounts must not be added again.</p>
+<p>The reviewer would request any underlying customer agreement and applicable treatment evidence needed for the particular event. The released movement classification would remain unchanged until an accepted successor explicitly corrects it. This workpaper does not create customer consent, a tax refund claim or a right to recover tax from another party.</p>
+<p>A proposed adjustment record would identify original invoice, affected event, reason, tax determination reference, commercial authority and accounting effect. Where tax facts remain unavailable, the event would be flagged for unresolved treatment rather than assigned an arbitrary tax code. Missing tax information does not authorize reversing a valid source credit or rewriting the release.</p>
+<h2>7. Proposed approval and implementation clauses</h2>
+<p>Before a new tax-bearing fictional scenario is adopted, the owner would accept its specifically identified new facts and financial effects. Finance would review the calculation and ledger bridge; Legal or the qualified tax reviewer would identify the source and limitations of the treatment. Billing presentation would be reviewed separately. Acceptance of a proposed customer name or address would not constitute acceptance of a tax rate, exemption or amount change.</p>
+<p>The proposed implementation record would show the original released amount, each accepted adjustment, revised scenario amount and affected accounting entries. It would use a successor version and preserve the frozen packet's hashes. New customer-facing PDFs or workbooks would remain held for exact-file visual review. No approved packet is regenerated by this workpaper.</p>
+<p>A reviewer would document acceptance, rejection or required changes at field level. If evidence remains insufficient, the correct disposition is to preserve the unresolved fields and stop numerical implementation. A deadline or a completed spreadsheet cannot substitute for missing facts. This proposed process creates no tax registration, filing or payment instruction.</p>
+<h2>8. Parent tax classification boundary</h2>
+<p>The industrial model's ARU S-corporation history, BS&amp;T QSub assumption and intended acquisition election are transaction-specific. They do not establish SHI's federal classification or authorize copying ARU's modeled 25% rate into a Foundry Field invoice. The parent's LLC form and its Sacramento working base are separate from any tax election or customer transaction determination.</p>
+<p>If parent classification becomes necessary for an exercise, the requester would identify the specific question and seek the governing source or a separately accepted fictional assumption. It would be recorded outside this invoice's tax calculation with its own scope and consequences. No tax identifier, government acceptance letter or election certificate would be invented to fill that need.</p>
+<h2>9. Review record and usable deliverables</h2>
+<p>The completed draft packet supplies a transaction-specific fact request, determination procedure, nonnumeric calculation schedule, change-control clauses and release-preservation instructions. It enables a reviewer to state precisely why a tax conclusion cannot yet be reached and what would permit one. It does not leave that problem hidden behind a generic “consult tax” label.</p>
+<p>The review record would identify the preparer, technical reviewer, version, source inventory, unresolved fields and owner decisions. Proposed administrative timing is a five-business-day initial completeness review after receipt of a full fact packet; it is not a filing deadline or a promise that a tax opinion will be delivered in that period. No reviewer name, signature or completed approval is represented here.</p>
+</article><aside class="source-identity"><a href="../review.html">All 17 packages</a> · <a href="../source/tax-billing.md">Complete Markdown</a><br>8a4fcc32efc81c2502158afbf7df05d2bec5cb296c366d82e90f3c7f3fa38e48</aside></body></html>

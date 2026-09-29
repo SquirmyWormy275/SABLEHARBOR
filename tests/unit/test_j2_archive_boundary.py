@@ -66,9 +66,16 @@ def test_large_chart_allowances_match_only_the_reviewed_bytes():
     assert unknown not in module.ALLOWED_LARGE_PUBLIC_ARTIFACTS
 
 
-def test_large_publication_with_changed_bytes_is_rejected(tmp_path, monkeypatch):
+@pytest.mark.parametrize(
+    "relative",
+    [
+        "docs/organization/history/v1.0.0/Sable-Harbor-Organization-Charts.pdf",
+        "docs/internal/institutional_catalog.sqlite3",
+    ],
+)
+def test_large_publication_with_changed_bytes_is_rejected(tmp_path, monkeypatch, relative):
     module = safety_module()
-    relative = Path("docs/organization/history/v1.0.0/Sable-Harbor-Organization-Charts.pdf")
+    relative = Path(relative)
     payload = bytearray((ROOT / relative).read_bytes())
     payload[-1] ^= 1
     destination = tmp_path / relative

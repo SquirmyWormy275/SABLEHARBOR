@@ -1,0 +1,101 @@
+{
+  "document_id": "SH-ADV-CARRY-EXECUTION-20260922",
+  "version": "1.0.0",
+  "state": "NEWLY_AUTHORED_SYNTHETIC_PENDING_REPOSITORY_ACCEPTANCE",
+  "authored_at": "2026-09-22T18:38:42Z",
+  "effective_date": "2026-09-22",
+  "sponsor": "SHI",
+  "legal_party": "Sable Harbor, LLC",
+  "business": "Advisory",
+  "authority": "Owner instruction OK. Finish everything; ordinary implementation of accepted SH-ADV-005, no new award or economic/control right",
+  "synthetic_execution": {
+    "record_id": "SYN-SHI-CARRY-PLAN-ADOPTION-20260922",
+    "sponsor_signatory": "Daniel Mercer",
+    "capacity": "Existing CEO; newly authored sponsor approval to implement accepted phantom plan, no equity issuance",
+    "review_roles": [
+      "Office of General Counsel",
+      "Finance",
+      "People and Culture",
+      "Advisory President"
+    ],
+    "state": "SYNTHETIC_SPONSOR_EXECUTION_AND_ROLE_REVIEW",
+    "real_signature_or_counsel_opinion": false
+  },
+  "source_hashes": {
+    "docs/advisory/CARRY_PLAN_STANDARD.md": "c8b64ecd570a2402233bd6067eea0e274e267c8f1aa90d9153de4b3a4865de45",
+    "docs/advisory/LEGAL_AND_CONTRACTING_TERM_SHEET.md": "b0e842b631713579f2890efb846de642b100a576282ba88dea9880fb671428f7",
+    "docs/legal/gap-instruments/source/carry.md": "f827af31cc408054a32c5cd602c4c378020c55fff06ff84c8851b6acd6f89312",
+    "enterprise/operations/source/current_company_2026_08.json": "729e45f44d5240be558bb8d1cfef3bdd527a379a810a342173b2409d7ce0ea74"
+  },
+  "units_authorized": 10000,
+  "pool_pct": "20",
+  "annual_hurdle_pct": "10",
+  "default_vesting_years": 5,
+  "annual_vesting_pct": "20",
+  "unallocated_units": 10000,
+  "issued_grants": [],
+  "applications": [],
+  "participant_distributions": [],
+  "population_origin": "Newly authored sponsor/People/Finance cross-register certification: no individualized carry applications, grants or distributions through September22. Existing forecasts/reserves are not individual awards. No serving-J2 individual screened or named.",
+  "payment_policy": {
+    "current_allocation_date": "December15 of year after earning year",
+    "holdback_release_date": "December15 of third year after earning year",
+    "holdback_fraction": "Explicit fixed grant parameter set before legally binding deferral; no current value because no grants",
+    "condition": "Finance results/reserve/claim calculation completed before fixed payment date; lack of approval does not itself permit discretionary payment delay",
+    "subsequent_changes": "Only legal-reviewed section409A-compliant change; no participant election or informal acceleration",
+    "unfunded": true,
+    "creditor_status": "Unsecured contractual promise only; no trust or segregated assets",
+    "withholding": "Employee ordinary compensation; income-tax withholding at payment and separate FICA special-timing test when services/forfeiture/value become determinable",
+    "employer_deduction": "Section404(a)(5) matching inclusion where applicable, not automatic book accrual deduction",
+    "no_current_tax_event": true
+  },
+  "required_grant_fields": [
+    "participant_id",
+    "former_j2_end",
+    "participant_initiated_contact",
+    "eligibility_gate",
+    "eligibility_evidence",
+    "no_serving_promise_attestation",
+    "grant_date",
+    "units",
+    "service_start",
+    "holdback_fraction",
+    "payment_schedule_acknowledged",
+    "residence_work_jurisdictions",
+    "tax_document_reference",
+    "employment_classification",
+    "legal_review",
+    "people_review",
+    "finance_review",
+    "sponsor_authority",
+    "participant_assent"
+  ],
+  "rights_excluded": [
+    "equity",
+    "vote",
+    "board_seat",
+    "management_authority",
+    "anti_dilution",
+    "J2_access",
+    "IP_title",
+    "matter_fee_percentage"
+  ],
+  "future_transaction_state": "NO_APPROVED_TRANSACTION_TO_IMPLEMENT; preserve existing SH-ADV-005 economically fair conversion direction without automatic acceleration/exchange or separate entity",
+  "financial_effects": {
+    "additional_cash_usd": "0",
+    "additional_expense_usd": "0",
+    "additional_liability_usd": "0",
+    "new_units_issued": 0
+  },
+  "primary_authorities": [
+    {
+      "url": "https://www.irs.gov/irb/2007-19_IRB",
+      "scope": "Final409Aregulations; fixedpayment schedule, exemptions and timing restrictions requireactualfacts"
+    },
+    {
+      "url": "https://www.irs.gov/pub/irs-pdf/p5528.pdf",
+      "scope": "NQDCaudit guide: income/FICA/deduction timing are distinct; guide notnewlaw"
+    }
+  ],
+  "external_boundary": "No actual professional engagement, signature, IRSfiling, securities exemption, ERISA/top-hat determination or foreignparticipanttaxconclusion. Firstgrant must complete jurisdiction/employment/legalreview before issuance."
+}

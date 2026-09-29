@@ -369,7 +369,7 @@ def framework():
             [-79.975, 40.398, -79.935, 40.433],
             26917,
             ["SH-GEO-0002"],
-            "The Fort / Klein lineage: GEO-C002",
+            "Fort: separate premises; 2024 relocation",
         ),
         (
             "FAIRMONT AREA",
@@ -647,7 +647,7 @@ def questions():
         ax, "hazelwood", [-79.978, 40.396, -79.930, 40.435], 26917, ["SH-GEO-0002"], small=True
     )
     fig.text(0.065, 0.790, "GEO-C003 / ENGINEERING GATES — WYOMING", fontsize=10, fontweight="bold")
-    fig.text(0.565, 0.790, "GEO-C002 — PITTSBURGH", fontsize=10, fontweight="bold")
+    fig.text(0.565, 0.790, "PITTSBURGH — CONTINUITY RESOLVED", fontsize=10, fontweight="bold")
     side(
         fig,
         [
@@ -665,7 +665,7 @@ def questions():
         [
             (
                 "Klein and Willow",
-                "The Fort and its shed functions are locked. The historical outside-Pittsburgh Klein shop remains unlocated. Same-site continuity or relocation to Hazelwood is not established.",
+                "Owner-approved history: Willow used the old Klein shop after recharter, moved to separate Fort premises during 2024 and vacated the old shop that year. Exact days and parcels remain unknown.",
             )
         ],
         x=0.565,
@@ -933,7 +933,7 @@ def main():
             ),
             (
                 "Historical precision",
-                "Klein's earlier shop was outside Pittsburgh. Exact Fort parcel and occupancy continuity are not established; GEO-C002 remains narrow.",
+                "Klein's earlier shop was outside Pittsburgh. Willow moved to separate Fort premises during 2024. Exact entry days and parcels remain unknown; GEO-C002 is resolved.",
             ),
             (
                 "Real-site boundary",

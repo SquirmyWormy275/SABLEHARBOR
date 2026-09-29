@@ -39,5 +39,3 @@ Collection disciplines are capabilities, not additional staffed departments. Raw
 - [Orientation](orientation.md)
 - [Alexandria institutional environment](alexandria.md)
 - [J2 Headquarters](j2-headquarters.md)
-
-Related reading describes useful connections, not additional reporting lines.

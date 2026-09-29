@@ -1,0 +1,7 @@
+{
+  "scope": "Local raster files under home excluding symlinks, dependency/cache/private-control directories and files over100MiB; inode deduplicated. No substitute generated.",
+  "expected_sha256": "2bf5a1209b9c3ece435271f2fbf5a3c827bbbccf242ea4ee60535749ccee9d92",
+  "checked": 65279,
+  "matches": [],
+  "read_errors": 0
+}

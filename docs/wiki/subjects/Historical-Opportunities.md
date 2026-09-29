@@ -29,5 +29,3 @@ An abandoned opportunity is not a current operating business, an acquired proper
 - [Finance](../departments/finance.md)
 - [Glasshouse, Wallaby and failed experiments](Project-History.md)
 - [Company history and The Crossing](History.md)
-
-Related reading describes useful connections, not additional reporting lines.

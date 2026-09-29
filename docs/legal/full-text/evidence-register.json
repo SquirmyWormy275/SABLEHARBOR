@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "package_id": "SH-LEGAL-FULL-TEXT-001",
+  "title": "Complete legal source editions",
+  "status": "DRAFT_FOR_EXACT_FILE_REVIEW",
+  "scope": {
+    "source_revision": "79437a778d4a4d5097a3cdaa36d7d8ab13217536",
+    "documents": 56,
+    "pages": 200
+  },
+  "sources": [
+    {
+      "path": "industrial/transaction/01_RW_TRANSACTION_FILE.md",
+      "sha256": "902ff083d3857004b5c868b106fddc8e3600e59ad959201fb97c99d68dba298c"
+    },
+    {
+      "path": "industrial/transaction/02_ARU_LOI_AND_SELLER_FILE.md",
+      "sha256": "e012644ca645384234ddf8f47e78d176b1cc11d4cef97449723f23f2803f5615"
+    },
+    {
+      "path": "industrial/transaction/03_ARU_DILIGENCE_MEMORANDUM.md",
+      "sha256": "1591f3a761202385693de6b689377400a4905862910b0213acb326ace0bbc272"
+    },
+    {
+      "path": "industrial/transaction/04_ARU_APPROVAL_AND_PURCHASE_AGREEMENT.md",
+      "sha256": "3b40effe8efb1d4a69216180d508dad90f7fc6a778679b39ee2ed5371d0de9eb"
+    },
+    {
+      "path": "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md",
+      "sha256": "a6dd448ed3a4a3ad6f0f3748e79dd918ea43c75685de762fe00843477a5d22c9"
+    },
+    {
+      "path": "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md",
+      "sha256": "5ee3715b0b5b08ba2fd259504ff7455da005d3d2e3701668945aa1ca90477808"
+    },
+    {
+      "path": "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
+      "sha256": "0b21f22c2a8ffe55fa4e43898834ddc38389e42efe2e9c11ff48c7418dad8be7"
+    },
+    {
+      "path": "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md",
+      "sha256": "89eae89e18db1d3cf3ab4f7bf7f54fa57efabb84c57127717b731572048d563b"
+    },
+    {
+      "path": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md",
+      "sha256": "23153dc86a3e9ea9fd501bce6bdf3c8478dbdf3ab79fa5e8abc84ca8bbb771fc"
+    },
+    {
+      "path": "industrial/transaction/09_SERVICE_PRICING_COMPARISON.md",
+      "sha256": "4f185dffc7906ecc6abda8420fc9d026d4fb5bc470d506eb99dbab968560b2c5"
+    },
+    {
+      "path": "docs/advisory/LEGAL_AND_CONTRACTING_TERM_SHEET.md",
+      "sha256": "b0e842b631713579f2890efb846de642b100a576282ba88dea9880fb671428f7"
+    },
+    {
+      "path": "docs/advisory/COMMERCIAL_CONTRACTING_AND_PRICING_STANDARD.md",
+      "sha256": "d205a6b5d1a254ed30fc35c395f0f3ea3372a449d0537fea7c7bb18583cb8275"
+    },
+    {
+      "path": "docs/advisory/IP_DATA_AND_METHOD_TRANSFER_STANDARD.md",
+      "sha256": "e6f58bec6caeaa1eb693962bd4a021d40b4bec5319c49f0e4e59c3212f04ad91"
+    },
+    {
+      "path": "docs/advisory/EXPERT_NETWORK_AND_THIRD_PARTY_STANDARD.md",
+      "sha256": "fe6648704a935ad7c91651f5042bc5b3f5e821e9d432cbcbbab2fa648dd31763"
+    },
+    {
+      "path": "docs/advisory/ATLAS_MERIDIAN_COMMERCIAL_PRODUCT_STANDARD.md",
+      "sha256": "5c852557be8c42cec41f50be2d01b850027a61ad613c98672f075e15453769d4"
+    },
+    {
+      "path": "enterprise/runtime/docs/CONTRACT_DOSSIER.md",
+      "sha256": "7cd01050b17f9451ff5bd341573289440c74fb190c01253bdc8197a6599d2ad1"
+    },
+    {
+      "path": "enterprise/operations/docs/commercial.md",
+      "sha256": "ef896e84c66e03eff7adecb3e3f6b7c082b28e618f4183ec37fc7568f2b45416"
+    },
+    {
+      "path": "enterprise/services/README.md",
+      "sha256": "d87d9efeef12a6848427dc57630ea1fb58ad1f7ac4c7de5bb041a457fcf023d4"
+    },
+    {
+      "path": "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md",
+      "sha256": "5a10f112b015d5dfa7ca3b500108718015a41369182092cabc44dfb224119fbc"
+    },
+    {
+      "path": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+      "sha256": "61a32c036e8cdb2fbf7ab0234d26a925ebd423b48869667724c5a254ca14fda1"
+    },
+    {
+      "path": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
+      "sha256": "dc1e2e3ea6e7ea8d364eae87bd890a8c79a5a577a7554ed371cda3810ea945a8"
+    },
+    {
+      "path": "docs/governance/RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md",
+      "sha256": "323a9611891d41dafa6eb00ed891ba4b0917a4b2329fd29e52bd730cc92d3313"
+    },
+    {
+      "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+      "sha256": "40b45496c66d6e7e5eb5dcd118c3ba37feb710744760c3617acbddcd899e466f"
+    },
+    {
+      "path": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+      "sha256": "25e484d7fbc2c83a37f0e7ae7fe20ff741cde176bd0c2ba7be742fa7fb3e2624"
+    },
+    {
+      "path": "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+      "sha256": "05ee1d4bbcad3ff2de9f623de0b57373acaaf611c0b161664a9f3e36b1066509"
+    },
+    {
+      "path": "docs/legal/ADVISORY_NAME_AND_EXTERNAL_CLEARANCE_STATUS_2026-09-09.md",
+      "sha256": "53cb9756ad05f9422b8d0bc93eeecace454cc25c6652424154caf2eaf0b4984d"
+    },
+    {
+      "path": "docs/governance/board-records/2021-06-18_harrison-vale-growth-financing-minutes.md",
+      "sha256": "b994512c64f86abe0d649f95d4ea3d3e00fd0c2c22af0ed56b62bd7ed41fae97"
+    },
+    {
+      "path": "docs/governance/board-records/2022-10-28_wolf-ridge-industrial-financing-minutes.md",
+      "sha256": "ec3625726d23588816c073afb4bd76cce51085a195833c6089faea3c3efed1a4"
+    },
+    {
+      "path": "docs/governance/board-records/2024-02-15_independent-chair-and-committee-architecture-minutes.md",
+      "sha256": "ff5ad2d4299617a7b931924b757e6ca2316795d2133a656c219094528ce0c9a4"
+    },
+    {
+      "path": "docs/governance/board-records/2026-09-02_governance-j2-alexandria-ratification-written-consent.md",
+      "sha256": "2a0afb5615327345daf491c308e2b89e7e6236e44be1b3b09b3663389b344400"
+    },
+    {
+      "path": "docs/governance/board-records/exhibits/2026-09-02_exhibit-a-governance-package.md",
+      "sha256": "a9fc111374c2eef37e889ce3adc39af9bca3c7c6a0bf318de51dbdd551164536"
+    },
+    {
+      "path": "docs/governance/board-records/exhibits/2026-09-02_exhibit-b-j2-package.md",
+      "sha256": "485477fcca0441c022bcf60174f5e74fc7eb951be8a9a3fdc2ba73e5559e1086"
+    },
+    {
+      "path": "docs/governance/board-records/exhibits/2026-09-02_exhibit-c-alexandria-package.md",
+      "sha256": "4cfd047e688015bb8d59d1306b4a2d0790f34445bfc2fa14ecbdf3d1c317f647"
+    },
+    {
+      "path": "docs/governance/board-records/exhibits/2026-09-02_exhibit-d-controlled-publication-and-catalog-package.md",
+      "sha256": "df7ea4fe111168a37d50848135443748ebcce970c259e05d728941d569f41bb5"
+    },
+    {
+      "path": "docs/governance/committees/AUDIT_AND_COMPLIANCE_COMMITTEE_CHARTER.md",
+      "sha256": "d59a708310e56dbe67fc28629efbedd4f790a4ef9765d841b651f3335ab8e993"
+    },
+    {
+      "path": "docs/governance/committees/COMPENSATION_AND_HUMAN_CAPITAL_COMMITTEE_CHARTER.md",
+      "sha256": "e7fe92afc99946ca4c61ed32980c67556aa3b9227abef852b1931182bd7ea295"
+    },
+    {
+      "path": "docs/governance/committees/FINANCE_AND_INVESTMENT_COMMITTEE_CHARTER.md",
+      "sha256": "7c3990aa3537281c2a53e42de941334b98a3859e55e9e9cbfa66c5c233db1361"
+    },
+    {
+      "path": "docs/governance/committees/GOVERNANCE_AND_NOMINATING_COMMITTEE_CHARTER.md",
+      "sha256": "d3afcfbaad2af59209b50994b15ae0846c329ebfb807e6ab14876bd2d9eb544e"
+    },
+    {
+      "path": "docs/governance/committees/TECHNOLOGY_AND_OPERATIONS_COMMITTEE_CHARTER.md",
+      "sha256": "953b7eaa91e5439df5d0ca86d398c01874ffe35f68f56d6c6e05e2c9c545a860"
+    },
+    {
+      "path": "industrial/transaction/06_ARU_TRANSITION_AND_RETENTION.md",
+      "sha256": "3e3653f95a286d71aa513410603dd0c78684db0ad94e2460708c434a6fc4aec0"
+    },
+    {
+      "path": "docs/governance/PEOPLE_AND_CULTURE_DOCTRINE.md",
+      "sha256": "9e8c8b6b3b3ce8500553adfc0e35e94956a8251d395fd8d39355f3d84c1dc5ee"
+    },
+    {
+      "path": "docs/advisory/CARRY_PLAN_STANDARD.md",
+      "sha256": "c8b64ecd570a2402233bd6067eea0e274e267c8f1aa90d9153de4b3a4865de45"
+    },
+    {
+      "path": "docs/advisory/TALENT_MOBILITY_AND_CARRY.md",
+      "sha256": "d61c2616c817a82a7c7f33be067dde51f353fd1ba3f7502d316b4fec83cb3e7e"
+    },
+    {
+      "path": "industrial/operations/LABOR_SAFETY_AND_CONTROLS.md",
+      "sha256": "586d3aa95bbb894c3891ceded1ddb78b6d73fb0df54e4d20b58ab523c9d622d6"
+    },
+    {
+      "path": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+      "sha256": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa"
+    },
+    {
+      "path": "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+      "sha256": "3289ad8ce5d20d767b38f1ad3ed804feeb80300c59d7e96653bfe68f1eaa24b6"
+    },
+    {
+      "path": "docs/legal/MOCK_DEED_NORTHERN_NEVADA_DATA_CENTER_2026-09-04.md",
+      "sha256": "aa1717ac07ea2968d0ad877045d57b29ec0766dd852a79bd61553fa24eb97d79"
+    },
+    {
+      "path": "docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md",
+      "sha256": "fd309a9bdf596ea96498b7207b60ea3bea70a35d8c418371aa96c06d928bb17b"
+    },
+    {
+      "path": "geospatial/facilities/README.md",
+      "sha256": "a58a62e1bfd735eaf954ebce3d3aeaab72f1c9494271250367014d574e0eaf3b"
+    },
+    {
+      "path": "geospatial/facilities/RESEARCH_CAMPUSES.md",
+      "sha256": "094ea7bb3bc9dd920f29dbe7ef0062880b399c46443cc5c32661589a8e51239a"
+    },
+    {
+      "path": "geospatial/facilities/INDUSTRIAL_FACILITIES.md",
+      "sha256": "3987e927a6b3b5633117d31737ccdd4ffbaae8b22bbdaf765c380316af3e89e9"
+    },
+    {
+      "path": "industrial/transaction/07_ARU_TAX_STRUCTURE_MEMORANDUM.md",
+      "sha256": "d42c4d67873e1b8e9b6488eac9a70a16643680718735ab0c3948327a37b16a44"
+    },
+    {
+      "path": "industrial/finance/TRANSACTION_ACCOUNTING.md",
+      "sha256": "d13f142968958585cfc56a7b06d54b5e95bccef6d434d11bb6bba93933a0aa58"
+    },
+    {
+      "path": "industrial/finance/DRIVERS_AND_COST_SUPPORT.md",
+      "sha256": "bf0c78a2c8d96ebabd34674d4c75f49a2d0ca19be68bb662073d0566bc85a83a"
+    },
+    {
+      "path": "docs/finance/TRANSACTION_DATA_ROOM_INDEX.md",
+      "sha256": "a107e920f200558c59685043415e7d967a32c6708baef7ad927a8e35f1a79d8c"
+    },
+    {
+      "path": "docs/finance/RUNTIME_INFRASTRUCTURE_FINANCE_RECONCILIATION_2026-09-11.md",
+      "sha256": "20558ea7ecde58914b7ccd44dc866f56c754b5eabd053eff01b43e7684aa40c8"
+    }
+  ],
+  "markdown": "docs/legal/full-text/README.md",
+  "reconciliation": "docs/reader/transactions/RECONCILIATION.md",
+  "visual_manifest": "docs/legal/full-text/render-manifest.json",
+  "database": "docs/legal/full-text/full-text.sqlite3"
+}

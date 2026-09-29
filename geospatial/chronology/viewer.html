@@ -410,8 +410,9 @@
       Offline edition · <a href="HISTORY.json">Full evidence JSON</a> ·
       <a href="EVENTS.csv">Complete event CSV</a>
       <p id="revision"></p>
-      Proposed Klein/Fort continuity is a separate review document and is
-      excluded from this accepted-data viewer.
+      The owner-approved staged 2024 relocation to separate Fort premises is
+      included with year-bounded occupancy. Exact days and parcel boundaries
+      remain unknown.
     </footer>
   </main>
   <script id="data" type="application/json">
@@ -497,9 +498,11 @@
           "</p><p><strong>Access:</strong> " +
           esc(nice(row.access_disposition)) +
           '</p><div class="notice">' +
-          (row.dated_lease_observation
-            ? "The narrative documents a shop lease in 2021. Exact occupancy endpoints remain unknown."
-            : "No accepted occupancy interval is established.") +
+          (row.occupancy_interval
+            ? "Owner-approved year-bounded occupancy. The staged 2024 move uses uncertain transition bounds, not an invented exact move day."
+            : row.dated_lease_observation
+              ? "The narrative documents a shop lease in 2021. Exact occupancy endpoints remain unknown."
+              : "No accepted occupancy interval is established.") +
           "</div><h3>Linked observations</h3>" +
           row.events
             .map((id) => {
@@ -513,10 +516,40 @@
               "No conflict ID; source limitations still apply",
           ) +
           "</p>" +
+          (row.continuity_evidence
+            ? evidence(row.continuity_evidence) +
+              '<label>Occupancy as of<input id="occupancy-date" type="date" value="2024-07-01"></label><p id="occupancy-result" role="status"></p>'
+            : "") +
           evidence(row.source) +
           "<details><summary>Retained operational states</summary><pre>" +
           esc(JSON.stringify(row.operational_states, null, 2)) +
           "</pre></details>";
+      }
+      if ($("occupancy-date")) {
+        const updateOccupancy = () => {
+          const day = $("occupancy-date").value,
+            state = row.occupancy_interval;
+          let result = "UNKNOWN";
+          if (
+            (state.earliest_start && day < state.earliest_start) ||
+            (state.latest_end && day >= state.latest_end)
+          )
+            result = "ABSENT";
+          else if (
+            (state.earliest_start && day < state.latest_start) ||
+            (state.earliest_end &&
+              day >= state.earliest_end &&
+              day < state.latest_end)
+          )
+            result = "POSSIBLE";
+          else if (state.latest_start && day >= state.latest_start)
+            result = "CERTAIN";
+          $("occupancy-result").textContent =
+            result +
+            " — site occupancy under the approved year bounds; not real property title.";
+        };
+        $("occupancy-date").oninput = updateOccupancy;
+        updateOccupancy();
       }
     }
     function render() {
@@ -525,7 +558,11 @@
         end = Number($("through").value);
       visible = data[view].filter(
         (r) =>
-          JSON.stringify(r).toLowerCase().includes(query) &&
+          (data[view].some(
+            (x) => (x.object_id || x.event_id).toLowerCase() === query,
+          )
+            ? (r.object_id || r.event_id).toLowerCase() === query
+            : JSON.stringify(r).toLowerCase().includes(query)) &&
           (view === "sites" ||
             ((!$("kind").value || r.kind === $("kind").value) &&
               Number(r.earliest.slice(0, 4)) <= end &&

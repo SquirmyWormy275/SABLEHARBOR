@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "result": "PASS",
+  "edition_verification": {
+    "result": "PASS",
+    "members": 8,
+    "components": 1
+  },
+  "portal_commit": "548cb5d2be82ec11877e298c2c8d00aa1e555b7f",
+  "portal_module_path": "enterprise/audit_suite/company_store.py",
+  "portal_module_sha256": "38a1aebcebde53051e306465dc2d807a3cd0e60fb8cc974da2235fa268c88292",
+  "checks": {
+    "originals": 8,
+    "transport_records": 10,
+    "originals_reassembled": 8,
+    "future_denials": 10,
+    "ungranted_denials": 10,
+    "revoked_denials": 10,
+    "restored_revoked_denials": 10
+  },
+  "backup_history_equality": true,
+  "transport_contract": "SH-EXACT-BYTE-PARTS-1",
+  "existing_store_max_record_bytes": 26214400,
+  "scope": "Actual isolated CompanyStore import/read/revocation/SQLite restore of public repository originals",
+  "limits": [
+    "No live portal or private company source was modified",
+    "No engagement, audit opinion, instructor key or grading material was created",
+    "Document import is not a complete company year or external confirmation",
+    "Multipart and empty originals require the explicit transport reconstruction adapter",
+    "Immutable CompanyStore lacks class-based deletion/hold; that gate remains open",
+    "HTTP indirect-disclosure and model inference evaluations remain separate"
+  ],
+  "recorded_on": "2026-09-15",
+  "fixture_scope": "Six current public documents, one zero-byte fixture and one 26214401-byte fixture; not full company edition",
+  "adapter_source_hashes": {
+    "tools/company_closeout/transport.py": "34e4361ee429fc8b20a460219de1df8b93eed2f369b1f52e98d03be1a6cc35c2",
+    "tools/company_closeout/portal_rehearsal.py": "69de6eccd2b32b805ff8131aac2617773c6cd64d512d2cefb7e85f288db0733d"
+  },
+  "command": "python -m tools.company_closeout.portal_rehearsal --edition [eight-original fixture edition] --portal [existing portal checkout] --revision 548cb5d2be82ec11877e298c2c8d00aa1e555b7f --output [new isolated private directory]"
+}

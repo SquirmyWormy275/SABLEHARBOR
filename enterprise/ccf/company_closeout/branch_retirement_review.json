@@ -1,0 +1,1023 @@
+{
+  "observed_at": "2026-09-22T06:33:22.604114+00:00",
+  "accepted_main": "c8d628aa84140d63f6b8da8e2cba173c26c9a3b1",
+  "remote_heads": [
+    {
+      "sha": "043d7715646c860b79dbe6def58b5f7e3cf36af3",
+      "ref": "refs/heads/advisory-atlas-rebuild",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "22e23aa59554118f2608ce98458cff69433113cb",
+      "ref": "refs/heads/advisory-tier1-operating-system",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "2b9f039b3df3151e9b8331885010022ba35debac",
+      "ref": "refs/heads/align/business-lines-current-state-2026-09-09",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "f12d359f3c3f009a1eea1d290f61be0462ca1f2e",
+      "ref": "refs/heads/architecture/corporate-operating-model-v0.1",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "ccce3cab7c8ab3646946efb9b0fa908a4bd02149",
+      "ref": "refs/heads/assets/brand-integration-and-collateral-v0.2",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "763a01ca80c7fc94709720252dad2a9ea6c63217",
+      "ref": "refs/heads/assets/corporate-logo-system-v0.1",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "20a88d3260fb8e20a30295d7a23093874f98ef56",
+      "ref": "refs/heads/blackridge/enterprise-data-foundation-v0.1.0",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "805dd3c97854ad031e81b32248a94ad827b3a834",
+      "ref": "refs/heads/blackridge/enterprise-data-foundation-v0.1.0-ledger-closeout",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "ATTACHED_LOCAL_WORKTREE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "d15d70d4dc8c711625ba0881f7c0f1641c782cce",
+      "ref": "refs/heads/blackridge/m00-ci-fix",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "1304c789fba17de883d9e4b236bf0ca47ce6091e",
+      "ref": "refs/heads/blackridge/m00-foundation",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "d15d70d4dc8c711625ba0881f7c0f1641c782cce",
+      "ref": "refs/heads/blackridge/m00-v0.1.0",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "1304c789fba17de883d9e4b236bf0ca47ce6091e",
+      "ref": "refs/heads/blackridge/m00-v0.1.0-final",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "56536580fea7b4734cf683d8a455f7176245c40d",
+      "ref": "refs/heads/blackridge/m00-v0.1.0-review",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "7988f4740f39afa4a3db92e9efe1e0d737840d6d",
+      "ref": "refs/heads/brand/complete-letterheads-2026-09-09",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "fc9650cee07921b265c97ba922801f31b33715ca",
+      "ref": "refs/heads/brand/emberline-approved-2026-09-07",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "daba73704c16418409d27cd7ef8778abfffd9cb0",
+      "ref": "refs/heads/brand/kelly-gang-mining-approved-2026-09-07",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "da6595b184d80d48c3eb8583c3316eeb48541aa5",
+      "ref": "refs/heads/brand/logo-system-v0.1",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "7854436ef15f160ad242ce638e5334e522fbef16",
+      "ref": "refs/heads/brand/northstar-approved-2026-09-07",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "7c20492c5e5db8d0a7fe625d8cde2e0270e421b7",
+      "ref": "refs/heads/brand/qfc-and-demotte-2026-09-07",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "d1b0cefb1d38120da90d4f6091f5fc7068474582",
+      "ref": "refs/heads/build/business-finance-successor-2026-09-09",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "04b921cedc608e791b5760b5458693458c6039c8",
+      "ref": "refs/heads/build/campus-facility-atlas-closeout-2026-09-11",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "6fe456717b5fac8446ef0e34ce6df8b42bc808fc",
+      "ref": "refs/heads/build/complete-wiki",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "ATTACHED_LOCAL_WORKTREE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "a66a2bacabddfbed4e6eeda7371bda8a7c5ecd72",
+      "ref": "refs/heads/build/operating-depth-v2-2026-09-09",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "820ec522cb2a0076e74e7fc65a1d62d3c94c2a4a",
+      "ref": "refs/heads/build/overnight-accounting-legal-rollup",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "ATTACHED_LOCAL_WORKTREE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "bc3ef2183532fb0560a96e71afb1e0c94bec1f2b",
+      "ref": "refs/heads/build/reader-evidence-closeout",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "ATTACHED_LOCAL_WORKTREE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "f8d3ac6901a9001135e99192bab4c81df35dcf3c",
+      "ref": "refs/heads/build/reader-practical-routes-2026-09-12",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "ATTACHED_LOCAL_WORKTREE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "14e654c34ea1b5b2bfc9b426cb00e44b4a38cc43",
+      "ref": "refs/heads/build/universe-reader-experience",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "ATTACHED_LOCAL_WORKTREE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "5137c5abc025ad757a4e1af2a57279e4964578cf",
+      "ref": "refs/heads/canon/corporate-lore-v0.2",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "22bb70d6267130308c9023a578d782b42558e7f2",
+      "ref": "refs/heads/canon/decision-closeout-2026-09-06",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "88734ad28b8aba159597f44c35edfe236536459f",
+      "ref": "refs/heads/canon/geographic-final-decisions",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "ATTACHED_LOCAL_WORKTREE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "22a6299a11113e81846fd58d0273f56e508e7a4e",
+      "ref": "refs/heads/canon/headquarters-closeout-2026-09-03",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "0dd3515aadd1836a438d1f6e1e6ee9c5ec57c08e",
+      "ref": "refs/heads/canon/j2-leadership-2026-09-10",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "3efebc8d670bb21c04e4be27975bc147f2b8f6f3",
+      "ref": "refs/heads/canon/klein-rename-2026-09-07",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "0c085ce85e194572bf9af6d061ee8619179458b9",
+      "ref": "refs/heads/ccf/enterprise-security-vendor-decisions-2026-09-11",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "473704cc71c44b636ba9bdb92fdcd04107a789e9",
+      "ref": "refs/heads/chore/finance-v0.1-post-merge-closeout",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "a91bd1cb5a0206b7ae4979b9445f9a90d2472707",
+      "ref": "refs/heads/cleanup/company-org-charts-2026-09-09",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "5192a49b7410a4c96157b5adbc6ada3709bdbd6e",
+      "ref": "refs/heads/cleanup/geo-discovery-adjudication-2026-09-12",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "ATTACHED_LOCAL_WORKTREE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "04a2c39503af8b9c2446880e46d30e1dd226fea4",
+      "ref": "refs/heads/cleanup/navigation-and-ci-2026-09-12",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "ATTACHED_LOCAL_WORKTREE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "8e76811c10dc3e728e21c0c01c53ba4e94e91942",
+      "ref": "refs/heads/cleanup/outstanding-issues-2026-09-12",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "1611db9544999f63752d9a047704c317d4d5fffe",
+      "ref": "refs/heads/cleanup/repository-improvements-2026-09-12",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "ATTACHED_LOCAL_WORKTREE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "67377e34c14a5a52b0b7dff190c0f5d8166200c8",
+      "ref": "refs/heads/closeout/company-edition-2026-09-15",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "ATTACHED_LOCAL_WORKTREE",
+        "OPEN_PR",
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "75aefdff6bdbb078edd96dc81e4f617ae9c854c5",
+      "ref": "refs/heads/closeout/main-source-protection-2026-09-15",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "ATTACHED_LOCAL_WORKTREE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "d008dcfe095e42eb0eb0053c77a2d828578172ec",
+      "ref": "refs/heads/docs/ccf-atlas-comparison",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "6881fb7903313b3e5cf0045abd6a3c502fc1ee57",
+      "ref": "refs/heads/docs/ccf-prebuild-audit",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "bf1b21fbcbbb3104c0f6bac3ae0b74811fab28f3",
+      "ref": "refs/heads/docs/ccf-reference-scope-approved",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "0f9b14bb364e16bc1acdd9ba988e0e85382d5d0b",
+      "ref": "refs/heads/docs/enterprise-portal-and-repo-hygiene-v0.1",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "788267791933ef2198fe5b1f284861904cc088c1",
+      "ref": "refs/heads/docs/human-reader-cleanup-2026-09-15",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "OPEN_PR",
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "58b656398af9d947801971a20f8c0c61b7cb25c2",
+      "ref": "refs/heads/docs/official-logo-org-briefing-v1.0",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "57339ee47c1b23a41fde5f02fb80cad77ee286fe",
+      "ref": "refs/heads/docs/organization-maps-v0.1",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "ab4906446d149617462f9de6b75dd7c48f0546fc",
+      "ref": "refs/heads/docs/runtime-release-closeout",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "8a8f11222b883947985e16cccc6458633cf7babb",
+      "ref": "refs/heads/execute/overnight-evidence-2026-09-12",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "ATTACHED_LOCAL_WORKTREE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "e385d29c4cd6fc49438e956027c8165102608e1b",
+      "ref": "refs/heads/feature/aru-bst-2025-baseline",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "576923ddfcd2f24273c9196ca58e69fedeab14b6",
+      "ref": "refs/heads/feature/ccf-actionable-control-deltas",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "8c1fc26bf11812709da9205e35f466001b668cf0",
+      "ref": "refs/heads/feature/ccf-assurance-delta",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "413b9b06953423c210852b87170b8796332d38a1",
+      "ref": "refs/heads/feature/ccf-baseline-design",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "5ddd6efa9a032d7e064e6552a9786cdaa6e01942",
+      "ref": "refs/heads/feature/ccf-control-library-completion",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "52c37a1415c3d4702375f79c5de59a1861a9b62b",
+      "ref": "refs/heads/feature/ccf-evidence-intake-workflow",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "03a10dd71bceabd401de35ced980dbb9defa30b0",
+      "ref": "refs/heads/feature/ccf-integrated-delivery",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "b4e36e5b9339c7b186fbbf094e5878b919237737",
+      "ref": "refs/heads/feature/ccf-iso-extensions",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "df69c470a942ba58e655f4b09a4ae648a9893320",
+      "ref": "refs/heads/feature/ccf-local-pilot",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "ATTACHED_LOCAL_WORKTREE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "1766b208a5f977bbded3aaffeba88bcf76264887",
+      "ref": "refs/heads/feature/ccf-preparation",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "7ffc6f4e9ee84b3ceb939c9e29fa9d47561fab94",
+      "ref": "refs/heads/feature/ccf-reference-assessment",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "45f07024bd7e9c59c6cda67e771af2fc617912dc",
+      "ref": "refs/heads/feature/ccf-reference-assessment-exercise",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "ac625b7b957b6ec15dd0f0de0f475d6a0c737006",
+      "ref": "refs/heads/feature/ccf-substantive-coverage-review",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "e4d189d367c040c2ebd277ad7df52106bcf61a13",
+      "ref": "refs/heads/feature/facility-planning-workbench",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "3f930410dfd31b1e864a4b2e2253698560e241eb",
+      "ref": "refs/heads/feature/facility-spatial-quality",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "2849424fd25dd626d1ea2523add65a374f884457",
+      "ref": "refs/heads/feature/geospatial-execution-current",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "de130e934bcafd2561efcad2cb791eda603c886c",
+      "ref": "refs/heads/feature/industrial-planning-and-enterprise-v2",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "7471ba0f405e94e22813b03890d950f5a8aa1582",
+      "ref": "refs/heads/feature/master-geospatial-package",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "2519b91f47c542a1a07687ff36d868230a7083a7",
+      "ref": "refs/heads/feature/pale-sun-aru-red-wash-closeout",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "712076751a31534cd9e6e41458336cdc7b6585b5",
+      "ref": "refs/heads/feature/red-wash-transaction-operating-record-v1",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "59df1da61daabecbaf3f65f79ce2d9670a1b545d",
+      "ref": "refs/heads/feature/red-wash-transaction-operating-record-v2",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "ATTACHED_LOCAL_WORKTREE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "89fd3a7c15b281ad9b91de0c8b9b3c5afbda9c5a",
+      "ref": "refs/heads/feature/willow-evalon-closeout-2026-09-06",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "47a93d153124bc9b92136045b0da6692b5456882",
+      "ref": "refs/heads/finance/corporate-financial-reconstruction-v0.1",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "ATTACHED_LOCAL_WORKTREE",
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "8699eca44efc22622930f57b69bc92a71a476c4c",
+      "ref": "refs/heads/finance/enterprise-financial-platform-v0.1",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "b63eb18c46929ff8d4991d468e9d6d67e3c63289",
+      "ref": "refs/heads/fix/reader-catalog-ccf-integration",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "ATTACHED_LOCAL_WORKTREE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "695c40a58e4461cad09ef463001808393fc08119",
+      "ref": "refs/heads/fix/wiki-header-contrast-2026-09-12",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "ATTACHED_LOCAL_WORKTREE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "ebf7a8cc2f00261123e244ceaf79472e956cc4e8",
+      "ref": "refs/heads/geo/canon-reconciliation-2026-09-07",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "c89f8fa99fef3b6523965f25c34f55bf834506af",
+      "ref": "refs/heads/integration/enterprise-audit-and-dossiers-v0.1",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "c8d628aa84140d63f6b8da8e2cba173c26c9a3b1",
+      "ref": "refs/heads/main",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "ACCEPTED_MAIN",
+        "ATTACHED_LOCAL_WORKTREE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "dbc5791c63fe339400bb988039d15a0160f58418",
+      "ref": "refs/heads/migration/alexandria-control-boundary-v0.1.0",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "ATTACHED_LOCAL_WORKTREE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "4c83886d1cdabc02b07669c549c0816fcea0d1e1",
+      "ref": "refs/heads/planning/third-party-services-2026-09-09",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "4d5b76479f8a3b6309b63f701df2efd653f6a7e7",
+      "ref": "refs/heads/planning/third-party-services-2026-09-09-copy",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "4d5b76479f8a3b6309b63f701df2efd653f6a7e7",
+      "ref": "refs/heads/planning/third-party-services-2026-09-09-reconcile",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "4d5b76479f8a3b6309b63f701df2efd653f6a7e7",
+      "ref": "refs/heads/planning/third-party-services-2026-09-09-reconciled",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "4d5b76479f8a3b6309b63f701df2efd653f6a7e7",
+      "ref": "refs/heads/planning/third-party-services-2026-09-09-temp",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "d17f9838f972e76843714f73f4054cf1c189b763",
+      "ref": "refs/heads/planning/third-party-services-reconciled-2026-09-09",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "c55d2f524b0ec1119c2057069bd11ff03af7d3af",
+      "ref": "refs/heads/reconcile/advisory-post-merge-2026-09-09",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "63c9039f8513677c999dbdf8ac84d77c0bab9d1e",
+      "ref": "refs/heads/reconcile/pr13-closeout-2026-09-05",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "390ba43641e24ed26593f256f8473ab416890cce",
+      "ref": "refs/heads/review/fictional-billing-details",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "ATTACHED_LOCAL_WORKTREE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "e22d80f9a901911b059ae77432f845cccfc773a0",
+      "ref": "refs/heads/review/finance-human-evidence",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "7143ed4dd9db550c9d6ca4e52187d6ad961aa193",
+      "ref": "refs/heads/review/legal-gap-instruments-2026-09-12",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "12fdd3b942672f2f84d8fdd27d7e749afdea2760",
+      "ref": "refs/heads/review/overnight-human-evidence-2026-09-12",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "ATTACHED_LOCAL_WORKTREE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "825be8ef9ca286cb33b1b35e9c072c6b0df4df1a",
+      "ref": "refs/heads/review/sacramento-visitor-map",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "ATTACHED_LOCAL_WORKTREE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "45e145614407c933739ff7143275268b55f11b4c",
+      "ref": "refs/heads/runtime/reno-boise-colo-owned-dc-2026-09",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "40c25ac1cd794c3f4ff3a076d0140b2f3ace37b7",
+      "ref": "refs/heads/shms/locked-principles",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "712076751a31534cd9e6e41458336cdc7b6585b5",
+      "ref": "refs/heads/tmp-never",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "4d5b76479f8a3b6309b63f701df2efd653f6a7e7",
+      "ref": "refs/heads/tmp-noop",
+      "ancestor_of_accepted_main": true,
+      "eligible": false,
+      "exclusions": [
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "sha": "61f6804d8bcb33620fe593322eb96388a6818174",
+      "ref": "refs/heads/tooling/source-snapshot-20260901",
+      "ancestor_of_accepted_main": false,
+      "eligible": false,
+      "exclusions": [
+        "NOT_ANCESTOR_OR_OBJECT_UNAVAILABLE",
+        "CURRENT_OWNERSHIP_NOT_CONFIRMED"
+      ]
+    }
+  ],
+  "open_prs": [
+    {
+      "author": {
+        "id": "U_kgDODZ-t0w",
+        "is_bot": false,
+        "login": "SquirmyWormy275",
+        "name": "Alex Kaper"
+      },
+      "headRefName": "docs/human-reader-cleanup-2026-09-15",
+      "headRefOid": "788267791933ef2198fe5b1f284861904cc088c1",
+      "number": 167,
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/167"
+    },
+    {
+      "author": {
+        "id": "U_kgDODZ-t0w",
+        "is_bot": false,
+        "login": "SquirmyWormy275",
+        "name": "Alex Kaper"
+      },
+      "headRefName": "closeout/company-edition-2026-09-15",
+      "headRefOid": "67377e34c14a5a52b0b7dff190c0f5d8166200c8",
+      "number": 166,
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/166"
+    }
+  ],
+  "attached_branches": [
+    "refs/heads/architecture/common-controls-framework-v0.1",
+    "refs/heads/blackridge/enterprise-data-foundation-v0.1.0-ledger-closeout",
+    "refs/heads/build/accounting-legal-records-closeout-2026-09-13",
+    "refs/heads/build/audit-training-suite",
+    "refs/heads/build/complete-wiki",
+    "refs/heads/build/overnight-accounting-legal-rollup",
+    "refs/heads/build/reader-evidence-closeout",
+    "refs/heads/build/reader-practical-routes-2026-09-12",
+    "refs/heads/build/universe-reader-experience",
+    "refs/heads/canon/geographic-final-decisions",
+    "refs/heads/canon/klein-fort-continuity",
+    "refs/heads/cleanup/geo-discovery-adjudication-2026-09-12",
+    "refs/heads/cleanup/navigation-and-ci-2026-09-12",
+    "refs/heads/cleanup/repository-improvements-2026-09-12",
+    "refs/heads/closeout/company-edition-2026-09-15",
+    "refs/heads/closeout/controls-2026-09-15",
+    "refs/heads/closeout/finance-2026-09-15",
+    "refs/heads/closeout/main-source-protection-2026-09-15",
+    "refs/heads/closeout/operations-2026-09-15",
+    "refs/heads/closeout/pr145-integration-2026-09-15",
+    "refs/heads/completion/geographic-requirements",
+    "refs/heads/completion/reviewer-workbench",
+    "refs/heads/docs/industrial-planning-v2-release",
+    "refs/heads/evidence/source-backed-closeout",
+    "refs/heads/execute/overnight-evidence-2026-09-12",
+    "refs/heads/execute/overnight-finance-2026-09-12",
+    "refs/heads/execute/overnight-legal-2026-09-12",
+    "refs/heads/execute/overnight-reader-2026-09-12",
+    "refs/heads/feature/ccf-local-pilot",
+    "refs/heads/feature/red-wash-transaction-operating-record-v2",
+    "refs/heads/finance/corporate-financial-reconstruction-v0.1",
+    "refs/heads/fix/reader-catalog-ccf-integration",
+    "refs/heads/fix/wiki-header-contrast-2026-09-12",
+    "refs/heads/main",
+    "refs/heads/migration/alexandria-control-boundary-v0.1.0",
+    "refs/heads/polish/professional-wiki",
+    "refs/heads/review/fictional-billing-details",
+    "refs/heads/review/overnight-human-evidence-2026-09-12",
+    "refs/heads/review/sacramento-visitor-map"
+  ],
+  "eligible_refs": [],
+  "rule": "No deletion. A merged ancestor with no attachment/openPR still remains excluded without current ownership disposition."
+}

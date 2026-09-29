@@ -39,5 +39,3 @@ A shared capability label is not a new department or a safety qualification. Unr
 - [Project Cradle](../businesses/Cradle.md)
 - [American Resource Utility / BS&T](../businesses/American-Resource-Utility.md)
 - [Quality and technical standards](quality-standards.md)
-
-Related reading describes useful connections, not additional reporting lines.

@@ -1,0 +1,801 @@
+{
+  "schema_version": 1,
+  "status": "DRAFT_FOR_EXACT_FILE_REVIEW",
+  "approved": false,
+  "source_revision": "79437a778d4a4d5097a3cdaa36d7d8ab13217536",
+  "source_manifest_sha256": "300fcc6f7b8f8b6a007b82c7afba47fca457e124379624fc1a29ed73894fffd0",
+  "generator_sha256": "0bd301fe64d2162f2a80597d1cb6fa08078c26c88d2bfdc735523ba5e81ac3ef",
+  "style_sha256": "646202deb55d3b4f547b45355be2b2b3e99964a3d8aeeda8a72d1a01f5bb8e81",
+  "artifacts": [
+    {
+      "id": "SH-IND-RW-TXN-001",
+      "source": "industrial/transaction/01_RW_TRANSACTION_FILE.md",
+      "source_sha256": "902ff083d3857004b5c868b106fddc8e3600e59ad959201fb97c99d68dba298c",
+      "html": "docs/legal/full-text/editions/SH-IND-RW-TXN-001.html",
+      "html_sha256": "05729462e9d09c1d6730be5ff07e222df0e37a6b7666dddf27ba5871c43d7ef3",
+      "pdf": "docs/legal/full-text/editions/SH-IND-RW-TXN-001.pdf",
+      "pdf_sha256": "7b58c7fed46556ebfe9258ca01414494a353672015e9fab1b1d986ef991708b5",
+      "pages": 2,
+      "logo": {
+        "path": "assets/brand/logos/pale_sun__canonical.png",
+        "sha256": "eedcabfca73460e8ff5ad72864c9f669ba2375097b05daa2912f30c9ff35c025"
+      }
+    },
+    {
+      "id": "SH-IND-ARU-LOI-001",
+      "source": "industrial/transaction/02_ARU_LOI_AND_SELLER_FILE.md",
+      "source_sha256": "e012644ca645384234ddf8f47e78d176b1cc11d4cef97449723f23f2803f5615",
+      "html": "docs/legal/full-text/editions/SH-IND-ARU-LOI-001.html",
+      "html_sha256": "baf8e654816a74b49d6c32ab4e5cd8c2e2b01ee0ccdd6e2eb67d24826e6f656c",
+      "pdf": "docs/legal/full-text/editions/SH-IND-ARU-LOI-001.pdf",
+      "pdf_sha256": "53f2ea6210e1672d7fac21ae689e18334058ca4b1ad389a564e77d0764c10b99",
+      "pages": 2,
+      "logo": {
+        "path": "assets/brand/industrial_sources/aru/aru_primary_centered_chat_asset.png",
+        "sha256": "5892792a95e7fbc2a16171fea38b96d2aee5becf0603b68687f0d48e1bd9fc46"
+      }
+    },
+    {
+      "id": "SH-IND-ARU-DD-001",
+      "source": "industrial/transaction/03_ARU_DILIGENCE_MEMORANDUM.md",
+      "source_sha256": "1591f3a761202385693de6b689377400a4905862910b0213acb326ace0bbc272",
+      "html": "docs/legal/full-text/editions/SH-IND-ARU-DD-001.html",
+      "html_sha256": "c8d3142859b4eadd08a5ea7123f22009b50a4e72916994c25f0307c918449a34",
+      "pdf": "docs/legal/full-text/editions/SH-IND-ARU-DD-001.pdf",
+      "pdf_sha256": "2f3138cbf0a160d6eb0d30a06b2389e7009e9ff6f42caa7244c2974adfde8f3f",
+      "pages": 3,
+      "logo": {
+        "path": "assets/brand/industrial_sources/aru/aru_primary_centered_chat_asset.png",
+        "sha256": "5892792a95e7fbc2a16171fea38b96d2aee5becf0603b68687f0d48e1bd9fc46"
+      }
+    },
+    {
+      "id": "SH-IND-ARU-SPA-001",
+      "source": "industrial/transaction/04_ARU_APPROVAL_AND_PURCHASE_AGREEMENT.md",
+      "source_sha256": "3b40effe8efb1d4a69216180d508dad90f7fc6a778679b39ee2ed5371d0de9eb",
+      "html": "docs/legal/full-text/editions/SH-IND-ARU-SPA-001.html",
+      "html_sha256": "3b4b48b4717673465da04e713ff9dfac8936b82e275447040c970afe906d7ece",
+      "pdf": "docs/legal/full-text/editions/SH-IND-ARU-SPA-001.pdf",
+      "pdf_sha256": "52d89a9277c9256f3e372d963b5e69d4528cc25bab6856e199c90c24bc40afcd",
+      "pages": 2,
+      "logo": {
+        "path": "assets/brand/industrial_sources/aru/aru_primary_centered_chat_asset.png",
+        "sha256": "5892792a95e7fbc2a16171fea38b96d2aee5becf0603b68687f0d48e1bd9fc46"
+      }
+    },
+    {
+      "id": "SH-IND-ARU-CLOSE-001",
+      "source": "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md",
+      "source_sha256": "a6dd448ed3a4a3ad6f0f3748e79dd918ea43c75685de762fe00843477a5d22c9",
+      "html": "docs/legal/full-text/editions/SH-IND-ARU-CLOSE-001.html",
+      "html_sha256": "deb631e6beb4b167dcf98733b5f6c038a8d8ca7bc1d6b4aef6bde3ada1549088",
+      "pdf": "docs/legal/full-text/editions/SH-IND-ARU-CLOSE-001.pdf",
+      "pdf_sha256": "ec357cecda12dae00f2fd2faf93119e9d73b7cf8a559e9728db96505dc3b4845",
+      "pages": 3,
+      "logo": {
+        "path": "assets/brand/industrial_sources/aru/aru_primary_centered_chat_asset.png",
+        "sha256": "5892792a95e7fbc2a16171fea38b96d2aee5becf0603b68687f0d48e1bd9fc46"
+      }
+    },
+    {
+      "id": "LEGAL-SOURCE-16BD06943F32",
+      "source": "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md",
+      "source_sha256": "5ee3715b0b5b08ba2fd259504ff7455da005d3d2e3701668945aa1ca90477808",
+      "html": "docs/legal/full-text/editions/LEGAL-SOURCE-16BD06943F32.html",
+      "html_sha256": "2c9d76ef2114833a9813a760b31bc64c7ca27b32a72de66af6bbd3c49276f859",
+      "pdf": "docs/legal/full-text/editions/LEGAL-SOURCE-16BD06943F32.pdf",
+      "pdf_sha256": "5ddf4b3f540a1d4dcc2e040846cedb76d74732b97c7b79ce59cac4cb917e5594",
+      "pages": 5,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-IND-DR-001",
+      "source": "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
+      "source_sha256": "0b21f22c2a8ffe55fa4e43898834ddc38389e42efe2e9c11ff48c7418dad8be7",
+      "html": "docs/legal/full-text/editions/SH-IND-DR-001.html",
+      "html_sha256": "857d4044257a9c75d0808059d8f864ddfb0b1286c6a794031378d53b5d699481",
+      "pdf": "docs/legal/full-text/editions/SH-IND-DR-001.pdf",
+      "pdf_sha256": "941000830565527f5e1cd64e6e9dfe659da905e3b0e3a7f3b702d7144125efc9",
+      "pages": 5,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-PS-RW-TOR-001",
+      "source": "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md",
+      "source_sha256": "89eae89e18db1d3cf3ab4f7bf7f54fa57efabb84c57127717b731572048d563b",
+      "html": "docs/legal/full-text/editions/SH-PS-RW-TOR-001.html",
+      "html_sha256": "967998229d622558c12b09f975885df2659740dbb8dccd10e210f5da80d10114",
+      "pdf": "docs/legal/full-text/editions/SH-PS-RW-TOR-001.pdf",
+      "pdf_sha256": "3a9cddaa1bec2594e651cc26565391229dc70ebe5546fb7903a788de745f2655",
+      "pages": 7,
+      "logo": {
+        "path": "assets/brand/logos/pale_sun__canonical.png",
+        "sha256": "eedcabfca73460e8ff5ad72864c9f669ba2375097b05daa2912f30c9ff35c025"
+      }
+    },
+    {
+      "id": "SH-IND-IC-001",
+      "source": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md",
+      "source_sha256": "23153dc86a3e9ea9fd501bce6bdf3c8478dbdf3ab79fa5e8abc84ca8bbb771fc",
+      "html": "docs/legal/full-text/editions/SH-IND-IC-001.html",
+      "html_sha256": "d2e53e953a1bc3bd93dc12eb7342d933906fc59ec7e88a5dbbd3b838ca6622d9",
+      "pdf": "docs/legal/full-text/editions/SH-IND-IC-001.pdf",
+      "pdf_sha256": "261934d6015a6cf259753f0c931df1ee7135ccdee111468b3471c56f971290a1",
+      "pages": 5,
+      "logo": {
+        "path": "assets/brand/industrial_sources/aru/aru_primary_centered_chat_asset.png",
+        "sha256": "5892792a95e7fbc2a16171fea38b96d2aee5becf0603b68687f0d48e1bd9fc46"
+      }
+    },
+    {
+      "id": "SH-IND-IC-PRC-001",
+      "source": "industrial/transaction/09_SERVICE_PRICING_COMPARISON.md",
+      "source_sha256": "4f185dffc7906ecc6abda8420fc9d026d4fb5bc470d506eb99dbab968560b2c5",
+      "html": "docs/legal/full-text/editions/SH-IND-IC-PRC-001.html",
+      "html_sha256": "f8735f5173de7a8a586dbcbcc294159dbd497e6e7fbcadb810e22b9cd8056f1a",
+      "pdf": "docs/legal/full-text/editions/SH-IND-IC-PRC-001.pdf",
+      "pdf_sha256": "ac7ec9cb9c7dff5ad558988b46455d0501148fbd42807b1b9f3179d955427ca3",
+      "pages": 3,
+      "logo": {
+        "path": "assets/brand/industrial_sources/aru/aru_primary_centered_chat_asset.png",
+        "sha256": "5892792a95e7fbc2a16171fea38b96d2aee5becf0603b68687f0d48e1bd9fc46"
+      }
+    },
+    {
+      "id": "SH-ADV-014",
+      "source": "docs/advisory/LEGAL_AND_CONTRACTING_TERM_SHEET.md",
+      "source_sha256": "b0e842b631713579f2890efb846de642b100a576282ba88dea9880fb671428f7",
+      "html": "docs/legal/full-text/editions/SH-ADV-014.html",
+      "html_sha256": "74faaa281b29bbb576a38bc6ab4922531847ccba80fd385c742181985030164f",
+      "pdf": "docs/legal/full-text/editions/SH-ADV-014.pdf",
+      "pdf_sha256": "310e49c913e8b50fdf1cec146c8fd72099faacb7e756be1a6de14aa6d6a14558",
+      "pages": 7,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-ADV-009",
+      "source": "docs/advisory/COMMERCIAL_CONTRACTING_AND_PRICING_STANDARD.md",
+      "source_sha256": "d205a6b5d1a254ed30fc35c395f0f3ea3372a449d0537fea7c7bb18583cb8275",
+      "html": "docs/legal/full-text/editions/SH-ADV-009.html",
+      "html_sha256": "7bbf2db1d2cd157b40eb71327d15faf3a5f82bf59eb9a78492ce0c41f5edf23e",
+      "pdf": "docs/legal/full-text/editions/SH-ADV-009.pdf",
+      "pdf_sha256": "d15658fb27032e42cb22b10aa2a15bd38ef1ba046cfb91262750c4647cdb4c92",
+      "pages": 6,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-ADV-007",
+      "source": "docs/advisory/IP_DATA_AND_METHOD_TRANSFER_STANDARD.md",
+      "source_sha256": "e6f58bec6caeaa1eb693962bd4a021d40b4bec5319c49f0e4e59c3212f04ad91",
+      "html": "docs/legal/full-text/editions/SH-ADV-007.html",
+      "html_sha256": "9b87d5c9be07986b78e54763db6591761218b5077411c69db1f43207d6304583",
+      "pdf": "docs/legal/full-text/editions/SH-ADV-007.pdf",
+      "pdf_sha256": "abff8652d19befb841725ca177f335f01737885eb8bf80c2ccd8ff4858a7b941",
+      "pages": 6,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-ADV-017",
+      "source": "docs/advisory/EXPERT_NETWORK_AND_THIRD_PARTY_STANDARD.md",
+      "source_sha256": "fe6648704a935ad7c91651f5042bc5b3f5e821e9d432cbcbbab2fa648dd31763",
+      "html": "docs/legal/full-text/editions/SH-ADV-017.html",
+      "html_sha256": "c5bf3be4d09a17e6b611c6e6163f33ce127264c6f9e43e5f3b9d1b7ed25952be",
+      "pdf": "docs/legal/full-text/editions/SH-ADV-017.pdf",
+      "pdf_sha256": "2223fb49db89ee4db37a7bfd740eff84ca48359e50e988cb802329733b761573",
+      "pages": 4,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-ATL-017",
+      "source": "docs/advisory/ATLAS_MERIDIAN_COMMERCIAL_PRODUCT_STANDARD.md",
+      "source_sha256": "5c852557be8c42cec41f50be2d01b850027a61ad613c98672f075e15453769d4",
+      "html": "docs/legal/full-text/editions/SH-ATL-017.html",
+      "html_sha256": "77dcf8c2d877e4eed0845ec2311e4e8f64289234e0765fe79dc83f914fe9e33b",
+      "pdf": "docs/legal/full-text/editions/SH-ATL-017.pdf",
+      "pdf_sha256": "e998053ebfd97562f2c25a39c15b3de46f50480a29176a41f5414bd42019e45e",
+      "pages": 8,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-RT-CONTRACT-001",
+      "source": "enterprise/runtime/docs/CONTRACT_DOSSIER.md",
+      "source_sha256": "7cd01050b17f9451ff5bd341573289440c74fb190c01253bdc8197a6599d2ad1",
+      "html": "docs/legal/full-text/editions/SH-RT-CONTRACT-001.html",
+      "html_sha256": "0ccc1b6b80c13f37ae4c9b96816a50466c9cf1a80a5a6d91e457b74925fbc2b0",
+      "pdf": "docs/legal/full-text/editions/SH-RT-CONTRACT-001.pdf",
+      "pdf_sha256": "710f0c058b4a1b99f6243663be0440b11d76471c647a592cd79d039ae78d4953",
+      "pages": 5,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "LEGAL-SOURCE-F1F0AD5F06DC",
+      "source": "enterprise/operations/docs/commercial.md",
+      "source_sha256": "ef896e84c66e03eff7adecb3e3f6b7c082b28e618f4183ec37fc7568f2b45416",
+      "html": "docs/legal/full-text/editions/LEGAL-SOURCE-F1F0AD5F06DC.html",
+      "html_sha256": "27dca55f917086a5d80c66b2519f0a68d4c1cdec865d576d43c0f48dfa7a715b",
+      "pdf": "docs/legal/full-text/editions/LEGAL-SOURCE-F1F0AD5F06DC.pdf",
+      "pdf_sha256": "5c04797b8ca54a0fb47378119b757ad6df470c3f156c741732ead340abade5e6",
+      "pages": 3,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "LEGAL-SOURCE-7FFDC6FBB585",
+      "source": "enterprise/services/README.md",
+      "source_sha256": "d87d9efeef12a6848427dc57630ea1fb58ad1f7ac4c7de5bb041a457fcf023d4",
+      "html": "docs/legal/full-text/editions/LEGAL-SOURCE-7FFDC6FBB585.html",
+      "html_sha256": "ff755517aa5b8accb94f8cc3a7e045e8b640342b30a82ae4c52c5425168f2446",
+      "pdf": "docs/legal/full-text/editions/LEGAL-SOURCE-7FFDC6FBB585.pdf",
+      "pdf_sha256": "4429d441c6effed7d681ae58c1602d2576e193614998353356e307305d184cbf",
+      "pages": 4,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-IND-COR-001",
+      "source": "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md",
+      "source_sha256": "5a10f112b015d5dfa7ca3b500108718015a41369182092cabc44dfb224119fbc",
+      "html": "docs/legal/full-text/editions/SH-IND-COR-001.html",
+      "html_sha256": "e86677ca60dece15752dcdb382ca063c2ee31160e3292e137437adaa848a1a2e",
+      "pdf": "docs/legal/full-text/editions/SH-IND-COR-001.pdf",
+      "pdf_sha256": "013b79a6302710d9d225ab11adf8045376649958790c0579045da4e0807e6360",
+      "pages": 4,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-IND-HR-001",
+      "source": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+      "source_sha256": "61a32c036e8cdb2fbf7ab0234d26a925ebd423b48869667724c5a254ca14fda1",
+      "html": "docs/legal/full-text/editions/SH-IND-HR-001.html",
+      "html_sha256": "b5a7180669dc0df02f98f0e7063ee44828953b170b5bc0b9df653ad39bc9814a",
+      "pdf": "docs/legal/full-text/editions/SH-IND-HR-001.pdf",
+      "pdf_sha256": "262cd36fc71d558fce7b191421213f79d63ced5f073e7f966e5eb00e8eb94ee8",
+      "pages": 4,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-GOV-BOARD-001",
+      "source": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
+      "source_sha256": "dc1e2e3ea6e7ea8d364eae87bd890a8c79a5a577a7554ed371cda3810ea945a8",
+      "html": "docs/legal/full-text/editions/SH-GOV-BOARD-001.html",
+      "html_sha256": "0db7734fa3c10b1f454fc66b1e004234373ca60e4a3ea108794123a2589d65f3",
+      "pdf": "docs/legal/full-text/editions/SH-GOV-BOARD-001.pdf",
+      "pdf_sha256": "edf4efe05adb8d7d604f3fdfe9aad117facd050c32a202d68b27993f85f26f1d",
+      "pages": 4,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-GOV-AUTH-001",
+      "source": "docs/governance/RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md",
+      "source_sha256": "323a9611891d41dafa6eb00ed891ba4b0917a4b2329fd29e52bd730cc92d3313",
+      "html": "docs/legal/full-text/editions/SH-GOV-AUTH-001.html",
+      "html_sha256": "c6286fbee39e4f51684bed059106e0a354b6beb91a76b55966fac4675abc1b26",
+      "pdf": "docs/legal/full-text/editions/SH-GOV-AUTH-001.pdf",
+      "pdf_sha256": "657afd043ef815eca79d51a5535c159a9247d11de8e0cc38ad16a8ae5c8ad335",
+      "pages": 2,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-GOV-ESS-001",
+      "source": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+      "source_sha256": "40b45496c66d6e7e5eb5dcd118c3ba37feb710744760c3617acbddcd899e466f",
+      "html": "docs/legal/full-text/editions/SH-GOV-ESS-001.html",
+      "html_sha256": "b72acb085d31e4e85a6d8acb4ded5ce36b16b6ec6d534382fd366746e28bc57f",
+      "pdf": "docs/legal/full-text/editions/SH-GOV-ESS-001.pdf",
+      "pdf_sha256": "1747fd235defbd819d2208d6e5bd86ac9638ab992fb9b696233e4b96307b60b5",
+      "pages": 3,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-CORP-HQ-20260903",
+      "source": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+      "source_sha256": "25e484d7fbc2c83a37f0e7ae7fe20ff741cde176bd0c2ba7be742fa7fb3e2624",
+      "html": "docs/legal/full-text/editions/SH-CORP-HQ-20260903.html",
+      "html_sha256": "0930761b2ee96f6630b16695c13dc5e6f1431dc8fc60c46917b32256bea41108",
+      "pdf": "docs/legal/full-text/editions/SH-CORP-HQ-20260903.pdf",
+      "pdf_sha256": "447bc160c379309c73d818a71cec11fb60af5383daae6c7b409acaf6507bd77f",
+      "pages": 12,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-J2-PPL-20260910",
+      "source": "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+      "source_sha256": "05ee1d4bbcad3ff2de9f623de0b57373acaaf611c0b161664a9f3e36b1066509",
+      "html": "docs/legal/full-text/editions/SH-J2-PPL-20260910.html",
+      "html_sha256": "5883038af8be4ffff4ba36bbc698db152a07ba1bc41eb1702dffbbd60e32b8d4",
+      "pdf": "docs/legal/full-text/editions/SH-J2-PPL-20260910.pdf",
+      "pdf_sha256": "f558b9bb030e5eb604e31dbb59ec1297eedbecd1b1d39ee824a669e3b8d1b325",
+      "pages": 3,
+      "logo": {
+        "path": "assets/brand/logos/j2__primary-horizontal.svg",
+        "sha256": "de17265dd599b1cd68a81f091c56c7409b44bfd8d12555af9c019046468f922c"
+      }
+    },
+    {
+      "id": "SH-LEGAL-ADV-001",
+      "source": "docs/legal/ADVISORY_NAME_AND_EXTERNAL_CLEARANCE_STATUS_2026-09-09.md",
+      "source_sha256": "53cb9756ad05f9422b8d0bc93eeecace454cc25c6652424154caf2eaf0b4984d",
+      "html": "docs/legal/full-text/editions/SH-LEGAL-ADV-001.html",
+      "html_sha256": "6e31aead3ed1cac306ac53b63eff968a9bb2500b4dfecb98c927647ec7d7a1c1",
+      "pdf": "docs/legal/full-text/editions/SH-LEGAL-ADV-001.pdf",
+      "pdf_sha256": "36730f71c7275ccf1c1abb499577fc0acd7460064f0f1a9495246ee1dc32bec0",
+      "pages": 2,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-BRD-MIN-2021-06-18",
+      "source": "docs/governance/board-records/2021-06-18_harrison-vale-growth-financing-minutes.md",
+      "source_sha256": "b994512c64f86abe0d649f95d4ea3d3e00fd0c2c22af0ed56b62bd7ed41fae97",
+      "html": "docs/legal/full-text/editions/SH-BRD-MIN-2021-06-18.html",
+      "html_sha256": "5dd77eb6f50e92f199baacf4d7958a04e075ad7024e760acff843896cc6f1a7a",
+      "pdf": "docs/legal/full-text/editions/SH-BRD-MIN-2021-06-18.pdf",
+      "pdf_sha256": "6731f485c0810d334e0defb04ff54bee7690172415a4fb682c61059d34a91a85",
+      "pages": 2,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-BRD-MIN-2022-10-28",
+      "source": "docs/governance/board-records/2022-10-28_wolf-ridge-industrial-financing-minutes.md",
+      "source_sha256": "ec3625726d23588816c073afb4bd76cce51085a195833c6089faea3c3efed1a4",
+      "html": "docs/legal/full-text/editions/SH-BRD-MIN-2022-10-28.html",
+      "html_sha256": "81a46b3bd15f98965834a9f2ca78d598b19210db346f7ad3ea1dff3a55bc0806",
+      "pdf": "docs/legal/full-text/editions/SH-BRD-MIN-2022-10-28.pdf",
+      "pdf_sha256": "70fc9633b353edaef253f582f0189e76b68fff800487ce4ffa2565a4708e5c62",
+      "pages": 2,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-BRD-MIN-2024-02-15",
+      "source": "docs/governance/board-records/2024-02-15_independent-chair-and-committee-architecture-minutes.md",
+      "source_sha256": "ff5ad2d4299617a7b931924b757e6ca2316795d2133a656c219094528ce0c9a4",
+      "html": "docs/legal/full-text/editions/SH-BRD-MIN-2024-02-15.html",
+      "html_sha256": "67f1390bbb17ed4304078857a4e36e4a8a9878475ae3f6444ce4cd19a56dd064",
+      "pdf": "docs/legal/full-text/editions/SH-BRD-MIN-2024-02-15.pdf",
+      "pdf_sha256": "7165c5ef2613b61eaeedbe34b4e6607448433b9c52fab7582207dbd3a1475cb2",
+      "pages": 2,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-BRD-CONSENT-2026-09-02",
+      "source": "docs/governance/board-records/2026-09-02_governance-j2-alexandria-ratification-written-consent.md",
+      "source_sha256": "2a0afb5615327345daf491c308e2b89e7e6236e44be1b3b09b3663389b344400",
+      "html": "docs/legal/full-text/editions/SH-BRD-CONSENT-2026-09-02.html",
+      "html_sha256": "2f385035542fc9a593f22f51ce9ba488cd7f0fdb78bba631bb9d1c80e37956f3",
+      "pdf": "docs/legal/full-text/editions/SH-BRD-CONSENT-2026-09-02.pdf",
+      "pdf_sha256": "69729d07ada3c840fdfd543e0af3fe80df7599da78346eac6aeb881c6b872bad",
+      "pages": 3,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "LEGAL-SOURCE-801955F60F74",
+      "source": "docs/governance/board-records/exhibits/2026-09-02_exhibit-a-governance-package.md",
+      "source_sha256": "a9fc111374c2eef37e889ce3adc39af9bca3c7c6a0bf318de51dbdd551164536",
+      "html": "docs/legal/full-text/editions/LEGAL-SOURCE-801955F60F74.html",
+      "html_sha256": "a2c563faa82aa901d7b6726ef0be882075f21d33ef09d66b943826b8a187e825",
+      "pdf": "docs/legal/full-text/editions/LEGAL-SOURCE-801955F60F74.pdf",
+      "pdf_sha256": "fea17b6e0b2df404b0e168d7528f38411f32a63d6e237eb83a325286d33ee8dc",
+      "pages": 1,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "LEGAL-SOURCE-46256BC2255E",
+      "source": "docs/governance/board-records/exhibits/2026-09-02_exhibit-b-j2-package.md",
+      "source_sha256": "485477fcca0441c022bcf60174f5e74fc7eb951be8a9a3fdc2ba73e5559e1086",
+      "html": "docs/legal/full-text/editions/LEGAL-SOURCE-46256BC2255E.html",
+      "html_sha256": "136d13c46d5b7ecc46214208b42e602e1626282cbee7abc9de63d32aabe89ace",
+      "pdf": "docs/legal/full-text/editions/LEGAL-SOURCE-46256BC2255E.pdf",
+      "pdf_sha256": "244088a7f1fe1283a07249aeecf9027fa4d52d9714050b2ee5257a5ecec04ae5",
+      "pages": 2,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "LEGAL-SOURCE-508081AAD2B2",
+      "source": "docs/governance/board-records/exhibits/2026-09-02_exhibit-c-alexandria-package.md",
+      "source_sha256": "4cfd047e688015bb8d59d1306b4a2d0790f34445bfc2fa14ecbdf3d1c317f647",
+      "html": "docs/legal/full-text/editions/LEGAL-SOURCE-508081AAD2B2.html",
+      "html_sha256": "ae5138ca5b0be9c1563430e425c1e8c8c5e6f2be77fcb44ffc8120cd2f5e829d",
+      "pdf": "docs/legal/full-text/editions/LEGAL-SOURCE-508081AAD2B2.pdf",
+      "pdf_sha256": "b8cc9e434ba8e21b2ecc926a7949319e07949e6a34ce0ec07f46387c180d3962",
+      "pages": 2,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "LEGAL-SOURCE-9E57D6909035",
+      "source": "docs/governance/board-records/exhibits/2026-09-02_exhibit-d-controlled-publication-and-catalog-package.md",
+      "source_sha256": "df7ea4fe111168a37d50848135443748ebcce970c259e05d728941d569f41bb5",
+      "html": "docs/legal/full-text/editions/LEGAL-SOURCE-9E57D6909035.html",
+      "html_sha256": "dde282d24be80d08a2de139db2137347b5247e7b833610918ad86341649a80fc",
+      "pdf": "docs/legal/full-text/editions/LEGAL-SOURCE-9E57D6909035.pdf",
+      "pdf_sha256": "8b2cc2fb19132b7cb00d40555ca1f53810f51eaa4d0041d7c3ec2ef6bf1a05e2",
+      "pages": 1,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-GOV-COM-AUDIT-001",
+      "source": "docs/governance/committees/AUDIT_AND_COMPLIANCE_COMMITTEE_CHARTER.md",
+      "source_sha256": "d59a708310e56dbe67fc28629efbedd4f790a4ef9765d841b651f3335ab8e993",
+      "html": "docs/legal/full-text/editions/SH-GOV-COM-AUDIT-001.html",
+      "html_sha256": "ea3e7d74b261a229db299beddb6c41c0c49fe27c4d317a95d62ec78f68e4506b",
+      "pdf": "docs/legal/full-text/editions/SH-GOV-COM-AUDIT-001.pdf",
+      "pdf_sha256": "ea50873e651a57a56216af7e87a0763ae87c68cc48e260aa9ed43263da6b18e7",
+      "pages": 1,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-GOV-COM-COMP-001",
+      "source": "docs/governance/committees/COMPENSATION_AND_HUMAN_CAPITAL_COMMITTEE_CHARTER.md",
+      "source_sha256": "e7fe92afc99946ca4c61ed32980c67556aa3b9227abef852b1931182bd7ea295",
+      "html": "docs/legal/full-text/editions/SH-GOV-COM-COMP-001.html",
+      "html_sha256": "ebfac5b8b7a9b86c90d355d0132ad572c20dc319946f5bf438661a0a48b06759",
+      "pdf": "docs/legal/full-text/editions/SH-GOV-COM-COMP-001.pdf",
+      "pdf_sha256": "b7a5a4aae4c2377053ecf4bb4875b35679baa7f83f33afea3f47bdbdc16bf53f",
+      "pages": 1,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-GOV-COM-FIN-001",
+      "source": "docs/governance/committees/FINANCE_AND_INVESTMENT_COMMITTEE_CHARTER.md",
+      "source_sha256": "7c3990aa3537281c2a53e42de941334b98a3859e55e9e9cbfa66c5c233db1361",
+      "html": "docs/legal/full-text/editions/SH-GOV-COM-FIN-001.html",
+      "html_sha256": "4cbd306f17bfccdb7fc6a0512abe2d25c1f39a77f10fe048ed172be2fd5962bd",
+      "pdf": "docs/legal/full-text/editions/SH-GOV-COM-FIN-001.pdf",
+      "pdf_sha256": "de665fd714b32a128683736998de3b4f80f3da8387117b91c9a23f28c3c3ba03",
+      "pages": 1,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-GOV-COM-GOVNOM-001",
+      "source": "docs/governance/committees/GOVERNANCE_AND_NOMINATING_COMMITTEE_CHARTER.md",
+      "source_sha256": "d3afcfbaad2af59209b50994b15ae0846c329ebfb807e6ab14876bd2d9eb544e",
+      "html": "docs/legal/full-text/editions/SH-GOV-COM-GOVNOM-001.html",
+      "html_sha256": "1c82bba0ffa8400bfd83bfd292fdd992a784dbc0289cfe7491f72a6388c391a0",
+      "pdf": "docs/legal/full-text/editions/SH-GOV-COM-GOVNOM-001.pdf",
+      "pdf_sha256": "c4bf172a1804744d472cbcab8d3073de371b08939d5bed782c74f482db196e20",
+      "pages": 1,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-GOV-COM-TECHOPS-001",
+      "source": "docs/governance/committees/TECHNOLOGY_AND_OPERATIONS_COMMITTEE_CHARTER.md",
+      "source_sha256": "953b7eaa91e5439df5d0ca86d398c01874ffe35f68f56d6c6e05e2c9c545a860",
+      "html": "docs/legal/full-text/editions/SH-GOV-COM-TECHOPS-001.html",
+      "html_sha256": "634c31024e44e64227eb51de590cbdeb1e4de7e4ea0ce5b0a6c936b540f9589e",
+      "pdf": "docs/legal/full-text/editions/SH-GOV-COM-TECHOPS-001.pdf",
+      "pdf_sha256": "dd30939853f17a929f1ce25c991dd779ae1c554d357fb139830d599818404481",
+      "pages": 1,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-IND-ARU-HR-001",
+      "source": "industrial/transaction/06_ARU_TRANSITION_AND_RETENTION.md",
+      "source_sha256": "3e3653f95a286d71aa513410603dd0c78684db0ad94e2460708c434a6fc4aec0",
+      "html": "docs/legal/full-text/editions/SH-IND-ARU-HR-001.html",
+      "html_sha256": "09cdec3e079149f1a1b8af237fe6ca80ad2619c9ebca8e360a644ec78fd5413b",
+      "pdf": "docs/legal/full-text/editions/SH-IND-ARU-HR-001.pdf",
+      "pdf_sha256": "c16c9aff6b96b7c4aa3439b91bd6f487b20709fa64504a5ffa0897213a3c531f",
+      "pages": 2,
+      "logo": {
+        "path": "assets/brand/industrial_sources/aru/aru_primary_centered_chat_asset.png",
+        "sha256": "5892792a95e7fbc2a16171fea38b96d2aee5becf0603b68687f0d48e1bd9fc46"
+      }
+    },
+    {
+      "id": "SH-PNC-001",
+      "source": "docs/governance/PEOPLE_AND_CULTURE_DOCTRINE.md",
+      "source_sha256": "9e8c8b6b3b3ce8500553adfc0e35e94956a8251d395fd8d39355f3d84c1dc5ee",
+      "html": "docs/legal/full-text/editions/SH-PNC-001.html",
+      "html_sha256": "7d64036f6f68c16dd24564ebea76d51b3e1c6877e0fed4882e0ea405d1fb1a58",
+      "pdf": "docs/legal/full-text/editions/SH-PNC-001.pdf",
+      "pdf_sha256": "e2b53bd90bd351b5ef4ee8cde881111c52bfd88177a5423cacbe97c63b568274",
+      "pages": 4,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-ADV-005",
+      "source": "docs/advisory/CARRY_PLAN_STANDARD.md",
+      "source_sha256": "c8b64ecd570a2402233bd6067eea0e274e267c8f1aa90d9153de4b3a4865de45",
+      "html": "docs/legal/full-text/editions/SH-ADV-005.html",
+      "html_sha256": "0a61d1824f97629f98a68d3f8ff5a3d725af974da4ee6dcc956fa3693677bb4d",
+      "pdf": "docs/legal/full-text/editions/SH-ADV-005.pdf",
+      "pdf_sha256": "9f748469346a36baf877b5f005ca831526225fbd24aab49ceda85a69cfabc92a",
+      "pages": 6,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-ADV-003",
+      "source": "docs/advisory/TALENT_MOBILITY_AND_CARRY.md",
+      "source_sha256": "d61c2616c817a82a7c7f33be067dde51f353fd1ba3f7502d316b4fec83cb3e7e",
+      "html": "docs/legal/full-text/editions/SH-ADV-003.html",
+      "html_sha256": "908b46559bc704040ea42b24bce3a97c1a464eda3f1609087b3fde160d2faca7",
+      "pdf": "docs/legal/full-text/editions/SH-ADV-003.pdf",
+      "pdf_sha256": "37e7d2e3a8cd866601e4af878dccdab599a11fa29b146bd9c497f348f5694ee4",
+      "pages": 7,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-IND-SAF-001",
+      "source": "industrial/operations/LABOR_SAFETY_AND_CONTROLS.md",
+      "source_sha256": "586d3aa95bbb894c3891ceded1ddb78b6d73fb0df54e4d20b58ab523c9d622d6",
+      "html": "docs/legal/full-text/editions/SH-IND-SAF-001.html",
+      "html_sha256": "78e7f11ac02d57d54e9ffe884d0303b6af0e3c80cc52cba0522096d0a975770e",
+      "pdf": "docs/legal/full-text/editions/SH-IND-SAF-001.pdf",
+      "pdf_sha256": "6fff991ea34e97d1bd8c5991bd1831bcb2fdb7b3aae0eb7c99810d3f6c665a74",
+      "pages": 3,
+      "logo": {
+        "path": "assets/brand/industrial_sources/bst/bst_railway_primary_chat_asset.png",
+        "sha256": "9af275b2f65ff5a82bca760609ab166ecd055c7a266d171bbf558b05c7e37a05"
+      }
+    },
+    {
+      "id": "SH-CRD-CLOSEOUT-20260906",
+      "source": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+      "source_sha256": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa",
+      "html": "docs/legal/full-text/editions/SH-CRD-CLOSEOUT-20260906.html",
+      "html_sha256": "1b8174497dd51baa0c6b4c43afd2474574cb05b53f4ab48eb70c03caf9728ca8",
+      "pdf": "docs/legal/full-text/editions/SH-CRD-CLOSEOUT-20260906.pdf",
+      "pdf_sha256": "8c462186bbcad9665a1f66b7c4cfdbb8e3a129c6d437166bea0695318a342ad3",
+      "pages": 7,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-CANON-WIL-KLEIN-20260906-001",
+      "source": "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+      "source_sha256": "3289ad8ce5d20d767b38f1ad3ed804feeb80300c59d7e96653bfe68f1eaa24b6",
+      "html": "docs/legal/full-text/editions/SH-CANON-WIL-KLEIN-20260906-001.html",
+      "html_sha256": "a60c23532c01c2f757e8700c207a96946a067f9ba2178187eb8ec051b981e848",
+      "pdf": "docs/legal/full-text/editions/SH-CANON-WIL-KLEIN-20260906-001.pdf",
+      "pdf_sha256": "67b7bc4e081da0ead831f385c926fa7f9b9015fa8a94ce44911e6e8f31802aef",
+      "pages": 5,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-RT-DEED-001",
+      "source": "docs/legal/MOCK_DEED_NORTHERN_NEVADA_DATA_CENTER_2026-09-04.md",
+      "source_sha256": "aa1717ac07ea2968d0ad877045d57b29ec0766dd852a79bd61553fa24eb97d79",
+      "html": "docs/legal/full-text/editions/SH-RT-DEED-001.html",
+      "html_sha256": "d55e892c7b8048c7c835cb7a8d67094ede02deea89ff18b004d09a805bb428db",
+      "pdf": "docs/legal/full-text/editions/SH-RT-DEED-001.pdf",
+      "pdf_sha256": "5d618a620817894a1c9dccdeee6136593a4934890ba69e73592eb97b71c62ef6",
+      "pages": 2,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-RT-DEC-001",
+      "source": "docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md",
+      "source_sha256": "fd309a9bdf596ea96498b7207b60ea3bea70a35d8c418371aa96c06d928bb17b",
+      "html": "docs/legal/full-text/editions/SH-RT-DEC-001.html",
+      "html_sha256": "6a56e358fce74d29fef132a3886efb652d50887da904b01a4b8d519fd35620f3",
+      "pdf": "docs/legal/full-text/editions/SH-RT-DEC-001.pdf",
+      "pdf_sha256": "0e3ad815e65931905c326d5a567293436d1e7dccb77e60b2513eecc304cee563",
+      "pages": 3,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "LEGAL-SOURCE-920F33E127C0",
+      "source": "geospatial/facilities/README.md",
+      "source_sha256": "a58a62e1bfd735eaf954ebce3d3aeaab72f1c9494271250367014d574e0eaf3b",
+      "html": "docs/legal/full-text/editions/LEGAL-SOURCE-920F33E127C0.html",
+      "html_sha256": "6f683ba2d69cf67a06229a653a42a715ad1410be674290604bd68915cbb9968a",
+      "pdf": "docs/legal/full-text/editions/LEGAL-SOURCE-920F33E127C0.pdf",
+      "pdf_sha256": "7c158fd35f8b93b8cd3b2d1a3f98a6508c578e32179e9b04529250208f7767ff",
+      "pages": 3,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "LEGAL-SOURCE-A709ECAC08C4",
+      "source": "geospatial/facilities/RESEARCH_CAMPUSES.md",
+      "source_sha256": "094ea7bb3bc9dd920f29dbe7ef0062880b399c46443cc5c32661589a8e51239a",
+      "html": "docs/legal/full-text/editions/LEGAL-SOURCE-A709ECAC08C4.html",
+      "html_sha256": "eace372c964764f864dd60b029a550f4c54933dc1b93683ae6ee64e448c2643f",
+      "pdf": "docs/legal/full-text/editions/LEGAL-SOURCE-A709ECAC08C4.pdf",
+      "pdf_sha256": "2a6aca2e9eccf2d063ba112cd8572cb5c89b9981d6863d9150f642d8aeac1c46",
+      "pages": 3,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "LEGAL-SOURCE-273909FD1A3E",
+      "source": "geospatial/facilities/INDUSTRIAL_FACILITIES.md",
+      "source_sha256": "3987e927a6b3b5633117d31737ccdd4ffbaae8b22bbdaf765c380316af3e89e9",
+      "html": "docs/legal/full-text/editions/LEGAL-SOURCE-273909FD1A3E.html",
+      "html_sha256": "ecd16359e1e9e9fe9060e16051d455ca4490bfd5239b5065313caba681850ae3",
+      "pdf": "docs/legal/full-text/editions/LEGAL-SOURCE-273909FD1A3E.pdf",
+      "pdf_sha256": "7b09dffca97c7933df7d2dee5f405fb925fab1f7d229433d500019023bb6fa54",
+      "pages": 3,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-IND-ARU-TAX-001",
+      "source": "industrial/transaction/07_ARU_TAX_STRUCTURE_MEMORANDUM.md",
+      "source_sha256": "d42c4d67873e1b8e9b6488eac9a70a16643680718735ab0c3948327a37b16a44",
+      "html": "docs/legal/full-text/editions/SH-IND-ARU-TAX-001.html",
+      "html_sha256": "8a3f369004413b63c84bed99b8394a5b13d9e02ae569bc300349276b40284f23",
+      "pdf": "docs/legal/full-text/editions/SH-IND-ARU-TAX-001.pdf",
+      "pdf_sha256": "f07389aef44b9690eff400c8d932cb779b42888bf49497f9e7fe8dc36fba5879",
+      "pages": 4,
+      "logo": {
+        "path": "assets/brand/industrial_sources/aru/aru_primary_centered_chat_asset.png",
+        "sha256": "5892792a95e7fbc2a16171fea38b96d2aee5becf0603b68687f0d48e1bd9fc46"
+      }
+    },
+    {
+      "id": "SH-IND-FIN-TXN-001",
+      "source": "industrial/finance/TRANSACTION_ACCOUNTING.md",
+      "source_sha256": "d13f142968958585cfc56a7b06d54b5e95bccef6d434d11bb6bba93933a0aa58",
+      "html": "docs/legal/full-text/editions/SH-IND-FIN-TXN-001.html",
+      "html_sha256": "8aae56c73d70686e598a5bc29b9da47a83e44658ef050746d86b4eaafb166b54",
+      "pdf": "docs/legal/full-text/editions/SH-IND-FIN-TXN-001.pdf",
+      "pdf_sha256": "1d0ac761d46bd330d9ccb2bcb2ab48ff028ea88f826fe379267b336155a98689",
+      "pages": 5,
+      "logo": {
+        "path": "assets/brand/industrial_sources/aru/aru_primary_centered_chat_asset.png",
+        "sha256": "5892792a95e7fbc2a16171fea38b96d2aee5becf0603b68687f0d48e1bd9fc46"
+      }
+    },
+    {
+      "id": "SH-IND-FIN-DRV-001",
+      "source": "industrial/finance/DRIVERS_AND_COST_SUPPORT.md",
+      "source_sha256": "bf0c78a2c8d96ebabd34674d4c75f49a2d0ca19be68bb662073d0566bc85a83a",
+      "html": "docs/legal/full-text/editions/SH-IND-FIN-DRV-001.html",
+      "html_sha256": "1b61940bccdb0f2d8ad13cdf7dd05334cf419182befd21223a06a5a43f7f4354",
+      "pdf": "docs/legal/full-text/editions/SH-IND-FIN-DRV-001.pdf",
+      "pdf_sha256": "5f959c4bd5c00531d9f4f9549d17df4a1be9a62c12c827dad740b8ea6d22abb7",
+      "pages": 4,
+      "logo": {
+        "path": "assets/brand/industrial_sources/aru/aru_primary_centered_chat_asset.png",
+        "sha256": "5892792a95e7fbc2a16171fea38b96d2aee5becf0603b68687f0d48e1bd9fc46"
+      }
+    },
+    {
+      "id": "LEGAL-SOURCE-FCEBAA48286F",
+      "source": "docs/finance/TRANSACTION_DATA_ROOM_INDEX.md",
+      "source_sha256": "a107e920f200558c59685043415e7d967a32c6708baef7ad927a8e35f1a79d8c",
+      "html": "docs/legal/full-text/editions/LEGAL-SOURCE-FCEBAA48286F.html",
+      "html_sha256": "9c47fc0c1a6131d1ef874a6d5494c2f8e2c4d41116b28b124cc48899fbae088b",
+      "pdf": "docs/legal/full-text/editions/LEGAL-SOURCE-FCEBAA48286F.pdf",
+      "pdf_sha256": "42264ebd126e08961b452384537a627ccfce239d3e882a7a1840af7240c6d015",
+      "pages": 1,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    },
+    {
+      "id": "SH-RT-FINANCE-001",
+      "source": "docs/finance/RUNTIME_INFRASTRUCTURE_FINANCE_RECONCILIATION_2026-09-11.md",
+      "source_sha256": "20558ea7ecde58914b7ccd44dc866f56c754b5eabd053eff01b43e7684aa40c8",
+      "html": "docs/legal/full-text/editions/SH-RT-FINANCE-001.html",
+      "html_sha256": "a6e5ccd5a7f0dfe09c7212f7de6af89a68ce5d68fe1e4e3b9f34990d140ea6e9",
+      "pdf": "docs/legal/full-text/editions/SH-RT-FINANCE-001.pdf",
+      "pdf_sha256": "188696dd87d4f52209e5011593b12d10916d4d77b47a8e1c3e4a63d634cc4b2b",
+      "pages": 4,
+      "logo": {
+        "path": "assets/brand/logos/sable-harbor__primary-horizontal.svg",
+        "sha256": "815efb4ca06e4f2df8b9dfee3d4288f94d2e64417b7c863ce5b8639d2de07076"
+      }
+    }
+  ],
+  "counts": {
+    "sources": 56,
+    "pdfs": 56,
+    "html": 56,
+    "pages": 200
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "status": "MANUAL_REVIEW_PASS_DRAFT_DESIGN",
+  "records": [
+    {
+      "mode": "blank",
+      "workbook_sha256": "4a249a7b1e52eb13403b244daca603a19b6a73250c919267f66a182255db8122",
+      "pages": [
+        {
+          "path": "docs/legal/gap-instruments/reconciliations/qa/blank-01.png",
+          "sha256": "7ac2fbe4e48d68d62ca07708cf9596e8f850a1e2356d1c694e4079130bcd2859"
+        },
+        {
+          "path": "docs/legal/gap-instruments/reconciliations/qa/blank-02.png",
+          "sha256": "97d95d7a9b951bb054281a2bffed58d6551a9a021faa503d7cc04200027074de"
+        },
+        {
+          "path": "docs/legal/gap-instruments/reconciliations/qa/blank-03.png",
+          "sha256": "aa24e5b32c622fd550c0c9bd2b48606d0433de1d7db7c4263085315d082cd406"
+        },
+        {
+          "path": "docs/legal/gap-instruments/reconciliations/qa/blank-04.png",
+          "sha256": "5f27922a16f1baaa40a2e713d7e6c90006cfd9fbb487441c6168baf4494e6c46"
+        },
+        {
+          "path": "docs/legal/gap-instruments/reconciliations/qa/blank-05.png",
+          "sha256": "3bf0bd9a3e4683ba60f7750bce4f548ffc5e203f9ff075c3efccb1e564057e72"
+        },
+        {
+          "path": "docs/legal/gap-instruments/reconciliations/qa/blank-06.png",
+          "sha256": "da59db057b210686c45dbfb01b4e5a7e6583735aac553447a54d54c62972c5b3"
+        },
+        {
+          "path": "docs/legal/gap-instruments/reconciliations/qa/blank-07.png",
+          "sha256": "5474e713f5fdbdd70ca062bfebde42df3bd9bc516fae40c2380ec61aa97e2c4e"
+        }
+      ]
+    },
+    {
+      "mode": "worked",
+      "workbook_sha256": "e3b74616c43695faf256080ce2d15cb8da9a9e45135bbb8ae72be13d9ea2fc32",
+      "pages": [
+        {
+          "path": "docs/legal/gap-instruments/reconciliations/qa/worked-01.png",
+          "sha256": "fbfbc7e6e5e9e5ce1733614f240b40a23aaea374ac865c4797f946e4742cc643"
+        },
+        {
+          "path": "docs/legal/gap-instruments/reconciliations/qa/worked-02.png",
+          "sha256": "6cd891a158337a1e65b8a2966bb26fc627750ca19f410531372f73bdb3d85bf4"
+        },
+        {
+          "path": "docs/legal/gap-instruments/reconciliations/qa/worked-03.png",
+          "sha256": "f532e31c097954baf84febe2111ebccc3ad5785f0c0bdf231b56924952b28077"
+        },
+        {
+          "path": "docs/legal/gap-instruments/reconciliations/qa/worked-04.png",
+          "sha256": "4150ffd546860c569b34dd904ee2ce409b927fb7474a2bb5ec65c7f6d7be2bcb"
+        },
+        {
+          "path": "docs/legal/gap-instruments/reconciliations/qa/worked-05.png",
+          "sha256": "41e2531bc892b4913eae1b9035d994af6098aeb3ab8e72ab3127054a8d33caba"
+        },
+        {
+          "path": "docs/legal/gap-instruments/reconciliations/qa/worked-06.png",
+          "sha256": "6c4492262b42b5e942f34b06bfab6c4071b07b484a69bbfafe4427e501cd025f"
+        },
+        {
+          "path": "docs/legal/gap-instruments/reconciliations/qa/worked-07.png",
+          "sha256": "5b8ad152e61b4d27ca7b910c918d994aa6acd56cc8c4b230d2bdb15b5144b252"
+        }
+      ]
+    }
+  ],
+  "reviewer": "Codex reconciliation workpaper agent",
+  "method": "LibreOffice native PDF export; all 14 complete pages inspected as individual 1548 x 1095 PNGs at readable resolution, covering every sheet of both workbooks.",
+  "corrections": [
+    "Added explicit left/right alignment and inner spacing so amounts do not touch source locators.",
+    "Labeled each case as a forecast model and kept entity, period and source system on every workpaper."
+  ],
+  "approval": "Visual QA is not owner acceptance. Exact workbook designs remain held for review."
+}

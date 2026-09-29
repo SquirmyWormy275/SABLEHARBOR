@@ -1,0 +1,108 @@
+{
+  "gap_id": "LEGAL-GAP-FINANCING-DOCUMENTS",
+  "document_id": "SH-LEGAL-DRAFT-FINANCING-DOCUMENTS",
+  "title": "Harrison Vale and Wolf Ridge subscription and rights drafts",
+  "status": "DRAFT_FOR_REVIEW",
+  "source_paths": [
+    "docs/governance/board-records/2021-06-18_harrison-vale-growth-financing-minutes.md",
+    "docs/governance/board-records/2022-10-28_wolf-ridge-industrial-financing-minutes.md",
+    "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md"
+  ],
+  "proposed_terms": [
+    {
+      "id": "FIN-P01",
+      "term": "Separate HV and WR subscriptions become operative only with verified subscribers, completed economics and actual execution.",
+      "basis": "New definitive-draft mechanism; historical board approvals are not recovered signed subscriptions."
+    },
+    {
+      "id": "FIN-P02",
+      "term": "Provide quarterly management financial information within 45 days and annual management information within 120 days after period end.",
+      "basis": "New proposed information-rights deadlines; no audited-statement promise."
+    },
+    {
+      "id": "FIN-P03",
+      "term": "Limit confidential information use to investment monitoring and protect J 2, personnel, privileged and third-party restricted material.",
+      "basis": "Proposed investor information safeguards within accepted institutional boundaries."
+    },
+    {
+      "id": "FIN-P04",
+      "term": "Require written approved amendments, indexed side letters, authenticated funding records and reconciliation before capital-ledger update.",
+      "basis": "New proposed closing and amendment clauses; no historical side letter asserted."
+    },
+    {
+      "id": "FIN-P05",
+      "term": "Preserve accepted board designation boundaries and no ordinary-course investor veto; exact thresholds remain open.",
+      "basis": "Existing board sources govern direction; proposed clauses cannot create new seats or operating rights."
+    }
+  ],
+  "unresolved_fields": [
+    {
+      "id": "FIN-U01",
+      "field": "Exact subscriber legal entities and allocations",
+      "next_action": "Verify each signing fund/party; lead firm name alone is insufficient."
+    },
+    {
+      "id": "FIN-U02",
+      "field": "Class, quantity, unit price and exact cap table",
+      "next_action": "Complete from accepted definitive economics without deriving exact ownership from rounded board totals."
+    },
+    {
+      "id": "FIN-U03",
+      "field": "Board designation threshold and replacement mechanics",
+      "next_action": "Obtain separately accepted rights schedule consistent with governing agreement."
+    },
+    {
+      "id": "FIN-U04",
+      "field": "Actual execution and settlement evidence",
+      "next_action": "Complete each round separately; no fabricated receipt or backdated signing."
+    },
+    {
+      "id": "FIN-U05",
+      "field": "Preference, conversion, anti-dilution, option-pool and transfer terms",
+      "next_action": "Obtain explicit acceptance if proposed; no standard term implied."
+    }
+  ],
+  "financial_schedules": [
+    {
+      "name": "Separate board financing models — approximate values",
+      "columns": [
+        "instrument",
+        "board_date",
+        "financing_usd",
+        "post_money_usd",
+        "implied_pre_money_usd",
+        "derived_new_money_ratio_percent",
+        "insiders_post_percent",
+        "outside_post_percent",
+        "precision"
+      ],
+      "rows": [
+        [
+          "HV",
+          "2021-06-18",
+          48000000,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Approximate financing; remaining economics unestablished here"
+        ],
+        [
+          "WR",
+          "2022-10-28",
+          135000000,
+          900000000,
+          765000000,
+          15,
+          66.5,
+          33.5,
+          "Approximate board model; 15% is arithmetic ratio, not exact investor allocation"
+        ]
+      ]
+    }
+  ],
+  "version": "0.1.0",
+  "prepared": "2026-09-12",
+  "approval_status": "NOT_ACCEPTED"
+}

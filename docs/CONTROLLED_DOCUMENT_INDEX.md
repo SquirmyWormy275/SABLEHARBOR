@@ -5,6 +5,30 @@ Facility delivery: [controlled release, source commit and checksums](releases/FA
 
 **Index version:** 1.0.18 | **As of:** September 7, 2026
 
+## September 15 company closeout successor
+
+[Edition 1.1.0 scope and acceptance](internal/company-closeout/REGISTER_v1.1.0.json) ·
+[Successor inspection route](internal/company-closeout/INSPECTION_GUIDE_v1.1.0.md) ·
+[September 22 administrative closeout](internal/company-closeout/RESIDUAL_CLOSEOUT_2026-09-22.md) ·
+[Edition 1.0.0 adoption register](internal/company-closeout/REGISTER.json) ·
+[Owner directions, including corporate taxation from formation](canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md) ·
+[Financial reconciliation](finance/evidence/company-closeout/README.md) ·
+[Current workforce and operating records](../enterprise/operations/docs/completed-period.md) ·
+[Obligations and controls](../enterprise/ccf/company_closeout/README.md) ·
+[Existing portal input contract](internal/company-closeout/PORTAL_CONTRACT.md) ·
+[Company edition release index](releases/COMPANY_EDITION_RELEASES.md) ·
+[September 22 dependency remediation](internal/company-closeout/DEPENDENCY_REMEDIATION_2026-09-22.md).
+
+The dated register distinguishes implemented, validated and accepted scope. PR #145
+is merged with its approved designs preserved; [its receipt](internal/company-closeout/PR145_INTEGRATION.md)
+identifies the acceptance and validation. [Main source protection](internal/company-closeout/MAIN_PROTECTION.md)
+is applied and verified. The older index date and draft headings below describe their
+historical source populations; current dispositions follow the linked successors.
+
+## Draft legal gap instruments — September 12
+
+[17 draft packages](legal/gap-instruments/README.md) provide complete Markdown, corporate PDF/HTML, structured records and financial workbooks where applicable. PR #158 accepted the implementation and scoped v0.4 designs; proposed legal terms and execution states require their individual dispositions. The [September 15 field review](internal/company-closeout/LEGAL_DISPOSITIONS.json) preserves all 125 items and applies accepted successors, including FF-003. [Open the historical review index](legal/gap-instruments/review.html).
+
 ## Authority order
 
 1. Accepted controlling canon under `docs/canon/`, including [corporate lore v0.3.1](canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md), the [decision register](canon/DECISION_REGISTER_v0.3.1.md), and dated addenda with their explicit supersession scope. The [September 6 closeout addendum](canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md) controls the four closeout decisions.
@@ -73,9 +97,9 @@ The transaction and interface PDFs are generated representations. The canonical 
 - [Enterprise authority, capital, and executive rhythm](governance/ENTERPRISE_AUTHORITY_CAPITAL_AND_EXECUTIVE_RHYTHM.md)
 - [SHMS doctrine](governance/SABLE_HARBOR_MANAGEMENT_SYSTEM.md) - LOCKED; [development framework](governance/SABLE_HARBOR_MANAGEMENT_SYSTEM_FRAMEWORK.md) retained as superseded history
 - [Structured headquarters closeout record](structured/corporate_headquarters_closeout_2026-09-03.json)
-- [Canonical Sacramento headquarters image manifest](../assets/headquarters/CANONICAL_HEADQUARTERS_IMAGE_MANIFEST.md) — approved reference identified by SHA-256; binary ingestion pending
+- [Headquarters exterior visual withdrawal](canon/HEADQUARTERS_VISUAL_WITHDRAWAL_2026-09-22.md) — no current exterior image or image-recovery requirement.
 - GitHub issue #87 - CLOSED after SHMS doctrine development
-- GitHub issue #88 — complete controlled PDF/office publications, manifests/checksums, and canonical headquarters-image binary ingestion under the three-representation rule
+- GitHub issue #88 — CLOSED after the owner withdrew the exterior-image requirement.
 - GitHub issue #89 — CLOSED after historical OPEN issue-state reconciliation
 
 ## Repository maintenance and post-merge hygiene
@@ -210,7 +234,7 @@ The v0.3 lore, base decision register, original lineage and other finance-pinned
 - [Scoped implementation direction](canon/BUSINESS_DEVELOPMENT_DIRECTION_2026-09-09.md)
 - [Generated-records lifecycle](governance/GENERATED_RECORDS_LIFECYCLE.md)
 
-The current publication manifest includes the headquarters/ESS/People/IT/authority/SHMS/J2-establishment sources and the four 2021–2026 board approval records. The exact approved Sacramento HQ image remains an independently tracked asset-ingestion gap (#88); publication of its doctrine does not supply the missing binary.
+The current publication manifest includes the headquarters/ESS/People/IT/authority/SHMS/J2-establishment sources and the four 2021–2026 board approval records. The later exterior-image publication was withdrawn and is absent from the current manifest.
 
 ## Runtime estate design — accepted PR #119
 

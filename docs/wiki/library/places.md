@@ -6,7 +6,7 @@ Generated file inventory. Includes current and historical records; open the sour
 
 ## `assets/headquarters`
 
-- [SABLE HARBOR HEADQUARTERS — CANONICAL IMAGE MANIFEST](../../../assets/headquarters/CANONICAL_HEADQUARTERS_IMAGE_MANIFEST.md) — MD
+- [Withdrawn visual source record](../../../assets/headquarters/CANONICAL_HEADQUARTERS_IMAGE_MANIFEST.md) — MD
 
 ## `docs/facilities`
 
@@ -38,6 +38,10 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Geographic evidence package](../../../geospatial/closeout/README.md) — MD
 
+## `geospatial/completion`
+
+- [Geographic requirements: source review, site alternatives and history](../../../geospatial/completion/README.md) — MD
+
 ## `geospatial/docs`
 
 - [ARU/BS&T geographic implementation summary](../../../geospatial/docs/ARU_BST_GEOGRAPHY_ADDENDUM_IMPLEMENTATION_SUMMARY.md) — MD
@@ -46,13 +50,21 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Cradle geographic supersession — implemented September 7](../../../geospatial/docs/CRADLE_GEOGRAPHY_SUPERSESSION_2026-09-06.md) — MD
 - [Data model and authority](../../../geospatial/docs/DATA_MODEL.md) — MD
 - [Definition of done — reconciled framework](../../../geospatial/docs/DEFINITION_OF_DONE.md) — MD
-- [Geo continuation after canon reconciliation](../../../geospatial/docs/NEXT_CHAT_HANDOFF.md) — MD
+- [Geographic continuation boundary](../../../geospatial/docs/NEXT_CHAT_HANDOFF.md) — MD
 - [Operating-model reconciliation](../../../geospatial/docs/OPERATING_MODEL_RECONCILIATION_20260906.md) — MD
-- [Geo canon reconciliation and program closeout matrix](../../../geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md) — MD
+- [Geographic program closeout matrix](../../../geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md) — MD
 - [Provenance and reproducibility](../../../geospatial/docs/PROVENANCE_AND_REPRODUCIBILITY.md) — MD
 - [Red Wash location supersession and Taylor rename](../../../geospatial/docs/RED_WASH_LOCATION_SUPERSESSION_NOTE.md) — MD
 - [Site-selection evidence and current limits](../../../geospatial/docs/SITE_SELECTION_EVIDENCE.md) — MD
 - [Time, ownership and operating state](../../../geospatial/docs/TEMPORAL_MODEL.md) — MD
+
+## `geospatial/engineering_review`
+
+- [Railway engineering source review — 28 September 2026](../../../geospatial/engineering_review/README.md) — MD
+
+## `geospatial/engineering_review/historical_alignment_2026_09_29`
+
+- [Early BS&T alignment: fictional alternative, September 29, 2026](../../../geospatial/engineering_review/historical_alignment_2026_09_29/README.md) — MD
 
 ## `geospatial/facilities`
 
@@ -197,6 +209,12 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Facility planning workbench](../../../geospatial/facilities/workbench/README.md) — MD
 - [Evidence intake and review candidates](../../../geospatial/facilities/workbench/README_EVIDENCE.md) — MD
 - [Architectural concept readiness](../../../geospatial/facilities/workbench/README_READINESS.md) — MD
+
+## `geospatial/finalization`
+
+- [Geographic completion authority — September 13, 2026](../../../geospatial/finalization/AUTHORIZATION.md) — MD
+- [Geographic decisions and final source review](../../../geospatial/finalization/README.md) — MD
+- [Source interpretation and geographic crosswalk](../../../geospatial/finalization/SOURCE_REVIEW.md) — MD
 
 ## `geospatial/history`
 
@@ -402,6 +420,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Geographic decision register v0.1](../../../geospatial/registers/GEOGRAPHIC_DECISION_REGISTER_v0.1.md) — MD
 - [Open geographic questions v0.1](../../../geospatial/registers/OPEN_GEOGRAPHIC_QUESTIONS_v0.1.md) — MD
 - [Provenance register](../../../geospatial/registers/PROVENANCE_REGISTER.md) — MD
+- [Geographic registers](../../../geospatial/registers/README.md) — MD
 
 ## `geospatial/releases`
 
@@ -466,3 +485,7 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `geospatial/sources/canon_snapshot/red_wash/logistics`
 
 - [ARU/BS&T Interface and Dependency Record](../../../geospatial/sources/canon_snapshot/red_wash/logistics/ARU_BST_INTERFACE_AND_DEPENDENCY_RECORD.md) — MD
+
+## `geospatial/successor_20260928`
+
+- [Geographic source successor — September 28, 2026](../../../geospatial/successor_20260928/README.md) — MD

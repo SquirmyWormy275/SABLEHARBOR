@@ -1,0 +1,299 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "SH-GEO-FINAL-SH-SITE-0001",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -121.49398552227532,
+              38.590892901753286
+            ],
+            [
+              -121.49395109553447,
+              38.59254044349152
+            ],
+            [
+              -121.4968900639686,
+              38.59257823444899
+            ],
+            [
+              -121.49692442358935,
+              38.59093069049614
+            ],
+            [
+              -121.49398552227532,
+              38.590892901753286
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "SH-GEO-FINAL-SH-SITE-0001",
+        "object_id": "SH-SITE-0001",
+        "canonical_name": "Sacramento headquarters",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "AUTHORED_DESIGN_WITH_REAL_CONTEXT",
+        "canon_status": "CANON_LOCKED",
+        "geometry_status": "AUTHORED_FICTIONAL_PLANNING_FOOTPRINT",
+        "location_method": "ENGINEERED_FROM_CONSTRAINTS",
+        "precision_class": "DESIGN_NOT_SURVEY",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "DESIGN_FOOTPRINT",
+        "source_id": "SRC-GEO-COMPLETE-20260913",
+        "decision_id": "GEO-COMPLETE-20260913",
+        "valid_from": null,
+        "valid_to": null,
+        "recorded_at": "2026-09-13T09:14:22+00:00",
+        "superseded_at": null,
+        "world_state_date": "2026-09-13",
+        "source_effective_date": "2026-09-13",
+        "owner_entity": null,
+        "operator_entity": "SH-ENT-001",
+        "geometry_area_acres": 11.570247933994839,
+        "elevation_min_m": 3.418482780456543,
+        "elevation_max_m": 12.745706558227539,
+        "engineering_status": "FICTIONAL_DESIGN_CONTEXT_SCREENED_NOT_PERMITTED",
+        "reference_source_ids": [],
+        "construction_method": "Explicit vertices in SITE_SELECTIONS.geojson; metric area and archived federal context reproduced by finalization/screen.py.",
+        "notes": "Authored fictional site. No surveyed accuracy, real title, tenancy, construction completion, access permit or environmental clearance. Historic occupancy evidence is separate; see docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-GEO-FINAL-SH-SITE-0003",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.95425379152326,
+              40.426249789374694
+            ],
+            [
+              -79.95417716614386,
+              40.42616823459933
+            ],
+            [
+              -79.95410219838585,
+              40.4260873484574
+            ],
+            [
+              -79.95390064131361,
+              40.425860969537084
+            ],
+            [
+              -79.95385934495391,
+              40.42581279049117
+            ],
+            [
+              -79.95373436511736,
+              40.425666814220605
+            ],
+            [
+              -79.95373375100179,
+              40.42566610308582
+            ],
+            [
+              -79.9537077519535,
+              40.42563625247439
+            ],
+            [
+              -79.95369522978667,
+              40.42562104698599
+            ],
+            [
+              -79.9535688496389,
+              40.425462823418535
+            ],
+            [
+              -79.95352372828894,
+              40.42540593126761
+            ],
+            [
+              -79.9533444648559,
+              40.4251689059186
+            ],
+            [
+              -79.9533431713686,
+              40.42516723053463
+            ],
+            [
+              -79.95319820953182,
+              40.42498327944761
+            ],
+            [
+              -79.95307487858766,
+              40.42482640283545
+            ],
+            [
+              -79.95291838412668,
+              40.42460552839762
+            ],
+            [
+              -79.95291657634377,
+              40.424603054846905
+            ],
+            [
+              -79.95243357558098,
+              40.42396205530843
+            ],
+            [
+              -79.95243349230053,
+              40.42396194500558
+            ],
+            [
+              -79.95236570320492,
+              40.42387222432398
+            ],
+            [
+              -79.95067590913408,
+              40.421604506408656
+            ],
+            [
+              -79.95067535628621,
+              40.42160377112909
+            ],
+            [
+              -79.95056278053765,
+              40.42145540601385
+            ],
+            [
+              -79.95138,
+              40.4214
+            ],
+            [
+              -79.9536,
+              40.424200000000006
+            ],
+            [
+              -79.95515,
+              40.4262
+            ],
+            [
+              -79.95425379152326,
+              40.426249789374694
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "SH-GEO-FINAL-SH-SITE-0003",
+        "object_id": "SH-SITE-0003",
+        "canonical_name": "The Fort / Willow",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "AUTHORED_DESIGN_WITH_REAL_CONTEXT",
+        "canon_status": "CANON_LOCKED",
+        "geometry_status": "AUTHORED_FICTIONAL_PLANNING_FOOTPRINT",
+        "location_method": "ENGINEERED_FROM_CONSTRAINTS",
+        "precision_class": "DESIGN_NOT_SURVEY",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "DESIGN_FOOTPRINT",
+        "source_id": "SRC-GEO-COMPLETE-20260913",
+        "decision_id": "GEO-COMPLETE-20260913",
+        "valid_from": null,
+        "valid_to": null,
+        "recorded_at": "2026-09-13T09:14:22+00:00",
+        "superseded_at": null,
+        "world_state_date": "2026-09-13",
+        "source_effective_date": "2026-09-13",
+        "owner_entity": null,
+        "operator_entity": "SH-ENT-002",
+        "geometry_area_acres": 10.650106065167332,
+        "elevation_min_m": 224.0643310546875,
+        "elevation_max_m": 229.2042236328125,
+        "engineering_status": "FICTIONAL_DESIGN_CONTEXT_SCREENED_NOT_PERMITTED",
+        "reference_source_ids": [],
+        "construction_method": "Explicit vertices in SITE_SELECTIONS.geojson; metric area and archived federal context reproduced by finalization/screen.py.",
+        "notes": "Authored fictional site. No surveyed accuracy, real title, tenancy, construction completion, access permit or environmental clearance. Historic occupancy evidence is separate; see docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "SH-GEO-FINAL-SH-SITE-0005",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.1847,
+              39.431720000000006
+            ],
+            [
+              -80.18115,
+              39.43212
+            ],
+            [
+              -80.1808,
+              39.43160000000001
+            ],
+            [
+              -80.18055,
+              39.4299
+            ],
+            [
+              -80.1818,
+              39.42994999999999
+            ],
+            [
+              -80.1831,
+              39.4306
+            ],
+            [
+              -80.18365,
+              39.430449999999986
+            ],
+            [
+              -80.1843,
+              39.43071999999999
+            ],
+            [
+              -80.1847,
+              39.43055
+            ],
+            [
+              -80.1847,
+              39.431720000000006
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "feature_id": "SH-GEO-FINAL-SH-SITE-0005",
+        "object_id": "SH-SITE-0005",
+        "canonical_name": "Bedford / Cradle",
+        "fictionality": "FICTIONAL_IN_REAL_GEOGRAPHY",
+        "real_world_relation": "AUTHORED_DESIGN_WITH_REAL_CONTEXT",
+        "canon_status": "CANON_LOCKED",
+        "geometry_status": "AUTHORED_FICTIONAL_PLANNING_FOOTPRINT",
+        "location_method": "ENGINEERED_FROM_CONSTRAINTS",
+        "precision_class": "DESIGN_NOT_SURVEY",
+        "horizontal_accuracy_m": null,
+        "vertical_accuracy_m": null,
+        "public_precision": "DESIGN_FOOTPRINT",
+        "source_id": "SRC-GEO-COMPLETE-20260913",
+        "decision_id": "GEO-COMPLETE-20260913",
+        "valid_from": null,
+        "valid_to": null,
+        "recorded_at": "2026-09-13T09:14:22+00:00",
+        "superseded_at": null,
+        "world_state_date": "2026-09-13",
+        "source_effective_date": "2026-09-13",
+        "owner_entity": null,
+        "operator_entity": "SH-ENT-005",
+        "geometry_area_acres": 15.266988222049582,
+        "elevation_min_m": 314.1447448730469,
+        "elevation_max_m": 358.43707275390625,
+        "engineering_status": "FICTIONAL_DESIGN_CONTEXT_SCREENED_NOT_PERMITTED",
+        "reference_source_ids": [],
+        "construction_method": "Explicit vertices in SITE_SELECTIONS.geojson; metric area and archived federal context reproduced by finalization/screen.py.",
+        "notes": "Authored fictional site. No surveyed accuracy, real title, tenancy, construction completion, access permit or environmental clearance. Historic occupancy evidence is separate; see docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+      }
+    }
+  ]
+}

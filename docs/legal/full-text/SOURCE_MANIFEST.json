@@ -1,0 +1,686 @@
+{
+  "schema_version": 1,
+  "package_id": "SH-LEGAL-FULL-TEXT-001",
+  "source_revision": "79437a778d4a4d5097a3cdaa36d7d8ab13217536",
+  "date": "2026-09-12",
+  "status": "DRAFT_FOR_EXACT_FILE_REVIEW",
+  "approved": false,
+  "scope": "Complete, unabridged editions of all 56 selected source records. A source that is itself a summary, proposal, index or synthetic instrument retains that character; no missing instrument or term is authored by publication.",
+  "records": [
+    {
+      "id": "SH-IND-RW-TXN-001",
+      "family": "acquisition",
+      "title": "Red Wash acquisition — transaction and authority file",
+      "source": "industrial/transaction/01_RW_TRANSACTION_FILE.md",
+      "source_sha256": "902ff083d3857004b5c868b106fddc8e3600e59ad959201fb97c99d68dba298c",
+      "brand": "pale_sun",
+      "source_status_verbatim": [
+        "**Record origin:** SYNTHETIC_COMPANY_RECORD | **Evidence state:** SYNTHETIC_RECONSTRUCTED transaction instrument summary",
+        "**Decision state:** LOCKED_CANON deal terms; LOCKED_DERIVED_IMPLEMENTATION paper-trail dates"
+      ],
+      "existing_pdf": "industrial/publications/SH-IND-RW-TXN-001_v1.0.0.pdf"
+    },
+    {
+      "id": "SH-IND-ARU-LOI-001",
+      "family": "acquisition",
+      "title": "ARU seller file and letter of intent",
+      "source": "industrial/transaction/02_ARU_LOI_AND_SELLER_FILE.md",
+      "source_sha256": "e012644ca645384234ddf8f47e78d176b1cc11d4cef97449723f23f2803f5615",
+      "brand": "aru",
+      "source_status_verbatim": [
+        "**Record origin:** SYNTHETIC_COMPANY_RECORD | **Evidence state:** SYNTHETIC_RECONSTRUCTED, not an executed real instrument",
+        "**Decision state:** LOCKED_CANON parties/strategy; LOCKED_DERIVED_IMPLEMENTATION LOI dates and detailed conditions"
+      ],
+      "existing_pdf": "industrial/publications/SH-IND-ARU-LOI-001_v1.0.0.pdf"
+    },
+    {
+      "id": "SH-IND-ARU-DD-001",
+      "family": "acquisition",
+      "title": "ARU diligence memorandum — findings, disagreement and disposition",
+      "source": "industrial/transaction/03_ARU_DILIGENCE_MEMORANDUM.md",
+      "source_sha256": "1591f3a761202385693de6b689377400a4905862910b0213acb326ace0bbc272",
+      "brand": "aru",
+      "source_status_verbatim": [
+        "**Record origin:** SYNTHETIC_COMPANY_ANALYSIS | **Evidence state:** SYNTHETIC_RECONSTRUCTED",
+        "**Decision state:** LOCKED_DERIVED_IMPLEMENTATION supporting the authorized acquisition"
+      ],
+      "existing_pdf": "industrial/publications/SH-IND-ARU-DD-001_v1.0.0.pdf"
+    },
+    {
+      "id": "SH-IND-ARU-SPA-001",
+      "family": "acquisition",
+      "title": "ARU investment approval and stock-purchase agreement summary",
+      "source": "industrial/transaction/04_ARU_APPROVAL_AND_PURCHASE_AGREEMENT.md",
+      "source_sha256": "3b40effe8efb1d4a69216180d508dad90f7fc6a778679b39ee2ed5371d0de9eb",
+      "brand": "aru",
+      "source_status_verbatim": [
+        "**Record origin:** SYNTHETIC_COMPANY_RECORD | **Evidence state:** SYNTHETIC_RECONSTRUCTED internal approval/instrument summary",
+        "**Decision state:** LOCKED_CANON headline terms; LOCKED_DERIVED_IMPLEMENTATION covenants and exact paper dates"
+      ],
+      "existing_pdf": "industrial/publications/SH-IND-ARU-SPA-001_v1.0.0.pdf"
+    },
+    {
+      "id": "SH-IND-ARU-CLOSE-001",
+      "family": "acquisition",
+      "title": "ARU closing statement and delivery register",
+      "source": "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md",
+      "source_sha256": "a6dd448ed3a4a3ad6f0f3748e79dd918ea43c75685de762fe00843477a5d22c9",
+      "brand": "aru",
+      "source_status_verbatim": [
+        "**Record origin:** SYNTHETIC_COMPANY_RECORD | **Evidence state:** SYNTHETIC_RECONSTRUCTED",
+        "**Decision state:** LOCKED_CANON headline bridge; LOCKED_DERIVED_IMPLEMENTATION fees and delivery dates"
+      ],
+      "existing_pdf": "industrial/publications/SH-IND-ARU-CLOSE-001_v1.0.0.pdf"
+    },
+    {
+      "id": "LEGAL-SOURCE-16BD06943F32",
+      "family": "acquisition",
+      "title": "RED WASH TRANSACTION AND COMMERCIAL INSTRUMENTS",
+      "source": "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md",
+      "source_sha256": "5ee3715b0b5b08ba2fd259504ff7455da005d3d2e3701668945aa1ca90477808",
+      "brand": "corporate",
+      "source_status_verbatim": [],
+      "existing_pdf": null
+    },
+    {
+      "id": "SH-IND-DR-001",
+      "family": "acquisition",
+      "title": "Industrial closeout — corporate, Pale Sun, Red Wash and ARU",
+      "source": "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
+      "source_sha256": "0b21f22c2a8ffe55fa4e43898834ddc38389e42efe2e9c11ff48c7418dad8be7",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**Record origin:** Author-adopted fictional canon and derived implementation",
+        "**State:** LOCKED_DERIVED_IMPLEMENTATION, subject to the domain boundaries below"
+      ],
+      "existing_pdf": null
+    },
+    {
+      "id": "SH-PS-RW-TOR-001",
+      "family": "acquisition",
+      "title": "Red Wash Transaction and Operating Record",
+      "source": "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md",
+      "source_sha256": "89eae89e18db1d3cf3ab4f7bf7f54fa57efabb84c57127717b731572048d563b",
+      "brand": "pale_sun",
+      "source_status_verbatim": [
+        "**State:** LOCKED where stated; all generated company records remain synthetic evidence"
+      ],
+      "existing_pdf": "docs/governance/publications/SH-PS-RW-TOR-001_v1.1.0.pdf"
+    },
+    {
+      "id": "SH-IND-IC-001",
+      "family": "commercial",
+      "title": "Taylor–Red Wash logistics services agreement summary",
+      "source": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md",
+      "source_sha256": "23153dc86a3e9ea9fd501bce6bdf3c8478dbdf3ab79fa5e8abc84ca8bbb771fc",
+      "brand": "aru",
+      "source_status_verbatim": [
+        "**Record origin:** SYNTHETIC_COMPANY_RECORD | **Evidence state:** SYNTHETIC_RECONSTRUCTED instrument and qualification summary",
+        "**Decision state:** LOCKED_DERIVED_IMPLEMENTATION commercial terms; OPEN_GATED direct uranium custody"
+      ],
+      "existing_pdf": "industrial/publications/SH-IND-IC-001_v1.0.0.pdf"
+    },
+    {
+      "id": "SH-IND-IC-PRC-001",
+      "family": "commercial",
+      "title": "Taylor–Red Wash service pricing: published tariff comparison",
+      "source": "industrial/transaction/09_SERVICE_PRICING_COMPARISON.md",
+      "source_sha256": "4f185dffc7906ecc6abda8420fc9d026d4fb5bc470d506eb99dbab968560b2c5",
+      "brand": "aru",
+      "source_status_verbatim": [
+        "**Record origin:** SYNTHETIC_COMPANY_ANALYSIS with EXTERNAL_RESEARCH",
+        "**Evidence state:** SYNTHETIC_RECONSTRUCTED company comparison; REFERENCE_ONLY carrier publications",
+        "**Decision state:** LOCKED_DERIVED_IMPLEMENTATION case prices; external competitiveness remains a review condition"
+      ],
+      "existing_pdf": "industrial/publications/SH-IND-IC-PRC-001_v1.0.0.pdf"
+    },
+    {
+      "id": "SH-ADV-014",
+      "family": "commercial",
+      "title": "SABLE HARBOR ADVISORY — LEGAL AND CONTRACTING TERM SHEET",
+      "source": "docs/advisory/LEGAL_AND_CONTRACTING_TERM_SHEET.md",
+      "source_sha256": "b0e842b631713579f2890efb846de642b100a576282ba88dea9880fb671428f7",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**State:** `LOCKED DIRECTION`; not executed legal paper; qualified counsel required  "
+      ],
+      "existing_pdf": null
+    },
+    {
+      "id": "SH-ADV-009",
+      "family": "commercial",
+      "title": "SABLE HARBOR ADVISORY — COMMERCIAL CONTRACTING AND PRICING STANDARD",
+      "source": "docs/advisory/COMMERCIAL_CONTRACTING_AND_PRICING_STANDARD.md",
+      "source_sha256": "d205a6b5d1a254ed30fc35c395f0f3ea3372a449d0537fea7c7bb18583cb8275",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**State:** `LOCKED DIRECTION`; price bands remain operating policy subject to market calibration  "
+      ],
+      "existing_pdf": null
+    },
+    {
+      "id": "SH-ADV-007",
+      "family": "commercial",
+      "title": "SABLE HARBOR ADVISORY — IP, DATA AND METHOD TRANSFER STANDARD",
+      "source": "docs/advisory/IP_DATA_AND_METHOD_TRANSFER_STANDARD.md",
+      "source_sha256": "e6f58bec6caeaa1eb693962bd4a021d40b4bec5319c49f0e4e59c3212f04ad91",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**State:** `LOCKED DIRECTION`  "
+      ],
+      "existing_pdf": null
+    },
+    {
+      "id": "SH-ADV-017",
+      "family": "commercial",
+      "title": "SABLE HARBOR ADVISORY — EXPERT NETWORK AND THIRD-PARTY STANDARD",
+      "source": "docs/advisory/EXPERT_NETWORK_AND_THIRD_PARTY_STANDARD.md",
+      "source_sha256": "fe6648704a935ad7c91651f5042bc5b3f5e821e9d432cbcbbab2fa648dd31763",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**State:** `LOCKED DIRECTION`  "
+      ],
+      "existing_pdf": null
+    },
+    {
+      "id": "SH-ATL-017",
+      "family": "commercial",
+      "title": "ATLAS MERIDIAN — COMMERCIAL PRODUCT STANDARD",
+      "source": "docs/advisory/ATLAS_MERIDIAN_COMMERCIAL_PRODUCT_STANDARD.md",
+      "source_sha256": "5c852557be8c42cec41f50be2d01b850027a61ad613c98672f075e15453769d4",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**State:** `LOCKED DIRECTION`  "
+      ],
+      "existing_pdf": null
+    },
+    {
+      "id": "SH-RT-CONTRACT-001",
+      "family": "commercial",
+      "title": "Proposed colocation agreement and incorporated schedules",
+      "source": "enterprise/runtime/docs/CONTRACT_DOSSIER.md",
+      "source_sha256": "7cd01050b17f9451ff5bd341573289440c74fb190c01253bdc8197a6599d2ad1",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**Status:** CUSTOMER-PROPOSED DRAFT; unsigned; no real agreement or reservation"
+      ],
+      "existing_pdf": "enterprise/runtime/publications/SH-RT-CONTRACT-001_v1.0.0.pdf"
+    },
+    {
+      "id": "LEGAL-SOURCE-F1F0AD5F06DC",
+      "family": "commercial",
+      "title": "Commercial operations and contract economics",
+      "source": "enterprise/operations/docs/commercial.md",
+      "source_sha256": "ef896e84c66e03eff7adecb3e3f6b7c082b28e618f4183ec37fc7568f2b45416",
+      "brand": "corporate",
+      "source_status_verbatim": [],
+      "existing_pdf": null
+    },
+    {
+      "id": "LEGAL-SOURCE-7FFDC6FBB585",
+      "family": "commercial",
+      "title": "Enterprise services, infrastructure and external dependencies",
+      "source": "enterprise/services/README.md",
+      "source_sha256": "d87d9efeef12a6848427dc57630ea1fb58ad1f7ac4c7de5bb041a457fcf023d4",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**State:** Implemented planning model. Owner-approved sourcing direction is pending canonical acceptance; numerical requirements and prices are proposals, not approved operating facts."
+      ],
+      "existing_pdf": null
+    },
+    {
+      "id": "SH-IND-COR-001",
+      "family": "corporate",
+      "title": "Industrial ownership and internal formation record",
+      "source": "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md",
+      "source_sha256": "5a10f112b015d5dfa7ca3b500108718015a41369182092cabc44dfb224119fbc",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**Record origin:** SYNTHETIC_COMPANY_RECORD | **Evidence state:** SYNTHETIC_RECONSTRUCTED",
+        "**Decision state:** LOCKED_CANON names/ownership; LOCKED_DERIVED_IMPLEMENTATION dates/mechanics"
+      ],
+      "existing_pdf": "industrial/publications/SH-IND-COR-001_v1.0.0.pdf"
+    },
+    {
+      "id": "SH-IND-HR-001",
+      "family": "corporate",
+      "title": "Industrial leadership, careers and decision authority",
+      "source": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+      "source_sha256": "61a32c036e8cdb2fbf7ab0234d26a925ebd423b48869667724c5a254ca14fda1",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**Record origin:** SYNTHETIC_COMPANY_RECORD | **Evidence state:** SYNTHETIC_RECONSTRUCTED biographies and authority records",
+        "**Decision state:** LOCKED_CANON existing people/authority spine; LOCKED_DERIVED_IMPLEMENTATION new management histories/titles"
+      ],
+      "existing_pdf": "industrial/publications/SH-IND-HR-001_v1.0.0.pdf"
+    },
+    {
+      "id": "SH-GOV-BOARD-001",
+      "family": "corporate",
+      "title": "SABLE HARBOR — BOARD AND CAPITAL GOVERNANCE",
+      "source": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
+      "source_sha256": "dc1e2e3ea6e7ea8d364eae87bd890a8c79a5a577a7554ed371cda3810ea945a8",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**Version:** 1.0.1 | **Effective:** September 2, 2026 | **Revised:** September 6, 2026 | **State:** LOCKED"
+      ],
+      "existing_pdf": "docs/governance/publications/SH-GOV-BOARD-001_v1.0.1.pdf"
+    },
+    {
+      "id": "SH-GOV-AUTH-001",
+      "family": "corporate",
+      "title": "RESERVED MATTERS, ESCALATION, AND SUBSIDIARY AUTONOMY",
+      "source": "docs/governance/RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md",
+      "source_sha256": "323a9611891d41dafa6eb00ed891ba4b0917a4b2329fd29e52bd730cc92d3313",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**Document ID:** `SH-GOV-AUTH-001` | **Version:** 1.0.0 | **Effective:** September 2, 2026 | **State:** LOCKED DIRECTION"
+      ],
+      "existing_pdf": "docs/governance/publications/SH-GOV-AUTH-001_v1.0.0.pdf"
+    },
+    {
+      "id": "SH-GOV-ESS-001",
+      "family": "corporate",
+      "title": "ENTERPRISE SUPPORT SERVICES AND INDEPENDENCE DOCTRINE",
+      "source": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+      "source_sha256": "40b45496c66d6e7e5eb5dcd118c3ba37feb710744760c3617acbddcd899e466f",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**Document ID:** `SH-GOV-ESS-001` | **Version:** 1.1.0 | **Effective:** September 3, 2026 | **State:** LOCKED"
+      ],
+      "existing_pdf": "docs/governance/publications/SH-GOV-ESS-001_v1.1.0.pdf"
+    },
+    {
+      "id": "SH-CORP-HQ-20260903",
+      "family": "corporate",
+      "title": "SABLE HARBOR — CORPORATE HEADQUARTERS CLOSEOUT",
+      "source": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+      "source_sha256": "25e484d7fbc2c83a37f0e7ae7fe20ff741cde176bd0c2ba7be742fa7fb3e2624",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**Status:** LOCKED unless explicitly marked DEFERRED  "
+      ],
+      "existing_pdf": "docs/governance/publications/SH-CORP-HQ-20260903_v1.0.1.pdf"
+    },
+    {
+      "id": "SH-J2-PPL-20260910",
+      "family": "corporate",
+      "title": "J2 leadership appointments — September 10, 2026",
+      "source": "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+      "source_sha256": "05ee1d4bbcad3ff2de9f623de0b57373acaaf611c0b161664a9f3e36b1066509",
+      "brand": "j2",
+      "source_status_verbatim": [
+        "**State:** LOCKED"
+      ],
+      "existing_pdf": "docs/j2/publications/SH-J2-PPL-20260910_v1.0.0.pdf"
+    },
+    {
+      "id": "SH-LEGAL-ADV-001",
+      "family": "corporate",
+      "title": "SABLE HARBOR ADVISORY — OPERATING NAME AND EXTERNAL CLEARANCE STATUS",
+      "source": "docs/legal/ADVISORY_NAME_AND_EXTERNAL_CLEARANCE_STATUS_2026-09-09.md",
+      "source_sha256": "53cb9756ad05f9422b8d0bc93eeecace454cc25c6652424154caf2eaf0b4984d",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**State:** operating-name decision reconciled; external legal clearance remains execution  "
+      ],
+      "existing_pdf": null
+    },
+    {
+      "id": "SH-BRD-MIN-2021-06-18",
+      "family": "corporate",
+      "title": "SABLE HARBOR BOARD OF DIRECTORS",
+      "source": "docs/governance/board-records/2021-06-18_harrison-vale-growth-financing-minutes.md",
+      "source_sha256": "b994512c64f86abe0d649f95d4ea3d3e00fd0c2c22af0ed56b62bd7ed41fae97",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**Record state:** LOCKED IN-UNIVERSE BOARD RECORD  "
+      ],
+      "existing_pdf": "docs/governance/publications/SH-BRD-MIN-2021-06-18_v1.0.0.pdf"
+    },
+    {
+      "id": "SH-BRD-MIN-2022-10-28",
+      "family": "corporate",
+      "title": "SABLE HARBOR BOARD OF DIRECTORS",
+      "source": "docs/governance/board-records/2022-10-28_wolf-ridge-industrial-financing-minutes.md",
+      "source_sha256": "ec3625726d23588816c073afb4bd76cce51085a195833c6089faea3c3efed1a4",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**Record state:** LOCKED IN-UNIVERSE BOARD RECORD  "
+      ],
+      "existing_pdf": "docs/governance/publications/SH-BRD-MIN-2022-10-28_v1.0.0.pdf"
+    },
+    {
+      "id": "SH-BRD-MIN-2024-02-15",
+      "family": "corporate",
+      "title": "SABLE HARBOR BOARD OF DIRECTORS",
+      "source": "docs/governance/board-records/2024-02-15_independent-chair-and-committee-architecture-minutes.md",
+      "source_sha256": "ff5ad2d4299617a7b931924b757e6ca2316795d2133a656c219094528ce0c9a4",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**Record state:** LOCKED IN-UNIVERSE BOARD RECORD  "
+      ],
+      "existing_pdf": "docs/governance/publications/SH-BRD-MIN-2024-02-15_v1.0.0.pdf"
+    },
+    {
+      "id": "SH-BRD-CONSENT-2026-09-02",
+      "family": "corporate",
+      "title": "SABLE HARBOR BOARD OF DIRECTORS",
+      "source": "docs/governance/board-records/2026-09-02_governance-j2-alexandria-ratification-written-consent.md",
+      "source_sha256": "2a0afb5615327345daf491c308e2b89e7e6236e44be1b3b09b3663389b344400",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**Record state:** LOCKED IN-UNIVERSE BOARD RECORD  "
+      ],
+      "existing_pdf": "docs/governance/publications/SH-BRD-CONSENT-2026-09-02_v1.0.0.pdf"
+    },
+    {
+      "id": "LEGAL-SOURCE-801955F60F74",
+      "family": "corporate",
+      "title": "Exhibit A — Governance Package",
+      "source": "docs/governance/board-records/exhibits/2026-09-02_exhibit-a-governance-package.md",
+      "source_sha256": "a9fc111374c2eef37e889ce3adc39af9bca3c7c6a0bf318de51dbdd551164536",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**Status:** Approved September 2, 2026  "
+      ],
+      "existing_pdf": null
+    },
+    {
+      "id": "LEGAL-SOURCE-46256BC2255E",
+      "family": "corporate",
+      "title": "Exhibit B — J2 Package",
+      "source": "docs/governance/board-records/exhibits/2026-09-02_exhibit-b-j2-package.md",
+      "source_sha256": "485477fcca0441c022bcf60174f5e74fc7eb951be8a9a3fdc2ba73e5559e1086",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**Status:** Approved September 2, 2026  "
+      ],
+      "existing_pdf": null
+    },
+    {
+      "id": "LEGAL-SOURCE-508081AAD2B2",
+      "family": "corporate",
+      "title": "Exhibit C — Alexandria Package",
+      "source": "docs/governance/board-records/exhibits/2026-09-02_exhibit-c-alexandria-package.md",
+      "source_sha256": "4cfd047e688015bb8d59d1306b4a2d0790f34445bfc2fa14ecbdf3d1c317f647",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**Status:** Approved September 2, 2026  "
+      ],
+      "existing_pdf": null
+    },
+    {
+      "id": "LEGAL-SOURCE-9E57D6909035",
+      "family": "corporate",
+      "title": "Exhibit D — Controlled-Publication and Catalog Package",
+      "source": "docs/governance/board-records/exhibits/2026-09-02_exhibit-d-controlled-publication-and-catalog-package.md",
+      "source_sha256": "df7ea4fe111168a37d50848135443748ebcce970c259e05d728941d569f41bb5",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**Status:** Approved September 2, 2026  "
+      ],
+      "existing_pdf": null
+    },
+    {
+      "id": "SH-GOV-COM-AUDIT-001",
+      "family": "corporate",
+      "title": "AUDIT & COMPLIANCE COMMITTEE CHARTER",
+      "source": "docs/governance/committees/AUDIT_AND_COMPLIANCE_COMMITTEE_CHARTER.md",
+      "source_sha256": "d59a708310e56dbe67fc28629efbedd4f790a4ef9765d841b651f3335ab8e993",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**Document ID:** `SH-GOV-COM-AUDIT-001` | **Version:** 1.0.0 | **Effective:** September 2, 2026 | **State:** LOCKED"
+      ],
+      "existing_pdf": "docs/governance/publications/SH-GOV-COM-AUDIT-001_v1.0.0.pdf"
+    },
+    {
+      "id": "SH-GOV-COM-COMP-001",
+      "family": "corporate",
+      "title": "COMPENSATION & HUMAN CAPITAL COMMITTEE CHARTER",
+      "source": "docs/governance/committees/COMPENSATION_AND_HUMAN_CAPITAL_COMMITTEE_CHARTER.md",
+      "source_sha256": "e7fe92afc99946ca4c61ed32980c67556aa3b9227abef852b1931182bd7ea295",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**Document ID:** `SH-GOV-COM-COMP-001` | **Version:** 1.0.0 | **Effective:** September 2, 2026 | **State:** LOCKED"
+      ],
+      "existing_pdf": "docs/governance/publications/SH-GOV-COM-COMP-001_v1.0.0.pdf"
+    },
+    {
+      "id": "SH-GOV-COM-FIN-001",
+      "family": "corporate",
+      "title": "FINANCE & INVESTMENT COMMITTEE CHARTER",
+      "source": "docs/governance/committees/FINANCE_AND_INVESTMENT_COMMITTEE_CHARTER.md",
+      "source_sha256": "7c3990aa3537281c2a53e42de941334b98a3859e55e9e9cbfa66c5c233db1361",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**Document ID:** `SH-GOV-COM-FIN-001` | **Version:** 1.0.0 | **Effective:** September 2, 2026 | **State:** LOCKED"
+      ],
+      "existing_pdf": "docs/governance/publications/SH-GOV-COM-FIN-001_v1.0.0.pdf"
+    },
+    {
+      "id": "SH-GOV-COM-GOVNOM-001",
+      "family": "corporate",
+      "title": "GOVERNANCE & NOMINATING COMMITTEE CHARTER",
+      "source": "docs/governance/committees/GOVERNANCE_AND_NOMINATING_COMMITTEE_CHARTER.md",
+      "source_sha256": "d3afcfbaad2af59209b50994b15ae0846c329ebfb807e6ab14876bd2d9eb544e",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**Document ID:** `SH-GOV-COM-GOVNOM-001` | **Version:** 1.0.0 | **Effective:** September 2, 2026 | **State:** LOCKED"
+      ],
+      "existing_pdf": "docs/governance/publications/SH-GOV-COM-GOVNOM-001_v1.0.0.pdf"
+    },
+    {
+      "id": "SH-GOV-COM-TECHOPS-001",
+      "family": "corporate",
+      "title": "TECHNOLOGY & OPERATIONS COMMITTEE CHARTER",
+      "source": "docs/governance/committees/TECHNOLOGY_AND_OPERATIONS_COMMITTEE_CHARTER.md",
+      "source_sha256": "953b7eaa91e5439df5d0ca86d398c01874ffe35f68f56d6c6e05e2c9c545a860",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**Document ID:** `SH-GOV-COM-TECHOPS-001` | **Version:** 1.0.0 | **Effective:** September 2, 2026 | **State:** LOCKED"
+      ],
+      "existing_pdf": "docs/governance/publications/SH-GOV-COM-TECHOPS-001_v1.0.0.pdf"
+    },
+    {
+      "id": "SH-IND-ARU-HR-001",
+      "family": "workforce",
+      "title": "ARU transition, retained management and retention instruments",
+      "source": "industrial/transaction/06_ARU_TRANSITION_AND_RETENTION.md",
+      "source_sha256": "3e3653f95a286d71aa513410603dd0c78684db0ad94e2460708c434a6fc4aec0",
+      "brand": "aru",
+      "source_status_verbatim": [
+        "**Record origin:** SYNTHETIC_COMPANY_RECORD | **Evidence state:** SYNTHETIC_RECONSTRUCTED service/employment terms",
+        "**Decision state:** LOCKED_CANON total compensation/authority; LOCKED_DERIVED_IMPLEMENTATION allocations and work program"
+      ],
+      "existing_pdf": "industrial/publications/SH-IND-ARU-HR-001_v1.0.0.pdf"
+    },
+    {
+      "id": "SH-PNC-001",
+      "family": "workforce",
+      "title": "SABLE HARBOR — PEOPLE & CULTURE DOCTRINE",
+      "source": "docs/governance/PEOPLE_AND_CULTURE_DOCTRINE.md",
+      "source_sha256": "9e8c8b6b3b3ce8500553adfc0e35e94956a8251d395fd8d39355f3d84c1dc5ee",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**Document ID:** `SH-PNC-001` | **Version:** 1.0.0 | **Effective:** September 3, 2026 | **State:** LOCKED"
+      ],
+      "existing_pdf": "docs/governance/publications/SH-PNC-001_v1.0.0.pdf"
+    },
+    {
+      "id": "SH-ADV-005",
+      "family": "workforce",
+      "title": "SABLE HARBOR ADVISORY — CARRY PLAN STANDARD",
+      "source": "docs/advisory/CARRY_PLAN_STANDARD.md",
+      "source_sha256": "c8b64ecd570a2402233bd6067eea0e274e267c8f1aa90d9153de4b3a4865de45",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**State:** `LOCKED DIRECTION`; legal/tax implementation remains subject to counsel  "
+      ],
+      "existing_pdf": null
+    },
+    {
+      "id": "SH-ADV-003",
+      "family": "workforce",
+      "title": "SABLE HARBOR ADVISORY — TALENT, MOBILITY AND CARRY",
+      "source": "docs/advisory/TALENT_MOBILITY_AND_CARRY.md",
+      "source_sha256": "d61c2616c817a82a7c7f33be067dde51f353fd1ba3f7502d316b4fec83cb3e7e",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**State:** `LOCKED DIRECTION`; carry mechanics remain `OPEN` where stated  "
+      ],
+      "existing_pdf": "docs/advisory/publications/SH-ADV-003_v1.0.0.pdf"
+    },
+    {
+      "id": "SH-IND-SAF-001",
+      "family": "workforce",
+      "title": "Labor, safety and controlled operating authority",
+      "source": "industrial/operations/LABOR_SAFETY_AND_CONTROLS.md",
+      "source_sha256": "586d3aa95bbb894c3891ceded1ddb78b6d73fb0df54e4d20b58ab523c9d622d6",
+      "brand": "bst",
+      "source_status_verbatim": [
+        "**Record origin:** User-authorized fictional case implementation, derived from controlled handoff and explicitly labeled engineering assumptions. Official sources establish external context only; they do not verify fictional assets, transactions, operating events or professional approvals. References observed September 6, 2026 UTC / September 5 PDT unless the pinned source manifest records an earlier acquisition."
+      ],
+      "existing_pdf": "industrial/publications/SH-IND-SAF-001_v1.0.0.pdf"
+    },
+    {
+      "id": "SH-CRD-CLOSEOUT-20260906",
+      "family": "assets-rights",
+      "title": "SABLE HARBOR — PROJECT CRADLE CLOSEOUT",
+      "source": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+      "source_sha256": "b49eaf96f1582f11886e9543b1543013f47acc99aa5533082d73717ab523e8aa",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**Status:** LOCKED canon except where explicitly marked IMPLEMENTATION or OPEN_NONBLOCKING  "
+      ],
+      "existing_pdf": null
+    },
+    {
+      "id": "SH-CANON-WIL-KLEIN-20260906-001",
+      "family": "assets-rights",
+      "title": "Willow / Klein closeout",
+      "source": "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+      "source_sha256": "3289ad8ce5d20d767b38f1ad3ed804feeb80300c59d7e96653bfe68f1eaa24b6",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**State:** LOCKED owner-approved canon; expressly noted implementation detail remains non-authoritative",
+        "**State:** LOCKED"
+      ],
+      "existing_pdf": null
+    },
+    {
+      "id": "SH-RT-DEED-001",
+      "family": "assets-rights",
+      "title": "MOCK DEED — SABLE HARBOR NORTHERN NEVADA DATA CENTER",
+      "source": "docs/legal/MOCK_DEED_NORTHERN_NEVADA_DATA_CENTER_2026-09-04.md",
+      "source_sha256": "aa1717ac07ea2968d0ad877045d57b29ec0766dd852a79bd61553fa24eb97d79",
+      "brand": "corporate",
+      "source_status_verbatim": [],
+      "existing_pdf": "enterprise/runtime/publications/SH-RT-DEED-001_v1.0.0.pdf"
+    },
+    {
+      "id": "SH-RT-DEC-001",
+      "family": "assets-rights",
+      "title": "Runtime Hosting and Data Center Decisions — 2026-09-11",
+      "source": "docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md",
+      "source_sha256": "fd309a9bdf596ea96498b7207b60ea3bea70a35d8c418371aa96c06d928bb17b",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**State:** CANON DECISION / implementation evidence remains separate",
+        "7. **Status as of 2026-09-11:** LAND ACQUIRED / PRECONSTRUCTION. Survey/geotechnical/utility/fiber/design/permitting work is authorized and in progress. **No vertical construction, completed shell, commissioned electrical plant, occupied data hall, or operating owned data center may be depicted.**"
+      ],
+      "existing_pdf": "enterprise/runtime/publications/SH-RT-DEC-001_v1.0.0.pdf"
+    },
+    {
+      "id": "LEGAL-SOURCE-920F33E127C0",
+      "family": "assets-rights",
+      "title": "Facility programme and atlas — R02 / v0.2.0",
+      "source": "geospatial/facilities/README.md",
+      "source_sha256": "a58a62e1bfd735eaf954ebce3d3aeaab72f1c9494271250367014d574e0eaf3b",
+      "brand": "corporate",
+      "source_status_verbatim": [],
+      "existing_pdf": null
+    },
+    {
+      "id": "LEGAL-SOURCE-A709ECAC08C4",
+      "family": "assets-rights",
+      "title": "Fort and Bedford concept programs",
+      "source": "geospatial/facilities/RESEARCH_CAMPUSES.md",
+      "source_sha256": "094ea7bb3bc9dd920f29dbe7ef0062880b399c46443cc5c32661589a8e51239a",
+      "brand": "corporate",
+      "source_status_verbatim": [],
+      "existing_pdf": null
+    },
+    {
+      "id": "LEGAL-SOURCE-273909FD1A3E",
+      "family": "assets-rights",
+      "title": "Industrial facility planning source",
+      "source": "geospatial/facilities/INDUSTRIAL_FACILITIES.md",
+      "source_sha256": "3987e927a6b3b5633117d31737ccdd4ffbaae8b22bbdaf765c380316af3e89e9",
+      "brand": "corporate",
+      "source_status_verbatim": [],
+      "existing_pdf": null
+    },
+    {
+      "id": "SH-IND-ARU-TAX-001",
+      "family": "accounting-tax",
+      "title": "ARU stock acquisition and §338(h)(10) tax structure",
+      "source": "industrial/transaction/07_ARU_TAX_STRUCTURE_MEMORANDUM.md",
+      "source_sha256": "d42c4d67873e1b8e9b6488eac9a70a16643680718735ab0c3948327a37b16a44",
+      "brand": "aru",
+      "source_status_verbatim": [
+        "**Record origin:** SYNTHETIC_COMPANY_ANALYSIS with EXTERNAL_RESEARCH",
+        "**Evidence state:** SYNTHETIC_RECONSTRUCTED deal assumptions; REFERENCE_ONLY real authority"
+      ],
+      "existing_pdf": "industrial/publications/SH-IND-ARU-TAX-001_v1.0.0.pdf"
+    },
+    {
+      "id": "SH-IND-FIN-TXN-001",
+      "family": "accounting-tax",
+      "title": "ARU transaction and accounting model",
+      "source": "industrial/finance/TRANSACTION_ACCOUNTING.md",
+      "source_sha256": "d13f142968958585cfc56a7b06d54b5e95bccef6d434d11bb6bba93933a0aa58",
+      "brand": "aru",
+      "source_status_verbatim": [
+        "**Record origin:** PUBLIC_SYNTHETIC_DIEGETIC",
+        "**Evidence state:** LOCKED_DERIVED_IMPLEMENTATION with explicitly labeled PROVISIONAL_ASSUMPTION inputs"
+      ],
+      "existing_pdf": "industrial/publications/SH-IND-FIN-TXN-001_v1.0.0.pdf"
+    },
+    {
+      "id": "SH-IND-FIN-DRV-001",
+      "family": "accounting-tax",
+      "title": "Physical drivers, contracts and operating cost support",
+      "source": "industrial/finance/DRIVERS_AND_COST_SUPPORT.md",
+      "source_sha256": "bf0c78a2c8d96ebabd34674d4c75f49a2d0ca19be68bb662073d0566bc85a83a",
+      "brand": "aru",
+      "source_status_verbatim": [
+        "**Record origin:** PUBLIC_SYNTHETIC_DIEGETIC",
+        "**Evidence state:** LOCKED_DERIVED_IMPLEMENTATION with explicitly labeled PROVISIONAL_ASSUMPTION inputs"
+      ],
+      "existing_pdf": "industrial/publications/SH-IND-FIN-DRV-001_v1.0.0.pdf"
+    },
+    {
+      "id": "LEGAL-SOURCE-FCEBAA48286F",
+      "family": "accounting-tax",
+      "title": "Transaction data-room index",
+      "source": "docs/finance/TRANSACTION_DATA_ROOM_INDEX.md",
+      "source_sha256": "a107e920f200558c59685043415e7d967a32c6708baef7ad927a8e35f1a79d8c",
+      "brand": "corporate",
+      "source_status_verbatim": [],
+      "existing_pdf": null
+    },
+    {
+      "id": "SH-RT-FINANCE-001",
+      "family": "accounting-tax",
+      "title": "Runtime Infrastructure Finance and Headcount Reconciliation — 2026-09-11",
+      "source": "docs/finance/RUNTIME_INFRASTRUCTURE_FINANCE_RECONCILIATION_2026-09-11.md",
+      "source_sha256": "20558ea7ecde58914b7ccd44dc866f56c754b5eabd053eff01b43e7684aa40c8",
+      "brand": "corporate",
+      "source_status_verbatim": [
+        "**State:** planning reconciliation; does not assert invoices, funded appropriations, occupied positions, executed contracts, or operating controls."
+      ],
+      "existing_pdf": "enterprise/runtime/publications/SH-RT-FINANCE-001_v1.0.0.pdf"
+    }
+  ]
+}

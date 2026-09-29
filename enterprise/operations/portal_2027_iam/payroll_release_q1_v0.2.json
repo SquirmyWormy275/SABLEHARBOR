@@ -1,0 +1,302 @@
+{
+  "accepted_predecessor": {
+    "accepted_merge_commit": "2bbbd004628ec7eb45906c493a847a7c841e3908",
+    "derived_path": "enterprise/operations/portal_2027_iam/payroll_release_q1_v0.1.json",
+    "derived_sha256": "12b6dcbf7113244f11c3b073038515fe7619987ff8d4c277d3c0f7cad6f6a83e",
+    "repository_available_not_before": "2026-09-29T06:16:14Z",
+    "source_path": "enterprise/operations/source/portal_2027_payroll_release_q1_2026_09_29.json",
+    "source_record_id": "SH-PORTAL-IAM007-PAYROLL-RELEASE-Q1-2027-v0.1",
+    "source_sha256": "a5d57e1c769393ade09cbe163281ccd88157d294f6a4024ff76eb0d1b6c71e8e",
+    "supersession_scope": "Adds selected-service HR, authorization, IAM realization and review evidence to the earlier future-due/no-performance scenario; leaves the 701-candidate whole-company gap unchanged."
+  },
+  "authored_at": "2026-09-29T06:22:12Z",
+  "case_branches": {
+    "A": {
+      "common_source": true,
+      "company_delta_state": "NOT_AUTHORED"
+    },
+    "B": {
+      "common_source": true,
+      "company_delta_state": "NOT_AUTHORED"
+    }
+  },
+  "event_index": [
+    {
+      "case_available_at": "2027-01-01T00:05:00Z",
+      "event_at": "2027-01-01T00:00:00Z",
+      "event_id": "SH-IAM007-Q1-2027-SELECTED-SERVICE-OPENING",
+      "kind": "selected_service_opening",
+      "person_id": null,
+      "service_account_id": null,
+      "source_object_sha256": "fe11b7f53929e4f29ad2257b49648db2e0eae8951e59d37a815011523d0a99b9"
+    },
+    {
+      "case_available_at": "2026-12-29T01:00:00Z",
+      "event_at": "2026-12-29T00:00:00Z",
+      "event_id": "SH-IAM007-Q1-2027-DELEGATE-OWNER",
+      "kind": "delegation",
+      "person_id": "SH-EMP-ESS-0005",
+      "service_account_id": null,
+      "source_object_sha256": "733a496cff7d62685f317065a9a006a976d0e78a9408652018522f16a3cd1046"
+    },
+    {
+      "case_available_at": "2026-12-29T01:00:00Z",
+      "event_at": "2026-12-29T00:00:00Z",
+      "event_id": "SH-IAM007-Q1-2027-DELEGATE-IMPLEMENTER",
+      "kind": "delegation",
+      "person_id": "SH-EMP-ESS-0006",
+      "service_account_id": null,
+      "source_object_sha256": "0b9093e4b1c0b47a7ece0aa02f959a9048ad4fbf3fbae6f92374758be9d1dd86"
+    },
+    {
+      "case_available_at": "2026-12-29T01:00:00Z",
+      "event_at": "2026-12-29T00:00:00Z",
+      "event_id": "SH-IAM007-Q1-2027-DELEGATE-HR",
+      "kind": "delegation",
+      "person_id": "SH-EMP-ESS-0007",
+      "service_account_id": null,
+      "source_object_sha256": "e8fe0af7fea80bf947a17f7f1993f211699dc81285f0e053502045616a5e5895"
+    },
+    {
+      "case_available_at": "2026-12-29T01:00:00Z",
+      "event_at": "2026-12-29T00:00:00Z",
+      "event_id": "SH-IAM007-Q1-2027-DELEGATE-VALIDATOR",
+      "kind": "delegation",
+      "person_id": "SH-EMP-INTERNAL-AUDIT-0001",
+      "service_account_id": null,
+      "source_object_sha256": "86edc1a6e744cd23793a9053f776e7122764c3af2aa3d5820ff588ae1da2a744"
+    },
+    {
+      "case_available_at": "2026-12-30T10:05:00Z",
+      "event_at": "2027-01-01T00:00:00Z",
+      "event_id": "SH-HR-IAM007-Q1-2027-PREPARE",
+      "kind": "hr_role",
+      "person_id": "SH-EMP-ESS-0001",
+      "service_account_id": null,
+      "source_object_sha256": "e91869f71b110e36a6653062414215062af61b0fec0d6b109f85a514ac43e759"
+    },
+    {
+      "case_available_at": "2026-12-30T10:20:00Z",
+      "event_at": "2027-01-01T00:00:00Z",
+      "event_id": "SH-HR-IAM007-Q1-2027-APPROVE",
+      "kind": "hr_role",
+      "person_id": "SH-EMP-ESS-0002",
+      "service_account_id": null,
+      "source_object_sha256": "5c4c89a43d35394d0ec0d0daf57517a2f7d3ca56c6ee2a3fabe4a31fd7cc7960"
+    },
+    {
+      "case_available_at": "2026-12-31T15:05:00Z",
+      "event_at": "2026-12-31T15:00:00Z",
+      "event_id": "SH-IAM-AUTH-Q1-2027-PREPARE",
+      "kind": "grant_authorization",
+      "person_id": "SH-EMP-ESS-0001",
+      "service_account_id": "SH-ESS-PAYROLL-RELEASE-PREPARE-0001",
+      "source_object_sha256": "ffc061615b91ce0466bf666839890caf641856905727791668016052d3d99593"
+    },
+    {
+      "case_available_at": "2026-12-31T15:20:00Z",
+      "event_at": "2026-12-31T15:15:00Z",
+      "event_id": "SH-IAM-AUTH-Q1-2027-APPROVE",
+      "kind": "grant_authorization",
+      "person_id": "SH-EMP-ESS-0002",
+      "service_account_id": "SH-ESS-PAYROLL-RELEASE-APPROVE-0002",
+      "source_object_sha256": "5faef8e0fa46fc14fd28fb7e6a9c5baf69eb78c6ec2407b197b67db1923f2318"
+    },
+    {
+      "case_available_at": "2027-01-01T00:10:00Z",
+      "event_at": "2027-01-01T00:00:00Z",
+      "event_id": "SH-IAM-REALIZE-Q1-2027-PREPARE",
+      "kind": "iam_realization",
+      "person_id": "SH-EMP-ESS-0001",
+      "service_account_id": "SH-ESS-PAYROLL-RELEASE-PREPARE-0001",
+      "source_object_sha256": "6312f6899079778f54f808eade01d8777365f335320e0441b65fecda1d930d17"
+    },
+    {
+      "case_available_at": "2027-01-01T00:15:00Z",
+      "event_at": "2027-01-01T00:00:00Z",
+      "event_id": "SH-IAM-REALIZE-Q1-2027-APPROVE",
+      "kind": "iam_realization",
+      "person_id": "SH-EMP-ESS-0002",
+      "service_account_id": "SH-ESS-PAYROLL-RELEASE-APPROVE-0002",
+      "source_object_sha256": "e342e470c93af6572bed744ea236c30e789296e45cc9270715e977f5886ccd4f"
+    },
+    {
+      "case_available_at": "2027-03-25T00:10:00Z",
+      "event_at": "2027-03-25T00:00:00Z",
+      "event_id": "SH-IAM007-Q1-2027-POPULATION",
+      "kind": "review_population",
+      "person_id": null,
+      "service_account_id": null,
+      "source_object_sha256": "c8ba03fbab5f7cf5dc038c09ccf295fa678e1981858bd4f7b4f007d2313eb9ee"
+    },
+    {
+      "case_available_at": "2027-03-27T16:10:00Z",
+      "event_at": "2027-03-27T16:00:00Z",
+      "event_id": "SH-IAM007-Q1-2027-DECISION-PREPARE",
+      "kind": "review_decision",
+      "person_id": "SH-EMP-ESS-0001",
+      "service_account_id": "SH-ESS-PAYROLL-RELEASE-PREPARE-0001",
+      "source_object_sha256": "7146285d5d1e684fc893a258185f1a83b22798a09d289a21e7b26d51f6816901"
+    },
+    {
+      "case_available_at": "2027-03-28T12:05:00Z",
+      "event_at": "2027-03-28T12:00:00Z",
+      "event_id": "SH-IAM007-Q1-2027-VERIFY-PREPARE",
+      "kind": "independent_verification",
+      "person_id": null,
+      "service_account_id": "SH-ESS-PAYROLL-RELEASE-PREPARE-0001",
+      "source_object_sha256": "ebabb8d82b83a23f93fdb7e651a3695b2436ce68b05f98ebc2a83ac750f6cf4f"
+    },
+    {
+      "case_available_at": "2027-04-01T01:05:00Z",
+      "event_at": "2027-04-01T00:00:00Z",
+      "event_id": "SH-IAM007-Q1-2027-MISSING-APPROVE",
+      "kind": "subsequent_missing_response",
+      "person_id": null,
+      "service_account_id": "SH-ESS-PAYROLL-RELEASE-APPROVE-0002",
+      "source_object_sha256": "95930c64129b138671bc734b26688d009362f550ad26f63bc9e3b414cf28ce01"
+    }
+  ],
+  "fact_status": "MODELED_2027_IN_UNIVERSE_EVENTS_NOT_REAL_DEPLOYMENT",
+  "forward_traces": [
+    {
+      "authorization_id": "SH-IAM-AUTH-Q1-2027-APPROVE",
+      "hr_event_id": "SH-HR-IAM007-Q1-2027-APPROVE",
+      "iam_realization_id": "SH-IAM-REALIZE-Q1-2027-APPROVE",
+      "independent_verification_id": null,
+      "missing_response_id": "SH-IAM007-Q1-2027-MISSING-APPROVE",
+      "opening_source_id": "SH-IAM007-Q1-2027-SELECTED-SERVICE-OPENING",
+      "person_id": "SH-EMP-ESS-0002",
+      "q1_review_source_state": "MISSING_OWNER_DECISION",
+      "review_decision_id": null,
+      "review_population_id": "SH-IAM007-Q1-2027-POPULATION",
+      "service_account_id": "SH-ESS-PAYROLL-RELEASE-APPROVE-0002"
+    },
+    {
+      "authorization_id": "SH-IAM-AUTH-Q1-2027-PREPARE",
+      "hr_event_id": "SH-HR-IAM007-Q1-2027-PREPARE",
+      "iam_realization_id": "SH-IAM-REALIZE-Q1-2027-PREPARE",
+      "independent_verification_id": "SH-IAM007-Q1-2027-VERIFY-PREPARE",
+      "missing_response_id": null,
+      "opening_source_id": "SH-IAM007-Q1-2027-SELECTED-SERVICE-OPENING",
+      "person_id": "SH-EMP-ESS-0001",
+      "q1_review_source_state": "DECIDED_AND_INDEPENDENTLY_VERIFIED",
+      "review_decision_id": "SH-IAM007-Q1-2027-DECISION-PREPARE",
+      "review_population_id": "SH-IAM007-Q1-2027-POPULATION",
+      "service_account_id": "SH-ESS-PAYROLL-RELEASE-PREPARE-0001"
+    }
+  ],
+  "known_on_state": "PENDING_ACCEPTANCE; CASE_EVENT_AVAILABILITY_FILTERS_APPLY_AFTER_PUBLISH",
+  "limits": [
+    "This is a prospective fictional 2027 case source authored in September 2026. Its scenario event times do not establish September 2026 completed activity or real deployment.",
+    "Repository availability and acceptance remain null until an accepted successor receipt pins the merge commit/time; authored_at is not known-on evidence.",
+    "The complete population assertion applies only to the two scoped human payroll-release role accounts. It does not establish all payroll application users, service identities, company entitlements, or the 701-person January census.",
+    "One review decision is absent. The response preserves the missing-evidence outcome and requires prospective remediation; it does not mark IAM-007 effective.",
+    "A/B-specific deltas, audit workroom commands, and private evaluator truth are outside this public common-source record."
+  ],
+  "portal_intake_contract": {
+    "as_of_field": "event_index.event_at",
+    "branch_scope": "A/B common company source; branch-specific deltas not authored",
+    "case_known_on_field": "event_index.case_available_at",
+    "due_count_path": "review_population.due",
+    "full_company_denominator": null,
+    "independently_verified_count_path": "review_population.independently_verified",
+    "missing_count_path": "review_population.missing_owner_decision",
+    "observed_decision_count_path": "review_population.owner_decision_sources",
+    "performance_claim": "ONE_MODELED_IN_UNIVERSE_DECISION_AND_ONE_MISSING; NOT_REAL_DEPLOYMENT",
+    "period_end_exclusive": "2027-04-01T00:00:00Z",
+    "period_start": "2027-01-01T00:00:00Z",
+    "population_unit": "one scoped human service-role account",
+    "repository_known_on_gate": "accepted merge commit/time required; null denies all intake",
+    "scenario": "FICTIONAL_2027_ENGAGEMENT_COMMON_BASELINE",
+    "source_hash_state": "PIN_IN_POST_ACCEPTANCE_MANIFEST",
+    "source_object_hash_field": "source_object_sha256",
+    "source_object_key": "event_id",
+    "source_path": "enterprise/operations/source/portal_2027_payroll_release_q1_successor_2026_09_29.json"
+  },
+  "record_id": "SH-PORTAL-IAM007-PAYROLL-RELEASE-Q1-2027-LEDGER-v0.2",
+  "repository_acceptance_at": null,
+  "repository_available_at": null,
+  "reverse_trace_index": {
+    "SH-HR-IAM007-Q1-2027-APPROVE": [
+      "SH-ESS-PAYROLL-RELEASE-APPROVE-0002"
+    ],
+    "SH-HR-IAM007-Q1-2027-PREPARE": [
+      "SH-ESS-PAYROLL-RELEASE-PREPARE-0001"
+    ],
+    "SH-IAM-AUTH-Q1-2027-APPROVE": [
+      "SH-ESS-PAYROLL-RELEASE-APPROVE-0002"
+    ],
+    "SH-IAM-AUTH-Q1-2027-PREPARE": [
+      "SH-ESS-PAYROLL-RELEASE-PREPARE-0001"
+    ],
+    "SH-IAM-REALIZE-Q1-2027-APPROVE": [
+      "SH-ESS-PAYROLL-RELEASE-APPROVE-0002"
+    ],
+    "SH-IAM-REALIZE-Q1-2027-PREPARE": [
+      "SH-ESS-PAYROLL-RELEASE-PREPARE-0001"
+    ],
+    "SH-IAM007-Q1-2027-DECISION-PREPARE": [
+      "SH-ESS-PAYROLL-RELEASE-PREPARE-0001"
+    ],
+    "SH-IAM007-Q1-2027-DELEGATE-HR": [],
+    "SH-IAM007-Q1-2027-DELEGATE-IMPLEMENTER": [],
+    "SH-IAM007-Q1-2027-DELEGATE-OWNER": [],
+    "SH-IAM007-Q1-2027-DELEGATE-VALIDATOR": [],
+    "SH-IAM007-Q1-2027-MISSING-APPROVE": [
+      "SH-ESS-PAYROLL-RELEASE-APPROVE-0002"
+    ],
+    "SH-IAM007-Q1-2027-POPULATION": [
+      "SH-ESS-PAYROLL-RELEASE-APPROVE-0002",
+      "SH-ESS-PAYROLL-RELEASE-PREPARE-0001"
+    ],
+    "SH-IAM007-Q1-2027-SELECTED-SERVICE-OPENING": [
+      "SH-ESS-PAYROLL-RELEASE-APPROVE-0002",
+      "SH-ESS-PAYROLL-RELEASE-PREPARE-0001"
+    ],
+    "SH-IAM007-Q1-2027-VERIFY-PREPARE": [
+      "SH-ESS-PAYROLL-RELEASE-PREPARE-0001"
+    ]
+  },
+  "review_population": {
+    "due": 2,
+    "due_at": "2027-03-31T23:59:59Z",
+    "independently_verified": 1,
+    "missing_account_ids": [
+      "SH-ESS-PAYROLL-RELEASE-APPROVE-0002"
+    ],
+    "missing_owner_decision": 1,
+    "owner_decision_sources": 1,
+    "status": "PARTIAL_ONE_MISSING_NOT_CONTROL_PASS",
+    "unit": "scoped_role_account_decision"
+  },
+  "scenario": "FICTIONAL_2027_ENGAGEMENT_COMMON_BASELINE",
+  "scope": {
+    "complete_for_declared_function": true,
+    "control_id": "SH-IAM-007",
+    "excluded": "All other payroll application users, service identities, other company systems, nonemployees and 701 unverified January 2027 company-principal candidates are outside this declared function.",
+    "included_service_account_ids": [
+      "SH-ESS-PAYROLL-RELEASE-PREPARE-0001",
+      "SH-ESS-PAYROLL-RELEASE-APPROVE-0002"
+    ],
+    "legal_operator": "SHI",
+    "period_end_exclusive": "2027-04-01T00:00:00Z",
+    "period_start": "2027-01-01T00:00:00Z",
+    "population_unit": "one human service-role account",
+    "service_id": "SH-ESS-PAYROLL-RELEASE",
+    "time_basis": "UTC synthetic case calendar",
+    "unit": "ess"
+  },
+  "service_population": {
+    "closing_at_2027_04_01": 2,
+    "company_wide_account_denominator": null,
+    "complete_within_declared_function": true,
+    "opening_before_2027_grants": 0,
+    "opening_source_id": "SH-IAM007-Q1-2027-SELECTED-SERVICE-OPENING",
+    "q1_grants": 2,
+    "q1_other_jml_events": 0,
+    "unit": "human_service_role_account"
+  },
+  "source_record_id": "SH-PORTAL-IAM007-PAYROLL-RELEASE-Q1-2027-v0.2",
+  "state": "PROVISIONAL_NEWLY_AUTHORED_FICTIONAL_CASE_SUCCESSOR"
+}

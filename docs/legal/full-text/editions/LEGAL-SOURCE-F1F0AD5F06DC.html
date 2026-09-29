@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Commercial operations and contract economics — full source edition</title><style>@page { size: Letter; margin: 0.68in 0.66in 0.68in; }
+* { box-sizing: border-box; }
+html { color: #20282c; background: #edf0f1; }
+body { margin: 0; font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.43; }
+.edition-header { display: flex; justify-content: space-between; align-items: center; gap: 24px; border-bottom: 2px solid #26383d; padding-bottom: 15px; margin-bottom: 14px; }
+.edition-header img { max-width: 245px; max-height: 65px; object-fit: contain; object-position: left center; }
+.edition-header span { color: #515e63; font-size: 8pt; letter-spacing: 0.8px; text-align: right; }
+.edition-note { padding: 10px 12px; border-left: 3px solid #958367; background: #f6f4ef; font-size: 9pt; line-height: 1.4; margin: 0 0 22px; }
+.edition-note p { margin: 0 0 4px; }
+.edition-note p:last-child { margin: 0; }
+h1 { font-size: 23pt; line-height: 1.15; margin: 0 0 18px; font-weight: 600; }
+h2 { font-size: 15pt; line-height: 1.2; margin: 23px 0 9px; }
+h3 { font-size: 12pt; line-height: 1.3; margin: 18px 0 7px; }
+h4,h5,h6 { font-size: 11pt; margin: 15px 0 6px; }
+h1,h2,h3,h4,h5,h6 { break-after: avoid; overflow-wrap: anywhere; }
+p { margin: 0 0 11px; orphans: 3; widows: 3; }
+li { margin: 0 0 5px; orphans: 2; widows: 2; }
+ul,ol { padding-left: 23px; margin: 8px 0 13px; }
+li > p { margin-bottom: 6px; }
+a { color: #294e60; text-decoration: underline; text-underline-offset: 2px; overflow-wrap: anywhere; }
+code { font-family: 'DejaVu Sans Mono', monospace; font-size: 0.88em; overflow-wrap: anywhere; }
+pre { font-size: 9.5pt; white-space: pre-wrap; overflow-wrap: anywhere; background: #f2f4f4; padding: 10px; border: 1px solid #d8dfe0; }
+blockquote { border-left: 2px solid #929fa4; margin: 12px 0; padding: 0 15px; color: #39464b; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0 17px; table-layout: auto; font-size: 10.5pt; line-height: 1.35; }
+thead { display: table-header-group; }
+tfoot { display: table-footer-group; }
+th { background: #e9eef0; font-weight: 600; text-align: left; }
+th,td { padding: 7px 8px; border-bottom: 1px solid #cbd3d6; vertical-align: top; overflow-wrap: anywhere; }
+tr { break-inside: avoid; }
+hr { border: 0; border-top: 1px solid #cbd3d6; margin: 19px 0; }
+article img { max-width: 100%; height: auto; }
+.source-identity { margin-top: 24px; border-top: 1px solid #b7c1c5; padding-top: 10px; font-size: 8pt; color: #516168; overflow-wrap: anywhere; }
+@media screen { body { max-width: 900px; margin: 24px auto; padding: 48px 54px; background: white; box-shadow: 0 2px 16px #18313b12; } }
+@media screen and (max-width: 600px) { body { margin: 0; padding: 22px 18px; } h1 { font-size: 21pt; } .edition-header { gap: 12px; } .edition-header img { max-width: 55%; } table { display: block; overflow-x: auto; } }
+@media print { html { background: white; } a { text-decoration: none; } }
+/* Source metadata uses Markdown soft line breaks; retain those readable lines. */
+article p:has(> strong:first-child) { white-space: pre-line; }
+th,td { min-width: 5em; }
+/* Provenance remains in the editable HTML and manifest; do not create empty PDF tail pages. */
+@media print { .source-identity { display: none; } }
+
+/* Keep the complete closing paragraph on one page in this formation record. */
+article[data-document-id="SH-IND-COR-001"] > p:last-child { break-inside: avoid; }
+article[data-document-id="SH-IND-HR-001"] th:first-child,
+article[data-document-id="SH-IND-HR-001"] td:first-child { min-width: 8em; }
+/* Chromium does not consistently honor widows/orphans; keep ordinary clauses intact. */
+article p { break-inside: avoid; }
+/* Wrap ordinary table words at spaces; long machine paths retain code wrapping. */
+th,td { overflow-wrap: normal; }
+@media screen and (max-width: 600px) {
+  th,td { min-width: 8em; }
+}
+</style></head>
+<body><header class="edition-header"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDE2MDAgNTAwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+PHRpdGxlIGlkPSJ0aXRsZSI+U2FibGUgSGFyYm9yIOKAlCBwcmltYXJ5IGhvcml6b250YWw8L3RpdGxlPjxkZXNjIGlkPSJkZXNjIj5JbmRpdmlkdWFsIHByaW1hcnkgaG9yaXpvbnRhbCBsb2dvIGFzc2V0IGZvciBTYWJsZSBIYXJib3IuPC9kZXNjPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDgwLjAwMCwxMTAuMDAwKSBzY2FsZSgyLjMzMzMzMzMzKSI+PHJlY3QgeD0iOCIgeT0iOCIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjIwIiBmaWxsPSIjMTAxMjE0Ii8+PHJlY3QgeD0iOCIgeT0iOCIgd2lkdGg9IjIwIiBoZWlnaHQ9Ijc0IiBmaWxsPSIjMTAxMjE0Ii8+PHBvbHlnb24gcG9pbnRzPSI4LjAwMCw2Mi4wMDAgNzguMDAwLDYyLjAwMCA2OC4wMDAsODIuMDAwIDguMDAwLDgyLjAwMCIgZmlsbD0iIzEwMTIxNCIvPjxyZWN0IHg9IjE2IiB5PSI5MiIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjIwIiBmaWxsPSIjMTAxMjE0Ii8+PHJlY3QgeD0iOTIiIHk9IjM4IiB3aWR0aD0iMjAiIGhlaWdodD0iNzQiIGZpbGw9IiMxMDEyMTQiLz48cG9seWdvbiBwb2ludHM9IjQyLjAwMCwzOC4wMDAgMTEyLjAwMCwzOC4wMDAgMTEyLjAwMCw1OC4wMDAgNTIuMDAwLDU4LjAwMCIgZmlsbD0iIzEwMTIxNCIvPjxyZWN0IHg9IjU0IiB5PSI1NCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIiBmaWxsPSIjQzQ1MTI0Ii8+PC9nPjxnIGZpbGw9IiMxMDEyMTQiPjxwYXRoIGQ9Ik02NTIgLTI0Qzk5MCAtMjQgMTIwOSAxNTIgMTIwOSA0MjBDMTIwOSA2MzMgMTA3MSA3NjIgNzcyIDgzM0w2MTEgODcxQzQwNiA5MjAgMzI2IDk4MiAzMjYgMTA5MEMzMjYgMTIyNSA0NTMgMTMyMCA2MzMgMTMyMEM4MjEgMTMyMCA5NDMgMTIxNSA5NTQgMTA0NEgxMTY5QzExNjAgMTMzNSA5NTcgMTUxNCA2MzYgMTUxNEMzMTYgMTUxNCAxMDUgMTM0MSAxMDUgMTA3OUMxMDUgODczIDIzNyA3NDggNTM4IDY3N0w3MDEgNjM4QzkwOCA1ODkgOTg3IDUyMyA5ODcgNDA4Qzk4NyAyNjMgODU0IDE3MCA2NTIgMTcwQzQyOSAxNzAgMjk4IDI4NiAyOTcgNDgzSDc1Qzc1IDE2OCAyOTUgLTI0IDY1MiAtMjRaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MzAuMDAwLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTE2IDBIMjUyTDM4OCAzODdIOTg5TDExMjEgMEgxMzYyTDgyNSAxNDkwSDU1N1pNNDU1IDU3NiA1NDggODQwQzU4OSA5NjMgNjMyIDEwOTQgNjkyIDEyODdDNzUxIDEwOTQgNzkzIDk2MyA4MzQgODQwTDkyNCA1NzZaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MDguNTExLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTEzNiAwSDcxMEMxMDYyIDAgMTIzOSAxNjYgMTIzOSA0MTlDMTIzOSA2MzEgMTEwMyA3NDggOTMwIDc3MlY3NzRDMTA4NiA4MjIgMTE4MCA5MjcgMTE4MCAxMDk4QzExODAgMTMzNyAxMDAwIDE0OTAgNjkzIDE0OTBIMTM2Wk0zNTYgMTg3VjY2NUg3MDRDOTAxIDY2NSAxMDEzIDU3MSAxMDEzIDQyMEMxMDEzIDI2OCA4OTggMTg3IDY5NiAxODdaTTM1NiA4NDhWMTMwM0g2OTBDODU5IDEzMDMgOTYwIDEyMTUgOTYwIDEwNzVDOTYwIDkzNSA4NTkgODQ4IDY5MCA4NDhaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1OTIuMDMyLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTEzNiAwSDEwNjNWMTk1SDM1OFYxNDkwSDEzNloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDY3MS45NjYsMjgwLjI0MCkgc2NhbGUoMC4wNTI3MzQzOCwtMC4wNTI3MzQzOCkiLz48cGF0aCBkPSJNMTM2IDBIMTEzOFYxOTVIMzU4VjY2M0gxMDgwVjg1NkgzNThWMTI5NUgxMTM4VjE0OTBIMTM2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzQxLjM1NCwyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjxwYXRoIGQ9Ik0xMzYgMEgzNThWNjY1SDEwOTlWMEgxMzIxVjE0OTBIMTA5OVY4NTlIMzU4VjE0OTBIMTM2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODc4LjM5MiwyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjxwYXRoIGQ9Ik0xNiAwSDI1MkwzODggMzg3SDk4OUwxMTIxIDBIMTM2Mkw4MjUgMTQ5MEg1NTdaTTQ1NSA1NzYgNTQ4IDg0MEM1ODkgOTYzIDYzMiAxMDk0IDY5MiAxMjg3Qzc1MSAxMDk0IDc5MyA5NjMgODM0IDg0MEw5MjQgNTc2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTY2LjAyNiwyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjxwYXRoIGQ9Ik0xMzYgMEgzNThWNTY0SDY4OEM2OTEgNTY0IDY5NSA1NjQgNjk4IDU2NEw5OTUgMEgxMjQ1TDkyMyA2MDFDMTEwOSA2NjggMTIyMiA4MTggMTIyMiAxMDI2QzEyMjIgMTMxMSAxMDIyIDE0OTAgNzAzIDE0OTBIMTM2Wk0zNTggNzUzVjEyOThINjkzQzg4NSAxMjk4IDEwMDMgMTE5NCAxMDAzIDEwMjZDMTAwMyA4NTggODg2IDc1MyA2OTQgNzUzWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTA0OS41NDcsMjgwLjI0MCkgc2NhbGUoMC4wNTI3MzQzOCwtMC4wNTI3MzQzOCkiLz48cGF0aCBkPSJNMTM2IDBINzEwQzEwNjIgMCAxMjM5IDE2NiAxMjM5IDQxOUMxMjM5IDYzMSAxMTAzIDc0OCA5MzAgNzcyVjc3NEMxMDg2IDgyMiAxMTgwIDkyNyAxMTgwIDEwOThDMTE4MCAxMzM3IDEwMDAgMTQ5MCA2OTMgMTQ5MEgxMzZaTTM1NiAxODdWNjY1SDcwNEM5MDEgNjY1IDEwMTMgNTcxIDEwMTMgNDIwQzEwMTMgMjY4IDg5OCAxODcgNjk2IDE4N1pNMzU2IDg0OFYxMzAzSDY5MEM4NTkgMTMwMyA5NjAgMTIxNSA5NjAgMTA3NUM5NjAgOTM1IDg1OSA4NDggNjkwIDg0OFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDExMjkuMjcwLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTc2NiAtMjRDMTE2MyAtMjQgMTQ1MiAyODggMTQ1MiA3NDRDMTQ1MiAxMjAyIDExNjMgMTUxNCA3NjYgMTUxNEMzNjkgMTUxNCA4MSAxMjAyIDgxIDc0NEM4MSAyODkgMzY5IC0yNCA3NjYgLTI0Wk03NjYgMTc5QzUwOSAxNzkgMzA0IDM4MSAzMDQgNzQ0QzMwNCAxMTA5IDUwOSAxMzExIDc2NiAxMzExQzEwMjMgMTMxMSAxMjI5IDExMDkgMTIyOSA3NDRDMTIyOSAzODEgMTAyMyAxNzkgNzY2IDE3OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEyMDkuMjA1LDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTEzNiAwSDM1OFY1NjRINjg4QzY5MSA1NjQgNjk1IDU2NCA2OTggNTY0TDk5NSAwSDEyNDVMOTIzIDYwMUMxMTA5IDY2OCAxMjIyIDgxOCAxMjIyIDEwMjZDMTIyMiAxMzExIDEwMjIgMTQ5MCA3MDMgMTQ5MEgxMzZaTTM1OCA3NTNWMTI5OEg2OTNDODg1IDEyOTggMTAwMyAxMTk0IDEwMDMgMTAyNkMxMDAzIDg1OCA4ODYgNzUzIDY5NCA3NTNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMzAwLjg0NywyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjwvZz48cmVjdCB4PSI0MzAiIHk9IjMwNi4yNCIgd2lkdGg9IjkzOS43NzA4NTkzNzQ5OTk5IiBoZWlnaHQ9IjQiIGZpbGw9IiNDNDUxMjQiLz48L3N2Zz4=" alt="corporate"><span>LEGAL RECORDS<br>FULL SOURCE EDITION</span></header>
+<aside class="edition-note"><p><strong>Draft publication design · exact-file review required</strong></p><p>Complete source text follows. The source’s own status and limitations remain in force; this edition does not establish execution, filing or approval.</p></aside>
+<article id="source-content" data-document-id="LEGAL-SOURCE-F1F0AD5F06DC"><h1>Commercial operations and contract economics</h1>
+<p>Status: implemented conditional planning histories. All customer decisions,
+approvals, incidents and future dates are public synthetic assumptions for
+2027–2031. They are not operating records or executed agreements.</p>
+<p>The successor retains the accepted business model's 75 contract sources and
+three scenarios. <code>source/commercial.json</code> supplies additional events; it never
+rewrites baseline contract values. Annual subscriptions remain prepaid billed
+terms, recognized monthly when service occurs. Deployment fees remain separate
+accepted work. Atlas licenses remain product revenue, with its outcome delivery
+capacity reserved separately from its commercial service pool.</p>
+<h2>Pipeline, capacity and service</h2>
+<p>Every eligible contract produces dated pipeline evidence until activation. The
+default synthetic outcome is won on its original start date. Explicit overrides
+exercise lost opportunities, permanently held opportunities, and decisions
+delayed beyond the planned start. A won opportunity still needs the scenario's
+acceptance delay and available deployment capacity; neither a planned start nor
+a customer decision bypasses capacity.</p>
+<p>Each product unit dedicates 20% of its workforce-derived delivery capacity to one
+shared monthly service pool. Opening customers reserve routine support first,
+incident work consumes the remainder next, and deployments use what remains.
+Newly activated customers also reserve their current month's support. Individual
+support tickets, incident movements and deployment acceptance records support
+the capacity rollforward. No hour in this pool is allocated twice. Opening
+customer support reservations include that month's renewal/exit administration;
+they may therefore remain for a customer whose service ends during the month.
+Routine unmet monthly demand is reported as backlog for that service month;
+incident remediation hours carry forward until resolved.</p>
+<p>Incident demand is an explicit source assumption. Failure to finish that month's
+incident demand records a service breach, creates a single earned-service credit,
+and enters the contract's renewal review. A breach in the preceding 12 months
+causes modeled nonrenewal at the configured threshold. Resolving the incident
+does not erase the original breach. Increasing service capacity can avoid the
+breach, its credit and the later customer loss. The original scenario churn rule
+remains as a separately identified renewal cause.</p>
+<p>These are monthly planning mechanics, not a claim that support hours establish
+production uptime or a particular contractual SLA. The model grants no live
+customer entitlement and does not choose a deployment/runtime architecture.</p>
+<h2>Versions, amendments and customer credits</h2>
+<p>Activation, renewal, expansion, price amendments, contraction and cancellation
+create immutable version rows. Each retains its applied month, original
+effective month and synthetic approval identifier. A change that becomes due
+before delayed activation is held and retried; it is applied once after actual
+activation. A change for a lost or closed customer receives an explicit
+nonapplicable disposition. Delays do not silently erase amendments.</p>
+<p>Positive changes bill the additional monthly rate for the unexpired part of the
+existing annual term. Contractions credit the unearned portion of the same
+term. Cancellation credits the entire unearned balance, ends recurring revenue,
+and prevents future service recognition. Amendments change seats and actual
+monthly recognized revenue as well as the reported ARR. Annual renewal
+escalation applies to the effective rate, including earlier changes.</p>
+<p>Each billed invoice retains an unearned claim. Recognition consumes claims in
+order; reductions consume remaining claims from newest to oldest. Earned-service
+credits use earned invoice capacity and cannot consume the unearned balance.
+The credit module applies credits to open AR, surviving written-off claims, and
+only then refundable collected cash. Commercial code does not bypass those
+collection, credit or refund controls.</p>
+<h2>Reconciliations and review tables</h2>
+<table>
+<thead>
+<tr>
+<th>Table</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>commercial_pipeline</code></td>
+<td>Customer decision, planned activation and capacity/acceptance holds</td>
+</tr>
+<tr>
+<td><code>contract_versions</code></td>
+<td>Effective rate, seats, term and approval history</td>
+</tr>
+<tr>
+<td><code>commercial_changes</code></td>
+<td>Applied, held or nonapplicable amendment disposition</td>
+</tr>
+<tr>
+<td><code>commercial_service_tickets</code></td>
+<td>Monthly routine support demand and service</td>
+</tr>
+<tr>
+<td><code>service_incidents</code></td>
+<td>Incident demand, work performed, open hours and preserved breach</td>
+</tr>
+<tr>
+<td><code>commercial_renewals</code></td>
+<td>Renewal decision and service/scenario cause</td>
+</tr>
+<tr>
+<td><code>commercial_capacity</code></td>
+<td>Shared capacity, support, incident, deployment and unused hours</td>
+</tr>
+<tr>
+<td><code>commercial_metrics</code></td>
+<td>Active customers, concentration, ARR and support backlog</td>
+</tr>
+<tr>
+<td><code>commercial_arr_bridge</code></td>
+<td>Opening + new + expansion + price − contraction − churn = closing ARR</td>
+</tr>
+<tr>
+<td><code>commercial_deferred_rollforward</code></td>
+<td>Opening + billings − unearned credits − recognition = closing deferred revenue</td>
+</tr>
+</tbody>
+</table>
+<p>All scenarios cover every month. Every baseline contract has a deferred
+rollforward, including zero balances before activation and after closure. These
+balances reconcile to invoice claims and the product unit's general ledger.
+Earned-service credits reduce revenue through credit-note journals; they do not
+reduce gross contractual ARR or deferred revenue a second time.</p>
+<p>Validation independently checks complete, unique monthly populations, continuous
+opening/closing balances, aggregate ARR, deferred balances against month-end
+books, capacity allocation, approval timing and nonnegative balances. Tests also
+exercise changes in capacity, lost opportunities, delayed amendments, actual
+invoices and journal consequences, cancellation, and deliberately corrupted
+exported bridges.</p>
+</article>
+<aside class="source-identity"><strong>Edition provenance</strong><br>LEGAL-SOURCE-F1F0AD5F06DC<br>Source: <a href="https://github.com/SquirmyWormy275/SABLEHARBOR/blob/79437a778d4a4d5097a3cdaa36d7d8ab13217536/enterprise/operations/docs/commercial.md">enterprise/operations/docs/commercial.md</a><br>Source revision: 79437a778d4a4d5097a3cdaa36d7d8ab13217536<br>Source SHA-256: ef896e84c66e03eff7adecb3e3f6b7c082b28e618f4183ec37fc7568f2b45416</aside>
+</body></html>

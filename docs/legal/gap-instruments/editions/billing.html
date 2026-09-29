@@ -1,0 +1,180 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Foundry Field proposed billing instrument and reconciliation attachment</title><style>@page { size: Letter; margin: 0.68in 0.66in 0.68in; }
+* { box-sizing: border-box; }
+html { color: #20282c; background: #edf0f1; }
+body { margin: 0; font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.43; }
+.edition-header { display: flex; justify-content: space-between; align-items: center; gap: 24px; border-bottom: 2px solid #26383d; padding-bottom: 15px; margin-bottom: 14px; }
+.edition-header img { max-width: 245px; max-height: 65px; object-fit: contain; object-position: left center; }
+.edition-header span { color: #515e63; font-size: 8pt; letter-spacing: 0.8px; text-align: right; }
+.edition-note { padding: 10px 12px; border-left: 3px solid #958367; background: #f6f4ef; font-size: 9pt; line-height: 1.4; margin: 0 0 22px; }
+.edition-note p { margin: 0 0 4px; }
+.edition-note p:last-child { margin: 0; }
+h1 { font-size: 23pt; line-height: 1.15; margin: 0 0 18px; font-weight: 600; }
+h2 { font-size: 15pt; line-height: 1.2; margin: 23px 0 9px; }
+h3 { font-size: 12pt; line-height: 1.3; margin: 18px 0 7px; }
+h4,h5,h6 { font-size: 11pt; margin: 15px 0 6px; }
+h1,h2,h3,h4,h5,h6 { break-after: avoid; overflow-wrap: anywhere; }
+p { margin: 0 0 11px; orphans: 3; widows: 3; }
+li { margin: 0 0 5px; orphans: 2; widows: 2; }
+ul,ol { padding-left: 23px; margin: 8px 0 13px; }
+li > p { margin-bottom: 6px; }
+a { color: #294e60; text-decoration: underline; text-underline-offset: 2px; overflow-wrap: anywhere; }
+code { font-family: 'DejaVu Sans Mono', monospace; font-size: 0.88em; overflow-wrap: anywhere; }
+pre { font-size: 9.5pt; white-space: pre-wrap; overflow-wrap: anywhere; background: #f2f4f4; padding: 10px; border: 1px solid #d8dfe0; }
+blockquote { border-left: 2px solid #929fa4; margin: 12px 0; padding: 0 15px; color: #39464b; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0 17px; table-layout: auto; font-size: 10.5pt; line-height: 1.35; }
+thead { display: table-header-group; }
+tfoot { display: table-footer-group; }
+th { background: #e9eef0; font-weight: 600; text-align: left; }
+th,td { padding: 7px 8px; border-bottom: 1px solid #cbd3d6; vertical-align: top; overflow-wrap: anywhere; }
+tr { break-inside: avoid; }
+hr { border: 0; border-top: 1px solid #cbd3d6; margin: 19px 0; }
+article img { max-width: 100%; height: auto; }
+.source-identity { margin-top: 24px; border-top: 1px solid #b7c1c5; padding-top: 10px; font-size: 8pt; color: #516168; overflow-wrap: anywhere; }
+@media screen { body { max-width: 900px; margin: 24px auto; padding: 48px 54px; background: white; box-shadow: 0 2px 16px #18313b12; } }
+@media screen and (max-width: 600px) { body { margin: 0; padding: 22px 18px; } h1 { font-size: 21pt; } .edition-header { gap: 12px; } .edition-header img { max-width: 55%; } table { display: block; overflow-x: auto; } }
+@media print { html { background: white; } a { text-decoration: none; } }
+/* Source metadata uses Markdown soft line breaks; retain those readable lines. */
+/* Source metadata already uses explicit Markdown hard breaks. */
+th,td { min-width: 5em; }
+/* Provenance remains in the editable HTML and manifest; do not create empty PDF tail pages. */
+@media print { .source-identity { display: none; } }
+
+/* Keep the complete closing paragraph on one page in this formation record. */
+article[data-document-id="SH-IND-COR-001"] > p:last-child { break-inside: avoid; }
+article[data-document-id="SH-IND-HR-001"] th:first-child,
+article[data-document-id="SH-IND-HR-001"] td:first-child { min-width: 8em; }
+/* Chromium does not consistently honor widows/orphans; keep ordinary clauses intact. */
+article p { break-inside: avoid; }
+/* Wrap ordinary table words at spaces; long machine paths retain code wrapping. */
+th,td { overflow-wrap: normal; }
+@media screen and (max-width: 600px) {
+  th,td { min-width: 8em; }
+}
+/* Corporate document standard SH-GOV-DOC-001. */
+.edition-header { border-bottom-color: #C45124; }
+.edition-note { border-left-color: #C45124; background: #F4F1EA; }
+@media screen { body { box-shadow: none; } }
+
+/* Keep reference lists and fillable completion forms intact. */
+.references, .execution-form { break-inside: avoid; }
+</style></head><body>
+<header class="edition-header"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDE2MDAgNTAwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+PHRpdGxlIGlkPSJ0aXRsZSI+U2FibGUgSGFyYm9yIOKAlCBwcmltYXJ5IGhvcml6b250YWw8L3RpdGxlPjxkZXNjIGlkPSJkZXNjIj5JbmRpdmlkdWFsIHByaW1hcnkgaG9yaXpvbnRhbCBsb2dvIGFzc2V0IGZvciBTYWJsZSBIYXJib3IuPC9kZXNjPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDgwLjAwMCwxMTAuMDAwKSBzY2FsZSgyLjMzMzMzMzMzKSI+PHJlY3QgeD0iOCIgeT0iOCIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjIwIiBmaWxsPSIjMTAxMjE0Ii8+PHJlY3QgeD0iOCIgeT0iOCIgd2lkdGg9IjIwIiBoZWlnaHQ9Ijc0IiBmaWxsPSIjMTAxMjE0Ii8+PHBvbHlnb24gcG9pbnRzPSI4LjAwMCw2Mi4wMDAgNzguMDAwLDYyLjAwMCA2OC4wMDAsODIuMDAwIDguMDAwLDgyLjAwMCIgZmlsbD0iIzEwMTIxNCIvPjxyZWN0IHg9IjE2IiB5PSI5MiIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjIwIiBmaWxsPSIjMTAxMjE0Ii8+PHJlY3QgeD0iOTIiIHk9IjM4IiB3aWR0aD0iMjAiIGhlaWdodD0iNzQiIGZpbGw9IiMxMDEyMTQiLz48cG9seWdvbiBwb2ludHM9IjQyLjAwMCwzOC4wMDAgMTEyLjAwMCwzOC4wMDAgMTEyLjAwMCw1OC4wMDAgNTIuMDAwLDU4LjAwMCIgZmlsbD0iIzEwMTIxNCIvPjxyZWN0IHg9IjU0IiB5PSI1NCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIiBmaWxsPSIjQzQ1MTI0Ii8+PC9nPjxnIGZpbGw9IiMxMDEyMTQiPjxwYXRoIGQ9Ik02NTIgLTI0Qzk5MCAtMjQgMTIwOSAxNTIgMTIwOSA0MjBDMTIwOSA2MzMgMTA3MSA3NjIgNzcyIDgzM0w2MTEgODcxQzQwNiA5MjAgMzI2IDk4MiAzMjYgMTA5MEMzMjYgMTIyNSA0NTMgMTMyMCA2MzMgMTMyMEM4MjEgMTMyMCA5NDMgMTIxNSA5NTQgMTA0NEgxMTY5QzExNjAgMTMzNSA5NTcgMTUxNCA2MzYgMTUxNEMzMTYgMTUxNCAxMDUgMTM0MSAxMDUgMTA3OUMxMDUgODczIDIzNyA3NDggNTM4IDY3N0w3MDEgNjM4QzkwOCA1ODkgOTg3IDUyMyA5ODcgNDA4Qzk4NyAyNjMgODU0IDE3MCA2NTIgMTcwQzQyOSAxNzAgMjk4IDI4NiAyOTcgNDgzSDc1Qzc1IDE2OCAyOTUgLTI0IDY1MiAtMjRaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MzAuMDAwLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTE2IDBIMjUyTDM4OCAzODdIOTg5TDExMjEgMEgxMzYyTDgyNSAxNDkwSDU1N1pNNDU1IDU3NiA1NDggODQwQzU4OSA5NjMgNjMyIDEwOTQgNjkyIDEyODdDNzUxIDEwOTQgNzkzIDk2MyA4MzQgODQwTDkyNCA1NzZaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MDguNTExLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTEzNiAwSDcxMEMxMDYyIDAgMTIzOSAxNjYgMTIzOSA0MTlDMTIzOSA2MzEgMTEwMyA3NDggOTMwIDc3MlY3NzRDMTA4NiA4MjIgMTE4MCA5MjcgMTE4MCAxMDk4QzExODAgMTMzNyAxMDAwIDE0OTAgNjkzIDE0OTBIMTM2Wk0zNTYgMTg3VjY2NUg3MDRDOTAxIDY2NSAxMDEzIDU3MSAxMDEzIDQyMEMxMDEzIDI2OCA4OTggMTg3IDY5NiAxODdaTTM1NiA4NDhWMTMwM0g2OTBDODU5IDEzMDMgOTYwIDEyMTUgOTYwIDEwNzVDOTYwIDkzNSA4NTkgODQ4IDY5MCA4NDhaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1OTIuMDMyLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTEzNiAwSDEwNjNWMTk1SDM1OFYxNDkwSDEzNloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDY3MS45NjYsMjgwLjI0MCkgc2NhbGUoMC4wNTI3MzQzOCwtMC4wNTI3MzQzOCkiLz48cGF0aCBkPSJNMTM2IDBIMTEzOFYxOTVIMzU4VjY2M0gxMDgwVjg1NkgzNThWMTI5NUgxMTM4VjE0OTBIMTM2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzQxLjM1NCwyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjxwYXRoIGQ9Ik0xMzYgMEgzNThWNjY1SDEwOTlWMEgxMzIxVjE0OTBIMTA5OVY4NTlIMzU4VjE0OTBIMTM2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODc4LjM5MiwyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjxwYXRoIGQ9Ik0xNiAwSDI1MkwzODggMzg3SDk4OUwxMTIxIDBIMTM2Mkw4MjUgMTQ5MEg1NTdaTTQ1NSA1NzYgNTQ4IDg0MEM1ODkgOTYzIDYzMiAxMDk0IDY5MiAxMjg3Qzc1MSAxMDk0IDc5MyA5NjMgODM0IDg0MEw5MjQgNTc2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTY2LjAyNiwyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjxwYXRoIGQ9Ik0xMzYgMEgzNThWNTY0SDY4OEM2OTEgNTY0IDY5NSA1NjQgNjk4IDU2NEw5OTUgMEgxMjQ1TDkyMyA2MDFDMTEwOSA2NjggMTIyMiA4MTggMTIyMiAxMDI2QzEyMjIgMTMxMSAxMDIyIDE0OTAgNzAzIDE0OTBIMTM2Wk0zNTggNzUzVjEyOThINjkzQzg4NSAxMjk4IDEwMDMgMTE5NCAxMDAzIDEwMjZDMTAwMyA4NTggODg2IDc1MyA2OTQgNzUzWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTA0OS41NDcsMjgwLjI0MCkgc2NhbGUoMC4wNTI3MzQzOCwtMC4wNTI3MzQzOCkiLz48cGF0aCBkPSJNMTM2IDBINzEwQzEwNjIgMCAxMjM5IDE2NiAxMjM5IDQxOUMxMjM5IDYzMSAxMTAzIDc0OCA5MzAgNzcyVjc3NEMxMDg2IDgyMiAxMTgwIDkyNyAxMTgwIDEwOThDMTE4MCAxMzM3IDEwMDAgMTQ5MCA2OTMgMTQ5MEgxMzZaTTM1NiAxODdWNjY1SDcwNEM5MDEgNjY1IDEwMTMgNTcxIDEwMTMgNDIwQzEwMTMgMjY4IDg5OCAxODcgNjk2IDE4N1pNMzU2IDg0OFYxMzAzSDY5MEM4NTkgMTMwMyA5NjAgMTIxNSA5NjAgMTA3NUM5NjAgOTM1IDg1OSA4NDggNjkwIDg0OFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDExMjkuMjcwLDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTc2NiAtMjRDMTE2MyAtMjQgMTQ1MiAyODggMTQ1MiA3NDRDMTQ1MiAxMjAyIDExNjMgMTUxNCA3NjYgMTUxNEMzNjkgMTUxNCA4MSAxMjAyIDgxIDc0NEM4MSAyODkgMzY5IC0yNCA3NjYgLTI0Wk03NjYgMTc5QzUwOSAxNzkgMzA0IDM4MSAzMDQgNzQ0QzMwNCAxMTA5IDUwOSAxMzExIDc2NiAxMzExQzEwMjMgMTMxMSAxMjI5IDExMDkgMTIyOSA3NDRDMTIyOSAzODEgMTAyMyAxNzkgNzY2IDE3OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEyMDkuMjA1LDI4MC4yNDApIHNjYWxlKDAuMDUyNzM0MzgsLTAuMDUyNzM0MzgpIi8+PHBhdGggZD0iTTEzNiAwSDM1OFY1NjRINjg4QzY5MSA1NjQgNjk1IDU2NCA2OTggNTY0TDk5NSAwSDEyNDVMOTIzIDYwMUMxMTA5IDY2OCAxMjIyIDgxOCAxMjIyIDEwMjZDMTIyMiAxMzExIDEwMjIgMTQ5MCA3MDMgMTQ5MEgxMzZaTTM1OCA3NTNWMTI5OEg2OTNDODg1IDEyOTggMTAwMyAxMTk0IDEwMDMgMTAyNkMxMDAzIDg1OCA4ODYgNzUzIDY5NCA3NTNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMzAwLjg0NywyODAuMjQwKSBzY2FsZSgwLjA1MjczNDM4LC0wLjA1MjczNDM4KSIvPjwvZz48cmVjdCB4PSI0MzAiIHk9IjMwNi4yNCIgd2lkdGg9IjkzOS43NzA4NTkzNzQ5OTk5IiBoZWlnaHQ9IjQiIGZpbGw9IiNDNDUxMjQiLz48L3N2Zz4=" alt="Sable Harbor"><span>LEGAL &amp; CORPORATE RECORDS<br>DRAFT INSTRUMENT · 12 SEPTEMBER 2026</span></header>
+<aside class="edition-note"><strong>Draft for exact-file review</strong><br>Proposed language. Accepted source facts retain their original status. No execution, filing, payment or clearance is established by this edition.</aside>
+<article id="source-content"><h1>Foundry Field proposed billing instrument and reconciliation attachment</h1>
+<p><strong>Document ID:</strong> SH-LEGAL-DRAFT-BILLING<br />
+<strong>Gap ID:</strong> LEGAL-GAP-BILLING<br />
+<strong>Status:</strong> DRAFT_FOR_REVIEW — synthetic, unexecuted proposed instrument<br />
+<strong>Version:</strong> 0.1.0<br />
+<strong>Prepared:</strong> 2026-09-12<br />
+<strong>Owner:</strong> Finance / Legal<br />
+<strong>Approval date:</strong> not established<br />
+<strong>Effective date:</strong> not established; source event dates below are not execution of this draft<br />
+<strong>Authority:</strong> Markdown controls this draft; JSON is its structured companion.</p>
+<h2>1. Instrument and sole proposal dependency</h2>
+<p>This proposed reconstructed billing instrument applies only to invoice <strong>INV-base-FF-003-TERM-0</strong>, contract <strong>FF-003</strong>, customer <strong>SYN-CUSTOMER-003</strong>, base scenario, Foundry Field. Its sole fictional billing-detail source is <strong>SH-FIN-BILL-PROP-001 version 0.1.0</strong>, preserved from the PR #138 proposal at revision <code>e4995ba</code>. The local dependency copy is an immutable review reference, not a second customer master or a newly accepted billing dataset. It shall not be edited to reconcile a preferred design.</p>
+<p>The invoice amount, due date, contract economics and ledger linkage derive from the accepted source packet and immutable business operations release. The display name, correspondence fields and documentary issue date derive only from the unaccepted billing proposal. This instrument keeps those two origins separate. Approval of a page layout cannot silently approve a missing legal party, tax treatment or payment destination. The original accepted Foundry Field evidence packet and release rows remain unchanged.</p>
+<h2>2. Proposed invoice face and identities</h2>
+<p>The proposed business heading is <strong>Foundry Field</strong>. The source book code <strong>SHI</strong> identifies the accepted parent <strong>Sable Harbor, LLC</strong>. The sole proposal retains a null invoice-specific legal-issuer presentation field; that unresolved assignment does not reopen the established parent identity. Foundry Field branding is not a new subsidiary. The customer display name is <strong>Copperreach Fabrication</strong>, attached only to existing customer ID SYN-CUSTOMER-003. No incorporation suffix, registered jurisdiction or executed legal party is inferred from that display name.</p>
+<p>The proposed customer correspondence block is Accounts Payable, 1840 Quarry Exchange, Suite 210, Sacramento, CA 95814, United States. Its proposed contact is <code>accounts-payable@copperreach.invalid</code>. The proposed issuer correspondence block is 240 Harbor Works Avenue, Billing desk — Foundry Field, Sacramento, CA 95814, United States; proposed contact is <code>billing@foundry-field.invalid</code>. These are display-only fictional correspondence details. They establish no postal deliverability, registered office, campus, lease, site occupancy or geographic-register update and are not endpoints to contact or deploy.</p>
+<p>The proposed purchase-order display reference is <strong>CRF-2027-FF003-001</strong>. It is not an existing purchase-order original, approval signature or procurement authorization. A human reader must be able to distinguish this invented reference from invoice, contract and customer IDs that already exist in the source population. Neither side's legal-name field shall be filled by guessing from brand identity.</p>
+<h2>3. Proposed billing statement</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Display or source value</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Invoice</td>
+<td>INV-base-FF-003-TERM-0</td>
+<td>Released native identifier</td>
+</tr>
+<tr>
+<td>Customer</td>
+<td>SYN-CUSTOMER-003 / Copperreach Fabrication</td>
+<td>Released ID / proposed display name</td>
+</tr>
+<tr>
+<td>Contract</td>
+<td>FF-003; initial term 0</td>
+<td>Released linkage</td>
+</tr>
+<tr>
+<td>Proposed issue date</td>
+<td>January 31, 2027</td>
+<td>Proposed documentary date aligned to posting period</td>
+</tr>
+<tr>
+<td>Due date</td>
+<td>February 28, 2027</td>
+<td>Released due date</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Foundry Field subscription — initial 12-month term, 140 seats</td>
+<td>Proposed wording of released contract scope</td>
+</tr>
+<tr>
+<td>Monthly subscription</td>
+<td>$145,000 USD</td>
+<td>Released contract amount</td>
+</tr>
+<tr>
+<td>Initial term</td>
+<td>12 months</td>
+<td>Released term</td>
+</tr>
+<tr>
+<td>Invoice amount</td>
+<td>$1,740,000 USD</td>
+<td>Released amount; not recalculated for invented tax</td>
+</tr>
+<tr>
+<td>Deployment fee</td>
+<td>$0 USD</td>
+<td>Released contract field; not a new discount</td>
+</tr>
+<tr>
+<td>Tax</td>
+<td>Treatment not established; no separate tax amount represented</td>
+<td>Unresolved source field</td>
+</tr>
+<tr>
+<td>Payment instructions</td>
+<td>Not supplied in this reconstruction</td>
+<td>No remittance authorization</td>
+</tr>
+</tbody>
+</table>
+<p>The documentary issue date is a proposed presentation field. Source <code>issue_month=1</code> and posting period January 31 do not independently establish an original invoice issue day. No invoice was issued to a real customer by creating this record. The description adds no SLA obligation, implementation deliverable, customer acceptance or new service entitlement beyond the stated source term.</p>
+<h2>4. Amount integrity and no implied tax election</h2>
+<p>The subscription calculation is twelve monthly amounts of $145,000, with 140 source seats and no deployment fee. The invoice remains $1,740,000. The preparer shall not divide the amount into invented tax and net charges, add tax, describe the transaction as exempt or assert a zero rate. The sole proposal expressly leaves tax unestablished. Any separately approved tax scenario must state its authority and effect and must not rewrite this release's historical values.</p>
+<p>Amounts on the invoice face describe initial billing. Later collections, writeoff and credits belong in the separate reconciliation in clause 6. They must not appear as though known at initial issue. The present proposed reconstruction is prepared September 12, 2026 from a conditional 2027 scenario; dates in the model are not observed future events. No “paid” stamp, payment receipt or customer acknowledgment shall be inferred from the existence of a ledger field.</p>
+<h2>5. Payment, dispute and correction provisions</h2>
+<p>The source due date remains February 28, 2027. This proposed instrument supplies no bank, routing number, account, payment link, payee instruction or remittance address. Display correspondence addresses are not instructions to send funds. A future accepted payment instruction must come from the verified issuer through an approved process; it cannot be inferred from the <code>.invalid</code> contact or a designer's footer.</p>
+<p>For case-review purposes, a dispute shall identify the invoice ID, disputed source field, reason and supporting record. The preparer shall retain the original statement and issue a separately versioned proposed correction rather than silently alter the evidence. This clause is a proposed administrative correction procedure, not a newly executed customer dispute term, late-charge covenant or waiver of rights. No interest, penalty, collection fee or acceleration is added because the source does not establish one.</p>
+<p>If the legal issuer or customer identity is later completed, the accepted decision must identify the affected field IDs and the exact proposal version. A correspondence change must not change customer identity or create another ledger customer. The original native IDs and release lineage shall survive any approved successor presentation. Corrections must also retain the distinction between commercial agreement, invoice, accounting event and payment evidence.</p>
+<h2>6. Separate retrospective reconciliation attachment</h2>
+<p>The accepted source packet follows five later movements after original billing: a $435,000 February receipt, a $1,305,000 June writeoff, a $14,500 July credit, a $145,000 August credit and a $174,000 October recovery. These are synthetic scenario events, not bank confirmations. This attachment permits a reader to compare the proposed billing face with the accepted accounting packet; it does not rebill the customer or create new postings.</p>
+<p>The source collected total is $609,000 and already includes the $174,000 recovery. Total credits are $159,500. Ledger receivable remaining is zero following the writeoff; the derived surviving written-off claim is $971,500 after later credits and recovery. The claim is not an asset newly recognized by this instrument. A zero receivable does not certify that the invoice was paid in full. Adding recovery a second time to the collected total would overstate cash.</p>
+<p>The July credit's source reason is SLA_SERVICE_CREDIT; its existence does not provide the complete customer SLA. The August amendment reference SYN-AMEND-003 and version change are synthetic model records, not a signature or an executed amendment supplied by this proposed invoice. Neither credit creates a cash refund in the selected packet. Original source events, including <code>base-01-INVOICE-INV-base-FF-003-TERM-0</code>, retain their journal linkage without a second invoice population.</p>
+<h2>7. Delivery, privacy and evidence record</h2>
+<p>This is a public synthetic review instrument. It shall contain no real customer contact, account credential, employee payment information, signature image or private assessment answer. The <code>.invalid</code> addresses remain text-only display references. A reviewer may compare the proposed fields with the pinned dependency and inspect the accepted packet's original source rows. Repetition across PDF, Markdown, JSON or a workbook does not provide independent corroboration.</p>
+<p>The case record shall preserve proposal ID/version, dependency hash, original packet path/hash, release source revision and each proposed field's status. Proposed addresses and display names must not propagate into accepted enterprise geography, legal entity registers or customer source tables through catalog generation. A database index may link this draft while retaining its review status; it shall not normalize null legal names into guessed entities.</p>
+<h2>8. Acceptance schedule and unresolved material fields</h2>
+<p>The exact proposal requires owner review with accepted or rejected field IDs. <strong>BILL-DEC-001</strong> remains the customer legal identity choice, <strong>BILL-DEC-002</strong> the invoice-specific issuer presentation/assignment, and <strong>BILL-DEC-003</strong> the tax-treatment decision. The proposal keeps its customer legal-name and invoice issuer-presentation fields null and supplies no tax scenario; Sable Harbor, LLC remains the established SHI legal identity. This document does not resolve those decisions by rendering a more realistic page.</p>
+<p>Execution, signature, delivery to a customer, receipt of payment and current legal enforceability remain unestablished. If the owner accepts selected display fields, the acceptance record shall identify the version and hashes and state that accepted source amounts and the frozen packet cannot be overwritten. Any new design still requires exact-file review. The artifact is useful as a proposed billing document and an invoice-to-ledger reading aid; it is not an instruction to pay or evidence of a real sale.</p>
+<section class="references"><h2>Source record and approval boundary</h2>
+<ul>
+<li><a href="../../evidence/proposals/decision-register.json">Accepted billing decision reconciliation</a></li>
+<li><a href="../../../../industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md">Accepted SHI entity identity</a></li>
+<li><a href="../../../../docs/legal/gap-instruments/dependencies/billing-proposal-PR138.json">docs/legal/gap-instruments/dependencies/billing-proposal-PR138.json</a></li>
+<li><a href="../../../../docs/finance/evidence/SH-FIN-HUMAN-001/source.json">docs/finance/evidence/SH-FIN-HUMAN-001/source.json</a></li>
+<li><a href="../../../../docs/finance/evidence/SH-FIN-HUMAN-001/PACKET.md">docs/finance/evidence/SH-FIN-HUMAN-001/PACKET.md</a></li>
+<li><a href="../../../../docs/finance/evidence/SH-FIN-HUMAN-001/ACCEPTANCE.json">docs/finance/evidence/SH-FIN-HUMAN-001/ACCEPTANCE.json</a></li>
+</ul>
+<p>No signatures, payments, provider acceptance or external filing are established by this draft. Its proposed clauses become neither accepted canon nor effective obligations through rendering, indexing or validation. Approval must identify the exact instrument and any completed schedules.</p>
+</section></article><aside class="source-identity"><a href="../review.html">All 17 packages</a> · <a href="../source/billing.md">Complete Markdown</a><br>83d8af1b3d5a73cab067b1d7839bcb2ed2cecfc7656d246951d213327127f28e</aside></body></html>

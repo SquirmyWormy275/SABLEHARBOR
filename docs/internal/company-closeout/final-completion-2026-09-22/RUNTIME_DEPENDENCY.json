@@ -1,0 +1,14 @@
+{
+  "document_id": "SH-CONTROLLED-RUNTIME-5344BF76",
+  "version": "1.0.0",
+  "classification": "PRIVATE_CONTROLLED_SOFTWARE_DEPENDENCY",
+  "runtime_commit": "5344bf76413ffe2cd378b957dbb5f7d56d04ea19",
+  "archive": "runtime-5344bf76.tar.gz",
+  "sha256": "fb4c8d964bfb925d6a9c41807c84bfcd8270ac4717e065edbfff7ddd3e56a858",
+  "bytes": 530402745,
+  "git_history": "Shallow boundary at exact runtime commit; full tree and referenced blobs, not complete parent history.",
+  "public_reference_permission": "Only this identifier, runtime commit, archive hash/size and private release URL may be referenced publicly. No controlled source payload redistribution.",
+  "release_url": "https://github.com/SquirmyWormy275/SABLEHARBOR-ALEXANDRIA-CONTROL/releases/tag/sh-company-runtime-5344bf76-v1.0.0",
+  "private_source_index_commit": "af6201fa0ce3253070257e21d4e27d684317ed93",
+  "access": "Authorized inspectors require private repository access. Public company CSV/SQLite import is independent of this software dependency."
+}

@@ -38,5 +38,3 @@ Unselected providers, unexecuted schedules and outstanding readiness gates remai
 - [Office of the General Counsel](legal.md)
 - [Enterprise Technology Services](technology.md)
 - [American Resource Utility / BS&T](../businesses/American-Resource-Utility.md)
-
-Related reading describes useful connections, not additional reporting lines.

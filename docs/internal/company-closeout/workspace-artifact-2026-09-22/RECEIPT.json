@@ -1,0 +1,18 @@
+{
+  "observed_at": "2026-09-22T18:55:32.897998+00:00",
+  "accepted_source_commit": "7ce2ed5c0751ca596a5540bd8afbc0072ef99016",
+  "source_path": "docs/j2/alexandria/DAEDALUS_OPERATING_DOCTRINE.md",
+  "source_sha256": "7c3a1e30b3aa0dd0f5993557d16cd6170e6df5fde080f98482f3216e7240dd3e",
+  "publication": {
+    "artifact_sha256": "81a6781651989b7e0f4599f4578565d1e9d308de81051f5af592bf25a32a5089",
+    "bytes": 3312,
+    "marking": "SYNTHETIC_NON_AUTHORITATIVE_WORKSPACE_ARTIFACT",
+    "canonical_source_modified": false,
+    "model_invoked": false
+  },
+  "result": "PASS",
+  "population": "One actual public-source excerpt artifact; synthetic exercise owner, not an employee or real user",
+  "private_payload_published": false,
+  "source_bytes_unchanged": true,
+  "model_invoked": false
+}

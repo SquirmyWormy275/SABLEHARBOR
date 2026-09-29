@@ -1,0 +1,20 @@
+{
+  "accepted_1898_geometry": null,
+  "accepted_1898_original_extent_miles": null,
+  "accepted_1954_geometry": null,
+  "accepted_1954_surviving_interval_miles": [
+    14,
+    16
+  ],
+  "candidate_1954_survivor_miles": 15.084857685308943,
+  "candidate_abandoned_mine_only_miles": 7.04739774310322,
+  "candidate_geojson_sha256": "6bea90deaad1fe4ffcf82aa81aa8df45e725f664ecc1712837aa0cf389ca1063",
+  "candidate_prefailure_total_miles": 22.132255428412165,
+  "current_route_overlap_screen_m": 0.049962765567995865,
+  "record_id": "SH-GEO-BST-HIST-CANDIDATE-20260929-001",
+  "recorded_date_utc": "2026-09-29",
+  "scope": "One newly authored alternative, not recovered original history, accepted linework, property title, historical terrain proof, or current operating asset; 1898 extent remains unknown.",
+  "source_fixed_modern_structure_or_asset_ids_reused": 0,
+  "source_sha256": "82534ace4479b75366e9fd7e1c547f99499f9490de27f1f33f78814e38ee4ec4",
+  "status": "PROVISIONAL_SYNTHETIC_RECONSTRUCTION_NOT_RECOVERED_HISTORY"
+}

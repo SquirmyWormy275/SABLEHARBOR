@@ -30,9 +30,9 @@
   ],
   "entrypoint": "geospatial/maps/index.html",
   "pdf": "geospatial/maps/SABLE_HARBOR_Facility_Atlas_v0.2.0.pdf",
-  "pdf_pages": 150,
+  "pdf_pages": 151,
   "source_sha256": {
-    "geospatial/facilities/coverage/COVERAGE_MATRIX.json": "a7243cf7f6b89d8dc8e7741c82680c4599e62dfe0bb157069f1bd5fdec336adf",
+    "geospatial/facilities/coverage/COVERAGE_MATRIX.json": "f9f4d06cb2d01f517d0f1563bc7f5784d464caa994dc792330722d515cac1b82",
     "geospatial/maps/facilities/MANIFEST.json": "4b414666a926d772382058a8242766274edcfb4662a8f204f012b0f6da58a144",
     "geospatial/facilities/source/campus.json": "0efd4854069ff20acb4032e02b021afebcb955990f1d684b51428624e281d950",
     "geospatial/facilities/source/industrial_facilities.json": "42aa17794e175eef4bd308c01d4cc9cd0c50da5bece5bde23320eccce0500ddc",
@@ -60,7 +60,7 @@
     "geospatial/geojson/runtime_parcel.geojson": "671c7eadf7347864f9ccc9876606fb476e6e866587aea0cfc556436e7310d5f0",
     "geospatial/maps/spatial/MANIFEST.json": "9b3bc41c160264a95baa46e6c2c0dd458b73a267365e8270f81d1f7cf1374def"
   },
-  "legacy_context_manifest_sha256": "eb209c43e33871487bd24cf7c67862703e7a317471d666428a86196384183d70",
+  "legacy_context_manifest_sha256": "521d4fb7c43805bf7f73d5f281a80cdc9a3e612559f2ae6ee1b2882178a7283a",
   "nodes": [
     {
       "id": "atlas",
@@ -1862,19 +1862,19 @@
       "id": "artifact:geospatial/maps/SH-MAP-ENT-001_locked-geographic-framework.pdf",
       "kind": "artifact",
       "path": "geospatial/maps/SH-MAP-ENT-001_locked-geographic-framework.pdf",
-      "sha256": "f7e5cb4f3fb04d31182a10206246aaf4b2473e3745c949a19607906d347fbc34"
+      "sha256": "6038d11dab555704e831603f071383fbe63807267b708234656bf3b0775ec34d"
     },
     {
       "id": "artifact:geospatial/maps/SH-MAP-ENT-001_locked-geographic-framework.svg",
       "kind": "artifact",
       "path": "geospatial/maps/SH-MAP-ENT-001_locked-geographic-framework.svg",
-      "sha256": "05effca77a8d8cb085f56c23063d91fe3ead23cd84eaaea7fce19404f1b5cf93"
+      "sha256": "6f62646f35c442fc006316e5aa19a0604cfdfd446d290d210f536dcc432f9390"
     },
     {
       "id": "artifact:geospatial/maps/SH-MAP-ENT-001_locked-geographic-framework.png",
       "kind": "artifact",
       "path": "geospatial/maps/SH-MAP-ENT-001_locked-geographic-framework.png",
-      "sha256": "4763ce2705a3f14c9b30b40e31415304a0621cbe7bc5fb15147734721b53f3f3"
+      "sha256": "7fe0090bc14cfa854ea34c53c9df822cf28ba27709ce34e10cdd664ff9973e43"
     },
     {
       "id": "SH-MAP-ENT-002_corporate-geographic-census",
@@ -1958,19 +1958,19 @@
       "id": "artifact:geospatial/maps/SH-MAP-WIL-001_fort-hazelwood-context.pdf",
       "kind": "artifact",
       "path": "geospatial/maps/SH-MAP-WIL-001_fort-hazelwood-context.pdf",
-      "sha256": "f5a1083b6416ee64787c36304c1bd09feda3a6ab1a6cb1d86365a9c7612713ad"
+      "sha256": "4c6f013e98fcacbaee58016de61aa3a96524a4824694ef2fa484b37672b9b402"
     },
     {
       "id": "artifact:geospatial/maps/SH-MAP-WIL-001_fort-hazelwood-context.svg",
       "kind": "artifact",
       "path": "geospatial/maps/SH-MAP-WIL-001_fort-hazelwood-context.svg",
-      "sha256": "5384c9c7a59b19939b3f9a6d1285b4d0aab3f0e9878dda128d703dde96becbd8"
+      "sha256": "35c98a35a494cda08bf2ee06beff36053b1b7bbd0b84ae04e38f5652a154735c"
     },
     {
       "id": "artifact:geospatial/maps/SH-MAP-WIL-001_fort-hazelwood-context.png",
       "kind": "artifact",
       "path": "geospatial/maps/SH-MAP-WIL-001_fort-hazelwood-context.png",
-      "sha256": "abdd60f0dd84265a1ce824ed44f239702b277d7e56bfc85e6ada19b6219cb52b"
+      "sha256": "f69db485f886d103b33b9785db8814bce6d90e58e7805f5327c657d046c5aad4"
     },
     {
       "id": "SH-MAP-CRD-001_bedford-fairmont-context",
@@ -2030,19 +2030,19 @@
       "id": "artifact:geospatial/maps/SH-MAP-ENT-003_open-geographic-questions.pdf",
       "kind": "artifact",
       "path": "geospatial/maps/SH-MAP-ENT-003_open-geographic-questions.pdf",
-      "sha256": "6dfe1c1665075e5de96bcc99f973d9019d291215f4d7a39ef037d001fb172f17"
+      "sha256": "611a163a985166904d2c813ef3cab746ec459dec1a2a51c51e4f406f4bd6fbaf"
     },
     {
       "id": "artifact:geospatial/maps/SH-MAP-ENT-003_open-geographic-questions.svg",
       "kind": "artifact",
       "path": "geospatial/maps/SH-MAP-ENT-003_open-geographic-questions.svg",
-      "sha256": "05bffbf7a33c6d5594192f215dd9e2e00858be15754fae14d364a2bc0ba834f4"
+      "sha256": "b7c7a521307d4958348463ccc77a03f0f84495a9de49b684ce7620ea038d4a42"
     },
     {
       "id": "artifact:geospatial/maps/SH-MAP-ENT-003_open-geographic-questions.png",
       "kind": "artifact",
       "path": "geospatial/maps/SH-MAP-ENT-003_open-geographic-questions.png",
-      "sha256": "c58d456eaba26d79331ee5096762179abb8f0abbd3a9682d6cfd5624e908462b"
+      "sha256": "fd5b1bca765d325af2b1d55daf5ad5db32030a5439d32024611bb25eca41b19a"
     },
     {
       "id": "SH-MAP-RWM-002_red-wash-site-study",
@@ -2540,6 +2540,11 @@
       "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md"
     },
     {
+      "id": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
+      "kind": "source",
+      "path": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+    },
+    {
       "id": "coverage:SH-SITE-0002",
       "kind": "coverage",
       "title": "Klein historical Pittsburgh-area shop",
@@ -2640,8 +2645,8 @@
     {
       "id": "coverage:SH-SITE-0011",
       "kind": "coverage",
-      "title": "Reno provisional office",
-      "status": "unresolved",
+      "title": "Reno shared office",
+      "status": "bounded_design_precision",
       "classification": "proposed/unresolved disposition"
     },
     {
@@ -2652,22 +2657,22 @@
     {
       "id": "coverage:SH-SITE-0012",
       "kind": "coverage",
-      "title": "Elko provisional field office",
-      "status": "unresolved",
+      "title": "Elko shared field office",
+      "status": "bounded_design_precision",
       "classification": "proposed/unresolved disposition"
     },
     {
       "id": "coverage:SH-SITE-0013",
       "kind": "coverage",
-      "title": "Tucson provisional engineering office",
-      "status": "unresolved",
+      "title": "Tucson shared engineering office",
+      "status": "bounded_design_precision",
       "classification": "proposed/unresolved disposition"
     },
     {
       "id": "coverage:SH-SITE-0014",
       "kind": "coverage",
       "title": "J2 Education residential campus and conference center",
-      "status": "unresolved",
+      "status": "bounded_design_precision",
       "classification": "proposed/unresolved disposition"
     },
     {
@@ -2679,7 +2684,7 @@
       "id": "coverage:SH-SITE-0015",
       "kind": "coverage",
       "title": "J2 headquarters physical accommodation",
-      "status": "unresolved",
+      "status": "bounded_design_precision",
       "classification": "proposed/unresolved disposition"
     },
     {
@@ -2691,7 +2696,7 @@
       "id": "coverage:SH-SITE-0016",
       "kind": "coverage",
       "title": "Alexandria physical hosting",
-      "status": "unresolved",
+      "status": "bounded_design_precision",
       "classification": "proposed/unresolved disposition"
     },
     {
@@ -2702,23 +2707,23 @@
     {
       "id": "coverage:SH-SITE-0017",
       "kind": "coverage",
-      "title": "Foundry/Foundry Field dedicated footprint",
-      "status": "unresolved",
-      "classification": "proposed/unresolved disposition"
+      "title": "Foundry / Foundry Field shared accommodation",
+      "status": "open",
+      "classification": "distributed/nonphysical/reference"
     },
     {
       "id": "coverage:SH-SITE-0018",
       "kind": "coverage",
-      "title": "Atlas Meridian dedicated footprint",
-      "status": "unresolved",
-      "classification": "proposed/unresolved disposition"
+      "title": "Atlas Meridian shared accommodation",
+      "status": "open",
+      "classification": "distributed/nonphysical/reference"
     },
     {
       "id": "coverage:SH-SITE-0019",
       "kind": "coverage",
-      "title": "Advisory project hubs/offices",
-      "status": "unresolved",
-      "classification": "proposed/unresolved disposition"
+      "title": "Advisory shared and project accommodation",
+      "status": "open",
+      "classification": "distributed/nonphysical/reference"
     },
     {
       "id": "source:docs/organization/ARU_BST_AND_ADVISORY.md",
@@ -2757,7 +2762,7 @@
       "id": "coverage:SH-SITE-0024",
       "kind": "coverage",
       "title": "Glasshouse underground trial site",
-      "status": "unresolved",
+      "status": "bounded_design_precision",
       "classification": "proposed/unresolved disposition"
     },
     {
@@ -3894,6 +3899,87 @@
       "classification": "operating site plan"
     },
     {
+      "id": "coverage:SH-PROP-0001",
+      "kind": "coverage",
+      "title": "Cedar Junction processing prospect",
+      "status": "constrained",
+      "classification": "distributed/nonphysical/reference"
+    },
+    {
+      "id": "source:industrial/pale_sun/05_FALSE_START_CEDAR_JUNCTION.md",
+      "kind": "source",
+      "path": "industrial/pale_sun/05_FALSE_START_CEDAR_JUNCTION.md"
+    },
+    {
+      "id": "coverage:SH-PROP-0002",
+      "kind": "coverage",
+      "title": "Juniper Mesa uranium-property prospect",
+      "status": "constrained",
+      "classification": "distributed/nonphysical/reference"
+    },
+    {
+      "id": "source:industrial/pale_sun/06_FALSE_START_JUNIPER_MESA.md",
+      "kind": "source",
+      "path": "industrial/pale_sun/06_FALSE_START_JUNIPER_MESA.md"
+    },
+    {
+      "id": "coverage:SH-PROP-0003",
+      "kind": "coverage",
+      "title": "Salt Rim recovery-restart prospect",
+      "status": "constrained",
+      "classification": "distributed/nonphysical/reference"
+    },
+    {
+      "id": "source:industrial/pale_sun/07_FALSE_START_SALT_RIM.md",
+      "kind": "source",
+      "path": "industrial/pale_sun/07_FALSE_START_SALT_RIM.md"
+    },
+    {
+      "id": "coverage:SH-REF-0027",
+      "kind": "coverage",
+      "title": "BTC career geography",
+      "status": "constrained",
+      "classification": "distributed/nonphysical/reference"
+    },
+    {
+      "id": "source:industrial/pale_sun/01_VILANDER_BIOGRAPHY.md",
+      "kind": "source",
+      "path": "industrial/pale_sun/01_VILANDER_BIOGRAPHY.md"
+    },
+    {
+      "id": "coverage:SH-REF-0028",
+      "kind": "coverage",
+      "title": "DeMotte / agricultural Midwest biography",
+      "status": "constrained",
+      "classification": "distributed/nonphysical/reference"
+    },
+    {
+      "id": "source:docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
+      "kind": "source",
+      "path": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md"
+    },
+    {
+      "id": "coverage:SH-REF-0029",
+      "kind": "coverage",
+      "title": "Kansas State education reference",
+      "status": "constrained",
+      "classification": "distributed/nonphysical/reference"
+    },
+    {
+      "id": "coverage:SH-REF-0031",
+      "kind": "coverage",
+      "title": "Gid Voss 2018 coal-preparation customer incident",
+      "status": "constrained",
+      "classification": "distributed/nonphysical/reference"
+    },
+    {
+      "id": "coverage:SH-REF-0030",
+      "kind": "coverage",
+      "title": "Harvard Business School education reference",
+      "status": "constrained",
+      "classification": "distributed/nonphysical/reference"
+    },
+    {
       "id": "coverage:ORG:SHI",
       "kind": "coverage",
       "title": "Sable Harbor, LLC",
@@ -3991,11 +4077,6 @@
       "title": "Margaret \u201cMaggie\u201d Kincaid",
       "status": "nonphysical",
       "classification": "distributed/nonphysical/reference"
-    },
-    {
-      "id": "source:docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
-      "kind": "source",
-      "path": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md"
     },
     {
       "id": "coverage:ORG:P044",
@@ -4956,11 +5037,6 @@
       "classification": "distributed/nonphysical/reference"
     },
     {
-      "id": "source:industrial/pale_sun/01_VILANDER_BIOGRAPHY.md",
-      "kind": "source",
-      "path": "industrial/pale_sun/01_VILANDER_BIOGRAPHY.md"
-    },
-    {
       "id": "source:docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
       "kind": "source",
       "path": "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md"
@@ -5071,21 +5147,11 @@
       "classification": "external context only"
     },
     {
-      "id": "source:industrial/pale_sun/05_FALSE_START_CEDAR_JUNCTION.md",
-      "kind": "source",
-      "path": "industrial/pale_sun/05_FALSE_START_CEDAR_JUNCTION.md"
-    },
-    {
       "id": "coverage:ORG:juniper",
       "kind": "coverage",
       "title": "Juniper Mesa",
       "status": "external",
       "classification": "external context only"
-    },
-    {
-      "id": "source:industrial/pale_sun/06_FALSE_START_JUNIPER_MESA.md",
-      "kind": "source",
-      "path": "industrial/pale_sun/06_FALSE_START_JUNIPER_MESA.md"
     },
     {
       "id": "coverage:ORG:mesa-lantern",
@@ -5100,11 +5166,6 @@
       "title": "Salt Rim Recovery Venture",
       "status": "external",
       "classification": "external context only"
-    },
-    {
-      "id": "source:industrial/pale_sun/07_FALSE_START_SALT_RIM.md",
-      "kind": "source",
-      "path": "industrial/pale_sun/07_FALSE_START_SALT_RIM.md"
     },
     {
       "id": "coverage:ORG:P008",
@@ -14342,6 +14403,18 @@
     },
     {
       "source": "atlas",
+      "target": "coverage:SH-PROP-0001"
+    },
+    {
+      "source": "atlas",
+      "target": "coverage:SH-PROP-0002"
+    },
+    {
+      "source": "atlas",
+      "target": "coverage:SH-PROP-0003"
+    },
+    {
+      "source": "atlas",
       "target": "coverage:SH-RAIL-0001"
     },
     {
@@ -14455,6 +14528,26 @@
     {
       "source": "atlas",
       "target": "coverage:SH-REF-0026"
+    },
+    {
+      "source": "atlas",
+      "target": "coverage:SH-REF-0027"
+    },
+    {
+      "source": "atlas",
+      "target": "coverage:SH-REF-0028"
+    },
+    {
+      "source": "atlas",
+      "target": "coverage:SH-REF-0029"
+    },
+    {
+      "source": "atlas",
+      "target": "coverage:SH-REF-0030"
+    },
+    {
+      "source": "atlas",
+      "target": "coverage:SH-REF-0031"
     },
     {
       "source": "atlas",
@@ -16602,11 +16695,19 @@
     },
     {
       "source": "coverage:SH-FAC-FORT-BIG",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+    },
+    {
+      "source": "coverage:SH-FAC-FORT-BIG",
       "target": "source:docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md"
     },
     {
       "source": "coverage:SH-FAC-FORT-MUSEUM",
       "target": "SH-SITE-0003"
+    },
+    {
+      "source": "coverage:SH-FAC-FORT-MUSEUM",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
     },
     {
       "source": "coverage:SH-FAC-FORT-MUSEUM",
@@ -16622,6 +16723,10 @@
     },
     {
       "source": "coverage:SH-FAC-FORT-SMALL",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+    },
+    {
+      "source": "coverage:SH-FAC-FORT-SMALL",
       "target": "source:docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md"
     },
     {
@@ -16631,6 +16736,10 @@
     {
       "source": "coverage:SH-FAC-FORT-WHITE",
       "target": "SH-SITE-0003"
+    },
+    {
+      "source": "coverage:SH-FAC-FORT-WHITE",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
     },
     {
       "source": "coverage:SH-FAC-FORT-WHITE",
@@ -17137,6 +17246,18 @@
       "target": "source:industrial/source/operations.json"
     },
     {
+      "source": "coverage:SH-PROP-0001",
+      "target": "source:industrial/pale_sun/05_FALSE_START_CEDAR_JUNCTION.md"
+    },
+    {
+      "source": "coverage:SH-PROP-0002",
+      "target": "source:industrial/pale_sun/06_FALSE_START_JUNIPER_MESA.md"
+    },
+    {
+      "source": "coverage:SH-PROP-0003",
+      "target": "source:industrial/pale_sun/07_FALSE_START_SALT_RIM.md"
+    },
+    {
       "source": "coverage:SH-RAIL-0001",
       "target": "source:industrial/source/operations.json"
     },
@@ -17253,6 +17374,26 @@
       "target": "source:docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md"
     },
     {
+      "source": "coverage:SH-REF-0027",
+      "target": "source:industrial/pale_sun/01_VILANDER_BIOGRAPHY.md"
+    },
+    {
+      "source": "coverage:SH-REF-0028",
+      "target": "source:docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md"
+    },
+    {
+      "source": "coverage:SH-REF-0029",
+      "target": "source:docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md"
+    },
+    {
+      "source": "coverage:SH-REF-0030",
+      "target": "source:docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md"
+    },
+    {
+      "source": "coverage:SH-REF-0031",
+      "target": "source:docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md"
+    },
+    {
       "source": "coverage:SH-SITE-0001",
       "target": "SH-MAP-SAC-001_headquarters-context"
     },
@@ -17265,8 +17406,16 @@
       "target": "source:docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-03.md"
     },
     {
+      "source": "coverage:SH-SITE-0001",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+    },
+    {
       "source": "coverage:SH-SITE-0002",
       "target": "SH-MAP-WIL-001_fort-hazelwood-context"
+    },
+    {
+      "source": "coverage:SH-SITE-0002",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
     },
     {
       "source": "coverage:SH-SITE-0002",
@@ -17282,11 +17431,19 @@
     },
     {
       "source": "coverage:SH-SITE-0003",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+    },
+    {
+      "source": "coverage:SH-SITE-0003",
       "target": "source:docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md"
     },
     {
       "source": "coverage:SH-SITE-0004",
       "target": "source:docs/canon/DECISION_REGISTER.md"
+    },
+    {
+      "source": "coverage:SH-SITE-0004",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
     },
     {
       "source": "coverage:SH-SITE-0005",
@@ -17299,6 +17456,10 @@
     {
       "source": "coverage:SH-SITE-0005",
       "target": "source:docs/canon/CRADLE_CLOSEOUT_2026-09-06.md"
+    },
+    {
+      "source": "coverage:SH-SITE-0005",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
     },
     {
       "source": "coverage:SH-SITE-0006",
@@ -17315,6 +17476,10 @@
     {
       "source": "coverage:SH-SITE-0006",
       "target": "SH-SITE-0006"
+    },
+    {
+      "source": "coverage:SH-SITE-0006",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
     },
     {
       "source": "coverage:SH-SITE-0006",
@@ -17346,6 +17511,10 @@
     },
     {
       "source": "coverage:SH-SITE-0007",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+    },
+    {
+      "source": "coverage:SH-SITE-0007",
       "target": "source:industrial/source/operations.json"
     },
     {
@@ -17354,7 +17523,15 @@
     },
     {
       "source": "coverage:SH-SITE-0008",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+    },
+    {
+      "source": "coverage:SH-SITE-0008",
       "target": "source:industrial/source/operations.json"
+    },
+    {
+      "source": "coverage:SH-SITE-0009",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
     },
     {
       "source": "coverage:SH-SITE-0009",
@@ -17365,8 +17542,20 @@
       "target": "source:docs/canon/DECISION_REGISTER.md"
     },
     {
+      "source": "coverage:SH-SITE-0010",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+    },
+    {
+      "source": "coverage:SH-SITE-0011",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+    },
+    {
       "source": "coverage:SH-SITE-0011",
       "target": "source:docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md"
+    },
+    {
+      "source": "coverage:SH-SITE-0012",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
     },
     {
       "source": "coverage:SH-SITE-0012",
@@ -17374,11 +17563,23 @@
     },
     {
       "source": "coverage:SH-SITE-0013",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+    },
+    {
+      "source": "coverage:SH-SITE-0013",
       "target": "source:docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md"
     },
     {
       "source": "coverage:SH-SITE-0014",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+    },
+    {
+      "source": "coverage:SH-SITE-0014",
       "target": "source:docs/j2/EDUCATION.md"
+    },
+    {
+      "source": "coverage:SH-SITE-0015",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
     },
     {
       "source": "coverage:SH-SITE-0015",
@@ -17389,6 +17590,14 @@
       "target": "source:docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md"
     },
     {
+      "source": "coverage:SH-SITE-0016",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+    },
+    {
+      "source": "coverage:SH-SITE-0017",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+    },
+    {
       "source": "coverage:SH-SITE-0017",
       "target": "source:docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md"
     },
@@ -17397,8 +17606,20 @@
       "target": "source:docs/canon/DECISION_REGISTER.md"
     },
     {
+      "source": "coverage:SH-SITE-0018",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+    },
+    {
+      "source": "coverage:SH-SITE-0019",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+    },
+    {
       "source": "coverage:SH-SITE-0019",
       "target": "source:docs/organization/ARU_BST_AND_ADVISORY.md"
+    },
+    {
+      "source": "coverage:SH-SITE-0020",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
     },
     {
       "source": "coverage:SH-SITE-0020",
@@ -17406,7 +17627,15 @@
     },
     {
       "source": "coverage:SH-SITE-0021",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+    },
+    {
+      "source": "coverage:SH-SITE-0021",
       "target": "source:industrial/source/operations.json"
+    },
+    {
+      "source": "coverage:SH-SITE-0022",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
     },
     {
       "source": "coverage:SH-SITE-0022",
@@ -17417,12 +17646,28 @@
       "target": "source:docs/canon/CRADLE_CLOSEOUT_2026-09-06.md"
     },
     {
+      "source": "coverage:SH-SITE-0023",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+    },
+    {
       "source": "coverage:SH-SITE-0024",
       "target": "source:docs/canon/DECISION_REGISTER.md"
     },
     {
+      "source": "coverage:SH-SITE-0024",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+    },
+    {
+      "source": "coverage:SH-SITE-0025",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+    },
+    {
       "source": "coverage:SH-SITE-0025",
       "target": "source:docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md"
+    },
+    {
+      "source": "coverage:SH-SITE-0026",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
     },
     {
       "source": "coverage:SH-SITE-0026",
@@ -17433,8 +17678,16 @@
       "target": "source:docs/canon/CRADLE_CLOSEOUT_2026-09-06.md"
     },
     {
+      "source": "coverage:SH-SITE-0027",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+    },
+    {
       "source": "coverage:SH-SITE-0028",
       "target": "SH-SITE-0028"
+    },
+    {
+      "source": "coverage:SH-SITE-0028",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
     },
     {
       "source": "coverage:SH-SITE-0028",
@@ -17446,11 +17699,19 @@
     },
     {
       "source": "coverage:SH-SITE-0029",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+    },
+    {
+      "source": "coverage:SH-SITE-0029",
       "target": "source:enterprise/services/source/runtime_sites_2026-09-11.json"
     },
     {
       "source": "coverage:SH-SITE-0030",
       "target": "SH-SITE-0030"
+    },
+    {
+      "source": "coverage:SH-SITE-0030",
+      "target": "source:docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
     },
     {
       "source": "coverage:SH-SITE-0030",
@@ -17826,6 +18087,7 @@
     "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH.md",
     "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md",
     "docs/canon/DECISION_REGISTER_v0.3.1.md",
+    "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md",
     "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
     "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
     "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05.md",
@@ -18545,8 +18807,8 @@
       "anchor": "record-SH-SITE-0011",
       "targets": [],
       "context_map_ids": [],
-      "disposition": "Location, dedicated footprint or implementation remains proposed/unresolved; labeled planning disposition preserves the record without claiming occupancy.",
-      "status": "unresolved",
+      "disposition": "Geographic/occupancy disposition accepted: AUTHORED_SHARED_LEASED_OFFICE. Exact architectural fitout remains unspecified; this is a design disposition, not a pending fictional location decision.",
+      "status": "bounded_design_precision",
       "classification": "proposed/unresolved disposition",
       "geometry_precision": "CITY_OR_DISTRICT"
     },
@@ -18555,8 +18817,8 @@
       "anchor": "record-SH-SITE-0012",
       "targets": [],
       "context_map_ids": [],
-      "disposition": "Location, dedicated footprint or implementation remains proposed/unresolved; labeled planning disposition preserves the record without claiming occupancy.",
-      "status": "unresolved",
+      "disposition": "Geographic/occupancy disposition accepted: AUTHORED_SHARED_LEASED_OFFICE. Exact architectural fitout remains unspecified; this is a design disposition, not a pending fictional location decision.",
+      "status": "bounded_design_precision",
       "classification": "proposed/unresolved disposition",
       "geometry_precision": "CITY_OR_DISTRICT"
     },
@@ -18565,8 +18827,8 @@
       "anchor": "record-SH-SITE-0013",
       "targets": [],
       "context_map_ids": [],
-      "disposition": "Location, dedicated footprint or implementation remains proposed/unresolved; labeled planning disposition preserves the record without claiming occupancy.",
-      "status": "unresolved",
+      "disposition": "Geographic/occupancy disposition accepted: AUTHORED_SHARED_LEASED_OFFICE. Exact architectural fitout remains unspecified; this is a design disposition, not a pending fictional location decision.",
+      "status": "bounded_design_precision",
       "classification": "proposed/unresolved disposition",
       "geometry_precision": "CITY_OR_DISTRICT"
     },
@@ -18575,8 +18837,8 @@
       "anchor": "record-SH-SITE-0014",
       "targets": [],
       "context_map_ids": [],
-      "disposition": "Location, dedicated footprint or implementation remains proposed/unresolved; labeled planning disposition preserves the record without claiming occupancy.",
-      "status": "unresolved",
+      "disposition": "Geographic/occupancy disposition accepted: RESIDENTIAL_CAMPUS_REGIONAL_PRECISION_ACCEPTED. Exact architectural fitout remains unspecified; this is a design disposition, not a pending fictional location decision.",
+      "status": "bounded_design_precision",
       "classification": "proposed/unresolved disposition",
       "geometry_precision": "UNLOCATED"
     },
@@ -18585,8 +18847,8 @@
       "anchor": "record-SH-SITE-0015",
       "targets": [],
       "context_map_ids": [],
-      "disposition": "Location, dedicated footprint or implementation remains proposed/unresolved; labeled planning disposition preserves the record without claiming occupancy.",
-      "status": "unresolved",
+      "disposition": "Geographic/occupancy disposition accepted: SHARED_HEADQUARTERS_ACCOMMODATION. Exact architectural fitout remains unspecified; this is a design disposition, not a pending fictional location decision.",
+      "status": "bounded_design_precision",
       "classification": "proposed/unresolved disposition",
       "geometry_precision": "UNLOCATED"
     },
@@ -18596,7 +18858,7 @@
       "targets": [],
       "context_map_ids": [],
       "disposition": "Retained Alexandria hosting identity. Accepted runtime placement uses Reno primary, Boise recovery and the proposed owned Northern Nevada end state; no separate Alexandria building is established.",
-      "status": "unresolved",
+      "status": "bounded_design_precision",
       "classification": "proposed/unresolved disposition",
       "geometry_precision": "UNLOCATED"
     },
@@ -18605,9 +18867,9 @@
       "anchor": "record-SH-SITE-0017",
       "targets": [],
       "context_map_ids": [],
-      "disposition": "Location, dedicated footprint or implementation remains proposed/unresolved; labeled planning disposition preserves the record without claiming occupancy.",
-      "status": "unresolved",
-      "classification": "proposed/unresolved disposition",
+      "disposition": "Accepted shared organizational accommodation; no separate dedicated building or additional property is established.",
+      "status": "open",
+      "classification": "distributed/nonphysical/reference",
       "geometry_precision": "UNLOCATED"
     },
     {
@@ -18615,9 +18877,9 @@
       "anchor": "record-SH-SITE-0018",
       "targets": [],
       "context_map_ids": [],
-      "disposition": "Location, dedicated footprint or implementation remains proposed/unresolved; labeled planning disposition preserves the record without claiming occupancy.",
-      "status": "unresolved",
-      "classification": "proposed/unresolved disposition",
+      "disposition": "Accepted shared organizational accommodation; no separate dedicated building or additional property is established.",
+      "status": "open",
+      "classification": "distributed/nonphysical/reference",
       "geometry_precision": "UNLOCATED"
     },
     {
@@ -18625,9 +18887,9 @@
       "anchor": "record-SH-SITE-0019",
       "targets": [],
       "context_map_ids": [],
-      "disposition": "Location, dedicated footprint or implementation remains proposed/unresolved; labeled planning disposition preserves the record without claiming occupancy.",
-      "status": "unresolved",
-      "classification": "proposed/unresolved disposition",
+      "disposition": "Accepted shared organizational accommodation; no separate dedicated building or additional property is established.",
+      "status": "open",
+      "classification": "distributed/nonphysical/reference",
       "geometry_precision": "UNLOCATED"
     },
     {
@@ -18675,8 +18937,8 @@
       "anchor": "record-SH-SITE-0024",
       "targets": [],
       "context_map_ids": [],
-      "disposition": "Location, dedicated footprint or implementation remains proposed/unresolved; labeled planning disposition preserves the record without claiming occupancy.",
-      "status": "unresolved",
+      "disposition": "Geographic/occupancy disposition accepted: HISTORICAL_CASE_EXACT_LOCATION_INTENTIONALLY_UNKNOWN. Exact architectural fitout remains unspecified; this is a design disposition, not a pending fictional location decision.",
+      "status": "bounded_design_precision",
       "classification": "proposed/unresolved disposition",
       "geometry_precision": "UNLOCATED"
     },
@@ -18688,7 +18950,7 @@
       "disposition": "Host/customer retains property and operating authority; only permitted context and bounded intervention are represented.",
       "status": "external",
       "classification": "external context only",
-      "geometry_precision": "UNLOCATED"
+      "geometry_precision": "STATE_OR_REGION"
     },
     {
       "coverage_id": "SH-SITE-0026",
@@ -20286,6 +20548,86 @@
       "status": "land_acquired_preconstruction",
       "classification": "operating site plan",
       "geometry_precision": "PLANNING_PIN"
+    },
+    {
+      "coverage_id": "SH-PROP-0001",
+      "anchor": "record-SH-PROP-0001",
+      "targets": [],
+      "context_map_ids": [],
+      "disposition": "Rejected external opportunity; inquiry history creates no company premises or architectural design requirement.",
+      "status": "constrained",
+      "classification": "distributed/nonphysical/reference",
+      "geometry_precision": "STATE_OR_REGION"
+    },
+    {
+      "coverage_id": "SH-PROP-0002",
+      "anchor": "record-SH-PROP-0002",
+      "targets": [],
+      "context_map_ids": [],
+      "disposition": "Rejected external opportunity; inquiry history creates no company premises or architectural design requirement.",
+      "status": "constrained",
+      "classification": "distributed/nonphysical/reference",
+      "geometry_precision": "STATE_OR_REGION"
+    },
+    {
+      "coverage_id": "SH-PROP-0003",
+      "anchor": "record-SH-PROP-0003",
+      "targets": [],
+      "context_map_ids": [],
+      "disposition": "Rejected external opportunity; inquiry history creates no company premises or architectural design requirement.",
+      "status": "constrained",
+      "classification": "distributed/nonphysical/reference",
+      "geometry_precision": "STATE_OR_REGION"
+    },
+    {
+      "coverage_id": "SH-REF-0027",
+      "anchor": "record-SH-REF-0027",
+      "targets": [],
+      "context_map_ids": [],
+      "disposition": "Event or real-world reference is not an enterprise property and creates no building requirement.",
+      "status": "constrained",
+      "classification": "distributed/nonphysical/reference",
+      "geometry_precision": "COUNTRY"
+    },
+    {
+      "coverage_id": "SH-REF-0028",
+      "anchor": "record-SH-REF-0028",
+      "targets": [],
+      "context_map_ids": [],
+      "disposition": "Event or real-world reference is not an enterprise property and creates no building requirement.",
+      "status": "constrained",
+      "classification": "distributed/nonphysical/reference",
+      "geometry_precision": "CITY_OR_REGION"
+    },
+    {
+      "coverage_id": "SH-REF-0029",
+      "anchor": "record-SH-REF-0029",
+      "targets": [],
+      "context_map_ids": [],
+      "disposition": "Event or real-world reference is not an enterprise property and creates no building requirement.",
+      "status": "constrained",
+      "classification": "distributed/nonphysical/reference",
+      "geometry_precision": "INSTITUTIONAL_REFERENCE"
+    },
+    {
+      "coverage_id": "SH-REF-0031",
+      "anchor": "record-SH-REF-0031",
+      "targets": [],
+      "context_map_ids": [],
+      "disposition": "Event or real-world reference is not an enterprise property and creates no building requirement.",
+      "status": "constrained",
+      "classification": "distributed/nonphysical/reference",
+      "geometry_precision": "INTENTIONALLY_UNLOCATED"
+    },
+    {
+      "coverage_id": "SH-REF-0030",
+      "anchor": "record-SH-REF-0030",
+      "targets": [],
+      "context_map_ids": [],
+      "disposition": "Event or real-world reference is not an enterprise property and creates no building requirement.",
+      "status": "constrained",
+      "classification": "distributed/nonphysical/reference",
+      "geometry_precision": "INSTITUTIONAL_REFERENCE"
     },
     {
       "coverage_id": "ORG:SHI",
@@ -24369,7 +24711,7 @@
     }
   ],
   "counts": {
-    "coverage_records": 586,
+    "coverage_records": 594,
     "sites": 19,
     "buildings": 18,
     "floors": 25,

@@ -31,5 +31,3 @@ Names and relationship charts do not establish executed supplier contracts, inst
 - [Founders, early colleagues and later people](People.md)
 - [Procurement and vendor support](../departments/procurement.md)
 - [Board and committees](../departments/board.md)
-
-Related reading describes useful connections, not additional reporting lines.

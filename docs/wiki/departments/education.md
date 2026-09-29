@@ -40,5 +40,3 @@ Program names do not establish a new staffing population, actual residential occ
 - [Orientation](orientation.md)
 - [Junction Advisory Group](jag.md)
 - [Sable Harbor Advisory](../businesses/Advisory.md)
-
-Related reading describes useful connections, not additional reporting lines.

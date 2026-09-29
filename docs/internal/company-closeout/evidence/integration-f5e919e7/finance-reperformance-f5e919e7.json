@@ -1,0 +1,31 @@
+{
+  "goodwill_removed_usd": "30000000",
+  "ff003_expense_payable_usd": "152250",
+  "direct_cash_usd": "0",
+  "parent_tax": "CORPORATE_FROM_FORMATION_ADOPTED_SEE_PROVISION_WORKPAPER",
+  "preserved_history": {
+    "native_2026_preserved_legs": 2700,
+    "annual_close_legs": 1241,
+    "elimination_legs": 408,
+    "historical_payer_bridge": {
+      "rwh_paid_for_ps_usd": "131343.0000",
+      "august_payroll_paid_for_ps_usd": "78125.0000",
+      "total_incremental_current_account_usd": "209468.0000",
+      "scenarios": 3
+    },
+    "prior_9778_scope": "DATED_PRE_STATUTORY_ALL_PERIOD_BOUNDARY;NOT_A_CURRENT_IMMUTABLE_FORECAST_TOTAL",
+    "forecast_native_preserved_legs": 11213,
+    "forecast_native_scope": "EXACT_REVISED_NATIVE_SEED;NOT_PRIOR_TAX_CASH_PLAN"
+  },
+  "pre_runtime_base_2027_member_cash": {
+    "MEMBER-INDUSTRIAL-2027-1": "3260787.0000",
+    "MEMBER-CORE-2027-1": "7643992.3907",
+    "MEMBER-INDUSTRIAL-2027-2": "862349.0000",
+    "MEMBER-INDUSTRIAL-2027-3": "719929.0000",
+    "MEMBER-INDUSTRIAL-2027-4": "447077.0000",
+    "MEMBER-INDUSTRIAL-2027-5": "309037.0000",
+    "MEMBER-INDUSTRIAL-2027-6": "82580.0000"
+  },
+  "pre_runtime_base_2027_total_usd": "13325751.3907",
+  "scope": "Targeted lane evidence; not a full tax provision, accepted edition or bank confirmation"
+}

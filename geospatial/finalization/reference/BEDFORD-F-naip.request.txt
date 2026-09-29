@@ -1,0 +1,1 @@
+https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/query?geometry=-80.18275%2C39.43084555555556&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&returnGeometry=false&f=json

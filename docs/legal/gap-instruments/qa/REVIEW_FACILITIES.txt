@@ -1,0 +1,33 @@
+Reviewer: approval_guard agent. This is agent visual QA, not owner approval or a human usability study.
+Scope: host-rights, tenure, rw-chronology, rw-title, uranium-custody, mark-clearance.
+Initial PDF inspection: all 37 pages at 1.3x raster scale in 12 full-resolution four-page contacts.
+Initial findings: readable body and tables; clear draft state; sound plain corporate letterhead. Metadata spacing inflated first pages. rw-title and uranium-custody each stranded final two source bullets on page7; chronology source-only page5; host brief final paragraph+sources on page7. Main notified and is correcting metadata and keep-together pagination.
+Initial HTML inspection: complete host-rights, tenure, rw-chronology across14 readable1280x1200 browser viewport captures; no clipped body/tables. Paused old-byte review on main's regeneration notice.
+
+
+FINAL REVIEW COMPLETE — 2026-09-12
+Inspected all 38 final PDF pages in 12 fresh contacts at original image resolution, each page rendered at 1.3x: /tmp/gap-six-pdf-qa/{slug}-001.png and -005.png.
+Inspected all six final HTML documents through their complete vertical extent in 28 overlapping Chromium viewport captures, 1280x1200 pixels, original resolution: /tmp/gap-six-html-qa/{slug}-{n}.png. Exact capture list: /tmp/gap-six-html-qa/captures.json.
+Final PDF and HTML body, tables, headings, letterhead and source links are readable, aligned and unclipped. No overlap, broken logo or unreadably small substantive text found. Metadata excessive spacing corrected. Source lists now remain together; no stranded final source bullets. Plain legal-document typography supports detailed reading without decorative diagrams or generic marketing filler.
+Minor pagination observation, not a review blocker: host-rights, rw-title and uranium-custody end with a concluding execution paragraph plus complete source list on page7; tenure and chronology have complete source appendix pages. Complete signature tables remain together. Footers are intentionally smaller than body.
+Scope limitation: desktop HTML and PDF only; no mobile HTML or XLSX inspection claimed in this receipt. This is agent visual QA, not owner acceptance or a human usability study. No accepted visual assets modified by this review.
+
+Final artifacts and SHA256:
+host-rights: 7 PDF pages; 5 HTML viewports
+  /home/kingoftheeast/Projects/SABLEHARBOR-legal-gaps/docs/legal/gap-instruments/editions/host-rights.pdf: c6bcc46b6479b0334ff530b77acd0d37483ea5735acb5bccb3ec3743f72f1e95
+  /home/kingoftheeast/Projects/SABLEHARBOR-legal-gaps/docs/legal/gap-instruments/editions/host-rights.html: b430e269258cea1104c1717e615b91678e87dcfe2631b71fd519e740dd30279a
+tenure: 7 PDF pages; 5 HTML viewports
+  /home/kingoftheeast/Projects/SABLEHARBOR-legal-gaps/docs/legal/gap-instruments/editions/tenure.pdf: 18b65645ff158127f06be3786248a236cf7b819b8038b84e305db545f284633d
+  /home/kingoftheeast/Projects/SABLEHARBOR-legal-gaps/docs/legal/gap-instruments/editions/tenure.html: 4b33ff0de750f1fe7d53366e7614f3696e7041017976f2dd53d9e2cd685fd19e
+rw-chronology: 5 PDF pages; 4 HTML viewports
+  /home/kingoftheeast/Projects/SABLEHARBOR-legal-gaps/docs/legal/gap-instruments/editions/rw-chronology.pdf: c469cbad13ad32e683aa690b108ecfefb5400c940e3660d6b8edf8b1e0de8da6
+  /home/kingoftheeast/Projects/SABLEHARBOR-legal-gaps/docs/legal/gap-instruments/editions/rw-chronology.html: 9a6ec9a60b113dc5c345a5e4ec3f72f7d8318e16fe0ce9f764eb88692de4663a
+rw-title: 7 PDF pages; 5 HTML viewports
+  /home/kingoftheeast/Projects/SABLEHARBOR-legal-gaps/docs/legal/gap-instruments/editions/rw-title.pdf: 482eddfac946de9aff5a0edb9fa723e5afc876da903f0b9f241e2a6e61df0783
+  /home/kingoftheeast/Projects/SABLEHARBOR-legal-gaps/docs/legal/gap-instruments/editions/rw-title.html: 5f1b108cd375e3af6ed8b380a14d89ac5702e696106f9326042b11dd5dd33e1a
+uranium-custody: 7 PDF pages; 5 HTML viewports
+  /home/kingoftheeast/Projects/SABLEHARBOR-legal-gaps/docs/legal/gap-instruments/editions/uranium-custody.pdf: 080efcb8e7ebda54b4f2985b1335056f1ba6bcdcddfb58b1a85cebe67183bcf7
+  /home/kingoftheeast/Projects/SABLEHARBOR-legal-gaps/docs/legal/gap-instruments/editions/uranium-custody.html: e754034d6696151f0e136104e72161b9475bc7fdb6b572c112dca7268c054671
+mark-clearance: 5 PDF pages; 4 HTML viewports
+  /home/kingoftheeast/Projects/SABLEHARBOR-legal-gaps/docs/legal/gap-instruments/editions/mark-clearance.pdf: b345750e052d3bf5754be3cb88ab9bab364772cb9533c768420c94771311a06b
+  /home/kingoftheeast/Projects/SABLEHARBOR-legal-gaps/docs/legal/gap-instruments/editions/mark-clearance.html: e48f5b8d532217fcdaf891ca58373ea476665d06ac16fac2677ea7676b6228d5

@@ -62,6 +62,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [CHAT-DERIVED CANON LEDGER — J2 / ALEXANDRIA](../../internal/CHAT_CANON_LEDGER_J2_ALEXANDRIA.md) — MD
 - [SABLE HARBOR — PHASE 2 COVERAGE AUDIT](../../internal/COVERAGE_AUDIT_PHASE2.md) — MD · [formatted PDF](../../internal/COVERAGE_AUDIT_PHASE2.pdf)
 - [SABLE HARBOR — PHASE 2 COVERAGE AUDIT — COVERAGE_AUDIT_PHASE2](../../internal/COVERAGE_AUDIT_PHASE2.pdf) — PDF
+- [Daedalus local-model boundary receipt — September 28, 2026](../../internal/DAEDALUS_MODEL_BOUNDARY_RECEIPT_2026-09-28.md) — MD
 - [ALEXANDRIA INSTITUTIONAL CATALOG — QUERY GUIDE](../../internal/INSTITUTIONAL_CATALOG_QUERY_GUIDE.md) — MD · [formatted PDF](../../internal/INSTITUTIONAL_CATALOG_QUERY_GUIDE.pdf)
 - [ALEXANDRIA INSTITUTIONAL CATALOG — QUERY GUIDE — INSTITUTIONAL_CATALOG_QUERY_GUIDE](../../internal/INSTITUTIONAL_CATALOG_QUERY_GUIDE.pdf) — PDF
 - [Open Canon and Post-Merge Hygiene Issue Index](../../internal/OPEN_CANON_AND_HYGIENE_ISSUE_INDEX.md) — MD
@@ -73,6 +74,65 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Superseded Record Archival Review — 2026-09-03](../../internal/SUPERSEDED_RECORD_ARCHIVAL_REVIEW_2026-09-03.md) — MD
 - [Validator Scope Audit — 2026-09-03](../../internal/VALIDATOR_SCOPE_AUDIT_2026-09-03.md) — MD
 - [Wiki Sync Boundary Review — 2026-09-03](../../internal/WIKI_SYNC_BOUNDARY_REVIEW_2026-09-03.md) — MD
+
+## `docs/internal/company-closeout`
+
+- [Independent capital export and selected-review route](../../internal/company-closeout/CAPITAL_EXPORT_REVIEW_2026-09-22.md) — MD
+- [Exact historical capitalization — reviewable authoring proposal](../../internal/company-closeout/CAPITAL_HISTORY_PROPOSAL.md) — MD
+- [Debt and selected host evidence — August 2026](../../internal/company-closeout/DEBT_AND_HOST_DISPOSITIONS.md) — MD
+- [Company edition dependency remediation — September 22, 2026](../../internal/company-closeout/DEPENDENCY_REMEDIATION_2026-09-22.md) — MD
+- [Current acquisition escrow and holdback register](../../internal/company-closeout/ESCROW_DISPOSITIONS.md) — MD
+- [Final company records — enterprise import contract](../../internal/company-closeout/FINAL_RECORDS_IMPORT_CONTRACT_2026-09-22.md) — MD
+- [Founder admission and monetary opening](../../internal/company-closeout/FOUNDER_ADMISSION_BASIS.md) — MD
+- [Geographic issue #108 — current criterion disposition](../../internal/company-closeout/GEOGRAPHIC_108_CURRENT_DISPOSITION_2026-09-22.md) — MD
+- [Industrial opening capital: authored 2025 contribution history](../../internal/company-closeout/INDUSTRIAL_CAPITAL_HISTORY_2026-09-22.md) — MD
+- [Company edition inspection and reproduction](../../internal/company-closeout/INSPECTION_GUIDE.md) — MD · [formatted PDF](../../finance/publications/SH-COMPANY-INSPECTION-20260915_v1.0.0.pdf)
+- [Company edition 1.1.0 — inspection route](../../internal/company-closeout/INSPECTION_GUIDE_v1.1.0.md) — MD · [formatted PDF](../../finance/publications/SH-COMPANY-INSPECTION-20260922_v1.1.0.pdf)
+- [Company edition 1.2.0 — inspection route](../../internal/company-closeout/INSPECTION_GUIDE_v1.2.0.md) — MD · [formatted PDF](../../finance/publications/SH-COMPANY-INSPECTION-20260922_v1.2.0.pdf)
+- [J2 administrative appointment history — September 22, 2026](../../internal/company-closeout/J2_ADMINISTRATIVE_HISTORY_2026-09-22.md) — MD
+- [Main source protection](../../internal/company-closeout/MAIN_PROTECTION.md) — MD
+- [Orientation commission history — September 22, 2026](../../internal/company-closeout/ORIENTATION_COMMISSIONS_2026-09-22.md) — MD
+- [Company edition to existing audit portal](../../internal/company-closeout/PORTAL_CONTRACT.md) — MD
+- [August 2026 period population handoff to the audit portal](../../internal/company-closeout/PORTAL_PERIOD_SOURCE_HANDOFF_2026-09-28.md) — MD
+- [Selected-edition portal review rehearsal](../../internal/company-closeout/PORTAL_SELECTED_REVIEW.md) — MD
+- [PR #145 integration evidence](../../internal/company-closeout/PR145_INTEGRATION.md) — MD
+- [Company closeout continuation — September 22, 2026](../../internal/company-closeout/RESIDUAL_CLOSEOUT_2026-09-22.md) — MD
+- [Current successor records — enterprise import contract](../../internal/company-closeout/SUCCESSOR_RECORDS_IMPORT_CONTRACT_2026-09-22.md) — MD
+
+## `docs/internal/company-closeout/evidence/newruntime/5344bf76`
+
+- [Public edition copy disposal — observed September 22, 2026](../../internal/company-closeout/evidence/newruntime/5344bf76/README.md) — MD
+- [Committed portal runtime review — 2026-09-22](../../internal/company-closeout/evidence/newruntime/5344bf76/REVIEW.md) — MD
+
+## `docs/internal/company-closeout/evidence/portal-neutral-2026-09-22`
+
+- [Portal neutral software reperformance — September 22, 2026 UTC](../../internal/company-closeout/evidence/portal-neutral-2026-09-22/README.md) — MD
+
+## `docs/internal/company-closeout/evidence/rail-source-consumer-2026-09-29`
+
+- [Rail source-consumer and geometry-only sensitivity receipt](../../internal/company-closeout/evidence/rail-source-consumer-2026-09-29/README.md) — MD
+
+## `docs/internal/company-closeout/final-completion-2026-09-22`
+
+- [Final company completion evidence — September 22, 2026](../../internal/company-closeout/final-completion-2026-09-22/README.md) — MD
+
+## `docs/internal/company-closeout/host-residual-successor`
+
+- [Host rights and escrow residual successor](../../internal/company-closeout/host-residual-successor/README.md) — MD
+- [HOST-R01 — precise prospective terms for decision](../../internal/company-closeout/host-residual-successor/TERMS_PROPOSAL.md) — MD
+
+## `docs/internal/company-closeout/residual-finance-2026-09-22`
+
+- [Pending implementation text — recommended current-rights bundle](../../internal/company-closeout/residual-finance-2026-09-22/PENDING_INSTRUMENT.md) — MD
+- [Capital rights and ARU debt: source completion and decision-ready terms](../../internal/company-closeout/residual-finance-2026-09-22/README.md) — MD
+
+## `docs/internal/company-closeout/validation`
+
+- [Integration validation history](../../internal/company-closeout/validation/README.md) — MD
+
+## `docs/internal/company-closeout/workspace-artifact-2026-09-22`
+
+- [Non-authoritative workspace output — bounded issue #34 implementation](../../internal/company-closeout/workspace-artifact-2026-09-22/README.md) — MD
 
 ## `docs/internal/development`
 
@@ -135,6 +195,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Audit-suite organization bridge and reconciliation proposal](../../internal/development/audit-suite/ORGANIZATION_RECONCILIATION_2026-09-13.md) — MD
 - [Explicit evidence inspection records](../../internal/development/audit-suite/RECORDED_INSPECTIONS.md) — MD
 - [Private-runtime browser sessions](../../internal/development/audit-suite/SERVICE_SESSION_ISOLATION_2026-09-14.md) — MD
+- [Prospective local software-install source exercise](../../internal/development/audit-suite/SOFTWARE_INSTALL_EXERCISE.md) — MD
 - [Audit workspace UX professionalization](../../internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md) — MD
 - [Explicit personal visit checkpoints](../../internal/development/audit-suite/VISIT_CHECKPOINTS.md) — MD
 
@@ -159,6 +220,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Business-driven finance releases](../../releases/BUSINESS_FINANCE_RELEASES.md) — MD
 - [Business operations releases](../../releases/BUSINESS_OPERATIONS_RELEASES.md) — MD
 - [Closeout evidence releases](../../releases/CLOSEOUT_EVIDENCE_RELEASES.md) — MD
+- [Company edition releases](../../releases/COMPANY_EDITION_RELEASES.md) — MD
 - [Facility atlas controlled releases](../../releases/FACILITY_ATLAS_RELEASES.md) — MD
 - [Facility spatial releases](../../releases/FACILITY_SPATIAL_RELEASES.md) — MD
 - [Facility planning workbench releases](../../releases/FACILITY_WORKBENCH_RELEASES.md) — MD
@@ -197,6 +259,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Protected saved Key filters](../../../enterprise/audit_suite/INSTRUCTOR_KEY_VIEWS.md) — MD
 - [Explicit investigation handoffs](../../../enterprise/audit_suite/INVESTIGATION_HANDOFFS.md) — MD
 - [Local worker lifecycle sources](../../../enterprise/audit_suite/LIFECYCLE_ACTIVITY.md) — MD
+- [Local logging clock companion](../../../enterprise/audit_suite/LOGGING_CLOCK_RUNTIME.md) — MD
 - [Local non-human credential lifecycle](../../../enterprise/audit_suite/NONHUMAN_IDENTITY_ACTIVITY.md) — MD
 - [Persistent local nonhuman identity operations](../../../enterprise/audit_suite/NONHUMAN_RUNTIME.md) — MD
 - [Personal saved views](../../../enterprise/audit_suite/PERSONAL_VIEWS.md) — MD
@@ -211,9 +274,15 @@ Generated file inventory. Includes current and historical records; open the sour
 - [Persistent local security-event intake](../../../enterprise/audit_suite/SECURITY_EVENT_RUNTIME.md) — MD
 - [Explicit source-impact reassessment dispositions](../../../enterprise/audit_suite/SOURCE_IMPACT_DISPOSITIONS.md) — MD
 - [Exact recorded source-impact relationships](../../../enterprise/audit_suite/SOURCE_IMPACT_REFERENCES.md) — MD
+- [Recorded procedure gaps](../../../enterprise/audit_suite/TASK_GAPS.md) — MD
 - [Local role-based training source pair](../../../enterprise/audit_suite/TRAINING_ACTIVITY.md) — MD
 - [Local package inventory, rule scans and rescans](../../../enterprise/audit_suite/VULNERABILITY_RUNTIME.md) — MD
 - [Private reasoned work guidance](../../../enterprise/audit_suite/WORK_GUIDANCE.md) — MD
+
+## `enterprise/closeout`
+
+- [Conditional mine utility ROT continuation](../../../enterprise/closeout/INDUSTRIAL_TAX_FUTURE.md) — MD
+- [State receipt apportionment — company closeout](../../../enterprise/closeout/STATE_APPORTIONMENT.md) — MD
 
 ## `evidence/closeout`
 
@@ -241,6 +310,10 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `tools/documents`
 
 - [Controlled-publication builds](../../../tools/documents/README.md) — MD
+
+## `tools/legal_gaps`
+
+- [Gap instrument publications](../../../tools/legal_gaps/README.md) — MD
 
 ## `tools/wiki`
 

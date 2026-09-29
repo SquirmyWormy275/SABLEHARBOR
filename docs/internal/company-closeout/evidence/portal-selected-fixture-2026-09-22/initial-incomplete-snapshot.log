@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/tmp/sh-portal-edition-review/tools/company_closeout/portal_engagement.py", line 174, in <module>
+    result = run(plan)
+             ^^^^^^^^^
+  File "/tmp/sh-portal-edition-review/tools/company_closeout/portal_engagement.py", line 16, in run
+    engine = Engine(destination / "engagement", company_root=destination / "company")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/sh-selected-review-fixture-gv7ole4e/rehearsal/pinned-portal-code/enterprise/audit_suite/engine.py", line 195, in __init__
+    native = compile_registry(repository)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/sh-selected-review-fixture-gv7ole4e/rehearsal/pinned-portal-code/enterprise/ccf/registry.py", line 106, in compile_registry
+    texts = {k: (repository / p).read_text() for k, p in SOURCES.items()}
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kingoftheeast/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kingoftheeast/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/sh-selected-review-fixture-gv7ole4e/rehearsal/pinned-portal-code/docs/controls/CCF_DOMAIN_TAXONOMY_v0.1.md'

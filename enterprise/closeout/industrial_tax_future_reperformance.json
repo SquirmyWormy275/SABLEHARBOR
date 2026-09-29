@@ -1,0 +1,99 @@
+{
+  "input_path": "enterprise/generated/company-closeout-v1/enterprise/enterprise_journal.csv",
+  "input_sha256": "85f52b3fe5561a4d7a88f4a0650c4dd0179fb1d0520de066fb1d517ed8e954e3",
+  "scope": "Existing finance exported forecast before new provider; not accepted successor",
+  "tax_rows": 540,
+  "allocation_rows": 720,
+  "annual_totals": [
+    {
+      "scenario": "base",
+      "year": 2027,
+      "tax_expense_usd": "2524874.88",
+      "cash_paid_usd": "0"
+    },
+    {
+      "scenario": "base",
+      "year": 2028,
+      "tax_expense_usd": "2665510.44",
+      "cash_paid_usd": "0"
+    },
+    {
+      "scenario": "base",
+      "year": 2029,
+      "tax_expense_usd": "2813978.14",
+      "cash_paid_usd": "0"
+    },
+    {
+      "scenario": "base",
+      "year": 2030,
+      "tax_expense_usd": "2968738.14",
+      "cash_paid_usd": "0"
+    },
+    {
+      "scenario": "base",
+      "year": 2031,
+      "tax_expense_usd": "2791421.89",
+      "cash_paid_usd": "0"
+    },
+    {
+      "scenario": "downside",
+      "year": 2027,
+      "tax_expense_usd": "2019899.58",
+      "cash_paid_usd": "0"
+    },
+    {
+      "scenario": "downside",
+      "year": 2028,
+      "tax_expense_usd": "2132408.44",
+      "cash_paid_usd": "0"
+    },
+    {
+      "scenario": "downside",
+      "year": 2029,
+      "tax_expense_usd": "2220096.17",
+      "cash_paid_usd": "0"
+    },
+    {
+      "scenario": "downside",
+      "year": 2030,
+      "tax_expense_usd": "2188068.42",
+      "cash_paid_usd": "0"
+    },
+    {
+      "scenario": "downside",
+      "year": 2031,
+      "tax_expense_usd": "2233137.71",
+      "cash_paid_usd": "0"
+    },
+    {
+      "scenario": "expansion",
+      "year": 2027,
+      "tax_expense_usd": "2524874.88",
+      "cash_paid_usd": "0"
+    },
+    {
+      "scenario": "expansion",
+      "year": 2028,
+      "tax_expense_usd": "2781401.88",
+      "cash_paid_usd": "0"
+    },
+    {
+      "scenario": "expansion",
+      "year": 2029,
+      "tax_expense_usd": "3063992.52",
+      "cash_paid_usd": "0"
+    },
+    {
+      "scenario": "expansion",
+      "year": 2030,
+      "tax_expense_usd": "3375294.82",
+      "cash_paid_usd": "0"
+    },
+    {
+      "scenario": "expansion",
+      "year": 2031,
+      "tax_expense_usd": "3718225.57",
+      "cash_paid_usd": "0"
+    }
+  ]
+}
