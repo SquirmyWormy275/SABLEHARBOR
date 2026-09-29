@@ -943,13 +943,19 @@
       "gate": "existing_authority",
       "execution_policy": "Locked design direction; queued, not started. Complete dependencies before execution. Preserve private data and prior scope boundaries. Owner usability and exact visual acceptance cannot be inferred from scripted checks.",
       "execution_authorized": true,
-      "evidence": "Durable background owner questions retain exact original source pins through ambiguous submission retries and queued-input inspection. Matching-only composer clearing preserves newer text/selections; explicit restore refuses to overwrite a newer composition. Older walkthrough capabilities now use clearly labeled volatile drafts and omit unsupported payload fields. Companion recovery retains inert job history; full-stage acceptance remains incomplete. Streamed instructor history preserves exact 815-event hashes at about 111 MiB peak RSS; actual protected revision 814 browser comparison completed in 31.554 seconds with unchanged formal history. Read-only 146-system browser checks now verify source selection, Key search and pending comparison survive ordinary panel navigation; lazy private panels and accessible loading statuses preserve context without eager Key access.",
+      "evidence": "Durable background owner questions retain exact original source pins through ambiguous submission retries and queued-input inspection. Matching-only composer clearing preserves newer text/selections; explicit restore refuses to overwrite a newer composition. Older walkthrough capabilities now use clearly labeled volatile drafts and omit unsupported payload fields. Companion recovery retains inert job history; full-stage acceptance remains incomplete. Streamed instructor history preserves exact 815-event hashes at about 111 MiB peak RSS; actual protected revision 814 browser comparison completed in 31.554 seconds with unchanged formal history. Read-only 146-system browser checks now verify source selection, Key search and pending comparison survive ordinary panel navigation; lazy private panels and accessible loading statuses preserve context without eager Key access. Bootstrap now queries authorized seven-field engagement summaries without decoding complete current states in Python; 27 focused tests passed. This is a memory-path improvement, not a measured navigation latency or full-stage acceptance claim.",
       "technical_checkpoints": [
         {
           "date": "2026-09-22",
           "scope": "History serialization reuse",
           "validation": "Independent exact digest/prefix/state preservation, legacy JSON, complete-tail integrity and final authority/revision checks passed; one instrumented998-event run33.43s to23.19s.",
           "acceptance": "Single measurement, not percentile/SLA. Full-state retention bounded; compact activity metadata grows with events."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Bootstrap engagement summary projection",
+          "validation": "Authorized SQLite projection preserves bootstrap response shape, engagement order, identity expiry and membership revocation; 27 targeted tests and Ruff passed.",
+          "acceptance": "No target-machine latency benchmark or full navigation/reconnection acceptance claimed; SQLite still parses each accessible current state."
         }
       ]
     },

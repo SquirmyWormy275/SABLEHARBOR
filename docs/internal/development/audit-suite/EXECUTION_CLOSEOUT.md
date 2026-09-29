@@ -52,6 +52,21 @@ CC3.1 tasks are now `IN_PROGRESS/LIMITATION`: accepted service-commitment linkag
 and the authored vague-objective challenge remain unperformed. The indexed
 A1934/B2060 packet predates these four commands.
 
+A subsequent CC9.1 dependency and continuity examination added one bounded
+`LIMITATION` workpaper and one task note in each original workroom, advancing A
+from revision 1936 to 1938 and B from 2062 to 2064. The nonfixture BEFORE,
+disposable rehearsal, four ordinary-command transitions, independent raw-event
+verification and final adjudication passed. The verification found all 60
+company source roots unchanged and checked the exact A/B history, authority,
+selected-source and artifact boundaries. The two CC9.1 tasks remain
+`NOT_STARTED/NOT_RUN`: supplier operation, risk acceptance and the authored
+continuity test were not performed. The workpapers document those limits;
+they do not grant CC9.1 audit credit. The proof is retained privately in
+`additional-duty-dependency-continuity-cc91-actual-proof-independent-v1/`
+(`REVIEW.json` SHA-256
+`327a9811450b0815b32f3455b1afa83b99f2c1f860f7c6689c662b51d32bd2d0`).
+The indexed A1934/B2060 packet also predates these four commands.
+
 In the earlier A1810/B1936 packet, per workroom, 79 tasks are `COMPLETE`, 132 are
 `IN_PROGRESS`, and 198 remain `NOT_STARTED`. The first three verified later batches
 change those actual-workroom counts to 89 `COMPLETE`, 155 `IN_PROGRESS`, and
@@ -63,6 +78,9 @@ has 92 `COMPLETE`, 181 `IN_PROGRESS`, and 136
 `NOT_STARTED` tasks. The later A1936/B2062 CC3.1 commands move one task per
 profile from `NOT_STARTED/NOT_RUN` to `IN_PROGRESS/LIMITATION`, leaving each
 profile with 92 `COMPLETE`, 182 `IN_PROGRESS`, and 135 `NOT_STARTED` tasks.
+The later A1938/B2064 CC9.1 commands retain those counts because the exact
+CC9.1 procedure remains `NOT_STARTED/NOT_RUN` with an attached limitation
+workpaper, not a completed test.
 These are exact task statuses, not an overall passing audit;
 the completed tasks retain their individual `LIMITATION` or `FAIL` conclusions.
 The earlier documentary
@@ -85,6 +103,8 @@ need current clause and source review; 251 lack an exact selected-source plan.
 The graph admits no execution batch or new task credit. Sharing a source scan
 requires a reviewed ordered task vector, separate workpapers and conclusions,
 and independent raw-event and source-preservation proof for every transition.
+That graph is a historical A1936/B2062 snapshot and must be reconciled against
+the later CC9.1 task notes before any subsequent batch is admitted.
 
 Execution remains authorized and in progress. Finish the accepted scope through
 these five deliverables; do not expand the feature list merely to create another
