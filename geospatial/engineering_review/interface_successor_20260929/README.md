@@ -34,7 +34,8 @@ switch number, frog, flangeway or vehicle swept-envelope clearance.
 
 The structure rows retain all **20** accepted culverts, **four** rail bridges
 and **two** highway overbridges with fixed coordinates, corrected chainage,
-source span, condition, inspection/restriction where present, and source
+old and accepted-successor mileposts, source span, condition,
+inspection/restriction where present, and source
 catch-up amount. The two highway overbridge clearances remain **source
 assumptions with a survey gate**. The source has no hydrologic catchment or
 design flow for any water crossing and no verified hydraulic capacity or

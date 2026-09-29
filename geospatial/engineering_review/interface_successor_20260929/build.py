@@ -13,6 +13,8 @@ from pyproj import Transformer
 from shapely.geometry import Point, shape
 from shapely.ops import transform
 
+from industrial.successors.rail_2026_09_29 import build as rail_successor
+
 ROOT = Path(__file__).resolve().parents[3]
 HERE = Path(__file__).resolve().parent
 TO_UTM = Transformer.from_crs(4326, 26913, always_xy=True).transform
@@ -277,16 +279,38 @@ def build() -> dict:
         raise ValueError("Twenty-six structure IDs do not crosswalk")
     if any(s["geometry_offset_m"] > 0.05 for s in candidate_structures):
         raise ValueError("Structure moved off corrected route")
+    rail_spec, _, rail_features, rail_original = rail_successor.checked_inputs()
+    rail_network = rail_successor.network_successor(
+        load("industrial/source/geography/network.geojson"), rail_features, rail_spec
+    )
+    rail_operations, rail_crosswalk = rail_successor.operations_successor(
+        rail_original, rail_network, rail_spec
+    )
+    accepted_structure_by_id = {s["id"]: s for s in rail_operations["structures"]}
+    milepost_by_id = {s["id"]: s for s in rail_crosswalk["structures"]}
+    if set(accepted_structure_by_id) != {s["id"] for s in structures} or set(milepost_by_id) != set(
+        accepted_structure_by_id
+    ):
+        raise ValueError("Accepted structure successor population differs")
     structure_by_id = {s["id"]: s for s in candidate_structures}
     structure_rows = []
     for structure in structures:
         crossing = structure_by_id[structure["id"]]
+        accepted = accepted_structure_by_id[structure["id"]]
+        milepost = milepost_by_id[structure["id"]]
+        if (
+            accepted["milepost"] != milepost["new_milepost"]
+            or structure["milepost"] != milepost["old_milepost"]
+            or structure["lon_lat"] != accepted["lon_lat"]
+        ):
+            raise ValueError(f"Accepted structure rechain differs: {structure['id']}")
         structure_rows.append(
             {
                 "structure_id": structure["id"],
                 "kind": structure["kind"],
                 "route_id": structure["route_id"],
                 "source_milepost": structure["milepost"],
+                "accepted_successor_milepost": milepost["new_milepost"],
                 "corrected_projected_chainage_m": crossing["candidate_projected_chainage_m"],
                 "fixed_coordinate_offset_m": crossing["geometry_offset_m"],
                 "source_span_m": structure["span_m"],

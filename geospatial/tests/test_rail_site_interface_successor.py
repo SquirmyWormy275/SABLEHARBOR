@@ -129,4 +129,6 @@ def test_turnout_and_structure_population_is_exact():
     assert len(structures) == 26
     assert structures["CUL-01"]["source_span_m"] == 1.2
     assert structures["BR-02"]["source_restriction"].startswith("10mph")
+    assert structures["BR-02"]["source_milepost"] == 18.1
+    assert structures["BR-02"]["accepted_successor_milepost"] == 17.948836813
     assert structures["HWY-I80-1"]["source_inspection_date"] is None

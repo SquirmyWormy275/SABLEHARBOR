@@ -561,6 +561,7 @@
   ],
   "structure_design_boundaries": [
     {
+      "accepted_successor_milepost": 5.1411379,
       "corrected_projected_chainage_m": 8276.882,
       "field_clearance_or_load_rating_verified": false,
       "fixed_coordinate_offset_m": 0.0,
@@ -578,6 +579,7 @@
       "waterway_label": "ephemeral draw A"
     },
     {
+      "accepted_successor_milepost": 17.948836813,
       "corrected_projected_chainage_m": 28896.888,
       "field_clearance_or_load_rating_verified": false,
       "fixed_coordinate_offset_m": 0.0,
@@ -595,6 +597,7 @@
       "waterway_label": "ephemeral draw B"
     },
     {
+      "accepted_successor_milepost": 28.240193273,
       "corrected_projected_chainage_m": 45466.131,
       "field_clearance_or_load_rating_verified": false,
       "fixed_coordinate_offset_m": 0.0,
@@ -612,6 +615,7 @@
       "waterway_label": "ephemeral draw C"
     },
     {
+      "accepted_successor_milepost": 2.936588454,
       "corrected_projected_chainage_m": 4727.814,
       "field_clearance_or_load_rating_verified": false,
       "fixed_coordinate_offset_m": 0.0,
@@ -629,6 +633,7 @@
       "waterway_label": "East Materials drainage"
     },
     {
+      "accepted_successor_milepost": 1.889999999,
       "corrected_projected_chainage_m": 3042.744,
       "field_clearance_or_load_rating_verified": false,
       "fixed_coordinate_offset_m": 0.0,
@@ -646,6 +651,7 @@
       "waterway_label": "synthetic ephemeral drainage crossing; not an asserted named watercourse"
     },
     {
+      "accepted_successor_milepost": 3.759898729,
       "corrected_projected_chainage_m": 6053.165,
       "field_clearance_or_load_rating_verified": false,
       "fixed_coordinate_offset_m": 0.0,
@@ -663,6 +669,7 @@
       "waterway_label": "synthetic ephemeral drainage crossing; not an asserted named watercourse"
     },
     {
+      "accepted_successor_milepost": 5.611137901,
       "corrected_projected_chainage_m": 9033.555,
       "field_clearance_or_load_rating_verified": false,
       "fixed_coordinate_offset_m": 0.0,
@@ -680,6 +687,7 @@
       "waterway_label": "synthetic ephemeral drainage crossing; not an asserted named watercourse"
     },
     {
+      "accepted_successor_milepost": 7.495344169,
       "corrected_projected_chainage_m": 12067.025,
       "field_clearance_or_load_rating_verified": false,
       "fixed_coordinate_offset_m": 0.0,
@@ -697,6 +705,7 @@
       "waterway_label": "synthetic ephemeral drainage crossing; not an asserted named watercourse"
     },
     {
+      "accepted_successor_milepost": 9.366630328,
       "corrected_projected_chainage_m": 15079.712,
       "field_clearance_or_load_rating_verified": false,
       "fixed_coordinate_offset_m": 0.0,
@@ -714,6 +723,7 @@
       "waterway_label": "synthetic ephemeral drainage crossing; not an asserted named watercourse"
     },
     {
+      "accepted_successor_milepost": 11.233355553,
       "corrected_projected_chainage_m": 18085.062,
       "field_clearance_or_load_rating_verified": false,
       "fixed_coordinate_offset_m": 0.0,
@@ -731,6 +741,7 @@
       "waterway_label": "synthetic ephemeral drainage crossing; not an asserted named watercourse"
     },
     {
+      "accepted_successor_milepost": 13.104588515,
       "corrected_projected_chainage_m": 21097.69,
       "field_clearance_or_load_rating_verified": false,
       "fixed_coordinate_offset_m": 0.0,
@@ -748,6 +759,7 @@
       "waterway_label": "synthetic ephemeral drainage crossing; not an asserted named watercourse"
     },
     {
+      "accepted_successor_milepost": 14.968836808,
       "corrected_projected_chainage_m": 24099.096,
       "field_clearance_or_load_rating_verified": false,
       "fixed_coordinate_offset_m": 0.0,
@@ -765,6 +777,7 @@
       "waterway_label": "synthetic ephemeral drainage crossing; not an asserted named watercourse"
     },
     {
+      "accepted_successor_milepost": 16.858836811,
       "corrected_projected_chainage_m": 27141.984,
       "field_clearance_or_load_rating_verified": false,
       "fixed_coordinate_offset_m": 0.0,
@@ -782,6 +795,7 @@
       "waterway_label": "synthetic ephemeral drainage crossing; not an asserted named watercourse"
     },
     {
+      "accepted_successor_milepost": 18.748836814,
       "corrected_projected_chainage_m": 30184.894,
       "field_clearance_or_load_rating_verified": false,
       "fixed_coordinate_offset_m": 0.0,
@@ -799,6 +813,7 @@
       "waterway_label": "synthetic ephemeral drainage crossing; not an asserted named watercourse"
     },
     {
+      "accepted_successor_milepost": 20.633534957,
       "corrected_projected_chainage_m": 33219.276,
       "field_clearance_or_load_rating_verified": false,
       "fixed_coordinate_offset_m": 0.0,
@@ -816,6 +831,7 @@
       "waterway_label": "synthetic ephemeral drainage crossing; not an asserted named watercourse"
     },
     {
+      "accepted_successor_milepost": 22.520193264,
       "corrected_projected_chainage_m": 36256.824,
       "field_clearance_or_load_rating_verified": false,
       "fixed_coordinate_offset_m": 0.0,
@@ -833,6 +849,7 @@
       "waterway_label": "synthetic ephemeral drainage crossing; not an asserted named watercourse"
     },
     {
+      "accepted_successor_milepost": 24.410193267,
       "corrected_projected_chainage_m": 39299.759,
       "field_clearance_or_load_rating_verified": false,
       "fixed_coordinate_offset_m": 0.0,
@@ -850,6 +867,7 @@
       "waterway_label": "synthetic ephemeral drainage crossing; not an asserted named watercourse"
     },
     {
+      "accepted_successor_milepost": 26.30019327,
       "corrected_projected_chainage_m": 42342.695,
       "field_clearance_or_load_rating_verified": false,
       "fixed_coordinate_offset_m": 0.0,
@@ -867,6 +885,7 @@
       "waterway_label": "synthetic ephemeral drainage crossing; not an asserted named watercourse"
     },
     {
+      "accepted_successor_milepost": 28.190193273,
       "corrected_projected_chainage_m": 45385.63,
       "field_clearance_or_load_rating_verified": false,
       "fixed_coordinate_offset_m": 0.0,
@@ -884,6 +903,7 @@
       "waterway_label": "synthetic ephemeral drainage crossing; not an asserted named watercourse"
     },
     {
+      "accepted_successor_milepost": 30.080193276,
       "corrected_projected_chainage_m": 48428.565,
       "field_clearance_or_load_rating_verified": false,
       "fixed_coordinate_offset_m": 0.0,
@@ -901,6 +921,7 @@
       "waterway_label": "synthetic ephemeral drainage crossing; not an asserted named watercourse"
     },
     {
+      "accepted_successor_milepost": 1.636588445,
       "corrected_projected_chainage_m": 2634.869,
       "field_clearance_or_load_rating_verified": false,
       "fixed_coordinate_offset_m": 0.0,
@@ -918,6 +939,7 @@
       "waterway_label": "synthetic ephemeral drainage crossing; not an asserted named watercourse"
     },
     {
+      "accepted_successor_milepost": 3.136588455,
       "corrected_projected_chainage_m": 5049.804,
       "field_clearance_or_load_rating_verified": false,
       "fixed_coordinate_offset_m": 0.0,
@@ -935,6 +957,7 @@
       "waterway_label": "synthetic ephemeral drainage crossing; not an asserted named watercourse"
     },
     {
+      "accepted_successor_milepost": 1.10643956,
       "corrected_projected_chainage_m": 1781.38,
       "field_clearance_or_load_rating_verified": false,
       "fixed_coordinate_offset_m": 0.0,
@@ -952,6 +975,7 @@
       "waterway_label": "synthetic ephemeral drainage crossing; not an asserted named watercourse"
     },
     {
+      "accepted_successor_milepost": 2.156439574,
       "corrected_projected_chainage_m": 3471.874,
       "field_clearance_or_load_rating_verified": false,
       "fixed_coordinate_offset_m": 0.0,
@@ -969,6 +993,7 @@
       "waterway_label": "synthetic ephemeral drainage crossing; not an asserted named watercourse"
     },
     {
+      "accepted_successor_milepost": 0.433682201,
       "corrected_projected_chainage_m": 698.189,
       "field_clearance_or_load_rating_verified": false,
       "fixed_coordinate_offset_m": 0.0,
@@ -986,6 +1011,7 @@
       "waterway_label": null
     },
     {
+      "accepted_successor_milepost": 0.404177588,
       "corrected_projected_chainage_m": 650.689,
       "field_clearance_or_load_rating_verified": false,
       "fixed_coordinate_offset_m": 0.0,
