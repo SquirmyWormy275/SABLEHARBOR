@@ -171,6 +171,7 @@ def test_state_reader_is_byte_preserving_and_does_not_initialize(tmp_path):
     with sqlite3.connect(path) as db:
         db.execute("CREATE TABLE engagements (state TEXT NOT NULL)")
         db.execute("INSERT INTO engagements VALUES (?)", (json.dumps({"id": "ENG-A"}),))
+    path.chmod(0o600)
     before = path.read_bytes()
     assert read_state(path) == {"id": "ENG-A"}
     assert path.read_bytes() == before
@@ -179,3 +180,49 @@ def test_state_reader_is_byte_preserving_and_does_not_initialize(tmp_path):
     with pytest.raises(FileNotFoundError):
         read_state(missing)
     assert not missing.exists()
+
+
+@pytest.mark.parametrize("suffix", ["-wal", "-shm", "-journal"])
+def test_immutable_reader_rejects_sidecars_without_touching_database(tmp_path, suffix):
+    path = tmp_path / "state.sqlite3"
+    with sqlite3.connect(path) as db:
+        db.execute("CREATE TABLE engagements (state TEXT NOT NULL)")
+        db.execute("INSERT INTO engagements VALUES (?)", (json.dumps({"id": "OLD"}),))
+    path.chmod(0o600)
+    sidecar = Path(str(path) + suffix)
+    sidecar.write_bytes(b"uncheckpointed-state-must-not-be-ignored")
+    before = path.read_bytes()
+    with pytest.raises(PreflightError, match="no active sidecars"):
+        read_state(path)
+    assert path.read_bytes() == before and sidecar.exists()
+
+
+def test_immutable_reader_rejects_symlink_alias(tmp_path):
+    path = tmp_path / "state.sqlite3"
+    with sqlite3.connect(path) as db:
+        db.execute("CREATE TABLE engagements (state TEXT NOT NULL)")
+    path.chmod(0o600)
+    alias = tmp_path / "alias.sqlite3"
+    alias.symlink_to(path)
+    with pytest.raises(PreflightError, match="symlink"):
+        read_state(alias)
+
+
+def test_immutable_reader_cannot_silently_omit_committed_wal_update(tmp_path):
+    path = tmp_path / "live.sqlite3"
+    with sqlite3.connect(path) as db:
+        assert db.execute("PRAGMA journal_mode=WAL").fetchone()[0] == "wal"
+        db.execute("PRAGMA wal_autocheckpoint=0")
+        db.execute("CREATE TABLE engagements (state TEXT NOT NULL)")
+        db.execute("INSERT INTO engagements VALUES (?)", (json.dumps({"id": "OLD"}),))
+        db.commit()
+        db.execute("PRAGMA wal_checkpoint(TRUNCATE)")
+        db.execute("UPDATE engagements SET state=?", (json.dumps({"id": "NEW"}),))
+        db.commit()
+        path.chmod(0o600)
+        assert Path(str(path) + "-wal").exists()
+        assert json.loads(db.execute("SELECT state FROM engagements").fetchone()[0]) == {
+            "id": "NEW"
+        }
+        with pytest.raises(PreflightError, match="no active sidecars"):
+            read_state(path)

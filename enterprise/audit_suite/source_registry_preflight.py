@@ -6,8 +6,10 @@ This module cannot activate an engagement or certify a registry as complete.
 
 from __future__ import annotations
 
+import hashlib
 import json
 import sqlite3
+import stat
 from collections import Counter
 from pathlib import Path
 
@@ -19,13 +21,36 @@ class PreflightError(ValueError):
 
 
 def read_state(path: Path) -> dict:
-    """Read the existing engagement without constructing an initializing store."""
-    path = Path(path).resolve(strict=True)
+    """Read an ordinary frozen private database without initializing or ignoring WAL."""
+    path = Path(path).absolute()
+
+    def frozen_file() -> tuple[int, int, int, int, bytes]:
+        if any(p.is_symlink() for p in (path, *path.parents)):
+            raise PreflightError("Frozen audit database cannot be a symlink")
+        info = path.stat()
+        if not stat.S_ISREG(info.st_mode) or info.st_nlink != 1 or info.st_mode & 0o077:
+            raise PreflightError("Private regular frozen audit database required")
+        if any(
+            Path(str(path) + suffix).exists() or Path(str(path) + suffix).is_symlink()
+            for suffix in ("-wal", "-shm", "-journal")
+        ):
+            raise PreflightError("Frozen audit database must have no active sidecars")
+        return (
+            info.st_dev,
+            info.st_ino,
+            info.st_size,
+            info.st_mtime_ns,
+            hashlib.sha256(path.read_bytes()).digest(),
+        )
+
+    before = frozen_file()
     with sqlite3.connect(path.as_uri() + "?mode=ro&immutable=1", uri=True) as db:
         db.execute("PRAGMA query_only=ON")
         if db.execute("PRAGMA quick_check").fetchone()[0] != "ok":
             raise PreflightError("Audit state database integrity failed")
         rows = db.execute("SELECT state FROM engagements").fetchall()
+    if frozen_file() != before:
+        raise PreflightError("Frozen audit database changed during read")
     if len(rows) != 1:
         raise PreflightError("One frozen engagement per side required")
     return json.loads(rows[0][0])
