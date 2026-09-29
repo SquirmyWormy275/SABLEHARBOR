@@ -719,6 +719,12 @@
         },
         {
           "date": "2026-09-29",
+          "scope": "Prospective 22-item HIPAA addressable pending docket and independent review",
+          "validation": "Independent review SHA-256 5796cf3bee5075defb743401dad3831448cb5687c7f06d5df9dcba3021143c7d checked 223 assertions across 50 native versions, one-to-one 22 source locators per branch, Clean pending hold, Messy omission/invalid blanket-waiver marker/backfill with one unresolved exception, 2027 authored clocks versus actual 2026 import, and no grants or collections. Corrected HANDOFF-V2 SHA-256 3a41ce41b307be313bb4bd2f92558703a36941b664e74747013bc07ab4c4f010 explicitly keeps actual HIPAA applicability UNDETERMINED; V1 preserved. After integration 12 focused exercise/CompanyStore tests, Ruff and native verify passed; copied private bytes match with distinct inodes and zero Btrfs sharing.",
+          "acceptance": "Pending locator intake only, not a 22-decision register or resolution of SH-POL-003's OPEN/INSUFFICIENT_SOURCE gap. No actual HIPAA applicability, environmental determination, approved substitution, implemented safeguard, real 2027 operation, current-pair source collection or audit task credit."
+        },
+        {
+          "date": "2026-09-29",
           "scope": "Prospective SH-ENG-005 local emergency-change source and independent review",
           "validation": "Independent V2 review SHA-256 371380b9b1db92e5a9d483bb43f9b90cbc534c257a853a4629c90261b95ef5c1 verified 35 canon/source pins, 19 native versions, Clean authority block, Messy invalid in-memory bypass then rollback with one exception open, 2027 authored clocks versus actual 2026 import, and zero grants/collections. After integration 13 focused/prior change tests and Ruff passed; private ordinary-byte copy matched exact hashes and modes, distinct inodes and zero Btrfs shared extents. Failed CLI attempt and V1 run remain preserved.",
           "acceptance": "Local prospective technical source only, outside the frozen P1 pair. Proposed contacts are not accepted emergency approvers; no production deployment, real 2027 operation, full incident/change population, audit procedure/task credit, Key, grade or release."

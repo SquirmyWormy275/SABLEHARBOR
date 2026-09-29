@@ -681,6 +681,20 @@ Ruff passed. The private output was copied by ordinary bytes with exact
 hashes, separate inodes and zero shared Btrfs extents; the failed CLI V1 and
 original V1 run remain preserved.
 
+The [prospective 22-item addressable docket](../../../../enterprise/audit_suite/ADDRESSABLE_DOCKET_EXERCISE.md)
+passed [independent isolated review](../../../../enterprise/generated/audit-suite/company-addressable-docket-independent-review-2026-09-29-v1/REVIEW.json)
+(SHA-256 `5796cf3bee5075defb743401dad3831448cb5687c7f06d5df9dcba3021143c7d`).
+Its 50 native versions retain every exact source locator per branch. Clean
+holds all 22 pending review; Messy omits one, records an invalid blanket-waiver
+marker, then quarantines and backfills while one exception stays open. The
+corrected private V2 handoff explicitly keeps actual HIPAA applicability
+`UNDETERMINED`; ambiguous V1 remains preserved. SH-POL-003's generic
+exception gap is separate and unchanged. No environmental decision, approved
+substitution, implemented safeguard, actual 2027 operation or task credit
+follows. After integration, 12 focused exercise/CompanyStore tests, Ruff and
+native verification passed; private outputs were copied with exact hashes,
+separate inodes and zero shared Btrfs extents.
+
 The active pair's 13-component company-source binding is frozen at activation.
 New native systems needed for the remaining controls cannot be silently added
 to that engagement. A [read-only final-registry gate](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq07-final-source-complete-registry-readonly-plan-v1/PLAN.md)
