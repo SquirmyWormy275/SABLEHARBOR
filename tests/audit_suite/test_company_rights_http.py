@@ -321,3 +321,45 @@ def test_future_source_is_unavailable_by_wall_time(workspace):
     producer.put_record(future, expected_revision=1)
     assert client.get(root + "/records/REC-2027").status_code == 403
     assert client.get(root + "/count?q=Synthetic").json() == {"count": 0}
+
+
+def test_http_rechecks_server_engagement_case_time_before_direct_and_count(workspace, monkeypatch):
+    client, producer, _, person, _, sources, root = workspace
+    client.post("/api/session", json={"credential": person["credential"]})
+    bind(producer, person)
+    future = row("REC-1", "docs/allowed.txt", sources["docs/allowed.txt"], ["read", "count"])
+    future["available_at"] = "2027-08-31T00:00:00+00:00"
+    producer.put_record(future, expected_revision=1)
+
+    approved = {"time": "2028-01-01T00:00:00+00:00"}
+
+    # Test-only independently approved clock, injected as trusted server code.
+    def case_resolver(context):
+        assert context.engagement_id == "ENG-1" and context.person_id == "PERSON-1"
+        return approved["time"]
+
+    producer.case_as_of = case_resolver
+    assert client.get(root + "/records/REC-1").status_code == 200
+    assert client.get(root + "/count?q=Synthetic").json() == {"count": 1}
+
+    original_direct = producer.authorize_disclosure
+
+    def changing_direct(**kwargs):
+        result = original_direct(**kwargs)
+        approved["time"] = "2026-09-22T00:00:00+00:00"
+        return result
+
+    monkeypatch.setattr(producer, "authorize_disclosure", changing_direct)
+    assert client.get(root + "/records/REC-1").status_code == 403
+    monkeypatch.setattr(producer, "authorize_disclosure", original_direct)
+
+    approved["time"] = "2028-01-01T00:00:00+00:00"
+    original_population = producer.visible_population
+
+    def changing_population(**kwargs):
+        result = original_population(**kwargs)
+        approved["time"] = "2026-09-22T00:00:00+00:00"
+        return result
+
+    monkeypatch.setattr(producer, "visible_population", changing_population)
+    assert client.get(root + "/count?q=Synthetic").status_code == 403

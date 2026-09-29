@@ -19,6 +19,7 @@ import sqlite3
 import subprocess
 from collections.abc import Callable
 from contextlib import contextmanager
+from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
 from pathlib import Path, PurePosixPath
 
@@ -49,6 +50,30 @@ SHA256 = re.compile(r"[0-9a-f]{64}\Z")
 
 class RightsUnavailable(ValueError):
     """The producer cannot make an authoritative current assertion."""
+
+
+@dataclass(frozen=True)
+class VerifiedCaseContext:
+    """Server-verified identity for resolving one engagement's case clock."""
+
+    principal_id: str
+    session_id: str
+    engagement_id: str
+    person_id: str
+    tenant: str
+    purpose: str
+
+
+def _case_instant(value: object) -> str:
+    if not isinstance(value, str):
+        raise RightsUnavailable("Trusted engagement case timestamp required")
+    try:
+        instant = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError as exc:
+        raise RightsUnavailable("Trusted engagement case timestamp required") from exc
+    if instant.tzinfo is None or instant.utcoffset() is None:
+        raise RightsUnavailable("Offset-aware engagement case timestamp required")
+    return instant.astimezone(UTC).isoformat()
 
 
 def _text(value: object) -> str:
@@ -122,6 +147,8 @@ class CompanyRightsProducer:
     request body or model tool. The former must return the exact pinned source
     bytes for a repository-relative path; the latter is the accepted company
     information-policy validator. Both are called again before each snapshot.
+    ``case_as_of`` is an optional server-only resolver for this authenticated
+    session's engagement; authority freshness remains on wall time.
     """
 
     def __init__(
@@ -137,6 +164,7 @@ class CompanyRightsProducer:
         validate_record: Callable[[dict], dict],
         decide: Callable[..., str],
         known_person_ids: frozenset[str],
+        case_as_of: Callable[[VerifiedCaseContext], str] | None = None,
     ):
         self.store = store
         self.rights_root = _private_root(rights_root)
@@ -157,6 +185,9 @@ class CompanyRightsProducer:
         self.source_bytes = source_bytes
         self.validate_record = validate_record
         self.decide = decide
+        if case_as_of is not None and not callable(case_as_of):
+            raise RightsUnavailable("Trusted engagement case resolver required")
+        self.case_as_of = case_as_of
         if (
             not isinstance(known_person_ids, frozenset)
             or not known_person_ids
@@ -469,6 +500,96 @@ class CompanyRightsProducer:
             "records": records,
         }
 
+    def _policy_time(self, session_token: str, engagement_id: str, snapshot: dict) -> str:
+        if self.case_as_of is None:
+            return datetime.now(UTC).isoformat()
+        # The resolver receives only the identity recovered from this live
+        # browser session and the same engagement asserted by the snapshot.
+        session = self.store.authenticated_company_session(session_token, engagement_id)
+        assertion = snapshot["assertion"]
+        if (
+            session["session_id"] != assertion["session_id"]
+            or engagement_id != assertion["engagement_id"]
+            or _instant(session["authenticated_at"]) != assertion["authenticated_at"]
+            or _instant(session["expires_at"]) != assertion["expires_at"]
+        ):
+            raise RightsUnavailable("Engagement case identity changed")
+        context = VerifiedCaseContext(
+            principal_id=session["principal_id"],
+            session_id=session["session_id"],
+            engagement_id=engagement_id,
+            person_id=assertion["id"],
+            tenant=assertion["tenant"],
+            purpose=assertion["purpose"],
+        )
+        try:
+            case_time = _case_instant(self.case_as_of(context))
+        except Exception as exc:
+            raise RightsUnavailable("Engagement case clock unavailable") from exc
+        if self.store.authenticated_company_session(session_token, engagement_id) != session:
+            raise RightsUnavailable("Engagement case authentication changed")
+        return case_time
+
+    def case_time(self, *, session_token: str, engagement_id: str) -> str:
+        """Fresh server-only callback for a gateway bound to this same session."""
+        if self.case_as_of is None:
+            raise RightsUnavailable("Engagement case resolver is not configured")
+        before = self.snapshot(session_token=session_token, engagement_id=engagement_id)
+        checkpoint = self.checkpoint()
+        if before["revocation_epoch"] != checkpoint["epoch"]:
+            raise RightsUnavailable("Company rights changed")
+        value = self._policy_time(session_token, engagement_id, before)
+        final_value = self._policy_time(session_token, engagement_id, before)
+        after = self.snapshot(session_token=session_token, engagement_id=engagement_id)
+        latest = self.checkpoint()
+        if (
+            after["rights_revision"] != before["rights_revision"]
+            or after["revocation_epoch"] != before["revocation_epoch"]
+            or latest["epoch"] != checkpoint["epoch"]
+            or after["assertion"] != before["assertion"]
+            or after["records"] != before["records"]
+            or final_value != value
+        ):
+            raise RightsUnavailable("Company rights or case clock changed")
+        return value
+
+    def _authorize_snapshot(
+        self,
+        snapshot: dict,
+        checkpoint: dict,
+        path: str,
+        content: bytes,
+        action: str,
+        at: str,
+    ) -> str:
+        if snapshot["revocation_epoch"] != checkpoint["epoch"]:
+            raise RightsUnavailable("Company rights changed")
+        digest = hashlib.sha256(content).hexdigest()
+        matching = [
+            key
+            for key, row in snapshot["records"].items()
+            if row["repository_path"] == path and row["source_sha256"] == digest
+        ]
+        if len(matching) != 1:
+            raise RightsUnavailable("Company disclosure unavailable")
+        record_id = matching[0]
+        subject = {key: snapshot["assertion"][key] for key in ("id", "tenant", "purpose")}
+        try:
+            outcome = self.decide(
+                snapshot["records"],
+                record_id,
+                subject,
+                action,
+                at,
+                revoked_ids=checkpoint["revoked_ids"],
+                tombstones=checkpoint["tombstones"],
+            )
+        except Exception as exc:
+            raise RightsUnavailable("Company disclosure unavailable") from exc
+        if outcome != "ALLOW":
+            raise RightsUnavailable("Company disclosure unavailable")
+        return record_id
+
     def authorize_disclosure(
         self,
         *,
@@ -490,39 +611,25 @@ class CompanyRightsProducer:
         checkpoint = self.checkpoint()
         if snapshot["revocation_epoch"] != checkpoint["epoch"]:
             raise RightsUnavailable("Company rights changed")
-        digest = hashlib.sha256(content).hexdigest()
-        matching = [
-            key
-            for key, row in snapshot["records"].items()
-            if row["repository_path"] == path and row["source_sha256"] == digest
-        ]
-        if len(matching) != 1:
-            raise RightsUnavailable("Company disclosure unavailable")
-        record_id = matching[0]
-        subject = {key: snapshot["assertion"][key] for key in ("id", "tenant", "purpose")}
-        now = datetime.now(UTC).isoformat()
-        try:
-            outcome = self.decide(
-                snapshot["records"],
-                record_id,
-                subject,
-                action,
-                now,
-                revoked_ids=checkpoint["revoked_ids"],
-                tombstones=checkpoint["tombstones"],
-            )
-        except Exception as exc:
-            raise RightsUnavailable("Company disclosure unavailable") from exc
-        if outcome != "ALLOW":
-            raise RightsUnavailable("Company disclosure unavailable")
+        at = self._policy_time(session_token, engagement_id, snapshot)
+        record_id = self._authorize_snapshot(snapshot, checkpoint, path, content, action, at)
+        # Resolve the final case clock before the last fresh authority read: a
+        # resolver that revokes rights during its own call must not pass.
+        final_at = self._policy_time(session_token, engagement_id, snapshot)
         after = self.snapshot(session_token=session_token, engagement_id=engagement_id)
         latest = self.checkpoint()
         if (
             after["rights_revision"] != snapshot["rights_revision"]
             or after["revocation_epoch"] != snapshot["revocation_epoch"]
             or latest["epoch"] != checkpoint["epoch"]
+            or after["assertion"] != snapshot["assertion"]
+            or after["records"] != snapshot["records"]
         ):
             raise RightsUnavailable("Company rights changed")
+        if self.case_as_of is not None and final_at != at:
+            raise RightsUnavailable("Engagement case clock changed")
+        if self._authorize_snapshot(after, latest, path, content, action, final_at) != record_id:
+            raise RightsUnavailable("Company disclosure changed")
         return record_id
 
     def visible_population(
@@ -535,32 +642,80 @@ class CompanyRightsProducer:
         complete: bool,
     ) -> list[dict]:
         """Filter a complete candidate set before snippets, ranking, paging or counts."""
-        if complete is not True or not isinstance(candidates, list):
+        if (
+            complete is not True
+            or not isinstance(candidates, list)
+            or not isinstance(action, str)
+            or action not in DISCLOSURE_ACTIONS
+        ):
             raise RightsUnavailable("Complete source population required")
-        start = self.snapshot(session_token=session_token, engagement_id=engagement_id)
-        result = []
-        for candidate in candidates:
-            if (
-                not isinstance(candidate, dict)
-                or set(candidate) != {"path", "content"}
-                or not isinstance(candidate["content"], bytes)
-            ):
+        # Candidate dictionaries belong to the caller and may be mutated by a
+        # source callback. Copy their exact immutable identities before any
+        # policy work and return only copies built from these frozen values.
+        frozen = []
+        for candidate in tuple(candidates):
+            if not isinstance(candidate, dict) or set(candidate) != {"path", "content"}:
                 raise RightsUnavailable("Exact source candidate required")
+            try:
+                path, content = _path(candidate["path"]), candidate["content"]
+            except (KeyError, RightsUnavailable) as exc:
+                raise RightsUnavailable("Exact source candidate required") from exc
+            if not isinstance(content, bytes):
+                raise RightsUnavailable("Exact source candidate required")
+            frozen.append((str(path), bytes(content)))
+        if len(frozen) != len(candidates):
+            raise RightsUnavailable("Source candidate population changed")
+        start = self.snapshot(session_token=session_token, engagement_id=engagement_id)
+        checkpoint = self.checkpoint()
+        if start["revocation_epoch"] != checkpoint["epoch"]:
+            raise RightsUnavailable("Company rights changed")
+        start_at = self._policy_time(session_token, engagement_id, start)
+        result = []
+        visible_indices = []
+        for index, (path, content) in enumerate(frozen):
             try:
                 self.authorize_disclosure(
                     session_token=session_token,
                     engagement_id=engagement_id,
-                    path=candidate["path"],
-                    content=candidate["content"],
+                    path=path,
+                    content=content,
                     action=action,
                 )
             except RightsUnavailable:
                 continue
-            result.append(candidate)
+            result.append({"path": path, "content": content})
+            visible_indices.append(index)
+        end_at = self._policy_time(session_token, engagement_id, start)
         end = self.snapshot(session_token=session_token, engagement_id=engagement_id)
+        latest = self.checkpoint()
         if (
             end["rights_revision"] != start["rights_revision"]
             or end["revocation_epoch"] != start["revocation_epoch"]
+            or latest["epoch"] != checkpoint["epoch"]
+            or end["assertion"] != start["assertion"]
+            or end["records"] != start["records"]
         ):
             raise RightsUnavailable("Company rights changed")
+        if self.case_as_of is not None and end_at != start_at:
+            raise RightsUnavailable("Engagement case clock changed")
+        final_indices = []
+        for index, (path, content) in enumerate(frozen):
+            try:
+                self._authorize_snapshot(end, latest, path, content, action, end_at)
+            except RightsUnavailable:
+                continue
+            final_indices.append(index)
+        if final_indices != visible_indices:
+            raise RightsUnavailable("Company visible population changed")
+        if len(candidates) != len(frozen):
+            raise RightsUnavailable("Source candidate population changed")
+        for candidate, (path, content) in zip(candidates, frozen, strict=True):
+            if (
+                not isinstance(candidate, dict)
+                or set(candidate) != {"path", "content"}
+                or candidate["path"] != path
+                or not isinstance(candidate["content"], bytes)
+                or bytes(candidate["content"]) != content
+            ):
+                raise RightsUnavailable("Source candidate population changed")
         return result

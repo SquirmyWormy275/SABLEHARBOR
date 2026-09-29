@@ -1,7 +1,10 @@
 """Portal producer contract; no test grant is inferred from an audit role."""
 
 import hashlib
+import json
 import sqlite3
+import time
+from datetime import datetime
 
 import pytest
 
@@ -9,8 +12,10 @@ from enterprise.audit_suite.company_rights_producer import (
     AUDIENCE,
     CompanyRightsProducer,
     RightsUnavailable,
+    VerifiedCaseContext,
     pinned_git_source_reader,
 )
+from enterprise.audit_suite.engine import COLLECTIONS, Engine
 from enterprise.audit_suite.store import DomainError, Store
 
 CONTENT = b"synthetic company record\n"
@@ -358,6 +363,369 @@ def test_rights_change_during_population_filter_fails_whole_result(setup, monkey
             candidates=[{"path": "docs/source.txt", "content": CONTENT}],
             action="count",
             complete=True,
+        )
+
+
+def temporal_decide(records, record_id, subject, action, at, *, revoked_ids, tombstones):
+    row = records[record_id]
+    moment = datetime.fromisoformat(at)
+    if moment < datetime.fromisoformat(row["available_at"]):
+        return "DENY"
+    if moment < datetime.fromisoformat(row["effective_at"]):
+        return "DENY"
+    if not any(
+        moment >= datetime.fromisoformat(grant["start"])
+        and (grant["end"] is None or moment < datetime.fromisoformat(grant["end"]))
+        for grant in row["grants"]
+    ):
+        return "DENY"
+    return policy_decide(
+        records,
+        record_id,
+        subject,
+        action,
+        at,
+        revoked_ids=revoked_ids,
+        tombstones=tombstones,
+    )
+
+
+def case_producer(setup, *, resolver=None, decider=temporal_decide):
+    original, store, _, _, policy, _ = setup
+    return CompanyRightsProducer(
+        store=store,
+        rights_root=original.rights_root,
+        checkpoint_root=original.checkpoint_root,
+        policy_file=policy,
+        policy_sha256=original.policy_sha256,
+        source_commit=COMMIT,
+        source_bytes=original.source_bytes,
+        validate_record=policy_validator,
+        decide=decider,
+        known_person_ids=original.known_person_ids,
+        case_as_of=resolver,
+    )
+
+
+def set_case_time(store, value):
+    state = {"id": "ENG-1"}
+    if value is not None:
+        state["simulated_at"] = value
+    with store.connect() as db:
+        db.execute("UPDATE engagements SET state=? WHERE id='ENG-1'", (json.dumps(state),))
+
+
+def future_case(setup):
+    original, store, _, _, _, _ = setup
+    populated(setup, actions=["read", "count"])
+    future = record(actions=["read", "count"])
+    future["available_at"] = future["effective_at"] = "2027-08-31T00:00:00+00:00"
+    future["grants"][0]["start"] = "2027-08-31T00:00:00+00:00"
+    original.put_record(future, expected_revision=2)
+    set_case_time(store, "2028-01-01T00:00:00+00:00")
+    return {"time": "2028-01-01T00:00:00+00:00"}
+
+
+def approved_resolver(store, session, approved):
+    expected_session = store._key_hash(session["token"])
+
+    def resolve(context):
+        if context.session_id != expected_session or context.engagement_id != "ENG-1":
+            raise RightsUnavailable("Approved case identity mismatch")
+        return approved.get("time")
+
+    return resolve
+
+
+def test_verified_engagement_case_time_allows_future_record_with_fresh_wall_authority(setup):
+    original, store, principal, session, _, _ = setup
+    approved = future_case(setup)
+    wall = case_producer(setup, resolver=None)
+    with pytest.raises(RightsUnavailable):
+        wall.authorize_disclosure(
+            session_token=session["token"],
+            engagement_id="ENG-1",
+            path="docs/source.txt",
+            content=CONTENT,
+            action="read",
+        )
+    seen = []
+
+    trusted = approved_resolver(store, session, approved)
+
+    def verified_resolver(context):
+        seen.append(context)
+        return trusted(context)
+
+    producer = case_producer(setup, resolver=verified_resolver)
+    assert (
+        producer.authorize_disclosure(
+            session_token=session["token"],
+            engagement_id="ENG-1",
+            path="docs/source.txt",
+            content=CONTENT,
+            action="read",
+        )
+        == "REC-1"
+    )
+    assert producer.visible_population(
+        session_token=session["token"],
+        engagement_id="ENG-1",
+        candidates=[{"path": "docs/source.txt", "content": CONTENT}],
+        action="count",
+        complete=True,
+    ) == [{"path": "docs/source.txt", "content": CONTENT}]
+    assert producer.case_time(session_token=session["token"], engagement_id="ENG-1") == (
+        "2028-01-01T00:00:00+00:00"
+    )
+    assert seen and all(isinstance(context, VerifiedCaseContext) for context in seen)
+    assert all(context.principal_id == principal["id"] for context in seen)
+    assert all(context.session_id == store._key_hash(session["token"]) for context in seen)
+    assert all(
+        context.engagement_id == "ENG-1" and context.person_id == "PERSON-1" for context in seen
+    )
+    assert original.case_as_of is None
+
+
+def test_case_time_cannot_refresh_expired_wall_session_or_restored_rights(setup):
+    _, store, _, session, _, _ = setup
+    approved = future_case(setup)
+    producer = case_producer(setup, resolver=approved_resolver(store, session, approved))
+    with store.connect() as db:
+        db.execute(
+            "UPDATE sessions SET expires=? WHERE token_hash=?",
+            (time.time() - 1, store._key_hash(session["token"])),
+        )
+    with pytest.raises(DomainError):
+        producer.authorize_disclosure(
+            session_token=session["token"],
+            engagement_id="ENG-1",
+            path="docs/source.txt",
+            content=CONTENT,
+            action="read",
+        )
+    with store.connect() as db:
+        db.execute(
+            "UPDATE sessions SET expires=? WHERE token_hash=?",
+            (time.time() + 3600, store._key_hash(session["token"])),
+        )
+    with sqlite3.connect(producer.checkpoint_db) as db:
+        db.execute("UPDATE state SET rights_revision=2")
+    with pytest.raises(RightsUnavailable, match="restored"):
+        producer.authorize_disclosure(
+            session_token=session["token"],
+            engagement_id="ENG-1",
+            path="docs/source.txt",
+            content=CONTENT,
+            action="read",
+        )
+
+
+def test_invalid_or_missing_server_case_time_fails_closed(setup):
+    _, store, _, session, _, _ = setup
+    approved = future_case(setup)
+    producer = case_producer(setup, resolver=approved_resolver(store, session, approved))
+    for value in ("2028-01-01", "not-an-instant", None):
+        approved["time"] = value
+        with pytest.raises(RightsUnavailable, match="case clock"):
+            producer.authorize_disclosure(
+                session_token=session["token"],
+                engagement_id="ENG-1",
+                path="docs/source.txt",
+                content=CONTENT,
+                action="read",
+            )
+
+
+def test_case_time_change_during_direct_disclosure_fails_closed(setup):
+    _, store, _, session, _, _ = setup
+    approved = future_case(setup)
+    calls = 0
+
+    def changing_decider(*args, **kwargs):
+        nonlocal calls
+        calls += 1
+        result = temporal_decide(*args, **kwargs)
+        if calls == 1:
+            approved["time"] = "2026-09-22T00:00:00+00:00"
+        return result
+
+    producer = case_producer(
+        setup, resolver=approved_resolver(store, session, approved), decider=changing_decider
+    )
+    with pytest.raises(RightsUnavailable, match="case clock changed"):
+        producer.authorize_disclosure(
+            session_token=session["token"],
+            engagement_id="ENG-1",
+            path="docs/source.txt",
+            content=CONTENT,
+            action="read",
+        )
+    assert calls == 1
+
+
+def test_case_time_change_during_complete_population_discards_count(setup, monkeypatch):
+    _, store, _, session, _, _ = setup
+    approved = future_case(setup)
+    producer = case_producer(setup, resolver=approved_resolver(store, session, approved))
+    original = producer.authorize_disclosure
+
+    def changing(**kwargs):
+        result = original(**kwargs)
+        approved["time"] = "2026-09-22T00:00:00+00:00"
+        return result
+
+    monkeypatch.setattr(producer, "authorize_disclosure", changing)
+    with pytest.raises(RightsUnavailable, match="case clock changed"):
+        producer.visible_population(
+            session_token=session["token"],
+            engagement_id="ENG-1",
+            candidates=[{"path": "docs/source.txt", "content": CONTENT}],
+            action="count",
+            complete=True,
+        )
+
+
+@pytest.mark.parametrize("operation", ["direct", "population", "case_time"])
+def test_final_case_callback_cannot_revoke_rights_after_last_check(setup, operation):
+    _, store, _, session, _, _ = setup
+    approved = future_case(setup)
+    calls = 0
+    producer = None
+    trusted = approved_resolver(store, session, approved)
+    revoke_on = {"direct": 2, "population": 4, "case_time": 2}[operation]
+
+    def revoking_resolver(context):
+        nonlocal calls
+        calls += 1
+        if calls == revoke_on:
+            producer.set_person_revoked("PERSON-1", revoked=True)
+        return trusted(context)
+
+    producer = case_producer(setup, resolver=revoking_resolver)
+    with pytest.raises(RightsUnavailable):
+        if operation == "direct":
+            producer.authorize_disclosure(
+                session_token=session["token"],
+                engagement_id="ENG-1",
+                path="docs/source.txt",
+                content=CONTENT,
+                action="read",
+            )
+        elif operation == "population":
+            producer.visible_population(
+                session_token=session["token"],
+                engagement_id="ENG-1",
+                candidates=[{"path": "docs/source.txt", "content": CONTENT}],
+                action="count",
+                complete=True,
+            )
+        else:
+            producer.case_time(session_token=session["token"], engagement_id="ENG-1")
+    assert calls >= revoke_on
+
+
+def test_mutated_candidate_cannot_change_disclosed_population(setup, monkeypatch):
+    producer, _, _, session, _, _ = setup
+    populated(setup, actions=["count"])
+    candidate = {"path": "docs/source.txt", "content": CONTENT}
+    original = producer.authorize_disclosure
+
+    def changing(**kwargs):
+        result = original(**kwargs)
+        candidate["content"] = b"unclassified changed bytes"
+        return result
+
+    monkeypatch.setattr(producer, "authorize_disclosure", changing)
+    with pytest.raises(RightsUnavailable, match="candidate population changed"):
+        producer.visible_population(
+            session_token=session["token"],
+            engagement_id="ENG-1",
+            candidates=[candidate],
+            action="count",
+            complete=True,
+        )
+
+
+def test_learner_clock_advance_does_not_create_approved_company_case_time(tmp_path):
+    engine = Engine(tmp_path / "runtime")
+    learner = engine.store.provision("Scenario learner", ["learner"])
+    state = {key: [] for key in COLLECTIONS}
+    state.update(
+        title="Case clock boundary",
+        phase="ACTIVE",
+        simulated_at="2027-01-03T09:00:00+00:00",
+        scope={
+            "period_start": "2027-01-01",
+            "period_end": "2027-12-31",
+            "timezone": "UTC",
+            "boundaries": ["unit"],
+        },
+        controls=[{"id": "C1", "owner_ids": ["P1"], "implementation_version": "v1"}],
+        people=[{"id": "P1"}],
+    )
+    created = engine.store.create(learner["id"], state, "create")
+    session = engine.store.login(learner["credential"])
+    rights_root, checkpoint_root = tmp_path / "rights", tmp_path / "checkpoint"
+    rights_root.mkdir(mode=0o700)
+    checkpoint_root.mkdir(mode=0o700)
+    policy = tmp_path / "policy.json"
+    policy.write_text('{"accepted":"test-only"}')
+    common = dict(
+        store=engine.store,
+        rights_root=rights_root,
+        checkpoint_root=checkpoint_root,
+        policy_file=policy,
+        policy_sha256=hashlib.sha256(policy.read_bytes()).hexdigest(),
+        source_commit=COMMIT,
+        source_bytes=lambda path: CONTENT,
+        validate_record=policy_validator,
+        decide=temporal_decide,
+        known_person_ids=frozenset({"PERSON-1"}),
+    )
+    producer = CompanyRightsProducer(**common)
+    producer.bind_person(
+        principal_id=learner["id"],
+        engagement_id=created["id"],
+        person_id="PERSON-1",
+        tenant="SH",
+        purpose="inspection",
+        expected_revision=0,
+    )
+    future = record(actions=["read"])
+    future["available_at"] = future["effective_at"] = "2028-01-05T00:00:00+00:00"
+    future["grants"][0]["start"] = "2028-01-05T00:00:00+00:00"
+    producer.put_record(future, expected_revision=1)
+    advanced = engine.command(
+        learner["id"],
+        created["id"],
+        {
+            "command_id": "learner-advance",
+            "expected_revision": created["revision"],
+            "kind": "clock.advance",
+            "payload": {"mode": "TARGET_DATE", "target": "2028-01-10"},
+        },
+    )
+    assert advanced["simulated_at"].startswith("2028-01-10")
+    with pytest.raises(RightsUnavailable):
+        producer.authorize_disclosure(
+            session_token=session["token"],
+            engagement_id=created["id"],
+            path="docs/source.txt",
+            content=CONTENT,
+            action="read",
+        )
+    approved = {}
+    verified = CompanyRightsProducer(
+        **common, case_as_of=lambda context: approved.get(context.engagement_id)
+    )
+    with pytest.raises(RightsUnavailable, match="case clock"):
+        verified.authorize_disclosure(
+            session_token=session["token"],
+            engagement_id=created["id"],
+            path="docs/source.txt",
+            content=CONTENT,
+            action="read",
         )
 
 

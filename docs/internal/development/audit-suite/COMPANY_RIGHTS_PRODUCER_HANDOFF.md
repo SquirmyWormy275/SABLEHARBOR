@@ -116,11 +116,52 @@ Concrete integration points for that owner:
    does not establish that those paths are gated.
 
 The portal's A/B engagements simulate 2027 activity, sometimes viewed in
-2028, while the real server clock is September 2026. This adapter and the
-current private gateway use wall time for fresh session/revocation authority
-and for `information_policy.decide` record availability. Consequently a
-record whose `available_at` is in simulated 2027 is denied now. Do not pass a
-fictional 2028 `now` to make a five-minute 2026 authority snapshot appear
-valid. Full scenario-time disclosure needs a reviewed policy contract with
-separate trusted wall-time freshness and an engagement-derived case-as-of for
-record eligibility, plus tests for both clocks.
+2028, while the real server clock is September 2026. Snapshot, checkpoint and
+browser-session freshness always use wall time. Without a configured case
+resolver, policy availability also uses wall time, so a future scenario record
+remains denied. Do not pass a fictional 2028 wall `now` to make a five-minute
+2026 authority snapshot appear valid.
+
+The optional `CompanyRightsProducer(case_as_of=...)` receives an immutable
+`VerifiedCaseContext` built from the same live portal session and engagement
+as the rights snapshot. There is **no default resolver** and no resolver that
+reads `Store.simulated_at` directly. A missing or malformed approved timestamp
+fails closed. The producer re-reads case time, then authority, and re-evaluates
+policy before direct disclosure and complete-population results. Candidate
+path/bytes are frozen before filtering; mutated caller candidates fail closed.
+The HTTP adapter repeats the case-time check before its response. With no
+resolver, wall time remains the policy time. No HTTP parameter, model argument,
+global process clock or CompanyStore system grant supplies case time or record
+rights.
+
+The private gateway's merged two-clock increment is
+`fb207339` (private PR #9). To bind its constructor-only `case_as_of` callback,
+the service owner must create a closure for the **same already-authenticated
+session token and engagement ID** used by the gateway snapshot callback, for
+example a closure that calls
+`producer.case_time(session_token=token, engagement_id=engagement_id)`.
+The gateway still checks its own snapshot/checkpoint freshness against wall
+time and rechecks case time before return. The producer's own portal read
+uses no request-supplied decision time.
+
+In this branch, an authorized `learn` or `instruct` member can issue
+`clock.advance` for an active engagement. Its resulting `simulated_at` is
+learner-influenced and cannot silently unlock company records. Before enabling
+case-time disclosure, the owner must define an administrator/instructor
+approved progression signal with explicit authority, engagement binding,
+provenance, revision and freshness, separate from ordinary learner clock
+advancement. The resolver must read that reviewed signal and reject missing,
+stale or changed approval. The case date controls policy eligibility only; it
+does not establish that a forecast is a completed real company fact. Neither
+this resolver nor the private gateway is wired into live portal/Daedalus
+service launch paths by this isolated commit.
+
+Isolated validation: focused producer, HTTP, company service and service tests
+passed (37 tests). A separate cross-repo smoke with public accepted policy
+`fbbdff203c03871fee1a3db876b4b91517903462`, this portal tree based on
+`a433b5a9`, and private merged gateway `fb2073397e28e0269c2166526b19c60f67986720`
+passed a future-case positive direct read plus a missing-approved-clock denial
+through both producer and gateway. The approved clock in that smoke was a
+test-only private callback; it does not establish a live approval ledger.
+That smoke exercises the accepted
+`information_policy.decide`, not the local test stand-in.

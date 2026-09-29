@@ -55,17 +55,27 @@ class CompanyRightsHTTP:
             candidates.append({"path": path, "content": content})
         return snap, candidates, identities
 
-    def _recheck(self, token: str, engagement_id: str, original: dict):
+    def _case_time(self, token: str, engagement_id: str) -> str | None:
+        if self.producer.case_as_of is None:
+            return None
+        return self.producer.case_time(session_token=token, engagement_id=engagement_id)
+
+    def _recheck(self, token: str, engagement_id: str, original: dict, case_time: str | None):
         latest = self._snapshot(token, engagement_id)
         if (
             latest["rights_revision"] != original["rights_revision"]
             or latest["revocation_epoch"] != original["revocation_epoch"]
+            or latest["assertion"] != original["assertion"]
+            or latest["records"] != original["records"]
         ):
             raise RightsUnavailable("Company rights changed")
+        if case_time is not None and self._case_time(token, engagement_id) != case_time:
+            raise RightsUnavailable("Engagement case clock changed")
 
     def direct(self, *, token: str, engagement_id: str, record_id: str, action: str) -> bytes:
         record_id = _text(record_id)
         snap = self._snapshot(token, engagement_id)
+        case_time = self._case_time(token, engagement_id)
         row = snap["records"].get(record_id)
         if row is None:
             raise RightsUnavailable("Company record unavailable")
@@ -84,13 +94,14 @@ class CompanyRightsHTTP:
         )
         if authorized != record_id:
             raise RightsUnavailable("Company record changed")
-        self._recheck(token, engagement_id, snap)
+        self._recheck(token, engagement_id, snap, case_time)
         return content
 
     def visible(self, *, token: str, engagement_id: str, action: str, query: str):
         if not isinstance(query, str) or len(query) > 160:
             raise RightsUnavailable("Bounded search query required")
         snap, candidates, identities = self._complete_population(token, engagement_id)
+        case_time = self._case_time(token, engagement_id)
         allowed = self.producer.visible_population(
             session_token=token,
             engagement_id=engagement_id,
@@ -104,5 +115,5 @@ class CompanyRightsHTTP:
             if query in item["content"].decode("utf-8", errors="replace").casefold():
                 key = (item["path"], hashlib.sha256(item["content"]).hexdigest())
                 result.append(identities[key])
-        self._recheck(token, engagement_id, snap)
+        self._recheck(token, engagement_id, snap, case_time)
         return sorted(result)
