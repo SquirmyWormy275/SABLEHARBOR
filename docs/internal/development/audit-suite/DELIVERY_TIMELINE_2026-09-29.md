@@ -12,6 +12,9 @@ model redesign. The reviewed task inventory is 409 procedures per branch;
 283 per branch route through further company-native discovery or period
 activity across 43 controls. The current 13-component pair is a technical
 baseline with all tasks uncredited and cannot absorb new source systems.
+The workload estimate is 20–40 focused builder-weeks before review rework;
+the calendar below requires that capacity to be sustained. Intermittent
+Codex sessions or a single builder do not imply the same elapsed dates.
 
 | Target | Deliverable and exit evidence |
 |---|---|
