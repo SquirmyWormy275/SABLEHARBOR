@@ -150,5 +150,9 @@ preservation checks confirmed browsing did not change original audits or
 company sources. The successor's independent output review passed against
 A1934/B2060 and its pinned receipt set; its separate offline browser check
 passed at desktop and narrow widths with exact-data and no-HTTP assertions.
+Their receipts are in private `integrated-review-packet-refresh-output-independent-v1/`
+and `integrated-review-packet-refresh-browser-independent-v1/`. The frozen
+packet author's `REFRESH-RECEIPT.json` still says independent review was
+pending when it was written; the later independent receipts are separate.
 These checks do not replace review of the procedures or owner
 acceptance of the audit workspace.
