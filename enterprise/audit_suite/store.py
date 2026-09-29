@@ -54,7 +54,8 @@ class Store:
               revoked INTEGER NOT NULL DEFAULT 0);
             CREATE TABLE IF NOT EXISTS sessions (
               token_hash TEXT PRIMARY KEY, principal TEXT NOT NULL REFERENCES principals(id),
-              csrf TEXT NOT NULL, expires REAL NOT NULL);
+              csrf TEXT NOT NULL, expires REAL NOT NULL,
+              authenticated_at REAL);
             CREATE TABLE IF NOT EXISTS engagements (
               id TEXT PRIMARY KEY, revision INTEGER NOT NULL, state TEXT NOT NULL);
             CREATE TABLE IF NOT EXISTS members (
@@ -72,6 +73,11 @@ class Store:
             CREATE TRIGGER IF NOT EXISTS events_no_delete BEFORE DELETE ON events
               BEGIN SELECT RAISE(ABORT,'events are immutable'); END;
             """)
+            # Existing sessions predate the company assertion. Their missing
+            # authentication time deliberately prevents use as company identity.
+            columns = {row[1] for row in db.execute("PRAGMA table_info(sessions)")}
+            if "authenticated_at" not in columns:
+                db.execute("ALTER TABLE sessions ADD COLUMN authenticated_at REAL")
         os.chmod(self.db_path, 0o600)
 
     def connect(self) -> sqlite3.Connection:
@@ -116,12 +122,47 @@ class Store:
     def login(self, credential: str) -> dict:
         p = self.authenticate(credential)
         token, csrf = secrets.token_urlsafe(32), secrets.token_urlsafe(32)
+        now = time.time()
         with self.connect() as db:
             db.execute(
-                "INSERT INTO sessions VALUES (?,?,?,?)",
-                (self._key_hash(token), p["id"], csrf, time.time() + 3600),
+                "INSERT INTO sessions(token_hash,principal,csrf,expires,authenticated_at) "
+                "VALUES (?,?,?,?,?)",
+                (self._key_hash(token), p["id"], csrf, now + 3600, now),
             )
         return {"token": token, "csrf": csrf, "viewer": p}
+
+    def authenticated_company_session(self, token: str, engagement_id: str) -> dict:
+        """Server-side browser session and current engagement membership only.
+
+        A bearer provisioning credential has no session ID and cannot be used
+        for company disclosure. Tenant, purpose and company person come from a
+        separate explicit binding, never from this audit principal's roles.
+        """
+        if not isinstance(token, str) or not token:
+            raise DomainError("Authenticated session required", status=401)
+        with self.connect() as db:
+            row = db.execute(
+                "SELECT s.token_hash,s.principal,s.expires,s.authenticated_at,p.expires "
+                "AS principal_expires FROM sessions s JOIN principals p ON p.id=s.principal "
+                "WHERE s.token_hash=?",
+                (self._key_hash(token),),
+            ).fetchone()
+            now = time.time()
+            if (
+                not row
+                or row["authenticated_at"] is None
+                or not row["authenticated_at"]
+                <= now
+                < min(row["expires"], row["principal_expires"])
+            ):
+                raise DomainError("Authenticated session required", status=401)
+            self._authorize(db, row["principal"], engagement_id)
+            return {
+                "session_id": row["token_hash"],
+                "principal_id": row["principal"],
+                "authenticated_at": row["authenticated_at"],
+                "expires_at": min(row["expires"], row["principal_expires"]),
+            }
 
     def session(self, token: str, *, csrf: str | None = None, mutation: bool = False) -> dict:
         with self.connect() as db:
