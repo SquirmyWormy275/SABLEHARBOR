@@ -52,3 +52,75 @@ Focused validation: `PYTHONPATH=.:src python -m pytest -q
 tests/audit_suite/test_company_rights_producer.py tests/audit_suite/test_store.py`
 and `ruff check` on changed Python files. See the branch commit receipt for
 the exact outcome and cross-repo gateway smoke pins.
+
+## Opt-in portal HTTP boundary
+
+The follow-on `company_rights_http.py` adapter is mounted by
+`service.create_app(company_rights_factory=...)`. The trusted factory receives
+that app's `Engine` and must return a producer using the identical portal
+`Store`; there is no CLI or default factory. The new `/company/rights/` route
+family requires this portal's authenticated browser cookie. Bearer credentials,
+request parameters and model arguments cannot supply a company person,
+tenant, purpose or decision time. Missing configuration, mapping, record,
+grant, policy pin or source bytes stops disclosure.
+
+| New route suffix | Required policy action | Response |
+| --- | --- | --- |
+| `records/{record_id}` | `read` | Exact pinned bytes |
+| `records/{record_id}/snippet` | `snippet` | First 160 UTF-8 characters |
+| `records/{record_id}/export` | `export` | Exact pinned download |
+| `search?q=...` | `search` | Record IDs after rights filtering and paging |
+| `count?q=...` | `count` | Count after rights filtering |
+
+Search and count enumerate all registered policy records, verify each exact
+path/hash, filter the complete bounded population, then apply text matching
+and paging. The boundary caps that population at 512 records and 25 MiB; an
+over-limit population fails closed. It does not silently convert a native
+CompanyStore `source_reference` into a repository path: many such references
+are activity IDs. Explicit policy rows are the only source catalog here.
+
+This route family is an isolated disclosure slice, not a replacement for
+existing audit-training workflows. The legacy `/company/systems`, native
+record discovery and `company.collect` routes retain their distinct audit
+engagement authority. They must not be exposed as Daedalus record entitlements.
+The integration owner must add an exact native-record-to-policy-ID closure
+before using this boundary for those routes, retained company artifacts,
+source impact/disposition, packages or exports. The private Alexandria Library
+and Daedalus model, tool, memory and conversation paths remain separate
+integration work; the private gateway's route inventory remains controlling.
+
+Concrete integration points for that owner:
+
+1. `enterprise/audit_suite/__main__.py` `serve` must load a private, reviewed
+   producer configuration and pass a trusted `company_rights_factory` to
+   `service.create_app`. The launch path must pin the accepted policy bytes,
+   public source revision, company person census, explicit principal mapping,
+   per-record grants and independent checkpoint root. No HTTP field can fill
+   one of those inputs.
+2. `enterprise/audit_suite/company_collection.py` must map each native
+   `(company, branch, system, record, version, sha256)` to a stable policy
+   record ID, exact source bytes and transitive source IDs. There is no such
+   reviewed mapping in this branch. Reject missing mappings; do not infer one
+   from `provenance.source_reference` or a system grant.
+3. `enterprise/audit_suite/service.py` must apply the same decision to the
+   legacy company discovery routes, collection command output, source impact
+   and disposition inputs, artifact downloads and any derived work that can
+   disclose a company source. Pagination and counts must follow a complete
+   authorized population. `enterprise/audit_suite/recovery.py` must keep the
+   independent checkpoint outside the restored rights database and test an
+   older-backup restore.
+4. The private Alexandria owner must bind the gateway across every route in
+   `docs/DAEDALUS_COMPANY_RIGHTS_HANDOFF.md` in the private repository, then
+   run positive and denied live HTTP/model, prompt, derivative, export and
+   private Control exclusion tests. Passing this portal adapter's HTTP tests
+   does not establish that those paths are gated.
+
+The portal's A/B engagements simulate 2027 activity, sometimes viewed in
+2028, while the real server clock is September 2026. This adapter and the
+current private gateway use wall time for fresh session/revocation authority
+and for `information_policy.decide` record availability. Consequently a
+record whose `available_at` is in simulated 2027 is denied now. Do not pass a
+fictional 2028 `now` to make a five-minute 2026 authority snapshot appear
+valid. Full scenario-time disclosure needs a reviewed policy contract with
+separate trusted wall-time freshness and an engagement-derived case-as-of for
+record eligibility, plus tests for both clocks.
