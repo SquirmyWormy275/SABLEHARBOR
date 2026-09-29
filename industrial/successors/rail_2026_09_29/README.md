@@ -31,3 +31,23 @@ The builder exports `source/operations.json`, `source/geography/network.geojson`
 ## Source locks and unresolved boundary
 
 `industrial/planning/source/preservation.json` and `geospatial/sources/catalog.json` continue pinning the original operations/network bytes. The default `industrial/tools/build_operations.py` build was independently run before and after the source-dir selector change: all **32 output files were byte-identical**. The new selector has a separate output guard and 155 operating reconciliation checks. The historical 1898/1954 centerline candidate remains a separate #107B scope and must never be described as a recovered survey or a real land right.
+
+The controlled-publications builder was run with `--normalizer pypdf`: it verified and retained its 131 configured current PDFs, but its selector omits 15 already accepted historical publication-manifest pairs. This rail-only PR changes no controlled publication source, so the existing 146-pair manifest was preserved byte-for-byte. The omitted pairs are exactly:
+
+| Source | Historical publication |
+|---|---|
+| `docs/internal/company-closeout/INSPECTION_GUIDE_v1.2.0.md` | `docs/finance/publications/SH-COMPANY-INSPECTION-20260922_v1.2.0.pdf` |
+| `docs/canon/J2_PERSONNEL_COMPLETION_2026-09-22.md` | `docs/governance/publications/SH-J2-PERSONNEL-20260922_v1.0.0.pdf` |
+| `docs/canon/ARU_ADMINISTRATIVE_COMPLETION_2026-09-22.md` | `docs/legal/publications/SH-ARU-ADMIN-20260922_v1.0.0.pdf` |
+| `docs/canon/ADVISORY_LEGAL_IMPLEMENTATION_2026-09-22.md` | `docs/legal/publications/SH-ADVISORY-LEGAL-20260922_v1.0.0.pdf` |
+| `docs/j2/alexandria/COMPANY_INFORMATION_POLICY_IMPLEMENTATION_2026-09-22.md` | `docs/governance/publications/SH-INFORMATION-POLICY-20260922_v1.0.0.pdf` |
+| `docs/internal/company-closeout/INSPECTION_GUIDE_v1.1.0.md` | `docs/finance/publications/SH-COMPANY-INSPECTION-20260922_v1.1.0.pdf` |
+| `docs/canon/ARU_SECURED_FINANCING_SUCCESSOR_2026-09-22.md` | `docs/finance/publications/SH-ARU-SECURED-20260922_v1.0.0.pdf` |
+| `docs/canon/CAPITAL_DESIGNATION_RIGHTS_2026-09-22.md` | `docs/governance/publications/SH-CAP-RIGHTS-20260922_v1.0.0.pdf` |
+| `docs/canon/CRADLE_HOST_TERMS_2026-09-22.md` | `docs/legal/host-successor/publications/SH-HOST-B-ADOPTION-20260922_v1.0.0.pdf` |
+| `docs/legal/host-successor/KGM_B_2026-09-22.md` | `docs/legal/host-successor/publications/SH-HOST-KGM-B-20260922_v1.0.0.pdf` |
+| `docs/legal/host-successor/DEMOTTE_B_2026-09-22.md` | `docs/legal/host-successor/publications/SH-HOST-DEMOTTE-B-20260922_v1.0.0.pdf` |
+| `docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md` | `docs/governance/publications/SH-COMPANY-DIRECTIONS-20260915_v1.2.0.pdf` |
+| `docs/internal/company-closeout/INSPECTION_GUIDE.md` | `docs/finance/publications/SH-COMPANY-INSPECTION-20260915_v1.0.0.pdf` |
+| `docs/finance/evidence/company-closeout/SOVEREIGNTY_METHOD.md` | `docs/finance/publications/SH-COMPANY-SOVEREIGNTY-20260915_v1.0.0.pdf` |
+| `docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md` | `docs/finance/publications/SH-COMPANY-PARENT-TAX-20260915_v2.0.0.pdf` |

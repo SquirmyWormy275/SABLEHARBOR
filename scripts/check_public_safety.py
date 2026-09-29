@@ -14,8 +14,8 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # handoff and both rail source/sensitivity receipts; prior bytes remain in Git.
     # Exact bytes only: no general allowance for new databases or later drift.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        12462080,
-        "ed3401bbedbe52ca697c626ad22dac5d240c1282195752091070c20680b8c1fa",
+        12464128,
+        "a99bbb79b7ed79ba03695017826732e716d50e76f5d5f11b66db0862cf5b3a06",
     ),
     # Reviewed September 10 successor: six approved J2 names, unchanged public scope.
     Path("docs/organization/assets/current/Sable-Harbor-Organization-Charts.pdf"): (
