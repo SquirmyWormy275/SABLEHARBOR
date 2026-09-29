@@ -81,5 +81,5 @@
   "planning_months": 180,
   "scope": "Complete three-route geometry with inherited branch switching; no proposed leads or new rights/costs placed in service. Metadata availability advances to successor date.",
   "source_selector_sha256": "3aa95c1764a144dc3611acca29f2982c59b44863766810532c6ef42faa3c1b80",
-  "status": "INDEPENDENT_REPERFORM_PASSED"
+  "status": "SEPARATE_REGENERATION_COMPARISON_PASSED"
 }

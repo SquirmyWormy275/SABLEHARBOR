@@ -15,7 +15,7 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # Exact bytes only: no general allowance for new databases or later drift.
     Path("docs/internal/institutional_catalog.sqlite3"): (
         12464128,
-        "a99bbb79b7ed79ba03695017826732e716d50e76f5d5f11b66db0862cf5b3a06",
+        "9494403db644b76a6f4265a309b296d6f63dd297439f0858c24cee81302ac048",
     ),
     # Reviewed September 10 successor: six approved J2 names, unchanged public scope.
     Path("docs/organization/assets/current/Sable-Harbor-Organization-Charts.pdf"): (

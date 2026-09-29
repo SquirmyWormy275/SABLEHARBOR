@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Independent old/new operating and financial comparison for the dated rail case."""
+"""Separate exact regeneration/comparison for the dated rail case."""
 
 from __future__ import annotations
 
@@ -74,7 +74,7 @@ def compare(output: Path = OUT) -> dict:
         if without_availability(a["summary"]["scenarios"]) != without_availability(b["summary"]["scenarios"]):
             raise ValueError("Scenario finance summary changed")
     result = {
-        "status": "INDEPENDENT_REPERFORM_PASSED",
+        "status": "SEPARATE_REGENERATION_COMPARISON_PASSED",
         "source_selector_sha256": sha(HERE / "source.json"),
         "candidate_report_sha256": sha(ROOT / "geospatial/engineering_review/COMPENSATED_40_MILE_CANDIDATE.json"),
         "candidate_geojson_sha256": sha(ROOT / "geospatial/engineering_review/COMPENSATED_40_MILE_CANDIDATE.geojson"),
