@@ -194,15 +194,20 @@ reimport measures within **0.00000001 mile** (about 1.6 cm) of 40 miles.
 This is the recommended **synthetic design source path**, not an accepted
 operating amendment. The three per-route lengths, all affected segment
 boundaries and structure mileposts still need a dated source successor and
-downstream reconciliation. A one-field sensitivity in the existing planning
-calculator showed 179 of 180 monthly train-hour cells change; downside
-March 2027 conditional expanded rail capacity changes **1,008→1,344 cars**
-when the shorter mainline allows a fourth daily trip within the modeled
-24 combined roster-hour ceiling under one failed locomotive. That is a
-material scenario effect, not a cosmetic map update. The pinned industrial
-source and finance-release bytes remain unchanged here. Full adoption must
-reperform operating, finance, export and publication consumers from a
-separately versioned source.
+downstream reconciliation. An isolated **mainline-only** sensitivity in the
+existing planning calculator, holding accepted branch hours fixed, showed
+179 of 180 monthly train-hour cells change and March 2027 downside
+conditional expanded rail capacity change **1,008→1,344 cars**. That is not
+the complete-route result. Both proposed branches lengthen by a combined
+0.193027977 mile. Preserving the accepted branch-speed and switching-time
+basis increases daily branch time from 1.500000 to 1.525737064 hours. With
+all three route lengths adopted, all 180 monthly train-hour cells change,
+but March 2027 downside conditional expanded capacity remains **1,008 cars**:
+four failure-speed trips require 24.008646 hours, above the 24-hour modeled
+ceiling. This distinction must be retained in downstream planning. The
+pinned industrial source and finance-release bytes remain unchanged here.
+Full adoption must reperform operating, finance, export and publication
+consumers from a separately versioned source.
 
 The geometry still does not establish real title, survey, an executed
 interentity connection, local lead construction, historic early linework or
