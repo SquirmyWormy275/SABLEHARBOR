@@ -104,6 +104,10 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Portal neutral software reperformance — September 22, 2026 UTC](../../internal/company-closeout/evidence/portal-neutral-2026-09-22/README.md) — MD
 
+## `docs/internal/company-closeout/evidence/rail-source-consumer-2026-09-29`
+
+- [Rail source-consumer and geometry-only sensitivity receipt](../../internal/company-closeout/evidence/rail-source-consumer-2026-09-29/README.md) — MD
+
 ## `docs/internal/company-closeout/final-completion-2026-09-22`
 
 - [Final company completion evidence — September 22, 2026](../../internal/company-closeout/final-completion-2026-09-22/README.md) — MD

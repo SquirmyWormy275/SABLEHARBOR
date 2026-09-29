@@ -36,7 +36,7 @@ def compare(output: Path = OUT) -> dict:
     new_source = json.loads((output / "planning_source.json").read_text())
     new = operating_model.calculate(new_source)
     exported = json.loads((output / "planning_operations/operating_rows.json").read_text())
-    if new != exported or len(old) != len(new) != 180:
+    if new != exported or len(old) != 180 or len(new) != 180:
         raise ValueError("Successor operating export is stale or has wrong population")
     changes = []
     for a, b in zip(old, new, strict=True):
