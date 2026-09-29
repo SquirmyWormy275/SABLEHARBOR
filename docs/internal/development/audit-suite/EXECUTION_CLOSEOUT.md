@@ -43,15 +43,25 @@ source roots. The second batch recorded `COMPLETE/LIMITATION` for its six exact
 procedures with no company evidence IDs. It does not establish a live HIPAA
 obligation, actual PHI processing or effective operation.
 
+A later, separately verified CC3.1 partial examination added one workpaper and
+one task update in each original workroom, advancing A to revision 1936 and B to
+revision 2062. Its nonfixture BEFORE, disposable rehearsal, ordinary command
+receipts, independent raw-event verification and final proof review matched the
+four exact transitions and found all 60 company source roots unchanged. The two
+CC3.1 tasks remain `IN_PROGRESS/LIMITATION`: accepted service-commitment linkage
+and the authored vague-objective challenge remain unperformed. The indexed
+A1934/B2060 packet predates these four commands.
+
 In the earlier A1810/B1936 packet, per workroom, 79 tasks are `COMPLETE`, 132 are
 `IN_PROGRESS`, and 198 remain `NOT_STARTED`. The first three verified later batches
 change those actual-workroom counts to 89 `COMPLETE`, 155 `IN_PROGRESS`, and
 165 `NOT_STARTED` per profile, without broader task credit. The 36-task fourth
 batch moves 18 tasks per profile from `NOT_STARTED` to `IN_PROGRESS`, making
 the counts at that fourth-batch checkpoint 89 `COMPLETE`, 173 `IN_PROGRESS`, and 147
-`NOT_STARTED` per profile. At the latest independently verified A1934/B2060
-endpoints, each profile has 92 `COMPLETE`, 181 `IN_PROGRESS`, and 136
-`NOT_STARTED` tasks. These are exact task statuses, not an overall passing audit;
+`NOT_STARTED` per profile. At the indexed A1934/B2060 checkpoint, each profile
+has 92 `COMPLETE`, 181 `IN_PROGRESS`, and 136
+`NOT_STARTED` tasks. The later A1936/B2062 CC3.1 commands do not change these
+counts. These are exact task statuses, not an overall passing audit;
 the completed tasks retain their individual `LIMITATION` or `FAIL` conclusions.
 The earlier documentary
 batch completes examination of eight exact legal-source task instances across
