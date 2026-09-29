@@ -164,6 +164,27 @@ verification SHA-256 `244709acd655b2464dd0fb7db9c7548a0417fb165923d04508ad98e836
 No accepted expected-use contract exists for the historical `CONFIG-BYTES` source,
 so this implementation does not add A/B company evidence or SH-POL-001 task credit.
 
+A separate prospective [local logging clock companion](../../../../enterprise/audit_suite/LOGGING_CLOCK_RUNTIME.md)
+(`82cbb61f`) reads pinned device and reference samples, compares signed offsets
+at exact microsecond precision, and records threshold alerts or an explicit
+missed observation as collectible native company versions. Its [isolated
+receipt](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq04-clock-local-isolated-v1/RECEIPT.json)
+(SHA-256 `d564aaa7e4d2f03bc68c693f9c28670053ef3fce37a150b5f6c4d42c2e769429`)
+retains the source-byte preservation check. The reference, threshold and cadence
+remain local unapproved inputs; no actual deployment, A/B operation, performed
+review or SH-SEC-002 task credit follows.
+
+The [task-level gap register](../../../../enterprise/audit_suite/TASK_GAPS.md)
+(`7ff72887`) and [workroom UI](../../../../audit_suite_web/src/TaskGapPanel.tsx)
+(`a44a14c0`) allow an auditor to record an explicit source/operation/access gap,
+assigned owner, disposition, optional verified retained original and exact
+task-linked retest workpaper version. Successors retain the earlier gap, and
+learner projections hide gaps tied to instructor-only artifacts. The backend
+focused suite, 261 frontend tests, build and two browser journeys passed. This
+is an attributed observation path, not automatic evidence, a conclusion or
+professional clearance. The frozen A1938/B2064 workrooms have no backfilled
+task-gap commands.
+
 Two user-interface corrections are committed: the offline private reviewer ZIP
 now links its included native files (`83ed1467`), and the active workspace rail
 exposes `aria-current="page"` through reviewer and learner deep links, keyboard

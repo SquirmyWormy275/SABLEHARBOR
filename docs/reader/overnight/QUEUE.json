@@ -508,6 +508,12 @@
           "scope": "Prospective native parsed restore-use contract and probe",
           "validation": "Commit 5a15cea5 and isolated company-source receipt SHA-256 41adba6d026547b957eb6d3ebe6f7ee4f2326740128b94cddaae6ef5cce51f61, with separate read-only verification SHA-256 244709acd655b2464dd0fb7db9c7548a0417fb165923d04508ad98e836ce1eac, prove exact restored-copy parsed read and isolated CompanyStore source collection in a fresh local runtime (no audit created).",
           "limits": "No accepted CONFIG-BYTES expected-use contract, actual A/B company operation, application/BIA usability acceptance or enterprise period coverage."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Prospective local logging-clock observation companion",
+          "validation": "Commit 82cbb61f and isolated native source receipt SHA-256 d564aaa7e4d2f03bc68c693f9c28670053ef3fce37a150b5f6c4d42c2e769429 show exact pinned device/reference samples, integer-microsecond offset comparison, one threshold alert, a distinct missed slot and CompanyStore source collection. The existing three source roots remained byte-identical in the proof.",
+          "limits": "Reference trust, threshold and cadence are local unapproved inputs; no real device deployment, enterprise clock synchronization, Security Operations review, A/B source transition or SH-SEC-002 audit credit."
         }
       ]
     },
@@ -590,6 +596,12 @@
           "scope": "Four exact unplanned HIPAA/integrity task pairs screened against current native sources",
           "validation": "Read-only screen SHA-256 802be28d42f769196f07bb7b33b7a99846a8180a8a075a892fe2f6ab6215ea82 found no complete performed clause. Native restore bytes do not prove parsed or application usability; an isolated prospective parsed probe passed separately under SHA-256 41adba6d026547b957eb6d3ebe6f7ee4f2326740128b94cddaae6ef5cce51f61.",
           "acceptance": "No A1938/B2064 task, workpaper or source mutation and no HIPAA procedure credit. An accepted scenario-specific expected-use contract, ordinary A/B audit collection and substantive review remain open."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Attributable task-level gap and retest-link record in the audit workroom",
+          "validation": "Commits 7ff72887 and a44a14c0 add task.gap.record with exact retained-byte and optional native source pins, scoped assigned owner, explicit cause/disposition, append-only predecessor, exact existing workpaper retest link, learner source-isolation projection and an accessible preview/retry UI. Focused backend, 261 frontend, production build and two browser journeys passed.",
+          "acceptance": "A recorded gap is an authored observation, not source evidence, a task conclusion or professional sufficiency. No historical A1938/B2064 gap was backfilled; period and clause-level reconciliation remain open."
         }
       ]
     },
