@@ -514,6 +514,12 @@
           "scope": "Prospective local logging-clock observation companion",
           "validation": "Commit 82cbb61f and isolated native source receipt SHA-256 d564aaa7e4d2f03bc68c693f9c28670053ef3fce37a150b5f6c4d42c2e769429 show exact pinned device/reference samples, integer-microsecond offset comparison, one threshold alert, a distinct missed slot and CompanyStore source collection. The existing three source roots remained byte-identical in the proof.",
           "limits": "Reference trust, threshold and cadence are local unapproved inputs; no real device deployment, enterprise clock synchronization, Security Operations review, A/B source transition or SH-SEC-002 audit credit."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Prospective local software-install source exercise for the CC6.8 missing-operation path",
+          "validation": "Commit 408a54e1, isolated run receipt SHA-256 7b6044460e8a88dde9ec838e6ba6b243a1e38fa8576879cc27657552eee10da9, and independent read-only review SHA-256 86e446ac08cf393b5b0680a7e26eaa3df7d46cf5b8f611d547377cc7eb7399e9 verify 12 new native versions and 12 ordinary retained-byte collections from a separate private CompanyStore. The local rule evaluates exact inert digest, asset and simulated exception time; approval, deny, detection/response, scoped exception, retry, expiry denial and untested declared asset are retained. Five focused/collection regression tests and Ruff passed.",
+          "limits": "A prospective fictional local exercise only: no executable was created/run, no deployed endpoint/Reno/Boise/provider operation, no accepted representative asset population, no 2027 period performance, no A/B company operation and no SH-CFG-002 CC6.8 task credit."
         }
       ]
     },
@@ -608,6 +614,12 @@
           "scope": "Retrospective SH-POL-003 source-gap command in isolated A/B audit copies",
           "validation": "Independent read-only review SHA-256 69e28e2d7754056c934f7b9980be027300f6d82953d1c5573bad3d1f79bb45a5 verified each copied workroom gained exactly one ordinary OPEN/INSUFFICIENT_SOURCE task.gap.record event; original A1938/B2064 database and 661/721 retained artifact byte hashes remained unchanged. Exact command replay and learner projections passed in the author run.",
           "acceptance": "This is a disposable retrospective rehearsal. It supplies no actual-workroom gap record, source evidence, HIPAA applicability, performed procedure or task credit; original workroom annotation requires its own safeguarded execution and review."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Actual A/B audit-workroom SH-POL-003 source-insufficiency gap observations",
+          "validation": "After sealed proposal SHA-256 35391278dcaa0ab49d7f7bc45794b257ab0d6534f2ab7d1866fd0be535404357, verified non-reflink database backups and independent pre-execution review SHA-256 28d55119cb8c6147d630fa9418bd7f5bfe53401980e4880223dd0c8aaa1b3dc6, ordinary task.gap.record commands advanced original A1938 to A1939 and B2064 to B2065 sequentially. Independent A/B postreviews SHA-256 c2a667e74c073538e934747afe28f23665b4f397b285e51e4a7790fdaa599a75 and 5a399cd1c2bd47ddbcc382cb20cd9e5ebd3fb715d48e155d981462be70870773 verified one raw gap event each, unchanged task status/conclusion, 661/721 retained artifacts, 237 company source files and backup integrity.",
+          "acceptance": "The current originals now have OPEN/INSUFFICIENT_SOURCE SH-POL-003 annotations; both exact tasks remain NOT_STARTED/NOT_RUN. The indexed A1938/B2064 packet predates these commands. The gaps do not create company evidence, establish HIPAA applicability, perform the addressable-measure test or grant audit credit."
         }
       ]
     },

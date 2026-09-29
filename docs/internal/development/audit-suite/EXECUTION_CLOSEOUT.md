@@ -174,6 +174,23 @@ retains the source-byte preservation check. The reference, threshold and cadence
 remain local unapproved inputs; no actual deployment, A/B operation, performed
 review or SH-SEC-002 task credit follows.
 
+A [read-only CC6.8 source-and-clause rebase](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/additional-duty-software-install-source-rebase-2026-09-29/REPORT.md)
+(SHA-256 `8c691a4b0a7fc55e95bf1183fe8dbd5b90bf5be121b72ebcc22e8b1edebdf238`)
+found no historical native test of unapproved executable installation and its
+exception path. The exact SH-CFG-002 CC6.8 tasks remain `NOT_STARTED/NOT_RUN`.
+The separately committed [prospective local software-install exercise](../../../../enterprise/audit_suite/company_software_install_activity.py)
+(`408a54e1`) creates inert fixture-digest, local asset/policy, approval,
+deny/detection/response, scoped exception, retry, expiry-denial and coverage
+records in a new private `CompanyStore` before audit collection. Its [isolated
+run](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/software-install-exercise-run-2026-09-29-v2/RUN-RECEIPT.json)
+passed an [independent read-only native-to-retained review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/software-install-exercise-independent-review-v1/REVIEW.json)
+(SHA-256 `86e446ac08cf393b5b0680a7e26eaa3df7d46cf5b8f611d547377cc7eb7399e9`)
+of all 12 ordinary collections. Five focused/collection-regression tests and
+Ruff passed. It runs no executable and creates no deployed endpoint, Reno/Boise
+operation, 2027 performance or audit task credit; only one of two declared
+local assets was tested, and its decision times are an explicit simulated
+exercise clock rather than source availability timestamps.
+
 The [task-level gap register](../../../../enterprise/audit_suite/TASK_GAPS.md)
 (`7ff72887`) and [workroom UI](../../../../audit_suite_web/src/TaskGapPanel.tsx)
 (`a44a14c0`) allow an auditor to record an explicit source/operation/access gap,
@@ -182,8 +199,8 @@ task-linked retest workpaper version. Successors retain the earlier gap, and
 learner projections hide gaps tied to instructor-only artifacts. The backend
 focused suite, 261 frontend tests, build and two browser journeys passed. This
 is an attributed observation path, not automatic evidence, a conclusion or
-professional clearance. The frozen A1938/B2064 workrooms have no backfilled
-task-gap commands.
+professional clearance. The indexed A1938/B2064 packet predates the later
+task-gap commands and remains a frozen historical snapshot.
 
 A separate [disposable retrospective rehearsal](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-pol003-retrospective-task-gap-disposable-v1/MANIFEST.json)
 (manifest SHA-256 `5ceddc78841f3092f7b32a88753d00c85e96789ed14efeeff15445dff58eb783`)
@@ -197,6 +214,22 @@ procedure credit. A separate [independent read-only review](../../../../enterpri
 (SHA-256 `69e28e2d7754056c934f7b9980be027300f6d82953d1c5573bad3d1f79bb45a5`)
 checked both original database hashes and 661/721 retained artifact hashes,
 event-chain deltas and task projections. It found no original audit mutation.
+
+The same bounded SH-POL-003 gap was then recorded by ordinary commands in the
+*original* A/B audit workrooms, after verified non-reflink database backups and
+an [independent pre-execution review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-pol003-original-task-gap-pre-execution-independent-v1/REVIEW.json)
+(SHA-256 `28d55119cb8c6147d630fa9418bd7f5bfe53401980e4880223dd0c8aaa1b3dc6`).
+A advanced 1938→1939, then passed [independent A postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-pol003-original-task-gap-post-execution-independent-v1/REVIEW-A.json)
+(SHA-256 `c2a667e74c073538e934747afe28f23665b4f397b285e51e4a7790fdaa599a75`)
+before B advanced 2064→2065 and passed [independent B postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-pol003-original-task-gap-post-execution-independent-v1/REVIEW-B.json)
+(SHA-256 `5a399cd1c2bd47ddbcc382cb20cd9e5ebd3fb715d48e155d981462be70870773`).
+Each original gained exactly one `OPEN/INSUFFICIENT_SOURCE` observation; the
+SH-POL-003 task remains `NOT_STARTED/NOT_RUN`. Independent raw-event checks
+found only revision, event and gap state changes. Both backups passed integrity
+and hash checks, and all 661/721 retained artifacts and 237 company-source
+files remained unchanged. No source was mounted or operated by the gap commands,
+and no HIPAA applicability or procedure credit was inferred. The indexed packet
+has not yet been refreshed to these later revisions.
 
 Two user-interface corrections are committed: the offline private reviewer ZIP
 now links its included native files (`83ed1467`), and the active workspace rail
