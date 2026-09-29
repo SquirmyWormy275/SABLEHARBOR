@@ -634,6 +634,17 @@ calendar placement nor source association makes them current operating
 evidence. These are read-only procedure plans, not performed task tests or
 substantive conclusions.
 
+The first exact-clause P6 rehearsal targets SH-IAM-001 without awarding task
+credit. The [private V2 proposal](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p6-iam001-no-credit-proposal-v2/MANIFEST.json)
+passed [independent preexecution review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p6-iam001-no-credit-independent-review-v2/REVIEW.json)
+(SHA-256 `ed2c8093daa5535b0b746e95b20a7b109df32db544e33fc684c929fa9619ed34`).
+It pins the selected A349/B324 request, approval and creation chains and all
+four SH-IAM-001 task clauses per side. The disposable smoke retained every
+task as `NOT_STARTED`/`NOT_RUN`; the live gate rejected a task or workpaper
+write before issuing a P1 command. This proves a safe bounded procedure
+screen, not full-population testing, real 2027 operation or a performed audit
+procedure. The failed private-mode V1 package remains preserved.
+
 A separately committed [prospective data-flow exercise](../../../../enterprise/audit_suite/DATA_FLOW_EXERCISE.md)
 emits 13 immutable company-native metadata versions with a Clean blocked path
 and a Messy queued-then-quarantined marker. Its [independent isolated review](../../../../enterprise/generated/audit-suite/data-flow-prospective-reference-2026-09-29-independent-review-v2/REVIEW.json)

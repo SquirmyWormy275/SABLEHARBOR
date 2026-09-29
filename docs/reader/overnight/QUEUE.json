@@ -713,6 +713,12 @@
         },
         {
           "date": "2026-09-29",
+          "scope": "SH-IAM-001 exact-clause P6 no-credit rehearsal gate",
+          "validation": "Independent V2 preexecution review SHA-256 ed2c8093daa5535b0b746e95b20a7b109df32db544e33fc684c929fa9619ed34 verified A349/B324 exact request, approval and creation native-to-retained chains, selected future chronology, all four IAM-001 clauses per side and untouched active/snapshot roots. Disposable smoke retained every task NOT_STARTED/NOT_RUN, and the live gate exited 3 before any workpaper or task command. Failed private-mode V1 is preserved.",
+          "acceptance": "Safe bounded procedure screen only. Future authored simulation is not actual operation; selected chains are not the full identity population or a performed audit procedure. No task, Key, grade, learner release or assurance credit."
+        },
+        {
+          "date": "2026-09-29",
           "scope": "Prospective metadata-only data-flow company source and final source-registry gate",
           "validation": "Isolated data-flow exercise V2 independent review SHA-256 4ae1e319439272e30635a4d7849c4d7e5c5a30aa6f5abbcecc343dfef21626cf verified 13 immutable company-native versions, Clean blocked and Messy queued-then-quarantined paths, one continuing open exception across five event rows, no transfer or PHI, and no active audit mutation. The same reviewed code was integrated into the repo and 13 focused exercise/CompanyStore tests plus Ruff passed. Read-only final-registry plan SHA-256 c1095b561fe8a3df86f089c12973bf0aaab49bf742c279f2758557334f03839e records that the current 13-component A/B binding is frozen.",
           "acceptance": "The exercise is future simulated and outside the active pair. Actual PHI/BA/contract/retention facts and deployed operation remain unasserted. A source-complete registry and fresh zero-evidence Clean/Messy pair are required for final full-scope rehearsal; no source transplant or task credit."
