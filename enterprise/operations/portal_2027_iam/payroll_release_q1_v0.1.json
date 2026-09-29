@@ -26,6 +26,7 @@
   "control_id": "SH-IAM-007",
   "fact_status": "MODELED_FUTURE_CASE_EVENTS_NOT_2026_ACTUAL",
   "fictional_completion_authority": "Owner's September 13 billing adoption delegates reasonable missing fictional accounting/legal/company details consistent with canon; this prospective case detail remains PROVISIONAL until repository acceptance and claims no real grant or review.",
+  "known_on_state": "PENDING_REPOSITORY_ACCEPTANCE_NOT_QUERYABLE_AS_CASE_EVIDENCE",
   "legal_operator": "SHI",
   "limits": [
     "No real or in-universe completed 2027 grants or access review are claimed as of authoring.",
@@ -90,11 +91,12 @@
   },
   "record_id": "SH-PORTAL-IAM007-PAYROLL-RELEASE-Q1-2027-LEDGER-v0.1",
   "repository_acceptance_at": null,
+  "repository_available_at": null,
   "scenario": "FICTIONAL_2027_ENGAGEMENT_COMMON_BASELINE",
   "scope": "Two fictional ESS payroll-batch preparation/release role assignments on the SH-ESS-PAYROLL-RELEASE authorization register. This is not the whole payroll application, all company accounts, or the 701-person candidate census.",
   "service_id": "SH-ESS-PAYROLL-RELEASE",
   "source_authored_at": "2026-09-29T05:44:16Z",
-  "source_available_at": "2026-09-29T05:48:37Z",
+  "source_available_at": null,
   "source_record_id": "SH-PORTAL-IAM007-PAYROLL-RELEASE-Q1-2027-v0.1",
   "source_state": "PROVISIONAL_NEWLY_AUTHORED_FICTIONAL_CASE",
   "unit": "ess"

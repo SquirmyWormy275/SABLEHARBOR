@@ -72,7 +72,10 @@ def derive(records: dict, config: dict, policy: list[dict]) -> dict:
     ):
         raise ValueError("Known September exit/revocation differs")
     if not (
-        config["bridge"]["unreconciled_start"] > exit_event["revoked_at"][:10]
+        config["bridge"]["supported_september_state_effective_as_of"] == "2026-09-15"
+        and config["bridge"]["public_release_known_on_not_before"]
+        == release["release_published_at"]
+        and config["bridge"]["unreconciled_start"] > exit_event["revoked_at"][:10]
         and config["bridge"]["unreconciled_end_exclusive"] == "2027-01-01"
         and config["bridge"]["september_december_jml_population_complete"] is False
         and config["bridge"]["unrepresented_jml_count"] is None

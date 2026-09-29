@@ -39,6 +39,14 @@ def test_bounded_candidate_denominator_and_generated_export(inputs):
     assert all(row["privileged_at_2027_opening"] is None for row in candidates)
     assert "SH-EMP-ESS-0054" not in {row["person_id"] for row in candidates}
     assert result["september_december_bridge"]["unrepresented_jml_count"] is None
+    assert (
+        result["september_december_bridge"]["supported_september_state_effective_as_of"]
+        == "2026-09-15"
+    )
+    assert (
+        result["september_december_bridge"]["public_release_known_on_not_before"]
+        == "2026-09-22T23:50:07Z"
+    )
     q1 = result["q1_due_event_schedule"][0]
     assert q1["privileged_review_due_count"] is None
     assert q1["missing_performance_count"] is None
@@ -72,6 +80,12 @@ def test_pinned_controlling_sources_have_not_changed(inputs):
         ),
         (
             lambda r, c, p: c["bridge"].update(september_december_jml_population_complete=True),
+            "Unreconciled Sep-Dec bridge",
+        ),
+        (
+            lambda r, c, p: c["bridge"].update(
+                public_release_known_on_not_before="2026-09-15T00:00:00Z"
+            ),
             "Unreconciled Sep-Dec bridge",
         ),
         (lambda r, c, p: c["opening"].update(confirmed_active_person_count=701), "promoted"),

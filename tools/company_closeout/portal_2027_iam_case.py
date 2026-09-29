@@ -21,7 +21,8 @@ def derive_case(records: dict, case: dict, policy: list[dict]) -> dict:
         case["state"] != "PROVISIONAL_NEWLY_AUTHORED_FICTIONAL_CASE"
         or case["fact_status"] != "MODELED_FUTURE_CASE_EVENTS_NOT_2026_ACTUAL"
         or case["repository_acceptance_at"] is not None
-        or case["available_at"] < case["authored_at"]
+        or case["available_at"] is not None
+        or case["repository_available_at"] is not None
         or records["repository_source_commit"] != case["source_commit"]
     ):
         raise ValueError("Case authority, temporal or source state differs")
@@ -111,7 +112,9 @@ def derive_case(records: dict, case: dict, policy: list[dict]) -> dict:
         "fact_status": case["fact_status"],
         "source_authored_at": case["authored_at"],
         "source_available_at": case["available_at"],
+        "repository_available_at": case["repository_available_at"],
         "repository_acceptance_at": None,
+        "known_on_state": "PENDING_REPOSITORY_ACCEPTANCE_NOT_QUERYABLE_AS_CASE_EVIDENCE",
         "accepted_august_source_commit": case["source_commit"],
         "accepted_august_approval_ids": sorted(approvals),
         "accepted_august_approval_count": len(approvals),

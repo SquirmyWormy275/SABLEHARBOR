@@ -23,7 +23,8 @@
   },
   "bridge": {
     "august_as_of": "2026-08-31",
-    "known_september_as_of": "2026-09-15",
+    "supported_september_state_effective_as_of": "2026-09-15",
+    "public_release_known_on_not_before": "2026-09-22T23:50:07Z",
     "known_september_event_ids": ["SH-HR-2026-09-01"],
     "unreconciled_start": "2026-09-16",
     "unreconciled_end_exclusive": "2027-01-01",

@@ -29,6 +29,12 @@ def test_two_role_due_population_and_unperformed_review(inputs):
     actual = derive_case(*inputs)
     assert actual == json.loads(EXPORT.read_text())
     assert actual["prior_period_bridge"]["unrepresented_jml_count"] is None
+    assert actual["source_authored_at"] == "2026-09-29T05:44:16Z"
+    assert actual["source_available_at"] is None
+    assert actual["repository_available_at"] is None
+    assert actual["known_on_state"] == (
+        "PENDING_REPOSITORY_ACCEPTANCE_NOT_QUERYABLE_AS_CASE_EVIDENCE"
+    )
     assert actual["accepted_august_approval_count"] == 10
     assert len(set(actual["accepted_august_approval_ids"])) == 10
     jml = actual["q1_selected_scope_jml"]
@@ -83,6 +89,14 @@ def test_two_role_due_population_and_unperformed_review(inputs):
         ),
         (
             lambda r, c, p: c.update(fact_status="COMPLETED_2027_ACTUAL"),
+            "authority, temporal",
+        ),
+        (
+            lambda r, c, p: c.update(available_at="2026-09-29T05:44:16Z"),
+            "authority, temporal",
+        ),
+        (
+            lambda r, c, p: c.update(repository_available_at="2026-09-29T05:49:21Z"),
             "authority, temporal",
         ),
     ],
