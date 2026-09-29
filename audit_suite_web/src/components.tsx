@@ -1,6 +1,7 @@
 import { useDurableDraft } from "./useDurableDraft";
 import { useTableMemory } from "./TableWorkspace";
 import { formDraftFields } from "./durableDraft";
+import { withoutSourceLinks } from "./draftContext";
 import type { DraftStore, DraftKey, DraftLookup } from "./draftContext";
 import { useEffect, useId, useRef, useState, type ReactNode } from "react";
 import { human, str, type Row } from "./api";
@@ -218,6 +219,7 @@ export type Action = {
   initial?: Record<string, unknown>;
   description?: string;
   submit?: string;
+  sourceBasis?: string;
 };
 export function Modal({
   title,
@@ -327,6 +329,8 @@ export function ActionForm({
   onDraftCleanupFailure,
   submitError,
   support,
+  sourceContextStale = false,
+  onReviewSource,
 }: {
   action: Action;
   draft?: {
@@ -342,6 +346,8 @@ export function ActionForm({
   ) => Promise<boolean | void>;
   onDraftCleanupFailure?: () => void;
   submitError?: string;
+  sourceContextStale?: boolean;
+  onReviewSource?: () => void;
   support?: (
     values: Record<string, unknown>,
     onChange: (values: Record<string, unknown>) => void,
@@ -358,6 +364,10 @@ export function ActionForm({
     ...(restored.status === "EMPTY" ? {} : restored.draft.values),
   });
   const [stale, setStale] = useState(restored.status === "STALE_BASE");
+  const [sourceNeedsReview, setSourceNeedsReview] = useState(
+    restored.status === "STALE_SOURCE",
+  );
+  const sourceBlocked = sourceContextStale || sourceNeedsReview;
   const [draftError, setDraftError] = useState("");
   const [baseKey, setBaseKey] = useState(
     restored.status !== "EMPTY" ? restored.draft.key : draft?.key,
@@ -366,6 +376,22 @@ export function ActionForm({
     draft?.remote ? draft.key : undefined,
     (saved) => {
       if (!draft) return;
+      // A changed-context row has no fields by contract. Keep any already
+      // authored volatile text visible; never replace it with blank fields.
+      if (saved.status === "STALE") return;
+      if (saved.status === "STALE_SOURCE") {
+        if (restored.status === "EMPTY")
+          setValue(withoutSourceLinks({ ...initial, ...formDraftFields(saved.fields ?? {}) }));
+        setSourceNeedsReview(true);
+        return;
+      }
+      if (
+        sourceContextStale ||
+        draft.store.lookup(draft.key).status === "STALE_SOURCE"
+      ) {
+        setSourceNeedsReview(true);
+        return;
+      }
       const fields = formDraftFields(saved.fields ?? {});
       const sourceKey = {
         ...draft.key,
@@ -386,6 +412,7 @@ export function ActionForm({
     },
   );
   function update(next: Record<string, unknown>) {
+    if (sourceBlocked) return;
     setValue(next);
     if (!draft) return;
     try {
@@ -398,13 +425,17 @@ export function ActionForm({
     }
   }
   function close() {
+    if (sourceBlocked || durable.blocked) {
+      onClose();
+      return;
+    }
     if (!draftError)
       void durable.flush().then((ok) => {
         if (ok) onClose();
       });
   }
   async function submit() {
-    if (stale || draftError || !(await durable.flush())) return;
+    if (stale || sourceBlocked || durable.blocked || draftError || !(await durable.flush())) return;
     await onSubmit(
       value,
       draft
@@ -422,7 +453,7 @@ export function ActionForm({
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            if (!stale && !draftError) void submit();
+            if (!stale && !sourceBlocked && !draftError) void submit();
           }}
         >
           {action.description && <p className="muted">{action.description}</p>}
@@ -431,8 +462,10 @@ export function ActionForm({
               {draft.remote ? (
                 <>
                   {durable.status} Personal draft text is stored separately from
-                  submitted audit records. Closing saves it; reload can recover
-                  it. Scope/access changes require explicit review or discard.
+                  submitted audit records. Current-context saved drafts can be
+                  recovered after reload. Changed source or acquisition
+                  context requires fresh source review before old links can be
+                  used; a stale saved copy must be explicitly discarded.
                 </>
               ) : (
                 <>
@@ -457,7 +490,7 @@ export function ActionForm({
           )}
           {draft && durable.remote && (
             <div role="alert">
-              <strong>Saved draft conflict or stale access</strong>
+              <strong>Saved draft conflict or changed context</strong>
               {durable.remote.fields && (
                 <details>
                   <summary>Inspect saved draft from the other session</summary>
@@ -473,7 +506,7 @@ export function ActionForm({
                   </dl>
                 </details>
               )}
-              {durable.remote.status !== "STALE" && (
+              {!["STALE", "STALE_SOURCE"].includes(durable.remote.status) && (
                 <>
                   <button type="button" onClick={durable.useRemote}>
                     Replace this form with the saved draft
@@ -514,7 +547,9 @@ export function ActionForm({
               </details>
               <button
                 type="button"
+                disabled={sourceBlocked || durable.blocked}
                 onClick={() => {
+                  if (sourceBlocked || durable.blocked) return;
                   try {
                     draft.store.save(draft.key, value);
                     setBaseKey(draft.key);
@@ -530,6 +565,55 @@ export function ActionForm({
               </button>
             </div>
           )}
+          {sourceBlocked && (
+            <div role="alert">
+              <strong>Source context changed.</strong>
+              {draft ? (
+                <p>
+                  Your authored text is retained. Earlier evidence, task,
+                  control and message links will be cleared before reuse.
+                  Inspect current originals and reselect any support you still
+                  need. Carrying text forward does not record an inspection.
+                </p>
+              ) : (
+                <p>
+                  This action was opened under an earlier source context. Close
+                  it and reopen the current record before submitting. Its old
+                  selections cannot be rebased here.
+                </p>
+              )}
+              {draft && (
+                <button
+                  type="button"
+                  disabled={!durable.ready}
+                  onClick={async () => {
+                    // A saved stale row must be explicitly discarded; its fields
+                    // are withheld by the service and cannot be silently rebased.
+                    if (durable.blocked && !(await durable.discard())) return;
+                    try {
+                      const retained = withoutSourceLinks(value);
+                      const current = draft.store.lookup(draft.key);
+                      if (current.status === "STALE_SOURCE")
+                        draft.store.reviewSource(draft.key);
+                      draft.store.save(draft.key, retained);
+                      durable.schedule(retained, draft.key);
+                      setValue(retained);
+                      setBaseKey(draft.key);
+                      setSourceNeedsReview(false);
+                      setDraftError("");
+                      onReviewSource?.();
+                    } catch (error) {
+                      setDraftError((error as Error).message);
+                    }
+                  }}
+                >
+                  {durable.blocked
+                    ? "Keep my text; clear old links and discard stale saved copy"
+                    : "Keep my text and clear old source links"}
+                </button>
+              )}
+            </div>
+          )}
           {draft && (
             <button
               type="button"
@@ -538,13 +622,15 @@ export function ActionForm({
                 draft.store.discardObject(draft.key);
                 setValue({ ...initial });
                 setStale(false);
+                setSourceNeedsReview(false);
                 setDraftError("");
+                if (sourceContextStale) onClose();
               }}
             >
               Discard unsaved draft
             </button>
           )}
-          <fieldset className="form-grid" disabled={!!draft && !durable.ready}>
+          <fieldset className="form-grid" disabled={sourceBlocked || durable.blocked || (!!draft && !durable.ready)}>
             {action.fields.map((field) => (
               <label
                 key={field.name}
@@ -629,6 +715,7 @@ export function ActionForm({
               disabled={
                 busy ||
                 stale ||
+                sourceBlocked ||
                 !!draftError ||
                 !durable.ready ||
                 durable.blocked
@@ -646,6 +733,7 @@ export function ActionForm({
               update,
               !busy &&
                 !stale &&
+                !sourceBlocked &&
                 !draftError &&
                 durable.ready &&
                 !durable.blocked,

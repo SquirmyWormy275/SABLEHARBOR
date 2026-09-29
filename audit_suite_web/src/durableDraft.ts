@@ -1,7 +1,7 @@
 import { ApiError, request } from "./api";
 import type { DraftKey } from "./draftContext";
 export type PersonalDraft = {
-  status: "DRAFT" | "EMPTY" | "STALE";
+  status: "DRAFT" | "EMPTY" | "STALE" | "STALE_SOURCE";
   version: number;
   fields?: Record<string, unknown>;
   base_workpaper_version: number | null;

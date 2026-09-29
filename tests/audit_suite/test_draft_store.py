@@ -5,7 +5,7 @@ from fastapi.testclient import TestClient
 
 from enterprise.audit_suite.draft_store import DraftStore
 from enterprise.audit_suite.service import create_app
-from enterprise.audit_suite.store import DomainError
+from enterprise.audit_suite.store import DomainError, digest
 
 
 @pytest.fixture
@@ -106,6 +106,66 @@ def test_scope_change_hides_text_and_workpaper_version_change_marks_stale(setup)
     assert "fields" not in drafts.get(*args)
     with pytest.raises(DomainError):
         drafts.write(*args, payload("overwrite", 1, base=2))
+    store.revoke(user["id"])
+    with pytest.raises(DomainError):
+        drafts.get(*args)
+
+
+def test_acquisition_change_withholds_old_draft_and_does_not_rehash_legacy_row(setup):
+    app, user, _, state = setup
+    store = app.state.engine.store
+    drafts = DraftStore(store)
+    args = (user["id"], state["id"], "workpaper.update", "WP1")
+    drafts.write(*args, payload(base=1, fields={"text": "Authored analysis", "evidence_ids": ["OLD"]}))
+    assert drafts.get(*args)["status"] == "DRAFT"
+
+    def change_acquisition(s, c, a):
+        s["evidence_acquisition"] = "RETAINED_COPY"
+        return s
+
+    changed = store.command(
+        user["id"], state["id"],
+        {"command_id": "acquisition-change", "expected_revision": state["revision"],
+         "kind": "fixture", "payload": {}},
+        change_acquisition, permissions={"learn"},
+    )
+    stale = drafts.get(*args)
+    assert stale["status"] == "STALE" and "fields" not in stale
+    with pytest.raises(DomainError):
+        drafts.write(*args, payload("stale-overwrite", 1, base=1))
+    assert store.get(user["id"], state["id"])["revision"] == changed["revision"]
+
+    # Pre-change rows used a digest without acquisition. Preserve their bytes;
+    # the new context must treat even a matching current acquisition as stale.
+    legacy = digest([state["id"], "learn", changed["scope"],
+                     changed.get("generation_epoch", 0), changed.get("company_source_binding")])
+    with drafts._db() as db:
+        db.execute("UPDATE drafts SET context_digest=? WHERE principal=? AND engagement=? "
+                   "AND action=? AND object_id=?", (legacy, *args))
+    old_format = drafts.get(*args)
+    assert old_format["status"] == "STALE_SOURCE"
+    assert old_format["fields"] == {"text": "Authored analysis"}
+    assert "OLD" not in json.dumps(old_format)
+    with drafts._db() as db:
+        assert db.execute(
+            "SELECT context_digest FROM drafts WHERE principal=? AND engagement=? "
+            "AND action=? AND object_id=?", args,
+        ).fetchone()[0] == legacy
+    with pytest.raises(DomainError):
+        drafts.write(*args, payload("legacy-overwrite", 1, base=1))
+
+    def change_source(s, c, a):
+        s["company_source_binding"] = {"branch": "messy"}
+        return s
+
+    store.command(
+        user["id"], state["id"],
+        {"command_id": "source-change", "expected_revision": changed["revision"],
+         "kind": "fixture", "payload": {}},
+        change_source, permissions={"learn"},
+    )
+    assert drafts.get(*args)["status"] == "STALE"
+    assert "fields" not in drafts.get(*args)
     store.revoke(user["id"])
     with pytest.raises(DomainError):
         drafts.get(*args)

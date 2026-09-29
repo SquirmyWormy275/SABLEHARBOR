@@ -41,7 +41,7 @@ export function useDurableDraft(
       const saved = await readDraft(key);
       if (!alive.current) return;
       version.current = saved.version;
-      guard.current = saved.status === "STALE";
+      guard.current = saved.status === "STALE" || saved.status === "STALE_SOURCE";
       setBlocked(guard.current);
       setRemote(guard.current ? saved : null);
       setError("");
@@ -49,8 +49,10 @@ export function useDurableDraft(
       setStatus(
         saved.status === "DRAFT"
           ? "Personal draft restored."
+          : saved.status === "STALE_SOURCE"
+            ? "Older saved draft text is available for review without prior source links. Explicitly discard the old version before saving a successor."
           : saved.status === "STALE"
-            ? "Previous draft scope or access is stale. Discard it explicitly before saving a new draft."
+            ? "A saved draft belongs to a different context or older format. Its fields are withheld. Explicitly discard it before saving a new draft."
             : "No saved personal draft.",
       );
       setReady(true);
@@ -163,7 +165,7 @@ export function useDurableDraft(
     if (!remote) return;
     version.current = remote.version;
     pending.current = null;
-    guard.current = remote.status === "STALE";
+    guard.current = remote.status === "STALE" || remote.status === "STALE_SOURCE";
     setBlocked(guard.current);
     restore.current(remote);
     setError("");
@@ -171,7 +173,7 @@ export function useDurableDraft(
     if (!guard.current) setRemote(null);
   }
   function keepLocal() {
-    if (!remote || remote.status === "STALE") return;
+    if (!remote || remote.status === "STALE" || remote.status === "STALE_SOURCE") return;
     version.current = remote.version;
     guard.current = false;
     setBlocked(false);

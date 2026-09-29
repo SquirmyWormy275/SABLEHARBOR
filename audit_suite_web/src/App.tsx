@@ -48,7 +48,7 @@ import { WorkpaperSupport } from "./WorkpaperSupport";
 import { appendEvidenceReference } from "./workpaperSupport";
 import { TableWorkspace } from "./TableWorkspace";
 import CompanyPopulation from "./CompanyPopulation";
-import { createDraftStore, type DraftKey } from "./draftContext";
+import { createDraftStore, draftSourceBasis, type DraftKey } from "./draftContext";
 import {
   createNavigationMemory,
   parseWorkspaceLink,
@@ -530,6 +530,8 @@ export default function App() {
       roles: bootstrap.viewer.roles,
       permissions: engagement.permissions ?? [],
       scope: engagement.scope,
+      companySourceBinding: engagement.company_source_binding,
+      evidenceAcquisition: engagement.evidence_acquisition,
     });
     navigationMemory.current.activate(engagement, bootstrap.viewer);
     const collections: Record<string, Row[]> = {
@@ -679,7 +681,12 @@ export default function App() {
     description?: string,
   ) {
     setEvidenceHandoff(null);
-    setAction({ title, kind, fields, initial, description });
+    setAction({
+      title, kind, fields, initial, description,
+      sourceBasis: engagement
+        ? draftSourceBasis(engagement.company_source_binding, engagement.evidence_acquisition)
+        : undefined,
+    });
   }
   async function create(payload: Record<string, unknown>) {
     const epoch = navigationEpoch.current;
@@ -3006,6 +3013,25 @@ export default function App() {
         </div>
         {action && (
           <ActionForm
+            sourceContextStale={
+              !!e && action.sourceBasis !== undefined &&
+              action.sourceBasis !==
+                draftSourceBasis(e.company_source_binding, e.evidence_acquisition)
+            }
+            onReviewSource={() => {
+              if (!e) return;
+              const basis = draftSourceBasis(
+                e.company_source_binding, e.evidence_acquisition,
+              );
+              setAction((current) =>
+                current
+                  ? {
+                      ...current,
+                      sourceBasis: basis,
+                    }
+                  : null,
+              );
+            }}
             key={
               actionDraft
                 ? JSON.stringify([actionDraft.key, actionDraft.remote])

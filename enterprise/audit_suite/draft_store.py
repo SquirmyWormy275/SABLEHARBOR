@@ -40,6 +40,9 @@ FIELDS = {
     },
 }
 MAX_BYTES = 100_000
+LEGACY_NARRATIVE_FIELDS = {
+    "title", "text", "objective", "procedures", "conclusion", "section"
+}
 
 
 class DraftStore:
@@ -98,19 +101,19 @@ class DraftStore:
             latest = workpaper["versions"][-1]["version"] if workpaper["versions"] else 0
         elif object_id != "new":
             raise DomainError("Creation draft requires object new")
-        context = digest(
-            [
-                engagement,
-                permission,
-                state.get("scope"),
-                state.get("generation_epoch", 0),
-                state.get("company_source_binding"),
-            ]
-        )
-        return context, latest
+        legacy_basis = [
+            engagement,
+            permission,
+            state.get("scope"),
+            state.get("generation_epoch", 0),
+            state.get("company_source_binding"),
+        ]
+        legacy_context = digest(legacy_basis)
+        context = digest([*legacy_basis, state.get("evidence_acquisition")])
+        return context, legacy_context, latest
 
     @staticmethod
-    def _projection(row, context, latest):
+    def _projection(row, context, legacy_context, latest):
         if row is None:
             return {
                 "status": "EMPTY",
@@ -129,25 +132,36 @@ class DraftStore:
         if row["fields"] is None:
             return {**value, "status": "EMPTY", "fields": {}}
         if row["context_digest"] != context:
+            if row["context_digest"] == legacy_context:
+                fields = json.loads(row["fields"])
+                return {
+                    **value,
+                    "status": "STALE_SOURCE",
+                    "fields": {
+                        key: field for key, field in fields.items()
+                        if key in LEGACY_NARRATIVE_FIELDS and isinstance(field, str)
+                    },
+                    "reason": "Older saved draft lacks an acquisition pin. Narrative text is available for explicit review; old source links are withheld. Discard the old saved version before saving a successor.",
+                }
             return {
                 **value,
                 "status": "STALE",
-                "reason": "Scope or permissions changed; explicit discard required.",
+                "reason": "Saved draft context differs from current scope, permissions, company source or acquisition; fields are withheld and explicit discard is required. Older draft formats may also require discard.",
             }
         return {**value, "status": "DRAFT", "fields": json.loads(row["fields"])}
 
     def get(self, actor, engagement, action, object_id):
-        context, latest = self._context(actor, engagement, action, object_id)
+        context, legacy_context, latest = self._context(actor, engagement, action, object_id)
         with self._db() as db:
             row = db.execute(
                 "SELECT * FROM drafts WHERE principal=? AND engagement=? "
                 "AND action=? AND object_id=?",
                 (actor, engagement, action, object_id),
             ).fetchone()
-            return self._projection(row, context, latest)
+            return self._projection(row, context, legacy_context, latest)
 
     def write(self, actor, engagement, action, object_id, payload, *, discard=False):
-        context, latest = self._context(actor, engagement, action, object_id)
+        context, legacy_context, latest = self._context(actor, engagement, action, object_id)
         allowed = (
             {"command_id", "expected_version"}
             if discard
@@ -216,9 +230,9 @@ class DraftStore:
             if row is not None and row["command_id"] == command:
                 if row["command_digest"] != fingerprint:
                     raise DomainError("Draft retry payload changed", status=409)
-                return self._projection(row, context, latest)
+                return self._projection(row, context, legacy_context, latest)
             if row is None and discard and expected == 0:
-                return self._projection(None, context, latest)
+                return self._projection(None, context, legacy_context, latest)
             if (row["version"] if row else 0) != expected:
                 raise DomainError("Draft changed; reload before replacing", status=409)
             if (
@@ -252,4 +266,4 @@ class DraftStore:
                 "AND action=? AND object_id=?",
                 key,
             ).fetchone()
-            return self._projection(row, context, latest)
+            return self._projection(row, context, legacy_context, latest)

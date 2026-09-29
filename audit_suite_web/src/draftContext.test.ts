@@ -10,6 +10,8 @@ const scope = (): DraftScope => ({
   roles: ["learner"],
   permissions: ["learn"],
   scope: { period: "2027", boundary: "corporate" },
+  companySourceBinding: { company: "Sable Harbor", branch: "clean" },
+  evidenceAcquisition: "COMPANY_SOURCE_COLLECTION",
 });
 const key = (): DraftKey => ({
   actorId: "actor-a",
@@ -55,6 +57,33 @@ it("marks stale base without silently moving it; explicit rebase preserves prior
   expect(s.lookup(next).status).toBe("CURRENT");
   expect(s.lookup(key()).status).toBe("CURRENT");
 });
+it.each(["source", "acquisition"])(
+  "quarantines source-linked drafts on %s change and requires explicit link re-selection",
+  (change) => {
+    const s = setup(), original = scope();
+    s.save(key(), {
+      objective: "Keep authored analysis", text: "Unsent finding",
+      evidence_ids: "OLD-ARTIFACT", artifact_id: "OLD-ARTIFACT",
+      task_ids: ["OLD-TASK"],
+    });
+    const next = change === "source"
+      ? { ...original, companySourceBinding: { company: "Sable Harbor", branch: "messy" } }
+      : { ...original, evidenceAcquisition: "RETAINED_COPY" };
+    s.activate(next);
+    const stale = s.lookup(key());
+    expect(stale.status).toBe("STALE_SOURCE");
+    if (stale.status === "EMPTY") throw Error();
+    expect(stale.draft.values.text).toBe("Unsent finding");
+    expect(() => s.save(key(), { text: "Silent carry", evidence_ids: "OLD-ARTIFACT" })).toThrow("source");
+    const reviewed = s.reviewSource(key());
+    expect(reviewed.values).toEqual({
+      objective: "Keep authored analysis", text: "Unsent finding",
+    });
+    expect(s.lookup(key()).status).toBe("CURRENT");
+    s.activate({ ...next }); // Ordinary engagement revisions are not draft scope.
+    expect(s.lookup(key()).status).toBe("CURRENT");
+  },
+);
 it.each(["actor", "engagement", "scope", "permissions", "roles"])(
   "clears all retained text on %s switch",
   (field) => {
