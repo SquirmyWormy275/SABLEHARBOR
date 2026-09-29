@@ -1,0 +1,75 @@
+{
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            -107.96562715205644,
+            41.6744965783547
+          ],
+          [
+            -108.0,
+            41.64
+          ],
+          [
+            -108.05,
+            41.58
+          ],
+          [
+            -108.14,
+            41.5
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "HYP-BST-1954-SURVIVOR",
+      "properties": {
+        "accepted_recovered_geometry": null,
+        "candidate_source_id": "SH-GEO-BST-HIST-CANDIDATE-20260929-001",
+        "continuous_operating_interval": null,
+        "current_asset_id": null,
+        "current_operating_effect": "NONE",
+        "event_or_snapshot_date": "1954-07-01",
+        "exact_abandonment_date": null,
+        "fact_state": "PROVISIONAL_DERIVED_SYNTHETIC_HISTORY_CASE",
+        "history_case_record_id": "SH-GEO-BST-HISTORY-CASE-20260929-001",
+        "real_title_or_right_of_way": null,
+        "role": "ILLUSTRATIVE_1954_SURVIVOR",
+        "scenario_id": "HYP-BST-1953-1954-SOUTHWEST-01"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            -108.05,
+            41.58
+          ],
+          [
+            -108.16,
+            41.52
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "HYP-BST-MINE-ONLY-ABANDONED",
+      "properties": {
+        "accepted_recovered_geometry": null,
+        "candidate_source_id": "SH-GEO-BST-HIST-CANDIDATE-20260929-001",
+        "continuous_operating_interval": null,
+        "current_asset_id": null,
+        "current_operating_effect": "NONE",
+        "event_or_snapshot_date": null,
+        "exact_abandonment_date": null,
+        "fact_state": "PROVISIONAL_DERIVED_SYNTHETIC_HISTORY_CASE",
+        "history_case_record_id": "SH-GEO-BST-HISTORY-CASE-20260929-001",
+        "real_title_or_right_of_way": null,
+        "role": "ILLUSTRATIVE_ABANDONED_MINE_ONLY",
+        "scenario_id": "HYP-BST-1953-1954-SOUTHWEST-01"
+      },
+      "type": "Feature"
+    }
+  ],
+  "type": "FeatureCollection"
+}

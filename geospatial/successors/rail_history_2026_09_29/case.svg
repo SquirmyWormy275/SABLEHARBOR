@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 820" role="img" aria-labelledby="title desc">
+<title id="title">BS&amp;T coal-era fictional alignment case</title>
+<desc id="desc">Provisional newly authored 1954 survivor and abandoned mine-only alignment. No recovered survey or real right of way.</desc>
+<rect width="1180" height="820" fill="#f5f2eb"/>
+<text x="72" y="62" font-family="sans-serif" font-size="27" font-weight="700" fill="#183445">BS&amp;T coal-era alignment case</text>
+<text x="72" y="92" font-family="sans-serif" font-size="15" fill="#415865">Provisional fictional placement · authored 29 Sep 2026 · 1954 rescue-stage illustration</text>
+<rect x="95" y="125" width="790" height="600" fill="#fffefa" stroke="#9ca9aa"/>
+<path d="M804.02,191.53 L695.40,281.52 L537.40,438.04 L253.00,646.74" fill="none" stroke="#126f77" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M537.40,438.04 L189.80,594.57" fill="none" stroke="#a55a36" stroke-width="6" stroke-dasharray="12 8" stroke-linecap="round"/>
+<circle cx="804.02" cy="191.53" r="8" fill="#183445"/>
+<circle cx="537.40" cy="438.04" r="7" fill="#183445"/>
+<circle cx="253.00" cy="646.74" r="7" fill="#126f77"/>
+<circle cx="189.80" cy="594.57" r="7" fill="#a55a36"/>
+<g font-family="sans-serif" font-size="14" fill="#183445">
+ <text x="629.02" y="173.53">Wamsutter later anchor</text>
+ <text x="265.00" y="650.74">fictional west service point</text>
+ <text x="201.80" y="580.57">fictional coal works</text>
+</g>
+<rect x="916" y="126" width="225" height="445" rx="10" fill="#e6ece9"/>
+<g font-family="sans-serif" fill="#183445">
+ <text x="936" y="161" font-size="18" font-weight="700">Evidence boundary</text>
+ <text x="936" y="195" font-size="14">1898 extent: unknown</text>
+ <text x="936" y="220" font-size="14">1954 source: 14–16 mi</text>
+ <text x="936" y="245" font-size="14">Surveyed line: unknown</text>
+ <text x="936" y="270" font-size="14">Real ROW: not supplied</text>
+ <path d="M938 309 L981 309" stroke="#126f77" stroke-width="6"/>
+ <text x="938" y="339" font-size="14">Case survivor</text>
+ <text x="938" y="360" font-size="14">15.085 miles</text>
+ <path d="M938 397 L981 397" stroke="#a55a36" stroke-width="6" stroke-dasharray="10 6"/>
+ <text x="938" y="427" font-size="14">Case abandoned</text>
+ <text x="938" y="448" font-size="14">7.047 miles</text>
+ <text x="938" y="499" font-size="13">Not a current asset,</text>
+ <text x="938" y="518" font-size="13">construction plan, or</text>
+ <text x="938" y="537" font-size="13">property-right record.</text>
+</g>
+<text x="72" y="780" font-family="sans-serif" font-size="13" fill="#415865">Coordinates are invented scenario anchors. This plate is not a recovered map; the accepted source-evidence history remains unlocated.</text>
+</svg>

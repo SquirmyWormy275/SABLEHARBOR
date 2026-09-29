@@ -406,9 +406,12 @@ bookends; they do not establish 40 completed operations, a complete year or
 control effectiveness. The six separate 2028 declarations and 28 slots
 remain excluded.
 
-The sealed [paired BCM procedure runner](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-bcm-ordinary-procedures-runner-proposal-v2/MANIFEST.json)
+The sealed paired BCM procedure runner (local generated receipt:
+`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-bcm-ordinary-procedures-runner-proposal-v2/MANIFEST.json`)
 then ran a reviewed disposable rehearsal and a separate private actual run
-against byte-copied Key-bound A/B workrooms. [Independent actual-run postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-bcm-ordinary-procedures-run-independent-review-v1/REVIEW.json)
+against byte-copied Key-bound A/B workrooms. The independent actual-run postreview
+(local generated receipt:
+`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-bcm-ordinary-procedures-run-independent-review-v1/REVIEW.json`)
 (SHA-256 `f42dc13679d7cef34bda1ae7c25bbe27f71bc66dee80075554503c77fea0fc78`)
 verified six ordinary commands per branch (A90→96, B63→69), provisional
 B1/B2/B3 declaration reconciliation, and distinct BCM-003 R1/R2 workpaper

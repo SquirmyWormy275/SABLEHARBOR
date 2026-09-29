@@ -15,6 +15,7 @@ Generated file inventory. Includes current and historical records; open the sour
 - [SABLE HARBOR — CANON CHANGELOG v0.3](../../canon/CANON_CHANGELOG_v0.3.md) — MD
 - [Prospective capital designation rights — September 22, 2026](../../canon/CAPITAL_DESIGNATION_RIGHTS_2026-09-22.md) — MD · [formatted PDF](../../governance/publications/SH-CAP-RIGHTS-20260922_v1.0.0.pdf)
 - [Company closeout owner directions](../../canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md) — MD · [formatted PDF](../../governance/publications/SH-COMPANY-DIRECTIONS-20260915_v1.2.0.pdf)
+- [Company closeout — synthetic scope and external execution](../../canon/COMPANY_SYNTHETIC_SCOPE_DISPOSITION_2026-09-29.md) — MD
 - [SABLE HARBOR — CORPORATE HEADQUARTERS CLOSEOUT](../../canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md) — MD · [formatted PDF](../../governance/publications/SH-CORP-HQ-20260903_v1.0.1.pdf)
 - [SABLE HARBOR — PROJECT CRADLE CLOSEOUT](../../canon/CRADLE_CLOSEOUT_2026-09-06.md) — MD
 - [Cradle host terms — approved alternative B](../../canon/CRADLE_HOST_TERMS_2026-09-22.md) — MD · [formatted PDF](../../legal/host-successor/publications/SH-HOST-B-ADOPTION-20260922_v1.0.0.pdf)

@@ -10,12 +10,12 @@ FORBIDDEN = ("ghp_", "github_pat_", "sk-proj-", "BEGIN PRIVATE KEY")
 MAX_BYTES = 10 * 1024 * 1024
 ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # Tracked convenience catalog retained by GENERATED_RECORDS_LIFECYCLE.md.
-    # September 29 portal/main integration retains all 148 publication pairs
-    # and adds the portal source index without broadening the size policy.
-    # Exact bytes only; later drift requires another row and hash review.
+    # September 29 portal/main integration plus accepted legal and geographic
+    # successors: 1,533 reader files, 148 publication pairs, 12 evidence
+    # packages. Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        13475840,
-        "2fb1f7b2a0e23b6b3dca9718d2b01e37306a1e95c13033226f6bb1c5bb32411a",
+        13512704,
+        "1fa5884bbee473b103207e3323ab37b86673dec2797f510adf7a220df2e5187d",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.
