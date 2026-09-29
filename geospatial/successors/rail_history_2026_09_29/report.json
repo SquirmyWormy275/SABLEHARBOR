@@ -10,6 +10,7 @@
     "abandoned_recovered_geometry": null,
     "real_title_or_right_of_way_instrument": null
   },
+  "attribution_correction": "geospatial/successors/rail_history_2026_09_29/ATTRIBUTION_CORRECTION_2026-09-29.md",
   "authored_at_utc": "2026-09-29T14:29:52Z",
   "candidate_scenario_id": "HYP-BST-1953-1954-SOUTHWEST-01",
   "current_operating_asset_count_added": 0,
@@ -34,6 +35,8 @@
     "The 1954 date is the rescue event/snapshot, not proof of full-line commencement or continuous operation; abandonment and retirement days remain unknown.",
     "No modern route, milepost, operating forecast, legal right or financial release changes."
   ],
+  "prior_source_accepted_commit": "bcdf3ade1d83d04774da9a914deb269442ee52f6",
+  "prior_source_repository_available_at_utc": "2026-09-29T15:22:18Z",
   "real_property_instrument_count_added": 0,
   "record_id": "SH-GEO-BST-HISTORY-CASE-20260929-001",
   "repository_available_at": null,
@@ -55,6 +58,8 @@
       "recovered_linework": 0
     }
   ],
-  "source_sha256": "33dcadb3c185d5c07125d92af9b3cea3bed6585b610f480d5cbf66214db78deb",
-  "state": "PROVISIONAL_DERIVED_SYNTHETIC_HISTORY_CASE"
+  "source_schema_version": "1.1",
+  "source_sha256": "a869bae143c4216663dc11e8364ef5ce5ada0e2d7b0e946b6e5920a0eb2c81a4",
+  "state": "PROVISIONAL_DERIVED_SYNTHETIC_HISTORY_CASE",
+  "supersedes_source_sha256": "33dcadb3c185d5c07125d92af9b3cea3bed6585b610f480d5cbf66214db78deb"
 }

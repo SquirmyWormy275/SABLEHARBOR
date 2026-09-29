@@ -18,6 +18,15 @@ def test_exact_separate_outputs_and_preserved_history():
     assert all((HERE / name).read_bytes() == content for name, content in outputs.items())
     report = json.loads(outputs["report.json"])
     case = json.loads(outputs["case.geojson"])
+    source = json.loads((HERE / "source.json").read_text())
+    assert source["schema_version"] == report["source_schema_version"] == "1.1"
+    assert source["supersedes_source_sha256"] == report["supersedes_source_sha256"]
+    assert source["prior_source_accepted_commit"] == report["prior_source_accepted_commit"]
+    assert source["prior_source_repository_available_at_utc"] == report[
+        "prior_source_repository_available_at_utc"
+    ]
+    assert source["repository_available_at"] is None
+    assert "#107B" in source["authority"] and "#108B" not in source["authority"]
     assert 14 <= report["lengths_miles"]["survivor"] <= 16
     assert 20 <= report["illustrative_prefailure_total_miles"] <= 24
     assert report["accepted_history_preserved"]["1898_extent_miles"] is None
@@ -59,13 +68,17 @@ def test_exact_separate_outputs_and_preserved_history():
         (("accepted_history_preserved", "1898_extent_miles"), 22.132, "uncertainty"),
         (("accepted_history_preserved", "1954_recovered_geometry"), "case.geojson", "uncertainty"),
         (("input_sha256", "industrial/source/operations.json"), "0" * 64, "Changed pinned"),
+        (("authority",), "Owner #107B/#108B approved", "authority"),
     ],
 )
 def test_unsupported_evidence_right_or_economic_promotion_rejected(
     tmp_path, monkeypatch, field, value, error
 ):
     source = json.loads((HERE / "source.json").read_text())
-    source[field[0]][field[1]] = value
+    if len(field) == 1:
+        source[field[0]] = value
+    else:
+        source[field[0]][field[1]] = value
     (tmp_path / "source.json").write_text(json.dumps(source))
     monkeypatch.setattr(history, "HERE", tmp_path)
     with pytest.raises(ValueError, match=error):

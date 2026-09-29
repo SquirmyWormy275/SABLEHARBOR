@@ -1,0 +1,12 @@
+{
+  "changed_controlling_canon": 0,
+  "changed_paths": 18,
+  "levels": {
+    "DERIVATION_AND_VALIDATION": 3,
+    "EXPLANATORY_READER": 3,
+    "IMPLEMENTATION_TEST": 3,
+    "REGENERATED_GEOGRAPHIC_DERIVATIVE": 6,
+    "SCOPED_GEOGRAPHIC_CRITERION_REVIEW": 1,
+    "TARGETED_GEOGRAPHIC_SOURCE_REVIEW": 2
+  }
+}

@@ -1,10 +1,26 @@
 # Geographic program closeout matrix
 
+The [September 29 synthetic scope disposition](../../docs/canon/GEOGRAPHIC_SYNTHETIC_SCOPE_DISPOSITION_2026-09-29.md)
+sets the finite company-edition boundary for #107/#108 **on repository
+acceptance**. The [final accepted-source delta](../successor_20260929_final/README.md)
+reviews every path from accepted `e4ed29b2` through the actual PR #185 merge
+`bcdf3ade`; together with the prior 83-path ledger, the accepted-source review
+is continuous from `3dd5e15f` at this frozen cutoff. The current edition has
+the corrected 40.000000000-mile synthetic route, complete declared
+site/track/structure populations, profile/turnout centerline screens and a
+separate visibly provisional 1954 case. It does **not** have a recovered early
+survey, construction-ready design, real land/access right, exact external
+customer parcel, in-service proposed lead or uranium-custody authority. These
+facts remain NOT_ESTABLISHED or OPEN_GATED after any scoped issue retirement.
+New later sources enter later edition change control; they do not make the
+frozen cutoff an infinite future-source claim. Issue closure still requires
+accepted source, reader/catalog regeneration and final-head validation.
+
 The [September 28 source successor](../successor_20260928/README.md) inventories the 1,415 changed paths after the 1.4.0 geographic source boundary, reviews all nine changed controlling canon documents for geographic effect, and targets twelve site-adjacent company sources. Its pinned boundary is accepted main `3dd5e15f58d39b28291782bde5bf4dbf3744a03e`. It does not resolve #107 engineering or close #108.
 
 The September 13 geographic review below records the [delegated geographic addendum](../../docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md), site and occupancy choices at explicit accepted precision, and the [final review](../finalization/README.md). Later [headquarters visual withdrawal](../../docs/canon/HEADQUARTERS_VISUAL_WITHDRAWAL_2026-09-22.md) supersedes only the exterior-image scope. Earlier dated increments below are historical release records.
 
-Issue #106 is closed at its accepted precision for all 34 site/component records, including three screened selected footprints. Issue #107 still requires detailed railway/site engineering beyond the existing grade-only synthetic screening. Issue #108 retains that whole-program dependency; source-carrier completion alone is not whole-program closure. Actual land rights, external execution and uranium custody are not established by this package.
+Issue #106 is closed at its accepted precision for all 34 site/component records, including three screened selected footprints. The new scope decision supersedes #107's construction-level/external precision as a prerequisite to the synthetic edition **only on acceptance**; it does not claim that work was performed. Issue #108's edition-level closure then depends on the final source delta, readers and checks. Actual land rights, external execution and uranium custody are not established by this package.
 
 The baseline census is fully dispositioned: 78,145 carriers across six disjoint batches. The source ledger covers all 919 original files and 3,190 changed paths through accepted main `dff38f0`, including full-text review of all 17 controlling canon deltas. Its other rows explicitly distinguish domain records, implementation and derived publications; they are not represented as comprehensive legal or financial audits. The final visual review verifies 135 unique embedded images and 290 appearances against the container inventory.
 
@@ -24,8 +40,8 @@ Historical requirement headings are identifiers, not authority for superseded na
 | 7 | BUILD A GEOGRAPHIC DECISION REGISTER FIRST | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 8 | MASTER SITE IDENTIFIERS | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 9 | TEMPORAL GIS | IMPLEMENTED_AT_ACCEPTED_PRECISION | 34 site histories with accepted current dispositions, 79 dated events and bounded occupancy; unknown dates stay unknown. |
-| 10 | RAILWAY MODEL | ENGINEERING_REMAINDER | Accepted synthetic estate preserved. Detailed transitions, design profiles, construction/site engineering and real land/access evidence are not certified by source adjudication; see #107. |
-| 11 | RESOURCE GEOGRAPHY | ENGINEERING_REMAINDER | Accepted synthetic estate preserved. Detailed transitions, design profiles, construction/site engineering and real land/access evidence are not certified by source adjudication; see #107. |
+| 10 | RAILWAY MODEL | DELIVERED_AT_SYNTHETIC_PLANNING_PRECISION_ON_ACCEPTANCE | Accepted 40-mile successor, eight turnout/profile screens, 31 tracks and 26 structure crosswalks reconcile. Construction-ready design and real land/access remain NOT_ESTABLISHED under the scoped #107 disposition. |
+| 11 | RESOURCE GEOGRAPHY | DELIVERED_AT_SYNTHETIC_PLANNING_PRECISION_ON_ACCEPTANCE | Red Wash remains truck-only with no mine spur; accepted fictional resource/site extent and external precision limits are preserved. Real survey/title or new custody is not inferred. |
 | 12 | CORPORATE FOOTPRINT | IMPLEMENTED_AT_ACCEPTED_PRECISION | Three screened selected footprints and explicit accepted precision dispositions for all 34 sites/components. |
 | 13 | EVENT GEOGRAPHY | IMPLEMENTED_AT_ACCEPTED_PRECISION | 79 source-bound events, including six rejected-prospect inquiry endpoints; no tenure inferred from inquiry. |
 | 14 | CARTOGRAPHIC PRODUCTS | IMPLEMENTED_AT_ACCEPTED_PRECISION | Full historical/site atlas plus three screened selected-footprint plates; no current alignments back-projected into unlocated eras. |
@@ -36,8 +52,8 @@ Historical requirement headings are identifiers, not authority for superseded na
 | 19 | GEOGRAPHIC PRECISION POLICY | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 20 | SOURCE ACQUISITION AND LICENSING | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 21 | LOCKED DECISIONS VERSUS ENGINEERING DETAILS | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
-| 22 | RED WASH EXACT-SITING WORKFLOW | ENGINEERING_REMAINDER | Accepted synthetic estate preserved. Detailed transitions, design profiles, construction/site engineering and real land/access evidence are not certified by source adjudication; see #107. |
-| 23 | BS&T NETWORK ENGINEERING WORKFLOW | ENGINEERING_REMAINDER | Accepted synthetic estate preserved. Detailed transitions, design profiles, construction/site engineering and real land/access evidence are not certified by source adjudication; see #107. |
+| 22 | RED WASH EXACT-SITING WORKFLOW | DELIVERED_AT_SYNTHETIC_PLANNING_PRECISION_ON_ACCEPTANCE | Accepted truck-only nine-mile mine road and fictional site geometry are retained; field siting, real title and construction authority are NOT_ESTABLISHED. |
+| 23 | BS&T NETWORK ENGINEERING WORKFLOW | DELIVERED_AT_SYNTHETIC_PLANNING_PRECISION_ON_ACCEPTANCE | Three-route exact-40-mile source, 11 route segments, 20 yard tracks, 26 structures, eight proposed interfaces and source/finance reperform pass at declared precision. Proposed leads remain out of service; field design/rights stay NOT_ESTABLISHED. |
 | 24 | SACRAMENTO HQ GEOMETRY | IMPLEMENTED_AT_ACCEPTED_PRECISION | 11.57-acre Sacramento fictional footprint screened against terrain, dated imagery, roads/rail and flood mapping; V08 artwork remains unchanged. |
 | 25 | EVALON / HAZELWOOD GEOMETRY | IMPLEMENTED_AT_ACCEPTED_PRECISION | 10.65-acre Fort fictional footprint screened; accepted 2024 separate-premises relocation preserved with unknown days. |
 | 26 | CRADLE / BELLE GEOMETRY | IMPLEMENTED_AT_ACCEPTED_PRECISION | 15.27-acre Bedford/Fairmont fictional footprint screened; upper bench and steep-buffer distinction retained; external hosts remain separate. |
@@ -61,7 +77,7 @@ Historical requirement headings are identifiers, not authority for superseded na
 | 44 | FOURTH EXECUTION PHASE | IMPLEMENTED_AT_ACCEPTED_PRECISION | Enterprise histories and bounded site precision integrated across catalog, docket and map products. |
 | 45 | FIFTH EXECUTION PHASE | IMPLEMENTED_AT_ACCEPTED_PRECISION | Offline historical and source research readers implemented with executable browser qualification. |
 | 46 | RELEASE PACKAGE | DELIVERED_AT_ACCEPTED_PRECISION | Geographic evidence 1.4.0 is sealed and published with integration, native/browser validation and acceptance receipts. The September 28 source successor is a review increment, not a new complete geographic release. |
-| 47 | DEFINITION OF DONE | PROGRAM_REMAINDER | The published 1.4.0 package satisfies its stated scope; #107 detailed engineering and the explicitly bounded whole-program evidence remain before #108 can close. |
+| 47 | DEFINITION OF DONE | FINITE_SYNTHETIC_EDITION_GATE_ON_ACCEPTANCE | Baseline 78,145-carrier census, declared visual review, 34 histories, 79 events, atlas/readers and exact accepted-source deltas through `bcdf3ade` define the finite geography edition. Accept the new scope decision, regenerate readers and validate its final revision before #107/#108 closure; no real construction or infinite future-source claim. |
 | 48 | DO-NOT-DO LIST | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 | 49 | IMMEDIATE START INSTRUCTION | IMPLEMENTED_FOR_FRAMEWORK | Current governed implementation is delivered; full geographic engineering remains bounded by the gaps above. |
 
