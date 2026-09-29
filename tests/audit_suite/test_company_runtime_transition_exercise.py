@@ -29,7 +29,7 @@ def _build(tmp_path):
 
 def test_exact_contract_commission_recovery_and_exception_history(tmp_path):
     root = _build(tmp_path)
-    assert verify(root, repository=REPOSITORY)["native_version_count"] == 32
+    assert verify(root, repository=REPOSITORY)["native_version_count"] == 48
     receipt = json.loads((root / "RECEIPT.json").read_text())
     assert (
         receipt["source_pins"][
@@ -40,6 +40,7 @@ def test_exact_contract_commission_recovery_and_exception_history(tmp_path):
     assert receipt["local_denominators"] == {
         "selected_sites": 2,
         "fictional_contract_delegations": 1,
+        "named_contract_clearances": 8,
         "contract_approvals": 2,
         "counterparty_acceptances": 2,
         "provider_contracts": 2,
@@ -67,7 +68,7 @@ def test_exact_contract_commission_recovery_and_exception_history(tmp_path):
     ) as db:
         db.row_factory = sqlite3.Row
         rows = db.execute("SELECT * FROM versions ORDER BY branch,event_at").fetchall()
-        assert len(rows) == 32
+        assert len(rows) == 48
         assert all(r["event_at"] > r["imported_at"] for r in rows)
         assert db.execute("SELECT COUNT(*) FROM grants").fetchone()[0] == 0
         assert db.execute("SELECT COUNT(*) FROM collections").fetchone()[0] == 0
@@ -85,7 +86,25 @@ def test_exact_contract_commission_recovery_and_exception_history(tmp_path):
             counterparty = bodies[(branch, "VA-RENO", 1)]
             executed = bodies[(branch, "C-RENO", 1)]
             assert delegation["fictional_delegation_decision"]["delegate_person_id"] == "AS-P002"
-            assert approval["depends_on_record"] == "DA-SHI-2027-RUNTIME"
+            assert approval["depends_on_record"] == "CLR-RENO-SECURITY"
+            expected_actors = {
+                "LEGAL": "AS-P003",
+                "PROCUREMENT": "AS-P013",
+                "TECHNOLOGY": "AS-P007",
+                "SECURITY": "AS-P008",
+            }
+            for role, actor in expected_actors.items():
+                record = f"CLR-RENO-{role}"
+                clearance = bodies[(branch, record, 1)]
+                assert clearance["fictional_named_clearance"]["actor_person_id"] == actor
+                assert clearance["fictional_named_clearance"]["outcome"] == "CLEARED_SIMULATED"
+                assert (
+                    approval["approved_clearance_sha256"][record]
+                    == db.execute(
+                        "SELECT sha256 FROM versions WHERE branch=? AND record=? AND version=1",
+                        (branch, record),
+                    ).fetchone()[0]
+                )
             assert counterparty["depends_on_record"] == "AP-RENO"
             assert executed["depends_on_record"] == "VA-RENO"
             assert executed["fictional_executed_terms"]["contracting_entity"] == {
@@ -193,6 +212,24 @@ def test_execution_cannot_skip_approval_or_counterparty_acceptance(tmp_path, mon
     with pytest.raises(CompanyStoreError, match="counterparty acceptance lacks approval"):
         create(
             tmp_path / "invalid-acceptance",
+            repository=REPOSITORY,
+            clean_branch="TRANS-CLEAN",
+            messy_branch="TRANS-MESSY",
+        )
+
+
+def test_missing_named_role_clearance_rejects_source(tmp_path, monkeypatch):
+    monkeypatch.setattr(
+        transition,
+        "EVENTS",
+        {
+            side: tuple(step for step in steps if step[1] != "CLR-BOISE-TECHNOLOGY")
+            for side, steps in transition.EVENTS.items()
+        },
+    )
+    with pytest.raises(CompanyStoreError, match="population incomplete"):
+        create(
+            tmp_path / "missing-technology-signoff",
             repository=REPOSITORY,
             clean_branch="TRANS-CLEAN",
             messy_branch="TRANS-MESSY",

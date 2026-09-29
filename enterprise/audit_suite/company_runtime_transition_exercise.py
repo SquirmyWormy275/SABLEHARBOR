@@ -20,14 +20,14 @@ from .company_store import CompanyStore, CompanyStoreError, _id, _time
 from .operating_source_bridge import encoded, sha
 from .private_publication import publish
 
-SCHEMA = "SH_FICTIONAL_2027_RUNTIME_TRANSITION_V2"
+SCHEMA = "SH_FICTIONAL_2027_RUNTIME_TRANSITION_V3"
 COMPANY = "SABLE-HARBOR-REFERENCE"
 QUALIFICATION = "AUTHORED_FUTURE_IN_UNIVERSE_SOURCE_NO_REAL_DEPLOYMENT_OR_AUDIT_CREDIT"
 DECISION = "docs/internal/development/audit-suite/FICTIONAL_2027_SCENARIO_DECISIONS_2026-09-29.md"
 DECISION_SHA256 = "15198cd0bcc1de1c8872d4310ff7f1eef8fc89a5250d24af15f4ec19f8e78496"
 SITES = "enterprise/services/source/runtime_sites_2026-09-11.json"
-CONTRACT_SPEC = "enterprise/audit_suite/runtime_transition_contract_spec_v2.json"
-CONTRACT_SPEC_SHA256 = "05c41b08b861fa5d9fe17425544b374cbf1cf380720e48d68b8df141eb65ce5f"
+CONTRACT_SPEC = "enterprise/audit_suite/runtime_transition_contract_spec_v3.json"
+CONTRACT_SPEC_SHA256 = "95b92ac2870a1097c39691d33a7553e4598eb114eaf89a74a405ee1833d03dc1"
 SOURCE_PATHS = (
     DECISION,
     SITES,
@@ -49,6 +49,7 @@ PROVIDER_IDS = {"RENO": "CP-SWITCH", "BOISE": "CP-IDACORE"}
 CONTRACT_IDS = {"RENO": "RT-SO-RENO", "BOISE": "RT-SO-BOISE"}
 SYSTEM_OWNERS = {
     "contract_authority": "AS-P002",
+    "contract_clearance": "AS-P013",
     "contract_approval": "AS-P013",
     "counterparty_acceptance": "AS-P013",
     "provider_contract": "AS-P013",
@@ -63,6 +64,7 @@ FIXTURE_SHA256 = sha(encoded({"marker": "NONPERSONAL_PAYLOAD_FREE_RECOVERY", "ve
 DENOMINATORS = {
     "selected_sites": 2,
     "fictional_contract_delegations": 1,
+    "named_contract_clearances": 8,
     "contract_approvals": 2,
     "counterparty_acceptances": 2,
     "provider_contracts": 2,
@@ -87,13 +89,49 @@ COMMON = (
         "DELEGATED_SIMULATED",
     ),
     _step(
+        "contract_clearance",
+        "CLR-RENO-LEGAL",
+        1,
+        "RENO",
+        "2027-02-06T10:00:00+00:00",
+        "CLEARED_SIMULATED",
+        depends="DA-SHI-2027-RUNTIME",
+    ),
+    _step(
+        "contract_clearance",
+        "CLR-RENO-PROCUREMENT",
+        1,
+        "RENO",
+        "2027-02-07T10:00:00+00:00",
+        "CLEARED_SIMULATED",
+        depends="CLR-RENO-LEGAL",
+    ),
+    _step(
+        "contract_clearance",
+        "CLR-RENO-TECHNOLOGY",
+        1,
+        "RENO",
+        "2027-02-08T10:00:00+00:00",
+        "CLEARED_SIMULATED",
+        depends="CLR-RENO-PROCUREMENT",
+    ),
+    _step(
+        "contract_clearance",
+        "CLR-RENO-SECURITY",
+        1,
+        "RENO",
+        "2027-02-09T10:00:00+00:00",
+        "CLEARED_SIMULATED",
+        depends="CLR-RENO-TECHNOLOGY",
+    ),
+    _step(
         "contract_approval",
         "AP-RENO",
         1,
         "RENO",
         "2027-02-10T10:00:00+00:00",
         "APPROVED_SIMULATED",
-        depends="DA-SHI-2027-RUNTIME",
+        depends="CLR-RENO-SECURITY",
     ),
     _step(
         "counterparty_acceptance",
@@ -114,13 +152,49 @@ COMMON = (
         depends="VA-RENO",
     ),
     _step(
+        "contract_clearance",
+        "CLR-BOISE-LEGAL",
+        1,
+        "BOISE",
+        "2027-02-25T10:00:00+00:00",
+        "CLEARED_SIMULATED",
+        depends="DA-SHI-2027-RUNTIME",
+    ),
+    _step(
+        "contract_clearance",
+        "CLR-BOISE-PROCUREMENT",
+        1,
+        "BOISE",
+        "2027-02-26T10:00:00+00:00",
+        "CLEARED_SIMULATED",
+        depends="CLR-BOISE-LEGAL",
+    ),
+    _step(
+        "contract_clearance",
+        "CLR-BOISE-TECHNOLOGY",
+        1,
+        "BOISE",
+        "2027-02-27T10:00:00+00:00",
+        "CLEARED_SIMULATED",
+        depends="CLR-BOISE-PROCUREMENT",
+    ),
+    _step(
+        "contract_clearance",
+        "CLR-BOISE-SECURITY",
+        1,
+        "BOISE",
+        "2027-02-28T10:00:00+00:00",
+        "CLEARED_SIMULATED",
+        depends="CLR-BOISE-TECHNOLOGY",
+    ),
+    _step(
         "contract_approval",
         "AP-BOISE",
         1,
         "BOISE",
         "2027-03-01T10:00:00+00:00",
         "APPROVED_SIMULATED",
-        depends="DA-SHI-2027-RUNTIME",
+        depends="CLR-BOISE-SECURITY",
     ),
     _step(
         "counterparty_acceptance",
@@ -306,7 +380,7 @@ def _source_context(repository: Path) -> tuple[dict, dict, dict]:
         raise CompanyStoreError("Fictional contract authority specification changed")
     spec = json.loads((repository / CONTRACT_SPEC).read_text())
     if (
-        spec["schema"] != "SH_FICTIONAL_2027_PROVIDER_CONTRACT_SPEC_V2"
+        spec["schema"] != "SH_FICTIONAL_2027_PROVIDER_CONTRACT_SPEC_V3"
         or spec["contracting_entity"]["id"] != "SHI"
         or spec["contracting_entity"]["legal_name"] != "Sable Harbor, LLC"
         or spec["fictional_delegation"]["delegate_person_id"] != "AS-P002"
@@ -382,6 +456,17 @@ def _source_context(repository: Path) -> tuple[dict, dict, dict]:
         != spec["fictional_delegation"]["maximum_base_commitment_usd"]
     ):
         raise CompanyStoreError("Fictional contract delegation amount differs")
+    for role in SITE_IDS:
+        clearances = spec["clearance_events"][role]
+        if (
+            [row["actor_person_id"] for row in clearances]
+            != ["AS-P003", "AS-P013", "AS-P007", "AS-P008"]
+            or [row["review_role"] for row in clearances]
+            != ["LEGAL", "PROCUREMENT", "TECHNOLOGY", "SECURITY"]
+            or [row["record_id"] for row in clearances]
+            != spec["approval_events"][role]["clearance_event_record_ids"]
+        ):
+            raise CompanyStoreError("Named fictional contract clearance population differs")
     services = json.loads((repository / "enterprise/services/source/services.json").read_text())
     if not {"SVC-compute", "SVC-identity", "SVC-siem", "SVC-backup"} <= {
         row[0] for row in services["services"]
@@ -395,6 +480,10 @@ def _checks(system: str, status: str, site: str) -> dict:
     if system == "contract_authority":
         return {
             x: "PASS" for x in ("named_issuer", "named_delegate", "bounded_scope", "fictional_only")
+        }
+    if system == "contract_clearance":
+        return {
+            x: "PASS" for x in ("named_actor", "role_scope", "dated_decision", "fictional_only")
         }
     if system == "contract_approval":
         return {x: "PASS" for x in ("legal", "procurement", "technology", "security")}
@@ -440,6 +529,20 @@ def _checks(system: str, status: str, site: str) -> dict:
     return {}
 
 
+def _clearance_refs(latest: dict, spec: dict, site: str) -> dict:
+    records = spec["approval_events"][site]["clearance_event_record_ids"]
+    if (
+        len(records) != 4
+        or len(set(records)) != 4
+        or any(
+            record not in latest or latest[record]["body_status"] != "CLEARED_SIMULATED"
+            for record in records
+        )
+    ):
+        raise CompanyStoreError("Four independently attributed contract clearances required")
+    return {record: latest[record]["sha256"] for record in records}
+
+
 def _body(
     scenario: str,
     step: tuple,
@@ -447,6 +550,7 @@ def _body(
     spec: dict,
     previous: str | None,
     dependency: str | None,
+    clearance_refs: dict | None,
 ) -> dict:
     system, record, version, site, at, status, lag, depends = step
     available = datetime.fromisoformat(at) + timedelta(minutes=lag)
@@ -457,6 +561,9 @@ def _body(
         or (record == "CM-BOISE" and version == 2)
     )
     contract = spec["site_orders"][site]
+    clearance = next(
+        (row for row in spec["clearance_events"][site] if row["record_id"] == record), None
+    )
     return {
         "schema": SCHEMA,
         "scenario": scenario,
@@ -485,9 +592,11 @@ def _body(
         "fictional_delegation_decision": (
             spec["fictional_delegation"] if system == "contract_authority" else None
         ),
+        "fictional_named_clearance": clearance if system == "contract_clearance" else None,
         "fictional_contract_approval": (
             spec["approval_events"][site] if system == "contract_approval" else None
         ),
+        "approved_clearance_sha256": clearance_refs if system == "contract_approval" else None,
         "fictional_counterparty_acceptance": (
             {
                 **spec["counterparty_acceptance_events"][site],
@@ -571,6 +680,7 @@ def _observed_counts(steps: tuple) -> dict:
     latest = {(step[0], step[1]): step for step in steps}
     accepted = {
         "contract_authority": {"DELEGATED_SIMULATED"},
+        "contract_clearance": {"CLEARED_SIMULATED"},
         "contract_approval": {"APPROVED_SIMULATED"},
         "counterparty_acceptance": {"ACCEPTED_SIMULATED"},
         "provider_contract": {"EXECUTED_SIMULATED"},
@@ -590,6 +700,7 @@ def _observed_counts(steps: tuple) -> dict:
     return {
         "selected_sites": len(SITE_IDS),
         "fictional_contract_delegations": passing("contract_authority"),
+        "named_contract_clearances": passing("contract_clearance"),
         "contract_approvals": passing("contract_approval"),
         "counterparty_acceptances": passing("counterparty_acceptance"),
         "provider_contracts": passing("provider_contract"),
@@ -636,15 +747,35 @@ def create(destination: Path, *, repository: Path, clean_branch: str, messy_bran
             previous = None
             for step in steps:
                 system, record, version, site, at, status, lag, depends = step
+                if depends and depends not in latest:
+                    raise CompanyStoreError("Transition dependency source missing")
                 dependency = latest[depends]["sha256"] if depends else None
-                body = _body(scenario, step, sites, spec, previous, dependency)
+                clearance_refs = (
+                    _clearance_refs(latest, spec, site) if system == "contract_approval" else None
+                )
+                body = _body(scenario, step, sites, spec, previous, dependency, clearance_refs)
                 if depends and _time(at) <= latest[depends]["event_at"]:
                     raise CompanyStoreError("Transition dependency chronology invalid")
+                if system == "contract_clearance":
+                    entries = spec["clearance_events"][site]
+                    match = [i for i, entry in enumerate(entries) if entry["record_id"] == record]
+                    if len(match) != 1:
+                        raise CompanyStoreError("Named contract clearance identity differs")
+                    index = match[0]
+                    expected_depends = (
+                        "DA-SHI-2027-RUNTIME" if index == 0 else entries[index - 1]["record_id"]
+                    )
+                    if (
+                        depends != expected_depends
+                        or status != entries[index]["outcome"]
+                        or _time(at) != _time(entries[index]["event_at"])
+                    ):
+                        raise CompanyStoreError("Named contract clearance chronology differs")
                 if system == "contract_approval" and (
-                    depends != "DA-SHI-2027-RUNTIME"
-                    or latest[depends]["body_status"] != "DELEGATED_SIMULATED"
+                    depends != spec["clearance_events"][site][-1]["record_id"]
+                    or latest["DA-SHI-2027-RUNTIME"]["body_status"] != "DELEGATED_SIMULATED"
                 ):
-                    raise CompanyStoreError("Fictional contract approval lacks delegation")
+                    raise CompanyStoreError("Fictional contract approval lacks named clearances")
                 if system == "counterparty_acceptance" and (
                     depends != f"AP-{site}"
                     or latest[depends]["body_status"] != "APPROVED_SIMULATED"
@@ -761,7 +892,7 @@ def verify(destination: Path, *, repository: Path | None = None) -> dict:
         or manifest["company_db_sha256"] != _digest(root / "company.sqlite3")
         or manifest["module_sha256"] != _digest(Path(__file__))
         or manifest["schema"] != SCHEMA + "_MANIFEST"
-        or manifest["native_version_count"] != 32
+        or manifest["native_version_count"] != 48
         or manifest["audit_task_credit"] is not False
     ):
         raise CompanyStoreError("Transition manifest pin mismatch")
@@ -807,7 +938,7 @@ def verify(destination: Path, *, repository: Path | None = None) -> dict:
         if db.execute("PRAGMA quick_check").fetchone()[0] != "ok":
             raise CompanyStoreError("Native transition database integrity failure")
         if (
-            db.execute("SELECT COUNT(*) FROM versions").fetchone()[0] != 32
+            db.execute("SELECT COUNT(*) FROM versions").fetchone()[0] != 48
             or db.execute("SELECT COUNT(*) FROM grants").fetchone()[0] != 0
             or db.execute("SELECT COUNT(*) FROM collections").fetchone()[0] != 0
         ):
@@ -829,6 +960,8 @@ def verify(destination: Path, *, repository: Path | None = None) -> dict:
             previous = None
             for ref, step in zip(refs, steps, strict=True):
                 system, record, version, site, at, status, lag, depends = step
+                if depends and depends not in latest:
+                    raise CompanyStoreError("Transition dependency source missing")
                 route = (COMPANY, branch, system, record, version)
                 if (
                     tuple(ref[k] for k in ("company", "branch", "system", "record", "version"))
@@ -861,7 +994,10 @@ def verify(destination: Path, *, repository: Path | None = None) -> dict:
                 }:
                     raise CompanyStoreError("Native transition provenance differs")
                 dependency = latest[depends]["sha256"] if depends else None
-                expected = _body(scenario, step, sites, spec, previous, dependency)
+                clearance_refs = (
+                    _clearance_refs(latest, spec, site) if system == "contract_approval" else None
+                )
+                expected = _body(scenario, step, sites, spec, previous, dependency, clearance_refs)
                 if (
                     json.loads(row["content"]) != expected
                     or row["event_at"] != expected["event_at"]
