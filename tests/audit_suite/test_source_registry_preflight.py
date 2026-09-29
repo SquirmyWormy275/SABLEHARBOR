@@ -226,3 +226,27 @@ def test_immutable_reader_cannot_silently_omit_committed_wal_update(tmp_path):
         }
         with pytest.raises(PreflightError, match="no active sidecars"):
             read_state(path)
+
+
+def test_reader_detects_private_mode_change_during_read(tmp_path, monkeypatch):
+    path = tmp_path / "state.sqlite3"
+    with sqlite3.connect(path) as db:
+        db.execute("CREATE TABLE engagements (state TEXT NOT NULL)")
+        db.execute("INSERT INTO engagements VALUES (?)", (json.dumps({"id": "ENG-A"}),))
+    path.chmod(0o600)
+    original = Path.read_bytes
+    calls = 0
+
+    def change_mode_after_first_digest(selected):
+        nonlocal calls
+        data = original(selected)
+        if selected == path:
+            calls += 1
+            if calls == 1:
+                path.chmod(0o400)
+        return data
+
+    monkeypatch.setattr(Path, "read_bytes", change_mode_after_first_digest)
+    with pytest.raises(PreflightError, match="changed during read"):
+        read_state(path)
+    assert calls == 2

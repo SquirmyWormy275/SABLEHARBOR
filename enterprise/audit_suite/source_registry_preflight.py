@@ -24,7 +24,7 @@ def read_state(path: Path) -> dict:
     """Read an ordinary frozen private database without initializing or ignoring WAL."""
     path = Path(path).absolute()
 
-    def frozen_file() -> tuple[int, int, int, int, bytes]:
+    def frozen_file() -> tuple[int, int, int, int, int, bytes]:
         if any(p.is_symlink() for p in (path, *path.parents)):
             raise PreflightError("Frozen audit database cannot be a symlink")
         info = path.stat()
@@ -38,6 +38,7 @@ def read_state(path: Path) -> dict:
         return (
             info.st_dev,
             info.st_ino,
+            stat.S_IMODE(info.st_mode),
             info.st_size,
             info.st_mtime_ns,
             hashlib.sha256(path.read_bytes()).digest(),
