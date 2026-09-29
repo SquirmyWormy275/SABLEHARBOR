@@ -692,6 +692,12 @@
           "scope": "Post-P5A whole-state ordinary-byte recovery checkpoint after transient diagnostic wrong-path SQLite file",
           "validation": "Independent postcopy review SHA-256 17ce40131cdf9f4052a4846e9303df2e54d94dfc751d4964e96254b924a4fca0 verified all 372 active/snapshot file hashes, 54 SQLite quick_checks, disjoint inodes and zero Btrfs shared extents, A175/B147 event tips, untouched protected sources/Key/historical audits. Failed v1 preflight SHA-256 69a3ac497addfb8f2e53b2d614aafa696172ebf25604185ddd2b45bafde0d4d6 and root reconciliation SHA-256 6cc4476995a3843a6808c776fc42e185dda19d2133c07e6da691072321418a32 preserve and resolve the transient zero-byte file.",
           "acceptance": "Recovery checkpoint only. No P5B-D run, task credit, Key bind, grade, learner release, full-year or professional assurance conclusion."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Integrated P5B logging/incident native collection and independently preserved whole-state checkpoint",
+          "validation": "Independent P5B actual postreview SHA-256 c732fe268d28563c45ccde05facb6683eff6785316608ff947e7629f6fe70b2a verifies A175→272/B147→246, 176 ordinary native→request receipt→retained joins from 68 distinct source identities, 67 new content-addressed files, 20 revoked scoped grants/40 access events per side, B omission/backfill and escalation/corrective chronology, and 409 untouched tasks per side. Independent checkpoint postcopy review SHA-256 ca07ebf8f029b94738f436478a421dccc3c4c2b2a83f2bf0a7feaa09f3091b75 verifies 439 identical active/snapshot files, 54 SQLite checks, zero Btrfs shared extents and protected history unchanged.",
+          "acceptance": "Collection and recovery proof only. P5C/D remain unexecuted; no clause completion, full-year operating effectiveness, professional acceptance, Key bind, learner release or grade."
         }
       ]
     },
@@ -779,6 +785,12 @@
           "scope": "Fresh integrated 13-component same-engagement Clean/Messy continuation through P5A",
           "validation": "P2 A78/B51 native collection, P3 A90/B63 recorded investigation, P4 A100/B73 BCM/CFG procedure records and P5A A175/B147 IAM/nonhuman collection each passed independent actual postreview. P5A review SHA-256 ce8724d33f2cbedbd08294b16bbf7760b403f435456b019607da1ba5bb26981c verifies 125 current-native request-linked receipts, 120 new content-addressed byte paths, full audit event chains, grant cleanup, protected roots and no sidecars.",
           "acceptance": "The same-company paired technical journey continues, but all 818 new-pair task instances remain NOT_STARTED/NOT_RUN. Neither six-check private instructor clone nor collected sources establish task effectiveness, complete 2027 period, actual PHI processing, learner release, assessment, owner acceptance or qualified SOC 2/HIPAA conclusion."
+        },
+        {
+          "date": "2026-09-29",
+          "scope": "Final source-complete registry gate identified after current 13-component paired technical run",
+          "validation": "company_collection.activate freezes the company-source binding, and FederatedCompanyStore rejects a changed registry digest. The current A/B pair has 13 bound components, while the reviewed unmatched-task plan routes 283 tasks per side across 43 controls to further native discovery or authorized operations. Read-only gate aq07-final-source-complete-registry-readonly-plan-v1/PLAN.md records the need to freeze a complete source portfolio and start a new zero-evidence A/B pair for eventual full-scope rehearsal.",
+          "acceptance": "Current A272/B246 pair remains a bounded technical journey. New company systems cannot be transplanted into it; no final full-scope audit, owner/qualified acceptance or assurance opinion is claimed."
         }
       ]
     },

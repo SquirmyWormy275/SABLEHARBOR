@@ -561,6 +561,36 @@ verified the reviewed 372-file inventory and A175/B147 tips after the exact
 stray file was removed. The successful v2 run changed no active workroom,
 protected source, private Key or task conclusion.
 
+The same pair's [P5B logging/incident collection](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5b-logging-incident-run-v1/RESULT.json)
+passed [independent actual postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5b-logging-incident-independent-postreview-v1/REVIEW.json)
+(SHA-256 `c732fe268d28563c45ccde05facb6683eff6785316608ff947e7629f6fe70b2a`).
+It advanced A175→272/B147→246 through five PBC groups per side and 176
+ordinary request-linked collections from 68 distinct native source identities.
+One A logging source has the same bytes as an earlier release-gate artifact but
+a different company source identity; every collection has its own receipt and
+artifact ID. Content-addressed storage added 67 files. All 40 new temporary
+grants were revoked. The Messy logging omission/backfill and incident
+escalation/corrective-action versions remain separate chronology observations,
+not asserted remediation or breach conclusions. All 409 tasks per branch remain
+`NOT_STARTED`/`NOT_RUN`.
+
+The [post-P5B whole-state checkpoint](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p5b-whole-state-checkpoint-run-v1/CHECKPOINT-RESULT.json)
+passed [independent postcopy review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p5b-whole-state-checkpoint-independent-postreview-v1/REVIEW.json)
+(SHA-256 `ca07ebf8f029b94738f436478a421dccc3c4c2b2a83f2bf0a7feaa09f3091b75`).
+All 439 active files match the ordinary-byte snapshot, all 54 SQLite databases
+pass integrity checks, and Btrfs reports zero shared extents. The earlier
+checkpoints, private Key clone, protected roots and historical audits remain
+unchanged. P5C/D have analysis-only isolated drafts, not live collection or
+task credit.
+
+The active pair's 13-component company-source binding is frozen at activation.
+New native systems needed for the remaining controls cannot be silently added
+to that engagement. A [read-only final-registry gate](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq07-final-source-complete-registry-readonly-plan-v1/PLAN.md)
+requires a source-complete registry and a fresh zero-evidence A/B pair for the
+eventual full-scope rehearsal. The current pair remains a bounded, reviewed
+technical journey; neither its growing artifact set nor a future Key clone is
+a final assurance packet.
+
 The queue's job `state`, acceptance criteria and attributed checkpoints must be read
 together. Historical `*_scope_update` entries record what was authorized at the time;
 their `QUEUED_NOT_STARTED` labels do not reset later job progress. Conversely, a
