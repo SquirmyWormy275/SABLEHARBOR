@@ -8,6 +8,7 @@ containing both pinned Git revisions.
 from __future__ import annotations
 
 import gzip
+import io
 import json
 from collections import Counter
 from pathlib import Path
@@ -125,7 +126,12 @@ def build() -> dict:
 def write() -> dict:
     result = build()
     raw = json.dumps(result, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode()
-    (OUTPUT / "SOURCE_DELTA.json.gz").write_bytes(gzip.compress(raw, mtime=0))
+    # gzip.compress(..., mtime=0) writes a platform-dependent OS header byte on
+    # some Python versions. GzipFile fixes that byte at 255 for exact releases.
+    buffer = io.BytesIO()
+    with gzip.GzipFile(fileobj=buffer, filename="", mode="wb", mtime=0) as stream:
+        stream.write(raw)
+    (OUTPUT / "SOURCE_DELTA.json.gz").write_bytes(buffer.getvalue())
     (OUTPUT / "SUMMARY.json").write_text(
         json.dumps(result["summary"], indent=2, sort_keys=True) + "\n"
     )

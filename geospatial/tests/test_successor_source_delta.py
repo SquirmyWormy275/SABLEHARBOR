@@ -58,3 +58,11 @@ def test_boundary_labels_do_not_masquerade_as_full_text_review():
         if not r["source_path"].startswith("docs/canon/")
     )
     assert "does not close issue 108" in result["remaining"]
+
+
+def test_compressed_artifact_reproduces_exact_bytes(tmp_path, monkeypatch):
+    checked_in = (review.OUTPUT / "SOURCE_DELTA.json.gz").read_bytes()
+    monkeypatch.setattr(review, "OUTPUT", tmp_path)
+    review.write()
+    assert (tmp_path / "SOURCE_DELTA.json.gz").read_bytes() == checked_in
+    assert checked_in[9] == 255  # gzip's platform-independent OS marker
