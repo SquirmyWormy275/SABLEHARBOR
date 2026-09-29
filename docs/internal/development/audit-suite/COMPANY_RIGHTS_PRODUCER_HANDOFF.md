@@ -156,6 +156,42 @@ does not establish that a forecast is a completed real company fact. Neither
 this resolver nor the private gateway is wired into live portal/Daedalus
 service launch paths by this isolated commit.
 
+## Protected portal service boundary (September 29 successor)
+
+When `service.create_app` receives `company_rights_factory`, that service is a
+dedicated protected disclosure instance. Its HTTP allowlist is deliberately
+small: browser session create/logout, the five `/company/rights/` operations,
+and exact retained company-source downloads when
+`company_native_rights_factory` is also configured. All ordinary portal
+commands, native company discovery/collection, source impact, derived audit
+routes, uploads, instructor routes, and other downloads return 403 on that
+instance. Run the ordinary audit workroom without either rights factory; its
+existing training behavior is unchanged. Do not expose ordinary workroom
+routes as Daedalus company-record entitlements.
+
+`NativeRecordClosure` requires a separately reviewed exact JSON manifest,
+provided from trusted server code with an expected SHA-256. Its schema is
+`{version: 1, source_commit, policy_sha256, records: [...]}`. Each record has
+`company`, `branch`, `system`, `record`, positive integer `version`, native
+`sha256`, `policy_record_id`, and `repository_path`. A retained artifact's
+native source tuple and bytes must match one entry and the current producer
+policy row. The download also re-reads the native version under the current
+portal principal's system grant and approved case time, then requires a current
+per-record `export` decision. Unknown, denied, tombstoned, altered, and
+unmapped artifact IDs have the same protected 403 response. The manifest is
+an explicit bounded closure, not an assertion that every historical native
+version in a workroom has been classified.
+
+There is still no operator-reviewed live person/engagement binding, record
+grant schedule, accepted 2027 case-clock approval ledger, or protected launch
+configuration. The factories are opt-in server hooks; a test fixture or system
+grant cannot supply those missing authorities. Private Operational must be
+launched against this producer with reviewed inputs and separately exercise
+model prompts, person isolation, revocation and older restore before #34 can
+claim live company access. Private gateway acceptance is at
+`131e60bf7b73bf8b6d3cafae0c61d30ba3917c46`; the public integration remains
+pending until its own source branch is accepted.
+
 Isolated validation: focused producer, HTTP, company service and service tests
 passed (37 tests). A separate cross-repo smoke with public accepted policy
 `fbbdff203c03871fee1a3db876b4b91517903462`, this portal tree based on

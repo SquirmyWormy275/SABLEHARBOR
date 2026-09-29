@@ -6,11 +6,16 @@ They are a handoff to the portal integration owner, not a deployment claim.
 """
 
 import hashlib
+import json
 
 import pytest
 from fastapi.testclient import TestClient
 
-from enterprise.audit_suite.company_rights_producer import CompanyRightsProducer
+from enterprise.audit_suite.company_native_rights import NativeRecordClosure
+from enterprise.audit_suite.company_rights_producer import (
+    CompanyRightsProducer,
+    RightsUnavailable,
+)
 from enterprise.audit_suite.engine import COLLECTIONS
 from enterprise.audit_suite.service import create_app
 from tests.audit_suite.test_company_rights_http import decide, row, validate_record
@@ -24,6 +29,18 @@ def protected_company(tmp_path):
     policy.write_text('{"accepted":"test-only"}')
     raw = b"PRIVATE-SYNTHETIC-COMPANY-RECORD\n"
     producer_holder = {}
+    closure_file = tmp_path / "native-closure.json"
+    closure_file.write_text(json.dumps({
+        "version": 1,
+        "source_commit": "a" * 40,
+        "policy_sha256": hashlib.sha256(policy.read_bytes()).hexdigest(),
+        "records": [{
+            "company": "SH", "branch": "base", "system": "identity",
+            "record": "REC-1", "version": 1,
+            "sha256": hashlib.sha256(raw).hexdigest(),
+            "policy_record_id": "REC-1", "repository_path": "docs/company.txt",
+        }],
+    }))
 
     def factory(engine):
         producer = CompanyRightsProducer(
@@ -46,6 +63,11 @@ def protected_company(tmp_path):
         company_root=tmp_path / "company",
         allowed_hosts=["testserver"],
         company_rights_factory=factory,
+        company_native_rights_factory=lambda _engine, producer: NativeRecordClosure(
+            producer=producer,
+            manifest_file=closure_file,
+            manifest_sha256=hashlib.sha256(closure_file.read_bytes()).hexdigest(),
+        ),
     )
     engine = app.state.engine
     person = engine.store.provision("Auditor", ["learner"])
@@ -69,8 +91,8 @@ def protected_company(tmp_path):
         "SH", "base", "identity", "REC-1",
         expected_version=0,
         command_id="import",
-        event_at="2027-01-01T00:00:00Z",
-        available_at="2027-01-02T00:00:00Z",
+        event_at="2026-09-01T00:00:00Z",
+        available_at="2026-09-22T00:00:00Z",
         content=raw,
         provenance={"source_reference": "synthetic-test-original", "name": "company.txt"},
     )
@@ -147,7 +169,75 @@ def test_retained_download_rechecks_deleted_company_record(protected_company):
     })
     artifact_id = saved["artifacts"][0]["id"]
     url = _root(state) + f"/artifacts/{artifact_id}/download"
-    assert client.get(url).status_code == 200
+    before = client.get(url)
+    assert before.status_code == 200, before.text
     producer.delete_record("REC-1")
     assert client.get(_root(state) + "/company/rights/records/REC-1").status_code == 403
-    assert client.get(url).status_code in {403, 404}
+    denied = client.get(url)
+    missing = client.get(_root(state) + "/artifacts/ART-MISSING/download")
+    assert denied.status_code == missing.status_code == 403
+    assert denied.json() == missing.json()
+
+
+def test_native_closure_rejects_wrong_version_bytes_path_and_changed_manifest(protected_company):
+    app, client, engine, state, producer, raw, _ = protected_company
+    producer.put_record(
+        row("REC-1", "docs/company.txt", raw, ["read", "export"]), expected_revision=2,
+    )
+    token = next(iter(client.cookies.values()))
+    native = engine.company_store.read_version(
+        state["created_by"], state["id"], "SH", "base", "identity", "REC-1",
+        version=1, as_of="2026-09-29T00:00:00+00:00",
+    )
+    closure = app.state.company_native_rights
+    assert closure.authorize_version(
+        session_token=token, engagement_id=state["id"], native=native, action="export",
+    ) == "REC-1"
+    for changed in (
+        {**native, "version": 2},
+        {**native, "record": "REC-OTHER"},
+        {**native, "content": b"wrong bytes"},
+        {**native, "sha256": "0" * 64},
+    ):
+        with pytest.raises(RightsUnavailable):
+            closure.authorize_version(
+                session_token=token, engagement_id=state["id"],
+                native=changed, action="export",
+            )
+    path = closure.manifest_file
+    original = path.read_bytes()
+    try:
+        altered = json.loads(original)
+        altered["records"][0]["repository_path"] = "docs/other.txt"
+        path.write_text(json.dumps(altered))
+        with pytest.raises(RightsUnavailable, match="manifest changed"):
+            closure.authorize_version(
+                session_token=token, engagement_id=state["id"],
+                native=native, action="export",
+            )
+    finally:
+        path.write_bytes(original)
+
+
+def test_retained_company_export_rechecks_native_grant_and_person_revocation(protected_company):
+    _, client, engine, state, producer, raw, _ = protected_company
+    producer.put_record(
+        row("REC-1", "docs/company.txt", raw, ["read", "export"]), expected_revision=2,
+    )
+    saved = engine.command(state["created_by"], state["id"], {
+        "command_id": "collect-prior", "expected_revision": state["revision"],
+        "kind": "company.collect",
+        "payload": {"system_id": "identity", "record_id": "REC-1", "version": 1,
+                    "request_id": "R1"},
+    })
+    url = _root(state) + f"/artifacts/{saved['artifacts'][0]['id']}/download"
+    assert client.get(url).status_code == 200
+    engine.company_store.grant(
+        state["created_by"], state["id"], "SH", "base", "identity", active=False,
+    )
+    assert client.get(url).status_code == 403
+    engine.company_store.grant(
+        state["created_by"], state["id"], "SH", "base", "identity", active=True,
+    )
+    producer.set_person_revoked("PERSON-1", revoked=True)
+    assert client.get(url).status_code == 403
