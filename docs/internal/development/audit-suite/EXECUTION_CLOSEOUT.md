@@ -714,6 +714,16 @@ Approved reference scope supports further provisional fictional design without
 another broad scope approval. Neither task can be closed by a proposed service
 label, draft provider clause, future-authored 2027 event or agent assertion.
 
+The owner subsequently selected both [fictional 2027 scenario directions](FICTIONAL_2027_SCENARIO_DECISIONS_2026-09-29.md):
+Reno primary and Boise recovery transition from their canonical 2026 planned
+state to simulated 2027 operation with company-native contract,
+commissioning and recovery histories; and a simulated customer ePHI flow with
+a BA/subcontractor obligation chain, synthetic contracts and legal decisions.
+These choices authorize source-faithful training-world construction, not a
+real deployment, PHI processing, legal-status assertion or automatic task
+credit. Exact in-universe dates, parties, terms, approvers, populations and
+independent review remain implementation gates.
+
 The [read-only paired registry preflight](../../../../enterprise/audit_suite/source_registry_preflight.py)
 passed [independent V3 review](../../../../enterprise/generated/audit-suite/source-complete-registry-readonly-preflight-independent-review-2026-09-29-v3/REVIEW.json)
 (SHA-256 `66a45ca163c97f0991eb9c77c920cf504608e8c86b9b4c27cc471db218585a4f`)
