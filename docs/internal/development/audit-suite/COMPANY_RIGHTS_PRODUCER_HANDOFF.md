@@ -208,18 +208,23 @@ schema is:
   "policy_module_sha256": "<SHA-256 of accepted policy Python module>",
   "rights_root": "/absolute/private/rights-root",
   "checkpoint_root": "/absolute/independent/checkpoint-root",
+  "rehearsal_authority_sha256": "<SHA-256 of accepted dated rehearsal source>",
+  "rehearsal_binding_file": "/absolute/private/rehearsal-binding.json",
+  "rehearsal_binding_sha256": "<SHA-256 of exact private binding>",
   "native_manifest_file": "/absolute/private/exact-native-closure.json",
   "native_manifest_sha256": "<SHA-256 of exact native closure>"
 }
 ```
 
-The two native manifest fields are optional as a pair. The loader requires an
+The three rehearsal fields and two native manifest fields are each optional
+only as complete groups. The loader requires an
 exact clean checked-out commit, pinned policy data and code, and the accepted
 702-person census. It instantiates the actual accepted validator/decider, and
 checks those imports come from this checkout. Both private roots must already
 exist and remain independent. It creates no person binding, grant, record row,
-case-clock resolver, or native closure entry. Such an empty protected instance
-therefore denies all company disclosure. The command is:
+or native closure entry. Without the rehearsal fields it has no case clock;
+even with that clock configured, an empty protected instance denies all
+company disclosure. The command is:
 
 ```sh
 python -m enterprise.audit_suite serve \
@@ -231,10 +236,41 @@ python -m enterprise.audit_suite serve \
 ```
 
 `--local-http` is for loopback development only; use the existing TLS flags for
-an actual protected local service. Operator staging of principal-to-person
-bindings, approved case progression, and exact record grants is a separate
-explicit step based on accepted source. A source record in the repository does
-not itself populate the private rights database or authorize a browser user.
+an actual protected local service. The private binding file must be a mode-0600
+JSON file in a mode-0700 directory, with this exact schema:
+
+```json
+{
+  "version": 1,
+  "authority_sha256": "<same rehearsal source SHA-256 as launch config>",
+  "engagement_id": "<actual generated private portal engagement ID>",
+  "principals": {
+    "auditor": "<actual authenticated portal principal ID>",
+    "record_owner": "<actual authenticated portal principal ID>"
+  }
+}
+```
+
+The engagement and principals must be created through the portal's existing
+private workflow with explicit engagement memberships. Once the dated source
+is accepted, an operator stages its two person bindings and four policy rows
+into **fresh empty** rights and checkpoint roots:
+
+```sh
+python -m enterprise.audit_suite stage-company-rights \
+  --private-root /absolute/private/portal-state \
+  --company-rights-config /absolute/private/company-rights-launch.json \
+  --company-rights-config-sha256 <exact-config-sha256>
+```
+
+The command prints source commit, authority hash, engagement, counts, rights
+revision and checkpoint epoch. It refuses a nonempty rights store and checks
+membership before writing. If staging fails after a write, use fresh disposable
+rights/checkpoint roots; a partial stage is not an accepted receipt. The
+server-only resolver rechecks the accepted source and private binding hash on
+every decision and requires the same verified principal, person, engagement,
+tenant and purpose. Learner `clock.advance` and HTTP fields cannot alter it.
+The public source alone does not authorize a browser user.
 
 Isolated validation: focused producer, HTTP, company service and service tests
 passed (37 tests). A separate cross-repo smoke with public accepted policy

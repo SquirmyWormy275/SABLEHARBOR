@@ -54,6 +54,13 @@ def main(argv=None):
         action="store_true",
         help="Explicit local-only development HTTP with non-secure cookie",
     )
+    stage_company = commands.add_parser(
+        "stage-company-rights",
+        help="Stage a reviewed synthetic company case into fresh private rights roots",
+    )
+    stage_company.add_argument("--private-root", type=Path, required=True)
+    stage_company.add_argument("--company-rights-config", type=Path, required=True)
+    stage_company.add_argument("--company-rights-config-sha256", required=True)
     backup_command = commands.add_parser("backup", help="Create a new private state backup")
     backup_command.add_argument("--private-root", type=Path, required=True)
     backup_command.add_argument("--destination", type=Path, required=True)
@@ -71,6 +78,15 @@ def main(argv=None):
     grant.add_argument("--permission", choices=["learn", "review", "instruct"], required=True)
     args = parser.parse_args(argv)
     try:
+        if args.command == "stage-company-rights":
+            from .company_rights_launch import stage_reviewed_company_authority
+
+            print(json.dumps(stage_reviewed_company_authority(
+                args.company_rights_config,
+                args.company_rights_config_sha256,
+                args.private_root,
+            )))
+            return
         if args.command == "backup":
             from .recovery import backup
 
