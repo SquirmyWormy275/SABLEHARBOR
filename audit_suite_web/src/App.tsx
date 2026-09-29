@@ -20,6 +20,8 @@ import { ConversationProvenance } from "./ConversationProvenance";
 import { MeetingSourceContext } from "./MeetingSourceContext";
 import { MeetingConsultation } from "./MeetingConsultation";
 import { WorkGuidance } from "./WorkGuidance";
+import { TaskGapPanel } from "./TaskGapPanel";
+import { canRecordTaskGap, taskEligibleForGap } from "./taskGap";
 import { InstructorDebrief } from "./InstructorDebrief";
 import { RequestReadBatch } from "./RequestReadBatch";
 import { ConsultationProvenance } from "./ConsultationProvenance";
@@ -299,6 +301,7 @@ export default function App() {
     [message, setMessage] = useState(""),
     [query, setQuery] = useState(""),
     [framework, setFramework] = useState("all"),
+    [gapTaskId, setGapTaskId] = useState<string | null>(null),
     [uploadKind, setUploadKind] = useState("workpaper"),
     [uploadLink, setUploadLink] = useState(""),
     [experimentalConsent, setExperimentalConsent] = useState(false);
@@ -311,6 +314,7 @@ export default function App() {
     element: HTMLElement;
     context: string;
   } | null>(null);
+  const gapOpener = useRef<{ element: HTMLButtonElement; context: string } | null>(null);
   const uploadRef = useRef<HTMLInputElement>(null);
   const navigationMemory = useRef(createNavigationMemory());
   const draftStore = useRef(createDraftStore());
@@ -338,6 +342,27 @@ export default function App() {
     engagement?.evidence_acquisition,
     engagement?.simulated_at,
   ]);
+  const gapContext = useRef(sourceContext);
+  useEffect(() => {
+    if (gapContext.current !== sourceContext) {
+      setGapTaskId(null);
+      gapOpener.current = null;
+    }
+    gapContext.current = sourceContext;
+  }, [sourceContext]);
+  function closeGap() {
+    setGapTaskId(null);
+    const opener = gapOpener.current;
+    gapOpener.current = null;
+    if (opener?.context !== sourceContext) return;
+    requestAnimationFrame(() => {
+      if (
+        opener.element.isConnected &&
+        !opener.element.closest("[hidden], [inert]")
+      )
+        opener.element.focus();
+    });
+  }
   useEffect(() => {
     if (detail) return;
     const opener = contextPreviewOpener.current;
@@ -415,6 +440,8 @@ export default function App() {
     setExperimentalConsent(false);
     setQuery("");
     setFramework("all");
+    setGapTaskId(null);
+    gapOpener.current = null;
     setNotice("");
     setBusy(false);
     setSetup(false);
@@ -521,6 +548,8 @@ export default function App() {
       setExperimentalConsent(false);
       setQuery("");
       setFramework("all");
+      setGapTaskId(null);
+      gapOpener.current = null;
       setBusy(false);
     }
     authorizedContext.current = contextKey;
@@ -1945,8 +1974,47 @@ export default function App() {
                           label: "Notes",
                           render: (r) => str(r.note ?? r.rationale ?? r.notes),
                         },
+                        {
+                          key: "gap",
+                          label: "Gap record",
+                          render: (r) => (
+                            <button
+                              type="button"
+                              onClick={(event) => {
+                                gapOpener.current = { element: event.currentTarget, context: sourceContext };
+                                setGapTaskId(r.id);
+                              }}
+                            >
+                              {canRecordTaskGap(e) && taskEligibleForGap(r)
+                                ? "Record gap"
+                                : "View gaps"}
+                            </button>
+                          ),
+                        },
                       ]}
                     />
+                    {gapTaskId && (
+                      <TaskGapPanel
+                        key={sourceContext + ":" + gapTaskId}
+                        engagement={e}
+                        taskId={gapTaskId}
+                        viewerId={bootstrap.viewer.id}
+                        onClose={closeGap}
+                        onState={(next) => {
+                          if (
+                            renderEpoch === navigationEpoch.current &&
+                            next.id === e.id
+                          )
+                            setEngagement((current) =>
+                              current &&
+                              current.id === next.id &&
+                              current.revision <= next.revision
+                                ? normalize(next)
+                                : current,
+                            );
+                        }}
+                      />
+                    )}
                     <h2>Common control register</h2>
                     <Table
                       memoryKey="controls"
