@@ -38,6 +38,16 @@ def identifier(prefix: str) -> str:
     return f"{prefix}-{secrets.token_hex(12)}"
 
 
+class _ClosingConnection(sqlite3.Connection):
+    """Commit or roll back on context exit, then release the SQLite handle."""
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        try:
+            return super().__exit__(exc_type, exc_value, traceback)
+        finally:
+            self.close()
+
+
 class Store:
     def __init__(self, root: Path):
         self.root = root.resolve()
@@ -81,7 +91,7 @@ class Store:
         os.chmod(self.db_path, 0o600)
 
     def connect(self) -> sqlite3.Connection:
-        db = sqlite3.connect(self.db_path, timeout=15)
+        db = sqlite3.connect(self.db_path, timeout=15, factory=_ClosingConnection)
         db.row_factory = sqlite3.Row
         db.execute("PRAGMA foreign_keys=ON")
         return db
