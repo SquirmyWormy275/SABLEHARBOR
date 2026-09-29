@@ -11,12 +11,15 @@ MAX_BYTES = 10 * 1024 * 1024
 ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # Tracked convenience catalog retained by GENERATED_RECORDS_LIFECYCLE.md.
     # September 29 portal/main integration plus accepted legal and geographic
-    # successors and the portal rights handoff: 1,543 reader files,
-    # 148 publication pairs, 12 evidence
-    # packages. Exact bytes only; later drift requires another hash review.
+    # successors, the portal rights handoff, and the bounded Daedalus receipt:
+    # 1,544 reader files, 148 publication pairs, 12 evidence packages.
+    # Logical catalog review found one receipt row each in reader_file,
+    # reader_text, reader_search, and reader_format_review;
+    # institutional objects, publication pairs, and evidence counts did not change.
+    # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        13594624,
-        "06c49daa4bff1fecae7781065cd56f05a84e22ce29e1bea3d21985d83944b817",
+        13602816,
+        "74ca05ab32358ddf8b1492a632eec41bcc92a3846a690c61529c4e92c322638d",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.

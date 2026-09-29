@@ -6,7 +6,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 306 |
+| COUNTERPART_REVIEW_REQUIRED | 307 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 102 |
@@ -75,6 +75,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [PR #145 integration evidence](../../internal/company-closeout/PR145_INTEGRATION.md) — Corporate document-format reconciliation
 - [Company closeout continuation — September 22, 2026](../../internal/company-closeout/RESIDUAL_CLOSEOUT_2026-09-22.md) — Corporate document-format reconciliation
 - [Current successor records — enterprise import contract](../../internal/company-closeout/SUCCESSOR_RECORDS_IMPORT_CONTRACT_2026-09-22.md) — Corporate document-format reconciliation
+- [Daedalus bounded company-runtime receipt — September 29, 2026](../../internal/company-closeout/daedalus-rehearsal-2026-09-29/ACCEPTED_RUNTIME_RECEIPT.md) — Corporate document-format reconciliation
 - [Synthetic withheld comparison note](../../internal/company-closeout/daedalus-rehearsal-2026-09-29/DENIED_NOTE.md) — Corporate document-format reconciliation
 - [Synthetic payroll-release review note](../../internal/company-closeout/daedalus-rehearsal-2026-09-29/LOWER_TRUST_NOTICE.md) — Corporate document-format reconciliation
 - [Selected payroll-release IAM-007 case view](../../internal/company-closeout/daedalus-rehearsal-2026-09-29/SELECTED_IAM_CASE.md) — Corporate document-format reconciliation

@@ -101,6 +101,7 @@ Generated file inventory. Includes current and historical records; open the sour
 
 ## `docs/internal/company-closeout/daedalus-rehearsal-2026-09-29`
 
+- [Daedalus bounded company-runtime receipt — September 29, 2026](../../internal/company-closeout/daedalus-rehearsal-2026-09-29/ACCEPTED_RUNTIME_RECEIPT.md) — MD
 - [Synthetic withheld comparison note](../../internal/company-closeout/daedalus-rehearsal-2026-09-29/DENIED_NOTE.md) — MD
 - [Synthetic payroll-release review note](../../internal/company-closeout/daedalus-rehearsal-2026-09-29/LOWER_TRUST_NOTICE.md) — MD
 - [Daedalus selected-company-record rehearsal source](../../internal/company-closeout/daedalus-rehearsal-2026-09-29/README.md) — MD
