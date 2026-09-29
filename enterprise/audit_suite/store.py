@@ -266,6 +266,46 @@ class Store:
                 )
             ]
 
+    def listing_summaries(self, actor: str) -> list[dict]:
+        """Read navigation metadata without retaining complete engagement states.
+
+        SQLite still reads/parses each accessible current state. Only the seven
+        summary values cross into Python; no historical state or schema is changed.
+        """
+        fields = ("id", "title", "discipline", "mode", "phase", "revision", "simulated_at")
+        with self.connect() as db:
+            self._principal(db, actor)
+            result = []
+            try:
+                rows = db.execute(
+                    "SELECT e.id, e.revision, json_extract(e.state, "
+                    "'$.id', '$.title', '$.discipline', '$.mode', '$.phase', "
+                    "'$.revision', '$.simulated_at') AS summary "
+                    "FROM engagements e JOIN members m ON e.id=m.engagement "
+                    "WHERE m.principal=? ORDER BY e.rowid DESC",
+                    (actor,),
+                )
+                for row in rows:
+                    values = json.loads(row["summary"])
+                    if (
+                        len(values) != len(fields)
+                        or any(type(values[i]) is not str for i in (0, 1, 2, 3, 4, 6))
+                        or type(values[5]) is not int
+                        or values[0] != row["id"]
+                        or values[5] != row["revision"]
+                    ):
+                        raise DomainError(
+                            "Invalid engagement summary", code="INVALID_STATE", status=500
+                        )
+                    result.append(dict(zip(fields, values, strict=True)))
+            except sqlite3.OperationalError as exc:
+                if "malformed JSON" not in str(exc):
+                    raise
+                raise DomainError(
+                    "Invalid engagement summary", code="INVALID_STATE", status=500
+                ) from exc
+            return result
+
     @staticmethod
     def _validate_command(command: dict) -> None:
         if not isinstance(command, dict) or set(command) != {

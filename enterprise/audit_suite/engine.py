@@ -317,21 +317,7 @@ class Engine:
             "providers": providers,
             "viewer": {k: actor[k] for k in ("id", "display_name", "roles")},
             "csrf_token": actor.get("csrf_token", ""),
-            "engagements": [
-                {
-                    k: e[k]
-                    for k in (
-                        "id",
-                        "title",
-                        "discipline",
-                        "mode",
-                        "phase",
-                        "revision",
-                        "simulated_at",
-                    )
-                }
-                for e in self.store.listing(actor["id"])
-            ],
+            "engagements": self.store.listing_summaries(actor["id"]),
             "capabilities": {
                 **self.capabilities,
                 "custom_authoring": providers["inference"]["ready"],
