@@ -8,10 +8,14 @@ This successor selects the previously reviewed southwest **fictional
 alternative** for a separate history-case map. It gives readers a concrete
 illustration of a possible 1954 survivor and mine-only abandoned line while
 keeping the accepted source-evidence history unchanged. The owner authorized
-work on #107B/#108B, but did not select these particular coordinates. They are
+work on #107B, but did not select these particular coordinates. No separate
+#108B selection was found; the [dated attribution correction](ATTRIBUTION_CORRECTION_2026-09-29.md)
+records the original wording and its exact supersession. These coordinates are
 newly authored scenario anchors, never a recovered 1898/1954 survey or a real
-property right. First repository availability and acceptance remain null in
-the source pending a reviewed merge.
+property right. The source's null availability/acceptance fields describe
+its pre-acceptance authoring state; the original repository availability is
+the accepted #185 merge on September 29, and this attribution correction
+becomes current only on its separate accepted successor merge.
 
 The selected case has 15.084858 miles of illustrated survivor and 7.047398
 miles of illustrated abandoned mine-only line. The total 22.132255 miles is a

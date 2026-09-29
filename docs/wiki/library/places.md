@@ -66,6 +66,10 @@ Generated file inventory. Includes current and historical records; open the sour
 
 - [Early BS&T alignment: fictional alternative, September 29, 2026](../../../geospatial/engineering_review/historical_alignment_2026_09_29/README.md) — MD
 
+## `geospatial/engineering_review/interface_successor_20260929`
+
+- [Corrected 40-mile rail/site interface register](../../../geospatial/engineering_review/interface_successor_20260929/README.md) — MD
+
 ## `geospatial/facilities`
 
 - [Facility planning and atlas closeout — R02 / v0.2.0 / September 11, 2026](../../../geospatial/facilities/CLOSEOUT_2026-09-11.md) — MD
@@ -489,3 +493,20 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `geospatial/successor_20260928`
 
 - [Geographic source successor — September 28, 2026](../../../geospatial/successor_20260928/README.md) — MD
+
+## `geospatial/successor_20260929`
+
+- [September 29 accepted-source geographic delta](../../../geospatial/successor_20260929/README.md) — MD
+
+## `geospatial/successor_20260929_final`
+
+- [Final accepted PR #185 geographic source delta](../../../geospatial/successor_20260929_final/README.md) — MD
+
+## `geospatial/successors`
+
+- [Rail and geographic criteria — September 29, 2026 review](../../../geospatial/successors/RAIL_GEO_107_108_DISPOSITION_2026-09-29.md) — MD
+
+## `geospatial/successors/rail_history_2026_09_29`
+
+- [Early-rail case authority attribution correction](../../../geospatial/successors/rail_history_2026_09_29/ATTRIBUTION_CORRECTION_2026-09-29.md) — MD
+- [Separate fictional early-rail history case](../../../geospatial/successors/rail_history_2026_09_29/README.md) — MD

@@ -92,7 +92,14 @@ def render_svg(survivor: list[list[float]], abandoned: list[list[float]], length
 def build() -> dict[str, bytes]:
     source = json.loads((HERE / "source.json").read_text())
     if (
-        source["state"] != "PROVISIONAL_DERIVED_SYNTHETIC_HISTORY_CASE"
+        source["schema_version"] != "1.1"
+        or source["supersedes_source_sha256"]
+        != "33dcadb3c185d5c07125d92af9b3cea3bed6585b610f480d5cbf66214db78deb"
+        or source["prior_source_accepted_commit"] != "bcdf3ade1d83d04774da9a914deb269442ee52f6"
+        or source["prior_source_repository_available_at_utc"] != "2026-09-29T15:22:18Z"
+        or "#107B" not in source["authority"]
+        or "#108B" in source["authority"]
+        or source["state"] != "PROVISIONAL_DERIVED_SYNTHETIC_HISTORY_CASE"
         or source["repository_available_at"] is not None
         or source["repository_accepted_at"] is not None
         or source["selection"]["use"] != "SELECTED_FOR_SEPARATE_FICTIONAL_HISTORY_CASE_MAP_ONLY"
@@ -193,6 +200,13 @@ def build() -> dict[str, bytes]:
     geojson = {"type": "FeatureCollection", "features": features}
     report = {
         "record_id": source["record_id"],
+        "source_schema_version": source["schema_version"],
+        "supersedes_source_sha256": source["supersedes_source_sha256"],
+        "prior_source_accepted_commit": source["prior_source_accepted_commit"],
+        "prior_source_repository_available_at_utc": source[
+            "prior_source_repository_available_at_utc"
+        ],
+        "attribution_correction": source["attribution_correction"],
         "state": source["state"],
         "authored_at_utc": source["authored_at_utc"],
         "repository_available_at": None,

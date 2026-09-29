@@ -6,11 +6,11 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 162 |
+| COUNTERPART_REVIEW_REQUIRED | 165 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 107 |
-| READER_OR_MAINTENANCE_PAGE | 196 |
+| READER_OR_MAINTENANCE_PAGE | 200 |
 | UNRESOLVED_DOCUMENT_COUNTERPART | 220 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_CHART_PUBLICATION | 40 |
@@ -30,6 +30,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Company closeout — synthetic scope and external execution](../../canon/COMPANY_SYNTHETIC_SCOPE_DISPOSITION_2026-09-29.md) — Corporate document-format reconciliation
 - [Foundry Field FF-003 billing adoption](../../canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md) — Corporate document-format reconciliation
 - [Geographic and occupancy completion — September 13, 2026](../../canon/GEOGRAPHIC_COMPLETION_2026-09-13.md) — Corporate document-format reconciliation
+- [Geographic closeout — synthetic edition scope](../../canon/GEOGRAPHIC_SYNTHETIC_SCOPE_DISPOSITION_2026-09-29.md) — Corporate document-format reconciliation
 - [Headquarters exterior visual withdrawn](../../canon/HEADQUARTERS_VISUAL_WITHDRAWAL_2026-09-22.md) — Corporate document-format reconciliation
 - [Klein shop and Fort occupancy continuity](../../canon/KLEIN_FORT_OCCUPANCY_2026-09-13.md) — Corporate document-format reconciliation
 - [Accounting, finance and audit practice](../../finance/READER_EXERCISES.md) — SH-FIN-HUMAN-001
@@ -183,6 +184,8 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Provenance register](../../../geospatial/registers/PROVENANCE_REGISTER.md) — Corporate document-format reconciliation
 - [Geospatial validation report](../../../geospatial/reports/GEOSPATIAL_VALIDATION_REPORT.md) — Corporate document-format reconciliation
 - [Open geographic questions v0.1](../../../geospatial/reports/OPEN_CONFLICTS.md) — Corporate document-format reconciliation
+- [Rail and geographic criteria — September 29, 2026 review](../../../geospatial/successors/RAIL_GEO_107_108_DISPOSITION_2026-09-29.md) — Corporate document-format reconciliation
+- [Early-rail case authority attribution correction](../../../geospatial/successors/rail_history_2026_09_29/ATTRIBUTION_CORRECTION_2026-09-29.md) — Corporate document-format reconciliation
 
 ## Dated counterpart dispositions
 
