@@ -1,0 +1,13 @@
+{
+  "canon_full_text": 9,
+  "changed_paths": 1415,
+  "review_levels": {
+    "DOCUMENT_OR_PUBLICATION_BOUNDARY": 177,
+    "DOMAIN_SOURCE_BOUNDARY": 946,
+    "FULL_TEXT_CANON_GEOGRAPHIC_REVIEW": 9,
+    "GEOGRAPHIC_SOURCE_OR_DERIVATIVE": 162,
+    "IMPLEMENTATION_OR_CONTEXT_BOUNDARY": 109,
+    "TARGETED_DOMAIN_GEOGRAPHIC_REVIEW": 12
+  },
+  "targeted_domain": 12
+}
