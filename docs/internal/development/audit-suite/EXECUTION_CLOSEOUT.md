@@ -821,6 +821,22 @@ tests, Ruff and native verification passed in this checkout. This bounded
 future training source grants no actual provider representation, 2027
 operation, audit collection or task credit.
 
+The [fictional ERM-003/004 stage-gate source](../../../../enterprise/audit_suite/RISK_GOVERNANCE_STAGEGATE_PROPOSAL.md)
+is integrated after [independent V2 review](../../../../enterprise/generated/audit-suite/company-risk-governance-stagegate-2026-09-29/independent-review-v2/REVIEW.json)
+(SHA-256 `78dbf2b9585efd8f51a08a598d6c56aa342ef7845b56e6c0892a239a968fde34`).
+Its 19 native rows form one bounded Boise recovery risk assessment and
+reassessment chain, with separate Clean/Messy technical recommendations.
+The residual-risk request remains `PENDING_AUTHORITY_DECISION`; neither a
+corporate appetite nor an accepted enterprise risk is asserted. The reviewed
+transition V3 and bounded ERM-001 source identities, 17 local hash edges,
+sidecar-safe frozen reads and unchanged active P1 passed review. V1 is
+preserved as superseded because its immutable ERM-001 read did not reject
+uncheckpointed SQLite sidecars. V2's private run/review were copied as
+matching ordinary bytes with separate inodes and zero shared extents
+reported. Six focused tests, Ruff and native verification passed in this
+checkout. The nine discovery routes per side remain uncredited; no audit
+collection or task disposition followed.
+
 The queue's job `state`, acceptance criteria and attributed checkpoints must be read
 together. Historical `*_scope_update` entries record what was authorized at the time;
 their `QUEUED_NOT_STARTED` labels do not reset later job progress. Conversely, a
