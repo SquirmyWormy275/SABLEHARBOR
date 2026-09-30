@@ -114,3 +114,14 @@ def test_missing_selected_open_finding_cannot_yield_messy_observation():
     del messy["issue"]["issue_finding", "BOISE-KEY-BYPASS-SELECTED", 1]
     with pytest.raises(CompanyStoreError, match="upstream tuple missing"):
         ass._steps("MESSY", messy)
+
+
+def test_same_root_tracked_and_private_sources_remain_distinct(tmp_path):
+    """Main-local execution must not treat public canon as private 0600 files."""
+    root = tmp_path / "same-root-owner-monitor"
+    created = ass.create(root, repository=PRIVATE, private_repository=PRIVATE)
+    checked = ass.verify(root, repository=PRIVATE, private_repository=PRIVATE)
+    assert created == checked
+    assert len(checked["records"]["CLEAN"]) == 3
+    assert len(checked["records"]["MESSY"]) == 5
+    assert checked["audit_task_credit"] is False

@@ -212,14 +212,19 @@ def _context(repository: Path, private_repository: Path) -> tuple[dict, dict, di
         if not path.is_file() or path.is_symlink() or _sha(path) != expected:
             raise CompanyStoreError(f"Tracked owner-monitor source differs: {relative}")
         pins[f"repo://{relative}"] = expected
-        stable[path] = (path.stat().st_dev, path.stat().st_ino, path.stat().st_mtime_ns, expected)
+        stable[("repo", relative)] = (
+            path.stat().st_dev,
+            path.stat().st_ino,
+            path.stat().st_mtime_ns,
+            expected,
+        )
     for relative, expected in PRIVATE_PINS.items():
         path = private_repository / relative
         before = _frozen(path) if relative.endswith("company.sqlite3") else _private(path)
         if before[-1] != expected:
             raise CompanyStoreError(f"Reviewed owner-monitor source differs: {relative}")
         pins[f"private://{relative}"] = expected
-        stable[path] = before
+        stable[("private", relative)] = before
     appointments = (repository / "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md").read_text()
     closeout = (repository / "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md").read_text()
     catalog = (repository / "docs/controls/COMMON_CONTROL_CATALOG_v0.1.md").read_text()
@@ -308,11 +313,12 @@ def _context(repository: Path, private_repository: Path) -> tuple[dict, dict, di
             or len(source_refs[scenario]["issue"]) != expected_issue
         ):
             raise CompanyStoreError("Bounded upstream branch source differs")
-    for path, before in stable.items():
-        if path.is_relative_to(private_repository):
-            relative = path.relative_to(private_repository)
+    for (kind, relative), before in stable.items():
+        if kind == "private":
+            path = private_repository / relative
             after = _frozen(path) if str(relative).endswith("company.sqlite3") else _private(path)
         else:
+            path = repository / relative
             after = (path.stat().st_dev, path.stat().st_ino, path.stat().st_mtime_ns, _sha(path))
         if after != before:
             raise CompanyStoreError("Reviewed owner-monitor source changed during read")
