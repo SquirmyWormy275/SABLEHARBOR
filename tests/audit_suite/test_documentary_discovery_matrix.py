@@ -1,9 +1,13 @@
 """Source-route joins must preserve task clauses and reject evidence promotion."""
 
 import copy
+import hashlib
+import json
+from pathlib import Path
 
 import pytest
 
+from enterprise.audit_suite import documentary_discovery_matrix as matrix_module
 from enterprise.audit_suite.documentary_discovery_matrix import MatrixError, assemble
 
 
@@ -148,3 +152,29 @@ def test_changed_clause_or_started_task_rejected():
     data["screen_v3"]["rows"][0]["current_status"] = "IN_PROGRESS"
     with pytest.raises(MatrixError, match="Task clause"):
         assemble(data, pins, expected_controls=1, expected_tasks=1)
+
+
+def test_source_uris_are_portable_across_relative_and_absolute_roots(tmp_path, monkeypatch):
+    repo = tmp_path / "repo"
+    private = tmp_path / "private"
+    (repo / "docs").mkdir(parents=True)
+    (private / "source").mkdir(parents=True)
+    tracked = repo / "docs" / "catalog.md"
+    private_file = private / "source" / "routes.json"
+    tracked.write_text("source catalog\n")
+    private_file.write_text(json.dumps({"routes": []}) + "\n")
+    monkeypatch.setattr(
+        matrix_module,
+        "INPUTS",
+        {
+            "catalog": ("docs/catalog.md", hashlib.sha256(tracked.read_bytes()).hexdigest()),
+            "routes": ("source/routes.json", hashlib.sha256(private_file.read_bytes()).hexdigest()),
+        },
+    )
+    monkeypatch.chdir(repo)
+    relative_values, relative_pins = matrix_module._read_inputs(Path("."), private)
+    absolute_values, absolute_pins = matrix_module._read_inputs(repo, private)
+    assert relative_values == absolute_values
+    assert relative_pins == absolute_pins
+    assert relative_pins["catalog"]["uri"] == "repo://docs/catalog.md"
+    assert relative_pins["routes"]["uri"] == "private://source/routes.json"

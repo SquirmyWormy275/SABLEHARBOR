@@ -113,13 +113,19 @@ def _sha(path: Path) -> str:
 
 
 def _read_inputs(repository: Path, private_repository: Path) -> tuple[dict, dict]:
+    repository = Path(repository).resolve()
+    private_repository = Path(private_repository).resolve()
     values, pins = {}, {}
     for name, (relative, expected) in INPUTS.items():
-        root = repository if name in {"procedures", "catalog"} else private_repository
+        tracked = name in {"procedures", "catalog"}
+        root = repository if tracked else private_repository
         path = root / relative
         if not path.is_file() or path.is_symlink() or _sha(path) != expected:
             raise MatrixError(f"Pinned source missing or changed: {name}")
-        pins[name] = {"path": str(path), "sha256": expected}
+        pins[name] = {
+            "uri": ("repo://" if tracked else "private://") + relative,
+            "sha256": expected,
+        }
         values[name] = path.read_text() if name == "catalog" else json.loads(path.read_text())
     return values, pins
 
@@ -365,6 +371,11 @@ def _plan(matrix: dict) -> str:
             "is an inference for planning, not replacement audit language. The six "
             "catalog-derived targets have a distinct candidate basis."
         ),
+        (
+            "Source pins use `repo://` for paths relative to the tracked checkout and "
+            "`private://` for paths relative to the separately supplied private input root; "
+            "neither URI asserts an installed source at another workstation."
+        ),
         "",
         (
             "Discover actual or properly simulated company-native period records, or "
@@ -415,7 +426,7 @@ def create(destination: Path, *, repository: Path, private_repository: Path) -> 
         or destination.parent.stat().st_mode & 0o077
     ):
         raise MatrixError("New private destination required")
-    data, pins = _read_inputs(Path(repository), Path(private_repository))
+    data, pins = _read_inputs(Path(repository).resolve(), Path(private_repository).resolve())
     matrix = assemble(data, pins)
     plan = _plan(matrix)
     destination.mkdir(mode=0o700)
@@ -453,7 +464,7 @@ def verify(destination: Path, *, repository: Path, private_repository: Path) -> 
         path = destination / name
         if not path.is_file() or path.is_symlink() or path.stat().st_mode & 0o077:
             raise MatrixError("Private plan file required")
-    data, pins = _read_inputs(Path(repository), Path(private_repository))
+    data, pins = _read_inputs(Path(repository).resolve(), Path(private_repository).resolve())
     matrix = assemble(data, pins)
     plan = _plan(matrix)
     if (destination / "MATRIX.json").read_text() != json.dumps(
