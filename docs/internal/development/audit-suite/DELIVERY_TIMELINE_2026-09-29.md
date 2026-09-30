@@ -93,7 +93,23 @@ A selected Q3 Boise owner self-assessment and local second-line observation
 now have independently reviewed Clean/Messy company-native histories, including
 a preserved omission, correction and open escalation. This is a bounded
 ASS-001/002 source candidate outside V3, without accepted certification,
-independent assurance, full monitoring population or task credit.
+independent assurance, full monitoring population or task credit. It is now
+routed in the partial V4 registry.
+
+**September 30 routing checkpoint:** The independently reviewed V4 partial
+registry now routes REC003, symbolic SEC005 and ASS001/002 in addition to the
+exact V3 prefix: 24 cohorts, 401 native business versions, 38 components and
+227 system aliases per profile. REC003's inherited 12/22/25 access journals
+remain historical and excluded from those business versions. No new A/B audit
+engagement or task credit was created. A separate 34-version selected fictional
+governance source passed main-local independent review; its nine individual
+member actions precede Chair certification and bounded management delegation,
+while the Messy waiver remains denied and open. The corrected 40-version
+fictional company-operated SEC005 source passed isolated independent review and
+independent main-local review.
+Its October false pass and November AS-P008 self-review cannot be described as
+independent assurance. These two newer sources await a later registry successor
+and exact route reclassification.
 
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
