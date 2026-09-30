@@ -776,6 +776,21 @@ The 13-component active pair and its 409 unstarted tasks per branch remain
 unchanged; a future full-source registry and fresh A/B collection are still
 required.
 
+The [read-only documentary/activity discovery matrix](../../../../enterprise/audit_suite/documentary_discovery_matrix.py)
+now maps all 283 outstanding discovery routes per side across 43 controls to
+source-search candidates, existing documentary leads, missing activity and
+explicit procedure gates. Its portable V2 [private matrix](../../../../enterprise/generated/audit-suite/documentary-discovery-routes-2026-09-29/run-v2/MATRIX.json)
+(SHA-256 `e9477d2074bebce185e412a3ee7c424ded395c1a1128a7c918a94f6acbd1e327`)
+passed [independent review](../../../../enterprise/generated/audit-suite/documentary-discovery-routes-2026-09-29/independent-review-v2/REVIEW.json)
+(SHA-256 `c4064f6217c0e7f69276adc71004d6da7971867ccf3d844a3e198145cec31ace`).
+Six catalog-derived search targets per side are marked as hypotheses; 129
+generic or null authored clauses per side retain explicit procedure gates.
+The V1 absolute-path portability failure and review remain preserved. V2's
+private output was copied with exact hashes/modes and separate inodes, with
+zero shared extents reported; four focused tests, Ruff and verification from
+this checkout passed. This is a planning map, not a completed registry,
+company source, tested clause, audit evidence or task disposition.
+
 The queue's job `state`, acceptance criteria and attributed checkpoints must be read
 together. Historical `*_scope_update` entries record what was authorized at the time;
 their `QUEUED_NOT_STARTED` labels do not reset later job progress. Conversely, a
