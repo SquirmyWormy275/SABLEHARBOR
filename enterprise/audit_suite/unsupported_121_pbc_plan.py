@@ -10,7 +10,7 @@ from pathlib import Path
 
 from . import documentary_283_route_reconciliation_v3 as reviewed_routes
 
-SCHEMA = "SH_UNSUPPORTED_121_PAIRED_SOURCE_REQUEST_PLAN_V1"
+SCHEMA = "SH_UNSUPPORTED_121_PAIRED_SOURCE_REQUEST_PLAN_V2"
 LEDGER = "enterprise/audit_suite/DOCUMENTARY_283_ROUTE_RECONCILIATION_V3_2026-09-29.json"
 REVIEW = (
     "enterprise/generated/audit-suite/documentary-283-route-reconciliation-v3-2026-09-29/"
@@ -275,6 +275,8 @@ LIMITS = [
     "requires a bounded population, attributable owner statement and "
     "independent challenge.",
     "Every unsupported task remains NOT_STARTED/NOT_RUN with no N/A or audit credit.",
+    "External and qualified-decision statuses describe what this read-only "
+    "request packet sent or received, not global company document absence.",
 ]
 
 
@@ -469,16 +471,16 @@ def build(repository: Path, private_repository: Path) -> dict:
             "requested_originals_or_decision": _request_text(row),
             "source_request_lanes": lanes,
             "external_request_status": (
-                "NOT_SENT_NOT_RECEIVED"
+                "NOT_SENT_OR_RECEIVED_BY_THIS_PACKET"
                 if any(lane.startswith("EXTERNAL_") for lane in lanes)
                 else "NO_EXTERNAL_REQUEST_DEFINED"
             ),
             "qualified_decision_status": (
-                "NOT_PROVIDED"
+                "NOT_SUPPLIED_TO_THIS_PACKET"
                 if any(lane.startswith("QUALIFIED_") for lane in lanes)
                 else "NO_QUALIFIED_DECISION_REQUEST_DEFINED"
             ),
-            "accepted_nonoccurrence_candidate": possible_nonoccurrence,
+            "possible_nonoccurrence_review_candidate": possible_nonoccurrence,
             "accepted_nonoccurrence_status": (
                 "NOT_ESTABLISHED" if possible_nonoccurrence else "NO_NONOCCURRENCE_PATH_DEFINED"
             ),
@@ -551,8 +553,10 @@ def build(repository: Path, private_repository: Path) -> dict:
                     ).items()
                 )
             ),
-            "accepted_nonoccurrence_candidates": sum(
-                row["accepted_nonoccurrence_candidate"] for row in rows if row["side"] == side
+            "possible_nonoccurrence_review_candidates": sum(
+                row["possible_nonoccurrence_review_candidate"]
+                for row in rows
+                if row["side"] == side
             ),
             "accepted_nonoccurrence_determinations": 0,
             "by_family": dict(
@@ -593,7 +597,7 @@ def markdown(result: dict) -> str:
     """Summarize request queues while the JSON preserves each exact clause."""
     count = result["counts"]["A"]
     lines = [
-        "# Unsupported exact clauses: PBC/source-request plan",
+        "# Unsupported exact clauses: PBC/source-request plan V2",
         "",
         "This is a read-only request plan over the independently reviewed "
         "21-source V3 route ledger. It lists all 121 unsupported authored clauses "
@@ -613,8 +617,9 @@ def markdown(result: dict) -> str:
         f"| Unsupported exact clauses | {count['unsupported_exact_clauses']} |",
         f"| Affected controls | {count['controls']} |",
         f"| Request groups | {count['request_groups']} |",
-        "| Possible no-event reviews, none accepted | "
-        f"{count['accepted_nonoccurrence_candidates']} |",
+        "| Possible no-event review candidates | "
+        f"{count['possible_nonoccurrence_review_candidates']} |",
+        "| Accepted nonoccurrence determinations | 0 |",
         "",
         "Request lanes overlap because a clause can need both company originals "
         "and a qualified decision, or an outside response if a matter was "
@@ -645,9 +650,11 @@ def markdown(result: dict) -> str:
         )
     lines += [
         "",
-        "External responses remain `NOT_SENT_NOT_RECEIVED`. Qualified legal, "
-        "Board, data-owner, security and independent assurance decisions remain "
-        "unprovided. Original 2027 company activity, accepted no-event decisions, "
+        "For proposed external lanes this packet records "
+        "`NOT_SENT_OR_RECEIVED_BY_THIS_PACKET`; qualified legal, Board, "
+        "data-owner, security and independent assurance decisions were not "
+        "supplied to this packet. Neither status asserts global absence. Original "
+        "2027 company activity, accepted no-event decisions, "
         "complete populations and ordinary audit procedures must be established "
         "separately. All 242 paired task rows remain `NOT_STARTED`/`NOT_RUN` with "
         "no N/A or audit credit; the active pair, Key, Atlas and workpapers were "

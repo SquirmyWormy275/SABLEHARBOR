@@ -51,12 +51,12 @@ def test_legal_case_split_and_nonoccurrence_are_pending():
         "SH-LEG-001/CONTEXT": 4,
         "SH-LEG-001/MATTER": 46,
     }
-    assert result["counts"]["A"]["accepted_nonoccurrence_candidates"] == 53
+    assert result["counts"]["A"]["possible_nonoccurrence_review_candidates"] == 53
     assert result["counts"]["A"]["accepted_nonoccurrence_determinations"] == 0
     assert all(
         row["accepted_nonoccurrence_status"] == "NOT_ESTABLISHED"
         for row in side_a
-        if row["accepted_nonoccurrence_candidate"]
+        if row["possible_nonoccurrence_review_candidate"]
     )
     assert all(
         "EXTERNAL_AUTHORITY_RESPONSE_IF_TRIGGERED" in row["source_request_lanes"]
@@ -75,7 +75,7 @@ def test_legal_case_split_and_nonoccurrence_are_pending():
     )
     reserved = next(row for row in legal if row["task_id"].endswith("CHECK-HIPAA:160.302"))
     assert reserved["request_group_id"] == "SH-LEG-001/CONTEXT"
-    assert reserved["accepted_nonoccurrence_candidate"] is False
+    assert reserved["possible_nonoccurrence_review_candidate"] is False
 
 
 def test_external_customer_and_regulator_lanes_do_not_claim_responses():
@@ -84,11 +84,11 @@ def test_external_customer_and_regulator_lanes_do_not_claim_responses():
     for control in ("SH-PRD-002", "SH-PRD-003", "SH-PRD-004"):
         row = side_a[f"TASK-{control}-corporate-ACTION-S-COMMUNICATION"]
         assert "EXTERNAL_COUNTERPARTY_RESPONSE" in row["source_request_lanes"]
-        assert row["external_request_status"] == "NOT_SENT_NOT_RECEIVED"
+        assert row["external_request_status"] == "NOT_SENT_OR_RECEIVED_BY_THIS_PACKET"
         assert row["task_credit"] is False
     regulator = side_a["TASK-SH-REC-002-corporate-ACTION-H-REGULATOR"]
     assert regulator["accepted_nonoccurrence_status"] == "NOT_ESTABLISHED"
-    assert regulator["qualified_decision_status"] == "NOT_PROVIDED"
+    assert regulator["qualified_decision_status"] == "NOT_SUPPLIED_TO_THIS_PACKET"
 
 
 def test_pinned_review_drift_fails_closed(monkeypatch):

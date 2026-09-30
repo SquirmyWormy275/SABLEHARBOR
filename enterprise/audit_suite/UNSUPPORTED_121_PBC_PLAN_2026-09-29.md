@@ -1,4 +1,4 @@
-# Unsupported exact clauses: PBC/source-request plan
+# Unsupported exact clauses: PBC/source-request plan V2
 
 This is a read-only request plan over the independently reviewed 21-source V3 route ledger. It lists all 121 unsupported authored clauses on each audit side, grouped by proposed source locator and candidate contact. The [paired JSON](UNSUPPORTED_121_PBC_PLAN_2026-09-29.json) preserves each exact task ID, clause, source limit, request lane and no-credit state. No request was sent.
 
@@ -9,7 +9,8 @@ The design procedure's system name is a locator suggestion, not a verified deplo
 | Unsupported exact clauses | 121 |
 | Affected controls | 28 |
 | Request groups | 30 |
-| Possible no-event reviews, none accepted | 53 |
+| Possible no-event review candidates | 53 |
+| Accepted nonoccurrence determinations | 0 |
 
 Request lanes overlap because a clause can need both company originals and a qualified decision, or an outside response if a matter was triggered. Counts below are lane mentions, not satisfied tasks:
 
@@ -58,4 +59,4 @@ The legal-obligation control accounts for 66 per side: 16 provision/status decis
 | AS-P014 | Processing register and privacy case queue | 8 | SH-DAT-002 |
 | AS-P014 | Retention schedule and deletion scheduler | 1 | SH-DAT-003 |
 
-External responses remain `NOT_SENT_NOT_RECEIVED`. Qualified legal, Board, data-owner, security and independent assurance decisions remain unprovided. Original 2027 company activity, accepted no-event decisions, complete populations and ordinary audit procedures must be established separately. All 242 paired task rows remain `NOT_STARTED`/`NOT_RUN` with no N/A or audit credit; the active pair, Key, Atlas and workpapers were not changed.
+For proposed external lanes this packet records `NOT_SENT_OR_RECEIVED_BY_THIS_PACKET`; qualified legal, Board, data-owner, security and independent assurance decisions were not supplied to this packet. Neither status asserts global absence. Original 2027 company activity, accepted no-event decisions, complete populations and ordinary audit procedures must be established separately. All 242 paired task rows remain `NOT_STARTED`/`NOT_RUN` with no N/A or audit credit; the active pair, Key, Atlas and workpapers were not changed.
