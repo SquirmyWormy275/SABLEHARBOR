@@ -41,6 +41,13 @@ qualified decisions, or failed independent review move the relevant batch and
 require a dated reforecast. A task disposition can remain a supported gap or
 `NOT_RUN`; the calendar does not turn it into a pass.
 
+**September 29 Pacific checkpoint:** The separately reviewed fictional
+Reno/Boise and payload-free ePHI/BA native sources are integrated, and a
+reviewed candidate matrix classifies all 283 documentary/activity discovery
+routes per branch. These sources are outside the active 13-component audit
+pair. The 283 routes still require native-source and procedure decisions;
+all 409 tasks per branch in that pair remain `NOT_STARTED`/`NOT_RUN`.
+
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
 2–16, 2027 (weeks 18–20) is the working target. March 16, 2027 (week 24) is
