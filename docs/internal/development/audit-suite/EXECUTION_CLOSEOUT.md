@@ -744,6 +744,23 @@ bytes, identity and mode afterward. Twelve focused tests, Ruff and exact
 report rerun passed; no engagement or registry changed. Historical V1
 provisional and V2 changes-required reviews remain preserved.
 
+The [fictional 2027 Reno/Boise transition source](../../../../enterprise/audit_suite/RUNTIME_TRANSITION_PROPOSAL.md)
+is now integrated as a prospective company-native training source. The V3
+[independent review](../../../../enterprise/generated/audit-suite/company-runtime-transition-2026-09-29/independent-review-v3/REVIEW.json)
+(SHA-256 `f1acaeaea963055f99b0de120fd1b0347ee984edf085d353e7af1e427234d5a9`)
+passed 48 native versions across Clean/Messy branches, 16 individually
+attributed contract clearances, their approval hash links, dated commissioning
+and recovery records, one open Messy exception, and preservation of the active
+P1 pair. The V2 changes-required review remains separate: its aggregate site
+approval lacked individually attributable role decisions. V3's private source
+and review were copied as independent ordinary bytes into this checkout;
+file hashes, modes and separate inodes matched, with zero shared extents
+reported. Five focused tests, Ruff and native V3 verification passed here.
+These are explicitly fictional source facts, not real contracts, real sites,
+actual PHI processing, a new audit registry, collection or task credit. The
+dependent simulated ePHI/BA source must pin the exact reviewed V3 run and pass
+its own independent review before it is integrated.
+
 The queue's job `state`, acceptance criteria and attributed checkpoints must be read
 together. Historical `*_scope_update` entries record what was authorized at the time;
 their `QUEUED_NOT_STARTED` labels do not reset later job progress. Conversely, a
