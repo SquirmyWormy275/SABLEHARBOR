@@ -63,8 +63,9 @@ candidate registry has 15 fictional source cohorts, 256 native versions,
 28 components and 182 system aliases per side. The reviewed exact 283-route
 reconciliation classifies 84 per side as partial native-source candidates,
 78 as design-only and 121 as unsupported clauses; no task receives credit.
-Four later reviewed local ENG005, PRD, ETH004 and ETH003 cohorts bring the
-broader source-production inventory to 19 cohorts and 317 versions, but are
+Six later reviewed local ENG005, PRD, ETH004, ETH003, PPL002 and IAM005 cohorts
+bring the broader source-production inventory to 21 cohorts and 358 versions,
+but are
 outside that candidate registry and route reconciliation. A disposable
 scoped-grant collection probe exercised 20 originals from the first ten
 cohorts without changing the active pair or granting task credit. These
