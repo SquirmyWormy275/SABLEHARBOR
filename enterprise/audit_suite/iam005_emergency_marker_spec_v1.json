@@ -1,0 +1,48 @@
+{
+  "schema": "SH_FICTIONAL_2027_IAM005_EMERGENCY_MARKER_SPEC_V1",
+  "truth_class": "TRAINING_SCENARIO_ONLY",
+  "selected_service_id": "SVC-compute",
+  "selected_customer_service_id": "SIM-RESTRICTED-HOSTING-01",
+  "marker_id": "SIM-EPHI-RECOVERY-MARKER-01",
+  "marker_description": "Payload-free synthetic recovery marker, not PHI or patient data",
+  "marker_bytes_utf8": "SABLEHARBOR:SIM-EPHI-RECOVERY-MARKER-01:NONPERSONAL:2027",
+  "marker_byte_count": 56,
+  "marker_sha256": "fb5a872ccff0e97081593ba6338b2bbb40556168999a253dc9d0df402638870a",
+  "human_operator_person_id": "AS-P007",
+  "security_approver_person_id": "AS-P008",
+  "data_owner_person_id": "AS-P014",
+  "risk_monitor_person_id": "AS-P005",
+  "inert_service_identity_id": "SIM-RECOVERY-SERVICE-IDENTITY-01",
+  "selected_site": "BOISE",
+  "source_boundary": "One selected customer marker, one human and one inert service identity, one Boise recovery exercise per branch; not an estate, customer or period population",
+  "upstream_selected_records": {
+    "phi_ba": ["BAA-CUST-01", "FLOW-BOISE-01"],
+    "bcm": ["MARKER-RECOVERY"],
+    "sec005": ["APPLY-BASELINE-01", "RECON-OCT-01"]
+  },
+  "chronology": {
+    "CLEAN": {
+      "scope_at": "2027-10-12T10:00:00+00:00",
+      "approval_at": "2027-10-13T10:00:00+00:00",
+      "exercise_at": "2027-10-15T09:00:00+00:00",
+      "review_at": "2027-10-16T10:00:00+00:00"
+    },
+    "MESSY": {
+      "scope_at": "2027-10-12T10:00:00+00:00",
+      "approval_at": "2027-10-13T10:00:00+00:00",
+      "exercise_at": "2027-10-20T09:00:00+00:00",
+      "review_at": "2027-11-11T10:00:00+00:00"
+    }
+  },
+  "expected": {
+    "CLEAN": {"native_versions": 9, "open_exceptions": 0},
+    "MESSY": {"native_versions": 16, "open_exceptions": 1}
+  },
+  "limits": [
+    "All times and actions are fictional future-authored source facts as of 2026-09-30.",
+    "No actual PHI, external identity provider, account, secret, session, packet or customer communication is created.",
+    "A local selected path does not establish every trust boundary, complete emergency-mode ePHI access, full-period operation or an audit task conclusion.",
+    "AS-P008 approves and later reviews this selected exercise; that review is management self-review, not independent assurance.",
+    "The Messy SEC005 October coverage omission remains an open upstream exception and prevents a complete access-log assurance claim."
+  ]
+}
