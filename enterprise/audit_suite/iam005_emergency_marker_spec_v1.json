@@ -17,7 +17,11 @@
   "source_boundary": "One selected customer marker, one human and one inert service identity, one Boise recovery exercise per branch; not an estate, customer or period population",
   "upstream_selected_records": {
     "phi_ba": ["BAA-CUST-01", "FLOW-BOISE-01"],
-    "bcm": ["MARKER-RECOVERY"],
+    "bcm": [
+      "MARKER-RECOVERY:v1",
+      "MESSY:MARKER-RECOVERY:v2",
+      "MESSY:KEY-AND-CAPACITY:closure_gate:v1"
+    ],
     "sec005": ["APPLY-BASELINE-01", "RECON-OCT-01"]
   },
   "chronology": {

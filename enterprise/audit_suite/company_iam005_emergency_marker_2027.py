@@ -18,7 +18,7 @@ SCHEMA = "SH_FICTIONAL_2027_IAM005_EMERGENCY_MARKER_V1"
 COMPANY = "SABLE-HARBOR-REFERENCE"
 BRANCHES = {"CLEAN": "IAM005-EMERGENCY-CLEAN", "MESSY": "IAM005-EMERGENCY-MESSY"}
 SPEC = "enterprise/audit_suite/iam005_emergency_marker_spec_v1.json"
-SPEC_SHA256 = "989c998f33cfd1a82638951eac715e29a427f4d61bb31e275752f08c4c429083"
+SPEC_SHA256 = "a666551c46a4db8fa67cae168f72237ef9123610175e98cded5f50d034b7fe7c"
 SOURCE_REFERENCE = "enterprise/audit_suite/company_iam005_emergency_marker_2027.py"
 MARKER_BYTES = b"SABLEHARBOR:SIM-EPHI-RECOVERY-MARKER-01:NONPERSONAL:2027"
 MARKER_SHA256 = "fb5a872ccff0e97081593ba6338b2bbb40556168999a253dc9d0df402638870a"
@@ -92,18 +92,17 @@ def _write(path: Path, value: dict) -> None:
     path.chmod(0o600)
 
 
-def _source_ref(receipt: dict, side: str, system: str, record: str) -> dict:
+def _source_ref(receipt: dict, side: str, system: str, record: str, *, version: int = 1) -> dict:
     rows = [
         row
         for row in receipt["records"][side]
-        if row["system"] == system and row["record"] == record
+        if row["system"] == system and row["record"] == record and row["version"] == version
     ]
     if not rows:
         raise CompanyStoreError("Required upstream native record missing")
-    # Messy BCM has a later retest under the same record: preserve first exercise.
+    if len(rows) != 1:
+        raise CompanyStoreError("Required upstream native version ambiguous")
     row = rows[0]
-    if row["version"] != 1:
-        raise CompanyStoreError("First upstream version differs")
     return {
         key: row[key]
         for key in (
@@ -195,6 +194,17 @@ def _context(repository: Path, private_repository: Path) -> dict:
                 receipts["sec005"], side, "security_reconciliation", "RECON-OCT-01"
             ),
         }
+        if side == "MESSY":
+            refs[side]["bcm_local_retest"] = _source_ref(
+                receipts["bcm"],
+                side,
+                "exercise_result",
+                "MARKER-RECOVERY",
+                version=2,
+            )
+            refs[side]["bcm_open_closure_gate"] = _source_ref(
+                receipts["bcm"], side, "closure_gate", "KEY-AND-CAPACITY"
+            )
         if any(
             _time(row["available_at"]) >= _time(spec["chronology"][side]["scope_at"])
             for row in refs[side].values()
@@ -279,6 +289,7 @@ def _rows(context: dict, scenario: str) -> list[dict]:
             "selected_site": spec["selected_site"],
             "population_count": 1,
             "marker_bytes_utf8": MARKER_BYTES.decode(),
+            "messy_bcm_local_retest_only_bia_and_closure_still_open": scenario == "MESSY",
         },
     )
     add(

@@ -14,6 +14,11 @@ data-only access decisions refer to its SHA-256. No authentication service or
 network read is run by the producer; those access records are explicitly
 fictional company-operation events.
 
+Messy also pins the **second** BCM marker exercise, which found the selected
+marker readable, and its later closure gate, which still denied BIA/capacity
+and historical key-bypass closure. The October IAM marker read therefore does
+not imply accepted service recovery or risk treatment.
+
 Clean records a bounded emergency approval, short-lived human and service
 marker reads, revocation, and management review. Messy first denies an expired
 human lease and an excessive override, later permits a narrower read, denies a

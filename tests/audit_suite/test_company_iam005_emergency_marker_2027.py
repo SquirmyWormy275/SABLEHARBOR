@@ -27,6 +27,10 @@ def test_selected_source_joins_prior_company_history_and_keeps_messy_denials(tmp
     assert receipt["upstream_selected_refs"]["MESSY"]["sec_october_reconciliation"]["record"] == (
         "RECON-OCT-01"
     )
+    assert receipt["upstream_selected_refs"]["MESSY"]["bcm_local_retest"]["version"] == 2
+    assert receipt["upstream_selected_refs"]["MESSY"]["bcm_open_closure_gate"]["record"] == (
+        "KEY-AND-CAPACITY"
+    )
     assert receipt["upstream_late_refs"]["MESSY"]["sec_november_recheck"]["record"] == (
         "SECURITY-RECHECK-NOV-01"
     )
