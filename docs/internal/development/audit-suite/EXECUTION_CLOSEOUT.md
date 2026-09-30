@@ -821,6 +821,18 @@ tests, Ruff and native verification passed in this checkout. This bounded
 future training source grants no actual provider representation, 2027
 operation, audit collection or task credit.
 
+The [provider/BA route delta V2](../../../../enterprise/audit_suite/PROVIDER_BA_85_ROUTE_DELTA_V2.md)
+adds the reviewed provider-lifecycle source to the exact 85-route-per-side
+candidate map. Its [independent review](../../../../enterprise/generated/audit-suite/provider-ba-85-route-v2-independent-review-2026-09-29/REVIEW.json)
+(SHA-256 `5f74853e540dc819b2fb5313fa9a62a4a984581217ca04027a3d72eda8df0883`)
+reconciled all 170 earlier task rows and 22 added native anchor tuples. V2
+classifies 19 partial-context and 66 no-direct-source routes per side; the
+three newly touched generic SH-LEG-001 routes have only a fictional provider
+contract calendar subset, not a provision-level legal obligation inventory.
+All 85 tasks per side remain uncredited. The review was copied with matching
+ordinary bytes and a separate inode; no source, audit pair or Atlas write
+followed from the map.
+
 The [fictional ERM-003/004 stage-gate source](../../../../enterprise/audit_suite/RISK_GOVERNANCE_STAGEGATE_PROPOSAL.md)
 is integrated after [independent V2 review](../../../../enterprise/generated/audit-suite/company-risk-governance-stagegate-2026-09-29/independent-review-v2/REVIEW.json)
 (SHA-256 `78dbf2b9585efd8f51a08a598d6c56aa342ef7845b56e6c0892a239a968fde34`).

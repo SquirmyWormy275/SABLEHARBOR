@@ -51,8 +51,9 @@ the active 13-component audit pair. The 283 routes still require
 native-source and procedure decisions; all 409 tasks per branch in that pair
 remain `NOT_STARTED`/`NOT_RUN`.
 Within the provider/BA family, `SH-LEG-001` alone has 72 discovery routes
-per branch; a reviewed clause map finds 69 of the family's 85 routes per
-branch have no direct source even after the transition and BA sources. Qualified
+per branch; the reviewed V2 clause map finds 66 of the family's 85 routes
+per branch have no direct source even after the bounded provider-lifecycle
+source. The other 19 have only partial fictional context. Qualified
 legal/applicability work and explicit limitations therefore remain a schedule
 dependency that additional source code alone cannot close.
 
