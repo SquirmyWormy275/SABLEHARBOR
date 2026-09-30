@@ -47,6 +47,11 @@ reviewed candidate matrix classifies all 283 documentary/activity discovery
 routes per branch. These sources are outside the active 13-component audit
 pair. The 283 routes still require native-source and procedure decisions;
 all 409 tasks per branch in that pair remain `NOT_STARTED`/`NOT_RUN`.
+Within the provider/BA family, `SH-LEG-001` alone has 72 discovery routes
+per branch; a reviewed clause map finds 69 of the family's 85 routes per
+branch have no direct source even after the two fictional sources. Qualified
+legal/applicability work and explicit limitations therefore remain a schedule
+dependency that additional source code alone cannot close.
 
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
