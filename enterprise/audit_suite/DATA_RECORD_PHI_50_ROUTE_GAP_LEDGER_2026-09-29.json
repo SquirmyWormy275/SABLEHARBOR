@@ -1,0 +1,1373 @@
+{
+  "as_of": "2026-09-29",
+  "base_commit": "c83a89e3d81b45d6f730e4e3978c5de870459861",
+  "catalog_sha256": "6bc27636355eb21204471672bd04377ee12cf5530feadf9ec7049a5983015433",
+  "counts": {
+    "controls": 8,
+    "remaining_after_dat001_per_side": 46,
+    "source_classes": {
+      "DESIGN_REFERENCE_ONLY": 8,
+      "LOCAL_FIXTURE_NATIVE": 12,
+      "LOCAL_OR_FUTURE_NATIVE_NOT_DEPLOYMENT": 8,
+      "NO_MATCHING_NATIVE_ACTIVITY": 13,
+      "SCOPED_FUTURE_NATIVE": 9
+    },
+    "task_routes_per_side": 50,
+    "task_rows_unique_paired": 50
+  },
+  "frozen_matrix_independent_review_sha256": "c4064f6217c0e7f69276adc71004d6da7971867ccf3d844a3e198145cec31ace",
+  "frozen_matrix_sha256": "e9477d2074bebce185e412a3ee7c424ded395c1a1128a7c918a94f6acbd1e327",
+  "proposed_procedures_sha256": "258f5c868e16f3dc197594857dc86a4f2b3ef11e3e5a36dd0a80a9fc6d40c679",
+  "schema": "SH_DATA_RECORD_PHI_50_ROUTE_GAP_LEDGER_V1",
+  "scope_limits": [
+    "Candidate discovery links only; source association is not sufficient task evidence.",
+    "All fictional 2027 source events are future as of 2026-09-29, even where imported now.",
+    "No actual PHI, HIPAA role, deployment, approved retention, patient-rights duty, full-period population or audit credit inferred.",
+    "No enterprise-wide authorized nonoccurrence decision is established."
+  ],
+  "source_catalog": {
+    "DISP": {
+      "kind": "LOCAL_FIXTURE_NATIVE",
+      "module": "enterprise/audit_suite/company_disposal_runtime.py",
+      "module_sha256": "80f42eb8d4625d15b64a74b43cc71831ed1e6d3dde1c23a1a7b95b2f6d1ee4b3",
+      "run_receipt_sha256": "af01063ddef31e909d21327ba071f774189b034d81968ae273c689d461a1359d",
+      "scope": "New disposable nonpersonal active/backup fixture copies, local holds and actual unlink; no secure erase or legal release."
+    },
+    "DQ": {
+      "kind": "LOCAL_FIXTURE_NATIVE",
+      "module": "enterprise/audit_suite/company_data_quality_runtime.py",
+      "module_sha256": "358fbf812e6203b4c1351e93449413d9efa45bb8a743b47d7562c6642461cbf2",
+      "run_receipt_sha256": "4b80e195d016592a4778caf2cebc312634d9c9ff4f09e02459cba752389415f9",
+      "scope": "Nonpersonal fixed-schema validation, correction, extraction and raw/derived lineage; locally declared denominator only."
+    },
+    "DS": {
+      "independent_review_sha256": "4d1cd9c423781bf97ff586075c460c891cc60f621b42a29a22db59df929ff52e",
+      "kind": "SCOPED_FUTURE_NATIVE",
+      "module": "enterprise/audit_suite/company_dataset_classification_exercise.py",
+      "module_sha256": "af48260a348cb35f0641b7fb309bfbffa790533e534b302d5906d9eb33e925b8",
+      "run_manifest_sha256": "ed670cf671da2f2d20579664807bd9a80b3dd7f0dec6e445a09166555adbfb31",
+      "scope": "One fictional payload-free marker metadata dataset; local classification recommendation, invalid Messy label, no accepted enforcement."
+    },
+    "FLOW": {
+      "independent_review_sha256": "4ae1e319439272e30635a4d7849c4d7e5c5a30aa6f5abbcecc343dfef21626cf",
+      "kind": "DESIGN_ONLY_PREDECESSOR",
+      "module": "enterprise/audit_suite/company_data_flow_exercise.py",
+      "module_sha256": "2288088ab252ad58fc68b3a6aa28cd4f9f73a03336d6b472c05c3550e87c290c",
+      "run_receipt_sha256": "8c0b246f6a750d30be0f84a7af94356f1ad8a16874f2e3f9a5d065845348c515",
+      "scope": "Prospective zero-payload authority/route marker; no deployed transfer or accepted retention."
+    },
+    "LOG": {
+      "kind": "LOCAL_FIXTURE_NATIVE",
+      "module": "enterprise/audit_suite/company_security_logging_activity.py",
+      "module_sha256": "eedb259b9cf7634c64d4492878c5c8c2def2c0de5ffd1869ca629c42922fdb0c",
+      "scope": "Selected synthetic security-log review records; does not by itself prove independently selected full activity periods.",
+      "source_receipt_sha256": "4867b33f8dfd56c7778506dca571fa31f841fd87cc2815744ac447f2a6cf0b62"
+    },
+    "PHI": {
+      "independent_review_sha256": "39bb9b071179ed672c5cf07c2867285d36b2f3e8cdce2106dc4472d17047911e",
+      "kind": "SCOPED_FUTURE_NATIVE",
+      "module": "enterprise/audit_suite/company_phi_ba_2027_simulation.py",
+      "module_sha256": "0cca9f99ee7cd4926229a693a4ab037668da7dc78c741c4ec4aab245a7480355",
+      "run_manifest_sha256": "8226ac2031cafe581289afb4c25088c8dfe603e75ac11fc1ababfe2590f2a5f2",
+      "scope": "Fictional 2027 BA/flow chain, one zero-payload marker, Clean gate and Messy late-flowdown exception; no actual legal/PHI status."
+    }
+  },
+  "task_rows": [
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Trace classification, contractual obligations, retention and lifecycle protection to actual datasets; inspect premature deletion and unauthorized retention risks.",
+      "bounded_fixture_nonoccurrence": null,
+      "candidate_native_source_ids": [
+        "DS",
+        "PHI"
+      ],
+      "control_id": "SH-DAT-001",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C1",
+      "remaining_test_gate": "Trace classification, contractual obligations, retention and lifecycle protection to actual datasets; inspect premature deletion and unauthorized retention risks.",
+      "source_class": "SCOPED_FUTURE_NATIVE",
+      "source_limitation": "One local marker label; accepted data-owner classification, contractual retention mapping, downstream enforcement and enterprise dataset denominator absent.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-001-corporate-CHECK-SOC2:C1.1",
+        "B": "TASK-SH-DAT-001-corporate-CHECK-SOC2:C1.1"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "CHECK-SOC2:C1.1",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "bounded_fixture_nonoccurrence": null,
+      "candidate_native_source_ids": [
+        "DS"
+      ],
+      "control_id": "SH-DAT-001",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C1",
+      "remaining_test_gate": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "source_class": "LOCAL_OR_FUTURE_NATIVE_NOT_DEPLOYMENT",
+      "source_limitation": "One local marker label; accepted data-owner classification, contractual retention mapping, downstream enforcement and enterprise dataset denominator absent.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-001-corporate-IMPLEMENTATION",
+        "B": "TASK-SH-DAT-001-corporate-IMPLEMENTATION"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "bounded_fixture_nonoccurrence": null,
+      "candidate_native_source_ids": [],
+      "control_id": "SH-DAT-001",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C1",
+      "remaining_test_gate": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "source_class": "DESIGN_REFERENCE_ONLY",
+      "source_limitation": "One local marker label; accepted data-owner classification, contractual retention mapping, downstream enforcement and enterprise dataset denominator absent.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-001-corporate-TOD",
+        "B": "TASK-SH-DAT-001-corporate-TOD"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "bounded_fixture_nonoccurrence": null,
+      "candidate_native_source_ids": [
+        "DS"
+      ],
+      "control_id": "SH-DAT-001",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C1",
+      "remaining_test_gate": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "source_class": "SCOPED_FUTURE_NATIVE",
+      "source_limitation": "One local marker label; accepted data-owner classification, contractual retention mapping, downstream enforcement and enterprise dataset denominator absent.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-001-corporate-TOE",
+        "B": "TASK-SH-DAT-001-corporate-TOE"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Trace selected disclosures and proposed reuse to actual authority and justified scope; reject a new AI-training use based solely on possession of PHI.",
+      "bounded_fixture_nonoccurrence": "Selected payload-free fixture has no real PHI and no individual rights/authorization/regulator cases; this is scenario design, not enterprise nonoccurrence.",
+      "candidate_native_source_ids": [
+        "PHI"
+      ],
+      "control_id": "SH-DAT-002",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C1",
+      "remaining_test_gate": "Trace selected disclosures and proposed reuse to actual authority and justified scope; reject a new AI-training use based solely on possession of PHI.",
+      "source_class": "SCOPED_FUTURE_NATIVE",
+      "source_limitation": "No actual PHI/BA applicability, processing population, legal purpose or delegated-rights duty accepted; one synthetic marker and BA chain only.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-002-corporate-ACTION-H-PRIVACY-PURPOSE",
+        "B": "TASK-SH-DAT-002-corporate-ACTION-H-PRIVACY-PURPOSE"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "ACTION-H-PRIVACY-PURPOSE",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Exercise an electronic-copy request, an accepted amendment and an accounting request on synthetic data; trace the correct recipient, complete records and upstream completion requirements.",
+      "bounded_fixture_nonoccurrence": "Selected payload-free fixture has no real PHI and no individual rights/authorization/regulator cases; this is scenario design, not enterprise nonoccurrence.",
+      "candidate_native_source_ids": [],
+      "control_id": "SH-DAT-002",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C1",
+      "remaining_test_gate": "Exercise an electronic-copy request, an accepted amendment and an accounting request on synthetic data; trace the correct recipient, complete records and upstream completion requirements.",
+      "source_class": "NO_MATCHING_NATIVE_ACTIVITY",
+      "source_limitation": "No actual PHI/BA applicability, processing population, legal purpose or delegated-rights duty accepted; one synthetic marker and BA chain only.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-002-corporate-ACTION-H-RIGHTS-ASSISTANCE",
+        "B": "TASK-SH-DAT-002-corporate-ACTION-H-RIGHTS-ASSISTANCE"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "ACTION-H-RIGHTS-ASSISTANCE",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Reconcile created, received, maintained and transmitted ePHI across systems, backups and subcontractors before choosing safeguards.",
+      "bounded_fixture_nonoccurrence": "Selected payload-free fixture has no real PHI and no individual rights/authorization/regulator cases; this is scenario design, not enterprise nonoccurrence.",
+      "candidate_native_source_ids": [
+        "PHI"
+      ],
+      "control_id": "SH-DAT-002",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C1",
+      "remaining_test_gate": "Reconcile created, received, maintained and transmitted ePHI across systems, backups and subcontractors before choosing safeguards.",
+      "source_class": "SCOPED_FUTURE_NATIVE",
+      "source_limitation": "No actual PHI/BA applicability, processing population, legal purpose or delegated-rights duty accepted; one synthetic marker and BA chain only.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-002-corporate-CHECK-HIPAA:164.302",
+        "B": "TASK-SH-DAT-002-corporate-CHECK-HIPAA:164.302"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "CHECK-HIPAA:164.302",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Separate direct BA, delegated covered-entity and inapplicable-by-fact duties, with reviewer reasoning for each actual workflow.",
+      "bounded_fixture_nonoccurrence": "Selected payload-free fixture has no real PHI and no individual rights/authorization/regulator cases; this is scenario design, not enterprise nonoccurrence.",
+      "candidate_native_source_ids": [
+        "PHI"
+      ],
+      "control_id": "SH-DAT-002",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C1",
+      "remaining_test_gate": "Separate direct BA, delegated covered-entity and inapplicable-by-fact duties, with reviewer reasoning for each actual workflow.",
+      "source_class": "SCOPED_FUTURE_NATIVE",
+      "source_limitation": "No actual PHI/BA applicability, processing population, legal purpose or delegated-rights duty accepted; one synthetic marker and BA chain only.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-002-corporate-CHECK-HIPAA:164.500",
+        "B": "TASK-SH-DAT-002-corporate-CHECK-HIPAA:164.500"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "CHECK-HIPAA:164.500",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Inventory records used to make decisions about individuals, not only clinical databases; validate actual payment/operations/research purpose before relying on a category.",
+      "bounded_fixture_nonoccurrence": "Selected payload-free fixture has no real PHI and no individual rights/authorization/regulator cases; this is scenario design, not enterprise nonoccurrence.",
+      "candidate_native_source_ids": [],
+      "control_id": "SH-DAT-002",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C1",
+      "remaining_test_gate": "Inventory records used to make decisions about individuals, not only clinical databases; validate actual payment/operations/research purpose before relying on a category.",
+      "source_class": "NO_MATCHING_NATIVE_ACTIVITY",
+      "source_limitation": "No actual PHI/BA applicability, processing population, legal purpose or delegated-rights duty accepted; one synthetic marker and BA chain only.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-002-corporate-CHECK-HIPAA:164.501",
+        "B": "TASK-SH-DAT-002-corporate-CHECK-HIPAA:164.501"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "CHECK-HIPAA:164.501",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Trace a cross-entity operations disclosure to qualifying relationships and purpose plus the BAA; ordinary consent cannot replace a required authorization.",
+      "bounded_fixture_nonoccurrence": "Selected payload-free fixture has no real PHI and no individual rights/authorization/regulator cases; this is scenario design, not enterprise nonoccurrence.",
+      "candidate_native_source_ids": [],
+      "control_id": "SH-DAT-002",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C1",
+      "remaining_test_gate": "Trace a cross-entity operations disclosure to qualifying relationships and purpose plus the BAA; ordinary consent cannot replace a required authorization.",
+      "source_class": "NO_MATCHING_NATIVE_ACTIVITY",
+      "source_limitation": "No actual PHI/BA applicability, processing population, legal purpose or delegated-rights duty accepted; one synthetic marker and BA chain only.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-002-corporate-CHECK-HIPAA:164.506",
+        "B": "TASK-SH-DAT-002-corporate-CHECK-HIPAA:164.506"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "CHECK-HIPAA:164.506",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Test an expired, revoked and incomplete authorization as well as a permitted one; validate special psychotherapy/marketing/sale conditions before release.",
+      "bounded_fixture_nonoccurrence": "Selected payload-free fixture has no real PHI and no individual rights/authorization/regulator cases; this is scenario design, not enterprise nonoccurrence.",
+      "candidate_native_source_ids": [],
+      "control_id": "SH-DAT-002",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C1",
+      "remaining_test_gate": "Test an expired, revoked and incomplete authorization as well as a permitted one; validate special psychotherapy/marketing/sale conditions before release.",
+      "source_class": "NO_MATCHING_NATIVE_ACTIVITY",
+      "source_limitation": "No actual PHI/BA applicability, processing population, legal purpose or delegated-rights duty accepted; one synthetic marker and BA chain only.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-002-corporate-CHECK-HIPAA:164.508",
+        "B": "TASK-SH-DAT-002-corporate-CHECK-HIPAA:164.508"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "CHECK-HIPAA:164.508",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "For any delegated workflow, inspect the customer's decision and prior preferences; do not grant general family access based solely on relationship.",
+      "bounded_fixture_nonoccurrence": "Selected payload-free fixture has no real PHI and no individual rights/authorization/regulator cases; this is scenario design, not enterprise nonoccurrence.",
+      "candidate_native_source_ids": [],
+      "control_id": "SH-DAT-002",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C1",
+      "remaining_test_gate": "For any delegated workflow, inspect the customer's decision and prior preferences; do not grant general family access based solely on relationship.",
+      "source_class": "NO_MATCHING_NATIVE_ACTIVITY",
+      "source_limitation": "No actual PHI/BA applicability, processing population, legal purpose or delegated-rights duty accepted; one synthetic marker and BA chain only.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-002-corporate-CHECK-HIPAA:164.510",
+        "B": "TASK-SH-DAT-002-corporate-CHECK-HIPAA:164.510"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "CHECK-HIPAA:164.510",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Use a route-specific legal decision with demand scope, recipient authority and necessary assurances; printed reproductive-health cross-references need the legal-status overlay before use.",
+      "bounded_fixture_nonoccurrence": "Selected payload-free fixture has no real PHI and no individual rights/authorization/regulator cases; this is scenario design, not enterprise nonoccurrence.",
+      "candidate_native_source_ids": [],
+      "control_id": "SH-DAT-002",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C1",
+      "remaining_test_gate": "Use a route-specific legal decision with demand scope, recipient authority and necessary assurances; printed reproductive-health cross-references need the legal-status overlay before use.",
+      "source_class": "NO_MATCHING_NATIVE_ACTIVITY",
+      "source_limitation": "No actual PHI/BA applicability, processing population, legal purpose or delegated-rights duty accepted; one synthetic marker and BA chain only.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-002-corporate-CHECK-HIPAA:164.512",
+        "B": "TASK-SH-DAT-002-corporate-CHECK-HIPAA:164.512"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "CHECK-HIPAA:164.512",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Test residual identifiers and actual-knowledge limits; distinguish de-identification, re-identification code, limited data set and minimum-necessary workflows and retain supporting determinations.",
+      "bounded_fixture_nonoccurrence": "Selected payload-free fixture has no real PHI and no individual rights/authorization/regulator cases; this is scenario design, not enterprise nonoccurrence.",
+      "candidate_native_source_ids": [],
+      "control_id": "SH-DAT-002",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C1",
+      "remaining_test_gate": "Test residual identifiers and actual-knowledge limits; distinguish de-identification, re-identification code, limited data set and minimum-necessary workflows and retain supporting determinations.",
+      "source_class": "NO_MATCHING_NATIVE_ACTIVITY",
+      "source_limitation": "No actual PHI/BA applicability, processing population, legal purpose or delegated-rights duty accepted; one synthetic marker and BA chain only.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-002-corporate-CHECK-HIPAA:164.514",
+        "B": "TASK-SH-DAT-002-corporate-CHECK-HIPAA:164.514"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "CHECK-HIPAA:164.514",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Trace customer instructions to filtering/contact configuration; test a termination against data timing and a paid-in-full exception before releasing information.",
+      "bounded_fixture_nonoccurrence": "Selected payload-free fixture has no real PHI and no individual rights/authorization/regulator cases; this is scenario design, not enterprise nonoccurrence.",
+      "candidate_native_source_ids": [],
+      "control_id": "SH-DAT-002",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C1",
+      "remaining_test_gate": "Trace customer instructions to filtering/contact configuration; test a termination against data timing and a paid-in-full exception before releasing information.",
+      "source_class": "NO_MATCHING_NATIVE_ACTIVITY",
+      "source_limitation": "No actual PHI/BA applicability, processing population, legal purpose or delegated-rights duty accepted; one synthetic marker and BA chain only.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-002-corporate-CHECK-HIPAA:164.522",
+        "B": "TASK-SH-DAT-002-corporate-CHECK-HIPAA:164.522"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "CHECK-HIPAA:164.522",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Trace classification, contractual obligations, retention and lifecycle protection to actual datasets; inspect premature deletion and unauthorized retention risks.",
+      "bounded_fixture_nonoccurrence": "Selected payload-free fixture has no real PHI and no individual rights/authorization/regulator cases; this is scenario design, not enterprise nonoccurrence.",
+      "candidate_native_source_ids": [
+        "DS",
+        "PHI"
+      ],
+      "control_id": "SH-DAT-002",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C1",
+      "remaining_test_gate": "Trace classification, contractual obligations, retention and lifecycle protection to actual datasets; inspect premature deletion and unauthorized retention risks.",
+      "source_class": "SCOPED_FUTURE_NATIVE",
+      "source_limitation": "No actual PHI/BA applicability, processing population, legal purpose or delegated-rights duty accepted; one synthetic marker and BA chain only.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-002-corporate-CHECK-SOC2:C1.1",
+        "B": "TASK-SH-DAT-002-corporate-CHECK-SOC2:C1.1"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "CHECK-SOC2:C1.1",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Trace a transfer to purpose, recipient authorization, channel/endpoint protection and handling after receipt; transport encryption alone does not authorize the transfer.",
+      "bounded_fixture_nonoccurrence": "Selected payload-free fixture has no real PHI and no individual rights/authorization/regulator cases; this is scenario design, not enterprise nonoccurrence.",
+      "candidate_native_source_ids": [
+        "PHI"
+      ],
+      "control_id": "SH-DAT-002",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C1",
+      "remaining_test_gate": "Trace a transfer to purpose, recipient authorization, channel/endpoint protection and handling after receipt; transport encryption alone does not authorize the transfer.",
+      "source_class": "SCOPED_FUTURE_NATIVE",
+      "source_limitation": "No actual PHI/BA applicability, processing population, legal purpose or delegated-rights duty accepted; one synthetic marker and BA chain only.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-002-corporate-CHECK-SOC2:CC6.7",
+        "B": "TASK-SH-DAT-002-corporate-CHECK-SOC2:CC6.7"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "CHECK-SOC2:CC6.7",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "bounded_fixture_nonoccurrence": "Selected payload-free fixture has no real PHI and no individual rights/authorization/regulator cases; this is scenario design, not enterprise nonoccurrence.",
+      "candidate_native_source_ids": [
+        "PHI"
+      ],
+      "control_id": "SH-DAT-002",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C1",
+      "remaining_test_gate": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "source_class": "LOCAL_OR_FUTURE_NATIVE_NOT_DEPLOYMENT",
+      "source_limitation": "No actual PHI/BA applicability, processing population, legal purpose or delegated-rights duty accepted; one synthetic marker and BA chain only.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-002-corporate-IMPLEMENTATION",
+        "B": "TASK-SH-DAT-002-corporate-IMPLEMENTATION"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "bounded_fixture_nonoccurrence": "Selected payload-free fixture has no real PHI and no individual rights/authorization/regulator cases; this is scenario design, not enterprise nonoccurrence.",
+      "candidate_native_source_ids": [],
+      "control_id": "SH-DAT-002",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C1",
+      "remaining_test_gate": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "source_class": "DESIGN_REFERENCE_ONLY",
+      "source_limitation": "No actual PHI/BA applicability, processing population, legal purpose or delegated-rights duty accepted; one synthetic marker and BA chain only.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-002-corporate-TOD",
+        "B": "TASK-SH-DAT-002-corporate-TOD"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "bounded_fixture_nonoccurrence": "Selected payload-free fixture has no real PHI and no individual rights/authorization/regulator cases; this is scenario design, not enterprise nonoccurrence.",
+      "candidate_native_source_ids": [
+        "PHI"
+      ],
+      "control_id": "SH-DAT-002",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C1",
+      "remaining_test_gate": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "source_class": "SCOPED_FUTURE_NATIVE",
+      "source_limitation": "No actual PHI/BA applicability, processing population, legal purpose or delegated-rights duty accepted; one synthetic marker and BA chain only.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-002-corporate-TOE",
+        "B": "TASK-SH-DAT-002-corporate-TOE"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Recompute dates for superseded and currently effective policies and required activity records. Attempt premature disposition in a test workflow; verify denial and accessible superseded records.",
+      "bounded_fixture_nonoccurrence": "Selected flow defers real deletion; local disposal fixture has only its declared disposable copies.",
+      "candidate_native_source_ids": [
+        "DISP"
+      ],
+      "control_id": "SH-DAT-003",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C2",
+      "remaining_test_gate": "Recompute dates for superseded and currently effective policies and required activity records. Attempt premature disposition in a test workflow; verify denial and accessible superseded records.",
+      "source_class": "LOCAL_FIXTURE_NATIVE",
+      "source_limitation": "No approved record-class retention schedule, trigger/authority citations, backup/provider coverage or legal-hold release.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-003-corporate-ACTION-H-RETENTION",
+        "B": "TASK-SH-DAT-003-corporate-ACTION-H-RETENTION"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "ACTION-H-RETENTION",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Reconcile expiry and holds with deletion across active systems, backup lifecycle and providers; retain disposition verification and unresolved copies.",
+      "bounded_fixture_nonoccurrence": "Selected flow defers real deletion; local disposal fixture has only its declared disposable copies.",
+      "candidate_native_source_ids": [
+        "DISP"
+      ],
+      "control_id": "SH-DAT-003",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C2",
+      "remaining_test_gate": "Reconcile expiry and holds with deletion across active systems, backup lifecycle and providers; retain disposition verification and unresolved copies.",
+      "source_class": "LOCAL_FIXTURE_NATIVE",
+      "source_limitation": "No approved record-class retention schedule, trigger/authority citations, backup/provider coverage or legal-hold release.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-003-corporate-CHECK-SOC2:C1.2",
+        "B": "TASK-SH-DAT-003-corporate-CHECK-SOC2:C1.2"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "CHECK-SOC2:C1.2",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Trace retired media through custody, hold checks, sanitization method and verification before release; a disposal receipt alone does not prove unrecoverability.",
+      "bounded_fixture_nonoccurrence": "Selected flow defers real deletion; local disposal fixture has only its declared disposable copies.",
+      "candidate_native_source_ids": [],
+      "control_id": "SH-DAT-003",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C2",
+      "remaining_test_gate": "Trace retired media through custody, hold checks, sanitization method and verification before release; a disposal receipt alone does not prove unrecoverability.",
+      "source_class": "NO_MATCHING_NATIVE_ACTIVITY",
+      "source_limitation": "No approved record-class retention schedule, trigger/authority citations, backup/provider coverage or legal-hold release.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-003-corporate-CHECK-SOC2:CC6.5",
+        "B": "TASK-SH-DAT-003-corporate-CHECK-SOC2:CC6.5"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "CHECK-SOC2:CC6.5",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "bounded_fixture_nonoccurrence": "Selected flow defers real deletion; local disposal fixture has only its declared disposable copies.",
+      "candidate_native_source_ids": [
+        "DISP"
+      ],
+      "control_id": "SH-DAT-003",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C2",
+      "remaining_test_gate": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "source_class": "LOCAL_OR_FUTURE_NATIVE_NOT_DEPLOYMENT",
+      "source_limitation": "No approved record-class retention schedule, trigger/authority citations, backup/provider coverage or legal-hold release.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-003-corporate-IMPLEMENTATION",
+        "B": "TASK-SH-DAT-003-corporate-IMPLEMENTATION"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "bounded_fixture_nonoccurrence": "Selected flow defers real deletion; local disposal fixture has only its declared disposable copies.",
+      "candidate_native_source_ids": [],
+      "control_id": "SH-DAT-003",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C2",
+      "remaining_test_gate": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "source_class": "DESIGN_REFERENCE_ONLY",
+      "source_limitation": "No approved record-class retention schedule, trigger/authority citations, backup/provider coverage or legal-hold release.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-003-corporate-TOD",
+        "B": "TASK-SH-DAT-003-corporate-TOD"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "bounded_fixture_nonoccurrence": "Selected flow defers real deletion; local disposal fixture has only its declared disposable copies.",
+      "candidate_native_source_ids": [
+        "DISP"
+      ],
+      "control_id": "SH-DAT-003",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C2",
+      "remaining_test_gate": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "source_class": "LOCAL_FIXTURE_NATIVE",
+      "source_limitation": "No approved record-class retention schedule, trigger/authority citations, backup/provider coverage or legal-hold release.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-003-corporate-TOE",
+        "B": "TASK-SH-DAT-003-corporate-TOE"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Inject approved synthetic unauthorized alteration into a test copy and a transfer; verify detection and response. Distinguish business-data validity from protection against unauthorized alteration.",
+      "bounded_fixture_nonoccurrence": null,
+      "candidate_native_source_ids": [],
+      "control_id": "SH-DAT-004",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C3",
+      "remaining_test_gate": "Inject approved synthetic unauthorized alteration into a test copy and a transfer; verify detection and response. Distinguish business-data validity from protection against unauthorized alteration.",
+      "source_class": "NO_MATCHING_NATIVE_ACTIVITY",
+      "source_limitation": "Local nonpersonal validation/correction does not prove business accuracy or a transfer-integrity attack response across material data.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-004-corporate-ACTION-H-INTEGRITY",
+        "B": "TASK-SH-DAT-004-corporate-ACTION-H-INTEGRITY"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "ACTION-H-INTEGRITY",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "bounded_fixture_nonoccurrence": null,
+      "candidate_native_source_ids": [
+        "DQ"
+      ],
+      "control_id": "SH-DAT-004",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C3",
+      "remaining_test_gate": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "source_class": "LOCAL_OR_FUTURE_NATIVE_NOT_DEPLOYMENT",
+      "source_limitation": "Local nonpersonal validation/correction does not prove business accuracy or a transfer-integrity attack response across material data.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-004-corporate-IMPLEMENTATION",
+        "B": "TASK-SH-DAT-004-corporate-IMPLEMENTATION"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "bounded_fixture_nonoccurrence": null,
+      "candidate_native_source_ids": [],
+      "control_id": "SH-DAT-004",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C3",
+      "remaining_test_gate": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "source_class": "DESIGN_REFERENCE_ONLY",
+      "source_limitation": "Local nonpersonal validation/correction does not prove business accuracy or a transfer-integrity attack response across material data.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-004-corporate-TOD",
+        "B": "TASK-SH-DAT-004-corporate-TOD"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "bounded_fixture_nonoccurrence": null,
+      "candidate_native_source_ids": [
+        "DQ"
+      ],
+      "control_id": "SH-DAT-004",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C3",
+      "remaining_test_gate": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "source_class": "LOCAL_FIXTURE_NATIVE",
+      "source_limitation": "Local nonpersonal validation/correction does not prove business accuracy or a transfer-integrity attack response across material data.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-DAT-004-corporate-TOE",
+        "B": "TASK-SH-DAT-004-corporate-TOE"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "bounded_fixture_nonoccurrence": null,
+      "candidate_native_source_ids": [
+        "DQ",
+        "PHI",
+        "DS"
+      ],
+      "control_id": "SH-REC-001",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C3",
+      "remaining_test_gate": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "source_class": "LOCAL_OR_FUTURE_NATIVE_NOT_DEPLOYMENT",
+      "source_limitation": "Selected source events have actor/time/bytes, but no accepted complete material-record population or controlled enterprise repository.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-REC-001-corporate-IMPLEMENTATION",
+        "B": "TASK-SH-REC-001-corporate-IMPLEMENTATION"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "bounded_fixture_nonoccurrence": null,
+      "candidate_native_source_ids": [],
+      "control_id": "SH-REC-001",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C3",
+      "remaining_test_gate": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "source_class": "DESIGN_REFERENCE_ONLY",
+      "source_limitation": "Selected source events have actor/time/bytes, but no accepted complete material-record population or controlled enterprise repository.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-REC-001-corporate-TOD",
+        "B": "TASK-SH-REC-001-corporate-TOD"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "bounded_fixture_nonoccurrence": null,
+      "candidate_native_source_ids": [
+        "DQ",
+        "PHI",
+        "DS"
+      ],
+      "control_id": "SH-REC-001",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C3",
+      "remaining_test_gate": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "source_class": "SCOPED_FUTURE_NATIVE",
+      "source_limitation": "Selected source events have actor/time/bytes, but no accepted complete material-record population or controlled enterprise repository.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-REC-001-corporate-TOE",
+        "B": "TASK-SH-REC-001-corporate-TOE"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Select periods independently; reperform an activity query and inspect anomaly disposition and missing periods. Validate recording as well as actual examination.",
+      "bounded_fixture_nonoccurrence": null,
+      "candidate_native_source_ids": [
+        "LOG"
+      ],
+      "control_id": "SH-REC-002",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C3",
+      "remaining_test_gate": "Select periods independently; reperform an activity query and inspect anomaly disposition and missing periods. Validate recording as well as actual examination.",
+      "source_class": "LOCAL_FIXTURE_NATIVE",
+      "source_limitation": "Local extract/monitoring examples lack full independent period denominator, regulator case, complete activity-review population and accepted assurance extraction authority.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-REC-002-corporate-ACTION-H-ACTIVITY-REVIEW",
+        "B": "TASK-SH-REC-002-corporate-ACTION-H-ACTIVITY-REVIEW"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "ACTION-H-ACTIVITY-REVIEW",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Exercise a regulator request with inaccessible provider records and an urgent access scenario; inspect response authority and preservation without treating ordinary customer disclosure rules as a bar to lawful access.",
+      "bounded_fixture_nonoccurrence": null,
+      "candidate_native_source_ids": [],
+      "control_id": "SH-REC-002",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C3",
+      "remaining_test_gate": "Exercise a regulator request with inaccessible provider records and an urgent access scenario; inspect response authority and preservation without treating ordinary customer disclosure rules as a bar to lawful access.",
+      "source_class": "NO_MATCHING_NATIVE_ACTIVITY",
+      "source_limitation": "Local extract/monitoring examples lack full independent period denominator, regulator case, complete activity-review population and accepted assurance extraction authority.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-REC-002-corporate-ACTION-H-REGULATOR",
+        "B": "TASK-SH-REC-002-corporate-ACTION-H-REGULATOR"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "ACTION-H-REGULATOR",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Reconcile a control report to its originating system, transformation logic, excluded records and data-quality exceptions; count reconciliation alone does not establish accuracy.",
+      "bounded_fixture_nonoccurrence": null,
+      "candidate_native_source_ids": [
+        "DQ"
+      ],
+      "control_id": "SH-REC-002",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C3",
+      "remaining_test_gate": "Reconcile a control report to its originating system, transformation logic, excluded records and data-quality exceptions; count reconciliation alone does not establish accuracy.",
+      "source_class": "LOCAL_FIXTURE_NATIVE",
+      "source_limitation": "Local extract/monitoring examples lack full independent period denominator, regulator case, complete activity-review population and accepted assurance extraction authority.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-REC-002-corporate-CHECK-SOC2:CC2.1",
+        "B": "TASK-SH-REC-002-corporate-CHECK-SOC2:CC2.1"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "CHECK-SOC2:CC2.1",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "bounded_fixture_nonoccurrence": null,
+      "candidate_native_source_ids": [
+        "DQ"
+      ],
+      "control_id": "SH-REC-002",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C3",
+      "remaining_test_gate": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "source_class": "LOCAL_OR_FUTURE_NATIVE_NOT_DEPLOYMENT",
+      "source_limitation": "Local extract/monitoring examples lack full independent period denominator, regulator case, complete activity-review population and accepted assurance extraction authority.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-REC-002-corporate-IMPLEMENTATION",
+        "B": "TASK-SH-REC-002-corporate-IMPLEMENTATION"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "bounded_fixture_nonoccurrence": null,
+      "candidate_native_source_ids": [],
+      "control_id": "SH-REC-002",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C3",
+      "remaining_test_gate": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "source_class": "DESIGN_REFERENCE_ONLY",
+      "source_limitation": "Local extract/monitoring examples lack full independent period denominator, regulator case, complete activity-review population and accepted assurance extraction authority.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-REC-002-corporate-TOD",
+        "B": "TASK-SH-REC-002-corporate-TOD"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "bounded_fixture_nonoccurrence": null,
+      "candidate_native_source_ids": [
+        "DQ"
+      ],
+      "control_id": "SH-REC-002",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C3",
+      "remaining_test_gate": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "source_class": "LOCAL_FIXTURE_NATIVE",
+      "source_limitation": "Local extract/monitoring examples lack full independent period denominator, regulator case, complete activity-review population and accepted assurance extraction authority.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-REC-002-corporate-TOE",
+        "B": "TASK-SH-REC-002-corporate-TOE"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Reconcile a control report to its originating system, transformation logic, excluded records and data-quality exceptions; count reconciliation alone does not establish accuracy.",
+      "bounded_fixture_nonoccurrence": null,
+      "candidate_native_source_ids": [
+        "DQ"
+      ],
+      "control_id": "SH-REC-003",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C3",
+      "remaining_test_gate": "Reconcile a control report to its originating system, transformation logic, excluded records and data-quality exceptions; count reconciliation alone does not establish accuracy.",
+      "source_class": "LOCAL_FIXTURE_NATIVE",
+      "source_limitation": "Local raw/derived lineage exists; no enterprise-wide transformation population or independent assurance signoff.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-REC-003-corporate-CHECK-SOC2:CC2.1",
+        "B": "TASK-SH-REC-003-corporate-CHECK-SOC2:CC2.1"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "CHECK-SOC2:CC2.1",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "bounded_fixture_nonoccurrence": null,
+      "candidate_native_source_ids": [
+        "DQ"
+      ],
+      "control_id": "SH-REC-003",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C3",
+      "remaining_test_gate": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "source_class": "LOCAL_OR_FUTURE_NATIVE_NOT_DEPLOYMENT",
+      "source_limitation": "Local raw/derived lineage exists; no enterprise-wide transformation population or independent assurance signoff.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-REC-003-corporate-IMPLEMENTATION",
+        "B": "TASK-SH-REC-003-corporate-IMPLEMENTATION"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "bounded_fixture_nonoccurrence": null,
+      "candidate_native_source_ids": [],
+      "control_id": "SH-REC-003",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C3",
+      "remaining_test_gate": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "source_class": "DESIGN_REFERENCE_ONLY",
+      "source_limitation": "Local raw/derived lineage exists; no enterprise-wide transformation population or independent assurance signoff.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-REC-003-corporate-TOD",
+        "B": "TASK-SH-REC-003-corporate-TOD"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "bounded_fixture_nonoccurrence": null,
+      "candidate_native_source_ids": [
+        "DQ"
+      ],
+      "control_id": "SH-REC-003",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C3",
+      "remaining_test_gate": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "source_class": "LOCAL_FIXTURE_NATIVE",
+      "source_limitation": "Local raw/derived lineage exists; no enterprise-wide transformation population or independent assurance signoff.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-REC-003-corporate-TOE",
+        "B": "TASK-SH-REC-003-corporate-TOE"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Trace workstations, facility repairs and moved/reused equipment from independent populations to the applicable records; reperform retrieval of a required pre-movement copy.",
+      "bounded_fixture_nonoccurrence": "Local fixture has no physical-media movement or real provider deletion; enterprise absence is unproven.",
+      "candidate_native_source_ids": [],
+      "control_id": "SH-REC-004",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C2",
+      "remaining_test_gate": "Trace workstations, facility repairs and moved/reused equipment from independent populations to the applicable records; reperform retrieval of a required pre-movement copy.",
+      "source_class": "NO_MATCHING_NATIVE_ACTIVITY",
+      "source_limitation": "Fixture unlink/holds are local only; no approved legal retention, provider/backup inventory, physical-media sanitization or enterprise disposition authority.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-REC-004-corporate-ACTION-H-PHYSICAL-MOVEMENT",
+        "B": "TASK-SH-REC-004-corporate-ACTION-H-PHYSICAL-MOVEMENT"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "ACTION-H-PHYSICAL-MOVEMENT",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Recompute dates for superseded and currently effective policies and required activity records. Attempt premature disposition in a test workflow; verify denial and accessible superseded records.",
+      "bounded_fixture_nonoccurrence": "Local fixture has no physical-media movement or real provider deletion; enterprise absence is unproven.",
+      "candidate_native_source_ids": [
+        "DISP"
+      ],
+      "control_id": "SH-REC-004",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C2",
+      "remaining_test_gate": "Recompute dates for superseded and currently effective policies and required activity records. Attempt premature disposition in a test workflow; verify denial and accessible superseded records.",
+      "source_class": "LOCAL_FIXTURE_NATIVE",
+      "source_limitation": "Fixture unlink/holds are local only; no approved legal retention, provider/backup inventory, physical-media sanitization or enterprise disposition authority.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-REC-004-corporate-ACTION-H-RETENTION",
+        "B": "TASK-SH-REC-004-corporate-ACTION-H-RETENTION"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "ACTION-H-RETENTION",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Reconcile expiry and holds with deletion across active systems, backup lifecycle and providers; retain disposition verification and unresolved copies.",
+      "bounded_fixture_nonoccurrence": "Local fixture has no physical-media movement or real provider deletion; enterprise absence is unproven.",
+      "candidate_native_source_ids": [
+        "DISP"
+      ],
+      "control_id": "SH-REC-004",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C2",
+      "remaining_test_gate": "Reconcile expiry and holds with deletion across active systems, backup lifecycle and providers; retain disposition verification and unresolved copies.",
+      "source_class": "LOCAL_FIXTURE_NATIVE",
+      "source_limitation": "Fixture unlink/holds are local only; no approved legal retention, provider/backup inventory, physical-media sanitization or enterprise disposition authority.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-REC-004-corporate-CHECK-SOC2:C1.2",
+        "B": "TASK-SH-REC-004-corporate-CHECK-SOC2:C1.2"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "CHECK-SOC2:C1.2",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Trace retired media through custody, hold checks, sanitization method and verification before release; a disposal receipt alone does not prove unrecoverability.",
+      "bounded_fixture_nonoccurrence": "Local fixture has no physical-media movement or real provider deletion; enterprise absence is unproven.",
+      "candidate_native_source_ids": [],
+      "control_id": "SH-REC-004",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C2",
+      "remaining_test_gate": "Trace retired media through custody, hold checks, sanitization method and verification before release; a disposal receipt alone does not prove unrecoverability.",
+      "source_class": "NO_MATCHING_NATIVE_ACTIVITY",
+      "source_limitation": "Fixture unlink/holds are local only; no approved legal retention, provider/backup inventory, physical-media sanitization or enterprise disposition authority.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-REC-004-corporate-CHECK-SOC2:CC6.5",
+        "B": "TASK-SH-REC-004-corporate-CHECK-SOC2:CC6.5"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "CHECK-SOC2:CC6.5",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "bounded_fixture_nonoccurrence": "Local fixture has no physical-media movement or real provider deletion; enterprise absence is unproven.",
+      "candidate_native_source_ids": [
+        "DISP"
+      ],
+      "control_id": "SH-REC-004",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C2",
+      "remaining_test_gate": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "source_class": "LOCAL_OR_FUTURE_NATIVE_NOT_DEPLOYMENT",
+      "source_limitation": "Fixture unlink/holds are local only; no approved legal retention, provider/backup inventory, physical-media sanitization or enterprise disposition authority.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-REC-004-corporate-IMPLEMENTATION",
+        "B": "TASK-SH-REC-004-corporate-IMPLEMENTATION"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "bounded_fixture_nonoccurrence": "Local fixture has no physical-media movement or real provider deletion; enterprise absence is unproven.",
+      "candidate_native_source_ids": [],
+      "control_id": "SH-REC-004",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C2",
+      "remaining_test_gate": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "source_class": "DESIGN_REFERENCE_ONLY",
+      "source_limitation": "Fixture unlink/holds are local only; no approved legal retention, provider/backup inventory, physical-media sanitization or enterprise disposition authority.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-REC-004-corporate-TOD",
+        "B": "TASK-SH-REC-004-corporate-TOD"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "bounded_fixture_nonoccurrence": "Local fixture has no physical-media movement or real provider deletion; enterprise absence is unproven.",
+      "candidate_native_source_ids": [
+        "DISP"
+      ],
+      "control_id": "SH-REC-004",
+      "design_leads": [
+        "DOCUMENTS_359_DESIGN_ONLY",
+        "PROPOSED_CONTROL_PROCEDURES",
+        "FLOW"
+      ],
+      "enterprise_authorized_nonoccurrence": "NOT_ESTABLISHED",
+      "proposed_next_cohort": "C2",
+      "remaining_test_gate": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "source_class": "LOCAL_FIXTURE_NATIVE",
+      "source_limitation": "Fixture unlink/holds are local only; no approved legal retention, provider/backup inventory, physical-media sanitization or enterprise disposition authority.",
+      "task_conclusion_at_frozen_matrix": "NOT_RUN",
+      "task_ids": {
+        "A": "TASK-SH-REC-004-corporate-TOE",
+        "B": "TASK-SH-REC-004-corporate-TOE"
+      },
+      "task_status_at_frozen_matrix": "NOT_STARTED",
+      "task_suffix": "TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    }
+  ]
+}
