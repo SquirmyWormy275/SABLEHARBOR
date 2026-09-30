@@ -8,9 +8,11 @@ separate-inode** copies of each source database into a new private run; no
 reviewed company original is opened for grant or collection mutation.
 
 For each Clean/A and Messy/B route, the probe selects one exact native source
-version, confirms read denial before an exact principal/engagement/system grant
-on the disposable copy, then reads the original bytes and collects through the
-federated adapter. It rechecks physical company, branch, system, record,
+version as its expected test oracle, confirms source invisibility/read denial
+before an exact principal/engagement/system grant on the disposable copy,
+discovers the granted source system and record through the adapter, then reads
+the original bytes and collects through the federated adapter. It rechecks
+physical company, branch, system, record,
 version, SHA-256, and business event, availability and real import clocks.
 The run has 20 disposable collections total. Each cloned database has one
 grant, one access event and one collection; all reviewed original source

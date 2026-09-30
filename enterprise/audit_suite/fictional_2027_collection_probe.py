@@ -114,6 +114,11 @@ def run(repository: Path, private_repository: Path, destination: Path) -> dict:
             alias = component["namespace"] + ":" + ref["system"]
             if (ref["company"], ref["branch"]) != (component["company"], component["branch"]):
                 raise CandidateRegistryError("Selected native source route differs")
+            before_systems = federated.list_systems(
+                PRINCIPAL, ENGAGEMENT, "SABLEHARBOR", profile["profile_id"]
+            )
+            if alias in {row["system"] for row in before_systems["systems"]}:
+                raise CandidateRegistryError("Source alias visible before scoped grant")
             try:
                 federated.read_version(
                     PRINCIPAL,
@@ -132,6 +137,26 @@ def run(repository: Path, private_repository: Path, destination: Path) -> dict:
             CompanyStore(copied[source.key].parent).grant(
                 PRINCIPAL, ENGAGEMENT, ref["company"], ref["branch"], ref["system"]
             )
+            discovered_systems = federated.list_systems(
+                PRINCIPAL, ENGAGEMENT, "SABLEHARBOR", profile["profile_id"]
+            )
+            if alias not in {row["system"] for row in discovered_systems["systems"]}:
+                raise CandidateRegistryError("Granted source alias not discoverable")
+            discovered_records = federated.list_records(
+                PRINCIPAL,
+                ENGAGEMENT,
+                "SABLEHARBOR",
+                profile["profile_id"],
+                alias,
+                as_of=ref["available_at"],
+            )
+            if not any(
+                row["record"] == ref["record"]
+                and row["version"] == ref["version"]
+                and row["sha256"] == ref["sha256"]
+                for row in discovered_records["records"]
+            ):
+                raise CandidateRegistryError("Exact native record not discoverable")
             read = federated.read_version(
                 PRINCIPAL,
                 ENGAGEMENT,
@@ -199,6 +224,7 @@ def run(repository: Path, private_repository: Path, destination: Path) -> dict:
                         )
                     },
                     "pregrant_denied": pregrant_denied,
+                    "source_discovery_verified": True,
                     "read_original_sha256_verified": True,
                     "ordinary_collection_provenance_verified": True,
                     "disposable_access_counts": counts,
