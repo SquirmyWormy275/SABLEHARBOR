@@ -100,6 +100,11 @@ def test_candidate_copies_exact_rebased_source_and_fails_on_original_drift(
         )
         assert paths[side].stat().st_ino != (destination / side / "company.sqlite3").stat().st_ino
     assert candidate.verify(destination, repository=tmp_path, private_repository=tmp_path) == result
+    monkeypatch.chdir(tmp_path)
+    assert (
+        candidate.verify(Path("candidate"), repository=Path("."), private_repository=Path("."))
+        == result
+    )
     with sqlite3.connect(paths["A"]) as db:
         db.execute(
             "INSERT INTO access_events(principal,engagement,company,branch,system,active,"

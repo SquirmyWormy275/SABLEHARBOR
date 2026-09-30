@@ -307,6 +307,8 @@ def create(destination: Path, *, repository: Path, private_repository: Path) -> 
 
 def verify(destination: Path, *, repository: Path, private_repository: Path) -> dict:
     root = Path(destination).absolute()
+    repository = Path(repository).resolve(strict=True)
+    private_repository = Path(private_repository).resolve(strict=True)
     _private_dir(root)
     if {item.name for item in root.iterdir()} != {
         "A",
@@ -316,7 +318,7 @@ def verify(destination: Path, *, repository: Path, private_repository: Path) -> 
         "MANIFEST.json",
     }:
         raise CompanyStoreError("Exact REC003 snapshot candidate layout required")
-    lineage = _lineage(Path(repository), Path(private_repository))
+    lineage = _lineage(repository, private_repository)
     if _json(root / "ROUTES.json") != _route_template():
         raise CompanyStoreError("REC003 portable source locator differs")
     receipt = _json(root / "RECEIPT.json")
@@ -362,9 +364,7 @@ def verify(destination: Path, *, repository: Path, private_repository: Path) -> 
             raise CompanyStoreError("Exact REC003 snapshot DB required")
         snapshot = snapshot_dir / "company.sqlite3"
         _no_shared_extents(snapshot)
-        original = (
-            Path(private_repository) / rec003.DQ / "run-v1" / side.lower() / "company.sqlite3"
-        )
+        original = private_repository / rec003.DQ / "run-v1" / side.lower() / "company.sqlite3"
         source = _originals(original, side, lineage["branches"][side])
         copied = _originals(snapshot, side, lineage["branches"][side])
         row = receipt["sides"][side]
