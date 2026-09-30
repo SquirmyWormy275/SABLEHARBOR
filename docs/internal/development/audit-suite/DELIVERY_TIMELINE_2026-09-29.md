@@ -58,6 +58,20 @@ source. The other 19 have only partial fictional context. Qualified
 legal/applicability work and explicit limitations therefore remain a schedule
 dependency that additional source code alone cannot close.
 
+**Later September 29 source checkpoint:** The first ten independently reviewed
+fictional source cohorts contain 178 native versions and load only into a
+partial 23-component candidate registry. Independently reviewed selected
+contract-obligation, retention/hold-denial, nonpersonal integrity-chain,
+selected shared-runtime BCM and policy/exception cohorts add 78 versions, for
+15 cohorts and 256 versions outside the frozen audit pair. The retention,
+integrity and policy runs were regenerated and reviewed
+against main-local private source bytes. A disposable scoped-grant collection
+probe exercised 20 originals from the first ten cohorts without changing the
+active pair or granting task credit. These additions improve source realism,
+but do not close the 283 route procedures, legal/owner gates or full-period
+population tests. The week-10 complete-registry and later fresh-pair gates
+remain on the same calendar until a route-level reforecast is reviewed.
+
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
 2–16, 2027 (weeks 18–20) is the working target. March 16, 2027 (week 24) is
