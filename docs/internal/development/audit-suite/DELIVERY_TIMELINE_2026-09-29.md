@@ -63,10 +63,12 @@ partial candidate registry has 21 fictional source cohorts, 358 native
 versions, 35 components and 211 system aliases per side. The reviewed exact
 283-route reconciliation classifies 108 per side as partial native-source
 candidates, 54 as design-only and 121 as unsupported clauses; no task receives
-credit. The historical ten- and 15-source checkpoints remain preserved. A
-disposable scoped-grant collection probe exercised 20 originals from the
-first ten cohorts without changing the active pair or granting task credit;
-the expanded V3 collection boundary is under development. The new sources
+credit. The historical ten- and 15-source checkpoints remain preserved. An
+independently reviewed main-local disposable probe has now exercised all 22
+V3 scenario components per side: 44 selected originals were discovered, read
+and retained through scoped grants on 70 ordinary-byte copies, with original
+source journals and the active pair unchanged. That is a selected-version
+collection diagnostic, not a period population or task result. The new sources
 improve local realism, but do not close legal/owner gates, full-period
 populations or the 818 branch-task procedures. The week-10 complete-registry
 and later fresh-pair gates remain on the same calendar until a route-level
