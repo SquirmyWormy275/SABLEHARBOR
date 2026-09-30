@@ -17,7 +17,7 @@ from .company_store import CompanyStore, CompanyStoreError, _time
 from .operating_source_bridge import encoded, sha
 from .private_publication import publish
 
-SCHEMA = "SH_FICTIONAL_2027_SELECTED_INTERNAL_CUSTOMER_CASE_V1"
+SCHEMA = "SH_FICTIONAL_2027_SELECTED_INTERNAL_CUSTOMER_CASE_V2"
 COMPANY = "SABLE-HARBOR-REFERENCE"
 BRANCHES = {"CLEAN": "PRD-CLEAN", "MESSY": "PRD-MESSY"}
 CUSTOMER = "SIM-COVERED-CUSTOMER-01"
@@ -30,6 +30,13 @@ PRIVATE_ROOT = "enterprise/generated/audit-suite"
 TRANSITION = PRIVATE_ROOT + "/company-runtime-transition-2026-09-29/run-v3"
 PHI = PRIVATE_ROOT + "/company-phi-ba-2027-simulation-2026-09-29"
 PROVIDER = PRIVATE_ROOT + "/company-provider-lifecycle-2026-09-29"
+ROUTE_AUTHORITY = {
+    "matrix_path": PRIVATE_ROOT + "/documentary-discovery-routes-2026-09-29/run-v2/MATRIX.json",
+    "matrix_sha256": "e9477d2074bebce185e412a3ee7c424ded395c1a1128a7c918a94f6acbd1e327",
+    "review_path": PRIVATE_ROOT
+    + "/documentary-discovery-routes-2026-09-29/independent-review-v2/REVIEW.json",
+    "review_sha256": "c4064f6217c0e7f69276adc71004d6da7971867ccf3d844a3e198145cec31ace",
+}
 SOURCE_PINS = {
     "docs/internal/development/audit-suite/FICTIONAL_2027_SCENARIO_DECISIONS_2026-09-29.md": (
         "15198cd0bcc1de1c8872d4310ff7f1eef8fc89a5250d24af15f4ec19f8e78496"
@@ -102,6 +109,10 @@ LIMITS = [
     "All three authored external-communication clauses remain unsupported; no task credit.",
     "No active P1 grant, collection, task, workpaper, Key or Atlas mutation.",
 ]
+AUTHORED_COMMUNICATION_CLAUSE = (
+    "Trace a changed service responsibility and an external concern through receipt, "
+    "response and the appropriate audience. Test contact accuracy and incomplete recipient lists."
+)
 
 
 def _digest(path: Path) -> str:
@@ -143,6 +154,117 @@ def _frozen(paths: dict[str, Path]) -> dict[str, tuple]:
             _digest(path),
         )
     return result
+
+
+def _validate_route_family(matrix: dict) -> dict:
+    if (
+        matrix.get("counts", {}).get("controls_per_side") != 43
+        or matrix.get("counts", {}).get("tasks_per_side") != 283
+    ):
+        raise CompanyStoreError("Reviewed route denominator differs")
+    selected = {}
+    for side in "AB":
+        families = [
+            family
+            for family in matrix["sides"][side]["families"]
+            if family["family"] == "product_customer_commitments"
+        ]
+        if len(families) != 1:
+            raise CompanyStoreError("Selected product route family differs")
+        controls = families[0]["controls"]
+        if {control["control_id"] for control in controls} != {
+            "SH-PRD-002",
+            "SH-PRD-003",
+            "SH-PRD-004",
+        }:
+            raise CompanyStoreError("Selected product controls differ")
+        rows = {
+            task["task_id"]: (control["control_id"], task)
+            for control in controls
+            for task in control["tasks"]
+        }
+        if len(rows) != 12 or set(rows) != set(GENERIC_ROUTE_IDS + UNSUPPORTED_AUTHORED_ROUTE_IDS):
+            raise CompanyStoreError("Exact twelve selected product task IDs differ")
+        for task_id, (control_id, task) in rows.items():
+            authored = task_id in UNSUPPORTED_AUTHORED_ROUTE_IDS
+            expected_type = "ADDITIONAL_DUTY" if authored else task_id.rsplit("-", 1)[1]
+            if (
+                not task_id.startswith(f"TASK-{control_id}-corporate-")
+                or task["procedure_type"] != expected_type
+                or task["authored_test_clause"]
+                != (AUTHORED_COMMUNICATION_CLAUSE if authored else None)
+                or task["requirement_ids"] != (["SOC2:CC2.2", "SOC2:CC2.3"] if authored else [])
+                or (authored and task["remaining_test_gate"] != AUTHORED_COMMUNICATION_CLAUSE)
+                or task["test_gate_basis"]
+                != (
+                    "AUTHORED_TASK_CLAUSE"
+                    if authored
+                    else "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+                )
+                or task["current_status"] != "NOT_STARTED"
+                or task["current_conclusion"] != "NOT_RUN"
+                or task["task_credit"] is not False
+            ):
+                raise CompanyStoreError("Selected product task clause/status/credit differs")
+        selected[side] = {
+            "task_count": 12,
+            "authored_clause_count": 3,
+            "inferred_gate_count": 9,
+            "task_ids": sorted(rows),
+            "selected_task_rows_sha256": sha(
+                encoded({key: value[1] for key, value in sorted(rows.items())})
+            ),
+        }
+    if selected["A"] != selected["B"]:
+        raise CompanyStoreError("Paired selected product route authority diverged")
+    return selected
+
+
+def _route_context(private_repository: Path) -> dict:
+    paths = {
+        "matrix": private_repository / ROUTE_AUTHORITY["matrix_path"],
+        "review": private_repository / ROUTE_AUTHORITY["review_path"],
+    }
+    before = {}
+    for name, path in paths.items():
+        _private(path, directory=False)
+        info = path.stat()
+        before[name] = (
+            info.st_dev,
+            info.st_ino,
+            stat.S_IMODE(info.st_mode),
+            info.st_size,
+            info.st_mtime_ns,
+            _digest(path),
+        )
+    if (
+        before["matrix"][-1] != ROUTE_AUTHORITY["matrix_sha256"]
+        or before["review"][-1] != ROUTE_AUTHORITY["review_sha256"]
+    ):
+        raise CompanyStoreError("Reviewed route matrix/review byte pin differs")
+    matrix = json.loads(paths["matrix"].read_text())
+    review = json.loads(paths["review"].read_text())
+    if (
+        review.get("verdict") != "PASS_READ_ONLY_CANDIDATE_MATRIX_FOR_INTEGRATION"
+        or review.get("matrix_sha256") != ROUTE_AUTHORITY["matrix_sha256"]
+        or review.get("audit_task_credit") is not False
+        or review.get("active_P1_mutated") is not False
+    ):
+        raise CompanyStoreError("Reviewed route authority differs")
+    selected = _validate_route_family(matrix)
+    for name, path in paths.items():
+        info = path.stat()
+        after = (
+            info.st_dev,
+            info.st_ino,
+            stat.S_IMODE(info.st_mode),
+            info.st_size,
+            info.st_mtime_ns,
+            _digest(path),
+        )
+        if after != before[name]:
+            raise CompanyStoreError("Reviewed route authority changed during read")
+    return selected
 
 
 def _native(private_repository: Path, key: str) -> dict:
@@ -249,6 +371,7 @@ def _native(private_repository: Path, key: str) -> dict:
 def _context(repository: Path, private_repository: Path) -> dict:
     repository = Path(repository).resolve(strict=True)
     private_repository = Path(private_repository).resolve(strict=True)
+    selected_routes = _route_context(private_repository)
     for name, expected in SOURCE_PINS.items():
         path = repository / name
         if path.is_symlink() or not path.is_file() or _digest(path) != expected:
@@ -318,6 +441,7 @@ def _context(repository: Path, private_repository: Path) -> dict:
         "provider": lifecycle,
         "terms_sha256": sha(encoded(terms)),
         "role_nodes": nodes,
+        "selected_routes": selected_routes,
     }
 
 
@@ -637,6 +761,7 @@ def create(destination: Path, *, repository: Path, private_repository: Path) -> 
                         "scenario": scenario,
                         "source_pins": SOURCE_PINS,
                         "upstream_pins": UPSTREAM,
+                        "route_authority_pins": ROUTE_AUTHORITY,
                         "qualification": "FUTURE_FICTIONAL_INTERNAL_CASE_NO_AUDIT_CREDIT",
                     },
                 )
@@ -650,6 +775,8 @@ def create(destination: Path, *, repository: Path, private_repository: Path) -> 
             "records": records,
             "source_pins": SOURCE_PINS,
             "upstream_pins": UPSTREAM,
+            "route_authority_pins": ROUTE_AUTHORITY,
+            "selected_route_authority": context["selected_routes"],
             "selected_customer_count_per_branch": 1,
             "selected_change_count_per_branch": 1,
             "internal_concern_counts": {"CLEAN": 0, "MESSY": 1},
@@ -700,6 +827,8 @@ def verify(destination: Path, *, repository: Path, private_repository: Path) -> 
         or receipt.get("branches") != BRANCHES
         or receipt.get("source_pins") != SOURCE_PINS
         or receipt.get("upstream_pins") != UPSTREAM
+        or receipt.get("route_authority_pins") != ROUTE_AUTHORITY
+        or receipt.get("selected_route_authority") != context["selected_routes"]
         or receipt.get("selected_customer_count_per_branch") != 1
         or receipt.get("selected_change_count_per_branch") != 1
         or receipt.get("internal_concern_counts") != {"CLEAN": 0, "MESSY": 1}
@@ -745,6 +874,7 @@ def verify(destination: Path, *, repository: Path, private_repository: Path) -> 
                 "scenario": scenario,
                 "source_pins": SOURCE_PINS,
                 "upstream_pins": UPSTREAM,
+                "route_authority_pins": ROUTE_AUTHORITY,
                 "qualification": "FUTURE_FICTIONAL_INTERNAL_CASE_NO_AUDIT_CREDIT",
             }
             for ref, item in zip(refs, expected, strict=True):

@@ -39,6 +39,9 @@ def test_selected_internal_case_and_original_messy_omission(sealed):
         f"TASK-{control}-corporate-ACTION-S-COMMUNICATION"
         for control in ("SH-PRD-002", "SH-PRD-003", "SH-PRD-004")
     }
+    assert receipt["selected_route_authority"]["A"] == receipt["selected_route_authority"]["B"]
+    assert receipt["selected_route_authority"]["A"]["authored_clause_count"] == 3
+    assert receipt["selected_route_authority"]["A"]["inferred_gate_count"] == 9
     assert receipt["audit_task_credit"] is False
     with sqlite3.connect(sealed / "company.sqlite3") as db:
         rows = [
@@ -101,3 +104,23 @@ def test_canon_pin_drift_fails_before_source_generation(monkeypatch):
     monkeypatch.setattr(prd, "SOURCE_PINS", altered)
     with pytest.raises(CompanyStoreError, match="Canon/role/term source pin"):
         prd._context(REPOSITORY, PRIVATE)
+
+
+def test_frozen_route_status_credit_and_authored_clause_drift_rejected():
+    matrix_path = PRIVATE / prd.ROUTE_AUTHORITY["matrix_path"]
+    matrix = json.loads(matrix_path.read_text())
+    assert prd._validate_route_family(matrix)["A"]["task_count"] == 12
+    for field, value in (
+        ("current_status", "COMPLETE"),
+        ("task_credit", True),
+        ("authored_test_clause", "weaker substitute clause"),
+    ):
+        altered = copy.deepcopy(matrix)
+        family = next(
+            family
+            for family in altered["sides"]["A"]["families"]
+            if family["family"] == "product_customer_commitments"
+        )
+        family["controls"][0]["tasks"][0][field] = value
+        with pytest.raises(CompanyStoreError, match="clause/status/credit"):
+            prd._validate_route_family(altered)
