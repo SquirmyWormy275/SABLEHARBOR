@@ -931,6 +931,23 @@ run/review copied as matching ordinary bytes with separate inodes and zero
 shared extents reported; three focused tests, Ruff and native verification
 passed here.
 
+The [fictional one-marker processing-purpose source](../../../../enterprise/audit_suite/PROCESSING_PURPOSE_2027_PROPOSAL.md)
+passed [independent V2 review](../../../../enterprise/generated/audit-suite/company-processing-purpose-2027-simulation-2026-09-29/independent-review-v2/REVIEW.json)
+(SHA-256 `d768b1fa01d7e2a1b56326c5a0ba14df61564d7e4cc9ccee208f0996b4f050f1`).
+Eight native rows trace a payload-free marker purpose request and decision.
+Clean matches the synthetic customer contract purpose but leaves execution
+pending data-owner classification and enforcement. Messy refuses and
+quarantines an AI-training reuse request before any copy, disclosure or
+transfer, retaining a distinct open purpose exception. Only request rows
+carry direct upstream native tuples; later rows inherit through
+predecessor-SHA links. V1's `CHANGES_REQUIRED` review for overstated direct
+links remains preserved. The private V1 run and both reviews were copied as
+matching ordinary bytes with separate inodes and zero shared extents
+reported; three focused tests, Ruff and final-code native verification
+passed here. The 16 SH-DAT-002 routes per side remain uncredited; this one
+case does not establish actual HIPAA applicability, rights responses or a
+complete processing population.
+
 The queue's job `state`, acceptance criteria and attributed checkpoints must be read
 together. Historical `*_scope_update` entries record what was authorized at the time;
 their `QUEUED_NOT_STARTED` labels do not reset later job progress. Conversely, a
