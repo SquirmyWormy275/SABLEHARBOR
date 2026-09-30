@@ -17,7 +17,7 @@ from .company_store import CompanyStore, CompanyStoreError, _time
 from .operating_source_bridge import encoded, sha
 from .private_publication import publish
 
-SCHEMA = "SH_FICTIONAL_2027_SEC005_SELECTED_OPERATIONS_V1"
+SCHEMA = "SH_FICTIONAL_2027_SEC005_SELECTED_OPERATIONS_V2"
 COMPANY = "SABLE-HARBOR-REFERENCE"
 BRANCHES = {"CLEAN": "SEC005-OPERATED-CLEAN", "MESSY": "SEC005-OPERATED-MESSY"}
 SPEC = "enterprise/audit_suite/sec005_operated_2027_spec_v1.json"
@@ -95,6 +95,8 @@ LIMITS = [
     "AS-P contacts are proposed; selected managed nodes establish no real device title.",
     "Probes are deterministic data-only evaluations; no socket, packet, executable, secret or PHI.",
     "October/November snapshots do not establish full-year monitoring or task sufficiency.",
+    "AS-P008's November fresh-source recheck is self-review of AS-P008's October false pass; "
+    "no independent assurance is claimed.",
     "No actual deployment, external communication, audit task credit, P1/Key/Atlas mutation.",
 ]
 
@@ -658,11 +660,18 @@ def _rows(context: dict, scenario: str) -> list[dict]:
     )
     emit(
         "security_reconciliation",
-        "INDEPENDENT-NOV-01",
+        "SECURITY-RECHECK-NOV-01",
         "2027-11-05T10:00:00+00:00",
         "AS-P008",
         {
-            "action": "INDEPENDENT_SELECTED_POPULATION_AND_SOURCE_REPERFORMANCE",
+            "action": "FRESH_NATIVE_SOURCE_SECURITY_RECHECK_WITH_SELF_REVIEW_LIMIT",
+            "reviewer_id": "AS-P008",
+            "october_reviewer_id": "AS-P008",
+            "same_reviewer_as_october": True,
+            "distinct_from_collector_operator": True,
+            "independent_of_own_prior_review": False,
+            "independent_assurance_performed": False,
+            "october_review_record_id": "RECON-OCT-01",
             "selected_asset_ids": selected_assets,
             "selected_interface_ids": selected_interfaces,
             "actual_october_publisher_ids": list(oct_probes),
@@ -688,7 +697,7 @@ def _rows(context: dict, scenario: str) -> list[dict]:
                 "status": "OPEN_HISTORICAL_CAUSE_AND_MONITORING_GAP",
                 "separate_source_from_local_symbolic_exercise": True,
             },
-            ("INDEPENDENT-NOV-01", "RECON-OCT-01"),
+            ("SECURITY-RECHECK-NOV-01", "RECON-OCT-01"),
         )
         emit(
             "security_approval",
@@ -743,7 +752,7 @@ def _rows(context: dict, scenario: str) -> list[dict]:
             "decision": evaluate_boundary(baseline, "IF-BOI-EGRESS", intent),
             "effect": "NO_NETWORK_IO",
         },
-        (config_record, "INDEPENDENT-NOV-01"),
+        (config_record, "SECURITY-RECHECK-NOV-01"),
     )
     emit(
         "security_probe",
@@ -757,7 +766,7 @@ def _rows(context: dict, scenario: str) -> list[dict]:
             "decision": evaluate_endpoint(selected_assets, "SIM-BOI-OPS-01"),
             "effect": "NO_EXECUTABLE_BYTES_INSTALL_OR_RUN",
         },
-        (coverage_record, "INDEPENDENT-NOV-01"),
+        (coverage_record, "SECURITY-RECHECK-NOV-01"),
     )
     emit(
         "security_monitor",
@@ -789,7 +798,7 @@ def _rows(context: dict, scenario: str) -> list[dict]:
             "historical_october_false_pass_retained": messy,
             "full_year_or_enterprise_population_claim": False,
         },
-        ("MONITOR-NOV-01", "INDEPENDENT-NOV-01"),
+        ("MONITOR-NOV-01", "SECURITY-RECHECK-NOV-01"),
     )
     return rows
 
@@ -823,7 +832,7 @@ def create(
     private_repository: Path,
     transition_root: Path,
 ) -> dict:
-    """Create one independent private CompanyStore; no audit access or real I/O."""
+    """Create one separate private CompanyStore; no audit access or real I/O."""
     destination = Path(destination).absolute()
     _private(destination.parent, directory=True)
     if destination.exists() or destination.is_symlink() or destination != destination.resolve():
@@ -875,6 +884,9 @@ def create(
             "native_version_counts": {side: len(refs) for side, refs in records.items()},
             "open_exception_counts": {"CLEAN": 0, "MESSY": 1},
             "open_exception_ids": {"CLEAN": [], "MESSY": ["EXC-SEC005-Q4-01"]},
+            "november_review_independence": (
+                "FRESH_NATIVE_SOURCE_AS_P008_SELF_REVIEW_NO_INDEPENDENT_ASSURANCE"
+            ),
             "october_original_probe_counts": {"CLEAN": 4, "MESSY": 4},
             "october_collected_probe_counts": {"CLEAN": 4, "MESSY": 2},
             "network_packets_sent": 0,
@@ -915,6 +927,12 @@ def verify(
         "db": root / "company.sqlite3",
     }
     before = _frozen(paths)
+    if {path.name for path in root.iterdir()} != {
+        "MANIFEST.json",
+        "RECEIPT.json",
+        "company.sqlite3",
+    }:
+        raise CompanyStoreError("Exact private SEC-005 three-file source required")
     manifest = json.loads(paths["manifest"].read_text())
     receipt = json.loads(paths["receipt"].read_text())
     context = _context(repository, private_repository, transition_root)
@@ -946,6 +964,8 @@ def verify(
         or receipt.get("native_version_counts") != expected_counts
         or receipt.get("open_exception_counts") != {"CLEAN": 0, "MESSY": 1}
         or receipt.get("open_exception_ids") != {"CLEAN": [], "MESSY": ["EXC-SEC005-Q4-01"]}
+        or receipt.get("november_review_independence")
+        != "FRESH_NATIVE_SOURCE_AS_P008_SELF_REVIEW_NO_INDEPENDENT_ASSURANCE"
         or receipt.get("october_original_probe_counts") != {"CLEAN": 4, "MESSY": 4}
         or receipt.get("october_collected_probe_counts") != {"CLEAN": 4, "MESSY": 2}
         or receipt.get("network_packets_sent") != 0

@@ -36,7 +36,7 @@ only when the approved baseline is available on September 6 at 10:01 UTC.
 | October 3–4 | No drift | An unapproved Boise egress rule admits one unauthorized intent; Boise admin endpoint loses policy-agent heartbeat |
 | October 5 data-only probes | Approved service intent would pass; unauthorized egress and remote admin denied; inert unapproved executable manifest denied | Egress would be allowed by drifted rule but sends zero packets; endpoint has no policy decision coverage but creates/runs zero executable bytes |
 | October 6–7 monitoring/reconciliation | Four probe records collected, four selected assets and six interfaces reconciled | Collector omits the two adverse probe records; original four remain in the native publisher. Reconciliation records a pass on incomplete 3/4-asset and 5/6-interface inputs; the original false pass is retained |
-| November 5 | Independent selected-population reperformer finds no gap | Independent reperformer detects both October gaps and opens one historical exception `EXC-SEC005-Q4-01` |
+| November 5 | AS-P008 performs a fresh-native-source selected-population recheck and finds no gap | AS-P008 rechecks the native publisher and selected inventory, detects both October gaps, and opens one historical exception `EXC-SEC005-Q4-01`. AS-P008 also made the October false pass, so this is self-review, not independent assurance |
 | November 6–10 | Negative reprobes and selected reconciliation remain clean | Distinct Security approval precedes rule and agent correction; negative reprobes deny after correction, but the historical cause/monitoring exception remains open |
 
 These are future fictional company operations in a separate `CompanyStore`,
@@ -48,6 +48,11 @@ unapproved-executable manifest is **not** an executable test on a physical
 endpoint. The September–November selected footprint and two monitoring
 snapshots do not establish continuous full-year operation or a representative
 enterprise population.
+The November recheck uses source bytes separate from AS-P007's October
+collection. Its AS-P008 reviewer is the same person who approved the baseline
+and recorded the October incomplete pass. That limitation remains explicit;
+no independent assurance or independent review of AS-P008's own prior work is
+claimed.
 
 The independently reviewed V3 route ledger has five SH-SEC-005 tasks per
 audit side. Its two authored CC6.6/CC6.8 clauses remain unsupported there;

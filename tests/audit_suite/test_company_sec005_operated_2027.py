@@ -44,6 +44,9 @@ def test_exact_company_native_population_clocks_and_limits(tmp_path):
     assert len(receipt["selected_asset_ids"]) == 4
     assert len(receipt["selected_logical_interface_ids"]) == 6
     assert receipt["open_exception_counts"] == {"CLEAN": 0, "MESSY": 1}
+    assert receipt["november_review_independence"] == (
+        "FRESH_NATIVE_SOURCE_AS_P008_SELF_REVIEW_NO_INDEPENDENT_ASSURANCE"
+    )
     assert receipt["network_packets_sent"] == receipt["executables_created_or_run"] == 0
     assert receipt["full_year_or_enterprise_population_complete"] is False
     assert receipt["authored_sec005_clause_satisfied"] is False
@@ -92,12 +95,17 @@ def test_exact_company_native_population_clocks_and_limits(tmp_path):
     assert messy["RECON-OCT-01"]["reviewed_native_selected_inventory"] is False
     assert len(messy["RECON-OCT-01"]["reviewed_asset_ids"]) == 3
     assert len(messy["RECON-OCT-01"]["reviewed_interface_ids"]) == 5
-    assert messy["INDEPENDENT-NOV-01"]["late_missing_publisher_ids"] == [
+    assert messy["SECURITY-RECHECK-NOV-01"]["late_missing_publisher_ids"] == [
         "OCT-UNAPPROVED-EXEC-01",
         "OCT-UNAUTHORIZED-EGRESS-01",
     ]
     assert messy["RECON-OCT-01"]["recorded_result"] == "RECORDED_PASS_ON_INCOMPLETE_INPUTS"
-    assert messy["INDEPENDENT-NOV-01"]["finding_count"] == 2
+    assert messy["SECURITY-RECHECK-NOV-01"]["finding_count"] == 2
+    assert messy["SECURITY-RECHECK-NOV-01"]["reviewer_id"] == "AS-P008"
+    assert messy["SECURITY-RECHECK-NOV-01"]["october_reviewer_id"] == "AS-P008"
+    assert messy["SECURITY-RECHECK-NOV-01"]["same_reviewer_as_october"] is True
+    assert messy["SECURITY-RECHECK-NOV-01"]["independent_of_own_prior_review"] is False
+    assert messy["SECURITY-RECHECK-NOV-01"]["independent_assurance_performed"] is False
     assert messy["EXC-SEC005-Q4-01"]["status"] == ("OPEN_HISTORICAL_CAUSE_AND_MONITORING_GAP")
     assert messy["APPROVE-CORRECTION-01"]["event_at"] < messy["CORRECT-BOI-EGRESS-01"]["event_at"]
     assert messy["RECON-NOV-01"]["historical_exception_open"] is True
@@ -129,6 +137,20 @@ def test_dangling_native_sidecar_fails_closed(tmp_path):
     root = _created(tmp_path)
     (root / "company.sqlite3-shm").symlink_to(root / "missing-target")
     with pytest.raises(CompanyStoreError, match="sidecar"):
+        source.verify(
+            root,
+            repository=REPOSITORY,
+            private_repository=PRIVATE_REPOSITORY,
+            transition_root=TRANSITION,
+        )
+
+
+def test_unreviewed_private_attachment_fails_closed(tmp_path):
+    root = _created(tmp_path)
+    extra = root / "unreviewed.txt"
+    extra.write_text("unreviewed attachment")
+    extra.chmod(0o600)
+    with pytest.raises(CompanyStoreError, match="three-file"):
         source.verify(
             root,
             repository=REPOSITORY,
