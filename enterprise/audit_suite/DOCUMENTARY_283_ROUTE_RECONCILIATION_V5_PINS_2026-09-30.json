@@ -1,0 +1,179 @@
+{
+  "as_of": "2026-09-30",
+  "base_commit": "32a024cb",
+  "inputs": {
+    "ass001002_db": {
+      "path": "enterprise/generated/audit-suite/company-ass-owner-monitor-2026-09-29/main-run-v1/company.sqlite3",
+      "scope": "private",
+      "sha256": "cf50ddd8c698656ac638810c325b608a11eeb68b338810134105b3528c8865c6"
+    },
+    "ass001002_manifest": {
+      "path": "enterprise/generated/audit-suite/company-ass-owner-monitor-2026-09-29/main-run-v1/MANIFEST.json",
+      "scope": "private",
+      "sha256": "716051f60ccb453cccab9dd6e0549026a803c0c908b0927be56df4222bd492a0"
+    },
+    "ass001002_receipt": {
+      "path": "enterprise/generated/audit-suite/company-ass-owner-monitor-2026-09-29/main-run-v1/RECEIPT.json",
+      "scope": "private",
+      "sha256": "d1181cd5a4130ecf21ccd863d1f565f966c384193331edc7b969bc34f23767d2"
+    },
+    "ass001002_review": {
+      "path": "enterprise/generated/audit-suite/company-ass-owner-monitor-2026-09-29/independent-review-main-v1/REVIEW.json",
+      "scope": "private",
+      "sha256": "eb47e363e5eaa8538ff3a9a41e98df1098f63cc46e854fdc8c7cc3af43851878"
+    },
+    "gov_appetite_db": {
+      "path": "enterprise/generated/audit-suite/company-gov-appetite-2026-09-30/main-run-v1/company.sqlite3",
+      "scope": "private",
+      "sha256": "b925f9bb3bc955fe0bcc107ac5ae5612b7a44227bd350fbe5d076b4480eb09d7"
+    },
+    "gov_appetite_manifest": {
+      "path": "enterprise/generated/audit-suite/company-gov-appetite-2026-09-30/main-run-v1/MANIFEST.json",
+      "scope": "private",
+      "sha256": "31c78f79bc0a533758ed7778c6c5a43d2256c5705ec425f26fd73e7d6623ce39"
+    },
+    "gov_appetite_receipt": {
+      "path": "enterprise/generated/audit-suite/company-gov-appetite-2026-09-30/main-run-v1/RECEIPT.json",
+      "scope": "private",
+      "sha256": "0b4d879e0536c404de2492bfa0b4388cc6e7f330c230764c4486766f247d54f1"
+    },
+    "gov_appetite_review": {
+      "path": "enterprise/generated/audit-suite/company-gov-appetite-2026-09-30/independent-review-main-v1/REVIEW.json",
+      "scope": "private",
+      "sha256": "293ff3ba7d368398d22a5008204173a9b22ed0d78686e00d7ad6b692f30a7c0e"
+    },
+    "rec003_db_a": {
+      "path": "enterprise/generated/audit-suite/company-rec003-native-snapshot-2026-09-29/main-run-v2/A/company.sqlite3",
+      "scope": "private",
+      "sha256": "9b5489db2643b728fd8df846fd07af6928d6607958bd3857c46b6c9720e980ab"
+    },
+    "rec003_db_b": {
+      "path": "enterprise/generated/audit-suite/company-rec003-native-snapshot-2026-09-29/main-run-v2/B/company.sqlite3",
+      "scope": "private",
+      "sha256": "14af2e579591f0460eb3fe7c549d4c5b12ad3ac0548599de7f7ca5d3d30def12"
+    },
+    "rec003_manifest": {
+      "path": "enterprise/generated/audit-suite/company-rec003-native-snapshot-2026-09-29/main-run-v2/MANIFEST.json",
+      "scope": "private",
+      "sha256": "941226221a728f56af223c29efd87124755aa766fe81b65f855d0dbfc32b3eb4"
+    },
+    "rec003_receipt": {
+      "path": "enterprise/generated/audit-suite/company-rec003-native-snapshot-2026-09-29/main-run-v2/RECEIPT.json",
+      "scope": "private",
+      "sha256": "06e7b6c09d6fdb5e43a8dd7b7e5be16be925c2d9d9b205cbd26a6f090f5614de"
+    },
+    "rec003_review": {
+      "path": "enterprise/generated/audit-suite/company-rec003-native-snapshot-2026-09-29/independent-review-main-v2/REVIEW.json",
+      "scope": "private",
+      "sha256": "010824ecc65c7be45fcffbc3cf22004c1dd4553c90d476e7c630a7a7cdd10eff"
+    },
+    "rec003_routes": {
+      "path": "enterprise/generated/audit-suite/company-rec003-native-snapshot-2026-09-29/main-run-v2/ROUTES.json",
+      "scope": "private",
+      "sha256": "90ec9d0a5db6a09ef830cd42ddb22ac1606608f1f8ae9ae93b137314add6b9de"
+    },
+    "sec005_operated_db": {
+      "path": "enterprise/generated/audit-suite/company-sec005-operated-2026-09-30/main-run-v1/company.sqlite3",
+      "scope": "private",
+      "sha256": "4c258e73de8084b20c65fcad24a96e7f0e3fbb771de431c6e079fc6500d7fd1f"
+    },
+    "sec005_operated_manifest": {
+      "path": "enterprise/generated/audit-suite/company-sec005-operated-2026-09-30/main-run-v1/MANIFEST.json",
+      "scope": "private",
+      "sha256": "37b170a7e6688d1bbab4022ff8a239eb3b2e5c44fff76af381a9872c0b84aa32"
+    },
+    "sec005_operated_receipt": {
+      "path": "enterprise/generated/audit-suite/company-sec005-operated-2026-09-30/main-run-v1/RECEIPT.json",
+      "scope": "private",
+      "sha256": "157495f5e98d9475f2c88b01954b6e192049183105fe35475350c20885681968"
+    },
+    "sec005_operated_review": {
+      "path": "enterprise/generated/audit-suite/company-sec005-operated-2026-09-30/independent-review-main-v2/REVIEW.json",
+      "scope": "private",
+      "sha256": "4c163ff06dda410b05a83a45f0135d9b3a80e8fd38801704df481d999b2772b6"
+    },
+    "sec005_symbolic_db": {
+      "path": "enterprise/generated/audit-suite/company-sec005-local-boundary-2026-09-29/main-run-v1/company.sqlite3",
+      "scope": "private",
+      "sha256": "b5b94ecd07f1c59faa815170b68a1a6fb59a06ac35c6188a2862370d355b5106"
+    },
+    "sec005_symbolic_manifest": {
+      "path": "enterprise/generated/audit-suite/company-sec005-local-boundary-2026-09-29/main-run-v1/MANIFEST.json",
+      "scope": "private",
+      "sha256": "6216b0308a94512868e8900c5812fc4f6821243b8fe92772fe09fdc08feb45cc"
+    },
+    "sec005_symbolic_receipt": {
+      "path": "enterprise/generated/audit-suite/company-sec005-local-boundary-2026-09-29/main-run-v1/RECEIPT.json",
+      "scope": "private",
+      "sha256": "b0e99ea38f78064adf040ff38416a01c65a08dbe1d707e437f2c9e91d5190658"
+    },
+    "sec005_symbolic_review": {
+      "path": "enterprise/generated/audit-suite/company-sec005-local-boundary-2026-09-29/independent-review-main-v1/REVIEW.json",
+      "scope": "private",
+      "sha256": "d1b1b455ce14d057b8cfe184448f8bb04ff5f4ae238bda888ad820899f97740a"
+    },
+    "v3_ledger": {
+      "path": "enterprise/audit_suite/DOCUMENTARY_283_ROUTE_RECONCILIATION_V3_2026-09-29.json",
+      "scope": "repo",
+      "sha256": "f7549eca0957a92d442cfabb385ae9eed4509fada804a3dfea5d371cfbbf4d33"
+    },
+    "v3_review": {
+      "path": "enterprise/generated/audit-suite/documentary-283-route-reconciliation-v3-2026-09-29/independent-review-v1/REVIEW.json",
+      "scope": "private",
+      "sha256": "b671d3547670b5de9c7f714d51e44b6d2e65b02502dac752464b9f36d7ca1603"
+    },
+    "v4_report": {
+      "path": "enterprise/generated/audit-suite/company-source-portfolio-v4-2026-09-30/main-run-v1/REPORT.json",
+      "scope": "private",
+      "sha256": "fa8474dfe68370b1fda382b03615c15a11d644edbbcd6b988f7c283b7f1221c4"
+    },
+    "v4_review": {
+      "path": "enterprise/generated/audit-suite/company-source-portfolio-v4-2026-09-30/independent-review-main-v1/REVIEW.json",
+      "scope": "private",
+      "sha256": "804e7c58ee437d4b7f2e87106c1e893cc155c2c0043e07b7205d4204d1a81264"
+    }
+  },
+  "limits": [
+    "Read-only future-fictional source-search classification, never task credit.",
+    "REC003 snapshots preserve existing A/B business bytes and inherited audit journals are excluded.",
+    "Symbolic and selected-operated SEC005 are distinct source cohorts but share five route identities per side."
+  ],
+  "schema": "SH_DOCUMENTARY_283_ROUTE_RECONCILIATION_V5_PINS_V1",
+  "sources": {
+    "ass001002": {
+      "folder": "company-ass-owner-monitor-2026-09-29",
+      "native_versions": 8,
+      "review": "independent-review-main-v1/REVIEW.json",
+      "run": "main-run-v1",
+      "verdict": "PASS_SELECTED_LOCAL_MANAGEMENT_SOURCE_SAME_ROOT_NO_AUDIT_CREDIT"
+    },
+    "gov_appetite": {
+      "folder": "company-gov-appetite-2026-09-30",
+      "native_versions": 34,
+      "review": "independent-review-main-v1/REVIEW.json",
+      "run": "main-run-v1",
+      "verdict": "PASS_FICTIONAL_SELECTED_GOVERNANCE_MAIN_LOCAL_NO_AUDIT_CREDIT"
+    },
+    "rec003": {
+      "folder": "company-rec003-native-snapshot-2026-09-29",
+      "native_versions": 22,
+      "review": "independent-review-main-v2/REVIEW.json",
+      "run": "main-run-v2",
+      "verdict": "PASS_QUALIFIED_LOCAL_SOURCE_SNAPSHOT_CANDIDATE_NO_CREDIT"
+    },
+    "sec005_operated": {
+      "folder": "company-sec005-operated-2026-09-30",
+      "native_versions": 40,
+      "review": "independent-review-main-v2/REVIEW.json",
+      "run": "main-run-v1",
+      "verdict": "PASS_SELECTED_FICTIONAL_COMPANY_SOURCE_MAIN_LOCAL_NO_AUDIT_CREDIT"
+    },
+    "sec005_symbolic": {
+      "folder": "company-sec005-local-boundary-2026-09-29",
+      "native_versions": 13,
+      "review": "independent-review-main-v1/REVIEW.json",
+      "run": "main-run-v1",
+      "verdict": "PASS_FICTIONAL_LOCAL_BOUNDARY_TRACE_NO_CREDIT"
+    }
+  }
+}
