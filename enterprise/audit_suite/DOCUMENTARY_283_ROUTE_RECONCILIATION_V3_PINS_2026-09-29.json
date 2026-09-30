@@ -1,0 +1,139 @@
+{
+  "as_of": "2026-09-29",
+  "base_commit": "1642a8e34574e96573b2db49826c550361af4879",
+  "inputs": {
+    "eng005_receipt": {
+      "path": "enterprise/generated/audit-suite/company-emergency-change-2027-simulation-2026-09-29/run-v1/SOURCE_RECEIPT.json",
+      "scope": "private",
+      "sha256": "efa67bb2cf9934a62e91ea51b109e61f2954bbb8b83ef84e2c5f1e6f344d78d9"
+    },
+    "eng005_report": {
+      "path": "enterprise/generated/audit-suite/company-emergency-change-verifier-2026-09-29/run-v2/REPORT.json",
+      "scope": "private",
+      "sha256": "eb46f9fae56ed5818a650b35924cddc4723fc07dae908420a0732256776d24a6"
+    },
+    "eng005_review": {
+      "path": "enterprise/generated/audit-suite/company-emergency-change-verifier-2026-09-29/independent-review-v2/REVIEW.json",
+      "scope": "private",
+      "sha256": "3719b01d86d4bd3451e712ba209342abe4da354454476e5cb6e2000629cf78ce"
+    },
+    "eth003_receipt": {
+      "path": "enterprise/generated/audit-suite/company-eth003-speakup-2026-09-29/run-v1/SOURCE_RECEIPT.json",
+      "scope": "private",
+      "sha256": "0695f0d1da9a943570007ebfa79158b1879ac43267b5bc1b612ed13b5cd6e8e5"
+    },
+    "eth003_review": {
+      "path": "enterprise/generated/audit-suite/company-eth003-speakup-2026-09-29/independent-review-v1/REVIEW.json",
+      "scope": "private",
+      "sha256": "1dcf8b57b9e665bc496b03659ad37e50de9b81c40be43478425290fc8362046d"
+    },
+    "eth004_receipt": {
+      "path": "enterprise/generated/audit-suite/company-eth004-conflict-2026-09-29/run-v1/SOURCE_RECEIPT.json",
+      "scope": "private",
+      "sha256": "77551779dca444c96a8cdd9430559897aef700fc1233b68de78afa2c6f2d2179"
+    },
+    "eth004_review": {
+      "path": "enterprise/generated/audit-suite/company-eth004-conflict-2026-09-29/independent-review-v1/REVIEW.json",
+      "scope": "private",
+      "sha256": "82d6f7007fccb77f2808069f3b97bf4ebfa4e001cc8cb7f838775ca0b4c97604"
+    },
+    "iam005_receipt": {
+      "path": "enterprise/generated/audit-suite/company-iam005-local-trace-2026-09-29/run-v1/RECEIPT.json",
+      "scope": "private",
+      "sha256": "9d4365455ef3b0964fbe1e03999a75f5ca16053c990c63590cddb9c8dedd1536"
+    },
+    "iam005_review": {
+      "path": "enterprise/generated/audit-suite/company-iam005-local-trace-2026-09-29/independent-review-v1/REVIEW.json",
+      "scope": "private",
+      "sha256": "3c7a90b412743fec9b6d6fd8a291358a3a4d672386a3237e60c197d57e55547f"
+    },
+    "portfolio_report": {
+      "path": "enterprise/generated/audit-suite/company-source-portfolio-v3-2026-09-29/run-v1/REPORT.json",
+      "scope": "private",
+      "sha256": "e868e937815350bc5d975d76c6cd00528e1931bdcdc40e8b408f06d1ceaa3ed3"
+    },
+    "portfolio_review": {
+      "path": "enterprise/generated/audit-suite/company-source-portfolio-v3-2026-09-29/independent-review-v1/REVIEW.json",
+      "scope": "private",
+      "sha256": "19a182c9c79f6a128cbd6e2840bab7adc953e8a76c58392988e88cdca9ffe704"
+    },
+    "portfolio_v2_report": {
+      "path": "enterprise/generated/audit-suite/company-source-portfolio-v2-2026-09-29/run-v1/REPORT.json",
+      "scope": "private",
+      "sha256": "80ef78ff0368577269c7bba96683d76377000e09d32c14c60e5904cc9d24472f"
+    },
+    "portfolio_v2_review": {
+      "path": "enterprise/generated/audit-suite/company-source-portfolio-v2-2026-09-29/independent-review-v1/REVIEW.json",
+      "scope": "private",
+      "sha256": "c0af1a38bce0942f220c375fa0681b238b9915dcd9d8c3588e4b161895f05738"
+    },
+    "ppl002_receipt": {
+      "path": "enterprise/generated/audit-suite/company-ppl002-screening-gate-2026-09-29/run-v1/SOURCE_RECEIPT.json",
+      "scope": "private",
+      "sha256": "21e65ed9b762cc0ff71b4733fe9feae874da2d15b89f5f9e584e265370a4bb80"
+    },
+    "ppl002_review": {
+      "path": "enterprise/generated/audit-suite/company-ppl002-screening-gate-2026-09-29/independent-review-v1/REVIEW.json",
+      "scope": "private",
+      "sha256": "1d3ad3fd6ca61c5a31f18c601e1f21c18eea4c37efafc58f8e77425f55a8e8b0"
+    },
+    "prd_receipt": {
+      "path": "enterprise/generated/audit-suite/company-prd-internal-customer-2026-09-29/run-v2/RECEIPT.json",
+      "scope": "private",
+      "sha256": "81b5a7f15636f824c6c48c449c726c1176d95c4ce7e70105b813730dc2b17842"
+    },
+    "prd_review": {
+      "path": "enterprise/generated/audit-suite/company-prd-internal-customer-2026-09-29/independent-review-v2/REVIEW.json",
+      "scope": "private",
+      "sha256": "5f5289ec43d7644f4e623ca7dbf13896f807f351d5488461dc5ba257119f9122"
+    },
+    "v2_ledger": {
+      "path": "enterprise/audit_suite/DOCUMENTARY_283_ROUTE_RECONCILIATION_2026-09-29.json",
+      "scope": "repo",
+      "sha256": "b93cb95ae320a1d374398102d095de98fe2d70bf92a814e3293a1cfeaeedf0d3"
+    },
+    "v2_review": {
+      "path": "enterprise/generated/audit-suite/documentary-283-route-reconciliation-2026-09-29/independent-review-v2/REVIEW.json",
+      "scope": "private",
+      "sha256": "ff9bec647c97a0b889574b5d56e57b7268e40abe0caf0d96e168554d89b6798a"
+    }
+  },
+  "limits": [
+    "Selected source receipts and independent PASS reviews are exact-byte pins; no task credit.",
+    "2027 event placement is fictional and future as of the packet date."
+  ],
+  "new_sources": {
+    "eng005": {
+      "portfolio_key": "eng005",
+      "review_join_field": "run_sha256/REPORT.json",
+      "reviewed_input": "eng005_report"
+    },
+    "eth003": {
+      "portfolio_key": "eth003",
+      "review_join_field": "source_sha256/SOURCE_RECEIPT.json",
+      "reviewed_input": "eth003_receipt"
+    },
+    "eth004": {
+      "portfolio_key": "eth004",
+      "review_join_field": "run_sha256/SOURCE_RECEIPT.json",
+      "reviewed_input": "eth004_receipt"
+    },
+    "iam005": {
+      "portfolio_key": "iam005",
+      "review_join_field": "run_sha256/RECEIPT.json",
+      "reviewed_input": "iam005_receipt"
+    },
+    "ppl002": {
+      "portfolio_key": "ppl002",
+      "review_join_field": "source_sha256/SOURCE_RECEIPT.json",
+      "reviewed_input": "ppl002_receipt"
+    },
+    "prd": {
+      "portfolio_key": "prd",
+      "review_join_field": "receipt_sha256",
+      "reviewed_input": "prd_receipt"
+    }
+  },
+  "portfolio_review_join_field": "portfolio_report_sha256",
+  "schema": "SH_DOCUMENTARY_283_ROUTE_RECONCILIATION_V3_PINS_V1"
+}
