@@ -1,0 +1,596 @@
+{
+  "as_of": "2026-09-29",
+  "authority_discrepancy": "The control ownership proposal maps BCM to AS-P004, while dated canon appoints AS-P004 as Corporate Secretary. This is not accepted service-owner, technical continuity or BIA approval authority. Obtain a fictional-world service owner and accountable BCM delegation before treating a BIA or exercise approval as authorized.",
+  "controls": [
+    {
+      "authority_gate": "AS-P004 is canonical Corporate Secretary and only a proposed BCM coordination contact; business service-owner acceptance and technical/continuity authority are not established.",
+      "control_id": "SH-BCM-001",
+      "description": "Business impact analyses identify critical processes, dependencies, recovery priorities, and tolerable interruption.",
+      "proposed_owner_ids": [
+        "AS-P004"
+      ],
+      "route_count": 5,
+      "side": "A",
+      "source_context": "TRANSITION_V3_SELECTED_CONTRACT_CAPACITY_ONLY"
+    },
+    {
+      "authority_gate": "AS-P004 is canonical Corporate Secretary and only a proposed BCM coordination contact; business service-owner acceptance and technical/continuity authority are not established.",
+      "control_id": "SH-BCM-004",
+      "description": "Continuity/DR exercises are performed and findings tracked to closure.",
+      "proposed_owner_ids": [
+        "AS-P004"
+      ],
+      "route_count": 6,
+      "side": "A",
+      "source_context": "TRANSITION_V3_SELECTED_RECOVERY_EXERCISE_ONLY"
+    },
+    {
+      "authority_gate": "AS-P004 is canonical Corporate Secretary and only a proposed BCM coordination contact; business service-owner acceptance and technical/continuity authority are not established.",
+      "control_id": "SH-BCM-001",
+      "description": "Business impact analyses identify critical processes, dependencies, recovery priorities, and tolerable interruption.",
+      "proposed_owner_ids": [
+        "AS-P004"
+      ],
+      "route_count": 5,
+      "side": "B",
+      "source_context": "TRANSITION_V3_SELECTED_CONTRACT_CAPACITY_ONLY"
+    },
+    {
+      "authority_gate": "AS-P004 is canonical Corporate Secretary and only a proposed BCM coordination contact; business service-owner acceptance and technical/continuity authority are not established.",
+      "control_id": "SH-BCM-004",
+      "description": "Continuity/DR exercises are performed and findings tracked to closure.",
+      "proposed_owner_ids": [
+        "AS-P004"
+      ],
+      "route_count": 6,
+      "side": "B",
+      "source_context": "TRANSITION_V3_SELECTED_RECOVERY_EXERCISE_ONLY"
+    }
+  ],
+  "counts": {
+    "audit_task_credit": 0,
+    "controls_per_side": 2,
+    "paired_routes_total": 22,
+    "reviewed_transition_selected_versions_clean": 5,
+    "reviewed_transition_selected_versions_messy": 7,
+    "routes_per_side": 11
+  },
+  "inputs": {
+    "appointments": {
+      "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+      "sha256": "1707ed7021576048ca5f1904ca5e94d484e8f7e2992da5c9e04965421f79a751"
+    },
+    "control_procedures": {
+      "path": "enterprise/ccf/assurance/design_data/control_procedures.json",
+      "sha256": "258f5c868e16f3dc197594857dc86a4f2b3ef11e3e5a36dd0a80a9fc6d40c679"
+    },
+    "frozen_task_screen": {
+      "path": "enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-all409-task-source-screen-v3/TASK-ROWS.json",
+      "sha256": "a0f995228683bde4663e1232380622fe208a225d71152cfb5aaf3cb0620f98ba"
+    },
+    "matrix_review": {
+      "path": "enterprise/generated/audit-suite/documentary-discovery-routes-2026-09-29/independent-review-v2/REVIEW.json",
+      "sha256": "c4064f6217c0e7f69276adc71004d6da7971867ccf3d844a3e198145cec31ace"
+    },
+    "organization_mapping": {
+      "path": "enterprise/audit_suite/organization.py",
+      "sha256": "1e822632917f739b40c1bd064aac49b633dc643b5930ef74dbc19887bec729d4"
+    },
+    "reviewed_283_matrix": {
+      "path": "enterprise/generated/audit-suite/documentary-discovery-routes-2026-09-29/run-v2/MATRIX.json",
+      "sha256": "e9477d2074bebce185e412a3ee7c424ded395c1a1128a7c918a94f6acbd1e327"
+    },
+    "transition_database": {
+      "path": "enterprise/generated/audit-suite/company-runtime-transition-2026-09-29/run-v3/company.sqlite3",
+      "sha256": "428b5c740cb8fc627b38f2aa6847e450fd166e62be52a6309d4f5a7b284988fd"
+    },
+    "transition_manifest": {
+      "path": "enterprise/generated/audit-suite/company-runtime-transition-2026-09-29/run-v3/MANIFEST.json",
+      "sha256": "f7c6ec3ab460f204f69cf6b50df66399687034b3b63cb38aaee84841daedcbd4"
+    },
+    "transition_receipt": {
+      "path": "enterprise/generated/audit-suite/company-runtime-transition-2026-09-29/run-v3/RECEIPT.json",
+      "sha256": "0a0a448f619e490870f69959d196eb6d5ca3747af0d4fb68056195910ce6cc11"
+    },
+    "transition_review": {
+      "path": "enterprise/generated/audit-suite/company-runtime-transition-2026-09-29/independent-review-v3/REVIEW.json",
+      "sha256": "f1acaeaea963055f99b0de120fd1b0347ee984edf085d353e7af1e427234d5a9"
+    }
+  },
+  "limits": [
+    "A/B denote frozen audit sides; Clean/Messy denote fictional company histories and are not retroactively bound.",
+    "Future 2027 events are authored scenario time; imported_at is real 2026 insertion time.",
+    "No real operating service, ePHI processing, provider contract, management assertion, audit collection or task credit."
+  ],
+  "missing_activity": [
+    "No accepted critical-service/dependency population, BIA, tolerable interruption, RTO/RPO or recovery priority.",
+    "No peak/expected demand forecast and capacity/action threshold comparison; synthetic contracted kW is capacity context only.",
+    "No authorized 2027 emergency-mode ePHI access/replay test; selected payload-free marker cannot prove necessary ePHI access.",
+    "One bounded Boise fixture recovery is not annual/full-population DR, accepted objectives, supplier/customer participation, return-to-service or validated finding closure.",
+    "Messy Boise key-bypass exception remains open after local technical retry; no residual-risk acceptance or issue closure."
+  ],
+  "native_transition_context": {
+    "CLEAN": [
+      {
+        "available_at": "2027-02-15T10:00:00.000000+00:00",
+        "branch": "TRANS-CLEAN",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "event_at": "2027-02-15T10:00:00.000000+00:00",
+        "imported_at": "2026-09-29T23:56:50.436536+00:00",
+        "record": "C-RENO",
+        "sha256": "2922fb73ffd7ddf7898c7023ebfa4da1c5cb727b2a273591366fb565800297a3",
+        "source_status": "EXECUTED_SIMULATED",
+        "system": "provider_contract",
+        "version": 1
+      },
+      {
+        "available_at": "2027-03-05T10:00:00.000000+00:00",
+        "branch": "TRANS-CLEAN",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "event_at": "2027-03-05T10:00:00.000000+00:00",
+        "imported_at": "2026-09-29T23:56:50.457944+00:00",
+        "record": "C-BOISE",
+        "sha256": "cbb85a03997f9e2555600e35d9feb662324438a5cdbb63221172a8e95114d672",
+        "source_status": "EXECUTED_SIMULATED",
+        "system": "provider_contract",
+        "version": 1
+      },
+      {
+        "available_at": "2027-05-08T12:00:00.000000+00:00",
+        "branch": "TRANS-CLEAN",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "event_at": "2027-05-08T12:00:00.000000+00:00",
+        "imported_at": "2026-09-29T23:56:50.464160+00:00",
+        "record": "CM-RENO",
+        "sha256": "c42fd29d27a44c69574d6a7bf4ef0a1ce7448ff7b51e6ae6c117c847a7069c51",
+        "source_status": "PASS",
+        "system": "site_commissioning",
+        "version": 1
+      },
+      {
+        "available_at": "2027-07-12T12:00:00.000000+00:00",
+        "branch": "TRANS-CLEAN",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "event_at": "2027-07-12T12:00:00.000000+00:00",
+        "imported_at": "2026-09-29T23:56:50.473173+00:00",
+        "record": "CM-BOISE",
+        "sha256": "d53c690ad8ab95d3b405b918ded386fdde1e1ec7c8223cea4f58886df14c7fd9",
+        "source_status": "PASS",
+        "system": "site_commissioning",
+        "version": 1
+      },
+      {
+        "available_at": "2027-07-21T10:00:00.000000+00:00",
+        "branch": "TRANS-CLEAN",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "event_at": "2027-07-21T10:00:00.000000+00:00",
+        "imported_at": "2026-09-29T23:56:50.476255+00:00",
+        "record": "RX-BOISE",
+        "sha256": "4fd16254961e4255b0642f075157a960419571c51ceee2c43ba3fc24eb4ae12b",
+        "source_status": "PASS",
+        "system": "recovery_exercise",
+        "version": 1
+      }
+    ],
+    "MESSY": [
+      {
+        "available_at": "2027-02-15T10:00:00.000000+00:00",
+        "branch": "TRANS-MESSY",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "event_at": "2027-02-15T10:00:00.000000+00:00",
+        "imported_at": "2026-09-29T23:56:50.534874+00:00",
+        "record": "C-RENO",
+        "sha256": "166d044c931a7b5218614ca98741e3b3019cd744ee5ce755090ecab3d01ca996",
+        "source_status": "EXECUTED_SIMULATED",
+        "system": "provider_contract",
+        "version": 1
+      },
+      {
+        "available_at": "2027-03-05T10:00:00.000000+00:00",
+        "branch": "TRANS-MESSY",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "event_at": "2027-03-05T10:00:00.000000+00:00",
+        "imported_at": "2026-09-29T23:56:50.558308+00:00",
+        "record": "C-BOISE",
+        "sha256": "1cc64316149b0048d2c3562cf13a48550a5b3ba1db0abc422c20440138660e1f",
+        "source_status": "EXECUTED_SIMULATED",
+        "system": "provider_contract",
+        "version": 1
+      },
+      {
+        "available_at": "2027-05-08T12:00:00.000000+00:00",
+        "branch": "TRANS-MESSY",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "event_at": "2027-05-08T12:00:00.000000+00:00",
+        "imported_at": "2026-09-29T23:56:50.564731+00:00",
+        "record": "CM-RENO",
+        "sha256": "9b0661b12e70334b662680d9165cd7a08fbaecaf879e1a6ba413d822eb41c097",
+        "source_status": "PASS",
+        "system": "site_commissioning",
+        "version": 1
+      },
+      {
+        "available_at": "2027-07-12T12:00:00.000000+00:00",
+        "branch": "TRANS-MESSY",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "event_at": "2027-07-12T12:00:00.000000+00:00",
+        "imported_at": "2026-09-29T23:56:50.574641+00:00",
+        "record": "CM-BOISE",
+        "sha256": "5b5dca80a9e28afbe37b7a94f675681699c18b70fcea6b959dfbbd80cd1eaa12",
+        "source_status": "HOLD_KEY_DEPENDENCY",
+        "system": "site_commissioning",
+        "version": 1
+      },
+      {
+        "available_at": "2027-07-20T11:00:00.000000+00:00",
+        "branch": "TRANS-MESSY",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "event_at": "2027-07-20T10:00:00.000000+00:00",
+        "imported_at": "2026-09-29T23:56:50.580852+00:00",
+        "record": "RX-BOISE",
+        "sha256": "948be350479414b961529c970447dd7bea62029d64e71d2b6d5685e6ff8ce5d2",
+        "source_status": "FAIL_KEY_DEPENDENCY",
+        "system": "recovery_exercise",
+        "version": 1
+      },
+      {
+        "available_at": "2027-08-02T12:00:00.000000+00:00",
+        "branch": "TRANS-MESSY",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "event_at": "2027-08-02T12:00:00.000000+00:00",
+        "imported_at": "2026-09-29T23:56:50.587550+00:00",
+        "record": "CM-BOISE",
+        "sha256": "7b392c6905ab8605a5f0576d5c53362dc41aebbf9cd34057549bdf7433ebc037",
+        "source_status": "PASS_AFTER_CORRECTION",
+        "system": "site_commissioning",
+        "version": 2
+      },
+      {
+        "available_at": "2027-08-05T10:00:00.000000+00:00",
+        "branch": "TRANS-MESSY",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "event_at": "2027-08-05T10:00:00.000000+00:00",
+        "imported_at": "2026-09-29T23:56:50.591460+00:00",
+        "record": "RX-BOISE",
+        "sha256": "446e27b03704122c7d2bda042c6689d52e773fadb661c51741648654024b0175",
+        "source_status": "PASS_AFTER_RETRY",
+        "system": "recovery_exercise",
+        "version": 2
+      }
+    ]
+  },
+  "routes": [
+    {
+      "authored_test_clause": "Compare peak and expected demand with primary and recovery capacity and action thresholds; a BIA without utilization/forecast records is insufficient.",
+      "control_id": "SH-BCM-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "remaining_test_gate": "Compare peak and expected demand with primary and recovery capacity and action thresholds; a BIA without utilization/forecast records is insufficient.",
+      "requirement_ids": [
+        "SOC2:A1.1"
+      ],
+      "side": "A",
+      "task_credit": false,
+      "task_id": "TASK-SH-BCM-001-corporate-CHECK-SOC2:A1.1",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE",
+      "transition_context_source": "SELECTED_CONTRACT_CAPACITY"
+    },
+    {
+      "authored_test_clause": "Trace a dependency failure to continuity treatment, recovery resources and accepted residual risk; insurance is a possible treatment, not a universal mandated purchase.",
+      "control_id": "SH-BCM-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "remaining_test_gate": "Trace a dependency failure to continuity treatment, recovery resources and accepted residual risk; insurance is a possible treatment, not a universal mandated purchase.",
+      "requirement_ids": [
+        "SOC2:CC9.1"
+      ],
+      "side": "A",
+      "task_credit": false,
+      "task_id": "TASK-SH-BCM-001-corporate-CHECK-SOC2:CC9.1",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE",
+      "transition_context_source": "SELECTED_CONTRACT_CAPACITY"
+    },
+    {
+      "authored_test_clause": null,
+      "control_id": "SH-BCM-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "procedure_type": "IMPLEMENTATION",
+      "remaining_test_gate": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "requirement_ids": [],
+      "side": "A",
+      "task_credit": false,
+      "task_id": "TASK-SH-BCM-001-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE",
+      "transition_context_source": "SELECTED_CONTRACT_CAPACITY"
+    },
+    {
+      "authored_test_clause": null,
+      "control_id": "SH-BCM-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "procedure_type": "TOD",
+      "remaining_test_gate": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "requirement_ids": [],
+      "side": "A",
+      "task_credit": false,
+      "task_id": "TASK-SH-BCM-001-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE",
+      "transition_context_source": "SELECTED_CONTRACT_CAPACITY"
+    },
+    {
+      "authored_test_clause": null,
+      "control_id": "SH-BCM-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "procedure_type": "TOE",
+      "remaining_test_gate": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "requirement_ids": [],
+      "side": "A",
+      "task_credit": false,
+      "task_id": "TASK-SH-BCM-001-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE",
+      "transition_context_source": "SELECTED_CONTRACT_CAPACITY"
+    },
+    {
+      "authored_test_clause": "Observe an approved emergency-mode exercise; verify necessary ePHI remains accessible to authorized operators and access decisions and activity survive recovery.",
+      "control_id": "SH-BCM-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "remaining_test_gate": "Observe an approved emergency-mode exercise; verify necessary ePHI remains accessible to authorized operators and access decisions and activity survive recovery.",
+      "requirement_ids": [
+        "HIPAA:164.308",
+        "HIPAA:164.312"
+      ],
+      "side": "A",
+      "task_credit": false,
+      "task_id": "TASK-SH-BCM-004-corporate-ACTION-H-EMERGENCY",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE",
+      "transition_context_source": "SELECTED_RECOVERY_HISTORY"
+    },
+    {
+      "authored_test_clause": "Reperform restore and failover outcomes against accepted RTO/RPO and data usability; include deviations, corrective actions and retests.",
+      "control_id": "SH-BCM-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "remaining_test_gate": "Reperform restore and failover outcomes against accepted RTO/RPO and data usability; include deviations, corrective actions and retests.",
+      "requirement_ids": [
+        "SOC2:A1.3"
+      ],
+      "side": "A",
+      "task_credit": false,
+      "task_id": "TASK-SH-BCM-004-corporate-CHECK-SOC2:A1.3",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE",
+      "transition_context_source": "SELECTED_RECOVERY_HISTORY"
+    },
+    {
+      "authored_test_clause": "Trace a dependency failure to continuity treatment, recovery resources and accepted residual risk; insurance is a possible treatment, not a universal mandated purchase.",
+      "control_id": "SH-BCM-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "remaining_test_gate": "Trace a dependency failure to continuity treatment, recovery resources and accepted residual risk; insurance is a possible treatment, not a universal mandated purchase.",
+      "requirement_ids": [
+        "SOC2:CC9.1"
+      ],
+      "side": "A",
+      "task_credit": false,
+      "task_id": "TASK-SH-BCM-004-corporate-CHECK-SOC2:CC9.1",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE",
+      "transition_context_source": "SELECTED_RECOVERY_HISTORY"
+    },
+    {
+      "authored_test_clause": null,
+      "control_id": "SH-BCM-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "procedure_type": "IMPLEMENTATION",
+      "remaining_test_gate": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "requirement_ids": [],
+      "side": "A",
+      "task_credit": false,
+      "task_id": "TASK-SH-BCM-004-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE",
+      "transition_context_source": "SELECTED_RECOVERY_HISTORY"
+    },
+    {
+      "authored_test_clause": null,
+      "control_id": "SH-BCM-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "procedure_type": "TOD",
+      "remaining_test_gate": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "requirement_ids": [],
+      "side": "A",
+      "task_credit": false,
+      "task_id": "TASK-SH-BCM-004-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE",
+      "transition_context_source": "SELECTED_RECOVERY_HISTORY"
+    },
+    {
+      "authored_test_clause": null,
+      "control_id": "SH-BCM-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "procedure_type": "TOE",
+      "remaining_test_gate": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "requirement_ids": [],
+      "side": "A",
+      "task_credit": false,
+      "task_id": "TASK-SH-BCM-004-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE",
+      "transition_context_source": "SELECTED_RECOVERY_HISTORY"
+    },
+    {
+      "authored_test_clause": "Compare peak and expected demand with primary and recovery capacity and action thresholds; a BIA without utilization/forecast records is insufficient.",
+      "control_id": "SH-BCM-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "remaining_test_gate": "Compare peak and expected demand with primary and recovery capacity and action thresholds; a BIA without utilization/forecast records is insufficient.",
+      "requirement_ids": [
+        "SOC2:A1.1"
+      ],
+      "side": "B",
+      "task_credit": false,
+      "task_id": "TASK-SH-BCM-001-corporate-CHECK-SOC2:A1.1",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE",
+      "transition_context_source": "SELECTED_CONTRACT_CAPACITY"
+    },
+    {
+      "authored_test_clause": "Trace a dependency failure to continuity treatment, recovery resources and accepted residual risk; insurance is a possible treatment, not a universal mandated purchase.",
+      "control_id": "SH-BCM-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "remaining_test_gate": "Trace a dependency failure to continuity treatment, recovery resources and accepted residual risk; insurance is a possible treatment, not a universal mandated purchase.",
+      "requirement_ids": [
+        "SOC2:CC9.1"
+      ],
+      "side": "B",
+      "task_credit": false,
+      "task_id": "TASK-SH-BCM-001-corporate-CHECK-SOC2:CC9.1",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE",
+      "transition_context_source": "SELECTED_CONTRACT_CAPACITY"
+    },
+    {
+      "authored_test_clause": null,
+      "control_id": "SH-BCM-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "procedure_type": "IMPLEMENTATION",
+      "remaining_test_gate": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "requirement_ids": [],
+      "side": "B",
+      "task_credit": false,
+      "task_id": "TASK-SH-BCM-001-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE",
+      "transition_context_source": "SELECTED_CONTRACT_CAPACITY"
+    },
+    {
+      "authored_test_clause": null,
+      "control_id": "SH-BCM-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "procedure_type": "TOD",
+      "remaining_test_gate": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "requirement_ids": [],
+      "side": "B",
+      "task_credit": false,
+      "task_id": "TASK-SH-BCM-001-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE",
+      "transition_context_source": "SELECTED_CONTRACT_CAPACITY"
+    },
+    {
+      "authored_test_clause": null,
+      "control_id": "SH-BCM-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "procedure_type": "TOE",
+      "remaining_test_gate": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "requirement_ids": [],
+      "side": "B",
+      "task_credit": false,
+      "task_id": "TASK-SH-BCM-001-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE",
+      "transition_context_source": "SELECTED_CONTRACT_CAPACITY"
+    },
+    {
+      "authored_test_clause": "Observe an approved emergency-mode exercise; verify necessary ePHI remains accessible to authorized operators and access decisions and activity survive recovery.",
+      "control_id": "SH-BCM-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "remaining_test_gate": "Observe an approved emergency-mode exercise; verify necessary ePHI remains accessible to authorized operators and access decisions and activity survive recovery.",
+      "requirement_ids": [
+        "HIPAA:164.308",
+        "HIPAA:164.312"
+      ],
+      "side": "B",
+      "task_credit": false,
+      "task_id": "TASK-SH-BCM-004-corporate-ACTION-H-EMERGENCY",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE",
+      "transition_context_source": "SELECTED_RECOVERY_HISTORY"
+    },
+    {
+      "authored_test_clause": "Reperform restore and failover outcomes against accepted RTO/RPO and data usability; include deviations, corrective actions and retests.",
+      "control_id": "SH-BCM-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "remaining_test_gate": "Reperform restore and failover outcomes against accepted RTO/RPO and data usability; include deviations, corrective actions and retests.",
+      "requirement_ids": [
+        "SOC2:A1.3"
+      ],
+      "side": "B",
+      "task_credit": false,
+      "task_id": "TASK-SH-BCM-004-corporate-CHECK-SOC2:A1.3",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE",
+      "transition_context_source": "SELECTED_RECOVERY_HISTORY"
+    },
+    {
+      "authored_test_clause": "Trace a dependency failure to continuity treatment, recovery resources and accepted residual risk; insurance is a possible treatment, not a universal mandated purchase.",
+      "control_id": "SH-BCM-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "remaining_test_gate": "Trace a dependency failure to continuity treatment, recovery resources and accepted residual risk; insurance is a possible treatment, not a universal mandated purchase.",
+      "requirement_ids": [
+        "SOC2:CC9.1"
+      ],
+      "side": "B",
+      "task_credit": false,
+      "task_id": "TASK-SH-BCM-004-corporate-CHECK-SOC2:CC9.1",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE",
+      "transition_context_source": "SELECTED_RECOVERY_HISTORY"
+    },
+    {
+      "authored_test_clause": null,
+      "control_id": "SH-BCM-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "procedure_type": "IMPLEMENTATION",
+      "remaining_test_gate": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "requirement_ids": [],
+      "side": "B",
+      "task_credit": false,
+      "task_id": "TASK-SH-BCM-004-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE",
+      "transition_context_source": "SELECTED_RECOVERY_HISTORY"
+    },
+    {
+      "authored_test_clause": null,
+      "control_id": "SH-BCM-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "procedure_type": "TOD",
+      "remaining_test_gate": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "requirement_ids": [],
+      "side": "B",
+      "task_credit": false,
+      "task_id": "TASK-SH-BCM-004-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE",
+      "transition_context_source": "SELECTED_RECOVERY_HISTORY"
+    },
+    {
+      "authored_test_clause": null,
+      "control_id": "SH-BCM-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "procedure_type": "TOE",
+      "remaining_test_gate": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "requirement_ids": [],
+      "side": "B",
+      "task_credit": false,
+      "task_id": "TASK-SH-BCM-004-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE",
+      "transition_context_source": "SELECTED_RECOVERY_HISTORY"
+    }
+  ],
+  "schema": "SH_BCM_11_ROUTE_GAP_LEDGER_V1",
+  "status": "READ_ONLY_CANDIDATE_DISCOVERY_NO_TASK_CREDIT"
+}
