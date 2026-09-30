@@ -108,8 +108,16 @@ while the Messy waiver remains denied and open. The corrected 40-version
 fictional company-operated SEC005 source passed isolated independent review and
 independent main-local review.
 Its October false pass and November AS-P008 self-review cannot be described as
-independent assurance. These two newer sources await a later registry successor
-and exact route reclassification.
+independent assurance. The reviewed V5 partial registry now includes both newer
+sources: 26 cohorts, 475 native versions, 40 components and 246 aliases per
+profile. An independently reviewed exact route successor classifies 126 of the
+283 discovery routes per side as partial native leads, 36 as design-only and
+121 authored clauses as unsupported. All 409 active tasks per side remain
+`NOT_STARTED`/`NOT_RUN`. A reviewed V4 disposable probe separately made 50
+selected-version collections on 76 ordinary-byte copies; REC003's historical
+journals were preserved and original company sources and the active pair were
+unchanged. These selected collection and route checks do not establish period
+population completeness, task sufficiency or a source-complete registry.
 
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
