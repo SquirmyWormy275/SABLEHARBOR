@@ -791,6 +791,20 @@ zero shared extents reported; four focused tests, Ruff and verification from
 this checkout passed. This is a planning map, not a completed registry,
 company source, tested clause, audit evidence or task disposition.
 
+The [provider/BA clause delta plan](../../../../enterprise/audit_suite/PROVIDER_BA_85_ROUTE_DELTA_PLAN.md)
+narrows one large family to 85 documentary/activity routes per audit side:
+72 `SH-LEG-001`, four `SH-LEG-002`, six `SH-TPR-003` and three `SH-TPR-005`.
+Its [170-row candidate map](../../../../enterprise/audit_suite/provider_ba_85_candidate_routes_v1.json)
+(SHA-256 `789f0a747255b63abe170403db06f6a1770f73888a44501d4434d305999f803f`)
+passed [independent review](../../../../enterprise/generated/audit-suite/provider-ba-route-plan-2026-09-29/independent-review-v1/REVIEW.json)
+(SHA-256 `43befb3686367b4931269c440adb9078e57322818f7088492b6a1b082090daba`).
+Only 16 routes per side have partial fictional-source context from the new
+transition/BA sources; 69 have no direct source. The next proposed native
+provider-lifecycle register is a source-design lead, not a completed
+relationship population, legal analysis or task credit. The private handoff
+and review were copied as independently hashed ordinary bytes with separate
+inodes and zero shared extents reported.
+
 The queue's job `state`, acceptance criteria and attributed checkpoints must be read
 together. Historical `*_scope_update` entries record what was authorized at the time;
 their `QUEUED_NOT_STARTED` labels do not reset later job progress. Conversely, a
