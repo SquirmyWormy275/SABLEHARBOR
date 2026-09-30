@@ -41,19 +41,21 @@ not operational source records to transplant into this branch.
 
 ## Scenario-only entities and fields
 
-All identifiers below have `SIM-` prefixes and `truth_class =
-TRAINING_SCENARIO_ONLY`. An implementation must not use real names, patient
-identifiers, PHI or external communications.
+The fictional customer, support party, service, contract and marker identifiers
+have `SIM-` prefixes. Company actors use pinned canon personnel IDs, but their
+2027 actions are explicitly `TRAINING_SCENARIO_ONLY` assumptions. The source
+contains no patient identifiers, PHI, real customer/support contact or external
+communication.
 
 | Record/system | Required fields and source relationships |
 |---|---|
-| `scenario_scope` | `scenario_id`, `branch_id`, `sim_customer_id=SIM-COVERED-CUSTOMER-01`, `sim_service_id=SIM-RESTRICTED-HOSTING-01`, `sim_subcontractor_id=SIM-RECOVERY-SUPPORT-01`, `data_class=SYNTHETIC_EPHI_ANALOG`, `fixture_contains_real_phi=false`, `actual_legal_applicability=UNDETERMINED`, exact 2026 canon pins, exact transition receipt/native release pins, and a statement that Switch/IDACORE are site dependencies, **not automatically BA subcontractors**. |
-| `role_decision` | Fictional case facts (customer assumed covered entity; Sable Harbor assumed to maintain the synthetic analog on its behalf; scenario-only support party assumed to maintain a recovery copy), proposed Legal contact `AS-P003` acting only in the training branch, decision `BA_AND_SUBCONTRACTOR_FOR_TRAINING_ONLY`, rationale and cited candidate rule locators, event/availability/import clocks, and `real_world_decision=false`. |
+| `scenario_scope` | `scenario`, `branch`, `sim_customer_id=SIM-COVERED-CUSTOMER-01`, `sim_service_id=SIM-RESTRICTED-HOSTING-01`, `sim_subcontractor_id=SIM-RECOVERY-SUPPORT-01`, `data_class=SYNTHETIC_EPHI_ANALOG_PAYLOAD_FREE`, `fixture_contains_real_phi=false`, `actual_legal_applicability=UNDETERMINED`, exact 2026 canon pins in source provenance, exact transition receipt/native release pins, and a statement that Switch/IDACORE are site dependencies, **not automatically BA subcontractors**. |
+| `legal_decision` | Fictional case facts (customer assumed covered entity; Sable Harbor assumed to maintain the synthetic analog on its behalf; scenario-only support party assumed to maintain a recovery copy), proposed Legal contact `AS-P003` acting only in the training branch, decision `BA_AND_SUBCONTRACTOR_FOR_TRAINING_ONLY`, rationale and cited candidate rule locators, event/availability/import clocks, and `real_world_legal_approval=false`. |
 | `contract_authority` | Scenario-only Daniel Mercer CEO delegation `DA-PHI-BA-2027` to Adrian Lowe (`AS-P002`), limited to the two `SIM-BAA` IDs. This is separate from the two-site runtime delegation and grants no real signature authority. |
 | `contract_approval` and `counterparty_acceptance` | Per-BAA legal, technology, security and data-governance review by Helena Ward (`AS-P003`), Elliot Tran (`AS-P007`), Dana West (`AS-P008`) and Omar Vale (`AS-P014`), followed by distinct fictional customer/support signatory acceptance. Exact source and availability times precede in-simulation execution. |
-| `contract` | Upstream `SIM-BAA-CUST-01` and downstream `SIM-BAA-SUB-01`; party IDs, service/data scope, eight contract-specific structured synthetic obligations, matching terms hashes on each individual reviewer and counterparty acceptance, scenario-only signer IDs, simulated execution/effective times, `real_signature=false`, and prior-record hash. A signed-in-simulation state must never be rendered as an actual agreement. |
-| `flow_event` | Synthetic record token with **no payload**; Reno source and Boise recovery dependency IDs; action, before/after state, site-release/role/upstream/downstream gate references, `payload_bytes=0` and a metadata-marker digest, source event time, source availability time, actual import time, causal prior hash, destination acknowledgement and exception ID. The source operation is a simulation of ePHI handling, not actual PHI transfer. |
-| `exception_event` | Stable single exception ID in Messy, detected-at and available-at separately, affected synthetic token, missing/late downstream flow-down, quarantine decision, owner/cure proposal, current open status, and whether any simulated copy reached the support role. No breach or real notice conclusion is automatic. |
+| `contract_register` | Upstream `SIM-BAA-CUST-01` and downstream `SIM-BAA-SUB-01`; party IDs, service/data scope, eight contract-specific structured synthetic obligations, matching terms hashes on each individual reviewer and counterparty acceptance, scenario-only signer IDs, simulated execution/effective times, `real_signature_or_agreement=false`, and prior-record hash. A signed-in-simulation state must never be rendered as an actual agreement. |
+| `flow_register` | Synthetic record token with **no payload**; Reno source and Boise recovery dependency refs; action, before/after state, site-release/role/upstream/downstream gate references, `payload_bytes=0` and a metadata-marker digest, source event time, source availability time, actual import time, causal prior hash, destination acknowledgement and exception ID. The source operation is a simulation of ePHI handling, not actual PHI transfer. |
+| `exception_register` | Stable single exception ID in Messy, detected-at and available-at separately, affected synthetic token, missing/late downstream flow-down, quarantine decision, owner/cure proposal, current open status, and whether any simulated copy reached the support role. No breach or real notice conclusion is automatic. |
 
 Clean must record the fictional role decision, distinct limited delegation,
 reviewer and counterparty approvals, and both in-simulation BAAs before the
