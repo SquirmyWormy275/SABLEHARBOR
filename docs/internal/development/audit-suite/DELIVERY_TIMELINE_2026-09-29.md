@@ -119,6 +119,25 @@ journals were preserved and original company sources and the active pair were
 unchanged. These selected collection and route checks do not establish period
 population completeness, task sufficiency or a source-complete registry.
 
+**Later September 30 checkpoint:** The selected fictional IAM005 emergency
+marker source passed isolated and main-local independent review with 25 native
+business versions (nine Clean, 16 Messy). Its linked BCM failed exercise,
+marker-readable retest and denied closure remain separate from the later SEC005
+open exception. The independently reviewed V6 partial registry routes this
+source alongside the exact V5 prefix: 27 cohorts, 500 native versions, 41
+components, 28 source pins and 255 aliases per profile. Its initial isolated
+candidate failed a same-count prefix-drift test and was preserved; the corrected
+successor passed isolated and main-local review. The V5 exact route ledger has
+not yet been superseded, and the authored IAM005 clauses remain unsupported.
+
+The V5 disposable collector probe passed main-local independent review with
+80 ordinary-byte copies and 54 selected-version scoped collections; it did
+not create a fresh engagement or collect a period population. The reviewed V5
+unsupported-clause PBC successor preserves 121 unsupported clauses per side
+and all 30 draft groups. Six groups have changed next actions, while 53
+possible no-event reviews per side remain unaccepted and zero requests were
+sent. The P1 pair still has 409 `NOT_STARTED`/`NOT_RUN` tasks per side.
+
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
 2–16, 2027 (weeks 18–20) is the working target. March 16, 2027 (week 24) is
