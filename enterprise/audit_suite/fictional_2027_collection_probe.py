@@ -248,6 +248,9 @@ def run(repository: Path, private_repository: Path, destination: Path) -> dict:
     report = {
         "schema": SCHEMA,
         "status": "PASS_DISPOSABLE_SOURCE_TO_COLLECTOR_BOUNDARY_ONLY",
+        "probe_module_sha256": _sha(Path(__file__)),
+        "source_portfolio_verifier_sha256": diagnostic["verifier_module_sha256"],
+        "reviewed_source_inventory": diagnostic["sources"],
         "source_count": 10,
         "native_version_count_in_reviewed_sources": diagnostic["native_versions"],
         "disposable_collection_count": 20,
