@@ -74,6 +74,13 @@ populations or the 818 branch-task procedures. The week-10 complete-registry
 and later fresh-pair gates remain on the same calendar until a route-level
 reforecast is reviewed.
 
+The independently reviewed unsupported-clause PBC plan now lists all 121
+unsupported exact clauses per side in 30 proposed request groups. Its 53
+possible no-event review candidates per side have zero accepted determinations;
+no outside request was sent through the packet. Legal applicability, owner
+authority and response evidence remain explicit schedule dependencies rather
+than automatic N/A paths.
+
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
 2–16, 2027 (weeks 18–20) is the working target. March 16, 2027 (week 24) is
