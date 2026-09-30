@@ -18,7 +18,7 @@ from enterprise.audit_suite.documentary_283_route_reconciliation_v3 import (
 
 REPOSITORY = Path(__file__).resolve().parents[2]
 PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
-PORTFOLIO = Path("/home/kingoftheeast/Projects/SABLEHARBOR-portfolio-v3-plan-wt")
+PORTFOLIO = PRIVATE
 STEM = REPOSITORY / "enterprise/audit_suite/DOCUMENTARY_283_ROUTE_RECONCILIATION_V3_2026-09-29"
 
 
