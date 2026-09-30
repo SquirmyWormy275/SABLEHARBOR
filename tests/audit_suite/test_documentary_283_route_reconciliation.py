@@ -4,7 +4,15 @@ import json
 from collections import Counter
 from pathlib import Path
 
-from enterprise.audit_suite.documentary_283_route_reconciliation import build, markdown
+import pytest
+
+from enterprise.audit_suite.documentary_283_route_reconciliation import (
+    ReconciliationError,
+    _require_review_receipt_join,
+    _reviewed_receipt_sha,
+    build,
+    markdown,
+)
 
 REPOSITORY = Path(__file__).resolve().parents[2]
 PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
@@ -94,3 +102,19 @@ def test_targeted_routes_can_still_lack_the_exact_activity():
         "DESIGN_CONTEXT_ONLY": 3,
         "UNSUPPORTED_EXACT_CLAUSE": 66,
     }
+
+
+def test_reviewed_receipt_join_rejects_missing_ambiguous_or_malformed_hash():
+    digest = "a" * 64
+    assert _reviewed_receipt_sha({"run_sha256": {"RECEIPT.json": digest}}) == digest
+    assert _reviewed_receipt_sha({"run_receipt_sha256": digest}) == digest
+    for review in (
+        {},
+        {"run_sha256": {"MANIFEST.json": digest}},
+        {"run_receipt_sha256": "not-a-sha"},
+        {"run_receipt_sha256": digest, "run_sha256": {"RECEIPT.json": digest}},
+    ):
+        with pytest.raises(ReconciliationError):
+            _reviewed_receipt_sha(review)
+    with pytest.raises(ReconciliationError, match="Review/receipt join differs"):
+        _require_review_receipt_join({"run_receipt_sha256": digest}, "b" * 64, "sample")

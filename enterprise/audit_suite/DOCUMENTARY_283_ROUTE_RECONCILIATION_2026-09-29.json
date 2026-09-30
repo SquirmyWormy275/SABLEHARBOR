@@ -13668,7 +13668,7 @@
       "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
     }
   ],
-  "schema": "SH_DOCUMENTARY_283_PAIRED_ROUTE_CANDIDATE_RECONCILIATION_V1",
+  "schema": "SH_DOCUMENTARY_283_PAIRED_ROUTE_CANDIDATE_RECONCILIATION_V2",
   "source_pins": {
     "bcm_11": {
       "path": "enterprise/audit_suite/BCM_11_ROUTE_GAP_LEDGER_2026-09-29.json",

@@ -9,7 +9,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 PINS = "enterprise/audit_suite/DOCUMENTARY_283_ROUTE_RECONCILIATION_PINS_2026-09-29.json"
-SCHEMA = "SH_DOCUMENTARY_283_PAIRED_ROUTE_CANDIDATE_RECONCILIATION_V1"
+SCHEMA = "SH_DOCUMENTARY_283_PAIRED_ROUTE_CANDIDATE_RECONCILIATION_V2"
 FAMILIES = {
     "architecture_configuration_and_change",
     "business_continuity_and_recovery",
@@ -73,6 +73,31 @@ def _selected(value: object) -> set[str]:
     return set()
 
 
+def _reviewed_receipt_sha(review: dict) -> str:
+    """Extract the reviewed run receipt across the sealed cohort receipt schemas."""
+    candidates = []
+    direct = review.get("run_receipt_sha256")
+    if direct is not None:
+        candidates.append(direct)
+    for key in ("run_sha256", "run_v1_sha256", "run_v2_sha256", "run_v3_sha256"):
+        run = review.get(key)
+        if run is not None:
+            if not isinstance(run, dict):
+                raise ReconciliationError("Reviewed run hash map is invalid")
+            candidates.append(run.get("RECEIPT.json"))
+    if len(candidates) != 1 or not isinstance(candidates[0], str):
+        raise ReconciliationError("Unique reviewed receipt hash is missing")
+    value = candidates[0]
+    if len(value) != 64 or any(ch not in "0123456789abcdef" for ch in value):
+        raise ReconciliationError("Reviewed receipt hash is malformed")
+    return value
+
+
+def _require_review_receipt_join(review: dict, pinned_sha256: str, name: str) -> None:
+    if _reviewed_receipt_sha(review) != pinned_sha256:
+        raise ReconciliationError(f"Review/receipt join differs: {name}")
+
+
 def _pin_inputs(repository: Path, private_repository: Path) -> tuple[dict, dict]:
     pin_file = repository / PINS
     pins = _json(pin_file)
@@ -120,6 +145,7 @@ def _pin_inputs(repository: Path, private_repository: Path) -> tuple[dict, dict]
         review = loaded[name + "_review"]
         if not str(review.get("verdict", "")).startswith("PASS"):
             raise ReconciliationError(f"Source review is not PASS: {name}")
+        _require_review_receipt_join(review, pins["inputs"][name + "_receipt"]["sha256"], name)
         receipt = loaded[name + "_receipt"]
         if receipt.get("audit_task_credit") is True:
             raise ReconciliationError(f"Source claims task credit: {name}")
