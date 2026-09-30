@@ -837,6 +837,19 @@ reported. Six focused tests, Ruff and native verification passed in this
 checkout. The nine discovery routes per side remain uncredited; no audit
 collection or task disposition followed.
 
+The [fictional SH-ASS-005 company issue source](../../../../enterprise/audit_suite/ASSURANCE_FINDINGS_2027_PROPOSAL.md)
+also passed [independent review](../../../../enterprise/generated/audit-suite/company-assurance-findings-2026-09-29/independent-review-v1/REVIEW.json)
+(SHA-256 `23033dcf6641d18038bc58a1e02fd1b014a4e550fe0ae78bd854e1f7f5552f58`).
+Its six native versions trace one selected transition exception: Clean has a
+no-defect screen; Messy has an open company finding, owner notification,
+remediation-plan request and overdue routing. These do not establish plan
+approval, correction validation, closure, risk acceptance or an audit
+finding. Exact transition tuples, four local issue hash edges, private modes
+and unchanged P1 passed review. The run/review were copied as matching
+ordinary bytes with separate inodes and zero shared extents reported; three
+focused tests, Ruff and native verification passed here. Four SH-ASS-005
+routes per side remain uncredited, with no collection or task disposition.
+
 The queue's job `state`, acceptance criteria and attributed checkpoints must be read
 together. Historical `*_scope_update` entries record what was authorized at the time;
 their `QUEUED_NOT_STARTED` labels do not reset later job progress. Conversely, a
