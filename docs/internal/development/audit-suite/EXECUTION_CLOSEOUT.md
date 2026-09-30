@@ -891,6 +891,19 @@ verification passed in this checkout. Three SH-REC-001 routes per side are
 candidate discovery links only; no prepared audit pack, collection or task
 credit follows.
 
+The [fictional source-version extraction log](../../../../enterprise/audit_suite/SOURCE_EXTRACTION_2027_PROPOSAL.md)
+passed [independent review](../../../../enterprise/generated/audit-suite/company-source-extraction-2026-09-29/independent-review-v1/REVIEW.json)
+(SHA-256 `b2940aaedb5721d91367503c997eceece71a53370e67335985cb77ea95165a4d`).
+It indexes exact DAT001 source versions for one selected record: four Clean,
+six Messy. Messy preserves an initial five-row omission and a corrected
+six-row export; independent source-review approval remains pending. The nine
+new native rows contain version identities, counts and hashes, not copied
+original content or a prepared audit pack. The private run/review were copied
+as matching ordinary bytes with separate inodes and zero shared extents
+reported; three focused tests, Ruff and native verification passed here.
+Six SH-REC-002 routes per side remain uncredited; no audit request, grant,
+collection or retained evidence was created.
+
 The queue's job `state`, acceptance criteria and attributed checkpoints must be read
 together. Historical `*_scope_update` entries record what was authorized at the time;
 their `QUEUED_NOT_STARTED` labels do not reset later job progress. Conversely, a
