@@ -42,8 +42,9 @@ require a dated reforecast. A task disposition can remain a supported gap or
 `NOT_RUN`; the calendar does not turn it into a pass.
 
 **September 29 Pacific checkpoint:** Separately reviewed fictional Reno/Boise,
-payload-free ePHI/BA, provider-lifecycle and bounded ERM stage-gate native
-sources are integrated. A reviewed candidate matrix classifies all 283
+payload-free ePHI/BA, provider-lifecycle, bounded ERM stage-gate,
+assurance-finding, critical-role/training and selected dataset-classification
+native sources are integrated. A reviewed candidate matrix classifies all 283
 documentary/activity discovery routes per branch. These sources are outside
 the active 13-component audit pair. The 283 routes still require
 native-source and procedure decisions; all 409 tasks per branch in that pair

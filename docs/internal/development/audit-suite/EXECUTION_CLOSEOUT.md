@@ -850,6 +850,34 @@ ordinary bytes with separate inodes and zero shared extents reported; three
 focused tests, Ruff and native verification passed here. Four SH-ASS-005
 routes per side remain uncredited, with no collection or task disposition.
 
+The [fictional critical-role and training source](../../../../enterprise/audit_suite/CRITICAL_ROLE_2027_SCOPE.md)
+passed [independent V3 review](../../../../enterprise/generated/audit-suite/company-critical-role-2027-simulation-2026-09-29/independent-review-v3/REVIEW.json)
+(SHA-256 `582d9250cc923efd720c36b68a44ced544bf8d453cc30816042afeecfdc52aa6`).
+It reconciles all 29 pinned Q1 training versions and records eight new Q2
+versions for two proposed critical-role contacts. Clean carries on-time local
+training; Messy retains one late course and follow-up. Both branches leave
+qualification and backup verification open. The earlier V2 review remains
+`CHANGES_REQUIRED` because it hashed a revision-bearing organization snapshot;
+V3 pins a bounded three-contact projection and verifies after commit. The
+private V3 output and review were copied as matching ordinary bytes with
+different inodes and no shared extents reported. Four focused tests, Ruff and
+native verification passed in this checkout. Eight SH-PPL-005/SH-TRN-003
+routes per side are candidate discovery links without audit credit.
+
+The [fictional selected dataset classification source](../../../../enterprise/audit_suite/DATASET_CLASSIFICATION_2027_PROPOSAL.md)
+passed [independent review](../../../../enterprise/generated/audit-suite/company-dataset-classification-2026-09-29/independent-review-v1/REVIEW.json)
+(SHA-256 `4d1cd9c423781bf97ff586075c460c891cc60f621b42a29a22db59df929ff52e`).
+Ten native versions cover one payload-free synthetic marker-metadata dataset,
+with exact joins to the reviewed BA-flow source. Clean records a local
+restricted classification recommendation; Messy preserves a premature
+invalid `PUBLIC` metadata marker and quarantine. Both request propagation
+without verified enforcement or accepted data-owner/retention decision. The
+private output and review were copied as matching ordinary bytes with
+different inodes and no shared extents reported. Three focused tests, Ruff
+and native verification passed here. Four SH-DAT-001 routes per side remain
+uncredited. Neither source changes the active P1 pair or asserts actual PHI,
+employment, deployment or a completed audit procedure.
+
 The queue's job `state`, acceptance criteria and attributed checkpoints must be read
 together. Historical `*_scope_update` entries record what was authorized at the time;
 their `QUEUED_NOT_STARTED` labels do not reset later job progress. Conversely, a
