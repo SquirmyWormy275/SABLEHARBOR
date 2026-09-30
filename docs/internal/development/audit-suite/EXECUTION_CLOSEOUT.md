@@ -757,9 +757,24 @@ and review were copied as independent ordinary bytes into this checkout;
 file hashes, modes and separate inodes matched, with zero shared extents
 reported. Five focused tests, Ruff and native V3 verification passed here.
 These are explicitly fictional source facts, not real contracts, real sites,
-actual PHI processing, a new audit registry, collection or task credit. The
-dependent simulated ePHI/BA source must pin the exact reviewed V3 run and pass
-its own independent review before it is integrated.
+actual PHI processing, a new audit registry, collection or task credit.
+
+That [payload-free fictional ePHI/BA source](../../../../enterprise/audit_suite/PHI_BA_2027_SIMULATION_PACKET.md)
+has since passed [independent review](../../../../enterprise/generated/audit-suite/company-phi-ba-2027-simulation-2026-09-29/independent-review-v1/REVIEW.json)
+(SHA-256 `39bb9b071179ed672c5cf07c2867285d36b2f3e8cdce2106dc4472d17047911e`)
+and is integrated as a separate prospective company-native training history.
+Its 37 native versions pin the exact reviewed transition V3 receipt, manifest
+and database; 16 named reviewer decisions carry agreement-terms hashes, and
+the six flow rows carry zero payload bytes. The Messy branch has one open
+exception with support-copy acknowledgement `NOT_ESTABLISHED`. The document
+correction after the initial seal did not alter the run. Private run and
+review bytes were copied independently; exact hashes, modes and separate
+inodes matched, with zero shared extents reported. Ten focused tests, Ruff
+and native verification passed in this checkout. This creates no actual PHI,
+real BA/legal status, contract, collection, task disposition or audit credit.
+The 13-component active pair and its 409 unstarted tasks per branch remain
+unchanged; a future full-source registry and fresh A/B collection are still
+required.
 
 The queue's job `state`, acceptance criteria and attributed checkpoints must be read
 together. Historical `*_scope_update` entries record what was authorized at the time;
