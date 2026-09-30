@@ -916,6 +916,21 @@ reported; three focused tests, Ruff and native verification passed here.
 Six SH-REC-002 routes per side remain uncredited; no audit request, grant,
 collection or retained evidence was created.
 
+The [SH-REC-003 lineage/gap packet](../../../../enterprise/audit_suite/REC003_LINEAGE_GAP_PROPOSAL.md)
+passed [independent review](../../../../enterprise/generated/audit-suite/rec003-lineage-gap-2026-09-29/independent-review-v1/REVIEW.json)
+(SHA-256 `f162bf84513163be4c21479c85ab986b20c62d026870bd9741a8e1285470844e`).
+It rehashes 11 existing nonpersonal data-quality business versions per side
+and preserves the original source review plus a later independently reviewed
+post-journal rebase. The source database bytes changed after the initial
+review because audit access/collection journals were added; the packet
+explicitly excludes those journals from transformation history and checks
+the current business originals. Clean's local-rule result is not accepted
+source truth; Messy remains partial/unreliable. No new company event was
+authored, and four SH-REC-003 routes per side remain uncredited. The private
+run/review copied as matching ordinary bytes with separate inodes and zero
+shared extents reported; three focused tests, Ruff and native verification
+passed here.
+
 The queue's job `state`, acceptance criteria and attributed checkpoints must be read
 together. Historical `*_scope_update` entries record what was authorized at the time;
 their `QUEUED_NOT_STARTED` labels do not reset later job progress. Conversely, a
