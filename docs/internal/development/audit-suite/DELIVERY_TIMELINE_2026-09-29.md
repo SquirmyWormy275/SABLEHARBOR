@@ -89,6 +89,12 @@ transformation population or grant task credit. A corrected relative-path
 verifier and fresh main-local copy passed independent review; the earlier
 failed diagnostic remains preserved.
 
+A selected Q3 Boise owner self-assessment and local second-line observation
+now have independently reviewed Clean/Messy company-native histories, including
+a preserved omission, correction and open escalation. This is a bounded
+ASS-001/002 source candidate outside V3, without accepted certification,
+independent assurance, full monitoring population or task credit.
+
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
 2–16, 2027 (weeks 18–20) is the working target. March 16, 2027 (week 24) is
