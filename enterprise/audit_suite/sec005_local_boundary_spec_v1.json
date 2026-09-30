@@ -1,0 +1,26 @@
+{
+  "schema": "SH_FICTIONAL_2027_SEC005_LOCAL_BOUNDARY_SPEC_V1",
+  "qualification": "LOCAL_NONPERSONAL_DECISION_EXERCISE_NOT_DEPLOYMENT",
+  "scenario_date": "2027-10-12",
+  "scope": "One declared symbolic boundary and one inert UTF-8 digest; no discovered enterprise interfaces or endpoints",
+  "boundary_id": "SIM-LOCAL-BOUNDARY-01",
+  "declared_symbolic_interface_ids": [
+    "SYMBOLIC-LOCAL-ALLOW",
+    "SYMBOLIC-FORBIDDEN-EGRESS",
+    "SYMBOLIC-REMOTE-ADMIN"
+  ],
+  "locally_permitted_interface_ids": ["SYMBOLIC-LOCAL-ALLOW"],
+  "selected_request_interface_id": "SYMBOLIC-FORBIDDEN-EGRESS",
+  "remote_admin_interface_id": "SYMBOLIC-REMOTE-ADMIN",
+  "endpoint_id": "SIM-LOCAL-ENDPOINT-01",
+  "approved_fixture_utf8": "Sable Harbor inert local update fixture v1\n",
+  "unapproved_fixture_utf8": "Sable Harbor inert unapproved text candidate v1\n",
+  "operator_contact_id": "AS-P007",
+  "distinct_review_contact_id": "AS-P008",
+  "contacts_are_accepted_corporate_appointments": false,
+  "actual_network_packets_sent": 0,
+  "actual_executables_created_or_run": 0,
+  "actual_phi_present": false,
+  "actual_deployment": false,
+  "audit_task_credit": false
+}
