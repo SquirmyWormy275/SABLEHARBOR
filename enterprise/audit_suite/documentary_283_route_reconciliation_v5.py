@@ -41,6 +41,13 @@ ROUTE_COUNTS = {
     "gov_appetite": 16,
     "sec005_operated": 5,
 }
+SOURCE_VERSIONS = {
+    "rec003": 22,
+    "sec005_symbolic": 13,
+    "ass001002": 8,
+    "gov_appetite": 34,
+    "sec005_operated": 40,
+}
 LIMITS = {
     "rec003": (
         "Exact existing data-quality versions in independent A/B snapshots; inherited "
@@ -194,6 +201,22 @@ def build(repository: Path, private_repository: Path) -> dict:
         source_review = loaded[name + "_review"]
         receipt_sha = pins["inputs"][name + "_receipt"]["sha256"]
         manifest_sha = pins["inputs"][name + "_manifest"]["sha256"]
+        if descriptor["native_versions"] != SOURCE_VERSIONS[name]:
+            raise V5ReconciliationError(f"Source native denominator differs: {name}")
+        v4_key = {
+            "rec003": "rec003",
+            "sec005_symbolic": "sec005",
+            "ass001002": "ass001002",
+        }.get(name)
+        if v4_key is not None:
+            v4_row = v4_sources[v4_key]
+            if (
+                v4_row["native_versions"] != SOURCE_VERSIONS[name]
+                or v4_row["receipt_sha256"] != receipt_sha
+                or v4_row["review_sha256"] != pins["inputs"][name + "_review"]["sha256"]
+                or v4_row["manifest_sha256"] != manifest_sha
+            ):
+                raise V5ReconciliationError(f"V4/native source byte join differs: {name}")
         if (
             source_review.get("verdict") != descriptor["verdict"]
             or source_review.get("selected_run", source_review.get("main_run")) != descriptor["run"]
@@ -264,8 +287,6 @@ def build(repository: Path, private_repository: Path) -> dict:
                 or manifest.get("native_version_count") != 40
             ):
                 raise V5ReconciliationError("SEC005 selected-operated boundary differs")
-        if descriptor["native_versions"] not in (22, 13, 8, 34, 40):
-            raise V5ReconciliationError("Source native denominator differs")
         selected[name] = _source_routes(name, receipt, old)
     if (
         sum(
