@@ -1,0 +1,3115 @@
+{
+  "as_of": "2026-09-29",
+  "controls": [
+    {
+      "authority_gate": "Management control owners and any independent evaluator must be separately identified; no self-assessment becomes independent assurance.",
+      "control_description": "Management performs periodic control-owner certification/self-assessment without labeling it independent assurance.",
+      "control_id": "SH-ASS-001",
+      "documentary_design_leads": [
+        {
+          "classification": "DOCUMENTARY_DESIGN_ONLY",
+          "component_id": "documents",
+          "native_version_count": 359,
+          "selected_in_proposed_registry": false
+        }
+      ],
+      "lead": "Control calendar and owner certification register is a proposed design/search target; 2026 AS-P005 appointment identifies a contact, not a 2027 certification.",
+      "missing_activity": "No selected 2027 owner certification, critical-duty backup/competence review, recurring-failure response, evaluation plan or independent sample.",
+      "next_procedure": "Choose one scoped control and quarter; source its schedule, owner certification, backup/competence input, exceptions and management response, then independently compare to a separate evaluation plan.",
+      "proposed_owner_ids": [
+        "AS-P005"
+      ],
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_count": 5
+    },
+    {
+      "authority_gate": "Second-line criteria and reviewer independence from execution need accepted scope and accountable authority; HIPAA applicability remains unassessed.",
+      "control_description": "Second-line compliance/control monitoring follows documented scope, criteria, evidence, results, and escalation.",
+      "control_id": "SH-ASS-002",
+      "documentary_design_leads": [
+        {
+          "classification": "DOCUMENTARY_DESIGN_ONLY",
+          "component_id": "documents",
+          "native_version_count": 359,
+          "selected_in_proposed_registry": false
+        }
+      ],
+      "lead": "Monitoring schedule and obligation register is proposed documentary design; AS-P005 is a 2026 role contact only.",
+      "missing_activity": "No selected 2027 second-line monitoring plan, nontechnical and technical evaluation, change-triggered refresh, result or escalated exception.",
+      "next_procedure": "For one material service change, source dated monitoring criteria and two distinct checks, compare schedule to work performed, and retain unresolved gaps/escalation.",
+      "proposed_owner_ids": [
+        "AS-P005"
+      ],
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_count": 5
+    },
+    {
+      "authority_gate": "Functional reporting statement alone is not independence or engagement authorization; Board/committee collective action cannot be inferred.",
+      "control_description": "Independent assurance engagements maintain organizational independence, approved scope, evidence, findings, review, and direct escalation rights.",
+      "control_id": "SH-ASS-003",
+      "documentary_design_leads": [
+        {
+          "classification": "DOCUMENTARY_DESIGN_ONLY",
+          "component_id": "documents",
+          "native_version_count": 359,
+          "selected_in_proposed_registry": false
+        }
+      ],
+      "lead": "2026 appointment canon proposes AS-P009 Internal Audit functional reporting; an independent assurance engagement and review record system is a proposed source target.",
+      "missing_activity": "No selected 2027 approved independent engagement scope, evaluator conflict check, execution workpapers, supervisory review or direct escalation.",
+      "next_procedure": "Obtain an actual fictional-world engagement mandate, accepted scope, evaluator conflict review and attributed execution/review before treating any work as independent assurance.",
+      "proposed_owner_ids": [
+        "AS-P009"
+      ],
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_count": 4
+    },
+    {
+      "authority_gate": "Qualified engagement scope, source access and independent reviewer acceptance are required; an audit module cannot manufacture company evidence.",
+      "control_description": "Control testing defines the population/source, period, method, evidence, exceptions, and limitations before concluding.",
+      "control_id": "SH-ASS-004",
+      "documentary_design_leads": [
+        {
+          "classification": "DOCUMENTARY_DESIGN_ONLY",
+          "component_id": "documents",
+          "native_version_count": 359,
+          "selected_in_proposed_registry": false
+        }
+      ],
+      "lead": "Assessment workspace/evidence index and CCF assurance design are tool/procedure leads, not selected 2027 independent testing.",
+      "missing_activity": "No independently executed 2027 population definition, source enumeration, sample, workpaper, limitation review or description-assertion reconciliation.",
+      "next_procedure": "After an accepted engagement, define one source-complete population, sample and method; collect native originals, reperform the test and record exceptions and reviewer disposition.",
+      "proposed_owner_ids": [
+        "AS-P009"
+      ],
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_count": 5
+    },
+    {
+      "authority_gate": "Severity is local/preliminary; technical correction and escalation request are not authorized closure or accepted residual risk.",
+      "control_description": "Findings and remediation items maintain owner, severity, due date, action, validation, risk acceptance, and governance escalation.",
+      "control_id": "SH-ASS-005",
+      "documentary_design_leads": [
+        {
+          "classification": "DOCUMENTARY_DESIGN_ONLY",
+          "component_id": "documents",
+          "native_version_count": 359,
+          "selected_in_proposed_registry": false
+        }
+      ],
+      "lead": "Reviewed company-native ASS_FINDINGS_V1 covers one selected fictional Boise issue with branch-specific clocks.",
+      "missing_activity": "No full 2027 findings population, accepted remediation plan, durable bypass-prevention validation, issue closure, risk acceptance or governance acknowledgment.",
+      "next_procedure": "Reconcile the selected issue to an independent defect population; inspect owner notification and overdue request, then require attributable action/validation and appropriate approval before any closure claim.",
+      "proposed_owner_ids": [
+        "AS-P005"
+      ],
+      "selected_2027_native_source_ids": [
+        "ASS_FINDINGS_V1"
+      ],
+      "side": "A",
+      "task_count": 4
+    },
+    {
+      "authority_gate": "P001/Board authority and commitment acceptance cannot be invented from a risk coordinator or pending request.",
+      "control_description": "Risk appetite and tolerance statements are approved and translated into escalation rules.",
+      "control_id": "SH-ERM-002",
+      "documentary_design_leads": [
+        {
+          "classification": "DOCUMENTARY_DESIGN_ONLY",
+          "component_id": "documents",
+          "native_version_count": 359,
+          "selected_in_proposed_registry": false
+        }
+      ],
+      "lead": "ERM001 quarterly method is bounded native context and ERM_STAGEGATE_V2 retains pending residual requests; neither establishes approved appetite or service commitments.",
+      "missing_activity": "No approved risk appetite/tolerance, accepted measurable service commitments, translation to escalation thresholds or 2027 application.",
+      "next_procedure": "Source actual authorized appetite and accepted service commitments, test measurable objectives and one threshold escalation; keep pending if authority is absent.",
+      "proposed_owner_ids": [
+        "P001"
+      ],
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_count": 4
+    },
+    {
+      "authority_gate": "Every stage-gate residual request remains PENDING_AUTHORITY_DECISION; no P001/Board acceptance, appetite or waiver.",
+      "control_description": "Material residual risks and accepted risks are reviewed at the appropriate governance level.",
+      "control_id": "SH-ERM-003",
+      "documentary_design_leads": [
+        {
+          "classification": "DOCUMENTARY_DESIGN_ONLY",
+          "component_id": "documents",
+          "native_version_count": 359,
+          "selected_in_proposed_registry": false
+        }
+      ],
+      "lead": "Reviewed ERM_STAGEGATE_V2 has one Boise dependency assessment and pending residual-risk request; ERM001 is two-input method context.",
+      "missing_activity": "No final accepted/rejected residual decision, approved threshold, independent control-conflict alternative test, complete significant-risk population or insurance treatment decision.",
+      "next_procedure": "Reperform the Boise dependency/control conflict and recovery evidence; obtain actual authorized disposition, or preserve pending state and open exception.",
+      "proposed_owner_ids": [
+        "P001"
+      ],
+      "selected_2027_native_source_ids": [
+        "ERM_STAGEGATE_V2"
+      ],
+      "side": "A",
+      "task_count": 5
+    },
+    {
+      "authority_gate": "AS-P007 local technical recommendation is distinct from separate transition site release and any governance risk acceptance.",
+      "control_description": "New ventures, acquisitions, major products, and physical operations receive cross-functional risk assessment.",
+      "control_id": "SH-ERM-004",
+      "documentary_design_leads": [
+        {
+          "classification": "DOCUMENTARY_DESIGN_ONLY",
+          "component_id": "documents",
+          "native_version_count": 359,
+          "selected_in_proposed_registry": false
+        }
+      ],
+      "lead": "Reviewed ERM_STAGEGATE_V2 has four role-attributed inputs, one selected Boise service assessment, Clean/Messy reassessments and local technical gates.",
+      "missing_activity": "No complete venture/provider-change population, accepted procedure change, corporate release approval or assurance of all stage-gates.",
+      "next_procedure": "Select changed services from an independent population, test timing of four inputs/reassessment against release, and inspect resulting approved procedure change or explicit no-change decision.",
+      "proposed_owner_ids": [
+        "AS-P005"
+      ],
+      "selected_2027_native_source_ids": [
+        "ERM_STAGEGATE_V2"
+      ],
+      "side": "A",
+      "task_count": 4
+    },
+    {
+      "authority_gate": "A historical board decision and meeting calendar do not assert 2027 governing-body oversight or quorum action.",
+      "control_description": "Board governance guidelines and committee charters are maintained and approved.",
+      "control_id": "SH-GOV-001",
+      "documentary_design_leads": [
+        {
+          "classification": "DOCUMENTARY_DESIGN_ONLY",
+          "component_id": "documents",
+          "native_version_count": 359,
+          "selected_in_proposed_registry": false
+        },
+        {
+          "classification": "DOCUMENTARY_DESIGN_ONLY",
+          "component_id": "repository-documents",
+          "native_version_count": 8,
+          "selected_in_proposed_registry": false
+        }
+      ],
+      "lead": "Locked 2024 independent-chair/committee-architecture minutes are historical context; a 2027 charter repository and minutes are only source-search targets.",
+      "missing_activity": "No selected 2027 approved charters, committee membership/eligibility, minutes challenging control failures or maintenance review.",
+      "next_procedure": "Source current charters, composition and minutes of an actual fictional-world control-failure challenge with dated collective approval.",
+      "proposed_owner_ids": [
+        "AS-P004"
+      ],
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_count": 4
+    },
+    {
+      "authority_gate": "CISO title is not proof of HIPAA security-official designation; reference scope does not establish hybrid designation; P001/Board reserved powers need actual records.",
+      "control_description": "Reserved matters and delegated authority are documented and reviewed.",
+      "control_id": "SH-GOV-003",
+      "documentary_design_leads": [
+        {
+          "classification": "DOCUMENTARY_DESIGN_ONLY",
+          "component_id": "documents",
+          "native_version_count": 359,
+          "selected_in_proposed_registry": false
+        },
+        {
+          "classification": "DOCUMENTARY_DESIGN_ONLY",
+          "component_id": "repository-documents",
+          "native_version_count": 8,
+          "selected_in_proposed_registry": false
+        }
+      ],
+      "lead": "2026 enterprise appointments and historical Board records identify roles; ERM_STAGEGATE_V2 contains pending residual routing, not a delegation decision.",
+      "missing_activity": "No selected 2027 reserved-matters/delegation review, actual HIPAA security-official appointment evidence, hybrid-entity designation, cross-site oversight or conflict resolution.",
+      "next_procedure": "Trace a current authorized delegation and cross-site escalation through decision rights and Board/committee action; separately verify security-official and any hybrid designation if applicable.",
+      "proposed_owner_ids": [
+        "P001"
+      ],
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_count": 6
+    },
+    {
+      "authority_gate": "P043 or a Corporate Secretary contact cannot substitute for the governing body\u2019s collective determination.",
+      "control_description": "Director independence, conflicts, recusal, and committee eligibility are assessed.",
+      "control_id": "SH-GOV-004",
+      "documentary_design_leads": [
+        {
+          "classification": "DOCUMENTARY_DESIGN_ONLY",
+          "component_id": "documents",
+          "native_version_count": 359,
+          "selected_in_proposed_registry": false
+        }
+      ],
+      "lead": "2024 independent-chair minute is historical; 2026 appointments explain reporting relationships but do not establish current director/committee independence.",
+      "missing_activity": "No selected 2027 conflict declarations, director independence assessments, recusal events, eligibility review or minutes challenging control failure.",
+      "next_procedure": "Source current director/committee roster, conflicts and recusal decisions, then test an actual challenged oversight matter against recorded quorum/action.",
+      "proposed_owner_ids": [
+        "P043"
+      ],
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_count": 4
+    },
+    {
+      "authority_gate": "Management control owners and any independent evaluator must be separately identified; no self-assessment becomes independent assurance.",
+      "control_description": "Management performs periodic control-owner certification/self-assessment without labeling it independent assurance.",
+      "control_id": "SH-ASS-001",
+      "documentary_design_leads": [
+        {
+          "classification": "DOCUMENTARY_DESIGN_ONLY",
+          "component_id": "documents",
+          "native_version_count": 359,
+          "selected_in_proposed_registry": false
+        }
+      ],
+      "lead": "Control calendar and owner certification register is a proposed design/search target; 2026 AS-P005 appointment identifies a contact, not a 2027 certification.",
+      "missing_activity": "No selected 2027 owner certification, critical-duty backup/competence review, recurring-failure response, evaluation plan or independent sample.",
+      "next_procedure": "Choose one scoped control and quarter; source its schedule, owner certification, backup/competence input, exceptions and management response, then independently compare to a separate evaluation plan.",
+      "proposed_owner_ids": [
+        "AS-P005"
+      ],
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_count": 5
+    },
+    {
+      "authority_gate": "Second-line criteria and reviewer independence from execution need accepted scope and accountable authority; HIPAA applicability remains unassessed.",
+      "control_description": "Second-line compliance/control monitoring follows documented scope, criteria, evidence, results, and escalation.",
+      "control_id": "SH-ASS-002",
+      "documentary_design_leads": [
+        {
+          "classification": "DOCUMENTARY_DESIGN_ONLY",
+          "component_id": "documents",
+          "native_version_count": 359,
+          "selected_in_proposed_registry": false
+        }
+      ],
+      "lead": "Monitoring schedule and obligation register is proposed documentary design; AS-P005 is a 2026 role contact only.",
+      "missing_activity": "No selected 2027 second-line monitoring plan, nontechnical and technical evaluation, change-triggered refresh, result or escalated exception.",
+      "next_procedure": "For one material service change, source dated monitoring criteria and two distinct checks, compare schedule to work performed, and retain unresolved gaps/escalation.",
+      "proposed_owner_ids": [
+        "AS-P005"
+      ],
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_count": 5
+    },
+    {
+      "authority_gate": "Functional reporting statement alone is not independence or engagement authorization; Board/committee collective action cannot be inferred.",
+      "control_description": "Independent assurance engagements maintain organizational independence, approved scope, evidence, findings, review, and direct escalation rights.",
+      "control_id": "SH-ASS-003",
+      "documentary_design_leads": [
+        {
+          "classification": "DOCUMENTARY_DESIGN_ONLY",
+          "component_id": "documents",
+          "native_version_count": 359,
+          "selected_in_proposed_registry": false
+        }
+      ],
+      "lead": "2026 appointment canon proposes AS-P009 Internal Audit functional reporting; an independent assurance engagement and review record system is a proposed source target.",
+      "missing_activity": "No selected 2027 approved independent engagement scope, evaluator conflict check, execution workpapers, supervisory review or direct escalation.",
+      "next_procedure": "Obtain an actual fictional-world engagement mandate, accepted scope, evaluator conflict review and attributed execution/review before treating any work as independent assurance.",
+      "proposed_owner_ids": [
+        "AS-P009"
+      ],
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_count": 4
+    },
+    {
+      "authority_gate": "Qualified engagement scope, source access and independent reviewer acceptance are required; an audit module cannot manufacture company evidence.",
+      "control_description": "Control testing defines the population/source, period, method, evidence, exceptions, and limitations before concluding.",
+      "control_id": "SH-ASS-004",
+      "documentary_design_leads": [
+        {
+          "classification": "DOCUMENTARY_DESIGN_ONLY",
+          "component_id": "documents",
+          "native_version_count": 359,
+          "selected_in_proposed_registry": false
+        }
+      ],
+      "lead": "Assessment workspace/evidence index and CCF assurance design are tool/procedure leads, not selected 2027 independent testing.",
+      "missing_activity": "No independently executed 2027 population definition, source enumeration, sample, workpaper, limitation review or description-assertion reconciliation.",
+      "next_procedure": "After an accepted engagement, define one source-complete population, sample and method; collect native originals, reperform the test and record exceptions and reviewer disposition.",
+      "proposed_owner_ids": [
+        "AS-P009"
+      ],
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_count": 5
+    },
+    {
+      "authority_gate": "Severity is local/preliminary; technical correction and escalation request are not authorized closure or accepted residual risk.",
+      "control_description": "Findings and remediation items maintain owner, severity, due date, action, validation, risk acceptance, and governance escalation.",
+      "control_id": "SH-ASS-005",
+      "documentary_design_leads": [
+        {
+          "classification": "DOCUMENTARY_DESIGN_ONLY",
+          "component_id": "documents",
+          "native_version_count": 359,
+          "selected_in_proposed_registry": false
+        }
+      ],
+      "lead": "Reviewed company-native ASS_FINDINGS_V1 covers one selected fictional Boise issue with branch-specific clocks.",
+      "missing_activity": "No full 2027 findings population, accepted remediation plan, durable bypass-prevention validation, issue closure, risk acceptance or governance acknowledgment.",
+      "next_procedure": "Reconcile the selected issue to an independent defect population; inspect owner notification and overdue request, then require attributable action/validation and appropriate approval before any closure claim.",
+      "proposed_owner_ids": [
+        "AS-P005"
+      ],
+      "selected_2027_native_source_ids": [
+        "ASS_FINDINGS_V1"
+      ],
+      "side": "B",
+      "task_count": 4
+    },
+    {
+      "authority_gate": "P001/Board authority and commitment acceptance cannot be invented from a risk coordinator or pending request.",
+      "control_description": "Risk appetite and tolerance statements are approved and translated into escalation rules.",
+      "control_id": "SH-ERM-002",
+      "documentary_design_leads": [
+        {
+          "classification": "DOCUMENTARY_DESIGN_ONLY",
+          "component_id": "documents",
+          "native_version_count": 359,
+          "selected_in_proposed_registry": false
+        }
+      ],
+      "lead": "ERM001 quarterly method is bounded native context and ERM_STAGEGATE_V2 retains pending residual requests; neither establishes approved appetite or service commitments.",
+      "missing_activity": "No approved risk appetite/tolerance, accepted measurable service commitments, translation to escalation thresholds or 2027 application.",
+      "next_procedure": "Source actual authorized appetite and accepted service commitments, test measurable objectives and one threshold escalation; keep pending if authority is absent.",
+      "proposed_owner_ids": [
+        "P001"
+      ],
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_count": 4
+    },
+    {
+      "authority_gate": "Every stage-gate residual request remains PENDING_AUTHORITY_DECISION; no P001/Board acceptance, appetite or waiver.",
+      "control_description": "Material residual risks and accepted risks are reviewed at the appropriate governance level.",
+      "control_id": "SH-ERM-003",
+      "documentary_design_leads": [
+        {
+          "classification": "DOCUMENTARY_DESIGN_ONLY",
+          "component_id": "documents",
+          "native_version_count": 359,
+          "selected_in_proposed_registry": false
+        }
+      ],
+      "lead": "Reviewed ERM_STAGEGATE_V2 has one Boise dependency assessment and pending residual-risk request; ERM001 is two-input method context.",
+      "missing_activity": "No final accepted/rejected residual decision, approved threshold, independent control-conflict alternative test, complete significant-risk population or insurance treatment decision.",
+      "next_procedure": "Reperform the Boise dependency/control conflict and recovery evidence; obtain actual authorized disposition, or preserve pending state and open exception.",
+      "proposed_owner_ids": [
+        "P001"
+      ],
+      "selected_2027_native_source_ids": [
+        "ERM_STAGEGATE_V2"
+      ],
+      "side": "B",
+      "task_count": 5
+    },
+    {
+      "authority_gate": "AS-P007 local technical recommendation is distinct from separate transition site release and any governance risk acceptance.",
+      "control_description": "New ventures, acquisitions, major products, and physical operations receive cross-functional risk assessment.",
+      "control_id": "SH-ERM-004",
+      "documentary_design_leads": [
+        {
+          "classification": "DOCUMENTARY_DESIGN_ONLY",
+          "component_id": "documents",
+          "native_version_count": 359,
+          "selected_in_proposed_registry": false
+        }
+      ],
+      "lead": "Reviewed ERM_STAGEGATE_V2 has four role-attributed inputs, one selected Boise service assessment, Clean/Messy reassessments and local technical gates.",
+      "missing_activity": "No complete venture/provider-change population, accepted procedure change, corporate release approval or assurance of all stage-gates.",
+      "next_procedure": "Select changed services from an independent population, test timing of four inputs/reassessment against release, and inspect resulting approved procedure change or explicit no-change decision.",
+      "proposed_owner_ids": [
+        "AS-P005"
+      ],
+      "selected_2027_native_source_ids": [
+        "ERM_STAGEGATE_V2"
+      ],
+      "side": "B",
+      "task_count": 4
+    },
+    {
+      "authority_gate": "A historical board decision and meeting calendar do not assert 2027 governing-body oversight or quorum action.",
+      "control_description": "Board governance guidelines and committee charters are maintained and approved.",
+      "control_id": "SH-GOV-001",
+      "documentary_design_leads": [
+        {
+          "classification": "DOCUMENTARY_DESIGN_ONLY",
+          "component_id": "documents",
+          "native_version_count": 359,
+          "selected_in_proposed_registry": false
+        },
+        {
+          "classification": "DOCUMENTARY_DESIGN_ONLY",
+          "component_id": "repository-documents",
+          "native_version_count": 8,
+          "selected_in_proposed_registry": false
+        }
+      ],
+      "lead": "Locked 2024 independent-chair/committee-architecture minutes are historical context; a 2027 charter repository and minutes are only source-search targets.",
+      "missing_activity": "No selected 2027 approved charters, committee membership/eligibility, minutes challenging control failures or maintenance review.",
+      "next_procedure": "Source current charters, composition and minutes of an actual fictional-world control-failure challenge with dated collective approval.",
+      "proposed_owner_ids": [
+        "AS-P004"
+      ],
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_count": 4
+    },
+    {
+      "authority_gate": "CISO title is not proof of HIPAA security-official designation; reference scope does not establish hybrid designation; P001/Board reserved powers need actual records.",
+      "control_description": "Reserved matters and delegated authority are documented and reviewed.",
+      "control_id": "SH-GOV-003",
+      "documentary_design_leads": [
+        {
+          "classification": "DOCUMENTARY_DESIGN_ONLY",
+          "component_id": "documents",
+          "native_version_count": 359,
+          "selected_in_proposed_registry": false
+        },
+        {
+          "classification": "DOCUMENTARY_DESIGN_ONLY",
+          "component_id": "repository-documents",
+          "native_version_count": 8,
+          "selected_in_proposed_registry": false
+        }
+      ],
+      "lead": "2026 enterprise appointments and historical Board records identify roles; ERM_STAGEGATE_V2 contains pending residual routing, not a delegation decision.",
+      "missing_activity": "No selected 2027 reserved-matters/delegation review, actual HIPAA security-official appointment evidence, hybrid-entity designation, cross-site oversight or conflict resolution.",
+      "next_procedure": "Trace a current authorized delegation and cross-site escalation through decision rights and Board/committee action; separately verify security-official and any hybrid designation if applicable.",
+      "proposed_owner_ids": [
+        "P001"
+      ],
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_count": 6
+    },
+    {
+      "authority_gate": "P043 or a Corporate Secretary contact cannot substitute for the governing body\u2019s collective determination.",
+      "control_description": "Director independence, conflicts, recusal, and committee eligibility are assessed.",
+      "control_id": "SH-GOV-004",
+      "documentary_design_leads": [
+        {
+          "classification": "DOCUMENTARY_DESIGN_ONLY",
+          "component_id": "documents",
+          "native_version_count": 359,
+          "selected_in_proposed_registry": false
+        }
+      ],
+      "lead": "2024 independent-chair minute is historical; 2026 appointments explain reporting relationships but do not establish current director/committee independence.",
+      "missing_activity": "No selected 2027 conflict declarations, director independence assessments, recusal events, eligibility review or minutes challenging control failure.",
+      "next_procedure": "Source current director/committee roster, conflicts and recusal decisions, then test an actual challenged oversight matter against recorded quorum/action.",
+      "proposed_owner_ids": [
+        "P043"
+      ],
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_count": 4
+    }
+  ],
+  "counts": {
+    "audit_task_credit": 0,
+    "authored_clauses_per_side": 17,
+    "bounded_native_partial_routes_per_side": 13,
+    "controls_per_side": 11,
+    "design_or_historical_only_routes_per_side": 37,
+    "generic_inferred_gates_per_side": 33,
+    "paired_tasks_total": 100,
+    "tasks_per_side": 50
+  },
+  "family": "risk_assurance_governance",
+  "inputs": {
+    "assurance_findings_proposal": {
+      "path": "enterprise/audit_suite/ASSURANCE_FINDINGS_2027_PROPOSAL.md",
+      "repository_label": "isolated-tracked",
+      "sha256": "784aeadd6e7fdeb33b7b6dce66e7adeccd48e453677671f7fbba4c132585f610"
+    },
+    "control_procedures": {
+      "path": "enterprise/ccf/assurance/design_data/control_procedures.json",
+      "repository_label": "isolated-tracked",
+      "sha256": "258f5c868e16f3dc197594857dc86a4f2b3ef11e3e5a36dd0a80a9fc6d40c679"
+    },
+    "enterprise_appointments_2026": {
+      "path": "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md",
+      "repository_label": "isolated-tracked",
+      "sha256": "1707ed7021576048ca5f1904ca5e94d484e8f7e2992da5c9e04965421f79a751"
+    },
+    "frozen_409_task_screen": {
+      "path": "enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-all409-task-source-screen-v3/TASK-ROWS.json",
+      "repository_label": "SABLEHARBOR-audit-suite/private-reviewed",
+      "sha256": "a0f995228683bde4663e1232380622fe208a225d71152cfb5aaf3cb0620f98ba"
+    },
+    "frozen_unmatched_373_task_routes": {
+      "path": "enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-unmatched373-company-native-coverage-plan-v2/TASK-ROUTES.json",
+      "repository_label": "SABLEHARBOR-audit-suite/private-reviewed",
+      "sha256": "00415fca7d40339ca416514829e62a33b0a7f47e2905c818fd4fee329d5cf69b"
+    },
+    "historical_board_minutes_2024": {
+      "path": "docs/governance/board-records/2024-02-15_independent-chair-and-committee-architecture-minutes.md",
+      "repository_label": "isolated-tracked",
+      "sha256": "ff5ad2d4299617a7b931924b757e6ca2316795d2133a656c219094528ce0c9a4"
+    },
+    "matrix_independent_review": {
+      "path": "enterprise/generated/audit-suite/documentary-discovery-routes-2026-09-29/independent-review-v2/REVIEW.json",
+      "repository_label": "SABLEHARBOR-audit-suite/private-reviewed",
+      "sha256": "c4064f6217c0e7f69276adc71004d6da7971867ccf3d844a3e198145cec31ace"
+    },
+    "reviewed_283_route_matrix": {
+      "path": "enterprise/generated/audit-suite/documentary-discovery-routes-2026-09-29/run-v2/MATRIX.json",
+      "repository_label": "SABLEHARBOR-audit-suite/private-reviewed",
+      "sha256": "e9477d2074bebce185e412a3ee7c424ded395c1a1128a7c918a94f6acbd1e327"
+    },
+    "risk_stagegate_proposal": {
+      "path": "enterprise/audit_suite/RISK_GOVERNANCE_STAGEGATE_PROPOSAL.md",
+      "repository_label": "isolated-tracked",
+      "sha256": "94c0609a6877b4b4cae523b5ab4718496f9bee86c0cff6f183d544cd949a99b8"
+    }
+  },
+  "limits": [
+    "2027 source event/availability clocks are fictional future chronology as of 2026-09-29; imported_at is actual authoring time.",
+    "A/B are audit sides, not Clean/Messy fictional company branches. No side pairing or collection occurs.",
+    "The 13 touched routes per side have bounded native context only; source association is not clause sufficiency.",
+    "The other 37 routes per side have design or historical context, not selected-period company-native activity.",
+    "No Board appetite, accepted residual risk, finding closure, independent assurance, actual operating year, HIPAA applicability or audit task credit is asserted."
+  ],
+  "next_bounded_cohorts": [
+    {
+      "authority_gate": "Accepted owner assignments, monitoring criteria and role separation; no assertion of complete control or evaluation populations.",
+      "controls": [
+        "SH-ASS-001",
+        "SH-ASS-002"
+      ],
+      "id": "RG-1",
+      "proposal": "One selected Q4 management owner certification and a separately attributed second-line monitoring cycle across a nontechnical and technical safeguard. Keep their responsibilities and conclusions distinct."
+    },
+    {
+      "authority_gate": "Actual Board/committee mandate and organizational independence cannot be invented from appointments or the audit tool.",
+      "controls": [
+        "SH-ASS-003",
+        "SH-ASS-004"
+      ],
+      "id": "RG-2",
+      "proposal": "An independent-assurance engagement intake/workspace with proposed scope, evaluator-conflict check, population plan and evidence-source index. Executed testing only after actual fictional-world mandate and reviewer authority are established."
+    },
+    {
+      "authority_gate": "Do not synthesize approved appetite, reserved-matter delegation, hybrid entity designation, director independence or collective Board action without attributable authority facts.",
+      "controls": [
+        "SH-ERM-002",
+        "SH-GOV-001",
+        "SH-GOV-003",
+        "SH-GOV-004"
+      ],
+      "id": "RG-3",
+      "proposal": "A dated governance decision docket for appetite, charters, delegation, security-official/hybrid-designation applicability and director conflicts, initially pending with exact owner/Board authority questions."
+    }
+  ],
+  "reviewed_native_sources": {
+    "ASS_FINDINGS_V1": {
+      "controls": [
+        "SH-ASS-005"
+      ],
+      "pins": {
+        "database": {
+          "path": "enterprise/generated/audit-suite/company-assurance-findings-2026-09-29/run-v1/company.sqlite3",
+          "repository_label": "SABLEHARBOR-audit-suite/private-reviewed",
+          "sha256": "0e010fb8f34acb7c4c8dfff6e43d8e9f2d9c01c99ae36311547175a6d0026c53"
+        },
+        "independent_review": {
+          "path": "enterprise/generated/audit-suite/company-assurance-findings-2026-09-29/independent-review-v1/REVIEW.json",
+          "repository_label": "SABLEHARBOR-audit-suite/private-reviewed",
+          "sha256": "23033dcf6641d18038bc58a1e02fd1b014a4e550fe0ae78bd854e1f7f5552f58"
+        },
+        "manifest": {
+          "path": "enterprise/generated/audit-suite/company-assurance-findings-2026-09-29/run-v1/MANIFEST.json",
+          "repository_label": "SABLEHARBOR-audit-suite/private-reviewed",
+          "sha256": "2a5db28d3024d00e194e02219428bb133dfbbe085123bf776980ac6b68f8b89f"
+        },
+        "receipt": {
+          "path": "enterprise/generated/audit-suite/company-assurance-findings-2026-09-29/run-v1/RECEIPT.json",
+          "repository_label": "SABLEHARBOR-audit-suite/private-reviewed",
+          "sha256": "74c614682c269eb1aff431b0c834e6c0581ebbb921e2549b0e200923d2129091"
+        }
+      },
+      "records_by_scenario": {
+        "CLEAN": [
+          {
+            "available_at": "2027-07-23T09:00:00.000000+00:00",
+            "branch": "ISSUE-CLEAN",
+            "company": "SABLE-HARBOR-REFERENCE",
+            "event_at": "2027-07-23T09:00:00.000000+00:00",
+            "imported_at": "2026-09-30T02:35:05.750247+00:00",
+            "record": "BOISE-KEY-BYPASS-SELECTED",
+            "sha256": "979a37a5926d895e2eaf1f3dbe450685c96d556864d91e6e6477dcda49eae562",
+            "system": "issue_screening",
+            "version": 1
+          }
+        ],
+        "MESSY": [
+          {
+            "available_at": "2027-07-23T09:00:00.000000+00:00",
+            "branch": "ISSUE-MESSY",
+            "company": "SABLE-HARBOR-REFERENCE",
+            "event_at": "2027-07-23T09:00:00.000000+00:00",
+            "imported_at": "2026-09-30T02:35:05.768040+00:00",
+            "record": "BOISE-KEY-BYPASS-SELECTED",
+            "sha256": "8663ab281d9d3ba0f8fb77d98c07cc7c07fe29a40ac466b6af1b0be5c2ffec84",
+            "system": "issue_screening",
+            "version": 1
+          },
+          {
+            "available_at": "2027-07-24T09:00:00.000000+00:00",
+            "branch": "ISSUE-MESSY",
+            "company": "SABLE-HARBOR-REFERENCE",
+            "event_at": "2027-07-24T09:00:00.000000+00:00",
+            "imported_at": "2026-09-30T02:35:05.770805+00:00",
+            "record": "BOISE-KEY-BYPASS-SELECTED",
+            "sha256": "e2851c526196a9e2144d98099b2de19bf2128fa292d266d5d2f1befa5d3f00d7",
+            "system": "issue_finding",
+            "version": 1
+          },
+          {
+            "available_at": "2027-07-25T09:00:00.000000+00:00",
+            "branch": "ISSUE-MESSY",
+            "company": "SABLE-HARBOR-REFERENCE",
+            "event_at": "2027-07-25T09:00:00.000000+00:00",
+            "imported_at": "2026-09-30T02:35:05.773569+00:00",
+            "record": "BOISE-KEY-BYPASS-SELECTED",
+            "sha256": "fa9aba77089b4d96441a894458572a84a6d5ec0702fcb8cf91607bdc489c6469",
+            "system": "owner_notification",
+            "version": 1
+          },
+          {
+            "available_at": "2027-08-12T09:00:00.000000+00:00",
+            "branch": "ISSUE-MESSY",
+            "company": "SABLE-HARBOR-REFERENCE",
+            "event_at": "2027-08-12T09:00:00.000000+00:00",
+            "imported_at": "2026-09-30T02:35:05.776667+00:00",
+            "record": "BOISE-KEY-BYPASS-SELECTED",
+            "sha256": "f1ce16201b3f1567da8c6c5b19f2fbe429a57f4f2aca6d04fe89e77acb56f535",
+            "system": "remediation_request",
+            "version": 1
+          },
+          {
+            "available_at": "2027-09-02T09:00:00.000000+00:00",
+            "branch": "ISSUE-MESSY",
+            "company": "SABLE-HARBOR-REFERENCE",
+            "event_at": "2027-09-02T09:00:00.000000+00:00",
+            "imported_at": "2026-09-30T02:35:05.779894+00:00",
+            "record": "BOISE-KEY-BYPASS-SELECTED",
+            "sha256": "0100d76ef3943400480bba65423657c54e00bf61373dd7f58e75069bb4be2422",
+            "system": "overdue_escalation",
+            "version": 1
+          }
+        ]
+      },
+      "review": "independent-review-v1/REVIEW.json",
+      "root": "enterprise/generated/audit-suite/company-assurance-findings-2026-09-29",
+      "run": "run-v1",
+      "selected_scope": "One fictional Boise key-bypass condition: Clean selected no-defect screen; Messy open finding, owner notification, remediation request and overdue escalation request; no validated closure or full issue population."
+    },
+    "ERM_STAGEGATE_V2": {
+      "controls": [
+        "SH-ERM-003",
+        "SH-ERM-004"
+      ],
+      "pins": {
+        "database": {
+          "path": "enterprise/generated/audit-suite/company-risk-governance-stagegate-2026-09-29/run-v2/company.sqlite3",
+          "repository_label": "SABLEHARBOR-audit-suite/private-reviewed",
+          "sha256": "36fcc9b4ce599a760ba98521cfad22a6082e5f34dd4c728c40b59bb133e383d2"
+        },
+        "independent_review": {
+          "path": "enterprise/generated/audit-suite/company-risk-governance-stagegate-2026-09-29/independent-review-v2/REVIEW.json",
+          "repository_label": "SABLEHARBOR-audit-suite/private-reviewed",
+          "sha256": "78dbf2b9585efd8f51a08a598d6c56aa342ef7845b56e6c0892a239a968fde34"
+        },
+        "manifest": {
+          "path": "enterprise/generated/audit-suite/company-risk-governance-stagegate-2026-09-29/run-v2/MANIFEST.json",
+          "repository_label": "SABLEHARBOR-audit-suite/private-reviewed",
+          "sha256": "c7f45a8147c8ce3f19ab1029e38dd3db53b3cd0cfa71700ff755072e492fd4d1"
+        },
+        "receipt": {
+          "path": "enterprise/generated/audit-suite/company-risk-governance-stagegate-2026-09-29/run-v2/RECEIPT.json",
+          "repository_label": "SABLEHARBOR-audit-suite/private-reviewed",
+          "sha256": "107aa37fad9fa453777c62ea119e677ec72c63efa7439885de2c318028bc89ee"
+        }
+      },
+      "records_by_scenario": {
+        "CLEAN": [
+          {
+            "available_at": "2027-06-10T10:00:00.000000+00:00",
+            "branch": "RISK-CLEAN",
+            "company": "SABLE-HARBOR-REFERENCE",
+            "event_at": "2027-06-10T10:00:00.000000+00:00",
+            "imported_at": "2026-09-30T02:28:22.018247+00:00",
+            "record": "INPUT-TECHNOLOGY",
+            "sha256": "a896407d967b15e3004028196bdc8d9cb5f82ba2b6b8427720579b17611dda94",
+            "system": "stage_input",
+            "version": 1
+          },
+          {
+            "available_at": "2027-06-11T10:00:00.000000+00:00",
+            "branch": "RISK-CLEAN",
+            "company": "SABLE-HARBOR-REFERENCE",
+            "event_at": "2027-06-11T10:00:00.000000+00:00",
+            "imported_at": "2026-09-30T02:28:22.021026+00:00",
+            "record": "INPUT-SECURITY",
+            "sha256": "986362f2ebb668c4e8bbbbf140fffe59789e94b1afbf0428c3133df0f8f0ab01",
+            "system": "stage_input",
+            "version": 1
+          },
+          {
+            "available_at": "2027-06-12T10:00:00.000000+00:00",
+            "branch": "RISK-CLEAN",
+            "company": "SABLE-HARBOR-REFERENCE",
+            "event_at": "2027-06-12T10:00:00.000000+00:00",
+            "imported_at": "2026-09-30T02:28:22.023906+00:00",
+            "record": "INPUT-PROCUREMENT",
+            "sha256": "ed809e9edd638648447f642a16b66a5e818bc851c463c4619957471c88157aa7",
+            "system": "stage_input",
+            "version": 1
+          },
+          {
+            "available_at": "2027-06-13T10:00:00.000000+00:00",
+            "branch": "RISK-CLEAN",
+            "company": "SABLE-HARBOR-REFERENCE",
+            "event_at": "2027-06-13T10:00:00.000000+00:00",
+            "imported_at": "2026-09-30T02:28:22.026854+00:00",
+            "record": "INPUT-LEGAL",
+            "sha256": "1f8a0d59a3d9d07c113f6661d8149ea91323c922e0b9257d1f11c8af6df9f402",
+            "system": "stage_input",
+            "version": 1
+          },
+          {
+            "available_at": "2027-07-01T10:00:00.000000+00:00",
+            "branch": "RISK-CLEAN",
+            "company": "SABLE-HARBOR-REFERENCE",
+            "event_at": "2027-07-01T10:00:00.000000+00:00",
+            "imported_at": "2026-09-30T02:28:22.029992+00:00",
+            "record": "BOISE-RECOVERY",
+            "sha256": "d3ca5363ad37ed2e4a6c1513828dc921f14ff1b2740c3eb397d1871c584f00e2",
+            "system": "stage_assessment",
+            "version": 1
+          },
+          {
+            "available_at": "2027-07-23T10:00:00.000000+00:00",
+            "branch": "RISK-CLEAN",
+            "company": "SABLE-HARBOR-REFERENCE",
+            "event_at": "2027-07-23T10:00:00.000000+00:00",
+            "imported_at": "2026-09-30T02:28:22.033209+00:00",
+            "record": "BOISE-RECOVERY",
+            "sha256": "ad1d26debe704b19ca19c84aa50a61c141871126e50918d25a185d88edb87e9f",
+            "system": "stage_reassessment",
+            "version": 1
+          },
+          {
+            "available_at": "2027-07-25T10:00:00.000000+00:00",
+            "branch": "RISK-CLEAN",
+            "company": "SABLE-HARBOR-REFERENCE",
+            "event_at": "2027-07-25T10:00:00.000000+00:00",
+            "imported_at": "2026-09-30T02:28:22.036256+00:00",
+            "record": "BOISE-RECOVERY",
+            "sha256": "66467de18ad519129ac56af29fbfc2614eafad429d0cbe504712432637cac6e8",
+            "system": "technical_gate",
+            "version": 1
+          },
+          {
+            "available_at": "2027-07-29T10:00:00.000000+00:00",
+            "branch": "RISK-CLEAN",
+            "company": "SABLE-HARBOR-REFERENCE",
+            "event_at": "2027-07-29T10:00:00.000000+00:00",
+            "imported_at": "2026-09-30T02:28:22.039069+00:00",
+            "record": "BOISE-RECOVERY",
+            "sha256": "5dacc0d5bbbdb381ab72d4f4e9110d519303c3fd620cbafaa322fe2465ca3d15",
+            "system": "residual_request",
+            "version": 1
+          }
+        ],
+        "MESSY": [
+          {
+            "available_at": "2027-06-10T10:00:00.000000+00:00",
+            "branch": "RISK-MESSY",
+            "company": "SABLE-HARBOR-REFERENCE",
+            "event_at": "2027-06-10T10:00:00.000000+00:00",
+            "imported_at": "2026-09-30T02:28:22.057180+00:00",
+            "record": "INPUT-TECHNOLOGY",
+            "sha256": "81d0ba3c569d8b7b854d937eebf4f4e44dc8f49dbccc73d77a2dbe50c7199cb3",
+            "system": "stage_input",
+            "version": 1
+          },
+          {
+            "available_at": "2027-06-11T10:00:00.000000+00:00",
+            "branch": "RISK-MESSY",
+            "company": "SABLE-HARBOR-REFERENCE",
+            "event_at": "2027-06-11T10:00:00.000000+00:00",
+            "imported_at": "2026-09-30T02:28:22.060187+00:00",
+            "record": "INPUT-SECURITY",
+            "sha256": "56912bd045cc6efb141c1153ab55d63d883f5d1ebe4acf4e7574826c2b4c8d6e",
+            "system": "stage_input",
+            "version": 1
+          },
+          {
+            "available_at": "2027-06-12T10:00:00.000000+00:00",
+            "branch": "RISK-MESSY",
+            "company": "SABLE-HARBOR-REFERENCE",
+            "event_at": "2027-06-12T10:00:00.000000+00:00",
+            "imported_at": "2026-09-30T02:28:22.063087+00:00",
+            "record": "INPUT-PROCUREMENT",
+            "sha256": "994339fcd16c2e8780121acfc86fb236033200ffef42e35340b7fd46d2f18569",
+            "system": "stage_input",
+            "version": 1
+          },
+          {
+            "available_at": "2027-06-13T10:00:00.000000+00:00",
+            "branch": "RISK-MESSY",
+            "company": "SABLE-HARBOR-REFERENCE",
+            "event_at": "2027-06-13T10:00:00.000000+00:00",
+            "imported_at": "2026-09-30T02:28:22.066033+00:00",
+            "record": "INPUT-LEGAL",
+            "sha256": "169cab9a4be31435cd80ab28ef3be219ee4f662dc038f9cf14e9e2e83cec223f",
+            "system": "stage_input",
+            "version": 1
+          },
+          {
+            "available_at": "2027-07-01T10:00:00.000000+00:00",
+            "branch": "RISK-MESSY",
+            "company": "SABLE-HARBOR-REFERENCE",
+            "event_at": "2027-07-01T10:00:00.000000+00:00",
+            "imported_at": "2026-09-30T02:28:22.069544+00:00",
+            "record": "BOISE-RECOVERY",
+            "sha256": "9e42d278a642711bc39f69b943b190a71c7aacea37e5075b90800bdd4066b70f",
+            "system": "stage_assessment",
+            "version": 1
+          },
+          {
+            "available_at": "2027-07-23T10:00:00.000000+00:00",
+            "branch": "RISK-MESSY",
+            "company": "SABLE-HARBOR-REFERENCE",
+            "event_at": "2027-07-23T10:00:00.000000+00:00",
+            "imported_at": "2026-09-30T02:28:22.072977+00:00",
+            "record": "BOISE-RECOVERY",
+            "sha256": "bf55629f7eb55e701783aaf09dc1a181f43c07ad8a50429607a8d90f1ef57a76",
+            "system": "stage_reassessment",
+            "version": 1
+          },
+          {
+            "available_at": "2027-07-24T10:00:00.000000+00:00",
+            "branch": "RISK-MESSY",
+            "company": "SABLE-HARBOR-REFERENCE",
+            "event_at": "2027-07-24T10:00:00.000000+00:00",
+            "imported_at": "2026-09-30T02:28:22.076606+00:00",
+            "record": "BOISE-RECOVERY",
+            "sha256": "c98c2f3408eba05c6c4757a48b5ef61a66df5eb58a98bb95e1e4d112f5fe6635",
+            "system": "technical_gate",
+            "version": 1
+          },
+          {
+            "available_at": "2027-07-25T10:00:00.000000+00:00",
+            "branch": "RISK-MESSY",
+            "company": "SABLE-HARBOR-REFERENCE",
+            "event_at": "2027-07-25T10:00:00.000000+00:00",
+            "imported_at": "2026-09-30T02:28:22.080116+00:00",
+            "record": "BOISE-RECOVERY",
+            "sha256": "2de69d1e78049a1d498aa9b9b05e2303c4a7bba5b012f33fc9b921b9bd642428",
+            "system": "residual_request",
+            "version": 1
+          },
+          {
+            "available_at": "2027-08-07T10:00:00.000000+00:00",
+            "branch": "RISK-MESSY",
+            "company": "SABLE-HARBOR-REFERENCE",
+            "event_at": "2027-08-07T10:00:00.000000+00:00",
+            "imported_at": "2026-09-30T02:28:22.083031+00:00",
+            "record": "BOISE-RECOVERY",
+            "sha256": "e9b26ff68106a90a7d7f5b0c7f71f3de8a802a4e2a9bf3a79c06126bf62bd8fe",
+            "system": "stage_reassessment",
+            "version": 2
+          },
+          {
+            "available_at": "2027-08-09T10:00:00.000000+00:00",
+            "branch": "RISK-MESSY",
+            "company": "SABLE-HARBOR-REFERENCE",
+            "event_at": "2027-08-09T10:00:00.000000+00:00",
+            "imported_at": "2026-09-30T02:28:22.086186+00:00",
+            "record": "BOISE-RECOVERY",
+            "sha256": "0ad570e40cb7597633d2348e692a06441c362bd55b6c77aedbe9773b2e9478cd",
+            "system": "technical_gate",
+            "version": 2
+          },
+          {
+            "available_at": "2027-08-11T10:00:00.000000+00:00",
+            "branch": "RISK-MESSY",
+            "company": "SABLE-HARBOR-REFERENCE",
+            "event_at": "2027-08-11T10:00:00.000000+00:00",
+            "imported_at": "2026-09-30T02:28:22.089579+00:00",
+            "record": "BOISE-RECOVERY",
+            "sha256": "305326542348851d883a6ca04a794ccf7428e85e4f25f90870c0abd1a4e1a84e",
+            "system": "residual_request",
+            "version": 2
+          }
+        ]
+      },
+      "review": "independent-review-v2/REVIEW.json",
+      "root": "enterprise/generated/audit-suite/company-risk-governance-stagegate-2026-09-29",
+      "run": "run-v2",
+      "selected_scope": "One fictional Boise recovery/provider change with four cross-functional inputs, local reassessment, technical recommendation and pending residual request; no accepted risk or complete enterprise population."
+    }
+  },
+  "routes": [
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Trace critical duties to competence evidence and backups; inspect whether recurring execution failures led to appropriate workload, training or accountability action.",
+      "authority_gate": "Management control owners and any independent evaluator must be separately identified; no self-assessment becomes independent assurance.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No selected 2027 owner certification, critical-duty backup/competence review, recurring-failure response, evaluation plan or independent sample.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "SOC2:CC1.4",
+        "SOC2:CC1.5"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "fdc5a6fcaf528d079262a82db887520c06a84e5c34aa136df65162396eba84ea",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-ASS-001-corporate-ACTION-S-ACCOUNTABILITY",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Compare the evaluation plan with risk, change and evaluator objectivity; inspect an ongoing monitoring gap and an independently performed evaluation.",
+      "authority_gate": "Management control owners and any independent evaluator must be separately identified; no self-assessment becomes independent assurance.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No selected 2027 owner certification, critical-duty backup/competence review, recurring-failure response, evaluation plan or independent sample.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "SOC2:CC4.1"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "bcef7ba92a6f9a5d01c440d83a363476b62e19a7b3882ca2792f183f57391d43",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-ASS-001-corporate-CHECK-SOC2:CC4.1",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Management control owners and any independent evaluator must be separately identified; no self-assessment becomes independent assurance.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "missing_activity": "No selected 2027 owner certification, critical-duty backup/competence review, recurring-failure response, evaluation plan or independent sample.",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "36fdb6cb4b53df93ed3e13ff8d7e3eccbc94a63eb5dcd1bec63c46895a54b9d3",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-ASS-001-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Management control owners and any independent evaluator must be separately identified; no self-assessment becomes independent assurance.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "missing_activity": "No selected 2027 owner certification, critical-duty backup/competence review, recurring-failure response, evaluation plan or independent sample.",
+      "procedure_type": "TOD",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "ce9f73f6bcb426f0b496e8ee63c108e75cfe36874fe91c669246951b13cc84a9",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-ASS-001-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Management control owners and any independent evaluator must be separately identified; no self-assessment becomes independent assurance.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "missing_activity": "No selected 2027 owner certification, critical-duty backup/competence review, recurring-failure response, evaluation plan or independent sample.",
+      "procedure_type": "TOE",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "19daa7db75b1e49835ce46e169ee89a418e1a93ddd6867df1155d8ff9e515460",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-ASS-001-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Compare material environment changes and scheduled evaluations to completed work. Inspect a nontechnical safeguard and a technical configuration for evaluated effectiveness.",
+      "authority_gate": "Second-line criteria and reviewer independence from execution need accepted scope and accountable authority; HIPAA applicability remains unassessed.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-002",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No selected 2027 second-line monitoring plan, nontechnical and technical evaluation, change-triggered refresh, result or escalated exception.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "HIPAA:164.308"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "00e7cc8f2234295a465f615de2f9d930b1f38ffd69bd57edd70d1cd1145e02c9",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-ASS-002-corporate-ACTION-H-EVALUATION",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Compare the evaluation plan with risk, change and evaluator objectivity; inspect an ongoing monitoring gap and an independently performed evaluation.",
+      "authority_gate": "Second-line criteria and reviewer independence from execution need accepted scope and accountable authority; HIPAA applicability remains unassessed.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-002",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No selected 2027 second-line monitoring plan, nontechnical and technical evaluation, change-triggered refresh, result or escalated exception.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "SOC2:CC4.1"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "833eca85a8828492c591c289cf1dd1f1fb6ae86aab78d6e05ff5d18483461e89",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-ASS-002-corporate-CHECK-SOC2:CC4.1",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Second-line criteria and reviewer independence from execution need accepted scope and accountable authority; HIPAA applicability remains unassessed.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-002",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "missing_activity": "No selected 2027 second-line monitoring plan, nontechnical and technical evaluation, change-triggered refresh, result or escalated exception.",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "2ab7f08a036d83c7b8569f0836b5eefbc07bad5a5281d67ccef0cbb0c2a7b2b3",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-ASS-002-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Second-line criteria and reviewer independence from execution need accepted scope and accountable authority; HIPAA applicability remains unassessed.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-002",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "missing_activity": "No selected 2027 second-line monitoring plan, nontechnical and technical evaluation, change-triggered refresh, result or escalated exception.",
+      "procedure_type": "TOD",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "bce6fcf1bb098747dd321d7d36f8c6d306fefa62f22c568c00bf9e7d6c423372",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-ASS-002-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Second-line criteria and reviewer independence from execution need accepted scope and accountable authority; HIPAA applicability remains unassessed.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-002",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "missing_activity": "No selected 2027 second-line monitoring plan, nontechnical and technical evaluation, change-triggered refresh, result or escalated exception.",
+      "procedure_type": "TOE",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "c3fd65927d5d973122b8d2f6553d7018370e49ead87ffdded840915cef589fc1",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-ASS-002-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Compare material environment changes and scheduled evaluations to completed work. Inspect a nontechnical safeguard and a technical configuration for evaluated effectiveness.",
+      "authority_gate": "Functional reporting statement alone is not independence or engagement authorization; Board/committee collective action cannot be inferred.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No selected 2027 approved independent engagement scope, evaluator conflict check, execution workpapers, supervisory review or direct escalation.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "HIPAA:164.308"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "17e6b9b31812a079452ca17cbd520aa55e09a3ce6bbd2abf2dc39688910536ed",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-ASS-003-corporate-ACTION-H-EVALUATION",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Functional reporting statement alone is not independence or engagement authorization; Board/committee collective action cannot be inferred.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "missing_activity": "No selected 2027 approved independent engagement scope, evaluator conflict check, execution workpapers, supervisory review or direct escalation.",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "ec17eb19ef5fce5566bf03963ff342bcf0dcb8f3f751c013e2083800220a0473",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-ASS-003-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Functional reporting statement alone is not independence or engagement authorization; Board/committee collective action cannot be inferred.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "missing_activity": "No selected 2027 approved independent engagement scope, evaluator conflict check, execution workpapers, supervisory review or direct escalation.",
+      "procedure_type": "TOD",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "ce86a74f666fb0d9af087f34a407a0b9c04c2d5416a50f6102a69880c9fda3e2",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-ASS-003-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Functional reporting statement alone is not independence or engagement authorization; Board/committee collective action cannot be inferred.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "missing_activity": "No selected 2027 approved independent engagement scope, evaluator conflict check, execution workpapers, supervisory review or direct escalation.",
+      "procedure_type": "TOE",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "43acadb150578f53f5f335e2cace181ce6a2aec0cd3a9ba190ff647b12c84b79",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-ASS-003-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Trace each description assertion to an authoritative record; independently compare incident/change/vendor populations to disclosures and investigate omitted relevant items.",
+      "authority_gate": "Qualified engagement scope, source access and independent reviewer acceptance are required; an audit module cannot manufacture company evidence.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No independently executed 2027 population definition, source enumeration, sample, workpaper, limitation review or description-assertion reconciliation.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "SOC2:DC1",
+        "SOC2:DC2",
+        "SOC2:DC3",
+        "SOC2:DC4",
+        "SOC2:DC5",
+        "SOC2:DC6",
+        "SOC2:DC7",
+        "SOC2:DC8",
+        "SOC2:DC9"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "46092d72d607042f1b33c8dfeb587a4a686a2bc093a99ca4ab73f0473343547b",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-ASS-004-corporate-ACTION-S-DESCRIPTION",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Compare the evaluation plan with risk, change and evaluator objectivity; inspect an ongoing monitoring gap and an independently performed evaluation.",
+      "authority_gate": "Qualified engagement scope, source access and independent reviewer acceptance are required; an audit module cannot manufacture company evidence.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No independently executed 2027 population definition, source enumeration, sample, workpaper, limitation review or description-assertion reconciliation.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "SOC2:CC4.1"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "6487c77f7141f90180c87d9841d3ed5ff8aff0036f80f6f7e8da4e251fbb47a6",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-ASS-004-corporate-CHECK-SOC2:CC4.1",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Qualified engagement scope, source access and independent reviewer acceptance are required; an audit module cannot manufacture company evidence.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "missing_activity": "No independently executed 2027 population definition, source enumeration, sample, workpaper, limitation review or description-assertion reconciliation.",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "2630c8ab2cb35d6e2f3600342eee83611d7f7d6402c396cb20a4d810be18ca35",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-ASS-004-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Qualified engagement scope, source access and independent reviewer acceptance are required; an audit module cannot manufacture company evidence.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "missing_activity": "No independently executed 2027 population definition, source enumeration, sample, workpaper, limitation review or description-assertion reconciliation.",
+      "procedure_type": "TOD",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "2680bef8e38983ffc3d0f98ebe6cc26e41ca22e7f0ed3459d061cace35aeace9",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-ASS-004-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Qualified engagement scope, source access and independent reviewer acceptance are required; an audit module cannot manufacture company evidence.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "missing_activity": "No independently executed 2027 population definition, source enumeration, sample, workpaper, limitation review or description-assertion reconciliation.",
+      "procedure_type": "TOE",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "4abe245b068a6f84d0d8bb2e5f580b85d0407fb8c0889f673c6f947d59141cd2",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-ASS-004-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Trace severity, notification, accountable action and overdue escalation; verify that closure evidence addresses the deficiency rather than only closing a ticket.",
+      "authority_gate": "Severity is local/preliminary; technical correction and escalation request are not authorized closure or accepted residual risk.",
+      "candidate_support": "BOUNDED_SELECTED_CONDITION_PARTIAL",
+      "control_id": "SH-ASS-005",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No full 2027 findings population, accepted remediation plan, durable bypass-prevention validation, issue closure, risk acceptance or governance acknowledgment.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "SOC2:CC4.2"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "15bd07f7bba45f47f8241305be3fc5a8320db356447ed20f0e8675adab10728c",
+      "selected_2027_native_source_ids": [
+        "ASS_FINDINGS_V1"
+      ],
+      "side": "A",
+      "task_id": "TASK-SH-ASS-005-corporate-CHECK-SOC2:CC4.2",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Severity is local/preliminary; technical correction and escalation request are not authorized closure or accepted residual risk.",
+      "candidate_support": "BOUNDED_SELECTED_CONDITION_PARTIAL",
+      "control_id": "SH-ASS-005",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "missing_activity": "No full 2027 findings population, accepted remediation plan, durable bypass-prevention validation, issue closure, risk acceptance or governance acknowledgment.",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "a405c3fd61b9cbfcc7363056aaa3a50c3e77027ebec0e93a7289284e0d7cc4e7",
+      "selected_2027_native_source_ids": [
+        "ASS_FINDINGS_V1"
+      ],
+      "side": "A",
+      "task_id": "TASK-SH-ASS-005-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Severity is local/preliminary; technical correction and escalation request are not authorized closure or accepted residual risk.",
+      "candidate_support": "BOUNDED_SELECTED_CONDITION_PARTIAL",
+      "control_id": "SH-ASS-005",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "missing_activity": "No full 2027 findings population, accepted remediation plan, durable bypass-prevention validation, issue closure, risk acceptance or governance acknowledgment.",
+      "procedure_type": "TOD",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "5361706783189e3bece5203d705c34582667e28584fbfc8e46501ed873302742",
+      "selected_2027_native_source_ids": [
+        "ASS_FINDINGS_V1"
+      ],
+      "side": "A",
+      "task_id": "TASK-SH-ASS-005-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Severity is local/preliminary; technical correction and escalation request are not authorized closure or accepted residual risk.",
+      "candidate_support": "BOUNDED_SELECTED_CONDITION_PARTIAL",
+      "control_id": "SH-ASS-005",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "missing_activity": "No full 2027 findings population, accepted remediation plan, durable bypass-prevention validation, issue closure, risk acceptance or governance acknowledgment.",
+      "procedure_type": "TOE",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "2e8252125a97cf96e0197583de5ffc1b616d613f2aebcf4555b668363cb5f4d7",
+      "selected_2027_native_source_ids": [
+        "ASS_FINDINGS_V1"
+      ],
+      "side": "A",
+      "task_id": "TASK-SH-ASS-005-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Compare accepted commitments to risk objectives and tolerances; challenge a vague availability objective that cannot be measured.",
+      "authority_gate": "P001/Board authority and commitment acceptance cannot be invented from a risk coordinator or pending request.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ERM-002",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No approved risk appetite/tolerance, accepted measurable service commitments, translation to escalation thresholds or 2027 application.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "SOC2:CC3.1"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "90b24153355299e791abe098cf00f7a354fb6b8f6cd67dd17e3e6d2c1906bce4",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-ERM-002-corporate-CHECK-SOC2:CC3.1",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "P001/Board authority and commitment acceptance cannot be invented from a risk coordinator or pending request.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ERM-002",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "missing_activity": "No approved risk appetite/tolerance, accepted measurable service commitments, translation to escalation thresholds or 2027 application.",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "3c57067b74f2eca60be44f7f1564bff0926019e22d8801cb7f59c1918a7eaf4e",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-ERM-002-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "P001/Board authority and commitment acceptance cannot be invented from a risk coordinator or pending request.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ERM-002",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "missing_activity": "No approved risk appetite/tolerance, accepted measurable service commitments, translation to escalation thresholds or 2027 application.",
+      "procedure_type": "TOD",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "74eb6f4c680da08d881e341651618cd435587179768ea99b4ed3e87fff1fe41c",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-ERM-002-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "P001/Board authority and commitment acceptance cannot be invented from a risk coordinator or pending request.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ERM-002",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "missing_activity": "No approved risk appetite/tolerance, accepted measurable service commitments, translation to escalation thresholds or 2027 application.",
+      "procedure_type": "TOE",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "4dd4659ad3a4a71c502701c7180ede71e5c959ab5bdff8b546f286806060dbd9",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-ERM-002-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Trace a significant risk to preventive/detective steps and incompatible responsibilities; test whether the alternative actually addresses the conflict.",
+      "authority_gate": "Every stage-gate residual request remains PENDING_AUTHORITY_DECISION; no P001/Board acceptance, appetite or waiver.",
+      "candidate_support": "BOUNDED_SELECTED_CONDITION_PARTIAL",
+      "control_id": "SH-ERM-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No final accepted/rejected residual decision, approved threshold, independent control-conflict alternative test, complete significant-risk population or insurance treatment decision.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "SOC2:CC5.1"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "69c1462123a27a0a471a7d19ce0e6a5e5117c91800c3bd359113f2cf4317f69b",
+      "selected_2027_native_source_ids": [
+        "ERM_STAGEGATE_V2"
+      ],
+      "side": "A",
+      "task_id": "TASK-SH-ERM-003-corporate-CHECK-SOC2:CC5.1",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Trace a dependency failure to continuity treatment, recovery resources and accepted residual risk; insurance is a possible treatment, not a universal mandated purchase.",
+      "authority_gate": "Every stage-gate residual request remains PENDING_AUTHORITY_DECISION; no P001/Board acceptance, appetite or waiver.",
+      "candidate_support": "BOUNDED_SELECTED_CONDITION_PARTIAL",
+      "control_id": "SH-ERM-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No final accepted/rejected residual decision, approved threshold, independent control-conflict alternative test, complete significant-risk population or insurance treatment decision.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "SOC2:CC9.1"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "c4e305e5bc026beb3748021439a8900c945640e5728d1b0916054c57cb37ea8a",
+      "selected_2027_native_source_ids": [
+        "ERM_STAGEGATE_V2"
+      ],
+      "side": "A",
+      "task_id": "TASK-SH-ERM-003-corporate-CHECK-SOC2:CC9.1",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Every stage-gate residual request remains PENDING_AUTHORITY_DECISION; no P001/Board acceptance, appetite or waiver.",
+      "candidate_support": "BOUNDED_SELECTED_CONDITION_PARTIAL",
+      "control_id": "SH-ERM-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "missing_activity": "No final accepted/rejected residual decision, approved threshold, independent control-conflict alternative test, complete significant-risk population or insurance treatment decision.",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "f14d292004603a13336af0eda087cefff5f8d13654e7401a54ab3a6af3d11e6b",
+      "selected_2027_native_source_ids": [
+        "ERM_STAGEGATE_V2"
+      ],
+      "side": "A",
+      "task_id": "TASK-SH-ERM-003-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Every stage-gate residual request remains PENDING_AUTHORITY_DECISION; no P001/Board acceptance, appetite or waiver.",
+      "candidate_support": "BOUNDED_SELECTED_CONDITION_PARTIAL",
+      "control_id": "SH-ERM-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "missing_activity": "No final accepted/rejected residual decision, approved threshold, independent control-conflict alternative test, complete significant-risk population or insurance treatment decision.",
+      "procedure_type": "TOD",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "b10858a04efa3d1ee6601bc253223a5ff910123b95261ce01725f1a50625de7f",
+      "selected_2027_native_source_ids": [
+        "ERM_STAGEGATE_V2"
+      ],
+      "side": "A",
+      "task_id": "TASK-SH-ERM-003-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Every stage-gate residual request remains PENDING_AUTHORITY_DECISION; no P001/Board acceptance, appetite or waiver.",
+      "candidate_support": "BOUNDED_SELECTED_CONDITION_PARTIAL",
+      "control_id": "SH-ERM-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "missing_activity": "No final accepted/rejected residual decision, approved threshold, independent control-conflict alternative test, complete significant-risk population or insurance treatment decision.",
+      "procedure_type": "TOE",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "c84d86596508b3dd84a7073850e2fc2f09af22209b57f2b3c83b47b1d05ea38d",
+      "selected_2027_native_source_ids": [
+        "ERM_STAGEGATE_V2"
+      ],
+      "side": "A",
+      "task_id": "TASK-SH-ERM-003-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Select a changed provider or service and verify a timely risk reassessment and resulting procedure change, including a decision that no change is needed.",
+      "authority_gate": "AS-P007 local technical recommendation is distinct from separate transition site release and any governance risk acceptance.",
+      "candidate_support": "BOUNDED_SELECTED_CONDITION_PARTIAL",
+      "control_id": "SH-ERM-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No complete venture/provider-change population, accepted procedure change, corporate release approval or assurance of all stage-gates.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "SOC2:CC3.4"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "2033573cc5d0695f74dc027adf85be5ce5287ef65aa10d8789557bfd1f1fb4ed",
+      "selected_2027_native_source_ids": [
+        "ERM_STAGEGATE_V2"
+      ],
+      "side": "A",
+      "task_id": "TASK-SH-ERM-004-corporate-CHECK-SOC2:CC3.4",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "AS-P007 local technical recommendation is distinct from separate transition site release and any governance risk acceptance.",
+      "candidate_support": "BOUNDED_SELECTED_CONDITION_PARTIAL",
+      "control_id": "SH-ERM-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "missing_activity": "No complete venture/provider-change population, accepted procedure change, corporate release approval or assurance of all stage-gates.",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "0a61833bba9ae87f02401522cc326c255bc40854d9e3f8e3a31b515c3ffb6ebf",
+      "selected_2027_native_source_ids": [
+        "ERM_STAGEGATE_V2"
+      ],
+      "side": "A",
+      "task_id": "TASK-SH-ERM-004-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "AS-P007 local technical recommendation is distinct from separate transition site release and any governance risk acceptance.",
+      "candidate_support": "BOUNDED_SELECTED_CONDITION_PARTIAL",
+      "control_id": "SH-ERM-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "missing_activity": "No complete venture/provider-change population, accepted procedure change, corporate release approval or assurance of all stage-gates.",
+      "procedure_type": "TOD",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "fc7df62f7e072d3f14c9edac56c1fcf237aec3ce806e19ff7ad89a2e1ec612bc",
+      "selected_2027_native_source_ids": [
+        "ERM_STAGEGATE_V2"
+      ],
+      "side": "A",
+      "task_id": "TASK-SH-ERM-004-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "AS-P007 local technical recommendation is distinct from separate transition site release and any governance risk acceptance.",
+      "candidate_support": "BOUNDED_SELECTED_CONDITION_PARTIAL",
+      "control_id": "SH-ERM-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "missing_activity": "No complete venture/provider-change population, accepted procedure change, corporate release approval or assurance of all stage-gates.",
+      "procedure_type": "TOE",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "4a6d910bcc06655fd6e867fabfffdc9044459435499d9e8a6a6ec06870e91e57",
+      "selected_2027_native_source_ids": [
+        "ERM_STAGEGATE_V2"
+      ],
+      "side": "A",
+      "task_id": "TASK-SH-ERM-004-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Inspect governing-body composition, conflicts and minutes challenging a control failure; a meeting calendar alone cannot demonstrate oversight.",
+      "authority_gate": "A historical board decision and meeting calendar do not assert 2027 governing-body oversight or quorum action.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No selected 2027 approved charters, committee membership/eligibility, minutes challenging control failures or maintenance review.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "SOC2:CC1.2"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "1f86e8613f3763a514219527fd0ab3e9001899833170b312ca3bff71baf2ba98",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-GOV-001-corporate-CHECK-SOC2:CC1.2",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "A historical board decision and meeting calendar do not assert 2027 governing-body oversight or quorum action.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "missing_activity": "No selected 2027 approved charters, committee membership/eligibility, minutes challenging control failures or maintenance review.",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "41bc0dfb4eb805f51af4476086c9c2f43ed4ede250a6a0a79c2461f052eb04aa",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-GOV-001-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "A historical board decision and meeting calendar do not assert 2027 governing-body oversight or quorum action.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "missing_activity": "No selected 2027 approved charters, committee membership/eligibility, minutes challenging control failures or maintenance review.",
+      "procedure_type": "TOD",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "b83e4ba06de5c63a46ec6935df7d16fbd217d906284b71ec6152908b9cc381bc",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-GOV-001-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "A historical board decision and meeting calendar do not assert 2027 governing-body oversight or quorum action.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "missing_activity": "No selected 2027 approved charters, committee membership/eligibility, minutes challenging control failures or maintenance review.",
+      "procedure_type": "TOE",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "13a362fd9cfece94edf52cbcd0af274049cca75c1efb0532c9c5ef735e58d407",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-GOV-001-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Inspect authorized appointment evidence and trace two policy/incident responsibilities to the appointed official. Flag vacant or conflicting authority.",
+      "authority_gate": "CISO title is not proof of HIPAA security-official designation; reference scope does not establish hybrid designation; P001/Board reserved powers need actual records.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No selected 2027 reserved-matters/delegation review, actual HIPAA security-official appointment evidence, hybrid-entity designation, cross-site oversight or conflict resolution.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "HIPAA:164.308"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "478d4be2e9e101251c0126fb291cc98ea0328e0864150d61d5436304be7b0fd6",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-GOV-003-corporate-ACTION-H-SECURITY-OFFICIAL",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Inspect actual designation, included components and separation safeguards; do not infer a designation from the reference scope.",
+      "authority_gate": "CISO title is not proof of HIPAA security-official designation; reference scope does not establish hybrid designation; P001/Board reserved powers need actual records.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No selected 2027 reserved-matters/delegation review, actual HIPAA security-official appointment evidence, hybrid-entity designation, cross-site oversight or conflict resolution.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "HIPAA:164.105"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "fc8fd8936f28bfc231b64f79e40cd65e0d744c0fb70a706eb53c0fa20ce8843c",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-GOV-003-corporate-CHECK-HIPAA:164.105",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Trace a cross-site escalation from executor through delegated authority to governing oversight; test a conflicting assignment.",
+      "authority_gate": "CISO title is not proof of HIPAA security-official designation; reference scope does not establish hybrid designation; P001/Board reserved powers need actual records.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No selected 2027 reserved-matters/delegation review, actual HIPAA security-official appointment evidence, hybrid-entity designation, cross-site oversight or conflict resolution.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "SOC2:CC1.3"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "1e9d458ef9382feb5224f20449017e8a5ec191c6cf8e09161fcba8610d47521b",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-GOV-003-corporate-CHECK-SOC2:CC1.3",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "CISO title is not proof of HIPAA security-official designation; reference scope does not establish hybrid designation; P001/Board reserved powers need actual records.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "missing_activity": "No selected 2027 reserved-matters/delegation review, actual HIPAA security-official appointment evidence, hybrid-entity designation, cross-site oversight or conflict resolution.",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "63d1f7580fbec5d35e1d113c1475b328a6751ee72b528ab754f21a750d1647f2",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-GOV-003-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "CISO title is not proof of HIPAA security-official designation; reference scope does not establish hybrid designation; P001/Board reserved powers need actual records.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "missing_activity": "No selected 2027 reserved-matters/delegation review, actual HIPAA security-official appointment evidence, hybrid-entity designation, cross-site oversight or conflict resolution.",
+      "procedure_type": "TOD",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "5cefb7e7e4ab1e0b6fe44d08a7066cd11813ad216f7bf479add3451363d4a3d9",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-GOV-003-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "CISO title is not proof of HIPAA security-official designation; reference scope does not establish hybrid designation; P001/Board reserved powers need actual records.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "missing_activity": "No selected 2027 reserved-matters/delegation review, actual HIPAA security-official appointment evidence, hybrid-entity designation, cross-site oversight or conflict resolution.",
+      "procedure_type": "TOE",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "fea11c405c07edb23a812882fa96822e6ac7a5ffc4ca1a06c047461dfe5865fc",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-GOV-003-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Inspect governing-body composition, conflicts and minutes challenging a control failure; a meeting calendar alone cannot demonstrate oversight.",
+      "authority_gate": "P043 or a Corporate Secretary contact cannot substitute for the governing body\u2019s collective determination.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No selected 2027 conflict declarations, director independence assessments, recusal events, eligibility review or minutes challenging control failure.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "SOC2:CC1.2"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "72597b45ccfffea05cd0ba6c4ef9fd0a4abc5bad2cd90e1734928496b877d941",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-GOV-004-corporate-CHECK-SOC2:CC1.2",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "P043 or a Corporate Secretary contact cannot substitute for the governing body\u2019s collective determination.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "missing_activity": "No selected 2027 conflict declarations, director independence assessments, recusal events, eligibility review or minutes challenging control failure.",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "1dcafcb55125ddb78c0e959ab5cb429978c3e5dd63318616a244260197dd71de",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-GOV-004-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "P043 or a Corporate Secretary contact cannot substitute for the governing body\u2019s collective determination.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "missing_activity": "No selected 2027 conflict declarations, director independence assessments, recusal events, eligibility review or minutes challenging control failure.",
+      "procedure_type": "TOD",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "540c9179cb9d24c8513a67c4c1fc94c0abde6463c220e9ef04949b6b2bd04736",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-GOV-004-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "P043 or a Corporate Secretary contact cannot substitute for the governing body\u2019s collective determination.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "missing_activity": "No selected 2027 conflict declarations, director independence assessments, recusal events, eligibility review or minutes challenging control failure.",
+      "procedure_type": "TOE",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "622567a0f54145fd2e3db5a70210f39a8864c3389a8205be112d60e2487e1edf",
+      "selected_2027_native_source_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-GOV-004-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Trace critical duties to competence evidence and backups; inspect whether recurring execution failures led to appropriate workload, training or accountability action.",
+      "authority_gate": "Management control owners and any independent evaluator must be separately identified; no self-assessment becomes independent assurance.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No selected 2027 owner certification, critical-duty backup/competence review, recurring-failure response, evaluation plan or independent sample.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "SOC2:CC1.4",
+        "SOC2:CC1.5"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "7e9756f28a8f36696fa3e0add194c61be4866c54a2e991ef1e80e08d0bcaafab",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-ASS-001-corporate-ACTION-S-ACCOUNTABILITY",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Compare the evaluation plan with risk, change and evaluator objectivity; inspect an ongoing monitoring gap and an independently performed evaluation.",
+      "authority_gate": "Management control owners and any independent evaluator must be separately identified; no self-assessment becomes independent assurance.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No selected 2027 owner certification, critical-duty backup/competence review, recurring-failure response, evaluation plan or independent sample.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "SOC2:CC4.1"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "fce733f83c2c9ae0cb2c6cb18f357509809f8dcaa9d03088ea5c3476db24cb4e",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-ASS-001-corporate-CHECK-SOC2:CC4.1",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Management control owners and any independent evaluator must be separately identified; no self-assessment becomes independent assurance.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "missing_activity": "No selected 2027 owner certification, critical-duty backup/competence review, recurring-failure response, evaluation plan or independent sample.",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "da893538964ca193b87a51f191d5ad6456592dda0af24975905aac37b4d6aded",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-ASS-001-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Management control owners and any independent evaluator must be separately identified; no self-assessment becomes independent assurance.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "missing_activity": "No selected 2027 owner certification, critical-duty backup/competence review, recurring-failure response, evaluation plan or independent sample.",
+      "procedure_type": "TOD",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "376d2b4497c4d74695122f4f0c2214954ccbf2489d591e533e6d06f18dd4a0c5",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-ASS-001-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Management control owners and any independent evaluator must be separately identified; no self-assessment becomes independent assurance.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "missing_activity": "No selected 2027 owner certification, critical-duty backup/competence review, recurring-failure response, evaluation plan or independent sample.",
+      "procedure_type": "TOE",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "9bf10e5a3a8f101b75257a1fb8b9940deae80f4b8a7ea07e8a3e9f6e22ae07a6",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-ASS-001-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Compare material environment changes and scheduled evaluations to completed work. Inspect a nontechnical safeguard and a technical configuration for evaluated effectiveness.",
+      "authority_gate": "Second-line criteria and reviewer independence from execution need accepted scope and accountable authority; HIPAA applicability remains unassessed.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-002",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No selected 2027 second-line monitoring plan, nontechnical and technical evaluation, change-triggered refresh, result or escalated exception.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "HIPAA:164.308"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "5af572a618d53da85652ba094c6296a49074cea6cb11dd15edcbc50e81d086b4",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-ASS-002-corporate-ACTION-H-EVALUATION",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Compare the evaluation plan with risk, change and evaluator objectivity; inspect an ongoing monitoring gap and an independently performed evaluation.",
+      "authority_gate": "Second-line criteria and reviewer independence from execution need accepted scope and accountable authority; HIPAA applicability remains unassessed.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-002",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No selected 2027 second-line monitoring plan, nontechnical and technical evaluation, change-triggered refresh, result or escalated exception.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "SOC2:CC4.1"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "1db1589cee0a177342ae2740056220537b179cc59cc5e6802ea29ae320e2dec5",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-ASS-002-corporate-CHECK-SOC2:CC4.1",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Second-line criteria and reviewer independence from execution need accepted scope and accountable authority; HIPAA applicability remains unassessed.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-002",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "missing_activity": "No selected 2027 second-line monitoring plan, nontechnical and technical evaluation, change-triggered refresh, result or escalated exception.",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "2a002448a609e68f60d671c0784a8bc754ac6bdc81fcc792df5560265757218a",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-ASS-002-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Second-line criteria and reviewer independence from execution need accepted scope and accountable authority; HIPAA applicability remains unassessed.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-002",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "missing_activity": "No selected 2027 second-line monitoring plan, nontechnical and technical evaluation, change-triggered refresh, result or escalated exception.",
+      "procedure_type": "TOD",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "9938d4f71bc74eebc886a07e8bcfc6b96877f5f69bcd79b70ec6e22a293ba110",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-ASS-002-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Second-line criteria and reviewer independence from execution need accepted scope and accountable authority; HIPAA applicability remains unassessed.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-002",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "missing_activity": "No selected 2027 second-line monitoring plan, nontechnical and technical evaluation, change-triggered refresh, result or escalated exception.",
+      "procedure_type": "TOE",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "170549ec44a74a2471952ee6c6c9a1d0d9b5d0b9c42d821236437ab5f17f27f8",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-ASS-002-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Compare material environment changes and scheduled evaluations to completed work. Inspect a nontechnical safeguard and a technical configuration for evaluated effectiveness.",
+      "authority_gate": "Functional reporting statement alone is not independence or engagement authorization; Board/committee collective action cannot be inferred.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No selected 2027 approved independent engagement scope, evaluator conflict check, execution workpapers, supervisory review or direct escalation.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "HIPAA:164.308"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "9df3203857098db2dfb065c488cc06f7e90c83a88967debaaf918c8ff354c857",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-ASS-003-corporate-ACTION-H-EVALUATION",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Functional reporting statement alone is not independence or engagement authorization; Board/committee collective action cannot be inferred.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "missing_activity": "No selected 2027 approved independent engagement scope, evaluator conflict check, execution workpapers, supervisory review or direct escalation.",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "9972508e435b7233653bec5b8ea9ee382eaf09a493a5f52129e4bef0eb7f00bf",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-ASS-003-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Functional reporting statement alone is not independence or engagement authorization; Board/committee collective action cannot be inferred.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "missing_activity": "No selected 2027 approved independent engagement scope, evaluator conflict check, execution workpapers, supervisory review or direct escalation.",
+      "procedure_type": "TOD",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "cd976e8331890b3191c551ef8c9762efb5f7a0154c7edc8329812cf4d121e939",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-ASS-003-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Functional reporting statement alone is not independence or engagement authorization; Board/committee collective action cannot be inferred.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "missing_activity": "No selected 2027 approved independent engagement scope, evaluator conflict check, execution workpapers, supervisory review or direct escalation.",
+      "procedure_type": "TOE",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "6a864bfe97f24067ca8eb956209c98f90428f01919f39f5478ee8221e52053e0",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-ASS-003-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Trace each description assertion to an authoritative record; independently compare incident/change/vendor populations to disclosures and investigate omitted relevant items.",
+      "authority_gate": "Qualified engagement scope, source access and independent reviewer acceptance are required; an audit module cannot manufacture company evidence.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No independently executed 2027 population definition, source enumeration, sample, workpaper, limitation review or description-assertion reconciliation.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "SOC2:DC1",
+        "SOC2:DC2",
+        "SOC2:DC3",
+        "SOC2:DC4",
+        "SOC2:DC5",
+        "SOC2:DC6",
+        "SOC2:DC7",
+        "SOC2:DC8",
+        "SOC2:DC9"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "1b29725afa220cb1e481b5978bedc5d4d2d66961bbfcf37c94650f310703cdf5",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-ASS-004-corporate-ACTION-S-DESCRIPTION",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Compare the evaluation plan with risk, change and evaluator objectivity; inspect an ongoing monitoring gap and an independently performed evaluation.",
+      "authority_gate": "Qualified engagement scope, source access and independent reviewer acceptance are required; an audit module cannot manufacture company evidence.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No independently executed 2027 population definition, source enumeration, sample, workpaper, limitation review or description-assertion reconciliation.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "SOC2:CC4.1"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "55d7c6c869b8eff0671d736ea3aff316f7aafb518487df00e6b73e6bff764713",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-ASS-004-corporate-CHECK-SOC2:CC4.1",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Qualified engagement scope, source access and independent reviewer acceptance are required; an audit module cannot manufacture company evidence.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "missing_activity": "No independently executed 2027 population definition, source enumeration, sample, workpaper, limitation review or description-assertion reconciliation.",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "d24a20772949b8e726acb19c32a33b0ac28ed2bdca4c68da287a7d00f22f15a3",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-ASS-004-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Qualified engagement scope, source access and independent reviewer acceptance are required; an audit module cannot manufacture company evidence.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "missing_activity": "No independently executed 2027 population definition, source enumeration, sample, workpaper, limitation review or description-assertion reconciliation.",
+      "procedure_type": "TOD",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "7fad4cae31d9745e6b1a4d5cc10c977ea619a4f2b0972dc70daa3f549185da70",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-ASS-004-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Qualified engagement scope, source access and independent reviewer acceptance are required; an audit module cannot manufacture company evidence.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ASS-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "missing_activity": "No independently executed 2027 population definition, source enumeration, sample, workpaper, limitation review or description-assertion reconciliation.",
+      "procedure_type": "TOE",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "0e83662d986f8be30b4e1919b2c3383563332216f7a1be9efaf0e06c06bd7fd7",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-ASS-004-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Trace severity, notification, accountable action and overdue escalation; verify that closure evidence addresses the deficiency rather than only closing a ticket.",
+      "authority_gate": "Severity is local/preliminary; technical correction and escalation request are not authorized closure or accepted residual risk.",
+      "candidate_support": "BOUNDED_SELECTED_CONDITION_PARTIAL",
+      "control_id": "SH-ASS-005",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No full 2027 findings population, accepted remediation plan, durable bypass-prevention validation, issue closure, risk acceptance or governance acknowledgment.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "SOC2:CC4.2"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "c80d863d3b15c976f4b5c0329e8b2ab11390e0c65d366d3a651a8ce5296a4b32",
+      "selected_2027_native_source_ids": [
+        "ASS_FINDINGS_V1"
+      ],
+      "side": "B",
+      "task_id": "TASK-SH-ASS-005-corporate-CHECK-SOC2:CC4.2",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Severity is local/preliminary; technical correction and escalation request are not authorized closure or accepted residual risk.",
+      "candidate_support": "BOUNDED_SELECTED_CONDITION_PARTIAL",
+      "control_id": "SH-ASS-005",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "missing_activity": "No full 2027 findings population, accepted remediation plan, durable bypass-prevention validation, issue closure, risk acceptance or governance acknowledgment.",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "01b04df749a11321b6729daf53b8677f69b8e87528abf4aca1f143ff5fb7df4e",
+      "selected_2027_native_source_ids": [
+        "ASS_FINDINGS_V1"
+      ],
+      "side": "B",
+      "task_id": "TASK-SH-ASS-005-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Severity is local/preliminary; technical correction and escalation request are not authorized closure or accepted residual risk.",
+      "candidate_support": "BOUNDED_SELECTED_CONDITION_PARTIAL",
+      "control_id": "SH-ASS-005",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "missing_activity": "No full 2027 findings population, accepted remediation plan, durable bypass-prevention validation, issue closure, risk acceptance or governance acknowledgment.",
+      "procedure_type": "TOD",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "57bcd11b2d6702d9a66e504a723f5ab1169c78dec1b6efe1eb09033c4e799350",
+      "selected_2027_native_source_ids": [
+        "ASS_FINDINGS_V1"
+      ],
+      "side": "B",
+      "task_id": "TASK-SH-ASS-005-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Severity is local/preliminary; technical correction and escalation request are not authorized closure or accepted residual risk.",
+      "candidate_support": "BOUNDED_SELECTED_CONDITION_PARTIAL",
+      "control_id": "SH-ASS-005",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "missing_activity": "No full 2027 findings population, accepted remediation plan, durable bypass-prevention validation, issue closure, risk acceptance or governance acknowledgment.",
+      "procedure_type": "TOE",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "3460b31cab30c23249ad4c986eae9c9547a919d4fcc45bc77932387f25fa460d",
+      "selected_2027_native_source_ids": [
+        "ASS_FINDINGS_V1"
+      ],
+      "side": "B",
+      "task_id": "TASK-SH-ASS-005-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Compare accepted commitments to risk objectives and tolerances; challenge a vague availability objective that cannot be measured.",
+      "authority_gate": "P001/Board authority and commitment acceptance cannot be invented from a risk coordinator or pending request.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ERM-002",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No approved risk appetite/tolerance, accepted measurable service commitments, translation to escalation thresholds or 2027 application.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "SOC2:CC3.1"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "780e8741eb032a07e263fb151a058bccd0ab1b6e1c2aa0b9094fe334eeb35d3a",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-ERM-002-corporate-CHECK-SOC2:CC3.1",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "P001/Board authority and commitment acceptance cannot be invented from a risk coordinator or pending request.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ERM-002",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "missing_activity": "No approved risk appetite/tolerance, accepted measurable service commitments, translation to escalation thresholds or 2027 application.",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "eab12514362274dfc1109cfecb84ca66c18c2dab725f925f0d43afe5eb9219d3",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-ERM-002-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "P001/Board authority and commitment acceptance cannot be invented from a risk coordinator or pending request.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ERM-002",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "missing_activity": "No approved risk appetite/tolerance, accepted measurable service commitments, translation to escalation thresholds or 2027 application.",
+      "procedure_type": "TOD",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "e036a654f49eda98062edffed7ece6fc52138319fa79f417aa0df0b82a4b31e3",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-ERM-002-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "P001/Board authority and commitment acceptance cannot be invented from a risk coordinator or pending request.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-ERM-002",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "missing_activity": "No approved risk appetite/tolerance, accepted measurable service commitments, translation to escalation thresholds or 2027 application.",
+      "procedure_type": "TOE",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "a51bfc749c19141d18d86dfc586528a0c38e20efbd5e3a91f2946855c5c4ae4b",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-ERM-002-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Trace a significant risk to preventive/detective steps and incompatible responsibilities; test whether the alternative actually addresses the conflict.",
+      "authority_gate": "Every stage-gate residual request remains PENDING_AUTHORITY_DECISION; no P001/Board acceptance, appetite or waiver.",
+      "candidate_support": "BOUNDED_SELECTED_CONDITION_PARTIAL",
+      "control_id": "SH-ERM-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No final accepted/rejected residual decision, approved threshold, independent control-conflict alternative test, complete significant-risk population or insurance treatment decision.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "SOC2:CC5.1"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "ba939bb7100650ec32cbdfe90ece4ebfd8adf423b30c94d50334697b3b697fac",
+      "selected_2027_native_source_ids": [
+        "ERM_STAGEGATE_V2"
+      ],
+      "side": "B",
+      "task_id": "TASK-SH-ERM-003-corporate-CHECK-SOC2:CC5.1",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Trace a dependency failure to continuity treatment, recovery resources and accepted residual risk; insurance is a possible treatment, not a universal mandated purchase.",
+      "authority_gate": "Every stage-gate residual request remains PENDING_AUTHORITY_DECISION; no P001/Board acceptance, appetite or waiver.",
+      "candidate_support": "BOUNDED_SELECTED_CONDITION_PARTIAL",
+      "control_id": "SH-ERM-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No final accepted/rejected residual decision, approved threshold, independent control-conflict alternative test, complete significant-risk population or insurance treatment decision.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "SOC2:CC9.1"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "5158ecac6b745ac3b8aded787bf3f6c95bccd091a5d7bc7705d03b61984ace0c",
+      "selected_2027_native_source_ids": [
+        "ERM_STAGEGATE_V2"
+      ],
+      "side": "B",
+      "task_id": "TASK-SH-ERM-003-corporate-CHECK-SOC2:CC9.1",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Every stage-gate residual request remains PENDING_AUTHORITY_DECISION; no P001/Board acceptance, appetite or waiver.",
+      "candidate_support": "BOUNDED_SELECTED_CONDITION_PARTIAL",
+      "control_id": "SH-ERM-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "missing_activity": "No final accepted/rejected residual decision, approved threshold, independent control-conflict alternative test, complete significant-risk population or insurance treatment decision.",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "5856e87d94964ceaa12ea475b0032edfc544ffe74411c075ba15539fd4b177d5",
+      "selected_2027_native_source_ids": [
+        "ERM_STAGEGATE_V2"
+      ],
+      "side": "B",
+      "task_id": "TASK-SH-ERM-003-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Every stage-gate residual request remains PENDING_AUTHORITY_DECISION; no P001/Board acceptance, appetite or waiver.",
+      "candidate_support": "BOUNDED_SELECTED_CONDITION_PARTIAL",
+      "control_id": "SH-ERM-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "missing_activity": "No final accepted/rejected residual decision, approved threshold, independent control-conflict alternative test, complete significant-risk population or insurance treatment decision.",
+      "procedure_type": "TOD",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "cdd6dfc1c3e5911523880f5116166685782f9885583738e911ae873e7d39f92f",
+      "selected_2027_native_source_ids": [
+        "ERM_STAGEGATE_V2"
+      ],
+      "side": "B",
+      "task_id": "TASK-SH-ERM-003-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "Every stage-gate residual request remains PENDING_AUTHORITY_DECISION; no P001/Board acceptance, appetite or waiver.",
+      "candidate_support": "BOUNDED_SELECTED_CONDITION_PARTIAL",
+      "control_id": "SH-ERM-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "missing_activity": "No final accepted/rejected residual decision, approved threshold, independent control-conflict alternative test, complete significant-risk population or insurance treatment decision.",
+      "procedure_type": "TOE",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "f41bcb86ec09d62ce3b5e1b628919301177084504d42185e2b889e06de4f8ef0",
+      "selected_2027_native_source_ids": [
+        "ERM_STAGEGATE_V2"
+      ],
+      "side": "B",
+      "task_id": "TASK-SH-ERM-003-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Select a changed provider or service and verify a timely risk reassessment and resulting procedure change, including a decision that no change is needed.",
+      "authority_gate": "AS-P007 local technical recommendation is distinct from separate transition site release and any governance risk acceptance.",
+      "candidate_support": "BOUNDED_SELECTED_CONDITION_PARTIAL",
+      "control_id": "SH-ERM-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No complete venture/provider-change population, accepted procedure change, corporate release approval or assurance of all stage-gates.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "SOC2:CC3.4"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "0a56529e53b056299378f1b332603abc3c2fb4e9d610e46e8ad177f1b797899e",
+      "selected_2027_native_source_ids": [
+        "ERM_STAGEGATE_V2"
+      ],
+      "side": "B",
+      "task_id": "TASK-SH-ERM-004-corporate-CHECK-SOC2:CC3.4",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "AS-P007 local technical recommendation is distinct from separate transition site release and any governance risk acceptance.",
+      "candidate_support": "BOUNDED_SELECTED_CONDITION_PARTIAL",
+      "control_id": "SH-ERM-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "missing_activity": "No complete venture/provider-change population, accepted procedure change, corporate release approval or assurance of all stage-gates.",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "1312ad9a1206cd9e2958064f8bd0c37070a995a6eb8852998610095df792a920",
+      "selected_2027_native_source_ids": [
+        "ERM_STAGEGATE_V2"
+      ],
+      "side": "B",
+      "task_id": "TASK-SH-ERM-004-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "AS-P007 local technical recommendation is distinct from separate transition site release and any governance risk acceptance.",
+      "candidate_support": "BOUNDED_SELECTED_CONDITION_PARTIAL",
+      "control_id": "SH-ERM-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "missing_activity": "No complete venture/provider-change population, accepted procedure change, corporate release approval or assurance of all stage-gates.",
+      "procedure_type": "TOD",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "3699deaf28831f819ef566e970c2e6f34ff27561ff9318ff347a30be02edeaa5",
+      "selected_2027_native_source_ids": [
+        "ERM_STAGEGATE_V2"
+      ],
+      "side": "B",
+      "task_id": "TASK-SH-ERM-004-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "AS-P007 local technical recommendation is distinct from separate transition site release and any governance risk acceptance.",
+      "candidate_support": "BOUNDED_SELECTED_CONDITION_PARTIAL",
+      "control_id": "SH-ERM-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "missing_activity": "No complete venture/provider-change population, accepted procedure change, corporate release approval or assurance of all stage-gates.",
+      "procedure_type": "TOE",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "ea00e093efaa9d7d0b34c4285bca7e2817b3b2d3f994f9b5bbd64d3400fde6db",
+      "selected_2027_native_source_ids": [
+        "ERM_STAGEGATE_V2"
+      ],
+      "side": "B",
+      "task_id": "TASK-SH-ERM-004-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Inspect governing-body composition, conflicts and minutes challenging a control failure; a meeting calendar alone cannot demonstrate oversight.",
+      "authority_gate": "A historical board decision and meeting calendar do not assert 2027 governing-body oversight or quorum action.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No selected 2027 approved charters, committee membership/eligibility, minutes challenging control failures or maintenance review.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "SOC2:CC1.2"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "d7e5029b410eea526f98f9434c6ca35c1b869e65f96540e22c2b40e0a6a8a8df",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-GOV-001-corporate-CHECK-SOC2:CC1.2",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "A historical board decision and meeting calendar do not assert 2027 governing-body oversight or quorum action.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "missing_activity": "No selected 2027 approved charters, committee membership/eligibility, minutes challenging control failures or maintenance review.",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "cf6ed797c837c16f4e7630941d33f2df18ee49a493af7fe9b0ee6ac6ed079ac3",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-GOV-001-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "A historical board decision and meeting calendar do not assert 2027 governing-body oversight or quorum action.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "missing_activity": "No selected 2027 approved charters, committee membership/eligibility, minutes challenging control failures or maintenance review.",
+      "procedure_type": "TOD",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "bd4105e7d794b54ce25126ef049e75f7cfd130258c02c23535ca727ca4a72c15",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-GOV-001-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "A historical board decision and meeting calendar do not assert 2027 governing-body oversight or quorum action.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-001",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "missing_activity": "No selected 2027 approved charters, committee membership/eligibility, minutes challenging control failures or maintenance review.",
+      "procedure_type": "TOE",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "7784970267871280af96c38d2985184b254478b61183e2dfb60c0098754b280c",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-GOV-001-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Inspect authorized appointment evidence and trace two policy/incident responsibilities to the appointed official. Flag vacant or conflicting authority.",
+      "authority_gate": "CISO title is not proof of HIPAA security-official designation; reference scope does not establish hybrid designation; P001/Board reserved powers need actual records.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No selected 2027 reserved-matters/delegation review, actual HIPAA security-official appointment evidence, hybrid-entity designation, cross-site oversight or conflict resolution.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "HIPAA:164.308"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "05610301586a6b3b1fcdd30d4a28ac738f0bc72ae475915681d4e0c6f57e8214",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-GOV-003-corporate-ACTION-H-SECURITY-OFFICIAL",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Inspect actual designation, included components and separation safeguards; do not infer a designation from the reference scope.",
+      "authority_gate": "CISO title is not proof of HIPAA security-official designation; reference scope does not establish hybrid designation; P001/Board reserved powers need actual records.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No selected 2027 reserved-matters/delegation review, actual HIPAA security-official appointment evidence, hybrid-entity designation, cross-site oversight or conflict resolution.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "HIPAA:164.105"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "303b7a7a5aac56964f73e1186ee5204475269167c94179f90d605c7018119204",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-GOV-003-corporate-CHECK-HIPAA:164.105",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Trace a cross-site escalation from executor through delegated authority to governing oversight; test a conflicting assignment.",
+      "authority_gate": "CISO title is not proof of HIPAA security-official designation; reference scope does not establish hybrid designation; P001/Board reserved powers need actual records.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No selected 2027 reserved-matters/delegation review, actual HIPAA security-official appointment evidence, hybrid-entity designation, cross-site oversight or conflict resolution.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "SOC2:CC1.3"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "5eecd69adba7a5f586739111a023f2a5204fb985e5e95358a9204f266e178faf",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-GOV-003-corporate-CHECK-SOC2:CC1.3",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "CISO title is not proof of HIPAA security-official designation; reference scope does not establish hybrid designation; P001/Board reserved powers need actual records.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "missing_activity": "No selected 2027 reserved-matters/delegation review, actual HIPAA security-official appointment evidence, hybrid-entity designation, cross-site oversight or conflict resolution.",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "80501d0f0225f01502b2506729a09e7d3c8a21c7794cdcbf94879cee5dff6836",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-GOV-003-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "CISO title is not proof of HIPAA security-official designation; reference scope does not establish hybrid designation; P001/Board reserved powers need actual records.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "missing_activity": "No selected 2027 reserved-matters/delegation review, actual HIPAA security-official appointment evidence, hybrid-entity designation, cross-site oversight or conflict resolution.",
+      "procedure_type": "TOD",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "fe32f14d9c9911f844f1bf979a9ff4e457ccbc27a13b5dfbe05407d012216011",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-GOV-003-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "CISO title is not proof of HIPAA security-official designation; reference scope does not establish hybrid designation; P001/Board reserved powers need actual records.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-003",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "missing_activity": "No selected 2027 reserved-matters/delegation review, actual HIPAA security-official appointment evidence, hybrid-entity designation, cross-site oversight or conflict resolution.",
+      "procedure_type": "TOE",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "e365c286ee3a74a240dc0e5078406d0af9b8d80dd015591acbdf15d22fe8faf7",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-GOV-003-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": "Inspect governing-body composition, conflicts and minutes challenging a control failure; a meeting calendar alone cannot demonstrate oversight.",
+      "authority_gate": "P043 or a Corporate Secretary contact cannot substitute for the governing body\u2019s collective determination.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": null,
+      "missing_activity": "No selected 2027 conflict declarations, director independence assessments, recusal events, eligibility review or minutes challenging control failure.",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [
+        "SOC2:CC1.2"
+      ],
+      "retained_source_count": 0,
+      "screen_row_sha256": "6a7ad5775313b0b6e5f6178d6299e23e499284677b3b9f45a465ceaace6c87f3",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-GOV-004-corporate-CHECK-SOC2:CC1.2",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "P043 or a Corporate Secretary contact cannot substitute for the governing body\u2019s collective determination.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Locate deployed company-native configuration or decision records for the scoped service; reconcile owner and effective date to the population.",
+      "missing_activity": "No selected 2027 conflict declarations, director independence assessments, recusal events, eligibility review or minutes challenging control failure.",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "d61899394dc1e839b65a6a28f7e3fd018f319c429b4d32e5007cb9e3fa0685ba",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-GOV-004-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "P043 or a Corporate Secretary contact cannot substitute for the governing body\u2019s collective determination.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Test design against the stated control objective, boundary, owner, frequency, inputs, decision criteria, outputs and exception path.",
+      "missing_activity": "No selected 2027 conflict declarations, director independence assessments, recusal events, eligibility review or minutes challenging control failure.",
+      "procedure_type": "TOD",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "c8d76aa4de3f2c17b434aa1aa6c9ce5da6144f83a755963645c78629862a9e7a",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-GOV-004-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "actual_operation_eligibility_as_of_packet": false,
+      "authored_test_clause": null,
+      "authority_gate": "P043 or a Corporate Secretary contact cannot substitute for the governing body\u2019s collective determination.",
+      "candidate_support": "DESIGN_OR_HISTORICAL_CONTEXT_ONLY",
+      "control_id": "SH-GOV-004",
+      "current_conclusion": "NOT_RUN",
+      "current_status": "NOT_STARTED",
+      "generic_gate_inferred_not_authored": "Define the complete selected-period population and sample, reperform execution and exceptions, and retain exact native provenance and availability clocks.",
+      "missing_activity": "No selected 2027 conflict declarations, director independence assessments, recusal events, eligibility review or minutes challenging control failure.",
+      "procedure_type": "TOE",
+      "proposed_disposition": "NO_TASK_CREDIT_NO_PROCEDURE_EXECUTED",
+      "requirement_ids": [],
+      "retained_source_count": 0,
+      "screen_row_sha256": "dd89f1871ec2addc28659afa9a6a85716c1e86072a8672c2e24c7515d0a240c0",
+      "selected_2027_native_source_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-GOV-004-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    }
+  ],
+  "schema": "SH_RISK_ASSURANCE_GOVERNANCE_50_ROUTE_GAP_LEDGER_V1",
+  "status": "READ_ONLY_CANDIDATE_DISCOVERY_NO_TASK_CREDIT"
+}
