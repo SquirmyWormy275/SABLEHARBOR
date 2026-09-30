@@ -39,13 +39,14 @@ def _v5_review(private: Path) -> tuple:
         prior.prior._private(directory, directory=True)
     before = (prior.prior._pin(review, V5_REVIEW_SHA), prior.prior._pin(report, V5_REPORT_SHA))
     row = prior.prior._read_json(review)
+    report_row = prior.prior._read_json(report)
     if (
         row.get("verdict") != "PASS_PARTIAL_READ_ONLY_V5_MAIN_LOCAL_NO_AUDIT_CREDIT"
         or row.get("portfolio_report_sha256") != V5_REPORT_SHA
         or row.get("selected_portfolio_run") != "main-run-v1"
         or row.get("selected_candidate_run") != "main-candidate-v1"
         or row.get("active_pair_mutated") is not False
-        or prior.prior._read_json(report).get("source_complete") is not False
+        or report_row.get("source_complete") is not False
         or set(row.get("candidate_sha256", {})) != set(candidates)
     ):
         raise PortfolioVerificationError("Reviewed V5 main baseline differs")
@@ -58,7 +59,7 @@ def _v5_review(private: Path) -> tuple:
         or tuple(_identity(path) for path in candidates.values()) != candidate_before
     ):
         raise PortfolioVerificationError("Reviewed V5 main baseline changed during read")
-    return (*before, candidate_before)
+    return (*before, candidate_before, report_row)
 
 
 def _iam_source(repository: Path, private: Path) -> dict:
@@ -149,6 +150,8 @@ def verify_all(repository: Path, *, private_repository: Path | None = None) -> d
     private = Path(private_repository or repository).resolve(strict=True)
     before = _v5_review(private)
     previous = prior.verify_all(repository, private_repository=private)
+    if previous != before[3]:
+        raise PortfolioVerificationError("Recomputed V5 prefix differs from reviewed report")
     if (
         previous.get("source_count"),
         previous.get("native_versions"),

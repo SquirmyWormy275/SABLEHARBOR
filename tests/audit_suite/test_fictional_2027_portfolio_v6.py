@@ -1,11 +1,13 @@
 """Reviewed V5 prefix and fictional IAM005 route remain partial and source-pinned."""
 
+from copy import deepcopy
 from pathlib import Path
 
 import pytest
 
 from enterprise.audit_suite import fictional_2027_candidate_registry_v6 as candidate
 from enterprise.audit_suite import fictional_2027_source_portfolio_v6 as portfolio
+from enterprise.audit_suite.fictional_2027_candidate_registry import CandidateRegistryError
 from enterprise.audit_suite.fictional_2027_source_portfolio import PortfolioVerificationError
 
 REPOSITORY = Path(__file__).resolve().parents[2]
@@ -50,3 +52,25 @@ def test_iam_review_byte_pin_drift_fails_closed(monkeypatch):
     monkeypatch.setattr(portfolio, "IAM_REVIEW_SHA", "0" * 64)
     with pytest.raises(PortfolioVerificationError, match="byte pin"):
         portfolio.verify_all(REPOSITORY, private_repository=PRIVATE)
+
+
+def test_recomputed_v5_source_row_drift_fails_closed(monkeypatch):
+    changed = deepcopy(portfolio.prior.verify_all(REPOSITORY, private_repository=PRIVATE))
+    changed["sources"][0]["source"] = "UNREVIEWED_SOURCE_ROW"
+    monkeypatch.setattr(portfolio.prior, "verify_all", lambda *args, **kwargs: changed)
+    with pytest.raises(PortfolioVerificationError, match="Recomputed V5 prefix"):
+        portfolio.verify_all(REPOSITORY, private_repository=PRIVATE)
+
+
+def test_recomputed_v5_candidate_drift_fails_closed(monkeypatch):
+    original = candidate.prior.candidate_profiles
+
+    def changed(*args, **kwargs):
+        diagnostic, profiles = original(*args, **kwargs)
+        profiles = deepcopy(profiles)
+        profiles["A"]["source_pins"][0]["source"] = "UNREVIEWED_PIN"
+        return diagnostic, profiles
+
+    monkeypatch.setattr(candidate.prior, "candidate_profiles", changed)
+    with pytest.raises(CandidateRegistryError, match="Recomputed V5 candidate"):
+        candidate.candidate_profiles(REPOSITORY, PRIVATE)

@@ -47,6 +47,21 @@ def candidate_profiles(repository: Path, private_repository: Path) -> tuple[dict
         diagnostic.get("source_component_count"),
     ) != (27, 500, 28):
         raise CandidateRegistryError("Reviewed V6 source roster differs")
+    reviewed_candidate = (
+        private_repository / portfolio.BASE / portfolio.V5_FOLDER / "main-candidate-v1"
+    )
+    reviewed_report = prior.prior.historical._json(reviewed_candidate / "REPORT.json")
+    for side in "AB":
+        selected = reviewed_report["sides"][side]
+        historical = old_profiles[side]
+        if (
+            historical["manifest"]
+            != prior.prior.historical._json(reviewed_candidate / f"{side}.json")
+            or historical["source_pins"] != selected["source_pins"]
+            or historical["profile_id"] != selected["profile_id"]
+            or historical["base_registry_sha256"] != selected["base_registry_sha256"]
+        ):
+            raise CandidateRegistryError("Recomputed V5 candidate differs from reviewed files")
     reviewed = {row["source"]: row for row in diagnostic["sources"]}
     profiles = {}
     for side, scenario in (("A", "CLEAN"), ("B", "MESSY")):
