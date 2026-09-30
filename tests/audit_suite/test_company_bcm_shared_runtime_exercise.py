@@ -4,6 +4,7 @@ import hashlib
 import json
 import shutil
 import sqlite3
+from copy import deepcopy
 from pathlib import Path
 
 import pytest
@@ -163,3 +164,24 @@ def test_exercise_finish_must_match_simulated_duration(tmp_path, monkeypatch):
     monkeypatch.setattr(bcm, "_steps", inconsistent_duration)
     with pytest.raises(CompanyStoreError, match="measurement clock differs"):
         bcm.create(tmp_path / "bad-clock", repository=REPOSITORY, private_repository=PRIVATE)
+
+
+def test_ceo_actor_id_must_join_locked_governance():
+    chartbook = json.loads((REPOSITORY / "docs/organization/source/chartbook.json").read_text())
+    governance = (REPOSITORY / "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md").read_text()
+    closeout = (
+        REPOSITORY / "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md"
+    ).read_text()
+    bcm._validate_ceo_actor(chartbook, governance, closeout)
+    wrong = deepcopy(chartbook)
+    next(n for n in wrong["nodes"] if n.get("id") == "P001")["title"] = "Corporate Secretary"
+    with pytest.raises(CompanyStoreError, match="P001-to-Daniel/CEO"):
+        bcm._validate_ceo_actor(wrong, governance, closeout)
+    wrong = deepcopy(chartbook)
+    next(n for n in wrong["nodes"] if n.get("id") == "P001")["person_id"] = "P004"
+    with pytest.raises(CompanyStoreError, match="P001-to-Daniel/CEO"):
+        bcm._validate_ceo_actor(wrong, governance, closeout)
+    with pytest.raises(CompanyStoreError, match="P001-to-Daniel/CEO"):
+        bcm._validate_ceo_actor(
+            chartbook, governance.replace("CEO, director", "director"), closeout
+        )

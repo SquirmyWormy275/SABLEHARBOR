@@ -17,7 +17,7 @@ from .company_store import CompanyStore, CompanyStoreError, _time
 from .operating_source_bridge import encoded, sha
 from .private_publication import publish
 
-SCHEMA = "SH_FICTIONAL_2027_SELECTED_BCM_V1"
+SCHEMA = "SH_FICTIONAL_2027_SELECTED_BCM_V2"
 COMPANY = transition.COMPANY
 AS_OF = "2026-09-29"
 QUALIFICATION = "FUTURE_FICTIONAL_SELECTED_SHARED_RUNTIME_NO_REAL_OPERATION_OR_AUDIT_CREDIT"
@@ -69,6 +69,18 @@ TRACKED_PINS = {
     ),
     "enterprise/audit_suite/BCM_SHARED_RUNTIME_2027_PROPOSAL.md": (
         "7cf852d956a4a74b9e618f1ea9321d5bb5336ad5bd102a8da643475a9e75244a"
+    ),
+    "enterprise/audit_suite/BCM_SHARED_RUNTIME_2027_PROPOSAL_V2.md": (
+        "daa784128e5707599c2389d53e9d0968e0f14672629eeb632495ac677cc54875"
+    ),
+    "docs/organization/source/chartbook.json": (
+        "6ba4f1ed1a14581455a62c3e79a29ca59dbaf1270dfb0db850c0376c15507b49"
+    ),
+    "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md": (
+        "dc1e2e3ea6e7ea8d364eae87bd890a8c79a5a577a7554ed371cda3810ea945a8"
+    ),
+    "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md": (
+        "7405bf888afc85634f9dfaa062a51c440e06a2588df0f44ac7ef9953b892530e"
     ),
 }
 BRANCHES = {"CLEAN": "BCM-CLEAN", "MESSY": "BCM-MESSY"}
@@ -133,6 +145,33 @@ def _frozen_identity(path: Path) -> tuple:
         info.st_mtime_ns,
         _digest(path),
     )
+
+
+def _validate_ceo_actor(chartbook: dict, governance: str, closeout: str) -> None:
+    """Bind fictional actor P001 to the current controlled CEO source chain."""
+    nodes = [n for n in chartbook["nodes"] if n.get("id") == "P001"]
+    if len(nodes) != 1:
+        raise CompanyStoreError("P001 CEO actor ID missing or ambiguous")
+    node = nodes[0]
+    source = node.get("sources")
+    if (
+        node.get("person_id") != "P001"
+        or node.get("source_record_id") != "P001"
+        or node.get("type") != "person"
+        or node.get("name") != "Daniel Mercer"
+        or node.get("title") != "Chief Executive Officer"
+        or node.get("status") != "current_employee"
+        or not isinstance(source, list)
+        or len(source) != 1
+        or source[0].get("path") != "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md"
+        or source[0].get("line") != 21
+        or source[0].get("evidence") != governance.splitlines()[20]
+        or "**State:** LOCKED" not in governance
+        or "## CLOSE-001 - Daniel Mercer" not in closeout
+        or "**Canon state:** LOCKED" not in closeout
+        or "his surname was not supplied are superseded by this decision" not in closeout
+    ):
+        raise CompanyStoreError("P001-to-Daniel/CEO authority source differs")
 
 
 def _selected_transition(trans: dict, root: Path) -> dict:
@@ -254,6 +293,11 @@ def _context(repository: Path, private_repository: Path) -> tuple[dict, dict, di
         or "founder, CEO, and director Daniel" not in lore
     ):
         raise CompanyStoreError("BCM authority canon differs")
+    _validate_ceo_actor(
+        json.loads((repository / "docs/organization/source/chartbook.json").read_text()),
+        (repository / "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md").read_text(),
+        (repository / "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md").read_text(),
+    )
     services = json.loads((repository / "enterprise/services/source/services.json").read_text())
     if "SVC-compute" not in str(services) or "SVC-backup" not in str(services):
         raise CompanyStoreError("Selected shared-service dependency absent")
@@ -318,7 +362,12 @@ def _steps(scenario: str) -> list[dict]:
             refs=(),
             prior=(),
             detail={
-                "issuer": "Daniel, CEO (surname unstated in canon)",
+                "issuer": "Daniel Mercer, CEO (P001; fictional selected-service decision)",
+                "actor_id_crosswalk_status": (
+                    "STRUCTURED_CHARTBOOK_ENGINEERING_REVIEW_PENDING_OWNER_ACCEPTANCE"
+                ),
+                "governance_name_role_source": "LOCKED_BOARD_V1.0.1_AND_CLOSE_001",
+                "real_world_delegation_asserted": False,
                 "delegate": "AS-P001",
                 "technical_owner": "AS-P007",
                 "scope": "SVC-compute selected corporate shared-runtime BIA only",
