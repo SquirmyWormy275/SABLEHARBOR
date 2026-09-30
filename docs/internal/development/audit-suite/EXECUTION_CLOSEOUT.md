@@ -805,6 +805,22 @@ relationship population, legal analysis or task credit. The private handoff
 and review were copied as independently hashed ordinary bytes with separate
 inodes and zero shared extents reported.
 
+The proposed [fictional 2027 provider lifecycle source](../../../../enterprise/audit_suite/PROVIDER_LIFECYCLE_2027_SIMULATION_PACKET.md)
+has since passed [independent review](../../../../enterprise/generated/audit-suite/company-provider-lifecycle-2026-09-29/independent-review-v1/REVIEW.json)
+(SHA-256 `bde642fd35fd4412bda49867b4d7961289bc97deae216bb56e325a19f371b634`).
+It has 24 company-native versions, three final synthetic relationships and
+three Q4 internal review rows per Clean/Messy branch. The Messy branch
+retains a historical support-relationship omission after detection and
+backfill, separate from the BA flow-down exception. Every proposed outside
+assurance request remains `NOT_SENT_NOT_RECEIVED`, and outside performance
+remains `NOT_VERIFIED`. The reviewed V3 transition and V1 BA native tuple
+pins, private modes, zero grants/collections and 538-file active P1
+preservation passed. The private run/review were copied as matching ordinary
+bytes with separate inodes and zero shared extents reported; seven focused
+tests, Ruff and native verification passed in this checkout. This bounded
+future training source grants no actual provider representation, 2027
+operation, audit collection or task credit.
+
 The queue's job `state`, acceptance criteria and attributed checkpoints must be read
 together. Historical `*_scope_update` entries record what was authorized at the time;
 their `QUEUED_NOT_STARTED` labels do not reset later job progress. Conversely, a
