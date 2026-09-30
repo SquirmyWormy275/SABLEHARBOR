@@ -81,6 +81,14 @@ no outside request was sent through the packet. Legal applicability, owner
 authority and response evidence remain explicit schedule dependencies rather
 than automatic N/A paths.
 
+An existing nonpersonal SH-REC-003 data-quality lineage source has also been
+preserved as an independently reviewed native snapshot candidate: eleven
+business versions per branch with inherited audit-access journals excluded
+from business provenance. It is outside V3 and cannot close a complete
+transformation population or grant task credit. A corrected relative-path
+verifier and fresh main-local copy passed independent review; the earlier
+failed diagnostic remains preserved.
+
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
 2–16, 2027 (weeks 18–20) is the working target. March 16, 2027 (week 24) is
