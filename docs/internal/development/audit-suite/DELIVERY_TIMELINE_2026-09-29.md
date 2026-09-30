@@ -58,21 +58,19 @@ source. The other 19 have only partial fictional context. Qualified
 legal/applicability work and explicit limitations therefore remain a schedule
 dependency that additional source code alone cannot close.
 
-**Later September 29 source checkpoint:** The independently reviewed partial
-candidate registry has 15 fictional source cohorts, 256 native versions,
-28 components and 182 system aliases per side. The reviewed exact 283-route
-reconciliation classifies 84 per side as partial native-source candidates,
-78 as design-only and 121 as unsupported clauses; no task receives credit.
-Six later reviewed local ENG005, PRD, ETH004, ETH003, PPL002 and IAM005 cohorts
-bring the broader source-production inventory to 21 cohorts and 358 versions,
-but are
-outside that candidate registry and route reconciliation. A disposable
-scoped-grant collection probe exercised 20 originals from the first ten
-cohorts without changing the active pair or granting task credit. These
-additions improve source realism, but do not close legal/owner gates,
-full-period populations or the 818 branch-task procedures. The week-10
-complete-registry and later fresh-pair gates remain on the same calendar
-until a route-level reforecast is reviewed.
+**Later September 29 source checkpoint:** The independently reviewed V3
+partial candidate registry has 21 fictional source cohorts, 358 native
+versions, 35 components and 211 system aliases per side. The reviewed exact
+283-route reconciliation classifies 108 per side as partial native-source
+candidates, 54 as design-only and 121 as unsupported clauses; no task receives
+credit. The historical ten- and 15-source checkpoints remain preserved. A
+disposable scoped-grant collection probe exercised 20 originals from the
+first ten cohorts without changing the active pair or granting task credit;
+the expanded V3 collection boundary is under development. The new sources
+improve local realism, but do not close legal/owner gates, full-period
+populations or the 818 branch-task procedures. The week-10 complete-registry
+and later fresh-pair gates remain on the same calendar until a route-level
+reforecast is reviewed.
 
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
