@@ -1,0 +1,216 @@
+{
+  "as_of": "2026-09-29",
+  "base_commit": "e49d911ef52a9c2f5ae7f6556a44be9ea6a40bda",
+  "inputs": {
+    "bcm_11": {
+      "path": "enterprise/audit_suite/BCM_11_ROUTE_GAP_LEDGER_2026-09-29.json",
+      "scope": "repo",
+      "sha256": "9684299eb5c49b7e6e2bb8eac40335a5468cb44db19ae9ed9ae3c9afd981e3f1"
+    },
+    "bcm_receipt": {
+      "path": "enterprise/generated/audit-suite/company-bcm-shared-runtime-2026-09-29/run-v2/RECEIPT.json",
+      "scope": "private",
+      "sha256": "3cd0b62de445cde7c1a76f61a156fb0fd5fa9c443cf3255ca85876b6f2c4de9a"
+    },
+    "bcm_review": {
+      "path": "enterprise/generated/audit-suite/company-bcm-shared-runtime-2026-09-29/independent-review-v2/REVIEW.json",
+      "scope": "private",
+      "sha256": "bff0e70bf1f8e72e2e94bf9c2fa91c4adec811a13d2a53f85788b57d967d9476"
+    },
+    "contract_triage_receipt": {
+      "path": "enterprise/generated/audit-suite/company-contract-obligation-triage-2026-09-29/run-v1/RECEIPT.json",
+      "scope": "private",
+      "sha256": "9e413b4f14912ad2034e8b4df7b0cf250378c2b4958238277222cd35d7b30d7e"
+    },
+    "contract_triage_review": {
+      "path": "enterprise/generated/audit-suite/company-contract-obligation-triage-2026-09-29/independent-review-v1/REVIEW.json",
+      "scope": "private",
+      "sha256": "ae4d988c15edec4ecba009244535ad53827b53e681aa82527dbe9a02e2ea970c"
+    },
+    "controlled_record_receipt": {
+      "path": "enterprise/generated/audit-suite/company-controlled-record-2026-09-29/run-v1/RECEIPT.json",
+      "scope": "private",
+      "sha256": "23b36b8d60f92893092257d507d82a8fd30fbdeba5d590560debe6a2c9b73962"
+    },
+    "controlled_record_review": {
+      "path": "enterprise/generated/audit-suite/company-controlled-record-2026-09-29/independent-review-v1/REVIEW.json",
+      "scope": "private",
+      "sha256": "968187ce495df23b72b6fe7e2d58b9ff017be42927cc0f3f1881d5e6669cd989"
+    },
+    "critical_role_receipt": {
+      "path": "enterprise/generated/audit-suite/company-critical-role-2027-simulation-2026-09-29/run-v3/RECEIPT.json",
+      "scope": "private",
+      "sha256": "cc4586f488d595b6769d290e7e4a0a9e274aea0cbde0fbcc1f4e51cc87a6ac77"
+    },
+    "critical_role_review": {
+      "path": "enterprise/generated/audit-suite/company-critical-role-2027-simulation-2026-09-29/independent-review-v3/REVIEW.json",
+      "scope": "private",
+      "sha256": "582d9250cc923efd720c36b68a44ced544bf8d453cc30816042afeecfdc52aa6"
+    },
+    "critical_scope": {
+      "path": "enterprise/audit_suite/CRITICAL_ROLE_2027_SCOPE.md",
+      "scope": "repo",
+      "sha256": "cb09f6edcead27418e9e3525554b0342a07d5e95f6b6be05c98d5fed4995bf39"
+    },
+    "data_50": {
+      "path": "enterprise/audit_suite/DATA_RECORD_PHI_50_ROUTE_GAP_LEDGER_2026-09-29.json",
+      "scope": "repo",
+      "sha256": "ec64be770474024c86cc9dd6876a9fd4c47d13478541f10cf3504688234cde63"
+    },
+    "dataset_receipt": {
+      "path": "enterprise/generated/audit-suite/company-dataset-classification-2026-09-29/run-v1/RECEIPT.json",
+      "scope": "private",
+      "sha256": "7c6e74974bcdb5b516b4a476099061543dbb6570e99942b3d74d9ed60bd9c44a"
+    },
+    "dataset_review": {
+      "path": "enterprise/generated/audit-suite/company-dataset-classification-2026-09-29/independent-review-v1/REVIEW.json",
+      "scope": "private",
+      "sha256": "4d1cd9c423781bf97ff586075c460c891cc60f621b42a29a22db59df929ff52e"
+    },
+    "extraction_receipt": {
+      "path": "enterprise/generated/audit-suite/company-source-extraction-2026-09-29/run-v1/RECEIPT.json",
+      "scope": "private",
+      "sha256": "3bf0b7bc42c141f4247bee734c8076fa73e10c60313c47b3f02a8cfdd0c5c52d"
+    },
+    "extraction_review": {
+      "path": "enterprise/generated/audit-suite/company-source-extraction-2026-09-29/independent-review-v1/REVIEW.json",
+      "scope": "private",
+      "sha256": "b2940aaedb5721d91367503c997eceece71a53370e67335985cb77ea95165a4d"
+    },
+    "findings_receipt": {
+      "path": "enterprise/generated/audit-suite/company-assurance-findings-2026-09-29/run-v1/RECEIPT.json",
+      "scope": "private",
+      "sha256": "74c614682c269eb1aff431b0c834e6c0581ebbb921e2549b0e200923d2129091"
+    },
+    "findings_review": {
+      "path": "enterprise/generated/audit-suite/company-assurance-findings-2026-09-29/independent-review-v1/REVIEW.json",
+      "scope": "private",
+      "sha256": "23033dcf6641d18038bc58a1e02fd1b014a4e550fe0ae78bd854e1f7f5552f58"
+    },
+    "integrity_receipt": {
+      "path": "enterprise/generated/audit-suite/company-integrity-chain-2026-09-29/run-v1/RECEIPT.json",
+      "scope": "private",
+      "sha256": "1c7103abc21bb3c1e5cc955c751638417d6bea04c6ddf32e1c36fbaf2240efa0"
+    },
+    "integrity_review": {
+      "path": "enterprise/generated/audit-suite/company-integrity-chain-2026-09-29/independent-review-main-v1/REVIEW.json",
+      "scope": "private",
+      "sha256": "30dece8998714cf412acf618a0fea9b59c891fb64415e5124eb4c9d509756aee"
+    },
+    "matrix_review_v2": {
+      "path": "enterprise/generated/audit-suite/documentary-discovery-routes-2026-09-29/independent-review-v2/REVIEW.json",
+      "scope": "private",
+      "sha256": "c4064f6217c0e7f69276adc71004d6da7971867ccf3d844a3e198145cec31ace"
+    },
+    "matrix_v2": {
+      "path": "enterprise/generated/audit-suite/documentary-discovery-routes-2026-09-29/run-v2/MATRIX.json",
+      "scope": "private",
+      "sha256": "e9477d2074bebce185e412a3ee7c424ded395c1a1128a7c918a94f6acbd1e327"
+    },
+    "phi_ba_receipt": {
+      "path": "enterprise/generated/audit-suite/company-phi-ba-2027-simulation-2026-09-29/run-v1/RECEIPT.json",
+      "scope": "private",
+      "sha256": "20e3762aabb45fcfa3107d695da37e7eeb677f6c5e98f1bb767fa463fe857d9d"
+    },
+    "phi_ba_review": {
+      "path": "enterprise/generated/audit-suite/company-phi-ba-2027-simulation-2026-09-29/independent-review-v1/REVIEW.json",
+      "scope": "private",
+      "sha256": "39bb9b071179ed672c5cf07c2867285d36b2f3e8cdce2106dc4472d17047911e"
+    },
+    "policy_22": {
+      "path": "enterprise/audit_suite/POLICY_EXCEPTION_22_ROUTE_LEDGER_2026-09-29.json",
+      "scope": "repo",
+      "sha256": "69cf0cbb368a58b30a9c55f1f09f0ee43895b245925a8336e5bdcb920a9118f0"
+    },
+    "policy_receipt": {
+      "path": "enterprise/generated/audit-suite/company-policy-exception-2026-09-29/run-v1/RECEIPT.json",
+      "scope": "private",
+      "sha256": "0e3a5c079b43acbf9dc2e24da7bfddf51ea9a1ea3dcc900ab01316abbdf8d1a1"
+    },
+    "policy_review": {
+      "path": "enterprise/generated/audit-suite/company-policy-exception-2026-09-29/independent-review-main-v1/REVIEW.json",
+      "scope": "private",
+      "sha256": "70150ae8307b0ef0ef503d3f4031a72b3c9e36ab8a77d7746c9846464b715087"
+    },
+    "processing_receipt": {
+      "path": "enterprise/generated/audit-suite/company-processing-purpose-2027-simulation-2026-09-29/run-v1/RECEIPT.json",
+      "scope": "private",
+      "sha256": "2c8e8205f20c03a1de981324db45c43cc66303ddaea60eccbce67023a452fb9d"
+    },
+    "processing_review": {
+      "path": "enterprise/generated/audit-suite/company-processing-purpose-2027-simulation-2026-09-29/independent-review-v2/REVIEW.json",
+      "scope": "private",
+      "sha256": "d768b1fa01d7e2a1b56326c5a0ba14df61564d7e4cc9ccee208f0996b4f050f1"
+    },
+    "processing_scope": {
+      "path": "enterprise/audit_suite/PROCESSING_PURPOSE_2027_PROPOSAL.md",
+      "scope": "repo",
+      "sha256": "c6ea8de7e1b807a93a7fed8df834dc9b026ba32812f3f59e339fd7b84b793b56"
+    },
+    "provider_85_v2": {
+      "path": "enterprise/audit_suite/provider_ba_85_candidate_routes_v2.json",
+      "scope": "repo",
+      "sha256": "7f4373f0b50d17a0e1b9d0e358cfb2f55b149068d5699916296cb35acea2bea8"
+    },
+    "provider_receipt": {
+      "path": "enterprise/generated/audit-suite/company-provider-lifecycle-2026-09-29/run-v2/RECEIPT.json",
+      "scope": "private",
+      "sha256": "ab530dfffb00574fe446b20b07bb80bcf89f5fbdc23d61a676ac0a4e4cce6025"
+    },
+    "provider_review": {
+      "path": "enterprise/generated/audit-suite/company-provider-lifecycle-2026-09-29/independent-review-v1/REVIEW.json",
+      "scope": "private",
+      "sha256": "bde642fd35fd4412bda49867b4d7961289bc97deae216bb56e325a19f371b634"
+    },
+    "retention_receipt": {
+      "path": "enterprise/generated/audit-suite/company-retention-hold-gate-2026-09-29/run-v1/RECEIPT.json",
+      "scope": "private",
+      "sha256": "13d0312ac10c0374f66f74e0be62d0e21f5485bf162994513ad04d93e8eff93b"
+    },
+    "retention_review": {
+      "path": "enterprise/generated/audit-suite/company-retention-hold-gate-2026-09-29/independent-review-main-v1/REVIEW.json",
+      "scope": "private",
+      "sha256": "468f2f56ec32fe61d3f6458471b5304f89f7e14c68bea91ed404eacfeb321499"
+    },
+    "risk_50": {
+      "path": "enterprise/audit_suite/risk_assurance_governance_50_route_gap_ledger_v1.json",
+      "scope": "repo",
+      "sha256": "ebe65d310d7d4a8b7c009992c66df411b087e807b06af97e30cc47db2a6d1b33"
+    },
+    "screen_v3": {
+      "path": "enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-all409-task-source-screen-v3/TASK-ROWS.json",
+      "scope": "private",
+      "sha256": "a0f995228683bde4663e1232380622fe208a225d71152cfb5aaf3cb0620f98ba"
+    },
+    "stagegate_receipt": {
+      "path": "enterprise/generated/audit-suite/company-risk-governance-stagegate-2026-09-29/run-v2/RECEIPT.json",
+      "scope": "private",
+      "sha256": "107aa37fad9fa453777c62ea119e677ec72c63efa7439885de2c318028bc89ee"
+    },
+    "stagegate_review": {
+      "path": "enterprise/generated/audit-suite/company-risk-governance-stagegate-2026-09-29/independent-review-v2/REVIEW.json",
+      "scope": "private",
+      "sha256": "78dbf2b9585efd8f51a08a598d6c56aa342ef7845b56e6c0892a239a968fde34"
+    },
+    "transition_receipt": {
+      "path": "enterprise/generated/audit-suite/company-runtime-transition-2026-09-29/run-v3/RECEIPT.json",
+      "scope": "private",
+      "sha256": "0a0a448f619e490870f69959d196eb6d5ca3747af0d4fb68056195910ce6cc11"
+    },
+    "transition_review": {
+      "path": "enterprise/generated/audit-suite/company-runtime-transition-2026-09-29/independent-review-v3/REVIEW.json",
+      "scope": "private",
+      "sha256": "f1acaeaea963055f99b0de120fd1b0347ee984edf085d353e7af1e427234d5a9"
+    },
+    "unmatched_v2": {
+      "path": "enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-unmatched373-company-native-coverage-plan-v2/TASK-ROUTES.json",
+      "scope": "private",
+      "sha256": "00415fca7d40339ca416514829e62a33b0a7f47e2905c818fd4fee329d5cf69b"
+    }
+  },
+  "limits": [
+    "Input hashes bind reviewed frozen task and source packets; source-target IDs are not audit credit.",
+    "2027 events are future fictional history relative to 2026-09-29; actual operation eligibility is false."
+  ],
+  "schema": "SH_DOCUMENTARY_283_ROUTE_RECONCILIATION_PINS_V1"
+}
