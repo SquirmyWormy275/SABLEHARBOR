@@ -16,7 +16,6 @@ from pathlib import Path
 
 from .company_store import CompanyStore, CompanyStoreError, _id, _time
 from .operating_source_bridge import encoded, sha
-from .organization import snapshot
 from .private_publication import publish
 
 SCHEMA = "SH_FICTIONAL_2027_CRITICAL_ROLE_REVIEW_V1"
@@ -33,6 +32,9 @@ SOURCE_PINS = {
     ),
     "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md": (
         "1707ed7021576048ca5f1904ca5e94d484e8f7e2992da5c9e04965421f79a751"
+    ),
+    "docs/structured/enterprise_leadership_2026-09-13.json": (
+        "90ec45642cc50219544910e60e4bf6d28b810302c62f29c5936bf965501d673d"
     ),
     "docs/controls/COMMON_CONTROL_CATALOG_v0.1.md": (
         "6bc27636355eb21204471672bd04377ee12cf5530feadf9ec7049a5983015433"
@@ -97,27 +99,58 @@ def _frozen(paths: dict[str, Path]) -> dict[str, tuple]:
     return result
 
 
+def _role_projection(leadership: dict) -> dict:
+    """Select only pinned proposed-contact facts; no git revision or broad roster."""
+    if (
+        leadership.get("record_id") != "SH-ENTERPRISE-PPL-20260913"
+        or leadership.get("repository_acceptance_status")
+        != "DELEGATED_IMPLEMENTATION_PENDING_ACCEPTED_MERGE"
+        or leadership.get("employment_start_dates") != "NOT_ESTABLISHED"
+    ):
+        raise CompanyStoreError("Scoped leadership source boundary differs")
+    contacts = {}
+    for person in leadership["people"]:
+        if person["person_id"] in {"AS-P006", *ROLES}:
+            contacts[person["person_id"]] = person
+    if set(contacts) != {"AS-P006", *ROLES}:
+        raise CompanyStoreError("Scoped contact population differs")
+    roles = {"AS-P006": "ROLE-32", **ROLES}
+    if any(
+        contacts[person]["org_role_id"] != role
+        or contacts[person]["appointment_date"] != "2026-09-13"
+        or contacts[person]["employment_start"] is not None
+        or contacts[person]["source_acceptance"]
+        != "DELEGATED_IMPLEMENTATION_PENDING_ACCEPTED_MERGE"
+        for person, role in roles.items()
+    ):
+        raise CompanyStoreError("Scoped role-contact facts differ")
+    return {
+        "leadership_record_id": leadership["record_id"],
+        "repository_acceptance_status": leadership["repository_acceptance_status"],
+        "role_contacts": [
+            {
+                "person_id": person,
+                "role_id": roles[person],
+                "appointment_date": contacts[person]["appointment_date"],
+                "source_acceptance": contacts[person]["source_acceptance"],
+                "employment_start": None,
+            }
+            for person in ("AS-P006", "AS-P007", "AS-P008")
+        ],
+        "assertion_limit": "SCOPED_PROPOSED_CONTACTS_NOT_EMPLOYMENT_OR_CONTROL_AUTHORITY",
+    }
+
+
 def _input_context(repository: Path, training_root: Path) -> dict:
     repository = Path(repository).resolve(strict=True)
     for relative, expected in SOURCE_PINS.items():
         path = repository / relative
         if path.is_symlink() or not path.is_file() or _digest(path) != expected:
             raise CompanyStoreError("Canon/procedure pin differs")
-    org = snapshot(repository, as_of="2027-04-15")
-    people = {p["person_id"]: p for p in org["canonical_people"] + org["proposed_people"]}
-    for person, role in ROLES.items():
-        if (
-            people[person]["org_role_id"] != role
-            or people[person]["status"] != "PROPOSED_OFFICE_OCCUPANT"
-        ):
-            raise CompanyStoreError("Scoped proposed-role contact differs")
-    owners = {a["control_id"]: a for a in org["control_assignments"]}
-    if any(
-        owners[c]["primary_person_id"] != "AS-P006"
-        or owners[c]["status"] != "PROPOSED_CURRENT_ASSIGNMENT"
-        for c in ("SH-PPL-005", "SH-TRN-003")
-    ):
-        raise CompanyStoreError("Proposed source custody differs")
+    leadership = json.loads(
+        (repository / "docs/structured/enterprise_leadership_2026-09-13.json").read_text()
+    )
+    projection = _role_projection(leadership)
     training_root = _private(training_root, directory=True)
     paths = {
         "receipt": training_root / "SOURCE_RECEIPT.json",
@@ -177,10 +210,16 @@ def _input_context(repository: Path, training_root: Path) -> dict:
     for scenario in TRAINING_BRANCHES:
         source = selected[scenario]
         roster = source[("training_roster", "ROSTER-LOCAL-TRN-2027-01")]["body"]
-        if {x["person_id"]: x["role_id"] for x in roster["members"]} != {
-            "AS-P006": "ROLE-32",
-            **ROLES,
-        }:
+        matrix = source[("training_matrix", "MATRIX-LOCAL-TRN-2027-01")]["body"]
+        if (
+            {x["person_id"]: x["role_id"] for x in roster["members"]}
+            != {
+                "AS-P006": "ROLE-32",
+                **ROLES,
+            }
+            or roster["custodian"] != "AS-P006"
+            or matrix["approved_by"] != "AS-P006"
+        ):
             raise CompanyStoreError("Training scoped roster differs")
         first = source[("training_monitoring", "MONITOR-LOCAL-TRN-2027-01-1")]["body"]
         final = source[("training_monitoring", "MONITOR-LOCAL-TRN-2027-01-2")]["body"]
@@ -202,7 +241,11 @@ def _input_context(repository: Path, training_root: Path) -> dict:
             or ("training_followup", "FOLLOWUP-LOCAL-TRN-2027-01") not in source
         ):
             raise CompanyStoreError("Late local-course causal chain differs")
-    return {"selected": selected, "org_digest": org["snapshot_digest"]}
+    return {
+        "selected": selected,
+        "role_projection": projection,
+        "role_projection_sha256": sha(encoded(projection)),
+    }
 
 
 def _source(context: dict, scenario: str, system: str, record: str) -> dict:
@@ -373,7 +416,7 @@ def create(destination: Path, *, repository: Path, training_root: Path) -> dict:
                         "source_reference": SOURCE_REFERENCE,
                         "source_pins": SOURCE_PINS,
                         "training_pins": TRAINING_PINS,
-                        "organization_snapshot_digest": context["org_digest"],
+                        "role_projection_sha256": context["role_projection_sha256"],
                         "scenario": scenario,
                         "classification": "FUTURE_FICTIONAL_NO_AUDIT_CREDIT",
                     },
@@ -389,7 +432,8 @@ def create(destination: Path, *, repository: Path, training_root: Path) -> dict:
             "source_pins": SOURCE_PINS,
             "training_pins": TRAINING_PINS,
             "training_branches": TRAINING_BRANCHES,
-            "organization_snapshot_digest": context["org_digest"],
+            "role_projection": context["role_projection"],
+            "role_projection_sha256": context["role_projection_sha256"],
             "role_count_per_branch": 2,
             "source_version_count": 8,
             "open_scoped_gap_count_per_branch": 2,
@@ -436,7 +480,8 @@ def verify(destination: Path, *, repository: Path, training_root: Path) -> dict:
         or receipt.get("source_pins") != SOURCE_PINS
         or receipt.get("training_pins") != TRAINING_PINS
         or receipt.get("training_branches") != TRAINING_BRANCHES
-        or receipt.get("organization_snapshot_digest") != context["org_digest"]
+        or receipt.get("role_projection") != context["role_projection"]
+        or receipt.get("role_projection_sha256") != context["role_projection_sha256"]
         or receipt.get("role_count_per_branch") != 2
         or receipt.get("source_version_count") != 8
         or receipt.get("open_scoped_gap_count_per_branch") != 2
@@ -476,7 +521,7 @@ def verify(destination: Path, *, repository: Path, training_root: Path) -> dict:
                 "source_reference": SOURCE_REFERENCE,
                 "source_pins": SOURCE_PINS,
                 "training_pins": TRAINING_PINS,
-                "organization_snapshot_digest": context["org_digest"],
+                "role_projection_sha256": context["role_projection_sha256"],
                 "scenario": scenario,
                 "classification": "FUTURE_FICTIONAL_NO_AUDIT_CREDIT",
             }

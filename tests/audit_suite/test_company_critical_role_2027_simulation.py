@@ -34,7 +34,11 @@ def _context():
                 }
             }
         selected[scenario] = rows
-    return {"selected": selected, "org_digest": "c" * 64}
+    return {
+        "selected": selected,
+        "role_projection": {"scoped": True},
+        "role_projection_sha256": "c" * 64,
+    }
 
 
 def test_clean_messy_training_causality_stays_scoped():
@@ -54,6 +58,34 @@ def test_clean_messy_training_causality_stays_scoped():
             rows[3]["body"]["action_status"] == "INTERNAL_VERIFICATION_QUEUED_NOT_SENT_OR_APPROVED"
         )
         assert all(r["available_at"] > r["event_at"] for r in rows)
+
+
+def test_bounded_projection_is_revision_independent_and_pending():
+    leadership = {
+        "record_id": "SH-ENTERPRISE-PPL-20260913",
+        "repository_acceptance_status": "DELEGATED_IMPLEMENTATION_PENDING_ACCEPTED_MERGE",
+        "employment_start_dates": "NOT_ESTABLISHED",
+        "people": [
+            {
+                "person_id": person,
+                "org_role_id": role_id,
+                "appointment_date": "2026-09-13",
+                "employment_start": None,
+                "source_acceptance": "DELEGATED_IMPLEMENTATION_PENDING_ACCEPTED_MERGE",
+            }
+            for person, role_id in {
+                "AS-P006": "ROLE-32",
+                **role.ROLES,
+            }.items()
+        ],
+    }
+    initial = role._role_projection(leadership)
+    leadership["source_revision"] = "successor-commit"
+    assert role._role_projection(leadership) == initial
+    assert all(p["employment_start"] is None for p in initial["role_contacts"])
+    leadership["people"][0]["employment_start"] = "2026-09-13"
+    with pytest.raises(CompanyStoreError, match="contact facts"):
+        role._role_projection(leadership)
 
 
 def test_create_verify_and_tamper_fail_closed(tmp_path: Path, monkeypatch):
