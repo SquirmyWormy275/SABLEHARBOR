@@ -10,6 +10,7 @@ import hashlib
 import json
 import os
 import sqlite3
+import stat
 import tempfile
 from contextlib import closing
 from pathlib import Path
@@ -119,6 +120,27 @@ def _private_file(path: Path) -> None:
         raise CompanyStoreError("Ordinary private source file required")
 
 
+def _frozen_db_identity(path: Path) -> tuple[int, int, int, int, int, str]:
+    """Reject SQLite sidecars and detect replacement/change across immutable reads."""
+    _private_file(path)
+    if any(
+        Path(str(path) + suffix).exists() or Path(str(path) + suffix).is_symlink()
+        for suffix in ("-wal", "-shm", "-journal")
+    ):
+        raise CompanyStoreError("Frozen ERM001 database has active sidecar")
+    info = path.stat()
+    if not stat.S_ISREG(info.st_mode):
+        raise CompanyStoreError("Frozen ERM001 database must be regular")
+    return (
+        info.st_dev,
+        info.st_ino,
+        stat.S_IMODE(info.st_mode),
+        info.st_size,
+        info.st_mtime_ns,
+        _digest(path),
+    )
+
+
 def _context(repository: Path, private_repository: Path) -> tuple[dict, dict, dict, dict]:
     repository, private_repository = repository.resolve(), private_repository.resolve()
     tracked = {}
@@ -171,11 +193,11 @@ def _context(repository: Path, private_repository: Path) -> tuple[dict, dict, di
             raise CompanyStoreError("Frozen nine-route cohort differs")
         routes[side] = {c["control_id"]: [t["task_id"] for t in c["tasks"]] for c in selected}
     risk = {}
-    with closing(
-        sqlite3.connect(
-            (private_repository / ERM001_REL).as_uri() + "?mode=ro&immutable=1", uri=True
-        )
-    ) as db:
+    risk_path = private_repository / ERM001_REL
+    frozen_before = _frozen_db_identity(risk_path)
+    if frozen_before[-1] != PRIVATE_PINS[ERM001_REL]:
+        raise CompanyStoreError("Frozen ERM001 database pin changed before read")
+    with closing(sqlite3.connect(risk_path.as_uri() + "?mode=ro&immutable=1", uri=True)) as db:
         db.row_factory = sqlite3.Row
         db.execute("PRAGMA query_only=ON")
         if db.execute("PRAGMA quick_check").fetchone()[0] != "ok":
@@ -211,6 +233,8 @@ def _context(repository: Path, private_repository: Path) -> tuple[dict, dict, di
                     "sha256",
                 )
             }
+    if _frozen_db_identity(risk_path) != frozen_before:
+        raise CompanyStoreError("Frozen ERM001 database changed during read")
     pins = {**tracked, **{f"private://{name}": digest for name, digest in PRIVATE_PINS.items()}}
     return pins, trans, risk, routes
 

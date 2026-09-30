@@ -21,6 +21,25 @@ def _build(tmp_path):
     return root
 
 
+def _clone_private(tmp_path):
+    clone = tmp_path / "private-copy"
+    clone.mkdir(mode=0o700)
+    rel = "enterprise/generated/audit-suite/company-runtime-transition-2026-09-29/run-v3"
+    target = clone / rel
+    target.parent.mkdir(mode=0o700, parents=True)
+    shutil.copytree(PRIVATE / rel, target)
+    for name in (
+        "enterprise/generated/audit-suite/company-runtime-transition-2026-09-29/independent-review-v3/REVIEW.json",
+        "enterprise/generated/audit-suite/documentary-discovery-routes-2026-09-29/run-v2/MATRIX.json",
+        "enterprise/generated/audit-suite/documentary-discovery-routes-2026-09-29/independent-review-v2/REVIEW.json",
+        "enterprise/generated/audit-suite/company-risk-assessment-2026-09-14/aligned-v2/company/company.sqlite3",
+    ):
+        dest = clone / name
+        dest.parent.mkdir(mode=0o700, parents=True)
+        shutil.copy2(PRIVATE / name, dest)
+    return clone
+
+
 def _bodies(root):
     with sqlite3.connect(
         (root / "company.sqlite3").as_uri() + "?mode=ro&immutable=1", uri=True
@@ -87,31 +106,33 @@ def test_exact_branch_causality_and_no_approval(tmp_path):
 
 
 def test_missing_transition_dependency_fails_closed(tmp_path):
-    clone = tmp_path / "private-copy"
-    clone.mkdir(mode=0o700)
-    rel = "enterprise/generated/audit-suite/company-runtime-transition-2026-09-29/run-v3"
-    target = clone / rel
-    target.parent.mkdir(mode=0o700, parents=True)
-    shutil.copytree(PRIVATE / rel, target)
+    clone = _clone_private(tmp_path)
     # Exact private pin must reject a changed source even if an attacker reseals its own receipt.
-    receipt = target / "RECEIPT.json"
+    receipt = (
+        clone / "enterprise/generated/audit-suite/company-runtime-transition-2026-09-29/"
+        "run-v3/RECEIPT.json"
+    )
     raw = json.loads(receipt.read_text())
     raw["records"]["MESSY"] = [
         r for r in raw["records"]["MESSY"] if not (r["record"] == "EX-BOISE" and r["version"] == 2)
     ]
     receipt.write_text(json.dumps(raw, sort_keys=True))
     receipt.chmod(0o600)
-    # Other reviewed private files are required too; copy them without modifying their bytes.
-    for name in (
-        "enterprise/generated/audit-suite/company-runtime-transition-2026-09-29/independent-review-v3/REVIEW.json",
-        "enterprise/generated/audit-suite/documentary-discovery-routes-2026-09-29/run-v2/MATRIX.json",
-        "enterprise/generated/audit-suite/documentary-discovery-routes-2026-09-29/independent-review-v2/REVIEW.json",
-        "enterprise/generated/audit-suite/company-risk-assessment-2026-09-14/aligned-v2/company/company.sqlite3",
-    ):
-        dest = clone / name
-        dest.parent.mkdir(mode=0o700, parents=True)
-        shutil.copy2(PRIVATE / name, dest)
     with pytest.raises(CompanyStoreError, match="Reviewed private input differs"):
+        create(tmp_path / "rejected", repository=REPOSITORY, private_repository=clone)
+
+
+@pytest.mark.parametrize("suffix", ["-wal", "-shm", "-journal"])
+def test_frozen_erm001_sidecars_rejected_before_immutable_read(tmp_path, suffix):
+    clone = _clone_private(tmp_path)
+    db = (
+        clone / "enterprise/generated/audit-suite/company-risk-assessment-2026-09-14/"
+        "aligned-v2/company/company.sqlite3"
+    )
+    sidecar = Path(str(db) + suffix)
+    sidecar.write_bytes(b"pending logical database mutation")
+    sidecar.chmod(0o600)
+    with pytest.raises(CompanyStoreError, match="active sidecar"):
         create(tmp_path / "rejected", repository=REPOSITORY, private_repository=clone)
 
 
