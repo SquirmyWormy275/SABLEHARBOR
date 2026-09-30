@@ -878,6 +878,19 @@ and native verification passed here. Four SH-DAT-001 routes per side remain
 uncredited. Neither source changes the active P1 pair or asserts actual PHI,
 employment, deployment or a completed audit procedure.
 
+The [fictional controlled-record pointer source](../../../../enterprise/audit_suite/CONTROLLED_RECORD_2027_PROPOSAL.md)
+passed [independent review](../../../../enterprise/generated/audit-suite/company-controlled-record-2026-09-29/independent-review-v1/REVIEW.json)
+(SHA-256 `968187ce495df23b72b6fe7e2d58b9ff017be42927cc0f3f1881d5e6669cd989`).
+Its nine native versions register and re-read one exact DAT001 classification
+original per branch. Messy retains an invalid local alias without an
+authoritative version/hash; retrieval uses the original pointer, never the
+alias. Retention, deletion, hold and record-owner authority remain undecided.
+The private run/review were copied as matching ordinary bytes with separate
+inodes and zero shared extents reported. Three focused tests, Ruff and native
+verification passed in this checkout. Three SH-REC-001 routes per side are
+candidate discovery links only; no prepared audit pack, collection or task
+credit follows.
+
 The queue's job `state`, acceptance criteria and attributed checkpoints must be read
 together. Historical `*_scope_update` entries record what was authorized at the time;
 their `QUEUED_NOT_STARTED` labels do not reset later job progress. Conversely, a
