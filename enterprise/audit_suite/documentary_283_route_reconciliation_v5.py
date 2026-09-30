@@ -417,8 +417,9 @@ def markdown(result: dict) -> str:
         "unsupported. The 154 authored/129 inferred split is unchanged. Both "
         "active engagements retain 409 `NOT_STARTED`/`NOT_RUN` tasks.",
         "",
-        "REC003 contributes separate A/B byte-identical snapshots of eleven "
-        "previously existing versions each, with historical access journals "
+        "REC003 contributes separate A/B snapshots, each byte-identical to its "
+        "corresponding reviewed original and containing eleven previously existing "
+        "versions; A and B differ. Historical access journals are "
         "excluded. It adds no new operation, and its four routes were already "
         "targeted by earlier source context. Symbolic and selected-operated SEC005 "
         "sources share exactly five route IDs; those routes are counted once. The "
