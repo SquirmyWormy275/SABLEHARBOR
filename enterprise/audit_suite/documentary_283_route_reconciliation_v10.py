@@ -33,9 +33,48 @@ PROSPECTIVE_V11 = {
     "candidate_B": "3f244b4b92f33740c6677b7a7166aab1aaef74067b3a4e90f741a5d8651aecc1",
     "candidate_report": "31dcabc95d102b3f9bdcd4f698c98e976d97eb9d1ae47948828825742dd5ae56",
 }
-# Final main-local review and replay hashes do not exist yet. Build fails closed
-# until V11 has independent review, integration and a fresh main-local replay.
-V11_ACCEPTED: dict | None = None
+V11_ACCEPTED = {
+    "verdict": "PASS_PARTIAL_ETH001_PORTFOLIO_MAIN_LOCAL_NO_AUDIT_CREDIT",
+    "integration_commit": "6926e5a9d17a8e22cae41d3ca58cc9d03de6c404",
+    "tracked_sha256": {
+        "enterprise/audit_suite/fictional_2027_source_portfolio_v11.py": (
+            "8a13e5888f8c8782fd471723ff4ce2177e4289b9b82f2e18b266d53256bf5beb"
+        ),
+        "enterprise/audit_suite/fictional_2027_candidate_registry_v11.py": (
+            "01deae2ca4b1c8ac1718e8436a5fab34142aa339490c6e2b12c296e9d3c22ece"
+        ),
+        "tests/audit_suite/test_fictional_2027_portfolio_v11.py": (
+            "3b0eafcf01feaf63cd3df12caca71122441a9eacbd5b001d901fe8a4c8d40b08"
+        ),
+    },
+    "pins": {
+        "v11_review": {
+            "scope": "private",
+            "path": f"{V11_ROOT}/independent-review-main-v1/REVIEW.json",
+            "sha256": "559cbd325ce84e736417576ece134c4f0959d849bd775af0761ad5bd6881b615",
+        },
+        "v11_portfolio": {
+            "scope": "private",
+            "path": f"{V11_ROOT}/main-run-v1/REPORT.json",
+            "sha256": "9011ff5ca02a41cd966179097b1663a1519ac4f91c446ae1b0bd3f6716cc59bf",
+        },
+        "v11_candidate_a": {
+            "scope": "private",
+            "path": f"{V11_ROOT}/main-candidate-v1/A.json",
+            "sha256": "43a86507b5d62d5e7348e7245426f8132b7eb6f5aea65e07511864baef3e6331",
+        },
+        "v11_candidate_b": {
+            "scope": "private",
+            "path": f"{V11_ROOT}/main-candidate-v1/B.json",
+            "sha256": "3f244b4b92f33740c6677b7a7166aab1aaef74067b3a4e90f741a5d8651aecc1",
+        },
+        "v11_candidate_report": {
+            "scope": "private",
+            "path": f"{V11_ROOT}/main-candidate-v1/REPORT.json",
+            "sha256": "31dcabc95d102b3f9bdcd4f698c98e976d97eb9d1ae47948828825742dd5ae56",
+        },
+    },
+}
 _ACCEPTED_TOKEN = object()
 PINS = {
     "v9_ledger": {
@@ -115,11 +154,11 @@ def _accepted_v11(repository: Path, private: Path, freeze: dict) -> object:
 
     pins = V11_ACCEPTED["pins"]
     expected = {
-        "review": f"{V11_ROOT}/independent-review-main-v1/REVIEW.json",
-        "portfolio": f"{V11_ROOT}/main-run-v1/REPORT.json",
-        "candidate_a": f"{V11_ROOT}/main-candidate-v1/A.json",
-        "candidate_b": f"{V11_ROOT}/main-candidate-v1/B.json",
-        "candidate_report": f"{V11_ROOT}/main-candidate-v1/REPORT.json",
+        "v11_review": f"{V11_ROOT}/independent-review-main-v1/REVIEW.json",
+        "v11_portfolio": f"{V11_ROOT}/main-run-v1/REPORT.json",
+        "v11_candidate_a": f"{V11_ROOT}/main-candidate-v1/A.json",
+        "v11_candidate_b": f"{V11_ROOT}/main-candidate-v1/B.json",
+        "v11_candidate_report": f"{V11_ROOT}/main-candidate-v1/REPORT.json",
     }
     if set(pins) != set(expected) or any(
         pins[name]["path"] != path or pins[name]["scope"] != "private"
@@ -129,20 +168,22 @@ def _accepted_v11(repository: Path, private: Path, freeze: dict) -> object:
     loaded = {
         name: pinned._pinned(repository, private, private, entry) for name, entry in pins.items()
     }
-    review = loaded["review"]
+    review = loaded["v11_review"]
     outputs = {
-        "portfolio_report": pins["portfolio"]["sha256"],
-        "candidate_A": pins["candidate_a"]["sha256"],
-        "candidate_B": pins["candidate_b"]["sha256"],
-        "candidate_report": pins["candidate_report"]["sha256"],
+        "portfolio_report": pins["v11_portfolio"]["sha256"],
+        "candidate_A": pins["v11_candidate_a"]["sha256"],
+        "candidate_B": pins["v11_candidate_b"]["sha256"],
+        "candidate_report": pins["v11_candidate_report"]["sha256"],
     }
     if (
         review.get("verdict") != V11_ACCEPTED["verdict"]
         or review.get("integration_commit") != V11_ACCEPTED["integration_commit"]
         or review.get("main_output_sha256") != outputs
+        or review.get("main_tracked_sha256") != V11_ACCEPTED["tracked_sha256"]
         or review.get("p1_freeze") != freeze
-        or review.get("checks", {}).get("audit_task_credit") is not False
-        or review.get("checks", {}).get("fresh_audit_pair_created") is not False
+        or review.get("audit_task_credit") is not False
+        or review.get("fresh_audit_pair_created") is not False
+        or review.get("source_complete") is not False
         or review.get("checks", {}).get("main_or_atlas_tracked_written_by_review") is not False
     ):
         raise V10ReconciliationError("V11 independently reviewed main candidate differs")
@@ -153,8 +194,8 @@ def _accepted_v11(repository: Path, private: Path, freeze: dict) -> object:
         private / V11_ROOT / "main-candidate-v1", repository, private
     )
     if (
-        diagnostic != loaded["portfolio"]
-        or routed != loaded["candidate_report"]
+        diagnostic != loaded["v11_portfolio"]
+        or routed != loaded["v11_candidate_report"]
         or (diagnostic["source_count"], diagnostic["native_versions"]) != (32, 729)
         or diagnostic["sources"][-1]["source"] != "eth001conduct"
         or diagnostic["sources"][-1]["receipt_sha256"] != PINS["eth_receipt"]["sha256"]
