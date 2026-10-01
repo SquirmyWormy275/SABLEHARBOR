@@ -31,6 +31,9 @@ tasks. The indexed conclusions are 272 `LIMITATION`/two `FAIL` in A and 214
 `LIMITATION`/60 `FAIL` in B, with no passing conclusion in either old workroom.
 That experience and tooling can be reused. Its evidence, conclusions and Key
 cannot be transplanted as fresh-period procedure results into a new pair.
+The independently reviewed read-only method crosswalk now identifies 407
+authored procedure-method candidates per side and flags two changed gate scopes.
+This reduces method design work, not the 818 fresh performance/review instances.
 
 | Outcome | Working range from October 1 | Conditions |
 | --- | --- | --- |
