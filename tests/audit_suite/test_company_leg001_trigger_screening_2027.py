@@ -207,3 +207,13 @@ def test_read_only_verification_and_native_immutability(native):
     with sqlite3.connect(run / "company.sqlite3") as db:
         with pytest.raises(sqlite3.IntegrityError, match="Immutable source"):
             db.execute("DELETE FROM versions")
+
+
+def test_resealed_extra_receipt_branch_rejected(native, tmp_path):
+    run = _copy(native, tmp_path)
+    receipt = json.loads((run / "RECEIPT.json").read_text())
+    receipt["records"]["UNDECLARED_BRANCH"] = receipt["records"]["CLEAN"]
+    (run / "RECEIPT.json").write_text(json.dumps(receipt))
+    _reseal(run)
+    with pytest.raises(CompanyStoreError, match="receipt boundary"):
+        source.verify(run, repository=REPO, private_repository=PRIVATE)

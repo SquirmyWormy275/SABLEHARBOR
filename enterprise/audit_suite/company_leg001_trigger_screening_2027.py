@@ -646,6 +646,8 @@ def verify(destination, *, repository, private_repository):
         or receipt.get("company") != COMPANY
         or receipt.get("real_hipaa_applicability") != "UNDETERMINED"
         or receipt.get("branches") != BRANCHES
+        or not isinstance(receipt.get("records"), dict)
+        or set(receipt["records"]) != set(BRANCHES)
         or receipt.get("source_pins") != context["pins"]
         or receipt.get("target_task_ids_per_side") != context["task_ids"]
         or any(

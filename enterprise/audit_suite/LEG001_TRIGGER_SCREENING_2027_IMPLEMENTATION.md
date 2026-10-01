@@ -50,7 +50,7 @@ Create and verify a new private destination with:
 ```sh
 PYTHONPATH=src:. python -m enterprise.audit_suite.company_leg001_trigger_screening_2027 create \
   --repository . --private-repository /home/kingoftheeast/Projects/SABLEHARBOR-audit-suite \
-  --destination enterprise/generated/audit-suite/company-leg001-trigger-screening-2027-2026-10-01/isolated-run-v2
+  --destination enterprise/generated/audit-suite/company-leg001-trigger-screening-2027-2026-10-01/isolated-run-v3
 ```
 
 Use the same arguments with `verify` for a separate read-only check. The
@@ -58,9 +58,11 @@ destination parent must already be a private 0700 directory; existing outputs
 are never replaced. The verifier re-performs the exact native population,
 branch-specific predecessor joins, content hashes, clocks, source/receipt pins,
 registered owners and empty audit journals, then rechecks the frozen P1 inventory.
-Nine focused regressions reject resealed missing-channel data, false accepted
+Ten focused regressions reject resealed missing-channel data, false accepted
 nonoccurrence, changed fictional provenance and a disabled immutable trigger.
-They verify monthly cutoff/tail chronology and preserved correction history.
+A resealed undeclared receipt branch is also rejected. They verify monthly cutoff/tail chronology and preserved correction history.
 The first candidate remains preserved and rejected: independent review found
 future-window attestation and an unchecked provenance/trigger mutation. The
-second candidate corrects both defects and requires a fresh independent review.
+second candidate corrected both defects but independent review rejected an
+extra receipt branch. The third candidate enforces the exact branch map and
+requires a fresh independent review.
