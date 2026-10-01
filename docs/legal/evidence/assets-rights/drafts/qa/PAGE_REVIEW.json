@@ -1,0 +1,443 @@
+{
+  "status": "MANUAL_QA_COMPLETE_OWNER_DESIGN_REVIEW_PENDING",
+  "pages": [
+    {
+      "id": "SH-LEGAL-READ-IC-001",
+      "page": 1,
+      "png": "docs/legal/evidence/commercial/drafts/qa/SH-LEGAL-READ-IC-001-page-1.png",
+      "sha256": "bd9a7c0bae782f3980459351b91622517c72317b5aec34f586b9c004f2623cc4",
+      "pdf_sha256": "c7b0da7dc88e73b8646ee6ee4d34b6fd333966f1ff0509c9715b7c2469939f47"
+    },
+    {
+      "id": "SH-LEGAL-READ-ADV-001",
+      "page": 1,
+      "png": "docs/legal/evidence/commercial/drafts/qa/SH-LEGAL-READ-ADV-001-page-1.png",
+      "sha256": "200a3fd95ac7b698b31e98a8b49dea655170cae80963af90b91026562e5f84f1",
+      "pdf_sha256": "344b609092739c3b0ce2f3981e30fc8eda11923fedcbb56e799cd0e702bf9a78"
+    },
+    {
+      "id": "SH-LEGAL-READ-ATL-001",
+      "page": 1,
+      "png": "docs/legal/evidence/commercial/drafts/qa/SH-LEGAL-READ-ATL-001-page-1.png",
+      "sha256": "a62fb7e04ea7c4dcf9259d84116932b8fa41dd7cd6bd7b69f51457b154d8d7fa",
+      "pdf_sha256": "4b4205d1ab555c11f7ddb5da19fe88e460ef5263b90b0d42f4c5166dbcdd8f87"
+    },
+    {
+      "id": "SH-LEGAL-READ-COLO-001",
+      "page": 1,
+      "png": "docs/legal/evidence/commercial/drafts/qa/SH-LEGAL-READ-COLO-001-page-1.png",
+      "sha256": "834c1f5a181dcfb05c1d0424e311007d3eacc76b8e26a5b663ae5769ee05bf1d",
+      "pdf_sha256": "d655287e390d973992a454e5e1fa09cc67ffeb0769543c6ea7afaf60a79ef02c"
+    },
+    {
+      "id": "SH-LEGAL-READ-ENTITY-001",
+      "page": 1,
+      "png": "docs/legal/evidence/corporate/drafts/qa/SH-LEGAL-READ-ENTITY-001-page-1.png",
+      "sha256": "4acca90cb77bb7e0be0652feff5c7e42cf605b0265751a252e394fb6df6ff550",
+      "pdf_sha256": "9bb2e2fe5771889721dfb88eb688729e4b21984907a926490dd518f3865f81ef"
+    },
+    {
+      "id": "SH-LEGAL-READ-CAPITAL-001",
+      "page": 1,
+      "png": "docs/legal/evidence/corporate/drafts/qa/SH-LEGAL-READ-CAPITAL-001-page-1.png",
+      "sha256": "b3ed9b55efab5275a9082e8f3ac7ac6d08fff1f0167af6efb0760315e6e167e5",
+      "pdf_sha256": "a726e752524e8b28ea47525b140c68203d6187823855c393e42caa02111c7fab"
+    },
+    {
+      "id": "SH-LEGAL-READ-HR-001",
+      "page": 1,
+      "png": "docs/legal/evidence/corporate/drafts/qa/SH-LEGAL-READ-HR-001-page-1.png",
+      "sha256": "de1c9a5b3ff5d25c10742ac15fe878d30d7808e0299017325002d3899772d121",
+      "pdf_sha256": "bac4eed5472ae84f222a0775c6164e79f97c1572bda4b053aa42c12f2dfd11f5"
+    },
+    {
+      "id": "SH-LEGAL-READ-CARRY-001",
+      "page": 1,
+      "png": "docs/legal/evidence/corporate/drafts/qa/SH-LEGAL-READ-CARRY-001-page-1.png",
+      "sha256": "4e36014aa3111ce7657cacae36a1e07a2f5fdd96ed895c727dcb9f5f0057c0e7",
+      "pdf_sha256": "1fe590925915b4cb02a0cce3daa99947540501e54efa38b21abd20b65e038867"
+    },
+    {
+      "id": "SH-LEGAL-READ-RW-001",
+      "page": 1,
+      "png": "docs/legal/evidence/assets-rights/drafts/qa/SH-LEGAL-READ-RW-001-page-1.png",
+      "sha256": "89a07cb1f6edff4129cc1134e7e4b9ab53291eb9ee32458a5fc7d7d9e6ac1d9f",
+      "pdf_sha256": "92b972709d5e08cdc2e4691c50cd725dfbdf87a047e683e5442ef706f335df42"
+    },
+    {
+      "id": "SH-LEGAL-READ-ARU-001",
+      "page": 1,
+      "png": "docs/legal/evidence/assets-rights/drafts/qa/SH-LEGAL-READ-ARU-001-page-1.png",
+      "sha256": "74109c10cce5ceb3fec30fc90857992891dfa77106919de45d2c569d7d12bf15",
+      "pdf_sha256": "45d48693d1a4dc16521043c96653a9f2e4edaeae19552bc340c6d94f4fbad1bd"
+    },
+    {
+      "id": "SH-LEGAL-READ-HOST-001",
+      "page": 1,
+      "png": "docs/legal/evidence/assets-rights/drafts/qa/SH-LEGAL-READ-HOST-001-page-1.png",
+      "sha256": "32241b185b04b93309d33fc45472e67a206092b2116409d7b76d28e05f96e56d",
+      "pdf_sha256": "fa53605c04594873f35552ec9e7ee571f4cf479762c1e537efc75f4ad8fa984f"
+    },
+    {
+      "id": "SH-LEGAL-READ-NV-001",
+      "page": 1,
+      "png": "docs/legal/evidence/assets-rights/drafts/qa/SH-LEGAL-READ-NV-001-page-1.png",
+      "sha256": "e4c13bdbc3f0caa6ae8f072a902837bf931adcc788488e17a203ed61b8242ea7",
+      "pdf_sha256": "6c124951d93c20b897b104edf0b4e6d0363f7d44d3f92da0f1609ed84f002994"
+    },
+    {
+      "id": "SH-LEGAL-READ-TENURE-001",
+      "page": 1,
+      "png": "docs/legal/evidence/assets-rights/drafts/qa/SH-LEGAL-READ-TENURE-001-page-1.png",
+      "sha256": "8331a7a772a6d2f355c5f42e37b2e0363cadcf081ed93091a1b67dd009d6d9d0",
+      "pdf_sha256": "b2d8d452042a835504bb872a60f99240eed85c0792a1eb44a772bfcdf24e7f6c"
+    }
+  ],
+  "approved": false,
+  "review_date": "2026-09-12",
+  "reviewer": "Codex legal lane",
+  "method": {
+    "pdf": "Every final PDF page inspected individually as readable 1.5x raster; all 13 final pages inspected.",
+    "html": "Every dossier desktop HTML capture and all three review index captures inspected individually. Three mobile captures (ADV, CARRY, NV) additionally inspected; all 26 desktop/mobile views checked for horizontal overflow and broken images.",
+    "acceptance": "Technical and visual QA is not owner design acceptance. Exact PDF/HTML bytes remain held."
+  },
+  "corrections": [
+    {
+      "id": "SH-LEGAL-READ-ADV-001",
+      "issue": "First draft orphaned controlling source paths on page 2.",
+      "fix": "Body line-height 1.4 to 1.36; heading top margin 13px to 10px. Body font remains 10.5pt. All 13 dossiers now fit one page without clipping."
+    }
+  ],
+  "reproducibility": {
+    "source_build": "Repeated full build.py then build_readers.py produces no tracked diff.",
+    "pdf_build": "All 13 PDF SHA-256 values identical across repeat render."
+  },
+  "html_views": [
+    {
+      "id": "SH-LEGAL-READ-IC-001",
+      "html": "docs/legal/evidence/commercial/drafts/SH-LEGAL-READ-IC-001.html",
+      "html_sha256": "91576fe04f1362c0d5829a560be3eed1c2f2aa17099803dcbebb5103033de1e9",
+      "desktop_png": "docs/legal/evidence/commercial/drafts/qa/SH-LEGAL-READ-IC-001-browser-1360.png",
+      "desktop_inspected": true,
+      "mobile_inspected": false,
+      "browser_widths_checked": [
+        1360,
+        390
+      ]
+    },
+    {
+      "id": "SH-LEGAL-READ-ADV-001",
+      "html": "docs/legal/evidence/commercial/drafts/SH-LEGAL-READ-ADV-001.html",
+      "html_sha256": "65baaae185075e8bcd1078583619727d36ee1168c155874ddc647ea124bcb311",
+      "desktop_png": "docs/legal/evidence/commercial/drafts/qa/SH-LEGAL-READ-ADV-001-browser-1360.png",
+      "desktop_inspected": true,
+      "mobile_inspected": true,
+      "browser_widths_checked": [
+        1360,
+        390
+      ]
+    },
+    {
+      "id": "SH-LEGAL-READ-ATL-001",
+      "html": "docs/legal/evidence/commercial/drafts/SH-LEGAL-READ-ATL-001.html",
+      "html_sha256": "342a306df4a92c76d563d6cffa81883486ca9639aec980808d99c6e9971b9c14",
+      "desktop_png": "docs/legal/evidence/commercial/drafts/qa/SH-LEGAL-READ-ATL-001-browser-1360.png",
+      "desktop_inspected": true,
+      "mobile_inspected": false,
+      "browser_widths_checked": [
+        1360,
+        390
+      ]
+    },
+    {
+      "id": "SH-LEGAL-READ-COLO-001",
+      "html": "docs/legal/evidence/commercial/drafts/SH-LEGAL-READ-COLO-001.html",
+      "html_sha256": "e969b05cd3afb33d59016f16d195caa23a6873c7c97386d91f16d0c2cc41e16a",
+      "desktop_png": "docs/legal/evidence/commercial/drafts/qa/SH-LEGAL-READ-COLO-001-browser-1360.png",
+      "desktop_inspected": true,
+      "mobile_inspected": false,
+      "browser_widths_checked": [
+        1360,
+        390
+      ]
+    },
+    {
+      "id": "SH-LEGAL-READ-ENTITY-001",
+      "html": "docs/legal/evidence/corporate/drafts/SH-LEGAL-READ-ENTITY-001.html",
+      "html_sha256": "d487b04e2e6e8d7771d18c4bf35fe6db19979c921f3db5e189eb78b88dfd1691",
+      "desktop_png": "docs/legal/evidence/corporate/drafts/qa/SH-LEGAL-READ-ENTITY-001-browser-1360.png",
+      "desktop_inspected": true,
+      "mobile_inspected": false,
+      "browser_widths_checked": [
+        1360,
+        390
+      ]
+    },
+    {
+      "id": "SH-LEGAL-READ-CAPITAL-001",
+      "html": "docs/legal/evidence/corporate/drafts/SH-LEGAL-READ-CAPITAL-001.html",
+      "html_sha256": "0b2c5849d2158f2bdad8ace7d1fd244d3040ac49bd012e366ee894253c0ee923",
+      "desktop_png": "docs/legal/evidence/corporate/drafts/qa/SH-LEGAL-READ-CAPITAL-001-browser-1360.png",
+      "desktop_inspected": true,
+      "mobile_inspected": false,
+      "browser_widths_checked": [
+        1360,
+        390
+      ]
+    },
+    {
+      "id": "SH-LEGAL-READ-HR-001",
+      "html": "docs/legal/evidence/corporate/drafts/SH-LEGAL-READ-HR-001.html",
+      "html_sha256": "8a5b4c91bc6e013034f4b9cab51e9feb2dbf5092da715eeb216c71639406391d",
+      "desktop_png": "docs/legal/evidence/corporate/drafts/qa/SH-LEGAL-READ-HR-001-browser-1360.png",
+      "desktop_inspected": true,
+      "mobile_inspected": false,
+      "browser_widths_checked": [
+        1360,
+        390
+      ]
+    },
+    {
+      "id": "SH-LEGAL-READ-CARRY-001",
+      "html": "docs/legal/evidence/corporate/drafts/SH-LEGAL-READ-CARRY-001.html",
+      "html_sha256": "4f512018f86c683660f02da2367a8d6fd29f0e1b419da8e995221ffd5fc8d5b7",
+      "desktop_png": "docs/legal/evidence/corporate/drafts/qa/SH-LEGAL-READ-CARRY-001-browser-1360.png",
+      "desktop_inspected": true,
+      "mobile_inspected": true,
+      "browser_widths_checked": [
+        1360,
+        390
+      ]
+    },
+    {
+      "id": "SH-LEGAL-READ-RW-001",
+      "html": "docs/legal/evidence/assets-rights/drafts/SH-LEGAL-READ-RW-001.html",
+      "html_sha256": "7a341d105ddd0a5755e78dceabd960a7b1e655245db7c078b1d1ac31675aa007",
+      "desktop_png": "docs/legal/evidence/assets-rights/drafts/qa/SH-LEGAL-READ-RW-001-browser-1360.png",
+      "desktop_inspected": true,
+      "mobile_inspected": false,
+      "browser_widths_checked": [
+        1360,
+        390
+      ]
+    },
+    {
+      "id": "SH-LEGAL-READ-ARU-001",
+      "html": "docs/legal/evidence/assets-rights/drafts/SH-LEGAL-READ-ARU-001.html",
+      "html_sha256": "a63c60b23fad64493887955b37fe7aaefa961e78ac93230da9209d7a1713f3e9",
+      "desktop_png": "docs/legal/evidence/assets-rights/drafts/qa/SH-LEGAL-READ-ARU-001-browser-1360.png",
+      "desktop_inspected": true,
+      "mobile_inspected": false,
+      "browser_widths_checked": [
+        1360,
+        390
+      ]
+    },
+    {
+      "id": "SH-LEGAL-READ-HOST-001",
+      "html": "docs/legal/evidence/assets-rights/drafts/SH-LEGAL-READ-HOST-001.html",
+      "html_sha256": "2e1d17ac2ecd645aa727ea06bd4ad282dbef0ec6c8c1ebed86fbf01fdd48c897",
+      "desktop_png": "docs/legal/evidence/assets-rights/drafts/qa/SH-LEGAL-READ-HOST-001-browser-1360.png",
+      "desktop_inspected": true,
+      "mobile_inspected": false,
+      "browser_widths_checked": [
+        1360,
+        390
+      ]
+    },
+    {
+      "id": "SH-LEGAL-READ-NV-001",
+      "html": "docs/legal/evidence/assets-rights/drafts/SH-LEGAL-READ-NV-001.html",
+      "html_sha256": "e087db9e6c936250726ce53827f817a6befea8aa5878d68f1bdad560639c65db",
+      "desktop_png": "docs/legal/evidence/assets-rights/drafts/qa/SH-LEGAL-READ-NV-001-browser-1360.png",
+      "desktop_inspected": true,
+      "mobile_inspected": true,
+      "browser_widths_checked": [
+        1360,
+        390
+      ]
+    },
+    {
+      "id": "SH-LEGAL-READ-TENURE-001",
+      "html": "docs/legal/evidence/assets-rights/drafts/SH-LEGAL-READ-TENURE-001.html",
+      "html_sha256": "d1bf3554946e56f20d0310759318fc54b3cbb6fb2988a4b0fb9f8146255691e3",
+      "desktop_png": "docs/legal/evidence/assets-rights/drafts/qa/SH-LEGAL-READ-TENURE-001-browser-1360.png",
+      "desktop_inspected": true,
+      "mobile_inspected": false,
+      "browser_widths_checked": [
+        1360,
+        390
+      ]
+    }
+  ],
+  "evidence_hashes": [
+    {
+      "path": "docs/legal/evidence/assets-rights/drafts/qa/SH-LEGAL-READ-ARU-001-browser-1360.png",
+      "sha256": "07d8d5dfd50d9a745f10fae1d2978ab4c5cac1be95bbd1f9d1e9752048c928e1"
+    },
+    {
+      "path": "docs/legal/evidence/assets-rights/drafts/qa/SH-LEGAL-READ-ARU-001-browser-390.png",
+      "sha256": "2f8e5254701d48c162632380c9dc1ffb5d5237da1212aeb2b623bb85a69341fe"
+    },
+    {
+      "path": "docs/legal/evidence/assets-rights/drafts/qa/SH-LEGAL-READ-ARU-001-page-1.png",
+      "sha256": "74109c10cce5ceb3fec30fc90857992891dfa77106919de45d2c569d7d12bf15"
+    },
+    {
+      "path": "docs/legal/evidence/assets-rights/drafts/qa/SH-LEGAL-READ-HOST-001-browser-1360.png",
+      "sha256": "9911aa6779583906866592a5988163fe19cdc86949c686919b36ba2404a18e55"
+    },
+    {
+      "path": "docs/legal/evidence/assets-rights/drafts/qa/SH-LEGAL-READ-HOST-001-browser-390.png",
+      "sha256": "e75f0445e7c46a36a1cdb8ab54fc5119cf123c194d7f7ae77143a5108097d855"
+    },
+    {
+      "path": "docs/legal/evidence/assets-rights/drafts/qa/SH-LEGAL-READ-HOST-001-page-1.png",
+      "sha256": "32241b185b04b93309d33fc45472e67a206092b2116409d7b76d28e05f96e56d"
+    },
+    {
+      "path": "docs/legal/evidence/assets-rights/drafts/qa/SH-LEGAL-READ-NV-001-browser-1360.png",
+      "sha256": "558c5f34606da27df0bb5c4ff13e42eec069b98d98278bf5f40109073ebf2900"
+    },
+    {
+      "path": "docs/legal/evidence/assets-rights/drafts/qa/SH-LEGAL-READ-NV-001-browser-390.png",
+      "sha256": "0a7cd68d0ddd7249c5e88d650b5c15af14d9dd3eafa59480210974f09262934e"
+    },
+    {
+      "path": "docs/legal/evidence/assets-rights/drafts/qa/SH-LEGAL-READ-NV-001-page-1.png",
+      "sha256": "e4c13bdbc3f0caa6ae8f072a902837bf931adcc788488e17a203ed61b8242ea7"
+    },
+    {
+      "path": "docs/legal/evidence/assets-rights/drafts/qa/SH-LEGAL-READ-RW-001-browser-1360.png",
+      "sha256": "6a71afca38a73d68a1cf46f613d497c0e3593e774e05355cff6e757d4af44dfb"
+    },
+    {
+      "path": "docs/legal/evidence/assets-rights/drafts/qa/SH-LEGAL-READ-RW-001-browser-390.png",
+      "sha256": "631c4bb139c628998ac43e88b825e99524b74e5b5157164eb2f4e93c1296a7a4"
+    },
+    {
+      "path": "docs/legal/evidence/assets-rights/drafts/qa/SH-LEGAL-READ-RW-001-page-1.png",
+      "sha256": "89a07cb1f6edff4129cc1134e7e4b9ab53291eb9ee32458a5fc7d7d9e6ac1d9f"
+    },
+    {
+      "path": "docs/legal/evidence/assets-rights/drafts/qa/SH-LEGAL-READ-TENURE-001-browser-1360.png",
+      "sha256": "523d2cf2aa9cf75b6536b91f4b464428ae3119b970d66a5a4579ce6e7a43a144"
+    },
+    {
+      "path": "docs/legal/evidence/assets-rights/drafts/qa/SH-LEGAL-READ-TENURE-001-browser-390.png",
+      "sha256": "942a023372995817b3d537d0f6f5885ec5e4cca19dd93957bcabed513fa833da"
+    },
+    {
+      "path": "docs/legal/evidence/assets-rights/drafts/qa/SH-LEGAL-READ-TENURE-001-page-1.png",
+      "sha256": "8331a7a772a6d2f355c5f42e37b2e0363cadcf081ed93091a1b67dd009d6d9d0"
+    },
+    {
+      "path": "docs/legal/evidence/assets-rights/drafts/qa/index.png",
+      "sha256": "aac658ebafe328efecbbc27c4bfa40c3c6e4e7b1acb0f7907d27e404241536f4"
+    },
+    {
+      "path": "docs/legal/evidence/commercial/drafts/qa/SH-LEGAL-READ-ADV-001-browser-1360.png",
+      "sha256": "1da346e1cd0c35ec9c85c5f78832f9b0c72d50171fdaf629abf6c459360c4a84"
+    },
+    {
+      "path": "docs/legal/evidence/commercial/drafts/qa/SH-LEGAL-READ-ADV-001-browser-390.png",
+      "sha256": "b07839b82f59e9179dc225e2969c37642dbfd27de36b95826d76160adc45d1c2"
+    },
+    {
+      "path": "docs/legal/evidence/commercial/drafts/qa/SH-LEGAL-READ-ADV-001-page-1.png",
+      "sha256": "200a3fd95ac7b698b31e98a8b49dea655170cae80963af90b91026562e5f84f1"
+    },
+    {
+      "path": "docs/legal/evidence/commercial/drafts/qa/SH-LEGAL-READ-ATL-001-browser-1360.png",
+      "sha256": "8e19fd2508851740ab83743ebbfabed9b1608d410c251960b24e8d330ccd21c0"
+    },
+    {
+      "path": "docs/legal/evidence/commercial/drafts/qa/SH-LEGAL-READ-ATL-001-browser-390.png",
+      "sha256": "1dda4715ef4b23fda0f2f49f1b7f5a5705165c7e6a9798e9a19ff4ccd7a53970"
+    },
+    {
+      "path": "docs/legal/evidence/commercial/drafts/qa/SH-LEGAL-READ-ATL-001-page-1.png",
+      "sha256": "a62fb7e04ea7c4dcf9259d84116932b8fa41dd7cd6bd7b69f51457b154d8d7fa"
+    },
+    {
+      "path": "docs/legal/evidence/commercial/drafts/qa/SH-LEGAL-READ-COLO-001-browser-1360.png",
+      "sha256": "e431db307bc27155f82b606a9a4eb5ecbe2f82ae3e8e245197b52d9cdf2b0d74"
+    },
+    {
+      "path": "docs/legal/evidence/commercial/drafts/qa/SH-LEGAL-READ-COLO-001-browser-390.png",
+      "sha256": "c96c265a96914140075b5226e937f166da442575c01bf1af86916385223e8b48"
+    },
+    {
+      "path": "docs/legal/evidence/commercial/drafts/qa/SH-LEGAL-READ-COLO-001-page-1.png",
+      "sha256": "834c1f5a181dcfb05c1d0424e311007d3eacc76b8e26a5b663ae5769ee05bf1d"
+    },
+    {
+      "path": "docs/legal/evidence/commercial/drafts/qa/SH-LEGAL-READ-IC-001-browser-1360.png",
+      "sha256": "e8e31b9e825de20cea17381d1cb9371dc3a8a6ca6e30d4bed581c8181414ce01"
+    },
+    {
+      "path": "docs/legal/evidence/commercial/drafts/qa/SH-LEGAL-READ-IC-001-browser-390.png",
+      "sha256": "093095627303c71aac89d6b7e6f31e72cb35ef4ece8e0f25a41fbc0a5792f5cc"
+    },
+    {
+      "path": "docs/legal/evidence/commercial/drafts/qa/SH-LEGAL-READ-IC-001-page-1.png",
+      "sha256": "bd9a7c0bae782f3980459351b91622517c72317b5aec34f586b9c004f2623cc4"
+    },
+    {
+      "path": "docs/legal/evidence/commercial/drafts/qa/index.png",
+      "sha256": "b78e7b0682aa79b118c37ff6471850a3a426b33fac89030d80b7c461c38ab846"
+    },
+    {
+      "path": "docs/legal/evidence/corporate/drafts/qa/SH-LEGAL-READ-CAPITAL-001-browser-1360.png",
+      "sha256": "a43fe0491fb30ee1511f0aba4945c8b249e7248d8ce15a1e227b4f5b21e21524"
+    },
+    {
+      "path": "docs/legal/evidence/corporate/drafts/qa/SH-LEGAL-READ-CAPITAL-001-browser-390.png",
+      "sha256": "a527e43c7d3b09c29a67d03fbe020798bb16cef25b20a624d65ae6b395a2ce41"
+    },
+    {
+      "path": "docs/legal/evidence/corporate/drafts/qa/SH-LEGAL-READ-CAPITAL-001-page-1.png",
+      "sha256": "b3ed9b55efab5275a9082e8f3ac7ac6d08fff1f0167af6efb0760315e6e167e5"
+    },
+    {
+      "path": "docs/legal/evidence/corporate/drafts/qa/SH-LEGAL-READ-CARRY-001-browser-1360.png",
+      "sha256": "49483c2fe2fbb3ba37d33c967c5f0a5d1e7f48bb24185160eaddea58be7bac64"
+    },
+    {
+      "path": "docs/legal/evidence/corporate/drafts/qa/SH-LEGAL-READ-CARRY-001-browser-390.png",
+      "sha256": "9ca08f178afb39e6c7213302e5041c9368f79ecd5cbac79573755773f167068f"
+    },
+    {
+      "path": "docs/legal/evidence/corporate/drafts/qa/SH-LEGAL-READ-CARRY-001-page-1.png",
+      "sha256": "4e36014aa3111ce7657cacae36a1e07a2f5fdd96ed895c727dcb9f5f0057c0e7"
+    },
+    {
+      "path": "docs/legal/evidence/corporate/drafts/qa/SH-LEGAL-READ-ENTITY-001-browser-1360.png",
+      "sha256": "382e59819de18737eb3cfedd2658f730b08c59488033c9097287fa13ff228e65"
+    },
+    {
+      "path": "docs/legal/evidence/corporate/drafts/qa/SH-LEGAL-READ-ENTITY-001-browser-390.png",
+      "sha256": "79131789b740c7c4bc36f50f5c70957b12f0852ecccd73f37add1e147731a204"
+    },
+    {
+      "path": "docs/legal/evidence/corporate/drafts/qa/SH-LEGAL-READ-ENTITY-001-page-1.png",
+      "sha256": "4acca90cb77bb7e0be0652feff5c7e42cf605b0265751a252e394fb6df6ff550"
+    },
+    {
+      "path": "docs/legal/evidence/corporate/drafts/qa/SH-LEGAL-READ-HR-001-browser-1360.png",
+      "sha256": "a55da4a6062cbe00abce2fae102293f79413ddc49e0a810f8209ae989025c49b"
+    },
+    {
+      "path": "docs/legal/evidence/corporate/drafts/qa/SH-LEGAL-READ-HR-001-browser-390.png",
+      "sha256": "4c45538c1076ece4b21144a7f538be4d72ebe976876fdc064e6621d018a16761"
+    },
+    {
+      "path": "docs/legal/evidence/corporate/drafts/qa/SH-LEGAL-READ-HR-001-page-1.png",
+      "sha256": "de1c9a5b3ff5d25c10742ac15fe878d30d7808e0299017325002d3899772d121"
+    },
+    {
+      "path": "docs/legal/evidence/corporate/drafts/qa/index.png",
+      "sha256": "ff802193834813ae2d7b1568e6d300defd6c2af6cd179bb85a584a6b6a2cbd67"
+    }
+  ]
+}

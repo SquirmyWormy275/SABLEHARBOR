@@ -1,0 +1,120 @@
+{
+  "gap_id": "LEGAL-GAP-LAND",
+  "document_id": "SH-LEGAL-DRAFT-LAND",
+  "title": "Northern Nevada land settlement and funding instruction draft",
+  "status": "DRAFT_FOR_REVIEW",
+  "source_paths": [
+    "docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md",
+    "docs/legal/MOCK_DEED_NORTHERN_NEVADA_DATA_CENTER_2026-09-04.md",
+    "docs/finance/RUNTIME_INFRASTRUCTURE_FINANCE_RECONCILIATION_2026-09-11.md"
+  ],
+  "proposed_terms": [
+    {
+      "id": "LAND-P01",
+      "term": "Complete transaction-specific settlement/funding instruction only after authority, recipient and counterpart evidence is supported.",
+      "basis": "New proposed instruction; accepted synthetic acquisition retained without claiming payment."
+    },
+    {
+      "id": "LAND-P02",
+      "term": "Treasury verifies funding/recipient and Finance verifies authority, amount and accounting as separate role reviews.",
+      "basis": "New proposed procedure; no control-operation claim."
+    },
+    {
+      "id": "LAND-P03",
+      "term": "Resolve the existing settlement clearing only through a supported completing entry; do not debit land twice.",
+      "basis": "Proposed completion clause implementing existing finance bridge."
+    },
+    {
+      "id": "LAND-P04",
+      "term": "Provide written owner update within 10 business days of assigning a material settlement evidence gap.",
+      "basis": "New proposed administrative timing; no statutory deadline."
+    }
+  ],
+  "unresolved_fields": [
+    {
+      "id": "LAND-U01",
+      "field": "Settlement counterpart and funding source",
+      "next_action": "Obtain accepted transaction evidence before classifying as cash, debt, payable or contribution."
+    },
+    {
+      "id": "LAND-U02",
+      "field": "Settlement adjustments and actual recipient support",
+      "next_action": "Obtain source-specific statement; blank is not zero."
+    },
+    {
+      "id": "LAND-U03",
+      "field": "Actual instruction authority/date",
+      "next_action": "Complete verified authorization without backdating to acquisition."
+    },
+    {
+      "id": "LAND-U04",
+      "field": "Exact real title or parcel evidence",
+      "next_action": "No real assertion authorized; retain synthetic geometry/no APN unless appropriately resolved."
+    }
+  ],
+  "financial_schedules": [
+    {
+      "name": "Land and development perimeter — amounts not additive",
+      "columns": [
+        "measure",
+        "amount_usd",
+        "basis"
+      ],
+      "rows": [
+        [
+          "Accepted fictional land consideration",
+          3000000,
+          "Acquisition 2026-09-04"
+        ],
+        [
+          "Phase-I planning envelope before IT",
+          15500000,
+          "Includes land; not spent"
+        ],
+        [
+          "Incremental envelope after land",
+          12500000,
+          "15.5M−3M"
+        ],
+        [
+          "Combined study forecast",
+          200000,
+          "No invoice; do not duplicate utility/survey scope"
+        ],
+        [
+          "Land settlement cash",
+          null,
+          "Unestablished,not zero"
+        ],
+        [
+          "Settlement adjustments",
+          null,
+          "Unestablished"
+        ]
+      ]
+    },
+    {
+      "name": "Existing balanced land overlay — reference only, no second posting",
+      "columns": [
+        "account_description",
+        "debit_usd",
+        "credit_usd"
+      ],
+      "rows": [
+        [
+          "Land",
+          3000000,
+          0
+        ],
+        [
+          "Unresolved settlement clearing",
+          0,
+          3000000
+        ]
+      ]
+    }
+  ],
+  "version": "0.1.0",
+  "prepared": "2026-09-12",
+  "approval_status": "NOT_ACCEPTED"
+}

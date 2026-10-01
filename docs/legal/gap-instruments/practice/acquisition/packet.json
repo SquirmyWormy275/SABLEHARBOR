@@ -1,0 +1,909 @@
+{
+  "id": "SH-LEGAL-PRACTICE-ACQUISITION",
+  "slug": "acquisition",
+  "title": "ARU acquisition accounting",
+  "classification": "PUBLIC_WORKED_EXAMPLE",
+  "design_status": "DRAFT_FOR_REVIEW",
+  "prepared": "2026-09-12",
+  "period": "January 7, 2026 acquisition opening",
+  "scenario": null,
+  "source_revision": "8898d2d0310a60bdf0e4753036790c6eda1388cd",
+  "route": "docs/reader/exercises/ACQUISITION.md",
+  "evidence": [
+    {
+      "path": "industrial/source/finance.json",
+      "sha256": "0d4461abfcdb138da36db503ff0cfea7c47ea7fd7109494126514225fd43e38c"
+    },
+    {
+      "path": "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md",
+      "sha256": "a6dd448ed3a4a3ad6f0f3748e79dd918ea43c75685de762fe00843477a5d22c9"
+    },
+    {
+      "path": "industrial/finance/TRANSACTION_ACCOUNTING.md",
+      "sha256": "d13f142968958585cfc56a7b06d54b5e95bccef6d434d11bb6bba93933a0aa58"
+    },
+    {
+      "path": "docs/finance/evidence/tax-transaction/CURRENT_SOURCE_BRIDGE.json",
+      "sha256": "4e4c35d03d5613e0ef037d7dd14d27c250fa547fc29d2f93ddd1a1b25274e17c"
+    },
+    {
+      "path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "sha256": "33a28e198a5ce5a5d35f751ca8a3fac6aefc04faba4329b6297c7cd560ca02d5"
+    },
+    {
+      "path": "industrial/publications/SH-IND-ARU-CLOSE-001_v1.0.0.pdf",
+      "sha256": "2db8049ce4ee571d4a681505321b73af49739adb2cbd86d1fae78e92082d7883"
+    }
+  ],
+  "task": [
+    "Reconcile buyer uses before fees to new debt and parent equity.",
+    "Separate parent cash including fees from stock consideration and retained finance leases.",
+    "Recompute book goodwill and independent tax goodwill; explain the difference.",
+    "Sum all 16 opening accounts and record the debit-credit difference.",
+    "Write an evidence conclusion distinguishing model reconciliation from signed closing and filing evidence."
+  ],
+  "limits": [
+    "Selected industrial reconstruction; do not add it to the separate operations release.",
+    "PPA and tax basis retain conditional model assumptions; no valuation or tax opinion is supplied.",
+    "An opening group trial balance is not independently reconstructed statutory books for each subsidiary."
+  ],
+  "inputs": [
+    {
+      "id": "price",
+      "label": "Buyer stock consideration",
+      "amount_usd": 48000000.0,
+      "source_path": "industrial/source/finance.json",
+      "locator": "transaction.buyer_consideration"
+    },
+    {
+      "id": "payoff",
+      "label": "Old term and revolver payoff",
+      "amount_usd": 13500000.0,
+      "source_path": "industrial/source/finance.json",
+      "locator": "transaction.existing_term_revolver_refinance"
+    },
+    {
+      "id": "debt",
+      "label": "New term debt",
+      "amount_usd": 22500000.0,
+      "source_path": "industrial/source/finance.json",
+      "locator": "transaction.new_debt"
+    },
+    {
+      "id": "equity",
+      "label": "Parent equity before fees",
+      "amount_usd": 39000000.0,
+      "source_path": "industrial/source/finance.json",
+      "locator": "transaction.parent_equity_before_fees"
+    },
+    {
+      "id": "transaction_fee",
+      "label": "Transaction services expense",
+      "amount_usd": 900000.0,
+      "source_path": "industrial/source/finance.json",
+      "locator": "transaction.transaction_expense"
+    },
+    {
+      "id": "debt_fee",
+      "label": "Debt issuance cost",
+      "amount_usd": 300000.0,
+      "source_path": "industrial/source/finance.json",
+      "locator": "transaction.debt_issuance_cost"
+    },
+    {
+      "id": "net_assets",
+      "label": "Fair identifiable book net assets",
+      "amount_usd": 33237500.0,
+      "source_path": "docs/finance/evidence/tax-transaction/CURRENT_SOURCE_BRIDGE.json",
+      "locator": "ppa.identifiable_net_assets_before_refinancing_usd"
+    },
+    {
+      "id": "tax_agub",
+      "label": "Modeled adjusted grossed-up tax basis",
+      "amount_usd": 68000000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/CURRENT_SOURCE_BRIDGE.json",
+      "locator": "ppa.tax_allocation.modeled_agub_usd"
+    },
+    {
+      "id": "tax_other",
+      "label": "Other tax asset bases (sum)",
+      "amount_usd": 55000000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/CURRENT_SOURCE_BRIDGE.json",
+      "locator": "sum ppa.tax_allocation.other_tax_asset_bases_usd"
+    },
+    {
+      "id": "tb_1000_debit",
+      "label": "1000 Cash — debit",
+      "amount_usd": 2000000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=1000; debit_balance_usd"
+    },
+    {
+      "id": "tb_1000_credit",
+      "label": "1000 Cash — credit",
+      "amount_usd": 0.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=1000; credit_balance_usd"
+    },
+    {
+      "id": "tb_1100_debit",
+      "label": "1100 External receivables, net of allowance — debit",
+      "amount_usd": 6000000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=1100; debit_balance_usd"
+    },
+    {
+      "id": "tb_1100_credit",
+      "label": "1100 External receivables, net of allowance — credit",
+      "amount_usd": 0.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=1100; credit_balance_usd"
+    },
+    {
+      "id": "tb_1200_debit",
+      "label": "1200 Inventory cash cost — debit",
+      "amount_usd": 1800000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=1200; debit_balance_usd"
+    },
+    {
+      "id": "tb_1200_credit",
+      "label": "1200 Inventory cash cost — credit",
+      "amount_usd": 0.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=1200; credit_balance_usd"
+    },
+    {
+      "id": "tb_1300_debit",
+      "label": "1300 Prepaids — debit",
+      "amount_usd": 700000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=1300; debit_balance_usd"
+    },
+    {
+      "id": "tb_1300_credit",
+      "label": "1300 Prepaids — credit",
+      "amount_usd": 0.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=1300; credit_balance_usd"
+    },
+    {
+      "id": "tb_1400_debit",
+      "label": "1400 PPE gross — debit",
+      "amount_usd": 42000000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=1400; debit_balance_usd"
+    },
+    {
+      "id": "tb_1400_credit",
+      "label": "1400 PPE gross — credit",
+      "amount_usd": 0.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=1400; credit_balance_usd"
+    },
+    {
+      "id": "tb_1500_debit",
+      "label": "1500 Finance lease ROU gross — debit",
+      "amount_usd": 2500000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=1500; debit_balance_usd"
+    },
+    {
+      "id": "tb_1500_credit",
+      "label": "1500 Finance lease ROU gross — credit",
+      "amount_usd": 0.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=1500; credit_balance_usd"
+    },
+    {
+      "id": "tb_1600_debit",
+      "label": "1600 Goodwill — debit",
+      "amount_usd": 14762500.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=1600; debit_balance_usd"
+    },
+    {
+      "id": "tb_1600_credit",
+      "label": "1600 Goodwill — credit",
+      "amount_usd": 0.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=1600; credit_balance_usd"
+    },
+    {
+      "id": "tb_1700_debit",
+      "label": "1700 Debt issuance cost, contra term debt — debit",
+      "amount_usd": 300000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=1700; debit_balance_usd"
+    },
+    {
+      "id": "tb_1700_credit",
+      "label": "1700 Debt issuance cost, contra term debt — credit",
+      "amount_usd": 0.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=1700; credit_balance_usd"
+    },
+    {
+      "id": "tb_1800_debit",
+      "label": "1800 Deferred tax asset on reserved liabilities — debit",
+      "amount_usd": 587500.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=1800; debit_balance_usd"
+    },
+    {
+      "id": "tb_1800_credit",
+      "label": "1800 Deferred tax asset on reserved liabilities — credit",
+      "amount_usd": 0.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=1800; credit_balance_usd"
+    },
+    {
+      "id": "tb_2000_debit",
+      "label": "2000 Trade payables — debit",
+      "amount_usd": 0.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=2000; debit_balance_usd"
+    },
+    {
+      "id": "tb_2000_credit",
+      "label": "2000 Trade payables — credit",
+      "amount_usd": 3000000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=2000; credit_balance_usd"
+    },
+    {
+      "id": "tb_2100_debit",
+      "label": "2100 Operating accruals — debit",
+      "amount_usd": 0.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=2100; debit_balance_usd"
+    },
+    {
+      "id": "tb_2100_credit",
+      "label": "2100 Operating accruals — credit",
+      "amount_usd": 1000000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=2100; credit_balance_usd"
+    },
+    {
+      "id": "tb_2200_debit",
+      "label": "2200 Environmental reserve / ARO — debit",
+      "amount_usd": 0.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=2200; debit_balance_usd"
+    },
+    {
+      "id": "tb_2200_credit",
+      "label": "2200 Environmental reserve / ARO — credit",
+      "amount_usd": 1750000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=2200; credit_balance_usd"
+    },
+    {
+      "id": "tb_2300_debit",
+      "label": "2300 Claim reserve / other liabilities — debit",
+      "amount_usd": 0.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=2300; debit_balance_usd"
+    },
+    {
+      "id": "tb_2300_credit",
+      "label": "2300 Claim reserve / other liabilities — credit",
+      "amount_usd": 600000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=2300; credit_balance_usd"
+    },
+    {
+      "id": "tb_2400_debit",
+      "label": "2400 Term debt face value — debit",
+      "amount_usd": 0.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=2400; debit_balance_usd"
+    },
+    {
+      "id": "tb_2400_credit",
+      "label": "2400 Term debt face value — credit",
+      "amount_usd": 22500000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=2400; credit_balance_usd"
+    },
+    {
+      "id": "tb_2600_debit",
+      "label": "2600 Finance lease obligation — debit",
+      "amount_usd": 0.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=2600; debit_balance_usd"
+    },
+    {
+      "id": "tb_2600_credit",
+      "label": "2600 Finance lease obligation — credit",
+      "amount_usd": 2500000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=2600; credit_balance_usd"
+    },
+    {
+      "id": "tb_3000_debit",
+      "label": "3000 Contributed equity — debit",
+      "amount_usd": 0.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=3000; debit_balance_usd"
+    },
+    {
+      "id": "tb_3000_credit",
+      "label": "3000 Contributed equity — credit",
+      "amount_usd": 39300000.0,
+      "source_path": "docs/finance/evidence/tax-transaction/aru_acquisition_opening_trial_balance.csv",
+      "locator": "entity=ARU_GROUP; year=2026; account=3000; credit_balance_usd"
+    }
+  ],
+  "calculations": [
+    {
+      "id": "uses",
+      "label": "Closing uses before fees",
+      "terms": [
+        [
+          1,
+          "price"
+        ],
+        [
+          1,
+          "payoff"
+        ]
+      ],
+      "expected_usd": 61500000.0,
+      "explanation": "Stock consideration includes escrow; retained leases are not paid off again."
+    },
+    {
+      "id": "sources",
+      "label": "Closing sources before fees",
+      "terms": [
+        [
+          1,
+          "debt"
+        ],
+        [
+          1,
+          "equity"
+        ]
+      ],
+      "expected_usd": 61500000.0,
+      "explanation": "New term debt and parent equity finance the same uses."
+    },
+    {
+      "id": "difference",
+      "label": "Funding reconciliation difference",
+      "terms": [
+        [
+          1,
+          "price"
+        ],
+        [
+          1,
+          "payoff"
+        ],
+        [
+          -1,
+          "debt"
+        ],
+        [
+          -1,
+          "equity"
+        ]
+      ],
+      "expected_usd": 0.0,
+      "explanation": "Zero means this selected funding bridge reconciles, not that cash settled."
+    },
+    {
+      "id": "parent_cash",
+      "label": "Parent cash including fees",
+      "terms": [
+        [
+          1,
+          "equity"
+        ],
+        [
+          1,
+          "transaction_fee"
+        ],
+        [
+          1,
+          "debt_fee"
+        ]
+      ],
+      "expected_usd": 40200000.0,
+      "explanation": "Fees are separate from stock consideration."
+    },
+    {
+      "id": "book_goodwill",
+      "label": "Book goodwill residual",
+      "terms": [
+        [
+          1,
+          "price"
+        ],
+        [
+          -1,
+          "net_assets"
+        ]
+      ],
+      "expected_usd": 14762500.0,
+      "explanation": "Source-model residual; no invented operating-income plug."
+    },
+    {
+      "id": "tax_goodwill",
+      "label": "Tax goodwill residual",
+      "terms": [
+        [
+          1,
+          "tax_agub"
+        ],
+        [
+          -1,
+          "tax_other"
+        ]
+      ],
+      "expected_usd": 13000000.0,
+      "explanation": "Independent conditional tax allocation, not book goodwill copied into tax."
+    },
+    {
+      "id": "tb_debits",
+      "label": "Opening trial-balance debit total",
+      "terms": [
+        [
+          1,
+          "tb_1000_debit"
+        ],
+        [
+          1,
+          "tb_1100_debit"
+        ],
+        [
+          1,
+          "tb_1200_debit"
+        ],
+        [
+          1,
+          "tb_1300_debit"
+        ],
+        [
+          1,
+          "tb_1400_debit"
+        ],
+        [
+          1,
+          "tb_1500_debit"
+        ],
+        [
+          1,
+          "tb_1600_debit"
+        ],
+        [
+          1,
+          "tb_1700_debit"
+        ],
+        [
+          1,
+          "tb_1800_debit"
+        ],
+        [
+          1,
+          "tb_2000_debit"
+        ],
+        [
+          1,
+          "tb_2100_debit"
+        ],
+        [
+          1,
+          "tb_2200_debit"
+        ],
+        [
+          1,
+          "tb_2300_debit"
+        ],
+        [
+          1,
+          "tb_2400_debit"
+        ],
+        [
+          1,
+          "tb_2600_debit"
+        ],
+        [
+          1,
+          "tb_3000_debit"
+        ]
+      ],
+      "expected_usd": 70650000.0,
+      "explanation": "All 16 source accounts included."
+    },
+    {
+      "id": "tb_credits",
+      "label": "Opening trial-balance credit total",
+      "terms": [
+        [
+          1,
+          "tb_1000_credit"
+        ],
+        [
+          1,
+          "tb_1100_credit"
+        ],
+        [
+          1,
+          "tb_1200_credit"
+        ],
+        [
+          1,
+          "tb_1300_credit"
+        ],
+        [
+          1,
+          "tb_1400_credit"
+        ],
+        [
+          1,
+          "tb_1500_credit"
+        ],
+        [
+          1,
+          "tb_1600_credit"
+        ],
+        [
+          1,
+          "tb_1700_credit"
+        ],
+        [
+          1,
+          "tb_1800_credit"
+        ],
+        [
+          1,
+          "tb_2000_credit"
+        ],
+        [
+          1,
+          "tb_2100_credit"
+        ],
+        [
+          1,
+          "tb_2200_credit"
+        ],
+        [
+          1,
+          "tb_2300_credit"
+        ],
+        [
+          1,
+          "tb_2400_credit"
+        ],
+        [
+          1,
+          "tb_2600_credit"
+        ],
+        [
+          1,
+          "tb_3000_credit"
+        ]
+      ],
+      "expected_usd": 70650000.0,
+      "explanation": "All 16 source accounts included."
+    },
+    {
+      "id": "tb_difference",
+      "label": "Opening trial-balance difference",
+      "terms": [
+        [
+          1,
+          "tb_1000_debit"
+        ],
+        [
+          -1,
+          "tb_1000_credit"
+        ],
+        [
+          1,
+          "tb_1100_debit"
+        ],
+        [
+          -1,
+          "tb_1100_credit"
+        ],
+        [
+          1,
+          "tb_1200_debit"
+        ],
+        [
+          -1,
+          "tb_1200_credit"
+        ],
+        [
+          1,
+          "tb_1300_debit"
+        ],
+        [
+          -1,
+          "tb_1300_credit"
+        ],
+        [
+          1,
+          "tb_1400_debit"
+        ],
+        [
+          -1,
+          "tb_1400_credit"
+        ],
+        [
+          1,
+          "tb_1500_debit"
+        ],
+        [
+          -1,
+          "tb_1500_credit"
+        ],
+        [
+          1,
+          "tb_1600_debit"
+        ],
+        [
+          -1,
+          "tb_1600_credit"
+        ],
+        [
+          1,
+          "tb_1700_debit"
+        ],
+        [
+          -1,
+          "tb_1700_credit"
+        ],
+        [
+          1,
+          "tb_1800_debit"
+        ],
+        [
+          -1,
+          "tb_1800_credit"
+        ],
+        [
+          1,
+          "tb_2000_debit"
+        ],
+        [
+          -1,
+          "tb_2000_credit"
+        ],
+        [
+          1,
+          "tb_2100_debit"
+        ],
+        [
+          -1,
+          "tb_2100_credit"
+        ],
+        [
+          1,
+          "tb_2200_debit"
+        ],
+        [
+          -1,
+          "tb_2200_credit"
+        ],
+        [
+          1,
+          "tb_2300_debit"
+        ],
+        [
+          -1,
+          "tb_2300_credit"
+        ],
+        [
+          1,
+          "tb_2400_debit"
+        ],
+        [
+          -1,
+          "tb_2400_credit"
+        ],
+        [
+          1,
+          "tb_2600_debit"
+        ],
+        [
+          -1,
+          "tb_2600_credit"
+        ],
+        [
+          1,
+          "tb_3000_debit"
+        ],
+        [
+          -1,
+          "tb_3000_credit"
+        ]
+      ],
+      "expected_usd": 0.0,
+      "explanation": "Balanced group opening books do not certify external evidence."
+    }
+  ],
+  "findings": [
+    {
+      "id": "ACQ-F01",
+      "question": "What does ARU-CL-07 establish?",
+      "worked_finding": "The March 2 source records filing-ready review, not IRS submission or acceptance.",
+      "evidence": "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md#delivery-register",
+      "additional_evidence": "Actual submission/status evidence and qualified eligibility review."
+    },
+    {
+      "id": "ACQ-F02",
+      "question": "Why do the goodwill amounts differ?",
+      "worked_finding": "Book goodwill uses fair identifiable net assets including the conditional reserve DTA; tax goodwill uses separately modeled recognized liabilities and other tax bases.",
+      "evidence": "industrial/finance/TRANSACTION_ACCOUNTING.md#purchase-price-allocation",
+      "additional_evidence": "Independent valuation and support for conditional tax classifications before external reliance."
+    }
+  ],
+  "selected_rows": {
+    "opening_trial_balance": [
+      {
+        "entity": "ARU_GROUP",
+        "year": "2026",
+        "account": "1000",
+        "account_name": "Cash",
+        "type": "asset",
+        "debit_balance_usd": "2000000",
+        "credit_balance_usd": "0",
+        "signed_usd": "2000000"
+      },
+      {
+        "entity": "ARU_GROUP",
+        "year": "2026",
+        "account": "1100",
+        "account_name": "External receivables, net of allowance",
+        "type": "asset",
+        "debit_balance_usd": "6000000",
+        "credit_balance_usd": "0",
+        "signed_usd": "6000000"
+      },
+      {
+        "entity": "ARU_GROUP",
+        "year": "2026",
+        "account": "1200",
+        "account_name": "Inventory cash cost",
+        "type": "asset",
+        "debit_balance_usd": "1800000",
+        "credit_balance_usd": "0",
+        "signed_usd": "1800000"
+      },
+      {
+        "entity": "ARU_GROUP",
+        "year": "2026",
+        "account": "1300",
+        "account_name": "Prepaids",
+        "type": "asset",
+        "debit_balance_usd": "700000",
+        "credit_balance_usd": "0",
+        "signed_usd": "700000"
+      },
+      {
+        "entity": "ARU_GROUP",
+        "year": "2026",
+        "account": "1400",
+        "account_name": "PPE gross",
+        "type": "asset",
+        "debit_balance_usd": "42000000",
+        "credit_balance_usd": "0",
+        "signed_usd": "42000000"
+      },
+      {
+        "entity": "ARU_GROUP",
+        "year": "2026",
+        "account": "1500",
+        "account_name": "Finance lease ROU gross",
+        "type": "asset",
+        "debit_balance_usd": "2500000",
+        "credit_balance_usd": "0",
+        "signed_usd": "2500000"
+      },
+      {
+        "entity": "ARU_GROUP",
+        "year": "2026",
+        "account": "1600",
+        "account_name": "Goodwill",
+        "type": "asset",
+        "debit_balance_usd": "14762500",
+        "credit_balance_usd": "0",
+        "signed_usd": "14762500"
+      },
+      {
+        "entity": "ARU_GROUP",
+        "year": "2026",
+        "account": "1700",
+        "account_name": "Debt issuance cost, contra term debt",
+        "type": "liability",
+        "debit_balance_usd": "300000",
+        "credit_balance_usd": "0",
+        "signed_usd": "300000"
+      },
+      {
+        "entity": "ARU_GROUP",
+        "year": "2026",
+        "account": "1800",
+        "account_name": "Deferred tax asset on reserved liabilities",
+        "type": "asset",
+        "debit_balance_usd": "587500",
+        "credit_balance_usd": "0",
+        "signed_usd": "587500"
+      },
+      {
+        "entity": "ARU_GROUP",
+        "year": "2026",
+        "account": "2000",
+        "account_name": "Trade payables",
+        "type": "liability",
+        "debit_balance_usd": "0",
+        "credit_balance_usd": "3000000",
+        "signed_usd": "-3000000"
+      },
+      {
+        "entity": "ARU_GROUP",
+        "year": "2026",
+        "account": "2100",
+        "account_name": "Operating accruals",
+        "type": "liability",
+        "debit_balance_usd": "0",
+        "credit_balance_usd": "1000000",
+        "signed_usd": "-1000000"
+      },
+      {
+        "entity": "ARU_GROUP",
+        "year": "2026",
+        "account": "2200",
+        "account_name": "Environmental reserve / ARO",
+        "type": "liability",
+        "debit_balance_usd": "0",
+        "credit_balance_usd": "1750000",
+        "signed_usd": "-1750000"
+      },
+      {
+        "entity": "ARU_GROUP",
+        "year": "2026",
+        "account": "2300",
+        "account_name": "Claim reserve / other liabilities",
+        "type": "liability",
+        "debit_balance_usd": "0",
+        "credit_balance_usd": "600000",
+        "signed_usd": "-600000"
+      },
+      {
+        "entity": "ARU_GROUP",
+        "year": "2026",
+        "account": "2400",
+        "account_name": "Term debt face value",
+        "type": "liability",
+        "debit_balance_usd": "0",
+        "credit_balance_usd": "22500000",
+        "signed_usd": "-22500000"
+      },
+      {
+        "entity": "ARU_GROUP",
+        "year": "2026",
+        "account": "2600",
+        "account_name": "Finance lease obligation",
+        "type": "liability",
+        "debit_balance_usd": "0",
+        "credit_balance_usd": "2500000",
+        "signed_usd": "-2500000"
+      },
+      {
+        "entity": "ARU_GROUP",
+        "year": "2026",
+        "account": "3000",
+        "account_name": "Contributed equity",
+        "type": "equity",
+        "debit_balance_usd": "0",
+        "credit_balance_usd": "39300000",
+        "signed_usd": "-39300000"
+      }
+    ]
+  }
+}

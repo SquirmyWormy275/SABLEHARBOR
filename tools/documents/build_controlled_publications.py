@@ -146,7 +146,7 @@ BRANDS = {
     },
 }
 
-GENERATED_FOR_VERSION = "2026-09-13"
+GENERATED_FOR_VERSION = "2026-09-06"
 
 DOCS.extend([('docs/finance/BUSINESS_DRIVEN_SUCCESSOR_2026-09-09.md', 'docs/finance/publications/SH-FIN-BUSINESS-001_v1.0.0.pdf', 'corporate'), ('docs/audit/UNIT_EXPORT_SPECIFICATION.md', 'docs/finance/publications/SH-AUDIT-UNIT-EXPORT-001_v1.0.0.pdf', 'corporate')])
 
@@ -415,12 +415,6 @@ DOCS.extend([
     ('enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md', 'enterprise/runtime/publications/SH-RT-ARCH-001_v1.0.0.pdf', 'corporate'),
     ('enterprise/runtime/docs/MODEL_RESULTS.md', 'enterprise/runtime/publications/SH-RT-RESULTS-001_v1.0.0.pdf', 'corporate'),
     ('enterprise/runtime/docs/ASSURANCE_SCOPE.md', 'enterprise/runtime/publications/SH-RT-ASSURANCE-001_v1.0.0.pdf', 'corporate'),
-])
-
-
-DOCS.extend([
-    ('docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md', 'docs/governance/publications/SH-ENTERPRISE-PPL-20260913_v1.0.0.pdf', 'corporate'),
-    ('docs/governance/ENTERPRISE_COORDINATION_2026-09-13.md', 'docs/governance/publications/SH-ENTERPRISE-COORD-20260913_v1.0.0.pdf', 'corporate'),
 ])
 
 

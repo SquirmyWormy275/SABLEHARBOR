@@ -1,0 +1,129 @@
+{
+  "receipt_id": "SH-CLOSEOUT-LANE-B-2026-09-15",
+  "authority_state": "PROVISIONAL",
+  "acceptance_state": "PENDING_INTEGRATION_ACCEPTANCE_AND_RELEASE",
+  "period": "2026-08 completed reconstruction plus selected September events through2026-09-14",
+  "known_on": "2026-09-15T00:00:00Z",
+  "work_packages": {
+    "SH-C01": "Implemented declared employee, commercial/research, customer/supplier balance, legal-book allocation, inventory valuation and asset-source populations; specific population precision limitations retained below.",
+    "SH-C03": "Implemented702employee roster,1404payments, exactwithholding/remittance, benefits/UI/RUIA, existingcost decomposition, HR/access eventstate; runtime access effectiveness remains integration-owned. July retention250k included in eight recipients AugustYTD;136regular/bonus taxevents. Grossbonusnet173951.75+employee withholding76048.25; employer24266.75 supplied tofinance separately.",
+    "SH-C07": "Implemented ten selected August normal/exception chains; September selected200lb custody successor invokes sourcequalification numericchecks; rejected200lb preserved. No whole physical monthly dispatch simulator claimed.",
+    "SH-C04": "Implemented bounded18ARU debt settlements/principal bridge and four Cradle host events; exact material debt/security/host rights residuals preserved. Current92 invoice tax annotations consume controls source; finance owns postings. Current AdvisoryU01 ordinaryparty/notices/signatory andU02SOW/data/execution completed; materialliabilitylimit notselected. WorkforceU01 mapped to8retention and8completedFredmonths, not censusalone."
+  },
+  "implementation_commits": [
+    "71b81cee027562dd783a05ce4c4a654ba8b5b7b1",
+    "78b570a",
+    "bbfa1f0"
+  ],
+  "latest_revision": "Composite manifest source_commit identifies final included balance and receipt revision; these earlier commits are implementation history, not accepted release pointers.",
+  "source_paths": [
+    "enterprise/operations/source/completed_period_2026_08.json",
+    "enterprise/operations/source/current_company_2026_08.json",
+    "enterprise/operations/source/september_custody_2026.json",
+    "enterprise/ccf/company_closeout/september_shipment_qualification.json",
+    "enterprise/ccf/company_closeout/current_activity_successor.json",
+    "enterprise/operations/source/debt_host_2026_08.json",
+    "enterprise/ccf/company_closeout/industrial_transaction_tax.json",
+    "enterprise/operations/source/retention_payroll_2026.json",
+    "enterprise/operations/source/current_legal_completion_2026_08.json"
+  ],
+  "generator_paths": [
+    "enterprise/operations/completed_period.py",
+    "enterprise/operations/current_records.py",
+    "enterprise/operations/current_balances.py",
+    "enterprise/operations/september_custody.py",
+    "enterprise/ccf/company_closeout/shipment.py",
+    "enterprise/operations/invoice_settlement.py",
+    "enterprise/operations/availability.py",
+    "enterprise/operations/debt_host.py",
+    "enterprise/operations/payroll_legal_bridge.py",
+    "enterprise/operations/retention_payroll.py",
+    "enterprise/operations/current_legal_records.py"
+  ],
+  "reproduction_commands": [
+    "python -m enterprise.operations.completed_period",
+    "python -m enterprise.operations.completed_period --check",
+    "python -m enterprise.operations.september_custody",
+    "python -m enterprise.operations.september_custody --check",
+    "python -m pytest enterprise/operations/tests/test_completed_period.py enterprise/operations/tests/test_current_records.py enterprise/operations/tests/test_current_balances.py enterprise/operations/tests/test_september_custody.py enterprise/operations/tests/test_invoice_settlement.py enterprise/operations/tests/test_availability.py -q"
+  ],
+  "independent_reperformance": [
+    "current_records.verify_current_finance(edition, legacy_snapshot, anchor_rows): original independent legacy and industrial journal source comparison; zero additional journal",
+    "current_balances.verify_legal_balances(tables, legal_trial_balance_rows): all15August legal tradeAR/AP/inventory bridges match finance successor",
+    "september_custody.verify_source_expense(result, anchor_rows): SeptemberRWH50000externalfreight envelope,1800selectedpaidcomponent,48200unallocatedmonthlytiming,zero additiveexpense",
+    "current_balances.verify_core_asset_balances(tables, legal_trial_balance_rows): requiredfinalcorrectedfinancejoin forLEG1500gross9m/LEG1590accumulated4714285.7139/net4285714.2861; sourcecomponent testsrejectold9mnet."
+  ],
+  "inspection_routes": {
+    "foundry-field": "44currentcontracts ->authority/deliveryevidence/invoices/receipts ->SHI11075500totalrevenue source ->FF100staff ->Coreequipmentpool",
+    "atlas-meridian": "10currentcontracts ->authority/deliveryevidence/invoices/receipts ->SHI source ->24staff ->networkequipmentpool",
+    "advisory": "4currentcontracts ->authority/deliveryevidence/invoices/receipts ->SHI source ->20staff; no voting equity from phantom carry",
+    "willow": "3benchprojects/costs/failures ->20staff ->researchbench equipment; zero sales",
+    "cradle": "1materialscontract plus selectedfailedresearch ->mass/yield/acceptedvalue/directmargin ->16staff ->pilot equipment; host ownership external",
+    "pale-sun": "4retainedRWHcustomercontracts ->booked revenue/customerbalance/inventorysource ->PS12/RWH128staff ->selectedheld/qualifiedcustodychain and permit controls",
+    "aru": "29retainedARU/BSTcontracts ->92populationjoined delivery/invoice records ->25groupcustomer balances/6supplierpool rows across industrialgroups ->149sourceassetrecords ->131staff ->warehouse/dispatch/maintenancechains",
+    "corporate": "SHIlegalbook paidcost11968000 decomposition ->ESS/IA/J2/corporate payroll/approvals ->tradeAR/AP/inventoryzero source bridge ->9000000gross assetcomponents/4285714.2861netafterbookDDA; financing/tax/treasury remain finance integration",
+    "debt_and_hosts": "debt_host_records.json ->18source cash legs and term/lease rollforward ->4host interface/acceptance/settlement/exception events ->exact rights residuals; no lien discharge inferred",
+    "current_transaction_tax": "92 current_invoices ->58Core scopedCA services +34industrial controls dispositions; threeRWHutility sellerborne tax180947.89 expense/payable, no customerprincipal/AR/cashdelta; certificates only forCradle refiner andSPOTtrader",
+    "retention": "retention_payroll_ytd ->eightacceptedretentionawards ->July250kexistinggrosscash/netpluswithholding ->August wagecaps/payroll ->finance employerbonuslevy disposition;Jan2027halfnotpaid",
+    "current_legal_execution": "4Advisory execution records ->existing25kSOWs/authority/delivery/invoice;8retention acknowledgments ->136YTDworkpaper/Julygrossbatch;8Fred monthlydeliveries ->TOLMAN-CONSULTINGcash; no newliabilitylimit or futurepayment"
+  },
+  "residuals": [
+    {
+      "id": "B-RES-02",
+      "affected_claim": "Whole physical August inventory/dispatch population",
+      "missing": "ARUinventory quantities retain accepted equivalent blended-cost units; RWHfullcurrentvaluation reconciles but selected400lb chains are not fullmine inventory count.149assetrecords retain their originalsource periods/status rather than inventing current inspections.",
+      "source": "industrial/source/operations.json;industrial/source/finance.json;red_wash/source/core_operating_data.json",
+      "next_owner": "integration/release scope",
+      "unaffected": "Selectednormal/exceptionchains,200lbSeptemberqualifiedcustody and financialinventoryvaluation trace."
+    },
+    {
+      "id": "B-RES-04",
+      "affected_claim": "Operated access and restore",
+      "missing": "Sourceprincipal population and late-revocation event are inputs, not proof of deployed policy/backuprestore.",
+      "source": "enterprise/operations/completed_period.py workforce_state",
+      "next_owner": "runtime/integration",
+      "unaffected": "Deterministicknown-on/effectivestate and qualificationguards tested."
+    }
+  ],
+  "artifact_root": "enterprise/generated/completed-period-2026-08",
+  "september_artifact": "enterprise/generated/september-custody-2026/records.json",
+  "publication_boundary": "Generated inputs become delivered only when the integration owner accepts and packages them in the composite Release. No deployment or acceptance claimed by this receipt.",
+  "validation_receipt": {
+    "recorded_at": "2026-09-15",
+    "dependency_environment": "SABLEHARBOR-company-closeout/.venv Python with repository locked dependencies",
+    "focused_cases": 110,
+    "focused_result": "PASS110 focused tests after corrected retention YTD, RWH historical sale-period allocation, debt-host packaging and composite identity guards; rerun on final integration revision.",
+    "ruff": "PASS on all changed generators and tests",
+    "august_and_september_regeneration_checks": "PASS; rerun for final integration source_commit",
+    "diff_check": "PASS",
+    "independent_legal_balance_reperformance": "PASS15rows against finance successor full legal_monthly_trial_balances.csv",
+    "independent_review": "Controls lane reproduced original chronologic, tax-component, IA approval and effective-state defects; corrected21+20 suites independently passed. Final balance and custody source integration requires composite review.",
+    "historical_broad_operations_suite": "224casesPASS before later bounded additions; final composed-head broadchecks remain integration-owned",
+    "limitations": "These are implementation and synthetic source checks, not audit opinion, independent bank confirmation or deployment evidence.",
+    "core_ppe_finance_reperformance": "PASSagainstfreshcorrectedfinancefullbuild: gross9000000.00 accumulated4714285.7139 net4285714.2861, zeroadditionaloperationsjournal",
+    "independent_finance_legal_artifact_sha256": "e0e97555484b8b84db26730287dea8fba33c3e047cde6751bd04ba1cb7db6953"
+  },
+  "completed_resolutions": [
+    {
+      "id": "B-RES-01",
+      "status": "IMPLEMENTED_PENDING_INTEGRATION_ACCEPTANCE",
+      "result": "117datedindustrialcustomerinvoices,117agingrows,33receipts; actualAugustinvoiceIDs/issuers/principals bind33currentindustrialinvoices. Historicinvoice dates and receiptallocation newlyauthored; customerpools nowweighted byactualbillings, not prior equalallocation. $80kfullyreserveddisputeand700k/300kolderDPDbuckets retained. No independentbankconfirmationclaimed.",
+      "source": "enterprise/operations/invoice_settlement.py"
+    },
+    {
+      "id": "B-RES-05",
+      "status": "IMPLEMENTED_AND_REPERFORMED_PENDING_INTEGRATION_ACCEPTANCE",
+      "result": "Eight assetcomponents nowgross9m; finance-authored2023cohort bookopeningaccumulated3857142.8571 plus8monthly107142.8571 givesAugustaccumulated4714285.7139/net4285714.2861. OperationsaddsnoDDAjournal; verify_core_asset_balances rejectsolduncorrectedfinance.",
+      "source": "enterprise/operations/current_balances.py;enterprise/closeout/finance.py;enterprise/closeout/tax_assets.py"
+    }
+  ],
+  "invoice_rounding": "ROUND_HALF_UPtocents for weightedallocations; last sortedcustomer receivescentresidual. Aging isdayspastdue, currentincludesnotdueand0-30DPD.",
+  "availability_policy": "DeclaredSeptember15day retained; generatedavailable/recorded atmax(declaredday,deterministicHEADcommitterUTC). Dirtypreviewnotpublishable andasofdeniedunlessexplicitanalysisoverride. Acceptance/publicationseparate.",
+  "resolved_residuals": [
+    {
+      "id": "B-RES-03",
+      "status": "IMPLEMENTED_PENDING_INTEGRATION_ACCEPTANCE",
+      "evidence": "All92 invoice tax annotations bind scoped controls sources; three utility own-use rows remain sellerborne taxpayable, not exempt or remitted."
+    }
+  ]
+}

@@ -42,8 +42,10 @@ def debrief_http(tmp_path):
         engine.store.grant(state["id"], person["id"], role)
     app = create_app(engine.store.root, instructor_bindings=config, allowed_hosts=["testserver"])
     client = TestClient(app, base_url="https://testserver")
+
     def headers(person):
         return {"Authorization": "Bearer " + person["credential"]}
+
     draft = payload(args)
     draft.update(
         recipient_id=student["id"], expected_revision=state["revision"], learner_revision=0

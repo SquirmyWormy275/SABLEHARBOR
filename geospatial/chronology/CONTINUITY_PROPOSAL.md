@@ -1,3 +1,5 @@
+> **Accepted by the owner.** The [controlling decision](../../docs/canon/KLEIN_FORT_OCCUPANCY_2026-09-13.md) now governs the staged 2024 relocation. The original proposal below is retained as historical review text; its pending-status statements no longer describe current canon.
+
 # Klein shop and Fort continuity — proposed decision
 
 **State: PROPOSED — awaiting owner acceptance.** This is a concrete fictional-history proposal, not recovered evidence. It is excluded from the accepted chronology, map layers, occupancy intervals and issue-closure claims. Its acceptance would need a dated controlling canon decision and a separately validated register update.

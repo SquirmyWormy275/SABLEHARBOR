@@ -1,0 +1,1232 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "SH-CLOSEOUT-DIGITAL-TAX-2026-09-15",
+  "known_on": "2026-09-15",
+  "effective_from": "2027-01-01",
+  "scenario_years": [
+    2027,
+    2028,
+    2029,
+    2030,
+    2031
+  ],
+  "state": "IMPLEMENTATION_PENDING_REPOSITORY_ACCEPTANCE",
+  "population": "All75existingdetailedsubscriptioncontracts; notcurrent88customers oralllegacyenterprise receipts",
+  "rate": "0.0875",
+  "rate_state": "July2026Sacramento cityrate heldconstant as2027-2031planningassumption",
+  "authority_url": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB122",
+  "authority_sha256": "5a07d3f3e934bcf86b2381d10ef4979f19961163e182b0e1c1f6e6556ed446a3",
+  "authority_provisions": [
+    "RTC6006(i)",
+    "RTC6010.5(b)(3)",
+    "RTC6010.5.1",
+    "RTC6016.1",
+    "RTC6052",
+    "RTC6372.1"
+  ],
+  "settlement": "NewlyauthoredmonthlyCDTFAaccountfrequency; followingmonth lastbusinessday plannedpayment, distinctfromacknowledgement. FF003baseTERM0 excludedforeverpendingseparatelysupporteddisposition.",
+  "credits": "CommercialSLAcredits remain unclaimedtaxrelief pendingtaxreview; grossinvoicetax retained,noautomaticrefund/baddebtrelief.",
+  "contracts": [
+    {
+      "contract_id": "FF-001",
+      "customer_id": "SYN-CUSTOMER-001",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2000 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-002",
+      "customer_id": "SYN-CUSTOMER-002",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2001 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-003",
+      "customer_id": "SYN-CUSTOMER-003",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "1840 Quarry Exchange",
+        "Suite 210",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "EXISTING_FF003_TERM0_ACCEPTANCE_PLUS_NEWLY_AUTHORED_RENEWAL_PRECISION"
+    },
+    {
+      "contract_id": "FF-004",
+      "customer_id": "SYN-CUSTOMER-004",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2003 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-005",
+      "customer_id": "SYN-CUSTOMER-005",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2004 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-006",
+      "customer_id": "SYN-CUSTOMER-006",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2005 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-007",
+      "customer_id": "SYN-CUSTOMER-007",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2006 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-008",
+      "customer_id": "SYN-CUSTOMER-008",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2007 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-009",
+      "customer_id": "SYN-CUSTOMER-009",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2008 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-010",
+      "customer_id": "SYN-CUSTOMER-010",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2009 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-011",
+      "customer_id": "SYN-CUSTOMER-011",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2010 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-012",
+      "customer_id": "SYN-CUSTOMER-012",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2011 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-013",
+      "customer_id": "SYN-CUSTOMER-013",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2012 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-014",
+      "customer_id": "SYN-CUSTOMER-014",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2013 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-015",
+      "customer_id": "SYN-CUSTOMER-015",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2014 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-016",
+      "customer_id": "SYN-CUSTOMER-016",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2015 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-017",
+      "customer_id": "SYN-CUSTOMER-017",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2016 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-018",
+      "customer_id": "SYN-CUSTOMER-018",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2017 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-019",
+      "customer_id": "SYN-CUSTOMER-019",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2018 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-020",
+      "customer_id": "SYN-CUSTOMER-020",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2019 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-021",
+      "customer_id": "SYN-CUSTOMER-021",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2020 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-022",
+      "customer_id": "SYN-CUSTOMER-022",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2021 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-023",
+      "customer_id": "SYN-CUSTOMER-023",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2022 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-024",
+      "customer_id": "SYN-CUSTOMER-024",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2023 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-025",
+      "customer_id": "SYN-CUSTOMER-025",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2024 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-026",
+      "customer_id": "SYN-CUSTOMER-026",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2025 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-027",
+      "customer_id": "SYN-CUSTOMER-027",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2026 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-028",
+      "customer_id": "SYN-CUSTOMER-028",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2027 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-029",
+      "customer_id": "SYN-CUSTOMER-029",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2028 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-030",
+      "customer_id": "SYN-CUSTOMER-030",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2029 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-031",
+      "customer_id": "SYN-CUSTOMER-031",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2030 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-032",
+      "customer_id": "SYN-CUSTOMER-032",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2031 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-033",
+      "customer_id": "SYN-CUSTOMER-033",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2032 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-034",
+      "customer_id": "SYN-CUSTOMER-034",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2033 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-035",
+      "customer_id": "SYN-CUSTOMER-035",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2034 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-036",
+      "customer_id": "SYN-CUSTOMER-036",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2035 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-037",
+      "customer_id": "SYN-CUSTOMER-037",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2036 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-038",
+      "customer_id": "SYN-CUSTOMER-038",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2037 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-039",
+      "customer_id": "SYN-CUSTOMER-039",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2038 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-040",
+      "customer_id": "SYN-CUSTOMER-040",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2039 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-041",
+      "customer_id": "SYN-CUSTOMER-041",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2040 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-042",
+      "customer_id": "SYN-CUSTOMER-042",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2041 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-043",
+      "customer_id": "SYN-CUSTOMER-043",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2042 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-044",
+      "customer_id": "SYN-CUSTOMER-044",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2043 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-045",
+      "customer_id": "SYN-CUSTOMER-045",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2044 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-046",
+      "customer_id": "SYN-CUSTOMER-046",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2045 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-047",
+      "customer_id": "SYN-CUSTOMER-047",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2046 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-048",
+      "customer_id": "SYN-CUSTOMER-048",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2047 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-049",
+      "customer_id": "SYN-CUSTOMER-049",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2048 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-050",
+      "customer_id": "SYN-CUSTOMER-050",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2049 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-051",
+      "customer_id": "SYN-CUSTOMER-051",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2050 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-052",
+      "customer_id": "SYN-CUSTOMER-052",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2051 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-053",
+      "customer_id": "SYN-CUSTOMER-053",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2052 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-054",
+      "customer_id": "SYN-CUSTOMER-054",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2053 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-055",
+      "customer_id": "SYN-CUSTOMER-055",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2054 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-056",
+      "customer_id": "SYN-CUSTOMER-056",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2055 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-057",
+      "customer_id": "SYN-CUSTOMER-057",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2056 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-058",
+      "customer_id": "SYN-CUSTOMER-058",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2057 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-059",
+      "customer_id": "SYN-CUSTOMER-059",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2058 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "FF-060",
+      "customer_id": "SYN-CUSTOMER-060",
+      "unit": "foundry-field",
+      "known_billing_address": [
+        "2059 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "ATL-LIC-001",
+      "customer_id": "SYN-CUSTOMER-001",
+      "unit": "atlas-meridian",
+      "known_billing_address": [
+        "2060 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "ATL-LIC-002",
+      "customer_id": "SYN-CUSTOMER-002",
+      "unit": "atlas-meridian",
+      "known_billing_address": [
+        "2061 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "ATL-LIC-003",
+      "customer_id": "SYN-CUSTOMER-003",
+      "unit": "atlas-meridian",
+      "known_billing_address": [
+        "2062 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "ATL-LIC-004",
+      "customer_id": "SYN-CUSTOMER-004",
+      "unit": "atlas-meridian",
+      "known_billing_address": [
+        "2063 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "ATL-LIC-005",
+      "customer_id": "SYN-CUSTOMER-005",
+      "unit": "atlas-meridian",
+      "known_billing_address": [
+        "2064 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "ATL-LIC-006",
+      "customer_id": "SYN-CUSTOMER-006",
+      "unit": "atlas-meridian",
+      "known_billing_address": [
+        "2065 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "ATL-LIC-007",
+      "customer_id": "SYN-CUSTOMER-007",
+      "unit": "atlas-meridian",
+      "known_billing_address": [
+        "2066 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "ATL-LIC-008",
+      "customer_id": "SYN-CUSTOMER-008",
+      "unit": "atlas-meridian",
+      "known_billing_address": [
+        "2067 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "ATL-LIC-009",
+      "customer_id": "SYN-CUSTOMER-009",
+      "unit": "atlas-meridian",
+      "known_billing_address": [
+        "2068 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "ATL-LIC-010",
+      "customer_id": "SYN-CUSTOMER-010",
+      "unit": "atlas-meridian",
+      "known_billing_address": [
+        "2069 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "ATL-LIC-011",
+      "customer_id": "SYN-CUSTOMER-011",
+      "unit": "atlas-meridian",
+      "known_billing_address": [
+        "2070 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "ATL-LIC-012",
+      "customer_id": "SYN-CUSTOMER-012",
+      "unit": "atlas-meridian",
+      "known_billing_address": [
+        "2071 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "ATL-LIC-013",
+      "customer_id": "SYN-ATLAS-SELFSERVE-013",
+      "unit": "atlas-meridian",
+      "known_billing_address": [
+        "2072 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "ATL-LIC-014",
+      "customer_id": "SYN-ATLAS-SELFSERVE-014",
+      "unit": "atlas-meridian",
+      "known_billing_address": [
+        "2073 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    },
+    {
+      "contract_id": "ATL-LIC-015",
+      "customer_id": "SYN-ATLAS-SELFSERVE-015",
+      "unit": "atlas-meridian",
+      "known_billing_address": [
+        "2074 Synthetic Software Exchange",
+        "Sacramento, CA 95814",
+        "United States"
+      ],
+      "address_scope": "Authored fictional correspondence; incorporated Sacramento city is a separate explicit tax-situs fact; not a property/geocoding representation",
+      "user_location": "Sacramento city, California",
+      "california_use_fraction": "1",
+      "product": "PREWRITTEN_PROVIDER_SOFTWARE_NOT_CUSTOM_OR_CUSTOMER_CODE_INFRASTRUCTURE",
+      "commercial_term": "SELLER_ABSORBS_TAX_SEPARATELY_NO_CUSTOMER_REIMBURSEMENT_NOT_TAX_INCLUSIVE_PRICE",
+      "origin": "NEWLY_AUTHORED_PROSPECTIVE_CONTRACT_PRECISION"
+    }
+  ]
+}

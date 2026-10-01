@@ -1,0 +1,301 @@
+{
+  "document_id": "SH-STATE-APPORTIONMENT-FACTS-20260915",
+  "version": "1.0.0",
+  "acceptance_state": "PENDING_REPOSITORY_ACCEPTANCE",
+  "origin": "NEWLY_AUTHORED_BOUNDED_TERRITORY_AND_PERIOD_PRECISION_WITH_ACCEPTED_CONTRACTS",
+  "years": [
+    2026,
+    2027,
+    2028,
+    2029,
+    2030,
+    2031
+  ],
+  "scenarios": [
+    "base",
+    "downside",
+    "expansion"
+  ],
+  "members": [
+    "SHI",
+    "SHIH",
+    "PS",
+    "ARU",
+    "BST"
+  ],
+  "dre": {
+    "RWH": "PS"
+  },
+  "unitary_source": "enterprise/ccf/company_closeout/state_unitary_facts.json",
+  "receipt_market_source": "enterprise/closeout/source/receipt_markets.json",
+  "industrial_contracts": [
+    {
+      "contract_id": "BST-2025-001",
+      "segment": "BST",
+      "transport": true,
+      "performance_state": "WY",
+      "original_scope": "Fictional customer siding/Taylor to Union Pacific interchange at Wamsutter"
+    },
+    {
+      "contract_id": "BST-2025-006",
+      "segment": "BST",
+      "transport": true,
+      "performance_state": "WY",
+      "original_scope": "Fictional customer siding/Taylor to Union Pacific interchange at Wamsutter"
+    },
+    {
+      "contract_id": "BST-2025-002",
+      "segment": "BST",
+      "transport": true,
+      "performance_state": "WY",
+      "original_scope": "Fictional customer siding/Taylor to Union Pacific interchange at Wamsutter"
+    },
+    {
+      "contract_id": "BST-2025-007",
+      "segment": "BST",
+      "transport": true,
+      "performance_state": "WY",
+      "original_scope": "Fictional customer siding/Taylor to Union Pacific interchange at Wamsutter"
+    },
+    {
+      "contract_id": "BST-2025-004",
+      "segment": "BST",
+      "transport": true,
+      "performance_state": "WY",
+      "original_scope": "Fictional customer siding/Taylor to Union Pacific interchange at Wamsutter"
+    },
+    {
+      "contract_id": "BST-2025-008",
+      "segment": "BST",
+      "transport": true,
+      "performance_state": "WY",
+      "original_scope": "Fictional customer siding/Taylor to Union Pacific interchange at Wamsutter"
+    },
+    {
+      "contract_id": "BST-2025-003",
+      "segment": "BST",
+      "transport": true,
+      "performance_state": "WY",
+      "original_scope": "Fictional customer siding/Taylor to Union Pacific interchange at Wamsutter"
+    },
+    {
+      "contract_id": "BST-2025-009",
+      "segment": "BST",
+      "transport": true,
+      "performance_state": "WY",
+      "original_scope": "Fictional customer siding/Taylor to Union Pacific interchange at Wamsutter"
+    },
+    {
+      "contract_id": "BST-2025-010",
+      "segment": "BST",
+      "transport": true,
+      "performance_state": "WY",
+      "original_scope": "Fictional customer siding/Taylor to Union Pacific interchange at Wamsutter"
+    },
+    {
+      "contract_id": "BST-2025-011",
+      "segment": "BST",
+      "transport": true,
+      "performance_state": "WY",
+      "original_scope": "Fictional customer siding/Taylor to Union Pacific interchange at Wamsutter"
+    },
+    {
+      "contract_id": "BST-2025-012",
+      "segment": "BST",
+      "transport": true,
+      "performance_state": "WY",
+      "original_scope": "Fictional customer siding/Taylor to Union Pacific interchange at Wamsutter"
+    },
+    {
+      "contract_id": "BST-2025-013",
+      "segment": "BST",
+      "transport": true,
+      "performance_state": "WY",
+      "original_scope": "Fictional customer siding/Taylor to Union Pacific interchange at Wamsutter"
+    },
+    {
+      "contract_id": "TRM-2025-001",
+      "segment": "TERMINALS",
+      "transport": false,
+      "performance_state": "WY",
+      "original_scope": "Taylor Industrial Complex / Rawlins satellite"
+    },
+    {
+      "contract_id": "TRM-2025-002",
+      "segment": "TERMINALS",
+      "transport": false,
+      "performance_state": "WY",
+      "original_scope": "Taylor Industrial Complex / Rawlins satellite"
+    },
+    {
+      "contract_id": "TRM-2025-003",
+      "segment": "TERMINALS",
+      "transport": false,
+      "performance_state": "WY",
+      "original_scope": "Taylor Industrial Complex / Rawlins satellite"
+    },
+    {
+      "contract_id": "TRM-2025-014",
+      "segment": "TERMINALS",
+      "transport": false,
+      "performance_state": "WY",
+      "original_scope": "Taylor Industrial Complex / Rawlins satellite"
+    },
+    {
+      "contract_id": "TRM-2025-015",
+      "segment": "TERMINALS",
+      "transport": false,
+      "performance_state": "WY",
+      "original_scope": "Taylor Industrial Complex / Rawlins satellite"
+    },
+    {
+      "contract_id": "TRM-2025-016",
+      "segment": "TERMINALS",
+      "transport": false,
+      "performance_state": "WY",
+      "original_scope": "Taylor Industrial Complex / Rawlins satellite"
+    },
+    {
+      "contract_id": "TRM-2025-017",
+      "segment": "TERMINALS",
+      "transport": false,
+      "performance_state": "WY",
+      "original_scope": "Taylor Industrial Complex / Rawlins satellite"
+    },
+    {
+      "contract_id": "TRM-2025-018",
+      "segment": "TERMINALS",
+      "transport": false,
+      "performance_state": "WY",
+      "original_scope": "Taylor Industrial Complex / Rawlins satellite"
+    },
+    {
+      "contract_id": "TRK-2025-004",
+      "segment": "TRUCKING",
+      "transport": true,
+      "performance_state": "WY",
+      "original_scope": "Taylor/Rawlins terminal regional industrial delivery"
+    },
+    {
+      "contract_id": "TRK-2025-019",
+      "segment": "TRUCKING",
+      "transport": true,
+      "performance_state": "WY",
+      "original_scope": "Taylor/Rawlins terminal regional industrial delivery"
+    },
+    {
+      "contract_id": "TRK-2025-020",
+      "segment": "TRUCKING",
+      "transport": true,
+      "performance_state": "WY",
+      "original_scope": "Taylor/Rawlins terminal regional industrial delivery"
+    },
+    {
+      "contract_id": "TRK-2025-021",
+      "segment": "TRUCKING",
+      "transport": true,
+      "performance_state": "WY",
+      "original_scope": "Taylor/Rawlins terminal regional industrial delivery"
+    },
+    {
+      "contract_id": "TRK-2025-022",
+      "segment": "TRUCKING",
+      "transport": true,
+      "performance_state": "WY",
+      "original_scope": "Taylor/Rawlins terminal regional industrial delivery"
+    },
+    {
+      "contract_id": "WHS-2025-005",
+      "segment": "WAREHOUSE",
+      "transport": false,
+      "performance_state": "WY",
+      "original_scope": "Taylor/Rawlins warehouse estate"
+    },
+    {
+      "contract_id": "WHS-2025-023",
+      "segment": "WAREHOUSE",
+      "transport": false,
+      "performance_state": "WY",
+      "original_scope": "Taylor/Rawlins warehouse estate"
+    },
+    {
+      "contract_id": "WHS-2025-024",
+      "segment": "WAREHOUSE",
+      "transport": false,
+      "performance_state": "WY",
+      "original_scope": "Taylor/Rawlins warehouse estate"
+    },
+    {
+      "contract_id": "WHS-2025-025",
+      "segment": "WAREHOUSE",
+      "transport": false,
+      "performance_state": "WY",
+      "original_scope": "Taylor/Rawlins warehouse estate"
+    }
+  ],
+  "transport_facts": "Existing BST route estate and all selected ARU regional truck movements remain wholly Wyoming during2026 and the conditional2027\u20132031 populations. No miles, receipt-producing transportation, terminals or storage in CA/IL/WV/PA are modeled. This newly authored finite territory precision does not create a route, license, carrier, minimum purchase or customer.",
+  "mine_market": "All represented RWH uranium product sales are delivered to existing external Illinois converter custody designated by the purchasers. Title-retained September200lb toll custody is not a new sale. This territory applies to existing native revenue, not an invented shipment or invoice.",
+  "cradle_activity": "Extraction/refining/processing of mineral ore and host feed is included with RWH in the CAqualified extractive activity numerator. No new activity or revenue created.",
+  "jan2026_aru_bst": {
+    "book_owned_days": 25,
+    "new_target_tax_days": 24,
+    "old_target_days": 1,
+    "method": "Newly authored evenly earned January ordinary customer revenue across the25 owned book days; exclude January7 oldtarget day from newtarget taxgroup receipts, retaining it separately. Do not apply this fraction to acquisition consideration or other dated one-time transactions."
+  },
+  "nexus_members": {
+    "CA": [
+      "SHI",
+      "SHIH",
+      "PS"
+    ],
+    "IL": [
+      "PS"
+    ],
+    "WV": [
+      "SHI"
+    ],
+    "PA": [
+      "SHI"
+    ]
+  },
+  "shared_service_pa": "SHI intercompany services benefit existing industrial/holding recipients at CA/WY operations; no Pennsylvania beneficiary operation is represented. Include their receipts in SHI separate-company PA denominator, eliminate within selectedCA/IL/WVcombined groups.",
+  "factor_policy": "Emit precise decimal ratios and separate6decimal Illinois return-factor values. No tax liability, NOL, commitment or payment is posted. Positive new in-state transport requires supported mileage/receipt source; no default percentage.",
+  "limits": [
+    "2026annual scope joins completed Jan\u2013Aug and separately conditional Sep\u2013Dec; annualfactor is a provision/scenario estimate, not a completed taxreturn.",
+    "CAqualifiedactivity >50%requires actual property/payroll threefactor inputs; provider rejects unsupported automatic single-sales use.",
+    "For selected no-in-state transport facts, special transportation numerators are zero; ILconversion remains executable and independently tested with nonzero illustrative inputs.",
+    "Native source legal revenue governs; duplicates, unknown accounts/entities, missing months or unclassified segments are rejected."
+  ],
+  "source_hashes": {
+    "industrial/source/finance.json": "0d4461abfcdb138da36db503ff0cfea7c47ea7fd7109494126514225fd43e38c",
+    "industrial/source/operations.json": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b",
+    "red_wash/source/core_operating_data.json": "eb5601f3a519ac175bef07744fa3c23939734f80b5774efeed4800aa73e8aa3f"
+  },
+  "authorities": [
+    {
+      "provision": "CA R&TC25128/25128.7/25135/25136; ScheduleR2025",
+      "url": "https://www.ftb.ca.gov/forms/2025/2025-100r-instructions.html",
+      "accessed_on": "2026-09-15"
+    },
+    {
+      "provision": "IL304(d),86Ill100.3450",
+      "url": "https://www.ilga.gov/ftp/JCAR/AdminCode/086/086001000M34500R.html",
+      "accessed_on": "2026-09-15"
+    },
+    {
+      "provision": "IL SubgroupSchedule R-03/26 lines1\u20135/100.3600",
+      "url": "https://tax.illinois.gov/content/dam/soi/en/web/tax/forms/incometax/documents/currentyear/business/miscellaneous/schedule-ub-subgroup-instr.pdf",
+      "accessed_on": "2026-09-15"
+    },
+    {
+      "provision": "WV11-24-7(e)(10)\u2013(14), post2022markets",
+      "url": "https://code.wvlegislature.gov/11-24-7/",
+      "accessed_on": "2026-09-15"
+    },
+    {
+      "provision": "PA 72 P.S.7401(3)2(a)(16.1)(C); Information Notice Corporation Taxes2014-01 (December12,2014), customer service delivery",
+      "url": "https://www.pa.gov/content/dam/copapwp-pagov/en/revenue/documents/taxlawpoliciesbulletinsnotices/informationalnotices/documents/info_notice_ct_2014-01.pdf",
+      "accessed_on": "2026-09-15"
+    }
+  ]
+}

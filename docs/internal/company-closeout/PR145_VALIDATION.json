@@ -1,0 +1,78 @@
+{
+  "prepared_on": "2026-09-15",
+  "review_head": "69a562cae5673301303293198d3a2135b3f494ff",
+  "main_integrated": "78d4fcdf1df5b8ffc0775b9af22cae1002d456d7",
+  "full_pytest": {
+    "exit_code": 0,
+    "skips": 3,
+    "output_sha256": "265df4380054061c72d8c9e55f95191126e0079b6cee510926be8965bc254dae"
+  },
+  "checks": [
+    {
+      "command": "python scripts/validate_governance_j2.py",
+      "exit_code": 0,
+      "output_sha256": "10be1fb601975723709974bb90405dda65842a88a7ad224478187c85c0a3430d",
+      "output": "PASS governance/J2 validation: board records, chat canon ledger, authority boundaries, 9 directors, 5 committees, 9 Pinakes portals, 4 process/role diagrams plus current organization charts, Daedalus boundaries, source/PDF hashes, US-Letter publications, links, supersession"
+    },
+    {
+      "command": "python scripts/validate_institutional_catalog.py",
+      "exit_code": 0,
+      "output_sha256": "e862748dfe97892619d48da76d63ec0b1048ba50bf0a1e2ce2cc5d6ae25c2547",
+      "output": "institutional catalog validation passed (131 objects, 9 Pinakes portals)"
+    },
+    {
+      "command": "python scripts/validate_organization_maps.py",
+      "exit_code": 0,
+      "output_sha256": "469fb022105f3c446b85b7171f8e150c1247f792adc7445c3a2852bf1c736ef2",
+      "output": "PASS organization charts: card copy, complete publication coverage, source paths, logos, assets and immutable history"
+    },
+    {
+      "command": "python scripts/validate_repository_hygiene.py",
+      "exit_code": 0,
+      "output_sha256": "47cf4f9f69cab4952520427cc3a84487d6cf47cbe5872c07b75b4bd1139173f0",
+      "output": "PASS repository hygiene: 4840 tracked paths; JSON, Markdown links, stale names, private/fake-contact boundaries"
+    },
+    {
+      "command": "python scripts/validate_business_records.py",
+      "exit_code": 0,
+      "output_sha256": "1e1f9fe57e63d2c5fffddf1d580be24348a2555968155e7cb0b272003483f8af",
+      "output": "Business records passed: 7 lines, 12 interfaces, 10 existing-CCF implementations"
+    },
+    {
+      "command": "python scripts/validate_finance_evidence_acceptance.py",
+      "exit_code": 0,
+      "output_sha256": "a588e4fa9da26257866313d8d23cc556f6d392a980e5751b787179675907225f",
+      "output": "PASS: accepted Foundry Field packet and review artifacts match exact hashes"
+    },
+    {
+      "command": "python tools/documents/approval_guard.py",
+      "exit_code": 0,
+      "output_sha256": "708f785585646ad4d9d01aad7e4d009a1b1cb01f3057158e96dbb13626be69b4",
+      "output": "{\n  \"status\": \"PASS\",\n  \"artifact_count\": 30,\n  \"groups\": [\n    {\n      \"group\": \"foundry-field\",\n      \"record\": \"docs/finance/evidence/SH-FIN-HUMAN-001/ACCEPTANCE.json\",\n      \"revision\": \"e71996a5c1fe567b6654ddf8956c2b757ae52ba2\",\n      \"artifacts\": 18\n    },\n    {\n      \"group\": \"visitor-v08\",\n      \"record\": \"geospatial/facilities/visitor/ACCEPTANCE.json\",\n      \"revision\": \"5ed6c8daa3b90cbb30122999fe92b1a36235aab8\",\n      \"artifacts\": 2\n    },\n    {\n      \"group\": \"sacramento-r01\",\n      \"record\": \"docs/facilities/references/sacramento-hq/r01-approved/MANIFEST.json\",\n      \"revision\": \"f91d6cbfef943927179aa3160c595028fce87d45\",\n      \"artifacts\": 8\n    },\n    {\n      \"group\": \"j2-originals\",\n      \"record\": \"assets/brand/manifest.json\",\n      \"revision\": \"8ed187e5dd1b7221fee10265451bf6060a1ac0e6\",\n      \"artifacts\": 2\n    }\n  ],\n  \"scope\": \"Existing exact-file records only; no new approval or visual quality assessment\"\n}"
+    },
+    {
+      "command": "python scripts/validate_reader_navigation.py --check-regeneration",
+      "exit_code": 0,
+      "output_sha256": "7f24ad058b61d7e4f3b2a68733721e06cca7a41e6f5840d386a49c1630d08da4",
+      "output": "Reader library: {'files': 1332, 'formats': {'md': 850, 'pdf': 434, 'xlsx': 48}, 'verified_pairs': 131}\nEvidence packages: 12\nAll institutional/reader table and search contents reproduce exactly\nReader validation passed: 129 pages, 4037 local links, 1332 indexed files"
+    },
+    {
+      "command": "python docs/legal/full-text/validate_qa.py",
+      "exit_code": 0,
+      "output_sha256": "1a387b9c6f77aeae3c8670354076596e5adb786632fd602691ad3c4604372322",
+      "output": "PASS: {\"documents\": 56, \"pdf_pages\": 200, \"html_viewports\": 112}"
+    },
+    {
+      "command": "python docs/legal/full-text/validate.py --browser",
+      "exit_code": 0,
+      "output_sha256": "fae3152023e130dc8df89934f750ae2bd2cbfca8279d6a7e767f107ae94b2df0",
+      "output": "{\n  \"sources\": 56,\n  \"pages\": 200,\n  \"source_blocks\": 3277,\n  \"browser_viewports\": 112,\n  \"result\": \"PASS\"\n}"
+    },
+    {
+      "command": "python -m pytest -q docs/legal/full-text/test_full_text.py",
+      "exit_code": 0,
+      "output_sha256": "cfc14fd2dc11c362cccf5421245ca5ab0e9d286b54a604a80bd2dd5522f6feb9",
+      "output": ".............                                                            [100%]"
+    }
+  ]
+}

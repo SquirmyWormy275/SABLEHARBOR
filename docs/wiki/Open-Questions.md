@@ -1,41 +1,48 @@
-# Open questions
+# Open questions and scope limits
 
 [Start here](Start-Here.md) · [Reading glossary](Glossary.md) · [Wiki home](Home.md)
 
-The archive deliberately preserves the difference between a complete presentation and complete evidence. These are the 11 outstanding issues reviewed on September 12, 2026. Follow the linked GitHub issues for subsequent decisions.
+The [company edition 1.2.0](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/sable-harbor-company-edition-v1.2.0) is accepted and published; its [register](../internal/company-closeout/REGISTER_v1.2.0.json) states the finite synthetic-company scope. Earlier editions [1.0.0](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/sable-harbor-company-edition-v1.0.0) and [1.1.0](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/sable-harbor-company-edition-v1.1.0) retain their original bytes. At the September 29, 2026 UTC check, the public SABLEHARBOR repository had **zero open issues and zero open PRs**. Consult the [live issues](https://github.com/SquirmyWormy275/SABLEHARBOR/issues) and [live PRs](https://github.com/SquirmyWormy275/SABLEHARBOR/pulls) for later changes. Earlier dated snapshots remain in Git history.
 
-## Evidence and decisions still needed
+## Closed issues and surviving scope limits
 
-| Issue | What remains unresolved | Accepted source to read |
+| Issue | September 29 disposition | Evidence route |
 |---|---|---|
-| [#11](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/11) | Wiki publication is complete. Main protection and branch retirement remain administrative work; shared branches stay with their owners. | [Source record](README.md) |
-| [#18](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/18) | Parent tax decisions, executed carry instruments and commercial name clearance still require their specified evidence. | [Source record](../canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md) |
-| [#19](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/19) | Six occupants and the 237-billet establishment are accepted. Remaining occupants and exact appointment histories are not supplied. | [Source record](../canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md) |
-| [#21](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/21) | Accepted runtime design and reference implementation do not establish integrated deployment qualification; preserve the runtime/CCF owner boundary. | [Source record](../../enterprise/runtime/DISPOSITION.md) |
-| [#22](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/22) | Reference authorization logic does not establish production source rights or integrated entitlement enforcement. | [Source record](../../enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md) |
-| [#24](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/24) | Generated-artifact retention does not settle Alexandria class-based retention, hold, deletion and enforcement requirements. | [Source record](../governance/GENERATED_RECORDS_LIFECYCLE.md) |
-| [#34](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/34) | Reference tests do not establish deployed Daedalus disclosure controls and inference-leakage enforcement. | [Source record](../../enterprise/runtime/docs/ASSURANCE_SCOPE.md) |
-| [#88](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/88) | The exact approved September 3 headquarters image remains missing; a similar image cannot satisfy its hash requirement. | [Source record](../canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md) |
-| [#106](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/106) | Precise geometry, source-backed access and historical occupancy remain incomplete for identified sites. | [Source record](../../geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md) |
-| [#107](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/107) | Early railway alignments and remaining detailed engineering are not established by the accepted present-day synthetic network. | [Source record](../../geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md) |
-| [#108](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/108) | Three batches classify 69,184 occurrence carriers; 8,961 remain outside those batches. Source-level semantic, OCR and temporal-history work remains. | [Source record](../../geospatial/adjudication/README.md) |
+| [#18](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/18) | Closed for the synthetic parent-tax history: corporate taxation from formation for the existing Delaware LLC. Real external filing and counsel execution are outside the fictional company edition. | [Owner directions](../canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md), [tax workpaper](../finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md) |
+| [#34](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/34) | Closed for the owner-selected bounded 34B scope after protected portal integration and an accepted-main genuine-model rehearsal. General multi-record Daedalus behavior and external deployment are not claimed. | [Runtime receipt](../internal/company-closeout/daedalus-rehearsal-2026-09-29/ACCEPTED_RUNTIME_RECEIPT.md) |
+| [#107](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/107) | Closed for the declared synthetic geographic evidence scope. Real survey, title, field design and construction remain unestablished. | [Geographic release receipt](../releases/GEOGRAPHIC_EVIDENCE_1_5_0_RECEIPT.md) |
+| [#108](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/108) | Closed after all original geographic carriers were dispositioned and the 1.5.0 package was published. Broader engineering/source-domain work is outside this completed company gate. | [Geographic release receipt](../releases/GEOGRAPHIC_EVIDENCE_1_5_0_RECEIPT.md) |
 
-## Executed reference evidence
+## Recently closed boundaries
 
-The [closeout evidence dossier](../../evidence/closeout/README.md) supplies runtime observations, retained validation logs and the exact remaining geographic occurrence population. Version 1.1 adds an offline review interface, complete baseline source verification, site records, raster text candidates and portable draft notes. The [completion audit](../audit/COMPLETION_BATCH_2026-09-13.md) accounts for the full remaining scope and owner boundaries. Its [release index](../releases/CLOSEOUT_EVIDENCE_RELEASES.md) provides the versioned workbook and machine-readable records. These are executed reference tests and source reconciliation; the open acceptance requirements above remain explicit.
+[#11](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/11) is closed after main protection, required checks, reviewed branch retirement and verified automatic merged-branch deletion. Unique and active unmerged branches remain intentionally retained. Issues [#19](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/19), [#21](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/21), [#22](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/22) and [#24](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/24) are closed at their documented workforce, portal-input, reference-authorization and restore scopes. Their receipts preserve external-deployment and broader runtime limits.
 
-The [portable geographic evidence package](../../geospatial/closeout/README.md) connects the accepted map layers to site/source review tables in QGIS. Its [release index](../releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) records native validation and downloads. Exact occupancy and historical continuity remain explicit source gaps.
+The owner also adopted the exact fictional five-holder register and voluntary
+proportional contributions without new units. The [dated direction](../canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md)
+settles that choice; capital-account implementation is accepted and published in edition 1.0.0. The subsequently approved designation, ARU secured and host B terms have separate dated successors; the final successor completes expressly synthetic filing/title/fixture and old-facility-release administration. Real perfection/priority, historical rights outside the adopted schedule and live runtime limits remain explicit.
 
-## What this review changes
+## Accepted successors to older status claims
 
-The Wiki has been built, published and verified. The earlier reports that its Git endpoint was unavailable are historical. That completes the publication portion of issue #11; it does not complete main-branch protection or the retirement of other sessions’ branches.
+PR #164 dispositioned all **78,145 original carriers** in six batches over the
+reviewed 919-file boundary, with 79 dated events and 34 site/component dispositions.
+Issue #106 is closed at accepted precision. This does not close every engineering
+extension beyond the issues' accepted synthetic scope. Issues #107 and #108 were
+subsequently closed through the [geographic 1.5.0 release](../releases/GEOGRAPHIC_EVIDENCE_1_5_0_RECEIPT.md).
 
-None of the 11 issues meets every remaining acceptance criterion in the inspected source. They stay open. A polished article, a selected design or a passing synthetic test does not supply the missing evidence.
+[PR #138 billing adoption](../canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md) is
+accepted. FF-003 is a January 2027 base conditional forecast, not September 2026
+actual revenue. PR #145 merged September 15 as
+`c8d628aa84140d63f6b8da8e2cba173c26c9a3b1` after 16 successful validation contexts
+and two intentionally skipped publication jobs. [Its integration receipt](../internal/company-closeout/PR145_INTEGRATION.md)
+records the numerical/source reconciliation and preserved approved designs.
+Earlier unapproved-design notices retain their historical dates.
 
-## Concurrent work
+The [financial successor](../finance/evidence/company-closeout/README.md) separately
+composes goodwill removal and billing tax. Immutable historical workbooks remain
+available; do not combine old and successor journals as additional transactions.
+The [treasury/investor route](../finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md)
+shows funding capacity, modeled receipts, shortfalls and evidence limits separately.
 
-[PR #145](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/145) owns the full legal-publication review. [PR #138](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/138) remains an unapproved billing proposal. Their pending work is not presented as accepted by this Wiki.
-
-Runtime and CCF implementation boundaries remain with their owning work. The [dated issue review](../audit/PROFESSIONAL_PRESENTATION_ISSUE_REVIEW.json) records the inspected baseline, source hashes and each disposition. It is a snapshot, not a live issue tracker.
-
-The [geographic history edition](../../geospatial/chronology/README.md) adds dated events, site histories and an interactive railway chronology. The [Klein/Fort continuity proposal](../../geospatial/chronology/CONTINUITY_PROPOSAL.md) identifies the new fictional facts that require acceptance; it is excluded from accepted timeline data.
+A company edition passes only when its declared population and material claims are
+substantiated. Software tests, retrospective fictional records and reference deployment
+are identified separately from real external evidence and professional conclusions.

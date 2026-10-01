@@ -1,0 +1,52 @@
+name: Company edition reconciliation
+on:
+  pull_request:
+    paths:
+      - 'enterprise/**'
+      - 'industrial/**'
+      - 'tools/company_closeout/**'
+      - 'tests/closeout/**'
+      - 'tests/company_closeout/**'
+      - 'docs/internal/company-closeout/**'
+      - 'docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md'
+      - 'pyproject.toml'
+      - 'uv.lock'
+      - '.github/workflows/company-closeout.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reperform:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4, existing source-integrity pin
+        with:
+          fetch-depth: 0
+      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          version: '0.12.4'
+      - run: uv sync --frozen --all-extras
+      - name: Exercise accounting, population, control and disclosure boundaries
+        run: uv run python -m pytest tests/closeout tests/company_closeout enterprise/operations/tests enterprise/ccf/company_closeout enterprise/runtime/tests/test_security.py -q
+      - name: Generate all three native populations from the same revision
+        run: |
+          uv run python -m enterprise.closeout.build
+          uv run python -m enterprise.operations.completed_period
+          uv run python -m enterprise.operations.completed_period --check
+          uv run python -m enterprise.operations.september_custody
+          uv run python -m enterprise.operations.september_custody --check
+      - name: Independently import and reconcile source populations
+        run: |
+          mkdir -p var/company-closeout/ci
+          uv run python -m tools.company_closeout.independent_import enterprise/generated/company-closeout-v1/exports --receipt var/company-closeout/ci/independent-import.json
+          uv run python -m enterprise.operations.reperform_closeout --output var/company-closeout/ci/company-reperformance.json
+          uv run python -m enterprise.closeout.reperform enterprise/generated/company-closeout-v1 > var/company-closeout/ci/finance-reperformance.json
+      - name: Exercise isolated reference restore
+        run: uv run python -m enterprise.ccf.company_closeout.restore_rehearsal > var/company-closeout/ci/reference-restore.json
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        if: always()
+        with:
+          name: company-edition-reconciliation
+          path: var/company-closeout/ci
+          if-no-files-found: warn

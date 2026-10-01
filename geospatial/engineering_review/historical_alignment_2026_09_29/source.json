@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "record_id": "SH-GEO-BST-HIST-CANDIDATE-20260929-001",
+  "recorded_date_utc": "2026-09-29",
+  "status": "PROVISIONAL_SYNTHETIC_RECONSTRUCTION_NOT_RECOVERED_HISTORY",
+  "authority_scope": "Owner-selected #107B work on existing issue criteria, not owner selection of these coordinates; this README records the dated provisional boundary without superseding accepted source-evidence unknowns",
+  "accepted_sources": {
+    "industrial/source/operations.json": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b",
+    "industrial/source/chronology.json": "53fe564b06301176a3a8322aedb82fee5a61c82caeae3d333e0a2c520b3eedc5",
+    "geospatial/engineering_review/COMPENSATED_40_MILE_CANDIDATE.geojson": "2d3358d9dd7d117954b7d36879626659117cb9387b1350b4541abccb726228ad"
+  },
+  "lower_authority_narrative_source": {
+    "path": "docs/handoffs/industrial_r2/source_reconciliation/ARU_BST_RECONCILIATION_REPORT_2026-09-05.md",
+    "sha256": "ca4be35149e33ef5b1336ebde2ada7b98fb64ebaa2b434ae5d8a12c6d8d7d677",
+    "clue": "Pre-failure active route was roughly 22 miles; mine-only trackage was abandoned by the 1954 rescue; surviving route was approximately 14-16 miles. This does not locate those lines."
+  },
+  "accepted_history_preserved": {
+    "1898_original_extent_miles": null,
+    "1898_original_geometry": null,
+    "1954_surviving_miles_interval": [14, 16],
+    "1954_surviving_geometry": null,
+    "abandoned_geometry": null,
+    "1968_main_completion": "1968-10-14",
+    "1972_east_branch_completion": "1972-05-08",
+    "1986_mineral_branch_completion": "1986-09-19"
+  },
+  "hypothesis": {
+    "scenario_id": "HYP-BST-1953-1954-SOUTHWEST-01",
+    "basis": "Newly authored coal-era alternative. Wamsutter is an accepted later geographic anchor; all intermediate stations and the southwest service/coal endpoints are fictional placement assumptions. This is not a projection of the modern northbound railway.",
+    "surviving_1954_centerline_lon_lat": [
+      [-107.96562715205644, 41.6744965783547],
+      [-108.0, 41.64],
+      [-108.05, 41.58],
+      [-108.14, 41.5]
+    ],
+    "abandoned_mine_only_centerline_lon_lat": [
+      [-108.05, 41.58],
+      [-108.16, 41.52]
+    ],
+    "mine_only_abandonment_window": "1953 failure through 1954 rescue; exact removal/abandonment date unavailable",
+    "fictional_west_service_point_lon_lat": [-108.14, 41.5],
+    "fictional_coal_works_lon_lat": [-108.16, 41.52],
+    "current_operating_right_or_asset": false,
+    "real_title_or_survey_evidence": false
+  }
+}

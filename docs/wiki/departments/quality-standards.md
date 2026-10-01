@@ -38,5 +38,3 @@ Standards stewardship does not establish a separate reporting chain or qualify a
 - [Project Cradle](../businesses/Cradle.md)
 - [Safety and environmental governance](safety-environment.md)
 - [Enterprise Technology Services](technology.md)
-
-Related reading describes useful connections, not additional reporting lines.

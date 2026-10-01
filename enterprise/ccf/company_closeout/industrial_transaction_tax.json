@@ -1,0 +1,1618 @@
+{
+  "document_id": "SH-CURRENT-INDUSTRIAL-TAX-202608",
+  "version": "1.2.0",
+  "acceptance_state": "PENDING_REPOSITORY_ACCEPTANCE",
+  "authored_on": "2026-09-15",
+  "available_at": "2026-09-15T00:00:00Z",
+  "event_period": "2026-08",
+  "fact_state": "NEWLY_AUTHORED_RETROSPECTIVE_SYNTHETIC_TAX_FACTS",
+  "scope": "Remaining 34 current contract/invoice allocations. Does not assert 34 physical deliveries or change annual/mine equal-month source reconstruction. Certificates are expressly fictional company-held records, not real signatures, tax registrations, licenses or rulings. All newly authored correspondence addresses are fictional routing details, not new operating sites, headquarters or surveyed geography.",
+  "source_hashes": {
+    "industrial/source/finance.json": "0d4461abfcdb138da36db503ff0cfea7c47ea7fd7109494126514225fd43e38c",
+    "industrial/source/operations.json": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b",
+    "red_wash/source/core_operating_data.json": "eb5601f3a519ac175bef07744fa3c23939734f80b5774efeed4800aa73e8aa3f",
+    "enterprise/operations/source/current_company_2026_08.json": "729e45f44d5240be558bb8d1cfef3bdd527a379a810a342173b2409d7ce0ea74"
+  },
+  "authorities": [
+    {
+      "id": "WY-202608",
+      "url": "https://wyoleg.gov/statutes/compress/title39.pdf",
+      "sha256": "ad38d0bd38b5574e3ff2bed3408c1d5fcf5d4d878b209826930ad36ecd9f26ae",
+      "provision": "39-15-103(a)(i), 39-15-104(f)(i); receipt sourcing and enumerated taxable services",
+      "version": "Current consolidation includes 2026 SF0079 July1 reorganization; August2026 scope",
+      "accessed_on": "2026-09-15",
+      "analysis": "Pure freight, nonalterative handling and custody storage are outside listed service impositions. Cargo repair, well-site services, equipment leases and merchandise sales require separate classification; no name-based utility exemption."
+    },
+    {
+      "id": "WY-2026-SF79",
+      "url": "https://wyoleg.gov/2026/Enroll/SF0079.pdf",
+      "sha256": "91bd65107011253d8093c20e807bd384c24e45501890cec5d38018078868a847",
+      "provision": "Enrolled Act18 sections1,4,5",
+      "version": "July1 2026 effective except section2 July1 2027",
+      "accessed_on": "2026-09-15"
+    },
+    {
+      "id": "WV-RESALE",
+      "url": "https://code.wvlegislature.gov/11-15-9/",
+      "sha256": "b4123c47529fc83d02b4279e9bd19cf24fdb7bbfcf33f8cddb6c96bb9b6112e4",
+      "provision": "11-15-9(a) and (a)(9)",
+      "version": "Consolidated provision accessed for August2026",
+      "accessed_on": "2026-09-15",
+      "analysis": "Refiner purchases concentrate for subsequent sale in tangible form; signed synthetic single-purchase certificate supports resale. Research-project status itself provides no sales exemption."
+    },
+    {
+      "id": "WV-CERT",
+      "url": "https://tax.wv.gov/Documents/sst/f0003.pdf",
+      "provision": "SSTGB F0003 required seller/purchaser, purpose, identity and retention fields",
+      "version": "12/21/2021 form",
+      "accessed_on": "2026-09-15"
+    },
+    {
+      "id": "IL-RESALE",
+      "url": "https://www.ilga.gov/commission/jcar/admincode/086/086001300N14010R.html",
+      "provision": "86 Ill. Adm. Code130.1401(a)",
+      "version": "Character of sale determined when sold; current August2026 screen",
+      "accessed_on": "2026-09-15",
+      "analysis": "Each purchaser certifies onward title transfer before ultimate consumption. Utility status alone does not prove resale."
+    },
+    {
+      "id": "IL-CERT",
+      "url": "https://www.ilga.gov/ftp/JCAR/AdminCode/086/086001300N14050R.html",
+      "provision": "86 Ill. Adm. Code130.1405(a)-(d), especially (b)(5)(C)",
+      "version": "Amended Oct2 2000; published current provision",
+      "accessed_on": "2026-09-15",
+      "analysis": "Complete seller-held certificate uses out-of-state purchaser statement, not an invented Illinois-issued number. August-only scope prevents extrapolation to unreviewed sales."
+    },
+    {
+      "id": "IL-OWN-USE",
+      "url": "https://www.ilga.gov/ftp/JCAR/AdminCode/086/086001500C03100R.html",
+      "provision": "86Ill150.310(a)(4),(b),(c)",
+      "version": "April24 2024 amendment",
+      "accessed_on": "2026-09-15",
+      "analysis": "Temporary processing exemption cannot be assumed for acquisition in Illinois with seller ROT exposure. Manufacturing machinery exemption130.330(k) excludes electricity generation; no automatic utility fuel exemption."
+    },
+    {
+      "id": "IL-DESTINATION",
+      "url": "https://tax.illinois.gov/research/publications/bulletins/fy-2026-12.html",
+      "provision": "2026 destination ROT threshold100000 gross receipts, quarterly lookback",
+      "version": "January1 2026",
+      "accessed_on": "2026-09-15"
+    },
+    {
+      "id": "IL-STATE-RATE",
+      "url": "https://tax.illinois.gov/research/taxinformation/sales/rot.html",
+      "provision": "General merchandise state rate6.25% plus applicable local taxes",
+      "version": "2026 current guidance",
+      "accessed_on": "2026-09-15"
+    },
+    {
+      "id": "IL-LOCAL-ILLUSTRATION",
+      "url": "https://tax.illinois.gov/research/publications/bulletins/fy-2026-26.html",
+      "provision": "Metropolis combined rate7.25% fromJuly1 2026",
+      "version": "FY2026-26-A",
+      "accessed_on": "2026-09-15",
+      "analysis": "The existing receiver municipality is now expressly authored as Metropolis outside special business districts. The July 1, 2026 combined rate of 7.25% applies to August."
+    },
+    {
+      "id": "IL-SELLER-BURDEN",
+      "url": "https://tax.illinois.gov/research/taxinformation/sales/rot.html",
+      "provision": "SellerROT liability, purchaseruse-tax collection reimburses retailer",
+      "version": "2026 current guidance; fiscal2026-12 controls updatedthreshold",
+      "accessed_on": "2026-09-15",
+      "analysis": "Uncollected seller obligation remains payable. No separatelybilled customer tax or supportedreimbursement asset is manufactured."
+    },
+    {
+      "id": "IL-RECEIPTS",
+      "url": "https://www.ilga.gov/ftp/JCAR/AdminCode/086/086001300D04010R.html",
+      "provision": "86Ill130.401(a)",
+      "version": "October2 2000 amendment; current text",
+      "accessed_on": "2026-09-15",
+      "analysis": "Receipt reporting is preferred; a change to gross-sales reporting requires written notice. Book accrual does not prove a filed return or payment."
+    },
+    {
+      "id": "IL-RETURN",
+      "url": "https://tax.illinois.gov/forms/sales/salesandusetax/st-1-instructions.html",
+      "provision": "2026 ST1 instructions: grossreceipts, whole-dollarreturnrounding, differing-rate sales andpaymentcredits",
+      "version": "January2026 andafter",
+      "accessed_on": "2026-09-15"
+    }
+  ],
+  "rejected_authority": {
+    "url": "https://taxarchive.illinois.gov/research/legal/letter-rulings/sales-tax/2012.html",
+    "reason": "2010/2012 uranium private rulings surfaced in search but are revoked after ten years; NOT relied upon or treated as SH authority. Current resale rules and authored specific facts control."
+  },
+  "rows": [
+    {
+      "contract_id": "SH-CRD-202608-STREAM17",
+      "customer_id": "SH-CURRENT-CRD-BUYER-001",
+      "legal_entity": "SHI",
+      "unit": "project-cradle",
+      "kind": "PILOT_RECOVERY_PRODUCT",
+      "invoice_id": "SH-CRD-202608-STREAM17-INV-202608",
+      "principal_usd": "60000.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": "SH-SYN-TAX-CERT-202608-01",
+      "classification": "WV_REFINER_INPUT_RESALE",
+      "service_jurisdiction": "US-WV",
+      "state": "EXEMPT_DECLARED_RESALE",
+      "authority_ids": [
+        "WV-RESALE",
+        "WV-CERT"
+      ],
+      "facts": {
+        "product": "1500kg Stream17 mixed rare-earth concentrate",
+        "delivered_at": "Existing downstream refiner acceptance August25; authored receiving jurisdiction West Virginia",
+        "refiner_resells_recovered_material": true,
+        "consumed_as_fuel_or_office_supply": false,
+        "installed_in_real_property": false,
+        "title_passes_to_buyer": true
+      }
+    },
+    {
+      "contract_id": "BST-2025-001",
+      "customer_id": "ARU-C-001",
+      "legal_entity": "BST",
+      "unit": "american-resource-utility",
+      "kind": "minerals",
+      "invoice_id": "BST-2025-001-INV-202608",
+      "principal_usd": "298945.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_FREIGHT",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-BST-2025-001-FAC-MINERAL-TEAM"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Freight movement and related car/track capacity/accessorials; goods stay customer-owned"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "BST-2025-006",
+      "customer_id": "ARU-C-006",
+      "legal_entity": "BST",
+      "unit": "american-resource-utility",
+      "kind": "minerals",
+      "invoice_id": "BST-2025-006-INV-202608",
+      "principal_usd": "127712.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_FREIGHT",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-BST-2025-006-FAC-MINERAL-TEAM"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Freight movement and related car/track capacity/accessorials; goods stay customer-owned"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "BST-2025-002",
+      "customer_id": "ARU-C-002",
+      "legal_entity": "BST",
+      "unit": "american-resource-utility",
+      "kind": "energy",
+      "invoice_id": "BST-2025-002-INV-202608",
+      "principal_usd": "221867.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_FREIGHT",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-BST-2025-002-FAC-TAY-TERMINAL"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Freight movement and related car/track capacity/accessorials; goods stay customer-owned"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "BST-2025-007",
+      "customer_id": "ARU-C-007",
+      "legal_entity": "BST",
+      "unit": "american-resource-utility",
+      "kind": "energy",
+      "invoice_id": "BST-2025-007-INV-202608",
+      "principal_usd": "100130.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_FREIGHT",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-BST-2025-007-FAC-TAY-TERMINAL"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Freight movement and related car/track capacity/accessorials; goods stay customer-owned"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "BST-2025-004",
+      "customer_id": "ARU-C-004",
+      "legal_entity": "BST",
+      "unit": "american-resource-utility",
+      "kind": "aggregates",
+      "invoice_id": "BST-2025-004-INV-202608",
+      "principal_usd": "115175.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_FREIGHT",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-BST-2025-004-FAC-EAST-MATERIALS"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Freight movement and related car/track capacity/accessorials; goods stay customer-owned"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "BST-2025-008",
+      "customer_id": "ARU-C-008",
+      "legal_entity": "BST",
+      "unit": "american-resource-utility",
+      "kind": "aggregates",
+      "invoice_id": "BST-2025-008-INV-202608",
+      "principal_usd": "57375.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_FREIGHT",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-BST-2025-008-FAC-EAST-MATERIALS"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Freight movement and related car/track capacity/accessorials; goods stay customer-owned"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "BST-2025-003",
+      "customer_id": "ARU-C-003",
+      "legal_entity": "BST",
+      "unit": "american-resource-utility",
+      "kind": "chemicals_metals",
+      "invoice_id": "BST-2025-003-INV-202608",
+      "principal_usd": "136451.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_FREIGHT",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-BST-2025-003-FAC-TAY-TERMINAL"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Freight movement and related car/track capacity/accessorials; goods stay customer-owned"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "BST-2025-009",
+      "customer_id": "ARU-C-009",
+      "legal_entity": "BST",
+      "unit": "american-resource-utility",
+      "kind": "chemicals_metals",
+      "invoice_id": "BST-2025-009-INV-202608",
+      "principal_usd": "70219.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_FREIGHT",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-BST-2025-009-FAC-TAY-TERMINAL"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Freight movement and related car/track capacity/accessorials; goods stay customer-owned"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "BST-2025-010",
+      "customer_id": "ARU-C-010",
+      "legal_entity": "BST",
+      "unit": "american-resource-utility",
+      "kind": "agriculture",
+      "invoice_id": "BST-2025-010-INV-202608",
+      "principal_usd": "66470.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_FREIGHT",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-BST-2025-010-FAC-TAY-TERMINAL"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Freight movement and related car/track capacity/accessorials; goods stay customer-owned"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "BST-2025-011",
+      "customer_id": "ARU-C-011",
+      "legal_entity": "BST",
+      "unit": "american-resource-utility",
+      "kind": "agriculture",
+      "invoice_id": "BST-2025-011-INV-202608",
+      "principal_usd": "35122.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_FREIGHT",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-BST-2025-011-FAC-TAY-TERMINAL"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Freight movement and related car/track capacity/accessorials; goods stay customer-owned"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "BST-2025-012",
+      "customer_id": "ARU-C-012",
+      "legal_entity": "BST",
+      "unit": "american-resource-utility",
+      "kind": "projects",
+      "invoice_id": "BST-2025-012-INV-202608",
+      "principal_usd": "108627.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_FREIGHT",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-BST-2025-012-FAC-TAY-TERMINAL"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Freight movement and related car/track capacity/accessorials; goods stay customer-owned"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "BST-2025-013",
+      "customer_id": "ARU-C-013",
+      "legal_entity": "BST",
+      "unit": "american-resource-utility",
+      "kind": "projects",
+      "invoice_id": "BST-2025-013-INV-202608",
+      "principal_usd": "69451.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_FREIGHT",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-BST-2025-013-FAC-TAY-TERMINAL"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Freight movement and related car/track capacity/accessorials; goods stay customer-owned"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "TRM-2025-001",
+      "customer_id": "ARU-C-001",
+      "legal_entity": "ARU",
+      "unit": "american-resource-utility",
+      "kind": "industrial dry bulk/materials custody",
+      "invoice_id": "TRM-2025-001-INV-202608",
+      "principal_usd": "123471.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_HANDLING",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-TRM-2025-001-FAC-TAY-TERMINAL"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Unload, weigh and reload customer material without changing composition; no fabrication, blending, repair or sale"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "TRM-2025-002",
+      "customer_id": "ARU-C-002",
+      "legal_entity": "ARU",
+      "unit": "american-resource-utility",
+      "kind": "industrial dry bulk/materials custody",
+      "invoice_id": "TRM-2025-002-INV-202608",
+      "principal_usd": "120003.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_HANDLING",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-TRM-2025-002-FAC-TAY-TERMINAL"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Unload, weigh and reload customer material without changing composition; no fabrication, blending, repair or sale"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "TRM-2025-003",
+      "customer_id": "ARU-C-003",
+      "legal_entity": "ARU",
+      "unit": "american-resource-utility",
+      "kind": "industrial dry bulk/materials custody",
+      "invoice_id": "TRM-2025-003-INV-202608",
+      "principal_usd": "165444.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_HANDLING",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-TRM-2025-003-FAC-TAY-TERMINAL"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Unload, weigh and reload customer material without changing composition; no fabrication, blending, repair or sale"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "TRM-2025-014",
+      "customer_id": "ARU-C-014",
+      "legal_entity": "ARU",
+      "unit": "american-resource-utility",
+      "kind": "industrial dry bulk/materials custody",
+      "invoice_id": "TRM-2025-014-INV-202608",
+      "principal_usd": "165240.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_HANDLING",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-TRM-2025-014-FAC-TAY-TERMINAL"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Unload, weigh and reload customer material without changing composition; no fabrication, blending, repair or sale"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "TRM-2025-015",
+      "customer_id": "ARU-C-015",
+      "legal_entity": "ARU",
+      "unit": "american-resource-utility",
+      "kind": "industrial dry bulk/materials custody",
+      "invoice_id": "TRM-2025-015-INV-202608",
+      "principal_usd": "162945.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_HANDLING",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-TRM-2025-015-FAC-TAY-TERMINAL"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Unload, weigh and reload customer material without changing composition; no fabrication, blending, repair or sale"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "TRM-2025-016",
+      "customer_id": "ARU-C-016",
+      "legal_entity": "ARU",
+      "unit": "american-resource-utility",
+      "kind": "industrial dry bulk/materials custody",
+      "invoice_id": "TRM-2025-016-INV-202608",
+      "principal_usd": "157896.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_HANDLING",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-TRM-2025-016-FAC-TAY-TERMINAL"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Unload, weigh and reload customer material without changing composition; no fabrication, blending, repair or sale"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "TRM-2025-017",
+      "customer_id": "ARU-C-017",
+      "legal_entity": "ARU",
+      "unit": "american-resource-utility",
+      "kind": "industrial dry bulk/materials custody",
+      "invoice_id": "TRM-2025-017-INV-202608",
+      "principal_usd": "151470.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_HANDLING",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-TRM-2025-017-FAC-RAW-TERMINAL"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Unload, weigh and reload customer material without changing composition; no fabrication, blending, repair or sale"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "TRM-2025-018",
+      "customer_id": "ARU-C-018",
+      "legal_entity": "ARU",
+      "unit": "american-resource-utility",
+      "kind": "industrial dry bulk/materials custody",
+      "invoice_id": "TRM-2025-018-INV-202608",
+      "principal_usd": "146880.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_HANDLING",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-TRM-2025-018-FAC-RAW-TERMINAL"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Unload, weigh and reload customer material without changing composition; no fabrication, blending, repair or sale"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "TRK-2025-004",
+      "customer_id": "ARU-C-004",
+      "legal_entity": "ARU",
+      "unit": "american-resource-utility",
+      "kind": "heavy industrial drayage / custody",
+      "invoice_id": "TRK-2025-004-INV-202608",
+      "principal_usd": "131580.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_FREIGHT",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-TRK-2025-004-FAC-TAY-TRUCK"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Operator-controlled heavy drayage between registered industrial endpoints; no on-well-site completion or production work"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "TRK-2025-019",
+      "customer_id": "ARU-C-019",
+      "legal_entity": "ARU",
+      "unit": "american-resource-utility",
+      "kind": "heavy industrial drayage / custody",
+      "invoice_id": "TRK-2025-019-INV-202608",
+      "principal_usd": "148920.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_FREIGHT",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-TRK-2025-019-FAC-TAY-TRUCK"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Operator-controlled heavy drayage between registered industrial endpoints; no on-well-site completion or production work"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "TRK-2025-020",
+      "customer_id": "ARU-C-020",
+      "legal_entity": "ARU",
+      "unit": "american-resource-utility",
+      "kind": "heavy industrial drayage / custody",
+      "invoice_id": "TRK-2025-020-INV-202608",
+      "principal_usd": "143310.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_FREIGHT",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-TRK-2025-020-FAC-TAY-TRUCK"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Operator-controlled heavy drayage between registered industrial endpoints; no on-well-site completion or production work"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "TRK-2025-021",
+      "customer_id": "ARU-C-021",
+      "legal_entity": "ARU",
+      "unit": "american-resource-utility",
+      "kind": "heavy industrial drayage / custody",
+      "invoice_id": "TRK-2025-021-INV-202608",
+      "principal_usd": "135660.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_FREIGHT",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-TRK-2025-021-FAC-TAY-TRUCK"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Operator-controlled heavy drayage between registered industrial endpoints; no on-well-site completion or production work"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "TRK-2025-022",
+      "customer_id": "ARU-C-022",
+      "legal_entity": "ARU",
+      "unit": "american-resource-utility",
+      "kind": "heavy industrial drayage / custody",
+      "invoice_id": "TRK-2025-022-INV-202608",
+      "principal_usd": "128520.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_FREIGHT",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-TRK-2025-022-FAC-TAY-TRUCK",
+        "ALLOC-TRK-2025-022-FAC-RAW-TRUCK"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Operator-controlled heavy drayage between registered industrial endpoints; no on-well-site completion or production work"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "WHS-2025-005",
+      "customer_id": "ARU-C-005",
+      "legal_entity": "ARU",
+      "unit": "american-resource-utility",
+      "kind": "industrial parts/equipment reserved storage",
+      "invoice_id": "WHS-2025-005-INV-202608",
+      "principal_usd": "223074.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_CUSTODY_STORAGE",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-WHS-2025-005-FAC-TAY-WAREHOUSE"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Operator-controlled custody of customer-owned parts/equipment; no customer self-storage tenancy or equipment lease"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "WHS-2025-023",
+      "customer_id": "ARU-C-023",
+      "legal_entity": "ARU",
+      "unit": "american-resource-utility",
+      "kind": "industrial parts/equipment reserved storage",
+      "invoice_id": "WHS-2025-023-INV-202608",
+      "principal_usd": "118422.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_CUSTODY_STORAGE",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-WHS-2025-023-FAC-TAY-WAREHOUSE"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Operator-controlled custody of customer-owned parts/equipment; no customer self-storage tenancy or equipment lease"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "WHS-2025-024",
+      "customer_id": "ARU-C-024",
+      "legal_entity": "ARU",
+      "unit": "american-resource-utility",
+      "kind": "industrial parts/equipment reserved storage",
+      "invoice_id": "WHS-2025-024-INV-202608",
+      "principal_usd": "110160.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_CUSTODY_STORAGE",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-WHS-2025-024-FAC-TAY-WAREHOUSE"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Operator-controlled custody of customer-owned parts/equipment; no customer self-storage tenancy or equipment lease"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "WHS-2025-025",
+      "customer_id": "ARU-C-025",
+      "legal_entity": "ARU",
+      "unit": "american-resource-utility",
+      "kind": "industrial parts/equipment reserved storage",
+      "invoice_id": "WHS-2025-025-INV-202608",
+      "principal_usd": "99144.00",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "WY_CUSTODY_STORAGE",
+      "service_jurisdiction": "US-WY",
+      "facility_assignment_ids": [
+        "ALLOC-WHS-2025-025-FAC-RAW-WAREHOUSE"
+      ],
+      "authority_ids": [
+        "WY-202608",
+        "WY-2026-SF79"
+      ],
+      "facts": {
+        "customer_retains_cargo_title": true,
+        "seller_transfers_cargo_title": false,
+        "cargo_repair_or_alteration": false,
+        "well_site_production_service": false,
+        "equipment_possession_transferred_to_customer": false,
+        "passenger_transport": false,
+        "materials_sold": false,
+        "service_scope": "Operator-controlled custody of customer-owned parts/equipment; no customer self-storage tenancy or equipment lease"
+      },
+      "state": "NOT_ENUMERATED_TAXABLE_SERVICE"
+    },
+    {
+      "contract_id": "UCA-2019-04",
+      "customer_id": "UCA-2019-04-BUYER",
+      "legal_entity": "RWH",
+      "unit": "pale-sun",
+      "kind": "base-escalated utility term",
+      "invoice_id": "UCA-2019-04-INV-202608",
+      "principal_usd": "762499.92",
+      "event_period": "2026-08",
+      "sales_tax_usd": "55281.24",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "IL_UTILITY_OWN_USE",
+      "service_jurisdiction": "US-IL",
+      "state": "TAXABLE_SELLER_BORNE_UNREMITTED",
+      "authority_ids": [
+        "IL-OWN-USE",
+        "IL-DESTINATION",
+        "IL-STATE-RATE",
+        "IL-LOCAL-ILLUSTRATION",
+        "IL-SELLER-BURDEN"
+      ],
+      "facts": {
+        "delivery_point": "licensed conversion facility, Illinois",
+        "contract_revenue_basis": "Retained equal-month allocation of accepted annual economics; not an August physical shipment assertion",
+        "buyer_purpose": "Own-use nuclear fuel procurement",
+        "title_transfers_to_buyer_in_illinois_after_assay": true,
+        "onward_resale_supported": false,
+        "buyer_retains_title_through_toll_processing": true,
+        "wyoming_customer_receipt": false,
+        "municipal_receiver_location": "Metropolis, Illinois",
+        "location_origin": "NEWLY_AUTHORED_JURISDICTION_PRECISION_EXISTING_EXTERNAL_RECEIVER",
+        "price_and_burden": "Existing principal and price are unchanged; no tax separately charged, no supported enforceable customer reimbursement asset recorded. RWH bears its uncollected ROT in this successor; no waiver of any later supported recovery is inferred.",
+        "tax_included_representation": false,
+        "inside_special_business_district": false
+      },
+      "state_rate_component_usd": "47656.24",
+      "tax_rate": "0.0725",
+      "liable_entity": "RWH",
+      "tax_expense_usd": "55281.24",
+      "customer_tax_billed_usd": "0.00",
+      "cash_tax_paid_usd": "0.00",
+      "tax_payable_usd": "55281.24",
+      "adjustment_source_id": "SH-RWH-IL-ROT-202608-UCA-2019-04"
+    },
+    {
+      "contract_id": "UCA-2024-11",
+      "customer_id": "UCA-2024-11-BUYER",
+      "legal_entity": "RWH",
+      "unit": "pale-sun",
+      "kind": "market-related utility term collar",
+      "invoice_id": "UCA-2024-11-INV-202608",
+      "principal_usd": "899999.90",
+      "event_period": "2026-08",
+      "sales_tax_usd": "65249.99",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "IL_UTILITY_OWN_USE",
+      "service_jurisdiction": "US-IL",
+      "state": "TAXABLE_SELLER_BORNE_UNREMITTED",
+      "authority_ids": [
+        "IL-OWN-USE",
+        "IL-DESTINATION",
+        "IL-STATE-RATE",
+        "IL-LOCAL-ILLUSTRATION",
+        "IL-SELLER-BURDEN"
+      ],
+      "facts": {
+        "delivery_point": "licensed conversion facility, Illinois",
+        "contract_revenue_basis": "Retained equal-month allocation of accepted annual economics; not an August physical shipment assertion",
+        "buyer_purpose": "Own-use nuclear fuel procurement",
+        "title_transfers_to_buyer_in_illinois_after_assay": true,
+        "onward_resale_supported": false,
+        "buyer_retains_title_through_toll_processing": true,
+        "wyoming_customer_receipt": false,
+        "municipal_receiver_location": "Metropolis, Illinois",
+        "location_origin": "NEWLY_AUTHORED_JURISDICTION_PRECISION_EXISTING_EXTERNAL_RECEIVER",
+        "price_and_burden": "Existing principal and price are unchanged; no tax separately charged, no supported enforceable customer reimbursement asset recorded. RWH bears its uncollected ROT in this successor; no waiver of any later supported recovery is inferred.",
+        "tax_included_representation": false,
+        "inside_special_business_district": false
+      },
+      "state_rate_component_usd": "56249.99",
+      "tax_rate": "0.0725",
+      "liable_entity": "RWH",
+      "tax_expense_usd": "65249.99",
+      "customer_tax_billed_usd": "0.00",
+      "cash_tax_paid_usd": "0.00",
+      "tax_payable_usd": "65249.99",
+      "adjustment_source_id": "SH-RWH-IL-ROT-202608-UCA-2024-11"
+    },
+    {
+      "contract_id": "UCA-2025-03",
+      "customer_id": "UCA-2025-03-BUYER",
+      "legal_entity": "RWH",
+      "unit": "pale-sun",
+      "kind": "fixed-price term",
+      "invoice_id": "UCA-2025-03-INV-202608",
+      "principal_usd": "833333.24",
+      "event_period": "2026-08",
+      "sales_tax_usd": "60416.66",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": null,
+      "classification": "IL_UTILITY_OWN_USE",
+      "service_jurisdiction": "US-IL",
+      "state": "TAXABLE_SELLER_BORNE_UNREMITTED",
+      "authority_ids": [
+        "IL-OWN-USE",
+        "IL-DESTINATION",
+        "IL-STATE-RATE",
+        "IL-LOCAL-ILLUSTRATION",
+        "IL-SELLER-BURDEN"
+      ],
+      "facts": {
+        "delivery_point": "licensed conversion facility, Illinois",
+        "contract_revenue_basis": "Retained equal-month allocation of accepted annual economics; not an August physical shipment assertion",
+        "buyer_purpose": "Own-use nuclear fuel procurement",
+        "title_transfers_to_buyer_in_illinois_after_assay": true,
+        "onward_resale_supported": false,
+        "buyer_retains_title_through_toll_processing": true,
+        "wyoming_customer_receipt": false,
+        "municipal_receiver_location": "Metropolis, Illinois",
+        "location_origin": "NEWLY_AUTHORED_JURISDICTION_PRECISION_EXISTING_EXTERNAL_RECEIVER",
+        "price_and_burden": "Existing principal and price are unchanged; no tax separately charged, no supported enforceable customer reimbursement asset recorded. RWH bears its uncollected ROT in this successor; no waiver of any later supported recovery is inferred.",
+        "tax_included_representation": false,
+        "inside_special_business_district": false
+      },
+      "state_rate_component_usd": "52083.33",
+      "tax_rate": "0.0725",
+      "liable_entity": "RWH",
+      "tax_expense_usd": "60416.66",
+      "customer_tax_billed_usd": "0.00",
+      "cash_tax_paid_usd": "0.00",
+      "tax_payable_usd": "60416.66",
+      "adjustment_source_id": "SH-RWH-IL-ROT-202608-UCA-2025-03"
+    },
+    {
+      "contract_id": "SPOT-2026-01",
+      "customer_id": "SPOT-2026-01-BUYER",
+      "legal_entity": "RWH",
+      "unit": "pale-sun",
+      "kind": "discretionary placement",
+      "invoice_id": "SPOT-2026-01-INV-202608",
+      "principal_usd": "543749.94",
+      "event_period": "2026-08",
+      "sales_tax_usd": "0.00",
+      "authored_on": "2026-09-15",
+      "available_at": "2026-09-15T00:00:00Z",
+      "certificate_id": "SH-SYN-TAX-CERT-202608-05",
+      "classification": "IL_YELLOWCAKE_RESALE",
+      "service_jurisdiction": "US-IL",
+      "state": "EXEMPT_DECLARED_RESALE",
+      "authority_ids": [
+        "WY-202608",
+        "IL-RESALE",
+        "IL-CERT"
+      ],
+      "facts": {
+        "delivery_point": "licensed conversion facility, Illinois",
+        "contract_revenue_basis": "Retained equal-month allocation of accepted 2026 annual contract economics; not evidence of an August physical shipment",
+        "product": "Natural U3O8 intermediate, not fabricated nuclear fuel",
+        "purchaser_out_of_state": true,
+        "purchaser_resells_only_to_out_of_state_buyers": true,
+        "onward_title_transfer_before_consumption": true,
+        "buyer_consumes_this_intermediate_without_resale": false,
+        "onward_transaction": "Purchaser procurement schedule transfers title to uranium intermediate to an external enrichment/fuel supplier outside Illinois before any final fuel consumption; trader contract instead resells intermediate to an outside-Illinois purchaser",
+        "wyoming_customer_receipt": false
+      }
+    }
+  ],
+  "certificates": [
+    {
+      "certificate_id": "SH-SYN-TAX-CERT-202608-01",
+      "contract_id": "SH-CRD-202608-STREAM17",
+      "invoice_id": "SH-CRD-202608-STREAM17-INV-202608",
+      "purchaser_id": "SH-CURRENT-CRD-BUYER-001",
+      "purchaser_name": "Synthetic current counterparty SH-CURRENT-CRD-BUYER-001",
+      "seller_legal_entity": "SHI",
+      "seller_name": "Sable Harbor, LLC",
+      "seller_address": "c/o 100 Synthetic Bedford Records Lane, Fairmont, WV 26554, USA",
+      "signed_on": "2026-08-20",
+      "received_on": "2026-08-21",
+      "signature_state": "NEWLY_AUTHORED_SYNTHETIC_PURCHASER_SIGNATURE",
+      "signer_id": "SYN-TAX-BUYER-REP-01",
+      "signer_role": "Authorized procurement officer",
+      "period": "2026-08",
+      "available_at": "2026-09-15T00:00:00Z",
+      "reviewed_by": "SH-EMP-ESS-0002",
+      "reviewed_on": "2026-08-24",
+      "scope": "Single August contract allocation only",
+      "canceled": false,
+      "purchaser_address": "101 Synthetic Refinery Records Lane, Fairmont, WV 26554 (fictional address)",
+      "item_description": "1500kg mixed rare-earth concentrate incorporated into refined oxides for onward sale",
+      "reason": "RESALE",
+      "business_type": "06_MANUFACTURING",
+      "synthetic_tax_identity": "SH-SYN-WV-RESALE-CRD-BUYER-001",
+      "real_government_identifier": false,
+      "address_state": "NEWLY_AUTHORED_FICTIONAL_CORRESPONDENCE_ONLY_NOT_HQ_OR_SITE_GEOGRAPHY"
+    },
+    {
+      "certificate_id": "SH-SYN-TAX-CERT-202608-05",
+      "contract_id": "SPOT-2026-01",
+      "invoice_id": "SPOT-2026-01-INV-202608",
+      "purchaser_id": "SPOT-2026-01-BUYER",
+      "purchaser_name": "Continental Nuclear Trading LLC",
+      "seller_legal_entity": "RWH",
+      "seller_name": "Red Wash Mining, LLC",
+      "seller_address": "c/o 100 Synthetic Mine Records Road, Rawlins, WY 82301, USA",
+      "signed_on": "2026-08-20",
+      "received_on": "2026-08-21",
+      "signature_state": "NEWLY_AUTHORED_SYNTHETIC_PURCHASER_SIGNATURE",
+      "signer_id": "SYN-TAX-BUYER-REP-05",
+      "signer_role": "Authorized procurement officer",
+      "period": "2026-08",
+      "available_at": "2026-09-15T00:00:00Z",
+      "reviewed_by": "SH-EMP-ESS-0002",
+      "reviewed_on": "2026-08-24",
+      "scope": "Single August contract allocation only",
+      "canceled": false,
+      "purchaser_address": "101 Synthetic Procurement Records Lane, Denver, CO 80202, USA",
+      "item_description": "Contract uranium intermediate for subsequent title transfer in downstream supply chain before ultimate consumption",
+      "reason": "RESALE",
+      "out_of_state_purchaser_statement": "Purchaser is outside Illinois and will sell only to purchasers located outside Illinois.",
+      "illinois_registration_number": null,
+      "real_government_identifier": false,
+      "address_state": "NEWLY_AUTHORED_FICTIONAL_CORRESPONDENCE_ONLY_NOT_HQ_OR_SITE_GEOGRAPHY"
+    }
+  ],
+  "accounting": {
+    "additional_revenue_usd": "0.00",
+    "additional_cash_usd": "0.00",
+    "additional_sales_tax_usd": "180947.89",
+    "posting_mode": "MEASURED_ADJUSTMENT_INTEGRATION_REQUIRED",
+    "limits": "No use-tax exemption for company purchases; no mineral/severance/property/income-tax relief. RWH production mineral taxes remain in accepted finance. A future changed factual screen must remeasure tax and finance overlay; do not silently retain zero.",
+    "additional_tax_expense_usd": "180947.89",
+    "additional_tax_payable_usd": "180947.89",
+    "additional_customer_ar_usd": "0.00",
+    "legal_book": "RWH",
+    "effective_date": "2026-08-31",
+    "scenario": "completed-period-reconstruction",
+    "finance_carryforward": "Carry the selected 2026 legal books into their successors. Do not duplicate this adjustment, the 2027 FF-003 seller tax or original mineral taxes.",
+    "settlement_state": "UNREMITTED_NO_CASH_ENTRY",
+    "filing_state": "PREPARATION_REQUIRED_NOT_SUBMITTED",
+    "rounding": "Each invoice principal multiplied by0.0725; roundhalfup cents; sumthree independently rounded invoices. No tax-inclusive divisor because existing invoice has no tax-included statement.",
+    "period_boundary": "August is the specifically measured current population. Reperform other months from native sources under period_contract_2026; do not multiply August by twelve."
+  },
+  "september_exclusion": {
+    "shipment_id": "RW-SHIP-202609-01",
+    "lot_id": "RW-LOT-202608-01",
+    "title_owner": "RWH",
+    "disposition": "Separate 200lb toll custody September receipt; no sale or additional revenue; cannot substantiate these annual contract sales."
+  },
+  "withdrawal_review": {
+    "reviewer": "INTEGRATION_OWNER_INDEPENDENT_REVIEW",
+    "date": "2026-09-15",
+    "finding": "No accepted source supports onward resale by three utility purchasers. The newly authored onward-title clause and certificates in v1.0 were unsupported commercial-substance completion and are withdrawn. No corporate affiliate was introduced.",
+    "sources": [
+      "red_wash/source/core_operating_data.json contract_book_2026",
+      "red_wash/TRANSACTION_OPERATING_RECORD.md section10",
+      "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md section13"
+    ],
+    "source_fact": "Utility/cooperative, utility procurement pool, nuclear utility; title transfers to buyer at Illinois converter after receipt and final assay. Downstream swaps/resale not established.",
+    "selected_completion": "Own-use fuel procurement, with buyer retaining title through downstream toll processing; no assumed resale.",
+    "affected_claim": "Three utility tax obligations now measured; finance must post designated adjustment once and preserve payable until supported settlement.",
+    "state_rate_component_usd": "155989.56",
+    "metropolis_illustration_usd": "180947.89",
+    "locality_state": "Newly authored September 15 precision places the existing external conversion delivery point in Metropolis, Illinois, outside a special business district. No operator, government license, SH site or survey is created."
+  },
+  "rejected_certificates": [
+    {
+      "certificate_id": "SH-SYN-TAX-CERT-202608-02",
+      "contract_id": "UCA-2019-04",
+      "invoice_id": "UCA-2019-04-INV-202608",
+      "purchaser_id": "UCA-2019-04-BUYER",
+      "purchaser_name": "Prairie States Electric Cooperative",
+      "seller_legal_entity": "RWH",
+      "seller_name": "Red Wash Mining, LLC",
+      "seller_address": "c/o 100 Synthetic Mine Records Road, Rawlins, WY 82301, USA",
+      "signed_on": "2026-08-20",
+      "received_on": "2026-08-21",
+      "signature_state": "NEWLY_AUTHORED_SYNTHETIC_PURCHASER_SIGNATURE",
+      "signer_id": "SYN-TAX-BUYER-REP-02",
+      "signer_role": "Authorized procurement officer",
+      "period": "2026-08",
+      "available_at": "2026-09-15T00:00:00Z",
+      "reviewed_by": "SH-EMP-ESS-0002",
+      "reviewed_on": "2026-08-24",
+      "scope": "Single August contract allocation only",
+      "canceled": false,
+      "purchaser_address": "101 Synthetic Procurement Records Lane, Kansas City, MO 64101, USA",
+      "item_description": "Contract uranium intermediate for subsequent title transfer in downstream supply chain before ultimate consumption",
+      "reason": "RESALE",
+      "out_of_state_purchaser_statement": "Purchaser is outside Illinois and will sell only to purchasers located outside Illinois.",
+      "illinois_registration_number": null,
+      "real_government_identifier": false,
+      "address_state": "NEWLY_AUTHORED_FICTIONAL_CORRESPONDENCE_ONLY_NOT_HQ_OR_SITE_GEOGRAPHY",
+      "disposition": "REJECTED_UNSUPPORTED_AUTHORING_NOT_ACCEPTED_EXEMPTION"
+    },
+    {
+      "certificate_id": "SH-SYN-TAX-CERT-202608-03",
+      "contract_id": "UCA-2024-11",
+      "invoice_id": "UCA-2024-11-INV-202608",
+      "purchaser_id": "UCA-2024-11-BUYER",
+      "purchaser_name": "Great Basin Nuclear Supply Pool",
+      "seller_legal_entity": "RWH",
+      "seller_name": "Red Wash Mining, LLC",
+      "seller_address": "c/o 100 Synthetic Mine Records Road, Rawlins, WY 82301, USA",
+      "signed_on": "2026-08-20",
+      "received_on": "2026-08-21",
+      "signature_state": "NEWLY_AUTHORED_SYNTHETIC_PURCHASER_SIGNATURE",
+      "signer_id": "SYN-TAX-BUYER-REP-03",
+      "signer_role": "Authorized procurement officer",
+      "period": "2026-08",
+      "available_at": "2026-09-15T00:00:00Z",
+      "reviewed_by": "SH-EMP-ESS-0002",
+      "reviewed_on": "2026-08-24",
+      "scope": "Single August contract allocation only",
+      "canceled": false,
+      "purchaser_address": "101 Synthetic Procurement Records Lane, Reno, NV 89501, USA",
+      "item_description": "Contract uranium intermediate for subsequent title transfer in downstream supply chain before ultimate consumption",
+      "reason": "RESALE",
+      "out_of_state_purchaser_statement": "Purchaser is outside Illinois and will sell only to purchasers located outside Illinois.",
+      "illinois_registration_number": null,
+      "real_government_identifier": false,
+      "address_state": "NEWLY_AUTHORED_FICTIONAL_CORRESPONDENCE_ONLY_NOT_HQ_OR_SITE_GEOGRAPHY",
+      "disposition": "REJECTED_UNSUPPORTED_AUTHORING_NOT_ACCEPTED_EXEMPTION"
+    },
+    {
+      "certificate_id": "SH-SYN-TAX-CERT-202608-04",
+      "contract_id": "UCA-2025-03",
+      "invoice_id": "UCA-2025-03-INV-202608",
+      "purchaser_id": "UCA-2025-03-BUYER",
+      "purchaser_name": "Heartland Atomic Power LLC",
+      "seller_legal_entity": "RWH",
+      "seller_name": "Red Wash Mining, LLC",
+      "seller_address": "c/o 100 Synthetic Mine Records Road, Rawlins, WY 82301, USA",
+      "signed_on": "2026-08-20",
+      "received_on": "2026-08-21",
+      "signature_state": "NEWLY_AUTHORED_SYNTHETIC_PURCHASER_SIGNATURE",
+      "signer_id": "SYN-TAX-BUYER-REP-04",
+      "signer_role": "Authorized procurement officer",
+      "period": "2026-08",
+      "available_at": "2026-09-15T00:00:00Z",
+      "reviewed_by": "SH-EMP-ESS-0002",
+      "reviewed_on": "2026-08-24",
+      "scope": "Single August contract allocation only",
+      "canceled": false,
+      "purchaser_address": "101 Synthetic Procurement Records Lane, Omaha, NE 68102, USA",
+      "item_description": "Contract uranium intermediate for subsequent title transfer in downstream supply chain before ultimate consumption",
+      "reason": "RESALE",
+      "out_of_state_purchaser_statement": "Purchaser is outside Illinois and will sell only to purchasers located outside Illinois.",
+      "illinois_registration_number": null,
+      "real_government_identifier": false,
+      "address_state": "NEWLY_AUTHORED_FICTIONAL_CORRESPONDENCE_ONLY_NOT_HQ_OR_SITE_GEOGRAPHY",
+      "disposition": "REJECTED_UNSUPPORTED_AUTHORING_NOT_ACCEPTED_EXEMPTION"
+    }
+  ],
+  "period_contract_2026": {
+    "id": "SH-RWH-IL-ROT-PERIODS-2026",
+    "origin": "NEWLY_AUTHORED_SUPPORTED_2026_TERMS_AND_RECEIVER_PRECISION",
+    "legal_book": "RWH",
+    "contracts": [
+      "UCA-2019-04",
+      "UCA-2024-11",
+      "UCA-2025-03"
+    ],
+    "trader_exclusion": "SPOT-2026-01 is a trader sale. Its August certificate is not a yearlong exemption; each additional period needs applicable resale evidence.",
+    "receiver_jurisdiction": "Metropolis, Illinois, outside special business districts",
+    "own_use_terms": "The three utility contracts purchase for own use through downstream toll processing. No swap or affiliate is assumed. Existing prices remain; RWH bears uncollected ROT unless a customer reimbursement right is separately supported.",
+    "population_contract": "Join each native 2026 invoice or revenue source to contract, legal issuer, sale date, scenario and principal. Reperform monthly amounts. Retained annual equal-month allocations are financial reconstruction, not physical shipment evidence. Opening receivable invoices are not new revenue and must not create a second tax accrual.",
+    "periods": [
+      {
+        "period": "2026-01",
+        "from": "2026-01-01",
+        "through": "2026-01-31",
+        "rate": "0.0625",
+        "record_role": "COMPLETED_PERIOD_SYNTHETIC_RECONSTRUCTION",
+        "authority_id": "IL-LOCAL-ILLUSTRATION"
+      },
+      {
+        "period": "2026-02",
+        "from": "2026-02-01",
+        "through": "2026-02-28",
+        "rate": "0.0625",
+        "record_role": "COMPLETED_PERIOD_SYNTHETIC_RECONSTRUCTION",
+        "authority_id": "IL-LOCAL-ILLUSTRATION"
+      },
+      {
+        "period": "2026-03",
+        "from": "2026-03-01",
+        "through": "2026-03-31",
+        "rate": "0.0625",
+        "record_role": "COMPLETED_PERIOD_SYNTHETIC_RECONSTRUCTION",
+        "authority_id": "IL-LOCAL-ILLUSTRATION"
+      },
+      {
+        "period": "2026-04",
+        "from": "2026-04-01",
+        "through": "2026-04-30",
+        "rate": "0.0625",
+        "record_role": "COMPLETED_PERIOD_SYNTHETIC_RECONSTRUCTION",
+        "authority_id": "IL-LOCAL-ILLUSTRATION"
+      },
+      {
+        "period": "2026-05",
+        "from": "2026-05-01",
+        "through": "2026-05-31",
+        "rate": "0.0625",
+        "record_role": "COMPLETED_PERIOD_SYNTHETIC_RECONSTRUCTION",
+        "authority_id": "IL-LOCAL-ILLUSTRATION"
+      },
+      {
+        "period": "2026-06",
+        "from": "2026-06-01",
+        "through": "2026-06-30",
+        "rate": "0.0625",
+        "record_role": "COMPLETED_PERIOD_SYNTHETIC_RECONSTRUCTION",
+        "authority_id": "IL-LOCAL-ILLUSTRATION"
+      },
+      {
+        "period": "2026-07",
+        "from": "2026-07-01",
+        "through": "2026-07-31",
+        "rate": "0.0725",
+        "record_role": "COMPLETED_PERIOD_SYNTHETIC_RECONSTRUCTION",
+        "authority_id": "IL-LOCAL-ILLUSTRATION"
+      },
+      {
+        "period": "2026-08",
+        "from": "2026-08-01",
+        "through": "2026-08-31",
+        "rate": "0.0725",
+        "record_role": "COMPLETED_PERIOD_SYNTHETIC_RECONSTRUCTION",
+        "authority_id": "IL-LOCAL-ILLUSTRATION"
+      },
+      {
+        "period": "2026-09",
+        "from": "2026-09-01",
+        "through": "2026-09-30",
+        "rate": "0.0725",
+        "record_role": "CONDITIONAL_FORECAST_NOT_COMPLETED",
+        "authority_id": "IL-LOCAL-ILLUSTRATION"
+      },
+      {
+        "period": "2026-10",
+        "from": "2026-10-01",
+        "through": "2026-10-31",
+        "rate": "0.0725",
+        "record_role": "CONDITIONAL_FORECAST_NOT_COMPLETED",
+        "authority_id": "IL-LOCAL-ILLUSTRATION"
+      },
+      {
+        "period": "2026-11",
+        "from": "2026-11-01",
+        "through": "2026-11-30",
+        "rate": "0.0725",
+        "record_role": "CONDITIONAL_FORECAST_NOT_COMPLETED",
+        "authority_id": "IL-LOCAL-ILLUSTRATION"
+      },
+      {
+        "period": "2026-12",
+        "from": "2026-12-01",
+        "through": "2026-12-31",
+        "rate": "0.0725",
+        "record_role": "CONDITIONAL_FORECAST_NOT_COMPLETED",
+        "authority_id": "IL-LOCAL-ILLUSTRATION"
+      }
+    ],
+    "book_measurement": "Accrue seller expense and tax obligation against each native sale principal at its period rate; round each invoice half-up to cents. The three August adjustment IDs belong in the annual population exactly once.",
+    "statutory_reporting": "Use gross-receipts reporting under 86 Ill. Code 130.401 absent a written method-change notice. No notice is claimed. Separate tax on collected and uncollected principal. Collection changes the reporting classification; it does not create another tax expense.",
+    "payment_state": "Invoice, customer receipt and workpaper do not prove remittance. Preserve approval, filing and settlement separately. Any existing tax payment must have its own identified source.",
+    "rate_on_later_receipt": "Preserve the underlying sale-date rate on later collections, including pre-July invoices collected after July. Distinguish invoice dates from physical sale dates where only financial calibration exists.",
+    "return_rounding": "ST-1 requires whole-dollar reporting. Retain a separate bridge from journal cents to return dollars.",
+    "calendar_owner": "Finance must assess monthly returns and accelerated payments from the supported lookback population. This workpaper does not declare every payment due only on the twentieth."
+  }
+}

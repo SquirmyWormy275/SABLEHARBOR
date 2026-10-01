@@ -1,0 +1,27 @@
+{
+  "portal_commit": "5344bf76413ffe2cd378b957dbb5f7d56d04ea19",
+  "status": "PASS",
+  "runtime_tests": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "97",
+    "time": "194.604",
+    "timestamp": "2026-09-22T09:36:43.158376-07:00",
+    "hostname": "strathex-P1"
+  },
+  "http_tests": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "1",
+    "time": "1.096",
+    "timestamp": "2026-09-22T09:37:16.101838-07:00",
+    "hostname": "strathex-P1"
+  },
+  "graph_tests_passed": 6,
+  "claim": "Isolated software fixtures; not full enterprise IT effectiveness or private workroom validation",
+  "tracked_portal_changes": false
+}

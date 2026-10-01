@@ -6,8 +6,6 @@
 
 American Resource Utility provides railway, terminal, trucking and warehouse services for industrial customers. Blood, Sweat & Tears Railway Company is its separately incorporated railway subsidiary. Taylor, Wamsutter and Rawlins records describe different parts of the operating network.
 
-**Reviewed:** September 12, 2026 · Fictional enterprise; source records control.
-
 ## Reading guide
 
 Follow freight through railway, truck, terminal and warehouse services, then reconcile the service volumes and costs. Use the legal ownership chain when studying consolidation and the operating network when studying capacity.
@@ -22,9 +20,9 @@ The legal chain is Sable Harbor → Sable Harbor Industrial Holdings → ARU →
 
 [![American Resource Utility / BS&T existing organization chart](../../../docs/organization/assets/current/aru-services.png)](../../../docs/organization/charts/aru-services.md)
 
-[Read the chart’s text roster, relationship key and source qualifications](../../../docs/organization/charts/aru-services.md). Grouped functions are not automatically reporting lines, separate companies or additional employees.
+[Chart and text roster](../../../docs/organization/charts/aru-services.md).
 
-[Named people and recorded roles](../../../docs/organization/charts/people-aru-leadership.md) — the current chart preserves unknown joining years rather than inventing them.
+[Named people and recorded roles](../../../docs/organization/charts/people-aru-leadership.md).
 
 ## Operating, legal and control records
 
@@ -67,5 +65,3 @@ Early railway alignments and detailed engineering remain incomplete. Service ava
 - [Procurement and vendor support](../departments/procurement.md)
 - [Safety and environmental governance](../departments/safety-environment.md)
 - [Finance](../departments/finance.md)
-
-Related reading describes useful connections, not additional reporting lines.

@@ -7,6 +7,7 @@ import json
 import os
 from pathlib import Path
 
+from .company_rights_producer import RightsUnavailable
 from .store import DomainError, Store
 
 
@@ -31,6 +32,12 @@ def main(argv=None):
     serve.add_argument("--company-bindings", type=Path)
     serve.add_argument("--company-registry", type=Path)
     serve.add_argument("--company-profile")
+    serve.add_argument(
+        "--company-rights-config",
+        type=Path,
+        help="Private, hash-pinned protected company rights configuration",
+    )
+    serve.add_argument("--company-rights-config-sha256")
     serve.add_argument("--instructor-key-root", type=Path)
     serve.add_argument("--instructor-bindings", type=Path)
     serve.add_argument(
@@ -49,6 +56,13 @@ def main(argv=None):
         action="store_true",
         help="Explicit local-only development HTTP with non-secure cookie",
     )
+    stage_company = commands.add_parser(
+        "stage-company-rights",
+        help="Stage a reviewed synthetic company case into fresh private rights roots",
+    )
+    stage_company.add_argument("--private-root", type=Path, required=True)
+    stage_company.add_argument("--company-rights-config", type=Path, required=True)
+    stage_company.add_argument("--company-rights-config-sha256", required=True)
     backup_command = commands.add_parser("backup", help="Create a new private state backup")
     backup_command.add_argument("--private-root", type=Path, required=True)
     backup_command.add_argument("--destination", type=Path, required=True)
@@ -66,6 +80,19 @@ def main(argv=None):
     grant.add_argument("--permission", choices=["learn", "review", "instruct"], required=True)
     args = parser.parse_args(argv)
     try:
+        if args.command == "stage-company-rights":
+            from .company_rights_launch import stage_reviewed_company_authority
+
+            print(
+                json.dumps(
+                    stage_reviewed_company_authority(
+                        args.company_rights_config,
+                        args.company_rights_config_sha256,
+                        args.private_root,
+                    )
+                )
+            )
+            return
         if args.command == "backup":
             from .recovery import backup
 
@@ -133,6 +160,16 @@ def main(argv=None):
             raise DomainError("TLS key must be a private regular file")
         if not (args.web_root / "index.html").is_file():
             raise DomainError("Build the web workroom before serving")
+        if bool(args.company_rights_config) != bool(args.company_rights_config_sha256):
+            raise DomainError("Protected company config path and exact SHA-256 required together")
+        company_rights_factory = None
+        company_native_rights_factory = None
+        if args.company_rights_config:
+            from .company_rights_launch import reviewed_company_factories
+
+            company_rights_factory, company_native_rights_factory = reviewed_company_factories(
+                args.company_rights_config, args.company_rights_config_sha256
+            )
         import uvicorn
 
         from .service import create_app
@@ -155,6 +192,8 @@ def main(argv=None):
             workspace_contexts=args.workspace_contexts,
             corpus_root=args.corpus_root,
             program_pack=args.program_pack,
+            company_rights_factory=company_rights_factory,
+            company_native_rights_factory=company_native_rights_factory,
         )
         uvicorn.run(
             app,
@@ -165,7 +204,7 @@ def main(argv=None):
             ssl_certfile=str(args.tls_cert) if args.tls_cert else None,
             ssl_keyfile=str(args.tls_key) if args.tls_key else None,
         )
-    except (DomainError, OSError) as exc:
+    except (DomainError, RightsUnavailable, OSError) as exc:
         parser.error(str(exc))
 
 

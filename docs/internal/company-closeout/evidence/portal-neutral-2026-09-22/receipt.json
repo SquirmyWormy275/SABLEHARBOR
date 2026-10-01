@@ -1,0 +1,594 @@
+{
+  "source_commit": "8f9b8eabed3af1d2c050afc9bfe8935fd41f48ae",
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "pytest",
+    "-v",
+    "-o",
+    "addopts=",
+    "--junitxml=/home/kingoftheeast/Projects/SABLEHARBOR-closeout-operations/docs/internal/company-closeout/evidence/portal-neutral-2026-09-22/pytest.xml",
+    "tests/audit_suite/test_acceptance_commands.py",
+    "tests/audit_suite/test_company_source_census_review.py",
+    "tests/audit_suite/test_company_service.py",
+    "tests/audit_suite/test_recovery.py",
+    "tests/audit_suite/test_company_operator.py",
+    "tests/audit_suite/test_personal_views_recovery.py"
+  ],
+  "cwd": "/tmp/sh-portal-neutral-review",
+  "started_at": "2026-09-22T06:48:39.558604+00:00",
+  "completed_at": "2026-09-22T06:49:00.511775+00:00",
+  "exit_code": 0,
+  "dependency_command": [
+    "uv",
+    "sync",
+    "--extra",
+    "dev",
+    "--extra",
+    "audit-suite",
+    "--frozen"
+  ],
+  "source_hashes": {
+    "enterprise/audit_suite/__init__.py": "6936955fb87b4bb29359d024ab7d79fdebf36a901cf77369370cf2e36a65f13e",
+    "enterprise/audit_suite/__main__.py": "09914aaa7c0846bb78c0880d6bfdc02fe9db507757e33bfe330b6d7dca3f2c32",
+    "enterprise/audit_suite/access_remediation_reconciliation.py": "2742fb4863dbeec7dc641a9348a7c89d4a6618bc7627b794bb697ef290545288",
+    "enterprise/audit_suite/artifacts.py": "619282d1dfa43d4c32e2401b3e3f080660903ec43b4b9910020af6fd188c6a70",
+    "enterprise/audit_suite/audit_readiness.py": "1c25ebe1c7c3a00d793a45479f98210404ddb775045d1853b248c244bafafa12",
+    "enterprise/audit_suite/background_jobs.py": "d62ae00453361b4d592ee7c1e7c3deb81f480444bd640263f7df5d3c3f978422",
+    "enterprise/audit_suite/behavior_composition.py": "7178ba0b7285a42457ca5f835b07a39ce1537751658c02085857351bfe1daab8",
+    "enterprise/audit_suite/bound_instructor.py": "aa586bd8fdce297f9716ce03263d9ac0979dba86a29718215043d6961c3dc589",
+    "enterprise/audit_suite/causal_composition.py": "28ecd1ec77f6d81f764cfb7631751117295bbf31d4173a1eed243a4a39a62bd8",
+    "enterprise/audit_suite/change_volume.py": "2b2e964e0bf559d3867ff5a2c946f6087f58cc99016f237a9072e84bd52c1b03",
+    "enterprise/audit_suite/clean.py": "b2f09fa02671837cf8bce9cbb1b01b284a323bc8f158d577639e3232bc72f689",
+    "enterprise/audit_suite/companion_recovery.py": "6362db8641e6bb1b9208b0203d6fc2727dd7afe010a274c83f8cef11f04998e2",
+    "enterprise/audit_suite/company_access_remediation_activity.py": "2ba4dca8a1b530de262548a4cd0a7598881937c492057da795c3690691c7c495",
+    "enterprise/audit_suite/company_access_review_continuation.py": "aef2aa35c17f13ac857da3ebd2c38a4aa3a67cd4caff39ff6192b59ca1b2037f",
+    "enterprise/audit_suite/company_activity.py": "a99e7d59530ac67656f6fdeebf3b068456b136ace5eb4dd46b95e831ca40e699",
+    "enterprise/audit_suite/company_activity_linked_plan.py": "444ee3bfebb265a0ddbb390a94655e56e64659c4fff949a510114bf4bef3cdc9",
+    "enterprise/audit_suite/company_activity_period.py": "1a3049f1a0e1c18783fe3d04cdedb900deb28428f0e1bec13c8063b79aaf8f34",
+    "enterprise/audit_suite/company_activity_plan.py": "cb3fa1a56f6d974e27b3f3c4e8cd25d7d36429ca0904d246fb16057622ff82b5",
+    "enterprise/audit_suite/company_activity_plan_sources.py": "c36439bd7a960af282d2c74edfb48b1f914c9bdc6bfa54ee2b9933f81a341433",
+    "enterprise/audit_suite/company_activity_producer_plan.py": "c707aa20a332d233eab61081d706fe433c96662a1c00fe6d258e5e55959a21da",
+    "enterprise/audit_suite/company_activity_source_capture.py": "3c08029f649140f0d70085c28284c4087b09698709de613d63c362e61e90314a",
+    "enterprise/audit_suite/company_backup_activity.py": "93226620c0658b4c6e0f9044ec3012e7c78004975c67a7cb0c4a2175030e30aa",
+    "enterprise/audit_suite/company_backup_monitor.py": "6141d7b2b86c871ae00a7143bf684edf01966db4c29f0a81337d865895045977",
+    "enterprise/audit_suite/company_backup_runtime.py": "9d5cf591728b7f6cf1a62df35120cd08c064dab01966b624cc05314bbe7209d2",
+    "enterprise/audit_suite/company_change_activity.py": "e341fa63aa8f499beaf0fe736200fc3f3e16588f9e0113d91c270d7027340795",
+    "enterprise/audit_suite/company_collection.py": "7741eff04e799b4c45d6f016695c245b324db7bc1c76a5068443651069f23b7d",
+    "enterprise/audit_suite/company_configuration_activity.py": "6afc6c3c8bc02673744830e0a015419cacd1501e1c7c69bee013d418088829c8",
+    "enterprise/audit_suite/company_configuration_export.py": "948e1d1caef9a953b5786d2de74ba45825f726fe2883e45250aeadf3f5aba548",
+    "enterprise/audit_suite/company_configuration_runtime.py": "319befdc95459c76b9ee3ee3068803f25c4f3eefa4617d333863e2e5012618e6",
+    "enterprise/audit_suite/company_federation.py": "acc22734204f4738640206c1763a912be6d54e0b701022e5b54b1f167408a490",
+    "enterprise/audit_suite/company_impact.py": "46846c5cbb3048b18176f4c4fb7e5112e103f1014903db97429c77a9a50f848a",
+    "enterprise/audit_suite/company_incident_activity.py": "b7608712fa1ee6eb17176302237140bf5451f8aa058ef0d1bab5895d2a0e6f5a",
+    "enterprise/audit_suite/company_lifecycle_activity.py": "23fc1d4205f410117193deeb70e90953331921a5dc5d502aff92158a592ec10d",
+    "enterprise/audit_suite/company_migration.py": "8ba6864c4d044b21a11080a2b62c1763b774ae0a27296d515ada97ab0e6ab1dc",
+    "enterprise/audit_suite/company_nonhuman_identity_activity.py": "24b8587dcc75eab99f857008e2ed287bf60bf0eaa12d1c160a1e1cedc7651e83",
+    "enterprise/audit_suite/company_operating_period.py": "59fd6b02702cdbc5b841e27f4baa13e27bcdd0709c0fbd9ddb49b577a19d27ab",
+    "enterprise/audit_suite/company_persona.py": "796f28718b4355eaea13fa49e1402cce760d888dff10b30cd8f8131e62d6bf9d",
+    "enterprise/audit_suite/company_population.py": "6edd525db815d5ef3fc1fceff51a24ec453bded68232d10c70daf81a1551c309",
+    "enterprise/audit_suite/company_population_collection.py": "506fdd543471b1274c46390253a6ac1688c791776d20f98fe8328fdf429fd3a6",
+    "enterprise/audit_suite/company_provider_intake_activity.py": "c4e3fc86e240d52f60aa70014987805e474e995b083c0ddde90aac28443a04b7",
+    "enterprise/audit_suite/company_recovery.py": "e724ad00426a3335be6c24e2154c998451d40f9569279e479415c0ba4b7bded0",
+    "enterprise/audit_suite/company_repository_documents.py": "d771fc75777c24abdcbf5c1b317a2b6b68fdafb07a2cb64ba75b5460648f87bf",
+    "enterprise/audit_suite/company_risk_assessment_activity.py": "21a4dda54508ae7f014e74bb394f3e7c3e71404155c45215847f4722333abe42",
+    "enterprise/audit_suite/company_runtime_activation.py": "19d9f073ba4219572f6b25fb00fdbbc8f78937683b997ada037d9f85a3443e98",
+    "enterprise/audit_suite/company_security_event_runtime.py": "fcfed606f7c4bd8fdc5e96ba6ff208aaf8b6cd6914a87626134f337c2a59640e",
+    "enterprise/audit_suite/company_security_logging_activity.py": "eedb259b9cf7634c64d4492878c5c8c2def2c0de5ffd1869ca629c42922fdb0c",
+    "enterprise/audit_suite/company_source_census.py": "26f5cf3a515aad7ebc532093006be6c5f3bb9d9245d151eef349a7dabb3961ea",
+    "enterprise/audit_suite/company_source_census_collection.py": "47b7f1964e940e5c3d14f1b296817311ea9761d07a1fa676b9c97976d3f2a8d4",
+    "enterprise/audit_suite/company_store.py": "38a1aebcebde53051e306465dc2d807a3cd0e60fb8cc974da2235fa268c88292",
+    "enterprise/audit_suite/company_training_activity.py": "24aa4819afe74a5311a2f2aa6c896abd76e60e4d763fad3208e5a231c5e02027",
+    "enterprise/audit_suite/composition.py": "04b9911b795450f3a228dd9ad4cbfcaab00f42448ab3fff2ec1c18d367bd3b8d",
+    "enterprise/audit_suite/configuration.py": "408e5d8348cc8ff0b59405bffdbe3f646a17456ae151382a680f5fbce5fadf74",
+    "enterprise/audit_suite/corpus.py": "6ad13d5c68143ebe9bd93b6f512ff447687c7da7b5dc57050753bcc01408d15f",
+    "enterprise/audit_suite/custom.py": "90d50b355ea3212a632bcb9e790ea6a494a53796e2bc97e813c87b647f18fabf",
+    "enterprise/audit_suite/deterministic_review.py": "bb35e03845da6afda69406b71f9229782f371ddc4002777ab02281325b68a431",
+    "enterprise/audit_suite/draft_recovery.py": "01d49d99712c4dce4ebe025a3516252368d516726115dda104c3c5244b97c851",
+    "enterprise/audit_suite/draft_store.py": "18fc5577d1c36f81e6541bfaf434306348cd017bfd0ccd1d8dff80ed0924547d",
+    "enterprise/audit_suite/encounters.py": "bab23181d1747dd45d819ca24f8851d110d7a44639f0726952ca2547bf8842a2",
+    "enterprise/audit_suite/engine.py": "825f2a5c85e583d4a4ef07b4e76f7b4f71a50db279d74339e47ff6e5282a20bb",
+    "enterprise/audit_suite/evidence_transform.py": "6b49c8c88d1b929cfc3e810349e50112d166a5cb914dd239af4636f6ad766f42",
+    "enterprise/audit_suite/expectation_links.py": "ff9d4ba1345e0c5bbe8ec47c3588af940fb13c4c11e82c89a48877c54702611b",
+    "enterprise/audit_suite/explanation_binding.py": "41b617d5de6d032a62d04ca818e8d4f5d167e2d11d499b0510d8a40d0f692152",
+    "enterprise/audit_suite/generation.py": "ddb96e1d4c040d37d750b849e41eaad1ba852620f7a044e8c89c76f55443c561",
+    "enterprise/audit_suite/history_inspection.py": "8822f10ffb38798604d5a66a66afb02e03e98fb537ba76e7e96b6f1d401dab4d",
+    "enterprise/audit_suite/iam_review_reconciliation.py": "38a6bf5d3e7694b645f45869bbac46b3d7d89a41b6e1e862e6a84e6cf1a72a11",
+    "enterprise/audit_suite/inference.py": "47a93b9a3c2cfa3e55b8e1295e9a9ae9c3bce114a4f8cfcf8d190897a91bae1e",
+    "enterprise/audit_suite/instructor_access.py": "ec2c24374308330add01a9c1ac2bcb462a21511770f9ff9ccdec843736b058fa",
+    "enterprise/audit_suite/instructor_comparison.py": "e40ee3b7afdb8d1eeaa713f012fe0c54137eb84678042f99f190a19f06ed1194",
+    "enterprise/audit_suite/instructor_key.py": "fb64f5cb8b22709d4bfc09ad447bd5255284f35e651accd1033fcbb8f8215f4c",
+    "enterprise/audit_suite/instructor_releases.py": "c236d51c4b4295b0e01d7702ea11021b42837a950a30b097eecc2d1dc7a42fc4",
+    "enterprise/audit_suite/operating_source_bridge.py": "75ea480cd41fc100f483e11f451ce4c90a909cdaba0b8f8d29f6c51b02d0e7d0",
+    "enterprise/audit_suite/organization.py": "1e822632917f739b40c1bd064aac49b633dc643b5930ef74dbc19887bec729d4",
+    "enterprise/audit_suite/parameters.py": "78ae9b965d92dc024ab33413533e84b9bfa723d9b7865917d1728372175ce1ef",
+    "enterprise/audit_suite/parent_support.py": "ea7b7d670f2c8d1bc7fcac0e5c33d2db1a1c1961cf2ba4cf73d25cb175e2303c",
+    "enterprise/audit_suite/parser_sandbox.py": "697775e351e48f1cfab25a8fa76bb7bdc4b4059f45fd596dcd3145f7038ed79b",
+    "enterprise/audit_suite/parser_worker.py": "33803037c33d77f5ec2a61e7116e1bf73779acc772b8dd2ceb50f3c01538e0fc",
+    "enterprise/audit_suite/personal_views.py": "b12f01e951194a96658a7522dbe843cf51c5ae88a3e3663368cc8752aa69fb74",
+    "enterprise/audit_suite/personal_views_recovery.py": "8f49f2600a564606dd2315fda99c27c20ed0182dfba5c9236562a7aa5b4fedb1",
+    "enterprise/audit_suite/population_lifecycle.py": "0dbd20a76bb6670456d05b4a621f8f2156f8f8d9dd77c0ace0908c9348a8b8de",
+    "enterprise/audit_suite/populations.py": "1bda7eed357a4f993b57191b9dc68f12f574e630689df99fb1a08358b1eb5927",
+    "enterprise/audit_suite/portable_composition.py": "5f8e455cae7e5a1736d6ea30ac24a1593307df7915d214f8a83d6ecbe6cdcffd",
+    "enterprise/audit_suite/portfolio_explanation.py": "7f909eebe0ffea29e6637961ee8fdddf372742332e7b2a16c8cd90cba57b2048",
+    "enterprise/audit_suite/private_publication.py": "dddacf269e72508323b934cbd048dd0f942396c15b6fa1bfc6aae5777d43332d",
+    "enterprise/audit_suite/private_review_export.py": "568a4acaa9c327a1e8354c5cd4051e03e5c707768c6fdb61fbae38692523841f",
+    "enterprise/audit_suite/programs.py": "388ba78e34225aa1e78bc75ecd2e1e7b252242bcaf75586ed623ba337c7b91f7",
+    "enterprise/audit_suite/recovery.py": "cfe1d5e27d373cfd5e17c57f5c663bbb9052fe2595fbaaa80154bf68a9d46924",
+    "enterprise/audit_suite/review.py": "0f0e4de6d1dc6277bf907a4c39a1b4f5f950eef4cc44c2b3765d05d07a18616b",
+    "enterprise/audit_suite/review_anchor.py": "c694e40bcf6485fd043d8c84062fd91f4ca9014d5002cbd13145979e1f0b0b83",
+    "enterprise/audit_suite/review_layers.py": "908f69e4fdb17d03b574e4b3d83d6d263221a59bc07737ac9a24de4bf3c574af",
+    "enterprise/audit_suite/sample_execution.py": "bb406b473fc0e336f8474b615b211043203abccbefb5d3733c8ae58733769673",
+    "enterprise/audit_suite/scope.py": "bd660e97d9c1d8ebaca81b29bb91fe63d1566ed2983014c65ecfb973883d0e7b",
+    "enterprise/audit_suite/scope_reconciliation.py": "edb60588cc6600ec02af68652c4dcda6bd1c28c5a82871d219a6f7c82332fa1e",
+    "enterprise/audit_suite/service.py": "d53d225b65d2ceea56874a0a3b1c9f63924723a97fe08588e5f7dc5aceb83ac8",
+    "enterprise/audit_suite/source_dependency_reconciliation.py": "1a26446d2c6589b90fc637f093267530068ff22a04721503016b6c8870cfd96a",
+    "enterprise/audit_suite/source_readiness.py": "b7561e6e010f2b57d6cc7b718eab2c15d32da3586a828d33ed589a75ae671aa8",
+    "enterprise/audit_suite/store.py": "edef37d2aecc03183c5a4a52ddc16457405e8628ab935c2c18bed2ec40dae919",
+    "enterprise/audit_suite/supporting_sources.py": "6731c3bb4bc6eab599e4baf690d4498a829afab11a330fec05e6219721ec0198",
+    "enterprise/audit_suite/temporal.py": "2b258898178fdc416d176b5e2d224c561598638950f93364a5525a7a6eea0aea",
+    "enterprise/audit_suite/temporal_workflow.py": "56d9672870ce51578476f6ac323e24ded4cb7b856a760aac290436a45b89f4ea",
+    "enterprise/audit_suite/voice.py": "ec7fc54fbbcd517a8582b46e0d27bdc44ef652b2770c9d77ac49a843cc156ae5",
+    "enterprise/audit_suite/workpaper_links.py": "3785738db90b0c9f4d4bb4379cf43933147d8dca989a393a25a56924bc25cc82",
+    "enterprise/audit_suite/workspace_context.py": "47bdabcee085f9f4b272f9be98114d515b58d5b603233b602e084f0170d8e863",
+    "pyproject.toml": "0394136a110a8dc1631076d2d60b6cb140c389e2b36fcfa8abb43a0d14f999b2",
+    "tests/audit_suite/test_acceptance_commands.py": "096f1c9730406bd6014393d285641ce003f06c1330a2b329ddcb092299a7ec64",
+    "tests/audit_suite/test_company_operator.py": "7f4e1bf9f8b0ac6f081c4756fb80dd21734e07f1fb52b2b0a17f5075593d0436",
+    "tests/audit_suite/test_company_service.py": "cbca32f3aeef5a1ac410755ba9766c839c24640a66d0fb8b40e71e5b0f292933",
+    "tests/audit_suite/test_company_source_census_review.py": "07c848c649c6c9af5a2510a3a51018e73f50152a0c26a73bddaba66bd6d3aaf5",
+    "tests/audit_suite/test_personal_views_recovery.py": "217f4b44d3d334ebeafb0a110d0fbd46346ef5bb50826e21d89f660db194dec1",
+    "tests/audit_suite/test_recovery.py": "cf1d2b7c294a7fd34b597d4b2a0994dada7b3097ec39661f241602e3a5a0e5c0",
+    "uv.lock": "b3a0c19ee0ba9856e11af98daea37efb41760e8ef749b62aa4ac718d6134d640",
+    "tests/audit_suite/test_acceptance_temporal.py": "ed7c0740d9842a4284af8b054024d0328a22fb31a6673f8a76521f334c13fcfb",
+    "tests/audit_suite/test_access_remediation_reconciliation.py": "c2075c7fb3310c4654fe3239a1d2d09cbe551837408ac4d798a6174936ef2c13",
+    "tests/audit_suite/test_access_remediation_report_integration.py": "1e826f6530d56b6964ab7530ea66ccd14f09febd3c2da200819ad069a0e61d76",
+    "tests/audit_suite/test_access_review_continuation_routing.py": "23793cc60ece01ca092fc32836ed683f3e52e973a2bdb3f0002e5e101179c6a4",
+    "tests/audit_suite/test_artifact_durability.py": "ed39bccdf3772da86051b68731a49361a696e141611f12afc71cb04f5390367c",
+    "tests/audit_suite/test_artifact_intake_origin.py": "fd4dee72b7d8d9a4e4ac8ea663484d2522cd7b3943c5aed100272914d1ce23cf",
+    "tests/audit_suite/test_artifacts.py": "f7b6d3b8e9b7210c52f0d57a093f424b07bbe93714357c358132e29b173e0d84",
+    "tests/audit_suite/test_audit_readiness.py": "362d9aba1bc41a7eef3f80f41aa44cc723a423bab04861307efd6e1acf6ffca9",
+    "tests/audit_suite/test_authority_editions.py": "888b8b55976f9afda306840734a0cf3db660c35095b66a0e8dba997f6de315ff",
+    "tests/audit_suite/test_background_census.py": "935637567ab49cdf6b5133eef01866152a52156ba89048a8906ef36644cf2ccf",
+    "tests/audit_suite/test_background_job_routes.py": "bf2fc89b24109d15d2a63602e7d8945b9029ef30faabbabdd974431deca2f292",
+    "tests/audit_suite/test_background_jobs.py": "cb87d320d811c89730a6c67eb30a6f0063b9cae9ecb68bd936c13a46e6c8ea9d",
+    "tests/audit_suite/test_background_review.py": "5367184a33aab39aea0e5708f43591cbb48cc584c1dad68e9b4990657129a32c",
+    "tests/audit_suite/test_background_source_errors.py": "1dbe19110457a59b258302cfe9d75ff3f7b8ba57d3d63935cb3a6aab209e9feb",
+    "tests/audit_suite/test_behavior_composition.py": "8f852a8b8c2e20109b75441ab64bd87efc8ec63e315124cd1c4c28a0354be151",
+    "tests/audit_suite/test_bound_instructor.py": "45697007d1e9d9c96c3496faa0fe095cb5cb223015491c197104b85090b43a76",
+    "tests/audit_suite/test_causal_composition.py": "51f68b256a5b57d7272d04c82786d67f6d90cb919db2793f86a89cb06bacff6b",
+    "tests/audit_suite/test_change_volume.py": "67e8709fa8ddf480922b54fd8c1d6961408e252b82590017a78205dc3225659b",
+    "tests/audit_suite/test_clean.py": "4fe03aa21f06d3430c2abe19f1cd4d86d29a32d59dd1d89484c7d7277e117782",
+    "tests/audit_suite/test_cli.py": "b2c79d6a0311ed3dee57235493b4f7d5e8fcc62b6c10d78f747e4ffa6aba8dc6",
+    "tests/audit_suite/test_companion_recovery.py": "a9f88b4ded843d50557c8009001b9b71417cd57ae8407255b50f42f0b3b28f38",
+    "tests/audit_suite/test_companion_release_recovery.py": "f5d4d2d194dde07f8d762630b322be18b855841204b7dacae586ddf70d332597",
+    "tests/audit_suite/test_company_access_remediation_activity.py": "8cf35538742d89c56852dfb01afb0d8d100619b4cde0c48443f8cd711170d629",
+    "tests/audit_suite/test_company_access_remediation_collection.py": "ec02a4472f88a64b76dedc8072abfd74ab104d45bbdb442d9dead8533ffcf392",
+    "tests/audit_suite/test_company_access_remediation_operator.py": "1c83f71a5c2602d6143aa0f5b454f278da8ce867c2df8bb7f4948543834dde76",
+    "tests/audit_suite/test_company_access_remediation_review.py": "57c14b58edcc0388b9808b2ef563bd0030677a1f85d32f9e71cd45c6b869daaa",
+    "tests/audit_suite/test_company_access_review_continuation.py": "b68c005199c0bc262b4f34c62db60eb0f1162cf437e733771155712c5bad3552",
+    "tests/audit_suite/test_company_access_review_continuation_review.py": "097a8ea29c7313ba2a78797a07e084d2958d065be4f2c235c30691054676dab2",
+    "tests/audit_suite/test_company_activity.py": "8cab7313ce30bb88e5bfdc73db463aa9ebd152321c4b7fd32d930503d454b739",
+    "tests/audit_suite/test_company_activity_collection.py": "544062bae8919a666f64a3cffc96257dfe86e00fc83e97e3c167bb86715a7111",
+    "tests/audit_suite/test_company_activity_linked_plan.py": "0c44a7e54874d05a15bc18347a10f96364004d95e6f9bbd334db3fd11455b993",
+    "tests/audit_suite/test_company_activity_operator.py": "94d59fd6496c7473e71def8e22d61c6288ec6c0ef91b08cbcccc8457a8278b38",
+    "tests/audit_suite/test_company_activity_period.py": "96609a7da075da0751bd36f06d363c379b3e68f7076f30fe24cc5360374ce09a",
+    "tests/audit_suite/test_company_activity_plan.py": "4bde4a8a194fd8d96dd23bb20ed21142a51b2b011a8f8be0d3ce9a46d4f333c5",
+    "tests/audit_suite/test_company_activity_plan_review.py": "e7cf8b8e3f286b3e426d811bb71070cf509b473fc6d28eb854ddcf1c44fb82cc",
+    "tests/audit_suite/test_company_activity_plan_sources.py": "96dcb32a836fb77fcb25c9eebfe7efe6744586a17295af30bd9e2f24b290927b",
+    "tests/audit_suite/test_company_activity_producer_plan.py": "11c8454abfc53ea12eec9f7b370dcfe84c1bcd8e2649cd691373c58ad550a623",
+    "tests/audit_suite/test_company_activity_source_capture.py": "bbb8831edc1a3580659538ad8e3257ad8ae90ef881c56ae3f94cd899fe23082a",
+    "tests/audit_suite/test_company_backup_activity.py": "8d42a88ccde360b6eb7bee9837265d84b370c4c8ba93ddd5e481238e6d48e226",
+    "tests/audit_suite/test_company_backup_collection.py": "f650e5ab1c2bc639f909cf53588916f1739da8adc322aa70b31dacaedf7e3d47",
+    "tests/audit_suite/test_company_backup_monitor.py": "a3e02b026baa9f38db059ac28278960ad1318608d07146c6adc81ac67dbc7449",
+    "tests/audit_suite/test_company_backup_monitor_cli.py": "083ba42a4b682de89c2851cfc9dbb1e0c804b08913da8a99c63cd4a6bff83b0f",
+    "tests/audit_suite/test_company_backup_monitor_review.py": "3d9255c3e0d85ee570a9117840ddedd383c99d70b6bcd20085cc7fbef453972d",
+    "tests/audit_suite/test_company_backup_runtime.py": "4100e6abbc5489ded6acb7e151f06d66f940ef6108d3c12f452251cb1ffa849e",
+    "tests/audit_suite/test_company_backup_runtime_cli.py": "7c96f13d05d133e1b794d060756eecfc08b90383296dc2acf0ec12f0dcc9dc26",
+    "tests/audit_suite/test_company_backup_runtime_cli_review.py": "71ea33bdbd30a4385dacdfab095b692d5570b8454e2d8b088dc3c3fcb21979d4",
+    "tests/audit_suite/test_company_backup_runtime_review.py": "a8b8eb3af158ee35c1e7f6933107923e51cf8b08f79848359ffa7b98be82eb4a",
+    "tests/audit_suite/test_company_change_activity.py": "f977f63267c1ea1f1f5532ee3cc462205787e924a87ba27be91a74deea1b79e7",
+    "tests/audit_suite/test_company_collection.py": "081cd0b951c459e373361de63f9b1661f4a6bddd01d7c2f7dd19ce69169acdb7",
+    "tests/audit_suite/test_company_collection_review.py": "cef5f2c088c3a02924a824b2ce0b7016cb6bc0427007b483dc2ec242953da1a8",
+    "tests/audit_suite/test_company_configuration_activity.py": "cd733053339e4f5cd76b3632df6817051da78ddb835942c63736350993387eac",
+    "tests/audit_suite/test_company_configuration_export.py": "c1c66856416c7a4e9d93bb5d23a8faaa6242bcdd2e32bcd08ee478e53edb1eb9",
+    "tests/audit_suite/test_company_configuration_export_cli.py": "f141ed07fc099fbecab164bfd91918ad6782ddddc2937c4e6c14219b1d6f3641",
+    "tests/audit_suite/test_company_configuration_export_review.py": "034062a20981acf0228d14b40eebb773b0d81738c45e91262091c0ba5bb11e9c",
+    "tests/audit_suite/test_company_configuration_runtime.py": "1a524d5266c5d761e054288586dc1a5036303a85419c0a32faf24571adf72766",
+    "tests/audit_suite/test_company_configuration_runtime_cli.py": "f2d4c6bf1e25fe3799afd19d06b85695f380b839eae5c5bec7632a1554ef60a9",
+    "tests/audit_suite/test_company_configuration_runtime_review.py": "b5e7538b57997e8c883380e6b6f1d64b472a666c342ee00a8f4af1d2d8f42ea8",
+    "tests/audit_suite/test_company_federation.py": "1d424db0f5b567486408977306f555225103199f32c025d130e252d2d140cf43",
+    "tests/audit_suite/test_company_federation_review.py": "2e0ed0fe101bfad90824dbd5603b0d6c71af7e4da828cbde451b85c032c94bfa",
+    "tests/audit_suite/test_company_impact.py": "90c0efe5dc12f667547c25929142503fad2a31ff3992bfafcc9879cc8561b28d",
+    "tests/audit_suite/test_company_impact_exact.py": "83e871cd4bee6ad135d1a2606ac133a55d4e90f1e967d0ec63b0fd7c7ae38fbd",
+    "tests/audit_suite/test_company_impact_federation.py": "4e36e8b63ea0153c09f01b4196c206d12864143b67f3be4569a905eae9917c64",
+    "tests/audit_suite/test_company_incident_activity.py": "fa935fc8253eee7eed12a4a8ffe20b3e516bf76985ccf5ac94d7a567d3140420",
+    "tests/audit_suite/test_company_incident_collection.py": "87832d17a2050d0b6bbf37bfbc9476a16a4513623dbe3a78ef1a0e28a49ada9b",
+    "tests/audit_suite/test_company_inventory.py": "9a381c9a61ea700fd6e2586227bb0d84c0bdf684003b53de9ef570d5ee2197a9",
+    "tests/audit_suite/test_company_lifecycle_activity.py": "a472be4ac876410fa1e80ff5841f84a1c548ef3ee80f9dde66f555620e8578f3",
+    "tests/audit_suite/test_company_lifecycle_collection.py": "97272ee2b58fc35b080e07d48c3a51b3fbec3a7a2cea4f02aa2bef2a22318e6d",
+    "tests/audit_suite/test_company_migration.py": "b5b7a9906326caa34407ee40927fa1ca04554c399146e20c00ca0280ff392633",
+    "tests/audit_suite/test_company_nonhuman_identity_activity.py": "8153b0263bda452bddc49d57a17a358dd4aa8bb5625a11e26cff893b4a8e9c20",
+    "tests/audit_suite/test_company_nonhuman_identity_collection.py": "2b37a0a03b305251f1080019cbec012ec6fbc4422680f604920477b5febb0912",
+    "tests/audit_suite/test_company_operating_period.py": "6e0feb23b1131f4f3ef80ab5beba4fe361e4458775300c53d204b5de74b07908",
+    "tests/audit_suite/test_company_operating_period_cli.py": "8937fe356050289c7763d22cf2a291e0ab3783e8c5868276e0ed194b38c9e1fb",
+    "tests/audit_suite/test_company_operating_period_review.py": "01b3d080f9d6803175536b631cd979d357ff2d372cd69a8db46251ca3528353c",
+    "tests/audit_suite/test_company_persona.py": "8995789e0c51bd4f191e769f623210e4cd229237041715a03fb645fe9a591311",
+    "tests/audit_suite/test_company_persona_selection.py": "ff05ce968eb54a6094d42f9ed6da981cbe03f669bfdb44caf6d00adccfb99f96",
+    "tests/audit_suite/test_company_population.py": "a5876ce3c5a585ed46a286d28503bd5f5a51b9a60b791ea8ce1393fd782eca04",
+    "tests/audit_suite/test_company_population_collection.py": "ce48bada8b1deae640aba843e5fdd75605eda2ae8c421ab8669a597117f8d855",
+    "tests/audit_suite/test_company_provider_intake_activity.py": "df2efef6fbf325a0093053baaa2ee2f3a511942e10d08e7f993ab3657dfb9166",
+    "tests/audit_suite/test_company_provider_intake_collection.py": "f1f2f78d3d753a6ed0511b4a839a226cf16366dfec44be9be058a5347dc9061e",
+    "tests/audit_suite/test_company_repository_documents.py": "a55365066d6f981fed870bc76a05b6d143eb4d0310978b6f15b445fb5397883e",
+    "tests/audit_suite/test_company_risk_assessment_activity.py": "736d8d0198ada49f3d70b60da8ea3862468951ac774b726a390584da352a2547",
+    "tests/audit_suite/test_company_risk_assessment_collection.py": "674549941e419dfd4c6131f1c9667fbe72b6a7ddbe76c6d822e21b9751434d5d",
+    "tests/audit_suite/test_company_risk_prevented_activity.py": "769e8a405742f0c19c0a38952188ddd56d29a2ca00cbed160ddad8776825fe09",
+    "tests/audit_suite/test_company_risk_prevented_review.py": "84951390d54c90bc5a7802078c14994010968d2c18d1ad9613c89affb549207e",
+    "tests/audit_suite/test_company_runtime_activation.py": "e021782f712acf545a4c188fea945109ae013a5b8bcbf492ffc678a7c9bf3db9",
+    "tests/audit_suite/test_company_runtime_activation_collection.py": "0aa2e8f644b9780d480f47fdf4574904e89891cdb6b80e02cf3e0466e39955ff",
+    "tests/audit_suite/test_company_security_event_runtime.py": "f2a7d5f21bd00caa1fec58694892b59d8132eb3454832be2c07ddd07ff44a2f6",
+    "tests/audit_suite/test_company_security_event_runtime_cli.py": "d8572ef0ad19446e7c15ca551bb3056edc3651d151ae79ff28feb47657592812",
+    "tests/audit_suite/test_company_security_event_runtime_review.py": "561347900c3f16506ad21edfa0753d451b96323fd15c90e2297d6f82b095c2f9",
+    "tests/audit_suite/test_company_security_logging_activity.py": "375841ea188cd811e47d502e503e4c707a4f20dfc61b07ebf47e6f5882a70e14",
+    "tests/audit_suite/test_company_security_logging_blocked_review.py": "6891a834c9c9eaab4ee3ac09b3a2f7162e890e20542dd759ad9ec8a14a2ac9ee",
+    "tests/audit_suite/test_company_security_logging_collection.py": "1694279b4d5fb49e040b4a2c08bd5831e2689f161203ff4a9e2ba1eadfae02f2",
+    "tests/audit_suite/test_company_security_logging_scenarios.py": "d0c8e388fb7fa3814b8145d5f4a7795a4c4a67174e0ddbe39d2de1cf96356869",
+    "tests/audit_suite/test_company_source_census.py": "c33d6a966206711ff8cf2a31f49f5c3a5f3495c70511b8d7c01d573aaa6a6f51",
+    "tests/audit_suite/test_company_source_census_collection.py": "72fe0588297bf2102f3980879bb6e28c64980e52923d47be50564df94bc0c45c",
+    "tests/audit_suite/test_company_store.py": "4640e42f3a3a0eadd45303bd387a445a7f4878d1b682c53e5c3b79cfeaa6a06b",
+    "tests/audit_suite/test_company_training_activity.py": "adb914a88b4c8741b5e7e6a44f7ca9c5e868e0d1e2051c75683d5748d3ac385d",
+    "tests/audit_suite/test_composition.py": "a4c515c325db8125e0681a1e31497df13df337ec803901d3ed8e79a6cf80d114",
+    "tests/audit_suite/test_configuration.py": "8706b863e0be347136d76ce88243ef4a2aafb0ce260513592e6b55091f86ff78",
+    "tests/audit_suite/test_custom.py": "040bdc6a1ddabb978e3406704b91d6dbb3c36031a82a930bdc6fee720f306595",
+    "tests/audit_suite/test_delivery_integration.py": "879f8e8693e6730b861b186abf5a86bbb6065550acafcbd6e6601292b4f02df9",
+    "tests/audit_suite/test_deterministic_review.py": "4ac9957d6e6d056b3a63640755d7653b3c817bf165cc8917a5018bf277901fc1",
+    "tests/audit_suite/test_documentary_custody.py": "50c8f77ad216e8e19b337d4e3c87d62c109e22a5ebd71dd2f80bc21db44dde3e",
+    "tests/audit_suite/test_draft_recovery.py": "f3ab317509d8d7683062cfc9ec7762db28e6d7a0a5124e2c3b1912dab14c4a70",
+    "tests/audit_suite/test_draft_store.py": "305deb1f8aaec04ed42f0510ad0218e49159e5f05b032f0e33e6b741ad41a198",
+    "tests/audit_suite/test_encounters.py": "62249432721b1b5cc41575166aa7e9663447cc77bada9d27e1c14ba22e89174a",
+    "tests/audit_suite/test_evidence_transform.py": "6565def157ddb965e02288d6c4876ce8570fa7e4274cb8248b7dba8fe8d10ed6",
+    "tests/audit_suite/test_expectation_links.py": "1887bdb7eb5e4072a884e0ff1d78ef8a4c0d71e402359ccc193b69ac56d3a09d",
+    "tests/audit_suite/test_explanation_binding.py": "c8af70e43da260f179e2ab2d5c94c3b9d58f5607305cc5a74b9551949d8e04f0",
+    "tests/audit_suite/test_explanation_binding_review.py": "4b2f00d1b80e31a98dbd976a14988b3f65cab3277debfa64e8491b11cb288341",
+    "tests/audit_suite/test_federated_service.py": "ea58d6b68249cf572355f8460987aea81b731d99b6431c00564464220204e033",
+    "tests/audit_suite/test_history_inspection.py": "8a83e39628a819e0637738698b9be5636dab4a2c1912898154c7f658f5a1b1aa",
+    "tests/audit_suite/test_iam_review_reconciliation.py": "a5fc1dee241760292a892f0a2f51f34daf996a791c69238aecbe22ed898768b3",
+    "tests/audit_suite/test_independent_boundary_review.py": "7d8cac2ffb5c5c30f385e8204fe2080f6c5b79e472a34ec1e3afc2af0718d251",
+    "tests/audit_suite/test_inference.py": "d9126cdf9f828093746a387d688ce62bc69ac13a3c638e8d49e768e7ab79aff7",
+    "tests/audit_suite/test_inference_timeout.py": "f3318f3d5bcc8d5003df46a59b4423f67e37661eca191fa2508f245f9ea2c5c5",
+    "tests/audit_suite/test_instructor_access.py": "92f6e9a129fb796e10d9846b64d6e222024458aa31b1b97ddd1e9cf842ac5ca1",
+    "tests/audit_suite/test_instructor_comparison.py": "843708ab5a5f85ef80fa483cf24625ca0d69837d731d3585e5a588da6f1072f3",
+    "tests/audit_suite/test_instructor_key.py": "b5336560a15235481c1f23f1b6390235603b72d015926f16396a107077336bd0",
+    "tests/audit_suite/test_instructor_key_service.py": "674665abad5399f45d63f9baf86a1cca62824a95e6d9df6227c0b5ff0647d02e",
+    "tests/audit_suite/test_instructor_release_metadata.py": "b2058be2f4be074a20c5dd2fad25c5b560f289e28f3a62fc98410607112dc338",
+    "tests/audit_suite/test_instructor_release_review.py": "4cc18f93aa5a91f73637ee4eb1771d12135e0b654aa33be4d19fd5140cec8c34",
+    "tests/audit_suite/test_instructor_release_service.py": "137ace1ebebd0b10efbc9f7e88b620c9639db415fbc43161f95720ca4e451c13",
+    "tests/audit_suite/test_instructor_releases.py": "6d7127f0245dca9c7ba2ad974149877948646dd4e2c6c11f9a88ab981aaf733b",
+    "tests/audit_suite/test_large_exports.py": "eda6aea122d440df80f4154815b654b749acfe64c7deaaa31d066fa2e797e95b",
+    "tests/audit_suite/test_manual_record_contracts.py": "ee64f7f3913d87e423ddb524156598d50555814b1abc855a28ddf4d771842958",
+    "tests/audit_suite/test_multi_source_activity_operator.py": "7ed08c068a272b61a82313ca7c0d1103ce3d684b605d239ef0f2a4b0ed95231a",
+    "tests/audit_suite/test_note_provenance.py": "e23e0bcfd792eb7ef24afe610729974b7e9bc2039b073266b7a77c22253159f7",
+    "tests/audit_suite/test_operating_source_bridge.py": "ab40c02fc47171c940d816042ccdad594fe8be67823565e91ff03ae549fa9786",
+    "tests/audit_suite/test_operator_commands.py": "84bd1221c27adc286e81a901d9fe2e7a1e00022040e5565a7441b289042ab0b9",
+    "tests/audit_suite/test_organization.py": "d6241ff0fb781896d45bf94b719a0056ee9f95d33e35028f965d3f82fab265a7",
+    "tests/audit_suite/test_parameters.py": "766a15325e28ae9ab604d9e190be6bdcd7ffb6fb580c9286c827fc8a8136d773",
+    "tests/audit_suite/test_parent_support.py": "1f63daa4686282f8e57abaa6cb0b9344ca4c1d1563d473b693a139d6c411392f",
+    "tests/audit_suite/test_parser_sandbox.py": "42366e48b5ec20ef826d09b0187133793dfbdb04fa2a2ffe0bab825ac2494fd2",
+    "tests/audit_suite/test_persona_factual_prompt.py": "7f9ae2cb9ebce5bc55bdf5b9eb6069ea277b222235f6b6d02740cd75ae44f4f9",
+    "tests/audit_suite/test_persona_source_boundary.py": "8971003a7fcbcdc01f81c26f7f1679f87c6d531548935c5aa08db431c0401103",
+    "tests/audit_suite/test_personal_view_routes.py": "81fe4eb26eabf32c3767d5fa8ec22c5ed30d6397c2584facf5f41229581a0a07",
+    "tests/audit_suite/test_personal_views.py": "64e19cf70f32e82cf41988faa2b99248a1a3098c534bf334a0d2aee784d7baeb",
+    "tests/audit_suite/test_population_lifecycle.py": "9f3b4e655ea339e05eaf1d78cc0c1307e15a0d306fe67f9e6796da8e644c6634",
+    "tests/audit_suite/test_populations.py": "6f732689ed6ae438154d7350d11d6d8e6b0ee7c19174a4553cec9f2efc897331",
+    "tests/audit_suite/test_portable_composition.py": "05bac0377308e5dd557ee4d244908c8fea1a0ab605f8f3de97af0e28a1d52dda",
+    "tests/audit_suite/test_portfolio_explanation.py": "b979d83ad9606aac281e49baff638692c94900bd9b6d04725c110daf6b935edf",
+    "tests/audit_suite/test_private_publication.py": "9614b6185f5dfcd598b748771ebaec14222c5db486f66937ef6765d175fbf25d",
+    "tests/audit_suite/test_private_review_export.py": "9fbee778d1b76dacf487a5b868be1f8c645f62b5b41c905e91794473369fa13f",
+    "tests/audit_suite/test_reconciliation_native_json_review.py": "725c9d09db8204056428b539dbb801609d0f46b18c01be6d42da6741927cba05",
+    "tests/audit_suite/test_recovery_source_pins.py": "04f7e44692fb1ad4d0c3083df50710f27758154b1e252d831a39ffb2abab4a80",
+    "tests/audit_suite/test_remediation.py": "8f2746630d461c00a38ecd56822cd4cdf120f4c421624f5bb57832ad869a0eee",
+    "tests/audit_suite/test_review.py": "c4d723125e5ae81c564c29c5f3c6b8bf3998c020711bb6bde07563f9a73f79a5",
+    "tests/audit_suite/test_review_anchor.py": "86d2f79b1ee3d27c4a1c11b8b93a1671ff6aa4fb9db602f6a9f27241825798b7",
+    "tests/audit_suite/test_review_anchor_integration.py": "1f30f96a53079f9eab677b6795328d2226f0dddcffa2ff5f6df78ab9144cf243",
+    "tests/audit_suite/test_review_findings.py": "5d69f69cc59785185647b9f92723a1a518c0ed0e54b1f28ff7090848c55da338",
+    "tests/audit_suite/test_review_layers.py": "8f9b9b08fd565fdff35155375a3a7a69ccf88caabac5b2fe78972ab3a5f3de25",
+    "tests/audit_suite/test_review_quotes.py": "ea999f602791aeaf82bdcf0a86aa9410607ff83af4aeb6f9c5d862fcb28cf5ef",
+    "tests/audit_suite/test_review_response_disposition.py": "a804026d6e5c601c7909515af1c46fd31c332f35cba6fad0eb34e2e734f3c1d5",
+    "tests/audit_suite/test_review_task_versioning.py": "2716deb5bf8ccdba0f311df984fb98a5b8cd069d82a2a75da6f73b63fcde0d40",
+    "tests/audit_suite/test_run_directory_isolation.py": "4670796bc16599223ba3c3550f35e80d59c174460176c2ed5573289e0da57559",
+    "tests/audit_suite/test_sample_execution.py": "64521541099af6afaa7a699f9b5516461834bcea2a274e78c84b779185fd5704",
+    "tests/audit_suite/test_sample_execution_engine.py": "214127b817a225c072231fd42e3b2f154cb8ef66145cf1c2e8af2a08e367717f",
+    "tests/audit_suite/test_sample_execution_review.py": "35f1ce34d522d500b6b5601099097338af953df2c51ac8058e9bbdea107e3360",
+    "tests/audit_suite/test_scope.py": "9423ee3cb9a09b71e29a7779e8f8f914cde02b256554b87faabd7511412cf2af",
+    "tests/audit_suite/test_scope_reconciliation.py": "4fbf34d9470a246b2ccff1eca4649e6953abb65325e49204c9dabf25983be86c",
+    "tests/audit_suite/test_service.py": "d7ad93fe24f07ef1290b69b5355eca8309fb2f6fd91bfb65e7d650b840b592ef",
+    "tests/audit_suite/test_source_bundle.py": "c74922d1eac2c04e76a758573b370cb6015f250717b90fccfbbcc1554dd32796",
+    "tests/audit_suite/test_source_dependency_code_provenance.py": "d728de93ecbc569bbacbb6d8132b5b7864f718e03bcb3cf44d19dfeffcdbd5bc",
+    "tests/audit_suite/test_source_dependency_operator.py": "7401a48b40e6b7a3af04cb914b1db04654999d28a2d619d2b4c402946b0a64a9",
+    "tests/audit_suite/test_source_dependency_reconciliation.py": "9dedcd2ff3806a1178bd5180a35c751775067bfa87ff9a936653d5ebff53004b",
+    "tests/audit_suite/test_source_readiness.py": "9304edf3711767203d2c22b6e293217018399f049c49685fd69299c2c59f3c07",
+    "tests/audit_suite/test_store.py": "8e884c0c058e243d81fe8bc7fdbcc480daa336694f0ee6d37011552e10e9a0c0",
+    "tests/audit_suite/test_supporting_sources.py": "4172c001d381e71ec107b5ab8107f72426f73c31726c9c3defb6cdcc8923f4d9",
+    "tests/audit_suite/test_temporal.py": "18257deab414da1c2a7632bc2e3dcf4ce629c527b457f05351cad2b3b4406c1d",
+    "tests/audit_suite/test_temporal_engine.py": "b09b4235f3f4d225965aab14f70667365a85638db7d585ce2e3557f314edd706",
+    "tests/audit_suite/test_temporal_workflow.py": "c957777ce688fe782ab1aee9052c377b88845f37cb89e216c29d468271e89be7",
+    "tests/audit_suite/test_timezone_service.py": "dbeeadc9a7b3a1f296e1b61e04332fba2c3a0d3a9dfb55a0743c246b41dfac10",
+    "tests/audit_suite/test_training_collection.py": "ed314f3500ddce68378debdcd5ed6658bd62a739e3c682dcf149fece432d6589",
+    "tests/audit_suite/test_voice.py": "5a07032c597539d5516b26883297dbc2586e9b5b19725be1e996563ed78fc3ca",
+    "tests/audit_suite/test_work_status_routes.py": "91684968ca12116cd6b7b5b5e8fcbb54349897deaeb3b29d08e2ff05482d0912",
+    "tests/audit_suite/test_workpaper_procedure_links.py": "1b8c1f3b9d3bd19bb50bb3539a52e33deddd380251382d0c07b72ca81389cc2a",
+    "tests/audit_suite/test_workspace_context.py": "f3e3244560afaf631a127775223e17938511c1b5c1ad5940f67c804a380979ab",
+    "tests/audit_suite/test_workspace_context_review.py": "99763d6b33c55cc2d97896bfe1fca3a55fdde720937bf4a186b2ae9a42beea82",
+    "tests/audit_suite/test_workspace_context_routes.py": "448c9a96dc51fe4dc3744a268d10a61359fd4e0a8977a160cec5c14a257cee0e",
+    "tests/audit_suite/test_world_integrity.py": "8b70f6856c9a8fec74aec4faf0d12fc3f8258773ab76c290178157393c8e536a"
+  },
+  "tracked_status": "",
+  "scope": "NEUTRAL_TEMPORARY_TEST_STORES;NO_ACTIVE_PORTAL_DATA_OR_SERVICES;NOT_COMPANY_EDITION_INTEGRATION",
+  "results": {
+    "tests": "36",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0",
+    "time": "19.589",
+    "warnings": 2
+  },
+  "source_hash_scope": "All committed audit_suite Python implementation/test files plus pyproject.toml and uv.lock; only six named test modules executed.",
+  "python_version": "Python 3.12.14",
+  "installed_packages": [
+    {
+      "name": "alembic",
+      "version": "1.19.1"
+    },
+    {
+      "name": "annotated-doc",
+      "version": "0.0.5"
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.8.0"
+    },
+    {
+      "name": "anyio",
+      "version": "4.15.1"
+    },
+    {
+      "name": "attrs",
+      "version": "26.1.0"
+    },
+    {
+      "name": "certifi",
+      "version": "2026.7.22"
+    },
+    {
+      "name": "click",
+      "version": "8.5.0"
+    },
+    {
+      "name": "et-xmlfile",
+      "version": "2.0.0"
+    },
+    {
+      "name": "fastapi",
+      "version": "0.141.1"
+    },
+    {
+      "name": "greenlet",
+      "version": "3.5.5"
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0"
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9"
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1"
+    },
+    {
+      "name": "idna",
+      "version": "3.19"
+    },
+    {
+      "name": "iniconfig",
+      "version": "2.3.0"
+    },
+    {
+      "name": "jsonschema",
+      "version": "4.26.0"
+    },
+    {
+      "name": "jsonschema-specifications",
+      "version": "2025.9.1"
+    },
+    {
+      "name": "librt",
+      "version": "0.15.0"
+    },
+    {
+      "name": "mako",
+      "version": "1.4.1"
+    },
+    {
+      "name": "markdown-it-py",
+      "version": "4.2.0"
+    },
+    {
+      "name": "markupsafe",
+      "version": "3.0.3"
+    },
+    {
+      "name": "mdurl",
+      "version": "0.1.2"
+    },
+    {
+      "name": "mypy",
+      "version": "1.20.2"
+    },
+    {
+      "name": "mypy-extensions",
+      "version": "1.1.0"
+    },
+    {
+      "name": "openpyxl",
+      "version": "3.1.5"
+    },
+    {
+      "name": "packaging",
+      "version": "26.3"
+    },
+    {
+      "name": "pathspec",
+      "version": "1.1.1"
+    },
+    {
+      "name": "pluggy",
+      "version": "1.6.0"
+    },
+    {
+      "name": "pydantic",
+      "version": "2.13.5"
+    },
+    {
+      "name": "pydantic-core",
+      "version": "2.46.5"
+    },
+    {
+      "name": "pygments",
+      "version": "2.21.0"
+    },
+    {
+      "name": "pymupdf",
+      "version": "1.26.6"
+    },
+    {
+      "name": "pypdf",
+      "version": "6.10.0"
+    },
+    {
+      "name": "pytest",
+      "version": "8.4.2"
+    },
+    {
+      "name": "python-multipart",
+      "version": "0.0.32"
+    },
+    {
+      "name": "pyyaml",
+      "version": "6.0.3"
+    },
+    {
+      "name": "referencing",
+      "version": "0.37.0"
+    },
+    {
+      "name": "rich",
+      "version": "15.0.0"
+    },
+    {
+      "name": "rpds-py",
+      "version": "2026.6.3"
+    },
+    {
+      "name": "ruff",
+      "version": "0.16.5"
+    },
+    {
+      "name": "sable-harbor-finance",
+      "version": "0.1.0",
+      "editable_project_location": "/tmp/sh-portal-neutral-review"
+    },
+    {
+      "name": "shellingham",
+      "version": "1.5.4"
+    },
+    {
+      "name": "sqlalchemy",
+      "version": "2.0.52"
+    },
+    {
+      "name": "starlette",
+      "version": "1.6.0"
+    },
+    {
+      "name": "typer",
+      "version": "0.27.2"
+    },
+    {
+      "name": "types-pyyaml",
+      "version": "6.0.12.20260815"
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.16.0"
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.4"
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.52.4"
+    },
+    {
+      "name": "xlsxwriter",
+      "version": "3.2.9"
+    }
+  ],
+  "output_hashes": {
+    "pytest.log": "08fc039e8104315a3f0c7a69ce3a6dedc4dec081255c2fe61a91c9e7a5cf8435",
+    "pytest.xml": "9267d7ee49a5d6b8d9293685d14ea24c8d0d3b7677c1624c8804e4e7fe33cf83"
+  },
+  "claims": [
+    {
+      "claim": "Preparer/reviewer role separation and retained workpaper versions",
+      "state": "EXERCISED_NEUTRAL_SOFTWARE_FIXTURE",
+      "tests": [
+        "test_human_export_keeps_workpaper_versions_and_independent_review",
+        "test_review_only_actor_and_revoked_actor_cannot_collect_or_replay"
+      ],
+      "limit": "Synthetic identities; no independent professional opinion or selected company-edition collection performed."
+    },
+    {
+      "claim": "HTTP records/system metadata access, future evidence, CSRF",
+      "state": "EXERCISED_FASTAPI_TESTCLIENT",
+      "tests": [
+        "test_company_http_auth_clock_csrf_and_retained_original"
+      ],
+      "limit": "In-process HTTP interface, no deployed server or full search/snippet/citation/count/graph/memory/export surface census."
+    },
+    {
+      "claim": "Restore older snapshot without reviving revoked credentials/sessions",
+      "state": "EXERCISED_TEMPORARY_FILESYSTEM_RESTORE",
+      "tests": [
+        "test_restore_preserves_native_files_failures_and_invalidates_old_access"
+      ],
+      "limit": "Backup precedes revocation; restore denies all old credentials and sessions; no physical-site or production backup claim."
+    },
+    {
+      "claim": "Company record recovery retains source bytes and revokes read grants",
+      "state": "EXERCISED_TEMPORARY_FILESYSTEM_RESTORE",
+      "tests": [
+        "test_recovery_preserves_sources_and_revokes_every_grant"
+      ],
+      "limit": "Explicit regrant restores exact prior collection replay; not automatic access resurrection."
+    },
+    {
+      "claim": "Personal-view history, current permissions and invalid recovery rejection",
+      "state": "EXERCISED_SEPARATE_PERSONAL_VIEW_SCOPE",
+      "tests": [
+        "test_exact_histories_owner_mapping_current_permissions_and_second_restore",
+        "test_changed_basis_remains_redacted_and_unauthorized_map_never_publishes",
+        "test_changed_companion_and_revoked_restore_authority_do_not_publish"
+      ],
+      "limit": "Saved views are not company-record legal holds or disposal tombstones."
+    },
+    {
+      "claim": "Company record post-backup hold/delete/disposal enforcement on restore",
+      "state": "NOT_IMPLEMENTED_IN_INSPECTED_RECOVERY_PATH",
+      "tests": [],
+      "limit": "CompanyStore versions/collections are append-only with no-delete triggers; inspected recovery copies/validates source DB and revokes grants. No later hold/disposal registry replay is implemented there. No full retention gate pass."
+    }
+  ]
+}

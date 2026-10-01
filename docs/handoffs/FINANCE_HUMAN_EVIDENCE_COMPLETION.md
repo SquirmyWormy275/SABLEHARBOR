@@ -1,5 +1,9 @@
 # Finance and accounting: human evidence completion handoff
 
+**September 13 billing successor:** [Foundry Field / Copperreach billing record](../finance/evidence/billing/FF-003-v1/README.md)
+resolves the FF-003 customer, issuer and tax decisions under the owner's later execution
+authority. The original handoff and accepted evidence packet remain dated source history.
+
 **Workline:** `SH-FIN-HUMAN-001`<br>
 **Prepared:** September 11, 2026<br>
 **Status:** implementation handoff; remaining work below is not represented as complete<br>

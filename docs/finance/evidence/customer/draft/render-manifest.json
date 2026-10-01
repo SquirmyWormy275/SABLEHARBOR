@@ -1,0 +1,104 @@
+[
+  {
+    "page": 1,
+    "path": "docs/finance/evidence/customer/draft/qa/paper-01.png",
+    "sha256": "7beb6c97421b2b8ee3b939839ff45c6022a4c1d4e3cff10fa48eaee33d7b7c74",
+    "source": "paper"
+  },
+  {
+    "page": 1,
+    "path": "docs/finance/evidence/customer/draft/qa/workbook-01.png",
+    "sha256": "38c2abad728e6c672542fa618ff8c66687ab34fbf4cd2549edd6b790a515fda2",
+    "source": "workbook"
+  },
+  {
+    "page": 2,
+    "path": "docs/finance/evidence/customer/draft/qa/workbook-02.png",
+    "sha256": "fb48b7d582dd7e3d385a324cdd1b749e8564e1d46aa6391b5d34267df39fb700",
+    "source": "workbook"
+  },
+  {
+    "page": 3,
+    "path": "docs/finance/evidence/customer/draft/qa/workbook-03.png",
+    "sha256": "521980991bdd2a369d874c79263b66024447bd9ed2b82acb7d771631eee597d5",
+    "source": "workbook"
+  },
+  {
+    "page": 4,
+    "path": "docs/finance/evidence/customer/draft/qa/workbook-04.png",
+    "sha256": "7e1b99da3e45ebfa1720cc8bdbb3752f022c67ce395be1d975b2bc8ec42950c7",
+    "source": "workbook"
+  },
+  {
+    "page": 5,
+    "path": "docs/finance/evidence/customer/draft/qa/workbook-05.png",
+    "sha256": "28e3da2e04c929f33c779502ebf28222a7cf303274cf082d309055e3c721a899",
+    "source": "workbook"
+  },
+  {
+    "page": 6,
+    "path": "docs/finance/evidence/customer/draft/qa/workbook-06.png",
+    "sha256": "68935526fb7e727202b2f5b78dced2dba0fd204f8ceb575d4a680e647271257b",
+    "source": "workbook"
+  },
+  {
+    "page": 7,
+    "path": "docs/finance/evidence/customer/draft/qa/workbook-07.png",
+    "sha256": "aa4c926e49d0db7dca3251d73ab3c9c83f0463d4335851433acc49da7e8f8bc6",
+    "source": "workbook"
+  },
+  {
+    "page": 8,
+    "path": "docs/finance/evidence/customer/draft/qa/workbook-08.png",
+    "sha256": "01230ae49d2ed8753ab740a7ab16b1cc90ce51c58c41f1267c93a37dc369ebf6",
+    "source": "workbook"
+  },
+  {
+    "page": 9,
+    "path": "docs/finance/evidence/customer/draft/qa/workbook-09.png",
+    "sha256": "de895d8b32ce1f827b32416aeb2f7792a4a95fd1adc179fab50e91ec377fd5fe",
+    "source": "workbook"
+  },
+  {
+    "page": 10,
+    "path": "docs/finance/evidence/customer/draft/qa/workbook-10.png",
+    "sha256": "366dc708ff6bebe611cae96a45e7549b8e85594e35b7c5992a6b1f2239d3de75",
+    "source": "workbook"
+  },
+  {
+    "page": 11,
+    "path": "docs/finance/evidence/customer/draft/qa/workbook-11.png",
+    "sha256": "d0d7fee8ec084dfa1b3081e618794debf62a7893b406a0728a9f73b207ae1d9b",
+    "source": "workbook"
+  },
+  {
+    "page": 12,
+    "path": "docs/finance/evidence/customer/draft/qa/workbook-12.png",
+    "sha256": "033d9b0a6afc82a7a317082b1d432b31abcb1a4d383ad8d673047ad787650c0b",
+    "source": "workbook"
+  },
+  {
+    "page": 13,
+    "path": "docs/finance/evidence/customer/draft/qa/workbook-13.png",
+    "sha256": "80aaf6b0290414963734daf39b7105c259f6838505d04b3ca9a8dfa74610e7b5",
+    "source": "workbook"
+  },
+  {
+    "page": 14,
+    "path": "docs/finance/evidence/customer/draft/qa/workbook-14.png",
+    "sha256": "0e3c2481667ac2cc03829a1820995feb078f16c9e6f787d1b0e366ccb9e6d960",
+    "source": "workbook"
+  },
+  {
+    "page": 15,
+    "path": "docs/finance/evidence/customer/draft/qa/workbook-15.png",
+    "sha256": "46b40e42e75645e950caaf7f30038470db7d87ceb88f2baa294e38f616ffe039",
+    "source": "workbook"
+  },
+  {
+    "page": 16,
+    "path": "docs/finance/evidence/customer/draft/qa/workbook-16.png",
+    "sha256": "9dfa92a128797d9ac27bfafb5f83cabff3e0eece9d8d01de2f0abe8c75e65e55",
+    "source": "workbook"
+  }
+]

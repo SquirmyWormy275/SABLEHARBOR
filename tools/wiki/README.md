@@ -112,3 +112,16 @@ The read-only workflow runs after main changes, daily and on manual dispatch. It
 artifact and run summary show the precise differences. It does not provision credentials,
 publish pages or change repository settings. After an accepted content change, publish
 with `make wiki-publish` and dispatch the freshness workflow to verify the updated state.
+
+## Reader-facing articles and supporting records
+
+Business and department explanations come first. The exporter appends their original
+source excerpts inside a closed “Supporting records and decision history” section.
+It retains the `in-depth-reading` address, source-section addresses, complete source
+text and the separate full-text reading pages. The article contents menu lists the
+article sections rather than reproducing the source records' entire contents.
+
+The Wiki sidebar and footer link to `Records-and-Decisions`; the sidebar also links
+to `Locations`. The former indexes existing authority and history records instead
+of creating a second decision register. Material operational and accounting limits
+stay in the articles. Source records are not rewritten to make them shorter.

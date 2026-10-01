@@ -19,7 +19,8 @@ CHART = "docs/organization/source/chartbook.json"
 OPS = "industrial/source/operations.json"
 COMP = "enterprise/services/source/components.json"
 RUNTIME = "enterprise/services/source/runtime_sites_2026-09-11.json"
-ACCEPTED_MAIN = "b83e4be2182a5e4143808a3dab5f8d929a133caf"
+ACCEPTED_MAIN = "dff38f04131b8f10cd62b543becb71aec5a7080a"
+DECISIONS = "geospatial/finalization/DECISIONS.json"
 CLASSES = {
     1: "campus master plan",
     2: "operating site plan",
@@ -92,6 +93,17 @@ PARENTS = {
 
 def classification(x):
     i, t, _s = x["object_id"], x["object_type"], x["census_status"]
+    if i.startswith("SH-PROP-"):
+        return (
+            6,
+            "Rejected external opportunity; inquiry history creates no company premises or architectural design requirement.",
+        )
+    if i in {"SH-SITE-0017", "SH-SITE-0018", "SH-SITE-0019"}:
+        return (
+            6,
+            "Accepted shared organizational accommodation; no separate dedicated building or additional property is established.",
+        )
+
     if i in ["SH-SITE-0028", "SH-SITE-0029"]:
         return (
             5,
@@ -239,6 +251,30 @@ def build():
             "actual_occupancy": None,
         }
         bind(CAT, "objects", i, i)
+    decisions = read(DECISIONS)
+    source(DECISIONS)
+    source(decisions["canon_path"])
+    for decision in decisions["records"]:
+        record = records[decision["object_id"]]
+        record["geographic_decision"] = decision["disposition"]
+        record["geographic_precision_disposition"] = decision["unknown_disposition"]
+        record["geometry_issue"] = None
+        record["provenance"].append(
+            {
+                "path": decisions["canon_path"],
+                "locator": decision["canon_section"],
+                "sha256": decisions["canon_sha256"],
+            }
+        )
+        if record["class"] == 8:
+            record["status"] = "bounded_design_precision"
+            record["reason"] = (
+                "Geographic/occupancy disposition accepted: "
+                + decision["disposition"]
+                + ". Exact architectural fitout remains unspecified; this is a design disposition, not a pending fictional location decision."
+            )
+        if record["detail_issue"] == "#106":
+            record["detail_issue"] = None
     for site in runtime_sites:
         target = site["geospatial_site_id"]
         record = records[target]
@@ -468,7 +504,7 @@ def main():
         "",
         "Machine-readable appearances, source hashes, aliases, statuses, tenure and unknown temporal/occupancy fields are in [COVERAGE_MATRIX.json](COVERAGE_MATRIX.json). A class 8 disposition is a placeholder requirement, not permission to drop its atlas record. Class 3 requires concept floors even when measured floor counts remain unknown. Class 4 exempts outdoor, rail and civil assets from architectural floors; the existing network and structure representations remain authoritative.",
         "",
-        "Foundry, Atlas Meridian and Advisory lack dedicated accepted physical footprints (SH-SITE-0017–0019). Their organizational cards are class 6 and their physical-footprint question remains class 8; this avoids multiplying business functions into sites. J2 Education (SH-SITE-0014) remains a separate unresolved residential-campus record even where the Sacramento model includes day education. Alexandria retains its existing hosting identity with explicit runtime placement links. Accepted runtime decisions select Switch Reno and IDACORE Boise; provider contracts and assigned cages remain unestablished. Northern Nevada is an acquired synthetic parcel in preconstruction with a separately proposed building/floor concept. Wallaby is historical/killed under the September 6 Cradle closeout despite the earlier catalog OPEN label. Bedford is Fairmont, not the superseded Belle study area.",
+        "Foundry, Atlas Meridian and Advisory use accepted shared accommodation (SH-SITE-0017–0019); class 6 avoids multiplying business functions into properties. J2 Education (SH-SITE-0014) retains its separate regional campus identity and intentionally unspecified parcel, distinct from Sacramento day education. All 34 site/component geographic dispositions follow the delegated addendum; remaining class 8 records concern design detail, not renewed fictional location approval. Alexandria retains its existing hosting identity with explicit runtime placement links. Accepted runtime decisions select Switch Reno and IDACORE Boise; provider contracts and assigned cages remain unestablished. Northern Nevada is an acquired synthetic parcel in preconstruction with a separately proposed building/floor concept. Wallaby is historical/killed under the September 6 Cradle closeout despite the earlier catalog OPEN label. Bedford is Fairmont, not the superseded Belle study area.",
     ]
     (OUT / "COVERAGE_MATRIX.md").write_text("\n".join(lines) + "\n")
     print(json.dumps(d["counts"], indent=2))

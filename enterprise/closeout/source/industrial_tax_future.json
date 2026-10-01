@@ -1,0 +1,40 @@
+{
+  "document_id": "SH-RWH-FUTURE-ROT-20260915",
+  "version": "1.0.0",
+  "acceptance_state": "PENDING_REPOSITORY_ACCEPTANCE",
+  "origin": "NEWLY_AUTHORED_CONDITIONAL_RENEWAL_AND_VALUE_MIX_CONTINUATION",
+  "years": [
+    2027,
+    2028,
+    2029,
+    2030,
+    2031
+  ],
+  "scenarios": [
+    "base",
+    "downside",
+    "expansion"
+  ],
+  "contracts_source": "red_wash/source/core_operating_data.json",
+  "allocation_contracts": [
+    "UCA-2019-04",
+    "UCA-2024-11",
+    "UCA-2025-03",
+    "SPOT-2026-01"
+  ],
+  "taxable_utility_contracts": [
+    "UCA-2019-04",
+    "UCA-2024-11",
+    "UCA-2025-03"
+  ],
+  "planning_rate": "0.0725",
+  "source_hashes": {
+    "red_wash/source/core_operating_data.json": "eb5601f3a519ac175bef07744fa3c23939734f80b5774efeed4800aa73e8aa3f",
+    "enterprise/ccf/company_closeout/industrial_transaction_tax.json": "0416985a0beac5584493d3a0046a7a113134bdaa1c4693e5a25df91b012d98ef"
+  },
+  "scope": "Retain utility own-use, seller burden and Metropolis Illinois receiving facts conditionally; forecast native monthly revenue allocated over all four retained source contract values. No claim existing terms legally bind through2031; no new counterparty/right. Trader excluded from this utility-only provider, not automatically exempt. Separate future trader review remains necessary.",
+  "payment_policy": "Accrue supported seller liability; do not transform forecast sale into customer receipt or tax remittance. No payment cash, receipt-date return or accelerated installment asserted. Finance must expose accrued unpaid balance in funding model. FF003 untouched.",
+  "authority_url": "https://tax.illinois.gov/research/taxinformation/sales/rot.html",
+  "authority_accessed_on": "2026-09-15",
+  "rate_scope": "7.25% existing2026 local rate held solely as scenario assumption, not verified future law."
+}

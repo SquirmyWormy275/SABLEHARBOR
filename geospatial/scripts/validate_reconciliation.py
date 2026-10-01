@@ -1,12 +1,14 @@
 """Cross-domain acceptance checks: regressions must fail even if GIS files are valid."""
 
 import json
+import sys
 from pathlib import Path
 from shapely.geometry import shape
 from model import GEOD, meters_between
 
 BASE = Path(__file__).resolve().parents[1]
 ROOT = BASE.parent
+sys.path.insert(0, str(ROOT))
 
 
 def reconciliation_errors(c, layers):
@@ -131,9 +133,22 @@ def reconciliation_errors(c, layers):
     )
     # Operating-entity creation does not establish shop occupancy or parcel ownership.
     for state in c["asset_states"]:
-        if state["asset_id"] in {"SH-SITE-0002", "SH-SITE-0003"}:
+        if (
+            state["asset_id"] in {"SH-SITE-0002", "SH-SITE-0003"}
+            and state.get("decision_id") != "GEO-KLEIN-FORT-20260913"
+        ):
             check(
                 not state.get("earliest_start") and not state.get("valid_from"),
                 "Institutional founding backdated into physical occupancy",
             )
+    from geospatial.chronology.continuity import load as approved_continuity
+
+    try:
+        approved = approved_continuity()
+        check(
+            all(r in c["asset_states"] for r in approved["states"]),
+            "Approved occupancy states differ from source",
+        )
+    except (ValueError, KeyError) as exc:
+        errors.append(str(exc))
     return errors

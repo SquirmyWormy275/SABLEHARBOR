@@ -42,5 +42,3 @@ Reference assessments retain unexecuted procedures and evidence gaps. Control ma
 - [Office of the General Counsel](legal.md)
 - [Enterprise security capability](security.md)
 - [Finance](finance.md)
-
-Related reading describes useful connections, not additional reporting lines.

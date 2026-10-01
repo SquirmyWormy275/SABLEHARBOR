@@ -1,0 +1,25 @@
+{
+  "baseline_revision": "d91a22c35c91b213204411421de88815f27d8e16",
+  "source_files": 471,
+  "grouped_wordings": 4956,
+  "reviewed_carriers": 6896,
+  "prior_reviewed_carriers": 71249,
+  "cumulative_reviewed_carriers": 78145,
+  "remaining_baseline_carriers": 0,
+  "dispositions": {
+    "HEADING_OR_RESOURCE_POINTER": 409,
+    "IDENTITY_OR_ARTIFACT_PROVENANCE": 283,
+    "IDENTITY_VECTOR_NOT_GEOGRAPHY": 16,
+    "NONLOCATING_CONTEXT_RETAINED": 2983,
+    "SOURCE_CLAIM_RETAINED_WITH_CURRENT_CROSSWALK": 2573,
+    "VERIFIED_TEXT_COUNTERPART": 497,
+    "WORKBOOK_PREVIEW_TITLE": 135
+  },
+  "group_decisions_sha256": "a403039ab6a02eb12ee7aa323fb46420e318529e2a62b97db352fc76a19d7be6",
+  "extraction_sha256": "8e43d22ad5546bc87b568d982596ab076973ec7adc5bf4e94ca5d04ddb8ad18e",
+  "baseline_carrier_adjudication_complete": true,
+  "subsequent_source_review_separate": true,
+  "semantic_census_complete": false,
+  "issue_108_complete": false,
+  "scope": "All remaining baseline discovery carriers have an exact fixed editorial disposition. This does not treat every carrier as a geographic claim or every source claim as current canon. Subsequent source review, visual evidence, geography and delivery have separate acceptance checks."
+}

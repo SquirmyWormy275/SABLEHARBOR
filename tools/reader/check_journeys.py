@@ -16,6 +16,21 @@ sys.path.insert(0, str(ROOT))
 from tools.documents import preview_reader as preview  # noqa: E402
 
 JOURNEYS = {
+    "draft_review": [
+        "README.md",
+        "docs/reader/transactions/README.md",
+        "docs/legal/gap-instruments/REVIEW_WORKFLOW.md",
+    ],
+    "wiki_invoice": [
+        "docs/wiki/Start-Here.md",
+        "docs/reader/exercises/INVOICE.md",
+        "docs/finance/evidence/SH-FIN-HUMAN-001/README.md",
+    ],
+    "finance_department": [
+        "docs/wiki/Home.md",
+        "docs/wiki/departments/finance.md",
+        "docs/finance/READER_EXERCISES.md",
+    ],
     "invoice": [
         "README.md",
         "docs/reader/exercises/README.md",
@@ -84,7 +99,7 @@ def run(output: Path, executable: str):
                                 screens.add(key)
                         if position + 1 < len(paths):
                             target = paths[position + 1]
-                            link = page.locator("main a")
+                            link = page.locator("main a[href]")
                             indexes = link.evaluate_all(
                                 "(links,target)=>links.map((a,i)=>"
                                 "new URL(a.href).pathname===('/'+target)?i:-1).filter(i=>i>=0)",

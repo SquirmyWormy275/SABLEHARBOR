@@ -10,6 +10,19 @@ from enterprise.business.model import BusinessModel, fingerprint
 
 from . import advisory_policy, commercial, credit, matters, research, workforce
 
+# This forecast consumes these eight sources. Completed-period histories and lane
+# receipts share the source directory but belong to their separate generators.
+OPERATING_INPUTS = (
+    "advisory_policy",
+    "commercial",
+    "controls",
+    "credit",
+    "management",
+    "matters",
+    "research",
+    "workforce",
+)
+
 
 class OperatingModel(
     credit.CreditMixin,
@@ -24,8 +37,8 @@ class OperatingModel(
             operations_inputs
             if operations_inputs is not None
             else {
-                p.stem: json.loads(p.read_text())
-                for p in sorted(Path(__file__).with_name("source").glob("*.json"))
+                name: json.loads((Path(__file__).with_name("source") / f"{name}.json").read_text())
+                for name in OPERATING_INPUTS
             }
         )
         super().__init__(inputs)

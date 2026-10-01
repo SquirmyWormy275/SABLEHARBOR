@@ -1,0 +1,108 @@
+{
+  "executed_at": "2026-09-22T06:56:20.511543+00:00",
+  "fixture": "PUBLIC_ONE_ROW_CSV;NOT_FULL_COMPANY_EDITION",
+  "result": {
+    "schema_version": "1.0.0",
+    "result": "PASS",
+    "edition_verification": {
+      "result": "PASS",
+      "members": 1,
+      "components": 1
+    },
+    "portal_commit": "8f9b8eabed3af1d2c050afc9bfe8935fd41f48ae",
+    "portal_module_path": "enterprise/audit_suite/company_store.py",
+    "portal_module_sha256": "38a1aebcebde53051e306465dc2d807a3cd0e60fb8cc974da2235fa268c88292",
+    "checks": {
+      "originals": 1,
+      "transport_records": 1,
+      "originals_reassembled": 1,
+      "future_denials": 1,
+      "ungranted_denials": 1,
+      "revoked_denials": 1,
+      "restored_revoked_denials": 1
+    },
+    "backup_history_equality": true,
+    "transport_contract": "SH-EXACT-BYTE-PARTS-1",
+    "existing_store_max_record_bytes": 26214400,
+    "scope": "Actual isolated CompanyStore import/read/revocation/SQLite restore of public repository originals",
+    "limits": [
+      "No live portal or private company source was modified",
+      "Synthetic software-role engagement only; no audit opinion, instructor key or grading material",
+      "Document import is not a complete company year or external confirmation",
+      "Multipart and empty originals require the explicit transport reconstruction adapter",
+      "Immutable CompanyStore lacks class-based deletion/hold; that gate remains open",
+      "HTTP indirect-disclosure and model inference evaluations remain separate"
+    ],
+    "selected_engagement_review": {
+      "result": "PASS",
+      "edition_id": "test",
+      "selected": [
+        {
+          "available_at": "2026-09-15T00:00:00Z",
+          "bytes": 15,
+          "parts": [
+            {
+              "kind": "EXACT_ORIGINAL",
+              "record": "DOC-4680db90bf5321735a5245842c27e7c46b53e38d",
+              "sha256": "ad804c4b64edd83560e3cf747c971bb55913a7e93af54ca75236460a22cca931"
+            }
+          ],
+          "path": "rows.csv",
+          "sha256": "ad804c4b64edd83560e3cf747c971bb55913a7e93af54ca75236460a22cca931",
+          "system": "finance"
+        }
+      ],
+      "surrounding_population": [
+        {
+          "component": "finance",
+          "fact_status": "NEWLY_AUTHORED_SYNTHETIC_HISTORY",
+          "members": 1,
+          "population_definition": "One row, August synthetic activity"
+        }
+      ],
+      "selection_rule": "Explicit operator-selected paths; bounded API exercise, not audit sampling",
+      "source_available_at": "2026-09-15T00:00:00Z",
+      "retained": [
+        {
+          "artifact_id": "ART-160a14094df302ce17ae3f3f",
+          "artifact_name": "company-source-d49eb3c976f0eac1408a9e34cf8046d1118c78b90b5ce1db10ef604f485a30d0.json",
+          "sha256": "ad804c4b64edd83560e3cf747c971bb55913a7e93af54ca75236460a22cca931",
+          "source_path": "rows.csv",
+          "source_sha256": "ad804c4b64edd83560e3cf747c971bb55913a7e93af54ca75236460a22cca931",
+          "source_record": "DOC-4680db90bf5321735a5245842c27e7c46b53e38d",
+          "system": "finance"
+        }
+      ],
+      "workpaper_versions": 2,
+      "self_review_denied": true,
+      "rejected_self_review_atomic": true,
+      "preparer_id": "USER-9f29df891b7ce4fc444e731c",
+      "reviewer_id": "USER-7fec697fa6669026ab63b2e7",
+      "independent_review_version_bound": true,
+      "export_sha256": "75a2f4aeb94825c0687c83d2a15906e55c17db37ba64a57170750fb4873b7095",
+      "export_artifact_id": "ART-e6a59cd27ca89e200bc4f34a",
+      "engagement_id": "ENG-6c3f9b0acd5f669e4771cbd3",
+      "review_status": "SOFTWARE_ROLE_EXERCISE;LIMITATION;NOT_AUDIT_OPINION",
+      "hold_disposal_status": "NOT_EXERCISED;EXISTING_STORE_LACKS_CLASS_BASED_HOLD_DISPOSAL",
+      "portal_commit": "8f9b8eabed3af1d2c050afc9bfe8935fd41f48ae",
+      "adapter_sha256": "066b0f9ba352eecfcbe5c8123bf8cdeb5b02e9417939bad7ef4ff0df3838bed2",
+      "pinned_portal_archive_sha256": "cf6997891e9be859a40e3a619d6860b853c9c9f74850c0370a50f50bec71e71b",
+      "command": [
+        "/home/kingoftheeast/Projects/SABLEHARBOR-company-closeout/.venv/bin/python",
+        "/tmp/sh-portal-edition-review/tools/company_closeout/portal_engagement.py",
+        "/tmp/sh-selected-review-final-9bp89xm2/rehearsal/SELECTED_REVIEW_PLAN.json",
+        "/tmp/sh-selected-review-final-9bp89xm2/rehearsal/SELECTED_REVIEW_RECEIPT.json"
+      ]
+    }
+  },
+  "negative_test": {
+    "mutation": "Expected selected transport SHA-256 replaced with 64 zeroes",
+    "exit_code": 1,
+    "receipt_created": false,
+    "expected_error": "Retained source bytes differ from edition transport"
+  },
+  "source_hashes": {
+    "/tmp/sh-portal-edition-review/tools/company_closeout/portal_engagement.py": "066b0f9ba352eecfcbe5c8123bf8cdeb5b02e9417939bad7ef4ff0df3838bed2",
+    "tools/company_closeout/portal_rehearsal.py": "85d22a608e9108def0b8293e57652b3a33561ad19d0f4bee04b07008b2e986b4"
+  }
+}

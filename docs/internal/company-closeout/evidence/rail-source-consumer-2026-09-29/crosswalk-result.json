@@ -1,0 +1,361 @@
+{
+  "candidate_geojson_sha256": "2d3358d9dd7d117954b7d36879626659117cb9387b1350b4541abccb726228ad",
+  "source_structure_count": 26,
+  "source_track_count": 11,
+  "status": "READ_ONLY_PROPOSED_CROSSWALK",
+  "structures": [
+    {
+      "candidate_milepost": 5.141138,
+      "candidate_offset_m": 0.0,
+      "coordinate_state": "SOURCE_FIXED_COORDINATE_PROPOSED_RECHAIN",
+      "id": "BR-01",
+      "route_id": "BST-MAIN",
+      "source_milepost": 5.2
+    },
+    {
+      "candidate_milepost": 17.948837,
+      "candidate_offset_m": 0.0,
+      "coordinate_state": "SOURCE_FIXED_COORDINATE_PROPOSED_RECHAIN",
+      "id": "BR-02",
+      "route_id": "BST-MAIN",
+      "source_milepost": 18.1
+    },
+    {
+      "candidate_milepost": 28.240193,
+      "candidate_offset_m": 0.0,
+      "coordinate_state": "SOURCE_FIXED_COORDINATE_PROPOSED_RECHAIN",
+      "id": "BR-03",
+      "route_id": "BST-MAIN",
+      "source_milepost": 28.4
+    },
+    {
+      "candidate_milepost": 2.936588,
+      "candidate_offset_m": 0.0,
+      "coordinate_state": "SOURCE_FIXED_COORDINATE_PROPOSED_RECHAIN",
+      "id": "BR-04",
+      "route_id": "BST-EAST",
+      "source_milepost": 2.8
+    },
+    {
+      "candidate_milepost": 1.89,
+      "candidate_offset_m": 0.0,
+      "coordinate_state": "SOURCE_FIXED_COORDINATE_PROPOSED_RECHAIN",
+      "id": "CUL-01",
+      "route_id": "BST-MAIN",
+      "source_milepost": 1.89
+    },
+    {
+      "candidate_milepost": 3.759899,
+      "candidate_offset_m": 0.0,
+      "coordinate_state": "SOURCE_FIXED_COORDINATE_PROPOSED_RECHAIN",
+      "id": "CUL-02",
+      "route_id": "BST-MAIN",
+      "source_milepost": 3.78
+    },
+    {
+      "candidate_milepost": 5.611138,
+      "candidate_offset_m": 0.0,
+      "coordinate_state": "SOURCE_FIXED_COORDINATE_PROPOSED_RECHAIN",
+      "id": "CUL-03",
+      "route_id": "BST-MAIN",
+      "source_milepost": 5.67
+    },
+    {
+      "candidate_milepost": 7.495344,
+      "candidate_offset_m": 0.0,
+      "coordinate_state": "SOURCE_FIXED_COORDINATE_PROPOSED_RECHAIN",
+      "id": "CUL-04",
+      "route_id": "BST-MAIN",
+      "source_milepost": 7.56
+    },
+    {
+      "candidate_milepost": 9.36663,
+      "candidate_offset_m": 0.0,
+      "coordinate_state": "SOURCE_FIXED_COORDINATE_PROPOSED_RECHAIN",
+      "id": "CUL-05",
+      "route_id": "BST-MAIN",
+      "source_milepost": 9.45
+    },
+    {
+      "candidate_milepost": 11.233356,
+      "candidate_offset_m": 0.0,
+      "coordinate_state": "SOURCE_FIXED_COORDINATE_PROPOSED_RECHAIN",
+      "id": "CUL-06",
+      "route_id": "BST-MAIN",
+      "source_milepost": 11.34
+    },
+    {
+      "candidate_milepost": 13.104588,
+      "candidate_offset_m": 0.0,
+      "coordinate_state": "SOURCE_FIXED_COORDINATE_PROPOSED_RECHAIN",
+      "id": "CUL-07",
+      "route_id": "BST-MAIN",
+      "source_milepost": 13.229999999999999
+    },
+    {
+      "candidate_milepost": 14.968837,
+      "candidate_offset_m": 0.0,
+      "coordinate_state": "SOURCE_FIXED_COORDINATE_PROPOSED_RECHAIN",
+      "id": "CUL-08",
+      "route_id": "BST-MAIN",
+      "source_milepost": 15.12
+    },
+    {
+      "candidate_milepost": 16.858837,
+      "candidate_offset_m": 0.0,
+      "coordinate_state": "SOURCE_FIXED_COORDINATE_PROPOSED_RECHAIN",
+      "id": "CUL-09",
+      "route_id": "BST-MAIN",
+      "source_milepost": 17.009999999999998
+    },
+    {
+      "candidate_milepost": 18.748837,
+      "candidate_offset_m": 0.0,
+      "coordinate_state": "SOURCE_FIXED_COORDINATE_PROPOSED_RECHAIN",
+      "id": "CUL-10",
+      "route_id": "BST-MAIN",
+      "source_milepost": 18.9
+    },
+    {
+      "candidate_milepost": 20.633535,
+      "candidate_offset_m": 0.0,
+      "coordinate_state": "SOURCE_FIXED_COORDINATE_PROPOSED_RECHAIN",
+      "id": "CUL-11",
+      "route_id": "BST-MAIN",
+      "source_milepost": 20.79
+    },
+    {
+      "candidate_milepost": 22.520193,
+      "candidate_offset_m": 0.0,
+      "coordinate_state": "SOURCE_FIXED_COORDINATE_PROPOSED_RECHAIN",
+      "id": "CUL-12",
+      "route_id": "BST-MAIN",
+      "source_milepost": 22.68
+    },
+    {
+      "candidate_milepost": 24.410193,
+      "candidate_offset_m": 0.0,
+      "coordinate_state": "SOURCE_FIXED_COORDINATE_PROPOSED_RECHAIN",
+      "id": "CUL-13",
+      "route_id": "BST-MAIN",
+      "source_milepost": 24.57
+    },
+    {
+      "candidate_milepost": 26.300193,
+      "candidate_offset_m": 0.0,
+      "coordinate_state": "SOURCE_FIXED_COORDINATE_PROPOSED_RECHAIN",
+      "id": "CUL-14",
+      "route_id": "BST-MAIN",
+      "source_milepost": 26.459999999999997
+    },
+    {
+      "candidate_milepost": 28.190193,
+      "candidate_offset_m": 0.0,
+      "coordinate_state": "SOURCE_FIXED_COORDINATE_PROPOSED_RECHAIN",
+      "id": "CUL-15",
+      "route_id": "BST-MAIN",
+      "source_milepost": 28.349999999999998
+    },
+    {
+      "candidate_milepost": 30.080193,
+      "candidate_offset_m": 0.0,
+      "coordinate_state": "SOURCE_FIXED_COORDINATE_PROPOSED_RECHAIN",
+      "id": "CUL-16",
+      "route_id": "BST-MAIN",
+      "source_milepost": 30.24
+    },
+    {
+      "candidate_milepost": 1.636588,
+      "candidate_offset_m": 0.0,
+      "coordinate_state": "SOURCE_FIXED_COORDINATE_PROPOSED_RECHAIN",
+      "id": "CUL-17",
+      "route_id": "BST-EAST",
+      "source_milepost": 1.5
+    },
+    {
+      "candidate_milepost": 3.136588,
+      "candidate_offset_m": 0.0,
+      "coordinate_state": "SOURCE_FIXED_COORDINATE_PROPOSED_RECHAIN",
+      "id": "CUL-18",
+      "route_id": "BST-EAST",
+      "source_milepost": 3.0
+    },
+    {
+      "candidate_milepost": 1.10644,
+      "candidate_offset_m": 0.0,
+      "coordinate_state": "SOURCE_FIXED_COORDINATE_PROPOSED_RECHAIN",
+      "id": "CUL-19",
+      "route_id": "BST-MINERAL",
+      "source_milepost": 1.05
+    },
+    {
+      "candidate_milepost": 2.15644,
+      "candidate_offset_m": 0.0,
+      "coordinate_state": "SOURCE_FIXED_COORDINATE_PROPOSED_RECHAIN",
+      "id": "CUL-20",
+      "route_id": "BST-MINERAL",
+      "source_milepost": 2.1
+    },
+    {
+      "candidate_milepost": 0.433682,
+      "candidate_offset_m": 0.0,
+      "coordinate_state": "SOURCE_FIXED_COORDINATE_PROPOSED_RECHAIN",
+      "id": "HWY-I80-1",
+      "route_id": "BST-MAIN",
+      "source_milepost": 0.4338486504634681
+    },
+    {
+      "candidate_milepost": 0.404178,
+      "candidate_offset_m": 0.0,
+      "coordinate_state": "SOURCE_FIXED_COORDINATE_PROPOSED_RECHAIN",
+      "id": "HWY-I80-2",
+      "route_id": "BST-MAIN",
+      "source_milepost": 0.4043327541069508
+    }
+  ],
+  "track_segments": [
+    {
+      "candidate_boundary_status": "PROPOSED_PROJECTION_NOT_ADOPTED_ASSET_BOUNDARY",
+      "candidate_mp_end": 3.979903,
+      "candidate_mp_start": 0.0,
+      "id": "TRK-BST-MAIN-0",
+      "route_id": "BST-MAIN",
+      "source_boundary_projection_offsets_m": [
+        0.0,
+        2.333
+      ],
+      "source_mp_end": 4,
+      "source_mp_start": 0
+    },
+    {
+      "candidate_boundary_status": "PROPOSED_PROJECTION_NOT_ADOPTED_ASSET_BOUNDARY",
+      "candidate_mp_end": 9.91056,
+      "candidate_mp_start": 3.979903,
+      "id": "TRK-BST-MAIN-4",
+      "route_id": "BST-MAIN",
+      "source_boundary_projection_offsets_m": [
+        2.333,
+        69.403
+      ],
+      "source_mp_end": 10,
+      "source_mp_start": 4
+    },
+    {
+      "candidate_boundary_status": "PROPOSED_PROJECTION_NOT_ADOPTED_ASSET_BOUNDARY",
+      "candidate_mp_end": 14.848837,
+      "candidate_mp_start": 9.91056,
+      "id": "TRK-BST-MAIN-10",
+      "route_id": "BST-MAIN",
+      "source_boundary_projection_offsets_m": [
+        69.403,
+        0.0
+      ],
+      "source_mp_end": 15,
+      "source_mp_start": 10
+    },
+    {
+      "candidate_boundary_status": "PROPOSED_PROJECTION_NOT_ADOPTED_ASSET_BOUNDARY",
+      "candidate_mp_end": 21.841876,
+      "candidate_mp_start": 14.848837,
+      "id": "TRK-BST-MAIN-15",
+      "route_id": "BST-MAIN",
+      "source_boundary_projection_offsets_m": [
+        0.0,
+        42.9
+      ],
+      "source_mp_end": 22,
+      "source_mp_start": 15
+    },
+    {
+      "candidate_boundary_status": "PROPOSED_PROJECTION_NOT_ADOPTED_ASSET_BOUNDARY",
+      "candidate_mp_end": 25.840193,
+      "candidate_mp_start": 21.841876,
+      "id": "TRK-BST-MAIN-22",
+      "route_id": "BST-MAIN",
+      "source_boundary_projection_offsets_m": [
+        42.9,
+        0.0
+      ],
+      "source_mp_end": 26,
+      "source_mp_start": 22
+    },
+    {
+      "candidate_boundary_status": "PROPOSED_PROJECTION_NOT_ADOPTED_ASSET_BOUNDARY",
+      "candidate_mp_end": 29.840193,
+      "candidate_mp_start": 25.840193,
+      "id": "TRK-BST-MAIN-26",
+      "route_id": "BST-MAIN",
+      "source_boundary_projection_offsets_m": [
+        0.0,
+        0.0
+      ],
+      "source_mp_end": 30,
+      "source_mp_start": 26
+    },
+    {
+      "candidate_boundary_status": "PROPOSED_PROJECTION_NOT_ADOPTED_ASSET_BOUNDARY",
+      "candidate_mp_end": 33.155449,
+      "candidate_mp_start": 29.840193,
+      "id": "TRK-BST-MAIN-30",
+      "route_id": "BST-MAIN",
+      "source_boundary_projection_offsets_m": [
+        0.0,
+        0.0
+      ],
+      "source_mp_end": 33.34847676361104,
+      "source_mp_start": 30
+    },
+    {
+      "candidate_boundary_status": "PROPOSED_PROJECTION_NOT_ADOPTED_ASSET_BOUNDARY",
+      "candidate_mp_end": 2.136588,
+      "candidate_mp_start": 0.0,
+      "id": "TRK-BST-EAST-0",
+      "route_id": "BST-EAST",
+      "source_boundary_projection_offsets_m": [
+        0.0,
+        0.0
+      ],
+      "source_mp_end": 2,
+      "source_mp_start": 0
+    },
+    {
+      "candidate_boundary_status": "PROPOSED_PROJECTION_NOT_ADOPTED_ASSET_BOUNDARY",
+      "candidate_mp_end": 4.136588,
+      "candidate_mp_start": 2.136588,
+      "id": "TRK-BST-EAST-2",
+      "route_id": "BST-EAST",
+      "source_boundary_projection_offsets_m": [
+        0.0,
+        0.0
+      ],
+      "source_mp_end": 4,
+      "source_mp_start": 2
+    },
+    {
+      "candidate_boundary_status": "PROPOSED_PROJECTION_NOT_ADOPTED_ASSET_BOUNDARY",
+      "candidate_mp_end": 1.30644,
+      "candidate_mp_start": 0.0,
+      "id": "TRK-BST-MINERAL-0",
+      "route_id": "BST-MINERAL",
+      "source_boundary_projection_offsets_m": [
+        0.0,
+        0.0
+      ],
+      "source_mp_end": 1.25,
+      "source_mp_start": 0
+    },
+    {
+      "candidate_boundary_status": "PROPOSED_PROJECTION_NOT_ADOPTED_ASSET_BOUNDARY",
+      "candidate_mp_end": 2.707963,
+      "candidate_mp_start": 1.30644,
+      "id": "TRK-BST-MINERAL-1.25",
+      "route_id": "BST-MINERAL",
+      "source_boundary_projection_offsets_m": [
+        0.0,
+        0.0
+      ],
+      "source_mp_end": 2.651523236389135,
+      "source_mp_start": 1.25
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "source_blob_count": 18,
+  "digests": {
+    "controlling_source": "19b1f3b8c5eea41cf2e30f8127d083f75012a21772783b811d3ea685866485d1",
+    "historical_knowledge_snapshot": "ed35b065c5aaba6dfefe82dd3532d95e51651fe18715c054747f3ba6a113b46c",
+    "noncontrolling_reference": "7bad385e290efc446764835eb31a0d73e3c8544570861e21eb123ce80c03d424"
+  }
+}

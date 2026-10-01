@@ -32,5 +32,3 @@ Blackridge is not a Sable Harbor subsidiary. The committed m00 database is not t
 - [Finance](../departments/finance.md)
 - [Internal Audit](../departments/internal-audit.md)
 - [Founders, early colleagues and later people](People.md)
-
-Related reading describes useful connections, not additional reporting lines.

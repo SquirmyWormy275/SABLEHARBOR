@@ -1,0 +1,9 @@
+{
+  "status": "MANUAL_REVIEW_PASS",
+  "path": "/tmp/sh-legal-review-preview-d/docs/legal/gap-instruments/accounting/LINKS.md.html",
+  "sha256": "2939849d6d3599feea0eaa86218f2f81934ad87a8fc511e8af5c5b5ef6f8b547",
+  "method": "All prior narrative vertical segments inspected; corrected eight tables captured in Chromium at left/right and overlapping850px offsets, all columns and rows manually inspected at original resolution.",
+  "correction": "Minimum160px columns and normal word breaking replaced crushed numerical strings and vertical fragmented headers. Horizontal table scrolling verified.",
+  "images": "/tmp/sh-accounting-horizontal",
+  "decisions": "All29overlappingviewports in /tmp/sh-legal-review-html-b/13-contact*.png passed originalresolution review."
+}

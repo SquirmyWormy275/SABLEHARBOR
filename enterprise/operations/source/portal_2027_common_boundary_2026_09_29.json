@@ -1,0 +1,64 @@
+{
+  "record_id": "SH-PORTAL-2027-COMMON-BOUNDARY-SOURCE-v0.1",
+  "version": "0.1.0",
+  "state": "PROVISIONAL_PROSPECTIVE_COMPANY_SOURCE",
+  "authored_at": "2026-09-29T06:06:27Z",
+  "repository_available_at": null,
+  "repository_acceptance_at": null,
+  "scenario": "FICTIONAL_2027_COMMON_REFERENCE_BOUNDARY",
+  "fact_status": "2026_DESIGN_FACTS_WITH_UNVERIFIED_2027_ACTIVATION",
+  "access_scope": "PUBLIC_SYNTHETIC",
+  "accepted_source_commit": "17c1e02b531436f2e698efeddec63552b69e0475",
+  "source_pins": {
+    "industrial_entities": {"path": "industrial/source/entities.json", "sha256": "799a24baf3240d50c5d6a80ac0f9ddb9d023b7a36de058ec12546aac60caee29"},
+    "services": {"path": "enterprise/services/source/services.json", "sha256": "f9cd08b7add29b7be6c51670bf0c92bcca4b582e9853d83d25d518171da75818"},
+    "runtime_sites": {"path": "enterprise/services/source/runtime_sites_2026-09-11.json", "sha256": "fa216f629762503865fd9f1a3207e87691cd484cec9885bf25ce045b4525519c"},
+    "ccf_procedures": {"path": "enterprise/ccf/assurance/design_data/control_procedures.json", "sha256": "258f5c868e16f3dc197594857dc86a4f2b3ef11e3e5a36dd0a80a9fc6d40c679"},
+    "hosting_canon": {"path": "docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md", "sha256": "fd309a9bdf596ea96498b7207b60ea3bea70a35d8c418371aa96c06d928bb17b"},
+    "assurance_scope": {"path": "enterprise/runtime/docs/ASSURANCE_SCOPE.md", "sha256": "4db7e0b179802891b1a632d08d280445350339cee7fbb70a89d059020e587994"}
+  },
+  "boundary": {
+    "scope_id": "SH-REF-2027-IDENTITY-RECOVERY-RECORDS",
+    "description": "Prospective internal identity, recovery and records-control reference boundary for nonpersonal local exercises. No operated Reno/Boise estate or customer service is asserted.",
+    "legal_entity_id": "SHI",
+    "service_ids": ["SVC-identity", "SVC-backup", "SVC-compute"],
+    "runtime_site_ids": ["RUNTIME-RENO-COLO", "RUNTIME-BOISE-DR", "RUNTIME-NN-OWNED-DC"],
+    "confirmed_2027_operating_systems": null,
+    "confirmed_2027_contracts": null,
+    "confirmed_2027_data_sets": null,
+    "confirmed_2027_human_accounts": null,
+    "confirmed_2027_nonhuman_accounts": null,
+    "confirmed_2027_privileged_accounts": null,
+    "confirmed_2027_disposal_targets": null,
+    "company_2027_opening_complete": false,
+    "system_scope_state": "DESIGN_REFERENCE_ACTIVATION_UNVERIFIED"
+  },
+  "calendar": {
+    "start": "2027-01-01T00:00:00Z",
+    "end_exclusive": "2028-01-01T00:00:00Z",
+    "timezone": "UTC",
+    "rule_state": "CONDITIONAL_DESIGN_RULES_NOT_ACCEPTED_COMPANY_DUE_EVENTS",
+    "company_due_count": null,
+    "company_observed_count": null,
+    "company_missing_count": null,
+    "supplied_2027_company_performance_source_ids": [],
+    "duty_rules": [
+      {"rule_id": "SH-REF-IAM006-NONHUMAN", "control_ids": ["SH-IAM-006"], "service_id": "SVC-identity", "owner_team": "TEAM-identity", "condition": "Full nonhuman account inventory, workload ownership and risk-approved rotation requirements; quarterly review applies to the actual in-scope population.", "specific_due_dates_state": "UNKNOWN_UNTIL_INVENTORY_AND_APPROVED_CALENDAR"},
+      {"rule_id": "SH-REF-BCM002-BACKUP", "control_ids": ["SH-BCM-002"], "service_id": "SVC-backup", "owner_team": "TEAM-reliability", "condition": "Protected dataset inventory and approved RPO-derived schedule, retention and isolation; each scheduled job is then a due occurrence.", "specific_due_dates_state": "UNKNOWN_UNTIL_APPROVED_RPO_AND_DATASET_SCHEDULE"},
+      {"rule_id": "SH-REF-BCM003-RESTORE", "control_ids": ["SH-BCM-003"], "service_id": "SVC-backup", "owner_team": "TEAM-reliability", "condition": "Critical dataset/recovery-path selection and approved BIA/risk criteria; restore exercise dates require an authorized schedule.", "specific_due_dates_state": "UNKNOWN_UNTIL_BIA_RISK_AND_EXERCISE_PLAN"},
+      {"rule_id": "SH-REF-IAM005-PRIVILEGED", "control_ids": ["SH-IAM-005"], "service_id": "SVC-identity", "owner_team": "TEAM-identity", "condition": "Actual privileged-account population and approved role/owner assignments; each emergency use and quarterly population review is separately due when triggered.", "specific_due_dates_state": "UNKNOWN_UNTIL_ACCOUNT_CENSUS_AND_APPROVED_CALENDAR"},
+      {"rule_id": "SH-REF-REC004-DISPOSAL", "control_ids": ["SH-REC-004"], "service_id": "SVC-backup", "owner_team": null, "condition": "Approved retention/hold and disposition authority plus an actual scheduled disposal or exit event; active and backup lifecycle must be scoped.", "specific_due_dates_state": "UNKNOWN_UNTIL_RETENTION_HOLD_AND_DISPOSAL_EVENT"}
+    ]
+  },
+  "case_branches": {
+    "A": {"source_role": "COMMON_BOUNDARY_ONLY", "company_delta_state": "NOT_AUTHORED"},
+    "B": {"source_role": "COMMON_BOUNDARY_ONLY", "company_delta_state": "NOT_AUTHORED"}
+  },
+  "limits": [
+    "The five rules are conditional design obligations, not five accepted 2027 company due populations.",
+    "Local A/B exercise declarations, executions, failures and audit workpapers do not become company evidence or a corporate calendar through this source.",
+    "No January 2027 site activation, executed host contract, data inventory, user census, RPO/BIA, retention schedule, role assignment, or performed control is inferred from 2026 design references.",
+    "This source does not cover the separate SH-IAM-007 payroll-release Q1 case, customer-operated services, or all company systems.",
+    "No private A/B scenario delta, audit answer or evaluator result is published."
+  ]
+}

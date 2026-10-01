@@ -1,0 +1,15 @@
+{
+  "backup_sha256": "4140b4fe12e2cd0ec4046b8115cada2bb772a336d879c53fbbb589cd5d8e1965",
+  "held_disclosure_denied": true,
+  "held_records": 1,
+  "history_entries": 2,
+  "history_sha256": "650de3089e50bd18487ba77dd1dbbd21d1de77b4797190ddf5596241b0c2fe69",
+  "isolated_disk_restore": "PASS",
+  "portal_or_production_restore": "NOT_ASSERTED",
+  "retained_live_records": 1,
+  "revoked_principal_denied": true,
+  "scope": "ACTUAL_LOCAL_SOFTWARE_REFERENCE_FIXTURE_REHEARSAL",
+  "source_records": 4,
+  "suppressed_records": 3,
+  "valid_access_retained": true
+}

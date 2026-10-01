@@ -36,7 +36,19 @@ def main():
             lines.append('| ' + item['sheet'] + ' | ' + str(item['row_count']) + ' | ' +
                          link(base + f'qa/workbook-{index:02d}.png', 'Open') + ' |')
         lines += ['| Checks | — | ' + link(base + f'qa/workbook-{len(mapping)+2:02d}.png', 'Open') + ' |', '']
-    lines += ['## Legal reading records', '', '| Record | PDF | Editable HTML |', '|---|---|---|']
+    full_manifest = ROOT / 'docs/legal/full-text/render-manifest.json'
+    if full_manifest.exists():
+        full = json.loads(full_manifest.read_text())
+        lines += ['## Complete legal source editions', '',
+                  'These full-length editions replace the abbreviated dossiers as the primary legal reading deliverable. Every selected source is reproduced in full; a source that is itself a summary or proposal retains that status.', '',
+                  link('docs/legal/full-text/README.md', 'Full source inventory, provenance and validation') + ' · ' +
+                  link('docs/legal/full-text/index.html', 'Searchable local browser index'), '',
+                  '| Complete source record | PDF | Pages | Editable HTML |', '|---|---|---:|---|']
+        for item in full['artifacts']:
+            lines.append('| ' + item['id'] + ' | ' + link(item['pdf'], 'Read full document') + ' | ' + str(item['pages']) + ' | ' + link(item['html'], 'Open locally') + ' |')
+    lines += ['## Earlier abbreviated reading aids', '',
+              'These 13 summaries are retained for comparison. They do not constitute full legal-document delivery.', '',
+              '| Record | PDF | Editable HTML |', '|---|---|---|']
     for family in ['commercial', 'corporate', 'assets-rights']:
         path = ROOT / 'docs/legal/evidence' / family / 'visual-manifest.json'
         for item in json.loads(path.read_text())['artifacts']:
@@ -46,6 +58,9 @@ def main():
               link('docs/finance/evidence/coverage/draft-review/QA.json', 'Accounting QA record') + ' · ' +
               link('docs/legal/evidence/assets-rights/drafts/qa/REVIEW.md', 'Legal page review'), '',
               'GitHub previews Markdown and images. Download/open HTML locally from the checkout; GitHub file preview does not execute it. Approval must name the exact files or manifest version; a source merge does not accept these designs.', '']
+    if full_manifest.exists():
+        lines += [link('docs/legal/full-text/CLOSEOUT.md', 'Full-length legal delivery and validation') + ' · ' +
+                  link('docs/legal/full-text/QA_MANIFEST.json', 'Every full-length page and HTML review record'), '']
     OUT.write_text('\n'.join(lines))
     print(f'Wrote {OUT.relative_to(ROOT)} from {len(records)} verified artifact links')
 

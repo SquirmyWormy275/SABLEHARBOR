@@ -1,0 +1,125 @@
+{
+  "release": "business-operations-v1.0.0",
+  "release_sha256": "b8e81572d829fec7209d1d18eb15bac21e52b37714211aee005b5f1a68ab5817",
+  "source_revision": "57cfa1b1c483ccf1f8b15d82c4cbdadbeef8063e",
+  "sources": [
+    {
+      "id": "opening_balances",
+      "path": "docs/legal/gap-instruments/period-close/source/opening_balances.csv",
+      "sha256": "66da92bcfb0791686e60ccd48b245840019b1d376f08680b4a245471258d67e2",
+      "release_member": "industrial/forecast/opening_balances.csv",
+      "release_member_sha256": "a0046753e4ac43b91abd6615a46e75531efa8c5be373028691cc2cbe3e557b77",
+      "selector": {
+        "entity": "ARU_GROUP",
+        "scenario": "base",
+        "year": "2027",
+        "month": "0"
+      },
+      "row_count": 22,
+      "full_member_rows": 494
+    },
+    {
+      "id": "journal",
+      "path": "docs/legal/gap-instruments/period-close/source/journal.csv",
+      "sha256": "0224ac15b5b4270d441de132519e559bd538e8f351bca8c04e654fa107f084e5",
+      "release_member": "industrial/forecast/journal.csv",
+      "release_member_sha256": "15281940f3f6d2bd72caa7e1f3ba715eaf784389a1524e01766553aab8d2ec61",
+      "selector": {
+        "entity": "ARU_GROUP",
+        "scenario": "base",
+        "year": "2027",
+        "month": "1"
+      },
+      "row_count": 274,
+      "full_member_rows": 123716
+    },
+    {
+      "id": "trial_balances",
+      "path": "docs/legal/gap-instruments/period-close/source/trial_balances.csv",
+      "sha256": "effa9d74b7b69cb181a0ddb4a95d1c3fb3a7695958a7304921b1095096e43d9c",
+      "release_member": "industrial/forecast/trial_balances.csv",
+      "release_member_sha256": "3997d80cf4ae35c1778c6203b751372bc94089c0fd4d166de2fcf3fe1ea814f6",
+      "selector": {
+        "entity": "ARU_GROUP",
+        "scenario": "base",
+        "year": "2027",
+        "month": "1"
+      },
+      "row_count": 34,
+      "full_member_rows": 10350
+    },
+    {
+      "id": "monthly_statements",
+      "path": "docs/legal/gap-instruments/period-close/source/monthly_statements.csv",
+      "sha256": "5e0749e5a79d8c0050734343eaa8a85ccf73afc12edd7982bfdcaee4b9aac928",
+      "release_member": "industrial/forecast/monthly_statements.csv",
+      "release_member_sha256": "849d48fc089dba1d87b274b8a028120b5af2889c36f2112223782584ac3c74c8",
+      "selector": {
+        "entity": "ARU_GROUP",
+        "scenario": "base",
+        "year": "2027",
+        "month": "1"
+      },
+      "row_count": 1,
+      "full_member_rows": 360
+    },
+    {
+      "id": "assets",
+      "path": "docs/legal/gap-instruments/period-close/source/assets.csv",
+      "sha256": "bfdd0be08eb22813bd94c0d36f790315b29dd7727bb854853145847c78a60d13",
+      "release_member": "industrial/forecast/assets.csv",
+      "release_member_sha256": "4e4c0776cb92178555164dc86eb12f0bbf29650972fbf9bd350b7e59b158a6d6",
+      "selector": {
+        "entity": "ARU_GROUP",
+        "scenario": "base",
+        "year": "2027",
+        "month": "1"
+      },
+      "row_count": 8,
+      "full_member_rows": 13867
+    },
+    {
+      "id": "debt",
+      "path": "docs/legal/gap-instruments/period-close/source/debt.csv",
+      "sha256": "7ede82644162878ea8e4fb3a029e35162a2dc765360772639a72ea95c085c237",
+      "release_member": "industrial/forecast/debt.csv",
+      "release_member_sha256": "e7f44d305baa2ee6ecac12e65d674ce540ed5d1007c316be58a276098e7ceb92",
+      "selector": {
+        "entity": "ARU_GROUP",
+        "scenario": "base",
+        "year": "2027",
+        "month": "1"
+      },
+      "row_count": 1,
+      "full_member_rows": 180
+    },
+    {
+      "id": "industrial_bank_reconciliations",
+      "path": "docs/legal/gap-instruments/period-close/source/industrial_bank_reconciliations.csv",
+      "sha256": "397114b6de513e8f259132f8d36f335712aebc042de515962505a6f848f91df5",
+      "upstream_path": "docs/finance/evidence/treasury/source/industrial_bank_reconciliations.csv",
+      "upstream_sha256": "12e2a7c840f5202a76e4317fd693f53a110202b64e8571831c3b0ded4a80dded",
+      "selector": {
+        "entity": "ARU_GROUP",
+        "scenario": "base",
+        "year": "2027",
+        "month": "1"
+      },
+      "row_count": 1
+    },
+    {
+      "id": "industrial_bank_transactions",
+      "path": "docs/legal/gap-instruments/period-close/source/industrial_bank_transactions.csv",
+      "sha256": "6f79d78f9e5135b490b0c7fc0bfc4b3fac72bef076df280d7423c0345187dd96",
+      "upstream_path": "docs/finance/evidence/treasury/source/industrial_bank_transactions.csv",
+      "upstream_sha256": "920b465e8ec8c247cc74475c94a512078355b0aa96c87f06d4823500b00547f3",
+      "selector": {
+        "entity": "ARU_GROUP",
+        "scenario": "base",
+        "year": "2027",
+        "month": "1"
+      },
+      "row_count": 33
+    }
+  ]
+}

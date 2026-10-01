@@ -6,8 +6,6 @@
 
 Pale Sun owns Red Wash Mining, LLC, which operates the Red Wash uranium mine in Sweetwater County, Wyoming. The archive includes acquisition records, mine and processing descriptions, operating evidence, financial models and logistics constraints.
 
-**Reviewed:** September 12, 2026 · Fictional enterprise; source records control.
-
 ## Reading guide
 
 Read the acquisition story alongside the operating constraints of the mining business. Separate investment assumptions from available cash, mine readiness and the permissions needed to move uranium.
@@ -16,15 +14,15 @@ Read the acquisition story alongside the operating constraints of the mining bus
 
 [Current business dossier](../../../docs/business-lines/PALE_SUN.md) · [Letterhead dossier PDF](../../../docs/business-lines/publications/SH-BIZ-PALE-SUN-001_v1.1.0.pdf)
 
-The legal chain is Sable Harbor → Sable Harbor Industrial Holdings → Pale Sun → Red Wash Mining. RWH is a stable reporting code, not the name “Red Wash Holdings.” Pale Sun’s own office location is not established by the mine’s geography.
+Pale Sun belongs to Sable Harbor Industrial Holdings and owns Red Wash Mining. Its mining operation is in the Great Divide Basin / Red Desert, north of Wamsutter in Sweetwater County, Wyoming. The [location directory](../Locations.md) distinguishes the operating sites from offices and proposed facilities. In the accounting records, RWH is the reporting code for Red Wash Mining.
 
 ## Organization and people
 
 [![Pale Sun / Red Wash existing organization chart](../../../docs/organization/assets/current/pale-sun-red-wash.png)](../../../docs/organization/charts/pale-sun-red-wash.md)
 
-[Read the chart’s text roster, relationship key and source qualifications](../../../docs/organization/charts/pale-sun-red-wash.md). Grouped functions are not automatically reporting lines, separate companies or additional employees.
+[Chart and text roster](../../../docs/organization/charts/pale-sun-red-wash.md).
 
-[Named people and recorded roles](../../../docs/organization/charts/people-pale-sun-red-wash.md) — the current chart preserves unknown joining years rather than inventing them.
+[Named people and recorded roles](../../../docs/organization/charts/people-pale-sun-red-wash.md).
 
 ## Operating, legal and control records
 
@@ -69,5 +67,3 @@ Uranium custody remains gated, and no Red Wash rail spur is authorized. Conditio
 - [Abandoned acquisition opportunities](../subjects/Historical-Opportunities.md)
 - [Safety and environmental governance](../departments/safety-environment.md)
 - [Finance](../departments/finance.md)
-
-Related reading describes useful connections, not additional reporting lines.

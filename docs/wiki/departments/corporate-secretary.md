@@ -41,5 +41,3 @@ A documented recovery plan is not proof of an operating estate or a successfully
 - [Office of the General Counsel](legal.md)
 - [Continuity and crisis responsibilities](../subjects/Continuity.md)
 - [Enterprise Technology Services](technology.md)
-
-Related reading describes useful connections, not additional reporting lines.

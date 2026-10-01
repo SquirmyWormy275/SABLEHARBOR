@@ -1,0 +1,114 @@
+{
+  "document_id": "SH-COMPANY-RESIDUAL-CLOSEOUT-2026-09-22",
+  "version": "1.0.0",
+  "state": "OPEN",
+  "recorded_at": "2026-09-22T16:40:09.032248+00:00",
+  "supersession_scope": "Current work/disposition status only. Preserves REGISTER.json and all published edition bytes; does not adopt new commercial rights, erase adverse outcomes, or certify full runtime effectiveness.",
+  "published_edition": {
+    "version": "1.0.0",
+    "source_commit": "812676c2ac739d6fba91f770ee1369eea9f2b46d",
+    "company_canon_pr": 166,
+    "maintenance_pr": 168,
+    "published_at": "2026-09-22T15:51:43Z",
+    "release_url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/sable-harbor-company-edition-v1.0.0",
+    "receipt_sources": [
+      {
+        "name": "RELEASE_RECEIPT.json",
+        "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.0.0/RELEASE_RECEIPT.json",
+        "sha256": "182b5d6ba7f742efec8191f9481723abf704c4091df79c20ae06c2b78cde23f5"
+      },
+      {
+        "name": "DELIVERY_COMPLETION_2026-09-22.json",
+        "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.0.0/DELIVERY_COMPLETION_2026-09-22.json",
+        "sha256": "95ecf6128a90fc924b022ede738a37532b00b3daccfa57ed64ecd4c863b13ea0"
+      }
+    ]
+  },
+  "residuals": [
+    {
+      "id": "SH-RES-TAX-INTEGRATION",
+      "status": "RESOLVED_FOR_ADOPTED_METHOD",
+      "disposition": "Accepted-source build, 90 independent annual taxpayer checks and source/statement/export reconciliation passed. A hypothetical alternative preclosing prior-year minimum is not established and is not used by the adopted current-month method.",
+      "affected_claim": "Final after-tax legal/consolidated results and funding need.",
+      "next_owner_action": "Maintain published evidence; future corrections require a separately versioned successor."
+    },
+    {
+      "id": "SH-RES-CAP-RIGHTS",
+      "status": "OPEN_MATERIAL_SOURCE_OR_AUTHORITY",
+      "disposition": "Current holdings and directors remain settled. A source-backed proposal quantifies half-original-unit and 10%-outstanding designation thresholds; neither is adopted pending owner selection. Source inventory can report no located side letter without asserting universal absence.",
+      "affected_claim": "A complete enforceability or every-rights representation.",
+      "next_owner_action": "Corporate/legal owner: resolve the particular instrument term before asserting it.",
+      "evidence": "docs/internal/company-closeout/residual-finance-2026-09-22/README.md"
+    },
+    {
+      "id": "SH-RES-DEBT-RIGHTS",
+      "status": "OPEN_MATERIAL_SOURCE_OR_AUTHORITY",
+      "disposition": "Source work recovered the $11.5M term/$2M revolver components of the $13.5M payoff and the modeled January 7, 2031 maturity with $15.375M scheduled balloon. Definitive contractual, covenant and security rights remain distinct. See the dated finance workpaper; owner selection of genuinely new terms is pending. The administrative source builder records both payoff components and screens 149 asset records without granting liens or posting new cash.",
+      "affected_claim": "Binding availability, covenant compliance and lien-free collateral.",
+      "next_owner_action": "Legal/Treasury: resolve DEBT-R01 and DEBT-R02 instruments.",
+      "evidence": "docs/internal/company-closeout/residual-finance-2026-09-22/README.md"
+    },
+    {
+      "id": "SH-RES-HOST-RIGHTS",
+      "status": "OPEN_MATERIAL_SOURCE_OR_AUTHORITY",
+      "disposition": "Completed source inventory and internal administrative routing. Two prospective term structures and their common terms are prepared for owner selection; neither changes historical economics or establishes signature/activation.",
+      "affected_claim": "Complete contract enforceability or additional long-term exclusivity.",
+      "next_owner_action": "Legal/Cradle: resolve HOST-R01 before extending the contractual claim.",
+      "evidence": "docs/internal/company-closeout/host-residual-successor/TERMS_PROPOSAL.md"
+    },
+    {
+      "id": "SH-RES-ESCROW-CLAIMS",
+      "status": "PRESERVED_ADVERSE_OR_CONDITIONAL_FACT",
+      "disposition": "Unreleased balances, unadjudicated claims and future conditions remain inspectable facts. No cash availability, recovery or title cure is inferred; a complete claims-merits assertion remains unsupported.",
+      "affected_claim": "Recovered losses, cured title or available escrow cash.",
+      "next_owner_action": "Acquisition legal/environmental owners: evaluate claims and deliverables on their recorded dates.",
+      "evidence": "docs/internal/company-closeout/host-residual-successor/dispositions.json"
+    },
+    {
+      "id": "SH-RES-CONTROL-OUTCOMES",
+      "status": "PRESERVED_ADVERSE_OR_FUTURE_FACT",
+      "disposition": "Failed, missing and future events retain their cutoff states and response owners. Clean outcomes are not a condition for an honest edition; no later event is backdated into the frozen September14 cutoff.",
+      "affected_claim": "Zero exposure, clean environmental pathway or future duty already performed.",
+      "next_owner_action": "Radiation protection, environmental and benefits accountable roles identified in the source."
+    },
+    {
+      "id": "SH-RES-CONTROL-SCOPE",
+      "status": "PRESERVED_DECLARED_LIMIT",
+      "disposition": "Original affected claim, evidence and next owner remain in REGISTER.json.",
+      "affected_claim": "Universal historical control performance or professional framework equivalence.",
+      "next_owner_action": "Obligations/CCF owner: maintain C05-R06/R07/R09 scope boundaries."
+    },
+    {
+      "id": "SH-RES-RUNTIME",
+      "status": "PARTIAL_EXERCISED_SCOPE",
+      "disposition": "Pinned portal 5344bf76 passed 104 isolated runtime/access/recovery tests. Six company adapter guards passed. Three copies of actual published company records exercised hold and retention denials, durable-intent interruption, held retry denial and explicit retry; two selected copies were unlinked and one unselected backup retained. Logical fixture dates are May 2027, observed September 22, 2026. This does not establish authoritative CompanyStore disposal, later-deletion suppression on older restore, corporate retention adoption or full runtime gates.",
+      "affected_claim": "Full end-to-end Alexandria/Daedalus operation and all thirteen external readiness gates.",
+      "next_owner_action": "Active audit-portal owner: native integration and precise gate evidence; integration owner: final full-edition rehearsal.",
+      "evidence": "docs/internal/company-closeout/evidence/newruntime/5344bf76/README.md"
+    },
+    {
+      "id": "SH-RES-ARTIFACT-ENGINEERING",
+      "status": "PRESERVED_DECLARED_LIMIT",
+      "disposition": "Exact-original artwork and engineering limits remain. The dated J2 successors complete ten current-office administrative episodes and 18 occupied Orientation admissions/standard commissions. Personal names for anonymous offices, biographies and broader earlier history remain distinct issue #19 claims. Frozen edition 1.0.0 does not contain these later successors.",
+      "affected_claim": "Exact image identity, unperformed engineering and full appointment-history completion.",
+      "next_owner_action": "Existing issue owners retain their precise next actions.",
+      "evidence": [
+        "docs/internal/company-closeout/J2_ADMINISTRATIVE_HISTORY_2026-09-22.md",
+        "docs/internal/company-closeout/ORIENTATION_COMMISSIONS_2026-09-22.md"
+      ]
+    },
+    {
+      "id": "SH-RES-ACCEPTANCE",
+      "status": "DELIVERED_DECLARED_SCOPE",
+      "disposition": "PR166 company adoption and PR168 maintenance source accepted; all nine published asset digests verified; fresh package download and independent import passed. Full closeout is not thereby certified.",
+      "affected_claim": "Accepted company edition or completed transition package.",
+      "next_owner_action": "Maintain published evidence; future corrections require a separately versioned successor."
+    }
+  ],
+  "delivery_status": "CONDITIONAL_ON_PR_169_MERGE",
+  "acceptance": {
+    "pr": "https://github.com/SquirmyWormy275/SABLEHARBOR/pull/169",
+    "condition": "Merged following required validation; branch presence alone is not acceptance.",
+    "scope": "Administrative source reconciliations, bounded implementation/evidence and current-status navigation. Unselected capital, debt and host proposals remain OPEN; full runtime and distinct issue criteria remain open."
+  }
+}

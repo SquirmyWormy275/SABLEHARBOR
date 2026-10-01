@@ -176,8 +176,7 @@ def test_bound_instructor_preview_disables_writeback_without_disabling_key(tmp_p
     assert client.get(base + "/instructor-binding", headers=lh).status_code == 403
     assert client.get(base + "/instructor-comparison?revision=1", headers=lh).status_code == 403
     assert (
-        client.get("/api/engagements/ENG-foreign/instructor-binding", headers=th).status_code
-        == 403
+        client.get("/api/engagements/ENG-foreign/instructor-binding", headers=th).status_code == 403
     )
     assert (
         client.get(

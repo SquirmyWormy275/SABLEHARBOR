@@ -1081,6 +1081,8 @@ def build(output=OUT, forecast_output=None, forecast_result=None, source=None, l
     for scenario in policy["scenarios"]:
         books = Books(scenario, policy, types)
         retained, selected_bridge, core_groups = legacy_core(books, snapshot)
+        if adjustment_provider is not None and hasattr(adjustment_provider, "post_opening"):
+            adjustment_provider.post_opening(books)
         if not bridge:
             bridge = selected_bridge
         snapshots = snapshot_rows(forecast_result, anchor, scenario, types)
