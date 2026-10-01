@@ -1,5 +1,17 @@
 # Audit-suite execution closeout
 
+Execution remains in progress. The current final workrooms are under
+`enterprise/generated/audit-suite/full-scope-company-audit-2026-10-01/main-run-v1/`.
+They share one company initialized with 5,608 admitted native versions before
+either audit began. Both started with 409 unrun tasks and zero evidence or
+fieldwork. Activation proof `40722199d57872e420e8fa0bee3ca048584adb3e15dd9593b5497770e1f086b3`
+and separate birth verification
+`bf804a33a1945fd332581070227edde813765b22e87e0e4a7292806b47472a36`
+record that boundary. B00 is now collecting ordinary company originals.
+Current status and exact implementation gates are recorded in
+`ACTIVE_AGENT_GRAPH_2026-10-01.md`. The packets below remain preserved historical
+technical snapshots and supply no inherited task results for the current pair.
+
 The latest indexed private review packet is
 `enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-refresh-run-post-original-journals-a1939-b2066-v4/`
 at A revision 1939 and B revision 2066. Its final independent technical and

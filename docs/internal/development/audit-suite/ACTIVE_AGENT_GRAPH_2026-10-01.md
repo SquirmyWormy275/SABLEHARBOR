@@ -9,6 +9,33 @@ The target is the complete fictional audit experience against Sable Harbor's
 persistent company operations. The selected engineering runs below validate
 parts of that workflow; they are not a separate product or a completed audit.
 
+The current final run is
+`enterprise/generated/audit-suite/full-scope-company-audit-2026-10-01/main-run-v1/`.
+One company was initialized before both workrooms with all 5,608 admitted native
+versions. Each workroom began with 409 unrun tasks and zero evidence, workpapers,
+populations, samples, findings and reviews. The independent birth verification
+is `bf804a33a1945fd332581070227edde813765b22e87e0e4a7292806b47472a36`;
+activation proof is `40722199d57872e420e8fa0bee3ca048584adb3e15dd9593b5497770e1f086b3`.
+The ordinary period-close clock advance to January 16, 2028 at 13:00 UTC is
+`573b1377749b2da3bcb6a6498f2c4cc990b09b6cdb97fb97cf00728bf7ac74a4`.
+The audit period remains 2027. B00 scope-source collection is running through
+ordinary requests, native grants, discovery and actual collection receipts.
+No historical audit result was imported into these workrooms.
+
+Current independently accepted implementation gates are retained service
+`1a00fe72a37b2e2ddefd098733567ce651364610c3e2a2055835698f6b0630fe`,
+shared-pair composition
+`8a544a1a2792de48b97bc7b90dcaf3f4ae827f9eabca21aa3296f24d4fd46ce7`,
+two scope-dependency methods
+`b0a466f3f99bfa4d9fc0034c41a3a809847e1ff290946528177aaf7178317bf1`,
+and the corrected twenty continuity methods
+`f05db52a547540d49e3121ea349054ba5f3fe113362e3984189ddb3c556c3d08`.
+Every family still requires its own exact task-contract gate and new fieldwork.
+B01's candidate is undergoing a native-role correction; B02 and B05 are being
+verified. Root is testing a runtime performance successor in an isolated
+checkout. That candidate supplies no current runtime or fieldwork authorization.
+Older activation-pending statements below describe preceding review stages.
+
 | Lane | Current deliverable | Integration condition |
 | --- | --- | --- |
 | Company operations | Company-owned person, account and entitlement populations, dated local authority and lifecycle operations | Canonical people and affiliations, explicit inclusion/exclusion rules, actual local permission mechanics and independently reviewed original records |
