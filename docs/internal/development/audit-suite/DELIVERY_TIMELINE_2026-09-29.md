@@ -170,6 +170,14 @@ reports: 29 cohorts, 560 native versions, 43 components, 30 pins and 273
 aliases per profile. Neither route nor registry establishes actual site
 operation or task credit.
 
+The reviewed V7 unsupported-clause PBC successor adds the selected physical
+source only to SH-SEC-001 CC6.4/A1.2 and revises that one draft request's next
+action. It preserves all 121 unsupported clauses per side, 30 groups, 53
+unaccepted possible no-event reviews, nine earlier changed actions and zero
+sent requests, N/A decisions or task credits. A V8 disposable collector probe
+is undergoing main-local review; selected-version access does not close the
+period-population gate.
+
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
 2–16, 2027 (weeks 18–20) is the working target. March 16, 2027 (week 24) is
