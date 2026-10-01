@@ -862,7 +862,10 @@ def test_full52_citations_fit_reviewed_batch_limit_without_losing_facts_or_nativ
     actual = methods.inspections(originals["records"], as_of=originals["as_of"])
     for inspected in actual:
         observations = inspected["observations"]
-        assert all(1 <= len(observation["evidence"]) <= 20 for observation in observations)
+        assert all(
+            1 <= len(observation["evidence"]) <= 20 and len(observation["id"]) <= 128
+            for observation in observations
+        )
         assert set(inspected["artifact_ids"]) == {
             item["artifact_id"] for observation in observations for item in observation["evidence"]
         }

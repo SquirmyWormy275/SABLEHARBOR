@@ -1255,7 +1255,8 @@ def bounded_observations(observations):
             continue
         parts = [evidence[start : start + 20] for start in range(0, len(evidence), 20)]
         continuation_ids = [
-            original["id"] + f"/CUSTODY-PART-{number}" for number in range(2, len(parts) + 1)
+            "CUSTODY-" + hashlib.sha256(original["id"].encode()).hexdigest() + f"-{number}"
+            for number in range(2, len(parts) + 1)
         ]
         out.append(
             {
@@ -1273,7 +1274,9 @@ def bounded_observations(observations):
         for number, part in enumerate(parts[1:], 2):
             out.append(
                 {
-                    "id": original["id"] + f"/CUSTODY-PART-{number}",
+                    "id": "CUSTODY-"
+                    + hashlib.sha256(original["id"].encode()).hexdigest()
+                    + f"-{number}",
                     "status": original["status"],
                     "evidence": part,
                     "facts": {
