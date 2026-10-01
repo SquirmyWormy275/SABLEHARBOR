@@ -180,6 +180,17 @@ receipts, including the physical-site source. Original company stores and P1
 were unchanged. Selected-version access does not close the period-population
 gate.
 
+**LEG001/V9 checkpoint:** The selected fictional counsel operating docket
+passed isolated and main-local independent review with 50 Clean and 50 Messy
+native versions for one synthetic customer/service/BA/subcontractor chain.
+It preserves the Messy BA flowdown and provider-support historical exceptions,
+an incomplete external-matter population, unverified 2027 law and undetermined
+real HIPAA applicability. The reviewed V9 partial registry now has 30 cohorts,
+660 native versions, 44 components, 31 scenario pins and 279 aliases per
+profile; isolated and main-local reports match byte for byte. This is selected
+source routing only. All 66 authored LEG001 clauses per side remain
+unsupported, and neither a fresh audit pair nor task credit has been created.
+
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
 2–16, 2027 (weeks 18–20) is the working target. March 16, 2027 (week 24) is
