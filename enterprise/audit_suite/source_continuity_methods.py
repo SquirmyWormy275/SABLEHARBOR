@@ -463,6 +463,18 @@ def _occurrence_observations(task, history, backup, restore, timing, local_resto
                 )
             )
     if clause in {"TOE", "CHECK-SOC2:A1.3"} and control in {"SH-BCM-003", "SH-BCM-004"}:
+        for number, occurrence in enumerate(
+            timing.get("recorded_interval_chronology_exceptions", [])
+        ):
+            result.append(
+                _observation(
+                    f"UNAVAILABLE-EXERCISE-{number + 1:03d}",
+                    occurrence,
+                    _fact_sources(history, occurrence, fallback),
+                    status="SUPPORT_UNAVAILABLE",
+                    locator="$.reported interval outside native event/publication boundary",
+                )
+            )
         for number, occurrence in enumerate(timing.get("observations", [])):
             failed = (
                 not occurrence["duration_claim_agrees"]
@@ -773,6 +785,7 @@ def _timestamp(history):
             "reason": "EXACT_BIA_TECHNICAL_AUTHORITY_RESULT_PRIORS_NOT_COLLECTED",
             "actual_marker_restore_performed": False,
         }
+    valid, chronology = [], []
     for row in results:
         d = _detail(row)
         require(
@@ -787,14 +800,54 @@ def _timestamp(history):
             ),
             "Typed nonnegative exercise timing values required",
         )
-    return analyze_continuity_timestamps(
-        bcm,
+        try:
+            require(
+                isinstance(d.get("exercise_start_at"), str)
+                and isinstance(d.get("observed_finish_at"), str),
+                "Recorded interval required",
+            )
+            start, finish = _time(d["exercise_start_at"]), _time(d["observed_finish_at"])
+            supported = (
+                start
+                <= finish
+                <= _time(row["source"]["event_at"])
+                <= _time(row["source"]["available_at"])
+                <= history.cutoff
+            )
+        except (ValueError, TypeError):
+            supported = False
+        if supported:
+            valid.append(row)
+        else:
+            chronology.append(
+                {
+                    "source": reference(row["source"]),
+                    "reported_start_at": d.get("exercise_start_at"),
+                    "reported_finish_at": d.get("observed_finish_at"),
+                    "actual_examination_cutoff": history.cutoff,
+                    "status": "SUPPORT_UNAVAILABLE",
+                    "reason": (
+                        "REPORTED_INTERVAL_UNKNOWN_OR_OUTSIDE_NATIVE_EVENT_PUBLICATION_BOUNDARY"
+                    ),
+                }
+            )
+    if not valid:
+        return {
+            "status": "SUPPORT_UNAVAILABLE",
+            "recorded_interval_chronology_exceptions": chronology,
+            "actual_marker_restore_performed": False,
+        }
+    valid_ids = {r["artifact_id"] for r in valid}
+    analysis = analyze_continuity_timestamps(
+        [r for r in bcm if r not in results or r["artifact_id"] in valid_ids],
         {
             "exercise_record": "MARKER-RECOVERY",
             "target_record": "SVC-COMPUTE",
             "authority_record": "SELECTED-SERVICE",
         },
     )
+    analysis["recorded_interval_chronology_exceptions"] = chronology
+    return analysis
 
 
 def _restores(history, scratch_root):
@@ -1214,6 +1267,7 @@ def examine(records, *, as_of, scratch_root):
                     if not o["duration_claim_agrees"]
                     or not o["recorded_elapsed_within_declared_rto"]
                 ]
+                exceptions += timing.get("recorded_interval_chronology_exceptions", [])
         else:
             selected = history.selected(
                 "bcm",

@@ -514,3 +514,43 @@ def test_task_plan_pin_is_checked_before_any_scratch_copy(tmp_path, monkeypatch)
     with pytest.raises(ProcedureError, match="Exact B03 task instruction plan"):
         examine(records, as_of=context.simulated_at, scratch_root=tmp_path)
     assert not (tmp_path / "BCM003-LOCAL-RESTORE-001").exists()
+
+
+@pytest.mark.parametrize(
+    "interval",
+    [
+        ("2028-01-01T01:00:00Z", "2028-01-01T01:20:00Z"),
+        ("2027-08-01T02:10:00Z", "2027-08-01T02:30:00Z"),
+        ("2027-08-01T02:00:00Z", "2027-08-01T01:40:00Z"),
+    ],
+)
+def test_reported_exercise_outside_native_occurrence_is_not_a_performed_interval(
+    tmp_path, interval
+):
+    originals = neutral_originals()
+    exercise = next(
+        r
+        for r in originals
+        if r["source"]["system"] == "bcm.exercise_result" and r["source"]["version"] == 1
+    )
+    body = json.loads(exercise["content"])
+    body["detail"]["exercise_start_at"], body["detail"]["observed_finish_at"] = interval
+    body["detail"]["measured_restore_minutes_simulated"] = 20
+    reseal_document(exercise, body)
+    records, context = collect(tmp_path, originals)
+    tmp_path.chmod(0o700)
+    inspection = by_clause(
+        examine(records, as_of=context.simulated_at, scratch_root=tmp_path),
+        "003",
+        "CHECK-SOC2:A1.3",
+    )
+    arithmetic = inspection["result"]["examined_attributes"]["recorded_timestamp_reperformance"]
+    assert len(arithmetic["recorded_interval_chronology_exceptions"]) == 1
+    assert (
+        len(arithmetic["observations"]) == 1
+        and arithmetic["observations"][0]["source"]["version"] == 2
+    )
+    refused = next(
+        o for o in inspection["observations"] if o["id"].startswith("UNAVAILABLE-EXERCISE")
+    )
+    assert refused["status"] == "SUPPORT_UNAVAILABLE"
