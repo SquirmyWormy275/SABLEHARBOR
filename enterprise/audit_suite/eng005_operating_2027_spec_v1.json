@@ -1,0 +1,39 @@
+{
+  "schema": "SH_ENG005_SELECTED_OPERATING_CHANGE_SPEC_V1",
+  "qualification": "FICTIONAL_2027_COMPANY_SELECTED_CHANGE_OPERATION_NO_REAL_DEPLOYMENT",
+  "company": "SABLE-HARBOR-REFERENCE",
+  "service_id": "SVC-compute",
+  "selected_period": ["2027-09-12T00:00:00+00:00", "2027-10-20T23:59:59+00:00"],
+  "selected_population": ["CHG-RNO-MARKER-2027-01", "CHG-BOI-GATE-2027-02"],
+  "ordinary": {
+    "change_id": "CHG-RNO-MARKER-2027-01",
+    "site": "RUNTIME-RENO-COLO",
+    "configuration_key": "nonpersonal_marker_checkpoint_interval_minutes",
+    "baseline": 30,
+    "candidate": 20,
+    "rollback": 30,
+    "required_tests": ["SCHEMA", "BOUNDARY", "RECOVERY"],
+    "requester": "AS-P014",
+    "executor": "AS-P007",
+    "independent_security_reviewer": "AS-P008"
+  },
+  "emergency": {
+    "change_id": "CHG-BOI-GATE-2027-02",
+    "site": "RUNTIME-BOISE-DR",
+    "configuration_key": "nonpersonal_marker_retry_limit",
+    "baseline": 2,
+    "candidate": 4,
+    "rollback": 2,
+    "requester": "AS-P007",
+    "local_observer": "AS-P005",
+    "corporate_emergency_authority_status": "NOT_EVIDENCED_OPEN",
+    "independent_retrospective_reviewer": "AS-P008"
+  },
+  "historical_prospective_exercise_id": "ENG005-SELECTED-2027-001",
+  "historical_exercise_is_operating_source": false,
+  "real_deployment": false,
+  "actual_phi": false,
+  "external_packets_or_writes": 0,
+  "enterprise_policy_approved": false,
+  "audit_task_credit": false
+}
