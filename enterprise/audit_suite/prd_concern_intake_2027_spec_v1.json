@@ -1,0 +1,19 @@
+{
+  "schema": "SH_FICTIONAL_2027_PRD_CONCERN_INTAKE_SPEC_V1",
+  "truth_class": "TRAINING_SCENARIO_ONLY",
+  "customer_id": "SIM-COVERED-CUSTOMER-01",
+  "service_id": "SIM-RESTRICTED-HOSTING-01",
+  "change_id": "SIM-PRD-SUPPORT-ROUTE-CHANGE-01",
+  "concern_id": "SIM-CUSTOMER-CONCERN-01",
+  "claimant_id": "SIM-UNVERIFIED-CLIENT-OPS-01",
+  "selected_internal_recipient_roles": ["CUSTOMER_DELIVERY", "LEGAL", "PRODUCT", "SUPPORT_RECOVERY"],
+  "chronology": {"CLEAN": "2027-11-19", "MESSY": "2027-11-20"},
+  "expected_native_versions": {"CLEAN": 8, "MESSY": 13},
+  "limits": [
+    "One future-authored fictional concern submitted to a local simulated company inbox; the claimant's customer identity and contact authority are unverified.",
+    "The earlier PRD internal notice gate remains blocked and contractual notice duty remains undetermined; P004 and AS-P003 are scenario contacts, not accepted external signatories.",
+    "Company drafts and dispatch denials are native internal history. There is no accepted fictional delivery, separate customer acknowledgment, real network send, actual contract or deployed service assertion.",
+    "The Messy initial recipient omission, false completion, denied dispatch attempt and open historical exception remain after a later internal correction.",
+    "One selected case does not establish a complete concern/channel population, exact authored communication clause, operating effectiveness, audit task credit or a fresh pair."
+  ]
+}
