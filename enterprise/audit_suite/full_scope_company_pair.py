@@ -195,6 +195,59 @@ def control_for(state, task_id):
     return matches[0]["control_id"]
 
 
+def documentary_population_attribution(state, rows):
+    """Separate the audited subject period from supporting document dates.
+
+    This population contains examined documentary attributes, not operating
+    occurrences. A January close or an antecedent design can support a 2027
+    examination without changing its actual native dates. The collected-byte
+    task method must separately establish relevance, cadence and sufficiency.
+    """
+    scope = state["scope"]
+    require(scope.get("timezone") == "UTC", "Explicit UTC documentary scope required")
+    start, end = scope["period_start"], scope["period_end"]
+    require(isinstance(start, str) and isinstance(end, str), "Explicit audit period required")
+    first = _time(start + "T00:00:00+00:00" if len(start) == 10 else start)
+    last = _time(end + "T23:59:59.999999+00:00" if len(end) == 10 else end)
+    require(first <= last, "Ordered documentary audit attribution period required")
+    originals = []
+    for row in rows:
+        source = row["source"]
+        event = _time(source["event_at"]) if source["event_at"] is not None else None
+        relation = (
+            "NO_NATIVE_OCCURRENCE_CLOCK"
+            if event is None
+            else "ANTECEDENT_DOCUMENT"
+            if event < first
+            else "POST_PERIOD_DOCUMENT"
+            if event > last
+            else "DOCUMENT_CREATED_IN_AUDIT_PERIOD"
+        )
+        originals.append(
+            {
+                "artifact_id": row["artifact_id"],
+                "native_source": {k: source[k] for k in CLOCK_ID},
+                "document_creation_relative_to_audit_period": relation,
+            }
+        )
+    require(
+        originals and any(r["native_source"]["event_at"] for r in originals),
+        "Actual documentary originals and source dates required",
+    )
+    return {
+        "kind": "SELECTED_DOCUMENTARY_EXAMINATION_ATTRIBUTES_NOT_CONTROL_OCCURRENCES",
+        "audit_attribution_period": {"start": start, "end": end, "timezone": "UTC"},
+        "audit_attribution_instants": {"start": first, "end": last},
+        "original_native_document_dates": originals,
+        "native_dates_or_receipt_clocks_changed": False,
+        "document_date_establishes_operating_period_or_cadence": False,
+        "enterprise_or_full_period_denominator_established": False,
+        "attribution_basis": "Current audited subject period only. The exact task method's "
+        "performed and unperformed facets determine relevance and actual control occurrence "
+        "dates. Before/after-period documents never automatically become operating events.",
+    }
+
+
 def record_documentary_items(
     room, task_id, rows, observations, *, performed, unperformed, result, disposition=None
 ):
@@ -208,8 +261,7 @@ def record_documentary_items(
     state, auditor, engagement = room.state(), room.auditor, room.engagement
     control = control_for(state, task_id)
     require(len({o["id"] for o in observations}) == len(observations), "Distinct observed items")
-    periods = [r["source"]["event_at"] for r in rows if r["source"]["event_at"] is not None]
-    require(periods, "Selected source event bounds required")
+    attribution = documentary_population_attribution(state, rows)
     state = command(
         room.engine,
         auditor,
@@ -217,19 +269,21 @@ def record_documentary_items(
         "population.import",
         {
             "artifact_id": rows[0]["artifact_id"],
-            "title": "Observed documentary subpopulation " + task_id,
+            "title": "Selected documentary examination attributes " + task_id,
             "rows": [{"id": o["id"]} for o in observations],
             "scope": {
                 "boundary_id": "corporate",
-                "unit": "selected native originals",
+                "unit": "selected documentary examination attributes, not operating occurrences",
                 "timezone": "UTC",
-                "period_start": min(periods),
-                "period_end": max(periods),
+                "period_start": attribution["audit_attribution_instants"]["start"],
+                "period_end": attribution["audit_attribution_instants"]["end"],
             },
             "source": {
                 "source_id": "ordinary-collected:" + task_id,
                 "query": "Actual clock-bound discovery; exact retained native versions",
-                "completeness_representation": "Observed selected subpopulation only; "
+                "completeness_representation": "Selected documentary attributes only; "
+                "audit period is subject attribution, not document creation or occurrence period. "
+                "Original source dates remain in the linked workpaper. Operating-event, "
                 "enterprise/full-year completeness and qualified acceptance unestablished",
                 "excluded_ids": [],
             },
@@ -270,6 +324,7 @@ def record_documentary_items(
         "observations": observations,
         "examination": result,
         "source_custody": [{k: r["source"][k] for k in CLOCK_ID} for r in rows],
+        "documentary_population_attribution": attribution,
         "conclusion": disposition["conclusion"],
         "independent_review": "PENDING_RESERVED_REVIEWER",
     }
@@ -897,6 +952,7 @@ class BoundWorkroom:
             any(r["source"]["event_at"] is not None for r in retained),
             "Actual selected source event bounds required before append",
         )
+        documentary_population_attribution(self.state(), retained)
         require(
             isinstance(inspection["observations"], list)
             and inspection["observations"]

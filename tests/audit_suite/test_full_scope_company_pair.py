@@ -15,6 +15,7 @@ from enterprise.audit_suite.full_scope_company_pair import (
     FullScopePair,
     PinnedReview,
     command,
+    documentary_population_attribution,
 )
 from enterprise.audit_suite.persistent_company_journey import native_rows, write
 from enterprise.audit_suite.source_library_audit import (
@@ -38,7 +39,7 @@ pytestmark = pytest.mark.skipif(
 )
 
 
-def neutral_source(root):
+def neutral_source(root, *, original_date="2027-02-01"):
     root.mkdir(mode=0o700)
     store = CompanyStore(root)
     for branch in ("ALPHA", "BETA"):
@@ -51,8 +52,8 @@ def neutral_source(root):
                 "event-one",
                 expected_version=0,
                 command_id=f"neutral-base-{branch}-{system}",
-                event_at="2027-02-01T01:00:00Z",
-                available_at="2027-02-01T02:00:00Z",
+                event_at=original_date + "T01:00:00Z",
+                available_at=original_date + "T02:00:00Z",
                 content=json.dumps({"engineering_neutral_fixture": True, "revision": 1}).encode(),
                 provenance={
                     "source_reference": "neutral-company-native-original",
@@ -325,6 +326,90 @@ def test_actual_normal_records_cite_exact_retained_bytes_and_do_not_credit_other
             rows=rows,
             method=neutral_inspection,
         )
+
+
+@pytest.mark.parametrize("original_date", ["2026-02-01", "2027-02-01"])
+def test_examining_audited_year_preserves_antecedent_and_post_period_document_dates(
+    tmp_path, original_date
+):
+    tmp_path.chmod(0o700)
+    pair = FullScopePair.initialize(
+        accepted=neutral_source(tmp_path / "accepted-neutral", original_date=original_date),
+        repository=REPO,
+        program_pack=PACK,
+        routes_by_mode=neutral_routes(),
+        destination=tmp_path / "neutral-pair",
+        operator_id="NEUTRAL-COMPANY-OPERATOR",
+        engineering_only=True,
+    )
+    room = pair.rooms["CLEAN"]
+    command(
+        room.engine,
+        room.auditor,
+        room.engagement,
+        "clock.advance",
+        {"mode": "TARGET_DATE", "target": "2028-01-16T09:00:00Z"},
+    )
+    native_before = native_rows(pair.world.database)
+    rows = acquire(room)
+    receipts_before = [json.dumps(r["receipt"], sort_keys=True) for r in rows]
+    room.append_reviewed_batch(
+        batch="neutral-post-period-examination",
+        review=neutral_method_review(pair),
+        rows=rows,
+        method=neutral_inspection,
+    )
+    state = room.state()
+    paper = json.loads(state["workpapers"][0]["versions"][0]["text"])
+    attribution = paper["documentary_population_attribution"]
+    assert attribution["audit_attribution_period"] == {
+        "start": "2027-01-01",
+        "end": "2027-12-31",
+        "timezone": "UTC",
+    }
+    assert [
+        r["document_creation_relative_to_audit_period"]
+        for r in attribution["original_native_document_dates"]
+    ] == [
+        "ANTECEDENT_DOCUMENT"
+        if original_date.startswith("2026")
+        else "DOCUMENT_CREATED_IN_AUDIT_PERIOD",
+        "POST_PERIOD_DOCUMENT",
+    ]
+    for population in state["populations"]:
+        scope = json.loads(population["immutable"]["scope_json"])
+        assert scope["period_start"] == "2027-01-01T00:00:00.000000+00:00"
+        assert scope["period_end"] == "2027-12-31T23:59:59.999999+00:00"
+        assert "not operating occurrences" in scope["unit"]
+    assert attribution["native_dates_or_receipt_clocks_changed"] is False
+    assert attribution["document_date_establishes_operating_period_or_cadence"] is False
+    assert attribution["enterprise_or_full_period_denominator_established"] is False
+    assert paper["source_custody"][1]["event_at"].startswith("2028-01-10")
+    assert native_rows(pair.world.database) == native_before
+    assert receipts_before == [json.dumps(r["receipt"], sort_keys=True) for r in rows]
+    assert room.engine.artifacts.read(state["artifacts"][1]) == rows[1]["retained_bytes"]
+    assert next(t for t in state["tasks"] if t["id"] == TASK)["conclusion"] == "LIMITATION"
+    assert all(t["conclusion"] == "NOT_RUN" for t in state["tasks"] if t["id"] != TASK)
+    assert all(t["conclusion"] == "NOT_RUN" for t in pair.rooms["MESSY"].state()["tasks"])
+    assert not state["reviews"] and not any(t["conclusion"] == "PASS" for t in state["tasks"])
+
+
+@pytest.mark.parametrize("change", ["timezone", "reversed_period"])
+def test_documentary_attribution_rejects_ambiguous_scope_without_appending(pair, change):
+    room = pair.rooms["CLEAN"]
+    rows = acquire(room)
+    before = room.state()
+    invalid = json.loads(json.dumps(before))
+    if change == "timezone":
+        invalid["scope"]["timezone"] = "America/Los_Angeles"
+    else:
+        invalid["scope"]["period_start"], invalid["scope"]["period_end"] = (
+            invalid["scope"]["period_end"],
+            invalid["scope"]["period_start"],
+        )
+    with pytest.raises(ProcedureError, match="UTC documentary|Ordered documentary"):
+        documentary_population_attribution(invalid, rows)
+    assert room.state() == before
 
 
 def test_independently_bounded_failed_attribute_can_finish_without_professional_pass(pair):
