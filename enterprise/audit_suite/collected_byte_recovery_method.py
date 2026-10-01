@@ -90,7 +90,9 @@ def checked_originals(rows, context):
     for item in rows:
         source, raw, receipt = item["source"], item["content"], item["receipt"]
         require(
-            source["company"] == context.company
+            type(source["version"]) is int
+            and source["version"] >= 1
+            and source["company"] == context.company
             and source["branch"] == context.branch
             and receipt["source"] == source
             and receipt["principal_id"] == context.auditor
@@ -127,7 +129,11 @@ def reference(source):
 
 def join(pointer, originals):
     require(
-        isinstance(pointer, dict) and set(NATIVE_ID) | {"sha256"} <= pointer.keys(),
+        isinstance(pointer, dict)
+        and set(BUSINESS_REFERENCE) <= pointer.keys()
+        and pointer.keys() <= set(BUSINESS_REFERENCE) | {"imported_at"}
+        and type(pointer["version"]) is int
+        and pointer["version"] >= 1,
         "Exact native version and digest reference required",
     )
     item = originals.get(tuple(pointer[k] for k in NATIVE_ID))
@@ -268,6 +274,18 @@ def examine_restore(
         backup["runtime_id"] == runtime["runtime_id"]
         and backup["dataset_id"] == restore["dataset_id"],
         "Backup runtime/dataset differs",
+    )
+    backup_binding = runtime["bindings"].get(backup_item["source"]["record"])
+    require(
+        backup_binding is not None
+        and all(
+            backup_binding[k] == backup[k]
+            for k in ("dataset_id", "occurrence_id", "operation")
+        )
+        and _time(plan["period_start"])
+        <= _time(backup["business_attempted_at"])
+        < _time(plan["period_end_exclusive"]),
+        "Selected backup is outside the original execution binding/period",
     )
     for name, pointer in {
         "captured_configuration": backup["source_pin"],

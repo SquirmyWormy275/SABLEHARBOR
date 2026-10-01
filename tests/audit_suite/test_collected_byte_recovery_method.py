@@ -55,7 +55,7 @@ def row(system, record, day, document, *, version=1):
     }
 
 
-def fixture():
+def fixture(*, old_configuration=None):
     ctx = CollectionContext(
         "NEUTRAL-COMPANY", "ALPHA", "ENG-NEUTRAL", "AUDITOR", "2028-01-03T09:00:00Z"
     )
@@ -79,6 +79,11 @@ def fixture():
             "qualification": "LOCAL_BYTE_BACKUP_RUNTIME_NOT_DEPLOYMENT_OR_BIA_ACCEPTANCE",
             "datasets": {"CONFIG-BYTES": "/original/archive/not-opened/config.json"},
             "bindings": {
+                "B1": {
+                    "dataset_id": "CONFIG-BYTES",
+                    "occurrence_id": "BACKUP-1",
+                    "operation": "BACKUP",
+                },
                 "R1": {
                     "dataset_id": "CONFIG-BYTES",
                     "occurrence_id": "RESTORE-1",
@@ -99,7 +104,11 @@ def fixture():
             "authority": "DECLARED_LOCAL_BYTE_OPERATION_ONLY",
         },
     )
-    old = {"attempts": 2, "timeout_ms": 100, "max_total_ms": 200}
+    old = (
+        {"attempts": 2, "timeout_ms": 100, "max_total_ms": 200}
+        if old_configuration is None
+        else old_configuration
+    )
     current = {"attempts": 3, "timeout_ms": 100, "max_total_ms": 300}
     captured = row(
         "backup-runtime-history.source_dataset", "CONFIG-BYTES", "2027-02-05T00:01:00Z", old
@@ -120,6 +129,8 @@ def fixture():
         {
             "runtime_id": "NEUTRAL-LOCAL-BYTE-RUNTIME",
             "dataset_id": "CONFIG-BYTES",
+            "occurrence_id": "BACKUP-1",
+            "operation": "BACKUP",
             "performed_by": "LOCAL-OPERATOR",
             "business_attempted_at": "2027-02-05T01:00:00Z",
             "source_pin": reference(captured["source"]),
@@ -206,6 +217,26 @@ def test_missing_backup_original_is_unavailable_support_never_reconstructed_from
 
 
 @pytest.mark.parametrize(
+    "configuration",
+    [
+        {"attempts": True, "timeout_ms": 100, "max_total_ms": 200},
+        {"attempts": 2, "timeout_ms": 100, "max_total_ms": 50},
+    ],
+)
+def test_intact_recovered_bytes_do_not_establish_typed_configuration_usability(
+    tmp_path, configuration
+):
+    tmp_path.chmod(0o700)
+    rows, kw = fixture(old_configuration=configuration)
+    result = examine_restore(rows, scratch=tmp_path / "bounded-restore", **kw)
+    assert result["real_isolated_byte_restore_performed"]
+    assert result["independent_byte_checks"]["backup_equals_its_captured_source"]
+    assert not result["typed_json_usability"]["minimum_single_attempt_budget"]
+    assert not result["typed_json_usability"]["application_workflow_usability_established"]
+    assert not result["full_task_credit"]
+
+
+@pytest.mark.parametrize(
     "field,value",
     [
         ("engagement_id", "ENG-OTHER"),
@@ -230,6 +261,19 @@ def test_changed_exact_version_digest_rejects_instead_of_latest_or_equal_byte_al
     kw["restore_ref"]["sha256"] = "0" * 64
     with pytest.raises(ProcedureError, match="pointer"):
         examine_restore(rows, scratch=tmp_path / "bad", **kw)
+
+
+@pytest.mark.parametrize("mutation", ["boolean_version", "missing_available_clock"])
+def test_incomplete_or_boolean_native_reference_is_not_an_exact_version(tmp_path, mutation):
+    tmp_path.chmod(0o700)
+    rows, kw = fixture()
+    if mutation == "boolean_version":
+        kw["restore_ref"]["version"] = True
+    else:
+        del kw["restore_ref"]["available_at"]
+    with pytest.raises(ProcedureError, match="Exact native"):
+        examine_restore(rows, scratch=tmp_path / "bad", **kw)
+    assert not (tmp_path / "bad").exists()
 
 
 def test_presealed_predicate_does_not_admit_source_executable_instructions_or_archived_copy_path(
