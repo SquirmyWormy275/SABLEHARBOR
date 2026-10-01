@@ -109,7 +109,7 @@ All canonical affiliations, proposed
 offices, local service delegations and earlier failures remain distinct. The
 first operating account is January 1 at 03:15; no earlier continuous operation is
 established. Thirty-two restricted original witnesses are private custody,
-not auditor access. The source is not yet admitted to the operational library.
+not auditor access. Its admission to the consolidated V3 library is recorded below.
 Main review: `eca954944dcc67d7dc5c80e3863f42f5fa1a87e0ff5896d603a0a902d5723b0f`.
 The rejected v5 and its chronology, custody and authority proofs remain preserved.
 
@@ -172,7 +172,27 @@ acceptance still covers only the exact selected V2.1 library. A consolidated
 successor library and actual company activation remain the next integration
 dependencies; drafts provide no source acceptance. The consolidated library
 must preserve operational provenance, source-admission metadata and executed
-byte payloads as well as ordinary document bodies.
+byte payloads as well as ordinary document bodies. That source dependency is now
+accepted and reproduced in main: V3 has 5,608 versions from 5,600 distinct
+originals plus eight approved common-input copies, 69 physical components and
+65 cohorts. Root's comparison did not import the projection compiler. It checked
+232,514 unchanged body/operating-metadata leaves, 19,247 full and 126 compact
+references, 2,261 unchanged byte contracts and all 72,423 original provenance
+leaves. The 204 unresolved dependencies retain their restrictions. Original
+executed definitions/text and historical failures remain unchanged. Thirty-two
+focused source checks and separate read-only verification passed in main.
+Main source-quality review:
+`1f152fd1e8ddb924b0214d092d246c30411d2dc59b7730e4646eea2d66906ee4`.
+
+The successor adapter has a separate exact code/source admission. Independent
+review exercised 33 neutral schema, authority, clock and held-WAL cases; main
+staging compared all 5,608 native rows and system owners with no engagement,
+grants or collection journals. Seventy-five focused adapter/gate/runtime checks
+passed. Gate:
+`d889054d7c94e511bbb946aafcb400ee9093eb06608595063a802addee65ad2c`.
+The prior b733 adapter and its 1,783-version acceptance remain historical;
+they cannot authorize this successor code or source. Shared-runtime activation
+and new task-specific fieldwork remain separate from source admission.
 
 Collected-original legal intake methods are independently accepted and integrated,
 with 35 focused tests and separately authored three/six-channel, two-month

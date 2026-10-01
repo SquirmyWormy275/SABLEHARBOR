@@ -1094,8 +1094,8 @@ actual Sable Harbor activation and the consolidated library remain unperformed.
 
 The corrected 3,399-version person/account source is independently accepted and
 reproduced in main, including 1,462 independently reperformed local permission
-decisions, 24 monthly populations and eight quarterly joins. It is not yet admitted
-to the company library. Its original-custody witnesses remain restricted and its
+decisions, 24 monthly populations and eight quarterly joins. It is now admitted
+to the separately reviewed consolidated V3 library. Its original-custody witnesses remain restricted and its
 January 1 03:15 operating start does not establish earlier coverage. Explicit
 successor admission of older company histories and these accepted records remains
 required. Source acceptance supplies no audit credit. The active graph records the
@@ -1108,5 +1108,19 @@ versions across the two runs, with exact byte/receipt/source checks and recorded
 December-to-January clock transitions. All nine tasks remain partial with explicit
 unperformed clauses. The adapter gate now binds its exact accepted library, and
 65 focused checks passed. This is selected fieldwork, not one completed full-scope
-audit. Company activation, the successor library, remaining procedures and
+audit. Company activation, remaining procedures and
 final acceptance workflow remain in progress.
+
+The consolidated V3 company library is independently accepted and freshly
+reproduced in main: 5,608 versions from 5,600 originals and eight explicitly
+approved common-input copies. Independent fidelity compared 232,514 unchanged
+body/operating-metadata leaves and all 72,423 provenance leaves, with exact
+native/scalar/vector/byte custody. The 204 restricted dependencies and earlier
+operating gaps remain explicit; this is selected company history, not enterprise
+or annual operating completeness. Main source review:
+`1f152fd1e8ddb924b0214d092d246c30411d2dc59b7730e4646eea2d66906ee4`.
+Separate read-only verification and 32 focused source tests passed. The successor
+adapter has its own reviewed code and exact source pins, 33 independent neutral
+cases and a main 5,608-row stage before audit creation. Gate:
+`d889054d7c94e511bbb946aafcb400ee9093eb06608595063a802addee65ad2c`.
+Older source and adapter acceptance records remain unchanged and narrower.

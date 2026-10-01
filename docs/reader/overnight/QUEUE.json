@@ -2049,15 +2049,30 @@
       },
       "selected_execution_focused_tests_passed": 65,
       "successor_library_candidate": {
-        "status": "DRAFT_SOURCE_FIDELITY_REVIEW_PENDING",
+        "status": "ACCEPTED_CONSOLIDATED_SELECTED_LIBRARY_MAIN_REPRODUCED",
         "projected_versions": 5608,
         "distinct_admitted_raw_identities": 5600,
         "approved_common_input_counterparts": 8,
         "draft_restricted_reference_count": 194,
-        "source_acceptance": false,
-        "adapter_execution_authorization": false,
+        "source_acceptance": true,
+        "adapter_execution_authorization": true,
         "existing_v2_1_frozen": true,
-        "operational_provenance_and_executed_byte_fidelity_review_pending": true
+        "operational_provenance_and_executed_byte_fidelity_review_pending": false,
+        "main_source_review_sha256": "1f152fd1e8ddb924b0214d092d246c30411d2dc59b7730e4646eea2d66906ee4",
+        "main_database_sha256": "952b1cb02c7079907e5722c7e6e40c2a12e33fd34b40498e12b875ff0161da4f",
+        "main_manifest_sha256": "27b02deb67fde2676b33e786688122f55d7797ca17cc3190ca05c4bc670e337e",
+        "main_receipt_sha256": "3ed93127af3763930e2e78f989fcaf5f60644024f0d8df89aeeb26f8a586d64c",
+        "main_transformation_sha256": "83d8e27b6a0d05a5f2795aeea125764732ffbd1232c0a68f93afa304cf315fd1",
+        "main_fidelity_proof_sha256": "ad36d9feb101614c9dd49abe8e2225d46d8bd94373cf21766a6f2dc8536045b8",
+        "main_separate_verification_sha256": "d49c97d197a397c73ec127ba636b15596edf53792d0a1f1f9e97b4c69c8cda48",
+        "actual_restricted_references": 204,
+        "physical_components": 69,
+        "cohorts": 65,
+        "unchanged_business_leaves_compared": 232514,
+        "original_provenance_leaves_classified": 72423,
+        "focused_main_source_tests_passed": 32,
+        "whole_enterprise_source_complete": false,
+        "audit_credit": false
       },
       "persistent_company_runtime_candidate": {
         "status": "ACCEPTED_RUNTIME_MAIN_NEUTRAL_REPRODUCTION_ONLY",
@@ -2097,6 +2112,38 @@
         "stored_sql_executed": false,
         "full_task_credit": false,
         "rejected_bool_reference_candidate_preserved": true
+      },
+      "collection_adapter_successor": {
+        "status": "ACCEPTED_EXACT_5608_LIBRARY_AND_CURRENT_MODULE",
+        "module_sha256": "9a1182db843d4b3fab962a98ccbad926737b5ef66b46680bd4cbf95081689876",
+        "adapter_review_sha256": "d889054d7c94e511bbb946aafcb400ee9093eb06608595063a802addee65ad2c",
+        "independent_code_review_sha256": "c82819b2893c24ff445137944e1836b3ac2f8aa70e7910b75f0b436dc107f94d",
+        "actual_main_staging_proof_sha256": "c06856fa60dd71a188d2d52271580af1a2b1632a3c01b67e52e202ebe2a24b5f",
+        "independent_neutral_cases": 33,
+        "focused_combined_tests_passed": 75,
+        "accepted_version_count": 5608,
+        "actual_source_audit_fieldwork_performed": false,
+        "arbitrary_raw_company_store_cutoffs_authorized": false
+      },
+      "full_scope_shared_pair_plan": {
+        "status": "PLANNING_ONLY_NO_NEW_TASK_CREDIT",
+        "exact_unique_tasks": 409,
+        "controls": 70,
+        "matrix_sha256": "249768769b0fc3c95cdb1b16f955fbc4afbb97b7ef907d677602b05b06089c8d",
+        "batch_graph_sha256": "9705769dcb58f9ef84198944c82d183a8046e16140427f209e558a8ca96c30d7",
+        "ten_batch_task_counts": [
+          2,
+          52,
+          38,
+          20,
+          37,
+          50,
+          99,
+          62,
+          23,
+          26
+        ],
+        "qualified_and_owner_acceptance_automatic": false
       }
     }
   },
