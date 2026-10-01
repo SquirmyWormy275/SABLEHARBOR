@@ -1,0 +1,28 @@
+{
+  "schema": "SH_FICTIONAL_2027_GOV_SELECTED_OVERSIGHT_SPEC_V1",
+  "truth_class": "TRAINING_SCENARIO_ONLY",
+  "case_id": "SIM-GOV-SEC003-Q4-01",
+  "selected_source": "SH_FICTIONAL_2027_SEC003_SELECTED_VULNERABILITY_V1",
+  "selected_committees": ["COM-AUDIT", "COM-GOVNOM"],
+  "selected_director_for_eligibility": "DIR-CALDER",
+  "secretary_contact": "AS-P004",
+  "selected_clean_source_records": [
+    ["vulnerability_reconciliation", "RECON-OCT-01"],
+    ["vulnerability_reconciliation", "CLOSE-01"]
+  ],
+  "selected_messy_source_records": [
+    ["vulnerability_reconciliation", "RECON-OCT-01"],
+    ["vulnerability_reconciliation", "DISCOVER-NOV-01"],
+    ["vulnerability_exception", "EXC-SEC003-Q4-01"]
+  ],
+  "chronology": {"CLEAN": "2027-11-15", "MESSY": "2027-11-16"},
+  "expected_native_versions": {"CLEAN": 9, "MESSY": 14},
+  "limits": [
+    "One selected fictional 2027 committee-cycle source, not a full governance or director population.",
+    "Clean and Messy branch records cite only their corresponding SEC003 branch originals; Clean reviews a closed selected finding, while Messy preserves false-clean, self-review and OPEN historical exception.",
+    "The 2026 locked board and committee instruments are authority references, not a fictional 2027 charter reapproval or new director appointment.",
+    "Selected director questionnaire and administrative eligibility review do not establish annual independence, legal quorum, collective committee approval or adopted minutes.",
+    "A secretary/contact record and internal draft minutes are not an actual Board meeting, Board resolution, signed committee decision or independent assurance.",
+    "No complete-period oversight, authored CC1.2 clause satisfaction, audit task credit, fresh P1 pair, actual customer/PHI/deployment or Atlas write."
+  ]
+}
