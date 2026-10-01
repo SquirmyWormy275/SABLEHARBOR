@@ -1,5 +1,9 @@
+import { createElement } from "react";
+import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 import type { Engagement } from "./api";
+import { ProcedureTraceReadiness } from "./ProcedureTraceReadiness";
+import type { TraceReadiness } from "./traceReadiness";
 import {
   currentIntegrity,
   traceIntegrity,
@@ -58,5 +62,43 @@ describe("retained original UI boundaries", () => {
         "TRACE-1",
       ),
     ).toBeNull();
+  });
+
+  it("shows the separate byte result beside a recorded trace without implying audit credit", () => {
+    const data = {
+      status: "RECORDED_TRACE_LINKS",
+      trace_count: 1,
+      current_leaf_count: 1,
+      current_leaf_item_status_counts: { OBSERVED: 1 },
+      lineages: [
+        {
+          root_id: "TRACE-1",
+          current_leaf_id: "TRACE-1",
+          status: "EXACT_VISIBLE_METADATA_LINKS",
+          historical_trace_ids: [],
+        },
+      ],
+      traces: [
+        {
+          id: "TRACE-1",
+          status: "EXACT_VISIBLE_METADATA_LINKS",
+          reason_codes: [],
+          exact_refs: [],
+          selected_item_count: 1,
+          items_with_no_recorded_observation_count: 0,
+        },
+      ],
+    } as TraceReadiness;
+    const html = renderToStaticMarkup(
+      createElement(ProcedureTraceReadiness, {
+        engagement,
+        data,
+        integrity: report,
+        onPreview: () => {},
+      }),
+    );
+    expect(html).toContain("Retained-copy check:");
+    expect(html).toContain("Retained bytes match the recorded size and hash.");
+    expect(html).toContain("do not establish completeness");
   });
 });
