@@ -3,6 +3,7 @@
 import hashlib
 import json
 import sqlite3
+from contextlib import closing
 from pathlib import Path
 
 import pytest
@@ -24,6 +25,7 @@ from enterprise.audit_suite.persistent_company_service import (
     configuration,
     create_retained_app,
 )
+from enterprise.audit_suite.recovery import _history
 from enterprise.audit_suite.source_library_audit import (
     EMPTY_WORKROOM,
     LIBRARY_MANIFEST_SCHEMA,
@@ -33,6 +35,7 @@ from enterprise.audit_suite.source_library_audit import (
     file_sha,
     quiescent_read,
 )
+from enterprise.audit_suite.store import canonical
 from enterprise.ccf.registry import compile_registry, digest
 
 REPO = Path(__file__).resolve().parents[2]
@@ -588,3 +591,162 @@ def test_cli_routes_pinned_existing_workroom_to_existing_loopback_service(retain
     client = TestClient(app, base_url="http://localhost")
     assert client.get("/").text == "Neutral retained UI fixture"
     assert not app.state.engine.store.get(case["ids"]["auditor"], case["engagement"])["artifacts"]
+
+
+def collect_existing_neutral_original(case):
+    engine, actor, eid = case["engine"], case["ids"]["auditor"], case["engagement"]
+    state = command(
+        engine,
+        actor,
+        eid,
+        "pbc.create",
+        {
+            "title": "Actual neutral original",
+            "purpose": "Inspect source receipt custody",
+            "control_id": "SH-SEC-003",
+            "person_id": "AS-P007",
+            "boundary_id": "corporate",
+        },
+    )
+    request = state["requests"][-1]["id"]
+    command(engine, actor, eid, "pbc.issue", {"request_id": request})
+    command(
+        engine,
+        actor,
+        eid,
+        "company.collect",
+        {
+            "system_id": SYSTEM,
+            "record_id": "event-one",
+            "version": 1,
+            "request_id": request,
+        },
+    )
+    return engine.store.get(actor, eid)["artifacts"][0]
+
+
+def fully_reseal_receipt_type_attack(case, world, field, *, historical_only=False):
+    """Repair all event/current/journal hashes, leaving original native bytes intact."""
+    artifact = collect_existing_neutral_original(case)
+    if historical_only:
+        command(
+            case["engine"],
+            case["ids"]["auditor"],
+            case["engagement"],
+            "clock.advance",
+            {
+                "mode": "TARGET_DATE",
+                "target": "2027-01-04T09:00:00Z",
+            },
+        )
+    native_before = native_rows(world.database)
+    db_path = case["root"] / "engagements.sqlite3"
+    with closing(sqlite3.connect(db_path)) as db:
+        db.row_factory = sqlite3.Row
+        triggers = list(db.execute("SELECT name,sql FROM sqlite_master WHERE type='trigger'"))
+        for name, _ in triggers:
+            db.execute('DROP TRIGGER "' + name + '"')
+        events = list(db.execute("SELECT * FROM events ORDER BY revision"))
+        previous = ""
+        for number, row in enumerate(events):
+            state = json.loads(row["state"])
+            for original in state["artifacts"]:
+                if not historical_only or number != len(events) - 1:
+                    if field == "source_version":
+                        original["source"]["receipt"]["source"]["version"] = True
+                    elif field == "receipt_bytes":
+                        original["source"]["receipt"]["content_bytes"] = True
+                    else:
+                        original["bytes"] = True
+            record = {
+                "actor": row["actor"],
+                "recorded_at": row["recorded_at"],
+                "previous_hash": previous,
+                "state": state,
+                "command": json.loads(row["command"]),
+                "command_id": row["command_id"],
+            }
+            current_hash = digest(record)
+            db.execute(
+                "UPDATE events SET state=?,previous_hash=?,hash=? WHERE revision=?",
+                (canonical(state), previous, current_hash, row["revision"]),
+            )
+            previous = current_hash
+        db.execute(
+            "UPDATE engagements SET state=? WHERE id=?", (canonical(state), case["engagement"])
+        )
+        for _, sql in triggers:
+            db.execute(sql)
+        db.commit()
+        _history(db)
+        assert (
+            list(db.execute("SELECT name,sql FROM sqlite_master WHERE type='trigger'")) == triggers
+        )
+    if field in {"source_version", "receipt_bytes"} and not historical_only:
+        receipt = artifact["source"]["receipt"]
+        if field == "source_version":
+            receipt["source"]["version"] = True
+        else:
+            receipt["content_bytes"] = True
+        with closing(sqlite3.connect(world.database)) as db:
+            triggers = list(db.execute("SELECT name,sql FROM sqlite_master WHERE type='trigger'"))
+            sql = next(sql for name, sql in triggers if name == "no_collection_update")
+            db.execute("DROP TRIGGER no_collection_update")
+            db.execute(
+                "UPDATE collections SET receipt=? WHERE command_id=?",
+                (canonical(receipt), receipt["command_id"]),
+            )
+            db.execute(sql)
+            db.commit()
+            assert dict(
+                db.execute("SELECT name,sql FROM sqlite_master WHERE type='trigger'")
+            ) == dict(triggers)
+    assert native_rows(world.database) == native_before
+    return artifact
+
+
+@pytest.mark.parametrize("field", ["source_version", "receipt_bytes", "artifact_bytes"])
+def test_fully_resealed_receipt_boolean_types_are_rejected_with_native_history_unchanged(
+    retained, field
+):
+    case = retained["workrooms"]["ALPHA"]
+    fully_reseal_receipt_type_attack(case, retained["world"], field)
+    with pytest.raises(ProcedureError, match="Strict.*(version|byte count)"):
+        boot(case)
+
+
+def test_repaired_current_receipt_does_not_hide_boolean_receipt_in_earlier_event(retained):
+    case = retained["workrooms"]["ALPHA"]
+    fully_reseal_receipt_type_attack(
+        case, retained["world"], "source_version", historical_only=True
+    )
+    current = case["engine"].store.get(case["ids"]["auditor"], case["engagement"])
+    assert type(current["artifacts"][0]["source"]["receipt"]["source"]["version"]) is int
+    with pytest.raises(ProcedureError, match="Strict retained source version"):
+        boot(case)
+
+
+def test_resealed_boolean_zero_birth_counts_do_not_establish_empty_workroom(retained):
+    case = retained["workrooms"]["ALPHA"]
+    value = json.loads(case["binding"].read_bytes())
+    value["zero_workroom_counts"] = {k: False for k in EMPTY_WORKROOM}
+    case["binding"].write_text(json.dumps(value))
+    config = json.loads(case["config"].read_bytes())
+    config["workroom_binding"]["sha256"] = file_sha(case["binding"])
+    case["config"].write_text(json.dumps(config))
+    case["config_sha256"] = file_sha(case["config"])
+    with pytest.raises(ProcedureError, match="birth binding"):
+        boot(case)
+
+
+def test_repository_file_pins_do_not_admit_a_differently_loaded_module_origin(
+    retained, monkeypatch
+):
+    from enterprise.audit_suite import engine as loaded_engine
+
+    case = retained["workrooms"]["ALPHA"]
+    monkeypatch.setattr(
+        loaded_engine.__spec__, "origin", str(retained["root"] / "another-engine.py")
+    )
+    with pytest.raises(ProcedureError, match="loaded module differs"):
+        boot(case)

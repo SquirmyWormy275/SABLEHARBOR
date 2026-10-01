@@ -7,11 +7,13 @@ and runtime acceptance remain the existing independently reviewed contracts.
 
 from __future__ import annotations
 
+import importlib
 import json
 import math
 import re
 import sqlite3
 import stat
+import sys
 import time
 from contextlib import closing
 from dataclasses import fields
@@ -46,6 +48,7 @@ CODE_MODULES = (
     "service.py",
     "source_library_audit.py",
     "store.py",
+    "workpaper_links.py",
 )
 BINDING_FIELDS = {
     "schema",
@@ -266,6 +269,11 @@ class RetainedWorkroom:
         self.check_pins()
 
     def check_code(self):
+        """Bind file pins to loaded module origins in this ordinary local process.
+
+        This is not a hostile-process sandbox or an attestation of mutable
+        interpreter memory. Operator configuration is pinned before startup.
+        """
         pins = self.config["code_pins"]
         require(
             isinstance(pins, dict) and set(pins) == set(CODE_MODULES),
@@ -273,9 +281,23 @@ class RetainedWorkroom:
         )
         for name, expected in pins.items():
             path = self.repository / "enterprise/audit_suite" / name
+            module_name = "enterprise.audit_suite." + name.removesuffix(".py")
+            loaded = sys.modules.get(module_name)
+            if name == "__main__.py":
+                entry = sys.modules.get("__main__")
+                if getattr(getattr(entry, "__spec__", None), "name", None) == module_name:
+                    loaded = entry
+            if loaded is None:
+                loaded = importlib.import_module(module_name)
+            origin = getattr(getattr(loaded, "__spec__", None), "origin", None)
             require(
-                not path.is_symlink() and path.is_file() and file_sha(path) == expected,
-                "Pinned retained service/runtime code changed",
+                not path.is_symlink()
+                and path.is_file()
+                and origin is not None
+                and Path(origin).resolve() == path.resolve()
+                and Path(loaded.__file__).resolve() == path.resolve()
+                and file_sha(path) == expected,
+                "Pinned retained service/runtime code changed or loaded module differs",
             )
 
     def verify_workroom(self):
@@ -346,6 +368,10 @@ class RetainedWorkroom:
                 and type(self.binding["task_count"]) is int
                 and self.binding["task_count"] == len(initial["tasks"]) > 0
                 and self.binding["zero_workroom_counts"] == {k: 0 for k in EMPTY_WORKROOM}
+                and all(
+                    type(self.binding["zero_workroom_counts"][k]) is int for k in EMPTY_WORKROOM
+                )
+                and all(isinstance(initial[k], list) for k in EMPTY_WORKROOM)
                 and not any(initial[k] for k in EMPTY_WORKROOM)
                 and all(
                     t["status"] == "NOT_STARTED" and t["conclusion"] == "NOT_RUN"
@@ -391,13 +417,18 @@ class RetainedWorkroom:
                 ),
                 "Company real import clock is in the future",
             )
-            self.verify_artifacts(current, native)
+            for event in events:
+                self.verify_artifacts(json.loads(event["state"]), native)
 
     def verify_artifacts(self, state, native):
         for artifact in state["artifacts"]:
             path = self.root / "artifacts" / artifact["sha256"]
             require(
                 re.fullmatch(r"[a-f0-9]{64}", artifact["sha256"]), "Retained artifact hash differs"
+            )
+            require(
+                type(artifact["bytes"]) is int and artifact["bytes"] >= 0,
+                "Strict nonnegative retained artifact byte count required",
             )
             private_file(path)
             require(
@@ -408,6 +439,13 @@ class RetainedWorkroom:
                 continue
             receipt = artifact["source"]["receipt"]
             source = receipt["source"]
+            require(
+                type(source["version"]) is int
+                and source["version"] > 0
+                and type(receipt["content_bytes"]) is int
+                and receipt["content_bytes"] >= 0,
+                "Strict retained source version and receipt byte count required",
+            )
             row = native.get(tuple(source[k] for k in NATIVE_ID))
             require(
                 row is not None
