@@ -165,8 +165,10 @@ versions. Its Messy false badge closure and unescorted entry remain visible
 beside an open historical exception. The physical source's exact route
 successor passed isolated and main-local review: 132 partial leads, 30 design
 leads and 121 unsupported exact clauses per side. The partial V8 portfolio
-extension passed isolated review and awaits main-local replay. Neither route
-nor registry establishes actual site operation or task credit.
+extension also passed isolated and main-local review with byte-identical
+reports: 29 cohorts, 560 native versions, 43 components, 30 pins and 273
+aliases per profile. Neither route nor registry establishes actual site
+operation or task credit.
 
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
