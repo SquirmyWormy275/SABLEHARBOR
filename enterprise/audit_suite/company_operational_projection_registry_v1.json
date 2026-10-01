@@ -1,0 +1,4440 @@
+{
+  "company": "SABLE-HARBOR-REFERENCE",
+  "database_schema": [
+    [
+      "index",
+      "sqlite_autoindex_collections_1",
+      null
+    ],
+    [
+      "index",
+      "sqlite_autoindex_grants_1",
+      null
+    ],
+    [
+      "index",
+      "sqlite_autoindex_systems_1",
+      null
+    ],
+    [
+      "index",
+      "sqlite_autoindex_versions_1",
+      null
+    ],
+    [
+      "index",
+      "sqlite_autoindex_versions_2",
+      null
+    ],
+    [
+      "table",
+      "access_events",
+      "CREATE TABLE access_events( id INTEGER PRIMARY KEY, principal TEXT, engagement TEXT, company TEXT, branch TEXT, system TEXT, active INTEGER, recorded_at TEXT)"
+    ],
+    [
+      "table",
+      "collections",
+      "CREATE TABLE collections( command_id TEXT PRIMARY KEY, input_digest TEXT NOT NULL, receipt TEXT NOT NULL)"
+    ],
+    [
+      "table",
+      "grants",
+      "CREATE TABLE grants( principal TEXT, engagement TEXT, company TEXT, branch TEXT, system TEXT, active INTEGER NOT NULL, PRIMARY KEY(principal,engagement,company,branch,system))"
+    ],
+    [
+      "table",
+      "systems",
+      "CREATE TABLE systems( company TEXT, branch TEXT, system TEXT, owner TEXT NOT NULL, PRIMARY KEY(company,branch,system))"
+    ],
+    [
+      "table",
+      "versions",
+      "CREATE TABLE versions( company TEXT, branch TEXT, system TEXT, record TEXT, version INTEGER, event_at TEXT, available_at TEXT NOT NULL, imported_at TEXT NOT NULL, origin TEXT NOT NULL, provenance TEXT NOT NULL, content BLOB NOT NULL, sha256 TEXT NOT NULL, command_id TEXT UNIQUE NOT NULL, input_digest TEXT NOT NULL, PRIMARY KEY(company,branch,system,record,version), FOREIGN KEY(company,branch,system) REFERENCES systems(company,branch,system))"
+    ],
+    [
+      "trigger",
+      "no_collection_delete",
+      "CREATE TRIGGER no_collection_delete BEFORE DELETE ON collections BEGIN SELECT RAISE(ABORT,'Immutable collection'); END"
+    ],
+    [
+      "trigger",
+      "no_collection_update",
+      "CREATE TRIGGER no_collection_update BEFORE UPDATE ON collections BEGIN SELECT RAISE(ABORT,'Immutable collection'); END"
+    ],
+    [
+      "trigger",
+      "no_version_delete",
+      "CREATE TRIGGER no_version_delete BEFORE DELETE ON versions BEGIN SELECT RAISE(ABORT,'Immutable source'); END"
+    ],
+    [
+      "trigger",
+      "no_version_update",
+      "CREATE TRIGGER no_version_update BEFORE UPDATE ON versions BEGIN SELECT RAISE(ABORT,'Immutable source'); END"
+    ]
+  ],
+  "expected_transformation_sha256": "9cbb39c64895d5c762c2d8dbd2283a24334266102a72df6da689ba8db928d2f7",
+  "inputs": [
+    {
+      "path": "enterprise/generated/audit-suite/company-source-portfolio-v18-2026-10-01/main-report-v1/REPORT.json",
+      "role": "PRIVATE_ACCEPTED_ROSTER",
+      "sha256": "254f5d1cc4d5a93da95f6fc9e5977fc36f0397511b96cd6cb5e7cd59dc56337a"
+    },
+    {
+      "cohort": "transition",
+      "path": "enterprise/generated/audit-suite/company-runtime-transition-2026-09-29/run-v3/company.sqlite3",
+      "role": "RESTRICTED_UPSTREAM_STORE",
+      "sha256": "428b5c740cb8fc627b38f2aa6847e450fd166e62be52a6309d4f5a7b284988fd"
+    },
+    {
+      "cohort": "transition",
+      "path": "enterprise/generated/audit-suite/company-runtime-transition-2026-09-29/run-v3/MANIFEST.json",
+      "role": "PRIVATE_CUSTODY_RECEIPT",
+      "sha256": "f7c6ec3ab460f204f69cf6b50df66399687034b3b63cb38aaee84841daedcbd4"
+    },
+    {
+      "cohort": "transition",
+      "path": "enterprise/generated/audit-suite/company-runtime-transition-2026-09-29/run-v3/RECEIPT.json",
+      "role": "PRIVATE_CUSTODY_RECEIPT",
+      "sha256": "0a0a448f619e490870f69959d196eb6d5ca3747af0d4fb68056195910ce6cc11"
+    },
+    {
+      "cohort": "sec005operated",
+      "path": "enterprise/generated/audit-suite/company-sec005-operated-2026-09-30/main-run-v1/company.sqlite3",
+      "role": "MIGRATED_NATIVE_STORE",
+      "sha256": "4c258e73de8084b20c65fcad24a96e7f0e3fbb771de431c6e079fc6500d7fd1f"
+    },
+    {
+      "cohort": "sec005operated",
+      "path": "enterprise/generated/audit-suite/company-sec005-operated-2026-09-30/main-run-v1/MANIFEST.json",
+      "role": "PRIVATE_CUSTODY_RECEIPT",
+      "sha256": "37b170a7e6688d1bbab4022ff8a239eb3b2e5c44fff76af381a9872c0b84aa32"
+    },
+    {
+      "cohort": "sec005operated",
+      "path": "enterprise/generated/audit-suite/company-sec005-operated-2026-09-30/main-run-v1/RECEIPT.json",
+      "role": "PRIVATE_CUSTODY_RECEIPT",
+      "sha256": "157495f5e98d9475f2c88b01954b6e192049183105fe35475350c20885681968"
+    },
+    {
+      "cohort": "sec003vuln",
+      "path": "enterprise/generated/audit-suite/company-sec003-selected-vulnerability-2026-09-30/main-run-v1/company.sqlite3",
+      "role": "MIGRATED_NATIVE_STORE",
+      "sha256": "a94b9f0e2d18e06afd2c83ae2012cea8da72102f9bafcf0e3968959eb6f1539f"
+    },
+    {
+      "cohort": "sec003vuln",
+      "path": "enterprise/generated/audit-suite/company-sec003-selected-vulnerability-2026-09-30/main-run-v1/MANIFEST.json",
+      "role": "PRIVATE_CUSTODY_RECEIPT",
+      "sha256": "4ae2200e8735ea60e4a85f1158782926fdd50eda96238fc15031d5d9eda69af3"
+    },
+    {
+      "cohort": "sec003vuln",
+      "path": "enterprise/generated/audit-suite/company-sec003-selected-vulnerability-2026-09-30/main-run-v1/RECEIPT.json",
+      "role": "PRIVATE_CUSTODY_RECEIPT",
+      "sha256": "85233a1e785ffea73f32996bc3f410e9b5c381720b6cbe941ff8a2bbd5474ff8"
+    }
+  ],
+  "migration_not_before": "2026-10-01T16:13:00+00:00",
+  "phase": "SEC69_INITIAL_MIGRATION",
+  "projection_policy": "Exact record hashes and declared JSON-pointer operations only. All other business fields remain equal; references receive explicit native custody projection. Original raw history is private and unchanged.",
+  "qualification": "PRIVATE_OPERATOR_RECIPE_NOT_LEARNER_COMPANY_CONTENT",
+  "records": [
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-CLEAN",
+        "security_authority",
+        "AUTH-SEC005-COMPUTE-2027",
+        1
+      ],
+      "input_sha256": "de08ad8006b82abba0a155500570fa38a649285b00d3b169f5fc245d736d6c39",
+      "operations": {
+        "/action": {
+          "from": "BOUNDED_FICTIONAL_TECHNICAL_DELEGATION",
+          "kind": "ENUM",
+          "to": "TECHNICAL_DELEGATION"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/asset_custody_limit": {
+          "from": "Fictional company-managed selected nodes; no real device title or inventory assertion",
+          "kind": "ENUM",
+          "to": "DECLARED_SELECTED_COMPANY_MANAGED_NODES"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/authority_limit": {
+          "from": "SCENARIO_ONLY_NOT_BOARD_APPETITE_OR_REAL_APPOINTMENT",
+          "kind": "ENUM",
+          "to": "SELECTED_TECHNICAL_SCOPE"
+        },
+        "/delegation/real_corporate_delegation": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_site_release_refs/BOISE": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_site_release_refs/RENO": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "AUTH-SEC005-COMPUTE-2027",
+      "system": "sec005operated.security_authority"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-CLEAN",
+        "security_approval",
+        "APPROVE-TECH-01",
+        1
+      ],
+      "input_sha256": "4e3547d935a8b16e71a4327186cfbf020ee442eca793266fe204855c8bd0e69e",
+      "operations": {
+        "/action": {
+          "from": "FICTIONAL_TECHNOLOGY_SELECTED_BASELINE_APPROVAL",
+          "kind": "ENUM",
+          "to": "TECHNOLOGY_BASELINE_APPROVAL"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/AUTH-SEC005-COMPUTE-2027": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "APPROVE-TECH-01",
+      "system": "sec005operated.security_approval"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-CLEAN",
+        "security_approval",
+        "APPROVE-SEC-01",
+        1
+      ],
+      "input_sha256": "1a5686b56cd2498128df879a83ef52638c6e38fd50dda23619ccdcba82b7d0a6",
+      "operations": {
+        "/action": {
+          "from": "DISTINCT_FICTIONAL_SECURITY_SELECTED_BASELINE_APPROVAL",
+          "kind": "ENUM",
+          "to": "SECURITY_BASELINE_APPROVAL"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/APPROVE-TECH-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "APPROVE-SEC-01",
+      "system": "sec005operated.security_approval"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-CLEAN",
+        "security_inventory",
+        "INVENTORY-SELECTED-01",
+        1
+      ],
+      "input_sha256": "e776ec0c25e52fb4261e8b3e0bd27a2b5021e6ca9f40ea47338f489534f442b0",
+      "operations": {
+        "/action": {
+          "from": "FICTIONAL_COMPANY_SELECTED_ASSET_AND_INTERFACE_INVENTORY",
+          "kind": "ENUM",
+          "to": "ASSET_AND_INTERFACE_INVENTORY"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/population_complete_only_for_selected_footprint": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/APPROVE-SEC-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/APPROVE-TECH-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_site_release_refs/BOISE": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_site_release_refs/RENO": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "INVENTORY-SELECTED-01",
+      "system": "sec005operated.security_inventory"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-CLEAN",
+        "security_baseline",
+        "BASELINE-01",
+        1
+      ],
+      "input_sha256": "fa81327fc7de97d942a1d0eb33625c93e51f185542ce2281ad6a1780ed5397bd",
+      "operations": {
+        "/action": {
+          "from": "FICTIONAL_SELECTED_NETWORK_AND_ENDPOINT_BASELINE",
+          "kind": "ENUM",
+          "to": "NETWORK_AND_ENDPOINT_BASELINE"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/approval_status": {
+          "from": "FICTIONAL_TECHNOLOGY_AND_SECURITY_APPROVED",
+          "kind": "ENUM",
+          "to": "TECHNOLOGY_AND_SECURITY_APPROVED"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/APPROVE-SEC-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/APPROVE-TECH-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/INVENTORY-SELECTED-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "BASELINE-01",
+      "system": "sec005operated.security_baseline"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-CLEAN",
+        "security_application",
+        "APPLY-BASELINE-01",
+        1
+      ],
+      "input_sha256": "4570d1a45dff808c119e59c508b56793d7ec08dc627b336f2c078ffc23938bf8",
+      "operations": {
+        "/action": {
+          "from": "FICTIONAL_COMPANY_SELECTED_CONFIG_APPLIED",
+          "kind": "ENUM",
+          "to": "BASELINE_APPLIED"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_device_write": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/APPROVE-SEC-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/BASELINE-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "APPLY-BASELINE-01",
+      "system": "sec005operated.security_application"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-CLEAN",
+        "security_probe",
+        "OCT-APPROVED-EGRESS-01",
+        1
+      ],
+      "input_sha256": "dd6d70002adfe4657a714e43c563143441f970842a43a3a9e0385035a2557518",
+      "operations": {
+        "/action": {
+          "from": "DATA_ONLY_APPROVED_INTENT_PROBE",
+          "kind": "ENUM",
+          "to": "POLICY_EVALUATION"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/decision": {
+          "from": "WOULD_ALLOW_DATA_ONLY",
+          "kind": "ENUM",
+          "to": "ALLOW"
+        },
+        "/effect": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/APPLY-BASELINE-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/INVENTORY-SELECTED-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "OCT-APPROVED-EGRESS-01",
+      "system": "sec005operated.security_probe"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-CLEAN",
+        "security_probe",
+        "OCT-UNAUTHORIZED-EGRESS-01",
+        1
+      ],
+      "input_sha256": "c34d58a336cc893264192079ffb9621a128b8a6836635d7158ec91b0ac37e869",
+      "operations": {
+        "/action": {
+          "from": "DATA_ONLY_UNAUTHORIZED_EGRESS_PROBE",
+          "kind": "ENUM",
+          "to": "EGRESS_POLICY_EVALUATION"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/decision": {
+          "from": "DENIED_DATA_ONLY",
+          "kind": "ENUM",
+          "to": "DENY"
+        },
+        "/effect": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/APPLY-BASELINE-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/BASELINE-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "OCT-UNAUTHORIZED-EGRESS-01",
+      "system": "sec005operated.security_probe"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-CLEAN",
+        "security_probe",
+        "OCT-UNAUTHORIZED-ADMIN-01",
+        1
+      ],
+      "input_sha256": "8b46a8428a5a78aa7435e5fe38c0435ded14e2ab426f42f729e8b7a41fbbb8f3",
+      "operations": {
+        "/action": {
+          "from": "DATA_ONLY_UNAUTHORIZED_REMOTE_ADMIN_PROBE",
+          "kind": "ENUM",
+          "to": "REMOTE_ADMIN_POLICY_EVALUATION"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/decision": {
+          "from": "DENIED_DATA_ONLY",
+          "kind": "ENUM",
+          "to": "DENY"
+        },
+        "/effect": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/APPLY-BASELINE-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/INVENTORY-SELECTED-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "OCT-UNAUTHORIZED-ADMIN-01",
+      "system": "sec005operated.security_probe"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-CLEAN",
+        "security_probe",
+        "OCT-UNAPPROVED-EXEC-01",
+        1
+      ],
+      "input_sha256": "8cf23cf407fa5bf9761f27be911e9ddf40a48eeebf578a0a51dd313ed8d57fe0",
+      "operations": {
+        "/action": {
+          "from": "DATA_ONLY_UNAPPROVED_EXECUTABLE_MANIFEST_PROBE",
+          "kind": "ENUM",
+          "to": "EXECUTABLE_POLICY_EVALUATION"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/decision": {
+          "from": "DENIED_UNAPPROVED_MANIFEST_DATA_ONLY",
+          "kind": "ENUM",
+          "to": "DENY_UNAPPROVED_MANIFEST"
+        },
+        "/effect": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/APPLY-BASELINE-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/BASELINE-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "OCT-UNAPPROVED-EXEC-01",
+      "system": "sec005operated.security_probe"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-CLEAN",
+        "security_monitor",
+        "MONITOR-OCT-01",
+        1
+      ],
+      "input_sha256": "7ee9961a34fa4e28c673be98e641c14a1872264b9e77f4bf7ec1ac13714ab82b",
+      "operations": {
+        "/action": {
+          "from": "FICTIONAL_SELECTED_MONITOR_COLLECTOR_SNAPSHOT",
+          "kind": "ENUM",
+          "to": "MONITOR_COLLECTOR_SNAPSHOT"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_external_log_source": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/OCT-APPROVED-EGRESS-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/OCT-UNAPPROVED-EXEC-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/OCT-UNAUTHORIZED-ADMIN-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/OCT-UNAUTHORIZED-EGRESS-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "MONITOR-OCT-01",
+      "system": "sec005operated.security_monitor"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-CLEAN",
+        "security_reconciliation",
+        "RECON-OCT-01",
+        1
+      ],
+      "input_sha256": "78e1a9c8248a192a096f7688928b74053620e73e89f3d42be58c4da1dbd04e92",
+      "operations": {
+        "/action": {
+          "from": "FICTIONAL_SELECTED_OCTOBER_RECONCILIATION",
+          "kind": "ENUM",
+          "to": "SECURITY_RECONCILIATION"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/population_basis": {
+          "from": "NATIVE_SELECTED_INVENTORY_AND_PUBLISHER_RECONCILED",
+          "kind": "ENUM",
+          "to": "NATIVE_INVENTORY_AND_PUBLISHER"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/recorded_result": {
+          "from": "SELECTED_LOCAL_RECONCILED",
+          "kind": "ENUM",
+          "to": "RECONCILED"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/INVENTORY-SELECTED-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/MONITOR-OCT-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "RECON-OCT-01",
+      "system": "sec005operated.security_reconciliation"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-CLEAN",
+        "security_reconciliation",
+        "SECURITY-RECHECK-NOV-01",
+        1
+      ],
+      "input_sha256": "211597e355586b4146f0a23cd1d035db3bad8f4090a7aca5e464f5504f09adcc",
+      "operations": {
+        "/action": {
+          "from": "FRESH_NATIVE_SOURCE_SECURITY_RECHECK_WITH_SELF_REVIEW_LIMIT",
+          "kind": "ENUM",
+          "to": "SECURITY_REVIEW"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/APPLY-BASELINE-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/INVENTORY-SELECTED-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/OCT-APPROVED-EGRESS-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/OCT-UNAPPROVED-EXEC-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/OCT-UNAUTHORIZED-ADMIN-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/OCT-UNAUTHORIZED-EGRESS-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/RECON-OCT-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "SECURITY-RECHECK-NOV-01",
+      "system": "sec005operated.security_reconciliation"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-CLEAN",
+        "security_probe",
+        "NOV-UNAUTHORIZED-EGRESS-01",
+        1
+      ],
+      "input_sha256": "38f2ed871c9e83fc4198533be890cd9750827c9c35906d53b6b87ae4a952f43a",
+      "operations": {
+        "/action": {
+          "from": "DATA_ONLY_CORRECTED_UNAUTHORIZED_EGRESS_REPROBE",
+          "kind": "ENUM",
+          "to": "EGRESS_POLICY_RETEST"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/decision": {
+          "from": "DENIED_DATA_ONLY",
+          "kind": "ENUM",
+          "to": "DENY"
+        },
+        "/effect": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/APPLY-BASELINE-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/SECURITY-RECHECK-NOV-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "NOV-UNAUTHORIZED-EGRESS-01",
+      "system": "sec005operated.security_probe"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-CLEAN",
+        "security_probe",
+        "NOV-UNAPPROVED-EXEC-01",
+        1
+      ],
+      "input_sha256": "8afa3b4b48c21230d58d4c5657caa94ad110adb3e58763d4363882e19dce9d86",
+      "operations": {
+        "/action": {
+          "from": "DATA_ONLY_RESTORED_ENDPOINT_POLICY_REPROBE",
+          "kind": "ENUM",
+          "to": "EXECUTABLE_POLICY_RETEST"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/decision": {
+          "from": "DENIED_UNAPPROVED_MANIFEST_DATA_ONLY",
+          "kind": "ENUM",
+          "to": "DENY_UNAPPROVED_MANIFEST"
+        },
+        "/effect": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/APPLY-BASELINE-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/SECURITY-RECHECK-NOV-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "NOV-UNAPPROVED-EXEC-01",
+      "system": "sec005operated.security_probe"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-CLEAN",
+        "security_monitor",
+        "MONITOR-NOV-01",
+        1
+      ],
+      "input_sha256": "50bb93134c5a912bcfc04f9e5a472a4712245dad0e994ec9e424a4da3afc2ad1",
+      "operations": {
+        "/action": {
+          "from": "FICTIONAL_SELECTED_NOVEMBER_MONITOR_SNAPSHOT",
+          "kind": "ENUM",
+          "to": "MONITOR_COLLECTOR_SNAPSHOT"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_external_log_source": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/NOV-UNAPPROVED-EXEC-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/NOV-UNAUTHORIZED-EGRESS-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "MONITOR-NOV-01",
+      "system": "sec005operated.security_monitor"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-CLEAN",
+        "security_reconciliation",
+        "RECON-NOV-01",
+        1
+      ],
+      "input_sha256": "ff3a60ed1c698587ab3137aae2f45793552775fe52299c578dc06485c602efd4",
+      "operations": {
+        "/action": {
+          "from": "DISTINCT_FICTIONAL_SELECTED_NOVEMBER_RECONCILIATION",
+          "kind": "ENUM",
+          "to": "SECURITY_RECONCILIATION"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/full_year_or_enterprise_population_claim": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/historical_october_false_pass_retained": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/MONITOR-NOV-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/SECURITY-RECHECK-NOV-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "RECON-NOV-01",
+      "system": "sec005operated.security_reconciliation"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-MESSY",
+        "security_authority",
+        "AUTH-SEC005-COMPUTE-2027",
+        1
+      ],
+      "input_sha256": "95263fbb6e077e0456eac915f1153c2b6b462c1ba89776a2b17d6551ec89a89b",
+      "operations": {
+        "/action": {
+          "from": "BOUNDED_FICTIONAL_TECHNICAL_DELEGATION",
+          "kind": "ENUM",
+          "to": "TECHNICAL_DELEGATION"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/asset_custody_limit": {
+          "from": "Fictional company-managed selected nodes; no real device title or inventory assertion",
+          "kind": "ENUM",
+          "to": "DECLARED_SELECTED_COMPANY_MANAGED_NODES"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/authority_limit": {
+          "from": "SCENARIO_ONLY_NOT_BOARD_APPETITE_OR_REAL_APPOINTMENT",
+          "kind": "ENUM",
+          "to": "SELECTED_TECHNICAL_SCOPE"
+        },
+        "/delegation/real_corporate_delegation": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_site_release_refs/BOISE": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_site_release_refs/RENO": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "AUTH-SEC005-COMPUTE-2027",
+      "system": "sec005operated.security_authority"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-MESSY",
+        "security_approval",
+        "APPROVE-TECH-01",
+        1
+      ],
+      "input_sha256": "5052845a42b77b40289400cd7da7146dadbc1e0da4badc7efc9edcde58fd2090",
+      "operations": {
+        "/action": {
+          "from": "FICTIONAL_TECHNOLOGY_SELECTED_BASELINE_APPROVAL",
+          "kind": "ENUM",
+          "to": "TECHNOLOGY_BASELINE_APPROVAL"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/AUTH-SEC005-COMPUTE-2027": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "APPROVE-TECH-01",
+      "system": "sec005operated.security_approval"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-MESSY",
+        "security_approval",
+        "APPROVE-SEC-01",
+        1
+      ],
+      "input_sha256": "91796166493b100874774e5b8c1552e477145f1935686015dbbcddc6c33651de",
+      "operations": {
+        "/action": {
+          "from": "DISTINCT_FICTIONAL_SECURITY_SELECTED_BASELINE_APPROVAL",
+          "kind": "ENUM",
+          "to": "SECURITY_BASELINE_APPROVAL"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/APPROVE-TECH-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "APPROVE-SEC-01",
+      "system": "sec005operated.security_approval"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-MESSY",
+        "security_inventory",
+        "INVENTORY-SELECTED-01",
+        1
+      ],
+      "input_sha256": "25108d965d1a0a1428f25ddae8fe778bb75cce2e7bf21f7a3483aad064bf6b33",
+      "operations": {
+        "/action": {
+          "from": "FICTIONAL_COMPANY_SELECTED_ASSET_AND_INTERFACE_INVENTORY",
+          "kind": "ENUM",
+          "to": "ASSET_AND_INTERFACE_INVENTORY"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/population_complete_only_for_selected_footprint": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/APPROVE-SEC-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/APPROVE-TECH-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_site_release_refs/BOISE": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_site_release_refs/RENO": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "INVENTORY-SELECTED-01",
+      "system": "sec005operated.security_inventory"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-MESSY",
+        "security_baseline",
+        "BASELINE-01",
+        1
+      ],
+      "input_sha256": "a3083c3c3e0003cd7453d2cc0028577fba6e2645e9ada4229e89b432a0ee7c3b",
+      "operations": {
+        "/action": {
+          "from": "FICTIONAL_SELECTED_NETWORK_AND_ENDPOINT_BASELINE",
+          "kind": "ENUM",
+          "to": "NETWORK_AND_ENDPOINT_BASELINE"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/approval_status": {
+          "from": "FICTIONAL_TECHNOLOGY_AND_SECURITY_APPROVED",
+          "kind": "ENUM",
+          "to": "TECHNOLOGY_AND_SECURITY_APPROVED"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/APPROVE-SEC-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/APPROVE-TECH-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/INVENTORY-SELECTED-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "BASELINE-01",
+      "system": "sec005operated.security_baseline"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-MESSY",
+        "security_application",
+        "APPLY-BASELINE-01",
+        1
+      ],
+      "input_sha256": "9cc035f8ddbe15229b5bb1f0762b6f872ea0bebc74d17c75bdfa59d69db72f50",
+      "operations": {
+        "/action": {
+          "from": "FICTIONAL_COMPANY_SELECTED_CONFIG_APPLIED",
+          "kind": "ENUM",
+          "to": "BASELINE_APPLIED"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_device_write": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/APPROVE-SEC-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/BASELINE-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "APPLY-BASELINE-01",
+      "system": "sec005operated.security_application"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-MESSY",
+        "security_application",
+        "DRIFT-BOI-EGRESS-01",
+        1
+      ],
+      "input_sha256": "628e64d07117b7031b1182729f69f8d10bd60035c915f340cb1d6877ba8ea4c3",
+      "operations": {
+        "/action": {
+          "from": "FICTIONAL_APPLIED_RULE_DRIFT_WITHOUT_CHANGE_APPROVAL",
+          "kind": "ENUM",
+          "to": "APPLIED_RULE_OBSERVATION"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_device_write": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/APPLY-BASELINE-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/BASELINE-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "DRIFT-BOI-EGRESS-01",
+      "system": "sec005operated.security_application"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-MESSY",
+        "security_application",
+        "AGENT-COVERAGE-LOSS-01",
+        1
+      ],
+      "input_sha256": "76a198eda5708e634af760c27d8bddb0410ea5d6f9e25024031d2a40d3c2421f",
+      "operations": {
+        "/action": {
+          "from": "FICTIONAL_MANAGED_ENDPOINT_AGENT_HEARTBEAT_MISSING",
+          "kind": "ENUM",
+          "to": "ENDPOINT_AGENT_HEARTBEAT_OBSERVATION"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_device_write": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/DRIFT-BOI-EGRESS-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/INVENTORY-SELECTED-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "AGENT-COVERAGE-LOSS-01",
+      "system": "sec005operated.security_application"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-MESSY",
+        "security_probe",
+        "OCT-APPROVED-EGRESS-01",
+        1
+      ],
+      "input_sha256": "2cf7e6083231b4a343a200e3406167dde3b85be9408ccb5dda7218c71668bdae",
+      "operations": {
+        "/action": {
+          "from": "DATA_ONLY_APPROVED_INTENT_PROBE",
+          "kind": "ENUM",
+          "to": "POLICY_EVALUATION"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/decision": {
+          "from": "WOULD_ALLOW_DATA_ONLY",
+          "kind": "ENUM",
+          "to": "ALLOW"
+        },
+        "/effect": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/DRIFT-BOI-EGRESS-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/INVENTORY-SELECTED-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "OCT-APPROVED-EGRESS-01",
+      "system": "sec005operated.security_probe"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-MESSY",
+        "security_probe",
+        "OCT-UNAUTHORIZED-EGRESS-01",
+        1
+      ],
+      "input_sha256": "712d437f1a741ea08154ded88e498e040d33b27a6edbf598cbe9449a825d31c5",
+      "operations": {
+        "/action": {
+          "from": "DATA_ONLY_UNAUTHORIZED_EGRESS_PROBE",
+          "kind": "ENUM",
+          "to": "EGRESS_POLICY_EVALUATION"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/decision": {
+          "from": "WOULD_ALLOW_DATA_ONLY",
+          "kind": "ENUM",
+          "to": "ALLOW"
+        },
+        "/effect": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/BASELINE-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/DRIFT-BOI-EGRESS-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "OCT-UNAUTHORIZED-EGRESS-01",
+      "system": "sec005operated.security_probe"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-MESSY",
+        "security_probe",
+        "OCT-UNAUTHORIZED-ADMIN-01",
+        1
+      ],
+      "input_sha256": "2fe8c9158501ae73563dda06b18cc29a9cd6647f0062fb593bfc6e0bf679c678",
+      "operations": {
+        "/action": {
+          "from": "DATA_ONLY_UNAUTHORIZED_REMOTE_ADMIN_PROBE",
+          "kind": "ENUM",
+          "to": "REMOTE_ADMIN_POLICY_EVALUATION"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/decision": {
+          "from": "DENIED_DATA_ONLY",
+          "kind": "ENUM",
+          "to": "DENY"
+        },
+        "/effect": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/DRIFT-BOI-EGRESS-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/INVENTORY-SELECTED-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "OCT-UNAUTHORIZED-ADMIN-01",
+      "system": "sec005operated.security_probe"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-MESSY",
+        "security_probe",
+        "OCT-UNAPPROVED-EXEC-01",
+        1
+      ],
+      "input_sha256": "6cd3d7f846179e570c4f24ca2d9ff2bdb3341af23a4008285841f5732867f9b6",
+      "operations": {
+        "/action": {
+          "from": "DATA_ONLY_UNAPPROVED_EXECUTABLE_MANIFEST_PROBE",
+          "kind": "ENUM",
+          "to": "EXECUTABLE_POLICY_EVALUATION"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/effect": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/AGENT-COVERAGE-LOSS-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/BASELINE-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "OCT-UNAPPROVED-EXEC-01",
+      "system": "sec005operated.security_probe"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-MESSY",
+        "security_monitor",
+        "MONITOR-OCT-01",
+        1
+      ],
+      "input_sha256": "23f30effe556161407fe736d6a1ca7c42d359ac47bf6904e5efff1cdde3ca513",
+      "operations": {
+        "/action": {
+          "from": "FICTIONAL_SELECTED_MONITOR_COLLECTOR_SNAPSHOT",
+          "kind": "ENUM",
+          "to": "MONITOR_COLLECTOR_SNAPSHOT"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_external_log_source": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/collector_filter": {
+          "from": "OMITS_TWO_ADVERSE_DECISIONS",
+          "kind": "ENUM",
+          "to": "EXPLICIT_PROBE_SELECTION"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/OCT-APPROVED-EGRESS-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/OCT-UNAUTHORIZED-ADMIN-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "MONITOR-OCT-01",
+      "system": "sec005operated.security_monitor"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-MESSY",
+        "security_reconciliation",
+        "RECON-OCT-01",
+        1
+      ],
+      "input_sha256": "54b5a1e2a01c73233421ffdd21ef286633e650b5ceaa5436b61d35462b770422",
+      "operations": {
+        "/action": {
+          "from": "FICTIONAL_SELECTED_OCTOBER_RECONCILIATION",
+          "kind": "ENUM",
+          "to": "SECURITY_RECONCILIATION"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/population_basis": {
+          "from": "STALE_COLLECTOR_REPORT_NOT_RECONCILED_TO_NATIVE_INVENTORY",
+          "kind": "ENUM",
+          "to": "COLLECTOR_REPORT"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/recorded_result": {
+          "from": "RECORDED_PASS_ON_INCOMPLETE_INPUTS",
+          "kind": "ENUM",
+          "to": "PASS"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/MONITOR-OCT-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "RECON-OCT-01",
+      "system": "sec005operated.security_reconciliation"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-MESSY",
+        "security_reconciliation",
+        "SECURITY-RECHECK-NOV-01",
+        1
+      ],
+      "input_sha256": "886f35564c68765e514a297bd0d49d794c5bb6323c31fa7b2fe288d1060ab940",
+      "operations": {
+        "/action": {
+          "from": "FRESH_NATIVE_SOURCE_SECURITY_RECHECK_WITH_SELF_REVIEW_LIMIT",
+          "kind": "ENUM",
+          "to": "SECURITY_REVIEW"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/AGENT-COVERAGE-LOSS-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/DRIFT-BOI-EGRESS-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/INVENTORY-SELECTED-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/OCT-APPROVED-EGRESS-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/OCT-UNAPPROVED-EXEC-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/OCT-UNAUTHORIZED-ADMIN-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/OCT-UNAUTHORIZED-EGRESS-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/RECON-OCT-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "SECURITY-RECHECK-NOV-01",
+      "system": "sec005operated.security_reconciliation"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-MESSY",
+        "security_exception",
+        "EXC-SEC005-Q4-01",
+        1
+      ],
+      "input_sha256": "2cf250eba9a6d318da066e48635f4f4de1ef582a5debf1e93f2eaef25e422b73",
+      "operations": {
+        "/action": {
+          "from": "COMBINED_HISTORICAL_SELECTED_CONTROL_EXCEPTION",
+          "kind": "ENUM",
+          "to": "OPEN_SECURITY_EXCEPTION"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/RECON-OCT-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/SECURITY-RECHECK-NOV-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "EXC-SEC005-Q4-01",
+      "system": "sec005operated.security_exception"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-MESSY",
+        "security_approval",
+        "APPROVE-CORRECTION-01",
+        1
+      ],
+      "input_sha256": "cbe5d66427bccab7a60f40b3bd08eb4eb44067b1cec3f57862f92e2aec6a0db9",
+      "operations": {
+        "/action": {
+          "from": "DISTINCT_FICTIONAL_SECURITY_CORRECTION_APPROVAL",
+          "kind": "ENUM",
+          "to": "SECURITY_CORRECTION_APPROVAL"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/BASELINE-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/EXC-SEC005-Q4-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "APPROVE-CORRECTION-01",
+      "system": "sec005operated.security_approval"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-MESSY",
+        "security_application",
+        "CORRECT-BOI-EGRESS-01",
+        1
+      ],
+      "input_sha256": "356240dd94987f283c34b39fe7c98bc1fac0963a274d3d1e4d4742879bba9fe7",
+      "operations": {
+        "/action": {
+          "from": "FICTIONAL_SELECTED_RULE_BASELINE_RESTORED",
+          "kind": "ENUM",
+          "to": "RULE_BASELINE_RESTORED"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_device_write": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/APPROVE-CORRECTION-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/DRIFT-BOI-EGRESS-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "CORRECT-BOI-EGRESS-01",
+      "system": "sec005operated.security_application"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-MESSY",
+        "security_application",
+        "RESTORE-AGENT-COVERAGE-01",
+        1
+      ],
+      "input_sha256": "c237b2b838121b1a223c674e057bb47dfc1125e909118cfa2268009575c9155a",
+      "operations": {
+        "/action": {
+          "from": "FICTIONAL_SELECTED_ENDPOINT_AGENT_COVERAGE_RESTORED",
+          "kind": "ENUM",
+          "to": "ENDPOINT_AGENT_COVERAGE_RESTORED"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_device_write": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/AGENT-COVERAGE-LOSS-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/APPROVE-CORRECTION-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "RESTORE-AGENT-COVERAGE-01",
+      "system": "sec005operated.security_application"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-MESSY",
+        "security_probe",
+        "NOV-UNAUTHORIZED-EGRESS-01",
+        1
+      ],
+      "input_sha256": "7203d8e9d2545c319a907f0a64cc5473684a41ed0e00f79f4ec734e24fa28a80",
+      "operations": {
+        "/action": {
+          "from": "DATA_ONLY_CORRECTED_UNAUTHORIZED_EGRESS_REPROBE",
+          "kind": "ENUM",
+          "to": "EGRESS_POLICY_RETEST"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/decision": {
+          "from": "DENIED_DATA_ONLY",
+          "kind": "ENUM",
+          "to": "DENY"
+        },
+        "/effect": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/CORRECT-BOI-EGRESS-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/SECURITY-RECHECK-NOV-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "NOV-UNAUTHORIZED-EGRESS-01",
+      "system": "sec005operated.security_probe"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-MESSY",
+        "security_probe",
+        "NOV-UNAPPROVED-EXEC-01",
+        1
+      ],
+      "input_sha256": "f9415ad6dcc2c25740ec612103299659f3d21090b4bdea5855fa5627415de100",
+      "operations": {
+        "/action": {
+          "from": "DATA_ONLY_RESTORED_ENDPOINT_POLICY_REPROBE",
+          "kind": "ENUM",
+          "to": "EXECUTABLE_POLICY_RETEST"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/decision": {
+          "from": "DENIED_UNAPPROVED_MANIFEST_DATA_ONLY",
+          "kind": "ENUM",
+          "to": "DENY_UNAPPROVED_MANIFEST"
+        },
+        "/effect": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/RESTORE-AGENT-COVERAGE-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/SECURITY-RECHECK-NOV-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "NOV-UNAPPROVED-EXEC-01",
+      "system": "sec005operated.security_probe"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-MESSY",
+        "security_monitor",
+        "MONITOR-NOV-01",
+        1
+      ],
+      "input_sha256": "7a65ab0e8cef882fe21c3c6b286e9f9bad8881fd3a321e2eee4d54913ad1b049",
+      "operations": {
+        "/action": {
+          "from": "FICTIONAL_SELECTED_NOVEMBER_MONITOR_SNAPSHOT",
+          "kind": "ENUM",
+          "to": "MONITOR_COLLECTOR_SNAPSHOT"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_external_log_source": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/NOV-UNAPPROVED-EXEC-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/NOV-UNAUTHORIZED-EGRESS-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "MONITOR-NOV-01",
+      "system": "sec005operated.security_monitor"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec005operated",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC005-OPERATED-MESSY",
+        "security_reconciliation",
+        "RECON-NOV-01",
+        1
+      ],
+      "input_sha256": "4d712718c1622d0605cc7a7a0c94b3d38c831f61bcd34d96078d8f873ae57637",
+      "operations": {
+        "/action": {
+          "from": "DISTINCT_FICTIONAL_SELECTED_NOVEMBER_RECONCILIATION",
+          "kind": "ENUM",
+          "to": "SECURITY_RECONCILIATION"
+        },
+        "/actual_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/full_year_or_enterprise_population_claim": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/historical_october_false_pass_retained": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/qualification": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_corporate_authority": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/source_previous": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/MONITOR-NOV-01": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/source_refs/SECURITY-RECHECK-NOV-01": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "RECON-NOV-01",
+      "system": "sec005operated.security_reconciliation"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-CLEAN",
+        "vulnerability_inventory",
+        "CENSUS-OCT-01",
+        1
+      ],
+      "input_sha256": "c42782649b4b372ecfe9f3a52d21960b79384a49b39da6274b15e08f5039d89b",
+      "operations": {
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "CENSUS-OCT-01",
+      "system": "sec003vuln.vulnerability_inventory"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-CLEAN",
+        "vulnerability_baseline",
+        "BASELINE-OCT-01",
+        1
+      ],
+      "input_sha256": "485cf8e28bacf713645efba7ac8f76b408e6d7fe05bd158b5a11ba4db8674904",
+      "operations": {
+        "/action": {
+          "from": "APPROVE_DATA_ONLY_SCAN_BASELINE",
+          "kind": "ENUM",
+          "to": "APPROVE_SCAN_BASELINE"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "BASELINE-OCT-01",
+      "system": "sec003vuln.vulnerability_baseline"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-CLEAN",
+        "vulnerability_schedule",
+        "SCHEDULE-OCT-01",
+        1
+      ],
+      "input_sha256": "ea7301bb6713dae196298e22018477dfc8ed39b8b212915e2ffc4be6aad3bb2a",
+      "operations": {
+        "/action": {
+          "from": "SCHEDULE_SELECTED_SCAN",
+          "kind": "ENUM",
+          "to": "SCHEDULE_SCAN"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "SCHEDULE-OCT-01",
+      "system": "sec003vuln.vulnerability_schedule"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-CLEAN",
+        "vulnerability_advisory",
+        "ADV-SH-SIM-2027-01",
+        1
+      ],
+      "input_sha256": "bbaa76d22fdaec8099e2309b0ed02882927081328b47724f4f7d4cbf5a7387f2",
+      "operations": {
+        "/action": {
+          "from": "INTAKE_SYNTHETIC_DISCLOSURE",
+          "kind": "ENUM",
+          "to": "ADVISORY_INTAKE"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "ADV-SH-SIM-2027-01",
+      "system": "sec003vuln.vulnerability_advisory"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-CLEAN",
+        "vulnerability_scan",
+        "SCAN-OCT-01",
+        1
+      ],
+      "input_sha256": "9bb9c03dce5e3969883e05d955cacb8010b1ac549d097da4ed84b85701692d70",
+      "operations": {
+        "/action": {
+          "from": "DATA_ONLY_SCAN_RESULT",
+          "kind": "ENUM",
+          "to": "SCAN_RESULT"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/detail/false_clean": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "SCAN-OCT-01",
+      "system": "sec003vuln.vulnerability_scan"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-CLEAN",
+        "vulnerability_reconciliation",
+        "RECON-OCT-01",
+        1
+      ],
+      "input_sha256": "1899c91deea81eae23f7cbe5724640310be4009cfec91ac7ce887769b8d4aefb",
+      "operations": {
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "RECON-OCT-01",
+      "system": "sec003vuln.vulnerability_reconciliation"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-CLEAN",
+        "vulnerability_triage",
+        "TRIAGE-01",
+        1
+      ],
+      "input_sha256": "fda3e45ee371673e967304bd6197819f0859a1923e9814a0eeb60b30e3959c0d",
+      "operations": {
+        "/action": {
+          "from": "TRIAGE_SYNTHETIC_FINDING",
+          "kind": "ENUM",
+          "to": "TRIAGE_FINDING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "TRIAGE-01",
+      "system": "sec003vuln.vulnerability_triage"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-CLEAN",
+        "vulnerability_approval",
+        "APPROVE-FIX-01",
+        1
+      ],
+      "input_sha256": "756af2cbecf678249a6e2e19a8c25d9911f38ca3cbdeb6b3b16894da32d8f7f6",
+      "operations": {
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/detail/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "APPROVE-FIX-01",
+      "system": "sec003vuln.vulnerability_approval"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-CLEAN",
+        "vulnerability_remediation",
+        "FIX-01",
+        1
+      ],
+      "input_sha256": "9ebda0377365615790451b16fdb91a1d54a9d07d3bc606a68a6bf52b23bf2b05",
+      "operations": {
+        "/action": {
+          "from": "AUTHOR_FICTIONAL_SELECTED_FIX",
+          "kind": "ENUM",
+          "to": "REMEDIATION_APPLIED"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/detail/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "FIX-01",
+      "system": "sec003vuln.vulnerability_remediation"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-CLEAN",
+        "vulnerability_scan",
+        "RETEST-01",
+        1
+      ],
+      "input_sha256": "b30e9e34a57a6681c711ca93b661073ba5d251b174d266c126264ba1f6fe37f6",
+      "operations": {
+        "/action": {
+          "from": "DATA_ONLY_RETEST",
+          "kind": "ENUM",
+          "to": "SCAN_RETEST"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "RETEST-01",
+      "system": "sec003vuln.vulnerability_scan"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-A",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-CLEAN",
+        "vulnerability_reconciliation",
+        "CLOSE-01",
+        1
+      ],
+      "input_sha256": "c067a05fbb4be5d3c648472f80c8df3157e980d98cec6c01a11b3a004754d9f4",
+      "operations": {
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/detail/enterprise_population_complete": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "CLOSE-01",
+      "system": "sec003vuln.vulnerability_reconciliation"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-MESSY",
+        "vulnerability_inventory",
+        "CENSUS-OCT-01",
+        1
+      ],
+      "input_sha256": "e059852e54a395455c1bba6e0e6a3a03159cf78f6cf05cf28584a3808ed0c36c",
+      "operations": {
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/agent_coverage_loss": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/drift": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "CENSUS-OCT-01",
+      "system": "sec003vuln.vulnerability_inventory"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-MESSY",
+        "vulnerability_baseline",
+        "BASELINE-OCT-01",
+        1
+      ],
+      "input_sha256": "a3ac208dbb1671ab3508002d9ef3738969375215da38c052cff8db53e69a45b1",
+      "operations": {
+        "/action": {
+          "from": "APPROVE_STALE_SCAN_BASELINE",
+          "kind": "ENUM",
+          "to": "APPROVE_SCAN_BASELINE"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/detail/upstream_drift_record": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/agent_coverage_loss": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/drift": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "BASELINE-OCT-01",
+      "system": "sec003vuln.vulnerability_baseline"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-MESSY",
+        "vulnerability_schedule",
+        "SCHEDULE-OCT-01",
+        1
+      ],
+      "input_sha256": "1f4a9c84c0f1ee201b8953adfb4128f244777c763230468095f451d2d66face2",
+      "operations": {
+        "/action": {
+          "from": "SCHEDULE_INCOMPLETE_SCAN",
+          "kind": "ENUM",
+          "to": "SCHEDULE_SCAN"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/agent_coverage_loss": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/drift": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "SCHEDULE-OCT-01",
+      "system": "sec003vuln.vulnerability_schedule"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-MESSY",
+        "vulnerability_advisory",
+        "ADV-SH-SIM-2027-01",
+        1
+      ],
+      "input_sha256": "08f370dd0fe7276a464ee4ee83df97dd63f04eaa7ac96fb4ab0d951cba7e02a4",
+      "operations": {
+        "/action": {
+          "from": "INTAKE_SYNTHETIC_DISCLOSURE",
+          "kind": "ENUM",
+          "to": "ADVISORY_INTAKE"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/agent_coverage_loss": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/drift": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "ADV-SH-SIM-2027-01",
+      "system": "sec003vuln.vulnerability_advisory"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-MESSY",
+        "vulnerability_scan",
+        "SCAN-OCT-01",
+        1
+      ],
+      "input_sha256": "85ef3eac706d15ebdde82e7d02f930bdcb983abcf5c3384586267ac5e6341af6",
+      "operations": {
+        "/action": {
+          "from": "DATA_ONLY_FALSE_CLEAN_SCAN",
+          "kind": "ENUM",
+          "to": "SCAN_RESULT"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/detail/false_clean": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/detail/upstream_agent_coverage_loss": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/agent_coverage_loss": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/drift": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "SCAN-OCT-01",
+      "system": "sec003vuln.vulnerability_scan"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-MESSY",
+        "vulnerability_reconciliation",
+        "RECON-OCT-01",
+        1
+      ],
+      "input_sha256": "ea9c95ce365bd5205804272f201e39d77c0f4c7827a79ae01f9ded9e7e884448",
+      "operations": {
+        "/action": {
+          "from": "FALSE_CLEAN_SIGNOFF",
+          "kind": "ENUM",
+          "to": "COVERAGE_ATTESTATION"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/detail/decision": {
+          "from": "INCORRECTLY_ACCEPTED",
+          "kind": "ENUM",
+          "to": "ACCEPTED"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/agent_coverage_loss": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/drift": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "RECON-OCT-01",
+      "system": "sec003vuln.vulnerability_reconciliation"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-MESSY",
+        "vulnerability_reconciliation",
+        "DISCOVER-NOV-01",
+        1
+      ],
+      "input_sha256": "d32723b9bc28941b7848abdcb112c68e87a2e9e3b02e02f093068906391c31a0",
+      "operations": {
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/detail/source_recheck": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/agent_coverage_loss": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/drift": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_recheck": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "DISCOVER-NOV-01",
+      "system": "sec003vuln.vulnerability_reconciliation"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-MESSY",
+        "vulnerability_exception",
+        "EXC-SEC003-Q4-01",
+        1
+      ],
+      "input_sha256": "cfaa0b61fb42c138a398e7f2de5945d1e45e3bf3ca101e9d2c12ba58259686ff",
+      "operations": {
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/agent_coverage_loss": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/drift": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_recheck": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "EXC-SEC003-Q4-01",
+      "system": "sec003vuln.vulnerability_exception"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-MESSY",
+        "vulnerability_triage",
+        "ROOTCAUSE-01",
+        1
+      ],
+      "input_sha256": "ecce7d910443dedd24c0691dbb3e2b2bc6a5512f1d0cf4066bbe281f086d6478",
+      "operations": {
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/detail/upstream_agent_loss": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/detail/upstream_drift": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/agent_coverage_loss": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/drift": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_recheck": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "ROOTCAUSE-01",
+      "system": "sec003vuln.vulnerability_triage"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-MESSY",
+        "vulnerability_approval",
+        "APPROVE-CORRECTION-01",
+        1
+      ],
+      "input_sha256": "c88b5d3864d8003d383694dd1f44ca9f99f74c61b660724f7afd636114b8e243",
+      "operations": {
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/agent_coverage_loss": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/drift": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_recheck": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "APPROVE-CORRECTION-01",
+      "system": "sec003vuln.vulnerability_approval"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-MESSY",
+        "vulnerability_inventory",
+        "CORRECT-CENSUS-NOV-01",
+        1
+      ],
+      "input_sha256": "bd2b1c8e7cb9dc95e198a48cab15736b46676a000f4b02030bfada4cd83f10b3",
+      "operations": {
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/detail/upstream_agent_restore": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/detail/upstream_correction": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/agent_coverage_loss": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/agent_restore": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/drift": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/drift_correction": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_recheck": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "CORRECT-CENSUS-NOV-01",
+      "system": "sec003vuln.vulnerability_inventory"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-MESSY",
+        "vulnerability_baseline",
+        "CORRECT-BASELINE-NOV-01",
+        1
+      ],
+      "input_sha256": "9cba4ecfee3b143b03464ed1f04628ddf044d630f093f7d5f679ab7c41cdb541",
+      "operations": {
+        "/action": {
+          "from": "UPDATE_DATA_ONLY_SCAN_BASELINE",
+          "kind": "ENUM",
+          "to": "UPDATE_SCAN_BASELINE"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/agent_coverage_loss": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/agent_restore": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/drift": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/drift_correction": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_recheck": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "CORRECT-BASELINE-NOV-01",
+      "system": "sec003vuln.vulnerability_baseline"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-MESSY",
+        "vulnerability_scan",
+        "RESCAN-NOV-01",
+        1
+      ],
+      "input_sha256": "64486a6d7152446206733e881940137bd0cf78acea25dcfb6aa5f368b77aad2d",
+      "operations": {
+        "/action": {
+          "from": "DATA_ONLY_RESCAN",
+          "kind": "ENUM",
+          "to": "SCAN_RESULT"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/detail/false_clean": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/agent_coverage_loss": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/agent_restore": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/drift": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/drift_correction": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_recheck": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "RESCAN-NOV-01",
+      "system": "sec003vuln.vulnerability_scan"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-MESSY",
+        "vulnerability_triage",
+        "TRIAGE-NOV-01",
+        1
+      ],
+      "input_sha256": "4ec9831924403f65664dcb8d3b17f9ba85c56f21f33a0db85a1fe9543f1d7fc3",
+      "operations": {
+        "/action": {
+          "from": "TRIAGE_LATE_SYNTHETIC_FINDING",
+          "kind": "ENUM",
+          "to": "TRIAGE_FINDING"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/agent_coverage_loss": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/agent_restore": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/drift": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/drift_correction": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_recheck": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "TRIAGE-NOV-01",
+      "system": "sec003vuln.vulnerability_triage"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-MESSY",
+        "vulnerability_approval",
+        "APPROVE-VULN-FIX-NOV-01",
+        1
+      ],
+      "input_sha256": "98d8b71b1a6d98528f2e668ceef26d0286287ba39ff19b69062e832e1f7d4440",
+      "operations": {
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/agent_coverage_loss": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/agent_restore": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/drift": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/drift_correction": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_recheck": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "APPROVE-VULN-FIX-NOV-01",
+      "system": "sec003vuln.vulnerability_approval"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-MESSY",
+        "vulnerability_remediation",
+        "FIX-ADV-NOV-01",
+        1
+      ],
+      "input_sha256": "066fb4fcd77fddf72bc5368b25177dfe82ee2e706d9fa42d5f25021c77e36fac",
+      "operations": {
+        "/action": {
+          "from": "AUTHOR_FICTIONAL_SELECTED_FIX",
+          "kind": "ENUM",
+          "to": "REMEDIATION_APPLIED"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/detail/real_deployment": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/agent_coverage_loss": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/agent_restore": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/drift": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/drift_correction": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_recheck": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "FIX-ADV-NOV-01",
+      "system": "sec003vuln.vulnerability_remediation"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-MESSY",
+        "vulnerability_scan",
+        "RETEST-NOV-01",
+        1
+      ],
+      "input_sha256": "cd15b04d97449f0fcb839086fab499105b16b75e54cd395839d1c092c7b1df12",
+      "operations": {
+        "/action": {
+          "from": "DATA_ONLY_RETEST",
+          "kind": "ENUM",
+          "to": "SCAN_RETEST"
+        },
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/agent_coverage_loss": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/agent_restore": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/drift": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/drift_correction": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_recheck": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "RETEST-NOV-01",
+      "system": "sec003vuln.vulnerability_scan"
+    },
+    {
+      "branch": "HARBOR-OPERATIONS-B",
+      "identity": [
+        "sec003vuln",
+        "SABLE-HARBOR-REFERENCE",
+        "SEC003-SELECTED-MESSY",
+        "vulnerability_reconciliation",
+        "RECON-NOV-01",
+        1
+      ],
+      "input_sha256": "6af2e0e6f349a53503ffa137db32ceaa8da4107f839147db84827fcd9726c370",
+      "operations": {
+        "/actual_phi": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/audit_task_credit": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_executable_bytes_or_runs": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/real_network_packets": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/scenario": {
+          "kind": "DROP_AUTHORING",
+          "reason": "DECLARED_AUTHORING_OR_SIMULATION_BOOKKEEPING"
+        },
+        "/upstream_native_refs_available_at_event/agent_coverage_loss": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/agent_restore": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/asset_inventory": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/drift": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/drift_correction": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_baseline": {
+          "kind": "NATIVE_REFERENCE"
+        },
+        "/upstream_native_refs_available_at_event/security_recheck": {
+          "kind": "NATIVE_REFERENCE"
+        }
+      },
+      "record": "RECON-NOV-01",
+      "system": "sec003vuln.vulnerability_reconciliation"
+    }
+  ],
+  "remaining_families_gate": "UNREVIEWED_FOR_LEARNER_EXPOSURE_NO_BLANKET_CLEARANCE",
+  "schema": "SH_COMPANY_OPERATIONAL_PROJECTION_V1"
+}
