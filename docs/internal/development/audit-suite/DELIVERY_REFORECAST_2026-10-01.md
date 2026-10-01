@@ -22,10 +22,12 @@ native versions, but is partial; it is not a fresh engagement. The V5 readiness
 gate still blocks all 43 control groups. None of these counts is an audit pass.
 
 This denominator is for the **new frozen P1 pair**. The older A1939/B2066
-review packet already contains a functioning audit UI, 818 indexed task rows,
+[review packet](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-refresh-run-post-original-journals-a1939-b2066-v4/TASK-DISPOSITIONS.json)
+already contains a functioning audit UI, 818 indexed task rows,
 16 findings and earlier performed work. At the nearby A1938/B2064 checkpoint,
 each old workroom had 92 `COMPLETE`, 182 `IN_PROGRESS` and 135 `NOT_STARTED`
-tasks, with many completed/in-progress tasks limited rather than passing.
+tasks. The indexed conclusions are 272 `LIMITATION`/two `FAIL` in A and 214
+`LIMITATION`/60 `FAIL` in B, with no passing conclusion in either old workroom.
 That experience and tooling can be reused. Its evidence, conclusions and Key
 cannot be transplanted as fresh-period procedure results into a new pair.
 
