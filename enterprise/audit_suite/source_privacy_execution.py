@@ -184,7 +184,7 @@ def load_pins(path: Path) -> AcceptedLibrary:
     )
 
 
-def gate(path: Path, expected: str, *, method: bool) -> dict:
+def gate(path: Path, expected: str, *, method: bool, library_pins: dict | None = None) -> dict:
     private_file(path)
     require(file_sha(path) == expected, "Independent execution gate pin changed")
     review = json.loads(path.read_bytes())
@@ -208,6 +208,11 @@ def gate(path: Path, expected: str, *, method: bool) -> dict:
         and review.get(key) == actual,
         "Actual independently reviewed implementation required",
     )
+    if not method:
+        require(
+            library_pins is not None and review.get("accepted_main_library_pins") == library_pins,
+            "Adapter acceptance does not authorize this exact source library",
+        )
     return {"path": str(path), "sha256": expected, "module_sha256": actual, "verdict": verdict}
 
 
@@ -657,9 +662,8 @@ def run(
     method_review,
     method_sha,
 ):
-    adapter = gate(adapter_review, adapter_sha, method=False)
+    adapter = gate(adapter_review, adapter_sha, method=False, library_pins=accepted.verify())
     method = gate(method_review, method_sha, method=True)
-    accepted.verify()
     private_file(program_pack)
     require(file_sha(program_pack) == PROGRAM_SHA, "Instruction-only program pack changed")
     require(
@@ -899,9 +903,9 @@ def run(
 
 def verify(destination, accepted, adapter_review, adapter_sha, method_review, method_sha):
     """Read-only original-byte, command-history and method/sample reperformance."""
-    adapter = gate(adapter_review, adapter_sha, method=False)
-    method = gate(method_review, method_sha, method=True)
     pins = accepted.verify()
+    adapter = gate(adapter_review, adapter_sha, method=False, library_pins=pins)
+    method = gate(method_review, method_sha, method=True)
     manifest = json.loads((destination / "MANIFEST.json").read_bytes())
     require(
         set(manifest) == {"schema", "files"}

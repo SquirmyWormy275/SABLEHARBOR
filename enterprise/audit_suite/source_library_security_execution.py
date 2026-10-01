@@ -129,7 +129,7 @@ def load_pins(path):
     )
 
 
-def adapter_gate(path, expected):
+def adapter_gate(path, expected, library_pins):
     private_file(path)
     require(file_sha(path) == expected, "Independent adapter review pin changed")
     review = json.loads(path.read_bytes())
@@ -140,6 +140,10 @@ def adapter_gate(path, expected):
         and review.get("source_execution_authorized") is True
         and review.get("adapter_module_sha256") == file_sha(module),
         "Actual independently accepted quiescent Engine-bound adapter required",
+    )
+    require(
+        review.get("accepted_main_library_pins") == library_pins,
+        "Adapter acceptance does not authorize this exact source library",
     )
     return {"path": str(path), "sha256": expected, "module_sha256": file_sha(module)}
 
@@ -694,8 +698,7 @@ def record_method(engine, auditor, engagement, rows, label, result, plan, root):
 
 
 def run(repository, destination, accepted, program_pack, adapter_review, adapter_review_sha):
-    gate = adapter_gate(adapter_review, adapter_review_sha)
-    accepted.verify()
+    gate = adapter_gate(adapter_review, adapter_review_sha, accepted.verify())
     private_file(program_pack)
     require(file_sha(program_pack) == PROGRAM_SHA, "Instruction-only program pack changed")
     require(
@@ -915,8 +918,8 @@ def run(repository, destination, accepted, program_pack, adapter_review, adapter
 
 def verify(destination, accepted, adapter_review, adapter_review_sha):
     """Separate read-only reperformance and custody checks of the actual workroom."""
-    gate = adapter_gate(adapter_review, adapter_review_sha)
     pins = accepted.verify()
+    gate = adapter_gate(adapter_review, adapter_review_sha, pins)
     manifest = json.loads((destination / "MANIFEST.json").read_bytes())
     require(
         manifest["schema"] == "SH_FRESH_LIBRARY_SELECTED_SECURITY_FILES_V1",
