@@ -79,6 +79,41 @@ export function currentIntegrity(
     new Set(report.traces.map((row) => row.id)).size !== report.traces.length
   )
     return false;
+  const artifactById = new Map(
+    report.artifacts.map((row) => [row.artifact_id, row.status]),
+  );
+  const citedIds = new Set<string>();
+  for (const row of report.traces) {
+    const ids = row.artifact_ids ?? [];
+    if (ids.some((id) => !artifactById.has(id))) return false;
+    if (
+      row.status === "VERIFIED_RETAINED_BYTES" &&
+      (!ids.length ||
+        ids.some((id) => artifactById.get(id) !== "VERIFIED_RETAINED_BYTES"))
+    )
+      return false;
+    if (
+      row.status === "RETAINED_BYTES_UNAVAILABLE" &&
+      (!ids.length ||
+        ids.every((id) => artifactById.get(id) === "VERIFIED_RETAINED_BYTES"))
+    )
+      return false;
+    if (
+      [
+        "NO_RETAINED_ORIGINAL_REFERENCED",
+        "METADATA_UNAVAILABLE",
+        "NOT_RECHECKED",
+      ].includes(row.status) &&
+      ids.length
+    )
+      return false;
+    ids.forEach((id) => citedIds.add(id));
+  }
+  if (
+    citedIds.size !== artifactById.size ||
+    [...artifactById.keys()].some((id) => !citedIds.has(id))
+  )
+    return false;
   if (report.counts === null) {
     return (
       ["METADATA_UNAVAILABLE", "RECHECK_INPUT_UNAVAILABLE"].includes(

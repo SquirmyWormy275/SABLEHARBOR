@@ -77,6 +77,23 @@ describe("retained original UI boundaries", () => {
         engagement,
       ),
     ).toBe(false);
+    for (const artifactIds of [[], ["ART-NOT-CHECKED"]]) {
+      expect(
+        currentIntegrity(
+          {
+            ...report,
+            traces: [
+              {
+                id: "TRACE-1",
+                status: "VERIFIED_RETAINED_BYTES",
+                artifact_ids: artifactIds,
+              },
+            ],
+          },
+          engagement,
+        ),
+      ).toBe(false);
+    }
   });
 
   it("does not attach an ambiguous trace result to a procedure", () => {
