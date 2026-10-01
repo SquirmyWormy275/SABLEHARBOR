@@ -2,7 +2,7 @@
 
 As of 2026-10-01, each branch has 72 authored routes: 66 unsupported exact clauses, three design-context and three source-candidate routes. This read-only gap map inventories the exact 66 task IDs and requirement references; it is not company-native evidence or an audit result.
 
-The new isolated fictional counsel overlay is bounded to the 16 PROVISION candidates. The 46 MATTER and four CONTEXT candidates still lack a new source in this iteration. Every clause remains unsupported, every P1 task NOT_STARTED/NOT_RUN, and all requests DRAFT_NOT_SENT.
+The new fictional counsel overlay is bounded to the 16 PROVISION candidates. The 46 MATTER and four CONTEXT candidates still lack a new source in this iteration. Every clause remains unsupported, every P1 task NOT_STARTED/NOT_RUN, and all requests DRAFT_NOT_SENT.
 
 | Task ID | Requirement references | Group | New overlay |
 | --- | --- | --- | --- |

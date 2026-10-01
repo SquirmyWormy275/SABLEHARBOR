@@ -168,8 +168,9 @@ def build(repository: Path, private_repository: Path) -> dict:
         "limits": [
             "This inventory maps audit task IDs to exact authored clauses and requirement IDs; "
             "it is not a company-native operating record or an audit test.",
-            "The 16-provision native overlay is an isolated unreviewed candidate until "
-            "separate source, route and procedure reviews; all 66 remain unsupported/unrun.",
+            "The 16-provision native overlay is a selected source candidate outside the "
+            "current route ledger; separate route and procedure reviews remain, and all "
+            "66 clauses remain unsupported/unrun.",
             "The 46 matter and four context candidates remain outside this source cohort. "
             "No outside matter or all-company no-event determination is inferred.",
         ],
@@ -186,7 +187,7 @@ def markdown(result: dict) -> str:
         "gap map inventories the exact 66 task IDs and requirement references; it is "
         "not company-native evidence or an audit result.",
         "",
-        "The new isolated fictional counsel overlay is bounded to the 16 PROVISION "
+        "The new fictional counsel overlay is bounded to the 16 PROVISION "
         "candidates. The 46 MATTER and four CONTEXT candidates still lack a new "
         "source in this iteration. Every clause remains unsupported, every P1 task "
         "NOT_STARTED/NOT_RUN, and all requests DRAFT_NOT_SENT.",
