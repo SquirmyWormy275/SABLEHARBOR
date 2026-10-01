@@ -127,8 +127,8 @@ open exception. The independently reviewed V6 partial registry routes this
 source alongside the exact V5 prefix: 27 cohorts, 500 native versions, 41
 components, 28 source pins and 255 aliases per profile. Its initial isolated
 candidate failed a same-count prefix-drift test and was preserved; the corrected
-successor passed isolated and main-local review. The V5 exact route ledger has
-not yet been superseded, and the authored IAM005 clauses remain unsupported.
+successor passed isolated and main-local review. The authored IAM005 clauses
+remain unsupported.
 
 The V5 disposable collector probe passed main-local independent review with
 80 ordinary-byte copies and 54 selected-version scoped collections; it did
@@ -148,9 +148,13 @@ exception stays open. The independently reviewed V7 partial registry now has
 enterprise inventory or CC7.1/CC5.2 procedure result. The reviewed V6
 disposable probe separately exercised 56 scoped selected-version collections
 on 82 ordinary-byte copies, including the IAM marker, with source originals
-and the frozen pair unchanged. A V7 route-level successor and collector probe
-are still under construction; the latest accepted 283-route classification is
-V5 until the successor is independently reviewed.
+and the frozen pair unchanged. The independently reviewed V6 route-level
+successor classifies 129 partial source leads, 33 design-only leads and 121
+unsupported exact clauses per side across the same 283 discovery routes.
+It adds three generic SEC003 partial leads, with no authored-clause satisfaction
+or task credit. The independently reviewed V7 collector probe exercised 58
+scoped selected-version collections on 84 disposable copies, including SEC003;
+source originals and the frozen pair stayed unchanged.
 
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
