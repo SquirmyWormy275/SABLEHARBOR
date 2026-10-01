@@ -226,6 +226,8 @@ The independently reviewed V11 partial registry now includes the selected fictio
 
 The independently reviewed V11 disposable collector adds the selected ETH001 final record to the scoped source-access diagnostic: 92 exclusive ordinary copies and 66 receipts. The main replay preserves the exact V10 semantic prefix, source originals, REC003 journals and the frozen P1 inventory; the Messy false-clean/late-attestation exception stays open. This is one selected read per source component, not full-period collection or task execution.
 
+A separately reviewed selected SEC001 transfer source adds 26 native fictional versions (10 Clean, 16 Messy) for one payload-free non-PHI fixture. Messy preserves a blocked wrong-endpoint attempt, an unauthorized false-close submission, later correction and open exception. The CC6.7 transfer clause remains unsupported: canon appointments are pending, the crypto supplement is proposed, and there is no deployed channel, real transmission, complete transfer population or task result.
+
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
 2–16, 2027 (weeks 18–20) is the working target. March 16, 2027 (week 24) is
