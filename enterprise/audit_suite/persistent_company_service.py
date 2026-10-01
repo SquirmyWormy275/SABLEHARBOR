@@ -417,11 +417,27 @@ class RetainedWorkroom:
                 ),
                 "Company real import clock is in the future",
             )
+            # A retained artifact appears in every subsequent state snapshot.
+            # Validate each complete typed representation once in this fresh
+            # locked invocation, at its earliest (most restrictive) clock. No
+            # result survives this invocation. Changed historical fields,
+            # including JSON booleans versus integers, are distinct inputs.
+            verified = set()
+            with quiescent_read(self.world.database) as db:
+                journal = {
+                    row["command_id"]: json.loads(row["receipt"])
+                    for row in db.execute("SELECT command_id,receipt FROM collections")
+                }
             for event in events:
-                self.verify_artifacts(json.loads(event["state"]), native)
+                self.verify_artifacts(
+                    json.loads(event["state"]), native, verified=verified, journal=journal
+                )
 
-    def verify_artifacts(self, state, native):
+    def verify_artifacts(self, state, native, *, verified=None, journal=None):
         for artifact in state["artifacts"]:
+            representation = json.dumps(artifact, sort_keys=True, separators=(",", ":"))
+            if verified is not None and representation in verified:
+                continue
             path = self.root / "artifacts" / artifact["sha256"]
             require(
                 re.fullmatch(r"[a-f0-9]{64}", artifact["sha256"]), "Retained artifact hash differs"
@@ -436,6 +452,8 @@ class RetainedWorkroom:
                 "Retained artifact bytes changed",
             )
             if artifact["source"].get("kind") != "COLLECTED_COMPANY_SOURCE":
+                if verified is not None:
+                    verified.add(representation)
                 continue
             receipt = artifact["source"]["receipt"]
             source = receipt["source"]
@@ -463,14 +481,21 @@ class RetainedWorkroom:
                 <= _time(time_to_iso()),
                 "Retained company collection receipt/source custody differs",
             )
-            with quiescent_read(self.world.database) as db:
-                saved = db.execute(
-                    "SELECT receipt FROM collections WHERE command_id=?", (receipt["command_id"],)
-                ).fetchone()
-                require(
-                    saved is not None and json.loads(saved[0]) == receipt,
-                    "Retained original company collection journal differs",
-                )
+            if journal is None:
+                with quiescent_read(self.world.database) as db:
+                    saved = db.execute(
+                        "SELECT receipt FROM collections WHERE command_id=?",
+                        (receipt["command_id"],),
+                    ).fetchone()
+                    saved_receipt = None if saved is None else json.loads(saved[0])
+            else:
+                saved_receipt = journal.get(receipt["command_id"])
+            require(
+                saved_receipt is not None and saved_receipt == receipt,
+                "Retained original company collection journal differs",
+            )
+            if verified is not None:
+                verified.add(representation)
 
     def check_pins(self):
         require(

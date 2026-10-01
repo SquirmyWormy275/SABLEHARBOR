@@ -715,15 +715,53 @@ def test_fully_resealed_receipt_boolean_types_are_rejected_with_native_history_u
         boot(case)
 
 
-def test_repaired_current_receipt_does_not_hide_boolean_receipt_in_earlier_event(retained):
+@pytest.mark.parametrize("field", ["source_version", "receipt_bytes", "artifact_bytes"])
+def test_repaired_current_receipt_does_not_hide_boolean_receipt_in_earlier_event(retained, field):
     case = retained["workrooms"]["ALPHA"]
-    fully_reseal_receipt_type_attack(
-        case, retained["world"], "source_version", historical_only=True
-    )
+    fully_reseal_receipt_type_attack(case, retained["world"], field, historical_only=True)
     current = case["engine"].store.get(case["ids"]["auditor"], case["engagement"])
     assert type(current["artifacts"][0]["source"]["receipt"]["source"]["version"]) is int
-    with pytest.raises(ProcedureError, match="Strict retained source version"):
+    with pytest.raises(ProcedureError, match="Strict.*(version|byte count)"):
         boot(case)
+
+
+def test_each_fresh_history_verification_reads_an_unchanged_original_once(retained, monkeypatch):
+    from enterprise.audit_suite import persistent_company_service as service
+
+    case = retained["workrooms"]["ALPHA"]
+    artifact = collect_existing_neutral_original(case)
+    for day in (4, 5, 6):
+        command(
+            case["engine"],
+            case["ids"]["auditor"],
+            case["engagement"],
+            "clock.advance",
+            {"mode": "TARGET_DATE", "target": f"2027-01-{day:02}T09:00:00Z"},
+        )
+    artifact_path = case["root"] / "artifacts" / artifact["sha256"]
+    original_sha = service.file_sha
+    reads = []
+
+    def observed_sha(path):
+        if path == artifact_path:
+            reads.append(path)
+        return original_sha(path)
+
+    monkeypatch.setattr(service, "file_sha", observed_sha)
+    workroom = RetainedWorkroom(
+        case["config"], case["config_sha256"], private_root=case["root"], repository=REPO
+    )
+    assert len(reads) == 1
+    before = original_sha(case["root"] / "engagements.sqlite3")
+    workroom.verify_workroom()
+    assert len(reads) == 2
+    assert original_sha(case["root"] / "engagements.sqlite3") == before
+    raw = artifact_path.read_bytes()
+    artifact_path.write_bytes(b"x" * len(raw))
+    with pytest.raises(ProcedureError, match="Retained artifact bytes changed"):
+        workroom.verify_workroom()
+    assert len(reads) == 3
+    assert original_sha(case["root"] / "engagements.sqlite3") == before
 
 
 def test_resealed_boolean_zero_birth_counts_do_not_establish_empty_workroom(retained):
