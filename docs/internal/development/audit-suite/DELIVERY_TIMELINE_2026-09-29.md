@@ -253,3 +253,14 @@ Real-world management assertions, actual PHI/BA role, signed contracts,
 deployed sites, actual Type 2 operating period and a qualified external
 assessor are outside this engineering calendar. They require their own
 attributable evidence and timing.
+
+**October 1 reforecast:** The reviewed V16 partial source roster has 37
+cohorts and 840 native versions, but `source_complete=false` and no fresh
+zero-evidence audit pair exists. The latest reviewed gate still records 121
+unsupported exact clauses, 30 unsent request groups and 409 unrun procedures
+per branch. Recent selected-source, route and collector work has improved
+traceability without reducing the 818-instance procedure denominator. The
+December 22 aggressive edge, February 2–16 working target and March 16
+contingency therefore remain the defensible engineering range; a 3–6 week
+full-completion estimate is not supported. Reforecast again when the complete
+source registry and fresh-pair gate are independently reviewed.
