@@ -12,14 +12,15 @@ an independent reviewer, prompt source/authority decisions and little rework;
 those conditions are not established for an intermittent Codex run.
 
 The measured denominator remains **409 procedures on each branch (818 total)**
-with all frozen-pair procedures `NOT_STARTED`/`NOT_RUN`. The reviewed V16 route
-ledger targets 183 of 283 documentary/activity routes per branch; 100 remain
+with all frozen-pair procedures `NOT_STARTED`/`NOT_RUN`. The reviewed V17 route
+ledger targets 201 of 283 documentary/activity routes per branch; 82 remain
 untargeted. It still labels 121 exact clauses per branch unsupported. The
 reviewed V14 request plan has 30 draft, unsent source/contact groups and 53
 possible no-event cases per branch with zero accepted determinations. The
-independently reviewed V17 candidate has 39 selected source cohorts and 897
+independently reviewed V18 candidate has 41 selected source cohorts and 948
 native versions, but is partial; it is not a fresh engagement. The V5 readiness
-gate still blocks all 43 control groups. None of these counts is an audit pass.
+gate is a historical V16/V14 checkpoint and blocks all 43 control groups. None
+of these counts is an audit pass.
 
 This denominator is for the **new frozen P1 pair**. The older A1939/B2066
 [review packet](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-refresh-run-post-original-journals-a1939-b2066-v4/TASK-DISPOSITIONS.json)
@@ -36,6 +37,7 @@ cannot be transplanted as fresh-period procedure results into a new pair.
 | One narrow, end-to-end, reviewed training slice | Weeks, scoped separately | A bounded control/source family, ordinary collection and performed procedures; no claim about the whole audit. |
 | Complete fictional internal rehearsal | Roughly 4–8 months | Two to three sustained builders, independent review, timely qualified decisions, and manageable rework. |
 | Polished F500-scale training world and UX | Roughly 6–12 months | The same capacity, broader source/period histories, exception Key calibration, walkthroughs, restore/replay, access and usability review. |
+| Polished full scope with one sustained builder | Roughly 12–24 months or longer | Full-time development, separate independent review, timely qualified decisions, and no major architecture reset. An intermittent agent run has no defensible calendar ETA. |
 
 These are planning ranges, not commitments. A single episodic agent cannot be
 mapped honestly to the sustained-team calendar. For a bottom-up capacity check,
