@@ -279,7 +279,11 @@ def analyze_security_publishers(rows, plan):
         published_ids = {row["source"]["record"] for row in published}
         require(len(published_ids) == len(published), "Ambiguous native publisher versions")
         received = set(body["received_probe_record_ids"])
-        claimed = set(body["publisher_probe_record_ids"])
+        claimed = (
+            set(body["publisher_probe_record_ids"])
+            if "publisher_probe_record_ids" in body
+            else None
+        )
         agents = set(body["observed_agent_asset_ids"])
         monitor_results.append(
             {
@@ -288,10 +292,13 @@ def analyze_security_publishers(rows, plan):
                 "population_cutoff": monitor["source"]["event_at"],
                 "native_publisher_ids": sorted(published_ids),
                 "collector_ids": sorted(received),
-                "publisher_claim_ids": sorted(claimed),
+                "publisher_claim_ids": sorted(claimed) if claimed is not None else None,
+                "publisher_claim_available": claimed is not None,
                 "unreceived_publisher_ids": sorted(published_ids - received),
                 "collector_without_publisher_ids": sorted(received - published_ids),
-                "publisher_claim_disagrees": claimed != published_ids,
+                "publisher_claim_disagrees": claimed != published_ids
+                if claimed is not None
+                else None,
                 "missing_required_agent_assets": sorted(required - agents),
                 "unjoined_agent_assets": sorted(agents - set(assets)),
                 "observed_interfaces": body.get("observed_interface_ids"),

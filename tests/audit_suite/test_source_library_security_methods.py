@@ -262,6 +262,17 @@ def test_unqualified_source_cannot_be_treated_as_a_model_with_live_credit():
         analyze_security_publishers(rows, plan)
 
 
+def test_absent_publisher_claim_stays_unknown_while_native_publishers_still_reconcile():
+    rows, plan = security_fixture()
+    del rows[-2]["document"]["publisher_probe_record_ids"]
+    monitor = analyze_security_publishers(rows, plan)["monitor_reconciliations"][0]
+    assert monitor["publisher_claim_ids"] is None
+    assert monitor["publisher_claim_disagrees"] is None
+    assert monitor["publisher_claim_available"] is False
+    assert monitor["native_publisher_ids"] == ["P1", "P2"]
+    assert monitor["unreceived_publisher_ids"] == ["P2"]
+
+
 def continuity_fixture():
     authority = row(
         "bcm",
