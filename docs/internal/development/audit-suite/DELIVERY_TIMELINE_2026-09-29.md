@@ -1,5 +1,9 @@
 # Internal audit-rehearsal delivery timeline
 
+**Forecast status:** This September 29 plan is a capacity-dependent target,
+not a completion ETA. The [October 1 reforecast](DELIVERY_REFORECAST_2026-10-01.md)
+supersedes its calendar dates for delivery expectations.
+
 **Planning baseline:** September 29, 2026. Target is a source-faithful,
 fictional Clean/Messy CCF/audit rehearsal for the approved SOC 2
 Security/Availability/Confidentiality and HIPAA scenario. This is an
