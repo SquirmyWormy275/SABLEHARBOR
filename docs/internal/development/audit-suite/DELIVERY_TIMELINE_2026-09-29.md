@@ -234,6 +234,8 @@ A separate independently reviewed CC5.2 component-lifecycle source adds 25 compa
 
 The selected fictional POL004 policy-to-procedure trace passed isolated and main-local independent review with 16 native versions. One local due-time check links the earlier policy-distribution originals to an actor, result and correction; Messy preserves a false close and expired open exception. The enterprise policy remains OPEN and procedure approval pending. CC5.3 stays unsupported and unrun; this source has not yet been routed into a candidate or collected in a fresh engagement.
 
+The reviewed V13 disposable collector added SEC001 CC5.2 to the selected-source access diagnostic with 96 exclusive ordinary-byte copies and 70 scoped receipts. Original sources, REC003 journals and the frozen P1 pair were unchanged. The reviewed V10 unsupported-clause request successor added POL004's selected trial to one draft CC5.3 action while preserving 121 unsupported clauses, 30 unsent groups, 53 unaccepted no-event candidates and 409 unrun tasks per side. The reviewed V2 readiness gate is a historical V13/V11/PBC V9 checkpoint: 34 cohorts/780 versions, 174 targeted routes, 135 partial/27 design/121 unsupported, 43 blocker controls, and `audit_ready=false`. These are routing and collection-path checks, not source completeness or task execution.
+
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
 2–16, 2027 (weeks 18–20) is the working target. March 16, 2027 (week 24) is
