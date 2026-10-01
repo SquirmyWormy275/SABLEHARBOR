@@ -240,6 +240,8 @@ The reviewed V14 partial source/candidate registry adds POL004's selected fictio
 
 A separately reviewed selected Boise emergency replay trace adds 23 company-native fictional versions for a single payload-free marker path. Its main-local run confirms the reviewed PHI/BA, BCM, IAM and SEC005 source joins, including Messy denial, stale-checkpoint mismatch, local retest and open exceptions. It supplies a bounded operating-history candidate, not actual ePHI access, deployed recovery, full-period population, independent assurance or task credit.
 
+The existing local audit viewer also gained an authorized, read-only retained-original check for recorded sample traces. A first independent review rejected the new path's manifest-only byte budget; the corrected implementation checks physical size before bounded reading and passed a disposable oversized-file regression plus 46 focused and adjacent main tests. It verifies custody of cited audit copies only, leaving source freshness, population and procedure sufficiency open.
+
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
 2–16, 2027 (weeks 18–20) is the working target. March 16, 2027 (week 24) is
