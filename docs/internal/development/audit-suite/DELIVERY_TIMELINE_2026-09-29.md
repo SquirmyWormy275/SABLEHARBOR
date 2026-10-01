@@ -138,6 +138,20 @@ and all 30 draft groups. Six groups have changed next actions, while 53
 possible no-event reviews per side remain unaccepted and zero requests were
 sent. The P1 pair still has 409 `NOT_STARTED`/`NOT_RUN` tasks per side.
 
+**SEC003/V7 checkpoint:** A selected fictional four-asset vulnerability and
+baseline-drift lifecycle passed isolated and main-local independent review:
+11 Clean and 18 Messy native versions. The Messy October 3/4 false-clean
+sign-off remains visible after November correction, and its historical
+exception stays open. The independently reviewed V7 partial registry now has
+28 cohorts, 529 native business versions, 42 components, 29 source pins and
+265 aliases per profile. It remains a routing diagnostic, not a complete
+enterprise inventory or CC7.1/CC5.2 procedure result. The reviewed V6
+disposable probe separately exercised 56 scoped selected-version collections
+on 82 ordinary-byte copies, including the IAM marker, with source originals
+and the frozen pair unchanged. A V7 route-level successor and collector probe
+are still under construction; the latest accepted 283-route classification is
+V5 until the successor is independently reviewed.
+
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
 2–16, 2027 (weeks 18–20) is the working target. March 16, 2027 (week 24) is
