@@ -709,6 +709,7 @@ def run(
             set(TASKS.values()) <= {t["id"] for t in state["tasks"]},
             "Exact selected authored privacy tasks unavailable",
         )
+        require(len(state["tasks"]) == 409, "Complete pinned 2027 authored programme required")
         require(_time(state["simulated_at"]) == INITIAL, "Frozen initial fieldwork clock differs")
         write(
             root / "START.json",
@@ -784,7 +785,7 @@ def run(
             )
             discovered, pages = session.discover(engine, auditor, engagement)
             require(
-                engine.store.get(auditor, engagement)["simulated_at"] == FINAL,
+                _time(engine.store.get(auditor, engagement)["simulated_at"]) == FINAL,
                 "Supported final clock differs",
             )
             write(
