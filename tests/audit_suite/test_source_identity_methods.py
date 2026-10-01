@@ -23,8 +23,7 @@ REPO = Path(__file__).resolve().parents[2]
 COMPANY, BRANCH = "NEUTRAL-IDENTITY", "LOCAL-ORIGINALS"
 
 
-@pytest.fixture(scope="module")
-def originals(tmp_path_factory):
+def build_originals(tmp_path_factory, extra_author=None):
     root = tmp_path_factory.mktemp("identity-originals")
     root.chmod(0o700)
     source_root = root / "company"
@@ -416,6 +415,9 @@ def originals(tmp_path_factory):
             "2027-01-01T00:15:00Z",
         )
 
+    if extra_author is not None:
+        extra_author(put)
+
     # The company source exists and contains genuine versions before an audit exists.
     engine = Engine(root / "audit", repository=REPO, company_root=source_root)
     operator = engine.store.provision("Neutral access operator", ["instructor"])
@@ -504,6 +506,11 @@ def originals(tmp_path_factory):
         "records": records,
         "as_of": state["simulated_at"],
     }
+
+
+@pytest.fixture(scope="module")
+def originals(tmp_path_factory):
+    return build_originals(tmp_path_factory)
 
 
 def test_recalculates_distinct_human_rights_quarters_expiry_bytes_and_independence(originals):
