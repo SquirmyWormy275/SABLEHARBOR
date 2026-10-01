@@ -15,7 +15,7 @@ The measured denominator remains **409 procedures on each branch (818 total)**
 with all frozen-pair procedures `NOT_STARTED`/`NOT_RUN`. The reviewed V17 route
 ledger targets 201 of 283 documentary/activity routes per branch; 82 remain
 untargeted. It still labels 121 exact clauses per branch unsupported. The
-reviewed V14 request plan has 30 draft, unsent source/contact groups and 53
+reviewed V15 request plan has 30 draft, unsent source/contact groups and 53
 possible no-event cases per branch with zero accepted determinations. The
 independently reviewed V18 candidate has 41 selected source cohorts and 948
 native versions, but is partial; it is not a fresh engagement. The V5 readiness
