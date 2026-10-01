@@ -121,17 +121,38 @@ against the exact accepted 1,783-version library. Raw in-process CompanyStore
 cutoffs remain trusted caller input and cannot be used arbitrarily for evidence.
 Evolving company/corrected-evidence learner journeys remain unverified.
 
-Fresh security/continuity fieldwork has now collected 39 A and 55 B originals and
-recorded three partial task examinations per side. A summary-link correction and
-independent result review remain pending; the earlier attempts are preserved.
+Fresh security/continuity fieldwork has now passed independent actual-byte review,
+separate read-only verification and main reproduction: 39 A and 55 B originals,
+three partial task examinations and four sample traces per side. Both workrooms
+actually start December 31 and record the ordinary January 3 clock advance before
+discovery. Summary links bind the matching selections and all performed traces.
+The earlier attempts remain preserved. Main review:
+`48dcd12d2163ba67ed3343476f077bcf238c238b3e4c59243e578e7de017ec5e`.
 No completed full task or audit is claimed. The independently checked privacy
 follow-up found no retained same-service history establishing September's final
 four hours. The original 20:00 month-close claim and 23:59:59 declared end remain
 unchanged. New collected-byte privacy methods expose that tail and derive release
 exceptions without a scenario answer key. Independent probes rejected the first
 method candidate for chronology, routing/scope and unknown-status interpretation;
-the corrected code also guards field types and has 24 neutral tests passing.
-Independent corrected method review and actual privacy fieldwork remain pending.
+the corrected code also guards field types. Independent corrected method review
+passed, followed by actual fresh fieldwork and main reproduction. A collected 133
+originals and B 136; all 23 observed cases were examined in each of the three case
+procedures, alongside distinct design, implementation and lifecycle inspections.
+Each workroom has six partial tasks/workpapers, eight sample traces and 403
+untouched tasks. B's AUTH-03 and RESTRICT-03 deliveries contradict current
+documentary permission; neither mode establishes September's missing tail or
+actual routing/legal effectiveness. Both recorded an ordinary January 15 clock
+advance from the December initial clock. Main review:
+`2e3b46917a0dad2ae98d4d6c8403f12afe1e88b20086f6ec30f963fe0cd3682f`.
+
+These two accepted runs cover nine distinct selected task IDs per side across
+separate workrooms. They do not constitute one full-scope engagement, and neither
+uses its reserved professional reviewer. Sixty-five focused checks passed in main,
+including sixteen checks that an adapter review cannot authorize a different
+database, manifest, source review or native-version boundary. The existing adapter
+acceptance still covers only the exact selected V2.1 library. A consolidated
+successor library and independently reviewed shared/evolving company runtime
+remain the next integration dependencies; drafts provide no source acceptance.
 
 The broad suite finished with 2,633 passing tests and two setup errors. Both errors
 were a test fixture pointing to `main-run-v1` rather than the retained reviewed

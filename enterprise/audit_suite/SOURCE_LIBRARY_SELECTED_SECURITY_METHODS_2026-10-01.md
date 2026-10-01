@@ -19,3 +19,11 @@ Supported engine commands create separate per-task populations, reliability deci
 The CLI requires `--repository`, a new private `--destination`, `--source-pins`, `--program-pack`, `--adapter-review` and `--adapter-review-sha256`. Run the same command with `--verify-only` against the existing output for separate verification. Source pin JSON contains exactly the seven `AcceptedLibrary` dataclass fields: database/path hash, manifest/path hash, review/path hash and positive version count. All output directories are 0700 and files are ordinary single-link 0600 bytes. Candidate pins and exact commands belong in the private handoff after execution; output history is never overwritten on retry.
 
 Meaningful neutral tests cover the omitted/observed advisory discrepancy, advisory timing, changed upstream/prior digests, collector population omissions, late correction approvals, missing model qualifiers, exact continuity versions and recorded-duration contradictions without restore credit. Adapter isolation/clock/WAL tests remain separate. Actual accepted-company runs must follow those engineering checks and the independent source/adapter gates.
+
+Main reproduction, separate verification and an independent actual-byte review
+passed on October 1: 39 A/55 B originals, three partial tasks and four sample
+traces per side. Main review:
+`48dcd12d2163ba67ed3343476f077bcf238c238b3e4c59243e578e7de017ec5e`.
+The runner now rejects an adapter review that does not authorize the exact passed
+source-library pins. Full procedures, actual recovery and the shared evolving
+company workflow remain separate work.

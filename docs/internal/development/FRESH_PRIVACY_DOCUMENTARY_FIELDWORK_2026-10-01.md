@@ -47,3 +47,11 @@ receipt journals, actual audit command history, initial/final clocks, zero start
 actor separation, sample/workpaper lineage, entire item coverage and unchanged
 task/reviewer limits. The verification is engineering validation of selected
 performed steps; independent professional review remains separate.
+
+Main reproduction and independent actual-byte examination passed on October 1.
+The main run retains 133 A/136 B originals and all 23 observed cases in each
+case-based procedure, with six partial tasks/workpapers and eight traces per side.
+The adapter review must bind the exact passed source-library pins. Main engineering
+review: `2e3b46917a0dad2ae98d4d6c8403f12afe1e88b20086f6ec30f963fe0cd3682f`.
+The reserved professional reviewer remains unused, and persistent source correction
+journeys require their own independently reviewed workflow.

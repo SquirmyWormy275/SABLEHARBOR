@@ -1093,3 +1093,13 @@ January 1 03:15 operating start does not establish earlier coverage. Explicit
 successor admission of older company histories and these accepted records remains
 required. Source acceptance supplies no audit credit. The active graph records the
 current pins, preserved rejections and chain to fresh fieldwork and final acceptance.
+
+Accepted-library fieldwork now has nine distinct selected procedures per mode
+across two independently checked main runs: three security/continuity examinations
+and six privacy examinations. Ordinary collection retained 172 A and 191 B native
+versions across the two runs, with exact byte/receipt/source checks and recorded
+December-to-January clock transitions. All nine tasks remain partial with explicit
+unperformed clauses. The adapter gate now binds its exact accepted library, and
+65 focused checks passed. This is selected fieldwork, not one completed full-scope
+audit. The shared company runtime, successor library, remaining procedures and
+final acceptance workflow remain in progress.
