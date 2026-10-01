@@ -1,0 +1,351 @@
+{
+  "remaining_B01_task_ids": [
+    "TASK-SH-ETH-001-corporate-ACTION-H-SANCTIONS",
+    "TASK-SH-ETH-001-corporate-IMPLEMENTATION",
+    "TASK-SH-ETH-001-corporate-TOD",
+    "TASK-SH-ETH-001-corporate-TOE",
+    "TASK-SH-IAM-002-corporate-CHECK-SOC2:CC6.4",
+    "TASK-SH-PPL-002-corporate-IMPLEMENTATION",
+    "TASK-SH-PPL-002-corporate-TOD",
+    "TASK-SH-PPL-002-corporate-TOE",
+    "TASK-SH-PPL-005-corporate-ACTION-S-ACCOUNTABILITY",
+    "TASK-SH-PPL-005-corporate-IMPLEMENTATION",
+    "TASK-SH-PPL-005-corporate-TOD",
+    "TASK-SH-PPL-005-corporate-TOE",
+    "TASK-SH-TRN-001-corporate-IMPLEMENTATION",
+    "TASK-SH-TRN-001-corporate-TOD",
+    "TASK-SH-TRN-001-corporate-TOE",
+    "TASK-SH-TRN-002-corporate-IMPLEMENTATION",
+    "TASK-SH-TRN-002-corporate-TOD",
+    "TASK-SH-TRN-002-corporate-TOE",
+    "TASK-SH-TRN-003-corporate-ACTION-S-ACCOUNTABILITY",
+    "TASK-SH-TRN-003-corporate-IMPLEMENTATION",
+    "TASK-SH-TRN-003-corporate-TOD",
+    "TASK-SH-TRN-003-corporate-TOE"
+  ],
+  "schema": "SH_COLLECTED_IDENTITY_METHOD_CONTRACTS_V1",
+  "selected_task_ids": [
+    "TASK-SH-IAM-001-corporate-CHECK-SOC2:CC6.2",
+    "TASK-SH-IAM-001-corporate-IMPLEMENTATION",
+    "TASK-SH-IAM-001-corporate-TOD",
+    "TASK-SH-IAM-001-corporate-TOE",
+    "TASK-SH-IAM-002-corporate-CHECK-SOC2:CC6.1",
+    "TASK-SH-IAM-002-corporate-CHECK-SOC2:CC6.3",
+    "TASK-SH-IAM-002-corporate-IMPLEMENTATION",
+    "TASK-SH-IAM-002-corporate-TOD",
+    "TASK-SH-IAM-002-corporate-TOE",
+    "TASK-SH-IAM-003-corporate-CHECK-SOC2:CC6.3",
+    "TASK-SH-IAM-003-corporate-IMPLEMENTATION",
+    "TASK-SH-IAM-003-corporate-TOD",
+    "TASK-SH-IAM-003-corporate-TOE",
+    "TASK-SH-IAM-004-corporate-CHECK-SOC2:CC6.2",
+    "TASK-SH-IAM-004-corporate-IMPLEMENTATION",
+    "TASK-SH-IAM-004-corporate-TOD",
+    "TASK-SH-IAM-004-corporate-TOE",
+    "TASK-SH-IAM-005-corporate-ACTION-H-EMERGENCY",
+    "TASK-SH-IAM-005-corporate-CHECK-SOC2:CC6.1",
+    "TASK-SH-IAM-005-corporate-IMPLEMENTATION",
+    "TASK-SH-IAM-005-corporate-TOD",
+    "TASK-SH-IAM-005-corporate-TOE",
+    "TASK-SH-IAM-006-corporate-CHECK-SOC2:CC6.2",
+    "TASK-SH-IAM-006-corporate-IMPLEMENTATION",
+    "TASK-SH-IAM-006-corporate-TOD",
+    "TASK-SH-IAM-006-corporate-TOE",
+    "TASK-SH-IAM-007-corporate-CHECK-SOC2:CC6.3",
+    "TASK-SH-IAM-007-corporate-IMPLEMENTATION",
+    "TASK-SH-IAM-007-corporate-TOD",
+    "TASK-SH-IAM-007-corporate-TOE"
+  ],
+  "source": "Authored task instructions and exact selected membership, not prior audit outcomes",
+  "tasks": {
+    "TASK-SH-IAM-001-corporate-CHECK-SOC2:CC6.2": {
+      "authored_instruction": "Reconcile HR, contractor and nonhuman identity populations with all identity stores; inspect pre-issue approval and termination removal including local accounts.",
+      "authored_procedure": "Create a unique identity only from an approved worker, contractor or service request; bind sponsor, start/end dates and identity proofing; reconcile creations with authoritative requests.",
+      "control_id": "SH-IAM-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Join dated authoritative affiliation/request/sponsor to every in-scope identity creation; distinguish workers, directors, former people, proposed contacts and service delegates; do not count planning positions as people.",
+      "requirement_ids": [
+        "SOC2:CC6.2"
+      ],
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence."
+    },
+    "TASK-SH-IAM-001-corporate-IMPLEMENTATION": {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Request; sponsor; unique identifier; creation log. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Create a unique identity only from an approved worker, contractor or service request; bind sponsor, start/end dates and identity proofing; reconcile creations with authoritative requests.",
+      "control_id": "SH-IAM-001",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Join dated authoritative affiliation/request/sponsor to every in-scope identity creation; distinguish workers, directors, former people, proposed contacts and service delegates; do not count planning positions as people.",
+      "requirement_ids": [],
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient."
+    },
+    "TASK-SH-IAM-001-corporate-TOD": {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Request; sponsor; unique identifier; creation log. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Create a unique identity only from an approved worker, contractor or service request; bind sponsor, start/end dates and identity proofing; reconcile creations with authoritative requests.",
+      "control_id": "SH-IAM-001",
+      "kind": "TOD",
+      "required_checks": "Join dated authoritative affiliation/request/sponsor to every in-scope identity creation; distinguish workers, directors, former people, proposed contacts and service delegates; do not count planning positions as people.",
+      "requirement_ids": [],
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient."
+    },
+    "TASK-SH-IAM-001-corporate-TOE": {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Request; sponsor; unique identifier; creation log. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Create a unique identity only from an approved worker, contractor or service request; bind sponsor, start/end dates and identity proofing; reconcile creations with authoritative requests.",
+      "control_id": "SH-IAM-001",
+      "kind": "TOE",
+      "required_checks": "Join dated authoritative affiliation/request/sponsor to every in-scope identity creation; distinguish workers, directors, former people, proposed contacts and service delegates; do not count planning positions as people.",
+      "requirement_ids": [],
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately."
+    },
+    "TASK-SH-IAM-002-corporate-CHECK-SOC2:CC6.1": {
+      "authored_instruction": "Trace a human and service identity through each trust boundary and resource permission; test unauthorized access, key/credential protection and a privileged path.",
+      "authored_procedure": "Record business need, role, boundary and duration; obtain resource-owner approval; check conflicting privileges; provision only approved rights and confirm actual grants.",
+      "control_id": "SH-IAM-002",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Join business-duty catalogue, independent owner approval and conflicts to actual grants per application/directory/local/remote/token channel; join physical credential rights separately for CC6.4.",
+      "requirement_ids": [
+        "SOC2:CC6.1"
+      ],
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence."
+    },
+    "TASK-SH-IAM-002-corporate-CHECK-SOC2:CC6.3": {
+      "authored_instruction": "Test an access change against actual job duties, conflicting privileges and approval authority; review effective permissions rather than group membership alone.",
+      "authored_procedure": "Record business need, role, boundary and duration; obtain resource-owner approval; check conflicting privileges; provision only approved rights and confirm actual grants.",
+      "control_id": "SH-IAM-002",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Join business-duty catalogue, independent owner approval and conflicts to actual grants per application/directory/local/remote/token channel; join physical credential rights separately for CC6.4.",
+      "requirement_ids": [
+        "SOC2:CC6.3"
+      ],
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence."
+    },
+    "TASK-SH-IAM-002-corporate-IMPLEMENTATION": {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Approval; entitlement diff; conflict check; provisioning event. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Record business need, role, boundary and duration; obtain resource-owner approval; check conflicting privileges; provision only approved rights and confirm actual grants.",
+      "control_id": "SH-IAM-002",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Join business-duty catalogue, independent owner approval and conflicts to actual grants per application/directory/local/remote/token channel; join physical credential rights separately for CC6.4.",
+      "requirement_ids": [],
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient."
+    },
+    "TASK-SH-IAM-002-corporate-TOD": {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Approval; entitlement diff; conflict check; provisioning event. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Record business need, role, boundary and duration; obtain resource-owner approval; check conflicting privileges; provision only approved rights and confirm actual grants.",
+      "control_id": "SH-IAM-002",
+      "kind": "TOD",
+      "required_checks": "Join business-duty catalogue, independent owner approval and conflicts to actual grants per application/directory/local/remote/token channel; join physical credential rights separately for CC6.4.",
+      "requirement_ids": [],
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient."
+    },
+    "TASK-SH-IAM-002-corporate-TOE": {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Approval; entitlement diff; conflict check; provisioning event. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Record business need, role, boundary and duration; obtain resource-owner approval; check conflicting privileges; provision only approved rights and confirm actual grants.",
+      "control_id": "SH-IAM-002",
+      "kind": "TOE",
+      "required_checks": "Join business-duty catalogue, independent owner approval and conflicts to actual grants per application/directory/local/remote/token channel; join physical credential rights separately for CC6.4.",
+      "requirement_ids": [],
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately."
+    },
+    "TASK-SH-IAM-003-corporate-CHECK-SOC2:CC6.3": {
+      "authored_instruction": "Test an access change against actual job duties, conflicting privileges and approval authority; review effective permissions rather than group membership alone.",
+      "authored_procedure": "On role change, compare old and new required rights; revoke obsolete entitlements as well as grant approved additions; reconcile applications and site access to the change.",
+      "control_id": "SH-IAM-003",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Compare before/after required rights to actual application and site changes; preserve original P014/P015 mover windows, provisional entitlement meanings and missing original requests.",
+      "requirement_ids": [
+        "SOC2:CC6.3"
+      ],
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence."
+    },
+    "TASK-SH-IAM-003-corporate-IMPLEMENTATION": {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Mover event; before/after rights; revocation confirmation. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "On role change, compare old and new required rights; revoke obsolete entitlements as well as grant approved additions; reconcile applications and site access to the change.",
+      "control_id": "SH-IAM-003",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Compare before/after required rights to actual application and site changes; preserve original P014/P015 mover windows, provisional entitlement meanings and missing original requests.",
+      "requirement_ids": [],
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient."
+    },
+    "TASK-SH-IAM-003-corporate-TOD": {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Mover event; before/after rights; revocation confirmation. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "On role change, compare old and new required rights; revoke obsolete entitlements as well as grant approved additions; reconcile applications and site access to the change.",
+      "control_id": "SH-IAM-003",
+      "kind": "TOD",
+      "required_checks": "Compare before/after required rights to actual application and site changes; preserve original P014/P015 mover windows, provisional entitlement meanings and missing original requests.",
+      "requirement_ids": [],
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient."
+    },
+    "TASK-SH-IAM-003-corporate-TOE": {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Mover event; before/after rights; revocation confirmation. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "On role change, compare old and new required rights; revoke obsolete entitlements as well as grant approved additions; reconcile applications and site access to the change.",
+      "control_id": "SH-IAM-003",
+      "kind": "TOE",
+      "required_checks": "Compare before/after required rights to actual application and site changes; preserve original P014/P015 mover windows, provisional entitlement meanings and missing original requests.",
+      "requirement_ids": [],
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately."
+    },
+    "TASK-SH-IAM-004-corporate-CHECK-SOC2:CC6.2": {
+      "authored_instruction": "Reconcile HR, contractor and nonhuman identity populations with all identity stores; inspect pre-issue approval and termination removal including local accounts.",
+      "authored_procedure": "At termination or contract expiry, use the authorized effective time to disable accounts, sessions, tokens, remote access and physical credentials; reconcile every connected system; escalate missed revocations immediately.",
+      "control_id": "SH-IAM-004",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Derive applicable expiry/termination events from authoritative records; test every connected credential, session, token, remote and badge revocation against effective time; empty export is not a no-leaver conclusion.",
+      "requirement_ids": [
+        "SOC2:CC6.2"
+      ],
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence."
+    },
+    "TASK-SH-IAM-004-corporate-IMPLEMENTATION": {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Termination event; system list; disable timestamps; exception case. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "At termination or contract expiry, use the authorized effective time to disable accounts, sessions, tokens, remote access and physical credentials; reconcile every connected system; escalate missed revocations immediately.",
+      "control_id": "SH-IAM-004",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Derive applicable expiry/termination events from authoritative records; test every connected credential, session, token, remote and badge revocation against effective time; empty export is not a no-leaver conclusion.",
+      "requirement_ids": [],
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient."
+    },
+    "TASK-SH-IAM-004-corporate-TOD": {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Termination event; system list; disable timestamps; exception case. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "At termination or contract expiry, use the authorized effective time to disable accounts, sessions, tokens, remote access and physical credentials; reconcile every connected system; escalate missed revocations immediately.",
+      "control_id": "SH-IAM-004",
+      "kind": "TOD",
+      "required_checks": "Derive applicable expiry/termination events from authoritative records; test every connected credential, session, token, remote and badge revocation against effective time; empty export is not a no-leaver conclusion.",
+      "requirement_ids": [],
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient."
+    },
+    "TASK-SH-IAM-004-corporate-TOE": {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Termination event; system list; disable timestamps; exception case. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "At termination or contract expiry, use the authorized effective time to disable accounts, sessions, tokens, remote access and physical credentials; reconcile every connected system; escalate missed revocations immediately.",
+      "control_id": "SH-IAM-004",
+      "kind": "TOE",
+      "required_checks": "Derive applicable expiry/termination events from authoritative records; test every connected credential, session, token, remote and badge revocation against effective time; empty export is not a no-leaver conclusion.",
+      "requirement_ids": [],
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately."
+    },
+    "TASK-SH-IAM-005-corporate-ACTION-H-EMERGENCY": {
+      "authored_instruction": "Observe an approved emergency-mode exercise; verify necessary ePHI remains accessible to authorized operators and access decisions and activity survive recovery.",
+      "authored_procedure": "Issue privileged access separately with purpose and duration; record emergency activation and session activity; expire access, rotate exposed credentials and review each emergency use plus quarterly privilege population.",
+      "control_id": "SH-IAM-005",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Reperform bounded human/service privilege and emergency authorization, session/read, expiration, rotation and independent use review; reconcile quarterly privilege denominator, including historical omitted members.",
+      "requirement_ids": [
+        "HIPAA:164.308",
+        "HIPAA:164.312"
+      ],
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence."
+    },
+    "TASK-SH-IAM-005-corporate-CHECK-SOC2:CC6.1": {
+      "authored_instruction": "Trace a human and service identity through each trust boundary and resource permission; test unauthorized access, key/credential protection and a privileged path.",
+      "authored_procedure": "Issue privileged access separately with purpose and duration; record emergency activation and session activity; expire access, rotate exposed credentials and review each emergency use plus quarterly privilege population.",
+      "control_id": "SH-IAM-005",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Reperform bounded human/service privilege and emergency authorization, session/read, expiration, rotation and independent use review; reconcile quarterly privilege denominator, including historical omitted members.",
+      "requirement_ids": [
+        "SOC2:CC6.1"
+      ],
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence."
+    },
+    "TASK-SH-IAM-005-corporate-IMPLEMENTATION": {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Approval; session log; expiration; emergency review. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Issue privileged access separately with purpose and duration; record emergency activation and session activity; expire access, rotate exposed credentials and review each emergency use plus quarterly privilege population.",
+      "control_id": "SH-IAM-005",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Reperform bounded human/service privilege and emergency authorization, session/read, expiration, rotation and independent use review; reconcile quarterly privilege denominator, including historical omitted members.",
+      "requirement_ids": [],
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient."
+    },
+    "TASK-SH-IAM-005-corporate-TOD": {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Approval; session log; expiration; emergency review. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Issue privileged access separately with purpose and duration; record emergency activation and session activity; expire access, rotate exposed credentials and review each emergency use plus quarterly privilege population.",
+      "control_id": "SH-IAM-005",
+      "kind": "TOD",
+      "required_checks": "Reperform bounded human/service privilege and emergency authorization, session/read, expiration, rotation and independent use review; reconcile quarterly privilege denominator, including historical omitted members.",
+      "requirement_ids": [],
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient."
+    },
+    "TASK-SH-IAM-005-corporate-TOE": {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Approval; session log; expiration; emergency review. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Issue privileged access separately with purpose and duration; record emergency activation and session activity; expire access, rotate exposed credentials and review each emergency use plus quarterly privilege population.",
+      "control_id": "SH-IAM-005",
+      "kind": "TOE",
+      "required_checks": "Reperform bounded human/service privilege and emergency authorization, session/read, expiration, rotation and independent use review; reconcile quarterly privilege denominator, including historical omitted members.",
+      "requirement_ids": [],
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately."
+    },
+    "TASK-SH-IAM-006-corporate-CHECK-SOC2:CC6.2": {
+      "authored_instruction": "Reconcile HR, contractor and nonhuman identity populations with all identity stores; inspect pre-issue approval and termination removal including local accounts.",
+      "authored_procedure": "Record owner, workload, permissions, dependencies and credential lifecycle for every non-human account; constrain grants and rotation according to approved risk requirements; review quarterly and on ownership change.",
+      "control_id": "SH-IAM-006",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Join nonhuman owner/purpose/permissions/dependencies to credential expiry, rotation, actual access/copy attempts and quarterly review; copied content and stale credential success require original bytes.",
+      "requirement_ids": [
+        "SOC2:CC6.2"
+      ],
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence."
+    },
+    "TASK-SH-IAM-006-corporate-IMPLEMENTATION": {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Service identity record; secret metadata; rotation and access review. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Record owner, workload, permissions, dependencies and credential lifecycle for every non-human account; constrain grants and rotation according to approved risk requirements; review quarterly and on ownership change.",
+      "control_id": "SH-IAM-006",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Join nonhuman owner/purpose/permissions/dependencies to credential expiry, rotation, actual access/copy attempts and quarterly review; copied content and stale credential success require original bytes.",
+      "requirement_ids": [],
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient."
+    },
+    "TASK-SH-IAM-006-corporate-TOD": {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Service identity record; secret metadata; rotation and access review. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Record owner, workload, permissions, dependencies and credential lifecycle for every non-human account; constrain grants and rotation according to approved risk requirements; review quarterly and on ownership change.",
+      "control_id": "SH-IAM-006",
+      "kind": "TOD",
+      "required_checks": "Join nonhuman owner/purpose/permissions/dependencies to credential expiry, rotation, actual access/copy attempts and quarterly review; copied content and stale credential success require original bytes.",
+      "requirement_ids": [],
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient."
+    },
+    "TASK-SH-IAM-006-corporate-TOE": {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Service identity record; secret metadata; rotation and access review. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Record owner, workload, permissions, dependencies and credential lifecycle for every non-human account; constrain grants and rotation according to approved risk requirements; review quarterly and on ownership change.",
+      "control_id": "SH-IAM-006",
+      "kind": "TOE",
+      "required_checks": "Join nonhuman owner/purpose/permissions/dependencies to credential expiry, rotation, actual access/copy attempts and quarterly review; copied content and stale credential success require original bytes.",
+      "requirement_ids": [],
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately."
+    },
+    "TASK-SH-IAM-007-corporate-CHECK-SOC2:CC6.3": {
+      "authored_instruction": "Test an access change against actual job duties, conflicting privileges and approval authority; review effective permissions rather than group membership alone.",
+      "authored_procedure": "Quarterly for privileged access and at a risk-approved cadence for other rights, reconcile HR/contractor records to actual entitlements; require owner decisions per account; independently confirm removals and overdue escalation.",
+      "control_id": "SH-IAM-007",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Recompute date-effective HR/contractor/account denominator and quarterly member digest; trace each account decision/removal/escalation; late corrections cannot repair earlier P014 review omissions.",
+      "requirement_ids": [
+        "SOC2:CC6.3"
+      ],
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence."
+    },
+    "TASK-SH-IAM-007-corporate-IMPLEMENTATION": {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Complete population; reviewer decisions; removal tickets; verification. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Quarterly for privileged access and at a risk-approved cadence for other rights, reconcile HR/contractor records to actual entitlements; require owner decisions per account; independently confirm removals and overdue escalation.",
+      "control_id": "SH-IAM-007",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Recompute date-effective HR/contractor/account denominator and quarterly member digest; trace each account decision/removal/escalation; late corrections cannot repair earlier P014 review omissions.",
+      "requirement_ids": [],
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient."
+    },
+    "TASK-SH-IAM-007-corporate-TOD": {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Complete population; reviewer decisions; removal tickets; verification. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Quarterly for privileged access and at a risk-approved cadence for other rights, reconcile HR/contractor records to actual entitlements; require owner decisions per account; independently confirm removals and overdue escalation.",
+      "control_id": "SH-IAM-007",
+      "kind": "TOD",
+      "required_checks": "Recompute date-effective HR/contractor/account denominator and quarterly member digest; trace each account decision/removal/escalation; late corrections cannot repair earlier P014 review omissions.",
+      "requirement_ids": [],
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient."
+    },
+    "TASK-SH-IAM-007-corporate-TOE": {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Complete population; reviewer decisions; removal tickets; verification. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Quarterly for privileged access and at a risk-approved cadence for other rights, reconcile HR/contractor records to actual entitlements; require owner decisions per account; independently confirm removals and overdue escalation.",
+      "control_id": "SH-IAM-007",
+      "kind": "TOE",
+      "required_checks": "Recompute date-effective HR/contractor/account denominator and quarterly member digest; trace each account decision/removal/escalation; late corrections cannot repair earlier P014 review omissions.",
+      "requirement_ids": [],
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately."
+    }
+  }
+}
