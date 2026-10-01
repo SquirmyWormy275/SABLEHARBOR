@@ -3,6 +3,8 @@
 Company workpapers and attestations are examined as business records. They never
 supply the auditor's verdict. This module does not read company databases, execute
 stored queries, create evidence, update tasks or consult an instructor Key.
+The caller must separately bind these exact artifacts to its actual Engine and
+supply the current engagement clock; this pure function is not an access gateway.
 """
 
 from __future__ import annotations
@@ -71,6 +73,19 @@ class CollectedHistory:
             raw = record["retained_bytes"]
             require(isinstance(raw, bytes), "Actual retained bytes required")
             require(
+                type(receipt.get("content_bytes")) is int
+                and receipt["content_bytes"] == len(raw)
+                and all(
+                    isinstance(receipt.get(k), str) and receipt[k]
+                    for k in ("engagement_id", "principal_id", "command_id")
+                )
+                and _time(source["available_at"]) <= _time(receipt["simulated_as_of"]) <= cutoff
+                and _time(source["imported_at"])
+                <= _time(receipt["collected_at"])
+                <= _time(datetime.now(UTC).isoformat()),
+                "Collection identity, byte count or collection clocks differ",
+            )
+            require(
                 hashlib.sha256(raw).hexdigest() == source["sha256"] == record["artifact_sha256"],
                 "Retained assurance artifact hash differs",
             )
@@ -95,6 +110,11 @@ class CollectedHistory:
             self.rows.append(row)
             self.index[key] = row
         require(self.rows, "Collected company assurance history required")
+        require(
+            len({(r["receipt"]["engagement_id"], r["receipt"]["principal_id"]) for r in self.rows})
+            == 1,
+            "One engagement and collecting principal per examination required",
+        )
         require(
             len({(r["source"]["company"], r["source"]["branch"]) for r in self.rows}) == 1,
             "One actually collected company branch required",
@@ -676,7 +696,7 @@ def _issues(history):
 
 
 def examine(records, *, as_of):
-    """Five distinct selected assurance examinations; no automatic task credit."""
+    """Pure examination after actual Engine artifact/clock binding by the caller."""
     history = CollectedHistory(records, as_of)
     return {
         "schema": "SH_COLLECTED_ASSURANCE_EXAMINATION_V1",

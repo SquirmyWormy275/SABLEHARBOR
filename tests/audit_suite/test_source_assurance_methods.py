@@ -28,7 +28,15 @@ def retained(system, record, body, *, at="2027-09-01T09:00:00Z", version=1):
     }
     return {
         "source": source,
-        "receipt": {"source": deepcopy(source)},
+        "receipt": {
+            "source": deepcopy(source),
+            "content_bytes": len(raw),
+            "engagement_id": "ENG-neutral",
+            "principal_id": "AUD-neutral",
+            "command_id": "collect-" + system + record + str(version),
+            "collected_at": "2026-10-01T00:10:00Z",
+            "simulated_as_of": AS_OF,
+        },
         "retained_bytes": raw,
         "artifact_id": "ART-" + system + record + str(version),
         "artifact_sha256": source["sha256"],
@@ -49,6 +57,7 @@ def repin(row, **fields):
     row["source"]["sha256"] = hashlib.sha256(row["retained_bytes"]).hexdigest()
     row["artifact_sha256"] = row["source"]["sha256"]
     row["receipt"]["source"] = deepcopy(row["source"])
+    row["receipt"]["content_bytes"] = len(row["retained_bytes"])
 
 
 def owner_history():
@@ -427,3 +436,24 @@ def test_screened_defect_without_finding_history_stays_unknown():
         for x in check["unperformed"]
         if isinstance(x, dict)
     )
+
+
+@pytest.mark.parametrize(
+    "field,value",
+    [
+        ("content_bytes", True),
+        ("content_bytes", 999),
+        ("engagement_id", "ENG-other"),
+        ("principal_id", "AUD-other"),
+        ("command_id", ""),
+        ("simulated_as_of", "2027-07-01T00:00:00Z"),
+        ("simulated_as_of", "2028-02-01T00:00:00Z"),
+        ("collected_at", "2026-09-01T00:00:00Z"),
+        ("collected_at", "2099-01-01T00:00:00Z"),
+    ],
+)
+def test_ordinary_receipt_fields_are_checked_before_content_analysis(field, value):
+    rows = owner_history()
+    rows[0]["receipt"][field] = value
+    with pytest.raises(ProcedureError):
+        examine(rows, as_of=AS_OF)
