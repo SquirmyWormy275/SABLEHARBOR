@@ -1,8 +1,4 @@
-"""Read-only partial V7 roster adding reviewed SEC003 vulnerability history.
-
-The SEC003 main-local review is a required input. Until it is sealed and pinned,
-this successor deliberately cannot produce a selected portfolio report.
-"""
+"""Read-only partial V7 roster adding reviewed SEC003 vulnerability history."""
 
 from __future__ import annotations
 
@@ -35,8 +31,8 @@ V6_CANDIDATE_SHA = {
 SEC_FOLDER = "company-sec003-selected-vulnerability-2026-09-30"
 SEC_RUN = "main-run-v1"
 SEC_REVIEW = "independent-review-main-v1/REVIEW.json"
-SEC_REVIEW_SHA = "PENDING_INDEPENDENT_MAIN_REVIEW"
-SEC_REVIEW_VERDICT = "PENDING_INDEPENDENT_MAIN_REVIEW"
+SEC_REVIEW_SHA = "f15bc7d94d04fa3599a0f852470e81ea53ce3dc1685d05d0fb15a65901013f36"
+SEC_REVIEW_VERDICT = "PASS_SELECTED_FICTIONAL_COMPANY_SOURCE_MAIN_LOCAL_NO_AUDIT_CREDIT"
 SEC_MANIFEST_SHA = "4ae2200e8735ea60e4a85f1158782926fdd50eda96238fc15031d5d9eda69af3"
 SEC_RECEIPT_SHA = "85233a1e785ffea73f32996bc3f410e9b5c381720b6cbe941ff8a2bbd5474ff8"
 SEC_DB_SHA = "a94b9f0e2d18e06afd2c83ae2012cea8da72102f9bafcf0e3968959eb6f1539f"

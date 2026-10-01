@@ -48,16 +48,13 @@ def test_same_count_v6_candidate_pin_drift_fails_closed(monkeypatch):
         candidate.candidate_profiles(REPOSITORY, PRIVATE)
 
 
-def test_unreviewed_sec003_cannot_be_selected():
-    if portfolio.SEC_REVIEW_SHA != "PENDING_INDEPENDENT_MAIN_REVIEW":
-        pytest.skip("SEC003 main review is now pinned")
+def test_unreviewed_sec003_cannot_be_selected(monkeypatch):
+    monkeypatch.setattr(portfolio, "SEC_REVIEW_SHA", "PENDING_INDEPENDENT_MAIN_REVIEW")
     with pytest.raises(PortfolioVerificationError, match="main review not yet pinned"):
         portfolio.verify_all(REPOSITORY, private_repository=PRIVATE)
 
 
 def test_reviewed_sec003_route_stays_partial_and_reperformable(tmp_path):
-    if portfolio.SEC_REVIEW_SHA == "PENDING_INDEPENDENT_MAIN_REVIEW":
-        pytest.skip("Awaiting SEC003 independent main review")
     selected = portfolio.write_report(REPOSITORY, PRIVATE, tmp_path / "portfolio")
     assert portfolio.verify_report(tmp_path / "portfolio", REPOSITORY, PRIVATE) == selected
     assert (
@@ -85,8 +82,6 @@ def test_reviewed_sec003_route_stays_partial_and_reperformable(tmp_path):
 
 
 def test_sec003_review_byte_drift_fails_closed(monkeypatch):
-    if portfolio.SEC_REVIEW_SHA == "PENDING_INDEPENDENT_MAIN_REVIEW":
-        pytest.skip("Awaiting SEC003 independent main review")
     monkeypatch.setattr(portfolio, "SEC_REVIEW_SHA", "0" * 64)
     with pytest.raises(PortfolioVerificationError, match="byte pin"):
         portfolio.verify_all(REPOSITORY, private_repository=PRIVATE)
