@@ -156,6 +156,16 @@ or task credit. The independently reviewed V7 collector probe exercised 58
 scoped selected-version collections on 84 disposable copies, including SEC003;
 source originals and the frozen pair stayed unchanged.
 
+The reviewed V6 unsupported-clause PBC successor retains 121 authored gaps per
+side and 30 draft request groups. IAM005 and SEC003 add four source leads per
+side and change three further group next actions; 53 possible no-event reviews
+per side remain unaccepted. Separately, the selected fictional Reno/Boise
+physical-site source passed isolated and main-local review with 31 native
+versions. Its Messy false badge closure and unescorted entry remain visible
+beside an open historical exception. The physical source's exact route
+successor and partial portfolio extension are under independent review;
+neither can establish actual site operation or task credit.
+
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
 2–16, 2027 (weeks 18–20) is the working target. March 16, 2027 (week 24) is
