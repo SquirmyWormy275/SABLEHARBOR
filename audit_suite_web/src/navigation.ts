@@ -14,6 +14,7 @@ export const workspaceSections = [
 export type WorkspaceSection = (typeof workspaceSections)[number];
 const objectSections = {
   controls: "controls",
+  tasks: "controls",
   requests: "pbc",
   artifacts: "pbc",
   meetings: "meetings",

@@ -20,6 +20,8 @@ import { ConversationProvenance } from "./ConversationProvenance";
 import { MeetingSourceContext } from "./MeetingSourceContext";
 import { MeetingConsultation } from "./MeetingConsultation";
 import { WorkGuidance } from "./WorkGuidance";
+import { RelatedWork, type RelatedWorkNavigation } from "./RelatedWork";
+import { resolveRelatedWork, type RelatedWorkReference } from "./relatedWork";
 import { TaskGapPanel } from "./TaskGapPanel";
 import { canRecordTaskGap, taskEligibleForGap } from "./taskGap";
 import { InstructorDebrief } from "./InstructorDebrief";
@@ -91,6 +93,7 @@ import SourceImpact from "./SourceImpact";
 import InstructorKey from "./InstructorKey";
 import BoundInstructorKey from "./BoundInstructorKey";
 import WorkspaceSearch from "./WorkspaceSearch";
+import { searchKinds, resolveSearchHit } from "./workspaceSearch";
 import CustomAuthoring from "./CustomAuthoring";
 import SelectionImport from "./SelectionImport";
 import SampleResponses from "./SampleResponses";
@@ -284,6 +287,9 @@ type DetailContext = {
   focusMessage?: MessagePin;
   savedAtRevision?: number;
   pinnedReference?: Row;
+  relatedReference?: RelatedWorkReference;
+  relatedContext?: string;
+  relatedNavigation?: RelatedWorkNavigation;
   returnToBoundSource?: boolean;
 };
 export default function App() {
@@ -490,6 +496,7 @@ export default function App() {
         const singular: Record<string, string> = {
           people: "person",
           controls: "control",
+          tasks: "task",
           requests: "request",
           artifacts: "artifact",
           populations: "population",
@@ -580,6 +587,8 @@ export default function App() {
     };
     setDetail((previous) => {
       if (!previous) return null;
+      if (previous.relatedContext && previous.relatedContext !== sourceContext)
+        return null;
       if (
         previous.savedAtRevision !== undefined &&
         previous.savedAtRevision !== engagement.revision
@@ -597,6 +606,11 @@ export default function App() {
       if (
         previous.pinnedReference &&
         !lineageReference(engagement, previous.pinnedReference)
+      )
+        return null;
+      if (
+        previous.relatedReference &&
+        !resolveRelatedWork(engagement, previous.relatedReference)
       )
         return null;
       if (
@@ -1559,7 +1573,27 @@ export default function App() {
               engagement={e}
               viewerId={bootstrap.viewer.id}
               onPreview={(kind, row) => setDetail({ kind, row })}
-              onNavigate={navigate}
+              onOpenRecord={(hit) => {
+                const row = resolveSearchHit(e, hit);
+                if (
+                  !row ||
+                  currentEngagement.current !== e.id ||
+                  renderEpoch !== navigationEpoch.current
+                )
+                  return;
+                savePosition();
+                restorePosition(hit.section);
+                setDetail({ kind: hit.kind, row });
+                history.pushState(
+                  {},
+                  "",
+                  workspaceLink({
+                    engagement: e.id,
+                    section: hit.section,
+                    object: { kind: searchKinds[hit.kind].collection, id: hit.id },
+                  }),
+                );
+              }}
             />
           )}
           <div id="main" tabIndex={-1}>
@@ -1908,6 +1942,18 @@ export default function App() {
                           ).includes(framework),
                       )}
                       columns={[
+                        {
+                          key: "inspect",
+                          label: "Inspect",
+                          render: (r, sequence) => (
+                            <button
+                              type="button"
+                              onClick={() => setDetail({ row: r, kind: "task", sequence })}
+                            >
+                              Inspect procedure {r.id}
+                            </button>
+                          ),
+                        },
                         {
                           key: "id",
                           label: "Task",
@@ -3280,6 +3326,8 @@ export default function App() {
                 onClick={() => {
                   const back = detail.returnTo!;
                   const collections: Record<string, string> = {
+                    control: "controls",
+                    task: "tasks",
                     population: "populations",
                     selection: "selections",
                     artifact: "artifacts",
@@ -3294,8 +3342,16 @@ export default function App() {
                     ...(back.row.sha256 ? { sha256: back.row.sha256 } : {}),
                   };
                   const target = lineageReference(e, ref);
-                  if (target) setDetail({ ...back, row: target.row });
-                  else
+                  if (target) {
+                    setDetail({ ...back, row: target.row });
+                    requestAnimationFrame(() => {
+                      const dialog = document.querySelector<HTMLDialogElement>(
+                        "dialog[open]",
+                      );
+                      dialog?.focus({ preventScroll: true });
+                      if (dialog) dialog.scrollTop = 0;
+                    });
+                  } else
                     setError(
                       "The original inspection context is no longer available at its pinned version.",
                     );
@@ -3303,6 +3359,43 @@ export default function App() {
               >
                 Back to {detail.returnTo.kind} {detail.returnTo.row.id}
               </button>
+            )}
+            {["control", "task"].includes(detail.kind) && (
+              <RelatedWork
+                key={sourceContext + ":" + detail.kind + ":" + detail.row.id}
+                engagement={e}
+                kind={detail.kind as "control" | "task"}
+                objectId={detail.row.id}
+                navigation={detail.relatedNavigation ?? { query: "", limits: {} }}
+                onNavigationChange={(value) =>
+                  setDetail({
+                    ...detail,
+                    relatedContext: sourceContext,
+                    relatedNavigation: value,
+                  })
+                }
+                onOpen={(reference) => {
+                  const target = resolveRelatedWork(e, reference);
+                  if (target)
+                    setDetail({
+                      kind: target.kind,
+                      row: target.row,
+                      returnTo: detail.returnTo ?? detail,
+                      relatedReference: reference,
+                      relatedContext: sourceContext,
+                      ...(reference.collection === "workpapers"
+                        ? { focusVersion: reference.version }
+                        : {}),
+                    });
+                  requestAnimationFrame(() => {
+                    const dialog = document.querySelector<HTMLDialogElement>(
+                      "dialog[open]",
+                    );
+                    dialog?.focus({ preventScroll: true });
+                    if (dialog) dialog.scrollTop = 0;
+                  });
+                }}
+              />
             )}
             {["population", "selection"].includes(detail.kind) && (
               <PopulationLineage

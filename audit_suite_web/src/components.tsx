@@ -24,7 +24,11 @@ export function Empty({
 }
 type TableProps = {
   rows: Row[];
-  columns: { key: string; label: string; render?: (row: Row) => ReactNode }[];
+  columns: {
+    key: string;
+    label: string;
+    render?: (row: Row, sequence: string[]) => ReactNode;
+  }[];
   onOpen?: (row: Row, sequence: string[]) => void;
   memoryKey?: string;
 };
@@ -72,6 +76,7 @@ function RecordTable({ rows, columns, onOpen, memoryKey }: TableProps) {
         : 0,
     );
   const pages = Math.max(1, Math.ceil(filtered.length / 25));
+  const sequence = filtered.map((row) => row.id);
   const currentPage = Math.min(page, pages - 1);
   useEffect(() => {
     if (memory && memoryKey)
@@ -133,15 +138,12 @@ function RecordTable({ rows, columns, onOpen, memoryKey }: TableProps) {
                   {columns.map((c, i) => (
                     <td key={c.key}>
                       {c.render ? (
-                        c.render(row)
+                        c.render(row, sequence)
                       ) : i === 0 && onOpen ? (
                         <button
                           className="text-link"
                           onClick={() =>
-                            onOpen(
-                              row,
-                              filtered.map((item) => item.id),
-                            )
+                            onOpen(row, sequence)
                           }
                         >
                           {str(row[c.key])}

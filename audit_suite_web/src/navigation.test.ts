@@ -21,6 +21,7 @@ const fixture = () =>
     permissions: ["read"],
     simulated_at: "2028-01-02T10:00:00Z",
     artifacts: [{ id: "artifact /&1" }],
+    tasks: [{ id: "TASK-SH-SEC-003-CHECK:CC7.1" }],
     notes: [],
     workpapers: [],
   }) as unknown as Engagement;
@@ -34,6 +35,23 @@ it("round-trips an authorized encoded object ID", () => {
     status: "ready",
     location,
   });
+});
+it("opens an exact authorized procedure in its control workspace", () => {
+  const location = {
+    engagement: "eng-a",
+    section: "controls" as const,
+    object: { kind: "tasks" as const, id: "TASK-SH-SEC-003-CHECK:CC7.1" },
+  };
+  expect(parseWorkspaceLink(workspaceLink(location), fixture())).toEqual({
+    status: "ready",
+    location,
+  });
+  expect(
+    parseWorkspaceLink(
+      workspaceLink({ ...location, section: "pbc" }),
+      fixture(),
+    ),
+  ).toEqual({ status: "unavailable" });
 });
 it.each([
   "?engagement=eng-b",
@@ -88,7 +106,12 @@ it.each(["source", "acquisition"])(
     const changed = {
       ...e,
       ...(change === "source"
-        ? { company_source_binding: { company: "Sable Harbor", branch: "messy" } }
+        ? {
+            company_source_binding: {
+              company: "Sable Harbor",
+              branch: "messy",
+            },
+          }
         : { evidence_acquisition: { mode: "retained_copy" } }),
     };
     m.activate(changed, viewer);
