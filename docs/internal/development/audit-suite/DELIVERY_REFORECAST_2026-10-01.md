@@ -84,6 +84,11 @@ performed, independently challenged and reproduced in main. The “1–3 days”
 row above is superseded by that completed bounded engineering result. The
 [active graph](ACTIVE_AGENT_GRAPH_2026-10-01.md) distinguishes that progress from
 the unchanged frozen P1 pair and the still-open full experience. A larger
-identity/access family is now measuring actual procedure throughput; source
-answer-annotation migration and full-period availability remain explicit gates.
+identity/access engineering pair has now been independently reproduced: thirty
+selected tasks per side, thirteen COMPLETE source examinations and seventeen
+IN_PROGRESS broader procedures. Its bounded conclusions and retained quarantines
+are not full audit completion. Five new company source families now provide
+locators for the previously untargeted 82 routes per side. Company-facing
+answer-annotation migration, authoritative populations, full-period availability
+and subsequent fresh ordinary collection remain explicit gates.
 The longer ranges are provisional, not a new promise of completion.

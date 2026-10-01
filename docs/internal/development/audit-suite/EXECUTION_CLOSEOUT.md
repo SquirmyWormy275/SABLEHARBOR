@@ -1063,3 +1063,23 @@ integration must remove older authoring answer annotations from company-facing
 records, preserve operational facts and advance full-period fieldwork by ordinary
 recorded clock commands before collecting January period-close sources. Source
 locators and older performed methods supply no automatic new task credit.
+
+The independently reproduced fresh identity/access engineering pair has thirty
+selected tasks and thirty workpapers per side: thirteen COMPLETE source
+examinations, seventeen IN_PROGRESS broader procedures and 379 other unrun tasks.
+Conclusions are bounded LIMITATION or four supported implementation FAIL results
+in B. This pair does not modify the frozen P1 workrooms or inherit older audit
+results. Its original authoring metadata and four quarantined plaintext collections
+keep it outside final learner acceptance until the company-facing library and
+ordinary adapter are independently accepted. Main review SHA-256:
+`1d5ef54843d26e6f52665da46f704b408a54dd9e08748c3a2ccc36ced6ad2532`.
+
+Five new independently reviewed company source families contain 835 native
+versions: privacy 269, assurance 53, legal intake 191, original legal messages 114
+and later policy/security/workforce operations 208. They supply locators for the
+82 routes previously missing in V17, without audit credit. Joining them with
+V18's selected 948 versions proposes a 1,783-version company-library stage;
+that stage is still under migration review and excludes older systems not
+selected by V18. Authoritative person/account populations and explicit admission
+of missing IAM foundations remain required. The active graph records current
+review pins and the dependency chain to fresh fieldwork and final acceptance.

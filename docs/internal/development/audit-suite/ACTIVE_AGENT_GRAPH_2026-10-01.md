@@ -11,9 +11,9 @@ parts of that workflow; they are not a separate product or a completed audit.
 
 | Lane | Current deliverable | Integration condition |
 | --- | --- | --- |
-| Company operations | Policy/procedure, security and sanctions history for the remaining twelve discovery routes | Dated authority, actual operational populations, preserved earlier limits and independent source review |
-| Audit execution | Fresh paired identity/access examinations across seven control families | Ordinary collection, exact per-task methods/workpapers, full-period clock handling, supported dispositions and independent review |
-| Source quality and integration | Remove authoring answer annotations from company-facing records; then consolidate the source registry and route/request/readiness reports | Preserve raw originals; explicit business-field migration, no learner answer leakage, exact custody and independently reviewed successor pins |
+| Company operations | Company-owned person, account and entitlement populations, dated local authority and lifecycle operations | Canonical people and affiliations, explicit inclusion/exclusion rules, actual local permission mechanics and independently reviewed original records |
+| Audit execution | Reusable ordinary-collection adapter and fresh security/logging/recovery examinations against the accepted company library | Company exists before audit creation, zero initial evidence, separate operator/auditor/reviewer authority, exact task methods and independent review |
+| Source quality and integration | Complete the company-facing operational library, then consolidate source and route/request/readiness reports | Preserve raw originals and business facts, explicitly migrate answer annotations, verify native and scalar/vector custody links, retain restricted unresolved references |
 | Main integration | Review, reproduce, verify and join the accepted work | Keep scope, period, authority, source versions and exact task results distinct; retain rejected candidates |
 
 The next dependency chain is company-source quality and population review →
@@ -37,14 +37,55 @@ Main-checkout results already reproduced:
 - LEG001 intake: 191 native versions. Ten focused tests and independent
   challenges cover completed monthly tails, provenance, immutable triggers,
   false nonoccurrence and undeclared receipt branches. Rejected candidates are
-  preserved. Original inbound-message and independent channel-population
-  completeness remain separate source work.
+  preserved. The original-message archive below separately corroborates the
+  registered channel population; broader communication completeness is unknown.
+- Original legal communications: 114 native versions, including two inbound
+  messages per branch, their retained attachments and 96 completed-window exports
+  across the pair. Actual SQL queries were independently recomputed. The first
+  nine hours of January reception remain unestablished; four registered channels
+  do not establish completeness of all company communications. Eleven focused
+  tests and independent mutations reject invalid custody and import history.
+- Later policy, procedure, security and workforce operations: 208 native
+  versions and twelve additional route locators per side. The dated local program
+  has four September–December reviews and a January close. Actual policy-source
+  retrieval, access decisions, transfer-integrity checks, movement/copy controls
+  and sanctions records preserve late or missing operations. Thirty-six focused
+  tests and independent challenges passed after schema/clock and protected-reporting
+  reference corrections. Earlier limits and rejected candidates remain preserved.
 - Fresh SEC003 selected procedure: each new workroom began with zero evidence;
   A collected thirteen originals and B twenty-five. Each contains one auditor
   workpaper and two sample-execution traces. Independent recalculation confirms
   B's three observed assets versus four claimed and the distinct missed EDGE
   advisory. The broad task remains IN_PROGRESS/LIMITATION. Older source
   authoring annotations require a company-facing migration before final use.
+- Fresh identity/access engineering pair: thirty selected tasks and thirty
+  distinct workpapers per side; thirteen source examinations are COMPLETE and
+  seventeen broader procedures remain IN_PROGRESS. All conclusions remain
+  LIMITATION, except four supported implementation FAIL results in B. The other
+  379 tasks per side are unrun. Four-quarter membership, mover permissions,
+  session revocation and credential rotation were independently recalculated;
+  106 focused/regression tests and nine actual mutation challenges passed. Four
+  plaintext collections across the pair remain quarantined under the older
+  filename metadata. This raw-source pilot is not accepted for final learner use.
+
+The five newly reviewed company source families above contain 835 native versions.
+They supply locators for the previously untargeted 82 documentary/activity routes
+per side; they do not perform those audit procedures. The proposed library stage
+joins those sources with V18's selected 948 versions: 1,783 versions, 48 physical
+components and 46 selected cohorts. V18 was a selected portfolio, not every older
+company system. Missing older IAM foundations and the new authoritative identity
+population must be admitted explicitly before final identity fieldwork.
+
+Main independent review SHA-256 pins:
+
+| Result | Review SHA-256 |
+| --- | --- |
+| DAT002 company operations | `92bda460dd5e2d3c099fa6c64f9562addddfde23f8204f74a44deb3752247064` |
+| ASS003/004 company operations | `9b8dc95fddf7a82d4a6722f5a66c4c588cbc734578c4500ffc238541962054e0` |
+| LEG001 intake | `842d04934e1996ff599406d57948ff39f37b11aa82db4c602425cef7c6b46ebe` |
+| Original legal communications | `d1d0c0de059efc861b4c2d6c741707491ba79abb27459b2dfc9536cb1768c7da` |
+| Later policy/security/workforce operations | `03c0784acc84596df76357e5ace8e211ec10f81845406550b5f7be0634053874` |
+| Fresh identity/access engineering pair | `1d5ef54843d26e6f52665da46f704b408a54dd9e08748c3a2ccc36ced6ad2532` |
 
 The frozen P1 pair still has 409 unrun tasks per side. It remains a preservation
 baseline, distinct from newly performed engagements. The new SEC003 pair has
@@ -55,7 +96,9 @@ completed new audit procedures.
 The older “236-identity operating execution baseline” means 236 unique
 operating-task instances across the older workrooms. It is not a 236-person
 workforce. Canonical people, proposed contacts and declared operational subjects
-have separate populations.
+have separate populations. Canon contains 44 current employees, seven nonemployee
+directors and one former employee. Fifteen proposed contacts remain proposed;
+forecast staffing positions are planning data, not additional people or accounts.
 
 A read-only SQLite inspection produced transient sidecars on frozen P1. Ordinary
 independent copies preserved the original database and sidecars before an empty
