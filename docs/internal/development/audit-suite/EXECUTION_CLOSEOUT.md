@@ -103,8 +103,8 @@ obligation, processing of PHI, or effective operation. Of the indexed 198,
 scope or qualified-review dependencies. The unstarted duties have no linked
 workpaper or sample trace in this snapshot. They require clause-level
 examination and applicability decisions; conditional wording alone does not
-justify `NOT_APPLICABLE`. The 236-identity operating execution baseline is
-independently covered, but that does not discharge these additional duties or
+justify `NOT_APPLICABLE`. The 236 unique operating-task instances across the older workrooms are
+independently covered; that denominator is not a workforce census, but that does not discharge these additional duties or
 the remaining clauses of partial tasks. The private
 `final-not-started-analysis-v1/` and `additional-duty-execution-strategy-v1/`
 records identify the next bounded work without claiming it was performed.
@@ -1051,3 +1051,15 @@ matches, mobile width and zero external requests or page errors. The static
 packet has no file-level identity gate; access and distribution remain private.
 These authored gaps do not supply source evidence, task credit, HIPAA
 applicability, a finding or a professional audit conclusion.
+
+
+## October 1 active parallel workflow
+
+The [active agent graph](ACTIVE_AGENT_GRAPH_2026-10-01.md) records the current
+worker ownership, integrated source/navigation results, fresh selected SEC003
+performance and independent challenges. The frozen P1 pair remains unchanged;
+its unrun procedures are distinct from the new selected workrooms. The next
+integration must remove older authoring answer annotations from company-facing
+records, preserve operational facts and advance full-period fieldwork by ordinary
+recorded clock commands before collecting January period-close sources. Source
+locators and older performed methods supply no automatic new task credit.

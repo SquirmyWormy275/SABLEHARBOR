@@ -77,3 +77,13 @@ If source authority, legal applicability, population completeness or review
 fails, the corresponding date moves. Open exceptions and unsupported results
 may remain in a faithful training world; they cannot be silently converted to
 passes or `N/A` decisions.
+
+
+October 1 execution update: the first selected SEC003 pipeline has now been
+performed, independently challenged and reproduced in main. The “1–3 days”
+row above is superseded by that completed bounded engineering result. The
+[active graph](ACTIVE_AGENT_GRAPH_2026-10-01.md) distinguishes that progress from
+the unchanged frozen P1 pair and the still-open full experience. A larger
+identity/access family is now measuring actual procedure throughput; source
+answer-annotation migration and full-period availability remain explicit gates.
+The longer ranges are provisional, not a new promise of completion.
