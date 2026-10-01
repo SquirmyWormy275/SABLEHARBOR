@@ -18,9 +18,9 @@ untargeted. It still labels 121 exact clauses per branch unsupported. The
 reviewed V15 request plan has 30 draft, unsent source/contact groups and 53
 possible no-event cases per branch with zero accepted determinations. The
 independently reviewed V18 candidate has 41 selected source cohorts and 948
-native versions, but is partial; it is not a fresh engagement. The V5 readiness
-gate is a historical V16/V14 checkpoint and blocks all 43 control groups. None
-of these counts is an audit pass.
+native versions, but is partial; it is not a fresh engagement. The current V6
+readiness gate reconciles V18/V17/V15 and still blocks all 43 control groups.
+None of these counts is an audit pass.
 
 The **82 still-untargeted routes per branch** are 48 LEG001, 13 DAT002,
 five ASS004, four each ASS003/POL001/SEC001, three POL004 and one ETH001.
