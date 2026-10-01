@@ -11,6 +11,7 @@ import hashlib
 import json
 import os
 import stat
+from contextlib import contextmanager
 from dataclasses import dataclass
 from datetime import UTC, datetime
 from pathlib import Path
@@ -22,10 +23,12 @@ from .fresh_sec003_procedure import (
     CLOCK_ID,
     NATIVE_ID,
     ProcedureError,
-    business_digest,
     discover_history,
     read_only,
     require,
+)
+from .fresh_sec003_procedure import (
+    business_digest as _business_digest,
 )
 
 EMPTY_WORKROOM = (
@@ -45,7 +48,7 @@ MEDIA_SUFFIX = {
 BUSINESS_REFERENCE = tuple(key for key in CLOCK_ID if key != "imported_at")
 LIBRARY_REVIEW_SCHEMA = "SH_ROOT_COMPANY_LIBRARY_INDEPENDENT_REVIEW_V1"
 LIBRARY_REVIEW_VERDICT = "PASS_COMPANY_FACING_LIBRARY_SELECTED_BOUNDARY"
-LIBRARY_MANIFEST_SCHEMA = "SH_COMPANY_OPERATIONAL_PROJECTION_V2"
+LIBRARY_MANIFEST_SCHEMA = "SH_COMPANY_OPERATIONAL_PROJECTION_V2_1"
 
 
 def file_sha(path: Path) -> str:
@@ -63,6 +66,50 @@ def private_file(path: Path) -> None:
         stat.S_ISREG(info.st_mode) and stat.S_IMODE(info.st_mode) == 0o600 and info.st_nlink == 1,
         "Private ordinary single-link file required",
     )
+
+
+def quiescent_database(path: Path) -> None:
+    """Immutable reads and normal source reads must observe the same database."""
+    private_file(path)
+    for suffix in ("-wal", "-shm", "-journal"):
+        sidecar = Path(str(path) + suffix)
+        require(
+            not sidecar.exists() and not sidecar.is_symlink(),
+            "Source SQLite sidecars are forbidden; quiescent database required",
+        )
+
+
+@contextmanager
+def quiescent_read(path: Path):
+    quiescent_database(path)
+    try:
+        with read_only(path) as db:
+            yield db
+    finally:
+        quiescent_database(path)
+
+
+def business_digest(path: Path) -> str:
+    quiescent_database(path)
+    try:
+        return _business_digest(path)
+    finally:
+        quiescent_database(path)
+
+
+class QuiescentCompanyStore(CompanyStore):
+    """The normal API with a fail-closed boundary around every connection."""
+
+    @contextmanager
+    def _db(self):
+        quiescent_database(self.path)
+        try:
+            with super()._db() as db:
+                yield db
+        finally:
+            # The ordinary DELETE-mode transaction has committed/rolled back
+            # and closed here. A held WAL writer is never checkpointed or deleted.
+            quiescent_database(self.path)
 
 
 def ordinary_copy(original: Path, target: Path) -> None:
@@ -85,7 +132,7 @@ def ordinary_copy(original: Path, target: Path) -> None:
 
 
 def schema_sha(path: Path) -> str:
-    with read_only(path) as db:
+    with quiescent_read(path) as db:
         objects = [
             list(row)
             for row in db.execute(
@@ -118,12 +165,7 @@ class AcceptedLibrary:
             type(self.version_count) is int and self.version_count > 0,
             "Exact positive accepted version boundary required",
         )
-        for suffix in ("-wal", "-shm", "-journal"):
-            sidecar = Path(str(self.database) + suffix)
-            require(
-                not sidecar.exists() and not sidecar.is_symlink(),
-                "Accepted source-side SQLite sidecars are forbidden",
-            )
+        quiescent_database(self.database)
         for path, expected in (
             (self.database, self.database_sha256),
             (self.manifest, self.manifest_sha256),
@@ -151,7 +193,7 @@ class AcceptedLibrary:
             and manifest.get("files", {}).get("company.sqlite3") == self.database_sha256,
             "Manifest must bind the exact projected library database",
         )
-        with read_only(self.database) as db:
+        with quiescent_read(self.database) as db:
             require(
                 db.execute("SELECT COUNT(*) FROM versions").fetchone()[0] == self.version_count,
                 "Accepted library version boundary changed",
@@ -262,28 +304,59 @@ class LibraryAudit:
         )
         destination.mkdir(mode=0o700)
         self.database = destination / "company.sqlite3"
+        quiescent_database(accepted.database)
         ordinary_copy(accepted.database, self.database)
+        quiescent_database(accepted.database)
+        quiescent_database(self.database)
         self.business_sha256 = business_digest(self.database)
         self.schema_sha256 = schema_sha(self.database)
         self.access_log = []
-        with read_only(self.database) as db:
+        with quiescent_read(self.database) as db:
             registered = {
                 tuple(row) for row in db.execute("SELECT company,branch,system FROM systems")
             }
         require(
             set(self.routes) <= registered, "Business route names an unregistered native system"
         )
-        self.store = CompanyStore(destination)
+        self.store = QuiescentCompanyStore(destination)
+        self.engine = None
+        self.engagement = None
+        self.identities = None
         self.check_unchanged()
 
     def check_unchanged(self):
         self.accepted.verify()
-        private_file(self.database)
+        quiescent_database(self.database)
         require(
             business_digest(self.database) == self.business_sha256,
             "Staged native company history changed",
         )
         require(schema_sha(self.database) == self.schema_sha256, "Staged native schema changed")
+        quiescent_database(self.database)
+
+    def _context(self, engine: Engine, auditor: str, engagement: str) -> tuple[dict, dict]:
+        require(
+            self.engine is not None
+            and engine is self.engine
+            and engagement == self.engagement
+            and auditor == self.identities["auditor"],
+            "Actual bound Engine engagement and audit performer required",
+        )
+        require(
+            engine.company_store is self.store,
+            "Engine company connection differs from the staged library",
+        )
+        state = engine.store.get(auditor, engagement)
+        branches = {(r.company, r.branch) for r in self.routes.values()}
+        company, branch = next(iter(branches))
+        bound = {"company": company, "branch": branch}
+        require(
+            engine.company_bindings.get(engagement) == bound
+            and state.get("company_source_binding") == bound
+            and state.get("evidence_acquisition") == "COMPANY_SOURCE_COLLECTION",
+            "Activated engagement company branch binding required",
+        )
+        return state, bound
 
     def authorize(
         self, *, operator: str, auditor: str, reviewer: str, engagement: str, active=True
@@ -292,6 +365,13 @@ class LibraryAudit:
             len({operator, auditor, reviewer}) == 3, "Separate company/auditor/reviewer required"
         )
         self.check_unchanged()
+        require(
+            self.identities is not None
+            and {"operator": operator, "auditor": auditor, "reviewer": reviewer} == self.identities
+            and engagement == self.engagement,
+            "Provisioned company operator, performer and reserved reviewer required",
+        )
+        self._context(self.engine, auditor, engagement)
         for company, branch, system in sorted(self.routes):
             self.store.grant(auditor, engagement, company, branch, system, active=active)
             self.access_log.append(
@@ -309,14 +389,21 @@ class LibraryAudit:
             )
         self.check_unchanged()
 
-    def discover(self, auditor: str, engagement: str, company: str, branch: str, *, as_of: str):
+    def discover(self, engine: Engine, auditor: str, engagement: str, *, as_of: str | None = None):
         self.check_unchanged()
+        state, bound = self._context(engine, auditor, engagement)
+        cutoff = _time(as_of if as_of is not None else state["simulated_at"])
+        require(
+            cutoff <= _time(state["simulated_at"]),
+            "Discovery cutoff exceeds bound engagement simulated clock",
+        )
+        company, branch = bound["company"], bound["branch"]
         systems = sorted(
             r.system for r in self.routes.values() if (r.company, r.branch) == (company, branch)
         )
         require(systems, "Declared company/branch route required")
         rows, pages = discover_history(
-            self.store, auditor, engagement, company, branch, as_of=as_of, systems=systems
+            self.store, auditor, engagement, company, branch, as_of=cutoff, systems=systems
         )
         views = []
         for row in rows:
@@ -332,7 +419,7 @@ class LibraryAudit:
                     **row,
                     "logical_family": route.family,
                     "logical_system": route.logical_system,
-                    "discovered_as_of": _time(as_of),
+                    "discovered_as_of": cutoff,
                 }
             )
         self.check_unchanged()
@@ -343,10 +430,11 @@ class LibraryAudit:
     ):
         """Supported create/configuration mechanics; never read a frozen audit state."""
         self.check_unchanged()
+        require(self.engine is None, "One fresh Engine engagement per source workroom required")
         branches = {(r.company, r.branch) for r in self.routes.values()}
         require(len(branches) == 1, "One explicit company branch per engagement required")
         company, branch = next(iter(branches))
-        with read_only(self.database) as db:
+        with quiescent_read(self.database) as db:
             require(
                 all(
                     db.execute(f"SELECT COUNT(*) FROM {table}").fetchone()[0] == 0
@@ -361,6 +449,10 @@ class LibraryAudit:
             program_pack=program_pack,
             company_root=self.database.parent,
         )
+        self.check_unchanged()
+        # Route Engine's ordinary collection commands through the same guarded
+        # CompanyStore API, preserving its existing typed collection semantics.
+        engine.company_store = self.store
         operator = engine.store.provision("Company source operator", ["instructor"])["id"]
         auditor = engine.store.provision("Independent audit performer", ["learner"])["id"]
         reviewer = engine.store.provision("Reserved independent reviewer", ["reviewer"])["id"]
@@ -379,6 +471,10 @@ class LibraryAudit:
         engine.store.grant(engagement, auditor, "learn")
         engine.store.grant(engagement, reviewer, "review")
         engine.company_bindings[engagement] = {"company": company, "branch": branch}
+        self.engine = engine
+        self.engagement = engagement
+        self.identities = {"operator": operator, "auditor": auditor, "reviewer": reviewer}
+        self.check_unchanged()
         return (
             engine,
             state,
@@ -395,13 +491,7 @@ class LibraryAudit:
         self, engine, auditor: str, engagement: str, request: str, row: dict, *, command_id: str
     ):
         self.check_unchanged()
-        require(
-            isinstance(engine.company_store, CompanyStore)
-            and engine.company_store.path.absolute() == self.database,
-            "Engine company connection differs from the staged library",
-        )
-        state = engine.store.get(auditor, engagement)
-        bound = engine.company_bindings.get(engagement)
+        state, bound = self._context(engine, auditor, engagement)
         require(
             bound == {"company": row["company"], "branch": row["branch"]},
             "Discovered source belongs to another engagement branch",

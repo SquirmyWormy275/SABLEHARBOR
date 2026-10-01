@@ -1,6 +1,7 @@
 import hashlib
 import json
 import sqlite3
+from contextlib import contextmanager
 from pathlib import Path
 
 import pytest
@@ -88,9 +89,56 @@ def library(tmp_path):
     return accepted, route
 
 
-def authorize(session):
-    session.authorize(
-        operator="source-operator", auditor="auditor", reviewer="reviewer", engagement="new"
+def command(session, actor, kind, payload):
+    engine, engagement = session.engine, session.engagement
+    current = engine.store.get(actor, engagement)
+    return engine.command(
+        actor,
+        engagement,
+        {
+            "command_id": f"test-{kind}-{current['revision']}",
+            "expected_revision": current["revision"],
+            "kind": kind,
+            "payload": payload,
+        },
+    )
+
+
+def create_session(session, *, start="2027-01-05"):
+    engine, state, identities = session.create(
+        repository=Path(__file__).resolve().parents[2],
+        audit_root=session.database.parent.parent / "audit",
+        payload={
+            "command_id": "fresh-test-create",
+            "title": "Neutral source-library mechanics test",
+            "discipline": "IT",
+            "mode": "CLEAN",
+            "configuration": {"selections": []},
+            "scope": {
+                "programs": ["SOC2"],
+                "report_type": "Type 2",
+                "period_start": "2027-01-01",
+                "period_end": "2027-12-31",
+                "fieldwork_start": start,
+                "timezone": "UTC",
+                "boundaries": ["corporate"],
+                "control_ids": ["SH-SEC-003"],
+            },
+        },
+    )
+    command(session, identities["operator"], "company.activate", {})
+    return engine, state, identities
+
+
+def authorize(session, *, active=True):
+    if session.engine is None:
+        create_session(session)
+    session.authorize(**session.identities, engagement=session.engagement, active=active)
+
+
+def discover(session, cutoff):
+    return session.discover(
+        session.engine, session.identities["auditor"], session.engagement, as_of=cutoff
     )
 
 
@@ -115,29 +163,19 @@ def test_discovery_preserves_projected_identity_and_available_version_clock(libr
     accepted, route = library
     session = LibraryAudit(accepted, tmp_path / "ordinary-copy", [route])
     authorize(session)
-    rows, pages = session.discover(
-        "auditor", "new", "EXAMPLE", "operating", as_of="2027-01-03T00:00:00Z"
-    )
+    rows, pages = discover(session, "2027-01-03T00:00:00Z")
     assert [r["version"] for r in rows] == [1]
     assert rows[0]["system"] == "operations.events"
     assert rows[0]["logical_system"] == "event_history"
     assert rows[0]["logical_family"] == "security"
     assert rows[0]["sha256"] == hashlib.sha256(rows[0]["content"]).hexdigest()
     assert pages[0]["records"][0]["available_at"].startswith("2027-01-02")
-    later, _ = session.discover(
-        "auditor", "new", "EXAMPLE", "operating", as_of="2027-01-05T00:00:00Z"
-    )
+    later, _ = discover(session, "2027-01-05T00:00:00Z")
     assert [r["version"] for r in later] == [1, 2]
     assert file_sha(accepted.database) == accepted.database_sha256
-    session.authorize(
-        operator="source-operator",
-        auditor="auditor",
-        reviewer="reviewer",
-        engagement="new",
-        active=False,
-    )
+    authorize(session, active=False)
     with pytest.raises(ProcedureError, match="not granted"):
-        session.discover("auditor", "new", "EXAMPLE", "operating", as_of="2027-01-05T00:00:00Z")
+        discover(session, "2027-01-05T00:00:00Z")
 
 
 @pytest.mark.parametrize(
@@ -191,6 +229,28 @@ def test_private_file_rejects_symlink_ancestor(library, tmp_path):
         private_file(alias / accepted.database.name)
 
 
+def test_rejected_v2_manifest_cannot_be_resealed_as_final_v2_1_acceptance(library, tmp_path):
+    accepted, route = library
+    manifest = json.loads(accepted.manifest.read_bytes())
+    manifest["schema"] = "SH_COMPANY_OPERATIONAL_PROJECTION_V2"
+    write(accepted.manifest, manifest)
+    review = json.loads(accepted.review.read_bytes())
+    review["library_pins"]["MANIFEST.json"] = file_sha(accepted.manifest)
+    write(accepted.review, review)
+    resealed = AcceptedLibrary(
+        accepted.database,
+        accepted.database_sha256,
+        accepted.manifest,
+        file_sha(accepted.manifest),
+        accepted.review,
+        file_sha(accepted.review),
+        accepted.version_count,
+    )
+    with pytest.raises(ProcedureError, match="Manifest"):
+        LibraryAudit(resealed, tmp_path / "forbidden", [route])
+    assert not (tmp_path / "forbidden").exists()
+
+
 def test_branch_membership_and_reviewer_separation_are_not_inferred(library, tmp_path):
     accepted, route = library
     session = LibraryAudit(accepted, tmp_path / "copy", [route])
@@ -199,12 +259,19 @@ def test_branch_membership_and_reviewer_separation_are_not_inferred(library, tmp
             operator="operator", auditor="same-person", reviewer="same-person", engagement="new"
         )
     authorize(session)
-    with pytest.raises(ProcedureError, match="branch route"):
-        session.discover("auditor", "new", "EXAMPLE", "other", as_of="2027-01-05T00:00:00Z")
+    session.engine.company_bindings[session.engagement] = {"company": "EXAMPLE", "branch": "other"}
+    with pytest.raises(ProcedureError, match="branch binding"):
+        discover(session, "2027-01-05T00:00:00Z")
+    session.engine.company_bindings[session.engagement] = {
+        "company": "EXAMPLE",
+        "branch": "operating",
+    }
+    with pytest.raises(ProcedureError, match="audit performer"):
+        session.discover(session.engine, session.identities["reviewer"], session.engagement)
     with pytest.raises(CompanyStoreError, match="unauthorized"):
         session.store.read_version(
-            "reviewer",
-            "new",
+            session.identities["reviewer"],
+            session.engagement,
             "EXAMPLE",
             "operating",
             "operations.events",
@@ -232,13 +299,142 @@ def test_removing_collection_immutability_on_disposable_copy_fails_closed(librar
         authorize(session)
 
 
+def test_held_open_wal_shadow_is_rejected_before_normal_source_access(library, tmp_path):
+    accepted, route = library
+    session = LibraryAudit(accepted, tmp_path / "copy", [route])
+    authorize(session)
+    shadow = sqlite3.connect(session.database)
+    try:
+        assert shadow.execute("PRAGMA journal_mode=WAL").fetchone()[0] == "wal"
+        shadow.execute("DROP TRIGGER no_version_update")
+        replacement = b'{"revision":"unaccepted WAL replacement"}'
+        shadow.execute(
+            "UPDATE versions SET content=?,sha256=? WHERE record='event-one' AND version=1",
+            (replacement, hashlib.sha256(replacement).hexdigest()),
+        )
+        shadow.commit()
+        assert Path(str(session.database) + "-wal").is_file()
+        with pytest.raises(ProcedureError, match="sidecars"):
+            session.check_unchanged()
+        with pytest.raises(ProcedureError, match="sidecars"):
+            authorize(session)
+        with pytest.raises(ProcedureError, match="sidecars"):
+            discover(session, "2027-01-03T00:00:00Z")
+        # Engine and direct normal CompanyStore calls share the same boundary.
+        with pytest.raises(ProcedureError, match="sidecars"):
+            session.engine.company_store.read_version(
+                session.identities["auditor"],
+                session.engagement,
+                "EXAMPLE",
+                "operating",
+                "operations.events",
+                "event-one",
+                version=1,
+                as_of="2027-01-03T00:00:00Z",
+            )
+        assert file_sha(accepted.database) == accepted.database_sha256
+        assert Path(str(session.database) + "-wal").is_file()
+    finally:
+        shadow.close()
+
+
+@pytest.mark.parametrize("suffix", ["-wal", "-shm", "-journal"])
+@pytest.mark.parametrize("alias", [False, True])
+def test_staged_sidecars_and_dangling_aliases_block_immutable_and_normal_api_reads(
+    library, tmp_path, suffix, alias
+):
+    accepted, route = library
+    session = LibraryAudit(accepted, tmp_path / "copy", [route])
+    authorize(session)
+    sidecar = Path(str(session.database) + suffix)
+    if alias:
+        sidecar.symlink_to(tmp_path / "nonexistent-preserved-target")
+    else:
+        sidecar.write_bytes(b"preserved staged journal")
+        sidecar.chmod(0o600)
+    with pytest.raises(ProcedureError, match="sidecars"):
+        session.check_unchanged()
+    with pytest.raises(ProcedureError, match="sidecars"):
+        session.store.list_systems(
+            session.identities["auditor"], session.engagement, "EXAMPLE", "operating"
+        )
+    assert sidecar.is_symlink() if alias else sidecar.read_bytes() == b"preserved staged journal"
+    assert file_sha(accepted.database) == accepted.database_sha256
+
+
+def test_normal_api_checks_quiescence_after_the_connection_closes(library, tmp_path, monkeypatch):
+    accepted, route = library
+    session = LibraryAudit(accepted, tmp_path / "copy", [route])
+    authorize(session)
+    original_db = CompanyStore._db
+    sidecar = Path(str(session.database) + "-journal")
+
+    @contextmanager
+    def journal_after_connection(store):
+        with original_db(store) as db:
+            yield db
+        sidecar.write_bytes(b"concurrent journal appeared after the read")
+        sidecar.chmod(0o600)
+
+    monkeypatch.setattr(CompanyStore, "_db", journal_after_connection)
+    with pytest.raises(ProcedureError, match="sidecars"):
+        session.store.list_systems(
+            session.identities["auditor"], session.engagement, "EXAMPLE", "operating"
+        )
+    assert sidecar.read_bytes() == b"concurrent journal appeared after the read"
+
+
+def test_discovery_rejects_future_clock_then_allows_explicit_clock_advance(library, tmp_path):
+    accepted, route = library
+    session = LibraryAudit(accepted, tmp_path / "copy", [route])
+    _, _, identities = create_session(session, start="2027-01-03")
+    authorize(session)
+    command(session, identities["auditor"], "kickoff.start", {})
+    original_state = session.engine.store.get(identities["auditor"], session.engagement)
+    assert original_state["simulated_at"].startswith("2027-01-03")
+    with pytest.raises(ProcedureError, match="simulated clock"):
+        discover(session, "2027-01-12T00:00:00Z")
+    assert session.engine.store.get(identities["auditor"], session.engagement) == original_state
+    early, _ = discover(session, "2027-01-03T00:00:00Z")
+    assert [(row["record"], row["version"]) for row in early] == [("event-one", 1)]
+    advanced = command(
+        session,
+        identities["auditor"],
+        "clock.advance",
+        {"mode": "TARGET_DATE", "target": "2027-01-12T00:00:00Z"},
+    )
+    assert advanced["simulated_at"].startswith("2027-01-12")
+    later, _ = session.discover(session.engine, identities["auditor"], session.engagement)
+    assert {(row["record"], row["version"]) for row in later} == {
+        ("event-one", 1),
+        ("event-one", 2),
+        ("object-one", 1),
+    }
+    historical, _ = discover(session, "2027-01-03T00:00:00Z")
+    assert [(row["record"], row["version"]) for row in historical] == [("event-one", 1)]
+
+
+def test_discovery_requires_actual_created_and_activated_engine_context(library, tmp_path):
+    accepted, route = library
+    session = LibraryAudit(accepted, tmp_path / "copy", [route])
+    with pytest.raises(ProcedureError, match="bound Engine"):
+        session.discover(None, "arbitrary-auditor", "arbitrary-engagement", as_of="2027-01-03")
+    engine, _, identities = create_session(session)
+    authorize(session)
+    for wrong_engine, actor, engagement in (
+        (object(), identities["auditor"], session.engagement),
+        (engine, identities["reviewer"], session.engagement),
+        (engine, identities["auditor"], "unbound-engagement"),
+    ):
+        with pytest.raises(ProcedureError, match="bound Engine"):
+            session.discover(wrong_engine, actor, engagement)
+
+
 def test_projected_pointer_requires_exact_native_system_version_hash_and_clocks(library, tmp_path):
     accepted, route = library
     session = LibraryAudit(accepted, tmp_path / "copy", [route])
     authorize(session)
-    rows, _ = session.discover(
-        "auditor", "new", "EXAMPLE", "operating", as_of="2027-01-05T00:00:00Z"
-    )
+    rows, _ = discover(session, "2027-01-05T00:00:00Z")
     reference = {
         key: rows[0][key]
         for key in (
@@ -334,7 +530,7 @@ def test_supported_zero_evidence_creation_and_normal_text_collection(library, tm
         engagement=engagement,
     )
     rows, _ = session.discover(
-        identities["auditor"], engagement, "EXAMPLE", "operating", as_of=state["simulated_at"]
+        engine, identities["auditor"], engagement, as_of=state["simulated_at"]
     )
     original = next(row for row in rows if row["record"] == "object-one")
     retained = session.collect(
@@ -356,6 +552,10 @@ def test_supported_zero_evidence_creation_and_normal_text_collection(library, tm
         t["status"] == "NOT_STARTED" and t["conclusion"] == "NOT_RUN" for t in final["tasks"]
     )
     assert file_sha(accepted.database) == accepted.database_sha256
+    assert engine.company_store is session.store
+    assert not any(
+        Path(str(session.database) + suffix).exists() for suffix in ("-wal", "-shm", "-journal")
+    )
 
 
 def test_missing_unavailable_predecessor_is_not_assumed_from_latest_version(tmp_path):
@@ -405,7 +605,7 @@ def test_missing_unavailable_predecessor_is_not_assumed_from_latest_version(tmp_
     )
     authorize(session)
     with pytest.raises(ProcedureError, match="Incomplete visible"):
-        session.discover("auditor", "new", "EXAMPLE", "operating", as_of="2027-01-05T00:00:00Z")
+        discover(session, "2027-01-05T00:00:00Z")
 
 
 @pytest.mark.parametrize(
