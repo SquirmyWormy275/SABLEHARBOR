@@ -60,6 +60,10 @@ export function WorkStatus({
   );
   const visibleIntegrity =
     integrity && currentIntegrity(integrity, e) ? integrity : null;
+  const visibleReport =
+    report?.engagement_id === e.id && report.engagement_revision === e.revision
+      ? report
+      : null;
   useEffect(() => {
     epoch.current++;
     setReport(null);
@@ -132,7 +136,7 @@ export function WorkStatus({
       if (current === epoch.current) setIntegrityBusy(false);
     }
   }
-  const control = report?.controls.find(
+  const control = visibleReport?.controls.find(
     (c) =>
       str(c.control_id) === selected ||
       str((c.control as Row)?.id) === selected,
@@ -184,7 +188,7 @@ export function WorkStatus({
         {busy ? "Checking recorded work…" : "Check work status"}
       </button>
       {error && <p role="alert">{error}</p>}
-      {report && (
+      {visibleReport && (
         <>
           <div className="actions">
             <button
@@ -224,11 +228,11 @@ export function WorkStatus({
             </section>
           )}
           <p>
-            {report.denominators.scoped_controls} scoped controls ·{" "}
-            {report.denominators.scoped_procedures} assigned procedures ·{" "}
-            {report.denominators.unassigned_or_out_of_scope_tasks} unassigned or
-            outside-scope tasks. The procedure count includes{" "}
-            {report.denominators.known_not_applicable_tasks} recorded
+            {visibleReport.denominators.scoped_controls} scoped controls ·{" "}
+            {visibleReport.denominators.scoped_procedures} assigned procedures ·{" "}
+            {visibleReport.denominators.unassigned_or_out_of_scope_tasks}{" "}
+            unassigned or outside-scope tasks. The procedure count includes{" "}
+            {visibleReport.denominators.known_not_applicable_tasks} recorded
             exclusions.
           </p>
           <label>
@@ -333,7 +337,7 @@ export function WorkStatus({
           <details>
             <summary>What this check covers</summary>
             <ul>
-              {report.limits.map((s, i) => (
+              {visibleReport.limits.map((s, i) => (
                 <li key={i}>{s}</li>
               ))}
             </ul>
