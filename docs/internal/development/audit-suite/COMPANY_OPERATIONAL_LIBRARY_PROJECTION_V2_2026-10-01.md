@@ -1,5 +1,14 @@
 # Unified company operational library initialization
 
+Status: historical structural candidate; rejected for final company-facing use.
+The independent stage1 review found that several enum changes removed policy/data
+model and reserved authority limits. The frozen candidate and its structural
+proof remain preserved. Use the separately reviewed
+[V2.1 successor](COMPANY_OPERATIONAL_LIBRARY_PROJECTION_V2_1_2026-10-01.md),
+which retains those limits, after its main source and audit adapter acceptance.
+Stage1 rejection review SHA-256:
+`89b58142660ef557fe58eca14af0265eafe03960dafb8df6d8c22d3de787872f`.
+
 V2 initializes persistent fictional company history independently of engagements.
 Its boundary is the pinned V18 native corpus, the independently accepted October
 LEGAL-intake/privacy/assurance sources, and independently accepted supplemental policy and legal-original source pins. It does not import old

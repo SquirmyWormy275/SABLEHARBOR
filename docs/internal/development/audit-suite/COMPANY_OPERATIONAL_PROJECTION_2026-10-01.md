@@ -64,3 +64,12 @@ This first 69-record proof is an intermediate source-quality review. The full
 persistent company library must include reviewed projections for the remaining
 V18 cohorts and accepted later families before final integration. No source
 completeness, audit acceptance, N/A credit, or automatic grades are asserted.
+# Historical prototype boundary
+
+This V1 selected-security proof establishes bounded projection/collection
+mechanics. It is preserved as a historical prototype. Final company-facing
+source use requires the separately reviewed
+[V2.1 library](COMPANY_OPERATIONAL_LIBRARY_PROJECTION_V2_1_2026-10-01.md),
+which preserves explicit policy/data model and reserved authority limits, and
+the corrected independently accepted audit adapter. The historical structural
+checks do not supply that later source-quality acceptance.

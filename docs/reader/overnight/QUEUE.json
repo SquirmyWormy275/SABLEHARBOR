@@ -1829,7 +1829,7 @@
         "LEGAL_ORIGINAL_MESSAGES": 114,
         "SUPPLEMENTAL_POLICY_SECURITY_WORKFORCE": 208
       },
-      "company_answer_annotation_migration": "IN_PROGRESS",
+      "company_answer_annotation_migration": "SELECTED_STAGE_ACCEPTED_SUCCESSOR_IN_PROGRESS",
       "full_scope_completion": false,
       "accepted_new_native_source_version_total": 835,
       "previously_untargeted_route_locators_per_side": 82,
@@ -1846,19 +1846,34 @@
         "independent_main_review_sha256": "1d5ef54843d26e6f52665da46f704b408a54dd9e08748c3a2ccc36ced6ad2532"
       },
       "company_library_stage": {
-        "status": "IN_PROGRESS",
+        "status": "ACCEPTED_SELECTED_BOUNDARY",
         "proposed_native_versions": 1783,
         "physical_components": 48,
         "selected_cohorts": 46,
         "boundary": "V18 selected portfolio plus five newly reviewed source families; not every historical company system",
-        "remaining_identity_source_gate": "Explicit admission of missing older IAM foundations and newly reviewed authoritative person/account populations",
+        "remaining_identity_source_gate": "Explicit admission of older baseline company histories and independently corrected authoritative person/account sources; selected library is not the full company universe",
         "acceptance_gates": [
           "Preserve operational business facts and original custody privately",
           "Remove authoring answer annotations from company-facing records",
           "Verify native, scalar and vector digest references",
           "Keep unresolved or cross-branch references restricted",
           "Perform fresh ordinary collection only after accepted library pins"
-        ]
+        ],
+        "accepted_native_versions": 1783,
+        "main_source_root": "enterprise/generated/audit-suite/company-operational-library-2026-10-01/main-run-v2-1",
+        "main_independent_review_sha256": "4ecc83ea3c0ff1e591d625493b3bde104ad2de0256c3d982e863ea79ad3f4e86",
+        "company_sqlite_sha256": "fa72a324a85728a318485f917ce1a7b2cc2e3355c6dac0bfbbfd602e3dec1ba8",
+        "manifest_sha256": "9677042fdf0ba944efe8cff7826784634efc8d810f932491b8a656162691553c",
+        "business_leaves_independently_compared": 47147,
+        "native_reference_joins": 3863,
+        "scalar_reference_joins": 1043,
+        "exact_unchanged_byte_digest_checks": 49,
+        "explicit_security_model_limit_records": 69,
+        "original_restricted_references": {
+          "cross_branch": 45,
+          "unregistered": 12
+        },
+        "rejected_stage1_review_sha256": "89b58142660ef557fe58eca14af0265eafe03960dafb8df6d8c22d3de787872f"
       },
       "canonical_people_boundary": {
         "current_employees": 44,
@@ -1889,6 +1904,30 @@
           "path": "enterprise/generated/audit-suite/company-supplemental-operations-2027-2026-10-01/independent-review-main-v1/REVIEW.json",
           "sha256": "03c0784acc84596df76357e5ace8e211ec10f81845406550b5f7be0634053874"
         }
+      },
+      "source_library_audit_fieldwork_performed": false,
+      "collection_adapter": {
+        "status": "CHANGES_REQUIRED_CORRECTION_IN_PROGRESS",
+        "rejected_commit": "e9f30331e99f05bd1390332567b330081ad6df40",
+        "independent_review_sha256": "077b32851b3cd1378249fa85bad5b2bd0a3f1cca9962c629c4cfe7e83568b386",
+        "actual_defects": [
+          "Held-open staged SQLite WAL changed ordinary discovery bytes while immutable checks saw original history",
+          "Unbound discovery cutoff exposed sources after the engagement simulated clock"
+        ],
+        "actual_source_fieldwork_performed": false
+      },
+      "person_account_source_candidate": {
+        "status": "CHANGES_REQUIRED_CORRECTION_IN_PROGRESS",
+        "native_versions": 3399,
+        "admitted_to_company_library": false,
+        "rejected_commit": "37effa250e9e633d3c3aaf8396ee026dd14ff83d",
+        "independent_review_sha256": "9e03e8afc6fc61fb063d5db2df8786ce81d2db0f1d1f8e84940147143ff65417",
+        "actual_defects": [
+          "Four retained approval publications preceded original HR source availability",
+          "Resealed answer-bearing provenance/filename and additional receipt branch were accepted",
+          "Fully resealed expired service-authority window was accepted"
+        ],
+        "limits": "First operating accounts Jan1 03:15; source is bounded declared service, not all staff/physical/industrial estate; missing earlier history remains missing"
       }
     }
   },

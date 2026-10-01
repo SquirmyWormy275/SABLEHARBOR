@@ -49,8 +49,8 @@ Main-checkout results already reproduced:
   versions and twelve additional route locators per side. The dated local program
   has four September–December reviews and a January close. Actual policy-source
   retrieval, access decisions, transfer-integrity checks, movement/copy controls
-  and sanctions records preserve late or missing operations. Thirty-six focused
-  tests and independent challenges passed after schema/clock and protected-reporting
+  and sanctions records preserve late or missing operations. Thirty-six selected
+  checks, including regressions, and independent challenges passed after schema/clock and protected-reporting
   reference corrections. Earlier limits and rejected candidates remain preserved.
 - Fresh SEC003 selected procedure: each new workroom began with zero evidence;
   A collected thirteen originals and B twenty-five. Each contains one auditor
@@ -70,11 +70,31 @@ Main-checkout results already reproduced:
 
 The five newly reviewed company source families above contain 835 native versions.
 They supply locators for the previously untargeted 82 documentary/activity routes
-per side; they do not perform those audit procedures. The proposed library stage
+per side; they do not perform those audit procedures. The accepted selected library stage
 joins those sources with V18's selected 948 versions: 1,783 versions, 48 physical
-components and 46 selected cohorts. V18 was a selected portfolio, not every older
-company system. Missing older IAM foundations and the new authoritative identity
-population must be admitted explicitly before final identity fieldwork.
+components and 46 selected cohorts. The corrected V2.1 stage is independently
+accepted and reproduced in main. Review compared 47,147 unchanged business leaves,
+3,863 native references, 1,043 scalar references and 49 unchanged byte-digest
+contracts. Four plaintext originals now have correct UTF-8 metadata. Sixty-nine
+security records explicitly preserve their policy/data model limits.
+
+V2 stage1 remains rejected and preserved: some enum changes removed operational
+and authority limits. V2.1 corrects those changes without changing the source
+population, original dates or historical business outcomes. Main library review:
+`4ecc83ea3c0ff1e591d625493b3bde104ad2de0256c3d982e863ea79ad3f4e86`.
+
+V18 was a selected portfolio, not every older company system. Older IAM,
+backup/configuration/logging/incident and other baseline histories require
+explicit successor admission. The new authoritative person/account candidate
+remains rejected pending corrected source-publication timing, exact custody
+shapes and authority-window checks. It is not in the accepted library.
+
+The first audit adapter candidate also remains rejected and preserved. Independent
+held-open SQLite journal and future-discovery probes demonstrated changed source
+bytes could bypass its immutable check and that discovery could run beyond the
+engagement clock. The corrected adapter must pass independent review before any
+fieldwork uses the accepted library. Engineering fixture tests do not close that
+gate or validate evolving company/corrected-evidence learner journeys.
 
 Main independent review SHA-256 pins:
 
