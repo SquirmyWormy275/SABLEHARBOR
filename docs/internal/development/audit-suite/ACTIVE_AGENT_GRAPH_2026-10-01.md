@@ -125,7 +125,19 @@ Main reproduction: `c73ddb35bcc80a2d637bfe10ff3f255dd677468a0aa5f558d41ec2669f33
 Its authorization covers bound adapter methods and ordinary Engine entrypoints
 against the exact accepted 1,783-version library. Raw in-process CompanyStore
 cutoffs remain trusted caller input and cannot be used arbitrarily for evidence.
-Evolving company/corrected-evidence learner journeys remain unverified.
+The separate shared-company runtime has now passed independent review and main
+reperformance with neutral sources: three fresh engagements share one company
+lifetime, later collection follows a recorded clock advance, and the earlier
+collected copy remains unchanged. Seventeen focused tests, five fully resealed
+correction-history attacks, six held-open WAL paths and an exact operation-review
+substitution challenge passed. Separate read-only replay preserves source and
+audit bytes. The original candidate failed replay validation and stays preserved;
+the corrected append contract is also enforced during recovery. Main review:
+`5dbdbb3daa109ff5c19178f506add34073040050ebb4f45732b200c0437013ea`.
+The acceptance covers the exact selected baseline and reviewed code. Actual
+Sable Harbor activation, each concrete company successor operation and the
+consolidated V3 library still require their own source review; these neutral
+results do not establish their execution or audit sufficiency.
 
 Fresh security/continuity fieldwork has now passed independent actual-byte review,
 separate read-only verification and main reproduction: 39 A and 55 B originals,
@@ -157,8 +169,10 @@ uses its reserved professional reviewer. Sixty-five focused checks passed in mai
 including sixteen checks that an adapter review cannot authorize a different
 database, manifest, source review or native-version boundary. The existing adapter
 acceptance still covers only the exact selected V2.1 library. A consolidated
-successor library and independently reviewed shared/evolving company runtime
-remain the next integration dependencies; drafts provide no source acceptance.
+successor library and actual company activation remain the next integration
+dependencies; drafts provide no source acceptance. The consolidated library
+must preserve operational provenance, source-admission metadata and executed
+byte payloads as well as ordinary document bodies.
 
 The broad suite finished with 2,633 passing tests and two setup errors. Both errors
 were a test fixture pointing to `main-run-v1` rather than the retained reviewed

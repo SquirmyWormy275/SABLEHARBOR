@@ -1083,7 +1083,14 @@ V2.1 company library. The earlier V2 candidate remains rejected and preserved.
 The corrected ordinary collection adapter has also passed independent review and
 actual main WAL/clock/typed-collection probes. Its gate covers that selected
 library and Engine-bound collection, with raw in-process cutoffs remaining trusted
-caller input; evolving company correction journeys are still unverified.
+caller input. The independently corrected shared-company runtime is reproduced
+in main with neutral originals: three fresh engagements, immutable prior
+collections, dated corrections, actual clock advancement, five fully resealed
+replay rejections, six held-open WAL rejections and separate read-only replay.
+Seventeen focused tests passed. Main review:
+`5dbdbb3daa109ff5c19178f506add34073040050ebb4f45732b200c0437013ea`.
+This accepts the reviewed runtime mechanics against the exact selected baseline;
+actual Sable Harbor activation and the consolidated library remain unperformed.
 
 The corrected 3,399-version person/account source is independently accepted and
 reproduced in main, including 1,462 independently reperformed local permission
@@ -1101,5 +1108,5 @@ versions across the two runs, with exact byte/receipt/source checks and recorded
 December-to-January clock transitions. All nine tasks remain partial with explicit
 unperformed clauses. The adapter gate now binds its exact accepted library, and
 65 focused checks passed. This is selected fieldwork, not one completed full-scope
-audit. The shared company runtime, successor library, remaining procedures and
+audit. Company activation, the successor library, remaining procedures and
 final acceptance workflow remain in progress.

@@ -2056,10 +2056,11 @@
         "draft_restricted_reference_count": 194,
         "source_acceptance": false,
         "adapter_execution_authorization": false,
-        "existing_v2_1_frozen": true
+        "existing_v2_1_frozen": true,
+        "operational_provenance_and_executed_byte_fidelity_review_pending": true
       },
       "persistent_company_runtime_candidate": {
-        "status": "CORRECTED_CANDIDATE_INDEPENDENT_REVIEW_PENDING",
+        "status": "ACCEPTED_RUNTIME_MAIN_NEUTRAL_REPRODUCTION_ONLY",
         "shared_company_root_precedes_engagements": true,
         "neutral_mechanics_tests_passed": 17,
         "accepted_company_successor_activation": false,
@@ -2073,7 +2074,18 @@
           "Extra undeclared operation field"
         ],
         "corrected_commit": "bb3d1d59bb25fda122ec34fb42f5ce9a60441eb9",
-        "source_execution_authorized": false
+        "source_execution_authorized": true,
+        "source_execution_authorization_boundary": "Exact 1783-version baseline pins and reviewed runtime code; every concrete company append requires a separately pinned exact operation review; consolidated V3 not authorized",
+        "corrected_runtime_module_sha256": "d1250c0f03401ba441c99a2138b0d2c25a12c8fe867342fcba56ac509f20d089",
+        "independent_review_sha256": "52389b0cde4460350b26369285619a3529227ecff564f662ee84f81dccf2d594",
+        "main_review_sha256": "5dbdbb3daa109ff5c19178f506add34073040050ebb4f45732b200c0437013ea",
+        "main_positive_proof_sha256": "e7ffa4b8cecbbbf8527b6da3ed2934d39cdac4e96442c17b90998fa7ecbc696f",
+        "main_separate_verification_sha256": "0abf3ce3d3abeabc2244ab600386e968736911917e2772f9d20a2194d2673101",
+        "neutral_shared_company_journey_validated": true,
+        "actual_sableharbor_journey_validated": false,
+        "fully_resealed_replay_attacks_rejected": 5,
+        "held_open_wal_paths_rejected": 6,
+        "exact_operation_review_substitution_rejected": true
       }
     }
   },
