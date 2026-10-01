@@ -4,6 +4,11 @@ import { sourceReference } from "./sourceReferences";
 import { ProcedureTraceReadiness } from "./ProcedureTraceReadiness";
 import { resolveTraceReference, type TraceReadiness } from "./traceReadiness";
 import type { ContextLink } from "./investigationContext";
+import {
+  currentIntegrity,
+  integrityStatusLabels,
+  type OriginalIntegrity,
+} from "./procedureIntegrity";
 const explanations: Record<string, string> = {
   NO_ISSUED_REQUEST: "No issued request is linked to this control.",
   OUTSTANDING_RESPONSE:
@@ -43,9 +48,12 @@ export function WorkStatus({
   onPreview: (kind: string, row: Row, reference?: ContextLink) => void;
 }) {
   const [report, setReport] = useState<Report | null>(null),
+    [integrity, setIntegrity] = useState<OriginalIntegrity | null>(null),
     [selected, setSelected] = useState(""),
     [error, setError] = useState(""),
-    [busy, setBusy] = useState(false);
+    [integrityError, setIntegrityError] = useState(""),
+    [busy, setBusy] = useState(false),
+    [integrityBusy, setIntegrityBusy] = useState(false);
   const epoch = useRef(0);
   const allowed = e.permissions?.some((permission) =>
     ["learn", "review", "instruct"].includes(permission),
@@ -53,9 +61,12 @@ export function WorkStatus({
   useEffect(() => {
     epoch.current++;
     setReport(null);
+    setIntegrity(null);
     setSelected("");
     setError("");
+    setIntegrityError("");
     setBusy(false);
+    setIntegrityBusy(false);
     return () => {
       epoch.current++;
     };
@@ -70,6 +81,9 @@ export function WorkStatus({
   async function check() {
     if (!allowed) return;
     setReport(null);
+    setIntegrity(null);
+    setIntegrityError("");
+    setIntegrityBusy(false);
     const current = ++epoch.current;
     setBusy(true);
     setError("");
@@ -91,6 +105,29 @@ export function WorkStatus({
       if (current === epoch.current) setError((err as Error).message);
     } finally {
       if (current === epoch.current) setBusy(false);
+    }
+  }
+  async function checkIntegrity() {
+    if (!allowed) return;
+    const current = ++epoch.current;
+    setIntegrity(null);
+    setIntegrityError("");
+    setIntegrityBusy(true);
+    try {
+      const result = await request<OriginalIntegrity>(
+        `/api/engagements/${encodeURIComponent(e.id)}/procedure-original-integrity`,
+      );
+      if (current === epoch.current) {
+        if (!currentIntegrity(result, e))
+          throw Error(
+            "Work changed. Refresh this engagement before rechecking originals.",
+          );
+        setIntegrity(result);
+      }
+    } catch (err) {
+      if (current === epoch.current) setIntegrityError((err as Error).message);
+    } finally {
+      if (current === epoch.current) setIntegrityBusy(false);
     }
   }
   const control = report?.controls.find(
@@ -147,6 +184,43 @@ export function WorkStatus({
       {error && <p role="alert">{error}</p>}
       {report && (
         <>
+          <div className="actions">
+            <button
+              type="button"
+              disabled={integrityBusy || busy}
+              onClick={() => void checkIntegrity()}
+            >
+              {integrityBusy
+                ? "Rechecking retained originals…"
+                : "Recheck cited retained originals"}
+            </button>
+          </div>
+          {integrityError && <p role="alert">{integrityError}</p>}
+          {integrity && (
+            <section aria-label="Retained original byte check">
+              <p role="status">
+                {integrityStatusLabels[integrity.status] ?? integrity.status}
+              </p>
+              {integrity.counts ? (
+                <p>
+                  {integrity.counts.verified} verified ·{" "}
+                  {integrity.counts.missing} missing ·{" "}
+                  {integrity.counts.integrity_failure} changed ·{" "}
+                  {integrity.counts.read_unavailable} unreadable of{" "}
+                  {integrity.counts.referenced} cited retained originals.
+                </p>
+              ) : (
+                <p>
+                  Byte counts unavailable; no zero count or success is implied.
+                </p>
+              )}
+              <p>
+                This checks retained copy bytes at this engagement revision. It
+                does not check company source freshness, population
+                completeness, procedure sufficiency or audit credit.
+              </p>
+            </section>
+          )}
           <p>
             {report.denominators.scoped_controls} scoped controls ·{" "}
             {report.denominators.scoped_procedures} assigned procedures ·{" "}
@@ -229,6 +303,7 @@ export function WorkStatus({
                         data={
                           p.sample_trace_readiness as TraceReadiness | undefined
                         }
+                        integrity={integrity ?? undefined}
                         onPreview={onPreview}
                       />
                     </li>
