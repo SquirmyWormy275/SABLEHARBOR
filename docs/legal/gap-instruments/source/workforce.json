@@ -1,0 +1,142 @@
+{
+  "gap_id": "LEGAL-GAP-WORKFORCE",
+  "document_id": "SH-LEGAL-DRAFT-WORKFORCE",
+  "title": "ARU individual retention agreements and Tolman consultancy",
+  "status": "DRAFT_FOR_REVIEW",
+  "source_paths": [
+    "industrial/transaction/06_ARU_TRANSITION_AND_RETENTION.md",
+    "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+    "industrial/source/finance.json",
+    "industrial/source/entities.json"
+  ],
+  "proposed_terms": [
+    {
+      "id": "SH-LEGAL-DRAFT-WORKFORCE-T01",
+      "term": "Eight awards total $500,000 in two $250,000 source installments.",
+      "basis": "Accepted SH-IND-ARU-HR-001; no payment assertion."
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-WORKFORCE-T02",
+      "term": "Protected departures receive service-based pro rata recognition; calendar-day convention proposed.",
+      "basis": "Source protection retained; calculation convention DRAFT_FOR_REVIEW."
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-WORKFORCE-T03",
+      "term": "Fred consultancy $225,000 January 7–October 7, without operating authority.",
+      "basis": "Accepted source economics; full administration clauses proposed."
+    }
+  ],
+  "unresolved_fields": [
+    {
+      "id": "SH-LEGAL-DRAFT-WORKFORCE-U01",
+      "field": "Individual signatures, later employment changes and payment evidence",
+      "next_action": "Preserve accepted employer mapping; verify execution and any later change before adoption."
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-WORKFORCE-U02",
+      "field": "Employment jurisdiction and payroll treatment",
+      "next_action": "Complete qualified review without inventing employee private data."
+    }
+  ],
+  "financial_schedules": [
+    {
+      "name": "Eight individual retention awards",
+      "columns": [
+        "schedule",
+        "employee",
+        "total_usd",
+        "july_7_2026_usd",
+        "january_7_2027_usd",
+        "employer_entity_id"
+      ],
+      "rows": [
+        [
+          "RET-01",
+          "Nora Ashcombe",
+          100000,
+          50000,
+          50000,
+          "ARU"
+        ],
+        [
+          "RET-02",
+          "Gareth Pike",
+          60000,
+          30000,
+          30000,
+          "ARU"
+        ],
+        [
+          "RET-03",
+          "Tessa Rourke",
+          60000,
+          30000,
+          30000,
+          "ARU"
+        ],
+        [
+          "RET-04",
+          "Owen Halberg",
+          50000,
+          25000,
+          25000,
+          "ARU"
+        ],
+        [
+          "RET-05",
+          "Seth Kettering",
+          80000,
+          40000,
+          40000,
+          "BST"
+        ],
+        [
+          "RET-06",
+          "Derek Fenwick",
+          50000,
+          25000,
+          25000,
+          "ARU"
+        ],
+        [
+          "RET-07",
+          "Marta Ellery",
+          50000,
+          25000,
+          25000,
+          "ARU"
+        ],
+        [
+          "RET-08",
+          "Inez Calderon",
+          50000,
+          25000,
+          25000,
+          "ARU"
+        ]
+      ]
+    },
+    {
+      "name": "Separate consultancy",
+      "columns": [
+        "consultant",
+        "source_start",
+        "source_end",
+        "total_usd",
+        "paid_status"
+      ],
+      "rows": [
+        [
+          "Fred Tolman",
+          "2026-01-07",
+          "2026-10-07",
+          225000,
+          "NOT_ESTABLISHED"
+        ]
+      ]
+    }
+  ],
+  "version": "0.1.0",
+  "prepared": "2026-09-12",
+  "approval_status": "NOT_ACCEPTED"
+}

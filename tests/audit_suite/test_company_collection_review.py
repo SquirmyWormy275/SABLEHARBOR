@@ -14,8 +14,6 @@ def workspace(tmp_path):
     return base_workspace.__wrapped__(tmp_path)
 
 
-
-
 def test_collection_recovers_after_artifact_storage_failure(workspace, monkeypatch):
     engine, actor, state = workspace
     original = engine.artifacts.retain_company

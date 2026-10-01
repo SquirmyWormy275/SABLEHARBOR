@@ -512,7 +512,7 @@ def calculate(
                 )
                 rows.append(
                     {
-                        "available_at": "2026-09-06T00:00:00-07:00",
+                        "available_at": source["available_at"],
                         "record_origin": "PUBLIC_SYNTHETIC_PLANNING_MODEL",
                         "fact_state": "FORECAST",
                         "schema_version": "1.0",
@@ -712,7 +712,7 @@ def write_manifest(
     write_json(
         output / "manifest.json",
         {
-            "available_at": "2026-09-06T00:00:00-07:00",
+            "available_at": effective_inputs["operating_plan"]["available_at"],
             "record_origin": "PUBLIC_SYNTHETIC_PLANNING_MODEL",
             "dependency_sha256": {
                 str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()

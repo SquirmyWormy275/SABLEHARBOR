@@ -1,0 +1,61 @@
+{
+  "status": "DRAFT_FOR_EXACT_FILE_REVIEW",
+  "approved": false,
+  "source_revision": "8898d2d0310a60bdf0e4753036790c6eda1388cd",
+  "logo": {
+    "path": "assets/brand/logos/sable-harbor__primary-horizontal.png",
+    "sha256": "a5673c57c909fee3dcce155c9ee636589f8a21c8e217de9ff541abfcf6264b4a"
+  },
+  "artifacts": [
+    {
+      "id": "SH-LEGAL-READ-RW-001",
+      "markdown": "docs/legal/evidence/assets-rights/SH-LEGAL-READ-RW-001.md",
+      "source_sha256": "4c00aa02862711624cbbf9129c2be8f7204c5e467f985741d7004605f225d01c",
+      "pdf": "docs/legal/evidence/assets-rights/drafts/SH-LEGAL-READ-RW-001.pdf",
+      "pdf_sha256": "92b972709d5e08cdc2e4691c50cd725dfbdf87a047e683e5442ef706f335df42",
+      "html": "docs/legal/evidence/assets-rights/drafts/SH-LEGAL-READ-RW-001.html",
+      "html_sha256": "7a341d105ddd0a5755e78dceabd960a7b1e655245db7c078b1d1ac31675aa007",
+      "pages": 1
+    },
+    {
+      "id": "SH-LEGAL-READ-ARU-001",
+      "markdown": "docs/legal/evidence/assets-rights/SH-LEGAL-READ-ARU-001.md",
+      "source_sha256": "9156c7e004de8a090e4d6343b846e02980e6fca8db0aacb83cbfcab3969040df",
+      "pdf": "docs/legal/evidence/assets-rights/drafts/SH-LEGAL-READ-ARU-001.pdf",
+      "pdf_sha256": "45d48693d1a4dc16521043c96653a9f2e4edaeae19552bc340c6d94f4fbad1bd",
+      "html": "docs/legal/evidence/assets-rights/drafts/SH-LEGAL-READ-ARU-001.html",
+      "html_sha256": "a63c60b23fad64493887955b37fe7aaefa961e78ac93230da9209d7a1713f3e9",
+      "pages": 1
+    },
+    {
+      "id": "SH-LEGAL-READ-HOST-001",
+      "markdown": "docs/legal/evidence/assets-rights/SH-LEGAL-READ-HOST-001.md",
+      "source_sha256": "c53a3ec3d5532d54a38ed573717690a0331959c5f97127c72a49ef5e5f652290",
+      "pdf": "docs/legal/evidence/assets-rights/drafts/SH-LEGAL-READ-HOST-001.pdf",
+      "pdf_sha256": "fa53605c04594873f35552ec9e7ee571f4cf479762c1e537efc75f4ad8fa984f",
+      "html": "docs/legal/evidence/assets-rights/drafts/SH-LEGAL-READ-HOST-001.html",
+      "html_sha256": "2e1d17ac2ecd645aa727ea06bd4ad282dbef0ec6c8c1ebed86fbf01fdd48c897",
+      "pages": 1
+    },
+    {
+      "id": "SH-LEGAL-READ-NV-001",
+      "markdown": "docs/legal/evidence/assets-rights/SH-LEGAL-READ-NV-001.md",
+      "source_sha256": "a794fc0af3d7e4d9f21a87c9de924459300a4b2281d87357487c6f757840c871",
+      "pdf": "docs/legal/evidence/assets-rights/drafts/SH-LEGAL-READ-NV-001.pdf",
+      "pdf_sha256": "6c124951d93c20b897b104edf0b4e6d0363f7d44d3f92da0f1609ed84f002994",
+      "html": "docs/legal/evidence/assets-rights/drafts/SH-LEGAL-READ-NV-001.html",
+      "html_sha256": "e087db9e6c936250726ce53827f817a6befea8aa5878d68f1bdad560639c65db",
+      "pages": 1
+    },
+    {
+      "id": "SH-LEGAL-READ-TENURE-001",
+      "markdown": "docs/legal/evidence/assets-rights/SH-LEGAL-READ-TENURE-001.md",
+      "source_sha256": "cca80fe84a7e0e1189eefaa0c2e9cfea632a2d24bbccdbfd4deea471eec285a4",
+      "pdf": "docs/legal/evidence/assets-rights/drafts/SH-LEGAL-READ-TENURE-001.pdf",
+      "pdf_sha256": "b2d8d452042a835504bb872a60f99240eed85c0792a1eb44a772bfcdf24e7f6c",
+      "html": "docs/legal/evidence/assets-rights/drafts/SH-LEGAL-READ-TENURE-001.html",
+      "html_sha256": "d1bf3554946e56f20d0310759318fc54b3cbb6fb2988a4b0fb9f8146255691e3",
+      "pages": 1
+    }
+  ]
+}

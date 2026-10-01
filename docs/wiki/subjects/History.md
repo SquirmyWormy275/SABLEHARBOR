@@ -32,5 +32,3 @@ Retrospective narrative is not a contemporaneous incident log or audited financi
 - [Klein, Emberline and Willow](Research-History.md)
 - [Foundry Field](../businesses/Foundry-Field.md)
 - [Atlas Meridian](../businesses/Atlas-Meridian.md)
-
-Related reading describes useful connections, not additional reporting lines.

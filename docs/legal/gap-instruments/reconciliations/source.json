@@ -1,0 +1,714 @@
+{
+  "id": "SH-RECON-001",
+  "status": "DRAFT_FOR_EXACT_FILE_REVIEW",
+  "classification": "PUBLIC_SOURCE_DERIVED_PRACTICE",
+  "source_release": "business-operations-v1.0.0",
+  "source_revision": "57cfa1b1c483ccf1f8b15d82c4cbdadbeef8063e",
+  "scope": "Five bounded selections; no cross-case aggregate and no new postings.",
+  "evidence": [
+    {
+      "id": "E01",
+      "path": "docs/finance/evidence/treasury/source/industrial_bank_reconciliations.csv",
+      "sha256": "12e2a7c840f5202a76e4317fd693f53a110202b64e8571831c3b0ded4a80dded",
+      "selector": {
+        "scenario": "base",
+        "entity": "ARU_GROUP",
+        "year": "2027",
+        "month": "1"
+      },
+      "rows": [
+        {
+          "scenario": "base",
+          "entity": "ARU_GROUP",
+          "year": "2027",
+          "month": "1",
+          "opening_bank_cash_usd": "4198440",
+          "cleared_receipts_usd": "0",
+          "cleared_payments_usd": "0",
+          "closing_bank_cash_usd": "4198440",
+          "deposits_in_transit_usd": "4639240",
+          "outstanding_payments_usd": "5343152",
+          "adjusted_bank_cash_usd": "3494528",
+          "ledger_cash_usd": "3494528",
+          "difference_usd": "0",
+          "treasury_scope": "ARU_GROUP",
+          "evidence_role": "SYNTHETIC_CLEARING_TIMING_RECONCILIATION",
+          "fact_state": "FORECAST",
+          "record_origin": "PUBLIC_SYNTHETIC_PLANNING_MODEL",
+          "available_at": "2026-09-06T00:00:00-07:00"
+        }
+      ]
+    },
+    {
+      "id": "E02",
+      "path": "docs/finance/evidence/customer/source/receivable_aging.csv",
+      "sha256": "7cf54fb1b113af93b4df4c20e1ed42f9ab30f7e45707efae4a8637f3cc449049",
+      "selector": {
+        "scenario": "base",
+        "unit": "atlas-meridian",
+        "period": "2027-01-31"
+      },
+      "rows": [
+        {
+          "customer_id": "SYN-CUSTOMER-001",
+          "due_date": "2027-02-28",
+          "invoice_id": "INV-base-ATL-LIC-001-TERM-0",
+          "months_past_due": "0",
+          "outstanding_usd": "240000.0000",
+          "period": "2027-01-31",
+          "scenario": "base",
+          "unit": "atlas-meridian"
+        },
+        {
+          "customer_id": "SYN-ATLAS-SELFSERVE-013",
+          "due_date": "2027-02-28",
+          "invoice_id": "INV-base-ATL-LIC-013-TERM-0",
+          "months_past_due": "0",
+          "outstanding_usd": "240000.0000",
+          "period": "2027-01-31",
+          "scenario": "base",
+          "unit": "atlas-meridian"
+        }
+      ]
+    },
+    {
+      "id": "E03",
+      "path": "docs/finance/evidence/customer/source/subledger_rollforward.csv",
+      "sha256": "9a2d216f5c3b7bce6f5a7c5e1c5491bb06586f129d171f61a486f9dbb7feaaa2",
+      "selector": {
+        "scenario": "base",
+        "unit": "atlas-meridian",
+        "period": "2027-01-31"
+      },
+      "rows": [
+        {
+          "accumulated_depreciation_usd": "0.0000",
+          "allowance_usd": "9600.0000",
+          "deferred_revenue_usd": "440000.0000",
+          "gross_ar_usd": "480000.0000",
+          "gross_ppe_usd": "0.0000",
+          "host_payable_usd": "0.0000",
+          "inventory_usd": "0.0000",
+          "period": "2027-01-31",
+          "scenario": "base",
+          "unit": "atlas-meridian",
+          "vendor_ap_usd": "2800.0000"
+        }
+      ]
+    },
+    {
+      "id": "E04",
+      "path": "docs/finance/evidence/close/source/journal.csv",
+      "sha256": "10b8bee2f13881e14ae9ddf0a862cf264eea3de92693368119421eee48a9bc91",
+      "selector": {
+        "scenario": "base",
+        "unit": "atlas-meridian",
+        "period": "2027-01-31",
+        "account": "BIZ_AP"
+      },
+      "rows": [
+        {
+          "account": "BIZ_AP",
+          "account_type": "liability",
+          "available_at": "2026-09-09T00:00:00Z",
+          "cash_flow": "NONCASH_OR_OPENING",
+          "credit_usd": "1400.0000",
+          "debit_usd": "0.0000",
+          "description": "Source-driven vendor cost",
+          "entity": "SHI",
+          "fact_state": "CONDITIONAL_FORECAST",
+          "journal_id": "BIZ-base-0000118",
+          "month": "1",
+          "month_index": "1",
+          "period": "2027-01-31",
+          "scenario": "base",
+          "segment": "ATLAS",
+          "signed_usd": "-1400.0000",
+          "source_id": "base-01-COST-HOSTING-ATL-LIC-001",
+          "source_type": "BUSINESS_DRIVEN_FORECAST",
+          "unit": "atlas-meridian",
+          "year": "2027"
+        },
+        {
+          "account": "BIZ_AP",
+          "account_type": "liability",
+          "available_at": "2026-09-09T00:00:00Z",
+          "cash_flow": "NONCASH_OR_OPENING",
+          "credit_usd": "1400.0000",
+          "debit_usd": "0.0000",
+          "description": "Source-driven vendor cost",
+          "entity": "SHI",
+          "fact_state": "CONDITIONAL_FORECAST",
+          "journal_id": "BIZ-base-0000121",
+          "month": "1",
+          "month_index": "1",
+          "period": "2027-01-31",
+          "scenario": "base",
+          "segment": "ATLAS",
+          "signed_usd": "-1400.0000",
+          "source_id": "base-01-COST-HOSTING-ATL-LIC-013",
+          "source_type": "BUSINESS_DRIVEN_FORECAST",
+          "unit": "atlas-meridian",
+          "year": "2027"
+        }
+      ]
+    },
+    {
+      "id": "E05",
+      "path": "docs/finance/evidence/treasury/source/subledger_rollforward.csv",
+      "sha256": "9a2d216f5c3b7bce6f5a7c5e1c5491bb06586f129d171f61a486f9dbb7feaaa2",
+      "selector": {
+        "scenario": "base",
+        "unit": "atlas-meridian",
+        "period": "2027-01-31"
+      },
+      "rows": [
+        {
+          "accumulated_depreciation_usd": "0.0000",
+          "allowance_usd": "9600.0000",
+          "deferred_revenue_usd": "440000.0000",
+          "gross_ar_usd": "480000.0000",
+          "gross_ppe_usd": "0.0000",
+          "host_payable_usd": "0.0000",
+          "inventory_usd": "0.0000",
+          "period": "2027-01-31",
+          "scenario": "base",
+          "unit": "atlas-meridian",
+          "vendor_ap_usd": "2800.0000"
+        }
+      ]
+    },
+    {
+      "id": "E06",
+      "path": "docs/finance/evidence/supporting-schedules/source/industrial_debt.csv",
+      "sha256": "5f6b7535dd73f440473c55672914866d51b70029477cb2b4a383777417de9c06",
+      "selector": {
+        "scenario": "base",
+        "entity": "ARU_GROUP",
+        "year": "2027",
+        "month": "1"
+      },
+      "rows": [
+        {
+          "scenario": "base",
+          "entity": "ARU_GROUP",
+          "year": "2027",
+          "month": "1",
+          "opening_legacy_term_usd": "21375000",
+          "opening_replacement_term_usd": "0",
+          "opening_lease_usd": "2008219",
+          "scheduled_legacy_principal_usd": "375000",
+          "scheduled_lease_principal_usd": "41667",
+          "interest_expense_usd": "132130",
+          "issuance_cost_amortization_usd": "5000",
+          "legacy_matured": "False",
+          "conditional_refinance_capacity_usd": "18000000",
+          "closing_legacy_term_usd": "21000000",
+          "principal_cash_paid_legacy_term_usd": "375000",
+          "closing_replacement_term_usd": "0",
+          "principal_cash_paid_replacement_term_usd": "0",
+          "closing_lease_usd": "1966552",
+          "principal_cash_paid_lease_usd": "41667",
+          "replacement_debt_draw_usd": "0",
+          "closing_issuance_costs_usd": "235968",
+          "overdue_matured_legacy_term_usd": "0",
+          "available_at": "2026-09-06T00:00:00-07:00",
+          "record_origin": "PUBLIC_SYNTHETIC_PLANNING_MODEL",
+          "fact_state": "CONDITIONAL_FORECAST",
+          "period_role": "CONDITIONAL_FORECAST",
+          "effective_period_end": "2027-01-31"
+        }
+      ]
+    },
+    {
+      "id": "E07",
+      "path": "docs/finance/evidence/supporting-schedules/source/asset_rollforward.csv",
+      "sha256": "a84bedaaf0e35bf6af46fcab78ecaab393f0c9a2a0b463f9cede642bd641c4e7",
+      "selector": {
+        "scenario": "base",
+        "unit": "willow",
+        "period": "2027-01-31",
+        "asset_id": "FORT-TEST-RIG"
+      },
+      "rows": [
+        {
+          "accumulated_usd": "0.0000",
+          "asset_id": "FORT-TEST-RIG",
+          "cost_usd": "240000.0000",
+          "net_book_usd": "240000.0000",
+          "original_site": "WIL-FORT-PGH",
+          "period": "2027-01-31",
+          "scenario": "base",
+          "unit": "willow"
+        }
+      ]
+    }
+  ],
+  "workpapers": [
+    {
+      "id": "SH-RECON-BANK",
+      "slug": "bank",
+      "title": "Bank clearing bridge",
+      "scope": "ARU_GROUP | industrial forecast model | January 2027",
+      "scenario": "base",
+      "period": "2027-01-31",
+      "status": "DRAFT_FOR_EXACT_FILE_REVIEW",
+      "inputs": [
+        {
+          "label": "Opening modeled bank cash",
+          "amount": "4198440",
+          "evidence": "E01",
+          "row_index": 0,
+          "field": "opening_bank_cash_usd"
+        },
+        {
+          "label": "Cleared receipts",
+          "amount": "0",
+          "evidence": "E01",
+          "row_index": 0,
+          "field": "cleared_receipts_usd"
+        },
+        {
+          "label": "Cleared payments",
+          "amount": "0",
+          "evidence": "E01",
+          "row_index": 0,
+          "field": "cleared_payments_usd"
+        },
+        {
+          "label": "Closing modeled bank cash",
+          "amount": "4198440",
+          "evidence": "E01",
+          "row_index": 0,
+          "field": "closing_bank_cash_usd"
+        },
+        {
+          "label": "Deposits in transit",
+          "amount": "4639240",
+          "evidence": "E01",
+          "row_index": 0,
+          "field": "deposits_in_transit_usd"
+        },
+        {
+          "label": "Outstanding payments",
+          "amount": "5343152",
+          "evidence": "E01",
+          "row_index": 0,
+          "field": "outstanding_payments_usd"
+        },
+        {
+          "label": "Adjusted bank cash",
+          "amount": "3494528",
+          "evidence": "E01",
+          "row_index": 0,
+          "field": "adjusted_bank_cash_usd"
+        },
+        {
+          "label": "Ledger cash",
+          "amount": "3494528",
+          "evidence": "E01",
+          "row_index": 0,
+          "field": "ledger_cash_usd"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Opening + receipts − payments − closing",
+          "terms": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              -1
+            ],
+            [
+              3,
+              -1
+            ]
+          ],
+          "result": "0",
+          "tolerance": "0.02"
+        },
+        {
+          "label": "Closing + deposits − outstanding − adjusted",
+          "terms": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              5,
+              -1
+            ],
+            [
+              6,
+              -1
+            ]
+          ],
+          "result": "0",
+          "tolerance": "0.02"
+        },
+        {
+          "label": "Adjusted bank cash − ledger cash",
+          "terms": [
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              -1
+            ]
+          ],
+          "result": "0",
+          "tolerance": "0.02"
+        }
+      ],
+      "evidence_request": "Obtain January bank-issued statement and subsequent clearing support for listed deposits and payments; compare dates and amounts with the model.",
+      "limitation": "This is a synthetic clearing schedule. A zero difference does not establish independent bank cash, ownership or actual payment."
+    },
+    {
+      "id": "SH-RECON-AR",
+      "slug": "ar",
+      "title": "Receivables aging to subledger",
+      "scope": "Atlas Meridian | Core forecast model | January 2027",
+      "scenario": "base",
+      "period": "2027-01-31",
+      "status": "DRAFT_FOR_EXACT_FILE_REVIEW",
+      "inputs": [
+        {
+          "label": "INV-base-ATL-LIC-001-TERM-0",
+          "amount": "240000.0000",
+          "evidence": "E02",
+          "row_index": 0,
+          "field": "outstanding_usd"
+        },
+        {
+          "label": "INV-base-ATL-LIC-013-TERM-0",
+          "amount": "240000.0000",
+          "evidence": "E02",
+          "row_index": 1,
+          "field": "outstanding_usd"
+        },
+        {
+          "label": "Month-end gross AR",
+          "amount": "480000.0000",
+          "evidence": "E03",
+          "row_index": 0,
+          "field": "gross_ar_usd"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Aging total − month-end gross AR",
+          "terms": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          "result": "0.0000",
+          "tolerance": "0.02"
+        }
+      ],
+      "evidence_request": "Obtain the two underlying customer invoices, delivery or license acceptance, and subsequent receipt support; assess collectability separately from the arithmetic tie.",
+      "limitation": "The complete selected month-end aging population is used. Terminal invoice-master balances are excluded; gross AR is before allowance."
+    },
+    {
+      "id": "SH-RECON-AP",
+      "slug": "ap",
+      "title": "Payables journal to subledger",
+      "scope": "Atlas Meridian | Core forecast model | January 2027",
+      "scenario": "base",
+      "period": "2027-01-31",
+      "status": "DRAFT_FOR_EXACT_FILE_REVIEW",
+      "inputs": [
+        {
+          "label": "BIZ-base-0000118 credit",
+          "amount": "1400.0000",
+          "evidence": "E04",
+          "row_index": 0,
+          "field": "credit_usd"
+        },
+        {
+          "label": "BIZ-base-0000118 debit",
+          "amount": "0.0000",
+          "evidence": "E04",
+          "row_index": 0,
+          "field": "debit_usd"
+        },
+        {
+          "label": "BIZ-base-0000121 credit",
+          "amount": "1400.0000",
+          "evidence": "E04",
+          "row_index": 1,
+          "field": "credit_usd"
+        },
+        {
+          "label": "BIZ-base-0000121 debit",
+          "amount": "0.0000",
+          "evidence": "E04",
+          "row_index": 1,
+          "field": "debit_usd"
+        },
+        {
+          "label": "Month-end vendor AP",
+          "amount": "2800.0000",
+          "evidence": "E05",
+          "row_index": 0,
+          "field": "vendor_ap_usd"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Cumulative credits − debits − vendor AP",
+          "terms": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              -1
+            ],
+            [
+              4,
+              -1
+            ]
+          ],
+          "result": "0.0000",
+          "tolerance": "0.02"
+        }
+      ],
+      "evidence_request": "Obtain vendor invoices and service acceptance for both hosting accruals; inspect post-period payments and unmatched invoices for unrecorded liabilities.",
+      "limitation": "January is the first Core model period. All January BIZ_AP legs are selected, credits positive. A tied model does not test liability completeness; terminal payable-master balances are excluded."
+    },
+    {
+      "id": "SH-RECON-DEBT",
+      "slug": "debt",
+      "title": "Debt principal movements",
+      "scope": "ARU_GROUP | industrial forecast model | January 2027",
+      "scenario": "base",
+      "period": "2027-01-31",
+      "status": "DRAFT_FOR_EXACT_FILE_REVIEW",
+      "inputs": [
+        {
+          "label": "opening legacy term",
+          "amount": "21375000",
+          "evidence": "E06",
+          "row_index": 0,
+          "field": "opening_legacy_term_usd"
+        },
+        {
+          "label": "principal cash paid legacy term",
+          "amount": "375000",
+          "evidence": "E06",
+          "row_index": 0,
+          "field": "principal_cash_paid_legacy_term_usd"
+        },
+        {
+          "label": "closing legacy term",
+          "amount": "21000000",
+          "evidence": "E06",
+          "row_index": 0,
+          "field": "closing_legacy_term_usd"
+        },
+        {
+          "label": "opening replacement term",
+          "amount": "0",
+          "evidence": "E06",
+          "row_index": 0,
+          "field": "opening_replacement_term_usd"
+        },
+        {
+          "label": "replacement debt draw",
+          "amount": "0",
+          "evidence": "E06",
+          "row_index": 0,
+          "field": "replacement_debt_draw_usd"
+        },
+        {
+          "label": "principal cash paid replacement term",
+          "amount": "0",
+          "evidence": "E06",
+          "row_index": 0,
+          "field": "principal_cash_paid_replacement_term_usd"
+        },
+        {
+          "label": "closing replacement term",
+          "amount": "0",
+          "evidence": "E06",
+          "row_index": 0,
+          "field": "closing_replacement_term_usd"
+        },
+        {
+          "label": "opening lease",
+          "amount": "2008219",
+          "evidence": "E06",
+          "row_index": 0,
+          "field": "opening_lease_usd"
+        },
+        {
+          "label": "principal cash paid lease",
+          "amount": "41667",
+          "evidence": "E06",
+          "row_index": 0,
+          "field": "principal_cash_paid_lease_usd"
+        },
+        {
+          "label": "closing lease",
+          "amount": "1966552",
+          "evidence": "E06",
+          "row_index": 0,
+          "field": "closing_lease_usd"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Legacy term principal rollforward difference",
+          "terms": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          "result": "0",
+          "tolerance": "0.02"
+        },
+        {
+          "label": "Replacement term principal rollforward difference",
+          "terms": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              5,
+              -1
+            ],
+            [
+              6,
+              -1
+            ]
+          ],
+          "result": "0",
+          "tolerance": "0.02"
+        },
+        {
+          "label": "Retained leases principal rollforward difference",
+          "terms": [
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              -1
+            ],
+            [
+              9,
+              -1
+            ]
+          ],
+          "result": "0",
+          "tolerance": "0.02"
+        }
+      ],
+      "evidence_request": "Obtain lender and lessor statements, executed credit terms and payment confirmations. Test maturity, security and covenants from executed terms, not assumed thresholds.",
+      "limitation": "Legacy term debt, replacement term debt and retained leases stay separate. Scheduled and cash-paid principal are distinct fields; interest and issuance costs are outside these principal checks."
+    },
+    {
+      "id": "SH-RECON-FIXED-ASSETS",
+      "slug": "fixed-assets",
+      "title": "Asset carrying value",
+      "scope": "Willow / FORT-TEST-RIG | Core forecast model | January 2027",
+      "scenario": "base",
+      "period": "2027-01-31",
+      "status": "DRAFT_FOR_EXACT_FILE_REVIEW",
+      "inputs": [
+        {
+          "label": "Recorded cost",
+          "amount": "240000.0000",
+          "evidence": "E07",
+          "row_index": 0,
+          "field": "cost_usd"
+        },
+        {
+          "label": "Accumulated depreciation",
+          "amount": "0.0000",
+          "evidence": "E07",
+          "row_index": 0,
+          "field": "accumulated_usd"
+        },
+        {
+          "label": "Net book value",
+          "amount": "240000.0000",
+          "evidence": "E07",
+          "row_index": 0,
+          "field": "net_book_usd"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Cost − accumulated depreciation − net book value",
+          "terms": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          "result": "0.0000",
+          "tolerance": "0.02"
+        }
+      ],
+      "evidence_request": "Obtain purchase invoice, receipt, commissioning approval and physical inspection evidence for FORT-TEST-RIG; support useful life and depreciation commencement.",
+      "limitation": "A single identified asset is selected, not the enterprise asset population. Zero modeled accumulated depreciation does not establish that no depreciation should be recognized."
+    }
+  ]
+}

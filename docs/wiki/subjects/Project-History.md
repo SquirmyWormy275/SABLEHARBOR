@@ -28,5 +28,3 @@ A named project or incident does not establish a separate company, exact locatio
 - [Project Cradle](../businesses/Cradle.md)
 - [Klein, Emberline and Willow](Research-History.md)
 - [Abandoned acquisition opportunities](Historical-Opportunities.md)
-
-Related reading describes useful connections, not additional reporting lines.

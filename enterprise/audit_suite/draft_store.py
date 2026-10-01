@@ -40,9 +40,7 @@ FIELDS = {
     },
 }
 MAX_BYTES = 100_000
-LEGACY_NARRATIVE_FIELDS = {
-    "title", "text", "objective", "procedures", "conclusion", "section"
-}
+LEGACY_NARRATIVE_FIELDS = {"title", "text", "objective", "procedures", "conclusion", "section"}
 
 
 class DraftStore:
@@ -138,15 +136,24 @@ class DraftStore:
                     **value,
                     "status": "STALE_SOURCE",
                     "fields": {
-                        key: field for key, field in fields.items()
+                        key: field
+                        for key, field in fields.items()
                         if key in LEGACY_NARRATIVE_FIELDS and isinstance(field, str)
                     },
-                    "reason": "Older saved draft lacks an acquisition pin. Narrative text is available for explicit review; old source links are withheld. Discard the old saved version before saving a successor.",
+                    "reason": (
+                        "Older saved draft lacks an acquisition pin. Narrative text is "
+                        "available for explicit review; old source links are withheld. "
+                        "Discard the old saved version before saving a successor."
+                    ),
                 }
             return {
                 **value,
                 "status": "STALE",
-                "reason": "Saved draft context differs from current scope, permissions, company source or acquisition; fields are withheld and explicit discard is required. Older draft formats may also require discard.",
+                "reason": (
+                    "Saved draft context differs from current scope, permissions, "
+                    "company source or acquisition; fields are withheld and explicit "
+                    "discard is required. Older draft formats may also require discard."
+                ),
             }
         return {**value, "status": "DRAFT", "fields": json.loads(row["fields"])}
 

@@ -60,6 +60,26 @@ def bind_source(record, root=ROOT):
 
 
 def review(root=ROOT):
+    from geospatial.chronology.continuity import (
+        load as load_continuity,
+        evidence as continuity_evidence,
+    )
+
+    continuity = load_continuity(root)
+    approved = continuity_evidence(root)
+    current = json.loads((root / "geospatial/finalization/DECISIONS.json").read_text())
+    current_raw = (root / current["canon_path"]).read_bytes()
+    if digest(current_raw) != current["canon_sha256"]:
+        raise ValueError("Geographic completion canon hash differs")
+    current_source = dict(
+        path=current["canon_path"],
+        revision=None,
+        locator="Controlling geographic and occupancy addendum",
+        sha256=current["canon_sha256"],
+        evidence=current_raw.decode(),
+        decision_id=current["decision_id"],
+    )
+    current_rows = {r["object_id"]: r for r in current["records"]}
     decisions = json.loads((root / "geospatial/closeout/site_decisions.json").read_text())
     catalog = json.loads((root / "geospatial/sources/catalog.json").read_text())
     objects = [
@@ -93,7 +113,8 @@ def review(root=ROOT):
     coverage = json.loads(
         (root / "geospatial/facilities/coverage/COVERAGE_MATRIX.json").read_text()
     )
-    rows, sources = [], {}
+    rows, sources = [], {approved["sha256"]: (approved, (root / approved["path"]).read_bytes())}
+    sources[current_source["sha256"]] = (current_source, current_raw)
     for obj in objects:
         source, raw = bind_source(obj, root)
         sources[source["sha256"]] = (source, raw)
@@ -104,18 +125,33 @@ def review(root=ROOT):
                 "object_id": oid,
                 "canonical_name": obj["canonical_name"],
                 "source": source,
+                "current_decision_evidence": current_source,
+                "current_disposition": current_rows[oid]["disposition"],
                 "original_register_record": obj,
                 "geometry_disposition": "EXISTING_QUALIFIED_REPRESENTATION"
                 if linked
                 else "EXPLICITLY_UNLOCATED",
                 "geometry_features": linked,
                 "exact_parcel_or_survey_established": False,
-                "occupancy_disposition": "NO_ACCEPTED_OCCUPANCY_INTERVAL",
+                "occupancy_disposition": "OWNER_APPROVED_YEAR_BOUNDED_OCCUPANCY"
+                if oid in ("SH-SITE-0002", "SH-SITE-0003")
+                else "NO_ACCEPTED_OCCUPANCY_INTERVAL",
+                "occupancy_bounds": next(
+                    (r for r in continuity["states"] if r["asset_id"] == oid), None
+                ),
+                "continuity_evidence": approved
+                if oid in ("SH-SITE-0002", "SH-SITE-0003")
+                else None,
                 "occupancy_valid_from": None,
                 "occupancy_valid_to": None,
                 "source_period": obj["relevant_date"],
                 "source_period_precision": obj["date_precision"],
-                "period_meaning": decisions["period_meanings"][oid],
+                "period_meaning": decisions["period_meanings"][oid]
+                + " Current controlling disposition: "
+                + current_rows[oid]["disposition"]
+                + "; "
+                + current_rows[oid]["temporal_precision"]
+                + ".",
                 "retained_operational_states": [
                     r for r in catalog["asset_states"] if r["asset_id"] == oid
                 ],
@@ -133,10 +169,10 @@ def review(root=ROOT):
             }
         )
     return {
-        "version": "1.0.0",
+        "version": "1.2.0",
         "rows": rows,
         "verified_site_records": len(rows),
         "continuity_conflict": decisions["continuity_conflict"],
-        "issue_106_complete": False,
-        "closure_boundary": "Source binding and explicit spatial/temporal dispositions are complete. Exact historical shop/Fort continuity and occupancy evidence remain unresolved; this package does not close #106 or the broader #108 programme.",
+        "issue_106_complete": True,
+        "closure_boundary": "All 34 objects have controlling fictional-design, regional, historical, shared-accommodation or explicit unknown/not-applicable dispositions. Delivery still requires integration, package qualification and publication. Actual external execution and #108 source review are separate.",
     }, sources

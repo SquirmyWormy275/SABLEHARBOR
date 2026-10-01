@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0.0",
+  "authority": "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md",
+  "acceptance": "Pending repository acceptance; conversation authority preserved in decision",
+  "available_at": "2026-09-15",
+  "adjustments": [
+    {"id":"SH-VOICE-GW-01","entity":"SHI","year":2026,"month":0,"scenarios":["base","downside","expansion"],"entries":{"LEG_1600":"-30000000","LEG_3000":"30000000"},"segment":"CORPORATE","description":"Dated successor correction of unsupported synthetic opening goodwill and initialization equity; no impairment expense, contribution, cash or tax basis event"},
+    {"id":"FF-003-TAX","entity":"SHI","year":2027,"month":1,"scenarios":["base"],"customer":"SYN-CUSTOMER-003","entries":{"CO_FF_TAX_EXP":"152250","CO_FF_TAX_PAY":"-152250"},"segment":"FOUNDRY_FIELD","description":"Accepted FF-003 seller-borne tax supplement; principal unchanged; payable retained without inferred remittance"}
+  ]
+}

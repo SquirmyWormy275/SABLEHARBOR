@@ -11,25 +11,41 @@ def test_work_status_authorization_and_no_formal_mutation(tmp_path):
     outsider = engine.store.provision("Other learner", ["learner"])
     state = {key: [] for key in COLLECTIONS}
     state.update(
-        title="Recorded work", phase="ACTIVE", mode="CLEAN", discipline="IT",
+        title="Recorded work",
+        phase="ACTIVE",
+        mode="CLEAN",
+        discipline="IT",
         scope={"boundaries": ["corporate"]},
-        simulated_at="2027-01-01T00:00:00Z", configuration={},
+        simulated_at="2027-01-01T00:00:00Z",
+        configuration={},
     )
     state["controls"] = [{"id": "C1", "title": "Control"}]
     state = engine.store.create(owner["id"], state, "create")
     client = TestClient(app, base_url="https://testserver")
     path = f"/api/engagements/{state['id']}/work-status"
     assert client.get(path).status_code == 401
-    assert client.get(path, headers={
-        "authorization": "Bearer " + outsider["credential"],
-    }).status_code in (403, 404)
-    response = client.get(path, headers={
-        "authorization": "Bearer " + owner["credential"],
-    })
+    assert client.get(
+        path,
+        headers={
+            "authorization": "Bearer " + outsider["credential"],
+        },
+    ).status_code in (403, 404)
+    response = client.get(
+        path,
+        headers={
+            "authorization": "Bearer " + owner["credential"],
+        },
+    )
     assert response.status_code == 200, response.text
-    assert client.get("/api/bootstrap", headers={
-        "authorization": "Bearer " + owner["credential"],
-    }).json()["capabilities"]["work_status"] is True
+    assert (
+        client.get(
+            "/api/bootstrap",
+            headers={
+                "authorization": "Bearer " + owner["credential"],
+            },
+        ).json()["capabilities"]["work_status"]
+        is True
+    )
     result = response.json()
     assert result["denominators"]["scoped_controls"] == 1
     assert result["controls"][0]["control_effectiveness"] == "NOT_ASSESSED"

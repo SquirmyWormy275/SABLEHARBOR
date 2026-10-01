@@ -10,6 +10,14 @@ All new operating histories are public synthetic 2027–2031 scenarios. A passin
 build means that records, accounting and disclosed outcomes reconcile. It does
 not mean every scenario is funded, every schedule is feasible or every control passed.
 
+## Completed-period company input
+
+The [August 2026 reconstruction](docs/completed-period.md) adds a separately
+versioned employee, payroll, access and selected operating-chain input. It remains
+pending composite financial reconciliation and repository acceptance. Its
+September 15 authorship is separate from August effective dates and does not
+change the forecast population or earlier release bytes.
+
 ## Run and review
 
 ```bash
@@ -83,5 +91,5 @@ cash is Core requested cash before enterprise Treasury/tax, not a consolidated
 financing revision. Control exercises do not establish production effectiveness.
 
 Legal/tax elections, permanent appointments, production Alexandria/Daedalus access
-and retention, exact geography and the approved headquarters image remain separately
-gated decisions. Earlier releases remain immutable and separately interpretable.
+and retention, and exact geography remain separately gated decisions. Earlier releases
+remain immutable and separately interpretable.

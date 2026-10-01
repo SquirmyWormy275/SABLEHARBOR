@@ -116,7 +116,9 @@ def test_acquisition_change_withholds_old_draft_and_does_not_rehash_legacy_row(s
     store = app.state.engine.store
     drafts = DraftStore(store)
     args = (user["id"], state["id"], "workpaper.update", "WP1")
-    drafts.write(*args, payload(base=1, fields={"text": "Authored analysis", "evidence_ids": ["OLD"]}))
+    drafts.write(
+        *args, payload(base=1, fields={"text": "Authored analysis", "evidence_ids": ["OLD"]})
+    )
     assert drafts.get(*args)["status"] == "DRAFT"
 
     def change_acquisition(s, c, a):
@@ -124,10 +126,16 @@ def test_acquisition_change_withholds_old_draft_and_does_not_rehash_legacy_row(s
         return s
 
     changed = store.command(
-        user["id"], state["id"],
-        {"command_id": "acquisition-change", "expected_revision": state["revision"],
-         "kind": "fixture", "payload": {}},
-        change_acquisition, permissions={"learn"},
+        user["id"],
+        state["id"],
+        {
+            "command_id": "acquisition-change",
+            "expected_revision": state["revision"],
+            "kind": "fixture",
+            "payload": {},
+        },
+        change_acquisition,
+        permissions={"learn"},
     )
     stale = drafts.get(*args)
     assert stale["status"] == "STALE" and "fields" not in stale
@@ -137,20 +145,34 @@ def test_acquisition_change_withholds_old_draft_and_does_not_rehash_legacy_row(s
 
     # Pre-change rows used a digest without acquisition. Preserve their bytes;
     # the new context must treat even a matching current acquisition as stale.
-    legacy = digest([state["id"], "learn", changed["scope"],
-                     changed.get("generation_epoch", 0), changed.get("company_source_binding")])
+    legacy = digest(
+        [
+            state["id"],
+            "learn",
+            changed["scope"],
+            changed.get("generation_epoch", 0),
+            changed.get("company_source_binding"),
+        ]
+    )
     with drafts._db() as db:
-        db.execute("UPDATE drafts SET context_digest=? WHERE principal=? AND engagement=? "
-                   "AND action=? AND object_id=?", (legacy, *args))
+        db.execute(
+            "UPDATE drafts SET context_digest=? WHERE principal=? AND engagement=? "
+            "AND action=? AND object_id=?",
+            (legacy, *args),
+        )
     old_format = drafts.get(*args)
     assert old_format["status"] == "STALE_SOURCE"
     assert old_format["fields"] == {"text": "Authored analysis"}
     assert "OLD" not in json.dumps(old_format)
     with drafts._db() as db:
-        assert db.execute(
-            "SELECT context_digest FROM drafts WHERE principal=? AND engagement=? "
-            "AND action=? AND object_id=?", args,
-        ).fetchone()[0] == legacy
+        assert (
+            db.execute(
+                "SELECT context_digest FROM drafts WHERE principal=? AND engagement=? "
+                "AND action=? AND object_id=?",
+                args,
+            ).fetchone()[0]
+            == legacy
+        )
     with pytest.raises(DomainError):
         drafts.write(*args, payload("legacy-overwrite", 1, base=1))
 
@@ -159,10 +181,16 @@ def test_acquisition_change_withholds_old_draft_and_does_not_rehash_legacy_row(s
         return s
 
     store.command(
-        user["id"], state["id"],
-        {"command_id": "source-change", "expected_revision": changed["revision"],
-         "kind": "fixture", "payload": {}},
-        change_source, permissions={"learn"},
+        user["id"],
+        state["id"],
+        {
+            "command_id": "source-change",
+            "expected_revision": changed["revision"],
+            "kind": "fixture",
+            "payload": {},
+        },
+        change_source,
+        permissions={"learn"},
     )
     assert drafts.get(*args)["status"] == "STALE"
     assert "fields" not in drafts.get(*args)

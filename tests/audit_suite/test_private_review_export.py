@@ -33,8 +33,12 @@ def test_private_export_preserves_bytes_and_excludes_unrelated_files(tmp_path):
     )
     state["artifacts"].append(manifest)
     named = engine.artifacts.retain(
-        state["id"], "trace #1.csv", b"trace,value\nT1,yes\n",
-        source={}, coverage={}, generated=True,
+        state["id"],
+        "trace #1.csv",
+        b"trace,value\nT1,yes\n",
+        source={},
+        coverage={},
+        generated=True,
     )
     state["artifacts"].append(named)
     root = run_directory(engine, state["id"])

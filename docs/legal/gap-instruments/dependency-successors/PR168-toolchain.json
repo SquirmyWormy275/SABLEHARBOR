@@ -1,0 +1,19 @@
+{
+  "id": "SH-LEGAL-TOOLCHAIN-SUCCESSOR-2026-09-22",
+  "state": "PENDING_PR168_ACCEPTANCE",
+  "scope": "Historical build-input provenance only; original publication bytes and manifest remain unchanged. The patched current toolchain does not claim to have generated historical publications.",
+  "path": "tools/legal_gaps/requirements.txt",
+  "before_sha256": "f75fe300b81b2114c30b260121110d0516e3d89c50cf317aad9fe7d935af92b5",
+  "after_sha256": "8b55f12cf9fe58244f0e39841521eb781d298837e7e004bf95ceff0915561c32",
+  "baseline_snapshot": "docs/legal/gap-instruments/dependency-successors/requirements-before-PR168.txt",
+  "changes": {
+    "PyMuPDF": [
+      "1.26.6",
+      "1.26.7"
+    ],
+    "pytest": [
+      "8.4.2",
+      "9.0.3"
+    ]
+  }
+}

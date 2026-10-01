@@ -1,0 +1,62 @@
+[
+  {
+    "page": 1,
+    "path": "docs/finance/evidence/tax-transaction/draft/qa/paper-01.png",
+    "sha256": "855fcb99c7e083256a57e5c0e4028a8035bbbec995961ed277879e983c12f824",
+    "source": "paper"
+  },
+  {
+    "page": 1,
+    "path": "docs/finance/evidence/tax-transaction/draft/qa/workbook-01.png",
+    "sha256": "ad8af194f834988b620eca1a945b62fa084f51f820aeeabf53fd4a02df128a7b",
+    "source": "workbook"
+  },
+  {
+    "page": 2,
+    "path": "docs/finance/evidence/tax-transaction/draft/qa/workbook-02.png",
+    "sha256": "acc64fbbf577629575dc19f41fce6c180ed7e49f47acdf7de873b429ba54a358",
+    "source": "workbook"
+  },
+  {
+    "page": 3,
+    "path": "docs/finance/evidence/tax-transaction/draft/qa/workbook-03.png",
+    "sha256": "11981825b1b7e2081de3386f949ce2c0c8fec57a5b0354963e695092a8643fc3",
+    "source": "workbook"
+  },
+  {
+    "page": 4,
+    "path": "docs/finance/evidence/tax-transaction/draft/qa/workbook-04.png",
+    "sha256": "7f05c29ec6b4f55770002ddb41f3ac91a847f2b2ce4634fffc36cfeee3e6c54a",
+    "source": "workbook"
+  },
+  {
+    "page": 5,
+    "path": "docs/finance/evidence/tax-transaction/draft/qa/workbook-05.png",
+    "sha256": "bdaac39a9cc11198126dfa33d015bf5c79bef6822c4d896c4da836747d72e8ec",
+    "source": "workbook"
+  },
+  {
+    "page": 6,
+    "path": "docs/finance/evidence/tax-transaction/draft/qa/workbook-06.png",
+    "sha256": "141e4a9b0492a9006b3b1b2fa44e9184ec75f3a11db2ed66e0addfe98b1f13a6",
+    "source": "workbook"
+  },
+  {
+    "page": 7,
+    "path": "docs/finance/evidence/tax-transaction/draft/qa/workbook-07.png",
+    "sha256": "528e9aae156d3bc84c6935f716823ff8ea17644486fb3b9309da5a105ba3fa09",
+    "source": "workbook"
+  },
+  {
+    "page": 8,
+    "path": "docs/finance/evidence/tax-transaction/draft/qa/workbook-08.png",
+    "sha256": "8e1874d0ace04ecac2696b056d7a9170f02423bbe129a34844bff0053d59753f",
+    "source": "workbook"
+  },
+  {
+    "page": 9,
+    "path": "docs/finance/evidence/tax-transaction/draft/qa/workbook-09.png",
+    "sha256": "9314260f99af25b1e5584b4f6ace289a99bee11780b755a7028d9c198b1dc973",
+    "source": "workbook"
+  }
+]

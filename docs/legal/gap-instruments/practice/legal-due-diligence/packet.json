@@ -1,0 +1,172 @@
+{
+  "id": "SH-LEGAL-PRACTICE-LEGAL-DUE-DILIGENCE",
+  "slug": "legal-due-diligence",
+  "title": "Taylor–Red Wash legal due diligence",
+  "classification": "PUBLIC_WORKED_EXAMPLE",
+  "design_status": "DRAFT_FOR_REVIEW",
+  "prepared": "2026-09-12",
+  "period": "Agreement source effective July 7, 2026; publication cutoff September 5, 2026",
+  "scenario": null,
+  "source_revision": "659a56747fe76522d18645ff115888c13fa8d2b0",
+  "route": "docs/reader/exercises/CONTRACTS.md",
+  "evidence": [
+    {
+      "path": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md",
+      "sha256": "23153dc86a3e9ea9fd501bce6bdf3c8478dbdf3ab79fa5e8abc84ca8bbb771fc"
+    },
+    {
+      "path": "industrial/publications/SH-IND-IC-001_v1.0.0.pdf",
+      "sha256": "6edd5e8f041b09b9447f51dee8f0dcc1179b1a58083396230642e31f383134f1"
+    },
+    {
+      "path": "industrial/source/entities.json",
+      "sha256": "799a24baf3240d50c5d6a80ac0f9ddb9d023b7a36de058ec12546aac60caee29"
+    }
+  ],
+  "task": [
+    "Prepare a clause-based due-diligence schedule for the stated Taylor–Red Wash agreement.",
+    "Separate stated contractual terms, performance claims and independent execution evidence.",
+    "Reperform one source rate calculation without inventing a shipment or invoice.",
+    "For each issue below, identify the relevant source heading, supported conclusion, missing evidence and appropriate next request."
+  ],
+  "limits": [
+    "The accepted source is a reconstructed internal agreement summary, not an authentic executed agreement.",
+    "An absent document in this selected packet does not prove it is absent everywhere or that a party breached.",
+    "No legal enforceability opinion, shipment, payment deadline breach or uranium qualification is asserted."
+  ],
+  "inputs": [
+    {
+      "id": "rail",
+      "label": "Acid rail rate per car",
+      "amount_usd": 950.0,
+      "source_path": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md",
+      "locator": "Schedule A; Sulfuric acid row"
+    },
+    {
+      "id": "terminal",
+      "label": "Acid terminal rate per car",
+      "amount_usd": 700.0,
+      "source_path": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md",
+      "locator": "Schedule A; Sulfuric acid row"
+    },
+    {
+      "id": "truck_total",
+      "label": "Four truck trips at stated rate (extended)",
+      "amount_usd": 1360.0,
+      "source_path": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md",
+      "locator": "Schedule A; Sulfuric acid row"
+    },
+    {
+      "id": "combined",
+      "label": "Published source combined rate per car",
+      "amount_usd": 3010.0,
+      "source_path": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md",
+      "locator": "Schedule A; Sulfuric acid row"
+    }
+  ],
+  "calculations": [
+    {
+      "id": "rate",
+      "label": "Combined rate per car (not an invoice)",
+      "terms": [
+        [
+          1,
+          "rail"
+        ],
+        [
+          1,
+          "terminal"
+        ],
+        [
+          1,
+          "truck_total"
+        ]
+      ],
+      "expected_usd": 3010.0,
+      "explanation": "Four road trips are priced, not one; no physical quantity ordered."
+    },
+    {
+      "id": "rate_difference",
+      "label": "Difference from source combined rate",
+      "terms": [
+        [
+          1,
+          "rail"
+        ],
+        [
+          1,
+          "terminal"
+        ],
+        [
+          1,
+          "truck_total"
+        ],
+        [
+          -1,
+          "combined"
+        ]
+      ],
+      "expected_usd": 0.0,
+      "explanation": "Arithmetic agreement does not establish delivered service."
+    }
+  ],
+  "findings": [
+    {
+      "id": "LEGAL-F01",
+      "question": "Who performs and bills?",
+      "worked_finding": "ARU supplies terminal/trucking; BS&T supplies rail; RWH is customer. Billing agency does not merge the sellers.",
+      "evidence": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md — Parties, authority and term",
+      "additional_evidence": "Verified signatures and invoice naming the actual performing seller."
+    },
+    {
+      "id": "LEGAL-F02",
+      "question": "Does planned capacity guarantee revenue?",
+      "worked_finding": "No minimum-volume guarantee or take-or-pay covenant is stated; unused slots produce no invoice.",
+      "evidence": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md — Schedule A — service and rates",
+      "additional_evidence": "Actual quantities, source events and accepted rate version for a selected invoice."
+    },
+    {
+      "id": "LEGAL-F03",
+      "question": "Can you test a late-service breach?",
+      "worked_finding": "The source states 72 elapsed hours, 96 for steel, with a separate 36–48-hour operating goal. No selected shipment timestamps are supplied here.",
+      "evidence": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md — Schedule B — clock, free time and service remedies",
+      "additional_evidence": "Interchange/empty-release timestamps, exclusions and responsibility evidence."
+    },
+    {
+      "id": "LEGAL-F04",
+      "question": "Is storage automatically chargeable?",
+      "worked_finding": "Only supported customer-caused occupancy after free time may receive the stated prorated charge; baseline has no chargeable dwell.",
+      "evidence": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md — Schedule B — clock, free time and service remedies",
+      "additional_evidence": "Car, custody, start/end time, expiry, cause and charging entity; any third-party invoice."
+    },
+    {
+      "id": "LEGAL-F05",
+      "question": "Is uranium custody authorized?",
+      "worked_finding": "Finished uranium concentrate is excluded and direct product custody remains OPEN_GATED.",
+      "evidence": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md — Schedule C — custody, insurance and qualification",
+      "additional_evidence": "Separate agreement and provider-specific qualification before any future activation."
+    },
+    {
+      "id": "LEGAL-F06",
+      "question": "Are insurance policies evidenced?",
+      "worked_finding": "The source states synthetic coverage assumptions, not insurer names, policies or certificates.",
+      "evidence": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md — Schedule C — custody, insurance and qualification",
+      "additional_evidence": "Applicable policy/certificate and exclusions; no inference from a budget."
+    },
+    {
+      "id": "LEGAL-F07",
+      "question": "Who owns the Phase 1 assets?",
+      "worked_finding": "RWH owns the mine programme; ARU owns reusable Taylor infrastructure. Ownership and depreciation remain separate.",
+      "evidence": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md — Schedule D — assets, billing and termination",
+      "additional_evidence": "Asset register and funding/acceptance evidence for any installed asset assertion."
+    },
+    {
+      "id": "LEGAL-F08",
+      "question": "Does next-month settlement prove timely payment?",
+      "worked_finding": "No. The source due period is 30 calendar days, while the model uses following-month settlement; exact invoice and payment dates are needed.",
+      "evidence": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md — Schedule D — assets, billing and termination",
+      "additional_evidence": "Dated invoice and independent settlement reference for the selected obligation."
+    }
+  ],
+  "selected_rows": {}
+}

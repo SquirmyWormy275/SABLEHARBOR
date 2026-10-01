@@ -1,8 +1,10 @@
 import json
+import re
 import sqlite3
 from copy import deepcopy
 from datetime import UTC, date, datetime
 from pathlib import Path
+from zipfile import ZipFile
 
 import pytest
 from jsonschema import ValidationError  # type: ignore[import-untyped]
@@ -324,6 +326,30 @@ def test_generated_artifact_scan_reads_sqlite_text_without_raw_page_false_positi
         "email-address-shaped value" in failure
         for failure in scan_generated_artifacts(clean_database)
     )
+
+
+def test_generated_artifact_scan_ignores_opaque_zip_bytes_but_reads_members(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    import sable_harbor.exports.safety as safety
+
+    archive_path = tmp_path / "evidence.xlsx"
+    with ZipFile(archive_path, "w") as archive:
+        archive.writestr("safe.txt", "synthetic public evidence")
+
+    # ZIP headers are compressed-container bytes, not a text population.
+    with monkeypatch.context() as patch:
+        patch.setattr(safety, "EMAIL_ADDRESS", re.compile(rb"PK\x03\x04"))
+        assert scan_generated_artifacts(archive_path) == []
+
+    with ZipFile(archive_path, "w") as archive:
+        archive.comment = b"contact@example.invalid"
+        archive.writestr("person@example.invalid.txt", "synthetic public evidence")
+        archive.writestr("contents.txt", "another@example.invalid")
+    failures = scan_generated_artifacts(archive_path)
+    assert any("archive-comment" in failure for failure in failures)
+    assert any("member-name" in failure for failure in failures)
+    assert any("contents.txt" in failure for failure in failures)
 
 
 @pytest.mark.parametrize(

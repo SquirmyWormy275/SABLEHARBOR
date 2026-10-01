@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "record_id": "SH-GEO-RAIL-SITE-INTERFACE-20260929-001",
+  "authored_at_utc": "2026-09-29T14:29:52Z",
+  "state": "SYNTHETIC_ENGINEERING_INTERFACE_REPERFORMANCE_NOT_REAL_CONSTRUCTION",
+  "scope": "Corrected modern 40-mile route against the twelve accepted synthetic facilities and thirty-one track records; proposed lead/ladder design remains out of service",
+  "projection": "EPSG:26913",
+  "distance_rounding_m": 0.001,
+  "operating_source_state": "DATED_SYNTHETIC_40_MILE_SUCCESSOR_ACCEPTED",
+  "proposed_lead_state": "OUT_OF_SERVICE_NOT_ASSET_OR_CASH",
+  "real_title_or_access_state": "NOT_SUPPLIED",
+  "external_customer_footprint_state": "UNKNOWN_RESTRICTED_PRECISION",
+  "no_mine_spur": true,
+  "finished_uranium_custody_authorized": false,
+  "input_sha256": {
+    "geospatial/engineering_review/COMPENSATED_40_MILE_CANDIDATE.json": "7592f356a9d13878a61960d735fba61924119c8efac226544c133f85d59b4750",
+    "geospatial/engineering_review/COMPENSATED_40_MILE_CANDIDATE.geojson": "2d3358d9dd7d117954b7d36879626659117cb9387b1350b4541abccb726228ad",
+    "geospatial/engineering_review/TRACK_SITE_INTERFACE_SCREEN.json": "0af0677b5f682b7dc84f6eaf4cd5e1ffada43a78347ae2df4d52c9e7b202f657",
+    "geospatial/geojson/industrial_tracks.geojson": "af649904a98d9f196f1d42f3ea1b7551a5354b16937285b88eae60f89774f684",
+    "geospatial/geojson/industrial_facilities.geojson": "d2aa49d58441878d6169f7ed20d50b59fbc28f9087c62b930f97d039de52438d",
+    "geospatial/geojson/rail_trackage_rights.geojson": "b3049ad7a1062091e169bd352424d59721a26b8b6229942aef26d11b0c6a96e1",
+    "industrial/source/operations.json": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b",
+    "industrial/successors/rail_2026_09_29/source.json": "3aa95c1764a144dc3611acca29f2982c59b44863766810532c6ef42faa3c1b80"
+  }
+}

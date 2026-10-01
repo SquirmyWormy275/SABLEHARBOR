@@ -1,0 +1,85 @@
+{
+  "gap_id": "LEGAL-GAP-RW-CHRONOLOGY",
+  "document_id": "SH-LEGAL-DRAFT-RW-CHRONOLOGY",
+  "title": "Red Wash chronology reconciliation and proposed correction instrument",
+  "status": "DRAFT_FOR_REVIEW",
+  "prepared": "2026-09-12",
+  "owner_role": "Pale Sun transaction owner with enterprise Legal",
+  "approval": null,
+  "effective_date": null,
+  "source_paths": [
+    "industrial/transaction/01_RW_TRANSACTION_FILE.md",
+    "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md",
+    "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md",
+    "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
+    "red_wash/source/core_operating_data.json"
+  ],
+  "proposed_terms": [
+    {
+      "id": "SH-LEGAL-DRAFT-RW-CHRONOLOGY-T01",
+      "term": "Display both pre-close date assertions until a scoped decision resolves their identity",
+      "basis": "Proposed representation control; existing sources disagree"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-RW-CHRONOLOGY-T02",
+      "term": "Preserve selected July 18, 2025 close and consideration",
+      "basis": "Accepted Red Wash transaction canon"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-RW-CHRONOLOGY-T03",
+      "term": "Adopt each date correction separately with source and derivative scope",
+      "basis": "Proposed correction procedure"
+    }
+  ],
+  "unresolved_fields": [
+    {
+      "id": "SH-LEGAL-DRAFT-RW-CHRONOLOGY-U01",
+      "field": "RW-CHR-01 through RW-CHR-04 event identity and dates",
+      "next_action": "Transaction owner proposes scoped decision using paired sources; owner accepts or retains uncertainty"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-RW-CHRONOLOGY-U02",
+      "field": "Post-signature approval scope in RW-CHR-04",
+      "next_action": "Review existing authority record before proposing a historical explanation"
+    }
+  ],
+  "financial_schedules": [
+    {
+      "name": "Preserved acquisition amounts",
+      "columns": [
+        "measure",
+        "amount_usd",
+        "basis"
+      ],
+      "rows": [
+        [
+          "cash_consideration",
+          28000000,
+          "accepted; unchanged"
+        ],
+        [
+          "environmental_title_escrow",
+          3000000,
+          "within consideration"
+        ],
+        [
+          "holdback",
+          500000,
+          "within consideration"
+        ],
+        [
+          "transaction_debt",
+          0,
+          "accepted; unchanged"
+        ],
+        [
+          "goodwill",
+          0,
+          "accepted; unchanged"
+        ]
+      ]
+    }
+  ],
+  "version": "0.1.0",
+  "approval_status": "NOT_ACCEPTED"
+}

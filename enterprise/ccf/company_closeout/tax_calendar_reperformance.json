@@ -1,0 +1,19 @@
+{
+  "calendar_count": 427,
+  "historical_row_count": 24,
+  "bridge": {
+    "sales_usd": "12600000",
+    "receipts_usd": "8600000",
+    "closing_ar_usd": "4000000.00",
+    "acquired_ar_collections_usd": "4000000",
+    "total_h2_cash_collections_usd": "12600000",
+    "acquired_ar_new_revenue_usd": "0",
+    "acquired_ar_new_rot_expense_usd": "0",
+    "utility_accrued_rot_usd": "646624.38",
+    "utility_receipt_rot_usd": "441346.80",
+    "threshold_monthly_lower_bound_usd": "36778.90",
+    "accelerated_threshold_exceeded": true,
+    "trader_tax_state": "NOT_AUTOMATICALLY_EXEMPT_SEPARATE_CERTIFICATE_OR_TAX_REVIEW",
+    "cash_posted_usd": "0"
+  }
+}

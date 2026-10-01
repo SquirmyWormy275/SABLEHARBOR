@@ -1,0 +1,78 @@
+{
+  "gap_id": "LEGAL-GAP-URANIUM-CUSTODY",
+  "document_id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY",
+  "title": "Conditional future Red Wash product custody and carrier agreement",
+  "status": "DRAFT_FOR_REVIEW",
+  "prepared": "2026-09-12",
+  "owner_role": "Red Wash operating authority with enterprise Legal, Safety and qualified carrier review",
+  "approval": null,
+  "effective_date": null,
+  "source_paths": [
+    "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md",
+    "red_wash/agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md",
+    "docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md",
+    "industrial/operations/OPERATING_AND_SERVICE_PLAN.md"
+  ],
+  "proposed_terms": [
+    {
+      "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-T01",
+      "term": "Conditional future contract; service inactive until provider-specific activation",
+      "basis": "Existing OPEN_GATED product-custody boundary"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-T02",
+      "term": "30-day undisputed invoice payment and remediable commercial cure",
+      "basis": "New negotiable terms only"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-T03",
+      "term": "No affiliate preference, no inherited ordinary-inbound rates/qualification",
+      "basis": "Accepted Red Wash and Taylor boundaries"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-T04",
+      "term": "Separate custody, title, assay and financial evidence",
+      "basis": "Accepted sale/custody source structure"
+    }
+  ],
+  "unresolved_fields": [
+    {
+      "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-U01",
+      "field": "Carrier, receiver, actual service and qualification evidence",
+      "next_action": "Select service/provider and obtain role-specific reviews before activation"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-U02",
+      "field": "Prices, liability caps, insurance, retention and law/forum",
+      "next_action": "Complete service-specific commercial/legal schedule"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-URANIUM-CUSTODY-U03",
+      "field": "Activation and execution dates",
+      "next_action": "Remain null until separately accepted future record"
+    }
+  ],
+  "financial_schedules": [
+    {
+      "name": "Unactivated service economics",
+      "columns": [
+        "service",
+        "rate",
+        "quantity",
+        "liability_cap",
+        "status"
+      ],
+      "rows": [
+        [
+          "future qualified product custody",
+          null,
+          null,
+          null,
+          "OPEN_GATED; no order or financial booking"
+        ]
+      ]
+    }
+  ],
+  "version": "0.1.0",
+  "approval_status": "NOT_ACCEPTED"
+}

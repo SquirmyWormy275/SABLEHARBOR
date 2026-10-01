@@ -39,5 +39,3 @@ A documented profession does not supply unnamed occupants or complete appointmen
 - [Orientation](orientation.md)
 - [Junction Advisory Group](jag.md)
 - [Alexandria institutional environment](alexandria.md)
-
-Related reading describes useful connections, not additional reporting lines.

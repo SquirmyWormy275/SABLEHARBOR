@@ -1,0 +1,256 @@
+{
+  "document_id": "SH-STATE-UNITARY-FACTS-20260915",
+  "version": "1.0.0",
+  "acceptance_state": "PENDING_REPOSITORY_ACCEPTANCE",
+  "authored_on": "2026-09-15",
+  "available_on": "2026-09-15",
+  "origin": "SOURCE_REVIEW_AND_NEWLY_AUTHORED_SYNTHETIC_OPERATIONAL_DETAIL",
+  "scope": "State unitary computation boundary for 2026 current reconstruction and conditional2027\u20132031 successors; earlier membership dates preserved without claiming complete prior-period returns",
+  "source_hashes": {
+    "industrial/source/entities.json": "799a24baf3240d50c5d6a80ac0f9ddb9d023b7a36de058ec12546aac60caee29",
+    "industrial/source/finance.json": "0d4461abfcdb138da36db503ff0cfea7c47ea7fd7109494126514225fd43e38c",
+    "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md": "61a32c036e8cdb2fbf7ab0234d26a925ebd423b48869667724c5a254ca14fda1",
+    "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md": "23153dc86a3e9ea9fd501bce6bdf3c8478dbdf3ab79fa5e8abc84ca8bbb771fc",
+    "industrial/planning/source/enterprise.json": "83604dc8f007e6de81eb8a28a58f0e4649e259361dbe67abae3db03feb62ba2c",
+    "industrial/planning/enterprise.py": "10f0654598db0c29f8d6ff79e58b60b5a717bf93f74c4d9c31c203f328ddd5f0"
+  },
+  "federal_consolidated_election": false,
+  "new_tax_sharing_agreement": false,
+  "new_cash_or_fee_usd": "0.00",
+  "group_id": "SH-UNITARY-OPERATING-2026",
+  "taxpayer_members": [
+    "SHI",
+    "SHIH",
+    "PS",
+    "ARU",
+    "BST"
+  ],
+  "disregarded_divisions": [
+    {
+      "entity_id": "RWH",
+      "taxpayer_id": "PS",
+      "from": "2025-07-18",
+      "legal_employer_and_operator_unchanged": true
+    }
+  ],
+  "membership": [
+    {
+      "entity_id": "SHI",
+      "first_common_control": "2016",
+      "2026_scope": "FULL_YEAR"
+    },
+    {
+      "entity_id": "SHIH",
+      "first_common_control": "2024-12-02",
+      "2026_scope": "FULL_YEAR"
+    },
+    {
+      "entity_id": "PS",
+      "first_common_control": "2025-01-13",
+      "2026_scope": "FULL_YEAR"
+    },
+    {
+      "entity_id": "ARU",
+      "first_common_control": "2026-01-07",
+      "2026_scope": "AFTER_ACQUISITION_CONTROL; elected_new_target_JAN08"
+    },
+    {
+      "entity_id": "BST",
+      "first_common_control": "2026-01-07",
+      "2026_scope": "AFTER_ACQUISITION_CONTROL; QSUB_TERMINATION_AND_ELECTED_TARGET_TIMING_SEPARATE"
+    }
+  ],
+  "excluded_entities": [
+    "NMI",
+    "SYN-RW-CARRIER-001",
+    "SYN-RW-CONVERTER-001",
+    "SYN-RW-SURETY-001",
+    "SH-SYN-BENEFIT-PROVIDER-001"
+  ],
+  "facts": [
+    {
+      "id": "UNITY-01",
+      "origin": "ACCEPTED_SOURCE",
+      "fact": "SHI owns100%SHIH; SHIH owns100%PSandARU; PSownsRWH; ARUownsBST. External providers and former seller excluded.",
+      "source": "industrial/source/entities.json"
+    },
+    {
+      "id": "UNITY-02",
+      "origin": "ACCEPTED_SOURCE",
+      "fact": "Evan sponsors miningcapital, Mari owns minetechnicaloperations and stopauthority, SHIH/enterprise approves reservedspend; Nora accountableSHIH, Seth retainsrailwaycommand. This is active operating/capital management rather than mere stockcustody.",
+      "source": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md"
+    },
+    {
+      "id": "UNITY-03",
+      "origin": "ACCEPTED_SOURCE",
+      "fact": "PS12person platform supplies commercial, supplychain, engineering, technicalassurance and personnel support to128personmine. Existing1.5Mcostbasedfee within2.8MG&A eliminates; no extraexpense.",
+      "source": "industrial/source/finance.json"
+    },
+    {
+      "id": "UNITY-04",
+      "origin": "ACCEPTED_SOURCE",
+      "fact": "ARU/BST use central treasury and reciprocal legalaccounts; transport/terminal/trucking/warehouse share procurement, customercoordination and safetyescalation. $830000ARUsharedservices and existing leadership responsibilities support operatingintegration.",
+      "source": "industrial/source/finance.json"
+    },
+    {
+      "id": "UNITY-05",
+      "origin": "ACCEPTED_SOURCE_WITH_LIMIT",
+      "fact": "Ordinarymaterials logistics joins ARU andRWH through bilateral responsibilities, fixedhandlingallowance and definedwindow controls. No minimumvolumeguarantee, preference or uraniumcarriage is assumed. ARU remains independently viable commercially.",
+      "source": "industrial/transaction/08_INTERCOMPANY_LOGISTICS_AGREEMENT.md"
+    },
+    {
+      "id": "UNITY-06",
+      "origin": "NEWLY_AUTHORED_RETROSPECTIVE_OPERATIONAL_DETAIL",
+      "fact": "Existing enterprise oversight is implemented through monthly operating resource reviews during 2026: SHI executives and SHIH sponsors review PS/ARU budgets, capital priorities and hiring capacity with named operating leaders. Reviews use common forecast definitions and exception records. Operating leaders retain safety and permit decisions. Newly authored implementation detail creates no new board vote or funding commitment.",
+      "effective_period": "2026 after relevant acquisition control"
+    },
+    {
+      "id": "UNITY-07",
+      "origin": "NEWLY_AUTHORED_RETROSPECTIVE_OPERATIONAL_DETAIL",
+      "fact": "Existing enterprise support roles supply procurement comparisons, qualified recruitment, benefit administration and record standards across Core and industrial management. Industrial technical and delivery constraints feed central resource allocation. Shared staff avoids duplicate support functions. No deployed portal, new customer sale, service invoice or guaranteed synergy is asserted.",
+      "effective_period": "2026 after relevant acquisition control"
+    },
+    {
+      "id": "UNITY-08",
+      "origin": "CONDITIONAL_FORECAST_ONLY",
+      "fact": "SHI->PS/ARU sharedservicefee journals begin2027; they corroborate continuing planned integration but are excluded as proof of2026 performedservices. Forecast group membership continues only while ownership/operating facts remain unchanged.",
+      "source": "industrial/planning/enterprise.py"
+    }
+  ],
+  "analysis": {
+    "ownership": "SATISFIED_COMMON_CONTROL",
+    "functional_integration": "PS_RWH_VERTICAL; ARU_BST_LOGISTICS; CROSS_GROUP_ACTIVE_RESOURCE_PROCUREMENT_PEOPLE_AND_OPERATING_MANAGEMENT",
+    "centralized_management": "EXISTING_RESERVED_CAPITAL_AND_STRATEGIC_AUTHORITY_WITH_AUTHORED_REGULAR_IMPLEMENTATION",
+    "economies_of_scale": "SHARED_SUPPORT_CAPACITY_NOT_ASSUMED_MARGIN_IMPROVEMENT",
+    "contrary_facts": [
+      "Distinctcustomerbases andbusinesscapabilities",
+      "ARUindependentviability andarm_lengthinternalrates",
+      "Separate safetycommand andlegalpermits",
+      "No parentservicefees in2026"
+    ],
+    "weighing": "Distinct markets, independent viability, arm-length pricing and separate safety command do not negate the represented active common operating management and shared support. No guaranteed financial benefit is assumed.",
+    "conclusion": "ONE_UNITARY_OPERATING_BUSINESS_FOR_SELECTED_STATE_COMPUTATIONS",
+    "review_state": "SYNTHETIC_COMPANY_CONCLUSION_PENDING_REPOSITORY_ACCEPTANCE_NOT_TAX_AUTHORITY_RULING"
+  },
+  "jurisdictions": [
+    {
+      "state": "CA",
+      "group_id": "SH-UNITARY-OPERATING-2026",
+      "members": [
+        "SHI",
+        "SHIH",
+        "PS",
+        "ARU",
+        "BST"
+      ],
+      "dre": "RWH_IN_PS",
+      "filing": "COMBINED_REPORT_REQUIRED; GROUP_RETURN_ELECTION_NOT_CREATED",
+      "nol": "MEMBER_SPECIFIC_ORIGIN_AND_APPORTIONED_USE",
+      "minimum_tax": "SEPARATE_NEXUS_QUALIFICATION_TEST; MEMBERSHIP_ALONE_NOT_800",
+      "factor": "CheckgroupgrossbusinessreceiptsQBAthreshold annually;single-salesifnot>50%qualifying;extractivemineisQBA. ApplytransportreceiptsruleswithoutinventedCAroute."
+    },
+    {
+      "state": "IL",
+      "group_id": "SH-UNITARY-OPERATING-2026",
+      "members": [
+        "SHI",
+        "SHIH",
+        "PS",
+        "ARU",
+        "BST"
+      ],
+      "dre": "RWH_IN_PS",
+      "filing": "UNITARY_COMBINED_IL1120;FINNIGAN_FROM_TY_ENDING_2025_12_31",
+      "subgroups": [
+        {
+          "id": "SALES",
+          "members": [
+            "SHI",
+            "SHIH",
+            "PS"
+          ]
+        },
+        {
+          "id": "NONAIR_TRANSPORT",
+          "members": [
+            "ARU",
+            "BST"
+          ],
+          "basis": "ARUresource-logistics company operatesowntruckingintegratedwithterminals/warehouses;BSTrailway. Use sourcephysicaltransportreceipts fortransportfraction andprescribedsubgroupconversion; retainallentitybusinessincome. Do notusehouseholdcarrier orreceipt-onlycustomerlocationproxy."
+        }
+      ],
+      "nexus": "PSincludesRWHretainedIllinoisprocessinginventory;othermembers notautomaticallyseparateIllinois taxpayers",
+      "factor": "86Ill100.3450transportfraction;100.3600/ScheduleUBsubgroupmethod;ILsalesnon-taxablemembersFinniganallocation. NoARU/BSTIllinoisroutesauthored."
+    },
+    {
+      "state": "WV",
+      "group_id": "SH-UNITARY-OPERATING-2026",
+      "members": [
+        "SHI",
+        "SHIH",
+        "PS",
+        "ARU",
+        "BST"
+      ],
+      "dre": "RWH_IN_PS",
+      "filing": "MANDATORY_WATERS_EDGE_COMBINED_REPORT;NO_WORLDWIDE_ELECTION",
+      "factor": "Currentpost2022single-saleswithspecialtransportactivityruleswhereapplicable; actualreceiptmarketsfromrootsource",
+      "nol": "WV_SOURCE_MEMBER_NOL_AND_APPLICABLE_SRLY;NO_GLOBAL_FEDERALNOL_POOL"
+    }
+  ],
+  "receipts_contract": "Root-owned marketfacts source supplies wholelegacy current/forecast receipts. This file does not allocate customerjurisdictions;75subscription and92currentcontract scopes remain distinct. Finance reconciles journal externalrevenue, subgroup receipts and eliminations before calculation.",
+  "change_triggers": [
+    "Ownership/control change",
+    "Material separation ofcentraloperatingfunctions",
+    "New foreignmember orforeignactivity",
+    "Newphysicaltransportjurisdiction",
+    "Changedextractivereceipts>50%CAthreshold",
+    "New election/validity failure338 changesbasis orperiod"
+  ],
+  "authorities": [
+    {
+      "id": "CA-UNITY",
+      "url": "https://www.ftb.ca.gov/forms/2021/2021-1061-publication.pdf",
+      "provision": "Threeunities/dependency/contribution tests;longstandingstandard",
+      "accessed_on": "2026-09-15"
+    },
+    {
+      "id": "CA-DIVERSE",
+      "url": "https://www.ftb.ca.gov/tax-pros/law/legal-rulings/1995-8.html",
+      "provision": "Diversebusinessesunitaryfacts;separateproductflowabsence notdecisive",
+      "accessed_on": "2026-09-15"
+    },
+    {
+      "id": "CA-FACTOR",
+      "url": "https://www.ftb.ca.gov/forms/2025/2025-100r-instructions.html",
+      "provision": "Qualifiedbusinessactivity50%threshold;apportionment",
+      "accessed_on": "2026-09-15"
+    },
+    {
+      "id": "IL-UNITARY",
+      "url": "https://tax.illinois.gov/content/dam/soi/en/web/tax/forms/incometax/documents/currentyear/business/miscellaneous/schedule-ub-instr.pdf",
+      "provision": "2025ScheduleUBRev03/26;unitarygroup/subgroups/Finnigan",
+      "accessed_on": "2026-09-15"
+    },
+    {
+      "id": "IL-TRANSPORT",
+      "url": "https://www.ilga.gov/ftp/JCAR/AdminCode/086/086001000M34500R.html",
+      "provision": "86Ill100.3450effective2015-11-18;transportreceipts/miles",
+      "accessed_on": "2026-09-15"
+    },
+    {
+      "id": "WV-UNITY",
+      "url": "https://code.wvlegislature.gov/11-24-3A/",
+      "provision": "11-24-3a(43)significantflowofvalue",
+      "accessed_on": "2026-09-15"
+    },
+    {
+      "id": "WV-COMBINED",
+      "url": "https://code.wvlegislature.gov/pdf/11-24-13a/",
+      "provision": "11-24-13a(j)mandatorycombined",
+      "accessed_on": "2026-09-15"
+    }
+  ],
+  "source_commit": "78d4fcdf1df5b8ffc0775b9af22cae1002d456d7",
+  "source_hash_rule": "Hashes identify pinned accepted source bytes via git show source_commit:path, not mutable successor code."
+}

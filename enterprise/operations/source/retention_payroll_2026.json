@@ -1,0 +1,19 @@
+{
+  "record_id": "SH-RETENTION-PAYROLL-2026",
+  "authored_day": "2026-09-15",
+  "fact_state": "NEWLY_AUTHORED_SYNTHETIC_RECONSTRUCTION",
+  "authority_sources": [
+    {"url": "https://www.irs.gov/pub/irs-pdf/p15.pdf", "version": "2026 Publication15 section7 and SocialSecurity/Medicare rules", "accessed_on": "2026-09-15", "conclusion": "Separately identified supplemental wages below1M may use22% when regular-wage withholding condition is met; here all8 recipients have regular2026 taxable salary with FIT withholding."},
+    {"url": "https://www.rrb.gov/sites/default/files/2025-12/NR2512_0.pdf", "version": "Railroad Retirement and Unemployment Insurance Taxes in2026", "accessed_on": "2026-09-15", "conclusion": "Seth remains BST railway employee;184500Tier1base,137100TierIIbase, employee4.9% andemployer13.1%TierII, Medicare uncapped."}
+  ],
+  "bonus_paid_on": "2026-07-07",
+  "source_awards": "industrial/source/finance.json transaction.retention_allocations",
+  "source_payment": "RETENTION-PAYMENT",
+  "employee_withholding_method": "SEPARATELY_IDENTIFIED_SUPPLEMENTAL_22_PERCENT",
+  "federal_supplemental_rate": "0.22",
+  "regular_pay_sequence": "Two monthly salary installments; July7bonus before Julyregular pay. January-July regular wages use same monthly cents precision as current payroll. All8declaredWY with no stateindividualincome tax; unemployment wagebases exhausted beforebonus.",
+  "settlement_scope": "Existing250000gross sourcecash is allocated to employee net plus employee withholding remittance, not250000net toemployees. Noadditionalcash from this employee allocation.",
+  "employer_bonus_levy_state": "CALCULATED_SOURCE_FOR_FINANCE_POSTING_AND_SETTLEMENT_DISPOSITION",
+  "future_award": "January7,2027 secondhalf remains conditional future due; notpaid or included2026YTD",
+  "source_budget_boundary": "Fixed30%salaryburden is not proof that bonus employer levy was included. Report grossbonuslevy and regularsalarycap offsets separately; finance owns successor expense/payable/cash disposition."
+}

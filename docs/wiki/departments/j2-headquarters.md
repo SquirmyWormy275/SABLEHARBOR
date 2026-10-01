@@ -38,5 +38,3 @@ The 28 headquarters billets are settled. Unnamed offices and exact appointment h
 - [Founders, early colleagues and later people](../subjects/People.md)
 - [Junction Advisory Group](jag.md)
 - [Alexandria institutional environment](alexandria.md)
-
-Related reading describes useful connections, not additional reporting lines.

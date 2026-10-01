@@ -1,0 +1,1369 @@
+{
+  "scope": "corporate and workforce full source editions",
+  "status": "PASS_FOR_DESIGN_REVIEW",
+  "documents": [
+    {
+      "id": "SH-IND-COR-001",
+      "source": "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md",
+      "pdf_sha256": "013b79a6302710d9d225ab11adf8045376649958790c0579045da4e0807e6360",
+      "html_sha256": "e86677ca60dece15752dcdb382ca063c2ee31160e3292e137437adaa848a1a2e",
+      "pages": [
+        {
+          "page": 1,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-IND-COR-001-p01.png",
+          "manual_status": "PASS",
+          "render_sha256": "3ad7d48b33e0ca45d54d7813c6a4d62f452022d94c7bd9348060394e5a46b8c9"
+        },
+        {
+          "page": 2,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-IND-COR-001-p02.png",
+          "manual_status": "PASS",
+          "render_sha256": "1c4ebaa10fc47517f2f0456385d2bd005cf675497e045925fbf548ee2dc7f771"
+        },
+        {
+          "page": 3,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-IND-COR-001-p03.png",
+          "manual_status": "PASS",
+          "render_sha256": "e6643361c831e9835ac75a27e41946ed00ce786a8db86312461c6e945b80458f"
+        },
+        {
+          "page": 4,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-IND-COR-001-p04.png",
+          "manual_status": "PASS",
+          "render_sha256": "9ba3f0cf477e4baf5165e7a32ef1db2a0e33b7e9b2600746c8010021be52baea"
+        }
+      ],
+      "html": [
+        {
+          "viewport": "desktop",
+          "width": 1280,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-IND-COR-001-desktop.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 2570,
+          "manual_status": "PASS",
+          "render_sha256": "f745c2ca91da2f6dc9e52d857d4cbb6239e227d1df4c48dd84f677ea8ad1d17e",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-IND-COR-001-desktop-full.png"
+        },
+        {
+          "viewport": "mobile",
+          "width": 390,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-IND-COR-001-mobile.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 4705,
+          "manual_status": "PASS",
+          "render_sha256": "6992a62745ff442c9872de93012d3dd7289bfc855d25cbd73725ead06228883a",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-IND-COR-001-mobile-full.png"
+        }
+      ]
+    },
+    {
+      "id": "SH-IND-HR-001",
+      "source": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+      "pdf_sha256": "262cd36fc71d558fce7b191421213f79d63ced5f073e7f966e5eb00e8eb94ee8",
+      "html_sha256": "b5a7180669dc0df02f98f0e7063ee44828953b170b5bc0b9df653ad39bc9814a",
+      "pages": [
+        {
+          "page": 1,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-IND-HR-001-p01.png",
+          "manual_status": "PASS",
+          "render_sha256": "cdd2c5353cfeb7d0948a10a66b51372a4e03394f185c14d326d2833a32625087"
+        },
+        {
+          "page": 2,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-IND-HR-001-p02.png",
+          "manual_status": "PASS",
+          "render_sha256": "6e1a05ef011a25af1eccd80152e467cf8fe9aeebe9e7cd443e169476ea9b88e0"
+        },
+        {
+          "page": 3,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-IND-HR-001-p03.png",
+          "manual_status": "PASS",
+          "render_sha256": "c73907da5cdbd253db9b702a2f247201fbfdff86b5d62cb561dfa4a07e6cbb8a"
+        },
+        {
+          "page": 4,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-IND-HR-001-p04.png",
+          "manual_status": "PASS",
+          "render_sha256": "f0e36ec95e60e83a4d0c3aee050e7d0c22620a5036de16048182496e238136fb"
+        }
+      ],
+      "html": [
+        {
+          "viewport": "desktop",
+          "width": 1280,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-IND-HR-001-desktop.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 3116,
+          "manual_status": "PASS",
+          "render_sha256": "ebf3f6f33628296874c3be7a99c76e92c72234ea380e2b9706f9433420e1d5db",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-IND-HR-001-desktop-full.png"
+        },
+        {
+          "viewport": "mobile",
+          "width": 390,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-IND-HR-001-mobile.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 5283,
+          "manual_status": "PASS",
+          "render_sha256": "a0e262c0b3c3603ebeab5bce50809bc1d7e9f16a77b86f22fe6fce6de4a6f45a",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-IND-HR-001-mobile-full.png"
+        }
+      ]
+    },
+    {
+      "id": "SH-GOV-BOARD-001",
+      "source": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
+      "pdf_sha256": "edf4efe05adb8d7d604f3fdfe9aad117facd050c32a202d68b27993f85f26f1d",
+      "html_sha256": "0db7734fa3c10b1f454fc66b1e004234373ca60e4a3ea108794123a2589d65f3",
+      "pages": [
+        {
+          "page": 1,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-BOARD-001-p01.png",
+          "manual_status": "PASS",
+          "render_sha256": "1d5bae5363d9c3b58c0b883b127143ac4be781670a7169212a276f7a11e889f7"
+        },
+        {
+          "page": 2,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-BOARD-001-p02.png",
+          "manual_status": "PASS",
+          "render_sha256": "37d44242f9c18b4a26a3fcce8e885cfed2b5a778c5a7aa17726956d0c1cb74a0"
+        },
+        {
+          "page": 3,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-BOARD-001-p03.png",
+          "manual_status": "PASS",
+          "render_sha256": "abe661582a2ccf31d76dd406dfcf31601b58f6f3fa2e9a0fcd0c5d8d1320dad3"
+        },
+        {
+          "page": 4,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-BOARD-001-p04.png",
+          "manual_status": "PASS",
+          "render_sha256": "675ceb8893c87d9ac573a0569405dfee3d526f4a4e4cffe052ac432b95b21bf7"
+        }
+      ],
+      "html": [
+        {
+          "viewport": "desktop",
+          "width": 1280,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-BOARD-001-desktop.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 3214,
+          "manual_status": "PASS",
+          "render_sha256": "173ae5f7188d721d0d525f648ad14ea61b3e7d928bbea1e49356c13aab2278ab",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-BOARD-001-desktop-full.png"
+        },
+        {
+          "viewport": "mobile",
+          "width": 390,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-BOARD-001-mobile.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 5243,
+          "manual_status": "PASS",
+          "render_sha256": "00649f6a9c8b1388cd50b7158fdac773f328b103844559e0b54b6f5e644ccd14",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-BOARD-001-mobile-full.png"
+        }
+      ]
+    },
+    {
+      "id": "SH-GOV-AUTH-001",
+      "source": "docs/governance/RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md",
+      "pdf_sha256": "657afd043ef815eca79d51a5535c159a9247d11de8e0cc38ad16a8ae5c8ad335",
+      "html_sha256": "c6286fbee39e4f51684bed059106e0a354b6beb91a76b55966fac4675abc1b26",
+      "pages": [
+        {
+          "page": 1,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-AUTH-001-p01.png",
+          "manual_status": "PASS",
+          "render_sha256": "427fae1f67a4bee7acc55dd5a48b38fb6de0e22b76bdfa0a4d050870dbe7aa17"
+        },
+        {
+          "page": 2,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-AUTH-001-p02.png",
+          "manual_status": "PASS",
+          "render_sha256": "e21190081f96252ca3cb99a4769f600972dacc2f09b4ae95709d834dd9c4a6e5"
+        }
+      ],
+      "html": [
+        {
+          "viewport": "desktop",
+          "width": 1280,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-AUTH-001-desktop.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 1761,
+          "manual_status": "PASS",
+          "render_sha256": "30ac5665bf1518a28fef71884f0a835bafa53aff63f9c185e00929f7895fd8d5",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-AUTH-001-desktop-full.png"
+        },
+        {
+          "viewport": "mobile",
+          "width": 390,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-AUTH-001-mobile.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 2641,
+          "manual_status": "PASS",
+          "render_sha256": "78dba24bc48c9ba24a0cd31f79e9f5c116d06b53987fb73caa913b40778c7ad2",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-AUTH-001-mobile-full.png"
+        }
+      ]
+    },
+    {
+      "id": "SH-GOV-ESS-001",
+      "source": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+      "pdf_sha256": "1747fd235defbd819d2208d6e5bd86ac9638ab992fb9b696233e4b96307b60b5",
+      "html_sha256": "b72acb085d31e4e85a6d8acb4ded5ce36b16b6ec6d534382fd366746e28bc57f",
+      "pages": [
+        {
+          "page": 1,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-ESS-001-p01.png",
+          "manual_status": "PASS",
+          "render_sha256": "cb7eb156b7b8aca33ccef17675685f7c885e25f9117b467b063ae3ce0ce0b3d4"
+        },
+        {
+          "page": 2,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-ESS-001-p02.png",
+          "manual_status": "PASS",
+          "render_sha256": "6332083ae0a856f4cebf0efd6ff076b93c4e575398c594e769a32cba619e2d8c"
+        },
+        {
+          "page": 3,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-ESS-001-p03.png",
+          "manual_status": "PASS",
+          "render_sha256": "710a4e100f0b3067fab891f129fd8526eaa51ff9b6e8c09aa43eca914e2f3e53"
+        }
+      ],
+      "html": [
+        {
+          "viewport": "desktop",
+          "width": 1280,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-ESS-001-desktop.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 2587,
+          "manual_status": "PASS",
+          "render_sha256": "58b90fe251e16677185d6495d10ce26e3f3eb1c33d045348a705cc736666cf5e",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-ESS-001-desktop-full.png"
+        },
+        {
+          "viewport": "mobile",
+          "width": 390,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-ESS-001-mobile.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 3943,
+          "manual_status": "PASS",
+          "render_sha256": "9c07043bd02a7eee4ad483ab2b6a8bddbee3c79e2559b3ae866612e10a829e82",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-ESS-001-mobile-full.png"
+        }
+      ]
+    },
+    {
+      "id": "SH-CORP-HQ-20260903",
+      "source": "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+      "pdf_sha256": "447bc160c379309c73d818a71cec11fb60af5383daae6c7b409acaf6507bd77f",
+      "html_sha256": "0930761b2ee96f6630b16695c13dc5e6f1431dc8fc60c46917b32256bea41108",
+      "pages": [
+        {
+          "page": 1,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-p01.png",
+          "manual_status": "PASS",
+          "render_sha256": "1fa0fac0b00c1288e03765b5259d978440cd0cd4dbfb53ed03d17d31c1b69189"
+        },
+        {
+          "page": 2,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-p02.png",
+          "manual_status": "PASS",
+          "render_sha256": "082d969878e15d4ef63416f24d4efd99ec0834ae16995292049fa11e3803626a"
+        },
+        {
+          "page": 3,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-p03.png",
+          "manual_status": "PASS",
+          "render_sha256": "ffcbb0ac0b928be6eb3a5b424da1b892ffe9f6ac032416ee204b7347f71ddb95"
+        },
+        {
+          "page": 4,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-p04.png",
+          "manual_status": "PASS",
+          "render_sha256": "63027cd5d210fb0886075d033f93b02a78ceb26d21375523975d72e54b79c6a7"
+        },
+        {
+          "page": 5,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-p05.png",
+          "manual_status": "PASS",
+          "render_sha256": "8193a27f95128145c6d91df44fe6bca7d7d5cd0c2ef4440851073b4c0a41af63"
+        },
+        {
+          "page": 6,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-p06.png",
+          "manual_status": "PASS",
+          "render_sha256": "e100e79a4ef2a5b3507905fead9933354a39ef604d293f31a5593254bb0b4bde"
+        },
+        {
+          "page": 7,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-p07.png",
+          "manual_status": "PASS",
+          "render_sha256": "d8beac931b104080e4cab52d0db3de1a0f7984b219862e4ee949a134d6f8e920"
+        },
+        {
+          "page": 8,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-p08.png",
+          "manual_status": "PASS",
+          "render_sha256": "944777f6ae6c63140e5468dc42f61157ad6a22eefeb2dece549ecf19d0d51036"
+        },
+        {
+          "page": 9,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-p09.png",
+          "manual_status": "PASS",
+          "render_sha256": "920f7636bfb1461a57b4c6b5d734bf9b88be9a3a689967182ea39d2f412d0de4"
+        },
+        {
+          "page": 10,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-p10.png",
+          "manual_status": "PASS",
+          "render_sha256": "6de522bd9c7c5d9b7f626e4a09e43574d45bcfb2f80895a3678e3a369a5ca387"
+        },
+        {
+          "page": 11,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-p11.png",
+          "manual_status": "PASS",
+          "render_sha256": "5c49a257c230b1724c071d93bb46443260ea20b371f4aed993ff09c96a786ad1"
+        },
+        {
+          "page": 12,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-p12.png",
+          "manual_status": "PASS",
+          "render_sha256": "b3f147613b1b8807f259a872e8bec2e90a4e319bce4ae7717fad1372649ba19d"
+        }
+      ],
+      "html": [
+        {
+          "viewport": "desktop",
+          "width": 1280,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-desktop.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 10269,
+          "manual_status": "PASS",
+          "render_sha256": "d9e2fc745266fc7f65e2e323707e8065849d75e971b71819fbe088558f389b73",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-desktop-full.png"
+        },
+        {
+          "viewport": "mobile",
+          "width": 390,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-mobile.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 16513,
+          "manual_status": "PASS",
+          "render_sha256": "f81baf31fea86091007eb3f04102ed020b95889781a8d92547a36f3f934f2e73",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-CORP-HQ-20260903-mobile-full.png"
+        }
+      ]
+    },
+    {
+      "id": "SH-J2-PPL-20260910",
+      "source": "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+      "pdf_sha256": "f558b9bb030e5eb604e31dbb59ec1297eedbecd1b1d39ee824a669e3b8d1b325",
+      "html_sha256": "5883038af8be4ffff4ba36bbc698db152a07ba1bc41eb1702dffbbd60e32b8d4",
+      "pages": [
+        {
+          "page": 1,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-J2-PPL-20260910-p01.png",
+          "manual_status": "PASS",
+          "render_sha256": "e28b364b62e47dc96e8eeb462c3887915801b17f80e2cf53bc429c6d573df7b2"
+        },
+        {
+          "page": 2,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-J2-PPL-20260910-p02.png",
+          "manual_status": "PASS",
+          "render_sha256": "b6e8d4c71e6f4e70f4785d74854be74bffc388b5e888b6ffdbe176cb5fa61cd2"
+        },
+        {
+          "page": 3,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-J2-PPL-20260910-p03.png",
+          "manual_status": "PASS",
+          "render_sha256": "851ef374dfe05a46fe3b72eaf3ac3e453358f7071f44f325cfce358806c4034a"
+        }
+      ],
+      "html": [
+        {
+          "viewport": "desktop",
+          "width": 1280,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-J2-PPL-20260910-desktop.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 2075,
+          "manual_status": "PASS",
+          "render_sha256": "121b656e276cc16dea756ab012289a63c411eb24c6c177c1f66f674dd82ee6d9",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-J2-PPL-20260910-desktop-full.png"
+        },
+        {
+          "viewport": "mobile",
+          "width": 390,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-J2-PPL-20260910-mobile.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 3207,
+          "manual_status": "PASS",
+          "render_sha256": "bd2986c5d9b009eec114675a8c628f2ff06813104f3552d3213912baca4aab19",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-J2-PPL-20260910-mobile-full.png"
+        }
+      ]
+    },
+    {
+      "id": "SH-LEGAL-ADV-001",
+      "source": "docs/legal/ADVISORY_NAME_AND_EXTERNAL_CLEARANCE_STATUS_2026-09-09.md",
+      "pdf_sha256": "36730f71c7275ccf1c1abb499577fc0acd7460064f0f1a9495246ee1dc32bec0",
+      "html_sha256": "6e31aead3ed1cac306ac53b63eff968a9bb2500b4dfecb98c927647ec7d7a1c1",
+      "pages": [
+        {
+          "page": 1,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-LEGAL-ADV-001-p01.png",
+          "manual_status": "PASS",
+          "render_sha256": "08e20e2b77baf217787a1acfeba8b3149b5f299a0a8869f9b71a0b62f5143180"
+        },
+        {
+          "page": 2,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-LEGAL-ADV-001-p02.png",
+          "manual_status": "PASS",
+          "render_sha256": "5ece5e8c9ca419ed052ab7f220a06183a7191a25f83dae2b6ad43453125a0807"
+        }
+      ],
+      "html": [
+        {
+          "viewport": "desktop",
+          "width": 1280,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-LEGAL-ADV-001-desktop.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 1869,
+          "manual_status": "PASS",
+          "render_sha256": "1d2cd81e008504aafa095a2fa38639fa2df517d88be51e30c6144ddb1104514c",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-LEGAL-ADV-001-desktop-full.png"
+        },
+        {
+          "viewport": "mobile",
+          "width": 390,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-LEGAL-ADV-001-mobile.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 2533,
+          "manual_status": "PASS",
+          "render_sha256": "6e0e805093a260a46494b17fb6ac5ba52c2456f6748a824c4cb47fba595ee651",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-LEGAL-ADV-001-mobile-full.png"
+        }
+      ]
+    },
+    {
+      "id": "SH-BRD-MIN-2021-06-18",
+      "source": "docs/governance/board-records/2021-06-18_harrison-vale-growth-financing-minutes.md",
+      "pdf_sha256": "6731f485c0810d334e0defb04ff54bee7690172415a4fb682c61059d34a91a85",
+      "html_sha256": "5dd77eb6f50e92f199baacf4d7958a04e075ad7024e760acff843896cc6f1a7a",
+      "pages": [
+        {
+          "page": 1,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2021-06-18-p01.png",
+          "manual_status": "PASS",
+          "render_sha256": "7337f518be7e5cd96c2d79f2b7ee60f5402f7b42e39aa8137582993dea2c2395"
+        },
+        {
+          "page": 2,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2021-06-18-p02.png",
+          "manual_status": "PASS",
+          "render_sha256": "5d89dd4423a5a1c32431e4b420ee7c6e6b84df936bc1ec8c12c4b7aef72396e5"
+        }
+      ],
+      "html": [
+        {
+          "viewport": "desktop",
+          "width": 1280,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2021-06-18-desktop.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 1759,
+          "manual_status": "PASS",
+          "render_sha256": "339afbb3f2d7966017745b33f856e79838aec91c1f26f76c7990b567d99f92f5",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2021-06-18-desktop-full.png"
+        },
+        {
+          "viewport": "mobile",
+          "width": 390,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2021-06-18-mobile.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 2525,
+          "manual_status": "PASS",
+          "render_sha256": "0eb35c7d5be3d82877961b85fb884b0f5fb495790ea61cee3deaa80eb891ea9f",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2021-06-18-mobile-full.png"
+        }
+      ]
+    },
+    {
+      "id": "SH-BRD-MIN-2022-10-28",
+      "source": "docs/governance/board-records/2022-10-28_wolf-ridge-industrial-financing-minutes.md",
+      "pdf_sha256": "70fc9633b353edaef253f582f0189e76b68fff800487ce4ffa2565a4708e5c62",
+      "html_sha256": "81a46b3bd15f98965834a9f2ca78d598b19210db346f7ad3ea1dff3a55bc0806",
+      "pages": [
+        {
+          "page": 1,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2022-10-28-p01.png",
+          "manual_status": "PASS",
+          "render_sha256": "1d63f337da69e098129051b04ed742c74ed54449fc9b0d7888796d81d1a19720"
+        },
+        {
+          "page": 2,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2022-10-28-p02.png",
+          "manual_status": "PASS",
+          "render_sha256": "60b39f4e2d14dc8cf7ff01bfc2db7f2e5669dcdb097bdcba3784b6dc3dbaf058"
+        }
+      ],
+      "html": [
+        {
+          "viewport": "desktop",
+          "width": 1280,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2022-10-28-desktop.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 1770,
+          "manual_status": "PASS",
+          "render_sha256": "19e46d2d1b338e5c259f018837ccfd7580166980c03a22b6a34dbad8b0429339",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2022-10-28-desktop-full.png"
+        },
+        {
+          "viewport": "mobile",
+          "width": 390,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2022-10-28-mobile.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 2599,
+          "manual_status": "PASS",
+          "render_sha256": "1cfc232351ccffda18f55bdf60d457e77e0de70e6d7cf55e51d96d47f8092c9e",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2022-10-28-mobile-full.png"
+        }
+      ]
+    },
+    {
+      "id": "SH-BRD-MIN-2024-02-15",
+      "source": "docs/governance/board-records/2024-02-15_independent-chair-and-committee-architecture-minutes.md",
+      "pdf_sha256": "7165c5ef2613b61eaeedbe34b4e6607448433b9c52fab7582207dbd3a1475cb2",
+      "html_sha256": "67f1390bbb17ed4304078857a4e36e4a8a9878475ae3f6444ce4cd19a56dd064",
+      "pages": [
+        {
+          "page": 1,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2024-02-15-p01.png",
+          "manual_status": "PASS",
+          "render_sha256": "3089ed3764068e7db36ff3edd43ad72ed507b40d986ff0704360faf310fdc701"
+        },
+        {
+          "page": 2,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2024-02-15-p02.png",
+          "manual_status": "PASS",
+          "render_sha256": "c6f9d205c69ed5f7fcaf3f921a5f9134a277c5e0e148c93ee2cb1847b5d2cbc7"
+        }
+      ],
+      "html": [
+        {
+          "viewport": "desktop",
+          "width": 1280,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2024-02-15-desktop.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 1738,
+          "manual_status": "PASS",
+          "render_sha256": "dc9d031dfe812d21567a363f65c13054036c068998ab4978189fb16114d717f5",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2024-02-15-desktop-full.png"
+        },
+        {
+          "viewport": "mobile",
+          "width": 390,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2024-02-15-mobile.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 2486,
+          "manual_status": "PASS",
+          "render_sha256": "675fab06d5d38c58c0aab9816329324b559e074a511d59977c8bce3c37b4db79",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-MIN-2024-02-15-mobile-full.png"
+        }
+      ]
+    },
+    {
+      "id": "SH-BRD-CONSENT-2026-09-02",
+      "source": "docs/governance/board-records/2026-09-02_governance-j2-alexandria-ratification-written-consent.md",
+      "pdf_sha256": "69729d07ada3c840fdfd543e0af3fe80df7599da78346eac6aeb881c6b872bad",
+      "html_sha256": "2f385035542fc9a593f22f51ce9ba488cd7f0fdb78bba631bb9d1c80e37956f3",
+      "pages": [
+        {
+          "page": 1,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-CONSENT-2026-09-02-p01.png",
+          "manual_status": "PASS",
+          "render_sha256": "3e6ae5a7d57897052c5af70d61c4a83cb00920b1fc499038e0f70ed7d5c0a8ca"
+        },
+        {
+          "page": 2,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-CONSENT-2026-09-02-p02.png",
+          "manual_status": "PASS",
+          "render_sha256": "2387e1402d228c487a14ff65a174c93b0a2ca12caab91f99c32c3534bfe669f2"
+        },
+        {
+          "page": 3,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-CONSENT-2026-09-02-p03.png",
+          "manual_status": "PASS",
+          "render_sha256": "34381b2d056450ea864062244d4b61f8e0dbd3daf1e3735af96ffbe8737acac6"
+        }
+      ],
+      "html": [
+        {
+          "viewport": "desktop",
+          "width": 1280,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-CONSENT-2026-09-02-desktop.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 2454,
+          "manual_status": "PASS",
+          "render_sha256": "c3d33f461266ae13b6512d081d42d07b3b7dfdea26f38d6fe144ca290c6e7a6e",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-CONSENT-2026-09-02-desktop-full.png"
+        },
+        {
+          "viewport": "mobile",
+          "width": 390,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-CONSENT-2026-09-02-mobile.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 3786,
+          "manual_status": "PASS",
+          "render_sha256": "ab959180cf3152018d71f124116564db349e3521ce1753c6fe83f693a8061cf7",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-BRD-CONSENT-2026-09-02-mobile-full.png"
+        }
+      ]
+    },
+    {
+      "id": "LEGAL-SOURCE-801955F60F74",
+      "source": "docs/governance/board-records/exhibits/2026-09-02_exhibit-a-governance-package.md",
+      "pdf_sha256": "fea17b6e0b2df404b0e168d7528f38411f32a63d6e237eb83a325286d33ee8dc",
+      "html_sha256": "a2c563faa82aa901d7b6726ef0be882075f21d33ef09d66b943826b8a187e825",
+      "pages": [
+        {
+          "page": 1,
+          "render": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-801955F60F74-p01.png",
+          "manual_status": "PASS",
+          "render_sha256": "d0b084152b010ba57a598531424606c11749bfd558bde6d784e97e5decf10e7f"
+        }
+      ],
+      "html": [
+        {
+          "viewport": "desktop",
+          "width": 1280,
+          "render": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-801955F60F74-desktop.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 1094,
+          "manual_status": "PASS",
+          "render_sha256": "dd2b051875caf0ca439abb4f71fd591fc80912e08614a5d4cee91c15ea1bbb1a",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-801955F60F74-desktop-full.png"
+        },
+        {
+          "viewport": "mobile",
+          "width": 390,
+          "render": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-801955F60F74-mobile.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 1292,
+          "manual_status": "PASS",
+          "render_sha256": "86d1a9f5bcfafc056290c3c067a233f1f2aa3ff42d192bb5f084c1e6e3b7ca64",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-801955F60F74-mobile-full.png"
+        }
+      ]
+    },
+    {
+      "id": "LEGAL-SOURCE-46256BC2255E",
+      "source": "docs/governance/board-records/exhibits/2026-09-02_exhibit-b-j2-package.md",
+      "pdf_sha256": "244088a7f1fe1283a07249aeecf9027fa4d52d9714050b2ee5257a5ecec04ae5",
+      "html_sha256": "136d13c46d5b7ecc46214208b42e602e1626282cbee7abc9de63d32aabe89ace",
+      "pages": [
+        {
+          "page": 1,
+          "render": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-46256BC2255E-p01.png",
+          "manual_status": "PASS",
+          "render_sha256": "07680a2d823575a81370d6c277377f0ae611814d41b1bff88112d85c0989c300"
+        },
+        {
+          "page": 2,
+          "render": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-46256BC2255E-p02.png",
+          "manual_status": "PASS",
+          "render_sha256": "b24bf4d53fa418ec7d6dbee50b1f80085d4a5af7af9a87150c7847645e49d837"
+        }
+      ],
+      "html": [
+        {
+          "viewport": "desktop",
+          "width": 1280,
+          "render": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-46256BC2255E-desktop.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 1286,
+          "manual_status": "PASS",
+          "render_sha256": "428b47f5de6222beaca1f720fb86c17cd04e2ee2cdba7e7876192c9cc67ab169",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-46256BC2255E-desktop-full.png"
+        },
+        {
+          "viewport": "mobile",
+          "width": 390,
+          "render": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-46256BC2255E-mobile.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 1554,
+          "manual_status": "PASS",
+          "render_sha256": "1bc747dc8ec5b42c1933d48c930f1dea627f70f706c60b82812443231660762d",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-46256BC2255E-mobile-full.png"
+        }
+      ]
+    },
+    {
+      "id": "LEGAL-SOURCE-508081AAD2B2",
+      "source": "docs/governance/board-records/exhibits/2026-09-02_exhibit-c-alexandria-package.md",
+      "pdf_sha256": "b8cc9e434ba8e21b2ecc926a7949319e07949e6a34ce0ec07f46387c180d3962",
+      "html_sha256": "ae5138ca5b0be9c1563430e425c1e8c8c5e6f2be77fcb44ffc8120cd2f5e829d",
+      "pages": [
+        {
+          "page": 1,
+          "render": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-508081AAD2B2-p01.png",
+          "manual_status": "PASS",
+          "render_sha256": "7cf7962b761ecbfc7e3ff440bbc0116970ec070a43af91992c96dec746ef2230"
+        },
+        {
+          "page": 2,
+          "render": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-508081AAD2B2-p02.png",
+          "manual_status": "PASS",
+          "render_sha256": "7d8175ab148d41cf5bd8dde190ffff8f2b956075d6ff0cfac026f11e07088654"
+        }
+      ],
+      "html": [
+        {
+          "viewport": "desktop",
+          "width": 1280,
+          "render": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-508081AAD2B2-desktop.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 1189,
+          "manual_status": "PASS",
+          "render_sha256": "cda9a03a91b3b08c9fd08fce6ffd533a255a446c383aa4fe5d7248502bb5f849",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-508081AAD2B2-desktop-full.png"
+        },
+        {
+          "viewport": "mobile",
+          "width": 390,
+          "render": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-508081AAD2B2-mobile.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 1537,
+          "manual_status": "PASS",
+          "render_sha256": "fa3f878fd8eeb3db32044565abc3a0aaa1e9feda414bffdeeb9bf13bb771ec56",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-508081AAD2B2-mobile-full.png"
+        }
+      ]
+    },
+    {
+      "id": "LEGAL-SOURCE-9E57D6909035",
+      "source": "docs/governance/board-records/exhibits/2026-09-02_exhibit-d-controlled-publication-and-catalog-package.md",
+      "pdf_sha256": "8b2cc2fb19132b7cb00d40555ca1f53810f51eaa4d0041d7c3ec2ef6bf1a05e2",
+      "html_sha256": "dde282d24be80d08a2de139db2137347b5247e7b833610918ad86341649a80fc",
+      "pages": [
+        {
+          "page": 1,
+          "render": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-9E57D6909035-p01.png",
+          "manual_status": "PASS",
+          "render_sha256": "90cb902b121ed8caf96472e5ccbb35325fc2f6afc965a8b3d757d3680705f481"
+        }
+      ],
+      "html": [
+        {
+          "viewport": "desktop",
+          "width": 1280,
+          "render": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-9E57D6909035-desktop.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 1054,
+          "manual_status": "PASS",
+          "render_sha256": "a7f55891d05d80a4b77081fa69e22c78c1004bb34492c2cd68479432a5b20cc1",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-9E57D6909035-desktop-full.png"
+        },
+        {
+          "viewport": "mobile",
+          "width": 390,
+          "render": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-9E57D6909035-mobile.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 1211,
+          "manual_status": "PASS",
+          "render_sha256": "0785312e6746239214f8f7ed7bfceb3b472e7fce87db43febb5c6ae51e21ba2e",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/LEGAL-SOURCE-9E57D6909035-mobile-full.png"
+        }
+      ]
+    },
+    {
+      "id": "SH-GOV-COM-AUDIT-001",
+      "source": "docs/governance/committees/AUDIT_AND_COMPLIANCE_COMMITTEE_CHARTER.md",
+      "pdf_sha256": "ea50873e651a57a56216af7e87a0763ae87c68cc48e260aa9ed43263da6b18e7",
+      "html_sha256": "ea3e7d74b261a229db299beddb6c41c0c49fe27c4d317a95d62ec78f68e4506b",
+      "pages": [
+        {
+          "page": 1,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-AUDIT-001-p01.png",
+          "manual_status": "PASS",
+          "render_sha256": "0ceb075da59cc86fc805f3213b21b6e55e85aeafc78a631f0e839bd0bfb96fd2"
+        }
+      ],
+      "html": [
+        {
+          "viewport": "desktop",
+          "width": 1280,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-AUDIT-001-desktop.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 1000,
+          "manual_status": "PASS",
+          "render_sha256": "a08c59e7ff3b8e3464633028e04ec5c86c54fa7f971ae84c505d6aa81d356151",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-AUDIT-001-desktop-full.png"
+        },
+        {
+          "viewport": "mobile",
+          "width": 390,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-AUDIT-001-mobile.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 1000,
+          "manual_status": "PASS",
+          "render_sha256": "8a29427a3be7a93c3fd0166390e459e2727e5dad7f330b11b393786170dacf08",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-AUDIT-001-mobile-full.png"
+        }
+      ]
+    },
+    {
+      "id": "SH-GOV-COM-COMP-001",
+      "source": "docs/governance/committees/COMPENSATION_AND_HUMAN_CAPITAL_COMMITTEE_CHARTER.md",
+      "pdf_sha256": "b7a5a4aae4c2377053ecf4bb4875b35679baa7f83f33afea3f47bdbdc16bf53f",
+      "html_sha256": "ebfac5b8b7a9b86c90d355d0132ad572c20dc319946f5bf438661a0a48b06759",
+      "pages": [
+        {
+          "page": 1,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-COMP-001-p01.png",
+          "manual_status": "PASS",
+          "render_sha256": "9088804675c2889065864fed4286bfefb6fde068d9376ec4148f827141dcda77"
+        }
+      ],
+      "html": [
+        {
+          "viewport": "desktop",
+          "width": 1280,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-COMP-001-desktop.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 1000,
+          "manual_status": "PASS",
+          "render_sha256": "b808a875bfe0bf0d0ce3edef6884dbfec48c5d23f5abda772f18ed40046dcea7",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-COMP-001-desktop-full.png"
+        },
+        {
+          "viewport": "mobile",
+          "width": 390,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-COMP-001-mobile.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 1000,
+          "manual_status": "PASS",
+          "render_sha256": "8b3b86b38ad33f7826b841eaa602ffa713b39e15c04aa61c7602c276d237b670",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-COMP-001-mobile-full.png"
+        }
+      ]
+    },
+    {
+      "id": "SH-GOV-COM-FIN-001",
+      "source": "docs/governance/committees/FINANCE_AND_INVESTMENT_COMMITTEE_CHARTER.md",
+      "pdf_sha256": "de665fd714b32a128683736998de3b4f80f3da8387117b91c9a23f28c3c3ba03",
+      "html_sha256": "4cbd306f17bfccdb7fc6a0512abe2d25c1f39a77f10fe048ed172be2fd5962bd",
+      "pages": [
+        {
+          "page": 1,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-FIN-001-p01.png",
+          "manual_status": "PASS",
+          "render_sha256": "922021c9b5a4e680005d0d7fab13fe882abcf8ac7468dc3fe69928271f16e793"
+        }
+      ],
+      "html": [
+        {
+          "viewport": "desktop",
+          "width": 1280,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-FIN-001-desktop.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 1000,
+          "manual_status": "PASS",
+          "render_sha256": "45dc6d191c5bdf8e66d0dfe980834c1e93faa2d6990eff4ce87958e7afd44db1",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-FIN-001-desktop-full.png"
+        },
+        {
+          "viewport": "mobile",
+          "width": 390,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-FIN-001-mobile.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 1000,
+          "manual_status": "PASS",
+          "render_sha256": "a68a72ae1e9148ddcdf703cfb7634be82b64b142e48e732114370e8a14c95dc2",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-FIN-001-mobile-full.png"
+        }
+      ]
+    },
+    {
+      "id": "SH-GOV-COM-GOVNOM-001",
+      "source": "docs/governance/committees/GOVERNANCE_AND_NOMINATING_COMMITTEE_CHARTER.md",
+      "pdf_sha256": "c4bf172a1804744d472cbcab8d3073de371b08939d5bed782c74f482db196e20",
+      "html_sha256": "1c82bba0ffa8400bfd83bfd292fdd992a784dbc0289cfe7491f72a6388c391a0",
+      "pages": [
+        {
+          "page": 1,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-GOVNOM-001-p01.png",
+          "manual_status": "PASS",
+          "render_sha256": "6a13bdbcba2a1167bb99fea9687da64799e6ed065d6c13b845a6ebcfe74a32c1"
+        }
+      ],
+      "html": [
+        {
+          "viewport": "desktop",
+          "width": 1280,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-GOVNOM-001-desktop.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 1000,
+          "manual_status": "PASS",
+          "render_sha256": "fee5013bc7f2696aebf7d6a1048cc40daa3d914b363c8960894aab8ade13d11d",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-GOVNOM-001-desktop-full.png"
+        },
+        {
+          "viewport": "mobile",
+          "width": 390,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-GOVNOM-001-mobile.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 1000,
+          "manual_status": "PASS",
+          "render_sha256": "ce18bd322d51e686838e9ffd5a79eddf47c3fa17f92327f88366ed71ad3646ee",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-GOVNOM-001-mobile-full.png"
+        }
+      ]
+    },
+    {
+      "id": "SH-GOV-COM-TECHOPS-001",
+      "source": "docs/governance/committees/TECHNOLOGY_AND_OPERATIONS_COMMITTEE_CHARTER.md",
+      "pdf_sha256": "dd30939853f17a929f1ce25c991dd779ae1c554d357fb139830d599818404481",
+      "html_sha256": "634c31024e44e64227eb51de590cbdeb1e4de7e4ea0ce5b0a6c936b540f9589e",
+      "pages": [
+        {
+          "page": 1,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-TECHOPS-001-p01.png",
+          "manual_status": "PASS",
+          "render_sha256": "10e803f93857094cd938ce0e6d5f671c1d24d90f61006f76b66f6ad083f52c1b"
+        }
+      ],
+      "html": [
+        {
+          "viewport": "desktop",
+          "width": 1280,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-TECHOPS-001-desktop.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 1000,
+          "manual_status": "PASS",
+          "render_sha256": "17ee1d44adc5b5d29a7db2d717ccad6378d6bef9b30b5a5eb3c21efb1a7a8d26",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-TECHOPS-001-desktop-full.png"
+        },
+        {
+          "viewport": "mobile",
+          "width": 390,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-TECHOPS-001-mobile.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 1000,
+          "manual_status": "PASS",
+          "render_sha256": "33576e33a45b109c67d3379e4d93503e1490861dc99512fd3fae972b413c121a",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-GOV-COM-TECHOPS-001-mobile-full.png"
+        }
+      ]
+    },
+    {
+      "id": "SH-IND-ARU-HR-001",
+      "source": "industrial/transaction/06_ARU_TRANSITION_AND_RETENTION.md",
+      "pdf_sha256": "c16c9aff6b96b7c4aa3439b91bd6f487b20709fa64504a5ffa0897213a3c531f",
+      "html_sha256": "09cdec3e079149f1a1b8af237fe6ca80ad2619c9ebca8e360a644ec78fd5413b",
+      "pages": [
+        {
+          "page": 1,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-IND-ARU-HR-001-p01.png",
+          "manual_status": "PASS",
+          "render_sha256": "2dc26d5122133bc75aeea26e3993075f6d124fa504c0ded989f523c5f810e491"
+        },
+        {
+          "page": 2,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-IND-ARU-HR-001-p02.png",
+          "manual_status": "PASS",
+          "render_sha256": "7509ff21fa62634e1329f790ed208aa28d823363b7b7c12218113140b7490f5f"
+        }
+      ],
+      "html": [
+        {
+          "viewport": "desktop",
+          "width": 1280,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-IND-ARU-HR-001-desktop.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 1894,
+          "manual_status": "PASS",
+          "render_sha256": "82b1dbdbf6f331cd09a51e47308d14637cb43d449a65ca92ccf1a35e1d186b2d",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-IND-ARU-HR-001-desktop-full.png"
+        },
+        {
+          "viewport": "mobile",
+          "width": 390,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-IND-ARU-HR-001-mobile.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 2759,
+          "manual_status": "PASS",
+          "render_sha256": "d22321039ec1f2a63f6d3500e7fa45ff3aa42f20f61f31af6d2ae1024d6c4047",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-IND-ARU-HR-001-mobile-full.png"
+        }
+      ]
+    },
+    {
+      "id": "SH-PNC-001",
+      "source": "docs/governance/PEOPLE_AND_CULTURE_DOCTRINE.md",
+      "pdf_sha256": "e2b53bd90bd351b5ef4ee8cde881111c52bfd88177a5423cacbe97c63b568274",
+      "html_sha256": "7d64036f6f68c16dd24564ebea76d51b3e1c6877e0fed4882e0ea405d1fb1a58",
+      "pages": [
+        {
+          "page": 1,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-PNC-001-p01.png",
+          "manual_status": "PASS",
+          "render_sha256": "5eec2ca24f8e3bfe539fb94712078ac427e2088082d87049a676c48f04351881"
+        },
+        {
+          "page": 2,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-PNC-001-p02.png",
+          "manual_status": "PASS",
+          "render_sha256": "097e3c871a8a9f288186592199ba3a62d86635b2104c8cb20c0a00996c68d4c2"
+        },
+        {
+          "page": 3,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-PNC-001-p03.png",
+          "manual_status": "PASS",
+          "render_sha256": "3035eff3c876896c392d3d3780d0d2befdeaf5bde70b6c0318c4a7ba02f55189"
+        },
+        {
+          "page": 4,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-PNC-001-p04.png",
+          "manual_status": "PASS",
+          "render_sha256": "aa49bf4cc62cf359b92d3d9941fec39337dd35c279842f52ff06abfe0bd693ad"
+        }
+      ],
+      "html": [
+        {
+          "viewport": "desktop",
+          "width": 1280,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-PNC-001-desktop.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 3270,
+          "manual_status": "PASS",
+          "render_sha256": "bde53ec44ed0fc09716a42842e072969ca9710b294ca5fe7ff47ccf9631db79c",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-PNC-001-desktop-full.png"
+        },
+        {
+          "viewport": "mobile",
+          "width": 390,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-PNC-001-mobile.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 5165,
+          "manual_status": "PASS",
+          "render_sha256": "03db4eb61b107565a54f30eb21b1abad0ecfd96a9c493871f108aff6a1421103",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-PNC-001-mobile-full.png"
+        }
+      ]
+    },
+    {
+      "id": "SH-ADV-005",
+      "source": "docs/advisory/CARRY_PLAN_STANDARD.md",
+      "pdf_sha256": "9f748469346a36baf877b5f005ca831526225fbd24aab49ceda85a69cfabc92a",
+      "html_sha256": "0a61d1824f97629f98a68d3f8ff5a3d725af974da4ee6dcc956fa3693677bb4d",
+      "pages": [
+        {
+          "page": 1,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-005-p01.png",
+          "manual_status": "PASS",
+          "render_sha256": "822d37f8211dcc23eb5648e5aa7ee6ed2d34158817fbe1f0d3b672a926a643ec"
+        },
+        {
+          "page": 2,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-005-p02.png",
+          "manual_status": "PASS",
+          "render_sha256": "fe95b9e8b6aca0b145eb3fa8482f770cb09956ce82fbcfdb57d6e4a158a94141"
+        },
+        {
+          "page": 3,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-005-p03.png",
+          "manual_status": "PASS",
+          "render_sha256": "f4086aec0be09e8fd622f013a89cc9753d6b0fb5bedb349f4e652080c439465b"
+        },
+        {
+          "page": 4,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-005-p04.png",
+          "manual_status": "PASS",
+          "render_sha256": "f5907acc083eb3d373514c67c2deacb30013076405017872ce4130f1713cccfb"
+        },
+        {
+          "page": 5,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-005-p05.png",
+          "manual_status": "PASS",
+          "render_sha256": "69a6cbcb4d2d291a4a8c6d60c1d688fba9e5f06c20c0626e3c1920ddf15d213f"
+        },
+        {
+          "page": 6,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-005-p06.png",
+          "manual_status": "PASS",
+          "render_sha256": "7a3aa442d1ffa490bd1ef8b837b1d6ab874db8a324585a3d3f619d58d3cfdfc5"
+        }
+      ],
+      "html": [
+        {
+          "viewport": "desktop",
+          "width": 1280,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-005-desktop.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 5323,
+          "manual_status": "PASS",
+          "render_sha256": "7abe9aff5f2e7fbc513ecbbb017b7a59ea88e2292eca3d1f7f05c30369e44d41",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-005-desktop-full.png"
+        },
+        {
+          "viewport": "mobile",
+          "width": 390,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-005-mobile.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 7283,
+          "manual_status": "PASS",
+          "render_sha256": "d482c2d04482c567a09bcffec0ef6b3fa71001b59db583e6db807fdb91b97f3c",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-005-mobile-full.png"
+        }
+      ]
+    },
+    {
+      "id": "SH-ADV-003",
+      "source": "docs/advisory/TALENT_MOBILITY_AND_CARRY.md",
+      "pdf_sha256": "37e7d2e3a8cd866601e4af878dccdab599a11fa29b146bd9c497f348f5694ee4",
+      "html_sha256": "908b46559bc704040ea42b24bce3a97c1a464eda3f1609087b3fde160d2faca7",
+      "pages": [
+        {
+          "page": 1,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-003-p01.png",
+          "manual_status": "PASS",
+          "render_sha256": "e8d6346a7b79f64c91b7525e8af42f4cd6f124996804f4efda15f584e876c8bb"
+        },
+        {
+          "page": 2,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-003-p02.png",
+          "manual_status": "PASS",
+          "render_sha256": "01a303a7f161b78f590c705817239f939b9656c664170de7e73f229ae340e0c3"
+        },
+        {
+          "page": 3,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-003-p03.png",
+          "manual_status": "PASS",
+          "render_sha256": "ff27ce8c917d4bbbbf7e0d2864583bce76db9324cb80aa3a1054efdef4b29cd3"
+        },
+        {
+          "page": 4,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-003-p04.png",
+          "manual_status": "PASS",
+          "render_sha256": "86efc94664264c32fb112fe17e30dcfbda3e6e45aa39cf5bf605a52fb2dfd0ff"
+        },
+        {
+          "page": 5,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-003-p05.png",
+          "manual_status": "PASS",
+          "render_sha256": "34797e340d5e69672bfa48f544581232e58f2c0acb048b29f3b38c40a23984a1"
+        },
+        {
+          "page": 6,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-003-p06.png",
+          "manual_status": "PASS",
+          "render_sha256": "a035941b85c36a88e27dd1e16f2aa0c8dd5b12f34ee4a58c888e142c9f4dd6fd"
+        },
+        {
+          "page": 7,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-003-p07.png",
+          "manual_status": "PASS",
+          "render_sha256": "e7f6beee2fcf2db4c2bcafb4aa621ea0aea8f408c2eec2fb8b4bfe5d8232456c"
+        }
+      ],
+      "html": [
+        {
+          "viewport": "desktop",
+          "width": 1280,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-003-desktop.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 5912,
+          "manual_status": "PASS",
+          "render_sha256": "11dc828da1fbe846cfacb27531f536dec751d54df70fda35c59a993db2ff11bd",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-003-desktop-full.png"
+        },
+        {
+          "viewport": "mobile",
+          "width": 390,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-003-mobile.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 7900,
+          "manual_status": "PASS",
+          "render_sha256": "21ea0837d09e712bf51bcd9f6c6b26c777d2ce6336346fb5834158268bed00a7",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-ADV-003-mobile-full.png"
+        }
+      ]
+    },
+    {
+      "id": "SH-IND-SAF-001",
+      "source": "industrial/operations/LABOR_SAFETY_AND_CONTROLS.md",
+      "pdf_sha256": "6fff991ea34e97d1bd8c5991bd1831bcb2fdb7b3aae0eb7c99810d3f6c665a74",
+      "html_sha256": "78e7f11ac02d57d54e9ffe884d0303b6af0e3c80cc52cba0522096d0a975770e",
+      "pages": [
+        {
+          "page": 1,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-IND-SAF-001-p01.png",
+          "manual_status": "PASS",
+          "render_sha256": "2c6719fb47c8e9ec227a133c6288390d844952f198fdea27273f9189539927de"
+        },
+        {
+          "page": 2,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-IND-SAF-001-p02.png",
+          "manual_status": "PASS",
+          "render_sha256": "bf1457a45a6dabe20632ffd779185bbba1746bf7924e18fee391d006e166c247"
+        },
+        {
+          "page": 3,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-IND-SAF-001-p03.png",
+          "manual_status": "PASS",
+          "render_sha256": "98c1647d03efea489668cae593ea1d73705efe2e04b987cd883cea699e4916eb"
+        }
+      ],
+      "html": [
+        {
+          "viewport": "desktop",
+          "width": 1280,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-IND-SAF-001-desktop.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 1855,
+          "manual_status": "PASS",
+          "render_sha256": "baf5c8e366405dc026958e563ab9c30ce4522abd74007834f9cced05823247ee",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-IND-SAF-001-desktop-full.png"
+        },
+        {
+          "viewport": "mobile",
+          "width": 390,
+          "render": "docs/legal/full-text/qa/corporate-workforce/SH-IND-SAF-001-mobile.png",
+          "overflow": false,
+          "broken_images": 0,
+          "height": 3143,
+          "manual_status": "PASS",
+          "render_sha256": "8ede1aa720d82eba3bb55cbe1582fbb405c304890a1e5d85ba1616f4269b8841",
+          "full_capture": "docs/legal/full-text/qa/corporate-workforce/SH-IND-SAF-001-mobile-full.png"
+        }
+      ]
+    }
+  ],
+  "reviewer": "legal_source_audit",
+  "method": "Each PDF page inspected individually as a 120 dpi PNG at readable resolution. Previously inspected pages were carried forward only when rendered PNG bytes were identical; every changed page was reinspected. Each source HTML inspected in 1280x1000 desktop and 390x1000 mobile viewport screenshots; complete-document overflow and image checks are separate automated checks. Six wide mobile tables were additionally inspected at both horizontal endpoints. Full-height screenshots are retained as supplementary captures, not a claim of manual inspection of every scroll position.",
+  "counts": {
+    "sources": 26,
+    "pdf_pages": 76,
+    "html_viewports": 52,
+    "mobile_table_endpoint_views": 12
+  },
+  "corrections": [
+    {
+      "finding": "Formation record had a one-word final page; 2022 minutes began page 2 with one orphaned word.",
+      "resolution": "Renderer keeps ordinary source paragraphs intact; complete source sections now appear together. Reinspected affected pages."
+    },
+    {
+      "finding": "Short IDs/dates and ordinary table labels fragmented within words; industrial leadership job titles wrapped poorly.",
+      "resolution": "Renderer added minimum cell widths, normal word wrapping and wider leadership first column. Reinspected every changed PDF page."
+    },
+    {
+      "finding": "Five-column mobile tables squeezed words into unreadable fragments despite no global overflow.",
+      "resolution": "Renderer uses minimum 8em mobile cells in horizontally scrollable tables. Both endpoints of six wide tables inspected; rightmost columns accessible."
+    },
+    {
+      "finding": "Initial non-source provenance created a print-only tail page.",
+      "resolution": "Edition provenance retained in HTML/manifest, hidden in print; source prose preserved."
+    }
+  ],
+  "limitations": [
+    "This is publication QA, not approval of new designs or verification of execution of synthetic legal instruments.",
+    "Source statuses, summaries, historical wording and unresolved instruments remain as documented in SOURCE_AUDIT.md.",
+    "Short final pages containing complete source sections are retained rather than deleting or compressing source text."
+  ],
+  "mobile_tables": [
+    {
+      "id": "SH-IND-COR-001",
+      "width": 354,
+      "scrollWidth": 560,
+      "scrollLeft": 206,
+      "overflow": "auto"
+    },
+    {
+      "id": "SH-GOV-BOARD-001",
+      "width": 354,
+      "scrollWidth": 448,
+      "scrollLeft": 94,
+      "overflow": "auto"
+    },
+    {
+      "id": "LEGAL-SOURCE-801955F60F74",
+      "width": 354,
+      "scrollWidth": 613,
+      "scrollLeft": 259,
+      "overflow": "auto"
+    },
+    {
+      "id": "LEGAL-SOURCE-46256BC2255E",
+      "width": 354,
+      "scrollWidth": 613,
+      "scrollLeft": 259,
+      "overflow": "auto"
+    },
+    {
+      "id": "LEGAL-SOURCE-508081AAD2B2",
+      "width": 354,
+      "scrollWidth": 613,
+      "scrollLeft": 259,
+      "overflow": "auto"
+    },
+    {
+      "id": "LEGAL-SOURCE-9E57D6909035",
+      "width": 354,
+      "scrollWidth": 617,
+      "scrollLeft": 263,
+      "overflow": "auto"
+    }
+  ]
+}

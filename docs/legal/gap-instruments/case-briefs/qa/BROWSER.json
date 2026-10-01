@@ -1,0 +1,72 @@
+[
+  {
+    "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-ARU-01.html",
+    "sha256": "6aa25f472102574b434a9ba1b3fd851579a1cb8d8cdf70c39ad617d951e787bb",
+    "views": [
+      {
+        "path": "docs/legal/gap-instruments/case-briefs/qa/SH-CASE-ARU-01-desktop.png",
+        "sha256": "958a288b1d7b927f0e3347968b96b0377b731e967c331d6617d2c2f2b62c651b"
+      },
+      {
+        "path": "docs/legal/gap-instruments/case-briefs/qa/SH-CASE-ARU-01-mobile.png",
+        "sha256": "6eabaada0bf23fa2ce2fd6fdf9712d503d9fa53d2578cb3de705b95c96223696"
+      }
+    ]
+  },
+  {
+    "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-CLOSE-01.html",
+    "sha256": "00b14ba850132f48a309617c91b88f913a885a8d6cb9cb1defb6e73287f46f31",
+    "views": [
+      {
+        "path": "docs/legal/gap-instruments/case-briefs/qa/SH-CASE-CLOSE-01-desktop.png",
+        "sha256": "f99c747c5dc349fce9d83d5eea0cbf7b560a99a84c1acc5d4e682b5119148a9b"
+      },
+      {
+        "path": "docs/legal/gap-instruments/case-briefs/qa/SH-CASE-CLOSE-01-mobile.png",
+        "sha256": "82e60d7c2815364fcaf03f233180d2ef27ae18c5f306fbb3432546265d681de3"
+      }
+    ]
+  },
+  {
+    "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-FF-01.html",
+    "sha256": "6b229c3c2289417df66b287f33d27ee07e7132753713bd52d6d29d585cfb9f6a",
+    "views": [
+      {
+        "path": "docs/legal/gap-instruments/case-briefs/qa/SH-CASE-FF-01-desktop.png",
+        "sha256": "60bd94ba917e0fb3413be4cb51b8d6832fa6613be44be42da390b8b0ee53bd71"
+      },
+      {
+        "path": "docs/legal/gap-instruments/case-briefs/qa/SH-CASE-FF-01-mobile.png",
+        "sha256": "9878e50a9566b0ab34262102cfd29a744ac9e7d98028bd292e739af04ad76f60"
+      }
+    ]
+  },
+  {
+    "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-RECON-01.html",
+    "sha256": "b9350f905ff441741a8126e9c07aeb4ad3b3012506ff114a4593009ab43a2868",
+    "views": [
+      {
+        "path": "docs/legal/gap-instruments/case-briefs/qa/SH-CASE-RECON-01-desktop.png",
+        "sha256": "6bdb7c5df07f2e4a57d789f1f422554fab1e3ebaf3abd57477c23605122d31cd"
+      },
+      {
+        "path": "docs/legal/gap-instruments/case-briefs/qa/SH-CASE-RECON-01-mobile.png",
+        "sha256": "5281ebfcd8b968c7d9d85cbde54c95c207841e1949da711b5a0a5f41e6a4534b"
+      }
+    ]
+  },
+  {
+    "path": "docs/legal/gap-instruments/case-briefs/SH-CASE-RW-01.html",
+    "sha256": "bd932c44faa69112f8474adb6adbce9740b0dff7e5e7565626a240c0082f2f88",
+    "views": [
+      {
+        "path": "docs/legal/gap-instruments/case-briefs/qa/SH-CASE-RW-01-desktop.png",
+        "sha256": "1432917df3071fe06dab077936de47c4af415a31f24ca156d461503bb11d21c6"
+      },
+      {
+        "path": "docs/legal/gap-instruments/case-briefs/qa/SH-CASE-RW-01-mobile.png",
+        "sha256": "306393c013983f71c39055e2d5d961dd6dc7c705207736c16b552d07da63a8fc"
+      }
+    ]
+  }
+]

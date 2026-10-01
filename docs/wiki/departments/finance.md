@@ -44,5 +44,3 @@ Conditional forecasts, historical reconstructions and executed records remain se
 - [Internal Audit](internal-audit.md)
 - [Procurement and vendor support](procurement.md)
 - [Sable Harbor Advisory](../businesses/Advisory.md)
-
-Related reading describes useful connections, not additional reporting lines.

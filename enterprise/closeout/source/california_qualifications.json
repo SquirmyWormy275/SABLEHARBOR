@@ -1,0 +1,14 @@
+{
+  "document_id": "SH-CA-QUALIFICATIONS-20260915",
+  "acceptance_state": "PENDING_REPOSITORY_ACCEPTANCE",
+  "origin": "NEWLY_AUTHORED_SYNTHETIC_HISTORY",
+  "authority": "https://www.ftb.ca.gov/file/business/types/corporations/index.html",
+  "accessed_on": "2026-09-15",
+  "facts": [
+    {"entity":"SHIH","first_qualified_on":"2024-12-02","management_state":"CA","first_taxable_year":2024,"basis":"Holding-company acquisition, capital and treasury management performed through parent Sacramento offices; no new property or subsidiary created."},
+    {"entity":"PS","first_qualified_on":"2025-01-13","management_state":"CA","first_taxable_year":2025,"basis":"Platform headquarters administration and twelve California employees; Red Wash Wyoming mine remains separate legal operator."}
+  ],
+  "minimum_usd":"800",
+  "performance":"Qualification effective dates are newly authored history. No recovered government receipt is claimed. No minimum-tax payment is invented; accrued amounts remain unpaid until supported settlement.",
+  "scope":"Minimum-tax floor only; combined-report income above the floor is computed separately. First-year exception does not repeat. No CA minimum is imposed on out-of-state ARU/BST merely because they join a combined computation."
+}

@@ -1,0 +1,141 @@
+{
+  "revision": "0.4.0-review.1",
+  "date": "2026-09-13",
+  "cases": [
+    {
+      "id": "SH-CASE-ARU-01",
+      "title": "Account for the ARU acquisition",
+      "period": "ARU acquisition opening \u00b7 7 January 2026",
+      "situation": "A stock purchase and refinancing establish a new opening trial balance. Fees, retained leases and buyer cash have different accounting treatments.",
+      "question": "Do the funding bridge and opening entries agree, and what evidence would support the closing?",
+      "files": [
+        {
+          "path": "../practice/acquisition/TASK.md",
+          "instruction": "Read the task and exact selected evidence.",
+          "label": "Acquisition task and evidence"
+        },
+        {
+          "path": "../practice/acquisition/blank.xlsx",
+          "instruction": "Complete the supplied acquisition working paper.",
+          "label": "Acquisition working paper"
+        },
+        {
+          "path": "../walkthroughs/walkthroughs.xlsx",
+          "instruction": "Use ARU opening, Monthly trace and ARU closing only if extending into 2026.",
+          "label": "Transaction walkthrough workbook"
+        }
+      ],
+      "deliverable": "Submit the funding bridge, opening debit\u2013credit check, book/tax goodwill comparison and a short evidence conclusion. Keep buyer costs separate from the ARU opening.",
+      "limits": "Opening acquisition reconstruction. Post-cutoff 2026 activity is a management scenario; the separate 2027 forecast is not added to these books.",
+      "status": "PUBLIC_LEARNING_MATERIAL_DRAFT_DESIGN"
+    },
+    {
+      "id": "SH-CASE-FF-01",
+      "title": "Resolve a disputed Foundry Field invoice",
+      "period": "Foundry Field business unit \u00b7 base scenario \u00b7 2027",
+      "situation": "A term invoice has collections, credits and an uncollected written-off claim. Billing and service revenue follow separate journal events.",
+      "question": "What happened to the invoice balance, and which entries support monthly revenue?",
+      "files": [
+        {
+          "path": "../../../finance/evidence/SH-FIN-HUMAN-001/README.md",
+          "instruction": "Read the accepted invoice packet first.",
+          "label": "Accepted Foundry Field invoice packet"
+        },
+        {
+          "path": "../practice/revenue-dispute/blank.xlsx",
+          "instruction": "Complete the revenue-dispute working paper.",
+          "label": "Revenue-dispute working paper"
+        },
+        {
+          "path": "../walkthroughs/walkthroughs.xlsx",
+          "instruction": "Open FF invoice events, FF service trace and FF statements.",
+          "label": "Transaction walkthrough workbook"
+        }
+      ],
+      "deliverable": "Submit the invoice-to-claim bridge, a billing-versus-revenue explanation and the specific evidence still required before asserting receipt or acceptance.",
+      "limits": "Public synthetic forecast. The FF-003 selection is not total business-unit revenue. Proposed customer identities and billing terms remain unaccepted.",
+      "status": "PUBLIC_LEARNING_MATERIAL_DRAFT_DESIGN"
+    },
+    {
+      "id": "SH-CASE-RW-01",
+      "title": "Trace the Red Wash closure obligation",
+      "period": "Red Wash \u00b7 18 July 2025 acquisition through the 2026 successor model",
+      "situation": "The acquisition assumes a closure liability. The successor opening and forecast closing balance reflect accretion and later movements.",
+      "question": "Can the liability be traced across dates without treating a modeled estimate as independent engineering evidence?",
+      "files": [
+        {
+          "path": "../../../../red_wash/source/core_operating_data.json",
+          "instruction": "Read the acquisition and closure assumptions.",
+          "label": "Red Wash acquisition and closure source"
+        },
+        {
+          "path": "../walkthroughs/README.md",
+          "instruction": "Follow case 3 and its exact source links.",
+          "label": "Red Wash walkthrough instructions"
+        },
+        {
+          "path": "../walkthroughs/walkthroughs.xlsx",
+          "instruction": "Open RW closure liability; complete journal rows are in the companion CSV/SQLite.",
+          "label": "Transaction walkthrough workbook"
+        }
+      ],
+      "deliverable": "Submit an acquisition-to-opening bridge, opening-to-closing rollforward and a list of unsupported engineering, timing and escrow conclusions.",
+      "limits": "Escrow and holdback are consideration components, not extra purchase price or proven current cash. The calibrated cash-flow model does not independently corroborate its input liability.",
+      "status": "PUBLIC_LEARNING_MATERIAL_DRAFT_DESIGN"
+    },
+    {
+      "id": "SH-CASE-RECON-01",
+      "title": "Practice five separate reconciliations",
+      "period": "January 2027 \u00b7 base forecast \u00b7 ARU_GROUP, Atlas Meridian and Willow",
+      "situation": "Five selected workpapers cover bank clearing, receivables, payables, debt and one asset. They come from different reporting scopes.",
+      "question": "Do each workpaper\u2019s selected balances tie, and what stronger evidence is missing?",
+      "files": [
+        {
+          "path": "../reconciliations/README.md",
+          "instruction": "Read the scope and evidence limitations for each case.",
+          "label": "Five-reconciliation instructions"
+        },
+        {
+          "path": "../reconciliations/blank.xlsx",
+          "instruction": "Complete each of the five workpapers in a separate saved copy.",
+          "label": "Five-reconciliation working paper"
+        },
+        {
+          "path": "../reconciliations/WORKED.md",
+          "instruction": "Compare only after completing your calculations.",
+          "label": "Worked explanations"
+        }
+      ],
+      "deliverable": "Submit five separate reconciliation conclusions with differences and evidence requests. Do not combine these balances into a trial balance or period close.",
+      "limits": "These are separate exercises. Willow covers FORT-TEST-RIG only. Modeled bank clearing is not a bank-issued statement; zero differences do not establish completeness.",
+      "status": "PUBLIC_LEARNING_MATERIAL_DRAFT_DESIGN"
+    },
+    {
+      "id": "SH-CASE-CLOSE-01",
+      "title": "Close one ARU reporting period",
+      "period": "ARU_GROUP \u00b7 January 2027 \u00b7 base industrial forecast",
+      "situation": "One reporting group has an opening trial balance, the complete month\u2019s journal and a closing reporting package. All five reconciliation areas stay within this scope.",
+      "question": "Can you reproduce the close and distinguish reconciled model balances from externally supported balances?",
+      "files": [
+        {
+          "path": "../period-close/README.md",
+          "instruction": "Start with the period-close instructions and source population.",
+          "label": "ARU period-close instructions"
+        },
+        {
+          "path": "../period-close/blank.xlsx",
+          "instruction": "Work from opening balances through activity, reconciliations and statements.",
+          "label": "ARU period-close working paper"
+        },
+        {
+          "path": "../evidence-tracking/README.md",
+          "instruction": "Record follow-up evidence without changing accepted source facts.",
+          "label": "Evidence-request tracking guide"
+        }
+      ],
+      "deliverable": "Submit the balanced closing trial balance, five reconciliation conclusions, proposed adjustments only where supported, and the financial statements. Identify unsupported external evidence explicitly.",
+      "limits": "January 2027 is a forecast, not an actual completed close. Group reporting is not separate statutory books for every subsidiary. Do not invent aging, vouchers or adjusting entries to make the case look complete.",
+      "status": "PUBLIC_LEARNING_MATERIAL_DRAFT_DESIGN"
+    }
+  ]
+}

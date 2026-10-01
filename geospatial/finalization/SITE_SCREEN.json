@@ -1,0 +1,272 @@
+{
+  "as_of": "2026-09-13",
+  "records": [
+    {
+      "option_id": "HQ-F",
+      "object_id": "SH-SITE-0001",
+      "name": "Sacramento headquarters",
+      "epsg": 26910,
+      "area_acres": 11.570247933994839,
+      "geometry_sha256": "bf0253d156ea14e3ec48a42a03714f567123a833eab92b00f2371d53e3058af8",
+      "elevation": {
+        "min_m": 3.418482780456543,
+        "max_m": 12.745706558227539,
+        "relief_m": 9.327223777770996,
+        "p10_p50_p90_m": [
+          3.7247276306152344,
+          7.378110885620117,
+          8.39129180908203
+        ],
+        "valid_cells": 8909,
+        "sampling": "Exported 256 \u00d7 256 F32 context raster, polygon-center mask; terrain screen, not finished grades or a geotechnical survey."
+      },
+      "imagery_sources": [
+        {
+          "name": "m_3812129_nw_10_060_20220621",
+          "acquisition_date": "2022-06-21",
+          "resolution_m": 0.6,
+          "catalog_query_scope": "Point at polygon vertex-mean; not a guarantee of every mosaic pixel acquisition."
+        }
+      ],
+      "flood_intersections": [
+        {
+          "zone": "X",
+          "subtype": "AREA OF MINIMAL FLOOD HAZARD",
+          "sfha": "F",
+          "dfirm_id": "06067C",
+          "intersection_acres": 11.570247933994839
+        }
+      ],
+      "archived_reference_screen": [
+        {
+          "path": "geospatial/reference/sacramento_connecting_roads.geojson",
+          "sha256": "05c2cc267e125bd36cb436a5f2a3fabf60d9fe6c3c445b21dbf3de0477d92e57",
+          "distance_m": 665.6317066783402,
+          "intersects": false,
+          "interpretation": "Archived centerline context, not a cadastral or right-of-way survey. Imagery and current primary-source exclusions control discrepancies."
+        },
+        {
+          "path": "geospatial/reference/sacramento_highways.geojson",
+          "sha256": "746fad45f6aa54ac4b1afb15bcadd04268302a262957089b6428ef5da4327178",
+          "distance_m": 635.9421277175103,
+          "intersects": false,
+          "interpretation": "Archived centerline context, not a cadastral or right-of-way survey. Imagery and current primary-source exclusions control discrepancies."
+        },
+        {
+          "path": "geospatial/reference/sacramento_hydro.geojson",
+          "sha256": "d11fb9f1c02956abcfc47d7d3180fdea93fa259b54c1d82d81d6535cb24c8708",
+          "distance_m": 845.2145035217548,
+          "intersects": false,
+          "interpretation": "Archived centerline context, not a cadastral or right-of-way survey. Imagery and current primary-source exclusions control discrepancies."
+        },
+        {
+          "path": "geospatial/reference/sacramento_local_roads.geojson",
+          "sha256": "683c8c7d16e5e614621c7d2b554c67c58f893ed135bd5b2321ba4f2702424f5c",
+          "distance_m": 16.24286630148141,
+          "intersects": false,
+          "interpretation": "Archived centerline context, not a cadastral or right-of-way survey. Imagery and current primary-source exclusions control discrepancies."
+        },
+        {
+          "path": "geospatial/reference/sacramento_rail.geojson",
+          "sha256": "3115b02fff101730d9c45e05e821f8611e304158b467d3ad19ca30339e4fc242",
+          "distance_m": 13.902144642949896,
+          "intersects": false,
+          "interpretation": "Archived centerline context, not a cadastral or right-of-way survey. Imagery and current primary-source exclusions control discrepancies."
+        }
+      ],
+      "selection": "AUTHORED_FICTIONAL_PLANNING_FOOTPRINT",
+      "precision": "DESIGN_COORDINATES_NOT_SURVEY",
+      "unavailable_certifications": [
+        "real cadastral interests and tenancy",
+        "approved zoning and access permits",
+        "geotechnical/foundation design",
+        "contamination cleanup certification",
+        "installed utility capacity"
+      ],
+      "authority": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+    },
+    {
+      "option_id": "FORT-NORTH",
+      "object_id": "SH-SITE-0003",
+      "name": "The Fort / Willow",
+      "epsg": 26917,
+      "area_acres": 10.650106065167332,
+      "geometry_sha256": "6f6fdfcd24aabe944f333d38bdf97874c81d517148ae4c0acb42ec08abd4e4eb",
+      "elevation": {
+        "min_m": 224.0643310546875,
+        "max_m": 229.2042236328125,
+        "relief_m": 5.139892578125,
+        "p10_p50_p90_m": [
+          224.54052734375,
+          225.95821380615234,
+          227.92505645751953
+        ],
+        "valid_cells": 4746,
+        "sampling": "Exported 256 \u00d7 256 F32 context raster, polygon-center mask; terrain screen, not finished grades or a geotechnical survey."
+      },
+      "imagery_sources": [
+        {
+          "name": "m_4007933_sw_17_060_20220509",
+          "acquisition_date": "2022-05-09",
+          "resolution_m": 0.6,
+          "catalog_query_scope": "Point at polygon vertex-mean; not a guarantee of every mosaic pixel acquisition."
+        }
+      ],
+      "flood_intersections": [
+        {
+          "zone": "X",
+          "subtype": "AREA OF MINIMAL FLOOD HAZARD",
+          "sfha": "F",
+          "dfirm_id": "42003C",
+          "intersection_acres": 8.703353739092835
+        },
+        {
+          "zone": "X",
+          "subtype": "0.2 PCT ANNUAL CHANCE FLOOD HAZARD",
+          "sfha": "F",
+          "dfirm_id": "42003C",
+          "intersection_acres": 0.0
+        },
+        {
+          "zone": "X",
+          "subtype": "0.2 PCT ANNUAL CHANCE FLOOD HAZARD",
+          "sfha": "F",
+          "dfirm_id": "42003C",
+          "intersection_acres": 1.9467978266778405
+        }
+      ],
+      "archived_reference_screen": [
+        {
+          "path": "geospatial/reference/hazelwood_connecting_roads.geojson",
+          "sha256": "6dfe260261719f80ee587feb3ead8870ba334d36ba35317debac636a7187c8b3",
+          "distance_m": 11.999510968427563,
+          "intersects": false,
+          "interpretation": "Archived centerline context, not a cadastral or right-of-way survey. Imagery and current primary-source exclusions control discrepancies."
+        },
+        {
+          "path": "geospatial/reference/hazelwood_highways.geojson",
+          "sha256": "96cea8a975c264fe3a69ab733a3ec86ab00804fbe7801933e6112814e9b464f4",
+          "distance_m": 150.3366212000955,
+          "intersects": false,
+          "interpretation": "Archived centerline context, not a cadastral or right-of-way survey. Imagery and current primary-source exclusions control discrepancies."
+        },
+        {
+          "path": "geospatial/reference/hazelwood_hydro.geojson",
+          "sha256": "4feebf27c90c99bfbf1d7dc7861b226aa8a6a069ebf913627960022739c2c69e",
+          "distance_m": 149.32051359778347,
+          "intersects": false,
+          "interpretation": "Archived centerline context, not a cadastral or right-of-way survey. Imagery and current primary-source exclusions control discrepancies."
+        },
+        {
+          "path": "geospatial/reference/hazelwood_local_roads.geojson",
+          "sha256": "7d961e9292f87ce71faf52a0f6b8d612233a30ca138c271938bb60de970f5b68",
+          "distance_m": 11.99897023528154,
+          "intersects": false,
+          "interpretation": "Archived centerline context, not a cadastral or right-of-way survey. Imagery and current primary-source exclusions control discrepancies."
+        },
+        {
+          "path": "geospatial/reference/hazelwood_rail.geojson",
+          "sha256": "7d6118a459a800dcc475accc96b693f837b0aedfbef9493596a893a7f1eec010",
+          "distance_m": 32.416318201041264,
+          "intersects": false,
+          "interpretation": "Archived centerline context, not a cadastral or right-of-way survey. Imagery and current primary-source exclusions control discrepancies."
+        }
+      ],
+      "selection": "AUTHORED_FICTIONAL_PLANNING_FOOTPRINT",
+      "precision": "DESIGN_COORDINATES_NOT_SURVEY",
+      "unavailable_certifications": [
+        "real cadastral interests and tenancy",
+        "approved zoning and access permits",
+        "geotechnical/foundation design",
+        "contamination cleanup certification",
+        "installed utility capacity"
+      ],
+      "authority": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+    },
+    {
+      "option_id": "BEDFORD-F",
+      "object_id": "SH-SITE-0005",
+      "name": "Bedford / Cradle",
+      "epsg": 26917,
+      "area_acres": 15.266988222049582,
+      "geometry_sha256": "21215865e3c503a05fb248dc820d6f46860de0f9ef5fd24358c7498a08ad308e",
+      "elevation": {
+        "min_m": 314.1447448730469,
+        "max_m": 358.43707275390625,
+        "relief_m": 44.292327880859375,
+        "p10_p50_p90_m": [
+          324.57733764648435,
+          342.31982421875,
+          349.9753662109375
+        ],
+        "valid_cells": 8269,
+        "sampling": "Exported 256 \u00d7 256 F32 context raster, polygon-center mask; terrain screen, not finished grades or a geotechnical survey."
+      },
+      "imagery_sources": [
+        {
+          "name": "m_3908039_se_17_060_20221022",
+          "acquisition_date": "2022-10-22",
+          "resolution_m": 0.6,
+          "catalog_query_scope": "Point at polygon vertex-mean; not a guarantee of every mosaic pixel acquisition."
+        }
+      ],
+      "flood_intersections": [
+        {
+          "zone": "X",
+          "subtype": "AREA OF MINIMAL FLOOD HAZARD",
+          "sfha": "F",
+          "dfirm_id": "54049C",
+          "intersection_acres": 15.266988222049582
+        }
+      ],
+      "archived_reference_screen": [
+        {
+          "path": "geospatial/reference/fairmont_connecting_roads.geojson",
+          "sha256": "889df27bde4c0c0fdf00f8d43940d4855ed8c2181bb2dbb701d8760292797381",
+          "distance_m": 6108.709998762838,
+          "intersects": false,
+          "interpretation": "Archived centerline context, not a cadastral or right-of-way survey. Imagery and current primary-source exclusions control discrepancies."
+        },
+        {
+          "path": "geospatial/reference/fairmont_highways.geojson",
+          "sha256": "873806918e44cbefa812bd6ad32c55aca9aeb227e2df534927c71c14346c0474",
+          "distance_m": 153.82242264413682,
+          "intersects": false,
+          "interpretation": "Archived centerline context, not a cadastral or right-of-way survey. Imagery and current primary-source exclusions control discrepancies."
+        },
+        {
+          "path": "geospatial/reference/fairmont_hydro.geojson",
+          "sha256": "4709eaa666d77462089a5f6159450f79c8640f0b89b8f2de9a756301ec65a4cf",
+          "distance_m": 284.5630527359136,
+          "intersects": false,
+          "interpretation": "Archived centerline context, not a cadastral or right-of-way survey. Imagery and current primary-source exclusions control discrepancies."
+        },
+        {
+          "path": "geospatial/reference/fairmont_rail.geojson",
+          "sha256": "fff23cf8e9c2b671be4558d9541c1ab8c142670c3d5240f46fc459a2fec5fb09",
+          "distance_m": 792.3996842367987,
+          "intersects": false,
+          "interpretation": "Archived centerline context, not a cadastral or right-of-way survey. Imagery and current primary-source exclusions control discrepancies."
+        },
+        {
+          "path": "geospatial/reference/fairmont_secondary_roads.geojson",
+          "sha256": "1599f0bfba21a4968e0c71ad55bbc633323e79cefd02aaec4033a505cfc32843",
+          "distance_m": 222.84593995991864,
+          "intersects": false,
+          "interpretation": "Archived centerline context, not a cadastral or right-of-way survey. Imagery and current primary-source exclusions control discrepancies."
+        }
+      ],
+      "selection": "AUTHORED_FICTIONAL_PLANNING_FOOTPRINT",
+      "precision": "DESIGN_COORDINATES_NOT_SURVEY",
+      "unavailable_certifications": [
+        "real cadastral interests and tenancy",
+        "approved zoning and access permits",
+        "geotechnical/foundation design",
+        "contamination cleanup certification",
+        "installed utility capacity"
+      ],
+      "authority": "docs/canon/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+    }
+  ],
+  "limitations": "2022 imagery supplemented with dated public planning/occupancy sources. Fictional sites do not prove real property availability. FEMA mapping is not assurance against flooding; DEM is terrain, not finished floor levels."
+}

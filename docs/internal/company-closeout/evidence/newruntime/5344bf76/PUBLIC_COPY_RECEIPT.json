@@ -1,0 +1,119 @@
+{
+  "status": "PASS",
+  "observed_at": "2026-09-22T16:44:04.216646+00:00",
+  "portal_commit": "5344bf76413ffe2cd378b957dbb5f7d56d04ea19",
+  "adapter_sha256": "4aecf99c2ded15f09227a44dc26b44bced166bcd175391f427a7c2aebd467892",
+  "runtime_source_sha256": "80f42eb8d4625d15b64a74b43cc71831ed1e6d3dde1c23a1a7b95b2f6d1ee4b3",
+  "package_sha256": "1da616c00e6978a8d6a7b31fb9a2efed1203403672e2b4926b89e36a30a60367",
+  "manifest_sha256": "13caa0a752c7b4ac70a8c01afd3827fb8bad778c7c62b884775edd26aaeff47e",
+  "edition_source_commit": "812676c2ac739d6fba91f770ee1369eea9f2b46d",
+  "edition_id": "SH-COMPANY-2026-09-15",
+  "selected": [
+    {
+      "id": "CAPITAL",
+      "path": "enterprise/closeout/source/capital_register.json",
+      "bytes": 15699,
+      "sha256": "8993b8e1457571d2ee937bef370f0cd26957e1e95945a85083544f547b08a15c"
+    },
+    {
+      "id": "EQUITY",
+      "path": "enterprise/generated/company-closeout-v1/capital_opening_equity_bridge.csv",
+      "bytes": 1264,
+      "sha256": "f167ea5d5862ee32a129f54aba4fc3b6ab4668e09464ac139784e701c45f5efb"
+    },
+    {
+      "id": "PAYROLL_BACKUP",
+      "path": "enterprise/generated/completed-period-2026-08/payroll_source_bridges.csv",
+      "bytes": 4803,
+      "sha256": "cb434ab0d21e7e8523b42c407bc8e7e8e9b4c154b96c712648c41472e96da307"
+    }
+  ],
+  "surrounding_population": {
+    "edition_members": 5731,
+    "selected_copies": 3,
+    "complete_enterprise_retention_population": false
+  },
+  "checks": {
+    "held_copy": {
+      "status": "DENIED",
+      "reason": "Current hold or local retention date blocks disposal"
+    },
+    "retained_copy": {
+      "status": "DENIED",
+      "reason": "Current hold or local retention date blocks disposal"
+    },
+    "hold_after_interruption": {
+      "status": "DENIED",
+      "reason": "Current hold or local retention date blocks disposal"
+    },
+    "explicit_retry": {
+      "status": "SELECTED_LOCAL_COPIES_UNLINKED",
+      "copies": {
+        "CAPITAL": "UNLINKED_VERIFIED_OWNED_INODE"
+      },
+      "secure_erasure": "NOT_ASSERTED",
+      "qualification": "LOCAL_FIXTURE_UNLINK_NOT_SECURE_ERASE_OR_APPROVED_LEGAL_RETENTION"
+    },
+    "after_retention": {
+      "status": "SELECTED_LOCAL_COPIES_UNLINKED",
+      "copies": {
+        "EQUITY": "UNLINKED_VERIFIED_OWNED_INODE"
+      },
+      "secure_erasure": "NOT_ASSERTED",
+      "qualification": "LOCAL_FIXTURE_UNLINK_NOT_SECURE_ERASE_OR_APPROVED_LEGAL_RETENTION"
+    }
+  },
+  "final_state": {
+    "revision": 12,
+    "pending": null,
+    "inventory": [
+      {
+        "id": "CAPITAL",
+        "kind": "ACTIVE",
+        "recorded_status": "UNLINKED",
+        "path_present": false,
+        "matches_initial_identity": false,
+        "holds": [],
+        "not_before": "2027-05-01T00:00:00.000000+00:00"
+      },
+      {
+        "id": "EQUITY",
+        "kind": "ACTIVE",
+        "recorded_status": "UNLINKED",
+        "path_present": false,
+        "matches_initial_identity": false,
+        "holds": [],
+        "not_before": "2027-05-01T00:01:00.000000+00:00"
+      },
+      {
+        "id": "PAYROLL_BACKUP",
+        "kind": "BACKUP",
+        "recorded_status": "PRESENT",
+        "path_present": true,
+        "matches_initial_identity": true,
+        "holds": [],
+        "not_before": "2027-05-01T00:00:00.000000+00:00"
+      }
+    ],
+    "declared_inventory_count": 3,
+    "present_declared_paths": 1,
+    "recorded_unattributed_missing_count": 0,
+    "recorded_unlinked_count": 2,
+    "retained_internal_files": [
+      "5537d5061f74e2b52403506d1e2043e2698433a7b9fee838e98fd0a57e3f0071.bin"
+    ],
+    "qualification": "LOCAL_FIXTURE_UNLINK_NOT_SECURE_ERASE_OR_APPROVED_LEGAL_RETENTION",
+    "secure_erasure": "NOT_ASSERTED",
+    "enterprise_copy_completeness": "NOT_ESTABLISHED"
+  },
+  "logical_fixture_period": {
+    "start": "2027-05-01T00:00:00Z",
+    "last_event": "2027-05-01T00:02:00Z"
+  },
+  "limits": [
+    "New owned public synthetic copies only; release originals and CompanyStore source originals unchanged",
+    "Local fixture hold/retention, not approved corporate retention or legal hold release",
+    "Pending-intent recovery only, not restore of older company backup with later hold/deletion state",
+    "No secure erasure, production deployment, external authority, professional audit opinion or full IT gate claim"
+  ]
+}

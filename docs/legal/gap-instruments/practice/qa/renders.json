@@ -1,0 +1,77 @@
+{
+  "status": "MANUAL_REVIEW_PASS_DRAFT_DESIGN",
+  "records": [
+    {
+      "packet": "SH-LEGAL-PRACTICE-ACQUISITION",
+      "mode": "blank",
+      "workbook_sha256": "f093de0e40a2c9eac6a5e73d5d99766c856247b9ceade38fba74b4ac9c20841d",
+      "pages": 8,
+      "image": "docs/legal/gap-instruments/practice/qa/acquisition-blank.png",
+      "image_sha256": "e8e849d54afc1d2e3ad87be23f884dd61a0d880b1d8efea630d6581d1947487b"
+    },
+    {
+      "packet": "SH-LEGAL-PRACTICE-ACQUISITION",
+      "mode": "worked",
+      "workbook_sha256": "90227ea974c0e9acd278328f4bd057a2e156ee5d06e0cb057b6f5888dcacb198",
+      "pages": 8,
+      "image": "docs/legal/gap-instruments/practice/qa/acquisition-worked.png",
+      "image_sha256": "1e13462c04e8e60c6a18cdd79aa912529b8f4a65c650769257f6e3669133979b"
+    },
+    {
+      "packet": "SH-LEGAL-PRACTICE-DEBT",
+      "mode": "blank",
+      "workbook_sha256": "b834a05fe38295b8677069a4071d7c07f52b14cc440a7a295d31236b7585b980",
+      "pages": 8,
+      "image": "docs/legal/gap-instruments/practice/qa/debt-blank.png",
+      "image_sha256": "33ea6f0a9f40af95b4fb811b8449886618e3f8cccc88087d5fb626cc7160b9c5"
+    },
+    {
+      "packet": "SH-LEGAL-PRACTICE-DEBT",
+      "mode": "worked",
+      "workbook_sha256": "1bbf491c5765cdd500cd326f7dfc668c7a9adae466dd7408acfd5c2b8bc3ebe0",
+      "pages": 8,
+      "image": "docs/legal/gap-instruments/practice/qa/debt-worked.png",
+      "image_sha256": "bccd6cad8e0307190bc6921a28e6cb531aaa937224fea64ee86d9a777d22ea3f"
+    },
+    {
+      "packet": "SH-LEGAL-PRACTICE-REVENUE-DISPUTE",
+      "mode": "blank",
+      "workbook_sha256": "12a7525e545def188bc2902b72f16ce46cd31b80ba0fad10ecd4e27b4c91afc1",
+      "pages": 6,
+      "image": "docs/legal/gap-instruments/practice/qa/revenue-dispute-blank.png",
+      "image_sha256": "7fd259231f6bf27eff5e1c0b381e71a1786a047f5ff2f2bd5ea4ec38e7e5b1ca"
+    },
+    {
+      "packet": "SH-LEGAL-PRACTICE-REVENUE-DISPUTE",
+      "mode": "worked",
+      "workbook_sha256": "61644d24656e64aa260547cdae78e90bd044d2378883226726c09cd37ffcef88",
+      "pages": 6,
+      "image": "docs/legal/gap-instruments/practice/qa/revenue-dispute-worked.png",
+      "image_sha256": "fe2f4f7d467f6c3f7af426d0eec1c752a9f561fe7faa5471b3522d7cafe2f365"
+    },
+    {
+      "packet": "SH-LEGAL-PRACTICE-LEGAL-DUE-DILIGENCE",
+      "mode": "blank",
+      "workbook_sha256": "1847cf054e37da4ae2ece38859f5af6b447f4e68ca9e299869ab70ade55001e5",
+      "pages": 5,
+      "image": "docs/legal/gap-instruments/practice/qa/legal-due-diligence-blank.png",
+      "image_sha256": "0339f8b51d809ea87d360c0cfa92a6b8e7d4ef4c8e2d5aa7d6b0bc84e63fb475"
+    },
+    {
+      "packet": "SH-LEGAL-PRACTICE-LEGAL-DUE-DILIGENCE",
+      "mode": "worked",
+      "workbook_sha256": "6383b64594e777840582c8d8773276a4828fc1d11858b89af9e339e76d435ac9",
+      "pages": 5,
+      "image": "docs/legal/gap-instruments/practice/qa/legal-due-diligence-worked.png",
+      "image_sha256": "65d1484b7d2f6044a83c5856e1b4def2e0368a163af16dfaf28bc7943a50c9a4"
+    }
+  ],
+  "reviewer": "Codex practical_routes",
+  "method": "Native LibreOffice export; all eight original-resolution contact sheets inspected, covering forty sheets and fifty-four native pages.",
+  "corrections": [
+    "Increased bottom print margin and moved footer inward after first-pass footer clipping; regenerated and reinspected every workbook."
+  ],
+  "limits": [
+    "Visual QA pass is delivery readiness, not user acceptance of exact workbook designs."
+  ]
+}

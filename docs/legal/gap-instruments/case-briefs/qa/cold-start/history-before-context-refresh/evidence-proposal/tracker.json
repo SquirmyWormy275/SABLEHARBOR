@@ -1,0 +1,261 @@
+{
+  "id": "SH-EVIDENCE-FOLLOWTHROUGH-001",
+  "status": "DRAFT_REVIEW_PROPOSAL_NOT_APPLIED",
+  "source_pins": {
+    "docs/finance/evidence/SH-FIN-HUMAN-001/source.json": "c4833cfc6f28db6cd3edcae761b0e2d8f463a20de79f1d6fd5b0c517f8f829b7",
+    "docs/legal/gap-instruments/period-close/README.md": "1f764afff496bd216dfca3fd1ffac4accf7433cf0404557f894312f82887577a",
+    "docs/legal/gap-instruments/period-close/case.json": "9ad2fd1377291bcbe61484aac9bb6e61c969c594be21ed86669008046ac628c3",
+    "docs/legal/gap-instruments/reconciliations/source.json": "167cdac04d99d603611ca169c9987436d3e6f92a17c21a90b06d2215133d5ea3",
+    "docs/legal/gap-instruments/walkthroughs/source/evidence_requests.csv": "649c0dce2e0de1b6f480c85e76d1bd7f4a364d426df3c47c6fb7871d860ec939",
+    "industrial/finance/ASSUMPTIONS_AND_TEMPORAL_CONTROLS.md": "933330f510acc9c05423f08f62d30c981dde8a26c2ae0325161f29d401ab43d8",
+    "industrial/finance/RED_WASH_AND_FUNDING.md": "5f54d6254e1d4e21ba37e2ed911fd8468d304e729f0272b4f45141b081a5fe94",
+    "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md": "a6dd448ed3a4a3ad6f0f3748e79dd918ea43c75685de762fe00843477a5d22c9",
+    "industrial/transaction/07_ARU_TAX_STRUCTURE_MEMORANDUM.md": "d42c4d67873e1b8e9b6488eac9a70a16643680718735ab0c3948327a37b16a44",
+    "red_wash/source/core_operating_data.json": "eb5601f3a519ac175bef07744fa3c23939734f80b5774efeed4800aa73e8aa3f"
+  },
+  "requests": [
+    {
+      "id": "WALK-REQ-ARU-01",
+      "scope": "ARU acquisition",
+      "request": "External funding and payoff confirmations",
+      "purpose": "Compare actual cash and creditor discharge to ARU-CL-02/03 and modeled sources/uses.",
+      "blocked_conclusion": "Cannot conclude funds moved or liens were released.",
+      "source_path": "docs/legal/gap-instruments/walkthroughs/source/evidence_requests.csv",
+      "source_locator": "CSV id=WALK-REQ-ARU-01",
+      "context_path": "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md"
+    },
+    {
+      "id": "WALK-REQ-ARU-02",
+      "scope": "ARU acquisition",
+      "request": "Filed election evidence and final valuation support",
+      "purpose": "Resolve conditional tax and PPA inputs before treating modeled tax basis as filed.",
+      "blocked_conclusion": "Cannot conclude IRS filing/acceptance or independently verified fair values.",
+      "source_path": "docs/legal/gap-instruments/walkthroughs/source/evidence_requests.csv",
+      "source_locator": "CSV id=WALK-REQ-ARU-02",
+      "context_path": "industrial/transaction/07_ARU_TAX_STRUCTURE_MEMORANDUM.md"
+    },
+    {
+      "id": "WALK-REQ-ARU-03",
+      "scope": "ARU acquisition",
+      "request": "Actual post-cutoff journals and source vouchers",
+      "purpose": "Replace September–December management scenario with supported actual activity.",
+      "blocked_conclusion": "Cannot call full-year modeled statements actual 2026 results.",
+      "source_path": "docs/legal/gap-instruments/walkthroughs/source/evidence_requests.csv",
+      "source_locator": "CSV id=WALK-REQ-ARU-03",
+      "context_path": "industrial/finance/ASSUMPTIONS_AND_TEMPORAL_CONTROLS.md"
+    },
+    {
+      "id": "WALK-REQ-FF-01",
+      "scope": "Foundry Field base 2027",
+      "request": "Customer billing identity, executed contract, service acceptance and bank evidence",
+      "purpose": "Corroborate invoice, service, credits and recovery beyond one synthetic release.",
+      "blocked_conclusion": "Cannot conclude actual billing, earned customer revenue or received cash.",
+      "source_path": "docs/legal/gap-instruments/walkthroughs/source/evidence_requests.csv",
+      "source_locator": "CSV id=WALK-REQ-FF-01",
+      "context_path": "docs/finance/evidence/SH-FIN-HUMAN-001/source.json"
+    },
+    {
+      "id": "WALK-REQ-RW-01",
+      "scope": "Red Wash",
+      "request": "Independent closure engineering estimate and approved timing",
+      "purpose": "Test ARO cash-flow amount/timing rather than liability-calibrated model.",
+      "blocked_conclusion": "Cannot conclude independently estimated closure obligation.",
+      "source_path": "docs/legal/gap-instruments/walkthroughs/source/evidence_requests.csv",
+      "source_locator": "CSV id=WALK-REQ-RW-01",
+      "context_path": "industrial/finance/RED_WASH_AND_FUNDING.md"
+    },
+    {
+      "id": "WALK-REQ-RW-02",
+      "scope": "Red Wash",
+      "request": "Closing escrow confirmation and successor opening rollforward",
+      "purpose": "Connect 2025 acquisition funds to 2026 successor opening with actual custody and movements.",
+      "blocked_conclusion": "Cannot treat 2025 escrow as current cash or successor opening as audited history.",
+      "source_path": "docs/legal/gap-instruments/walkthroughs/source/evidence_requests.csv",
+      "source_locator": "CSV id=WALK-REQ-RW-02",
+      "context_path": "red_wash/source/core_operating_data.json"
+    },
+    {
+      "id": "SH-RECON-BANK-REQ",
+      "scope": "ARU_GROUP | industrial forecast model | January 2027",
+      "request": "Obtain January bank-issued statement and subsequent clearing support for listed deposits and payments; compare dates and amounts with the model.",
+      "purpose": "Corroborate the selected model rows with the requested originals.",
+      "blocked_conclusion": "This is a synthetic clearing schedule. A zero difference does not establish independent bank cash, ownership or actual payment.",
+      "source_path": "docs/legal/gap-instruments/reconciliations/source.json",
+      "source_locator": "/workpapers/0/evidence_request",
+      "context_path": "docs/legal/gap-instruments/reconciliations/source.json"
+    },
+    {
+      "id": "SH-RECON-AR-REQ",
+      "scope": "Atlas Meridian | Core forecast model | January 2027",
+      "request": "Obtain the two underlying customer invoices, delivery or license acceptance, and subsequent receipt support; assess collectability separately from the arithmetic tie.",
+      "purpose": "Corroborate the selected model rows with the requested originals.",
+      "blocked_conclusion": "The complete selected month-end aging population is used. Terminal invoice-master balances are excluded; gross AR is before allowance.",
+      "source_path": "docs/legal/gap-instruments/reconciliations/source.json",
+      "source_locator": "/workpapers/1/evidence_request",
+      "context_path": "docs/legal/gap-instruments/reconciliations/source.json"
+    },
+    {
+      "id": "SH-RECON-AP-REQ",
+      "scope": "Atlas Meridian | Core forecast model | January 2027",
+      "request": "Obtain vendor invoices and service acceptance for both hosting accruals; inspect post-period payments and unmatched invoices for unrecorded liabilities.",
+      "purpose": "Corroborate the selected model rows with the requested originals.",
+      "blocked_conclusion": "January is the first Core model period. All January BIZ_AP legs are selected, credits positive. A tied model does not test liability completeness; terminal payable-master balances are excluded.",
+      "source_path": "docs/legal/gap-instruments/reconciliations/source.json",
+      "source_locator": "/workpapers/2/evidence_request",
+      "context_path": "docs/legal/gap-instruments/reconciliations/source.json"
+    },
+    {
+      "id": "SH-RECON-DEBT-REQ",
+      "scope": "ARU_GROUP | industrial forecast model | January 2027",
+      "request": "Obtain lender and lessor statements, executed credit terms and payment confirmations. Test maturity, security and covenants from executed terms, not assumed thresholds.",
+      "purpose": "Corroborate the selected model rows with the requested originals.",
+      "blocked_conclusion": "Legacy term debt, replacement term debt and retained leases stay separate. Scheduled and cash-paid principal are distinct fields; interest and issuance costs are outside these principal checks.",
+      "source_path": "docs/legal/gap-instruments/reconciliations/source.json",
+      "source_locator": "/workpapers/3/evidence_request",
+      "context_path": "docs/legal/gap-instruments/reconciliations/source.json"
+    },
+    {
+      "id": "SH-RECON-FIXED-ASSETS-REQ",
+      "scope": "Willow / FORT-TEST-RIG | Core forecast model | January 2027",
+      "request": "Obtain purchase invoice, receipt, commissioning approval and physical inspection evidence for FORT-TEST-RIG; support useful life and depreciation commencement.",
+      "purpose": "Corroborate the selected model rows with the requested originals.",
+      "blocked_conclusion": "A single identified asset is selected, not the enterprise asset population. Zero modeled accumulated depreciation does not establish that no depreciation should be recognized.",
+      "source_path": "docs/legal/gap-instruments/reconciliations/source.json",
+      "source_locator": "/workpapers/4/evidence_request",
+      "context_path": "docs/legal/gap-instruments/reconciliations/source.json"
+    },
+    {
+      "id": "SH-CLOSE-ARU-2027-01-AR-REQ",
+      "scope": "ARU_GROUP industrial reporting book; base scenario; January 2027",
+      "request": "Obtain ARU_GROUP January 31, 2027 gross external receivables aging, allowance calculation and subsequent receipts supporting account 1100 in the base scenario.",
+      "purpose": "Corroborate this reporting book and period with the requested originals.",
+      "blocked_conclusion": "Account 1100 is external receivables net of allowance. This case supplies complete ledger movement, not independent gross aging or allowance adequacy evidence.",
+      "source_path": "docs/legal/gap-instruments/period-close/case.json",
+      "source_locator": "/limitations/2",
+      "context_path": "docs/legal/gap-instruments/period-close/README.md"
+    },
+    {
+      "id": "SH-CLOSE-ARU-2027-01-AP-REQ",
+      "scope": "ARU_GROUP industrial reporting book; base scenario; January 2027",
+      "request": "Obtain ARU_GROUP January 31, 2027 supplier open items, invoices and subsequent disbursements supporting trade payable account 2000 in the base scenario.",
+      "purpose": "Corroborate this reporting book and period with the requested originals.",
+      "blocked_conclusion": "Account 2000 is trade payables including forecast settlement flows. Obtain a dated supplier open-item schedule and subsequent disbursements; terminal invoice masters are not month-end balances.",
+      "source_path": "docs/legal/gap-instruments/period-close/case.json",
+      "source_locator": "/limitations/3",
+      "context_path": "docs/legal/gap-instruments/period-close/README.md"
+    },
+    {
+      "id": "SH-CLOSE-ARU-2027-01-PPE-REQ",
+      "scope": "ARU_GROUP industrial reporting book; base scenario; January 2027",
+      "request": "Obtain ARU_GROUP January 2027 PPE invoices, title, commissioning records, physical inspection and useful-life support for accounts 1400/1490 in the base scenario; keep finance-lease ROU separate.",
+      "purpose": "Corroborate this reporting book and period with the requested originals.",
+      "blocked_conclusion": "PPE schedule covers accounts 1400/1490; finance-lease ROU accounts 1500/1590 remain separately visible in the complete trial balance. Physical existence, title, useful lives and executed debt terms require additional evidence.",
+      "source_path": "docs/legal/gap-instruments/period-close/case.json",
+      "source_locator": "/limitations/4",
+      "context_path": "docs/legal/gap-instruments/period-close/README.md"
+    }
+  ],
+  "history": [
+    {
+      "id": "COLD-START-ARU-BANK-RETEST-20260912",
+      "request_id": "SH-RECON-BANK-REQ",
+      "from": "unresolved",
+      "to": "incomplete",
+      "date": "2026-09-12",
+      "evidence_path": "docs/legal/gap-instruments/period-close/source/industrial_bank_reconciliations.csv",
+      "evidence_sha256": "397114b6de513e8f259132f8d36f335712aebc042de515962505a6f848f91df5",
+      "citation": "base,ARU_GROUP,2027,1,4198440,0,0,4198440,4639240,5343152,3494528,3494528,0,ARU_GROUP,SYNTHETIC_CLEARING_TIMING_RECONCILIATION,FORECAST,PUBLIC_SYNTHETIC_PLANNING_MODEL,2026-09-06T00:00:00-07:00",
+      "note": "Independent agent cold-start review reproduced the ARU_GROUP base January 2027 numerical close from supplied model records. This cited row supplies partial model support only. Bank-issued statement and actual subsequent clearing remain missing.",
+      "lines": [
+        2,
+        2
+      ],
+      "previous_sha256": "dde6c0ebd5e7d1d19757346feade554732bcb34ce35e90f8ab7e5101923021f9",
+      "sha256": "3a15899d5571ea3915892a8b35ebc85910312d48fab814bc3685e677a7950228"
+    },
+    {
+      "id": "COLD-START-ARU-DEBT-RETEST-20260912",
+      "request_id": "SH-RECON-DEBT-REQ",
+      "from": "unresolved",
+      "to": "incomplete",
+      "date": "2026-09-12",
+      "evidence_path": "docs/legal/gap-instruments/period-close/source/debt.csv",
+      "evidence_sha256": "7ede82644162878ea8e4fb3a029e35162a2dc765360772639a72ea95c085c237",
+      "citation": "base,ARU_GROUP,2027,1,21375000,0,2008219,375000,41667,132130,5000,False,18000000,21000000,375000,0,0,1966552,41667,0,235968,0,2026-09-06T00:00:00-07:00,PUBLIC_SYNTHETIC_PLANNING_MODEL,CONDITIONAL_FORECAST,CONDITIONAL_FORECAST,2027-01-31",
+      "note": "Independent agent cold-start review reproduced the ARU_GROUP base January 2027 numerical close from supplied model records. This cited row supplies partial model support only. Executed terms and lender/lessor statements remain missing.",
+      "lines": [
+        2,
+        2
+      ],
+      "previous_sha256": "3a15899d5571ea3915892a8b35ebc85910312d48fab814bc3685e677a7950228",
+      "sha256": "ea7cc4b9261cdecd72150dfe318568c3de8bc125798597db576f070f23a80e3f"
+    },
+    {
+      "id": "COLD-START-ARU-AR-RETEST-20260912",
+      "request_id": "SH-CLOSE-ARU-2027-01-AR-REQ",
+      "from": "unresolved",
+      "to": "incomplete",
+      "date": "2026-09-12",
+      "evidence_path": "docs/legal/gap-instruments/period-close/source/journal.csv",
+      "evidence_sha256": "0224ac15b5b4270d441de132519e559bd538e8f351bca8c04e654fa107f084e5",
+      "citation": "base,ARU_GROUP,2027,1,2027-01,base-ARU_GROUP-2027-000002,1100,\"External receivables, net of allowance\",asset,246974,0,246974,SALE-base-202701-BST-2025-001,CUSTOMER_INVOICE,Physical fulfilled units and declared contract price,BST,ARU-C-001,NONCASH_OR_OPENING,2026-09-06T00:00:00-07:00,PUBLIC_SYNTHETIC_PLANNING_MODEL,CONDITIONAL_FORECAST,CONDITIONAL_FORECAST,2027-01-31",
+      "note": "Independent agent cold-start review reproduced the ARU_GROUP base January 2027 numerical close from supplied model records. This cited row supplies partial model support only. Independent January gross aging, allowance support, invoices and receipts remain missing.",
+      "lines": [
+        2,
+        2
+      ],
+      "previous_sha256": "ea7cc4b9261cdecd72150dfe318568c3de8bc125798597db576f070f23a80e3f",
+      "sha256": "6d2d739b995eefb6d6e63471e2b93b51e12a18ea1cd0a87598d0de168a319ca6"
+    },
+    {
+      "id": "COLD-START-ARU-AP-RETEST-20260912",
+      "request_id": "SH-CLOSE-ARU-2027-01-AP-REQ",
+      "from": "unresolved",
+      "to": "incomplete",
+      "date": "2026-09-12",
+      "evidence_path": "docs/legal/gap-instruments/period-close/source/journal.csv",
+      "evidence_sha256": "0224ac15b5b4270d441de132519e559bd538e8f351bca8c04e654fa107f084e5",
+      "citation": "base,ARU_GROUP,2027,1,2027-01,base-ARU_GROUP-2027-000031,2000,Trade payables,liability,0,516154,-516154,PAYROLL-base-202701-BST,PAYROLL,Forecast expense supported by declared operating driver,BST,SYNTHETIC_EMPLOYEE_CENSUS,NONCASH_OR_OPENING,2026-09-06T00:00:00-07:00,PUBLIC_SYNTHETIC_PLANNING_MODEL,CONDITIONAL_FORECAST,CONDITIONAL_FORECAST,2027-01-31",
+      "note": "Independent agent cold-start review reproduced the ARU_GROUP base January 2027 numerical close from supplied model records. This cited row supplies partial model support only. Independent January supplier open-item schedule, invoices and subsequent disbursements remain missing.",
+      "lines": [
+        61,
+        61
+      ],
+      "previous_sha256": "6d2d739b995eefb6d6e63471e2b93b51e12a18ea1cd0a87598d0de168a319ca6",
+      "sha256": "1ff023e014966dedeeb674533dfd61885ec1cef7253158dc23c0cee4cef4a307"
+    },
+    {
+      "id": "COLD-START-ARU-PPE-RETEST-20260912",
+      "request_id": "SH-CLOSE-ARU-2027-01-PPE-REQ",
+      "from": "unresolved",
+      "to": "incomplete",
+      "date": "2026-09-12",
+      "evidence_path": "docs/legal/gap-instruments/period-close/source/assets.csv",
+      "evidence_sha256": "bfdd0be08eb22813bd94c0d36f790315b29dd7727bb854853145847c78a60d13",
+      "citation": "base,ARU_GROUP,2027,1,ARU-LAND,,1400,CONDITIONAL_IN_SERVICE,0,0,ACCEPTED_2026_OPENING,ACCEPTED_2026_OPENING,LAND,8000000,8000000,0,0,0,8000000,0,0,0,0,2026-09-06T00:00:00-07:00,PUBLIC_SYNTHETIC_PLANNING_MODEL,CONDITIONAL_FORECAST,CONDITIONAL_FORECAST,2027-01-31",
+      "note": "Independent agent cold-start review reproduced the ARU_GROUP base January 2027 numerical close from supplied model records. This cited row supplies partial model support only. Independent physical existence, title, useful lives and commissioning support remain missing.",
+      "lines": [
+        2,
+        2
+      ],
+      "previous_sha256": "1ff023e014966dedeeb674533dfd61885ec1cef7253158dc23c0cee4cef4a307",
+      "sha256": "9c06ef7da3ea8d229e840b84b3c0bd4d6730836fb03b43953997ccf6e64316da"
+    }
+  ],
+  "current": {
+    "WALK-REQ-ARU-01": "unresolved",
+    "WALK-REQ-ARU-02": "unresolved",
+    "WALK-REQ-ARU-03": "unresolved",
+    "WALK-REQ-FF-01": "unresolved",
+    "WALK-REQ-RW-01": "unresolved",
+    "WALK-REQ-RW-02": "unresolved",
+    "SH-RECON-BANK-REQ": "incomplete",
+    "SH-RECON-AR-REQ": "unresolved",
+    "SH-RECON-AP-REQ": "unresolved",
+    "SH-RECON-DEBT-REQ": "incomplete",
+    "SH-RECON-FIXED-ASSETS-REQ": "unresolved",
+    "SH-CLOSE-ARU-2027-01-AR-REQ": "incomplete",
+    "SH-CLOSE-ARU-2027-01-AP-REQ": "incomplete",
+    "SH-CLOSE-ARU-2027-01-PPE-REQ": "incomplete"
+  }
+}

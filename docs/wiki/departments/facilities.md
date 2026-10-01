@@ -34,7 +34,7 @@ The shared chart retains its original scope; it is not a new reporting chart for
 
 ## What remains unknown
 
-Exact site and occupancy evidence remains open under issue #106. The original September 3 headquarters image still requires recovery under issue #88. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for current site and occupancy evidence limits.
 
 ## Related reading
 
@@ -42,5 +42,3 @@ Exact site and occupancy evidence remains open under issue #106. The original Se
 - [People & Culture](people-culture.md)
 - [Continuity and crisis responsibilities](../subjects/Continuity.md)
 - [Willow](../businesses/Willow.md)
-
-Related reading describes useful connections, not additional reporting lines.

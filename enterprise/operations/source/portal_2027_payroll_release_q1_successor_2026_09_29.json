@@ -1,0 +1,220 @@
+{
+  "record_id": "SH-PORTAL-IAM007-PAYROLL-RELEASE-Q1-2027-v0.2",
+  "version": "0.2.0",
+  "state": "PROVISIONAL_NEWLY_AUTHORED_FICTIONAL_CASE_SUCCESSOR",
+  "authored_at": "2026-09-29T06:22:12Z",
+  "repository_available_at": null,
+  "repository_acceptance_at": null,
+  "scenario": "FICTIONAL_2027_ENGAGEMENT_COMMON_BASELINE",
+  "fact_status": "MODELED_2027_IN_UNIVERSE_EVENTS_NOT_REAL_DEPLOYMENT",
+  "access_scope": "PUBLIC_SYNTHETIC",
+  "authority": "September 13 delegated fictional-completion authority, bounded by accepted information policy and September 15 company-closeout scope; this proposal is not controlling until accepted.",
+  "accepted_predecessor": {
+    "source_record_id": "SH-PORTAL-IAM007-PAYROLL-RELEASE-Q1-2027-v0.1",
+    "source_path": "enterprise/operations/source/portal_2027_payroll_release_q1_2026_09_29.json",
+    "source_sha256": "a5d57e1c769393ade09cbe163281ccd88157d294f6a4024ff76eb0d1b6c71e8e",
+    "derived_path": "enterprise/operations/portal_2027_iam/payroll_release_q1_v0.1.json",
+    "derived_sha256": "12b6dcbf7113244f11c3b073038515fe7619987ff8d4c277d3c0f7cad6f6a83e",
+    "accepted_merge_commit": "2bbbd004628ec7eb45906c493a847a7c841e3908",
+    "repository_available_not_before": "2026-09-29T06:16:14Z",
+    "supersession_scope": "Adds selected-service HR, authorization, IAM realization and review evidence to the earlier future-due/no-performance scenario; leaves the 701-candidate whole-company gap unchanged."
+  },
+  "accepted_august_release": {
+    "source_commit": "ddca0d93b16c743e90ce5ac3f9cc74fb74ec6d1f",
+    "records_sha256": "5dd78a2bc6c6a08f333a7a6a0d09f7a310e3f2bd0fe027926c6b120a7b4a795e",
+    "receipt_sha256": "bc0b66500d682c1ea1705601bc1fc1b45e1c6e166d3d28b308df9c729c53767e"
+  },
+  "scope": {
+    "control_id": "SH-IAM-007",
+    "legal_operator": "SHI",
+    "unit": "ess",
+    "service_id": "SH-ESS-PAYROLL-RELEASE",
+    "period_start": "2027-01-01T00:00:00Z",
+    "period_end_exclusive": "2027-04-01T00:00:00Z",
+    "time_basis": "UTC synthetic case calendar",
+    "population_unit": "one human service-role account",
+    "complete_for_declared_function": true,
+    "included_service_account_ids": [
+      "SH-ESS-PAYROLL-RELEASE-PREPARE-0001",
+      "SH-ESS-PAYROLL-RELEASE-APPROVE-0002"
+    ],
+    "excluded": "All other payroll application users, service identities, other company systems, nonemployees and 701 unverified January 2027 company-principal candidates are outside this declared function."
+  },
+  "opening_state": {
+    "event_id": "SH-IAM007-Q1-2027-SELECTED-SERVICE-OPENING",
+    "as_of_exclusive": "2027-01-01T00:00:00Z",
+    "case_available_at": "2027-01-01T00:05:00Z",
+    "service_account_ids": [],
+    "source_state": "NEWLY_AUTHORED_SYNTHETIC_ZERO_BASELINE_FOR_DECLARED_FUNCTION_ONLY"
+  },
+  "role_delegations": [
+    {
+      "event_id": "SH-IAM007-Q1-2027-DELEGATE-OWNER",
+      "effective_at": "2026-12-29T00:00:00Z",
+      "case_available_at": "2026-12-29T01:00:00Z",
+      "person_id": "SH-EMP-ESS-0005",
+      "role": "SCOPED_SERVICE_OWNER_AND_GRANT_APPROVER"
+    },
+    {
+      "event_id": "SH-IAM007-Q1-2027-DELEGATE-IMPLEMENTER",
+      "effective_at": "2026-12-29T00:00:00Z",
+      "case_available_at": "2026-12-29T01:00:00Z",
+      "person_id": "SH-EMP-ESS-0006",
+      "role": "SCOPED_IAM_GRANT_IMPLEMENTER"
+    },
+    {
+      "event_id": "SH-IAM007-Q1-2027-DELEGATE-HR",
+      "effective_at": "2026-12-29T00:00:00Z",
+      "case_available_at": "2026-12-29T01:00:00Z",
+      "person_id": "SH-EMP-ESS-0007",
+      "role": "SCOPED_HR_ROLE_APPROVER"
+    },
+    {
+      "event_id": "SH-IAM007-Q1-2027-DELEGATE-VALIDATOR",
+      "effective_at": "2026-12-29T00:00:00Z",
+      "case_available_at": "2026-12-29T01:00:00Z",
+      "person_id": "SH-EMP-INTERNAL-AUDIT-0001",
+      "role": "INDEPENDENT_SECOND_LINE_VALIDATOR"
+    }
+  ],
+  "hr_role_events": [
+    {
+      "event_id": "SH-HR-IAM007-Q1-2027-PREPARE",
+      "person_id": "SH-EMP-ESS-0001",
+      "action": "JOIN_SELECTED_SERVICE_FUNCTION",
+      "right_requested": "PREPARE_PAYROLL_BATCH",
+      "approved_by": "SH-EMP-ESS-0007",
+      "recorded_at": "2026-12-30T10:00:00Z",
+      "case_available_at": "2026-12-30T10:05:00Z",
+      "effective_at": "2027-01-01T00:00:00Z",
+      "state": "APPROVED_FUTURE_SYNTHETIC_ROLE_ASSIGNMENT"
+    },
+    {
+      "event_id": "SH-HR-IAM007-Q1-2027-APPROVE",
+      "person_id": "SH-EMP-ESS-0002",
+      "action": "JOIN_SELECTED_SERVICE_FUNCTION",
+      "right_requested": "APPROVE_PAYROLL_BATCH",
+      "approved_by": "SH-EMP-ESS-0007",
+      "recorded_at": "2026-12-30T10:15:00Z",
+      "case_available_at": "2026-12-30T10:20:00Z",
+      "effective_at": "2027-01-01T00:00:00Z",
+      "state": "APPROVED_FUTURE_SYNTHETIC_ROLE_ASSIGNMENT"
+    }
+  ],
+  "grant_authorizations": [
+    {
+      "event_id": "SH-IAM-AUTH-Q1-2027-PREPARE",
+      "hr_event_id": "SH-HR-IAM007-Q1-2027-PREPARE",
+      "person_id": "SH-EMP-ESS-0001",
+      "service_account_id": "SH-ESS-PAYROLL-RELEASE-PREPARE-0001",
+      "right": "PREPARE_PAYROLL_BATCH",
+      "approved_by": "SH-EMP-ESS-0005",
+      "assigned_implementer": "SH-EMP-ESS-0006",
+      "approved_at": "2026-12-31T15:00:00Z",
+      "case_available_at": "2026-12-31T15:05:00Z"
+    },
+    {
+      "event_id": "SH-IAM-AUTH-Q1-2027-APPROVE",
+      "hr_event_id": "SH-HR-IAM007-Q1-2027-APPROVE",
+      "person_id": "SH-EMP-ESS-0002",
+      "service_account_id": "SH-ESS-PAYROLL-RELEASE-APPROVE-0002",
+      "right": "APPROVE_PAYROLL_BATCH",
+      "approved_by": "SH-EMP-ESS-0005",
+      "assigned_implementer": "SH-EMP-ESS-0006",
+      "approved_at": "2026-12-31T15:15:00Z",
+      "case_available_at": "2026-12-31T15:20:00Z"
+    }
+  ],
+  "iam_realization_events": [
+    {
+      "event_id": "SH-IAM-REALIZE-Q1-2027-PREPARE",
+      "modeled_predecessor_grant_id": "SH-IAM007-Q1-2027-GRANT-PREPARE",
+      "authorization_id": "SH-IAM-AUTH-Q1-2027-PREPARE",
+      "hr_event_id": "SH-HR-IAM007-Q1-2027-PREPARE",
+      "person_id": "SH-EMP-ESS-0001",
+      "service_account_id": "SH-ESS-PAYROLL-RELEASE-PREPARE-0001",
+      "right": "PREPARE_PAYROLL_BATCH",
+      "implemented_by": "SH-EMP-ESS-0006",
+      "effective_at": "2027-01-01T00:00:00Z",
+      "case_available_at": "2027-01-01T00:10:00Z",
+      "state": "SYNTHETIC_IN_UNIVERSE_GRANT_NOT_REAL_DEPLOYMENT"
+    },
+    {
+      "event_id": "SH-IAM-REALIZE-Q1-2027-APPROVE",
+      "modeled_predecessor_grant_id": "SH-IAM007-Q1-2027-GRANT-APPROVE",
+      "authorization_id": "SH-IAM-AUTH-Q1-2027-APPROVE",
+      "hr_event_id": "SH-HR-IAM007-Q1-2027-APPROVE",
+      "person_id": "SH-EMP-ESS-0002",
+      "service_account_id": "SH-ESS-PAYROLL-RELEASE-APPROVE-0002",
+      "right": "APPROVE_PAYROLL_BATCH",
+      "implemented_by": "SH-EMP-ESS-0006",
+      "effective_at": "2027-01-01T00:00:00Z",
+      "case_available_at": "2027-01-01T00:15:00Z",
+      "state": "SYNTHETIC_IN_UNIVERSE_GRANT_NOT_REAL_DEPLOYMENT"
+    }
+  ],
+  "other_selected_service_q1_jml_events": [],
+  "selected_service_jml_completion_basis": "NEWLY_AUTHORED_SYNTHETIC_TWO_GRANT_CENSUS_ONLY; no claim about other company systems or prior Sep-Dec continuity",
+  "review_population": {
+    "event_id": "SH-IAM007-Q1-2027-POPULATION",
+    "campaign_id": "SH-IAM007-SH-ESS-PAYROLL-RELEASE-2027-Q1",
+    "as_of_exclusive": "2027-03-25T00:00:00Z",
+    "extracted_at": "2027-03-25T00:00:00Z",
+    "case_available_at": "2027-03-25T00:10:00Z",
+    "service_account_ids": [
+      "SH-ESS-PAYROLL-RELEASE-PREPARE-0001",
+      "SH-ESS-PAYROLL-RELEASE-APPROVE-0002"
+    ],
+    "source_state": "COMPLETE_NEWLY_AUTHORED_SELECTED_FUNCTION_EXPORT_NOT_EXTERNAL_DIRECTORY_CONFIRMATION"
+  },
+  "review_decisions": [
+    {
+      "event_id": "SH-IAM007-Q1-2027-DECISION-PREPARE",
+      "campaign_id": "SH-IAM007-SH-ESS-PAYROLL-RELEASE-2027-Q1",
+      "service_account_id": "SH-ESS-PAYROLL-RELEASE-PREPARE-0001",
+      "person_id": "SH-EMP-ESS-0001",
+      "decision": "RETAIN_AUTHORIZED",
+      "observed_rights": ["PREPARE_PAYROLL_BATCH"],
+      "authorized_rights": ["PREPARE_PAYROLL_BATCH"],
+      "decided_by": "SH-EMP-ESS-0005",
+      "decided_at": "2027-03-27T16:00:00Z",
+      "case_available_at": "2027-03-27T16:10:00Z"
+    }
+  ],
+  "independent_verifications": [
+    {
+      "event_id": "SH-IAM007-Q1-2027-VERIFY-PREPARE",
+      "decision_id": "SH-IAM007-Q1-2027-DECISION-PREPARE",
+      "service_account_id": "SH-ESS-PAYROLL-RELEASE-PREPARE-0001",
+      "verified_by": "SH-EMP-INTERNAL-AUDIT-0001",
+      "verified_at": "2027-03-28T12:00:00Z",
+      "case_available_at": "2027-03-28T12:05:00Z",
+      "result": "DECISION_MATCHES_AUTHORED_SELECTED_SERVICE_RIGHT"
+    }
+  ],
+  "missing_decision_response": {
+    "event_id": "SH-IAM007-Q1-2027-MISSING-APPROVE",
+    "campaign_id": "SH-IAM007-SH-ESS-PAYROLL-RELEASE-2027-Q1",
+    "service_account_id": "SH-ESS-PAYROLL-RELEASE-APPROVE-0002",
+    "expected_decision_due_at": "2027-03-31T23:59:59Z",
+    "owner_decision_source_id": null,
+    "independent_verification_source_id": null,
+    "detected_at": "2027-04-01T00:00:00Z",
+    "case_available_at": "2027-04-01T01:05:00Z",
+    "escalated_by": "SH-EMP-INTERNAL-AUDIT-0001",
+    "escalated_at": "2027-04-01T01:00:00Z",
+    "state": "MISSING_OWNER_DECISION_AND_INDEPENDENT_VERIFICATION",
+    "response": "Keep the account visible as an unresolved exception; no retroactive owner decision, access removal or clean control result is inferred."
+  },
+  "case_branches": {
+    "A": {"common_source": true, "company_delta_state": "NOT_AUTHORED"},
+    "B": {"common_source": true, "company_delta_state": "NOT_AUTHORED"}
+  },
+  "limits": [
+    "This is a prospective fictional 2027 case source authored in September 2026. Its scenario event times do not establish September 2026 completed activity or real deployment.",
+    "Repository availability and acceptance remain null until an accepted successor receipt pins the merge commit/time; authored_at is not known-on evidence.",
+    "The complete population assertion applies only to the two scoped human payroll-release role accounts. It does not establish all payroll application users, service identities, company entitlements, or the 701-person January census.",
+    "One review decision is absent. The response preserves the missing-evidence outcome and requires prospective remediation; it does not mark IAM-007 effective.",
+    "A/B-specific deltas, audit workroom commands, and private evaluator truth are outside this public common-source record."
+  ]
+}

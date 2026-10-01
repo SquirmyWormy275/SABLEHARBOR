@@ -1,0 +1,100 @@
+{
+  "gap_id": "LEGAL-GAP-TENURE",
+  "document_id": "SH-LEGAL-DRAFT-TENURE",
+  "title": "Sacramento, Fort and Bedford proposed site tenure and access instrument",
+  "status": "DRAFT_FOR_REVIEW",
+  "prepared": "2026-09-12",
+  "owner_role": "ESS Facilities/Workplace with enterprise Legal and relevant operating owner",
+  "approval": null,
+  "effective_date": null,
+  "source_paths": [
+    "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+    "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+    "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+    "geospatial/facilities/source/campus.json",
+    "geospatial/facilities/source/research_campuses.json",
+    "geospatial/facilities/RESEARCH_CAMPUSES.md",
+    "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md"
+  ],
+  "proposed_terms": [
+    {
+      "id": "SH-LEGAL-DRAFT-TENURE-T01",
+      "term": "Separate investigation access from definitive tenancy/acquisition; no automatic conversion",
+      "basis": "Proposed instrument architecture"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-TENURE-T02",
+      "term": "90-day inspection window from future effective date",
+      "basis": "New proposed duration"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-TENURE-T03",
+      "term": "Preserve three stable site IDs, modelled geometry and null occupancy dates",
+      "basis": "Accepted facility models and closeouts"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-TENURE-T04",
+      "term": "Each party bears its own investigation costs absent accepted work order",
+      "basis": "Proposed cost allocation"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-TENURE-T05",
+      "term": "Sable Harbor, LLC (SHI) is the proposed contracting party; individual authority remains to be established",
+      "basis": "Accepted parent legal identity; proposed selection for this instrument"
+    }
+  ],
+  "unresolved_fields": [
+    {
+      "id": "SH-LEGAL-DRAFT-TENURE-U01",
+      "field": "Property counterparty, legal interest and description for each site",
+      "next_action": "Select actual/synthetic accepted parcel and verify grantor authority before definitive instrument"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-TENURE-U02",
+      "field": "Rent/price, deposit, tax treatment and commencement dates",
+      "next_action": "Owner reviews separately sourced commercial schedule"
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-TENURE-U03",
+      "field": "Permitted lodging/process uses and professional approvals",
+      "next_action": "Reconcile site-specific readiness with Facilities and operating owner"
+    }
+  ],
+  "financial_schedules": [
+    {
+      "name": "Uncommitted site consideration",
+      "columns": [
+        "site_id",
+        "rent_usd",
+        "purchase_price_usd",
+        "commencement",
+        "status"
+      ],
+      "rows": [
+        [
+          "SH-SITE-0001",
+          null,
+          null,
+          null,
+          "unestablished"
+        ],
+        [
+          "SH-SITE-0003",
+          null,
+          null,
+          null,
+          "unestablished"
+        ],
+        [
+          "SH-SITE-0005",
+          null,
+          null,
+          null,
+          "unestablished"
+        ]
+      ]
+    }
+  ],
+  "version": "0.1.0",
+  "approval_status": "NOT_ACCEPTED"
+}

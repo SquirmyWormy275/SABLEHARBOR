@@ -1,0 +1,106 @@
+{
+  "document_id": "SH-INFORMATION-POLICY-20260922",
+  "version": "1.0.0",
+  "state": "IMPLEMENTATION_PENDING_REPOSITORY_ACCEPTANCE",
+  "authority": "Owner instruction to finish company closeout; ordinary implementation of pinned accepted information doctrine",
+  "authored_on": "2026-09-22",
+  "effective_at": "2026-09-22T00:00:00+00:00",
+  "availability": "Actual source commit or later; effective day is not evidence availability",
+  "sources": [
+    {
+      "path": "docs/j2/alexandria/INFORMATION_ACCESS_AND_DISCLOSURE.md",
+      "sha256": "d286201998a94058c9c1c16165537a9e612b6bd84cb29442d052f68da869c752"
+    },
+    {
+      "path": "docs/j2/alexandria/DAEDALUS_PERSONAL_INSTANCE_AND_WORKSPACE.md",
+      "sha256": "d91c6191dd095639e546c1cf623e05adf6d614f46fe5f1c9d4e7e7fa3758fb97"
+    },
+    {
+      "path": "docs/j2/alexandria/TEMPORAL_INTEGRITY.md",
+      "sha256": "e2cdc51b055e07f3161794b9a8fcd904809a610bd1d87d33952cfe5ed5dea0b0"
+    },
+    {
+      "path": "docs/governance/GENERATED_RECORDS_LIFECYCLE.md",
+      "sha256": "6ccf966b6d8f041b57ad8c0c5f8a43ae908324dd4321ed91126b894cc2aecfc5"
+    }
+  ],
+  "record_classes": [
+    {
+      "class_id": "PUBLIC_SYNTHETIC",
+      "accountable_role": "Information Governance",
+      "classification": "OPEN",
+      "restriction_reason": "PUBLISHED_OR_APPROVED_PUBLIC",
+      "retention_method": "PRESERVE_IMMUTABLE_EDITION",
+      "review_interval_days": 90,
+      "review_interval_basis": "Newly authored internal reconsideration schedule, not statutory retention period"
+    },
+    {
+      "class_id": "WORKING_OPERATIONS",
+      "accountable_role": "Business record owner",
+      "classification": "RESTRICTED",
+      "restriction_reason": "BUSINESS_WORKING",
+      "retention_method": "EXPLICIT_RECORD_SCHEDULE",
+      "review_interval_days": 90,
+      "review_interval_basis": "Newly authored internal reconsideration schedule, not statutory retention period"
+    },
+    {
+      "class_id": "WORKFORCE_PERSONAL",
+      "accountable_role": "People Operations",
+      "classification": "RESTRICTED",
+      "restriction_reason": "PERSONAL_INFORMATION",
+      "retention_method": "EXPLICIT_RECORD_SCHEDULE",
+      "review_interval_days": 90,
+      "review_interval_basis": "Newly authored internal reconsideration schedule, not statutory retention period"
+    },
+    {
+      "class_id": "LEGAL_PRIVILEGED",
+      "accountable_role": "Legal record owner",
+      "classification": "RESTRICTED",
+      "restriction_reason": "LEGAL_PRIVILEGE",
+      "retention_method": "EXPLICIT_RECORD_SCHEDULE",
+      "review_interval_days": 90,
+      "review_interval_basis": "Newly authored internal reconsideration schedule, not statutory retention period"
+    },
+    {
+      "class_id": "AUDIT_EVIDENCE",
+      "accountable_role": "Independent Assurance",
+      "classification": "RESTRICTED",
+      "restriction_reason": "AUDIT_WORK_PRODUCT",
+      "retention_method": "EXPLICIT_RECORD_SCHEDULE",
+      "review_interval_days": 90,
+      "review_interval_basis": "Newly authored internal reconsideration schedule, not statutory retention period"
+    },
+    {
+      "class_id": "PERSONAL_MEMORY",
+      "accountable_role": "Individual memory owner",
+      "classification": "RESTRICTED",
+      "restriction_reason": "PERSONAL_MEMORY",
+      "retention_method": "OWNER_REQUEST_AND_HOLD_REVIEW",
+      "review_interval_days": 90,
+      "review_interval_basis": "Newly authored internal reconsideration schedule, not statutory retention period"
+    },
+    {
+      "class_id": "PUBLIC_WORKING_COPY",
+      "accountable_role": "Working-copy custodian",
+      "classification": "OPEN",
+      "restriction_reason": "APPROVED_PUBLIC_COPY_NOT_AUTHORITATIVE_ORIGINAL",
+      "retention_method": "EXPLICIT_RECORD_SCHEDULE",
+      "review_interval_days": 90,
+      "review_interval_basis": "Internal reconsideration, not statutory destruction period"
+    }
+  ],
+  "rules": [
+    "No rank-based restriction or automatic manager access",
+    "OPEN applies to approved public synthetic records; absence of classification is not approval",
+    "Institutional Daedalus read authority does not authorize user disclosure or personal memory access",
+    "Derivative access is intersection of all transitive source entitlements",
+    "Personal memory is owner-specific; export remains non-authoritative and source-restricted",
+    "No authoritative write, self-promotion, cross-user memory sharing or shared training from memory",
+    "Record-specific schedule and human authority required for deletion; review date is not destruction deadline",
+    "Active legal hold defeats disposal, never enlarges disclosure",
+    "Revocation and tombstones defeat reads including restored older copies",
+    "Immutable published sources are preserved; approved successors do not erase original release bytes"
+  ],
+  "retention_years": null,
+  "real_deployment_claim": false
+}

@@ -1,0 +1,49 @@
+{
+  "record_id": "SH-ARU-TRANSACTION-COST-TAX-20260922",
+  "authored_on": "2026-09-22",
+  "fact_status": "NEWLY_AUTHORED_SYNTHETIC_DETAIL",
+  "acceptance_state": "PENDING_REPOSITORY_ACCEPTANCE",
+  "entity": "SHIH",
+  "target": "ARU",
+  "book_expense_usd": "900000.00",
+  "additional_book_cash_usd": "0",
+  "source_paths": [
+    "industrial/source/finance.json",
+    "industrial/transaction/02_ARU_LOI_AND_SELLER_FILE.md",
+    "docs/legal/gap-instruments/source/debt-liens.md"
+  ],
+  "loi_on": "2025-11-14",
+  "service_period": "2025-11-15/2026-01-07",
+  "costs": [
+    {
+      "cost_id": "ARU-TC-01",
+      "purpose": "Definitive acquisition agreement negotiation and required third-party consent documentation",
+      "amount_usd": "350000.00"
+    },
+    {
+      "cost_id": "ARU-TC-02",
+      "purpose": "Acquisition structure and all-shareholder closing implementation advice",
+      "amount_usd": "200000.00"
+    },
+    {
+      "cost_id": "ARU-TC-03",
+      "purpose": "Post-LOI confirmatory financial, tax and operating diligence to facilitate this acquisition",
+      "amount_usd": "250000.00"
+    },
+    {
+      "cost_id": "ARU-TC-04",
+      "purpose": "Closing checklist, stock-transfer documentation and acquisition completion services",
+      "amount_usd": "100000.00"
+    }
+  ],
+  "fee_facts": "Fixed service charges; no contingent success fee, financing service, integration service, employee compensation or pre-LOI investigation allocated to this existing900k envelope. This supplies ordinary fictional precision, not recovered provider invoices. No new payment or obligation. Separate accepted300k debt issuance cost unaffected.",
+  "current_tax_deduction_usd": "0",
+  "capitalized_tax_acquisition_cost_usd": "900000.00",
+  "elected_treatment": "Add separately identified900k to deemed acquisition basis/AGUB under modeled338h10 architecture; reconcile ClassI\u2013VI allocation before residualClassVII. Preserve original13M tax goodwill as historical original allocation, not silent rewrite.",
+  "no_election_treatment": "Capitalized acquired stock basis, no automatic asset amortization.",
+  "authority_urls": [
+    "https://www.irs.gov/irb/2004-07_IRB",
+    "https://www.govinfo.gov/content/pkg/CFR-2025-title26-vol5/pdf/CFR-2025-title26-vol5-sec1-338-5.pdf"
+  ],
+  "authority_access_date": "2026-09-22"
+}

@@ -40,5 +40,3 @@ Authorized billets, named people, modeled staffing and actual occupancy are diff
 - [J2 Education](education.md)
 - [Enterprise Support Services](ess.md)
 - [Facilities and workplace services](facilities.md)
-
-Related reading describes useful connections, not additional reporting lines.

@@ -1,0 +1,47 @@
+Manual workbook QA — first pass, 2026-09-12
+Reviewer: practical_routes agent. All 17 retained workbook contact PNGs opened with view_image(detail=original). Each contact derives from native LibreOffice PDF rendering. This is a findings record, NOT a passing visual approval.
+
+CRITICAL
+uranium-custody-workbook-001.png: only a blank portrait page with 'Read first' and 'Page 1'. No title, draft status, metadata or unactivated-service schedule is visible. Cannot count both workbook sheets as visually inspected from this image. Regenerate complete source workbook/render; inspect corrected image before PASS.
+
+REQUIRED PRESENTATION CORRECTIONS
+1. Machine headers visible in most schedules: amount_usd, employer_entity_id, january_7_2027_usd, account_description, ownership_percent, board_date, implied_pre_money_usd, participation_rate etc. Use human display labels, preserve native keys in source/register rather than table headers. Read-first and schedule status should display 'Draft for review' rather than DRAFT_FOR_REVIEW where practical.
+2. Currency values are tightly adjacent to next text cell: workforce 50,000.00ARU; consultancy225,000.00NOT_ESTABLISHED; debt48,000,000.00Use; tax-filing68,000,000.0048M+20M; billing1,740,000.00Released. Add cell padding/separation/borders or accounting-style right margin. No confirmed overlapping glyphs, but visually reads as concatenated fields.
+3. Financing-documents schedule has 9 columns compressed into tiny text, much smaller than other sheets. Use shorter human headers, practical widths and split economic/ownership/precision presentation or larger native print page. Readability must not rely on fit-to-page shrinking.
+4. Percent columns render as 20.00/100.00/66.50 rather than 20%/100%/66.5%. Current header conveys percent, so not an arithmetic error, but needs appropriate number format. Do not change underlying percentage value or apply a format that produces 2000%. Carry 10,000 units and 5 years should not carry false decimal precision. Currency column human label should say USD.
+5. Machine measure names visible in carry and Red Wash schedules (excess_profit_pool, cash_consideration, environmental_title_escrow); show normal spaced human labels. Null fields are blank with status in adjacent column; preserve unknown-versus-zero and add clear legend if needed.
+
+PER WORKBOOK OBSERVATIONS (all visible pages inspected)
+advisory-contracts: 2 pages; title wraps within header; five milestone rows intact; percent formatting correction.
+billing: 2 pages; five rows intact, no false total; money/text adjacency and header correction.
+carry: 2 pages; four constants intact; machine measure names, false 2-decimal counts and percent formatting correction.
+colo: 2 pages; four sensitivity rows intact and hypothesis caveat visible; long rate header tiny/tight; money/text adjacency.
+debt-liens: 4 pages; 9 sources/uses rows, 5 principal rows, 7 term-input rows visible; no false aggregate; source ACT/365 visible; money/text adjacency and human headers needed.
+financing-documents: 2 pages; HV/WR rows and precision caveat present, but tiny full-width sheet needs readability improvement.
+formations: 3 pages; six entities and four seller rows intact; ownership percentages run into event dates; percent labels/spacing correction.
+host-rights: 2 pages; two hosts visible; unknown economic cells remain blank; no fabricated amount.
+land: 3 pages; six perimeter rows and two balanced posting rows visible; clearing not depicted as cash; money/text adjacency.
+mark-clearance: 2 pages; all three unapproved cost rows visible and amounts blank.
+rw-chronology: 2 pages; five preserved measures visible; no summation; human labels/spacing correction.
+rw-title: 2 pages; four consideration rows visible and total28M distinct; machine component names/spacing correction.
+tax-billing: 2 pages; six fields visible, only released invoice amount numeric; no false tax zero; header/spacing correction.
+tax-filing: 2 pages; ten bridge rows visible, no misleading sum; 587,500 DTA visible; money/text adjacency.
+tenure: 2 pages; three stable sites visible; no rent/price/date inferred; human headers needed.
+uranium-custody: FAIL blank one-page render as above, outstanding second sheet visual coverage.
+workforce: 3 pages; eight recipients and one consultancy visible; correct source employers (Seth BST, others ARU); readable but machine headers and numeric/text joining need correction.
+
+No source/builder/workbook files changed during this review. Request corrected native renders for all affected surfaces before a final visual-QA pass.
+
+FINAL REINSPECTION — corrected workbook render set
+Opened ALL 17 corrected *-workbook-001.png files again using view_image(detail=original), covering all 39 native worksheet pages (17 Read first plus 22 schedule pages). Result: PASS for complete, readable review delivery; no remaining critical missing content, clipped values, overlapping cells or misleading totals observed. This is visual QA, not owner design approval or legal-term acceptance.
+
+Confirmed corrections:
+- Uranium now has complete title/metadata and the separate unactivated-service schedule; blank-render failure resolved.
+- Human column headings and normal measure labels replace native snake_case headers.
+- Monetary values have clear spacing from adjacent text and USD headers.
+- Percent-only columns display 20%, 100%, 66.50% correctly; mixed-unit columns retain explicit percent/year/unit labels.
+- Financing schedule is materially larger and readable, with complete wrapped precision caveat and distinct approximate/derived values.
+- All 39 pages retain source/approval limitations; unresolved rates, commencement and tax fields remain blank rather than false zeros.
+- Eight retention rows, separate consultancy, funding/uses subtotals and land-clearing entry remain legible and distinct.
+
+Minor nonblocking typography observed: tenure heading 'Commencement' wraps within the word; workforce consultancy status NOT_ESTABLISHED wraps its final letters. All letters remain visible and the meaning is clear. Shorter display aliases ('Start date', 'Not established') would polish those two cells if another layout change is made. These are not missing-content or arithmetic failures and do not warrant an unsupported claim that every visual style choice is owner-approved.

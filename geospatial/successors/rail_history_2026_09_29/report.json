@@ -1,0 +1,65 @@
+{
+  "accepted_history_preserved": {
+    "1898_extent_miles": null,
+    "1898_surveyed_geometry": null,
+    "1954_recovered_geometry": null,
+    "1954_survivor_source_range_miles": [
+      14,
+      16
+    ],
+    "abandoned_recovered_geometry": null,
+    "real_title_or_right_of_way_instrument": null
+  },
+  "attribution_correction": "geospatial/successors/rail_history_2026_09_29/ATTRIBUTION_CORRECTION_2026-09-29.md",
+  "authored_at_utc": "2026-09-29T14:29:52Z",
+  "candidate_scenario_id": "HYP-BST-1953-1954-SOUTHWEST-01",
+  "current_operating_asset_count_added": 0,
+  "finance_tax_cash_delta_usd": 0,
+  "illustrative_prefailure_total_miles": 22.132255428412165,
+  "input_sha256": {
+    "geospatial/engineering_review/historical_alignment_2026_09_29/candidate.geojson": "6bea90deaad1fe4ffcf82aa81aa8df45e725f664ecc1712837aa0cf389ca1063",
+    "geospatial/engineering_review/historical_alignment_2026_09_29/report.json": "87de9e8b04f8f0c77498fa8719a6c6598c786f0b06910eae2ea4c696ee8368da",
+    "geospatial/engineering_review/historical_alignment_2026_09_29/source.json": "82534ace4479b75366e9fd7e1c547f99499f9490de27f1f33f78814e38ee4ec4",
+    "industrial/source/chronology.json": "53fe564b06301176a3a8322aedb82fee5a61c82caeae3d333e0a2c520b3eedc5",
+    "industrial/source/operations.json": "e7488b55c1c963d102db66e7a7b6f1373a3d68a9f94b8f99b164092245713a3b",
+    "industrial/successors/rail_2026_09_29/reperform-result.json": "868ea3f17d063021b3a574a33b8ddc019a657e6521e3431a4963db5a8379a5c4",
+    "industrial/successors/rail_2026_09_29/source.json": "3aa95c1764a144dc3611acca29f2982c59b44863766810532c6ef42faa3c1b80"
+  },
+  "lengths_miles": {
+    "abandoned": 7.04739774310322,
+    "survivor": 15.084857685308943
+  },
+  "limits": [
+    "The source-evidence view of 1898, 1954 and abandoned geometry remains unlocated.",
+    "This separate map case selects authored coordinates for an illustrative historical fiction, not a recovered survey or real property right.",
+    "The 1954 date is the rescue event/snapshot, not proof of full-line commencement or continuous operation; abandonment and retirement days remain unknown.",
+    "No modern route, milepost, operating forecast, legal right or financial release changes."
+  ],
+  "prior_source_accepted_commit": "bcdf3ade1d83d04774da9a914deb269442ee52f6",
+  "prior_source_repository_available_at_utc": "2026-09-29T15:22:18Z",
+  "real_property_instrument_count_added": 0,
+  "record_id": "SH-GEO-BST-HISTORY-CASE-20260929-001",
+  "repository_available_at": null,
+  "snapshot_dispositions": [
+    {
+      "date": "1898-04-06",
+      "illustrative_linework": 0,
+      "recovered_linework": 0
+    },
+    {
+      "date": "1954-07-01",
+      "illustrative_linework": 1,
+      "recovered_linework": 0
+    },
+    {
+      "date": "1968-10-14",
+      "illustrative_linework": 0,
+      "modern_route_source_separate": true,
+      "recovered_linework": 0
+    }
+  ],
+  "source_schema_version": "1.1",
+  "source_sha256": "a869bae143c4216663dc11e8364ef5ce5ada0e2d7b0e946b6e5920a0eb2c81a4",
+  "state": "PROVISIONAL_DERIVED_SYNTHETIC_HISTORY_CASE",
+  "supersedes_source_sha256": "33dcadb3c185d5c07125d92af9b3cea3bed6585b610f480d5cbf66214db78deb"
+}

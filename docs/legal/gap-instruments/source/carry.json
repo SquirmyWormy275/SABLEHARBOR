@@ -1,0 +1,75 @@
+{
+  "gap_id": "LEGAL-GAP-CARRY",
+  "document_id": "SH-LEGAL-DRAFT-CARRY",
+  "title": "Advisory contractual phantom carry plan — proposed instrument",
+  "status": "DRAFT_FOR_REVIEW",
+  "source_paths": [
+    "docs/advisory/CARRY_PLAN_STANDARD.md",
+    "docs/advisory/LEGAL_AND_CONTRACTING_TERM_SHEET.md",
+    "industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md"
+  ],
+  "proposed_terms": [
+    {
+      "id": "SH-LEGAL-DRAFT-CARRY-T01",
+      "term": "20% pool, 10,000 notional units, five-year 20% annual vesting.",
+      "basis": "SH-ADV-005 accepted direction."
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-CARRY-T02",
+      "term": "No named grants or individualized serving-J2 contact; applicant initiates after service.",
+      "basis": "SH-ADV-005 sections 5–6."
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-CARRY-T03",
+      "term": "Notice, correction and calculation records administer source rights.",
+      "basis": "Proposed operational clauses; no new grant."
+    }
+  ],
+  "unresolved_fields": [
+    {
+      "id": "SH-LEGAL-DRAFT-CARRY-U01",
+      "field": "Sponsor approval, jurisdiction and legal/tax mechanics",
+      "next_action": "Qualified review before plan execution."
+    },
+    {
+      "id": "SH-LEGAL-DRAFT-CARRY-U02",
+      "field": "Annual capital, holdback and participant fields",
+      "next_action": "Populate only through approved annual calculation and post-service grant; no serving-person examples."
+    }
+  ],
+  "financial_schedules": [
+    {
+      "name": "Plan constants; no participant balances",
+      "columns": [
+        "measure",
+        "value",
+        "unit"
+      ],
+      "rows": [
+        [
+          "excess_profit_pool",
+          20,
+          "percent"
+        ],
+        [
+          "notional_pool",
+          10000,
+          "units"
+        ],
+        [
+          "default_vesting_years",
+          5,
+          "years"
+        ],
+        [
+          "annual_vesting",
+          20,
+          "percent"
+        ]
+      ]
+    }
+  ],
+  "version": "0.1.0",
+  "prepared": "2026-09-12",
+  "approval_status": "NOT_ACCEPTED"
+}

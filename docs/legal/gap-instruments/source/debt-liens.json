@@ -1,0 +1,207 @@
+{
+  "gap_id": "LEGAL-GAP-DEBT-LIENS",
+  "document_id": "SH-LEGAL-DRAFT-DEBT-LIENS",
+  "title": "ARU credit, security and payoff document drafts",
+  "status": "DRAFT_FOR_REVIEW",
+  "source_paths": [
+    "industrial/transaction/05_ARU_CLOSING_AND_TAX_DELIVERY.md",
+    "industrial/finance/TRANSACTION_ACCOUNTING.md",
+    "industrial/source/finance.json"
+  ],
+  "proposed_terms": [
+    {
+      "id": "DEBT-P01",
+      "term": "ARU proposed borrower and verified lender execute a 22.5M term facility only with completed authority, facility and funding schedules.",
+      "basis": "Draft borrower/contract identification; existing model supplies debt economics, not lender evidence."
+    },
+    {
+      "id": "DEBT-P02",
+      "term": "Carry 6.75% and ACT/365 with 375000 quarterly principal beginning 2026-04-07 as model-derived draft terms.",
+      "basis": "Existing transaction accounting and finance source; actual lender acceptance remains unverified."
+    },
+    {
+      "id": "DEBT-P03",
+      "term": "Deliver quarterly debt reconciliation within 45 days and material payment/collateral discrepancy notice within 5 business days.",
+      "basis": "New proposed reporting terms, not source-established lender obligations."
+    },
+    {
+      "id": "DEBT-P04",
+      "term": "Grant only separately scheduled security upon proper execution; preserve entity-specific exclusions, authority and third-party rights.",
+      "basis": "New security draft; no present grant, guarantee, filing or perfection assertion."
+    },
+    {
+      "id": "DEBT-P05",
+      "term": "Obtain payoff statement and instrument-specific release undertaking; verify supported settlement separately from lien release.",
+      "basis": "New request and undertaking clauses; current internal ARU-CL-03 is not independent lender confirmation."
+    }
+  ],
+  "unresolved_fields": [
+    {
+      "id": "DEBT-U01",
+      "field": "Lender, verified borrower capacity and any separate guarantors/grantors",
+      "next_action": "Complete party and authority schedule without assuming group-wide guarantees."
+    },
+    {
+      "id": "DEBT-U02",
+      "field": "Actual maturity, business-day rule, late interest and prepayment terms",
+      "next_action": "Negotiate explicit clauses; 60-month model amortization is not independent maturity evidence."
+    },
+    {
+      "id": "DEBT-U03",
+      "field": "Collateral assets, existing encumbrances and required consents",
+      "next_action": "Complete asset-specific grantor schedule and qualified legal review before execution."
+    },
+    {
+      "id": "DEBT-U04",
+      "field": "Payoff value date, accrued interest, instruction reference and release instruments",
+      "next_action": "Obtain exact lender documentation; do not fabricate operational bank details."
+    },
+    {
+      "id": "DEBT-U05",
+      "field": "Numerical covenants and compliance definitions",
+      "next_action": "Obtain accepted covenant schedule before any compliance certificate."
+    }
+  ],
+  "financial_schedules": [
+    {
+      "name": "Closing sources and uses — do not sum sources and uses together",
+      "columns": [
+        "line",
+        "amount_usd",
+        "classification"
+      ],
+      "rows": [
+        [
+          "Buyer share consideration",
+          48000000,
+          "Use; includes 45M seller and 3M escrow"
+        ],
+        [
+          "Old term/revolver payoff",
+          13500000,
+          "Use; excludes leases"
+        ],
+        [
+          "Total uses before fees",
+          61500000,
+          "Use subtotal"
+        ],
+        [
+          "New term advance",
+          22500000,
+          "Source"
+        ],
+        [
+          "Parent equity before fees",
+          39000000,
+          "Source"
+        ],
+        [
+          "Total sources before fees",
+          61500000,
+          "Source subtotal"
+        ],
+        [
+          "Transaction expense funding",
+          900000,
+          "Separate fee"
+        ],
+        [
+          "Debt issuance cost funding",
+          300000,
+          "Separate financing cost"
+        ],
+        [
+          "Parent cash including fees",
+          40200000,
+          "Parent 39M+fees 1.2M"
+        ]
+      ]
+    },
+    {
+      "name": "Modeled closing principal",
+      "columns": [
+        "measure",
+        "amount_usd"
+      ],
+      "rows": [
+        [
+          "New term principal",
+          22500000
+        ],
+        [
+          "Retained leases",
+          2500000
+        ],
+        [
+          "Total funded principal",
+          25000000
+        ],
+        [
+          "Retained cash",
+          2000000
+        ],
+        [
+          "Net principal debt",
+          23000000
+        ]
+      ]
+    },
+    {
+      "name": "Source-model term and revolver inputs",
+      "columns": [
+        "measure",
+        "value",
+        "unit",
+        "basis"
+      ],
+      "rows": [
+        [
+          "Term rate",
+          6.75,
+          "percent annually",
+          "Modeled"
+        ],
+        [
+          "Interest basis",
+          "ACT/365",
+          "day count",
+          "Modeled; unverified lender acceptance"
+        ],
+        [
+          "Quarterly principal",
+          375000,
+          "USD",
+          "First 2026-04-07"
+        ],
+        [
+          "Revolver capacity",
+          5000000,
+          "USD",
+          "Modeled"
+        ],
+        [
+          "Revolver draw",
+          0,
+          "USD",
+          "Modeled selected case"
+        ],
+        [
+          "Undrawn fee",
+          0.25,
+          "percent annually",
+          "Modeled"
+        ],
+        [
+          "Constant full-year undrawn fee sensitivity",
+          12500,
+          "USD",
+          "5M×0.25%; not actual settlement"
+        ]
+      ]
+    }
+  ],
+  "version": "0.1.0",
+  "prepared": "2026-09-12",
+  "approval_status": "NOT_ACCEPTED"
+}

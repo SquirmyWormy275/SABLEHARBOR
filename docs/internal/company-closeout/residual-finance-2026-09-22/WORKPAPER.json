@@ -1,0 +1,76 @@
+{
+  "status": "REVIEWABLE_SOURCE_DERIVATION_NOT_ADOPTED_RIGHTS",
+  "source_baseline": "812676c2ac739d6fba91f770ee1369eea9f2b46d",
+  "source_hashes": {
+    "industrial/source/finance.json": "0d4461abfcdb138da36db503ff0cfea7c47ea7fd7109494126514225fd43e38c",
+    "industrial/planning/source/forecast.json": "bd1eb4da4c2fa60277db9122d7f4272298ef4c005e26d4a710e315b0cadb1013",
+    "enterprise/closeout/source/capital_register.json": "8993b8e1457571d2ee937bef370f0cd26957e1e95945a85083544f547b08a15c",
+    "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md": "400190fc75b2e8ca001dedb9eb99773f677d9ed8462e1bd41ae56ac35aeb9a69",
+    "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md": "dc1e2e3ea6e7ea8d364eae87bd890a8c79a5a577a7554ed371cda3810ea945a8",
+    "docs/governance/board-records/2021-06-18_harrison-vale-growth-financing-minutes.md": "b994512c64f86abe0d649f95d4ea3d3e00fd0c2c22af0ed56b62bd7ed41fae97",
+    "docs/legal/gap-instruments/source/debt-liens.md": "e9adf8cdc08237c855556d22d30a7649ac64b471c567ce7a54c1aa67613485ef",
+    "docs/legal/gap-instruments/source/financing-documents.md": "f648e1844ed93a66b81111b86ae98c98e3e901907f138fd5b9e87172adbf3607"
+  },
+  "existing_payoff_components": [
+    {
+      "authored_administrative_id": "SH-DEBT-ARU-LEGACY-TERM-PAYOFF-20260107",
+      "principal_usd": 11500000,
+      "derivation": "2025 opening term principal less 2025 source principal payments"
+    },
+    {
+      "authored_administrative_id": "SH-DEBT-ARU-LEGACY-REVOLVER-PAYOFF-20260107",
+      "principal_usd": 2000000,
+      "derivation": "2025 source revolver principal; no principal movement in closing drivers"
+    }
+  ],
+  "existing_total_payoff_usd": 13500000,
+  "retained_lease_usd_excluded": 2500000,
+  "scheduled_2031_maturity": {
+    "date": "2031-01-07",
+    "scheduled_installments_before_maturity": 19,
+    "principal_usd_if_scheduled_payments_made": 15375000,
+    "source_status": "ACCEPTED_CONDITIONAL_FORECAST_NOT_EXECUTED_INSTRUMENT"
+  },
+  "conditional_refinancing": [
+    {
+      "scenario": "base",
+      "conditional_capacity_usd": 18000000,
+      "conditional_draw_usd": 15375000,
+      "principal_not_covered_by_new_draw_usd": 0,
+      "conditional_fee_usd": "153750",
+      "principal_plus_fee_not_covered_by_draw_usd": "153750"
+    },
+    {
+      "scenario": "downside",
+      "conditional_capacity_usd": 12000000,
+      "conditional_draw_usd": 12000000,
+      "principal_not_covered_by_new_draw_usd": 3375000,
+      "conditional_fee_usd": "180000.0",
+      "principal_plus_fee_not_covered_by_draw_usd": "3555000.0"
+    },
+    {
+      "scenario": "expansion",
+      "conditional_capacity_usd": 20000000,
+      "conditional_draw_usd": 15375000,
+      "principal_not_covered_by_new_draw_usd": 0,
+      "conditional_fee_usd": "153750",
+      "principal_plus_fee_not_covered_by_draw_usd": "153750"
+    }
+  ],
+  "cap_threshold_options_not_adopted": {
+    "half_original_registered_units": {
+      "Harrison Vale Partners": 9250000,
+      "Wolf Ridge Holdings": 7500000
+    },
+    "ten_percent_current_units_at_100m_total": {
+      "Harrison Vale Partners": 10000000,
+      "Wolf Ridge Holdings": 10000000
+    },
+    "current_units": {
+      "Harrison Vale Partners": 18500000,
+      "Wolf Ridge Holdings": 15000000
+    }
+  },
+  "posting_count": 0,
+  "boundary": "Schedule arithmetic is not actual future cash sufficiency or a commitment. No old security or lien release inferred. Administrative IDs identify existing obligations, not new instruments or lender acceptance."
+}

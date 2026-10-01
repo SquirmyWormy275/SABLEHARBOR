@@ -187,11 +187,11 @@ def build(engine, state: dict, actor: str) -> dict:
         "source pins and explicit context omissions where review was requested.</p>"
         "<h2>Included native artifacts</h2>"
         "<p>These links open the retained files included in this snapshot. "
-        "The manifest records each file's identity and hash.</p><ul>"
-        + artifact_links + "</ul>"
+        "The manifest records each file's identity and hash.</p><ul>" + artifact_links + "</ul>"
         "<h2>Review records and private appendices</h2>"
         "<p><a href='manifest.json'>Exact native-file manifest</a></p><ul>"
-        + appendix_links + "</ul></body></html>"
+        + appendix_links
+        + "</ul></body></html>"
     ).encode()
     if sum(m["bytes"] for m in included) + sum(map(len, additions.values())) > MAX_EXPANDED:
         raise DomainError("Private review exceeds bounded archive limit")

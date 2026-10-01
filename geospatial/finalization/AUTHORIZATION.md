@@ -1,0 +1,9 @@
+# Geographic completion authority — September 13, 2026
+
+The repository owner authorized the agent to resolve the remaining fictional geographic and occupancy decisions using its judgment, preserve existing accepted canon, screen site choices against real geography, and record the decisions in a controlling canon addendum. The owner specifically required fidelity to the overall canon and reference to existing documents for cogency and continuity. Explicit unknown or not-applicable dispositions are authorized where precision adds no value. Source review, integration, testing, publication and closure of issues whose acceptance criteria pass are authorized without further per-detail approval.
+
+This authority was provided in the repository working conversation following geographic evidence v1.3.0 / PR #163. The accepted starting revision is `321354190005c17bd91fa15ce15bb1c57be56f88`. The implementation worktree is separate from other sessions.
+
+The delegation does not authorize contradictory business redesign, replacement of approved visual sources, real property claims, invented actual execution, changes to the other sessions' protected work, billing approval, or closure by unsupported certification. Current canon outranks historical handovers. The September 6 Cradle closeout, for example, controls Bedford's Fairmont-area location and scale over the older Belle/Kanawha suggestion. The approved 2024 Klein/Fort transition remains controlling.
+
+Decisions produced under this delegation must name their controlling source constraints, explicit newly authored fictional facts, alternatives, real-reference screening, temporal precision, and any retained uncertainty. The controlling addendum and its structured records become accepted canon only with their accepted integration; a proposal branch does not independently establish canon.

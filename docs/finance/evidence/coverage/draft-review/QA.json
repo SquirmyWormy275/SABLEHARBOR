@@ -1,0 +1,63 @@
+{
+  "status": "DRAFT_FOR_EXACT_FILE_REVIEW",
+  "source_commit": "222292f94592b87747a0a15afd58740e7bc776ce",
+  "renderer_sha256": "6c941b14b2d8ae30ac5d42c8ed84ebba9c51f2db8f7b51106e065b4e534dafb1",
+  "archive_sha256": "b8e81572d829fec7209d1d18eb15bac21e52b37714211aee005b5f1a68ab5817",
+  "families": [
+    {
+      "family": "customer",
+      "manifest": "docs/finance/evidence/customer/draft/manifest.json",
+      "manifest_sha256": "b9eb1180ca6bc5acfd4b6256a26f952efbf412f5dd26179c4da3dda992887958",
+      "pdf_pages": 1,
+      "worksheet_previews": 16
+    },
+    {
+      "family": "treasury",
+      "manifest": "docs/finance/evidence/treasury/draft/manifest.json",
+      "manifest_sha256": "a3e59491e26933b9c02b363b3d254a672bf88acc30b99cce5bbdbfdb29e3a7be",
+      "pdf_pages": 1,
+      "worksheet_previews": 16
+    },
+    {
+      "family": "close",
+      "manifest": "docs/finance/evidence/close/draft/manifest.json",
+      "manifest_sha256": "9cba0612757b2fe6d2f05b0f0aedb47e5a13bbc3defc056dd7d494a0e2c7daca",
+      "pdf_pages": 1,
+      "worksheet_previews": 12
+    },
+    {
+      "family": "supporting-schedules",
+      "manifest": "docs/finance/evidence/supporting-schedules/draft/manifest.json",
+      "manifest_sha256": "a6d551a9fa28bc25b61787624fc210517073dd7b536ab6a3638f8451dca2ade6",
+      "pdf_pages": 1,
+      "worksheet_previews": 16
+    },
+    {
+      "family": "tax-transaction",
+      "manifest": "docs/finance/evidence/tax-transaction/draft/manifest.json",
+      "manifest_sha256": "40a411b3c16381f34d4ee0e993f72ca91e228a2a0b65462bd1272022a996aa56",
+      "pdf_pages": 1,
+      "worksheet_previews": 9
+    }
+  ],
+  "render_count": 74,
+  "contact_sheet_count": 22,
+  "contact_manifest_sha256": "35766c01f839403ac0a3b6bc1bbe411d54f1fbad0de76d4ce67f593c00982e9a",
+  "index_sha256": "65f893e2df93fb463b92476dbf3e6f3128c6afac5bfa284b16b80e8623751f6c",
+  "validation": {
+    "complete_workbook_data_row_instances": 49076,
+    "current_transaction_source_row_instances": 70,
+    "source_and_artifact_hashes": "PASS",
+    "current_renderer_binding": "PASS",
+    "render_and_contact_hashes": "PASS",
+    "review_index_local_links": "PASS",
+    "source_population_and_accounting_validator": "PASS",
+    "extract_regression_tests": "5 passed",
+    "reader_workqueue_validator": "PASS: 17 jobs, graph, paths and frozen hashes"
+  },
+  "visual_review": {
+    "initial_review": "Prior finance worker inspected all 74 original renders and identified two layout issues.",
+    "corrected_review": "Recovery worker inspected actual final treasury workbook-06.png and tax-transaction workbook-04.png: settlement IDs remain within each row; PPA measure labels fit the widened column. Adjacent workbook-07.png treasury and workbook-05.png tax-transaction were also inspected.",
+    "remaining_limit": "Owner exact-file acceptance pending. Worksheet previews show leading rows and columns; complete workbook data validated separately."
+  }
+}

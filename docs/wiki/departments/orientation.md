@@ -40,5 +40,3 @@ Board and executive proximity do not confer executive authority. Unnamed appoint
 - [Judgment](judgment.md)
 - [Contact](contact.md)
 - [J2 Education](education.md)
-
-Related reading describes useful connections, not additional reporting lines.

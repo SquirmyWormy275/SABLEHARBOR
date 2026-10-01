@@ -1,0 +1,619 @@
+{
+  "version": "1.0.0",
+  "schema_id": "SH-SUCCESSOR-RECORDS-2026-09-22",
+  "base_schema_sha256": "38209cbe5318e759eac4e0967865c5dcb2ec291a6403986729fd81404a04d1ff",
+  "base_scope_sha256": "d4ab2050fd745ce565382b206eb8141047878c21df84bcbbb4128fc4e5bd5618",
+  "schema": {
+    "successor_j2_administration": [
+      "record_id",
+      "record_type",
+      "entity",
+      "unit",
+      "effective_from",
+      "effective_to",
+      "effective_precision",
+      "available_at",
+      "recorded_at",
+      "authored_day",
+      "fact_state",
+      "record_origin",
+      "scenario",
+      "source_path",
+      "source_sha256",
+      "source_hashes_json",
+      "source_commit",
+      "publication_state",
+      "acceptance_status",
+      "payload_json",
+      "additional_cash_usd"
+    ],
+    "successor_orientation_commissions": [
+      "record_id",
+      "record_type",
+      "entity",
+      "unit",
+      "effective_from",
+      "effective_to",
+      "effective_precision",
+      "available_at",
+      "recorded_at",
+      "authored_day",
+      "fact_state",
+      "record_origin",
+      "scenario",
+      "source_path",
+      "source_sha256",
+      "source_hashes_json",
+      "source_commit",
+      "publication_state",
+      "acceptance_status",
+      "payload_json",
+      "additional_cash_usd"
+    ],
+    "successor_debt_payoff": [
+      "record_id",
+      "record_type",
+      "entity",
+      "unit",
+      "effective_from",
+      "effective_to",
+      "effective_precision",
+      "available_at",
+      "recorded_at",
+      "authored_day",
+      "fact_state",
+      "record_origin",
+      "scenario",
+      "source_path",
+      "source_sha256",
+      "source_hashes_json",
+      "source_commit",
+      "publication_state",
+      "acceptance_status",
+      "payload_json",
+      "additional_cash_usd"
+    ],
+    "successor_asset_screen": [
+      "record_id",
+      "record_type",
+      "entity",
+      "unit",
+      "effective_from",
+      "effective_to",
+      "effective_precision",
+      "available_at",
+      "recorded_at",
+      "authored_day",
+      "fact_state",
+      "record_origin",
+      "scenario",
+      "source_path",
+      "source_sha256",
+      "source_hashes_json",
+      "source_commit",
+      "publication_state",
+      "acceptance_status",
+      "payload_json",
+      "additional_cash_usd"
+    ],
+    "successor_finance_source_inventory": [
+      "record_id",
+      "record_type",
+      "entity",
+      "unit",
+      "effective_from",
+      "effective_to",
+      "effective_precision",
+      "available_at",
+      "recorded_at",
+      "authored_day",
+      "fact_state",
+      "record_origin",
+      "scenario",
+      "source_path",
+      "source_sha256",
+      "source_hashes_json",
+      "source_commit",
+      "publication_state",
+      "acceptance_status",
+      "payload_json",
+      "additional_cash_usd"
+    ],
+    "successor_capital_rights": [
+      "record_id",
+      "record_type",
+      "entity",
+      "unit",
+      "effective_from",
+      "effective_to",
+      "effective_precision",
+      "available_at",
+      "recorded_at",
+      "authored_day",
+      "fact_state",
+      "record_origin",
+      "scenario",
+      "source_path",
+      "source_sha256",
+      "source_hashes_json",
+      "source_commit",
+      "publication_state",
+      "acceptance_status",
+      "payload_json",
+      "additional_cash_usd"
+    ],
+    "successor_capital_assents": [
+      "record_id",
+      "record_type",
+      "entity",
+      "unit",
+      "effective_from",
+      "effective_to",
+      "effective_precision",
+      "available_at",
+      "recorded_at",
+      "authored_day",
+      "fact_state",
+      "record_origin",
+      "scenario",
+      "source_path",
+      "source_sha256",
+      "source_hashes_json",
+      "source_commit",
+      "publication_state",
+      "acceptance_status",
+      "payload_json",
+      "additional_cash_usd"
+    ],
+    "successor_host_instruments": [
+      "record_id",
+      "record_type",
+      "entity",
+      "unit",
+      "effective_from",
+      "effective_to",
+      "effective_precision",
+      "available_at",
+      "recorded_at",
+      "authored_day",
+      "fact_state",
+      "record_origin",
+      "scenario",
+      "source_path",
+      "source_sha256",
+      "source_hashes_json",
+      "source_commit",
+      "publication_state",
+      "acceptance_status",
+      "payload_json",
+      "additional_cash_usd"
+    ],
+    "successor_host_orders": [
+      "record_id",
+      "record_type",
+      "entity",
+      "unit",
+      "effective_from",
+      "effective_to",
+      "effective_precision",
+      "available_at",
+      "recorded_at",
+      "authored_day",
+      "fact_state",
+      "record_origin",
+      "scenario",
+      "source_path",
+      "source_sha256",
+      "source_hashes_json",
+      "source_commit",
+      "publication_state",
+      "acceptance_status",
+      "payload_json",
+      "additional_cash_usd"
+    ],
+    "successor_debt_instruments": [
+      "record_id",
+      "record_type",
+      "entity",
+      "unit",
+      "effective_from",
+      "effective_to",
+      "effective_precision",
+      "available_at",
+      "recorded_at",
+      "authored_day",
+      "fact_state",
+      "record_origin",
+      "scenario",
+      "source_path",
+      "source_sha256",
+      "source_hashes_json",
+      "source_commit",
+      "publication_state",
+      "acceptance_status",
+      "payload_json",
+      "additional_cash_usd"
+    ],
+    "successor_debt_collateral": [
+      "record_id",
+      "record_type",
+      "entity",
+      "unit",
+      "effective_from",
+      "effective_to",
+      "effective_precision",
+      "available_at",
+      "recorded_at",
+      "authored_day",
+      "fact_state",
+      "record_origin",
+      "scenario",
+      "source_path",
+      "source_sha256",
+      "source_hashes_json",
+      "source_commit",
+      "publication_state",
+      "acceptance_status",
+      "payload_json",
+      "additional_cash_usd"
+    ]
+  },
+  "scope": {
+    "successor_j2_administration": {
+      "allowed_values": {
+        "entity": [
+          "SHI"
+        ],
+        "unit": [
+          "CORPORATE"
+        ],
+        "scenario": [
+          ""
+        ],
+        "fact_state": [
+          "NEWLY_AUTHORED_SYNTHETIC_SUCCESSOR"
+        ],
+        "record_origin": [
+          "PUBLIC_SYNTHETIC_DIEGETIC"
+        ]
+      },
+      "routing_fields": [
+        "unit",
+        "entity"
+      ],
+      "allowed_routes": [
+        [
+          "CORPORATE",
+          "SHI"
+        ]
+      ]
+    },
+    "successor_orientation_commissions": {
+      "allowed_values": {
+        "entity": [
+          "SHI"
+        ],
+        "unit": [
+          "CORPORATE"
+        ],
+        "scenario": [
+          ""
+        ],
+        "fact_state": [
+          "NEWLY_AUTHORED_SYNTHETIC_SUCCESSOR"
+        ],
+        "record_origin": [
+          "PUBLIC_SYNTHETIC_DIEGETIC"
+        ]
+      },
+      "routing_fields": [
+        "unit",
+        "entity"
+      ],
+      "allowed_routes": [
+        [
+          "CORPORATE",
+          "SHI"
+        ]
+      ]
+    },
+    "successor_debt_payoff": {
+      "allowed_values": {
+        "entity": [
+          "ARU"
+        ],
+        "unit": [
+          "american-resource-utility"
+        ],
+        "scenario": [
+          ""
+        ],
+        "fact_state": [
+          "NEWLY_AUTHORED_SYNTHETIC_SUCCESSOR"
+        ],
+        "record_origin": [
+          "PUBLIC_SYNTHETIC_DIEGETIC"
+        ]
+      },
+      "routing_fields": [
+        "unit",
+        "entity"
+      ],
+      "allowed_routes": [
+        [
+          "american-resource-utility",
+          "ARU"
+        ]
+      ]
+    },
+    "successor_asset_screen": {
+      "allowed_values": {
+        "entity": [
+          "ARU",
+          "BST",
+          "EXTERNAL",
+          "RWH",
+          "UNRESOLVED"
+        ],
+        "unit": [
+          "american-resource-utility",
+          "pale-sun"
+        ],
+        "scenario": [
+          ""
+        ],
+        "fact_state": [
+          "NEWLY_AUTHORED_SYNTHETIC_SUCCESSOR"
+        ],
+        "record_origin": [
+          "PUBLIC_SYNTHETIC_DIEGETIC"
+        ]
+      },
+      "routing_fields": [
+        "unit",
+        "entity"
+      ],
+      "allowed_routes": [
+        [
+          "american-resource-utility",
+          "ARU"
+        ],
+        [
+          "american-resource-utility",
+          "BST"
+        ],
+        [
+          "american-resource-utility",
+          "UNRESOLVED"
+        ],
+        [
+          "american-resource-utility",
+          "EXTERNAL"
+        ],
+        [
+          "pale-sun",
+          "RWH"
+        ]
+      ]
+    },
+    "successor_finance_source_inventory": {
+      "allowed_values": {
+        "entity": [
+          "SHI"
+        ],
+        "unit": [
+          "CORPORATE"
+        ],
+        "scenario": [
+          ""
+        ],
+        "fact_state": [
+          "NEWLY_AUTHORED_SYNTHETIC_SUCCESSOR"
+        ],
+        "record_origin": [
+          "PUBLIC_SYNTHETIC_DIEGETIC"
+        ]
+      },
+      "routing_fields": [
+        "unit",
+        "entity"
+      ],
+      "allowed_routes": [
+        [
+          "CORPORATE",
+          "SHI"
+        ]
+      ]
+    },
+    "successor_capital_rights": {
+      "allowed_values": {
+        "entity": [
+          "SHI"
+        ],
+        "unit": [
+          "CORPORATE"
+        ],
+        "scenario": [
+          ""
+        ],
+        "fact_state": [
+          "NEWLY_AUTHORED_SYNTHETIC_SUCCESSOR"
+        ],
+        "record_origin": [
+          "PUBLIC_SYNTHETIC_DIEGETIC"
+        ]
+      },
+      "routing_fields": [
+        "unit",
+        "entity"
+      ],
+      "allowed_routes": [
+        [
+          "CORPORATE",
+          "SHI"
+        ]
+      ]
+    },
+    "successor_capital_assents": {
+      "allowed_values": {
+        "entity": [
+          "SHI"
+        ],
+        "unit": [
+          "CORPORATE"
+        ],
+        "scenario": [
+          ""
+        ],
+        "fact_state": [
+          "NEWLY_AUTHORED_SYNTHETIC_SUCCESSOR"
+        ],
+        "record_origin": [
+          "PUBLIC_SYNTHETIC_DIEGETIC"
+        ]
+      },
+      "routing_fields": [
+        "unit",
+        "entity"
+      ],
+      "allowed_routes": [
+        [
+          "CORPORATE",
+          "SHI"
+        ]
+      ]
+    },
+    "successor_host_instruments": {
+      "allowed_values": {
+        "entity": [
+          "SHI"
+        ],
+        "unit": [
+          "project-cradle"
+        ],
+        "scenario": [
+          ""
+        ],
+        "fact_state": [
+          "NEWLY_AUTHORED_SYNTHETIC_SUCCESSOR"
+        ],
+        "record_origin": [
+          "PUBLIC_SYNTHETIC_DIEGETIC"
+        ]
+      },
+      "routing_fields": [
+        "unit",
+        "entity"
+      ],
+      "allowed_routes": [
+        [
+          "project-cradle",
+          "SHI"
+        ]
+      ]
+    },
+    "successor_host_orders": {
+      "allowed_values": {
+        "entity": [
+          "SHI"
+        ],
+        "unit": [
+          "project-cradle"
+        ],
+        "scenario": [
+          ""
+        ],
+        "fact_state": [
+          "NEWLY_AUTHORED_SYNTHETIC_SUCCESSOR"
+        ],
+        "record_origin": [
+          "PUBLIC_SYNTHETIC_DIEGETIC"
+        ]
+      },
+      "routing_fields": [
+        "unit",
+        "entity"
+      ],
+      "allowed_routes": [
+        [
+          "project-cradle",
+          "SHI"
+        ]
+      ]
+    },
+    "successor_debt_instruments": {
+      "allowed_values": {
+        "entity": [
+          "ARU"
+        ],
+        "unit": [
+          "american-resource-utility"
+        ],
+        "scenario": [
+          ""
+        ],
+        "fact_state": [
+          "NEWLY_AUTHORED_SYNTHETIC_SUCCESSOR"
+        ],
+        "record_origin": [
+          "PUBLIC_SYNTHETIC_DIEGETIC"
+        ]
+      },
+      "routing_fields": [
+        "unit",
+        "entity"
+      ],
+      "allowed_routes": [
+        [
+          "american-resource-utility",
+          "ARU"
+        ]
+      ]
+    },
+    "successor_debt_collateral": {
+      "allowed_values": {
+        "entity": [
+          "ARU"
+        ],
+        "unit": [
+          "american-resource-utility"
+        ],
+        "scenario": [
+          ""
+        ],
+        "fact_state": [
+          "NEWLY_AUTHORED_SYNTHETIC_SUCCESSOR"
+        ],
+        "record_origin": [
+          "PUBLIC_SYNTHETIC_DIEGETIC"
+        ]
+      },
+      "routing_fields": [
+        "unit",
+        "entity"
+      ],
+      "allowed_routes": [
+        [
+          "american-resource-utility",
+          "ARU"
+        ]
+      ]
+    }
+  },
+  "population_counts": {
+    "successor_j2_administration": 10,
+    "successor_orientation_commissions": 18,
+    "successor_debt_payoff": 2,
+    "successor_asset_screen": 149,
+    "successor_finance_source_inventory": 7,
+    "successor_capital_rights": 2,
+    "successor_capital_assents": 5,
+    "successor_host_instruments": 2,
+    "successor_host_orders": 0,
+    "successor_debt_instruments": 1,
+    "successor_debt_collateral": 64
+  },
+  "no_new_database": true,
+  "additional_cash_usd": "0.00",
+  "availability": "Later of dated authoring and clean source HEAD availability; source fact/acceptance preserved independently. No earlier known-on promotion."
+}

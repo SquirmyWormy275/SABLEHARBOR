@@ -38,5 +38,3 @@ A capability label does not create another department or a new reporting line. S
 - [People & Culture](people-culture.md)
 - [Enterprise Technology Services](technology.md)
 - [Internal Audit](internal-audit.md)
-
-Related reading describes useful connections, not additional reporting lines.

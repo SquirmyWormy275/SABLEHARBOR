@@ -1,0 +1,742 @@
+{
+  "document_id": "SH-C05-FRA-EVENT-DAY-AUTHORITY-20260915",
+  "version": "1.0.0",
+  "acceptance_state": "PENDING_REPOSITORY_ACCEPTANCE",
+  "accessed_on": "2026-09-15",
+  "scope": "Existing14selectedevents2014-02-12through2026-08-14; finite225.9/.11/.19classification/due audit plus relevantamendment screens",
+  "annual_notices": [
+    {
+      "id": "FRA-ORIGINAL-NOTICE-2021",
+      "year": 2021,
+      "threshold_usd": 11200,
+      "publisher": "Federal Railroad Administration",
+      "publisher_updated_on": "2020-12-22",
+      "effective_from": "2021-01-08",
+      "original_url": "https://railroads.dot.gov/forms-guides-publications/guides/monetary-threshold-notice",
+      "archive_capture_utc": "20210612233940",
+      "archive_url": "https://web.archive.org/web/20210612233940id_/https://railroads.dot.gov/forms-guides-publications/guides/monetary-threshold-notice",
+      "accessed_on": "2026-09-15",
+      "snapshot": "authority_snapshots/FRA_THRESHOLD_2021.html.txt",
+      "sha256": "cc20f42f8d8ef0b05962cf76a53cb4cc2fd995fc37e359a1deaa6e3eefc2d6e3",
+      "evidence_state": "RECOVERED_PRIMARY_AGENCY_PUBLICATION_VIA_ARCHIVE_NOT_COMPANY_EVENT"
+    },
+    {
+      "id": "FRA-ORIGINAL-NOTICE-2023",
+      "year": 2023,
+      "threshold_usd": 11500,
+      "publisher": "Federal Railroad Administration",
+      "publisher_updated_on": "2022-11-16",
+      "effective_from": "2023-01-01",
+      "original_url": "https://railroads.dot.gov/safety-data/forms-guides-publications/guides/monetary-threshold-notice",
+      "archive_capture_utc": "20231002151607",
+      "archive_url": "https://web.archive.org/web/20231002151607id_/https://railroads.dot.gov/safety-data/forms-guides-publications/guides/monetary-threshold-notice",
+      "accessed_on": "2026-09-15",
+      "snapshot": "authority_snapshots/FRA_THRESHOLD_2023.html.txt",
+      "sha256": "55b9b3c8ed36c4276980348c3c4f2a11898957cb11c21d8f86142f34ad53b47e",
+      "evidence_state": "RECOVERED_PRIMARY_AGENCY_PUBLICATION_VIA_ARCHIVE_NOT_COMPANY_EVENT"
+    },
+    {
+      "id": "FRA-ORIGINAL-NOTICE-2025",
+      "year": 2025,
+      "threshold_usd": 12400,
+      "publisher": "Federal Railroad Administration",
+      "publisher_updated_on": "2024-11-29",
+      "effective_from": "2025-01-01",
+      "original_url": "https://railroads.dot.gov/safety-data/forms-guides-publications/guides/monetary-threshold-notice",
+      "archive_capture_utc": "20251116171657",
+      "archive_url": "https://web.archive.org/web/20251116171657id_/https://railroads.dot.gov/safety-data/forms-guides-publications/guides/monetary-threshold-notice",
+      "accessed_on": "2026-09-15",
+      "snapshot": "authority_snapshots/FRA_THRESHOLD_2025.html.txt",
+      "sha256": "251cc4bca8a3854ca9a122cf35be98c5de071c900ec36497d559bb420c5e0bcd",
+      "evidence_state": "RECOVERED_PRIMARY_AGENCY_PUBLICATION_VIA_ARCHIVE_NOT_COMPANY_EVENT"
+    }
+  ],
+  "baseline": {
+    "id": "FRA-BASELINE-2010",
+    "document_number": "2010-27641",
+    "effective_on": "2011-06-01",
+    "url": "https://www.federalregister.gov/documents/2010/11/09/2010-27641/miscellaneous-amendments-to-the-federal-railroad-administrations-accidentincident-reporting",
+    "body_sha256": "6170449f27a27b393b07efda651808a03040d8a925ebbeec6acbf4208d81c3b1",
+    "conclusion": "225.9immediate,225.11monthlyand225.19injury revisions effectiveJune1,2011 precedeallselectedevents."
+  },
+  "annual_cross_checks": [
+    {
+      "provision": "49CFR225.9",
+      "edition": "2025-10-01",
+      "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title49-vol4/xml/CFR-2025-title49-vol4-sec225-9.xml",
+      "snapshot": "authority_snapshots/CFR-2025-title49-vol4-sec225-9.xml",
+      "sha256": "73091284c2ee7f5cd0f6ff9d67414166749562ae0e93142a38d413b2342921c2",
+      "role": "Later annual text cross-check; event applicability resolved through FederalRegister amendment index, not backward application of this edition."
+    },
+    {
+      "provision": "49CFR225.11",
+      "edition": "2025-10-01",
+      "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title49-vol4/xml/CFR-2025-title49-vol4-sec225-11.xml",
+      "snapshot": "authority_snapshots/CFR-2025-title49-vol4-sec225-11.xml",
+      "sha256": "3f13fdbb7f599b85e5ea2fbf9d882c911ac67e237d352cbd2f4aeb03b03e1b06",
+      "role": "Later annual text cross-check; event applicability resolved through FederalRegister amendment index, not backward application of this edition."
+    },
+    {
+      "provision": "49CFR225.19",
+      "edition": "2025-10-01",
+      "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title49-vol4/xml/CFR-2025-title49-vol4-sec225-19.xml",
+      "snapshot": "authority_snapshots/CFR-2025-title49-vol4-sec225-19.xml",
+      "sha256": "38dfd31aefa67d9ad646c177d73a556eb315c0c5a9dcfc96fbd3bc76dca4c680",
+      "role": "Later annual text cross-check; event applicability resolved through FederalRegister amendment index, not backward application of this edition."
+    }
+  ],
+  "rule_index": {
+    "id": "FRA-FR-INDEX-2013-2026",
+    "query": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bcfr%5D%5Btitle%5D=49&conditions%5Bcfr%5D%5Bpart%5D=225&conditions%5Bpublication_date%5D%5Bgte%5D=2013-01-01&per_page=100&order=oldest",
+    "retrieved_count": 33,
+    "cutoff": "2026-09-15",
+    "records": [
+      {
+        "document_number": "2013-30807",
+        "title": "Adjustment of Monetary Threshold for Reporting Rail Equipment Accidents/Incidents for Calendar Year 2014",
+        "type": "Rule",
+        "published_on": "2013-12-24",
+        "effective_on": "2014-01-01",
+        "url": "https://www.federalregister.gov/documents/2013/12/24/2013-30807/adjustment-of-monetary-threshold-for-reporting-rail-equipment-accidentsincidents-for-calendar-year",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2013/12/24/2013-30807.html",
+        "body_sha256": "0eabffb6846894223b96cfd89d6b7fa7acb8cebba6b9ecb126f7141d6d4b72e1",
+        "disposition": "THRESHOLD_RULE",
+        "affected_scope": "225.19 numeric threshold; use effective interval, not publication year."
+      },
+      {
+        "document_number": "2014-30113",
+        "title": "Monetary Threshold for Reporting Rail Equipment Accidents/Incidents for Calendar Year 2015",
+        "type": "Rule",
+        "published_on": "2014-12-24",
+        "effective_on": "2015-01-01",
+        "url": "https://www.federalregister.gov/documents/2014/12/24/2014-30113/monetary-threshold-for-reporting-rail-equipment-accidentsincidents-for-calendar-year-2015",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2014/12/24/2014-30113.html",
+        "body_sha256": "2a040c06f3750359d878889fe051fa58ba6b637dfb26543a1da62f973df45e85",
+        "disposition": "THRESHOLD_RULE",
+        "affected_scope": "225.19 numeric threshold; use effective interval, not publication year."
+      },
+      {
+        "document_number": "2015-32545",
+        "title": "Monetary Threshold for Reporting Rail Equipment Accidents/Incidents for Calendar Year 2016",
+        "type": "Rule",
+        "published_on": "2015-12-28",
+        "effective_on": "2016-01-01",
+        "url": "https://www.federalregister.gov/documents/2015/12/28/2015-32545/monetary-threshold-for-reporting-rail-equipment-accidentsincidents-for-calendar-year-2016",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2015/12/28/2015-32545.html",
+        "body_sha256": "6b3b9c695fafc994747a6654a9ccc6ee956efd5920d2bd46f18d1c5e37aeac96",
+        "disposition": "THRESHOLD_RULE",
+        "affected_scope": "225.19 numeric threshold; use effective interval, not publication year."
+      },
+      {
+        "document_number": "2016-15641",
+        "title": "Implementation of the Federal Civil Penalties Inflation Adjustment Act Improvements Act for a Violation of a Federal Railroad Safety Law or Federal Railroad Administration Safety Regulation or Order",
+        "type": "Rule",
+        "published_on": "2016-07-01",
+        "effective_on": "2016-08-01",
+        "url": "https://www.federalregister.gov/documents/2016/07/01/2016-15641/implementation-of-the-federal-civil-penalties-inflation-adjustment-act-improvements-act-for-a",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2016/07/01/2016-15641.html",
+        "body_sha256": "3bc121e8479dd808d20dbd31a156407aa4fc3d4075e366749074dd7207f9dbb0",
+        "disposition": "CIVIL_PENALTIES_ONLY",
+        "affected_scope": "Penalty amount/schedule correction; no selected penalty assessment modeled, no225.9/.11/.19 criteria change."
+      },
+      {
+        "document_number": "2016-29309",
+        "title": "Update to Email Address for the Electronic Submission via the Internet of Certain Accident/Incident Reports",
+        "type": "Rule",
+        "published_on": "2016-12-07",
+        "effective_on": "2016-12-07",
+        "url": "https://www.federalregister.gov/documents/2016/12/07/2016-29309/update-to-email-address-for-the-electronic-submission-via-the-internet-of-certain-accidentincident",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2016/12/07/2016-29309.html",
+        "body_sha256": "36ba37887bb20c173e37d02e92565372b0268d00d293d4db62a4be38a1f8de09",
+        "disposition": "SUBMISSION_ADDRESS_ONLY",
+        "affected_scope": "225.27/.37 email address, not group classification or monthly due interval."
+      },
+      {
+        "document_number": "2016-30812",
+        "title": "Monetary Threshold for Reporting Rail Equipment Accidents/Incidents for Calendar Year 2017",
+        "type": "Rule",
+        "published_on": "2016-12-23",
+        "effective_on": "2017-01-01",
+        "url": "https://www.federalregister.gov/documents/2016/12/23/2016-30812/monetary-threshold-for-reporting-rail-equipment-accidentsincidents-for-calendar-year-2017",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2016/12/23/2016-30812.html",
+        "body_sha256": "bc9e79f9bfc8149c424e1935d0656a5508c2c53f5f1751c342947adb56b72518",
+        "disposition": "THRESHOLD_RULE",
+        "affected_scope": "225.19 numeric threshold; use effective interval, not publication year."
+      },
+      {
+        "document_number": "2017-06220",
+        "title": "Implementation of the Federal Civil Penalties Inflation Adjustment Act Improvements Act for a Violation of a Federal Railroad Safety Law, Federal Railroad Administration Safety Regulation or Order, or the Hazardous Material Transportation Laws or Regulations, Orders, Special Permits, and Approvals Issued Under Those Laws",
+        "type": "Rule",
+        "published_on": "2017-04-03",
+        "effective_on": "2017-04-03",
+        "url": "https://www.federalregister.gov/documents/2017/04/03/2017-06220/implementation-of-the-federal-civil-penalties-inflation-adjustment-act-improvements-act-for-a",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2017/04/03/2017-06220.html",
+        "body_sha256": "5564244ccab182f36adcaa931731833f646e814ca6aff780b8b69535870f2422",
+        "disposition": "CIVIL_PENALTIES_ONLY",
+        "affected_scope": "Penalty amount/schedule correction; no selected penalty assessment modeled, no225.9/.11/.19 criteria change."
+      },
+      {
+        "document_number": "2017-07467",
+        "title": "Implementation of the Federal Civil Penalties Inflation Adjustment Act Improvements Act for a Violation of a Federal Railroad Safety Law, Federal Railroad Administration Safety Regulation or Order, or the Hazardous Material Transportation Laws or Regulations, Orders, Special Permits, and Approvals Issued Under Those Laws",
+        "type": "Rule",
+        "published_on": "2017-04-13",
+        "effective_on": "2017-04-13",
+        "url": "https://www.federalregister.gov/documents/2017/04/13/2017-07467/implementation-of-the-federal-civil-penalties-inflation-adjustment-act-improvements-act-for-a",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2017/04/13/2017-07467.html",
+        "body_sha256": "023d70e5a8628e942089b8017f5c17ccd63d722c969fdcaa670dadcd3e2bf7ce",
+        "disposition": "CIVIL_PENALTIES_ONLY",
+        "affected_scope": "Penalty amount/schedule correction; no selected penalty assessment modeled, no225.9/.11/.19 criteria change."
+      },
+      {
+        "document_number": "2018-04349",
+        "title": "Monetary Threshold for Reporting Rail Equipment Accidents/Incidents for Calendar Year 2018",
+        "type": "Rule",
+        "published_on": "2018-03-05",
+        "effective_on": "2018-03-05",
+        "url": "https://www.federalregister.gov/documents/2018/03/05/2018-04349/monetary-threshold-for-reporting-rail-equipment-accidentsincidents-for-calendar-year-2018",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2018/03/05/2018-04349.html",
+        "body_sha256": "a26bc76c82f000210cc66478f56f89e2c93bbbb96a71b321286b360904a4e733",
+        "disposition": "THRESHOLD_RULE",
+        "affected_scope": "225.19 numeric threshold; use effective interval, not publication year."
+      },
+      {
+        "document_number": "2018-24930",
+        "title": "Revisions to Civil Penalty Amounts",
+        "type": "Rule",
+        "published_on": "2018-11-27",
+        "effective_on": "2018-11-27",
+        "url": "https://www.federalregister.gov/documents/2018/11/27/2018-24930/revisions-to-civil-penalty-amounts",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2018/11/27/2018-24930.html",
+        "body_sha256": "af8e9ba914bd759fc5f3708fa432163380c814875c11ef9bb2cba111f82aee28",
+        "disposition": "CIVIL_PENALTIES_ONLY",
+        "affected_scope": "Penalty amount/schedule correction; no selected penalty assessment modeled, no225.9/.11/.19 criteria change."
+      },
+      {
+        "document_number": "2019-09980",
+        "title": "Revision of Method for Calculating Monetary Threshold for Reporting Rail Equipment Accidents/Incidents",
+        "type": "Proposed Rule",
+        "published_on": "2019-05-17",
+        "effective_on": null,
+        "url": "https://www.federalregister.gov/documents/2019/05/17/2019-09980/revision-of-method-for-calculating-monetary-threshold-for-reporting-rail-equipment",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2019/05/17/2019-09980.html",
+        "body_sha256": "6a2e9b04ebfd14e751176cfdcd626c580e1527f12ca4dc88a609b61615184773",
+        "disposition": "PROPOSAL_NOT_OPERATIVE",
+        "affected_scope": "No event-day legal effect; final rule must be checked separately."
+      },
+      {
+        "document_number": "2019-09979",
+        "title": "Moving the Federal Railroad Administration (FRA) Civil Penalties Schedules and Guidelines From the Code of Federal Regulations (CFR) to the FRA Website",
+        "type": "Rule",
+        "published_on": "2019-05-23",
+        "effective_on": "2019-05-23",
+        "url": "https://www.federalregister.gov/documents/2019/05/23/2019-09979/moving-the-federal-railroad-administration-fra-civil-penalties-schedules-and-guidelines-from-the",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2019/05/23/2019-09979.html",
+        "body_sha256": "b5a51b1f741b9b378a4790676ef1b441525dea2e24895ed247eba0ca2177707f",
+        "disposition": "CIVIL_PENALTIES_ONLY",
+        "affected_scope": "Penalty amount/schedule correction; no selected penalty assessment modeled, no225.9/.11/.19 criteria change."
+      },
+      {
+        "document_number": "2019-14101",
+        "title": "Revisions to Civil Penalty Amounts",
+        "type": "Rule",
+        "published_on": "2019-07-31",
+        "effective_on": "2019-07-31",
+        "url": "https://www.federalregister.gov/documents/2019/07/31/2019-14101/revisions-to-civil-penalty-amounts",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2019/07/31/2019-14101.html",
+        "body_sha256": "893a227fd18393a9ec94f5c9e31008ed38959112695bf6359035a24ec65b3431",
+        "disposition": "CIVIL_PENALTIES_ONLY",
+        "affected_scope": "Penalty amount/schedule correction; no selected penalty assessment modeled, no225.9/.11/.19 criteria change."
+      },
+      {
+        "document_number": "C1-2019-14101",
+        "title": "Revisions to Civil Penalty Amounts",
+        "type": "Rule",
+        "published_on": "2019-10-29",
+        "effective_on": null,
+        "url": "https://www.federalregister.gov/documents/2019/10/29/C1-2019-14101/revisions-to-civil-penalty-amounts",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2019/10/29/C1-2019-14101.html",
+        "body_sha256": "2ba69b72472ff22e386ef7c697e4f5fdf8f2f6a7b98e78debde2ab28b5bcd25a",
+        "disposition": "CIVIL_PENALTIES_ONLY",
+        "affected_scope": "Penalty amount/schedule correction; no selected penalty assessment modeled, no225.9/.11/.19 criteria change."
+      },
+      {
+        "document_number": "2020-25863",
+        "title": "Revision of Method for Calculating Monetary Threshold for Reporting Rail Equipment Accidents/Incidents",
+        "type": "Rule",
+        "published_on": "2020-12-09",
+        "effective_on": "2021-01-08",
+        "url": "https://www.federalregister.gov/documents/2020/12/09/2020-25863/revision-of-method-for-calculating-monetary-threshold-for-reporting-rail-equipment",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2020/12/09/2020-25863.html",
+        "body_sha256": "722b079a0bf3b7e84868c64b62d660ba095245577f2e509483e7c4d4a7e6f665",
+        "disposition": "THRESHOLD_METHOD_RULE",
+        "affected_scope": "225.19(c)/(e) and AppendixB; website annual notices; effectiveJan8,2021."
+      },
+      {
+        "document_number": "2020-25236",
+        "title": "Revisions to Civil Penalty Amounts",
+        "type": "Rule",
+        "published_on": "2021-01-11",
+        "effective_on": "2021-01-11",
+        "url": "https://www.federalregister.gov/documents/2021/01/11/2020-25236/revisions-to-civil-penalty-amounts",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2021/01/11/2020-25236.html",
+        "body_sha256": "5a44bf4eac97ac57661bce520de728a826843983221bdb881a117e212a042d2d",
+        "disposition": "CIVIL_PENALTIES_ONLY",
+        "affected_scope": "Penalty amount/schedule correction; no selected penalty assessment modeled, no225.9/.11/.19 criteria change."
+      },
+      {
+        "document_number": "2021-08224",
+        "title": "Civil Penalty Amounts",
+        "type": "Rule",
+        "published_on": "2021-05-03",
+        "effective_on": "2021-05-03",
+        "url": "https://www.federalregister.gov/documents/2021/05/03/2021-08224/civil-penalty-amounts",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2021/05/03/2021-08224.html",
+        "body_sha256": "793ca4e93ea989831d8809df6e9b3ae677daa54e30882e5103cd635d1e314bd7",
+        "disposition": "CIVIL_PENALTIES_ONLY",
+        "affected_scope": "Penalty amount/schedule correction; no selected penalty assessment modeled, no225.9/.11/.19 criteria change."
+      },
+      {
+        "document_number": "2022-04456",
+        "title": "Revisions to Civil Penalty Amounts",
+        "type": "Rule",
+        "published_on": "2022-03-21",
+        "effective_on": "2022-03-21",
+        "url": "https://www.federalregister.gov/documents/2022/03/21/2022-04456/revisions-to-civil-penalty-amounts",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2022/03/21/2022-04456.html",
+        "body_sha256": "15513d14bcfd183d6331982d3db89a7b5ff0c30f0ca4fe6315b6c3ea31795056",
+        "disposition": "CIVIL_PENALTIES_ONLY",
+        "affected_scope": "Penalty amount/schedule correction; no selected penalty assessment modeled, no225.9/.11/.19 criteria change."
+      },
+      {
+        "document_number": "2022-28580",
+        "title": "Revisions to Civil Penalty Amounts",
+        "type": "Rule",
+        "published_on": "2023-01-06",
+        "effective_on": "2023-01-06",
+        "url": "https://www.federalregister.gov/documents/2023/01/06/2022-28580/revisions-to-civil-penalty-amounts",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2023/01/06/2022-28580.html",
+        "body_sha256": "efa76732f4e7602a498cde89c1a23582b81a19b4b0bb17327256c80c4df23096",
+        "disposition": "CIVIL_PENALTIES_ONLY",
+        "affected_scope": "Penalty amount/schedule correction; no selected penalty assessment modeled, no225.9/.11/.19 criteria change."
+      },
+      {
+        "document_number": "2023-28066",
+        "title": "Revisions to Civil Penalty Amounts, 2024",
+        "type": "Rule",
+        "published_on": "2023-12-28",
+        "effective_on": "2023-12-28",
+        "url": "https://www.federalregister.gov/documents/2023/12/28/2023-28066/revisions-to-civil-penalty-amounts-2024",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2023/12/28/2023-28066.html",
+        "body_sha256": "dfd4ea879cbdfbf8070ae7c14d6cd54828239357fb0991b9f91ebcc514b63ce5",
+        "disposition": "CIVIL_PENALTIES_ONLY",
+        "affected_scope": "Penalty amount/schedule correction; no selected penalty assessment modeled, no225.9/.11/.19 criteria change."
+      },
+      {
+        "document_number": "2024-22326",
+        "title": "Federal Railroad Administration Accident/Incident Investigation Policy for Gathering Information and Consulting With Stakeholders",
+        "type": "Rule",
+        "published_on": "2024-10-01",
+        "effective_on": "2024-10-31",
+        "url": "https://www.federalregister.gov/documents/2024/10/01/2024-22326/federal-railroad-administration-accidentincident-investigation-policy-for-gathering-information-and",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2024/10/01/2024-22326.html",
+        "body_sha256": "63d8fb2ec02139d8ab718ccd72fe10353489afb8dc6cf67f443ffa56e60d90be",
+        "disposition": "INVESTIGATION_POLICY",
+        "affected_scope": "225.31 stakeholder-investigation procedure and subsequent removals; no assumed FRA investigation in selected14cases. No change to225.9/.11/.19."
+      },
+      {
+        "document_number": "2024-24967",
+        "title": "Federal Railroad Administration Accident/Incident Investigation Policy for Gathering Information and Consulting With Stakeholders; Correction",
+        "type": "Rule",
+        "published_on": "2024-10-28",
+        "effective_on": "2024-11-15",
+        "url": "https://www.federalregister.gov/documents/2024/10/28/2024-24967/federal-railroad-administration-accidentincident-investigation-policy-for-gathering-information-and",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2024/10/28/2024-24967.html",
+        "body_sha256": "e083f5528da99d6386212c52466290040faf7f618a2ddf5541a1171d3bb1c3a5",
+        "disposition": "INVESTIGATION_POLICY",
+        "affected_scope": "225.31 stakeholder-investigation procedure and subsequent removals; no assumed FRA investigation in selected14cases. No change to225.9/.11/.19."
+      },
+      {
+        "document_number": "2024-30608",
+        "title": "Revisions to Civil Penalty Amounts, 2025",
+        "type": "Rule",
+        "published_on": "2024-12-30",
+        "effective_on": "2024-12-30",
+        "url": "https://www.federalregister.gov/documents/2024/12/30/2024-30608/revisions-to-civil-penalty-amounts-2025",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2024/12/30/2024-30608.html",
+        "body_sha256": "ae1bef1ffff004463fa21c535a72231f617ebcddb1e96ad1751ac2f105273553",
+        "disposition": "CIVIL_PENALTIES_ONLY",
+        "affected_scope": "Penalty amount/schedule correction; no selected penalty assessment modeled, no225.9/.11/.19 criteria change."
+      },
+      {
+        "document_number": "2025-00998",
+        "title": "Accident/Incident Investigation Policy for Gathering Information and Consulting With Stakeholders",
+        "type": "Rule",
+        "published_on": "2025-01-17",
+        "effective_on": "2025-01-17",
+        "url": "https://www.federalregister.gov/documents/2025/01/17/2025-00998/accidentincident-investigation-policy-for-gathering-information-and-consulting-with-stakeholders",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2025/01/17/2025-00998.html",
+        "body_sha256": "1a961807285770e233a220a18817bcf4aa150614a25b02f00b4cbe8b2207142c",
+        "disposition": "INVESTIGATION_POLICY",
+        "affected_scope": "225.31 stakeholder-investigation procedure and subsequent removals; no assumed FRA investigation in selected14cases. No change to225.9/.11/.19."
+      },
+      {
+        "document_number": "2025-12135",
+        "title": "Administrative Updates to the Railroad Accidents/Incidents: Reports Classification, and Investigations Regulations",
+        "type": "Rule",
+        "published_on": "2025-07-01",
+        "effective_on": "2025-07-01",
+        "url": "https://www.federalregister.gov/documents/2025/07/01/2025-12135/administrative-updates-to-the-railroad-accidentsincidents-reports-classification-and-investigations",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2025/07/01/2025-12135.html",
+        "body_sha256": "cd9cd9cf5fc72fff913155c76734b616584f780ecb7eb0fc34f064799d3ce9ea",
+        "disposition": "ADMINISTRATIVE_UPDATE",
+        "affected_scope": "225.7/.12/.29 website/penalty references; no225.9/.11/.19 change."
+      },
+      {
+        "document_number": "2025-12177",
+        "title": "Allowing for the Electronic Posting of Reportable Injuries and Occupational Illnesses",
+        "type": "Proposed Rule",
+        "published_on": "2025-07-01",
+        "effective_on": null,
+        "url": "https://www.federalregister.gov/documents/2025/07/01/2025-12177/allowing-for-the-electronic-posting-of-reportable-injuries-and-occupational-illnesses",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2025/07/01/2025-12177.html",
+        "body_sha256": "8e8d20c1e2498170417a21136aa61ec68271b38e9d98e04cab86e1519949cec1",
+        "disposition": "PROPOSAL_NOT_OPERATIVE",
+        "affected_scope": "No event-day legal effect; final rule must be checked separately."
+      },
+      {
+        "document_number": "2025-12179",
+        "title": "Miscellaneous Amendments to FRA's Accident Reporting Regulations",
+        "type": "Proposed Rule",
+        "published_on": "2025-07-01",
+        "effective_on": null,
+        "url": "https://www.federalregister.gov/documents/2025/07/01/2025-12179/miscellaneous-amendments-to-fras-accident-reporting-regulations",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2025/07/01/2025-12179.html",
+        "body_sha256": "451ef44d5a2206fb75bd1d9a0709374c7b1a74f0f05f7a027b0bd251dc685f97",
+        "disposition": "PROPOSAL_NOT_OPERATIVE",
+        "affected_scope": "No event-day legal effect; final rule must be checked separately."
+      },
+      {
+        "document_number": "2025-12190",
+        "title": "Updating the Definition of Person",
+        "type": "Rule",
+        "published_on": "2025-07-01",
+        "effective_on": "2025-07-31",
+        "url": "https://www.federalregister.gov/documents/2025/07/01/2025-12190/updating-the-definition-of-person",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2025/07/01/2025-12190.html",
+        "body_sha256": "d311ab9b3426192c0e6c91dab9edd0cea02e1bfa4058ed8e01a72e6635f662d5",
+        "disposition": "PERSON_DEFINITION",
+        "affected_scope": "225.29 expands person definition; no change to selected railroad reportability or due date."
+      },
+      {
+        "document_number": "2025-12194",
+        "title": "Retiring Form FRA F 6180.107 and Form FRA F 6180.150",
+        "type": "Proposed Rule",
+        "published_on": "2025-07-01",
+        "effective_on": null,
+        "url": "https://www.federalregister.gov/documents/2025/07/01/2025-12194/retiring-form-fra-f-6180107-and-form-fra-f-6180150",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2025/07/01/2025-12194.html",
+        "body_sha256": "f48be043cd7f3f12b35350caed66a6a45d4ab6ba68d8be09b5ae5427d73c97df",
+        "disposition": "PROPOSAL_NOT_OPERATIVE",
+        "affected_scope": "No event-day legal effect; final rule must be checked separately."
+      },
+      {
+        "document_number": "2025-13766",
+        "title": "Accident/Incident Investigation Policy for Gathering Information and Consulting With Stakeholders",
+        "type": "Rule",
+        "published_on": "2025-07-22",
+        "effective_on": "2025-07-22",
+        "url": "https://www.federalregister.gov/documents/2025/07/22/2025-13766/accidentincident-investigation-policy-for-gathering-information-and-consulting-with-stakeholders",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2025/07/22/2025-13766.html",
+        "body_sha256": "50bc79830245ae1db4f858ef0e45d198088e11ccd0b84ba3f9656b673ed9327b",
+        "disposition": "INVESTIGATION_POLICY",
+        "affected_scope": "225.31 stakeholder-investigation procedure and subsequent removals; no assumed FRA investigation in selected14cases. No change to225.9/.11/.19."
+      },
+      {
+        "document_number": "2026-08255",
+        "title": "Allowing for the Electronic Posting of Reportable Injuries and Occupational Illnesses",
+        "type": "Rule",
+        "published_on": "2026-04-28",
+        "effective_on": "2026-05-28",
+        "url": "https://www.federalregister.gov/documents/2026/04/28/2026-08255/allowing-for-the-electronic-posting-of-reportable-injuries-and-occupational-illnesses",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2026/04/28/2026-08255.html",
+        "body_sha256": "ec0911693206caf181b44136575c6af72506c60d4718b91da72dedc642a548ea",
+        "disposition": "ELECTRONIC_POSTING_OPTION",
+        "affected_scope": "225.25(h) permits electronic establishment posting subject access/training; effectiveMay28,2026. No group or monthly due change; no electronic-posting performance claim authored."
+      },
+      {
+        "document_number": "2026-17790",
+        "title": "Retiring Form FRA F 6180.107 and Form FRA F 6180.150",
+        "type": "Rule",
+        "published_on": "2026-08-31",
+        "effective_on": "2026-09-30",
+        "url": "https://www.federalregister.gov/documents/2026/08/31/2026-17790/retiring-form-fra-f-6180107-and-form-fra-f-6180150",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2026/08/31/2026-17790.html",
+        "body_sha256": "ceb083089e2a02c14e2b7ec10dd8dd4dd54b41792229e864178ae96f1cacfee2",
+        "disposition": "PUBLISHED_FUTURE_EFFECTIVE",
+        "affected_scope": "EffectiveSep30,2026 after edition/eventcutoff. Do not retire107/150 or substitute15calendar-daycreation/email late-report method for earlier events."
+      },
+      {
+        "document_number": "2026-17791",
+        "title": "Miscellaneous Amendments to FRA's Accident Reporting Regulations",
+        "type": "Rule",
+        "published_on": "2026-08-31",
+        "effective_on": "2026-09-30",
+        "url": "https://www.federalregister.gov/documents/2026/08/31/2026-17791/miscellaneous-amendments-to-fras-accident-reporting-regulations",
+        "body_url": "https://www.federalregister.gov/documents/full_text/html/2026/08/31/2026-17791.html",
+        "body_sha256": "78bf3a66bbed53b83dcc59aad60e6459a8981ee341b384d0efbf0e9349e020c8",
+        "disposition": "PUBLISHED_FUTURE_EFFECTIVE",
+        "affected_scope": "EffectiveSep30,2026 after edition/eventcutoff. Do not retire107/150 or substitute15calendar-daycreation/email late-report method for earlier events."
+      }
+    ]
+  },
+  "events": [
+    {
+      "event_id": "BST-EVT-001",
+      "event_date": "2014-02-12",
+      "authority_ids": [
+        "FRA-BASELINE-2010",
+        "FRA-FR-INDEX-2013-2026",
+        "2013-30807"
+      ],
+      "reporting_groups": [
+        "II"
+      ],
+      "threshold_usd": 10500,
+      "threshold_needed": true,
+      "monthly_due_rule": "225.11:30days_after_month_end",
+      "immediate_rule": "225.9:2010amendment_effective2011-06-01",
+      "result": "EVENT_DAY_SELECTED_CLASSIFICATION_AND_DUE_RULES_RECONCILED",
+      "limit": "No fullmonthlyrailroadfilingpopulation, penaltyassessment, actualFRAacknowledgement orinvestigationperformance claimed."
+    },
+    {
+      "event_id": "BST-EVT-002",
+      "event_date": "2016-08-09",
+      "authority_ids": [
+        "FRA-BASELINE-2010",
+        "FRA-FR-INDEX-2013-2026"
+      ],
+      "reporting_groups": [
+        "III"
+      ],
+      "threshold_usd": null,
+      "threshold_needed": false,
+      "monthly_due_rule": "225.11:30days_after_month_end",
+      "immediate_rule": "225.9:2010amendment_effective2011-06-01",
+      "result": "EVENT_DAY_SELECTED_CLASSIFICATION_AND_DUE_RULES_RECONCILED",
+      "limit": "No fullmonthlyrailroadfilingpopulation, penaltyassessment, actualFRAacknowledgement orinvestigationperformance claimed."
+    },
+    {
+      "event_id": "BST-EVT-003",
+      "event_date": "2018-06-20",
+      "authority_ids": [
+        "FRA-BASELINE-2010",
+        "FRA-FR-INDEX-2013-2026",
+        "2018-04349"
+      ],
+      "reporting_groups": [
+        "I",
+        "II",
+        "III"
+      ],
+      "threshold_usd": 10700,
+      "threshold_needed": true,
+      "monthly_due_rule": "225.11:30days_after_month_end",
+      "immediate_rule": "225.9:2010amendment_effective2011-06-01",
+      "result": "EVENT_DAY_SELECTED_CLASSIFICATION_AND_DUE_RULES_RECONCILED",
+      "limit": "No fullmonthlyrailroadfilingpopulation, penaltyassessment, actualFRAacknowledgement orinvestigationperformance claimed."
+    },
+    {
+      "event_id": "BST-EVT-004",
+      "event_date": "2019-11-04",
+      "authority_ids": [
+        "FRA-BASELINE-2010",
+        "FRA-FR-INDEX-2013-2026"
+      ],
+      "reporting_groups": [],
+      "threshold_usd": null,
+      "threshold_needed": false,
+      "monthly_due_rule": "225.11:30days_after_month_end",
+      "immediate_rule": "225.9:2010amendment_effective2011-06-01",
+      "result": "EVENT_DAY_SELECTED_CLASSIFICATION_AND_DUE_RULES_RECONCILED",
+      "limit": "No fullmonthlyrailroadfilingpopulation, penaltyassessment, actualFRAacknowledgement orinvestigationperformance claimed."
+    },
+    {
+      "event_id": "BST-EVT-005",
+      "event_date": "2020-03-13",
+      "authority_ids": [
+        "FRA-BASELINE-2010",
+        "FRA-FR-INDEX-2013-2026"
+      ],
+      "reporting_groups": [],
+      "threshold_usd": null,
+      "threshold_needed": false,
+      "monthly_due_rule": "225.11:30days_after_month_end",
+      "immediate_rule": "225.9:2010amendment_effective2011-06-01",
+      "result": "EVENT_DAY_SELECTED_CLASSIFICATION_AND_DUE_RULES_RECONCILED",
+      "limit": "No fullmonthlyrailroadfilingpopulation, penaltyassessment, actualFRAacknowledgement orinvestigationperformance claimed."
+    },
+    {
+      "event_id": "BST-EVT-006",
+      "event_date": "2021-10-06",
+      "authority_ids": [
+        "FRA-BASELINE-2010",
+        "FRA-FR-INDEX-2013-2026",
+        "FRA-ORIGINAL-NOTICE-2021"
+      ],
+      "reporting_groups": [
+        "II"
+      ],
+      "threshold_usd": 11200,
+      "threshold_needed": true,
+      "monthly_due_rule": "225.11:30days_after_month_end",
+      "immediate_rule": "225.9:2010amendment_effective2011-06-01",
+      "result": "EVENT_DAY_SELECTED_CLASSIFICATION_AND_DUE_RULES_RECONCILED",
+      "limit": "No fullmonthlyrailroadfilingpopulation, penaltyassessment, actualFRAacknowledgement orinvestigationperformance claimed."
+    },
+    {
+      "event_id": "BST-EVT-007",
+      "event_date": "2022-01-21",
+      "authority_ids": [
+        "FRA-BASELINE-2010",
+        "FRA-FR-INDEX-2013-2026"
+      ],
+      "reporting_groups": [
+        "III"
+      ],
+      "threshold_usd": null,
+      "threshold_needed": false,
+      "monthly_due_rule": "225.11:30days_after_month_end",
+      "immediate_rule": "225.9:2010amendment_effective2011-06-01",
+      "result": "EVENT_DAY_SELECTED_CLASSIFICATION_AND_DUE_RULES_RECONCILED",
+      "limit": "No fullmonthlyrailroadfilingpopulation, penaltyassessment, actualFRAacknowledgement orinvestigationperformance claimed."
+    },
+    {
+      "event_id": "BST-EVT-008",
+      "event_date": "2023-07-18",
+      "authority_ids": [
+        "FRA-BASELINE-2010",
+        "FRA-FR-INDEX-2013-2026",
+        "FRA-ORIGINAL-NOTICE-2023"
+      ],
+      "reporting_groups": [
+        "I"
+      ],
+      "threshold_usd": 11500,
+      "threshold_needed": true,
+      "monthly_due_rule": "225.11:30days_after_month_end",
+      "immediate_rule": "225.9:2010amendment_effective2011-06-01",
+      "result": "EVENT_DAY_SELECTED_CLASSIFICATION_AND_DUE_RULES_RECONCILED",
+      "limit": "No fullmonthlyrailroadfilingpopulation, penaltyassessment, actualFRAacknowledgement orinvestigationperformance claimed."
+    },
+    {
+      "event_id": "BST-EVT-009",
+      "event_date": "2024-04-23",
+      "authority_ids": [
+        "FRA-BASELINE-2010",
+        "FRA-FR-INDEX-2013-2026"
+      ],
+      "reporting_groups": [
+        "III"
+      ],
+      "threshold_usd": null,
+      "threshold_needed": false,
+      "monthly_due_rule": "225.11:30days_after_month_end",
+      "immediate_rule": "225.9:2010amendment_effective2011-06-01",
+      "result": "EVENT_DAY_SELECTED_CLASSIFICATION_AND_DUE_RULES_RECONCILED",
+      "limit": "No fullmonthlyrailroadfilingpopulation, penaltyassessment, actualFRAacknowledgement orinvestigationperformance claimed."
+    },
+    {
+      "event_id": "BST-EVT-010",
+      "event_date": "2024-09-09",
+      "authority_ids": [
+        "FRA-BASELINE-2010",
+        "FRA-FR-INDEX-2013-2026"
+      ],
+      "reporting_groups": [],
+      "threshold_usd": null,
+      "threshold_needed": false,
+      "monthly_due_rule": "225.11:30days_after_month_end",
+      "immediate_rule": "225.9:2010amendment_effective2011-06-01",
+      "result": "EVENT_DAY_SELECTED_CLASSIFICATION_AND_DUE_RULES_RECONCILED",
+      "limit": "No fullmonthlyrailroadfilingpopulation, penaltyassessment, actualFRAacknowledgement orinvestigationperformance claimed."
+    },
+    {
+      "event_id": "BST-EVT-011",
+      "event_date": "2025-02-11",
+      "authority_ids": [
+        "FRA-BASELINE-2010",
+        "FRA-FR-INDEX-2013-2026",
+        "FRA-ORIGINAL-NOTICE-2025"
+      ],
+      "reporting_groups": [
+        "III"
+      ],
+      "threshold_usd": 12400,
+      "threshold_needed": false,
+      "monthly_due_rule": "225.11:30days_after_month_end",
+      "immediate_rule": "225.9:2010amendment_effective2011-06-01",
+      "result": "EVENT_DAY_SELECTED_CLASSIFICATION_AND_DUE_RULES_RECONCILED",
+      "limit": "No fullmonthlyrailroadfilingpopulation, penaltyassessment, actualFRAacknowledgement orinvestigationperformance claimed."
+    },
+    {
+      "event_id": "BST-EVT-012",
+      "event_date": "2025-08-14",
+      "authority_ids": [
+        "FRA-BASELINE-2010",
+        "FRA-FR-INDEX-2013-2026",
+        "FRA-ORIGINAL-NOTICE-2025"
+      ],
+      "reporting_groups": [
+        "II"
+      ],
+      "threshold_usd": 12400,
+      "threshold_needed": true,
+      "monthly_due_rule": "225.11:30days_after_month_end",
+      "immediate_rule": "225.9:2010amendment_effective2011-06-01",
+      "result": "EVENT_DAY_SELECTED_CLASSIFICATION_AND_DUE_RULES_RECONCILED",
+      "limit": "No fullmonthlyrailroadfilingpopulation, penaltyassessment, actualFRAacknowledgement orinvestigationperformance claimed."
+    },
+    {
+      "event_id": "BST-EVT-013",
+      "event_date": "2026-02-16",
+      "authority_ids": [
+        "FRA-BASELINE-2010",
+        "FRA-FR-INDEX-2013-2026"
+      ],
+      "reporting_groups": [],
+      "threshold_usd": null,
+      "threshold_needed": false,
+      "monthly_due_rule": "225.11:30days_after_month_end",
+      "immediate_rule": "225.9:2010amendment_effective2011-06-01",
+      "result": "EVENT_DAY_SELECTED_CLASSIFICATION_AND_DUE_RULES_RECONCILED",
+      "limit": "No fullmonthlyrailroadfilingpopulation, penaltyassessment, actualFRAacknowledgement orinvestigationperformance claimed."
+    },
+    {
+      "event_id": "BST-EVT-014",
+      "event_date": "2026-08-14",
+      "authority_ids": [
+        "FRA-BASELINE-2010",
+        "FRA-FR-INDEX-2013-2026"
+      ],
+      "reporting_groups": [],
+      "threshold_usd": null,
+      "threshold_needed": false,
+      "monthly_due_rule": "225.11:30days_after_month_end",
+      "immediate_rule": "225.9:2010amendment_effective2011-06-01",
+      "result": "EVENT_DAY_SELECTED_CLASSIFICATION_AND_DUE_RULES_RECONCILED",
+      "limit": "No fullmonthlyrailroadfilingpopulation, penaltyassessment, actualFRAacknowledgement orinvestigationperformance claimed."
+    }
+  ],
+  "attempts": [
+    "Initial ordinarysearch failed to locate historical notices.",
+    "WaybackCDX endpoint503; availability API initially returned empty snapshots at some dates.",
+    "AvailabilityAPI later returned20210612/20231002/20251116captures; archivedoriginalagencyHTMLretrievedandread.",
+    "FederalRegisterstructuredindex yielded33documents; proposal/final/effective states inspected."
+  ],
+  "remaining_authority_residuals": [],
+  "limits": [
+    "Archivecapturedate is notpublisherdate or earliestcompanyavailability. Researchretrieval occursSep15,2026; no syntheticrecordbackdating.",
+    "The original2025notice is now direct evidence; prior nextyeararithmetic inference remains inGit history.",
+    "Scope is selectedreportingconclusions; this doesnotvalidate everyrailwaylaw, engineeringclaim or everypastfiling."
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "reviewer": "approval_guard agent",
+  "status": "AGENT_VISUAL_QA_NOT_OWNER_ACCEPTANCE",
+  "artifact": "docs/legal/gap-instruments/review-support/decisions.xlsx",
+  "sha256": "36394a1a6b2c13f1e4a721d904f6b5a956015610302b284b3121d72e2dd6823a",
+  "method": "LibreOffice native export; PyMuPDF 1x A3 landscape page images inspected at original resolution",
+  "sheets": [
+    {
+      "name": "Review",
+      "coverage": "All 125 records; all 16 final native print pages manually inspected; every nonempty cell also checked against export text"
+    },
+    {
+      "name": "Read first",
+      "coverage": "Entire sheet, one page inspected"
+    },
+    {
+      "name": "Source details",
+      "coverage": "All 125 records and all 9 columns, across A:D, E:F and G:I native print excerpts; all 42 pages manually inspected at original resolution. Every nonempty cell also checked against final export text."
+    }
+  ],
+  "corrections": [
+    "Reduced primary view from9widecolumns to5; source fields retained separately",
+    "Only header frozen; no four-column frozen pane",
+    "Clause link indentation and subtle row separators prevent text/link collision",
+    "Three topic mappings and host term primary clause corrected",
+    "Workbook ZIP/core timestamps normalized; repeated build byte equality verified",
+    "Source details columns F and H indented to separate neighboring long text; all affected pages re-rendered and inspected."
+  ],
+  "limitations": [
+    "No owner acceptance inferred; no mobile or interactive application usability study claimed. Source details is a wide reference sheet; print excerpts used for complete visual inspection."
+  ],
+  "screenshots": [
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/page-01.png",
+      "sha256": "f5a60cc06689bcdab879f4710c1bb0baee021df50984c30221621f094ebe424f"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/page-02.png",
+      "sha256": "ef1c545b0da25a48d868ca60bbcfa6d91c311bbce942130c14f4108d6a85661f"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/page-03.png",
+      "sha256": "27e07920ea12d5776d6b5043ca7c76e1a38c964bcc6850ef6510b7edcf6bcd9f"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/page-04.png",
+      "sha256": "e8301194110097184e366885275230d377a17da95d3fd44d2f57707217698442"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/page-05.png",
+      "sha256": "8b73ed617c9189f8d07d34f86902bf881e1f5e23d4dda6a157150b60a0ad5e27"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/page-06.png",
+      "sha256": "5e28ddb3a6a11d1e6707de7eae72d3dffccb2cf988d537e141ba376bbc008f3a"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/page-07.png",
+      "sha256": "ed6e24eeb87828f45cf9bb8327709eb6b150ed341da3a6f7095a77de1953ebf6"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/page-08.png",
+      "sha256": "a9e0af35d0e1ba7fba73d105793a64322125cbf4aa246cb1060a69360179953d"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/page-09.png",
+      "sha256": "ae7405da2538c3671b881133f9d493a0fafa021642206412896d43208a966577"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/page-10.png",
+      "sha256": "aa8d503e3a2e9ba01fbf665c7d7a3e6d4856f4269f97d8a9400794e739a27e93"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/page-11.png",
+      "sha256": "7effa91832eb2fd797ea29f2aa15131d9df679c7ffeee6914baffa3bd2d17583"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/page-12.png",
+      "sha256": "5ac7df0d7d26963a3c5b1f3314a2806f7902f219228ea3212bad6918370eb7ae"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/page-13.png",
+      "sha256": "8fbe7b60ccc5a8f6e9362d76a6a965684e3ea680ee8fe6f91d249fd75d2c40a2"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/page-14.png",
+      "sha256": "c6cee6124ae7d777dde6b3306466666e5106da6886cd452021e6ec72af7f65a2"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/page-15.png",
+      "sha256": "76707c99b1243ed43992dd294a585f02bfd35ef8e7965c1aa3991c8c482fd65a"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/page-16.png",
+      "sha256": "bd6e3be4b524843c268adeae3db8670eb1873e3759f894b1b8361079964fdc15"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/read-first-1.png",
+      "sha256": "a1245e2b735bfe2f103fb673c5c71e755fe140116b6d26d58be43cde8047212d"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-left-01.png",
+      "sha256": "c60146c4f62a16821fc169841d97e0405260ddd5d3fee8dfe5a4d87c373aa38f"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-left-02.png",
+      "sha256": "dc4da2e346cc0aa05e36019f01c183d7a6fea601d4e617b42eb9032d2b70e503"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-left-03.png",
+      "sha256": "f7aa71b1e25957d6c61646c161f758e683f18d1e05a3d010ee4c4fce68ad33fd"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-left-04.png",
+      "sha256": "a7cb56f40c87d96e22588ce9788ac34b1ddc8a9f45be2c5ee45c094fdde1f727"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-left-05.png",
+      "sha256": "fd767e15e728b2ff051370635f2bb5134ae84659e6b82b67921e5f4cffd9518a"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-left-06.png",
+      "sha256": "15a31ce4fa52b2c05049a8b4e6492da0688226e0fc493a42966afceb9d801012"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-left-07.png",
+      "sha256": "9209425ba635825b5bcdef4020ae2aac4c25666cc0b4d84e7b00c719a0ab22c1"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-left-08.png",
+      "sha256": "479dd9b31ed4a6becec138a0e03a57d84c477133b86f0629ff33dadae873d506"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-left-09.png",
+      "sha256": "8b709680f5ba719cad400763f4090857983db9beed1f36ea4214c5be7d9db193"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-left-10.png",
+      "sha256": "48f68b1c43306df984347aa3d41354240cbabb37c4f80fa05568d55e9161aa60"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-left-11.png",
+      "sha256": "2326b7bab0bc650e1c2edbd0b79c2a74b7eca7ce4aaca1f2d14a8836bfd992a0"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-left-12.png",
+      "sha256": "b162ede79a0880475c6a136a635290fcfb883087f8e495b295457fbfc4ba1318"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-left-13.png",
+      "sha256": "43c13a8567051032f7c24074b0ab35d64f63fe8fa7678addb1f679eda8d8df8c"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-left-14.png",
+      "sha256": "1d0bb98d44ab2a69d44524f9c7e2c3474f906b5882a6b18fd8d8c729d5daa399"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-middle-01.png",
+      "sha256": "b2ff143baddda598ef4d75c38c23defcdb6ab9d4c5fc168e37efa56a917c1441"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-middle-02.png",
+      "sha256": "e674970ce7560840f0e4f96120886ee62bc036e344d393b45eb6c353ccc277d2"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-middle-03.png",
+      "sha256": "d648c160701da088352133a5812bc218ef3bde904e5f6db54b731b0594cddcf0"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-middle-04.png",
+      "sha256": "c371db283e170fb745342e2b005aa7ccffbe0ff7bb4fa422c42bc5fb59179c79"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-middle-05.png",
+      "sha256": "5133011e2a701f4ab2be723cebf06c0f9473ff08f04470c4c4666ebe3634fc0d"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-middle-06.png",
+      "sha256": "98def2506c99e145845b723d082d316365e2e8f1a98823e3d8bc8da42bc52a2f"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-middle-07.png",
+      "sha256": "d94fd796c9f4c3844cd3c86fd28ac5bc188220e5f48ef97cba05591bb85d9db3"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-middle-08.png",
+      "sha256": "2afac670781ed1ddf4c9c9644d3db842d89c1316bf147c37622124bc14e358c9"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-middle-09.png",
+      "sha256": "e513ef7682426e8179e1ced575fca4e4faedadccadb9268b6fdfa576ce106474"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-middle-10.png",
+      "sha256": "066865f619a46fb8055a115d74ce748a0f6edb8ce28221b16c870edc9c435f5e"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-middle-11.png",
+      "sha256": "b528e31809b5abf5b1a90841d2b9fddabe916dad8c2c5b3c3566660e4febd2fd"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-middle-12.png",
+      "sha256": "2ed76e20c4988d4bf44ca2401720aee5ef2acef476506e1736f211a9bba1bf17"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-middle-13.png",
+      "sha256": "7f0f4688a2c81efbbfef296f74095f59f740e7e6251a068f08c2211fed794683"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-middle-14.png",
+      "sha256": "22499b33069be291d937b20f5bbe53ba5b5a6685bbcee7e5a846b31189312cb0"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-right-01.png",
+      "sha256": "8eb535cbeeb635e4237d5c1e7a52c5364f1e7bac5f3b4adb3bea0c837d485044"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-right-02.png",
+      "sha256": "abbfdaf4fd257ddeac6f8742a34b581348ddc2fadb24523c659664e9d5642eb8"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-right-03.png",
+      "sha256": "364ccc1d8442f8bf1707302cdd5460679aeebbe3786b27ab6405825f0ec6ed6b"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-right-04.png",
+      "sha256": "ffa0e1b3695dfa5eccae25bf6e50803db3fbaf699bce47b16e111b931b33e31f"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-right-05.png",
+      "sha256": "6d1a091ccb0ed80748d3c1648c8d0bf90984b482b40da02edf68425cfe6464a7"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-right-06.png",
+      "sha256": "cee16274948e88f1ba1ed1666b0558ebfce0cebee44c38b6d588942b0354e4fc"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-right-07.png",
+      "sha256": "7b5068d1026edabe88025df718acb05e5f461b2f59d49cdbfba94baa5f447e6c"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-right-08.png",
+      "sha256": "3568324cbcccbbe9368e7aceae49fb119af5d87b8dfc6a3d9d471bb304dd2af3"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-right-09.png",
+      "sha256": "6fdb20accf44a4f22a238688188ec9f29dc14f98e21e66bbf9f5f14ba6dbe55a"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-right-10.png",
+      "sha256": "d5f714bbd9f426bb8ee491c20f4d8f7e85b41849c990855fbae981082dbe3189"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-right-11.png",
+      "sha256": "45015853733cb9c7f0a1ce684ce82efd4c37d3e4714f5bf43f695aa3a2414b3e"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-right-12.png",
+      "sha256": "c68bdf1e5055cbf5f3d1a35b6b222311f1836f4323564b8c5842dceb5c7624ae"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-right-13.png",
+      "sha256": "7ebb34264e0d85092b7d0180773d27632df819a5a5e1c3aabe89ec3b24efc887"
+    },
+    {
+      "path": "docs/legal/gap-instruments/review-support/qa/workbook/source-right-14.png",
+      "sha256": "af4adf79adb00a351afaa7b2c97bdbf6e2039b648aa0d78c932327c94008b62a"
+    }
+  ],
+  "inspected_surface_count": 59
+}

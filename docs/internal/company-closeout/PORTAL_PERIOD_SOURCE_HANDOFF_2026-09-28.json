@@ -1,0 +1,98 @@
+{
+  "accepted_source_commit": "ddca0d93b16c743e90ce5ac3f9cc74fb74ec6d1f",
+  "completed_period": {
+    "end_exclusive": "2026-09-01",
+    "start": "2026-08-01",
+    "timezone": "America/Los_Angeles"
+  },
+  "edition": "sable-harbor-company-edition-v1.2.0",
+  "limits": [
+    "Due counts are source-declared schedules, not independently validated statutory duties.",
+    "Modeled payment and clearing records are not independent bank or counterparty confirmation.",
+    "Selected operating chains do not establish the full physical month denominator.",
+    "Null permit due counts and cash-payment due dates are unknown, not zero.",
+    "No August effective record was available in an August known-on view; source and release availability govern."
+  ],
+  "populations": {
+    "august_rail_event_review": {
+      "expected": 1,
+      "missing_evidence": 1,
+      "other_historical_events_excluded": 13,
+      "performance_evidence": 0,
+      "reporting_determination": "OPEN_2026_EVENT_DATE_AUTHORITY",
+      "represented_event": 1,
+      "source_event_id": "BST-EVT-014",
+      "unit": "event_review"
+    },
+    "contract_delivery_invoice": {
+      "due": 92,
+      "id_set_sha256": "a6c689270499648af93d06c89bf2e3547cb5564cc47ebaa04a971eeb7406e6cb",
+      "missing": 0,
+      "modeled_paid_invoices": 59,
+      "modeled_unpaid_invoices": 33,
+      "observed_delivery": 92,
+      "observed_evidence": 92,
+      "observed_invoice": 92,
+      "unit": "august_contract"
+    },
+    "current_projects": {
+      "cradle": 2,
+      "id_set_sha256": "8a5676a8e3b84f7d31d050a617781e2f0d8649bb4d83b550eadd33be6efd44a4",
+      "represented": 5,
+      "statutory_due_occurrences": null,
+      "unit": "project",
+      "willow": 3
+    },
+    "payroll": {
+      "approval_batches": 10,
+      "due": 1404,
+      "excluded_nonemployee_people": 7,
+      "id_set_sha256": "6f8f63a303ddde8a5882fe7ad3d26c825644197f060a722f10ba2182babe0ba5",
+      "missing": 0,
+      "modeled_paid": 1404,
+      "observed": 1404,
+      "unit": "person_pay_date"
+    },
+    "red_wash_permit_conditions": {
+      "due_occurrences": null,
+      "id_set_sha256": "b57332c44f13d8f3e42598ea70d39a7c04aa119526fd4b658b915afca8970998",
+      "missing_occurrence_count": null,
+      "performance_evidence_missing_sets": 14,
+      "represented": 14,
+      "unit": "permit_condition_set"
+    },
+    "selected_operating_chains": {
+      "cases": {
+        "EXCEPTION": 5,
+        "NORMAL": 4,
+        "QUALIFIED_ASSAY_WITH_OPEN_EXTERNAL_AUTHORITY": 1
+      },
+      "declared": 10,
+      "full_month_transaction_denominator": null,
+      "id_set_sha256": "8c83a468652a5969ae7a9267e9a1812b607a4e84092bc0df42c30c34201aacb4",
+      "missing_within_selection": 0,
+      "observed": 10,
+      "stage_records": 52,
+      "unit": "selected_case"
+    },
+    "september_hr_change_excluded_from_august": {
+      "count": 1,
+      "id_set_sha256": "3bb6eee7a84f0d11374053650a35776de500e04ef96495fa20f0ad695fce62d5",
+      "unit": "change_event"
+    }
+  },
+  "record_id": "SH-PORTAL-PERIOD-SOURCE-HANDOFF-2026-08-v1",
+  "records_json_sha256": "5dd78a2bc6c6a08f333a7a6a0d09f7a310e3f2bd0fe027926c6b120a7b4a795e",
+  "release_package_sha256": "8136d8cae07dd4f9fc1f488a7d1034275f5c4149f8606774c6370bbaff7c597c",
+  "release_published_at": "2026-09-22T23:50:07Z",
+  "release_receipt_sha256": "bc0b66500d682c1ea1705601bc1fc1b45e1c6e166d3d28b308df9c729c53767e",
+  "repository_source_available_at": "2026-09-22T23:26:06Z",
+  "source_sha256": {
+    "enterprise/ccf/company_closeout/current_activity_successor.json": "367d2807bf96dfdc21aa8353e2b7e2a6709bc5ed08a5be7af06acf1c12c2a696",
+    "enterprise/ccf/company_closeout/obligation_census.json": "4f3ea9b9d7269d15ae1c8086af28691e65130c17ba346a857f117120183146ac",
+    "enterprise/operations/source/completed_period_2026_08.json": "14e7b53177b80d671ed66fdc309c6b2c0e1b0b68567f54da97dd02dca4d1ddf8",
+    "enterprise/operations/source/current_company_2026_08.json": "729e45f44d5240be558bb8d1cfef3bdd527a379a810a342173b2409d7ce0ea74"
+  },
+  "state": "REVIEWABLE_SOURCE_INPUT_NOT_AUDIT_ACCEPTANCE",
+  "version": "1.0.0"
+}

@@ -2,12 +2,12 @@
 
 The latest indexed private review packet is
 `enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-refresh-run-post-original-journals-a1939-b2066-v4/`
-at A revision 1939 and B revision 2066. Its [final independent technical and
-browser review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-refresh-run-post-original-journals-a1939-b2066-v4-independent-v1/FINAL-REVIEW.json)
+at A revision 1939 and B revision 2066. Its final independent technical and
+browser review (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-refresh-run-post-original-journals-a1939-b2066-v4-independent-v1/FINAL-REVIEW.json`)
 (SHA-256 `0a9b8b18096bf576ec555c86d13acb2d5cbbfc0f2588755c24770e55f5c7e291`)
 verified the source-journal rebase after authorized original-root B2 collection
 and Key binding. The core audit packet remains byte-identical to the prior
-[independently reviewed v3](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-refresh-run-post-gaps-a1939-b2066-v3-independent-v1/REVIEW.json)
+independently reviewed v3 (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-refresh-run-post-gaps-a1939-b2066-v3-independent-v1/REVIEW.json`)
 (SHA-256 `e750ba85d68f4d37a8d45b3df2abc145bfd6b59eb8cf1b9f2ea67506f4ba589d`):
 112 receipt pins, all 818 task instances, linked workpapers and sample traces,
 16 recorded findings, three learner-visible authored gaps and 1,382 retained
@@ -134,12 +134,12 @@ date real-world Type 2 readiness or external acceptance.
 | Procedure reconciliation — AQ-06/AQ-07 | Ordinary `task.update` supports attributed status, conclusion and rationale; [scope reconciliation](../../../../enterprise/audit_suite/scope_reconciliation.py) preserves prior work when scope changes. These mechanisms do not perform the authored tests. | Account for every scoped task and conditional duty against exact originals, workpapers, population units and performed checks. Execute supportable remaining clauses and record limitations or unperformed steps. Retain per-task dispositions and exact ordinary-command references; no blanket PASS or automatic N/A. |
 | Recorded inspections — IK-04/UX-02 | [Explicit inspection records](RECORDED_INSPECTIONS.md), API/UI submission and historical actor/payload linkage are implemented. [Focused tests](../../../../tests/audit_suite/test_artifact_inspection.py) cover immutable records, rejected inputs, exact retries and historical comparison. | Reuse those records in the selected paired case and acceptance index. Preserve missing historical assertions as unknown; do not backfill a claimed inspection from a download or treat an assertion as proof of understanding, adequate testing or a conclusion. |
 | Combined paired journey — AQ-07/IK-06/UX-10/CX-05 | The [paired technical journey](COMPANY_SOURCE_IMPLEMENTATION.md#paired-integration-and-substantive-reconciliation) already exercises collection, inspection, sampling, partial conclusions, separate review, restored work, handoff, assessment and debrief. | Reconcile the existing case matrix and stage receipts to the full queued scenarios, including alternative investigations and corrected/missing support. Retain measured interaction burden, exports and access/context checks; fix reproduced defects. Scripted coverage does not supply qualified calibration or actual owner feedback. |
-| Company-period reconciliation — AQ-04/AQ-06 | The [declared operating-period ledger](AQ_SHARED_OPERATING_PERIOD_LEDGER_2026-09-14.md) and [source inventory](AQ_SOURCE_READINESS_INVENTORY_2026-09-14.md) distinguish declared denominators from observed records. The independently reviewed [historical selected 2027 register](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/company-period-reconciliation-2027-selected-v3/REGISTER.md) accounts for 36 due, 33 observed and three missing occurrences across distinct IAM007, backup/restore and nonhuman branch schedules. All 33 observed slots join exact ordinary collections of 35 selected native occurrence records; 28 slots in six separate 2028 declarations are excluded. A later [company-native close](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/selected-2027-company-period-close-native-postreview-independent-v6/REVIEW.json) emitted A19/B21 source versions, and [fresh ordinary collection](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/selected-2027-period-close-fresh-collection-independent-postreview-v1/REVIEW.json) retained all 40 close records in new engagements. A [read-only downstream join](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/selected-2027-period-close-downstream-reconciliation-v1/RECONCILIATION.json) kept the three missing operations explicit. | The 40 close artifacts include 36 occurrence records, of which three document missing operations, plus four definition/reconciliation records. They do not mean 40 completed operations. Expand only through exact company-owned operations and declared denominators, then independently assess source populations, period coherence, approvals and control effectiveness. The selected work does not establish a complete company year. |
+| Company-period reconciliation — AQ-04/AQ-06 | The [declared operating-period ledger](AQ_SHARED_OPERATING_PERIOD_LEDGER_2026-09-14.md) and [source inventory](AQ_SOURCE_READINESS_INVENTORY_2026-09-14.md) distinguish declared denominators from observed records. The independently reviewed historical selected 2027 register (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/company-period-reconciliation-2027-selected-v3/REGISTER.md`) accounts for 36 due, 33 observed and three missing occurrences across distinct IAM007, backup/restore and nonhuman branch schedules. All 33 observed slots join exact ordinary collections of 35 selected native occurrence records; 28 slots in six separate 2028 declarations are excluded. A later company-native close (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/selected-2027-company-period-close-native-postreview-independent-v6/REVIEW.json`) emitted A19/B21 source versions, and fresh ordinary collection (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/selected-2027-period-close-fresh-collection-independent-postreview-v1/REVIEW.json`) retained all 40 close records in new engagements. A read-only downstream join (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/selected-2027-period-close-downstream-reconciliation-v1/RECONCILIATION.json`) kept the three missing operations explicit. | The 40 close artifacts include 36 occurrence records, of which three document missing operations, plus four definition/reconciliation records. They do not mean 40 completed operations. Expand only through exact company-owned operations and declared denominators, then independently assess source populations, period coherence, approvals and control effectiveness. The selected work does not establish a complete company year. |
 | Acceptance packet — AQ-08 | The latest A1939/B2066 private v4 packet indexes 112 pinned receipts, 818 task rows, three authored gaps and 16 findings. Independent v3 core and v4 source-journal/browser reviews covered task/work/finding rows, retained audit artifact bytes, company journal changes, filters, keyboard navigation and narrow layout. It remains an immutable snapshot; the separately reviewed fresh paired and period-close engagements are outside it. | Reconcile the indexed technical results with the full queued scope, source ownership, migration/recovery, paired behavior and unresolved decisions. Record qualified substantive review and actual owner usability acceptance separately; the packet does not supply either. |
 
 The selected 2027 register is an author read-only artifact (manifest SHA-256
 `fac3fb11a124d2f766e84eee24c2727c344e718a24269a47b3701f89e4856b1f`),
-with a distinct [independent review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/company-period-reconciliation-2027-selected-v3-independent-review-v1/REVIEW.json)
+with a distinct independent review (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/company-period-reconciliation-2027-selected-v3-independent-review-v1/REVIEW.json`)
 (SHA-256 `faf8e149a88490f4babb70c0cd4bb79e0cf1975fb58f6d6bf2c512c2b435d89e`).
 Its source cutoffs differ: the access report is as of January 15, 2028, the backup
 reports are as of December 31, 2027, and the nonhuman rows use a final native
@@ -149,7 +149,7 @@ to the earlier queue SHA-256 `85998a2294336adacb47028a9f84ae28918a17a97a91ac9342
 at repository HEAD `6a5a2a517d9b3ca54462121b8d8d83617de1d322`; this later checkpoint
 does not change its bytes or conclusions.
 
-A later [read-only gap adjudication](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/selected-2027-missing-occurrence-gap-v1/GAP.json)
+A later read-only gap adjudication (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/selected-2027-missing-occurrence-gap-v1/GAP.json`)
 (SHA-256 `44c64cb2b9c87432132bc4f726e7f2166211946781eb51e77d05ba4bf8157dd9`)
 checked the three missing selected-period occurrences against their declarations,
 native histories and author intents. IAM007 Q4 has no Q4 review, branch B deliberately
@@ -157,17 +157,17 @@ omitted the September B09 backup despite a source dataset, and branch B has no Q
 nonhuman review. None was backfilled or converted to a completed operation.
 
 For `TASK-SH-POL-003-corporate-ACTION-H-ADDRESSABLE`, the independently checked
-[selected-original readout](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/pol003-selected-content-read-v1/READOUT.json)
+selected-original readout (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/pol003-selected-content-read-v1/READOUT.json`)
 (review SHA-256 `9e4f0bf89690dac8a5259617c08f95b01ffbc705846c6a87613477cea8fd2246`)
 found a generic local procedure and a single `EXC-01` exception package in the five
-route-hinted files per branch. A [bounded authorized-source scan](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/pol003-authorized-source-discovery-v1/DISCOVERY.json)
+route-hinted files per branch. A bounded authorized-source scan (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/pol003-authorized-source-discovery-v1/DISCOVERY.json`)
 (SHA-256 `812f6df66b4b7829234e395ec4f288df235615e0d79fe36a6dec7fb36f4ebb0b`)
 joined every currently authorized native version at the A/B as-of to an ordinary
 collected artifact and found no 22-entry addressable-measure decision register in
 that portfolio. The task remains `NOT_STARTED/NOT_RUN`; future or unregistered
 sources and professional HIPAA applicability are outside these checks.
 
-The [four-task exact-clause screen](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-exact-clause-screen-v1/SCREEN.json)
+The four-task exact-clause screen (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-exact-clause-screen-v1/SCREEN.json`)
 (SHA-256 `802be28d42f769196f07bb7b33b7a99846a8180a8a075a892fe2f6ab6215ea82`)
 found no supportable transition among the selected unplanned HIPAA and integrity
 tasks. The newly committed prospective [restore-use probe](../../../../enterprise/audit_suite/company_backup_use_probe.py)
@@ -181,23 +181,23 @@ so this implementation does not add A/B company evidence or SH-POL-001 task cred
 A separate prospective [local logging clock companion](../../../../enterprise/audit_suite/LOGGING_CLOCK_RUNTIME.md)
 (`82cbb61f`) reads pinned device and reference samples, compares signed offsets
 at exact microsecond precision, and records threshold alerts or an explicit
-missed observation as collectible native company versions. Its [isolated
-receipt](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq04-clock-local-isolated-v1/RECEIPT.json)
+missed observation as collectible native company versions. Its isolated
+receipt (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq04-clock-local-isolated-v1/RECEIPT.json`)
 (SHA-256 `d564aaa7e4d2f03bc68c693f9c28670053ef3fce37a150b5f6c4d42c2e769429`)
 retains the source-byte preservation check. The reference, threshold and cadence
 remain local unapproved inputs; no actual deployment, A/B operation, performed
 review or SH-SEC-002 task credit follows.
 
-A [read-only CC6.8 source-and-clause rebase](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/additional-duty-software-install-source-rebase-2026-09-29/REPORT.md)
+A read-only CC6.8 source-and-clause rebase (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/additional-duty-software-install-source-rebase-2026-09-29/REPORT.md`)
 (SHA-256 `8c691a4b0a7fc55e95bf1183fe8dbd5b90bf5be121b72ebcc22e8b1edebdf238`)
 found no historical native test of unapproved executable installation and its
 exception path. The exact SH-CFG-002 CC6.8 tasks remain `NOT_STARTED/NOT_RUN`.
 The separately committed [prospective local software-install exercise](../../../../enterprise/audit_suite/company_software_install_activity.py)
 (`408a54e1`) creates inert fixture-digest, local asset/policy, approval,
 deny/detection/response, scoped exception, retry, expiry-denial and coverage
-records in a new private `CompanyStore` before audit collection. Its [isolated
-run](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/software-install-exercise-run-2026-09-29-v2/RUN-RECEIPT.json)
-passed an [independent read-only native-to-retained review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/software-install-exercise-independent-review-v1/REVIEW.json)
+records in a new private `CompanyStore` before audit collection. Its isolated
+run (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/software-install-exercise-run-2026-09-29-v2/RUN-RECEIPT.json`)
+passed an independent read-only native-to-retained review (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/software-install-exercise-independent-review-v1/REVIEW.json`)
 (SHA-256 `86e446ac08cf393b5b0680a7e26eaa3df7d46cf5b8f611d547377cc7eb7399e9`)
 of all 12 ordinary collections. Five focused/collection-regression tests and
 Ruff passed. It runs no executable and creates no deployed endpoint, Reno/Boise
@@ -217,7 +217,7 @@ professional clearance. The historical A1938/B2064 packet predates the later
 task-gap commands; the independently reviewed A1939/B2066 v3 and v4 packets
 include the three subsequent authored observations.
 
-A separate [disposable retrospective rehearsal](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-pol003-retrospective-task-gap-disposable-v1/MANIFEST.json)
+A separate disposable retrospective rehearsal (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-pol003-retrospective-task-gap-disposable-v1/MANIFEST.json`)
 (manifest SHA-256 `5ceddc78841f3092f7b32a88753d00c85e96789ed14efeeff15445dff58eb783`)
 recorded one `OPEN/INSUFFICIENT_SOURCE` SH-POL-003 observation in each *copied*
 audit workroom. The A/B commands advanced only the copies from 1938/2064 to
@@ -225,18 +225,18 @@ audit workroom. The A/B commands advanced only the copies from 1938/2064 to
 `NOT_STARTED/NOT_RUN` states passed the author's checks. Original event tips,
 database hashes and retained artifact bytes stayed unchanged. No company source
 was mounted, and the observation supplies neither HIPAA applicability nor
-procedure credit. A separate [independent read-only review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-pol003-retrospective-task-gap-independent-review-v1/REVIEW.json)
+procedure credit. A separate independent read-only review (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-pol003-retrospective-task-gap-independent-review-v1/REVIEW.json`)
 (SHA-256 `69e28e2d7754056c934f7b9980be027300f6d82953d1c5573bad3d1f79bb45a5`)
 checked both original database hashes and 661/721 retained artifact hashes,
 event-chain deltas and task projections. It found no original audit mutation.
 
 The same bounded SH-POL-003 gap was then recorded by ordinary commands in the
 *original* A/B audit workrooms, after verified non-reflink database backups and
-an [independent pre-execution review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-pol003-original-task-gap-pre-execution-independent-v1/REVIEW.json)
+an independent pre-execution review (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-pol003-original-task-gap-pre-execution-independent-v1/REVIEW.json`)
 (SHA-256 `28d55119cb8c6147d630fa9418bd7f5bfe53401980e4880223dd0c8aaa1b3dc6`).
-A advanced 1938→1939, then passed [independent A postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-pol003-original-task-gap-post-execution-independent-v1/REVIEW-A.json)
+A advanced 1938→1939, then passed independent A postreview (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-pol003-original-task-gap-post-execution-independent-v1/REVIEW-A.json`)
 (SHA-256 `c2a667e74c073538e934747afe28f23665b4f397b285e51e4a7790fdaa599a75`)
-before B advanced 2064→2065 and passed [independent B postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-pol003-original-task-gap-post-execution-independent-v1/REVIEW-B.json)
+before B advanced 2064→2065 and passed independent B postreview (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-pol003-original-task-gap-post-execution-independent-v1/REVIEW-B.json`)
 (SHA-256 `5a399cd1c2bd47ddbcc382cb20cd9e5ebd3fb715d48e155d981462be70870773`).
 Each original gained exactly one `OPEN/INSUFFICIENT_SOURCE` observation; the
 SH-POL-003 task remains `NOT_STARTED/NOT_RUN`. Independent raw-event checks
@@ -252,9 +252,9 @@ genuine B-side omissions. The B09 backup and nonhuman Q4 review already appear
 in B's bounded `IN_PROGRESS/FAIL` work and were not duplicated. A separate
 IAM007 Q4 review slot for the selected `access-review-continuation-b` branch
 was absent; the collected Q4 successor belongs to another branch. After an
-[independently reviewed, backed-up B-only command](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/selected-2027-iam007-q4-b-execution-v1/RECEIPT.json),
+independently reviewed, backed-up B-only command (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/selected-2027-iam007-q4-b-execution-v1/RECEIPT.json`),
 B advanced 2065→2066 with one `OPEN/MISSING_OPERATION` task gap. The
-[independent postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/selected-2027-iam007-q4-b-post-execution-independent-v1/REVIEW.json)
+independent postreview (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/selected-2027-iam007-q4-b-post-execution-independent-v1/REVIEW.json`)
 (SHA-256 `1252ab39a0389c6c0ae78c05209eabb32fcceacc241ed6ab7936712443913afa`)
 verified the single event, unchanged `IN_PROGRESS/FAIL` task, intact non-reflink
 backup, 721 retained artifacts and 237 company-source pins; A remained at
@@ -271,27 +271,27 @@ passed; actual owner visual/usability acceptance remains unrecorded. A full
 backend `tests/audit_suite` run passed at this checkpoint; the later restore-use
 module also passed its focused and backup-runtime regression suites.
 
-The historical [paired B2 Key case](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-paired-b2-key-validation-v2/MANIFEST.json)
-passed [independent technical review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-paired-b2-key-validation-v2-independent-review-v1/REVIEW.json)
+The historical paired B2 Key case (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-paired-b2-key-validation-v2/MANIFEST.json`)
+passed independent technical review (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-paired-b2-key-validation-v2-independent-review-v1/REVIEW.json`)
 (SHA-256 `f7c70524ec6a7d7d4ae0951b98e6e1c17ef017bf99a8579a240be9422a8cddae`).
 It verifies the selected native-to-collection-to-retained chain at bound A997/B1047
 and shows Messy B's open backup failure ticket was not linked to the B2 issue.
-A new-only unbound [ticket-link draft](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-ticket-key-draft-v1/MANIFEST.json)
-passed [independent review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-ticket-key-draft-independent-review-v1/REVIEW.json)
+A new-only unbound ticket-link draft (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-ticket-key-draft-v1/MANIFEST.json`)
+passed independent review (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-ticket-key-draft-independent-review-v1/REVIEW.json`)
 (SHA-256 `312527981747c57ac1078e033283b8db0ddaf23c1f01a02afd19dd65e4e1886f`):
 only the existing ticket source ID was appended to B2, and isolated issue-view
 navigation then included it. The existing bound Key was not rewritten. A B1095
 successor proposal passed technical review, but the historical Key workroom's
 instructor and learner identities are expired. An independently reviewed
-[copy-local prepare preflight](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-key-b1095-fresh-principal-independent-review-v2/REVIEW.json)
+copy-local prepare preflight (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-key-b1095-fresh-principal-independent-review-v2/REVIEW.json`)
 (SHA-256 `97c430c8e6edcdea8aba42dabc97e78d5ce15b4a7e63a7da4ad7c9a81a19fa2e`)
 used newly provisioned identities in a separate copy and preserved all 1,096
 historical events and 32 retained source bytes. It did not bind or release a Key:
 native-source isolation/rebinding was unresolved at that preflight. Qualified
 grading calibration and owner acceptance remain separate gates.
 
-An independently reviewed [new-engagement source collection](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-new-engagement-collection-run-v1/MANIFEST.json)
-(independent [review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-new-engagement-collection-independent-review-v1/REVIEW.json)
+An independently reviewed new-engagement source collection (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-new-engagement-collection-run-v1/MANIFEST.json`)
+(independent review (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-new-engagement-collection-independent-review-v1/REVIEW.json`)
 SHA-256 `1743cd7dd7dfe511e39fdcf0051111d5fc67aa572c8e88e27b2085f308efff15`)
 resolved the *isolated rehearsal* source-binding feasibility without altering B1095.
 A distinct EID `ENG-b4ae647a4ac35a18acba21a5` activated a new registry over four
@@ -303,8 +303,8 @@ intentionally different from B1095's pinned binding. These cloned derivatives
 are not live physical company originals; no Key was bound at this collection
 checkpoint, and the selected collection is not full-year or professional sufficiency.
 
-An [unbound six-check Key plan](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-new-engagement-key-plan-seal-v2/MANIFEST.json)
-for that distinct EID passed [independent review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-new-engagement-key-independent-review-v2/REVIEW.json)
+An unbound six-check Key plan (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-new-engagement-key-plan-seal-v2/MANIFEST.json`)
+for that distinct EID passed independent review (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-new-engagement-key-independent-review-v2/REVIEW.json`)
 (SHA-256 `8eb6264f7a35bc436900e8d05a1c13161ac970f0244c9979c56c9f69c0d6900a`).
 Its exact 159-file seal covers 32 new source/artifact/retained links, six
 issue-to-task links, and the branch-B OPEN backup failure ticket in B2. The
@@ -313,8 +313,8 @@ an unbound, private plan at that checkpoint; instructor native-source access,
 Key comparison, learner isolation at bind time, qualified grading calibration
 and owner acceptance had not been established by it.
 
-A subsequent private [bind run](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-new-engagement-key-bind-run-v1/MANIFEST.json)
-passed [independent postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-new-engagement-key-bind-independent-postreview-v1/REVIEW.json)
+A subsequent private bind run (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-new-engagement-key-bind-run-v1/MANIFEST.json`)
+passed independent postreview (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-new-engagement-key-bind-independent-postreview-v1/REVIEW.json`)
 (SHA-256 `d5eaa206309640dd87439f9cb4f5a25764f83eff9932129f7111306777939067`).
 The exact reviewed runner bound all 32 selected cloned native versions and
 retained audit copies to six checks, including the B2 OPEN failure ticket.
@@ -327,13 +327,13 @@ live-source claim or full-year sufficiency follows. Bind-time learner denial
 does not imply the same source was inaccessible during historical collection.
 
 A separate original-root B2 path used four local company source roots in a new
-engagement `ENG-31cb484132351ecbcde7c908`. Its [independent collection
-postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-original-root-collection-run-v2-independent-v1/REVIEW.json)
+engagement `ENG-31cb484132351ecbcde7c908`. Its independent collection
+postreview (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-original-root-collection-run-v2-independent-v1/REVIEW.json`)
 (SHA-256 `8ef8a324056d12c1cc986c48fd8b6b59aae986ddd806ae1fb38b9aa66cce8600`)
 verified 32 original-source/ordinary-receipt/retained-byte links, eight PBC
 groups, 21 collection-time grant/revoke pairs, the OPEN B2 failure ticket and
 an unbound six-check plan at audit revision 51. A later private
-[Key bind](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-original-root-key-bind-independent-postreview-v4/REVIEW.json)
+Key bind (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-original-root-key-bind-independent-postreview-v4/REVIEW.json`)
 (independent postreview SHA-256
 `e2cb538b46ae611455cc1e97bb757bb1cea4f80fbef5824175e4514e2b716471`)
 bound those 32 links and six checks, then revoked 21 temporary instructor
@@ -345,7 +345,7 @@ retained separately. This is a synthetic local, private Key binding: no active
 service mount, learner release, grade, professional validation or full-year
 effectiveness follows.
 
-An actual [fresh paired B2 journey](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-paired-fresh-journey-run-v1-independent-postreview-v1/REVIEW.json)
+An actual fresh paired B2 journey (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-paired-fresh-journey-run-v1-independent-postreview-v1/REVIEW.json`)
 (independent postreview SHA-256
 `922b850c9539ab849c35b9578c5921ffd1daf6812d9e8ff6d7f067e226f70be8`)
 started two distinct private A/B engagements with no retained audit evidence,
@@ -356,7 +356,7 @@ first attempt and retry completed; Messy B2's first attempt failed, its retry
 completed and the failure ticket remained OPEN. R1's older bytes differed
 from current bytes in both branches; R2's matched. The historical PBC flows
 are different: A has 22 groups, four empty ACKNOWLEDGED, while B has eight
-SUBMITTED groups. A subsequent [paired private Key bind](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-paired-fresh-private-key-bind-run-v2-independent-postreview-v1/REVIEW.json)
+SUBMITTED groups. A subsequent paired private Key bind (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-paired-fresh-private-key-bind-run-v2-independent-postreview-v1/REVIEW.json`)
 (independent postreview SHA-256
 `f5486e0afbc50ca22ff3d9b3444ddedae0fa48b65c340980e585d8b6ad798b87`)
 bound six checks per profile to the 31/32 retained source links; Messy's B2
@@ -372,9 +372,9 @@ The workroom now supports an instructor-only private preview through
 `serve --disable-instructor-writeback`; the default release and assessment
 behavior remains unchanged. With this switch, no assessment, release or
 debrief store is created, their routes return 503, and the bound Key and
-instructor comparison remain available. [Independent code review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-paired-fresh-private-preview-independent-review-v2/REVIEW.json)
+instructor comparison remain available. Independent code review (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-paired-fresh-private-preview-independent-review-v2/REVIEW.json`)
 (SHA-256 `698e8a6f89093f2cdb488b1c40c9b81538a1f3bcc3a3da73c840440f056760b8`)
-and exact [A/B disposable route QA](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-paired-fresh-private-preview-route-qa-v5/RECEIPT.json)
+and exact A/B disposable route QA (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/ik06-b2-paired-fresh-private-preview-route-qa-v5/RECEIPT.json`)
 (SHA-256 `ae18053f77770293bab8cdf3372cacca6ec31f53935fb7baacb8689d327480c1`)
 verified instructor comparison 200, learner and other-engagement denial 403,
 and disabled assessment/release/debrief routes 503. Nineteen focused tests,
@@ -382,7 +382,7 @@ Ruff and diff checks passed. This used private TestClient copies: no actual
 service mount, learner Key release, assessment, grade or professional review.
 
 The selected 2027 company period was then closed into two new native source
-roots with A19/B21 version-one records. [Independent native postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/selected-2027-company-period-close-native-postreview-independent-v6/REVIEW.json)
+roots with A19/B21 version-one records. Independent native postreview (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/selected-2027-company-period-close-native-postreview-independent-v6/REVIEW.json`)
 (SHA-256 `c745638fb8386aa4865a088586e4e899de99ce9ad65616f70c94a15df131f7c3`)
 verified 36 selected due occurrences, 33 observed and three genuinely missing
 in B: BCM002 B09, IAM006 Q4 and IAM007 Q4. The observed set comprises 25
@@ -393,11 +393,11 @@ import time. This producer created no audit evidence or task credit.
 
 Two fresh zero-evidence audit engagements then collected all 40 close records
 through ordinary PBC, temporary source grants and `company.collect` commands.
-[Independent collection postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/selected-2027-period-close-fresh-collection-independent-postreview-v1/REVIEW.json)
+Independent collection postreview (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/selected-2027-period-close-fresh-collection-independent-postreview-v1/REVIEW.json`)
 (SHA-256 `822d77e84c64be040245b59f64d33e3d403856013d975b2bc9c5c77f18667dfe`)
 verified exact A19/B21 native/receipt/retained-byte joins at fresh revisions
 30/34, with all grants revoked and historical A1939/B2066 audits unchanged.
-The [read-only downstream reconciliation](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/selected-2027-period-close-downstream-reconciliation-v1/RECONCILIATION.json)
+The read-only downstream reconciliation (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/selected-2027-period-close-downstream-reconciliation-v1/RECONCILIATION.json`)
 (SHA-256 `688b35fa1a06f72581a37dcc62b654c1c83d83c05fdf7f4197d2ddbd65e7535c`)
 joins each selected due row to its close record and retained artifact, compares
 the frozen historical A1938/B2064 register and preserves the three missing
@@ -407,9 +407,9 @@ bookends; they do not establish 40 completed operations, a complete year or
 control effectiveness. The six separate 2028 declarations and 28 slots
 remain excluded.
 
-The sealed [paired BCM procedure runner](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-bcm-ordinary-procedures-runner-proposal-v2/MANIFEST.json)
+The sealed paired BCM procedure runner (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-bcm-ordinary-procedures-runner-proposal-v2/MANIFEST.json`)
 then ran a reviewed disposable rehearsal and a separate private actual run
-against byte-copied Key-bound A/B workrooms. [Independent actual-run postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-bcm-ordinary-procedures-run-independent-review-v1/REVIEW.json)
+against byte-copied Key-bound A/B workrooms. Independent actual-run postreview (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-bcm-ordinary-procedures-run-independent-review-v1/REVIEW.json`)
 (SHA-256 `f42dc13679d7cef34bda1ae7c25bbe27f71bc66dee80075554503c77fea0fc78`)
 verified six ordinary commands per branch (A90→96, B63→69), provisional
 B1/B2/B3 declaration reconciliation, and distinct BCM-003 R1/R2 workpaper
@@ -422,15 +422,15 @@ bound Key and historical A1939/B2066 audits remained unchanged. BCM-002/003
 tasks remain `NOT_STARTED`/`NOT_RUN`; this selected local slice grants no
 full-year, control-effectiveness, professional, task or grade credit.
 
-The paired [CFG-002 local procedure run](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-cfg002-ordinary-procedures-run-v2/RESULT.json)
+The paired CFG-002 local procedure run (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-cfg002-ordinary-procedures-run-v2/RESULT.json`)
 followed an independently reviewed plan, a copy-only API smoke, and a gated
 rehearsal. The first gated rehearsal failed during final verification when a
 transient copied SQLite WAL disappeared between listing and `stat`; its
-[independent failure review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-cfg002-ordinary-procedures-rehearsal-failure-independent-v1/REVIEW.json)
+independent failure review (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-cfg002-ordinary-procedures-rehearsal-failure-independent-v1/REVIEW.json`)
 (SHA-256 `bc19edddfbdb699561fcf42cbb93912482db618c3084d8bbe3a04917afe2e8e5`)
 keeps that output failed and preserved. A new-only runner quiesced the copied
 databases and passed a separate rehearsal before the actual private run.
-The [independent actual postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-cfg002-ordinary-procedures-actual-independent-postreview-v2/REVIEW.json)
+The independent actual postreview (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-cfg002-ordinary-procedures-actual-independent-postreview-v2/REVIEW.json`)
 (SHA-256 `5b971fa1c14d20dee9f752ae7d2747695fafc4ec5664dcdf8e72f287fe6d7315`)
 verified A96→100/B69→73, four ordinary commands and 13 exact native/receipt/
 retained-byte joins per branch. The one local APPLY shows a pre-operation
@@ -440,25 +440,25 @@ workrooms, native roots, bound Key and historical audits remained unchanged.
 All six CFG-002 tasks per branch remain `NOT_STARTED`/`NOT_RUN`;
 there is no enterprise drift, full-period, task, grade or professional credit.
 
-The current [paired 818-row task screen](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-all409-task-source-screen-v3/SUMMARY.json)
-passed [independent review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-all409-task-source-screen-independent-review-v3/REVIEW.json)
+The current paired 818-row task screen (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-all409-task-source-screen-v3/SUMMARY.json`)
+passed independent review (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-all409-task-source-screen-independent-review-v3/REVIEW.json`)
 (SHA-256 `ac4420f96db4441b8e3ec5e7433d5db13bdf23eb54f91086c7e5f32cb243fb39`).
 At A100/B73, each branch has 409 uncredited tasks: 36 have an explicit
 selected-workroom source association, 373 do not, and only three have a
 task-specific recorded procedure. Association is not evidence sufficiency.
-The [native coverage plan](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-unmatched373-company-native-coverage-plan-v2/PLAN.md)
-and its [independent review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-unmatched373-company-native-coverage-independent-review-v2/REVIEW.json)
+The native coverage plan (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-unmatched373-company-native-coverage-plan-v2/PLAN.md`)
+and its independent review (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-unmatched373-company-native-coverage-independent-review-v2/REVIEW.json`)
 (SHA-256 `f09117919331a3a2ca36963f4d9ad9135461af47f9fd9a6db00c38a0d235e1f4`)
 separate 84 tasks per branch with existing portfolio native references, four
 with a separate local SEC-006 source, 283 needing further source discovery or
 period-coherent company activity, and two owner service-scope decisions.
 
-The first 18-control batch design was [marked CHANGES_REQUIRED](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-existing-native-ordinary-collection-batch-independent-review-v1/REVIEW.json)
+The first 18-control batch design was marked CHANGES_REQUIRED (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-existing-native-ordinary-collection-batch-independent-review-v1/REVIEW.json`)
 (SHA-256 `5109c4bd936a54e0a38a74adb425f98d9fe274e7d9a7e850c796135d6102953d`):
 its new engagements bound only nine additional company components and could
 not later absorb the four B2/BCM/CFG components. The corrected
-[13-component integrated design](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-existing-native-batch-plan-v3/PLAN.md)
-passed [independent static review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-existing-native-batch-independent-review-v3/REVIEW.json)
+13-component integrated design (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-existing-native-batch-plan-v3/PLAN.md`)
+passed independent static review (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-existing-native-batch-independent-review-v3/REVIEW.json`)
 (SHA-256 `8dd2d89db34b28f28a272f9865d594cf40bb989efd13c6363374c1ab4614ec97`).
 It requires a fresh zero-evidence A/B pair with all 13 source components
 bound before activation, ordinary recollection of B2 originals, replay of
@@ -467,8 +467,8 @@ first P5 collection tranche below have run; old Key and audit artifacts cannot
 be transplanted.
 Full-period population, qualified review and owner acceptance remain open.
 
-The new [integrated A/B bootstrap](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-full-portfolio-bootstrap-run-v1/RESULT.json)
-passed [independent postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-full-portfolio-bootstrap-independent-postreview-v1/REVIEW.json)
+The new integrated A/B bootstrap (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-full-portfolio-bootstrap-run-v1/RESULT.json`)
+passed independent postreview (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-full-portfolio-bootstrap-independent-postreview-v1/REVIEW.json`)
 (SHA-256 `badd73686b81ff1cfd94690d01aa20ce3ace3f15a20ef9baa3c479a5b04cd461`).
 It created separate A/B engagements with all 13 company components bound before
 activation, 409 untouched tasks per side, zero requests/evidence/Key, and
@@ -478,17 +478,17 @@ roots; 353 planned native versions were verified. The earlier A100/B73 pair,
 bound Key and historical audits remained unchanged. A read-only SQLite check
 later created empty WAL/SHM sidecars in the new audit workrooms. Their bytes
 were preserved, then a tested quiescence restored the exact reviewed 203-file
-inventory without changing either database; [independent postcheck](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-p1-sidecar-quiescence-independent-postreview-v1/REVIEW.json)
+inventory without changing either database; independent postcheck (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-p1-sidecar-quiescence-independent-postreview-v1/REVIEW.json`)
 passed (SHA-256 `fbbbee6abdf21d3b25adcd158db57ba626428e1580fa2f8490dd37edfd4524e7`).
-A separate [whole-state P1 checkpoint](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-full-portfolio-pre-p2-checkpoint-run-v2/CHECKPOINT-RESULT.json)
-passed [independent review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-full-portfolio-pre-p2-checkpoint-independent-postreview-v2/REVIEW.json)
+A separate whole-state P1 checkpoint (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-full-portfolio-pre-p2-checkpoint-run-v2/CHECKPOINT-RESULT.json`)
+passed independent review (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-full-portfolio-pre-p2-checkpoint-independent-postreview-v2/REVIEW.json`)
 (SHA-256 `9ae3e485e0850a6a847956e5a9644347a491a984132d28a5584b3342c68e74a2`):
 all 203 files match, 54 copied SQLite databases pass integrity checks, and the
 copy has no shared Btrfs extents. `Store.connect()` now closes on context exit
 (commit `3abd5c0f`); 39 focused store, history and recovery tests pass.
 
-The active pair's [ordinary B2 collection](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p2-b2-ordinary-collection-run-v1/RESULT.json)
-passed [independent actual postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p2-b2-ordinary-collection-independent-postreview-v1/REVIEW.json)
+The active pair's ordinary B2 collection (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p2-b2-ordinary-collection-run-v1/RESULT.json`)
+passed independent actual postreview (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p2-b2-ordinary-collection-independent-postreview-v1/REVIEW.json`)
 (SHA-256 `86a045d0e984062ef6a649f18fedb931ba8dd64cd7e57e04b5acba644acec7ed`).
 The same bound engagements advanced A2→78/B2→51 through 22/8 PBC requests,
 31/32 ordinary company collections, and 18/21 scoped grants that were all
@@ -500,48 +500,48 @@ unchanged. All 818 tasks remain `NOT_STARTED`/`NOT_RUN`; P3 investigation,
 new instructor Key, BCM/CFG replay, other control collection, full-period
 procedures and professional acceptance remain open.
 
-The integrated pair's [P3 learner investigation](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p3-b2-learner-investigation-run-v1/RESULT.json)
-passed [independent actual postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p3-b2-learner-independent-postreview-v1/REVIEW.json)
+The integrated pair's P3 learner investigation (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p3-b2-learner-investigation-run-v1/RESULT.json`)
+passed independent actual postreview (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p3-b2-learner-independent-postreview-v1/REVIEW.json`)
 (SHA-256 `5b8afc3a876e75e3409f478b80a4d21d3a88e0ae11ca4e9f12bbe53d96475471`).
 The same engagements advanced A78→90/B51→63 through eight recorded inspections
 and four provisional population, selection, workpaper and sample commands per
 side. All 63 B2 source joins remained exact; neither task credit nor Key access
-was added. The [post-P3 whole-state checkpoint](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p3-whole-state-checkpoint-independent-postreview-v1/REVIEW.json)
+was added. The post-P3 whole-state checkpoint (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p3-whole-state-checkpoint-independent-postreview-v1/REVIEW.json`)
 (SHA-256 `57d1f0fbcdb1f772614ffdf415afd58aedfed488ad7cf3ebb0d4097e5bb8d3d9`)
 verified 252 copied files, 54 SQLite databases and zero Btrfs shared extents.
 
-An instructor-only [six-check Key successor bind](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p3-private-key-bind-run-v1/RESULT.json)
-passed [independent postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p3-private-key-bind-independent-postreview-v1/REVIEW.json)
+An instructor-only six-check Key successor bind (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p3-private-key-bind-run-v1/RESULT.json`)
+passed independent postreview (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p3-private-key-bind-independent-postreview-v1/REVIEW.json`)
 (SHA-256 `9255752378b8b4d24eb37a4ce4f4e28ed1196bab99fdbb210170764032a896b6`)
 on a separate ordinary-byte private clone. It references the current A/B source
 IDs, retains A31/B32 B2 source links and denies learner access. The active
 engagements remain unbound; the six technical expectations are not validated
 audit conclusions, a release or a grade.
 
-The active pair's [P4 BCM run](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p4-bcm-ordinary-run-v2/RESULT.json)
-passed [independent actual postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p4-bcm-ordinary-actual-independent-postreview-v2/REVIEW.json)
+The active pair's P4 BCM run (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p4-bcm-ordinary-run-v2/RESULT.json`)
+passed independent actual postreview (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p4-bcm-ordinary-actual-independent-postreview-v2/REVIEW.json`)
 (SHA-256 `55eb6211a51073117e068beb3b72ffd343d2fc73584ea308d5fe4ae53caef8a3`).
 Six ordinary commands per side advanced A90→96/B63→69 with separate B1/B2/B3
 and R1/R2 population, selection, workpaper and sample records. Messy B's first
 B2 failure ticket stays OPEN and B3 has an explicit missing-operation monitor;
-R1 remains older than current bytes while R2 matches. The [P4 CFG-002 local
-before/after run](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p4-cfg-ordinary-run-v1/RESULT.json)
-passed [independent actual postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p4-cfg-ordinary-actual-independent-postreview-v1/REVIEW.json)
+R1 remains older than current bytes while R2 matches. The P4 CFG-002 local
+before/after run (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p4-cfg-ordinary-run-v1/RESULT.json`)
+passed independent actual postreview (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p4-cfg-ordinary-actual-independent-postreview-v1/REVIEW.json`)
 (SHA-256 `b1e5d2df1ec8f8440a3fa00bafec89372bfd9037cae9ba0d8afbf47392be3875`),
 advancing A96→100/B69→73 through four commands per side. It preserves the
 pre-APPLY 30-versus-40 timeout discrepancy and verifies the post-APPLY local
 40-second value, without asserting enterprise-wide change effectiveness. The
-[post-CFG whole-state checkpoint](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-cfg-whole-state-checkpoint-independent-postreview-v1/REVIEW.json)
+post-CFG whole-state checkpoint (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-cfg-whole-state-checkpoint-independent-postreview-v1/REVIEW.json`)
 (SHA-256 `52c2cd9134bb6ce7aba07749796aedc5d7cd156e1260a8d2a5cdfc96326f06e6`)
 verified 252 copied files, all 54 databases and zero Btrfs shared extents.
 
-The [P5 native-coverage analysis](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5-native-collection-analysis-plan-v1/PLAN.md)
-passed [independent review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5-native-collection-independent-analysis-review-v1/REVIEW.json)
+The P5 native-coverage analysis (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5-native-collection-analysis-plan-v1/PLAN.md`)
+passed independent review (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5-native-collection-independent-analysis-review-v1/REVIEW.json`)
 (SHA-256 `0722f78cae3c3f87d95e425bba941ebbbcff9b2db01aa24f80f44630a2712d57`).
 It maps 18 controls and 84 still-uncredited tasks per side to 144/146 existing
 native versions across IAM/nonhuman, logging/incident, provider/training and
-risk/configuration tranches. The first [P5A IAM/nonhuman collection](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5a-iam-nonhuman-run-v1/RESULT.json)
-passed [independent actual postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5a-iam-nonhuman-independent-postreview-v1/REVIEW.json)
+risk/configuration tranches. The first P5A IAM/nonhuman collection (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5a-iam-nonhuman-run-v1/RESULT.json`)
+passed independent actual postreview (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5a-iam-nonhuman-independent-postreview-v1/REVIEW.json`)
 (SHA-256 `ce8724d33f2cbedbd08294b16bbf7760b403f435456b019607da1ba5bb26981c`).
 The same active pair advanced A100→175/B73→147 through A75/B74 ordinary
 commands, six new PBC groups per side and 125 request-linked native collection
@@ -554,20 +554,20 @@ negative chronology, P5B–D, broader source discovery, full-year procedures and
 qualified acceptance remain open. Six PRIV Q4 source events dated 2028-01-01
 are post-period references, not proof of 2027 operation.
 
-The [post-P5A whole-state checkpoint](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p5a-whole-state-checkpoint-run-v2/CHECKPOINT-RESULT.json)
-passed [independent postcopy review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p5a-whole-state-checkpoint-independent-postreview-v2/REVIEW.json)
+The post-P5A whole-state checkpoint (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p5a-whole-state-checkpoint-run-v2/CHECKPOINT-RESULT.json`)
+passed independent postcopy review (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p5a-whole-state-checkpoint-independent-postreview-v2/REVIEW.json`)
 (SHA-256 `17ce40131cdf9f4052a4846e9303df2e54d94dfc751d4964e96254b924a4fca0`):
 all 372 active files match the ordinary-byte snapshot, all 54 SQLite databases
 pass integrity checks, and Btrfs reports zero shared extents. A failed first
 preflight found a transient zero-byte wrong-path SQLite file created during a
-read-only inspection. Its [failure receipt](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p5a-whole-state-checkpoint-rehearsal-preflight-failure-v1/RECEIPT.json)
-was preserved; [independent root reconciliation](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5a-post-incident-root-reconciliation-v1/RECEIPT.json)
+read-only inspection. Its failure receipt (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p5a-whole-state-checkpoint-rehearsal-preflight-failure-v1/RECEIPT.json`)
+was preserved; independent root reconciliation (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5a-post-incident-root-reconciliation-v1/RECEIPT.json`)
 verified the reviewed 372-file inventory and A175/B147 tips after the exact
 stray file was removed. The successful v2 run changed no active workroom,
 protected source, private Key or task conclusion.
 
-The same pair's [P5B logging/incident collection](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5b-logging-incident-run-v1/RESULT.json)
-passed [independent actual postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5b-logging-incident-independent-postreview-v1/REVIEW.json)
+The same pair's P5B logging/incident collection (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5b-logging-incident-run-v1/RESULT.json`)
+passed independent actual postreview (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5b-logging-incident-independent-postreview-v1/REVIEW.json`)
 (SHA-256 `c732fe268d28563c45ccde05facb6683eff6785316608ff947e7629f6fe70b2a`).
 It advanced A175→272/B147→246 through five PBC groups per side and 176
 ordinary request-linked collections from 68 distinct native source identities.
@@ -579,16 +579,16 @@ escalation/corrective-action versions remain separate chronology observations,
 not asserted remediation or breach conclusions. All 409 tasks per branch remain
 `NOT_STARTED`/`NOT_RUN`.
 
-The [post-P5B whole-state checkpoint](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p5b-whole-state-checkpoint-run-v1/CHECKPOINT-RESULT.json)
-passed [independent postcopy review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p5b-whole-state-checkpoint-independent-postreview-v1/REVIEW.json)
+The post-P5B whole-state checkpoint (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p5b-whole-state-checkpoint-run-v1/CHECKPOINT-RESULT.json`)
+passed independent postcopy review (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p5b-whole-state-checkpoint-independent-postreview-v1/REVIEW.json`)
 (SHA-256 `ca07ebf8f029b94738f436478a421dccc3c4c2b2a83f2bf0a7feaa09f3091b75`).
 All 439 active files match the ordinary-byte snapshot, all 54 SQLite databases
 pass integrity checks, and Btrfs reports zero shared extents. The earlier
 checkpoints, private Key clone, protected roots and historical audits remain
 unchanged.
 
-The [P5C provider/training collection](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5c-provider-training-run-v1/RESULT.json)
-passed [independent actual postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5c-provider-training-independent-postreview-v1/REVIEW.json)
+The P5C provider/training collection (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5c-provider-training-run-v1/RESULT.json`)
+passed independent actual postreview (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5c-provider-training-independent-postreview-v1/REVIEW.json`)
 (SHA-256 `5d23ef30a2e97c0945294cf435ff55fbd838fc3c84919fd3aeb326ffce10a6e6`).
 Five PBC groups per side and 103 ordinary request-linked collections advanced
 the same engagements A272→333/B246→308. The receipts join 75 distinct full
@@ -596,16 +596,16 @@ company-native source tuples to retained bytes; 75 new content-addressed files
 were created. All 29 temporary grants were revoked. Messy B retains the
 provider omission/backfill and late-training chronology, without asserting an
 operating provider, accepted contract, or full-year effectiveness. The
-[post-P5C whole-state checkpoint](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p5c-whole-state-checkpoint-run-v2/CHECKPOINT-RESULT.json)
-passed [independent postcopy review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p5c-whole-state-checkpoint-independent-postreview-v2/REVIEW.json)
+post-P5C whole-state checkpoint (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p5c-whole-state-checkpoint-run-v2/CHECKPOINT-RESULT.json`)
+passed independent postcopy review (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p5c-whole-state-checkpoint-independent-postreview-v2/REVIEW.json`)
 (SHA-256 `3ed92d4d398b9cc831511ff19a25422db691976f3de46faefeb9b52f4f09b711`):
 all 514 files match with separate inodes, 54 SQLite checks pass, and Btrfs
 reports zero shared extents. A preserved v1 proposal failed a dry preflight
 because it expected a nonexistent review field; corrected v2 passed before the
 actual copy. No audit task or Key state changed.
 
-The [P5D risk/configuration collection](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5d-risk-config-run-v1/RESULT.json)
-passed [independent actual postreview](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5d-risk-config-independent-postreview-v1/REVIEW.json)
+The P5D risk/configuration collection (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5d-risk-config-run-v1/RESULT.json`)
+passed independent actual postreview (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p5d-risk-config-independent-postreview-v1/REVIEW.json`)
 (SHA-256 `cebeb60b2dc7f04ad75581b038dff1ec9f2c345669b62657b6996b6986561bc0`).
 Two PBC groups per side and 24 ordinary request-linked collections advanced
 A333→349/B308→324, with 24 distinct native-to-receipt-to-retained joins and
@@ -613,23 +613,23 @@ A333→349/B308→324, with 24 distinct native-to-receipt-to-retained joins and
 omission/backfill and local configuration inventory timeout 50→40 are distinct
 source histories. The inventory association belongs to CFG-001; it does not
 prove CFG-002 APPLY or a deployed enterprise inventory. The
-[post-P5D whole-state checkpoint](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p5d-whole-state-checkpoint-run-v1/CHECKPOINT-RESULT.json)
-passed [independent postcopy review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p5d-whole-state-checkpoint-independent-postreview-v1/REVIEW.json)
+post-P5D whole-state checkpoint (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p5d-whole-state-checkpoint-run-v1/CHECKPOINT-RESULT.json`)
+passed independent postcopy review (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-post-p5d-whole-state-checkpoint-independent-postreview-v1/REVIEW.json`)
 (SHA-256 `eb042c1470ada3927ae62d78714f2e7530ebb683a99220af12b7d751eee197b4`):
 all 538 files match with separate inodes, 54 SQLite checks pass, and Btrfs
 reports zero shared extents. Every one of the 409 tasks per branch remains
 `NOT_STARTED`/`NOT_RUN`; the active pair has no bound Key, grade or release.
 
-The [P6 task triage](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p6-task-clause-triage-v1/TASKS.json)
-passed [independent review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p6-task-clause-triage-independent-review-v1/REVIEW.json)
-for 84 exact P5 task IDs per side. Its [IAM, incident and logging procedure
-support matrix](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p6-iam-incident-procedure-support-v3/TASK_MATRIX.json)
-passed [independent review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p6-iam-incident-procedure-support-independent-review-v3/REVIEW.json)
+The P6 task triage (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p6-task-clause-triage-v1/TASKS.json`)
+passed independent review (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p6-task-clause-triage-independent-review-v1/REVIEW.json`)
+for 84 exact P5 task IDs per side. Its IAM, incident and logging procedure
+support matrix (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p6-iam-incident-procedure-support-v3/TASK_MATRIX.json`)
+passed independent review (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p6-iam-incident-procedure-support-independent-review-v3/REVIEW.json`)
 (SHA-256 `13d7dd7268807a67652c39da02a3df3e94c6b24b5d4621a6007bc5b4f0fc7f9b`).
 It maps 57 exact tasks per side across 11 controls to 301 source-to-retained
 edges and separates six Q4 references nominally after 2027. The
-[provider, training, risk and configuration matrix](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p6-provider-training-risk-config-procedure-support-v2/TASK_MATRIX.json)
-passed [independent review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p6-provider-training-risk-config-procedure-support-independent-review-v2/REVIEW.json)
+provider, training, risk and configuration matrix (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p6-provider-training-risk-config-procedure-support-v2/TASK_MATRIX.json`)
+passed independent review (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p6-provider-training-risk-config-procedure-support-independent-review-v2/REVIEW.json`)
 (SHA-256 `aa335757608ce5ffa8de64d8291f4f47457ae89454d8e9147d8262cdb41454c4`),
 mapping the other 27 exact tasks per side across seven controls to 127 further
 source-to-retained edges. Both matrices record population, contract, site,
@@ -640,8 +640,8 @@ evidence. These are read-only procedure plans, not performed task tests or
 substantive conclusions.
 
 The first exact-clause P6 rehearsal targets SH-IAM-001 without awarding task
-credit. The [private V2 proposal](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p6-iam001-no-credit-proposal-v2/MANIFEST.json)
-passed [independent preexecution review](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p6-iam001-no-credit-independent-review-v2/REVIEW.json)
+credit. The private V2 proposal (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p6-iam001-no-credit-proposal-v2/MANIFEST.json`)
+passed independent preexecution review (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-integrated-p6-iam001-no-credit-independent-review-v2/REVIEW.json`)
 (SHA-256 `ed2c8093daa5535b0b746e95b20a7b109df32db544e33fc684c929fa9619ed34`).
 It pins the selected A349/B324 request, approval and creation chains and all
 four SH-IAM-001 task clauses per side. The disposable smoke retained every
@@ -652,7 +652,7 @@ procedure. The failed private-mode V1 package remains preserved.
 
 A separately committed [prospective data-flow exercise](../../../../enterprise/audit_suite/DATA_FLOW_EXERCISE.md)
 emits 13 immutable company-native metadata versions with a Clean blocked path
-and a Messy queued-then-quarantined marker. Its [independent isolated review](../../../../enterprise/generated/audit-suite/data-flow-prospective-reference-2026-09-29-independent-review-v2/REVIEW.json)
+and a Messy queued-then-quarantined marker. Its independent isolated review (`enterprise/generated/audit-suite/data-flow-prospective-reference-2026-09-29-independent-review-v2/REVIEW.json`)
 (SHA-256 `4ae1e319439272e30635a4d7849c4d7e5c5a30aa6f5abbcecc343dfef21626cf`)
 verified one continuing Messy exception across five event rows. The exercise
 is outside the active pair's frozen registry, has no actual data transfer or
@@ -662,7 +662,7 @@ identifies the service-owner, legal, retention and period facts still needed.
 
 The [provider contract draft gate](../../../../enterprise/audit_suite/CONTRACT_DRAFT_EXERCISE.md)
 adds a separate prospective company-native exercise for the selected planned
-Reno and Boise boundaries. Its [isolated independent review](../../../../enterprise/generated/audit-suite/company-contract-draft-2026-09-29/independent-review-v1/REVIEW.json)
+Reno and Boise boundaries. Its isolated independent review (`enterprise/generated/audit-suite/company-contract-draft-2026-09-29/independent-review-v1/REVIEW.json`)
 (SHA-256 `780439abadfb5d985279f53717503a12027c563c6cad03d55842eeaa9ed89a9d`)
 verified 12 exact native versions, Clean HOLD, Messy QUARANTINED and one
 continuing exception across five event rows. The integrated code passed focused
@@ -674,7 +674,7 @@ events are future simulation relative to the actual 2026 insertion time.
 
 The [prospective SH-ENG-005 emergency-change exercise](../../../../enterprise/audit_suite/EMERGENCY_CHANGE_EXERCISE.md)
 keeps the existing ordinary change path's `NOT_EXERCISED` status intact. Its
-[independent V2 review](../../../../enterprise/generated/audit-suite/eng005-prospective-2026-09-29/independent-review-v2/REVIEW.json)
+independent V2 review (`enterprise/generated/audit-suite/eng005-prospective-2026-09-29/independent-review-v2/REVIEW.json`)
 (SHA-256 `371380b9b1db92e5a9d483bb43f9b90cbc534c257a853a4629c90261b95ef5c1`)
 verified 19 native versions: Clean blocks without verified emergency authority;
 Messy records an invalid local bypass of an in-memory fixture, observation and
@@ -687,7 +687,7 @@ hashes, separate inodes and zero shared Btrfs extents; the failed CLI V1 and
 original V1 run remain preserved.
 
 The [prospective 22-item addressable docket](../../../../enterprise/audit_suite/ADDRESSABLE_DOCKET_EXERCISE.md)
-passed [independent isolated review](../../../../enterprise/generated/audit-suite/company-addressable-docket-independent-review-2026-09-29-v1/REVIEW.json)
+passed independent isolated review (`enterprise/generated/audit-suite/company-addressable-docket-independent-review-2026-09-29-v1/REVIEW.json`)
 (SHA-256 `5796cf3bee5075defb743401dad3831448cb5687c7f06d5df9dcba3021143c7d`).
 Its 50 native versions retain every exact source locator per branch. Clean
 holds all 22 pending review; Messy omits one, records an invalid blanket-waiver
@@ -702,13 +702,13 @@ separate inodes and zero shared Btrfs extents.
 
 The active pair's 13-component company-source binding is frozen at activation.
 New native systems needed for the remaining controls cannot be silently added
-to that engagement. A [read-only final-registry gate](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq07-final-source-complete-registry-readonly-plan-v1/PLAN.md)
+to that engagement. A read-only final-registry gate (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq07-final-source-complete-registry-readonly-plan-v1/PLAN.md`)
 requires a source-complete registry and a fresh zero-evidence A/B pair for the
 eventual full-scope rehearsal. The current pair remains a bounded, reviewed
 technical journey; neither its growing artifact set nor a future Key clone is
 a final assurance packet.
 
-The [read-only service-scope gate packet](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-service-scope-gates-decision-packet-v1/DECISION_PACKET.md)
+The read-only service-scope gate packet (`enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-service-scope-gates-decision-packet-v1/DECISION_PACKET.md`)
 (SHA-256 `46399c98edf4bc4baba94c3cfe9b3a9f9defe51dbab67374ed819cd6954639fa`)
 separates two exact active tasks per branch. `TASK-GATE-SERVICE-FACTS`
 requires management-accepted entity, service, flows, agreements, population,
@@ -730,7 +730,7 @@ credit. Exact in-universe dates, parties, terms, approvers, populations and
 independent review remain implementation gates.
 
 The [read-only paired registry preflight](../../../../enterprise/audit_suite/source_registry_preflight.py)
-passed [independent V3 review](../../../../enterprise/generated/audit-suite/source-complete-registry-readonly-preflight-independent-review-2026-09-29-v3/REVIEW.json)
+passed independent V3 review (`enterprise/generated/audit-suite/source-complete-registry-readonly-preflight-independent-review-2026-09-29-v3/REVIEW.json`)
 (SHA-256 `66a45ca163c97f0991eb9c77c920cf504608e8c86b9b4c27cc471db218585a4f`)
 as a **baseline diagnostic only**. It reconciles 70 controls and 409 task
 IDs per side against the earlier route screen, frozen A349/B324 state and
@@ -746,7 +746,7 @@ provisional and V2 changes-required reviews remain preserved.
 
 The [fictional 2027 Reno/Boise transition source](../../../../enterprise/audit_suite/RUNTIME_TRANSITION_PROPOSAL.md)
 is now integrated as a prospective company-native training source. The V3
-[independent review](../../../../enterprise/generated/audit-suite/company-runtime-transition-2026-09-29/independent-review-v3/REVIEW.json)
+independent review (`enterprise/generated/audit-suite/company-runtime-transition-2026-09-29/independent-review-v3/REVIEW.json`)
 (SHA-256 `f1acaeaea963055f99b0de120fd1b0347ee984edf085d353e7af1e427234d5a9`)
 passed 48 native versions across Clean/Messy branches, 16 individually
 attributed contract clearances, their approval hash links, dated commissioning
@@ -760,7 +760,7 @@ These are explicitly fictional source facts, not real contracts, real sites,
 actual PHI processing, a new audit registry, collection or task credit.
 
 That [payload-free fictional ePHI/BA source](../../../../enterprise/audit_suite/PHI_BA_2027_SIMULATION_PACKET.md)
-has since passed [independent review](../../../../enterprise/generated/audit-suite/company-phi-ba-2027-simulation-2026-09-29/independent-review-v1/REVIEW.json)
+has since passed independent review (`enterprise/generated/audit-suite/company-phi-ba-2027-simulation-2026-09-29/independent-review-v1/REVIEW.json`)
 (SHA-256 `39bb9b071179ed672c5cf07c2867285d36b2f3e8cdce2106dc4472d17047911e`)
 and is integrated as a separate prospective company-native training history.
 Its 37 native versions pin the exact reviewed transition V3 receipt, manifest
@@ -779,9 +779,9 @@ required.
 The [read-only documentary/activity discovery matrix](../../../../enterprise/audit_suite/documentary_discovery_matrix.py)
 now maps all 283 outstanding discovery routes per side across 43 controls to
 source-search candidates, existing documentary leads, missing activity and
-explicit procedure gates. Its portable V2 [private matrix](../../../../enterprise/generated/audit-suite/documentary-discovery-routes-2026-09-29/run-v2/MATRIX.json)
+explicit procedure gates. Its portable V2 private matrix (`enterprise/generated/audit-suite/documentary-discovery-routes-2026-09-29/run-v2/MATRIX.json`)
 (SHA-256 `e9477d2074bebce185e412a3ee7c424ded395c1a1128a7c918a94f6acbd1e327`)
-passed [independent review](../../../../enterprise/generated/audit-suite/documentary-discovery-routes-2026-09-29/independent-review-v2/REVIEW.json)
+passed independent review (`enterprise/generated/audit-suite/documentary-discovery-routes-2026-09-29/independent-review-v2/REVIEW.json`)
 (SHA-256 `c4064f6217c0e7f69276adc71004d6da7971867ccf3d844a3e198145cec31ace`).
 Six catalog-derived search targets per side are marked as hypotheses; 129
 generic or null authored clauses per side retain explicit procedure gates.
@@ -796,7 +796,7 @@ narrows one large family to 85 documentary/activity routes per audit side:
 72 `SH-LEG-001`, four `SH-LEG-002`, six `SH-TPR-003` and three `SH-TPR-005`.
 Its [170-row candidate map](../../../../enterprise/audit_suite/provider_ba_85_candidate_routes_v1.json)
 (SHA-256 `789f0a747255b63abe170403db06f6a1770f73888a44501d4434d305999f803f`)
-passed [independent review](../../../../enterprise/generated/audit-suite/provider-ba-route-plan-2026-09-29/independent-review-v1/REVIEW.json)
+passed independent review (`enterprise/generated/audit-suite/provider-ba-route-plan-2026-09-29/independent-review-v1/REVIEW.json`)
 (SHA-256 `43befb3686367b4931269c440adb9078e57322818f7088492b6a1b082090daba`).
 Only 16 routes per side have partial fictional-source context from the new
 transition/BA sources; 69 have no direct source. The next proposed native
@@ -806,7 +806,7 @@ and review were copied as independently hashed ordinary bytes with separate
 inodes and zero shared extents reported.
 
 The proposed [fictional 2027 provider lifecycle source](../../../../enterprise/audit_suite/PROVIDER_LIFECYCLE_2027_SIMULATION_PACKET.md)
-has since passed [independent review](../../../../enterprise/generated/audit-suite/company-provider-lifecycle-2026-09-29/independent-review-v1/REVIEW.json)
+has since passed independent review (`enterprise/generated/audit-suite/company-provider-lifecycle-2026-09-29/independent-review-v1/REVIEW.json`)
 (SHA-256 `bde642fd35fd4412bda49867b4d7961289bc97deae216bb56e325a19f371b634`).
 It has 24 company-native versions, three final synthetic relationships and
 three Q4 internal review rows per Clean/Messy branch. The Messy branch
@@ -823,7 +823,7 @@ operation, audit collection or task credit.
 
 The [provider/BA route delta V2](../../../../enterprise/audit_suite/PROVIDER_BA_85_ROUTE_DELTA_V2.md)
 adds the reviewed provider-lifecycle source to the exact 85-route-per-side
-candidate map. Its [independent review](../../../../enterprise/generated/audit-suite/provider-ba-85-route-v2-independent-review-2026-09-29/REVIEW.json)
+candidate map. Its independent review (`enterprise/generated/audit-suite/provider-ba-85-route-v2-independent-review-2026-09-29/REVIEW.json`)
 (SHA-256 `5f74853e540dc819b2fb5313fa9a62a4a984581217ca04027a3d72eda8df0883`)
 reconciled all 170 earlier task rows and 22 added native anchor tuples. V2
 classifies 19 partial-context and 66 no-direct-source routes per side; the
@@ -834,7 +834,7 @@ ordinary bytes and a separate inode; no source, audit pair or Atlas write
 followed from the map.
 
 The [fictional ERM-003/004 stage-gate source](../../../../enterprise/audit_suite/RISK_GOVERNANCE_STAGEGATE_PROPOSAL.md)
-is integrated after [independent V2 review](../../../../enterprise/generated/audit-suite/company-risk-governance-stagegate-2026-09-29/independent-review-v2/REVIEW.json)
+is integrated after independent V2 review (`enterprise/generated/audit-suite/company-risk-governance-stagegate-2026-09-29/independent-review-v2/REVIEW.json`)
 (SHA-256 `78dbf2b9585efd8f51a08a598d6c56aa342ef7845b56e6c0892a239a968fde34`).
 Its 19 native rows form one bounded Boise recovery risk assessment and
 reassessment chain, with separate Clean/Messy technical recommendations.
@@ -850,7 +850,7 @@ checkout. The nine discovery routes per side remain uncredited; no audit
 collection or task disposition followed.
 
 The [fictional SH-ASS-005 company issue source](../../../../enterprise/audit_suite/ASSURANCE_FINDINGS_2027_PROPOSAL.md)
-also passed [independent review](../../../../enterprise/generated/audit-suite/company-assurance-findings-2026-09-29/independent-review-v1/REVIEW.json)
+also passed independent review (`enterprise/generated/audit-suite/company-assurance-findings-2026-09-29/independent-review-v1/REVIEW.json`)
 (SHA-256 `23033dcf6641d18038bc58a1e02fd1b014a4e550fe0ae78bd854e1f7f5552f58`).
 Its six native versions trace one selected transition exception: Clean has a
 no-defect screen; Messy has an open company finding, owner notification,
@@ -863,7 +863,7 @@ focused tests, Ruff and native verification passed here. Four SH-ASS-005
 routes per side remain uncredited, with no collection or task disposition.
 
 The [fictional critical-role and training source](../../../../enterprise/audit_suite/CRITICAL_ROLE_2027_SCOPE.md)
-passed [independent V3 review](../../../../enterprise/generated/audit-suite/company-critical-role-2027-simulation-2026-09-29/independent-review-v3/REVIEW.json)
+passed independent V3 review (`enterprise/generated/audit-suite/company-critical-role-2027-simulation-2026-09-29/independent-review-v3/REVIEW.json`)
 (SHA-256 `582d9250cc923efd720c36b68a44ced544bf8d453cc30816042afeecfdc52aa6`).
 It reconciles all 29 pinned Q1 training versions and records eight new Q2
 versions for two proposed critical-role contacts. Clean carries on-time local
@@ -877,7 +877,7 @@ native verification passed in this checkout. Eight SH-PPL-005/SH-TRN-003
 routes per side are candidate discovery links without audit credit.
 
 The [fictional selected dataset classification source](../../../../enterprise/audit_suite/DATASET_CLASSIFICATION_2027_PROPOSAL.md)
-passed [independent review](../../../../enterprise/generated/audit-suite/company-dataset-classification-2026-09-29/independent-review-v1/REVIEW.json)
+passed independent review (`enterprise/generated/audit-suite/company-dataset-classification-2026-09-29/independent-review-v1/REVIEW.json`)
 (SHA-256 `4d1cd9c423781bf97ff586075c460c891cc60f621b42a29a22db59df929ff52e`).
 Ten native versions cover one payload-free synthetic marker-metadata dataset,
 with exact joins to the reviewed BA-flow source. Clean records a local
@@ -891,7 +891,7 @@ uncredited. Neither source changes the active P1 pair or asserts actual PHI,
 employment, deployment or a completed audit procedure.
 
 The [fictional controlled-record pointer source](../../../../enterprise/audit_suite/CONTROLLED_RECORD_2027_PROPOSAL.md)
-passed [independent review](../../../../enterprise/generated/audit-suite/company-controlled-record-2026-09-29/independent-review-v1/REVIEW.json)
+passed independent review (`enterprise/generated/audit-suite/company-controlled-record-2026-09-29/independent-review-v1/REVIEW.json`)
 (SHA-256 `968187ce495df23b72b6fe7e2d58b9ff017be42927cc0f3f1881d5e6669cd989`).
 Its nine native versions register and re-read one exact DAT001 classification
 original per branch. Messy retains an invalid local alias without an
@@ -904,7 +904,7 @@ candidate discovery links only; no prepared audit pack, collection or task
 credit follows.
 
 The [fictional source-version extraction log](../../../../enterprise/audit_suite/SOURCE_EXTRACTION_2027_PROPOSAL.md)
-passed [independent review](../../../../enterprise/generated/audit-suite/company-source-extraction-2026-09-29/independent-review-v1/REVIEW.json)
+passed independent review (`enterprise/generated/audit-suite/company-source-extraction-2026-09-29/independent-review-v1/REVIEW.json`)
 (SHA-256 `b2940aaedb5721d91367503c997eceece71a53370e67335985cb77ea95165a4d`).
 It indexes exact DAT001 source versions for one selected record: four Clean,
 six Messy. Messy preserves an initial five-row omission and a corrected
@@ -917,7 +917,7 @@ Six SH-REC-002 routes per side remain uncredited; no audit request, grant,
 collection or retained evidence was created.
 
 The [SH-REC-003 lineage/gap packet](../../../../enterprise/audit_suite/REC003_LINEAGE_GAP_PROPOSAL.md)
-passed [independent review](../../../../enterprise/generated/audit-suite/rec003-lineage-gap-2026-09-29/independent-review-v1/REVIEW.json)
+passed independent review (`enterprise/generated/audit-suite/rec003-lineage-gap-2026-09-29/independent-review-v1/REVIEW.json`)
 (SHA-256 `f162bf84513163be4c21479c85ab986b20c62d026870bd9741a8e1285470844e`).
 It rehashes 11 existing nonpersonal data-quality business versions per side
 and preserves the original source review plus a later independently reviewed
@@ -932,7 +932,7 @@ shared extents reported; three focused tests, Ruff and native verification
 passed here.
 
 The [fictional one-marker processing-purpose source](../../../../enterprise/audit_suite/PROCESSING_PURPOSE_2027_PROPOSAL.md)
-passed [independent V2 review](../../../../enterprise/generated/audit-suite/company-processing-purpose-2027-simulation-2026-09-29/independent-review-v2/REVIEW.json)
+passed independent V2 review (`enterprise/generated/audit-suite/company-processing-purpose-2027-simulation-2026-09-29/independent-review-v2/REVIEW.json`)
 (SHA-256 `d768b1fa01d7e2a1b56326c5a0ba14df61564d7e4cc9ccee208f0996b4f050f1`).
 Eight native rows trace a payload-free marker purpose request and decision.
 Clean matches the synthetic customer contract purpose but leaves execution

@@ -1,0 +1,776 @@
+{
+  "status": "MANUAL_VISUAL_QA_COMPLETE_NOT_OWNER_APPROVAL",
+  "records": [
+    {
+      "id": "SH-IND-IC-001",
+      "pdf_sha256": "261934d6015a6cf259753f0c931df1ee7135ccdee111468b3471c56f971290a1",
+      "html_sha256": "d2e53e953a1bc3bd93dc12eb7342d933906fc59ec7e88a5dbbd3b838ca6622d9",
+      "pdf_pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-IC-001-page-01.png",
+          "sha256": "5d4e000ecf6c2c7c5f015d149fe87d5e66398635a0e175746da5ba26bbdd61ec",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-IC-001-page-02.png",
+          "sha256": "dd000d81a4c6f2e123945d02c3ed0a11ab554b5abd52d09ea57fa0faa8ac3835",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 3,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-IC-001-page-03.png",
+          "sha256": "4d730aa15cedaeba586cc706888067dae0b8ba30bf18987740e350441e77b0c6",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 4,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-IC-001-page-04.png",
+          "sha256": "ecab5fc5aee093297bebf09f18b932112203fb8b514462856303d674613e54fb",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 5,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-IC-001-page-05.png",
+          "sha256": "c0de0f511ab2c452f4ebf56285a1b63119b9205713b697fa4f9c2e56067e2a66",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        }
+      ],
+      "html_views": [
+        {
+          "width": 1280,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-IC-001-html-1280.png",
+          "sha256": "04c549b4ede5ea14545a973975aef3b536177604dcd206d7ccc0a62e382f3c94",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        },
+        {
+          "width": 390,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-IC-001-html-390.png",
+          "sha256": "eef971fdce07a1cc56517b0eabd13cec2d1b07729e9117e8ecd6ebd52ed4aac8",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        }
+      ],
+      "status": "MANUALLY_INSPECTED_PASS_FOR_REVIEW"
+    },
+    {
+      "id": "SH-IND-IC-PRC-001",
+      "pdf_sha256": "ac7ec9cb9c7dff5ad558988b46455d0501148fbd42807b1b9f3179d955427ca3",
+      "html_sha256": "f8735f5173de7a8a586dbcbcc294159dbd497e6e7fbcadb810e22b9cd8056f1a",
+      "pdf_pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-IC-PRC-001-page-01.png",
+          "sha256": "37a93a435b245fe6a3ce8442fd4e39d9ec7ae2e1674b5a278907b1eb150b5d41",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-IC-PRC-001-page-02.png",
+          "sha256": "9962b144165db4e25442b0e5fbd6e5911aef3c68cbf02086403c152d70b852c8",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 3,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-IC-PRC-001-page-03.png",
+          "sha256": "1baa95cc3f8199269e7971e2a75ad1e87a6633818de7c4a71c8b6de7c2c85e21",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        }
+      ],
+      "html_views": [
+        {
+          "width": 1280,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-IC-PRC-001-html-1280.png",
+          "sha256": "6d1fd6260f9dc73354393e4e9d95fe15c5ca13aab384d726d6b2b2ac7a6c059f",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        },
+        {
+          "width": 390,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-IC-PRC-001-html-390.png",
+          "sha256": "3a9eb2f112dd90c3d3d66b2472cfa0539b6d4a7ff3392b2960cc6298e51dbaa7",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        }
+      ],
+      "status": "MANUALLY_INSPECTED_PASS_FOR_REVIEW"
+    },
+    {
+      "id": "SH-ADV-014",
+      "pdf_sha256": "310e49c913e8b50fdf1cec146c8fd72099faacb7e756be1a6de14aa6d6a14558",
+      "html_sha256": "74faaa281b29bbb576a38bc6ab4922531847ccba80fd385c742181985030164f",
+      "pdf_pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-014-page-01.png",
+          "sha256": "12f75ec61a7f995c88c98b38da93b93af6aa857723e035a45d19b714de7ccc1b",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-014-page-02.png",
+          "sha256": "18a3e82de90b1e9623c984f5cf246b25d34730910728aa6eaf434e4e3013ea03",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 3,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-014-page-03.png",
+          "sha256": "b0a331cfe739f13a45b3b6222b8a61175c45b229ba83648c77846a1f5663a75e",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 4,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-014-page-04.png",
+          "sha256": "253d75b6db3b5aeb65b3a66def00797f83f58b1703e0ee891b46fad8e6adf1d5",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 5,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-014-page-05.png",
+          "sha256": "3f85ac9b410a94899a89830051f163e6cb3b27935b4283f55c77567c6ae49c6e",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 6,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-014-page-06.png",
+          "sha256": "01570eb5b5299b6951f835edf313c94bf062dd45692f17e28bf7de5a65826105",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 7,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-014-page-07.png",
+          "sha256": "c9a552f5dd52268937fdc998d78ffead04dad6afe8b44c25a3b282781a399af1",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        }
+      ],
+      "html_views": [
+        {
+          "width": 1280,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-014-html-1280.png",
+          "sha256": "fb119313ded42f5fbad2a5fda840636c6fb9f935bd9e04b757b834296e8effc7",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        },
+        {
+          "width": 390,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-014-html-390.png",
+          "sha256": "ab28656c50cdce60ea019151833c0d10f3d5dc9797cfce26b34fa2f8376f23d3",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        }
+      ],
+      "status": "MANUALLY_INSPECTED_PASS_FOR_REVIEW"
+    },
+    {
+      "id": "SH-ADV-009",
+      "pdf_sha256": "d15658fb27032e42cb22b10aa2a15bd38ef1ba046cfb91262750c4647cdb4c92",
+      "html_sha256": "7bbf2db1d2cd157b40eb71327d15faf3a5f82bf59eb9a78492ce0c41f5edf23e",
+      "pdf_pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-009-page-01.png",
+          "sha256": "2fed288ebeb3bae50ceb236d73134ce3203164753e7b447a47befe349fd473d5",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-009-page-02.png",
+          "sha256": "5aaae5faf7b3c64f62d19e815f940f073571f0bcd149adb181d7298c6a1d7b31",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 3,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-009-page-03.png",
+          "sha256": "61e22b5a3942013ef82d240f6c3b8476fc10a204387528081baeedd9dfea90d1",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 4,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-009-page-04.png",
+          "sha256": "ec0de975a254ef0e484b640807126aa9df89d311ffce0707cb907b4512570ccb",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 5,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-009-page-05.png",
+          "sha256": "8a1cfc922292730fbb0f538e878495cad1c168e74e9b3745d5540ab6a491c196",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 6,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-009-page-06.png",
+          "sha256": "e83f90d82f3e8a42b732976251782fed4fda71a638cd4c07e954cac5b29e6e64",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        }
+      ],
+      "html_views": [
+        {
+          "width": 1280,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-009-html-1280.png",
+          "sha256": "0f2e80c95140f194e4177f3719d45b2ba26df8158a309977e4403d88f35d3f2e",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        },
+        {
+          "width": 390,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-009-html-390.png",
+          "sha256": "6292d1902aa1175b3ae6347377c8e1fa9da67aba3fc1b1448bc17255f3c497c1",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        }
+      ],
+      "status": "MANUALLY_INSPECTED_PASS_FOR_REVIEW"
+    },
+    {
+      "id": "SH-ADV-007",
+      "pdf_sha256": "abff8652d19befb841725ca177f335f01737885eb8bf80c2ccd8ff4858a7b941",
+      "html_sha256": "9b87d5c9be07986b78e54763db6591761218b5077411c69db1f43207d6304583",
+      "pdf_pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-007-page-01.png",
+          "sha256": "efdf7c5d786759ef4caf35f62da06e4328f31bd92db40204fa8695bf070adac9",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-007-page-02.png",
+          "sha256": "5eab27cbc37d771807e589d059b57ebf89c17e0dfff59683b0a07890a77bec92",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 3,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-007-page-03.png",
+          "sha256": "79317b5a115566c7574ffd1fce19d502ba7fbe7f79b054a735793dc7632581c4",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 4,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-007-page-04.png",
+          "sha256": "b2e5b2e49b54352a571186d9338bbd7b926df880182da2577137a70c5b421d09",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 5,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-007-page-05.png",
+          "sha256": "75a3e671cd537a782e06f05d5e88656405561135b426d5d67fce1aa4c065a24b",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 6,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-007-page-06.png",
+          "sha256": "4118c6de098024fa6707de2259b7b7a032b890b416717d4279135ba6bcb4d69a",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        }
+      ],
+      "html_views": [
+        {
+          "width": 1280,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-007-html-1280.png",
+          "sha256": "54fb535b8a17cb3458f03f20b8e06a80fff59d8ea3b6b218780689bab22f51b5",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        },
+        {
+          "width": 390,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-007-html-390.png",
+          "sha256": "f9afac5a896cb214ad5947132bf83781e38c43d8a5e8f9436bd3065324ac9d7f",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        }
+      ],
+      "status": "MANUALLY_INSPECTED_PASS_FOR_REVIEW"
+    },
+    {
+      "id": "SH-ADV-017",
+      "pdf_sha256": "2223fb49db89ee4db37a7bfd740eff84ca48359e50e988cb802329733b761573",
+      "html_sha256": "c5bf3be4d09a17e6b611c6e6163f33ce127264c6f9e43e5f3b9d1b7ed25952be",
+      "pdf_pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-017-page-01.png",
+          "sha256": "0e582d9f1cf77666adb1dfcc40f18f2b156aeaf84b0ead0df78db7cf285aea94",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-017-page-02.png",
+          "sha256": "29b1852c642da9ad900d3d75521a0e782b8b0e7448980a03820c6f4f7036a12b",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 3,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-017-page-03.png",
+          "sha256": "9d42b309b5971b54a2a1adbf751e8dc7837c2c25123dc4fc9db92eed1447837a",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 4,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-017-page-04.png",
+          "sha256": "d4190b918afa8b9966d8b6aadf968e350a29bbae60e780af582acb3a2cae0efe",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        }
+      ],
+      "html_views": [
+        {
+          "width": 1280,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-017-html-1280.png",
+          "sha256": "04e0f6f18b69e18657e2a7ecb71127e91df79ddab55b86e13773522f56b0345f",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        },
+        {
+          "width": 390,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ADV-017-html-390.png",
+          "sha256": "57ee257f6109741e3f10a445e190893194491a9970c177b241360dd1a491bcaf",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        }
+      ],
+      "status": "MANUALLY_INSPECTED_PASS_FOR_REVIEW"
+    },
+    {
+      "id": "SH-ATL-017",
+      "pdf_sha256": "e998053ebfd97562f2c25a39c15b3de46f50480a29176a41f5414bd42019e45e",
+      "html_sha256": "77dcf8c2d877e4eed0845ec2311e4e8f64289234e0765fe79dc83f914fe9e33b",
+      "pdf_pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ATL-017-page-01.png",
+          "sha256": "58f8e91b8fea55cce37f9a3a1e546a42c0a95b8112a1b933e36f3cd4455393af",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ATL-017-page-02.png",
+          "sha256": "15f10f882a4f3ef79dc1847e7340001777a88d265ef3abbc099398798d763dd4",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 3,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ATL-017-page-03.png",
+          "sha256": "160eb609ef29aa1ee7a0bd2d641e0ca95d99bf2a854e73531765cc59176a8d79",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 4,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ATL-017-page-04.png",
+          "sha256": "c0f505860a1450f04ab8a3bc1adccbf31adead7db7d83116cee4fb6c42b3d12b",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 5,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ATL-017-page-05.png",
+          "sha256": "b8d12bb3c3a572f8583bd26e8f71975a50cc71c471cbd9e7bab0503a5670e4a3",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 6,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ATL-017-page-06.png",
+          "sha256": "c6f447da5130dd55eb69cd4c8ddcd04754d364c64edf66b88b21af8d378d50cc",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 7,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ATL-017-page-07.png",
+          "sha256": "5513a84db681621ee61c171cd55ec208e1a5a2746255949816c286bb7e5d361c",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 8,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ATL-017-page-08.png",
+          "sha256": "fa3d85912b579e04ea24f4b24adbc6a1cc21c86743871fd1b3a962d9d4a520c8",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        }
+      ],
+      "html_views": [
+        {
+          "width": 1280,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ATL-017-html-1280.png",
+          "sha256": "d84cae98b349a73591a3351ee1a3f30c5d46a3a54027381a51002bd9ff4ad53c",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        },
+        {
+          "width": 390,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-ATL-017-html-390.png",
+          "sha256": "54f2cef613ebe5f6615dc6c6754129e0d9aba4dd8f2a273b02aa3c6cf99c2f85",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        }
+      ],
+      "status": "MANUALLY_INSPECTED_PASS_FOR_REVIEW"
+    },
+    {
+      "id": "SH-RT-CONTRACT-001",
+      "pdf_sha256": "710f0c058b4a1b99f6243663be0440b11d76471c647a592cd79d039ae78d4953",
+      "html_sha256": "0ccc1b6b80c13f37ae4c9b96816a50466c9cf1a80a5a6d91e457b74925fbc2b0",
+      "pdf_pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-RT-CONTRACT-001-page-01.png",
+          "sha256": "cfaa6b3b7be8fa73771a0724adc77a27cafa34d753b9dcda32223f28b050a631",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-RT-CONTRACT-001-page-02.png",
+          "sha256": "a5841401f80bd9fe7243de045f50a60859f2f11e785f396a913a9039852d5271",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 3,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-RT-CONTRACT-001-page-03.png",
+          "sha256": "3153ecb8ce9b3f0c807810a5d16d99e5c8fb2eda2743d01511bb483708582f07",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 4,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-RT-CONTRACT-001-page-04.png",
+          "sha256": "30d7087b9e6e052e9b2af2bd240db306dc325fa4419557f01ae06563e400b755",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 5,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-RT-CONTRACT-001-page-05.png",
+          "sha256": "0fdfa41fdafacc2411bede0c7f0fdd00ec5e92825048349ad54c811afc4081a0",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        }
+      ],
+      "html_views": [
+        {
+          "width": 1280,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-RT-CONTRACT-001-html-1280.png",
+          "sha256": "784eec4de20f501c8943117e3e32a0ecd9b0bb957e7e89009ee30bea482cbad0",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        },
+        {
+          "width": 390,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-RT-CONTRACT-001-html-390.png",
+          "sha256": "902016d930b5ceb8871d97a3dfade8c37cc5f2060de5a1a0da00a2bfed0b4f31",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        }
+      ],
+      "status": "MANUALLY_INSPECTED_PASS_FOR_REVIEW"
+    },
+    {
+      "id": "LEGAL-SOURCE-F1F0AD5F06DC",
+      "pdf_sha256": "5c04797b8ca54a0fb47378119b757ad6df470c3f156c741732ead340abade5e6",
+      "html_sha256": "27dca55f917086a5d80c66b2519f0a68d4c1cdec865d576d43c0f48dfa7a715b",
+      "pdf_pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-F1F0AD5F06DC-page-01.png",
+          "sha256": "010e66e9fcb28dc45052e4e1f0938b8d6d7697a5041f8bde14e840a8abdc70c8",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-F1F0AD5F06DC-page-02.png",
+          "sha256": "3feb04060ca0e905e4ec4b36fa0e3b57a0f57d25557058cb747c560cacf757ed",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 3,
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-F1F0AD5F06DC-page-03.png",
+          "sha256": "0c9dc55fb94998618536c4622ff3d0437dde278d06f24218dc72f37efdf9ada2",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        }
+      ],
+      "html_views": [
+        {
+          "width": 1280,
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-F1F0AD5F06DC-html-1280.png",
+          "sha256": "f05432b04567d1244dbbd72b05a63a1884958fb20272b3b196353e8b70965c0a",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        },
+        {
+          "width": 390,
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-F1F0AD5F06DC-html-390.png",
+          "sha256": "40b030db00138244a2fe5d1a0ffa2ac645d1d70cb5934c9b391a3c4376a0c86f",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        }
+      ],
+      "status": "MANUALLY_INSPECTED_PASS_FOR_REVIEW"
+    },
+    {
+      "id": "LEGAL-SOURCE-7FFDC6FBB585",
+      "pdf_sha256": "4429d441c6effed7d681ae58c1602d2576e193614998353356e307305d184cbf",
+      "html_sha256": "ff755517aa5b8accb94f8cc3a7e045e8b640342b30a82ae4c52c5425168f2446",
+      "pdf_pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-7FFDC6FBB585-page-01.png",
+          "sha256": "7d1674f5d824bd165036509c3c0abb6986ac437d268b0339ab1fb9dc2553d6c1",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-7FFDC6FBB585-page-02.png",
+          "sha256": "b110086d05764c68f9e3f5b594aff1481476d3bee2790de0b7fbdeffcda94bc2",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 3,
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-7FFDC6FBB585-page-03.png",
+          "sha256": "5e193e289c3dd5082f1f9567ee699dc62cf2e48d7ce8ce201abb7f9995eccde8",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 4,
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-7FFDC6FBB585-page-04.png",
+          "sha256": "fff9c9a3a483c32febae80462531d5ae1d38dfb3970772fe867932a075be1525",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        }
+      ],
+      "html_views": [
+        {
+          "width": 1280,
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-7FFDC6FBB585-html-1280.png",
+          "sha256": "e4a86b4439449540073aff48ca0d5f2d046b56f609d34e801b7e2287039a3eb9",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        },
+        {
+          "width": 390,
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-7FFDC6FBB585-html-390.png",
+          "sha256": "4f0752e55e6e0237fbaafbd125ed0ad603ba06be36e5d865a6aebdaed6fa842a",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        }
+      ],
+      "status": "MANUALLY_INSPECTED_PASS_FOR_REVIEW"
+    },
+    {
+      "id": "SH-IND-ARU-TAX-001",
+      "pdf_sha256": "f07389aef44b9690eff400c8d932cb779b42888bf49497f9e7fe8dc36fba5879",
+      "html_sha256": "8a3f369004413b63c84bed99b8394a5b13d9e02ae569bc300349276b40284f23",
+      "pdf_pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-ARU-TAX-001-page-01.png",
+          "sha256": "cdd7c3446a3a1ac853aa77e23284dcabd4e4edcdec2c77d82726acfe4b42004b",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-ARU-TAX-001-page-02.png",
+          "sha256": "4c3c924843005957f887dff819f510621ab075e7f9e2de92d7763699637ecd26",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 3,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-ARU-TAX-001-page-03.png",
+          "sha256": "e793bdcb405e18178e4fe60db746d14934a8f4b36a59b64f79b53a419f2b3604",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 4,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-ARU-TAX-001-page-04.png",
+          "sha256": "6ef015212917b6a4b55d20db311d2b7f17e6155507b3a7d0b5ae2ab322b90de8",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        }
+      ],
+      "html_views": [
+        {
+          "width": 1280,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-ARU-TAX-001-html-1280.png",
+          "sha256": "f52c228c0ff3bf6394f82b4c5e5a70cd6db3f6363b84b1a29b5662ebc255afcc",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        },
+        {
+          "width": 390,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-ARU-TAX-001-html-390.png",
+          "sha256": "f5787c6af2cec2b891f53b97cc2e1854da813babf58ded6a0211df7cde46ce6b",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        }
+      ],
+      "status": "MANUALLY_INSPECTED_PASS_FOR_REVIEW"
+    },
+    {
+      "id": "SH-IND-FIN-TXN-001",
+      "pdf_sha256": "1d0ac761d46bd330d9ccb2bcb2ab48ff028ea88f826fe379267b336155a98689",
+      "html_sha256": "8aae56c73d70686e598a5bc29b9da47a83e44658ef050746d86b4eaafb166b54",
+      "pdf_pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-FIN-TXN-001-page-01.png",
+          "sha256": "26aa37ab8e9562a51a649a453f2b78fe15b27d4e8c80218aaf294825a92cbb92",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-FIN-TXN-001-page-02.png",
+          "sha256": "74fbeabccd3dd10c7b2939a1fdee298a9ff621189c155f17a7a6ec1c55688c6f",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 3,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-FIN-TXN-001-page-03.png",
+          "sha256": "a236893342413c521b9fc07f8d5ef687c7aa535f549a769eeba31b9defd9861f",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 4,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-FIN-TXN-001-page-04.png",
+          "sha256": "0bf1210b9ffcc1405a390434c6cbd4639e463292242d786079d9eddee52a116c",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 5,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-FIN-TXN-001-page-05.png",
+          "sha256": "772b4fe8f684a23418c7fa6934c3490a8a90a2701d84e8b0e0ccfe2f432326ab",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        }
+      ],
+      "html_views": [
+        {
+          "width": 1280,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-FIN-TXN-001-html-1280.png",
+          "sha256": "d34d8285da1c2bce5c04f59b67064d5cab9b9c9c7d10923057418917d26a36f6",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        },
+        {
+          "width": 390,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-FIN-TXN-001-html-390.png",
+          "sha256": "f547ed1359517220a64e4e099e578c8087368561316eb4e2b56f84301f5a5c8a",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        }
+      ],
+      "status": "MANUALLY_INSPECTED_PASS_FOR_REVIEW"
+    },
+    {
+      "id": "SH-IND-FIN-DRV-001",
+      "pdf_sha256": "5f959c4bd5c00531d9f4f9549d17df4a1be9a62c12c827dad740b8ea6d22abb7",
+      "html_sha256": "1b61940bccdb0f2d8ad13cdf7dd05334cf419182befd21223a06a5a43f7f4354",
+      "pdf_pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-FIN-DRV-001-page-01.png",
+          "sha256": "9926d312e405e88d82783c1109b7ed5e74099a509ce10d5621a15eac57392a54",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-FIN-DRV-001-page-02.png",
+          "sha256": "a0f7c1f13a452d8803e426d1e98db8facbb16296dd2920f6af774d4856ac7b17",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 3,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-FIN-DRV-001-page-03.png",
+          "sha256": "4a0211c8eca98c9a413c75ed6651ae06022c956d31c38723524e5fabdd4ffaa1",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 4,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-FIN-DRV-001-page-04.png",
+          "sha256": "159e20658fc284717008e55e3cd146574c2c33a2b5e7c8eedefc10faf56a5e71",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        }
+      ],
+      "html_views": [
+        {
+          "width": 1280,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-FIN-DRV-001-html-1280.png",
+          "sha256": "b461816932e35808858a45a4f03705f82e11c490be35ab43639a20ed48666efd",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        },
+        {
+          "width": 390,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-IND-FIN-DRV-001-html-390.png",
+          "sha256": "a0328d548b420998cb8295f7d5c6952f87c29f4a15bfb1b56f75b4818a9ae845",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        }
+      ],
+      "status": "MANUALLY_INSPECTED_PASS_FOR_REVIEW"
+    },
+    {
+      "id": "LEGAL-SOURCE-FCEBAA48286F",
+      "pdf_sha256": "42264ebd126e08961b452384537a627ccfce239d3e882a7a1840af7240c6d015",
+      "html_sha256": "9c47fc0c1a6131d1ef874a6d5494c2f8e2c4d41116b28b124cc48899fbae088b",
+      "pdf_pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-FCEBAA48286F-page-01.png",
+          "sha256": "3d07876ba316d14e041774d522c52410c5ee3aeccc6b9d79db89cb7c79763563",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        }
+      ],
+      "html_views": [
+        {
+          "width": 1280,
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-FCEBAA48286F-html-1280.png",
+          "sha256": "52d4d3a5f9d4e6dcf27dfc22c9617f705c476e5c956510d4ff8ebe494e9afd1a",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        },
+        {
+          "width": 390,
+          "image": "docs/legal/full-text/qa/commercial-tax/LEGAL-SOURCE-FCEBAA48286F-html-390.png",
+          "sha256": "c9fa6439fe3c54c5d661c476dfa687239e42c8a1d7ff518af1034778409cac20",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        }
+      ],
+      "status": "MANUALLY_INSPECTED_PASS_FOR_REVIEW"
+    },
+    {
+      "id": "SH-RT-FINANCE-001",
+      "pdf_sha256": "188696dd87d4f52209e5011593b12d10916d4d77b47a8e1c3e4a63d634cc4b2b",
+      "html_sha256": "a6e5ccd5a7f0dfe09c7212f7de6af89a68ce5d68fe1e4e3b9f34990d140ea6e9",
+      "pdf_pages": [
+        {
+          "page": 1,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-RT-FINANCE-001-page-01.png",
+          "sha256": "d8238557ff3e9485f361e3c42f4d29dc1c45f15f89f0b7e939d8d9043929accd",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 2,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-RT-FINANCE-001-page-02.png",
+          "sha256": "5c2af37b5fd1edc8e3989a31894d2784afa3b8a776b4d6da252555f33bfdd013",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 3,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-RT-FINANCE-001-page-03.png",
+          "sha256": "7628f8c98ea5b89f16b08a8c85a8b04f33c357dd4cb1c8df5952cb39c49224a0",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        },
+        {
+          "page": 4,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-RT-FINANCE-001-page-04.png",
+          "sha256": "d2d9159fab24f328b0e4b661a6aba2363d6caa8ca4e10f130e65d70c8d6d3625",
+          "result": "PASS: readable body, complete visible tables, no clipping or overlaps; section continuation retained."
+        }
+      ],
+      "html_views": [
+        {
+          "width": 1280,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-RT-FINANCE-001-html-1280.png",
+          "sha256": "d4607378d32daf7106a8ebc8176d6f7079ad21b9427ee941fe890e1e34c1dd86",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        },
+        {
+          "width": 390,
+          "image": "docs/legal/full-text/qa/commercial-tax/SH-RT-FINANCE-001-html-390.png",
+          "sha256": "9487e405a6ac1766f5c3724ec81aa23e2ea17cf37a7b12a00dcbddeb6e95b241",
+          "result": "PASS: manually inspected initial viewport; readable heading, status, logo and body."
+        }
+      ],
+      "status": "MANUALLY_INSPECTED_PASS_FOR_REVIEW"
+    }
+  ],
+  "reviewer": "legal_full_validate agent",
+  "method": "Every final PDF page inspected as an individual 765x990 PNG (1.25x Letter). Each HTML inspected in a 1280x1000 desktop and 390x1000 mobile initial viewport. Complete DOM overflow/hidden text/images checked programmatically at both widths across all56 editions. This does not claim a human owner accepted the design.",
+  "counts": {
+    "documents": 15,
+    "pdf_pages": 69,
+    "manual_html_viewports": 30
+  },
+  "findings": [
+    {
+      "id": "LEGAL-QA-COM-001",
+      "finding": "SH-IND-IC-001 page2 began with lone word created.",
+      "correction": "Renderer keeps body paragraphs together; final page2 begins complete paragraph. Reinspected all5 finalpages.",
+      "state": "CORRECTED"
+    },
+    {
+      "id": "LEGAL-QA-COM-002",
+      "finding": "SH-ADV-014 page6 began transferred capability. after split indemnities paragraph.",
+      "correction": "Renderer keeps paragraph and heading together; finalpage6 begins Indemnities and complete paragraph. Reinspected changedpages5-7.",
+      "state": "CORRECTED"
+    },
+    {
+      "id": "LEGAL-QA-EXTRACT-001",
+      "finding": "PyMuPDF default media-box extraction discarded a leading dot in5 wrapped inline-code source paths although visible in PDF.",
+      "correction": "Validator disables extraction preclipping and explicitly validates all textspan bounds. Independent pdftotext confirmed exact punctuation. No source text discarded by normalizer.",
+      "state": "CORRECTED_VALIDATION"
+    }
+  ]
+}

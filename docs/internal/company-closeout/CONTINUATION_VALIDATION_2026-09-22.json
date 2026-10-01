@@ -1,0 +1,92 @@
+{
+  "document_id": "SH-CLOSEOUT-CONTINUATION-VALIDATION-20260922",
+  "observed_at": "2026-09-22T16:56:38.718105+00:00",
+  "later_changes": "Administrative Python line wrapping and evidence log EOF normalization only; focused 12 tests rerun after wrapping.",
+  "main_suite": {
+    "passed": 785,
+    "skipped": 5,
+    "failed": 0,
+    "exit_code": 0
+  },
+  "commands": [
+    {
+      "name": "governance",
+      "status": "PASS",
+      "log_sha256": "10be1fb601975723709974bb90405dda65842a88a7ad224478187c85c0a3430d"
+    },
+    {
+      "name": "organization",
+      "status": "PASS",
+      "log_sha256": "469fb022105f3c446b85b7171f8e150c1247f792adc7445c3a2852bf1c736ef2"
+    },
+    {
+      "name": "catalog-validation",
+      "status": "PASS",
+      "log_sha256": "1d563269705a1ffc7712736f20977796c7095a9b71f5cd18126d75f8744cef01"
+    },
+    {
+      "name": "hygiene",
+      "status": "PASS",
+      "log_sha256": "01c50fa2b8c8b761171a5c00610057d0f2cb079c303383732e29a54063762b75"
+    },
+    {
+      "name": "approval",
+      "status": "PASS",
+      "log_sha256": "708f785585646ad4d9d01aad7e4d009a1b1cb01f3057158e96dbb13626be69b4"
+    },
+    {
+      "name": "public-safety",
+      "status": "PASS",
+      "log_sha256": "245002ebb584b773befd35118909da63800459421b45bb31b76f2cc4a18a80ad"
+    },
+    {
+      "name": "publications",
+      "status": "PASS",
+      "log_sha256": "7892c24b4e1bdb721a4660069cc46baf1d7986cda93fbc691cc4f5a322802adc"
+    },
+    {
+      "name": "company-publications",
+      "status": "PASS",
+      "log_sha256": "b602bd92ccc1eb05064ac85c1083fae83bb4064f3dd37818a502ae2e85c4e079"
+    },
+    {
+      "name": "catalog-final",
+      "status": "PASS",
+      "log_sha256": "ffdb9e03f238b27eba2ef4523c66aac24a48cee50f56e40abee3bf520f769db6"
+    },
+    {
+      "name": "tests",
+      "status": "PASS",
+      "log_sha256": "cd5ea0a9640e558c983d63e599984ca9970c7bc73581403009055f70c8309bdc"
+    }
+  ],
+  "failed_and_corrected": [
+    {
+      "check": "ruff targeted",
+      "failure": "Three overlong administrative-builder lines",
+      "correction": "Wrap string literals without semantic change",
+      "retest": "PASS; 12 focused tests PASS"
+    },
+    {
+      "check": "Source integrity / required",
+      "failure": "Extra EOF blank line in retained graph.log",
+      "correction": "Reversible normalization recorded in LOG_NORMALIZATION.json",
+      "retest": "Local base-to-head diff check PASS; hosted source-integrity rerun PASS on ddd11fc3"
+    },
+    {
+      "check": "Reader navigation hosted validation",
+      "failure": "New untracked continuation page was absent from the earlier generated reader index",
+      "correction": "Regenerated catalog after source tracking",
+      "retest": "validate_reader_navigation.py --check-regeneration PASS; hosted final revision pending"
+    }
+  ],
+  "acceptance": "PENDING_PR_169",
+  "limits": "Validation of implementation and named evidence only; no adoption of material proposal terms or complete IT gate.",
+  "tested_scope": "Continuation code integrated through administrative finance and public-copy adapter; later J2 successors have their own focused evidence. Full hosted checks must pass on the final PR revision.",
+  "focused_j2_administrative_tests": 11,
+  "focused_j2_tests": {
+    "administrative": 11,
+    "commissions": 22,
+    "total": 33
+  }
+}

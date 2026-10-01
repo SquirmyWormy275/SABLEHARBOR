@@ -1,0 +1,57 @@
+{
+  "status": "MANUAL_QA_PASS_NO_OWNER_ACCEPTANCE",
+  "purpose": "Verify the actual importer guide and one populated-copy import. Samples are fictional QA instructions, not owner decisions or proposed canon. No workbook input or full reviewer report is committed.",
+  "html_review": {
+    "path": "docs/legal/gap-instruments/decision-import/README.md.html",
+    "sha256": "414b006d2b5b79ccc4a6b13ef7b55f8dcd55e5d33127c8239743e130cc2eca80",
+    "contact": "05-contact-000.png",
+    "contact_sha256": "ade84e848417b7e1f81e44016fa2fd7d8d304001c6000edaebb3cfe9cbf050e1",
+    "method": "Read all three overlapping desktop viewports: all table rows, code, instructions and limitations; no clipping or overflow observed."
+  },
+  "sample_input": {
+    "template_sha256": "36394a1a6b2c13f1e4a721d904f6b5a956015610302b284b3121d72e2dd6823a",
+    "changes": [
+      {
+        "id": "DEBT-P03",
+        "response": "SET {\"term\":\"Deliver quarterly debt reconciliation within 60 days and material payment/collateral discrepancy notice within 5 business days.\"}"
+      },
+      {
+        "id": "DEBT-U01",
+        "response": "DISCUSS: Need verified lender identity and signing authority."
+      },
+      {
+        "id": "DEBT-P04",
+        "response": "approve"
+      }
+    ]
+  },
+  "result": {
+    "items": 125,
+    "explicit_field_changes": 1,
+    "diff_hunks": 1,
+    "discussion_only": 1,
+    "comment_only_not_approval": 1,
+    "unanswered": 122,
+    "all_instrument_sources_unchanged": true,
+    "source_files_checked": 34,
+    "no_source_writeback": true,
+    "no_acceptance_created": true
+  },
+  "corrections": [
+    "Preserve Unicode in proposed JSON to avoid unrelated escape-only diff hunks.",
+    "Use count-neutral report wording for one or several proposed replacements."
+  ],
+  "artifacts": {
+    "tools/legal_gaps/import_decisions.py": "e9a5b1828865878ce1135c9884d19aeafb8614d368f54203f2559d8e748243f5",
+    "tests/publications/test_legal_decision_import.py": "a9bd59b0c4ab7140bf5aff7589412c25f2176d9bf219ea43500cee5d73a1764d",
+    "docs/legal/gap-instruments/decision-import/qa/SAMPLE.diff": "63b83481a23b7b7f9b1e93a70988e16f1246e8df17ed63ca15d030028e93a392"
+  },
+  "actual_output_hashes": {
+    "REPORT.md": "9ab1cb1352cbabec3d601fb352f2f9bc87a9afd95c40000486267aa937fd7adb",
+    "debt-liens.diff": "63b83481a23b7b7f9b1e93a70988e16f1246e8df17ed63ca15d030028e93a392",
+    "report.json": "fcfa01997eb46ce04c815b2afb9ed02f8054451bdc79067405583cbafcb4357a",
+    "review.sqlite3": "08513c10ec74352a78b42156915f9d764ba523d0c69a913fd20c3cb12c16ca10"
+  },
+  "validation": "python -m pytest -q tests/publications/test_legal_decision_import.py; Ruff check for importer and test.",
+  "reviewed_report_markdown": "# Decision import proposal\n\n**PROPOSAL ONLY \u2014 not approved or applied.**\n\nSource items checked: 125. Proposed field replacements: 1.\n\nThe original sources and all PDF, HTML and workbook editions remain unchanged. Proposed JSON files are review copies, not canon. Markdown clauses, financial implications and regenerated editions require separate reconciliation and exact-file review before adoption.\n\nSee `report.json` for every response and source hash; `review.sqlite3` contains the same response and change records.\n\n## docs/legal/gap-instruments/source/debt-liens.json\n\n[Proposed JSON](proposed/docs/legal/gap-instruments/source/debt-liens.json) \u00b7 [Before/after diff](debt-liens.diff)\n\n- `DEBT-P03`: `/proposed_terms/2/term` (exact before/after text in the diff and JSON report).\n"
+}

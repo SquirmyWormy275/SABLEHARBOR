@@ -1,0 +1,165 @@
+{
+  "status": "MANUAL_REVIEW_PASS_DRAFT_DESIGN",
+  "owner_acceptance": false,
+  "workbook_sha256": "73fca36092d713e4170e5b38a3e226407fd95da23b328c05ad11bba86110c0f7",
+  "sheets": 9,
+  "rendered_pages": 29,
+  "method": "LibreOffice headless PDF export; PyMuPDF 1.4x page renders. All 29 pages inspected through eight full-resolution 2x2 contact sheets. Every page image retained for exact review.",
+  "corrections": [
+    "Widened account-name column to separate labels from balances.",
+    "Stored monetary cells as numbers with thousands separators, two decimal display and parentheses for negatives.",
+    "Retained full source decimals in CSV/SQLite; workbook display rounding does not alter native data."
+  ],
+  "render_command": "libreoffice -env:UserInstallation=file:///tmp/sh-walk-lo --headless --convert-to pdf --outdir /tmp/sh-walk-render docs/legal/gap-instruments/walkthroughs/walkthroughs.xlsx",
+  "page_renderer": "fitz.open(pdf); page.get_pixmap(matrix=fitz.Matrix(1.4,1.4)).save(page_path)",
+  "evidence": [
+    {
+      "path": "qa/contact-01.png",
+      "sha256": "a38df5315a48a1a71bee7a42270f8382721d7513f9bd35a4e815e4301de6234a"
+    },
+    {
+      "path": "qa/contact-02.png",
+      "sha256": "f1fcd5e7cd0e7fb12a6f85f088ab042a809cdeb6e1b1a89986fbd1e3eb714133"
+    },
+    {
+      "path": "qa/contact-03.png",
+      "sha256": "0103bdf1ae9728ce7cdda88aaebdad180e55a6758b61343055d9ebd7f5d88fc7"
+    },
+    {
+      "path": "qa/contact-04.png",
+      "sha256": "0168df227ae8cac82d73acfae2c47e95a29be7f83ae188d42a72c4e42b397a91"
+    },
+    {
+      "path": "qa/contact-05.png",
+      "sha256": "05d81859aa881448b258f44b3bd6c1860ad59f86f2df7e105fe9adcfbc54ccc5"
+    },
+    {
+      "path": "qa/contact-06.png",
+      "sha256": "e7cbb557c6dbae9a8eeeb462a707aa61ccd99dc4266f8fb74e134533da7f19c4"
+    },
+    {
+      "path": "qa/contact-07.png",
+      "sha256": "ea37c7ef5e88d9c2235ad7b81d3df5ef54dccfefc6508974d719c4f63179a517"
+    },
+    {
+      "path": "qa/contact-08.png",
+      "sha256": "87892d55ac1af2ab9388330490b3e048069a17f410afb942b9ebe47dbce4ddcb"
+    },
+    {
+      "path": "qa/page-01.png",
+      "sha256": "a6413d3cae221e7f9aa9d06670e14d21a9849446b1d3aeac9aa6eddbdf1e7041"
+    },
+    {
+      "path": "qa/page-02.png",
+      "sha256": "8035c18f00a8a278e0f3921353afab8cc38400cd1a18a061126cb371bc4495c7"
+    },
+    {
+      "path": "qa/page-03.png",
+      "sha256": "de078a6a4547212d837ddda801b4af4daa9d003dc7e7a6991d4b19f2930e492a"
+    },
+    {
+      "path": "qa/page-04.png",
+      "sha256": "03db32f854d1da1bf5908b7a096411f81b543636eb7c8d26e44ec920749284fc"
+    },
+    {
+      "path": "qa/page-05.png",
+      "sha256": "f6763a63605806c0eb2fdc95fd669af237ff3ab303366b28548d14ad6270e918"
+    },
+    {
+      "path": "qa/page-06.png",
+      "sha256": "08c5a2e67841ba82ba2b3364854aaa277fa1f3bc158e690c3f84adb465698740"
+    },
+    {
+      "path": "qa/page-07.png",
+      "sha256": "4baf6e19b41523f2f253421993ba24f4a7caff8d5cf024012c8f6c7e9d0a0590"
+    },
+    {
+      "path": "qa/page-08.png",
+      "sha256": "24151b9e6017d719ae35b1d00788c0451c698214fbb3d355c13a6be3176dea23"
+    },
+    {
+      "path": "qa/page-09.png",
+      "sha256": "84da6fea4ac7b267bb235c66d10a3b93c1a33de193c5c75ecdd3a7b395c1a0d1"
+    },
+    {
+      "path": "qa/page-10.png",
+      "sha256": "66308c488b3df3df9b3f0e3c980e29c395d2573ec9c9e2f5231c4d8ebb3f3ca9"
+    },
+    {
+      "path": "qa/page-11.png",
+      "sha256": "1074cce441281bd3ad97d3d43fb28d449e51c26435b1ad9fc3d627bd779d8cf0"
+    },
+    {
+      "path": "qa/page-12.png",
+      "sha256": "2748afc60aab5854f51ac57ec35e719e33239bfbcb3b5c70b5d4c681be9bd1f8"
+    },
+    {
+      "path": "qa/page-13.png",
+      "sha256": "89abae7bfe0ba9e7bfa1029f84d08f09ea776892ba0a294ead9e25771b76e5fc"
+    },
+    {
+      "path": "qa/page-14.png",
+      "sha256": "68c30002f35e38358bc2c693dc2a9c47e8db0bf7d15d723c06c488d1e6192f91"
+    },
+    {
+      "path": "qa/page-15.png",
+      "sha256": "ce96ee7128d0cad6fac6f5baf33c6be9ea4cb8c1be3d9f36316c169bd241d7a6"
+    },
+    {
+      "path": "qa/page-16.png",
+      "sha256": "2edb34df9feecd675642f4e12fdbb11e63c87b7df70d98295e01b0240a84c699"
+    },
+    {
+      "path": "qa/page-17.png",
+      "sha256": "550c3115ddf7069da7600fe56e1b8c0fe3c76a8615ff4ebf2ddd421c4e82d138"
+    },
+    {
+      "path": "qa/page-18.png",
+      "sha256": "b2fc75cda0998b5693dc6e33a472c3c9889b626cd5c6bf38a3fb14d4435beb60"
+    },
+    {
+      "path": "qa/page-19.png",
+      "sha256": "c3fab81735597abd479405aa9238e190bc60546e881d22c3c6cd93aef1017b21"
+    },
+    {
+      "path": "qa/page-20.png",
+      "sha256": "e60fe758c99533a169d292873912dff374e499f570d5854286193ef3e3eac7f7"
+    },
+    {
+      "path": "qa/page-21.png",
+      "sha256": "3e2790aeca1dcf6d736dffd6e43c4c03cb4e569fc1ea8af328500e9a92b2157b"
+    },
+    {
+      "path": "qa/page-22.png",
+      "sha256": "b7141794ee1808d9b2095c750e06b2d037e09b68f3f8e275ee842387f2adbe36"
+    },
+    {
+      "path": "qa/page-23.png",
+      "sha256": "5b1b0b3b0f765d510b6073ad8a1125626477b80545d4f98b63a5163c4035e4e9"
+    },
+    {
+      "path": "qa/page-24.png",
+      "sha256": "610526b01d9584c675387d12d0bf802443daa662ab64763d5a3d62c24f560b58"
+    },
+    {
+      "path": "qa/page-25.png",
+      "sha256": "d3516c33cf2b6103786f79327bc7f9f773355555ba21130221291b94e69fdc15"
+    },
+    {
+      "path": "qa/page-26.png",
+      "sha256": "e75507adad1d2f751df8fba7b4f44fcfd9f53c85bf3c221859b259c9c5aaa2df"
+    },
+    {
+      "path": "qa/page-27.png",
+      "sha256": "799ca6d7e6cd07eb869c36635e5fa278684c6bd4769ebb1b1098ad0a1e0543f3"
+    },
+    {
+      "path": "qa/page-28.png",
+      "sha256": "6755216ca3cce738dbf9959ba821939efe96eb596c90902b5f5ecf8ad266e839"
+    },
+    {
+      "path": "qa/page-29.png",
+      "sha256": "28d01d5ae034c98cd5c7a492f224c3c370e329476016d94600f2aa6867b17158"
+    }
+  ]
+}

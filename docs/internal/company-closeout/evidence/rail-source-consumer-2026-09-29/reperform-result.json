@@ -1,0 +1,93 @@
+{
+  "branch_speed_mph": 15,
+  "branch_switching_hours_preserved": 0.6131302351481637,
+  "candidate_route_miles": {
+    "BST-EAST": 4.136588436,
+    "BST-MAIN": 33.155448786,
+    "BST-MINERAL": 2.707962778,
+    "total": 40.0
+  },
+  "candidate_sha256": "7592f356a9d13878a61960d735fba61924119c8efac226544c133f85d59b4750",
+  "candidate_status": "RECOMMENDED_PROPOSED_SYNTHETIC_SOURCE_PATH_NOT_OPERATING_CANON",
+  "forecast_datasets": {
+    "assets": {
+      "equal": true,
+      "rows": 13867
+    },
+    "contract_revenue": {
+      "equal": true,
+      "rows": 5220
+    },
+    "debt": {
+      "equal": true,
+      "rows": 180
+    },
+    "eliminations": {
+      "equal": true,
+      "rows": 180
+    },
+    "funding": {
+      "equal": true,
+      "rows": 360
+    },
+    "intercompany": {
+      "equal": true,
+      "rows": 3240
+    },
+    "inventory": {
+      "equal": true,
+      "rows": 180
+    },
+    "journal": {
+      "equal": true,
+      "rows": 123716
+    },
+    "monthly_statements": {
+      "equal": true,
+      "rows": 360
+    },
+    "opening_balances": {
+      "equal": true,
+      "rows": 494
+    },
+    "payments": {
+      "equal": true,
+      "rows": 12941
+    },
+    "tax": {
+      "equal": true,
+      "rows": 360
+    },
+    "trial_balances": {
+      "equal": true,
+      "rows": 10350
+    }
+  },
+  "forecast_summary_equal": true,
+  "full_network_branch_hours_daily": 1.525737063681497,
+  "full_network_comparison": {
+    "only_train_hours_changed_months": 180,
+    "other_changed_months": [],
+    "train_hours_changed_months": 180
+  },
+  "mainline_only_sensitivity": {
+    "only_train_hours_changed_months": 179,
+    "other_changed_months": [
+      {
+        "changed_paths": [
+          ".capacity.rail.train_hours_daily",
+          ".capacity.conditional_total_rail_capacity_cars"
+        ],
+        "conditional_capacity_after_cars": 1344,
+        "conditional_capacity_before_cars": 1008,
+        "period": "2027-03",
+        "scenario": "downside"
+      }
+    ],
+    "train_hours_changed_months": 180
+  },
+  "planning_months": 180,
+  "scope": "Proposed geometry-only full three-route sensitivity preserves accepted branch switching at 15 mph; no candidate lead placed in service, new asset, price, cost, cash or legal right authored",
+  "source_branch_hours_daily": 1.5,
+  "source_mainline_miles": 33.34847676361104
+}
