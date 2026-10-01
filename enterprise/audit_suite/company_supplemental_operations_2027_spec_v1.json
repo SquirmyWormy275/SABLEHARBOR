@@ -176,5 +176,11 @@
       "530": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.530"
     }
   },
-  "schema": "SH_COMPANY_SUPPLEMENTAL_OPERATIONS_SPEC_V1"
+  "schema": "SH_COMPANY_SUPPLEMENTAL_OPERATIONS_SPEC_V1",
+  "source_generation_authorization": {
+    "authorization_reference": "docs/internal/development/audit-suite/FICTIONAL_2027_SCENARIO_DECISIONS_2026-09-29.md",
+    "authorization_scope": "Later local company-source history for the approved fictional 2027 reference service; commissioned source task dated2026-10-01",
+    "not_before_utc": "2026-10-01T00:00:00+00:00",
+    "real_clock_separate_from_simulated_events": true
+  }
 }

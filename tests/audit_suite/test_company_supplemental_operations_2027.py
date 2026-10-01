@@ -397,3 +397,93 @@ def test_context_rejects_changed_canon_before_any_predecessor_read(monkeypatch, 
     monkeypatch.setattr(source, "digest", lambda path: "0" * 64)
     with pytest.raises(CompanyStoreError, match="Canon pin differs"):
         source._context(REPOSITORY, tmp_path)
+
+
+@pytest.mark.parametrize(
+    "trigger",
+    [
+        "no_version_update",
+        "no_version_delete",
+        "no_collection_update",
+        "no_collection_delete",
+    ],
+)
+@pytest.mark.parametrize("attack", ["missing", "inert"])
+def test_every_immutable_trigger_fails_closed_even_with_resealed_manifest(
+    native_run, tmp_path, trigger, attack
+):
+    source.verify(native_run, repository=REPOSITORY, private_repository=tmp_path)
+    with closing(sqlite3.connect(native_run / "company.sqlite3")) as db:
+        db.execute("DROP TRIGGER " + trigger)
+        if attack == "inert":
+            table = "versions" if "version" in trigger else "collections"
+            action = "UPDATE" if "update" in trigger else "DELETE"
+            db.execute(f"CREATE TRIGGER {trigger} BEFORE {action} ON {table} BEGIN SELECT 1; END")
+        db.commit()
+    manifest = json.loads((native_run / "RUN-MANIFEST.json").read_bytes())
+    manifest["files"]["company.sqlite3"] = source.digest(native_run / "company.sqlite3")
+    (native_run / "RUN-MANIFEST.json").write_bytes(source.encoded(manifest))
+    with pytest.raises(CompanyStoreError, match="Exact native.*schema"):
+        source.verify(native_run, repository=REPOSITORY, private_repository=tmp_path)
+
+
+@pytest.mark.parametrize(
+    "statement",
+    [
+        "CREATE TABLE unexpected_content(body TEXT)",
+        "CREATE VIEW unexpected_view AS SELECT content FROM versions",
+        "CREATE INDEX unexpected_index ON versions(event_at)",
+    ],
+)
+def test_foreign_sqlite_schema_objects_are_rejected_after_reseal(native_run, tmp_path, statement):
+    with closing(sqlite3.connect(native_run / "company.sqlite3")) as db:
+        db.execute(statement)
+        db.commit()
+    manifest = json.loads((native_run / "RUN-MANIFEST.json").read_bytes())
+    manifest["files"]["company.sqlite3"] = source.digest(native_run / "company.sqlite3")
+    (native_run / "RUN-MANIFEST.json").write_bytes(source.encoded(manifest))
+    with pytest.raises(CompanyStoreError, match="Exact native.*schema"):
+        source.verify(native_run, repository=REPOSITORY, private_repository=tmp_path)
+
+
+@pytest.mark.parametrize(
+    "imported_at",
+    [
+        "2025-01-01T00:00:00.000000+00:00",
+        "2099-01-01T00:00:00.000000+00:00",
+    ],
+)
+def test_real_import_clock_cannot_predate_authorization_or_come_from_future(
+    native_run, tmp_path, imported_at
+):
+    with closing(sqlite3.connect(native_run / "company.sqlite3")) as db:
+        trigger = db.execute(
+            "SELECT sql FROM sqlite_master WHERE name='no_version_update'"
+        ).fetchone()[0]
+        db.execute("DROP TRIGGER no_version_update")
+        db.execute(
+            "UPDATE versions SET imported_at=? WHERE record='LOCAL-OPERATING-ORDER-2027'",
+            (imported_at,),
+        )
+        db.execute(trigger)
+        db.commit()
+    receipt = json.loads((native_run / "SOURCE_RECEIPT.json").read_bytes())
+
+    def replace_clocks(value):
+        if isinstance(value, dict):
+            if value.get("record") == "LOCAL-OPERATING-ORDER-2027":
+                value["imported_at"] = imported_at
+            for child in value.values():
+                replace_clocks(child)
+        elif isinstance(value, list):
+            for child in value:
+                replace_clocks(child)
+
+    replace_clocks(receipt)
+    (native_run / "SOURCE_RECEIPT.json").write_bytes(source.encoded(receipt))
+    manifest = json.loads((native_run / "RUN-MANIFEST.json").read_bytes())
+    for name in ["company.sqlite3", "SOURCE_RECEIPT.json"]:
+        manifest["files"][name] = source.digest(native_run / name)
+    (native_run / "RUN-MANIFEST.json").write_bytes(source.encoded(manifest))
+    with pytest.raises(CompanyStoreError, match="outside authorized generation window"):
+        source.verify(native_run, repository=REPOSITORY, private_repository=tmp_path)

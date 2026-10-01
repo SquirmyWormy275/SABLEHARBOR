@@ -277,7 +277,56 @@ def _ref(row: dict) -> dict:
     return {k: row[k] for k in REF_FIELDS}
 
 
-def _read_native(path: Path) -> list[dict]:
+def _exact_native_schema(db: sqlite3.Connection) -> None:
+    """Require all five tables, their constraints/indexes and all four exact triggers."""
+
+    def normal(sql: str | None) -> str | None:
+        return "".join(sql.split()).lower() if sql is not None else None
+
+    definitions = {
+        "systems": "CREATE TABLE systems(company TEXT, branch TEXT, system TEXT, "
+        "owner TEXT NOT NULL, PRIMARY KEY(company,branch,system))",
+        "versions": "CREATE TABLE versions(company TEXT, branch TEXT, system TEXT, "
+        "record TEXT, version INTEGER, event_at TEXT, available_at TEXT NOT NULL, "
+        "imported_at TEXT NOT NULL, origin TEXT NOT NULL, provenance TEXT NOT NULL, "
+        "content BLOB NOT NULL, sha256 TEXT NOT NULL, command_id TEXT UNIQUE NOT NULL, "
+        "input_digest TEXT NOT NULL, PRIMARY KEY(company,branch,system,record,version), "
+        "FOREIGN KEY(company,branch,system) REFERENCES systems(company,branch,system))",
+        "grants": "CREATE TABLE grants(principal TEXT, engagement TEXT, company TEXT, "
+        "branch TEXT, system TEXT, active INTEGER NOT NULL, "
+        "PRIMARY KEY(principal,engagement,company,branch,system))",
+        "access_events": "CREATE TABLE access_events(id INTEGER PRIMARY KEY, principal TEXT, "
+        "engagement TEXT, company TEXT, branch TEXT, system TEXT, "
+        "active INTEGER, recorded_at TEXT)",
+        "collections": "CREATE TABLE collections(command_id TEXT PRIMARY KEY, "
+        "input_digest TEXT NOT NULL, receipt TEXT NOT NULL)",
+    }
+    expected = {("table", name, name): normal(sql) for name, sql in definitions.items()}
+    for table, count in [("systems", 1), ("versions", 2), ("grants", 1), ("collections", 1)]:
+        for i in range(1, count + 1):
+            expected[("index", f"sqlite_autoindex_{table}_{i}", table)] = None
+    for table, label in [("versions", "source"), ("collections", "collection")]:
+        for verb in ["UPDATE", "DELETE"]:
+            name = f"no_{'version' if table == 'versions' else 'collection'}_{verb.lower()}"
+            expected[("trigger", name, table)] = normal(
+                f"CREATE TRIGGER {name} BEFORE {verb} ON {table} "
+                f"BEGIN SELECT RAISE(ABORT,'Immutable {label}'); END"
+            )
+    actual = {
+        (kind, name, table): normal(sql)
+        for kind, name, table, sql in db.execute("SELECT type,name,tbl_name,sql FROM sqlite_master")
+    }
+    if actual != expected:
+        raise CompanyStoreError(
+            "Exact native table/constraint/index/immutable trigger schema differs"
+        )
+    if db.execute("PRAGMA user_version").fetchone()[0] != 0 or (
+        db.execute("PRAGMA application_id").fetchone()[0] != 0
+    ):
+        raise CompanyStoreError("Native database application/version metadata differs")
+
+
+def _read_native(path: Path, *, import_floor: str | None = None) -> list[dict]:
     """No mutable constructor, grants, journals, or SQLite sidecars in predecessor reads."""
     stamp = private_file(path)
     if any(Path(str(path) + suffix).exists() for suffix in ("-wal", "-shm", "-journal")):
@@ -286,22 +335,25 @@ def _read_native(path: Path) -> list[dict]:
         db.row_factory = sqlite3.Row
         if db.execute("PRAGMA integrity_check").fetchone()[0] != "ok":
             raise CompanyStoreError("Native database integrity differs")
-        triggers = dict(db.execute("SELECT name,sql FROM sqlite_master WHERE type='trigger'"))
-        for name, verb in [("no_version_update", "UPDATE"), ("no_version_delete", "DELETE")]:
-            rule = triggers.get(name, "")
-            if (
-                f"BEFORE {verb} ON versions" not in rule
-                or "RAISE(ABORT,'Immutable source')" not in rule
-            ):
-                raise CompanyStoreError("Exact immutable native trigger required")
+        _exact_native_schema(db)
+        if db.execute("PRAGMA foreign_key_check").fetchone() is not None:
+            raise CompanyStoreError("Native foreign-key integrity differs")
         rows = [
             dict(x)
             for x in db.execute(
                 "SELECT * FROM versions ORDER BY branch,event_at,system,record,version"
             )
         ]
+    ceiling = _time(datetime.now().astimezone().isoformat())
     sequences: dict[tuple, list] = {}
     for row in rows:
+        imported = _time(row["imported_at"])
+        if (
+            imported != row["imported_at"]
+            or imported > ceiling
+            or (import_floor is not None and imported < _time(import_floor))
+        ):
+            raise CompanyStoreError("Actual import clock is outside authorized generation window")
         if sha(row["content"]) != row["sha256"] or _time(row["available_at"]) < _time(
             row["event_at"]
         ):
@@ -317,6 +369,19 @@ def _read_native(path: Path) -> list[dict]:
 
 def _context(repository: Path, private: Path) -> dict:
     spec = json.loads((repository / SPEC).read_bytes())
+    authorization = spec.get("source_generation_authorization", {})
+    if authorization != {
+        "not_before_utc": "2026-10-01T00:00:00+00:00",
+        "authorization_reference": (
+            "docs/internal/development/audit-suite/FICTIONAL_2027_SCENARIO_DECISIONS_2026-09-29.md"
+        ),
+        "authorization_scope": (
+            "Later local company-source history for the approved fictional 2027 reference "
+            "service; commissioned source task dated2026-10-01"
+        ),
+        "real_clock_separate_from_simulated_events": True,
+    }:
+        raise CompanyStoreError("Source-generation authorization boundary differs")
     if _p1_inventory(private) != P1_FREEZE:
         raise CompanyStoreError("Frozen 538-file P1 inventory differs")
     canon = {}
@@ -2674,6 +2739,7 @@ def _provenance(ctx: dict, repository: Path) -> dict:
         ),
         "reference_edition_boundary": ctx["spec"]["primary_legal_basis"]["edition_boundary"],
         "generation_kind": "AUTHORED_LATER_COMPANY_OPERATIONS_NOT_AUDIT_RESULTS",
+        "source_generation_authorization": ctx["spec"]["source_generation_authorization"],
     }
 
 
@@ -2942,7 +3008,10 @@ def verify(destination: Path, *, repository: Path, private_repository: Path) -> 
         raise CompanyStoreError("Output manifest or implementation pin differs")
     ctx = _context(repository, private)
     ctx["repository"] = repository
-    rows = _read_native(destination / "company.sqlite3")
+    rows = _read_native(
+        destination / "company.sqlite3",
+        import_floor=ctx["spec"]["source_generation_authorization"]["not_before_utc"],
+    )
     provenance = _provenance(ctx, repository)
     originals = {}
     counts = {}
