@@ -48,6 +48,102 @@ def collect(tmp_path, originals):
     return actual, context.simulated_at
 
 
+@pytest.mark.parametrize("other_scope", ["NONE", "FOREIGN", "AMBIGUOUS"])
+def test_effective_lag_policy_version_at_checkpoint_preserves_breach_and_explicit_ambiguity(
+    tmp_path, other_scope
+):
+    originals = []
+    for version, limit, at in (
+        (1, 5, "2027-05-01T00:00:00Z"),
+        (2, 6, "2027-05-02T00:00:00Z"),
+    ):
+        originals.append(
+            native(
+                "logging-history",
+                "source_inventory",
+                "LAG-POLICY",
+                at,
+                {
+                    "required_sources": [{"source_id": "LOCAL"}],
+                    "local_max_ingestion_lag_seconds": limit,
+                },
+                version=version,
+            )
+        )
+    if other_scope != "NONE":
+        originals.append(
+            native(
+                "logging-history",
+                "source_inventory",
+                "OTHER-POLICY",
+                "2027-05-02T01:00:00Z",
+                {
+                    "required_sources": [
+                        {"source_id": "FOREIGN" if other_scope == "FOREIGN" else "LOCAL"}
+                    ],
+                    "local_max_ingestion_lag_seconds": 100,
+                },
+            )
+        )
+    event = {
+        "sequence": 1,
+        "source_event_at": "2027-05-03T00:00:00Z",
+        "authorization_decision": "DENY",
+    }
+    originals.append(
+        native(
+            "logging-history",
+            "publisher_events",
+            "PUBLISHER",
+            "2027-05-03T00:00:00Z",
+            {},
+            fields={"local_source_id": "LOCAL", "event": event},
+        )
+    )
+    originals.append(
+        native(
+            "logging-history",
+            "ingestion_journal",
+            "INGESTION",
+            "2027-05-03T00:00:09Z",
+            {},
+            fields={
+                "local_source_id": "LOCAL",
+                "event": event,
+                "received_at": "2027-05-03T00:00:09Z",
+                "ingestion_lag_seconds": 9,
+            },
+        )
+    )
+    originals.append(
+        native(
+            "logging-history",
+            "publisher_checkpoints",
+            "CHECKPOINT",
+            "2027-05-03T00:00:10Z",
+            {},
+            fields={"local_source_id": "LOCAL", "sequences": [1]},
+        )
+    )
+    actual, clock = collect(tmp_path, originals)
+    result = logging(History(actual, as_of=clock))
+    checkpoint = result["checkpoint_populations_before_selection"][0]
+    lag = checkpoint["lag_observations"][0]
+    assert lag["calculated_ingestion_lag_seconds"] == 9 and lag["claim_agrees"] is True
+    assert len(checkpoint["retained_inventory_versions_not_overwritten"]) == (
+        2 if other_scope == "NONE" else 3
+    )
+    if other_scope == "AMBIGUOUS":
+        assert lag["effective_local_lag_limit_seconds"] is None
+        assert lag["exceeds_effective_lag_limit"] is None
+        assert checkpoint["lag_limit_status"] == "AMBIGUOUS_EFFECTIVE_LOCAL_DECLARATIONS"
+    else:
+        assert lag["effective_local_lag_limit_seconds"] == 6
+        assert lag["exceeds_effective_lag_limit"] is True and result["exceptions"]
+        assert checkpoint["effective_inventory_originals"][0]["version"] == 2
+        assert len(checkpoint["effective_inventory_originals"]) == 1
+
+
 def original_history():
     rows = []
 

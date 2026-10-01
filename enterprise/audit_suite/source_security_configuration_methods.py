@@ -491,8 +491,35 @@ def logging(history):
         for checkpoint in history.select(family, {"publisher_checkpoints"}):
             source_id = checkpoint["document"].get("local_source_id")
             cutoff = checkpoint["source"]["event_at"]
+
+            def relevant_inventory(r, source_id=source_id):
+                d = detail(r)
+                explicit = r["document"].get("local_source_id", d.get("local_source_id"))
+                if explicit is not None:
+                    require(
+                        isinstance(explicit, str) and explicit, "Typed lag-policy source required"
+                    )
+                    return explicit == source_id
+                if "required_sources" not in d:
+                    return True  # An expressly unscoped local declaration remains global.
+                declared = d["required_sources"]
+                require(isinstance(declared, list), "Typed required-source policy scope required")
+                names = [
+                    item
+                    if isinstance(item, str)
+                    else item.get("source_id", item.get("local_source_id"))
+                    if isinstance(item, dict)
+                    else None
+                    for item in declared
+                ]
+                require(
+                    all(isinstance(name, str) and name for name in names),
+                    "Explicit required-source identifiers required",
+                )
+                return source_id in names
+
             effective_inventories = [
-                r for r in inventories if _time(r["source"]["available_at"]) <= _time(cutoff)
+                r for r in _effective(inventories, cutoff) if relevant_inventory(r)
             ]
             lag_limits = {
                 detail(r).get("local_max_ingestion_lag_seconds")
@@ -504,6 +531,13 @@ def logging(history):
                 "Typed local ingestion lag limit required",
             )
             lag_limit = next(iter(lag_limits)) if len(lag_limits) == 1 else None
+            lag_limit_status = (
+                "EXACT_EFFECTIVE_UNAMBIGUOUS_LOCAL_LIMIT"
+                if len(lag_limits) == 1
+                else "AMBIGUOUS_EFFECTIVE_LOCAL_DECLARATIONS"
+                if len(lag_limits) > 1
+                else "EFFECTIVE_LOCAL_LIMIT_UNAVAILABLE"
+            )
             published = [
                 r
                 for r in publishers
@@ -569,6 +603,7 @@ def logging(history):
                         else None,
                         "observed_interval_chronology_supported": chronology,
                         "effective_local_lag_limit_seconds": lag_limit,
+                        "effective_local_lag_limit_status": lag_limit_status,
                         "exceeds_effective_lag_limit": lag > lag_limit
                         if chronology and lag_limit is not None
                         else None,
@@ -595,6 +630,9 @@ def logging(history):
                 "source": custody(checkpoint),
                 "source_id": source_id,
                 "cutoff": cutoff,
+                "lag_limit_status": lag_limit_status,
+                "effective_inventory_originals": [custody(r) for r in effective_inventories],
+                "retained_inventory_versions_not_overwritten": [custody(r) for r in inventories],
                 "required_sources": _pick(
                     effective_inventories,
                     ["required_sources", "required_detections", "local_max_ingestion_lag_seconds"],
