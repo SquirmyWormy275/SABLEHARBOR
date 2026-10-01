@@ -212,6 +212,11 @@ per side remain pending, Clean awaits review, and Messy retains the invalid
 blanket-waiver/omission history with an open exception. There is no actual
 applicability, environmental choice, implemented safeguard, source-complete
 registry, fresh pair or task credit.
+The independently reviewed V9 route successor binds the pending docket to
+only SH-POL-003's authored addressable discovery action. It names 170 distinct
+task IDs per side without moving a class: 132 partial, 30 design-only and 121
+unsupported. All 22 specification decisions per side remain pending, so the
+authored clause and the three generic operating gates gain no completed result.
 
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
