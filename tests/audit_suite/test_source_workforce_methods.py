@@ -854,3 +854,75 @@ def test_collected_relationship_counts_keep_directors_former_and_proposed_separa
     assert affiliations["people"]["P008"]["service_eligible"] is False
     assert not set(affiliations["canonical_people"]) & set(affiliations["proposed_office_contacts"])
     assert affiliations["appointments_or_planning_positions_inferred"] is False
+
+
+@pytest.mark.parametrize("population_role", ["denominator_snapshot", "periodic_review_population"])
+def test_genuine_ordinary_collected_copied_state_meeting_note_cannot_be_account_authority(
+    tmp_path_factory, population_role
+):
+    def author(put):
+        def wrapped(family, role, record, document, at, **kwargs):
+            if family == "person-access-history" and role == population_role:
+                document = deepcopy(document)
+                entry = (
+                    document["accounts"][0]
+                    if role == "denominator_snapshot"
+                    else document["members"][0]["accounts"][0]
+                )
+                alias = put(
+                    "person-access-history",
+                    "meeting_note",
+                    "NOT-AN-ACCOUNT",
+                    {"state": deepcopy(entry["state"])},
+                    "2027-01-20T00:00:00Z",
+                )
+                entry["source"] = alias
+                if "members" in document:
+                    document["membership_sha256"] = identity_tests.digest(document["members"])
+            return put(family, role, record, document, at, **kwargs)
+
+        author_neutral_source(wrapped)
+
+    fixture = identity_tests.build_originals(tmp_path_factory, author)
+    with pytest.raises(ProcedureError, match="native account role required for population"):
+        methods.inspections(fixture["records"], as_of=fixture["as_of"])
+
+
+@pytest.mark.parametrize("case", ["future-state", "wrong-subject"])
+def test_genuine_ordinary_quarter_members_require_effective_native_states_before_cutoff(
+    tmp_path_factory, case
+):
+    def author(put):
+        revoked = {}
+
+        def wrapped(family, role, record, document, at, **kwargs):
+            if family == "person-access-history" and role == "periodic_review_population":
+                document = deepcopy(document)
+                member = document["members"][0]
+                if case == "future-state":
+                    member["accounts"][0] = deepcopy(revoked)
+                else:
+                    member["subject_id"] = "ANOTHER-SUBJECT"
+                document["membership_sha256"] = identity_tests.digest(document["members"])
+            result = put(family, role, record, document, at, **kwargs)
+            if (
+                family == "person-access-history"
+                and role == "account_application"
+                and kwargs.get("version") == 2
+            ):
+                revoked.update(source=result, state=deepcopy(document["state"]))
+            return result
+
+        author_neutral_source(wrapped)
+
+    fixture = identity_tests.build_originals(tmp_path_factory, author)
+    actual = methods.workforce_access(methods.History(fixture["records"], fixture["as_of"]))
+    quarter = actual["periodic_reviews"][0]
+    assert quarter["native_member_tests"][0]["actual_state_matches"] is False
+    assert quarter["review_decision_tests"][0]["member_original_present"] is False
+    assert quarter["review_decision_tests"][0]["observed_rights_match"] is None
+    if case == "future-state":
+        assert quarter["native_member_tests"][0]["available_before_period_cutoff"] is False
+        assert quarter["native_member_tests"][0]["available_at_population_occurrence"] is False
+    else:
+        assert quarter["native_member_tests"][0]["subject_matches_member"] is False

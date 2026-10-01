@@ -802,6 +802,57 @@ def workforce_access(history):
                     decision=a["decision"],
                 )
             grant_tests.append(facts)
+
+    def effective_accounts(cutoff):
+        latest = {}
+        for account in accounts:
+            if _time(account["source"]["available_at"]) >= cutoff:
+                continue
+            aid = account["source"]["record"]
+            if aid not in latest or account["source"]["version"] > latest[aid]["source"]["version"]:
+                latest[aid] = account
+        return {
+            aid: account
+            for aid, account in latest.items()
+            if account["document"]["state"]["active"]
+            and _time(account["document"]["state"]["starts"])
+            < cutoff
+            <= _time(account["document"]["state"]["ends"])
+        }
+
+    def member_account(row, declared, cutoff, active, subject=None):
+        checked_state(declared["state"])
+        target, joined = pointer(history, row, declared["source"])
+        if target is not None:
+            require(
+                identity_methods.identity(target["source"]) in states,
+                "Actual native account role required for population member",
+            )
+            require(
+                target["source"]["record"] == declared["state"]["account_id"],
+                "Population member account differs from native account ID",
+            )
+        aid = declared["state"]["account_id"]
+        latest_matches = target is not None and target is active.get(aid)
+        subject_matches = subject is None or declared["state"]["subject_id"] == subject
+        available = joined == "EXACT_AVAILABLE_NATIVE_JOIN"
+        state_matches = (
+            available
+            and latest_matches
+            and subject_matches
+            and target["document"]["state"] == declared["state"]
+        )
+        return target, {
+            "account_id": aid,
+            "native_join": joined,
+            "actual_state_matches": state_matches,
+            "date_effective_latest_matches": latest_matches,
+            "available_at_population_occurrence": available,
+            "available_before_period_cutoff": target is not None
+            and _time(target["source"]["available_at"]) < cutoff,
+            "subject_matches_member": subject_matches,
+        }
+
     objects = selected(history, "workforce", "workspace_object", needed=False)
     require(len(objects) <= 1, "One exact selected workforce workspace object required")
     for row in selected(history, "workforce", "permission_activity", needed=False):
@@ -867,36 +918,13 @@ def workforce_access(history):
             cutoff <= _time(row["source"]["event_at"]), "Denominator uses future operating state"
         )
         flag(d["worker_and_account_counts_are_identical"], "worker/account population identity")
-        latest = {}
-        for account in accounts:
-            if _time(account["source"]["available_at"]) >= cutoff:
-                continue
-            aid = account["source"]["record"]
-            if aid not in latest or account["source"]["version"] > latest[aid]["source"]["version"]:
-                latest[aid] = account
-        active = {
-            aid: r
-            for aid, r in latest.items()
-            if r["document"]["state"]["active"]
-            and _time(r["document"]["state"]["starts"])
-            < cutoff
-            <= _time(r["document"]["state"]["ends"])
-        }
+        active = effective_accounts(cutoff)
         declared = {a["state"]["account_id"]: a for a in d["accounts"]}
         require(len(declared) == len(d["accounts"]), "Distinct denominator accounts required")
         join_tests = []
-        for aid, a in declared.items():
-            checked_state(a["state"])
-            target, state = pointer(history, row, a["source"])
-            join_tests.append(
-                {
-                    "account_id": aid,
-                    "native_join": state,
-                    "actual_state_matches": target is not None
-                    and target["document"]["state"] == a["state"],
-                    "date_effective_latest_matches": target is active.get(aid),
-                }
-            )
+        for a in declared.values():
+            _, tests = member_account(row, a, cutoff, active)
+            join_tests.append(tests)
         observed_subjects = sorted({r["document"]["state"]["subject_id"] for r in active.values()})
         unmatched = sorted(
             {
@@ -923,24 +951,33 @@ def workforce_access(history):
         )
     for row in selected(history, "workforce", "periodic_review_population", needed=False):
         d = row["document"]
+        cutoff = _time(d["period_end_exclusive"])
+        require(cutoff <= _time(row["source"]["event_at"]), "Quarter population uses future cutoff")
+        active = effective_accounts(cutoff)
         subject_ids = [m["subject_id"] for m in d["members"]]
         require(
             len(subject_ids) == len(set(subject_ids)),
             "Distinct actual periodic review subjects required",
         )
-        found = []
+        found, actual_members, account_ids = [], {}, set()
         for member in d["members"]:
+            tested, actual_rights = [], set()
             for a in member["accounts"]:
-                checked_state(a["state"])
-                target, state = pointer(history, row, a["source"])
-                found.append(
-                    {
-                        "subject_id": member["subject_id"],
-                        "native_join": state,
-                        "actual_state_matches": target is not None
-                        and target["document"]["state"] == a["state"],
-                    }
+                target, tests = member_account(row, a, cutoff, active, member["subject_id"])
+                require(
+                    tests["account_id"] not in account_ids, "Distinct quarterly accounts required"
                 )
+                account_ids.add(tests["account_id"])
+                found.append({"subject_id": member["subject_id"], **tests})
+                tested.append(tests["actual_state_matches"])
+                if tests["actual_state_matches"]:
+                    actual_rights.update(
+                        tokens(target["document"]["state"]["rights"], "native review rights")
+                    )
+            actual_members[member["subject_id"]] = {
+                "all_accounts_supported": bool(tested) and all(tested),
+                "actual_native_rights": actual_rights,
+            }
         decision_rows = [
             r
             for r in selected(history, "workforce", "periodic_review_decisions", needed=False)
@@ -949,29 +986,32 @@ def workforce_access(history):
         decisions = []
         for review in decision_rows:
             r = review["document"]
+            population, population_join = pointer(history, review, r["population"])
+            if population is not None:
+                require(
+                    population["component"] == "workforce"
+                    and population["logical_system"] == "periodic_review_population",
+                    "Actual native quarterly population role required for decisions",
+                )
+            exact_population = (
+                population is row and population_join == "EXACT_AVAILABLE_NATIVE_JOIN"
+            )
             flag(r["wider_estate_reviewed"], "wider estate review")
             for dec in r["decisions"]:
-                member = next(
-                    (m for m in d["members"] if m["subject_id"] == dec["subject_id"]), None
+                member = actual_members.get(dec["subject_id"])
+                supported = (
+                    exact_population and member is not None and member["all_accounts_supported"]
                 )
-                actual = (
-                    set().union(
-                        *(
-                            tokens(a["state"]["rights"], "review member actual rights")
-                            for a in member["accounts"]
-                        )
-                    )
-                    if member
-                    else set()
-                )
+                observed = tokens(dec["observed_rights"], "periodic observed rights")
                 decisions.append(
                     {
                         "subject_id": dec["subject_id"],
-                        "member_original_present": member is not None,
-                        "observed_rights_match": tokens(
-                            dec["observed_rights"], "periodic observed rights"
-                        )
-                        == actual,
+                        "population_native_join": population_join,
+                        "decision_targets_exact_population": exact_population,
+                        "member_original_present": supported,
+                        "observed_rights_match": observed == member["actual_native_rights"]
+                        if supported
+                        else None,
                         "removal_rights": dec["remove_rights"],
                         "removal_confirmation": dec["removal_confirmation"],
                         "actual_removal_implementation_proved": False,
