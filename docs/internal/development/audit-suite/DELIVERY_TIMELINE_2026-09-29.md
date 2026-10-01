@@ -238,6 +238,8 @@ The reviewed V13 disposable collector added SEC001 CC5.2 to the selected-source 
 
 The reviewed V14 partial source/candidate registry adds POL004's selected fictional procedure trial to the exact V13 prefix: 35 cohorts/796 native versions, 49 components, 36 pins and 305 aliases per profile. Its main-local output bytes match isolated review. The exact V12 route successor gives only CC5.3 a bounded named lead, bringing targeted routes to 175 per side without moving the 135 partial/27 design/121 unsupported classes. The main-local route replay matches isolated bytes, while POL004 authority, complete population and the Messy open exception remain unresolved. The frozen P1 pair still has 409 unrun tasks per side; no audit credit or fresh pair follows.
 
+A separately reviewed selected Boise emergency replay trace adds 23 company-native fictional versions for a single payload-free marker path. Its main-local run confirms the reviewed PHI/BA, BCM, IAM and SEC005 source joins, including Messy denial, stale-checkpoint mismatch, local retest and open exceptions. It supplies a bounded operating-history candidate, not actual ePHI access, deployed recovery, full-period population, independent assurance or task credit.
+
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
 2–16, 2027 (weeks 18–20) is the working target. March 16, 2027 (week 24) is
