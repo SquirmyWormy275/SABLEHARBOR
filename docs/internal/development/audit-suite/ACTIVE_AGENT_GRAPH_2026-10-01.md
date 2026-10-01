@@ -97,9 +97,15 @@ remain restricted and cannot be promoted into company operating evidence.
 The corrected person/account source is independently accepted for its bounded
 fictional company scope and freshly reproduced in main: 3,399 versions, 1,462
 reperformed local permission/object decisions, 24 monthly populations and eight
-quarterly membership/decision/followup joins. Review independently checked 30,803
-native references and 48 derived vectors per creation when comparing the new
-actual import clocks and resulting hashes. All canonical affiliations, proposed
+quarterly membership/decision/followup joins. A new independent census identifies
+14,091 distinct native-reference occurrences, all matching exact internal custody,
+and no reference extras; the comparison also checked 48 derived vectors per
+creation when rebinding actual import clocks and resulting hashes. The older
+frozen review's 30,803 comparison counter has an unresolved counting basis and
+must not be read as a distinct per-source occurrence count. Its review stays
+preserved; census correction:
+`1dada8f42af43936bee8a82c6002f6323408e3795d2236bfb15f17061e8aa6d3`.
+All canonical affiliations, proposed
 offices, local service delegations and earlier failures remain distinct. The
 first operating account is January 1 at 03:15; no earlier continuous operation is
 established. Thirty-two restricted original witnesses are private custody,

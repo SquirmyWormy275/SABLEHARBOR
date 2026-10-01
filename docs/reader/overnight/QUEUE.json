@@ -1946,10 +1946,17 @@
         "native_permission_decisions_reperformed": 1462,
         "closed_monthly_populations": 24,
         "quarterly_joins": 8,
-        "internal_native_joins_checked_per_creation": 30803,
+        "internal_native_joins_checked_per_creation": 14091,
         "derived_vector_hashes_checked_per_creation": 48,
         "restricted_original_witnesses": 32,
-        "auditor_access_to_restricted_originals_established": false
+        "auditor_access_to_restricted_originals_established": false,
+        "native_reference_count_basis": "Distinct full-reference occurrences in typed native bodies; all matching exact internal custody, no extras or missing targets",
+        "native_reference_census_correction_sha256": "1dada8f42af43936bee8a82c6002f6323408e3795d2236bfb15f17061e8aa6d3",
+        "preserved_prior_comparison_counter": {
+          "value": 30803,
+          "basis": "UNRESOLVED_REPEATED_COMPARISON_COUNTER_NOT_DISTINCT_PER_SOURCE_COUNT",
+          "frozen_review_rewritten": false
+        }
       },
       "selected_main_adapter_workforce_tests_passed": 90,
       "privacy_tail_assessment": {
@@ -2052,12 +2059,21 @@
         "existing_v2_1_frozen": true
       },
       "persistent_company_runtime_candidate": {
-        "status": "NEUTRAL_MECHANICS_INDEPENDENT_REVIEW_PENDING",
+        "status": "CORRECTED_CANDIDATE_INDEPENDENT_REVIEW_PENDING",
         "shared_company_root_precedes_engagements": true,
-        "neutral_mechanics_tests_passed": 11,
+        "neutral_mechanics_tests_passed": 17,
         "accepted_company_successor_activation": false,
         "old_adapter_review_authorizes_evolution": false,
-        "evolving_company_acceptance": false
+        "evolving_company_acceptance": false,
+        "rejected_commit": "8d5fabc8cf580f2d8be3f135f06951be75ce779a",
+        "rejected_independent_review_sha256": "9b72a74f155595cca683f7cb2b5ea6d1a9fccd7680a6d86723553ab8916f2778",
+        "fully_repaired_replay_defects": [
+          "Predecessor business/publication clock backdating",
+          "Boolean expected predecessor version",
+          "Extra undeclared operation field"
+        ],
+        "corrected_commit": "bb3d1d59bb25fda122ec34fb42f5ce9a60441eb9",
+        "source_execution_authorized": false
       }
     }
   },
