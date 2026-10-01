@@ -856,6 +856,40 @@ def test_collected_relationship_counts_keep_directors_former_and_proposed_separa
     assert affiliations["appointments_or_planning_positions_inferred"] is False
 
 
+def test_full52_citations_fit_reviewed_batch_limit_without_losing_facts_or_native_members(
+    originals,
+):
+    actual = methods.inspections(originals["records"], as_of=originals["as_of"])
+    for inspected in actual:
+        observations = inspected["observations"]
+        assert all(1 <= len(observation["evidence"]) <= 20 for observation in observations)
+        assert set(inspected["artifact_ids"]) == {
+            item["artifact_id"] for observation in observations for item in observation["evidence"]
+        }
+        by_id = {o["id"]: o for o in observations}
+        for original in observations:
+            if "continued_evidence_observation_ids" not in original["facts"]:
+                continue
+            parts = [
+                original,
+                *(by_id[name] for name in original["facts"]["continued_evidence_observation_ids"]),
+            ]
+            assert (
+                sum(len(part["evidence"]) for part in parts)
+                == original["facts"]["complete_citation_count"]
+            )
+            assert all(
+                part["facts"]["supports_complete_calculation_observation_id"] == original["id"]
+                for part in parts[1:]
+            )
+            assert set(original["facts"]) - {
+                "continued_evidence_observation_ids",
+                "complete_citation_count",
+                "custody_part",
+                "custody_part_count",
+            }
+
+
 @pytest.mark.parametrize("population_role", ["denominator_snapshot", "periodic_review_population"])
 def test_genuine_ordinary_collected_copied_state_meeting_note_cannot_be_account_authority(
     tmp_path_factory, population_role

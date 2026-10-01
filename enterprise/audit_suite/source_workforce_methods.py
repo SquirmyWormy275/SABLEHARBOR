@@ -1245,6 +1245,48 @@ TASK_COMPONENTS = {
 }
 
 
+def bounded_observations(observations):
+    """Preserve complete calculations/custody within the reviewed 20-citation limit."""
+    out = []
+    for original in observations:
+        evidence = original["evidence"]
+        if len(evidence) <= 20:
+            out.append(original)
+            continue
+        parts = [evidence[start : start + 20] for start in range(0, len(evidence), 20)]
+        continuation_ids = [
+            original["id"] + f"/CUSTODY-PART-{number}" for number in range(2, len(parts) + 1)
+        ]
+        out.append(
+            {
+                **original,
+                "evidence": parts[0],
+                "facts": {
+                    **original["facts"],
+                    "continued_evidence_observation_ids": continuation_ids,
+                    "complete_citation_count": len(evidence),
+                    "custody_part": 1,
+                    "custody_part_count": len(parts),
+                },
+            }
+        )
+        for number, part in enumerate(parts[1:], 2):
+            out.append(
+                {
+                    "id": original["id"] + f"/CUSTODY-PART-{number}",
+                    "status": original["status"],
+                    "evidence": part,
+                    "facts": {
+                        "supports_complete_calculation_observation_id": original["id"],
+                        "custody_part": number,
+                        "custody_part_count": len(parts),
+                        "complete_citation_count": len(evidence),
+                    },
+                }
+            )
+    return out
+
+
 def inspections(records, *, as_of, scratch_root=None):
     """Pure exact 52-task batch callback; no writes, source grants or old outcomes."""
     value = authored_contracts()
@@ -1417,4 +1459,6 @@ def inspections(records, *, as_of, scratch_root=None):
                 + contracts[task_id]["unperformed"],
             },
         }
+    for inspected in out.values():
+        inspected["observations"] = bounded_observations(inspected["observations"])
     return [out[tid] for tid in value["selected_task_ids"]]
