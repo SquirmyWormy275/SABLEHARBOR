@@ -649,7 +649,7 @@ def record_method(engine, auditor, engagement, rows, label, result, plan, root):
         "population_id": pop["id"],
         "selection_id": chosen["id"],
         "workpaper_id": paper["id"],
-        "sample_execution_id": state["sample_executions"][-1]["id"],
+        "sample_execution_id": execution_ids[0],
         "sample_execution_ids": execution_ids,
     }
 
@@ -1063,6 +1063,7 @@ def verify(destination, accepted, adapter_review, adapter_review_sha):
                 )
                 require(
                     _time(plan["selection_sealed_at"]) <= _time(item["receipt"]["collected_at"])
+                    and _time(source["imported_at"]) <= _time(item["receipt"]["collected_at"])
                     and _time(item["receipt"]["collected_at"])
                     <= _time(datetime.now(UTC).isoformat()),
                     "Transplanted or future collection chronology",
@@ -1110,6 +1111,14 @@ def verify(destination, accepted, adapter_review, adapter_review_sha):
             require(
                 len(traces) == (2 if label == "SEC003" else 1),
                 "Actual selected sample trace missing",
+            )
+            links = branch_receipt["task_links"][label]
+            require(
+                links["sample_execution_ids"] == [trace["id"] for trace in traces]
+                and links["sample_execution_id"] == traces[0]["id"]
+                and links["selection_id"] == traces[0]["selection_id"]
+                and links["population_id"] == traces[0]["population_id"],
+                "Summary sample/selection links disagree with actual traces",
             )
             for trace in traces:
                 pop = next(p for p in state["populations"] if p["id"] == trace["population_id"])
