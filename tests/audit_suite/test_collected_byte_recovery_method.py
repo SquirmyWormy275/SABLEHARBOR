@@ -13,7 +13,7 @@ from enterprise.audit_suite.collected_byte_recovery_method import (
     reference,
     sha,
 )
-from enterprise.audit_suite.company_store import _time
+from enterprise.audit_suite.company_store import _json, _time
 from enterprise.audit_suite.fresh_sec003_procedure import ProcedureError
 
 
@@ -121,6 +121,67 @@ def fixture(*, old_configuration=None):
         current,
         version=2,
     )
+    producer_runtime = row(
+        "configuration-runtime-history.configuration_runtime",
+        "EXPORT-RUNTIME",
+        "2027-02-04T03:00:00Z",
+        {"runtime_id": "NEUTRAL-CONFIGURATION-RUNTIME", "executes_in_auditor_method": False},
+    )
+    producer_runtime["source"]["provenance"]["operational_metadata"] = {
+        "revision": 1,
+        "operator_id": "LOCAL-OPERATOR",
+        "authority": "DECLARED_LOCAL_CONFIGURATION_EXPORT_ONLY",
+    }
+    producer_exports = [
+        row(
+            "configuration-runtime-history.configuration_export",
+            "CONFIG-BYTES",
+            "2027-02-05T00:00:00Z",
+            old,
+        ),
+        row(
+            "configuration-runtime-history.configuration_export",
+            "CONFIG-BYTES",
+            "2027-02-06T00:01:00Z",
+            current,
+            version=2,
+        ),
+    ]
+    for consumer, exported in zip((captured, comparison), producer_exports, strict=True):
+        exported["source"]["provenance"]["operational_metadata"] = {
+            "operation": "EXPORT",
+            "exported_at": exported["source"]["event_at"],
+            "operator_id": "LOCAL-OPERATOR",
+            "authority": "DECLARED_LOCAL_CONFIGURATION_EXPORT_ONLY",
+        }
+        pair = {
+            "original": {**reference(exported["source"]), "publication_id": "NEUTRAL-PUBLICATION"},
+            "definition": reference(producer_runtime["source"]),
+        }
+        original_pair = {"original": exported["source"], "definition": producer_runtime["source"]}
+        consumer["source"]["provenance"]["operational_metadata"] = {
+            "source_admission": {
+                "consumed_at": consumer["source"]["event_at"],
+                "consumer_runtime_id": "NEUTRAL-LOCAL-BYTE-RUNTIME",
+                "consumer_runtime_sha256": runtime["source"]["sha256"],
+                "dataset_id": "CONFIG-BYTES",
+                "source_store_id": "NEUTRAL-ORIGINAL-CONFIGURATION-STORE",
+                "source_location_sha256": sha(b"NEUTRAL-ORIGINAL-LOCATION-NOT-OPENED"),
+                "identity_basis": "EXPLICIT_NEUTRAL_ENGINEERING_METADATA",
+                "qualification": "LOCAL_CONFIGURATION_ADMISSION_ONLY",
+                "execution_source_sha256": sha(b"NEUTRAL-ORIGINAL-EXECUTOR-NOT-EXECUTED"),
+                "source_pin": reference(exported["source"]),
+                "source_definition_pin": reference(producer_runtime["source"]),
+                "metadata": pair["original"],
+                "definition_metadata": pair["definition"],
+                "original_metadata_sha256": sha(_json(original_pair).encode()),
+                "original_metadata_digest_basis": (
+                    "EXACT_PRIVATE_ORIGINAL_EXPORT_AND_RUNTIME_METADATA_WITH_ORIGINAL_PROVENANCE"
+                ),
+                "projected_metadata_sha256": sha(_json(pair).encode()),
+                "projected_metadata_digest_basis": "PUBLISHED_REFERENCE_HEADER_PAIR_ONLY",
+            }
+        }
     restored = row("backup-runtime-history.restored_dataset", "R1", "2027-02-06T01:10:00Z", old)
     backup = row(
         "backup-runtime-history.backup_job",
@@ -173,6 +234,8 @@ def fixture(*, old_configuration=None):
         restored,
         backup,
         restore,
+        producer_runtime,
+        *producer_exports,
     ]
     return rows, {
         "context": ctx,
@@ -201,6 +264,81 @@ def test_actual_isolated_backup_copy_and_typed_json_read_keep_business_and_real_
     assert not result["historical_august_marker_restore_reperformed"]
     assert not result["accepted_business_rto_rpo_established"]
     assert result["conclusion"] == "LIMITATION" and not result["full_task_credit"]
+    admission = result["configuration_admission_observations"]["captured_configuration"]
+    assert admission["consumer_bytes_equal_collected_export"]
+    assert admission["projected_header_pair_digest_independently_verified"]
+    assert not admission["original_archive_metadata_independently_authenticated"]
+    assert not admission["archive_digest_relabelled_as_projected_metadata_digest"]
+
+
+def test_producer_admission_needs_collected_originals_not_equal_digest_aliases(tmp_path):
+    tmp_path.chmod(0o700)
+    rows, kw = fixture()
+    rows = [
+        item
+        for item in rows
+        if item["source"]["system"] != "configuration-runtime-history.configuration_export"
+    ]
+    result = examine_restore(rows, scratch=tmp_path / "missing-export", **kw)
+    assert result["status"] == "SUPPORT_UNAVAILABLE"
+    assert "captured_configuration.producer_export" in result["missing_exact_originals"]
+    assert not (tmp_path / "missing-export").exists()
+
+
+def test_original_archive_digest_cannot_replace_projected_published_header_pair_digest(tmp_path):
+    tmp_path.chmod(0o700)
+    rows, kw = fixture()
+    captured = next(
+        item
+        for item in rows
+        if item["source"]["system"].endswith(".source_dataset")
+        and item["source"]["version"] == 1
+    )
+    admission = captured["source"]["provenance"]["operational_metadata"]["source_admission"]
+    admission["projected_metadata_sha256"] = admission["original_metadata_sha256"]
+    with pytest.raises(ProcedureError, match="header-pair digest"):
+        examine_restore(rows, scratch=tmp_path / "bad-digest-basis", **kw)
+    assert not (tmp_path / "bad-digest-basis").exists()
+
+
+@pytest.mark.parametrize("change", ["restricted", "different_collected_version"])
+def test_resealed_admission_header_keeps_restricted_and_distinct_targets_separate(tmp_path, change):
+    tmp_path.chmod(0o700)
+    rows, kw = fixture()
+    captured = next(
+        item
+        for item in rows
+        if item["source"]["system"].endswith(".source_dataset")
+        and item["source"]["version"] == 1
+    )
+    admission = captured["source"]["provenance"]["operational_metadata"]["source_admission"]
+    if change == "restricted":
+        admission["metadata"] = {
+            "custody_id": "UPSTREAM-" + "a" * 24,
+            "status": "RESTRICTED_CROSS_BRANCH_DEPENDENCY",
+        }
+    else:
+        other = next(
+            item
+            for item in rows
+            if item["source"]["system"].endswith(".configuration_export")
+            and item["source"]["version"] == 2
+        )
+        admission["metadata"] = reference(other["source"])
+    admission["projected_metadata_sha256"] = sha(
+        _json(
+            {"original": admission["metadata"], "definition": admission["definition_metadata"]}
+        ).encode()
+    )
+    target = tmp_path / "no-alias"
+    if change == "restricted":
+        result = examine_restore(rows, scratch=target, **kw)
+        assert result["status"] == "SUPPORT_UNAVAILABLE"
+        assert "captured_configuration.producer_export" in result["missing_exact_originals"]
+    else:
+        with pytest.raises(ProcedureError, match="different originals"):
+            examine_restore(rows, scratch=target, **kw)
+    assert not target.exists()
 
 
 def test_missing_backup_original_is_unavailable_support_never_reconstructed_from_digest_flags(

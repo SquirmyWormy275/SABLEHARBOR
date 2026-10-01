@@ -10,6 +10,7 @@ import hashlib
 import json
 import math
 import os
+import re
 import stat
 import time
 from dataclasses import dataclass
@@ -155,6 +156,113 @@ def body(item):
     return data
 
 
+def published_join(header, originals):
+    """Resolve core custody, retaining declared business extras as attribution."""
+    require(isinstance(header, dict), "Published admission header required")
+    if not set(BUSINESS_REFERENCE) <= header.keys():
+        require(
+            isinstance(header.get("status"), str)
+            and re.fullmatch(r"UPSTREAM-[0-9a-f]{24}", header.get("custody_id", "")),
+            "Exact published header or explicitly restricted dependency required",
+        )
+        return None
+    return join({k: header[k] for k in BUSINESS_REFERENCE}, originals)
+
+
+def admission_observation(item, originals, *, runtime_item, dataset_id, label, needed):
+    """Inspect separately retained operational admission, never archive recipes."""
+    operational = item["source"]["provenance"].get("operational_metadata", {})
+    admission = operational.get("source_admission")
+    if not isinstance(admission, dict):
+        return None, [label + ".source_admission"]
+    require(
+        {
+            "dataset_id",
+            "consumer_runtime_id",
+            "consumer_runtime_sha256",
+            "consumed_at",
+            "source_pin",
+            "source_definition_pin",
+            "metadata",
+            "definition_metadata",
+            "original_metadata_digest_basis",
+            "original_metadata_sha256",
+            "projected_metadata_digest_basis",
+            "projected_metadata_sha256",
+        }
+        <= admission.keys(),
+        "Complete declared configuration source-admission metadata required",
+    )
+    require(
+        admission["dataset_id"] == dataset_id
+        and admission["consumer_runtime_id"] == body(runtime_item)["runtime_id"]
+        and admission["consumer_runtime_sha256"] == runtime_item["source"]["sha256"]
+        and admission["original_metadata_digest_basis"]
+        == "EXACT_PRIVATE_ORIGINAL_EXPORT_AND_RUNTIME_METADATA_WITH_ORIGINAL_PROVENANCE"
+        and re.fullmatch(r"[0-9a-f]{64}", admission["original_metadata_sha256"])
+        and isinstance(admission["projected_metadata_digest_basis"], str)
+        and admission["projected_metadata_digest_basis"],
+        "Collected configuration admission runtime, dataset or digest basis differs",
+    )
+    pair = {"original": admission["metadata"], "definition": admission["definition_metadata"]}
+    require(
+        sha(_json(pair).encode()) == admission["projected_metadata_sha256"],
+        "Published configuration admission header-pair digest differs",
+    )
+    missing = []
+    for role, pin, metadata in (
+        ("producer_export", admission["source_pin"], pair["original"]),
+        ("producer_runtime", admission["source_definition_pin"], pair["definition"]),
+    ):
+        target, corroboration = published_join(pin, originals), published_join(metadata, originals)
+        require(
+            target is None
+            or corroboration is None
+            or target["source"] == corroboration["source"],
+            "Admission pin and published metadata resolve to different originals",
+        )
+        name = label + "." + role
+        if target is None or corroboration is None:
+            missing.append(name)
+        else:
+            needed[name] = target
+    if missing:
+        return None, missing
+    exported = needed[label + ".producer_export"]
+    definition = needed[label + ".producer_runtime"]
+    body(definition)
+    require(
+        exported["source"]["system"].endswith(".configuration_export")
+        and definition["source"]["system"].endswith(".configuration_runtime"),
+        "Admission producer has another native source kind",
+    )
+    producer_facts = {}
+    for role, target in (("export", exported), ("runtime", definition)):
+        facts = target["source"]["provenance"].get("operational_metadata")
+        if not isinstance(facts, dict) or not facts:
+            return None, [label + ".producer_" + role + ".operational_metadata"]
+        producer_facts[role] = facts
+    consumed_at = _time(admission["consumed_at"])
+    return {
+        "consumer_source": reference(item["source"]),
+        "consumed_at": consumed_at,
+        "consumer_runtime_id": admission["consumer_runtime_id"],
+        "consumer_runtime_sha256": admission["consumer_runtime_sha256"],
+        "producer_export": reference(exported["source"]),
+        "producer_runtime": reference(definition["source"]),
+        "consumer_bytes_equal_collected_export": item["content"] == exported["content"],
+        "producer_export_available_at_consumption": _time(exported["source"]["available_at"])
+        <= consumed_at,
+        "producer_runtime_available_at_consumption": _time(definition["source"]["available_at"])
+        <= consumed_at,
+        "producer_operational_facts": json.loads(_json(producer_facts)),
+        "declared_admission": json.loads(_json(admission)),
+        "projected_header_pair_digest_independently_verified": True,
+        "original_archive_metadata_independently_authenticated": False,
+        "archive_digest_relabelled_as_projected_metadata_digest": False,
+    }, []
+
+
 def positive_number(value):
     return type(value) in {int, float} and math.isfinite(value) and value >= 0
 
@@ -295,6 +403,21 @@ def examine_restore(
     missing = [name for name, item in needed.items() if item is None]
     if missing:
         return unavailable(missing, [reference(i["source"]) for i in needed.values() if i])
+    admissions = {}
+    missing = []
+    for label in ("captured_configuration", "comparison_configuration"):
+        observations, gaps = admission_observation(
+            needed[label],
+            originals,
+            runtime_item=needed["runtime_definition"],
+            dataset_id=restore["dataset_id"],
+            label=label,
+            needed=needed,
+        )
+        admissions[label] = observations
+        missing.extend(gaps)
+    if missing:
+        return unavailable(missing, [reference(i["source"]) for i in needed.values() if i])
     # Archive paths remain attributed company fields. Never open or execute them.
     scratch = Path(scratch).absolute()
     require(
@@ -407,6 +530,7 @@ def examine_restore(
             "backup": credential_observation(needed["backup_credential"], backup),
             "restore": credential_observation(needed["restore_credential"], restore),
         },
+        "configuration_admission_observations": admissions,
         "runtime_qualification": runtime["qualification"],
         "original_archive_runtime_executed_by_auditor": False,
         "historical_august_marker_restore_reperformed": False,
