@@ -1,0 +1,90 @@
+{
+  "schema": "SH_FICTIONAL_2027_DAT002_PRIVACY_OPERATIONS_V1_SPEC",
+  "truth_class": "TRAINING_SCENARIO_ONLY",
+  "scenario_acceptance": "PENDING_INDEPENDENT_SOURCE_REVIEW",
+  "dataset_id": "DS-SIM-PRIVACY-OPERATIONS-01",
+  "service_id": "SIM-PRIVACY-ROUTING-01",
+  "schedule_id": "SIM-BAA-CUST-01-PRIVACY-SCHEDULE-01",
+  "contracting_entity_id": "SHI",
+  "customer_id": "SIM-COVERED-CUSTOMER-01",
+  "customer_decision_owner": "SIM-CUST-PRIVACY-OFFICER-01",
+  "customer_clinical_decision_actor": "SIM-CUST-CLINICIAN-01",
+  "customer_actors": "Authored synthetic customer role tokens; not invented real people or external messages.",
+  "real_world_authority": false,
+  "prospective_only": true,
+  "period": {
+    "start": "2027-09-01T00:00:00+00:00",
+    "end": "2027-09-30T23:59:59+00:00"
+  },
+  "fictional_history_extension": "A prospective privacy-services schedule, executed in the simulation after separate LEGAL/DATA/TECH/SEC reviews, extends the original fictional upstream BAA only for this new dataset. It is not an amendment to stored original contract bytes and does not close earlier marker/classification/rights or BA-flowdown exceptions.",
+  "synthetic_terms": {
+    "permitted_use": "Only customer-directed, minimized routing of nonpersonal logical-PHI tokens under an explicit customer decision and a separate Sable Harbor counsel gate; no independent AI reuse, unrelated marketing or discretionary sale.",
+    "customer_reserved_decisions": "Customer retains its covered-entity decisions, individual preference/authorization ledger, clinical professional judgment, restriction acceptance and termination instructions, and de-identification/limited-data-set determinations.",
+    "sable_harbor_duties": "Sable Harbor independently validates contract purpose, release authority, current authorization/restriction state, route conditions, recipient identity, minimized scope, endpoint protection and after-receipt use/retention. It holds requests when any gate is unresolved.",
+    "subcontractor": "The new restricted token scope uses the prospectively executed fictional downstream chain; no independent reuse and no retroactive cure of the prior late-flowdown marker incident.",
+    "records_and_retention": "Token records remain until 2027-10-31 pending customer disposition; backup copies remain until 2027-11-30; privacy-decision records remain through 2033-09-30. Legal holds override scheduled disposition. These are fictional contract choices, not assertions of a universal HIPAA medical-record retention period.",
+    "incident_path": "Security reconciles decisions and deliveries, pauses routing on authority mismatch, and asks Legal and the customer to evaluate return, remediation and simulated notification obligations. An OPEN incident remains OPEN until actual source versions support closure.",
+    "real_data": "No personal or medical payloads, actual signatures, real external messages, actual legal authority or operating deployments are created. Business dates are 2027 simulation clocks; imported_at is actual insertion time."
+  },
+  "source_roles": {
+    "legal_and_contract": "AS-P003 / Helena Ward / General Counsel",
+    "dataset_and_records": "AS-P014 / Omar Vale / Data Governance and Records Lead",
+    "router_operator": "AS-P007 / Elliot Tran / Head of Enterprise Technology Services",
+    "security_review_and_monitoring": "AS-P008 / Dana West / Chief Information Security Officer"
+  },
+  "primary_authority_checked_as_of": "2026-10-01",
+  "period_specific_2027_law_asserted": false,
+  "primary_sources": [
+    {
+      "section": "164.302",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C/section-164.302",
+      "model_basis": "Electronic PHI security applies to covered entities and business associates; reconcile created, received, maintained and transmitted locations within the fictional service."
+    },
+    {
+      "section": "164.500",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.500",
+      "model_basis": "Separate direct BA provisions from customer covered-entity decisions and delegated services. Do not infer that every covered-entity duty directly applies to the BA."
+    },
+    {
+      "section": "164.506",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.506",
+      "model_basis": "Cross-entity quality operations require qualifying relationships and information related to them; ordinary consent cannot substitute for required authorization."
+    },
+    {
+      "section": "164.508",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.508",
+      "model_basis": "Include current, expired, revoked and incomplete authorization facts, a separate psychotherapy-notes gate, and explicit remuneration statements for the modeled marketing/sale requests. Do not rely on nonexistent exceptions."
+    },
+    {
+      "section": "164.510",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.510",
+      "model_basis": "Known objections remain effective; absent-individual disclosures use customer clinical judgment and directly relevant scope. Relationship alone does not authorize access."
+    },
+    {
+      "section": "164.512",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.512",
+      "model_basis": "An express court order permits only its authorized scope; a subpoena without an order requires the modeled satisfactory notice or protective-order assurances. Informal requests remain held."
+    },
+    {
+      "section": "164.514",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.514",
+      "model_basis": "Distinguish residual-identifier and actual-knowledge failures, random non-derived reidentification codes without disclosure of the mechanism, limited data sets with distinct DUAs, and minimum-necessary scope. No expert qualifications are fabricated."
+    },
+    {
+      "section": "164.522",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.522",
+      "model_basis": "Unilateral notice affects later-created/received information only and does not end the paid-in-full health-plan restriction. A provider accommodates reasonable alternative communications without demanding an explanation."
+    },
+    {
+      "section": "reproductive_health_legal_status_overlay",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/phi-reproductive-health/index.html",
+      "model_basis": "HHS reports the June 18, 2025 vacatur of most of the 2024 rule. Printed cross-references are not treated as automatically operative; a separate qualified 2027 status review remains pending and the related request is held."
+    }
+  ],
+  "remaining_review_gates": [
+    "Independent acceptance of this new fictional customer schedule, signatory limits and native histories.",
+    "Qualified period-specific legal review for reproductive-health cross-references and any amended law.",
+    "Enterprise-wide ePHI/record-set and full audit-period populations beyond the selected September service.",
+    "Source collection, audit sampling, reperformance, workpapers and independent audit conclusions."
+  ]
+}
