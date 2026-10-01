@@ -23,6 +23,28 @@ calibration → integrated learner journeys and final acceptance packet. Shared
 method code can reduce repeated work; observations and conclusions must still
 come from each branch's collected originals.
 
+The October 1 restart recovered the existing isolated work without repeating
+company creation. Current workers own the retained learner-service loader,
+recovery correction/shared-pair orchestration, and independent method review.
+Main owns integration and the next collected-original assurance methods.
+
+The current runtime composition has a separate exact gate for the accepted
+5,608-version V3 source, corrected append runtime and successor adapter:
+`d17e71f0463db99323000fca1088a987c176fdf764db9ef3188aa398dcac111f`.
+Current-code neutral probes and a separate read-only replay passed; source and
+audit bytes stayed unchanged. This gate does not inherit the historical
+1,783-version authorization. Actual Sable Harbor activation still awaits review
+of the single shared-pair and retained-service wrappers; every concrete company
+append also requires its own exact source-operation review.
+
+Collected-original assurance methods are a new unaccepted candidate with 25
+focused tests. Five distinct examinations reconcile owner claims with prior
+issues, second-line underlying originals, programme dates and selected counts,
+population/selection/workpaper versions, and retained remediation history. They
+do not execute stored queries, substitute company workpapers for auditor tests,
+create evidence or award the 23 B08 procedures automatic credit. Independent
+ordinary-collection review and clause-specific fieldwork remain required.
+
 Main-checkout results already reproduced:
 
 - Related-work navigation: 272 unit tests, production build and a 409-procedure

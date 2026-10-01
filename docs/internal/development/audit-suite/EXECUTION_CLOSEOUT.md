@@ -1124,3 +1124,19 @@ adapter has its own reviewed code and exact source pins, 33 independent neutral
 cases and a main 5,608-row stage before audit creation. Gate:
 `d889054d7c94e511bbb946aafcb400ee9093eb06608595063a802addee65ad2c`.
 Older source and adapter acceptance records remain unchanged and narrower.
+
+The current shared-company runtime composition now has its own exact V3 gate:
+`d17e71f0463db99323000fca1088a987c176fdf764db9ef3188aa398dcac111f`.
+It binds the accepted 5,608-version source, corrected append runtime and current
+adapter. Current-code neutral collection/correction/WAL/resealed-history probes
+and a separate read-only verifier passed without changing source/audit bytes.
+Actual Sable Harbor activation and shared-pair/service wrapper review remain
+unperformed. Each concrete company append needs separate exact review.
+
+The new collected-original assurance reconciliation candidate passes 25 focused
+tests. It preserves initial failures after correction, rejects custody/type
+substitutions, identifies self-review, and separates exact workpaper versions,
+declared population counts and incomplete period tails. It has no independent
+acceptance or new fieldwork credit yet. Recovery candidates remain withheld after
+independent native-role, contemporaneous-support and backup/restore-causality
+challenges; prior candidates and proofs are preserved.
