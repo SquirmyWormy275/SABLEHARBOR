@@ -22,6 +22,12 @@ native versions, but is partial; it is not a fresh engagement. The V5 readiness
 gate is a historical V16/V14 checkpoint and blocks all 43 control groups. None
 of these counts is an audit pass.
 
+The **82 still-untargeted routes per branch** are 48 LEG001, 13 DAT002,
+five ASS004, four each ASS003/POL001/SEC001, three POL004 and one ETH001.
+Targeting the other 201 does not establish complete source populations or
+supported conclusions. Qualified legal and customer-authority decisions can
+extend elapsed time even when engineering capacity is available.
+
 This denominator is for the **new frozen P1 pair**. The older A1939/B2066
 [review packet](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-refresh-run-post-original-journals-a1939-b2066-v4/TASK-DISPOSITIONS.json)
 already contains a functioning audit UI, 818 indexed task rows,
