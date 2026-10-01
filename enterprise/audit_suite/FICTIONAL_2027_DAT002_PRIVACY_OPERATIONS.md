@@ -20,7 +20,7 @@ The Messy worker uses a September 4 release-manifest snapshot for an authorizati
 
 The [source specification](dat002_privacy_operations_spec_v1.json) records official primary authorities checked October 1, 2026, with short modeling summaries. The workflow distinguishes BA security duties from delegated covered-entity privacy decisions under [164.302](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C/section-164.302) and [164.500](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.500). The [authorization](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.508), [family-disclosure](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.510), [judicial-process](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.512), [de-identification/minimum-necessary](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.514) and [restriction/contact](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.522) conditions are retained as distinct decisions. [HHS's reproductive-health guidance](https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/phi-reproductive-health/index.html) reports the June 18, 2025 vacatur of most of the 2024 rule; printed cross-references therefore remain held for a qualified period-specific review. This family asserts no future change in law or actual legal status.
 
-The source manifest binds its module, specification, receipt and company database. The verifier checks exact source pins, prior reviewed originals, branch identities, custody owners, complete native rosters, chronological dependencies, source content/provenance, business/event/availability/import clocks, private modes, no database sidecars and zero audit grants/collections/access events. Actual `imported_at` is always the insertion clock. Company content has explicit fictional provenance; it contains neither audit task results nor Key material. The receipt's integration lead map names all 13 currently untargeted DAT002 routes. Locators alone do not satisfy any authored clause or earn audit credit.
+The source manifest binds its module, specification, receipt and company database. The verifier checks exact source pins, prior reviewed originals, branch identities, custody owners, complete native rosters, chronological dependencies, source content/provenance, business/event/availability/import clocks, private modes, no database sidecars the exact four immutable update/delete triggers, and zero audit grants/collections/access events. Actual `imported_at` is always the insertion clock. Company content has explicit fictional provenance; it contains neither audit task results nor Key material. The receipt's integration lead map names all 13 currently untargeted DAT002 routes. Locators alone do not satisfy any authored clause or earn audit credit.
 
 Run in the isolated worktree with a fresh 0700 parent:
 
@@ -28,15 +28,15 @@ Run in the isolated worktree with a fresh 0700 parent:
 PYTHONPATH=src:. python -m enterprise.audit_suite.company_dat002_privacy_operations_2027 create \
   --repository . \
   --private-repository /home/kingoftheeast/Projects/SABLEHARBOR-audit-suite \
-  --destination enterprise/generated/audit-suite/company-dat002-privacy-operations-2027-2026-10-01/isolated-run-v2
+  --destination enterprise/generated/audit-suite/company-dat002-privacy-operations-2027-2026-10-01/isolated-run-v3
 PYTHONPATH=src:. python -m enterprise.audit_suite.company_dat002_privacy_operations_2027 verify \
   --repository . \
   --private-repository /home/kingoftheeast/Projects/SABLEHARBOR-audit-suite \
-  --destination enterprise/generated/audit-suite/company-dat002-privacy-operations-2027-2026-10-01/isolated-run-v2
+  --destination enterprise/generated/audit-suite/company-dat002-privacy-operations-2027-2026-10-01/isolated-run-v3
 PYTHONPATH=src:. /tmp/sableharbor-audit-merge-venv-20261001/bin/python -m pytest -q \
   tests/audit_suite/test_company_dat002_privacy_operations_2027.py
 ```
 
-Private outputs are ignored, 0700/0600, and ordinary copies with no hardlinks or reflinks. The initial candidate `isolated-run-v1` is preserved for history; only `isolated-run-v2` reflects the tightened native sequencing, per-location reconciliation and dated cache snapshot. Do not overwrite either.
+Private outputs are ignored, 0700/0600, and ordinary copies with no hardlinks or reflinks. Earlier candidates `isolated-run-v1` and `isolated-run-v2`, plus the root's disposable trigger probe, remain preserved. `isolated-run-v3` includes the exact immutable-trigger verification correction established by independent review. Do not overwrite earlier candidates.
 
 Independent acceptance of the new fictional schedule, authority limits and source history is pending. Qualified reproductive-health status review, the complete enterprise and audit-period populations, customer designated-record-set decisions, actual source collection, sampling, reperformance and independent audit conclusions remain separate work. This source does not change frozen P1, shared route/portfolio/readiness files, QUEUE, Atlas or any real external system.

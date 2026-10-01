@@ -201,6 +201,10 @@ def test_repinned_native_payload_mutation_is_rejected(tmp_path, context, monkeyp
             "UPDATE versions SET content=?,sha256=? WHERE branch=? AND record=? AND version=1",
             (encoded(body), sha(encoded(body)), privacy.BRANCHES["CLEAN"], "CONFIG-01"),
         )
+        db.execute(
+            "CREATE TRIGGER no_version_update BEFORE UPDATE ON versions "
+            "BEGIN SELECT RAISE(ABORT,'Immutable source'); END"
+        )
     manifest = root / "MANIFEST.json"
     body = json.loads(manifest.read_text())
     body["company_db_sha256"] = hashlib.sha256(dbpath.read_bytes()).hexdigest()
@@ -218,3 +222,42 @@ def test_unknown_branch_and_partial_pinned_hash_rejected(context, monkeypatch):
     monkeypatch.setattr(privacy, "SOURCE_PINS", pins)
     with pytest.raises(CompanyStoreError, match="Pinned DAT002 privacy"):
         privacy._context(REPOSITORY, PRIVATE)
+
+
+@pytest.mark.parametrize(
+    "trigger",
+    ["no_version_update", "no_version_delete", "no_collection_update", "no_collection_delete"],
+)
+def test_resealed_drop_of_any_immutable_trigger_rejected(tmp_path, context, monkeypatch, trigger):
+    parent = tmp_path / "private"
+    parent.mkdir(mode=0o700)
+    monkeypatch.setattr(privacy, "_context", lambda *_: context)
+    root = parent / "run"
+    privacy.create(root, repository=REPOSITORY, private_repository=PRIVATE)
+    dbpath = root / "company.sqlite3"
+    with sqlite3.connect(dbpath) as db:
+        db.execute(f"DROP TRIGGER {trigger}")
+    manifest = root / "MANIFEST.json"
+    body = json.loads(manifest.read_text())
+    body["company_db_sha256"] = hashlib.sha256(dbpath.read_bytes()).hexdigest()
+    manifest.write_text(json.dumps(body))
+    with pytest.raises(CompanyStoreError, match="immutable-source triggers"):
+        privacy.verify(root, repository=REPOSITORY, private_repository=PRIVATE)
+
+
+def test_resealed_noop_trigger_with_original_name_rejected(tmp_path, context, monkeypatch):
+    parent = tmp_path / "private"
+    parent.mkdir(mode=0o700)
+    monkeypatch.setattr(privacy, "_context", lambda *_: context)
+    root = parent / "run"
+    privacy.create(root, repository=REPOSITORY, private_repository=PRIVATE)
+    dbpath = root / "company.sqlite3"
+    with sqlite3.connect(dbpath) as db:
+        db.execute("DROP TRIGGER no_version_update")
+        db.execute("CREATE TRIGGER no_version_update BEFORE UPDATE ON versions BEGIN SELECT 1; END")
+    manifest = root / "MANIFEST.json"
+    body = json.loads(manifest.read_text())
+    body["company_db_sha256"] = hashlib.sha256(dbpath.read_bytes()).hexdigest()
+    manifest.write_text(json.dumps(body))
+    with pytest.raises(CompanyStoreError, match="immutable-source triggers"):
+        privacy.verify(root, repository=REPOSITORY, private_repository=PRIVATE)

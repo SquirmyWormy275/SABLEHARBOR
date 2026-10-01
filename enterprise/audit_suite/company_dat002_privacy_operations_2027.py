@@ -1383,6 +1383,27 @@ def create(destination: Path, *, repository: Path, private_repository: Path) -> 
     return manifest
 
 
+def _verify_immutable_triggers(db: sqlite3.Connection) -> None:
+    expected = {
+        f"no_{noun}_{verb.lower()}": (
+            f"CREATE TRIGGER no_{noun}_{verb.lower()} BEFORE {verb} ON {table} "
+            f"BEGIN SELECT RAISE(ABORT,'Immutable {noun}'); END"
+        )
+        for noun, table in (("version", "versions"), ("collection", "collections"))
+        for verb in ("UPDATE", "DELETE")
+    }
+    # CompanyStore uses 'Immutable source' for version protection.
+    expected = {
+        name: sql.replace("Immutable version", "Immutable source") for name, sql in expected.items()
+    }
+    observed = {
+        row["name"]: " ".join(row["sql"].split())
+        for row in db.execute("SELECT name,sql FROM sqlite_master WHERE type='trigger'")
+    }
+    if observed != expected:
+        raise CompanyStoreError("Privacy exact immutable-source triggers differ")
+
+
 def verify(destination: Path, *, repository: Path, private_repository: Path) -> dict:
     root = purpose._private(destination, directory=True)
     paths = {
@@ -1417,6 +1438,7 @@ def verify(destination: Path, *, repository: Path, private_repository: Path) -> 
     ) as db:
         db.row_factory = sqlite3.Row
         db.execute("PRAGMA query_only=ON")
+        _verify_immutable_triggers(db)
         systems = {
             (COMPANY, branch, system, owner)
             for scenario, branch in BRANCHES.items()
