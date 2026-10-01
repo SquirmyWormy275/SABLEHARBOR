@@ -200,6 +200,11 @@ The independently reviewed V8 PBC successor changes only the draft
 `SH-LEG-001/MATTER` next action for the 160.306 and 160.504 leads. It retains
 121 unsupported clauses and 53 unaccepted possible no-event reviews per side,
 30 draft groups, and zero sent requests, N/A decisions or task credits.
+The independently reviewed V9 disposable collector extends the selected
+source-access diagnostic to the legal docket with 88 ordinary copies and 62
+scoped receipts. REC003's inherited journals, all source originals and P1
+remain unchanged. A selected legal change-watch read does not establish a
+complete matter population or satisfy an authored clause.
 
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
