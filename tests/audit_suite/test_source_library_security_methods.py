@@ -9,6 +9,7 @@ import pytest
 from enterprise.audit_suite.company_store import _time
 from enterprise.audit_suite.fresh_sec003_procedure import ProcedureError
 from enterprise.audit_suite.source_library_audit import BUSINESS_REFERENCE
+from enterprise.audit_suite.source_library_security_execution import authored_instruction
 from enterprise.audit_suite.source_library_security_methods import (
     analyze_continuity_timestamps,
     analyze_security_publishers,
@@ -366,3 +367,33 @@ def test_continuity_prior_digest_join_rejects_a_replacement_or_absent_original()
     rows[2]["document"]["local_prior_source_sha256"]["AUTH"] = "0" * 64
     with pytest.raises(ProcedureError, match="prior digest"):
         analyze_continuity_timestamps(rows, plan)
+
+
+def test_base_toe_and_additional_duty_instructions_use_their_authored_locations():
+    state = {
+        "tasks": [
+            {"id": "BASE", "kind": "TOE", "control_id": "CONTROL"},
+            {"id": "CHECK", "kind": "ADDITIONAL_DUTY", "test": "Exact additional duty"},
+        ],
+        "controls": [
+            {
+                "id": "CONTROL",
+                "procedure": "Exact base procedure",
+                "base_test": "Exact base test",
+                "population_rule": "Exact population rule",
+            }
+        ],
+    }
+    assert authored_instruction(state, "BASE") == {
+        "task_kind": "TOE",
+        "procedure": "Exact base procedure",
+        "base_test": "Exact base test",
+        "population_rule": "Exact population rule",
+    }
+    assert authored_instruction(state, "CHECK") == {
+        "task_kind": "ADDITIONAL_DUTY",
+        "test": "Exact additional duty",
+    }
+    del state["controls"][0]["base_test"]
+    with pytest.raises(ProcedureError, match="base control"):
+        authored_instruction(state, "BASE")

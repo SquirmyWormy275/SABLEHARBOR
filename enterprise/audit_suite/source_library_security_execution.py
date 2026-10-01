@@ -195,6 +195,29 @@ def method_rows(rows, label):
     return chosen
 
 
+def authored_instruction(state, task_id):
+    task = next(t for t in state["tasks"] if t["id"] == task_id)
+    if task["kind"] == "ADDITIONAL_DUTY":
+        require(
+            isinstance(task.get("test"), str) and task["test"], "Additional-duty instruction absent"
+        )
+        return {"task_kind": task["kind"], "test": task["test"]}
+    require(task["kind"] in {"TOD", "IMPLEMENTATION", "TOE"}, "Unsupported authored task kind")
+    control = next(c for c in state["controls"] if c["id"] == task["control_id"])
+    require(
+        all(
+            isinstance(control.get(key), str) and control[key] for key in ("procedure", "base_test")
+        ),
+        "Authored base control procedure/test absent",
+    )
+    return {
+        "task_kind": task["kind"],
+        "procedure": control["procedure"],
+        "base_test": control["base_test"],
+        "population_rule": control.get("population_rule"),
+    }
+
+
 def business_routes(accepted, branch):
     requested = [
         BusinessRoute("SABLE-HARBOR-REFERENCE", branch, family + "." + system, family, system)
@@ -423,7 +446,7 @@ def record_method(engine, auditor, engagement, rows, label, result, plan, root):
     work = {
         "task_id": task,
         "selected_plan": plan,
-        "authored_instruction": next(t["test"] for t in state["tasks"] if t["id"] == task),
+        "authored_instruction": authored_instruction(state, task),
         "result": result,
         "source_custody": [custody(r) for r in relevant],
         "performed_scope": "Actual collected documentary/local-model examinations only",
