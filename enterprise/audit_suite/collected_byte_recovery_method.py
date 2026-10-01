@@ -31,6 +31,20 @@ JSON_PREDICATE = {
     "executes_source_code": False,
 }
 _PRESEALED_PREDICATE_BYTES = _json(JSON_PREDICATE).encode()
+ROLE_SYSTEMS = {
+    "restore_job": "backup-runtime-history.restore_job",
+    "runtime_definition": "backup-runtime-history.runtime_definition",
+    "operating_period_original": "period-history.operating_period_ledger",
+    "backup_object": "backup-runtime-history.backup_object",
+    "company_restored_dataset": "backup-runtime-history.restored_dataset",
+    "comparison_configuration": "backup-runtime-history.source_dataset",
+    "captured_configuration": "backup-runtime-history.source_dataset",
+    "restore_credential": "backup-runtime-history.credential_event",
+    "backup_credential": "backup-runtime-history.credential_event",
+    "backup_job": "backup-runtime-history.backup_job",
+    "producer_export": "configuration-runtime-history.configuration_export",
+    "producer_runtime": "configuration-runtime-history.configuration_runtime",
+}
 
 
 def sha(raw):
@@ -156,6 +170,23 @@ def body(item):
     return data
 
 
+def native_role(item, role):
+    system = ROLE_SYSTEMS[role]
+    require(
+        item["source"]["system"] == system
+        and ("logical_family" not in item or item["logical_family"] == system.split(".", 1)[0])
+        and ("logical_system" not in item or item["logical_system"] == system.split(".", 1)[1]),
+        "Collected original has another actual native operating role: " + role,
+    )
+
+
+def available_to(item, when):
+    source = item["source"]
+    return _time(source["available_at"]) <= _time(when) and (
+        source["event_at"] is None or _time(source["event_at"]) <= _time(when)
+    )
+
+
 def published_join(header, originals):
     """Resolve core custody, retaining declared business extras as attribution."""
     require(isinstance(header, dict), "Published admission header required")
@@ -216,9 +247,7 @@ def admission_observation(item, originals, *, runtime_item, dataset_id, label, n
     ):
         target, corroboration = published_join(pin, originals), published_join(metadata, originals)
         require(
-            target is None
-            or corroboration is None
-            or target["source"] == corroboration["source"],
+            target is None or corroboration is None or target["source"] == corroboration["source"],
             "Admission pin and published metadata resolve to different originals",
         )
         name = label + "." + role
@@ -231,11 +260,8 @@ def admission_observation(item, originals, *, runtime_item, dataset_id, label, n
     exported = needed[label + ".producer_export"]
     definition = needed[label + ".producer_runtime"]
     body(definition)
-    require(
-        exported["source"]["system"].endswith(".configuration_export")
-        and definition["source"]["system"].endswith(".configuration_runtime"),
-        "Admission producer has another native source kind",
-    )
+    native_role(exported, "producer_export")
+    native_role(definition, "producer_runtime")
     producer_facts = {}
     for role, target in (("export", exported), ("runtime", definition)):
         facts = target["source"]["provenance"].get("operational_metadata")
@@ -282,12 +308,13 @@ def credential_observation(item, job):
     }
 
 
-def unavailable(missing, sources):
+def unavailable(missing, sources, limitations=None):
     return {
         "schema": "SH_COLLECTED_LOCAL_BYTE_RECOVERY_METHOD_V1",
         "task_id": TASK,
         "status": "SUPPORT_UNAVAILABLE",
         "missing_exact_originals": missing,
+        "contemporaneous_support_limitations": limitations or [],
         "collected_source_references": sources,
         "real_isolated_byte_restore_performed": False,
         "application_or_ephi_recovered_data_age_established": False,
@@ -322,6 +349,8 @@ def examine_restore(
     missing = [name for name, item in needed.items() if item is None]
     if missing:
         return unavailable(missing, [reference(i["source"]) for i in needed.values() if i])
+    for role, item in needed.items():
+        native_role(item, role)
     restore, runtime, period = (
         body(needed[k]) for k in ("restore_job", "runtime_definition", "operating_period_original")
     )
@@ -333,7 +362,8 @@ def examine_restore(
     )
     require(
         restore["runtime_id"] == runtime["runtime_id"]
-        and restore["dataset_id"] in runtime["datasets"],
+        and restore["dataset_id"] in runtime["datasets"]
+        and restore["operation"] == "RESTORE",
         "Selected restore belongs to another runtime/dataset",
     )
     binding = runtime["bindings"].get(needed["restore_job"]["source"]["record"])
@@ -363,10 +393,12 @@ def examine_restore(
     missing = [name for name, item in needed.items() if item is None]
     if missing:
         return unavailable(missing, [reference(i["source"]) for i in needed.values() if i])
+    for role, item in needed.items():
+        native_role(item, role)
     backup_pointer = reference(needed["backup_object"]["source"])
     candidates = []
     for item in originals.values():
-        if item["source"]["system"].endswith(".backup_job"):
+        if item["source"]["system"] == ROLE_SYSTEMS["backup_job"]:
             data = body(item)
             pointer = data.get("object_pin")
             if pointer and all(pointer.get(k) == backup_pointer[k] for k in NATIVE_ID):
@@ -378,17 +410,18 @@ def examine_restore(
         )
     backup_item, backup = candidates[0]
     needed["backup_job"] = backup_item
+    native_role(backup_item, "backup_job")
     require(
         backup["runtime_id"] == runtime["runtime_id"]
-        and backup["dataset_id"] == restore["dataset_id"],
+        and backup["dataset_id"] == restore["dataset_id"]
+        and backup["operation"] == "BACKUP",
         "Backup runtime/dataset differs",
     )
     backup_binding = runtime["bindings"].get(backup_item["source"]["record"])
     require(
         backup_binding is not None
         and all(
-            backup_binding[k] == backup[k]
-            for k in ("dataset_id", "occurrence_id", "operation")
+            backup_binding[k] == backup[k] for k in ("dataset_id", "occurrence_id", "operation")
         )
         and _time(plan["period_start"])
         <= _time(backup["business_attempted_at"])
@@ -403,6 +436,8 @@ def examine_restore(
     missing = [name for name, item in needed.items() if item is None]
     if missing:
         return unavailable(missing, [reference(i["source"]) for i in needed.values() if i])
+    for role, item in needed.items():
+        native_role(item, role)
     admissions = {}
     missing = []
     for label in ("captured_configuration", "comparison_configuration"):
@@ -418,6 +453,53 @@ def examine_restore(
         missing.extend(gaps)
     if missing:
         return unavailable(missing, [reference(i["source"]) for i in needed.values() if i])
+    limitations = []
+    for operation, job in (("backup", backup), ("restore", restore)):
+        when = job["business_attempted_at"]
+        roles = ["runtime_definition", "operating_period_original", operation + "_credential"]
+        if operation == "backup":
+            roles.append("captured_configuration")
+        else:
+            roles.extend(["backup_object", "comparison_configuration"])
+        for role in roles:
+            if not available_to(needed[role], when):
+                limitations.append(
+                    {
+                        "role": role,
+                        "source": reference(needed[role]["source"]),
+                        "required_at_company_operation": operation,
+                        "business_attempted_at": when,
+                        "basis": "COLLECTED_ORIGINAL_NOT_CONTEMPORANEOUSLY_AVAILABLE",
+                    }
+                )
+    for label, observations in admissions.items():
+        when = backup["business_attempted_at"] if label == "captured_configuration" else attempted
+        if _time(observations["consumed_at"]) > _time(when):
+            limitations.append(
+                {
+                    "role": label + ".source_admission",
+                    "source": observations["consumer_source"],
+                    "consumed_at": observations["consumed_at"],
+                    "business_attempted_at": when,
+                    "basis": "CONFIGURATION_CONSUMPTION_AFTER_COMPANY_OPERATION",
+                }
+            )
+        for role in ("producer_export", "producer_runtime"):
+            if not available_to(needed[label + "." + role], observations["consumed_at"]):
+                limitations.append(
+                    {
+                        "role": label + "." + role,
+                        "source": reference(needed[label + "." + role]["source"]),
+                        "consumed_at": observations["consumed_at"],
+                        "basis": "PRODUCER_NOT_CONTEMPORANEOUSLY_AVAILABLE_AT_CONSUMPTION",
+                    }
+                )
+    if limitations:
+        return unavailable(
+            [item["role"] for item in limitations],
+            [reference(i["source"]) for i in needed.values()],
+            limitations,
+        )
     # Archive paths remain attributed company fields. Never open or execute them.
     scratch = Path(scratch).absolute()
     require(

@@ -88,7 +88,7 @@ def fixture(*, old_configuration=None):
                     "dataset_id": "CONFIG-BYTES",
                     "occurrence_id": "RESTORE-1",
                     "operation": "RESTORE",
-                }
+                },
             },
         },
     )
@@ -169,7 +169,9 @@ def fixture(*, old_configuration=None):
                 "source_location_sha256": sha(b"NEUTRAL-ORIGINAL-LOCATION-NOT-OPENED"),
                 "identity_basis": "EXPLICIT_NEUTRAL_ENGINEERING_METADATA",
                 "qualification": "LOCAL_CONFIGURATION_ADMISSION_ONLY",
-                "execution_source_sha256": sha(b"NEUTRAL-ORIGINAL-EXECUTOR-NOT-EXECUTED"),
+                "execution_source_sha256": {
+                    "neutral_original_executor.py": sha(b"NEUTRAL-ORIGINAL-EXECUTOR-NOT-EXECUTED"),
+                },
                 "source_pin": reference(exported["source"]),
                 "source_definition_pin": reference(producer_runtime["source"]),
                 "metadata": pair["original"],
@@ -291,8 +293,7 @@ def test_original_archive_digest_cannot_replace_projected_published_header_pair_
     captured = next(
         item
         for item in rows
-        if item["source"]["system"].endswith(".source_dataset")
-        and item["source"]["version"] == 1
+        if item["source"]["system"].endswith(".source_dataset") and item["source"]["version"] == 1
     )
     admission = captured["source"]["provenance"]["operational_metadata"]["source_admission"]
     admission["projected_metadata_sha256"] = admission["original_metadata_sha256"]
@@ -308,8 +309,7 @@ def test_resealed_admission_header_keeps_restricted_and_distinct_targets_separat
     captured = next(
         item
         for item in rows
-        if item["source"]["system"].endswith(".source_dataset")
-        and item["source"]["version"] == 1
+        if item["source"]["system"].endswith(".source_dataset") and item["source"]["version"] == 1
     )
     admission = captured["source"]["provenance"]["operational_metadata"]["source_admission"]
     if change == "restricted":
@@ -544,3 +544,222 @@ def test_retained_input_bridge_uses_actual_engine_collection_and_bound_clock(tmp
     assert context.branch == "ALPHA" and rows[0]["receipt"]["engagement_id"] == engagement
     with pytest.raises(ProcedureError, match="actually collected|Distinct actually"):
         retained_inputs(engine, auditor, engagement, [artifact_id, artifact_id])
+
+
+def ordinary_inputs(tmp_path, originals):
+    """Author only neutral native bytes; retrieve every version via real commands."""
+    from pathlib import Path
+
+    from enterprise.audit_suite.collected_byte_recovery_method import retained_inputs
+    from enterprise.audit_suite.company_store import CompanyStore
+    from enterprise.audit_suite.engine import Engine
+
+    company = tmp_path / "native-company"
+    company.mkdir(mode=0o700)
+    store = CompanyStore(company)
+    for system in sorted({r["source"]["system"] for r in originals}):
+        store.register_system("NEUTRAL-COMPANY", "ALPHA", system, "NEUTRAL-SOURCE-OWNER")
+    for index, item in enumerate(originals):
+        source = item["source"]
+        store.append_version(
+            "NEUTRAL-COMPANY",
+            "ALPHA",
+            source["system"],
+            source["record"],
+            expected_version=source["version"] - 1,
+            command_id="neutral-original-" + str(index),
+            event_at=source["event_at"],
+            available_at=source["available_at"],
+            content=item["content"],
+            provenance=source["provenance"],
+        )
+    engine = Engine(
+        tmp_path / "actual-neutral-audit",
+        repository=Path(__file__).resolve().parents[2],
+        company_root=company,
+    )
+    operator = engine.store.provision("Neutral access operator", ["instructor"])["id"]
+    auditor = engine.store.provision("Neutral performer", ["learner"])["id"]
+    reviewer = engine.store.provision("Reserved neutral reviewer", ["reviewer"])["id"]
+    assert len({operator, auditor, reviewer}) == 3
+    state = engine.create(
+        operator,
+        {
+            "command_id": "neutral-recovery-create",
+            "title": "Neutral ordinary recovery inputs",
+            "discipline": "IT",
+            "mode": "CLEAN",
+            "configuration": {"selections": []},
+            "scope": {
+                "programs": ["SOC2"],
+                "report_type": "Type 2",
+                "period_start": "2027-01-01",
+                "period_end": "2027-12-31",
+                "fieldwork_start": "2027-12-31",
+                "timezone": "UTC",
+                "boundaries": ["corporate"],
+                "control_ids": ["SH-BCM-003"],
+            },
+        },
+    )
+    engagement = state["id"]
+    engine.store.grant(engagement, auditor, "learn")
+    engine.store.grant(engagement, reviewer, "review")
+    engine.company_bindings[engagement] = {"company": "NEUTRAL-COMPANY", "branch": "ALPHA"}
+
+    def command(actor, kind, payload):
+        before = engine.store.get(actor, engagement)
+        return engine.command(
+            actor,
+            engagement,
+            {
+                "command_id": "neutral-recovery-" + str(before["revision"]),
+                "expected_revision": before["revision"],
+                "kind": kind,
+                "payload": payload,
+            },
+        )
+
+    command(operator, "company.activate", {})
+    command(auditor, "kickoff.start", {})
+    command(
+        auditor,
+        "clock.advance",
+        {
+            "mode": "TARGET_DATE",
+            "target": "2028-01-03T09:00:00Z",
+        },
+    )
+    for system in sorted({r["source"]["system"] for r in originals}):
+        store.grant(auditor, engagement, "NEUTRAL-COMPANY", "ALPHA", system)
+    state = command(
+        auditor,
+        "pbc.create",
+        {
+            "title": "Neutral actual originals",
+            "purpose": "Bounded byte test",
+            "control_id": "SH-BCM-003",
+            "person_id": "AS-P007",
+            "boundary_id": "corporate",
+        },
+    )
+    request = state["requests"][-1]["id"]
+    command(auditor, "pbc.issue", {"request_id": request})
+    for item in originals:
+        source = item["source"]
+        state = command(
+            auditor,
+            "company.collect",
+            {
+                "request_id": request,
+                "system_id": source["system"],
+                "record_id": source["record"],
+                "version": source["version"],
+            },
+        )
+    actual, context = retained_inputs(
+        engine,
+        auditor,
+        engagement,
+        [a["id"] for a in state["artifacts"]],
+    )
+    assert len(actual) == len(originals) and not state["reviews"]
+    return actual, context
+
+
+@pytest.mark.parametrize(
+    "role,wrong_system",
+    [
+        ("restore_ref", "backup-runtime-history.meeting_note"),
+        ("runtime_ref", "backup-runtime-history.support_note"),
+        ("period_ref", "period-history.policy_note"),
+    ],
+)
+def test_actual_collected_body_identical_record_cannot_impersonate_native_operating_role(
+    tmp_path, role, wrong_system
+):
+    tmp_path.chmod(0o700)
+    rows, kw = fixture()
+    target = next(r for r in rows if reference(r["source"]) == kw[role])
+    target["source"]["system"] = wrong_system
+    actual, context = ordinary_inputs(tmp_path, rows)
+    selected = next(r for r in actual if r["source"]["system"] == wrong_system)
+    kw[role], kw["context"] = reference(selected["source"]), context
+    scratch = tmp_path / "must-not-restore"
+    with pytest.raises(ProcedureError, match="actual native operating role"):
+        examine_restore(actual, scratch=scratch, **kw)
+    assert not scratch.exists()
+
+
+@pytest.mark.parametrize("role", ["runtime_ref", "period_ref"])
+def test_actual_collected_retrospective_runtime_or_period_is_explicit_support_limitation(
+    tmp_path, role
+):
+    tmp_path.chmod(0o700)
+    rows, kw = fixture()
+    target = next(r for r in rows if reference(r["source"]) == kw[role])
+    target["source"]["event_at"] = _time("2027-03-20T00:00:00Z")
+    target["source"]["available_at"] = _time("2027-03-20T00:01:00Z")
+    actual, context = ordinary_inputs(tmp_path, rows)
+    selected = next(r for r in actual if r["source"]["system"] == target["source"]["system"])
+    kw[role], kw["context"] = reference(selected["source"]), context
+    scratch = tmp_path / "no-retrospective-cure"
+    result = examine_restore(actual, scratch=scratch, **kw)
+    assert result["status"] == "SUPPORT_UNAVAILABLE"
+    assert {
+        gap["required_at_company_operation"]
+        for gap in result["contemporaneous_support_limitations"]
+    } == {
+        "backup",
+        "restore",
+    }
+    assert not result["real_isolated_byte_restore_performed"] and not scratch.exists()
+
+
+def test_actual_ordinary_collected_originals_perform_only_the_bounded_byte_copy(tmp_path):
+    tmp_path.chmod(0o700)
+    rows, kw = fixture()
+    actual, kw["context"] = ordinary_inputs(tmp_path, rows)
+    result = examine_restore(actual, scratch=tmp_path / "actual-auditor-copy", **kw)
+    assert result["real_isolated_byte_restore_performed"]
+    assert result["independent_byte_checks"]["auditor_restore_equals_selected_backup"]
+    assert not result["independent_byte_checks"]["company_restore_equals_selected_comparison"]
+    assert not result["full_task_credit"]
+
+
+@pytest.mark.parametrize("producer_role", ["configuration_runtime", "configuration_export"])
+def test_actual_late_producer_with_resealed_declared_admission_cannot_support_consumption(
+    tmp_path, producer_role
+):
+    tmp_path.chmod(0o700)
+    rows, kw = fixture()
+    producer = next(
+        r
+        for r in rows
+        if r["source"]["system"] == "configuration-runtime-history." + producer_role
+        and (producer_role == "configuration_runtime" or r["source"]["version"] == 2)
+    )
+    old_reference = reference(producer["source"])
+    producer["source"]["event_at"] = _time("2027-03-20T00:00:00Z")
+    producer["source"]["available_at"] = _time("2027-03-20T00:01:00Z")
+    for consumer in rows:
+        admission = (
+            consumer["source"]["provenance"].get("operational_metadata", {}).get("source_admission")
+        )
+        if not admission:
+            continue
+        for field in ("source_pin", "source_definition_pin", "metadata", "definition_metadata"):
+            header = admission[field]
+            if all(header[k] == old_reference[k] for k in old_reference):
+                admission[field] = {**header, **reference(producer["source"])}
+        pair = {"original": admission["metadata"], "definition": admission["definition_metadata"]}
+        admission["projected_metadata_sha256"] = sha(_json(pair).encode())
+    actual, kw["context"] = ordinary_inputs(tmp_path, rows)
+    scratch = tmp_path / "must-not-use-late-producer"
+    result = examine_restore(actual, scratch=scratch, **kw)
+    assert result["status"] == "SUPPORT_UNAVAILABLE"
+    assert any(
+        gap["basis"] == "PRODUCER_NOT_CONTEMPORANEOUSLY_AVAILABLE_AT_CONSUMPTION"
+        for gap in result["contemporaneous_support_limitations"]
+    )
+    assert not result["real_isolated_byte_restore_performed"] and not scratch.exists()
