@@ -471,7 +471,7 @@ class BoundWorkroom:
                 }
             )
 
-    def _retained(self, row, artifacts, *, cutoff):
+    def _retained(self, row, artifacts, *, cutoff, collection_clock):
         key = tuple(row[k] for k in NATIVE_ID)
         matches = [
             a
@@ -497,10 +497,13 @@ class BoundWorkroom:
             and receipt["source"]["provenance"] == row["provenance"]
             and receipt["engagement_id"] == self.engagement
             and receipt["principal_id"] == self.auditor
-            and _time(row["available_at"]) <= _time(receipt["simulated_as_of"]) <= _time(cutoff)
+            and _time(row["available_at"]) <= _time(cutoff)
+            and _time(row["available_at"])
+            <= _time(receipt["simulated_as_of"])
+            <= _time(collection_clock)
             and (
                 row["event_at"] is None
-                or _time(row["event_at"]) <= _time(receipt["simulated_as_of"])
+                or _time(row["event_at"]) <= min(_time(cutoff), _time(receipt["simulated_as_of"]))
             )
             and raw == row["content"]
             and hashlib.sha256(raw).hexdigest() == artifact["sha256"] == row["sha256"]
@@ -564,7 +567,9 @@ class BoundWorkroom:
             artifacts = self.state()["artifacts"]
             retained = []
             for row in rows:
-                existing = self._retained(row, artifacts, cutoff=cutoff)
+                existing = self._retained(
+                    row, artifacts, cutoff=cutoff, collection_clock=state["simulated_at"]
+                )
                 if existing is not None:
                     retained.append(existing)
                     continue

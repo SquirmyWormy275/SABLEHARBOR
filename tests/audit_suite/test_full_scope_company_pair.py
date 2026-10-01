@@ -188,6 +188,7 @@ def test_scoped_collection_reuses_only_this_engagement_and_preserves_historical_
     assert json.loads(later[1]["retained_bytes"])["revision"] == 2
     original = next(a for a in clean.state()["artifacts"] if a["id"] == first[0]["artifact_id"])
     assert clean.engine.artifacts.read(original) == first[0]["retained_bytes"]
+
     assert native_rows(pair.world.database) == before
     with quiescent_read(pair.world.database) as db:
         assert db.execute("SELECT COUNT(*) FROM grants WHERE active=1").fetchone()[0] == 0
@@ -198,6 +199,20 @@ def test_scoped_collection_reuses_only_this_engagement_and_preserves_historical_
             == 0
         )
     assert not clean.state()["reviews"] and not messy.state()["reviews"]
+
+
+def test_historical_source_view_reuses_later_actual_collection_receipt(pair):
+    room = pair.rooms["CLEAN"]
+    collected = acquire(room)[0]
+    old_receipt = collected["receipt"].copy()
+    historical = acquire(room, as_of="2027-11-30T09:00:00Z")[0]
+    assert historical["artifact_id"] == collected["artifact_id"]
+    assert historical["receipt"] == old_receipt
+    assert historical["discovered_as_of"].startswith("2027-11-30T09:00:00")
+    assert historical["receipt"]["simulated_as_of"].startswith("2027-12-31T09:00:00")
+    assert len(room.state()["artifacts"]) == 1
+    assert acquire(room, as_of="2027-02-01T01:30:00Z") == []
+    assert len(room.state()["artifacts"]) == 1
 
 
 def neutral_inspection(rows, *, as_of, scratch_root):
