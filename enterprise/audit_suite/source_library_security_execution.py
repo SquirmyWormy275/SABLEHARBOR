@@ -1048,7 +1048,8 @@ def verify(destination, accepted, adapter_review, adapter_review_sha):
             )
             transition = clock_transition(events, identities["auditor"])
             require(
-                _time(plan["selection_sealed_at"]) <= _time(transition["recorded_at"]),
+                _time(plan["selection_sealed_at"])
+                <= _time(datetime.fromtimestamp(transition["recorded_at"], UTC).isoformat()),
                 "Collection-clock plan was not sealed before actual advance",
             )
         require(

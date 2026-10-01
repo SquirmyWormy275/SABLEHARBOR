@@ -419,7 +419,7 @@ def test_final_time_alone_cannot_substitute_for_actual_preacquisition_clock_adva
     def event(clock, kind, payload=None):
         return {
             "actor": "auditor",
-            "recorded_at": "2026-10-01T12:00:00Z",
+            "recorded_at": 1790856000.0,
             "command": {"kind": kind, "payload": payload or {}},
             "state": {
                 "scope": {"fieldwork_start": "2027-12-31"},
