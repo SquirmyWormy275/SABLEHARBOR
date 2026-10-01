@@ -1,14 +1,14 @@
-"""Prepared V12 roster: SEC001 stays blocked until main source review pins land."""
+"""Bounded V12 roster pinned to the reviewed main SEC001 source."""
 
 from __future__ import annotations
 
 import argparse
-import importlib.util
 import json
 import os
 import tempfile
 from pathlib import Path
 
+from . import company_sec001_selected_transfer as transfer
 from . import fictional_2027_source_portfolio_v11 as prior
 from .documentary_283_route_reconciliation_v6 import _p1_inventory
 from .fictional_2027_source_portfolio import BASE, PortfolioVerificationError, _digest, _identity
@@ -32,15 +32,15 @@ V11_CANDIDATE_SHA = {
 }
 SEC_FOLDER = "company-sec001-selected-transfer-2027-09-30"
 SEC_RUN = "main-run-v1"
-# Fill only from the accepted, independently reviewed main-local SEC001 source.
-# The isolated source hashes deliberately do not qualify the V12 registry.
-SEC_REVIEW_SHA: str | None = None
-SEC_REVIEW_VERDICT: str | None = None
-SEC_INTEGRATION_COMMIT: str | None = None
-SEC_MANIFEST_SHA: str | None = None
-SEC_RECEIPT_SHA: str | None = None
-SEC_DB_SHA: str | None = None
-SEC_MODULE_SHA: str | None = None
+# Accepted main-local SEC001 source and independent review. Isolated source
+# hashes deliberately do not qualify the V12 registry.
+SEC_REVIEW_SHA = "9cf4d438d7b191f227f87f3dcb5cf6d36bcb3e7e490415d16cff11e72a33c196"
+SEC_REVIEW_VERDICT = "PASS_SELECTED_SYNTHETIC_SEC001_TRANSFER_SOURCE_MAIN_LOCAL_NO_AUDIT_CREDIT"
+SEC_INTEGRATION_COMMIT = "b286bbb9acef0c64e56b5170349546e74485f7b1"
+SEC_MANIFEST_SHA = "d653285e748e7529557749445c0a3646b049237a1ff9888fed835f53fd185942"
+SEC_RECEIPT_SHA = "73fa3ff1cb40f9e0e8196cd01bf18048c408427e0d10ade9003fd60d9c984d28"
+SEC_DB_SHA = "3841366d17e3f072ef2ae303ec3bf010ab644e474a778d59f62263c6a8c86e7d"
+SEC_MODULE_SHA = "430fa83ed5c3ac457132c4b10e02571e3921a21b70461e85cf6f2524bc73a7f2"
 SEC_BRANCHES = ("SEC001-XFER-CLEAN", "SEC001-XFER-MESSY")
 SEC_COUNTS = (10, 16)
 SEC_SYSTEMS = 5
@@ -55,7 +55,7 @@ P1_FREEZE = {
 
 
 def _require_sec_pins() -> None:
-    """Reject every production build until the main source has its own PASS review."""
+    """Reject builds unless the accepted main source and PASS review are pinned."""
     hashes = (SEC_REVIEW_SHA, SEC_MANIFEST_SHA, SEC_RECEIPT_SHA, SEC_DB_SHA, SEC_MODULE_SHA)
     if (
         any(
@@ -122,7 +122,7 @@ def _v11_review(private: Path) -> tuple:
 def _sec_source(repository: Path, private: Path) -> dict:
     """Require the accepted main review, source originals and 26 native rows."""
     _require_sec_pins()
-    module = private / "enterprise/audit_suite/company_sec001_selected_transfer.py"
+    module = repository / "enterprise/audit_suite/company_sec001_selected_transfer.py"
     if not module.is_file() or _digest(module) != SEC_MODULE_SHA:
         raise PortfolioVerificationError("SEC001 integrated source module differs")
     folder = private / BASE / SEC_FOLDER
@@ -148,18 +148,22 @@ def _sec_source(repository: Path, private: Path) -> dict:
     receipt = _read_json(paths["receipt"])
     if (
         review.get("verdict") != SEC_REVIEW_VERDICT
-        or review.get("integrated_commit") != SEC_INTEGRATION_COMMIT
+        or review.get("integration_commit") != SEC_INTEGRATION_COMMIT
         or review.get("main_run_sha256")
         != {
             "RUN-MANIFEST.json": SEC_MANIFEST_SHA,
             "SOURCE_RECEIPT.json": SEC_RECEIPT_SHA,
             "company.sqlite3": SEC_DB_SHA,
         }
-        or review.get("main_tracked_sha256", {}).get(
+        or review.get("tracked_sha256", {}).get(
             "enterprise/audit_suite/company_sec001_selected_transfer.py"
         )
         != SEC_MODULE_SHA
         or review.get("p1_freeze") != P1_FREEZE
+        or review.get("selected_authored_clause") != SEC_CLAUSE
+        or review.get("selected_task_id") != "TASK-SH-SEC-001-corporate-CHECK-SOC2:CC6.7"
+        or review.get("main_or_atlas_tracked_written_by_review") is not False
+        or review.get("active_pair_mutated") is not False
         or review.get("source_complete") is not False
         or review.get("audit_task_credit") is not False
     ):
@@ -205,15 +209,10 @@ def _sec_source(repository: Path, private: Path) -> dict:
         or set(receipt.get("route_disposition", {})) != {"A", "B"}
     ):
         raise PortfolioVerificationError("SEC001 selected-transfer receipt boundary differs")
-    # Load the reviewed main module only after checking its exact tracked bytes.
-    spec = importlib.util.spec_from_file_location(
-        "enterprise.audit_suite.company_sec001_selected_transfer", module
-    )
-    if spec is None or spec.loader is None:
-        raise PortfolioVerificationError("SEC001 reviewed source module cannot be loaded")
-    transfer = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(transfer)
-    if transfer.verify(run, repository=private, private_repository=private) != receipt:
+    if (
+        receipt.get("schema") != transfer.SCHEMA
+        or transfer.verify(run, repository=repository, private_repository=private) != receipt
+    ):
         raise PortfolioVerificationError("SEC001 native source verifier differs")
     native, systems, journals = _frozen_rows(paths["database"])
     if (

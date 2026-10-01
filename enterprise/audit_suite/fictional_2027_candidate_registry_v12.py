@@ -1,4 +1,4 @@
-"""Prepared V12 SEC001 routing diagnostic; no output until main review pins."""
+"""Bounded V12 SEC001 routing diagnostic with reviewed main source pins."""
 
 from __future__ import annotations
 
