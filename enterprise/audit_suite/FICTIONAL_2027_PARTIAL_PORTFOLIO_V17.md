@@ -1,0 +1,9 @@
+# Fictional 2027 partial source portfolio V17
+
+V17 extends the exact independently reviewed V16 PRD concern source and candidate bytes with two separately reviewed company-native cohorts: selected SH-ENG-005 operating change history, and selected SH-GOV-001/004 secretary-owned oversight history. It pins their tracked modules/specs, private main manifests, receipts, databases and independent reviews. It does not recursively replay the V16 builder. The active 538-file P1 inventory is checked before and after qualification.
+
+ENG005 contributes 12 Clean and 22 Messy native versions across 10 systems per branch. It covers two authored, data-only 2027 requests. Corporate emergency authority remains `NOT_EVIDENCED_OPEN`; the Messy ordinary and emergency historical exceptions remain open. The earlier blocked in-memory exercise is distinct. This does not assert actual device deployment, network writes, PHI, approved enterprise policy or a complete change population.
+
+GOV contributes 9 Clean and 14 Messy native versions across 11 systems per branch. It covers one fictional committee cycle. The Clean selected finding closes only its selected local case; Messy governance and SEC003 historical exceptions remain `OPEN`. It does not assert an actual Board meeting, adopted minutes, legal quorum, complete oversight population, independent assurance or authored CC1.2 satisfaction.
+
+The V17 partial portfolio has 39 selected cohorts, 897 native versions and 40 routed source components. Each A/B candidate has 53 total components, 40 source pins and 345 aliases. The V16 37-row source prefix, candidate components and pins remain exact; V17 appends only `eng005operating` and `govoversight`. These local routing diagnostics create no grant, collection, fresh audit pair, task credit, Key result or grade. The private runs and handoff live under `enterprise/generated/audit-suite/company-source-portfolio-v17-2026-10-01/` in the isolated worktree and are not tracked.
