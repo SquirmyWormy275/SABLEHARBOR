@@ -2086,6 +2086,17 @@
         "fully_resealed_replay_attacks_rejected": 5,
         "held_open_wal_paths_rejected": 6,
         "exact_operation_review_substitution_rejected": true
+      },
+      "legal_collected_byte_methods": {
+        "status": "ACCEPTED_METHOD_MAIN_REPRODUCED_NO_SOURCE_FIELDWORK",
+        "module_sha256": "2d9c7cd9c42646fcbd32b0fd012b095fa5c7cda79f694034b314ec8d0cfcb281",
+        "method_review_sha256": "513356fdc907d7d1206ca5d85a2e2751adebd108038b23a249cee5aa81ed8390",
+        "independent_main_proof_sha256": "2cf76489e7ba41767d9eab1d58ca394cf68f03862bcb63dc6e43d30b5fd30fff",
+        "focused_tests_passed": 35,
+        "actual_source_fieldwork_performed": false,
+        "stored_sql_executed": false,
+        "full_task_credit": false,
+        "rejected_bool_reference_candidate_preserved": true
       }
     }
   },

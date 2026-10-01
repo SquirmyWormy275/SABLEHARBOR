@@ -174,6 +174,17 @@ dependencies; drafts provide no source acceptance. The consolidated library
 must preserve operational provenance, source-admission metadata and executed
 byte payloads as well as ordinary document bodies.
 
+Collected-original legal intake methods are independently accepted and integrated,
+with 35 focused tests and separately authored three/six-channel, two-month
+reconciliation probes. Review reproduced and corrected Boolean versions bypassing
+exact native and locator joins; the rejected code and proof remain preserved.
+The methods recompute channel/window counts from retained message bytes, inspect
+attachment custody and preserve historical omissions and open exceptions. Stored
+SQL is descriptive evidence and never executed. Method gate:
+`513356fdc907d7d1206ca5d85a2e2751adebd108038b23a249cee5aa81ed8390`.
+No legal fieldwork, full-period communications completeness, legal conclusion
+or task credit is supplied by this method acceptance.
+
 The broad suite finished with 2,633 passing tests and two setup errors. Both errors
 were a test fixture pointing to `main-run-v1` rather than the retained reviewed
 V15 `main-report-v1`. The corrected two checks passed. Modules integrated after
