@@ -40,3 +40,14 @@ The frozen v5 candidate was rejected and remains preserved. Independent review f
 These witnesses do not grant auditor access and do not admit originals into the projected source library. An integration must explicitly admit the corresponding original and map its witnessed identity to an ordinary same-branch CompanyStore original under a declared exact identity/digest contract. Private verifier resolution must never substitute for discovery and collection by the auditor.
 
 Review also demonstrated that subset provenance checks allowed extra answer fields and altered JSON filenames, and that an extra receipt branch claim was ignored. The corrected verifier requires the complete canonical provenance dictionary and generated filename, exact receipt/manifest key sets and period/limitation claims, exact private lineage/root metadata, and the dated CEO operating/closing authority windows and inherited delegation scope. Actual resealed byte-mutation regressions cover these defects. The first accounts still begin January 1 at 03:15 UTC; earlier operating history and whole-period operations remain explicitly unestablished.
+
+## Main acceptance
+
+Corrected v6 is independently accepted for its bounded fictional company source
+scope and reproduced in main. Main review SHA:
+`eca954944dcc67d7dc5c80e3863f42f5fa1a87e0ff5896d603a0a902d5723b0f`.
+Independent main replay checked 1,462 local permission/object decisions, 24 monthly
+populations and eight quarterly joins. Exact reference/vector comparison accounted
+for actual insertion clocks and resulting content hashes without rewriting raw
+originals. V5 remains rejected and preserved. Operational-library admission and
+fresh auditor collection remain separate pending steps; no audit credit follows.

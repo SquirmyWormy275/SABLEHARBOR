@@ -1851,7 +1851,7 @@
         "physical_components": 48,
         "selected_cohorts": 46,
         "boundary": "V18 selected portfolio plus five newly reviewed source families; not every historical company system",
-        "remaining_identity_source_gate": "Explicit admission of older baseline company histories and independently corrected authoritative person/account sources; selected library is not the full company universe",
+        "remaining_identity_source_gate": "Explicit successor admission of older baseline company histories and accepted3399-version person/account source; preserve physical history differences, restricted custody and exact references",
         "acceptance_gates": [
           "Preserve operational business facts and original custody privately",
           "Remove authoring answer annotations from company-facing records",
@@ -1907,27 +1907,93 @@
       },
       "source_library_audit_fieldwork_performed": false,
       "collection_adapter": {
-        "status": "CHANGES_REQUIRED_CORRECTION_IN_PROGRESS",
+        "status": "ACCEPTED_SELECTED_ENGINE_BOUND_BOUNDARY",
         "rejected_commit": "e9f30331e99f05bd1390332567b330081ad6df40",
-        "independent_review_sha256": "077b32851b3cd1378249fa85bad5b2bd0a3f1cca9962c629c4cfe7e83568b386",
+        "independent_review_sha256": "ba1f02d6c35d4ff8f4a029ab7e10315193c71cb9aeb23f729d74828266082350",
         "actual_defects": [
           "Held-open staged SQLite WAL changed ordinary discovery bytes while immutable checks saw original history",
           "Unbound discovery cutoff exposed sources after the engagement simulated clock"
         ],
-        "actual_source_fieldwork_performed": false
+        "actual_source_fieldwork_performed": false,
+        "rejected_independent_review_sha256": "077b32851b3cd1378249fa85bad5b2bd0a3f1cca9962c629c4cfe7e83568b386",
+        "main_reproduction_sha256": "c73ddb35bcc80a2d637bfe10ff3f255dd677468a0aa5f558d41ec2669f333235",
+        "adapter_module_sha256": "b733bb25869a431b4f35262f400acf731e83c464f49b188f1b7f5ed9a7ce572d",
+        "original_defects_corrected": true,
+        "source_execution_authorized": true,
+        "accepted_native_boundary": 1783,
+        "trusted_low_level_limit": "Raw in-process CompanyStore cutoff is trusted caller input; evidence must use bound adapter or normal Engine entrypoints at the actual engagement clock",
+        "evolving_source_journey_validated": false
       },
       "person_account_source_candidate": {
-        "status": "CHANGES_REQUIRED_CORRECTION_IN_PROGRESS",
+        "status": "ACCEPTED_BOUNDED_SOURCE_PENDING_LIBRARY_ADMISSION",
         "native_versions": 3399,
         "admitted_to_company_library": false,
         "rejected_commit": "37effa250e9e633d3c3aaf8396ee026dd14ff83d",
-        "independent_review_sha256": "9e03e8afc6fc61fb063d5db2df8786ce81d2db0f1d1f8e84940147143ff65417",
+        "independent_review_sha256": "ea3a2959f14877e1d978f921ffed11fce2a19618f4342f1caa96f17e6195c090",
         "actual_defects": [
           "Four retained approval publications preceded original HR source availability",
           "Resealed answer-bearing provenance/filename and additional receipt branch were accepted",
           "Fully resealed expired service-authority window was accepted"
         ],
-        "limits": "First operating accounts Jan1 03:15; source is bounded declared service, not all staff/physical/industrial estate; missing earlier history remains missing"
+        "limits": "First operating accounts Jan1 03:15; source is bounded declared service, not all staff/physical/industrial estate; missing earlier history remains missing",
+        "rejected_independent_review_sha256": "9e03e8afc6fc61fb063d5db2df8786ce81d2db0f1d1f8e84940147143ff65417",
+        "main_independent_review_sha256": "eca954944dcc67d7dc5c80e3863f42f5fa1a87e0ff5896d603a0a902d5723b0f",
+        "main_source_root": "enterprise/generated/audit-suite/company-workforce-identity-2027-2026-10-01/main-run-v6",
+        "company_sqlite_sha256": "abd356fbe02f81e1b44bd34e5f39b8e3a0dbcc4148b3533636c1a07f9aaa56cb",
+        "manifest_sha256": "ec03efd5b0dafc6e56b82213b3423ff2e793bcbfa89745fe7614970badebdb09",
+        "original_defects_corrected": true,
+        "native_permission_decisions_reperformed": 1462,
+        "closed_monthly_populations": 24,
+        "quarterly_joins": 8,
+        "internal_native_joins_checked_per_creation": 30803,
+        "derived_vector_hashes_checked_per_creation": 48,
+        "restricted_original_witnesses": 32,
+        "auditor_access_to_restricted_originals_established": false
+      },
+      "selected_main_adapter_workforce_tests_passed": 90,
+      "privacy_tail_assessment": {
+        "status": "RETAINED_SELECTED_BOUNDARY_GAP",
+        "unestablished_interval_start": "2027-09-30T20:00:00Z",
+        "unestablished_interval_end_exclusive": "2027-10-01T00:00:00Z",
+        "later_versions_checked": 497,
+        "same_service_tail_records_found": 0,
+        "review_sha256": "5770cf473d13f3ca7fffd55a381a101a56c7dd9c5161628dd1b0999cb6b3da22",
+        "enterprise_nonoccurrence_established": false,
+        "original_dates_rewritten": false
+      },
+      "privacy_examination_methods": {
+        "status": "CORRECTED_INDEPENDENT_REVIEW_PENDING",
+        "commit": "f2549183",
+        "neutral_tests_passed": 24,
+        "actual_fieldwork_performed": false,
+        "rejected_v1_review_sha256": "ae2a527345cd40e81efc60b8c4314d2adb72d4bfc29ad3421db9937e2047f19d",
+        "independent_defects_corrected": [
+          "Current authority publication chronology independent of optional pointers",
+          "Exact selected service/dataset/customer/entity and native-system routing",
+          "Unknown recipient status retained as unknown",
+          "Typed permission scopes/recipient identity/copy state and count claims"
+        ]
+      },
+      "regression_validation": {
+        "broad_initial_tests_passed": 2633,
+        "broad_initial_setup_errors": 2,
+        "error_cause": "V15 test fixture used main-run-v1 while retained reviewed report is main-report-v1",
+        "corrected_tests_reperformed": 2,
+        "remaining_failures_from_initial_collection": 0,
+        "new_modules_focused_checks_separate": true
+      },
+      "source_library_security_fieldwork_candidate": {
+        "status": "SUMMARY_LINK_CORRECTION_IN_PROGRESS",
+        "actual_selected_tasks_per_side": 3,
+        "selected_task_status": "IN_PROGRESS",
+        "selected_conclusion": "LIMITATION",
+        "other_tasks_unrun_per_side": 406,
+        "collected_native_versions": {
+          "A": 39,
+          "B": 55
+        },
+        "independent_acceptance": false,
+        "prior_v1_v2_v3_preserved": true
       }
     }
   },

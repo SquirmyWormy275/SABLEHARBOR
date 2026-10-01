@@ -85,16 +85,59 @@ population, original dates or historical business outcomes. Main library review:
 
 V18 was a selected portfolio, not every older company system. Older IAM,
 backup/configuration/logging/incident and other baseline histories require
-explicit successor admission. The new authoritative person/account candidate
-remains rejected pending corrected source-publication timing, exact custody
-shapes and authority-window checks. It is not in the accepted library.
+explicit successor admission. A source-only inventory identifies 373 versions
+selected by 26 older source locators; their actual identities and distinct
+physical histories require explicit reconciliation. Exactly three nonpersonal
+data-quality originals used by both integrity histories have a declared common
+upstream basis; any counterpart requires a separate migration and custody review.
+Five additional exact common local-duty/direct dataset inputs have candidate
+migration authority after pinned writer review. Two historical motivation records
+remain restricted and cannot be promoted into company operating evidence.
 
-The first audit adapter candidate also remains rejected and preserved. Independent
+The corrected person/account source is independently accepted for its bounded
+fictional company scope and freshly reproduced in main: 3,399 versions, 1,462
+reperformed local permission/object decisions, 24 monthly populations and eight
+quarterly membership/decision/followup joins. Review independently checked 30,803
+native references and 48 derived vectors per creation when comparing the new
+actual import clocks and resulting hashes. All canonical affiliations, proposed
+offices, local service delegations and earlier failures remain distinct. The
+first operating account is January 1 at 03:15; no earlier continuous operation is
+established. Thirty-two restricted original witnesses are private custody,
+not auditor access. The source is not yet admitted to the operational library.
+Main review: `eca954944dcc67d7dc5c80e3863f42f5fa1a87e0ff5896d603a0a902d5723b0f`.
+The rejected v5 and its chronology, custody and authority proofs remain preserved.
+
+The first audit adapter candidate remains rejected and preserved. Independent
 held-open SQLite journal and future-discovery probes demonstrated changed source
 bytes could bypass its immutable check and that discovery could run beyond the
-engagement clock. The corrected adapter must pass independent review before any
-fieldwork uses the accepted library. Engineering fixture tests do not close that
-gate or validate evolving company/corrected-evidence learner journeys.
+engagement clock. The corrected adapter has passed independent review and main
+reperformance: all six actual held-open WAL paths reject; future discovery rejects
+before source reads; supported clock advancement permits later discovery and
+exact typed collection. Ninety focused adapter/workforce tests passed in main.
+Adapter gate: `ba1f02d6c35d4ff8f4a029ab7e10315193c71cb9aeb23f729d74828266082350`.
+Main reproduction: `c73ddb35bcc80a2d637bfe10ff3f255dd677468a0aa5f558d41ec2669f333235`.
+Its authorization covers bound adapter methods and ordinary Engine entrypoints
+against the exact accepted 1,783-version library. Raw in-process CompanyStore
+cutoffs remain trusted caller input and cannot be used arbitrarily for evidence.
+Evolving company/corrected-evidence learner journeys remain unverified.
+
+Fresh security/continuity fieldwork has now collected 39 A and 55 B originals and
+recorded three partial task examinations per side. A summary-link correction and
+independent result review remain pending; the earlier attempts are preserved.
+No completed full task or audit is claimed. The independently checked privacy
+follow-up found no retained same-service history establishing September's final
+four hours. The original 20:00 month-close claim and 23:59:59 declared end remain
+unchanged. New collected-byte privacy methods expose that tail and derive release
+exceptions without a scenario answer key. Independent probes rejected the first
+method candidate for chronology, routing/scope and unknown-status interpretation;
+the corrected code also guards field types and has 24 neutral tests passing.
+Independent corrected method review and actual privacy fieldwork remain pending.
+
+The broad suite finished with 2,633 passing tests and two setup errors. Both errors
+were a test fixture pointing to `main-run-v1` rather than the retained reviewed
+V15 `main-report-v1`. The corrected two checks passed. Modules integrated after
+that suite's collection were verified separately; this is not a claim that a new
+full-suite collection includes every later module.
 
 Main independent review SHA-256 pins:
 

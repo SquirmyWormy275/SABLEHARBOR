@@ -2,6 +2,7 @@
 
 import json
 import sqlite3
+from contextlib import closing
 from copy import deepcopy
 from pathlib import Path
 
@@ -16,7 +17,7 @@ REPOSITORY = Path(__file__).resolve().parents[2]
 PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
 RUN = REPOSITORY / "enterprise/generated/audit-suite/company-source-portfolio-v15-2026-09-30"
 RUN_ROLE = "main" if REPOSITORY.resolve() == PRIVATE.resolve() else "isolated"
-SOURCE_RUN = RUN / f"{RUN_ROLE}-run-v1"
+SOURCE_RUN = RUN / ("main-report-v1" if RUN_ROLE == "main" else "isolated-run-v1")
 CANDIDATE_RUN = RUN / f"{RUN_ROLE}-candidate-v1"
 
 
@@ -76,8 +77,10 @@ def test_replay_main_source_retains_open_exceptions_and_native_rows(diagnostic):
     assert receipt["upstream_original_refs"]["MESSY"]["bcm_open_closure"]["record"] == (
         "KEY-AND-CAPACITY"
     )
-    with sqlite3.connect(
-        (source_root / "company.sqlite3").as_uri() + "?mode=ro&immutable=1", uri=True
+    with closing(
+        sqlite3.connect(
+            (source_root / "company.sqlite3").as_uri() + "?mode=ro&immutable=1", uri=True
+        )
     ) as db:
         assert db.execute("PRAGMA quick_check").fetchone()[0] == "ok"
         assert db.execute("SELECT COUNT(*) FROM versions").fetchone()[0] == 23

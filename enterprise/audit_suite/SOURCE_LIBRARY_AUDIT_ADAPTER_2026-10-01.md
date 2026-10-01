@@ -1,5 +1,17 @@
 # Normal source-library audit adapter
 
+Current main integration: the corrected module passed independent review and
+actual main reperformance, including held-open WAL, Engine clock, ordinary
+typed collection and unchanged accepted-library custody. Independent gate SHA:
+`ba1f02d6c35d4ff8f4a029ab7e10315193c71cb9aeb23f729d74828266082350`.
+Main reproduction SHA:
+`c73ddb35bcc80a2d637bfe10ff3f255dd677468a0aa5f558d41ec2669f333235`.
+This accepts only bound adapter/ordinary Engine entrypoints against the exact
+selected V2.1 library. Direct in-process CompanyStore cutoffs remain trusted
+caller input. The candidate checkpoint wording below predates that separate gate;
+neither the gate nor fixture collection supplies actual procedure credit or
+validation of evolving company correction journeys.
+
 `source_library_audit.py` reuses the reviewed SEC003 discovery mechanics for a normal CompanyStore library. It preserves the actual projected company/branch/system/record/version, bytes, hashes and event/availability/import clocks. Logical family and system aliases are separate business routing metadata. They cannot replace native identifiers in a collection receipt or satisfy an exact business-reference join.
 
 An operator supplies the independently accepted main library's database, manifest and review pins plus its fixed version boundary. Acceptance requires the exact root review schema `SH_ROOT_COMPANY_LIBRARY_INDEPENDENT_REVIEW_V1`, verdict `PASS_COMPANY_FACING_LIBRARY_SELECTED_BOUNDARY`, explicit `source_quality_accepted_for_final_learner_audit=true`, exact database/manifest pins and strict native-version count. The explicitly supported manifest schema is `SH_COMPANY_OPERATIONAL_PROJECTION_V2_1` and must directly bind `files.company.sqlite3`. A bounded raw-source PASS or false source-quality gate cannot authorize an audit. Pending review, changed pins, source-side SQLite sidecars, symlink ancestors, inherited grants/collections/access journals and changed version boundaries prevent source-workroom staging. The adapter reads only these accepted custody records and the ordinary company database; it never opens a transformation map, authoring recipe, Key, old observation or prepared evidence set.

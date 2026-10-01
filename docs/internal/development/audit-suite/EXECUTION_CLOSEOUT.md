@@ -1078,8 +1078,18 @@ Five new independently reviewed company source families contain 835 native
 versions: privacy 269, assurance 53, legal intake 191, original legal messages 114
 and later policy/security/workforce operations 208. They supply locators for the
 82 routes previously missing in V17, without audit credit. Joining them with
-V18's selected 948 versions proposes a 1,783-version company-library stage;
-that stage is still under migration review and excludes older systems not
-selected by V18. Authoritative person/account populations and explicit admission
-of missing IAM foundations remain required. The active graph records current
-review pins and the dependency chain to fresh fieldwork and final acceptance.
+V18's selected 948 versions yields the independently accepted 1,783-version
+V2.1 company library. The earlier V2 candidate remains rejected and preserved.
+The corrected ordinary collection adapter has also passed independent review and
+actual main WAL/clock/typed-collection probes. Its gate covers that selected
+library and Engine-bound collection, with raw in-process cutoffs remaining trusted
+caller input; evolving company correction journeys are still unverified.
+
+The corrected 3,399-version person/account source is independently accepted and
+reproduced in main, including 1,462 independently reperformed local permission
+decisions, 24 monthly populations and eight quarterly joins. It is not yet admitted
+to the company library. Its original-custody witnesses remain restricted and its
+January 1 03:15 operating start does not establish earlier coverage. Explicit
+successor admission of older company histories and these accepted records remains
+required. Source acceptance supplies no audit credit. The active graph records the
+current pins, preserved rejections and chain to fresh fieldwork and final acceptance.
