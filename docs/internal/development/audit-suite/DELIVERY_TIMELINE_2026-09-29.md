@@ -224,6 +224,8 @@ The independently reviewed read-only readiness gate replays the V10 source/candi
 
 The independently reviewed V11 partial registry now includes the selected fictional ETH001 source after the exact V10 prefix: 32 cohorts, 729 native versions, 46 components, 33 pins and 285 aliases per side. Main and isolated output bytes match. The source is limited to two fictional people. The independently reviewed V10 exact route successor promotes only three generic ETH001 discovery gates per side, bringing the route ledger to 173 targeted IDs and 135 partial/27 design/121 unsupported classes per side; the sanctions clause and complete period/workforce populations remain open. The V10 readiness gate above is a historical checkpoint, not an automatically updated V11 conclusion.
 
+The independently reviewed V11 disposable collector adds the selected ETH001 final record to the scoped source-access diagnostic: 92 exclusive ordinary copies and 66 receipts. The main replay preserves the exact V10 semantic prefix, source originals, REC003 journals and the frozen P1 inventory; the Messy false-clean/late-attestation exception stays open. This is one selected read per source component, not full-period collection or task execution.
+
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
 2–16, 2027 (weeks 18–20) is the working target. March 16, 2027 (week 24) is
