@@ -163,6 +163,36 @@ def test_exact_closed_window_membership_and_history(candidate):
         assert source.instant(q4["available_at"]) > initial
 
 
+def test_retained_approval_publication_and_restricted_lineage(candidate):
+    root, _, rows, _, legacy = candidate
+    for side in source.BRANCHES:
+        for cause in ("MOVE-2027-Q1-001", "MOVE-2027-Q2-001"):
+            row = record(rows, "duty_authorizations", cause, side)
+            witness = row["body"]["original_source_witness"]
+            assert source.instant(row["event_at"]).hour == 8
+            assert source.instant(row["available_at"]).hour == 9
+            assert source.instant(witness["available_at"]) <= source.instant(row["available_at"])
+            assert "branch" not in witness
+            assert witness["custody_status"] == "RESTRICTED_ARCHIVE_WITNESS_ONLY"
+            assert sum(source.original_witness(original) == witness for original in legacy) == 1
+    custody = json.loads((root / "ORIGINAL_CUSTODY.json").read_bytes())
+    assert len(custody["records"]) == 64
+    assert custody["admission_status"] == "RESTRICTED_NOT_PROJECTED_AUDITOR_ACCESS_NOT_ESTABLISHED"
+
+
+def test_startup_gap_does_not_claim_whole_period_operations(candidate):
+    root, _, rows, _, _ = candidate
+    receipt = json.loads((root / "RECEIPT.json").read_bytes())
+    assert receipt["whole_period_operations_established"] is False
+    assert receipt["registered_account_first_issue_at"] == "2027-01-01T03:15:00Z"
+    earliest = min(
+        source.instant(r["event_at"])
+        for r in rows
+        if r["system"].startswith("account_") and r["body"] and "state" in r["body"]
+    )
+    assert earliest == source.instant(receipt["registered_account_first_issue_at"])
+
+
 def test_permission_byte_mechanics(tmp_path):
     original = tmp_path / "object.txt"
     original.write_bytes(b"actual local original")
@@ -235,6 +265,9 @@ def test_contract_expiry_and_credential_epoch_causes(candidate):
         "truncated_month",
         "historical_definition",
         "mirrored_overgrant",
+        "authority_window",
+        "delegation_window",
+        "original_scalar_future",
     ],
 )
 def test_semantics_reject_mutations(candidate, mutation):
@@ -338,6 +371,17 @@ def test_semantics_reject_mutations(candidate, mutation):
             "iam.approve",
             "workspace.read",
         ]
+    elif mutation == "authority_window":
+        record(rows, "company_authority", "SERVICE-ORDER-2027")["body"]["effective_to"] = (
+            "2027-01-01T00:45:00Z"
+        )
+    elif mutation == "delegation_window":
+        record(rows, "service_delegation", "AS-P007")["body"]["effective_to"] = (
+            "2029-01-01T00:00:00Z"
+        )
+    elif mutation == "original_scalar_future":
+        row = record(rows, "duty_authorizations", "MOVE-2027-Q1-001")
+        row["available_at"] = row["event_at"]
     with pytest.raises((ProcedureError, KeyError, ValueError)):
         sem(candidate, rows)
 
@@ -356,14 +400,101 @@ def test_resealed_dropped_immutable_trigger(candidate, tmp_path, trigger):
         source.verify(root)
 
 
+def mutate_source_metadata(root, mutation):
+    with sqlite3.connect(root / "company/company.sqlite3") as db:
+        db.row_factory = sqlite3.Row
+        trigger = db.execute(
+            "SELECT sql FROM sqlite_master WHERE name='no_version_update'"
+        ).fetchone()[0]
+        db.execute("DROP TRIGGER no_version_update")
+        system = (
+            "account_system_inventory"
+            if mutation == "provenance_filename"
+            else "duty_authorizations"
+            if mutation == "original_scalar_future"
+            else "workspace_object"
+        )
+        row = dict(
+            db.execute(
+                "SELECT * FROM versions WHERE branch=? AND system=? ORDER BY record LIMIT 1",
+                (source.BRANCHES["A"], system),
+            ).fetchone()
+        )
+        provenance = json.loads(row["provenance"])
+        if mutation == "provenance_answer":
+            provenance["expected_finding"] = "FALSE_CLEAN_EXPECTED"
+        elif mutation == "provenance_filename":
+            provenance["name"] = "EXPECTED_FALSE_CLEAN_ANSWER.json"
+        elif mutation == "original_scalar_future":
+            row["available_at"] = row["event_at"]
+        else:
+            provenance["name"] = "object.json"
+        fingerprint = hashlib.sha256(
+            _json(
+                [
+                    [row[k] for k in ("company", "branch", "system", "record")],
+                    row["version"] - 1,
+                    row["event_at"],
+                    row["available_at"],
+                    row["origin"],
+                    provenance,
+                    row["sha256"],
+                ]
+            ).encode()
+        ).hexdigest()
+        db.execute(
+            "UPDATE versions SET provenance=?,available_at=?,input_digest=? "
+            "WHERE branch=? AND system=? AND record=? AND version=?",
+            (
+                _json(provenance),
+                row["available_at"],
+                fingerprint,
+                row["branch"],
+                system,
+                row["record"],
+                row["version"],
+            ),
+        )
+        db.execute(trigger)
+    reseal(root)
+
+
 @pytest.mark.parametrize(
     "mutation",
-    ["owner", "journal", "schema", "typed_object", "import_clock", "open_followup", "permission"],
+    [
+        "owner",
+        "journal",
+        "schema",
+        "typed_object",
+        "import_clock",
+        "open_followup",
+        "permission",
+        "provenance_answer",
+        "provenance_filename",
+        "receipt_extra",
+        "manifest_extra",
+        "original_scalar_future",
+        "receipt_limits",
+    ],
 )
 def test_actual_resealed_source_rejections(candidate, tmp_path, mutation):
     root = tmp_path / "copy"
     byte_copy(candidate[0], root)
-    if mutation == "open_followup":
+    if mutation in {"receipt_extra", "receipt_limits"}:
+        path = root / "RECEIPT.json"
+        d = json.loads(path.read_bytes())
+        if mutation == "receipt_extra":
+            d["additional_branches"] = {"C": "COMPLETE_AND_ACCEPTED"}
+        else:
+            d["limitations"] = []
+        path.write_text(json.dumps(d))
+        reseal(root)
+    elif mutation == "manifest_extra":
+        path = root / "MANIFEST.json"
+        d = json.loads(path.read_bytes())
+        d["additional_branches"] = {"C": "COMPLETE_AND_ACCEPTED"}
+        path.write_text(json.dumps(d))
+    elif mutation == "open_followup":
         mutate_unreferenced(
             root,
             "review_followup",
@@ -381,6 +512,13 @@ def test_actual_resealed_source_rejections(candidate, tmp_path, mutation):
                 returned_sha256=source.sha(root / "corporate-reference.txt"),
             ),
         )
+    elif mutation in {
+        "typed_object",
+        "provenance_answer",
+        "provenance_filename",
+        "original_scalar_future",
+    }:
+        mutate_source_metadata(root, mutation)
     else:
         with sqlite3.connect(root / "company/company.sqlite3") as db:
             if mutation == "owner":
@@ -397,43 +535,10 @@ def test_actual_resealed_source_rejections(candidate, tmp_path, mutation):
                     "SELECT sql FROM sqlite_master WHERE name='no_version_update'"
                 ).fetchone()[0]
                 db.execute("DROP TRIGGER no_version_update")
-                if mutation == "typed_object":
-                    row = db.execute(
-                        "SELECT * FROM versions WHERE branch=? AND system='workspace_object'",
-                        (source.BRANCHES["A"],),
-                    ).fetchone()
-                    row = dict(
-                        zip(
-                            [c[1] for c in db.execute("PRAGMA table_info(versions)")],
-                            row,
-                            strict=True,
-                        )
-                    )
-                    p = json.loads(row["provenance"])
-                    p["name"] = "object.json"
-                    fingerprint = hashlib.sha256(
-                        _json(
-                            [
-                                [row[k] for k in ("company", "branch", "system", "record")],
-                                0,
-                                row["event_at"],
-                                row["available_at"],
-                                row["origin"],
-                                p,
-                                row["sha256"],
-                            ]
-                        ).encode()
-                    ).hexdigest()
-                    db.execute(
-                        "UPDATE versions SET provenance=?,input_digest=? WHERE branch=? "
-                        "AND system='workspace_object'",
-                        (_json(p), fingerprint, source.BRANCHES["A"]),
-                    )
-                else:
-                    db.execute(
-                        "UPDATE versions SET imported_at='2027-01-01T00:00:00.000000+00:00' "
-                        "WHERE system='workspace_object'"
-                    )
+                db.execute(
+                    "UPDATE versions SET imported_at='2027-01-01T00:00:00.000000+00:00' "
+                    "WHERE system='workspace_object'"
+                )
                 db.execute(trigger)
         reseal(root)
     with pytest.raises(ProcedureError):

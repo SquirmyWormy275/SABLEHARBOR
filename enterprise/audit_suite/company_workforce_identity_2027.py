@@ -84,6 +84,23 @@ def after(value, seconds):
     return (instant(value) + timedelta(seconds=seconds)).isoformat()
 
 
+def original_witness(row):
+    """Bind exact original custody without exposing legacy mode labels."""
+    return {
+        "custody_status": "RESTRICTED_ARCHIVE_WITNESS_ONLY",
+        "company": row["company"],
+        "system": row["system"],
+        "record": row["record"],
+        "version": row["version"],
+        "native_identity_sha256": digest(
+            [row[k] for k in ("company", "branch", "system", "record", "version")]
+        ),
+        "event_at": row["event_at"],
+        "available_at": row["available_at"],
+        "content_sha256": row["sha256"],
+    }
+
+
 def canonical_basis(repository):
     value = snapshot(repository, as_of="2027-12-31")
     people = value["canonical_people"]
@@ -295,6 +312,8 @@ def opening(w, basis):
             "employment_appointments_made": False,
             "forecast_positions_are_operating_workers": False,
             "financial_or_physical_occupancy_change": False,
+            "operating_access_ready_from": "2027-01-01T03:15:00Z",
+            "earlier_operating_history": "NOT_ESTABLISHED_BY_THIS_REGISTER",
             "scope": (
                 "Named registered company/affiliate people, separately accepted "
                 "service delegates, "
@@ -600,8 +619,11 @@ def retain_movers(w, runtime, legacy, catalog, authority, original, side):
                 "approval_id": auth["approval_id"],
                 "canonical_job_title_changed": False,
                 "source_content_sha256": hr["sha256"],
+                "original_source_witness": original_witness(hr),
                 "source_scope": "Retained local service duty history; not a personnel appointment",
+                "approval_document_at_fact_time": "NOT_ESTABLISHED_BY_RESTRICTED_ORIGINAL",
             },
+            available=hr["available_at"],
             owner="AS-P008",
         )
         for source in sorted(
@@ -627,6 +649,7 @@ def retain_movers(w, runtime, legacy, catalog, authority, original, side):
                     "state": state,
                     "performed_by": d.get("performed_by", "AS-P007"),
                     "source_content_sha256": source["sha256"],
+                    "original_source_witness": original_witness(source),
                     "source_event_at": source["event_at"],
                     "source_available_at": source["available_at"],
                     "duty_approval_id": d.get("authorization_id"),
@@ -672,8 +695,10 @@ def retain_movers(w, runtime, legacy, catalog, authority, original, side):
                 "followup_status": d["followup_status"],
                 "followup_owner": d.get("followup_owner"),
                 "source_content_sha256": original_review["sha256"],
+                "original_source_witness": original_witness(original_review),
                 "removal_is_confirmed": not d["unapproved_remaining_rights"],
             },
+            available=original_review["available_at"],
             owner="AS-P008",
         )
 
@@ -1057,6 +1082,8 @@ def period_operations(w, subjects, legacy, side):
                 ),
                 "retained_local_privileged_population": oldpop["document"]["members"],
                 "retained_source_content_sha256": oldpop["sha256"],
+                "retained_population_witness": original_witness(oldpop),
+                "retained_reconciliation_witness": original_witness(oldrecon),
                 "retained_local_review_missing_ids": oldrecon["document"]["missing_person_ids"],
                 "retained_local_scope": (
                     "Two original local mover causes only; membership follows actual "
@@ -1277,6 +1304,49 @@ def semantic_verify(rows, basis, legacy, original):
                 instant(row["event_at"]) <= instant(row["available_at"]),
                 "Invalid source availability",
             )
+            document = row["body"] or {}
+            for field in (
+                "original_source_witness",
+                "retained_population_witness",
+                "retained_reconciliation_witness",
+            ):
+                if field not in document:
+                    continue
+                witness = document[field]
+                matches = [
+                    r
+                    for r in legacy
+                    if r["branch"] == ("year-clean" if side == "A" else "year-messy")
+                    and original_witness(r) == witness
+                ]
+                require(len(matches) == 1, "Exact restricted original custody witness differs")
+                require(
+                    instant(matches[0]["available_at"]) <= instant(row["available_at"]),
+                    "Original source custody becomes available after retained publication",
+                )
+                scalar = (
+                    "source_content_sha256"
+                    if field == "original_source_witness"
+                    else "retained_source_content_sha256"
+                    if field == "retained_population_witness"
+                    else None
+                )
+                if scalar:
+                    require(
+                        document[scalar] == witness["content_sha256"],
+                        "Original scalar SHA does not match exact custody witness",
+                    )
+            if "source_content_sha256" in document:
+                require(
+                    "original_source_witness" in document,
+                    "Original scalar SHA lacks exact restricted custody witness",
+                )
+            if "retained_source_content_sha256" in document:
+                require(
+                    "retained_population_witness" in document
+                    and "retained_reconciliation_witness" in document,
+                    "Retained history lacks exact original custody witnesses",
+                )
             for ref in refs(row["body"]):
                 target = lookup.get(tuple(ref[k] for k in keys))
                 require(
@@ -1371,6 +1441,57 @@ def semantic_verify(rows, basis, legacy, original):
             and order["financial_or_physical_occupancy_change"] is False,
             "Service order conflates planning, employment or operating occupancy",
         )
+        require(
+            order["issued_by"] == "P001"
+            and order["management_acceptance"] == ["P001", "P002"]
+            and order["effective_from"] == "2027-01-01T00:30:00Z"
+            and order["effective_to"] == "2028-01-01T00:00:00Z"
+            and order["closing_record_authority_until"] == "2028-01-16T00:00:00Z"
+            and order["delegations"] == DELEGATES
+            and order["operating_access_ready_from"] == "2027-01-01T03:15:00Z"
+            and order["earlier_operating_history"] == "NOT_ESTABLISHED_BY_THIS_REGISTER",
+            "Exact company authority operating/closing window differs",
+        )
+        require(
+            order["scope"]
+            == (
+                "Named registered company/affiliate people, separately accepted service "
+                "delegates, explicit contractor relationships and owned nonhuman accounts only"
+            )
+            and order["unmodeled_scope"]
+            == (
+                "Unnamed workers, other enterprise accounts, industrial operating systems, "
+                "physical badges and unaccepted proposed office occupants"
+            )
+            and order["closing_authority_scope"]
+            == (
+                "Retrospective reconciliation, review and expired-state maintenance; "
+                "no operating access extension"
+            )
+            and order["reserved_authority"]
+            == "No operating safety, corporate employment hire, external opinion or legal status",
+            "Exact company authority scope/reservations differ",
+        )
+        for person, capacity in DELEGATES.items():
+            delegated = exact("service_delegation", person)
+            d = delegated["body"]
+            require(
+                d["person_id"] == d["accepted_by"] == person
+                and d["issuer"] == "P001"
+                and d["capacity"] == capacity
+                and d["accepted_at"] == d["effective_from"] == "2027-01-01T01:00:00Z"
+                and d["effective_to"] == order["closing_record_authority_until"]
+                and d["operating_service_window_ends"] == order["effective_to"]
+                and d["post_window_scope"]
+                == "Closing records only; no operating permissions extended"
+                and d["office_status"] == "PROPOSED_NOT_APPOINTED"
+                and d["employment_status"] == "NOT_ESTABLISHED"
+                and d["appointment_is_employment"] is False
+                and instant(order["effective_from"])
+                <= instant(d["accepted_at"])
+                < instant(order["effective_to"]),
+                ("Delegation exceeds inherited authority or changes appointment/employment"),
+            )
         catalogue = exact("entitlement_catalogue", "CORPORATE-LOGICAL")["body"]
         require(
             catalogue["conflicting_rights"] == [list(pair) for pair in CONFLICTS]
@@ -1749,6 +1870,18 @@ def semantic_verify(rows, basis, legacy, original):
                 "Contractor expiry/removal channel history differs",
             )
         if side == "B":
+            maintenance = exact("company_authority", "POST-PERIOD-MAINTENANCE")["body"]
+            require(
+                maintenance["issued_by"] == "P001"
+                and maintenance["independent_acceptance"] == "P002"
+                and maintenance["delegated_to"] == "AS-P007"
+                and maintenance["approved_by"] == "AS-P008"
+                and maintenance["effective_from"] == "2028-01-15T10:00:00Z"
+                and maintenance["effective_to"] == "2028-01-15T18:00:00Z"
+                and maintenance["employment_appointments_made"] is False
+                and maintenance["previous_reviews_reperformed"] is False,
+                "Exact post-period maintenance authority differs",
+            )
             for cause, pid in (("MOVE-2027-Q1-001", "P014"), ("MOVE-2027-Q2-001", "P015")):
                 corrected = exact("account_legacy_application", cause + ":application", 4)
                 d = corrected["body"]
@@ -1904,6 +2037,56 @@ def private_inventory(destination):
     return inventory
 
 
+def custody_contract(legacy, repository, private_repository):
+    return {
+        "schema": "SH_PRIVATE_RESTRICTED_ORIGINAL_CUSTODY_V1",
+        "input_repository": str(Path(repository).absolute()),
+        "input_private_repository": str(Path(private_repository).absolute()),
+        "original_database_sha256": LEGACY_SHA,
+        "admission_status": "RESTRICTED_NOT_PROJECTED_AUDITOR_ACCESS_NOT_ESTABLISHED",
+        "records": [
+            {
+                "original_native_reference": {k: row[k] for k in REFERENCE_KEYS},
+                "native_identity_sha256": original_witness(row)["native_identity_sha256"],
+            }
+            for row in legacy
+        ],
+    }
+
+
+def limitation_contract():
+    return [
+        (
+            "Declared named shared-service boundary only; forecast positions "
+            "and wider workers remain unmodeled"
+        ),
+        (
+            "Canonical source does not supply exact employment starts, "
+            "payroll entities or accepted proposed offices"
+        ),
+        (
+            "Original mover initial requests and historical former-employee "
+            "revocation remain unavailable"
+        ),
+        (
+            "Quarter-end reviews first become available after their closed "
+            "window; later corrections do not replace them"
+        ),
+        (
+            "No physical badge, industrial-system census, real deployment, "
+            "legal acceptance or external opinion is asserted"
+        ),
+        (
+            "First registered accounts are issued January 1 at 03:15 UTC; "
+            "earlier operating access history is not established"
+        ),
+        (
+            "Restricted original custody witnesses do not grant auditor "
+            "source access or admit projected originals"
+        ),
+    ]
+
+
 def create(destination, repository, private_repository):
     destination, repository, private_repository = map(
         lambda p: Path(p).absolute(), (destination, repository, private_repository)
@@ -1931,6 +2114,10 @@ def create(destination, repository, private_repository):
     )
     write(destination / "IMPLEMENTATION.py", Path(__file__).read_bytes())
     write(destination / "BASIS.json", basis)
+    write(
+        destination / "ORIGINAL_CUSTODY.json",
+        custody_contract(legacy, repository, private_repository),
+    )
     store = CompanyStore(company_root)
     author_family(store, basis, legacy, original, initialized)
     rows = native_records(store.path)
@@ -1964,32 +2151,14 @@ def create(destination, repository, private_repository):
             "systems": systems,
             "summary": summary,
             "source_complete": False,
+            "whole_period_operations_established": False,
+            "registered_account_first_issue_at": "2027-01-01T03:15:00Z",
+            "restricted_original_admission": "NOT_ADMITTED_OR_GRANTED_BY_THIS_SOURCE",
             "wider_workforce_established": False,
             "engagements_created": 0,
             "source_grants": 0,
             "audit_collections": 0,
-            "limitations": [
-                (
-                    "Declared named shared-service boundary only; forecast positions "
-                    "and wider workers remain unmodeled"
-                ),
-                (
-                    "Canonical source does not supply exact employment starts, "
-                    "payroll entities or accepted proposed offices"
-                ),
-                (
-                    "Original mover initial requests and historical former-employee "
-                    "revocation remain unavailable"
-                ),
-                (
-                    "Quarter-end reviews first become available after their closed "
-                    "window; later corrections do not replace them"
-                ),
-                (
-                    "No physical badge, industrial-system census, real deployment, "
-                    "legal acceptance or external opinion is asserted"
-                ),
-            ],
+            "limitations": limitation_contract(),
         },
     )
     write(
@@ -2000,9 +2169,12 @@ def create(destination, repository, private_repository):
 
 def verify(destination):
     destination = Path(destination).absolute()
+    inventory = private_inventory(destination)
     manifest = json.loads((destination / "MANIFEST.json").read_bytes())
     require(
-        manifest["schema"] == SCHEMA and manifest["files"] == private_inventory(destination),
+        set(manifest) == {"schema", "files"}
+        and manifest["schema"] == SCHEMA
+        and manifest["files"] == inventory,
         "Exact private source manifest differs",
     )
     require(
@@ -2012,6 +2184,7 @@ def verify(destination):
             "corporate-reference.txt",
             "IMPLEMENTATION.py",
             "BASIS.json",
+            "ORIGINAL_CUSTODY.json",
             "RECEIPT.json",
         }
         and {str(p.relative_to(destination)) for p in destination.rglob("*") if p.is_dir()}
@@ -2019,6 +2192,58 @@ def verify(destination):
         "Exact private source file/directory roster differs",
     )
     receipt = json.loads((destination / "RECEIPT.json").read_bytes())
+    require(
+        set(receipt)
+        == {
+            "schema",
+            "company",
+            "branches",
+            "initialized_at",
+            "completed_at",
+            "fictional_business_period",
+            "input_repository",
+            "input_private_repository",
+            "legacy_source",
+            "legacy_sha256",
+            "basis_sha256",
+            "native_versions",
+            "systems",
+            "summary",
+            "source_complete",
+            "whole_period_operations_established",
+            "registered_account_first_issue_at",
+            "restricted_original_admission",
+            "wider_workforce_established",
+            "engagements_created",
+            "source_grants",
+            "audit_collections",
+            "limitations",
+        },
+        "Exact receipt key contract differs",
+    )
+    require(
+        receipt["fictional_business_period"]
+        == {
+            "start": "2027-01-01T00:00:00Z",
+            "end_exclusive": "2028-01-01T00:00:00Z",
+            "closing_record_cutoff": "2028-01-16T00:00:00Z",
+        }
+        and receipt["legacy_source"] == LEGACY
+        and receipt["legacy_sha256"] == LEGACY_SHA
+        and receipt["limitations"] == limitation_contract()
+        and receipt["whole_period_operations_established"] is False
+        and receipt["registered_account_first_issue_at"] == "2027-01-01T03:15:00Z"
+        and receipt["restricted_original_admission"] == "NOT_ADMITTED_OR_GRANTED_BY_THIS_SOURCE",
+        "Exact receipt boundary, history or limitation claims differ",
+    )
+    for field in ("input_repository", "input_private_repository"):
+        path = Path(receipt[field])
+        require(
+            path.is_absolute()
+            and str(path.absolute()) == receipt[field]
+            and not any(p.is_symlink() for p in [path, *path.parents]),
+            "Exact ordinary input root required",
+        )
     require(
         receipt["schema"] == SCHEMA
         and receipt["company"] == COMPANY
@@ -2045,6 +2270,13 @@ def verify(destination):
         "Canonical source custody differs",
     )
     legacy = legacy_basis(Path(receipt["input_private_repository"]))
+    require(
+        json.loads((destination / "ORIGINAL_CUSTODY.json").read_bytes())
+        == custody_contract(
+            legacy, Path(receipt["input_repository"]), Path(receipt["input_private_repository"])
+        ),
+        "Exact private original tuple, lineage status or input root differs",
+    )
     path = destination / "company/company.sqlite3"
     schema_verify(path)
     rows = native_records(path)
@@ -2065,6 +2297,21 @@ def verify(destination):
             "Actual source import outside authoring bounds",
         )
         provenance = json.loads(r["provenance"])
+        expected_provenance = {
+            "source_reference": f"company://{COMPANY}/{r['branch']}/{r['system']}/{r['record']}",
+            "name": "corporate-reference.txt"
+            if r["system"] == "workspace_object"
+            else "person-access-" + digest([r["system"], r["record"]])[:24] + ".json",
+            "content_type": "text/plain; charset=utf-8"
+            if r["system"] == "workspace_object"
+            else "application/json",
+            "initialized_at": receipt["initialized_at"],
+            "qualification": "FICTIONAL_COMPANY_OPERATIONS_NO_REAL_EMPLOYMENT_OR_PHI",
+        }
+        require(
+            provenance == expected_provenance,
+            "Exact typed authoring provenance/name contract differs",
+        )
         require(
             r["input_digest"]
             == hashlib.sha256(
