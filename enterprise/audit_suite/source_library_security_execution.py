@@ -38,6 +38,9 @@ from .source_library_security_methods import (
 from .store import digest
 
 PROGRAM_SHA = "73d856274fbfe65e32a61cffaf3bb101b801e2ff24825be1eddfe8b4f2138134"
+INITIAL_FIELDWORK_DATE = "2027-12-31"
+INITIAL_AUDIT_CLOCK = "2027-12-31T09:00:00Z"
+COLLECTION_CLOCK = "2028-01-03T09:00:00Z"
 ADAPTER_REVIEW_SCHEMA = "SH_ROOT_SOURCE_LIBRARY_ADAPTER_INDEPENDENT_REVIEW_V2"
 ADAPTER_REVIEW_VERDICT = "PASS_QUIESCENT_ENGINE_BOUND_ADAPTER"
 TASKS = {
@@ -153,6 +156,42 @@ def command(engine, actor, engagement, kind, payload):
             "payload": payload,
         },
     )
+
+
+def clock_transition(events, auditor):
+    """Require the actual ordinary transition, never infer it from final time."""
+    require(
+        events
+        and events[0]["state"]["scope"]["fieldwork_start"] == INITIAL_FIELDWORK_DATE
+        and _time(events[0]["state"]["simulated_at"]) == _time(INITIAL_AUDIT_CLOCK),
+        "Actual initial December audit clock required",
+    )
+    advances = [i for i, e in enumerate(events) if e["command"].get("kind") == "clock.advance"]
+    require(len(advances) == 1, "One actual ordinary January clock advance required")
+    index = advances[0]
+    event = events[index]
+    require(
+        index > 0
+        and event["actor"] == auditor
+        and event["command"]["payload"] == {"mode": "TARGET_DATE", "target": COLLECTION_CLOCK}
+        and all(
+            _time(e["state"]["simulated_at"]) == _time(INITIAL_AUDIT_CLOCK)
+            for e in events[:index]
+        )
+        and all(
+            _time(e["state"]["simulated_at"]) == _time(COLLECTION_CLOCK)
+            for e in events[index:]
+        )
+        and not any(e["state"]["artifacts"] for e in events[:index]),
+        "Actual performer clock transition or acquisition chronology differs",
+    )
+    return {
+        "initial_simulated_at": _time(INITIAL_AUDIT_CLOCK),
+        "collection_simulated_at": _time(COLLECTION_CLOCK),
+        "actor": auditor,
+        "command": event["command"],
+        "recorded_at": event["recorded_at"],
+    }
 
 
 def plans():
@@ -698,7 +737,7 @@ def run(repository, destination, accepted, program_pack, adapter_review, adapter
                     "report_type": "Type 2",
                     "period_start": "2027-01-01",
                     "period_end": "2027-12-31",
-                    "fieldwork_start": "2028-01-03",
+                    "fieldwork_start": INITIAL_FIELDWORK_DATE,
                     "timezone": "UTC",
                     "boundaries": ["corporate"],
                     "soc2_categories": ["Security", "Availability", "Confidentiality"],
@@ -727,12 +766,24 @@ def run(repository, destination, accepted, program_pack, adapter_review, adapter
             "selection_sealed_at": datetime.now(UTC).isoformat(),
             "basis": "Safe business locators and authored procedure instructions only; "
             "no outcomes inspected",
-            "source_cutoff": state["simulated_at"],
+            "initial_audit_clock": _time(INITIAL_AUDIT_CLOCK),
+            "source_cutoff": _time(COLLECTION_CLOCK),
             "selected_task_ids": TASKS,
             "adapter_acceptance": gate,
             "population_method": "ENTIRE_SELECTED_SUBPOPULATION",
         }
         write(root / "PLAN.json", plan)
+        state = command(
+            engine,
+            auditor,
+            engagement,
+            "clock.advance",
+            {"mode": "TARGET_DATE", "target": COLLECTION_CLOCK},
+        )
+        require(
+            _time(state["simulated_at"]) == _time(COLLECTION_CLOCK),
+            "Ordinary clock advance did not reach presealed source cutoff",
+        )
         for label, task in TASKS.items():
             command(
                 engine,
@@ -914,6 +965,11 @@ def verify(destination, accepted, adapter_review, adapter_review_sha):
         start = json.loads((root / "START.json").read_bytes())
         plan = json.loads((root / "PLAN.json").read_bytes())
         require(plan["methods"] == plans(), "Presealed selected method locators changed")
+        require(
+            plan["initial_audit_clock"] == _time(INITIAL_AUDIT_CLOCK)
+            and plan["source_cutoff"] == _time(COLLECTION_CLOCK),
+            "Presealed audit collection clocks changed",
+        )
         require(not any(start["zero_workroom_counts"].values()), "Nonzero evidence start")
         identities = {key: start[key] for key in ("operator", "auditor", "reviewer")}
         require(len(set(identities.values())) == 3, "Identity separation failed")
@@ -989,6 +1045,11 @@ def verify(destination, accepted, adapter_review, adapter_review_sha):
                     for t in first["tasks"]
                 ),
                 "Initial tasks inherited credit",
+            )
+            transition = clock_transition(events, identities["auditor"])
+            require(
+                _time(plan["selection_sealed_at"]) <= _time(transition["recorded_at"]),
+                "Collection-clock plan was not sealed before actual advance",
             )
         require(
             state == json.loads((root / "FINAL_STATE.json").read_bytes()),

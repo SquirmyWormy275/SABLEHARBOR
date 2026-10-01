@@ -9,7 +9,12 @@ import pytest
 from enterprise.audit_suite.company_store import _time
 from enterprise.audit_suite.fresh_sec003_procedure import ProcedureError
 from enterprise.audit_suite.source_library_audit import BUSINESS_REFERENCE
-from enterprise.audit_suite.source_library_security_execution import authored_instruction
+from enterprise.audit_suite.source_library_security_execution import (
+    COLLECTION_CLOCK,
+    INITIAL_AUDIT_CLOCK,
+    authored_instruction,
+    clock_transition,
+)
 from enterprise.audit_suite.source_library_security_methods import (
     analyze_continuity_timestamps,
     analyze_security_publishers,
@@ -408,3 +413,32 @@ def test_base_toe_and_additional_duty_instructions_use_their_authored_locations(
     del state["controls"][0]["base_test"]
     with pytest.raises(ProcedureError, match="base control"):
         authored_instruction(state, "BASE")
+
+
+def test_final_time_alone_cannot_substitute_for_actual_preacquisition_clock_advance():
+    def event(clock, kind, payload=None):
+        return {
+            "actor": "auditor",
+            "recorded_at": "2026-10-01T12:00:00Z",
+            "command": {"kind": kind, "payload": payload or {}},
+            "state": {
+                "scope": {"fieldwork_start": "2027-12-31"},
+                "simulated_at": clock,
+                "artifacts": [],
+            },
+        }
+
+    initial = event(INITIAL_AUDIT_CLOCK, "engagement.create")
+    advance = event(
+        COLLECTION_CLOCK,
+        "clock.advance",
+        {"mode": "TARGET_DATE", "target": COLLECTION_CLOCK},
+    )
+    assert clock_transition([initial, advance], "auditor")["actor"] == "auditor"
+    with pytest.raises(ProcedureError, match="ordinary January"):
+        clock_transition([initial, event(COLLECTION_CLOCK, "company.collect")], "auditor")
+    with pytest.raises(ProcedureError, match="initial December"):
+        clock_transition([event(COLLECTION_CLOCK, "engagement.create"), advance], "auditor")
+    initial["state"]["artifacts"] = [{"id": "early-evidence"}]
+    with pytest.raises(ProcedureError, match="acquisition chronology"):
+        clock_transition([initial, advance], "auditor")
