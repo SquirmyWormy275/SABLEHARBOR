@@ -765,6 +765,11 @@ def _leg_provision_final(path: Path, ref: dict) -> dict:
     body = _selected_body(path, ref)
     detail = body.get("detail", {})
     predecessor = detail.get("predecessor_reconciliation_ref", {})
+    expected_sha = (
+        "8677c84dc12d0960a6b539c55e0c547f65d7b310b2206072af362e4602a1004d"
+        if messy
+        else "d36dc83feb2c544d1f8bb4c6c40378fcddbbcc34eb88a9d91e4296a6884c5c78"
+    )
     if (
         body.get("schema") != v18_portfolio.leg.SCHEMA
         or body.get("scenario") != ("MESSY" if messy else "CLEAN")
@@ -805,12 +810,7 @@ def _leg_provision_final(path: Path, ref: dict) -> dict:
         or predecessor.get("branch") != ("LEG-MESSY" if messy else "LEG-CLEAN")
         or predecessor.get("record") != "LEG001-SELECTED-RECON"
         or predecessor.get("version") != 1
-        or predecessor.get("sha256")
-        not in (
-            "8677c84dc12d0960a6b539c55e0c547f65d7b310b2206072af362e4602a1004d"
-            if messy
-            else "d36dc83feb2c544d1f8bb4c6c40378fcddbbcc34eb88a9d91e4296a6884c5c78",
-        )
+        or predecessor.get("sha256") != expected_sha
     ):
         raise CandidateRegistryError("LEG overlay asserted legal applicability or closure")
     return {

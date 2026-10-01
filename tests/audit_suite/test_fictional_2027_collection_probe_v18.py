@@ -1,5 +1,6 @@
 """Reviewed LEG/DAT selected collection extends the exact V17 boundary."""
 
+import copy
 from pathlib import Path
 
 import pytest
@@ -62,6 +63,20 @@ def test_exact_selected_terminals_and_open_limits(profiles):
                 with pytest.raises(CandidateRegistryError, match="exact DAT rights"):
                     probe._dat_rights_final(origin, dict(ref, record="EXC-01"))
             assert selected["audit_task_credit"] is False
+
+
+@pytest.mark.parametrize("side", ["A", "B"])
+def test_leg_predecessor_hash_prefix_rejected(profiles, monkeypatch, side):
+    _, _, component = probe._component_rows(profiles[side])[-2]
+    origin = Path(component["root"]) / "company.sqlite3"
+    ref, _ = probe._native(origin, component)
+    body = probe._selected_body(origin, ref)
+    truncated = copy.deepcopy(body)
+    predecessor = truncated["detail"]["predecessor_reconciliation_ref"]
+    predecessor["sha256"] = predecessor["sha256"][:32]
+    monkeypatch.setattr(probe, "_selected_body", lambda *_: truncated)
+    with pytest.raises(CandidateRegistryError, match="LEGAL|LEG overlay"):
+        probe._leg_provision_final(origin, ref)
 
 
 def test_v18_review_byte_and_verdict_fail_closed(monkeypatch):
