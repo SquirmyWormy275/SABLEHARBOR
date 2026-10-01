@@ -33,6 +33,12 @@ def main(argv=None):
     serve.add_argument("--company-registry", type=Path)
     serve.add_argument("--company-profile")
     serve.add_argument(
+        "--persistent-company-config",
+        type=Path,
+        help="Private retained company/workroom configuration, externally hash-pinned",
+    )
+    serve.add_argument("--persistent-company-config-sha256")
+    serve.add_argument(
         "--company-rights-config",
         type=Path,
         help="Private, hash-pinned protected company rights configuration",
@@ -162,6 +168,25 @@ def main(argv=None):
             raise DomainError("Build the web workroom before serving")
         if bool(args.company_rights_config) != bool(args.company_rights_config_sha256):
             raise DomainError("Protected company config path and exact SHA-256 required together")
+        if bool(args.persistent_company_config) != bool(args.persistent_company_config_sha256):
+            raise DomainError("Retained company config path and exact SHA-256 required together")
+        if args.persistent_company_config and any(
+            value is not None
+            for value in (
+                args.company_root,
+                args.company_bindings,
+                args.company_registry,
+                args.company_profile,
+                args.company_rights_config,
+                args.instructor_key_root,
+                args.instructor_bindings,
+                args.corpus_root,
+                args.program_pack,
+            )
+        ):
+            raise DomainError(
+                "Retained workroom cannot combine company, Key or instruction overrides"
+            )
         company_rights_factory = None
         company_native_rights_factory = None
         if args.company_rights_config:
@@ -174,27 +199,42 @@ def main(argv=None):
 
         from .service import create_app
 
-        app = create_app(
-            args.private_root,
+        common_options = dict(
             web_root=args.web_root,
             secure_cookie=not args.local_http,
             allowed_hosts=["localhost", "127.0.0.1"],
             inference_config=args.inference_config,
             voice_config=args.voice_config,
-            company_root=args.company_root,
-            company_bindings=args.company_bindings,
-            company_registry=args.company_registry,
-            company_profile=args.company_profile,
-            instructor_key_root=args.instructor_key_root,
-            instructor_bindings=args.instructor_bindings,
-            enable_instructor_writeback=not args.disable_instructor_writeback,
             background_jobs=args.background_jobs,
             workspace_contexts=args.workspace_contexts,
-            corpus_root=args.corpus_root,
-            program_pack=args.program_pack,
-            company_rights_factory=company_rights_factory,
-            company_native_rights_factory=company_native_rights_factory,
         )
+        if args.persistent_company_config:
+            from .engine import ROOT
+            from .persistent_company_service import create_retained_app
+
+            app = create_retained_app(
+                args.private_root,
+                args.persistent_company_config,
+                args.persistent_company_config_sha256,
+                repository=ROOT,
+                **common_options,
+            )
+        else:
+            app = create_app(
+                args.private_root,
+                **common_options,
+                company_root=args.company_root,
+                company_bindings=args.company_bindings,
+                company_registry=args.company_registry,
+                company_profile=args.company_profile,
+                instructor_key_root=args.instructor_key_root,
+                instructor_bindings=args.instructor_bindings,
+                enable_instructor_writeback=not args.disable_instructor_writeback,
+                corpus_root=args.corpus_root,
+                program_pack=args.program_pack,
+                company_rights_factory=company_rights_factory,
+                company_native_rights_factory=company_native_rights_factory,
+            )
         uvicorn.run(
             app,
             host="127.0.0.1",
@@ -204,7 +244,7 @@ def main(argv=None):
             ssl_certfile=str(args.tls_cert) if args.tls_cert else None,
             ssl_keyfile=str(args.tls_key) if args.tls_key else None,
         )
-    except (DomainError, RightsUnavailable, OSError) as exc:
+    except (DomainError, RightsUnavailable, OSError, ValueError) as exc:
         parser.error(str(exc))
 
 

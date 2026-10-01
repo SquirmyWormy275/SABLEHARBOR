@@ -142,7 +142,14 @@ def create_app(
     company_rights_factory: Callable[[Engine], CompanyRightsProducer] | None = None,
     company_native_rights_factory: Callable[[Engine, CompanyRightsProducer], NativeRecordClosure]
     | None = None,
+    engine_factory: Callable[[], Engine] | None = None,
+    request_guard: Callable[[Request], None] | None = None,
 ) -> FastAPI:
+    if engine_factory is not None and any(
+        value is not None
+        for value in (company_root, company_bindings, company_registry, company_profile)
+    ):
+        raise DomainError("Trusted retained engine cannot combine company connection overrides")
     if company_native_rights_factory is not None and company_rights_factory is None:
         raise DomainError("Native company closure requires company rights", status=503)
     if company_bindings is not None and company_root is None and company_registry is None:
@@ -199,18 +206,24 @@ def create_app(
         initial_keys = verified_keys()
         key_pin, key_files = initial_keys[3], initial_keys[4]
     limits = RequestLimits()
-    engine = Engine(
-        private_root,
-        inference_config=inference_config,
-        voice_config=voice_config,
-        corpus_root=corpus_root,
-        program_pack=program_pack,
-        company_root=company_root,
-        company_bindings=bindings,
-        company_registry=company_registry,
-        company_profile=company_profile,
-        **({"repository": repository} if repository else {}),
+    engine = (
+        engine_factory()
+        if engine_factory is not None
+        else Engine(
+            private_root,
+            inference_config=inference_config,
+            voice_config=voice_config,
+            corpus_root=corpus_root,
+            program_pack=program_pack,
+            company_root=company_root,
+            company_bindings=bindings,
+            company_registry=company_registry,
+            company_profile=company_profile,
+            **({"repository": repository} if repository else {}),
+        )
     )
+    if not isinstance(engine, Engine) or engine.store.root != Path(private_root).resolve():
+        raise DomainError("Trusted workroom engine must use the configured private root")
     company_rights = None
     company_native_rights = None
     if company_rights_factory is not None:
@@ -310,6 +323,26 @@ def create_app(
     app.add_middleware(
         TrustedHostMiddleware, allowed_hosts=allowed_hosts or ["localhost", "127.0.0.1", "[::1]"]
     )
+
+    if request_guard is not None:
+
+        @app.middleware("http")
+        async def retained_workroom_guard(request: Request, call_next):
+            try:
+                await asyncio.to_thread(request_guard, request)
+                return await call_next(request)
+            except DomainError as exc:
+                return JSONResponse({"error": str(exc), "code": exc.code}, status_code=exc.status)
+            except (ValueError, OSError):
+                # Runtime/source custody errors are private operator diagnostics.
+                # No review paths, source pins or private exception text cross HTTP.
+                return JSONResponse(
+                    {
+                        "error": "Retained company workroom unavailable",
+                        "code": "SOURCE_UNAVAILABLE",
+                    },
+                    status_code=503,
+                )
 
     @app.middleware("http")
     async def protected_company_surface(request: Request, call_next):
