@@ -126,7 +126,7 @@ def build(repository: Path, private_repository: Path) -> dict:
                     "v16_existing_targeted_source_ids": route["targeted_integrated_source_ids"],
                     "new_overlay_cohort": group == "SH-LEG-001/PROVISION",
                     "new_overlay_status": (
-                        "ISOLATED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED"
+                        "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED"
                         if group == "SH-LEG-001/PROVISION"
                         else "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION"
                     ),
