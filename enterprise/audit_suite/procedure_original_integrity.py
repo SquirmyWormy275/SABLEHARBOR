@@ -164,4 +164,7 @@ def summarize(projection: dict, read_artifact) -> dict:
 
 def report(engine, actor: str, engagement_id: str) -> dict:
     """Authorize before reading retained originals; never inspect company truth."""
-    return summarize(engine.get(actor, engagement_id), engine.artifacts.read)
+    return summarize(
+        engine.get(actor, engagement_id),
+        lambda manifest: engine.artifacts.read_bounded(manifest, max_bytes=manifest["bytes"]),
+    )

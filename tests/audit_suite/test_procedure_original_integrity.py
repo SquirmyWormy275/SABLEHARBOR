@@ -2,12 +2,13 @@
 
 from copy import deepcopy
 
+import pytest
 from fastapi.testclient import TestClient
 
 from enterprise.audit_suite import procedure_original_integrity as integrity
 from enterprise.audit_suite import sample_execution
 from enterprise.audit_suite.service import create_app
-from enterprise.audit_suite.store import digest
+from enterprise.audit_suite.store import DomainError, digest
 from tests.audit_suite.test_sample_execution import trace as trace
 
 
@@ -129,6 +130,31 @@ def test_reader_bytes_are_hashed_independently_and_ambiguous_manifests_fail_clos
     ambiguous = integrity.summarize(state, lambda manifest: calls.append(manifest))
     assert ambiguous["status"] == "RECHECK_INPUT_UNAVAILABLE"
     assert ambiguous["counts"] is None and calls == []
+
+
+def test_physically_oversized_disposable_original_is_rejected_before_read(trace):
+    state, artifacts = recorded(trace)
+    original = artifacts.root / state["artifacts"][0]["sha256"]
+    saved = original.read_bytes()
+    manifest = state["artifacts"][0]
+
+    class Engine:
+        def get(self, actor, engagement_id):
+            return state
+
+    engine = Engine()
+    engine.artifacts = artifacts
+    try:
+        with original.open("r+b") as stream:
+            stream.truncate(integrity.MAX_SINGLE_BYTES + 1)
+        with pytest.raises(DomainError, match="bounded read"):
+            artifacts.read_bounded(manifest, max_bytes=manifest["bytes"])
+        result = integrity.report(engine, "learner", state["id"])
+        assert result["status"] == "PARTIAL_UNAVAILABLE"
+        assert result["counts"]["integrity_failure"] == 1
+    finally:
+        original.write_bytes(saved)
+    assert integrity.report(engine, "learner", state["id"])["counts"]["verified"] == 1
 
 
 def test_read_only_route_requires_engagement_membership(tmp_path):

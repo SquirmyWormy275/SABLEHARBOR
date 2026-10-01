@@ -14,6 +14,8 @@ The report separates `MISSING_RETAINED_BYTES` (a cited retained file is absent),
 trace metadata or correction lineage is `METADATA_UNAVAILABLE`; its bytes are
 not reported as verified. An explicit 256-original/128 MiB budget returns
 `RECHECK_INPUT_UNAVAILABLE` rather than silently skipping reads.
+The endpoint also limits the physical file read to the pinned byte count, so a
+file enlarged after retention cannot bypass the diagnostic budget.
 
 Byte integrity proves only the custody of cited copies at request time. The
 recorded observations and locators remain author assertions; the report does
