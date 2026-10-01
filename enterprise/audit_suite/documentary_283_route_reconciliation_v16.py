@@ -203,6 +203,7 @@ def _extend(previous: dict, receipt: dict, freeze: dict) -> dict:
     """Preserve V15 row fields and add only the eight specified GOV leads per side."""
     if (
         previous.get("schema") != prior.SCHEMA
+        or previous.get("as_of") != "2026-09-30"
         or previous.get("p1_freeze") != freeze
         or previous.get("audit_task_credit") is not False
         or previous.get("active_pair_mutated") is not False
@@ -312,6 +313,7 @@ def _extend(previous: dict, receipt: dict, freeze: dict) -> dict:
     return {
         **previous,
         "schema": SCHEMA,
+        "as_of": "2026-10-01",
         "v15_prefix_sha256": PINS["v15_ledger"]["sha256"],
         "source_pins": pins,
         "source_pins_sha256": hashlib.sha256(json.dumps(pins, sort_keys=True).encode()).hexdigest(),

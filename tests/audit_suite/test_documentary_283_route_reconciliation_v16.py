@@ -57,6 +57,8 @@ def test_reviewed_pins_and_exact_branch_roster(previous: dict, receipt: dict) ->
 
 def test_only_eight_gov_routes_extend_and_six_generic_promote(previous: dict, result: dict) -> None:
     assert len(result["rows"]) == len(previous["rows"]) == 566
+    assert previous["as_of"] == "2026-09-30"
+    assert result["as_of"] == "2026-10-01"
     assert result["v15_prefix_sha256"] == route.PINS["v15_ledger"]["sha256"]
     assert result["active_p1_tasks"] == previous["active_p1_tasks"]
     for old, new in zip(previous["rows"], result["rows"], strict=True):
@@ -121,6 +123,10 @@ def test_counts_and_authored_limits_persist(result: dict) -> None:
 
 
 def test_tampered_authority_branch_roster_or_gate_fails(previous: dict, receipt: dict) -> None:
+    changed = deepcopy(previous)
+    changed["as_of"] = "2026-10-01"
+    with pytest.raises(route.V16ReconciliationError, match="Reviewed V15 route prefix"):
+        route._extend(changed, receipt, route.P1_FREEZE)
     for key, value in (
         ("actual_board_meeting", True),
         ("adopted_minutes", True),
