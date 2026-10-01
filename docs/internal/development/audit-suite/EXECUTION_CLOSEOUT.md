@@ -1133,10 +1133,16 @@ and a separate read-only verifier passed without changing source/audit bytes.
 Actual Sable Harbor activation and shared-pair/service wrapper review remain
 unperformed. Each concrete company append needs separate exact review.
 
-The new collected-original assurance reconciliation candidate passes 25 focused
-tests. It preserves initial failures after correction, rejects custody/type
-substitutions, identifies self-review, and separates exact workpaper versions,
-declared population counts and incomplete period tails. It has no independent
-acceptance or new fieldwork credit yet. Recovery candidates remain withheld after
-independent native-role, contemporaneous-support and backup/restore-causality
-challenges; prior candidates and proofs are preserved.
+Collected-original assurance reconciliation and the corrected recovery method
+are independently accepted and integrated, with 34 and 28 focused checks
+respectively. Assurance preserves initial failures, verifies receipt identity
+and clocks, identifies self-review, and separates exact workpaper versions,
+declared population counts and incomplete period tails. Recovery requires actual
+native roles, contemporaneous support and known capture/backup/restore ordering
+before any bounded configuration-byte reperformance. Main method reviews:
+`e2c09425fb7db3a13ecd3eb9474afa82851f0811a5c9a922ef01c7b9187d33be`
+and `595488c36db7cb8100c99c3b4bcf1f79e0aa4e6cb056887521a6970ed49242b8`.
+Neither acceptance supplies new Sable Harbor fieldwork or task credit; earlier
+recovery rejections remain preserved. Scope workpaper links also pass fifteen
+focused checks and independent linkage challenges without changing task status.
+Shared-pair and retained-service wrapper review still precede actual activation.

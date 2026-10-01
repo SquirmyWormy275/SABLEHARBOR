@@ -26,7 +26,7 @@ come from each branch's collected originals.
 The October 1 restart recovered the existing isolated work without repeating
 company creation. Current workers own the retained learner-service loader,
 recovery correction/shared-pair orchestration, and independent method review.
-Main owns integration and the next collected-original assurance methods.
+Main owns integration and the collected-original scope-dependency methods.
 
 The current runtime composition has a separate exact gate for the accepted
 5,608-version V3 source, corrected append runtime and successor adapter:
@@ -37,13 +37,36 @@ audit bytes stayed unchanged. This gate does not inherit the historical
 of the single shared-pair and retained-service wrappers; every concrete company
 append also requires its own exact source-operation review.
 
-Collected-original assurance methods are a new unaccepted candidate with 25
-focused tests. Five distinct examinations reconcile owner claims with prior
+Collected-original assurance methods are independently accepted for bounded
+content examination and pass 34 focused tests. Five distinct examinations reconcile owner claims with prior
 issues, second-line underlying originals, programme dates and selected counts,
 population/selection/workpaper versions, and retained remediation history. They
 do not execute stored queries, substitute company workpapers for auditor tests,
 create evidence or award the 23 B08 procedures automatic credit. Independent
-ordinary-collection review and clause-specific fieldwork remain required.
+ordinary-collection review passed; clause-specific fieldwork remains required.
+Main method review: `e2c09425fb7db3a13ecd3eb9474afa82851f0811a5c9a922ef01c7b9187d33be`.
+
+The corrected collected-original recovery method is also independently accepted
+and integrated, with 28 focused tests. Review checked 300 neutral collections,
+39 distinct cases and separate read-only verification. Twelve actual native
+roles, contemporaneous authority and known capture/backup/restore ordering are
+required before a bounded configuration-byte copy; missing support stops that
+reperformance. Original failures and rejected candidates remain preserved.
+Main method review: `595488c36db7cb8100c99c3b4bcf1f79e0aa4e6cb056887521a6970ed49242b8`.
+The two method suites pass 62 checks together; neither supplies new Sable Harbor
+fieldwork, real application recovery, legal judgment or automatic task credit.
+
+Scope workpapers now support the two actual source-dependency tasks without
+inventing control ownership, populations or samples. Fifteen focused checks and
+an independent full-409-workroom linkage challenge passed. Linking a workpaper
+does not complete either task or supply qualified/owner acceptance.
+
+The first retained-service candidate was rejected after a fully resealed Boolean
+native-version receipt passed startup. Its code and independent proof remain
+preserved. The corrected loader is undergoing independent replay against that
+same frozen attack, historical receipts and fresh ordinary HTTP collections.
+The shared-pair wrapper is separately correcting historical-search reuse of
+evidence whose genuine collection receipt is later than the source-view cutoff.
 
 Main-checkout results already reproduced:
 
