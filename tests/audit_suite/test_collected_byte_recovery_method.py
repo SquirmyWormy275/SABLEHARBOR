@@ -572,6 +572,7 @@ def ordinary_inputs(tmp_path, originals):
             available_at=source["available_at"],
             content=item["content"],
             provenance=source["provenance"],
+            origin=source["origin"],
         )
     engine = Engine(
         tmp_path / "actual-neutral-audit",
@@ -762,4 +763,62 @@ def test_actual_late_producer_with_resealed_declared_admission_cannot_support_co
         gap["basis"] == "PRODUCER_NOT_CONTEMPORANEOUSLY_AVAILABLE_AT_CONSUMPTION"
         for gap in result["contemporaneous_support_limitations"]
     )
+    assert not result["real_isolated_byte_restore_performed"] and not scratch.exists()
+
+
+def reseal_document(item, document):
+    raw = json.dumps(document, sort_keys=True).encode()
+    item["content"] = raw
+    item["source"]["sha256"] = item["artifact_sha256"] = sha(raw)
+    item["receipt"]["content_bytes"] = len(raw)
+
+
+@pytest.mark.parametrize("kind", ["backup_after_restore", "completion_before_restore"])
+def test_actual_resealed_impossible_operation_order_stops_before_scratch(tmp_path, kind):
+    tmp_path.chmod(0o700)
+    rows, kw = fixture()
+    target_system = "backup_job" if kind == "backup_after_restore" else "restore_job"
+    item = next(r for r in rows if r["source"]["system"].endswith("." + target_system))
+    document = json.loads(item["content"])
+    if kind == "backup_after_restore":
+        document["business_attempted_at"] = "2027-02-07T01:00:00Z"
+    else:
+        document["business_completed_at"] = "2027-02-06T00:00:00Z"
+    reseal_document(item, document)
+    if kind != "backup_after_restore":
+        kw["restore_ref"] = reference(item["source"])
+    actual, kw["context"] = ordinary_inputs(tmp_path, rows)
+    scratch = tmp_path / "impossible-company-order"
+    result = examine_restore(actual, scratch=scratch, **kw)
+    assert result["status"] == "SUPPORT_UNAVAILABLE"
+    expected = (
+        "BACKUP_ATTEMPT_AFTER_SELECTED_RESTORE_ATTEMPT"
+        if kind == "backup_after_restore"
+        else "DECLARED_COMPANY_COMPLETION_UNKNOWN_OR_PRECEDES_RESTORE_COPY"
+    )
+    assert expected in {g["basis"] for g in result["contemporaneous_support_limitations"]}
+    assert not result["real_isolated_byte_restore_performed"] and not scratch.exists()
+
+
+def test_unknown_capture_time_is_not_substituted_by_publication_or_audit_clock(tmp_path):
+    tmp_path.chmod(0o700)
+    rows, kw = fixture()
+    captured = next(
+        r
+        for r in rows
+        if r["source"]["system"].endswith(".source_dataset") and r["source"]["version"] == 1
+    )
+    captured["source"]["event_at"] = None
+    captured["source"]["origin"] = "MIGRATED_SYNTHETIC_HISTORY"
+    backup = next(r for r in rows if r["source"]["system"].endswith(".backup_job"))
+    document = json.loads(backup["content"])
+    document["source_pin"] = reference(captured["source"])
+    reseal_document(backup, document)
+    actual, kw["context"] = ordinary_inputs(tmp_path, rows)
+    scratch = tmp_path / "no-unknown-capture"
+    result = examine_restore(actual, scratch=scratch, **kw)
+    assert result["status"] == "SUPPORT_UNAVAILABLE"
+    assert "CAPTURE_TIME_UNKNOWN_OR_AFTER_SELECTED_BACKUP_ATTEMPT" in {
+        gap["basis"] for gap in result["contemporaneous_support_limitations"]
+    }
     assert not result["real_isolated_byte_restore_performed"] and not scratch.exists()

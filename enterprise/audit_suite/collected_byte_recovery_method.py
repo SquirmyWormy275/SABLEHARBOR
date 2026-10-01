@@ -454,6 +454,53 @@ def examine_restore(
     if missing:
         return unavailable(missing, [reference(i["source"]) for i in needed.values() if i])
     limitations = []
+    backup_attempted = _time(backup["business_attempted_at"])
+    if backup_attempted > attempted:
+        limitations.append(
+            {
+                "role": "backup_job",
+                "source": reference(backup_item["source"]),
+                "backup_business_attempted_at": backup_attempted,
+                "restore_business_attempted_at": attempted,
+                "basis": "BACKUP_ATTEMPT_AFTER_SELECTED_RESTORE_ATTEMPT",
+            }
+        )
+    for role in ("captured_configuration", "backup_object"):
+        stamp = needed[role]["source"]["event_at"]
+        if stamp is None or _time(stamp) > backup_attempted:
+            limitations.append(
+                {
+                    "role": role,
+                    "source": reference(needed[role]["source"]),
+                    "backup_business_attempted_at": backup_attempted,
+                    "basis": "CAPTURE_TIME_UNKNOWN_OR_AFTER_SELECTED_BACKUP_ATTEMPT",
+                }
+            )
+    copied_at = needed["company_restored_dataset"]["source"]["event_at"]
+    if copied_at is not None and _time(copied_at) < attempted:
+        limitations.append(
+            {
+                "role": "company_restored_dataset",
+                "source": reference(needed["company_restored_dataset"]["source"]),
+                "restore_business_attempted_at": attempted,
+                "basis": "RECORDED_RESTORED_OBJECT_PRECEDES_SELECTED_RESTORE_ATTEMPT",
+            }
+        )
+    for field in ("business_completed_at", "completed_at", "finished_at"):
+        if field in restore and (
+            restore[field] is None
+            or _time(restore[field]) < attempted
+            or (copied_at is not None and _time(restore[field]) < _time(copied_at))
+        ):
+            limitations.append(
+                {
+                    "role": "restore_job." + field,
+                    "source": reference(needed["restore_job"]["source"]),
+                    "restore_business_attempted_at": attempted,
+                    "declared_completion_at": restore[field],
+                    "basis": "DECLARED_COMPANY_COMPLETION_UNKNOWN_OR_PRECEDES_RESTORE_COPY",
+                }
+            )
     for operation, job in (("backup", backup), ("restore", restore)):
         when = job["business_attempted_at"]
         roles = ["runtime_definition", "operating_period_original", operation + "_credential"]
@@ -472,6 +519,24 @@ def examine_restore(
                         "basis": "COLLECTED_ORIGINAL_NOT_CONTEMPORANEOUSLY_AVAILABLE",
                     }
                 )
+        credential = credential_observation(needed[operation + "_credential"], job)
+        if not all(
+            credential[key]
+            for key in (
+                "enabled",
+                "principal_matches_company_performer",
+                "lease_covers_business_attempt",
+            )
+        ):
+            limitations.append(
+                {
+                    "role": operation + "_credential",
+                    "source": credential["source"],
+                    "business_attempted_at": when,
+                    "credential_observation": credential,
+                    "basis": "DECLARED_COPY_LEASE_NOT_ENABLED_BOUND_AND_VALID_AT_ATTEMPT",
+                }
+            )
     for label, observations in admissions.items():
         when = backup["business_attempted_at"] if label == "captured_configuration" else attempted
         if _time(observations["consumed_at"]) > _time(when):
