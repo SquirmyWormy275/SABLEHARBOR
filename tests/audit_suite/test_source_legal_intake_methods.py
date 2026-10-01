@@ -132,9 +132,7 @@ def history(*, channels=None, omitted=False, correction=False, startup=False):
                     "registered_channels_only": True,
                     "record_count": len(declared),
                     "declared_message_ids": declared,
-                    "query": (
-                        "SELECT original versions by company, branch, channel and window"
-                    ),
+                    "query": ("SELECT original versions by company, branch, channel and window"),
                     "channel_operation_start": established,
                     "window_operational_coverage_start": established if startup else START,
                     "full_window_channel_continuity_established": not startup,
@@ -499,10 +497,24 @@ def test_uncollected_attachment_does_not_conflate_matching_counts_with_preservat
 
 def test_archive_count_claims_are_reperformed_separately_from_monthly_roster():
     rows = history()
-    rows.append(retained("legaloriginals", "legal_archive_reconciliation", "ARCHIVE", {
-        "source_scope": SCOPE, "inbound_message_count": 999, "retained_attachment_count": 1,
-        "monthly_channel_export_count": len(CHANNELS), "declared_channel_count": len(CHANNELS),
-    }, "2028-01-02T11:00:00Z"))
+    rows.append(
+        retained(
+            "legaloriginals",
+            "legal_archive_reconciliation",
+            "ARCHIVE",
+            {
+                "source_scope": SCOPE,
+                "inbound_message_count": 999,
+                "retained_attachment_count": 1,
+                "monthly_export_count": len(CHANNELS),
+                "declared_channel_count": len(CHANNELS),
+                "registered_channel_ids": CHANNELS,
+                "retained_summary_item_ids": ["MESSAGE-X"],
+                "period_end_exclusive": STOP,
+            },
+            "2028-01-02T11:00:00Z",
+        )
+    )
     result = examine(rows, as_of=AS_OF)
     assert "REVIEW_RETAINED_COUNT_MISMATCH" in kinds(result)
     assert result["selected_export_original_roster_corroborated"]

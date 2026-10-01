@@ -802,7 +802,7 @@ def examine(records: list[dict], *, as_of: str) -> dict:
                         if _time(r["source"]["available_at"]) <= _time(row["source"]["event_at"])
                     }
                 ),
-                "monthly_channel_export_count": len(
+                "monthly_export_count": len(
                     {
                         r["source"]["record"]
                         for r in by_system["legal_channel_export"]
@@ -818,6 +818,36 @@ def examine(records: list[dict], *, as_of: str) -> dict:
                         field=field,
                         declared_count=body[field],
                         observed_count=observed,
+                    )
+            if system == "legal_archive_reconciliation":
+                declared_channels = set(
+                    _tokens(body.get("registered_channel_ids"), "archive registered channels")
+                )
+                if declared_channels != channels:
+                    issue(
+                        row,
+                        "ARCHIVE_REGISTERED_CHANNEL_ROSTER_MISMATCH",
+                        missing_channel_ids=sorted(channels - declared_channels),
+                        unexpected_channel_ids=sorted(declared_channels - channels),
+                    )
+                require(
+                    _dt(body["period_end_exclusive"]) == months[-1][1],
+                    "Archive period boundary differs from selected registry",
+                )
+                declared_ids = set(
+                    _tokens(body.get("retained_summary_item_ids"), "archive retained messages")
+                )
+                observed_ids = {
+                    r["source"]["record"]
+                    for r in by_system["legal_inbound_message"]
+                    if _time(r["source"]["available_at"]) <= _time(row["source"]["event_at"])
+                }
+                if declared_ids != observed_ids:
+                    issue(
+                        row,
+                        "ARCHIVE_RETAINED_ORIGINAL_ROSTER_MISMATCH",
+                        missing_original_ids=sorted(declared_ids - observed_ids),
+                        undeclared_original_ids=sorted(observed_ids - declared_ids),
                     )
             context_observations.append(
                 {
