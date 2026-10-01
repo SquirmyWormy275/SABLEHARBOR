@@ -190,6 +190,12 @@ real HIPAA applicability. The reviewed V9 partial registry now has 30 cohorts,
 profile; isolated and main-local reports match byte for byte. This is selected
 source routing only. All 66 authored LEG001 clauses per side remain
 unsupported, and neither a fresh audit pair nor task credit has been created.
+The independently reviewed V8 exact route successor adds eight selected
+LEG001 leads per side, including two conditional complaint/hearing leads that
+remain unsupported. It names 169 distinct discovery task IDs per side, with
+132 partial, 30 design-only and 121 unsupported exact clauses unchanged. The
+legal-status overlay clause is still unassigned; all 66 authored LEG001
+clauses remain unsupported and every P1 task stays `NOT_STARTED`/`NOT_RUN`.
 
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
