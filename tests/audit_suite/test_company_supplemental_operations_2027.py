@@ -293,6 +293,30 @@ def test_later_operations_leave_old_scope_and_lapses_visible(native_run, tmp_pat
     assert checked["route_locator_count_per_side"] == 12
 
 
+def test_protected_reporting_uses_sanctions_exception_and_antiretaliation_references(native_run):
+    for side in "AB":
+        bodies = _bodies(native_run, side)
+        assert "164.502(g)(2)" not in json.dumps(list(bodies.values()))
+        privacy = bodies[("privacy_responsibility", "CUSTOMER-OBLIGATION-BOUNDARY", 1)]
+        bases = privacy["prohibited_sanction_bases"]
+        assert bases[0] == "Protected whistleblowing under164.502(j)"
+        assert bases[1] == "Protected reporting under164.530(g)(2), applying160.316 conditions"
+        assert len(privacy["covered_customer_retains"]) == 4
+        assert "Covered-customer workforce sanctions" in privacy["covered_customer_retains"]
+        assert (
+            "Local workforce sanctions for established security-policy noncompliance"
+            in (privacy["direct_security_responsibilities"])
+        )
+    review = _bodies(native_run, "B")[("workforce_case", "ER-2027-PROTECTED-REPORT-REVIEW", 1)]
+    assert review["protected_disclosures_considered"] == [
+        "164.502(j)",
+        "164.530(g)(2)",
+        "160.316",
+    ]
+    assert review["decision"] == "REJECT_ADVERSE_ACTION"
+    assert review["action_applied"] is False
+
+
 def test_discovery_cannot_see_january_closure_at_december_fieldwork(native_run):
     # Grant only in a disposable ordinary-byte copy, never the sealed source output.
     copy = native_run.parent / "discovery-copy"

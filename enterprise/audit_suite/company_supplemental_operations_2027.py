@@ -1173,7 +1173,7 @@ def _plan(ctx: dict, side: str) -> list[dict]:
             },
             "prohibited_sanction_bases": [
                 "Protected whistleblowing under164.502(j)",
-                "Protected disclosure under164.502(g)(2)",
+                "Protected reporting under164.530(g)(2), applying160.316 conditions",
                 "Good-faith complaint or participation in a proceeding",
             ],
         },
@@ -2150,7 +2150,7 @@ def _plan(ctx: dict, side: str) -> list[dict]:
                     "Good-faith reporting/participation is protected; no independently "
                     "substantiated misconduct by reporter"
                 ),
-                "protected_disclosures_considered": ["164.502(j)", "164.502(g)(2)"],
+                "protected_disclosures_considered": ["164.502(j)", "164.530(g)(2)", "160.316"],
                 "action_applied": False,
                 "proposal_original_retained": True,
             },
