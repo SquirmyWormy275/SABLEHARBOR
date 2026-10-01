@@ -1,0 +1,49 @@
+# Consolidated company history successor V3
+
+This is an operator-only source migration and admission contract. It initializes a persistent fictional company library before an audit exists. It grants no access, creates no engagement or evidence, awards no task credit, and asserts no whole-company completeness. The accepted 1,783-version V2.1 library and its authorization remain a separate, unchanged boundary. A V3 audit adapter requires a new independently reviewed source-quality decision and exact database/manifest/review pins.
+
+## Declared source boundary
+
+V3 imports 5,600 distinct original native versions and publishes 5,608 versions. Its 69 admitted physical stores comprise the previous 48 selected stores (1,783 versions), 416 older operating versions, the independently accepted 3,399-version person/account family, and two selected original nonpersonal service data inputs. Eight additional outputs are explicitly declared copies of approved common upstream inputs; they add no new original company history or runtime execution.
+
+The 416 older versions consist of ten canonical change, configuration, identity, incident, lifecycle, logging, nonhuman, provider, risk and training histories (330 versions); owned backup, configuration and period-ledger histories (49 versions); and the distinct pre-audit A lifecycle/logging/risk histories (37 versions). The physical source and record selections are literal in the pinned private operator registry. Matching bytes never establish physical identity, branch authority or metadata equivalence.
+
+Unselected rows and original grants, access journals, collection journals, receipts, instructions and source-authoring metadata stay in their original private stores. None of those old audit/access journals is imported as new operating authority or evidence. Frozen P1 remains the original 538-file capsule with aggregate digest `f266ef682b502b3b093170f8a7b64fcf5cbab722d5c8ddf6715a63c0e535360f`.
+
+## Migration fidelity and custody
+
+Every transformation has an explicit original physical store, complete original record identity, original content hash and exact JSON pointer. Only declared authoring fields or labels are removed or neutralized. Business observations, claims, discrepancies, chronology, omissions, rights, local-model limits and later corrections survive. There is no outcome predicate, blanket string redaction, inferred audit mode, hidden Key, invented predecessor or automatic grade.
+
+The private transformation manifest preserves the original header and authoring custody for every changed reference. Both native and older compact `system_id`/`record_id` reference shapes map through their declared writer/source-family contracts. Equivalent timestamp representations in the compact contracts are compared as UTC instants; the complete original header representation remains privately preserved. Business extras such as `purpose` and `source_store_id` remain intact.
+
+Scalar content references, self-vector hashes, linked monthly/quarterly vectors, logging event envelopes, publisher/collector membership maps and backup monitor membership vectors are independently re-derived from their exact native definitions. Original file, copy, object and executed configuration digests keep their unchanged payload bytes. A migrated reference never turns an original metadata digest into a content digest.
+
+Original SQL metadata hashes retain their exact ten-field archive definition, including original origin and provenance. Separately named operational reference-vector hashes bind the newly published references. Three pre-audit A identity rows have an explicit same-branch business-equivalence contract: exact equal content bytes, native identity and event/publication clocks, with distinct original physical metadata custody. Their archived SQL digest stays unchanged. This is not full-native identity equivalence or a hash-only alias.
+
+Captured original provenance digests are verified against the original private provenance bytes and published as `original_provenance_sha256` with an explicit archive basis. They do not claim to hash new library provenance. Actual library provenance records the real initialization clock, fictional origin, raw content hash and verified filename/content type; it carries no source-authoring scenario, recipe outcome or Key.
+
+Operational provenance is an explicitly projected source field, not discarded authoring data. The private leaf inventory classifies every original provenance leaf. Company-facing operational metadata preserves source-admission/export clocks, operator and authority declarations, runtime/source lineage, scope limits, original initialization clocks and original business reference identifiers. Original input/recipe/scenario/review pins and physical private paths remain in private custody. Unknown provenance fields block compilation.
+
+Original source-admission metadata digests retain the exact two original SQL-header bundles, including original provenance strings, as `original_metadata_sha256`. A distinct `projected_metadata_sha256` binds the published native reference-header pair `{original: metadata, definition: definition_metadata}`. Those eight-field references omit current import/provenance metadata; they must join actual ordinarily collected targets. Restrictions remain support unavailable. Neither digest authenticates a producer by itself. Original executed period-ledger payloads and their original branch coordinates remain byte-exact so runtime declaration hashes retain their actual basis.
+
+## Exactly scoped common inputs
+
+The explicit eight one-to-many contracts cover three integrity inputs, three inherited local-duty inputs, and two direct nonpersonal service data inputs. Each contract names exactly one original and two projected counterparts. Newly distinct counterpart namespaces start at native version 1 and retain the original content-version number, original bytes and original event/publication dates in their migration lineage. They create no invented earlier version, new employment/office appointment, runtime operation or blanket access to another source branch.
+
+The two nonhuman historical-motivation originals remain restricted. A copied motivation never becomes either world's operating evidence. Other genuinely wrong-branch or unregistered pointers remain restrictions.
+
+## Remaining limits
+
+The final private reference inventory names every restricted owner, pointer, original physical identity when resolved, raw header and classification. Current counts are 204 restricted pointers: 82 unregistered dependencies, 60 archive-motivation-only references, 54 cross-branch references and eight ambiguous references. These are source limits, not evidence that a control failed or passed. Ordinary access and collection must establish any later audit claim.
+
+The person/account source retains its January 1 03:15 startup gap, proposed/former-person exclusions, local-duty scope, legacy entitlement histories and unresolved review anchors. Dated corrections do not close earlier omissions retroactively. Original neutral restricted witnesses stay archive witnesses unless an explicit operational counterpart is separately established.
+
+The older owned backup/configuration capsules provide real original nonpersonal local configuration payloads and copy/restore records for the bounded February 2027 exercise. Original executed runtime definition bytes remain exact, with embedded identifiers explicitly qualified as original archive coordinates. Migration executes no new projected runtime and establishes no deployment, application/ePHI data-as-of, enterprise census or accepted business RTO/RPO. Historical August recovery marker bytes remain absent. External repository/document/configuration digest declarations that are not new native-reference contracts are preserved as original declarations, without new verification of their historical external files.
+
+## Operator commands and review
+
+Run with the repository's Python environment and `PYTHONPATH=src:.`; set `PYTHONDONTWRITEBYTECODE=1` when reading frozen implementations. The module is `enterprise.audit_suite.company_operational_library_projection_v3`; the separate literal recipe is `company_operational_library_projection_registry_v3.json`. Call `create(destination, repository=repository, private_repository=original_source_repository)` once into a new private directory, then independently call `verify` from a new Python process. The destination contains only `company.sqlite3`, `RECEIPT.json`, `MANIFEST.json` and private `TRANSFORMATION.json`.
+
+Focused validation is `pytest -q tests/audit_suite/test_company_operational_library_projection_v3.py`, plus Ruff over the V3 module and tests. Tests compare unchanged business leaves, exact source/copy bytes, all shared counterparts, original metadata witnesses, full and compact reference custody, digest chains, eight legacy IAM quarterly joins, all 1,462 local permission decisions, 24 monthly populations and eight new quarterly populations. Ordinary Engine collection verifies typed original human/service/person text bytes without a prepared evidence set. Adversarial ordinary-copy tests challenge author answers, provenance, import clocks, native observations, immutable trigger/schema/receipt shapes, grants, wrong-branch byte-equal targets, common-copy contracts, archive metadata, vector bases and reference business purpose.
+
+The private handoff binds the exact commit, recipe, candidate files, original input pins, restricted inventory, source characterization and verification results. Preliminary candidates and their failed fidelity review remain preserved separately. Root must independently review the frozen candidate, reproduce main initialization, and issue the new V3 source-quality decision before an audit adapter may bind it.
