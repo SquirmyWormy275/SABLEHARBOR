@@ -52,6 +52,33 @@ describe("retained original UI boundaries", () => {
     ).toBe(false);
   });
 
+  it("rejects malformed or contradictory byte-check results", () => {
+    expect(
+      currentIntegrity(
+        { ...report, metadata_status: "INPUT_UNAVAILABLE", counts: null },
+        engagement,
+      ),
+    ).toBe(false);
+    expect(
+      currentIntegrity(
+        { ...report, counts: { ...report.counts!, referenced: 2 } },
+        engagement,
+      ),
+    ).toBe(false);
+    expect(currentIntegrity({ ...report, status: "UNKNOWN" }, engagement)).toBe(
+      false,
+    );
+    expect(
+      currentIntegrity(
+        {
+          ...report,
+          traces: [{ id: "TRACE-1", status: "METADATA_UNAVAILABLE" }],
+        },
+        engagement,
+      ),
+    ).toBe(false);
+  });
+
   it("does not attach an ambiguous trace result to a procedure", () => {
     expect(traceIntegrity(report, "TRACE-1")?.status).toBe(
       "VERIFIED_RETAINED_BYTES",

@@ -22,14 +22,134 @@ export function currentIntegrity(
   report: OriginalIntegrity,
   engagement: Engagement,
 ): boolean {
-  return (
-    report.schema_version === "1.0" &&
-    report.engagement_id === engagement.id &&
-    report.engagement_revision === engagement.revision &&
-    report.automatic_testing_credit === false &&
-    Array.isArray(report.artifacts) &&
-    Array.isArray(report.traces)
-  );
+  if (!report || typeof report !== "object") return false;
+  if (
+    report.schema_version !== "1.0" ||
+    report.engagement_id !== engagement.id ||
+    report.engagement_revision !== engagement.revision ||
+    report.automatic_testing_credit !== false ||
+    !Array.isArray(report.artifacts) ||
+    !Array.isArray(report.traces) ||
+    !["AVAILABLE", "PARTIAL_UNAVAILABLE", "INPUT_UNAVAILABLE"].includes(
+      report.metadata_status,
+    ) ||
+    ![
+      "VERIFIED_RETAINED_BYTES_ONLY",
+      "PARTIAL_UNAVAILABLE",
+      "NO_RECORDED_TRACES",
+      "NO_RETAINED_ORIGINAL_REFERENCED",
+      "METADATA_UNAVAILABLE",
+      "RECHECK_INPUT_UNAVAILABLE",
+    ].includes(report.status)
+  )
+    return false;
+  const artifactStatuses = [
+    "VERIFIED_RETAINED_BYTES",
+    "MISSING_RETAINED_BYTES",
+    "RETAINED_BYTE_INTEGRITY_FAILURE",
+    "RETAINED_BYTE_READ_UNAVAILABLE",
+  ];
+  const traceStatuses = [
+    "VERIFIED_RETAINED_BYTES",
+    "RETAINED_BYTES_UNAVAILABLE",
+    "NO_RETAINED_ORIGINAL_REFERENCED",
+    "METADATA_UNAVAILABLE",
+    "NOT_RECHECKED",
+  ];
+  if (
+    report.artifacts.some(
+      (row) =>
+        !row ||
+        typeof row.artifact_id !== "string" ||
+        !row.artifact_id ||
+        !artifactStatuses.includes(row.status),
+    ) ||
+    new Set(report.artifacts.map((row) => row.artifact_id)).size !==
+      report.artifacts.length ||
+    report.traces.some(
+      (row) =>
+        !row ||
+        typeof row.id !== "string" ||
+        !row.id ||
+        !traceStatuses.includes(row.status) ||
+        (row.artifact_ids !== undefined &&
+          (!Array.isArray(row.artifact_ids) ||
+            row.artifact_ids.some((id) => typeof id !== "string" || !id))),
+    ) ||
+    new Set(report.traces.map((row) => row.id)).size !== report.traces.length
+  )
+    return false;
+  if (report.counts === null) {
+    return (
+      ["METADATA_UNAVAILABLE", "RECHECK_INPUT_UNAVAILABLE"].includes(
+        report.status,
+      ) &&
+      report.artifacts.length === 0 &&
+      report.traces.every((row) => row.status === "NOT_RECHECKED")
+    );
+  }
+  const counts = report.counts;
+  if (!counts || typeof counts !== "object") return false;
+  if (
+    [
+      counts.referenced,
+      counts.verified,
+      counts.missing,
+      counts.integrity_failure,
+      counts.read_unavailable,
+    ].some((value) => !Number.isSafeInteger(value) || value < 0) ||
+    counts.referenced !== report.artifacts.length ||
+    counts.referenced !==
+      counts.verified +
+        counts.missing +
+        counts.integrity_failure +
+        counts.read_unavailable ||
+    counts.verified !==
+      report.artifacts.filter((row) => row.status === "VERIFIED_RETAINED_BYTES")
+        .length ||
+    counts.missing !==
+      report.artifacts.filter((row) => row.status === "MISSING_RETAINED_BYTES")
+        .length ||
+    counts.integrity_failure !==
+      report.artifacts.filter(
+        (row) => row.status === "RETAINED_BYTE_INTEGRITY_FAILURE",
+      ).length ||
+    counts.read_unavailable !==
+      report.artifacts.filter(
+        (row) => row.status === "RETAINED_BYTE_READ_UNAVAILABLE",
+      ).length
+  )
+    return false;
+  if (report.status === "VERIFIED_RETAINED_BYTES_ONLY") {
+    return (
+      report.metadata_status === "AVAILABLE" &&
+      counts.referenced > 0 &&
+      counts.verified === counts.referenced &&
+      report.traces.length > 0 &&
+      report.traces.every((row) =>
+        ["VERIFIED_RETAINED_BYTES", "NO_RETAINED_ORIGINAL_REFERENCED"].includes(
+          row.status,
+        ),
+      ) &&
+      report.traces.some((row) => row.status === "VERIFIED_RETAINED_BYTES")
+    );
+  }
+  if (report.status === "NO_RECORDED_TRACES")
+    return (
+      report.metadata_status === "AVAILABLE" &&
+      counts.referenced === 0 &&
+      report.traces.length === 0
+    );
+  if (report.status === "NO_RETAINED_ORIGINAL_REFERENCED")
+    return (
+      report.metadata_status === "AVAILABLE" &&
+      counts.referenced === 0 &&
+      report.traces.length > 0 &&
+      report.traces.every(
+        (row) => row.status === "NO_RETAINED_ORIGINAL_REFERENCED",
+      )
+    );
+  return report.status === "PARTIAL_UNAVAILABLE";
 }
 
 export function traceIntegrity(

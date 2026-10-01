@@ -58,6 +58,8 @@ export function WorkStatus({
   const allowed = e.permissions?.some((permission) =>
     ["learn", "review", "instruct"].includes(permission),
   );
+  const visibleIntegrity =
+    integrity && currentIntegrity(integrity, e) ? integrity : null;
   useEffect(() => {
     epoch.current++;
     setReport(null);
@@ -196,18 +198,18 @@ export function WorkStatus({
             </button>
           </div>
           {integrityError && <p role="alert">{integrityError}</p>}
-          {integrity && (
+          {visibleIntegrity && (
             <section aria-label="Retained original byte check">
               <p role="status">
-                {integrityStatusLabels[integrity.status] ?? integrity.status}
+                {integrityStatusLabels[visibleIntegrity.status]}
               </p>
-              {integrity.counts ? (
+              {visibleIntegrity.counts ? (
                 <p>
-                  {integrity.counts.verified} verified ·{" "}
-                  {integrity.counts.missing} missing ·{" "}
-                  {integrity.counts.integrity_failure} changed ·{" "}
-                  {integrity.counts.read_unavailable} unreadable of{" "}
-                  {integrity.counts.referenced} cited retained originals.
+                  {visibleIntegrity.counts.verified} verified ·{" "}
+                  {visibleIntegrity.counts.missing} missing ·{" "}
+                  {visibleIntegrity.counts.integrity_failure} changed ·{" "}
+                  {visibleIntegrity.counts.read_unavailable} unreadable of{" "}
+                  {visibleIntegrity.counts.referenced} cited retained originals.
                 </p>
               ) : (
                 <p>
@@ -303,7 +305,7 @@ export function WorkStatus({
                         data={
                           p.sample_trace_readiness as TraceReadiness | undefined
                         }
-                        integrity={integrity ?? undefined}
+                        integrity={visibleIntegrity ?? undefined}
                         onPreview={onPreview}
                       />
                     </li>
