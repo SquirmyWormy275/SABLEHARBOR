@@ -205,6 +205,13 @@ source-access diagnostic to the legal docket with 88 ordinary copies and 62
 scoped receipts. REC003's inherited journals, all source originals and P1
 remain unchanged. A selected legal change-watch read does not establish a
 complete matter population or satisfy an authored clause.
+The independently reviewed V10 partial registry adds the existing prospective
+HIPAA addressable docket: 31 source cohorts, 710 native versions, 45
+components, 32 pins and 281 aliases per profile. Its 22 specification cases
+per side remain pending, Clean awaits review, and Messy retains the invalid
+blanket-waiver/omission history with an open exception. There is no actual
+applicability, environmental choice, implemented safeguard, source-complete
+registry, fresh pair or task credit.
 
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
