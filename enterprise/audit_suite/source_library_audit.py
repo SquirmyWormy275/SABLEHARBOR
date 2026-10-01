@@ -49,6 +49,12 @@ BUSINESS_REFERENCE = tuple(key for key in CLOCK_ID if key != "imported_at")
 LIBRARY_REVIEW_SCHEMA = "SH_ROOT_COMPANY_LIBRARY_INDEPENDENT_REVIEW_V1"
 LIBRARY_REVIEW_VERDICT = "PASS_COMPANY_FACING_LIBRARY_SELECTED_BOUNDARY"
 LIBRARY_MANIFEST_SCHEMA = "SH_COMPANY_OPERATIONAL_PROJECTION_V2_1"
+SUCCESSOR_MANIFEST_SCHEMA = "SH_COMPANY_OPERATIONAL_PROJECTION_V3"
+SUCCESSOR_SOURCE_ADMISSION = {
+    "manifest_schema": SUCCESSOR_MANIFEST_SCHEMA,
+    "operating_provenance_reviewed": True,
+    "population_boundary": "CONSOLIDATED_SELECTED_COMPANY_HISTORY_NOT_ENTIRE_ENTERPRISE",
+}
 
 
 def file_sha(path: Path) -> str:
@@ -188,11 +194,20 @@ class AcceptedLibrary:
             and review["native_versions"] == self.version_count,
             "Review must bind exact database, manifest and version boundary",
         )
+        source_schema = manifest.get("schema")
         require(
-            manifest.get("schema") == LIBRARY_MANIFEST_SCHEMA
+            source_schema in {LIBRARY_MANIFEST_SCHEMA, SUCCESSOR_MANIFEST_SCHEMA}
             and manifest.get("files", {}).get("company.sqlite3") == self.database_sha256,
             "Manifest must bind the exact projected library database",
         )
+        if source_schema == SUCCESSOR_MANIFEST_SCHEMA:
+            admission = review.get("source_schema_admission")
+            require(
+                isinstance(admission, dict)
+                and admission == SUCCESSOR_SOURCE_ADMISSION
+                and admission.get("operating_provenance_reviewed") is True,
+                "Successor source schema and operating provenance require explicit review",
+            )
         with quiescent_read(self.database) as db:
             require(
                 db.execute("SELECT COUNT(*) FROM versions").fetchone()[0] == self.version_count,

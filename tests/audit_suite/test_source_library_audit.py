@@ -2,6 +2,7 @@ import hashlib
 import json
 import sqlite3
 from contextlib import contextmanager
+from dataclasses import replace
 from pathlib import Path
 
 import pytest
@@ -12,6 +13,8 @@ from enterprise.audit_suite.source_library_audit import (
     LIBRARY_MANIFEST_SCHEMA,
     LIBRARY_REVIEW_SCHEMA,
     LIBRARY_REVIEW_VERDICT,
+    SUCCESSOR_MANIFEST_SCHEMA,
+    SUCCESSOR_SOURCE_ADMISSION,
     AcceptedLibrary,
     BusinessRoute,
     LibraryAudit,
@@ -87,6 +90,56 @@ def library(tmp_path):
     )
     route = BusinessRoute("EXAMPLE", "operating", "operations.events", "security", "event_history")
     return accepted, route
+
+
+def successor_review(library, *, admission=None, schema=SUCCESSOR_MANIFEST_SCHEMA):
+    """Neutral contract fixture, never an actual company-source acceptance."""
+    accepted, _ = library
+    manifest = json.loads(accepted.manifest.read_bytes())
+    manifest["schema"] = schema
+    write(accepted.manifest, manifest)
+    review = json.loads(accepted.review.read_bytes())
+    review["library_pins"]["MANIFEST.json"] = file_sha(accepted.manifest)
+    if admission is not None:
+        review["source_schema_admission"] = admission
+    write(accepted.review, review)
+    return replace(
+        accepted,
+        manifest_sha256=file_sha(accepted.manifest),
+        review_sha256=file_sha(accepted.review),
+    )
+
+
+def test_successor_requires_explicit_source_quality_review(library):
+    with pytest.raises(ProcedureError, match="operating provenance require explicit review"):
+        successor_review(library).verify()
+
+
+def test_exact_successor_source_review_can_be_bound(library):
+    accepted = successor_review(library, admission=dict(SUCCESSOR_SOURCE_ADMISSION))
+    assert accepted.verify()["version_count"] == 3
+
+
+@pytest.mark.parametrize(
+    "admission",
+    [
+        {**SUCCESSOR_SOURCE_ADMISSION, "manifest_schema": LIBRARY_MANIFEST_SCHEMA},
+        {**SUCCESSOR_SOURCE_ADMISSION, "operating_provenance_reviewed": False},
+        {**SUCCESSOR_SOURCE_ADMISSION, "operating_provenance_reviewed": 1},
+        {**SUCCESSOR_SOURCE_ADMISSION, "population_boundary": "FULL_COMPANY"},
+        {**SUCCESSOR_SOURCE_ADMISSION, "automatic_audit_credit": True},
+    ],
+)
+def test_successor_review_cannot_expand_or_misstate_admission(library, admission):
+    with pytest.raises(ProcedureError, match="operating provenance require explicit review"):
+        successor_review(library, admission=admission).verify()
+
+
+def test_future_source_schema_not_implicitly_admitted(library):
+    with pytest.raises(ProcedureError, match="Manifest must bind"):
+        successor_review(
+            library, admission=dict(SUCCESSOR_SOURCE_ADMISSION), schema="UNREVIEWED_FUTURE_SCHEMA"
+        ).verify()
 
 
 def command(session, actor, kind, payload):
