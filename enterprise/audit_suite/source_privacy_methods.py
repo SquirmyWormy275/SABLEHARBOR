@@ -24,6 +24,15 @@ CASE_SYSTEMS = (
     "privacy_release",
     "privacy_receipt",
 )
+SERVICE_SCOPE = ("service_id", "dataset_id", "customer_id", "contracting_entity_id")
+CAUSAL_EDGES = (
+    ("privacy_request", "privacy_customer_decision"),
+    ("privacy_request", "privacy_gate_decision"),
+    ("privacy_customer_decision", "privacy_gate_decision"),
+    ("privacy_customer_decision", "privacy_release"),
+    ("privacy_gate_decision", "privacy_release"),
+    ("privacy_release", "privacy_receipt"),
+)
 LIMITS = (
     "Selected customer-directed nonpersonal token histories only; no enterprise "
     "ePHI, designated-record-set or full audit-period population is established.",
@@ -80,6 +89,14 @@ def _prepare(records: list[dict], as_of: str) -> tuple[list[dict], dict]:
             "Declared privacy business routing required",
         )
         require(
+            source["system"] == FAMILY + "." + record["logical_system"],
+            "Logical privacy routing differs from actual native system",
+        )
+        require(
+            all(isinstance(document.get(k), str) and document[k] for k in SERVICE_SCOPE),
+            "Explicit selected service/dataset/customer/entity scope required",
+        )
+        require(
             type(document.get("payload_bytes")) is int
             and document["payload_bytes"] == 0
             and document.get("real_phi_payload") is False
@@ -98,6 +115,10 @@ def _prepare(records: list[dict], as_of: str) -> tuple[list[dict], dict]:
     require(
         len({(r["source"]["company"], r["source"]["branch"]) for r in prepared}) == 1,
         "One explicitly authorized company branch per examination required",
+    )
+    require(
+        len({tuple(r["document"][k] for k in SERVICE_SCOPE) for r in prepared}) == 1,
+        "Collected service/dataset/customer/entity scopes differ",
     )
     return prepared, index
 
@@ -197,6 +218,20 @@ def examine(records: list[dict], *, as_of: str) -> dict:
             selected[system]["document"] for system in CASE_SYSTEMS
         )
         reasons = []
+        causal_violations = []
+        for upstream, consumer in CAUSAL_EDGES:
+            source_available = selected[upstream]["source"]["available_at"]
+            consumer_event = selected[consumer]["source"]["event_at"]
+            if _time(source_available) > _time(consumer_event):
+                reasons.append(f"CAUSAL_SOURCE_UNAVAILABLE:{upstream}->{consumer}")
+                causal_violations.append(
+                    {
+                        "source_system": upstream,
+                        "source_available_at": source_available,
+                        "consumer_system": consumer,
+                        "consumer_event_at": consumer_event,
+                    }
+                )
         delivered = release["execution_status"] == "DELIVERED"
         require(release["execution_status"] in {"DELIVERED", "WITHHELD"}, "Unknown release state")
         require(gate["decision"] in {"PERMIT", "HOLD"}, "Unknown counsel gate state")
@@ -231,8 +266,13 @@ def examine(records: list[dict], *, as_of: str) -> dict:
         else:
             if release["released_scope"]:
                 reasons.append("WITHHELD_RELEASE_RETAINS_RELEASED_SCOPE")
+        recipient_status_known = receipt["status"] in {"RECIPIENT_ACKNOWLEDGED", "NO_DELIVERY"}
+        if not recipient_status_known:
+            reasons.append("RECIPIENT_STATUS_UNDETERMINED")
         acknowledged = receipt["status"] == "RECIPIENT_ACKNOWLEDGED"
-        if acknowledged != delivered or receipt["copy_in_recipient_scope"] != delivered:
+        if (recipient_status_known and acknowledged != delivered) or receipt[
+            "copy_in_recipient_scope"
+        ] != delivered:
             reasons.append("DELIVERY_AND_RECIPIENT_STATUS_DIFFER")
         if receipt["recipient_id"] != release["recipient_id"]:
             reasons.append("RECIPIENT_STATUS_IDENTITY_DIFFERS")
@@ -247,6 +287,8 @@ def examine(records: list[dict], *, as_of: str) -> dict:
                 "execution_status": release["execution_status"],
                 "worker_authority_source": release.get("worker_authority_source"),
                 "recorded_mismatches": reasons,
+                "causal_availability_violations": causal_violations,
+                "recipient_status_known": recipient_status_known,
                 "evidence": {
                     system: {"artifact_id": row["artifact_id"], "source": _reference(row["source"])}
                     for system, row in selected.items()
@@ -273,6 +315,7 @@ def examine(records: list[dict], *, as_of: str) -> dict:
         "schema": "SH_COLLECTED_PRIVACY_EXAMINATION_V1",
         "as_of": _time(as_of),
         "selected_period": period,
+        "selected_service_scope": {k: rows[0]["document"][k] for k in SERVICE_SCOPE},
         "recorded_month_close_at": closed_at,
         "selected_window_finished_at_recorded_close": window_finished_at_close,
         "unestablished_period_tail": None

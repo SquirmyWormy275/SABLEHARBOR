@@ -16,6 +16,10 @@ AS_OF = "2028-01-02T09:00:00Z"
 def retained(system, record, details, *, at="2027-09-21T09:00:00+00:00"):
     available = (datetime.fromisoformat(at) + timedelta(minutes=10)).isoformat()
     body = {
+        "service_id": "neutral-service",
+        "dataset_id": "neutral-dataset",
+        "customer_id": "neutral-customer",
+        "contracting_entity_id": "neutral-entity",
         "payload_bytes": 0,
         "real_phi_payload": False,
         "real_world_processing_or_transfer": False,
@@ -122,6 +126,13 @@ def history(*, permitted=True, delivered=None):
             at="2027-10-01T00:00:00+00:00",
         ),
     ]
+    for hour, row in enumerate(rows[:-1], 9):
+        at = f"2027-09-21T{hour:02}:00:00+00:00"
+        change(
+            row,
+            event_at=at,
+            available_at=(datetime.fromisoformat(at) + timedelta(minutes=10)).isoformat(),
+        )
     return rows
 
 
@@ -237,3 +248,37 @@ def test_out_of_period_request_is_not_hidden_by_a_matching_export_count():
     actual = examine(rows, as_of=AS_OF)
     assert actual["requests_outside_declared_period"] == ["arbitrary-case"]
     assert not actual["selected_population_corroborated"]
+
+
+def test_counsel_first_published_after_delivery_is_not_current_permission():
+    rows = history()
+    change(rows[2], event_at="2027-09-22T11:00:00+00:00", available_at="2027-09-22T11:10:00+00:00")
+    actual = examine(rows, as_of=AS_OF)
+    assert actual["recorded_mismatch_case_ids"] == ["arbitrary-case"]
+    assert any(
+        v["source_system"] == "privacy_gate_decision"
+        for v in actual["cases"][0]["causal_availability_violations"]
+    )
+
+
+def test_same_case_identifier_does_not_join_a_different_service_permission():
+    rows = history()
+    change(rows[2], service_id="different-service")
+    with pytest.raises(ProcedureError, match="scopes differ"):
+        examine(rows, as_of=AS_OF)
+
+
+def test_routing_alias_cannot_replace_actual_native_case_system():
+    rows = history()
+    rows[2]["source"]["system"] = "privacyops.privacy_request"
+    rows[2]["receipt"]["source"] = deepcopy(rows[2]["source"])
+    with pytest.raises(ProcedureError, match="actual native system"):
+        examine(rows, as_of=AS_OF)
+
+
+def test_unknown_withheld_receipt_state_is_not_known_nondelivery():
+    rows = history(permitted=False)
+    change(rows[4], status="EXPORT_STATUS_UNDETERMINED")
+    actual = examine(rows, as_of=AS_OF)
+    assert not actual["cases"][0]["recipient_status_known"]
+    assert "RECIPIENT_STATUS_UNDETERMINED" in actual["cases"][0]["recorded_mismatches"]
