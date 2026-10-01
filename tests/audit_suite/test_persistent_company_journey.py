@@ -475,3 +475,78 @@ def test_exact_source_operation_approval_cannot_be_reused_for_other_bytes(world)
     with pytest.raises(ProcedureError, match="exact company-owned"):
         world.operation_approval(operation, world.operator.principal, path, file_sha(path))
     assert world.verify()["native_versions"] == 2
+
+
+@pytest.mark.parametrize(
+    "mutation",
+    [
+        "backdated_event_and_publication",
+        "boolean_predecessor",
+        "extra_operation_field",
+        "event_after_publication",
+        "publication_before_predecessor",
+    ],
+)
+def test_fully_resealed_successor_replay_uses_the_same_live_append_contract(world, mutation):
+    from enterprise.audit_suite.company_store import _time
+    from enterprise.audit_suite.persistent_company_journey import rows_sha
+
+    update = world.append(world.operator, *correction(world))
+    receipt_path = Path(update["receipt"])
+    receipt = json.loads(receipt_path.read_bytes())
+    operation = receipt["operation"]
+    if mutation == "backdated_event_and_publication":
+        operation["event_at"] = "2027-01-01T00:00:00Z"
+        operation["available_at"] = "2027-01-01T01:00:00Z"
+    elif mutation == "boolean_predecessor":
+        operation["expected_version"] = True
+    elif mutation == "extra_operation_field":
+        operation["unexpected_operation_option"] = True
+    elif mutation == "event_after_publication":
+        operation["event_at"] = "2027-01-12T00:00:00Z"
+    else:
+        operation["event_at"] = "2027-01-02T00:00:00Z"
+        operation["available_at"] = "2027-01-02T00:30:00Z"
+    event, available = _time(operation["event_at"]), _time(operation["available_at"])
+    fingerprint = hashlib.sha256(
+        _json(
+            [
+                [operation[k] for k in ("company", "branch", "system", "record")],
+                operation["expected_version"],
+                event,
+                available,
+                operation["origin"],
+                operation["provenance"],
+                operation["content_sha256"],
+            ]
+        ).encode()
+    ).hexdigest()
+    with sqlite3.connect(world.database) as db:
+        trigger = db.execute(
+            "SELECT sql FROM sqlite_master WHERE name='no_version_update'"
+        ).fetchone()[0]
+        db.execute("DROP TRIGGER no_version_update")
+        db.execute(
+            "UPDATE versions SET event_at=?,available_at=?,input_digest=? "
+            "WHERE branch='ALPHA' AND version=2",
+            (event, available, fingerprint),
+        )
+        db.execute(trigger)
+    # Repair all custody digests, including the caller's external current checkpoint pin.
+    rows = native_rows(world.database)
+    key = ("NEUTRAL-COMPANY", "ALPHA", "operations.events", "event-one", 2)
+    receipt["native_row"] = rows[key]
+    receipt["operation_sha256"] = hashlib.sha256(_json(operation).encode()).hexdigest()
+    receipt["approval"]["operation_sha256"] = receipt["operation_sha256"]
+    receipt_path.write_bytes((_json(receipt) + "\n").encode())
+    checkpoint = json.loads(world.checkpoint.read_bytes())
+    checkpoint["operations"][0]["sha256"] = file_sha(receipt_path)
+    checkpoint["native_rows_sha256"] = rows_sha(rows)
+    world.checkpoint.write_bytes((_json(checkpoint) + "\n").encode())
+    repaired_external_pin = file_sha(world.checkpoint)
+    with pytest.raises(
+        ProcedureError, match="nonretroactive|Strict integer|fields/bytes|publication"
+    ):
+        PersistentCompany(
+            world.accepted, world.root, world.checkpoint, repaired_external_pin, read_only=True
+        )

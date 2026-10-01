@@ -39,6 +39,63 @@ RUNTIME_SCHEMA = "SH_ROOT_PERSISTENT_COMPANY_RUNTIME_REVIEW_V1"
 RUNTIME_VERDICT = "PASS_SHARED_APPEND_ONLY_COMPANY_RUNTIME_SELECTED_BOUNDARY"
 OPERATION_SCHEMA = "SH_ROOT_COMPANY_SOURCE_OPERATION_REVIEW_V1"
 OPERATION_VERDICT = "PASS_COMPANY_OWNED_APPEND_OPERATION_SELECTED_BOUNDARY"
+OPERATION_FIELDS = {
+    "company",
+    "branch",
+    "system",
+    "record",
+    "expected_version",
+    "command_id",
+    "event_at",
+    "available_at",
+    "content_sha256",
+    "provenance",
+    "origin",
+}
+
+
+def validate_operation(operation, content, predecessor=None):
+    """The same exact operation contract governs live admission and custody replay."""
+    require(
+        isinstance(operation, dict)
+        and set(operation) == OPERATION_FIELDS
+        and isinstance(content, bytes)
+        and 0 < len(content) <= 25 * 1024 * 1024
+        and hashlib.sha256(content).hexdigest() == operation["content_sha256"],
+        "Exact approved source-operation fields/bytes required",
+    )
+    for key in (*NATIVE_ID[:4], "command_id"):
+        _id(operation[key])
+    require(
+        type(operation["expected_version"]) is int and operation["expected_version"] >= 0,
+        "Strict integer source predecessor version required",
+    )
+    require(
+        operation["origin"]
+        in {
+            "AUTHORED_TRAINING_SOURCE",
+            "MIGRATED_SYNTHETIC_HISTORY",
+            "REPOSITORY_SYNTHETIC_DOCUMENT",
+        }
+        and isinstance(operation["provenance"], dict)
+        and operation["provenance"].get("source_reference")
+        and len(_json(operation["provenance"]).encode()) <= 65536,
+        "Explicit synthetic origin and bounded source provenance required",
+    )
+    event, available = _time(operation["event_at"]), _time(operation["available_at"])
+    require(event <= available, "Source publication cannot precede business event")
+    typed_content({**operation, "sha256": operation["content_sha256"], "content": content})
+    if predecessor is not None:
+        require(
+            type(predecessor["version"]) is int
+            and operation["expected_version"] == predecessor["version"]
+            and all(operation[key] == predecessor[key] for key in NATIVE_ID[:4])
+            and predecessor["event_at"] is not None
+            and event >= _time(predecessor["event_at"])
+            and available >= _time(predecessor["available_at"]),
+            "Exact current predecessor and nonretroactive correction chronology required",
+        )
+    return event, available
 
 
 def now():
@@ -299,6 +356,12 @@ class PersistentCompany:
                     "Unaccepted source operation or actual import chronology",
                 )
                 operation = receipt["operation"]
+                predecessors = [r for k, r in expected.items() if k[:4] == key[:4]]
+                require(predecessors, "Correction requires an existing accepted native record")
+                latest = max(predecessors, key=lambda r: r["version"])
+                event, available = validate_operation(
+                    operation, bytes.fromhex(row["content"]), latest
+                )
                 if initialization["engineering_only"]:
                     require(
                         row["company"].startswith("NEUTRAL-")
@@ -318,13 +381,13 @@ class PersistentCompany:
                         Path(receipt["approval"]["path"]),
                         receipt["approval"]["sha256"],
                     )
-                predecessors = [r for k, r in expected.items() if k[:4] == key[:4]]
                 require(
                     predecessors
                     and max(r["version"] for r in predecessors) == operation["expected_version"]
                     and all(row[k] == operation[k] for k in NATIVE_ID[:4])
-                    and row["event_at"] == _time(operation["event_at"])
-                    and row["available_at"] == _time(operation["available_at"])
+                    and row["event_at"] == event
+                    and row["available_at"] == available
+                    and row["imported_at"] == _time(row["imported_at"])
                     and row["origin"] == operation["origin"]
                     and json.loads(row["provenance"]) == operation["provenance"]
                     and receipt["operation_sha256"]
@@ -430,32 +493,8 @@ class PersistentCompany:
         require(not self.read_only, "Read-only company verification cannot append")
         require(actor is self.operator, "Actual trusted company operator capability required")
         self.require_runtime()
-        require(
-            set(operation)
-            == {
-                "company",
-                "branch",
-                "system",
-                "record",
-                "expected_version",
-                "command_id",
-                "event_at",
-                "available_at",
-                "content_sha256",
-                "provenance",
-                "origin",
-            }
-            and hashlib.sha256(content).hexdigest() == operation["content_sha256"],
-            "Exact approved source-operation fields/bytes required",
-        )
+        validate_operation(operation, content)
         operation_sha = hashlib.sha256(_json(operation).encode()).hexdigest()
-        typed_content(
-            {
-                **operation,
-                "sha256": operation["content_sha256"],
-                "content": content,
-            }
-        )
         if self.initialization["engineering_only"]:
             require(
                 operation["company"].startswith("NEUTRAL-")
@@ -472,12 +511,7 @@ class PersistentCompany:
             predecessors = [r for k, r in rows.items() if k[:4] == key]
             require(predecessors, "Correction requires an existing accepted native record")
             latest = max(predecessors, key=lambda r: r["version"])
-            require(
-                operation["expected_version"] == latest["version"]
-                and _time(operation["event_at"]) >= _time(latest["event_at"])
-                and _time(operation["available_at"]) >= _time(latest["available_at"]),
-                "Exact current predecessor and nonretroactive correction chronology required",
-            )
+            validate_operation(operation, content, latest)
             authorized = now()
             self.writing = True
             try:
