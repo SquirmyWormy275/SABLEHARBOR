@@ -669,6 +669,24 @@ def test_all_38_exact_inspections_use_actual_collected_originals_and_distinct_fa
         assert output["performed"] == contracts()[output["task_id"]]["performed"]
         assert set(output["artifact_ids"]) <= {r["artifact_id"] for r in rows}
         assert all(o["evidence"] for o in output["observations"])
+        for label in ("EXACT-TASK-ATTRIBUTES", "EXACT-NATIVE-SUPPORT"):
+            parts = [
+                o
+                for o in output["observations"]
+                if o["id"] == label or o["id"].startswith(label + "-CITE-")
+            ]
+            if not parts:
+                continue
+            group = parts[0]["facts"]["citation_group"]
+            assert [p["id"] for p in parts] == group["all_citation_part_ids"]
+            assert len(parts) == group["citation_part_count"]
+            assert {e["artifact_id"] for p in parts for e in p["evidence"]} == set(
+                output["artifact_ids"]
+            )
+            assert all(len(p["evidence"]) <= 20 and len(p["id"]) <= 128 for p in parts)
+            assert all(
+                p["facts"]["citation_group"]["aggregate_observation_id"] == label for p in parts
+            )
 
 
 def test_historical_component_gap_and_logging_gap_remain_after_later_repair(tmp_path):

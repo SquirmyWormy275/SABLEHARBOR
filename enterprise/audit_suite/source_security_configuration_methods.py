@@ -1313,14 +1313,45 @@ def vulnerability_attributes(history):
 
 
 def _evidence(rows, locator="$"):
+    require(0 < len(rows) <= 20, "Explicit complete citation part must fit writer limit")
     return [
         {"artifact_id": r["artifact_id"], "sha256": r["artifact_sha256"], "locator": locator}
-        for r in rows[:20]
+        for r in rows
     ]
 
 
 def _observation(label, facts, rows, status="OBSERVED"):
     return {"id": label, "facts": facts, "status": status, "evidence": _evidence(rows)}
+
+
+def _aggregate(label, facts, rows, status="OBSERVED"):
+    """All direct citations extend the same aggregate; none are silently omitted."""
+    chunks = [rows[n : n + 20] for n in range(0, len(rows), 20)]
+    ids = [label] + [f"{label}-CITE-{n + 1:04d}" for n in range(1, len(chunks))]
+    observations = []
+    for n, chunk in enumerate(chunks):
+        linked = {
+            "aggregate_observation_id": label,
+            "citation_part_index": n + 1,
+            "citation_part_count": len(chunks),
+            "all_citation_part_ids": ids,
+            "this_part_extends_aggregate_direct_citations": True,
+        }
+        part_facts = (
+            {**facts, "citation_group": linked}
+            if n == 0
+            else {
+                "citation_group": linked,
+                "source_custody_subset": [custody(r) for r in chunk],
+                "aggregate_facts_held_in_observation": label,
+            }
+        )
+        observations.append(_observation(ids[n], part_facts, chunk, status))
+    require(
+        observations and all(len(o["id"]) <= 128 for o in observations),
+        "Complete aggregate citations and bounded IDs required",
+    )
+    return observations
 
 
 def _sec005_exceptions(result):
@@ -1704,24 +1735,22 @@ def examine(records, *, as_of, scratch_root):
             if not linked:
                 break
             rows.extend(linked)
-        observations = [
-            _observation(
-                "EXACT-TASK-ATTRIBUTES",
-                {
-                    "authored_instruction": task["authored_instruction"],
-                    "task_kind_rule": task["task_kind_rule"],
-                    "examined_attributes": facts,
-                    "bounded_exceptions": exceptions,
-                    "full_clause_performed": False,
-                },
-                rows,
-                "EXCEPTION_RECORDED"
-                if exceptions
-                else "SUPPORT_UNAVAILABLE"
-                if missing
-                else "OBSERVED",
-            )
-        ]
+        observations = _aggregate(
+            "EXACT-TASK-ATTRIBUTES",
+            {
+                "authored_instruction": task["authored_instruction"],
+                "task_kind_rule": task["task_kind_rule"],
+                "examined_attributes": facts,
+                "bounded_exceptions": exceptions,
+                "full_clause_performed": False,
+            },
+            rows,
+            "EXCEPTION_RECORDED"
+            if exceptions
+            else "SUPPORT_UNAVAILABLE"
+            if missing
+            else "OBSERVED",
+        )
         # Every selected native version is a separate bounded documentary occurrence.
         for number, row in enumerate(rows):
             observations.append(
@@ -1740,8 +1769,8 @@ def examine(records, *, as_of, scratch_root):
                 )
             )
         if joins:
-            observations.append(
-                _observation(
+            observations.extend(
+                _aggregate(
                     "EXACT-NATIVE-SUPPORT",
                     {"joins": joins},
                     rows,
