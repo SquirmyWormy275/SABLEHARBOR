@@ -282,3 +282,47 @@ def test_unknown_withheld_receipt_state_is_not_known_nondelivery():
     actual = examine(rows, as_of=AS_OF)
     assert not actual["cases"][0]["recipient_status_known"]
     assert "RECIPIENT_STATUS_UNDETERMINED" in actual["cases"][0]["recorded_mismatches"]
+
+
+def test_string_scopes_cannot_be_compared_as_sets_of_characters():
+    rows = history()
+    change(rows[2], allowed_scope="token")
+    change(rows[3], released_scope="token")
+    with pytest.raises(ProcedureError, match="string-list"):
+        examine(rows, as_of=AS_OF)
+
+
+def test_integer_one_does_not_establish_a_boolean_recipient_copy():
+    rows = history()
+    change(rows[4], copy_in_recipient_scope=1)
+    with pytest.raises(ProcedureError, match="boolean recipient-copy"):
+        examine(rows, as_of=AS_OF)
+
+
+def test_duplicate_tokens_are_not_collapsed_into_a_valid_scope():
+    rows = history()
+    change(rows[3], released_scope=["token", "token"])
+    with pytest.raises(ProcedureError, match="Duplicate permission/release"):
+        examine(rows, as_of=AS_OF)
+
+
+def test_recipient_identity_cannot_be_an_integer_in_matching_records():
+    rows = history()
+    for row in rows[:-1]:
+        change(row, recipient_id=123)
+    with pytest.raises(ProcedureError, match="recipient identity"):
+        examine(rows, as_of=AS_OF)
+
+
+def test_boolean_count_claim_is_not_equivalent_to_integer_one():
+    rows = history()
+    change(rows[-1], delivered_count=True)
+    assert "delivered_count" in examine(rows, as_of=AS_OF)["month_close_discrepancies"]
+
+
+def test_huge_forged_inlet_range_is_a_discrepancy_without_range_allocation():
+    rows = history()
+    change(rows[-1], inlet_sequence_last=10**15)
+    actual = examine(rows, as_of=AS_OF)
+    assert not actual["inlet_sequence_matches"]
+    assert not actual["selected_population_corroborated"]

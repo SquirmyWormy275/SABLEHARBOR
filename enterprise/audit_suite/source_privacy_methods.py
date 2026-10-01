@@ -187,8 +187,16 @@ def examine(records: list[dict], *, as_of: str) -> dict:
     roster_matches = len(declared) == len(set(declared)) and set(declared) == ids
     sequence = [r["document"]["inlet_sequence"] for r in requests.values()]
     require(all(type(n) is int for n in sequence), "Integer inlet sequence required")
-    expected = list(range(close["inlet_sequence_first"], close["inlet_sequence_last"] + 1))
-    sequence_matches = sorted(sequence) == expected and not close["inlet_sequence_gaps"]
+    first, last = close["inlet_sequence_first"], close["inlet_sequence_last"]
+    require(
+        type(first) is int and type(last) is int and 0 < first <= last,
+        "Integer inlet bounds required",
+    )
+    sequence_matches = (
+        len(sequence) == last - first + 1
+        and all(n == first + i for i, n in enumerate(sorted(sequence)))
+        and not close["inlet_sequence_gaps"]
+    )
     out_of_period = sorted(
         cid
         for cid, row in requests.items()
@@ -216,6 +224,24 @@ def examine(records: list[dict], *, as_of: str) -> dict:
         selected = {system: case_maps[system][cid] for system in CASE_SYSTEMS}
         request, customer, gate, release, receipt = (
             selected[system]["document"] for system in CASE_SYSTEMS
+        )
+        for document in (request, customer, gate, release, receipt):
+            if "recipient_id" in document:
+                require(
+                    isinstance(document["recipient_id"], str) and document["recipient_id"],
+                    "Nonempty string recipient identity required",
+                )
+        for document, field in ((gate, "allowed_scope"), (release, "released_scope")):
+            scope = document[field]
+            require(
+                isinstance(scope, list)
+                and all(isinstance(token, str) and token for token in scope),
+                "Explicit string-list permission/release scope required",
+            )
+            require(len(scope) == len(set(scope)), "Duplicate permission/release token scope")
+        require(
+            type(receipt["copy_in_recipient_scope"]) is bool,
+            "Genuine boolean recipient-copy state required",
         )
         reasons = []
         causal_violations = []
@@ -249,8 +275,6 @@ def examine(records: list[dict], *, as_of: str) -> dict:
                 reasons.append("DELIVERY_RECIPIENT_DIFFERS_FROM_REQUEST_OR_CUSTOMER")
             if set(release["released_scope"]) != set(gate["allowed_scope"]):
                 reasons.append("DELIVERY_SCOPE_DIFFERS_FROM_COUNSEL_PERMISSION")
-            if len(release["released_scope"]) != len(set(release["released_scope"])):
-                reasons.append("DUPLICATED_RELEASE_SCOPE")
             if "gate_record_id" in release:
                 if (
                     release["gate_record_id"]
@@ -309,7 +333,7 @@ def examine(records: list[dict], *, as_of: str) -> dict:
     discrepancies = {
         key: {"claimed": close.get(key), "recomputed": value}
         for key, value in count_checks.items()
-        if close.get(key) != value
+        if type(close.get(key)) is not int or close.get(key) != value
     }
     return {
         "schema": "SH_COLLECTED_PRIVACY_EXAMINATION_V1",
