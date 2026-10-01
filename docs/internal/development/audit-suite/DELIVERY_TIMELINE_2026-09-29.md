@@ -196,6 +196,10 @@ remain unsupported. It names 169 distinct discovery task IDs per side, with
 132 partial, 30 design-only and 121 unsupported exact clauses unchanged. The
 legal-status overlay clause is still unassigned; all 66 authored LEG001
 clauses remain unsupported and every P1 task stays `NOT_STARTED`/`NOT_RUN`.
+The independently reviewed V8 PBC successor changes only the draft
+`SH-LEG-001/MATTER` next action for the 160.306 and 160.504 leads. It retains
+121 unsupported clauses and 53 unaccepted possible no-event reviews per side,
+30 draft groups, and zero sent requests, N/A decisions or task credits.
 
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
