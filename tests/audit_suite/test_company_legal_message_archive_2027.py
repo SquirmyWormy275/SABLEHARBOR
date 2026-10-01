@@ -103,6 +103,16 @@ def test_monthly_complete_windows_are_closed_after_period_tail(context):
     assert rows[-1][2] > max(at for at, _ in exports)
     assert rows[-1][3]["unregistered_channel_completeness"] == "NOT_ESTABLISHED"
     assert rows[-1][3]["earlier_screening_and_exceptions_changed"] is False
+    january = [body for _, body in exports if body["record_id"].startswith("EXPORT-01-")]
+    assert len(january) == 4
+    assert all(not body["full_window_channel_continuity_established"] for body in january)
+    assert all(
+        body["window_operational_coverage_start"] == archive.CHANNEL_OPERATION_START
+        for body in january
+    )
+    assert rows[-1][3]["registered_channel_continuity_gap"]["end_exclusive"] == (
+        archive.CHANNEL_OPERATION_START
+    )
 
 
 def test_source_contains_no_audit_answers_and_does_not_mutate(native):
@@ -151,4 +161,63 @@ def test_resealed_inert_immutable_trigger_rejected(native, tmp_path):
         db.execute("CREATE TRIGGER no_version_update BEFORE UPDATE ON versions BEGIN SELECT 1; END")
     _reseal(root)
     with pytest.raises(CompanyStoreError, match="Immutable legal-intake trigger"):
+        archive.verify(root, private_repository=PRIVATE)
+
+
+@pytest.mark.parametrize("attack", ["INPUT_DIGEST", "EARLY_IMPORT", "LATE_IMPORT"])
+def test_resealed_original_import_custody_rejected(native, tmp_path, attack):
+    root = _copy(native, tmp_path)
+    with sqlite3.connect(root / "company.sqlite3") as db:
+        db.row_factory = sqlite3.Row
+        trigger = db.execute(
+            "SELECT sql FROM sqlite_master WHERE name='no_version_update'"
+        ).fetchone()[0]
+        db.execute("DROP TRIGGER no_version_update")
+        if attack == "INPUT_DIGEST":
+            db.execute("UPDATE versions SET input_digest=?", ("0" * 64,))
+        else:
+            clock = (
+                "2025-01-01T00:00:00.000000+00:00"
+                if attack == "EARLY_IMPORT"
+                else ("2099-01-01T00:00:00.000000+00:00")
+            )
+            db.execute("UPDATE versions SET imported_at=?", (clock,))
+            receipt = json.loads((root / "RECEIPT.json").read_text())
+            for references in receipt["records"].values():
+                for ref in references:
+                    ref["imported_at"] = clock
+            (root / "RECEIPT.json").write_text(json.dumps(receipt))
+        db.execute(trigger)
+    _reseal(root)
+    with pytest.raises(CompanyStoreError, match="original/version/provenance"):
+        archive.verify(root, private_repository=PRIVATE)
+
+
+def test_resealed_foreign_schema_rejected(native, tmp_path):
+    root = _copy(native, tmp_path)
+    with sqlite3.connect(root / "company.sqlite3") as db:
+        db.execute("CREATE TABLE extra_answers(answer TEXT)")
+    _reseal(root)
+    with pytest.raises(CompanyStoreError, match="exact database schema"):
+        archive.verify(root, private_repository=PRIVATE)
+
+
+def test_resealed_backdated_initialization_and_imports_rejected(native, tmp_path):
+    root = _copy(native, tmp_path)
+    with sqlite3.connect(root / "company.sqlite3") as db:
+        trigger = db.execute(
+            "SELECT sql FROM sqlite_master WHERE name='no_version_update'"
+        ).fetchone()[0]
+        db.execute("DROP TRIGGER no_version_update")
+        db.execute("UPDATE versions SET imported_at='2025-01-01T00:00:00.000000+00:00'")
+        db.execute(trigger)
+    receipt = json.loads((root / "RECEIPT.json").read_text())
+    receipt["initialized_at"] = "2025-01-01T00:00:00.000000+00:00"
+    receipt["completed_at"] = "2025-01-01T01:00:00.000000+00:00"
+    for references in receipt["records"].values():
+        for ref in references:
+            ref["imported_at"] = receipt["initialized_at"]
+    (root / "RECEIPT.json").write_text(json.dumps(receipt))
+    _reseal(root)
+    with pytest.raises(CompanyStoreError, match="actual initialization clock"):
         archive.verify(root, private_repository=PRIVATE)

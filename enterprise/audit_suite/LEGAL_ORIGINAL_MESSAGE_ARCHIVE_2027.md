@@ -23,6 +23,10 @@ message is sent.
 
 Completeness is limited to the four registered reference channels. Other legal
 entities, personal inboxes and unregistered channels remain outside this archive.
+The first channel configuration is dated January 1 at 09:00 UTC. January exports
+retain their whole-month query window but explicitly show that reception during
+the first nine hours is unestablished; a zero count cannot establish nonoccurrence
+in that interval. The separate archive reconciliation retains this gap.
 Original mailbox support improves the auditor's evidence basis but does not
 accept nonoccurrence, legal applicability, N/A or any audit conclusion.
 
@@ -33,3 +37,9 @@ with `--private-repository` pointing to the reviewed main-private sources and
 re-performs exact original content, attachment hashes, source joins, query
 results, completed windows, immutability and private modes. Frozen P1 and all
 predecessor sources remain unchanged.
+
+The corrected verifier also checks every original import digest, all four exact
+immutable triggers and the complete database schema. Each actual insertion time
+must fall between initialization and completion recorded on October 1 or later;
+neither those bounds nor imports can be backdated into the simulated history.
+Rejected version-one custody probes remain preserved separately.

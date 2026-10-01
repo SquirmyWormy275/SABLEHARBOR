@@ -15,7 +15,7 @@ import os
 import sqlite3
 import tempfile
 from contextlib import closing
-from datetime import datetime, timedelta
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
 from . import company_leg001_trigger_screening_2027 as intake
@@ -25,6 +25,8 @@ from .operating_source_bridge import encoded
 from .private_publication import publish
 
 SCHEMA = "SH_FICTIONAL_COMPANY_LEGAL_MESSAGE_ARCHIVE_2027_V1"
+INITIALIZATION_NOT_BEFORE = _time("2026-10-01T00:00:00+00:00")
+CHANNEL_OPERATION_START = _time("2027-01-01T09:00:00+00:00")
 SOURCE = "enterprise/audit_suite/company_legal_message_archive_2027.py"
 BASE = "enterprise/generated/audit-suite/company-leg001-trigger-screening-2027-2026-10-01"
 PINS = {
@@ -83,6 +85,24 @@ def _read_only(path):
     return closing(db)
 
 
+def _schema(db):
+    return [
+        [kind, name, " ".join(sql.split()) if sql else None]
+        for kind, name, sql in db.execute(
+            "SELECT type,name,sql FROM sqlite_master ORDER BY type,name"
+        )
+    ]
+
+
+def _native_schema():
+    # Build the ordinary current schema only in disposable scratch storage.
+    # The archive under verification is never opened through a DDL constructor.
+    with tempfile.TemporaryDirectory(prefix=".mail-schema-reference-") as temp:
+        store = CompanyStore(Path(temp))
+        with _read_only(store.path) as db:
+            return _schema(db)
+
+
 def _context(private_repository):
     private = Path(private_repository).resolve(strict=True)
     if _p1_inventory(private) != intake.overlay.P1_FREEZE:
@@ -137,6 +157,8 @@ def _steps(messages):
                 "legal_owner": "AS-P003",
                 "retained_intake_registry_id": "REGISTRY-2027",
                 "retained_originals": "MESSAGE_AND_ATTACHMENT_VERSIONS",
+                "operation_established_from": CHANNEL_OPERATION_START,
+                "earlier_reception_continuity": "NOT_ESTABLISHED",
                 "scope": intake.SCOPE,
                 "unregistered_channels": "NOT_ESTABLISHED",
                 "outside_mail_service": "NONE_LOCAL_FICTIONAL_ARCHIVE",
@@ -207,6 +229,9 @@ def _steps(messages):
                     "record_count": len(selected),
                     "operator": "AS-P014",
                     "registered_channels_only": True,
+                    "channel_operation_start": CHANNEL_OPERATION_START,
+                    "window_operational_coverage_start": max(start, CHANNEL_OPERATION_START),
+                    "full_window_channel_continuity_established": start >= CHANNEL_OPERATION_START,
                 },
             )
     add(
@@ -224,6 +249,11 @@ def _steps(messages):
             "period_end_exclusive": "2028-01-01T00:00:00+00:00",
             "reconciliation": "EXACT_REGISTERED_ARCHIVE_AND_INTAKE_SUMMARY_IDS",
             "unregistered_channel_completeness": "NOT_ESTABLISHED",
+            "registered_channel_continuity_gap": {
+                "start": _time("2027-01-01T00:00:00+00:00"),
+                "end_exclusive": CHANNEL_OPERATION_START,
+                "status": "RECEPTION_CONTINUITY_NOT_ESTABLISHED",
+            },
             "regulator_case_classification": "REFER_TO_COUNSEL_RECORDS",
             "earlier_screening_and_exceptions_changed": False,
             "source_scope": intake.SCOPE,
@@ -261,6 +291,7 @@ def create(destination, *, private_repository):
         raise CompanyStoreError("Fresh ordinary private archive destination required")
     intake.docket._private(destination.parent, directory=True)
     context = _context(private_repository)
+    initialized = datetime.now(UTC).isoformat(timespec="microseconds")
     with tempfile.TemporaryDirectory(prefix=".mail-archive-", dir=destination.parent) as temp:
         root = Path(temp)
         store = CompanyStore(root)
@@ -288,10 +319,13 @@ def create(destination, *, private_repository):
                         provenance=_provenance(),
                     )
                 )
+        completed = datetime.now(UTC).isoformat(timespec="microseconds")
         _write(
             root / "RECEIPT.json",
             {
                 "schema": SCHEMA,
+                "initialized_at": initialized,
+                "completed_at": completed,
                 "source_pins": {BASE + "/" + p: h for p, h in PINS.items()},
                 "branches": BRANCHES,
                 "records": records,
@@ -327,6 +361,8 @@ def verify(destination, *, private_repository):
     receipt = json.loads((root / "RECEIPT.json").read_text())
     expected_receipt = {
         "schema": SCHEMA,
+        "initialized_at": receipt.get("initialized_at"),
+        "completed_at": receipt.get("completed_at"),
         "source_pins": {BASE + "/" + p: h for p, h in PINS.items()},
         "branches": BRANCHES,
         "records": receipt.get("records"),
@@ -350,8 +386,21 @@ def verify(destination, *, private_repository):
         }
     ):
         raise CompanyStoreError("Archive manifest/receipt scope differs")
+    initialized = _time(receipt["initialized_at"])
+    completed = _time(receipt["completed_at"])
+    if not (
+        INITIALIZATION_NOT_BEFORE
+        <= initialized
+        <= completed
+        <= datetime.now(UTC).isoformat(timespec="microseconds")
+        and initialized == receipt["initialized_at"]
+        and completed == receipt["completed_at"]
+    ):
+        raise CompanyStoreError("Archive actual initialization clock boundary differs")
     with _read_only(root / "company.sqlite3") as db:
         intake._trigger_schema(db)
+        if _schema(db) != _native_schema():
+            raise CompanyStoreError("Archive exact database schema differs")
         if db.execute("PRAGMA quick_check").fetchone()[0] != "ok" or any(
             db.execute(f"SELECT count(*) FROM {table}").fetchone()[0]
             for table in ("grants", "collections", "access_events")
@@ -372,6 +421,19 @@ def verify(destination, *, private_repository):
                     "AND record=? AND version=1",
                     (COMPANY, branch, system, record),
                 ).fetchone()
+                expected_digest = hashlib.sha256(
+                    encoded(
+                        [
+                            [COMPANY, branch, system, record],
+                            0,
+                            at,
+                            at,
+                            "AUTHORED_TRAINING_SOURCE",
+                            _provenance(),
+                            hashlib.sha256(encoded(body)).hexdigest(),
+                        ]
+                    )
+                ).hexdigest()
                 if (
                     row is None
                     or row["content"] != encoded(body)
@@ -381,7 +443,10 @@ def verify(destination, *, private_repository):
                     or row["origin"] != "AUTHORED_TRAINING_SOURCE"
                     or row["command_id"] != f"MAIL-{branch}-{system}-{record}"
                     or json.loads(row["provenance"]) != _provenance()
+                    or row["provenance"] != encoded(_provenance()).decode()
+                    or row["input_digest"] != expected_digest
                     or _time(row["imported_at"]) != row["imported_at"]
+                    or not initialized <= row["imported_at"] <= completed
                 ):
                     raise CompanyStoreError("Archive original/version/provenance differs")
                 if system == "legal_channel_export" and (
