@@ -218,6 +218,10 @@ def examine(records: list[dict], *, as_of: str) -> dict:
 
     def locate(consumer, system, record_id, *, version=None, at=None):
         require(isinstance(record_id, str) and record_id.strip(), "Explicit legal locator required")
+        require(
+            version is None or (type(version) is int and version > 0),
+            "Explicit legal locator version must be a positive integer",
+        )
         cutoff = _time(at or consumer["source"]["event_at"])
         candidates = [
             r
@@ -252,6 +256,10 @@ def examine(records: list[dict], *, as_of: str) -> dict:
         require(
             isinstance(ref, dict) and fields <= ref.keys(),
             "Exact legal original reference required",
+        )
+        require(
+            type(ref["version"]) is int and ref["version"] > 0,
+            "Exact legal original reference version must be a positive integer",
         )
         require(
             (ref["company"], ref["branch"])

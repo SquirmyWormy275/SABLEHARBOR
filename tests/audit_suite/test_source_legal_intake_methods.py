@@ -518,3 +518,23 @@ def test_archive_count_claims_are_reperformed_separately_from_monthly_roster():
     result = examine(rows, as_of=AS_OF)
     assert "REVIEW_RETAINED_COUNT_MISMATCH" in kinds(result)
     assert result["selected_export_original_roster_corroborated"]
+
+
+@pytest.mark.parametrize("version", [True, False, 0, -1, 1.0, "1"])
+def test_resealed_tail_explicit_predecessor_requires_strict_positive_int(version):
+    rows = history()
+    replace(one(rows, "intake_tail_reconciliation"), related_screening_version=version)
+    with pytest.raises(ProcedureError, match="locator version must be a positive integer"):
+        examine(rows, as_of=AS_OF)
+
+
+@pytest.mark.parametrize("version", [True, False, 0, -1, 1.0, "1"])
+def test_resealed_attachment_native_reference_requires_strict_positive_int(version):
+    rows = history()
+    ref = original_reference(one(rows, "legal_inbound_attachment"))
+    ref["version"] = version
+    replace(one(rows, "legal_inbound_message"), attachment_refs=[ref])
+    with pytest.raises(
+        ProcedureError, match="original reference version must be a positive integer"
+    ):
+        examine(rows, as_of=AS_OF)
