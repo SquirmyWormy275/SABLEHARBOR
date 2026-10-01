@@ -15,6 +15,9 @@ from enterprise.audit_suite.fictional_2027_source_portfolio import PortfolioVeri
 REPOSITORY = Path(__file__).resolve().parents[2]
 PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
 RUN = REPOSITORY / "enterprise/generated/audit-suite/company-source-portfolio-v13-2026-09-30"
+RUN_ROLE = "main" if REPOSITORY.resolve() == PRIVATE.resolve() else "isolated"
+SOURCE_RUN = RUN / f"{RUN_ROLE}-run-v1"
+CANDIDATE_RUN = RUN / f"{RUN_ROLE}-candidate-v1"
 
 
 @pytest.fixture(scope="module")
@@ -24,12 +27,12 @@ def reviewed_v12():
 
 @pytest.fixture(scope="module")
 def diagnostic():
-    return portfolio.verify_report(RUN / "isolated-run-v1", REPOSITORY, PRIVATE)
+    return portfolio.verify_report(SOURCE_RUN, REPOSITORY, PRIVATE)
 
 
 @pytest.fixture(scope="module")
 def routed():
-    return candidate.verify_candidate(RUN / "isolated-candidate-v1", REPOSITORY, PRIVATE)
+    return candidate.verify_candidate(CANDIDATE_RUN, REPOSITORY, PRIVATE)
 
 
 def test_exact_v12_source_prefix(reviewed_v12, diagnostic):
@@ -114,7 +117,7 @@ def test_exact_v12_candidate_prefix_and_new_component(reviewed_v12, routed):
     assert routed["grants_or_collections_created"] is False
     for side, branch in (("A", "SEC001-COMPONENT-CLEAN"), ("B", "SEC001-COMPONENT-MESSY")):
         old_manifest = old_candidates[f"{side}.json"]
-        new_manifest = json.loads((RUN / "isolated-candidate-v1" / f"{side}.json").read_text())
+        new_manifest = json.loads((CANDIDATE_RUN / f"{side}.json").read_text())
         assert new_manifest["components"] == {
             **old_manifest["components"],
             "scenario-sec001component": new_manifest["components"]["scenario-sec001component"],
