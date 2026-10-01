@@ -1,0 +1,23 @@
+{
+  "schema": "SH_FICTIONAL_2027_SELECTED_EMERGENCY_REPLAY_SPEC_V1",
+  "truth_class": "TRAINING_SCENARIO_ONLY",
+  "service_id": "SIM-RESTRICTED-HOSTING-01",
+  "site": "BOISE",
+  "marker_id": "SIM-EPHI-RECOVERY-MARKER-01",
+  "marker_sha256": "fb5a872ccff0e97081593ba6338b2bbb40556168999a253dc9d0df402638870a",
+  "selected_population_count": 1,
+  "chronology": {
+    "CLEAN": "2027-11-15",
+    "MESSY": "2027-11-16"
+  },
+  "expected_native_versions": {
+    "CLEAN": 8,
+    "MESSY": 15
+  },
+  "limits": [
+    "This is one future-authored, payload-free company-source rehearsal, not actual ePHI processing or deployment.",
+    "Replay decisions and checksum comparisons are fictional local records; the producer transmits no bytes or packets.",
+    "A selected marker and local review do not establish full-period recovery, complete access or data populations, customer/provider participation, independent assurance, or audit task credit.",
+    "The Messy BIA/capacity and IAM/SEC005 coverage exceptions remain open after the selected local retest."
+  ]
+}
