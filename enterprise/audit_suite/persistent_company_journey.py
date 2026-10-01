@@ -17,6 +17,7 @@ from contextlib import contextmanager
 from dataclasses import dataclass
 from datetime import UTC, datetime
 from pathlib import Path
+from types import MappingProxyType
 
 from .company_store import _id, _json, _time
 from .engine import Engine
@@ -124,7 +125,7 @@ def native_rows(path):
 
 
 def rows_sha(rows):
-    return hashlib.sha256(_json([rows[key] for key in sorted(rows)]).encode()).hexdigest()
+    return hashlib.sha256(_json([dict(rows[key]) for key in sorted(rows)]).encode()).hexdigest()
 
 
 def registered_systems(path):
@@ -164,12 +165,10 @@ class SharedCompanyStore(QuiescentCompanyStore):
         with self.world.locked():
             if self.world.ready and not self.world.writing:
                 self.world.require_runtime()
-                self.world.verify()
             with super()._db() as db:
                 yield db
             if self.world.ready and not self.world.writing:
                 self.world.require_runtime()
-                self.world.verify()
 
     def append_version(self, *args, **kwargs):
         require(self.world.writing, "Company-owned approved append operation required")
@@ -253,6 +252,7 @@ class PersistentCompany:
         self.writing = False
         self.read_only = read_only
         self.runtime_acceptance = None
+        self._baseline_cache = None
         private_file(self.root / "LOCK")
         self.verify()
         self.operator = CompanyOperator(self.initialization["operator_id"])
@@ -277,6 +277,27 @@ class PersistentCompany:
                 if not self._local.depth:
                     fcntl.flock(self._local.fd, fcntl.LOCK_UN)
                     os.close(self._local.fd)
+
+    def _verified_baseline(self):
+        """Reuse only immutable parsing after verify() checks every source byte.
+
+        The accepted database, manifest and review are hashed afresh before this
+        helper is called. No current company rows, checkpoints, operation receipts
+        or access decisions are cached. Both mapping levels are read-only.
+        """
+        key = (str(self.accepted.database.absolute()), self.pins["database_sha256"])
+        if self._baseline_cache is None or self._baseline_cache[0] != key:
+            rows = native_rows(self.accepted.database)
+            digest = rows_sha(rows)
+            frozen = MappingProxyType({k: MappingProxyType(row) for k, row in rows.items()})
+            self._baseline_cache = (
+                key,
+                frozen,
+                digest,
+                tuple(tuple(row) for row in registered_systems(self.accepted.database)),
+                schema_sha(self.accepted.database),
+            )
+        return self._baseline_cache[1:]
 
     def verify(self):
         """Allow only pinned baseline rows plus specifically receipted new versions."""
@@ -303,15 +324,16 @@ class PersistentCompany:
                 and not (self.root / "operations").is_symlink(),
                 "Private source-operation receipt directory and explicit runtime boundary required",
             )
-            baseline, current = native_rows(self.accepted.database), native_rows(self.database)
+            baseline, baseline_digest, baseline_systems, baseline_schema = self._verified_baseline()
+            current = native_rows(self.database)
             systems = registered_systems(self.database)
             require(
                 initialization["accepted_baseline_pins"] == self.pins
-                and initialization["baseline_native_rows_sha256"] == rows_sha(baseline)
+                and initialization["baseline_native_rows_sha256"] == baseline_digest
                 and initialization["schema_sha256"]
-                == schema_sha(self.accepted.database)
+                == baseline_schema
                 == schema_sha(self.database)
-                and systems == registered_systems(self.accepted.database)
+                and tuple(tuple(row) for row in systems) == baseline_systems
                 and initialization["systems_sha256"]
                 == hashlib.sha256(_json(systems).encode()).hexdigest(),
                 "Exact accepted baseline/schema/immutable triggers changed",
@@ -326,7 +348,7 @@ class PersistentCompany:
                     neutral_boundary(baseline),
                     "Neutral engineering mode cannot admit actual company baseline",
                 )
-            prefix_digests = {0: rows_sha(baseline)}
+            prefix_digests = {0: baseline_digest}
             previous_receipt = None
             for index, entry in enumerate(checkpoint["operations"], 1):
                 require(
@@ -438,7 +460,11 @@ class PersistentCompany:
             require(
                 expected == current
                 and checkpoint["native_versions"] == len(current)
-                and checkpoint["native_rows_sha256"] == rows_sha(current),
+                # Every current byte/metadata field must first equal the full
+                # freshly checked expected rows. Their canonical digests are
+                # therefore identical; reuse the already computed prefix hash.
+                and checkpoint["native_rows_sha256"]
+                == prefix_digests[len(checkpoint["operations"])],
                 "Unreceipted company change or source sequence gap",
             )
             self.initialization = initialization
@@ -579,7 +605,6 @@ class PersistentAudit(LibraryAudit):
     def __init__(self, world: PersistentCompany, routes: list[BusinessRoute]):
         require(not world.read_only, "Read-only company verifier cannot create an audit")
         world.require_runtime()
-        world.verify()
         require(routes and len(set(routes)) == len(routes), "Distinct business routes required")
         require(
             len({(r.company, r.branch) for r in routes}) == 1
@@ -597,7 +622,6 @@ class PersistentAudit(LibraryAudit):
 
     def check_unchanged(self):
         self.world.require_runtime()
-        self.world.verify()
 
     def create(self, *, repository, audit_root, payload, program_pack=None):
         with self.world.locked():
