@@ -1,0 +1,264 @@
+{
+  "schema": "SH_COLLECTED_CONTINUITY_B03_TASK_PLAN_V1",
+  "source_matrix_sha256": "249768769b0fc3c95cdb1b16f955fbc4afbb97b7ef907d677602b05b06089c8d",
+  "task_count": 20,
+  "tasks": [
+    {
+      "authored_instruction": "Compare peak and expected demand with primary and recovery capacity and action thresholds; a BIA without utilization/forecast records is insufficient.",
+      "authored_procedure": "Walk each critical service from Reno loss through Boise recovery; record outage impacts, dependencies, tolerable outage, recovery order, RTO, RPO and required resources; obtain business acceptance annually and after material change.",
+      "clause_group": "CHECK-SOC2:A1.1",
+      "control_id": "SH-BCM-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Join critical service/dependency inventory to accepted outage impact, recovery order and RTO/RPO/resource objectives; selected technical plan does not establish business acceptance.",
+      "requirement_ids": [
+        "SOC2:A1.1"
+      ],
+      "task_id": "TASK-SH-BCM-001-corporate-CHECK-SOC2:A1.1",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Business impact analyses identify critical processes, dependencies, recovery priorities, and tolerable interruption."
+    },
+    {
+      "authored_instruction": "Trace a dependency failure to continuity treatment, recovery resources and accepted residual risk; insurance is a possible treatment, not a universal mandated purchase.",
+      "authored_procedure": "Walk each critical service from Reno loss through Boise recovery; record outage impacts, dependencies, tolerable outage, recovery order, RTO, RPO and required resources; obtain business acceptance annually and after material change.",
+      "clause_group": "CHECK-SOC2:CC9.1",
+      "control_id": "SH-BCM-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Join critical service/dependency inventory to accepted outage impact, recovery order and RTO/RPO/resource objectives; selected technical plan does not establish business acceptance.",
+      "requirement_ids": [
+        "SOC2:CC9.1"
+      ],
+      "task_id": "TASK-SH-BCM-001-corporate-CHECK-SOC2:CC9.1",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Business impact analyses identify critical processes, dependencies, recovery priorities, and tolerable interruption."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Versioned BIA; dependency map; objective approval. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Walk each critical service from Reno loss through Boise recovery; record outage impacts, dependencies, tolerable outage, recovery order, RTO, RPO and required resources; obtain business acceptance annually and after material change.",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-BCM-001",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Join critical service/dependency inventory to accepted outage impact, recovery order and RTO/RPO/resource objectives; selected technical plan does not establish business acceptance.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-BCM-001-corporate-IMPLEMENTATION",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "title": "Business impact analyses identify critical processes, dependencies, recovery priorities, and tolerable interruption."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Versioned BIA; dependency map; objective approval. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Walk each critical service from Reno loss through Boise recovery; record outage impacts, dependencies, tolerable outage, recovery order, RTO, RPO and required resources; obtain business acceptance annually and after material change.",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-BCM-001",
+      "kind": "TOD",
+      "required_checks": "Join critical service/dependency inventory to accepted outage impact, recovery order and RTO/RPO/resource objectives; selected technical plan does not establish business acceptance.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-BCM-001-corporate-TOD",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "title": "Business impact analyses identify critical processes, dependencies, recovery priorities, and tolerable interruption."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Versioned BIA; dependency map; objective approval. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Walk each critical service from Reno loss through Boise recovery; record outage impacts, dependencies, tolerable outage, recovery order, RTO, RPO and required resources; obtain business acceptance annually and after material change.",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-BCM-001",
+      "kind": "TOE",
+      "required_checks": "Join critical service/dependency inventory to accepted outage impact, recovery order and RTO/RPO/resource objectives; selected technical plan does not establish business acceptance.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-BCM-001-corporate-TOE",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "title": "Business impact analyses identify critical processes, dependencies, recovery priorities, and tolerable interruption."
+    },
+    {
+      "authored_instruction": "Inspect monitored environmental protections, backup recoverability and recovery infrastructure under a site failure; backup job success does not establish recovery capacity.",
+      "authored_procedure": "Assign each dataset a schedule derived from its approved RPO; record retention and isolation; monitor every scheduled job; ticket missed or failed runs and reconcile protected datasets to inventory.",
+      "clause_group": "CHECK-SOC2:A1.2",
+      "control_id": "SH-BCM-002",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Recompute scheduled jobs from dataset scope and RPO-derived cadence, then reconcile actual objects/job failures/monitor tickets/isolation credentials; inspect original data bytes.",
+      "requirement_ids": [
+        "SOC2:A1.2"
+      ],
+      "task_id": "TASK-SH-BCM-002-corporate-CHECK-SOC2:A1.2",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Critical systems/data have defined backup/recovery requirements and monitored backup execution."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Schedule; job ledger; failure tickets; access and isolation configuration. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Assign each dataset a schedule derived from its approved RPO; record retention and isolation; monitor every scheduled job; ticket missed or failed runs and reconcile protected datasets to inventory.",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-BCM-002",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Recompute scheduled jobs from dataset scope and RPO-derived cadence, then reconcile actual objects/job failures/monitor tickets/isolation credentials; inspect original data bytes.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-BCM-002-corporate-IMPLEMENTATION",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "title": "Critical systems/data have defined backup/recovery requirements and monitored backup execution."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Schedule; job ledger; failure tickets; access and isolation configuration. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Assign each dataset a schedule derived from its approved RPO; record retention and isolation; monitor every scheduled job; ticket missed or failed runs and reconcile protected datasets to inventory.",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-BCM-002",
+      "kind": "TOD",
+      "required_checks": "Recompute scheduled jobs from dataset scope and RPO-derived cadence, then reconcile actual objects/job failures/monitor tickets/isolation credentials; inspect original data bytes.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-BCM-002-corporate-TOD",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "title": "Critical systems/data have defined backup/recovery requirements and monitored backup execution."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Schedule; job ledger; failure tickets; access and isolation configuration. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Assign each dataset a schedule derived from its approved RPO; record retention and isolation; monitor every scheduled job; ticket missed or failed runs and reconcile protected datasets to inventory.",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-BCM-002",
+      "kind": "TOE",
+      "required_checks": "Recompute scheduled jobs from dataset scope and RPO-derived cadence, then reconcile actual objects/job failures/monitor tickets/isolation credentials; inspect original data bytes.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-BCM-002-corporate-TOE",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "title": "Critical systems/data have defined backup/recovery requirements and monitored backup execution."
+    },
+    {
+      "authored_instruction": "Reperform restore and failover outcomes against accepted RTO/RPO and data usability; include deviations, corrective actions and retests.",
+      "authored_procedure": "Select critical datasets and recovery paths using documented risk; restore into an isolated environment; measure recovery time and recovered data age; validate integrity and usability against the BIA; record failures and retest.",
+      "clause_group": "CHECK-SOC2:A1.3",
+      "control_id": "SH-BCM-003",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Perform collected-byte source/copy/restore joins and authorized real local read/copy mechanics; measure timestamps and integrity separately from application usability, data-age and accepted BIA objectives.",
+      "requirement_ids": [
+        "SOC2:A1.3"
+      ],
+      "task_id": "TASK-SH-BCM-003-corporate-CHECK-SOC2:A1.3",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Restore tests demonstrate recoverability of critical data/systems at defined cadence."
+    },
+    {
+      "authored_instruction": "Trace restored service validation, stakeholder communications, root-cause analysis and changes preventing recurrence; closure alone is not recovery validation.",
+      "authored_procedure": "Select critical datasets and recovery paths using documented risk; restore into an isolated environment; measure recovery time and recovered data age; validate integrity and usability against the BIA; record failures and retest.",
+      "clause_group": "CHECK-SOC2:CC7.5",
+      "control_id": "SH-BCM-003",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Perform collected-byte source/copy/restore joins and authorized real local read/copy mechanics; measure timestamps and integrity separately from application usability, data-age and accepted BIA objectives.",
+      "requirement_ids": [
+        "SOC2:CC7.5"
+      ],
+      "task_id": "TASK-SH-BCM-003-corporate-CHECK-SOC2:CC7.5",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Restore tests demonstrate recoverability of critical data/systems at defined cadence."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Restore commands; timestamps; reconciliation; result and findings. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Select critical datasets and recovery paths using documented risk; restore into an isolated environment; measure recovery time and recovered data age; validate integrity and usability against the BIA; record failures and retest.",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-BCM-003",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Perform collected-byte source/copy/restore joins and authorized real local read/copy mechanics; measure timestamps and integrity separately from application usability, data-age and accepted BIA objectives.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-BCM-003-corporate-IMPLEMENTATION",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "title": "Restore tests demonstrate recoverability of critical data/systems at defined cadence."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Restore commands; timestamps; reconciliation; result and findings. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Select critical datasets and recovery paths using documented risk; restore into an isolated environment; measure recovery time and recovered data age; validate integrity and usability against the BIA; record failures and retest.",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-BCM-003",
+      "kind": "TOD",
+      "required_checks": "Perform collected-byte source/copy/restore joins and authorized real local read/copy mechanics; measure timestamps and integrity separately from application usability, data-age and accepted BIA objectives.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-BCM-003-corporate-TOD",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "title": "Restore tests demonstrate recoverability of critical data/systems at defined cadence."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Restore commands; timestamps; reconciliation; result and findings. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Select critical datasets and recovery paths using documented risk; restore into an isolated environment; measure recovery time and recovered data age; validate integrity and usability against the BIA; record failures and retest.",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-BCM-003",
+      "kind": "TOE",
+      "required_checks": "Perform collected-byte source/copy/restore joins and authorized real local read/copy mechanics; measure timestamps and integrity separately from application usability, data-age and accepted BIA objectives.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-BCM-003-corporate-TOE",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "title": "Restore tests demonstrate recoverability of critical data/systems at defined cadence."
+    },
+    {
+      "authored_instruction": "Observe an approved emergency-mode exercise; verify necessary ePHI remains accessible to authorized operators and access decisions and activity survive recovery.",
+      "authored_procedure": "Exercise primary-site loss, recovery-site operation and return to service annually and after major change; include suppliers and customer dependencies; record decision times, communications, capacity and lessons; update plans and retest failures.",
+      "clause_group": "ACTION-H-EMERGENCY",
+      "control_id": "SH-BCM-004",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Join exercise plan, participating authority, timed activation/communications/failover/return evidence to corrective action and independent closure; rehearsal is not real deployment.",
+      "requirement_ids": [
+        "HIPAA:164.308",
+        "HIPAA:164.312"
+      ],
+      "task_id": "TASK-SH-BCM-004-corporate-ACTION-H-EMERGENCY",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Continuity/DR exercises are performed and findings tracked to closure."
+    },
+    {
+      "authored_instruction": "Reperform restore and failover outcomes against accepted RTO/RPO and data usability; include deviations, corrective actions and retests.",
+      "authored_procedure": "Exercise primary-site loss, recovery-site operation and return to service annually and after major change; include suppliers and customer dependencies; record decision times, communications, capacity and lessons; update plans and retest failures.",
+      "clause_group": "CHECK-SOC2:A1.3",
+      "control_id": "SH-BCM-004",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Join exercise plan, participating authority, timed activation/communications/failover/return evidence to corrective action and independent closure; rehearsal is not real deployment.",
+      "requirement_ids": [
+        "SOC2:A1.3"
+      ],
+      "task_id": "TASK-SH-BCM-004-corporate-CHECK-SOC2:A1.3",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Continuity/DR exercises are performed and findings tracked to closure."
+    },
+    {
+      "authored_instruction": "Trace a dependency failure to continuity treatment, recovery resources and accepted residual risk; insurance is a possible treatment, not a universal mandated purchase.",
+      "authored_procedure": "Exercise primary-site loss, recovery-site operation and return to service annually and after major change; include suppliers and customer dependencies; record decision times, communications, capacity and lessons; update plans and retest failures.",
+      "clause_group": "CHECK-SOC2:CC9.1",
+      "control_id": "SH-BCM-004",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Join exercise plan, participating authority, timed activation/communications/failover/return evidence to corrective action and independent closure; rehearsal is not real deployment.",
+      "requirement_ids": [
+        "SOC2:CC9.1"
+      ],
+      "task_id": "TASK-SH-BCM-004-corporate-CHECK-SOC2:CC9.1",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Continuity/DR exercises are performed and findings tracked to closure."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Scenario; attendance; event timeline; measured results; revised plan. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Exercise primary-site loss, recovery-site operation and return to service annually and after major change; include suppliers and customer dependencies; record decision times, communications, capacity and lessons; update plans and retest failures.",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-BCM-004",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Join exercise plan, participating authority, timed activation/communications/failover/return evidence to corrective action and independent closure; rehearsal is not real deployment.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-BCM-004-corporate-IMPLEMENTATION",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "title": "Continuity/DR exercises are performed and findings tracked to closure."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Scenario; attendance; event timeline; measured results; revised plan. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Exercise primary-site loss, recovery-site operation and return to service annually and after major change; include suppliers and customer dependencies; record decision times, communications, capacity and lessons; update plans and retest failures.",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-BCM-004",
+      "kind": "TOD",
+      "required_checks": "Join exercise plan, participating authority, timed activation/communications/failover/return evidence to corrective action and independent closure; rehearsal is not real deployment.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-BCM-004-corporate-TOD",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "title": "Continuity/DR exercises are performed and findings tracked to closure."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Scenario; attendance; event timeline; measured results; revised plan. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Exercise primary-site loss, recovery-site operation and return to service annually and after major change; include suppliers and customer dependencies; record decision times, communications, capacity and lessons; update plans and retest failures.",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-BCM-004",
+      "kind": "TOE",
+      "required_checks": "Join exercise plan, participating authority, timed activation/communications/failover/return evidence to corrective action and independent closure; rehearsal is not real deployment.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-BCM-004-corporate-TOE",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "title": "Continuity/DR exercises are performed and findings tracked to closure."
+    }
+  ]
+}
