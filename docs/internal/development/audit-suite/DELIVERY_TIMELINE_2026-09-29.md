@@ -218,6 +218,10 @@ task IDs per side without moving a class: 132 partial, 30 design-only and 121
 unsupported. All 22 specification decisions per side remain pending, so the
 authored clause and the three generic operating gates gain no completed result.
 
+The independently reviewed V10 disposable collector extends the bounded access diagnostic to the pending addressable docket with 90 ordinary copies and 64 scoped selected-version receipts. No environmental or legal decision follows; original sources and P1 remain unchanged. The selected ETH001 source passed isolated and main-local review with 19 native versions for two fictional people, a preserved Messy false-clean history and open exception. The 2026 enterprise code remains future/OPEN; the local 2027 approval and attestations are fictional and cannot support workforce, sanctions or no-case conclusions.
+
+The independently reviewed read-only readiness gate replays the V10 source/candidate, V9 route, V8 draft request plan and frozen P1. Main and isolated reports match byte for byte. It reports 31 cohorts/710 versions, 170 targeted discovery routes, 132 partial/30 design/121 unsupported routes per side, 53 unaccepted no-event candidates per side, 30 unsent request groups, 409 unrun P1 tasks per side and 43 controls with explicit blockers. `source_complete`, `fresh_pair_eligible` and `audit_ready` remain false. This is a dated diagnostic checkpoint; subsequent candidate extensions need their own review and do not retroactively change it.
+
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
 2–16, 2027 (weeks 18–20) is the working target. March 16, 2027 (week 24) is
