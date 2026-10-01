@@ -14,6 +14,7 @@ import json
 import os
 import sqlite3
 import tempfile
+from datetime import datetime, timedelta
 from pathlib import Path
 
 from . import company_leg001_operating_docket_2027 as docket
@@ -33,6 +34,7 @@ OWNERS = {
     "intake_channel_register": "AS-P014",
     "regulatory_response_playbook": "AS-P003",
     "intake_channel_ledger": "AS-P014",
+    "intake_tail_reconciliation": "AS-P014",
     "legal_matter_classification": "AS-P003",
     "monthly_intake_screening": "AS-P014",
     "quarterly_legal_review": "AS-P003",
@@ -209,10 +211,29 @@ def _steps(scenario, basis):
                 "reviewed_channel_ids": reviewed,
                 "ledger_record_ids": [f"LEDGER-{month:02d}-{c}" for c in reviewed],
                 "observed_official_notice_ids": [],
-                "screening_state": "CLOSED",
-                "period_tail_attestation": (
-                    "Channel custodians report no additional intake after export cutoff"
+                "screening_state": (
+                    "CLOSED" if scenario == "MESSY" and month == 9 else "PRELIMINARY"
                 ),
+                "reviewed_through": day + "T15:00:00+00:00",
+                "period_tail_attestation": (
+                    "Channel custodians report no additional intake between export cutoff "
+                    "and this review; later hours remain pending"
+                ),
+            },
+        )
+        next_day = (datetime.fromisoformat(day) + timedelta(days=1)).date().isoformat()
+        add(
+            "intake_tail_reconciliation",
+            f"TAIL-{month:02d}",
+            next_day + "T09:00:00+00:00",
+            {
+                "extract_owner": "AS-P014",
+                "channel_ids": reviewed,
+                "window_start": day + "T13:00:00+00:00",
+                "window_end": day + "T23:59:59+00:00",
+                "additional_intake_items": [],
+                "related_screening_id": f"SCREEN-{month:02d}",
+                "extract_state": "COMPLETED_RECORDED_CHANNELS",
             },
         )
     add(
@@ -258,6 +279,23 @@ def _steps(scenario, basis):
                 "observed_case_ids": [],
                 "review_state": "FILED",
                 "review_basis": "Monthly screening summaries; retained originals remain available",
+            },
+        )
+        completed_day = (datetime.fromisoformat(day) + timedelta(days=2)).date().isoformat()
+        add(
+            "quarterly_legal_review",
+            f"QUARTER-{quarter}",
+            completed_day + "T10:00:00+00:00",
+            {
+                "reviewed_by": "AS-P003",
+                "tail_record_versions": {f"TAIL-{m:02d}": 1 for m in range(month - 2, month + 1)},
+                "observed_case_ids": [],
+                "review_state": (
+                    "RECONCILIATION_REQUIRED"
+                    if scenario == "MESSY" and quarter == 3
+                    else "DECLARED_WINDOW_RECONCILED"
+                ),
+                "scope_limit": "Registered channels only",
             },
         )
     # This is a company tabletop record, never a simulated outside agency notice.
@@ -361,6 +399,35 @@ def _steps(scenario, basis):
                 "historical_exception_id": "EXC-INTAKE-2027",
             },
         )
+        add(
+            "intake_tail_reconciliation",
+            "TAIL-09",
+            "2027-11-10T11:00:00+00:00",
+            {
+                "extract_owner": "AS-P014",
+                "channel_ids": list(CHANNELS),
+                "window_start": "2027-09-30T13:00:00+00:00",
+                "window_end": "2027-09-30T23:59:59+00:00",
+                "additional_intake_items": [],
+                "related_screening_id": "SCREEN-09",
+                "related_screening_version": 2,
+                "extract_state": "RETROSPECTIVE_RECONCILIATION",
+                "historical_exception_id": "EXC-INTAKE-2027",
+            },
+        )
+        add(
+            "quarterly_legal_review",
+            "QUARTER-3",
+            "2027-11-12T10:00:00+00:00",
+            {
+                "reviewed_by": "AS-P003",
+                "tail_record_versions": {"TAIL-07": 1, "TAIL-08": 1, "TAIL-09": 2},
+                "observed_case_ids": [],
+                "review_state": "DECLARED_WINDOW_RECONCILED",
+                "historical_exception_id": "EXC-INTAKE-2027",
+                "scope_limit": "Registered channels only",
+            },
+        )
     add(
         "period_legal_disposition",
         "PERIOD-2027",
@@ -405,6 +472,50 @@ def _steps(scenario, basis):
             "external_auditor_acceptance": "NOT_REQUESTED",
         },
     )
+    tail_versions = {
+        f"TAIL-{m:02d}": 2 if scenario == "MESSY" and m == 9 else 1 for m in range(1, 13)
+    }
+    add(
+        "period_legal_disposition",
+        "PERIOD-2027",
+        "2028-01-02T14:00:00+00:00",
+        {
+            "reviewed_by": "AS-P003",
+            "prior_selected_contract_basis": basis,
+            "tail_record_versions": tail_versions,
+            "registered_channel_ids": list(CHANNELS),
+            "reviewed_period_end": SCOPE["period_end"],
+            "official_notice_ids": [],
+            "penalty_determination_ids": [],
+            "hearing_case_ids": [],
+            "statement": (
+                "No qualifying trigger was identified in the declared completed channel windows"
+            ),
+            "unregistered_channels": "NOT_ESTABLISHED",
+            "legal_reference_recheck_required_on_trigger": True,
+            "open_exception_ids": [] if scenario == "CLEAN" else ["EXC-INTAKE-2027"],
+        },
+    )
+    add(
+        "independent_intake_review",
+        "INDEPENDENT-2027",
+        "2028-01-03T10:00:00+00:00",
+        {
+            "reviewed_by": "AS-P009",
+            "operating_owner": "AS-P014",
+            "legal_classifier": "AS-P003",
+            "declared_channel_count": 4,
+            "monthly_ledger_count": 48,
+            "tail_record_versions": tail_versions,
+            "period_disposition_version": 2,
+            "reviewed_period_end": SCOPE["period_end"],
+            "review_boundary": (
+                "Declared channels and completed monthly windows; unregistered channels excluded"
+            ),
+            "historical_exception_ids": [] if scenario == "CLEAN" else ["EXC-INTAKE-2027"],
+            "external_auditor_acceptance": "NOT_REQUESTED",
+        },
+    )
     return rows
 
 
@@ -415,6 +526,33 @@ def _write(path, value):
         stream.write("\n")
         stream.flush()
         os.fsync(stream.fileno())
+
+
+def _provenance():
+    return {
+        "source_reference": SOURCE,
+        "truth_class": "AUTHORED_FICTIONAL_COMPANY_OPERATION",
+        "reference_research_as_of": "2026-10-01",
+    }
+
+
+def _trigger_schema(db):
+    expected = {}
+    for table, label in (("versions", "source"), ("collections", "collection")):
+        for action in ("UPDATE", "DELETE"):
+            name = f"no_{'version' if table == 'versions' else 'collection'}_{action.lower()}"
+            expected[name] = "".join(
+                (
+                    f"CREATE TRIGGER {name} BEFORE {action} ON {table} "
+                    f"BEGIN SELECT RAISE(ABORT,'Immutable {label}'); END"
+                ).split()
+            ).lower()
+    actual = {
+        r[0]: "".join(r[1].split()).lower()
+        for r in db.execute("SELECT name,sql FROM sqlite_master WHERE type='trigger'")
+    }
+    if actual != expected:
+        raise CompanyStoreError("Immutable legal-intake trigger schema differs")
 
 
 def create(destination, *, repository, private_repository):
@@ -445,11 +583,7 @@ def create(destination, *, repository, private_repository):
                         event_at=at,
                         available_at=at,
                         content=encoded(body),
-                        provenance={
-                            "source_reference": SOURCE,
-                            "truth_class": "AUTHORED_FICTIONAL_COMPANY_OPERATION",
-                            "reference_research_as_of": "2026-10-01",
-                        },
+                        provenance=_provenance(),
                     )
                 )
                 versions[(system, record)] = version + 1
@@ -529,6 +663,7 @@ def verify(destination, *, repository, private_repository):
         raise CompanyStoreError("Legal-intake receipt boundary differs")
     with sqlite3.connect(f"file:{root / 'company.sqlite3'}?mode=ro&immutable=1", uri=True) as db:
         db.row_factory = sqlite3.Row
+        _trigger_schema(db)
         expected_systems = {
             (COMPANY, b, s, owner) for b in BRANCHES.values() for s, owner in OWNERS.items()
         }
@@ -557,6 +692,8 @@ def verify(destination, *, repository, private_repository):
                     or row["event_at"] != _time(at)
                     or row["available_at"] != _time(at)
                     or row["origin"] != "AUTHORED_TRAINING_SOURCE"
+                    or json.loads(row["provenance"]) != _provenance()
+                    or row["command_id"] != f"LEGINT-{branch}-{system}-{record}-{version}"
                     or _time(row["imported_at"]) != row["imported_at"]
                 ):
                     raise CompanyStoreError("Exact native legal-intake record differs")

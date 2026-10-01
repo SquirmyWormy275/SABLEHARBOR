@@ -5,7 +5,7 @@ This source family adds company-owned legal operations to the approved fictional
 monthly operating screening, quarterly Legal review, two contractual inquiry
 classifications, a legal-response tabletop and a separate Internal Audit intake
 review. The source exists independently of audit workrooms. The private native
-store contains 75 Clean and 78 Messy immutable versions across ten systems.
+store contains 93 Clean and 98 Messy immutable versions across eleven systems.
 
 The operating differences emerge from records. Messy's September screening
 references three of four registered channels while the provider ledger contains
@@ -17,8 +17,12 @@ manufacture an outside agency notice, hearing, penalty or executed settlement.
 
 The declared channel census is a basis for auditor reconciliation, not proof of
 all-company completeness. Unregistered personal channels, other legal entities,
-real-world matters and the December 31 tail after the final review cutoff remain
-outside the reviewed source boundary. Annual Legal and Internal Audit records
+real-world matters remain outside the reviewed source boundary. Each monthly
+ledger discloses its extraction cutoff. Preliminary screens never attest future
+activity; a next-day tail reconciliation closes each declared monthly window.
+Quarterly successors reference exact completed tail versions. January 2028 Legal
+and Internal Audit successors reconcile all twelve completed 2027 windows while
+retaining the earlier December 31 limited snapshots. Annual company records
 remain attributed company judgments; their existence does not accept an audit
 N/A determination. The receipt explicitly preserves `source_complete=false`,
 `nonoccurrence_acceptance=false` and `audit_task_credit=false`.
@@ -46,7 +50,7 @@ Create and verify a new private destination with:
 ```sh
 PYTHONPATH=src:. python -m enterprise.audit_suite.company_leg001_trigger_screening_2027 create \
   --repository . --private-repository /home/kingoftheeast/Projects/SABLEHARBOR-audit-suite \
-  --destination enterprise/generated/audit-suite/company-leg001-trigger-screening-2027-2026-10-01/isolated-run-v1
+  --destination enterprise/generated/audit-suite/company-leg001-trigger-screening-2027-2026-10-01/isolated-run-v2
 ```
 
 Use the same arguments with `verify` for a separate read-only check. The
@@ -54,5 +58,9 @@ destination parent must already be a private 0700 directory; existing outputs
 are never replaced. The verifier re-performs the exact native population,
 branch-specific predecessor joins, content hashes, clocks, source/receipt pins,
 registered owners and empty audit journals, then rechecks the frozen P1 inventory.
-Focused regressions reject resealed missing-channel data and a false accepted
-nonoccurrence claim, and verify that corrections preserve earlier history.
+Nine focused regressions reject resealed missing-channel data, false accepted
+nonoccurrence, changed fictional provenance and a disabled immutable trigger.
+They verify monthly cutoff/tail chronology and preserved correction history.
+The first candidate remains preserved and rejected: independent review found
+future-window attestation and an unchecked provenance/trigger mutation. The
+second candidate corrects both defects and requires a fresh independent review.

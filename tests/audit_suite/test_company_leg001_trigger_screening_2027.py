@@ -115,8 +115,12 @@ def test_exercise_is_explicit_and_remediation_keeps_original(context):
 def test_resealed_missing_channel_still_rejected(native, tmp_path):
     run = _copy(native, tmp_path)
     with sqlite3.connect(run / "company.sqlite3") as db:
+        trigger = db.execute(
+            "SELECT sql FROM sqlite_master WHERE name='no_version_delete'"
+        ).fetchone()[0]
         db.execute("DROP TRIGGER no_version_delete")
         db.execute("DELETE FROM versions WHERE record='LEDGER-09-PROVIDER-LEGAL'")
+        db.execute(trigger)
     _reseal(run)
     with pytest.raises(CompanyStoreError, match="native legal-intake record"):
         source.verify(run, repository=REPO, private_repository=PRIVATE)
@@ -129,6 +133,69 @@ def test_resealed_false_nonoccurrence_claim_rejected(native, tmp_path):
     (run / "RECEIPT.json").write_text(json.dumps(receipt))
     _reseal(run)
     with pytest.raises(CompanyStoreError, match="receipt boundary"):
+        source.verify(run, repository=REPO, private_repository=PRIVATE)
+
+
+def test_completed_month_tails_precede_final_period_reviews(context):
+    for scenario in source.BRANCHES:
+        rows = source._steps(scenario, context["refs"][scenario])
+        tails = [(at, body) for sys, _, at, body in rows if sys == "intake_tail_reconciliation"]
+        assert len(tails) == (12 if scenario == "CLEAN" else 13)
+        assert all(at > body["window_end"] for at, body in tails)
+        final_legal = [
+            (at, body) for sys, _, at, body in rows if sys == "period_legal_disposition"
+        ][-1]
+        final_independent = [
+            (at, body) for sys, _, at, body in rows if sys == "independent_intake_review"
+        ][-1]
+        assert max(at for at, _ in tails) < final_legal[0] < final_independent[0]
+        assert len(final_legal[1]["tail_record_versions"]) == 12
+        assert final_independent[1]["period_disposition_version"] == 2
+        assert final_legal[1]["reviewed_period_end"] == source.SCOPE["period_end"]
+        if scenario == "CLEAN":
+            assert all(
+                body["screening_state"] == "PRELIMINARY"
+                for sys, _, _, body in rows
+                if sys == "monthly_intake_screening"
+            )
+
+
+def test_resealed_false_provenance_rejected(native, tmp_path):
+    run = _copy(native, tmp_path)
+    with sqlite3.connect(run / "company.sqlite3") as db:
+        trigger = db.execute(
+            "SELECT sql FROM sqlite_master WHERE name='no_version_update'"
+        ).fetchone()[0]
+        db.execute("DROP TRIGGER no_version_update")
+        db.execute(
+            "UPDATE versions SET provenance=? WHERE record='PLAYBOOK-2027'",
+            (
+                json.dumps(
+                    {"source_reference": "UNREVIEWED", "truth_class": "REAL_WORLD_OPERATION"}
+                ),
+            ),
+        )
+        db.execute(trigger)
+    receipt = json.loads((run / "RECEIPT.json").read_text())
+    for refs in receipt["records"].values():
+        for ref in refs:
+            if ref["record"] == "PLAYBOOK-2027":
+                ref["provenance"] = {
+                    "source_reference": "UNREVIEWED",
+                    "truth_class": "REAL_WORLD_OPERATION",
+                }
+    (run / "RECEIPT.json").write_text(json.dumps(receipt))
+    _reseal(run)
+    with pytest.raises(CompanyStoreError, match="native legal-intake record"):
+        source.verify(run, repository=REPO, private_repository=PRIVATE)
+
+
+def test_resealed_removed_immutable_trigger_rejected(native, tmp_path):
+    run = _copy(native, tmp_path)
+    with sqlite3.connect(run / "company.sqlite3") as db:
+        db.execute("DROP TRIGGER no_version_update")
+    _reseal(run)
+    with pytest.raises(CompanyStoreError, match="Immutable legal-intake trigger"):
         source.verify(run, repository=REPO, private_repository=PRIVATE)
 
 
