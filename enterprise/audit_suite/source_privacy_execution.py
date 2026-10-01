@@ -928,6 +928,24 @@ def verify(destination, accepted, adapter_review, adapter_sha, method_review, me
         )
     receipt = json.loads((destination / "RECEIPT.json").read_bytes())
     require(
+        set(receipt)
+        == {
+            "schema",
+            "accepted_library",
+            "adapter_acceptance",
+            "privacy_method_acceptance",
+            "program_pack_sha256",
+            "branches",
+            "full_audit_credit",
+            "actual_privacy_routing_reperformed",
+            "real_hipaa_applicability_decided",
+            "enterprise_period_population_established",
+        }
+        and receipt["schema"] == "SH_FRESH_SELECTED_PRIVACY_EXECUTION_V1"
+        and receipt["program_pack_sha256"] == PROGRAM_SHA,
+        "Exact privacy receipt claims required",
+    )
+    require(
         receipt["accepted_library"] == pins
         and receipt["adapter_acceptance"] == adapter
         and receipt["privacy_method_acceptance"] == method,
@@ -951,6 +969,23 @@ def verify(destination, accepted, adapter_review, adapter_sha, method_review, me
     for branch in BRANCHES:
         root = destination / branch
         branch_receipt = receipt["branches"][branch]
+        require(
+            set(branch_receipt)
+            == {
+                "engagement_id",
+                "collected_native_versions",
+                "zero_workroom_counts",
+                "task_links",
+                "native_business_sha256",
+                "native_schema_sha256",
+                "selected_task_disposition",
+                "independent_review",
+            }
+            and branch_receipt["selected_task_disposition"] == "IN_PROGRESS_LIMITATION"
+            and branch_receipt["independent_review"] == "PENDING"
+            and set(branch_receipt["task_links"]) == set(TASKS),
+            "Exact partial privacy branch claims required",
+        )
         start = json.loads((root / "START.json").read_bytes())
         plan = json.loads((root / "PLAN.json").read_bytes())
         require(
@@ -1024,6 +1059,13 @@ def verify(destination, accepted, adapter_review, adapter_sha, method_review, me
         )
         first = events[0]["state"]
         require(
+            len(first["tasks"]) == len(state["tasks"]) == start["task_count"] == 409
+            and {t["id"] for t in first["tasks"]} == {t["id"] for t in state["tasks"]}
+            and state["scope"] == first["scope"] == start["scope"]
+            and start["zero_workroom_counts"] == branch_receipt["zero_workroom_counts"],
+            "Pinned programme/scope/zero-start boundary changed",
+        )
+        require(
             all(not first[k] for k in start["zero_workroom_counts"])
             and _time(first["simulated_at"]) == INITIAL,
             "Initial privacy state/clock differs",
@@ -1071,6 +1113,11 @@ def verify(destination, accepted, adapter_review, adapter_sha, method_review, me
             == len(artifacts)
             == branch_receipt["collected_native_versions"],
             "Actual collected census differs",
+        )
+        require(
+            [tuple(r["source"][k] for k in CLOCK_ID) for r in collected]
+            == [tuple(r[k] for k in CLOCK_ID) for r in discovery["rows"]],
+            "Discovered exact source census differs from actual collection",
         )
         require(
             all(r["record"] != "PERIOD-01" for r in discovery["older_cutoff_rows"]),
@@ -1149,7 +1196,25 @@ def verify(destination, accepted, adapter_review, adapter_sha, method_review, me
             work = json.loads((root / (label + "-WORKPAPER.json")).read_bytes())
             paper = next(w for w in state["workpapers"] if w["id"] == link["workpaper_id"])
             require(
-                work["task_id"] == task_id
+                set(link)
+                == {
+                    "task_id",
+                    "population_id",
+                    "selection_id",
+                    "workpaper_id",
+                    "sample_execution_ids",
+                    "observed_items",
+                }
+                and link["task_id"] == task_id
+                and link["observed_items"] == len(observed)
+                and work["conclusion"] == "LIMITATION"
+                and work["independent_review"] == "PENDING_RESERVED_REVIEWER"
+                and paper["prepared_by"] == ids["auditor"]
+                and len(paper["versions"]) == 1
+                and paper["versions"][0]["task_ids"] == [task_id]
+                and paper["versions"][0]["conclusion"] == "LIMITATION"
+                and paper["versions"][0]["evidence_ids"] == [r["artifact_id"] for r in relevant]
+                and work["task_id"] == task_id
                 and work["authored_instruction"] == authored_instruction(state, task_id)
                 and work["selected_method"] == METHODS[label]
                 and work["examination"] == result
