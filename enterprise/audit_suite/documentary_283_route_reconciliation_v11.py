@@ -70,9 +70,55 @@ PINS = {
         "sha256": "3841366d17e3f072ef2ae303ec3bf010ab644e474a778d59f62263c6a8c86e7d",
     },
 }
-# No prospective or isolated V12 bytes qualify an integrated route. Populate only
-# after an independent main-local V12 candidate review has accepted exact pins.
-V12_ACCEPTED: dict | None = None
+V12_ACCEPTED = {
+    "verdict": "PASS_PARTIAL_SEC001_PORTFOLIO_MAIN_LOCAL_NO_AUDIT_CREDIT",
+    "integration_commits_in_order": [
+        "6d229a7d73946a556951f4d903e8f276373cdfe8",
+        "3d61d4e8b50ae09c3d0e214af9dba95a4ad32fd5",
+    ],
+    "main_head": "3d61d4e8b50ae09c3d0e214af9dba95a4ad32fd5",
+    "tracked_sha256": {
+        "enterprise/audit_suite/SEC001_SELECTED_TRANSFER_PORTFOLIO_V12_PROPOSAL.md": (
+            "decfa771f4d8a297c76c46aa9227f8f52b31de015f2c3f4d99a5df47c10f9c01"
+        ),
+        "enterprise/audit_suite/fictional_2027_candidate_registry_v12.py": (
+            "67a28d070d8ab82d06dbc29a69c3def9967646080dbe5ffcc7168d94192fbbfe"
+        ),
+        "enterprise/audit_suite/fictional_2027_source_portfolio_v12.py": (
+            "92756c5c29e21d5fdce1e79704917fea021ea18e5e2285c994801139789094c4"
+        ),
+        "tests/audit_suite/test_fictional_2027_portfolio_v12.py": (
+            "f423b51fa1b7efc15a83f7707ee630e81933da28b3fae395f7f14c0430f0f42b"
+        ),
+    },
+    "pins": {
+        "v12_review": {
+            "scope": "private",
+            "path": f"{V12_ROOT}/independent-review-main-v1/REVIEW.json",
+            "sha256": "053dca8df77c5fb990daf7844a62a792276b89100dfef8df1d564f04df841400",
+        },
+        "v12_portfolio": {
+            "scope": "private",
+            "path": f"{V12_ROOT}/main-run-v1/REPORT.json",
+            "sha256": "c6d7205a9f2e6bc3a213a5eece4e0b1c28811d407850e31fd2bcb4a2eb382821",
+        },
+        "v12_candidate_a": {
+            "scope": "private",
+            "path": f"{V12_ROOT}/main-candidate-v1/A.json",
+            "sha256": "2919a119ac97520f4026c6b9c25635857d1ff12e0308217864575d251a9443b2",
+        },
+        "v12_candidate_b": {
+            "scope": "private",
+            "path": f"{V12_ROOT}/main-candidate-v1/B.json",
+            "sha256": "6dbab1e7ef28f7ace549db73232d43b065ac1c6491f99152c4d5107ee763ca1a",
+        },
+        "v12_candidate_report": {
+            "scope": "private",
+            "path": f"{V12_ROOT}/main-candidate-v1/REPORT.json",
+            "sha256": "ee37e0e2d934ece1ba0f4d4c4cab5fce5dbabb4b0784044b6bca01a24fb529af",
+        },
+    },
+}
 _ACCEPTED_TOKEN = object()
 P1_FREEZE = prior.P1_FREEZE
 IDENTITY = (
@@ -122,15 +168,38 @@ def _accepted_v12(repository: Path, private: Path, freeze: dict) -> object:
     }
     review = loaded["v12_review"]
     if (
-        review.get("verdict") != V12_ACCEPTED["verdict"]
-        or review.get("integration_commit") != V12_ACCEPTED["integration_commit"]
+        review.get("schema")
+        != "SH_FICTIONAL_2027_SEC001_PARTIAL_PORTFOLIO_V12_MAIN_LOCAL_INDEPENDENT_REVIEW_V1"
+        or review.get("verdict") != V12_ACCEPTED["verdict"]
+        or review.get("main_head") != V12_ACCEPTED["main_head"]
+        or review.get("integration_commits_in_order")
+        != V12_ACCEPTED["integration_commits_in_order"]
         or review.get("main_output_sha256") != outputs
         or review.get("main_tracked_sha256") != V12_ACCEPTED["tracked_sha256"]
+        or review.get("sec001_main_review_sha256") != PINS["sec_review"]["sha256"]
+        or review.get("sec001_main_run_sha256")
+        != {
+            "RUN-MANIFEST.json": PINS["sec_manifest"]["sha256"],
+            "SOURCE_RECEIPT.json": PINS["sec_receipt"]["sha256"],
+            "company.sqlite3": PINS["sec_db"]["sha256"],
+        }
+        or review.get("counts")
+        != {
+            "candidate_components_per_side": 47,
+            "candidate_pins_per_side": 34,
+            "native_business_versions": 755,
+            "sec001_clean_versions": 10,
+            "sec001_messy_versions": 16,
+            "sec001_native_versions": 26,
+            "source_cohorts": 33,
+            "source_components": 34,
+            "system_aliases_per_side": 290,
+        }
         or review.get("p1_freeze") != freeze
         or review.get("source_complete") is not False
         or review.get("fresh_audit_pair_created") is not False
         or review.get("audit_task_credit") is not False
-        or review.get("checks", {}).get("main_or_atlas_tracked_written_by_review") is not False
+        or review.get("main_or_atlas_tracked_written_by_review") is not False
     ):
         raise V11ReconciliationError("V12 independently reviewed main candidate differs")
     diagnostic = portfolio_v12.verify_report(
@@ -375,6 +444,7 @@ def build(repository: Path, private_repository: Path) -> dict:
         or source_review.get("source_complete") is not False
         or source_review.get("audit_task_credit") is not False
         or source_review.get("active_pair_mutated") is not False
+        or source_review.get("main_or_atlas_tracked_written_by_review") is not False
     ):
         raise V11ReconciliationError("SEC001 independent review/source join differs")
     receipt = transfer.verify(private / SEC_RUN, repository=repository, private_repository=private)

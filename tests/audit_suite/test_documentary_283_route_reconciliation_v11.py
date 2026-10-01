@@ -12,6 +12,7 @@ from enterprise.audit_suite.documentary_283_route_reconciliation_v11 import V11R
 
 REPOSITORY = Path(__file__).resolve().parents[2]
 PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+STEM = REPOSITORY / "enterprise/audit_suite/DOCUMENTARY_283_ROUTE_RECONCILIATION_V11_2026-09-30"
 
 
 @pytest.fixture(scope="module")
@@ -26,6 +27,11 @@ def receipt():
     path = PRIVATE / route.SEC_RUN / "SOURCE_RECEIPT.json"
     assert hashlib.sha256(path.read_bytes()).hexdigest() == route.PINS["sec_receipt"]["sha256"]
     return json.loads(path.read_text())
+
+
+@pytest.fixture(scope="module")
+def result():
+    return route.build(REPOSITORY, PRIVATE)
 
 
 def test_exact_v10_prefix_and_cc67_authored_gate(previous):
@@ -100,21 +106,28 @@ def test_main_review_and_source_pins_are_specific():
     assert source_review["source_complete"] is source_review["audit_task_credit"] is False
 
 
-def test_no_integrated_route_without_accepted_v12(previous, receipt):
-    assert route.V12_ACCEPTED is None
-    with pytest.raises(V11ReconciliationError, match="V12 main-local review"):
-        route.build(REPOSITORY, PRIVATE)
-    with pytest.raises(V11ReconciliationError, match="V12 main-local review"):
-        route._accepted_v12(REPOSITORY, PRIVATE, route.P1_FREEZE)
+def test_accepted_v12_main_local_pins_and_unqualified_delta(previous, receipt, monkeypatch):
+    assert route.V12_ACCEPTED["pins"]["v12_review"]["sha256"] == (
+        "053dca8df77c5fb990daf7844a62a792276b89100dfef8df1d564f04df841400"
+    )
+    for entry in route.V12_ACCEPTED["pins"].values():
+        assert entry["scope"] == "private"
+        assert hashlib.sha256((PRIVATE / entry["path"]).read_bytes()).hexdigest() == entry["sha256"]
     with pytest.raises(V11ReconciliationError, match="accepted candidate verification required"):
         route._extend(previous, receipt, route.P1_FREEZE, qualification=None)
+    monkeypatch.setitem(route.V12_ACCEPTED["pins"]["v12_review"], "sha256", "0" * 64)
+    with pytest.raises(route.pinned.V3ReconciliationError, match="Pinned input differs"):
+        route._accepted_v12(REPOSITORY, PRIVATE, route.P1_FREEZE)
 
 
-def test_in_memory_delta_changes_only_cc67_targeting_after_qualification(
-    previous, receipt, monkeypatch
-):
-    """Exercise row arithmetic without publishing an unaccepted V12 ledger."""
-    monkeypatch.setattr(route, "V12_ACCEPTED", {"pins": {}})
+def test_build_fails_closed_without_accepted_v12(monkeypatch):
+    monkeypatch.setattr(route, "V12_ACCEPTED", None)
+    with pytest.raises(V11ReconciliationError, match="V12 main-local review"):
+        route.build(REPOSITORY, PRIVATE)
+
+
+def test_in_memory_delta_changes_only_cc67_targeting_after_qualification(previous, receipt):
+    """Exercise exact row arithmetic after the accepted V12 review."""
     result = route._extend(previous, receipt, route.P1_FREEZE, qualification=route._ACCEPTED_TOKEN)
     assert len(result["rows"]) == 566
     assert result["active_p1_tasks"] == previous["active_p1_tasks"]
@@ -156,11 +169,24 @@ def test_in_memory_delta_changes_only_cc67_targeting_after_qualification(
     assert result["audit_task_credit"] is result["active_pair_mutated"] is False
 
 
-def test_in_memory_delta_rejects_changed_authored_gate(previous, receipt, monkeypatch):
-    monkeypatch.setattr(route, "V12_ACCEPTED", {"pins": {}})
+def test_in_memory_delta_rejects_changed_authored_gate(previous, receipt):
     changed = deepcopy(previous)
     for row in changed["rows"]:
         if row["task_id"] == route.TASK and row["side"] == "A":
             row["remaining_test_gate"] = "truncated"
     with pytest.raises(V11ReconciliationError, match="Authored SEC001 route boundary"):
         route._extend(changed, receipt, route.P1_FREEZE, qualification=route._ACCEPTED_TOKEN)
+
+
+def test_build_reproduces_tracked_json_markdown_and_frozen_p1(result):
+    assert result == json.loads(STEM.with_suffix(".json").read_text())
+    assert route.markdown(result) == STEM.with_suffix(".md").read_text()
+    assert result["counts"]["A"] == result["counts"]["B"]
+    assert result["p1_freeze"] == route.P1_FREEZE
+    assert result["active_p1_tasks"] == {
+        side: {"task_count": 409, "status": "NOT_STARTED", "conclusion": "NOT_RUN"} for side in "AB"
+    }
+    assert result["source_pins"]["v12_review"]["sha256"] == (
+        "053dca8df77c5fb990daf7844a62a792276b89100dfef8df1d564f04df841400"
+    )
+    assert result["audit_task_credit"] is result["active_pair_mutated"] is False
