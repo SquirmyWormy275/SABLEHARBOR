@@ -415,6 +415,12 @@ def create_app(
 
         return await asyncio.to_thread(report, engine, actor(request)["id"], engagement_id)
 
+    @app.get("/api/engagements/{engagement_id}/procedure-original-integrity")
+    async def procedure_original_integrity(engagement_id: str, request: Request):
+        from .procedure_original_integrity import report
+
+        return await asyncio.to_thread(report, engine, actor(request)["id"], engagement_id)
+
     def instructor_reference_value(principal, engagement_id, scenario_id=None):
         import hashlib
         import json
