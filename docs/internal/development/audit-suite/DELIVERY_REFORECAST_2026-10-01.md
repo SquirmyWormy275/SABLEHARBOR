@@ -7,9 +7,10 @@ an external auditor's opinion. Atlas is read-only reference material.
 
 The September 29 [delivery timeline](DELIVERY_TIMELINE_2026-09-29.md) gave
 February 16, 2027 as a working exit date under sustained staffing. That date
-was too precise to present as an ETA. It assumed two to three focused builders,
-an independent reviewer, prompt source/authority decisions and little rework;
-those conditions are not established for an intermittent Codex run.
+was too precise to present as an ETA. The subsequent 6–12-month answer applied
+a human staffing model to an autonomous agent run and was also the wrong unit
+for the user's question. This reforecast distinguishes continuous agent
+wall-clock time from elapsed calendar time between sessions.
 
 The measured denominator remains **409 procedures on each branch (818 total)**
 with all frozen-pair procedures `NOT_STARTED`/`NOT_RUN`. The reviewed V17 route
@@ -41,23 +42,24 @@ The independently reviewed read-only method crosswalk now identifies 407
 authored procedure-method candidates per side and flags two changed gate scopes.
 This reduces method design work, not the 818 fresh performance/review instances.
 
-| Outcome | Working range from October 1 | Conditions |
+| Outcome | Provisional continuous agent wall-clock range | Conditions |
 | --- | --- | --- |
-| One narrow, end-to-end, reviewed training slice | Weeks, scoped separately | A bounded control/source family, ordinary collection and performed procedures; no claim about the whole audit. |
-| Complete fictional internal rehearsal | Roughly 4–8 months | Two to three sustained builders, independent review, timely qualified decisions, and manageable rework. |
-| Polished F500-scale training world and UX | Roughly 6–12 months | The same capacity, broader source/period histories, exception Key calibration, walkthroughs, restore/replay, access and usability review. |
-| Polished full scope with one sustained builder | Roughly 12–24 months or longer | Full-time development, separate independent review, timely qualified decisions, and no major architecture reset. An intermittent agent run has no defensible calendar ETA. |
+| One narrow, end-to-end, reviewed training slice | 1–3 days | Fresh disposable pair, company-native collection, one actually performed procedure and independent review. |
+| Complete executable fictional A/B internal rehearsal | 2–4 weeks | Reuse the existing audit UI and methods; build collection/procedure automation across control families, retain explicit negative and limited results. |
+| Polished F500-scale training world and UX | 4–8 weeks | Complete scenario/period depth, exception Key calibration, independent challenge, restore/replay, learner/owner walkthroughs and usability repair. |
 
-These are planning ranges, not commitments. A single episodic agent cannot be
-mapped honestly to the sustained-team calendar. For a bottom-up capacity check,
-the prior source/registry work estimate was 20–40 focused builder-weeks before
-review rework. At 30–90 minutes to reperform, document and review each of the
-818 new-pair procedure instances, the gross procedure workload is about 10–31
-forty-hour workweeks. Reusing vetted procedure methods can lower that effort;
-source rework, legal/authority decisions and independent review can raise it.
-Integration and UX also need time. Parallel work reduces elapsed
-time only when source dependencies and independent review permit it; it does
-not erase procedure or legal/authority gates.
+These are estimates for uninterrupted agent execution with available parallel
+slots, working tools and independent verification, **not** human builder-weeks
+or a promise of calendar delivery. Sessions, context resets and tool outages can
+stretch elapsed time. The 818 instances are not 818 unrelated manual jobs:
+there are 409 distinct task IDs per side and 407 reusable historical method
+candidates per side, so shared procedure code and branch-specific re-performance
+should compress the work. Conversely, the 350 commits recorded since September
+29 are not an audit throughput measure: all 818 fresh procedures remain unrun.
+The first performed, independently reviewed SEC003 pilot should replace these
+provisional ranges with measured collection, performance and review times.
+Qualified real-world legal or customer-authority conclusions are outside the
+synthetic rehearsal and cannot be manufactured by agent speed.
 
 Reforecast against observable exits rather than generated-file volume:
 
