@@ -236,6 +236,8 @@ The selected fictional POL004 policy-to-procedure trace passed isolated and main
 
 The reviewed V13 disposable collector added SEC001 CC5.2 to the selected-source access diagnostic with 96 exclusive ordinary-byte copies and 70 scoped receipts. Original sources, REC003 journals and the frozen P1 pair were unchanged. The reviewed V10 unsupported-clause request successor added POL004's selected trial to one draft CC5.3 action while preserving 121 unsupported clauses, 30 unsent groups, 53 unaccepted no-event candidates and 409 unrun tasks per side. The reviewed V2 readiness gate is a historical V13/V11/PBC V9 checkpoint: 34 cohorts/780 versions, 174 targeted routes, 135 partial/27 design/121 unsupported, 43 blocker controls, and `audit_ready=false`. These are routing and collection-path checks, not source completeness or task execution.
 
+The reviewed V14 partial source/candidate registry adds POL004's selected fictional procedure trial to the exact V13 prefix: 35 cohorts/796 native versions, 49 components, 36 pins and 305 aliases per profile. Its main-local output bytes match isolated review. The exact V12 route successor gives only CC5.3 a bounded named lead, bringing targeted routes to 175 per side without moving the 135 partial/27 design/121 unsupported classes. The main-local route replay matches isolated bytes, while POL004 authority, complete population and the Messy open exception remain unresolved. The frozen P1 pair still has 409 unrun tasks per side; no audit credit or fresh pair follows.
+
 **Range:** December 22, 2026 (week 12) is an aggressive earliest engineering
 finish if source development and review parallelize unusually well. February
 2–16, 2027 (weeks 18–20) is the working target. March 16, 2027 (week 24) is
