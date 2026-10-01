@@ -11,9 +11,10 @@ from enterprise.audit_suite.company_store import CompanyStoreError
 
 REPOSITORY = Path(__file__).resolve().parents[2]
 PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
-RUN = (
-    REPOSITORY
-    / "enterprise/generated/audit-suite/company-pol004-procedure-trace-2027-09-30/isolated-run-v1"
+RUN_ROOT = REPOSITORY / "enterprise/generated/audit-suite/company-pol004-procedure-trace-2027-09-30"
+RUN = next(
+    (path for name in ("main-run-v1", "isolated-run-v1") if (path := RUN_ROOT / name).is_dir()),
+    RUN_ROOT / "isolated-run-v1",
 )
 
 
