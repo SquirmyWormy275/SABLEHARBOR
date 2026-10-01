@@ -1,0 +1,98 @@
+{
+  "base_control_instruction": {
+    "base_design_digest": "50f954d2eb39c92804c6702d424988781ce75a011f2e4dec79b0531257e8fff9",
+    "base_evidence": [
+      "Source hash",
+      "applicability rationale",
+      "legal-status check",
+      "reviewer decision"
+    ],
+    "base_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+    "base_test": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Source hash; applicability rationale; legal-status check; reviewer decision. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+    "boundary_rule": "Corporate execution requires a documented responsibility split and evidence that it covers the site/system; retain local complementary measures.",
+    "failure_response": "Record failed, missing and untested steps separately, preserve original evidence, assign remediation and independently retest. A later pass does not repair an earlier period.",
+    "population_rule": "Reconcile independent source records to all occurrences in the accepted period and boundary before risk-based selection. Record query, exclusions and selection rationale; no invented sample size."
+  },
+  "control_id": "SH-LEG-001",
+  "fieldwork_authorized_by_this_candidate": false,
+  "input_contract": [
+    "Actual retained artifact bytes, original SHA and normal receipt metadata; cached document ignored",
+    "Trusted original/intake route maps must match actual native system; one company/branch and one registry scope",
+    "Company methods only rederive arbitrary registered channels and complete selected calendar-month windows; no expected fixture count or branch parameter",
+    "Native full custody references and locator-only business references have distinct explicit join bases; unavailable/missing originals remain unresolved"
+  ],
+  "instruction_pack_sha256": "73d856274fbfe65e32a61cffaf3bb101b801e2ff24825be1eddfe8b4f2138134",
+  "method_module": "enterprise.audit_suite.source_legal_intake_methods",
+  "method_schema": "SH_COLLECTED_LEGAL_INTAKE_EXAMINATION_V1",
+  "next_gate": "Independent exact-module method review before any actual source fieldwork; root integrates separately",
+  "nonselected_tasks": [
+    "TOD",
+    "IMPLEMENTATION",
+    "CHECK-HIPAA:160.306",
+    "CHECK-HIPAA:160.308",
+    "CHECK-HIPAA:160.312",
+    "ACTION-H-REGULATOR",
+    "penalty/hearing/docket clauses"
+  ],
+  "output_contract": [
+    "No task mutation, status credit, PASS/N/A, final legal conclusion or enterprise no-event assertion",
+    "Selected export/original roster agreement is distinct from original attachment preservation, source-link resolution and physical period continuity",
+    "A company configuration may claim whole selected period continuity; original communication-system operation is not independently established by these methods"
+  ],
+  "schema": "SH_COLLECTED_LEGAL_INTAKE_SELECTED_METHOD_PLAN_V1",
+  "selected_tasks": [
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Source hash; applicability rationale; legal-status check; reviewer decision. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "proposed_performed_facets": [
+        "Retained company/native version/hash/event/publication/import custody bound to ordinary collection receipt and exact artifact bytes",
+        "Selected registry and operating channel configuration; declared full-month vector and explicit startup/unregistered exclusions",
+        "Fixed typed channel/received-time/available-time count reconciliation against collected originals; stored SQL never executed",
+        "Contemporaneous ledger/screen/tail/quarter versions and later corrections reconciled without overwriting historical missing channels or OPEN exception",
+        "Recorded classifier source links and retained exception/reviewer decisions inspected as documentary company judgments"
+      ],
+      "task_disposition_after_selected_fieldwork": "IN_PROGRESS/LIMITATION",
+      "task_id": "TASK-SH-LEG-001-corporate-TOE",
+      "unperformed_facets": [
+        "Authoritative law edition, source citation, effective-period/entity-role obligation applicability and full boundary responsibility split",
+        "Direct/delegated/conditional/enforcement obligation classification and amendments/judicial-status/legal-event sufficiency",
+        "Underlying original communication-system SQL execution, enterprise source completeness and external legal/professional acceptance"
+      ]
+    },
+    {
+      "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted.",
+      "authored_instruction": "Classify as triggered legal-response context and link the response playbook.",
+      "dependencies": [
+        "GATE-SERVICE-FACTS",
+        "GATE-QUALIFIED-REVIEW"
+      ],
+      "proposed_performed_facets": [
+        "Recorded counsel classification joined to contemporaneously available original",
+        "Contemporaneously available response playbook source is visible separately; explicit case-to-playbook linkage is not inferred"
+      ],
+      "task_disposition_after_selected_fieldwork": "IN_PROGRESS/LIMITATION",
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.300",
+      "unperformed_facets": [
+        "Actual facts and qualified applicability/design decision; no enforcement or external assistance matter asserted",
+        "Any missing explicit context/playbook or legal source acceptance remains a limitation"
+      ]
+    },
+    {
+      "activation": "On an actual legal event or scheduled source-context review; no enforcement matter is asserted.",
+      "authored_instruction": "Retain correspondence and distinguish assistance from an approval or assurance conclusion.",
+      "dependencies": [
+        "GATE-SERVICE-FACTS",
+        "GATE-QUALIFIED-REVIEW"
+      ],
+      "proposed_performed_facets": [
+        "Retained original message text, source receipt/hash and exact native attachment links",
+        "Recorded counsel context distinguished from independent approval/assurance; actual_external_message false remains explicit"
+      ],
+      "task_disposition_after_selected_fieldwork": "IN_PROGRESS/LIMITATION",
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.304",
+      "unperformed_facets": [
+        "Actual facts and qualified applicability/design decision; no enforcement or external assistance matter asserted",
+        "Any missing explicit context/playbook or legal source acceptance remains a limitation"
+      ]
+    }
+  ]
+}
