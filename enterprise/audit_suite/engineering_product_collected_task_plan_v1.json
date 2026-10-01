@@ -1,0 +1,474 @@
+{
+  "schema": "SH_COLLECTED_ENGINEERING_PRODUCT_B04_TASK_PLAN_V1",
+  "source_matrix_sha256": "249768769b0fc3c95cdb1b16f955fbc4afbb97b7ef907d677602b05b06089c8d",
+  "task_count": 37,
+  "tasks": [
+    {
+      "authored_instruction": "Select normal and emergency code, infrastructure and data changes; trace requirements, security tests, independent approval, deployment verification and rollback.",
+      "authored_procedure": "For every material change, identify business intent, affected services/data, risks and owner; link commitments and source requirements before implementation; include period-change description impacts.",
+      "clause_group": "CHECK-SOC2:CC8.1",
+      "control_id": "SH-ENG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Reconcile deployment/change census to original issue intent, affected service/data, accountable owner and scope-description impact.",
+      "requirement_ids": [
+        "SOC2:CC8.1"
+      ],
+      "task_id": "TASK-SH-ENG-001-corporate-CHECK-SOC2:CC8.1",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Material engineering work begins from traceable issue/requirement/change intent and accountable owner."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Change record; risk assessment; linked requirement. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "For every material change, identify business intent, affected services/data, risks and owner; link commitments and source requirements before implementation; include period-change description impacts.",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-ENG-001",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Reconcile deployment/change census to original issue intent, affected service/data, accountable owner and scope-description impact.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-ENG-001-corporate-IMPLEMENTATION",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "title": "Material engineering work begins from traceable issue/requirement/change intent and accountable owner."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Change record; risk assessment; linked requirement. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "For every material change, identify business intent, affected services/data, risks and owner; link commitments and source requirements before implementation; include period-change description impacts.",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-ENG-001",
+      "kind": "TOD",
+      "required_checks": "Reconcile deployment/change census to original issue intent, affected service/data, accountable owner and scope-description impact.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-ENG-001-corporate-TOD",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "title": "Material engineering work begins from traceable issue/requirement/change intent and accountable owner."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Change record; risk assessment; linked requirement. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "For every material change, identify business intent, affected services/data, risks and owner; link commitments and source requirements before implementation; include period-change description impacts.",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-ENG-001",
+      "kind": "TOE",
+      "required_checks": "Reconcile deployment/change census to original issue intent, affected service/data, accountable owner and scope-description impact.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-ENG-001-corporate-TOE",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "title": "Material engineering work begins from traceable issue/requirement/change intent and accountable owner."
+    },
+    {
+      "authored_instruction": "Select normal and emergency code, infrastructure and data changes; trace requirements, security tests, independent approval, deployment verification and rollback.",
+      "authored_procedure": "Require peer review of the exact proposed revision; check separation from author and protected-branch rules; route emergency bypasses to the documented emergency workflow.",
+      "clause_group": "CHECK-SOC2:CC8.1",
+      "control_id": "SH-ENG-002",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Bind exact revision/artifact to peer review identity/time and protected gate; test author separation and each emergency bypass through the distinct emergency chain.",
+      "requirement_ids": [
+        "SOC2:CC8.1"
+      ],
+      "task_id": "TASK-SH-ENG-002-corporate-CHECK-SOC2:CC8.1",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Code/configuration/model changes receive peer review before protected production merge/deployment, subject to documented emergency process."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Diff; reviewer identity; branch settings; approval event. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Require peer review of the exact proposed revision; check separation from author and protected-branch rules; route emergency bypasses to the documented emergency workflow.",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-ENG-002",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Bind exact revision/artifact to peer review identity/time and protected gate; test author separation and each emergency bypass through the distinct emergency chain.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-ENG-002-corporate-IMPLEMENTATION",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "title": "Code/configuration/model changes receive peer review before protected production merge/deployment, subject to documented emergency process."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Diff; reviewer identity; branch settings; approval event. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Require peer review of the exact proposed revision; check separation from author and protected-branch rules; route emergency bypasses to the documented emergency workflow.",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-ENG-002",
+      "kind": "TOD",
+      "required_checks": "Bind exact revision/artifact to peer review identity/time and protected gate; test author separation and each emergency bypass through the distinct emergency chain.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-ENG-002-corporate-TOD",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "title": "Code/configuration/model changes receive peer review before protected production merge/deployment, subject to documented emergency process."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Diff; reviewer identity; branch settings; approval event. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Require peer review of the exact proposed revision; check separation from author and protected-branch rules; route emergency bypasses to the documented emergency workflow.",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-ENG-002",
+      "kind": "TOE",
+      "required_checks": "Bind exact revision/artifact to peer review identity/time and protected gate; test author separation and each emergency bypass through the distinct emergency chain.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-ENG-002-corporate-TOE",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "title": "Code/configuration/model changes receive peer review before protected production merge/deployment, subject to documented emergency process."
+    },
+    {
+      "authored_instruction": "Select normal and emergency code, infrastructure and data changes; trace requirements, security tests, independent approval, deployment verification and rollback.",
+      "authored_procedure": "Choose tests from change risk including security, privacy, recovery and data effects; bind results to the release artifact; block release on failed mandatory tests unless an authorized exception applies.",
+      "clause_group": "CHECK-SOC2:CC8.1",
+      "control_id": "SH-ENG-003",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Derive mandatory tests from recorded change risk; bind test results/hash to released artifact; inspect failure blocking and independent exception before release.",
+      "requirement_ids": [
+        "SOC2:CC8.1"
+      ],
+      "task_id": "TASK-SH-ENG-003-corporate-CHECK-SOC2:CC8.1",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Automated/manual tests appropriate to change risk must pass or exceptions be approved before release."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Test plan; results; artifact hash; exception. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Choose tests from change risk including security, privacy, recovery and data effects; bind results to the release artifact; block release on failed mandatory tests unless an authorized exception applies.",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-ENG-003",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Derive mandatory tests from recorded change risk; bind test results/hash to released artifact; inspect failure blocking and independent exception before release.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-ENG-003-corporate-IMPLEMENTATION",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "title": "Automated/manual tests appropriate to change risk must pass or exceptions be approved before release."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Test plan; results; artifact hash; exception. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Choose tests from change risk including security, privacy, recovery and data effects; bind results to the release artifact; block release on failed mandatory tests unless an authorized exception applies.",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-ENG-003",
+      "kind": "TOD",
+      "required_checks": "Derive mandatory tests from recorded change risk; bind test results/hash to released artifact; inspect failure blocking and independent exception before release.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-ENG-003-corporate-TOD",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "title": "Automated/manual tests appropriate to change risk must pass or exceptions be approved before release."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Test plan; results; artifact hash; exception. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Choose tests from change risk including security, privacy, recovery and data effects; bind results to the release artifact; block release on failed mandatory tests unless an authorized exception applies.",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-ENG-003",
+      "kind": "TOE",
+      "required_checks": "Derive mandatory tests from recorded change risk; bind test results/hash to released artifact; inspect failure blocking and independent exception before release.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-ENG-003-corporate-TOE",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "title": "Automated/manual tests appropriate to change risk must pass or exceptions be approved before release."
+    },
+    {
+      "authored_instruction": "Inspect installation restrictions, update coverage and detection response on representative assets; test an unapproved executable and exception path.",
+      "authored_procedure": "Release only approved artifacts using attributable deployment identities; reconcile pipeline runs with actual runtime versions and out-of-band changes; record target environment and rollback reference.",
+      "clause_group": "CHECK-SOC2:CC6.8",
+      "control_id": "SH-ENG-004",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Reconcile approved build and release gate with attributable actual local/runtime deployment and out-of-band changes; verify target environment and rollback reference.",
+      "requirement_ids": [
+        "SOC2:CC6.8"
+      ],
+      "task_id": "TASK-SH-ENG-004-corporate-CHECK-SOC2:CC6.8",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Production deployment is attributable to approved artifacts and controlled pipeline/release authority."
+    },
+    {
+      "authored_instruction": "Select normal and emergency code, infrastructure and data changes; trace requirements, security tests, independent approval, deployment verification and rollback.",
+      "authored_procedure": "Release only approved artifacts using attributable deployment identities; reconcile pipeline runs with actual runtime versions and out-of-band changes; record target environment and rollback reference.",
+      "clause_group": "CHECK-SOC2:CC8.1",
+      "control_id": "SH-ENG-004",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Reconcile approved build and release gate with attributable actual local/runtime deployment and out-of-band changes; verify target environment and rollback reference.",
+      "requirement_ids": [
+        "SOC2:CC8.1"
+      ],
+      "task_id": "TASK-SH-ENG-004-corporate-CHECK-SOC2:CC8.1",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Production deployment is attributable to approved artifacts and controlled pipeline/release authority."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Release approval; artifact digest; deployment log; runtime comparison. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Release only approved artifacts using attributable deployment identities; reconcile pipeline runs with actual runtime versions and out-of-band changes; record target environment and rollback reference.",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-ENG-004",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Reconcile approved build and release gate with attributable actual local/runtime deployment and out-of-band changes; verify target environment and rollback reference.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-ENG-004-corporate-IMPLEMENTATION",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "title": "Production deployment is attributable to approved artifacts and controlled pipeline/release authority."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Release approval; artifact digest; deployment log; runtime comparison. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Release only approved artifacts using attributable deployment identities; reconcile pipeline runs with actual runtime versions and out-of-band changes; record target environment and rollback reference.",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-ENG-004",
+      "kind": "TOD",
+      "required_checks": "Reconcile approved build and release gate with attributable actual local/runtime deployment and out-of-band changes; verify target environment and rollback reference.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-ENG-004-corporate-TOD",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "title": "Production deployment is attributable to approved artifacts and controlled pipeline/release authority."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Release approval; artifact digest; deployment log; runtime comparison. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Release only approved artifacts using attributable deployment identities; reconcile pipeline runs with actual runtime versions and out-of-band changes; record target environment and rollback reference.",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-ENG-004",
+      "kind": "TOE",
+      "required_checks": "Reconcile approved build and release gate with attributable actual local/runtime deployment and out-of-band changes; verify target environment and rollback reference.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-ENG-004-corporate-TOE",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "title": "Production deployment is attributable to approved artifacts and controlled pipeline/release authority."
+    },
+    {
+      "authored_instruction": "Select normal and emergency code, infrastructure and data changes; trace requirements, security tests, independent approval, deployment verification and rollback.",
+      "authored_procedure": "Record emergency reason, affected boundary, limited authority and recovery plan before execution where feasible; preserve timestamps and bypass scope; obtain retrospective review and correct recurring bypass causes.",
+      "clause_group": "CHECK-SOC2:CC8.1",
+      "control_id": "SH-ENG-005",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Reperform emergency request/authority duration/recovery/actual application and retrospective review clocks; preserve local intake gaps and delayed reviews.",
+      "requirement_ids": [
+        "SOC2:CC8.1"
+      ],
+      "task_id": "TASK-SH-ENG-005-corporate-CHECK-SOC2:CC8.1",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Emergency changes are logged, limited, approved by emergency authority, and retrospectively reviewed."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Emergency ticket; approval trail; execution log; retrospective. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Record emergency reason, affected boundary, limited authority and recovery plan before execution where feasible; preserve timestamps and bypass scope; obtain retrospective review and correct recurring bypass causes.",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-ENG-005",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Reperform emergency request/authority duration/recovery/actual application and retrospective review clocks; preserve local intake gaps and delayed reviews.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-ENG-005-corporate-IMPLEMENTATION",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "title": "Emergency changes are logged, limited, approved by emergency authority, and retrospectively reviewed."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Emergency ticket; approval trail; execution log; retrospective. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Record emergency reason, affected boundary, limited authority and recovery plan before execution where feasible; preserve timestamps and bypass scope; obtain retrospective review and correct recurring bypass causes.",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-ENG-005",
+      "kind": "TOD",
+      "required_checks": "Reperform emergency request/authority duration/recovery/actual application and retrospective review clocks; preserve local intake gaps and delayed reviews.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-ENG-005-corporate-TOD",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "title": "Emergency changes are logged, limited, approved by emergency authority, and retrospectively reviewed."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Emergency ticket; approval trail; execution log; retrospective. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Record emergency reason, affected boundary, limited authority and recovery plan before execution where feasible; preserve timestamps and bypass scope; obtain retrospective review and correct recurring bypass causes.",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-ENG-005",
+      "kind": "TOE",
+      "required_checks": "Reperform emergency request/authority duration/recovery/actual application and retrospective review clocks; preserve local intake gaps and delayed reviews.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-ENG-005-corporate-TOE",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "title": "Emergency changes are logged, limited, approved by emergency authority, and retrospectively reviewed."
+    },
+    {
+      "authored_instruction": "Select normal and emergency code, infrastructure and data changes; trace requirements, security tests, independent approval, deployment verification and rollback.",
+      "authored_procedure": "For each material release, identify rollback prerequisites, irreversible data effects and stop conditions; test recovery in a representative environment; require a tested recovery alternative when rollback is infeasible.",
+      "clause_group": "CHECK-SOC2:CC8.1",
+      "control_id": "SH-ENG-006",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Bind release version to rollback prerequisites, irreversible effects, stop conditions and actual recovery test; marker-only reports do not establish tested recovery.",
+      "requirement_ids": [
+        "SOC2:CC8.1"
+      ],
+      "task_id": "TASK-SH-ENG-006-corporate-CHECK-SOC2:CC8.1",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Rollback/recovery paths are defined for material production changes where technically feasible."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Recovery procedure; rehearsal result; release stop decision. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "For each material release, identify rollback prerequisites, irreversible data effects and stop conditions; test recovery in a representative environment; require a tested recovery alternative when rollback is infeasible.",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-ENG-006",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Bind release version to rollback prerequisites, irreversible effects, stop conditions and actual recovery test; marker-only reports do not establish tested recovery.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-ENG-006-corporate-IMPLEMENTATION",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "title": "Rollback/recovery paths are defined for material production changes where technically feasible."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Recovery procedure; rehearsal result; release stop decision. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "For each material release, identify rollback prerequisites, irreversible data effects and stop conditions; test recovery in a representative environment; require a tested recovery alternative when rollback is infeasible.",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-ENG-006",
+      "kind": "TOD",
+      "required_checks": "Bind release version to rollback prerequisites, irreversible effects, stop conditions and actual recovery test; marker-only reports do not establish tested recovery.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-ENG-006-corporate-TOD",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "title": "Rollback/recovery paths are defined for material production changes where technically feasible."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Recovery procedure; rehearsal result; release stop decision. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "For each material release, identify rollback prerequisites, irreversible data effects and stop conditions; test recovery in a representative environment; require a tested recovery alternative when rollback is infeasible.",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-ENG-006",
+      "kind": "TOE",
+      "required_checks": "Bind release version to rollback prerequisites, irreversible effects, stop conditions and actual recovery test; marker-only reports do not establish tested recovery.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-ENG-006-corporate-TOE",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "title": "Rollback/recovery paths are defined for material production changes where technically feasible."
+    },
+    {
+      "authored_instruction": "Trace a changed service responsibility and an external concern through receipt, response and the appropriate audience. Test contact accuracy and incomplete recipient lists.",
+      "authored_procedure": "At contract and service change, record approved commitments, intended use, limitations and responsibility splits. Assign delivery ownership and communicate audience-appropriate operating information, support and reporting routes. Review nonstandard promises before acceptance and reconcile them to deliverable capability.",
+      "clause_group": "ACTION-S-COMMUNICATION",
+      "control_id": "SH-PRD-002",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Join signed/scoped commitments and operating limitations to assigned delivery owner/capability and audience-appropriate published information; do not manufacture external assurance.",
+      "requirement_ids": [
+        "SOC2:CC2.2",
+        "SOC2:CC2.3"
+      ],
+      "task_id": "TASK-SH-PRD-002-corporate-ACTION-S-COMMUNICATION",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Customer commitments and nonstandard product/service terms are documented and assigned accountable delivery ownership."
+    },
+    {
+      "authored_instruction": "Trace selected agreements and published product information to approved commitments and actual delivery owners. Investigate unsupported promises or omitted use limitations.",
+      "authored_procedure": "At contract and service change, record approved commitments, intended use, limitations and responsibility splits. Assign delivery ownership and communicate audience-appropriate operating information, support and reporting routes. Review nonstandard promises before acceptance and reconcile them to deliverable capability.",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-PRD-002",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Join signed/scoped commitments and operating limitations to assigned delivery owner/capability and audience-appropriate published information; do not manufacture external assurance.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-PRD-002-corporate-IMPLEMENTATION",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "title": "Customer commitments and nonstandard product/service terms are documented and assigned accountable delivery ownership."
+    },
+    {
+      "authored_instruction": "Trace selected agreements and published product information to approved commitments and actual delivery owners. Investigate unsupported promises or omitted use limitations.",
+      "authored_procedure": "At contract and service change, record approved commitments, intended use, limitations and responsibility splits. Assign delivery ownership and communicate audience-appropriate operating information, support and reporting routes. Review nonstandard promises before acceptance and reconcile them to deliverable capability.",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-PRD-002",
+      "kind": "TOD",
+      "required_checks": "Join signed/scoped commitments and operating limitations to assigned delivery owner/capability and audience-appropriate published information; do not manufacture external assurance.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-PRD-002-corporate-TOD",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "title": "Customer commitments and nonstandard product/service terms are documented and assigned accountable delivery ownership."
+    },
+    {
+      "authored_instruction": "Trace selected agreements and published product information to approved commitments and actual delivery owners. Investigate unsupported promises or omitted use limitations.",
+      "authored_procedure": "At contract and service change, record approved commitments, intended use, limitations and responsibility splits. Assign delivery ownership and communicate audience-appropriate operating information, support and reporting routes. Review nonstandard promises before acceptance and reconcile them to deliverable capability.",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-PRD-002",
+      "kind": "TOE",
+      "required_checks": "Join signed/scoped commitments and operating limitations to assigned delivery owner/capability and audience-appropriate published information; do not manufacture external assurance.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-PRD-002-corporate-TOE",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "title": "Customer commitments and nonstandard product/service terms are documented and assigned accountable delivery ownership."
+    },
+    {
+      "authored_instruction": "Trace a changed service responsibility and an external concern through receipt, response and the appropriate audience. Test contact accuracy and incomplete recipient lists.",
+      "authored_procedure": "Before material change, assess affected users, AI purposes and dependencies, limitations and contractual notice duties. Approve the change and communication plan; issue accurate notices to affected parties and retain delivery evidence. Reassess significant unplanned changes and failures.",
+      "clause_group": "ACTION-S-COMMUNICATION",
+      "control_id": "SH-PRD-003",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Start from actual release population; derive affected customer, notice duty/deadline and recipients; inspect release impact, dispatch authority and delivery originals.",
+      "requirement_ids": [
+        "SOC2:CC2.2",
+        "SOC2:CC2.3"
+      ],
+      "task_id": "TASK-SH-PRD-003-corporate-ACTION-S-COMMUNICATION",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Material customer-impacting changes receive impact analysis and communication appropriate to commitments."
+    },
+    {
+      "authored_instruction": "Select releases from deployment records; check affected-customer analysis, required notice timing and recipient completeness. Inspect changes affecting AI limitations or responsibility splits.",
+      "authored_procedure": "Before material change, assess affected users, AI purposes and dependencies, limitations and contractual notice duties. Approve the change and communication plan; issue accurate notices to affected parties and retain delivery evidence. Reassess significant unplanned changes and failures.",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-PRD-003",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Start from actual release population; derive affected customer, notice duty/deadline and recipients; inspect release impact, dispatch authority and delivery originals.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-PRD-003-corporate-IMPLEMENTATION",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "title": "Material customer-impacting changes receive impact analysis and communication appropriate to commitments."
+    },
+    {
+      "authored_instruction": "Select releases from deployment records; check affected-customer analysis, required notice timing and recipient completeness. Inspect changes affecting AI limitations or responsibility splits.",
+      "authored_procedure": "Before material change, assess affected users, AI purposes and dependencies, limitations and contractual notice duties. Approve the change and communication plan; issue accurate notices to affected parties and retain delivery evidence. Reassess significant unplanned changes and failures.",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-PRD-003",
+      "kind": "TOD",
+      "required_checks": "Start from actual release population; derive affected customer, notice duty/deadline and recipients; inspect release impact, dispatch authority and delivery originals.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-PRD-003-corporate-TOD",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "title": "Material customer-impacting changes receive impact analysis and communication appropriate to commitments."
+    },
+    {
+      "authored_instruction": "Select releases from deployment records; check affected-customer analysis, required notice timing and recipient completeness. Inspect changes affecting AI limitations or responsibility splits.",
+      "authored_procedure": "Before material change, assess affected users, AI purposes and dependencies, limitations and contractual notice duties. Approve the change and communication plan; issue accurate notices to affected parties and retain delivery evidence. Reassess significant unplanned changes and failures.",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-PRD-003",
+      "kind": "TOE",
+      "required_checks": "Start from actual release population; derive affected customer, notice duty/deadline and recipients; inspect release impact, dispatch authority and delivery originals.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-PRD-003-corporate-TOE",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "title": "Material customer-impacting changes receive impact analysis and communication appropriate to commitments."
+    },
+    {
+      "authored_instruction": "Trace a changed service responsibility and an external concern through receipt, response and the appropriate audience. Test contact accuracy and incomplete recipient lists.",
+      "authored_procedure": "Provide external reporting routes for service problems and AI adverse impacts. Triage severity, affected users and escalation duties; link repeat issues to engineering and risk/impact reassessment. Communicate appropriate responses and verify corrective changes before closure.",
+      "clause_group": "ACTION-S-COMMUNICATION",
+      "control_id": "SH-PRD-004",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Reconcile support/concern channels to cases; trace recurring/high-impact severity, engineering/risk linkage, approved response, original inbox delivery and validated closure.",
+      "requirement_ids": [
+        "SOC2:CC2.2",
+        "SOC2:CC2.3"
+      ],
+      "task_id": "TASK-SH-PRD-004-corporate-ACTION-S-COMMUNICATION",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Support incidents and recurring customer issues are linked to product/engineering corrective action where warranted."
+    },
+    {
+      "authored_instruction": "Reconcile support channels to cases; inspect high-impact and repeated reports for timely escalation and risk linkage. Trace closure to validated changes and retained failure history.",
+      "authored_procedure": "Provide external reporting routes for service problems and AI adverse impacts. Triage severity, affected users and escalation duties; link repeat issues to engineering and risk/impact reassessment. Communicate appropriate responses and verify corrective changes before closure.",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-PRD-004",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Reconcile support/concern channels to cases; trace recurring/high-impact severity, engineering/risk linkage, approved response, original inbox delivery and validated closure.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-PRD-004-corporate-IMPLEMENTATION",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "title": "Support incidents and recurring customer issues are linked to product/engineering corrective action where warranted."
+    },
+    {
+      "authored_instruction": "Reconcile support channels to cases; inspect high-impact and repeated reports for timely escalation and risk linkage. Trace closure to validated changes and retained failure history.",
+      "authored_procedure": "Provide external reporting routes for service problems and AI adverse impacts. Triage severity, affected users and escalation duties; link repeat issues to engineering and risk/impact reassessment. Communicate appropriate responses and verify corrective changes before closure.",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-PRD-004",
+      "kind": "TOD",
+      "required_checks": "Reconcile support/concern channels to cases; trace recurring/high-impact severity, engineering/risk linkage, approved response, original inbox delivery and validated closure.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-PRD-004-corporate-TOD",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "title": "Support incidents and recurring customer issues are linked to product/engineering corrective action where warranted."
+    },
+    {
+      "authored_instruction": "Reconcile support channels to cases; inspect high-impact and repeated reports for timely escalation and risk linkage. Trace closure to validated changes and retained failure history.",
+      "authored_procedure": "Provide external reporting routes for service problems and AI adverse impacts. Triage severity, affected users and escalation duties; link repeat issues to engineering and risk/impact reassessment. Communicate appropriate responses and verify corrective changes before closure.",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-PRD-004",
+      "kind": "TOE",
+      "required_checks": "Reconcile support/concern channels to cases; trace recurring/high-impact severity, engineering/risk linkage, approved response, original inbox delivery and validated closure.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-PRD-004-corporate-TOE",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "title": "Support incidents and recurring customer issues are linked to product/engineering corrective action where warranted."
+    }
+  ]
+}
