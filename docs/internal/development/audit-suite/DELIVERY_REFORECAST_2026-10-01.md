@@ -21,6 +21,14 @@ independently reviewed V17 candidate has 39 selected source cohorts and 897
 native versions, but is partial; it is not a fresh engagement. The V5 readiness
 gate still blocks all 43 control groups. None of these counts is an audit pass.
 
+This denominator is for the **new frozen P1 pair**. The older A1939/B2066
+review packet already contains a functioning audit UI, 818 indexed task rows,
+16 findings and earlier performed work. At the nearby A1938/B2064 checkpoint,
+each old workroom had 92 `COMPLETE`, 182 `IN_PROGRESS` and 135 `NOT_STARTED`
+tasks, with many completed/in-progress tasks limited rather than passing.
+That experience and tooling can be reused. Its evidence, conclusions and Key
+cannot be transplanted as fresh-period procedure results into a new pair.
+
 | Outcome | Working range from October 1 | Conditions |
 | --- | --- | --- |
 | One narrow, end-to-end, reviewed training slice | Weeks, scoped separately | A bounded control/source family, ordinary collection and performed procedures; no claim about the whole audit. |
@@ -30,9 +38,11 @@ gate still blocks all 43 control groups. None of these counts is an audit pass.
 These are planning ranges, not commitments. A single episodic agent cannot be
 mapped honestly to the sustained-team calendar. For a bottom-up capacity check,
 the prior source/registry work estimate was 20–40 focused builder-weeks before
-review rework. Even if each of the 818 procedure instances takes only 30–90
-minutes to perform, document and review, that adds about 10–31 forty-hour
-workweeks. Integration, UI and rework add time. Parallel work reduces elapsed
+review rework. At 30–90 minutes to reperform, document and review each of the
+818 new-pair procedure instances, the gross procedure workload is about 10–31
+forty-hour workweeks. Reusing vetted procedure methods can lower that effort;
+source rework, legal/authority decisions and independent review can raise it.
+Integration and UX also need time. Parallel work reduces elapsed
 time only when source dependencies and independent review permit it; it does
 not erase procedure or legal/authority gates.
 
