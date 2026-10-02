@@ -1,6 +1,37 @@
 # Local audit-training delivery
 
-Latest October 2 continuation: the independently accepted UTF-8 B08 successor
+October 2 restart recovery: CLEAN finished all 409 ordinary procedures at
+revision 6,226, with 2,741 retained originals and no unrun tasks. Its queue
+completion proof is `c6ee4875a37903ea37ee786101d39df1f183583114e294bc8d0cfd412a22e5e9`.
+MESSY preserved 358 workpapers at revision 5,936, with 2,833 originals and 52
+unrun tasks: the last two B01 tasks and all 50 B05 tasks. Its interrupted TOD
+already has its original population, selection and workpaper; it has no sample
+trace or task disposition yet. No batch rerun, reset or duplicate work is allowed.
+
+Both writers stopped before the workstation restarted. The root disk then had
+about 148 MiB available. Re-downloadable Python package caches were cleared;
+installed runtimes, company/audit history and frozen review proofs were preserved.
+Storage remains insufficient for the remaining run and delivery. Exact normal
+read-only quiescence, states and ordinary preserved WAL/SHM copies are pinned by
+`6688c21d546512497fb9983e91926183a2373e3f32b0177ea15c4a519282f2a2`.
+This capture explicitly does not establish whole-history integrity or authorize
+the interrupted continuation. Narrow recovery review and safe storage recovery
+are in progress. The clean run also still requires independent final replay.
+
+All ten disjoint method gates, 39 historical code versions and the exact 409
+procedure contracts are prepared for final capture as
+`34fac279f00392657b01b565d66fa6811fb74b8307e99121b00f40c5f2c2b59d`.
+The compiler's actual seven-field source identities and all 409 current task
+links have been checked for each Key; preparation is
+`a6e792872fb46888e62d30a192c5d3b132e17fe5a919e8c81efb309a58eecc49`.
+No actual Key, final packet or protected service has been activated. The retained
+history performance and fixed-scope successors remain separate from the current
+main Store and require final composition review. No professional, owner or
+whole-enterprise acceptance is asserted.
+
+The following paragraphs preserve earlier October 2 integration checkpoints.
+
+Earlier October 2 continuation: the independently accepted UTF-8 B08 successor
 is in main, with 154 freshly verified references and 14 passing checks. Both real
 rooms completed its 23 ordinary procedures: CLEAN now has 307 workpapers and 102
 unrun tasks; MESSY has 120 workpapers and 289 unrun tasks. Native text remains

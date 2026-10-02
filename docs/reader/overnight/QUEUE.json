@@ -2217,7 +2217,7 @@
       "activation_proof_sha256": "40722199d57872e420e8fa0bee3ca048584adb3e15dd9593b5497770e1f086b3",
       "independent_birth_verification_sha256": "bf804a33a1945fd332581070227edde813765b22e87e0e4a7292806b47472a36",
       "period_close_clock_advance_sha256": "573b1377749b2da3bcb6a6498f2c4cc990b09b6cdb97fb97cf00728bf7ac74a4",
-      "current_fieldwork": "CLEAN307_MESSY120_B08_NATIVE23_PROCEDURES_PER_BRANCH_COMPLETE_V6_ALL_REMAINING_QUEUE_RUNNING",
+      "current_fieldwork": "CLEAN409_COMPLETE_PENDING_FINAL_REPLAY_MESSY358_WORKPAPERS_52_UNRUN_INTERRUPTED_B01",
       "all_disjoint_family_task_methods_required": true,
       "historical_task_results_imported": false,
       "qualified_or_owner_acceptance": "NOT_ASSERTED",
@@ -2354,7 +2354,7 @@
         "MESSY": 1393
       },
       "superseded262_queue_status": "PRESERVED_FAILED_OR_INTERRUPTED_NO_COMPLETION_INDEX_NEW_V5_CONTINUATION_INCLUDES_B05",
-      "actual_service_activation": "PENDING_FRESH_EXPANDED_COMPOSITION_NO_OLD_ORIGIN_GATE_INHERITANCE",
+      "actual_service_activation": false,
       "full_company_key_v1_semantic_review": "NOT_ACCEPTED_GENERIC_SOURCE_ISSUES_AND_EXCESSIVE_FANOUT_REQUIRE_CAUSAL_EPISODES_AND_TASK_SPECIFIC_WITNESSES",
       "clean_completed_governance_execution_sha256": "bf5a301d4d48efe8b380b38a427663cb065a80dd637588925c17125fe9a3ff70",
       "clean_completed_governance_workpapers": 258,
@@ -2368,7 +2368,7 @@
       "protected_retained_key_full_scope_size_status": "EXACT3379146_BYTE_GENUINE409_SNAPSHOT32MIB_SNAPSHOT_ONLY_INDEPENDENT23_HTTP_ACCEPTED_MAIN99_REFERENCES35_CHECKS_PASS_ACTUAL_COMPOSITION_PENDING",
       "first_company_native_key_causal_review_sha256": "f36e358e25743ee5d825d38078d4f6aa356a7d182da265c2773777e523720add",
       "first_company_native_key_causal_status": "REFINED_EIGHT_BOUNDED_CARDS35_ORIGINALS75_LOCATORS_SUPPORTED_FULL76_CARDS_AND409_TASK_FACETS_PER_BRANCH_REQUIRE_VISIBLE_CLAIM_AND_INDEPENDENT_REVIEW",
-      "current_queue_status": "V6_CONTINUATION_RUNNING_CLEAN_B01_B05_MESSY_B06_B07_B09_B01_B05",
+      "current_queue_status": "STOPPED_RESTART_STORAGE_BLOCKER_NARROW_B01_RECOVERY_REVIEW",
       "clean_completed_incident_execution_sha256": "54030de60898ca77f69f4d8825f53635d2b444b079bcbc2053f42aea2f61fa37",
       "clean_completed_incident_workpapers": 284,
       "clean_unrun_after_incidents": 125,
@@ -2413,7 +2413,32 @@
       "full_company_native_key_v2_literal_review_sha256": "163d269ac3841ffbcda88508f5d38270db6a0d9e6a16a6dc14e037b560e68239",
       "full_company_native_key_v2_visible_semantic_review_sha256": "2eacd47024ba113e69ff914b6f50ed0cb76c1062fdbb5689b00f29a7064879d4",
       "full_company_native_key_v2_main_reproduction_sha256": "aadb238d41fba2d792d2653a37ddf845abdce7d08914bd523a9e5aead89f7ce9",
-      "full_company_native_key_v2_main_focused_sha256": "f779325571128d5ffdae556ceedba6bc8625d75d99e627cb5529f37f5d684545"
+      "full_company_native_key_v2_main_focused_sha256": "f779325571128d5ffdae556ceedba6bc8625d75d99e627cb5529f37f5d684545",
+      "restart_quiescence_sha256": "6688c21d546512497fb9983e91926183a2373e3f32b0177ea15c4a519282f2a2",
+      "clean_final_fieldwork_queue_execution_sha256": "c6ee4875a37903ea37ee786101d39df1f183583114e294bc8d0cfd412a22e5e9",
+      "actual_current_revisions": {
+        "CLEAN": 6226,
+        "MESSY": 5936
+      },
+      "actual_current_workpapers": {
+        "CLEAN": 409,
+        "MESSY": 358
+      },
+      "actual_current_tasks_unrun": {
+        "CLEAN": 0,
+        "MESSY": 52
+      },
+      "actual_current_retained_originals": {
+        "CLEAN": 2741,
+        "MESSY": 2833
+      },
+      "messy_interrupted_task": "TASK-SH-TRN-003-corporate-TOD",
+      "messy_interrupted_task_objects_preserved": "ORIGINAL_POPULATION_READY_VERSION_SELECTION_AND_WP1_ZERO_TRACES_NO_TASK_DISPOSITION",
+      "actual_writers_running": false,
+      "whole_history_final_replay": "PENDING",
+      "final_fieldwork_input_preparation_sha256": "34fac279f00392657b01b565d66fa6811fb74b8307e99121b00f40c5f2c2b59d",
+      "key_binding_input_preparation_sha256": "a6e792872fb46888e62d30a192c5d3b132e17fe5a919e8c81efb309a58eecc49",
+      "storage_status": "CAPACITY_BLOCKER_SAFE_ARCHIVE_CANDIDATE_REVIEW_AND_ADDITIONAL_STORAGE_REQUESTED"
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"
