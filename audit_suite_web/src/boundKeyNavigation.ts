@@ -6,6 +6,7 @@ import type {
 } from "./boundInstructorKey";
 export const BOUND_SOURCE_PAGE_SIZE = 10;
 export function issueControlLabel(issue: BoundIssue, controls: Row[]): string {
+  if (issue.control_ids.length === 0) return "Engagement scope";
   return issue.control_ids
     .map((id) => {
       const control = controls.find((row) => row.id === id);
