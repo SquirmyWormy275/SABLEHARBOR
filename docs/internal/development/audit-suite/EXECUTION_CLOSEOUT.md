@@ -10,23 +10,26 @@ and separate birth verification
 record that boundary. The preserved B00 execution checkpoint contains two
 scope workpapers per room; proof is
 `fb886c5ad15d71be8f0f43b9ac3dce5a0d3746abc639772624159d01b4fa1f51`.
-B03 performed 20 selected continuity procedures per branch and B04 subsequently
-performed 37 engineering procedures. Both rooms have 59 workpapers and 350 tasks
-unrun; B04 paired proof is
-`ab3c83158f4299b7db4cf00a5dc6eedde767b1be6ed523a425b73f1a5713f3cf`.
-The B02 source-format correction passed independent review and 42 main checks;
-its old pure failure and raw inputs are preserved. Actual B05 preflight then
-found a native common-quality role mismatch before any data-record task write;
-sealed failure is `678b02f1d2ad2b2785fc928709afc9f9e9a04fe5bee52a6a859c31cf996000ec`.
-The shared pair is quiescent pending the reviewed successor. Other accepted
-batches still require actual fieldwork. The corrected full-scale independent
-workforce writer completed all 52 tasks with unchanged substantive results;
-its immutable history seal is pending. Large-run checks exposed unscoped
-history sorts, an oversized full workspace response and the old export limit.
-Focused streaming-query, workspace-detail and complete-history packet lanes
-are active. The Key small-boundary independent gate passed, with large
-composition and actual explanation binding pending. No final completion,
-qualified acceptance or passing audit opinion is asserted.
+B03 performed 20 selected continuity procedures per branch, B04 performed 37
+engineering procedures and B02 performed 38 security procedures. The latest
+sealed checkpoint has 97 workpapers and 312 unrun tasks per room; B02 paired
+proof is `e7b0b519a699a445901d97591bacb342bcd6736476e447a385fbc5fb16ee8893`.
+Two ordinary room queues are now executing 262 further reviewed procedures
+per room. B05's preserved pure preflight role failure occurred before any data
+record task write; its corrected author candidate is in independent review.
+The full-scale 52-task workforce successor is independently sealed, reproduced
+in main and included in these actual queues. All earlier task work, native
+sources, clocks and receipts remain intact.
+
+Large-history correctness now passes bounded streaming verification, but a
+real instructor Key request takes 446.63 seconds; performance work continues.
+Scoped workspace loading and genuine large draft/edit/review/correction have
+passed author checks, with separate review still required. The complete private
+export is independently accepted against two large histories and 31 refusal
+cases, and its exact main reproduction passed. Actual final delivery, usable
+integrated navigation, full fieldwork verification and explanation binding
+remain required. No final completion, professional opinion or owner acceptance
+is asserted.
 Current status and exact implementation gates are recorded in
 `ACTIVE_AGENT_GRAPH_2026-10-01.md`. The packets below remain preserved historical
 technical snapshots and supply no inherited task results for the current pair.

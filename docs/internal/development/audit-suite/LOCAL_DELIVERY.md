@@ -1,5 +1,7 @@
 # Local audit-training delivery
 
+Current October 1 execution is tracked in [the active workflow](ACTIVE_AGENT_GRAPH_2026-10-01.md) and [execution closeout](EXECUTION_CLOSEOUT.md). The full company-source pair is still in progress; the versioned checks below describe earlier delivery snapshots.
+
 This branch delivers the local implementation of the September 12 audit-suite handover against accepted baseline `325fdc8a25ab8ba8d74bf4b62d6853e703cfecd8`. The protected build ledger retains engineering evidence and exact scope limits. Eight of ten program entries have usable scoped training content; two remain blocked by missing authorized sources. This document does not assert complete program coverage, owner acceptance, professional rubric validation, a completed assessment or external deployment.
 
 ## Application and installation
@@ -39,7 +41,7 @@ Human review exports retain original evidence and versioned workpapers. Experime
 
 ## Organization and existing repository boundaries
 
-The dated branch appointments add fifteen named fictional occupants to existing modeled positions. The projection contains 59 current named employee identities and seven nonemployee directors; accepted predecessor sources contain 44 current named employees. No incremental conditional 2027 FTE or payroll is added. The workforce bridge preserves 7,092 modeled position-month rows; J2's 237 billets remain unchanged. Physical occupancy is not invented from a training role assignment.
+The current accepted canon contains 44 current named employees, seven nonemployee directors and former employee P008: 52 distinct people. Fifteen proposed occupants remain unappointed. The older 59-employee projection records a proposal rather than current company authority. Forecast totals of 591 and 506 are not headcount. No incremental conditional 2027 FTE or payroll is added. The workforce bridge preserves 7,092 modeled position-month rows; J2's 237 billets remain unchanged. Physical occupancy is not invented from a training role assignment.
 
 The organization chart successor has 60 pages. The bodies of the predecessor's 57 pages were preserved pixel-for-pixel, and the original v1.1.0 publication is retained in history. Two controlled publications were added; 131 prior publication hashes were preserved. Engineering visual inspection is separate from owner visual acceptance and Board ratification. See the [reconciliation record](ORGANIZATION_RECONCILIATION_2026-09-13.md).
 

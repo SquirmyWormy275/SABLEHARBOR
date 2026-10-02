@@ -67,7 +67,7 @@ The independently reviewed correction performed all 20 selected continuity
 procedures per branch. Its B03 checkpoint had 22 workpapers and 387 unrun tasks;
 paired proof is `05c01c1fec27a14eafab688fa57e10b293ddc88322e355b7206abe6f0b219ec2`.
 B04 subsequently performed all 37 selected engineering procedures per branch.
-Both rooms now have 59 workpapers and 350 tasks unrun; paired proof is
+That B04 checkpoint had 59 workpapers and 350 tasks unrun; paired proof is
 `ab3c83158f4299b7db4cf00a5dc6eedde767b1be6ed523a425b73f1a5713f3cf`.
 B04 held 2,295 CLEAN originals and 491 MESSY originals. These are bounded
 performed procedures with individual limitations and failures, without an
@@ -79,25 +79,39 @@ is preserved. The exact source-format correction is independently accepted as
 `d8363d68b56088e18de6b303cc8ff635caf293df275874e049a6a087ccf9ea29`;
 main verified 607 ordinary frozen copies and 42 focused checks. Its original
 raw lists remain distinct from structured policy/inventory facts. Actual B02
-fieldwork has not yet resumed.
+fieldwork subsequently completed all 38 security procedures per branch.
+Paired proof is `e7b0b519a699a445901d97591bacb342bcd6736476e447a385fbc5fb16ee8893`.
+The preserved continuation checkpoint has 97 workpapers and 312 unrun tasks
+per room, with 2,469 CLEAN and 629 MESSY retained originals. Its scoped grant
+backstop and unchanged company checkpoint are sealed as
+`33d5aaa3e57e21eb46754e803879e6a54b31c2e652e9ed729ec075d520c18f46`.
 
 The actual B05 pure preflight then failed on an exact native common-quality
 role. Failure `678b02f1d2ad2b2785fc928709afc9f9e9a04fe5bee52a6a859c31cf996000ec`
 preserves all 296 held inputs, current states and revoked temporary grants.
-CLEAN now holds 2,463 originals and MESSY 491; no B05 task write occurred.
+That failure checkpoint held 2,463 CLEAN originals and 491 MESSY originals;
+no B05 task write occurred.
 The corrected author candidate retains direct citations to wrong-role originals
 as unresolved and passed the exact 50-task pure preflight plus 35 checks.
-Independent review is required before actual use. B06, B07, B08 and B09 method
-gates are integrated; their actual fieldwork remains required.
+Independent review is running before actual B05 use. B06, B07, B08 and B09
+method gates are integrated. Two independent room queues are now executing
+those four batches and the reviewed B01 successor: 262 selected tasks per room,
+with one writer per audit database and ordinary serialized company grants.
+The queues preserve all existing task work and use no imported audit outcomes.
 
 All 1,695 CLEAN person-access history originals were collected normally.
 The old workforce driver stopped before its 52 task writes; quiescence is
 `08a4e82bebc8d74b2d14a5c92473a25b31eca255c1ed193decd5ed86bfa3652c`.
 The corrected efficient candidate completed the full independent 52-task writer,
 with all old/new task results equal and exact prerequisite custody retained.
-Its full immutable history verification is still running; actual adoption is
-pending. That independent state measures 120,825,800 bytes. A separate author
-lane is developing scoped detail loading without altering stored fieldwork.
+Its full immutable replay is accepted as
+`97bad40743da6f5cc7bdd797c19f1ca439be0e03e88316d89ce2dbbeaec88400`.
+Main checked all 2,158 frozen references without duplicating the 51 GiB journal,
+reproduced all 52 contracts, and passed 45 focused checks. B01 is in the actual
+room queues. That independent state measures 120,825,800 bytes. Scoped detail
+loading has passed author HTTP and browser checks, including a 4.7 MB saved
+draft with 1,694 citations, historical review, latest-version editing and sample
+correction. Its separate independent review and main adoption remain required.
 
 The retained-service streaming successor passed small genuine and adversarial
 checks, but the large history profile exposed four unscoped queries sorting
@@ -403,3 +417,24 @@ missing operations remain missing after that advance.
 Atlas stays read-only. Company sources, audit results, instructor answers and
 owner/professional acceptance remain separate. No remote publication or real
 assurance claim is part of this local implementation run.
+
+Latest performance and delivery checks: indexed streaming completes the large
+2,811-event service verification in 825.87 seconds with bounded memory, but a
+genuine instructor-binding request takes 446.63 seconds. Large interaction
+usability therefore remains CHANGES_REQUIRED. A fresh-read performance author
+lane is active; no prior acceptance gate supplies performance credit.
+
+The complete private packet successor is independently accepted as
+`ceac6db0c968b75923a581e025d3598b18dcc70e6c1450d2b1095f1771020e50`,
+with all-event value/type replay, two large normal and exact-second positive
+histories, and 31 genuine privacy, authority, tamper and race refusals. Main
+reverified 1,070 current and preserved-rejection references and both large
+packets; reproduction is
+`a11fd7c22535646336f08ab73f5b2c7340aa285d112a006ceb81a0f7bd9a4b1d`.
+Actual final packet delivery awaits fieldwork completion.
+
+Before resuming fieldwork, both original audit databases were preserved as
+independent ordinary byte copies and verified. Scoped Btrfs compression applies
+only to future audit writes; old SQLite bytes and company history are unchanged.
+Preservation proof is
+`c0548637ff11760ae3682c3cd8461e336b2fab91f96e070daf716687b9f8d84f`.
