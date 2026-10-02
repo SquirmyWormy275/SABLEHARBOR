@@ -36,6 +36,18 @@ EVENT_COLUMNS = (
     "hash",
     "request_hash",
 )
+HISTORY_SQL = (
+    "CREATE TABLE history_events (revision INTEGER PRIMARY KEY, actor TEXT NOT NULL, "
+    "recorded_at INTEGER NOT NULL, previous_hash TEXT NOT NULL, state TEXT NOT NULL, "
+    "command TEXT NOT NULL, command_id TEXT NOT NULL, hash TEXT NOT NULL, "
+    "request_hash TEXT NOT NULL)"
+)
+STATE_SQL = "CREATE TABLE selected_state (id TEXT PRIMARY KEY, state TEXT NOT NULL)"
+SCHEMA_OBJECTS = {
+    ("table", "history_events", "history_events", HISTORY_SQL),
+    ("table", "selected_state", "selected_state", STATE_SQL),
+    ("index", "sqlite_autoindex_selected_state_1", "selected_state", None),
+}
 
 
 def file_digest(path):
@@ -178,13 +190,8 @@ def export_packet(engine, actor, engagement_id, output):
             "SELECT revision,state FROM engagements WHERE id=?", (engagement_id,)
         ).fetchone()
         state = json.loads(current["state"])
-        target.execute(
-            "CREATE TABLE history_events (revision INTEGER PRIMARY KEY, actor TEXT NOT NULL, "
-            "recorded_at INTEGER NOT NULL, previous_hash TEXT NOT NULL, state TEXT NOT NULL, "
-            "command TEXT NOT NULL, command_id TEXT NOT NULL, hash TEXT NOT NULL, "
-            "request_hash TEXT NOT NULL)"
-        )
-        target.execute("CREATE TABLE selected_state (id TEXT PRIMARY KEY, state TEXT NOT NULL)")
+        target.execute(HISTORY_SQL)
+        target.execute(STATE_SQL)
         for row in source.execute(
             "SELECT * FROM events WHERE engagement=? ORDER BY revision", (engagement_id,)
         ):
@@ -396,15 +403,20 @@ def verify_packet(path, expected_manifest_sha256):
     uri = (root / "history.sqlite3").as_uri() + "?mode=ro&immutable=1"
     with closing(sqlite3.connect(uri, uri=True)) as db:
         db.row_factory = sqlite3.Row
-        objects = list(db.execute("SELECT type,name FROM sqlite_master WHERE type!='index'"))
+        objects = list(db.execute("SELECT type,name,tbl_name,sql FROM sqlite_master"))
         if (
-            {(r["type"], r["name"]) for r in objects}
-            != {("table", "history_events"), ("table", "selected_state")}
+            {tuple(r) for r in objects} != SCHEMA_OBJECTS
             or tuple(r["name"] for r in db.execute("PRAGMA table_info(history_events)"))
             != EVENT_COLUMNS
             or tuple(r["name"] for r in db.execute("PRAGMA table_info(selected_state)"))
             != ("id", "state")
             or db.execute("PRAGMA quick_check").fetchone()[0] != "ok"
+            or db.execute("PRAGMA freelist_count").fetchone()[0] != 0
+            or db.execute("PRAGMA application_id").fetchone()[0] != 0
+            or db.execute("PRAGMA user_version").fetchone()[0] != 0
+            or (root / "history.sqlite3").stat().st_size
+            != db.execute("PRAGMA page_count").fetchone()[0]
+            * db.execute("PRAGMA page_size").fetchone()[0]
         ):
             raise DomainError("Exclusive complete packet journal schema required")
         selected = list(db.execute("SELECT id,state FROM selected_state"))

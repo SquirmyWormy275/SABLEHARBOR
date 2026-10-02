@@ -161,7 +161,7 @@ def test_destination_created_during_export_is_preserved(packetcase, monkeypatch)
 
 
 @pytest.mark.parametrize(
-    "attack", ["omitted_original", "foreign_table", "missing_event", "false_grade"]
+    "attack", ["omitted_original", "foreign_table", "missing_event", "false_grade", "foreign_index"]
 )
 def test_resealed_packet_refuses_incomplete_or_promoted_content(packetcase, attack):
     _, case, output = packetcase
@@ -177,6 +177,11 @@ def test_resealed_packet_refuses_incomplete_or_promoted_content(packetcase, atta
             if attack == "foreign_table":
                 db.execute("CREATE TABLE principals (private_token TEXT)")
                 db.execute("INSERT INTO principals VALUES ('must not travel')")
+            elif attack == "foreign_index":
+                db.execute(
+                    "CREATE INDEX private_auth_tokens ON history_events "
+                    "((CAST('OWN-PRIVATE-CREDENTIAL-CANARY' AS TEXT)))"
+                )
             else:
                 db.execute("DELETE FROM history_events WHERE revision=0")
             db.commit()
