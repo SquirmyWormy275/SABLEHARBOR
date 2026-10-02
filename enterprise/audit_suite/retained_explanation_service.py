@@ -14,7 +14,7 @@ from pathlib import Path
 
 from .bound_instructor import load_bindings
 from .company_store import _time
-from .explanation_binding import verify_snapshot
+from .explanation_binding import _authored, verify_snapshot
 from .fresh_sec003_procedure import require
 from .history_inspection import inspect_history
 from .persistent_company_service import RetainedWorkroom, absolute_path, pinned_json
@@ -31,6 +31,7 @@ MODULES = (
     "instructor_comparison.py",
     "instructor_access.py",
     "instructor_key_views.py",
+    "expectation_links.py",
 )
 
 
@@ -116,6 +117,44 @@ class ExplainedWorkroom:
         snapshot = verify_snapshot(
             binding["path"], expected_manifest_sha256=binding["manifest_sha256"]
         )
+        require(
+            set(snapshot)
+            == {
+                "schema_version",
+                "status",
+                "created_at",
+                "instructor_id",
+                "audited_actor_id",
+                "source_operator_id",
+                "operator_source_as_of",
+                "company_binding",
+                "engagement",
+                "access_event_watermark",
+                "sources",
+                "software_verified",
+                "authored",
+                "authored_status",
+                "professional_validation",
+                "grading",
+                "limits",
+            }
+            and snapshot["schema_version"] == "1.0"
+            and snapshot["status"] == "BOUND_INSTRUCTOR_AUTHORED_UNVALIDATED"
+            and snapshot["authored_status"] == "INSTRUCTOR_AUTHORED_INFERENCE"
+            and snapshot["professional_validation"] == "UNVALIDATED"
+            and snapshot["grading"] == "NOT_PERFORMED"
+            and snapshot["software_verified"]
+            == [
+                "Source byte identity",
+                "Source availability timestamps",
+                "Actor grant state at binding",
+                "Exact retained audit-copy hashes",
+            ]
+            and isinstance(snapshot["limits"], list)
+            and snapshot["limits"]
+            and all(isinstance(x, str) and x.strip() for x in snapshot["limits"]),
+            "Exact unvalidated explanation status and software fact boundaries required",
+        )
         identities = retained.binding["identities"]
         require(
             snapshot["company_binding"] == retained.selected
@@ -139,9 +178,65 @@ class ExplainedWorkroom:
             and _time(state["simulated_at"]) == _time(snapshot["engagement"]["simulated_at"]),
             "Explanation history prefix, scope or clock differs",
         )
+        sources = snapshot["sources"]
+        require(
+            isinstance(sources, list)
+            and sources
+            and all(
+                isinstance(s, dict) and isinstance(s.get("id"), str) and s["id"] for s in sources
+            )
+            and len({s["id"] for s in sources}) == len(sources),
+            "Distinct typed bound explanation source IDs required",
+        )
+        require(
+            _authored(
+                snapshot["authored"],
+                {s["id"] for s in sources},
+                {c["id"] for c in state["controls"]},
+                self.repository,
+                state=state,
+            )
+            == snapshot["authored"],
+            "Exact authored source, scoped control and task links required",
+        )
+        watermark = snapshot["access_event_watermark"]
+        require(type(watermark) is int and watermark >= 0, "Strict access event watermark required")
         seen = set()
         with quiescent_read(retained.world.store.path) as db:
+            require(
+                watermark
+                <= db.execute("SELECT COALESCE(MAX(id),0) FROM access_events").fetchone()[0]
+                and (
+                    watermark == 0
+                    or db.execute("SELECT 1 FROM access_events WHERE id=?", (watermark,)).fetchone()
+                    is not None
+                ),
+                "Explanation access watermark does not exist in this company history",
+            )
             for source in snapshot["sources"]:
+                require(
+                    set(source)
+                    == {
+                        "id",
+                        "company",
+                        "branch",
+                        "system",
+                        "record",
+                        "version",
+                        "sha256",
+                        "path",
+                        "event_at",
+                        "available_at",
+                        "imported_at",
+                        "actor_granted_at_binding",
+                        "actor_visibility_at_binding",
+                        "retained_audit_artifact_ids",
+                        "fact_verification",
+                    }
+                    and source["fact_verification"]
+                    == "EXACT_EXISTING_SOURCE_BYTES_AND_ACCESS_STATE_ONLY",
+                    "Exact explanation source fact boundary required",
+                )
                 version = source["version"]
                 require(
                     type(version) is int and version > 0,
@@ -166,6 +261,36 @@ class ExplainedWorkroom:
                         for k in ("sha256", "event_at", "available_at", "imported_at")
                     ),
                     "Explanation native original or clocks differ",
+                )
+                access = db.execute(
+                    "SELECT active FROM access_events WHERE id<=? AND principal=? AND engagement=? "
+                    "AND company=? AND branch=? AND system=? ORDER BY id DESC LIMIT 1",
+                    (watermark, identities["auditor"], retained.engagement, *key[:3]),
+                ).fetchone()
+                granted = bool(access and access["active"] == 1)
+                clock = _time(state["simulated_at"])
+                exists = _time(row["available_at"]) <= clock and (
+                    row["event_at"] is None or _time(row["event_at"]) <= clock
+                )
+                latest = db.execute(
+                    "SELECT MAX(version) FROM versions WHERE company=? AND branch=? AND system=? "
+                    "AND record=? AND available_at<=? AND (event_at IS NULL OR event_at<=?)",
+                    (*key[:4], clock, clock),
+                ).fetchone()[0]
+                visibility = (
+                    "FUTURE_UNAVAILABLE"
+                    if not exists
+                    else "ACCESS_NOT_GRANTED"
+                    if not granted
+                    else "DISCOVERABLE_LATEST"
+                    if latest == version
+                    else "READABLE_PRIOR_VERSION"
+                )
+                require(
+                    type(source["actor_granted_at_binding"]) is bool
+                    and source["actor_granted_at_binding"] == granted
+                    and source["actor_visibility_at_binding"] == visibility,
+                    "Explanation captured grant or visibility differs from actual access history",
                 )
                 raw = (binding["path"] / source["path"]).read_bytes()
                 require(raw == row["content"], "Explanation bytes differ from company original")

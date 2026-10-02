@@ -13,6 +13,7 @@ from enterprise.audit_suite.fresh_sec003_procedure import ProcedureError
 from enterprise.audit_suite.persistent_company_journey import native_rows, write
 from enterprise.audit_suite.retained_explanation_service import configuration, create_explained_app
 from enterprise.audit_suite.source_library_audit import file_sha
+from enterprise.audit_suite.store import DomainError
 
 REPO = Path(__file__).resolve().parents[2]
 retained = retained_fixture
@@ -180,7 +181,25 @@ def test_private_snapshot_tamper_fails_private_reads_while_learner_keeps_company
 
 
 @pytest.mark.parametrize(
-    "change", ["other_room", "wrong_actor", "wrong_prefix", "wrong_source", "boolean_version"]
+    "change",
+    [
+        "other_room",
+        "wrong_actor",
+        "wrong_prefix",
+        "wrong_source",
+        "boolean_version",
+        "captured_grant",
+        "captured_visibility",
+        "claimed_validation",
+        "claimed_grading",
+        "authored_unbound_source",
+        "authored_unscoped_control",
+        "authored_unscoped_task",
+        "boolean_watermark",
+        "future_watermark",
+        "software_claim",
+        "source_claim",
+    ],
 )
 def test_resealed_operator_key_cannot_substitute_native_actor_history_or_original(keycase, change):
     snapshot = keycase["snapshot"]
@@ -194,8 +213,32 @@ def test_resealed_operator_key_cannot_substitute_native_actor_history_or_origina
         value["engagement"]["history_sha256"] = "0" * 64
     elif change == "wrong_source":
         value["sources"][0]["record"] = "another-record"
-    else:
+    elif change == "boolean_version":
         value["sources"][0]["version"] = True
+    elif change == "captured_grant":
+        value["sources"][0]["actor_granted_at_binding"] = not value["sources"][0][
+            "actor_granted_at_binding"
+        ]
+    elif change == "captured_visibility":
+        value["sources"][0]["actor_visibility_at_binding"] = "ACCESS_NOT_GRANTED"
+    elif change == "claimed_validation":
+        value["professional_validation"] = "VALIDATED"
+    elif change == "claimed_grading":
+        value["grading"] = "PERFORMED"
+    elif change == "authored_unbound_source":
+        value["authored"]["issues"][0]["source_ids"] = ["unbound"]
+    elif change == "authored_unscoped_control":
+        value["authored"]["issues"][0]["control_ids"] = ["SH-UNKNOWN"]
+    elif change == "authored_unscoped_task":
+        value["authored"]["expectations"][0]["task_ids"] = ["TASK-UNKNOWN"]
+    elif change == "boolean_watermark":
+        value["access_event_watermark"] = True
+    elif change == "future_watermark":
+        value["access_event_watermark"] += 100000
+    elif change == "software_claim":
+        value["software_verified"].append("Professional assurance")
+    else:
+        value["sources"][0]["fact_verification"] = "PROFESSIONALLY_VALIDATED"
     path.write_text(json.dumps(value, sort_keys=True))
     manifest = json.loads((snapshot / "manifest.json").read_bytes())
     manifest["files"]["snapshot.json"] = file_sha(path)
@@ -207,7 +250,7 @@ def test_resealed_operator_key_cannot_substitute_native_actor_history_or_origina
     config["explanation_bindings"]["sha256"] = file_sha(keycase["bindings"])
     keycase["config"].write_text(json.dumps(config, sort_keys=True))
     keycase["config_sha256"] = file_sha(keycase["config"])
-    with pytest.raises((ProcedureError, ValueError, RuntimeError)):
+    with pytest.raises((ProcedureError, ValueError, RuntimeError, DomainError)):
         boot(keycase)
 
 
