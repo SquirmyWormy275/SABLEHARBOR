@@ -10,22 +10,23 @@ and separate birth verification
 record that boundary. The preserved B00 execution checkpoint contains two
 scope workpapers per room; proof is
 `fb886c5ad15d71be8f0f43b9ac3dce5a0d3746abc639772624159d01b4fa1f51`.
-The corrected B03 now performed 20 selected continuity procedures per room,
-bringing each to 22 workpapers with 387 tasks still unrun at that checkpoint.
-Its paired index is `05c01c1fec27a14eafab688fa57e10b293ddc88322e355b7206abe6f0b219ec2`.
-All 1,695 CLEAN person-access originals are held; workforce task writes await
-the independently reviewed efficient citation successor. The old read-only
-service verification was stopped after excessive memory use; a streaming
-successor passed 29 author checks and awaits independent scale verification.
-B02 retained 337 security originals before a pure non-object format failure;
-no security task writes were made. Exact failure and inputs are preserved as
-`27071600f6e6c475036c711a30844c2f762f91f60516ba334ca801c2f1f2fc8d`.
-The disjoint engineering, data, legal, assurance and incident batches continue
-ordinary fieldwork in the same rooms. Governance methods also passed independent
-review and are integrated, with actual fieldwork still required. Protected Key
-integrity corrections remain unactivated pending independent review. Historical
-and neutral engineering results do not supply actual completion, qualified
-acceptance or passing audit conclusions.
+B03 performed 20 selected continuity procedures per branch and B04 subsequently
+performed 37 engineering procedures. Both rooms have 59 workpapers and 350 tasks
+unrun; B04 paired proof is
+`ab3c83158f4299b7db4cf00a5dc6eedde767b1be6ed523a425b73f1a5713f3cf`.
+The B02 source-format correction passed independent review and 42 main checks;
+its old pure failure and raw inputs are preserved. Actual B05 preflight then
+found a native common-quality role mismatch before any data-record task write;
+sealed failure is `678b02f1d2ad2b2785fc928709afc9f9e9a04fe5bee52a6a859c31cf996000ec`.
+The shared pair is quiescent pending the reviewed successor. Other accepted
+batches still require actual fieldwork. The corrected full-scale independent
+workforce writer completed all 52 tasks with unchanged substantive results;
+its immutable history seal is pending. Large-run checks exposed unscoped
+history sorts, an oversized full workspace response and the old export limit.
+Focused streaming-query, workspace-detail and complete-history packet lanes
+are active. The Key small-boundary independent gate passed, with large
+composition and actual explanation binding pending. No final completion,
+qualified acceptance or passing audit opinion is asserted.
 Current status and exact implementation gates are recorded in
 `ACTIVE_AGENT_GRAPH_2026-10-01.md`. The packets below remain preserved historical
 technical snapshots and supply no inherited task results for the current pair.

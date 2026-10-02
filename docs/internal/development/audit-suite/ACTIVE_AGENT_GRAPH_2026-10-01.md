@@ -63,50 +63,55 @@ request guards freshly check company source and implementation pins.
 
 The first B03 pure preflight failure remains preserved as
 `9482cea303ad575a20af983b0769575dcf293f042152ae49cd5c272c2eb433ca`.
-The independently reviewed correction now performed all 20 selected continuity
-procedures through ordinary commands in each actual room. Each room has 22
-workpapers and 387 tasks still unrun at that checkpoint. CLEAN retained 2,035
-originals and MESSY 302; paired execution index is
-`05c01c1fec27a14eafab688fa57e10b293ddc88322e355b7206abe6f0b219ec2`.
-These are bounded performed procedures with individual limitations and failures,
-not a completed audit or whole-year effectiveness.
+The independently reviewed correction performed all 20 selected continuity
+procedures per branch. Its B03 checkpoint had 22 workpapers and 387 unrun tasks;
+paired proof is `05c01c1fec27a14eafab688fa57e10b293ddc88322e355b7206abe6f0b219ec2`.
+B04 subsequently performed all 37 selected engineering procedures per branch.
+Both rooms now have 59 workpapers and 350 tasks unrun; paired proof is
+`ab3c83158f4299b7db4cf00a5dc6eedde767b1be6ed523a425b73f1a5713f3cf`.
+B04 held 2,295 CLEAN originals and 491 MESSY originals. These are bounded
+performed procedures with individual limitations and failures, without an
+issued audit opinion or whole-year effectiveness claim.
 
-All 1,695 available CLEAN person-access history originals were actually
-collected. The old workforce driver was stopped before its 52 task writes;
-scoped grants were revoked and verified with quiescence
+B02 retained 337 CLEAN security originals before its parser rejected three
+non-object originals. Failure `27071600f6e6c475036c711a30844c2f762f91f60516ba334ca801c2f1f2fc8d`
+is preserved. The exact source-format correction is independently accepted as
+`d8363d68b56088e18de6b303cc8ff635caf293df275874e049a6a087ccf9ea29`;
+main verified 607 ordinary frozen copies and 42 focused checks. Its original
+raw lists remain distinct from structured policy/inventory facts. Actual B02
+fieldwork has not yet resumed.
+
+The actual B05 pure preflight then failed on an exact native common-quality
+role. Failure `678b02f1d2ad2b2785fc928709afc9f9e9a04fe5bee52a6a859c31cf996000ec`
+preserves all 296 held inputs, current states and revoked temporary grants.
+CLEAN now holds 2,463 originals and MESSY 491; no B05 task write occurred.
+The corrected author candidate retains direct citations to wrong-role originals
+as unresolved and passed the exact 50-task pure preflight plus 35 checks.
+Independent review is required before actual use. B06, B07, B08 and B09 method
+gates are integrated; their actual fieldwork remains required.
+
+All 1,695 CLEAN person-access history originals were collected normally.
+The old workforce driver stopped before its 52 task writes; quiescence is
 `08a4e82bebc8d74b2d14a5c92473a25b31eca255c1ed193decd5ed86bfa3652c`.
-Independent review rejected an efficient candidate that omitted exact
-prerequisite citations. The corrected candidate preserves affiliation and
-catalogue originals and is undergoing the full 1,695-original writer review.
-The retained service's read-only whole-history verification consumed excessive
-memory and was interrupted without task writes. A streaming successor passed
-29 genuine author checks and is frozen for independent scale review; no new
-service configuration has been activated.
+The corrected efficient candidate completed the full independent 52-task writer,
+with all old/new task results equal and exact prerequisite custody retained.
+Its full immutable history verification is still running; actual adoption is
+pending. That independent state measures 120,825,800 bytes. A separate author
+lane is developing scoped detail loading without altering stored fieldwork.
 
-B02 security/configuration, B04 engineering/product, B05 data/records, B06
-legal/provider, B07 governance, B08 corrected assurance and B09 incidents have
-integrated independent method gates, respectively:
-`d342f67aa9aa371566b79c62a1aaa2e044133be0dc986bf02ac07575d2eea31e`,
-`2c1f58e1bbb9f5a822062d1565a9815520a00df2dd5479d2bbfafa93a74bf422`,
-`751d385b3f65f81449e4e360fd002a83fd32c2741c4ef858742bc9c45ce7da68`,
-`aace1bc14db93a4d61c1e07a57b84d03aa5da1bba72cd6e2a02e8ec40dec8926`,
-`f6934145ec6f1d981f90bf8c13aa91b73b80625da9973adcb5b4e987e222cb93`,
-`4ee8eb5827625df3cbce45571cbc079a5239ca02c201165e1d51176641e08078`,
-and `7bee82300a5f546922b0a6c70d22292f6cfebd807fd7955144acdee7408262bc`.
-Actual B02 collection retained 337 security-relevant originals in CLEAN; its
-pure parser rejected three non-object JSON originals before any security task
-writes. Failure `27071600f6e6c475036c711a30844c2f762f91f60516ba334ca801c2f1f2fc8d`
-preserves exact inputs, both task states and zero temporary auditor grants.
-A format correction is being authored and independently reviewed; raw originals
-are retained. The disjoint B04/B05/B06/B08/B09 actual driver is progressing.
-B07 actual fieldwork remains required after main focused checks.
+The retained-service streaming successor passed small genuine and adversarial
+checks, but the large history profile exposed four unscoped queries sorting
+complete state blobs. A focused indexed-predicate correction is under author
+checks. No new service configuration is activated. The complete private history
+packet passed 16 genuine author checks, including history above the old 100 MiB
+export limit, and is frozen for independent review.
 
-The protected retained Key remains an unactivated candidate. Independent
-reviews found false access/status claims, an unmanifested original path and
-an omitted snapshot member. Every rejection is preserved. The complete-manifest
-successor is undergoing 32 author checks before cross-review. Its explanations
-remain instructor-authored inferences, never preloaded learner evidence or
-professional acceptance. Neutral engineering results supply no actual task
+The protected Key complete-manifest successor passed independent small-boundary
+review `1ad37a24764680d0e74cdb2712509e2b7f75e706ee141106e78c2fa570d2eb56`.
+Large streaming composition and actual company-bound explanations remain
+required. Earlier false-access, member-omission and path rejections are preserved.
+Explanations remain instructor-authored unvalidated inferences, separate from
+ordinary company originals. Neutral engineering results supply no actual task
 credit; source business versions have not been appended during fieldwork.
 The entries below are a preserved chronological review log. Their earlier
 activation-pending/current-code wording describes preceding review stages;
