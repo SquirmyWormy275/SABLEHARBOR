@@ -2520,8 +2520,8 @@
       "real_payload_encoder_component_status": "FROZEN_A070_FULL238423640_BYTES_EXACT_REFERENCE_AND_FRESH_ALL_NODE_PASS_122BYTE_NOTE_ENCODE1_459SECONDS_DB_GROWTH20480_BYTES_NO_ACTUAL_DB_OR_SERVICE",
       "new_final_retained_composition_status": "SELECTED_COMPONENTS_PASS_INDEPENDENT599217_CHANGES_REQUIRED_ORDINARY_GET_CLOSURE_AND_ORIGINAL_MANUAL_ASSESSMENT_DEBRIEF_ACTIVATION_FOCUSED_SUCCESSOR_IN_ISOLATED_REVIEW",
       "final_current_live_replay_last_observed_progress": {
-        "CLEAN": 5200,
-        "MESSY": 4300
+        "CLEAN": 5800,
+        "MESSY": 5400
       },
       "final_current_live_replay_last_observed_progress_is_acceptance": false,
       "actual_prefix_delegation_consumption_recipe_independent_review_sha256": "4ada2eb0b964a901cd9787c47e961fc2635446ad46e835d9548a0072dbddd098",
@@ -2550,9 +2550,9 @@
       "engineering_closeout_matrix_sha256": "0b98a7deae0a8a41fec72dea67c0cff528bc72ddb1b4a5f705b3343f3d14703e",
       "postdelegation_coordinator_root_selected_input_review_sha256": "c4e9f11b7cd11ac678365ff2f2d23d7c6b7c124713ab26d6416c42d80a4766c7",
       "postdelegation_coordinator_status": "SELECTED_AUTHOR20_AND_IMMUTABLE_LINEAGE_PASS_ROOT286_REFERENCES_STATIC_PASS_UNFILLED_ACTUAL_FINAL_GATES_PENDING",
-      "checkpoint_utc": "2026-10-02T21:00:00Z",
+      "checkpoint_utc": "2026-10-02T21:55:11Z",
       "focused_delivery_successor_commit": "c696bda0a6c3e60c990d5ebcfbe39177fede6cb3",
-      "focused_delivery_successor_status": "ISOLATED_FROZEN_V2_MANUAL_ASSESSMENT_SELECTED_DEBRIEF_BACKGROUND_AND_ORDINARY_GET_CLOSURE_IN_INDEPENDENT_REVIEW_NOT_ADOPTED",
+      "focused_delivery_successor_status": "SELECTED_SEQUENTIAL_BACKEND_ACCEPTED_GENUINE_PARALLEL_BROWSER_STARTUP_REFUSAL_UNDER_FOCUSED_REPAIR",
       "focused_delivery_successor_dependency_sha256": "c0bd01bd24add29231732cbfd8a745eb8f04e8dea47110b90639969bbd3a1122",
       "source_backed_followthrough_root_review_sha256": "7454cef40da3b357a3e954ea0267d7a2cab9d43348c6f85a18667a5e7aff2c06",
       "source_backed_followthrough_http_v1_preserved_sha256": "374d8aba63228b4d36aba5137d1a9c556886f080a312060e996c42352a6f9bc0",
@@ -2561,9 +2561,23 @@
       "captured_workspace_summary_component_measurement_sha256": "2faf21e6ae282b12e74110aa3f6496dcae8ce35114d428214cecb883d1999f64",
       "actual_HTTP_performance_accepted": false,
       "last_observed_current_live_replay_progress": {
-        "CLEAN": 5400,
-        "MESSY": 4700
-      }
+        "CLEAN": 5800,
+        "MESSY": 5400
+      },
+      "focused_delivery_successor_independent_selected_review_sha256": "51381821f015515e96cf1e3d398f9a26747a8b07577d33651dc7b9f182e93440",
+      "focused_delivery_root_input_and_isolated_origin_replay_sha256": "b6fdcea5509459f6124a8b33244924bcbf200dd32e7f3f38efe9bda27310c541",
+      "focused_delivery_isolated_main_transplant_focused_checks": 25,
+      "focused_delivery_isolated_main_transplant_focused_xml_sha256": "56df68624d55634f62af63e3b613837d48fde2e6533d13c0b4e36913fb780a0f",
+      "focused_delivery_isolated_frontend_checks": 282,
+      "focused_delivery_isolated_frontend_qa_sha256": "ebcae386eb66685094d544d3183f333ce295d5bf66dbb7eaf2e97e5ab40bed4d",
+      "focused_delivery_isolated_frontend_build": "PASS",
+      "focused_mobile_style_sha256": "a0b06a9739fcfe818d0c00afe75a2f4044ead75d3583b43da8bad81812d92c26",
+      "source_backed_followthrough_http_v3_preserved_sha256": "384d98e47f44b6ba3889cc26a7f7513cc313bd5b8a14ddcf419dbfd8feea3cad",
+      "source_backed_followthrough_http_v4_draft_sha256": "55a36d51c466af237beaf034ba4d2bd065c5071ce8bb2390f1394fb5eadf11d9",
+      "source_backed_followthrough_http_v4_independent_selected_review_sha256": "1dc34338a28826c8a066c741461242cdd671c0dcf118b9c1b7af2a7f0c9e4dd2",
+      "offline_export_preparation_root_reconciliation_sha256": "961c42bc5d31ce6766fabff2879bfbcaa8bb8c638e5165478b7837419e2bc051",
+      "offline_lexical_successor_sha256": "2f17b594fe76daa041233ec4fe392a75910618568d003e9bb417472c707020ad",
+      "actual_complete_compressed_packets_exported": false
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"

@@ -1,5 +1,41 @@
 # Active company-source audit workflow
 
+October 2, 21:55 UTC checkpoint: independent review accepted the selected
+sequential V2 backend with 22 cases; gate is
+`51381821f015515e96cf1e3d398f9a26747a8b07577d33651dc7b9f182e93440`.
+Root freshly reconciled 9,977 ordinary byte/origin references and every loaded
+Python/native/signature origin in the isolated current-main transplant; receipt
+is `b6fdcea5509459f6124a8b33244924bcbf200dd32e7f3f38efe9bda27310c541`.
+Its 25 focused cases and all 282 frontend tests pass, and the frontend builds.
+Actual main adoption remains unperformed.
+
+The real local browser startup probe found intermittent parallel scoped-read
+503 responses (`Tail changed during protected closure`) on an owned sealed
+fixture. A separate focused request-serialization correction is being implemented
+and independently reviewed. Sequential acceptance does not establish concurrent
+startup acceptance. The exact persisted-review mobile title/body correction is
+also isolated; its source SHA is
+`a0b06a9739fcfe818d0c00afe75a2f4044ead75d3583b43da8bad81812d92c26`.
+No actual source, audit, identity, Key or service activation occurred.
+
+The follow-through HTTP draft V4 preserves every unrelated summary field using
+the same learner projection, exact event-prefix append and complete finite record
+transitions. It strictly checks revision-dependent input/detail descriptors before
+normalizing their revision. Independent selected review has 35 genuine owned
+transition/counter checks; gate is
+`1dc34338a28826c8a066c741461242cdd671c0dcf118b9c1b7af2a7f0c9e4dd2`.
+Earlier drafts and positive-path/refusal findings remain preserved; the actual
+eight commands have not run.
+
+Root freshly reconciled 959 offline/export preparation input pairs and the
+lexical-only successor against both exact captured raw states. Component spans
+match exactly, and a fresh 14-case parser parity check passes. Receipt is
+`961c42bc5d31ce6766fabff2879bfbcaa8bb8c638e5165478b7837419e2bc051`.
+This does not establish actual compressed export or whole-packet acceptance.
+The first actual current-live replay remains running on unchanged originals;
+last observed progress is CLEAN 5,800 and MESSY 5,400 events. The one-use original
+parent delegations remain unspent. All 46 original queue jobs remain unchanged.
+
 October 2, 21:00 UTC checkpoint: the focused V2 delivery successor is frozen in
 isolation at `c696bda0a6c3e60c990d5ebcfbe39177fede6cb3` and under independent
 review. It activates the existing manual assessment, selected debrief and durable
