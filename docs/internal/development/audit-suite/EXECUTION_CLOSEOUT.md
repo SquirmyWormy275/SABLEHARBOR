@@ -1,5 +1,37 @@
 # Audit-suite execution closeout
 
+October 2, 23:35 UTC checkpoint: the first actual current-live replay exited
+with a verifier format refusal, `Actual record facts unavailable`; it produced
+no final proof. Failure observation is
+`5e9f86b4291c79215e67a695d5c23baba2a98f78fa5f579bfc400c31b95cc221`.
+Freshly checked company and both audit metadata match the preexpiry capture,
+and all SQLite sidecars remain absent. No one-use delegation was consumed,
+no runtime was adopted, and no Key or actual viewer was activated.
+
+The captured source facts are present: each branch has exactly 29 nonempty
+record-list observations where the old verifier accepts only a dictionary.
+Independent review confirmed the authored list shape and citation/native
+headers. A narrowly source-checked verifier correction is being prepared;
+this diagnosis does not supply a full history pass or professional acceptance.
+
+The selected final request settlement and mobile delivery passed 32 independent
+checks, including two simultaneous apps sharing one company, real TCP
+client disconnection, cancellation during all invocation stages, and native
+and standard-library browser journeys at desktop/mobile widths. Gate is
+`373e3713aa0f06522906c64b8abbab3fc9bf92661796aba57d18683fc4a16d95`;
+root freshly reconciled 9,303 references at
+`f573b430d776e7087737f20224f11a73a149907b40eb1022b3de584f00f0a3f1`.
+These are selected engineering checks, not actual activation authority.
+
+The exact 88-origin postdelegation/Key coordinator successors passed 29
+independent checks with company originals preceding two 409-task rooms,
+literal 818-parent consumption, signed rotation of the same six identities,
+and separate scoped Key grant/revoke cleanup. Root reconciled 998 references
+and the staged source/native/backend vectors at
+`89b6a8abc7492e9edc82feb4f3fde358dc57f7768920d5d96a577323dcdb3899`.
+Actual execution still requires the finished current-live proof and filled,
+externally pinned final authorizations. All 46 original queue jobs are unchanged.
+
 October 2, 22:53 UTC checkpoint: the focused request successor owns the entire
 retained ASGI invocation through guard, handler and closing-worker settlement.
 Frozen service SHA is
