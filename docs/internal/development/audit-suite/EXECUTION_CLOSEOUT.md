@@ -1,5 +1,23 @@
 # Audit-suite execution closeout
 
+October 2 final batch checkpoint: the reviewed B05 V5 process exited successfully.
+Both original modes now have 409 workpapers and zero unrun tasks: CLEAN revision
+6,226 with 2,741 retained originals; MESSY revision 6,349 with 2,863. B05 added
+24 fresh native acquisition commands and 327 ordinary documentary commands.
+Execution is `65af9ea66cdc89cae25398c5a288d208af5d3f053bcfc4ebdc9cba44562ffbd3`;
+receipt is `e73181269ece050079aadcddf1d7080afb9f17dafe5996e34db06f7735d3a22b`.
+The final source snapshot and complete original database byte capture are running
+under both room locks and the company lock. Every-event current-live replay,
+actual Key binding, interactive service, packet and final delivery remain pending.
+
+The corrected signed login/logout/reopen procedure passed 51 independent native
+checks, 13 standard-library checks and six immutable journal replays. Root freshly
+rehashed all 506 frozen files and their original counterparts. Selected gate is
+`2078ad5c5c22d3ac9bd136cf4018949700ea0099ea63f70b4058e6419fb7cf6e`;
+this does not establish actual-scale service performance or storage growth.
+
+The sections below preserve earlier checkpoints and their pending statuses.
+
 October 2 storage recovery: the Seagate is available with sufficient capacity.
 Four private recovery sets were encrypted and every decrypted member compared
 against fresh local bytes, including a locked copy of the current company

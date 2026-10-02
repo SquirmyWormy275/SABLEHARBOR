@@ -2217,7 +2217,7 @@
       "activation_proof_sha256": "40722199d57872e420e8fa0bee3ca048584adb3e15dd9593b5497770e1f086b3",
       "independent_birth_verification_sha256": "bf804a33a1945fd332581070227edde813765b22e87e0e4a7292806b47472a36",
       "period_close_clock_advance_sha256": "573b1377749b2da3bcb6a6498f2c4cc990b09b6cdb97fb97cf00728bf7ac74a4",
-      "current_fieldwork": "CLEAN409_MESSY359_STARTING_CAPTURE_B05_V5_FRESH_NATIVE_AND_FULL50_BATCH_IN_PROGRESS",
+      "current_fieldwork": "BOTH409_ORDINARY_FIELDWORK_RECORDED_NO_UNRUN_FINAL_BYTE_CAPTURE_RUNNING",
       "all_disjoint_family_task_methods_required": true,
       "historical_task_results_imported": false,
       "qualified_or_owner_acceptance": "NOT_ASSERTED",
@@ -2368,7 +2368,7 @@
       "protected_retained_key_full_scope_size_status": "EXACT3379146_BYTE_GENUINE409_SNAPSHOT32MIB_SNAPSHOT_ONLY_INDEPENDENT23_HTTP_ACCEPTED_MAIN99_REFERENCES35_CHECKS_PASS_ACTUAL_COMPOSITION_PENDING",
       "first_company_native_key_causal_review_sha256": "f36e358e25743ee5d825d38078d4f6aa356a7d182da265c2773777e523720add",
       "first_company_native_key_causal_status": "REFINED_EIGHT_BOUNDED_CARDS35_ORIGINALS75_LOCATORS_SUPPORTED_FULL76_CARDS_AND409_TASK_FACETS_PER_BRANCH_REQUIRE_VISIBLE_CLAIM_AND_INDEPENDENT_REVIEW",
-      "current_queue_status": "B05_FULL50_PREFLIGHT_PASS_CAPACITY_GUARD_REFUSAL_ADDITIONAL_SPACE_REQUIRED",
+      "current_queue_status": "B05_V5_EXIT0_FULL50_COMPLETED_FRESH_ACQUISITION_AND327_ORDINARY_DOCUMENTARY_COMMANDS",
       "clean_completed_incident_execution_sha256": "54030de60898ca77f69f4d8825f53635d2b444b079bcbc2053f42aea2f61fa37",
       "clean_completed_incident_workpapers": 284,
       "clean_unrun_after_incidents": 125,
@@ -2418,15 +2418,15 @@
       "clean_final_fieldwork_queue_execution_sha256": "c6ee4875a37903ea37ee786101d39df1f183583114e294bc8d0cfd412a22e5e9",
       "actual_current_revisions": {
         "CLEAN": 6226,
-        "MESSY": 5998
+        "MESSY": 6349
       },
       "actual_current_workpapers": {
         "CLEAN": 409,
-        "MESSY": 359
+        "MESSY": 409
       },
       "actual_current_tasks_unrun": {
         "CLEAN": 0,
-        "MESSY": 50
+        "MESSY": 0
       },
       "actual_current_retained_originals": {
         "CLEAN": 2741,
@@ -2434,11 +2434,11 @@
       },
       "messy_interrupted_task": "TASK-SH-TRN-003-corporate-TOD",
       "messy_interrupted_task_objects_preserved": "ORIGINAL_TOD_POPULATION_SELECTION_WP_PRESERVED_TOD_AND_TOE_ORDINARY_CONTINUATION_COMPLETE",
-      "actual_writers_running": true,
-      "whole_history_final_replay": "PENDING",
+      "actual_writers_running": false,
+      "whole_history_final_replay": "PENDING_FIRST_CURRENT_LIVE_AFTER_FINAL_CAPTURE",
       "final_fieldwork_input_preparation_sha256": "34fac279f00392657b01b565d66fa6811fb74b8307e99121b00f40c5f2c2b59d",
       "key_binding_input_preparation_sha256": "a6e792872fb46888e62d30a192c5d3b132e17fe5a919e8c81efb309a58eecc49",
-      "storage_status": "CAPACITY_RECOVERED_ENCRYPTED_EXTERNAL_BACKUPS_VERIFIED_ORIGINAL_ENGINEERING_CLONES_COMPRESSED_IN_PLACE_ALL_ACCEPTED2158_PINS_MATCH_B05_V5_RUNNING",
+      "storage_status": "CAPACITY_RECOVERED_ENCRYPTED_BACKUPS_VERIFIED_ORIGINAL_PATHS_PRESERVED_B05_FULL50_FINISHED",
       "storage_archive_root": "/home/kingoftheeast/SABLEHARBOR-preserved-neutral-archives-20261002/b01-unaccepted-v4",
       "storage_archive_sha256": "a26ad126343b08a5923b0199ee78d7bf2ae86fcdd8b9159cda80861e3cfd43a6",
       "storage_root_independent_verification_sha256": "4ca85db2985fb6b50ab5b34109df650728fb33cdb64c377a66d6ca84064ab5b4",
@@ -2466,7 +2466,7 @@
       "b05_documentary_commands_committed": 0,
       "b05_native_acquisition_commands_committed": 54,
       "historical_source_reproduction_successor_status": "INDEPENDENT_ROOT82_PASS_PROCEDURE_ONLY_PRIOR_CURRENT_LIVE_PROOF_REQUIRED",
-      "actual_counts_are_starting_quiescence_while_writer_active": true,
+      "actual_counts_are_starting_quiescence_while_writer_active": false,
       "b05_coordinator_static_review_sha256": "a40cfd06c827d86af9b8bb2c9903aeddaa8b9d1abb32480f6cdfc0e5e54c6183",
       "preserved_capacity_refused_b05_coordinator_sha256": "f7a1b3bbc9ec17ee9fdfa3e913671fa2b4182dbb450ffe3de15e4dff294312b6",
       "preserved_capacity_refused_b05_writer_pid": 34853,
@@ -2477,8 +2477,20 @@
       "encrypted_external_backup_recovery_key_requires_separate_preservation": true,
       "historical_source_reproduction_procedure_review_sha256": "94c69073ca9e2ae1f3f2e6800df74e75aa223a0b39baa9ccda3fd2783190939f",
       "sealed_prefix_tail_original_candidate_status": "CHANGES_REQUIRED_NORMAL_SIGNED_LOGIN_LOGOUT_REOPEN_DEFECT_PRESERVED_60A83A14",
-      "sealed_prefix_tail_lifecycle_correction_status": "ISOLATED1210BAD4_AUTHOR22_PASS_INDEPENDENT_REVIEW_PENDING",
-      "state_delta_and_bounded_complete_packet_status": "ISOLATED_AUTHOR_AND_SEPARATE_INDEPENDENT_REVIEW_IN_PROGRESS_ACTUAL_SCALE_PENDING"
+      "sealed_prefix_tail_lifecycle_correction_status": "95DC_INDEPENDENT_NATIVE51_STDLIB13_AND6_IMMUTABLE_REPLAYS_PASS_SELECTED_BOUNDARY_ONLY",
+      "state_delta_and_bounded_complete_packet_status": "ISOLATED_AUTHOR_AND_SEPARATE_INDEPENDENT_REVIEW_IN_PROGRESS_ACTUAL_SCALE_PENDING",
+      "b05_v5_execution_sha256": "65af9ea66cdc89cae25398c5a288d208af5d3f053bcfc4ebdc9cba44562ffbd3",
+      "b05_v5_receipt_sha256": "e73181269ece050079aadcddf1d7080afb9f17dafe5996e34db06f7735d3a22b",
+      "b05_v5_elapsed_seconds": 2678.155486604999,
+      "b05_v5_documentary_commands_committed": 327,
+      "b05_v5_native_acquisition_commands_committed": 24,
+      "b05_v5_capacity_observation_sha256": "8f8f64f1cd2b3c0c09f6e55cbd30d1eab3ad7c05e1320bfc13bf0a4aedd6b6ff",
+      "b05_v5_capacity_required_bytes_including_reserve": 78934301363,
+      "b05_v5_capacity_available_bytes_at_probe": 143692480512,
+      "b05_v5_capacity_plan_sha256": "4c3cd4ff22fdab849b542cc53dee49230e05184a95f71d43f5b69d3cf9bd6967",
+      "final_byte_capture_status": "RUNNING_V2_UNDER_ORIGINAL_ROOM_AND_COMPANY_LOCKS",
+      "sealed_prefix_tail_lifecycle_correction_independent_review_sha256": "2078ad5c5c22d3ac9bd136cf4018949700ea0099ea63f70b4058e6419fb7cf6e",
+      "preexpiry_delegation_status": "ROOT42_PASS_EXACT48_BACKEND_INDEPENDENT_GENUINE_REVIEW_SEALING_ACTUAL_PREPARATION_PENDING"
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"
