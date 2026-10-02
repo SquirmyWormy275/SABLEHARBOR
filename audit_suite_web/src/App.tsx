@@ -46,13 +46,23 @@ import type {
   SavedViewReferenceDescriptor,
 } from "./savedViews";
 import { selectedVersion } from "./investigationContext";
+import {
+  deferredPaper,
+  loadWorkspaceDetail,
+  paperVersion,
+  workspaceContext,
+} from "./workspaceDetail";
 import { WorkStatus } from "./WorkStatus";
 import { submitMeetingJob } from "./backgroundWork";
 import { WorkpaperSupport } from "./WorkpaperSupport";
 import { appendEvidenceReference } from "./workpaperSupport";
 import { TableWorkspace } from "./TableWorkspace";
 import CompanyPopulation from "./CompanyPopulation";
-import { createDraftStore, draftSourceBasis, type DraftKey } from "./draftContext";
+import {
+  createDraftStore,
+  draftSourceBasis,
+  type DraftKey,
+} from "./draftContext";
 import {
   createNavigationMemory,
   parseWorkspaceLink,
@@ -292,6 +302,20 @@ type DetailContext = {
   relatedNavigation?: RelatedWorkNavigation;
   returnToBoundSource?: boolean;
 };
+function detailRequestKey(
+  e: Engagement | null,
+  d: DetailContext | null,
+  viewer = "",
+) {
+  return e && d
+    ? JSON.stringify([
+        workspaceContext(e, viewer),
+        d.kind,
+        d.row.id,
+        d.focusVersion,
+      ])
+    : "";
+}
 export default function App() {
   const [bootstrap, setBootstrap] = useState<Bootstrap | null>(null),
     [engagement, setEngagement] = useState<Engagement | null>(null),
@@ -320,13 +344,31 @@ export default function App() {
     element: HTMLElement;
     context: string;
   } | null>(null);
-  const gapOpener = useRef<{ element: HTMLButtonElement; context: string } | null>(null);
+  const gapOpener = useRef<{
+    element: HTMLButtonElement;
+    context: string;
+  } | null>(null);
   const uploadRef = useRef<HTMLInputElement>(null);
   const navigationMemory = useRef(createNavigationMemory());
   const draftStore = useRef(createDraftStore());
   const navigationEpoch = useRef(0);
   const authorizedContext = useRef("");
   const currentEngagement = useRef<string | null>(null);
+  const detailCurrent = useRef({
+    engagement,
+    detail,
+    viewer: bootstrap?.viewer.id ?? "",
+  });
+  detailCurrent.current = {
+    engagement,
+    detail,
+    viewer: bootstrap?.viewer.id ?? "",
+  };
+  const [detailRead, setDetailRead] = useState({
+    key: "",
+    busy: false,
+    error: "",
+  });
   const [sourceSelection, setSourceSelection] = useState<{
     key: string;
     pins: SourcePin[];
@@ -629,6 +671,47 @@ export default function App() {
     });
   }, [engagement, bootstrap]);
   useEffect(() => {
+    if (
+      !engagement ||
+      detail?.kind !== "workpaper" ||
+      !deferredPaper(detail.row, detail.focusVersion)
+    )
+      return;
+    const e = engagement,
+      d = detail,
+      viewer = bootstrap?.viewer.id ?? "";
+    const key = detailRequestKey(e, d, viewer);
+    const version = Number(paperVersion(d.row, d.focusVersion)?.version);
+    let cancelled = false;
+    const current = () =>
+      !cancelled &&
+      detailRequestKey(
+        detailCurrent.current.engagement,
+        detailCurrent.current.detail,
+        detailCurrent.current.viewer,
+      ) === key;
+    setDetailRead({ key, busy: true, error: "" });
+    void loadWorkspaceDetail(e, "workpapers", d.row, version)
+      .then((row) => {
+        if (!current()) return;
+        setDetail((previous) => (previous ? { ...previous, row } : null));
+        setDetailRead({ key, busy: false, error: "" });
+      })
+      .catch((error) => {
+        if (current())
+          setDetailRead({ key, busy: false, error: (error as Error).message });
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [
+    engagement,
+    bootstrap?.viewer.id,
+    detail?.kind,
+    detail?.row,
+    detail?.focusVersion,
+  ]);
+  useEffect(() => {
     if (!engagement || !["GENERATING", "VALIDATING"].includes(engagement.phase))
       return;
     const epoch = navigationEpoch.current;
@@ -725,9 +808,16 @@ export default function App() {
   ) {
     setEvidenceHandoff(null);
     setAction({
-      title, kind, fields, initial, description,
+      title,
+      kind,
+      fields,
+      initial,
+      description,
       sourceBasis: engagement
-        ? draftSourceBasis(engagement.company_source_binding, engagement.evidence_acquisition)
+        ? draftSourceBasis(
+            engagement.company_source_binding,
+            engagement.evidence_acquisition,
+          )
         : undefined,
     });
   }
@@ -848,7 +938,7 @@ export default function App() {
           } as DraftKey,
           initial: compatibleWorkpaperValues(
             action.kind,
-            draftPaper
+            draftPaper && !deferredPaper(draftPaper)
               ? newWorkpaperVersion(draftPaper)
               : (action.initial ?? {}),
             bootstrap.capabilities,
@@ -1452,7 +1542,9 @@ export default function App() {
                 key={id}
                 disabled={!e || setup}
                 className={e && section === id && !setup ? "active" : ""}
-                aria-current={e && section === id && !setup ? "page" : undefined}
+                aria-current={
+                  e && section === id && !setup ? "page" : undefined
+                }
                 onClick={() => navigate(id)}
               >
                 <span>{String(i + 1).padStart(2, "0")}</span>
@@ -1590,7 +1682,10 @@ export default function App() {
                   workspaceLink({
                     engagement: e.id,
                     section: hit.section,
-                    object: { kind: searchKinds[hit.kind].collection, id: hit.id },
+                    object: {
+                      kind: searchKinds[hit.kind].collection,
+                      id: hit.id,
+                    },
                   }),
                 );
               }}
@@ -1948,7 +2043,9 @@ export default function App() {
                           render: (r, sequence) => (
                             <button
                               type="button"
-                              onClick={() => setDetail({ row: r, kind: "task", sequence })}
+                              onClick={() =>
+                                setDetail({ row: r, kind: "task", sequence })
+                              }
                             >
                               Inspect procedure {r.id}
                             </button>
@@ -2027,7 +2124,10 @@ export default function App() {
                             <button
                               type="button"
                               onClick={(event) => {
-                                gapOpener.current = { element: event.currentTarget, context: sourceContext };
+                                gapOpener.current = {
+                                  element: event.currentTarget,
+                                  context: sourceContext,
+                                };
                                 setGapTaskId(r.id);
                               }}
                             >
@@ -3129,14 +3229,19 @@ export default function App() {
         {action && (
           <ActionForm
             sourceContextStale={
-              !!e && action.sourceBasis !== undefined &&
+              !!e &&
+              action.sourceBasis !== undefined &&
               action.sourceBasis !==
-                draftSourceBasis(e.company_source_binding, e.evidence_acquisition)
+                draftSourceBasis(
+                  e.company_source_binding,
+                  e.evidence_acquisition,
+                )
             }
             onReviewSource={() => {
               if (!e) return;
               const basis = draftSourceBasis(
-                e.company_source_binding, e.evidence_acquisition,
+                e.company_source_binding,
+                e.evidence_acquisition,
               );
               setAction((current) =>
                 current
@@ -3312,6 +3417,16 @@ export default function App() {
             title={str(detail.row.title ?? detail.row.name ?? detail.row.id)}
             onClose={() => setDetail(null)}
           >
+            {detail.kind === "workpaper" &&
+              deferredPaper(detail.row, detail.focusVersion) && (
+                <p role={detailRead.error ? "alert" : "status"}>
+                  {detailRead.key ===
+                    detailRequestKey(e, detail, bootstrap.viewer.id) &&
+                  detailRead.error
+                    ? detailRead.error
+                    : "Loading the exact retained workpaper version. Its text is not yet loaded."}
+                </p>
+              )}
             {savedViewsPanel}
             {checkpointPanel}
             {handoffsPanel}
@@ -3345,9 +3460,10 @@ export default function App() {
                   if (target) {
                     setDetail({ ...back, row: target.row });
                     requestAnimationFrame(() => {
-                      const dialog = document.querySelector<HTMLDialogElement>(
-                        "dialog[open]",
-                      );
+                      const dialog =
+                        document.querySelector<HTMLDialogElement>(
+                          "dialog[open]",
+                        );
                       dialog?.focus({ preventScroll: true });
                       if (dialog) dialog.scrollTop = 0;
                     });
@@ -3366,7 +3482,9 @@ export default function App() {
                 engagement={e}
                 kind={detail.kind as "control" | "task"}
                 objectId={detail.row.id}
-                navigation={detail.relatedNavigation ?? { query: "", limits: {} }}
+                navigation={
+                  detail.relatedNavigation ?? { query: "", limits: {} }
+                }
                 onNavigationChange={(value) =>
                   setDetail({
                     ...detail,
@@ -3388,9 +3506,8 @@ export default function App() {
                         : {}),
                     });
                   requestAnimationFrame(() => {
-                    const dialog = document.querySelector<HTMLDialogElement>(
-                      "dialog[open]",
-                    );
+                    const dialog =
+                      document.querySelector<HTMLDialogElement>("dialog[open]");
                     dialog?.focus({ preventScroll: true });
                     if (dialog) dialog.scrollTop = 0;
                   });
@@ -3486,48 +3603,96 @@ export default function App() {
                     (p) => p === "learn" || p === "instruct",
                   ) && (
                     <button
-                      disabled={busy}
-                      onClick={() => {
-                        const paper = detail.row;
-                        setDetail(null);
-                        edit(
-                          "Save a new workpaper version",
-                          "workpaper.update",
-                          [
-                            f("section", "Section", "text", false),
-                            f("objective", "Objective", "textarea"),
-                            f(
-                              "procedures",
-                              "Nature, timing and extent",
-                              "textarea",
-                            ),
-                            f(
-                              "text",
-                              "Work performed and explanation",
-                              "textarea",
-                              false,
-                            ),
-                            f(
-                              "artifact_id",
-                              "Retained original artifact ID",
-                              "text",
-                              false,
-                            ),
-                            f(
-                              "evidence_ids",
-                              "Evidence references",
-                              "text",
-                              false,
-                            ),
-                            f(
-                              "conclusion",
-                              "Conclusion and limitations",
-                              "textarea",
-                            ),
-                          ],
-                          newWorkpaperVersion(paper),
-                          "This creates a successor revision. Earlier versions and reviews remain available.",
+                      disabled={
+                        busy || deferredPaper(detail.row, detail.focusVersion)
+                      }
+                      onClick={async () => {
+                        const sourceKey = workspaceContext(
+                          e,
+                          bootstrap.viewer.id,
                         );
+                        const key = detailRequestKey(
+                          e,
+                          detail,
+                          bootstrap.viewer.id,
+                        );
+                        let paper = detail.row;
+                        try {
+                          if (deferredPaper(paper)) {
+                            setBusy(true);
+                            paper = await loadWorkspaceDetail(
+                              e,
+                              "workpapers",
+                              paper,
+                              Number(paperVersion(paper)?.version),
+                            );
+                          }
+                          if (
+                            detailRequestKey(
+                              detailCurrent.current.engagement,
+                              detailCurrent.current.detail,
+                              detailCurrent.current.viewer,
+                            ) !== key
+                          )
+                            return;
+                          setDetail(null);
+                          edit(
+                            "Save a new workpaper version",
+                            "workpaper.update",
+                            [
+                              f("section", "Section", "text", false),
+                              f("objective", "Objective", "textarea"),
+                              f(
+                                "procedures",
+                                "Nature, timing and extent",
+                                "textarea",
+                              ),
+                              f(
+                                "text",
+                                "Work performed and explanation",
+                                "textarea",
+                                false,
+                              ),
+                              f(
+                                "artifact_id",
+                                "Retained original artifact ID",
+                                "text",
+                                false,
+                              ),
+                              f(
+                                "evidence_ids",
+                                "Evidence references",
+                                "text",
+                                false,
+                              ),
+                              f(
+                                "conclusion",
+                                "Conclusion and limitations",
+                                "textarea",
+                              ),
+                            ],
+                            newWorkpaperVersion(paper),
+                            "This creates a successor revision. Earlier versions and reviews remain available.",
+                          );
+                        } catch (err) {
+                          if (
+                            detailRequestKey(
+                              detailCurrent.current.engagement,
+                              detailCurrent.current.detail,
+                              detailCurrent.current.viewer,
+                            ) === key
+                          )
+                            setError((err as Error).message);
+                        } finally {
+                          if (
+                            detailCurrent.current.engagement &&
+                            workspaceContext(
+                              detailCurrent.current.engagement,
+                              detailCurrent.current.viewer,
+                            ) === sourceKey
+                          )
+                            setBusy(false);
+                        }
                       }}
                     >
                       Save new version
@@ -3552,7 +3717,40 @@ export default function App() {
                       { key: "recorded_at", label: "Recorded at" },
                       { key: "objective", label: "Objective" },
                       { key: "procedures", label: "Procedures" },
-                      { key: "text", label: "Work performed" },
+                      {
+                        key: "text",
+                        label: "Work performed",
+                        render: (version) =>
+                          deferredPaper(detail.row, Number(version.version)) ? (
+                            <button
+                              disabled={busy}
+                              onClick={() =>
+                                setDetail({
+                                  ...detail,
+                                  focusVersion: Number(version.version),
+                                })
+                              }
+                            >
+                              Load full text of version{" "}
+                              {String(version.version)}
+                            </button>
+                          ) : str(version.text).length <= 100_000 ? (
+                            str(version.text)
+                          ) : (
+                            <details>
+                              <summary>
+                                Full retained work performed (
+                                {Array.from(
+                                  str(version.text),
+                                ).length.toLocaleString()}{" "}
+                                characters)
+                              </summary>
+                              <pre className="retained-workpaper-text">
+                                {str(version.text)}
+                              </pre>
+                            </details>
+                          ),
+                      },
                       {
                         key: "artifact_id",
                         label: "Original",
@@ -3571,19 +3769,32 @@ export default function App() {
                         key: "id",
                         label: "Independent review",
                         render: (version) =>
-                          canReviewWorkpaper(
-                            detail.row,
-                            bootstrap?.viewer.id,
-                            e.permissions,
-                            version,
-                          ) ? (
+                          deferredPaper(detail.row, Number(version.version)) ? (
+                            <button
+                              disabled={busy}
+                              onClick={() =>
+                                setDetail({
+                                  ...detail,
+                                  focusVersion: Number(version.version),
+                                })
+                              }
+                            >
+                              Load this version before review
+                            </button>
+                          ) : canReviewWorkpaper(
+                              detail.row,
+                              bootstrap?.viewer.id,
+                              e.permissions,
+                              version,
+                            ) ? (
                             <WorkpaperReviewAction
                               key={JSON.stringify([
                                 bootstrap.viewer.id,
                                 e.id,
                                 e.revision,
                                 e.permissions,
-                                version,
+                                version.version,
+                                version._workspace_version_sha256,
                               ])}
                               version={version}
                               supported={

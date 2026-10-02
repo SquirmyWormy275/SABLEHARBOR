@@ -1,5 +1,6 @@
 /** Volatile user-authored drafts only. No browser storage, model call or auto-submit. */
 export type DraftKind = "workpaper.update" | "workpaper.add" | "note.create";
+export const WORKPAPER_DRAFT_BYTES = 8 * 1024 * 1024;
 export type DraftKey = {
   actorId: string;
   engagementId: string;
@@ -15,7 +16,8 @@ export type Draft = {
   sourceBasis: string;
 };
 export type DraftLookup =
-  { status: "EMPTY" } | { status: "CURRENT" | "STALE_BASE" | "STALE_SOURCE"; draft: Draft };
+  | { status: "EMPTY" }
+  | { status: "CURRENT" | "STALE_BASE" | "STALE_SOURCE"; draft: Draft };
 export type DraftScope = {
   actorId: string;
   engagementId: string;
@@ -27,12 +29,19 @@ export type DraftScope = {
 };
 /** These choices must be made again against the newly authorized source context. */
 export const sourceLinkedDraftFields = [
-  "evidence_ids", "artifact_id", "task_ids", "control_id",
-  "source_message_id", "meeting_id", "person_id",
+  "evidence_ids",
+  "artifact_id",
+  "task_ids",
+  "control_id",
+  "source_message_id",
+  "meeting_id",
+  "person_id",
 ] as const;
 export const draftSourceBasis = (binding: unknown, acquisition: unknown) =>
   JSON.stringify([binding, acquisition]);
-export function withoutSourceLinks<T extends Record<string, unknown>>(values: T): T {
+export function withoutSourceLinks<T extends Record<string, unknown>>(
+  values: T,
+): T {
   const retained = { ...values };
   for (const field of sourceLinkedDraftFields) delete retained[field];
   return retained;
@@ -106,11 +115,17 @@ export function createDraftStore() {
     if (!Object.hasOwn(allowed, key.kind) || !key.objectId || !key.baseVersion)
       throw Error("Invalid draft identity.");
   }
-  function put(key: DraftKey, values: Record<string, unknown>, reviewedSource = false) {
+  function put(
+    key: DraftKey,
+    values: Record<string, unknown>,
+    reviewedSource = false,
+  ) {
     check(key);
     const prior = entries.get(keyId(key));
     if (prior && prior.sourceBasis !== sourceBasis && !reviewedSource)
-      throw Error("Draft source context changed; review current sources and reselect linked records.");
+      throw Error(
+        "Draft source context changed; review current sources and reselect linked records.",
+      );
     const projected: DraftValues = {};
     for (const field of allowed[key.kind]) {
       const value = values[field];
@@ -137,7 +152,13 @@ export function createDraftStore() {
         throw Error("Invalid numeric draft field.");
       projected[field] = value;
     }
-    if (JSON.stringify(projected).length > 100_000)
+    const serialized = JSON.stringify(projected);
+    const oversize =
+      key.kind === "note.create"
+        ? serialized.length > 100_000
+        : new TextEncoder().encode(serialized).byteLength >
+          WORKPAPER_DRAFT_BYTES;
+    if (oversize)
       throw Error(
         "Draft exceeds the in-memory size limit. Keep the form open and save or shorten it.",
       );
@@ -147,7 +168,10 @@ export function createDraftStore() {
         "Draft limit reached. Save or explicitly discard an existing draft.",
       );
     const next = {
-      key: { ...key }, values: projected, sequence: ++sequence, sourceBasis,
+      key: { ...key },
+      values: projected,
+      sequence: ++sequence,
+      sourceBasis,
     };
     entries.set(id, next);
     return clone(next);
@@ -166,7 +190,8 @@ export function createDraftStore() {
         identity = next;
       }
       sourceBasis = draftSourceBasis(
-        scope.companySourceBinding, scope.evidenceAcquisition,
+        scope.companySourceBinding,
+        scope.evidenceAcquisition,
       );
       active = {
         ...scope,
@@ -180,14 +205,19 @@ export function createDraftStore() {
       const exact = entries.get(keyId(key));
       if (exact)
         return {
-          status: exact.sourceBasis === sourceBasis ? "CURRENT" : "STALE_SOURCE",
+          status:
+            exact.sourceBasis === sourceBasis ? "CURRENT" : "STALE_SOURCE",
           draft: clone(exact),
         };
       const older = [...entries.values()]
         .filter((e) => sameObject(e.key, key))
         .sort((a, b) => b.sequence - a.sequence)[0];
       return older
-        ? { status: older.sourceBasis === sourceBasis ? "STALE_BASE" : "STALE_SOURCE", draft: clone(older) }
+        ? {
+            status:
+              older.sourceBasis === sourceBasis ? "STALE_BASE" : "STALE_SOURCE",
+            draft: clone(older),
+          }
         : { status: "EMPTY" };
     },
     /** Call only after an explicit user decision to use old draft text against the inspected current base. */
@@ -199,7 +229,9 @@ export function createDraftStore() {
       const draft = entries.get(keyId(previous));
       if (!draft) throw Error("Draft no longer exists.");
       if (draft.sourceBasis !== sourceBasis)
-        throw Error("Draft source context changed; review current sources first.");
+        throw Error(
+          "Draft source context changed; review current sources first.",
+        );
       return put(current, draft.values);
     },
     /** Explicitly retain authored text while dropping all old source selections. */

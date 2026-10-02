@@ -3,7 +3,7 @@ import json
 import pytest
 from fastapi.testclient import TestClient
 
-from enterprise.audit_suite.draft_store import DraftStore
+from enterprise.audit_suite.draft_store import MAX_WORKPAPER_BYTES, DraftStore
 from enterprise.audit_suite.service import create_app
 from enterprise.audit_suite.store import DomainError, digest
 
@@ -34,6 +34,45 @@ def payload(command="save", version=0, fields=None, base=None):
         "fields": fields if fields is not None else {"text": "PERSONAL_UNSUBMITTED_TEXT"},
         "base_workpaper_version": base,
     }
+
+
+def test_large_workpaper_draft_preserves_full_text_citations_and_existing_quotas(setup):
+    app, user, other, state = setup
+    drafts = DraftStore(app.state.engine.store)
+    args = (user["id"], state["id"], "workpaper.update", "WP1")
+    text = "Exact calculation 🧭\n" * 225000
+    ids = [f"ART-{i:04d}" for i in range(1694)]
+    fields = {"text": text, "evidence_ids": ids}
+    written = drafts.write(*args, payload(fields=fields, base=1))
+    assert written["fields"] == fields
+    assert DraftStore(app.state.engine.store).get(*args)["fields"] == fields
+    assert drafts.get(other["id"], *args[1:])["status"] == "EMPTY"
+    assert "Exact calculation" not in json.dumps(
+        app.state.engine.store.history(user["id"], state["id"])
+    )
+    with pytest.raises(DomainError):
+        drafts.write(
+            *args,
+            payload("oversize", 1, fields={"text": "🧭" * (MAX_WORKPAPER_BYTES // 4)}, base=1),
+        )
+    with pytest.raises(DomainError):
+        drafts.write(
+            *args,
+            payload("ids", 1, fields={"evidence_ids": [f"ART-{i}" for i in range(5001)]}, base=1),
+        )
+    with pytest.raises(DomainError):
+        drafts.write(
+            *args,
+            payload("tasks", 1, fields={"task_ids": [f"TASK-{i}" for i in range(501)]}, base=1),
+        )
+    with pytest.raises(DomainError):
+        drafts.write(user["id"], state["id"], "note.create", "new", payload(fields={"text": text}))
+    with pytest.raises(DomainError) as quota:
+        drafts.write(
+            user["id"], state["id"], "workpaper.add", "new", payload(fields={"text": "x" * 6000000})
+        )
+    assert quota.value.status == 413
+    assert drafts.get(*args) == written
 
 
 def test_personal_content_not_history_other_user_or_backup_state(setup):

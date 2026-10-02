@@ -18,6 +18,7 @@ from fastapi import FastAPI, Request
 from fastapi.responses import FileResponse, JSONResponse, Response
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 
+from . import workspace_transport
 from .artifacts import MAX_BYTES
 from .company_native_rights import NativeRecordClosure
 from .company_rights_http import CompanyRightsHTTP
@@ -506,15 +507,74 @@ def create_app(
         actor(request)
         return app.openapi()
 
+    def workspace_view(request: Request) -> bool:
+        values = request.headers.getlist("X-Workspace-View")
+        if not values:
+            return False
+        if values != [workspace_transport.HEADER]:
+            raise DomainError("Unsupported workspace transport view")
+        return True
+
+    async def workspace_response(state: dict, compact: bool) -> dict:
+        return await asyncio.to_thread(workspace_transport.summary, state) if compact else state
+
+    def workspace_query(request: Request, *, original: bool = False) -> dict:
+        allowed = (
+            {"observed_revision", "source_epoch", "artifact_sha256"}
+            if original
+            else {"observed_revision", "source_epoch", "object_sha256", "version"}
+        )
+        pairs = list(request.query_params.multi_items())
+        values = dict(pairs)
+        if len(values) != len(pairs) or set(values) - allowed:
+            raise DomainError("Exact retained workspace query required")
+        revision = values.get("observed_revision", "")
+        if not re.fullmatch(r"0|[1-9][0-9]{0,15}", revision):
+            raise DomainError("Exact workspace revision required")
+        pins = {"revision": int(revision), "source_epoch": values.get("source_epoch", "")}
+        if original:
+            pins["artifact_sha256"] = values.get("artifact_sha256", "")
+        else:
+            pins["object_sha256"] = values.get("object_sha256", "")
+            version = values.get("version")
+            if version is not None:
+                if not re.fullmatch(r"[1-9][0-9]{0,15}", version):
+                    raise DomainError("Exact retained workpaper version required")
+                pins["version"] = int(version)
+        return pins
+
     @app.post("/api/engagements")
     async def create(request: Request):
         principal = actor(request, mutation=True)
+        compact = workspace_view(request)
         payload = await json_body(request)
-        return await asyncio.to_thread(engine.create, principal["id"], payload)
+        state = await asyncio.to_thread(engine.create, principal["id"], payload)
+        return await workspace_response(state, compact)
 
     @app.get("/api/engagements/{engagement_id}")
     async def get(engagement_id: str, request: Request):
-        return await asyncio.to_thread(engine.get, actor(request)["id"], engagement_id)
+        principal = actor(request)
+        compact = workspace_view(request)
+        state = await asyncio.to_thread(engine.get, principal["id"], engagement_id)
+        return await workspace_response(state, compact)
+
+    @app.get("/api/engagements/{engagement_id}/workspace/sample-original-context/{artifact_id}")
+    async def workspace_original(engagement_id: str, artifact_id: str, request: Request):
+        state = await asyncio.to_thread(engine.get, actor(request)["id"], engagement_id)
+        pins = workspace_query(request, original=True)
+        return await asyncio.to_thread(
+            workspace_transport.sample_original_context, state, artifact_id, **pins
+        )
+
+    @app.get("/api/engagements/{engagement_id}/workspace/{collection}/{object_id}")
+    async def workspace_detail(
+        engagement_id: str, collection: str, object_id: str, request: Request
+    ):
+        state = await asyncio.to_thread(engine.get, actor(request)["id"], engagement_id)
+        pins = workspace_query(request)
+        return await asyncio.to_thread(
+            workspace_transport.detail, state, collection, object_id, **pins
+        )
 
     @app.get("/api/engagements/{engagement_id}/work-status")
     async def work_status(engagement_id: str, request: Request):
@@ -1517,6 +1577,7 @@ def create_app(
     @app.post("/api/engagements/{engagement_id}/commands")
     async def command(engagement_id: str, request: Request):
         principal = actor(request, mutation=True)
+        compact = workspace_view(request)
         payload = await json_body(request)
         limits.check("commands", principal["id"], 240)
         if payload.get("kind") in {
@@ -1544,11 +1605,12 @@ def create_app(
                     app.state.generation_jobs.pop(engagement_id, None)
 
             app.state.generation_jobs[engagement_id] = asyncio.create_task(generate())
-        return state
+        return await workspace_response(state, compact)
 
     @app.post("/api/engagements/{engagement_id}/uploads")
     async def upload(engagement_id: str, request: Request):
         principal = actor(request, mutation=True)
+        compact = workspace_view(request)
         limits.check("uploads", principal["id"], 60)
         state = engine.get(principal["id"], engagement_id)
         if state["phase"] != "ACTIVE":
@@ -1717,7 +1779,8 @@ def create_app(
                 retain,
                 permissions={"learn", "instruct"},
             )
-            return engine._project(principal["id"], saved)
+            projected = engine._project(principal["id"], saved)
+            return await workspace_response(projected, compact)
 
     @app.get("/api/engagements/{engagement_id}/artifacts/{artifact_id}/download")
     async def download(engagement_id: str, artifact_id: str, request: Request):

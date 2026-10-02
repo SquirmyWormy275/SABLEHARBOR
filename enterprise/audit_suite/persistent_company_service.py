@@ -42,6 +42,7 @@ CODE_MODULES = (
     "artifacts.py",
     "company_collection.py",
     "company_store.py",
+    "draft_store.py",
     "engine.py",
     "persistent_company_journey.py",
     "persistent_company_service.py",
@@ -49,6 +50,7 @@ CODE_MODULES = (
     "source_library_audit.py",
     "store.py",
     "workpaper_links.py",
+    "workspace_transport.py",
 )
 BINDING_FIELDS = {
     "schema",

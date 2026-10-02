@@ -40,6 +40,10 @@ FIELDS = {
     },
 }
 MAX_BYTES = 100_000
+# A collected workpaper can retain several MiB of exact calculations and many
+# original citations. Keep those editable without changing note or owner quotas.
+MAX_WORKPAPER_BYTES = 8 * 1024 * 1024
+MAX_WORKPAPER_EVIDENCE_IDS = 5000
 LEGACY_NARRATIVE_FIELDS = {"title", "text", "objective", "procedures", "conclusion", "section"}
 
 
@@ -197,15 +201,17 @@ class DraftStore:
 
             if not isinstance(fields, dict) or set(fields) - FIELDS[action]:
                 raise DomainError("Unsupported draft fields")
+            byte_limit = MAX_BYTES if action == "note.create" else MAX_WORKPAPER_BYTES
             for name, value in fields.items():
                 if name in {"evidence_ids", "task_ids"}:
+                    id_limit = MAX_WORKPAPER_EVIDENCE_IDS if name == "evidence_ids" else 500
                     if (
                         not isinstance(value, list)
-                        or len(value) > 500
+                        or len(value) > id_limit
                         or any(not isinstance(v, str) or len(v) > 128 for v in value)
                     ):
                         raise DomainError("Invalid draft evidence IDs")
-                elif value is not None and (not isinstance(value, str) or len(value) > MAX_BYTES):
+                elif value is not None and (not isinstance(value, str) or len(value) > byte_limit):
                     raise DomainError("Draft fields must be bounded text")
             if "task_ids" in fields:
                 from .workpaper_links import validate_task_ids
@@ -222,9 +228,15 @@ class DraftStore:
                     raise DomainError("Explicit existing base workpaper version required")
             elif base is not None:
                 raise DomainError("Creation draft has no workpaper base version")
-            encoded = json.dumps(fields, sort_keys=True, separators=(",", ":"), allow_nan=False)
-            if len(encoded.encode()) > MAX_BYTES:
-                raise DomainError("Personal draft exceeds 100000 byte limit", status=413)
+            encoded = json.dumps(
+                fields,
+                sort_keys=True,
+                separators=(",", ":"),
+                allow_nan=False,
+                ensure_ascii=action == "note.create",
+            )
+            if len(encoded.encode()) > byte_limit:
+                raise DomainError(f"Personal draft exceeds {byte_limit} byte limit", status=413)
         fingerprint = digest([discard, payload])
         key = (actor, engagement, action, object_id)
         with self._db() as db:

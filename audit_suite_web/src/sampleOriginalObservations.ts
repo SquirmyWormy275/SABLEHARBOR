@@ -1,6 +1,7 @@
 import type { Engagement, Row } from "./api";
 import type { EvidenceContextReference } from "./evidenceContext";
 import { ITEM_STATUSES } from "./sampleExecution";
+import { deferredTrace } from "./workspaceDetail";
 type ObjectRow = Record<string, unknown>;
 const object = (v: unknown): ObjectRow =>
   v && typeof v === "object" && !Array.isArray(v) ? (v as ObjectRow) : {};
@@ -36,7 +37,7 @@ export type SampleObservation = {
 export function sampleOriginalContext(
   e: Engagement,
   artifactId: string,
-): { rows: SampleObservation[]; unavailable: boolean } {
+): { rows: SampleObservation[]; unavailable: boolean; deferred?: boolean } {
   const artifacts = e.artifacts.filter((a) => a.id === artifactId);
   if (
     !e.permissions?.some((r) => ["learn", "review", "instruct"].includes(r)) ||
@@ -50,6 +51,8 @@ export function sampleOriginalContext(
   if (raw === undefined) return { rows: [], unavailable: false };
   if (!Array.isArray(raw) || raw.length > 10000)
     return { rows: [], unavailable: true };
+  if (raw.some((t) => deferredTrace(t)))
+    return { rows: [], unavailable: false, deferred: true };
   const traces = raw.map(object),
     counts = new Map<string, number>(),
     successors = new Map<string, ObjectRow[]>();

@@ -1455,17 +1455,45 @@ section[aria-label="Bound instructor explanation"] dd {
   margin-inline-start: 0;
 }
 
-.modal.modal-wide { width: min(1320px, 96vw); max-width: 96vw; }
-.workpaper-editor { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; align-items: start; }
-.workpaper-editor > form { min-width: 0; }
-.workpaper-inspection { min-width: 0; position: sticky; top: 0; max-height: 72vh; overflow: auto; }
+.modal.modal-wide {
+  width: min(1320px, 96vw);
+  max-width: 96vw;
+}
+.workpaper-editor {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.workpaper-editor > form {
+  min-width: 0;
+}
+.workpaper-inspection {
+  min-width: 0;
+  position: sticky;
+  top: 0;
+  max-height: 72vh;
+  overflow: auto;
+}
 @media (max-width: 900px) {
-  .workpaper-editor { grid-template-columns: minmax(0, 1fr); }
-  .workpaper-inspection { position: static; max-height: none; }
+  .workpaper-editor {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .workpaper-inspection {
+    position: static;
+    max-height: none;
+  }
 }
 
-.background-work-panel { margin: 16px 32px; overflow-wrap: anywhere; }
-@media (max-width: 700px) { .background-work-panel { margin: 12px; } }
+.background-work-panel {
+  margin: 16px 32px;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 700px) {
+  .background-work-panel {
+    margin: 12px;
+  }
+}
 
 /* Detail sections are flex items; their tables must not set the modal's width. */
 .modal .actions > section {
@@ -1485,4 +1513,13 @@ section[aria-label="Bound instructor explanation"] dd {
     color: var(--muted);
     font-size: 0.75rem;
   }
+}
+
+/* Full retained text stays exact, with a bounded reading viewport. */
+.retained-workpaper-text {
+  max-height: 22rem;
+  max-width: 48rem;
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
 }
