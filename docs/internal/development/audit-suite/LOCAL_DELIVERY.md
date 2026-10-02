@@ -1,8 +1,30 @@
 # Local audit-training delivery
 
+October 2 checkpoint: CLEAN has 284 workpapers and 125 unrun procedures at
+revision 4,941; MESSY has 97 workpapers and 312 unrun procedures at revision 3,111.
+Both stopped in the pure B08 preflight before its 23 task writes because a valid
+UTF-8 native text original was rejected. Held originals and all prior work remain
+intact: 2,741 CLEAN and 2,321 MESSY. Same-room quiescence is
+`58efa85bb11a2a9ef676acedd9d1b54b24ec96921d339d007b21f702b4ff3fe3`.
+The narrow MIME successor passed 14 author checks and both exact frozen-input
+preflights; independent native collection and ordinary-writer review is running.
+No successor task execution is claimed. All 5,608 company business versions and
+its original checkpoint remain unchanged.
+
+The snapshot-only Key size correction is integrated. A genuine 3,379,146-byte
+source-bound snapshot with 409 expectations passed independent review
+`db7687d4f52426da31644f3b6d71be0004c33456b6ee3c6fcfff79c9d8db9828`.
+Main freshly checked 99 frozen files and passed 35 checks. Only the snapshot has
+a 32 MiB limit; configuration, index and manifest retain their 1 MiB limit.
+This supplies no actual large-service activation or cold/live-edit acceptance.
+The single-pass history verifier and company-native Key content remain in review;
+neither room, final private packet nor interactive walkthrough is declared finished.
+
+The paragraphs below retain earlier integration checkpoints and their limits.
+
 The reviewed large-workspace transport is now integrated; all 280 frontend tests and the production build pass. Actual final fieldwork, protected Key authoring, large-service composition and delivery remain in progress.
 
-The source-verification lease has passed independent runtime and same-company composition review, plus 44 main checks. The unchanged rooms reopened under fieldwork index `ca1a4ded9f2c5220ff3369a7eeee302068adf006c10b3b7b61eec2eaca9fd3e9`. One ordinary writer per room is continuing the remaining 213 CLEAN and 312 MESSY tasks, including B05 last. The full-company answer key is undergoing causal content review; a source-fact inventory alone does not establish a usable or accepted Key.
+The source-verification lease has passed independent runtime and same-company composition review, plus 44 main checks. The unchanged rooms reopened under fieldwork index `ca1a4ded9f2c5220ff3369a7eeee302068adf006c10b3b7b61eec2eaca9fd3e9`. The preserved V5 continuation stopped in the B08 pure preflight; the reviewed successor will resume only the currently unrun tasks, including B05 last. The full-company answer key is undergoing causal content review; a source-fact inventory alone does not establish a usable or accepted Key.
 
 Current October 1 execution is tracked in [the active workflow](ACTIVE_AGENT_GRAPH_2026-10-01.md) and [execution closeout](EXECUTION_CLOSEOUT.md). The full company-source pair is still in progress; the versioned checks below describe earlier delivery snapshots.
 

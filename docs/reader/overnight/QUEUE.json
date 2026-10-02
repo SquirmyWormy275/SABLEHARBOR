@@ -2217,7 +2217,7 @@
       "activation_proof_sha256": "40722199d57872e420e8fa0bee3ca048584adb3e15dd9593b5497770e1f086b3",
       "independent_birth_verification_sha256": "bf804a33a1945fd332581070227edde813765b22e87e0e4a7292806b47472a36",
       "period_close_clock_advance_sha256": "573b1377749b2da3bcb6a6498f2c4cc990b09b6cdb97fb97cf00728bf7ac74a4",
-      "current_fieldwork": "CLEAN_GOVERNANCE62_COMPLETE258_WORKPAPERS_INCIDENT_QUEUE_RUNNING_MESSY_B08_PURE_PREFLIGHT_MIME_REFUSAL_BEFORE23_WRITES",
+      "current_fieldwork": "CLEAN284_MESSY97_WORKPAPERS_BOTH_B08_PURE_UTF8_PREFLIGHT_REFUSED_BEFORE23_WRITES_SUCCESSOR_INDEPENDENT_REVIEW_RUNNING",
       "all_disjoint_family_task_methods_required": true,
       "historical_task_results_imported": false,
       "qualified_or_owner_acceptance": "NOT_ASSERTED",
@@ -2313,7 +2313,7 @@
         "failed": 0,
         "skipped": 0
       },
-      "source_invocation_lease_status": "INDEPENDENT_RUNTIME_AND_PAIR_ACCEPTED_MAIN114_REFERENCES44_CHECKS_PASS_ACTUAL_SAME_ROOM_REOPEN_PASS_CONTINUATION_RUNNING",
+      "source_invocation_lease_status": "INDEPENDENT_RUNTIME_AND_PAIR_ACCEPTED_MAIN114_REFERENCES44_CHECKS_PASS_PREDECESSOR_V5_CONTINUATION_PARTIAL_PRESERVED",
       "source_invocation_lease_author_handoff_sha256": "771a3d9afcbb87e570bc05a2de53288564c85855fca8cd568c2e505f9ddb0d33",
       "scope_key_contract_status": "INDEPENDENT25_REFUSALS_GENUINE_BOTH_SCOPE_TASK_BIND_ACCEPTED_MAIN79_REFERENCES34_CHECKS_PASS_ACTUAL_CONTENT_PENDING",
       "scope_key_contract_author_handoff_sha256": "6259e4bd03ffbb610607dffa24fb7104fe4d6f8a9c60546a35c1c2008014354f",
@@ -2363,11 +2363,38 @@
       "messy_held_at_assurance_pure_failure": 2321,
       "messy_person_history_held_at_assurance_pure_failure": 1704,
       "messy_revision_at_assurance_pure_failure": 3111,
-      "assurance_utf8_mime_successor_status": "EXACT1851_PURE23_PREFLIGHT_PASS_AUTHOR14_CHECKS_RUNNING_INDEPENDENT_REVIEW_REQUIRED",
-      "retained_cold_scan_successor_status": "REAL20GB_BOOT1398_SECONDS_DUPLICATE_PASSES_EXPOSED_NEXT_SINGLE_INVOCATION_PASS_AUTHOR_IN_ISOLATED_WORKTREE",
-      "protected_retained_key_full_scope_size_status": "REAL409_SNAPSHOT3389146_BYTES_REFUSED_OLD1MIB_LIMIT_BOUNDED32MIB_SNAPSHOT_ONLY_AUTHOR35_PASS_INDEPENDENT_REPLAY_PENDING",
+      "assurance_utf8_mime_successor_status": "AUTHOR14_CHECKS_RUFF_PASS_EXACT1819_AND1851_PURE23_PASS_INDEPENDENT_NATIVE_WRITER_REVIEW_RUNNING_NO_ACTUAL_TASK_WRITES",
+      "retained_cold_scan_successor_status": "PRESERVED_REAL20GB_BOOT1398_SECONDS_NEXT_SINGLE_PASS_QUERY_ONLY_CONNECTION_LIFECYCLE_AND_STORE_MODE_AUTHOR_REVIEW_PENDING_NO_ACTUAL_ACTIVATION",
+      "protected_retained_key_full_scope_size_status": "EXACT3379146_BYTE_GENUINE409_SNAPSHOT32MIB_SNAPSHOT_ONLY_INDEPENDENT23_HTTP_ACCEPTED_MAIN99_REFERENCES35_CHECKS_PASS_ACTUAL_COMPOSITION_PENDING",
       "first_company_native_key_causal_review_sha256": "f36e358e25743ee5d825d38078d4f6aa356a7d182da265c2773777e523720add",
-      "first_company_native_key_causal_status": "EIGHT_BOUNDED_SOURCE_CAUSAL_CARDS31_ORIGINALS71_LOCATORS_SUPPORTED_REFINED35_ORIGINALS75_LOCATORS_AND_ALL409_CONTENT_REVIEW_PENDING"
+      "first_company_native_key_causal_status": "REFINED_EIGHT_BOUNDED_CARDS35_ORIGINALS75_LOCATORS_SUPPORTED_FULL76_CARDS_AND409_TASK_FACETS_PER_BRANCH_REQUIRE_VISIBLE_CLAIM_AND_INDEPENDENT_REVIEW",
+      "current_queue_status": "POST_B08_PURE_FAILURE_QUIESCENT_NO_RESULT_IMPORT",
+      "clean_completed_incident_execution_sha256": "54030de60898ca77f69f4d8825f53635d2b444b079bcbc2053f42aea2f61fa37",
+      "clean_completed_incident_workpapers": 284,
+      "clean_unrun_after_incidents": 125,
+      "post_assurance_mime_quiescence_sha256": "58efa85bb11a2a9ef676acedd9d1b54b24ec96921d339d007b21f702b4ff3fe3",
+      "actual_workpapers_at_assurance_mime_failure": {
+        "CLEAN": 284,
+        "MESSY": 97
+      },
+      "actual_unrun_at_assurance_mime_failure": {
+        "CLEAN": 125,
+        "MESSY": 312
+      },
+      "actual_retained_originals_at_assurance_mime_failure": {
+        "CLEAN": 2741,
+        "MESSY": 2321
+      },
+      "actual_revision_at_assurance_mime_failure": {
+        "CLEAN": 4941,
+        "MESSY": 3111
+      },
+      "preserved_clean_assurance_actual_preflight_failure_sha256": "719b479457f39bf7fa469b3a1d8eea2fdee698a9947d7bc806fefd8aeb9674cb",
+      "assurance_utf8_mime_author_handoff_sha256": "c1af7065c8b2716bcd39f38e45c7697bfc1c56336285eee5709b61862271aee2",
+      "protected_retained_key_snapshot_size_review_sha256": "db7687d4f52426da31644f3b6d71be0004c33456b6ee3c6fcfff79c9d8db9828",
+      "protected_retained_key_snapshot_size_main_reproduction_sha256": "b51dd1e1308ac15d2916815c118ce8c5f45e55119f98a4f9980c39bb25ebd139",
+      "protected_retained_key_snapshot_size_main_focused_sha256": "8b9d3f867982ab374c97f84c213bae4a931fe54ea959adc4562aa0c64b438d52",
+      "first_company_native_key_refined_causal_review_sha256": "b19d293029d44b2e8289e64ec081448d700576a2a994fa24770aafb303288169"
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"
