@@ -3,6 +3,7 @@
 import hashlib
 from copy import deepcopy
 from pathlib import Path
+from types import SimpleNamespace
 
 import pytest
 
@@ -872,6 +873,11 @@ def test_full99_has_exact_distinct_contracts_actual_source_evidence_and_unchange
 
     results = outputs(originals)
     contracts = task_contracts()
+    room = SimpleNamespace(
+        state=lambda: originals["engine"].store.get(
+            originals["auditor"], originals["engagement"]
+        )
+    )
     assert (
         len(results) == 99
         and [r["task_id"] for r in results] == authored_contracts()["selected_task_ids"]
@@ -888,7 +894,7 @@ def test_full99_has_exact_distinct_contracts_actual_source_evidence_and_unchange
             0 < len(o["evidence"]) <= 20 and len(o["id"]) <= 128 for o in result["observations"]
         )
         BoundWorkroom._validate_inspection(
-            None, originals["rows"], result, contracts[result["task_id"]]
+            room, originals["rows"], result, contracts[result["task_id"]]
         )
         assert (
             result["result"]["population"]["full_period_enterprise_denominator_established"]
