@@ -1,5 +1,34 @@
 # Local audit-training delivery
 
+October 2 viewer preparation checkpoint: the separate pristine delegated-tail
+storage conversion passed independent review, including 14 executions and four
+product-free journal replays. Root freshly verified all 1,436 frozen references
+(980,571,040 logical bytes). Selected mechanism gate is
+`a6dbc4d59c904aae0d39f68335cfa06a7460cc2b05ce77bf823317bb387fec37`.
+This preserves the original spent-grant producer tuple, signing authority,
+identities, expiry and original physical prefix; it does not transfer an 818c
+delegation to new code or authorize actual activation.
+
+Root independently measured the frozen native encoder against a private copy of
+the complete 238,423,640-byte final CLEAN state. Exact canonical bytes and every
+stored node passed comparison. Initial encoding took 1.685 seconds; a 122-byte
+component note took 1.459 seconds and grew the test database by 20,480 bytes.
+Fresh all-node verification took 0.338 seconds and exact reconstruction 0.408.
+Report is `6d32c48e99c511cd028cf11f07fa8e2cd8ceb40255fd72a72c4603e2b78c84d3`.
+These are serialization-component measurements; no actual database, Engine,
+Company or Store was initialized, and actual viewer action timing remains pending.
+
+The new final service composition is being tested in isolation. It includes the
+reviewed migration, separately reviewed compressed complete packet, faster
+encoder and invocation-local integrity work. Every new native, Python, backend
+and Key origin requires its own explicit final composition review. The full
+current-live replay continues on unchanged originals. The original grants remain
+unspent. Its root parent coordinator passed read-only frozen-input preflight;
+actual consumption requires completed current-live replay and separate static
+review. The Key coordinator's missing required actor was corrected in unexecuted,
+unfilled V2; neutral orchestration and final composition review remain pending.
+Earlier checkpoints below retain their historical scope.
+
 October 2 final verification checkpoint: complete byte capture passed for both
 original rooms and the company snapshot. Capture is
 `0140048503b3e9c70b211ffe513cc12a7c1c7204f47a485a0454849e90c88178`;

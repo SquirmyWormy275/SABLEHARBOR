@@ -2217,7 +2217,7 @@
       "activation_proof_sha256": "40722199d57872e420e8fa0bee3ca048584adb3e15dd9593b5497770e1f086b3",
       "independent_birth_verification_sha256": "bf804a33a1945fd332581070227edde813765b22e87e0e4a7292806b47472a36",
       "period_close_clock_advance_sha256": "573b1377749b2da3bcb6a6498f2c4cc990b09b6cdb97fb97cf00728bf7ac74a4",
-      "current_fieldwork": "BOTH409_ORDINARY_FIELDWORK_RECORDED_NO_UNRUN_FINAL_BYTE_CAPTURE_RUNNING",
+      "current_fieldwork": "BOTH409_ORDINARY_FIELDWORK_RECORDED_NO_UNRUN_FINAL_BYTE_CAPTURE_PASSED_CURRENT_LIVE_REPLAY_RUNNING",
       "all_disjoint_family_task_methods_required": true,
       "historical_task_results_imported": false,
       "qualified_or_owner_acceptance": "NOT_ASSERTED",
@@ -2509,7 +2509,21 @@
       "preexpiry_delegation_root_preparation_receipt_sha256": "177707e3d5f9e0b6cab8841e2e58f5fa0399b5b0008caa59ea4b96823430a984",
       "preexpiry_delegations_consumed": false,
       "signed_credentials_rotated": false,
-      "codec_independent_selected_semantics_review_sha256": "225ed622e7263ac65bafbbeab1ae0733f6c664499e7ff0fba03297d7f49137e3"
+      "codec_independent_selected_semantics_review_sha256": "225ed622e7263ac65bafbbeab1ae0733f6c664499e7ff0fba03297d7f49137e3",
+      "pristine_delegated_tail_storage_conversion_status": "SELECTED_INDEPENDENT_PASS_ROOT1436_FROZEN_REFERENCES_VERIFIED_ACTUAL_FINAL_COMPOSITION_AND_PROOF_PENDING",
+      "pristine_delegated_tail_storage_conversion_independent_review_sha256": "a6dbc4d59c904aae0d39f68335cfa06a7460cc2b05ce77bf823317bb387fec37",
+      "actual_prefix_delegation_consumption_coordinator_sha256": "3c3aca782f4f1456da50ce250b3573b4929d45f00eaffad3a252f7f03e8caf98",
+      "actual_prefix_delegation_consumption_coordinator_status": "READONLY_VERIFY_ONLY_PASSED_LITERAL818_480PAIRS_ORIGINAL_GRANTS_UNSPENT_INDEPENDENT_STATIC_AND_ACTUAL_PROOF_PENDING",
+      "actual_key_binding_coordinator_v2_sha256": "aef4f85b7c8e885ca3f0b43eb60bc3bf9e1fb6bb14723649ec799fc7efdbe5a3",
+      "actual_key_binding_coordinator_v2_status": "CORRECT_REQUIRED_ORIGINAL_ACTOR_STATIC_ONLY_UNFILLED_NEUTRAL_INTEGRATION_PENDING_NO_ACTUAL_KEYS",
+      "real_payload_encoder_component_root_review_sha256": "6d32c48e99c511cd028cf11f07fa8e2cd8ceb40255fd72a72c4603e2b78c84d3",
+      "real_payload_encoder_component_status": "FROZEN_A070_FULL238423640_BYTES_EXACT_REFERENCE_AND_FRESH_ALL_NODE_PASS_122BYTE_NOTE_ENCODE1_459SECONDS_DB_GROWTH20480_BYTES_NO_ACTUAL_DB_OR_SERVICE",
+      "new_final_retained_composition_status": "ISOLATED_AUTHOR_INTEGRATION_RUNNING_PRISTINE_MIGRATION_COMPRESSED_PACKET_NATIVE_ENCODER_REQUEST_LOCAL_INTEGRITY_FRESH_PIN_VECTOR_REQUIRED",
+      "final_current_live_replay_last_observed_progress": {
+        "CLEAN": 3700,
+        "MESSY": 2300
+      },
+      "final_current_live_replay_last_observed_progress_is_acceptance": false
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"
