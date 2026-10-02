@@ -7,7 +7,11 @@ either audit began. Both started with 409 unrun tasks and zero evidence or
 fieldwork. Activation proof `40722199d57872e420e8fa0bee3ca048584adb3e15dd9593b5497770e1f086b3`
 and separate birth verification
 `bf804a33a1945fd332581070227edde813765b22e87e0e4a7292806b47472a36`
-record that boundary. B00 is now collecting ordinary company originals.
+record that boundary. B00 has retained 141 CLEAN originals and stopped safely
+for reviewed runtime/writer successors; all temporary grants are revoked.
+Both actual 409-task vectors remain unrun. The accepted runtime successor
+reopened the same company and workrooms unchanged; independent isolated method
+results do not supply actual task completion.
 Current status and exact implementation gates are recorded in
 `ACTIVE_AGENT_GRAPH_2026-10-01.md`. The packets below remain preserved historical
 technical snapshots and supply no inherited task results for the current pair.

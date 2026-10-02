@@ -18,23 +18,40 @@ is `bf804a33a1945fd332581070227edde813765b22e87e0e4a7292806b47472a36`;
 activation proof is `40722199d57872e420e8fa0bee3ca048584adb3e15dd9593b5497770e1f086b3`.
 The ordinary period-close clock advance to January 16, 2028 at 13:00 UTC is
 `573b1377749b2da3bcb6a6498f2c4cc990b09b6cdb97fb97cf00728bf7ac74a4`.
-The audit period remains 2027. B00 scope-source collection is running through
-ordinary requests, native grants, discovery and actual collection receipts.
-No historical audit result was imported into these workrooms.
+The audit period remains 2027. B00 ordinary collection retained 141 CLEAN
+originals; MESSY still has zero. Collection stopped safely during read-only
+discovery verification so reviewed successors can be applied. All temporary
+grants were revoked; all 409 tasks in each room remain unrun, with no workpapers,
+populations or samples. Quiescence proof is
+`bbb4605263d7df5503ea029abcad2a931cef870c1f1fc12483d9dfde535413d2`.
+The same company and workrooms reopened under the accepted runtime successor;
+no company, audit or principal was recreated and no historical task results
+were imported.
 
 Current independently accepted implementation gates are retained service
 `1a00fe72a37b2e2ddefd098733567ce651364610c3e2a2055835698f6b0630fe`,
 shared-pair composition
-`8a544a1a2792de48b97bc7b90dcaf3f4ae827f9eabca21aa3296f24d4fd46ce7`,
+`35bb0fcb949bd66a4cf8d82be5645bc762008f61b734cecf21d0e40303ec5eef`,
 two scope-dependency methods
 `b0a466f3f99bfa4d9fc0034c41a3a809847e1ff290946528177aaf7178317bf1`,
 and the corrected twenty continuity methods
 `f05db52a547540d49e3121ea349054ba5f3fe113362e3984189ddb3c556c3d08`.
+The runtime successor gate is
+`b5d6b6ac856cca71146ee55b379f0894d2c124fcf391fd6f80896d7f82a331a8`;
+58 fresh main checks passed and both existing workrooms reopened unchanged.
 Every family still requires its own exact task-contract gate and new fieldwork.
-B01's candidate is undergoing a native-role correction; B02 and B05 are being
-verified. Root is testing a runtime performance successor in an isolated
-checkout. That candidate supplies no current runtime or fieldwork authorization.
-Older activation-pending statements below describe preceding review stages.
+Independent B01 and scope replays now pass with a documentary attribution
+successor that preserves antecedent, in-period and post-period document dates.
+Its final composition gate is being sealed before main integration. A separate
+retained-history successor passes 28 author checks; on the existing 141-original
+history its read-only verifier took 3.07 seconds against 76.38 seconds for the
+accepted implementation. That result concerns this verifier, not end-to-end
+fieldwork throughput. Independent acceptance remains pending for that code.
+B02's effective-threshold correction, B04's 37 methods, B05's 50 methods and
+B08's 23 methods are under review; B06, B07 and B09 remain in authoring/testing.
+The entries below are a preserved chronological review log. Their earlier
+activation-pending/current-code wording describes preceding review stages;
+the opening section records current authority and actual workroom state.
 
 | Lane | Current deliverable | Integration condition |
 | --- | --- | --- |
