@@ -1,5 +1,31 @@
 # Active company-source audit workflow
 
+October 2, 21:00 UTC checkpoint: the focused V2 delivery successor is frozen in
+isolation at `c696bda0a6c3e60c990d5ebcfbe39177fede6cb3` and under independent
+review. It activates the existing manual assessment, selected debrief and durable
+background workflow through an explicit pinned configuration, increases the
+bounded original selector to cover both complete corpora, adds ordinary GET
+response closure, and records technical reviewer provenance. Main runtime and
+original company/audit histories remain unchanged. The first full current-live
+replay is running; last observed progress is CLEAN 5,400 and MESSY 4,700 events.
+
+Root reconciled the proposed technical follow-through against both exact captured
+states, selected task/WP versions, fourteen held originals and their native
+receipts. Receipt is `7454cef40da3b357a3e954ea0267d7a2cab9d43348c6f85a18667a5e7aff2c06`.
+No actual follow-through command has executed. The standard-library HTTP draft
+V2 `4efcd0b874442d6fd34ebc2c3a8d39ee6a5bc1becb639b02938d81d738459b0a`
+requires accepted final gates and the original signed learner/reviewer identities;
+it preserves source custody, task/WP/sample records, explicit technical provenance,
+proposed remediation and the distinction between preparer response and resolution.
+The earlier draft and its static-review limitations remain preserved.
+
+Captured-payload transport measurement confirms complete summaries of 25,456,076
+and 26,507,057 bytes before runtime projection; largest individual WP texts are
+4,559,121 and 4,641,150 bytes. Report is
+`2faf21e6ae282b12e74110aa3f6496dcae8ce35114d428214cecb883d1999f64`.
+These are component measurements, not actual service or browser acceptance.
+All 46 original queue jobs and their prior acceptance states remain unchanged.
+
 October 2, 20:40 UTC delivery review checkpoint: the current frozen viewer passed
 its selected storage, custody, private-Key closure, packet and path-equivalence
 checks, but independent review requires changes before complete delivery.

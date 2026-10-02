@@ -2549,7 +2549,21 @@
       "actual_documentary_outcomes_are_full_control_effectiveness": false,
       "engineering_closeout_matrix_sha256": "0b98a7deae0a8a41fec72dea67c0cff528bc72ddb1b4a5f705b3343f3d14703e",
       "postdelegation_coordinator_root_selected_input_review_sha256": "c4e9f11b7cd11ac678365ff2f2d23d7c6b7c124713ab26d6416c42d80a4766c7",
-      "postdelegation_coordinator_status": "SELECTED_AUTHOR20_AND_IMMUTABLE_LINEAGE_PASS_ROOT286_REFERENCES_STATIC_PASS_UNFILLED_ACTUAL_FINAL_GATES_PENDING"
+      "postdelegation_coordinator_status": "SELECTED_AUTHOR20_AND_IMMUTABLE_LINEAGE_PASS_ROOT286_REFERENCES_STATIC_PASS_UNFILLED_ACTUAL_FINAL_GATES_PENDING",
+      "checkpoint_utc": "2026-10-02T21:00:00Z",
+      "focused_delivery_successor_commit": "c696bda0a6c3e60c990d5ebcfbe39177fede6cb3",
+      "focused_delivery_successor_status": "ISOLATED_FROZEN_V2_MANUAL_ASSESSMENT_SELECTED_DEBRIEF_BACKGROUND_AND_ORDINARY_GET_CLOSURE_IN_INDEPENDENT_REVIEW_NOT_ADOPTED",
+      "focused_delivery_successor_dependency_sha256": "c0bd01bd24add29231732cbfd8a745eb8f04e8dea47110b90639969bbd3a1122",
+      "source_backed_followthrough_root_review_sha256": "7454cef40da3b357a3e954ea0267d7a2cab9d43348c6f85a18667a5e7aff2c06",
+      "source_backed_followthrough_http_v1_preserved_sha256": "374d8aba63228b4d36aba5137d1a9c556886f080a312060e996c42352a6f9bc0",
+      "source_backed_followthrough_http_v2_draft_sha256": "4efcd0b874442d6fd34ebc2c3a8d39ee6a5bc1becb639b02938d81d738459b0a",
+      "source_backed_followthrough_actual_execution": false,
+      "captured_workspace_summary_component_measurement_sha256": "2faf21e6ae282b12e74110aa3f6496dcae8ce35114d428214cecb883d1999f64",
+      "actual_HTTP_performance_accepted": false,
+      "last_observed_current_live_replay_progress": {
+        "CLEAN": 5400,
+        "MESSY": 4700
+      }
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"
