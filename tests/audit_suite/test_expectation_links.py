@@ -166,3 +166,93 @@ def test_task_reference_does_not_promote_unrelated_source_or_later_version():
     assert len(rows) == 1
     assert rows[0]["version"] == 1 and rows[0]["source_artifact_ids"] == ["EXACT"]
     assert rows[0]["version_sha256"] == digest(state["workpapers"][0]["versions"][0])
+
+
+def scope_setup(workspace):
+    engine, args = workspace
+
+    def add_scope(state):
+        state["tasks"] = [
+            {
+                "id": "SCOPE-ONE",
+                "kind": "SCOPE_DEPENDENCY",
+                "control_id": None,
+                "scope": deepcopy(state["scope"]),
+            }
+        ]
+        return state
+
+    advance(engine, args, add_scope)
+    args["authored"]["issues"][0]["control_ids"] = []
+    args["authored"]["expectations"][0]["task_ids"] = ["SCOPE-ONE"]
+    return engine, args
+
+
+def test_scope_issue_binds_exact_source_without_inventing_control_or_grade(workspace):
+    engine, args = scope_setup(workspace)
+    before = engine.store.get(args["instructor_id"], args["engagement_id"])
+    receipt = bind_snapshot(engine, **args)
+    snapshot = verify_snapshot(args["output"], expected_manifest_sha256=receipt["manifest_sha256"])
+    assert snapshot["authored"]["issues"][0]["control_ids"] == []
+    assert snapshot["authored"]["expectations"][0]["task_ids"] == ["SCOPE-ONE"]
+    assert snapshot["professional_validation"] == "UNVALIDATED"
+    assert snapshot["grading"] == "NOT_PERFORMED"
+    assert engine.store.get(args["instructor_id"], args["engagement_id"]) == before
+    result = compare(
+        engine,
+        {"id": args["instructor_id"]},
+        args["engagement_id"],
+        {
+            args["engagement_id"]: {
+                "path": args["output"],
+                "manifest_sha256": receipt["manifest_sha256"],
+            }
+        },
+        revision=before["revision"],
+    )["expectations"][0]
+    assert result["task_mapping_status"] == "EXPLICIT_AUTHORED_LINKS"
+    assert result["authored_task_ids"] == ["SCOPE-ONE"]
+    assert result["testing"] == "NOT_ASSESSED"
+
+
+@pytest.mark.parametrize(
+    "fault",
+    [
+        "no_tasks",
+        "empty_tasks",
+        "orphan",
+        "mixed_issues",
+        "controlled_task",
+        "missing_kind",
+        "prior_scope",
+        "excluded",
+        "duplicate_task",
+    ],
+)
+def test_scope_issue_refuses_unbound_mixed_or_noncurrent_procedures(workspace, fault):
+    engine, args = scope_setup(workspace)
+    authored = args["authored"]
+    state = engine.store.get(args["instructor_id"], args["engagement_id"])
+    if fault == "no_tasks":
+        del authored["expectations"][0]["task_ids"]
+    elif fault == "empty_tasks":
+        authored["expectations"][0]["task_ids"] = []
+    elif fault == "orphan":
+        authored["expectations"] = []
+    elif fault == "mixed_issues":
+        normal = deepcopy(authored["issues"][0])
+        normal.update(id="NORMAL", control_ids=["CONTROL1"])
+        authored["issues"].append(normal)
+        authored["expectations"][0]["issue_ids"].append("NORMAL")
+    elif fault == "controlled_task":
+        state["tasks"][0]["control_id"] = "CONTROL1"
+    elif fault == "missing_kind":
+        del state["tasks"][0]["kind"]
+    elif fault == "prior_scope":
+        state["tasks"][0]["scope"]["period_start"] = "2026-01-01"
+    elif fault == "excluded":
+        state["tasks"][0]["applicability"] = "EXCLUDED"
+    else:
+        state["tasks"].append(deepcopy(state["tasks"][0]))
+    with pytest.raises(DomainError):
+        _authored(authored, {"R1", "R2"}, {"CONTROL1"}, engine.repository, state)

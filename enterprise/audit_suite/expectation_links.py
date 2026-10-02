@@ -16,11 +16,15 @@ def validate_authored_tasks(state, controls, value):
         raise DomainError("Authored procedure links require unique bounded task IDs")
     for task_id in value:
         matches = [t for t in state.get("tasks", []) if t.get("id") == task_id]
-        if len(matches) != 1 or matches[0].get("control_id") not in controls:
+        if len(matches) != 1 or (controls and matches[0].get("control_id") not in controls):
             raise DomainError("Authored procedure must belong to an issue's scoped control")
         task = matches[0]
         if task.get("applicability", "CURRENT_SCOPE") != "CURRENT_SCOPE":
             raise DomainError("Authored procedure must belong to the current scope")
+        if not controls and (
+            task.get("kind") != "SCOPE_DEPENDENCY" or task.get("control_id") is not None
+        ):
+            raise DomainError("Control-free issues require exact current scope-dependency tasks")
         validate_task_ids(state, task.get("control_id"), [task_id])
     return list(value)
 
