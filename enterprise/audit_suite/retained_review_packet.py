@@ -38,7 +38,7 @@ EVENT_COLUMNS = (
 )
 HISTORY_SQL = (
     "CREATE TABLE history_events (revision INTEGER PRIMARY KEY, actor TEXT NOT NULL, "
-    "recorded_at INTEGER NOT NULL, previous_hash TEXT NOT NULL, state TEXT NOT NULL, "
+    "recorded_at REAL NOT NULL, previous_hash TEXT NOT NULL, state TEXT NOT NULL, "
     "command TEXT NOT NULL, command_id TEXT NOT NULL, hash TEXT NOT NULL, "
     "request_hash TEXT NOT NULL)"
 )
@@ -274,7 +274,9 @@ def export_packet(engine, actor, engagement_id, output):
         "overall_grade": "NOT_PROVIDED",
     }
     # Recheck current authority and selected revision after every potentially
-    # expensive read. Failed staging remains private and has no final manifest.
+    # expensive read. Authority/revision failures leave no staging manifest.
+    # Publication failures may retain a verified private staging manifest for
+    # inspection; only the successfully returned destination is published.
     with closing(engine.store.connect()) as source:
         source.execute("BEGIN IMMEDIATE")
         engine.store._authorize(source, actor, engagement_id, {"instruct"})

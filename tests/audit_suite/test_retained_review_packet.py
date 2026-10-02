@@ -5,6 +5,7 @@ import json
 import sqlite3
 import subprocess
 import sys
+import time
 from contextlib import closing
 
 import pytest
@@ -158,6 +159,32 @@ def test_destination_created_during_export_is_preserved(packetcase, monkeypatch)
         export_packet(case["engine"], case["ids"]["operator"], case["engagement"], output)
     assert (output / "important.txt").read_bytes() == b"Concurrent owner"
     assert list(output.iterdir()) == [output / "important.txt"]
+
+
+def test_exact_second_real_event_clock_preserves_type_and_hash(packetcase, monkeypatch):
+    import enterprise.audit_suite.store as module
+
+    _, case, output = packetcase
+    exact_second = float(int(time.time()) + 1)
+    with monkeypatch.context() as patched:
+        patched.setattr(module.time, "time", lambda: exact_second)
+        command(
+            case["engine"],
+            case["ids"]["auditor"],
+            case["engagement"],
+            "note.create",
+            {"title": "Exact second", "text": "Normal command with a whole-second real clock."},
+        )
+        result = export_packet(case["engine"], case["ids"]["operator"], case["engagement"], output)
+    history = case["engine"].store.history(case["ids"]["operator"], case["engagement"])
+    assert type(history[-1]["recorded_at"]) is float and history[-1]["recorded_at"] == exact_second
+    with closing(sqlite3.connect(output / "history.sqlite3")) as db:
+        last = db.execute(
+            "SELECT recorded_at FROM history_events ORDER BY revision DESC LIMIT 1"
+        ).fetchone()[0]
+    assert type(last) is float and last == exact_second
+    assert result["history_sha256"] == digest(history)
+    assert verify_packet(output, result["manifest_sha256"])["verified"] is True
 
 
 @pytest.mark.parametrize(
