@@ -12,6 +12,7 @@ from enterprise.audit_suite.engine import Engine
 from enterprise.audit_suite.fresh_sec003_procedure import ProcedureError
 from enterprise.audit_suite.source_legal_provider_methods import (
     CLAUSE_FIELDS,
+    strict_fields,
     authored_contracts,
     encoded,
     inspections,
@@ -20,6 +21,24 @@ from enterprise.audit_suite.source_legal_provider_methods import (
 
 REPO = Path(__file__).resolve().parents[2]
 COMPANY, BRANCH = "NEUTRAL-LEGAL-PROVIDER", "SELECTED-OPERATIONS"
+
+
+def test_exact_undetermined_real_hipaa_declaration_is_preserved_without_boolean_coercion():
+    body = {"real_hipaa_applicability": "UNDETERMINED", "actual_phi": False}
+    before = deepcopy(body)
+    strict_fields(body)
+    assert body == before and type(body["real_hipaa_applicability"]) is str
+
+
+@pytest.mark.parametrize("value", [0, 1, "false", "true", "undetermined", "APPLICABLE", {}, []])
+def test_only_exact_undetermined_declaration_supplements_strict_boolean_contract(value):
+    with pytest.raises(ProcedureError, match="Strict Boolean field"):
+        strict_fields({"real_hipaa_applicability": value})
+
+
+def test_undetermined_hipaa_declaration_does_not_relax_other_boolean_fields():
+    with pytest.raises(ProcedureError, match="Strict Boolean field actual_phi"):
+        strict_fields({"real_hipaa_applicability": "UNDETERMINED", "actual_phi": "false"})
 
 
 def build_originals(

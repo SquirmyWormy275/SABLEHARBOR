@@ -88,6 +88,11 @@ def strict_fields(value):
     if isinstance(value, dict):
         for key, child in value.items():
             if key in BOOLEAN_FIELDS and child is not None:
+                # Native legal overlays explicitly preserve undetermined real
+                # HIPAA applicability. This exact declaration is not Boolean
+                # support, a fictional applicability decision, or legal credit.
+                if key == "real_hipaa_applicability" and child == "UNDETERMINED":
+                    continue
                 # usable_JSON is also an actual parsed document in recovery records.
                 if key != "usable_JSON" or not isinstance(child, dict):
                     require(type(child) is bool, "Strict Boolean field " + key + " required")
