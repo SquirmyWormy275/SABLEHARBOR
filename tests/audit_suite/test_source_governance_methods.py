@@ -723,7 +723,10 @@ def test_recusal_and_material_change_exact_followup_deadline(ordinary_pair):
 
 def test_policy_actual_audience_contact_sanction_delay_and_fraud_gate(ordinary_pair):
     communication = _communications(hist(ordinary_pair))[0]["facts"]
-    assert communication["missing_actual_receipts"] == ["RECORDS"]
+    assert communication["missing_actual_receipts"] == ["OWNER", "RECORDS"]
+    assert communication["actual_receipt_documentary_attributes"][0]["document_binding_status"] == (
+        "DOCUMENT_BINDING_NOT_REPORTED"
+    )
     assert communication["template_contact_matches_effective_directory"] is False
     ethics = _ethics(hist(ordinary_pair))
     assert any(o["facts"].get("case_existence_sent_to_implicated_line") is True for o in ethics)
@@ -819,6 +822,146 @@ def test_cached_document_not_authority_and_missing_pointer_never_aliased(ordinar
     out = _addressable(History(candidates, at))
     assert out[0]["facts"]["distinct_candidate_original_count"] == 0
     assert out[0]["status"] == "SUPPORT_UNAVAILABLE"
+
+
+@pytest.mark.parametrize(
+    "case", ["valid", "duplicate-count-two", "duplicate-count-one", "same-member-conflict"]
+)
+def test_unique_actual_individual_votes_and_duplicate_reference_exceptions(tmp_path, case):
+    # Each complete business history is authored before ordinary Engine collection.
+    motion = row(
+        "govapp.appetite_motion",
+        "OWN-MOTION",
+        "2027-01-01T09:00:00Z",
+        {"engineering_neutral_fixture": True, "internal_marker_rpo_minutes_max": 5},
+    )
+    member = row(
+        "govapp.board_member_action",
+        "OWN-MEMBER",
+        "2027-01-02T09:00:00Z",
+        {
+            "engineering_neutral_fixture": True,
+            "actor_id": "DIR-ONE",
+            "vote": "SUPPORT",
+            "motion_sha256": motion["source"]["sha256"],
+        },
+    )
+    actions = [
+        {
+            "director_id": "DIR-ONE",
+            "vote": "SUPPORT",
+            "action_sha256": member["source"]["sha256"],
+            "event_at": member["source"]["event_at"],
+        }
+    ]
+    sources = [motion, member]
+    if case.startswith("duplicate"):
+        actions.append(dict(actions[0]))
+    elif case == "same-member-conflict":
+        changed = row(
+            "govapp.board_member_action",
+            "OWN-MEMBER-SECOND",
+            "2027-01-03T09:00:00Z",
+            {
+                "engineering_neutral_fixture": True,
+                "actor_id": "DIR-ONE",
+                "vote": "DISSENT",
+                "motion_sha256": motion["source"]["sha256"],
+            },
+        )
+        sources.append(changed)
+        actions.append(
+            {
+                "director_id": "DIR-ONE",
+                "vote": "DISSENT",
+                "action_sha256": changed["source"]["sha256"],
+                "event_at": changed["source"]["event_at"],
+            }
+        )
+    sources.append(
+        row(
+            "govapp.board_decision",
+            "OWN-BOARD",
+            "2027-01-04T09:00:00Z",
+            {
+                "engineering_neutral_fixture": True,
+                "member_actions": actions,
+                "accepted_motion_sha256": motion["source"]["sha256"],
+                "support_count": 2 if case == "duplicate-count-two" else 1,
+                "dissent_count": 1 if case == "same-member-conflict" else 0,
+            },
+        )
+    )
+    records, at = collected(tmp_path, sources)
+    observation = _governing_decisions(History(records, at))[0]
+    facts = observation["facts"]
+    assert facts["distinct_actual_member_actions"] == 1
+    if case == "same-member-conflict":
+        assert facts["recomputed_votes"] == {}
+        assert len(facts["ambiguous_individual_member_actions"]) == 1
+        assert not facts["recorded_vote_counts_match_collected_individual_actions"]
+    else:
+        assert facts["recomputed_votes"] == {"SUPPORT": 1}
+        assert len(facts["counted_individual_member_originals"]) == 1
+        assert facts["recorded_vote_counts_match_collected_individual_actions"] == (
+            case != "duplicate-count-two"
+        )
+    assert facts["duplicate_original_references"] == int(case.startswith("duplicate"))
+    assert observation["status"] == ("OBSERVED" if case == "valid" else "EXCEPTION_RECORDED")
+    assert not facts["legal_quorum_or_entire_period_oversight_established"]
+
+
+@pytest.mark.parametrize("binding", [True, False, "absent", 1])
+def test_documentary_receipt_binding_false_missing_and_boolean_alias(tmp_path, binding):
+    directory = row(
+        "supplementalops.communication_directory",
+        "OWN-DIRECTORY",
+        "2027-01-01T09:00:00Z",
+        {"engineering_neutral_fixture": True, "required_internal_recipients": ["A", "B"]},
+    )
+    first = {"recipient": "A", "received_at": "2027-01-02T09:00:00Z"}
+    if binding != "absent":
+        first["document_sha_bound"] = binding
+    delivery = row(
+        "supplementalops.communication_event",
+        "OWN-DELIVERY",
+        "2027-01-03T09:00:00Z",
+        {
+            "engineering_neutral_fixture": True,
+            "required_recipients": ["A", "B"],
+            "due_at": "2027-01-03T09:00:00Z",
+            "delivery_receipts": [
+                first,
+                {
+                    "recipient": "B",
+                    "document_sha_bound": True,
+                    "received_at": "2027-01-02T09:00:00Z",
+                },
+            ],
+            "native_dependencies": [reference(directory["source"])],
+        },
+    )
+    records, at = collected(tmp_path, [directory, delivery])
+    if type(binding) is int:
+        with pytest.raises(ProcedureError, match="delivery Boolean"):
+            _communications(History(records, at))
+        return
+    result = _communications(History(records, at))[0]
+    facts = result["facts"]
+    assert facts["directory_original_effective_at_event"]
+    assert facts["source_bounded_received_recipients"] == (["A", "B"] if binding is True else ["B"])
+    assert facts["missing_actual_receipts"] == ([] if binding is True else ["A"])
+    first = facts["actual_receipt_documentary_attributes"][0]
+    assert first["document_binding_status"] == (
+        "REPORTED_BOUND"
+        if binding is True
+        else "REPORTED_UNBOUND"
+        if binding is False
+        else "DOCUMENT_BINDING_NOT_REPORTED"
+    )
+    assert first["counts_as_source_bounded_received"] is (binding is True)
+    assert result["status"] == ("OBSERVED" if binding is True else "EXCEPTION_RECORDED")
+    assert facts["method_verified_delivery_or_bound_document_bytes"] is False
 
 
 def test_exact62_reviewed_neutral_writer_preserves_other347_and_company_history(ordinary_pair):

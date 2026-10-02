@@ -538,11 +538,29 @@ def _governing_decisions(history):
             else:
                 absent.append({"member": action.get("director_id"), "reason": reason})
         members = [r["document"].get("actor_id") for r in actions]
-        votes = Counter(r["document"].get("vote") for r in actions)
+        originals = {_key(r["source"]): r for r in actions}
+        by_member = {}
+        for action in originals.values():
+            by_member.setdefault(action["document"].get("actor_id"), []).append(action)
+        ambiguous = [
+            {
+                "member": member,
+                "actual_originals": [r["source"] for r in rows],
+                "reason": "MULTIPLE_DISTINCT_MEMBER_ACTIONS_NO_SELECTED_VOTE",
+            }
+            for member, rows in by_member.items()
+            if len(rows) != 1
+        ]
+        counted = [rows[0] for rows in by_member.values() if len(rows) == 1]
+        votes = Counter(r["document"].get("vote") for r in counted)
+        duplicate_originals = len(actions) - len(originals)
         observed = {
             "motion_link": status,
             "distinct_actual_member_actions": len(set(members)),
             "duplicate_member_actions": len(members) - len(set(members)),
+            "duplicate_original_references": duplicate_originals,
+            "ambiguous_individual_member_actions": ambiguous,
+            "counted_individual_member_originals": [r["source"] for r in counted],
             "recomputed_votes": dict(votes),
             "recorded_support_count": body.get("support_count"),
             "recorded_dissent_count": body.get("dissent_count"),
@@ -555,14 +573,16 @@ def _governing_decisions(history):
         mismatch = votes.get("SUPPORT", 0) != body.get("support_count") or votes.get(
             "DISSENT", 0
         ) != body.get("dissent_count")
-        observed["recorded_vote_counts_match_collected_individual_actions"] = not mismatch
+        observed["recorded_vote_counts_match_collected_individual_actions"] = (
+            not mismatch and not ambiguous
+        )
         observations.append(
             _obs(
                 str(_key(row["source"])) + "votes",
                 observed,
                 [row, *actions, *([motion] if motion else [])],
                 status="EXCEPTION_RECORDED"
-                if mismatch
+                if mismatch or duplicate_originals or ambiguous
                 else "SUPPORT_UNAVAILABLE"
                 if motion is None or absent or not actions
                 else "OBSERVED",
@@ -1570,7 +1590,7 @@ def _communications(history):
             isinstance(receipts, list) and all(isinstance(r, dict) for r in receipts),
             "Typed delivery receipts required",
         )
-        delivered = set()
+        delivered, receipt_attributes = set(), []
         for receipt in receipts:
             recipient, received = receipt.get("recipient"), receipt.get("received_at")
             require(isinstance(recipient, str) and recipient, "Typed delivery recipient required")
@@ -1579,11 +1599,31 @@ def _communications(history):
                     flag not in receipt or type(receipt[flag]) is bool,
                     "Strict delivery Boolean required",
                 )
-            if isinstance(received, str) and _time(received) <= _time(row["source"]["event_at"]):
-                if not isinstance(body.get("due_at"), str) or _time(received) <= _time(
-                    body["due_at"]
-                ):
-                    delivered.add(recipient)
+            bound = receipt.get("document_sha_bound")
+            timely = isinstance(received, str) and _time(received) <= _time(
+                row["source"]["event_at"]
+            )
+            timely = timely and (
+                not isinstance(body.get("due_at"), str) or _time(received) <= _time(body["due_at"])
+            )
+            supported = bound is True and timely
+            if supported:
+                delivered.add(recipient)
+            receipt_attributes.append(
+                {
+                    "recipient": recipient,
+                    "reported_received_at": received,
+                    "reported_document_sha_bound": bound,
+                    "document_binding_attribute_present": "document_sha_bound" in receipt,
+                    "document_binding_status": "REPORTED_BOUND"
+                    if bound is True
+                    else "REPORTED_UNBOUND"
+                    if bound is False
+                    else "DOCUMENT_BINDING_NOT_REPORTED",
+                    "reported_receipt_time_within_source_event_and_any_declared_due": timely,
+                    "counts_as_source_bounded_received": supported,
+                }
+            )
         missing = sorted(expected - delivered) if expected is not None else None
         omitted = (
             sorted(expected - declared) if expected is not None and declared is not None else None
@@ -1612,6 +1652,8 @@ def _communications(history):
                     "declared_recipients": sorted(declared) if declared is not None else None,
                     "declared_required_audience_omissions": omitted,
                     "source_bounded_received_recipients": sorted(delivered),
+                    "actual_receipt_documentary_attributes": receipt_attributes,
+                    "method_verified_delivery_or_bound_document_bytes": False,
                     "missing_actual_receipts": missing,
                     "source_directory_contact": contact,
                     "reported_template_contact": template,
