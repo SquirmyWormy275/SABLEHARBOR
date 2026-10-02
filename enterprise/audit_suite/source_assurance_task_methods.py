@@ -434,12 +434,29 @@ def _objectivity(history, fallback):
     observations = []
     for row in rows:
         body = row["document"]
-        preparer, reviewer = (
-            body.get("preparer_id"),
-            body.get("reviewer_id", body.get("quality_reviewer_id")),
+        preparer = body.get("preparer_id")
+        reviewers = {
+            field: body[field] for field in ("reviewer_id", "quality_reviewer_id") if field in body
+        }
+        require(
+            all(
+                value is None or (isinstance(value, str) and value) for value in reviewers.values()
+            ),
+            "Typed distinct recorded reviewer role identities required",
         )
-        known = all(isinstance(x, str) and x for x in [preparer, reviewer])
-        self_review = known and preparer == reviewer
+        preparer_known = isinstance(preparer, str) and bool(preparer)
+        role_tests = [
+            {
+                "role": field,
+                "reviewer_id": value,
+                "identity_present": value is not None,
+                "same_as_preparer": preparer_known and value == preparer,
+            }
+            for field, value in reviewers.items()
+        ]
+        reviewer = next((value for value in reviewers.values() if value is not None), None)
+        known = preparer_known and reviewer is not None
+        self_review = any(test["same_as_preparer"] for test in role_tests)
         ownership = any(
             body.get(k) is True
             for k in [
@@ -454,6 +471,7 @@ def _objectivity(history, fallback):
                 {
                     "preparer": preparer,
                     "reviewer": reviewer,
+                    "recorded_reviewer_role_tests": role_tests,
                     "identities_present": known,
                     "same_preparer_and_reviewer": self_review,
                     "recorded_operating_or_preparation_conflict": ownership,

@@ -36,7 +36,9 @@ COMPANY = "NEUTRAL-ASSURANCE-TASKS"
 pytestmark = pytest.mark.skipif(not PACK.exists(), reason="Private exact program pack required")
 
 
-def fixture_source(root, *, self_review=False, future_dependency=False, many_owners=False):
+def fixture_source(
+    root, *, self_review=False, future_dependency=False, many_owners=False, reviewer_fields=None
+):
     root.mkdir(mode=0o700)
     store = CompanyStore(root)
     systems = set()
@@ -134,6 +136,7 @@ def fixture_source(root, *, self_review=False, future_dependency=False, many_own
                 "quality_reviewer_id": "preparer" if self_review else "quality",
                 "actual_credentials_verified": False,
                 "reviewer_prepared_tests": False,
+                **(reviewer_fields or {}),
             },
             "2027-09-15T09:00:00Z",
         )
@@ -292,6 +295,38 @@ def test_actual_self_review_is_reported_without_treating_synthetic_identity_as_c
         for o in item["observations"]
         if o["id"].startswith("objectivity-")
     )
+
+
+@pytest.mark.parametrize(
+    "fields,expected",
+    [
+        ({"reviewer_id": None, "quality_reviewer_id": "preparer"}, "EXCEPTION_RECORDED"),
+        ({"reviewer_id": "other", "quality_reviewer_id": "preparer"}, "EXCEPTION_RECORDED"),
+        ({"reviewer_id": "preparer", "quality_reviewer_id": "other"}, "EXCEPTION_RECORDED"),
+        ({"reviewer_id": None, "quality_reviewer_id": None}, "SUPPORT_UNAVAILABLE"),
+    ],
+)
+def test_each_actual_reviewer_role_is_examined_without_null_or_other_role_masking(
+    tmp_path, fields, expected
+):
+    _, room, rows = collect(tmp_path, reviewer_fields=fields)
+    item = next(
+        i
+        for i in examine(rows, as_of=room.state()["simulated_at"])
+        if i["task_id"] == "TASK-SH-ASS-002-corporate-CHECK-SOC2:CC4.1"
+    )
+    selected = [
+        o
+        for o in item["observations"]
+        if o["facts"].get("recorded_reviewer_role_tests")
+        and any(
+            test["role"] == "quality_reviewer_id"
+            for test in o["facts"]["recorded_reviewer_role_tests"]
+        )
+    ]
+    assert len(selected) == 1 and selected[0]["status"] == expected
+    assert selected[0]["facts"]["same_preparer_and_reviewer"] == (expected == "EXCEPTION_RECORDED")
+    assert not selected[0]["facts"]["actual_credentials_verified_by_auditor"]
 
 
 @pytest.mark.parametrize(
