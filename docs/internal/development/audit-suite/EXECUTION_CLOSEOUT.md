@@ -7,18 +7,25 @@ either audit began. Both started with 409 unrun tasks and zero evidence or
 fieldwork. Activation proof `40722199d57872e420e8fa0bee3ca048584adb3e15dd9593b5497770e1f086b3`
 and separate birth verification
 `bf804a33a1945fd332581070227edde813765b22e87e0e4a7292806b47472a36`
-record that boundary. The B00 checkpoint holds 154 CLEAN and 159 MESSY
-company originals and two actual scope workpapers in each room. Its execution
-proof is `fb886c5ad15d71be8f0f43b9ac3dce5a0d3746abc639772624159d01b4fa1f51`.
-The two scope tasks remain IN_PROGRESS/LIMITATION and the other 407 remain unrun
-at that checkpoint. Reviewed runtime, documentary attribution and retained
-service successors reopened the same company and workrooms without importing
-old results. B03 retained continuity originals but its pure examination stopped
-before task writes on an ambiguous business reference; the reviewed correction
-is integrated, with the failure preserved. B01 ordinary workforce acquisition
-is running. Security, engineering and data methods are independently reviewed
-and integrated, with actual fieldwork still required. Independent neutral
-results do not supply actual task completion.
+record that boundary. The preserved B00 execution checkpoint contains two
+scope workpapers per room; proof is
+`fb886c5ad15d71be8f0f43b9ac3dce5a0d3746abc639772624159d01b4fa1f51`.
+The corrected B03 now performed 20 selected continuity procedures per room,
+bringing each to 22 workpapers with 387 tasks still unrun at that checkpoint.
+Its paired index is `05c01c1fec27a14eafab688fa57e10b293ddc88322e355b7206abe6f0b219ec2`.
+All 1,695 CLEAN person-access originals are held; workforce task writes await
+the independently reviewed efficient citation successor. The old read-only
+service verification was stopped after excessive memory use; a streaming
+successor passed 29 author checks and awaits independent scale verification.
+B02 retained 337 security originals before a pure non-object format failure;
+no security task writes were made. Exact failure and inputs are preserved as
+`27071600f6e6c475036c711a30844c2f762f91f60516ba334ca801c2f1f2fc8d`.
+The disjoint engineering, data, legal, assurance and incident batches continue
+ordinary fieldwork in the same rooms. Governance methods also passed independent
+review and are integrated, with actual fieldwork still required. Protected Key
+integrity corrections remain unactivated pending independent review. Historical
+and neutral engineering results do not supply actual completion, qualified
+acceptance or passing audit conclusions.
 Current status and exact implementation gates are recorded in
 `ACTIVE_AGENT_GRAPH_2026-10-01.md`. The packets below remain preserved historical
 technical snapshots and supply no inherited task results for the current pair.

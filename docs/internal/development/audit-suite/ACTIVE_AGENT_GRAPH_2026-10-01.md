@@ -18,9 +18,9 @@ is `bf804a33a1945fd332581070227edde813765b22e87e0e4a7292806b47472a36`;
 activation proof is `40722199d57872e420e8fa0bee3ca048584adb3e15dd9593b5497770e1f086b3`.
 The ordinary period-close clock advance to January 16, 2028 at 13:00 UTC is
 `573b1377749b2da3bcb6a6498f2c4cc990b09b6cdb97fb97cf00728bf7ac74a4`.
-The audit period remains 2027. B00 ordinary collection and examination now
-hold 154 CLEAN and 159 MESSY originals, with two actual scope workpapers in each
-room. The two scope tasks are IN_PROGRESS/LIMITATION; the other 407 tasks remain
+The audit period remains 2027. The preserved B00 ordinary collection and
+examination checkpoint holds 154 CLEAN and 159 MESSY originals, with two actual
+scope workpapers in each room. The two scope tasks are IN_PROGRESS/LIMITATION; the other 407 tasks remain
 unrun at that checkpoint. B00 execution proof is
 `fb886c5ad15d71be8f0f43b9ac3dce5a0d3746abc639772624159d01b4fa1f51`.
 The earlier interrupted collection and quiescence proof
@@ -61,27 +61,53 @@ freshly checks company history, full typed artifact representations and
 original bytes; its duplicate-check set lasts only that invocation. Ordinary
 request guards freshly check company source and implementation pins.
 
-The first ordinary B03 acquisition retained 156 continuity originals in CLEAN,
-bringing that room to 289 originals. Its pure preflight stopped at an ambiguous
-business scalar reference before any continuity task updates. Failure proof
-`9482cea303ad575a20af983b0769575dcf293f042152ae49cd5c272c2eb433ca`
-and its unchanged task states remain preserved. The independently reviewed
-successor reports unsupported business references as unresolved; it preserves
-strict native custody and does not guess an alias. Ordinary B01 workforce
-acquisition is running against these same rooms, including all available dated
-person-access records. No new workforce task results are recorded yet.
+The first B03 pure preflight failure remains preserved as
+`9482cea303ad575a20af983b0769575dcf293f042152ae49cd5c272c2eb433ca`.
+The independently reviewed correction now performed all 20 selected continuity
+procedures through ordinary commands in each actual room. Each room has 22
+workpapers and 387 tasks still unrun at that checkpoint. CLEAN retained 2,035
+originals and MESSY 302; paired execution index is
+`05c01c1fec27a14eafab688fa57e10b293ddc88322e355b7206abe6f0b219ec2`.
+These are bounded performed procedures with individual limitations and failures,
+not a completed audit or whole-year effectiveness.
 
-B02 security/configuration, B04 engineering/product and B05 data/records have
-independent gates `d342f67aa9aa371566b79c62a1aaa2e044133be0dc986bf02ac07575d2eea31e`,
-`2c1f58e1bbb9f5a822062d1565a9815520a00df2dd5479d2bbfafa93a74bf422`
-and `751d385b3f65f81449e4e360fd002a83fd32c2741c4ef858742bc9c45ce7da68`.
-Their exact methods and frozen independent evidence are integrated; they still
-require actual fieldwork in both current rooms. B06 legal/provider, B07
-governance and B09 incidents/complaints are authored and await completed
-independent review. B08's reviewer-role correction and the protected retained
-instructor Key wrapper are author-tested candidates awaiting independent review.
-Every family requires new actual fieldwork;
-neutral engineering results supply no actual task credit or qualified acceptance.
+All 1,695 available CLEAN person-access history originals were actually
+collected. The old workforce driver was stopped before its 52 task writes;
+scoped grants were revoked and verified with quiescence
+`08a4e82bebc8d74b2d14a5c92473a25b31eca255c1ed193decd5ed86bfa3652c`.
+Independent review rejected an efficient candidate that omitted exact
+prerequisite citations. The corrected candidate preserves affiliation and
+catalogue originals and is undergoing the full 1,695-original writer review.
+The retained service's read-only whole-history verification consumed excessive
+memory and was interrupted without task writes. A streaming successor passed
+29 genuine author checks and is frozen for independent scale review; no new
+service configuration has been activated.
+
+B02 security/configuration, B04 engineering/product, B05 data/records, B06
+legal/provider, B07 governance, B08 corrected assurance and B09 incidents have
+integrated independent method gates, respectively:
+`d342f67aa9aa371566b79c62a1aaa2e044133be0dc986bf02ac07575d2eea31e`,
+`2c1f58e1bbb9f5a822062d1565a9815520a00df2dd5479d2bbfafa93a74bf422`,
+`751d385b3f65f81449e4e360fd002a83fd32c2741c4ef858742bc9c45ce7da68`,
+`aace1bc14db93a4d61c1e07a57b84d03aa5da1bba72cd6e2a02e8ec40dec8926`,
+`f6934145ec6f1d981f90bf8c13aa91b73b80625da9973adcb5b4e987e222cb93`,
+`4ee8eb5827625df3cbce45571cbc079a5239ca02c201165e1d51176641e08078`,
+and `7bee82300a5f546922b0a6c70d22292f6cfebd807fd7955144acdee7408262bc`.
+Actual B02 collection retained 337 security-relevant originals in CLEAN; its
+pure parser rejected three non-object JSON originals before any security task
+writes. Failure `27071600f6e6c475036c711a30844c2f762f91f60516ba334ca801c2f1f2fc8d`
+preserves exact inputs, both task states and zero temporary auditor grants.
+A format correction is being authored and independently reviewed; raw originals
+are retained. The disjoint B04/B05/B06/B08/B09 actual driver is progressing.
+B07 actual fieldwork remains required after main focused checks.
+
+The protected retained Key remains an unactivated candidate. Independent
+reviews found false access/status claims, an unmanifested original path and
+an omitted snapshot member. Every rejection is preserved. The complete-manifest
+successor is undergoing 32 author checks before cross-review. Its explanations
+remain instructor-authored inferences, never preloaded learner evidence or
+professional acceptance. Neutral engineering results supply no actual task
+credit; source business versions have not been appended during fieldwork.
 The entries below are a preserved chronological review log. Their earlier
 activation-pending/current-code wording describes preceding review stages;
 the opening section records current authority and actual workroom state.
