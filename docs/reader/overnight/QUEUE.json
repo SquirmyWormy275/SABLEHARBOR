@@ -2512,18 +2512,26 @@
       "codec_independent_selected_semantics_review_sha256": "225ed622e7263ac65bafbbeab1ae0733f6c664499e7ff0fba03297d7f49137e3",
       "pristine_delegated_tail_storage_conversion_status": "SELECTED_INDEPENDENT_PASS_ROOT1436_FROZEN_REFERENCES_VERIFIED_ACTUAL_FINAL_COMPOSITION_AND_PROOF_PENDING",
       "pristine_delegated_tail_storage_conversion_independent_review_sha256": "a6dbc4d59c904aae0d39f68335cfa06a7460cc2b05ce77bf823317bb387fec37",
-      "actual_prefix_delegation_consumption_coordinator_sha256": "3c3aca782f4f1456da50ce250b3573b4929d45f00eaffad3a252f7f03e8caf98",
-      "actual_prefix_delegation_consumption_coordinator_status": "READONLY_VERIFY_ONLY_PASSED_LITERAL818_480PAIRS_ORIGINAL_GRANTS_UNSPENT_INDEPENDENT_STATIC_AND_ACTUAL_PROOF_PENDING",
+      "actual_prefix_delegation_consumption_coordinator_sha256": "b7e001381c0fc651ac7f15f72c6eba24a43f1121d3be16ecad1479cf0d4b3b8f",
+      "actual_prefix_delegation_consumption_coordinator_status": "V4_NATIVE24_LITERAL22_RECIPE_INDEPENDENT_PASS_ROOT58_REFERENCES_PASS_ACTUAL_CURRENT_LIVE_PROOF_PENDING_ORIGINAL_GRANTS_UNSPENT",
       "actual_key_binding_coordinator_v2_sha256": "aef4f85b7c8e885ca3f0b43eb60bc3bf9e1fb6bb14723649ec799fc7efdbe5a3",
-      "actual_key_binding_coordinator_v2_status": "CORRECT_REQUIRED_ORIGINAL_ACTOR_STATIC_ONLY_UNFILLED_NEUTRAL_INTEGRATION_PENDING_NO_ACTUAL_KEYS",
+      "actual_key_binding_coordinator_v2_status": "19_NEUTRAL_SELECTED_PRIMITIVE_CHECKS_AND_INDEPENDENT_BYTE_ACL_PASS_ROOT140_REFERENCES_PASS_NO_ACTUAL_BIND_FINAL_COMPOSITION_PENDING",
       "real_payload_encoder_component_root_review_sha256": "6d32c48e99c511cd028cf11f07fa8e2cd8ceb40255fd72a72c4603e2b78c84d3",
       "real_payload_encoder_component_status": "FROZEN_A070_FULL238423640_BYTES_EXACT_REFERENCE_AND_FRESH_ALL_NODE_PASS_122BYTE_NOTE_ENCODE1_459SECONDS_DB_GROWTH20480_BYTES_NO_ACTUAL_DB_OR_SERVICE",
-      "new_final_retained_composition_status": "ISOLATED_AUTHOR_INTEGRATION_RUNNING_PRISTINE_MIGRATION_COMPRESSED_PACKET_NATIVE_ENCODER_REQUEST_LOCAL_INTEGRITY_FRESH_PIN_VECTOR_REQUIRED",
+      "new_final_retained_composition_status": "FROZEN25EA_PRODUCT46394_ROOT2770_REFERENCES_PASS_INDEPENDENT_LIFECYCLE_KEY_HTTP_HISTORY_COMPOSITION_REVIEW_RUNNING_MAIN_INTEGRATION_ISOLATED",
       "final_current_live_replay_last_observed_progress": {
-        "CLEAN": 3700,
-        "MESSY": 2300
+        "CLEAN": 4700,
+        "MESSY": 3500
       },
-      "final_current_live_replay_last_observed_progress_is_acceptance": false
+      "final_current_live_replay_last_observed_progress_is_acceptance": false,
+      "actual_prefix_delegation_consumption_recipe_independent_review_sha256": "4ada2eb0b964a901cd9787c47e961fc2635446ad46e835d9548a0072dbddd098",
+      "actual_prefix_delegation_consumption_root_admission_sha256": "d1e2073df219c2a725debe3e91c1ced46a869cd01686663ba10dcd9588cb5acb",
+      "actual_key_binding_coordinator_v2_neutral_review_sha256": "5cff5211c1a917c1be6af35121d67dcb00e872e8d6bf4ce5908756fc108f4301",
+      "actual_key_binding_coordinator_v2_root_input_replay_sha256": "1f8ede1f3251a205b316c3c3ca376fc0c8543de2af90addd6bc11c03da9efcb2",
+      "new_final_retained_composition_author_handoff_sha256": "dd8e86105ad51e01ff54d7bb2403aa8d579912e9b8f507e9520122468980d5bf",
+      "new_final_retained_composition_root_input_replay_sha256": "835e3d6719f85514903c9b6ea268233482dc7db0a52456b72fd9fc00d1b8866c",
+      "final_native_evidence_external_preservation_sha256": "e3a024e3df2d6edf0811369f2054e4d386ca1dec88e90811c6811643b0c259f5",
+      "full_historical_physical_audit_sqlite_external_backup": false
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"

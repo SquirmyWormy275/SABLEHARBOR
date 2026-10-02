@@ -1,5 +1,36 @@
 # Active company-source audit workflow
 
+October 2, 20:10 UTC checkpoint: both original rooms retain 409 documentary
+workpapers and zero unrun tasks. The first complete current-live replay is still
+running on unchanged company/audit bytes; no final replay acceptance is claimed.
+
+The final viewer source is frozen at `25ea4478` (product source `46394c55`).
+Root freshly compared 2,770 ordinary source/proof references, totaling
+1,929,076,738 logical bytes; input replay is
+`835e3d6719f85514903c9b6ea268233482dc7db0a52456b72fd9fc00d1b8866c`.
+Independent composed lifecycle, Key, request integrity and history review is
+running. Main integration is prepared in isolation and will preserve main's
+current company-native Key, canonical methods, browser changes and queue.
+
+The exact original-parent V4 invocation recipe passed independent native/std
+comparison and root replay of all 58 frozen references. Root admission is
+`d1e2073df219c2a725debe3e91c1ced46a869cd01686663ba10dcd9588cb5acb`.
+The original one-use grants remain unspent; actual consumption still requires the
+finished first current-live proof. The corrected Key V2 grant/revoke primitive
+passed 19 neutral checks and independent byte/ACL replay; root compared all 140
+original/copy references. This is a selected primitive review, not actual binding.
+
+Independent encrypted external copies now preserve the final company snapshot,
+both captured current states and both complete retained-original file trees.
+Every archive passed full decrypt-and-byte comparison; preservation receipt is
+`e3a024e3df2d6edf0811369f2054e4d386ca1dec88e90811c6811643b0c259f5`.
+The full 818 GB physical audit databases have not been externally copied.
+Complete compressed historical packets remain to be generated and verified.
+Approximately 125 GB is free internally and 333 GB on the Seagate; there was no
+additional deletion, file relocation, mount change or game configuration change.
+
+The paragraphs below preserve earlier checkpoints and their original limits.
+
 October 2 viewer preparation checkpoint: the separate pristine delegated-tail
 storage conversion passed independent review, including 14 executions and four
 product-free journal replays. Root freshly verified all 1,436 frozen references
