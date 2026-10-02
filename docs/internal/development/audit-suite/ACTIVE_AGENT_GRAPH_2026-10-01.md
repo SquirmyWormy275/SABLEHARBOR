@@ -38,8 +38,11 @@ scope methods
 `692169c62ab300b2c6d0436d10041bdd4fc90fa4419ad2d82cc3a61d8448052d`,
 workforce methods
 `d1d4b188bae7621ea687115fe2b066db3f9456f7c263a00788fbda9f58894290`,
-and continuity composition
-`c3eafd0eec3925d9f5ac29f6c677eb512e754b1bf5f483181d076c8113d1f54b`.
+and corrected continuity methods
+`f6bca6fb467cbd55022ba09a3941ad9b838d278c442df5420d222bcb701c2724`.
+The earlier continuity composition
+`c3eafd0eec3925d9f5ac29f6c677eb512e754b1bf5f483181d076c8113d1f54b`
+remains a preserved predecessor.
 The documentary successor passed 71 fresh main checks and reopened the same
 workrooms before fieldwork. Antecedent and post-period document dates stay
 intact; documentary examination attributes are not operating-event populations.
@@ -53,14 +56,31 @@ reproduction proof is
 The versioned private service index is `SERVICE_INDEX_HISTORY_V4.json` with hash
 `6d4baca82414624ad613cd66aa03e4aede55ed47995789e26d9658997cd4dfaf`.
 Twenty-eight fresh main service/HTTP checks and Ruff passed. All preceding
-configs/indexes are unchanged. Each locked service invocation
-still freshly checks company history, full typed artifact representations and
-original bytes. No result or artifact-verification cache survives a request.
+configs/indexes are unchanged. Each explicit locked workroom verification
+freshly checks company history, full typed artifact representations and
+original bytes; its duplicate-check set lasts only that invocation. Ordinary
+request guards freshly check company source and implementation pins.
 
-Ordinary B03 continuity acquisition, followed by B01 workforce acquisition and
-exact reviewed examinations, is running against these same rooms. B02, B04,
-B05, B06 and B08 require their final independent gates; B07 and B09 authoring
-and testing remain in progress. Every family requires new actual fieldwork;
+The first ordinary B03 acquisition retained 156 continuity originals in CLEAN,
+bringing that room to 289 originals. Its pure preflight stopped at an ambiguous
+business scalar reference before any continuity task updates. Failure proof
+`9482cea303ad575a20af983b0769575dcf293f042152ae49cd5c272c2eb433ca`
+and its unchanged task states remain preserved. The independently reviewed
+successor reports unsupported business references as unresolved; it preserves
+strict native custody and does not guess an alias. Ordinary B01 workforce
+acquisition is running against these same rooms, including all available dated
+person-access records. No new workforce task results are recorded yet.
+
+B02 security/configuration, B04 engineering/product and B05 data/records have
+independent gates `d342f67aa9aa371566b79c62a1aaa2e044133be0dc986bf02ac07575d2eea31e`,
+`2c1f58e1bbb9f5a822062d1565a9815520a00df2dd5479d2bbfafa93a74bf422`
+and `751d385b3f65f81449e4e360fd002a83fd32c2741c4ef858742bc9c45ce7da68`.
+Their exact methods and frozen independent evidence are integrated; they still
+require actual fieldwork in both current rooms. B06 legal/provider, B07
+governance and B09 incidents/complaints are authored and await completed
+independent review. B08's reviewer-role correction and the protected retained
+instructor Key wrapper are author-tested candidates awaiting independent review.
+Every family requires new actual fieldwork;
 neutral engineering results supply no actual task credit or qualified acceptance.
 The entries below are a preserved chronological review log. Their earlier
 activation-pending/current-code wording describes preceding review stages;

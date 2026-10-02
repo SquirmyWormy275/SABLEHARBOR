@@ -13,8 +13,12 @@ proof is `fb886c5ad15d71be8f0f43b9ac3dce5a0d3746abc639772624159d01b4fa1f51`.
 The two scope tasks remain IN_PROGRESS/LIMITATION and the other 407 remain unrun
 at that checkpoint. Reviewed runtime, documentary attribution and retained
 service successors reopened the same company and workrooms without importing
-old results. B03 continuity collection and then B01 workforce fieldwork are
-running. Independent neutral results do not supply actual task completion.
+old results. B03 retained continuity originals but its pure examination stopped
+before task writes on an ambiguous business reference; the reviewed correction
+is integrated, with the failure preserved. B01 ordinary workforce acquisition
+is running. Security, engineering and data methods are independently reviewed
+and integrated, with actual fieldwork still required. Independent neutral
+results do not supply actual task completion.
 Current status and exact implementation gates are recorded in
 `ACTIVE_AGENT_GRAPH_2026-10-01.md`. The packets below remain preserved historical
 technical snapshots and supply no inherited task results for the current pair.
