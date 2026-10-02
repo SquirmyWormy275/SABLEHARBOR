@@ -2368,7 +2368,7 @@
       "protected_retained_key_full_scope_size_status": "EXACT3379146_BYTE_GENUINE409_SNAPSHOT32MIB_SNAPSHOT_ONLY_INDEPENDENT23_HTTP_ACCEPTED_MAIN99_REFERENCES35_CHECKS_PASS_ACTUAL_COMPOSITION_PENDING",
       "first_company_native_key_causal_review_sha256": "f36e358e25743ee5d825d38078d4f6aa356a7d182da265c2773777e523720add",
       "first_company_native_key_causal_status": "REFINED_EIGHT_BOUNDED_CARDS35_ORIGINALS75_LOCATORS_SUPPORTED_FULL76_CARDS_AND409_TASK_FACETS_PER_BRANCH_REQUIRE_VISIBLE_CLAIM_AND_INDEPENDENT_REVIEW",
-      "current_queue_status": "STOPPED_RESTART_STORAGE_BLOCKER_NARROW_B01_RECOVERY_REVIEW",
+      "current_queue_status": "RESTART_STORAGE_RECOVERED_NARROW_B01_RECOVERY_INDEPENDENT_REVIEW",
       "clean_completed_incident_execution_sha256": "54030de60898ca77f69f4d8825f53635d2b444b079bcbc2053f42aea2f61fa37",
       "clean_completed_incident_workpapers": 284,
       "clean_unrun_after_incidents": 125,
@@ -2438,7 +2438,11 @@
       "whole_history_final_replay": "PENDING",
       "final_fieldwork_input_preparation_sha256": "34fac279f00392657b01b565d66fa6811fb74b8307e99121b00f40c5f2c2b59d",
       "key_binding_input_preparation_sha256": "a6e792872fb46888e62d30a192c5d3b132e17fe5a919e8c81efb309a58eecc49",
-      "storage_status": "CAPACITY_BLOCKER_SAFE_ARCHIVE_CANDIDATE_REVIEW_AND_ADDITIONAL_STORAGE_REQUESTED"
+      "storage_status": "RECOVERED_61GIB_EXACT_UNACCEPTED_AUTHOR_DATABASE_ARCHIVED_AND_REMOVED_ACTUAL_ACCEPTED_JOURNALS_PRESERVED",
+      "storage_archive_root": "/home/kingoftheeast/SABLEHARBOR-preserved-neutral-archives-20261002/b01-unaccepted-v4",
+      "storage_archive_sha256": "a26ad126343b08a5923b0199ee78d7bf2ae86fcdd8b9159cda80861e3cfd43a6",
+      "storage_root_independent_verification_sha256": "4ca85db2985fb6b50ab5b34109df650728fb33cdb64c377a66d6ca84064ab5b4",
+      "storage_exact_cleanup_receipt_sha256": "a68fda1fce76775a162e4a8f6e28c9853d656eb78a352ed6a4721431fd76f3dc"
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"

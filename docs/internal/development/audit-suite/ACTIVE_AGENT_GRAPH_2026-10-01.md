@@ -11,12 +11,19 @@ trace or task disposition yet. No batch rerun, reset or duplicate work is allowe
 Both writers stopped before the workstation restarted. The root disk then had
 about 148 MiB available. Re-downloadable Python package caches were cleared;
 installed runtimes, company/audit history and frozen review proofs were preserved.
-Storage remains insufficient for the remaining run and delivery. Exact normal
-read-only quiescence, states and ordinary preserved WAL/SHM copies are pinned by
+Storage recovery is complete: 61 GiB is available. An unaccepted author test
+fixture was archived with all 1,833 original files independently verified, then
+only its exact unused database was removed. Actual audit/company journals and
+accepted review proofs remain intact. The archive is preserved outside the repo
+in `~/SABLEHARBOR-preserved-neutral-archives-20261002/b01-unaccepted-v4`;
+root verification is `4ca85db2985fb6b50ab5b34109df650728fb33cdb64c377a66d6ca84064ab5b4`
+and exact cleanup receipt is
+`a68fda1fce76775a162e4a8f6e28c9853d656eb78a352ed6a4721431fd76f3dc`.
+Exact normal read-only quiescence, states and ordinary preserved WAL/SHM copies are pinned by
 `6688c21d546512497fb9983e91926183a2373e3f32b0177ea15c4a519282f2a2`.
 This capture explicitly does not establish whole-history integrity or authorize
-the interrupted continuation. Narrow recovery review and safe storage recovery
-are in progress. The clean run also still requires independent final replay.
+the interrupted continuation. Narrow recovery review is in progress; storage
+capacity is no longer a blocker. The clean run also still requires independent final replay.
 
 All ten disjoint method gates, 39 historical code versions and the exact 409
 procedure contracts are prepared for final capture as
