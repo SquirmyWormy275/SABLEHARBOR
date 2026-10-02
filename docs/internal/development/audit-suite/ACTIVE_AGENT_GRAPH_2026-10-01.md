@@ -6,13 +6,17 @@ its exact failure is `e9cedc898b2f5bcc76b6df7276ca28e893add18b1d8653b5ece20d9813
 All 586 held originals remain intact. The native-format successor is independently
 accepted as `350bcb9a3385bc1bef36e315269ad02c1bbf3b3c8b414f8ad77267db197049c0`;
 main freshly verified 399 references and passed 75 focused checks. Its ordinary
-CLEAN 99-task continuation is running. MESSY is still collecting B08 company
-originals with its existing writer; neither room is declared complete.
+CLEAN 99-task continuation completed, with 196 workpapers, 213 unrun tasks and
+2,643 held originals at revision 4,122. Its execution is
+`093c750e86b4dc225a5c2398f0853e8a528cade39ab1d01d47d19093f9abe5ab`.
+Both room writers are now quiescent for the source-verification successor;
+MESSY completed source transfers remain held and its 312 tasks remain unrun.
+Neither room is declared complete.
 
 B05's native-role successor is independently accepted as
 `b4ee8d76204edf97bd32c6b77dd479a53abcff3815fce9f2b898ea3a9c1016ac`,
-with 227 main-verified references and 35 checks. Its actual 50-task follow-on
-waits for each room's preceding queue. The large workspace transport passed
+with 227 main-verified references and 35 checks. Its superseded idle 50-task follow-on drivers were stopped before any write;
+the fresh continuation includes B05 alongside each room's remaining tasks. The large workspace transport passed
 independent review `24b455f7e05d821c37ccae21048380a9cb722795671bb8cc0c52b35527595a81`:
 54 HTTP cases and seven real browser cases, including 1,694 citations, a 4.44 MB
 workpaper, historical review, latest-base editing and exact sample correction.
@@ -26,7 +30,9 @@ and 32 checks. Neither supplies the actual final packet or company-bound Key.
 A source-operation verification lease passed 44 author checks and exact native
 byte/metadata discovery at 1,695-version scale; independent runtime and pair
 composition review is running. A narrow source-dependency Key contract passed
-34 author checks and is separately reviewed. Fresh large-history verification
+34 author checks and passed separate independent review; main checked its 79
+frozen references and all 34 checks. Both exact scope procedures can now have
+source-bound Key expectations without invented control ownership. Fresh large-history verification
 and interactive Key performance remain in development. No earlier acceptance
 configuration authorizes changed origins or transfers audit outcomes.
 

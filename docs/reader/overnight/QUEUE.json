@@ -2217,7 +2217,7 @@
       "activation_proof_sha256": "40722199d57872e420e8fa0bee3ca048584adb3e15dd9593b5497770e1f086b3",
       "independent_birth_verification_sha256": "bf804a33a1945fd332581070227edde813765b22e87e0e4a7292806b47472a36",
       "period_close_clock_advance_sha256": "573b1377749b2da3bcb6a6498f2c4cc990b09b6cdb97fb97cf00728bf7ac74a4",
-      "current_fieldwork": "CLEAN_B06_NATIVE_SHAPE99_ORDINARY_WRITER_RUNNING_MESSY_B08_ORDINARY_SOURCE_COLLECTION_RUNNING",
+      "current_fieldwork": "CLEAN_B06_NATIVE_SHAPE99_COMPLETE_196_WPS_213_UNRUN_MESSY_COLLECTION_PRESERVED_BOTH_QUIESCENT_BEFORE_SOURCE_LEASE_INTEGRATION",
       "all_disjoint_family_task_methods_required": true,
       "historical_task_results_imported": false,
       "qualified_or_owner_acceptance": "NOT_ASSERTED",
@@ -2315,8 +2315,23 @@
       },
       "source_invocation_lease_status": "AUTHOR44_PASS_EXACT_NATIVE1695_DISCOVERY_BENCHMARK_PASS_PENDING_INDEPENDENT_RUNTIME_AND_PAIR_COMPOSITION",
       "source_invocation_lease_author_handoff_sha256": "771a3d9afcbb87e570bc05a2de53288564c85855fca8cd568c2e505f9ddb0d33",
-      "scope_key_contract_status": "AUTHOR34_PASS_PENDING_INDEPENDENT_CURRENT_SCOPE_DEPENDENCY_REVIEW",
-      "scope_key_contract_author_handoff_sha256": "6259e4bd03ffbb610607dffa24fb7104fe4d6f8a9c60546a35c1c2008014354f"
+      "scope_key_contract_status": "INDEPENDENT25_REFUSALS_GENUINE_BOTH_SCOPE_TASK_BIND_ACCEPTED_MAIN79_REFERENCES34_CHECKS_PASS_ACTUAL_CONTENT_PENDING",
+      "scope_key_contract_author_handoff_sha256": "6259e4bd03ffbb610607dffa24fb7104fe4d6f8a9c60546a35c1c2008014354f",
+      "clean_completed_legal_provider_execution_sha256": "093c750e86b4dc225a5c2398f0853e8a528cade39ab1d01d47d19093f9abe5ab",
+      "clean_completed_legal_provider_receipt_sha256": "dd366e3c26bcbc576fb80b1e50d83c319ffa0a458e525edc62f800d6e5024e4a",
+      "clean_actual_workpapers_after_legal_provider": 196,
+      "clean_actual_unrun_tasks_after_legal_provider": 213,
+      "clean_actual_retained_originals_after_legal_provider": 2643,
+      "clean_actual_revision_after_legal_provider": 4122,
+      "scope_key_contract_review_sha256": "188d91d7f32a45662e9973c69ec7a71b5a7695b2908cc542bf2d3124c2e2f898",
+      "scope_key_contract_main_reproduction_sha256": "f508b09fd54dbe8db0018922a060a09bef27dd2bd3e2347f41ca0b964f3c7ed8",
+      "superseded_idle_b05_waiter_proof_sha256": "0584659200637f87e74a606cee0a82df6d8a1b155799b41c21afaf887f69466d",
+      "workspace_transport_main_checks": {
+        "python_passed": 56,
+        "frontend_passed": 280,
+        "frontend_files": 49,
+        "production_build": "PASS"
+      }
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"
