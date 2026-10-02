@@ -1,0 +1,1502 @@
+{
+  "batch": "B06",
+  "examined_source_contract": {
+    "families": [
+      "addressabledocket",
+      "assuranceops",
+      "contract",
+      "dat002rights",
+      "leg001docket",
+      "legaloriginals",
+      "legint",
+      "legprovision",
+      "phi_ba",
+      "privacyops",
+      "processing",
+      "provider",
+      "provider-history",
+      "supplementalops",
+      "transition"
+    ],
+    "native_boundary": "Exact physical family/role, native identity/hash/version/event/publication/import, ordinary receipt and current cutoff; same hash/role/title outside authority never supplies equivalent custody.",
+    "optional_dependencies": [
+      "dat002rights",
+      "privacyops",
+      "processing",
+      "assuranceops"
+    ],
+    "scope": "Fictional selected service/entity/branch/company records only; statutory applicability, professional interpretations, real PHI, regulator approval, actual signed agreements and complete enterprise populations are not established."
+  },
+  "schema": "SH_COLLECTED_B06_METHOD_CONTRACTS_V1",
+  "selected_task_ids": [
+    "TASK-SH-LEG-001-corporate-ACTION-H-LEGAL-STATUS",
+    "TASK-SH-LEG-001-corporate-ACTION-H-REGULATOR",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.101",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.102",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.103",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.104",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.105",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.201",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.202",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.203",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.204",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.205",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.300",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.302",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.304",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.306",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.308",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.312",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.314",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.400",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.401",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.402",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.404",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.406",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.408",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.410",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.412",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.414",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.416",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.418",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.420",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.422",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.424",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.426",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.500",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.502",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.504",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.506",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.508",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.510",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.512",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.514",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.516",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.518",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.520",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.522",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.524",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.526",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.528",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.530",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.532",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.534",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.536",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.538",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.540",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.542",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.544",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.546",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.548",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.550",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.552",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.102",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.103",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.104",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.106",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.318",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.532",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.534",
+    "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.535",
+    "TASK-SH-LEG-001-corporate-IMPLEMENTATION",
+    "TASK-SH-LEG-001-corporate-TOD",
+    "TASK-SH-LEG-001-corporate-TOE",
+    "TASK-SH-LEG-002-corporate-ACTION-H-PRIVACY-PURPOSE",
+    "TASK-SH-LEG-002-corporate-IMPLEMENTATION",
+    "TASK-SH-LEG-002-corporate-TOD",
+    "TASK-SH-LEG-002-corporate-TOE",
+    "TASK-SH-TPR-001-corporate-CHECK-SOC2:CC9.2",
+    "TASK-SH-TPR-001-corporate-IMPLEMENTATION",
+    "TASK-SH-TPR-001-corporate-TOD",
+    "TASK-SH-TPR-001-corporate-TOE",
+    "TASK-SH-TPR-002-corporate-ACTION-S-DESCRIPTION",
+    "TASK-SH-TPR-002-corporate-CHECK-SOC2:CC9.2",
+    "TASK-SH-TPR-002-corporate-IMPLEMENTATION",
+    "TASK-SH-TPR-002-corporate-TOD",
+    "TASK-SH-TPR-002-corporate-TOE",
+    "TASK-SH-TPR-003-corporate-ACTION-H-NOTICE-CLOCK",
+    "TASK-SH-TPR-003-corporate-ACTION-H-RIGHTS-ASSISTANCE",
+    "TASK-SH-TPR-003-corporate-ACTION-H-SUBCONTRACT",
+    "TASK-SH-TPR-003-corporate-IMPLEMENTATION",
+    "TASK-SH-TPR-003-corporate-TOD",
+    "TASK-SH-TPR-003-corporate-TOE",
+    "TASK-SH-TPR-004-corporate-ACTION-H-SUBCONTRACT",
+    "TASK-SH-TPR-004-corporate-CHECK-SOC2:CC9.2",
+    "TASK-SH-TPR-004-corporate-IMPLEMENTATION",
+    "TASK-SH-TPR-004-corporate-TOD",
+    "TASK-SH-TPR-004-corporate-TOE",
+    "TASK-SH-TPR-005-corporate-IMPLEMENTATION",
+    "TASK-SH-TPR-005-corporate-TOD",
+    "TASK-SH-TPR-005-corporate-TOE"
+  ],
+  "task_count": 99,
+  "tasks": [
+    {
+      "authored_instruction": "Compare any proposed obligation from the affected sections to the overlay; block an applicability conclusion based only on the historical XML.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "source_status_role_applicability",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:164.502",
+        "HIPAA:164.509",
+        "HIPAA:164.520"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-ACTION-H-LEGAL-STATUS",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Exercise a regulator request with inaccessible provider records and an urgent access scenario; inspect response authority and preservation without treating ordinary customer disclosure rules as a bar to lawful access.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "triggered_regulatory_response",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.310",
+        "HIPAA:160.316"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-ACTION-H-REGULATOR",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Check the authority citation in the obligation register without creating a recurring technical control.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "source_status_role_applicability",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.101"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.101",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Trace each actual entity/function to a role decision and the specific provisions applying to that role.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "source_status_role_applicability",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.102"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.102",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Compare contracting chain, PHI flows and workforce status to the definitions, including exceptions; do not classify from a vendor label alone.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "source_status_role_applicability",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.103"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.103",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Record final-rule effective/compliance dates and exceptions; do not turn the general 180-day floor into an automatic service grace period.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "source_status_role_applicability",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.104"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.104",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Verify the specific new or modified rule overrides before docketing the compliance date.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "source_status_role_applicability",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.105"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.105",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Link the authority to the preemption analysis and retain context classification.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "preemption_and_determination",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.201"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.201",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Require a provision-by-provision state/federal comparison identifying the applicable test, not a blanket stricter-law assertion.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "preemption_and_determination",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.202"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.202",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Record the actual exception and supporting law for each conflict before treating a state duty as displaced.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "preemption_and_determination",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.203"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.203",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Inspect the written request and determination; reject a pending request as authority to stop compliance.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "preemption_and_determination",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.204"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.204",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Reassess relied-on exceptions on legal/factual change and retain revocation monitoring evidence.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "preemption_and_determination",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.205"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.205",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Classify as triggered legal-response context and link the response playbook.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "registered_intake_originals_partial",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.300"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.300",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Verify the reserved source entry; retain inventory presence without inventing an operating duty.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "triggered_regulatory_response",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.302"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.302",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Retain correspondence and distinguish assistance from an approval or assurance conclusion.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "registered_intake_originals_partial",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.304"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.304",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Keep complaint dates and records, protect reporting and route regulator correspondence; do not convert the complainant clock into the organization's response deadline.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "triggered_regulatory_response",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.306"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.306",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Trigger preservation and authorized cooperation when notified; record review scope and response orders rather than inventing a recurring inspection cadence.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "triggered_regulatory_response",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.308"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.308",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Docket notice receipt, response and service; preserve completed corrective plans and written disposition separately from internal closure.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "triggered_regulatory_response",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.312"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.312",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Check subpoena scope, designated witnesses, service, transcript corrections and counsel-controlled objections against the actual proceeding.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "triggered_regulatory_response",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.314"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.314",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Retain enforcement classification; do not generate a technical control from the penalty authority.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "penalty_exposure_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.400"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.400",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Preserve knowledge, diligence and correction facts for counsel; do not let an incident severity label decide the legal standard.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "penalty_exposure_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.401"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.401",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Analyze actual agency relationships and conduct; a supplier agreement alone does not eliminate exposure.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "penalty_exposure_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.402"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.402",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Resolve the applicable date, tier and current primary adjustment before exposure modeling; leave amounts unpopulated until verified.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "penalty_exposure_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.404"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.404",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Preserve start/end dates and affected occurrences; distinguish continuous failure from incident ticket counts.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "penalty_exposure_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.406"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.406",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Collect supporting facts with provenance and privilege handling rather than auto-scoring mitigation from remediation status.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "penalty_exposure_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.408"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.408",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Preserve discovery and correction evidence and any Secretary extension; internal risk acceptance does not establish an affirmative defense.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "penalty_exposure_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.410"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.410",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Record eligibility analysis, request and actual disposition; do not mark waiver granted when requested.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "penalty_exposure_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.412"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.412",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Counsel verifies occurrence and commencement facts and applicable authority; retention policy is not this limitations determination.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "penalty_exposure_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.414"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.414",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Route proposed terms to authorized counsel and management; retain the actual executed settlement and duties.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "penalty_exposure_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.416"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.416",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Assess additional exposure separately; payment does not automatically resolve every proceeding.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "penalty_exposure_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.418"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.418",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Capture receipt and completeness, docket the hearing path and preserve a statistical study if relied on.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "penalty_exposure_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.420"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.420",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Escalate missed hearing deadlines and preserve final notice; do not presume an appeal remains available.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "penalty_exposure_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.422"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.422",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Reconcile final determination, payment/offset and counsel's available remedies before finance execution.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "penalty_exposure_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.424"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.424",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Prepare accurate authorized communications and track finality; this is not a mandate for routine customer publication by the company.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "penalty_exposure_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.426"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.426",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Activate the case playbook only for a real proceeding; retain source context otherwise.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "hearing_docket_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.500"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.500",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Verify the proper appellate body and addressee rather than routing to corporate governance.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "hearing_docket_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.502"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.502",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Test actual/presumed receipt, admitted/denied facts, defense grounds and mailing proof with counsel; do not add the general mail-response extension to this request.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "hearing_docket_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.504"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.504",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Confirm representative authority and ethical conduct; record exercised or intentionally waived procedural rights.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "hearing_docket_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.506"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.506",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Maintain orders and assigned actions; distinguish ALJ directions from options or requests and flag contested authority for counsel.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "hearing_docket_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.508"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.508",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Inspect case communications for prohibited ex parte contact while allowing documented scheduling/status inquiries.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "hearing_docket_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.510"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.510",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Docket the conference, prepare authorized representatives and reconcile the resulting order to action owners and deadlines.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "hearing_docket_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.512"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.512",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Verify the settlement counterparty's authority; do not make ALJ signature an invented condition.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "hearing_docket_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.514"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.514",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Track requests, scoped objections, accessible production and protective/compel motions, including the second 30-day motion window.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "hearing_docket_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.516"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.516",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Independently compute each exchange deadline and preserve delivery, objections and any extraordinary-circumstance ruling.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "hearing_docket_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.518"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.518",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Docket motion, opposition, service and quash separately; verify named witnesses, necessary evidence and allowed exceptions.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "hearing_docket_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.520"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.520",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Reconcile the actual subpoenaing party, service package and authorized fee payment.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "hearing_docket_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.522"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.522",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Check the actual order first, then filing form, mailing date, opposing counsel service and proof.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "hearing_docket_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.524"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.524",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Reperform the docket with federal holidays and actual service method; independently test the hearing-request exception.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "hearing_docket_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.526"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.526",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Reconcile each motion with service and actual ALJ response deadline; oral-motion exceptions require case context.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "hearing_docket_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.528"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.528",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Escalate missed orders and preserve the actual sanction decision; do not silently cure the docket history.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "hearing_docket_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.530"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.530",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Link the prior final determination and participation record before asserting issue preclusion.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "hearing_docket_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.532"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.532",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Organize the evidence burden by issue and preserve breach notification/no-breach support; do not treat no regulator evidence as proof of company compliance.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "hearing_docket_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.534"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.534",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Retain the study, population and methods for qualified rebuttal; never substitute this enforcement rule for an audit sample-size policy.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "hearing_docket_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.536"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.536",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Verify witness statements, availability, disclosures and actual ALJ orders before relying on a written statement.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "hearing_docket_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.538"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.538",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Keep evidence provenance and counsel's privilege/admissibility assessment; confidentiality markings alone do not establish privilege.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "hearing_docket_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.540"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.540",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Reconcile the official record and request appropriate protection through counsel; do not assume a private internal evidence folder makes the hearing record private.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "hearing_docket_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.542"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.542",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Docket the actual order and receipt event; preserve timely filed briefs and any allowed reply.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "hearing_docket_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.544"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.544",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Record service, finality and the separate 30-day appeal path; do not use finality as the appeal deadline.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "hearing_docket_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.546"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.546",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Maintain appeal, opposition, reconsideration, service and finality events separately with counsel; preserve briefs and court-stamped petition service.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "hearing_docket_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.548"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.548",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Preserve request, appeal copy, interim status, security and ruling; an appeal alone is not the specified stay request.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "hearing_docket_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.550"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.550",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Route alleged error to counsel with prejudice evidence; never label an operational control failure harmless using this hearing rule.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "hearing_docket_case_specific",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:160.552"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.552",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Retain authority references without creating a recurring safeguard.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "source_status_role_applicability",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:164.102"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.102",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Inspect ownership/control, covered functions and actual legal demands; shared corporate services alone do not create a hybrid designation.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "source_status_role_applicability",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:164.103"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.103",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Bind applicability to actual functions and direct provisions, preserving the approved scenario as hypothetical.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "source_status_role_applicability",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:164.104"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.104",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Determine whether transaction functions invoke Part 162 and open a scoped dependency review if so; current inventory does not prove Part 162 coverage.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "source_status_role_applicability",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:164.106"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.106",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Retain dates as context and test that no new-service grace period is inferred.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "source_status_role_applicability",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:164.318"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.318",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Require dated pre-transition evidence and the exact exception before reliance; do not treat this as a new agreement exemption.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "source_status_role_applicability",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:164.532"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.532",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Retain initial dates as context and reconcile later changes separately.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "source_status_role_applicability",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:164.534"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.534",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Require the actual judgment/status analysis for the affected text; do not infer enforceability merely from its presence in XML.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "source_status_role_applicability",
+      "control_id": "SH-LEG-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [
+        "HIPAA:164.535"
+      ],
+      "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.535",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Source hash; applicability rationale; legal-status check; reviewer decision. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "source_status_role_applicability",
+      "control_id": "SH-LEG-001",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-LEG-001-corporate-IMPLEMENTATION",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Source hash; applicability rationale; legal-status check; reviewer decision. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "source_status_role_applicability",
+      "control_id": "SH-LEG-001",
+      "kind": "TOD",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-LEG-001-corporate-TOD",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Source hash; applicability rationale; legal-status check; reviewer decision. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Bind obligations to source edition, citation, effective period, entity role and boundary; classify direct, delegated, conditional and enforcement context; check amendments and judicial status quarterly and at legal events.",
+      "clause_group": "registered_intake_originals_partial",
+      "control_id": "SH-LEG-001",
+      "kind": "TOE",
+      "required_checks": "Inspect each exact legal clause against retained source edition/status, entity/function/period and recorded qualified decision; safely rederive registered monthly intake from collected originals; conditional proceedings need case-specific facts or explicit unperformed scope, never enterprise nonoccurrence from four channels.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-LEG-001-corporate-TOE",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "title": "Legal/regulatory/contractual obligation inventory is maintained by business boundary."
+    },
+    {
+      "authored_instruction": "Trace selected disclosures and proposed reuse to actual authority and justified scope; reject a new AI-training use based solely on possession of PHI.",
+      "authored_procedure": "Before signature, reconcile service scope, data rights, BA/subcontractor duties, notification timing, liabilities, assurance access and exit terms; verify delegation and unresolved redlines.",
+      "clause_group": "ACTION-H-PRIVACY-PURPOSE",
+      "control_id": "SH-LEG-002",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Join pre-signature risk/legal/security/privacy/finance/insurance review, redlines and delegated authority to exact signed terms, BA chain, data rights and upstream obligations.",
+      "requirement_ids": [
+        "HIPAA:164.502",
+        "HIPAA:164.504"
+      ],
+      "task_id": "TASK-SH-LEG-002-corporate-ACTION-H-PRIVACY-PURPOSE",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Contracts receive risk-based legal, security, privacy, finance, insurance, data-rights, and authority review before signature."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Review checklist; redlines; risk acceptance; authorized signature. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Before signature, reconcile service scope, data rights, BA/subcontractor duties, notification timing, liabilities, assurance access and exit terms; verify delegation and unresolved redlines.",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-LEG-002",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Join pre-signature risk/legal/security/privacy/finance/insurance review, redlines and delegated authority to exact signed terms, BA chain, data rights and upstream obligations.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-LEG-002-corporate-IMPLEMENTATION",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "title": "Contracts receive risk-based legal, security, privacy, finance, insurance, data-rights, and authority review before signature."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Review checklist; redlines; risk acceptance; authorized signature. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Before signature, reconcile service scope, data rights, BA/subcontractor duties, notification timing, liabilities, assurance access and exit terms; verify delegation and unresolved redlines.",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-LEG-002",
+      "kind": "TOD",
+      "required_checks": "Join pre-signature risk/legal/security/privacy/finance/insurance review, redlines and delegated authority to exact signed terms, BA chain, data rights and upstream obligations.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-LEG-002-corporate-TOD",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "title": "Contracts receive risk-based legal, security, privacy, finance, insurance, data-rights, and authority review before signature."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Review checklist; redlines; risk acceptance; authorized signature. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Before signature, reconcile service scope, data rights, BA/subcontractor duties, notification timing, liabilities, assurance access and exit terms; verify delegation and unresolved redlines.",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-LEG-002",
+      "kind": "TOE",
+      "required_checks": "Join pre-signature risk/legal/security/privacy/finance/insurance review, redlines and delegated authority to exact signed terms, BA chain, data rights and upstream obligations.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-LEG-002-corporate-TOE",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "title": "Contracts receive risk-based legal, security, privacy, finance, insurance, data-rights, and authority review before signature."
+    },
+    {
+      "authored_instruction": "Trace supplier selection, contractual responsibilities, ongoing monitoring, unresolved report exceptions and exit capability; possession of a supplier report does not close its exceptions.",
+      "authored_procedure": "Before onboarding, classify service criticality, data/access, concentration and recovery dependency; record PHI/subcontractor role and required diligence tier.",
+      "clause_group": "CHECK-SOC2:CC9.2",
+      "control_id": "SH-TPR-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Reconcile actual/planned supplier relationship and service/data/access/PHI/recovery/concentration scope to approved inherent tier before onboarding.",
+      "requirement_ids": [
+        "SOC2:CC9.2"
+      ],
+      "task_id": "TASK-SH-TPR-001-corporate-CHECK-SOC2:CC9.2",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "New third parties receive inherent-risk tiering based on service criticality, data, access, operational, legal, financial, and concentration exposure."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Intake; data/access assessment; risk tier. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Before onboarding, classify service criticality, data/access, concentration and recovery dependency; record PHI/subcontractor role and required diligence tier.",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-TPR-001",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Reconcile actual/planned supplier relationship and service/data/access/PHI/recovery/concentration scope to approved inherent tier before onboarding.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-TPR-001-corporate-IMPLEMENTATION",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "title": "New third parties receive inherent-risk tiering based on service criticality, data, access, operational, legal, financial, and concentration exposure."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Intake; data/access assessment; risk tier. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Before onboarding, classify service criticality, data/access, concentration and recovery dependency; record PHI/subcontractor role and required diligence tier.",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-TPR-001",
+      "kind": "TOD",
+      "required_checks": "Reconcile actual/planned supplier relationship and service/data/access/PHI/recovery/concentration scope to approved inherent tier before onboarding.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-TPR-001-corporate-TOD",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "title": "New third parties receive inherent-risk tiering based on service criticality, data, access, operational, legal, financial, and concentration exposure."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Intake; data/access assessment; risk tier. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Before onboarding, classify service criticality, data/access, concentration and recovery dependency; record PHI/subcontractor role and required diligence tier.",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-TPR-001",
+      "kind": "TOE",
+      "required_checks": "Reconcile actual/planned supplier relationship and service/data/access/PHI/recovery/concentration scope to approved inherent tier before onboarding.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-TPR-001-corporate-TOE",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "title": "New third parties receive inherent-risk tiering based on service criticality, data, access, operational, legal, financial, and concentration exposure."
+    },
+    {
+      "authored_instruction": "Trace each description assertion to an authoritative record; independently compare incident/change/vendor populations to disclosures and investigate omitted relevant items.",
+      "authored_procedure": "Obtain tier-appropriate security, privacy, continuity and financial evidence; inspect report scope, period, exceptions and customer controls; record gaps and conditions before onboarding or renewal.",
+      "clause_group": "ACTION-S-DESCRIPTION",
+      "control_id": "SH-TPR-002",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect tier-driven diligence work and original report scope/period/exceptions/customer controls; compare decision dates to onboarding/renewal and retain inaccessible provider evidence.",
+      "requirement_ids": [
+        "SOC2:DC1",
+        "SOC2:DC2",
+        "SOC2:DC3",
+        "SOC2:DC4",
+        "SOC2:DC5",
+        "SOC2:DC6",
+        "SOC2:DC7",
+        "SOC2:DC8",
+        "SOC2:DC9"
+      ],
+      "task_id": "TASK-SH-TPR-002-corporate-ACTION-S-DESCRIPTION",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Due diligence depth is proportional to vendor tier and identified risk."
+    },
+    {
+      "authored_instruction": "Trace supplier selection, contractual responsibilities, ongoing monitoring, unresolved report exceptions and exit capability; possession of a supplier report does not close its exceptions.",
+      "authored_procedure": "Obtain tier-appropriate security, privacy, continuity and financial evidence; inspect report scope, period, exceptions and customer controls; record gaps and conditions before onboarding or renewal.",
+      "clause_group": "CHECK-SOC2:CC9.2",
+      "control_id": "SH-TPR-002",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Inspect tier-driven diligence work and original report scope/period/exceptions/customer controls; compare decision dates to onboarding/renewal and retain inaccessible provider evidence.",
+      "requirement_ids": [
+        "SOC2:CC9.2"
+      ],
+      "task_id": "TASK-SH-TPR-002-corporate-CHECK-SOC2:CC9.2",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Due diligence depth is proportional to vendor tier and identified risk."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Diligence report; source scope; exception analysis; decision. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Obtain tier-appropriate security, privacy, continuity and financial evidence; inspect report scope, period, exceptions and customer controls; record gaps and conditions before onboarding or renewal.",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-TPR-002",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Inspect tier-driven diligence work and original report scope/period/exceptions/customer controls; compare decision dates to onboarding/renewal and retain inaccessible provider evidence.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-TPR-002-corporate-IMPLEMENTATION",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "title": "Due diligence depth is proportional to vendor tier and identified risk."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Diligence report; source scope; exception analysis; decision. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Obtain tier-appropriate security, privacy, continuity and financial evidence; inspect report scope, period, exceptions and customer controls; record gaps and conditions before onboarding or renewal.",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-TPR-002",
+      "kind": "TOD",
+      "required_checks": "Inspect tier-driven diligence work and original report scope/period/exceptions/customer controls; compare decision dates to onboarding/renewal and retain inaccessible provider evidence.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-TPR-002-corporate-TOD",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "title": "Due diligence depth is proportional to vendor tier and identified risk."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Diligence report; source scope; exception analysis; decision. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Obtain tier-appropriate security, privacy, continuity and financial evidence; inspect report scope, period, exceptions and customer controls; record gaps and conditions before onboarding or renewal.",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-TPR-002",
+      "kind": "TOE",
+      "required_checks": "Inspect tier-driven diligence work and original report scope/period/exceptions/customer controls; compare decision dates to onboarding/renewal and retain inaccessible provider evidence.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-TPR-002-corporate-TOE",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "title": "Due diligence depth is proportional to vendor tier and identified risk."
+    },
+    {
+      "authored_instruction": "Test a delayed escalation, discovery by an agent, a shorter contractual limit, incomplete initial information and oral/written law-enforcement delays. Reject clocks restarted at management confirmation and treating day 60 as the routine target.",
+      "authored_procedure": "Translate service, security, BA, subcontractor, incident, evidence, continuity and exit requirements into clauses and named responsible parties; reconcile signed terms with technical design and upstream promises.",
+      "clause_group": "ACTION-H-NOTICE-CLOCK",
+      "control_id": "SH-TPR-003",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Reconcile selected signed clauses and upstream customer terms to technical/service responsibility, BA/subcontractor flow-down, evidence access, continuity and exit duties.",
+      "requirement_ids": [
+        "HIPAA:164.410",
+        "HIPAA:164.412"
+      ],
+      "task_id": "TASK-SH-TPR-003-corporate-ACTION-H-NOTICE-CLOCK",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Contracts include risk-appropriate service, security, privacy, incident, evidence, data, continuity, and termination terms."
+    },
+    {
+      "authored_instruction": "Exercise an electronic-copy request, an accepted amendment and an accounting request on synthetic data; trace the correct recipient, complete records and upstream completion requirements.",
+      "authored_procedure": "Translate service, security, BA, subcontractor, incident, evidence, continuity and exit requirements into clauses and named responsible parties; reconcile signed terms with technical design and upstream promises.",
+      "clause_group": "ACTION-H-RIGHTS-ASSISTANCE",
+      "control_id": "SH-TPR-003",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Reconcile selected signed clauses and upstream customer terms to technical/service responsibility, BA/subcontractor flow-down, evidence access, continuity and exit duties.",
+      "requirement_ids": [
+        "HIPAA:164.502",
+        "HIPAA:164.504",
+        "HIPAA:164.524",
+        "HIPAA:164.526",
+        "HIPAA:164.528"
+      ],
+      "task_id": "TASK-SH-TPR-003-corporate-ACTION-H-RIGHTS-ASSISTANCE",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Contracts include risk-appropriate service, security, privacy, incident, evidence, data, continuity, and termination terms."
+    },
+    {
+      "authored_instruction": "Select downstream data flows independently from vendor lists; inspect signed scope and reporting paths. Exercise an unsuccessful cure and review documented termination feasibility.",
+      "authored_procedure": "Translate service, security, BA, subcontractor, incident, evidence, continuity and exit requirements into clauses and named responsible parties; reconcile signed terms with technical design and upstream promises.",
+      "clause_group": "ACTION-H-SUBCONTRACT",
+      "control_id": "SH-TPR-003",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Reconcile selected signed clauses and upstream customer terms to technical/service responsibility, BA/subcontractor flow-down, evidence access, continuity and exit duties.",
+      "requirement_ids": [
+        "HIPAA:164.308",
+        "HIPAA:164.314",
+        "HIPAA:164.502",
+        "HIPAA:164.504"
+      ],
+      "task_id": "TASK-SH-TPR-003-corporate-ACTION-H-SUBCONTRACT",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Contracts include risk-appropriate service, security, privacy, incident, evidence, data, continuity, and termination terms."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Clause matrix; signed agreement when available; flow-down and dependency register. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Translate service, security, BA, subcontractor, incident, evidence, continuity and exit requirements into clauses and named responsible parties; reconcile signed terms with technical design and upstream promises.",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-TPR-003",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Reconcile selected signed clauses and upstream customer terms to technical/service responsibility, BA/subcontractor flow-down, evidence access, continuity and exit duties.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-TPR-003-corporate-IMPLEMENTATION",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "title": "Contracts include risk-appropriate service, security, privacy, incident, evidence, data, continuity, and termination terms."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Clause matrix; signed agreement when available; flow-down and dependency register. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Translate service, security, BA, subcontractor, incident, evidence, continuity and exit requirements into clauses and named responsible parties; reconcile signed terms with technical design and upstream promises.",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-TPR-003",
+      "kind": "TOD",
+      "required_checks": "Reconcile selected signed clauses and upstream customer terms to technical/service responsibility, BA/subcontractor flow-down, evidence access, continuity and exit duties.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-TPR-003-corporate-TOD",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "title": "Contracts include risk-appropriate service, security, privacy, incident, evidence, data, continuity, and termination terms."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Clause matrix; signed agreement when available; flow-down and dependency register. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Translate service, security, BA, subcontractor, incident, evidence, continuity and exit requirements into clauses and named responsible parties; reconcile signed terms with technical design and upstream promises.",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-TPR-003",
+      "kind": "TOE",
+      "required_checks": "Reconcile selected signed clauses and upstream customer terms to technical/service responsibility, BA/subcontractor flow-down, evidence access, continuity and exit duties.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-TPR-003-corporate-TOE",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "title": "Contracts include risk-appropriate service, security, privacy, incident, evidence, data, continuity, and termination terms."
+    },
+    {
+      "authored_instruction": "Select downstream data flows independently from vendor lists; inspect signed scope and reporting paths. Exercise an unsuccessful cure and review documented termination feasibility.",
+      "authored_procedure": "At the risk-based cadence, review performance, incidents, assurance exceptions, subcontractor changes, financial exposure and concentration; track breach of terms and corrective action.",
+      "clause_group": "ACTION-H-SUBCONTRACT",
+      "control_id": "SH-TPR-004",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Derive each supplier review window from tier/calendar; reconcile performance, incidents, assurance exceptions/subcontractor/financial/concentration changes and overdue corrective actions.",
+      "requirement_ids": [
+        "HIPAA:164.308",
+        "HIPAA:164.314",
+        "HIPAA:164.502",
+        "HIPAA:164.504"
+      ],
+      "task_id": "TASK-SH-TPR-004-corporate-ACTION-H-SUBCONTRACT",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Critical vendors are periodically monitored for performance, risk change, incidents, financial health, and concentration."
+    },
+    {
+      "authored_instruction": "Trace supplier selection, contractual responsibilities, ongoing monitoring, unresolved report exceptions and exit capability; possession of a supplier report does not close its exceptions.",
+      "authored_procedure": "At the risk-based cadence, review performance, incidents, assurance exceptions, subcontractor changes, financial exposure and concentration; track breach of terms and corrective action.",
+      "clause_group": "CHECK-SOC2:CC9.2",
+      "control_id": "SH-TPR-004",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Derive each supplier review window from tier/calendar; reconcile performance, incidents, assurance exceptions/subcontractor/financial/concentration changes and overdue corrective actions.",
+      "requirement_ids": [
+        "SOC2:CC9.2"
+      ],
+      "task_id": "TASK-SH-TPR-004-corporate-CHECK-SOC2:CC9.2",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Critical vendors are periodically monitored for performance, risk change, incidents, financial health, and concentration."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Monitoring record; report review; SLA incidents; corrective actions. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "At the risk-based cadence, review performance, incidents, assurance exceptions, subcontractor changes, financial exposure and concentration; track breach of terms and corrective action.",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-TPR-004",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Derive each supplier review window from tier/calendar; reconcile performance, incidents, assurance exceptions/subcontractor/financial/concentration changes and overdue corrective actions.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-TPR-004-corporate-IMPLEMENTATION",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "title": "Critical vendors are periodically monitored for performance, risk change, incidents, financial health, and concentration."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Monitoring record; report review; SLA incidents; corrective actions. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "At the risk-based cadence, review performance, incidents, assurance exceptions, subcontractor changes, financial exposure and concentration; track breach of terms and corrective action.",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-TPR-004",
+      "kind": "TOD",
+      "required_checks": "Derive each supplier review window from tier/calendar; reconcile performance, incidents, assurance exceptions/subcontractor/financial/concentration changes and overdue corrective actions.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-TPR-004-corporate-TOD",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "title": "Critical vendors are periodically monitored for performance, risk change, incidents, financial health, and concentration."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Monitoring record; report review; SLA incidents; corrective actions. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "At the risk-based cadence, review performance, incidents, assurance exceptions, subcontractor changes, financial exposure and concentration; track breach of terms and corrective action.",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-TPR-004",
+      "kind": "TOE",
+      "required_checks": "Derive each supplier review window from tier/calendar; reconcile performance, incidents, assurance exceptions/subcontractor/financial/concentration changes and overdue corrective actions.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-TPR-004-corporate-TOE",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "title": "Critical vendors are periodically monitored for performance, risk change, incidents, financial health, and concentration."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Transition plan; revocation proof; data disposition; closure. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Plan service transfer before termination; revoke supplier identities and connections; obtain data return/destruction or continuing-protection rationale; verify residual backups and open financial obligations.",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-TPR-005",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Derive actual termination/exit events and join transition, supplier identity/connection revocation, disposition/backups and open financial obligations; empty exit register alone is not no-exit proof.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-TPR-005-corporate-IMPLEMENTATION",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "title": "Third-party offboarding revokes access, addresses data return/destruction, transitions service, and closes financial obligations."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Transition plan; revocation proof; data disposition; closure. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Plan service transfer before termination; revoke supplier identities and connections; obtain data return/destruction or continuing-protection rationale; verify residual backups and open financial obligations.",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-TPR-005",
+      "kind": "TOD",
+      "required_checks": "Derive actual termination/exit events and join transition, supplier identity/connection revocation, disposition/backups and open financial obligations; empty exit register alone is not no-exit proof.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-TPR-005-corporate-TOD",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "title": "Third-party offboarding revokes access, addresses data return/destruction, transitions service, and closes financial obligations."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Transition plan; revocation proof; data disposition; closure. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Plan service transfer before termination; revoke supplier identities and connections; obtain data return/destruction or continuing-protection rationale; verify residual backups and open financial obligations.",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-TPR-005",
+      "kind": "TOE",
+      "required_checks": "Derive actual termination/exit events and join transition, supplier identity/connection revocation, disposition/backups and open financial obligations; empty exit register alone is not no-exit proof.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-TPR-005-corporate-TOE",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "title": "Third-party offboarding revokes access, addresses data return/destruction, transitions service, and closes financial obligations."
+    }
+  ]
+}
