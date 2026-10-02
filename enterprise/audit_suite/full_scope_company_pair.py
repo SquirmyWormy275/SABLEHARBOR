@@ -500,6 +500,10 @@ class BoundWorkroom:
         return state
 
     def _authorize(self, systems, *, active):
+        with self.pair.world.verified_sources():
+            self._authorize_verified(systems, active=active)
+
+    def _authorize_verified(self, systems, *, active):
         self.session._context(self.engine, self.auditor, self.engagement)
         require(
             all(
@@ -592,15 +596,16 @@ class BoundWorkroom:
         self._authorize(systems, active=True)
         try:
             self.session._context(self.engine, self.auditor, self.engagement)
-            rows, _ = discover_history(
-                self.session.store,
-                self.auditor,
-                self.engagement,
-                self.binding["company"],
-                self.binding["branch"],
-                as_of=cutoff,
-                systems=systems,
-            )
+            with self.pair.world.verified_sources():
+                rows, _ = discover_history(
+                    self.session.store,
+                    self.auditor,
+                    self.engagement,
+                    self.binding["company"],
+                    self.binding["branch"],
+                    as_of=cutoff,
+                    systems=systems,
+                )
             rows = [{**row, "discovered_as_of": cutoff} for row in rows]
             state = command(
                 self.engine,
@@ -629,14 +634,15 @@ class BoundWorkroom:
                     retained.append(existing)
                     continue
                 revision = self.engine.store.get(self.auditor, self.engagement)["revision"]
-                item = self.session.collect(
-                    self.engine,
-                    self.auditor,
-                    self.engagement,
-                    request,
-                    row,
-                    command_id=f"pair-collect-{revision}",
-                )
+                with self.pair.world.verified_sources():
+                    item = self.session.collect(
+                        self.engine,
+                        self.auditor,
+                        self.engagement,
+                        request,
+                        row,
+                        command_id=f"pair-collect-{revision}",
+                    )
                 current = self.engine.store.get(self.auditor, self.engagement)
                 artifact = next(a for a in current["artifacts"] if a["id"] == item["artifact_id"])
                 item["content"] = self.engine.artifacts.read(artifact)

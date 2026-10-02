@@ -487,6 +487,11 @@ class PersistentCompany:
         self.runtime_acceptance = {"path": str(review), "sha256": expected_sha256}
 
     def require_runtime(self):
+        if getattr(self._local, "verified_sources", False):
+            # Only the same thread inside a fully verified, process-locked
+            # source operation may defer repeated whole-company scans. Native
+            # APIs still check exact grants, clocks, original hashes and receipts.
+            return
         self.verify()
         if self.initialization["engineering_only"]:
             return
@@ -496,6 +501,32 @@ class PersistentCompany:
         self.accept_runtime(
             Path(self.runtime_acceptance["path"]), self.runtime_acceptance["sha256"]
         )
+
+    @contextmanager
+    def verified_sources(self):
+        """Verify one locked source operation before and after, never across calls.
+
+        This admits normal source reads and scoped grant/collection journals,
+        while business history appends remain prohibited. No source content,
+        grant, receipt, checkpoint or verification result survives the operation.
+        Other managed threads/processes cannot change the company in between.
+        Every individual native API still reads the current database and checks
+        its own exact authority, version and availability boundary.
+        """
+        with self.locked():
+            require(
+                self.ready
+                and not self.writing
+                and not getattr(self._local, "verified_sources", False),
+                "Distinct verified source operation required",
+            )
+            self.require_runtime()
+            self._local.verified_sources = True
+            try:
+                yield
+            finally:
+                self._local.verified_sources = False
+                self.require_runtime()
 
     def operation_approval(self, operation, operator_id, review, review_sha256):
         private_file(review)
@@ -516,6 +547,10 @@ class PersistentCompany:
 
     def append(self, actor, operation, content, *, review=None, review_sha256=None):
         """Company-owned append, independent of engagements and audit commands."""
+        require(
+            not getattr(self._local, "verified_sources", False),
+            "Business history append cannot enter a verified source operation",
+        )
         require(not self.read_only, "Read-only company verification cannot append")
         require(actor is self.operator, "Actual trusted company operator capability required")
         self.require_runtime()
