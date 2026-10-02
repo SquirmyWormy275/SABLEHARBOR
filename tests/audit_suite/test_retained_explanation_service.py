@@ -183,6 +183,69 @@ def test_private_snapshot_tamper_fails_private_reads_while_learner_keeps_company
 @pytest.mark.parametrize(
     "change",
     [
+        "missing_snapshot",
+        "extra_member",
+        "wrong_engagement",
+        "wrong_revision",
+        "boolean_revision",
+        "wrong_snapshot_pin",
+        "extra_manifest_field",
+    ],
+)
+def test_resealed_manifest_cannot_leave_the_authored_snapshot_unbound(keycase, change):
+    snapshot = keycase["snapshot"]
+    path = snapshot / "manifest.json"
+    manifest = json.loads(path.read_bytes())
+    if change == "missing_snapshot":
+        del manifest["files"]["snapshot.json"]
+    elif change == "extra_member":
+        write(snapshot / "extra.json", {"unrelated": "not part of this bound Key"})
+        manifest["files"]["extra.json"] = file_sha(snapshot / "extra.json")
+    elif change == "wrong_engagement":
+        manifest["engagement_id"] = keycase["retained"]["workrooms"]["BETA"]["engagement"]
+    elif change == "wrong_revision":
+        manifest["engagement_revision"] += 1
+    elif change == "boolean_revision":
+        manifest["engagement_revision"] = True
+    elif change == "wrong_snapshot_pin":
+        manifest["files"]["snapshot.json"] = "0" * 64
+    else:
+        manifest["unsigned_authored_claim"] = "Claim outside the complete snapshot"
+    path.write_text(json.dumps(manifest, sort_keys=True))
+    index = json.loads(keycase["bindings"].read_bytes())
+    index[keycase["case"]["engagement"]]["manifest_sha256"] = file_sha(path)
+    keycase["bindings"].write_text(json.dumps(index, sort_keys=True))
+    config = json.loads(keycase["config"].read_bytes())
+    config["explanation_bindings"]["sha256"] = file_sha(keycase["bindings"])
+    keycase["config"].write_text(json.dumps(config, sort_keys=True))
+    keycase["config_sha256"] = file_sha(keycase["config"])
+    with pytest.raises((ProcedureError, ValueError, RuntimeError, DomainError)):
+        boot(keycase)
+
+
+def test_unsigned_authored_claim_change_after_startup_fails_closed(keycase):
+    app = boot(keycase)
+    case = keycase["case"]
+    operator, _ = login(app, case, "operator")
+    learner, _ = login(app, case)
+    url = "/api/engagements/" + case["engagement"]
+    assert operator.get(url + "/instructor-binding").status_code == 200
+    pinned_files = [keycase["config"], keycase["bindings"], keycase["snapshot"] / "manifest.json"]
+    before = {str(path): file_sha(path) for path in pinned_files}
+    snapshot = keycase["snapshot"] / "snapshot.json"
+    value = json.loads(snapshot.read_bytes())
+    value["authored"]["issues"][0]["claim"] = "This changed claim has no authorized file pin."
+    snapshot.write_text(json.dumps(value, sort_keys=True))
+    assert {str(path): file_sha(path) for path in pinned_files} == before
+    assert operator.get(url + "/instructor-binding").status_code == 503
+    assert learner.get(url + "/instructor-binding").status_code == 403
+    assert learner.get(url + "/company/systems").status_code == 200
+    assert learner.get(url).status_code == 200
+
+
+@pytest.mark.parametrize(
+    "change",
+    [
         "other_room",
         "wrong_actor",
         "wrong_prefix",

@@ -114,10 +114,26 @@ class ExplainedWorkroom:
         require(set(index) == {retained.engagement}, "Only this retained engagement may have a Key")
         bindings = load_bindings(path)
         binding = bindings[retained.engagement]
-        snapshot = verify_snapshot(
-            binding["path"], expected_manifest_sha256=binding["manifest_sha256"]
-        )
         manifest = pinned_json(binding["path"] / "manifest.json", binding["manifest_sha256"])
+        require(
+            set(manifest) == {"schema_version", "files", "engagement_id", "engagement_revision"}
+            and manifest["schema_version"] == "1.0"
+            and manifest["engagement_id"] == retained.engagement
+            and type(manifest["engagement_revision"]) is int
+            and manifest["engagement_revision"] >= 0
+            and isinstance(manifest["files"], dict)
+            and "snapshot.json" in manifest["files"]
+            and all(
+                isinstance(name, str)
+                and isinstance(pin, str)
+                and re.fullmatch(r"[0-9a-f]{64}", pin)
+                for name, pin in manifest["files"].items()
+            ),
+            "Exact same-engagement explanation manifest with a pinned snapshot required",
+        )
+        snapshot = pinned_json(
+            binding["path"] / "snapshot.json", manifest["files"]["snapshot.json"]
+        )
         require(
             set(snapshot)
             == {
@@ -166,7 +182,12 @@ class ExplainedWorkroom:
             "Explanation workroom, company, branch or attributed actors differ",
         )
         revision = snapshot["engagement"]["revision"]
-        require(type(revision) is int and revision >= 0, "Strict bound revision required")
+        require(
+            type(revision) is int
+            and revision >= 0
+            and manifest["engagement_revision"] == revision,
+            "Strict matching bound and manifest revision required",
+        )
         history = inspect_history(
             retained.engine.store, identities["operator"], retained.engagement, revisions=[revision]
         )
@@ -188,6 +209,15 @@ class ExplainedWorkroom:
             )
             and len({s["id"] for s in sources}) == len(sources),
             "Distinct typed bound explanation source IDs required",
+        )
+        require(
+            set(manifest["files"])
+            == {"snapshot.json", *[f"sources/{index:05d}.json" for index in range(len(sources))]}
+            and verify_snapshot(
+                binding["path"], expected_manifest_sha256=binding["manifest_sha256"]
+            )
+            == snapshot,
+            "Exact complete explanation snapshot and original member set required",
         )
         require(
             _authored(
