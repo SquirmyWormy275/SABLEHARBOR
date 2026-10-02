@@ -18,37 +18,50 @@ is `bf804a33a1945fd332581070227edde813765b22e87e0e4a7292806b47472a36`;
 activation proof is `40722199d57872e420e8fa0bee3ca048584adb3e15dd9593b5497770e1f086b3`.
 The ordinary period-close clock advance to January 16, 2028 at 13:00 UTC is
 `573b1377749b2da3bcb6a6498f2c4cc990b09b6cdb97fb97cf00728bf7ac74a4`.
-The audit period remains 2027. B00 ordinary collection retained 141 CLEAN
-originals; MESSY still has zero. Collection stopped safely during read-only
-discovery verification so reviewed successors can be applied. All temporary
-grants were revoked; all 409 tasks in each room remain unrun, with no workpapers,
-populations or samples. Quiescence proof is
-`bbb4605263d7df5503ea029abcad2a931cef870c1f1fc12483d9dfde535413d2`.
-The same company and workrooms reopened under the accepted runtime successor;
-no company, audit or principal was recreated and no historical task results
-were imported.
+The audit period remains 2027. B00 ordinary collection and examination now
+hold 154 CLEAN and 159 MESSY originals, with two actual scope workpapers in each
+room. The two scope tasks are IN_PROGRESS/LIMITATION; the other 407 tasks remain
+unrun at that checkpoint. B00 execution proof is
+`fb886c5ad15d71be8f0f43b9ac3dce5a0d3746abc639772624159d01b4fa1f51`.
+The earlier interrupted collection and quiescence proof
+`bbb4605263d7df5503ea029abcad2a931cef870c1f1fc12483d9dfde535413d2`
+remain preserved. The company, workrooms, identities and original receipts were
+retained throughout; no prior task results were imported.
 
-Current independently accepted implementation gates are retained service
-`1a00fe72a37b2e2ddefd098733567ce651364610c3e2a2055835698f6b0630fe`,
+Current independently accepted gates are runtime
+`b5d6b6ac856cca71146ee55b379f0894d2c124fcf391fd6f80896d7f82a331a8`,
+documentary attribution code
+`458a7041f8338aefad9674edd157bdc86496a0296e68089ab07169f0da11e98d`,
 shared-pair composition
-`35bb0fcb949bd66a4cf8d82be5645bc762008f61b734cecf21d0e40303ec5eef`,
-two scope-dependency methods
-`b0a466f3f99bfa4d9fc0034c41a3a809847e1ff290946528177aaf7178317bf1`,
-and the corrected twenty continuity methods
-`f05db52a547540d49e3121ea349054ba5f3fe113362e3984189ddb3c556c3d08`.
-The runtime successor gate is
-`b5d6b6ac856cca71146ee55b379f0894d2c124fcf391fd6f80896d7f82a331a8`;
-58 fresh main checks passed and both existing workrooms reopened unchanged.
-Every family still requires its own exact task-contract gate and new fieldwork.
-Independent B01 and scope replays now pass with a documentary attribution
-successor that preserves antecedent, in-period and post-period document dates.
-Its final composition gate is being sealed before main integration. A separate
-retained-history successor passes 28 author checks; on the existing 141-original
-history its read-only verifier took 3.07 seconds against 76.38 seconds for the
-accepted implementation. That result concerns this verifier, not end-to-end
-fieldwork throughput. Independent acceptance remains pending for that code.
-B02's effective-threshold correction, B04's 37 methods, B05's 50 methods and
-B08's 23 methods are under review; B06, B07 and B09 remain in authoring/testing.
+`249a03c21077290f42b09b1a98c3ed9053e3a9f748657985b9bb0af0a5a7cac0`,
+scope methods
+`692169c62ab300b2c6d0436d10041bdd4fc90fa4419ad2d82cc3a61d8448052d`,
+workforce methods
+`d1d4b188bae7621ea687115fe2b066db3f9456f7c263a00788fbda9f58894290`,
+and continuity composition
+`c3eafd0eec3925d9f5ac29f6c677eb512e754b1bf5f483181d076c8113d1f54b`.
+The documentary successor passed 71 fresh main checks and reopened the same
+workrooms before fieldwork. Antecedent and post-period document dates stay
+intact; documentary examination attributes are not operating-event populations.
+
+The independently reviewed retained-history service gate is
+`a9f21a01c659015c137510bfb7080946152b1586864a79d4830dc689fdd517f5`.
+Main preserved all 336 frozen references in 201 unique ordinary byte copies.
+Both actual workrooms reopened unchanged with the new service configuration;
+reproduction proof is
+`9d6ff455765c464e6c085bac807ae2d5669213181044050d0d0a2d05673c15de`.
+The versioned private service index is `SERVICE_INDEX_HISTORY_V4.json` with hash
+`6d4baca82414624ad613cd66aa03e4aede55ed47995789e26d9658997cd4dfaf`.
+Twenty-eight fresh main service/HTTP checks and Ruff passed. All preceding
+configs/indexes are unchanged. Each locked service invocation
+still freshly checks company history, full typed artifact representations and
+original bytes. No result or artifact-verification cache survives a request.
+
+Ordinary B03 continuity acquisition, followed by B01 workforce acquisition and
+exact reviewed examinations, is running against these same rooms. B02, B04,
+B05, B06 and B08 require their final independent gates; B07 and B09 authoring
+and testing remain in progress. Every family requires new actual fieldwork;
+neutral engineering results supply no actual task credit or qualified acceptance.
 The entries below are a preserved chronological review log. Their earlier
 activation-pending/current-code wording describes preceding review stages;
 the opening section records current authority and actual workroom state.
