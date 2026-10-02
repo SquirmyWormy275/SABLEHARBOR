@@ -2550,7 +2550,7 @@
       "engineering_closeout_matrix_sha256": "0b98a7deae0a8a41fec72dea67c0cff528bc72ddb1b4a5f705b3343f3d14703e",
       "postdelegation_coordinator_root_selected_input_review_sha256": "c4e9f11b7cd11ac678365ff2f2d23d7c6b7c124713ab26d6416c42d80a4766c7",
       "postdelegation_coordinator_status": "SELECTED_AUTHOR20_AND_IMMUTABLE_LINEAGE_PASS_ROOT286_REFERENCES_STATIC_PASS_UNFILLED_ACTUAL_FINAL_GATES_PENDING",
-      "checkpoint_utc": "2026-10-02T22:55:00Z",
+      "checkpoint_utc": "2026-10-02T22:53:00Z",
       "focused_delivery_successor_commit": "c696bda0a6c3e60c990d5ebcfbe39177fede6cb3",
       "focused_delivery_successor_status": "SELECTED_SEQUENTIAL_BACKEND_ACCEPTED_GENUINE_PARALLEL_BROWSER_STARTUP_REFUSAL_UNDER_FOCUSED_REPAIR",
       "focused_delivery_successor_dependency_sha256": "c0bd01bd24add29231732cbfd8a745eb8f04e8dea47110b90639969bbd3a1122",
