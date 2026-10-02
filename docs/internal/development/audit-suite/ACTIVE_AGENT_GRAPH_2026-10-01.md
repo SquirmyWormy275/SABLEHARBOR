@@ -1,50 +1,60 @@
 # Active company-source audit workflow
 
-October 2 restart recovery: CLEAN finished all 409 ordinary procedures at
-revision 6,226, with 2,741 retained originals and no unrun tasks. Its queue
-completion proof is `c6ee4875a37903ea37ee786101d39df1f183583114e294bc8d0cfd412a22e5e9`.
-MESSY preserved 358 workpapers at revision 5,936, with 2,833 originals and 52
-unrun tasks: the last two B01 tasks and all 50 B05 tasks. Its interrupted TOD
-already has its original population, selection and workpaper; it has no sample
-trace or task disposition yet. No batch rerun, reset or duplicate work is allowed.
+October 2 recovery and continuation: CLEAN completed all 409 ordinary procedures
+at revision 6,226 with 2,741 retained originals. Its queue completion proof is
+`c6ee4875a37903ea37ee786101d39df1f183583114e294bc8d0cfd412a22e5e9`.
+The narrow MESSY B01 continuation completed at revision 5,944 with 359
+workpapers, 2,833 retained originals and 50 unrun B05 tasks. It added exactly
+eight ordinary commands and preserved the interrupted original population,
+selection, workpaper, all prior records, company bytes and the other room.
+Execution is `268054caa0bad882b25f4b989e9bbb24ced9d6b4461ec19e692fb4d62969a9bf`;
+exact resulting state is
+`69dce454116a7cffa2666c66ebdd15f7fcf2d938092e4d9482a15b9cad651265`.
+Its separate reader-interface gate is
+`31b74a61a7d94b35cfe1fd79c2ee9e6affe91cea2782aec19cb2d663899b51e7`.
 
-Both writers stopped before the workstation restarted. The root disk then had
-about 148 MiB available. Re-downloadable Python package caches were cleared;
-installed runtimes, company/audit history and frozen review proofs were preserved.
-Storage recovery is complete: 61 GiB is available. An unaccepted author test
-fixture was archived with all 1,833 original files independently verified, then
-only its exact unused database was removed. Actual audit/company journals and
-accepted review proofs remain intact. The archive is preserved outside the repo
-in `~/SABLEHARBOR-preserved-neutral-archives-20261002/b01-unaccepted-v4`;
-root verification is `4ca85db2985fb6b50ab5b34109df650728fb33cdb64c377a66d6ca84064ab5b4`
-and exact cleanup receipt is
+The remaining B05 batch is running in the original MESSY room through root
+coordinator `f7a1b3bbc9ec17ee9fdfa3e913671fa2b4182dbb450ffe3de15e4dff294312b6`
+(PID 34853). Each family is freshly collected from the same company's native
+records; held originals are reused only after native and custody checks.
+The full fifty-task preflight and a private opaque SQLite allocation measurement
+must pass before its procedure writes. Each actual command also requires a
+16 GiB free-space reserve. No B05 completion or final replay is asserted yet.
+
+Storage recovery preserved company/audit history, installed runtimes and frozen
+accepted proofs. Re-downloadable caches were cleared. All 1,833 files in one
+unaccepted author fixture were independently byte-verified in a private archive;
+only its exact unused database was then removed. Root verification is
+`4ca85db2985fb6b50ab5b34109df650728fb33cdb64c377a66d6ca84064ab5b4`;
+cleanup receipt is
 `a68fda1fce76775a162e4a8f6e28c9853d656eb78a352ed6a4721431fd76f3dc`.
-Exact normal read-only quiescence, states and ordinary preserved WAL/SHM copies are pinned by
-`6688c21d546512497fb9983e91926183a2373e3f32b0177ea15c4a519282f2a2`.
-This capture explicitly does not establish whole-history integrity or authorize
-the interrupted continuation. Narrow recovery review is in progress; storage
-capacity is no longer a blocker. The clean run also still requires independent final replay.
+The archive remains outside the repo at
+`~/SABLEHARBOR-preserved-neutral-archives-20261002/b01-unaccepted-v4`.
+B05 launch observed 63.7 GB free. The earlier external-drive request was a
+contingency; remaining packet capacity has not yet been measured.
 
-The first actual narrow continuation stopped before any audit command because
-the retained-original reader did not return the `content` alias required by the
-checked-row adapter. Its refusal is preserved as
+The first interrupted B01 capture and ordinary WAL/SHM copies remain pinned by
+`6688c21d546512497fb9983e91926183a2373e3f32b0177ea15c4a519282f2a2`.
+The actual prewrite reader-interface refusal remains preserved as
 `b190663946dc22696e9bd28f3b9b0d4e894df7c79cc37e00a14182d76fe73761`.
-Fresh quiescence `12bf710f551d2112d586e53059a8ff1fc6e930886cf416fdbd108359a8d161cf`
-confirms both current state hashes and the company database bytes are unchanged.
-The original nonempty WAL copies and first capture remain preserved. A successor
-uses the actual reader interface and the existing verified source-operation
-lease; it awaits independent review before a new execution destination.
+Post-refusal quiescence
+`12bf710f551d2112d586e53059a8ff1fc6e930886cf416fdbd108359a8d161cf`
+confirmed no prior state/company change before the reviewed successor ran.
+No old capture, driver, failure or accepted history was overwritten.
 
 All ten disjoint method gates, 39 historical code versions and the exact 409
 procedure contracts are prepared for final capture as
 `34fac279f00392657b01b565d66fa6811fb74b8307e99121b00f40c5f2c2b59d`.
-The compiler's actual seven-field source identities and all 409 current task
-links have been checked for each Key; preparation is
+Independent parallel full-history replay procedure has root review
+`4f1d16d9ba53d073c54f159d76b1e904b57ece77d17fb83ab416258db35fa7e3`;
+this authorizes its exact verifier on a finished capture, not actual acceptance.
+The seven-field Key source identities and all 409 task links were prepared as
 `a6e792872fb46888e62d30a192c5d3b132e17fe5a919e8c81efb309a58eecc49`.
-No actual Key, final packet or protected service has been activated. The retained
-history performance and fixed-scope successors remain separate from the current
-main Store and require final composition review. No professional, owner or
-whole-enterprise acceptance is asserted.
+The small source archive for later historical reproduction, sealed-prefix/delta
+service, signed credential/session rotation and storage-bounded complete packet
+remain in development and separate review. Main's fieldwork Store is unchanged.
+No actual Key, final packet or protected service has been activated, and no
+professional, owner or whole-enterprise acceptance is asserted.
 
 The following paragraphs preserve earlier October 2 integration checkpoints.
 

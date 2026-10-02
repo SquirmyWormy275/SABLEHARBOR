@@ -2217,7 +2217,7 @@
       "activation_proof_sha256": "40722199d57872e420e8fa0bee3ca048584adb3e15dd9593b5497770e1f086b3",
       "independent_birth_verification_sha256": "bf804a33a1945fd332581070227edde813765b22e87e0e4a7292806b47472a36",
       "period_close_clock_advance_sha256": "573b1377749b2da3bcb6a6498f2c4cc990b09b6cdb97fb97cf00728bf7ac74a4",
-      "current_fieldwork": "CLEAN409_COMPLETE_PENDING_FINAL_REPLAY_MESSY358_WORKPAPERS_52_UNRUN_INTERRUPTED_B01",
+      "current_fieldwork": "CLEAN409_MESSY359_B01_COMPLETE_B05_NATIVE_ACQUISITION_RUNNING_FINAL_REPLAY_PENDING",
       "all_disjoint_family_task_methods_required": true,
       "historical_task_results_imported": false,
       "qualified_or_owner_acceptance": "NOT_ASSERTED",
@@ -2368,7 +2368,7 @@
       "protected_retained_key_full_scope_size_status": "EXACT3379146_BYTE_GENUINE409_SNAPSHOT32MIB_SNAPSHOT_ONLY_INDEPENDENT23_HTTP_ACCEPTED_MAIN99_REFERENCES35_CHECKS_PASS_ACTUAL_COMPOSITION_PENDING",
       "first_company_native_key_causal_review_sha256": "f36e358e25743ee5d825d38078d4f6aa356a7d182da265c2773777e523720add",
       "first_company_native_key_causal_status": "REFINED_EIGHT_BOUNDED_CARDS35_ORIGINALS75_LOCATORS_SUPPORTED_FULL76_CARDS_AND409_TASK_FACETS_PER_BRANCH_REQUIRE_VISIBLE_CLAIM_AND_INDEPENDENT_REVIEW",
-      "current_queue_status": "NARROW_B01_ACTUAL_PREWRITE_READER_SHAPE_REFUSAL_NEW_V4_REVIEW",
+      "current_queue_status": "ORIGINAL_MESSY_B05_FRESH_NATIVE_ACQUISITION_AND_FULL50_PREFLIGHT_RUNNING",
       "clean_completed_incident_execution_sha256": "54030de60898ca77f69f4d8825f53635d2b444b079bcbc2053f42aea2f61fa37",
       "clean_completed_incident_workpapers": 284,
       "clean_unrun_after_incidents": 125,
@@ -2418,23 +2418,23 @@
       "clean_final_fieldwork_queue_execution_sha256": "c6ee4875a37903ea37ee786101d39df1f183583114e294bc8d0cfd412a22e5e9",
       "actual_current_revisions": {
         "CLEAN": 6226,
-        "MESSY": 5936
+        "MESSY": 5944
       },
       "actual_current_workpapers": {
         "CLEAN": 409,
-        "MESSY": 358
+        "MESSY": 359
       },
       "actual_current_tasks_unrun": {
         "CLEAN": 0,
-        "MESSY": 52
+        "MESSY": 50
       },
       "actual_current_retained_originals": {
         "CLEAN": 2741,
         "MESSY": 2833
       },
       "messy_interrupted_task": "TASK-SH-TRN-003-corporate-TOD",
-      "messy_interrupted_task_objects_preserved": "ORIGINAL_POPULATION_READY_VERSION_SELECTION_AND_WP1_ZERO_TRACES_NO_TASK_DISPOSITION",
-      "actual_writers_running": false,
+      "messy_interrupted_task_objects_preserved": "ORIGINAL_TOD_POPULATION_SELECTION_WP_PRESERVED_TOD_AND_TOE_ORDINARY_CONTINUATION_COMPLETE",
+      "actual_writers_running": true,
       "whole_history_final_replay": "PENDING",
       "final_fieldwork_input_preparation_sha256": "34fac279f00392657b01b565d66fa6811fb74b8307e99121b00f40c5f2c2b59d",
       "key_binding_input_preparation_sha256": "a6e792872fb46888e62d30a192c5d3b132e17fe5a919e8c81efb309a58eecc49",
@@ -2446,7 +2446,17 @@
       "post_prewrite_refusal_quiescence_sha256": "12bf710f551d2112d586e53059a8ff1fc6e930886cf416fdbd108359a8d161cf",
       "preserved_actual_b01_prewrite_refusal_sha256": "b190663946dc22696e9bd28f3b9b0d4e894df7c79cc37e00a14182d76fe73761",
       "actual_b01_prewrite_refusal_outcome": "NO_AUDIT_TAIL_COMMAND_COMMITTED_EXACT_PRIOR_STATES_AND_COMPANY_BYTES_UNCHANGED",
-      "original_interrupted_wal_and_first_quiescence_preserved": true
+      "original_interrupted_wal_and_first_quiescence_preserved": true,
+      "b05_root_writer_pid": 34853,
+      "b05_root_coordinator_sha256": "f7a1b3bbc9ec17ee9fdfa3e913671fa2b4182dbb450ffe3de15e4dff294312b6",
+      "b05_root_execution_path": "MESSY/COMPLETE_B05_AFTER_RESTART_V4",
+      "messy_b01_continuation_execution_sha256": "268054caa0bad882b25f4b989e9bbb24ced9d6b4461ec19e692fb4d62969a9bf",
+      "messy_b01_continuation_after_state_sha256": "69dce454116a7cffa2666c66ebdd15f7fcf2d938092e4d9482a15b9cad651265",
+      "messy_b01_retained_reader_review_sha256": "31b74a61a7d94b35cfe1fd79c2ee9e6affe91cea2782aec19cb2d663899b51e7",
+      "final_fieldwork_parallel_verifier_procedure_review_sha256": "4f1d16d9ba53d073c54f159d76b1e904b57ece77d17fb83ab416258db35fa7e3",
+      "storage_free_bytes_at_b05_launch": 63692414976,
+      "minimum_free_bytes_per_b05_command": 17179869184,
+      "remaining_packet_capacity": "PENDING_ACTUAL_STORAGE_BOUNDED_MEASUREMENT"
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"
