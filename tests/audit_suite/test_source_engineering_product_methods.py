@@ -804,6 +804,73 @@ def test_genuine_cross_request_test_cannot_authorize_another_approved_change(tmp
     assert result["exceptions"][0]["facet"] == "OPERATING_RELEASE_GATE"
 
 
+@pytest.mark.parametrize("pointer_kind", ["exact", "different", "uncollected", "scalar"])
+def test_genuine_explicit_release_request_pointer_binds_approved_original(tmp_path, pointer_kind):
+    sources = []
+
+    def add(role, record, day, document):
+        r = row("eng005operating." + role, record, f"2027-08-0{day}T09:00:00Z", document)
+        sources.append(r)
+        return r
+
+    a = add("change_request", "CHANGE-A", 1, {"candidate": {"retry": 3}, "actor_id": "AUTHOR"})
+    b = add("change_request", "CHANGE-B", 2, {"candidate": {"retry": 9}, "actor_id": "AUTHOR"})
+    test = add(
+        "change_test",
+        "TEST-A",
+        3,
+        {
+            "required_tests": ["SCHEMA"],
+            "passed_tests": ["SCHEMA"],
+            "test_results": {"SCHEMA": True},
+            "tested_candidate": {"retry": 3},
+            "source_refs": {"request": reference(a["source"])},
+        },
+    )
+    approval = add(
+        "change_approval",
+        "APPROVAL-A",
+        4,
+        {
+            "decision": "APPROVE_SELECTED_LOCAL_CHANGE",
+            "actor_id": "REVIEWER",
+            "source_refs": {"request": reference(a["source"])},
+        },
+    )
+    ptr = reference(b["source"] if pointer_kind == "different" else a["source"])
+    if pointer_kind == "uncollected":
+        ptr["record"] = "MISSING-ORIGINAL"
+    if pointer_kind == "scalar":
+        ptr = "CHANGE-A"
+    add(
+        "change_release",
+        "RELEASE",
+        5,
+        {
+            "security_decision_ref": reference(approval["source"]),
+            "required_test_ref": reference(test["source"]),
+            "request_ref": ptr,
+            "decision": "RELEASED",
+        },
+    )
+    records, at = collected(tmp_path, sources)
+    result = operating_changes(History(records, as_of=at))
+    release = result["releases"][0]
+    assert release["mandatory_test_support"] is True
+    assert release["tests_and_approval_bind_exact_same_request"] is True
+    assert release["local_release_supported"] is (pointer_kind == "exact")
+    assert release["explicit_release_request_pointers_match_approved_request"] is (
+        pointer_kind == "exact"
+    )
+    pointer = release["explicit_release_request_pointers"][0]
+    assert pointer["path"] == "$.request_ref"
+    if pointer_kind == "different":
+        assert pointer["original_status"] == "EXACT_AVAILABLE_ORIGINAL"
+        assert pointer["matches_approved_request"] is False
+    if pointer_kind != "exact":
+        assert any(e["facet"] == "OPERATING_RELEASE_GATE" for e in result["exceptions"])
+
+
 def test_emergency_bypass_and_later_rollback_do_not_make_retrospective_approval(ordinary_pair):
     out = emergency(hist(ordinary_pair))
     assert [r["recorded_candidate_applied"] for r in out["dated_states"]] == [True, False]

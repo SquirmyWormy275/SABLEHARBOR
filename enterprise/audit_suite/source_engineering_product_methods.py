@@ -12,7 +12,14 @@ import hashlib
 import json
 from pathlib import Path
 
-from .collected_engineering_history import History, custody, detail, key
+from .collected_engineering_history import (
+    History,
+    custody,
+    detail,
+    key,
+    pointer_header,
+    pointers,
+)
 from .company_store import _json, _time
 from .fresh_sec003_procedure import require
 
@@ -543,6 +550,53 @@ def operating_changes(history):
             if request_original is not None
             else None
         )
+        explicit_request_pointers = []
+        request_fields = {"request", "request_ref", "change_request", "change_request_ref"}
+        for path, raw_ref in pointers(detail(row)):
+            header = pointer_header(raw_ref)
+            if (
+                path.rsplit(".", 1)[-1] not in request_fields
+                and header.get("system") != "eng005operating.change_request"
+            ):
+                continue
+            target, pointer_status = history.resolve(
+                row, raw_ref, expected={"eng005operating.change_request"}
+            )
+            explicit_request_pointers.append(
+                {
+                    "path": path,
+                    "original_status": pointer_status,
+                    "exact_original": custody(target) if target else None,
+                    "matches_approved_request": key(target["source"]) == key(request_pointer)
+                    if target is not None and request_pointer is not None
+                    else None,
+                }
+            )
+        for field in sorted(request_fields & detail(row).keys()):
+            if any(p["path"] == "$." + field for p in explicit_request_pointers):
+                continue
+            target, pointer_status = _binding(
+                history, row, field, "eng005operating", {"change_request"}
+            )
+            explicit_request_pointers.append(
+                {
+                    "path": "$." + field,
+                    "original_status": pointer_status,
+                    "exact_original": custody(target) if target else None,
+                    "matches_approved_request": key(target["source"]) == key(request_pointer)
+                    if target is not None and request_pointer is not None
+                    else None,
+                }
+            )
+        explicit_pointers_match = (
+            all(
+                p["original_status"] == "EXACT_AVAILABLE_ORIGINAL"
+                and p["matches_approved_request"] is True
+                for p in explicit_request_pointers
+            )
+            if request_pointer is not None
+            else None
+        )
         decision = detail(approval).get("decision") if approval else None
         local_approved = decision in {"APPROVE_SELECTED_LOCAL_CHANGE", "APPROVED"}
         fact = {
@@ -556,6 +610,8 @@ def operating_changes(history):
             "tests_and_approval_bind_exact_same_request": same_request,
             "explicit_release_request_fields_examined": explicit_fields,
             "explicit_release_request_fields_match_approved_request": explicit_matches,
+            "explicit_release_request_pointers": explicit_request_pointers,
+            "explicit_release_request_pointers_match_approved_request": explicit_pointers_match,
             "distinct_recorded_requester_and_approver": approval_attr[
                 "distinct_from_named_requester"
             ]
@@ -566,6 +622,7 @@ def operating_changes(history):
             and accepted_test
             and same_request is True
             and explicit_matches is True
+            and explicit_pointers_match is True
             and approval_attr is not None
             and approval_attr["distinct_from_named_requester"] is True
             and history.action_supported(row)
@@ -580,6 +637,7 @@ def operating_changes(history):
             and not accepted_test
             or same_request is False
             or explicit_matches is False
+            or explicit_pointers_match is False
             or approval_attr
             and approval_attr["distinct_from_named_requester"] is False
         ):
