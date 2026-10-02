@@ -25,6 +25,16 @@ This capture explicitly does not establish whole-history integrity or authorize
 the interrupted continuation. Narrow recovery review is in progress; storage
 capacity is no longer a blocker. The clean run also still requires independent final replay.
 
+The first actual narrow continuation stopped before any audit command because
+the retained-original reader did not return the `content` alias required by the
+checked-row adapter. Its refusal is preserved as
+`b190663946dc22696e9bd28f3b9b0d4e894df7c79cc37e00a14182d76fe73761`.
+Fresh quiescence `12bf710f551d2112d586e53059a8ff1fc6e930886cf416fdbd108359a8d161cf`
+confirms both current state hashes and the company database bytes are unchanged.
+The original nonempty WAL copies and first capture remain preserved. A successor
+uses the actual reader interface and the existing verified source-operation
+lease; it awaits independent review before a new execution destination.
+
 All ten disjoint method gates, 39 historical code versions and the exact 409
 procedure contracts are prepared for final capture as
 `34fac279f00392657b01b565d66fa6811fb74b8307e99121b00f40c5f2c2b59d`.
