@@ -782,11 +782,20 @@ def contract_commitments(history):
                 else (None, "EXACT_TERM_ORIGINAL_REFERENCE_ABSENT")
             )
             original_terms = detail(original).get("synthetic_terms", {}) if original else {}
-            value = (
-                original_terms.get(term.get("term_id"))
-                if isinstance(original_terms, dict)
-                else None
-            )
+            if isinstance(original_terms, dict):
+                value = original_terms.get(term.get("term_id"))
+            elif isinstance(original_terms, list):
+                require(
+                    all(isinstance(t, dict) for t in original_terms),
+                    "Typed original synthetic contract clause vector required",
+                )
+                _ids([t.get("clause_candidate_id") for t in original_terms])
+                matches = [
+                    t for t in original_terms if t["clause_candidate_id"] == term.get("term_id")
+                ]
+                value = matches[0].get("declared_obligation") if len(matches) == 1 else None
+            else:
+                value = None
             examined.append(
                 {
                     "occurrence_id": term["occurrence_id"],

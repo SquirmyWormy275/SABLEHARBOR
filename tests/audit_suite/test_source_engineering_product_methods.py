@@ -394,7 +394,14 @@ def originals(
         "contract_register",
         "SIM-CONTRACT",
         "06-04",
-        {"synthetic_terms": {"responsibility": "nonpersonal-marker"}},
+        {
+            "synthetic_terms": [
+                {
+                    "clause_candidate_id": "responsibility",
+                    "declared_obligation": "nonpersonal-marker",
+                }
+            ]
+        },
     )
     add(
         "contract",
