@@ -173,7 +173,8 @@ class History:
                 "Exact declared native assurance/context role required",
             )
             require(
-                record["content_type"] in {"application/json", "text/plain"},
+                record["content_type"]
+                in {"application/json", "text/plain", "text/plain; charset=utf-8"},
                 "Typed retained original required",
             )
             body = (

@@ -37,7 +37,13 @@ pytestmark = pytest.mark.skipif(not PACK.exists(), reason="Private exact program
 
 
 def fixture_source(
-    root, *, self_review=False, future_dependency=False, many_owners=False, reviewer_fields=None
+    root,
+    *,
+    self_review=False,
+    future_dependency=False,
+    many_owners=False,
+    reviewer_fields=None,
+    utf8_text=False,
 ):
     root.mkdir(mode=0o700)
     store = CompanyStore(root)
@@ -171,6 +177,34 @@ def fixture_source(
             },
             "2027-09-18T09:00:00Z",
         )
+        if utf8_text:
+            system = "person-access-history.workspace_object"
+            store.register_system(COMPANY, branch, system, "NEUTRAL-OWNER")
+            systems.add((branch, system))
+            store.append_version(
+                COMPANY,
+                branch,
+                system,
+                "local-reference",
+                expected_version=0,
+                command_id=branch + ":utf8-reference",
+                event_at="2027-09-18T10:00:00Z",
+                available_at="2027-09-18T10:00:00Z",
+                # JSON-shaped text stays unparsed; its claimed finding is not authority.
+                content=json.dumps(
+                    {
+                        "engineering_neutral_fixture": True,
+                        "label": "Local workspace reference: café.",
+                        "finding_closed": True,
+                    },
+                    ensure_ascii=False,
+                ).encode(),
+                provenance={
+                    "source_reference": "owned-neutral-company-source",
+                    "name": "reference.txt",
+                    "content_type": "text/plain; charset=utf-8",
+                },
+            )
         if many_owners:
             for number in range(23):
                 append(
@@ -193,7 +227,7 @@ def fixture_source(
         manifest,
         {"schema": LIBRARY_MANIFEST_SCHEMA, "files": {"company.sqlite3": file_sha(database)}},
     )
-    count = 66 if many_owners else 20
+    count = (66 if many_owners else 20) + (2 if utf8_text else 0)
     write(
         review,
         {
@@ -399,3 +433,31 @@ def test_preparsed_cache_does_not_change_genuine_original_results(tmp_path):
     for row in changed:
         row["document"] = {"statement": "FAKE_CLEAR", "finding_closed": True}
     assert examine(changed, as_of=room.state()["simulated_at"]) == original
+
+
+def test_actual_utf8_plain_text_is_preserved_without_structured_assurance_credit(tmp_path):
+    pair, room, rows = collect(tmp_path, utf8_text=True)
+    before = room.state()
+    text_row = next(r for r in rows if r["logical_system"] == "workspace_object")
+    result = examine(rows, as_of=before["simulated_at"])
+    assert len(result) == 23
+    assert text_row["retained_bytes"].decode() == text_row["document"]
+    assert "café" in text_row["document"]
+    for item in result:
+        room._validate_inspection(rows, item, contracts()[item["task_id"]])
+        assert {k: item["disposition"][k] for k in ("status", "conclusion")} == {
+            "status": "IN_PROGRESS",
+            "conclusion": "LIMITATION",
+        }
+    assert room.state() == before and not pair.rooms["MESSY"].state()["artifacts"]
+    # The plain-text context has no typed assurance fields or native pointers.
+    without_text = examine(
+        [r for r in rows if r is not text_row], as_of=before["simulated_at"]
+    )
+    assert result == without_text
+    changed = deepcopy(rows)
+    next(r for r in changed if r["logical_system"] == "workspace_object")[
+        "content_type"
+    ] = "text/plain; charset=latin-1"
+    with pytest.raises(ProcedureError, match="Typed retained original"):
+        examine(changed, as_of=before["simulated_at"])
