@@ -4,6 +4,7 @@ import hashlib
 import json
 from copy import deepcopy
 from pathlib import Path
+from types import SimpleNamespace
 
 import pytest
 
@@ -1175,9 +1176,14 @@ def test_actual_ordinary_collected_50_vector_passes_unchanged_shared_pair_prefli
     from enterprise.audit_suite.full_scope_company_pair import BoundWorkroom
 
     contracts = task_contracts()
+    room = SimpleNamespace(
+        state=lambda: originals["engine"].store.get(
+            originals["auditor"], originals["engagement"]
+        )
+    )
     for result in outputs(originals):
         BoundWorkroom._validate_inspection(
-            None, originals["rows"], result, contracts[result["task_id"]]
+            room, originals["rows"], result, contracts[result["task_id"]]
         )
 
 
