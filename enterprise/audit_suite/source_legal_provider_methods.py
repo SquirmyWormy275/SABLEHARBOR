@@ -1117,6 +1117,28 @@ def ba_chain(history):
     return out
 
 
+def provider_register_id(row):
+    """Read only the native vendor-register's explicit flat or nested declaration."""
+    require(
+        row["family"] == "provider-history" and row["role"] == "vendor_register",
+        "Exact native planned vendor-register role required",
+    )
+    document = row["document"]
+    values = []
+    if "provider_id" in document:
+        values.append(document["provider_id"])
+    provider = document.get("provider")
+    if isinstance(provider, dict) and "provider_id" in provider:
+        values.append(provider["provider_id"])
+    require(
+        values
+        and all(isinstance(value, str) and value.strip() for value in values)
+        and len(set(values)) == 1,
+        "Exact unambiguous declared planned provider ID required",
+    )
+    return values[0]
+
+
 def provider_population(history):
     transitions = history.select("transition", {"provider_contract"})
     flows = history.select("phi_ba", {"flow_register"})
@@ -1179,7 +1201,7 @@ def provider_population(history):
         plans = active(history.select("provider-history", {"planned_dependency_inventory"}), at)
         expected = {d["provider_id"] for r in plans for d in r["document"].get("dependencies", [])}
         actual = active(history.select("provider-history", {"vendor_register"}), at)
-        observed = {r["document"]["provider_id"] for r in actual}
+        observed = {provider_register_id(r) for r in actual}
         missing = sorted(expected - observed)
         out.append(
             observation(

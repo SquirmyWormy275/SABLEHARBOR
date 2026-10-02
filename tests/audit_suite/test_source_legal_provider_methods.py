@@ -42,7 +42,8 @@ def test_undetermined_hipaa_declaration_does_not_relax_other_boolean_fields():
 
 
 def build_originals(
-    tmp_path_factory, *, alias_calendar=False, extra_author=None, case_overrides=None
+    tmp_path_factory, *, alias_calendar=False, extra_author=None, case_overrides=None,
+    provider_register_body=None,
 ):
     root = tmp_path_factory.mktemp("legal-provider-originals")
     root.chmod(0o700)
@@ -633,7 +634,7 @@ def build_originals(
         "provider-history",
         "vendor_register",
         "FACILITY",
-        {"provider_id": "FACILITY"},
+        {"provider_id": "FACILITY"} if provider_register_body is None else provider_register_body,
         "2027-01-02T00:00:00Z",
     )
     put(
@@ -1003,6 +1004,32 @@ def test_original_provider_omission_survives_corrected_register_and_sources_are_
     assert populations[0]["declared_expected_matches_actual_selected_sources"]
     assert populations[1]["later_register_backfill_does_not_cure_earlier_omission"]
     assert result["disposition"]["conclusion"] == "FAIL"
+
+
+def test_nested_native_planned_provider_declaration_retains_coverage_limitation(tmp_path_factory):
+    fixture = build_originals(
+        tmp_path_factory,
+        provider_register_body={"provider": {"provider_id": "FACILITY", "operating": False}},
+    )
+    result = task(outputs(fixture), "SH-TPR-001", "TOE")
+    population = facts(result, "planned-provider-historical-coverage-")[0]
+    assert population["registered_ids_at_occurrence"] == ["FACILITY"]
+    assert population["missing_ids"] == ["RESERVE"]
+    assert population["local_planned_intake_does_not_establish_operating_supplier_monitoring"]
+
+
+@pytest.mark.parametrize("body", [
+    {"provider_id": "FACILITY", "provider": {"provider_id": "OTHER"}},
+    {"provider": {"provider_id": None}},
+    {"provider_id": 0},
+    {"vendor_id": "FACILITY"},
+])
+def test_ambiguous_or_aliased_planned_provider_ids_fail_before_fieldwork(tmp_path_factory, body):
+    fixture = build_originals(tmp_path_factory, provider_register_body=body)
+    before = fixture['engine'].store.get(fixture['auditor'], fixture['engagement'])
+    with pytest.raises(ProcedureError, match="Exact unambiguous declared planned provider ID"):
+        outputs(fixture)
+    assert fixture['engine'].store.get(fixture['auditor'], fixture['engagement']) == before
 
 
 def test_due_review_lateness_uses_native_event_and_publication_not_internal_result(originals):
