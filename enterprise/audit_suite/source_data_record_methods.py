@@ -1455,58 +1455,102 @@ def extraction_observations(history):
     ]
 
 
+def _integrity_required_original(history, ref, family, role, *, at, purpose, own, unresolved):
+    target, state = history.resolve(ref, at=at)
+    if target:
+        # The actual collected original remains a cited witness even
+        # when its physical role cannot support this operation. Never
+        # reinterpret it as an equal-role or equal-byte substitute.
+        if target["artifact_id"] not in {r["artifact_id"] for r in own}:
+            own.append(target)
+        if (target["family"], target["role"]) != (family, role):
+            unresolved.append(
+                {
+                    "purpose": purpose,
+                    "required_native_system": family + "." + role,
+                    "reference": ref,
+                    "actual_target_artifact_id": target["artifact_id"],
+                    "actual_native_system": target["source"]["system"],
+                    "native_reference_status": state,
+                    "status": "UNRESOLVED_NATIVE_ROLE",
+                    "operation_attributes_not_supported": True,
+                }
+            )
+            return None, "UNRESOLVED_NATIVE_ROLE"
+    return target, state
+
+
 def integrity_observations(history):
     observations = []
     for row in history.select("integrity", {"transform_report"}):
         doc, own = row["document"], [row]
-        copy, status = history.resolve(doc["input_copy_ref"], at=row["source"]["event_at"])
-        if copy:
-            require(
-                copy["family"] == "integrity" and copy["role"] == "test_copy",
-                "Actual native integrity-copy role required",
-            )
+        unresolved = []
+
+        copy, status = _integrity_required_original(
+            history,
+            doc["input_copy_ref"],
+            "integrity",
+            "test_copy",
+            at=row["source"]["event_at"],
+            purpose="input_copy",
+            own=own,
+            unresolved=unresolved,
+        )
         source_refs = doc.get("source_refs", {})
-        inputs = {}
+        inputs, input_statuses = {}, {}
         for name in ("definition", "raw", "reference"):
-            target, state = history.resolve(source_refs[name], at=row["source"]["event_at"])
+            role = {
+                "definition": "quality_definition",
+                "raw": "quality_raw",
+                "reference": "quality_reference",
+            }[name]
+            target, state = _integrity_required_original(
+                history,
+                source_refs[name],
+                "common-dq",
+                role,
+                at=row["source"]["event_at"],
+                purpose="common_" + name,
+                own=own,
+                unresolved=unresolved,
+            )
             inputs[name] = target if state == "EXACT_COLLECTED_ORIGINAL" else None
-            if target:
-                role = {
-                    "definition": "quality_definition",
-                    "raw": "quality_raw",
-                    "reference": "quality_reference",
-                }[name]
-                require(
-                    target["family"] == "common-dq" and target["role"] == role,
-                    "Exact approved common quality native role required",
-                )
-                own.append(target)
-        if copy:
-            own.append(copy)
+            input_statuses[name] = state
         check = None
         check_status = "NO_CHECK_AT_TRANSFORM"
         if isinstance(doc.get("integrity_check_ref"), dict):
-            check, check_status = history.resolve(
-                doc["integrity_check_ref"], at=row["source"]["event_at"]
+            check, check_status = _integrity_required_original(
+                history,
+                doc["integrity_check_ref"],
+                "integrity",
+                "integrity_check",
+                at=row["source"]["event_at"],
+                purpose="pretransform_check",
+                own=own,
+                unresolved=unresolved,
             )
-            if check:
-                require(
-                    check["family"] == "integrity" and check["role"] == "integrity_check",
-                    "Actual native pre-transform integrity-check role required",
-                )
-                own.append(check)
         byte_match = (
             (sha(copy["retained_bytes"]) == sha(inputs["raw"]["retained_bytes"]))
-            if copy and inputs["raw"]
+            if copy and status == "EXACT_COLLECTED_ORIGINAL" and inputs["raw"]
             else None
         )
         check_tests = {}
         if check:
-            checked, checked_status = history.resolve(
-                check["document"]["checked_copy_ref"], at=check["source"]["event_at"]
+            checked, checked_status = _integrity_required_original(
+                history,
+                check["document"]["checked_copy_ref"],
+                "integrity",
+                "test_copy",
+                at=check["source"]["event_at"],
+                purpose="checked_copy",
+                own=own,
+                unresolved=unresolved,
             )
             check_tests = {
-                "checked_native_copy_matches": checked is copy,
+                "checked_copy_status": checked_status,
+                "checked_native_copy_matches": checked is not None
+                and copy is not None
+                and checked is copy,
                 "checked_copy_available_at_check": checked_status == "EXACT_COLLECTED_ORIGINAL",
                 "expected_baseline_digest_matches": inputs["raw"] is not None
                 and check["document"].get("expected_source_raw_sha256")
@@ -1549,7 +1593,9 @@ def integrity_observations(history):
                         ),
                         expected,
                     )
-        precheck = check_status == "EXACT_COLLECTED_ORIGINAL" and all(check_tests.values())
+        precheck = check_status == "EXACT_COLLECTED_ORIGINAL" and all(
+            v for k, v in check_tests.items() if k != "checked_copy_status"
+        )
         observations.append(
             observation(
                 "integrity-at-transform-" + row["artifact_id"],
@@ -1563,6 +1609,8 @@ def integrity_observations(history):
                     "recomputed_quality_report": tested,
                     "recorded_report_differences": differences,
                     "missing_exact_common_inputs": [k for k, v in inputs.items() if not v],
+                    "common_input_statuses": input_statuses,
+                    "unresolved_native_support": unresolved,
                     "semantic_quality_is_separate_from_byte_authenticity": True,
                     "subsequent_match_does_not_cure_precheck_absence": True,
                 },

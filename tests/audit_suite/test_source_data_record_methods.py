@@ -1177,9 +1177,7 @@ def test_actual_ordinary_collected_50_vector_passes_unchanged_shared_pair_prefli
 
     contracts = task_contracts()
     room = SimpleNamespace(
-        state=lambda: originals["engine"].store.get(
-            originals["auditor"], originals["engagement"]
-        )
+        state=lambda: originals["engine"].store.get(originals["auditor"], originals["engagement"])
     )
     for result in outputs(originals):
         BoundWorkroom._validate_inspection(
@@ -1232,8 +1230,204 @@ def test_collected_native_meeting_note_cannot_replace_exact_common_definition(tm
         )
 
     fixture = build_originals(tmp_path_factory, extra_author=author)
-    with pytest.raises(ProcedureError, match="common quality native role"):
-        outputs(fixture)
+    result = task(outputs(fixture), "SH-DAT-004", "TOE")
+    facts = next(
+        o["facts"]
+        for o in obs(result, "integrity-at-transform-")
+        if o["facts"]["common_input_statuses"]["definition"] == "UNRESOLVED_NATIVE_ROLE"
+    )
+    assert "definition" in facts["missing_exact_common_inputs"]
+    assert facts["recomputed_quality_report"] is None
+    assert not facts["effective_pretransform_check_collected"]
+    assert facts["unresolved_native_support"][0]["actual_native_system"] == "common-dq.meeting_note"
+
+
+def test_genuine_integrity_wrong_role_family_copy_check_and_future_inputs_remain_unresolved(
+    tmp_path_factory,
+):
+    def author(put, native):
+        clean = [
+            {
+                "record_id": f"R{i}",
+                "entity_id": "E",
+                "observed_at": f"2027-06-01T0{i}:00:00Z",
+                "units": i,
+            }
+            for i in range(1, 4)
+        ]
+        wrong_raw = put(
+            "rec003",
+            "quality_raw",
+            "SAME-BYTES-FOREIGN-FAMILY",
+            clean,
+            "2027-07-01T00:00:00Z",
+        )
+        assert wrong_raw["sha256"] == native["common_raw"]["sha256"]
+        wrong_reference = put(
+            "rec003",
+            "quality_reference",
+            "SAME-ROLE-FOREIGN-FAMILY",
+            [{"entity_id": "E", "category": "CAT"}],
+            "2027-07-01T00:00:00Z",
+        )
+        wrong_check = put(
+            "integrity",
+            "meeting_note",
+            "NOT-A-CHECK",
+            {"checked_copy_ref": native["copy"], "result": "MISMATCH_DETECTED"},
+            "2027-07-01T00:00:00Z",
+        )
+        checked_wrong_role = put(
+            "integrity",
+            "integrity_check",
+            "WRONG-CHECKED-COPY",
+            {
+                "checked_copy_ref": wrong_raw,
+                "expected_source_raw_sha256": native["common_raw"]["sha256"],
+                "observed_copy_sha256": native["copy"]["sha256"],
+                "result": "MISMATCH_DETECTED",
+                "checked_before_first_transform": True,
+            },
+            "2027-07-01T01:00:00Z",
+        )
+        late_copy = put(
+            "integrity",
+            "test_copy",
+            "FUTURE-COPY",
+            clean,
+            "2027-07-03T00:00:00Z",
+        )
+        late_raw = put(
+            "common-dq",
+            "quality_raw",
+            "FUTURE-RAW",
+            clean,
+            "2027-07-03T00:00:00Z",
+        )
+        clean_copy = put("integrity", "test_copy", "OWN-CLEAN-COPY", clean, "2027-07-01T00:00:00Z")
+        exact_check = put(
+            "integrity",
+            "integrity_check",
+            "OWN-EXACT-CHECK",
+            {
+                "checked_copy_ref": clean_copy,
+                "expected_source_raw_sha256": native["common_raw"]["sha256"],
+                "observed_copy_sha256": clean_copy["sha256"],
+                "result": "MATCH_CONFIRMED",
+                "checked_before_first_transform": True,
+            },
+            "2027-07-01T01:00:00Z",
+        )
+        restricted = {k: v for k, v in native["common_raw"].items() if k != "sha256"}
+        restricted.update(
+            status="RESTRICTED_UNREGISTERED_DEPENDENCY",
+            event_at=None,
+            custody_id="OWN-RESTRICTED-WITNESS",
+        )
+        base = {
+            "input_copy_ref": native["copy"],
+            "integrity_check_ref": None,
+            "source_refs": {
+                "definition": native["common_definition"],
+                "raw": native["common_raw"],
+                "reference": native["common_reference"],
+            },
+            "dq_report": {},
+        }
+        cases = {
+            "WRONG-RAW": {"source_refs": {**base["source_refs"], "raw": wrong_raw}},
+            "WRONG-REFERENCE": {
+                "source_refs": {**base["source_refs"], "reference": wrong_reference}
+            },
+            "WRONG-COPY": {"input_copy_ref": wrong_raw},
+            "WRONG-CHECK": {"integrity_check_ref": wrong_check},
+            "WRONG-CHECKED-COPY": {"integrity_check_ref": checked_wrong_role},
+            "LATE-COPY": {"input_copy_ref": late_copy},
+            "LATE-RAW": {"source_refs": {**base["source_refs"], "raw": late_raw}},
+            "MISSING-RAW": {
+                "source_refs": {
+                    **base["source_refs"],
+                    "raw": {**native["common_raw"], "record": "UNREGISTERED-RAW"},
+                }
+            },
+            "FOREIGN-RAW": {
+                "source_refs": {
+                    **base["source_refs"],
+                    "raw": {**native["common_raw"], "branch": "OTHER-BRANCH"},
+                }
+            },
+            "RESTRICTED-RAW": {"source_refs": {**base["source_refs"], "raw": restricted}},
+            "VALID-EXACT-COPY-CHECK": {
+                "input_copy_ref": clean_copy,
+                "integrity_check_ref": exact_check,
+            },
+        }
+        for name, changed in cases.items():
+            put("integrity", "transform_report", name, {**base, **changed}, "2027-07-02T00:00:00Z")
+
+    fixture = build_originals(tmp_path_factory, extra_author=author)
+    vector = outputs(fixture)
+    assert len(vector) == 50
+    result = task(vector, "SH-DAT-004", "TOE")
+    artifacts = {r["artifact_id"]: r for r in fixture["rows"]}
+    observations = {
+        artifacts[o["evidence"][0]["artifact_id"]]["source"]["record"]: o
+        for o in obs(result, "integrity-at-transform-")
+    }
+    for name in ("WRONG-RAW", "WRONG-REFERENCE", "WRONG-COPY", "WRONG-CHECK", "WRONG-CHECKED-COPY"):
+        facts = observations[name]["facts"]
+        assert facts["unresolved_native_support"]
+        assert not facts["effective_pretransform_check_collected"]
+        for unresolved in facts["unresolved_native_support"]:
+            assert unresolved["status"] == "UNRESOLVED_NATIVE_ROLE"
+            assert unresolved["operation_attributes_not_supported"] is True
+            assert unresolved["actual_target_artifact_id"] in {
+                e["artifact_id"] for e in observations[name]["evidence"]
+            }
+    raw = observations["WRONG-RAW"]["facts"]
+    assert raw["common_input_statuses"]["raw"] == "UNRESOLVED_NATIVE_ROLE"
+    assert raw["actual_copy_matches_collected_baseline_bytes"] is None
+    assert "raw" in raw["missing_exact_common_inputs"]
+    assert observations["WRONG-REFERENCE"]["facts"]["recomputed_quality_report"] is None
+    assert observations["WRONG-COPY"]["facts"]["recomputed_quality_report"] is None
+    assert observations["WRONG-CHECK"]["facts"]["actual_check_claim"] is None
+    assert (
+        observations["WRONG-CHECKED-COPY"]["facts"]["actual_pretransform_check_tests"][
+            "checked_native_copy_matches"
+        ]
+        is False
+    )
+    assert observations["LATE-COPY"]["facts"]["input_copy_status"] == "UNAVAILABLE_AT_OPERATION"
+    assert (
+        observations["LATE-COPY"]["facts"]["actual_copy_matches_collected_baseline_bytes"] is None
+    )
+    assert observations["LATE-COPY"]["facts"]["recomputed_quality_report"] is None
+    assert (
+        observations["LATE-RAW"]["facts"]["common_input_statuses"]["raw"]
+        == "UNAVAILABLE_AT_OPERATION"
+    )
+    assert observations["LATE-RAW"]["facts"]["actual_copy_matches_collected_baseline_bytes"] is None
+    assert (
+        observations["MISSING-RAW"]["facts"]["common_input_statuses"]["raw"]
+        == "ORIGINAL_NOT_COLLECTED"
+    )
+    assert (
+        observations["FOREIGN-RAW"]["facts"]["common_input_statuses"]["raw"]
+        == "OUTSIDE_COLLECTED_BRANCH_AUTHORITY"
+    )
+    assert (
+        observations["RESTRICTED-RAW"]["facts"]["common_input_statuses"]["raw"]
+        == "RESTRICTED_ORIGINAL_NOT_COLLECTED"
+    )
+    exact = observations["VALID-EXACT-COPY-CHECK"]["facts"]
+    assert exact["actual_copy_matches_collected_baseline_bytes"] is True
+    assert exact["effective_pretransform_check_collected"] is True
+    assert (
+        exact["actual_pretransform_check_tests"]["checked_copy_status"]
+        == "EXACT_COLLECTED_ORIGINAL"
+    )
+    assert exact["recomputed_quality_report"]["failed_rows"] == 0
+    assert exact["missing_exact_common_inputs"] == exact["unresolved_native_support"] == []
 
 
 def test_genuine_delayed_check_publication_cannot_be_pretransform_availability(tmp_path_factory):
@@ -1276,6 +1470,47 @@ def test_genuine_delayed_check_publication_cannot_be_pretransform_availability(t
     )
     assert not late["effective_pretransform_check_collected"]
     assert late["actual_check_claim"]["checked_before_first_transform"] is True
+
+
+@pytest.mark.parametrize(
+    "field",
+    [
+        "boolean_version",
+        "zero_version",
+        "hash",
+        "event_clock",
+        "import_clock",
+        "missing_clock",
+        "scalar",
+    ],
+)
+def test_malformed_caller_native_references_still_refused_after_role_boundary_correction(
+    originals, field
+):
+    history = History(originals["rows"], originals["as_of"])
+    target = next(
+        r for r in history.rows if r["family"] == "common-dq" and r["role"] == "quality_raw"
+    )
+    reference = {k: target["source"][k] for k in CLOCK_ID}
+    assert history.resolve(reference, at=originals["as_of"])[1] == "EXACT_COLLECTED_ORIGINAL"
+    if field == "boolean_version":
+        reference["version"] = True
+    elif field == "zero_version":
+        reference["version"] = 0
+    elif field == "hash":
+        reference["sha256"] = "0" * 64
+    elif field == "event_clock":
+        reference["event_at"] = "2027-01-01T00:00:00Z"
+    elif field == "import_clock":
+        reference["imported_at"] = "2030-01-01T00:00:00Z"
+    elif field == "missing_clock":
+        del reference["available_at"]
+    else:
+        reference = "RAW"
+    # These are malformed caller arguments seeded by genuine ordinary receipts,
+    # not resealed company originals or substitute evidence.
+    with pytest.raises(ProcedureError):
+        history.resolve(reference, at=originals["as_of"])
 
 
 def test_distinct_privacy_clause_screens_use_actual_ordinary_collected_request_facts(
