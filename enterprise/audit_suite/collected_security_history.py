@@ -3,12 +3,11 @@
 from __future__ import annotations
 
 import hashlib
-import json
 from datetime import UTC, datetime
 
 from .company_store import _json, _time
 from .fresh_sec003_procedure import CLOCK_ID, NATIVE_ID, require
-from .source_library_audit import BUSINESS_REFERENCE
+from .source_library_audit import BUSINESS_REFERENCE, MEDIA_SUFFIX, typed_content
 
 FAMILIES = {
     "configuration-history",
@@ -34,6 +33,7 @@ LONG_ID = {
     "system_id": "system",
     "record_id": "record",
 }
+CONTENT_TYPES = set(MEDIA_SUFFIX)
 
 
 def key(source):
@@ -45,6 +45,7 @@ def custody(row):
 
 
 def detail(row):
+    require(isinstance(row["document"], dict), "Structured security attributes unperformed")
     value = row["document"].get("detail", row["document"])
     require(isinstance(value, dict), "Typed security detail object required")
     return value
@@ -148,9 +149,8 @@ class History:
                 <= self.as_of
                 and _time(source["imported_at"]) <= _time(receipt["collected_at"]) <= now
                 and hashlib.sha256(raw).hexdigest() == source["sha256"] == record["artifact_sha256"]
-                and record["content_type"]
-                == source["provenance"].get("content_type")
-                == "application/json",
+                and record["content_type"] == source["provenance"].get("content_type")
+                and record["content_type"] in CONTENT_TYPES,
                 "Actual security custody, version, bytes or receipt clocks differ",
             )
             family, role = record["logical_family"], record["logical_system"]
@@ -158,16 +158,25 @@ class History:
                 family in FAMILIES and source["system"] == family + "." + role,
                 "Security role differs from actual native physical system",
             )
-            document = json.loads(raw)
-            require(isinstance(document, dict), "Structured native security original required")
+            document, _ = typed_content({**source, "content": raw})
             require(
-                all(
+                not isinstance(document, dict)
+                or all(
                     k not in document or _time(document[k]) == _time(source[k])
                     for k in ("event_at", "available_at")
                 ),
                 "Security document clock differs from native custody",
             )
-            row = {**record, "content": raw, "document": document}
+            row = {
+                **record,
+                "content": raw,
+                "document": document,
+                "document_format": "JSON_OBJECT"
+                if isinstance(document, dict)
+                else "JSON_LIST"
+                if isinstance(document, list)
+                else "PLAIN_TEXT",
+            }
             require(
                 key(source) not in self.index, "Distinct actual native security versions required"
             )
@@ -193,7 +202,9 @@ class History:
             "One collected company branch, engagement and principal required",
         )
         for row in self.rows:
-            for path, ref in pointers(row["document"]):
+            # List elements and text are retained originals, never aliases for a
+            # structured action, inventory, approval or calculation record.
+            for path, ref in pointers(row["document"] if isinstance(row["document"], dict) else {}):
                 target, status = self.resolve(row, ref, expected=expected_role(row, path))
                 self.joins.append(
                     {
@@ -202,6 +213,11 @@ class History:
                         "declared_reference": ref,
                         "status": status,
                         "target": custody(target) if target else None,
+                        "retained_unstructured_original": custody(
+                            self.index[key(pointer_header(ref))]
+                        )
+                        if status == "ORIGINAL_FORMAT_UNSUPPORTED_FOR_STRUCTURED_ATTRIBUTES"
+                        else None,
                     }
                 )
             metadata = row["source"]["provenance"].get("operational_metadata", {})
@@ -214,6 +230,11 @@ class History:
                         "declared_reference": ref,
                         "status": status,
                         "target": custody(target) if target else None,
+                        "retained_unstructured_original": custody(
+                            self.index[key(pointer_header(ref))]
+                        )
+                        if status == "ORIGINAL_FORMAT_UNSUPPORTED_FOR_STRUCTURED_ATTRIBUTES"
+                        else None,
                     }
                 )
 
@@ -221,7 +242,25 @@ class History:
         return [
             r
             for r in self.rows
-            if r["logical_family"] == family and (roles is None or r["logical_system"] in roles)
+            if isinstance(r["document"], dict)
+            and r["logical_family"] == family
+            and (roles is None or r["logical_system"] in roles)
+        ]
+
+    def format_limitations(self, families, *, rows=None):
+        return [
+            {
+                "source": custody(r),
+                "native_role": r["source"]["system"],
+                "content_type": r["content_type"],
+                "document_format": r["document_format"],
+                "original_retained_bytes": len(r["content"]),
+                "structured_attribute_examination": "UNPERFORMED",
+                "list_elements_or_text_not_promoted_to_record": True,
+            }
+            for r in (self.rows if rows is None else rows)
+            if (families is None or r["logical_family"] in families)
+            and not isinstance(r["document"], dict)
         ]
 
     def resolve(self, origin, raw_ref, *, expected=None, at=None):
@@ -254,8 +293,12 @@ class History:
         cutoff = origin["source"]["event_at"] if at is None else at
         if _time(target["source"]["available_at"]) > _time(cutoff):
             return None, "ORIGINAL_UNAVAILABLE_AT_COMPANY_OCCURRENCE"
+        if not isinstance(target["document"], dict):
+            return None, "ORIGINAL_FORMAT_UNSUPPORTED_FOR_STRUCTURED_ATTRIBUTES"
         return target, "EXACT_AVAILABLE_ORIGINAL"
 
     def supported_rows(self, value, fallback=()):
         keys = {key(pointer_header(ref)) for _, ref in pointers(value)}
-        return [r for r in self.rows if key(r["source"]) in keys] or list(fallback)
+        return [
+            r for r in self.rows if isinstance(r["document"], dict) and key(r["source"]) in keys
+        ] or list(fallback)

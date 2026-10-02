@@ -146,8 +146,10 @@ def _observed_at(row, value):
         return False
 
 
-def _effective(rows, at):
+def _effective(rows, at, history):
     """Date-effective native versions, while the original history remains retained."""
+    identities = {key(r["source"])[:-1] for r in rows}
+    rows = [r for r in history.rows if key(r["source"])[:-1] in identities]
     selected = {}
     for r in rows:
         if _time(r["source"]["available_at"]) > _time(at):
@@ -158,7 +160,9 @@ def _effective(rows, at):
             or r["source"]["version"] > selected[identity]["source"]["version"]
         ):
             selected[identity] = r
-    return list(selected.values())
+    # An unavailable structured body on the actual latest version does not
+    # authorize falling back to an older configuration, policy or assignment.
+    return [r for r in selected.values() if isinstance(r["document"], dict)]
 
 
 def configuration(history):
@@ -296,7 +300,7 @@ def configuration(history):
                     set(d["ids"])
                     - {
                         detail(r)["asset_id"]
-                        for r in _effective(inventories, d["source"]["event_at"])
+                        for r in _effective(inventories, d["source"]["event_at"], history)
                         if isinstance(detail(r).get("asset_id"), str)
                     }
                 ),
@@ -391,19 +395,25 @@ def selected_calculations(history):
             if j["origin"]["system"].split(".", 1)[0] in relevant
             and j["status"] != "EXACT_AVAILABLE_ORIGINAL"
         ]
-        if missing or unavailable:
+        unsupported_formats = history.format_limitations(relevant)
+        if missing or unavailable or unsupported_formats:
             results[label] = {
                 "status": "SUPPORT_UNAVAILABLE",
                 "missing_exact_originals": missing,
                 "unavailable_native_dependencies": unavailable,
+                "retained_format_limitations": unsupported_formats,
                 "actual_execution_performed": False,
             }
         else:
             try:
                 results[label] = (
-                    analyze_security_publishers(history.rows, SEC005_PLAN)
+                    analyze_security_publishers(
+                        [r for r in history.rows if isinstance(r["document"], dict)], SEC005_PLAN
+                    )
                     if label == "SEC005"
-                    else analyze_vulnerability(history.rows, SEC003_PLAN)
+                    else analyze_vulnerability(
+                        [r for r in history.rows if isinstance(r["document"], dict)], SEC003_PLAN
+                    )
                 )
             except (ProcedureError, KeyError, TypeError, ValueError) as error:
                 # Custody has already been checked centrally. Missing/ambiguous
@@ -424,7 +434,9 @@ def component_lifecycle(history):
         origin = inventory["document"].get("exercise_id")
         related = [
             r
-            for r in _effective(history.select("sec001component"), inventory["source"]["event_at"])
+            for r in _effective(
+                history.select("sec001component"), inventory["source"]["event_at"], history
+            )
             if isinstance(origin, str) and origin
             if r["document"].get("exercise_id") == origin
             and _time(r["source"]["available_at"]) <= _time(inventory["source"]["event_at"])
@@ -519,7 +531,7 @@ def logging(history):
                 return source_id in names
 
             effective_inventories = [
-                r for r in _effective(inventories, cutoff) if relevant_inventory(r)
+                r for r in _effective(inventories, cutoff, history) if relevant_inventory(r)
             ]
             lag_limits = {
                 detail(r).get("local_max_ingestion_lag_seconds")
@@ -972,7 +984,7 @@ def integrity_movement(history):
     movements = []
     for row in history.select("supplementalops", {"media_movement"}):
         d = detail(row)
-        effective = _effective(population, row["source"]["event_at"])
+        effective = _effective(population, row["source"]["event_at"], history)
         ids = {a["asset_id"] for r in effective for a in detail(r).get("resources", [])}
         assets = d.get("assets", d.get("asset_ids", [d["asset_id"]] if "asset_id" in d else []))
         declared = {a["asset_id"] if isinstance(a, dict) else a for a in assets}
@@ -1762,17 +1774,33 @@ def examine(records, *, as_of, scratch_root):
         facts, exceptions, families = _task_facts(task, calculations)
         rows = history.supported_rows(facts)
         missing = not rows
+        formats = history.format_limitations(families)
         if not rows:
             rows = [r for r in history.rows if r["logical_family"] in families]
+        else:
+            included = {key(r["source"]) for r in rows}
+            rows.extend(
+                r
+                for r in history.rows
+                if r["logical_family"] in families
+                and not isinstance(r["document"], dict)
+                and key(r["source"]) not in included
+            )
         rows = rows or history.rows[:1]
         while True:
             included = {key(r["source"]) for r in rows}
             joins = [j for j in history.joins if key(j["origin"]) in included]
-            targets = {key(j["target"]) for j in joins if j["target"] is not None}
+            targets = {
+                key(ref)
+                for j in joins
+                for ref in (j["target"], j.get("retained_unstructured_original"))
+                if ref is not None
+            }
             linked = [r for r in history.rows if key(r["source"]) in targets - included]
             if not linked:
                 break
             rows.extend(linked)
+        formats = history.format_limitations(None, rows=rows)
         observations = _aggregate(
             "EXACT-TASK-ATTRIBUTES",
             {
@@ -1780,6 +1808,7 @@ def examine(records, *, as_of, scratch_root):
                 "task_kind_rule": task["task_kind_rule"],
                 "examined_attributes": facts,
                 "bounded_exceptions": exceptions,
+                "retained_format_limitations": formats,
                 "full_clause_performed": False,
             },
             rows,
@@ -1801,9 +1830,15 @@ def examine(records, *, as_of, scratch_root):
                         "native_role": row["source"]["system"],
                         "actual_retained_bytes_reparsed": True,
                         "full_period_completeness_not_asserted": True,
-                        "task_specific_attributes_supported": not missing,
+                        "document_format": row["document_format"],
+                        "task_specific_attributes_supported": not missing
+                        and isinstance(row["document"], dict),
+                        "structured_attribute_examination": "UNPERFORMED"
+                        if not isinstance(row["document"], dict)
+                        else "BOUNDED_BY_EXACT_TASK_FACTS",
                     },
                     [row],
+                    "SUPPORT_UNAVAILABLE" if not isinstance(row["document"], dict) else "OBSERVED",
                 )
             )
         if joins:
@@ -1832,10 +1867,15 @@ def examine(records, *, as_of, scratch_root):
                     "examined_attributes": facts,
                     "exceptions": exceptions,
                     "native_support": joins,
-                    "selected_native_population_before_selection": [custody(r) for r in rows]
+                    "retained_format_limitations": formats,
+                    "selected_native_population_before_selection": [
+                        custody(r) for r in rows if isinstance(r["document"], dict)
+                    ]
                     if not missing
                     else [],
-                    "acquisition_context_witnesses": [custody(r) for r in rows] if missing else [],
+                    "acquisition_context_witnesses": [
+                        custody(r) for r in rows if missing or not isinstance(r["document"], dict)
+                    ],
                     "required_task_attribute_population_available": not missing,
                     "source_applicability_or_professional_assurance_accepted": False,
                     "prior_audit_or_Key_outcomes_used": False,

@@ -1,6 +1,7 @@
 """Neutral originals precede audit creation and are ordinarily collected."""
 
 import copy
+import hashlib
 import json
 
 import pytest
@@ -46,6 +47,206 @@ def collect(tmp_path, originals):
         item["content_type"] = item["source"]["provenance"]["content_type"]
         item["logical_family"], item["logical_system"] = item["source"]["system"].split(".", 1)
     return actual, context.simulated_at
+
+
+def documentary_original(system, record, at, document, content_type="application/json"):
+    item = row(system, record, at, document)
+    if content_type != "application/json":
+        raw = document.encode("utf-8")
+        item["content"] = raw
+        item["source"]["sha256"] = item["artifact_sha256"] = hashlib.sha256(raw).hexdigest()
+        item["source"]["provenance"].update(content_type=content_type, name="original.txt")
+        item["receipt"]["content_bytes"] = len(raw)
+    return item
+
+
+@pytest.mark.parametrize(
+    "content_type", ["application/json", "text/plain", "text/plain; charset=utf-8"]
+)
+def test_actual_list_and_text_desired_originals_never_supply_structured_configuration(
+    tmp_path, content_type
+):
+    cfg = {"configuration": {"attempts": 2, "timeout_ms": 100, "max_total_ms": 200}}
+    document = [{"detail": cfg}] if content_type == "application/json" else json.dumps(cfg)
+    unsupported = documentary_original(
+        "configuration-history.configuration_desired",
+        "RAW-DESIRED",
+        "2027-02-01T00:00:00Z",
+        document,
+        content_type,
+    )
+    inventory = native(
+        "configuration-history",
+        "configuration_inventory",
+        "ACTUAL",
+        "2027-02-01T00:01:00Z",
+        cfg,
+    )
+    drift = native(
+        "configuration-history",
+        "configuration_drift",
+        "CONSUMER",
+        "2027-02-02T00:00:00Z",
+        {"matches_approved_desired": True},
+        fields={
+            "source_records": {
+                "configuration_inventory": reference(inventory["source"]),
+                "configuration_desired": reference(unsupported["source"]),
+            }
+        },
+    )
+    actual, clock = collect(tmp_path, [unsupported, inventory, drift])
+    # A cached object must never substitute for the ordinary original bytes.
+    for held in actual:
+        held["document"] = {"detail": cfg}
+    history = History(actual, as_of=clock)
+    retained = next(r for r in history.rows if r["source"]["record"] == "RAW-DESIRED")
+    assert retained["document"] == document
+    assert history.select("configuration-history", {"configuration_desired"}) == []
+    fact = configuration(history)["embedded_drift_comparisons"][0]
+    assert (
+        fact["desired_original_status"] == "ORIGINAL_FORMAT_UNSUPPORTED_FOR_STRUCTURED_ATTRIBUTES"
+    )
+    assert "equal_embedded_configuration" not in fact and "actual_retry" not in fact
+    assert any(j["status"] == fact["desired_original_status"] for j in history.joins)
+    scratch = tmp_path / "never-created-by-data-only-examination"
+    outputs = examine(actual, as_of=clock, scratch_root=scratch)
+    assert len(outputs) == 38 and not scratch.exists()
+    output = task(outputs, "CFG-002", "TOE")
+    assert (
+        output["result"]["retained_format_limitations"][0]["structured_attribute_examination"]
+        == "UNPERFORMED"
+    )
+    assert retained["artifact_id"] in output["artifact_ids"]
+    raw_observation = next(
+        o
+        for o in output["observations"]
+        if o["id"].startswith("NATIVE-OCCURRENCE-")
+        and o["facts"]["source"]["record"] == "RAW-DESIRED"
+    )
+    assert raw_observation["status"] == "SUPPORT_UNAVAILABLE"
+    assert raw_observation["facts"]["task_specific_attributes_supported"] is False
+    assert (
+        reference(unsupported["source"])
+        not in output["result"]["selected_native_population_before_selection"]
+    )
+
+
+def test_actual_list_copy_versions_are_preserved_and_do_not_stop_other_38_tasks(tmp_path):
+    originals = original_history()
+    before = []
+    for version, body in ((1, [{"value": 1}]), (2, [{"value": 99}]), (3, [{"value": 1}])):
+        item = row(
+            "integrity.test_copy",
+            "COPY-01",
+            f"2027-06-0{version}T00:00:00Z",
+            body,
+            version=version,
+        )
+        originals.append(item)
+        before.append(item["source"]["sha256"])
+    actual, clock = collect(tmp_path, originals)
+    history = History(actual, as_of=clock)
+    copies = [r for r in history.rows if r["source"]["system"] == "integrity.test_copy"]
+    assert [r["source"]["sha256"] for r in copies] == before
+    assert before[0] == before[2] != before[1]
+    assert len(copies) == 3 and history.select("integrity", {"test_copy"}) == []
+    outputs = examine(actual, as_of=clock, scratch_root=tmp_path / "not-opened")
+    assert len(outputs) == 38
+    citing = [o for o in outputs if o["result"]["retained_format_limitations"]]
+    assert citing and all(len(o["result"]["retained_format_limitations"]) == 3 for o in citing)
+    for output in citing:
+        assert {r["artifact_id"] for r in copies} <= set(output["artifact_ids"])
+        assert not any(
+            r["system"] == "integrity.test_copy"
+            for r in output["result"]["selected_native_population_before_selection"]
+        )
+    assert task(outputs, "SEC-003", "CHECK-SOC2:CC7.1")["result"]["examined_attributes"][
+        "accepted_pure_selected_inventory_scan_baseline_reperformance"
+    ]["omitted_scan_assets"] == ["OPS"]
+
+
+@pytest.mark.parametrize(
+    "mutation", ["bytes", "version_bool", "content_bytes_bool", "future_receipt", "role"]
+)
+def test_nonobject_original_still_requires_exact_custody(tmp_path, mutation):
+    actual, clock = collect(
+        tmp_path, [row("integrity.test_copy", "COPY-01", "2027-06-01T00:00:00Z", [{"value": 1}])]
+    )
+    held = actual[0]
+    if mutation == "bytes":
+        held["retained_bytes"] += b" "
+    elif mutation == "version_bool":
+        held["source"]["version"] = True
+    elif mutation == "content_bytes_bool":
+        held["receipt"]["content_bytes"] = True
+    elif mutation == "future_receipt":
+        held["receipt"]["simulated_as_of"] = "2029-01-01T00:00:00Z"
+    else:
+        held["logical_system"] = "security_approval"
+    with pytest.raises(ProcedureError):
+        History(actual, as_of=clock)
+
+
+def test_later_list_inventory_does_not_revive_earlier_structured_lag_policy(tmp_path):
+    policy = native(
+        "logging-history",
+        "source_inventory",
+        "POLICY",
+        "2027-05-01T00:00:00Z",
+        {"required_sources": [{"source_id": "LOCAL"}], "local_max_ingestion_lag_seconds": 5},
+    )
+    newer = row(
+        "logging-history.source_inventory",
+        "POLICY",
+        "2027-05-02T00:00:00Z",
+        [{"local_max_ingestion_lag_seconds": 100}],
+        version=2,
+    )
+    event = {"sequence": 1, "source_event_at": "2027-05-03T00:00:00Z"}
+    originals = [
+        policy,
+        newer,
+        native(
+            "logging-history",
+            "publisher_events",
+            "PUBLISHER",
+            "2027-05-03T00:00:00Z",
+            {},
+            fields={"local_source_id": "LOCAL", "event": event},
+        ),
+        native(
+            "logging-history",
+            "ingestion_journal",
+            "INGESTION",
+            "2027-05-03T00:00:09Z",
+            {},
+            fields={
+                "local_source_id": "LOCAL",
+                "event": event,
+                "received_at": "2027-05-03T00:00:09Z",
+                "ingestion_lag_seconds": 9,
+            },
+        ),
+        native(
+            "logging-history",
+            "publisher_checkpoints",
+            "CHECKPOINT",
+            "2027-05-03T00:00:10Z",
+            {},
+            fields={"local_source_id": "LOCAL", "sequences": [1]},
+        ),
+    ]
+    actual, clock = collect(tmp_path, originals)
+    history = History(actual, as_of=clock)
+    checkpoint = logging(history)["checkpoint_populations_before_selection"][0]
+    lag = checkpoint["lag_observations"][0]
+    assert checkpoint["effective_inventory_originals"] == []
+    assert lag["effective_local_lag_limit_seconds"] is None
+    assert lag["exceeds_effective_lag_limit"] is None
+    assert checkpoint["lag_limit_status"] == "EFFECTIVE_LOCAL_LIMIT_UNAVAILABLE"
+    limitations = history.format_limitations({"logging-history"})
+    assert len(limitations) == 1 and limitations[0]["source"]["version"] == 2
 
 
 @pytest.mark.parametrize("other_scope", ["NONE", "FOREIGN", "AMBIGUOUS"])
