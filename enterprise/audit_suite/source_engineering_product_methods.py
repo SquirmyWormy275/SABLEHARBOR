@@ -520,6 +520,29 @@ def operating_changes(history):
         approval_attr = next(
             (a for a in approvals if approval and key(a["source"]) == key(approval["source"])), None
         )
+        request_pointer = approval_attr["exact_request_original"] if approval_attr else None
+        same_request = (
+            all(
+                t["exact_request_original"] is not None
+                and key(t["exact_request_original"]) == key(request_pointer)
+                for t in test_attrs
+            )
+            if request_pointer is not None and test_attrs
+            else None
+        )
+        request_original = history.index.get(key(request_pointer)) if request_pointer else None
+        explicit_fields = [
+            name for name in ("change_id", "configuration_key", "candidate") if name in detail(row)
+        ]
+        explicit_matches = (
+            all(
+                name in detail(request_original)
+                and _json(detail(row)[name]) == _json(detail(request_original)[name])
+                for name in explicit_fields
+            )
+            if request_original is not None
+            else None
+        )
         decision = detail(approval).get("decision") if approval else None
         local_approved = decision in {"APPROVE_SELECTED_LOCAL_CHANGE", "APPROVED"}
         fact = {
@@ -529,6 +552,10 @@ def operating_changes(history):
             "approval_decision": decision,
             "mandatory_test_attributes": test_attrs,
             "mandatory_test_support": accepted_test,
+            "approval_request_original": request_pointer,
+            "tests_and_approval_bind_exact_same_request": same_request,
+            "explicit_release_request_fields_examined": explicit_fields,
+            "explicit_release_request_fields_match_approved_request": explicit_matches,
             "distinct_recorded_requester_and_approver": approval_attr[
                 "distinct_from_named_requester"
             ]
@@ -537,6 +564,8 @@ def operating_changes(history):
             "local_release_supported": status == "EXACT_AVAILABLE_ORIGINAL"
             and local_approved
             and accepted_test
+            and same_request is True
+            and explicit_matches is True
             and approval_attr is not None
             and approval_attr["distinct_from_named_requester"] is True
             and history.action_supported(row)
@@ -549,6 +578,8 @@ def operating_changes(history):
             and not local_approved
             or test_attrs
             and not accepted_test
+            or same_request is False
+            or explicit_matches is False
             or approval_attr
             and approval_attr["distinct_from_named_requester"] is False
         ):

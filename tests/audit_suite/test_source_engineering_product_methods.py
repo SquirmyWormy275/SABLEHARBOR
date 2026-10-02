@@ -724,6 +724,7 @@ def test_operating_mandatory_results_application_and_false_clean_claim_preserved
     out = operating_changes(hist(ordinary_pair))
     assert [r["mandatory_test_support"] for r in out["releases"]] == [False, True]
     assert [r["local_release_supported"] for r in out["releases"]] == [False, True]
+    assert all(r["tests_and_approval_bind_exact_same_request"] is True for r in out["releases"])
     assert [r["applied_value_equals_exact_requested_candidate"] for r in out["applications"]] == [
         False,
         True,
@@ -735,6 +736,72 @@ def test_operating_mandatory_results_application_and_false_clean_claim_preserved
         "APPLIED_VALUE",
         "POST_CHANGE_VERIFICATION",
     }
+
+
+def test_genuine_cross_request_test_cannot_authorize_another_approved_change(tmp_path):
+    sources = []
+
+    def add(role, record, day, document):
+        r = row("eng005operating." + role, record, f"2027-08-0{day}T09:00:00Z", document)
+        sources.append(r)
+        return r
+
+    request_a = add(
+        "change_request",
+        "CHANGE-A",
+        1,
+        {"change_id": "A", "candidate": {"retry": 3}, "actor_id": "REQUESTER"},
+    )
+    request_b = add(
+        "change_request",
+        "CHANGE-B",
+        2,
+        {"change_id": "B", "candidate": {"retry": 9}, "actor_id": "REQUESTER"},
+    )
+    tested_a = add(
+        "change_test",
+        "TEST-A",
+        3,
+        {
+            "required_tests": ["SCHEMA"],
+            "passed_tests": ["SCHEMA"],
+            "test_results": {"SCHEMA": True},
+            "tested_candidate": {"retry": 3},
+            "source_refs": {"request": reference(request_a["source"])},
+        },
+    )
+    approval_b = add(
+        "change_approval",
+        "APPROVAL-B",
+        4,
+        {
+            "decision": "APPROVE_SELECTED_LOCAL_CHANGE",
+            "actor_id": "INDEPENDENT-APPROVER",
+            "source_refs": {"request": reference(request_b["source"])},
+        },
+    )
+    add(
+        "change_release",
+        "RELEASE-B",
+        5,
+        {
+            "change_id": "B",
+            "security_decision_ref": "APPROVAL-B",
+            "source_refs": {
+                "APPROVAL-B": reference(approval_b["source"]),
+                "TEST-A": reference(tested_a["source"]),
+            },
+        },
+    )
+    records, at = collected(tmp_path, sources)
+    result = operating_changes(History(records, as_of=at))
+    release = result["releases"][0]
+    assert release["mandatory_test_support"] is True
+    assert release["distinct_recorded_requester_and_approver"] is True
+    assert release["tests_and_approval_bind_exact_same_request"] is False
+    assert release["explicit_release_request_fields_match_approved_request"] is True
+    assert release["local_release_supported"] is False
+    assert result["exceptions"][0]["facet"] == "OPERATING_RELEASE_GATE"
 
 
 def test_emergency_bypass_and_later_rollback_do_not_make_retrospective_approval(ordinary_pair):
