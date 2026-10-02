@@ -22,6 +22,7 @@ from .source_library_audit import file_sha, private_file, quiescent_read
 from .store import DomainError, digest
 
 SCHEMA = "SH_RETAINED_COMPANY_EXPLANATION_SERVICE_CONFIG_V1"
+MAX_SNAPSHOT_BYTES = 32 * 1024 * 1024
 MODULES = (
     "retained_explanation_service.py",
     "bound_instructor.py",
@@ -132,7 +133,9 @@ class ExplainedWorkroom:
             "Exact same-engagement explanation manifest with a pinned snapshot required",
         )
         snapshot = pinned_json(
-            binding["path"] / "snapshot.json", manifest["files"]["snapshot.json"]
+            binding["path"] / "snapshot.json",
+            manifest["files"]["snapshot.json"],
+            max_bytes=MAX_SNAPSHOT_BYTES,
         )
         require(
             set(snapshot)
