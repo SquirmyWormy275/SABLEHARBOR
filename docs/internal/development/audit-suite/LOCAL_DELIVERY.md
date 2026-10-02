@@ -2,6 +2,8 @@
 
 The reviewed large-workspace transport is now integrated; all 280 frontend tests and the production build pass. Actual final fieldwork, protected Key authoring, large-service composition and delivery remain in progress.
 
+The source-verification lease has passed independent runtime and same-company composition review, plus 44 main checks. The unchanged rooms reopened under fieldwork index `ca1a4ded9f2c5220ff3369a7eeee302068adf006c10b3b7b61eec2eaca9fd3e9`. One ordinary writer per room is continuing the remaining 213 CLEAN and 312 MESSY tasks, including B05 last. The full-company answer key is undergoing causal content review; a source-fact inventory alone does not establish a usable or accepted Key.
+
 Current October 1 execution is tracked in [the active workflow](ACTIVE_AGENT_GRAPH_2026-10-01.md) and [execution closeout](EXECUTION_CLOSEOUT.md). The full company-source pair is still in progress; the versioned checks below describe earlier delivery snapshots.
 
 This branch delivers the local implementation of the September 12 audit-suite handover against accepted baseline `325fdc8a25ab8ba8d74bf4b62d6853e703cfecd8`. The protected build ledger retains engineering evidence and exact scope limits. Eight of ten program entries have usable scoped training content; two remain blocked by missing authorized sources. This document does not assert complete program coverage, owner acceptance, professional rubric validation, a completed assessment or external deployment.

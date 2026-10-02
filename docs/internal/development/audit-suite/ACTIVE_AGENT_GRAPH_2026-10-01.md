@@ -9,9 +9,10 @@ main freshly verified 399 references and passed 75 focused checks. Its ordinary
 CLEAN 99-task continuation completed, with 196 workpapers, 213 unrun tasks and
 2,643 held originals at revision 4,122. Its execution is
 `093c750e86b4dc225a5c2398f0853e8a528cade39ab1d01d47d19093f9abe5ab`.
-Both room writers are now quiescent for the source-verification successor;
-MESSY completed source transfers remain held and its 312 tasks remain unrun.
-Neither room is declared complete.
+The preserved source-lease checkpoint is quiescent at CLEAN revision 4,122
+and MESSY revision 2,754; MESSY holds 1,988 originals, including 1,393 person-history
+versions. The current continuation has resumed both rooms from that exact
+checkpoint. Neither room is declared complete.
 
 B05's native-role successor is independently accepted as
 `b4ee8d76204edf97bd32c6b77dd479a53abcff3815fce9f2b898ea3a9c1016ac`,
@@ -27,9 +28,17 @@ and remains pending.
 The complete private packet is in main with 1,070 verified references and 18
 checks; the small protected Key boundary is in main with 603 verified references
 and 32 checks. Neither supplies the actual final packet or company-bound Key.
-A source-operation verification lease passed 44 author checks and exact native
-byte/metadata discovery at 1,695-version scale; independent runtime and pair
-composition review is running. A narrow source-dependency Key contract passed
+The source-operation verification lease is independently accepted: runtime
+`9bc055d1d730b77e4bbbfb46cc4643813525124119f255e31c0acfdda4f60c37` and pair
+`c8d40a4ecd50d797984e33e46416b8d71208169ff7da2c73db5be30d882ca330`.
+Main rechecked all 114 frozen references and passed 44 checks with no skips.
+The same company and unchanged rooms reopened under composition
+`ca1a4ded9f2c5220ff3369a7eeee302068adf006c10b3b7b61eec2eaca9fd3e9`;
+reopen verification is `d1f142c2922907539ef714103ccdfe247d194e56288d487c25dd75b38b8092bf`.
+One ordinary writer in each room is now continuing all remaining disjoint
+procedures: 213 CLEAN and 312 MESSY tasks, including B05 last. Native
+permissions, dates, bytes and receipts are still verified for each transfer.
+The lease lasts one locked operation and carries no cached evidence or outcomes. A narrow source-dependency Key contract passed
 34 author checks and passed separate independent review; main checked its 79
 frozen references and all 34 checks. Both exact scope procedures can now have
 source-bound Key expectations without invented control ownership. Fresh large-history verification
