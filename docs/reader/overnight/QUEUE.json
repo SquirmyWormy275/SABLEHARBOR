@@ -2518,10 +2518,10 @@
       "actual_key_binding_coordinator_v2_status": "19_NEUTRAL_SELECTED_PRIMITIVE_CHECKS_AND_INDEPENDENT_BYTE_ACL_PASS_ROOT140_REFERENCES_PASS_NO_ACTUAL_BIND_FINAL_COMPOSITION_PENDING",
       "real_payload_encoder_component_root_review_sha256": "6d32c48e99c511cd028cf11f07fa8e2cd8ceb40255fd72a72c4603e2b78c84d3",
       "real_payload_encoder_component_status": "FROZEN_A070_FULL238423640_BYTES_EXACT_REFERENCE_AND_FRESH_ALL_NODE_PASS_122BYTE_NOTE_ENCODE1_459SECONDS_DB_GROWTH20480_BYTES_NO_ACTUAL_DB_OR_SERVICE",
-      "new_final_retained_composition_status": "FROZEN25EA_PRODUCT46394_ROOT2770_REFERENCES_PASS_INDEPENDENT_LIFECYCLE_KEY_HTTP_HISTORY_COMPOSITION_REVIEW_RUNNING_MAIN_INTEGRATION_ISOLATED",
+      "new_final_retained_composition_status": "SELECTED_COMPONENTS_PASS_INDEPENDENT599217_CHANGES_REQUIRED_ORDINARY_GET_CLOSURE_AND_ORIGINAL_MANUAL_ASSESSMENT_DEBRIEF_ACTIVATION_FOCUSED_SUCCESSOR_IN_ISOLATED_REVIEW",
       "final_current_live_replay_last_observed_progress": {
-        "CLEAN": 4700,
-        "MESSY": 3500
+        "CLEAN": 5200,
+        "MESSY": 4300
       },
       "final_current_live_replay_last_observed_progress_is_acceptance": false,
       "actual_prefix_delegation_consumption_recipe_independent_review_sha256": "4ada2eb0b964a901cd9787c47e961fc2635446ad46e835d9548a0072dbddd098",
@@ -2531,7 +2531,25 @@
       "new_final_retained_composition_author_handoff_sha256": "dd8e86105ad51e01ff54d7bb2403aa8d579912e9b8f507e9520122468980d5bf",
       "new_final_retained_composition_root_input_replay_sha256": "835e3d6719f85514903c9b6ea268233482dc7db0a52456b72fd9fc00d1b8866c",
       "final_native_evidence_external_preservation_sha256": "e3a024e3df2d6edf0811369f2054e4d386ca1dec88e90811c6811643b0c259f5",
-      "full_historical_physical_audit_sqlite_external_backup": false
+      "full_historical_physical_audit_sqlite_external_backup": false,
+      "new_final_retained_composition_independent_review_sha256": "599217e173e2572c1ba42aa869884b211d2d4b121a782274ac939b70dde2d9f2",
+      "actual_rehearsal_followthrough_captured_gap_sha256": "6cea5ff26e9136c3e24d3df0e79eef2e066e597250f18a1a40593120f0790bd3",
+      "actual_captured_findings": {
+        "CLEAN": 0,
+        "MESSY": 0
+      },
+      "actual_captured_reviews": {
+        "CLEAN": 0,
+        "MESSY": 0
+      },
+      "actual_captured_recorded_remediations": {
+        "CLEAN": 0,
+        "MESSY": 0
+      },
+      "actual_documentary_outcomes_are_full_control_effectiveness": false,
+      "engineering_closeout_matrix_sha256": "0b98a7deae0a8a41fec72dea67c0cff528bc72ddb1b4a5f705b3343f3d14703e",
+      "postdelegation_coordinator_root_selected_input_review_sha256": "c4e9f11b7cd11ac678365ff2f2d23d7c6b7c124713ab26d6416c42d80a4766c7",
+      "postdelegation_coordinator_status": "SELECTED_AUTHOR20_AND_IMMUTABLE_LINEAGE_PASS_ROOT286_REFERENCES_STATIC_PASS_UNFILLED_ACTUAL_FINAL_GATES_PENDING"
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"

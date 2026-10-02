@@ -1,5 +1,29 @@
 # Local audit-training delivery
 
+October 2, 20:40 UTC delivery review checkpoint: the current frozen viewer passed
+its selected storage, custody, private-Key closure, packet and path-equivalence
+checks, but independent review requires changes before complete delivery.
+Review is `599217e173e2572c1ba42aa869884b211d2d4b121a782274ac939b70dde2d9f2`.
+An ordinary learner GET lacks the later response-closure check, and the protected
+preview disables the requested manual assessment and staged debrief functions.
+A focused, separately reviewed successor is being built; neither frozen candidate
+has been adopted in main. Its existing default preview remains preserved.
+
+Root freshly compared both captured state bytes to capture `01400485` and counted
+409 workpapers, zero findings, zero remediations and zero reviews per room.
+Reconciliation is `6cea5ff26e9136c3e24d3df0e79eef2e066e597250f18a1a40593120f0790bd3`.
+Documentary task execution does not establish the requested separate follow-through
+journey or a full control-effectiveness conclusion. After original-prefix and
+successor acceptance, the derived tail will retain a source-linked, explicitly
+scripted engineering discussion, proposed remediation and separate reviewer record.
+It will not invent professional acceptance or a successful unperformed retest.
+
+The 29-job engineering matrix preserves every queue job and identifies the real
+activation, full-corpus selection, background-work and final journey gaps.
+Matrix is `0b98a7deae0a8a41fec72dea67c0cff528bc72ddb1b4a5f705b3343f3d14703e`.
+The original current-live replay continues on unchanged originals; the one-use
+parent grants remain unspent. Earlier checkpoints and their limits follow.
+
 October 2, 20:10 UTC checkpoint: both original rooms retain 409 documentary
 workpapers and zero unrun tasks. The first complete current-live replay is still
 running on unchanged company/audit bytes; no final replay acceptance is claimed.
