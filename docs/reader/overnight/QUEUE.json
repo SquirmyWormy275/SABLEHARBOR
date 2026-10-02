@@ -2550,7 +2550,7 @@
       "engineering_closeout_matrix_sha256": "0b98a7deae0a8a41fec72dea67c0cff528bc72ddb1b4a5f705b3343f3d14703e",
       "postdelegation_coordinator_root_selected_input_review_sha256": "c4e9f11b7cd11ac678365ff2f2d23d7c6b7c124713ab26d6416c42d80a4766c7",
       "postdelegation_coordinator_status": "SELECTED_AUTHOR20_AND_IMMUTABLE_LINEAGE_PASS_ROOT286_REFERENCES_STATIC_PASS_UNFILLED_ACTUAL_FINAL_GATES_PENDING",
-      "checkpoint_utc": "2026-10-02T21:55:11Z",
+      "checkpoint_utc": "2026-10-02T22:55:00Z",
       "focused_delivery_successor_commit": "c696bda0a6c3e60c990d5ebcfbe39177fede6cb3",
       "focused_delivery_successor_status": "SELECTED_SEQUENTIAL_BACKEND_ACCEPTED_GENUINE_PARALLEL_BROWSER_STARTUP_REFUSAL_UNDER_FOCUSED_REPAIR",
       "focused_delivery_successor_dependency_sha256": "c0bd01bd24add29231732cbfd8a745eb8f04e8dea47110b90639969bbd3a1122",
@@ -2577,7 +2577,20 @@
       "source_backed_followthrough_http_v4_independent_selected_review_sha256": "1dc34338a28826c8a066c741461242cdd671c0dcf118b9c1b7af2a7f0c9e4dd2",
       "offline_export_preparation_root_reconciliation_sha256": "961c42bc5d31ce6766fabff2879bfbcaa8bb8c638e5165478b7837419e2bc051",
       "offline_lexical_successor_sha256": "2f17b594fe76daa041233ec4fe392a75910618568d003e9bb417472c707020ad",
-      "actual_complete_compressed_packets_exported": false
+      "actual_complete_compressed_packets_exported": false,
+      "retained_concurrent_successor_status": "F9_FULL_ASGI_SETTLEMENT_OWN_AND_ROOT_SELECTED_CHECKS_PASS_INDEPENDENT_SHARED_APP_DISCONNECT_BROWSER_CLOSURE_PENDING",
+      "retained_concurrent_successor_commit": "f9d570b750b4b0e2afb8e6d1007c1482ec11a706",
+      "retained_concurrent_successor_service_sha256": "5f2ac63f33bb0a8d7a2302fa0de2b82a592c0167f71e8448bc5e112fb048b3f2",
+      "retained_concurrent_successor_root_isolated_sha256": "ceab83a113cf34bf7f36758d1d0d1b82876c755ef3c519a8fcce95679a5ede69",
+      "retained_concurrent_successor_root_dependency_vector_sha256": "bb0b4f9fdca7dd7521f84439b3e030825a70ee308833ddd32134a241e4c1af7e",
+      "retained_concurrent_successor_root_focused25_xml_sha256": "463e4714b3017cb8bf0529e3a4312956a38bad168d51d83584605a62498624f0",
+      "retained_concurrent_successor_root_build": "PASS_NEW_MOBILE_CSS_AND_6_LITERAL_FILES",
+      "mobile_signout_successor_css_sha256": "7c456aa0d2471f8808445a620e033952106d778fcaec341ee2f1a8965cf8b7fa",
+      "selected_small_preparations_root_reconciliation_sha256": "4744e220e772fdc93c42aca97d66089a6ab650f072b31fb71ba96be13ced9a5a",
+      "source_backed_followthrough_v4_root_admission_sha256": "776534957360728933080a19b6f8e1c32243341fbee5d268a310c1d19344c6a2",
+      "actual_main_runtime_adoption": false,
+      "full88_coordinator_admission": "NEW_SURGICAL_SUCCESSORS_IN_PREPARATION_OLD33_PREPARATIONS_PRESERVED",
+      "first_actual_full_replay_status": "PARENT94754_RUNNING_CLEAN_WORKER_IDLE_MESSY_WORKER_READING_NO_FINAL_PROOF"
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"

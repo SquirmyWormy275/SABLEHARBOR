@@ -1,5 +1,27 @@
 # Active company-source audit workflow
 
+October 2, 22:55 UTC checkpoint: the focused request successor owns the entire
+retained ASGI invocation through guard, handler and closing-worker settlement.
+Frozen service SHA is
+`5f2ac63f33bb0a8d7a2302fa0de2b82a592c0167f71e8448bc5e112fb048b3f2`.
+Root staged it in isolation, loaded all 88 Python origins and four native members
+under the exact signature-48 descriptor, and passed 25 focused checks plus the
+frontend build. Root receipt is
+`ceab83a113cf34bf7f36758d1d0d1b82876c755ef3c519a8fcce95679a5ede69`.
+The mobile successor also restores the existing keyboard-accessible sign-out
+control. Independent shared-company, disconnect and real-browser closure remains
+under review; the old concurrency counters remain preserved. Actual adoption,
+Key binding and original one-use parent consumption remain unperformed.
+
+Root separately reconciled 194 ordinary preparation pairs (402 references): the
+selected 22-case/mobile supplement, current-native-closure draft and six-case
+truthful denied-census prediction. Receipt is
+`4744e220e772fdc93c42aca97d66089a6ab650f072b31fb71ba96be13ced9a5a`.
+The first actual full history verifier remains running: CLEAN's worker is idle
+and MESSY's worker is actively reading. No final proof has been accepted. Exact
+88-origin coordinator successors are being prepared; old 33-origin narrow
+preparations remain unchanged. All 46 original queue jobs remain unchanged.
+
 October 2, 21:55 UTC checkpoint: independent review accepted the selected
 sequential V2 backend with 22 cases; gate is
 `51381821f015515e96cf1e3d398f9a26747a8b07577d33651dc7b9f182e93440`.
