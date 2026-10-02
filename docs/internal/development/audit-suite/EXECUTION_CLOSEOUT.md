@@ -1,5 +1,35 @@
 # Audit-suite execution closeout
 
+The current integration checkpoint supersedes the older implementation-status
+paragraphs below. The CLEAN B06 preflight stopped before its 99 task writes;
+its exact failure is `e9cedc898b2f5bcc76b6df7276ca28e893add18b1d8653b5ece20d9813118e70`.
+All 586 held originals remain intact. The native-format successor is independently
+accepted as `350bcb9a3385bc1bef36e315269ad02c1bbf3b3c8b414f8ad77267db197049c0`;
+main freshly verified 399 references and passed 75 focused checks. Its ordinary
+CLEAN 99-task continuation is running. MESSY is still collecting B08 company
+originals with its existing writer; neither room is declared complete.
+
+B05's native-role successor is independently accepted as
+`b4ee8d76204edf97bd32c6b77dd479a53abcff3815fce9f2b898ea3a9c1016ac`,
+with 227 main-verified references and 35 checks. Its actual 50-task follow-on
+waits for each room's preceding queue. The large workspace transport passed
+independent review `24b455f7e05d821c37ccae21048380a9cb722795671bb8cc0c52b35527595a81`:
+54 HTTP cases and seven real browser cases, including 1,694 citations, a 4.44 MB
+workpaper, historical review, latest-base editing and exact sample correction.
+Main verified 1,807 references, passed all 280 frontend tests and built the
+production app. The protected large retained-service composition is separate
+and remains pending.
+
+The complete private packet is in main with 1,070 verified references and 18
+checks; the small protected Key boundary is in main with 603 verified references
+and 32 checks. Neither supplies the actual final packet or company-bound Key.
+A source-operation verification lease passed 44 author checks and exact native
+byte/metadata discovery at 1,695-version scale; independent runtime and pair
+composition review is running. A narrow source-dependency Key contract passed
+34 author checks and is separately reviewed. Fresh large-history verification
+and interactive Key performance remain in development. No earlier acceptance
+configuration authorizes changed origins or transfers audit outcomes.
+
 Execution remains in progress. The current final workrooms are under
 `enterprise/generated/audit-suite/full-scope-company-audit-2026-10-01/main-run-v1/`.
 They share one company initialized with 5,608 admitted native versions before

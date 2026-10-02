@@ -2217,7 +2217,7 @@
       "activation_proof_sha256": "40722199d57872e420e8fa0bee3ca048584adb3e15dd9593b5497770e1f086b3",
       "independent_birth_verification_sha256": "bf804a33a1945fd332581070227edde813765b22e87e0e4a7292806b47472a36",
       "period_close_clock_advance_sha256": "573b1377749b2da3bcb6a6498f2c4cc990b09b6cdb97fb97cf00728bf7ac74a4",
-      "current_fieldwork": "RUNNING_REVIEWED262_PER_ROOM_ONE_WRITER_EACH_B05_SUCCESSOR_REVIEW_PENDING",
+      "current_fieldwork": "CLEAN_B06_NATIVE_SHAPE99_ORDINARY_WRITER_RUNNING_MESSY_B08_ORDINARY_SOURCE_COLLECTION_RUNNING",
       "all_disjoint_family_task_methods_required": true,
       "historical_task_results_imported": false,
       "qualified_or_owner_acceptance": "NOT_ASSERTED",
@@ -2248,13 +2248,11 @@
       "current_continuity_method_review_sha256": "f6bca6fb467cbd55022ba09a3941ad9b838d278c442df5420d222bcb701c2724",
       "current_security_method_review_sha256": "d8363d68b56088e18de6b303cc8ff635caf293df275874e049a6a087ccf9ea29",
       "current_engineering_method_review_sha256": "2c1f58e1bbb9f5a822062d1565a9815520a00df2dd5479d2bbfafa93a74bf422",
-      "current_data_record_method_review_sha256": "751d385b3f65f81449e4e360fd002a83fd32c2741c4ef858742bc9c45ce7da68",
-      "pending_independent_method_reviews": [
-        "B05_ACTUAL_NATIVE_ROLE_SUCCESSOR"
-      ],
+      "current_data_record_method_review_sha256": "b4ee8d76204edf97bd32c6b77dd479a53abcff3815fce9f2b898ea3a9c1016ac",
+      "pending_independent_method_reviews": [],
       "protected_retained_key_status": "SMALL_BOUNDARY_ACCEPTED_LARGE_BINDING_CORRECT446_63_SECONDS_USABILITY_CHANGES_REQUIRED_ACTUAL_BINDING_PENDING",
       "workforce_efficient_successor_status": "FULL52_IMMUTABLE_REPLAY_ACCEPTED_MAIN45_PASS_ACTUAL_QUEUE_RUNNING",
-      "current_legal_provider_method_review_sha256": "aace1bc14db93a4d61c1e07a57b84d03aa5da1bba72cd6e2a02e8ec40dec8926",
+      "current_legal_provider_method_review_sha256": "350bcb9a3385bc1bef36e315269ad02c1bbf3b3c8b414f8ad77267db197049c0",
       "current_governance_method_review_sha256": "f6934145ec6f1d981f90bf8c13aa91b73b80625da9973adcb5b4e987e222cb93",
       "current_assurance_method_review_sha256": "4ee8eb5827625df3cbce45571cbc079a5239ca02c201165e1d51176641e08078",
       "current_incident_complaints_method_review_sha256": "7bee82300a5f546922b0a6c70d22292f6cfebd807fd7955144acdee7408262bc",
@@ -2277,7 +2275,7 @@
       "protected_retained_key_small_review_sha256": "1ad37a24764680d0e74cdb2712509e2b7f75e706ee141106e78c2fa570d2eb56",
       "complete_history_packet_status": "INDEPENDENT_ACCEPTED31_REFUSALS_MAIN_EXACT_REPRODUCTION_PASS_ACTUAL_DELIVERY_PENDING",
       "complete_history_packet_author_handoff_sha256": "9037405794c64ae1a72d5f8228103a435791ac6adea2b60d76351b3fa0e43404",
-      "workspace_transport_status": "AUTHOR_FULL1695_HTTP_AND_LARGE_DRAFT_EDIT_REVIEW_CORRECTION_BROWSER_PASS_PENDING_INDEPENDENT_REVIEW",
+      "workspace_transport_status": "INDEPENDENT54_HTTP_7_BROWSER_ACCEPTED_MAIN1807_REFERENCES_AND280_UI_PASS_PRODUCTION_BUILD_PASS_LARGE_SERVICE_COMPOSITION_PENDING",
       "per_mode_queue_quiescence_sha256": "33d5aaa3e57e21eb46754e803879e6a54b31c2e652e9ed729ec075d520c18f46",
       "actual_retained_originals_at_queue_quiescence": {
         "CLEAN": 2469,
@@ -2288,7 +2286,37 @@
       "complete_history_packet_review_sha256": "ceac6db0c968b75923a581e025d3598b18dcc70e6c1450d2b1095f1771020e50",
       "complete_history_packet_main_reproduction_sha256": "a11fd7c22535646336f08ab73f5b2c7340aa285d112a006ceb81a0f7bd9a4b1d",
       "audit_storage_preservation_sha256": "c0548637ff11760ae3682c3cd8461e336b2fab91f96e070daf716687b9f8d84f",
-      "per_mode_queue_selected_tasks": 262
+      "per_mode_queue_selected_tasks": 262,
+      "preserved_legal_provider_actual_preflight_failure_sha256": "e9cedc898b2f5bcc76b6df7276ca28e893add18b1d8653b5ece20d9813118e70",
+      "legal_provider_native_shape_main_reproduction_sha256": "0efeb3117be2d0f9938d91b193b07491b187f5976e5254eeeb678eed17f90207",
+      "legal_provider_native_shape_main_checks": {
+        "passed": 75,
+        "failed": 0,
+        "skipped": 0
+      },
+      "data_record_native_role_main_reproduction_sha256": "002a4b7d07f511575ebb50d035bdb6d58a8a83c5a3121611952d061cf91dbe63",
+      "data_record_native_role_main_checks": {
+        "passed": 35,
+        "failed": 0,
+        "skipped": 0
+      },
+      "workspace_transport_review_sha256": "24b455f7e05d821c37ccae21048380a9cb722795671bb8cc0c52b35527595a81",
+      "workspace_transport_main_reproduction_sha256": "7a4f9825f03c4ce14a763066431a7ee1c790297f786440629d121e3230f7d0d0",
+      "protected_retained_key_main_reproduction_sha256": "14c02d85e9d014e2a12974c2403f771edbab4da858ca2470ba2bdfc3a8f28363",
+      "protected_retained_key_main_checks": {
+        "passed": 32,
+        "failed": 0,
+        "skipped": 0
+      },
+      "complete_history_packet_main_checks": {
+        "passed": 18,
+        "failed": 0,
+        "skipped": 0
+      },
+      "source_invocation_lease_status": "AUTHOR44_PASS_EXACT_NATIVE1695_DISCOVERY_BENCHMARK_PASS_PENDING_INDEPENDENT_RUNTIME_AND_PAIR_COMPOSITION",
+      "source_invocation_lease_author_handoff_sha256": "771a3d9afcbb87e570bc05a2de53288564c85855fca8cd568c2e505f9ddb0d33",
+      "scope_key_contract_status": "AUTHOR34_PASS_PENDING_INDEPENDENT_CURRENT_SCOPE_DEPENDENCY_REVIEW",
+      "scope_key_contract_author_handoff_sha256": "6259e4bd03ffbb610607dffa24fb7104fe4d6f8a9c60546a35c1c2008014354f"
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"
