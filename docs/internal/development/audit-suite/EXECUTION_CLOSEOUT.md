@@ -1,6 +1,25 @@
 # Audit-suite execution closeout
 
-October 2 checkpoint: CLEAN has 284 workpapers and 125 unrun procedures at
+Latest October 2 continuation: the independently accepted UTF-8 B08 successor
+is in main, with 154 freshly verified references and 14 passing checks. Both real
+rooms completed its 23 ordinary procedures: CLEAN now has 307 workpapers and 102
+unrun tasks; MESSY has 120 workpapers and 289 unrun tasks. Native text remains
+unparsed and receives no structured assurance credit. The same rooms resumed
+under `718dcd5dae3857f4238ef3b6bbd07f1298b00ec706753c83bee4c955f15e333e`.
+The remaining ordinary batches are running, with B05 last and all prior failures
+preserved. Neither final workroom is complete yet.
+
+The full company-native Key now has 70 control chapters, two exact control-free
+scope chapters and four specific causal cards in each branch, linked to all 409
+procedures. Root rechecked 1,906 originals, 19,271 typed facts, 15,520 literal
+references and all 818 distinct procedure facets. Claims were reconstructed from
+the exact originals and their authority/population/period limits are retained.
+Main rechecked 37 frozen files and passed 24 focused checks. This accepts bounded
+instructor-authored context and procedure prompts; actual company clock/ACL/source
+binding and protected large-service verification remain pending. It supplies no
+automatic grade, full-attribute satisfaction, owner or qualified acceptance.
+
+Preserved October 2 MIME-failure checkpoint: CLEAN has 284 workpapers and 125 unrun procedures at
 revision 4,941; MESSY has 97 workpapers and 312 unrun procedures at revision 3,111.
 Both stopped in the pure B08 preflight before its 23 task writes because a valid
 UTF-8 native text original was rejected. Held originals and all prior work remain

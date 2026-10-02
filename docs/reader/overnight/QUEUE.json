@@ -2217,7 +2217,7 @@
       "activation_proof_sha256": "40722199d57872e420e8fa0bee3ca048584adb3e15dd9593b5497770e1f086b3",
       "independent_birth_verification_sha256": "bf804a33a1945fd332581070227edde813765b22e87e0e4a7292806b47472a36",
       "period_close_clock_advance_sha256": "573b1377749b2da3bcb6a6498f2c4cc990b09b6cdb97fb97cf00728bf7ac74a4",
-      "current_fieldwork": "CLEAN284_MESSY97_WORKPAPERS_BOTH_B08_PURE_UTF8_PREFLIGHT_REFUSED_BEFORE23_WRITES_SUCCESSOR_INDEPENDENT_REVIEW_RUNNING",
+      "current_fieldwork": "CLEAN307_MESSY120_B08_NATIVE23_PROCEDURES_PER_BRANCH_COMPLETE_V6_ALL_REMAINING_QUEUE_RUNNING",
       "all_disjoint_family_task_methods_required": true,
       "historical_task_results_imported": false,
       "qualified_or_owner_acceptance": "NOT_ASSERTED",
@@ -2254,7 +2254,7 @@
       "workforce_efficient_successor_status": "FULL52_IMMUTABLE_REPLAY_ACCEPTED_MAIN45_PASS_ACTUAL_QUEUE_RUNNING",
       "current_legal_provider_method_review_sha256": "350bcb9a3385bc1bef36e315269ad02c1bbf3b3c8b414f8ad77267db197049c0",
       "current_governance_method_review_sha256": "f6934145ec6f1d981f90bf8c13aa91b73b80625da9973adcb5b4e987e222cb93",
-      "current_assurance_method_review_sha256": "4ee8eb5827625df3cbce45571cbc079a5239ca02c201165e1d51176641e08078",
+      "current_assurance_method_review_sha256": "45fb607e2d7ba2991b38bdcdadc0a97451e779d6edf8685a23024c8ae1682164",
       "current_incident_complaints_method_review_sha256": "7bee82300a5f546922b0a6c70d22292f6cfebd807fd7955144acdee7408262bc",
       "retained_history_streaming_successor_status": "FULL2811_INDEXED_VERIFICATION_PASS825_87_SECONDS_LARGE_INTERACTION_CHANGES_REQUIRED",
       "preserved_security_actual_preflight_failure_sha256": "27071600f6e6c475036c711a30844c2f762f91f60516ba334ca801c2f1f2fc8d",
@@ -2332,8 +2332,8 @@
         "frontend_files": 49,
         "production_build": "PASS"
       },
-      "current_fieldwork_composition_sha256": "ca1a4ded9f2c5220ff3369a7eeee302068adf006c10b3b7b61eec2eaca9fd3e9",
-      "current_fieldwork_reopen_verification_sha256": "d1f142c2922907539ef714103ccdfe247d194e56288d487c25dd75b38b8092bf",
+      "current_fieldwork_composition_sha256": "718dcd5dae3857f4238ef3b6bbd07f1298b00ec706753c83bee4c955f15e333e",
+      "current_fieldwork_reopen_verification_sha256": "6e49015d0ad668fef8b2bdf3aaf29072644728aa2d9c2960d67f2fdb2c4ed1fe",
       "source_invocation_lease_main_reproduction_sha256": "882413ea9f39f9b69c7e8cc2ad2942e48bc37d4cef797e4ff5ccbfafb1bd4595",
       "source_invocation_lease_main_checks_sha256": "66264448bb1dc24a5cb7406dc8165b2baa2944c6f8c1ae9446319a590a1915b5",
       "source_invocation_lease_quiescence_sha256": "fc6f49aaa182eee099a8c746e4a0e58b72df53e9e7154f938733eeaf7660ca7f",
@@ -2363,12 +2363,12 @@
       "messy_held_at_assurance_pure_failure": 2321,
       "messy_person_history_held_at_assurance_pure_failure": 1704,
       "messy_revision_at_assurance_pure_failure": 3111,
-      "assurance_utf8_mime_successor_status": "AUTHOR14_CHECKS_RUFF_PASS_EXACT1819_AND1851_PURE23_PASS_INDEPENDENT_NATIVE_WRITER_REVIEW_RUNNING_NO_ACTUAL_TASK_WRITES",
-      "retained_cold_scan_successor_status": "PRESERVED_REAL20GB_BOOT1398_SECONDS_NEXT_SINGLE_PASS_QUERY_ONLY_CONNECTION_LIFECYCLE_AND_STORE_MODE_AUTHOR_REVIEW_PENDING_NO_ACTUAL_ACTIVATION",
+      "assurance_utf8_mime_successor_status": "INDEPENDENT_BOTH23_NATIVE_WRITER_REPLAY_ACCEPTED_MAIN154_REFERENCES14_CHECKS_PASS_ACTUAL_BOTH23_COMPLETED_NO_STRUCTURED_TEXT_CREDIT",
+      "retained_cold_scan_successor_status": "ISOLATED_ONE_PASS82_CHECKS_AND_NATIVE_CLOSURE_PASS_GENUINE20GB_COLD_LOGIN_NOTE_PROFILE_AND_INDEPENDENT_NEW_STORE_COMPOSITION_PENDING_NO_ACTUAL_ACTIVATION",
       "protected_retained_key_full_scope_size_status": "EXACT3379146_BYTE_GENUINE409_SNAPSHOT32MIB_SNAPSHOT_ONLY_INDEPENDENT23_HTTP_ACCEPTED_MAIN99_REFERENCES35_CHECKS_PASS_ACTUAL_COMPOSITION_PENDING",
       "first_company_native_key_causal_review_sha256": "f36e358e25743ee5d825d38078d4f6aa356a7d182da265c2773777e523720add",
       "first_company_native_key_causal_status": "REFINED_EIGHT_BOUNDED_CARDS35_ORIGINALS75_LOCATORS_SUPPORTED_FULL76_CARDS_AND409_TASK_FACETS_PER_BRANCH_REQUIRE_VISIBLE_CLAIM_AND_INDEPENDENT_REVIEW",
-      "current_queue_status": "POST_B08_PURE_FAILURE_QUIESCENT_NO_RESULT_IMPORT",
+      "current_queue_status": "V6_CONTINUATION_RUNNING_CLEAN_B01_B05_MESSY_B06_B07_B09_B01_B05",
       "clean_completed_incident_execution_sha256": "54030de60898ca77f69f4d8825f53635d2b444b079bcbc2053f42aea2f61fa37",
       "clean_completed_incident_workpapers": 284,
       "clean_unrun_after_incidents": 125,
@@ -2394,7 +2394,26 @@
       "protected_retained_key_snapshot_size_review_sha256": "db7687d4f52426da31644f3b6d71be0004c33456b6ee3c6fcfff79c9d8db9828",
       "protected_retained_key_snapshot_size_main_reproduction_sha256": "b51dd1e1308ac15d2916815c118ce8c5f45e55119f98a4f9980c39bb25ebd139",
       "protected_retained_key_snapshot_size_main_focused_sha256": "8b9d3f867982ab374c97f84c213bae4a931fe54ea959adc4562aa0c64b438d52",
-      "first_company_native_key_refined_causal_review_sha256": "b19d293029d44b2e8289e64ec081448d700576a2a994fa24770aafb303288169"
+      "first_company_native_key_refined_causal_review_sha256": "b19d293029d44b2e8289e64ec081448d700576a2a994fa24770aafb303288169",
+      "assurance_utf8_mime_main_reproduction_sha256": "9485d474a4ff7b66543b68ae46cb2865c8a781fd9168b51adfe217bd91e4b4c9",
+      "assurance_utf8_mime_main_focused_sha256": "e3664d5fe55f7bec61ab259ac924ba65e2f86e4b9dbedeaa903b01e14e7544b5",
+      "actual_workpapers_after_assurance": {
+        "CLEAN": 307,
+        "MESSY": 120
+      },
+      "actual_unrun_after_assurance": {
+        "CLEAN": 102,
+        "MESSY": 289
+      },
+      "actual_assurance_receipt_sha256": {
+        "CLEAN": "67bec57f6a1931269c71cba87be60201d2e8629a58b96c673ebd1c859b8b95d5",
+        "MESSY": "f07e7b61af36591ee42ea3adb9764c3790350266af91b656fd4a75378d5e2c04"
+      },
+      "full_company_native_key_v2_status": "BOUNDED_VISIBLE_CONTEXT_AND_EXACT409_PROMPTS_EACH_ACCEPTED_ROOT1906_ORIGINALS19271_LOCATORS15520_REFERENCES_ALL818FACETS_MAIN37_REFERENCES24_TESTS_PASS_ACTUAL_NATIVE_CLOCK_ACL_BIND_PENDING",
+      "full_company_native_key_v2_literal_review_sha256": "163d269ac3841ffbcda88508f5d38270db6a0d9e6a16a6dc14e037b560e68239",
+      "full_company_native_key_v2_visible_semantic_review_sha256": "2eacd47024ba113e69ff914b6f50ed0cb76c1062fdbb5689b00f29a7064879d4",
+      "full_company_native_key_v2_main_reproduction_sha256": "aadb238d41fba2d792d2653a37ddf845abdce7d08914bd523a9e5aead89f7ce9",
+      "full_company_native_key_v2_main_focused_sha256": "f779325571128d5ffdae556ceedba6bc8625d75d99e627cb5529f37f5d684545"
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"
