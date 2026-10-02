@@ -13,13 +13,19 @@ exact resulting state is
 Its separate reader-interface gate is
 `31b74a61a7d94b35cfe1fd79c2ee9e6affe91cea2782aec19cb2d663899b51e7`.
 
-The remaining B05 batch is running in the original MESSY room through root
-coordinator `f7a1b3bbc9ec17ee9fdfa3e913671fa2b4182dbb450ffe3de15e4dff294312b6`
-(PID 34853). Each family is freshly collected from the same company's native
-records; held originals are reused only after native and custody checks.
-The full fifty-task preflight and a private opaque SQLite allocation measurement
-must pass before its procedure writes. Each actual command also requires a
-16 GiB free-space reserve. No B05 completion or final replay is asserted yet.
+The original MESSY B05 coordinator
+`f7a1b3bbc9ec17ee9fdfa3e913671fa2b4182dbb450ffe3de15e4dff294312b6`
+completed fresh native collection and its full fifty-task pure preflight, then
+stopped at the conservative capacity guard before any B05 procedure write.
+Its 54 ordinary acquisition commands leave revision 5,998 with 359 workpapers,
+2,863 held originals and all 50 B05 procedures unrun. All prior task/workpaper/
+population/selection/sample/review/finding content and CLEAN's full state match
+the previous capture exactly. Company grants are revoked and native business
+versions remain 5,608. New quiescence is
+`077a037ad14853786d566166bd8c7ad4638d23eb98fe46616c50bf6db5fca620`.
+The opaque measurement found 78.35 GB needed including the 16 GiB reserve,
+against 61.84 GB available: 16.51 GB additional space, rounded to a 25 GB target.
+The guard remains enforced. No B05 completion or final replay is asserted.
 
 Storage recovery preserved company/audit history, installed runtimes and frozen
 accepted proofs. Re-downloadable caches were cleared. All 1,833 files in one
