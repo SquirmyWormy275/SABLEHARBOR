@@ -2435,7 +2435,7 @@
       "messy_interrupted_task": "TASK-SH-TRN-003-corporate-TOD",
       "messy_interrupted_task_objects_preserved": "ORIGINAL_TOD_POPULATION_SELECTION_WP_PRESERVED_TOD_AND_TOE_ORDINARY_CONTINUATION_COMPLETE",
       "actual_writers_running": false,
-      "whole_history_final_replay": "PENDING_FIRST_CURRENT_LIVE_AFTER_FINAL_CAPTURE",
+      "whole_history_final_replay": "RUNNING_FIRST_CURRENT_LIVE_PARALLEL_ORIGINAL_SOURCE_UNCHANGED",
       "final_fieldwork_input_preparation_sha256": "34fac279f00392657b01b565d66fa6811fb74b8307e99121b00f40c5f2c2b59d",
       "key_binding_input_preparation_sha256": "a6e792872fb46888e62d30a192c5d3b132e17fe5a919e8c81efb309a58eecc49",
       "storage_status": "CAPACITY_RECOVERED_ENCRYPTED_BACKUPS_VERIFIED_ORIGINAL_PATHS_PRESERVED_B05_FULL50_FINISHED",
@@ -2478,7 +2478,7 @@
       "historical_source_reproduction_procedure_review_sha256": "94c69073ca9e2ae1f3f2e6800df74e75aa223a0b39baa9ccda3fd2783190939f",
       "sealed_prefix_tail_original_candidate_status": "CHANGES_REQUIRED_NORMAL_SIGNED_LOGIN_LOGOUT_REOPEN_DEFECT_PRESERVED_60A83A14",
       "sealed_prefix_tail_lifecycle_correction_status": "95DC_INDEPENDENT_NATIVE51_STDLIB13_AND6_IMMUTABLE_REPLAYS_PASS_SELECTED_BOUNDARY_ONLY",
-      "state_delta_and_bounded_complete_packet_status": "ISOLATED_AUTHOR_AND_SEPARATE_INDEPENDENT_REVIEW_IN_PROGRESS_ACTUAL_SCALE_PENDING",
+      "state_delta_and_bounded_complete_packet_status": "4FA_CODEC_SELECTED_STORAGE_CUSTODY_PASS_ACTUAL_COMPONENT_BENCHMARK_AND_PRISTINE_818_MIGRATION_AND_NEW_PACKET_COMPOSITION_IN_PROGRESS",
       "b05_v5_execution_sha256": "65af9ea66cdc89cae25398c5a288d208af5d3f053bcfc4ebdc9cba44562ffbd3",
       "b05_v5_receipt_sha256": "e73181269ece050079aadcddf1d7080afb9f17dafe5996e34db06f7735d3a22b",
       "b05_v5_elapsed_seconds": 2678.155486604999,
@@ -2488,9 +2488,28 @@
       "b05_v5_capacity_required_bytes_including_reserve": 78934301363,
       "b05_v5_capacity_available_bytes_at_probe": 143692480512,
       "b05_v5_capacity_plan_sha256": "4c3cd4ff22fdab849b542cc53dee49230e05184a95f71d43f5b69d3cf9bd6967",
-      "final_byte_capture_status": "RUNNING_V2_UNDER_ORIGINAL_ROOM_AND_COMPANY_LOCKS",
+      "final_byte_capture_status": "PASS_FINISHED_QUIESCENT_ORIGINAL_BYTES_AND_INDEPENDENT_COMPANY_ARCHIVE",
       "sealed_prefix_tail_lifecycle_correction_independent_review_sha256": "2078ad5c5c22d3ac9bd136cf4018949700ea0099ea63f70b4058e6419fb7cf6e",
-      "preexpiry_delegation_status": "ROOT42_PASS_EXACT48_BACKEND_INDEPENDENT_GENUINE_REVIEW_SEALING_ACTUAL_PREPARATION_PENDING"
+      "preexpiry_delegation_status": "READONLY_PREPARATION_PASS_SAME_ORIGINAL_IDENTITIES_BEFORE_EXPIRY_UNCONSUMED_NO_AUTH_OR_SOURCE_MUTATION",
+      "final_byte_capture_sha256": "0140048503b3e9c70b211ffe513cc12a7c1c7204f47a485a0454849e90c88178",
+      "final_historical_company_source_archive_sha256": "515830ab4639f0d3c0f9c02d5ac5e05528c7e403bea4e3a17147f377c81d72e8",
+      "final_capture_company_database_sha256": "0a02f9a0aa5534f90083c5708d0707e174b60eeaa6b0706297939a9c1ee6e214",
+      "final_capture_original_database_sha256": {
+        "CLEAN": "36324d5a7e13d6e8d127a748a98d15f0fb463e08fcd757e253a0f5a30c563d97",
+        "MESSY": "31c5613eeb60b30e84bd085b55726c5d1eaede3caffae9704f14e0138695ff3e"
+      },
+      "final_capture_current_state_sha256": {
+        "CLEAN": "c5ff208d16c98beef6a875180cbc07819c3a6c359796f844bb9aa666991c3349",
+        "MESSY": "c2f952e2b041c9343f9f37967eb7c79189f3d8fd072cb13a88d137b365dfa803"
+      },
+      "final_current_live_replay_pid": 94754,
+      "final_current_live_replay_tool_session": 7115,
+      "preexpiry_delegation_independent_review_sha256": "67fb8590d88d210f7e31b461e43c956402f0f3f5f646516cac46ad3f37552416",
+      "preexpiry_delegation_root_coordinator_static_review_sha256": "53e04357027857f0e69d03610838437a1f300f34da482b1f46d2d2e2bbc187b6",
+      "preexpiry_delegation_root_preparation_receipt_sha256": "177707e3d5f9e0b6cab8841e2e58f5fa0399b5b0008caa59ea4b96823430a984",
+      "preexpiry_delegations_consumed": false,
+      "signed_credentials_rotated": false,
+      "codec_independent_selected_semantics_review_sha256": "225ed622e7263ac65bafbbeab1ae0733f6c664499e7ff0fba03297d7f49137e3"
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"

@@ -1,5 +1,25 @@
 # Active company-source audit workflow
 
+October 2 final verification checkpoint: complete byte capture passed for both
+original rooms and the company snapshot. Capture is
+`0140048503b3e9c70b211ffe513cc12a7c1c7204f47a485a0454849e90c88178`;
+independent historical-source archive is
+`515830ab4639f0d3c0f9c02d5ac5e05528c7e403bea4e3a17147f377c81d72e8`.
+The first full current-live independent replay is running against unchanged
+original company and audit bytes using the reviewed parallel verifier. Its result
+is pending; byte capture alone does not establish event or procedure acceptance.
+
+Read-only pre-expiry preparation also passed for both original operators. Exact
+frozen 818c code and signature48 origins, 42 root checks, 47 independent checks
+and all 480 independent frozen references were verified. Receipt is
+`177707e3d5f9e0b6cab8841e2e58f5fa0399b5b0008caa59ea4b96823430a984`.
+Original audit/source metadata and source bytes remain unchanged. No delegation
+was consumed, credential rotated, identity created or service activated. The
+one-use delegation must be consumed through its exact frozen code; it cannot
+be transferred to the new codec. A separately reviewed pristine-tail storage
+derivation is being built. Actual-size codec timing and complete packets remain
+in progress. Earlier checkpoints below remain preserved.
+
 October 2 final batch checkpoint: the reviewed B05 V5 process exited successfully.
 Both original modes now have 409 workpapers and zero unrun tasks: CLEAN revision
 6,226 with 2,741 retained originals; MESSY revision 6,349 with 2,863. B05 added
