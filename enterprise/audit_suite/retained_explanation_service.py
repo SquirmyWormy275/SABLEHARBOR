@@ -18,7 +18,7 @@ from .explanation_binding import _authored, verify_snapshot
 from .fresh_sec003_procedure import require
 from .history_inspection import inspect_history
 from .persistent_company_service import RetainedWorkroom, absolute_path, pinned_json
-from .source_library_audit import file_sha, quiescent_read
+from .source_library_audit import file_sha, private_file, quiescent_read
 from .store import DomainError, digest
 
 SCHEMA = "SH_RETAINED_COMPANY_EXPLANATION_SERVICE_CONFIG_V1"
@@ -117,6 +117,7 @@ class ExplainedWorkroom:
         snapshot = verify_snapshot(
             binding["path"], expected_manifest_sha256=binding["manifest_sha256"]
         )
+        manifest = pinned_json(binding["path"] / "manifest.json", binding["manifest_sha256"])
         require(
             set(snapshot)
             == {
@@ -213,7 +214,7 @@ class ExplainedWorkroom:
                 ),
                 "Explanation access watermark does not exist in this company history",
             )
-            for source in snapshot["sources"]:
+            for index, source in enumerate(snapshot["sources"]):
                 require(
                     set(source)
                     == {
@@ -292,7 +293,15 @@ class ExplainedWorkroom:
                     and source["actor_visibility_at_binding"] == visibility,
                     "Explanation captured grant or visibility differs from actual access history",
                 )
-                raw = (binding["path"] / source["path"]).read_bytes()
+                require(
+                    source["path"] == f"sources/{index:05d}.json"
+                    and source["path"] in manifest["files"]
+                    and manifest["files"][source["path"]] == source["sha256"],
+                    "Exact declared relative explanation source member required",
+                )
+                member = binding["path"] / source["path"]
+                private_file(member)
+                raw = member.read_bytes()
                 require(raw == row["content"], "Explanation bytes differ from company original")
                 require(
                     _time(row["available_at"]) <= _time(snapshot["operator_source_as_of"]),

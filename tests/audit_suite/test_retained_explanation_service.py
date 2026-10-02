@@ -199,6 +199,8 @@ def test_private_snapshot_tamper_fails_private_reads_while_learner_keeps_company
         "future_watermark",
         "software_claim",
         "source_claim",
+        "outside_unmanifested_original",
+        "inside_unmanifested_original",
     ],
 )
 def test_resealed_operator_key_cannot_substitute_native_actor_history_or_original(keycase, change):
@@ -237,8 +239,17 @@ def test_resealed_operator_key_cannot_substitute_native_actor_history_or_origina
         value["access_event_watermark"] += 100000
     elif change == "software_claim":
         value["software_verified"].append("Professional assurance")
-    else:
+    elif change == "source_claim":
         value["sources"][0]["fact_verification"] = "PROFESSIONALLY_VALIDATED"
+    else:
+        relative = (
+            "../unmanifested-original.json"
+            if change == "outside_unmanifested_original"
+            else "sources/99999.json"
+        )
+        raw = (snapshot / value["sources"][0]["path"]).read_bytes()
+        (snapshot / relative).write_bytes(raw)
+        value["sources"][0]["path"] = relative
     path.write_text(json.dumps(value, sort_keys=True))
     manifest = json.loads((snapshot / "manifest.json").read_bytes())
     manifest["files"]["snapshot.json"] = file_sha(path)
