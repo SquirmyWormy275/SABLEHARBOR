@@ -1,5 +1,45 @@
 # Audit-suite execution closeout
 
+October 2 storage recovery: the Seagate is available with sufficient capacity.
+Four private recovery sets were encrypted and every decrypted member compared
+against fresh local bytes, including a locked copy of the current company
+source. Recovery receipt is
+`e48bbaf3bdc359418e06a6dcd21b5b51a35188cb23384341d4bfcc4b56a70936`.
+The recovery passphrase is a private Downloads file and needs separate secure
+preservation; an encrypted drive copy alone cannot recover a lost passphrase.
+
+Three old engineering clone databases were compressed in place after verified
+local and encrypted external backup. Their original paths, bytes, inodes,
+modification times, ownership and permissions remain intact. No file was removed
+or relocated in this recovery. Every accepted B01 frozen reference was freshly
+rechecked afterward: all 2,158 match. Available SSD space is about 145 GB, above
+the prior 78.35 GB batch estimate. Measured available space is used; logical file
+sizes and extent sizes are not reported as physical savings. Steam, mount rules,
+company business records and actual audit state were unchanged by recovery.
+
+The exact B05 V5 coordinator
+`84df4dd803278ad5423e9b37d5aa3374a528ba6ff771df14ebc572f135c24197`
+passed separate static review
+`a40cfd06c827d86af9b8bb2c9903aeddaa8b9d1abb32480f6cdfc0e5e54c6183`.
+Its actual writer, PID 64554, has resumed fresh company-native acquisition from
+the original revision-5,998 quiescence. The new namespace is
+`MESSY/COMPLETE_B05_AFTER_CAPACITY_RECOVERY_V5`; the prior capacity refusal and
+all prior records remain preserved. The full-batch capacity estimate and per-
+command 16 GiB reserve are still enforced. Counts below are the starting capture,
+not a current query into an active writer; completion is not yet asserted.
+
+Historical source reproduction passed 82 independent root checks and exact
+frozen-reference comparison; procedure gate is
+`94c69073ca9e2ae1f3f2e6800df74e75aa223a0b39baa9ccda3fd2783190939f`.
+It accepts only reproduction of a prior exact current-live proof using the
+captured original source bytes. The first full current-live final replay remains
+pending and uses the unchanged earlier verifier/gate. The original sealed-tail
+candidate has a preserved login/logout/reopen defect; its separately frozen
+correction, incremental state storage and bounded complete packet are in review.
+No actual Key, protected service, final packet or owner acceptance is asserted.
+
+The paragraphs below preserve the earlier capacity-refusal checkpoint.
+
 October 2 recovery and continuation: CLEAN completed all 409 ordinary procedures
 at revision 6,226 with 2,741 retained originals. Its queue completion proof is
 `c6ee4875a37903ea37ee786101d39df1f183583114e294bc8d0cfd412a22e5e9`.
