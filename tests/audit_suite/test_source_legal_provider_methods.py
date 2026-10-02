@@ -12,10 +12,10 @@ from enterprise.audit_suite.engine import Engine
 from enterprise.audit_suite.fresh_sec003_procedure import ProcedureError
 from enterprise.audit_suite.source_legal_provider_methods import (
     CLAUSE_FIELDS,
-    strict_fields,
     authored_contracts,
     encoded,
     inspections,
+    strict_fields,
     task_contracts,
 )
 
