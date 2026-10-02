@@ -251,33 +251,46 @@ class History:
             if row["logical_family"] == "bcm":
                 for locator, digest in row["document"].get("local_prior_source_sha256", {}).items():
                     parts = locator.rsplit(":", 2)
-                    require(
-                        len(parts) == 3 and parts[1] in SCALAR_ROLES and parts[2].isdigit(),
-                        "Strict record:role:version BCM scalar locator required",
+                    typed_locator = (
+                        len(parts) == 3
+                        and bool(parts[0])
+                        and parts[1] in SCALAR_ROLES
+                        and parts[2].isascii()
+                        and parts[2].isdigit()
+                        and int(parts[2]) > 0
                     )
-                    candidates = [
-                        r
-                        for r in self.rows
-                        if r["source"]["system"] == "bcm." + parts[1]
-                        and r["source"]["record"] == parts[0]
-                        and r["source"]["version"] == int(parts[2])
-                    ]
-                    require(len(candidates) <= 1, "Ambiguous BCM scalar native original")
-                    target = candidates[0] if candidates else None
-                    require(
-                        target is None or target["source"]["sha256"] == digest,
-                        "BCM scalar exact digest differs",
+                    typed_digest = (
+                        isinstance(digest, str)
+                        and len(digest) == 64
+                        and all(c in "0123456789abcdef" for c in digest)
                     )
-                    status = (
-                        "ORIGINAL_NOT_COLLECTED"
-                        if target is None
-                        else (
-                            "EXACT_AVAILABLE_ORIGINAL"
-                            if _time(target["source"]["available_at"])
-                            <= _time(row["source"]["event_at"])
-                            else "SOURCE_UNAVAILABLE_AT_COMPANY_EVENT"
-                        )
+                    candidates = (
+                        [
+                            r
+                            for r in self.rows
+                            if r["source"]["system"] == "bcm." + parts[1]
+                            and r["source"]["record"] == parts[0]
+                            and r["source"]["version"] == int(parts[2])
+                        ]
+                        if typed_locator and typed_digest
+                        else []
                     )
+                    target = candidates[0] if len(candidates) == 1 else None
+                    if not typed_locator:
+                        status = "UNRESOLVED_UNTYPED_SCALAR_LOCATOR_NO_ALIAS"
+                    elif not typed_digest:
+                        status = "UNRESOLVED_UNTYPED_SCALAR_DIGEST"
+                    elif len(candidates) > 1:
+                        status = "AMBIGUOUS_EXACT_SCALAR_ORIGINAL"
+                    elif target is None:
+                        status = "ORIGINAL_NOT_COLLECTED"
+                    elif target["source"]["sha256"] != digest:
+                        status = "SCALAR_ORIGINAL_DIGEST_DIFFERS"
+                        target = None
+                    elif _time(target["source"]["available_at"]) > _time(row["source"]["event_at"]):
+                        status = "SOURCE_UNAVAILABLE_AT_COMPANY_EVENT"
+                    else:
+                        status = "EXACT_AVAILABLE_ORIGINAL"
                     self.joins.append(
                         {
                             "origin": reference(row["source"]),

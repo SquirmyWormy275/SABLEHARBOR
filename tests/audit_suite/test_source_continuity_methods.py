@@ -262,6 +262,49 @@ def by_clause(inspections, control, clause):
     )
 
 
+def test_genuine_bare_malformed_and_unavailable_scalar_witnesses_are_bounded(tmp_path):
+    originals = neutral_originals()
+    inventory = next(r for r in originals if r["source"]["system"] == "bcm.service_inventory")
+    authority = next(r for r in originals if r["source"]["system"] == "bcm.authority_decision")
+    document = json.loads(inventory["content"])
+    document["local_prior_source_sha256"] = {
+        "SELECTED-SERVICE": authority["source"]["sha256"],
+        "SELECTED-SERVICE:unknown_role:1": authority["source"]["sha256"],
+        "SELECTED-SERVICE:authority_decision:0": authority["source"]["sha256"],
+        "SELECTED-SERVICE:authority_decision:True": authority["source"]["sha256"],
+        "MISSING:authority_decision:1": authority["source"]["sha256"],
+        "SELECTED-SERVICE:authority_decision:1": "0" * 64,
+    }
+    reseal_document(inventory, document)
+    rows, context = collect(tmp_path, originals)
+    history = History(rows, as_of=context.simulated_at)
+    joins = [j for j in history.joins if j["origin"]["system"] == "bcm.service_inventory"]
+    assert len(joins) == 6
+    assert all(j["target"] is None for j in joins)
+    assert [j["status"] for j in joins].count("UNRESOLVED_UNTYPED_SCALAR_LOCATOR_NO_ALIAS") == 4
+    assert {j["status"] for j in joins} >= {
+        "ORIGINAL_NOT_COLLECTED",
+        "SCALAR_ORIGINAL_DIGEST_DIFFERS",
+    }
+    # Exact typed locators elsewhere still bind; the available authority's bare name
+    # above never borrows that independently present original.
+    assert any(j["status"] == "EXACT_AVAILABLE_ORIGINAL" for j in history.joins)
+    tmp_path.chmod(0o700)
+    values = examine(rows, as_of=context.simulated_at, scratch_root=tmp_path)
+    assert len(values) == 20
+    native_observations = [
+        o
+        for v in values
+        for o in v["observations"]
+        if o["facts"].get("joins")
+        and any(
+            j["status"] == "UNRESOLVED_UNTYPED_SCALAR_LOCATOR_NO_ALIAS" for j in o["facts"]["joins"]
+        )
+    ]
+    assert native_observations
+    assert all(o["status"] == "SUPPORT_UNAVAILABLE" for o in native_observations)
+
+
 def test_exact_twenty_task_vector_has_distinct_kind_clause_contracts():
     plan = task_plan()
     assert len(plan) == len(contracts()) == 20
