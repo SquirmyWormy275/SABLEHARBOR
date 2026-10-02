@@ -232,6 +232,20 @@ def inspections(records, *, as_of, scratch_root=None):
             if context["state"] == "EXAMINED_SELECTED_ORIGINALS":
                 number = int(result["authored_task"]["control_id"][-3:])
                 used.update(_current_inputs(history, CURRENT_FIELDS[number]))
+                # workforce_access performs these mandatory queries before any
+                # selected context can be published. They remain method inputs
+                # even when this task's displayed attributes omit affiliations
+                # or grant conflicts. Preserve their exact native originals so
+                # the selected calculation can be reperformed from its custody.
+                used.update(
+                    r["artifact_id"]
+                    for r in history.selected("workforce", "affiliation_register")
+                )
+                used.add(
+                    history.exact("workforce", "entitlement_catalogue", "CORPORATE-LOGICAL")[
+                        "artifact_id"
+                    ]
+                )
         else:
             used = set().union(*(additional_inputs[name] for name in result["method_results"]))
         used.update(_result_inputs(history, result))

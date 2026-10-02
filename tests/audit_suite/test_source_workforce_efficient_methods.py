@@ -96,6 +96,39 @@ def test_actual_account_versions_permission_bytes_monthly_and_quarter_dependenci
     )
 
 
+def test_every_examined_current_context_can_be_reperformed_from_its_actual_citations(originals):
+    records, clock = originals["records"], originals["as_of"]
+    tasks = efficient.inspections(records, as_of=clock)
+    mandatory = {
+        r["artifact_id"]
+        for r in records
+        if r["logical_family"] == "person-access-history"
+        and (
+            r["logical_system"] == "affiliation_register"
+            or (
+                r["logical_system"] == "entitlement_catalogue"
+                and r["source"]["record"] == "CORPORATE-LOGICAL"
+                and r["source"]["version"] == 1
+            )
+        )
+    }
+    assert mandatory
+    checked = 0
+    for task in tasks:
+        context = task["result"].get("company_workforce_access", {})
+        if context.get("state") != "EXAMINED_SELECTED_ORIGINALS":
+            continue
+        cited = set(task["artifact_ids"])
+        assert mandatory <= cited
+        actual = accepted.workforce_access(
+            efficient.identity.History([r for r in records if r["artifact_id"] in cited], clock)
+        )
+        selected = context["selected_attributes"]
+        assert {name: actual[name] for name in selected} == selected
+        checked += 1
+    assert checked == 30
+
+
 def test_unrelated_inputs_are_still_strictly_parsed_and_cached_results_ignored(originals):
     bad = deepcopy(originals["records"])
     note = next(r for r in bad if r["logical_system"] == "meeting_note")
