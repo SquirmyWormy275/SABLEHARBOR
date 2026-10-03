@@ -1,5 +1,13 @@
 # Local audit-training delivery
 
+2026-10-03 01:52 UTC checkpoint: the read-only V2 replay has verified 5,100 CLEAN and 4,100 MESSY events of 6,227 and 6,350; no final proof or closing acceptance exists yet. Original MAIN runtime, physical journals, authority and company source remain unchanged.
+
+The opt-in same-process reuse and Key V4 seam passed 36 independent checks. Root freshly reconciled 713 author and 557 independent ordinary pairs (2,660 references), receipt `ddc7acf1fcbf7c8a2e17248c0b000479e9b860a08465211009a2f5ca67ab1615`. The prepared successor installation contains 46 tracked files and two exact ignored native binaries, plan `131b4c4192afb54dc0bc697a67105855a769ba90eea7e953fa5bbec0a815331d`. It preserves the selected f9 request settlement and mobile source. Real cold reopen still requires full verification; no persisted evidence or outcome cache is added. Actual proof, one-use original parent preparation and fresh MAIN closure remain prerequisites.
+
+Independent packet composition review rejected the old source-sidecar, combined sealed-query and final archive-byte publication candidates. Their failures and byte-frozen copies are preserved. The new separately indexed prefix/tail cursor passed on genuine sealed plain/codec fixtures; the final post-callback archive-byte correction is under review. None of these engineering fixtures is an actual packet acceptance.
+
+The streamed encrypted physical-original backup helper passed 35 owned checks and the independently reproduced closing-mutation counter. Root rehashed 293 ordinary pairs (598 references), admission `4542d9ba4d81fa98e1964fb32ae45b6179382bf5088b32491c121fe5bac9c797`; corrected root caller V2 passed static review `b0bb12759033895fb0f55bce79d21d53ee762f7f401dcda36e87765841768db8`. Actual backups require the successful first proof, dead readers and held original locks. No 818 GB backup is yet claimed. The connected Seagate has over 330 GB available; only encrypted backups are authorized there.
+
 October 3, 00:43 UTC progress: the V2 opening full database byte guards passed.
 The current-live readers have verified 3,400 CLEAN and 2,000 MESSY events of
 6,227 and 6,350 respectively, with no reported failure. This is progress,

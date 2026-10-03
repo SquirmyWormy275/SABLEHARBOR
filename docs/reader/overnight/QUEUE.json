@@ -660,13 +660,13 @@
         {
           "date": "2026-09-29",
           "scope": "Selected February 2027 BCM-002/003 ordinary population and procedure reconciliation in separate copied paired workrooms",
-          "validation": "Independent actual-run review enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-bcm-ordinary-procedures-run-independent-review-v1/REVIEW.json SHA-256 f42dc13679d7cef34bda1ae7c25bbe27f71bc66dee80075554503c77fea0fc78 verified A90\u219296/B63\u219269 with six ordinary commands per side, provisional B1/B2/B3 declaration population and selection, distinct BCM-003 R1/R2 workpaper/sample, 20 native/collection-receipt/retained-byte source joins per branch, and unchanged original workrooms, native roots, bound Key and historical A1939/B2066 audits. Messy B has no B3 backup job; first B2 failed, retry completed and failure ticket remains OPEN. R1 matches an older selected backup while differing from current bytes; R2 matches current bytes.",
+          "validation": "Independent actual-run review enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-bcm-ordinary-procedures-run-independent-review-v1/REVIEW.json SHA-256 f42dc13679d7cef34bda1ae7c25bbe27f71bc66dee80075554503c77fea0fc78 verified A90→96/B63→69 with six ordinary commands per side, provisional B1/B2/B3 declaration population and selection, distinct BCM-003 R1/R2 workpaper/sample, 20 native/collection-receipt/retained-byte source joins per branch, and unchanged original workrooms, native roots, bound Key and historical A1939/B2066 audits. Messy B has no B3 backup job; first B2 failed, retry completed and failure ticket remains OPEN. R1 matches an older selected backup while differing from current bytes; R2 matches current bytes.",
           "acceptance": "Both BCM-002/003 TOE tasks remain NOT_STARTED/NOT_RUN. This selected local slice does not establish full-year population completeness, control effectiveness, independent professional acceptance, task or grade credit."
         },
         {
           "date": "2026-09-29",
           "scope": "Paired CFG-002 local before/after ordinary procedure on separate private copied workrooms",
-          "validation": "Independent actual postreview SHA-256 5b971fa1c14d20dee9f752ae7d2747695fafc4ec5664dcdf8e72f287fe6d7315 verified A96\u2192100/B69\u219273, four ordinary commands per side, 13 exact native/receipt/retained-byte joins per side, pre-APPLY mismatch versus local approval and post-APPLY equality, unchanged original workrooms/native roots/Key, and no release or grade. Failed first rehearsal was preserved and independently classified FAIL under SHA-256 bc19edddfbdb699561fcf42cbb93912482db618c3084d8bbe3a04917afe2e8e5; new-only v3 runner passed rehearsal and actual gates.",
+          "validation": "Independent actual postreview SHA-256 5b971fa1c14d20dee9f752ae7d2747695fafc4ec5664dcdf8e72f287fe6d7315 verified A96→100/B69→73, four ordinary commands per side, 13 exact native/receipt/retained-byte joins per side, pre-APPLY mismatch versus local approval and post-APPLY equality, unchanged original workrooms/native roots/Key, and no release or grade. Failed first rehearsal was preserved and independently classified FAIL under SHA-256 bc19edddfbdb699561fcf42cbb93912482db618c3084d8bbe3a04917afe2e8e5; new-only v3 runner passed rehearsal and actual gates.",
           "acceptance": "All six CFG-002 tasks per branch remain NOT_STARTED/NOT_RUN. This one local data-only APPLY does not establish enterprise baseline coverage, continuous drift detection, full-year effectiveness, professional acceptance or task credit."
         },
         {
@@ -696,13 +696,13 @@
         {
           "date": "2026-09-29",
           "scope": "Integrated P5B logging/incident native collection and independently preserved whole-state checkpoint",
-          "validation": "Independent P5B actual postreview SHA-256 c732fe268d28563c45ccde05facb6683eff6785316608ff947e7629f6fe70b2a verifies A175\u2192272/B147\u2192246, 176 ordinary native\u2192request receipt\u2192retained joins from 68 distinct source identities, 67 new content-addressed files, 20 revoked scoped grants/40 access events per side, B omission/backfill and escalation/corrective chronology, and 409 untouched tasks per side. Independent checkpoint postcopy review SHA-256 ca07ebf8f029b94738f436478a421dccc3c4c2b2a83f2bf0a7feaa09f3091b75 verifies 439 identical active/snapshot files, 54 SQLite checks, zero Btrfs shared extents and protected history unchanged.",
+          "validation": "Independent P5B actual postreview SHA-256 c732fe268d28563c45ccde05facb6683eff6785316608ff947e7629f6fe70b2a verifies A175→272/B147→246, 176 ordinary native→request receipt→retained joins from 68 distinct source identities, 67 new content-addressed files, 20 revoked scoped grants/40 access events per side, B omission/backfill and escalation/corrective chronology, and 409 untouched tasks per side. Independent checkpoint postcopy review SHA-256 ca07ebf8f029b94738f436478a421dccc3c4c2b2a83f2bf0a7feaa09f3091b75 verifies 439 identical active/snapshot files, 54 SQLite checks, zero Btrfs shared extents and protected history unchanged.",
           "acceptance": "At this historical checkpoint, P5C/D remained unexecuted. This is collection and recovery proof only; no clause completion, full-year operating effectiveness, professional acceptance, Key bind, learner release or grade."
         },
         {
           "date": "2026-09-29",
           "scope": "Integrated P5C provider/training and P5D risk/configuration native collections with independently preserved whole-state checkpoints",
-          "validation": "P5C independent actual postreview SHA-256 5d23ef30a2e97c0945294cf435ff55fbd838fc3c84919fd3aeb326ffce10a6e6 verified A272\u2192333/B246\u2192308, 103 request-linked native-to-retained joins over 75 full source tuples, 29 revoked grants and B provider/training chronology. Post-P5C checkpoint independent review SHA-256 3ed92d4d398b9cc831511ff19a25422db691976f3de46faefeb9b52f4f09b711 verified 514 copied files and zero Btrfs sharing. P5D independent actual postreview SHA-256 cebeb60b2dc7f04ad75581b038dff1ec9f2c345669b62657b6996b6986561bc0 verified A333\u2192349/B308\u2192324, 24 native-to-retained joins, 14 revoked grants and B risk/config chronology. Post-P5D checkpoint independent review SHA-256 eb042c1470ada3927ae62d78714f2e7530ebb683a99220af12b7d751eee197b4 verified 538 copied files, 54 SQLite checks and zero Btrfs sharing.",
+          "validation": "P5C independent actual postreview SHA-256 5d23ef30a2e97c0945294cf435ff55fbd838fc3c84919fd3aeb326ffce10a6e6 verified A272→333/B246→308, 103 request-linked native-to-retained joins over 75 full source tuples, 29 revoked grants and B provider/training chronology. Post-P5C checkpoint independent review SHA-256 3ed92d4d398b9cc831511ff19a25422db691976f3de46faefeb9b52f4f09b711 verified 514 copied files and zero Btrfs sharing. P5D independent actual postreview SHA-256 cebeb60b2dc7f04ad75581b038dff1ec9f2c345669b62657b6996b6986561bc0 verified A333→349/B308→324, 24 native-to-retained joins, 14 revoked grants and B risk/config chronology. Post-P5D checkpoint independent review SHA-256 eb042c1470ada3927ae62d78714f2e7530ebb683a99220af12b7d751eee197b4 verified 538 copied files, 54 SQLite checks and zero Btrfs sharing.",
           "acceptance": "The same bound 13-component pair now has verified source associations for the selected P5 tranches, but all 409 tasks per branch remain NOT_STARTED/NOT_RUN. No complete population, full-year operation, PHI/BA fact, qualified conclusion, Key bind, grade or release follows."
         },
         {
@@ -813,7 +813,7 @@
         {
           "date": "2026-09-29",
           "scope": "Reviewed disposable rehearsal followed by separate actual private paired BCM-002/003 ordinary-procedure run",
-          "validation": "Sealed v2 runner and independent rehearsal gate preceded actual independent postreview enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-bcm-ordinary-procedures-run-independent-review-v1/REVIEW.json SHA-256 f42dc13679d7cef34bda1ae7c25bbe27f71bc66dee80075554503c77fea0fc78. Byte-copied A/B workrooms advanced A90\u219296/B63\u219269 through six ordinary commands each: B1/B2/B3 population/selection, BCM-002 workpaper/sample, and distinct BCM-003 R1/R2 workpaper/sample. All 40 selected source joins and raw event/intent/result histories passed. B B3 remains absent, B B2 failure ticket OPEN, R1 older-checkpoint chronology explicit; original paired workrooms, native roots, Key and A1939/B2066 preserved.",
+          "validation": "Sealed v2 runner and independent rehearsal gate preceded actual independent postreview enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-bcm-ordinary-procedures-run-independent-review-v1/REVIEW.json SHA-256 f42dc13679d7cef34bda1ae7c25bbe27f71bc66dee80075554503c77fea0fc78. Byte-copied A/B workrooms advanced A90→96/B63→69 through six ordinary commands each: B1/B2/B3 population/selection, BCM-002 workpaper/sample, and distinct BCM-003 R1/R2 workpaper/sample. All 40 selected source joins and raw event/intent/result histories passed. B B3 remains absent, B B2 failure ticket OPEN, R1 older-checkpoint chronology explicit; original paired workrooms, native roots, Key and A1939/B2066 preserved.",
           "acceptance": "BCM-002/003 tasks remain NOT_STARTED/NOT_RUN; no Key release, assessment, grade, task credit, full-year or professional/control-effectiveness conclusion. The broader AQ-07 full-scope acceptance remains IN_PROGRESS."
         },
         {
@@ -831,7 +831,7 @@
         {
           "date": "2026-09-29",
           "scope": "Actual ordinary B2 company-source recollection on the fresh 13-component bound A/B engagements",
-          "validation": "Gated P2 RESULT SHA-256 f7c1b90cf079244c1dab3a2c62e3953fba96d073679a55e5923cc773ada13f33 and independent actual postreview SHA-256 86a045d0e984062ef6a649f18fedb931ba8dd64cd7e57e04b5acba644acec7ed verified A2\u219278/B2\u219251, 22/8 PBC requests, 31/32 native\u2192ordinary collection receipt\u2192retained-byte joins, 18/21 scoped grants all inactive with 36/42 access events, full event chains and expected Clean/Messy B2/B3/R1/R2 chronology. Pre-P2 whole-state snapshot, 26 original company roots, three preservation trees and historical A1939/B2066 hashes/tips remained unchanged; no WAL/SHM.",
+          "validation": "Gated P2 RESULT SHA-256 f7c1b90cf079244c1dab3a2c62e3953fba96d073679a55e5923cc773ada13f33 and independent actual postreview SHA-256 86a045d0e984062ef6a649f18fedb931ba8dd64cd7e57e04b5acba644acec7ed verified A2→78/B2→51, 22/8 PBC requests, 31/32 native→ordinary collection receipt→retained-byte joins, 18/21 scoped grants all inactive with 36/42 access events, full event chains and expected Clean/Messy B2/B3/R1/R2 chronology. Pre-P2 whole-state snapshot, 26 original company roots, three preservation trees and historical A1939/B2066 hashes/tips remained unchanged; no WAL/SHM.",
           "acceptance": "Bounded B2 collection only. All 409 tasks per branch remain NOT_STARTED/NOT_RUN; no new Key, learner release, grade, full-period operating conclusion or qualified professional acceptance. P3 investigation and remaining integrated phases require separate execution and review."
         },
         {
@@ -2550,7 +2550,7 @@
       "engineering_closeout_matrix_sha256": "0b98a7deae0a8a41fec72dea67c0cff528bc72ddb1b4a5f705b3343f3d14703e",
       "postdelegation_coordinator_root_selected_input_review_sha256": "c4e9f11b7cd11ac678365ff2f2d23d7c6b7c124713ab26d6416c42d80a4766c7",
       "postdelegation_coordinator_status": "SELECTED_AUTHOR20_AND_IMMUTABLE_LINEAGE_PASS_ROOT286_REFERENCES_STATIC_PASS_UNFILLED_ACTUAL_FINAL_GATES_PENDING",
-      "checkpoint_utc": "2026-10-03T00:08:00Z",
+      "checkpoint_utc": "2026-10-03 01:52 UTC",
       "focused_delivery_successor_commit": "c696bda0a6c3e60c990d5ebcfbe39177fede6cb3",
       "focused_delivery_successor_status": "SELECTED_SEQUENTIAL_BACKEND_ACCEPTED_GENUINE_PARALLEL_BROWSER_STARTUP_REFUSAL_UNDER_FOCUSED_REPAIR",
       "focused_delivery_successor_dependency_sha256": "c0bd01bd24add29231732cbfd8a745eb8f04e8dea47110b90639969bbd3a1122",
@@ -2617,28 +2617,28 @@
         "ignored_exact_native_binaries": 2
       },
       "first_current_live_v2_progress": {
-        "observed_at": "2026-10-03T00:43:27Z",
-        "opening_original_database_byte_guards": "PASS",
-        "verified_events": {
-          "CLEAN": 3400,
-          "MESSY": 2000
-        },
-        "required_history_events": {
-          "CLEAN": 6227,
-          "MESSY": 6350
-        },
+        "observed_at": "2026-10-03 01:52 UTC",
+        "CLEAN_verified_events": 5100,
+        "MESSY_verified_events": 4100,
+        "CLEAN_required_events": 6227,
+        "MESSY_required_events": 6350,
         "reader_pid": 326175,
         "wrapper_pid": 326168,
-        "workers": [
+        "worker_pids": [
           343816,
           343819
         ],
-        "stderr_bytes": 0,
-        "completed_actual_history_acceptance": false
+        "completed_acceptance": false
       },
-      "anchored_packet_successor_author_status": "CONSUMER57_PRODUCER45_OWNED_CHECKS_PASS_INDEPENDENT_COMPOSITION_AND_ACTUAL_FIRST_PROOF_PENDING",
+      "anchored_packet_successor_author_status": "INDEPENDENT_COMPOSITION_CHANGES_REQUIRED_FINAL_ARCHIVE_BYTE_SUCCESSOR_UNDER_REVIEW",
       "anchored_consumer_author_root_reconciliation_sha256": "91a80225f2a5ab5843aef1c4248ad1898b0457453f440a8eea33260999b7df6a",
-      "anchored_consumer_author_fresh_ordinary_pairs": 1204
+      "anchored_consumer_author_fresh_ordinary_pairs": 1204,
+      "live_reuse_keyv4_independent_gate_sha256": "cbb694819890de816f12146ce4c52da8edbfeb48ecf751e3dc53dc9d84d296f0",
+      "live_reuse_keyv4_root_admission_sha256": "ddc7acf1fcbf7c8a2e17248c0b000479e9b860a08465211009a2f5ca67ab1615",
+      "closed_final_MAIN_installation_successor_plan_sha256": "131b4c4192afb54dc0bc697a67105855a769ba90eea7e953fa5bbec0a815331d",
+      "closed_final_MAIN_installation_successor_plan_files": 48,
+      "streamed_original_backup_root_admission_sha256": "4542d9ba4d81fa98e1964fb32ae45b6179382bf5088b32491c121fe5bac9c797",
+      "streamed_original_backup_corrected_caller_static_review_sha256": "b0bb12759033895fb0f55bce79d21d53ee762f7f401dcda36e87765841768db8"
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"
