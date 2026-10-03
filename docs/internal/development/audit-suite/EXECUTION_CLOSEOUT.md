@@ -1,5 +1,33 @@
 # Audit-suite execution closeout
 
+2026-10-03 21:17 UTC actual library acceptance and checkout preservation: the corrected
+read-only caller (`65089808`) passed independent lifecycle review (`ba78dc54`) and
+Root selection (`bda97d31`). One actual existing AcceptedLibrary.verify invocation
+completed (`33488f16`, process `17dba844`), verifying all 5,714 native records through
+two immutable source connections and one schema-only RAM connection. Root freshly
+closed 505 references (`7e4e4952`), including unchanged source receipts, database
+bytes, code identities, 130 loaded origins, native extensions and signature backend.
+The original SQLite initialization refusal is preserved. This check created no
+runtime, audit, source commands, Key, HTTP service or old-epoch cutover authority.
+
+Eight complete older checkouts now passed all 24 capture, preserve and full
+separate WITH-source verification commands (`e70d61ce`, final `f40abc4d`): 69,381
+regular files/28,804,105,455 bytes, 78,342 members and 307 opaque links; encrypted
+archives total 3,832,671,832 bytes. Independent source/cipher closure is in progress.
+Three cache-tree backups are continuing under the original exact selection and
+Root continuation (`b93e003e`). Their first capture is valid; only caller labels
+file/regular needed normalization. The failure and successful capture are retained.
+No original folders, Git registrations or link referents are removed or released.
+
+A separate short-prefix storage composition is being prepared and tested before
+new heavy fieldwork. The frozen ordinary fullscope stage is missing the loader's
+compact-prefix module and has a sealed-store constructor mismatch; its ordinary
+70-control/409-task birth proof does not cover this composition. Original holder
+PID 1927871 remains in MESSY, without the final Key-ready receipt or viewer activation.
+Original C3/M5 followthrough, actual QA/cold reopen, full packets, original journal
+backup, migration and retirement remain unperformed. Actual MAIN product source
+and all 46 locked job payloads/statuses are unchanged.
+
 2026-10-03 20:34 UTC actual source and restore acceptance: the corrected source caller
 (`ffdc1e63`) and exact support/namespace closure are Root-admitted (`4ce21acc`).
 Normal unchanged-command resume completed with receipt `35449f07`; Root conserved
