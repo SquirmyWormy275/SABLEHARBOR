@@ -2617,9 +2617,9 @@
         "ignored_exact_native_binaries": 2
       },
       "first_current_live_v2_progress": {
-        "observed_at": "2026-10-03 02:43 UTC",
-        "CLEAN_verified_events": 5600,
-        "MESSY_verified_events": 5000,
+        "observed_at": "2026-10-03 04:58 UTC",
+        "CLEAN_verified_events": 6200,
+        "MESSY_verified_events": 6100,
         "CLEAN_required_events": 6227,
         "MESSY_required_events": 6350,
         "reader_pid": 326175,
@@ -2647,8 +2647,8 @@
       "same_process_holder_independent_gate_sha256": "81922336374672acea9bed2e2d97b4d3fd5c0b2c13f1bf2fb91f84c8bf8f7ab0",
       "same_process_holder_root_admission_sha256": "d3a19fd4d7fba406a26e9a5ef871483681e83c9c498679f3a332c3af0ee23044",
       "same_process_holder_source_sha256": "6b1224a73b8d07f3840920cfcd13370608fdc91c3f89571a75935014a0670e55",
-      "current_connected_seagate_free_bytes": 331856371712,
-      "current_internal_free_bytes": 114192543744,
+      "current_connected_seagate_free_bytes": 310651944960,
+      "current_internal_free_bytes": 93419782144,
       "viewer_lifecycle_preparation_checkpoint_2026_10_03_0328_UTC": {
         "status": "SELECTED_ENGINEERING_PREPARATION_ONLY_ACTUAL_DELIVERY_PENDING",
         "last_observed_at": "2026-10-03T03:28:00Z",
@@ -2719,6 +2719,36 @@
           "AWAITING_REVIEW": 1,
           "IN_PROGRESS": 28
         }
+      },
+      "bounded_mechanics_and_clause_ledger_checkpoint_2026_10_03_0458_UTC": {
+        "status": "PASS_BOUNDED_MECHANICS_AND_OPEN_LEDGER_ONLY_ACTUAL_DELIVERY_PENDING",
+        "independent_mechanics_review_sha256": "4324ba81f0c847d67badc33b3c749143a059096e739ccd90bd4743de7fc7d668",
+        "root_review": {
+          "path": "enterprise/generated/audit-suite/bounded-mechanics-clause-ledger-root-review-2026-10-03/REVIEW.json",
+          "sha256": "67cd79d1a0f8aa8f6950b6f88337cd8b287ca48e79b9b4914df464e17c58be3d"
+        },
+        "focused_owned_checks": 20,
+        "root_fresh_references": 627,
+        "owned_journal_events": 51,
+        "owned_native_originals": 4,
+        "clause_ledger": {
+          "path": "/home/kingoftheeast/SABLEHARBOR-per-clause-closeout-ledger-preparation-20261003/CLOSEOUT_LEDGER.json",
+          "sha256": "5aad1a6dcebf47e87b7ac48edbab76009bc75de91b1b5f9c55ec495dfc194016",
+          "jobs": 28,
+          "clauses": 116,
+          "future_actual_receipts": "UNFILLED_INELIGIBLE"
+        },
+        "limits": [
+          "Owned small fixtures; model stub and persisted interruption simulation explicitly declared",
+          "No actual full-size, retained-wrapper, process-crash, model-quality or human acceptance",
+          "Population and period sufficiency remain substantive limits; owner/qualified reviews separate"
+        ],
+        "external_review_companion_status": "PREPARATION_PENDING_INDEPENDENT_REVIEW_OUTSIDE_IMMUTABLE_PACKET",
+        "actual_parent_authorizations_consumed": false,
+        "actual_activation": false,
+        "actual_packet_acceptance": false,
+        "locked_job_payload_sha256": "2c16e6a5abf94a2b70be3924b8baac60bd56061fa592b75da3d58166a687040f",
+        "all46_job_payloads_and_statuses_unchanged": true
       }
     }
   },

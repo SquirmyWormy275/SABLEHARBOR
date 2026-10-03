@@ -1,5 +1,30 @@
 # Active company-source audit workflow
 
+2026-10-03 04:58 UTC checkpoint: V2 remains running, with 6,200 CLEAN
+and 6,100 MESSY events reported out of 6,227 and 6,350. Its successful proof
+and closing byte guards remain pending. Original parent authorizations remain
+unconsumed. About 87 GiB is available internally and 289 GiB on the Seagate;
+all actual operations still require their measured reserves.
+
+The focused background-job and guidance review passed 20 checks on small owned
+fixtures. Its independent replay verified 51 events in 20 journals, nine job
+stores, 25 private guidance events and four company-native originals/receipts.
+Root freshly closed 627 references together with the 28-job, 116-clause ledger,
+receipt `67cd79d1a0f8aa8f6950b6f88337cd8b287ca48e79b9b4914df464e17c58be3d`
+at `enterprise/generated/audit-suite/bounded-mechanics-clause-ledger-root-review-2026-10-03/REVIEW.json`.
+This verifies bounded mechanics, not full-size latency, process-crash durability,
+model quality or human acceptance. The ledger preserves every locked clause,
+all 46 job payloads/statuses, substantive period/population limits, and separate
+owner and qualified review requirements. Every future actual receipt remains
+unfilled; no job is marked complete by this preparation.
+
+Direct export inspection identified a remaining UX-04 readability gap: the
+immutable packet index lists tasks and originals, while workpaper limitations
+and review history require raw JSON inspection. A separately pinned local
+review companion is being prepared outside the unchanged verified packet.
+Its review and actual exported-packet inspection remain pending. No existing
+packet protocol, selected source vector, API or original store is changed.
+
 2026-10-03 03:28 UTC checkpoint: the actual read-only V2 replay remains running;
 last observed progress is 5,900 CLEAN and 5,500 MESSY events of 6,227 and 6,350.
 The successful proof and closing byte guards are still pending. Original runtime,
