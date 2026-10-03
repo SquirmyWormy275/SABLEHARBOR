@@ -1,5 +1,54 @@
 # Audit-suite execution closeout
 
+2026-10-03 23:37 UTC new-native runtime review preparation: Root issued the existing
+eight-field review for the exact accepted 5,714-record edition (`adcd007a`),
+with its qualified preparation receipt (`73573a8d`). Fourteen inputs were
+freshly closed, including the small published database bytes. Independent
+static review joined thirteen small body pins plus the database's nine metadata
+fields, without another database read. The six baseline pins and runtime67b,
+adapterfcd and setup92b hashes match the selected `b3e905d5` composition.
+
+The review itself performs no initialization, audit birth, collection, Key,
+HTTP or cutover. Old-epoch C3/M5, QA, genuine cold and full-packet closure, full70
+physical-route admission and fresh actual loaded-origin/input admission remain
+required by the future selected caller. These are external selection conditions,
+not extra fields or automatic cutover checks invented inside the initializer.
+The original 5,608-record runtime remains unchanged. The three/two OWN example
+routes have no full70 coverage credit; exact source-header/method crosswalk
+preparation is continuing. All 46 locked jobs remain unchanged.
+
+2026-10-03 23:25 UTC compact-first composition acceptance: the corrected finite caller
+`8e5a8ba2` is independently reviewed (`e1a2c5fa`) and Root-accepted (`ce4f6965`),
+with 634 fresh small references and 287+18 original/copy pairs. Its whole-byte
+and function-AST inverse changes only the supplemental-origin descriptor: five
+existing cold helpers join the twelve prior activity helpers. Product commands,
+phase logic, original holder and MAIN source remain unchanged.
+
+The one owned existing-epoch journey conserved seven prefix frames plus one
+existing note, original IDs, native custody, signed head and four known logout
+pins. Its genuine ASGI role/privacy/logout and full raw9e/a84 mechanisms completed
+before the preserved final source-origin refusal (exit1). The corrected positive
+is a separate read-only cold/source check on those same settled files, with
+three refusal checks; no successful journey was repeated or ended-process import
+snapshot invented. Actual paired localhost serving, signal/drain, browser QA,
+physical backups, conversion and packet acceptance remain unexecuted.
+
+This accepts only the selected future composition. Runtime89/export90 source
+unions need explicit actual source admission and compact configurations; old
+Main88, anchored93 and the separate new-native birth admission do not transfer.
+Fresh static lookup confirms that the original runtime/adapter and all nine Key
+modules are unchanged. The existing approved runtime and per-mode Key bindings
+can remain. Root must materialize the exact rebound unsealed base: only its two
+runtime-review references change, then normal configuration regenerates stage
+code pins. No Key rebuild, identity rotation or source-edition substitution is
+required. Actual phase plans remain unfilled. Verified original physical backup precedes lossless conversion,
+then the first genuine compact cold viewer and settled full-raw packet export.
+Original PID1927871 remains live without its final Key-ready output. The finite
+UI recipe is also ready: its unchanged QA selects zero attachments, so portable
+debrief export has exactly two ZIP members. Eight is the attachment cap; 390 is
+the mobile viewport width in pixels. All 46 locked job payloads/statuses remain
+unchanged and no professional acceptance is asserted.
+
 2026-10-03 22:28 UTC disposable restoration staging cleanup: Root selected and
 removed exactly the sixteen verified C01–C16 private restoration containers,
 after fresh complete member metadata/namespace joins and a visible-process

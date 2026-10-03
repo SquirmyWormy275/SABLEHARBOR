@@ -3418,6 +3418,85 @@
         "all46_job_payloads_and_statuses_unchanged": true,
         "locked_job_payload_sha256": "2c16e6a5abf94a2b70be3924b8baac60bd56061fa592b75da3d58166a687040f",
         "professional_acceptance": "NOT_ASSERTED"
+      },
+      "compact_first_selected_composition_checkpoint_2026_10_03": {
+        "checked_at_UTC": "2026-10-03 23:25 UTC",
+        "status": "COMPACT_FIRST_SELECTED_COMPOSITION_ROOT_ACCEPTED_ACTUAL_PHASES_UNFILLED_ORIGINAL_KEY_RUNNING",
+        "selected_stage_commit": "41e1d0beb12fbc16382dd6e1dae031ee1edb429c",
+        "selected_caller_sha256": "8e5a8ba23320ae94138154f6fc2a722485378c1c70a76e46b427ee8cbb5154c9",
+        "selected_supplemental_origins_sha256": "ccbb41c6efecb00b80b320cd2fd6d30cbb05e319302195d8e764b174692c3c66",
+        "independent_review_sha256": "e1a2c5fa49865daaa477d82c78158c938bca2d2819514c7b71659ee4bfa2035d",
+        "Root_composition_review_sha256": "ce4f6965edac93f77b16f04d6a33f1140f94ecbfa58135eb4542b898f226bd62",
+        "Root_fresh_small_references": 634,
+        "fresh_author_original_copy_pairs": [
+          287,
+          18
+        ],
+        "runtime_export_python_unions": [
+          89,
+          90
+        ],
+        "original_Key_runtime_88_admission_inherited": false,
+        "new_native_birth_composition_admission_inherited": false,
+        "only_caller_SUPPLEMENTAL_assignment_changed": true,
+        "five_known_source_origins_added_without_product_or_phase_logic_changes": true,
+        "OWN_complete_raw_packet_prefix_total_frames": [
+          7,
+          8
+        ],
+        "OWN_native_originals": 2,
+        "OWN_original_ids_same_signed_head_complete_logout_inventory_preserved": true,
+        "first_OWN_flow_exit1_final_origin_refusal_preserved": true,
+        "corrected_positive_is_separate_readonly_same_settled_OWN_closure": true,
+        "successful_journey_repeated_or_ended_process_snapshot_invented": false,
+        "actual_CONVERT_CONFIGURE_COLD_EXPORT_authority_issued": false,
+        "actual_original_backup_conversion_HTTP_UI_export_or_retirement_performed": false,
+        "first_actual_genuine_cold_viewer_after_verified_physical_backup_and_conversion": true,
+        "original_holder_pid": 1927871,
+        "original_holder_tool_session": 70163,
+        "actual_ready_output_observed": false,
+        "actual_UI_recipe_sha256": "cc8003513aff7d605f78a6364e1ca42002799703d3f16cbf44e8c4bffd3a8170",
+        "QA_zero_attachments_expected_ZIP_members": 2,
+        "portable_debrief_attachment_cap": 8,
+        "mobile_viewport_width_pixels": 390,
+        "all46_locked_job_payloads_and_statuses_unchanged": true,
+        "locked_job_payload_sha256": "2c16e6a5abf94a2b70be3924b8baac60bd56061fa592b75da3d58166a687040f",
+        "professional_acceptance": "NOT_ASSERTED",
+        "remaining_unsealed_base_materialization_and_compact_config_require_separate_actual_selection": true,
+        "original_runtime_adapter_and_Key9_module_bytes_equal_selected_stage": true,
+        "same_original5608_runtime_acceptance_and_per_mode_Key_bindings_can_remain": true,
+        "only_unsealed_base_two_runtime_review_reference_fields_change": true,
+        "Key_rebuild_identity_renewal_or_new5714_source_substitution_required": false
+      },
+      "new_native_runtime_review_preparation_checkpoint_2026_10_03": {
+        "checked_at_UTC": "2026-10-03 23:37 UTC",
+        "status": "EXACT_EXISTING_SCHEMA_NEW5714_RUNTIME_REVIEW_PREPARED_AND_INDEPENDENTLY_CHECKED_NO_LIFETIME_OR_BIRTH",
+        "selected_repository": "/home/kingoftheeast/Projects/SABLEHARBOR-next-native-short-prefix-codec-integration-wt",
+        "selected_commit": "b3e905d5d123e9b2170292a71a3b65abde56daca",
+        "runtime_review": {
+          "path": "/home/kingoftheeast/SABLEHARBOR-next-native-runtime-review-field-preparation-20261003/ROOT_NEXT_NATIVE_RUNTIME_REVIEW.json",
+          "sha256": "adcd007a7a7094c57535bfac2b450392f8cc0e96437b568b4146f659bd315c5d"
+        },
+        "Root_qualified_preparation_receipt_sha256": "73573a8d5cbe4f5cce7c83dec384aff5a54d385fc23856a4bcf2ec283276b079",
+        "existing_runtime_schema_fields": 8,
+        "accepted_baseline_pins": 6,
+        "native_versions": 5714,
+        "Root_fresh_small_input_files": 14,
+        "independent_small_reference_body_hashes": 13,
+        "independent_published_DB_nine_metadata_join_without_another_body_read": true,
+        "exact_runtime_adapter_setup_sources": [
+          "67b09075",
+          "fcd0807c",
+          "92b393c1"
+        ],
+        "actual_lifetime_or_audit_birth_fieldwork_Key_HTTP_or_cutover": false,
+        "original5608_runtime_admission_changed_or_substituted": false,
+        "old_epoch_cutover_full70_routes_and_fresh_actual_loader_input_admission_still_required": true,
+        "remaining_requirements_enforced_by_future_selected_caller_not_invented_initializer_fields": true,
+        "full70_routes_not_inherited_from_CLEAN3_MESSY2_mechanism_examples": true,
+        "full70_route_contract_inventory_in_progress": true,
+        "all46_job_payloads_and_statuses_unchanged": true,
+        "professional_acceptance": "NOT_ASSERTED"
       }
     }
   },
