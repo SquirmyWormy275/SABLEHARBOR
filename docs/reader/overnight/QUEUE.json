@@ -2217,7 +2217,7 @@
       "activation_proof_sha256": "40722199d57872e420e8fa0bee3ca048584adb3e15dd9593b5497770e1f086b3",
       "independent_birth_verification_sha256": "bf804a33a1945fd332581070227edde813765b22e87e0e4a7292806b47472a36",
       "period_close_clock_advance_sha256": "573b1377749b2da3bcb6a6498f2c4cc990b09b6cdb97fb97cf00728bf7ac74a4",
-      "current_fieldwork": "BOTH409_RECORDED_ZERO_UNRUN_FINAL_CAPTURE_PASS_FIRST_LIVE_VERIFIER_FORMAT_CORRECTION_UNDER_INDEPENDENT_REVIEW",
+      "current_fieldwork": "BOTH409_RECORDED_ZERO_UNRUN_CAPTURE_PASS_CORRECTED_FIRST_CURRENT_LIVE_V2_FULL_HISTORY_REPLAY_ACTIVE",
       "all_disjoint_family_task_methods_required": true,
       "historical_task_results_imported": false,
       "qualified_or_owner_acceptance": "NOT_ASSERTED",
@@ -2615,7 +2615,30 @@
       "closed_final_MAIN_installation_plan_files": {
         "tracked": 45,
         "ignored_exact_native_binaries": 2
-      }
+      },
+      "first_current_live_v2_progress": {
+        "observed_at": "2026-10-03T00:43:27Z",
+        "opening_original_database_byte_guards": "PASS",
+        "verified_events": {
+          "CLEAN": 3400,
+          "MESSY": 2000
+        },
+        "required_history_events": {
+          "CLEAN": 6227,
+          "MESSY": 6350
+        },
+        "reader_pid": 326175,
+        "wrapper_pid": 326168,
+        "workers": [
+          343816,
+          343819
+        ],
+        "stderr_bytes": 0,
+        "completed_actual_history_acceptance": false
+      },
+      "anchored_packet_successor_author_status": "CONSUMER57_PRODUCER45_OWNED_CHECKS_PASS_INDEPENDENT_COMPOSITION_AND_ACTUAL_FIRST_PROOF_PENDING",
+      "anchored_consumer_author_root_reconciliation_sha256": "91a80225f2a5ab5843aef1c4248ad1898b0457453f440a8eea33260999b7df6a",
+      "anchored_consumer_author_fresh_ordinary_pairs": 1204
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"

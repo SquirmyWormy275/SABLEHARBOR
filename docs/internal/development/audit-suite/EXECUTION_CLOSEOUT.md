@@ -1,5 +1,20 @@
 # Audit-suite execution closeout
 
+October 3, 00:43 UTC progress: the V2 opening full database byte guards passed.
+The current-live readers have verified 3,400 CLEAN and 2,000 MESSY events of
+6,227 and 6,350 respectively, with no reported failure. This is progress,
+not completed history acceptance; original SQL/source/authority remain unchanged.
+
+The isolated new anchored packet lanes passed 57 consumer and 45 producer
+checks on genuine owned histories. Root freshly reconciled all 1,204 consumer
+ordinary input/copy pairs (2,411 references), receipt
+`91a80225f2a5ab5843aef1c4248ad1898b0457453f440a8eea33260999b7df6a`.
+Independent composed review and the actual successful first replay are still
+required. The generic packet implementation, strict legacy offline verifier
+and selected final88 sources are preserved unchanged. A physical-original
+streaming encrypted backup helper is being prepared using owned files only;
+no original database backup or source change has been performed by that lane.
+
 October 3, 00:08 UTC checkpoint: the separately admitted actual V2 read-only
 full-history replay is running (reader 326175, wrapper 326168). Independent gate
 `60d01feea4070445b025b5f55ffae6342183bee902c183927c1a889184a5c82d`
