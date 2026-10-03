@@ -1,5 +1,38 @@
 # Audit-suite execution closeout
 
+2026-10-03 23:57 UTC actual header/contract preparation and concrete method gap: Root read
+exactly thirteen metadata columns through one immutable, query-only SELECT from
+the actual published company library (`2023e74a`). Source content was denied.
+All 5,714 headers join the 922 closed registered-owner tuples, with unchanged
+source bytes/metadata authority. CLEAN has 447 systems/2,793 versions; MESSY has
+475/2,921. All original 886 dotted routes/5,608 versions remain; 36 new flat
+systems contain the 106 company-operation versions. An initial row-shape
+preflight refused before SQL; the source's four-item lists were then mapped
+explicitly. No successful query, collection, grant or source operation repeated.
+
+The finite crosswalk (`c8eaa871`, qualified Root `5e46d9c9`) joins every header
+exactly once and reconciles 407 control tasks across 70 controls plus two scope
+gates. It identifies 882 historical family candidates, four registered-only
+common inputs and the 36 new flat systems. These joins establish neither body
+sufficiency nor collection/grant/control credit. A descriptor-label qualification
+preserves the first Root receipt and separates header input from crosswalk output.
+
+A real integration gap is now being developed in a new isolated `b3e905d5`
+successor: current methods can collect the flat company records but cannot
+interpret their operating observations/policy/continuity facts. The selected
+change is a pure retained-native helper plus narrow workforce, governance and
+continuity supplements/reader integration, preserving normal custody and legacy
+results. Missing-at-due, late policy, P015 omissions, open IAM and local restore
+capacity FAIL remain literal; prospective remediation does not cure 2027 history.
+No source/collection API, fabricated physical alias, new public API or automatic
+PASS/grading is proposed. Main, frozen `b3e905d5` and PID1927871 remain unchanged.
+
+The legacy 1,110-case inventory/archive exists. Current retained V2 does not
+expose its explicit crosswalk to the 76 current issues; the existing isolated V3
+reference solution already provides the bounded, unresolved-safe implementation.
+Its later source/config/frontend adoption and actual current crosswalk selection
+remain separate. All 46 locked jobs remain unchanged.
+
 2026-10-03 23:37 UTC new-native runtime review preparation: Root issued the existing
 eight-field review for the exact accepted 5,714-record edition (`adcd007a`),
 with its qualified preparation receipt (`73573a8d`). Fourteen inputs were
