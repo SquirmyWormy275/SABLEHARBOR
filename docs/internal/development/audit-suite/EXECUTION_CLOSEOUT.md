@@ -1,5 +1,73 @@
 # Audit-suite execution closeout
 
+2026-10-03 22:28 UTC disposable restoration staging cleanup: Root selected and
+removed exactly the sixteen verified C01–C16 private restoration containers,
+after fresh complete member metadata/namespace joins and a visible-process
+reference check (`525d78f0`). The 75,439 regular files/30,688,264,191 logical bytes,
+85,788 members and 358 opaque links were redundant verification copies. All
+original sources, encrypted backups, manifests, reports, logs, restore operation
+directories and original deletion/retirement boundaries remain retained. No
+restored program, SQL, Git pointer or link referent was executed. Prior restore
+acceptance is a completed point-in-time recovery exercise; deleted staging is
+not claimed still present or freshly reopenable.
+
+Internal available space increased from 61,413,900,288 to 69,095,641,088 bytes
+across this cleanup. The observed 7,681,740,800-byte difference is not the logical
+30.69 GB and does not assert exclusive attribution amid other machine activity.
+Original Key holder PID 1927871 remains active in MESSY without its final ready
+receipt. No original journal has been backed up, migrated or deleted yet.
+
+Read-only dependency review found no original-cold-viewer prerequisite in the
+selected physical-backup or compact conversion APIs. The unchanged cold542 and
+fa481 paths would nevertheless repeat original full-prefix scans. A separately
+reviewed compact-aware cold/export composition is therefore being prepared using
+the existing `41e1d0be` storage components and complete raw packet protocol. It
+will preserve the same original physical SHA, audit IDs, source/native custody,
+Key bindings, active tail, signed head and complete revocations; it cannot reuse
+old Main88/anchored93 gates by assertion. Actual physical backup must precede
+conversion and any original retirement. No new public API, Main hotpatch, new
+audit or actual compact activation has occurred. All 46 locked jobs are unchanged.
+
+2026-10-03 22:20 UTC recovery and source-history acceptance: all eight checkout
+restores completed their full archive verification, restored-file readback and
+one additional full 28,804,105,455-byte caller readback (`b5090648`). Root freshly
+joined all 78,342 members, nine metadata fields, modes, nanosecond modification
+times and 307 opaque targets to that complete byte proof (`e2199d32`), without
+another large body pass. Ownership differences were zero. Together with the
+earlier eight HOME restores, sixteen selected recovery trees are verified.
+Temporary restore staging is being prepared for separate scoped cleanup; original
+source paths, archive manifests, encrypted backups and verification receipts remain.
+
+The actual modeled company operating history is separately preserved: A01/A02
+include the immutable capsule, all seven source ledgers, all 96 action receipts,
+published native library and source/library authority. All six normal capture,
+preserve and separate WITH-source verification commands passed. Root freshly
+verified all 284 source files/93,824,553 bytes and both encrypted copies (`358feea8`),
+which total 4,199,155 bytes. These are retained company history, not disposable
+test fixtures. Backup establishes no new audit, runtime, Key or cutover authority.
+
+The short-prefix storage composition now has independent (`b9b9bb09`) and Root
+acceptance (`52a54792`). Its owned 70-control/409-task birth and cold native,
+history and logout checks passed; all tasks remain unrun and workpapers remain
+zero. Actual new-edition fieldwork and migration of the original large journals
+remain separate. No additional component development is needed for this seam.
+
+A new complete common Git backup is verified (`e49f21a9`): 4,615 regular files,
+6,401 members and 1,155,262,553 bytes, with an 808,270,569-byte encrypted archive.
+Its capture window includes Main `1d3e2b6f` and isolated composition `b3e905d5`;
+it does not cover later commits or dirty/untracked checkout content. A caller
+subcommand refusal was preserved and corrected to the existing literal
+`manifest` command in a new namespace. No helper changes were needed.
+
+Original Key holder PID 1927871 remains alive in MESSY. Read-only process metrics
+show continuing file reads and no demonstrated deadlock; final Key-ready and
+viewer activation receipts are still absent. Initial activation will reuse its
+live room objects. Original C3/M5 followthrough, actual viewer QA/cold reopening,
+full packets, original-journal backup/migration/retirement and qualified owner
+acceptance remain pending. Actual MAIN product bytes and all 46 locked job
+payloads/statuses are unchanged. None of these preparation or recovery results
+asserts professional audit acceptance or measured physical reclaim.
+
 2026-10-03 21:39 UTC independent checkout/cache recovery and storage composition: all nineteen
 selected historical preparation/checkout/cache trees now have encrypted backups,
 full separate WITH-source archive verification and Root acceptance. The eight

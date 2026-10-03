@@ -3331,6 +3331,93 @@
         "all46_job_payloads_and_statuses_unchanged": true,
         "locked_job_payload_sha256": "2c16e6a5abf94a2b70be3924b8baac60bd56061fa592b75da3d58166a687040f",
         "professional_acceptance": "NOT_ASSERTED"
+      },
+      "verified_restores_source_history_and_codec_checkpoint_2026_10_03": {
+        "checked_at_UTC": "2026-10-03 22:20 UTC",
+        "status": "SIXTEEN_PRIVATE_RESTORES_VERIFIED_ACTUAL_NATIVE_SOURCE_HISTORY_ENCRYPTED_BACKUPS_ROOT_ACCEPTED_CODEC_COMPOSITION_ROOT_ACCEPTED_ORIGINAL_KEY_STILL_RUNNING",
+        "eight_checkout_restore_aggregate_sha256": "b50906489c618325555efefe815fca34efbd90f8f1824e615410c02038e80670",
+        "eight_checkout_restored_member_manifest_sha256": "655c09bc97e62c5dfc83f41678ffc803410a568a4d5a233d51029ffce0eb19d9",
+        "eight_checkout_final_restore_closure_sha256": "078c0277d2ca156560376ec8e8f145b311c471307d7019accec6f44ea3e5cf04",
+        "eight_checkout_Root_restore_acceptance_sha256": "e2199d32ec4c87b2ac56c7030ad36b54b6a46bc17f7defac8643beac223be3fd",
+        "sixteen_recovery_restores_accepted": true,
+        "eight_checkout_restored_regular_files_members_links": [
+          69381,
+          78342,
+          307
+        ],
+        "eight_checkout_independent_full_byte_readback_bytes": 28804105455,
+        "eight_checkout_Root_fresh_namespace_metadata_without_another_body_pass": true,
+        "restore_staging_cleanup_completed": false,
+        "actual_source_history_backup_selection_sha256": "7195cf65be81b8b391ade001b0d69853371c82e97426447f288e4eba550d959e",
+        "actual_source_history_backup_result_sha256": "bb87d631c093d5a8d4a7c85e639e6b7e72e4b3026ce4c1166b84c9d510b8246f",
+        "actual_source_history_backup_Root_acceptance_sha256": "358feea855feeb299175e98b689b2b4540ea88d5fd8bb48083496445cdcc2265",
+        "actual_source_history_regular_files_directories_bytes": [
+          284,
+          49,
+          93824553
+        ],
+        "actual_source_history_encrypted_ciphertext_bytes": 4199155,
+        "actual_source_history_original_paths_retained": true,
+        "new_short_prefix_codec_independent_review_sha256": "b9b9bb09ebc53af37a09883a9ce81c9ee2f623b5df65fa6da81de2f1aa6178fc",
+        "new_short_prefix_codec_Root_acceptance_sha256": "52a54792159f481f09039be2d6f522bd7cef800c70eb7389bd0deb72ead7bc41",
+        "new_short_prefix_codec_component_admitted_for_future_actual_selection": true,
+        "new_short_prefix_codec_actual_birth_fieldwork_migration_cutover_credit": false,
+        "current_common_Git_backup_Root_acceptance_sha256": "e49f21a9d66f878179dc4d92c8f2c31bd3dcb924bbd610b46d1130d4ed50de8a",
+        "current_common_Git_backup_window_commits": [
+          "1d3e2b6f",
+          "b3e905d5d123e9b2170292a71a3b65abde56daca"
+        ],
+        "current_common_Git_backup_regular_files_members_bytes": [
+          4615,
+          6401,
+          1155262553
+        ],
+        "current_common_Git_backup_ciphertext_bytes": 808270569,
+        "current_common_Git_future_commits_or_dirty_untracked_checkout_coverage": false,
+        "original_holder_pid": 1927871,
+        "original_holder_tool_session": 70163,
+        "original_holder_mode": "MESSY",
+        "original_holder_readonly_metrics_show_progress": true,
+        "original_holder_precise_substage_or_completion_percentage_known": false,
+        "actual_original_Key_ready_or_viewer_activation": false,
+        "actual_original_C3_M5_QA_cold_packets_executed": false,
+        "original_journal_independent_backup_migration_or_retirement": false,
+        "source_original_deletion_reference_clearance_or_retirement": false,
+        "actual_Main_product_source_changed": false,
+        "all46_job_payloads_and_statuses_unchanged": true,
+        "locked_job_payload_sha256": "2c16e6a5abf94a2b70be3924b8baac60bd56061fa592b75da3d58166a687040f",
+        "professional_acceptance": "NOT_ASSERTED"
+      },
+      "disposable_restore_staging_cleanup_checkpoint_2026_10_03": {
+        "checked_at_UTC": "2026-10-03 22:28 UTC",
+        "status": "SIXTEEN_VERIFIED_PRIVATE_RESTORE_CONTAINERS_REMOVED_ORIGINALS_BACKUPS_PROOFS_RETAINED_COMPACT_FIRST_CLOSEOUT_COMPOSITION_PREPARING",
+        "Root_cleanup_receipt_sha256": "525d78f0ece18982686b248b0dadad1a7e539baa7ed43abc0e3fda6712efefcc",
+        "exact_disposable_restoration_containers_removed": 16,
+        "removed_staging_regular_files_members_opaque_links": [
+          75439,
+          85788,
+          358
+        ],
+        "removed_staging_declared_logical_regular_bytes": 30688264191,
+        "internal_available_bytes_before": 61413900288,
+        "internal_available_bytes_after": 69095641088,
+        "observed_available_byte_change": 7681740800,
+        "exclusive_physical_reclaim_attribution": false,
+        "original_source_archive_manifest_report_log_operations_and_Git_retained": true,
+        "restoration_acceptance_is_completed_point_in_time_not_current_deleted_stage_reopen": true,
+        "original_source_deletion_retirement_or_reference_clearance": false,
+        "original_holder_pid": 1927871,
+        "original_holder_mode": "MESSY",
+        "actual_original_Key_ready_or_viewer_activation": false,
+        "compact_first_sequence_static_review_shows_no_original_cold_receipt_prerequisite": true,
+        "compact_first_source_config_Key_packet_composition_acceptance": false,
+        "compact_first_actual_conversion_cold_viewer_or_export_executed": false,
+        "physical_original_backups_before_conversion_and_retirement_required": true,
+        "old_Main88_or_anchored93_gates_inherited": false,
+        "actual_Main_product_source_changed": false,
+        "all46_job_payloads_and_statuses_unchanged": true,
+        "locked_job_payload_sha256": "2c16e6a5abf94a2b70be3924b8baac60bd56061fa592b75da3d58166a687040f",
+        "professional_acceptance": "NOT_ASSERTED"
       }
     }
   },
