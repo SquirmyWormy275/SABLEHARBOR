@@ -2590,7 +2590,7 @@
       "source_backed_followthrough_v4_root_admission_sha256": "776534957360728933080a19b6f8e1c32243341fbee5d268a310c1d19344c6a2",
       "actual_main_runtime_adoption": false,
       "full88_coordinator_admission": "NEW_EXACT88_SUCCESSORS_INDEPENDENT29_PASS_ROOT998_FRESH_REFERENCES_ADMITTED_ACTUAL_FIRST_LIVE_AND_FILLED_AUTHORIZATION_PENDING",
-      "first_actual_full_replay_status": "V1_EXIT1_PRESERVED_V2_INDEPENDENT_ADMITTED_RUNNING_UNCHANGED_ORIGINALS_NO_PROOF",
+      "first_actual_full_replay_status": "PASS_ACTUAL_V2_ALL818_BOUNDED_ACCOUNTING_AND_ALL_ORIGINAL_HISTORY_BYTE_CLOSURE",
       "first_actual_full_replay_failure_observation_sha256": "5e9f86b4291c79215e67a695d5c23baba2a98f78fa5f579bfc400c31b95cc221",
       "request_settlement_selected_independent_gate_sha256": "373e3713aa0f06522906c64b8abbab3fc9bf92661796aba57d18683fc4a16d95",
       "request_settlement_selected_independent_cases": 32,
@@ -2617,9 +2617,9 @@
         "ignored_exact_native_binaries": 2
       },
       "first_current_live_v2_progress": {
-        "observed_at": "2026-10-03 04:58 UTC",
-        "CLEAN_verified_events": 6200,
-        "MESSY_verified_events": 6100,
+        "observed_at": "2026-10-03 05:39:51 UTC",
+        "CLEAN_verified_events": 6227,
+        "MESSY_verified_events": 6350,
         "CLEAN_required_events": 6227,
         "MESSY_required_events": 6350,
         "reader_pid": 326175,
@@ -2628,7 +2628,11 @@
           343816,
           343819
         ],
-        "completed_acceptance": false
+        "completed_acceptance": true,
+        "proof_sha256": "f18841171e787067cd41c671f6e54a08d34710a0a8fb516dad77071e125db68c",
+        "process_result_sha256": "7d37965c94c5a927aff39bac7ba5fedf8eea5ad98c35b6f5f06eec01950f5bbb",
+        "process_returncode": 0,
+        "all_reader_processes_settled": true
       },
       "anchored_packet_successor_author_status": "PASS_SELECTED_CORRECTED_COMPOSITION_ROOT_FRESH_ACTUAL_PACKET_PENDING",
       "anchored_consumer_author_root_reconciliation_sha256": "91a80225f2a5ab5843aef1c4248ad1898b0457453f440a8eea33260999b7df6a",
@@ -2749,6 +2753,46 @@
         "actual_packet_acceptance": false,
         "locked_job_payload_sha256": "2c16e6a5abf94a2b70be3924b8baac60bd56061fa592b75da3d58166a687040f",
         "all46_job_payloads_and_statuses_unchanged": true
+      },
+      "actual_original_parent_preparation_progress": {
+        "coordinator_pid": 930776,
+        "coordinator_session": 85644,
+        "started_before_original_deadlines": true,
+        "one_use_attempts_started": 2,
+        "complete_receipt_pending": true,
+        "source_or_original_audit_mutation": false,
+        "original_grants_consumed_once_before_deadline": true,
+        "consumption_receipts": {
+          "CLEAN": {
+            "path": "/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite/enterprise/generated/audit-suite/full-scope-company-audit-2026-10-01/main-run-v1/PREEXPIRY_OPERATOR_DELEGATIONS_V1/CLEAN/CONSUMED.json",
+            "sha256": "45f4385363377048574c377cbaed8222a269422ae5fe788c111b87dd12a115d9"
+          },
+          "MESSY": {
+            "path": "/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite/enterprise/generated/audit-suite/full-scope-company-audit-2026-10-01/main-run-v1/PREEXPIRY_OPERATOR_DELEGATIONS_V1/MESSY/CONSUMED.json",
+            "sha256": "7dc77a7d80b429136dc83cccb399c21e9667507da8c00c3afb514323331b69d6"
+          }
+        }
+      },
+      "review_companion_selected_preparation": {
+        "product_sha256": "ce0ab74bbaedf15ec35c8cee2ca10684d80a483d1215296f50550eb14e9fedbf",
+        "independent_gate_sha256": "e35c61896c41e9780bb3862bfdcaa82205a9208872f17bc3746c70101a00a27d",
+        "root_admission_sha256": "ae2e8365f79b88b7336251f5993dea04bc1732a32589ea5324c3a35a894c6015",
+        "independent_record_checks": 35,
+        "browser_checks": 9,
+        "future_receipt_parser_only_checks": 15,
+        "actual_packet_accepted": false,
+        "historical_fixture_ctime_qualification_sha256": "e53794c455cb9150bfbe78d6c4b5d4cf4070127a102453bc9f5dc1c8ab6946eb"
+      },
+      "storage_cleanup_required_before_closeout": {
+        "user_explicitly_asked_about_hundreds_of_GB": true,
+        "original_SQL_logical_bytes": 818317565952,
+        "original_SQL_allocated_bytes_stat": 818317557760,
+        "live_runtime_depends_on_originals": true,
+        "delete_required_originals_because_backup_exists": false,
+        "verified_independent_backup_required_before_storage_rewrite": true,
+        "transparent_Btrfs_recompression_status": "READ_ONLY_FEASIBILITY_UNDER_REVIEW",
+        "disposable_intermediate_cleanup": "PENDING_VERIFIED_PRESERVATION",
+        "actual_cleanup_complete": false
       }
     }
   },

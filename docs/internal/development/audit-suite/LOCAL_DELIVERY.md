@@ -1,5 +1,32 @@
 # Local audit-training delivery
 
+2026-10-03 05:44 UTC checkpoint: the first actual read-only V2 replay
+PASSED and exited 0. Both complete histories (6,227 CLEAN and 6,350 MESSY
+events), all 818 bounded procedure records, and closing original-file byte
+guards passed. Proof is `f18841171e787067cd41c671f6e54a08d34710a0a8fb516dad77071e125db68c`;
+settled process result is `7d37965c94c5a927aff39bac7ba5fedf8eea5ad98c35b6f5f06eec01950f5bbb`.
+This establishes integrity and procedure accounting, not a passing audit opinion.
+
+The two original one-use parent preparations started before their deadlines
+under coordinator V5 (PID 930776). Both one-use grants were consumed once
+before their deadlines. Complete parent receipts remain pending;
+actual MAIN adoption, signed renewal, Key/source closure, viewers, complete
+packet acceptance and encrypted original backups remain unfinished.
+
+The separate readable companion passed 35 independent content/privacy/refusal,
+9 browser and 15 future-receipt parser checks. Root closed 328 current references,
+admission `ae2e8365f79b88b7336251f5993dea04bc1732a32589ea5324c3a35a894c6015`.
+Actual packet use remains pending. A disclosed OWN-fixture index ctime change
+is separately qualified; original canonical bytes and old frozen copies/gates
+were preserved, without claiming its historical original stamp is current.
+
+Storage cleanup remains part of closeout. The two live original journals occupy
+818,317,557,760 allocated bytes and are still runtime dependencies. Disposable
+intermediates may be removed only after required evidence is independently
+preserved; the live originals cannot be deleted merely because backups exist.
+Transparent Btrfs recompression feasibility is under read-only investigation.
+No original bytes or storage configuration changed for this checkpoint.
+
 2026-10-03 04:58 UTC checkpoint: V2 remains running, with 6,200 CLEAN
 and 6,100 MESSY events reported out of 6,227 and 6,350. Its successful proof
 and closing byte guards remain pending. Original parent authorizations remain
