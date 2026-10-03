@@ -1,5 +1,44 @@
 # Audit-suite execution closeout
 
+2026-10-03 14:02 UTC source and navigation checkpoint: Root admitted the
+corrected lossless source publisher, the pre-audit source driver and the flat
+native collection runner (`1931132c`). The publisher preserves all fourteen
+native fields, excludes operational grants and collections, and rejects the
+confirmed race between final component checks. The old rejection (`4f1ad770`)
+and its counterexample remain intact. Publication requires stopped source
+writers; concurrent-reader atomic visibility is not asserted. The driver passed
+26 independent checks; the runner passed seven fresh Root checks, including
+four normal successor commands that preserved original workpapers and evidence.
+These source mechanisms are integrated in isolated commit `f0eca216`, with
+actual activation still pending.
+
+New period, backup and policy emissions now have truthful filename, MIME and
+source provenance in frozen commit `0743c436`. Its 94 focused checks passed;
+completed source edition, publication and fresh audit collection are under
+independent integration review. Independent integration found one further defect: generated observation slot
+IDs containing a colon produce an unsafe transport filename. The exact native
+counter (`2daa210d`) is preserved, and a narrow new-emission correction is being
+reviewed. Earlier source records remain unchanged. The strict old-policy publication refusal is preserved rather than relabelled as
+accepted evidence. Raw backup bytes retain their binary type.
+
+The loaded read-only navigation correction passed 57 independent steps on
+desktop and mobile, including eight successful workpaper-detail reads and five
+learner-private refusals. Root admission is `e6e1c4ac`. The real-room plan is
+still unfilled; this does not accept all 409 workpapers or the full document UX.
+The portable packet correction is Root-admitted (`f24dc5fd`) and no longer needs
+the original absolute witness paths. Actual use still requires eleven exact
+lineage witnesses, an externally pinned original authority, compatible Python,
+the exact zstd binary, and a full independently accepted packet. Frozen original
+packet protocols remain unchanged.
+
+Both original parent preparations completed (`06af0282`), and coordinator
+PID 930776 exited 0. The metadata-only event bounds passed (`85297c56`). Both original one-use grants were consumed before
+their deadlines and are not retried. Signed renewal is now running; Key binding, viewers and the first eight
+followthrough actions remain pending their separate gates. At the latest inventory check the Seagate was
+absent; the owner has agreed to reconnect it. Original database backup,
+migration, large-file cleanup and actual packet acceptance remain pending.
+All 46 locked queue jobs retain their original payloads and statuses.
+
 2026-10-03 11:19 UTC selected successor integration checkpoint: independent review
 passed nine finite integration checks, two 390/1440 navigation journeys and
 a product-free 16-event complete-packet replay. Root closed 1,890 references
