@@ -2797,7 +2797,7 @@
         "stat_accounting_is_not_compressed_physical_footprint": true,
         "originals_already_Btrfs_zstd_compressed": true,
         "current_codec_replaces_complete_prefix": false,
-        "safe_full_prefix_retirement_status": "UNIMPLEMENTED_REQUIRES_LOSSLESS_STORAGE_REPLACEMENT_AND_COLD_VERIFICATION",
+        "safe_full_prefix_retirement_status": "ISOLATED_LOSSLESS_REPLACEMENT_IMPLEMENTATION_AND_REVIEW_IN_PROGRESS_ACTUAL_MIGRATION_NOT_ADMITTED",
         "validation_cache_apparent_bytes_approx": 52100000000,
         "validation_cache_contains_proof_inputs": true,
         "completed_main51_owned_fixture_cleanup": {
@@ -2832,6 +2832,30 @@
           "path": "/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite/enterprise/generated/audit-suite/ROOT_PRIVATE_SCRIPTS_2026-10-02/FILL_FINAL_POST_KEY_AUTHORIZATIONS_V2.py",
           "sha256": "2d8379b47f79b263a83a1b43bdf7a0158ad4cc6e88bf0334d09ff6a5090bddb0"
         }
+      },
+      "retention_and_compact_storage_checkpoint_2026_10_03_0731_UTC": {
+        "external_volume_last_verified": "NOT_DETECTED_NO_EXTERNAL_BLOCK_DEVICE_OR_NTFS_MOUNT",
+        "required_external_uuid": "72A448AAA44872A1",
+        "owner_reconnect_response_received": true,
+        "backup_or_migration_executed": false,
+        "full_prefix_derivative": "ISOLATED_AUTHOR_DRAFT_WITH_OWN_FIXTURES_NOT_ADMITTED_OR_INSTALLED",
+        "independent_storage_review": "IN_PROGRESS_NO_ACTUAL_MIGRATION_ACCEPTANCE",
+        "retention_plan": {
+          "path": "/home/kingoftheeast/SABLEHARBOR-retention-cleanup-plan-preparation-20261003/HANDOFF.json",
+          "sha256": "7bf36b454dbf04e8c93916ed77b17368e21fa20f1a464cb8d8dcf3ba9e7a7c99"
+        },
+        "retention_plan_files_freshly_closed": 6,
+        "candidate_cohorts": 19,
+        "all_candidates_currently_ineligible_for_removal": true,
+        "generic_streaming_tree_archive_implementation": "ISOLATED_IN_PROGRESS_NO_ACTUAL_ARCHIVE",
+        "physical_reclaimed_bytes_not_measured": true,
+        "actual_cleanup_complete": false,
+        "actual_parent_pid": 930776,
+        "actual_parent_receipt": "PENDING",
+        "actual_optional_denied_census": "UNSUPPORTED_NO_ISSUED_REQUEST_IN_EITHER_CAPTURED_BRANCH",
+        "actual_QA_unfilled_plan_sha256": "c8022fc703c2896a13115f7d48ef8241c75ac77911a605e46e441679916afdb4",
+        "actual_QA_census_disposition_sha256": "2b4e62607eeb54cda4cf1a65660c13b2cd29e80f2d427c3c1f5c23e24ae55cb0",
+        "historical_fixture_stamp_qualification_sha256": "0d1b945c962e40f5fdb703a758f390c9ffcd49de9bbe5e1b06b31cf0b563f336"
       }
     }
   },

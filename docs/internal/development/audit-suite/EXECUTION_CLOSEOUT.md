@@ -1,5 +1,28 @@
 # Audit-suite execution closeout
 
+2026-10-03 07:31 UTC storage checkpoint: the Seagate was no longer visible
+in either block-device or mount inventory. The owner has agreed to reconnect it;
+no archive, original migration or deletion proceeds until its UUID and capacity
+are freshly verified. Original parent PID 930776 remains running; its complete
+receipt is pending. Signed renewal, Key and actual viewers remain unexecuted.
+
+The lossless full-prefix replacement is an isolated draft under independent
+review. Its owned fixture results are not an actual savings or migration claim.
+The cleanup plan identifies 19 conditional candidates, including linked Git
+worktrees; all remain ineligible pending complete reference clearance and
+verified independent encrypted preservation. A streaming tree-archive mechanism
+is being implemented separately. Plan handoff is `7bf36b454dbf04e8c93916ed77b17368e21fa20f1a464cb8d8dcf3ba9e7a7c99`;
+Root freshly closed its six plan files. The existing MAIN51 cleanup is still the
+only new removal. No physical-space recovery estimate is asserted.
+
+Actual QA preparation now records that both captured branches contain zero
+requests in the optional census test's required ISSUED state. The optional
+scenario is omitted with an explicit unsupported disposition (`2b4e6260`);
+no request, source grant or failed-job result was fabricated. The full QA
+journey remains unexecuted. Historical OWN-fixture ctime qualification is
+recorded separately (`0d1b945c`) without rewriting the old proof or claiming
+its original stamp is current.
+
 2026-10-03 06:22 UTC checkpoint: the selected retained-history and context-review
 source is installed and committed locally as `f7fe0229`. All 51 focused MAIN
 tests passed with zero failures, errors or skips. Fresh typecheck and frontend
