@@ -1,5 +1,36 @@
 # Audit-suite execution closeout
 
+2026-10-03 21:39 UTC independent checkout/cache recovery and storage composition: all nineteen
+selected historical preparation/checkout/cache trees now have encrypted backups,
+full separate WITH-source archive verification and Root acceptance. The eight
+checkout source/cipher closure is independently sealed (`96a846c5`) and Root-accepted
+(`d8018f20`); the three caches are independently sealed (`9424e70a`) and Root-accepted
+(`ea4344a2`). Together with the earlier eight HOME trees, they preserve 108,466
+regular files/61,069,614,774 bytes, 121,450 members and 367 opaque link targets;
+archives total 7,364,869,091 bytes. Root joins current complete source namespaces
+and all nine metadata fields to the independently read full-byte proof, without
+repeating the large source/cipher passes. These figures describe backup contents,
+not physical disk reclaim. Original paths and Git registrations remain retained.
+
+Eight private checkout restore checks are now running under exact selection
+`03419ed1`; no restored programs, SQL, configuration, Git pointer or external link
+referents are executed. Their complete readback/Root acceptance remains pending.
+The three cache restores have no reserved workspace or execution authorization.
+
+A new isolated composition (`b3e905d5`) adds exactly the four previously reviewed
+compact-store/inspection/loader components to the frozen fullscope source stage,
+resolving its missing-module and constructor mismatch. One tiny owned rehearsal
+passed (`ffa61a56`): normal 70-control/409-task birth, activation, two-event prefix,
+sealed state-codec tail, five normal retained commands including typed collection
+and note, exact cold state/native custody and signed-head/logout closure. All 409
+tasks remain NOT_RUN and there are zero workpapers. Independent review is pending;
+this gives no actual fieldwork, actual birth/cutover or original-journal migration
+credit. Earlier harness refusals are preserved. Original Key holder PID 1927871
+remains running in MESSY, without final ready/activation receipts. Original C3/M5,
+actual viewer QA/cold, full packets and large-journal backup/migration/retirement
+remain pending. The current common Git recovery predates later local commits;
+actual MAIN product source and all 46 locked job payloads/statuses are unchanged.
+
 2026-10-03 21:17 UTC actual library acceptance and checkout preservation: the corrected
 read-only caller (`65089808`) passed independent lifecycle review (`ba78dc54`) and
 Root selection (`bda97d31`). One actual existing AcceptedLibrary.verify invocation
