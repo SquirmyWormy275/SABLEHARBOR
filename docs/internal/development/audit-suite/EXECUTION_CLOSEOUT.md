@@ -1,5 +1,42 @@
 # Audit-suite execution closeout
 
+2026-10-03 20:34 UTC actual source and restore acceptance: the corrected source caller
+(`ffdc1e63`) and exact support/namespace closure are Root-admitted (`4ce21acc`).
+Normal unchanged-command resume completed with receipt `35449f07`; Root conserved
+all seven database bytes/nine metadata fields and all 96 receipts (`3425d539`).
+Strict local source publication completed (`fc996cd4`, manifest `b376a78c`).
+Independent native closure (`f4dbdfe0`) and Root acceptance (`ac280a9a`) confirm
+5,714 native versions/922 systems, all fourteen fields/raw bytes and all original
+5,608 records/886 owners unchanged, 1,440 native reference joins, unique native
+keys/commands, and zero grants, collections or access journals. The 106 new
+records and 36 systems came from the actual company-source operations. Prior
+caller refusal, namespace counters and checker setup qualifications are retained.
+
+The external selected-library review is issued (`76274b91`); the existing
+AcceptedLibrary read-only API check is being prepared. This does not create a
+runtime or audit, mark the original viewer epoch complete, or assert whole-estate
+or full-year sufficiency. Local capacity failures and missing/late policy and
+open IAM history remain literal. Normal new birth uses dense Store: heavy new
+fieldwork must use an explicitly admitted short-prefix sealed state codec after
+normal source activation; its composition is not credited by the ordinary
+70-control/409-task owned birth gate alone.
+
+Eight historical HOME preparation trees passed encrypted preservation and full
+separate source verification, freshly Root-closed (`c121e050`). All eight private
+isolated restorations and independent complete readbacks are freshly Root-closed
+(`e51fed56`): 6,058 regular files/1,884,158,736 bytes, 7,446 members and 51 opaque
+link strings, with zero ownership differences. No link referents or restored
+program portability are claimed. Original paths remain retained; reference
+clearance, retirement and deletion are not authorized by these recovery proofs.
+Complete older-checkout preservation is being prepared separately. Earlier
+common Git recovery is point-in-time only.
+
+Original holder PID 1927871 has advanced to MESSY after producing CLEAN private
+Key files; the final Key receipt and viewer-ready checkpoint remain pending.
+No original C3/M5 followthrough, actual viewer QA/cold reopen, complete packets,
+large original journal backup, migration or retirement is credited. Actual MAIN
+product bytes and all 46 locked job payloads/statuses remain unchanged.
+
 2026-10-03 19:41 UTC actual source and recovery checkpoint: the isolated
 company-only guard is Root-admitted (`e02df9d4`) and its immutable source inputs
 are independently conserved (`4ceab083`). Canon permits company activity without
