@@ -1,5 +1,37 @@
 # Audit-suite execution closeout
 
+2026-10-03 15:55 UTC corrected Key attempt: Root reviewed the private runtime
+configuration successor (`8df67377`), independently recovered all four original
+companion sources and both original configurations from their narrow inverses,
+and closed the original lifecycle gates. The new authorizations preserve the
+original 88-module/native-four/signature-48 vector and all old source, clock,
+identity and history fields. The final holder authorization is `a096a851`, with
+Root review `500549cd`. One new attempt is running as PID 1927871; Key completion
+and viewer activation are still pending. The old failed namespace and original
+POST credentials are preserved. No original delegation or rotation was retried.
+
+The native-edition lifetime successor is Root-admitted (`3449b054`). Independent
+checking found an incoming-trigger gap in the first draft; the corrected source
+requires the complete application-owned schema, including triggers, indexes,
+columns and SQLite version pragmas. The original rejection and qualified test
+history are preserved. The isolated combined source/runtime/retained-service
+test passed (`f5dc9857`), with a normal 192-task birth, one authenticated typed
+collection and cold retention. This does not inherit actual 409-task acceptance.
+The precise deadline variant is Root-admitted (`9362eb93`) and integrated in
+isolated commit `a66fffee`; actual MAIN code remains unchanged.
+
+The full 96-action two-mode source draft completed in a small owned fixture,
+but resume exposed a historical-policy cutoff bug. A separate historical replay
+successor is under independent review. Independent canonical-source checking
+also caught a one-minute availability mismatch: the original policy event is
+09:00 and availability is 09:01. The corrected draft uses a 09:01 calendar,
+09:02 registration and 53,940 seconds to preserve the original midnight deadline.
+The previous drafts, first completion and resume refusal remain preserved.
+Full feasibility against an independent copy of the immutable pre-audit library
+is in progress. Actual source execution remains gated behind original closeout.
+The Seagate is still absent; independent backups, migration and large-file cleanup
+remain pending. All 46 locked job payloads and statuses remain unchanged.
+
 2026-10-03 15:07 UTC execution and source checkpoint: signed renewal completed
 for both original rooms and the coordinator exited 0 (`24edfe01`). The original
 principals, audit revisions, immutable prefixes and company source were
