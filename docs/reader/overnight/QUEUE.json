@@ -2876,6 +2876,36 @@
         "actual_storage_savings_or_latency_measured": false,
         "old88_delivery_and_anchored93_gates_inherited_by_compact_code": false,
         "locked_job_payloads_or_states_changed": false
+      },
+      "selected_methods_and_recovery_checkpoint_2026_10_03_1013_UTC": {
+        "status": "PASS_SELECTED_METHOD_AND_RESTORE_REVIEWS_ACTUAL_ADOPTION_PENDING",
+        "root_method_review": {
+          "path": "enterprise/generated/audit-suite/selected-source-method-corrections-root-admission-2026-10-03/REVIEW.json",
+          "sha256": "130fc68e6b9b442e4f3b222291281fe6780336805ca78fd658f93b8a97586dfa"
+        },
+        "root_method_fresh_refs": 1172,
+        "data_security_independent_assertion_cases": 80,
+        "data_security_ordinary_collections": 67,
+        "data_security_independent_event_replay": 79,
+        "security_legal_independent_tests": 37,
+        "security_legal_author_tests": 43,
+        "method_composition": "ISOLATED_IN_PROGRESS_CURRENT_MAIN_UNCHANGED",
+        "restore_root_review_sha256": "a2d3db6cf5e4e71f900a424893414a9a447cc93204aab37343db24fa525f94e5",
+        "restore_selected_source_sha256": "5cc5338ec0d75886fbda2ebdfeda87bfc7eee7d173d5f93d24a5ebe6932096a4",
+        "restore_independent_qualified_gate_sha256": "d4e44833efbee2af2737d1cba3bd060bfb1f8a538325191bfa3dfd1d0943e76c",
+        "restore_fresh_own_probe_members": 7,
+        "git_restore_author_checks_per_three_owned_archives": 18,
+        "restore_own_metadata_qualification_preserves_prior_refusal": true,
+        "operating_depth_plan_handoff_sha256": "a11bd214aeb41cb5892d11ea02ae7520d2cd5cd495e0edb9fcc393d67fa13730",
+        "existing_engineering_corrections_preserved_not_duplicated": true,
+        "optional_instructor_crosswalk": "INDEPENDENT_REVIEW_PENDING_NOT_ACTUAL_KEY_CREDIT",
+        "external_volume_last_verified": "NOT_DETECTED_NO_EXTERNAL_BLOCK_DEVICE_OR_NTFS_MOUNT",
+        "actual_parent_pid": 930776,
+        "actual_parent_receipt": "PENDING",
+        "actual_main_or_company_or_audit_mutation": false,
+        "actual_migration_archive_deletion_or_viewer_activation": false,
+        "locked_job_payload_sha256": "2c16e6a5abf94a2b70be3924b8baac60bd56061fa592b75da3d58166a687040f",
+        "all46_job_payloads_and_statuses_unchanged": true
       }
     }
   },

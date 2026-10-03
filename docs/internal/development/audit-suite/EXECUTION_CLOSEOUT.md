@@ -1,5 +1,32 @@
 # Audit-suite execution closeout
 
+2026-10-03 10:13 UTC selected-method and recovery checkpoint: Root closed
+1,172 current source/proof references for the SEC001/SEC005, legal term,
+REC001 and REC003 corrections. Admission is `130fc68e`; independent reviews
+retain 80 data/security assertion cases and 37 reference-method tests. These
+used ordinary company-native collection in small owned workrooms, preserving
+wrong-identity, changed-hash, late-source and unknown-reference refusals.
+The overlapping security fixes are being composed in an isolated successor.
+Current MAIN, original audit conclusions and Key versions remain unchanged.
+Fresh composition pins and explicit successor fieldwork remain required.
+
+The bounded streaming restore is independently reviewed and Root-admitted
+(`a2d3db6c`). Its selected `5cc5338e` helper restores full member streams and
+verifies bytes, modes, timestamps and namespace before publication. One old
+OWN fixture's ctime changed during proof sealing; the old failed closure and
+original proof remain preserved. The new qualified gate records the exact
+change and a fresh seven-member probe. The three Git restore exercises have
+18 checks each; these are preparation results, not actual backup recovery.
+
+The source-depth plan (`a11bd214`) confirms existing CONFIG/BUILD/TEST-CORRECTED
+records and avoids duplicating them. Remaining native implementation targets
+independent populations, due slots, review cadence, exact policy document
+receipts and commissioned service windows. The optional instructor archive
+crosswalk remains under independent review and outside actual activation.
+At the latest device check the Seagate was still absent. Original parent
+PID 930776 remained running, with no complete receipt. Actual signed renewal,
+viewers, packets, migration, new backups and cleanup remain pending.
+
 2026-10-03 08:28 UTC storage verification checkpoint: the isolated lossless
 history replacement passed 29 independent checks under cryptography 48.0.1.
 Root closed 1,754 source/proof references, review `2a32a56d`; selected commit
