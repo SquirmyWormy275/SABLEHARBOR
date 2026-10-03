@@ -1,5 +1,34 @@
 # Audit-suite execution closeout
 
+2026-10-03 11:19 UTC selected successor integration checkpoint: independent review
+passed nine finite integration checks, two 390/1440 navigation journeys and
+a product-free 16-event complete-packet replay. Root closed 1,890 references
+and independently recomputed the three method AST deltas (`b9276817`).
+The isolated composition selects 91 Python modules, four native members and
+cryptography 48.0.1/12 origins; 95 supplementary imports remain separate.
+The current-card reference index searches and pages twenty rows; the target
+is reachable in three Tabs. The exact composed methods retain 66 unique
+author checks and three repeated final checks. Actual 409-task activation,
+original 88/93-origin gates, storage savings and queue completion are separate.
+
+A portability gap was found in the frozen anchored offline consumer: it needs
+authority, reader and historical-source files at external absolute paths. A
+separate witness transport and consumer correction is being built. It must
+preserve every original document byte, use the original authority SHA as an
+external trust input, and refuse unknown paths. It needs eight neutral or eleven
+actual-lineage witnesses, not the original large audit journals or live company
+database. Compatible Python and the exact pinned zstd remain prerequisites.
+Frozen actual writer/consumer products have not changed.
+
+Source reconciliation confirms each branch already has twelve monthly
+denominator/reconciliation pairs and four quarterly population/decision/followup
+sets. Remaining source work reuses them and binds genuine open followup, policy
+receipts and commissioned service use. A later January 2028 action cannot cure a
+missed 2027 deadline; the approved 2027 scope and old edition remain intact.
+Original parent PID 930776 still has no complete receipt. The Seagate remains
+absent. Actual viewer, packets, migration, independent backups and large-file
+cleanup remain pending.
+
 2026-10-03 10:13 UTC selected-method and recovery checkpoint: Root closed
 1,172 current source/proof references for the SEC001/SEC005, legal term,
 REC001 and REC003 corrections. Admission is `130fc68e`; independent reviews

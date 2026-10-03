@@ -2906,6 +2906,49 @@
         "actual_migration_archive_deletion_or_viewer_activation": false,
         "locked_job_payload_sha256": "2c16e6a5abf94a2b70be3924b8baac60bd56061fa592b75da3d58166a687040f",
         "all46_job_payloads_and_statuses_unchanged": true
+      },
+      "selected_closeout_composition_and_portability_checkpoint_2026_10_03": {
+        "checked_at_UTC": "2026-10-03 11:19 UTC",
+        "selected_commit": "8a8a08c00ce866afc610d3a21b28fccfef5fb5b9",
+        "independent_gate_sha256": "d65ca27b10f70104b8f211197aa2cb4a693afbfaf7382e5d77f01dbd05f3ff4e",
+        "Root_selected_admission_sha256": "b92768178fe23917be5bd1a97dc7a4acee08157183121a8423b7024c1d609873",
+        "Root_fresh_refs": 1890,
+        "selected_python": 91,
+        "native_source_and_binary": 4,
+        "signature_backend": "48.0.1",
+        "signature_origins": 12,
+        "supplementary_project_imports_separate": 95,
+        "independent_finite_integration_cases": 9,
+        "independent_metadata_UI_journeys": 2,
+        "independent_product_free_events": 16,
+        "independent_ordinary_pairs": 682,
+        "combined_method_unique_author_cases": 66,
+        "combined_method_repeated_cases_not_unique": 3,
+        "actual_MAIN_or_company_or_audit_or_Key_activation": false,
+        "delivery88_or_anchored93_or_actual409_inherited": false,
+        "temporary_dependency_symlink_removed_target_preserved": true,
+        "standalone_packet_portability_gap": {
+          "status": "CONFIRMED_CORRECTION_IN_PROGRESS",
+          "required_external_witnesses": {
+            "neutral": 8,
+            "actual_lineage": 11
+          },
+          "original_documents_unchanged_and_original_authority_SHA_externally_required": true,
+          "live_company_or_original_journal_dependency_for_consumer": false,
+          "compatible_Python_and_exact_packet_pinned_zstd_required": true
+        },
+        "operating_source_reconciliation": {
+          "existing_each_branch_monthly_denominators": 12,
+          "existing_each_branch_monthly_reconciliations": 12,
+          "existing_each_branch_quarter_populations": 4,
+          "existing_each_branch_quarter_decisions": 4,
+          "existing_each_branch_quarter_followups": 4,
+          "existing_period_sources_reused_without_duplicate_rosters_or_reviews": true,
+          "2028_followup_not_a_2027_cure": true
+        },
+        "actual_complete_parent_receipt_pending": true,
+        "verified_Seagate_reconnection_pending": true,
+        "job_completion_or_professional_acceptance": false
       }
     }
   },
