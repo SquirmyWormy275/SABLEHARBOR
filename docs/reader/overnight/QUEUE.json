@@ -2797,7 +2797,7 @@
         "stat_accounting_is_not_compressed_physical_footprint": true,
         "originals_already_Btrfs_zstd_compressed": true,
         "current_codec_replaces_complete_prefix": false,
-        "safe_full_prefix_retirement_status": "ISOLATED_LOSSLESS_REPLACEMENT_IMPLEMENTATION_AND_REVIEW_IN_PROGRESS_ACTUAL_MIGRATION_NOT_ADMITTED",
+        "safe_full_prefix_retirement_status": "ISOLATED_SELECTED_LOSSLESS_REPLACEMENT_REVIEW_PASS_ACTUAL_MIGRATION_NOT_ADMITTED",
         "validation_cache_apparent_bytes_approx": 52100000000,
         "validation_cache_contains_proof_inputs": true,
         "completed_main51_owned_fixture_cleanup": {
@@ -2856,6 +2856,26 @@
         "actual_QA_unfilled_plan_sha256": "c8022fc703c2896a13115f7d48ef8241c75ac77911a605e46e441679916afdb4",
         "actual_QA_census_disposition_sha256": "2b4e62607eeb54cda4cf1a65660c13b2cd29e80f2d427c3c1f5c23e24ae55cb0",
         "historical_fixture_stamp_qualification_sha256": "0d1b945c962e40f5fdb703a758f390c9ffcd49de9bbe5e1b06b31cf0b563f336"
+      },
+      "storage_selected_review_checkpoint_2026_10_03_0828_UTC": {
+        "external_volume_last_verified": "NOT_DETECTED_NO_EXTERNAL_BLOCK_DEVICE_OR_NTFS_MOUNT",
+        "actual_parent_pid": 930776,
+        "actual_parent_receipt": "PENDING",
+        "compact_history_selected_commit": "41e1d0beb12fbc16382dd6e1dae031ee1edb429c",
+        "compact_history_independent_review_sha256": "fa8f271e88839da4c6d011de696044ea6258f59fb67dec543e777cda2bac03fc",
+        "compact_history_root_review_sha256": "2a32a56d7f543c94504b96a490535c97fd85ca4191fe14260490727733944ba6",
+        "compact_history_independent_own_checks": 29,
+        "compact_history_root_fresh_refs": 1754,
+        "tree_preservation_selected_source_sha256": "8a481110adef24897eba2d0d39218a0453b6c906f8c8ed3caf9523f7d2f1ec7e",
+        "tree_preservation_independent_review_sha256": "b14fa89a9a373dcd85cf0261f5306bf7cd137265432d3273a60322e51c22975a",
+        "tree_preservation_root_review_sha256": "73f3137980c0e495da1e0d6eac48ebba55ccd5b0b2c333cae4f157d4caf2a7f4",
+        "tree_preservation_independent_own_checks": 21,
+        "tree_preservation_root_fresh_refs": 569,
+        "git_aware_preservation_restore_preparation": "IN_PROGRESS_OWN_FIXTURE_ONLY",
+        "actual_migration_archive_deletion_or_viewer_activation": false,
+        "actual_storage_savings_or_latency_measured": false,
+        "old88_delivery_and_anchored93_gates_inherited_by_compact_code": false,
+        "locked_job_payloads_or_states_changed": false
       }
     }
   },

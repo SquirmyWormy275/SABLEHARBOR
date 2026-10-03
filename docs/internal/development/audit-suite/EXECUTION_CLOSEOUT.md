@@ -1,5 +1,23 @@
 # Audit-suite execution closeout
 
+2026-10-03 08:28 UTC storage verification checkpoint: the isolated lossless
+history replacement passed 29 independent checks under cryptography 48.0.1.
+Root closed 1,754 source/proof references, review `2a32a56d`; selected commit
+is `41e1d0be`. Exact raw history, native custody, active tails, signed authority,
+complete logout inventories and the generic complete-packet path were checked
+on owned fixtures. Existing 88-origin delivery and 93-origin anchored-packet
+gates are not inherited. Actual migration, retirement, savings and latency
+remain unaccepted.
+
+The streaming encrypted tree helper passed 21 independent checks. Root closed
+569 references, review `73f31379`, selecting helper `8a481110`. Its full reverse
+stream checks every member and settles owned crypto processes. Git-aware
+preservation and standalone restore are being prepared separately for linked
+worktrees. No actual archive or removal occurred. The Seagate remains absent
+from the device/mount inventory; backups wait for verified reconnection.
+Original parent PID 930776 remains running, with its complete receipt pending.
+Signed renewal, Key binding and actual viewers remain unexecuted.
+
 2026-10-03 07:31 UTC storage checkpoint: the Seagate was no longer visible
 in either block-device or mount inventory. The owner has agreed to reconnect it;
 no archive, original migration or deletion proceeds until its UUID and capacity
