@@ -1,5 +1,40 @@
 # Audit-suite execution closeout
 
+2026-10-03 19:41 UTC actual source and recovery checkpoint: the isolated
+company-only guard is Root-admitted (`e02df9d4`) and its immutable source inputs
+are independently conserved (`4ceab083`). Canon permits company activity without
+an audit. The separate source-only authorization does not mark the original
+viewer epoch complete or allow audit birth, Key, HTTP or cutover. Original MAIN
+code and both original audit rooms remain unchanged.
+
+Actual PREVIEW passed with the exact 96 actions. The actual native driver then
+completed all 96 and issued source completion `d8464167` in the separate HOME
+edition. Its caller refused final acceptance on an undeclared supporting import;
+no caller receipt or publication was issued. Failure `10898654` is preserved.
+The policy parser's lazy support imports are being explicitly pinned. Independent
+review rejected the first correction's extra-namespace gap (`9e9724ef`); it is
+not execution eligible. Actual source acceptance and publication wait for the
+corrected caller and normal unchanged-command resume. No new audit exists.
+
+The full 70-control/409-task owned source-to-retained seam now has independent
+and Root admission (`081446f0`); all tasks began unrun, with no initial workpapers
+or collections. This is an owned integration result, not actual fieldwork.
+The 49-byte capacity failure, missing-at-due/late policy history and open IAM
+decisions remain explicit.
+
+Two immutable source-proof trees are encrypted on the reconnected Seagate and
+passed full separate verification (`962fb990`). The complete 1,153,629,715-byte
+common Git store is independently preserved and freshly Root-closed (`c64de88b`).
+Its isolated restoration and all 4,561 file bytes/6,339 members are Root-verified
+(`7da01b8d`). Active Git was untouched by recovery. This is point-in-time common
+Git recovery; dirty/untracked/ignored checkout contents need their own backups.
+No original journal backup, original storage migration or retirement is credited.
+
+Original holder PID 1927871 remains running, with the Key-ready checkpoint and
+viewer activation pending. The first original C3/M5 actions, actual QA and cold
+reopen, full packets and large cleanup remain unperformed. All 46 locked job
+payloads and statuses remain unchanged.
+
 2026-10-03 18:15 UTC publication and full-scope checkpoint: the new initializer
 namespace and new literal 96-action run, full resume and strict publication are
 Root-admitted (`361b3d5d`, 553 fresh references). The initializer changes one

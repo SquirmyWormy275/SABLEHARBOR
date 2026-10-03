@@ -3141,6 +3141,41 @@
         "locked_job_payload_sha256": "2c16e6a5abf94a2b70be3924b8baac60bd56061fa592b75da3d58166a687040f",
         "all46_job_payloads_and_statuses_unchanged": true,
         "professional_acceptance": "NOT_ASSERTED"
+      },
+      "actual_isolated_source_and_recovery_checkpoint_2026_10_03_1941_UTC": {
+        "checked_at_UTC": "2026-10-03 19:41 UTC",
+        "status": "ACTUAL96_NATIVE_DRIVER_COMPLETED_CALLER_CLOSURE_REFUSED_CORRECTION_PENDING_ORIGINAL_KEY_RUNNING",
+        "isolated_guard_Root_review_sha256": "e02df9d429056946f56345c20b0863f526e060329c615ead925d8bb9fd1b7cc7",
+        "immutable_source_conservation_Root_review_sha256": "4ceab083f477a009657925e59e860fec66dd61cef2693f26405d2da66a1ec753",
+        "isolated_source_worker_Root_input_review_sha256": "71f4963338c53fd18815c8f0428afd6da10814c33d9cbd126832a4b90d4a06ba",
+        "actual_source_preview_receipt_sha256": "41e019a27e605a0ca0dec9a2636b42b104c99def2f7b41e71e9fcfe53273f697",
+        "actual_source_driver_completed_actions": 96,
+        "actual_source_driver_completion_sha256": "d84641675031b4e4181001ff38040b42ab5ff66f4b261709fa7ffed2410d2dda",
+        "actual_source_caller_closing_refusal_sha256": "108986542814b4ec0069b210cdade1d68f3307db1dfee777a6595a39872bc529",
+        "first_support_correction_counter_sha256": "9e9724eff9193e93487c5cc7e7d0168237d005e6a17b3f519b0ba3c691c370b0",
+        "actual_source_caller_receipt_or_publication_accepted": false,
+        "actual_new_audit_created": false,
+        "source_only_admission_marks_old_pipeline_complete": false,
+        "full70_409_OWN_Root_seam_review_sha256": "081446f0db6d121fcc3840618615f2260c68040c9920e56e9bb4869a5112877b",
+        "immutable_two_proof_tree_preservation_Root_review_sha256": "962fb990907f46e8b9de17e5f4db0f41feac0411b6892cc58feaa44fd5557b3b",
+        "common_Git_preservation_Root_review_sha256": "c64de88b3bfcf66f7e2bca9fa93c5c1f88ebd7c9797665dd86ab6791e686c81a",
+        "common_Git_restore_Root_review_sha256": "7da01b8d9a76c6a941c09da476be31b2b206a01f03ab07c0a012c1772e569a08",
+        "common_Git_original_file_bytes": 1153629715,
+        "common_Git_files_and_members": [
+          4561,
+          6339
+        ],
+        "common_Git_backup_is_point_in_time_only": true,
+        "full_checkout_dirty_ignored_untracked_preservation_accepted": false,
+        "original_full_journal_backup_migration_or_retirement_accepted": false,
+        "original_holder_pid": 1927871,
+        "original_holder_tool_session": 70163,
+        "actual_original_Key_ready_or_viewer_activation": false,
+        "actual_original_C3_M5_QA_cold_packets_executed": false,
+        "actual_Main_product_source_changed": false,
+        "locked_job_payload_sha256": "2c16e6a5abf94a2b70be3924b8baac60bd56061fa592b75da3d58166a687040f",
+        "all46_job_payloads_and_statuses_unchanged": true,
+        "professional_acceptance": "NOT_ASSERTED"
       }
     }
   },
