@@ -2520,8 +2520,8 @@
       "real_payload_encoder_component_status": "FROZEN_A070_FULL238423640_BYTES_EXACT_REFERENCE_AND_FRESH_ALL_NODE_PASS_122BYTE_NOTE_ENCODE1_459SECONDS_DB_GROWTH20480_BYTES_NO_ACTUAL_DB_OR_SERVICE",
       "new_final_retained_composition_status": "SELECTED_COMPONENTS_PASS_INDEPENDENT599217_CHANGES_REQUIRED_ORDINARY_GET_CLOSURE_AND_ORIGINAL_MANUAL_ASSESSMENT_DEBRIEF_ACTIVATION_FOCUSED_SUCCESSOR_IN_ISOLATED_REVIEW",
       "final_current_live_replay_last_observed_progress": {
-        "CLEAN": 5800,
-        "MESSY": 5400
+        "CLEAN": 5600,
+        "MESSY": 5000
       },
       "final_current_live_replay_last_observed_progress_is_acceptance": false,
       "actual_prefix_delegation_consumption_recipe_independent_review_sha256": "4ada2eb0b964a901cd9787c47e961fc2635446ad46e835d9548a0072dbddd098",
@@ -2550,7 +2550,7 @@
       "engineering_closeout_matrix_sha256": "0b98a7deae0a8a41fec72dea67c0cff528bc72ddb1b4a5f705b3343f3d14703e",
       "postdelegation_coordinator_root_selected_input_review_sha256": "c4e9f11b7cd11ac678365ff2f2d23d7c6b7c124713ab26d6416c42d80a4766c7",
       "postdelegation_coordinator_status": "SELECTED_AUTHOR20_AND_IMMUTABLE_LINEAGE_PASS_ROOT286_REFERENCES_STATIC_PASS_UNFILLED_ACTUAL_FINAL_GATES_PENDING",
-      "checkpoint_utc": "2026-10-03 01:52 UTC",
+      "checkpoint_utc": "2026-10-03 02:43 UTC",
       "focused_delivery_successor_commit": "c696bda0a6c3e60c990d5ebcfbe39177fede6cb3",
       "focused_delivery_successor_status": "SELECTED_SEQUENTIAL_BACKEND_ACCEPTED_GENUINE_PARALLEL_BROWSER_STARTUP_REFUSAL_UNDER_FOCUSED_REPAIR",
       "focused_delivery_successor_dependency_sha256": "c0bd01bd24add29231732cbfd8a745eb8f04e8dea47110b90639969bbd3a1122",
@@ -2617,9 +2617,9 @@
         "ignored_exact_native_binaries": 2
       },
       "first_current_live_v2_progress": {
-        "observed_at": "2026-10-03 01:52 UTC",
-        "CLEAN_verified_events": 5100,
-        "MESSY_verified_events": 4100,
+        "observed_at": "2026-10-03 02:43 UTC",
+        "CLEAN_verified_events": 5600,
+        "MESSY_verified_events": 5000,
         "CLEAN_required_events": 6227,
         "MESSY_required_events": 6350,
         "reader_pid": 326175,
@@ -2630,7 +2630,7 @@
         ],
         "completed_acceptance": false
       },
-      "anchored_packet_successor_author_status": "INDEPENDENT_COMPOSITION_CHANGES_REQUIRED_FINAL_ARCHIVE_BYTE_SUCCESSOR_UNDER_REVIEW",
+      "anchored_packet_successor_author_status": "PASS_SELECTED_CORRECTED_COMPOSITION_ROOT_FRESH_ACTUAL_PACKET_PENDING",
       "anchored_consumer_author_root_reconciliation_sha256": "91a80225f2a5ab5843aef1c4248ad1898b0457453f440a8eea33260999b7df6a",
       "anchored_consumer_author_fresh_ordinary_pairs": 1204,
       "live_reuse_keyv4_independent_gate_sha256": "cbb694819890de816f12146ce4c52da8edbfeb48ecf751e3dc53dc9d84d296f0",
@@ -2638,7 +2638,17 @@
       "closed_final_MAIN_installation_successor_plan_sha256": "131b4c4192afb54dc0bc697a67105855a769ba90eea7e953fa5bbec0a815331d",
       "closed_final_MAIN_installation_successor_plan_files": 48,
       "streamed_original_backup_root_admission_sha256": "4542d9ba4d81fa98e1964fb32ae45b6179382bf5088b32491c121fe5bac9c797",
-      "streamed_original_backup_corrected_caller_static_review_sha256": "b0bb12759033895fb0f55bce79d21d53ee762f7f401dcda36e87765841768db8"
+      "streamed_original_backup_corrected_caller_static_review_sha256": "b0bb12759033895fb0f55bce79d21d53ee762f7f401dcda36e87765841768db8",
+      "anchored_packet_joint_independent_gate_sha256": "a992288f2de499ce91389ec54cc9b590c2c6966020cfc0fe6ea70d20e54f569e",
+      "anchored_packet_joint_root_admission_sha256": "cc96d10d8de668137c144ad858ed7c027c1acd93b41703ba704e1b813a1da56c",
+      "anchored_packet_joint_root_ordinary_pairs": 5639,
+      "anchored_packet_joint_root_fresh_refs": 11312,
+      "same_process_holder_status": "SELECTED_LIFECYCLE40_AND_AUTHOR29_PASS_UNFILLED_NO_ACTUAL_ACTIVATION",
+      "same_process_holder_independent_gate_sha256": "81922336374672acea9bed2e2d97b4d3fd5c0b2c13f1bf2fb91f84c8bf8f7ab0",
+      "same_process_holder_root_admission_sha256": "d3a19fd4d7fba406a26e9a5ef871483681e83c9c498679f3a332c3af0ee23044",
+      "same_process_holder_source_sha256": "6b1224a73b8d07f3840920cfcd13370608fdc91c3f89571a75935014a0670e55",
+      "current_connected_seagate_free_bytes": 331856371712,
+      "current_internal_free_bytes": 114192543744
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"
