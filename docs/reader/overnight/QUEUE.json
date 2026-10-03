@@ -3074,6 +3074,33 @@
         "actual_backups_migration_cleanup": "PENDING",
         "locked_job_payload_sha256": "2c16e6a5abf94a2b70be3924b8baac60bd56061fa592b75da3d58166a687040f",
         "all46_job_payloads_and_statuses_unchanged": true
+      },
+      "source_reference_and_native_selection_checkpoint_2026_10_03_1717_UTC": {
+        "status": "ORIGINAL_KEY_HOLDER_READING_NEW_SOURCE_PROGRAM_OWN96_AND_RESUME_PASSED_FINAL_SEAL_PENDING",
+        "original_holder_pid": 1927871,
+        "original_holder_session": 70163,
+        "actual_original_Key_receipt": "PENDING",
+        "actual_viewer_activation": false,
+        "historical_policy_Root_review_sha256": "72441ff86db74e72d418433bac1d0e522eb814996595ebb38ed0b663a2c64c7d",
+        "native_reference_Root_review_sha256": "4bc6286a0b2f74330fa549471be9a6d7563f55cea811b3c51d49c6ba5fadf250",
+        "source_depth_sha256": "106b5957743bae993ac9549649aac7ae34499c4b1a9b6befa182be96c3766ecb",
+        "isolated_selected_commit": "dfa4c11e",
+        "Main_locked_source_unchanged": true,
+        "native_filler_Root_review_sha256": "c12a86899ff68a185e7b41d297a6ed34b33ed3ff7039bd796e4af6eab40ccf0e",
+        "native_filler_source_sha256": "5fb7ddc711c7bab7eb1379f951b84934b3b21fe3da1a2deb5bb665fae366c293",
+        "native_worker_unchanged_full64_SHA": "979907c20b93a0f1b88a5e7be5e5387976e49b5f5f5b13aec9bd37f27404d31b",
+        "old_native_filler_route_rejection_preserved_sha256": "cd9ba1d0024a7f16a485142b82c2619d2bbdb7a4c9b8690d36c4862ecad919b4",
+        "literal96_program_OWN_run_and_full_resume": "PASS_REPORTED_FINAL_INDEPENDENT_CONSERVATION_SEAL_PENDING",
+        "actual96_source_program_or_new409_audit_executed": false,
+        "new_full70_409_birth": "OWN_NORMAL_API_INTEGRATION_PREPARATION_PENDING",
+        "original_failed76_and89_runs_preserved": true,
+        "malformed9_native_clock_fields": "NOW_REFUSE_UNSUPPORTED_CLOCK_MISMATCH_VALID6_9_PRESERVED",
+        "physical_source_unknowns_and_late_policy_unchanged": true,
+        "temporary_frontend_symlink_removed_target_preserved_receipt_sha256": "91a65a6d5c6d0053063742988a5ed695bf277e0999d4db670349655a5ff812bf",
+        "external_volume_last_verified": "NOT_DETECTED_NO_EXTERNAL_BLOCK_DEVICE_OR_NTFS_MOUNT",
+        "actual_backups_migration_large_cleanup": "PENDING",
+        "locked_job_payload_sha256": "2c16e6a5abf94a2b70be3924b8baac60bd56061fa592b75da3d58166a687040f",
+        "all46_job_payloads_and_statuses_unchanged": true
       }
     }
   },

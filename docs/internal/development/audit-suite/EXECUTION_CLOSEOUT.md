@@ -1,5 +1,33 @@
 # Audit-suite execution closeout
 
+2026-10-03 17:17 UTC source and closure checkpoint: historical policy replay
+is Root-admitted (`72441ff8`), with the old current-only guard preserved. Exact
+native retry and period reference shapes are Root-admitted (`4bc6286a`), including
+fresh company/branch/occurrence/availability joins. Valid legacy shapes retain
+their results; malformed nine-field clock metadata now refuses explicitly.
+Both fixes are integrated in isolated commit `dfa4c11e`; actual MAIN source
+remains unchanged. The failed 76- and 89-action full-library runs are preserved.
+A fresh 96-action run and full resume now pass in the independently owned
+immutable-library copy. Its final all-fourteen-field and proof closure is still
+being sealed, with genuine capacity failures and late delivery left intact.
+
+The current-native filler has a separate Root review (`c12a8689`). Its exact
+five-literal successor selects the current MAIN review, corrected Key namespace
+and authorization, and a new output folder. Independent checking also found
+and corrected an inherited truncated worker SHA. The unchanged native worker
+has full SHA `979907c20b93a0f1b88a5e7be5e5387976e49b5f5f5b13aec9bd37f27404d31b`.
+The prior rejection remains preserved. No actual filler or closure was run.
+Original holder PID 1927871 is still reading the original audit history;
+there is no completed Key receipt or activated viewer yet.
+
+A normal fresh 70-control/409-task source-edition birth is being prepared through
+the existing audit APIs, with a January 18, 2028 fieldwork start. The old
+192-task fixture is not credited as that check. The temporary owned frontend
+symlink was removed after verification (`91a65a6d`); its shared dependency target
+is preserved. The Seagate is still absent. Independent backups, migration,
+large-file cleanup and actual packet acceptance remain pending. All 46 locked
+job payloads and statuses remain unchanged.
+
 2026-10-03 15:55 UTC corrected Key attempt: Root reviewed the private runtime
 configuration successor (`8df67377`), independently recovered all four original
 companion sources and both original configurations from their narrow inverses,
