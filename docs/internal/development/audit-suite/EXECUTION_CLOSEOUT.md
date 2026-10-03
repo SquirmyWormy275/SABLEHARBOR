@@ -1,5 +1,30 @@
 # Audit-suite execution closeout
 
+2026-10-03 18:15 UTC publication and full-scope checkpoint: the new initializer
+namespace and new literal 96-action run, full resume and strict publication are
+Root-admitted (`361b3d5d`, 553 fresh references). The initializer changes one
+new command expression; old records, headers, bodies and commands are untouched.
+The previous two-branch command collision remains preserved. The new publication
+contains 5,714 native versions and 5,714 unique commands, retaining all fourteen
+fields and every original 5,608 row. It transfers no grants or collections.
+The selected isolated commit is `9f9b518e`; actual MAIN code stays unchanged.
+
+Normal owned integration opened both fresh 70-control/409-task rooms with all
+tasks unrun and no documentary work before source access. Six typed collections,
+genuine cold retention and learner Key denial passed (`74f886b5`); the frozen
+handoff is `1abc9f1c`. Independent review is running. The local 49-byte capacity
+failure, missing-at-due and late policy versions, and unresolved IAM decisions
+remain explicit. Owned checks do not substitute for actual new source execution,
+full fieldwork or professional acceptance.
+
+The independent current-native checker V2 has a separate Root source review
+(`931aacef`); actual closure has not run. Original holder PID 1927871 is still
+reading the original audit history, with no completed Key receipt or activated
+viewer. The Seagate is now mounted with the expected UUID `72A448AAA44872A1`;
+capacity and backup readiness are being checked. Original backups, migration,
+large cleanup and actual packet acceptance remain pending. All 46 locked job
+payloads and statuses are unchanged.
+
 2026-10-03 17:17 UTC source and closure checkpoint: historical policy replay
 is Root-admitted (`72441ff8`), with the old current-only guard preserved. Exact
 native retry and period reference shapes are Root-admitted (`4bc6286a`), including
