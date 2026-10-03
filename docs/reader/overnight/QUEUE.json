@@ -2648,7 +2648,78 @@
       "same_process_holder_root_admission_sha256": "d3a19fd4d7fba406a26e9a5ef871483681e83c9c498679f3a332c3af0ee23044",
       "same_process_holder_source_sha256": "6b1224a73b8d07f3840920cfcd13370608fdc91c3f89571a75935014a0670e55",
       "current_connected_seagate_free_bytes": 331856371712,
-      "current_internal_free_bytes": 114192543744
+      "current_internal_free_bytes": 114192543744,
+      "viewer_lifecycle_preparation_checkpoint_2026_10_03_0328_UTC": {
+        "status": "SELECTED_ENGINEERING_PREPARATION_ONLY_ACTUAL_DELIVERY_PENDING",
+        "last_observed_at": "2026-10-03T03:28:00Z",
+        "actual_V2_read_only_replay": {
+          "status": "RUNNING_NO_FINAL_PROOF",
+          "verified_events": {
+            "CLEAN": 5900,
+            "MESSY": 5500
+          },
+          "total_events": {
+            "CLEAN": 6227,
+            "MESSY": 6350
+          },
+          "closing_byte_guards": "PENDING"
+        },
+        "source_authorization_filler": {
+          "selected_program_sha256": "b507c5b69dca04bc1981c55580220c3a249c6d5c10de4a8f4b2363ce44d4eb95",
+          "independent_gate_sha256": "6692350c266bf7fcc6e3bd5b09f78c82afe643664f80a86bafc592daa422c79c",
+          "root_admission": {
+            "path": "enterprise/generated/audit-suite/current-native-auth-fill-root-admission-2026-10-03/REVIEW.json",
+            "sha256": "ce89aabf55d4ccfbb0e7e14a2f1e9780d0439bd4caf3c55a379929fccf35117d"
+          },
+          "older_rejected_4271_preserved": true,
+          "actual_execution": false,
+          "full5608_current_native_acceptance": false
+        },
+        "lifecycle_preparation": {
+          "filler_sha256": "52b6343996ee8284002114dab459b5b0d42c6c82405a90f107f8fb5bd283455f",
+          "cold_holder_sha256": "b954533a14e094237b9979d13f11e7f8711437333ed4789f5c80c50a67096c40",
+          "independent_gate_sha256": "d543877222595514f257b48652ddfedca97fa28f439f5758ff0966a091abd6f0",
+          "root_admission": {
+            "path": "enterprise/generated/audit-suite/viewer-lifecycle-root-admission-2026-10-03/REVIEW.json",
+            "sha256": "348e5d8489465c7c8d9aa9032a474c7b4094d8838325e68eecf8cb447f6d1e9c"
+          },
+          "independent_checks": 26,
+          "author_ordinary_pairs": 127,
+          "independent_ordinary_pairs": 367,
+          "root_fresh_references": 1099,
+          "normal_cold_constructor_and_explicit_authority_inventory_selected_only": true,
+          "actual_execution": false
+        },
+        "immediate_capacity": {
+          "status": "IMMEDIATE_BLOCKER_RESOLVED",
+          "approximate_available_GiB": {
+            "connected_Seagate": 309,
+            "internal": 88
+          },
+          "16_GiB_reserve_remains_required": true,
+          "originals_deleted_for_this_update": false
+        },
+        "still_pending": [
+          "successful_actual_first_current_live_proof_and_closing_guards",
+          "original_parent_preparation",
+          "fresh_MAIN_adoption",
+          "actual_POST",
+          "actual_company_native_Key_binding",
+          "actual_current_native_source_closure",
+          "actual_viewer_startup_and_true_cold_restart",
+          "actual_compressed_packet_and_offline_acceptance"
+        ],
+        "prior_failures_and_reviews_preserved": true,
+        "professional_or_owner_acceptance": "NOT_ASSERTED",
+        "locked_job_payload_count": 46,
+        "locked_job_payload_canonical_sha256": "2c16e6a5abf94a2b70be3924b8baac60bd56061fa592b75da3d58166a687040f",
+        "locked_job_status_counts_unchanged": {
+          "COMPLETE": 8,
+          "SOURCE_COMPLETE_REVIEW_PENDING": 9,
+          "AWAITING_REVIEW": 1,
+          "IN_PROGRESS": 28
+        }
+      }
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"

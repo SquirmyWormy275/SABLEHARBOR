@@ -1,5 +1,35 @@
 # Local audit-training delivery
 
+2026-10-03 03:28 UTC checkpoint: the actual read-only V2 replay remains running;
+last observed progress is 5,900 CLEAN and 5,500 MESSY events of 6,227 and 6,350.
+The successful proof and closing byte guards are still pending. Original runtime,
+journals, authority and company source are preserved. About 309 GiB is available
+on the Seagate and 88 GiB internally, resolving the immediate capacity blocker;
+no originals were deleted for this preparation update.
+
+The selected current-native authorization filler is corrected `b507c5b6`, with
+independent gate `6692350c266bf7fcc6e3bd5b09f78c82afe643664f80a86bafc592daa422c79c`
+and root admission `ce89aabf55d4ccfbb0e7e14a2f1e9780d0439bd4caf3c55a379929fccf35117d`
+at `enterprise/generated/audit-suite/current-native-auth-fill-root-admission-2026-10-03/REVIEW.json`.
+The older rejected `4271` preparation stays preserved; its review is not the
+selected execution boundary. The filler remains unfilled and unexecuted, and
+its selected preparation review does not establish actual full 5,608-version source closure.
+
+The final lifecycle filler `52b63439` and genuine cold holder `b954533a` passed
+26 independent checks. Independent gate is
+`d543877222595514f257b48652ddfedca97fa28f439f5758ff0966a091abd6f0`;
+root reconciled 127 author and 367 independent ordinary pairs plus the declared
+hash-only references, 1,099 references in total. Root admission is
+`348e5d8489465c7c8d9aa9032a474c7b4094d8838325e68eecf8cb447f6d1e9c`
+at `enterprise/generated/audit-suite/viewer-lifecycle-root-admission-2026-10-03/REVIEW.json`.
+This is selected engineering preparation: normal cold construction preserves
+original roots/IDs, explicit signed heads and complete known-revocation mappings.
+Successful actual first proof, original parent preparation, fresh MAIN adoption,
+POST, actual Key binding, source closure, user-visible startup/cold restart and
+complete packet acceptance remain pending. No professional or owner acceptance
+is asserted. Earlier failures/reviews and all 46 locked job payloads/statuses
+remain unchanged.
+
 2026-10-03 02:43 UTC checkpoint: actual read-only V2 replay has verified 5,600 CLEAN and 5,000 MESSY events of 6,227 and 6,350. The proof and closing guards are still pending; original runtime, journals, authority and company source remain unchanged. The connected Seagate has 331,856,371,712 bytes available and internal free space is 114,192,543,744 bytes, resolving the immediate capacity blocker.
 
 The corrected opt-in anchored packet composition passed 70 independent checks, including the genuine sealed prefix/tail query and late archive mutation refusal. Root freshly closed 5,639 ordinary pairs (11,312 references), admission `cc96d10d8de668137c144ad858ed7c027c1acd93b41703ba704e1b813a1da56c`. Independent gate is `a992288f2de499ce91389ec54cc9b590c2c6966020cfc0fe6ea70d20e54f569e`; actual packet creation and offline acceptance remain pending. Selected90 project sources plus three standalone packet programs and separately declared supporting imports are distinct from a claim about all imports.
