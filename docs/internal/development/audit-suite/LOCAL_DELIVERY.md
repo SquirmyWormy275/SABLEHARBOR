@@ -1,5 +1,32 @@
 # Local audit-training delivery
 
+October 3, 00:08 UTC checkpoint: the separately admitted actual V2 read-only
+full-history replay is running (reader 326175, wrapper 326168). Independent gate
+`60d01feea4070445b025b5f55ffae6342183bee902c183927c1a889184a5c82d`
+accepted the exact corrected B05 reader and explicit native entry composition.
+Root freshly verified 638 ordinary references; replacement composition is
+`ec0659760f8b840cbf690cd33ba0f5a2d8344d2eca4ea2dc336910df0cdcc8d3`.
+No final history acceptance is asserted until both histories and closing original
+byte guards pass. Failed V1, original capture and every original are preserved;
+V2 has separate private stdout/stderr, process descriptor and proof destination.
+
+The selected correction independently reconciled all 818 terminal procedures,
+461 direct/wrapped native facts and 38 altered-fact/custody refusals. Native
+selection passed 530 independent byte/error comparisons, two genuine owned
+409-task prefix streams and six fresh-origin refusals. All ordinary historical
+state, event/request hash, native/source, procedure and closing predicates remain
+required; no historical state or method is skipped in this V2 replay.
+
+The closed MAIN installation plan contains exactly 45 tracked files and two
+existing ignored native binaries, with full staged88 source closure and every
+current MAIN input preserved. Plan is
+`52e1d3476a710db7793298655152fdfe7feda4fd91e33dc5840006d528270beb`.
+It is prepared only. Original-parent V5 changes only the proof namespace from
+failed V1 to V2; static addendum `344c3a43e2abb9d38e1c11e2ccd287ccac5095e060803b66cf31903d4230f0f5`
+requires the future successful V2 proof, dead readers, fresh locks/origins,
+unchanged source/prefix and an unspent valid grant. No delegation, renewal,
+MAIN adoption, actual Key binding, viewer or packet activation has occurred.
+
 October 2, 23:35 UTC checkpoint: the first actual current-live replay exited
 with a verifier format refusal, `Actual record facts unavailable`; it produced
 no final proof. Failure observation is

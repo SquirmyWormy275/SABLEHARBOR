@@ -2435,7 +2435,7 @@
       "messy_interrupted_task": "TASK-SH-TRN-003-corporate-TOD",
       "messy_interrupted_task_objects_preserved": "ORIGINAL_TOD_POPULATION_SELECTION_WP_PRESERVED_TOD_AND_TOE_ORDINARY_CONTINUATION_COMPLETE",
       "actual_writers_running": false,
-      "whole_history_final_replay": "FIRST_ACTUAL_ATTEMPT_EXIT1_VERIFIER_B05_FACT_LIST_FORMAT_MISMATCH_NO_FINAL_ACCEPTANCE",
+      "whole_history_final_replay": "EXACT_REPLACEMENT_V2_READONLY_FULL_HISTORY_RUNNING_NO_FINAL_PROOF",
       "final_fieldwork_input_preparation_sha256": "34fac279f00392657b01b565d66fa6811fb74b8307e99121b00f40c5f2c2b59d",
       "key_binding_input_preparation_sha256": "a6e792872fb46888e62d30a192c5d3b132e17fe5a919e8c81efb309a58eecc49",
       "storage_status": "CAPACITY_RECOVERED_ENCRYPTED_BACKUPS_VERIFIED_ORIGINAL_PATHS_PRESERVED_B05_FULL50_FINISHED",
@@ -2502,8 +2502,8 @@
         "CLEAN": "c5ff208d16c98beef6a875180cbc07819c3a6c359796f844bb9aa666991c3349",
         "MESSY": "c2f952e2b041c9343f9f37967eb7c79189f3d8fd072cb13a88d137b365dfa803"
       },
-      "final_current_live_replay_pid": 94754,
-      "final_current_live_replay_tool_session": 7115,
+      "final_current_live_replay_pid": 326175,
+      "final_current_live_replay_tool_session": 35670,
       "preexpiry_delegation_independent_review_sha256": "67fb8590d88d210f7e31b461e43c956402f0f3f5f646516cac46ad3f37552416",
       "preexpiry_delegation_root_coordinator_static_review_sha256": "53e04357027857f0e69d03610838437a1f300f34da482b1f46d2d2e2bbc187b6",
       "preexpiry_delegation_root_preparation_receipt_sha256": "177707e3d5f9e0b6cab8841e2e58f5fa0399b5b0008caa59ea4b96823430a984",
@@ -2550,7 +2550,7 @@
       "engineering_closeout_matrix_sha256": "0b98a7deae0a8a41fec72dea67c0cff528bc72ddb1b4a5f705b3343f3d14703e",
       "postdelegation_coordinator_root_selected_input_review_sha256": "c4e9f11b7cd11ac678365ff2f2d23d7c6b7c124713ab26d6416c42d80a4766c7",
       "postdelegation_coordinator_status": "SELECTED_AUTHOR20_AND_IMMUTABLE_LINEAGE_PASS_ROOT286_REFERENCES_STATIC_PASS_UNFILLED_ACTUAL_FINAL_GATES_PENDING",
-      "checkpoint_utc": "2026-10-02T23:35:00Z",
+      "checkpoint_utc": "2026-10-03T00:08:00Z",
       "focused_delivery_successor_commit": "c696bda0a6c3e60c990d5ebcfbe39177fede6cb3",
       "focused_delivery_successor_status": "SELECTED_SEQUENTIAL_BACKEND_ACCEPTED_GENUINE_PARALLEL_BROWSER_STARTUP_REFUSAL_UNDER_FOCUSED_REPAIR",
       "focused_delivery_successor_dependency_sha256": "c0bd01bd24add29231732cbfd8a745eb8f04e8dea47110b90639969bbd3a1122",
@@ -2590,7 +2590,7 @@
       "source_backed_followthrough_v4_root_admission_sha256": "776534957360728933080a19b6f8e1c32243341fbee5d268a310c1d19344c6a2",
       "actual_main_runtime_adoption": false,
       "full88_coordinator_admission": "NEW_EXACT88_SUCCESSORS_INDEPENDENT29_PASS_ROOT998_FRESH_REFERENCES_ADMITTED_ACTUAL_FIRST_LIVE_AND_FILLED_AUTHORIZATION_PENDING",
-      "first_actual_full_replay_status": "EXIT1_ACTUAL_RECORD_FACTS_UNAVAILABLE_NO_PROOF_OR_AUTHORITY_CONSUMPTION",
+      "first_actual_full_replay_status": "V1_EXIT1_PRESERVED_V2_INDEPENDENT_ADMITTED_RUNNING_UNCHANGED_ORIGINALS_NO_PROOF",
       "first_actual_full_replay_failure_observation_sha256": "5e9f86b4291c79215e67a695d5c23baba2a98f78fa5f579bfc400c31b95cc221",
       "request_settlement_selected_independent_gate_sha256": "373e3713aa0f06522906c64b8abbab3fc9bf92661796aba57d18683fc4a16d95",
       "request_settlement_selected_independent_cases": 32,
@@ -2600,7 +2600,22 @@
       "full88_coordinator_root_gate_sha256": "89b6a8abc7492e9edc82feb4f3fde358dc57f7768920d5d96a577323dcdb3899",
       "postdelegation_coordinator_v2_sha256": "69dafec53a51767f389c835256748115c8eeeebe10fa2fa9bb33f1aacf6b1374",
       "actual_key_binding_coordinator_v3_sha256": "cd02e252c11ce3a083f6fe27cdbe14be934478916075f629cc55b7c5be4c65c0",
-      "original_source_and_audit_metadata_after_failed_replay_unchanged": true
+      "original_source_and_audit_metadata_after_failed_replay_unchanged": true,
+      "first_failed_actual_reader_pid": 94754,
+      "final_current_live_replay_wrapper_pid": 326168,
+      "final_current_live_replay_v2_namespace": "enterprise/generated/audit-suite/full-scope-company-audit-2026-10-01/main-run-v1/FINAL_CURRENT_LIVE_INDEPENDENT_REPLAY_V2",
+      "final_current_live_replay_v2_selected_independent_gate_sha256": "60d01feea4070445b025b5f55ffae6342183bee902c183927c1a889184a5c82d",
+      "final_current_live_replay_v2_root_composition_sha256": "ec0659760f8b840cbf690cd33ba0f5a2d8344d2eca4ea2dc336910df0cdcc8d3",
+      "final_current_live_replay_v2_entry_sha256": "1974e657c46381b8eb9e5b2a5bca08e06e1ed99e10c48756068a6b333578fe10",
+      "final_current_live_replay_v2_checker_sha256": "dfd27fec83e6ce457e609ab38ebcd7b9074344c76a4f2af8051dbe437b834c22",
+      "final_current_live_replay_v2_explicit_native_selection": true,
+      "actual_prefix_delegation_consumption_coordinator_v5_sha256": "5eb3840732db27f58eaa0e4bf7e10248eb45fb9e7eac042d422388718ff0b194",
+      "actual_prefix_delegation_consumption_coordinator_v5_static_gate_sha256": "344c3a43e2abb9d38e1c11e2ccd287ccac5095e060803b66cf31903d4230f0f5",
+      "closed_final_MAIN_installation_plan_sha256": "52e1d3476a710db7793298655152fdfe7feda4fd91e33dc5840006d528270beb",
+      "closed_final_MAIN_installation_plan_files": {
+        "tracked": 45,
+        "ignored_exact_native_binaries": 2
+      }
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"
