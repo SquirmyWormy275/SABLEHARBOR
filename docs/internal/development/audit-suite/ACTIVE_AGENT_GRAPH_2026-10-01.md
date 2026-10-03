@@ -1,5 +1,38 @@
 # Active company-source audit workflow
 
+2026-10-03 06:22 UTC checkpoint: the selected retained-history and context-review
+source is installed and committed locally as `f7fe0229`. All 51 focused MAIN
+tests passed with zero failures, errors or skips. Fresh typecheck and frontend
+build passed; all six built outputs match their pins. The final loaded-source
+check closed 88 selected Python origins, four native members, signature backend
+48.0.1 and supporting imports. Actual MAIN review is
+`6f5038ccf16822929071a8c202c1714042b04eccddec07a1d69ad84f8e2be4a0`
+at `main-run-v1/FINAL_ACTUAL_MAIN_VECTOR_V3/REVIEW.json`.
+
+The first actual full-history replay already passed (`f1884117`, exit 0).
+The original one-use parent preparation remains running under PID 930776;
+both attempts began and consumed their grants before expiry. Its complete
+receipt is still required before signed renewal, Key binding or viewer startup.
+No actual viewer, complete packet acceptance or full-journal backup is claimed.
+
+Cleanup is required before closeout. The completed MAIN51 owned fixtures have
+been removed: 1,365 reproducible test files, 269,636,879 apparent file bytes.
+Its XML, result, log, source-origin records and committed test sources remain
+intact; cleanup receipt is `b74457c13f5e6f1c61fc2647d33b70e684069436f053bddfc27f11c9a8c4e456`.
+No physical-space recovery estimate is asserted. The 52.1 GB apparent validation
+cache and older working copies contain proof inputs as well as disposable data;
+they require item-specific preservation and retirement, not blanket deletion.
+
+The original journals total 818,317,565,952 logical bytes. They already use
+Btrfs zstd compression. Their `st_blocks` accounting is not a measurement of
+compressed physical SSD usage, and no hundreds-of-GB recovery promise follows
+from it. They remain live runtime dependencies. The current codec compresses
+new tail events; it does not replace the complete old prefix. Safe retirement
+requires verified independent preservation and an admitted lossless storage
+replacement with a verified cold reopen. That storage work and the remaining
+disposable-file cleanup are unfinished; no original or storage configuration
+was changed by this checkpoint.
+
 2026-10-03 05:44 UTC checkpoint: the first actual read-only V2 replay
 PASSED and exited 0. Both complete histories (6,227 CLEAN and 6,350 MESSY
 events), all 818 bounded procedure records, and closing original-file byte
@@ -21,7 +54,8 @@ is separately qualified; original canonical bytes and old frozen copies/gates
 were preserved, without claiming its historical original stamp is current.
 
 Storage cleanup remains part of closeout. The two live original journals occupy
-818,317,557,760 allocated bytes and are still runtime dependencies. Disposable
+818,317,557,760 bytes in stat allocation accounting (not measured compressed
+physical usage) and are still runtime dependencies. Disposable
 intermediates may be removed only after required evidence is independently
 preserved; the live originals cannot be deleted merely because backups exist.
 Transparent Btrfs recompression feasibility is under read-only investigation.

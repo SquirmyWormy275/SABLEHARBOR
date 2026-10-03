@@ -2588,7 +2588,7 @@
       "mobile_signout_successor_css_sha256": "7c456aa0d2471f8808445a620e033952106d778fcaec341ee2f1a8965cf8b7fa",
       "selected_small_preparations_root_reconciliation_sha256": "4744e220e772fdc93c42aca97d66089a6ab650f072b31fb71ba96be13ced9a5a",
       "source_backed_followthrough_v4_root_admission_sha256": "776534957360728933080a19b6f8e1c32243341fbee5d268a310c1d19344c6a2",
-      "actual_main_runtime_adoption": false,
+      "actual_main_runtime_adoption": true,
       "full88_coordinator_admission": "NEW_EXACT88_SUCCESSORS_INDEPENDENT29_PASS_ROOT998_FRESH_REFERENCES_ADMITTED_ACTUAL_FIRST_LIVE_AND_FILLED_AUTHORIZATION_PENDING",
       "first_actual_full_replay_status": "PASS_ACTUAL_V2_ALL818_BOUNDED_ACCOUNTING_AND_ALL_ORIGINAL_HISTORY_BYTE_CLOSURE",
       "first_actual_full_replay_failure_observation_sha256": "5e9f86b4291c79215e67a695d5c23baba2a98f78fa5f579bfc400c31b95cc221",
@@ -2790,9 +2790,48 @@
         "live_runtime_depends_on_originals": true,
         "delete_required_originals_because_backup_exists": false,
         "verified_independent_backup_required_before_storage_rewrite": true,
-        "transparent_Btrfs_recompression_status": "READ_ONLY_FEASIBILITY_UNDER_REVIEW",
+        "transparent_Btrfs_recompression_status": "READ_ONLY_FINDING_ALREADY_COMPRESSED_NO_GUARANTEED_RECLAIM",
         "disposable_intermediate_cleanup": "PENDING_VERIFIED_PRESERVATION",
-        "actual_cleanup_complete": false
+        "actual_cleanup_complete": false,
+        "original_SQL_compressed_physical_bytes": null,
+        "stat_accounting_is_not_compressed_physical_footprint": true,
+        "originals_already_Btrfs_zstd_compressed": true,
+        "current_codec_replaces_complete_prefix": false,
+        "safe_full_prefix_retirement_status": "UNIMPLEMENTED_REQUIRES_LOSSLESS_STORAGE_REPLACEMENT_AND_COLD_VERIFICATION",
+        "validation_cache_apparent_bytes_approx": 52100000000,
+        "validation_cache_contains_proof_inputs": true,
+        "completed_main51_owned_fixture_cleanup": {
+          "receipt_sha256": "b74457c13f5e6f1c61fc2647d33b70e684069436f053bddfc27f11c9a8c4e456",
+          "files_removed": 1365,
+          "apparent_file_bytes_removed": 269636879,
+          "verification_artifacts_retained": true,
+          "physical_reclaimed_bytes_not_measured": true
+        },
+        "remaining_disposable_cleanup": "PENDING_ITEM_SPECIFIC_PRESERVATION"
+      },
+      "actual_main_runtime_adoption_detail": {
+        "source_only": true,
+        "activation_performed": false,
+        "local_commit": "f7fe02298c69cb5595981754e8f468bf3f330fd0",
+        "adoption_receipt_sha256": "621e82f619c676586ebbc5a1d754efa75e07125e9747eeb4605836820d99dd7c",
+        "fresh_main_review": {
+          "path": "/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite/enterprise/generated/audit-suite/full-scope-company-audit-2026-10-01/main-run-v1/FINAL_ACTUAL_MAIN_VECTOR_V3/REVIEW.json",
+          "sha256": "6f5038ccf16822929071a8c202c1714042b04eccddec07a1d69ad84f8e2be4a0"
+        },
+        "selected_python_origins": 88,
+        "native_members": 4,
+        "signature_backend": "48.0.1",
+        "focused_tests": 51,
+        "focused_tests_errors": 0,
+        "focused_tests_failures": 0,
+        "focused_tests_skipped": 0,
+        "typecheck": "PASS",
+        "frontend_build": "PASS",
+        "fresh_frontend_receipt_sha256": "414a559a21786f3a9aa85b6c7ec41fcc96e361c7fa7847b14627a9b5a9e23c30",
+        "final_filler_program": {
+          "path": "/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite/enterprise/generated/audit-suite/ROOT_PRIVATE_SCRIPTS_2026-10-02/FILL_FINAL_POST_KEY_AUTHORIZATIONS_V2.py",
+          "sha256": "2d8379b47f79b263a83a1b43bdf7a0158ad4cc6e88bf0334d09ff6a5090bddb0"
+        }
       }
     }
   },
