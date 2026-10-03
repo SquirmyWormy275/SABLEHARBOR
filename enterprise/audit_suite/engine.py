@@ -173,12 +173,15 @@ class Engine:
         company_bindings: dict | None = None,
         company_registry: Path | None = None,
         company_profile: str | None = None,
+        _store: Store | None = None,
     ):
         if company_root is not None and company_registry is not None:
             raise DomainError("Choose one concrete company store or source registry")
         if (company_registry is None) != (company_profile is None):
             raise DomainError("Company registry and profile must be configured together")
-        self.store = Store(private_root)
+        if _store is not None and _store.root != Path(private_root).absolute():
+            raise DomainError("Injected private Store root differs")
+        self.store = Store(private_root) if _store is None else _store
         self.artifacts = Artifacts(private_root)
         self.repository = repository
         from .company_store import CompanyStore
@@ -1170,6 +1173,13 @@ class Engine:
                 anchor = (
                     {"anchor": normalize_anchor(p["anchor"], reviewed)} if "anchor" in p else {}
                 )
+                review_kind = p.get("review_kind", "HUMAN")
+                if type(review_kind) is not str or review_kind not in {
+                    "HUMAN",
+                    "SCRIPTED_ENGINEERING",
+                    "SYNTHETIC_TECHNICAL",
+                }:
+                    raise DomainError("Choose a supported explicit review provenance")
                 state["reviews"].append(
                     {
                         "id": identifier("REVIEW"),
@@ -1178,7 +1188,12 @@ class Engine:
                         "workpaper_version_digest": digest(reviewed),
                         "comment": require_text(p, "comment"),
                         "status": "OPEN",
-                        "kind": "HUMAN",
+                        "kind": review_kind,
+                        **(
+                            {"professional_acceptance": "NOT_ASSERTED"}
+                            if review_kind != "HUMAN"
+                            else {}
+                        ),
                         "history": [],
                         **anchor,
                         **stamped,
@@ -1228,12 +1243,20 @@ class Engine:
                     )
                     # Feedback never changes the suggestion, acceptance or original input pins.
                 else:
-                    if row.get("kind", "HUMAN") != "HUMAN" or not row.get("workpaper_id"):
-                        raise DomainError("Only human comments or AI suggestions accept responses")
+                    if row.get("kind", "HUMAN") not in {
+                        "HUMAN",
+                        "SCRIPTED_ENGINEERING",
+                        "SYNTHETIC_TECHNICAL",
+                    } or not row.get("workpaper_id"):
+                        raise DomainError(
+                            "Only recorded comments or AI suggestions accept responses"
+                        )
                     workpaper = find(state, "workpapers", row["workpaper_id"])
                     latest = workpaper["versions"][-1]
                     if not explicit_feedback and row.get("status") != "OPEN":
-                        raise DomainError("Only an open human review can be resolved", status=409)
+                        raise DomainError(
+                            "Only an open recorded comment can be resolved", status=409
+                        )
                     if not explicit_feedback and (
                         workpaper.get("prepared_by") == actor
                         or any(version.get("actor") == actor for version in workpaper["versions"])

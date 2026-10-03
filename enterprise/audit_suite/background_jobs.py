@@ -60,7 +60,9 @@ def now():
 
 
 class BackgroundJobs:
-    def __init__(self, private_root: Path, engine, *, max_workers=2, max_pending=32):
+    def __init__(
+        self, private_root: Path, engine, *, max_workers=2, max_pending=32, execution_guard=None
+    ):
         self.root = Path(private_root).absolute()
         if any(p.is_symlink() for p in [self.root, *self.root.parents]):
             raise DomainError("Job store aliases are forbidden")
@@ -71,6 +73,9 @@ class BackgroundJobs:
         if type(max_pending) is not int or not 1 <= max_pending <= 128:
             raise DomainError("Pending job quota must be1–128")
         self.engine, self.max_workers, self.max_pending = engine, max_workers, max_pending
+        if execution_guard is not None and not callable(execution_guard):
+            raise DomainError("Trusted worker guard required")
+        self.execution_guard = execution_guard
         self.path = self.root / "jobs.sqlite3"
         fd = os.open(self.path, os.O_RDWR | os.O_CREAT | os.O_NOFOLLOW, 0o600)
         os.close(fd)
@@ -356,7 +361,11 @@ class BackgroundJobs:
                 command = json.loads(row["command"])
                 if digest(command) != row["command_digest"]:
                     raise DomainError("Command digest differs", code="INTEGRITY", status=500)
+                if self.execution_guard is not None:
+                    self.execution_guard(actor, engagement)
                 result = self.engine.command(actor, engagement, command)
+                if self.execution_guard is not None:
+                    self.execution_guard(actor, engagement)
                 status, error, revision = "COMPLETED", None, result["revision"]
             except DomainError as exc:
                 if exc.code in {

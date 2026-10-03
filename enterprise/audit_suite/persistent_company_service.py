@@ -7,6 +7,7 @@ and runtime acceptance remain the existing independently reviewed contracts.
 
 from __future__ import annotations
 
+import hashlib
 import importlib
 import json
 import math
@@ -14,6 +15,7 @@ import re
 import sqlite3
 import stat
 import sys
+import threading
 import time
 from contextlib import closing
 from dataclasses import fields
@@ -22,9 +24,11 @@ from pathlib import Path
 from .company_store import CompanyStore, _id, _time
 from .engine import Engine
 from .fresh_sec003_procedure import NATIVE_ID, require
+from .history_inspection import _stamp as journal_stamp
+from .history_inspection import publish_validated_history, scan_validated_history
 from .inference import _json
 from .persistent_company_journey import PersistentCompany, native_rows
-from .recovery import _history
+from .serialized_json import native_code_files
 from .source_library_audit import (
     EMPTY_WORKROOM,
     AcceptedLibrary,
@@ -33,9 +37,10 @@ from .source_library_audit import (
     quiescent_database,
     quiescent_read,
 )
-from .store import DomainError
+from .store import DomainError, digest
 
 CONFIG_SCHEMA = "SH_RETAINED_COMPANY_WORKROOM_SERVICE_CONFIG_V1"
+SEALED_CONFIG_SCHEMA = "SH_RETAINED_COMPANY_SEALED_WORKROOM_SERVICE_CONFIG_V1"
 BINDING_SCHEMA = "SH_RETAINED_COMPANY_AUDIT_WORKROOM_BINDING_V1"
 CODE_MODULES = (
     "__main__.py",
@@ -44,13 +49,27 @@ CODE_MODULES = (
     "company_store.py",
     "draft_store.py",
     "engine.py",
+    "history_inspection.py",
+    "history_locators.py",
     "persistent_company_journey.py",
     "persistent_company_service.py",
+    "recovery.py",
+    "request_integrity.py",
+    "serialized_json.py",
     "service.py",
     "source_library_audit.py",
     "store.py",
     "workpaper_links.py",
     "workspace_transport.py",
+)
+SEALED_CODE_MODULES = CODE_MODULES + (
+    "canonical_state_codec.py",
+    "pristine_tail_conversion.py",
+    "codec_history_inspection.py",
+    "sealed_history_authority.py",
+    "sealed_history_inspection.py",
+    "sealed_history_store.py",
+    "sealed_retained_service.py",
 )
 BINDING_FIELDS = {
     "schema",
@@ -86,6 +105,22 @@ def private_directory(path):
     require(
         path.is_dir() and stat.S_IMODE(path.stat().st_mode) == 0o700,
         "Existing private ordinary directory required",
+    )
+
+
+def same_file_identity(left, right):
+    """Read access may update atime; all mutation/alias indicators stay strict."""
+    return all(
+        getattr(left, name) == getattr(right, name)
+        for name in (
+            "st_dev",
+            "st_ino",
+            "st_mode",
+            "st_nlink",
+            "st_size",
+            "st_mtime_ns",
+            "st_ctime_ns",
+        )
     )
 
 
@@ -133,7 +168,44 @@ def configuration(world, binding_path, binding_sha256, *, repository):
         "workroom_binding": {"path": str(Path(binding_path).absolute()), "sha256": binding_sha256},
         "code_pins": {
             name: file_sha(Path(repository) / "enterprise/audit_suite" / name)
-            for name in CODE_MODULES
+            for name in (*CODE_MODULES, *native_code_files())
+        },
+    }
+
+
+def retained_native_files(*, sealed=False):
+    result = dict(native_code_files())
+    if sealed:
+        from .canonical_state_codec import native_code_files as encoder_native_files
+
+        result.update(encoder_native_files())
+    return result
+
+
+def sealed_configuration(base, history, authority_head, *, repository, session_revocations=None):
+    """Serialize explicit opt-in authority; this grants no acceptance or migration."""
+    from .sealed_history_authority import loaded_backend
+
+    require(base.get("schema") == CONFIG_SCHEMA, "Original explicit retained config required")
+    require(
+        session_revocations is None or type(session_revocations) is dict,
+        "Session-revocation pins must be an exact mapping",
+    )
+    for item in (history, authority_head):
+        require(
+            type(item) is dict and set(item) == {"path", "sha256"},
+            "Exact sealed operator pin required",
+        )
+        pinned_json(absolute_path(item["path"]), item["sha256"])
+    return json.loads(json.dumps(base)) | {
+        "schema": SEALED_CONFIG_SCHEMA,
+        "sealed_history": dict(history),
+        "authority_head": dict(authority_head),
+        "authority_backend": loaded_backend(),
+        "session_revocations": {} if session_revocations is None else dict(session_revocations),
+        "code_pins": {
+            name: file_sha(Path(repository) / "enterprise/audit_suite" / name)
+            for name in (*SEALED_CODE_MODULES, *retained_native_files(sealed=True))
         },
     }
 
@@ -171,15 +243,22 @@ class RetainedWorkroom:
         inference_config=None,
         voice_config=None,
     ):
+        self._integrity_lock = threading.RLock()
         self.path = absolute_path(str(config_path))
         private_directory(self.path.parent)
         self.expected_sha256 = expected_sha256
         self.repository = Path(repository).absolute()
         self.config = pinned_json(self.path, expected_sha256)
+        self.sealed = self.config.get("schema") == SEALED_CONFIG_SCHEMA
         require(
             set(self.config)
             == {"schema", "accepted_library", "company_lifetime", "workroom_binding", "code_pins"}
-            and self.config["schema"] == CONFIG_SCHEMA,
+            | (
+                {"sealed_history", "authority_head", "authority_backend", "session_revocations"}
+                if self.sealed
+                else set()
+            )
+            and self.config["schema"] in {CONFIG_SCHEMA, SEALED_CONFIG_SCHEMA},
             "Exact retained-service schema required",
         )
         self.check_code()
@@ -247,6 +326,26 @@ class RetainedWorkroom:
         )
         self.pack_path = absolute_path(pack["path"])
         pinned_json(self.pack_path, pack["sha256"], max_bytes=32 * 1024 * 1024)
+        self.sealed_store = None
+        if self.sealed:
+            from .sealed_history_store import SealedHistoryStore
+
+            item = self.config["sealed_history"]
+            require(
+                type(item) is dict and set(item) == {"path", "sha256"},
+                "Exact externally pinned sealed journal required",
+            )
+            self.sealed_store = SealedHistoryStore(
+                self.root,
+                absolute_path(item["path"]),
+                item["sha256"],
+                authority_head=self.config["authority_head"],
+                session_revocations=self.config["session_revocations"],
+            )
+            require(
+                self.sealed_store.prefix["engagement"] == self.engagement,
+                "Sealed original engagement differs",
+            )
         self.verify_workroom()
         # Do not construct a raw CompanyStore: the accepted lifetime supplies the
         # only company connection and retains its existing grant/clock checks.
@@ -256,6 +355,7 @@ class RetainedWorkroom:
             program_pack=self.pack_path,
             inference_config=inference_config,
             voice_config=voice_config,
+            _store=self.sealed_store,
         )
         self.engine.company_store = self.world.store
         self.engine.company_bindings = {self.engagement: dict(self.selected)}
@@ -269,6 +369,31 @@ class RetainedWorkroom:
             company_source_impact=True,
         )
         self.check_pins()
+        if self.sealed:
+            from .sealed_retained_service import finish_startup
+
+            finish_startup(self)
+            return
+        # Construction/config/source verification must all succeed before the
+        # exact Store can inherit integrity metadata from the original scan.
+        candidate, identity = self._pending_history
+        published = publish_validated_history(
+            self.engine.store,
+            self.binding["identities"]["operator"],
+            self.engagement,
+            candidate,
+            identity,
+        )
+        self._retained_integrity = (
+            {"history": candidate, "stamp": identity, **self._pending_custody}
+            if published
+            else None
+        )
+        self.engine.store._retained_typed_stamp = (
+            identity if journal_stamp(self.engine.store.db_path) == identity else None
+        )
+        del self._pending_history
+        del self._pending_custody
 
     def check_code(self):
         """Bind file pins to loaded module origins in this ordinary local process.
@@ -278,11 +403,25 @@ class RetainedWorkroom:
         """
         pins = self.config["code_pins"]
         require(
-            isinstance(pins, dict) and set(pins) == set(CODE_MODULES),
+            isinstance(pins, dict)
+            and set(pins)
+            == set(SEALED_CODE_MODULES if self.sealed else CODE_MODULES)
+            | set(retained_native_files(sealed=self.sealed)),
             "Exact retained service/engine/runtime module pins required",
         )
         for name, expected in pins.items():
             path = self.repository / "enterprise/audit_suite" / name
+            native_files = retained_native_files(sealed=self.sealed)
+            if name in native_files:
+                native_path = native_files[name]
+                require(
+                    not any(p.is_symlink() for p in [path, *path.parents])
+                    and path.is_file()
+                    and native_path.resolve() == path.resolve()
+                    and file_sha(path) == expected,
+                    "Pinned native validator code changed or loaded origin differs",
+                )
+                continue
             module_name = "enterprise.audit_suite." + name.removesuffix(".py")
             loaded = sys.modules.get(module_name)
             if name == "__main__.py":
@@ -301,70 +440,208 @@ class RetainedWorkroom:
                 and file_sha(path) == expected,
                 "Pinned retained service/runtime code changed or loaded module differs",
             )
+        if self.sealed:
+            from .sealed_history_authority import loaded_backend
+
+            require(
+                digest(self.config["authority_backend"]) == digest(loaded_backend()),
+                "Operator signature backend version/ABI/loaded origins changed",
+            )
+
+    def _verify_memberships(self, audit_db):
+        identities = self.binding["identities"]
+        require(
+            isinstance(identities, dict)
+            and set(identities) == {"operator", "auditor", "reviewer"}
+            and len(set(identities.values()) | {self.world.operator.principal}) == 4,
+            "Distinct original audit and company identities required",
+        )
+        require(
+            {
+                (row["principal"], row["permission"])
+                for row in audit_db.execute("SELECT principal,permission FROM members")
+            }
+            == {
+                (identities["operator"], "instruct"),
+                (identities["auditor"], "learn"),
+                (identities["reviewer"], "review"),
+            },
+            "Original isolated workroom memberships differ",
+        )
+        for role, permission, expected_roles in (
+            ("operator", "instruct", ["instructor"]),
+            ("auditor", "learn", ["learner"]),
+            ("reviewer", "review", ["reviewer"]),
+        ):
+            person = _id(identities[role])
+            principal = audit_db.execute(
+                "SELECT roles FROM principals WHERE id=?", (person,)
+            ).fetchone()
+            member = audit_db.execute(
+                "SELECT permission FROM members WHERE principal=? AND engagement=?",
+                (person, self.engagement),
+            ).fetchone()
+            require(
+                principal is not None
+                and json.loads(principal[0]) == expected_roles
+                and member is not None
+                and member[0] == permission,
+                "Retained audit identity or membership differs",
+            )
+        return identities
 
     def verify_workroom(self):
+        if self.sealed:
+            from .sealed_retained_service import verify_sealed
+
+            return verify_sealed(self)
         path = self.root / "engagements.sqlite3"
         private_file(path)
-        # Audit workrooms intentionally use WAL. A normal read-only connection
-        # sees their actual committed current state; immutable reads are reserved
-        # for the separately quiescent accepted company source.
-        with closing(sqlite3.connect(f"file:{path}?mode=ro", uri=True)) as db:
-            db.row_factory = sqlite3.Row
-            db.execute("BEGIN")
-            require(
-                db.execute("PRAGMA quick_check").fetchone()[0] == "ok"
-                and not db.execute("PRAGMA foreign_key_check").fetchall(),
-                "Existing workroom database integrity failed",
+        outside_identity = journal_stamp(path)
+        previous_proof = getattr(self, "_retained_integrity", None)
+        # Open only the existing database. Reserve the audit writer before any
+        # read, then forbid all SQL mutations for this validation transaction.
+        # Normal SQLite closing may remove its own empty WAL/SHM. This is
+        # query-only SQL with the normal journal lifecycle, not immutable
+        # filesystem access or schema initialization.
+        with closing(sqlite3.connect(f"file:{path}?mode=rw", uri=True)) as audit_db:
+            audit_db.row_factory = sqlite3.Row
+            audit_db.execute("BEGIN IMMEDIATE")
+            audit_db.execute("PRAGMA query_only=ON")
+            schema_sha256 = digest(
+                [
+                    dict(row)
+                    for row in audit_db.execute(
+                        "SELECT type,name,tbl_name,sql FROM sqlite_master ORDER BY type,name"
+                    )
+                ]
             )
-            require(
-                {row[0] for row in db.execute("SELECT id FROM engagements")} == {self.engagement},
-                "Exactly one retained workroom engagement required",
-            )
-            _history(db)
-            events = db.execute("SELECT * FROM events ORDER BY revision").fetchall()
-            initial, current = json.loads(events[0]["state"]), json.loads(events[-1]["state"])
-            identities = self.binding["identities"]
-            require(
-                isinstance(identities, dict)
-                and set(identities) == {"operator", "auditor", "reviewer"}
-                and len(set(identities.values()) | {self.world.operator.principal}) == 4,
-                "Distinct original audit and company identities required",
-            )
-            require(
-                {
-                    (row["principal"], row["permission"])
-                    for row in db.execute("SELECT principal,permission FROM members")
-                }
-                == {
-                    (identities["operator"], "instruct"),
-                    (identities["auditor"], "learn"),
-                    (identities["reviewer"], "review"),
-                },
-                "Original isolated workroom memberships differ",
-            )
-            for role, permission, expected_roles in (
-                ("operator", "instruct", ["instructor"]),
-                ("auditor", "learn", ["learner"]),
-                ("reviewer", "review", ["reviewer"]),
-            ):
-                person = _id(identities[role])
-                principal = db.execute(
-                    "SELECT roles FROM principals WHERE id=?", (person,)
-                ).fetchone()
-                member = db.execute(
-                    "SELECT permission FROM members WHERE principal=? AND engagement=?",
-                    (person, self.engagement),
-                ).fetchone()
+            if previous_proof is None:
                 require(
-                    principal is not None
-                    and json.loads(principal[0]) == expected_roles
-                    and member is not None
-                    and member[0] == permission,
-                    "Retained audit identity or membership differs",
+                    audit_db.execute("PRAGMA quick_check").fetchone()[0] == "ok",
+                    "Existing workroom database integrity failed",
+                )
+            else:
+                require(
+                    schema_sha256 == previous_proof["schema_sha256"],
+                    "Previously verified workroom schema changed",
                 )
             require(
+                not audit_db.execute("PRAGMA foreign_key_check").fetchall(),
+                "Existing workroom foreign-key integrity failed",
+            )
+            require(
+                {row[0] for row in audit_db.execute("SELECT id FROM engagements")}
+                == {self.engagement},
+                "Exactly one retained workroom engagement required",
+            )
+            with self.world.locked():
+                self.world.verify()
+                native = native_rows(self.world.database)
+                require(
+                    _time(self.world.initialization["initialized_at"]) <= _time(time_to_iso())
+                    and all(
+                        _time(value["imported_at"]) <= _time(time_to_iso())
+                        for value in native.values()
+                    ),
+                    "Company real import clock is in the future",
+                )
+                with quiescent_read(self.world.database) as source_db:
+                    journal = {
+                        value["command_id"]: json.loads(value["receipt"])
+                        for value in source_db.execute("SELECT command_id,receipt FROM collections")
+                    }
+                verified, verified_files, custody = set(), {}, {}
+                if previous_proof is not None:
+                    verified_files.update(
+                        self._verify_integrity_descriptors(previous_proof, native, journal)
+                    )
+                    custody.update(previous_proof["custody"])
+                previous_clock, previous_real = None, 0
+
+                def validate_original(event, state, prior_header=None):
+                    nonlocal previous_clock, previous_real
+                    if prior_header is not None:
+                        require(
+                            prior_header["scope_sha256"] == digest(self.binding["scope"]),
+                            "Previously verified retained scope descriptor differs",
+                        )
+                        require(
+                            prior_header["company_binding_sha256"]
+                            in {digest(None), digest(self.selected)},
+                            "Previously verified company binding descriptor differs",
+                        )
+                        state = {
+                            name: prior_header[name] for name in ("id", "mode", "simulated_at")
+                        } | {
+                            "company_source_binding": (
+                                None
+                                if prior_header["company_binding_sha256"] == digest(None)
+                                else self.selected
+                            ),
+                            "artifacts": [],
+                            "scope": self.binding["scope"],
+                        }
+                    real = event["recorded_at"]
+                    clock = _time(state["simulated_at"])
+                    require(
+                        type(real) in (int, float)
+                        and math.isfinite(real)
+                        and previous_real <= real <= time.time()
+                        and (previous_clock is None or previous_clock <= clock),
+                        "Workroom actual/simulated clock chronology changed",
+                    )
+                    require(
+                        state["id"] == self.engagement and state["mode"] == self.binding["mode"],
+                        "Retained engagement identity/mode differs",
+                    )
+                    require(
+                        type(state.get("scope")) is dict
+                        and digest(state["scope"]) == digest(self.binding["scope"]),
+                        "Historical retained workroom scope differs",
+                    )
+                    if state.get("company_source_binding") is not None:
+                        require(
+                            state["company_source_binding"] == self.selected,
+                            "Historical company branch binding changed",
+                        )
+                    self.verify_artifacts(
+                        state,
+                        native,
+                        verified=verified,
+                        journal=journal,
+                        files=verified_files,
+                        custody=custody,
+                    )
+                    previous_clock, previous_real = clock, real
+
+                history, candidate, identity = scan_validated_history(
+                    audit_db,
+                    path,
+                    self.engagement,
+                    revisions=[0],
+                    row_validator=validate_original,
+                    previous_integrity=(
+                        None if previous_proof is None else previous_proof["history"]
+                    ),
+                )
+                # Fresh closing native verification under the same source lock.
+                # A failure prevents publication of every candidate digest.
+                self.world.verify()
+                for original, (identity, sha256, size) in verified_files.items():
+                    private_file(original)
+                    require(
+                        same_file_identity(original.stat(), identity)
+                        and original.stat().st_size == size
+                        and file_sha(original) == sha256,
+                        "Retained original changed during complete validation",
+                    )
+            initial = history["selected"][0]["state"]
+            current = history["latest"]["state"]
+            identities = self._verify_memberships(audit_db)
+            require(
                 initial["created_by"] == identities["operator"]
-                and initial["scope"] == self.binding["scope"]
+                and digest(initial["scope"]) == digest(self.binding["scope"])
                 and initial["mode"] == self.binding["mode"]
                 and _time(initial["simulated_at"]) == _time(self.binding["initial_simulated_at"])
                 and type(self.binding["task_count"]) is int
@@ -381,61 +658,30 @@ class RetainedWorkroom:
                 ),
                 "Original fresh-workroom birth binding differs",
             )
-            previous_clock, previous_real = _time(initial["simulated_at"]), 0
-            for event in events:
-                state = json.loads(event["state"])
-                real = event["recorded_at"]
-                clock = _time(state["simulated_at"])
-                require(
-                    type(real) in (int, float)
-                    and math.isfinite(real)
-                    and previous_real <= real <= time.time()
-                    and previous_clock <= clock,
-                    "Workroom actual/simulated clock chronology changed",
-                )
-                require(
-                    state["id"] == self.engagement and state["mode"] == self.binding["mode"],
-                    "Retained engagement identity/mode differs",
-                )
-                if state.get("company_source_binding") is not None:
-                    require(
-                        state["company_source_binding"] == self.selected,
-                        "Historical company branch binding changed",
-                    )
-                previous_clock, previous_real = clock, real
             require(
                 current.get("company_source_binding") == self.selected
                 and current.get("evidence_acquisition") == "COMPANY_SOURCE_COLLECTION"
                 and current["phase"] in {"READY", "ACTIVE", "CLOSED"},
                 "Retained workroom must have an activated exact company binding",
             )
-        with self.world.locked():
-            self.world.verify()
-            native = native_rows(self.world.database)
-            require(
-                _time(self.world.initialization["initialized_at"]) <= _time(time_to_iso())
-                and all(
-                    _time(row["imported_at"]) <= _time(time_to_iso()) for row in native.values()
-                ),
-                "Company real import clock is in the future",
-            )
-            # A retained artifact appears in every subsequent state snapshot.
-            # Validate each complete typed representation once in this fresh
-            # locked invocation, at its earliest (most restrictive) clock. No
-            # result survives this invocation. Changed historical fields,
-            # including JSON booleans versus integers, are distinct inputs.
-            verified = set()
-            with quiescent_read(self.world.database) as db:
-                journal = {
-                    row["command_id"]: json.loads(row["receipt"])
-                    for row in db.execute("SELECT command_id,receipt FROM collections")
-                }
-            for event in events:
-                self.verify_artifacts(
-                    json.loads(event["state"]), native, verified=verified, journal=journal
-                )
+            self._pending_history = candidate, outside_identity
+            self._pending_custody = {
+                "files": {
+                    str(original): {"sha256": sha256, "bytes": size}
+                    for original, (_identity, sha256, size) in verified_files.items()
+                },
+                "custody": custody,
+                "schema_sha256": schema_sha256,
+            }
+        # Like inspect_history, bind the complete invocation to unchanged outer
+        # file identities and its separately checked inner read transaction.
+        # SQLite may create and remove its own empty WAL/SHM during connection
+        # lifetime; preexisting/externally changed sidecars never get normalized.
+        require(journal_stamp(path) == outside_identity, "Journal changed during retained closure")
 
-    def verify_artifacts(self, state, native, *, verified=None, journal=None):
+    def verify_artifacts(
+        self, state, native, *, verified=None, journal=None, files=None, custody=None
+    ):
         for artifact in state["artifacts"]:
             representation = json.dumps(artifact, sort_keys=True, separators=(",", ":"))
             if verified is not None and representation in verified:
@@ -449,10 +695,23 @@ class RetainedWorkroom:
                 "Strict nonnegative retained artifact byte count required",
             )
             private_file(path)
-            require(
-                file_sha(path) == artifact["sha256"] and path.stat().st_size == artifact["bytes"],
-                "Retained artifact bytes changed",
-            )
+            prior_file = None if files is None else files.get(path)
+            if prior_file is None:
+                require(
+                    file_sha(path) == artifact["sha256"]
+                    and path.stat().st_size == artifact["bytes"],
+                    "Retained artifact bytes changed",
+                )
+            else:
+                # This invocation has already freshly hashed this exact file.
+                # Its closing full hash still covers every historical member.
+                require(
+                    same_file_identity(path.stat(), prior_file[0])
+                    and prior_file[1:] == (artifact["sha256"], artifact["bytes"]),
+                    "Retained artifact bytes changed",
+                )
+            if files is not None:
+                files.setdefault(path, (path.stat(), artifact["sha256"], artifact["bytes"]))
             if artifact["source"].get("kind") != "COLLECTED_COMPANY_SOURCE":
                 if verified is not None:
                     verified.add(representation)
@@ -496,8 +755,167 @@ class RetainedWorkroom:
                 saved_receipt is not None and saved_receipt == receipt,
                 "Retained original company collection journal differs",
             )
+            if custody is not None:
+                descriptor = {
+                    "receipt_sha256": digest(receipt),
+                    "native_id": tuple(source[k] for k in NATIVE_ID),
+                    "native_metadata_sha256": digest(CompanyStore._metadata(row)),
+                }
+                previous = custody.setdefault(receipt["command_id"], descriptor)
+                require(previous == descriptor, "Historical collection custody descriptor differs")
             if verified is not None:
                 verified.add(representation)
+
+    def _verify_integrity_descriptors(self, proof, native, journal):
+        """Fresh every historical original/custody, including absent current artifacts.
+
+        The prior proof holds only file and native locators, byte/metadata hashes
+        and sizes. No receipt, source body or examination outcome is retained.
+        """
+        files = {}
+        for name, descriptor in proof["files"].items():
+            path = Path(name)
+            require(
+                path == self.root / "artifacts" / descriptor["sha256"],
+                "Historical original file locator differs",
+            )
+            private_file(path)
+            initial = path.stat()
+            require(
+                initial.st_size == descriptor["bytes"]
+                and file_sha(path) == descriptor["sha256"]
+                and same_file_identity(path.stat(), initial),
+                "Retained artifact bytes changed in historical original",
+            )
+            files[path] = (initial, descriptor["sha256"], descriptor["bytes"])
+        for command_id, descriptor in proof["custody"].items():
+            row = native.get(descriptor["native_id"])
+            saved = journal.get(command_id)
+            require(
+                row is not None
+                and saved is not None
+                and digest(CompanyStore._metadata(row)) == descriptor["native_metadata_sha256"]
+                and digest(saved) == descriptor["receipt_sha256"],
+                "Historical native collection integrity descriptor differs",
+            )
+        return files
+
+    def refresh_integrity(self, actor):
+        """Fresh protected-call integrity; never evidence or outcome memoization.
+
+        An unchanged physical journal can reuse its complete validated history
+        proof, while current membership, native originals, retained original
+        files and saved receipt hashes are all rechecked. After any stamp
+        change, every old state and command byte is freshly streamed and hashed;
+        only exactly identical canonical state representations reuse their
+        previously validated identity/clock metadata. New/changed/legacy rows
+        undergo the original complete semantic and native validation.
+        """
+        # Pending cursor descriptors belong to one protected invocation. A
+        # concurrent request cannot publish another invocation's candidate.
+        with self._integrity_lock:
+            self._refresh_integrity(actor)
+
+    def _refresh_integrity(self, actor):
+        if self.sealed:
+            from .sealed_retained_service import read_sealed
+
+            read_sealed(self, actor, ())
+            return
+        self.check_pins()
+        proof = self._retained_integrity
+        path = self.root / "engagements.sqlite3"
+        outside = journal_stamp(path)
+        if proof is None or proof["stamp"] != outside:
+            self.verify_workroom()
+            self.check_pins()
+            candidate, identity = self._pending_history
+            published = publish_validated_history(
+                self.engine.store, actor, self.engagement, candidate, identity
+            )
+            require(candidate is None or published, "Journal changed before integrity publication")
+            self._retained_integrity = (
+                {"history": candidate, "stamp": identity, **self._pending_custody}
+                if published
+                else None
+            )
+            self.engine.store._retained_typed_stamp = identity
+            del self._pending_history
+            del self._pending_custody
+            return
+        with closing(sqlite3.connect(f"file:{path}?mode=rw", uri=True)) as db:
+            db.row_factory = sqlite3.Row
+            db.execute("BEGIN IMMEDIATE")
+            db.execute("PRAGMA query_only=ON")
+            self.engine.store._authorize(db, actor, self.engagement)
+            inside = journal_stamp(path)
+            self._verify_memberships(db)
+            row = db.execute(
+                "SELECT revision,state FROM engagements WHERE id=?", (self.engagement,)
+            ).fetchone()
+            require(
+                row is not None
+                and row["revision"] == proof["history"]["count"] - 1
+                and hashlib.sha256(row["state"].encode()).hexdigest()
+                == proof["history"]["current_raw_sha256"],
+                "Current retained engagement differs",
+            )
+            current = json.loads(row["state"])
+            require(
+                type(current.get("scope")) is dict
+                and digest(current["scope"]) == digest(self.binding["scope"]),
+                "Current retained workroom scope differs",
+            )
+            require(
+                current["id"] == self.engagement
+                and current["mode"] == self.binding["mode"]
+                and current.get("company_source_binding") == self.selected,
+                "Current company binding differs",
+            )
+            with self.world.locked():
+                self.world.verify()
+                native = native_rows(self.world.database)
+                with quiescent_read(self.world.database) as source_db:
+                    journal = {
+                        value["command_id"]: json.loads(value["receipt"])
+                        for value in source_db.execute("SELECT command_id,receipt FROM collections")
+                    }
+                originals = self._verify_integrity_descriptors(proof, native, journal)
+                self.verify_artifacts(current, native, journal=journal, files=originals)
+                self.world.verify()
+                for original, (identity, sha256, size) in originals.items():
+                    private_file(original)
+                    require(
+                        same_file_identity(original.stat(), identity)
+                        and original.stat().st_size == size
+                        and file_sha(original) == sha256,
+                        "Historical original changed during protected validation",
+                    )
+            self.engine.store._authorize(db, actor, self.engagement)
+            require(journal_stamp(path) == inside, "Journal changed during protected validation")
+        require(journal_stamp(path) == outside, "Journal changed during protected closure")
+        self.check_pins()
+
+    def close_protected_read(self, actor, expected_stamp):
+        """Close one private response over its exact validated journal boundary."""
+        with self._integrity_lock:
+            require(
+                expected_stamp is not None
+                and self.engine.store._retained_typed_stamp == expected_stamp
+                and self.integrity_stamp() == expected_stamp,
+                "Journal changed before private response closure",
+            )
+            self._refresh_integrity(actor)
+            require(
+                self.engine.store._retained_typed_stamp == expected_stamp
+                and self.integrity_stamp() == expected_stamp,
+                "Journal changed during private response closure",
+            )
+
+    def integrity_stamp(self):
+        if self.sealed:
+            return self.sealed_store.check_prefix(), journal_stamp(self.sealed_store.db_path)
+        return journal_stamp(self.engine.store.db_path)
 
     def check_pins(self):
         require(
@@ -509,6 +927,12 @@ class RetainedWorkroom:
             "Retained workroom binding changed",
         )
         self.check_code()
+        if self.sealed and self.sealed_store is not None:
+            require(
+                self.sealed_store.authority_head == self.config["authority_head"],
+                "Signed authority head needs a new exact operator configuration",
+            )
+            self.sealed_store.check_prefix()
         lifetime = self.config["company_lifetime"]
         private_file(self.world.checkpoint)
         require(
@@ -588,4 +1012,5 @@ def create_retained_app(private_root, config_path, expected_sha256, *, repositor
         enable_instructor_writeback=False,
         **options,
     )
+    app.state.retained_workroom = retained
     return app

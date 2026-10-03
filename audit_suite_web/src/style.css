@@ -732,6 +732,10 @@ input[type="checkbox"] {
   border: 0;
   background: none;
 }
+.modal-title h2 {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
 .details > div {
   display: grid;
   grid-template-columns: 160px minmax(0, 1fr);
@@ -1090,9 +1094,12 @@ body:has(dialog[open]) {
     width: 170px;
   }
   .rail-label,
-  .engagement-switch,
-  .rail footer {
+  .engagement-switch {
     display: none;
+  }
+  .rail footer {
+    margin-top: 12px;
+    padding-top: 0;
   }
   .rail nav {
     display: flex;
@@ -1500,6 +1507,10 @@ section[aria-label="Bound instructor explanation"] dd {
   min-width: 0;
   max-width: 100%;
   width: 100%;
+}
+/* Exact review digests must wrap within the detail modal's available width. */
+.modal section[aria-label="Recorded review feedback"] {
+  overflow-wrap: anywhere;
 }
 .table-tools .search,
 .table-tools .search input {

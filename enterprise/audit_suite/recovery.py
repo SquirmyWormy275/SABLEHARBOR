@@ -7,7 +7,8 @@ import re
 import sqlite3
 from pathlib import Path, PurePosixPath
 
-from .store import DomainError, Store, canonical, digest
+from .serialized_json import canonical_bytes, update_object
+from .store import DomainError, Store, canonical
 
 TABLES = ("principals", "engagements", "members", "events")
 
@@ -66,19 +67,19 @@ def _history(db) -> dict:
         for row in db.execute(
             "SELECT * FROM events WHERE engagement=? ORDER BY revision", (engagement["id"],)
         ):
-            record = {
-                "actor": row["actor"],
-                "recorded_at": row["recorded_at"],
-                "previous_hash": row["previous_hash"],
-                "state": json.loads(row["state"]),
-                "command": json.loads(row["command"]),
-                "command_id": row["command_id"],
+            fields = {
+                name: canonical(row[name]).encode()
+                for name in ("actor", "recorded_at", "previous_hash", "command_id")
             }
+            fields["state"] = canonical_bytes(row["state"])
+            fields["command"] = canonical_bytes(row["command"])
+            event_hash = hashlib.sha256()
+            update_object(event_hash, fields)
             if (
                 row["revision"] != count
                 or row["previous_hash"] != previous
-                or digest(record) != row["hash"]
-                or digest(record["command"]) != row["request_hash"]
+                or event_hash.hexdigest() != row["hash"]
+                or hashlib.sha256(fields["command"]).hexdigest() != row["request_hash"]
             ):
                 raise DomainError("Backup event history integrity failure")
             count += 1

@@ -14,6 +14,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 from urllib.parse import quote, urlsplit
 
+import anyio
 from fastapi import FastAPI, Request
 from fastapi.responses import FileResponse, JSONResponse, Response
 from starlette.middleware.trustedhost import TrustedHostMiddleware
@@ -138,13 +139,15 @@ def create_app(
     instructor_key_root: Path | None = None,
     instructor_bindings: Path | None = None,
     enable_instructor_writeback: bool = True,
+    instructor_artifact_option_limit: int = 2000,
     background_jobs: bool = False,
+    background_job_guard=None,
     workspace_contexts: bool = False,
     company_rights_factory: Callable[[Engine], CompanyRightsProducer] | None = None,
     company_native_rights_factory: Callable[[Engine, CompanyRightsProducer], NativeRecordClosure]
     | None = None,
     engine_factory: Callable[[], Engine] | None = None,
-    request_guard: Callable[[Request], None] | None = None,
+    request_guard: Callable[[Request], Callable[[], None] | None] | None = None,
 ) -> FastAPI:
     if engine_factory is not None and any(
         value is not None
@@ -260,7 +263,9 @@ def create_app(
 
         job_root = engine.store.root / "background-jobs"
         job_root.mkdir(mode=0o700, exist_ok=True)
-        jobs = BackgroundJobs(job_root, engine, max_workers=2, max_pending=32)
+        jobs = BackgroundJobs(
+            job_root, engine, max_workers=2, max_pending=32, execution_guard=background_job_guard
+        )
     contexts = None
     personal_views = None
     visit_checkpoints = None
@@ -297,7 +302,12 @@ def create_app(
 
             release_root = engine.store.root / "instructor-releases"
             release_root.mkdir(mode=0o700, exist_ok=True)
-            releases = InstructorReleases(release_root, engine, protected_bindings)
+            releases = InstructorReleases(
+                release_root,
+                engine,
+                protected_bindings,
+                artifact_option_limit=instructor_artifact_option_limit,
+            )
             assessment_root = engine.store.root / "instructor-assessments"
             assessment_root.mkdir(mode=0o700, exist_ok=True)
             assessments = InstructorAssessments(assessment_root, engine, protected_bindings)
@@ -327,23 +337,73 @@ def create_app(
 
     if request_guard is not None:
 
-        @app.middleware("http")
-        async def retained_workroom_guard(request: Request, call_next):
-            try:
-                await asyncio.to_thread(request_guard, request)
-                return await call_next(request)
-            except DomainError as exc:
-                return JSONResponse({"error": str(exc), "code": exc.code}, status_code=exc.status)
-            except (ValueError, OSError):
-                # Runtime/source custody errors are private operator diagnostics.
-                # No review paths, source pins or private exception text cross HTTP.
-                return JSONResponse(
-                    {
-                        "error": "Retained company workroom unavailable",
-                        "code": "SOURCE_UNAVAILABLE",
-                    },
-                    status_code=503,
-                )
+        class RetainedRequestBoundary:
+            def __init__(self, app):
+                self.app = app
+                self.lock = asyncio.Lock()
+
+            async def invoke(self, scope, receive, send):
+                from .request_integrity import begin, finish
+
+                proof, token = begin()
+                started = False
+                try:
+                    request = Request(scope, receive=receive)
+                    closing = await asyncio.to_thread(request_guard, request)
+
+                    async def validated_send(message):
+                        nonlocal started, closing
+                        if message["type"] == "http.response.start":
+                            if closing is not None:
+                                await asyncio.to_thread(closing)
+                                closing = None
+                            started = True
+                        await send(message)
+
+                    await self.app(scope, receive, validated_send)
+                except DomainError as exc:
+                    if started:
+                        raise
+                    await JSONResponse(
+                        {"error": str(exc), "code": exc.code}, status_code=exc.status
+                    )(scope, receive, send)
+                except (ValueError, OSError):
+                    if started:
+                        raise
+                    await JSONResponse(
+                        {
+                            "error": "Retained company workroom unavailable",
+                            "code": "SOURCE_UNAVAILABLE",
+                        },
+                        status_code=503,
+                    )(scope, receive, send)
+                finally:
+                    finish(proof, token)
+
+            async def __call__(self, scope, receive, send):
+                if scope["type"] != "http":
+                    return await self.app(scope, receive, send)
+                async with self.lock:
+                    # Own the entire downstream ASGI invocation. BaseHTTP's
+                    # call_next task group can otherwise cancel a handler while
+                    # its submitted executor worker is still using the journal.
+                    invocation = asyncio.create_task(self.invoke(scope, receive, send))
+                    try:
+                        return await asyncio.shield(invocation)
+                    except asyncio.CancelledError:
+                        # Keep the reservation and request proofs until every
+                        # guard/handler/closing worker has really settled.
+                        with anyio.CancelScope(shield=True):
+                            while not invocation.done():
+                                try:
+                                    await asyncio.shield(invocation)
+                                except asyncio.CancelledError:
+                                    continue
+                                except Exception:
+                                    break
+                        if not invocation.cancelled():
+                            invocation.exception()
+                        raise
 
     @app.middleware("http")
     async def protected_company_surface(request: Request, call_next):
@@ -788,9 +848,16 @@ def create_app(
 
         principal = actor(request)
         limits.check("instructor-comparison", principal["id"], 60)
-        return await asyncio.to_thread(
+        value = await asyncio.to_thread(
             compare, engine, principal, engagement_id, protected_bindings, revision=revision
         )
+        return await private_view(value)
+
+    async def private_view(value):
+        # Only the opt-in sealed Store imposes this protected metadata budget.
+        # Ordinary workrooms and original-byte downloads retain their APIs.
+        check = getattr(engine.store, "check_private_view_budget", None)
+        return value if check is None else await asyncio.to_thread(check, value)
 
     def assessment_store(request: Request, *, mutation=False):
         principal = actor(request, mutation=mutation)
@@ -807,29 +874,33 @@ def create_app(
             or len(request.query_params.getlist("revision")) != 1
         ):
             raise DomainError("Choose one recorded work revision")
-        return await asyncio.to_thread(store.options, principal, engagement_id, revision)
+        return await private_view(
+            await asyncio.to_thread(store.options, principal, engagement_id, revision)
+        )
 
     @app.get("/api/engagements/{engagement_id}/instructor-assessments")
     async def assessment_history(engagement_id: str, request: Request):
         principal, store = assessment_store(request)
         if request.query_params:
             raise DomainError("Assessments use the current authenticated context")
-        return await asyncio.to_thread(store.listing, principal, engagement_id)
+        return await private_view(await asyncio.to_thread(store.listing, principal, engagement_id))
 
     @app.get("/api/engagements/{engagement_id}/instructor-assessments/{assessment_id}")
     async def assessment_read(engagement_id: str, assessment_id: str, request: Request):
         principal, store = assessment_store(request)
         if request.query_params:
             raise DomainError("Assessments use the current authenticated context")
-        return await asyncio.to_thread(store.read, principal, engagement_id, assessment_id)
+        return await private_view(
+            await asyncio.to_thread(store.read, principal, engagement_id, assessment_id)
+        )
 
     @app.post("/api/engagements/{engagement_id}/instructor-assessments")
     async def assessment_save(engagement_id: str, request: Request):
         principal, store = assessment_store(request, mutation=True)
         if request.query_params:
             raise DomainError("Assessments use the current authenticated context")
-        return await asyncio.to_thread(
-            store.save, principal, engagement_id, await json_body(request)
+        return await private_view(
+            await asyncio.to_thread(store.save, principal, engagement_id, await json_body(request))
         )
 
     def key_view_store(request: Request, *, mutation=False):
@@ -847,7 +918,8 @@ def create_app(
             or len(request.query_params.getlist("kind")) != 1
         ):
             raise DomainError("Choose one saved Key view kind")
-        return await asyncio.to_thread(store.listing, principal, engagement_id, kind)
+        value = await asyncio.to_thread(store.listing, principal, engagement_id, kind)
+        return await private_view(value)
 
     @app.post("/api/engagements/{engagement_id}/instructor-key-views")
     async def key_view_save(engagement_id: str, request: Request):
@@ -879,37 +951,45 @@ def create_app(
     @app.get("/api/engagements/{engagement_id}/instructor-releases")
     async def release_history(engagement_id: str, request: Request):
         principal, store = release_store(request)
-        return await asyncio.to_thread(store.history, principal, engagement_id)
+        return await private_view(await asyncio.to_thread(store.history, principal, engagement_id))
 
     @app.get("/api/engagements/{engagement_id}/instructor-releases/options")
     async def release_options(engagement_id: str, request: Request):
         principal, store = release_store(request)
-        return await asyncio.to_thread(store.options, principal, engagement_id)
+        return await private_view(await asyncio.to_thread(store.options, principal, engagement_id))
 
     @app.get("/api/engagements/{engagement_id}/instructor-releases/debrief-options")
     async def debrief_options(engagement_id: str, request: Request):
         principal, store = release_store(request)
-        return await asyncio.to_thread(store.debrief_options, principal, engagement_id)
+        return await private_view(
+            await asyncio.to_thread(store.debrief_options, principal, engagement_id)
+        )
 
     @app.post("/api/engagements/{engagement_id}/instructor-releases/debrief-preview")
     async def debrief_preview(engagement_id: str, request: Request):
         principal, store = release_store(request, mutation=True)
-        return await asyncio.to_thread(
-            store.debrief_preview, principal, engagement_id, await json_body(request)
+        return await private_view(
+            await asyncio.to_thread(
+                store.debrief_preview, principal, engagement_id, await json_body(request)
+            )
         )
 
     @app.post("/api/engagements/{engagement_id}/instructor-releases/preview")
     async def release_preview(engagement_id: str, request: Request):
         principal, store = release_store(request, mutation=True)
-        return await asyncio.to_thread(
-            store.preview, principal, engagement_id, await json_body(request)
+        return await private_view(
+            await asyncio.to_thread(
+                store.preview, principal, engagement_id, await json_body(request)
+            )
         )
 
     @app.post("/api/engagements/{engagement_id}/instructor-releases")
     async def release_confirm(engagement_id: str, request: Request):
         principal, store = release_store(request, mutation=True)
-        return await asyncio.to_thread(
-            store.confirm, principal, engagement_id, await json_body(request)
+        return await private_view(
+            await asyncio.to_thread(
+                store.confirm, principal, engagement_id, await json_body(request)
+            )
         )
 
     @app.post("/api/engagements/{engagement_id}/instructor-releases/{release_id}/revoke")
@@ -918,17 +998,21 @@ def create_app(
         payload = await json_body(request)
         if payload.get("release_id") != release_id:
             raise DomainError("Exact release identity required")
-        return await asyncio.to_thread(store.revoke, principal, engagement_id, payload)
+        return await private_view(
+            await asyncio.to_thread(store.revoke, principal, engagement_id, payload)
+        )
 
     @app.get("/api/engagements/{engagement_id}/assistance")
     async def assistance_list(engagement_id: str, request: Request):
         principal, store = release_store(request)
-        return await asyncio.to_thread(store.list, principal, engagement_id)
+        return await private_view(await asyncio.to_thread(store.list, principal, engagement_id))
 
     @app.get("/api/engagements/{engagement_id}/assistance/{release_id}")
     async def assistance_read(engagement_id: str, release_id: str, request: Request):
         principal, store = release_store(request)
-        return await asyncio.to_thread(store.read, principal, engagement_id, release_id)
+        return await private_view(
+            await asyncio.to_thread(store.read, principal, engagement_id, release_id)
+        )
 
     @app.post("/api/engagements/{engagement_id}/assistance/{release_id}/acknowledge")
     async def assistance_acknowledge(engagement_id: str, release_id: str, request: Request):
@@ -936,14 +1020,18 @@ def create_app(
         payload = await json_body(request)
         if payload.get("release_id") != release_id:
             raise DomainError("Exact release identity required")
-        return await asyncio.to_thread(store.acknowledge, principal, engagement_id, payload)
+        return await private_view(
+            await asyncio.to_thread(store.acknowledge, principal, engagement_id, payload)
+        )
 
     @app.post("/api/engagements/{engagement_id}/assistance/{release_id}/export-preview")
     async def debrief_export_preview(engagement_id: str, release_id: str, request: Request):
         principal, store = release_store(request, mutation=True)
         limits.check("debrief-export", principal, 12)
-        return await asyncio.to_thread(
-            store.export_preview, principal, engagement_id, release_id, await json_body(request)
+        return await private_view(
+            await asyncio.to_thread(
+                store.export_preview, principal, engagement_id, release_id, await json_body(request)
+            )
         )
 
     @app.post("/api/engagements/{engagement_id}/assistance/{release_id}/export")
@@ -979,9 +1067,10 @@ def create_app(
     async def instructor_binding(engagement_id: str, request: Request):
         from .bound_instructor import read_binding
 
-        return await asyncio.to_thread(
+        value = await asyncio.to_thread(
             read_binding, engine, actor(request), engagement_id, protected_bindings
         )
+        return await private_view(value)
 
     @app.get("/api/engagements/{engagement_id}/instructor-key")
     async def instructor_key_index(engagement_id: str, request: Request):
@@ -1927,4 +2016,8 @@ def create_app(
                 candidate = web_root / "index.html"
             return FileResponse(candidate)
 
+    if request_guard is not None:
+        # Outermost user middleware: downstream BaseHTTP task groups belong to
+        # the owned invocation, so HTTP cancellation cannot detach their workers.
+        app.add_middleware(RetainedRequestBoundary)
     return app

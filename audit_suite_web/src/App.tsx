@@ -4114,7 +4114,7 @@ export default function App() {
                     onResolveHuman={(payload) => {
                       setDetail(null);
                       edit(
-                        "Resolve human review",
+                        "Resolve recorded review",
                         "review.resolve",
                         [
                           f(
@@ -4124,7 +4124,7 @@ export default function App() {
                           ),
                         ],
                         payload,
-                        "This separate reviewer action resolves the human comment against the current retained workpaper version. It preserves earlier comments and responses; it does not accept any AI suggestion.",
+                        "This separate reviewer action resolves the recorded comment against the current retained workpaper version. It preserves its origin, earlier comments and responses; it does not assert professional acceptance or accept any AI suggestion.",
                       );
                     }}
                     onRespond={(payload) => {

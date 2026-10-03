@@ -725,7 +725,9 @@ def test_repaired_current_receipt_does_not_hide_boolean_receipt_in_earlier_event
         boot(case)
 
 
-def test_each_fresh_history_verification_reads_an_unchanged_original_once(retained, monkeypatch):
+def test_each_fresh_history_verification_hashes_each_original_at_open_and_close(
+    retained, monkeypatch
+):
     from enterprise.audit_suite import persistent_company_service as service
 
     case = retained["workrooms"]["ALPHA"]
@@ -751,17 +753,107 @@ def test_each_fresh_history_verification_reads_an_unchanged_original_once(retain
     workroom = RetainedWorkroom(
         case["config"], case["config_sha256"], private_root=case["root"], repository=REPO
     )
-    assert len(reads) == 1
+    assert len(reads) == 2
     before = original_sha(case["root"] / "engagements.sqlite3")
     workroom.verify_workroom()
-    assert len(reads) == 2
+    assert len(reads) == 4
     assert original_sha(case["root"] / "engagements.sqlite3") == before
     raw = artifact_path.read_bytes()
     artifact_path.write_bytes(b"x" * len(raw))
     with pytest.raises(ProcedureError, match="Retained artifact bytes changed"):
         workroom.verify_workroom()
-    assert len(reads) == 3
+    assert len(reads) == 5
     assert original_sha(case["root"] / "engagements.sqlite3") == before
+
+
+def test_complete_history_verification_streams_events_without_retaining_all_snapshots(
+    retained, monkeypatch
+):
+    from enterprise.audit_suite import persistent_company_service as service
+
+    case = retained["workrooms"]["ALPHA"]
+    collect_existing_neutral_original(case)
+    for day in range(4, 20):
+        command(
+            case["engine"],
+            case["ids"]["auditor"],
+            case["engagement"],
+            "clock.advance",
+            {"mode": "TARGET_DATE", "target": f"2027-01-{day:02}T09:00:00Z"},
+        )
+    original_connect = service.sqlite3.connect
+    scanned = []
+    indexed_plans = []
+
+    class Cursor:
+        def __init__(self, cursor, sql):
+            self.cursor, self.sql = cursor, sql
+
+        def __iter__(self):
+            for row in self.cursor:
+                if "FROM events" in self.sql:
+                    scanned.append(self.sql)
+                yield row
+
+        def fetchall(self):
+            assert "FROM events" not in self.sql, "Whole-history snapshot list is unbounded"
+            return self.cursor.fetchall()
+
+        def __getattr__(self, name):
+            return getattr(self.cursor, name)
+
+    class Connection:
+        def __init__(self, connection):
+            object.__setattr__(self, "connection", connection)
+
+        def __setattr__(self, name, value):
+            setattr(self.connection, name, value)
+
+        def __getattr__(self, name):
+            return getattr(self.connection, name)
+
+        def execute(self, sql, *args):
+            if "FROM events" in sql:
+                assert "WHERE engagement=?" in sql, (
+                    "Complete states require the scoped primary index"
+                )
+                plan = self.connection.execute("EXPLAIN QUERY PLAN " + sql, *args).fetchall()
+                assert not any("TEMP B-TREE" in row[3] for row in plan), "Unbounded state sorter"
+                indexed_plans.append(sql)
+            return Cursor(self.connection.execute(sql, *args), sql)
+
+        def __enter__(self):
+            self.connection.__enter__()
+            return self
+
+        def __exit__(self, *args):
+            return self.connection.__exit__(*args)
+
+    def bounded_connect(path, *args, **kwargs):
+        connection = original_connect(path, *args, **kwargs)
+        return (
+            Connection(connection)
+            if str(case["root"] / "engagements.sqlite3") in str(path)
+            else connection
+        )
+
+    monkeypatch.setattr(service.sqlite3, "connect", bounded_connect)
+    workroom = RetainedWorkroom(
+        case["config"], case["config_sha256"], private_root=case["root"], repository=REPO
+    )
+    first = len(scanned)
+    assert first > 16
+    workroom.verify_workroom()
+    assert len(scanned) == first * 2
+    assert len(indexed_plans) == 4
+    assert indexed_plans == [
+        "SELECT rowid FROM events WHERE engagement=?",
+        "SELECT rowid AS locator_rowid,* FROM events WHERE engagement=? ORDER BY revision",
+        "SELECT rowid FROM events WHERE engagement=?",
+        "SELECT rowid AS locator_rowid,engagement,revision,command_id,request_hash,"
+        "actor,recorded_at,previous_hash,hash,CAST(state AS BLOB) AS state,"
+        "CAST(command AS BLOB) AS command FROM events WHERE engagement=? ORDER BY revision",
+    ]
 
 
 def test_resealed_boolean_zero_birth_counts_do_not_establish_empty_workroom(retained):
