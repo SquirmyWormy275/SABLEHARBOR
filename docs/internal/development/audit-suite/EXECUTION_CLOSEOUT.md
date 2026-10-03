@@ -1,5 +1,38 @@
 # Audit-suite execution closeout
 
+2026-10-03 15:07 UTC execution and source checkpoint: signed renewal completed
+for both original rooms and the coordinator exited 0 (`24edfe01`). The original
+principals, audit revisions, immutable prefixes and company source were
+preserved. The first Key holder then refused startup before binding anything
+(`556481dc`). No viewers started and no Key or source operations were performed.
+Independent diagnosis (`d487e3e9`) found that the renewed configurations inherited
+an old persistent-runtime review. The existing separate review `9bc055d1`
+already matches the current runtime and the same original library. A private
+configuration successor and new one-use coordinator namespaces are being
+prepared; the old configurations, consumed grants and failed attempt remain
+preserved. This is a configuration selection correction, not a weakened check.
+
+The completed source emission/publication/collection seam passed ten independent
+checks (`d6265a2d`). Root closed 3,209 source and proof references (`dfb9a71b`),
+including 1,237 author and 365 independent ordinary-copy pairs. Nineteen newly
+generated originals were collected normally; every original native header,
+byte and custody association was retained. Two deliberate refusal cases remain
+refusals. The safe observation filename and truthful new-emission metadata are
+integrated in isolated commit `105e6380`. Original records and raw binary types
+were not rewritten. Persistent-library admission is a separate successor;
+its author reports fourteen owned checks and a normal 192-task birth, with
+independent admission still pending and no inherited 409-task credit.
+
+The long investigation preparation is Root-admitted (`8aa7c547`): original
+workpaper versions and evidence were preserved through a bounded native source
+change, ordinary successor workpaper actions and a genuine cold reopen. Its
+three-task fixture is not the full actual workroom. The two-mode source program
+has a frozen 89-action draft; it is not execution eligible. Exact fifteen-hour
+policy deadlines require a narrowly reviewed calendar extension. Actual source
+operations, the first eight original-room followthrough actions, viewer QA,
+full packets, backups, migration and cleanup remain pending their gates.
+The Seagate is still absent. All 46 locked job payloads and statuses are unchanged.
+
 2026-10-03 14:02 UTC source and navigation checkpoint: Root admitted the
 corrected lossless source publisher, the pre-audit source driver and the flat
 native collection runner (`1931132c`). The publisher preserves all fourteen
