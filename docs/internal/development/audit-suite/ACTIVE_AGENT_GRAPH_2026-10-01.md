@@ -1,5 +1,18 @@
 # Active company-source audit workflow
 
+2026-10-04 22:37 UTC: Actual FIRST8 is accepted: exit 0, all eight
+ordinary HTTP command receipts, exact CLEAN 6229/MESSY 6354 transitions
+(`20b466a2`, Root `6b8bf4b1`, independent `92de1f06`, Root closure `7636beb7`).
+No retest, direct state write, Key rebuild or professional acceptance occurred.
+
+The first actual QA attempt failed once at CLEAN operator login with a
+TimeoutError (`a5b51f0f`, Root `eac0b493`), zero completed checks and zero PNGs.
+Successful session/bootstrap responses do not settle possible session or
+authority changes. NAV/SUP/STOP/offline/cutover, Main adoption and raw cleanup
+remain unaccepted. The live viewers are preserved for a bounded browser
+diagnosis; no QA or FIRST8 replay has run. SAME-ID fieldwork continues.
+All 46 locked job payloads and states remain unchanged.
+
 2026-10-04 22:22 UTC: The closed CLEAN B06 checkpoint is byte-verified
 (`9d4d70d0`): revision 5003, 5,001 observed commands including the retained
 2,050-command prefix, 298 workpapers and 111 base tasks still unrun. The

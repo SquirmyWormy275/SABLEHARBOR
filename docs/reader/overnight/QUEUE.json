@@ -4350,8 +4350,8 @@
         "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5"
       },
       "current_actual_execution": {
-        "checkpoint_utc": "2026-10-04T22:22:51.090680+00:00",
-        "status": "ACTUAL_SAME_ID_CONTINUATION_RUNNING_AFTER_EXACT_52_TASK_PARITY",
+        "checkpoint_utc": "2026-10-04T22:37:26.469148+00:00",
+        "status": "ACTUAL_SAME_ID_CONTINUATION_RUNNING_ORIGINAL_UI_TIMEOUT_UNDER_BOUNDED_DIAGNOSIS",
         "process_pid": 18961,
         "settled_exit_code": null,
         "confirmed_commands": 2050,
@@ -4457,7 +4457,7 @@
         "original_compact_shared_native_canonical_validator_used": true,
         "original_actual_cold_child_pid": 360719,
         "original_actual_cold_child_start_ticks": 18981722,
-        "original_actual_cold_child_status": "GENUINE_NORMAL_COLD_READY_PENDING_ACTUAL_FIRST8_UI_STOP_OFFLINE",
+        "original_actual_cold_child_status": "Genuine_cold_alive_after_preserved_QA_failure_pending_bounded_diagnosis",
         "original_UI_actual_execution_owner": "retained_learner_service",
         "conditional_Main_source_only_adoption_scheduling_addendum_sha256": "9c5eadd49cde9ea386a4c0a6bc6c930ad7399d5594533bf2b4c8a75daf78bbae",
         "conditional_Main_source_only_adoption_requires_original_cutover": true,
@@ -4540,7 +4540,23 @@
         "original_FIRST8_actual_process_pid": 653519,
         "original_FIRST8_actual_process_start_ticks": "20128781",
         "original_FIRST8_actual_process_launch_sha256": "4cf25a83793250bbf52c8e514b3cba6be4a2ca8effb315b6b05f15f5f39bf5cd",
-        "original_FIRST8_paired_acceptance": false
+        "original_FIRST8_paired_acceptance": true,
+        "original_FIRST8_actual_settled_exit_code": 0,
+        "original_FIRST8_actual_execution_sha256": "20b466a2d9fe8304cf45e2eb6509f96ba1516ff5d323ea6f1cedd4d7b14ae5af",
+        "Root_original_FIRST8_actual_receipt_review_sha256": "6b8bf4b1bd9b23df7f9ea3e04fc0cdea04222f4746da63c109b2b54cce33e38a",
+        "original_FIRST8_independent_actual_review_sha256": "92de1f060955db7c8fe5de8a4fb3f3eeff6011b99d8f470d69a03a6d9a409add",
+        "Root_original_FIRST8_independent_review_closure_sha256": "7636beb7cb4360a5edaadaf276f78fff5437952e4c87e8380fb7dfa319732b11",
+        "original_QA_actual_exit_code": 1,
+        "original_QA_actual_report_sha256": "a5b51f0f35c4d6128796fdf5aa3fe11e6a5d780b623c6b256b64d909b26e2761",
+        "Root_original_QA_actual_failure_review_sha256": "eac0b493c3dd704689ca877af4014d93964224845473c15aa9c75f997fa280e6",
+        "original_QA_actual_failure_step": "CLEAN-operator-login",
+        "original_QA_actual_failure_class": "TimeoutError",
+        "original_QA_actual_completed_checks": 0,
+        "original_QA_actual_PNG_count": 0,
+        "original_QA_actual_UI_accepted": false,
+        "original_QA_possible_issued_session_or_authority_change_unreconciled": true,
+        "original_QA_bounded_diagnosis_source_preparation_authorized": true,
+        "original_QA_bounded_diagnostic_actual_execution": false
       }
     }
   },
