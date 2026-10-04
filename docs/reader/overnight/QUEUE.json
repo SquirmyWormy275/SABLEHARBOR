@@ -4350,8 +4350,8 @@
         "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5"
       },
       "current_actual_execution": {
-        "checkpoint_utc": "2026-10-04T23:26:39.789309+00:00",
-        "status": "ACTUAL_SAME_ID_CONTINUATION_RUNNING_ORIGINAL_UI_BUDGET_CORRECTION_SOURCE_REVIEWED_PENDING_ONCE_RUN",
+        "checkpoint_utc": "2026-10-04T23:32:32.441733+00:00",
+        "status": "ACTUAL_SAME_ID_CONTINUATION_RUNNING_ORIGINAL_CORRECTED_QA_ONCE_RUNNING",
         "process_pid": 18961,
         "settled_exit_code": null,
         "confirmed_commands": 2050,
@@ -4568,9 +4568,16 @@
         "Root_original_corrected_UI_source_review_sha256": "2c59642a16ec4b927d347abec54b22c71732ea7f4917b4edc476e6ac95aa78ee",
         "Root_original_corrected_UI_current_static_prerequisite_closure_sha256": "8a76cf7f37cc8651a5baf41ee744a4059a017b2116193c884c56f7f67268ac73",
         "original_corrected_UI_per_wait_budget_ms": 180000,
-        "original_corrected_UI_actual_execution": false,
+        "original_corrected_UI_actual_execution": true,
         "original_UI_latency_source_analysis": "Repeated verification, complete state parsing and serialized requests found in actual Original source; source-based mechanism, no measured attribution or ETA. Same paths remain in FinalWT.",
-        "original_prior_issued_sessions_unresolved": true
+        "original_prior_issued_sessions_unresolved": true,
+        "original_corrected_QA_root_once_selection_sha256": "62b2cfe432a2077941458f7ad2a68e0f6b022fb330de0091a70ac31c7f409938",
+        "original_corrected_QA_filled_plan_sha256": "d65b79c8265290fa5a092ab0e6d801519c98a4db6fa786c11e1583301481d276",
+        "original_corrected_QA_actual_launch_sha256": "d048a3bfacf619233b0ccaa2a5c2fae375b63ee2ed2bfa00b8b7ad22ea644a99",
+        "original_corrected_QA_actual_pid": 783225,
+        "original_corrected_QA_actual_start_ticks": 20589307,
+        "original_corrected_QA_actual_exit_code": null,
+        "original_corrected_QA_UI_accepted": false
       }
     }
   },

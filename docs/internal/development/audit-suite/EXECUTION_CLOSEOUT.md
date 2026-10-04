@@ -1,5 +1,14 @@
 # Audit-suite execution closeout
 
+2026-10-04 23:31 UTC: One corrected actual QA is now running: Node child
+783225/start 20589307, launch `d048a3bf`, selected source `4a8d7d4b`, plan
+`d65b79c8`, Root once-selection `62b2cfe4`. Independent timeout-only source
+review is `ab7a3df2`; all 207 selected static prerequisites closed before launch.
+The same genuine cold service remains live. Actual QA result, private teaching
+writes, own logouts and Root PNG review are not yet accepted. Prior lost-context
+sessions remain unresolved. Navigation, supplement, STOP, offline, cutover,
+Main adoption and retirement are still pending; FIRST8 is not replayed.
+
 2026-10-04 23:26 UTC: The real bounded login diagnostic reached the correct
 Controls & tracker screen; Root inspected the safe PNG (`955e6a1a`). Its
 60-second heading wait expired, although successful bootstrap and engagement
