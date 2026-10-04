@@ -4313,6 +4313,41 @@
         "original_cutover_accepted": false,
         "Main_adoption_accepted": false,
         "final_cleanup_complete": false
+      },
+      "corrected_binding_clock_and_plain_retention_checkpoint_2026_10_04": {
+        "checkpoint_utc": "2026-10-04T13:38:26.573230+00:00",
+        "status": "ACTUAL_FIELDWORK_RUNNING_CURRENT_BINDING_CLOCK_AND_VIEWER_ACCEPTANCE_PENDING",
+        "last_worker_observed_CLEAN_confirmed_commands": 1918,
+        "observation_is_completed_paired_capture": false,
+        "paired_bootstrap_corrected_source_sha256": "cdf72032fa9c299f69ebb22ef619619da8afe4aa6872a026d569546bec1933dc",
+        "Root_corrected_bootstrap_source_selection_sha256": "58ca6013ca56446aea335f9afbf9501be52a49c8e0201972a58696f618526b9a",
+        "two_revocation_inventory_observations_only_corrected": true,
+        "prior_bootstrap_and_source_selection_historical_unexecuted": true,
+        "literal_expected_Key_clock_preparation_sha256": "93b71081dbbfd769686f5c60393e7bb48b2c17186d367988e52d602da992a4be",
+        "planned_clock_reference_counts": {
+          "CLEAN": {
+            "sources": 913,
+            "post_period_events": 12,
+            "selected_prior_versions": 45,
+            "future_sources": 0
+          },
+          "MESSY": {
+            "sources": 1025,
+            "post_period_events": 22,
+            "selected_prior_versions": 62,
+            "future_sources": 0
+          }
+        },
+        "actual_current_clock_acl_acceptance": false,
+        "Root_plain_retention_addendum_sha256": "37676dba58665cf1a68bc5721e9bb6ea089e56f6bbde66eaaf3a369d60e689ba",
+        "backup_encryption_or_owner_key_confirmation_required": false,
+        "actual_paired_fieldwork_independently_accepted": false,
+        "actual_Key_binding_accepted": false,
+        "actual_V3_viewer_accepted": false,
+        "original_cutover_accepted": false,
+        "Main_adoption_accepted": false,
+        "final_cleanup_complete": false,
+        "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5"
       }
     }
   },

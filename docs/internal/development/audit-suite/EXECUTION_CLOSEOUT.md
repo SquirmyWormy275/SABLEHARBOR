@@ -1,5 +1,33 @@
 # Audit-suite execution closeout
 
+2026-10-04 13:38 UTC: actual fieldwork continues on the same new CLEAN/MESSY
+rooms. The latest bounded worker observation recorded 1,918 confirmed CLEAN
+command returns in B01, with no unconfirmed command or completed paired capture.
+No independent fieldwork, Key, viewer or Main adoption is asserted.
+
+The unexecuted paired-binding bootstrap had compared the session API's returned
+token-hash set with its filename-to-SHA inventory. The narrow child `cdf72032`
+now calls normal signed revocation validation before copying the complete known
+inventory at both observations. Root selected it (`58ca6013`) after exact whole
+source inversion and fresh closure of 26 ordinary references. Parent `7f860a85`
+and selection `988f419c` remain historical and unexecuted; all other inputs,
+methods, limits and guard bytes are unchanged. Actual binding gates remain unfilled.
+
+Literal Key clock expectations are prepared (`93b71081`) for all 913 CLEAN and
+1,025 MESSY references. At the planned January 18, 2028 clock there are no future
+references; 12/22 event sources fall after the audited period and 45/62 references
+select prior versions. These differences remain explicit. Current full14 source,
+actual clock, zero auditor ACL and resulting bound snapshots must still close
+before these expectations become actual acceptance.
+
+The final retention addendum (`37676dba`) explicitly supersedes historical
+backup encryption and separate-key requirements. All 27 ordinary compressed
+recovery copies remain verified, and future final backups use plain tar/zstd
+with complete member verification. No owner key confirmation remains. Current
+Git/new outputs/proofs and exact dependency-cleared removals are still pending.
+Original conversion/cold/UI/owned stop/offline obligations remain required.
+All 46 locked job payloads and states remain unchanged.
+
 2026-10-04 13:07 UTC: normal CLEAN scope collection/testing completed its two
 workpapers at revision 162 (`7a3009e6`); control fieldwork is still running.
 No completed paired capture or independent fieldwork acceptance is asserted.
