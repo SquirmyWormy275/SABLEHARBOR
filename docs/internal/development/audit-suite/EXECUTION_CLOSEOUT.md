@@ -1,5 +1,20 @@
 # Audit-suite execution closeout
 
+2026-10-04 21:16 UTC: The exact two-file Original raw-retirement source is selected
+(`f5846fc4`, Root `4bb70976`, independent `0b91df2b`). It requires genuine
+RAW1–5 acceptance, both held Original writer locks, exact reader clearance,
+final independent plain preservation and unchanged raw/archive identities.
+Only the two physical journal paths may be unlinked; all other entries and
+four runtime recovery receipts remain in place. No raw/archive bodies were
+reread, no retirement gate was issued, and no deletion ran.
+
+The SAME-ID writer remains active (2,607 CLEAN return filenames, metadata only).
+The closed B05 checkpoint reports 199 workpapers and 210 base tasks still
+unrun at that checkpoint; that is not a current SQL/raw replay acceptance.
+The Original cold constructor remains active without readiness. Actual UI/STOP/
+offline, next paired replay/Keys/UI, Main reopening and final cleanup remain
+pending. All 46 locked job payloads and states remain unchanged.
+
 2026-10-04 20:41 UTC: The exact Main adoption helper is source-selected (`60b92717`,
 Root `bfc71da8`, independent review `6f0ebbaf`). It covers 66 tracked files,
 six frontend assets, 103 current byte checks, only two obsolete asset removals

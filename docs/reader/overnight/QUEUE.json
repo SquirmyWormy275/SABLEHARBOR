@@ -4350,7 +4350,7 @@
         "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5"
       },
       "current_actual_execution": {
-        "checkpoint_utc": "2026-10-04T20:41:48.219232+00:00",
+        "checkpoint_utc": "2026-10-04T21:16:52.995242+00:00",
         "status": "ACTUAL_SAME_ID_CONTINUATION_RUNNING_AFTER_EXACT_52_TASK_PARITY",
         "process_pid": 18961,
         "settled_exit_code": null,
@@ -4464,8 +4464,8 @@
         "conditional_Main_source_only_adoption_requires_unrelated_next_run_completion": false,
         "Main_same_next_runtime_reopen_requires_next_quiescence_and_actual_gates": true,
         "continuation_metadata_only_progress": {
-          "observed_utc": "2026-10-04T20:41:48.219232+00:00",
-          "new_CLEAN_RETURN_filenames": 2387,
+          "observed_utc": "2026-10-04T21:16:52.995242+00:00",
+          "new_CLEAN_RETURN_filenames": 2607,
           "completed_CLEAN_legacy_phase_filenames": [
             "B01-LEGACY-PHASE.json",
             "B02-LEGACY-PHASE.json",
@@ -4502,7 +4502,19 @@
         "Main_exact_adopter_Root_source_selection_sha256": "bfc71da8219f2c7e2101a346fcc367f3f041050927af22bae0e0245ab4676025",
         "Main_exact_adopter_independent_source_review_sha256": "6f0ebbaf2e475455b1b2b0383c0c70510b1024a37249b9b3f526ea9fec10bd19",
         "Main_exact_adopter_actual_execution": false,
-        "Main_exact_literal_parent_directory_candidates": 2
+        "Main_exact_literal_parent_directory_candidates": 2,
+        "Original_raw_two_file_retirement_source_sha256": "f5846fc4a1cc3b57e67f9a1ef73ffbdd2e01a29ecaaa2b443e99f3bf6f73ba03",
+        "Original_raw_two_file_Root_source_selection_sha256": "4bb70976a6a395e6ea472cd0fc5c3661b52eb4e34ddc2af138d4ac8b9fb9793a",
+        "Original_raw_two_file_independent_source_review_sha256": "0b91df2b110010834215267d3d79118ff1c3805f9a6ce71563a20581624a16aa",
+        "Original_raw_two_file_retirement_actual_execution": false,
+        "closed_CLEAN_B05_checkpoint": {
+          "receipt_sha256": "ade005ce934a8564ee31e395184a38dfb40e9a320ed76afb3a9d274dd3edf5d3",
+          "revision": 4203,
+          "observed_command_count_including_historical_prefix": 4201,
+          "workpapers": 199,
+          "unrun_tasks": 210,
+          "current_SQL_or_raw_or_professional_acceptance": false
+        }
       }
     }
   },
