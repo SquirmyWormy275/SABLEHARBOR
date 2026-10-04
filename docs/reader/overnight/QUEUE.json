@@ -4350,7 +4350,7 @@
         "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5"
       },
       "current_actual_execution": {
-        "checkpoint_utc": "2026-10-04T15:23:25.257145+00:00",
+        "checkpoint_utc": "2026-10-04T16:57:07.630345+00:00",
         "status": "ACTUAL_SAME_ID_CONTINUATION_RUNNING_AFTER_EXACT_52_TASK_PARITY",
         "process_pid": 18961,
         "settled_exit_code": null,
@@ -4405,7 +4405,20 @@
         "confirmed_commands_observation_boundary": "HISTORICAL_PREFIX_2050_NEW_COMMANDS_NOT_YET_RECONCILED",
         "source_grants_observation_boundary": "PRE_CONTINUATION_RECONCILIATION_NOT_CURRENT_WRITER_ACL",
         "reset_or_rebirth": false,
-        "cached_outcomes_imported": false
+        "cached_outcomes_imported": false,
+        "original_conversion_settled_exit_code": 0,
+        "original_conversion_result_sha256": "d69e2def7d4a9ed3e565f237c517d48c4e206a62008ed9d75f83407ace5b44f2",
+        "original_converter_process_settlement_sha256": "29936f75cfb6d883629e6ff87dbde1193f6fb93f00adb8b613fa523844d8add3",
+        "original_independent_compact_checker_status": "ACTUAL_RUNNING_NOT_YET_ACCEPTED",
+        "current_base_import_admission_accepted": false,
+        "backup_plain_archive_count": 34,
+        "backup_all34_recovery_closeout_sha256": "a2f64fbf42133aff13867fc1403dd590f83088edd7c2e732e026fbb2c6593078",
+        "obsolete_backup_ciphertext_count_retired": 34,
+        "unnecessary_backup_key_retired": true,
+        "obsolete_encrypted_transport_retirement_sha256": "de3cb4c72138e2940bd6602d321a30ab7bec6ca2dab29747bb85f5a65e112ee6",
+        "measured_external_available_GiB_increase": 24.271,
+        "all34_recovery_guide_sha256": "9bef32d0244aa10b8fa1637ab3433e3801e14f791f617c2bca77f561db32a60e",
+        "working_company_or_audit_data_retired_by_backup_correction": false
       }
     }
   },

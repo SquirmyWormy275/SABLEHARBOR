@@ -1,5 +1,24 @@
 # Audit-suite execution closeout
 
+2026-10-04 16:57 UTC: backup encryption correction is complete for all 34
+known recovery archives, including seven earlier ordinary-tar backups omitted
+from the first 27-copy batch. The actual seven-copy process exited 0 (`c2fa1234`);
+whole authenticated tar streams and all 5,701 saved member records were checked.
+Root accepted all 34 unchanged plain copies and a stock tar listing (`a2f64fbf`).
+The exact obsolete 34 ciphertexts and backup key were retired (`de3cb4c7`),
+recovering 24.271 GiB on Seagate. Historical verification receipts remain intact;
+all five recovery guides now describe the ordinary copies (`9bef32d0`). No owner
+key preservation or further backup encryption is required.
+
+Original storage conversion exited 0 with a genuine selected-phase result
+(`d69e2def`), separately settled by Root (`29936f75`). The sole independent
+checker is still running; original cold/UI/owned STOP/offline acceptance remains
+pending. The new SAME-ID fieldwork worker continues on the existing rooms.
+The import-only admission remains unaccepted after a safe metadata-constructor
+refusal; an exact five-class source-only correction is under independent review.
+No actual paired replay, new Key/UI, Main adoption or final cohort cleanup is
+claimed. All 46 locked job payloads and states remain unchanged.
+
 2026-10-04 15:24 UTC: the actual SAME-ID fieldwork continuation is running
 under the pinned Python 3.12 runtime, PID 18961/start 17652877. Root selected
 one invocation (`0a45a6d4`) of caller `9b6169b4` with actual input `ed78719d`;
