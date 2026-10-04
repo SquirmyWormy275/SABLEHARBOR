@@ -1,5 +1,18 @@
 # Audit-suite execution closeout
 
+2026-10-04 23:36 UTC: The one corrected 180-second QA settled exit 1
+(`8eb2591f`), again within CLEAN operator login (`b8557885`). Root closed the
+actual failure (`d85113b9`). Successful browser responses include bootstrap,
+the exact engagement and all five saved-view/member/handoff/context/job routes.
+The coarse step does not identify heading versus explicit API bootstrap timeout;
+browser response logs do not include APIRequest-context calls. No teaching,
+assessment, release, draft, audit or company source write endpoint was reached.
+PNG count and log bytes are zero. The new session remains unresolved.
+
+A granular, safe-timestamp login diagnostic is being prepared separately; no
+replay or dependent UI/STOP/offline/cutover/adoption/cleanup is accepted. The
+same cold service and SAME-ID fieldwork remain live, with their sources intact.
+
 2026-10-04 23:31 UTC: One corrected actual QA is now running: Node child
 783225/start 20589307, launch `d048a3bf`, selected source `4a8d7d4b`, plan
 `d65b79c8`, Root once-selection `62b2cfe4`. Independent timeout-only source

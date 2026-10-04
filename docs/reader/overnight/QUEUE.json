@@ -4350,8 +4350,8 @@
         "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5"
       },
       "current_actual_execution": {
-        "checkpoint_utc": "2026-10-04T23:32:32.441733+00:00",
-        "status": "ACTUAL_SAME_ID_CONTINUATION_RUNNING_ORIGINAL_CORRECTED_QA_ONCE_RUNNING",
+        "checkpoint_utc": "2026-10-04T23:41:42.113638+00:00",
+        "status": "ACTUAL_SAME_ID_CONTINUATION_RUNNING_ORIGINAL_180S_QA_FAILED_UNDER_GRANULAR_DIAGNOSIS",
         "process_pid": 18961,
         "settled_exit_code": null,
         "confirmed_commands": 2050,
@@ -4576,8 +4576,16 @@
         "original_corrected_QA_actual_launch_sha256": "d048a3bfacf619233b0ccaa2a5c2fae375b63ee2ed2bfa00b8b7ad22ea644a99",
         "original_corrected_QA_actual_pid": 783225,
         "original_corrected_QA_actual_start_ticks": 20589307,
-        "original_corrected_QA_actual_exit_code": null,
-        "original_corrected_QA_UI_accepted": false
+        "original_corrected_QA_actual_exit_code": 1,
+        "original_corrected_QA_UI_accepted": false,
+        "original_corrected_QA_actual_process_settlement_sha256": "8eb2591f11347a483f5381256397064493564f3078012968e310689be9a25bec",
+        "original_corrected_QA_actual_report_sha256": "b855788526343bf745d3097efed0fd520908410a2eb853f010ddd6f9b4ebf567",
+        "Root_original_corrected_QA_actual_failure_review_sha256": "d85113b94b6b82fb6b5782151f5e0f1f2fe8a26b1c83102500fcc42e0db818bb",
+        "original_corrected_QA_actual_failure_substep": "UNKNOWN_WITHIN_ENTER_HEADING_OR_EXPLICIT_API_REQUEST_NOT_INSTRUMENTED",
+        "original_corrected_QA_actual_UI_accepted": false,
+        "original_corrected_QA_private_teaching_release_or_draft_write_reached": false,
+        "original_diagnostic_V3_source_preparation_authorized": true,
+        "original_diagnostic_V3_actual_execution": false
       }
     }
   },
