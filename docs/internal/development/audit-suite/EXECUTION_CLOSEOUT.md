@@ -1,5 +1,37 @@
 # Audit-suite execution closeout
 
+2026-10-04 02:02 UTC actual Key success, holder failure and physical-backup recovery: the
+original paired Key receipt now exists (`026ee7a6`). CLEAN and MESSY each retain
+76 issues and 409 expectations, with 864/971 native references at unchanged
+original revisions 6226/6349. Scoped temporary operator grants were revoked;
+learner grants, native originals and audit state were conserved. The holder
+then exited 1 (`9a88d398`) after a reported 36,000.7-second binding phase. Its
+specific RuntimeError cause is unknown; duration alone does not prove timeout.
+No Key-holder-ready or settled-authority receipt was produced. No viewer,
+activation input or first-eight follow-through command ran.
+
+Root's bounded fresh receipt/schema, authorization, source/frontend and serving
+checks pass without constructing a world or opening audit SQL. The successful
+paired Key and failed holder outputs are preserved. There is no automatic Key
+rebind or repeat of the full history validation. The unchanged Root-admitted
+physical backup caller has started the real CLEAN encrypted original stream to
+the verified Seagate, after matching original metadata and acquiring all three
+locks. Complete paired authenticated round trips remain pending. No original
+was deleted, relocated or rewritten. Fresh native/access closure and a reviewed
+compact recovery using the saved actual Key must precede resumed viewer work;
+no missing live-process or authority proof is inferred.
+
+The combined isolated composition is now independently reviewed at `cf08fa36`
+(`d49cf7d9`) and Root-selected (`14d3b678`). Root closed 294 source/copy pairs,
+nineteen exact products, eighteen unchanged primitives and the independent
+review's small references. Seven read-only custody/workpaper joins passed;
+the one genuine V3/private-access case remains explicitly author-executed.
+Actual adoption is false. Minimal native-caller receipt recovery and the two
+confirmed locked-scope Key search/relationship gaps are being completed in
+separate isolated successors. Main product source and all 46 locked job payloads
+and statuses remain unchanged. Actual UI, cold export, retirement and complete
+new-edition fieldwork remain pending; professional acceptance is NOT_ASSERTED.
+
 2026-10-04 01:18 UTC isolated reference and native-method integration: the exact
 V3 archive/current-issue UI composition is frozen at `c466ec95` (`0392413b`).
 Root freshly closed its 338 source/copy pairs (27,054,778 bytes), fifteen exact
