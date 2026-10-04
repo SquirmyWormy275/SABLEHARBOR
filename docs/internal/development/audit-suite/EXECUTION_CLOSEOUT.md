@@ -1,5 +1,28 @@
 # Audit-suite execution closeout
 
+2026-10-04 19:16 UTC: The sole Original compact checker and configuration process both
+exited 0 without retries. Genuine complete derivative replay passed all 6,227
+CLEAN and 6,350 MESSY frames (`9b3eab70`); Root closed the 19 small receipt and
+configuration joins (`071201af`). The shared native canonical validator is
+explicit, and comparison to original raw bytes remains attributed separately
+to the frozen completed converter. Both actual compact configurations are
+written (`f217d137`). The normal cold constructor is running in the owned
+child PID360719/start18981722; actual readiness and UI acceptance remain pending.
+
+Root explicitly selected the conditional Main source-adoption ordering
+addendum (`9c5eadd4`): after genuine Original cutover and fresh target checks,
+the exact 66 source files and six assets may be adopted while the unrelated
+FinalWT fieldworker remains isolated. Actual SAME-ID next-room Main runtime
+reopening and final cleanup still require completed, quiescent next fieldwork
+and its actual Key/UI/current-authority gates. No adoption has occurred.
+
+The SAME-ID next writer remains active. Metadata-only progress has four CLEAN
+legacy phase files complete; it is not a current SQL or ACL reconciliation.
+All 34 backups remain ordinary verified tar/zstd copies, with obsolete encrypted
+copies and key removed. Original live UI/owned STOP/offline, next paired
+replay/Key/UI, Main reopening and final verified cleanup remain pending.
+All 46 locked job payloads and states remain unchanged.
+
 2026-10-04 17:59 UTC: The actual finite service import probe exited 0 (`b4cfce08`), separately settled
 by Root (`3eb9b8cb`). It observed 156 base file origins and 313 external file
 origins, with all 519 selected dependency/resource files freshly closed. Root

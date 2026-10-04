@@ -4350,7 +4350,7 @@
         "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5"
       },
       "current_actual_execution": {
-        "checkpoint_utc": "2026-10-04T17:59:49.948429+00:00",
+        "checkpoint_utc": "2026-10-04T19:16:33.719746+00:00",
         "status": "ACTUAL_SAME_ID_CONTINUATION_RUNNING_AFTER_EXACT_52_TASK_PARITY",
         "process_pid": 18961,
         "settled_exit_code": null,
@@ -4409,7 +4409,7 @@
         "original_conversion_settled_exit_code": 0,
         "original_conversion_result_sha256": "d69e2def7d4a9ed3e565f237c517d48c4e206a62008ed9d75f83407ace5b44f2",
         "original_converter_process_settlement_sha256": "29936f75cfb6d883629e6ff87dbde1193f6fb93f00adb8b613fa523844d8add3",
-        "original_independent_compact_checker_status": "ACTUAL_RUNNING_NOT_YET_ACCEPTED",
+        "original_independent_compact_checker_status": "ACTUAL_EXIT0_COMPLETE_DERIVATIVE_REPLAY_ACCEPTED_ORIGINAL_BYTES_ATTRIBUTED_SEPARATELY_TO_FROZEN_CONVERTER",
         "current_base_import_admission_accepted": true,
         "backup_plain_archive_count": 34,
         "backup_all34_recovery_closeout_sha256": "a2f64fbf42133aff13867fc1403dd590f83088edd7c2e732e026fbb2c6593078",
@@ -4443,7 +4443,38 @@
         "tiny_retention_cohorts_entirely_preserved": [
           "C14",
           "C15"
-        ]
+        ],
+        "original_independent_compact_checker_exit_code": 0,
+        "original_independent_compact_checker_receipt_sha256": "9b3eab708363439b2e7689479c0b9f967a45ccf9fb3250b5921c8ebb25f4171c",
+        "original_configure_actual_exit_code": 0,
+        "original_configure_result_sha256": "f217d13799ef2d7052163e72072f97403f1b83511488957417ed601294ade408",
+        "root_original_configured_review_sha256": "071201af06fe59c791cfe2eab06d1322884dacf49ea2a2b1703f30f84916252b",
+        "original_compact_frames_checked": {
+          "CLEAN": 6227,
+          "MESSY": 6350
+        },
+        "original_compact_independent_original_raw_comparison": false,
+        "original_compact_shared_native_canonical_validator_used": true,
+        "original_actual_cold_child_pid": 360719,
+        "original_actual_cold_child_start_ticks": 18981722,
+        "original_actual_cold_child_status": "LAUNCHED_GENUINE_NORMAL_CONSTRUCTOR_NOT_YET_READY",
+        "original_UI_actual_execution_owner": "retained_learner_service",
+        "conditional_Main_source_only_adoption_scheduling_addendum_sha256": "9c5eadd49cde9ea386a4c0a6bc6c930ad7399d5594533bf2b4c8a75daf78bbae",
+        "conditional_Main_source_only_adoption_requires_original_cutover": true,
+        "conditional_Main_source_only_adoption_requires_unrelated_next_run_completion": false,
+        "Main_same_next_runtime_reopen_requires_next_quiescence_and_actual_gates": true,
+        "continuation_metadata_only_progress": {
+          "observed_utc": "2026-10-04T19:16:33.719746+00:00",
+          "new_CLEAN_RETURN_filenames": 1904,
+          "completed_CLEAN_legacy_phase_filenames": [
+            "B01-LEGACY-PHASE.json",
+            "B02-LEGACY-PHASE.json",
+            "B03-LEGACY-PHASE.json",
+            "B04-LEGACY-PHASE.json"
+          ],
+          "reconciled_current_SQL_or_company_ACL": false,
+          "actual_paired_completion": false
+        }
       }
     }
   },
