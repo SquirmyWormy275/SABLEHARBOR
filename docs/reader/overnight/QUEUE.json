@@ -4350,7 +4350,7 @@
         "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5"
       },
       "current_actual_execution": {
-        "checkpoint_utc": "2026-10-04T21:16:52.995242+00:00",
+        "checkpoint_utc": "2026-10-04T21:58:50.924754+00:00",
         "status": "ACTUAL_SAME_ID_CONTINUATION_RUNNING_AFTER_EXACT_52_TASK_PARITY",
         "process_pid": 18961,
         "settled_exit_code": null,
@@ -4464,8 +4464,8 @@
         "conditional_Main_source_only_adoption_requires_unrelated_next_run_completion": false,
         "Main_same_next_runtime_reopen_requires_next_quiescence_and_actual_gates": true,
         "continuation_metadata_only_progress": {
-          "observed_utc": "2026-10-04T21:16:52.995242+00:00",
-          "new_CLEAN_RETURN_filenames": 2607,
+          "observed_utc": "2026-10-04T21:58:50.924754+00:00",
+          "new_CLEAN_RETURN_filenames": 2859,
           "completed_CLEAN_legacy_phase_filenames": [
             "B01-LEGACY-PHASE.json",
             "B02-LEGACY-PHASE.json",
@@ -4514,6 +4514,15 @@
           "workpapers": 199,
           "unrun_tasks": 210,
           "current_SQL_or_raw_or_professional_acceptance": false
+        },
+        "original_cold_metadata_only_progress": {
+          "observed_utc": "2026-10-04T21:58:50.924754+00:00",
+          "pid": 360719,
+          "start_ticks": "18981722",
+          "selected_prefix_mode": "MESSY",
+          "observation_boundary": "PROCESS_FD_PATHS_AND_SEQUENTIAL_CONSTRUCTOR_SOURCE_INFERENCE_ONLY",
+          "CLEAN_constructor_stage_inferred_complete": true,
+          "paired_ready_or_authenticated_HTTP_accepted": false
         }
       }
     }

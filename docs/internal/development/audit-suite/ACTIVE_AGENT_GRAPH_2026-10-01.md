@@ -1,5 +1,16 @@
 # Active company-source audit workflow
 
+2026-10-04 21:58 UTC: The genuine Original cold process has reached the MESSY
+prefix stage. Its selected file-descriptor paths and the sequential constructor
+source support that stage inference; they do not establish paired readiness,
+authenticated HTTP, UI acceptance or cutover. The existing UI agent retains
+sole serial execution ownership.
+
+The separate SAME-ID fieldworker remains active with 2,859 new CLEAN return
+filenames and closed B01–B05 phase receipts (metadata only). No current SQL,
+ACL, paired replay, Key, Main adoption or raw-retirement gate is accepted.
+All 46 locked job payloads and states remain unchanged.
+
 2026-10-04 21:16 UTC: The exact two-file Original raw-retirement source is selected
 (`f5846fc4`, Root `4bb70976`, independent `0b91df2b`). It requires genuine
 RAW1–5 acceptance, both held Original writer locks, exact reader clearance,
