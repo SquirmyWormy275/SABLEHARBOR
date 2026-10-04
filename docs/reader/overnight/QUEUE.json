@@ -4350,7 +4350,7 @@
         "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5"
       },
       "current_actual_execution": {
-        "checkpoint_utc": "2026-10-04T19:16:33.719746+00:00",
+        "checkpoint_utc": "2026-10-04T19:39:10.018162+00:00",
         "status": "ACTUAL_SAME_ID_CONTINUATION_RUNNING_AFTER_EXACT_52_TASK_PARITY",
         "process_pid": 18961,
         "settled_exit_code": null,
@@ -4464,8 +4464,8 @@
         "conditional_Main_source_only_adoption_requires_unrelated_next_run_completion": false,
         "Main_same_next_runtime_reopen_requires_next_quiescence_and_actual_gates": true,
         "continuation_metadata_only_progress": {
-          "observed_utc": "2026-10-04T19:16:33.719746+00:00",
-          "new_CLEAN_RETURN_filenames": 1904,
+          "observed_utc": "2026-10-04T19:39:10.018162+00:00",
+          "new_CLEAN_RETURN_filenames": 2056,
           "completed_CLEAN_legacy_phase_filenames": [
             "B01-LEGACY-PHASE.json",
             "B02-LEGACY-PHASE.json",
@@ -4474,7 +4474,23 @@
           ],
           "reconciled_current_SQL_or_company_ACL": false,
           "actual_paired_completion": false
-        }
+        },
+        "original_configured_independent_receipt_review_sha256": "75c2b5e8d6cab73fc3a7380e9a5d116a65518ac4f35ca67636f6fffd62f5533e",
+        "Main_fresh_import_probe_source_sha256": "45a80a89eddb1aa2ed84aeb05c20c71bba7f43d7a3f156df815af74373a4c585",
+        "Main_fresh_import_probe_root_source_review_sha256": "279a018b72436fe94e1408cd73227209849a480336f242a7c92728a6a0e4d389",
+        "Main_fresh_import_probe_independent_source_review_sha256": "9615158802965263571109e20eb85191a64c2782940823408a9dddfabacf9c7a",
+        "Main_fresh_import_probe_actual_execution": false,
+        "Main_exact_asset_namespace_source_addendum_sha256": "13f0b3d2f216416d53523957e6861c1b9ad56d8a41571c07dd41657c3dbca6d0",
+        "Main_exact_asset_namespace_root_source_review_sha256": "96a806a4a41b19dc693243eb11dd8d40097388cfff6735f089884f2d16f68371",
+        "Main_obsolete_compiled_asset_candidates": 2,
+        "Main_obsolete_compiled_assets_actually_removed": 0,
+        "actual_old_Main_frontend_plain_preservation_sha256": "1769f2aff2ebc8d609ee5af6f3f3af5662b95e6ed6622bb2e88ed21396b93f2a",
+        "Root_separate_old_Main_frontend_plain_replay_sha256": "2bffe823fd637c8637b2e3f0fa0bc152e7b87103ef8a4cd397b7b2ae09b1018d",
+        "old_Main_frontend_plain_archive_sha256": "e94f22fc9b584e7d5a91719bdce17eb03aead8c3f4420fadc20cc7ed560a27dc",
+        "old_Main_frontend_plain_archive_bytes": 214528,
+        "old_Main_frontend_files_preserved": 6,
+        "old_Main_frontend_source_unchanged_after_backup": true,
+        "new_final_plain_preservation_archives_completed": 1
       }
     }
   },

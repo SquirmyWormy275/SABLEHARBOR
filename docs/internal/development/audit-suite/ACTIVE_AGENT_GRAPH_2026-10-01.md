@@ -1,5 +1,26 @@
 # Active company-source audit workflow
 
+2026-10-04 19:39 UTC: Main fresh-origin import preparation is selected (`45a80a89`, Root
+`279a018b`, independent source review `96151588`). It preserves all nested
+operation/file/constructor guards, derives exactly 274 Main paths plus the
+unchanged 13 P0 paths, and requires actual adoption/cutover before import. Its
+distinct Main observation cannot substitute for FinalWT runtime verification.
+No Main adoption or fresh Main product import has run.
+
+Root found and selected the exact asset-namespace addendum (`96a806a4`): merely
+copying the selected bundle would leave two obsolete generated assets. Retirement
+is limited to those exact two files after genuine Original STOP/cutover and last
+reader clearance; the three same-byte brand files and all directories remain.
+The complete current six-file frontend now has a genuine ordinary compressed
+copy on Seagate (`1769f2af`, Root separate full member replay `2bffe823`). Its
+archive is 214,528 bytes; all six original files remain unchanged. This is static
+source preservation, not final audit/authority preservation or removal authority.
+
+The Original cold constructor and SAME-ID next fieldworker remain active.
+Original live UI/owned STOP/offline, next paired replay/Key/UI, Main reopening
+and final verified cleanup remain pending. No backup encryption/key requirement
+returns. All 46 locked job payloads and states remain unchanged.
+
 2026-10-04 19:16 UTC: The sole Original compact checker and configuration process both
 exited 0 without retries. Genuine complete derivative replay passed all 6,227
 CLEAN and 6,350 MESSY frames (`9b3eab70`); Root closed the 19 small receipt and
