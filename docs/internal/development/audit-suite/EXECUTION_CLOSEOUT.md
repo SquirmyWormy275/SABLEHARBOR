@@ -1,5 +1,46 @@
 # Audit-suite execution closeout
 
+2026-10-04 04:28 UTC concrete caller and UI closeout preparation: the final
+next-edition fieldwork caller is frozen (`60d5894f`, handoff `124ad2bc`),
+independently source-reviewed (`8a3ba66f`) and Root-selected (`24a8dd83`). Root
+freshly closed 147 ordinary source/metadata leaves and seven copy pairs. The
+caller uses the genuine retained-session public assembly, the approved Jan18
+fieldwork scope, two scope tasks plus nine legacy batches totaling 407, and the
+three qualified native supplements. Exact requests are saved before command
+entry; uncertain commits require journal reconciliation and never automatic retry.
+All 199 actual input slots remain unfilled. This is source preparation, not an
+actual 409-procedure run or a new execution/cutover authority.
+
+The genuine public assembly has now been exercised on one existing copied small
+OWN snapshot. It reached the scope/refusal assertions, a normal kickoff and one
+note, then refused an already existing final RESULT filename. Its exit1 is
+preserved. Root independently rederived all four saved raw/canonical event and
+request hashes, fixed scope/clock and all 70/409 untouched tasks (`94c4a9a0`),
+with 304 ordinary source/copy pairs. No world or commands were rerun, and this
+saved evidence does not claim a successful caller run or actual 5,714-edition
+fieldwork authority. It supersedes the earlier source-only assembly uncertainty.
+
+The additional Key/timeline/debrief UI runner is source-reviewed (`b18b5029`)
+and Root-selected (`687111f4`). It prevalidates both original branch identities
+and releases before any session/export, joins each outgoing confirmation to the
+fresh preview, checks the actual 76/409 and 864/971 Key cardinalities, conserves
+formal audit state, and verifies the selected two-member portable debrief ZIP.
+Actual cold readiness, original first-eight, QA/navigation and all four private
+access descriptors remain externally selected prerequisites. No actual browser,
+HTTP, credential or Key reads have occurred for this preparation. Root's initial
+source-descriptor lookup refusal is preserved; only the Root helper was corrected.
+
+The original conversion remains active (session27102, PID3028524). At04:28 UTC
+its cumulative application reads were 587,816,997,685 bytes. CLEAN's derivative
+was still empty during the original SQLite structural check; MESSY had not
+started. Cumulative reads are not a unique-byte percentage or an encoding rate.
+All three original locks remain held, no original has been removed, and no final
+conversion receipt exists. There is still no defensible end-to-end ETA.
+Independent conversion verification, configuration, genuine cold viewers,
+original C3/M5, UI/debrief, graceful settlement/full offline replay, actual new
+fieldwork and conditional cleanup remain pending. The 46 locked jobs/statuses
+and Main product source remain unchanged; professional acceptance NOT_ASSERTED.
+
 2026-10-04 03:43 UTC source composition and measured conversion checkpoint: the
 final isolated source composition is frozen at `fae700a2` (`34fb1843`),
 independently reviewed (`77f209b1`) and Root-selected (`e17490b0`). Root freshly
