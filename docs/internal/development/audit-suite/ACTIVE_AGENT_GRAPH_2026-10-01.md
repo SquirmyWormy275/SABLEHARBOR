@@ -1,5 +1,17 @@
 # Active company-source audit workflow
 
+2026-10-04 22:07 UTC: Genuine paired Original cold startup receipts are now
+accepted (`145fd793`, cold receipt `9fced5ef`, Root `f149bb73`). Ten small
+reference bodies and their stable metadata close; the live process identity,
+normal factory and both original engagement IDs match. No injected workroom,
+Key rebuild or replacement IDs occurred. The exact FIRST8 authorization is
+filled (`121ab04b`); the existing UI agent owns the sole serial execution.
+
+This is startup acceptance only. Actual FIRST8/UI/visual review/owned STOP,
+both offline verifications and aggregate cutover remain required. Main adoption,
+raw retirement, next paired completion and final cleanup remain unaccepted.
+All 46 locked job payloads and states remain unchanged.
+
 2026-10-04 21:58 UTC: The genuine Original cold process has reached the MESSY
 prefix stage. Its selected file-descriptor paths and the sequential constructor
 source support that stage inference; they do not establish paired readiness,

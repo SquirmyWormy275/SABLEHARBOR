@@ -4350,7 +4350,7 @@
         "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5"
       },
       "current_actual_execution": {
-        "checkpoint_utc": "2026-10-04T21:58:50.924754+00:00",
+        "checkpoint_utc": "2026-10-04T22:07:45.079145+00:00",
         "status": "ACTUAL_SAME_ID_CONTINUATION_RUNNING_AFTER_EXACT_52_TASK_PARITY",
         "process_pid": 18961,
         "settled_exit_code": null,
@@ -4457,7 +4457,7 @@
         "original_compact_shared_native_canonical_validator_used": true,
         "original_actual_cold_child_pid": 360719,
         "original_actual_cold_child_start_ticks": 18981722,
-        "original_actual_cold_child_status": "LAUNCHED_GENUINE_NORMAL_CONSTRUCTOR_NOT_YET_READY",
+        "original_actual_cold_child_status": "GENUINE_NORMAL_COLD_READY_PENDING_ACTUAL_FIRST8_UI_STOP_OFFLINE",
         "original_UI_actual_execution_owner": "retained_learner_service",
         "conditional_Main_source_only_adoption_scheduling_addendum_sha256": "9c5eadd49cde9ea386a4c0a6bc6c930ad7399d5594533bf2b4c8a75daf78bbae",
         "conditional_Main_source_only_adoption_requires_original_cutover": true,
@@ -4523,7 +4523,12 @@
           "observation_boundary": "PROCESS_FD_PATHS_AND_SEQUENTIAL_CONSTRUCTOR_SOURCE_INFERENCE_ONLY",
           "CLEAN_constructor_stage_inferred_complete": true,
           "paired_ready_or_authenticated_HTTP_accepted": false
-        }
+        },
+        "original_actual_cold_ready_observation_sha256": "145fd793a59ff542c25add2a550bc94983bcce510a8c72cc1ff2a5100142b8e6",
+        "original_actual_cold_start_receipt_sha256": "9fced5efb4e3f935db4cfd6f38c5590deda8b6a6ef7934c99e98a10c9cc708f5",
+        "Root_original_actual_cold_ready_review_sha256": "f149bb7321f7fa53c2e44debf78c97cbd4f63ff90884ddc32a319de879bc03ed",
+        "original_actual_normal_cold_ready_receipts_accepted": true,
+        "original_FIRST8_authorization_sha256": "121ab04bffc7d07251ae6f433817e50339cb54901b0867514d61d7894e962c56"
       }
     }
   },
