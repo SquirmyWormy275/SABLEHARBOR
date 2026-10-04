@@ -1,5 +1,21 @@
 # Audit-suite execution closeout
 
+2026-10-04 17:34 UTC: The corrected base import-only probe exited 0 under P0. Root accepted the
+existing-schema admission (`846e6a03`) and fresh observed origins (`815aa468`):
+151 actual base file imports from 287 declared sources, plus 134 actual external
+modules from the finite 263-file dependency list. This clears only the future
+base-import slot; no company state, Key, SQL, viewer or fieldwork acceptance is
+asserted. The separate service stack needs an exact namespace-package admission;
+its source-only successor is being prepared without changing active sources.
+
+The original independent compact checker finished its CLEAN frame pass and is
+checking MESSY. The SAME-ID next fieldwork writer remains active. Existing
+Original cold/UI/owned STOP/offline gates, next paired replay/Key/UI, fresh Main
+adoption/reopen and final verified cohort cleanup remain pending. Static Main
+reopen lookup (`357ac4cc`) found no product defect; it requires fresh Main imports
+after exact adoption and retention of original producer paths through last use.
+All 46 locked job payloads and states remain unchanged.
+
 2026-10-04 16:57 UTC: backup encryption correction is complete for all 34
 known recovery archives, including seven earlier ordinary-tar backups omitted
 from the first 27-copy batch. The actual seven-copy process exited 0 (`c2fa1234`);
