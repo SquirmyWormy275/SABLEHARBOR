@@ -3959,6 +3959,93 @@
         "all46_jobs_and_statuses_unchanged": true,
         "Main_product_source_changed": false,
         "professional_acceptance": "NOT_ASSERTED"
+      },
+      "independent_codec_review_and_Main_integration_preflight_checkpoint_2026_10_04": {
+        "checkpoint_utc": "2026-10-04T07:09:15Z",
+        "status": "ORIGINAL_CONVERSION_ACTIVE_NEXT_VERIFICATION_SOURCE_SELECTED_BOUNDED_NEUTRAL_TESTS_RUNNING",
+        "independent_codec_decoder": {
+          "source_sha256": "848705e7ff28d9bc5150b0ccfc34277e3790a8520f57ab4d3efedd3b2d9b568d",
+          "independent_source_review_sha256": "0791445599a0c86739b616c9ea69c104f933b248084991813e793509fc617813",
+          "Root_source_selection_sha256": "2de85ede99a0c4e8a81b3be1ce27a484e00f46d7073c66417029dd7319ba21c7",
+          "fresh_Root_refs": 15,
+          "actual_neutral_parity_corruption_test_status": "RUNNING_SEPARATELY_AUTHORIZED_NO_COMPANY_WORLDS",
+          "actual_next5714_audit_verification": false,
+          "caps_are_actual_scale_or_memory_acceptance": false
+        },
+        "existing_method_review_fill": {
+          "source_sha256": "f3a81e0a4938fb911181fe5b3d7435d5e3f3733603a9dde2210e0f6f96d4007a",
+          "independent_source_review_sha256": "ebafb99d401ddb92c0062acfdf904ce8407ebf641c911cd5b50d7cdb0f274e15",
+          "Root_source_selection_sha256": "800d340ef84bfc1adbf9658e3570dbc79fe87117dbdb647a2c3da2942764c850",
+          "fresh_Root_refs": 84,
+          "existing_scope_and_control_tasks": 409,
+          "actual_current_gates_and_invocation": "UNFILLED_PENDING_ORIGINAL_CUTOVER_AND_ROOT_ELIGIBILITY"
+        },
+        "Main_source_integration_preflight": {
+          "path": "/home/kingoftheeast/SABLEHARBOR-final-Main-source-integration-preflight-20261004/PREFLIGHT.json",
+          "sha256": "882f1992dad43066efc657a9513646553a75add3ccbb445095e8b472bbcf62b0",
+          "tracked_targets": 65,
+          "dist_targets": 6,
+          "post_adoption_relative_code_and_native_checks": 102,
+          "fresh_ordinary_leaves": 185,
+          "native4_current_Main_bytes_already_match": true,
+          "current_progress_documents_preserved": 4,
+          "actual_Main_adoption": false
+        },
+        "conversion": {
+          "pid": 3028524,
+          "session_id": 27102,
+          "CLEAN_derivative_bytes": 528687104,
+          "MESSY_started": false,
+          "completed_receipt_exists": false,
+          "originals_retained": true
+        },
+        "conditional_check_CONFIGURE_COLD_and_first8_metadata_waiters_live": true,
+        "actual_HTTP_UI_birth_full_fieldwork_or_cleanup_complete": false,
+        "all46_locked_jobs_and_statuses_unchanged": true,
+        "independent_recovery_key_preservation_before_cleanup": "OWNER_LOCATION_OR_PROTECTED_COPY_PENDING",
+        "Main_product_source_changed": false,
+        "professional_acceptance": "NOT_ASSERTED"
+      },
+      "bounded_decoder_tests_and_self_contained_recovery_checkpoint_2026_10_04": {
+        "checkpoint_utc": "2026-10-04T07:22:53.773215+00:00",
+        "status": "BOUNDED_DECODER_TESTS_ACCEPTED_SELF_CONTAINED_EXTERNAL_RECOVERY_CURRENT_VERIFIER_SOURCE_FIX_PENDING",
+        "decoder_OWN": {
+          "independent_review_sha256": "645e72a9d1523a7b8155e4ece942c89c906986ad0a1913e6eda5c08f1787210d",
+          "Root_saved_result_selection_sha256": "2fbbe7846c338e29883d25c8645320c3498cea5d19d087b7d80c62c2bafbc29a",
+          "unique_cases_passed": 46,
+          "runs": 1,
+          "process_exit": 0,
+          "fresh_Root_refs": 197,
+          "actual_full_scope_or_native_or_authority_acceptance": false
+        },
+        "self_contained_external_recovery": {
+          "Root_actual_receipt_sha256": "47fd69388d6c803eb9c8479b6352444bee7eebc9d403317502af5a1066666d54",
+          "volume_UUID": "72A448AAA44872A1",
+          "external_key_identical_to_retained_local_key": true,
+          "actual_small_archive_GPG_authentication_exit": 0,
+          "external_README_and_Downloads_instructions_updated": true,
+          "previous_instructions_preserved": true,
+          "working_company_files_encrypted_or_changed": false,
+          "ciphertexts_rewritten": false,
+          "owner_password_manager_or_independent_key_task_required": false,
+          "independent_backup_restore_without_laptop_available": true,
+          "cleanup_original_retirement_performed": false,
+          "basis": "Owner clarified this is fictional company data; unnecessary owner key-management burden removed without repeating large backups."
+        },
+        "new_verifier_source": {
+          "preserved_handoff_sha256": "b9600befeda63d2036b1218a10d9a35fd2451fb891c6825e0ed529e1ce3229bc",
+          "wrapper_V1_sha256": "43aecd4a526d5559b7b21c5fddecf3a87c3116069e0f6631a25d93f220466871",
+          "qualified_appendage_sha256": "b0021abbb4ccfbd459837c3ab734ccd569913b19f83765b1a3a9c855218e8af4",
+          "independent_source_review": "IN_PROGRESS_TWO_LIBRARY_FIELD_PATH_DEFECTS_CONFIRMED",
+          "Root_metadata_confirmation_sha256": "e6a6570d14c3d36b89069c39207a34d5c23c2e6cb33e437d3a45cf9e1e100690",
+          "existing_source_edition_publication_runtime_join_valid": true,
+          "actual_capture_launch_and_full_verification": "UNFILLED_NOT_PERFORMED",
+          "strict_legacy409_core_modified": false
+        },
+        "all46_jobs_and_statuses_unchanged": true,
+        "Main_product_source_changed": false,
+        "actual_pipeline_complete": false,
+        "professional_acceptance": "NOT_ASSERTED"
       }
     }
   },

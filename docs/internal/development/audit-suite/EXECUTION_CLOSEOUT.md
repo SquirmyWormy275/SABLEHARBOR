@@ -1,5 +1,55 @@
 # Audit-suite execution closeout
 
+2026-10-04 07:22 UTC the decoder's independent bounded OWN run completed once
+with all 46 cases passing and exit0 (`645e72a9`). Root closed 197 ordinary
+references and settled inventories (`2fbbe784`) without rerunning tests/worlds.
+Raw parity, corruption refusals, partial/EOF cleanup and the 17MiB request
+boundary passed. Actual born-audit authority/native/full semantic verification,
+2GiB memory safety and production-scale performance remain separate.
+
+Recovery is now self-contained on the verified Seagate (`47fd6938`). In response
+to the owner's clarification that this is fictional company data, Root removed
+the unnecessary key-management task: an identical adjacent key copy actually
+authenticated a small archive with GPG exit0. Existing ciphertexts and working
+company files remain unchanged. The prior instructions are preserved and current
+Downloads/drive instructions identify the complete recovery path. No owner
+password-manager action is required before eventual conditional cleanup.
+
+The new verifier is frozen for review (`b9600bef`), with separate appendage
+source (`b0021abb`) and unchanged strict legacy409 dependency. Independent review
+caught two library field paths that contradict the existing 5,714 review schema;
+Root's six-file metadata join confirms the defect (`e6a6570d`). A minimal preserved
+successor must use the existing library_pins map. The distinct source completion
+and publisher receipt were checked and their existing source/runtime joins are
+valid. V1 remains preserved; no verifier import, SQL, actual capture or acceptance
+occurred. All 46 locked jobs/statuses and Main product source remain unchanged.
+
+2026-10-04 07:09 UTC the independent short-prefix/codec decoder (`848705e7`)
+passed separate source review (`07914455`) and Root selection (`2de85ede`,
+15 freshly closed references). Bounded independently authored neutral SQLite
+parity/corruption tests are now running; they use no company world, original
+history or product encoder. This source selection credits no actual 5,714 audit
+replay, measured 2GiB memory safety or canonical/semantic acceptance.
+
+The trusted-local existing-review fill body (`f3a81e0a`) also passed independent
+source review (`ebafb99d`) and Root selection (`800d340e`, 84 references).
+Its nine methods and existing adapter/pair/scope schemas conserve all 407+2
+task contracts. Actual cutover/current prerequisites and the explicit Root
+invocation remain unfilled; no source execution authority was issued by review.
+
+The Main integration preflight (`882f1992`) maps 65 tracked changes and six
+built assets, with 102 relative module/native checks for later normal retained
+construction. All four current progress documents remain excluded from overwrite;
+Main's four native bytes already match the selected source. It closes 185 small
+ordinary leaves and changes no Main product, configuration or runtime. Actual
+integration follows original live/offline closeout and accepted next-edition work.
+
+CLEAN's derivative is 528,687,104 bytes at this checkpoint; all three downstream
+continuations and the first-eight metadata waiter are live. MESSY and actual
+conversion/check/configuration/cold/UI completion remain pending. Recovery-key
+preservation is still unresolved before eventual cleanup. All 46 job/status
+payloads and originals remain unchanged; professional acceptance NOT_ASSERTED.
+
 2026-10-04 06:44 UTC downstream preparation now has concrete joins: the existing
 UI fill body's V2 (`9a57022c`) passed independent source review (`6d038c6d`)
 and Root byte selection (`bd07c162`, 36 fresh ordinary inputs). Both affected
