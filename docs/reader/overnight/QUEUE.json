@@ -4350,7 +4350,7 @@
         "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5"
       },
       "current_actual_execution": {
-        "checkpoint_utc": "2026-10-04T19:39:10.018162+00:00",
+        "checkpoint_utc": "2026-10-04T20:14:02.668725+00:00",
         "status": "ACTUAL_SAME_ID_CONTINUATION_RUNNING_AFTER_EXACT_52_TASK_PARITY",
         "process_pid": 18961,
         "settled_exit_code": null,
@@ -4464,13 +4464,14 @@
         "conditional_Main_source_only_adoption_requires_unrelated_next_run_completion": false,
         "Main_same_next_runtime_reopen_requires_next_quiescence_and_actual_gates": true,
         "continuation_metadata_only_progress": {
-          "observed_utc": "2026-10-04T19:39:10.018162+00:00",
-          "new_CLEAN_RETURN_filenames": 2056,
+          "observed_utc": "2026-10-04T20:14:02.668725+00:00",
+          "new_CLEAN_RETURN_filenames": 2252,
           "completed_CLEAN_legacy_phase_filenames": [
             "B01-LEGACY-PHASE.json",
             "B02-LEGACY-PHASE.json",
             "B03-LEGACY-PHASE.json",
-            "B04-LEGACY-PHASE.json"
+            "B04-LEGACY-PHASE.json",
+            "B05-LEGACY-PHASE.json"
           ],
           "reconciled_current_SQL_or_company_ACL": false,
           "actual_paired_completion": false
@@ -4490,7 +4491,13 @@
         "old_Main_frontend_plain_archive_bytes": 214528,
         "old_Main_frontend_files_preserved": 6,
         "old_Main_frontend_source_unchanged_after_backup": true,
-        "new_final_plain_preservation_archives_completed": 1
+        "new_final_plain_preservation_archives_completed": 1,
+        "Original_final_plain_tree_source_plan_sha256": "3d9643e50a846f53b59e450c3e960e5ea191a9e6ede0c2d53701ab5ecdf3ae13",
+        "Root_Original_final_plain_tree_source_selection_sha256": "29785bcbb6bef9e200e71a44fb2e1f9f18ee2d605e1d4ef29f5ef048b554379a",
+        "Original_final_plain_tree_count": 16,
+        "Original_final_plain_scattered_file_count": 534,
+        "Original_final_plain_scattered_apparent_bytes": 8038871,
+        "Original_final_plain_preservation_actual_execution": false
       }
     }
   },

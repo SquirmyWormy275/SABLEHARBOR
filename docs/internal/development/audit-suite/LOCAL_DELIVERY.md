@@ -1,5 +1,19 @@
 # Local audit-training delivery
 
+2026-10-04 20:14 UTC: Root closed the final Original plain-preservation plan correction
+(`3d9643e5`, source-only Root `29785bcb`). Seven existing receipts are now
+explicitly included: 534 scattered files totaling 8,038,871 bytes. Exact inverse
+recovers the prior plan; all 16 complete trees, raw-prefix exclusions and genuine
+STOP/offline/current-state requirements remain unchanged. No current audit
+capture, new backup, raw removal or Main adoption occurred in this correction.
+
+The SAME-ID writer remains active; metadata lists 2,252 CLEAN return files
+and 5 completed legacy phase files. These filenames do not establish
+current SQL, ACL or paired completion. The Original cold constructor remains
+active without readiness. Actual UI/owned STOP/offline, next replay/Keys/UI,
+Main runtime reopening and final verified cleanup remain pending.
+All 46 locked job payloads and states remain unchanged.
+
 2026-10-04 19:39 UTC: Main fresh-origin import preparation is selected (`45a80a89`, Root
 `279a018b`, independent source review `96151588`). It preserves all nested
 operation/file/constructor guards, derives exactly 274 Main paths plus the
