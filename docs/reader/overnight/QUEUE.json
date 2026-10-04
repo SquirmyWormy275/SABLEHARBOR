@@ -3866,6 +3866,54 @@
         "all46_jobs_and_statuses_unchanged": true,
         "Main_product_source_changed": false,
         "professional_acceptance": "NOT_ASSERTED"
+      },
+      "passive_original_cold_continuation_checkpoint_2026_10_04": {
+        "checkpoint_utc": "2026-10-04T06:16:19Z",
+        "status": "PASSIVE_COLD_CONTINUATION_RUNNING_WAITING_ACTUAL_CONVERSION_AND_CONFIGURE",
+        "launcher": {
+          "pid": 3358772,
+          "session_id": 36111,
+          "source_sha256": "14d338cace11eafa03c0c20336ad387c71a530342005d7faa53128bc8f6064f7",
+          "independent_review_sha256": "cf680e75b08e152b1d37d429a6ad0550fd6b145b6580a235f273aa1bae49ad9d",
+          "root_manifest_sha256": "a9a95319e932de9ab7c51ca68c62c20159ae609c3ec1fb78075c716073c0f035",
+          "root_declaration_sha256": "80ee1a722fcc16d3e96c967433a92a2be7d1bcc65f39750c767da09431493660",
+          "root_source_review_sha256": "1b3e60d6bfeb1513f14f81ef19a7f92a6d2957447693cec0fc7c5c386e91379a",
+          "fresh_ordinary_inputs": 320,
+          "actual_cold_child_started": false,
+          "automatic_HTTP_UI_STOP_offline_birth_cleanup_authority": false,
+          "actual_ready_required": true
+        },
+        "frontend": {
+          "root_byte_closure_sha256": "8b5df115afe1394df885e371c81f965582692a7e54e100736c8ce47de2890e40",
+          "files": 174,
+          "dist_files": 6,
+          "bytes": 1985298,
+          "rechecked_after_wait_before_child_and_after_real_ready": true,
+          "actual_UI_or_final_next_edition_adoption_acceptance": false
+        },
+        "flat_private_UI_access": {
+          "receipt_sha256": "f0e6db777fa1109e470199cb896bd0f2a0a58d375d1c408f1a60d62e4ae35c7d",
+          "copies": 6,
+          "original_credentials_IDs_and_expiry_preserved": true,
+          "identity_or_authority_mutation": false
+        },
+        "conversion": {
+          "pid": 3028524,
+          "session_id": 27102,
+          "CLEAN_derivative_bytes": 459575296,
+          "MESSY_started": false,
+          "completed_receipt_exists": false,
+          "originals_retained": true
+        },
+        "free_internal_bytes": 59526955008,
+        "free_Seagate_bytes": 260210008064,
+        "next_birth_requires_retained_engine_kickoff_after_codec_before_company_fieldwork": true,
+        "actual_new_birth_or_kickoff_or_full_fieldwork": false,
+        "all46_jobs_and_statuses_unchanged": true,
+        "Main_product_source_changed": false,
+        "actual_original_UI_cutover_and_cleanup_complete": false,
+        "full_completion_ETA": "NOT_ESTABLISHED",
+        "professional_acceptance": "NOT_ASSERTED"
       }
     }
   },

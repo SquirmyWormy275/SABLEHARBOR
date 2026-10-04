@@ -1,5 +1,43 @@
 # Audit-suite execution closeout
 
+2026-10-04 06:16 UTC passive cold continuation started: the selected V2 launcher
+(`14d338ca`, independent review `cf680e75`) is running as PID3358772,
+session36111. Its Root-filled manifest is `a9a95319`, declaration `80ee1a72`
+and source selection `1b3e60d6`. Root freshly closed 320 ordinary source,
+backend and metadata inputs, including the original room-lock paths. It waits
+for the named converter and check/configuration continuation to settle, then
+requires their successful exact receipts before starting unchanged `5da` once.
+The child remains owned and alive for actual first-eight/UI observations and a
+later manual graceful stop. The launcher grants no HTTP/UI/STOP/offline replay,
+new birth or cleanup acceptance and performs no automatic retry.
+
+The selected Main frontend closure (`8b5df115`) pins 174 files, including all six
+dist assets, totaling 1,985,298 bytes. The V2 launcher rechecks each explicit
+frontend file after its wait and closes those bytes before child launch and
+after genuine readiness. This selects the existing original-pair frontend;
+the final next-edition frontend is separate and remains unadopted.
+
+Six private access copies are ready (`f0e6db77`) in the strict two-field UI
+schema. Their IDs, credential bytes and original expiry times were conserved;
+no identity rotation, renewal, session or company/audit authority mutation
+occurred. The existing UI plan fill body is being reviewed for the actual
+passive-readiness/frontend provenance join before any use.
+
+The active original converter has reached a 459,575,296-byte CLEAN derivative.
+MESSY has not started and no completed conversion receipt exists. All originals
+remain retained; actual check/configuration/cold readiness and original first-eight
+are pending. Current free space is 59,526,955,008 internal bytes and
+260,210,008,064 Seagate bytes. These observations establish neither a complete
+conversion percentage nor a full completion ETA.
+
+The new-edition birth worksheet now has a concrete source-level correction:
+the normal birth ends at revision1/READY, while the fieldwork caller begins with
+company work that requires ACTIVE. One separately authorized ordinary
+`kickoff.start` must run on the retained room's engine after the codec transition,
+then actual revision2/ACTIVE is selected for fieldwork. No new API, caller edit,
+birth or kickoff has occurred. All 46 locked jobs/statuses and Main product
+source remain unchanged; professional acceptance is NOT_ASSERTED.
+
 2026-10-04 05:20 UTC next-phase sequencing defect closed at source: the original
 combined COLD/export caller required a preselected offline authority before its
 first-eight HTTP commands. Those later bodies contain finding/review IDs created
