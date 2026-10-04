@@ -1,5 +1,24 @@
 # Active company-source audit workflow
 
+2026-10-04 11:20 UTC: the compiled private explanations passed independent
+source-semantic inspection (`8e2108c0`), selected by Root (`14976fea`). All
+5,714 native rows, 20,729 literal facts, 16,854 declared pointer assessments,
+409 contracts per branch and six existing native-context cards were checked.
+The 14 CLEAN / 11 MESSY tasks without exact attribute facts, dated post-period
+records and 12 opaque context sources retain their explicit limits. This is
+source-only acceptance; actual Company/clock/ACL binding and fieldwork are pending.
+
+A separately reviewed Root scheduling selection (`db64816b`) now permits the
+isolated next audit birth/codec/kickoff/409+3 fieldwork workflow to proceed in
+parallel. Independent dependency review (`2ce738dc`) confirmed the original
+cutover wait was scheduling policy, not a normal constructor/fieldwork dependency.
+The new declaration explicitly says original_cutover_accepted=false. It supersedes
+only the serial wait; the original conversion, genuine UI/stop/offline obligations
+remain required. All existing source/runtime/library/method/scope/head/origin
+guards and 16GiB remaining-free checks still apply. Main product/frontends, ports,
+original worlds and Atlas are unchanged. Next actual outputs are not asserted.
+All 46 locked job payloads and states remain unchanged.
+
 2026-10-04 10:58 UTC: private source-only instructor content has actually compiled once
 from the accepted immutable 5,714-version library (`d021937e`). Each mode has
 76 cards and 409 expectations; CLEAN cites 913 originals and MESSY 1,025.

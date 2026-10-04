@@ -4197,6 +4197,30 @@
         "learner_outcomes_used": false,
         "professional_acceptance": "NOT_ASSERTED",
         "all_46_locked_job_payloads_and_states_unchanged": true
+      },
+      "parallel_isolated_next_and_source_semantic_checkpoint_2026_10_04": {
+        "checkpoint_utc": "2026-10-04T11:20:00+00:00",
+        "source_only_semantic_review_sha256": "8e2108c04549ccd4ed39d0e03e85822bc1a0577af3ea0dd0a22f9b9954149e0b",
+        "Root_source_semantic_selection_sha256": "14976fea8a7727756460b274921104f189477ca74fa7243dbd6cb95e36697065",
+        "independent_parallel_dependency_review_sha256": "2ce738dc95e11ef84f3eda4c3c3f2740293c7cb268dcfa449a701bee0fe8d332",
+        "Root_parallel_scheduling_selection": {
+          "path": "/home/kingoftheeast/SABLEHARBOR-root-parallel-next5714-selection-20261004/ROOT_PARALLEL_SELECTION.json",
+          "sha256": "db64816b68cce35577b0e0bd1a582b58e68f4d47685768164b393fe097c3006b"
+        },
+        "original_cutover_accepted": false,
+        "all_original_obligations_remain_required": true,
+        "next_actual_birth_or_fieldwork_outputs_asserted": false,
+        "actual_Company_acl_Key_binding_accepted": false,
+        "unresolved_exact_attribute_tasks": {
+          "CLEAN": 14,
+          "MESSY": 11
+        },
+        "post_period_bound_source_counts": {
+          "CLEAN": 12,
+          "MESSY": 22
+        },
+        "all_46_locked_job_payloads_and_states_unchanged": true,
+        "professional_acceptance": "NOT_ASSERTED"
       }
     }
   },
