@@ -4350,7 +4350,7 @@
         "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5"
       },
       "current_actual_execution": {
-        "checkpoint_utc": "2026-10-04T20:14:02.668725+00:00",
+        "checkpoint_utc": "2026-10-04T20:41:48.219232+00:00",
         "status": "ACTUAL_SAME_ID_CONTINUATION_RUNNING_AFTER_EXACT_52_TASK_PARITY",
         "process_pid": 18961,
         "settled_exit_code": null,
@@ -4464,8 +4464,8 @@
         "conditional_Main_source_only_adoption_requires_unrelated_next_run_completion": false,
         "Main_same_next_runtime_reopen_requires_next_quiescence_and_actual_gates": true,
         "continuation_metadata_only_progress": {
-          "observed_utc": "2026-10-04T20:14:02.668725+00:00",
-          "new_CLEAN_RETURN_filenames": 2252,
+          "observed_utc": "2026-10-04T20:41:48.219232+00:00",
+          "new_CLEAN_RETURN_filenames": 2387,
           "completed_CLEAN_legacy_phase_filenames": [
             "B01-LEGACY-PHASE.json",
             "B02-LEGACY-PHASE.json",
@@ -4497,7 +4497,12 @@
         "Original_final_plain_tree_count": 16,
         "Original_final_plain_scattered_file_count": 534,
         "Original_final_plain_scattered_apparent_bytes": 8038871,
-        "Original_final_plain_preservation_actual_execution": false
+        "Original_final_plain_preservation_actual_execution": false,
+        "Main_exact_adopter_source_sha256": "60b9271710160cc874d83972d3f1e74f7788a4cd2c2b6d5880a16aa2f3636b71",
+        "Main_exact_adopter_Root_source_selection_sha256": "bfc71da8219f2c7e2101a346fcc367f3f041050927af22bae0e0245ab4676025",
+        "Main_exact_adopter_independent_source_review_sha256": "6f0ebbaf2e475455b1b2b0383c0c70510b1024a37249b9b3f526ea9fec10bd19",
+        "Main_exact_adopter_actual_execution": false,
+        "Main_exact_literal_parent_directory_candidates": 2
       }
     }
   },

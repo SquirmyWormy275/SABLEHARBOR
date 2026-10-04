@@ -1,5 +1,18 @@
 # Local audit-training delivery
 
+2026-10-04 20:41 UTC: The exact Main adoption helper is source-selected (`60b92717`,
+Root `bfc71da8`, independent review `6f0ebbaf`). It covers 66 tracked files,
+six frontend assets, 103 current byte checks, only two obsolete asset removals
+and two required literal parent directories. The independent 286-file closure
+was freshly checked. Actual cutover/STOP/last-reader/copy gates remain unfilled;
+no Main source change, import, staging, runtime activation or removal has run.
+
+The SAME-ID fieldworker remains active (2,387 CLEAN return filenames;
+5 legacy phase files, metadata only). The Original normal cold constructor
+is still active without readiness. Actual Original UI/STOP/offline, next paired
+replay/Keys/UI, Main runtime reopening and final verified cleanup remain pending.
+All 46 locked job payloads and states remain unchanged.
+
 2026-10-04 20:14 UTC: Root closed the final Original plain-preservation plan correction
 (`3d9643e5`, source-only Root `29785bcb`). Seven existing receipts are now
 explicitly included: 534 scattered files totaling 8,038,871 bytes. Exact inverse
