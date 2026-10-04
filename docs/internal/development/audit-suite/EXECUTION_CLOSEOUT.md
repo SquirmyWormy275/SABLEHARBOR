@@ -1,5 +1,29 @@
 # Audit-suite execution closeout
 
+2026-10-04 07:48 UTC all five confirmed next-run verifier defects are closed
+in the preserved successor (`81257428` wrapper, `423b6be4` appendage).
+Independent source review passed (`662881d7`); Root closed 62 ordinary source
+references and verified both whole-source inverses (`368c0b93`). The corrections
+use the existing library pin map, restrict citations to the current collection
+batch, enforce admitted file types, use the real ExitStack/Inputs lifecycle,
+and reject current sessions belonging to revoked principals.
+
+The separately commissioned 46 neutral unit cases all passed once, exit0
+(`0de75624`). Root reviewed the saved results and closed 81 small ordinary
+references and ten settled inventories (`6a3c0b8c`). Real helper resource cleanup
+and the tested preservation/refusal branches passed. The four-task sentinel and
+explicit query/signature facades establish no completed409, native5714, actual
+cryptographic authority or full-verifier acceptance. Actual capture remains
+unfilled; the original strict replay, product and current company stores were
+not changed or rerun.
+
+Original conversion and its three conditional continuations remain live.
+CLEAN is still encoding; no completed paired conversion, check/configuration,
+genuine cold readiness or actual UI receipt exists. All 46 locked job payloads
+and statuses remain unchanged. External recovery is self-contained and requires
+no owner key-management action. Main product adoption, actual next fieldwork,
+final preservation and conditional cleanup remain pending.
+
 2026-10-04 07:22 UTC the decoder's independent bounded OWN run completed once
 with all 46 cases passing and exit0 (`645e72a9`). Root closed 197 ordinary
 references and settled inventories (`2fbbe784`) without rerunning tests/worlds.

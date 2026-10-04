@@ -4046,6 +4046,38 @@
         "Main_product_source_changed": false,
         "actual_pipeline_complete": false,
         "professional_acceptance": "NOT_ASSERTED"
+      },
+      "corrected_verifier_46_case_saved_result_checkpoint_2026_10_04": {
+        "checkpoint_utc": "2026-10-04T07:47:22.367347+00:00",
+        "status": "FIVE_VERIFIER_SOURCE_DEFECTS_CLOSED_46_NEUTRAL_CASES_PASSED_ACTUAL_CAPTURE_PENDING",
+        "wrapper_sha256": "812574287cb6d88dfba0bac16a2bb35e4eada40d6c7417f8ad6219546ad1dfe0",
+        "appendage_sha256": "423b6be475be68f3afd50c7d050a9a2e1e9014746b3aad961e242e176edbab71",
+        "independent_source_review_sha256": "662881d7dd28d06a07adaded7dcae9d6fd47f4c951b37112f820f8326dff43ce",
+        "Root_source_selection_sha256": "368c0b938084a4fc89bc2cc7c964740f4aa11e781c40ddcabb74880bdaaa9662",
+        "source_refs_closed": 62,
+        "whole_source_inverses_verified": true,
+        "neutral_unit_review_sha256": "0de75624e48418c4e4f74ab53033f85b3c4e3891ba3e46c1b9cb2357f693d1d9",
+        "Root_saved_unit_results_selection_sha256": "6a3c0b8c45101ead4e931810bff412f7fbc6a44ae57cb2b8b074a7eb3983fb9f",
+        "neutral_unit_cases_passed": 46,
+        "runs": 1,
+        "exit": 0,
+        "Root_unit_refs_closed": 81,
+        "qualified_four_task_sentinel_query_and_signature_facades": true,
+        "actual_capture_filled_or_accepted": false,
+        "actual_full409_native5714_or_signed_authority_acceptance": false,
+        "original_strict_replay_or_product_modified": false,
+        "original_conversion": {
+          "pid": 3028524,
+          "CLEAN_derivative_bytes": 549371904,
+          "MESSY_started": false,
+          "completed_receipt_exists": false,
+          "originals_retained": true
+        },
+        "external_recovery_key_management_task_required": false,
+        "all46_jobs_and_statuses_unchanged": true,
+        "Main_product_adoption": false,
+        "actual_pipeline_complete": false,
+        "professional_acceptance": "NOT_ASSERTED"
       }
     }
   },
