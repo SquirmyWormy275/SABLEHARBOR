@@ -1,5 +1,28 @@
 # Local audit-training delivery
 
+2026-10-04 14:43 UTC: the bounded pure B01 diagnostic confirmed the exact
+failure: two 129-character literal record identifiers appeared in 28 tasks.
+Every other observation/evidence predicate passed, and the largest workpaper
+and sample request remained within the unchanged 64 MiB limit. No diagnostic
+outcomes were imported into the audit. Root independently closed the 4,123
+reconciliation files and the genuine retained evidence/current stores (`6f8decd3`).
+
+The isolated FinalWT now contains the exact identifier preservation fix and
+one compact-method dependency correction in local commit `e3f58473`. Full
+literal identifiers remain in facts; calculations and dispositions are unchanged.
+Both B01 plans contain only the method's legacy inputs; native appendages stay
+separate. The current source declaration is explicitly 287 files (`09c1cbc0`),
+with a new source delta admission (`dae337ba`) and vector (`b77a274d`). The old
+286-file/source admissions remain historical. Independent plain copies of the
+two parent source files are verified on Seagate (`4c102f22`).
+
+The fresh current-case parity check and explicit SAME-ID continuation caller
+are pending. CLEAN remains revision 2,052 and MESSY revision 2; no confirmed
+command is retried or room reset. Original conversion/cold/UI/owned stop/offline,
+actual paired replay, Key/UI, Main adoption and final cleanup remain pending.
+All 27 recovery archives are ordinary verified tar/zstd copies; no owner key
+confirmation remains. All 46 locked job payloads and states are unchanged.
+
 2026-10-04 13:56 UTC: new fieldwork stopped during pure B01 inspection
 validation, before any B01 task result was appended. The settled process exited
 1; its 2,050 commands all have confirmed returns and no unconfirmed attempt.

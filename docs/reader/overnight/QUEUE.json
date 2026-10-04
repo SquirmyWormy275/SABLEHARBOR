@@ -4350,8 +4350,8 @@
         "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5"
       },
       "current_actual_execution": {
-        "checkpoint_utc": "2026-10-04T13:57:00.754196+00:00",
-        "status": "NEXT_FIELDWORK_INTERRUPTED_PURE_B01_VALIDATION_RECONCILED_DIAGNOSIS_PENDING",
+        "checkpoint_utc": "2026-10-04T14:40:24.279599+00:00",
+        "status": "INTERRUPTED_PREFIX_PRESERVED_EXACT_B01_ID_FIX_APPLIED_PARITY_AND_SAME_ID_CONTINUATION_PENDING",
         "process_pid": 3942835,
         "settled_exit_code": 1,
         "confirmed_commands": 2050,
@@ -4376,13 +4376,22 @@
             "tasks_unrun": 409
           }
         },
-        "observation_ID_length_candidate_requires_actual_pure_diagnosis": true,
+        "observation_ID_length_candidate_requires_actual_pure_diagnosis": false,
         "automatic_retry_or_reset_authorized": false,
         "original_cutover_accepted": false,
         "actual_paired_fieldwork_independently_accepted": false,
         "actual_Key_UI_or_Main_adoption_accepted": false,
         "final_cleanup_complete": false,
-        "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5"
+        "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5",
+        "exact_pure_diagnostic_sha256": "d97cb34f2b339d489d6a9e34fb6941328333649313798ab5dec9bff7afc571e7",
+        "root_diagnostic_review_sha256": "6f8decd39515a7c5bf3458135103bb8263b8a8a848380d7ffe1bc9575cdb98b6",
+        "actual_pure_diagnosis_confirmed": true,
+        "isolated_current_commit": "e3f58473747fe3f8567c5a6b84b4f721012ab2c4",
+        "current_declared_source_files": 287,
+        "current_source_admission_sha256": "dae337ba552b3cef9a9f025f995893f94329a291a116beaca617db597bd32f61",
+        "current_case_parity_accepted": false,
+        "same_ID_continuation_executed": false,
+        "backup_key_confirmation_required": false
       }
     }
   },
