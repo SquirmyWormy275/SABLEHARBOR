@@ -3848,6 +3848,24 @@
         "actual_original_UI_cutover_new_fieldwork_and_cleanup_complete": false,
         "Main_product_source_changed": false,
         "professional_acceptance": "NOT_ASSERTED"
+      },
+      "cold_sequencing_and_new_storage_checkpoint_2026_10_04": {
+        "checkpoint_utc": "2026-10-04T05:20:00Z",
+        "status": "NARROW_COLD_SOURCE_FIX_SELECTED_ACTUAL_RUNTIME_PENDING",
+        "cold_source_sha256": "5da01d1c6db0e5966218bc06096ee2e2b1060ce8516ae7e5d51b6c649659ca31",
+        "independent_review_sha256": "f8134a1844b4e7b6f975c96fd4b381902a12b9e38bdbd28e263fc23cd905c452",
+        "root_source_review_sha256": "36f4f03b5de6557b407f6b91719217162c267e90176550a514ec7c2ac039778d",
+        "fresh_leaves": 18,
+        "whole_three_literal_inverse_to_f341": true,
+        "independent_offline_replay_deferred_until_exact_actual_HTTP_receipts_and_stop": true,
+        "independent_offline_replay_waived": false,
+        "actual_cold_HTTP_packet_or_offline_acceptance": false,
+        "CONVERT_CONFIGURE_jobs_unchanged": true,
+        "next_birth_storage_sequence": "normal lifetime/create, company.activate, immediate quiescent prepare_tail(state_codec=True), exact sealed configuration, heavy commands on retained room.engine",
+        "new_actual409_storage_size_proof": false,
+        "all46_jobs_and_statuses_unchanged": true,
+        "Main_product_source_changed": false,
+        "professional_acceptance": "NOT_ASSERTED"
       }
     }
   },

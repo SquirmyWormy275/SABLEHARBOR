@@ -1,5 +1,29 @@
 # Audit-suite execution closeout
 
+2026-10-04 05:20 UTC next-phase sequencing defect closed at source: the original
+combined COLD/export caller required a preselected offline authority before its
+first-eight HTTP commands. Those later bodies contain finding/review IDs created
+with random identifiers, so their exact independent authority cannot exist before
+the live commands. The COLD-only successor (`5da01d1c`, handoff `1b55f43b`) is
+independently reviewed (`f8134a18`) and Root-selected (`36f4f03b`), with eighteen
+fresh ordinary leaves and a whole three-literal inverse to preserved `f341`.
+It permits paired null offline authorities only under an explicit typed COLD
+admission, preserves the genuine factory/serving/STOP/drain/same-object export,
+and returns an explicit independent-replay-PENDING receipt. Exact authority must
+be derived from actual HTTP receipts and settled inventory, then unchanged
+`a84` must independently replay the packets. No offline acceptance is waived.
+CONVERT and CONFIGURE remain unchanged; the current conversion and continuation
+jobs are unaffected. Actual COLD, HTTP, export and replay remain unperformed.
+
+The existing supported new-edition storage sequence was also checked: normal
+lifetime/full-scope birth, one company activation, immediate quiescent
+`prepare_tail(state_codec=True)`, exact sealed configuration, then all heavy work
+on the retained room's engine. Only two initial events use dense prefix storage;
+the fieldwork caller refuses missing codec storage. The explicit True is needed
+because the primitive defaults False. This is source preparation, not a new
+actual audit or a proven full-run storage bound. Current-state TEXT, command bytes
+and unique fragments still consume space; disk reserves must remain monitored.
+
 2026-10-04 05:07 UTC actual encoding and conditional continuation: the original
 converter (session27102, PID3028524) has progressed beyond CLEAN's opening
 SQLite structural checks into lossless event encoding. CLEAN's derivative is
