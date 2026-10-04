@@ -1,5 +1,35 @@
 # Audit-suite execution closeout
 
+2026-10-04 10:21 UTC: corrected private instructor-authoring and browser verification sources
+are selected; actual new Key/fieldwork/UI acceptance remains pending. Source
+`1f2e0358` enforces opening and streamed byte limits; independent static review
+`7bd3cfec` passed, and Root closed 34 ordinary inputs (`80ffd1e0`). It preserves
+76 cards and 409 expectations, adds qualified native context to six existing
+controls, and grants no task-facet credit from a role match.
+
+The browser successor `99e80f45` opens collapsed relationship details before
+keyboard selection, finds literal endpoints through bounded pages, bounds both
+opening and closing input reads, captures learner errors and binds actual served
+files to an explicitly selected Main or final source repository. Root closed
+56 ordinary inputs and checked exact predecessor inverses (`db0f2edf`); both
+successors passed syntax parsing. Its intended coverage is all 1,110 archive
+index/page entries and all 76 current cards with selected content/privacy checks,
+not all-original-body fact verification or human acceptance. Actual workpaper
+counts and metadata must come from the new completed run.
+
+Fresh final preservation now uses the ordinary tar/zstd helper `4bef5859`,
+selected by `e80a7f5d`. A tiny real independent-volume fixture passed complete
+member conservation, source-free stream verification and independent stock tar
+parsing; a truncated compressed frame was refused (`a6bd91d6`). No key or GPG is
+used. This changes the transport for future exact final cohorts, while retaining
+complete member verification and dependency clearance before cleanup. No final
+Git/current-output/home-proof cohort has been archived by this preparation.
+
+Original MESSY conversion remains active; CLEAN's 562,479,104-byte derivative is
+complete. Paired conversion, live original UI/stop/offline cutover, actual new
+fieldwork, Main adoption, new explanation binding/UI and final cleanup remain
+pending. All 46 locked job payloads and states remain unchanged.
+
 2026-10-04 09:09 UTC: the unnecessary encryption dependency is removed for the fictional
 company's preserved recovery set. All 27 archives have authenticated ordinary
 `.tar.zst` copies on the verified Seagate; full fresh compressed-copy SHA and

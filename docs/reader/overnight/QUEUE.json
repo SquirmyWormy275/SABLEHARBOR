@@ -4136,6 +4136,43 @@
         "all46_job_payloads_and_statuses_unchanged": true,
         "actual_pipeline_complete": false,
         "professional_acceptance": "NOT_ASSERTED"
+      },
+      "source_only_Key_UI_plain_transport_checkpoint_2026_10_04": {
+        "checkpoint_utc": "2026-10-04T10:21:24.701331+00:00",
+        "status": "CORRECTED_PRIVATE_AUTHOR_UI_SOURCE_AND_PLAIN_FINAL_TRANSPORT_SELECTED_ACTUAL_PIPELINE_PENDING",
+        "selected_sources": {
+          "authoring": {
+            "path": "/home/kingoftheeast/SABLEHARBOR-next5714-private-instructor-authoring-input-bound-correction-20261004/ROOT_SELECTED_AUTHORING_SOURCE.json",
+            "sha256": "80ffd1e099efaadc2a992c03485f9c12faf203ac5e8f22d9acfd7e7334f6bd9e"
+          },
+          "browser_source": {
+            "path": "/home/kingoftheeast/SABLEHARBOR-next5714-ui-served-repository-correction-20261004/ROOT_SELECTED_BROWSER_SOURCE.json",
+            "sha256": "db0f2edf6bda9ebaa06136610559d6e4e536ef1d2bc8bcd5f30608fb9872bc98"
+          },
+          "plain_preservation": {
+            "path": "/home/kingoftheeast/SABLEHARBOR-plain-streamed-final-preservation-preparation-20261004/ROOT_SELECTED_PLAIN_PRESERVATION_TRANSPORT.json",
+            "sha256": "e80a7f5d416d3d1e7cf64bbbc526df1ba47df92dacf30911e671b105161b7530"
+          }
+        },
+        "instructor_source_independent_static_review_sha256": "7bd3cfec892220929959d43227351242ae268cbf4a541aae5436cb4968da82bd",
+        "current409_expectations76_cards_preserved": true,
+        "corpus_all1110_and76_inventory_selected_content_limits_explicit": true,
+        "corpus_bounded_reads_relationship_disclosure_paging_learner_errors_and_served_repository_fixed": true,
+        "QA_workpaper_count_requires_actual_observation": true,
+        "Node_syntax_only_both_successors_returncode": 0,
+        "plain_transport_fixture_review_sha256": "a6bd91d635c8584a8e0d3539caa8c828492cd79a42d192a7627f993eaeac02bc",
+        "plain_transport_real_complete_member_tar_parser_and_corrupt_frame_refusal_passed": true,
+        "new_final_backups_require_encryption_or_key": false,
+        "original_converter_pid": 3028524,
+        "CLEAN_derivative_bytes": 562479104,
+        "MESSY_current_target_bytes": 0,
+        "paired_convert_complete": false,
+        "actual_original_UI_stop_packet_acceptance": false,
+        "actual_next_birth_fieldwork_capture_or_verifier_acceptance": false,
+        "Main_product_adoption_or_actual_new_Key_UI": false,
+        "final_actual_cohorts_preserved_or_cleanup": false,
+        "all46_job_payloads_and_states_unchanged": true,
+        "professional_acceptance": "NOT_ASSERTED"
       }
     }
   },
