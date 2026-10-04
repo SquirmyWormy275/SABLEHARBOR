@@ -4221,6 +4221,34 @@
         },
         "all_46_locked_job_payloads_and_states_unchanged": true,
         "professional_acceptance": "NOT_ASSERTED"
+      },
+      "actual_next_birth_and_contextmanager_origin_checkpoint_2026_10_04": {
+        "checkpoint_utc": "2026-10-04 11:49 UTC",
+        "birth_result_sha256": "56f15d8afed21060d79c9d47ce5d9a0902b6ab284f931102e43e0cbfd39ad6eb",
+        "root_birth_metadata_review_sha256": "a1da9cdd42c63988db5c6ad3ae1f94cfb514df1f05a75bbf928449a709c37fcd",
+        "actual_birth_modes": [
+          "CLEAN",
+          "MESSY"
+        ],
+        "initial_controls_each": 70,
+        "initial_tasks_each": 409,
+        "initial_revision_each": 2,
+        "initial_phase_each": "ACTIVE",
+        "initial_artifacts_requests_workpapers_each": 0,
+        "caller_origin_guard_successor_sha256": "8c5cd0d1eeec48a41a73409533a4676798c9119da4d373f462463565d7720982",
+        "root_origin_guard_selection_sha256": "5f623b7928028a47f4b04ecb4e0d3ba9d0820fc674486608e66713cb59a8d528",
+        "method_dispatch_outcome_bytes_unchanged": true,
+        "original_failed_attempt_reached_constructors": false,
+        "actual_fieldwork_accepted": false,
+        "post_Key_closure_source_sha256": "fb06282ba7d62edb1032a70f75e6b49d69817288420e1a145bbbd0b25d715e95",
+        "root_post_Key_closure_source_selection_sha256": "cfb456d64b33cc377daf15d58a6a3103df99b1ee5305c546b8a9e60287460d81",
+        "actual_post_Key_check_executed": false,
+        "original_cutover_accepted": false,
+        "Main_product_frontend_adopted": false,
+        "actual_Key_UI_accepted": false,
+        "final_preservation_cleanup_complete": false,
+        "professional_acceptance": "NOT_ASSERTED",
+        "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5"
       }
     }
   },

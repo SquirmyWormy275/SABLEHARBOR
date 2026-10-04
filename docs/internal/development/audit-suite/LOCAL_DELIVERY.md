@@ -1,5 +1,35 @@
 # Local audit-training delivery
 
+2026-10-04 11:49 UTC: both isolated next-edition audit workrooms were created through normal
+Company/PersistentAudit APIs, immediately moved to two-event sealed codec prefixes,
+and started once. The settled producer returned `56f15d8a`; Root independently
+closed the small birth metadata (`a1da9cdd`). Each branch began at revision 2 ACTIVE,
+70 controls and 409 untouched tasks, with zero inherited artifacts, requests or
+workpapers. All six audit identities and the company operator are distinct.
+Actual scoped source-native planning and fieldwork are proceeding separately;
+this birth receipt gives no fieldwork, private Key, UI or professional acceptance.
+
+The first startup refused before creating any world because the source-origin
+check treated six normal stdlib contextmanager wrappers as product functions.
+The narrow caller successor `8c5cd0d1` and birth body `6f259123` preserve all method,
+dispatch and outcome bytes; exact complete inverses were checked by Root. Only the
+six literal wrappers are admitted, with a pinned Python 3.12.14 contextlib helper,
+one closure cell equal to the original wrapped product function, and its exact
+module/name/qualname/source origin. Root selection `5f623b79` closed 309 files;
+a single fresh import-only opening/closing probe passed before the successful
+normal constructor invocation. The failed pre-constructor attempt is preserved.
+The independent fieldwork reader's literal caller pin is being updated to this
+actual successor; replay and semantic algorithms remain unchanged.
+
+The later post-Key native/access reader is source-selected (`cfb456d6`, body
+`fb06282b`) after complete source inversion and retained helper comparison.
+Its actual binding, three source snapshots, exact access suffix and current
+signed-head/lifecycle inputs remain unfilled. No actual post-Key check ran.
+Original conversion/check/cold/UI/stop/offline obligations remain pending and
+unchanged; original_cutover_accepted=false. Main product/frontend adoption,
+actual new fieldwork acceptance, Key binding/UI, final preservation and cleanup
+remain pending. All 46 locked job payloads and states remain unchanged.
+
 2026-10-04 11:20 UTC: the compiled private explanations passed independent
 source-semantic inspection (`8e2108c0`), selected by Root (`14976fea`). All
 5,714 native rows, 20,729 literal facts, 16,854 declared pointer assessments,
