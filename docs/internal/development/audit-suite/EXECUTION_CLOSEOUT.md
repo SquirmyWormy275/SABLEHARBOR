@@ -1,5 +1,38 @@
 # Audit-suite execution closeout
 
+2026-10-04 06:44 UTC downstream preparation now has concrete joins: the existing
+UI fill body's V2 (`9a57022c`) passed independent source review (`6d038c6d`)
+and Root byte selection (`bd07c162`, 36 fresh ordinary inputs). Both affected
+gates now bind the genuine passive readiness observation, its exact real child,
+accepted CONFIGURE and selected frontend/source chain. V1 and its refusal remain
+preserved. A Root-owned metadata-only invocation (session87085, PID3389127)
+waits for that real observation before filling the first-eight authorization.
+It submits no HTTP and stops for Root's actual review and once-only V4 launch.
+QA/navigation and all four selected runners remain unchanged.
+
+The preserved birth worksheet V3 (`0287aada`) supplies the normal post-codec
+kickoff join without editing product or fieldwork caller. The nine method review
+lookup (`79600ce8`, map `cff26534`) closes 74 ordinary references and preserves
+all ordered 407 control-task contracts plus two scope tasks. Changed callables,
+adapter dependencies, the new 5,714 baseline and Jan18 pair scope require exact
+current metadata reselection; no product fix was identified. Actual fills,
+cutover, birth, kickoff and launch remain unperformed.
+
+The independent-reader lookup (`8d7638b9`) found an actual next-run verification
+gap: the old reader selects original V5/5,608 data and physical event rows, and
+its legacy-only grammar cannot admit the three separately qualified native
+appendages. Parallel private successor preparation now handles independent
+short-prefix/codec decoding and new capture/appendage checks. The strict legacy
+reader, original first proof and `a84` remain unchanged. No next-run reader or
+actual 5,714 fieldwork acceptance is yet claimed.
+
+At06:44 UTC CLEAN's derivative is 501,526,528 bytes; the original converter,
+check/configuration continuation and passive cold launcher are all still live.
+No completed conversion or cold-readiness receipt exists. The external recovery
+key preservation question is pending before eventual destructive cleanup.
+All originals and all 46 locked jobs/statuses remain preserved; professional
+acceptance is NOT_ASSERTED.
+
 2026-10-04 06:16 UTC passive cold continuation started: the selected V2 launcher
 (`14d338ca`, independent review `cf680e75`) is running as PID3358772,
 session36111. Its Root-filled manifest is `a9a95319`, declaration `80ee1a72`

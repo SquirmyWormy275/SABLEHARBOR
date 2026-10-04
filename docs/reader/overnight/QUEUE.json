@@ -3914,6 +3914,51 @@
         "actual_original_UI_cutover_and_cleanup_complete": false,
         "full_completion_ETA": "NOT_ESTABLISHED",
         "professional_acceptance": "NOT_ASSERTED"
+      },
+      "original_UI_fill_and_next_reader_readiness_checkpoint_2026_10_04": {
+        "checkpoint_utc": "2026-10-04T06:44:51Z",
+        "status": "ORIGINAL_CONVERSION_RUNNING_UI_FILL_WAITING_REAL_READY_NEXT_READER_SOURCE_PREPARATION",
+        "UI_fill": {
+          "body_sha256": "9a57022cada3dc9b3c3f60a33ef38469d13344a87069e171a5989b43c8275f28",
+          "independent_review_sha256": "6d038c6ddbf8d24858db82f50210dd1d453af3ac894103c950768e36160e322c",
+          "root_source_selection_sha256": "bd07c1627054cb8c8c3537673f9ec2c92474e66da2a58ba251aaaaf9b248fade",
+          "fresh_ordinary_inputs": 36,
+          "metadata_wait_pid": 3389127,
+          "metadata_wait_session": 87085,
+          "actual_ready_required_before_fill": true,
+          "HTTP_started_by_fill": false,
+          "V4_actual_once_launch_pending": true,
+          "V1_and_refusal_preserved": true
+        },
+        "birth_kickoff_worksheet_handoff_sha256": "0287aadaae851358683f45396cbcbbc230d1f3e90b8046a7275ad7c42ca2fc30",
+        "method_review_lookup": {
+          "handoff_sha256": "79600ce82bf38a32418d2d2024773908b7facc5a2e1a12f6d3be914991a1148e",
+          "map_sha256": "cff265344340c9c99859474f02e8a63c7d7da7a842962cb265916c7352f510ba",
+          "fresh_ordinary_refs": 74,
+          "scope_plus_control_tasks": 409,
+          "product_fix_identified": false,
+          "actual_reselection_or_launch": false
+        },
+        "new_reader_lookup_sha256": "8d7638b9eaf25caff6bd6328baf3d499b412b290d5d3f0bac19245bc168f2f97",
+        "new_reader_source_preparation_parallel_lanes": [
+          "independent_prefix_and_codec_tail_decoder",
+          "new_capture_and_separate_qualified_appendage_semantics"
+        ],
+        "original_legacy_reader_first_proof_and_a84_modified": false,
+        "actual_new_reader_fieldwork_acceptance": false,
+        "conversion": {
+          "pid": 3028524,
+          "session_id": 27102,
+          "CLEAN_derivative_bytes": 501526528,
+          "MESSY_started": false,
+          "completed_receipt_exists": false,
+          "originals_retained": true
+        },
+        "independent_recovery_key_preservation_before_cleanup": "OWNER_LOCATION_OR_PROTECTED_COPY_PENDING",
+        "actual_UI_cutover_birth_fieldwork_and_cleanup_complete": false,
+        "all46_jobs_and_statuses_unchanged": true,
+        "Main_product_source_changed": false,
+        "professional_acceptance": "NOT_ASSERTED"
       }
     }
   },
