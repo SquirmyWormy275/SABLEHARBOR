@@ -1,5 +1,24 @@
 # Local audit-training delivery
 
+2026-10-04 17:59 UTC: The actual finite service import probe exited 0 (`b4cfce08`), separately settled
+by Root (`3eb9b8cb`). It observed 156 base file origins and 313 external file
+origins, with all 519 selected dependency/resource files freshly closed. Root
+issued the existing service-origin source gate (`524a8e6d`); base admission846e
+remains unchanged. The correction admits only three exact OpenTelemetry namespace
+paths and preserves the original operation/file/constructor guards. Its Viewer
+successor (`26f28d19`) retains the existing phases and lifecycle. Root selected
+the six exact frontend assets/package (`b67727ce`); no actual viewer/UI acceptance
+is implied. Genuine next fieldwork/capture/replay/Keys/configuration remain pending.
+
+Root reviewed the exact cleanup dependency worksheet (`a094b237`): original
+raw-file-only retirement needs genuine Original cutover/final preservation/last
+reader clearance, independently of the unrelated next run or Main adoption. It
+selects only the two physical journal files after those gates; four compact
+recovery receipt bodies and the entire tinyC14/C15 folders remain in place.
+No raw or cohort deletion authority is issued yet. The original checker and
+SAME-ID fieldworker are active; broader next/Main/cold/UI/final cleanup and all
+46 locked job payloads/states remain unchanged.
+
 2026-10-04 17:34 UTC: The corrected base import-only probe exited 0 under P0. Root accepted the
 existing-schema admission (`846e6a03`) and fresh observed origins (`815aa468`):
 151 actual base file imports from 287 declared sources, plus 134 actual external

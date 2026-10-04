@@ -4350,7 +4350,7 @@
         "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5"
       },
       "current_actual_execution": {
-        "checkpoint_utc": "2026-10-04T17:34:19.572942+00:00",
+        "checkpoint_utc": "2026-10-04T17:59:49.948429+00:00",
         "status": "ACTUAL_SAME_ID_CONTINUATION_RUNNING_AFTER_EXACT_52_TASK_PARITY",
         "process_pid": 18961,
         "settled_exit_code": null,
@@ -4424,9 +4424,26 @@
         "current_base_import_actual_exit_code": 0,
         "current_base_import_actual_observed_file_origins": 151,
         "current_base_import_declared_sources": 287,
-        "service_import_admission_accepted": false,
-        "service_import_namespace_correction_status": "NARROW_EXPLICIT_NAMESPACE_SOURCE_SUCCESSOR_PREPARATION_ONLY",
-        "final_main_reopen_static_dependency_lookup_sha256": "357ac4cc8b8226d4b4d353da7aa2cd1e35ad07e9507b71c1d10e6d1919e3c67d"
+        "service_import_admission_accepted": true,
+        "service_import_namespace_correction_status": "EXACT_THREE_NAMESPACE_SOURCE_CORRECTION_SELECTED_AND_ACTUAL_IMPORT_ONLY_PASS",
+        "final_main_reopen_static_dependency_lookup_sha256": "357ac4cc8b8226d4b4d353da7aa2cd1e35ad07e9507b71c1d10e6d1919e3c67d",
+        "service_import_actual_exit_code": 0,
+        "service_import_observed_base_file_origins": 156,
+        "service_import_observed_external_file_origins": 313,
+        "service_import_held_dependency_files": 519,
+        "service_import_actual_receipt_sha256": "b4cfce08ccad3569a8fdfa36603af428fdb135e55013edb1bce9f280e8324267",
+        "service_import_process_settlement_sha256": "3eb9b8cb3138d96b75d54354300d674bbbeac53a86396580ebb2c4363743723d",
+        "root_service_origin_admission_sha256": "524a8e6dc6e37075c3b800b215ffd7fb324f082daee1905cc5451eabcad4c38d",
+        "selected_owned_viewer_source_sha256": "26f28d19e80bff4664cf5c959b0943099314c166fcc7e2e4c08869a1bdab8108",
+        "root_frontend_and_source_selection_sha256": "b67727ceff1a13e0f99173f752756d71df241012bb433b8e9444e2dc042c7479",
+        "root_retention_dependency_worksheet_review_sha256": "a094b237777c623b00cdd29db51b7acae13890497afc1e606a9ecdd3aee6c168",
+        "original_raw_only_retirement_source_dependency_requires_next_or_Main_completion": false,
+        "original_raw_only_retirement_actual_eligibility_issued": false,
+        "permanent_compact_recovery_receipts_retained_in_place": 4,
+        "tiny_retention_cohorts_entirely_preserved": [
+          "C14",
+          "C15"
+        ]
       }
     }
   },
