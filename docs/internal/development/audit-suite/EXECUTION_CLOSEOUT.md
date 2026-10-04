@@ -1,5 +1,35 @@
 # Audit-suite execution closeout
 
+2026-10-04 09:09 UTC: the unnecessary encryption dependency is removed for the fictional
+company's preserved recovery set. All 27 archives have authenticated ordinary
+`.tar.zst` copies on the verified Seagate; full fresh compressed-copy SHA and
+unchanged source metadata passed. Root joined both large copies to their existing
+complete raw-backup proofs and listed a small plain tar without a key. Receipt
+`45fccd0c` binds the 25-copy result `f1e24cbf`, two source-history copies `b1d096d2`
+and revised Downloads/drive instructions. The existing ciphertexts, keys and
+point-in-time proofs remain preserved pending final cleanup. Earlier statements
+requiring encrypted-only output or owner separate-key preservation are superseded
+for this fictional company. No 818 GB raw restore was repeated and no working
+company/audit store was opened or changed.
+
+Original CLEAN conversion has completed its 6,227-frame mapping (`fe0c00ec`),
+133,223 graph nodes and 562,479,104-byte derivative. MESSY conversion is running;
+there is no paired completed conversion/check/configuration or genuine cold/UI
+receipt. The existing conditional continuations remain live. Original physical
+files remain retained.
+
+The next run's exact existing 882-system logical scope is selected (`9e12e3b1`),
+with 2,741 CLEAN and 2,863 MESSY visible source versions. Root closed 288 ordinary
+source inputs for the 284 declared module/file pins (`bb40e2b1`); this is not an
+observed runtime import count. Actual scoped Company reads still derive native
+dependency selections after normal birth/codec/kickoff. Root's conditional agent
+delegation (`c124af2c`) assigns original actual UI/offline closeout, next fieldwork
+and separate verification to existing workers. It conveys intent only; genuine
+prerequisites and actual observations remain mandatory. Main product adoption,
+actual next execution, new Key and UI, final preservation and exact cleanup are pending.
+All 46 locked job payloads/statuses remain unchanged; professional acceptance
+NOT_ASSERTED.
+
 2026-10-04 07:48 UTC all five confirmed next-run verifier defects are closed
 in the preserved successor (`81257428` wrapper, `423b6be4` appendage).
 Independent source review passed (`662881d7`); Root closed 62 ordinary source

@@ -1805,7 +1805,7 @@
     "worktree": "SABLEHARBOR-audit-suite",
     "branch": "build/audit-training-suite",
     "boundaries": "Local integrated implementation; preserve immutable sources and private records. Atlas read-only. No inferred professional acceptance or remote deployment.",
-    "checkpoint_note": "Company source foundation, retrospective documentary migration, original operating-table bridge, live browser collection, protected reference-key explorer and context/navigation foundation implemented. Full queued acceptance remains in progress. The integrated 13-component Clean/Messy pair reached independently reviewed A349/B324 after P5A-D company-native collections; a 538-file ordinary-byte checkpoint passed independent review. All 409 tasks per branch remain NOT_STARTED/NOT_RUN. Exact P6 procedure mapping has begun; source-complete final-pair replay, performed task testing, qualified substantive review and owner usability acceptance remain open. Atlas is read-only.",
+    "checkpoint_note": "Original company-source fieldwork has documented paired409 task records and its first complete replay. Original compact storage replacement is processing MESSY after completed CLEAN; paired check, genuine cold/UI/offline cutover remain pending. All27 preserved backup archives now have verified ordinary .tar.zst copies with key-free instructions. Next5714 fieldwork is conditionally delegated and remains unstarted pending actual original cutover. Main adoption, new Key/UI delivery, final preservation and exact cleanup remain pending; all46 locked job payloads/statuses unchanged. Atlas remains read-only; professional and owner usability acceptance are not asserted.",
     "active_agent_graph": {
       "date": "2026-10-01",
       "owner_instruction": "ok. Let 'er rip",
@@ -2198,6 +2198,20 @@
         "rejected_review_sha256": "9019abecf4279455c65d258cb53b6af0fa513a89b72611d3e41223de9cb0ae94",
         "corrected_candidate": "2775dee4",
         "actual_sableharbor_activation": false
+      },
+      "current_execution_2026_10_04": {
+        "checkpoint_utc": "2026-10-04T09:09:51.867625+00:00",
+        "Root_integration_owner": true,
+        "running_workers": [
+          "retained_learner_service",
+          "recovered_method_review"
+        ],
+        "independent_worker_waiting_producer": "recovered_execution",
+        "original_runtime_lane": "real readiness → once-only first8 → QA/navigation/debrief → observed owned stop → unchanged independent offline consumers → genuine cutover acceptance",
+        "next_runtime_lane": "genuine cutover → existing review fill → normal birth/codec/kickoff → scoped native dependency reads → once-only full409 plus qualified native3 → quiescent capture",
+        "independent_next_lane": "actual producer capture → independent standalone8125 once; no producer callbacks or professional credit",
+        "Root_final_lane": "actual acceptance → Main integration/normal reopen/newKey/UI → fresh plain preservation → dependency-cleared exact cleanup",
+        "actual_pipeline_complete": false
       }
     },
     "current_shared_company_run": {
@@ -2474,7 +2488,7 @@
       "storage_free_bytes_at_capacity_recovered_b05_launch": 145042059264,
       "storage_new_cleanup_or_file_relocation": false,
       "encrypted_external_backup_root": "/run/media/kingoftheeast/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002",
-      "encrypted_external_backup_recovery_key_requires_separate_preservation": true,
+      "encrypted_external_backup_recovery_key_requires_separate_preservation": false,
       "historical_source_reproduction_procedure_review_sha256": "94c69073ca9e2ae1f3f2e6800df74e75aa223a0b39baa9ccda3fd2783190939f",
       "sealed_prefix_tail_original_candidate_status": "CHANGES_REQUIRED_NORMAL_SIGNED_LOGIN_LOGOUT_REOPEN_DEFECT_PRESERVED_60A83A14",
       "sealed_prefix_tail_lifecycle_correction_status": "95DC_INDEPENDENT_NATIVE51_STDLIB13_AND6_IMMUTABLE_REPLAYS_PASS_SELECTED_BOUNDARY_ONLY",
@@ -4076,6 +4090,50 @@
         "external_recovery_key_management_task_required": false,
         "all46_jobs_and_statuses_unchanged": true,
         "Main_product_adoption": false,
+        "actual_pipeline_complete": false,
+        "professional_acceptance": "NOT_ASSERTED"
+      },
+      "plain_recovery_and_conditional_runtime_checkpoint_2026_10_04": {
+        "checkpoint_utc": "2026-10-04T09:09:51.867625+00:00",
+        "status": "PLAIN27_RECOVERY_COMPLETE_CLEAN_CONVERSION_COMPLETE_MESSY_RUNNING_ACTUAL_PAIRED_CUTOVER_PENDING",
+        "plain_backup_recovery": {
+          "Root_receipt_path": "/home/kingoftheeast/SABLEHARBOR-plain-compressed-backup-recovery-20261004/ROOT_RECOVERY_CLOSEOUT.json",
+          "Root_receipt_sha256": "45fccd0cb03a63a710878120f1987ce2c5c41ca94d2e4bf302155cff07116925",
+          "archive_count": 27,
+          "plain_compressed_bytes": 20783300538,
+          "key_required": false,
+          "owner_independent_key_preservation_action_required": false,
+          "previous_versions_and_receipts_retained": true,
+          "working_source_SQL_changed": false,
+          "full818GB_raw_roundtrip_not_repeated": true
+        },
+        "original_conversion": {
+          "pid": 3028524,
+          "CLEAN_derivative_bytes": 562479104,
+          "CLEAN_history_count": 6227,
+          "CLEAN_nodes": 133223,
+          "CLEAN_mapping_sha256": "fe0c00ec93e01f02632af23990d79a6bc3abaaac7b1b1075cb95e07dfa6a5f0d",
+          "MESSY_started": true,
+          "MESSY_completed_mapping": false,
+          "paired_conversion_receipt_exists": false,
+          "originals_retained": true
+        },
+        "next_edition_metadata": {
+          "preserved_legacy_scope_selection_sha256": "9e12e3b1e1cbd9938ca0d7ece61654474634dcd74a202de8680de0ff30a7ea5a",
+          "systems": 882,
+          "CLEAN_source_versions": 2741,
+          "MESSY_source_versions": 2863,
+          "declared_origin_selection_sha256": "bb40e2b15bb4365d47e9aeab2f032b444832041c184e1073bb5ceea07aa56cde",
+          "ordinary_source_refs": 288,
+          "observed_actual_import_count": null,
+          "native_dependency_refs_still_require_scoped_company_reads": true
+        },
+        "conditional_agent_delegation_sha256": "c124af2cdfda69914e917e326c68ba621f27efae7f172f0a420935785e6c80f6",
+        "delegation_is_current_Root_intent_not_completed_prerequisites": true,
+        "actual_original_HTTP_UI_stop_offline_acceptance": false,
+        "actual_next_birth_fieldwork_capture_or_verifier_acceptance": false,
+        "Main_product_adoption": false,
+        "all46_job_payloads_and_statuses_unchanged": true,
         "actual_pipeline_complete": false,
         "professional_acceptance": "NOT_ASSERTED"
       }
