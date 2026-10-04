@@ -1,5 +1,21 @@
 # Audit-suite execution closeout
 
+2026-10-04 10:58 UTC: private source-only instructor content has actually compiled once
+from the accepted immutable 5,714-version library (`d021937e`). Each mode has
+76 cards and 409 expectations; CLEAN cites 913 originals and MESSY 1,025.
+The companion contains 2,012 distinct selected originals and 20,729 literal
+fact locators. The narrow BCM period-context correction (`f849317e`) passed
+independent static review (`daf2991b`) before compilation. All selected input
+bytes and pure loaded module origins closed after the call.
+
+This compilation creates unbound private explanations only. It uses no learner
+outcomes and executes no Company grants, audit commands or Key binding. Separate
+independent source-semantic review is running; actual fieldwork, current Company
+clock/ACL validation and private binding remain pending. Original conversion and
+its conditional continuations remain active. Final Main delivery, UI verification,
+preservation and reference-cleared cleanup are not complete. All 46 locked job
+payloads and states remain unchanged.
+
 2026-10-04 10:21 UTC: corrected private instructor-authoring and browser verification sources
 are selected; actual new Key/fieldwork/UI acceptance remains pending. Source
 `1f2e0358` enforces opening and streamed byte limits; independent static review

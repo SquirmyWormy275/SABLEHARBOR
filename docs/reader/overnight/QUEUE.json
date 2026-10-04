@@ -4173,6 +4173,30 @@
         "final_actual_cohorts_preserved_or_cleanup": false,
         "all46_job_payloads_and_states_unchanged": true,
         "professional_acceptance": "NOT_ASSERTED"
+      },
+      "actual_private_source_only_compilation_checkpoint_2026_10_04": {
+        "checkpoint_utc": "2026-10-04T10:58:00+00:00",
+        "status": "COMPILED_PRIVATE_UNBOUND_INDEPENDENT_SOURCE_SEMANTICS_PENDING",
+        "result": {
+          "path": "/home/kingoftheeast/SABLEHARBOR-next5714-source-only-compilation-20261004/RESULT.json",
+          "sha256": "d021937e2d1f33f25ab7509c05a3eebe18b4688d4dd7c8ee6f5666d1d456849c"
+        },
+        "author_source_sha256": "f849317e7dadeb94e18b6ecc7cd579fc224efc2e03deb2b6224002bf64add7cb",
+        "independent_static_review_sha256": "daf2991b65cc67988f16b8092d5438a3324c34183acc8d857fd821f3a9a99e61",
+        "cards_and_expectations_per_mode": [
+          76,
+          409
+        ],
+        "used_originals": {
+          "CLEAN": 913,
+          "MESSY": 1025
+        },
+        "companion_originals": 2012,
+        "literal_fact_locators": 20729,
+        "actual_fieldwork_or_key_binding_issued": false,
+        "learner_outcomes_used": false,
+        "professional_acceptance": "NOT_ASSERTED",
+        "all_46_locked_job_payloads_and_states_unchanged": true
       }
     }
   },
