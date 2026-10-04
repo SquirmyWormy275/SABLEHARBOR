@@ -1,5 +1,44 @@
 # Audit-suite execution closeout
 
+2026-10-04 03:43 UTC source composition and measured conversion checkpoint: the
+final isolated source composition is frozen at `fae700a2` (`34fb1843`),
+independently reviewed (`77f209b1`) and Root-selected (`e17490b0`). Root freshly
+closed all 194 source/copy pairs and 394 unique leaves. Exactly two scope donor
+files differ from complete-match parent `2b2118e3`; native caller, consumers,
+primitives, frontend and six dist files remain exact. Separate source counts are
+92 configured, six workflow, four native and twelve signature-backend files.
+Those counts do not assert loaded runtime origins or signature behavior.
+
+The complete seven-field authored search component is Root-selected (`8e315438`)
+with a shared complete matcher for search and saved views. Preview omissions no
+longer omit matches; every cached projection follows fresh full archive validation.
+Independent scope review (`714fa67f`) accepts the narrow explicit 2028-01-18
+fieldwork date while preserving the approved 2027 audit period and all other
+scope fields. Its saved test is metadata-only: genuine retained-session public
+assembly and actual full-70/409 fieldwork are still unperformed. None of these
+component gates constitutes actual archive, current Key, runtime or UI adoption.
+
+Pure preparation for original CONFIGURE is complete (`cda073b7`). Eighteen
+ordinary metadata files close; each original UNSEALED base changes only its two
+runtime-review fields to the already accepted original-5,608 baseline review.
+Original binding, saved actual Key index, completed POST heads and explicit
+complete initial logout maps remain exact. Mapping acceptance and phase admission
+remain unfilled. No product import, SQL or credentials/private signing values
+were read, and no actual configuration or authority was issued.
+
+Actual paired conversion remains running under all three original locks. At
+03:39 UTC the worker had run about 35 minutes, with continuing reads near 47 MB/s,
+about 80 MiB resident memory and no swap. The first output remained empty while
+SQLite structural checks precede event encoding. A conditional 3.9-4.4-hour
+projection covers structural checks only, assumes one unique full-file read at
+the observed rate, and is unverified. All 12,577 raw events, reconstruction,
+graph checks and final hashes remain outside that projection; there is no measured
+actual event-encoding rate and no defensible full completion ETA. The process is
+untouched. Original backups and post-Key native/authority checks remain completed;
+original first-eight, UI, offline replay, cutover, new fieldwork and retirement
+remain pending. All 46 locked jobs/statuses and Main product source are unchanged.
+Professional acceptance remains NOT_ASSERTED.
+
 2026-10-04 03:04 UTC original preservation and actual recovery execution: both
 original audit databases are independently preserved and verified (`116ee63e`).
 The encrypted streams authenticated and recovered all 818,317,565,952 original
