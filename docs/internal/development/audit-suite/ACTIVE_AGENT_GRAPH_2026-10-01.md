@@ -1,5 +1,29 @@
 # Active company-source audit workflow
 
+2026-10-04 12:35 UTC: actual normal next-edition fieldwork is running once on
+both newborn rooms (caller `872cbca6`, input `5a1bda71`, process start `03162617`).
+The source-origin declaration was corrected to include two existing, reviewed
+scope modules; Root checked all 286 declared files, exact Git bytes and the
+whole input inverse (`227cae45`). The preserved first attempt refused before
+constructors or commands. No fieldwork completion or acceptance is asserted.
+
+Source-native dependency planning completed 80 CLEAN and 679 MESSY ordinary
+Company reads (`47ea4aeb`). Its separate quiescent closure (`507d8954`) confirmed
+zero collections, no audit commands and all temporary source grants inactive.
+The native batches now select 8/30/46 CLEAN and 599/30/54 MESSY references.
+The broader instructor archive's missing/foreign pointer limits remain explicit.
+The selected native-batch caller uses the existing verified source lease around
+each batch, with all attempted grants revoked; legacy method leases are unchanged.
+
+The independent fieldwork reader is source-selected for that exact caller
+(`3888ea84`, Root `0e69eea0`); actual replay awaits genuine settled capture.
+Root conditionally permits private Key binding on reviewed FinalWT after actual
+fieldwork and current source/head checks (`884769c3`), in parallel with original
+storage recovery. This does not authorize Main adoption or transfer live objects
+between repositories. Original conversion/cold/UI/owned stop/offline closeout,
+new Key/UI verification, final preservation and exact cleanup remain pending.
+All 46 locked job payloads and states remain unchanged.
+
 2026-10-04 11:49 UTC: both isolated next-edition audit workrooms were created through normal
 Company/PersistentAudit APIs, immediately moved to two-event sealed codec prefixes,
 and started once. The settled producer returned `56f15d8a`; Root independently

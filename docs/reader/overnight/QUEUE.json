@@ -2564,7 +2564,7 @@
       "engineering_closeout_matrix_sha256": "0b98a7deae0a8a41fec72dea67c0cff528bc72ddb1b4a5f705b3343f3d14703e",
       "postdelegation_coordinator_root_selected_input_review_sha256": "c4e9f11b7cd11ac678365ff2f2d23d7c6b7c124713ab26d6416c42d80a4766c7",
       "postdelegation_coordinator_status": "SELECTED_AUTHOR20_AND_IMMUTABLE_LINEAGE_PASS_ROOT286_REFERENCES_STATIC_PASS_UNFILLED_ACTUAL_FINAL_GATES_PENDING",
-      "checkpoint_utc": "2026-10-04T03:04:31+00:00",
+      "checkpoint_utc": "2026-10-04T12:35:26.315267+00:00",
       "focused_delivery_successor_commit": "c696bda0a6c3e60c990d5ebcfbe39177fede6cb3",
       "focused_delivery_successor_status": "SELECTED_SEQUENTIAL_BACKEND_ACCEPTED_GENUINE_PARALLEL_BROWSER_STARTUP_REFUSAL_UNDER_FOCUSED_REPAIR",
       "focused_delivery_successor_dependency_sha256": "c0bd01bd24add29231732cbfd8a745eb8f04e8dea47110b90639969bbd3a1122",
@@ -4249,6 +4249,47 @@
         "final_preservation_cleanup_complete": false,
         "professional_acceptance": "NOT_ASSERTED",
         "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5"
+      },
+      "actual_next_native_planning_and_fieldwork_checkpoint_2026_10_04": {
+        "checkpoint_utc": "2026-10-04T12:35:26.315267+00:00",
+        "status": "ACTUAL_NEXT_FIELDWORK_RUNNING_NO_COMPLETION_OR_ACCEPTANCE",
+        "native_planning_result_sha256": "47ea4aebdd910b01d9c518a7e0fb2beebf6ce3b6c978a0e08688169b01fba81f",
+        "native_planning_quiescent_closure_sha256": "507d8954fd841a8d602c438972728c15227affdbe06a25eddc84ecb7faba98d3",
+        "planning_actual_reads": {
+          "CLEAN": 80,
+          "MESSY": 679
+        },
+        "planning_native_batch_refs": {
+          "CLEAN": [
+            8,
+            30,
+            46
+          ],
+          "MESSY": [
+            599,
+            30,
+            54
+          ]
+        },
+        "planning_COL_or_audit_commands": 0,
+        "planning_final_active_grants": 0,
+        "broader_archive_unadmitted_pointer_limits_retained": true,
+        "caller_sha256": "872cbca698fc7ed4fba4e5591d44f789deef5540f9225a1a40b0410d3420a8fd",
+        "actual_input_sha256": "5a1bda71ef9c4b910e3c8c98bb350cc238d729c7ab0b7209559ac346c11f5d26",
+        "Root_input_selection_sha256": "227cae450b0c2939d79041890fb76a77cd88496724fe076b6592bd481a2dcd4b",
+        "source_origin_declarations": 286,
+        "actual_process_start_sha256": "03162617db8761f3356a594ce1349807615c2d77ed767eb3ec7dfe369156882c",
+        "actual_fieldwork_pid": 3942835,
+        "actual_fieldwork_session": 27463,
+        "actual_fieldwork_complete": false,
+        "actual_fieldwork_independently_accepted": false,
+        "independent_reader_sha256": "3888ea84ff1af16ad5132e817fad03b588b67f7c2027d070c1710043eec5066d",
+        "Root_reader_source_selection_sha256": "0e69eea0b4e6e4c2282e72e2b3fef01ade6b32152c5e8e8d289a078ddef4c0dd",
+        "conditional_private_FinalWT_Key_binding_policy_sha256": "884769c3b82a1921894efe83dc44902d0646a97445671b16615340eb3a1600c3",
+        "actual_Key_binding_accepted": false,
+        "original_cutover_accepted": false,
+        "Main_product_frontend_adoption_accepted": false,
+        "final_cleanup_complete": false
       }
     }
   },
