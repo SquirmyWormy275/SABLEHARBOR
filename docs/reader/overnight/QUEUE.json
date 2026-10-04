@@ -4348,6 +4348,41 @@
         "Main_adoption_accepted": false,
         "final_cleanup_complete": false,
         "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5"
+      },
+      "current_actual_execution": {
+        "checkpoint_utc": "2026-10-04T13:57:00.754196+00:00",
+        "status": "NEXT_FIELDWORK_INTERRUPTED_PURE_B01_VALIDATION_RECONCILED_DIAGNOSIS_PENDING",
+        "process_pid": 3942835,
+        "settled_exit_code": 1,
+        "confirmed_commands": 2050,
+        "unconfirmed_commands": 0,
+        "reconciliation_sha256": "f2249928f2ef17684930e6086defcc946f5f54de757d168b4d216ef0d8255fd6",
+        "interruption_sha256": "74ec42074b244a6ddadd35258521b79a3357db87e783bd72a5788a066a47ddd4",
+        "source_native_versions": 5714,
+        "source_native_rows_sha256": "99dd4a5c68f83a6b337944dab95714df630d3cb547e22192419d0cd327773a71",
+        "all_source_grants_inactive": true,
+        "source_grants_count": 306,
+        "actual_modes": {
+          "CLEAN": {
+            "revision": 2052,
+            "collected_originals": 2042,
+            "scope_workpapers": 2,
+            "control_tasks_unrun": 407
+          },
+          "MESSY": {
+            "revision": 2,
+            "collected_originals": 0,
+            "workpapers": 0,
+            "tasks_unrun": 409
+          }
+        },
+        "observation_ID_length_candidate_requires_actual_pure_diagnosis": true,
+        "automatic_retry_or_reset_authorized": false,
+        "original_cutover_accepted": false,
+        "actual_paired_fieldwork_independently_accepted": false,
+        "actual_Key_UI_or_Main_adoption_accepted": false,
+        "final_cleanup_complete": false,
+        "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5"
       }
     }
   },

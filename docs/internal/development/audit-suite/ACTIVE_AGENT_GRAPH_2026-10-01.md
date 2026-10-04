@@ -1,5 +1,23 @@
 # Active company-source audit workflow
 
+2026-10-04 13:56 UTC: new fieldwork stopped during pure B01 inspection
+validation, before any B01 task result was appended. The settled process exited
+1; its 2,050 commands all have confirmed returns and no unconfirmed attempt.
+The three-lock reconciliation (`f2249928`) preserves CLEAN revision 2,052,
+2,042 collected originals and the two completed scope workpapers; all 407
+control tasks remain unrun. MESSY retains its original revision 2 and zero
+collected evidence. All 5,714 source rows remain exact, all 306 source grants
+are inactive, and no company operations were appended.
+
+The writer's existing observation-format limit appears to reject two 129-character
+native record identifiers. A single read-only callback diagnosis is checking
+that cause against genuine collected originals. No automatic retry, control
+result overwrite, reset, new room or resumed execution is authorized by this
+checkpoint. Existing records and failed batch planning remain preserved.
+The original conversion/cold/UI/owned stop/offline lane is unchanged.
+Actual paired replay, Key/UI, Main adoption and final cleanup remain pending.
+All 46 locked job payloads and states remain unchanged.
+
 2026-10-04 13:38 UTC: actual fieldwork continues on the same new CLEAN/MESSY
 rooms. The latest bounded worker observation recorded 1,918 confirmed CLEAN
 command returns in B01, with no unconfirmed command or completed paired capture.
