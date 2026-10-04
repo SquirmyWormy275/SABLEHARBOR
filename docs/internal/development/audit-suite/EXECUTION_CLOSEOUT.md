@@ -1,5 +1,51 @@
 # Audit-suite execution closeout
 
+2026-10-04 03:04 UTC original preservation and actual recovery execution: both
+original audit databases are independently preserved and verified (`116ee63e`).
+The encrypted streams authenticated and recovered all 818,317,565,952 original
+bytes; the two encrypted files total 11,803,596,489 bytes on the verified
+Seagate. Root freshly closed both verification receipts and current original
+and ciphertext metadata (`bb24abf3`). All originals remain in place. This does
+not assert separate preservation of the recovery key.
+
+Actual post-Key native closure is complete. The reviewed dead-holder filler
+(`60a9211c`) produced the exact read-only authorization (`0869ba5a`); the
+unchanged native worker produced an ordinary independent copy (`5e7bdfed`).
+Root's independent actual checker (`223a7bb6`) compared three snapshots, all
+5,608 native versions and fourteen fields. Native records, system registrations,
+collections, schema and headers match. The exact 1,232-event scoped grant/revoke
+suffix is conserved; every learner and temporary grant is inactive. No audit,
+source, credential or authority mutation was performed. A caller SHA refusal
+occurred before any source SQL; the exact corrected invocation and refusal are
+both preserved.
+
+The separately reviewed authority checker (`55f87bd6`, program `cd93ad31`)
+passed on the actual originals (`17b9098e`). It verified both explicit completed
+POST sequence-three heads, all three signed transitions per room, current tail
+byte/metadata and sidecar closure, and complete explicitly supplied empty logout
+inventories. It used only bounded read-only tail authority SQL and did not read
+the 818 GB original prefixes, read private signing values or create a STOP proof.
+
+Root has started the actual paired compact conversion (session 27102) under
+five pinned recovery gates. The selected conversion (`ec9eaa3b`) explicitly
+keeps original first-eight and QA completion false. The three original locks are
+held. Conversion parity, configuration, genuine cold viewers, C3/M5 follow-through,
+QA/navigation/debrief, graceful settlement and complete packet replay remain
+pending. The saved actual Key and original IDs are required throughout; no repeat
+Key binding or missing live-object/ready/STOP receipt is inferred.
+
+Isolated navigation is Root-selected (`9891ecf2`) after 165 source/copy pairs
+and independent static review (`c887ca3f`). The bounded semantic preview component
+(`66635ef7`) is qualified (`3fe10fea`): freshness and privacy passed, but full
+matching beyond preview omissions remains open. A separate complete-match child
+is being implemented. Native fieldwork caller `3ae91ce6` is Root-selected
+(`4f786dc7`), and source-only composition `868016b5` preserves it. The exact
+2028-01-18 fresh fieldwork admission needs a narrow per-instance scope seam;
+the 2027 audit period and approved service/framework scope stay fixed.
+Main product source and all 46 locked job payloads/statuses remain unchanged.
+Actual new-edition full fieldwork, runtime/UI adoption and destructive retirement
+are pending. Professional acceptance remains NOT_ASSERTED.
+
 2026-10-04 02:02 UTC actual Key success, holder failure and physical-backup recovery: the
 original paired Key receipt now exists (`026ee7a6`). CLEAN and MESSY each retain
 76 issues and 409 expectations, with 864/971 native references at unchanged
