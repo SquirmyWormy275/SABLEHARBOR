@@ -4350,10 +4350,10 @@
         "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5"
       },
       "current_actual_execution": {
-        "checkpoint_utc": "2026-10-04T14:40:24.279599+00:00",
-        "status": "INTERRUPTED_PREFIX_PRESERVED_EXACT_B01_ID_FIX_APPLIED_PARITY_AND_SAME_ID_CONTINUATION_PENDING",
-        "process_pid": 3942835,
-        "settled_exit_code": 1,
+        "checkpoint_utc": "2026-10-04T15:23:25.257145+00:00",
+        "status": "ACTUAL_SAME_ID_CONTINUATION_RUNNING_AFTER_EXACT_52_TASK_PARITY",
+        "process_pid": 18961,
+        "settled_exit_code": null,
         "confirmed_commands": 2050,
         "unconfirmed_commands": 0,
         "reconciliation_sha256": "f2249928f2ef17684930e6086defcc946f5f54de757d168b4d216ef0d8255fd6",
@@ -4389,9 +4389,23 @@
         "isolated_current_commit": "e3f58473747fe3f8567c5a6b84b4f721012ab2c4",
         "current_declared_source_files": 287,
         "current_source_admission_sha256": "dae337ba552b3cef9a9f025f995893f94329a291a116beaca617db597bd32f61",
-        "current_case_parity_accepted": false,
-        "same_ID_continuation_executed": false,
-        "backup_key_confirmation_required": false
+        "current_case_parity_accepted": true,
+        "same_ID_continuation_executed": true,
+        "backup_key_confirmation_required": false,
+        "process_start_ticks": "17652877",
+        "current_case_parity_sha256": "d4bab8c7efafeb8862f9fbbc28d4ca963e4e5c0c333accab87552e0e1f3ea8e2",
+        "root_current_case_parity_sha256": "cfc08e8dd54a2e1b4b3f2075f56b8fc93b3eb4984c71e6cd4dd899def0747002",
+        "root_once_selection_sha256": "0a45a6d468ab4df7ff5720488c26ee073097a4b642d7a0ba6c06c8d415786746",
+        "continuation_start_sha256": "65b40a526ef60431a2e692ec484a713285ad30f652a6640b1160a7dc9881399b",
+        "actual_continuation_caller_sha256": "9b6169b42601cd0b45b7329bdda7c6c25b274e177ba3e9586c8ebfd7a3a84cd8",
+        "actual_continuation_input_sha256": "ed78719d52d18c54c650afeb295912dea7bf69cedc0e142ad209231a227ef578",
+        "metadata_only_eligibility_sha256": "53845d04c8214cd2369877f8193ba44ea691b8ff456798f0631ff124ee8f7430",
+        "independent_continuation_source_review_sha256": "4e2b39444110048d93c4025de97addb343c4f91e0528158a1985615eadc1bdff",
+        "actual_modes_observation_boundary": "PRESERVED_PRE_CONTINUATION_BOUNDARY_NOT_CURRENT_WRITER_STATE",
+        "confirmed_commands_observation_boundary": "HISTORICAL_PREFIX_2050_NEW_COMMANDS_NOT_YET_RECONCILED",
+        "source_grants_observation_boundary": "PRE_CONTINUATION_RECONCILIATION_NOT_CURRENT_WRITER_ACL",
+        "reset_or_rebirth": false,
+        "cached_outcomes_imported": false
       }
     }
   },

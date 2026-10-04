@@ -1,5 +1,27 @@
 # Audit-suite execution closeout
 
+2026-10-04 15:24 UTC: the actual SAME-ID fieldwork continuation is running
+under the pinned Python 3.12 runtime, PID 18961/start 17652877. Root selected
+one invocation (`0a45a6d4`) of caller `9b6169b4` with actual input `ed78719d`;
+the launch record is `65b40a52`. The saved 2,050 confirmed commands, CLEAN
+revision 2,052 and MESSY revision 2 remain the starting boundary. The caller
+reuses genuine collected CLEAN B01 originals and does not reset, rebirth,
+reacquire those originals, import diagnostic outcomes or retry confirmed writes.
+
+Fresh actual-case comparison passed all 52 workforce task results and
+performed/unperformed contracts (`d4bab8c7`, Root `cfc08e8d`). Bounded evidence
+links reduce observations from 56,791 to 2,349 without changing dispositions.
+The existing verified-source lease now surrounds receipt reuse, avoiding
+3,932 redundant whole-company scans while keeping individual custody checks
+and complete source verification before and after the batch. Independent
+static review passed (`4e2b3944`); exact pre-import metadata eligibility also
+passed (`53845d04`). Current source remains commit `e3f58473`/287 files.
+
+Original conversion/cold/UI/owned stop/offline, actual paired replay, Key/UI,
+Main adoption and final cleanup remain pending. All 27 recovery archives have
+verified ordinary tar/zstd copies; no encryption key confirmation is required.
+All 46 locked job payloads and states remain unchanged.
+
 2026-10-04 14:43 UTC: the bounded pure B01 diagnostic confirmed the exact
 failure: two 129-character literal record identifiers appeared in 28 tasks.
 Every other observation/evidence predicate passed, and the largest workpaper
