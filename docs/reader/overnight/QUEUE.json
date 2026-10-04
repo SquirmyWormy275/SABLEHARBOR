@@ -2564,7 +2564,7 @@
       "engineering_closeout_matrix_sha256": "0b98a7deae0a8a41fec72dea67c0cff528bc72ddb1b4a5f705b3343f3d14703e",
       "postdelegation_coordinator_root_selected_input_review_sha256": "c4e9f11b7cd11ac678365ff2f2d23d7c6b7c124713ab26d6416c42d80a4766c7",
       "postdelegation_coordinator_status": "SELECTED_AUTHOR20_AND_IMMUTABLE_LINEAGE_PASS_ROOT286_REFERENCES_STATIC_PASS_UNFILLED_ACTUAL_FINAL_GATES_PENDING",
-      "checkpoint_utc": "2026-10-04T12:35:26.315267+00:00",
+      "checkpoint_utc": "2026-10-04T13:07:43.313175+00:00",
       "focused_delivery_successor_commit": "c696bda0a6c3e60c990d5ebcfbe39177fede6cb3",
       "focused_delivery_successor_status": "SELECTED_SEQUENTIAL_BACKEND_ACCEPTED_GENUINE_PARALLEL_BROWSER_STARTUP_REFUSAL_UNDER_FOCUSED_REPAIR",
       "focused_delivery_successor_dependency_sha256": "c0bd01bd24add29231732cbfd8a745eb8f04e8dea47110b90639969bbd3a1122",
@@ -4289,6 +4289,29 @@
         "actual_Key_binding_accepted": false,
         "original_cutover_accepted": false,
         "Main_product_frontend_adoption_accepted": false,
+        "final_cleanup_complete": false
+      },
+      "reference_custody_and_binding_source_checkpoint_2026_10_04": {
+        "checkpoint_utc": "2026-10-04T13:07:43.313175+00:00",
+        "status": "ACTUAL_FIELDWORK_RUNNING_REFERENCE_CUSTODY_VALIDATED_BINDING_AND_UI_PENDING",
+        "CLEAN_scope_phase_receipt_sha256": "7a3009e6117da164719bfc59321cb365cb8ff23903aead6e3fc39b3a8a57f5c8",
+        "CLEAN_scope_phase_revision": 162,
+        "CLEAN_scope_workpapers": 2,
+        "actual_paired_fieldwork_complete": false,
+        "actual_independent_fieldwork_accepted": false,
+        "existing1110_archive_custody_result_sha256": "a09e495c61a7ac259a6bc4d0232474c643821c63940b1061f44073c59ff926d8",
+        "archive_company_import_or_rebuild": false,
+        "archive_professional_validation": false,
+        "archive_query_cases_preparation_sha256": "86f8fe9705b6a1cde60ca767856b78c6a6731f471f9efed75c716cf9655bcda8",
+        "current_bound_source_joint_empty_query_check_complete": false,
+        "Root_paired_binding_bootstrap_source_selection_sha256": "988f419cc04dd9664612a157d1b6fc2d6dd07c6876a1e11f73790bef616421d0",
+        "binder_import_only_origin_admission_sha256": "85ae3c122459e9aea9f18b8e15272dbf175c990fed22f073d87f57f047636f9d",
+        "binder_additional_origin_files": 0,
+        "Root_conditional_FinalWT_V3_local_viewer_policy_sha256": "0bf11d577e2efed1470da38f14eed9efd9af6b47a8709445377b51a9a2e52926",
+        "actual_Key_binding_accepted": false,
+        "actual_V3_viewer_accepted": false,
+        "original_cutover_accepted": false,
+        "Main_adoption_accepted": false,
         "final_cleanup_complete": false
       }
     }

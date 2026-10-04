@@ -1,5 +1,29 @@
 # Audit-suite execution closeout
 
+2026-10-04 13:07 UTC: normal CLEAN scope collection/testing completed its two
+workpapers at revision 162 (`7a3009e6`); control fieldwork is still running.
+No completed paired capture or independent fieldwork acceptance is asserted.
+
+The existing version-2 canonical reference archive passed a single normal full
+custody check (`a09e495c`): all 1,110 originals, 1,110 keys and 2,221 ZIP members
+retain their exact bytes, canonical links and private file identities. It was
+not rebuilt or imported into Company. Its migration, causal, professional and
+unbound-reference gaps remain explicit. Full pinned scalar matching produced
+three browser query cases (`86f8fe97`), including a literal match omitted from
+its display preview; joint emptiness against genuine bound current sources
+still needs checking after actual Key binding.
+
+The normal paired Key bootstrap is source-selected (`988f419c`, body `7f860a85`)
+and its import-only source admission passed (`85ae3c12`), with no extra files
+beyond the accepted 286 source declarations. No constructors, SQL or actual
+binding ran in those checks. Genuine paired replay/current source/head gates
+remain mandatory. Root conditionally allows the new V3 reference viewer on
+FinalWT and separate local ports after all new actual prerequisites (`0bf11d57`),
+while the original recovery lane continues. Main adoption remains conditional
+on genuine original UI/owned stop/offline cutover, followed by fresh normal
+Main reopens on the same new born IDs. Final preservation and cleanup are pending.
+All 46 locked job payloads and states remain unchanged.
+
 2026-10-04 12:35 UTC: actual normal next-edition fieldwork is running once on
 both newborn rooms (caller `872cbca6`, input `5a1bda71`, process start `03162617`).
 The source-origin declaration was corrected to include two existing, reviewed
