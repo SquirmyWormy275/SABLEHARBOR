@@ -1,5 +1,22 @@
 # Active company-source audit workflow
 
+2026-10-04 23:26 UTC: The real bounded login diagnostic reached the correct
+Controls & tracker screen; Root inspected the safe PNG (`955e6a1a`). Its
+60-second heading wait expired, although successful bootstrap and engagement
+responses took 30.711 and 34.816 seconds. Exact overlap and the original QA
+failure's backend cause remain unmeasured. Diagnostic logout timed out before
+its logout POST; prior issued sessions remain unresolved. The separate
+pre-browser V1 failure and both actual outputs remain preserved.
+
+Three explicit 180-second QA/navigation/supplement budget siblings are frozen
+(`76583ba5`), whole-source inverses and syntax checked (`2c59642a`), and 174
+current frontend files plus prior real receipts closed (`8a76cf7f`). These are
+per-wait budgets, not a whole-journey deadline. No corrected UI run, FIRST8
+replay, STOP, offline, cutover, Main adoption or cleanup acceptance is issued.
+Source review found repeated verification and full-state parsing, without
+measured performance attribution or edits to either live runtime. SAME-ID
+fieldwork remains live; 3,316 new CLEAN RETURN filenames are metadata only.
+
 2026-10-04 22:37 UTC: Actual FIRST8 is accepted: exit 0, all eight
 ordinary HTTP command receipts, exact CLEAN 6229/MESSY 6354 transitions
 (`20b466a2`, Root `6b8bf4b1`, independent `92de1f06`, Root closure `7636beb7`).

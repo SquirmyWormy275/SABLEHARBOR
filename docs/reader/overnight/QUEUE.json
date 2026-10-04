@@ -4350,8 +4350,8 @@
         "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5"
       },
       "current_actual_execution": {
-        "checkpoint_utc": "2026-10-04T22:37:26.469148+00:00",
-        "status": "ACTUAL_SAME_ID_CONTINUATION_RUNNING_ORIGINAL_UI_TIMEOUT_UNDER_BOUNDED_DIAGNOSIS",
+        "checkpoint_utc": "2026-10-04T23:26:39.789309+00:00",
+        "status": "ACTUAL_SAME_ID_CONTINUATION_RUNNING_ORIGINAL_UI_BUDGET_CORRECTION_SOURCE_REVIEWED_PENDING_ONCE_RUN",
         "process_pid": 18961,
         "settled_exit_code": null,
         "confirmed_commands": 2050,
@@ -4457,21 +4457,22 @@
         "original_compact_shared_native_canonical_validator_used": true,
         "original_actual_cold_child_pid": 360719,
         "original_actual_cold_child_start_ticks": 18981722,
-        "original_actual_cold_child_status": "Genuine_cold_alive_after_preserved_QA_failure_pending_bounded_diagnosis",
+        "original_actual_cold_child_status": "Genuine_cold_alive_after_preserved_QA_and_diagnostic_failures_pending_once_corrected_QA",
         "original_UI_actual_execution_owner": "retained_learner_service",
         "conditional_Main_source_only_adoption_scheduling_addendum_sha256": "9c5eadd49cde9ea386a4c0a6bc6c930ad7399d5594533bf2b4c8a75daf78bbae",
         "conditional_Main_source_only_adoption_requires_original_cutover": true,
         "conditional_Main_source_only_adoption_requires_unrelated_next_run_completion": false,
         "Main_same_next_runtime_reopen_requires_next_quiescence_and_actual_gates": true,
         "continuation_metadata_only_progress": {
-          "observed_utc": "2026-10-04T21:58:50.924754+00:00",
-          "new_CLEAN_RETURN_filenames": 2859,
+          "observed_utc": "2026-10-04T23:26:39.789309+00:00",
+          "new_CLEAN_RETURN_filenames": 3316,
           "completed_CLEAN_legacy_phase_filenames": [
             "B01-LEGACY-PHASE.json",
             "B02-LEGACY-PHASE.json",
             "B03-LEGACY-PHASE.json",
             "B04-LEGACY-PHASE.json",
-            "B05-LEGACY-PHASE.json"
+            "B05-LEGACY-PHASE.json",
+            "B06-LEGACY-PHASE.json"
           ],
           "reconciled_current_SQL_or_company_ACL": false,
           "actual_paired_completion": false
@@ -4556,7 +4557,20 @@
         "original_QA_actual_UI_accepted": false,
         "original_QA_possible_issued_session_or_authority_change_unreconciled": true,
         "original_QA_bounded_diagnosis_source_preparation_authorized": true,
-        "original_QA_bounded_diagnostic_actual_execution": false
+        "original_QA_bounded_diagnostic_actual_execution": true,
+        "original_login_diagnostic_V1_report_sha256": "3b48e9aac9dca7cc41b41e1851476598da64138a8bd8495a12c1067b5bc2cc63",
+        "original_login_diagnostic_V1_status": "PRESERVED_PRE_BROWSER_SETUP_FAILURE_NO_HTTP",
+        "original_login_diagnostic_V2_report_sha256": "375304470383dbada9a73d24d2e2b9df419e7562a601bc1d19ee66472a7a0e14",
+        "original_login_diagnostic_V2_status": "ACTUAL_CONTROLS_RENDERED_HEADING_WAIT_TIMEOUT_OWN_LOGOUT_UNCERTAIN",
+        "Root_original_login_diagnostic_V2_visual_observation_sha256": "955e6a1a2243ba4677d6e6b1f3d2b450770a3b77bdb31909b5e308bc161a1f2b",
+        "original_login_diagnostic_V2_independent_review_sha256": "1d8069b631fcb966ac20736ff6319d4af62469d1d411d45529c0f02a277ad7c0",
+        "original_corrected_UI_source_handoff_sha256": "76583ba5a3948dc045ff3276ce1d2374f8c80e14974fb053ca46bd0d71cff804",
+        "Root_original_corrected_UI_source_review_sha256": "2c59642a16ec4b927d347abec54b22c71732ea7f4917b4edc476e6ac95aa78ee",
+        "Root_original_corrected_UI_current_static_prerequisite_closure_sha256": "8a76cf7f37cc8651a5baf41ee744a4059a017b2116193c884c56f7f67268ac73",
+        "original_corrected_UI_per_wait_budget_ms": 180000,
+        "original_corrected_UI_actual_execution": false,
+        "original_UI_latency_source_analysis": "Repeated verification, complete state parsing and serialized requests found in actual Original source; source-based mechanism, no measured attribution or ETA. Same paths remain in FinalWT.",
+        "original_prior_issued_sessions_unresolved": true
       }
     }
   },
