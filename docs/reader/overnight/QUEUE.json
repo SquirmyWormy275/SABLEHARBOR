@@ -3552,6 +3552,65 @@
         "original_Key_ready_or_actual_viewers_started": false,
         "all46_locked_job_payloads_and_statuses_unchanged": true,
         "professional_acceptance": "NOT_ASSERTED"
+      },
+      "isolated_native_consumer_and_reference_integration_checkpoint_2026_10_04": {
+        "as_of_utc": "2026-10-04T01:18:00Z",
+        "reference_composition": {
+          "commit": "c466ec95e9c8b2642faa3aefc155e2759f51e38e",
+          "handoff_sha256": "0392413be8cf88290f99c82529bb2760b486892d415b8cc2b150ff513936a964",
+          "exact_products": 15,
+          "Root_freshly_closed_pairs": 338,
+          "source_bytes": 27054778,
+          "configured_python": 92,
+          "actual_adoption": false
+        },
+        "native_consumer": {
+          "first_frozen_commit": "957d376bb05ffb4bad5f65bd1a7a89befa03d0b3",
+          "author_selected_checks": 25,
+          "independent_first_review_sha256": "281dc148605645e55a007b0823ed7e106451480eabfb241b75894306314af99f",
+          "independent_first_passed_checks": 30,
+          "independent_first_mixed_bridge_failures": 2,
+          "successor_commit": "fe4ca826b24efa3669e6bf0144cc7963b2227ebe",
+          "successor_handoff_sha256": "7e3ea4228d0a76f0e794deb258751932ed37bebe231518f6af4562470d7081a1",
+          "successor_author_selected_checks": 6,
+          "Root_freshly_closed_successor_pairs": 228,
+          "successor_source_bytes": 6924738,
+          "exact_inverse_replacements": 3,
+          "independent_successor_review": "PASS_SELECTED_SOURCE_FIRST_NATIVE_AND_LEGACY_METHOD_BRIDGE_WITH_EXPLICIT_QUALIFICATIONS",
+          "actual_adoption": false,
+          "independent_successor_review_sha256": "27d817e1df3e0e2187bcb80ba5ca034d5ccbf5fc0b9c11d879b052a8d319cd20",
+          "independent_successor_selected_checks": 16,
+          "one_new_source_first_fixture": {
+            "native_originals": 13,
+            "ordinary_collections": 13,
+            "verified_events": 19,
+            "all_52_legacy_workforce_result_fields_and_prior_observations_preserved": true
+          },
+          "combined_reference_consumer_stage": "/home/kingoftheeast/Projects/SABLEHARBOR-b3-v3-native-consumer-composition-wt",
+          "combined_stage_review": "PENDING"
+        },
+        "collection_and_documentary_path": {
+          "lookup_sha256": "26f460cb6fde744fa2342b6e91dda9626a0ebc31d42826578c0ca73554989f8a",
+          "flat_routes": 36,
+          "versions": 106,
+          "opaque_versions": 12,
+          "ordinary_PBC_company_collection": true,
+          "exact_versions_and_historical_dependencies_required": true,
+          "reader_interface": "scoped retained native LIST",
+          "all_original_citations_and_quarantine_warnings_preserved": true,
+          "opaque_artifact_reclassification": false,
+          "ordinary_workpaper_add_and_partial_task_update": true,
+          "population_sample_retest_acceptance": false,
+          "full_clause_or_automatic_PASS": false
+        },
+        "original_holder": {
+          "pid": 1927871,
+          "paired_Key_ready_receipt_observed": false,
+          "HTTP_activated": false
+        },
+        "actual_main_product_source_source_stores_new_lifetime_birth_fieldwork_migration_or_retirement_changed": false,
+        "locked_jobs_sha256": "2c16e6a5abf94a2b70be3924b8baac60bd56061fa592b75da3d58166a687040f",
+        "professional_acceptance": "NOT_ASSERTED"
       }
     }
   },

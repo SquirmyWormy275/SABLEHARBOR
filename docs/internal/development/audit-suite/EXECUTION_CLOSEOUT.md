@@ -1,5 +1,53 @@
 # Audit-suite execution closeout
 
+2026-10-04 01:18 UTC isolated reference and native-method integration: the exact
+V3 archive/current-issue UI composition is frozen at `c466ec95` (`0392413b`).
+Root freshly closed its 338 source/copy pairs (27,054,778 bytes), fifteen exact
+donor products and eight preserved b3 modules. The genuine retained-workroom
+reuse function's AST is unchanged. Three selected OWN backend cases, build and
+declared desktop/mobile browser checks passed. The separate published-edition
+constructor check and its instrumented replay have distinct roots/receipts;
+neither supplies actual 5,714-record/409-task/current-Key/archive adoption.
+Configured Python membership is 92; production namespace and supplemental
+origin closure remain separate actual invocation requirements.
+
+The first native consumer `957d376b` passed 25 author checks but independent
+review rejected two mixed-input bridges (`281dc148`, counter `6755b6d9`), while
+30 named checks passed. Its source and failures remain unchanged. The new
+`fe4ca826` successor (`7e3ea422`) has six focused passing checks and an exact
+three-replacement whole-byte inverse: two bridges exclude only the admitted
+native-policy text support tuple from unrelated legacy JSON histories, and the
+workforce fallback projects the pinned task-map keys. Root closed 228 successor
+pairs (6,924,738 bytes) and nine unchanged helper/adapter/intake/contract files.
+Independent review now accepts that selected successor (`27d817e1`): nine
+read-only checks reuse the settled counter files, and seven checks close one
+distinct tiny clock-bearing source-first fixture with thirteen originals,
+thirteen ordinary collections and nineteen verified events. All 52 legacy
+workforce result fields and prior observations coexist with native facts. The
+earlier clockless-reference refusal remains outside the unchanged legacy
+contract; no source was rewritten to cure it. Actual consumer adoption remains
+unperformed. A new isolated child now combines the corrected four consumer
+products with the fifteen reference products for one focused composition check.
+
+The scoped reader preserves ordinary collection receipts, exact source versions
+and quarantine status. It permits only the three literal opaque backup roles
+whose unchanged intake reason is unsupported `.bin`, for bounded hash/equality
+and explicit local JSON-read-contract analysis. Other quarantine/type/custody
+failures remain refused. The supported documentary path is ordinary
+`workpaper.add` with all original citations and intake warnings, followed by
+`task.update` as IN_PROGRESS/LIMITATION or FAIL. The completed independent OWN
+workpaper retained all seventeen citations; population import still refused.
+Population/sample/retest availability guards and full-clause/PASS restrictions
+are unchanged. The finite acquisition lookup (`26f460cb`) covers 36 flat routes,
+106 versions and twelve opaque versions; it requires exact historical versions
+and dependencies through issued PBCs and normal `company.collect`, then the new
+list reader. Legacy typed wrappers are not a substitute for this byte path.
+
+Main product source, actual source stores and original PID1927871 remain
+unchanged. The original paired Key-ready receipt is still pending; no HTTP,
+new lifetime, audit birth, actual fieldwork, migration or retirement occurred.
+All 46 locked job payloads and statuses remain unchanged.
+
 2026-10-03 23:57 UTC actual header/contract preparation and concrete method gap: Root read
 exactly thirteen metadata columns through one immutable, query-only SELECT from
 the actual published company library (`2023e74a`). Source content was denied.
