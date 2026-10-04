@@ -3807,6 +3807,47 @@
         "Main_product_source_changed": false,
         "actual_original_UI_cutover_new_fieldwork_and_cleanup_complete": false,
         "professional_acceptance": "NOT_ASSERTED"
+      },
+      "actual_encoding_and_conditional_continuation_checkpoint_2026_10_04": {
+        "checkpoint_utc": "2026-10-04T05:07:38Z",
+        "status": "ACTUAL_ORIGINAL_CONVERSION_ENCODING_AND_CONTINUATION_WAITING",
+        "conversion": {
+          "session_id": 27102,
+          "pid": 3028524,
+          "process_alive": true,
+          "CLEAN_derivative_bytes": 333975552,
+          "MESSY_derivative_started": false,
+          "final_receipt_exists": false,
+          "cumulative_application_read_bytes": 769004197907,
+          "phase": "CLEAN_LOSSLESS_EVENT_ENCODING_AFTER_OPENING_STRUCTURAL_CHECK",
+          "originals_retained": true,
+          "full_completion_ETA": "NOT_ESTABLISHED"
+        },
+        "conditional_continuation": {
+          "session_id": 59167,
+          "pid": 3244988,
+          "process_alive": true,
+          "manifest_sha256": "1fcea3d429fe5087d4695d5a444ec96ce5c1a01dcf6e131a07549a1aa3432fb5",
+          "macro_sha256": "bda6da03c522725e6f57bb31cd0e326724c24c4ee8a4388035278cb51c1b8d9d",
+          "current_phase": "WAITING_NAMED_ORIGINAL_CONVERTER",
+          "allowed_followon_phases": [
+            "independent_derivative_check",
+            "CONFIGURE"
+          ],
+          "stops_at_configured_outputs": true,
+          "cold_HTTP_UI_birth_cleanup_allowed": false,
+          "initial_preflight_exit1_preserved": true,
+          "typed_conditional_review_predicate_corrected_in_manifest_only": true,
+          "whole_manifest_inverse_passed": true,
+          "converter_retried": false,
+          "actual_derivative_or_configuration_accepted": false
+        },
+        "checker_source_root_review_sha256": "3b3bf90a32470a701f771c4366c9f05075a37233f629ceee1f2b79be570f114d",
+        "existing_runtime_compatibility_root_review_sha256": "807dd5ca137eeed63e15fc4016c4043c4116feab5eb64f5c032f490e000d2fed",
+        "all46_jobs_and_statuses_unchanged": true,
+        "actual_original_UI_cutover_new_fieldwork_and_cleanup_complete": false,
+        "Main_product_source_changed": false,
+        "professional_acceptance": "NOT_ASSERTED"
       }
     }
   },

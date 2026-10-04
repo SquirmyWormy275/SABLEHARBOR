@@ -1,5 +1,40 @@
 # Audit-suite execution closeout
 
+2026-10-04 05:07 UTC actual encoding and conditional continuation: the original
+converter (session27102, PID3028524) has progressed beyond CLEAN's opening
+SQLite structural checks into lossless event encoding. CLEAN's derivative is
+333,975,552 bytes; MESSY has not started and no completed conversion receipt
+exists. Cumulative application reads are 769,004,197,907 bytes. These include
+repeated reads and do not establish a unique-byte percentage or an event rate.
+All originals remain intact. Full completion ETA remains unestablished.
+
+The independent compact checker with the explicitly shared native canonical
+primitive is Root-selected (`3b3bf90a`); complete derivative replay must still
+execute. Original exact raw-byte comparison remains separately attributed to
+the frozen converter, with no independent all-original-raw certificate claimed.
+The unchanged existing eight-key 5,714 runtime review is compatible with the
+final source composition (`807dd5ca`); stale preparatory nested stamps were
+preserved and corrected. Neither selection credits actual new audit birth,
+runtime adoption or fieldwork.
+
+The Root-owned conditional continuation is now running (session59167,
+PID3244988), waiting for the named original converter. Its filled V2 manifest is
+`1fcea3d4`; the selected frozen macro remains `bda6da03`. On an accepted completed
+conversion it runs the selected independent derivative check, writes separately
+qualified combined acceptance, and invokes unchanged CONFIGURE once. It stops
+at configured outputs; COLD/HTTP, UI, new birth and cleanup are outside this job.
+The initial invocation exited1 before creating its output namespace: Root's
+manifest incorrectly expected boolean true for a pinned review's conditional
+string. The failed manifest/invocation are preserved. V2 changes only that exact
+predicate, the new output namespace and dependent Root declaration scope/pin;
+the whole manifest inverse passed. No converter retry or source patch occurred.
+
+Actual independent replay/configuration, genuine cold viewers, original C3/M5,
+QA/navigation/Key/debrief checks, graceful settlement/offline replay, new-edition
+fieldwork and conditional cleanup remain pending. All 46 locked job payloads
+and statuses and Main product source are unchanged. Professional acceptance is
+NOT_ASSERTED.
+
 2026-10-04 04:28 UTC concrete caller and UI closeout preparation: the final
 next-edition fieldwork caller is frozen (`60d5894f`, handoff `124ad2bc`),
 independently source-reviewed (`8a3ba66f`) and Root-selected (`24a8dd83`). Root
