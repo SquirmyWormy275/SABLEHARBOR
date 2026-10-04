@@ -1,5 +1,17 @@
 # Local audit-training delivery
 
+2026-10-04 22:22 UTC: The closed CLEAN B06 checkpoint is byte-verified
+(`9d4d70d0`): revision 5003, 5,001 observed commands including the retained
+2,050-command prefix, 298 workpapers and 111 base tasks still unrun. The
+normal SAME-ID producer remains active. This small checkpoint does not
+establish current SQL, ACL, raw replay or paired acceptance.
+
+The sole actual FIRST8 worker is running (`4cf25a83`, PID 653519/start
+20128781). Its CLEAN three-action transition has returned through revision
+6229 and received an independent partial receipt review; the same worker
+continues MESSY. Overall FIRST8/UI/STOP/offline and aggregate cutover remain
+pending. All 46 locked job payloads and states remain unchanged.
+
 2026-10-04 22:07 UTC: Genuine paired Original cold startup receipts are now
 accepted (`145fd793`, cold receipt `9fced5ef`, Root `f149bb73`). Ten small
 reference bodies and their stable metadata close; the live process identity,

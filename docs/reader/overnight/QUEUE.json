@@ -4350,7 +4350,7 @@
         "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5"
       },
       "current_actual_execution": {
-        "checkpoint_utc": "2026-10-04T22:07:45.079145+00:00",
+        "checkpoint_utc": "2026-10-04T22:22:51.090680+00:00",
         "status": "ACTUAL_SAME_ID_CONTINUATION_RUNNING_AFTER_EXACT_52_TASK_PARITY",
         "process_pid": 18961,
         "settled_exit_code": null,
@@ -4528,7 +4528,19 @@
         "original_actual_cold_start_receipt_sha256": "9fced5efb4e3f935db4cfd6f38c5590deda8b6a6ef7934c99e98a10c9cc708f5",
         "Root_original_actual_cold_ready_review_sha256": "f149bb7321f7fa53c2e44debf78c97cbd4f63ff90884ddc32a319de879bc03ed",
         "original_actual_normal_cold_ready_receipts_accepted": true,
-        "original_FIRST8_authorization_sha256": "121ab04bffc7d07251ae6f433817e50339cb54901b0867514d61d7894e962c56"
+        "original_FIRST8_authorization_sha256": "121ab04bffc7d07251ae6f433817e50339cb54901b0867514d61d7894e962c56",
+        "closed_CLEAN_B06_checkpoint": {
+          "receipt_sha256": "9d4d70d07606a036f18204918a366e340b3f1a4e12a85842cb1650e781fb3a52",
+          "revision": 5003,
+          "observed_command_count_including_historical_prefix": 5001,
+          "workpapers": 298,
+          "unrun_tasks": 111,
+          "current_SQL_or_raw_or_professional_acceptance": false
+        },
+        "original_FIRST8_actual_process_pid": 653519,
+        "original_FIRST8_actual_process_start_ticks": "20128781",
+        "original_FIRST8_actual_process_launch_sha256": "4cf25a83793250bbf52c8e514b3cba6be4a2ca8effb315b6b05f15f5f39bf5cd",
+        "original_FIRST8_paired_acceptance": false
       }
     }
   },
