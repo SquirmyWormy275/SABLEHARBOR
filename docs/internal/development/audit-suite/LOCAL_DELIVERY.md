@@ -1,5 +1,24 @@
 # Local audit-training delivery
 
+2026-10-05 07:16 UTC: Root prepared the exact nine-field Original offline authorities from
+23 freshly hashed ordinary references (`c27fbdb1`; actual metadata call exit 0,
+session 39381). CLEAN `e844d0be` and MESSY `967fd251` join accepted first proof
+f188/capture0140, the original source archive, exact role/scope/binding digests,
+and the actual three CLEAN/five MESSY FIRST8 commands. No command was replayed.
+The two immutable captured terminal states were read only to verify historical
+metadata: their actual clock is 2028-01-16T13:00:00+00:00. They were not used as
+a factory, seed, source collection or current-world claim. No SQL, HTTP, product
+import or current-room construction occurred.
+
+The 2GiB state/32MiB subtree settings are explicit resource ceilings, not claimed
+observed maxima across every frame. Actual once-per-packet bound enforcement,
+corrected UI, owned STOP and final packet selection remain pending; the prefix
+selection grants no offline launch or cutover acceptance. Native session 18182
+has completed all four CLEAN native phases (131 new returns) and reached 2024
+MESSY returns at this checkpoint. Corrected Original child 1414043 remains active;
+READY and actual wait settlement have not been observed. Main adoption, final
+verification and cleanup remain open; all 46 job states remain unchanged.
+
 2026-10-05 06:11 UTC: Actual corrected normal Original configuration calls completed
 under all three Original locks (tool exit 0, `86162d`; result `93fc4de9`). The
 existing public configuration functions generated four new configuration files;
