@@ -1,5 +1,31 @@
 # Active company-source audit workflow
 
+2026-10-05 08:53 UTC: Corrected Original genuinely reached READY (`7bcfdd78`);
+owner `2518231b` closes exact child1414043/start22879626 and both real8780/8781
+listeners. The ready callback's existing loaded source/serving closures ran;
+this is startup acceptance only, not UI/offline/cutover acceptance.
+
+Root once guarded-read session48836 completed with actual tool exit0 and dead
+PID1589679 (`52a3abe4`; settlement `9016e76d`). All24 requests returned: both
+assessment and released-debrief lists are empty; all four operator/auditor
+drafts are EMPTY version0; all four owned sessions logged out and refused the
+old cookie with401. Hidden staged previews and lost historical issuance remain
+qualified unknown. No assessment/release/draft save or formal audit command
+was submitted by these reads.
+
+Root selection `b87a7292` approves one distinct fresh engineering demonstration
+(QA `f78466bf`) followed by one navigation run (`9e9d75a9`) only after actual
+QA exit0. This does not resume or replay the previous failed QA or FIRST8.
+Source-only preparation failure `4d0347` was a mistyped NAV digest, before any
+output, HTTP or UI; it is preserved and the unchanged actual candidate selected.
+Actual UI execution, Root PNG review and supplemental review remain pending.
+
+Native worker18182 remains active; MESSY has 3180 genuine command returns
+and the first legacy B01 phase complete. CLEAN's four native phases and131
+new returns remain complete. No paired final result or actual writer settlement.
+Both offline packet checks, Main adoption, final native verification and
+preservation/cleanup remain pending; all46 queue jobs/statuses are unchanged.
+
 2026-10-05 08:23 UTC: Native worker 18182 remains active. Its first MESSY legacy batch
 has genuinely completed at revision2865: 54 workpapers and355 explicit NOT_RUN
 tasks remain. Subsequent command returns have reached2944. CLEAN's four native
