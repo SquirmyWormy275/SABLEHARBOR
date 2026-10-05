@@ -2214,7 +2214,7 @@
         "actual_pipeline_complete": false
       },
       "native_kind_recovery_2026_10_05": {
-        "checkpoint_utc": "2026-10-05T03:55:00Z",
+        "checkpoint_utc": "2026-10-05T04:40:00Z",
         "root_source_gate": {
           "path": "/home/kingoftheeast/SABLEHARBOR-root-native-kind-recovery-source-review-20261005/ROOT_SOURCE_SELECTION.json",
           "sha256": "169adca8a93e39c2348dc0a2b300a9a0ee11ec81823d1a750214c111b75cd62b"
@@ -2224,7 +2224,18 @@
         "N_plain_interim_verification_sha256": "7349301bb38c6bb97ad3885a151c180ab8d72f80804602485d82c99043b4910b",
         "N_plain_interim_Root_review_sha256": "660ae245077302f935ecc9b46a0279f2b6430d43ff8b6e6b9959e322342693ff",
         "actual_readonly_runtime_admission": null,
-        "actual_resumed_run": null,
+        "actual_resumed_run": {
+          "pid": 1299099,
+          "start_time": 22442427,
+          "session_id": 18182,
+          "status": "ROOT_OWNED_RUNNING_NO_RESULT_OR_EXIT_OBSERVED",
+          "selection_sha256": "870a26e108c37e7b273a94378442f889daa4c1b2c15e3f71888baafe521a6d70",
+          "input_sha256": "c33db7ac8dc8323463c27b4c8d33b0471ba2003096adc562331f99b3d5d9040b",
+          "process_session_binding_sha256": "90decc9be143a3e36f721150dd13c4684d386e933bbbf2b0a9861727131f98a6",
+          "exit_code": null,
+          "result": null,
+          "automatic_retry": false
+        },
         "actual_pipeline_complete": false,
         "source_review_is_runtime_or_fieldwork_acceptance": false,
         "independent_corrected_reader_sha256": "a6361d5ef2cfddebc0df69172201a1b3e3418a8d6e9255d8f5f485dc7c929c5f",
@@ -2234,7 +2245,9 @@
         "readonly_diagnostic_process": {
           "pid": 1166868,
           "session_id": 8640,
-          "status": "RUNNING_NO_RESULT_OR_REFUSAL_OBSERVED"
+          "status": "ACTUAL_EXIT1_SETTLED_FAILURE_NOT_RUNTIME_ACCEPTANCE",
+          "exit_code": 1,
+          "pid_observed_dead": true
         },
         "readonly_diagnostic_independent_source_review_sha256": "2cdbe502c5365aaccf9ccf76cf2261a53df8a3a5802e1b27d363e3445136e19f",
         "collector_capture_handoff_sha256": "8e852ae270106a4c75dbebb5c9e0fbd777c2d9fac7dc2c3cc1e1da68a200f3fa",
@@ -2255,7 +2268,30 @@
         "corrected_Main_adopter_independent_source_review_sha256": "7214d4aac9ca8028b7131b3c63671a317af8f136997c47b6f0058c258960afa0",
         "corrected_Main_probe_independent_source_review_sha256": "9cb6842cf09199d0117a7b907bd3b14f60f07ac510a9a4e5256cf3b22dd4a333",
         "corrected_Main_adopter_source_sha256": "2eaea9b18978c6285f50ca9b493be2ecf69701fca42689964cacc90eaabd8ad5",
-        "corrected_Main_import_probe_source_sha256": "d080c4d29075dc5ee0fdd0486d624dc640c89a44fd920cea2193cede04921830"
+        "corrected_Main_import_probe_source_sha256": "d080c4d29075dc5ee0fdd0486d624dc640c89a44fd920cea2193cede04921830",
+        "readonly_diagnostic_actual_failure_settlement": {
+          "path": "/home/kingoftheeast/SABLEHARBOR-root-eight-retained-source-readiness-20261005/READONLY_FAILURE_PROCESS_SETTLEMENT.json",
+          "sha256": "2090737ba9fb13059a85b971a84e56da82083253c4ad63133e28fb0fe659534a"
+        },
+        "readonly_diagnostic_failure_cause": {
+          "predicate_maximum_ID_characters": 128,
+          "source_ID_rewritten": false,
+          "all11776_known_protected_files_unchanged_after_failure": true,
+          "actual_corrected_diagnostic": null,
+          "genuine_RETRY_observation_ID_characters": 151
+        },
+        "recovery_binder_source_sha256": "6909c0ac91c6f448bb3bc666d77aa7aa5a486dec540616953cb8c22d28dce2ed",
+        "recovery_binder_independent_source_review_sha256": "f7479b16d9ba93588eca8f53c42f35079f37bb3dc4c93dce295193624be83542",
+        "Root_recovery_binder_source_selection_sha256": "0a844801beae3042a4d37d31a4f7b7b91be65c53fd22ab98e1562d9f16e6063f",
+        "actual_partial_preflight_once_resume_eligibility": {
+          "path": "/home/kingoftheeast/SABLEHARBOR-root-native-kind-recovery-once-run-20261005/ROOT_CURRENT_NATIVE_RESUME_ELIGIBILITY.json",
+          "sha256": "8a1cc2c60615e1d98dc6109e8c7162cc105a58b70dc9f76127b6534d2776e846"
+        },
+        "complete_readonly_preflight_PASS_asserted": false,
+        "independent_forward_observation_ID_source_review_sha256": "1e58e10fb77784fea4c092bc9a04de737caf54ec1eec88da177f06d0e9c22af6",
+        "diagnostic_ID_membership_independent_source_review_sha256": "efc40889e34815d07d97fdc8720d7f7e66920bbb41d5d7da643ce4489871658f",
+        "Main_viewer_source_handoff_sha256": "a08a2e30d214a516d82137e586386bf5135e0d17013026b15c0f34410ac37348",
+        "Main_viewer_independent_source_review": null
       }
     },
     "current_shared_company_run": {

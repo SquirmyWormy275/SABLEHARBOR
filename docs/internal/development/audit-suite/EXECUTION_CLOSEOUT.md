@@ -1,5 +1,39 @@
 # Audit-suite execution closeout
 
+2026-10-05 04:40 UTC: Root selected and launched actual native-kind recovery
+once: session 18182, PID 1299099/start 22442427 (`870a26e1`, input `c33db7ac`,
+process binding `90decc9b`). The diagnostic exit 1 remains a failure; it was not
+relabeled a complete runtime pass. Explicit eligibility (`8a1cc2c6`) joins its
+partial genuine normal execution with actual postfailure SHA7 integrity209 and
+independent forward source review (`1e58e10f`), which confirms the diagnostic-only
+128-character cap is absent from the recovery worker and independent reader.
+The worker freshly performs normal source/callback/custody checks; every5875
+confirmed command and the existing8 COL identities are retained without replay.
+A later refusal requires exact journal reconciliation; automatic retry is off.
+
+The diagnostic-only identity membership correction passes independent source
+review (`efc40889`), with one saved focused positive/four-negative case. It has
+not been rerun on the live rooms. Main viewer correction is source-prepared
+(`a08a2e30`) and undergoing independent review. Actual fieldwork completion,
+corrected UI, offline replay, Main adoption and cleanup remain unaccepted.
+
+2026-10-05 04:30 UTC: Root diagnostic session 8640 genuinely returned exit 1;
+PID 1166868 is dead. The concrete refusal occurs at the ID/citation predicate:
+the check caps native observation IDs at 128 characters, while the genuine
+native operating RETRY identity derived from the selected source pin is 151.
+No resumed fieldwork or runtime acceptance is asserted. The refusal and actual
+settlement are preserved (`2090737b`). A separate Root check acquired all three
+locks and fully closed all 11776 protected files against the prior SHA and
+seven-field identities; those files remain unchanged. Its namespace closure
+covers its own check, not an unrecorded failed-case opening.
+
+A narrow diagnostic correction will match the finite actual RETRY identity set,
+with the existing facts and citation checks retained. The recovery-compatible
+binder selector now passes independent review (`f7479b16`) and Root source
+closure (`0a844801`); no Key binding ran. The Original owner still reports
+MESSY exporting, with no paired result/settlement (04:22 UTC); CLEAN remains
+published. Actual UI, independent replay, Main adoption and cleanup remain open.
+
 2026-10-05 03:55 UTC: The repaired Main adopter and fresh import probe passed
 independent source review (`7214d4aa`, `9cb6842c`). Root directly reviewed the
 material source differences and closed 227 immutable references (`09792f13`),
