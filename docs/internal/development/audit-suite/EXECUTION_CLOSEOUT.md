@@ -1,5 +1,27 @@
 # Audit-suite execution closeout
 
+2026-10-05 06:11 UTC: Actual corrected normal Original configuration calls completed
+under all three Original locks (tool exit 0, `86162d`; result `93fc4de9`). The
+existing public configuration functions generated four new configuration files;
+source imports/backend/static/six-asset closure passed before and after. No
+room constructor, SQL, HTTP or fieldwork was invoked by configuration. A
+metadata-only caller refusal (`4ec2de`) preceded imports/writes and is preserved.
+Ordinary raw-original backups were joined by their unchanged verified identities
+and authenticated stream lineage; no encryption or large rehash was repeated.
+
+Root selected corrected cold once (`dc1f2b0e`, CLI `fecc8978`). The retained
+service owner launched child 1414043/start 22879626, parent 1414042/start
+22879616, monitor 76036 (`cf7096e1`, `4c5257ce`). Actual wait return is pending;
+READY has not been observed. Native worker 18182 remains active, with 128 new
+CLEAN command returns and three native phase receipts observed at 06:05 UTC.
+
+Existing QA/NAV candidates are prepared (`9617d0f5`, `7e74fd83`) but unexecuted.
+Their Main package path anchors Playwright tooling; corrected served assets are
+selected independently. Prior QA has no saved private assessment baseline;
+ordinary guarded assessment/release/draft reads are required, and hidden staged
+preview uncertainty must not be replaced by an absence claim. No FIRST8 replay,
+Key reset, UI/offline/cutover/Main adoption/cleanup or professional acceptance.
+
 2026-10-05 05:37 UTC: Original owned STOP/export has genuinely settled. Owner closure
 `d357bb78` and Root fresh selection `891a5f2f` join paired result `96b4c9ca`,
 both published packets (CLEAN 6230 events/revision 6229; MESSY 6355/revision

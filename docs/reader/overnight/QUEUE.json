@@ -1805,7 +1805,7 @@
     "worktree": "SABLEHARBOR-audit-suite",
     "branch": "build/audit-training-suite",
     "boundaries": "Local integrated implementation; preserve immutable sources and private records. Atlas read-only. No inferred professional acceptance or remote deployment.",
-    "checkpoint_note": "Original STOP/export actually settled: ownerd357bb78/Root891a5f2f, paired96b4c9ca, packets C6230/rev6229 and M6355/rev6354, both room locks released. Target waitpid statusUNKNOWN; monitor exit0only, knownlogoutC1/M0 not globalissuedempty; failedQA privatewrite extent unresolved. Existing corrected Original CONFIGURE/cold assembly being filled; no actual restart. Native18182/PID1299099/inputc33db7ac remains active with no terminal result. Mainviewer637e source reviewed35d/Rootacaa. UI/offline/cutover/Main/exactcleanup pending; all46 jobs preserved; Atlas read-only; no professional or owner acceptance.",
+    "checkpoint_note": "Corrected Original normalconfigs actualexit0/86162d/result93fc4de9 with all3locks/currentSource+backend+sixasset closure. RootCOLD onceDC1/CLIfecc; child1414043/start22879626, ownedmonitor76036, launchcf7096/session4c525; no actualREADY/waitreturn. Original priorSTOP accepted891a5/d357/96b4, targetwaitpidUNKNOWN and failedQA privatewrite extent stillqualified. Native18182 active, C128new returns/threephase receipts observed06:05, no overallresult. QA9617/NAV7e74 candidates unexecuted; Mainpackage onlyPlaywright toolanchor. UI/offline/cutover/Main/exactcleanup pending; all46jobs unchanged; Atlas read-only; no professional/owner acceptance.",
     "active_agent_graph": {
       "date": "2026-10-01",
       "owner_instruction": "ok. Let 'er rip",
@@ -4836,6 +4836,20 @@
       "both_room_locks_released": true,
       "QA_private_write_extent_reconciled": false,
       "offline_UI_or_cutover_accepted": false
+    },
+    "corrected_original_runtime_attempt": {
+      "status": "ACTUAL_ONCE_LAUNCHED_READY_AND_TERMINAL_PENDING",
+      "normal_configuration_result_sha256": "93fc4de943ad8233bf9f7069e9b20df350a7f42883314ab38409af5203d7895b",
+      "normal_configuration_tool_exit_code": 0,
+      "once_selection_sha256": "dc1f2b0edf203a71e37e7ccb698d66a20a6cf966f4cbb902d682d3a3be58aed8",
+      "CLI_selection_sha256": "fecc897847e24034be6a4ab06951a0b832558ea0d0569903cf2d6940e6dcb30c",
+      "child_pid": 1414043,
+      "child_start_ticks": 22879626,
+      "owned_monitor_session": 76036,
+      "launch_sha256": "cf7096e1012a5432465a24fe614f15662006a61aceff7ed0febe57ebe12d035d",
+      "monitor_binding_sha256": "4c5257ce7ef1974b5ae988ebaa367f530f891008eeea66571847a69978466ce5",
+      "actual_READY_or_UI_accepted": false,
+      "FIRST8_replayed": false
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"
