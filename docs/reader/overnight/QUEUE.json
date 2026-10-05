@@ -1805,7 +1805,7 @@
     "worktree": "SABLEHARBOR-audit-suite",
     "branch": "build/audit-training-suite",
     "boundaries": "Local integrated implementation; preserve immutable sources and private records. Atlas read-only. No inferred professional acceptance or remote deployment.",
-    "checkpoint_note": "Actual continuation exit1 after CLEAN409 legacy workpapers: first B01 native supplement rejected empty observations or task facet mismatch after eight returned company collections, with grant cleanup reporting no failures. Current journal/ACL reconciliation and faithful correction pending; no auto retry/native or MESSY completion. PollingV2 overlap case/two builds/independent source review pass; corrected Original source assembly frozen, independent assembly and actual runtime acceptance pending. Original same-room export remains active after one owned SIGINT and genuine paired drain; no published packet/terminal result/lock release. Full UI/offline/cutover/Main adoption/retirement pending. All46 lockedjobs/statuses unchanged; Atlas read-only; no professional/owner acceptance.",
+    "checkpoint_note": "Actual N read-only current journal/ACL reconciliation passed: CLEAN5877/5875 exact returned commands including2050 historical/409legacy workpapers, no native WP or unconfirmed command; MESSY2; all572 grants inactive,5714native digest/922systems unchanged. Source trace identifies RESTORE/RETRY incorrectly selected for IAM; meaningful guard preserved. Private unsupported-IAM/B04 engineering-RETRY sameID continuation/verifier in preparation, no resumed run. Corrected Original assembly has qualified independent source approval; all-nine core preservation overclaim explicitly corrected to8unchanged plus approvedcomparisonappendage. Old Original export still active after owned paired drain. Actual cold/UI/offline/cutover/Main adoption/cleanup pending. All46 lockedjobs/statuses unchanged; Atlas read-only; no professional/owner acceptance.",
     "active_agent_graph": {
       "date": "2026-10-01",
       "owner_instruction": "ok. Let 'er rip",
@@ -4670,13 +4670,18 @@
         "V1_narrow_closed_polling_race_remaining": true,
         "V2_targeted_overlap_case_reported_passed": true,
         "V2_freeze_and_review": "PASS_SOURCE_ONLY",
-        "corrected_Original_source_assembly": "FROZEN_SOURCE_ONLY_INDEPENDENT_REVIEW_PENDING",
+        "corrected_Original_source_assembly": "QUALIFIED_INDEPENDENT_SOURCE_APPROVED_ACTUAL_RUNTIME_PENDING",
         "actual_repaired_company_UI_acceptance": false,
         "V2_handoff_sha256": "5ca6dfdb96e5614470a05bafe9fe66091daa8d693749145ba86ff4beaad25b58",
         "V2_independent_review_sha256": "b1aa9abf6dff37c19d1f425ce1b4fc9363a83969b236f118616de1c479523e77",
         "V2_production_builds_Original_and_Final_passed": true,
         "V1_polling_race_resolved_in_V2": true,
-        "corrected_Original_assembly_handoff_sha256": "1bd983d8c92c7abd61ae7c988a7ddf999ea46daad7d36e62eb5cbf61b3d296a9"
+        "corrected_Original_assembly_handoff_sha256": "1bd983d8c92c7abd61ae7c988a7ddf999ea46daad7d36e62eb5cbf61b3d296a9",
+        "corrected_Original_assembly_independent_review_sha256": "067d55e295365003297e92f8506cbd2bb9b4d42b61d2e52dfc6d5f2b2b1213f1",
+        "Root_qualified_source_selection_sha256": "46f5f26c86567dbdc2db6979f30e263c2ed3ae629bff00f670220924ea2206b8",
+        "core_source_preservation_qualification_sha256": "291fc6308eb9a833fc1fa095fb29450d9c234f4a0af1e8550fcc76dc624da045",
+        "core_nine_source_files_all_unchanged": false,
+        "core_eight_unchanged_comparison_original_full_prefix_preserved": true
       },
       "original_QA_600S_independent_actual_failure_review_sha256": "fb854013018e5f9293798cc14ca0ca649f599a0e052d6538dc102f2d002f22cb",
       "closed_CLEAN_B09_checkpoint": {
@@ -4717,9 +4722,21 @@
         "confirmed_company_collect_returns": 8,
         "unconfirmed_attempted_command": null,
         "cleanup_receipt_failures": [],
-        "current_journal_ACL_reconciliation": "PENDING",
+        "current_journal_ACL_reconciliation": "PASS_CURRENT_BOUNDARY_ONLY_NOT_COMPLETED_FIELDWORK",
         "automatic_retry_performed": false,
-        "native_MESSY_or_professional_acceptance": false
+        "native_MESSY_or_professional_acceptance": false,
+        "current_reconciliation_sha256": "c0ed66d5a277d3ac8df20fcce166b2b376f7b37dadefa291a16d6fdbabbb15c3",
+        "Root_actual_reconciliation_review_sha256": "7f857fe08304e8deabffd919c3b9d1524ca63b19cd0a1b90265752be8750ef30",
+        "current_CLEAN_revision": 5877,
+        "current_CLEAN_exact_returned_commands": 5875,
+        "current_MESSY_revision": 2,
+        "current_all572_grants_inactive": true,
+        "current_native_versions": 5714,
+        "current_registered_systems": 922,
+        "source_diagnosis": "Selected CLEAN8 refs contain RESTORE/RETRY and no IAM execution or PERIOD ledger; workforce callback cannot credit selectedIAM003/007 tasks. Preserve guard and prior collections.",
+        "continuation_status": "PRIVATE_SOURCE_PREPARATION_NO_RESUMED_RUN",
+        "proposed_unsupported_IAM_is_task_credit": false,
+        "proposed_RETRY_engineering_bridge": "Exact existing SH-ENG-003 contracts; no PASS/full-clause inference."
       }
     }
   },

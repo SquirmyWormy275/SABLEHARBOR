@@ -1,5 +1,26 @@
 # Audit-suite execution closeout
 
+2026-10-05 02:26 UTC: Actual read-only reconciliation passed once (`c0ed66d5`,
+Root `7f857fe0`), holding all three N locks. CLEAN revision 5877 has all 5875
+returned commands rejoined to the raw journal, including the historical 2050;
+409 legacy workpapers remain intact, with no native supplement workpaper or
+unconfirmed command. MESSY remains at revision 2. All 572 grants are inactive;
+the 5714-version native digest and 922-system census are unchanged.
+
+Source diagnosis confirms the CLEAN B01 selection contains RESTORE/RETRY
+records but no IAM operation or PERIOD ledger. The meaningful guard refused
+IAM credit. A private continuation is being prepared to record unsupported IAM
+without task promotion and examine RETRY against the existing engineering
+contracts, then complete the remaining applicable work. No resumed run exists.
+
+The corrected Original assembly now has qualified independent source approval
+(`067d55e2`, Root `46f5f26c`). Eight core modules are unchanged; the ninth has
+an approved comparison appendage preserving its full original source. The old
+all-nine-unchanged receipt assertion is explicitly superseded (`291fc630`).
+Actual configuration, repaired UI and offline acceptance remain pending; the
+old Original export is still active. No adoption or deletion has occurred.
+
+
 2026-10-05 02:06 UTC: The continuation worker has genuinely settled with exit 1
 (`d51e27ce`), without a final paired result or automatic retry. CLEAN B09 legacy
 work remains 409 workpapers and zero unrun legacy tasks. The first native B01
