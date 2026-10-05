@@ -1,37 +1,39 @@
 # Active company-source audit workflow
 
-2026-10-05 13:40 UTC checkpoint: Original owned monitor76036 genuinely returned
-wait0 with its child absent and both packets published. Root closure `21f2`
-accepts operational drain/export/lock settlement only. Qualified immutable
-history proofs are accepted for CLEAN (`43474344`, 6230 events/2741 originals)
-and MESSY (`84438f46`, 6355 events/2863 originals, 768.158 seconds). These do not
-accept final V3 UI, current-packet rebind, owned STOP or aggregate cutover.
-Root expiry review `aed7` records six existing credentials valid until October10;
-no new identities are asserted.
+2026-10-05 14:13 UTC checkpoint: Native continuation `3bb94f30` remains
+running under monitor7885, child2045026/start25335479. The genuine MESSY
+B05 retained-continuation phase is complete at revision4357: 199 workpapers,
+210 unrun tasks, 4355 durable commands, 4354 observed returns and one
+journal-only commit; professional acceptance is false. Its 436-byte phase
+receipt SHA256 is
+`44ff072d607d4e3ec53979d512f1450aea3e9a006c149f664c6ed449bad824d3`.
+Only the three remaining B05 tasks were continued. The old47 tasks' custody
+and committed4339 update without a RETURN remain conserved; this phase is not
+a synthetic full50-task receipt. Later batches, final five-database closure,
+independent replay, Key and Main remain pending.
 
-Normal V3 CONFIGURE session19439 actually exited0 (result `4ebbb`), producing
-CLEAN configurations `b53c`/`8f7d` and MESSY `8862`/`cafe8`. Root-filled cold
-selection `12bc` and phase `82803` authorize the sole Original owner. Actual
-monitor58159 launched child2117718/start25651250 and parent2117716/start25651243
-with source `de9`; E3 launch receipt `1a565100` records that tuple. READY, UI and
-eventual wait remain pending. Failed-QA logout and hidden-preview qualifications
-remain. No endpoint readiness or UI pass is claimed.
+Original monitor58159 child2117718/start25651250 remains in live V3 startup
+under selection `12bc` and source `de9`; genuine READY, UI and eventual wait
+remain pending. Root's exact ten-second /proc observations showed active CPU
+for both workers, which establishes activity only. QA, guarded private-read
+and NAV input candidates are prepared as source-only, with no executions.
+Prior failed-QA logout and hidden-preview qualifications remain unresolved.
+Root source-only admissions `4be0` and `38c` retain actual completion, current
+authority and independent replay as future snapshot/capture/reader and
+binder/viewer requirements.
 
-Native continuation `3bb94f30` remains active under monitor7885,
-child2045026/start25335479 and parent2045024/start25335472. It is loading retained
-history; the MESSY output directory now exists, with no new commands observed. Starting CLEAN6008/MESSY4339, the six
-normally renewed same-ID credentials and the journal-only committed4339 update
-remain preserved. No completed3d, fabricated RETURN, reacquisition or cached
-outcome is claimed; actual fieldwork completion and independent replay are open.
+Root observed Seagate absent through lsblk/findmnt at 14:12:48 UTC; the user
+will reconnect it. Final plain preservation and cleanup await verified drive
+reappearance. Internal free space was 43.43 GiB at 14:02:43 UTC. The accepted
+34-archive plain closeout `a2f`/index `8f4` and qualified immutable Original
+CLEAN/MESSY history proofs `43474344`/`84438f46` remain historical evidence;
+no new backup or deletion occurred. Original operational closure `21f2`
+and normal V3 CONFIGURE result `4ebbb` do not accept final UI or cutover.
 
-Root source-only admission `4be0` accepts the new snapshot/capture/reader
-follow-ons; `38c` accepts the binder/viewer caller selectors. They retain genuine
-3bb completion, current authority and independent replay as future requirements,
-not runtime, Key, Main or UI acceptance. Current plain preservation uses the
-verified34-archive closeout `a2f` and index `8f4`; no encryption is required.
-Final UI/NAV/SUP, Root PNG review, current bindings/STOP/packet closure, Next
-replay/Key/Main, final preservation and cleanup gates remain pending. All46 jobs
-and all126 existing status/state values remain unchanged. This checkpoint update changes only documentation and queue notes.
+Final UI/NAV/SUP, Root PNG review, current bindings/owned STOP/packet closure,
+Next replay/Key/Main, final preservation and cleanup remain pending. All46
+jobs and all126 existing status/state values remain unchanged. This checkpoint
+changes only documentation and queue notes.
 
 2026-10-05 12:12 UTC checkpoint: Independent CLEAN history verification71680
 completed with actual child/driver exit0. Root admission `43474344` freshly
