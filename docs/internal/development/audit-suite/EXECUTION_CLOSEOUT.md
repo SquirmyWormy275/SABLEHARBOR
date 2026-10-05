@@ -1,5 +1,27 @@
 # Audit-suite execution closeout
 
+2026-10-05 03:33 UTC: Corrected PERIOD mapping verification passed independent
+source review (`a6361d5e`, Root `30a16aa7`), preserving the original rejection
+and failed scalar-shaped case. Prepared recovery input also passed actual
+metadata preflight (`f7214258`), closing 11769 refs and preserving all 5875
+confirmed commands. The genuine read-only eight-original diagnostic is now
+running once under Root session 8640, PID 1166868 (`14c4cc87`); it has no
+result/refusal yet. Independent diagnostic source review passed (`2cdbe502`).
+No resumed fieldwork or runtime acceptance is asserted.
+
+The final normal collector/capture successors are source-ready (`8e852ae2`)
+and independently reviewed (`45dafa3d`), separating seven applicable supplements
+from one taskless unsupported IAM note. Their actual result/writer/current-state
+inputs remain unfilled. Corrected Main integration requires five repaired paths
+missing from the old recipe: 71 tracked targets plus six Final V2 assets and
+106 postcopy checks. This is preparation only; no source adoption occurred.
+
+Original CLEAN packet publication was genuinely observed (`3bd43f19`), with
+6230 events/revision 6229. MESSY and the paired result/process settlement remain
+pending. Live corrected UI, offline replay, cutover and exact cleanup remain
+open. No professional or owner acceptance, remote changes or Atlas writes.
+
+
 2026-10-05 03:04 UTC: The native-kind recovery caller/helper passed Root
 source review (`169adca8`): both whole-source inverses close, completed CLEAN
 legacy work is skipped, historical PBC/COL commands are preserved, and

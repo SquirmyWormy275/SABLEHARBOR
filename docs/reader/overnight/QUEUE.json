@@ -1805,7 +1805,7 @@
     "worktree": "SABLEHARBOR-audit-suite",
     "branch": "build/audit-training-suite",
     "boundaries": "Local integrated implementation; preserve immutable sources and private records. Atlas read-only. No inferred professional acceptance or remote deployment.",
-    "checkpoint_note": "Root native-kind recovery source review169adca8 passed with historical5875/CLEANlegacy409 unchanged and unsupported IAM taskless/no credit. Independent reader855df59c found genuine PERIOD source-hash mapping versus scalar guard; narrow successor/read-only runtime diagnostic pending, no resumed fieldwork. N ordinary complete-tree backup7349301b/Root660ae245 verified. Corrected Original source46f5 remains approved; old export still pending/no published result02:56UTC. Actual corrected cold/UI/offline/cutover/Main/cleanup pending; all46 lockedjobs/statuses unchanged; Atlas read-only; no professional/owner acceptance.",
+    "checkpoint_note": "Corrected PERIOD mapping source a636/Root30a16 and prepared-input metadata f721 passed. Genuine readonly8-original diagnostic running once Root8640/PID1166868/selection14c4 with source review2cd; no actual result or resumed fieldwork. Collector/capture8e85 independently source-reviewed45d. Corrected Main recipe needs71tracked+6assets/106checks; no adoption. Original CLEAN packet3bd genuinelypublished6230events/rev6229; MESSY/paired result and processsettlement pending. Actual correctedUI/offline/cutover/Main/exactcleanup open; all46 lockedjobs unchanged; Atlas read-only; no professional/owner acceptance.",
     "active_agent_graph": {
       "date": "2026-10-01",
       "owner_instruction": "ok. Let 'er rip",
@@ -2214,19 +2214,39 @@
         "actual_pipeline_complete": false
       },
       "native_kind_recovery_2026_10_05": {
-        "checkpoint_utc": "2026-10-05T03:04:00Z",
+        "checkpoint_utc": "2026-10-05T03:33:00Z",
         "root_source_gate": {
           "path": "/home/kingoftheeast/SABLEHARBOR-root-native-kind-recovery-source-review-20261005/ROOT_SOURCE_SELECTION.json",
           "sha256": "169adca8a93e39c2348dc0a2b300a9a0ee11ec81823d1a750214c111b75cd62b"
         },
-        "independent_reader_status": "CHANGES_REQUIRED_PERIOD_SOURCE_HASH_MAPPING",
+        "independent_reader_status": "PASS_QUALIFIED_SOURCE_ONLY_PERIOD_MAPPING_CORRECTION",
         "independent_reader_review_sha256": "855df59cfab3ab1ddc245fea305288846204189c1690037436d575ac1d9e542c",
         "N_plain_interim_verification_sha256": "7349301bb38c6bb97ad3885a151c180ab8d72f80804602485d82c99043b4910b",
         "N_plain_interim_Root_review_sha256": "660ae245077302f935ecc9b46a0279f2b6430d43ff8b6e6b9959e322342693ff",
         "actual_readonly_runtime_admission": null,
         "actual_resumed_run": null,
         "actual_pipeline_complete": false,
-        "source_review_is_runtime_or_fieldwork_acceptance": false
+        "source_review_is_runtime_or_fieldwork_acceptance": false,
+        "independent_corrected_reader_sha256": "a6361d5ef2cfddebc0df69172201a1b3e3418a8d6e9255d8f5f485dc7c929c5f",
+        "Root_corrected_reader_source_sha256": "30a16aa7818f788248389810ac35aa005714621dc592d6db8ca5d8b2d5d6e47b",
+        "actual_prepared_input_metadata_preflight_sha256": "f721425878ab8be0c3e38c2aaf681141fbb8048d1278666daeb12df146781782",
+        "readonly_diagnostic_once_selection_sha256": "14c4cc87170a7f5c08bfb86cabb55e6e552d5929ea781294159edb0d3d307234",
+        "readonly_diagnostic_process": {
+          "pid": 1166868,
+          "session_id": 8640,
+          "status": "RUNNING_NO_RESULT_OR_REFUSAL_OBSERVED"
+        },
+        "readonly_diagnostic_independent_source_review_sha256": "2cdbe502c5365aaccf9ccf76cf2261a53df8a3a5802e1b27d363e3445136e19f",
+        "collector_capture_handoff_sha256": "8e852ae270106a4c75dbebb5c9e0fbd777c2d9fac7dc2c3cc1e1da68a200f3fa",
+        "collector_capture_independent_review_sha256": "45dafa3d4d6df9c2b74835a5107b898afb3b597ac33d38b4b194b0ae4515b9e8",
+        "original_CLEAN_published_manifest_sha256": "3bd43f192970838210d658ea655e0813087dd1c72dad66ac9ebbfb846fd5af4d",
+        "original_paired_export_settlement": null,
+        "corrected_Main_preparation_scope": {
+          "tracked_targets": 71,
+          "compiled_assets": 6,
+          "postcopychecks": 106,
+          "actual_adoption": false
+        }
       }
     },
     "current_shared_company_run": {
