@@ -1,5 +1,18 @@
 # Audit-suite execution closeout
 
+2026-10-05 03:55 UTC: The repaired Main adopter and fresh import probe passed
+independent source review (`7214d4aa`, `9cb6842c`). Root directly reviewed the
+material source differences and closed 227 immutable references (`09792f13`),
+including exact parent inverses for both Main bodies and the final normal
+snapshot/capture bodies. The 71 tracked targets, six Final V2 assets and 106
+postcopy checks remain preparation; no adoption, imports or runtime acceptance.
+
+The Root-owned read-only diagnostic remains active under session 8640, with
+no result or refusal observed. The Original owner reports CLEAN packet
+publication complete, MESSY export still active and no paired settlement.
+Actual fieldwork continuation, corrected live UI, offline replay and cleanup
+remain open. Source review does not close these tasks.
+
 2026-10-05 03:33 UTC: Corrected PERIOD mapping verification passed independent
 source review (`a6361d5e`, Root `30a16aa7`), preserving the original rejection
 and failed scalar-shaped case. Prepared recovery input also passed actual

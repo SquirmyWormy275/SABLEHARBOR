@@ -2214,13 +2214,13 @@
         "actual_pipeline_complete": false
       },
       "native_kind_recovery_2026_10_05": {
-        "checkpoint_utc": "2026-10-05T03:33:00Z",
+        "checkpoint_utc": "2026-10-05T03:55:00Z",
         "root_source_gate": {
           "path": "/home/kingoftheeast/SABLEHARBOR-root-native-kind-recovery-source-review-20261005/ROOT_SOURCE_SELECTION.json",
           "sha256": "169adca8a93e39c2348dc0a2b300a9a0ee11ec81823d1a750214c111b75cd62b"
         },
         "independent_reader_status": "PASS_QUALIFIED_SOURCE_ONLY_PERIOD_MAPPING_CORRECTION",
-        "independent_reader_review_sha256": "855df59cfab3ab1ddc245fea305288846204189c1690037436d575ac1d9e542c",
+        "independent_reader_review_sha256": "a6361d5ef2cfddebc0df69172201a1b3e3418a8d6e9255d8f5f485dc7c929c5f",
         "N_plain_interim_verification_sha256": "7349301bb38c6bb97ad3885a151c180ab8d72f80804602485d82c99043b4910b",
         "N_plain_interim_Root_review_sha256": "660ae245077302f935ecc9b46a0279f2b6430d43ff8b6e6b9959e322342693ff",
         "actual_readonly_runtime_admission": null,
@@ -2246,7 +2246,16 @@
           "compiled_assets": 6,
           "postcopychecks": 106,
           "actual_adoption": false
-        }
+        },
+        "historical_reader_rejection_sha256": "855df59cfab3ab1ddc245fea305288846204189c1690037436d575ac1d9e542c",
+        "Root_follow_on_source_selection": {
+          "path": "/home/kingoftheeast/SABLEHARBOR-root-reviewed-follow-on-source-selection-20261005/ROOT_SOURCE_SELECTION.json",
+          "sha256": "09792f13a0fb6cc8d72c48db7cc166b4ffa7f7adf654bc6ec03fc1a48174c039"
+        },
+        "corrected_Main_adopter_independent_source_review_sha256": "7214d4aac9ca8028b7131b3c63671a317af8f136997c47b6f0058c258960afa0",
+        "corrected_Main_probe_independent_source_review_sha256": "9cb6842cf09199d0117a7b907bd3b14f60f07ac510a9a4e5256cf3b22dd4a333",
+        "corrected_Main_adopter_source_sha256": "2eaea9b18978c6285f50ca9b493be2ecf69701fca42689964cacc90eaabd8ad5",
+        "corrected_Main_import_probe_source_sha256": "d080c4d29075dc5ee0fdd0486d624dc640c89a44fd920cea2193cede04921830"
       }
     },
     "current_shared_company_run": {
