@@ -1,5 +1,34 @@
 # Audit-suite execution closeout
 
+2026-10-05 16:36 UTC checkpoint: Native continuation `3bb94f30` remains
+running under sole monitor 7885, child 2045026/start 25335479. Its genuine B06
+legacy phase receipt `1ded0296` records revision 5164, 298 workpapers and 111
+unrun base tasks, with 5162 durable commands, 5161 observed returns and the
+preserved journal-only commit. Root independently byte-closed the 414-byte
+receipt. These are completed-phase counts; later legacy/native treatments,
+final five-database closure, independent replay, Key and Main remain pending.
+
+Original V3 genuinely reached READY under sole monitor 58159, exact serving
+child 2117718/start 25651250. READY `533b7c84` and owner process/listener closure
+`23492de3` are actual observations. Root source/config/current-principal
+preflight `3c8d7b02` passed its stated metadata extent. Root selected one
+existing guarded private API read invocation `8af6b360`, now running under
+separate monitor 68909, child 2152576/start 26724284. Its actual return and
+settlement remain pending. QA tooling-only byte closure `8c29ffd6` covers
+426 files and Node 26.7.0 plus installed Chromium and Playwright. No new QA,
+navigation, supplement, Root PNG acceptance, STOP or cutover has occurred.
+Prior lost-session and hidden-preview qualifications remain unresolved;
+FIRST8 is never replayed.
+
+The Seagate remains physically absent at 16:31 UTC; the user has said they
+will reconnect it. Internal free space is 43.07 GiB at 16:33 UTC. Accepted
+plain archives and both qualified immutable Original history proofs remain
+historical evidence. Final preservation and destructive cleanup still await
+verified storage and all remaining acceptance gates. No encryption, push,
+deployment or Atlas write occurred. All 46 jobs and 126 existing status/state
+values remain unchanged; this checkpoint updates documentation and queue
+notes only.
+
 2026-10-05 14:13 UTC checkpoint: Native continuation `3bb94f30` remains
 running under monitor7885, child2045026/start25335479. The genuine MESSY
 B05 retained-continuation phase is complete at revision4357: 199 workpapers,
