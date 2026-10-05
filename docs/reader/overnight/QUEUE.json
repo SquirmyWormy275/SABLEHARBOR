@@ -4350,8 +4350,8 @@
         "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5"
       },
       "current_actual_execution": {
-        "checkpoint_utc": "2026-10-04T23:41:42.113638+00:00",
-        "status": "ACTUAL_SAME_ID_CONTINUATION_RUNNING_ORIGINAL_180S_QA_FAILED_UNDER_GRANULAR_DIAGNOSIS",
+        "checkpoint_utc": "2026-10-04T23:59:47.996396+00:00",
+        "status": "ACTUAL_SAME_ID_CONTINUATION_RUNNING_ORIGINAL_GRANULAR_LOGIN_DIAGNOSTIC_ONCE_RUNNING",
         "process_pid": 18961,
         "settled_exit_code": null,
         "confirmed_commands": 2050,
@@ -4464,15 +4464,16 @@
         "conditional_Main_source_only_adoption_requires_unrelated_next_run_completion": false,
         "Main_same_next_runtime_reopen_requires_next_quiescence_and_actual_gates": true,
         "continuation_metadata_only_progress": {
-          "observed_utc": "2026-10-04T23:26:39.789309+00:00",
-          "new_CLEAN_RETURN_filenames": 3316,
+          "observed_utc": "2026-10-04T23:59:47.996396+00:00",
+          "new_CLEAN_RETURN_filenames": 3482,
           "completed_CLEAN_legacy_phase_filenames": [
             "B01-LEGACY-PHASE.json",
             "B02-LEGACY-PHASE.json",
             "B03-LEGACY-PHASE.json",
             "B04-LEGACY-PHASE.json",
             "B05-LEGACY-PHASE.json",
-            "B06-LEGACY-PHASE.json"
+            "B06-LEGACY-PHASE.json",
+            "B07-LEGACY-PHASE.json"
           ],
           "reconciled_current_SQL_or_company_ACL": false,
           "actual_paired_completion": false
@@ -4585,7 +4586,23 @@
         "original_corrected_QA_actual_UI_accepted": false,
         "original_corrected_QA_private_teaching_release_or_draft_write_reached": false,
         "original_diagnostic_V3_source_preparation_authorized": true,
-        "original_diagnostic_V3_actual_execution": false
+        "original_diagnostic_V3_actual_execution": true,
+        "original_diagnostic_V3_actual_pid": 827711,
+        "original_diagnostic_V3_actual_start_ticks": 20753091,
+        "original_diagnostic_V3_actual_launch_sha256": "07ca58ba5a158f857088c000828a1995ea6d2acdd32f7ab0daa3087187cac242",
+        "original_diagnostic_V3_root_once_selection_sha256": "01d23e9eee9e6d5455b15e3733aca1ae887d65656a85a8e08151207343bbb309",
+        "original_diagnostic_V3_root_source_review_sha256": "14a55f05e035039dd29a659aaf2517c119f9d8ee6d4e9c89b197c6d8c32e4cdb",
+        "original_diagnostic_V3_independent_source_review_sha256": "62a442fe8bfa97e219ad7e2b1331edcccd595c38c0727a12d610ea39ec620ad6",
+        "original_diagnostic_V3_actual_exit_code": null,
+        "original_corrected_QA_failure_independent_review_sha256": "0acfc1a8cb21928f39c0cb240ddd09c33db5261b10b2856d0372ed0cde62c4c4",
+        "closed_CLEAN_B07_checkpoint": {
+          "receipt_sha256": "ef61e3a4a4fa2952e7fd99bb68ccb3b682970567f2079e272cd6388b630b9fba",
+          "revision": 5498,
+          "observed_command_count_including_historical_prefix": 5496,
+          "workpapers": 360,
+          "unrun_tasks": 49,
+          "current_SQL_or_raw_or_professional_acceptance": false
+        }
       }
     }
   },

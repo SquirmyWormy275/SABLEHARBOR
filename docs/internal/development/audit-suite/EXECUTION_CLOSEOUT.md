@@ -1,5 +1,21 @@
 # Audit-suite execution closeout
 
+2026-10-04 23:59 UTC: CLEAN B07 is now byte-closed (`ef61e3a4`):
+revision 5498, command count 5496 including the historical 2050 prefix,
+360 workpapers and 49 unrun tasks. These are checkpoint receipt fields, not
+current SQL/ACL or paired acceptance. MESSY has not started.
+
+One granular login diagnostic is running: child 827711/start 20753091,
+launch `07ca58ba`, source `729e7a04`, plan `2cbc7985`, Root once-selection
+`01d23e9e`. Root source review `14a55f05` and independent `62a442fe` closed the
+exact eleven-change inverse, safe event/buffered-API timing and own-session
+logout guards. Budget 600000ms applies per selected wait, not the whole phase.
+The real 180-second QA failure is independently preserved (`0acfc1a8`).
+Source trace proves Controls does not await the five auxiliary reads; they
+can queue the later explicit API bootstrap. This is a source-based mechanism,
+not measured attribution. Actual diagnostic result/PNG/logout remain pending.
+No QA/FIRST8 replay, NAV/SUP/STOP/offline/cutover/adoption/retirement accepted.
+
 2026-10-04 23:36 UTC: The one corrected 180-second QA settled exit 1
 (`8eb2591f`), again within CLEAN operator login (`b8557885`). Root closed the
 actual failure (`d85113b9`). Successful browser responses include bootstrap,
