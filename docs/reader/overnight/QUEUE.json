@@ -1805,7 +1805,7 @@
     "worktree": "SABLEHARBOR-audit-suite",
     "branch": "build/audit-training-suite",
     "boundaries": "Local integrated implementation; preserve immutable sources and private records. Atlas read-only. No inferred professional acceptance or remote deployment.",
-    "checkpoint_note": "Actual N read-only current journal/ACL reconciliation passed: CLEAN5877/5875 exact returned commands including2050 historical/409legacy workpapers, no native WP or unconfirmed command; MESSY2; all572 grants inactive,5714native digest/922systems unchanged. Source trace identifies RESTORE/RETRY incorrectly selected for IAM; meaningful guard preserved. Private unsupported-IAM/B04 engineering-RETRY sameID continuation/verifier in preparation, no resumed run. Corrected Original assembly has qualified independent source approval; all-nine core preservation overclaim explicitly corrected to8unchanged plus approvedcomparisonappendage. Old Original export still active after owned paired drain. Actual cold/UI/offline/cutover/Main adoption/cleanup pending. All46 lockedjobs/statuses unchanged; Atlas read-only; no professional/owner acceptance.",
+    "checkpoint_note": "Root native-kind recovery source review169adca8 passed with historical5875/CLEANlegacy409 unchanged and unsupported IAM taskless/no credit. Independent reader855df59c found genuine PERIOD source-hash mapping versus scalar guard; narrow successor/read-only runtime diagnostic pending, no resumed fieldwork. N ordinary complete-tree backup7349301b/Root660ae245 verified. Corrected Original source46f5 remains approved; old export still pending/no published result02:56UTC. Actual corrected cold/UI/offline/cutover/Main/cleanup pending; all46 lockedjobs/statuses unchanged; Atlas read-only; no professional/owner acceptance.",
     "active_agent_graph": {
       "date": "2026-10-01",
       "owner_instruction": "ok. Let 'er rip",
@@ -2212,6 +2212,21 @@
         "independent_next_lane": "actual producer capture → independent standalone8125 once; no producer callbacks or professional credit",
         "Root_final_lane": "actual acceptance → Main integration/normal reopen/newKey/UI → fresh plain preservation → dependency-cleared exact cleanup",
         "actual_pipeline_complete": false
+      },
+      "native_kind_recovery_2026_10_05": {
+        "checkpoint_utc": "2026-10-05T03:04:00Z",
+        "root_source_gate": {
+          "path": "/home/kingoftheeast/SABLEHARBOR-root-native-kind-recovery-source-review-20261005/ROOT_SOURCE_SELECTION.json",
+          "sha256": "169adca8a93e39c2348dc0a2b300a9a0ee11ec81823d1a750214c111b75cd62b"
+        },
+        "independent_reader_status": "CHANGES_REQUIRED_PERIOD_SOURCE_HASH_MAPPING",
+        "independent_reader_review_sha256": "855df59cfab3ab1ddc245fea305288846204189c1690037436d575ac1d9e542c",
+        "N_plain_interim_verification_sha256": "7349301bb38c6bb97ad3885a151c180ab8d72f80804602485d82c99043b4910b",
+        "N_plain_interim_Root_review_sha256": "660ae245077302f935ecc9b46a0279f2b6430d43ff8b6e6b9959e322342693ff",
+        "actual_readonly_runtime_admission": null,
+        "actual_resumed_run": null,
+        "actual_pipeline_complete": false,
+        "source_review_is_runtime_or_fieldwork_acceptance": false
       }
     },
     "current_shared_company_run": {

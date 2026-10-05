@@ -1,5 +1,25 @@
 # Local audit-training delivery
 
+2026-10-05 03:04 UTC: The native-kind recovery caller/helper passed Root
+source review (`169adca8`): both whole-source inverses close, completed CLEAN
+legacy work is skipped, historical PBC/COL commands are preserved, and
+unsupported IAM receives one taskless limitation without task credit. The
+existing four engineering facets examine actual RETRY observations. Genuine
+read-only runtime admission and the resumed run remain pending.
+
+Independent verifier review found a concrete PERIOD ABI mismatch (`855df59c`):
+the genuine producer emits a source-hash mapping, while the guard expected a
+string. The saved neutral positive case used the wrong shape. A narrow
+successor is being prepared; that case supplies no actual-runtime acceptance.
+
+The reconciled N tree has an independently verified ordinary Seagate backup
+(`7349301b`, Root `660ae245`), with every member verified and GNU tar exiting 0.
+No encryption or source deletion was performed. The old Original export still
+has no published packet/result as of 02:56 UTC. Corrected Original source
+approval remains valid; actual repaired UI, Main adoption and cleanup are
+pending. Atlas stays read-only; no professional or owner acceptance is inferred.
+
+
 2026-10-05 02:26 UTC: Actual read-only reconciliation passed once (`c0ed66d5`,
 Root `7f857fe0`), holding all three N locks. CLEAN revision 5877 has all 5875
 returned commands rejoined to the raw journal, including the historical 2050;
