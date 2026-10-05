@@ -1,5 +1,24 @@
 # Audit-suite execution closeout
 
+2026-10-05 02:06 UTC: The continuation worker has genuinely settled with exit 1
+(`d51e27ce`), without a final paired result or automatic retry. CLEAN B09 legacy
+work remains 409 workpapers and zero unrun legacy tasks. The first native B01
+extension collected eight company records, then rejected empty observations or
+a substituted task facet (`29eb1196`); no unconfirmed command is recorded in
+that interruption receipt. Temporary grant cleanup reported no failures
+(`ab380c20`). Current journal/ACL reconciliation and a faithful correction are
+pending; native and MESSY completion are not asserted.
+
+The polling V2 overlap case, both affected production builds and independent
+source review now pass (`5ca6dfdb`, `b1aa9abf`). The corrected Original source
+assembly is frozen (`1bd983d8`): 417 copies and 64 explicit external references,
+with the normal factory/serve/drain/export functions unchanged. Its independent
+assembly review and actual configuration/runtime acceptance remain pending.
+The old Original process is still exporting after genuine paired drain; no
+published recovery packet or terminal result exists at this checkpoint.
+Full corrected UI, paired fieldwork, Main adoption and cleanup remain pending.
+
+
 2026-10-05 01:33 UTC: CLEAN legacy B09 is byte-closed (`284539f9`):
 revision 5867, command count 5865 including the historical 2050 prefix,
 409 workpapers and zero unrun legacy tasks. The native extension phases and
