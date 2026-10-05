@@ -1805,7 +1805,7 @@
     "worktree": "SABLEHARBOR-audit-suite",
     "branch": "build/audit-training-suite",
     "boundaries": "Local integrated implementation; preserve immutable sources and private records. Atlas read-only. No inferred professional acceptance or remote deployment.",
-    "checkpoint_note": "Catalogue source correction173b/c2d and8focuschecks d37 actualexit0/6000refs2.455MB/bounds32+8MiB retained. V3de9/32dd417sameleaves onlyassessmentbytes;4globalinverse16functionsexact/same64externals/native4/6assets. Roota9fresh941SHA7sourceprepaccepted, noactualruntimeacceptance. OwneronepidfdSIGINT318/preflight0c60; sameenginea460 servers/workerssettled C4M2KNOWNmaps/heads3/IDs/Key same; export/realPopen76036 settlementpending. Native18182activeM3575returns/B03legacy112WP297NOT_RUN; C4native131complete. Newconfig/cold/Mainsuccessorspreponly; actualUI/offline/native/Main/preserve/cleanup pending. All46jobs unchanged; Atlasreadonly/noownerprofessionalcredit.",
+    "checkpoint_note": "Root source selection 9ff accepts V3 normal configure/cold candidates 1af and Main successors 57ea/a5a5/1c98; exact 8/2/3 inverses and future Main 287 map 4c43 (only assessment 173b changes), 71 tracked files/six assets/106 checks. Actual config/settlement/launch/adoption/import/runtime/UI/offline/cutover remain unfilled or pending. QA source 05c approved 5097: precise options substeps/response 200 before title, 19-replacement inverse, saved syntax exit 0; unchanged actions/order/endpoints/credentials/600000 ms and no actual QA approval. Root 10:14:25 UTC checkpoint has native PID 1299099/start 22442427/session 18182 and Original PID 1414043/start 22879626/monitor 76036 live; no native command totals inferred from directory entries. Prior logout/hidden-preview uncertainty preserved. All 46 jobs/statuses unchanged; Main/FinalWT/N/served source/assets/Atlas untouched.",
     "active_agent_graph": {
       "date": "2026-10-01",
       "owner_instruction": "ok. Let 'er rip",
@@ -4879,6 +4879,63 @@
       "V3_assessment_donor_sha256": "173b9a87ddbd7bc660fb6122d74100a05badde9ad7d624c4c8f4d6c0df06e328",
       "V3_saved_focused_result_sha256": "d37fac832f2ed9ff870589157172eee058957fd03947e1ab737c8e02d822ee17",
       "V3_actual_configuration_or_launch_performed": false
+    },
+    "catalogue_source_only_preparation_2026_10_05": {
+      "root_checkpoint_utc": "2026-10-05T10:14:25+00:00",
+      "source_selection": {
+        "path": "/home/kingoftheeast/SABLEHARBOR-root-catalogue-successor-and-cold-candidate-source-selection-20261005/ROOT_PREPARATION_SELECTION.json",
+        "sha256": "9ff46eb93764f1d8dfa60b61b7229a4ed3a9a5ff238e9e59107c6a075604399d"
+      },
+      "V3_normal_configure_cold_candidate_handoff_sha256": "1af5ec7d758c3eb4b7e2be139153e5f21e6e351ed2d44b50e888253b80648d37",
+      "Main_successor_source_sha256": {
+        "adopter": "57ea24abfb4f1db2d2d81eb0522856f46abd097712822e7c168ab025eaa155dc",
+        "fresh_import_probe": "a5a5b2903d0513438f30e0ab33c7d3c004542c3b1fb7dfda0971a25cf3b79c15",
+        "viewer": "1c98bdf88f2a73f71807878d1f1f28da951fd3d54237ec11e886548f4796e2ca"
+      },
+      "whole_source_inverse_replacement_counts": [
+        8,
+        2,
+        3
+      ],
+      "expected_Main287_not_yet_adopted": {
+        "path": "/home/kingoftheeast/SABLEHARBOR-final-Main-assessment-catalogue-adoption-successor-20261005/EXPECTED_MAIN_CODE_FILES_287_CATALOGUE_NOT_YET_ADOPTED.json",
+        "sha256": "4c43cf79185b8787e9321d37a9bf4e4b1d70a9c5ee3fc6ea7b2613300e966517",
+        "changed_origin": "enterprise.audit_suite.instructor_assessments",
+        "changed_origin_sha256": "173b9a87ddbd7bc660fb6122d74100a05badde9ad7d624c4c8f4d6c0df06e328"
+      },
+      "future_adoption_scope": {
+        "tracked_files": 71,
+        "assets": 6,
+        "checks": 106,
+        "origins": 287
+      },
+      "QA_source_approval": {
+        "path": "/home/kingoftheeast/SABLEHARBOR-root-qa-assessment-options-source-approval-20261005/ROOT_SOURCE_APPROVAL.json",
+        "sha256": "5097afc41d45fa6198cbc9255e504880f2e2753d1bc835ea4eae09ab3b5438ea"
+      },
+      "QA_source_sha256": "05c04aa3b97e15d97a4a508889e0d7ae43d6c844a67971a7f45a2e4dbaedac49",
+      "QA_source_extent": "19-replacement whole inverse to b322; precise teaching/options substeps and explicit response200 before title wait; saved syntax exit0. Actions/order/endpoints/credential handling/600000ms waits unchanged. Source preparation only.",
+      "actual_QA_execution_approved": false,
+      "V3_actual_configuration_settlement_launch_pins_filled": false,
+      "actual_Main_adoption_import_runtime_UI_offline_cutover_accepted": false,
+      "live_jobs_at_Root_checkpoint": {
+        "native": {
+          "pid": 1299099,
+          "start_ticks": 22442427,
+          "session": 18182
+        },
+        "Original": {
+          "pid": 1414043,
+          "start_ticks": 22879626,
+          "owned_monitor_session": 76036
+        }
+      },
+      "native_current_command_total": null,
+      "native_current_command_total_basis": "No inference from directory entries; no new current-world reads.",
+      "prior_failed_QA_logout_and_hidden_preview_uncertainty_preserved": true,
+      "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5",
+      "product_assets_FinalWT_N_Atlas_changed": false,
+      "extent": "Confirmed source-only preparation; actual eligibility and output acceptance remain Root-held."
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"

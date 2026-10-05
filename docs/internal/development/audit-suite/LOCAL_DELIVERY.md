@@ -1,5 +1,28 @@
 # Local audit-training delivery
 
+2026-10-05 10:14:25 UTC checkpoint: Root source selection `9ff46eb9` accepts
+V3 normal configure/cold candidates (`1af5ec7d`) and the Main catalogue
+successors: adopter `57ea24ab`, fresh-import probe `a5a5b290` and viewer
+`1c98bdf8`. Their exact 8/2/3 source inverses passed finite source review.
+Future Main map `4c43cf79` retains 287 origins, changing only the assessment
+entry to `173b9a87`; adoption remains 71 tracked files, six assets and 106
+checks. The V3 candidate's actual configuration, child settlement, Root
+launch authority and output pins remain unfilled. This accepts preparation,
+not actual Main adoption, imports, runtime, UI, offline or cutover completion.
+
+Root source approval `5097afc4` separately accepts QA refinement `05c04aa3`:
+19 exact replacements recover `b322c5e3`; precise teaching/options substeps
+and an explicit options response 200 check precede the title wait. Existing
+actions, order, endpoints, credential handling and 600000 ms waits are unchanged.
+The saved syntax result passed; no new QA execution or output is approved.
+
+At that Root checkpoint, native PID 1299099/start 22442427 (session 18182) and
+Original PID 1414043/start 22879626 (owned monitor 76036) remained live. Current
+native command totals are not inferred from directory entries. Prior failed-QA
+logout and hidden-preview uncertainty remain qualified. Main, FinalWT, N,
+served source/assets and Atlas are unchanged; all 46 queue jobs/statuses remain
+unchanged. Actual UI, final replay, adoption and cleanup remain pending.
+
 2026-10-05 09:49 UTC: Assessment catalogue donor `173b9a87` is frozen (`c2d2f2b7`):
 only the arbitrary whole-catalogue4096 guard is removed. Eight focused isolated
 checks actually passed (`d37fac83`, exit0), including6000 complete references
