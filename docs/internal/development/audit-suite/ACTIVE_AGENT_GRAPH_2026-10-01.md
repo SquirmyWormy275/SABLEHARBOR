@@ -1,5 +1,23 @@
 # Active company-source audit workflow
 
+2026-10-05 00:44 UTC: The full measured-budget QA settled once, exit 1
+(`8c4d6e90`, report `47721390`). CLEAN operator login passed in 319.991 seconds.
+The Key issue-index step then timed out; its saved comparison GET returned 413.
+Root closed the actual receipts (`e49669be`); owner failure closure is `90001386`.
+Independent actual failure review is `fb854013`; it grants no full UI acceptance.
+No successful assessment/release/draft response, selected release ID or PNG is
+recorded. The coarse teaching step covers several subsequent operations, so an
+unconfirmed private write and the exact timeout call remain unresolved. Its own
+logout was not reached; no retry or dependent action was performed.
+
+Source review identifies a 32 MiB comparison response guard and eager repeated
+inventory detail, plus an assessment-options 8 MiB check on the raw inventory.
+These are source findings; the failed response body and its measured size were
+not retained. An isolated correction is being prepared for a bounded Key index,
+explicitly paged details and the actual assessment-options reply. Current source
+roots, native evidence, audit outcomes and the active fieldwork writer remain
+unchanged. Full UI, STOP/offline/cutover, adoption and retirement remain pending.
+
 2026-10-05 00:28 UTC: CLEAN B08 is now byte-closed (`5c769b47`):
 revision 5642, command count 5640 including the historical 2050 prefix,
 383 workpapers and 26 unrun tasks. These are checkpoint receipt fields, not

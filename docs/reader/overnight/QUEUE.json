@@ -1805,7 +1805,7 @@
     "worktree": "SABLEHARBOR-audit-suite",
     "branch": "build/audit-training-suite",
     "boundaries": "Local integrated implementation; preserve immutable sources and private records. Atlas read-only. No inferred professional acceptance or remote deployment.",
-    "checkpoint_note": "Original genuine normal cold readiness and FIRST8 passed. Granular login diagnostic passed with its own logout; prior issued sessions remain unresolved. Full original measured-budget QA is running once; its current substep and private-write progress are unknown until settlement. Next5714 continuation CLEAN B08 checkpoint records 383 workpapers and 26 unrun tasks; MESSY has not begun. No current SQL, paired fieldwork, full UI, STOP/offline/cutover, Main adoption or cleanup acceptance is asserted. All34 historical backups are verified ordinary .tar.zst copies; obsolete ciphertext and key were removed. All46 locked job payloads and statuses remain unchanged. Atlas remains read-only; professional and owner usability acceptance are not asserted.",
+    "checkpoint_note": "Original genuine normal cold readiness and FIRST8 passed. Granular login diagnostic passed with its own logout; prior issued sessions remain unresolved. Full measured-budget QA settled once exit1: login passed, Key issue-index timed out and comparison GET413 was recorded. Exact timeout call and unconfirmed private writes remain unresolved; no retry. Isolated bounded Key/assessment transport correction is in preparation. Next5714 continuation CLEAN B08 records383 workpapers/26 unrun; MESSY has not begun. No current SQL, paired fieldwork, full UI, STOP/offline/cutover, Main adoption or cleanup acceptance is asserted. All34 historical backups are verified ordinary .tar.zst copies; obsolete ciphertext and key were removed. All46 locked job payloads/statuses unchanged; Atlas read-only; professional and owner usability acceptance not asserted.",
     "active_agent_graph": {
       "date": "2026-10-01",
       "owner_instruction": "ok. Let 'er rip",
@@ -4639,7 +4639,30 @@
         "current_UI_substep": "UNKNOWN_NOT_PERSISTED_UNTIL_SETTLEMENT",
         "private_write_progress": "UNKNOWN",
         "observation_boundary": "EXISTING_EXECUTOR_PROCESS_AND_OUTPUT_METADATA_ONLY"
-      }
+      },
+      "original_QA_600S_actual_exit_code": 1,
+      "original_QA_600S_actual_UI_accepted": false,
+      "original_QA_600S_actual_process_sha256": "8c4d6e90630d281d84b56186576ae11cb121068837bdacaa3f365e19dc7196f7",
+      "original_QA_600S_actual_report_sha256": "477213902bce14bec555feee05ce2290098a4b4b1dd70463a41d328921a1bf33",
+      "Root_original_QA_600S_actual_failure_review_sha256": "e49669befe32b0b0b5aeaf1e4175578caa8febcaea6c3abc11dc15b9e272f896",
+      "original_QA_600S_owner_failure_closure_sha256": "9000138658dbd2e862e2033be1d89ee711a0b48aba9fac995810ac76574615b3",
+      "original_QA_600S_actual_failure_step": "CLEAN-key-issue-index",
+      "original_QA_600S_exact_timeout_callsite": "UNKNOWN_WITHIN_COARSE_TEACHING_STEP",
+      "original_QA_600S_recorded_comparison_GET_status": 413,
+      "original_QA_600S_successful_private_assessment_release_draft_response_count": 0,
+      "original_QA_600S_unconfirmed_private_write_excluded": false,
+      "original_QA_600S_own_logout_reached": false,
+      "original_Key_transport_repair": {
+        "status": "ISOLATED_SOURCE_CANDIDATE_IN_PREPARATION",
+        "source_trace_comparison_response_guard_bytes": 33554432,
+        "source_trace_assessment_options_raw_inventory_guard_bytes": 8388608,
+        "actual_failed_response_body_or_size_recorded": false,
+        "selected_scope": "Bounded comparison index and complete explicit paged details; preserve full internal inventory context/digest and private access. Apply options size budget to actual response; retain unique-reference safeguard and full inventory save/read validation.",
+        "current_Main_FinalWT_P0_original_runtime_or_native_source_mutated": false,
+        "live_repair_or_QA_retry_performed": false,
+        "UI_acceptance": false
+      },
+      "original_QA_600S_independent_actual_failure_review_sha256": "fb854013018e5f9293798cc14ca0ca649f599a0e052d6538dc102f2d002f22cb"
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"
