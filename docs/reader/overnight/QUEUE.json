@@ -1805,7 +1805,7 @@
     "worktree": "SABLEHARBOR-audit-suite",
     "branch": "build/audit-training-suite",
     "boundaries": "Local integrated implementation; preserve immutable sources and private records. Atlas read-only. No inferred professional acceptance or remote deployment.",
-    "checkpoint_note": "Root source selection 9ff accepts V3 normal configure/cold candidates 1af and Main successors 57ea/a5a5/1c98; exact 8/2/3 inverses and future Main 287 map 4c43 (only assessment 173b changes), 71 tracked files/six assets/106 checks. Actual config/settlement/launch/adoption/import/runtime/UI/offline/cutover remain unfilled or pending. QA source 05c approved 5097: precise options substeps/response 200 before title, 19-replacement inverse, saved syntax exit 0; unchanged actions/order/endpoints/credentials/600000 ms and no actual QA approval. Root 10:14:25 UTC checkpoint has native PID 1299099/start 22442427/session 18182 and Original PID 1414043/start 22879626/monitor 76036 live; no native command totals inferred from directory entries. Prior logout/hidden-preview uncertainty preserved. All 46 jobs/statuses unchanged; Main/FinalWT/N/served source/assets/Atlas untouched.",
+    "checkpoint_note": "CLEAN packet manifest 3bd published and byte-equal to prior export only; large members not yet independently compared. MESSY export began 11:12:30 UTC; paired result/exit/locks pending. Source-only plan 1181 accepted Root 3aba: 30 roots/534 scattered unchanged, E3/new plan metadata/source proofs final selection deferred; no backup/deletion. First a84 CLI e7 exit 1 before world/packet bodies due noncanonical authority JSON, settlement 29f9/stderr c558 preserved/no automatic retry. Identical-value/type canonical C9ee/M7cd separately Root170b-selected; corrected one CLEAN a84 session 71680 child 1940989/start 24927239 parent 1940987/start 24927235 active, immutable-history extent only, final UI/STOP/current-packet rebind/cutover pending. Native PID 1299099/start 22442427/session 18182 unchanged active; latest Root B05 checkpoint 4257 returns, no later count/rate inference. All 46 jobs/statuses/digest unchanged; no tests/source/assets/Atlas/FinalWT/N/world reads.",
     "active_agent_graph": {
       "date": "2026-10-01",
       "owner_instruction": "ok. Let 'er rip",
@@ -4936,6 +4936,85 @@
       "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5",
       "product_assets_FinalWT_N_Atlas_changed": false,
       "extent": "Confirmed source-only preparation; actual eligibility and output acceptance remain Root-held."
+    },
+    "Original_export_authority_and_preservation_checkpoint_2026_10_05": {
+      "MESSY_export_started_utc": "2026-10-05T11:12:30+00:00",
+      "CLEAN_published_packet_manifest_sha256_prefix": "3bd43f19",
+      "CLEAN_manifest_byte_equal_to_prior_export": true,
+      "large_packet_members_independently_compared": false,
+      "paired_result_and_actual_exit_lock_settlement": null,
+      "source_only_preservation_plan": {
+        "path": "/home/kingoftheeast/SABLEHARBOR-final-Original-plain-tree-plan-post-catalogue-root-additions-20261005/ORIGINAL_ONLY_PLAIN_TREE_PLAN_UNFILLED.json",
+        "sha256": "1181fb132d705d63be3570939341d6a106df38c43b387fa6825509869771f0d5",
+        "roots": 30,
+        "scattered_entries": 534
+      },
+      "Root_plan_source_approval": {
+        "path": "/home/kingoftheeast/SABLEHARBOR-root-catalogue-successor-and-cold-candidate-source-selection-20261005/ROOT_PRESERVATION_PLAN_SOURCE_APPROVAL.json",
+        "sha256": "3aba247e10784a18a2ee2c47f3ae5832117a8434d443d94d7012a4dd3ae7b0a6"
+      },
+      "E3_and_new_plan_handoff_inverse_addendum_source_proofs_final_selection": null,
+      "actual_backup_or_deletion_authorized": false,
+      "first_a84_CLI": {
+        "Root_selection": {
+          "path": "/home/kingoftheeast/SABLEHARBOR-root-original-CLEAN-offline-mechanism-overlap-20261005/ROOT_ACTUAL_ONCE_SELECTION.json",
+          "sha256": "e7a72526510bf0f806863b5dd7660d1d1f049536651241b238104e39fec80963"
+        },
+        "actual_exit_code": 1,
+        "before_world_or_packet_body_reads": true,
+        "cause": "Authority JSON noncanonical",
+        "preserved_settlement": {
+          "path": "/home/kingoftheeast/SABLEHARBOR-root-original-CLEAN-offline-mechanism-overlap-20261005/RUN_ONCE/PROCESS_SETTLEMENT.json",
+          "sha256": "29f9e82addda8cae5121a8cb655d71a42b80017e27a5ddc020f506bad0de4726"
+        },
+        "preserved_stderr": {
+          "path": "/home/kingoftheeast/SABLEHARBOR-root-original-CLEAN-offline-mechanism-overlap-20261005/RUN_ONCE/stderr.log",
+          "sha256": "c5581a91602d9fd0811fe5bd0ec813f292ad736dfd1c2bfae8ed1e94686fb206"
+        },
+        "automatic_retry": false
+      },
+      "canonical_authority_preparation": {
+        "CLEAN": {
+          "path": "/home/kingoftheeast/SABLEHARBOR-root-original-offline-prefix-authorities-20261005/CLEAN_OFFLINE_PREFIX_AUTHORITY_CANONICAL.json",
+          "sha256": "9ee6ea5338042abb8be5d83e011a0c3979f1280daaab103174b98f0eae3f5599"
+        },
+        "MESSY": {
+          "path": "/home/kingoftheeast/SABLEHARBOR-root-original-offline-prefix-authorities-20261005/MESSY_OFFLINE_PREFIX_AUTHORITY_CANONICAL.json",
+          "sha256": "7cd41a50348d2f857688060157d02b77d06c8038f7b85aa0a16c2731eb977b84"
+        },
+        "values_and_types_identical_to_predecessors": true,
+        "repair_receipt": {
+          "path": "/home/kingoftheeast/SABLEHARBOR-root-original-offline-prefix-authorities-20261005/CANONICAL_ENCODING_REPAIR_RECEIPT.json",
+          "sha256": "e29abaa85e04786ddc2485449575fed37955ddb3d901013b2aa51341d2ed801f"
+        },
+        "Root_source_selection": {
+          "path": "/home/kingoftheeast/SABLEHARBOR-root-original-CLEAN-offline-mechanism-overlap-20261005/ROOT_CANONICAL_ACTUAL_ONCE_SELECTION.json",
+          "sha256": "170b6e6229d854b25b6267d377e26d73249423843a13a17308acb3c32ca2f5f6"
+        }
+      },
+      "corrected_once_CLEAN_a84": {
+        "owner": "recovered_execution",
+        "session": 71680,
+        "child_pid": 1940989,
+        "child_start_ticks": 24927239,
+        "parent_pid": 1940987,
+        "parent_start_ticks": 24927235,
+        "active_at_checkpoint": true,
+        "result": null,
+        "extent": "Qualified immutable-history verification only; final UI/STOP/current-packet rebind/cutover not accepted."
+      },
+      "final_V3_UI_STOP_export_both_a84_cutover_last_reader_current_source_closure": null,
+      "native_writer": {
+        "pid": 1299099,
+        "start_ticks": 22442427,
+        "session": 18182,
+        "active_at_Root_checkpoint": true,
+        "latest_Root_observed_batch": "B05",
+        "latest_Root_observed_command_returns": 4257,
+        "later_count_or_rate_inferred": false
+      },
+      "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5",
+      "source_assets_tests_Atlas_FinalWT_N_world_reads_or_changes_in_docs_update": false
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"

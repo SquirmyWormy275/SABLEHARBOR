@@ -1,5 +1,32 @@
 # Active company-source audit workflow
 
+2026-10-05 11:12:30 UTC checkpoint: The CLEAN packet is published (manifest
+`3bd43f19`), with manifest bytes equal to the prior export. Large packet members
+have not yet been independently compared. MESSY export started at 11:12:30 UTC;
+the paired result, child exit and final lock/process settlement remain pending.
+
+Root source-only approval `3aba247e` accepts preservation plan `1181fb13`:
+14 nonoverlapping whole-root additions give 30 roots; all 534 scattered entries
+and existing runtime gates remain unchanged. E3, the new plan/handoff/inverse/
+addendum and source proofs still require explicit final staging/tree selection.
+No backup or deletion is authorized. Final V3 UI, owned STOP/export, both a84
+proofs, cutover, last-reader clearance and current-source closure remain unfilled.
+
+The first actual a84 CLI (`e7`) failed with exit 1 before world/packet-body reads:
+the authority JSON was noncanonical. Settlement `29f9` and stderr `c558` are
+preserved; there was no automatic retry. Canonical authority children CLEAN
+`9ee`/MESSY `7cd` retain identical values and types and are separately accepted
+by Root `170b`. The corrected one CLEAN a84 run is now active under owner
+recovered_execution, session 71680, child 1940989/start 24927239 and
+parent 1940987/start 24927235. Its selected extent is immutable-history verification;
+final UI/STOP/current-packet rebind and cutover acceptance remain pending.
+
+Native writer PID 1299099/start 22442427 (session 18182) remains unchanged and
+active. The latest Root-observed B05 checkpoint records 4257 command returns;
+no further count or rate is inferred. No new tests or source/assets/world reads
+were performed for this update. Main products, FinalWT, N and Atlas are unchanged;
+all 46 queue jobs/statuses and their locked digest remain unchanged.
+
 2026-10-05 10:14:25 UTC checkpoint: Root source selection `9ff46eb9` accepts
 V3 normal configure/cold candidates (`1af5ec7d`) and the Main catalogue
 successors: adopter `57ea24ab`, fresh-import probe `a5a5b290` and viewer
