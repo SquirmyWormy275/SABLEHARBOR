@@ -1,5 +1,28 @@
 # Local audit-training delivery
 
+2026-10-05 12:43 UTC checkpoint: Six existing nonrevoked identities were normally
+renewed for seven days through signed credential.rotate; actual Root session55906
+exited0, result `896f3ab6`. Root post-rotation review `2ec39ecb` freshly closes
+all five databases and287 source origins, verifies unchanged raw audit histories,
+IDs/roles/members, two sequence3 heads with complete empty logout maps, valid
+private credentials and two normal configurations. World/scope/clock are intact.
+
+The separately reviewed expiry continuation `3bb94f30` passes peer source review
+`574a31bb` and exact2+9 source inverses. Root input `52adf382` and once selection
+`0cb20242` authorize genuine same-epoch execution. Owned monitor7885 has launched
+child2045026/start25335479 (parent2045024/start25335472). Its starting revisions
+are CLEAN6008/MESSY4339. Completed work and the journal-only committed command
+remain preserved; B05 recomputes genuine retained originals before appending its
+three untouched facets, then MESSY B06-B09/native4. No completed3d/oldRETURN or
+professional acceptance is claimed. Successor capture/replay preparation must
+select this genuine successor and retain the old interruption lineage.
+
+Original76036 continues its MESSY export: the last bounded checkpoint at12:35
+recorded532051272 staging bytes and no published MESSY manifest/paired result or
+actual exit. CLEAN independent history verification remains accepted only within
+its qualified extent (`43474344`). Final UI/cutover, preservation, adoption and
+cleanup remain open. All46 jobs and126 existing status/state values are unchanged.
+
 2026-10-05 12:12 UTC checkpoint: Independent CLEAN history verification71680
 completed with actual child/driver exit0. Root admission `43474344` freshly
 closes the selected inputs and accepts6230 events,2741 retained native receipts
