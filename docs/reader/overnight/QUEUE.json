@@ -1805,7 +1805,7 @@
     "worktree": "SABLEHARBOR-audit-suite",
     "branch": "build/audit-training-suite",
     "boundaries": "Local integrated implementation; preserve immutable sources and private records. Atlas read-only. No inferred professional acceptance or remote deployment.",
-    "checkpoint_note": "Corrected Original genuine READY7bcfdd/owned child+listeners251823. Root current guardedread48836 actualexit0/PIDdead,24returns, bothassessment/releases0, fourdraftsEMPTYv0/fourownlogout+401; readsettlement9016e76d. Rootb87a7292 selects distinctfreshQA f78466bf thenNAV9e9d75a9 once onlyifQAexit0, noFIRST8replay; hiddenpreviews/lostpriorissuance remain unknown. Native18182 active MESSY3180returns/B01legacy complete; CLEAN4native/131returns complete. UI PNG/SUP/offline/native/Main/preservation/cleanup pending. All46jobs unchanged; Atlasread-only; no professional/owner acceptance.",
+    "checkpoint_note": "CorrectedOriginal QA17534 actualexit1/report92988842: comparison200/options400/noPNG; no teaching/draft boundary reached, QAownlogoutunconfirmed. NAV/SUPnotrun; settlement7aca retainsunknownPID. Rootboundeddiag55332 actualexit0/dead1734033 result59a4 exact4096Assessmentreferenceinventorylimit, ownlogout+401. Isolatedonefilefix/new417+64physicalsource rebase pending; nofrozen productchanges. Root6c7116a7 selects one guardedSIGINT/sameengineexport; actualsettlement pending. Native18182active M3439returns/B02legacy92WP317NOT_RUN; C4native131returns complete. UI/offline/native/Main/preservation/cleanup pending. All46jobs unchanged; Atlasread-only/noownerprofessionalacceptance.",
     "active_agent_graph": {
       "date": "2026-10-01",
       "owner_instruction": "ok. Let 'er rip",
@@ -4838,7 +4838,7 @@
       "offline_UI_or_cutover_accepted": false
     },
     "corrected_original_runtime_attempt": {
-      "status": "GENUINE_READY_CURRENT_GUARDED_READS_COMPLETED_UI_EXECUTION_PENDING",
+      "status": "GENUINE_READY_QA_FAILED4096_REFERENCE_LIMIT_OPERATIONAL_STOP_PENDING",
       "normal_configuration_result_sha256": "93fc4de943ad8233bf9f7069e9b20df350a7f42883314ab38409af5203d7895b",
       "normal_configuration_tool_exit_code": 0,
       "once_selection_sha256": "dc1f2b0edf203a71e37e7ccb698d66a20a6cf966f4cbb902d682d3a3be58aed8",
@@ -4858,7 +4858,15 @@
       "current_guarded_read_return_sha256": "52a3abe4a65210f4b911495634a003eda48528143ac52ba9a4f43fd1b2721521",
       "current_guarded_read_settlement_sha256": "9016e76db6d91ad47908168e33ad3dce6b5c43af2519eaeb07ad6987cfdfbbff",
       "once_UI_selection_sha256": "b87a7292b12e267cb7cc678c7a7f44be3e29e0592f8de2a1c47dc22bdab81eeb",
-      "prior_hidden_preview_and_lost_issuance_qualification_retained": true
+      "prior_hidden_preview_and_lost_issuance_qualification_retained": true,
+      "actual_QA_session": 17534,
+      "actual_QA_tool_exit_code": 1,
+      "actual_QA_report_sha256": "92988842eed02acf7a63cc5d9b2efeac0e1782beb9dec7d9bbb7d02ffb62d565",
+      "actual_QA_settlement_sha256": "7aca7e208d023b97f64be8b0a2012f53fe0ae40ead3c08703e7ffe22d549148d",
+      "actual_options_diagnostic_tool_exit_code": 0,
+      "actual_options_diagnostic_sha256": "59a4f1fd6d9c9a3fd9b06e69d104ed1a5b61be082487ef92c53123da25310d56",
+      "Root_failed_UI_STOP_selection_sha256": "6c7116a7d1f8e621d231f3206d0861bacb682fafbce29e7bfadb04d6c8f941ea",
+      "failed_QA_owned_logout_unconfirmed": true
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"

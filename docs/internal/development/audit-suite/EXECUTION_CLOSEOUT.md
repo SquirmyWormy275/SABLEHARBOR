@@ -1,5 +1,33 @@
 # Audit-suite execution closeout
 
+2026-10-05 09:27 UTC: The once corrected Original QA session17534 failed with
+actual exit1. Report `92988842` records CLEAN operator login PASS254208ms,
+comparison200 and assessment-options400; no PNG was saved. The literal QA
+sequence did not reach teaching-save/preview/release or auditor draft writes.
+No logout response was recorded. The stale `CLEAN-key-issue-index` step label
+covers later teaching actions, so it does not pinpoint an issue-selector defect.
+NAV and SUP were not run; settlement `7aca7e20` retains actual tool exit1 and
+explicitly unknown numeric QA PID/start.
+
+Root's one bounded options diagnostic55332 completed with actual exit0 and
+dead PID1734033 (`59a4f1fd`): the exact error is `Assessment reference inventory
+limit` at the backend's4096 whole-catalogue cap. Its own login/logout+401 closed.
+The frontend has no4096 guard; the existing whole-options8MiB and32-selected
+reference bounds remain. A minimal one-file donor correction and a distinct
+417-source/64-external Original assembly rebase are in isolated preparation;
+the served assembly, Main, FinalWT and active N sources remain unchanged.
+
+Root `6c7116a7` authorizes one guarded SIGINT and genuine same-engine drain/export
+of the failed-UI viewer before a separately selected normal corrected reopen.
+Operational STOP settlement is pending; no UI/offline/cutover acceptance.
+Historical hidden previews/lost issuance and failed QA logout remain qualified.
+
+Native writer18182 continues: MESSY B02-LEGACY genuinely completed at revision3340
+with92 workpapers/317 NOT_RUN tasks; 3439 command returns now observed.
+CLEAN's four native phases/131 new returns remain complete. Paired completion,
+offline packet checks, Main adoption, final preservation/cleanup and all46 queue
+job/status completions remain unasserted.
+
 2026-10-05 08:53 UTC: Corrected Original genuinely reached READY (`7bcfdd78`);
 owner `2518231b` closes exact child1414043/start22879626 and both real8780/8781
 listeners. The ready callback's existing loaded source/serving closures ran;
