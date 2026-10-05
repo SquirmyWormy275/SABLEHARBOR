@@ -1,5 +1,32 @@
 # Active company-source audit workflow
 
+2026-10-05 09:49 UTC: Assessment catalogue donor `173b9a87` is frozen (`c2d2f2b7`):
+only the arbitrary whole-catalogue4096 guard is removed. Eight focused isolated
+checks actually passed (`d37fac83`, exit0), including6000 complete references
+(2,455,142-byte options), exact IDs/dedup/expectation/hash/context closure,
+unchanged32 selected-reference bounds and existing8MiB rejection. TestV1's
+missing-constant setup refusal is preserved; frontend/assets are unchanged.
+
+V3 source-only assembly `32ddcb2d` has417 same relative leaves, only assessment
+bytes changed;64 externals/native4/same6 assets retained. Worker `de9a772d`
+reverses to43c through exactly4 global substitutions with all16 function slices
+unchanged. Root actual source admission `a9b766a1` freshly closes941 unique
+SHA/seven-metadata references and accepts the saved test extent without reruns.
+No actual options/UI/configuration/cold/offline/cutover acceptance is inferred.
+
+Owner sent exactlyone guarded pidfd SIGINT (`318cbeb7`; preflight `0c60820a`).
+Same-engine `a460436f` now records both servers/background workers settled and
+CLEAN4/MESSY2 complete KNOWN tombstone maps; original IDs/Key and sequence3 heads
+are unchanged. Exports and actual parent76036 child-wait/lock/source settlement
+remain pending. Lost issuance/hidden-preview qualifications remain.
+
+Native writer18182 remains active: B03-LEGACY is complete at revision3483 with
+112 workpapers/297 NOT_RUN tasks; 3575 command returns now observed. New
+configuration/cold candidates and minimal Main donor/import expectation
+successors are source-only preparation; served/Main/FinalWT/N remain unchanged.
+Final verification, Main adoption and preservation/cleanup remain pending;
+all46 queue jobs/statuses are unchanged.
+
 2026-10-05 09:27 UTC: The once corrected Original QA session17534 failed with
 actual exit1. Report `92988842` records CLEAN operator login PASS254208ms,
 comparison200 and assessment-options400; no PNG was saved. The literal QA
