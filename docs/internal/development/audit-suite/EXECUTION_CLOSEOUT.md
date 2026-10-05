@@ -1,5 +1,24 @@
 # Audit-suite execution closeout
 
+2026-10-05 08:23 UTC: Native worker 18182 remains active. Its first MESSY legacy batch
+has genuinely completed at revision2865: 54 workpapers and355 explicit NOT_RUN
+tasks remain. Subsequent command returns have reached2944. CLEAN's four native
+phases and131 new returns remain complete; no paired final result or process
+settlement has been observed.
+
+Root saved the existing guarded API client (`f76d5831`,22052 bytes) after source
+review and AST compilation. Once-call session48836/PID1589679/start23548053
+(`cf8379f0`,`e1c9d265`) waits for genuine corrected Original READY, then checks
+its exact43c caller/fecc selection/93 configuration/IDs and active config pins
+before authorizing only current private GETs and owned login/logout. At this
+checkpoint it has issued no API requests. No automatic retry, FIRST8 replay,
+new product API, UI acceptance or blanket failed-QA reconciliation is granted.
+Original child1414043 remains active under sole owned monitor76036. Its open-file
+metadata supports a MESSY-construction inference; READY remains unobserved.
+
+Actual UI, both offline packet checks, Main adoption, final native verification
+and preservation/cleanup remain pending. All46 jobs/statuses are unchanged.
+
 2026-10-05 07:16 UTC: Root prepared the exact nine-field Original offline authorities from
 23 freshly hashed ordinary references (`c27fbdb1`; actual metadata call exit 0,
 session 39381). CLEAN `e844d0be` and MESSY `967fd251` join accepted first proof
