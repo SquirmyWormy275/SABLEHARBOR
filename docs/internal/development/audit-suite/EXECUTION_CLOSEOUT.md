@@ -1,5 +1,28 @@
 # Audit-suite execution closeout
 
+2026-10-05 01:33 UTC: CLEAN legacy B09 is byte-closed (`284539f9`):
+revision 5867, command count 5865 including the historical 2050 prefix,
+409 workpapers and zero unrun legacy tasks. The native extension phases and
+MESSY remain pending; current paired/native/professional acceptance is false.
+
+Root selected an operational failure-repair stop (`c9fcdb52`), superseding
+QA-before-STOP only for repair. The sole owner sent one SIGINT through the
+matched process handle (`cd052c58`). Actual paired server/background drain and
+current authority receipts are written (`3e8ab8b9`; CLEAN `1f0be128`, MESSY
+`327a338f`). The known signed logout maps contain one CLEAN and zero MESSY
+entries; they do not establish every issued session is gone. The old process
+is still exporting the same rooms. Final publication, lock release and process
+termination remain pending; a waitpid return code cannot be asserted for this
+detached child. No restart, independent offline check, UI or cutover ran.
+
+The isolated correction V1 is frozen (`1dd770b9`). Its 26 neutral backend,
+32 typed frontend and five neutral desktop/mobile checks, plus both production
+builds, passed. Independent review (`be48e991`) accepts transport and assessment
+source semantics but found one narrow polling race. A targeted asynchronous
+successor case passed; V2 builds/review and the corrected source-only Original
+assembly are pending. Existing saved Keys, native evidence and product trees
+remain unchanged. These are source/neutral checks, not actual company UI acceptance.
+
 2026-10-05 00:44 UTC: The full measured-budget QA settled once, exit 1
 (`8c4d6e90`, report `47721390`). CLEAN operator login passed in 319.991 seconds.
 The Key issue-index step then timed out; its saved comparison GET returned 413.

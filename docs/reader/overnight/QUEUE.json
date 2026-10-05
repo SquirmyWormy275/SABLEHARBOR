@@ -1805,7 +1805,7 @@
     "worktree": "SABLEHARBOR-audit-suite",
     "branch": "build/audit-training-suite",
     "boundaries": "Local integrated implementation; preserve immutable sources and private records. Atlas read-only. No inferred professional acceptance or remote deployment.",
-    "checkpoint_note": "Original genuine normal cold readiness and FIRST8 passed. Granular login diagnostic passed with its own logout; prior issued sessions remain unresolved. Full measured-budget QA settled once exit1: login passed, Key issue-index timed out and comparison GET413 was recorded. Exact timeout call and unconfirmed private writes remain unresolved; no retry. Isolated bounded Key/assessment transport correction is in preparation. Next5714 continuation CLEAN B08 records383 workpapers/26 unrun; MESSY has not begun. No current SQL, paired fieldwork, full UI, STOP/offline/cutover, Main adoption or cleanup acceptance is asserted. All34 historical backups are verified ordinary .tar.zst copies; obsolete ciphertext and key were removed. All46 locked job payloads/statuses unchanged; Atlas read-only; professional and owner usability acceptance not asserted.",
+    "checkpoint_note": "CLEAN legacyB09 records409 workpapers and zero unrun legacy tasks; native extensions and MESSY pending. OriginalQA failed413; isolatedboundedtransport/assessment repair passed neutral/source checks, with narrowly corrected pollingV2/buildreview pending. One selected operationalSIGINT completed pairedserver/backgrounddrain/currentauthority capture; same-roomexport/finalpublication/lockrelease/exit remain pending. Detachedchildwaitstatus is unobserved, knownlogoutmaps are not allissued-sessionempty proof. No actual repairedUI/offline/cutover/Mainadoption/retirement accepted. All46 lockedjobs/statuses unchanged; Atlasread-only; no professional/owneracceptance.",
     "active_agent_graph": {
       "date": "2026-10-01",
       "owner_instruction": "ok. Let 'er rip",
@@ -4653,16 +4653,55 @@
       "original_QA_600S_unconfirmed_private_write_excluded": false,
       "original_QA_600S_own_logout_reached": false,
       "original_Key_transport_repair": {
-        "status": "ISOLATED_SOURCE_CANDIDATE_IN_PREPARATION",
+        "status": "V1_FROZEN_TRANSPORT_AND_ASSESSMENT_SOURCE_REVIEW_PASSED_NARROW_POLLING_V2_PENDING",
         "source_trace_comparison_response_guard_bytes": 33554432,
         "source_trace_assessment_options_raw_inventory_guard_bytes": 8388608,
         "actual_failed_response_body_or_size_recorded": false,
         "selected_scope": "Bounded comparison index and complete explicit paged details; preserve full internal inventory context/digest and private access. Apply options size budget to actual response; retain unique-reference safeguard and full inventory save/read validation.",
         "current_Main_FinalWT_P0_original_runtime_or_native_source_mutated": false,
         "live_repair_or_QA_retry_performed": false,
-        "UI_acceptance": false
+        "UI_acceptance": false,
+        "V1_handoff_sha256": "1dd770b94f1cf7d8da966fd5f88c50df5794a51551d8ef147dd54d499b003577",
+        "V1_independent_review_sha256": "be48e99120b799a1b50f923129dc5714a4f1bd5ad947997941a501e06f4993e0",
+        "reported_neutral_backend_checks_passed": 26,
+        "reported_typed_frontend_checks_passed": 32,
+        "reported_neutral_desktop_mobile_checks_passed": 5,
+        "production_builds_Original_and_Final_passed": true,
+        "V1_narrow_closed_polling_race_remaining": true,
+        "V2_targeted_overlap_case_reported_passed": true,
+        "V2_freeze_and_review": "PENDING",
+        "corrected_Original_source_assembly": "SOURCE_ONLY_IN_PREPARATION",
+        "actual_repaired_company_UI_acceptance": false
       },
-      "original_QA_600S_independent_actual_failure_review_sha256": "fb854013018e5f9293798cc14ca0ca649f599a0e052d6538dc102f2d002f22cb"
+      "original_QA_600S_independent_actual_failure_review_sha256": "fb854013018e5f9293798cc14ca0ca649f599a0e052d6538dc102f2d002f22cb",
+      "closed_CLEAN_B09_checkpoint": {
+        "receipt_sha256": "284539f9fa07b0b0f002aab5d487cd63e37734489173029fd5c6ee35bc5a8abc",
+        "revision": 5867,
+        "observed_command_count_including_historical_prefix": 5865,
+        "workpapers": 409,
+        "unrun_legacy_tasks": 0,
+        "native_extension_and_MESSY_complete": false,
+        "current_SQL_raw_or_professional_acceptance": false
+      },
+      "original_owned_failure_repair_stop": {
+        "Root_selection_sha256": "c9fcdb52ab7d2eeb6b44c9f35d20a6ee58a87956a03dec281177328e87b6589a",
+        "actual_signal_receipt_sha256": "cd052c588573060dd39e167704bbba009aa2a5d7d1a98e97a32d129147016619",
+        "signal": "SIGINT",
+        "actual_signal_count": 1,
+        "settled_paired_authority_receipt_sha256": "3e8ab8b9615e30d023e83e2c1d323477493065d7878b007457da8867589ed894",
+        "CLEAN_reopen_authority_sha256": "1f0be1284664fdf18ae37565332b4905e8ba11a16331aa0eebda1bf85f68b9f7",
+        "MESSY_reopen_authority_sha256": "327a338fc84725b39fb25f04f865a8b22bd371b41c7f916435ab8f453619b7fa",
+        "known_signed_logout_tombstones": {
+          "CLEAN": 1,
+          "MESSY": 0
+        },
+        "all_issued_sessions_gone_asserted": false,
+        "paired_server_and_background_drain_observed": true,
+        "same_room_exports_terminal_result_lock_release_process_exit": "PENDING",
+        "actual_waitpid_return_code": null,
+        "waitpid_limitation": "Detached child is not monitor child; no exit0 fabricated.",
+        "UI_offline_cutover_acceptance": false
+      }
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"
