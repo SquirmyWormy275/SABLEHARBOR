@@ -1805,7 +1805,7 @@
     "worktree": "SABLEHARBOR-audit-suite",
     "branch": "build/audit-training-suite",
     "boundaries": "Local integrated implementation; preserve immutable sources and private records. Atlas read-only. No inferred professional acceptance or remote deployment.",
-    "checkpoint_note": "Corrected PERIOD mapping source a636/Root30a16 and prepared-input metadata f721 passed. Genuine readonly8-original diagnostic running once Root8640/PID1166868/selection14c4 with source review2cd; no actual result or resumed fieldwork. Collector/capture8e85 independently source-reviewed45d. Corrected Main recipe needs71tracked+6assets/106checks; no adoption. Original CLEAN packet3bd genuinelypublished6230events/rev6229; MESSY/paired result and processsettlement pending. Actual correctedUI/offline/cutover/Main/exactcleanup open; all46 lockedjobs unchanged; Atlas read-only; no professional/owner acceptance.",
+    "checkpoint_note": "Actual native recovery is running once Root18182/PID1299099/inputc33db7ac; no terminal result yet. Diagnostic8640 remains exit1; eligibility8a1cc2c6 joins partial normal execution, postfailure11776-file SHA7 closure2090737b and independent forward source review1e58e10f. Corrected Main viewer637e6c5b independently source-reviewed35d40983/Root51-refacaa574c; actual adoption/runtime/UI pending. Original export PID360719 alive04:59 UTC, CLEAN published, MESSY/paired settlement pending. Actual fieldwork completion, correctedUI/offline/cutover/Main/exactcleanup remain open. All46 lockedjobs unchanged; Atlas read-only; no professional or owner acceptance.",
     "active_agent_graph": {
       "date": "2026-10-01",
       "owner_instruction": "ok. Let 'er rip",
@@ -4818,6 +4818,13 @@
         "proposed_unsupported_IAM_is_task_credit": false,
         "proposed_RETRY_engineering_bridge": "Exact existing SH-ENG-003 contracts; no PASS/full-clause inference."
       }
+    },
+    "main_viewer_interface_source_selection": {
+      "status": "SOURCE_ONLY_REVIEWED_ACTUAL_RUNTIME_PENDING",
+      "source_sha256": "637e6c5bf592c7c2e6e5979b682fcb70527e4934c730b76ac7f38616fee4faa0",
+      "independent_review_sha256": "35d409832c26db6a64cdd80e8c1805eaeae137160dabc65cf65d0b9a2d6d0010",
+      "root_source_selection_sha256": "acaa574c9af734f02174832cb1d89644724556b132beaca01d60aef89b69ef8d",
+      "actual_Main_adoption_or_runtime_or_UI_acceptance": false
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"

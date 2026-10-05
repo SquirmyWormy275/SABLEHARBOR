@@ -1,5 +1,17 @@
 # Audit-suite execution closeout
 
+2026-10-05 05:02 UTC: Main viewer interface correction passed independent source review
+(`35d40983`) and Root's fresh 51-reference closure (`acaa574c`). Its exact
+adapter preserves all seven typed adoption claims and the original schema;
+two literal changes invert to the parent, which still inverts to its original
+source. The saved neutral case was inspected without rerunning. This closes
+source preparation only; actual Main adoption, runtime and UI remain pending.
+
+At 04:59 UTC the native worker (session 18182, PID 1299099) and Original export
+(PID 360719, monitor owned by the retained-service agent) were both active.
+Neither had an observed terminal result. No completed audit, independent replay,
+cutover, cleanup, professional acceptance or owner acceptance is asserted.
+
 2026-10-05 04:40 UTC: Root selected and launched actual native-kind recovery
 once: session 18182, PID 1299099/start 22442427 (`870a26e1`, input `c33db7ac`,
 process binding `90decc9b`). The diagnostic exit 1 remains a failure; it was not
