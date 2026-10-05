@@ -1,5 +1,11 @@
 # Active company-source audit workflow
 
+2026-10-05 17:45 UTC checkpoint: The isolated four-file assessment repair is frozen with complete catalogue semantics, bounded/searchable exact reference pages, actor/history/Key context checks, and unchanged selected-reference and save/read validation. Reload and correction hydrate only the selected references. Actual checks passed 41 backend tests, 12 frontend tests, type checking and the build; frozen donor selection is `20b12b2e`.
+
+Root's source-only A4 materializer actually exited 0 (`e7cc4b`), staging exactly 417 repository files, six built assets and the unchanged 64 external files. The new caller `9468f6c2` differs from the preceding `de9a772d` only in four source globals; all worker function bodies remain identical. Root independently closed the source/test vectors and saved source admission `ff3761a0`. No new configuration, cold start, browser walkthrough or cutover is accepted yet. Main/Next successor source preparation remains isolated.
+
+The preceding failed-QA viewer is still completing its one owned operational STOP/export under sole monitor 58159. Both listener ports are clear; actual process settlement is pending. Native monitor 7885 continues independently with 1240 new returned commands, no unconfirmed return or reported error; the latest completed phase remains B06. Final fieldwork closure/replay/Key/Main, actual viewer checks, preservation and cleanup remain unfinished. FIRST8, saved Key and identities are preserved. The Seagate remains absent; no encryption, backup deletion, push, deployment or Atlas write occurred.
+
 2026-10-05 17:15 UTC checkpoint: All four selected current private access
 checks genuinely completed with own logout and revoked-cookie rejection;
 Root review `0cfbb887` accepted that extent. Actual QA monitor 60824 then
