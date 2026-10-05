@@ -1,5 +1,19 @@
 # Local audit-training delivery
 
+2026-10-05 05:37 UTC: Original owned STOP/export has genuinely settled. Owner closure
+`d357bb78` and Root fresh selection `891a5f2f` join paired result `96b4c9ca`,
+both published packets (CLEAN 6230 events/revision 6229; MESSY 6355/revision
+6354), held-source closure and both released room locks. Root freshly reclosed
+15 small refs, both manifest hashes and the complete known logout namespaces.
+The old target is absent; its waitpid status remains unknown. Monitor exit 0
+is not target exit 0. Known tombstones are CLEAN 1/MESSY 0; this does not resolve
+all issued sessions or the failed QA's unconfirmed private-write extent.
+
+Corrected normal Original CONFIGURE/cold inputs are being filled from the
+existing reviewed assembly and same bindings/history/Keys; no restart has
+occurred. Actual native worker 18182 is still active without a terminal result.
+UI, independent replay, cutover, Main adoption and cleanup remain open.
+
 2026-10-05 05:02 UTC: Main viewer interface correction passed independent source review
 (`35d40983`) and Root's fresh 51-reference closure (`acaa574c`). Its exact
 adapter preserves all seven typed adoption claims and the original schema;

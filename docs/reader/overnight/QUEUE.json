@@ -1805,7 +1805,7 @@
     "worktree": "SABLEHARBOR-audit-suite",
     "branch": "build/audit-training-suite",
     "boundaries": "Local integrated implementation; preserve immutable sources and private records. Atlas read-only. No inferred professional acceptance or remote deployment.",
-    "checkpoint_note": "Actual native recovery is running once Root18182/PID1299099/inputc33db7ac; no terminal result yet. Diagnostic8640 remains exit1; eligibility8a1cc2c6 joins partial normal execution, postfailure11776-file SHA7 closure2090737b and independent forward source review1e58e10f. Corrected Main viewer637e6c5b independently source-reviewed35d40983/Root51-refacaa574c; actual adoption/runtime/UI pending. Original export PID360719 alive04:59 UTC, CLEAN published, MESSY/paired settlement pending. Actual fieldwork completion, correctedUI/offline/cutover/Main/exactcleanup remain open. All46 lockedjobs unchanged; Atlas read-only; no professional or owner acceptance.",
+    "checkpoint_note": "Original STOP/export actually settled: ownerd357bb78/Root891a5f2f, paired96b4c9ca, packets C6230/rev6229 and M6355/rev6354, both room locks released. Target waitpid statusUNKNOWN; monitor exit0only, knownlogoutC1/M0 not globalissuedempty; failedQA privatewrite extent unresolved. Existing corrected Original CONFIGURE/cold assembly being filled; no actual restart. Native18182/PID1299099/inputc33db7ac remains active with no terminal result. Mainviewer637e source reviewed35d/Rootacaa. UI/offline/cutover/Main/exactcleanup pending; all46 jobs preserved; Atlas read-only; no professional or owner acceptance.",
     "active_agent_graph": {
       "date": "2026-10-01",
       "owner_instruction": "ok. Let 'er rip",
@@ -4825,6 +4825,17 @@
       "independent_review_sha256": "35d409832c26db6a64cdd80e8c1805eaeae137160dabc65cf65d0b9a2d6d0010",
       "root_source_selection_sha256": "acaa574c9af734f02174832cb1d89644724556b132beaca01d60aef89b69ef8d",
       "actual_Main_adoption_or_runtime_or_UI_acceptance": false
+    },
+    "original_operational_settlement": {
+      "status": "ACCEPTED_OPERATIONAL_DRAIN_EXPORT_AND_LOCK_RELEASE_ONLY",
+      "owner_closure_sha256": "d357bb78af320cfa79de36e6c7e12251cfd281c1dbcb6c21252e04472ec33b43",
+      "root_selection_sha256": "891a5f2f3025a067a6ec6ed88ed8186b47e385dc50c9fc944fd23c3e4e1fb0e9",
+      "paired_result_sha256": "96b4c9ca01658a363b1bd1099b27c174d20bb6a72f04c3f10f0e9a65aff16a94",
+      "target_waitpid_returncode": null,
+      "monitor_exit_code": 0,
+      "both_room_locks_released": true,
+      "QA_private_write_extent_reconciled": false,
+      "offline_UI_or_cutover_accepted": false
     }
   },
   "historical_reader_status": "DESIGN_REVIEW_PENDING"
