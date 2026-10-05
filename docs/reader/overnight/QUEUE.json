@@ -4350,8 +4350,8 @@
         "locked_46_jobs_sha256": "dd1a3dc873982e52f69a2798528a82ec44255d589d6ff266286b053699ccc0f5"
       },
       "current_actual_execution": {
-        "checkpoint_utc": "2026-10-04T23:59:47.996396+00:00",
-        "status": "ACTUAL_SAME_ID_CONTINUATION_RUNNING_ORIGINAL_GRANULAR_LOGIN_DIAGNOSTIC_ONCE_RUNNING",
+        "checkpoint_utc": "2026-10-05T00:15:41.325212+00:00",
+        "status": "ACTUAL_SAME_ID_CONTINUATION_RUNNING_ORIGINAL_MEASURED_BUDGET_QA_ONCE_RUNNING",
         "process_pid": 18961,
         "settled_exit_code": null,
         "confirmed_commands": 2050,
@@ -4593,7 +4593,7 @@
         "original_diagnostic_V3_root_once_selection_sha256": "01d23e9eee9e6d5455b15e3733aca1ae887d65656a85a8e08151207343bbb309",
         "original_diagnostic_V3_root_source_review_sha256": "14a55f05e035039dd29a659aaf2517c119f9d8ee6d4e9c89b197c6d8c32e4cdb",
         "original_diagnostic_V3_independent_source_review_sha256": "62a442fe8bfa97e219ad7e2b1331edcccd595c38c0727a12d610ea39ec620ad6",
-        "original_diagnostic_V3_actual_exit_code": null,
+        "original_diagnostic_V3_actual_exit_code": 0,
         "original_corrected_QA_failure_independent_review_sha256": "0acfc1a8cb21928f39c0cb240ddd09c33db5261b10b2856d0372ed0cde62c4c4",
         "closed_CLEAN_B07_checkpoint": {
           "receipt_sha256": "ef61e3a4a4fa2952e7fd99bb68ccb3b682970567f2079e272cd6388b630b9fba",
@@ -4602,7 +4602,25 @@
           "workpapers": 360,
           "unrun_tasks": 49,
           "current_SQL_or_raw_or_professional_acceptance": false
-        }
+        },
+        "original_diagnostic_V3_actual_report_sha256": "9f6e580ffa912fa8e8c1f8dee158ea1cdf52bdba1108af4ba90cdbb83de33142",
+        "original_diagnostic_V3_actual_process_sha256": "58371f9c536a5d6fb7b305129d1d68646bf9cdf0204393fbd61b8973e166d8f1",
+        "Root_original_diagnostic_V3_actual_visual_review_sha256": "22d39b0e8e5a176e9179420d2f861c6e08b8420a7439205016af36bef0b579f8",
+        "original_diagnostic_V3_independent_actual_review_sha256": "423eaabc79e2376edb174055d75adbd2ca44c05d6617787a552585389bc6d663",
+        "original_diagnostic_V3_heading_elapsed_ms": 67627,
+        "original_diagnostic_V3_API_buffered_bootstrap_elapsed_ms": 204619,
+        "original_diagnostic_V3_own_logout_200_then_bootstrap_401": true,
+        "original_diagnostic_V3_full_QA_acceptance": false,
+        "original_QA_600S_actual_execution": true,
+        "original_QA_600S_actual_pid": 852935,
+        "original_QA_600S_actual_start_ticks": 20843823,
+        "original_QA_600S_actual_launch_sha256": "5aeddd0bee7c76446d880bd8f3fbe8bebe64f898b6466ef52393b3b19032cea4",
+        "original_QA_600S_root_once_selection_sha256": "bf9118d694ef88fd1e0065e13b9274fa5caf73a3104f925ddc3b71afa946141d",
+        "original_QA_600S_filled_plan_sha256": "298ede4f2b8cf285fbd9cc7bd1f409efd7a5f06efa30f6668f5ff258e5acd2d6",
+        "original_QA_600S_source_sha256": "b322c5e31b99a004cfea94320d40b884a89287834f912e6e7f13253723afa332",
+        "original_QA_600S_actual_output": "/home/kingoftheeast/SABLEHARBOR-original-cold-actual-UI-20261004/QA_600S_UNFILLED_V1",
+        "original_QA_600S_actual_exit_code": null,
+        "original_QA_600S_actual_UI_accepted": false
       }
     }
   },

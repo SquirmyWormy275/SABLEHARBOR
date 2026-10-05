@@ -1,5 +1,23 @@
 # Audit-suite execution closeout
 
+2026-10-05 00:15 UTC: The granular diagnostic genuinely finished
+once, exit 0 (`58371f9c`, report `9f6e580f`): nine steps passed. Controls took
+67.627 seconds; the separate buffered API bootstrap took 204.619 seconds,
+exceeding the prior 180-second budget. All five auxiliary request intervals
+overlap that API interval in one process clock. This proves the wait boundary,
+not the exact backend cause or previous coarse QA failing substep. Its own
+single session logout returned 200 and subsequent bootstrap 401; prior lost
+sessions remain unresolved. Root inspected the actual PNG (`22d39b0e`);
+independent actual review is `423eaabc`. This is diagnostic-only acceptance.
+
+One full measured-budget QA is now running: child 852935/start 20843823,
+launch `5aeddd0b`, source `b322c5e3`, plan `298ede4f`, Root selection `bf9118d6`.
+The exact selected output is `QA_600S_UNFILLED_V1`; the historical directory
+name does not replace the approved plan status. All 229 static prerequisites
+closed before launch. Budget 600000ms is per selected wait. Actual QA result,
+private teaching/logout and Root visual acceptance are pending. No following
+navigation, supplement, STOP/offline/cutover, Main adoption or retirement ran.
+
 2026-10-04 23:59 UTC: CLEAN B07 is now byte-closed (`ef61e3a4`):
 revision 5498, command count 5496 including the historical 2050 prefix,
 360 workpapers and 49 unrun tasks. These are checkpoint receipt fields, not
