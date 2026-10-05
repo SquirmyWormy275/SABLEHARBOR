@@ -1,5 +1,30 @@
 # Active company-source audit workflow
 
+2026-10-05 17:15 UTC checkpoint: All four selected current private access
+checks genuinely completed with own logout and revoked-cookie rejection;
+Root review `0cfbb887` accepted that extent. Actual QA monitor 60824 then
+exited 1: assessment choices returned 400 before any selected assessment
+save. Report `e240e489` has no screenshots. A separate once-owned diagnostic
+10464 exited 0 and confirmed “Assessment options byte limit,” with its own
+logout and cookie rejection complete (`90fa892b`). Prior failed-QA session
+and hidden-preview uncertainty remain; no UI or cutover is accepted.
+
+An isolated four-file repair is implementing bounded, searchable reference
+pages while preserving the full catalogue/context and existing save/read
+validation. One operational repair SIGTERM was sent to the exact owned
+Original child under selection `82747027` and signal receipt `c9f450cc`;
+sole monitor 58159 retains graceful drain/export/wait ownership. This is
+operational recovery, not final acceptance. Native monitor 7885 continues
+independently, with 1076 new returns and no reported error; completed B06
+counts remain 298 workpapers and 111 unrun base tasks. Later phases, final
+Native closure/replay/Key/Main, renewed viewer checks and final preservation
+remain unfinished. FIRST8 is never replayed; no Key or identity reset occurs.
+
+The Seagate is still physically absent at 17:15 UTC; internal free space is
+42.98 GiB. Final preservation and cleanup remain gated. No backup deletion,
+encryption, push, deployment or Atlas write occurred. All 46 jobs and 126
+existing status/state values remain unchanged; only checkpoint notes change.
+
 2026-10-05 16:36 UTC checkpoint: Native continuation `3bb94f30` remains
 running under sole monitor 7885, child 2045026/start 25335479. Its genuine B06
 legacy phase receipt `1ded0296` records revision 5164, 298 workpapers and 111
