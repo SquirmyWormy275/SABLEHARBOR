@@ -1,5 +1,27 @@
 # Audit-suite execution closeout
 
+2026-10-05 12:12 UTC checkpoint: Independent CLEAN history verification71680
+completed with actual child/driver exit0. Root admission `43474344` freshly
+closes the selected inputs and accepts6230 events,2741 retained native receipts
+and343659637053 raw frame bytes. This is qualified history verification;
+final V3 UI, current-packet binding, owned STOP and aggregate cutover remain open.
+The separate owned Original76036 MESSY export remains pending.
+
+Native writer18182 actually exited1 after simulated identity expiry. Root
+read-only reconciliation `3474a54f` closes all287 source origins, five databases
+and three locks. The exact attempted task.update is committed at revision4339
+with valid decoded state and event hashes; only its task/history/audit log and
+revision changed. Existing originals, requests, populations, selections,
+workpapers and samples are preserved. No RETURN was fabricated and the committed
+command cannot replay. All six existing identities are expired and nonrevoked.
+B05 has47 complete documentary task pipelines and3 untouched tasks; no partial
+pipeline exists for those remaining tasks. Normal signed renewal and a separate
+continuation are being prepared; neither has executed. CLEAN remains revision6008.
+
+Main product sources/assets, FinalWT and Atlas are unchanged. No new fieldwork
+completion, professional acceptance, backup or deletion is asserted. All46 queue
+jobs and their existing status/state values remain unchanged.
+
 2026-10-05 11:12:30 UTC checkpoint: The CLEAN packet is published (manifest
 `3bd43f19`), with manifest bytes equal to the prior export. Large packet members
 have not yet been independently compared. MESSY export started at 11:12:30 UTC;
