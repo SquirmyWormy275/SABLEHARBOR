@@ -1,5 +1,18 @@
 # Active company-source audit workflow
 
+2026-10-05 00:28 UTC: CLEAN B08 is now byte-closed (`5c769b47`):
+revision 5642, command count 5640 including the historical 2050 prefix,
+383 workpapers and 26 unrun tasks. These are checkpoint receipt fields, not
+current SQL/ACL or paired acceptance. MESSY has not started. At the metadata
+check, the continuation writer remains the selected PID 18961/start 17652877.
+
+The sole full QA remains live as PID 852935/start 20843823. No final report
+exists yet. The selected source saves its current step and completed checks
+only on settlement, so the current UI substep and whether private writes have
+occurred remain unknown. No duplicate HTTP, instrumentation or replay ran.
+Final UI, navigation, supplement, STOP/offline/cutover, adoption and retirement
+remain unaccepted.
+
 2026-10-05 00:15 UTC: The granular diagnostic genuinely finished
 once, exit 0 (`58371f9c`, report `9f6e580f`): nine steps passed. Controls took
 67.627 seconds; the separate buffered API bootstrap took 204.619 seconds,

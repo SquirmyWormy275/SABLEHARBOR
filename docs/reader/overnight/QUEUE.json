@@ -1805,7 +1805,7 @@
     "worktree": "SABLEHARBOR-audit-suite",
     "branch": "build/audit-training-suite",
     "boundaries": "Local integrated implementation; preserve immutable sources and private records. Atlas read-only. No inferred professional acceptance or remote deployment.",
-    "checkpoint_note": "Original company-source fieldwork has documented paired409 task records and its first complete replay. Original compact storage replacement is processing MESSY after completed CLEAN; paired check, genuine cold/UI/offline cutover remain pending. All27 preserved backup archives now have verified ordinary .tar.zst copies with key-free instructions. Next5714 fieldwork is conditionally delegated and remains unstarted pending actual original cutover. Main adoption, new Key/UI delivery, final preservation and exact cleanup remain pending; all46 locked job payloads/statuses unchanged. Atlas remains read-only; professional and owner usability acceptance are not asserted.",
+    "checkpoint_note": "Original genuine normal cold readiness and FIRST8 passed. Granular login diagnostic passed with its own logout; prior issued sessions remain unresolved. Full original measured-budget QA is running once; its current substep and private-write progress are unknown until settlement. Next5714 continuation CLEAN B08 checkpoint records 383 workpapers and 26 unrun tasks; MESSY has not begun. No current SQL, paired fieldwork, full UI, STOP/offline/cutover, Main adoption or cleanup acceptance is asserted. All34 historical backups are verified ordinary .tar.zst copies; obsolete ciphertext and key were removed. All46 locked job payloads and statuses remain unchanged. Atlas remains read-only; professional and owner usability acceptance are not asserted.",
     "active_agent_graph": {
       "date": "2026-10-01",
       "owner_instruction": "ok. Let 'er rip",
@@ -4621,6 +4621,24 @@
         "original_QA_600S_actual_output": "/home/kingoftheeast/SABLEHARBOR-original-cold-actual-UI-20261004/QA_600S_UNFILLED_V1",
         "original_QA_600S_actual_exit_code": null,
         "original_QA_600S_actual_UI_accepted": false
+      },
+      "closed_CLEAN_B08_checkpoint": {
+        "receipt_sha256": "5c769b4774f0830b0370a09d335ade7c8521f0b755e726ab27ca70bc459acb93",
+        "revision": 5642,
+        "observed_command_count_including_historical_prefix": 5640,
+        "workpapers": 383,
+        "unrun_tasks": 26,
+        "current_SQL_or_raw_or_professional_acceptance": false
+      },
+      "original_QA_600S_metadata_observation": {
+        "observed_utc": "2026-10-05T00:28:00+00:00",
+        "pid": 852935,
+        "start_ticks": "20843823",
+        "live": true,
+        "final_report_exists": false,
+        "current_UI_substep": "UNKNOWN_NOT_PERSISTED_UNTIL_SETTLEMENT",
+        "private_write_progress": "UNKNOWN",
+        "observation_boundary": "EXISTING_EXECUTOR_PROCESS_AND_OUTPUT_METADATA_ONLY"
       }
     }
   },
