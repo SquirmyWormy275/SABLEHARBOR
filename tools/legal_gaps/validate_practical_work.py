@@ -23,6 +23,19 @@ def validate():
     updates = {r["path"]: r for r in successor["records"]}
     assert set(updates) == {"docs/reader/transactions/README.md", "docs/reader/transactions/build.py",
                             "tools/legal_gaps/validate_practical_work.py", "docs/reader/usability/RESULTS.json"}
+    # The legal design review remains historical. Later editorial work has its
+    # own exact navigation pins rather than rewriting the manual-review receipt.
+    editorial_path = BASE / "review-support/qa/v3/NAVIGATION_SUCCESSOR_2026-10-07.json"
+    editorial = json.loads(editorial_path.read_text())
+    assert editorial["state"] == "AUTOMATED_NAVIGATION_REVIEW"
+    assert editorial["historical_receipt_sha256"] == successor["historical_receipt_sha256"]
+    assert editorial["previous_successor_sha256"] == sha(successor_path)
+    refreshed = {r["path"]: r for r in editorial["records"]}
+    assert set(refreshed) == {"docs/wiki/Start-Here.md", "tools/legal_gaps/validate_practical_work.py",
+                              "tools/reader/check_journeys.py"}
+    for relative, update in refreshed.items():
+        assert update["historical_sha256"] == receipt["input_hashes"][relative]
+    updates.update(refreshed)
     for group in ("input_hashes", "evidence_hashes"):
         assert receipt[group], "Empty review coverage"
         for relative, digest in receipt[group].items():

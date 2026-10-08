@@ -185,11 +185,8 @@ def audit_export(directory, root=ROOT):
         errors.append(f"{name}: unreachable exported Wiki page")
     click_report = {}
     if manifest.get("file_directory"):
-        # Sidebar and footer links are rendered on every actual Wiki page. Each
-        # selection costs one click; those navigation surfaces are not roots.
-        navigation = visible_edges.get("_Sidebar", set()) | visible_edges.get("_Footer", set())
-        for name in visible_edges:
-            visible_edges[name].update(navigation)
+        # Measure from the visible Home article alone. This route also works
+        # when GitHub collapses its sidebar on narrow screens.
         home_distances = distances(visible_edges, "Home")
         for name in pages.keys() - aliases.keys() - {"_Sidebar", "_Footer"}:
             if home_distances.get(name, 4) > 3:
@@ -203,9 +200,10 @@ def audit_export(directory, root=ROOT):
             errors.append("File directory differs from the tracked repository inventory")
         for relative, filename in manifest["file_directory"].items():
             page_name = Path(filename).stem
+            index_page = pages.get(page_name)
             matching = [
                 href
-                for href, _ in pages.get(page_name, Page("")).visible_links
+                for href, _ in (index_page.visible_links if index_page else [])
                 if href.startswith(prefix)
                 and unquote(urlsplit(href).path.split("/", 5)[-1]) == relative
             ]
@@ -220,7 +218,7 @@ def audit_export(directory, root=ROOT):
         if readme_path.exists():
             readme = Page(readme_path.read_text())
             if not any(
-                urlsplit(href).path == "/SquirmyWormy275/SABLEHARBOR/wiki/Files"
+                href == "https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Files"
                 for href, _ in readme.visible_links
             ):
                 errors.append("README: missing direct All files link")
