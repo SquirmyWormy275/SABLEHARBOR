@@ -2,7 +2,7 @@
 
 This is a development tracker for the approved Clean/Messy rehearsal, not an
 evidence register or audit conclusion. Its denominator is the independently
-reviewed [V2 discovery matrix](../../../../enterprise/generated/audit-suite/documentary-discovery-routes-2026-09-29/run-v2/MATRIX.json): 283 documentary/activity discovery routes in each audit side, grouped under 43 controls. The current A/B pair still has 409 `NOT_STARTED`/`NOT_RUN` tasks on each side and a frozen 13-component registry. A company source outside that registry cannot be collected into it retroactively.
+reviewed V2 discovery matrix (private local receipt: `enterprise/generated/audit-suite/documentary-discovery-routes-2026-09-29/run-v2/MATRIX.json`, not included in Git): 283 documentary/activity discovery routes in each audit side, grouped under 43 controls. The current A/B pair still has 409 `NOT_STARTED`/`NOT_RUN` tasks on each side and a frozen 13-component registry. A company source outside that registry cannot be collected into it retroactively.
 
 “Targeted” below means a reviewed new source names all the indicated discovery task IDs as possible future collection/procedure links. It does **not** mean the source covers the whole control, satisfies a task clause, establishes an accepted population or gives task credit. Every route remains unresolved until a fresh zero-evidence pair, exact source collection, procedure performance and review. Fictional 2027 events are future-authored as of 2026-09-30 and never establish real operation or a real Type 2 period.
 

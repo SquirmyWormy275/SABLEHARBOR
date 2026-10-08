@@ -30,7 +30,7 @@ supported conclusions. Qualified legal and customer-authority decisions can
 extend elapsed time even when engineering capacity is available.
 
 This denominator is for the **new frozen P1 pair**. The older A1939/B2066
-[review packet](../../../../enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-refresh-run-post-original-journals-a1939-b2066-v4/TASK-DISPOSITIONS.json)
+review packet (private local receipt: `enterprise/generated/audit-suite/acceptance-audit-2026-09-22/integrated-review-packet-refresh-run-post-original-journals-a1939-b2066-v4/TASK-DISPOSITIONS.json`, not included in Git)
 already contains a functioning audit UI, 818 indexed task rows,
 16 findings and earlier performed work. At the nearby A1938/B2064 checkpoint,
 each old workroom had 92 `COMPLETE`, 182 `IN_PROGRESS` and 135 `NOT_STARTED`
