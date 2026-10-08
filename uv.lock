@@ -1255,6 +1255,7 @@ dependencies = [
 
 [package.optional-dependencies]
 audit-suite = [
+    { name = "cryptography" },
     { name = "fastapi" },
     { name = "httpx" },
     { name = "openpyxl" },
@@ -1283,6 +1284,7 @@ postgres = [
 [package.metadata]
 requires-dist = [
     { name = "alembic", specifier = ">=1.13,<2" },
+    { name = "cryptography", marker = "extra == 'audit-suite'", specifier = ">=50.0.1,<51" },
     { name = "fastapi", marker = "extra == 'audit-suite'", specifier = ">=0.115,<1" },
     { name = "gunicorn", marker = "python_full_version >= '3.12' and extra == 'ccf-service'", specifier = ">=26.2,<27" },
     { name = "httpx", marker = "extra == 'audit-suite'", specifier = ">=0.27,<1" },

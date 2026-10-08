@@ -30,6 +30,10 @@ ERRORS = {
         "model computation may repeat."
     ),
     "EXECUTION_FAILED": "Action failed. Inspect the engagement before explicitly retrying.",
+    "POST_COMMIT_UNVERIFIED": (
+        "The command returned a committed revision, but its final context check failed. "
+        "Inspect that revision and reconcile the context before taking further action."
+    ),
     "INFERENCE_TIMEOUT": (
         "The local model exceeded its configured wait. No reply was saved. "
         "Inspect the engagement before explicitly retrying; model computation may repeat."
@@ -356,6 +360,7 @@ class BackgroundJobs:
                 if row["status"] != "PENDING":
                     return
                 self._transition(db, job_id, "RUNNING")
+            revision = None
             try:
                 self._authorize(actor, engagement)
                 command = json.loads(row["command"])
@@ -364,11 +369,14 @@ class BackgroundJobs:
                 if self.execution_guard is not None:
                     self.execution_guard(actor, engagement)
                 result = self.engine.command(actor, engagement, command)
+                revision = result["revision"]
                 if self.execution_guard is not None:
                     self.execution_guard(actor, engagement)
                 status, error, revision = "COMPLETED", None, result["revision"]
             except DomainError as exc:
-                if exc.code in {
+                if revision is not None:
+                    status, error = "INTERRUPTED", "POST_COMMIT_UNVERIFIED"
+                elif exc.code in {
                     "CONSULTATION_DELAYED",
                     "INVALID_CONSULTATION",
                     "SOURCE_CONTEXT_UNAVAILABLE",
@@ -388,9 +396,12 @@ class BackgroundJobs:
                     status, error = "FAILED", "INVALID_COMMAND"
                 else:
                     status, error = "FAILED", "EXECUTION_FAILED"
-                revision = None
             except Exception:
-                status, error, revision = "FAILED", "EXECUTION_FAILED", None
+                status, error = (
+                    ("INTERRUPTED", "POST_COMMIT_UNVERIFIED")
+                    if revision is not None
+                    else ("FAILED", "EXECUTION_FAILED")
+                )
             with self._db() as db:
                 db.execute("BEGIN IMMEDIATE")
                 self._transition(db, job_id, status, error, revision)

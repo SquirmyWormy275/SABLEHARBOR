@@ -8,6 +8,7 @@ revision, permission/source epoch and complete stored-object digest.
 from __future__ import annotations
 
 import hashlib
+import json
 import re
 
 from .store import DomainError, digest
@@ -15,6 +16,8 @@ from .store import DomainError, digest
 SCHEMA = "SH_WORKSPACE_SUMMARY_V1"
 HEADER = "summary-v1"
 COLLECTIONS = frozenset({"workpapers", "sample_executions"})
+ORIGINAL_CONTEXT_MAX_TRACES = 256
+ORIGINAL_CONTEXT_MAX_BYTES = 2 * 1024 * 1024
 
 
 def epoch(state: dict) -> str:
@@ -173,7 +176,7 @@ def sample_original_context(
         )
     }
     related = selected | {row["id"] for row in traces if row.get("predecessor_id") in selected}
-    return {
+    result = {
         "engagement_id": state["id"],
         "engagement_revision": state["revision"],
         "source_epoch_sha256": epoch(state),
@@ -181,5 +184,23 @@ def sample_original_context(
         "artifact_sha256": artifact_sha256,
         "complete_exact_original_selection": True,
         "retained_trace_count": len(traces),
-        "traces": [row for row in traces if row["id"] in related],
+        "traces": [],
     }
+    encoder = json.JSONEncoder(ensure_ascii=False, separators=(",", ":"), allow_nan=False)
+    size = sum(len(piece.encode()) for piece in encoder.iterencode(result))
+    for row in traces:
+        if row["id"] not in related:
+            continue
+        if len(result["traces"]) >= ORIGINAL_CONTEXT_MAX_TRACES:
+            raise DomainError(
+                "Original-context trace selection exceeds its count budget", status=413
+            )
+        size += 1  # A separator between trace objects.
+        for piece in encoder.iterencode(row):
+            size += len(piece.encode())
+            if size > ORIGINAL_CONTEXT_MAX_BYTES:
+                raise DomainError(
+                    "Original-context trace selection exceeds its byte budget", status=413
+                )
+        result["traces"].append(row)
+    return result

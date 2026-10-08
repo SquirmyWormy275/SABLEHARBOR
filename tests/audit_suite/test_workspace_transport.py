@@ -208,6 +208,27 @@ def test_exact_original_selection_preserves_earlier_exception_and_non_citing_suc
     )
 
 
+@pytest.mark.parametrize(
+    "limit,value", [("ORIGINAL_CONTEXT_MAX_TRACES", 1), ("ORIGINAL_CONTEXT_MAX_BYTES", 200)]
+)
+def test_exact_original_context_refuses_oversized_selection_without_partial_results(
+    monkeypatch, limit, value
+):
+    state = fixture_state()
+    before = deepcopy(state)
+    monkeypatch.setattr(transport, limit, value)
+    with pytest.raises(DomainError) as error:
+        transport.sample_original_context(
+            state,
+            "ART-1",
+            revision=8,
+            source_epoch=transport.epoch(state),
+            artifact_sha256="a" * 64,
+        )
+    assert error.value.status == 413
+    assert state == before
+
+
 def test_http_read_mutation_replay_authority_epoch_and_source_exclusion(tmp_path):
     app = create_app(tmp_path / "state", allowed_hosts=["testserver"])
     engine = app.state.engine

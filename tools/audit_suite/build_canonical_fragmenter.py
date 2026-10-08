@@ -1,8 +1,13 @@
 """Explicit local build of the separately code-pinned canonical byte splitter."""
 
-import hashlib
-import json
 import os
+import sys
+
+if __package__ in (None, ""):
+    sys.path[0] = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
+
+import hashlib  # noqa: E402
+import json  # noqa: E402
 import shlex
 import subprocess
 import sysconfig
