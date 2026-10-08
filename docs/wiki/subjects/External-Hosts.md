@@ -1,6 +1,6 @@
 # Cradle's external hosts
 
-Kelly Gang Mining and Demotte Reclamation Services operate their own host systems. The [Cradle closeout](../../canon/CRADLE_CLOSEOUT_2026-09-06.md) controls the reference relationships and supersedes the former Gunns placeholder and older location language within its stated scope.
+Cradle recovers materials at sites operated by Kelly Gang Mining and Demotte Reclamation Services. Each host continues to run its own plant; Cradle’s work uses the agreed stream or slipstream. The [host-relationship record](../../canon/CRADLE_CLOSEOUT_2026-09-06.md) describes access, equipment and the point where material title transfers.
 
 | Host | Cradle interface | Read and inspect |
 |---|---|---|
@@ -9,20 +9,15 @@ Kelly Gang Mining and Demotte Reclamation Services operate their own host system
 
 For an evidence review, follow source stream → sample/assay → recovery run → captured material → Bedford batch → downstream acceptance → host settlement. Start with the [Cradle business page](../businesses/Cradle.md), [operating commercial guide](../../../enterprise/operations/docs/commercial.md) and [facility artifact index](../../../geospatial/maps/facilities/ARTIFACT_INDEX.md). Source status governs whether a map is context, modelled geometry or an established site record.
 
-Exact price, participation, tonnage and margin in a scenario are numerical assumptions, not permanent lore values. The relationship does not transfer the host's whole plant, mine liability, workforce or books into Sable Harbor. These pages do not fabricate complete host companies or floor plans beyond the permitted interface.
+Exact price, participation, tonnage and margin in a scenario are numerical assumptions, not permanent lore values. The relationship does not transfer the host's whole plant, mine liability, workforce or books into Sable Harbor. The linked plans cover the host interface described in the agreement.
 
 [Existing external-host chart](../../organization/charts/external-cradle-hosts.md)
 
-[Subject directory](README.md) · [Business directory](../businesses/README.md) · [Department directory](../departments/README.md) · [Wiki home](../Home.md)
+[Subject directory](README.md) · [Business directory](../businesses/README.md) · [Department directory](../departments/README.md) · [Wiki home](../Home.md) · [All files](../Files.md)
 
-## Reading guide
+<a id="reading-guide"></a>
 
-Cradle’s host relationships connect its recovery work to someone else’s operating site. Read the technical opportunity alongside the host-rights record and the distinction between ownership, access and a planned installation.
-
-
-## What remains unknown
-
-Host relationships do not establish ownership of the host site. Precise footprints, access and occupancy remain limited by the supporting instruments and issue #106. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+<a id="what-remains-unknown"></a>
 
 ## Related reading
 

@@ -2,16 +2,20 @@
 
 <img src="../../../assets/brand/logos/sable-harbor__reverse-horizontal.png" alt="Sable Harbor approved identity" width="360">
 
-**Canon state:** LOCKED institutional scope; implementation detail varies by linked record.<br>
-**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
+[Wiki home](../Home.md) · [Departments](README.md) · [All files](../Files.md)
 
-OGC provides legal advice and manages corporate legal affairs. Corporate Secretary sits within OGC and handles formal corporate records and Board mechanics.
+The Office of the General Counsel advises Sable Harbor on lawful ways to do business and manages its legal affairs. The Corporate Secretary sits within the office and handles Board processes and formal corporate records. The accountable manager makes the business decision with that advice.
 
-## Reading guide
+<a id="reading-guide"></a>
+<a id="what-remains-unknown"></a>
 
-Legal identifies lawful paths and explains legal constraints; the accountable manager retains the business decision. Read the authority and transaction sources before treating a draft, an approval or an execution record as interchangeable.
+## Advice, agreements and corporate affairs
 
-## Read and use the records
+The [transaction guide](../../reader/transactions/README.md) connects agreements with approvals, obligations and accounting support. Draft terms, company approvals and signed instruments have different roles; the guide identifies the execution evidence available for each case.
+
+<a id="read-and-use-the-records"></a>
+
+## Documents
 
 - [Complete legal source editions](../../legal/full-text/README.md) — Read all 56 selected records in full, with PDF, editable HTML, original Markdown and database access. New publication designs await exact-file review.
 - [Headquarters closeout](../../../docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md) — Section 3 establishes legal advice and Corporate Secretary responsibilities.
@@ -20,19 +24,13 @@ Legal identifies lawful paths and explains legal constraints; the accountable ma
 - [Corporate Secretary](../../../docs/wiki/departments/corporate-secretary.md) — Board records and crisis-governance access.
 - [Runtime contract dossier](../../../enterprise/runtime/docs/CONTRACT_DOSSIER.md) — Read contract baseline and schedules with their design/execution limits.
 
-## Organization and identity
+<a id="organization-and-identity"></a>
 
-[Organization chart, text roster and source qualifications](../../organization/charts/corporate-enterprise-support.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+## Organization
+
+[Organization chart and roster](../../organization/charts/corporate-enterprise-support.md) · [Complete chart book](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Office of the General Counsel — shared organization chart, first page](../../organization/assets/current/corporate-enterprise-support.png)](../../organization/assets/current/corporate-enterprise-support.png)
-
-The shared chart retains its original scope; it is not a new reporting chart for this page. The approved corporate mark above identifies the parent institution.
-
-[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
-
-## What remains unknown
-
-Drafts and documented operating choices do not establish signatures, elections, clearances or external legal execution. Issue #18 and the separately owned publication review remain open. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
 
 ## Related reading
 
@@ -40,3 +38,11 @@ Drafts and documented operating choices do not establish signatures, elections, 
 - [Risk & Compliance](risk-compliance.md)
 - [Sable Harbor Advisory](../businesses/Advisory.md)
 - [Board and committees](board.md)
+
+<details>
+<summary>About this article</summary>
+
+**Canon state:** LOCKED institutional scope; implementation detail varies by linked record.
+**Reviewed:** October 7, 2026. Supporting documents retain their own dates and status.
+
+</details>

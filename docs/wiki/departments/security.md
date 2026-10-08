@@ -2,16 +2,20 @@
 
 <img src="../../../assets/brand/logos/sable-harbor__reverse-horizontal.png" alt="Sable Harbor approved identity" width="360">
 
-**Canon state:** LOCKED institutional scope; implementation detail varies by linked record.<br>
-**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
+[Wiki home](../Home.md) · [Departments](README.md) · [All files](../Files.md)
 
-The enterprise security capability protects systems and data and manages cybersecurity incidents. The CISO retains an independent security authority boundary within the enterprise support environment.
+The enterprise security capability protects systems and information and coordinates cybersecurity incident response. The CISO retains independent security authority alongside Technology Services. The doctrine favors practical controls built into systems and restrictions proportionate to the work.
 
-## Reading guide
+<a id="reading-guide"></a>
+<a id="what-remains-unknown"></a>
 
-Security provides a distinct authority boundary alongside enterprise technology services. The doctrine favors controls built into systems, proportionate restrictions and practical secure ways to do the work.
+## Protecting systems and information
 
-## Read and use the records
+Security designs explain the intended controls. Implementation, supplier assurance and operating test records show how those controls have been applied. The runtime and incident-response exercises identify the particular systems and conditions they test.
+
+<a id="read-and-use-the-records"></a>
+
+## Documents
 
 - [Reference assurance preparation](../../../enterprise/ccf/assurance/README.md#approved-reference-assessment-preparation) — Find the corporate/Reno/Boise design scope and unexecuted SOC/HIPAA test plans, with optional C5 continuity workpapers.
 - [Technology and security doctrine](../../../docs/governance/ENTERPRISE_TECHNOLOGY_SERVICES_DOCTRINE.md) — Security authority, engineered controls and monitoring boundaries.
@@ -20,20 +24,13 @@ Security provides a distinct authority boundary alongside enterprise technology 
 - [CCF preparation](../../../enterprise/ccf/README.md) — Synthetic identity and recovery checks.
 - [Runtime assurance scope](../../../enterprise/runtime/docs/ASSURANCE_SCOPE.md) — Actual implementation and evidence limits.
 
-## Organization and identity
+<a id="organization-and-identity"></a>
 
-[Organization chart, text roster and source qualifications](../../organization/charts/corporate-enterprise-support.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+## Organization
+
+[Organization chart and roster](../../organization/charts/corporate-enterprise-support.md) · [Complete chart book](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Enterprise security capability — shared organization chart, first page](../../organization/assets/current/corporate-enterprise-support.png)](../../organization/assets/current/corporate-enterprise-support.png)
-
-The shared chart retains its original scope; it is not a new reporting chart for this page. The approved corporate mark above identifies the parent institution.
-
-[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
-[Continuity and crisis responsibilities across the existing institutions](../subjects/Continuity.md).
-
-## What remains unknown
-
-Security doctrine and deterministic reference checks do not establish deployed enforcement, supplier assurance or complete inference-leakage protection. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
 
 ## Related reading
 
@@ -41,3 +38,11 @@ Security doctrine and deterministic reference checks do not establish deployed e
 - [Risk & Compliance](risk-compliance.md)
 - [Alexandria institutional environment](alexandria.md)
 - [Continuity and crisis responsibilities](../subjects/Continuity.md)
+
+<details>
+<summary>About this article</summary>
+
+**Canon state:** LOCKED institutional scope; implementation detail varies by linked record.
+**Reviewed:** October 7, 2026. Supporting documents retain their own dates and status.
+
+</details>

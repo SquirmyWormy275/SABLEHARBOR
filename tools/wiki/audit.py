@@ -20,6 +20,8 @@ class Page(HTMLParser):
     def __init__(self, source):
         super().__init__()
         self.links, self.images, self.headings, self.anchors = [], [], [], set()
+        self.visible_links, self.details = [], []
+        self.link_visible = True
         self.heading = None
         self.link = None
         self.duplicates = {}
@@ -27,6 +29,8 @@ class Page(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if tag == "details":
+            self.details.append("open" in attrs)
         for key in ("id", "name"):
             if attrs.get(key):
                 self.anchors.add(attrs[key])
@@ -34,6 +38,7 @@ class Page(HTMLParser):
             self.heading = [int(tag[1]), ""]
         if tag == "a" and "href" in attrs:
             self.link = [attrs["href"], ""]
+            self.link_visible = all(self.details)
         if tag == "img":
             self.images.append(attrs)
             if self.link is not None:
@@ -56,7 +61,23 @@ class Page(HTMLParser):
             self.heading = None
         if tag == "a" and self.link is not None:
             self.links.append(tuple(self.link))
+            if self.link_visible:
+                self.visible_links.append(tuple(self.link))
             self.link = None
+        if tag == "details" and self.details:
+            self.details.pop()
+
+
+def distances(edges, start):
+    """Count actual link selections; opening collapsed details is not a free click."""
+    result, queue = {start: 0}, deque([start])
+    while queue:
+        current = queue.popleft()
+        for target in edges.get(current, set()):
+            if target not in result:
+                result[target] = result[current] + 1
+                queue.append(target)
+    return result
 
 
 def audit(root=ROOT):
@@ -123,17 +144,18 @@ def audit(root=ROOT):
     }
 
 
-def audit_export(directory):
+def audit_export(directory, root=ROOT):
     """Check the actual composed Wiki, including all records and generated rooms."""
     pages = {p.stem: Page(p.read_text()) for p in directory.glob("*.md")}
     edges = {name: set() for name in pages}
+    visible_edges = {name: set() for name in pages}
     errors, checked = [], 0
     prefix = "/SquirmyWormy275/SABLEHARBOR/wiki/"
     for name, page in pages.items():
-        for href, _ in page.links:
+        for href, label in page.links:
             url = urlsplit(href)
             if url.netloc == "github.com" and url.path.startswith(prefix):
-                target = unquote(url.path[len(prefix):])
+                target = unquote(url.path[len(prefix) :])
             elif not url.scheme and not url.netloc:
                 target = unquote(url.path) or name
             else:
@@ -143,6 +165,8 @@ def audit_export(directory):
                 errors.append(f"{name}: missing Wiki page {href}")
             else:
                 edges[name].add(target)
+                if (href, label) in page.visible_links:
+                    visible_edges[name].add(target)
                 if url.fragment and unquote(url.fragment) not in pages[target].anchors:
                     errors.append(f"{name}: missing Wiki anchor {href}")
     manifest_path = directory / "sable-harbor-wiki-manifest.json"
@@ -159,10 +183,77 @@ def audit_export(directory):
             queue.extend(edges.get(page, set()) - seen)
     for name in set(pages) - seen - aliases.keys():
         errors.append(f"{name}: unreachable exported Wiki page")
-    return {"pages": len(pages), "wiki_destinations": checked,
-            "reachable_pages": len((seen | aliases.keys()) & pages.keys()),
-            "canonical_pages": len(pages) - len(aliases), "historical_addresses": len(aliases),
-            "errors": sorted(errors)}
+    click_report = {}
+    if manifest.get("file_directory"):
+        # Sidebar and footer links are rendered on every actual Wiki page. Each
+        # selection costs one click; those navigation surfaces are not roots.
+        navigation = visible_edges.get("_Sidebar", set()) | visible_edges.get("_Footer", set())
+        for name in visible_edges:
+            visible_edges[name].update(navigation)
+        home_distances = distances(visible_edges, "Home")
+        for name in pages.keys() - aliases.keys() - {"_Sidebar", "_Footer"}:
+            if home_distances.get(name, 4) > 3:
+                errors.append(f"{name}: more than three clicks from Wiki Home")
+        prefix = f"https://github.com/{manifest['repository']}/blob/{manifest['source_revision']}/"
+        file_depths = {}
+        from tools.wiki.files import tracked_files
+
+        expected_files = {p.relative_to(root).as_posix() for p in tracked_files(root)}
+        if expected_files != manifest["file_directory"].keys():
+            errors.append("File directory differs from the tracked repository inventory")
+        for relative, filename in manifest["file_directory"].items():
+            page_name = Path(filename).stem
+            matching = [
+                href
+                for href, _ in pages.get(page_name, Page("")).visible_links
+                if href.startswith(prefix)
+                and unquote(urlsplit(href).path.split("/", 5)[-1]) == relative
+            ]
+            if not matching:
+                errors.append(f"{relative}: missing visible original-file link in {filename}")
+            depth = home_distances.get(page_name, 4) + 1
+            file_depths[relative] = depth
+            if depth > 3:
+                errors.append(f"{relative}: more than three clicks from Wiki Home")
+        # The README must offer the same direct entrance to the directory.
+        readme_path = root / "README.md"
+        if readme_path.exists():
+            readme = Page(readme_path.read_text())
+            if not any(
+                urlsplit(href).path == "/SquirmyWormy275/SABLEHARBOR/wiki/Files"
+                for href, _ in readme.visible_links
+            ):
+                errors.append("README: missing direct All files link")
+        else:
+            errors.append("README: missing repository entry point")
+        click_report = {
+            "indexed_files": len(file_depths),
+            "maximum_file_clicks": max(file_depths.values(), default=0),
+            "maximum_article_clicks": max(
+                (
+                    home_distances.get(name, 4)
+                    for name in pages.keys() - aliases.keys() - {"_Sidebar", "_Footer"}
+                ),
+                default=0,
+            ),
+        }
+        downloads = manifest.get("release_downloads", [])
+        if downloads:
+            links = {href for href, _ in pages.get("Downloads", Page("")).visible_links}
+            if set(downloads) - links:
+                errors.append("Release directory is missing visible asset links")
+            if home_distances.get("Downloads", 4) + 1 > 3:
+                errors.append("Release downloads require more than three clicks")
+            click_report["release_downloads"] = len(downloads)
+    return {
+        "pages": len(pages),
+        "wiki_destinations": checked,
+        "reachable_pages": len((seen | aliases.keys()) & pages.keys()),
+        "canonical_pages": len(pages) - len(aliases),
+        "historical_addresses": len(aliases),
+        **click_report,
+        "errors": sorted(errors),
+    }
 
 
 if __name__ == "__main__":

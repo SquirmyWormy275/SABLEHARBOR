@@ -316,11 +316,10 @@ def populate(
         lines = [
             f"# {label}",
             "",
-            "[Library](../Library.md) · [Company index](../Home.md)",
+            "[Library](../Library.md) · [All files](../Files.md) · [Company index](../Home.md)",
             "",
-            "Generated file inventory. Includes current and historical records; open the source for its status. "
-            "A folder or title does not establish approval. PDF companions below are verified through the controlled-publication manifest. "
-            "Other files are listed independently; an absent companion link means unmapped, not proven nonexistent.",
+            "Browse the documents below, grouped by folder. Earlier editions remain available alongside current records. "
+            "Where a formatted PDF has been verified against its source, the two are linked together.",
             "",
         ]
         folders = defaultdict(list)
@@ -340,12 +339,11 @@ def populate(
     review_lines = [
         "# Document-format review queue",
         "",
-        "[Library](../Library.md)",
+        "[Library](../Library.md) · [All files](../Files.md)",
         "",
-        "Generated reconciliation queue, not an assertion that every unpaired record lacks a publication. "
-        "The repository maintainer owns reconciliation of this queue; these work queues are not in-universe appointments. "
-        "Review other domain manifests and release members before proposing new documents. "
-        "Historical releases remain immutable. Native accounting record completeness is outside this discovery index.",
+        "This list helps maintainers check which source documents have formatted companions. "
+        "Before creating a publication, check the relevant package manifest and release: "
+        "an existing companion may be listed there. Historical releases keep their original files.",
         "",
         "| State | Records |",
         "|---|---:|",
@@ -380,12 +378,12 @@ def populate(
     lines = [
         "# Document library",
         "",
-        "[Company index](Home.md) · [Use cases](../reader/USE_CASES.md) · "
+        "[Company index](Home.md) · [All files](Files.md) · [Audit practice](Audit.md) · "
         "[Source and format guide](../reader/SOURCES_AND_FORMATS.md)",
         "",
-        "Use the subject pages for a guided introduction. Use this complete file inventory to reach the underlying "
-        "Markdown records, PDFs and Excel workbooks without parsing source data. Current and historical files remain "
-        "visible; read each document's status and successor references.",
+        "Browse company documents by subject, including Markdown records, PDFs and Excel workbooks. "
+        "For datasets, maps, artwork, programs and every other repository file, open [All files](Files.md). "
+        "Each collection links directly to the originals. Earlier editions remain available with their dates and status.",
         "",
         "| Collection | Files |",
         "|---|---:|",
@@ -402,24 +400,27 @@ def populate(
             f"{counts['pdf']} PDFs and {counts['xlsx']} Excel workbooks. "
             f"The existing publication manifest verifies {len(paired)} Markdown/PDF pairs.",
             "",
-            "Every inventoried file has a path, title, format, collection, size and SHA-256 in "
-            "`reader_file` within the [institutional database](../internal/institutional_catalog.sqlite3). "
-            "`reader_publication_pair` records verified source/PDF links; `reader_search` supports text search. "
-            "`reader_evidence_link` separately connects validated evidence packets to their native accounting IDs and MD/PDF/XLSX files without declaring publication approval. These are discovery tables. Native accounting and operating databases retain their transaction records.",
-            "`reader_evidence_package` preserves accounting/legal package registers and review states; "
-            "`reader_counterpart_audit` records applicable dated counterpart evidence.",
+            "## Published formats",
             "",
-            "The [format-review queue](library/format-review.md) lists every unpaired non-navigation Markdown record for reconciliation. "
-            "Unpaired documents have not been certified against the new three-form requirement. "
-            "Release-only records are reached through release guides; their archive contents are not silently "
-            "counted as files in this checkout. Code, raw data, imagery and packaged binaries are reached through "
-            "their domain guides and manifests. Generated library pages are excluded from their own inventory.",
+            "The [format-review list](library/format-review.md) tracks source documents whose formatted "
+            "companions need checking. The [release guides](../reader/USE_CASES.md#downloads-and-tools) "
+            "link complete downloadable packages and their manifests.",
             "",
-            "## Rebuild",
+            "<details>",
+            "<summary>Catalog and maintenance</summary>",
             "",
-            "Run `python tools/documents/build_institutional_catalog.py` from the repository root. "
-            "The generator updates this library and the existing database together. It does not change source records "
-            "or issue new publications.",
+            "The [institutional database](../internal/institutional_catalog.sqlite3) stores file paths, "
+            "titles, formats and hashes in `reader_file`. `reader_search` provides text search; "
+            "`reader_publication_pair` records verified source/PDF links. Evidence-package and "
+            "counterpart tables retain the associated review records. Transaction data remains in "
+            "the relevant accounting and operating databases.",
+            "",
+            '<a id="rebuild"></a>',
+            "Run `python tools/documents/build_institutional_catalog.py` from the repository root "
+            "to update this library and its database. The build updates discovery records; it does "
+            "not issue new publications. Generated library pages are excluded from their own inventory.",
+            "",
+            "</details>",
             "",
         ]
     )

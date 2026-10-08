@@ -1,14 +1,12 @@
 # Pale Sun / Red Wash
 
-[Wiki home](../Home.md) · [Business directory](README.md) · [Department directory](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
+[Wiki home](../Home.md) · [All files](../Files.md) · [Business directory](README.md) · [Department directory](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
 
 <img src="../../../assets/brand/logos/pale_sun__canonical.png" alt="Approved Pale Sun / Red Wash logo" width="280">
 
 Pale Sun owns Red Wash Mining, LLC, which operates the Red Wash uranium mine in Sweetwater County, Wyoming. The archive includes acquisition records, mine and processing descriptions, operating evidence, financial models and logistics constraints.
 
-## Reading guide
-
-Read the acquisition story alongside the operating constraints of the mining business. Separate investment assumptions from available cash, mine readiness and the permissions needed to move uranium.
+<a id="reading-guide"></a>
 
 ## Start here
 
@@ -44,9 +42,13 @@ Work from the acquisition consideration into transaction accounting, then compar
 2. Open `units/pale-sun/audit.xlsx` in the extracted release. Its `README.md` explains the unit scope. The matching CSV and SQLite extracts provide the same scoped evidence; SQL is optional.
 3. Read the [unit evidence guide](../../../docs/audit/UNIT_EXPORT_SPECIFICATION.md) before choosing samples. Select scenario and period together, and distinguish retained 2026 reconstruction from conditional 2027–2031 forecasts.
 
-The [finance successor guide](../../../enterprise/business/README.md) explains generation, reconciliation and limits. A workbook is scenario evidence, not an audited financial statement or observed bank record.
+The [finance successor guide](../../../enterprise/business/README.md) explains generation, reconciliation and limits. The workbook records the selected scenario and its assumptions.
 
 ## Places and plans
+
+<a id="what-remains-unknown"></a>
+
+Uranium movements require custody qualification, and no Red Wash rail spur is authorized. Funding forecasts and proposed facilities identify the investment assumptions; financing and construction records establish later commitments.
 
 | Open | What you will find |
 |---|---|
@@ -56,10 +58,6 @@ The [finance successor guide](../../../enterprise/business/README.md) explains g
 Use the [complete facility artifact index](../../../geospatial/maps/facilities/ARTIFACT_INDEX.md) for independently saved maps and floor plans, or open the [interactive atlas](../../../geospatial/maps/index.html) locally in a browser. GitHub displays the linked Markdown and images directly; it does not execute the atlas HTML.
 
 [Abandoned acquisition files](../subjects/Historical-Opportunities.md) · [Northstar seller boundary](../subjects/External-Counterparties.md)
-
-## What remains unknown
-
-Uranium custody remains gated, and no Red Wash rail spur is authorized. Conditional funding and planned facilities are not executed financing or as-built infrastructure. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
 
 ## Related reading
 

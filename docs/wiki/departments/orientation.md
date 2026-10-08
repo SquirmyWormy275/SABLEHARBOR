@@ -2,16 +2,20 @@
 
 <img src="../../../assets/brand/logos/j2__primary-horizontal.png" alt="J2 approved identity" width="240">
 
-**Canon state:** LOCKED DIRECTION doctrine; LOCKED establishment and current leadership.<br>
-**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
+[Wiki home](../Home.md) · [Departments](README.md) · [All files](../Files.md)
 
-Orientation maintains enterprise questions, the Enterprise Intelligence Brief and the company’s recorded current understanding. Officers brief decision-makers on findings, assumptions, uncertainty and dissent without owning the decision.
+Orientation maintains enterprise questions, the Enterprise Intelligence Brief and the company’s recorded understanding of important issues. Officers brief decision-makers on findings, assumptions, changes and dissent, giving leaders a shared picture of the evidence available.
 
-## Reading guide
+<a id="reading-guide"></a>
+<a id="what-remains-unknown"></a>
 
-Orientation helps leaders maintain a shared picture of what is known, what changed and where uncertainty remains. Enterprise questions and briefings provide context for decisions rather than a second chain of command.
+## Briefing the company’s current understanding
 
-## Read and use the records
+The briefing informs the decision; responsibility stays with the executive or operating owner. Recorded appointments and source permissions determine who prepares a briefing and which material can be disclosed.
+
+<a id="read-and-use-the-records"></a>
+
+## Documents
 
 - [Orientation doctrine](../../../docs/j2/ORIENTATION.md) — Responsibilities, executive/Board proximity and authority limits.
 - [Orientation Officer profession](../../../docs/j2/ORIENTATION_OFFICER_PROFESSION.md) — Commissioning, standards and professional constraints.
@@ -20,19 +24,13 @@ Orientation helps leaders maintain a shared picture of what is known, what chang
 - [Establishment](../../../docs/j2/J2_ESTABLISHMENT.md) — 24 authorized Orientation billets; distinguish this from earlier approximate commissioned-officer targets.
 - [Leadership appointments](../../../docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md) — Grant Kohrs is Head of Orientation; joined in 2020.
 
-## Organization and identity
+<a id="organization-and-identity"></a>
 
-[Organization chart, text roster and source qualifications](../../organization/charts/corporate-j2.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+## Organization
+
+[Organization chart and roster](../../organization/charts/corporate-j2.md) · [Complete chart book](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Orientation — shared organization chart, first page](../../organization/assets/current/corporate-j2.png)](../../organization/assets/current/corporate-j2.png)
-
-The shared chart retains its original scope; it is not a new reporting chart for this page. The approved J2 mark above identifies the parent institution.
-
-[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
-
-## What remains unknown
-
-Board and executive proximity do not confer executive authority. Unnamed appointments and the runtime disclosure boundary retain their explicit limits. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
 
 ## Related reading
 
@@ -40,3 +38,11 @@ Board and executive proximity do not confer executive authority. Unnamed appoint
 - [Judgment](judgment.md)
 - [Contact](contact.md)
 - [J2 Education](education.md)
+
+<details>
+<summary>About this article</summary>
+
+**Canon state:** LOCKED DIRECTION doctrine; LOCKED establishment and current leadership.
+**Reviewed:** October 7, 2026. Supporting documents retain their own dates and status.
+
+</details>

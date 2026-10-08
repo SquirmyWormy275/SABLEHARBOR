@@ -2,16 +2,20 @@
 
 <img src="../../../assets/brand/logos/j2__primary-horizontal.png" alt="J2 approved identity" width="240">
 
-**Canon state:** LOCKED institutional scope; implementation detail varies by linked record.<br>
-**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
+[Wiki home](../Home.md) · [Departments](README.md) · [All files](../Files.md)
 
-Education designs and teaches enterprise and professional courses, cases and exercises, and supports conferences. Subject owners retain responsibility for law, safety, controls and technical content; Education owns instructional design.
+J2 Education develops courses, cases and exercises from professional practice and company experience. It also supports conferences and a rotating practitioner faculty. Education designs the teaching; the relevant subject owners remain responsible for legal, safety, control and technical requirements.
 
-## Reading guide
+<a id="reading-guide"></a>
+<a id="what-remains-unknown"></a>
 
-Education turns work and institutional experience into opportunities to learn and develop judgment. Read the program families alongside the rotating faculty model and the responsibilities of Orientation and JAG.
+## Teaching from company experience
 
-## Read and use the records
+Program descriptions explain the intended learning and faculty arrangements. Capacity models describe planned provision; teaching events and residential attendance have their own records.
+
+<a id="read-and-use-the-records"></a>
+
+## Documents
 
 - [Education doctrine](../../../docs/j2/EDUCATION.md) — Five program families, teaching responsibilities, residential use and rotating faculty.
 - [Program chart](../../../docs/organization/charts/corporate-education-programs.md) — Current program names and concise descriptions.
@@ -20,19 +24,13 @@ Education turns work and institutional experience into opportunities to learn an
 - [Leadership appointments](../../../docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md) — Brett Calder is Head of Education; joined in 2021.
 - [Campus and floor plans](../../../geospatial/facilities/README.md) — Modelled education and residential facilities with explicit status.
 
-## Organization and identity
+<a id="organization-and-identity"></a>
 
-[Organization chart, text roster and source qualifications](../../organization/charts/corporate-education-programs.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+## Organization
+
+[Organization chart and roster](../../organization/charts/corporate-education-programs.md) · [Complete chart book](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![J2 Education — shared organization chart, first page](../../organization/assets/current/corporate-education-programs.png)](../../organization/assets/current/corporate-education-programs.png)
-
-The shared chart retains its original scope; it is not a new reporting chart for this page. The approved J2 mark above identifies the parent institution.
-
-[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
-
-## What remains unknown
-
-Program names do not establish a new staffing population, actual residential occupancy or completed teaching events. Model capacity retains its source scope. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
 
 ## Related reading
 
@@ -40,3 +38,11 @@ Program names do not establish a new staffing population, actual residential occ
 - [Orientation](orientation.md)
 - [Junction Advisory Group](jag.md)
 - [Sable Harbor Advisory](../businesses/Advisory.md)
+
+<details>
+<summary>About this article</summary>
+
+**Canon state:** LOCKED institutional scope; implementation detail varies by linked record.
+**Reviewed:** October 7, 2026. Supporting documents retain their own dates and status.
+
+</details>

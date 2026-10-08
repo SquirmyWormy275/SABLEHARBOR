@@ -2,16 +2,20 @@
 
 <img src="../../../assets/brand/logos/sable-harbor__reverse-horizontal.png" alt="Sable Harbor approved identity" width="360">
 
-**Canon state:** LOCKED institutional scope; implementation detail varies by linked record.<br>
-**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
+[Wiki home](../Home.md) · [Departments](README.md) · [All files](../Files.md)
 
-The Board oversees management, appoints senior leadership and approves reserved commitments. Its five committees divide oversight of audit, finance, technology and operations, compensation, and governance. Committee oversight does not make a committee an operating department.
+The Board appoints senior leadership, oversees management and approves commitments reserved to it. Its five committees cover audit, finance, technology and operations, compensation, and governance. Management runs the businesses; committees examine the work and challenge the decisions within their charters.
 
-## Reading guide
+<a id="reading-guide"></a>
+<a id="what-remains-unknown"></a>
 
-Use this page to distinguish oversight from day-to-day operating authority. The committee charters explain which questions go to which committee; dated minutes and consents explain what was actually ratified.
+## Oversight and reserved decisions
 
-## Read and use the records
+The charters describe each committee’s responsibilities. Dated minutes and consents record particular approvals, while the people charts identify Board members and their recorded roles.
+
+<a id="read-and-use-the-records"></a>
+
+## Documents
 
 - [Current Board and capital governance](../../../docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md) — Read the current membership and governance rules before older financing proposals.
 - [Five committee charters](../../../docs/governance/committees/README.md) — Find each committee’s remit and authority.
@@ -20,19 +24,13 @@ Use this page to distinguish oversight from day-to-day operating authority. The 
 - [Board publication](../../../docs/governance/publications/SH-GOV-BOARD-001_v1.0.1.pdf) — Download the controlled reader edition.
 - [Board and committee register](../../../docs/governance/structured/board_and_committees.json) — Inspect the structured counterpart to the governance sources.
 
-## Organization and identity
+<a id="organization-and-identity"></a>
 
-[Organization chart, text roster and source qualifications](../../organization/charts/corporate-board-committees.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+## Organization
+
+[Organization chart and roster](../../organization/charts/corporate-board-committees.md) · [Complete chart book](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Board and committees — shared organization chart, first page](../../organization/assets/current/corporate-board-committees.png)](../../organization/assets/current/corporate-board-committees.png)
-
-The shared chart retains its original scope; it is not a new reporting chart for this page. The approved corporate mark above identifies the parent institution.
-
-[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
-
-## What remains unknown
-
-Board membership is not an employee census. An oversight remit does not prove that a particular transaction or commitment has been approved. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
 
 ## Related reading
 
@@ -40,3 +38,11 @@ Board membership is not an employee census. An oversight remit does not prove th
 - [Corporate Secretary](corporate-secretary.md)
 - [Internal Audit](internal-audit.md)
 - [Founders, early colleagues and later people](../subjects/People.md)
+
+<details>
+<summary>About this article</summary>
+
+**Canon state:** LOCKED institutional scope; implementation detail varies by linked record.
+**Reviewed:** October 7, 2026. Supporting documents retain their own dates and status.
+
+</details>

@@ -16,6 +16,9 @@ sys.path.insert(0, str(ROOT))
 from tools.documents import preview_reader as preview  # noqa: E402
 
 JOURNEYS = {
+    "audit_workspace": ["README.md", "docs/wiki/Audit.md", "docs/audit-suite/LOCAL_WORKSPACE.md"],
+    "audit_controls": ["docs/wiki/Home.md", "docs/wiki/Audit.md", "enterprise/ccf/PROCEDURES.md"],
+    "people": ["docs/wiki/Home.md", "docs/wiki/departments/people-culture.md", "docs/governance/PEOPLE_AND_CULTURE_DOCTRINE.md"],
     "draft_review": [
         "README.md",
         "docs/reader/transactions/README.md",

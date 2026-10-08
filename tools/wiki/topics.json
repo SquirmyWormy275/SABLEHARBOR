@@ -1,82 +1,82 @@
 {
   "advisory": {
     "title": "Advisory matters",
-    "introduction": "Read the engagement model, delivery practices and matter economics together. Contractual terms and external execution retain their stated limits."
+    "introduction": "Follow a client matter through investigation, delivery, review and its economics."
   },
   "assets": {
     "title": "Identity and artwork",
-    "introduction": "Find the approved identity sources and their use boundaries. Reusing a mark does not authorize a new variant or change its source authority."
+    "introduction": "Find the company’s approved logos, artwork and guidance for using them."
   },
   "audit": {
     "title": "Audit evidence",
-    "introduction": "Use the export contract to understand a unit\u2019s evidence population, formats and reconciliation scope before selecting samples."
+    "introduction": "Find the records, formats and reconciliations supplied with each accounting case."
   },
   "blackridge": {
     "title": "Blackridge case",
-    "introduction": "Keep the 2015 Blackridge case separate from Sable Harbor\u2019s company history and books. Match the dataset profile, period and version to the exercise."
+    "introduction": "Explore the separate 2015 Blackridge mining case using the dataset profile and period named in the exercise."
   },
   "business-lines": {
     "title": "Business dossiers",
-    "introduction": "Read what each business produces, how its work moves and which financial and control records support it. Business-line relationships and legal ownership remain distinct."
+    "introduction": "Read about each business’s work and the financial and control records behind it."
   },
   "canon": {
     "title": "Canon and decisions",
-    "introduction": "These records preserve accepted decisions and their explicit supersession scope. Read dates and status before using an older narrative as current authority."
+    "introduction": "Follow company decisions over time. Later records identify the parts of earlier decisions they replace."
   },
   "controls": {
     "title": "Controls and assurance",
-    "introduction": "Follow control scope, evidence populations and review boundaries. A framework mapping or generated procedure is not an assurance conclusion."
+    "introduction": "Read the control framework, procedures and assessment guidance. Test records describe the work performed and its results."
   },
   "enterprise": {
     "title": "Enterprise models and services",
-    "introduction": "Read business, operating, service and runtime models with their release and readiness boundaries. Synthetic design is distinct from an operating estate."
+    "introduction": "Explore business models, shared services and runtime design. Each package identifies its edition and implementation stage."
   },
   "finance": {
     "title": "Finance and accounting",
-    "introduction": "Start with the evidence guide or a worked exercise, then use the accounting and model documentation for the selected population. Conditional forecasts and historical reconstructions remain separate."
+    "introduction": "Start with a worked exercise, then follow its transactions, accounting policies and model assumptions."
   },
   "geospatial": {
     "title": "Places and facilities",
-    "introduction": "Inspect sites, buildings, floor plans and geographic evidence with their precision and occupancy limits. A planned or illustrative location is not a surveyed property right."
+    "introduction": "Browse site records, buildings, floor plans and maps. Each drawing identifies its purpose and the location evidence available."
   },
   "governance": {
     "title": "Governance and authority",
-    "introduction": "Read the Board, committee and enterprise doctrines to understand who decides, who supports and who independently reviews. Dated approvals remain specific to their recorded scope."
+    "introduction": "Read how the Board, executives and professional officers make decisions, support operations and review the work."
   },
   "industrial": {
     "title": "Industrial cases",
-    "introduction": "Follow operating constraints, acquisition decisions and historical alternatives across the industrial cases. Preserve the selected scenario and the distinction between an opportunity and an acquired asset."
+    "introduction": "Explore industrial operations, acquisitions and investment choices through the selected case."
   },
   "internal": {
     "title": "Catalog and source tools",
-    "introduction": "Use the catalog guide to query and trace the archive. An index helps locate a record; it does not add authority to that record."
+    "introduction": "Find the tools and source history used to catalog and maintain the archive."
   },
   "j2": {
     "title": "J2 and institutional memory",
-    "introduction": "Read the intelligence, judgment, orientation and learning doctrines alongside Alexandria\u2019s records and disclosure boundaries. Institutional support does not confer executive authority."
+    "introduction": "Read about evidence collection, investigations, briefings and teaching, together with the Alexandria records environment."
   },
   "organization": {
     "title": "People and organization",
-    "introduction": "Read chart rosters and source qualifications alongside the images. Named people, authorized billets, business lines and legal entities are different populations and relationships."
+    "introduction": "Explore organization charts, people and recorded roles. The rosters explain the relationships shown in each image."
   },
   "reader": {
     "title": "Practical reading and exercises",
-    "introduction": "Choose a bounded exercise, locate its supporting records and state the limits of the result. The source and format guides explain how to compare different representations."
+    "introduction": "Choose an exercise and find its supporting documents. The source guides explain dates, status and file formats."
   },
   "red_wash": {
     "title": "Red Wash records",
-    "introduction": "Read the mining case with its operating, financial and transaction boundaries. Logistics availability does not remove uranium custody or qualification gates."
+    "introduction": "Follow the mining case through its operating, financial and transaction records, including the requirements for moving uranium."
   },
   "reference": {
     "title": "Document reference",
-    "introduction": "Use the controlled index to locate formal source and publication pairs. Compare version and status before relying on an edition."
+    "introduction": "Find formal company documents and their published editions by version."
   },
   "releases": {
     "title": "Release packages",
-    "introduction": "Use indexed releases for complete, versioned exercise packages. Retain the guide, manifest and checksums with a downloaded dataset."
+    "introduction": "Download complete exercise packages with their guides, manifests and checksums."
   },
   "tools": {
     "title": "Publication tools",
-    "introduction": "These records describe how the reading edition is exported, checked and published. The repository remains the source of truth for editorial and generated content."
+    "introduction": "Find the instructions for exporting, checking and publishing the Wiki from its repository sources."
   }
 }

@@ -1,6 +1,6 @@
 # Current businesses
 
-Open a business page for its accepted description, existing identity and organization chart, financial evidence, and places. The seven pages follow the existing business-line boundary; they are not seven newly formed legal entities.
+Explore what each business does, who works there, how its finances work and where operations take place. Each article links the documents and charts for a closer look.
 
 - [Foundry Field](Foundry-Field.md)
 - [Atlas Meridian](Atlas-Meridian.md)
@@ -10,4 +10,4 @@ Open a business page for its accepted description, existing identity and organiz
 - [American Resource Utility and BS&T](American-Resource-Utility.md)
 - [Sable Harbor Advisory](Advisory.md)
 
-[History and external relationships](../subjects/README.md) · [Department directory](../departments/README.md) · [Legal ownership chart](../../organization/charts/industrial-ownership.md) · [Wiki home](../Home.md)
+[History and external relationships](../subjects/README.md) · [Department directory](../departments/README.md) · [Legal ownership chart](../../organization/charts/industrial-ownership.md) · [Wiki home](../Home.md) · [All files](../Files.md)

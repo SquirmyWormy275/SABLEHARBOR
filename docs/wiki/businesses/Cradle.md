@@ -1,14 +1,12 @@
 # Project Cradle
 
-[Wiki home](../Home.md) · [Business directory](README.md) · [Department directory](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
+[Wiki home](../Home.md) · [All files](../Files.md) · [Business directory](README.md) · [Department directory](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
 
 <img src="../../../assets/brand/logos/project-cradle__reverse-horizontal.png" alt="Approved Project Cradle logo" width="360">
 
 Cradle recovers rare-earth materials from designated industrial side streams and mine water for specialist downstream sale. Its work connects external host deployments with the separate Bedford development, refurbishment, analytical and upgrading facility.
 
-## Reading guide
-
-Follow a material stream from the host site through recovery and onward processing. Host rights, technical results and the economics of a useful recovered output answer different questions in that chain.
+<a id="reading-guide"></a>
 
 ## Start here
 
@@ -40,9 +38,13 @@ Compare feed measurements with recovered lots, assay and downstream acceptance, 
 2. Open `units/project-cradle/audit.xlsx` in the extracted release. Its `README.md` explains the unit scope. The matching CSV and SQLite extracts provide the same scoped evidence; SQL is optional.
 3. Read the [unit evidence guide](../../../docs/audit/UNIT_EXPORT_SPECIFICATION.md) before choosing samples. Select scenario and period together, and distinguish retained 2026 reconstruction from conditional 2027–2031 forecasts.
 
-The [finance successor guide](../../../enterprise/business/README.md) explains generation, reconciliation and limits. A workbook is scenario evidence, not an audited financial statement or observed bank record.
+The [finance successor guide](../../../enterprise/business/README.md) explains generation, reconciliation and limits. The workbook records the selected scenario and its assumptions.
 
 ## Places and plans
+
+<a id="what-remains-unknown"></a>
+
+The host owns and operates its site. Cradle’s footprint and access follow the relevant host-rights agreement and facility record.
 
 | Open | What you will find |
 |---|---|
@@ -52,10 +54,6 @@ The [finance successor guide](../../../enterprise/business/README.md) explains g
 Use the [complete facility artifact index](../../../geospatial/maps/facilities/ARTIFACT_INDEX.md) for independently saved maps and floor plans, or open the [interactive atlas](../../../geospatial/maps/index.html) locally in a browser. GitHub displays the linked Markdown and images directly; it does not execute the atlas HTML.
 
 [Kelly Gang Mining and Demotte host interfaces](../subjects/External-Hosts.md) · [Wallaby history](../subjects/Project-History.md)
-
-## What remains unknown
-
-External host records do not establish ownership of the host sites. Exact footprints, access instruments and remaining implementation evidence retain their source limits. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
 
 ## Related reading
 

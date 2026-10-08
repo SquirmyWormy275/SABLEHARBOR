@@ -2,35 +2,33 @@
 
 <img src="../../../assets/brand/logos/j2__primary-horizontal.png" alt="J2 approved identity" width="240">
 
-**Canon state:** LOCKED DIRECTION field doctrine; LOCKED establishment.<br>
-**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
+[Wiki home](../Home.md) · [Departments](README.md) · [All files](../Files.md)
 
-JAG sends rotating teams into operating businesses to observe work, collect evidence, test improvements and transfer lessons. Each five-person team combines a team lead, data scientist, technical systems advisor, operational advisor and human systems advisor.
+The Junction Advisory Group sends rotating teams into businesses to observe work, gather evidence, test improvements and pass on lessons. Each five-person team includes a team lead, data scientist, technical systems advisor, operational advisor and human systems advisor.
 
-## Reading guide
+<a id="reading-guide"></a>
+<a id="what-remains-unknown"></a>
 
-JAG brings bounded field support to consequential operating problems. Its deployment compact and handoff requirements explain how a team helps without inheriting the operating owner’s authority.
+## Working with operating teams
 
-## Read and use the records
+The establishment provides six active teams. A deployment compact defines the team’s task and handoff, while the operating owner remains responsible for the business. Deployment and visit records describe the work actually undertaken.
+
+<a id="read-and-use-the-records"></a>
+
+## Documents
 
 - [JAG field doctrine](../../../docs/j2/JUNCTION_ADVISORY_GROUP.md) — Team roles, deployment compact, field visits and handoff requirements.
 - [Controlled JAG publication](../../../docs/j2/publications/SH-J2-JAG-001_v1.0.0.pdf) — Reader edition.
 - [Establishment](../../../docs/j2/J2_ESTABLISHMENT.md) — Six active five-person teams: 30 billets within J2.
 - [Education handoff](../../../docs/j2/EDUCATION.md) — How field lessons become teaching material.
 
-## Organization and identity
+<a id="organization-and-identity"></a>
 
-[Organization chart, text roster and source qualifications](../../organization/charts/corporate-j2.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+## Organization
+
+[Organization chart and roster](../../organization/charts/corporate-j2.md) · [Complete chart book](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Junction Advisory Group — shared organization chart, first page](../../organization/assets/current/corporate-j2.png)](../../organization/assets/current/corporate-j2.png)
-
-The shared chart retains its original scope; it is not a new reporting chart for this page. The approved J2 mark above identifies the parent institution.
-
-[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
-
-## What remains unknown
-
-Six active five-person teams describe the accepted establishment. That count does not establish every named occupant, visit or completed deployment. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
 
 ## Related reading
 
@@ -38,3 +36,11 @@ Six active five-person teams describe the accepted establishment. That count doe
 - [Contact](contact.md)
 - [J2 Education](education.md)
 - [J2 Headquarters](j2-headquarters.md)
+
+<details>
+<summary>About this article</summary>
+
+**Canon state:** LOCKED DIRECTION field doctrine; LOCKED establishment.
+**Reviewed:** October 7, 2026. Supporting documents retain their own dates and status.
+
+</details>

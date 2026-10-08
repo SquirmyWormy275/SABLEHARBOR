@@ -1,8 +1,8 @@
 # Document-format review queue
 
-[Library](../Library.md)
+[Library](../Library.md) · [All files](../Files.md)
 
-Generated reconciliation queue, not an assertion that every unpaired record lacks a publication. The repository maintainer owns reconciliation of this queue; these work queues are not in-universe appointments. Review other domain manifests and release members before proposing new documents. Historical releases remain immutable. Native accounting record completeness is outside this discovery index.
+This list helps maintainers check which source documents have formatted companions. Before creating a publication, check the relevant package manifest and release: an existing companion may be listed there. Historical releases keep their original files.
 
 | State | Records |
 |---|---:|
@@ -10,7 +10,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 102 |
-| READER_OR_MAINTENANCE_PAGE | 203 |
+| READER_OR_MAINTENANCE_PAGE | 205 |
 | UNRESOLVED_DOCUMENT_COUNTERPART | 218 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_DOCUMENT_PAIR | 148 |

@@ -1,6 +1,6 @@
 # Continuity and crisis responsibilities
 
-Continuity crosses existing institutions. The [headquarters closeout](../../canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md) assigns governance coordination to Corporate Secretary within OGC and ESS; it does not establish another resilience department.
+Continuity work brings together corporate governance, technology recovery, facilities and independent review. The Corporate Secretary coordinates the governance work within OGC and ESS; operating teams carry out their recovery responsibilities. The [headquarters record](../../canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md) describes those roles.
 
 | Question | Existing route |
 |---|---|
@@ -12,18 +12,13 @@ Continuity crosses existing institutions. The [headquarters closeout](../../cano
 
 A useful exercise follows one service dependency, the stated recovery requirement, the evidence actually available, and the responsible review path. Record missing evidence separately from a test failure. A successful synthetic restore does not establish enterprise-wide operating effectiveness, and planning capacity does not prove that a provider contract or deployment exists.
 
-The linked CCF work is independently maintained. This subject page provides access to its accepted source and does not add controls, mappings, conclusions or workflow implementation.
+The [audit practice guide](../Audit.md) connects the recovery exercises with the wider control-testing and assessment tools.
 
-[Subject directory](README.md) · [Business directory](../businesses/README.md) · [Department directory](../departments/README.md) · [Wiki home](../Home.md)
+[Subject directory](README.md) · [Business directory](../businesses/README.md) · [Department directory](../departments/README.md) · [Wiki home](../Home.md) · [All files](../Files.md)
 
-## Reading guide
+<a id="reading-guide"></a>
 
-Follow one dependency from the service that must continue to its recovery requirement, governance owner and available evidence. The work crosses existing functions; the records do not establish a separate resilience department.
-
-
-## What remains unknown
-
-Plans and synthetic restoration results do not establish enterprise-wide recovery effectiveness or an operating runtime estate. Missing evidence and failed tests remain distinct. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+<a id="what-remains-unknown"></a>
 
 ## Related reading
 

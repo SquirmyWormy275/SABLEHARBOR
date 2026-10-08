@@ -4,25 +4,28 @@
 
 Sable Harbor develops industrial software, operates resource businesses, and provides professional services. This Wiki introduces its businesses and corporate functions: who works there, what they do, how the finances work, and where operations take place. Each article explains the subject first. Supporting records are available at the end when you need to inspect them.
 
-[Start here](Start-Here.md) · [Practical exercises](../reader/exercises/README.md) · [Document library](Library.md) · [Reading glossary](Glossary.md) · [Open questions](Open-Questions.md)
+[Start here](Start-Here.md) · [All files](Files.md) · [Audit practice](Audit.md) · [Document library](Library.md) · [Full-text reading room](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Reading)
 
 <a id="read-the-wiki"></a>
 
 ## Start your reading
 
-Choose a business or department below. Use **On this page** to move through an article. The optional **Supporting records and decision history** section at the end contains the original documents; the [records guide](Records-and-Decisions.md) brings the decision history together in one place. The [start guide](Start-Here.md) explains the downloads.
+Choose a business or department below, or open [All files](Files.md) to find a particular document, dataset, map or program. The file directory takes you from this page to any original in three clicks: directory, collection, file. Articles link the documents that explain their work; the [records guide](Records-and-Decisions.md) brings the decision history together.
 
 For practical work, try the [acquisition exercise](../reader/exercises/ACQUISITION.md), [invoice exercise](../reader/exercises/INVOICE.md), or [contract review exercise](../reader/exercises/CONTRACTS.md). You can read the instructions in the Wiki and download the linked Excel, PDF, or SQLite files as needed.
 
-## Find records for a task
+<a id="find-records-for-a-task"></a>
 
-The [three practical exercises](../reader/exercises/README.md) walk through acquisition accounting, invoice tracing, and contract review using the accepted records.
+## Try an exercise
+
+The [audit practice guide](Audit.md) introduces the delivered audit workspace and the accounting and control exercises. The [three document exercises](../reader/exercises/README.md) cover acquisition accounting, invoice tracing and contract review.
 
 | I want to… | Open first | Then inspect |
 |---|---|---|
 | Reconcile an invoice, revenue balance, or cash shortfall | [Accounting exercises](../finance/READER_EXERCISES.md) | The named workbook sheets and supporting files for the same release, unit, and period. |
+| Work through an audit engagement | [Local audit workspace](../audit-suite/LOCAL_WORKSPACE.md) | Request and collect company originals, select samples, record findings and prepare reviewed workpapers in CLEAN or MESSY cases. |
 | Test a control and follow an exception | [CCF example procedures](../../enterprise/ccf/PROCEDURES.md) | The records tested, original result, waiver, and independent retest. |
-| Prepare a SOC-oriented evidence request or compare frameworks | [Assessment workbench](../../enterprise/ccf/assurance/README.md) | Excel/HTML workpapers for local use, a source inventory, and unfinished review tasks. These help plan an assessment; they are not an assurance opinion. |
+| Prepare a SOC-oriented evidence request or compare frameworks | [Assessment workbench](../../enterprise/ccf/assurance/README.md) | Excel/HTML workpapers for local use, a source inventory, and the review tasks needed to complete the assessment. |
 | Review a purchase or an operating investment | [Industrial case guide](../../industrial/CASE_GUIDE.md) | Transaction documents, operating constraints, and financial schedules for the selected scenario. |
 | Understand who decides and who reviews | [Department directory](departments/README.md) | Organization charts, authority documents, and dated Board records. |
 | Visit or inspect the campus concept | [Selected V08 visitor map](../../geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.png) | The [PDF](../../geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.pdf) for a visitor overview, or the [facility index](../../geospatial/maps/facilities/ARTIFACT_INDEX.md) for site, building, and floor plans. |
@@ -78,4 +81,4 @@ Read Markdown directly on GitHub. Open PDFs for formatted documents, and downloa
 
 The [library](Library.md) points to the original files rather than keeping separate copies. It includes historical material, so check each record's date and status before treating it as current. Some figures are conditional scenarios or reconstructions, not observed history. The [source guide](../reader/SOURCES_AND_FORMATS.md) explains these distinctions and why documents are maintained in three forms.
 
-The Wiki has seven business guides, 23 department, institution, and capability guides, and nine guides to historical, external, or company-wide subjects. The [coverage record](../reader/WIKI_COVERAGE.json) lists them.
+For terminology, use the [glossary](Glossary.md). For accepted resolutions and further work, see [decisions and remaining work](Open-Questions.md).

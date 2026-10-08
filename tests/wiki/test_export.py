@@ -1,5 +1,6 @@
 import importlib.util
 import json
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
@@ -212,6 +213,75 @@ class WikiExportTests(unittest.TestCase):
         (wiki / MODULE.MANIFEST).write_text(json.dumps({"files": {"../outside.md": "hash"}}))
         with self.assertRaises(ValueError):
             MODULE.sync(output, wiki)
+
+    def file_directory_fixture(self):
+        subprocess.run(["git", "init", "-q", str(self.root)], check=True)
+        self.home.write_text("# Home\n\n[All files](Files.md)\n")
+        (self.root / "README.md").write_text(
+            "# Repository\n\n[All files]"
+            "(https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Files)\n"
+        )
+        for name in (
+            "Files.md",
+            "Library.md",
+            "Locations.md",
+            "Records-and-Decisions.md",
+            "businesses/README.md",
+            "departments/README.md",
+            "subjects/README.md",
+        ):
+            path = self.home.parent / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text("# Directory\n")
+        data = self.root / "data/deep/nested"
+        data.mkdir(parents=True)
+        for i in range(251):
+            (data / f"record {i:03}.csv").write_text("id,value\n1,2\n")
+        (data / "untracked-private.txt").write_text("Never publish this file")
+        subprocess.run(["git", "add", "."], cwd=self.root, check=True)
+        subprocess.run(
+            ["git", "rm", "--cached", "data/deep/nested/untracked-private.txt"],
+            cwd=self.root,
+            check=True,
+            capture_output=True,
+        )
+
+    def test_every_tracked_format_has_a_visible_three_click_original(self):
+        self.file_directory_fixture()
+        output = self.base / "output"
+        manifest = MODULE.Exporter(self.root, SHA).build(output)
+        inventory = manifest["file_directory"]
+        self.assertIn("asset.png", inventory)
+        self.assertIn("data/deep/nested/record 250.csv", inventory)
+        self.assertNotIn("data/deep/nested/untracked-private.txt", inventory)
+        self.assertIn("Files--data-1.md", manifest["files"])
+        self.assertIn("Files--data-2.md", manifest["files"])
+        report = audit_export(output, root=self.root)
+        self.assertEqual(report["errors"], [])
+        self.assertEqual(report["maximum_file_clicks"], 3)
+        self.assertEqual(report["indexed_files"], len(inventory))
+        (self.root / "README.md").write_text("# Repository\n")
+        self.assertIn(
+            "README: missing direct All files link", audit_export(output, root=self.root)["errors"]
+        )
+
+    def test_hidden_file_link_and_added_file_fail_publication_audit(self):
+        self.file_directory_fixture()
+        output = self.base / "output"
+        manifest = MODULE.Exporter(self.root, SHA).build(output)
+        filename = manifest["file_directory"]["asset.png"]
+        path = output / filename
+        path.write_text(
+            "<details><summary>Hidden files</summary>\n\n" + path.read_text() + "\n</details>\n"
+        )
+        errors = "\n".join(audit_export(output, root=self.root)["errors"])
+        self.assertIn("asset.png: missing visible original-file link", errors)
+        (self.root / "new.txt").write_text("New public source")
+        subprocess.run(["git", "add", "new.txt"], cwd=self.root, check=True)
+        self.assertIn(
+            "File directory differs from the tracked repository inventory",
+            audit_export(output, root=self.root)["errors"],
+        )
 
 
 if __name__ == "__main__":

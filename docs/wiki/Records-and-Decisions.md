@@ -8,7 +8,7 @@ Use this page to check where a company fact came from, what changed, and which r
 
 **For accounting or control testing,** start with the actual case records: agreements, invoices, ledgers, populations, procedures and results. The [practical exercises](../reader/exercises/README.md) and [transaction guide](../reader/transactions/README.md) identify those records and the period they cover. A decision about how the fictional company was written is not evidence that a transaction occurred or a control operated.
 
-**For the company's design history,** use the sources below. Decision identifiers, approval history, superseded wording and publication checks belong here and in the underlying registers—not in every paragraph of a business description.
+**For the company's design history,** use the sources below. The registers preserve decision identifiers, approval history, earlier wording and publication checks.
 
 | Subject | Where to inspect it |
 |---|---|
@@ -52,6 +52,6 @@ The September 10 organization-chart edition predates these September 13 accommod
 
 ## For contributors
 
-Write the company fact plainly in the article. Link to the relevant supporting record where it helps the reader, or to this page for the decision history. Keep material qualifications—such as a forecast rather than an actual result, an unperformed test, or a proposed rather than occupied building—next to the affected statement. Do not substitute repeated approval codes for an explanation.
+Write the company fact plainly in the article. Link to the relevant supporting record where it helps the reader, or to this page for the decision history. Keep relevant qualifications close to the statement: whether a figure is a forecast, a test is still planned or a building is proposed.
 
 A missing street address is not an unknown city. A shared office is not an unlocated business. Before carrying forward an unresolved label, check later decisions and distinguish the legal entity, operating site, office, historical premises and proposed facility.

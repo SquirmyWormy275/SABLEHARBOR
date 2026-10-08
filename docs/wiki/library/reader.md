@@ -1,8 +1,8 @@
 # Reader guides and subject pages
 
-[Library](../Library.md) · [Company index](../Home.md)
+[Library](../Library.md) · [All files](../Files.md) · [Company index](../Home.md)
 
-Generated file inventory. Includes current and historical records; open the source for its status. A folder or title does not establish approval. PDF companions below are verified through the controlled-publication manifest. Other files are listed independently; an absent companion link means unmapped, not proven nonexistent.
+Browse the documents below, grouped by folder. Earlier editions remain available alongside current records. Where a formatted PDF has been verified against its source, the two are linked together.
 
 ## `docs/reader`
 
@@ -54,10 +54,12 @@ Generated file inventory. Includes current and historical records; open the sour
 
 ## `docs/wiki`
 
+- [Audit practice](../Audit.md) — MD
+- [All files](../Files.md) — MD
 - [Reading glossary](../Glossary.md) — MD
 - [Explore Sable Harbor](../Home.md) — MD
 - [Locations and facilities](../Locations.md) — MD
-- [Open questions and scope limits](../Open-Questions.md) — MD
+- [Decisions and remaining work](../Open-Questions.md) — MD
 - [Wiki source and publishing](../README.md) — MD
 - [Records and decisions](../Records-and-Decisions.md) — MD
 - [Start here](../Start-Here.md) — MD
