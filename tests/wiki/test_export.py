@@ -256,6 +256,11 @@ class WikiExportTests(unittest.TestCase):
         self.assertNotIn("data/deep/nested/untracked-private.txt", inventory)
         self.assertIn("Files--data-1.md", manifest["files"])
         self.assertIn("Files--data-2.md", manifest["files"])
+        self.assertIn(
+            f"https://raw.githubusercontent.com/{MODULE.REPOSITORY}/{SHA}/"
+            "data/deep/nested/record%20250.csv",
+            (output / "Files--data-2.md").read_text(),
+        )
         report = audit_export(output, root=self.root)
         self.assertEqual(report["errors"], [])
         self.assertEqual(report["maximum_file_clicks"], 3)

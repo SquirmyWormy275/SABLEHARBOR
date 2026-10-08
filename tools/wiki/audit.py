@@ -8,7 +8,7 @@ import re
 from collections import deque
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import unquote, urlsplit
+from urllib.parse import quote, unquote, urlsplit
 
 from markdown_it import MarkdownIt
 
@@ -209,6 +209,14 @@ def audit_export(directory, root=ROOT):
             ]
             if not matching:
                 errors.append(f"{relative}: missing visible original-file link in {filename}")
+            raw_url = (
+                f"https://raw.githubusercontent.com/{manifest['repository']}/"
+                f"{manifest['source_revision']}/{quote(relative, safe='/')}"
+            )
+            if index_page is None or not any(
+                href == raw_url for href, _ in index_page.visible_links
+            ):
+                errors.append(f"{relative}: missing visible direct download in {filename}")
             depth = home_distances.get(page_name, 4) + 1
             file_depths[relative] = depth
             if depth > 3:

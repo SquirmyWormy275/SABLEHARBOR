@@ -103,7 +103,8 @@ def build_directory(root: Path, files: list[Path], revision: str, names: dict) -
                 "",
                 "[All files](Files) · [Wiki home](Home)",
                 "",
-                "Open a file below. Paths identify the original files, including older editions.",
+                "Open a file below, or choose Download for its original bytes. "
+                "Paths identify the files, including older editions.",
                 "",
             ]
             for path in batch:
@@ -111,7 +112,11 @@ def build_directory(root: Path, files: list[Path], revision: str, names: dict) -
                 url = f"https://github.com/SquirmyWormy275/SABLEHARBOR/blob/{revision}/{quote(relative, safe='/')}"
                 # Escaping protects filenames without replacing their visible spelling.
                 text = relative.replace("\\", "\\\\").replace("[", "\\[").replace("]", "\\]")
-                row = f"- [{text}]({url})"
+                download = (
+                    f"https://raw.githubusercontent.com/SquirmyWormy275/SABLEHARBOR/"
+                    f"{revision}/{quote(relative, safe='/')}"
+                )
+                row = f"- [{text}]({url}) · [Download]({download})"
                 if path in names:
                     row += f" · [Read in the Wiki]({quote(names[path])})"
                 rows.append(row)
