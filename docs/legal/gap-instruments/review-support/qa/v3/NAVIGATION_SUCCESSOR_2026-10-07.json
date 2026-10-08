@@ -15,7 +15,7 @@
       "path": "tools/legal_gaps/validate_practical_work.py",
       "historical_revision": "1d86f78944c95d3fdde72c4dcc31cd9b50c2ada9",
       "historical_sha256": "9d8682a15cc655ae7ed124ff459d769a0547270f17d1316eb886e40fbb363861",
-      "current_sha256": "ef8d7d511674f003ccd9a32a072f40d2f29fb552c9f0b0ce94e0ef8fa201922d",
+      "current_sha256": "dfd32fb5e76a9c20842fcfcaf6668e387c7135ca2fcefe165fb70ba0702f61ca",
       "scope": "Editorial navigation and exact historical-review validation; legal source records, workbooks, publications and original manual QA are unchanged."
     },
     {
@@ -24,6 +24,13 @@
       "historical_sha256": "dbd87acec576f66e0f6e3497589382f6c415bf89193f362bd3252b097eea9031",
       "current_sha256": "4a6b20e06230fadc6368de581ac8f7679619fe48b54302485d30d741769f7630",
       "scope": "Retain the existing reading journeys and add audit-workspace, control and People & Culture routes."
+    },
+    {
+      "path": "docs/reader/usability/RESULTS.json",
+      "historical_revision": "1d86f78944c95d3fdde72c4dcc31cd9b50c2ada9",
+      "historical_sha256": "db7f50a06446ebcef37c850092a4055bd699e9c969a367df9c0ba58d70116932",
+      "current_sha256": "cc2eafc7a96e4d577c163128552804944ead3e2e4d63615132554778bf4b329d",
+      "scope": "Replay the six unchanged reading and document-content tasks against the rewritten navigation; preserve their original case inputs."
     }
   ],
   "verification": {
@@ -31,6 +38,7 @@
     "reading_journeys": 22,
     "composed_page_checks": 1476,
     "maximum_file_clicks": 3,
-    "limits": "Navigation review only; does not replace historical legal-design QA or imply new owner approval of the draft legal designs."
+    "limits": "Navigation review only; does not replace historical legal-design QA or imply new owner approval of the draft legal designs.",
+    "complete_document_routes": 6
   }
 }

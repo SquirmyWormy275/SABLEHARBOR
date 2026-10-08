@@ -32,7 +32,7 @@ def validate():
     assert editorial["previous_successor_sha256"] == sha(successor_path)
     refreshed = {r["path"]: r for r in editorial["records"]}
     assert set(refreshed) == {"docs/wiki/Start-Here.md", "tools/legal_gaps/validate_practical_work.py",
-                              "tools/reader/check_journeys.py"}
+                              "tools/reader/check_journeys.py", "docs/reader/usability/RESULTS.json"}
     for relative, update in refreshed.items():
         assert update["historical_sha256"] == receipt["input_hashes"][relative]
     updates.update(refreshed)
