@@ -1,0 +1,44 @@
+{
+  "schema": "SH_FICTIONAL_2027_ASS003_004_OPERATIONS_V1_SPEC",
+  "truth_class": "TRAINING_SCENARIO_ONLY",
+  "scenario_acceptance": "PENDING_INDEPENDENT_SOURCE_REVIEW",
+  "period": {
+    "start": "2027-07-01T00:00:00+00:00",
+    "end": "2027-09-30T23:59:59+00:00"
+  },
+  "selected_service": "SVC-compute",
+  "sites": ["RUNTIME-RENO-COLO", "RUNTIME-BOISE-DR"],
+  "internal_audit_lead": "AS-P009",
+  "quality_reviewer": "SIM-IA-QUALITY-REVIEWER-01",
+  "quality_reviewer_identity_basis": "A nonpersonal specialist role token for this authored fictional evaluation. It models a distinct reviewer without asserting a real credential, certification, actual professional appointment, external auditor opinion, enterprise staffing increment or payroll change.",
+  "qualification_scope": ["RECALCULATE_SELECTED_RECOVERY_TIMESTAMPS", "RECONCILE_IMMUTABLE_COMPANY_SOURCE_ROSTERS", "REVIEW_DESCRIPTION_ASSERTION_SUPPORT"],
+  "no_operating_control_ownership": true,
+  "enterprise_charter_approval_asserted": false,
+  "annual_enterprise_programme_approval_asserted": false,
+  "authority_boundary": "The Head of Internal Audit conducts a bounded selected factual evaluation using the locked functional independence and direct Committee communication doctrine. This does not settle the full enterprise charter, annual programme or historical 2026 operating model. Management retains operating controls and remediation. The Corporate Secretary keeps a communication queue and cannot supply collective Committee approval.",
+  "workstreams": [
+    {"id": "RECOVERY", "scheduled_start": "2027-09-20", "scope": "Recalculate latest selected marker restore/replay measures; retain failed originals and distinguish business-objective acceptance, key authorization, capacity holds and actual application recovery."},
+    {"id": "MONITORING", "scheduled_start": "2027-09-22", "scope": "Independently reconcile original and corrected owner submissions, local issue and overdue histories, and the objectivity-limited second-line observation; management acknowledgment is not closure."},
+    {"id": "DESCRIPTION", "scheduled_start": "2027-09-26", "scope": "Compare selected management-description assertions against independent change, provider-contract, issue and monitoring source rosters. Preserve omitted-item drafts and restrict customer statements to supported selected facts."}
+  ],
+  "source_scope": "Exact reviewed company cohorts MONITOR, BCM, ISSUE and TRANSITION. Complete census of these bounded frozen cohorts does not establish enterprise or full-year populations.",
+  "external_assessment_path": "The internal readiness description can supply later assessment discovery. No actual service-auditor engagement, completed SOC 2 examination, attestation, provider certification or HIPAA-compliance representation is produced.",
+  "customer_assurance_boundary": "An authored synthetic customer inquiry receives a Legal-approved limited briefing decision, accompanied by exclusions and open issues, but no actual message is transmitted. SOC badges, blanket compliance claims and nonexistent opinions are refused.",
+  "primary_authority_checked_as_of": "2026-10-01",
+  "primary_sources": [
+    {
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C/section-164.308",
+      "model_basis": "The HIPAA evaluation provision includes periodic technical and nontechnical evaluation and responses to environmental or operational changes. This fictional source deliberately distinguishes selected evaluation work from any actual regulated-entity or full-compliance conclusion."
+    },
+    {
+      "url": "https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services",
+      "model_basis": "AICPA distinguishes criteria, management information and illustrative service-auditor reports. Company management description and internal evaluation records are not a professional external opinion. This source follows the repo's authored description/evaluation clauses and does not reproduce licensed criteria text."
+    }
+  ],
+  "remaining_gates": [
+    "Independent acceptance of the selected fictional source histories, authority and distinct quality-review role.",
+    "Full enterprise charter/programme governance, enterprise source populations and qualified external-assessment criteria review.",
+    "New approved remediation and independent retest before any prior issue closure.",
+    "Learner source collection, audit procedures, workpapers and separate independent conclusions."
+  ]
+}

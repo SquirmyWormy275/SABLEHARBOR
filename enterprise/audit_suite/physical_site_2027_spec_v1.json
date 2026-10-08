@@ -1,0 +1,17 @@
+{
+  "schema": "SH_FICTIONAL_2027_SELECTED_PHYSICAL_SITE_SPEC_V1",
+  "company": "SABLE-HARBOR-REFERENCE",
+  "sites": {
+    "RENO": "RUNTIME-RENO-COLO",
+    "BOISE": "RUNTIME-BOISE-DR"
+  },
+  "selected_zones": ["RNO-CAGE-A", "BOI-CAGE-R"],
+  "selected_badges": ["BADGE-FAC-01", "BADGE-BOI-TECH-01"],
+  "selected_environment_point": "BOI-CAGE-R-TEMP-01",
+  "selected_period": ["2027-09-10T10:00:00+00:00", "2027-11-14T12:00:00+00:00"],
+  "real_site_action": false,
+  "actual_phi": false,
+  "actual_personal_data": false,
+  "network_packets": 0,
+  "audit_task_credit": false
+}

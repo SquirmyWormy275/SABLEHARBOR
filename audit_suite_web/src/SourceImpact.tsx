@@ -10,6 +10,13 @@ import {
 } from "./sourceImpact";
 import { useRef, useEffect, useState } from "react";
 import { request, str, type Engagement, type Row } from "./api";
+import {
+  deferredPaper,
+  deferredTrace,
+  loadWorkspaceDetail,
+  mergeWorkspaceRecord,
+  workspaceContext,
+} from "./workspaceDetail";
 export default function SourceImpact({
   engagement: e,
   onPreview,
@@ -32,8 +39,113 @@ export default function SourceImpact({
   const [error, setError] = useState(""),
     [busy, setBusy] = useState(false);
   const epoch = useRef(0);
+  const readContext = workspaceContext(e, viewerId),
+    liveRead = useRef(readContext);
+  liveRead.current = readContext;
+  const [readRows, setReadRows] = useState<{
+      key: string;
+      rows: Record<string, Row>;
+    }>({ key: "", rows: {} }),
+    [reading, setReading] = useState<Record<string, boolean>>({}),
+    [readErrors, setReadErrors] = useState<Record<string, string>>({});
+  const visible: Engagement =
+    readRows.key === readContext
+      ? {
+          ...e,
+          workpapers: e.workpapers.map(
+            (row) => readRows.rows["workpapers:" + row.id] ?? row,
+          ),
+          sample_executions: Array.isArray(e.sample_executions)
+            ? e.sample_executions.map(
+                (row: Row) =>
+                  readRows.rows["sample_executions:" + row.id] ?? row,
+              )
+            : e.sample_executions,
+        }
+      : e;
+  async function readReference(
+    collection: "workpapers" | "sample_executions",
+    row: Row,
+    version?: number,
+  ) {
+    const captured = readContext,
+      id = collection + ":" + row.id;
+    setReading((prior) => ({ ...prior, [id]: true }));
+    setReadErrors((prior) => ({ ...prior, [id]: "" }));
+    try {
+      const full = await loadWorkspaceDetail(e, collection, row, version);
+      if (liveRead.current !== captured) return;
+      setReadRows((prior) => ({
+        key: captured,
+        rows: {
+          ...(prior.key === captured ? prior.rows : {}),
+          [id]: mergeWorkspaceRecord(
+            prior.key === captured ? (prior.rows[id] ?? row) : row,
+            full,
+          ),
+        },
+      }));
+    } catch (err) {
+      if (liveRead.current === captured)
+        setReadErrors((prior) => ({ ...prior, [id]: (err as Error).message }));
+    } finally {
+      if (liveRead.current === captured)
+        setReading((prior) => ({ ...prior, [id]: false }));
+    }
+  }
   function openReference(ref: Row, artifactId = str(ref.id)) {
-    const target = impactReference(e, ref, artifactId);
+    let required: {
+      collection: "workpapers" | "sample_executions";
+      row: Row;
+      version?: number;
+    } | null = null;
+    if (ref.collection === "sample_executions") {
+      const matches = (
+        Array.isArray(visible.sample_executions)
+          ? (visible.sample_executions as Row[])
+          : []
+      ).filter((row) => row.id === ref.id);
+      if (matches.length === 1 && deferredTrace(matches[0]))
+        required = { collection: "sample_executions", row: matches[0] };
+    } else if (ref.collection === "reviews" && ref.anchor) {
+      const matches = visible.workpapers.filter(
+        (row) => row.id === ref.workpaper_id,
+      );
+      if (
+        matches.length === 1 &&
+        typeof ref.version === "number" &&
+        deferredPaper(matches[0], ref.version)
+      )
+        required = {
+          collection: "workpapers",
+          row: matches[0],
+          version: ref.version,
+        };
+    }
+    if (required) {
+      const value = required,
+        id = value.collection + ":" + value.row.id;
+      return (
+        <span>
+          <p>
+            Exact retained details have not been loaded; their absence is not
+            inferred.
+          </p>
+          <button
+            disabled={reading[id]}
+            onClick={() =>
+              void readReference(value.collection, value.row, value.version)
+            }
+          >
+            {reading[id]
+              ? "Loading exact details…"
+              : "Load exact retained details"}
+          </button>
+          {readErrors[id] && <p role="alert">{readErrors[id]}</p>}
+        </span>
+      );
+    }
+    const target = impactReference(visible, ref, artifactId);
     if (target?.kind === "sample_execution")
       return (
         <details>
@@ -62,7 +174,7 @@ export default function SourceImpact({
               ? ref.locators.map(str).join("; ")
               : "none"}
           </p>
-          {impactTraceLinks(e, target.row).map((link) => (
+          {impactTraceLinks(visible, target.row).map((link) => (
             <span key={str(link.collection)}>
               {openReference(link, artifactId)}
             </span>
@@ -110,6 +222,14 @@ export default function SourceImpact({
       epoch.current++;
     };
   }, [impactContext(e)]);
+  useEffect(() => {
+    liveRead.current = readContext;
+    setReading({});
+    setReadErrors({});
+    return () => {
+      liveRead.current = "";
+    };
+  }, [readContext]);
   async function check() {
     const current = ++epoch.current;
     setBusy(true);

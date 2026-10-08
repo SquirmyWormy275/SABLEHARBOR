@@ -6,7 +6,7 @@ Generated reconciliation queue, not an assertion that every unpaired record lack
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 307 |
+| COUNTERPART_REVIEW_REQUIRED | 435 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 102 |
@@ -23,6 +23,9 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Contributing to Sable Harbor](../../../CONTRIBUTING.md) — Corporate document-format reconciliation
 - [Withdrawn visual source record](../../../assets/headquarters/CANONICAL_HEADQUARTERS_IMAGE_MANIFEST.md) — Corporate document-format reconciliation
 - [SABLE HARBOR CONTROLLED DOCUMENT INDEX](../../CONTROLLED_DOCUMENT_INDEX.md) — Corporate document-format reconciliation
+- [Native operating-depth physical input roles](../../OPERATING_DEPTH_PHYSICAL_ROLE_CORRECTION.md) — Corporate document-format reconciliation
+- [Local audit workspace](../../audit-suite/LOCAL_WORKSPACE.md) — Corporate document-format reconciliation
+- [Separate modeled source edition](../../audit-suite/OPERATING_SOURCE_EDITION_DRIVER.md) — Corporate document-format reconciliation
 - [Branch and Pull Request Register](../../audit/BRANCH_AND_PR_REGISTER.md) — SH-FIN-HUMAN-001
 - [Repository completion batch — September 13, 2026](../../audit/COMPLETION_BATCH_2026-09-13.md) — SH-FIN-HUMAN-001
 - [Outstanding issue review — September 12, 2026](../../audit/ISSUE_CLOSEOUT_2026-09-12.md) — SH-FIN-HUMAN-001
@@ -85,6 +88,12 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Actionable CCF procedure deltas](../../internal/development/CCF_ACTIONABLE_CONTROL_DELTAS_2026-09-12.md) — Corporate document-format reconciliation
 - [Integrated CCF delivery workflow](../../internal/development/CCF_INTEGRATED_DELIVERY_WORKFLOW_2026-09-12.md) — Corporate document-format reconciliation
 - [A practical first CCF system](../../internal/development/CCF_PILOT_SYSTEM_DESIGN_2026-09-12.md) — Corporate document-format reconciliation
+- [Consolidated company history successor V3](../../internal/development/COMPANY_OPERATIONAL_LIBRARY_SUCCESSOR_V3_2026-10-01.md) — Corporate document-format reconciliation
+- [Bounded 2027 person and account operations](../../internal/development/COMPANY_WORKFORCE_IDENTITY_2027_2026-10-01.md) — Corporate document-format reconciliation
+- [Fresh identity family fieldwork](../../internal/development/FRESH_IDENTITY_FAMILY_PROCEDURE_2026-10-01.md) — Corporate document-format reconciliation
+- [Selected privacy fieldwork](../../internal/development/FRESH_PRIVACY_DOCUMENTARY_FIELDWORK_2026-10-01.md) — Corporate document-format reconciliation
+- [Fictional 2027 source-route tracker](../../internal/development/audit-suite/2027_SOURCE_ROUTE_TRACKER_2026-09-29.md) — Corporate document-format reconciliation
+- [Active company-source audit workflow](../../internal/development/audit-suite/ACTIVE_AGENT_GRAPH_2026-10-01.md) — Corporate document-format reconciliation
 - [Explicit backup due-job monitoring operator](../../internal/development/audit-suite/AQ04_BACKUP_MONITOR_OPERATOR.md) — Corporate document-format reconciliation
 - [Backup execution and restore exercise — September 14, 2026](../../internal/development/audit-suite/AQ04_BACKUP_RESTORE_SLICE_2026-09-14.md) — Corporate document-format reconciliation
 - [Identity period slice and remaining coverage](../../internal/development/audit-suite/AQ04_IDENTITY_PERIOD_SLICE_2026-09-14.md) — Corporate document-format reconciliation
@@ -104,11 +113,19 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [One-system source-record census](../../internal/development/audit-suite/AQ_SOURCE_RECORD_CENSUS_2026-09-14.md) — Corporate document-format reconciliation
 - [Company source and recovery review — September 14, 2026](../../internal/development/audit-suite/AQ_SOURCE_RECOVERY_REVIEW_2026-09-14.md) — Corporate document-format reconciliation
 - [Company-source audit readiness workflow queue](../../internal/development/audit-suite/AUDIT_READINESS_WORKFLOW_QUEUE.md) — Corporate document-format reconciliation
+- [Company-native Key V2 author candidate](../../internal/development/audit-suite/COMPANY_NATIVE_KEY_V2_AUTHORING_2026-10-02.md) — Corporate document-format reconciliation
+- [Company library V2.1: preserved operational scope](../../internal/development/audit-suite/COMPANY_OPERATIONAL_LIBRARY_PROJECTION_V2_1_2026-10-01.md) — Corporate document-format reconciliation
+- [Unified company operational library initialization](../../internal/development/audit-suite/COMPANY_OPERATIONAL_LIBRARY_PROJECTION_V2_2026-10-01.md) — Corporate document-format reconciliation
+- [Company operational source projection](../../internal/development/audit-suite/COMPANY_OPERATIONAL_PROJECTION_2026-10-01.md) — Corporate document-format reconciliation
 - [Portal company-rights producer handoff](../../internal/development/audit-suite/COMPANY_RIGHTS_PRODUCER_HANDOFF.md) — Corporate document-format reconciliation
 - [Company-source implementation checkpoint](../../internal/development/audit-suite/COMPANY_SOURCE_IMPLEMENTATION.md) — Corporate document-format reconciliation
 - [Intelligent contextual workspace](../../internal/development/audit-suite/CONTEXTUAL_WORKSPACE_WORKFLOW.md) — Corporate document-format reconciliation
 - [Audit-suite contribution and state formats](../../internal/development/audit-suite/CONTRIBUTING_AND_STATE_FORMATS.md) — Corporate document-format reconciliation
+- [Fictional audit-rehearsal delivery reforecast](../../internal/development/audit-suite/DELIVERY_REFORECAST_2026-10-01.md) — Corporate document-format reconciliation
+- [Internal audit-rehearsal delivery timeline](../../internal/development/audit-suite/DELIVERY_TIMELINE_2026-09-29.md) — Corporate document-format reconciliation
 - [Audit-suite execution closeout](../../internal/development/audit-suite/EXECUTION_CLOSEOUT.md) — Corporate document-format reconciliation
+- [Fictional 2027 audit-rehearsal scenario decisions](../../internal/development/audit-suite/FICTIONAL_2027_SCENARIO_DECISIONS_2026-09-29.md) — Corporate document-format reconciliation
+- [Full company-native instructor Key source plan](../../internal/development/audit-suite/FULL_COMPANY_NATIVE_KEY_SOURCE_PLAN_2026-10-01.md) — Corporate document-format reconciliation
 - [Explicit instructor assistance release core](../../internal/development/audit-suite/IK05_EXPLICIT_RELEASE_CORE.md) — Corporate document-format reconciliation
 - [Streamed instructor history inspection](../../internal/development/audit-suite/IK_STREAMED_HISTORY_INSPECTION_2026-09-14.md) — Corporate document-format reconciliation
 - [Audit training suite implementation direction](../../internal/development/audit-suite/IMPLEMENTATION_DIRECTION_2026-09-13.md) — Corporate document-format reconciliation
@@ -243,41 +260,152 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Local access-remediation continuation](../../../enterprise/audit_suite/ACCESS_REMEDIATION_ACTIVITY.md) — Corporate document-format reconciliation
 - [Declared-subject access review continuation](../../../enterprise/audit_suite/ACCESS_REVIEW_CONTINUATION.md) — Corporate document-format reconciliation
 - [Adjacent declared-subject access review](../../../enterprise/audit_suite/ACCESS_REVIEW_SUCCESSOR.md) — Corporate document-format reconciliation
+- [Prospective HIPAA addressable-specification docket](../../../enterprise/audit_suite/ADDRESSABLE_DOCKET_EXERCISE.md) — Corporate document-format reconciliation
+- [Fictional 2027 Boise issue-management source](../../../enterprise/audit_suite/ASSURANCE_FINDINGS_2027_PROPOSAL.md) — Corporate document-format reconciliation
+- [Selected fictional 2027 owner self-assessment and local monitoring](../../../enterprise/audit_suite/ASS_OWNER_MONITOR_2027_PROPOSAL.md) — Corporate document-format reconciliation
 - [Persistent local backup byte operations](../../../enterprise/audit_suite/BACKUP_RUNTIME.md) — Corporate document-format reconciliation
 - [Exact native configuration admission to backup datasets](../../../enterprise/audit_suite/BACKUP_SOURCE_ADMISSION.md) — Corporate document-format reconciliation
+- [Continuity and recovery: eleven route gaps per audit side](../../../enterprise/audit_suite/BCM_11_ROUTE_GAP_LEDGER_2026-09-29.md) — Corporate document-format reconciliation
+- [Selected fictional 2027 shared-runtime BIA and recovery exercise](../../../enterprise/audit_suite/BCM_SHARED_RUNTIME_2027_PROPOSAL.md) — Corporate document-format reconciliation
+- [Selected fictional 2027 BCM source: authority-chain correction](../../../enterprise/audit_suite/BCM_SHARED_RUNTIME_2027_PROPOSAL_V2.md) — Corporate document-format reconciliation
 - [Local configuration change and release source pair](../../../enterprise/audit_suite/CHANGE_ACTIVITY.md) — Corporate document-format reconciliation
+- [Selected collected-byte recovery method](../../../enterprise/audit_suite/COLLECTED_LOCAL_BYTE_RECOVERY_METHOD_2026-10-01.md) — Corporate document-format reconciliation
 - [Private companion recovery](../../../enterprise/audit_suite/COMPANION_RECOVERY.md) — Corporate document-format reconciliation
 - [Attributed company consultation and correction requests](../../../enterprise/audit_suite/COMPANY_CONSULTATION.md) — Corporate document-format reconciliation
 - [Company runtime activation contract](../../../enterprise/audit_suite/COMPANY_RUNTIME_ACTIVATION.md) — Corporate document-format reconciliation
 - [Selected-source ownership and migration register](../../../enterprise/audit_suite/COMPANY_SOURCE_REGISTER.md) — Corporate document-format reconciliation
+- [Later company operations: policy, procedure, security and workforce](../../../enterprise/audit_suite/COMPANY_SUPPLEMENTAL_OPERATIONS_2027_2026-10-01.md) — Corporate document-format reconciliation
 - [Configuration inventory and drift from original release records](../../../enterprise/audit_suite/CONFIGURATION_ACTIVITY.md) — Corporate document-format reconciliation
 - [Explicit persistent configuration export](../../../enterprise/audit_suite/CONFIGURATION_EXPORT.md) — Corporate document-format reconciliation
 - [Persistent local configuration runtime](../../../enterprise/audit_suite/CONFIGURATION_RUNTIME.md) — Corporate document-format reconciliation
+- [Prospective provider contract draft gate](../../../enterprise/audit_suite/CONTRACT_DRAFT_EXERCISE.md) — Corporate document-format reconciliation
+- [Fictional 2027 selected contract-obligation inventory](../../../enterprise/audit_suite/CONTRACT_OBLIGATION_TRIAGE_2027_PROPOSAL.md) — Corporate document-format reconciliation
+- [Fictional 2027 selected controlled-record pointer](../../../enterprise/audit_suite/CONTROLLED_RECORD_2027_PROPOSAL.md) — Corporate document-format reconciliation
+- [Prospective critical-role review source boundary](../../../enterprise/audit_suite/CRITICAL_ROLE_2027_SCOPE.md) — Corporate document-format reconciliation
+- [Fictional 2027 selected marker-metadata classification](../../../enterprise/audit_suite/DATASET_CLASSIFICATION_2027_PROPOSAL.md) — Corporate document-format reconciliation
+- [Prospective company-native data and record flow exercise](../../../enterprise/audit_suite/DATA_FLOW_EXERCISE.md) — Corporate document-format reconciliation
+- [Data and record flow: implementation boundary and decision packet](../../../enterprise/audit_suite/DATA_FLOW_GAP_DECISION_PACKET.md) — Corporate document-format reconciliation
 - [Local dataset quality and correction](../../../enterprise/audit_suite/DATA_QUALITY_RUNTIME.md) — Corporate document-format reconciliation
+- [Data, record and PHI-flow source-to-task gap ledger](../../../enterprise/audit_suite/DATA_RECORD_PHI_50_ROUTE_GAP_LEDGER_2026-09-29.md) — Corporate document-format reconciliation
 - [Local disposal runtime](../../../enterprise/audit_suite/DISPOSAL_RUNTIME.md) — Corporate document-format reconciliation
+- [Paired 283-route source and clause reconciliation](../../../enterprise/audit_suite/DOCUMENTARY_283_ROUTE_RECONCILIATION_2026-09-29.md) — Corporate document-format reconciliation
+- [Paired 283-route selected ETH001 conduct reconciliation V10](../../../enterprise/audit_suite/DOCUMENTARY_283_ROUTE_RECONCILIATION_V10_2026-09-30.md) — Corporate document-format reconciliation
+- [Paired 283-route SEC001 selected-transfer reconciliation V11](../../../enterprise/audit_suite/DOCUMENTARY_283_ROUTE_RECONCILIATION_V11_2026-09-30.md) — Corporate document-format reconciliation
+- [Paired 283-route POL004 procedure-trace reconciliation V12](../../../enterprise/audit_suite/DOCUMENTARY_283_ROUTE_RECONCILIATION_V12_2026-09-30.md) — Corporate document-format reconciliation
+- [Paired 283-route emergency replay reconciliation V13](../../../enterprise/audit_suite/DOCUMENTARY_283_ROUTE_RECONCILIATION_V13_2026-09-30.md) — Corporate document-format reconciliation
+- [Paired 283-route ENG005 selected operating-source reconciliation V14](../../../enterprise/audit_suite/DOCUMENTARY_283_ROUTE_RECONCILIATION_V14_2026-09-30.md) — Corporate document-format reconciliation
+- [SH-ENG-005 selected operating-source discovery route V14](../../../enterprise/audit_suite/DOCUMENTARY_283_ROUTE_RECONCILIATION_V14_PROPOSAL.md) — Corporate document-format reconciliation
+- [Paired 283-route PRD concern-intake reconciliation V15](../../../enterprise/audit_suite/DOCUMENTARY_283_ROUTE_RECONCILIATION_V15_2026-09-30.md) — Corporate document-format reconciliation
+- [Paired 283-route selected governance reconciliation V16](../../../enterprise/audit_suite/DOCUMENTARY_283_ROUTE_RECONCILIATION_V16_2026-10-01.md) — Corporate document-format reconciliation
+- [Paired 283-route selected LEG/DAT discovery reconciliation V17](../../../enterprise/audit_suite/DOCUMENTARY_283_ROUTE_RECONCILIATION_V17_2026-10-01.md) — Corporate document-format reconciliation
+- [Paired 283-route source and clause reconciliation V3](../../../enterprise/audit_suite/DOCUMENTARY_283_ROUTE_RECONCILIATION_V3_2026-09-29.md) — Corporate document-format reconciliation
+- [Paired 283-route source and clause reconciliation V5](../../../enterprise/audit_suite/DOCUMENTARY_283_ROUTE_RECONCILIATION_V5_2026-09-30.md) — Corporate document-format reconciliation
+- [Paired 283-route source and clause reconciliation V6](../../../enterprise/audit_suite/DOCUMENTARY_283_ROUTE_RECONCILIATION_V6_2026-09-30.md) — Corporate document-format reconciliation
+- [Paired 283-route physical-site source reconciliation V7](../../../enterprise/audit_suite/DOCUMENTARY_283_ROUTE_RECONCILIATION_V7_2026-09-30.md) — Corporate document-format reconciliation
+- [Paired 283-route LEG001 selected-docket reconciliation V8](../../../enterprise/audit_suite/DOCUMENTARY_283_ROUTE_RECONCILIATION_V8_2026-09-30.md) — Corporate document-format reconciliation
+- [Paired 283-route pending addressable-docket reconciliation V9](../../../enterprise/audit_suite/DOCUMENTARY_283_ROUTE_RECONCILIATION_V9_2026-09-30.md) — Corporate document-format reconciliation
 - [Per-control legacy documentary custody](../../../enterprise/audit_suite/DOCUMENTARY_CUSTODY.md) — Corporate document-format reconciliation
+- [Prospective local emergency-change exercise](../../../enterprise/audit_suite/EMERGENCY_CHANGE_EXERCISE.md) — Corporate document-format reconciliation
+- [Fictional 2027 selected Boise emergency replay source](../../../enterprise/audit_suite/EMERGENCY_REPLAY_2027_SELECTED_PROPOSAL.md) — Corporate document-format reconciliation
+- [Selected fictional 2027 SH-ENG-005 operating change source](../../../enterprise/audit_suite/ENG005_SELECTED_OPERATING_CHANGE_2027_PROPOSAL.md) — Corporate document-format reconciliation
+- [SH-ENG-005 selected local source: physical check and remaining audit gates](../../../enterprise/audit_suite/ENG005_SELECTED_SOURCE_GAP_PROPOSAL.md) — Corporate document-format reconciliation
+- [Selected fictional SH-ETH-001 conduct source](../../../enterprise/audit_suite/ETH001_SELECTED_CONDUCT_2027_PROPOSAL.md) — Corporate document-format reconciliation
+- [Selected fictional SH-ETH-003 speak-up routing source](../../../enterprise/audit_suite/ETH003_SELECTED_SPEAKUP_2027_PROPOSAL.md) — Corporate document-format reconciliation
+- [Selected fictional SH-ETH-004 procurement conflict source](../../../enterprise/audit_suite/ETH004_SELECTED_CONFLICT_2027_PROPOSAL.md) — Corporate document-format reconciliation
+- [Fictional company assurance programme and description operations](../../../enterprise/audit_suite/FICTIONAL_2027_ASSURANCE_OPERATIONS.md) — Corporate document-format reconciliation
+- [Partial fictional 2027 source-routing diagnostic](../../../enterprise/audit_suite/FICTIONAL_2027_CANDIDATE_REGISTRY.md) — Corporate document-format reconciliation
+- [Disposable source-to-collector probe](../../../enterprise/audit_suite/FICTIONAL_2027_COLLECTION_PROBE.md) — Corporate document-format reconciliation
+- [Fictional 2027 disposable collection probe V16](../../../enterprise/audit_suite/FICTIONAL_2027_COLLECTION_PROBE_V16.md) — Corporate document-format reconciliation
+- [Fictional 2027 disposable collection probe V17](../../../enterprise/audit_suite/FICTIONAL_2027_COLLECTION_PROBE_V17.md) — Corporate document-format reconciliation
+- [Fictional 2027 disposable collection probe V18](../../../enterprise/audit_suite/FICTIONAL_2027_COLLECTION_PROBE_V18.md) — Corporate document-format reconciliation
+- [Disposable V5 source-to-collector probe](../../../enterprise/audit_suite/FICTIONAL_2027_COLLECTION_PROBE_V5.md) — Corporate document-format reconciliation
+- [Disposable V6 source-to-collector probe](../../../enterprise/audit_suite/FICTIONAL_2027_COLLECTION_PROBE_V6.md) — Corporate document-format reconciliation
+- [Fictional 2027 company privacy routing operations](../../../enterprise/audit_suite/FICTIONAL_2027_DAT002_PRIVACY_OPERATIONS.md) — Corporate document-format reconciliation
+- [Fictional 2027 partial source portfolio V16](../../../enterprise/audit_suite/FICTIONAL_2027_PARTIAL_PORTFOLIO_V16.md) — Corporate document-format reconciliation
+- [Fictional 2027 partial source portfolio V17](../../../enterprise/audit_suite/FICTIONAL_2027_PARTIAL_PORTFOLIO_V17.md) — Corporate document-format reconciliation
+- [Reviewed fictional 2027 source portfolio: partial V2 successor](../../../enterprise/audit_suite/FICTIONAL_2027_PARTIAL_PORTFOLIO_V2.md) — Corporate document-format reconciliation
+- [Reviewed fictional 2027 source portfolio V3: partial routing diagnostic](../../../enterprise/audit_suite/FICTIONAL_2027_PARTIAL_PORTFOLIO_V3.md) — Corporate document-format reconciliation
+- [Partial V5 fictional source and routing diagnostic](../../../enterprise/audit_suite/FICTIONAL_2027_PARTIAL_PORTFOLIO_V5.md) — Corporate document-format reconciliation
+- [Reviewed fictional 2027 source portfolio diagnostic](../../../enterprise/audit_suite/FICTIONAL_2027_SOURCE_PORTFOLIO_DIAGNOSTIC.md) — Corporate document-format reconciliation
+- [Fresh selected SEC003 procedure performance](../../../enterprise/audit_suite/FRESH_SEC003_EXECUTION_2026-10-01.md) — Corporate document-format reconciliation
+- [Selected fictional 2027 Board envelope and management authority](../../../enterprise/audit_suite/GOV_APPETITE_2027_SELECTED_PROPOSAL.md) — Corporate document-format reconciliation
+- [Selected fictional 2027 committee oversight source](../../../enterprise/audit_suite/GOV_SELECTED_OVERSIGHT_2027_PROPOSAL.md) — Corporate document-format reconciliation
+- [Fictional IAM005 emergency marker source](../../../enterprise/audit_suite/IAM005_EMERGENCY_MARKER_2027_PROPOSAL.md) — Corporate document-format reconciliation
+- [One nonpersonal local IAM-005 human/service trace](../../../enterprise/audit_suite/IAM005_LOCAL_SAME_OBJECT_2027_PROPOSAL.md) — Corporate document-format reconciliation
 - [Instructor-authored assessment history](../../../enterprise/audit_suite/INSTRUCTOR_ASSESSMENTS.md) — Corporate document-format reconciliation
 - [Selected instructor debriefs](../../../enterprise/audit_suite/INSTRUCTOR_DEBRIEF.md) — Corporate document-format reconciliation
 - [Protected saved Key filters](../../../enterprise/audit_suite/INSTRUCTOR_KEY_VIEWS.md) — Corporate document-format reconciliation
+- [Fictional 2027 nonpersonal integrity and transformation chain](../../../enterprise/audit_suite/INTEGRITY_CHAIN_2027_PROPOSAL.md) — Corporate document-format reconciliation
 - [Explicit investigation handoffs](../../../enterprise/audit_suite/INVESTIGATION_HANDOFFS.md) — Corporate document-format reconciliation
+- [SH-LEG-001: exact 66 unsupported authored candidates](../../../enterprise/audit_suite/LEG001_66_CANDIDATE_GAP_2026-10-01.md) — Corporate document-format reconciliation
+- [Fictional 2027 SH-LEG-001 provision-status hold](../../../enterprise/audit_suite/LEG001_PROVISION_OVERLAY_2027_PROPOSAL.md) — Corporate document-format reconciliation
+- [Fictional 2027 SH-LEG-001 selected operating docket](../../../enterprise/audit_suite/LEG001_SELECTED_OPERATING_DOCKET_2027_PROPOSAL.md) — Corporate document-format reconciliation
+- [Company legal intake and response exercise](../../../enterprise/audit_suite/LEG001_TRIGGER_SCREENING_2027_IMPLEMENTATION.md) — Corporate document-format reconciliation
+- [Company legal mailbox originals](../../../enterprise/audit_suite/LEGAL_ORIGINAL_MESSAGE_ARCHIVE_2027.md) — Corporate document-format reconciliation
 - [Local worker lifecycle sources](../../../enterprise/audit_suite/LIFECYCLE_ACTIVITY.md) — Corporate document-format reconciliation
 - [Local logging clock companion](../../../enterprise/audit_suite/LOGGING_CLOCK_RUNTIME.md) — Corporate document-format reconciliation
 - [Local non-human credential lifecycle](../../../enterprise/audit_suite/NONHUMAN_IDENTITY_ACTIVITY.md) — Corporate document-format reconciliation
 - [Persistent local nonhuman identity operations](../../../enterprise/audit_suite/NONHUMAN_RUNTIME.md) — Corporate document-format reconciliation
+- [First fresh P1 procedure pilot: selected SEC003 vulnerability trace](../../../enterprise/audit_suite/P1_FRESH_PROCEDURE_PILOT_SEC003_2026-10-01.md) — Corporate document-format reconciliation
+- [Persistent company-source journey candidate](../../../enterprise/audit_suite/PERSISTENT_COMPANY_JOURNEY_2026-10-01.md) — Corporate document-format reconciliation
 - [Personal saved views](../../../enterprise/audit_suite/PERSONAL_VIEWS.md) — Corporate document-format reconciliation
+- [Fictional 2027 customer ePHI/BA flow: field-level implementation packet](../../../enterprise/audit_suite/PHI_BA_2027_SIMULATION_PACKET.md) — Corporate document-format reconciliation
+- [Selected fictional 2027 Reno/Boise physical-site source](../../../enterprise/audit_suite/PHYSICAL_SITE_SELECTED_2027_PROPOSAL.md) — Corporate document-format reconciliation
+- [Selected fictional 2027 POL004 policy-to-procedure trace](../../../enterprise/audit_suite/POL004_SELECTED_PROCEDURE_TRACE_2027_PROPOSAL.md) — Corporate document-format reconciliation
 - [Local policy distribution runtime](../../../enterprise/audit_suite/POLICY_DELIVERY_RUNTIME.md) — Corporate document-format reconciliation
+- [Fictional 2027 local policy and exception history](../../../enterprise/audit_suite/POLICY_EXCEPTION_2027_PROPOSAL.md) — Corporate document-format reconciliation
 - [Protected portfolio source snapshots](../../../enterprise/audit_suite/PORTFOLIO_EXPLANATION.md) — Corporate document-format reconciliation
+- [Selected fictional SH-PPL-002 screening requirement negative gate](../../../enterprise/audit_suite/PPL002_SELECTED_SCREENING_GATE_2027_PROPOSAL.md) — Corporate document-format reconciliation
+- [Selected fictional PRD concern intake](../../../enterprise/audit_suite/PRD_CONCERN_INTAKE_2027_PROPOSAL.md) — Corporate document-format reconciliation
+- [One selected fictional 2027 internal customer case](../../../enterprise/audit_suite/PRD_INTERNAL_CUSTOMER_2027_PROPOSAL.md) — Corporate document-format reconciliation
+- [PRD internal customer source V2: frozen route authority](../../../enterprise/audit_suite/PRD_INTERNAL_CUSTOMER_2027_PROPOSAL_V2.md) — Corporate document-format reconciliation
 - [Local privileged-session runtime](../../../enterprise/audit_suite/PRIVILEGED_RUNTIME.md) — Corporate document-format reconciliation
+- [Historical procedure-method reuse crosswalk](../../../enterprise/audit_suite/PROCEDURE_METHOD_REUSE_CROSSWALK_V1_2026-10-01.md) — Corporate document-format reconciliation
+- [Recorded procedure original-byte check](../../../enterprise/audit_suite/PROCEDURE_ORIGINAL_INTEGRITY.md) — Corporate document-format reconciliation
 - [Procedure trace metadata readiness](../../../enterprise/audit_suite/PROCEDURE_TRACE_READINESS.md) — Corporate document-format reconciliation
+- [Fictional 2027 one-marker processing-purpose case](../../../enterprise/audit_suite/PROCESSING_PURPOSE_2027_PROPOSAL.md) — Corporate document-format reconciliation
+- [Provider and BA discovery: exact 85-route delta](../../../enterprise/audit_suite/PROVIDER_BA_85_ROUTE_DELTA_PLAN.md) — Corporate document-format reconciliation
+- [Provider and BA discovery after the reviewed lifecycle source](../../../enterprise/audit_suite/PROVIDER_BA_85_ROUTE_DELTA_V2.md) — Corporate document-format reconciliation
+- [Fictional 2027 provider lifecycle source](../../../enterprise/audit_suite/PROVIDER_LIFECYCLE_2027_SIMULATION_PACKET.md) — Corporate document-format reconciliation
+- [SH-REC-003 local lineage and remaining audit gap](../../../enterprise/audit_suite/REC003_LINEAGE_GAP_PROPOSAL.md) — Corporate document-format reconciliation
+- [SH-REC-003 rebased native-source candidate](../../../enterprise/audit_suite/REC003_NATIVE_SNAPSHOT_CANDIDATE.md) — Corporate document-format reconciliation
 - [Explicit local recovery-period runner](../../../enterprise/audit_suite/RECOVERY_PERIOD_RUNNER.md) — Corporate document-format reconciliation
 - [Repository documentary sync](../../../enterprise/audit_suite/REPOSITORY_DOCUMENT_SYNC.md) — Corporate document-format reconciliation
+- [Fictional 2027 selected retention and hold negative gate](../../../enterprise/audit_suite/RETENTION_HOLD_NEGATIVE_GATE_2027_PROPOSAL.md) — Corporate document-format reconciliation
 - [Local quarterly risk-input assessment](../../../enterprise/audit_suite/RISK_ASSESSMENT_ACTIVITY.md) — Corporate document-format reconciliation
+- [Risk and assurance governance: 50-route gap ledger](../../../enterprise/audit_suite/RISK_ASSURANCE_GOVERNANCE_50_ROUTE_GAP_LEDGER.md) — Corporate document-format reconciliation
+- [Fictional 2027 provider-transition risk stage gate and residual-risk routing](../../../enterprise/audit_suite/RISK_GOVERNANCE_STAGEGATE_PROPOSAL.md) — Corporate document-format reconciliation
+- [Fictional 2027 Reno–Boise runtime transition proposal](../../../enterprise/audit_suite/RUNTIME_TRANSITION_PROPOSAL.md) — Corporate document-format reconciliation
 - [Explicit sampled-item procedure trace](../../../enterprise/audit_suite/SAMPLE_EXECUTION.md) — Corporate document-format reconciliation
+- [Selected SEC001 technology-component lifecycle exercise](../../../enterprise/audit_suite/SEC001_SELECTED_COMPONENT_LIFECYCLE_2027_PROPOSAL.md) — Corporate document-format reconciliation
+- [Selected synthetic transfer custody exercise (SEC001)](../../../enterprise/audit_suite/SEC001_SELECTED_TRANSFER_2027_PROPOSAL.md) — Corporate document-format reconciliation
+- [V12 selected-transfer portfolio and candidate extension](../../../enterprise/audit_suite/SEC001_SELECTED_TRANSFER_PORTFOLIO_V12_PROPOSAL.md) — Corporate document-format reconciliation
+- [Selected fictional SEC003 vulnerability lifecycle source](../../../enterprise/audit_suite/SEC003_SELECTED_VULNERABILITY_2027_PROPOSAL.md) — Corporate document-format reconciliation
+- [SH-SEC-005 fictional local boundary and endpoint trace](../../../enterprise/audit_suite/SEC005_LOCAL_BOUNDARY_2027_PROPOSAL.md) — Corporate document-format reconciliation
+- [Fictional 2027 selected SVC-compute security operation](../../../enterprise/audit_suite/SEC005_SELECTED_OPERATIONS_2027_PROPOSAL.md) — Corporate document-format reconciliation
 - [Persistent local security-event intake](../../../enterprise/audit_suite/SECURITY_EVENT_RUNTIME.md) — Corporate document-format reconciliation
+- [Fictional 2027 selected-source extraction history](../../../enterprise/audit_suite/SOURCE_EXTRACTION_2027_PROPOSAL.md) — Corporate document-format reconciliation
 - [Explicit source-impact reassessment dispositions](../../../enterprise/audit_suite/SOURCE_IMPACT_DISPOSITIONS.md) — Corporate document-format reconciliation
 - [Exact recorded source-impact relationships](../../../enterprise/audit_suite/SOURCE_IMPACT_REFERENCES.md) — Corporate document-format reconciliation
+- [Normal source-library audit adapter](../../../enterprise/audit_suite/SOURCE_LIBRARY_AUDIT_ADAPTER_2026-10-01.md) — Corporate document-format reconciliation
+- [Selected company-library security and continuity fieldwork](../../../enterprise/audit_suite/SOURCE_LIBRARY_SELECTED_SECURITY_METHODS_2026-10-01.md) — Corporate document-format reconciliation
 - [Recorded procedure gaps](../../../enterprise/audit_suite/TASK_GAPS.md) — Corporate document-format reconciliation
 - [Local role-based training source pair](../../../enterprise/audit_suite/TRAINING_ACTIVITY.md) — Corporate document-format reconciliation
+- [Unsupported exact clauses: PBC/source-request plan V2](../../../enterprise/audit_suite/UNSUPPORTED_121_PBC_PLAN_2026-09-29.md) — Corporate document-format reconciliation
+- [Unsupported exact clauses: selected POL004 request delta V10](../../../enterprise/audit_suite/UNSUPPORTED_121_PBC_PLAN_V10_2026-09-30.md) — Corporate document-format reconciliation
+- [Selected POL004 discovery lead for the unsupported PBC plan V10](../../../enterprise/audit_suite/UNSUPPORTED_121_PBC_PLAN_V10_PROPOSAL.md) — Corporate document-format reconciliation
+- [Unsupported exact clauses: emergency replay request delta V11](../../../enterprise/audit_suite/UNSUPPORTED_121_PBC_PLAN_V11_2026-09-30.md) — Corporate document-format reconciliation
+- [Selected emergency replay PBC successor V11](../../../enterprise/audit_suite/UNSUPPORTED_121_PBC_PLAN_V11_PROPOSAL.md) — Corporate document-format reconciliation
+- [Unsupported exact clauses: selected ENG005 request delta V12](../../../enterprise/audit_suite/UNSUPPORTED_121_PBC_PLAN_V12_2026-09-30.md) — Corporate document-format reconciliation
+- [Unsupported exact clauses: held PRD concern request delta V13](../../../enterprise/audit_suite/UNSUPPORTED_121_PBC_PLAN_V13_2026-10-01.md) — Corporate document-format reconciliation
+- [Unsupported exact clauses: selected GOV request delta V14](../../../enterprise/audit_suite/UNSUPPORTED_121_PBC_PLAN_V14_2026-10-01.md) — Corporate document-format reconciliation
+- [Unsupported exact clauses: selected LEG/DAT draft delta V15](../../../enterprise/audit_suite/UNSUPPORTED_121_PBC_PLAN_V15_2026-10-01.md) — Corporate document-format reconciliation
+- [Unsupported exact clauses: reviewed V5 PBC/source-request delta](../../../enterprise/audit_suite/UNSUPPORTED_121_PBC_PLAN_V5_2026-09-30.md) — Corporate document-format reconciliation
+- [Unsupported exact clauses: reviewed V6 PBC/source-request delta](../../../enterprise/audit_suite/UNSUPPORTED_121_PBC_PLAN_V6_2026-09-30.md) — Corporate document-format reconciliation
+- [Unsupported exact clauses: reviewed V7 physical-site request delta](../../../enterprise/audit_suite/UNSUPPORTED_121_PBC_PLAN_V7_2026-09-30.md) — Corporate document-format reconciliation
+- [Unsupported exact clauses: conditional LEG001 matter request delta V8](../../../enterprise/audit_suite/UNSUPPORTED_121_PBC_PLAN_V8_2026-09-30.md) — Corporate document-format reconciliation
+- [Unsupported exact clauses: selected SEC001 request delta V9](../../../enterprise/audit_suite/UNSUPPORTED_121_PBC_PLAN_V9_2026-09-30.md) — Corporate document-format reconciliation
+- [Selected SEC001 source leads for the unsupported PBC plan V9](../../../enterprise/audit_suite/UNSUPPORTED_121_PBC_PLAN_V9_PROPOSAL.md) — Corporate document-format reconciliation
 - [Local package inventory, rule scans and rescans](../../../enterprise/audit_suite/VULNERABILITY_RUNTIME.md) — Corporate document-format reconciliation
 - [Private reasoned work guidance](../../../enterprise/audit_suite/WORK_GUIDANCE.md) — Corporate document-format reconciliation
 - [ARU acquisition cost classification](../../../enterprise/ccf/company_closeout/ARU_TRANSACTION_COST_TAX.md) — Corporate document-format reconciliation

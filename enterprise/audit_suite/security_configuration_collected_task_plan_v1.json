@@ -1,0 +1,501 @@
+{
+  "schema": "SH_COLLECTED_SECURITY_CONFIGURATION_B02_TASK_PLAN_V1",
+  "source_matrix_sha256": "249768769b0fc3c95cdb1b16f955fbc4afbb97b7ef907d677602b05b06089c8d",
+  "task_count": 38,
+  "tasks": [
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Inventory snapshot; discovery comparison; discrepancy tickets. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Record assets, software, services, owners, locations and lifecycle states at onboarding/change/retirement; reconcile identity, endpoint, network, provider and deployment discovery to inventory; resolve unowned resources.",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-CFG-001",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Reconcile owned hardware/software/service/resource inventories to independent configuration, identity, provider and deployment discoveries; preserve unowned and out-of-scope items.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-CFG-001-corporate-IMPLEMENTATION",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "title": "Material hardware, software, SaaS, cloud resources, environments, and owners are inventoried."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Inventory snapshot; discovery comparison; discrepancy tickets. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Record assets, software, services, owners, locations and lifecycle states at onboarding/change/retirement; reconcile identity, endpoint, network, provider and deployment discovery to inventory; resolve unowned resources.",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-CFG-001",
+      "kind": "TOD",
+      "required_checks": "Reconcile owned hardware/software/service/resource inventories to independent configuration, identity, provider and deployment discoveries; preserve unowned and out-of-scope items.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-CFG-001-corporate-TOD",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "title": "Material hardware, software, SaaS, cloud resources, environments, and owners are inventoried."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Inventory snapshot; discovery comparison; discrepancy tickets. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Record assets, software, services, owners, locations and lifecycle states at onboarding/change/retirement; reconcile identity, endpoint, network, provider and deployment discovery to inventory; resolve unowned resources.",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-CFG-001",
+      "kind": "TOE",
+      "required_checks": "Reconcile owned hardware/software/service/resource inventories to independent configuration, identity, provider and deployment discoveries; preserve unowned and out-of-scope items.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-CFG-001-corporate-TOE",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "title": "Material hardware, software, SaaS, cloud resources, environments, and owners are inventoried."
+    },
+    {
+      "authored_instruction": "Reconcile technologies and outsourced components to controls and test an unsupported component; a hardening baseline alone does not cover the technology lifecycle.",
+      "authored_procedure": "Version the intended configuration for each technology; compare deployed settings to the approved baseline; investigate drift and link correction or an expiring exception.",
+      "clause_group": "CHECK-SOC2:CC5.2",
+      "control_id": "SH-CFG-002",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Compare exact actual settings bytes to effective approved baseline and versioned exception; reperform drift detection and correction, including absent historic originals.",
+      "requirement_ids": [
+        "SOC2:CC5.2"
+      ],
+      "task_id": "TASK-SH-CFG-002-corporate-CHECK-SOC2:CC5.2",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Baseline configurations are defined for critical technologies and material drift is detected."
+    },
+    {
+      "authored_instruction": "Inspect installation restrictions, update coverage and detection response on representative assets; test an unapproved executable and exception path.",
+      "authored_procedure": "Version the intended configuration for each technology; compare deployed settings to the approved baseline; investigate drift and link correction or an expiring exception.",
+      "clause_group": "CHECK-SOC2:CC6.8",
+      "control_id": "SH-CFG-002",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Compare exact actual settings bytes to effective approved baseline and versioned exception; reperform drift detection and correction, including absent historic originals.",
+      "requirement_ids": [
+        "SOC2:CC6.8"
+      ],
+      "task_id": "TASK-SH-CFG-002-corporate-CHECK-SOC2:CC6.8",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Baseline configurations are defined for critical technologies and material drift is detected."
+    },
+    {
+      "authored_instruction": "Reconcile inventory, scan and baseline populations; trace drift and a newly disclosed vulnerability through detection and correction.",
+      "authored_procedure": "Version the intended configuration for each technology; compare deployed settings to the approved baseline; investigate drift and link correction or an expiring exception.",
+      "clause_group": "CHECK-SOC2:CC7.1",
+      "control_id": "SH-CFG-002",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Compare exact actual settings bytes to effective approved baseline and versioned exception; reperform drift detection and correction, including absent historic originals.",
+      "requirement_ids": [
+        "SOC2:CC7.1"
+      ],
+      "task_id": "TASK-SH-CFG-002-corporate-CHECK-SOC2:CC7.1",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Baseline configurations are defined for critical technologies and material drift is detected."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Baseline version; drift export; change or exception link. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Version the intended configuration for each technology; compare deployed settings to the approved baseline; investigate drift and link correction or an expiring exception.",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-CFG-002",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Compare exact actual settings bytes to effective approved baseline and versioned exception; reperform drift detection and correction, including absent historic originals.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-CFG-002-corporate-IMPLEMENTATION",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "title": "Baseline configurations are defined for critical technologies and material drift is detected."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Baseline version; drift export; change or exception link. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Version the intended configuration for each technology; compare deployed settings to the approved baseline; investigate drift and link correction or an expiring exception.",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-CFG-002",
+      "kind": "TOD",
+      "required_checks": "Compare exact actual settings bytes to effective approved baseline and versioned exception; reperform drift detection and correction, including absent historic originals.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-CFG-002-corporate-TOD",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "title": "Baseline configurations are defined for critical technologies and material drift is detected."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Baseline version; drift export; change or exception link. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Version the intended configuration for each technology; compare deployed settings to the approved baseline; investigate drift and link correction or an expiring exception.",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-CFG-002",
+      "kind": "TOE",
+      "required_checks": "Compare exact actual settings bytes to effective approved baseline and versioned exception; reperform drift detection and correction, including absent historic originals.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-CFG-002-corporate-TOE",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "title": "Baseline configurations are defined for critical technologies and material drift is detected."
+    },
+    {
+      "authored_instruction": "Reconcile all 22 addressable entries to documented decisions; inspect both implemented measures and alternatives. Reject blank reasoning and a generic risk waiver substituted for the environmental assessment.",
+      "authored_procedure": "Document trust zones, data flows, administrative paths, authentication, key custody and supplier responsibilities for both sites; assess threat scenarios and minimum requirements before material architecture change.",
+      "clause_group": "ACTION-H-ADDRESSABLE",
+      "control_id": "SH-SEC-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Join trust/data/admin paths and key/supplier responsibilities to architecture review and threat decisions before material changes; component inventory is not complete architecture assurance.",
+      "requirement_ids": [
+        "HIPAA:164.306",
+        "HIPAA:164.308",
+        "HIPAA:164.310",
+        "HIPAA:164.312"
+      ],
+      "task_id": "TASK-SH-SEC-001-corporate-ACTION-H-ADDRESSABLE",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Security architecture and minimum security requirements are defined for enterprise and product environments."
+    },
+    {
+      "authored_instruction": "Inject approved synthetic unauthorized alteration into a test copy and a transfer; verify detection and response. Distinguish business-data validity from protection against unauthorized alteration.",
+      "authored_procedure": "Document trust zones, data flows, administrative paths, authentication, key custody and supplier responsibilities for both sites; assess threat scenarios and minimum requirements before material architecture change.",
+      "clause_group": "ACTION-H-INTEGRITY",
+      "control_id": "SH-SEC-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Join trust/data/admin paths and key/supplier responsibilities to architecture review and threat decisions before material changes; component inventory is not complete architecture assurance.",
+      "requirement_ids": [
+        "HIPAA:164.312"
+      ],
+      "task_id": "TASK-SH-SEC-001-corporate-ACTION-H-INTEGRITY",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Security architecture and minimum security requirements are defined for enterprise and product environments."
+    },
+    {
+      "authored_instruction": "Trace workstations, facility repairs and moved/reused equipment from independent populations to the applicable records; reperform retrieval of a required pre-movement copy.",
+      "authored_procedure": "Document trust zones, data flows, administrative paths, authentication, key custody and supplier responsibilities for both sites; assess threat scenarios and minimum requirements before material architecture change.",
+      "clause_group": "ACTION-H-PHYSICAL-MOVEMENT",
+      "control_id": "SH-SEC-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Join trust/data/admin paths and key/supplier responsibilities to architecture review and threat decisions before material changes; component inventory is not complete architecture assurance.",
+      "requirement_ids": [
+        "HIPAA:164.310"
+      ],
+      "task_id": "TASK-SH-SEC-001-corporate-ACTION-H-PHYSICAL-MOVEMENT",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Security architecture and minimum security requirements are defined for enterprise and product environments."
+    },
+    {
+      "authored_instruction": "Inspect monitored environmental protections, backup recoverability and recovery infrastructure under a site failure; backup job success does not establish recovery capacity.",
+      "authored_procedure": "Document trust zones, data flows, administrative paths, authentication, key custody and supplier responsibilities for both sites; assess threat scenarios and minimum requirements before material architecture change.",
+      "clause_group": "CHECK-SOC2:A1.2",
+      "control_id": "SH-SEC-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Join trust/data/admin paths and key/supplier responsibilities to architecture review and threat decisions before material changes; component inventory is not complete architecture assurance.",
+      "requirement_ids": [
+        "SOC2:A1.2"
+      ],
+      "task_id": "TASK-SH-SEC-001-corporate-CHECK-SOC2:A1.2",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Security architecture and minimum security requirements are defined for enterprise and product environments."
+    },
+    {
+      "authored_instruction": "Reconcile technologies and outsourced components to controls and test an unsupported component; a hardening baseline alone does not cover the technology lifecycle.",
+      "authored_procedure": "Document trust zones, data flows, administrative paths, authentication, key custody and supplier responsibilities for both sites; assess threat scenarios and minimum requirements before material architecture change.",
+      "clause_group": "CHECK-SOC2:CC5.2",
+      "control_id": "SH-SEC-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Join trust/data/admin paths and key/supplier responsibilities to architecture review and threat decisions before material changes; component inventory is not complete architecture assurance.",
+      "requirement_ids": [
+        "SOC2:CC5.2"
+      ],
+      "task_id": "TASK-SH-SEC-001-corporate-CHECK-SOC2:CC5.2",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Security architecture and minimum security requirements are defined for enterprise and product environments."
+    },
+    {
+      "authored_instruction": "Trace a human and service identity through each trust boundary and resource permission; test unauthorized access, key/credential protection and a privileged path.",
+      "authored_procedure": "Document trust zones, data flows, administrative paths, authentication, key custody and supplier responsibilities for both sites; assess threat scenarios and minimum requirements before material architecture change.",
+      "clause_group": "CHECK-SOC2:CC6.1",
+      "control_id": "SH-SEC-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Join trust/data/admin paths and key/supplier responsibilities to architecture review and threat decisions before material changes; component inventory is not complete architecture assurance.",
+      "requirement_ids": [
+        "SOC2:CC6.1"
+      ],
+      "task_id": "TASK-SH-SEC-001-corporate-CHECK-SOC2:CC6.1",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Security architecture and minimum security requirements are defined for enterprise and product environments."
+    },
+    {
+      "authored_instruction": "Inspect site zoning, visitor authorization, escort, credentials and revocation at Reno, Boise and relevant providers; logical IAM records are insufficient physical evidence.",
+      "authored_procedure": "Document trust zones, data flows, administrative paths, authentication, key custody and supplier responsibilities for both sites; assess threat scenarios and minimum requirements before material architecture change.",
+      "clause_group": "CHECK-SOC2:CC6.4",
+      "control_id": "SH-SEC-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Join trust/data/admin paths and key/supplier responsibilities to architecture review and threat decisions before material changes; component inventory is not complete architecture assurance.",
+      "requirement_ids": [
+        "SOC2:CC6.4"
+      ],
+      "task_id": "TASK-SH-SEC-001-corporate-CHECK-SOC2:CC6.4",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Security architecture and minimum security requirements are defined for enterprise and product environments."
+    },
+    {
+      "authored_instruction": "Trace a transfer to purpose, recipient authorization, channel/endpoint protection and handling after receipt; transport encryption alone does not authorize the transfer.",
+      "authored_procedure": "Document trust zones, data flows, administrative paths, authentication, key custody and supplier responsibilities for both sites; assess threat scenarios and minimum requirements before material architecture change.",
+      "clause_group": "CHECK-SOC2:CC6.7",
+      "control_id": "SH-SEC-001",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Join trust/data/admin paths and key/supplier responsibilities to architecture review and threat decisions before material changes; component inventory is not complete architecture assurance.",
+      "requirement_ids": [
+        "SOC2:CC6.7"
+      ],
+      "task_id": "TASK-SH-SEC-001-corporate-CHECK-SOC2:CC6.7",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Security architecture and minimum security requirements are defined for enterprise and product environments."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Architecture; threat assessment; technical requirements; review. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Document trust zones, data flows, administrative paths, authentication, key custody and supplier responsibilities for both sites; assess threat scenarios and minimum requirements before material architecture change.",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-SEC-001",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Join trust/data/admin paths and key/supplier responsibilities to architecture review and threat decisions before material changes; component inventory is not complete architecture assurance.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-SEC-001-corporate-IMPLEMENTATION",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "title": "Security architecture and minimum security requirements are defined for enterprise and product environments."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Architecture; threat assessment; technical requirements; review. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Document trust zones, data flows, administrative paths, authentication, key custody and supplier responsibilities for both sites; assess threat scenarios and minimum requirements before material architecture change.",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-SEC-001",
+      "kind": "TOD",
+      "required_checks": "Join trust/data/admin paths and key/supplier responsibilities to architecture review and threat decisions before material changes; component inventory is not complete architecture assurance.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-SEC-001-corporate-TOD",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "title": "Security architecture and minimum security requirements are defined for enterprise and product environments."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Architecture; threat assessment; technical requirements; review. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Document trust zones, data flows, administrative paths, authentication, key custody and supplier responsibilities for both sites; assess threat scenarios and minimum requirements before material architecture change.",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-SEC-001",
+      "kind": "TOE",
+      "required_checks": "Join trust/data/admin paths and key/supplier responsibilities to architecture review and threat decisions before material changes; component inventory is not complete architecture assurance.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-SEC-001-corporate-TOE",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "title": "Security architecture and minimum security requirements are defined for enterprise and product environments."
+    },
+    {
+      "authored_instruction": "Select periods independently; reperform an activity query and inspect anomaly disposition and missing periods. Validate recording as well as actual examination.",
+      "authored_procedure": "Inventory required log sources and detections; monitor ingestion and clock gaps; route alerts with severity and ownership; test representative detections and collection-loss alerts.",
+      "clause_group": "ACTION-H-ACTIVITY-REVIEW",
+      "control_id": "SH-SEC-002",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Recompute required publisher/source coverage, sequence/ingestion/clock gaps and alert routing; inspect retained publisher originals and actual detection/collection-loss exercises.",
+      "requirement_ids": [
+        "HIPAA:164.308",
+        "HIPAA:164.312"
+      ],
+      "task_id": "TASK-SH-SEC-002-corporate-ACTION-H-ACTIVITY-REVIEW",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Security logging and detection coverage is defined for material systems and monitored for collection gaps."
+    },
+    {
+      "authored_instruction": "Inspect detection rules, source coverage, alert analysis and periods of collection failure; a healthy collector is not evidence that anomalies were examined.",
+      "authored_procedure": "Inventory required log sources and detections; monitor ingestion and clock gaps; route alerts with severity and ownership; test representative detections and collection-loss alerts.",
+      "clause_group": "CHECK-SOC2:CC7.2",
+      "control_id": "SH-SEC-002",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Recompute required publisher/source coverage, sequence/ingestion/clock gaps and alert routing; inspect retained publisher originals and actual detection/collection-loss exercises.",
+      "requirement_ids": [
+        "SOC2:CC7.2"
+      ],
+      "task_id": "TASK-SH-SEC-002-corporate-CHECK-SOC2:CC7.2",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Security logging and detection coverage is defined for material systems and monitored for collection gaps."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Source coverage; ingestion health; detection exercise; response ticket. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Inventory required log sources and detections; monitor ingestion and clock gaps; route alerts with severity and ownership; test representative detections and collection-loss alerts.",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-SEC-002",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Recompute required publisher/source coverage, sequence/ingestion/clock gaps and alert routing; inspect retained publisher originals and actual detection/collection-loss exercises.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-SEC-002-corporate-IMPLEMENTATION",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "title": "Security logging and detection coverage is defined for material systems and monitored for collection gaps."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Source coverage; ingestion health; detection exercise; response ticket. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Inventory required log sources and detections; monitor ingestion and clock gaps; route alerts with severity and ownership; test representative detections and collection-loss alerts.",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-SEC-002",
+      "kind": "TOD",
+      "required_checks": "Recompute required publisher/source coverage, sequence/ingestion/clock gaps and alert routing; inspect retained publisher originals and actual detection/collection-loss exercises.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-SEC-002-corporate-TOD",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "title": "Security logging and detection coverage is defined for material systems and monitored for collection gaps."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Source coverage; ingestion health; detection exercise; response ticket. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Inventory required log sources and detections; monitor ingestion and clock gaps; route alerts with severity and ownership; test representative detections and collection-loss alerts.",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-SEC-002",
+      "kind": "TOE",
+      "required_checks": "Recompute required publisher/source coverage, sequence/ingestion/clock gaps and alert routing; inspect retained publisher originals and actual detection/collection-loss exercises.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-SEC-002-corporate-TOE",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "title": "Security logging and detection coverage is defined for material systems and monitored for collection gaps."
+    },
+    {
+      "authored_instruction": "Reconcile inventory, scan and baseline populations; trace drift and a newly disclosed vulnerability through detection and correction.",
+      "authored_procedure": "Reconcile asset coverage across scanners, testing and advisories; validate findings; assign remediation against approved severity/exploitability SLAs; verify fixes by rescan or record expiring acceptance.",
+      "clause_group": "CHECK-SOC2:CC7.1",
+      "control_id": "SH-SEC-003",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Derive covered assets, due scans/advisories and observed findings; independently recompute severity deadlines, remediation rescan and expiring acceptance with original availability.",
+      "requirement_ids": [
+        "SOC2:CC7.1"
+      ],
+      "task_id": "TASK-SH-SEC-003-corporate-CHECK-SOC2:CC7.1",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Vulnerabilities are identified from scanning, testing, advisories, incidents, and engineering input and tracked to remediation/acceptance."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Coverage reconciliation; finding; SLA; fix verification. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Reconcile asset coverage across scanners, testing and advisories; validate findings; assign remediation against approved severity/exploitability SLAs; verify fixes by rescan or record expiring acceptance.",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-SEC-003",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Derive covered assets, due scans/advisories and observed findings; independently recompute severity deadlines, remediation rescan and expiring acceptance with original availability.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-SEC-003-corporate-IMPLEMENTATION",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "title": "Vulnerabilities are identified from scanning, testing, advisories, incidents, and engineering input and tracked to remediation/acceptance."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Coverage reconciliation; finding; SLA; fix verification. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Reconcile asset coverage across scanners, testing and advisories; validate findings; assign remediation against approved severity/exploitability SLAs; verify fixes by rescan or record expiring acceptance.",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-SEC-003",
+      "kind": "TOD",
+      "required_checks": "Derive covered assets, due scans/advisories and observed findings; independently recompute severity deadlines, remediation rescan and expiring acceptance with original availability.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-SEC-003-corporate-TOD",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "title": "Vulnerabilities are identified from scanning, testing, advisories, incidents, and engineering input and tracked to remediation/acceptance."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Coverage reconciliation; finding; SLA; fix verification. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Reconcile asset coverage across scanners, testing and advisories; validate findings; assign remediation against approved severity/exploitability SLAs; verify fixes by rescan or record expiring acceptance.",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-SEC-003",
+      "kind": "TOE",
+      "required_checks": "Derive covered assets, due scans/advisories and observed findings; independently recompute severity deadlines, remediation rescan and expiring acceptance with original availability.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-SEC-003-corporate-TOE",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "title": "Vulnerabilities are identified from scanning, testing, advisories, incidents, and engineering input and tracked to remediation/acceptance."
+    },
+    {
+      "authored_instruction": "Test approved ingress/egress paths, remote administration and boundary defenses against an unauthorized connection; reconcile rules to actual external interfaces.",
+      "authored_procedure": "Enforce approved host, endpoint, SaaS and network settings; restrict unauthorized software and flows; detect exceptions and link to remediation or approved time-limited deviation.",
+      "clause_group": "CHECK-SOC2:CC6.6",
+      "control_id": "SH-SEC-005",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Compare local actual application/export/probe bytes to effective endpoint/network/SaaS rules and time-bound deviations; keep local mechanics separate from cloud/enterprise enforcement.",
+      "requirement_ids": [
+        "SOC2:CC6.6"
+      ],
+      "task_id": "TASK-SH-SEC-005-corporate-CHECK-SOC2:CC6.6",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Endpoint, network, cloud, and SaaS security baselines are enforced or deviations governed."
+    },
+    {
+      "authored_instruction": "Inspect installation restrictions, update coverage and detection response on representative assets; test an unapproved executable and exception path.",
+      "authored_procedure": "Enforce approved host, endpoint, SaaS and network settings; restrict unauthorized software and flows; detect exceptions and link to remediation or approved time-limited deviation.",
+      "clause_group": "CHECK-SOC2:CC6.8",
+      "control_id": "SH-SEC-005",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Compare local actual application/export/probe bytes to effective endpoint/network/SaaS rules and time-bound deviations; keep local mechanics separate from cloud/enterprise enforcement.",
+      "requirement_ids": [
+        "SOC2:CC6.8"
+      ],
+      "task_id": "TASK-SH-SEC-005-corporate-CHECK-SOC2:CC6.8",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Endpoint, network, cloud, and SaaS security baselines are enforced or deviations governed."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Configuration exports; enforcement results; drift and exception log. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Enforce approved host, endpoint, SaaS and network settings; restrict unauthorized software and flows; detect exceptions and link to remediation or approved time-limited deviation.",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-SEC-005",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Compare local actual application/export/probe bytes to effective endpoint/network/SaaS rules and time-bound deviations; keep local mechanics separate from cloud/enterprise enforcement.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-SEC-005-corporate-IMPLEMENTATION",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "title": "Endpoint, network, cloud, and SaaS security baselines are enforced or deviations governed."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Configuration exports; enforcement results; drift and exception log. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Enforce approved host, endpoint, SaaS and network settings; restrict unauthorized software and flows; detect exceptions and link to remediation or approved time-limited deviation.",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-SEC-005",
+      "kind": "TOD",
+      "required_checks": "Compare local actual application/export/probe bytes to effective endpoint/network/SaaS rules and time-bound deviations; keep local mechanics separate from cloud/enterprise enforcement.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-SEC-005-corporate-TOD",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "title": "Endpoint, network, cloud, and SaaS security baselines are enforced or deviations governed."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Configuration exports; enforcement results; drift and exception log. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Enforce approved host, endpoint, SaaS and network settings; restrict unauthorized software and flows; detect exceptions and link to remediation or approved time-limited deviation.",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-SEC-005",
+      "kind": "TOE",
+      "required_checks": "Compare local actual application/export/probe bytes to effective endpoint/network/SaaS rules and time-bound deviations; keep local mechanics separate from cloud/enterprise enforcement.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-SEC-005-corporate-TOE",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "title": "Endpoint, network, cloud, and SaaS security baselines are enforced or deviations governed."
+    },
+    {
+      "authored_instruction": "Reperform classification for an incident and dismissed event using impact evidence, escalation criteria and recorded rationale.",
+      "authored_procedure": "Escalate material threats into incident command; preserve original alerts and source evidence; record containment authority and actions; reconcile closed alerts to incident criteria.",
+      "clause_group": "CHECK-SOC2:CC7.3",
+      "control_id": "SH-SEC-006",
+      "kind": "ADDITIONAL_DUTY",
+      "required_checks": "Join closed alerts to severity criteria, incident authority, containment actions and preserved originals; inspect escalation failures and missing facts.",
+      "requirement_ids": [
+        "SOC2:CC7.3"
+      ],
+      "task_id": "TASK-SH-SEC-006-corporate-CHECK-SOC2:CC7.3",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "title": "Material threats/security events enter incident response with preserved evidence and accountable command."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Alert; triage rationale; incident link; preserved evidence. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Escalate material threats into incident command; preserve original alerts and source evidence; record containment authority and actions; reconcile closed alerts to incident criteria.",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-SEC-006",
+      "kind": "IMPLEMENTATION",
+      "required_checks": "Join closed alerts to severity criteria, incident authority, containment actions and preserved originals; inspect escalation failures and missing facts.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-SEC-006-corporate-IMPLEMENTATION",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "title": "Material threats/security events enter incident response with preserved evidence and accountable command."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Alert; triage rationale; incident link; preserved evidence. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Escalate material threats into incident command; preserve original alerts and source evidence; record containment authority and actions; reconcile closed alerts to incident criteria.",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-SEC-006",
+      "kind": "TOD",
+      "required_checks": "Join closed alerts to severity criteria, incident authority, containment actions and preserved originals; inspect escalation failures and missing facts.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-SEC-006-corporate-TOD",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "title": "Material threats/security events enter incident response with preserved evidence and accountable command."
+    },
+    {
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Alert; triage rationale; incident link; preserved evidence. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Escalate material threats into incident command; preserve original alerts and source evidence; record containment authority and actions; reconcile closed alerts to incident criteria.",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "control_id": "SH-SEC-006",
+      "kind": "TOE",
+      "required_checks": "Join closed alerts to severity criteria, incident authority, containment actions and preserved originals; inspect escalation failures and missing facts.",
+      "requirement_ids": [],
+      "task_id": "TASK-SH-SEC-006-corporate-TOE",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "title": "Material threats/security events enter incident response with preserved evidence and accountable command."
+    }
+  ]
+}

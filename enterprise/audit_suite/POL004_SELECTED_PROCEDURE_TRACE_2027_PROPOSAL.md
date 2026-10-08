@@ -1,0 +1,15 @@
+# Selected fictional 2027 POL004 policy-to-procedure trace
+
+This company-native training source targets only `TASK-SH-POL-004-corporate-CHECK-SOC2:CC5.3`: “Walk one policy into an executable trigger, responsible person, dated result and correction; reject an approved policy with no execution procedure.” The frozen V11 route keeps that authored clause `UNSUPPORTED_EXACT_CLAUSE` and `NOT_STARTED`/`NOT_RUN` on both sides. No task or audit credit follows from creating this source.
+
+The 2026 corporate document standard `SH-GOV-DOC-001` v0.1.0 is approved as a **design standard**, not a broad enterprise policy approval. The broader policy/control-governance standard remains OPEN in the artifact inventory, and the independently reviewed fictional v0.2 distribution-procedure revision remains pending authorized approval. AS-P005 Martin Ives is a proposed policy-governance contact; AS-P003 Helena Ward is a separate proposed review contact. Their authored training records do not establish an accepted employment, delegation, waiver, legal decision, or enterprise procedure effective date. The source records an explicit policy-only rejection and a pending procedure decision.
+
+The selected local trigger is the May 1, 2027 09:30 UTC due time for two declared private endpoints in the reviewed policy/exception source. Each new event joins the original `company-policy-exception-2026-09-29/run-v1` native record by exact company, branch, system, record, version, SHA and three clocks. The source replays that producer and its main-local independent review before writing. It does not copy a prepared audit evidence set or send messages.
+
+| Local trace | Clean | Messy |
+| --- | --- | --- |
+| Procedure candidate and policy-only gate | AS-P005 drafts a selected due-time variance check; the design standard and unapproved v0.2 draft are explicitly insufficient as an effective enterprise policy/procedure. | Same pending gate; the reviewed premature v0.2 release marker remains invalid. |
+| Trigger and execution | At the declared due time, AS-P005 uses the reviewed two-endpoint reconciliation to record both exact local copies on time. | AS-P005 uses the reviewed missed-at-due record: Security's local copy is absent. A later false close claims selected distribution was clean despite that original. |
+| Result and correction | A dated selected result finds no variation; separate review leaves procedure approval pending. | AS-P003 challenges the false close against the reviewed quarantine and missed original. AS-P005 records the later local backfill without erasing the missed interval, and AS-P003 retains the expired unapproved exception as open. |
+
+This is one selected simulated trigger and a candidate procedure trace, not an accepted enterprise policy, deployed process, complete policy/procedure population, human delivery, independent operating test, Type 2 period or CC5.3 satisfaction. Future 2027 event/availability clocks are authored training-world history as of September 2026; `imported_at` is actual 2026 insertion. The frozen 538-file P1 pair is read only; no grant, collection, task status, Key, grade or Atlas write is permitted.

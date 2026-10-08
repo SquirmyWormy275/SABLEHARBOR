@@ -1,3 +1,4 @@
+import { DeferredPanel } from "./DeferredPanel";
 import { useEffect, useRef, useState } from "react";
 import { ApiError, request } from "./api";
 import type { Engagement, Row } from "./api";
@@ -37,13 +38,9 @@ export function InvestigationHandoffs(props: Props) {
   )
     return null;
   return (
-    <details className="panel">
-      <summary>Share an investigation</summary>
-      <HandoffPanel
-        key={handoffAuthority(props.engagement, props.viewerId)}
-        {...props}
-      />
-    </details>
+    <DeferredPanel context={handoffAuthority(props.engagement, props.viewerId)} summary="Share an investigation">
+      {(visible) => <HandoffPanel {...props} visible={visible} />}
+    </DeferredPanel>
   );
 }
 function HandoffPanel({
@@ -51,7 +48,8 @@ function HandoffPanel({
   viewerId,
   onPreview,
   selectedReference,
-}: Props) {
+  visible,
+}: Props & { visible: boolean }) {
   const [members, setMembers] = useState<Member[]>([]),
     [items, setItems] = useState<Handoff[]>([]);
   const [form, setForm] = useState({
@@ -106,14 +104,19 @@ function HandoffPanel({
   }
   useEffect(() => {
     live.current = true;
-    void load().catch((x) => {
-      if (live.current) setError(x.message);
-    });
     return () => {
       live.current = false;
       epoch.current++;
     };
-  }, [e.revision]);
+  }, []);
+  useEffect(() => {
+    if (!visible) return;
+    const token = epoch.current + 1;
+    void load().catch((x) => {
+      if (live.current && token === epoch.current) setError(x.message);
+    });
+    return () => { epoch.current++; };
+  }, [e.revision, visible]);
   const dirty = Boolean(
     form.title ||
     form.question ||

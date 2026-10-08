@@ -54,7 +54,12 @@ def basis(state):
 
 
 class InstructorReleases(DebriefMixin):
-    def __init__(self, private_root: Path, engine, bindings):
+    def __init__(self, private_root: Path, engine, bindings, *, artifact_option_limit=2000):
+        require(
+            type(artifact_option_limit) is int and 2000 <= artifact_option_limit <= 5000,
+            "Typed bounded artifact options required",
+        )
+        self.artifact_option_limit = artifact_option_limit
         require(
             Path(private_root).is_absolute() and ".." not in Path(private_root).parts,
             "Canonical absolute release directory required",
@@ -690,7 +695,7 @@ class InstructorReleases(DebriefMixin):
         require(
             len(recipients) <= 200
             and len(state.get("tasks", [])) <= 2000
-            and len(state.get("artifacts", [])) <= 2000,
+            and len(state.get("artifacts", [])) <= self.artifact_option_limit,
             "Release options limit exceeded",
         )
         result = {

@@ -1,3 +1,4 @@
+import { DeferredPanel } from "./DeferredPanel";
 import { useEffect, useRef, useState } from "react";
 import { request, type Engagement, type Row } from "./api";
 import type { ContextLink } from "./investigationContext";
@@ -22,13 +23,9 @@ export function VisitCheckpoint(props: Props) {
   )
     return null;
   return (
-    <details className="panel">
-      <summary>Changes since my checkpoint</summary>
-      <CheckpointPanel
-        key={savedViewContext(props.engagement, props.viewerId)}
-        {...props}
-      />
-    </details>
+    <DeferredPanel context={savedViewContext(props.engagement, props.viewerId)} summary="Changes since my checkpoint">
+      {() => <CheckpointPanel key={savedViewContext(props.engagement, props.viewerId)} {...props} />}
+    </DeferredPanel>
   );
 }
 function CheckpointPanel({ engagement: e, onPreview }: Props) {

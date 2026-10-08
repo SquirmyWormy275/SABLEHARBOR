@@ -6,6 +6,7 @@ export const FEEDBACK_DISPOSITIONS = [
   "missing_context",
   "human_review",
 ] as const;
+const COMMENT_KINDS = ["HUMAN", "SCRIPTED_ENGINEERING", "SYNTHETIC_TECHNICAL"];
 export function reviewFeedbackTarget(
   e: Engagement,
   reviewId: string,
@@ -40,7 +41,7 @@ export function reviewFeedbackTarget(
     if (typeof row.input_digest === "string" && row.input_digest)
       payload.input_digest = row.input_digest;
   } else if (
-    (row.kind === undefined || row.kind === "HUMAN") &&
+    (row.kind === undefined || COMMENT_KINDS.includes(String(row.kind))) &&
     typeof row.workpaper_id === "string"
   ) {
     const paper = e.workpapers.find((p) => p.id === row.workpaper_id),
@@ -62,7 +63,7 @@ export function reviewFeedbackTarget(
     return {
       payload: null,
       reason:
-        "Only human comments and experimental suggestions accept feedback.",
+        "Only recorded comments and experimental suggestions accept feedback.",
     };
   return { payload, reason: "" };
 }
@@ -86,7 +87,7 @@ export function humanResolutionTarget(
   if (rows.length !== 1) return null;
   const review = rows[0];
   if (
-    (review.kind !== undefined && review.kind !== "HUMAN") ||
+    (review.kind !== undefined && !COMMENT_KINDS.includes(String(review.kind))) ||
     review.status !== "OPEN"
   )
     return null;

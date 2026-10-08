@@ -5,6 +5,7 @@ import pytest
 from enterprise.audit_suite.audit_readiness import summarize
 from enterprise.audit_suite.draft_store import DraftStore
 from enterprise.audit_suite.engine import COLLECTIONS, Engine
+from enterprise.audit_suite.programs import dependency_tasks
 from enterprise.audit_suite.store import DomainError
 
 
@@ -14,7 +15,9 @@ def workspace(tmp_path):
     actor = engine.store.provision("Neutral preparer", ["learner"])["id"]
     state = {key: [] for key in COLLECTIONS}
     state.update(
-        scope={"boundaries": ["corporate"]}, phase="ACTIVE", simulated_at="2027-05-01T09:00:00Z"
+        scope={"boundaries": ["corporate"], "programs": ["SOC2"]},
+        phase="ACTIVE",
+        simulated_at="2027-05-01T09:00:00Z",
     )
     state["controls"] = [{"id": "C1"}, {"id": "C2"}]
     state["tasks"] = [
@@ -22,6 +25,25 @@ def workspace(tmp_path):
         {"id": "T2", "control_id": "C2"},
         {"id": "T3", "control_id": "C1", "boundary_id": "other"},
     ]
+    state["tasks"].extend(
+        dependency_tasks(
+            state["scope"],
+            {
+                "selections": {
+                    "baseline": {
+                        "dependency_gates": [
+                            {
+                                "id": "NEUTRAL-SCOPE-GATE",
+                                "title": "Fictional service applicability",
+                                "acceptance": "Trace selected service to its source boundary",
+                                "owner": "neutral-scope-owner",
+                            },
+                        ]
+                    }
+                },
+            },
+        )
+    )
     state = engine.store.create(actor, state, "create")
     seq = count()
 
@@ -93,3 +115,50 @@ def test_drafts_roundtrip_links_validate_scope_and_never_mutate_formal_state(wor
             },
         )
     assert engine.store.get(actor, state["id"])["revision"] == state["revision"]
+
+
+def test_scope_dependency_paper_keeps_exact_versions_without_inventing_control(workspace):
+    engine, actor, state, command = workspace
+    task = next(t for t in state["tasks"] if t.get("kind") == "SCOPE_DEPENDENCY")
+    first = command(
+        "workpaper.add",
+        {
+            "title": "Source applicability examination",
+            "task_ids": [task["id"]],
+            "objective": task["test"],
+            "text": "Selected boundary still needs owner acceptance.",
+            "conclusion": "LIMITATION",
+        },
+    )
+    paper = first["workpapers"][0]
+    assert paper["control_id"] is None
+    assert paper["versions"][0]["task_ids"] == [task["id"]]
+    assert first["tasks"][-1]["status"] == "NOT_STARTED"
+    assert first["tasks"][-1]["professional_acceptance"] == "NOT_ASSERTED"
+    second = command(
+        "workpaper.update", {"workpaper_id": paper["id"], "text": "Later source examination"}
+    )
+    assert [v["task_ids"] for v in second["workpapers"][0]["versions"]] == [
+        [task["id"]],
+        [task["id"]],
+    ]
+    assert engine.store.get(actor, state["id"])["tasks"][-1]["conclusion"] == "NOT_RUN"
+
+
+@pytest.mark.parametrize(
+    "control,refs",
+    [
+        (None, ["T1"]),
+        (None, ["TASK-NEUTRAL-SCOPE-GATE", "T1"]),
+        ("C1", ["TASK-NEUTRAL-SCOPE-GATE"]),
+    ],
+)
+def test_scope_and_control_procedures_cannot_be_conflated(workspace, control, refs):
+    engine, actor, state, command = workspace
+    before = engine.store.get(actor, state["id"])
+    with pytest.raises(DomainError):
+        command(
+            "workpaper.add",
+            {"title": "Invalid scope mixture", "control_id": control, "task_ids": refs},
+        )
+    assert engine.store.get(actor, state["id"]) == before

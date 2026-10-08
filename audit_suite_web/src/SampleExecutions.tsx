@@ -1,5 +1,10 @@
-import { useState } from "react";
-import type { Engagement } from "./api";
+import { useEffect, useRef, useState } from "react";
+import type { Engagement, Row } from "./api";
+import {
+  deferredTrace,
+  loadWorkspaceDetail,
+  workspaceContext,
+} from "./workspaceDetail";
 import {
   inputPins,
   selectionItems,
@@ -71,6 +76,38 @@ function SampleWorkspace({
     [error, setError] = useState(""),
     [pending, setPending] = useState(false),
     [itemId, setItemId] = useState("");
+  const [loaded, setLoaded] = useState<Record<string, Row>>({}),
+    [loading, setLoading] = useState<Record<string, boolean>>({}),
+    [readErrors, setReadErrors] = useState<Record<string, string>>({});
+  const context = workspaceContext(e),
+    active = useRef(context);
+  active.current = context;
+  useEffect(
+    () => () => {
+      active.current = "";
+    },
+    [],
+  );
+  async function readTrace(row: Row) {
+    if (!deferredTrace(row) || loading[row.id]) return;
+    const captured = context;
+    setLoading((prior) => ({ ...prior, [row.id]: true }));
+    setReadErrors((prior) => ({ ...prior, [row.id]: "" }));
+    try {
+      const full = await loadWorkspaceDetail(e, "sample_executions", row);
+      if (active.current === captured)
+        setLoaded((prior) => ({ ...prior, [row.id]: full }));
+    } catch (err) {
+      if (active.current === captured)
+        setReadErrors((prior) => ({
+          ...prior,
+          [row.id]: (err as Error).message,
+        }));
+    } finally {
+      if (active.current === captured)
+        setLoading((prior) => ({ ...prior, [row.id]: false }));
+    }
+  }
   const update = (patch: Partial<Draft>) => {
     setError("");
     setD({ ...d, ...patch });
@@ -109,7 +146,9 @@ function SampleWorkspace({
       "UNAVAILABLE",
   );
   const traces = (
-    Array.isArray(e.sample_executions) ? e.sample_executions : []
+    Array.isArray(e.sample_executions)
+      ? e.sample_executions.map((row: Row) => loaded[row.id] ?? row)
+      : []
   ) as Record<string, unknown>[];
   const historyQuery = historySearch.trim().toLowerCase();
   const matchingTraces = traces.filter((t) =>
@@ -168,7 +207,15 @@ function SampleWorkspace({
             event.preventDefault();
             if (pending || busy) return;
             try {
-              const payload = executionPayload(e, p, d);
+              // Correction validation needs the complete exact predecessor item
+              // set. The engagement transport contains only its deferred index.
+              const executionContext = {
+                ...e,
+                sample_executions: ((e.sample_executions as Row[]) ?? []).map(
+                  (row) => loaded[row.id] ?? row,
+                ),
+              };
+              const payload = executionPayload(executionContext, p, d);
               setPending(true);
               await onCommand(
                 d.predecessor
@@ -574,7 +621,12 @@ function SampleWorkspace({
       {matchingTraces
         .slice(historyPage * 20, historyPage * 20 + 20)
         .map((t) => (
-          <details key={String(t.id)}>
+          <details
+            key={String(t.id)}
+            onToggle={(event) => {
+              if (event.currentTarget.open) void readTrace(t as Row);
+            }}
+          >
             <summary>
               {taskLabels.get(String(t.task_id)) ?? String(t.task_id)} ·
               revision {String(t.revision)}
@@ -594,6 +646,22 @@ function SampleWorkspace({
               Independent review {String(t.independent_review)} · Automatic
               testing credit: false
             </p>
+            {deferredTrace(t as Row) && (
+              <p role={readErrors[String(t.id)] ? "alert" : "status"}>
+                {readErrors[String(t.id)] ||
+                  (loading[String(t.id)]
+                    ? "Loading exact retained sample items…"
+                    : "Sample items are not yet loaded.")}
+                {readErrors[String(t.id)] && (
+                  <button
+                    type="button"
+                    onClick={() => void readTrace(t as Row)}
+                  >
+                    Retry exact trace
+                  </button>
+                )}
+              </p>
+            )}
             {((t.items as Item[]) ?? []).map((i) => (
               <article key={i.item_id} className="sample-execution-observation">
                 <h4>
@@ -626,36 +694,41 @@ function SampleWorkspace({
             ))}
             <details>
               <summary>Exact retained trace and lineage</summary>
-              <pre>{JSON.stringify(t, null, 2)}</pre>
+              {deferredTrace(t as Row) ? (
+                <p>Full trace details have not been loaded.</p>
+              ) : (
+                <pre>{JSON.stringify(t, null, 2)}</pre>
+              )}
             </details>
-            {p?.correctable_executions?.some(
-              (pin) => pin.execution_id === t.id,
-            ) && (
-              <button
-                disabled={busy}
-                onClick={() => {
-                  setD({
-                    task: String(t.task_id),
-                    selection: String(t.selection_id),
-                    workpaper: `${t.workpaper_id}:${t.workpaper_version}`,
-                    purpose: String(t.purpose),
-                    procedure: String(t.procedure),
-                    items: (t.items as Item[]).map((i) => ({
-                      item_id: i.item_id,
-                      observation: i.observation,
-                      status: i.status,
-                      evidence: i.evidence.map((r) => ({ ...r })),
-                    })),
-                    predecessor: String(t.id),
-                    rationale: "",
-                  });
-                  setError("");
-                  setOpen(true);
-                }}
-              >
-                Correct this execution
-              </button>
-            )}
+            {!deferredTrace(t as Row) &&
+              p?.correctable_executions?.some(
+                (pin) => pin.execution_id === t.id,
+              ) && (
+                <button
+                  disabled={busy}
+                  onClick={() => {
+                    setD({
+                      task: String(t.task_id),
+                      selection: String(t.selection_id),
+                      workpaper: `${t.workpaper_id}:${t.workpaper_version}`,
+                      purpose: String(t.purpose),
+                      procedure: String(t.procedure),
+                      items: (t.items as Item[]).map((i) => ({
+                        item_id: i.item_id,
+                        observation: i.observation,
+                        status: i.status,
+                        evidence: i.evidence.map((r) => ({ ...r })),
+                      })),
+                      predecessor: String(t.id),
+                      rationale: "",
+                    });
+                    setError("");
+                    setOpen(true);
+                  }}
+                >
+                  Correct this execution
+                </button>
+              )}
           </details>
         ))}
     </section>

@@ -56,6 +56,32 @@ def finish(jobs, job_id):
         assert not thread.is_alive()
 
 
+@pytest.mark.parametrize(
+    "error", [DomainError("Changed source", status=503), RuntimeError("guard")]
+)
+def test_post_commit_guard_failure_retains_committed_revision(fixture, error):
+    jobs, engine, actor, state, command, _, release, _ = fixture
+    checks = []
+
+    def guard(*_):
+        checks.append(1)
+        if len(checks) == 2:
+            raise error
+
+    jobs.execution_guard = guard
+    release.set()
+    job = jobs.submit(actor, state["id"], command)
+    jobs.start(actor, state["id"], job["id"])
+    finish(jobs, job["id"])
+    result = jobs.read(actor, state["id"], job["id"])
+    committed = engine.store.get(actor, state["id"])
+    assert result["status"] == "INTERRUPTED"
+    assert result["error_code"] == "POST_COMMIT_UNVERIFIED"
+    assert result["result_revision"] == committed["revision"] == state["revision"] + 1
+    assert result["retry_requires_inspection"] is True
+    assert len(committed["meetings"][0]["messages"]) == 2
+
+
 def test_delayed_actual_engine_command_survives_reload_and_deduplicates(fixture):
     jobs, e, actor, s, command, entered, release, calls = fixture
     job = jobs.submit(actor, s["id"], command)

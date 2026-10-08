@@ -1,0 +1,21 @@
+# Provider and BA discovery after the reviewed lifecycle source
+
+**Status:** read-only candidate update, no audit task credit. This [V2 exact route map](provider_ba_85_candidate_routes_v2.json) preserves the reviewed [V1 85-route plan](PROVIDER_BA_85_ROUTE_DELTA_PLAN.md) and adds the independently reviewed fictional provider-lifecycle V1 source (`run-v2` in private storage; review SHA-256 `bde642fd35fd4412bda49867b4d7961289bc97deae216bb56e325a19f371b634`). It is a source-search plan, not a legal opinion, company-source collection, workpaper or changed task disposition.
+
+The denominator remains 85 documentary/activity routes under four controls **per audit side** (170 paired rows). Every frozen A/B task remains `NOT_STARTED`/`NOT_RUN`, with zero retained source from these new cohorts. The source's Clean/Messy branches are fictional company histories; they are not automatically the A/B audit sides. Its 2027 event/availability dates are future in-universe as of 2026-09-29; `imported_at` is actual authoring time. The physical source company ID `SABLE-HARBOR-REFERENCE` must remain distinguishable from actual company operation.
+
+| Control | Routes/side | V1 partial context | V2 partial context | Still no direct source |
+| --- | ---: | ---: | ---: | ---: |
+| SH-LEG-001 | 72 | 3 role/function clauses | 6, adding the three generic obligation-inventory design/execution routes as a **contract-only subset** | 66 |
+| SH-LEG-002 | 4 | 4 | 4 | 0 |
+| SH-TPR-003 | 6 | 6 | 6 | 0 |
+| SH-TPR-005 | 3 | 3 | 3 | 0 |
+| **Total** | **85** | **16** | **19** | **66** |
+
+The lifecycle source contributes exact native references for three scoped relationship rows and their obligation calendars per branch, one Q3 population reconciliation, and three Q4 internal reviews per branch. Messy also preserves two versions of a distinct open support-omission exception; Clean has none. The map anchors all those rows by company, branch, system, record, version, SHA-256 and three clocks, after checking the reviewed source receipt against the frozen private SQLite originals. Eighteen task routes per side gain an additional lifecycle anchor; one existing partial purpose/reuse route stays anchored only to the earlier BA/flow source. The three newly classified SH-LEG-001 generic routes are **not** a provision-level legal inventory: a provider contractual calendar cannot supply applicable statutes, current legal-status decisions, business-boundary owners or regulator matters.
+
+No new source answers the 66 remaining SH-LEG-001 legal/regulatory routes. The other 19 have only scenario context, not completed procedures. In particular, a notice term does not establish a triggered incident clock; a rights term does not establish an authenticated request/response; an obligation calendar does not establish outside performance; and terms-indexed offboarding readiness does not establish revocation, return/destruction, transition or financial closeout. The Messy provider omission remains historically open after backfill and is distinct from the BA flow-down exception. External assurance requests remain `NOT_SENT_NOT_RECEIVED` and performance `NOT_VERIFIED`.
+
+The next source/procedure gate is to separate (a) a counsel-controlled provision-level legal-status and obligation overlay with dated authority and business-boundary decisions, (b) attributable contract risk review across finance, insurance, data rights and signing authority, and (c) real fictional-world triggered case operations, if they are intentionally added, from generic calendars. A qualified reviewer must decide which clauses are legally applicable in the selected reference scenario and which are supportable by synthetic activity; a real assessment needs real attributable facts. Before audit use, build a source-complete registry, activate a fresh zero-evidence A/B pair, collect company originals through ordinary scoped access, and perform each exact task. This map makes none of those transitions.
+
+V1 route IDs, titles, authored clauses, requirement IDs, screen hashes, status, conclusion and original source anchors are preserved. The V2 JSON pins its predecessor and the later provider run/independent-review hashes. No P1 engagement, grant, collection, Key, Atlas or external party was changed.

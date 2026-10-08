@@ -30,6 +30,10 @@ ERRORS = {
         "model computation may repeat."
     ),
     "EXECUTION_FAILED": "Action failed. Inspect the engagement before explicitly retrying.",
+    "POST_COMMIT_UNVERIFIED": (
+        "The command returned a committed revision, but its final context check failed. "
+        "Inspect that revision and reconcile the context before taking further action."
+    ),
     "INFERENCE_TIMEOUT": (
         "The local model exceeded its configured wait. No reply was saved. "
         "Inspect the engagement before explicitly retrying; model computation may repeat."
@@ -60,7 +64,9 @@ def now():
 
 
 class BackgroundJobs:
-    def __init__(self, private_root: Path, engine, *, max_workers=2, max_pending=32):
+    def __init__(
+        self, private_root: Path, engine, *, max_workers=2, max_pending=32, execution_guard=None
+    ):
         self.root = Path(private_root).absolute()
         if any(p.is_symlink() for p in [self.root, *self.root.parents]):
             raise DomainError("Job store aliases are forbidden")
@@ -71,6 +77,9 @@ class BackgroundJobs:
         if type(max_pending) is not int or not 1 <= max_pending <= 128:
             raise DomainError("Pending job quota must be1–128")
         self.engine, self.max_workers, self.max_pending = engine, max_workers, max_pending
+        if execution_guard is not None and not callable(execution_guard):
+            raise DomainError("Trusted worker guard required")
+        self.execution_guard = execution_guard
         self.path = self.root / "jobs.sqlite3"
         fd = os.open(self.path, os.O_RDWR | os.O_CREAT | os.O_NOFOLLOW, 0o600)
         os.close(fd)
@@ -351,15 +360,23 @@ class BackgroundJobs:
                 if row["status"] != "PENDING":
                     return
                 self._transition(db, job_id, "RUNNING")
+            revision = None
             try:
                 self._authorize(actor, engagement)
                 command = json.loads(row["command"])
                 if digest(command) != row["command_digest"]:
                     raise DomainError("Command digest differs", code="INTEGRITY", status=500)
+                if self.execution_guard is not None:
+                    self.execution_guard(actor, engagement)
                 result = self.engine.command(actor, engagement, command)
+                revision = result["revision"]
+                if self.execution_guard is not None:
+                    self.execution_guard(actor, engagement)
                 status, error, revision = "COMPLETED", None, result["revision"]
             except DomainError as exc:
-                if exc.code in {
+                if revision is not None:
+                    status, error = "INTERRUPTED", "POST_COMMIT_UNVERIFIED"
+                elif exc.code in {
                     "CONSULTATION_DELAYED",
                     "INVALID_CONSULTATION",
                     "SOURCE_CONTEXT_UNAVAILABLE",
@@ -379,9 +396,12 @@ class BackgroundJobs:
                     status, error = "FAILED", "INVALID_COMMAND"
                 else:
                     status, error = "FAILED", "EXECUTION_FAILED"
-                revision = None
             except Exception:
-                status, error, revision = "FAILED", "EXECUTION_FAILED", None
+                status, error = (
+                    ("INTERRUPTED", "POST_COMMIT_UNVERIFIED")
+                    if revision is not None
+                    else ("FAILED", "EXECUTION_FAILED")
+                )
             with self._db() as db:
                 db.execute("BEGIN IMMEDIATE")
                 self._transition(db, job_id, status, error, revision)

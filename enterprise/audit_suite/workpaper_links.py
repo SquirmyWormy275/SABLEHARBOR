@@ -13,6 +13,17 @@ def validate_task_ids(state, control_id, value):
         raise DomainError("Procedure references must be unique bounded task IDs")
     if not value:
         return []
+    if control_id is None:
+        for task_id in value:
+            matches = [t for t in state.get("tasks", []) if t["id"] == task_id]
+            if (
+                len(matches) != 1
+                or matches[0].get("kind") != "SCOPE_DEPENDENCY"
+                or matches[0].get("control_id") is not None
+                or matches[0].get("scope") != state.get("scope")
+            ):
+                raise DomainError("Scope workpapers require current source-dependency tasks")
+        return list(value)
     if control_id not in {c["id"] for c in state.get("controls", [])}:
         raise DomainError("Linked procedures require a current scoped workpaper control")
     for task_id in value:

@@ -1,0 +1,76 @@
+{
+  "schema": "SH_FICTIONAL_2027_PROVIDER_CONTRACT_SPEC_V2",
+  "status": "PROPOSED_FICTIONAL_SCENARIO_FACTS_PENDING_INDEPENDENT_REVIEW",
+  "authority_basis": "Owner-selected 2027 training-world model; this specification proposes exact future fictional contract facts, not actual delegated authority, signatures, provider assent, or legal advice.",
+  "contracting_entity": {"id": "SHI", "legal_name": "Sable Harbor, LLC", "source": "industrial/source/entities.json#entity_id=SHI"},
+  "fictional_delegation": {
+    "decision_id": "DA-SHI-2027-RUNTIME",
+    "event_at": "2027-01-15T10:00:00+00:00",
+    "issuer": "Daniel, Sable Harbor CEO (surname intentionally unspecified in canon)",
+    "delegate_person_id": "AS-P002",
+    "delegate_office": "Chief Financial Officer",
+    "scope": ["RT-MSA-001-SIM-2027", "RT-SO-RENO", "RT-SO-BOISE"],
+    "maximum_base_commitment_usd": 720000,
+    "additional_spend_authorized": false,
+    "condition": "Legal AS-P003, Procurement AS-P013, Technology AS-P007 and Security AS-P008 record site-specific clearance before CFO fictional signature; provider persona acceptance precedes execution.",
+    "limits": "One fictional 2027 reference service only; no actual Board or CEO decision, legal delegation, payment or real provider action."
+  },
+  "master_terms": {
+    "id": "RT-MSA-001-SIM-2027",
+    "service": "Facility enclosure, power, cooling, physical perimeter, building access and scoped remote hands only",
+    "sable_harbor_retains": ["equipment", "network_edge", "identity", "keys", "applications", "data", "backups", "customer_commitments", "provider_oversight"],
+    "provider_incident_notice_hours": 24,
+    "provider_security_report_frequency": "ANNUAL_AND_ON_MATERIAL_CHANGE",
+    "exit_notice_days": 90,
+    "billing_start": "SITE_RELEASE_AFTER_TECHNICAL_ACCEPTANCE",
+    "setup_deposit_reservation_and_pass_through": "NONE_IN_THIS_BOUNDED_SYNTHETIC_SCENARIO",
+    "additional_commercial_lines": "REQUIRE_NEW_AUTHORITY_DECISION",
+    "logical_access": "NOT_GRANTED_BY_FACILITY_CONTRACT",
+    "ephi_processing": "NOT_AUTHORIZED_BY_THIS_CONTRACT",
+    "real_signed_instrument": false
+  },
+  "site_orders": {
+    "RENO": {
+      "order_id": "RT-SO-RENO",
+      "provider_id": "CP-SWITCH",
+      "scenario_counterparty_id": "SIM-CP-SWITCH-RENO-2027",
+      "scenario_counterparty_legal_label": "Switch Reno contract persona (fictional simulation; real legal party unverified)",
+      "scenario_acceptor_role_id": "SIM-VENDOR-RENO-AUTHORIZED-REP",
+      "facility_id": "FAC-PRIMARY",
+      "enclosure_id": "SIM-RENO-ENCLOSURE-01",
+      "usable_it_kw": 75,
+      "initial_term_months_after_acceptance": 24,
+      "monthly_usd_per_committed_usable_it_kw": 350,
+      "monthly_base_usd": 26250,
+      "initial_base_commitment_usd": 630000,
+      "service_start_gate": "PASSED_COMMISSIONING_AND_SITE_RELEASE",
+      "commercial_lines_status": "SYNTHETIC_NEGOTIATED_RATE_NO_REAL_QUOTE_OR_PAYMENT_CLAIM",
+      "independence_requirement": "PRIMARY_SITE"
+    },
+    "BOISE": {
+      "order_id": "RT-SO-BOISE",
+      "provider_id": "CP-IDACORE",
+      "scenario_counterparty_id": "SIM-CP-IDACORE-BOISE-2027",
+      "scenario_counterparty_legal_label": "IDACORE Boise contract persona (fictional simulation; real legal party unverified)",
+      "scenario_acceptor_role_id": "SIM-VENDOR-BOISE-AUTHORIZED-REP",
+      "facility_id": "FAC-RECOVERY",
+      "enclosure_id": "SIM-BOISE-ENCLOSURE-01",
+      "usable_it_kw": 25,
+      "initial_term_months_after_acceptance": 12,
+      "monthly_usd_per_committed_usable_it_kw": 300,
+      "monthly_base_usd": 7500,
+      "initial_base_commitment_usd": 90000,
+      "service_start_gate": "PASSED_COMMISSIONING_RECOVERY_AND_SITE_RELEASE",
+      "commercial_lines_status": "SYNTHETIC_NEGOTIATED_RATE_NO_REAL_QUOTE_OR_PAYMENT_CLAIM",
+      "independence_requirement": "SEPARATE_CARRIER_POWER_PHYSICAL_ADMIN_AND_KEY_RECOVERY"
+    }
+  },
+  "approval_events": {
+    "RENO": {"decision_id": "AP-RENO", "event_at": "2027-02-10T10:00:00+00:00", "clearance_roles": ["AS-P003", "AS-P013", "AS-P007", "AS-P008"], "result": "APPROVED_SIMULATED"},
+    "BOISE": {"decision_id": "AP-BOISE", "event_at": "2027-03-01T10:00:00+00:00", "clearance_roles": ["AS-P003", "AS-P013", "AS-P007", "AS-P008"], "result": "APPROVED_SIMULATED"}
+  },
+  "counterparty_acceptance_events": {
+    "RENO": {"decision_id": "VA-RENO", "event_at": "2027-02-12T10:00:00+00:00", "result": "ACCEPTED_SIMULATED"},
+    "BOISE": {"decision_id": "VA-BOISE", "event_at": "2027-03-03T10:00:00+00:00", "result": "ACCEPTED_SIMULATED"}
+  }
+}

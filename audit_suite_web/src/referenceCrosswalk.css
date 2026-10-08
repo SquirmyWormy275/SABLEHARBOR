@@ -1,0 +1,7 @@
+.reference-crosswalk {
+  overflow-wrap: anywhere;
+}
+.reference-crosswalk button {
+  max-width: 100%;
+  white-space: normal;
+}

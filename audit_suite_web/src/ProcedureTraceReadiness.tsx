@@ -1,6 +1,11 @@
 import { str, type Engagement, type Row } from "./api";
 import type { ContextLink } from "./investigationContext";
 import {
+  integrityStatusLabels,
+  traceIntegrity,
+  type OriginalIntegrity,
+} from "./procedureIntegrity";
+import {
   observationLabels,
   resolveTraceReference,
   tracePosition,
@@ -30,10 +35,12 @@ function Counts({
 export function ProcedureTraceReadiness({
   engagement,
   data,
+  integrity,
   onPreview,
 }: {
   engagement: Engagement;
   data?: TraceReadiness;
+  integrity?: OriginalIntegrity;
   onPreview: (kind: string, row: Row, reference?: ContextLink) => void;
 }) {
   if (!data)
@@ -47,7 +54,10 @@ export function ProcedureTraceReadiness({
       <p>
         Recorded metadata linkage only. Observations, population reliability
         decisions and item counts do not establish completeness, accuracy or
-        effectiveness. Original bytes were not rechecked.
+        effectiveness.{" "}
+        {integrity
+          ? "The separate retained-copy recheck appears below."
+          : "Original bytes were not rechecked."}
       </p>
       <p>
         Retained traces: {visibleCount(data.trace_count)} · Current correction
@@ -74,6 +84,16 @@ export function ProcedureTraceReadiness({
             {tracePosition(data, trace.id)} · {trace.id}
             {trace.revision ? ` · trace revision ${trace.revision}` : ""}
           </summary>
+          {integrity && (
+            <p>
+              Retained-copy check:{" "}
+              {
+                integrityStatusLabels[
+                  traceIntegrity(integrity, trace.id)?.status ?? "NOT_RECHECKED"
+                ]
+              }
+            </p>
+          )}
           {trace.status !== "EXACT_VISIBLE_METADATA_LINKS" ? (
             <p>
               Exact linked records unavailable:{" "}

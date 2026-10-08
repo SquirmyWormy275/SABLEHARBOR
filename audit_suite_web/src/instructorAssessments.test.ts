@@ -213,3 +213,212 @@ it("accepts only typed historical support relations and preserves exact pins", (
     ),
   ).toThrow();
 });
+
+import {
+  assertAssessmentReferencePage,
+  assessmentReferencePageQuery,
+  mergeAssessmentReferences,
+  type AssessmentReferencePage,
+} from "./instructorAssessments";
+const catalogueOptions: PinnedAssessmentOptions = {
+  ...options,
+  references: [],
+  reference_catalogue: {
+    schema: "ASSESSMENT_REFERENCE_CATALOGUE_V1",
+    count: 83,
+    sha256: pin,
+    context_sha256: "b".repeat(64),
+  },
+};
+const selector = { query: "work", expectation_ids: [], reference_ids: [] };
+const referencePage: AssessmentReferencePage = {
+  reference_catalogue: catalogueOptions.reference_catalogue!,
+  selector,
+  offset: 0,
+  total: 83,
+  next_offset: 1,
+  references: [options.references[0]],
+};
+it("loads rubric without claiming deferred catalogue references are missing", () => {
+  expect(assertAssessmentOptions(catalogueOptions, e, pin, "L", 0, h)).toBe(
+    catalogueOptions,
+  );
+  const d = draft();
+  d.dimensions[4].reference_ids = [];
+  expect(
+    assessmentSavePayload(d, catalogueOptions, "empty-support")
+      .inventory_sha256,
+  ).toBe(pin);
+  expect(() =>
+    assessmentSavePayload(draft(), catalogueOptions, "unloaded"),
+  ).toThrow();
+});
+it("pins catalogue pages to context, selector and contiguous cursor", () => {
+  expect(
+    assertAssessmentReferencePage(referencePage, catalogueOptions, 0, selector),
+  ).toBe(referencePage);
+  const query = new URLSearchParams(
+    assessmentReferencePageQuery(catalogueOptions, 0, selector),
+  );
+  expect(query.get("catalogue_sha256")).toBe(pin);
+  expect(query.get("context_sha256")).toBe("b".repeat(64));
+  expect(query.get("expectation_ids")).toBe("[]");
+  for (const patch of [
+    { offset: 2 },
+    { total: 84 },
+    { next_offset: 2 },
+    { references: [] },
+    { selector: { ...selector, query: "foreign" } },
+    {
+      reference_catalogue: {
+        ...referencePage.reference_catalogue,
+        context_sha256: pin,
+      },
+    },
+    {
+      reference_catalogue: {
+        ...referencePage.reference_catalogue,
+        sha256: "c".repeat(64),
+      },
+    },
+    { references: [options.references[0], options.references[0]] },
+    {
+      references: [{ ...options.references[0], expectation_ids: ["FOREIGN"] }],
+    },
+  ])
+    expect(() =>
+      assertAssessmentReferencePage(
+        { ...referencePage, ...patch },
+        catalogueOptions,
+        0,
+        selector,
+      ),
+    ).toThrow();
+});
+it("retains selected references across pages without accepting changed records", () => {
+  const first = mergeAssessmentReferences(
+    catalogueOptions,
+    [options.references[0]],
+    [],
+  );
+  const next = mergeAssessmentReferences(first, [options.references[1]], ["R"]);
+  expect(next.references.map((r) => r.id)).toEqual(["R", "REQUEST"]);
+  expect(
+    assessmentSavePayload(draft(), next, "selected").dimensions[4]
+      .reference_ids,
+  ).toEqual(["R"]);
+  expect(() =>
+    mergeAssessmentReferences(
+      first,
+      [{ ...options.references[0], inventory_sha256: "c".repeat(64) }],
+      ["R"],
+    ),
+  ).toThrow();
+  expect(
+    mergeAssessmentReferences(first, [options.references[1]], []).references,
+  ).toEqual([options.references[1]]);
+});
+it("accepts explicit selected-ID pages and refuses unrelated returned references", () => {
+  const selected = { query: "", expectation_ids: ["X"], reference_ids: ["R"] };
+  const page = {
+    ...referencePage,
+    selector: selected,
+    total: 1,
+    next_offset: null,
+  };
+  expect(
+    assertAssessmentReferencePage(page, catalogueOptions, 0, selected),
+  ).toBe(page);
+  expect(() =>
+    assertAssessmentReferencePage(
+      { ...page, references: [options.references[1]] },
+      catalogueOptions,
+      0,
+      selected,
+    ),
+  ).toThrow();
+});
+it("rejects malformed catalogue descriptors while retaining selected32 bound", () => {
+  for (const patch of [
+    { count: -1 },
+    { count: 1.5 },
+    { sha256: "wrong" },
+    { schema: "OTHER" },
+  ])
+    expect(() =>
+      assertAssessmentOptions(
+        {
+          ...catalogueOptions,
+          reference_catalogue: {
+            ...catalogueOptions.reference_catalogue!,
+            ...patch,
+          } as typeof catalogueOptions.reference_catalogue,
+        },
+        e,
+        pin,
+        "L",
+        0,
+        h,
+      ),
+    ).toThrow();
+  const refs = Array.from({ length: 33 }, (_, n) => ({
+    ...options.references[0],
+    id: "REF-" + n,
+  }));
+  const many = { ...catalogueOptions, references: refs };
+  const d = draft();
+  d.dimensions[0].reference_ids = refs.slice(0, 32).map((r) => r.id);
+  d.dimensions[4].reference_ids = [];
+  expect(
+    assessmentSavePayload(d, many, "32").dimensions[0].reference_ids,
+  ).toHaveLength(32);
+  d.dimensions[1].reference_ids = [refs[32].id];
+  expect(() => assessmentSavePayload(d, many, "33")).toThrow();
+});
+
+import { loadSelectedAssessmentReferences } from "./instructorAssessments";
+it("reloads only selected references for dirty drafts and broad corrections", async () => {
+  const keep = ["R", "REQUEST"],
+    calls: number[] = [];
+  const loaded = await loadSelectedAssessmentReferences(
+    catalogueOptions,
+    keep,
+    async (offset, selector) => {
+      calls.push(offset);
+      return {
+        reference_catalogue: catalogueOptions.reference_catalogue!,
+        selector,
+        offset,
+        total: 2,
+        next_offset: offset === 0 ? 1 : null,
+        references: [options.references[offset]],
+      };
+    },
+  );
+  expect(calls).toEqual([0, 1]);
+  expect(loaded.references).toEqual(options.references);
+  expect(
+    assessmentSavePayload(draft(), loaded, "reload").inventory_sha256,
+  ).toBe(pin);
+  const empty = await loadSelectedAssessmentReferences(
+    catalogueOptions,
+    [],
+    async () => {
+      throw Error("Must not fetch whole catalogue");
+    },
+  );
+  expect(empty).toBe(catalogueOptions);
+  await expect(
+    loadSelectedAssessmentReferences(
+      catalogueOptions,
+      keep,
+      async (offset, selector) => ({
+        ...referencePage,
+        selector,
+        offset,
+        total: 1,
+        next_offset: null,
+      }),
+    ),
+  ).rejects.toThrow();
+});

@@ -93,10 +93,15 @@ export async function request<T>(
   body?: unknown,
 ): Promise<T> {
   const isForm = body instanceof FormData;
+  const workspace =
+    /^(?:\/api\/engagements(?:\/[^/?]+(?:\/(?:commands|uploads))?)?)$/.test(
+      path,
+    );
   const response = await fetch(path, {
     method,
     credentials: "same-origin",
     headers: {
+      ...(workspace ? { "X-Workspace-View": "summary-v1" } : {}),
       ...(method === "GET" ? {} : { "X-CSRF-Token": csrf }),
       ...(body && !isForm ? { "Content-Type": "application/json" } : {}),
     },

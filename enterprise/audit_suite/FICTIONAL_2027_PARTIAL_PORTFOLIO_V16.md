@@ -1,0 +1,9 @@
+# Fictional 2027 partial source portfolio V16
+
+V16 extends the independently reviewed V15 partial source and candidate prefix with one company-owned PRD concern intake cohort. It pins the main-reviewed source run and independent review for `company-prd-concern-intake-2026-09-30`. The source holds one future-authored concern in local company history: 8 Clean and 13 Messy native versions, 10 systems per branch. The 2027 event and availability clocks remain distinct from actual 2026 import clocks.
+
+The claimant's customer identity and authority are unverified. The earlier PRD notice gate, contractual duty, recipient scope and signatory authority remain unresolved. Clean has a held internal draft. Messy retains its initial recipient omission, false close, denied dispatch attempt, later matrix correction and one **OPEN** historical exception. Neither branch has an accepted company dispatch, a customer acknowledgment, real external message or real PHI processing.
+
+The resulting partial portfolio has 37 selected cohorts and 840 native versions, with 38 routed source components. Each A/B candidate has 51 total components, 38 source pins and 324 system aliases. Every V15 source row, candidate component and source pin remains byte-equivalent to the reviewed predecessor; this extension adds only `prdconcern` / `scenario-prdconcern`. The candidates are local routing diagnostics, not audit engagements. The fixed 538-file P1 inventory is checked before source qualification.
+
+This does not establish a complete concern or customer-channel population, a contractual communication conclusion, operating effectiveness, source completion, an audit collection, a fresh pair, task credit, a Key result or a grade. No grant or collection is created. Private run and handoff files live under `enterprise/generated/audit-suite/company-source-portfolio-v16-2026-10-01/` in the isolated worktree and are not tracked.

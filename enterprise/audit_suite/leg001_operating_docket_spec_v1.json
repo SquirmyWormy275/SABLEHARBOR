@@ -1,0 +1,51 @@
+{
+  "schema": "SH_FICTIONAL_2027_LEG001_SELECTED_OPERATING_DOCKET_SPEC_V1",
+  "truth_class": "TRAINING_SCENARIO_ONLY",
+  "company": "SABLE-HARBOR-REFERENCE",
+  "branches": {"CLEAN": "LEG-CLEAN", "MESSY": "LEG-MESSY"},
+  "selected_chain": {
+    "customer": "SIM-COVERED-CUSTOMER-01",
+    "service": "SIM-RESTRICTED-HOSTING-01",
+    "business_associate": "SHI",
+    "subcontractor": "SIM-RECOVERY-SUPPORT-01",
+    "site_providers_are_not_assumed_ba_subcontractors": ["CP-SWITCH", "CP-IDACORE"]
+  },
+  "source_record_ids": ["BAA-CUST-01", "BAA-SUB-01", "CAL-RENO", "CAL-BOISE", "CAL-SUPPORT"],
+  "term_occurrences_per_branch": 34,
+  "counsel_person_id": "AS-P003",
+  "counsel_office": "General Counsel",
+  "owner_by_term_id": {
+    "permitted_uses_and_disclosures": "AS-P007",
+    "safeguards_and_security": "AS-P008",
+    "incident_and_breach_reporting": "AS-P008",
+    "subcontractor_flowdown": "AS-P013",
+    "rights_request_support": "AS-P014",
+    "regulator_records_access": "AS-P014",
+    "return_or_destruction_and_continuing_protection": "AS-P014",
+    "material_breach_cure_and_termination": "AS-P003",
+    "facility_service": "AS-P007",
+    "site_incident_notice_hours": "AS-P008",
+    "security_report_frequency": "AS-P008",
+    "exit_notice_days": "AS-P013",
+    "ephi_processing": "AS-P003"
+  },
+  "legal_reference_checked_as_of": "2026-09-29",
+  "legal_provisions": [
+    {"id": "45-CFR-160.102", "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-160/subpart-A/section-160.102", "meaning": "entity applicability first depends on covered-entity or specified business-associate status", "scenario_status": "CONDITIONAL_TRAINING_APPLICABILITY", "real_status": "UNDETERMINED"},
+    {"id": "45-CFR-160.103", "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-160/subpart-A/section-160.103", "meaning": "business-associate and subcontractor definitions require actual facts", "scenario_status": "CONDITIONAL_TRAINING_APPLICABILITY", "real_status": "UNDETERMINED"},
+    {"id": "45-CFR-164.502(e)", "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.502", "meaning": "satisfactory assurances and documentation for relevant BA/subcontractor PHI relationships", "scenario_status": "SELECTED_CHAIN_TERM_MAPPING", "real_status": "UNDETERMINED"},
+    {"id": "45-CFR-164.504(e)", "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.504", "meaning": "specified BA contract terms and subcontractor restrictions where applicable", "scenario_status": "SELECTED_CHAIN_TERM_MAPPING", "real_status": "UNDETERMINED"},
+    {"id": "45-CFR-164.314(a)", "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C/section-164.314", "meaning": "security arrangement requirements for ePHI relationships where applicable", "scenario_status": "SELECTED_CHAIN_TERM_MAPPING", "real_status": "UNDETERMINED"},
+    {"id": "45-CFR-164.410", "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-D/section-164.410", "meaning": "breach-notification duties require a qualifying trigger; contract SLA is separate", "scenario_status": "CONDITIONAL_EVENT_INTAKE", "real_status": "UNDETERMINED"},
+    {"id": "45-CFR-160.306", "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-160/subpart-C/section-160.306", "meaning": "Secretary complaint process is a conditional outside matter", "scenario_status": "CONDITIONAL_EVENT_INTAKE", "real_status": "UNDETERMINED"},
+    {"id": "45-CFR-160.504", "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-160/subpart-E/section-160.504", "meaning": "hearing path follows proposed determination and respondent request", "scenario_status": "CONDITIONAL_EVENT_INTAKE", "real_status": "UNDETERMINED"}
+  ],
+  "simulated_period": {"start": "2027-10-25T10:00:00+00:00", "end": "2027-12-31T17:00:00+00:00", "watch_dates": ["2027-10-31", "2027-11-30", "2027-12-31"]},
+  "real_hipaa_applicability": "UNDETERMINED",
+  "actual_personal_data": false,
+  "actual_phi": false,
+  "real_contract_executed": false,
+  "outside_message_sent": false,
+  "audit_task_credit": false,
+  "source_complete": false
+}

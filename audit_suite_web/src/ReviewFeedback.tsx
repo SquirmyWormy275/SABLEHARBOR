@@ -28,6 +28,10 @@ export function ReviewFeedback({
   return (
     <section aria-label="Recorded review feedback">
       <h3>Review feedback</h3>
+      {Boolean(review.kind) && <p>Recorded origin: {human(str(review.kind))}.</p>}
+      {["SCRIPTED_ENGINEERING", "SYNTHETIC_TECHNICAL"].includes(str(review.kind)) && (
+        <p>Technical rehearsal review; professional acceptance is not asserted.</p>
+      )}
       <p>
         Review status: {human(str(review.status))}. Feedback status:{" "}
         {review.feedback_status
@@ -41,7 +45,7 @@ export function ReviewFeedback({
         </p>
       )}
       <p>
-        Feedback does not close a human review or change an experimental
+        Feedback does not close a recorded review or change an experimental
         suggestion. Reviewer resolution is a separate action.
       </p>
       {entries.length === 0 ? (
@@ -126,7 +130,7 @@ export function ReviewFeedback({
           <div>
             <p>
               After checking the current workpaper, an independent reviewer can
-              explicitly resolve this human comment. The original comment and
+              explicitly resolve this recorded comment. The original comment and
               responses remain recorded.
             </p>
             <button
@@ -142,7 +146,7 @@ export function ReviewFeedback({
                 if (payload) onResolveHuman(payload);
               }}
             >
-              Resolve human review
+              Resolve recorded review
             </button>
           </div>
         )}

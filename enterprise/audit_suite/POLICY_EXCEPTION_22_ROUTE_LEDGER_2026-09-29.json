@@ -1,0 +1,697 @@
+{
+  "as_of": "2026-09-29",
+  "counts": {
+    "authored_clauses_per_side": 10,
+    "controls_per_side": 4,
+    "inferred_gates_per_side": 12,
+    "routes_per_side": 22
+  },
+  "limits": [
+    "Frozen audit pair remains NOT_STARTED/NOT_RUN and uncredited.",
+    "Pending HIPAA addressable locator docket is separate from SH-POL-003 generic exception decisions.",
+    "2027 source candidates are fictional future local activity, not actual operation or completed audit procedures."
+  ],
+  "rows": [
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Recompute dates for superseded and currently effective policies and required activity records. Attempt premature disposition in a test workflow; verify denial and accessible superseded records.",
+      "control_id": "SH-POL-001",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [
+        "HIPAA:164.316"
+      ],
+      "side": "A",
+      "task_id": "TASK-SH-POL-001-corporate-ACTION-H-RETENTION",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Trace a changed service responsibility and an external concern through receipt, response and the appropriate audience. Test contact accuracy and incomplete recipient lists.",
+      "control_id": "SH-POL-001",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [
+        "SOC2:CC2.2",
+        "SOC2:CC2.3"
+      ],
+      "side": "A",
+      "task_id": "TASK-SH-POL-001-corporate-ACTION-S-COMMUNICATION",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Verify incident intake includes attempts and that recovery tests assess usability; distinguish security access from individual privacy access rights.",
+      "control_id": "SH-POL-001",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [
+        "HIPAA:164.304"
+      ],
+      "side": "A",
+      "task_id": "TASK-SH-POL-001-corporate-CHECK-HIPAA:164.304",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Inspect applicable delegated/direct steps and six-year later-of retention; reject sanctions against protected reporting and a policy update without required notice coordination.",
+      "control_id": "SH-POL-001",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [
+        "HIPAA:164.530"
+      ],
+      "side": "A",
+      "task_id": "TASK-SH-POL-001-corporate-CHECK-HIPAA:164.530",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Walk one policy into an executable trigger, responsible person, dated result and correction; reject an approved policy with no execution procedure.",
+      "control_id": "SH-POL-001",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_source_scope": "PARTIAL_LOCAL_POLICY_BYTES_AND_DELIVERY_HISTORY",
+      "requirement_ids": [
+        "SOC2:CC5.3"
+      ],
+      "side": "A",
+      "task_id": "TASK-SH-POL-001-corporate-CHECK-SOC2:CC5.3",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "control_id": "SH-POL-001",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_source_scope": "PARTIAL_LOCAL_POLICY_BYTES_AND_DELIVERY_HISTORY",
+      "requirement_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-POL-001-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "control_id": "SH-POL-001",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "TOD",
+      "proposed_source_scope": "PARTIAL_LOCAL_POLICY_BYTES_AND_DELIVERY_HISTORY",
+      "requirement_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-POL-001-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "control_id": "SH-POL-001",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "TOE",
+      "proposed_source_scope": "PARTIAL_LOCAL_POLICY_BYTES_AND_DELIVERY_HISTORY",
+      "requirement_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-POL-001-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Inspect authorized appointment evidence and trace two policy/incident responsibilities to the appointed official. Flag vacant or conflicting authority.",
+      "control_id": "SH-POL-002",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [
+        "HIPAA:164.308"
+      ],
+      "side": "A",
+      "task_id": "TASK-SH-POL-002-corporate-ACTION-H-SECURITY-OFFICIAL",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Trace a cross-site escalation from executor through delegated authority to governing oversight; test a conflicting assignment.",
+      "control_id": "SH-POL-002",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [
+        "SOC2:CC1.3"
+      ],
+      "side": "A",
+      "task_id": "TASK-SH-POL-002-corporate-CHECK-SOC2:CC1.3",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Trace a significant risk to preventive/detective steps and incompatible responsibilities; test whether the alternative actually addresses the conflict.",
+      "control_id": "SH-POL-002",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [
+        "SOC2:CC5.1"
+      ],
+      "side": "A",
+      "task_id": "TASK-SH-POL-002-corporate-CHECK-SOC2:CC5.1",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "control_id": "SH-POL-002",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-POL-002-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "control_id": "SH-POL-002",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "TOD",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-POL-002-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "control_id": "SH-POL-002",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "TOE",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-POL-002-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Reconcile all 22 addressable entries to documented decisions; inspect both implemented measures and alternatives. Reject blank reasoning and a generic risk waiver substituted for the environmental assessment.",
+      "control_id": "SH-POL-003",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_source_scope": "SEPARATE_22_PENDING_LOCATOR_DOCKET_NOT_GENERIC_WAIVER",
+      "requirement_ids": [
+        "HIPAA:164.306",
+        "HIPAA:164.308",
+        "HIPAA:164.310",
+        "HIPAA:164.312"
+      ],
+      "side": "A",
+      "task_id": "TASK-SH-POL-003-corporate-ACTION-H-ADDRESSABLE",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "control_id": "SH-POL-003",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_source_scope": "PARTIAL_PENDING_GENERIC_EXCEPTION_HISTORY",
+      "requirement_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-POL-003-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "control_id": "SH-POL-003",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "TOD",
+      "proposed_source_scope": "PARTIAL_PENDING_GENERIC_EXCEPTION_HISTORY",
+      "requirement_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-POL-003-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "control_id": "SH-POL-003",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "TOE",
+      "proposed_source_scope": "PARTIAL_PENDING_GENERIC_EXCEPTION_HISTORY",
+      "requirement_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-POL-003-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Walk one policy into an executable trigger, responsible person, dated result and correction; reject an approved policy with no execution procedure.",
+      "control_id": "SH-POL-004",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [
+        "SOC2:CC5.3"
+      ],
+      "side": "A",
+      "task_id": "TASK-SH-POL-004-corporate-CHECK-SOC2:CC5.3",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "control_id": "SH-POL-004",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-POL-004-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "control_id": "SH-POL-004",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "TOD",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-POL-004-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "control_id": "SH-POL-004",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "TOE",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [],
+      "side": "A",
+      "task_id": "TASK-SH-POL-004-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Recompute dates for superseded and currently effective policies and required activity records. Attempt premature disposition in a test workflow; verify denial and accessible superseded records.",
+      "control_id": "SH-POL-001",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [
+        "HIPAA:164.316"
+      ],
+      "side": "B",
+      "task_id": "TASK-SH-POL-001-corporate-ACTION-H-RETENTION",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Trace a changed service responsibility and an external concern through receipt, response and the appropriate audience. Test contact accuracy and incomplete recipient lists.",
+      "control_id": "SH-POL-001",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [
+        "SOC2:CC2.2",
+        "SOC2:CC2.3"
+      ],
+      "side": "B",
+      "task_id": "TASK-SH-POL-001-corporate-ACTION-S-COMMUNICATION",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Verify incident intake includes attempts and that recovery tests assess usability; distinguish security access from individual privacy access rights.",
+      "control_id": "SH-POL-001",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [
+        "HIPAA:164.304"
+      ],
+      "side": "B",
+      "task_id": "TASK-SH-POL-001-corporate-CHECK-HIPAA:164.304",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Inspect applicable delegated/direct steps and six-year later-of retention; reject sanctions against protected reporting and a policy update without required notice coordination.",
+      "control_id": "SH-POL-001",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [
+        "HIPAA:164.530"
+      ],
+      "side": "B",
+      "task_id": "TASK-SH-POL-001-corporate-CHECK-HIPAA:164.530",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Walk one policy into an executable trigger, responsible person, dated result and correction; reject an approved policy with no execution procedure.",
+      "control_id": "SH-POL-001",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_source_scope": "PARTIAL_LOCAL_POLICY_BYTES_AND_DELIVERY_HISTORY",
+      "requirement_ids": [
+        "SOC2:CC5.3"
+      ],
+      "side": "B",
+      "task_id": "TASK-SH-POL-001-corporate-CHECK-SOC2:CC5.3",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "control_id": "SH-POL-001",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_source_scope": "PARTIAL_LOCAL_POLICY_BYTES_AND_DELIVERY_HISTORY",
+      "requirement_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-POL-001-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "control_id": "SH-POL-001",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "TOD",
+      "proposed_source_scope": "PARTIAL_LOCAL_POLICY_BYTES_AND_DELIVERY_HISTORY",
+      "requirement_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-POL-001-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "control_id": "SH-POL-001",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "TOE",
+      "proposed_source_scope": "PARTIAL_LOCAL_POLICY_BYTES_AND_DELIVERY_HISTORY",
+      "requirement_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-POL-001-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Inspect authorized appointment evidence and trace two policy/incident responsibilities to the appointed official. Flag vacant or conflicting authority.",
+      "control_id": "SH-POL-002",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [
+        "HIPAA:164.308"
+      ],
+      "side": "B",
+      "task_id": "TASK-SH-POL-002-corporate-ACTION-H-SECURITY-OFFICIAL",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Trace a cross-site escalation from executor through delegated authority to governing oversight; test a conflicting assignment.",
+      "control_id": "SH-POL-002",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [
+        "SOC2:CC1.3"
+      ],
+      "side": "B",
+      "task_id": "TASK-SH-POL-002-corporate-CHECK-SOC2:CC1.3",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Trace a significant risk to preventive/detective steps and incompatible responsibilities; test whether the alternative actually addresses the conflict.",
+      "control_id": "SH-POL-002",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [
+        "SOC2:CC5.1"
+      ],
+      "side": "B",
+      "task_id": "TASK-SH-POL-002-corporate-CHECK-SOC2:CC5.1",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "control_id": "SH-POL-002",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-POL-002-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "control_id": "SH-POL-002",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "TOD",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-POL-002-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "control_id": "SH-POL-002",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "TOE",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-POL-002-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Reconcile all 22 addressable entries to documented decisions; inspect both implemented measures and alternatives. Reject blank reasoning and a generic risk waiver substituted for the environmental assessment.",
+      "control_id": "SH-POL-003",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_source_scope": "SEPARATE_22_PENDING_LOCATOR_DOCKET_NOT_GENERIC_WAIVER",
+      "requirement_ids": [
+        "HIPAA:164.306",
+        "HIPAA:164.308",
+        "HIPAA:164.310",
+        "HIPAA:164.312"
+      ],
+      "side": "B",
+      "task_id": "TASK-SH-POL-003-corporate-ACTION-H-ADDRESSABLE",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "control_id": "SH-POL-003",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_source_scope": "PARTIAL_PENDING_GENERIC_EXCEPTION_HISTORY",
+      "requirement_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-POL-003-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "control_id": "SH-POL-003",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "TOD",
+      "proposed_source_scope": "PARTIAL_PENDING_GENERIC_EXCEPTION_HISTORY",
+      "requirement_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-POL-003-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "control_id": "SH-POL-003",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "TOE",
+      "proposed_source_scope": "PARTIAL_PENDING_GENERIC_EXCEPTION_HISTORY",
+      "requirement_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-POL-003-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": "Walk one policy into an executable trigger, responsible person, dated result and correction; reject an approved policy with no execution procedure.",
+      "control_id": "SH-POL-004",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "ADDITIONAL_DUTY",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [
+        "SOC2:CC5.3"
+      ],
+      "side": "B",
+      "task_id": "TASK-SH-POL-004-corporate-CHECK-SOC2:CC5.3",
+      "test_gate_basis": "AUTHORED_TASK_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "control_id": "SH-POL-004",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "IMPLEMENTATION",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-POL-004-corporate-IMPLEMENTATION",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "control_id": "SH-POL-004",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "TOD",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-POL-004-corporate-TOD",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    },
+    {
+      "audit_task_credit": false,
+      "authored_test_clause": null,
+      "control_id": "SH-POL-004",
+      "current_conclusion": "NOT_RUN",
+      "current_pair_source_match_count": 0,
+      "current_status": "NOT_STARTED",
+      "procedure_type": "TOE",
+      "proposed_source_scope": "NO_DIRECT_NEW_SOURCE_FOR_THIS_CLAUSE",
+      "requirement_ids": [],
+      "side": "B",
+      "task_id": "TASK-SH-POL-004-corporate-TOE",
+      "test_gate_basis": "GENERIC_PROCEDURE_GATE_NOT_AN_AUTHORED_CLAUSE"
+    }
+  ],
+  "schema": "SH_POLICY_EXCEPTION_22_PAIRED_ROUTE_LEDGER_V1",
+  "source_paths": {
+    "addressable_manifest": "enterprise/generated/audit-suite/company-addressable-docket-2026-09-29/run-v1/MANIFEST.json",
+    "addressable_receipt": "enterprise/generated/audit-suite/company-addressable-docket-2026-09-29/run-v1/RECEIPT.json",
+    "addressable_review": "enterprise/generated/audit-suite/company-addressable-docket-independent-review-2026-09-29-v1/REVIEW.json",
+    "matrix": "enterprise/generated/audit-suite/documentary-discovery-routes-2026-09-29/run-v2/MATRIX.json",
+    "routes": "enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-unmatched373-company-native-coverage-plan-v2/TASK-ROUTES.json",
+    "screen": "enterprise/generated/audit-suite/acceptance-audit-2026-09-22/aq06-aq07-paired-all409-task-source-screen-v3/TASK-ROWS.json"
+  },
+  "source_sha256": {
+    "addressable_manifest": "41f3b1c783c3c84217f86edd03febad42da00a25e22fcc38c41e6bf61aa910e1",
+    "addressable_receipt": "7ef4cb845b14259acd7ecfb015ff8d0626c3b0a4a9a3052b485764f6a164e0f0",
+    "addressable_review": "5796cf3bee5075defb743401dad3831448cb5687c7f06d5df9dcba3021143c7d",
+    "matrix": "e9477d2074bebce185e412a3ee7c424ded395c1a1128a7c918a94f6acbd1e327",
+    "routes": "00415fca7d40339ca416514829e62a33b0a7f47e2905c818fd4fee329d5cf69b",
+    "screen": "a0f995228683bde4663e1232380622fe208a225d71152cfb5aaf3cb0620f98ba"
+  }
+}

@@ -4,6 +4,11 @@ import { sourceReference } from "./sourceReferences";
 import { ProcedureTraceReadiness } from "./ProcedureTraceReadiness";
 import { resolveTraceReference, type TraceReadiness } from "./traceReadiness";
 import type { ContextLink } from "./investigationContext";
+import {
+  currentIntegrity,
+  integrityStatusLabels,
+  type OriginalIntegrity,
+} from "./procedureIntegrity";
 const explanations: Record<string, string> = {
   NO_ISSUED_REQUEST: "No issued request is linked to this control.",
   OUTSTANDING_RESPONSE:
@@ -43,19 +48,31 @@ export function WorkStatus({
   onPreview: (kind: string, row: Row, reference?: ContextLink) => void;
 }) {
   const [report, setReport] = useState<Report | null>(null),
+    [integrity, setIntegrity] = useState<OriginalIntegrity | null>(null),
     [selected, setSelected] = useState(""),
     [error, setError] = useState(""),
-    [busy, setBusy] = useState(false);
+    [integrityError, setIntegrityError] = useState(""),
+    [busy, setBusy] = useState(false),
+    [integrityBusy, setIntegrityBusy] = useState(false);
   const epoch = useRef(0);
   const allowed = e.permissions?.some((permission) =>
     ["learn", "review", "instruct"].includes(permission),
   );
+  const visibleIntegrity =
+    integrity && currentIntegrity(integrity, e) ? integrity : null;
+  const visibleReport =
+    report?.engagement_id === e.id && report.engagement_revision === e.revision
+      ? report
+      : null;
   useEffect(() => {
     epoch.current++;
     setReport(null);
+    setIntegrity(null);
     setSelected("");
     setError("");
+    setIntegrityError("");
     setBusy(false);
+    setIntegrityBusy(false);
     return () => {
       epoch.current++;
     };
@@ -70,6 +87,9 @@ export function WorkStatus({
   async function check() {
     if (!allowed) return;
     setReport(null);
+    setIntegrity(null);
+    setIntegrityError("");
+    setIntegrityBusy(false);
     const current = ++epoch.current;
     setBusy(true);
     setError("");
@@ -93,7 +113,30 @@ export function WorkStatus({
       if (current === epoch.current) setBusy(false);
     }
   }
-  const control = report?.controls.find(
+  async function checkIntegrity() {
+    if (!allowed) return;
+    const current = ++epoch.current;
+    setIntegrity(null);
+    setIntegrityError("");
+    setIntegrityBusy(true);
+    try {
+      const result = await request<OriginalIntegrity>(
+        `/api/engagements/${encodeURIComponent(e.id)}/procedure-original-integrity`,
+      );
+      if (current === epoch.current) {
+        if (!currentIntegrity(result, e))
+          throw Error(
+            "Work changed. Refresh this engagement before rechecking originals.",
+          );
+        setIntegrity(result);
+      }
+    } catch (err) {
+      if (current === epoch.current) setIntegrityError((err as Error).message);
+    } finally {
+      if (current === epoch.current) setIntegrityBusy(false);
+    }
+  }
+  const control = visibleReport?.controls.find(
     (c) =>
       str(c.control_id) === selected ||
       str((c.control as Row)?.id) === selected,
@@ -145,14 +188,51 @@ export function WorkStatus({
         {busy ? "Checking recorded work…" : "Check work status"}
       </button>
       {error && <p role="alert">{error}</p>}
-      {report && (
+      {visibleReport && (
         <>
+          <div className="actions">
+            <button
+              type="button"
+              disabled={integrityBusy || busy}
+              onClick={() => void checkIntegrity()}
+            >
+              {integrityBusy
+                ? "Rechecking retained originals…"
+                : "Recheck cited retained originals"}
+            </button>
+          </div>
+          {integrityError && <p role="alert">{integrityError}</p>}
+          {visibleIntegrity && (
+            <section aria-label="Retained original byte check">
+              <p role="status">
+                {integrityStatusLabels[visibleIntegrity.status]}
+              </p>
+              {visibleIntegrity.counts ? (
+                <p>
+                  {visibleIntegrity.counts.verified} verified ·{" "}
+                  {visibleIntegrity.counts.missing} missing ·{" "}
+                  {visibleIntegrity.counts.integrity_failure} changed ·{" "}
+                  {visibleIntegrity.counts.read_unavailable} unreadable of{" "}
+                  {visibleIntegrity.counts.referenced} cited retained originals.
+                </p>
+              ) : (
+                <p>
+                  Byte counts unavailable; no zero count or success is implied.
+                </p>
+              )}
+              <p>
+                This checks retained copy bytes at this engagement revision. It
+                does not check company source freshness, population
+                completeness, procedure sufficiency or audit credit.
+              </p>
+            </section>
+          )}
           <p>
-            {report.denominators.scoped_controls} scoped controls ·{" "}
-            {report.denominators.scoped_procedures} assigned procedures ·{" "}
-            {report.denominators.unassigned_or_out_of_scope_tasks} unassigned or
-            outside-scope tasks. The procedure count includes{" "}
-            {report.denominators.known_not_applicable_tasks} recorded
+            {visibleReport.denominators.scoped_controls} scoped controls ·{" "}
+            {visibleReport.denominators.scoped_procedures} assigned procedures ·{" "}
+            {visibleReport.denominators.unassigned_or_out_of_scope_tasks}{" "}
+            unassigned or outside-scope tasks. The procedure count includes{" "}
+            {visibleReport.denominators.known_not_applicable_tasks} recorded
             exclusions.
           </p>
           <label>
@@ -229,6 +309,7 @@ export function WorkStatus({
                         data={
                           p.sample_trace_readiness as TraceReadiness | undefined
                         }
+                        integrity={visibleIntegrity ?? undefined}
                         onPreview={onPreview}
                       />
                     </li>
@@ -256,7 +337,7 @@ export function WorkStatus({
           <details>
             <summary>What this check covers</summary>
             <ul>
-              {report.limits.map((s, i) => (
+              {visibleReport.limits.map((s, i) => (
                 <li key={i}>{s}</li>
               ))}
             </ul>

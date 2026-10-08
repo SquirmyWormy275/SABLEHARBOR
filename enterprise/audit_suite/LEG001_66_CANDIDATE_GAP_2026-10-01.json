@@ -1,0 +1,2032 @@
+{
+  "as_of": "2026-10-01",
+  "audit_task_credit": false,
+  "counts_per_side": {
+    "active_p1_tasks_unrun": 409,
+    "authored_routes": 72,
+    "bounded_provision_candidates": 16,
+    "remaining_context_candidates": 4,
+    "remaining_matter_candidates": 46,
+    "unmodeled_in_this_iteration": 50,
+    "unsupported_exact_clauses": 66
+  },
+  "fresh_audit_pair_created": false,
+  "limits": [
+    "This inventory maps audit task IDs to exact authored clauses and requirement IDs; it is not a company-native operating record or an audit test.",
+    "The 16-provision native overlay is a selected source candidate outside the current route ledger; separate route and procedure reviews remain, and all 66 clauses remain unsupported/unrun.",
+    "The 46 matter and four context candidates remain outside this source cohort. No outside matter or all-company no-event determination is inferred."
+  ],
+  "p1_freeze": {
+    "file_count": 538,
+    "inventory_sha256": "f266ef682b502b3b093170f8a7b64fcf5cbab722d5c8ddf6715a63c0e535360f"
+  },
+  "rows_by_side": {
+    "A": [
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Compare any proposed obligation from the affected sections to the overlay; block an applicability conclusion based only on the historical XML.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:164.502",
+          "HIPAA:164.509",
+          "HIPAA:164.520"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-ACTION-H-LEGAL-STATUS",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Exercise a regulator request with inaccessible provider records and an urgent access scenario; inspect response authority and preservation without treating ordinary customer disclosure rules as a bar to lawful access.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.310",
+          "HIPAA:160.316"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-ACTION-H-REGULATOR",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Check the authority citation in the obligation register without creating a recurring technical control.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:160.101"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.101",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Record final-rule effective/compliance dates and exceptions; do not turn the general 180-day floor into an automatic service grace period.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:160.104"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.104",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Verify the specific new or modified rule overrides before docketing the compliance date.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:160.105"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.105",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Link the authority to the preemption analysis and retain context classification.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:160.201"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.201",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Require a provision-by-provision state/federal comparison identifying the applicable test, not a blanket stricter-law assertion.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:160.202"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.202",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Record the actual exception and supporting law for each conflict before treating a state duty as displaced.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:160.203"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.203",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Inspect the written request and determination; reject a pending request as authority to stop compliance.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:160.204"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.204",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Reassess relied-on exceptions on legal/factual change and retain revocation monitoring evidence.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:160.205"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.205",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Classify as triggered legal-response context and link the response playbook.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/CONTEXT",
+        "requirement_ids": [
+          "HIPAA:160.300"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.300",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Verify the reserved source entry; retain inventory presence without inventing an operating duty.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/CONTEXT",
+        "requirement_ids": [
+          "HIPAA:160.302"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.302",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Retain correspondence and distinguish assistance from an approval or assurance conclusion.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.304"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.304",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Keep complaint dates and records, protect reporting and route regulator correspondence; do not convert the complainant clock into the organization's response deadline.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.306"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.306",
+        "v16_existing_targeted_source_ids": [
+          "LEG001_SELECTED_DOCKET_V1"
+        ]
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Trigger preservation and authorized cooperation when notified; record review scope and response orders rather than inventing a recurring inspection cadence.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.308"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.308",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Docket notice receipt, response and service; preserve completed corrective plans and written disposition separately from internal closure.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.312"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.312",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Check subpoena scope, designated witnesses, service, transcript corrections and counsel-controlled objections against the actual proceeding.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.314"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.314",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Retain enforcement classification; do not generate a technical control from the penalty authority.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/CONTEXT",
+        "requirement_ids": [
+          "HIPAA:160.400"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.400",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Preserve knowledge, diligence and correction facts for counsel; do not let an incident severity label decide the legal standard.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.401"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.401",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Analyze actual agency relationships and conduct; a supplier agreement alone does not eliminate exposure.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.402"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.402",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Resolve the applicable date, tier and current primary adjustment before exposure modeling; leave amounts unpopulated until verified.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.404"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.404",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Preserve start/end dates and affected occurrences; distinguish continuous failure from incident ticket counts.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.406"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.406",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Collect supporting facts with provenance and privilege handling rather than auto-scoring mitigation from remediation status.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.408"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.408",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Preserve discovery and correction evidence and any Secretary extension; internal risk acceptance does not establish an affirmative defense.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.410"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.410",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Record eligibility analysis, request and actual disposition; do not mark waiver granted when requested.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.412"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.412",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Counsel verifies occurrence and commencement facts and applicable authority; retention policy is not this limitations determination.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.414"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.414",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Route proposed terms to authorized counsel and management; retain the actual executed settlement and duties.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.416"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.416",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Assess additional exposure separately; payment does not automatically resolve every proceeding.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.418"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.418",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Capture receipt and completeness, docket the hearing path and preserve a statistical study if relied on.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.420"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.420",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Escalate missed hearing deadlines and preserve final notice; do not presume an appeal remains available.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.422"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.422",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Reconcile final determination, payment/offset and counsel's available remedies before finance execution.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.424"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.424",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Prepare accurate authorized communications and track finality; this is not a mandate for routine customer publication by the company.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.426"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.426",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Activate the case playbook only for a real proceeding; retain source context otherwise.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/CONTEXT",
+        "requirement_ids": [
+          "HIPAA:160.500"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.500",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Verify the proper appellate body and addressee rather than routing to corporate governance.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.502"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.502",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Test actual/presumed receipt, admitted/denied facts, defense grounds and mailing proof with counsel; do not add the general mail-response extension to this request.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.504"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.504",
+        "v16_existing_targeted_source_ids": [
+          "LEG001_SELECTED_DOCKET_V1"
+        ]
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Confirm representative authority and ethical conduct; record exercised or intentionally waived procedural rights.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.506"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.506",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Maintain orders and assigned actions; distinguish ALJ directions from options or requests and flag contested authority for counsel.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.508"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.508",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Inspect case communications for prohibited ex parte contact while allowing documented scheduling/status inquiries.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.510"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.510",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Docket the conference, prepare authorized representatives and reconcile the resulting order to action owners and deadlines.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.512"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.512",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Verify the settlement counterparty's authority; do not make ALJ signature an invented condition.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.514"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.514",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Track requests, scoped objections, accessible production and protective/compel motions, including the second 30-day motion window.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.516"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.516",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Independently compute each exchange deadline and preserve delivery, objections and any extraordinary-circumstance ruling.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.518"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.518",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Docket motion, opposition, service and quash separately; verify named witnesses, necessary evidence and allowed exceptions.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.520"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.520",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Reconcile the actual subpoenaing party, service package and authorized fee payment.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.522"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.522",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Check the actual order first, then filing form, mailing date, opposing counsel service and proof.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.524"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.524",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Reperform the docket with federal holidays and actual service method; independently test the hearing-request exception.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.526"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.526",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Reconcile each motion with service and actual ALJ response deadline; oral-motion exceptions require case context.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.528"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.528",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Escalate missed orders and preserve the actual sanction decision; do not silently cure the docket history.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.530"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.530",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Link the prior final determination and participation record before asserting issue preclusion.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.532"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.532",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Organize the evidence burden by issue and preserve breach notification/no-breach support; do not treat no regulator evidence as proof of company compliance.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.534"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.534",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Retain the study, population and methods for qualified rebuttal; never substitute this enforcement rule for an audit sample-size policy.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.536"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.536",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Verify witness statements, availability, disclosures and actual ALJ orders before relying on a written statement.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.538"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.538",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Keep evidence provenance and counsel's privilege/admissibility assessment; confidentiality markings alone do not establish privilege.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.540"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.540",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Reconcile the official record and request appropriate protection through counsel; do not assume a private internal evidence folder makes the hearing record private.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.542"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.542",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Docket the actual order and receipt event; preserve timely filed briefs and any allowed reply.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.544"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.544",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Record service, finality and the separate 30-day appeal path; do not use finality as the appeal deadline.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.546"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.546",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Maintain appeal, opposition, reconsideration, service and finality events separately with counsel; preserve briefs and court-stamped petition service.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.548"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.548",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Preserve request, appeal copy, interim status, security and ruling; an appeal alone is not the specified stay request.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.550"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.550",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Route alleged error to counsel with prejudice evidence; never label an operational control failure harmless using this hearing rule.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.552"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.552",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Retain authority references without creating a recurring safeguard.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:164.102"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.102",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Inspect ownership/control, covered functions and actual legal demands; shared corporate services alone do not create a hybrid designation.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:164.103"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.103",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Determine whether transaction functions invoke Part 162 and open a scoped dependency review if so; current inventory does not prove Part 162 coverage.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:164.106"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.106",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Retain dates as context and test that no new-service grace period is inferred.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:164.318"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.318",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Require dated pre-transition evidence and the exact exception before reliance; do not treat this as a new agreement exemption.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:164.532"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.532",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Retain initial dates as context and reconcile later changes separately.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:164.534"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.534",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Require the actual judgment/status analysis for the affected text; do not infer enforceability merely from its presence in XML.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:164.535"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.535",
+        "v16_existing_targeted_source_ids": []
+      }
+    ],
+    "B": [
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Compare any proposed obligation from the affected sections to the overlay; block an applicability conclusion based only on the historical XML.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:164.502",
+          "HIPAA:164.509",
+          "HIPAA:164.520"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-ACTION-H-LEGAL-STATUS",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Exercise a regulator request with inaccessible provider records and an urgent access scenario; inspect response authority and preservation without treating ordinary customer disclosure rules as a bar to lawful access.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.310",
+          "HIPAA:160.316"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-ACTION-H-REGULATOR",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Check the authority citation in the obligation register without creating a recurring technical control.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:160.101"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.101",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Record final-rule effective/compliance dates and exceptions; do not turn the general 180-day floor into an automatic service grace period.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:160.104"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.104",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Verify the specific new or modified rule overrides before docketing the compliance date.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:160.105"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.105",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Link the authority to the preemption analysis and retain context classification.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:160.201"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.201",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Require a provision-by-provision state/federal comparison identifying the applicable test, not a blanket stricter-law assertion.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:160.202"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.202",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Record the actual exception and supporting law for each conflict before treating a state duty as displaced.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:160.203"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.203",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Inspect the written request and determination; reject a pending request as authority to stop compliance.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:160.204"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.204",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Reassess relied-on exceptions on legal/factual change and retain revocation monitoring evidence.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:160.205"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.205",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Classify as triggered legal-response context and link the response playbook.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/CONTEXT",
+        "requirement_ids": [
+          "HIPAA:160.300"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.300",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Verify the reserved source entry; retain inventory presence without inventing an operating duty.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/CONTEXT",
+        "requirement_ids": [
+          "HIPAA:160.302"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.302",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Retain correspondence and distinguish assistance from an approval or assurance conclusion.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.304"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.304",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Keep complaint dates and records, protect reporting and route regulator correspondence; do not convert the complainant clock into the organization's response deadline.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.306"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.306",
+        "v16_existing_targeted_source_ids": [
+          "LEG001_SELECTED_DOCKET_V1"
+        ]
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Trigger preservation and authorized cooperation when notified; record review scope and response orders rather than inventing a recurring inspection cadence.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.308"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.308",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Docket notice receipt, response and service; preserve completed corrective plans and written disposition separately from internal closure.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.312"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.312",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Check subpoena scope, designated witnesses, service, transcript corrections and counsel-controlled objections against the actual proceeding.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.314"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.314",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Retain enforcement classification; do not generate a technical control from the penalty authority.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/CONTEXT",
+        "requirement_ids": [
+          "HIPAA:160.400"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.400",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Preserve knowledge, diligence and correction facts for counsel; do not let an incident severity label decide the legal standard.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.401"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.401",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Analyze actual agency relationships and conduct; a supplier agreement alone does not eliminate exposure.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.402"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.402",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Resolve the applicable date, tier and current primary adjustment before exposure modeling; leave amounts unpopulated until verified.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.404"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.404",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Preserve start/end dates and affected occurrences; distinguish continuous failure from incident ticket counts.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.406"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.406",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Collect supporting facts with provenance and privilege handling rather than auto-scoring mitigation from remediation status.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.408"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.408",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Preserve discovery and correction evidence and any Secretary extension; internal risk acceptance does not establish an affirmative defense.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.410"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.410",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Record eligibility analysis, request and actual disposition; do not mark waiver granted when requested.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.412"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.412",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Counsel verifies occurrence and commencement facts and applicable authority; retention policy is not this limitations determination.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.414"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.414",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Route proposed terms to authorized counsel and management; retain the actual executed settlement and duties.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.416"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.416",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Assess additional exposure separately; payment does not automatically resolve every proceeding.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.418"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.418",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Capture receipt and completeness, docket the hearing path and preserve a statistical study if relied on.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.420"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.420",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Escalate missed hearing deadlines and preserve final notice; do not presume an appeal remains available.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.422"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.422",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Reconcile final determination, payment/offset and counsel's available remedies before finance execution.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.424"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.424",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Prepare accurate authorized communications and track finality; this is not a mandate for routine customer publication by the company.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.426"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.426",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Activate the case playbook only for a real proceeding; retain source context otherwise.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/CONTEXT",
+        "requirement_ids": [
+          "HIPAA:160.500"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.500",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Verify the proper appellate body and addressee rather than routing to corporate governance.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.502"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.502",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Test actual/presumed receipt, admitted/denied facts, defense grounds and mailing proof with counsel; do not add the general mail-response extension to this request.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.504"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.504",
+        "v16_existing_targeted_source_ids": [
+          "LEG001_SELECTED_DOCKET_V1"
+        ]
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Confirm representative authority and ethical conduct; record exercised or intentionally waived procedural rights.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.506"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.506",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Maintain orders and assigned actions; distinguish ALJ directions from options or requests and flag contested authority for counsel.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.508"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.508",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Inspect case communications for prohibited ex parte contact while allowing documented scheduling/status inquiries.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.510"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.510",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Docket the conference, prepare authorized representatives and reconcile the resulting order to action owners and deadlines.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.512"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.512",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Verify the settlement counterparty's authority; do not make ALJ signature an invented condition.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.514"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.514",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Track requests, scoped objections, accessible production and protective/compel motions, including the second 30-day motion window.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.516"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.516",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Independently compute each exchange deadline and preserve delivery, objections and any extraordinary-circumstance ruling.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.518"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.518",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Docket motion, opposition, service and quash separately; verify named witnesses, necessary evidence and allowed exceptions.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.520"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.520",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Reconcile the actual subpoenaing party, service package and authorized fee payment.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.522"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.522",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Check the actual order first, then filing form, mailing date, opposing counsel service and proof.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.524"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.524",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Reperform the docket with federal holidays and actual service method; independently test the hearing-request exception.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.526"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.526",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Reconcile each motion with service and actual ALJ response deadline; oral-motion exceptions require case context.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.528"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.528",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Escalate missed orders and preserve the actual sanction decision; do not silently cure the docket history.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.530"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.530",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Link the prior final determination and participation record before asserting issue preclusion.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.532"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.532",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Organize the evidence burden by issue and preserve breach notification/no-breach support; do not treat no regulator evidence as proof of company compliance.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.534"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.534",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Retain the study, population and methods for qualified rebuttal; never substitute this enforcement rule for an audit sample-size policy.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.536"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.536",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Verify witness statements, availability, disclosures and actual ALJ orders before relying on a written statement.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.538"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.538",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Keep evidence provenance and counsel's privilege/admissibility assessment; confidentiality markings alone do not establish privilege.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.540"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.540",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Reconcile the official record and request appropriate protection through counsel; do not assume a private internal evidence folder makes the hearing record private.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.542"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.542",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Docket the actual order and receipt event; preserve timely filed briefs and any allowed reply.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.544"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.544",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Record service, finality and the separate 30-day appeal path; do not use finality as the appeal deadline.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.546"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.546",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Maintain appeal, opposition, reconsideration, service and finality events separately with counsel; preserve briefs and court-stamped petition service.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.548"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.548",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Preserve request, appeal copy, interim status, security and ruling; an appeal alone is not the specified stay request.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.550"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.550",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Route alleged error to counsel with prejudice evidence; never label an operational control failure harmless using this hearing rule.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": false,
+        "new_overlay_status": "NO_NEW_NATIVE_LEAD_IN_THIS_ITERATION",
+        "request_group_id": "SH-LEG-001/MATTER",
+        "requirement_ids": [
+          "HIPAA:160.552"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:160.552",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Retain authority references without creating a recurring safeguard.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:164.102"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.102",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Inspect ownership/control, covered functions and actual legal demands; shared corporate services alone do not create a hybrid designation.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:164.103"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.103",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Determine whether transaction functions invoke Part 162 and open a scoped dependency review if so; current inventory does not prove Part 162 coverage.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:164.106"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.106",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Retain dates as context and test that no new-service grace period is inferred.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:164.318"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.318",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Require dated pre-transition evidence and the exact exception before reliance; do not treat this as a new agreement exemption.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:164.532"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.532",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Retain initial dates as context and reconcile later changes separately.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:164.534"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.534",
+        "v16_existing_targeted_source_ids": []
+      },
+      {
+        "audit_task_credit": false,
+        "authored_test_clause": "Require the actual judgment/status analysis for the affected text; do not infer enforceability merely from its presence in XML.",
+        "classification": "UNSUPPORTED_EXACT_CLAUSE",
+        "current_conclusion": "NOT_RUN",
+        "current_status": "NOT_STARTED",
+        "new_overlay_cohort": true,
+        "new_overlay_status": "SELECTED_NATIVE_LOCATOR_CANDIDATE_NOT_ROUTED",
+        "request_group_id": "SH-LEG-001/PROVISION",
+        "requirement_ids": [
+          "HIPAA:164.535"
+        ],
+        "task_id": "TASK-SH-LEG-001-corporate-CHECK-HIPAA:164.535",
+        "v16_existing_targeted_source_ids": []
+      }
+    ]
+  },
+  "schema": "SH_LEG001_66_AUTHORED_CANDIDATE_GAP_V1",
+  "source_complete": false,
+  "source_pins": {
+    "enterprise/audit_suite/DOCUMENTARY_283_ROUTE_RECONCILIATION_V16_2026-10-01.json": "cd3b55409e9e0112b49d060cfbbacf329660422d0c4e1b2002ec220af5bad5a3",
+    "enterprise/audit_suite/UNSUPPORTED_121_PBC_PLAN_V14_2026-10-01.json": "c414799171d1256222f80675be0e0b4dd5fff45ce5d345f7540cd34f08a905b4",
+    "enterprise/generated/audit-suite/documentary-283-route-reconciliation-v16-2026-10-01/independent-review-main-v1/REVIEW.json": "138bc8e7cd5e701d0507e4dcb6228364c3406aa097d12d14d9753c456ae60b34",
+    "enterprise/generated/audit-suite/unsupported-121-pbc-plan-v14-2026-10-01/independent-review-main-v1/REVIEW.json": "2a212e9ff08e9bad9532b4c88c685094251424fbc7bfd973451cadad2801819a"
+  },
+  "truth_class": "DERIVED_READ_ONLY_GAP_MAP_NOT_COMPANY_SOURCE"
+}

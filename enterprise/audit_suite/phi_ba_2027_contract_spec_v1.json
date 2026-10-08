@@ -1,0 +1,181 @@
+{
+  "schema": "SH_FICTIONAL_2027_PHI_BA_CONTRACT_SPEC_V1",
+  "status": "PROPOSED_TRAINING_WORLD_FACTS_FOR_INDEPENDENT_REVIEW",
+  "truth_class": "TRAINING_SCENARIO_ONLY",
+  "canonical_source_pins": {
+    "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-06_CLOSEOUT.md": "7405bf888afc85634f9dfaa062a51c440e06a2588df0f44ac7ef9953b892530e",
+    "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md": "0b21f22c2a8ffe55fa4e43898834ddc38389e42efe2e9c11ff48c7418dad8be7",
+    "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md": "1707ed7021576048ca5f1904ca5e94d484e8f7e2992da5c9e04965421f79a751"
+  },
+  "fictional_2027_boundary": {
+    "contracting_entity_id": "SHI",
+    "contracting_entity_name": "Sable Harbor, LLC",
+    "customer": {
+      "id": "SIM-COVERED-CUSTOMER-01",
+      "label": "Scenario Health Customer One",
+      "role_assumption": "COVERED_ENTITY_FOR_TRAINING_ONLY"
+    },
+    "service": {
+      "id": "SIM-RESTRICTED-HOSTING-01",
+      "description": "Payload-free synthetic ePHI-analog hosting and recovery exercise",
+      "purpose": "Simulated customer-directed storage and recovery only"
+    },
+    "support_party": {
+      "id": "SIM-RECOVERY-SUPPORT-01",
+      "label": "Scenario Recovery Support One",
+      "role_assumption": "BA_SUBCONTRACTOR_FOR_TRAINING_ONLY",
+      "service": "Simulated maintenance of a recovery marker under Sable Harbor direction",
+      "distinct_from_site_providers": [
+        "CP-SWITCH",
+        "CP-IDACORE"
+      ]
+    },
+    "actual_phi_processing": "UNASSERTED",
+    "actual_hipaa_applicability": "UNDETERMINED",
+    "real_contract_execution": false
+  },
+  "limited_fictional_delegation": {
+    "record_id": "DA-PHI-BA-2027",
+    "delegator": {
+      "id": "SH-CEO-DANIEL-MERCER",
+      "name": "Daniel Mercer",
+      "role": "Chief Executive Officer"
+    },
+    "delegatee": {
+      "id": "AS-P002",
+      "name": "Adrian Lowe",
+      "role": "Chief Financial Officer"
+    },
+    "scope": [
+      "SIM-BAA-CUST-01",
+      "SIM-BAA-SUB-01"
+    ],
+    "excludes": [
+      "RT-MSA-001-SIM-2027",
+      "RT-SO-RENO",
+      "RT-SO-BOISE",
+      "any_real_agreement"
+    ],
+    "basis": "Proposed scenario-only future authority; not a 2026 canon delegation",
+    "real_world_delegation": false
+  },
+  "required_fictional_reviewers": [
+    {
+      "id": "AS-P003",
+      "name": "Helena Ward",
+      "role": "Legal/privacy role and contract review"
+    },
+    {
+      "id": "AS-P007",
+      "name": "Elliot Tran",
+      "role": "Technology service and flow review"
+    },
+    {
+      "id": "AS-P008",
+      "name": "Dana West",
+      "role": "Security review"
+    },
+    {
+      "id": "AS-P014",
+      "name": "Omar Vale",
+      "role": "Data governance and records review"
+    }
+  ],
+  "counterparty_personas": {
+    "SIM-BAA-CUST-01": "SIM-CUSTOMER-SIGNATORY-01",
+    "SIM-BAA-SUB-01": "SIM-SUPPORT-SIGNATORY-01"
+  },
+  "contract_ids": [
+    "SIM-BAA-CUST-01",
+    "SIM-BAA-SUB-01"
+  ],
+  "clause_candidates": [
+    "permitted_uses_and_disclosures",
+    "safeguards_and_security",
+    "incident_and_breach_reporting",
+    "subcontractor_flowdown",
+    "rights_request_support",
+    "regulator_records_access",
+    "return_or_destruction_and_continuing_protection",
+    "material_breach_cure_and_termination"
+  ],
+  "terms_status": "STRUCTURED_SYNTHETIC_TERMS_NO_REAL_COUNTERPARTY_TEXT",
+  "chronology": "All event times derive from the independently reviewed branch-specific Boise release availability; delegation, reviewer decision, counterparty acceptance and contract execution precede authorized flow.",
+  "limits": [
+    "Named Sable Harbor contacts are proposed source contacts in 2026, not independently established real signatories or accepted operating officers.",
+    "Every delegation, review, counterparty acceptance and contract execution in this specification is fictional 2027 training-world data only.",
+    "The exact customer and support parties are scenario-only personas, not real organizations or canon subsidiaries.",
+    "Site-provider contracts and provider HIPAA roles are separate; Switch and IDACORE are not automatically BA subcontractors.",
+    "No real ePHI, patient payload, external communication, legal advice, audit credit or actual operating history is asserted."
+  ],
+  "synthetic_terms": {
+    "SIM-BAA-CUST-01": [
+      {
+        "clause_candidate_id": "permitted_uses_and_disclosures",
+        "scenario_obligation": "SHI may receive, maintain and route only the payload-free scenario marker for customer-directed hosting and recovery; no other scenario use or disclosure is permitted."
+      },
+      {
+        "clause_candidate_id": "safeguards_and_security",
+        "scenario_obligation": "SHI applies scenario role access, encryption, logging, incident handling and recovery controls to the marker and retains reviewable control records."
+      },
+      {
+        "clause_candidate_id": "incident_and_breach_reporting",
+        "scenario_obligation": "SHI alerts the fictional customer contact within 24 scenario-hours after discovering unauthorized marker access, supplies known facts, and updates the record; this is a training SLA, not a legal notice conclusion."
+      },
+      {
+        "clause_candidate_id": "subcontractor_flowdown",
+        "scenario_obligation": "SHI may permit the fictional recovery support party to maintain the marker only after a separate simulated subcontract with restrictions and safeguards at least as protective as these candidate terms."
+      },
+      {
+        "clause_candidate_id": "rights_request_support",
+        "scenario_obligation": "SHI assists the fictional customer with synthetic access, amendment and accounting requests within five scenario-business-days of receipt."
+      },
+      {
+        "clause_candidate_id": "regulator_records_access",
+        "scenario_obligation": "SHI makes this scenario contract and relevant marker records available to the fictional review authority for a simulated compliance check; no real regulator access is asserted."
+      },
+      {
+        "clause_candidate_id": "return_or_destruction_and_continuing_protection",
+        "scenario_obligation": "At simulated service end, SHI returns or destroys the marker within 30 scenario-days where feasible and protects any retained copy until deletion."
+      },
+      {
+        "clause_candidate_id": "material_breach_cure_and_termination",
+        "scenario_obligation": "The fictional customer may demand cure of a material scenario term failure within 10 scenario-business-days, suspend routing, or terminate the simulated service; no actual breach or legal conclusion follows."
+      }
+    ],
+    "SIM-BAA-SUB-01": [
+      {
+        "clause_candidate_id": "permitted_uses_and_disclosures",
+        "scenario_obligation": "The fictional support party may access only the payload-free recovery marker under SHI direction for simulated recovery maintenance; no independent use or disclosure is permitted."
+      },
+      {
+        "clause_candidate_id": "safeguards_and_security",
+        "scenario_obligation": "The fictional support party applies scenario role access, encryption, logging and recovery safeguards and supplies SHI reviewable control records."
+      },
+      {
+        "clause_candidate_id": "incident_and_breach_reporting",
+        "scenario_obligation": "The fictional support party alerts SHI within 12 scenario-hours after discovering unauthorized marker access, supplies known facts and updates the record; SHI retains the fictional customer-reporting duty."
+      },
+      {
+        "clause_candidate_id": "subcontractor_flowdown",
+        "scenario_obligation": "The fictional support party may delegate marker maintenance only after SHI approval and a further simulated agreement carrying these same restrictions and safeguards."
+      },
+      {
+        "clause_candidate_id": "rights_request_support",
+        "scenario_obligation": "The fictional support party assists SHI with synthetic customer rights requests within three scenario-business-days of SHI direction."
+      },
+      {
+        "clause_candidate_id": "regulator_records_access",
+        "scenario_obligation": "The fictional support party makes relevant scenario marker records available to SHI for simulated review and to the fictional review authority only through SHI direction."
+      },
+      {
+        "clause_candidate_id": "return_or_destruction_and_continuing_protection",
+        "scenario_obligation": "At simulated support end, the fictional support party returns or destroys the marker within 15 scenario-days where feasible and protects any retained copy until deletion."
+      },
+      {
+        "clause_candidate_id": "material_breach_cure_and_termination",
+        "scenario_obligation": "SHI may demand cure of a material scenario term failure within five scenario-business-days, suspend support access, or terminate the simulated subcontract; late execution does not cure an earlier route."
+      }
+    ]
+  }
+}

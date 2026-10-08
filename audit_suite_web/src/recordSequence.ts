@@ -1,6 +1,7 @@
 import type { Engagement } from "./api";
 const collections = {
   control: "controls",
+  task: "tasks",
   request: "requests",
   artifact: "artifacts",
   person: "people",

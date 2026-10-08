@@ -12,7 +12,7 @@ from pathlib import Path
 
 from .bound_instructor import read_binding
 from .instructor_access import InstructorAccessLog
-from .instructor_key import verify_archive
+from .instructor_key import semantic_search_bundle, semantic_search_matches, verify_archive
 from .personal_views import PersonalViews
 from .store import DomainError, canonical, digest, identifier
 from .workspace_context import _basis
@@ -63,14 +63,29 @@ def validate_user(kind, user):
         common
         | (
             {"issue_id", "scope_to_issue", "source"}
+            | ({"issue_index"} if isinstance(user, dict) and "issue_index" in user else set())
+            | ({"source_filters"} if isinstance(user, dict) and "source_filters" in user else set())
             if kind == "BOUND"
             else {"selector", "option", "review", "scenario"}
+            | ({"review_facets"} if isinstance(user, dict) and "review_facets" in user else set())
         ),
     )
     text(user["title"], 120, True)
     text(user["query"], 1000)
     integer(user["page"], 100000)
     if kind == "BOUND":
+        if "source_filters" in user:
+            fields(user["source_filters"], ("system", "visibility"))
+            for value in user["source_filters"].values():
+                if value is not None:
+                    text(value, 256, True)
+        if "issue_index" in user:
+            index = user["issue_index"]
+            fields(index, ("query", "control_id", "page"))
+            text(index["query"], 1000)
+            integer(index["page"], 100000)
+            if index["control_id"] is not None:
+                text(index["control_id"], 128, True)
         require(type(user["scope_to_issue"]) is bool, "Explicit issue scope required")
         if user["issue_id"] is not None:
             text(user["issue_id"], 128, True)
@@ -82,6 +97,11 @@ def validate_user(kind, user):
             require(user["source"]["version"] > 0, "Positive source version required")
             pin(user["source"]["sha256"])
     else:
+        if "review_facets" in user:
+            fields(user["review_facets"], ("causal_validation", "grading"))
+            for value in user["review_facets"].values():
+                if value is not None:
+                    text(value, 128, True)
         for key in ("selector", "option", "review"):
             text(user[key], 128, True)
         if user["scenario"] is not None:
@@ -188,6 +208,7 @@ class InstructorKeyViews:
         self.path = self.root / "key-views.sqlite3"
         self.engine, self.bindings = engine, bindings
         self.archive_root = Path(archive_root) if archive_root is not None else None
+        self._semantic_index = None
         PersonalViews._private(self.root, True)
         if not self.path.exists():
             fd = os.open(self.path, os.O_CREAT | os.O_EXCL | os.O_WRONLY | os.O_NOFOLLOW, 0o600)
@@ -339,7 +360,11 @@ class InstructorKeyViews:
         verify_archive(root)
         index = json.loads((root / "index.json").read_bytes())
         receipt = json.loads((root / "receipt.json").read_bytes())
-        return digest(fingerprints), receipt["archive_sha256"], index
+        identity = digest(fingerprints)
+        if self._semantic_index is None:
+            self._semantic_index = (identity, *semantic_search_bundle(root, index))
+        require(self._semantic_index[0] == identity, "Protected archive changed", 503)
+        return identity, receipt["archive_sha256"], self._semantic_index[1]
 
     def _context(self, actor, eid, kind):
         require(isinstance(kind, str) and kind in {"BOUND", "ARCHIVE"}, "Unknown Key view kind")
@@ -389,6 +414,9 @@ class InstructorKeyViews:
                 {"actor_id": actor, "engagement_id": eid, "permission": "instruct", **_basis(state)}
             ),
             "error": error,
+            "authored_matching_texts": (
+                self._semantic_index[2] if kind == "ARCHIVE" and error is None else None
+            ),
         }
 
     def _finish(self, actor, eid, context):
@@ -423,6 +451,53 @@ class InstructorKeyViews:
                 "Saved issue unavailable",
                 409,
             )
+            if "issue_index" in user:
+                index = user["issue_index"]
+                control = index["control_id"]
+                require(
+                    control is None or any(control in r["control_ids"] for r in issues),
+                    "Saved issue-index control unavailable",
+                    409,
+                )
+                issue_query = index["query"].strip().lower()
+                issue_count = sum(
+                    (control is None or control in r["control_ids"])
+                    and issue_query
+                    in " ".join(
+                        [r["id"], *r["control_ids"], r["claim"], r["uncertainty"]]
+                        + [
+                            str(value)
+                            for expectation in data["authored"]["expectations"]
+                            if r["id"] in expectation["issue_ids"]
+                            for value in [
+                                expectation["id"],
+                                *expectation.get("task_ids", []),
+                                expectation["procedure"],
+                                *expectation["acceptable_alternatives"],
+                            ]
+                        ]
+                        + [
+                            str(value)
+                            for source in sources
+                            if source["id"] in r["source_ids"]
+                            for value in [
+                                source["id"],
+                                source["company"],
+                                source["branch"],
+                                source["system"],
+                                source["record"],
+                                source["version"],
+                                source["sha256"],
+                            ]
+                        ]
+                    ).lower()
+                    for r in issues
+                )
+                require(
+                    index["page"] < max(1, (issue_count + 19) // 20),
+                    "Saved issue page outside exact results",
+                    409,
+                )
             if user["source"] is not None:
                 require(
                     any(all(r.get(k) == v for k, v in user["source"].items()) for r in sources),
@@ -431,8 +506,24 @@ class InstructorKeyViews:
                 )
             if user["scope_to_issue"]:
                 sources = [r for r in sources if r["id"] in selected_issue["source_ids"]]
+            source_filters = user.get("source_filters", {"system": None, "visibility": None})
+            for name, field in (
+                ("system", "system"),
+                ("visibility", "actor_visibility_at_binding"),
+            ):
+                require(
+                    source_filters[name] is None
+                    or any(r[field] == source_filters[name] for r in data["sources"]),
+                    "Saved source facet unavailable",
+                    409,
+                )
             count = sum(
-                query
+                (source_filters["system"] is None or r["system"] == source_filters["system"])
+                and (
+                    source_filters["visibility"] is None
+                    or r["actor_visibility_at_binding"] == source_filters["visibility"]
+                )
+                and query
                 in " ".join(
                     str(r.get(k) or "")
                     for k in (
@@ -441,6 +532,8 @@ class InstructorKeyViews:
                         "branch",
                         "system",
                         "record",
+                        "version",
+                        "sha256",
                         "source_store_id",
                         "source_system_alias",
                         "registry_sha256",
@@ -452,6 +545,9 @@ class InstructorKeyViews:
             page_size = 10
         else:
             rows = data["entries"]
+            matching_ids = set(
+                semantic_search_matches(context["authored_matching_texts"], user["query"])
+            )
             require(len({r["id"] for r in rows}) == len(rows), "Ambiguous scenario IDs", 409)
 
             def selector(row):
@@ -481,12 +577,23 @@ class InstructorKeyViews:
                     "Saved scenario differs",
                     409,
                 )
+            review_facets = user.get("review_facets", {"causal_validation": None, "grading": None})
+            for name in ("causal_validation", "grading"):
+                require(
+                    review_facets[name] is None
+                    or any(r["review"][name] == review_facets[name] for r in rows),
+                    "Saved review facet unavailable",
+                    409,
+                )
             count = sum(
                 (user["selector"] == "all" or selector(r) == user["selector"])
                 and (user["option"] == "all" or option(r) == user["option"])
                 and (user["review"] == "all" or r["review"]["professional"] == user["review"])
-                and query
-                in " ".join([r["id"], r["review"]["professional"], *r["review"]["gaps"]]).lower()
+                and all(
+                    review_facets[name] is None or r["review"][name] == review_facets[name]
+                    for name in ("causal_validation", "grading")
+                )
+                and r["id"] in matching_ids
                 for r in rows
             )
             page_size = 25

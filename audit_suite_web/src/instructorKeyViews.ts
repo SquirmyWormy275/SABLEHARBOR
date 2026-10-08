@@ -1,6 +1,11 @@
 import type { Engagement } from "./api";
 import type { BoundSnapshot } from "./boundInstructorKey";
-import { boundSourcePage } from "./boundKeyNavigation";
+import {
+  boundIssuePage,
+  boundSourcePage,
+  type BoundIssueIndex,
+  type BoundSourceFilters,
+} from "./boundKeyNavigation";
 import {
   filterKeys,
   keyOption,
@@ -13,6 +18,8 @@ export type BoundKeyFilters = {
   scope_to_issue: boolean;
   source: null | { id: string; version: number; sha256: string };
   page: number;
+  issue_index?: BoundIssueIndex;
+  source_filters?: BoundSourceFilters;
 };
 export type ArchiveKeyFilters = {
   query: string;
@@ -21,6 +28,7 @@ export type ArchiveKeyFilters = {
   review: string;
   scenario: null | { id: string; key_sha256: string };
   page: number;
+  review_facets?: { causal_validation: string | null; grading: string | null };
 };
 export type KeyViewFilters = BoundKeyFilters | ArchiveKeyFilters;
 export type KeyViewKind = "BOUND" | "ARCHIVE";
@@ -61,6 +69,12 @@ export function validateBoundFilters(v: BoundKeyFilters, s: BoundSnapshot) {
       "scope_to_issue",
       "source",
       "page",
+      ...(Object.prototype.hasOwnProperty.call(v ?? {}, "issue_index")
+        ? ["issue_index"]
+        : []),
+      ...(Object.prototype.hasOwnProperty.call(v ?? {}, "source_filters")
+        ? ["source_filters"]
+        : []),
     ]) ||
     (v.source !== null && !exactFields(v.source, ["id", "version", "sha256"]))
   )
@@ -88,18 +102,57 @@ export function validateBoundFilters(v: BoundKeyFilters, s: BoundSnapshot) {
     throw Error(
       "Saved original pin is unavailable; no version was substituted.",
     );
+  if (
+    v.source_filters &&
+    (!exactFields(v.source_filters, ["system", "visibility"]) ||
+      Object.entries(v.source_filters).some(
+        ([key, value]) =>
+          value !== null &&
+          (typeof value !== "string" ||
+            !s.sources.some(
+              (r) =>
+                (key === "system"
+                  ? r.system
+                  : r.actor_visibility_at_binding) === value,
+            )),
+      ))
+  )
+    throw Error("Saved source facets are unavailable in this exact snapshot.");
+  if (Object.hasOwn(v, "source_filters") && !v.source_filters)
+    throw Error("Exact source facet fields required.");
   const result = boundSourcePage(s, {
     query: v.query,
     issueId: v.scope_to_issue ? (v.issue_id ?? "") : "",
     page: v.page,
+    sourceFilters: v.source_filters,
   });
   if (result.page !== v.page)
     throw Error("Saved source page is outside this exact filter result.");
+  if (Object.prototype.hasOwnProperty.call(v, "issue_index")) {
+    const index = v.issue_index;
+    if (
+      !exactFields(index, ["query", "control_id", "page"]) ||
+      typeof index?.query !== "string" ||
+      index.query.length > 1000 ||
+      !Number.isSafeInteger(index.page) ||
+      index.page < 0 ||
+      (index.control_id !== null &&
+        (typeof index.control_id !== "string" ||
+          !s.authored.issues.some((issue) =>
+            issue.control_ids.includes(index.control_id!),
+          )))
+    )
+      throw Error("Exact saved issue-index filters required.");
+    if (boundIssuePage(s, index).page !== index.page)
+      throw Error("Saved issue page is outside this exact filter result.");
+  }
   return structuredClone(v);
 }
 export function validateArchiveFilters(
   v: ArchiveKeyFilters,
   index: InstructorIndex,
+  completeMatchIds?: string[],
+  pendingRestoredQuery = false,
 ) {
   if (
     !exactFields(v, [
@@ -109,6 +162,7 @@ export function validateArchiveFilters(
       "review",
       "scenario",
       "page",
+      ...(Object.hasOwn(v ?? {}, "review_facets") ? ["review_facets"] : []),
     ]) ||
     (v.scenario !== null && !exactFields(v.scenario, ["id", "key_sha256"]))
   )
@@ -133,6 +187,20 @@ export function validateArchiveFilters(
   )
     throw Error("Saved archive filters no longer match this exact archive.");
   if (
+    Object.hasOwn(v, "review_facets") &&
+    (!exactFields(v.review_facets, ["causal_validation", "grading"]) ||
+      Object.entries(v.review_facets ?? {}).some(
+        ([key, value]) =>
+          value !== null &&
+          (typeof value !== "string" ||
+            !index.entries.some(
+              (row) =>
+                row.review[key as "causal_validation" | "grading"] === value,
+            )),
+      ))
+  )
+    throw Error("Saved review facets are unavailable in this exact archive.");
+  if (
     v.scenario &&
     index.entries.filter(
       (x) => x.id === v.scenario!.id && x.key_sha256 === v.scenario!.key_sha256,
@@ -142,8 +210,20 @@ export function validateArchiveFilters(
       "Saved scenario pin is unavailable; no scenario was substituted.",
     );
   if (
-    v.page >= Math.max(1, Math.ceil(filterKeys(index.entries, v).length / 25))
+    index.semantic_matching &&
+    v.query.trim() &&
+    completeMatchIds === undefined &&
+    !pendingRestoredQuery
   )
+    throw Error(
+      "Wait for complete authored search matching before saving this view.",
+    );
+  // A server-validated restored query may be pending. Bound its page by the full
+  // archive now; the exact matching receipt validates it again before rendering.
+  const rows = pendingRestoredQuery
+    ? index.entries
+    : filterKeys(index.entries, { ...v, complete_match_ids: completeMatchIds });
+  if (v.page >= Math.max(1, Math.ceil(rows.length / 25)))
     throw Error("Saved archive page is outside this exact filter result.");
   return structuredClone(v);
 }

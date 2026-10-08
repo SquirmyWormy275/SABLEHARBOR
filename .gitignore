@@ -35,3 +35,6 @@ releases/generated/
 
 /enterprise/generated/
 /enterprise/dist/
+
+/enterprise/audit_suite/_serialized_json_native*.so
+/enterprise/audit_suite/_canonical_fragmenter_native*.so

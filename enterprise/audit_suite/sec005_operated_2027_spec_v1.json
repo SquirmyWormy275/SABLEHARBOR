@@ -1,0 +1,56 @@
+{
+  "schema": "SH_FICTIONAL_2027_SEC005_SELECTED_OPERATIONS_SPEC_V1",
+  "qualification": "FICTIONAL_COMPANY_OPERATED_2027_SELECTED_POPULATION_NO_REAL_DEPLOYMENT",
+  "company": "SABLE-HARBOR-REFERENCE",
+  "service_id": "SVC-compute",
+  "selected_period_start": "2027-09-06T10:01:00+00:00",
+  "selected_period_end": "2027-11-30T23:59:59+00:00",
+  "delegation": {
+    "record_id": "AUTH-SEC005-COMPUTE-2027",
+    "issuer_person_id": "P001",
+    "issuer_name": "Daniel Mercer",
+    "issuer_title": "Chief Executive Officer",
+    "grantee_person_id": "AS-P007",
+    "security_reviewer_person_id": "AS-P008",
+    "scope": "Only selected SVC-compute Reno/Boise policy nodes, endpoints and logical interfaces in this specification",
+    "effective_at": "2027-09-01T10:00:00+00:00",
+    "expires_at": "2027-12-31T23:59:59+00:00",
+    "real_corporate_delegation": false
+  },
+  "assets": [
+    {"id": "SIM-RNO-EDGE-01", "site": "RUNTIME-RENO-COLO", "kind": "SABLE_HARBOR_MANAGED_EDGE_POLICY_NODE"},
+    {"id": "SIM-RNO-OPS-01", "site": "RUNTIME-RENO-COLO", "kind": "SABLE_HARBOR_MANAGED_ADMIN_ENDPOINT"},
+    {"id": "SIM-BOI-EDGE-01", "site": "RUNTIME-BOISE-DR", "kind": "SABLE_HARBOR_MANAGED_EDGE_POLICY_NODE"},
+    {"id": "SIM-BOI-OPS-01", "site": "RUNTIME-BOISE-DR", "kind": "SABLE_HARBOR_MANAGED_ADMIN_ENDPOINT"}
+  ],
+  "asset_custody_limit": "Fictional company-managed selected nodes; no real device title or inventory assertion",
+  "logical_interfaces": [
+    {"id": "IF-RNO-EGRESS", "site": "RUNTIME-RENO-COLO", "asset_id": "SIM-RNO-EDGE-01", "purpose": "nonpersonal service metadata egress"},
+    {"id": "IF-RNO-ADMIN", "site": "RUNTIME-RENO-COLO", "asset_id": "SIM-RNO-EDGE-01", "purpose": "selected remote administration"},
+    {"id": "IF-RNO-RECOVERY", "site": "RUNTIME-RENO-COLO", "asset_id": "SIM-RNO-EDGE-01", "purpose": "nonpersonal recovery metadata"},
+    {"id": "IF-BOI-EGRESS", "site": "RUNTIME-BOISE-DR", "asset_id": "SIM-BOI-EDGE-01", "purpose": "nonpersonal service metadata egress"},
+    {"id": "IF-BOI-ADMIN", "site": "RUNTIME-BOISE-DR", "asset_id": "SIM-BOI-EDGE-01", "purpose": "selected remote administration"},
+    {"id": "IF-BOI-RECOVERY", "site": "RUNTIME-BOISE-DR", "asset_id": "SIM-BOI-EDGE-01", "purpose": "nonpersonal recovery metadata"}
+  ],
+  "approved_rule_intents": {
+    "IF-RNO-EGRESS": ["NONPERSONAL-METADATA-SERVICE"],
+    "IF-RNO-ADMIN": ["ADMIN-AS-P007-FROM-SIM-RNO-OPS-01"],
+    "IF-RNO-RECOVERY": ["NONPERSONAL-REPLICATION-TO-BOISE"],
+    "IF-BOI-EGRESS": ["NONPERSONAL-METADATA-SERVICE"],
+    "IF-BOI-ADMIN": ["ADMIN-AS-P007-FROM-SIM-BOI-OPS-01"],
+    "IF-BOI-RECOVERY": ["NONPERSONAL-REPLICATION-FROM-RENO"]
+  },
+  "unauthorized_egress_intent": "UNAPPROVED-EXTERNAL-DESTINATION",
+  "unauthorized_admin_intent": "ADMIN-UNRECOGNIZED-SOURCE",
+  "inert_unapproved_executable_manifest": {
+    "id": "SIM-EXE-MANIFEST-UNAPPROVED-01",
+    "description": "metadata-only executable policy probe; no binary bytes exist",
+    "digest_basis_text": "Sable Harbor metadata-only unapproved executable probe v1",
+    "digest_sha256": "13cfa914314388cfcffffdbf9807d81f92ccf489e790710c68b6cbc12f102f95"
+  },
+  "real_network_packets": 0,
+  "real_executable_bytes_or_runs": 0,
+  "real_deployment": false,
+  "actual_phi": false,
+  "audit_task_credit": false
+}

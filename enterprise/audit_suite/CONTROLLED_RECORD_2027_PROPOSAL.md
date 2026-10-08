@@ -1,0 +1,14 @@
+# Fictional 2027 selected controlled-record pointer
+
+**Scope:** one selected company-native local classification recommendation for `DS-SIM-EHR-MARKER-METADATA-01` from independently reviewed SH-DAT-001 source, referenced by exact branch/system/record/version/SHA. This exercise records a controlled source locator and re-reads the original; it does not copy a prepared audit evidence pack, claim a complete enterprise records repository, or turn a local recommendation into accepted classification policy. The original dataset and fictional BA flow contain no person payload and establish no actual PHI applicability.
+
+The independently reviewed 283-route matrix contains exactly three SH-REC-001 documentary/activity discovery routes per side: `TASK-SH-REC-001-corporate-IMPLEMENTATION`, `TASK-SH-REC-001-corporate-TOD`, `TASK-SH-REC-001-corporate-TOE`. All remain `NOT_STARTED`/`NOT_RUN`. The candidate controlled-record repository is a search target, not a deployed source. Existing local data-quality activity has actor/time lineage for its own fixture, while `company_repository_documents.py` maps documentary originals; neither establishes the complete 2027 controlled-record population for this selected service.
+
+| Local event | Clean | Messy |
+|---|---|---|
+| Selected source | Reviewed DAT001 `classification_review` and `enforcement_followup`, with classification a local recommendation and enforcement unverified. | Same selected records plus the invalid local PUBLIC metadata label, preserving its branch-specific source identity. |
+| Registration | 2027-07-30 10:00Z: AS-P014 registers the exact source-native classification record pointer, actor/time/scope/outcome and SHA. | 2027-08-12 10:00Z: a local alias marker lacking source version/hash is logged as invalid, not admitted as an authoritative record. 11:00Z: AS-P014 registers the exact classification pointer while retaining the invalid alias history. |
+| Integrity and retrieval | 11:00Z exact source re-read verifies selected bytes. 2027-08-01 10:00Z a retrieval re-reads the original and reports its local recommendation status, without a prepared audit artifact. | 12:00Z exact source re-read detects and preserves the alias exception. 2027-08-13 10:00Z retrieval uses the exact original, never the alias; the exception remains open. |
+| Disposition | 2027-08-01 11:00Z defers retention/deletion/hold disposition. | 2027-08-13 11:00Z likewise defers. |
+
+The local denominator is one selected record per branch, four Clean and five Messy native events. AS-P014 is the proposed records/data custodian under pinned canon; accountable record-owner acceptance and legal/retention/hold authority remain unresolved. Future 2027 event and availability clocks are authored training-world time as of 2026-09-29; `imported_at` is actual insertion. No accepted policy, deletion, legal-hold release, real-world operation, P1 access/collection, task credit, Key or grade is asserted.

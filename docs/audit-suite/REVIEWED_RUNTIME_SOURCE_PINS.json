@@ -1,0 +1,26 @@
+{
+  "purpose": "Preserve the exact reviewed runtime source bytes; syntax, source integrity and domain tests still apply. Formatting and nonfunctional style findings must not silently change the source identities of retained histories.",
+  "files": {
+    "enterprise/audit_suite/compact_prefix_storage.py": "91136717cdc4388d3570e88ccd569e5db1dec1a03e5167d3fd4689f505be899c",
+    "enterprise/audit_suite/company_source_edition.py": "bc7b5cb6e5fc03953aa9b744ef98810737d4f8054776320ed85c95471b5e8983",
+    "enterprise/audit_suite/fictional_2027_source_portfolio.py": "bfcec9e49b314932097ff00478e9f5fc8c10c367a8577104163e8199771f19bb",
+    "enterprise/audit_suite/full_scope_company_pair.py": "fa89cbc05148ca7fbdb40ce563a68d853cefb5db2c463d5c7cc9250ad2470052",
+    "enterprise/audit_suite/history_integrity_reference.py": "f1a36afdd36a651c0b71971631afdc44bdaa58b0f9522c1b0e9a861c6de38497",
+    "enterprise/audit_suite/instructor_assessments.py": "31b0b3046dfc7202df5e7e92dfb0f16b02ae26349986b292f7eab3dbd50ac1bd",
+    "enterprise/audit_suite/instructor_comparison.py": "1f655df430dbe1a8f5754a5abf9831c819fa46ef2763b854b9fb3c0b6bfadbbd",
+    "enterprise/audit_suite/instructor_debrief.py": "73714145789c6dd4bbfb12a5628a464e3a5dd681c06c2678a04e9270e1204cf4",
+    "enterprise/audit_suite/managed_history_integrity.py": "dff4c9f69b78272a85ce0e2139c806e91dcca68e3ff558529a21ef1652f65f5c",
+    "enterprise/audit_suite/persistent_company_journey.py": "fe139cefb162ffdebb66b21e7b2178f4141d66820bbdf409d7bd738fb6c7aaaa",
+    "enterprise/audit_suite/persistent_company_service.py": "a30b0dca400f3ddace1054328f8cb7fb63a5da416f16fb0b957612663134892d",
+    "enterprise/audit_suite/retained_explanation_service.py": "7bd3002343abd67931c18154cdbbad02a8fed43ad8bfef27d36d89228869a0b5",
+    "enterprise/audit_suite/sealed_history_authority.py": "ae969747783823f6453acf428203d038181752d45401838f50af7a96f72c22c7",
+    "enterprise/audit_suite/sealed_history_inspection.py": "ff7733adfa61198d1f51e6cb25043fb694241c9a53ac32232759f7e456873ca1",
+    "enterprise/audit_suite/sealed_history_store.py": "e05e8591f6d6a53bd40e0ac955b0e3a395273a3c676cc6ca2ef001d21b5f87c4",
+    "enterprise/audit_suite/sealed_retained_service.py": "3d6d8e335d829684eed36270bbe4b92daba611e3db14acfa076f52f6820f5e3e",
+    "enterprise/audit_suite/service.py": "62f8eca0b254e43c2461a3cf91ccda704c60dc0aa92da964454fd1182bd7b3c5",
+    "enterprise/audit_suite/source_library_security_execution.py": "f6bae9a73cc6d60b4a61277ed309f019db2d79c312961721c1734e45085f493c",
+    "enterprise/audit_suite/source_native_operating_methods.py": "486266df8ef56f7096c92b8ac6b9fe0da7ecd12504503aa1a513e15db4a7be5e",
+    "enterprise/audit_suite/source_workforce_efficient_methods.py": "ff85ceda4996fad2aa111dd07c8846ad644cd00773ec927629e0f40b57d16e1d",
+    "enterprise/audit_suite/source_workforce_methods.py": "00a078645cf8bb0ec948f615adf4fa520920b11ca0a9585c3058e323fe77b3b6"
+  }
+}

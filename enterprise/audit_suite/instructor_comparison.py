@@ -197,10 +197,10 @@ def _compare(engine, principal, engagement_id, bindings, *, revision):
         raise DomainError("Explicit nonnegative historical revision required")
     bound = read_binding(engine, principal, engagement_id, bindings)
     snapshot = bound["snapshot"]
-    from .history_inspection import inspect_history
+    from .history_integrity_reference import inspect_selected_integrity, validate_reference
 
     original = snapshot["engagement"]
-    history = inspect_history(
+    history = inspect_selected_integrity(
         engine.store,
         principal["id"],
         engagement_id,
@@ -250,7 +250,12 @@ def _compare(engine, principal, engagement_id, bindings, *, revision):
         "bound_revision": original["revision"],
         "selected_history_revision": revision,
         "selected_state_sha256": digest(state),
-        "selected_history_sha256": history["prefix_sha256"][revision],
+        **({"schema_version": "2.0", "selected_history_integrity_reference":
+            validate_reference(history["selected_integrity_reference"][revision],
+                engagement=engagement_id, revision=revision,
+                state_sha256=digest(state), event_sha256=selected["hash"])}
+           if "selected_integrity_reference" in history else
+           {"selected_history_sha256": history["prefix_sha256"][revision]}),
         "selected_history_tip_sha256": selected["hash"],
         "current_revision": history["latest"]["revision"],
         "mismatches": mismatch,
@@ -312,3 +317,166 @@ def compare(engine, principal, engagement_id, bindings, *, revision):
             http_status=status,
         )
         raise
+
+
+# Opt-in transport only. The complete comparison and its historical checks above
+# remain unchanged; every deferred field is recoverable through the same route.
+COMPARISON_VIEW_SCHEMA = "SH_INSTRUCTOR_COMPARISON_TRANSPORT_V1"
+COMPARISON_VIEW_MAX_BYTES = 4 * 1024 * 1024
+COMPARISON_PAGE_LIMIT = 20
+_EXPECTATION_FAMILIES = (
+    "task_linked_workpaper_versions", "source_linked_workpaper_versions",
+    "workpaper_version_reviews", "source_linked_populations",
+    "population_linked_selections", "recorded_sample_executions",
+    "recorded_findings", "recorded_remediations",
+    "control_associated_records_only.requests", "control_associated_records_only.tasks",
+)
+_GLOBAL_FAMILIES = ("sources", "inspection.records", "audited_actor_activity")
+_SOURCE_FAMILIES = ("sources.exact_retained_artifacts", "sources.different_version_or_digest_artifact_ids")
+_SAMPLE_FAMILIES = (
+    "expectation.recorded_sample_executions.matched_items",
+    "expectation.recorded_sample_executions.matched_items.evidence",
+)
+
+
+def _view_require(condition, message, status=400):
+    if not condition:
+        raise DomainError(message, status=status)
+
+
+def _view_size(value):
+    import json
+
+    total = 0
+    encoder = json.JSONEncoder(ensure_ascii=False, allow_nan=False, separators=(",", ":"))
+    for part in encoder.iterencode(value):
+        # Count UTF-8 in bounded slices; do not encode an unbounded scalar at once.
+        for offset in range(0, len(part), 65536):
+            total += len(part[offset:offset + 65536].encode("utf-8"))
+            if total > COMPARISON_VIEW_MAX_BYTES:
+                return total
+    return total
+
+
+def _view_list(value):
+    _view_require(type(value) is list, "Comparison relationship list unavailable", 503)
+    return value
+
+
+def _view_one(rows, field, value):
+    _view_require(type(value) is str and 0 < len(value) <= 256, "Exact comparison record selector required")
+    matches = [row for row in rows if row.get(field) == value]
+    _view_require(len(matches) == 1, "Exact comparison record unavailable", 404)
+    return matches[0]
+
+
+def _view_descriptor(rows, family, **selectors):
+    return {"family": family, "count": len(rows), "sha256": digest(rows), **selectors}
+
+
+def _view_target(inventory, family, expectation_id, source_id, record_id, item_id):
+    _view_require(type(family) is str, "Exact comparison family required")
+    if family in _GLOBAL_FAMILIES:
+        _view_require(all(v is None for v in (expectation_id, source_id, record_id, item_id)), "Unexpected comparison selector")
+        if family == "inspection.records":
+            return _view_list(inventory["inspection"]["records"])
+        return _view_list(inventory[family])
+    if family in _SOURCE_FAMILIES:
+        _view_require(all(v is None for v in (expectation_id, record_id, item_id)), "Unexpected source selector")
+        row = _view_one(inventory["sources"], "source_id", source_id)
+        return _view_list(row[family.split(".", 1)[1]])
+    _view_require(source_id is None, "Unexpected expectation source selector")
+    row = _view_one(inventory["expectations"], "expectation_id", expectation_id)
+    if family == "expectation":
+        _view_require(record_id is None and item_id is None, "Unexpected expectation record selector")
+        return [row]
+    if family in _SAMPLE_FAMILIES:
+        sample = _view_one(row.get("recorded_sample_executions", []), "id", record_id)
+        if family.endswith(".evidence"):
+            item = _view_one(sample["matched_items"], "item_id", item_id)
+            return _view_list(item["evidence"])
+        _view_require(item_id is None, "Unexpected sample item selector")
+        return _view_list(sample["matched_items"])
+    _view_require(record_id is None and item_id is None, "Unexpected relationship record selector")
+    name = family.removeprefix("expectation.")
+    _view_require(family.startswith("expectation.") and name in _EXPECTATION_FAMILIES, "Unsupported comparison family")
+    if name.startswith("control_associated_records_only."):
+        return _view_list(row["control_associated_records_only"][name.rsplit(".", 1)[1]])
+    return _view_list(row.get(name, []))
+
+
+def _view_row(row, family, expectation_id=None, record_id=None):
+    if type(row) is not dict:
+        return row
+    value = dict(row)
+    deferred = {}
+    if family == "expectation":
+        for name in _EXPECTATION_FAMILIES:
+            if name.startswith("control_associated_records_only."):
+                rows = row["control_associated_records_only"][name.rsplit(".", 1)[1]]
+            else:
+                rows = row.get(name, [])
+                value.pop(name, None)
+            deferred[name] = _view_descriptor(rows, "expectation." + name, expectation_id=row["expectation_id"])
+        value.pop("control_associated_records_only", None)
+    elif family == "sources":
+        for name in ("exact_retained_artifacts", "different_version_or_digest_artifact_ids"):
+            deferred[name] = _view_descriptor(row[name], "sources." + name, source_id=row["source_id"])
+            value.pop(name)
+    elif family == "expectation.recorded_sample_executions":
+        deferred["matched_items"] = _view_descriptor(row["matched_items"], family + ".matched_items", expectation_id=expectation_id, record_id=row["id"])
+        value.pop("matched_items")
+    elif family == "expectation.recorded_sample_executions.matched_items":
+        deferred["evidence"] = _view_descriptor(row["evidence"], family + ".evidence", expectation_id=expectation_id, record_id=record_id, item_id=row["item_id"])
+        value.pop("evidence")
+    if deferred:
+        value["_comparison_deferred"] = deferred
+    return value
+
+
+def comparison_view(inventory, *, view, family=None, expectation_id=None, source_id=None,
+                    record_id=None, item_id=None, inventory_sha256=None, target_sha256=None,
+                    offset=0, limit=COMPARISON_PAGE_LIMIT):
+    """Complete header or typed bounded page; never alter the full inventory."""
+    import re
+
+    _view_require(view in {"summary-v1", "detail-v1"}, "Exact comparison transport required")
+    _view_require(type(offset) is int and offset >= 0 and type(limit) is int and 1 <= limit <= COMPARISON_PAGE_LIMIT, "Bounded comparison page required")
+    full_sha = digest(inventory)
+    context = {k: v for k, v in inventory.items() if k not in {"sources", "expectations", "inspection", "audited_actor_activity"}}
+    transport = {"schema": COMPARISON_VIEW_SCHEMA, "inventory_sha256": full_sha,
+                 "complete_inventory_changed": False, "response_max_bytes": COMPARISON_VIEW_MAX_BYTES}
+    if view == "summary-v1":
+        _view_require(all(v is None for v in (family, expectation_id, source_id, record_id, item_id, inventory_sha256, target_sha256)) and offset == 0 and limit == COMPARISON_PAGE_LIMIT, "Summary does not accept detail selectors")
+        result = {**context, "comparison_transport": {**transport, "view": "SUMMARY"}}
+        if inventory["status"] == "DETERMINISTIC_LINK_INVENTORY_ONLY":
+            result["expectations"] = [{"expectation_id": row["expectation_id"], "status": row["status"],
+                                       "detail": _view_descriptor([row], "expectation", expectation_id=row["expectation_id"])}
+                                      for row in inventory["expectations"]]
+            result["deferred"] = {name: _view_descriptor(_view_target(inventory, name, None, None, None, None), name) for name in _GLOBAL_FAMILIES}
+            result["inspection"] = {k: v for k, v in inventory["inspection"].items() if k != "records"}
+            result["audited_actor_activity_count"] = len(inventory["audited_actor_activity"])
+        else:
+            result["inspection"] = inventory["inspection"]
+            result["expectations"] = []
+            result["deferred"] = {}
+    else:
+        _view_require(inventory["status"] == "DETERMINISTIC_LINK_INVENTORY_ONLY", "Selected comparison context unavailable", 409)
+        _view_require(type(inventory_sha256) is str and re.fullmatch(r"[a-f0-9]{64}", inventory_sha256) and inventory_sha256 == full_sha, "Comparison context changed; select again", 409)
+        rows = _view_target(inventory, family, expectation_id, source_id, record_id, item_id)
+        _view_require(type(target_sha256) is str and re.fullmatch(r"[a-f0-9]{64}", target_sha256) and target_sha256 == digest(rows), "Comparison relationship changed; select again", 409)
+        _view_require(offset <= len(rows), "Comparison page is outside the selected list")
+        result = {**context, "comparison_transport": {**transport, "view": "DETAIL"},
+                  "page": {"family": family, "target_sha256": target_sha256, "offset": offset,
+                           "total": len(rows), "next_offset": None, "rows": []}}
+        for row in rows[offset:offset + limit]:
+            projected = _view_row(row, family, expectation_id, record_id)
+            result["page"]["rows"].append(projected)
+            if _view_size(result) > COMPARISON_VIEW_MAX_BYTES:
+                result["page"]["rows"].pop()
+                _view_require(bool(result["page"]["rows"]), "Selected comparison record exceeds the bounded view; use its declared detail or complete packet", 413)
+                break
+        end = offset + len(result["page"]["rows"])
+        result["page"]["next_offset"] = end if end < len(rows) else None
+    _view_require(_view_size(result) <= COMPARISON_VIEW_MAX_BYTES, "Comparison header exceeds the bounded view; complete packet remains available", 413)
+    return result

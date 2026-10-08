@@ -20,6 +20,8 @@ import { ConversationProvenance } from "./ConversationProvenance";
 import { MeetingSourceContext } from "./MeetingSourceContext";
 import { MeetingConsultation } from "./MeetingConsultation";
 import { WorkGuidance } from "./WorkGuidance";
+import { RelatedWork, type RelatedWorkNavigation } from "./RelatedWork";
+import { resolveRelatedWork, type RelatedWorkReference } from "./relatedWork";
 import { TaskGapPanel } from "./TaskGapPanel";
 import { canRecordTaskGap, taskEligibleForGap } from "./taskGap";
 import { InstructorDebrief } from "./InstructorDebrief";
@@ -44,13 +46,23 @@ import type {
   SavedViewReferenceDescriptor,
 } from "./savedViews";
 import { selectedVersion } from "./investigationContext";
+import {
+  deferredPaper,
+  loadWorkspaceDetail,
+  paperVersion,
+  workspaceContext,
+} from "./workspaceDetail";
 import { WorkStatus } from "./WorkStatus";
 import { submitMeetingJob } from "./backgroundWork";
 import { WorkpaperSupport } from "./WorkpaperSupport";
 import { appendEvidenceReference } from "./workpaperSupport";
 import { TableWorkspace } from "./TableWorkspace";
 import CompanyPopulation from "./CompanyPopulation";
-import { createDraftStore, draftSourceBasis, type DraftKey } from "./draftContext";
+import {
+  createDraftStore,
+  draftSourceBasis,
+  type DraftKey,
+} from "./draftContext";
 import {
   createNavigationMemory,
   parseWorkspaceLink,
@@ -91,6 +103,7 @@ import SourceImpact from "./SourceImpact";
 import InstructorKey from "./InstructorKey";
 import BoundInstructorKey from "./BoundInstructorKey";
 import WorkspaceSearch from "./WorkspaceSearch";
+import { searchKinds, resolveSearchHit } from "./workspaceSearch";
 import CustomAuthoring from "./CustomAuthoring";
 import SelectionImport from "./SelectionImport";
 import SampleResponses from "./SampleResponses";
@@ -284,9 +297,33 @@ type DetailContext = {
   focusMessage?: MessagePin;
   savedAtRevision?: number;
   pinnedReference?: Row;
+  relatedReference?: RelatedWorkReference;
+  relatedContext?: string;
+  relatedNavigation?: RelatedWorkNavigation;
   returnToBoundSource?: boolean;
 };
+function detailRequestKey(
+  e: Engagement | null,
+  d: DetailContext | null,
+  viewer = "",
+) {
+  return e && d
+    ? JSON.stringify([
+        workspaceContext(e, viewer),
+        d.kind,
+        d.row.id,
+        d.focusVersion,
+      ])
+    : "";
+}
 export default function App() {
+  const [referenceSelection, setReferenceSelection] = useState<{
+    engagementId: string;
+    viewerId: string;
+    revision: number;
+    currentId?: string;
+    legacyId?: string;
+  } | null>(null);
   const [bootstrap, setBootstrap] = useState<Bootstrap | null>(null),
     [engagement, setEngagement] = useState<Engagement | null>(null),
     [section, setSection] = useState<Section>("kickoff"),
@@ -314,13 +351,31 @@ export default function App() {
     element: HTMLElement;
     context: string;
   } | null>(null);
-  const gapOpener = useRef<{ element: HTMLButtonElement; context: string } | null>(null);
+  const gapOpener = useRef<{
+    element: HTMLButtonElement;
+    context: string;
+  } | null>(null);
   const uploadRef = useRef<HTMLInputElement>(null);
   const navigationMemory = useRef(createNavigationMemory());
   const draftStore = useRef(createDraftStore());
   const navigationEpoch = useRef(0);
   const authorizedContext = useRef("");
   const currentEngagement = useRef<string | null>(null);
+  const detailCurrent = useRef({
+    engagement,
+    detail,
+    viewer: bootstrap?.viewer.id ?? "",
+  });
+  detailCurrent.current = {
+    engagement,
+    detail,
+    viewer: bootstrap?.viewer.id ?? "",
+  };
+  const [detailRead, setDetailRead] = useState({
+    key: "",
+    busy: false,
+    error: "",
+  });
   const [sourceSelection, setSourceSelection] = useState<{
     key: string;
     pins: SourcePin[];
@@ -454,7 +509,8 @@ export default function App() {
     if (id !== currentEngagement.current) clearContext();
     try {
       const b = await request<Bootstrap>("/api/bootstrap");
-      if (epoch !== navigationEpoch.current) return;
+      if (epoch !== navigationEpoch.current || search !== location.search)
+        return;
       setCSRF(b.csrf_token);
       setBootstrap(b);
       setUnauthorized(false);
@@ -466,7 +522,8 @@ export default function App() {
             ),
           )
         : null;
-      if (epoch !== navigationEpoch.current) return;
+      if (epoch !== navigationEpoch.current || search !== location.search)
+        return;
       const resolved = parseWorkspaceLink(search, fetched);
       if (resolved.status !== "ready" || !fetched) {
         clearContext();
@@ -490,6 +547,7 @@ export default function App() {
         const singular: Record<string, string> = {
           people: "person",
           controls: "control",
+          tasks: "task",
           requests: "request",
           artifacts: "artifact",
           populations: "population",
@@ -507,11 +565,12 @@ export default function App() {
         });
       }
       requestAnimationFrame(() => {
-        if (epoch === navigationEpoch.current)
+        if (epoch === navigationEpoch.current && search === location.search)
           window.scrollTo(0, saved.scrollTop);
       });
     } catch (e) {
-      if (epoch !== navigationEpoch.current) return;
+      if (epoch !== navigationEpoch.current || search !== location.search)
+        return;
       clearContext();
       if (e instanceof ApiError && e.status === 401) setUnauthorized(true);
       else setError((e as Error).message);
@@ -580,6 +639,8 @@ export default function App() {
     };
     setDetail((previous) => {
       if (!previous) return null;
+      if (previous.relatedContext && previous.relatedContext !== sourceContext)
+        return null;
       if (
         previous.savedAtRevision !== undefined &&
         previous.savedAtRevision !== engagement.revision
@@ -600,6 +661,11 @@ export default function App() {
       )
         return null;
       if (
+        previous.relatedReference &&
+        !resolveRelatedWork(engagement, previous.relatedReference)
+      )
+        return null;
+      if (
         previous.focusVersion !== undefined &&
         !workpaperVersions(rows[0]).some(
           (version) => version.version === previous.focusVersion,
@@ -614,6 +680,47 @@ export default function App() {
       return { ...previous, row: rows[0] };
     });
   }, [engagement, bootstrap]);
+  useEffect(() => {
+    if (
+      !engagement ||
+      detail?.kind !== "workpaper" ||
+      !deferredPaper(detail.row, detail.focusVersion)
+    )
+      return;
+    const e = engagement,
+      d = detail,
+      viewer = bootstrap?.viewer.id ?? "";
+    const key = detailRequestKey(e, d, viewer);
+    const version = Number(paperVersion(d.row, d.focusVersion)?.version);
+    let cancelled = false;
+    const current = () =>
+      !cancelled &&
+      detailRequestKey(
+        detailCurrent.current.engagement,
+        detailCurrent.current.detail,
+        detailCurrent.current.viewer,
+      ) === key;
+    setDetailRead({ key, busy: true, error: "" });
+    void loadWorkspaceDetail(e, "workpapers", d.row, version)
+      .then((row) => {
+        if (!current()) return;
+        setDetail((previous) => (previous ? { ...previous, row } : null));
+        setDetailRead({ key, busy: false, error: "" });
+      })
+      .catch((error) => {
+        if (current())
+          setDetailRead({ key, busy: false, error: (error as Error).message });
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [
+    engagement,
+    bootstrap?.viewer.id,
+    detail?.kind,
+    detail?.row,
+    detail?.focusVersion,
+  ]);
   useEffect(() => {
     if (!engagement || !["GENERATING", "VALIDATING"].includes(engagement.phase))
       return;
@@ -711,9 +818,16 @@ export default function App() {
   ) {
     setEvidenceHandoff(null);
     setAction({
-      title, kind, fields, initial, description,
+      title,
+      kind,
+      fields,
+      initial,
+      description,
       sourceBasis: engagement
-        ? draftSourceBasis(engagement.company_source_binding, engagement.evidence_acquisition)
+        ? draftSourceBasis(
+            engagement.company_source_binding,
+            engagement.evidence_acquisition,
+          )
         : undefined,
     });
   }
@@ -834,7 +948,7 @@ export default function App() {
           } as DraftKey,
           initial: compatibleWorkpaperValues(
             action.kind,
-            draftPaper
+            draftPaper && !deferredPaper(draftPaper)
               ? newWorkpaperVersion(draftPaper)
               : (action.initial ?? {}),
             bootstrap.capabilities,
@@ -1438,7 +1552,9 @@ export default function App() {
                 key={id}
                 disabled={!e || setup}
                 className={e && section === id && !setup ? "active" : ""}
-                aria-current={e && section === id && !setup ? "page" : undefined}
+                aria-current={
+                  e && section === id && !setup ? "page" : undefined
+                }
                 onClick={() => navigate(id)}
               >
                 <span>{String(i + 1).padStart(2, "0")}</span>
@@ -1559,7 +1675,30 @@ export default function App() {
               engagement={e}
               viewerId={bootstrap.viewer.id}
               onPreview={(kind, row) => setDetail({ kind, row })}
-              onNavigate={navigate}
+              onOpenRecord={(hit) => {
+                const row = resolveSearchHit(e, hit);
+                if (
+                  !row ||
+                  currentEngagement.current !== e.id ||
+                  renderEpoch !== navigationEpoch.current
+                )
+                  return;
+                savePosition();
+                restorePosition(hit.section);
+                setDetail({ kind: hit.kind, row });
+                history.pushState(
+                  {},
+                  "",
+                  workspaceLink({
+                    engagement: e.id,
+                    section: hit.section,
+                    object: {
+                      kind: searchKinds[hit.kind].collection,
+                      id: hit.id,
+                    },
+                  }),
+                );
+              }}
             />
           )}
           <div id="main" tabIndex={-1}>
@@ -1909,6 +2048,20 @@ export default function App() {
                       )}
                       columns={[
                         {
+                          key: "inspect",
+                          label: "Inspect",
+                          render: (r, sequence) => (
+                            <button
+                              type="button"
+                              onClick={() =>
+                                setDetail({ row: r, kind: "task", sequence })
+                              }
+                            >
+                              Inspect procedure {r.id}
+                            </button>
+                          ),
+                        },
+                        {
                           key: "id",
                           label: "Task",
                           render: (r) => (
@@ -1981,7 +2134,10 @@ export default function App() {
                             <button
                               type="button"
                               onClick={(event) => {
-                                gapOpener.current = { element: event.currentTarget, context: sourceContext };
+                                gapOpener.current = {
+                                  element: event.currentTarget,
+                                  context: sourceContext,
+                                };
                                 setGapTaskId(r.id);
                               }}
                             >
@@ -2775,6 +2931,22 @@ export default function App() {
                   {e.permissions?.includes("instruct") &&
                     bootstrap.capabilities.bound_instructor_keys && (
                       <BoundInstructorKey
+                        referenceCurrent={
+                          referenceSelection?.engagementId === e.id &&
+                          referenceSelection.viewerId === bootstrap.viewer.id &&
+                          referenceSelection.revision === e.revision
+                            ? referenceSelection.currentId
+                            : undefined
+                        }
+                        onReferenceLegacy={(id) => {
+                          setReferenceSelection({
+                            engagementId: e.id,
+                            viewerId: bootstrap.viewer.id,
+                            revision: e.revision,
+                            legacyId: id,
+                          });
+                          setSection("review");
+                        }}
                         assessmentsEnabled={
                           bootstrap.capabilities.instructor_assessments === true
                         }
@@ -2845,6 +3017,23 @@ export default function App() {
                         "instructor_reference_library",
                       ) && (
                         <InstructorKey
+                          referenceLegacy={
+                            referenceSelection?.engagementId === e.id &&
+                            referenceSelection.viewerId ===
+                              bootstrap.viewer.id &&
+                            referenceSelection.revision === e.revision
+                              ? referenceSelection.legacyId
+                              : undefined
+                          }
+                          onReferenceCurrent={(id) => {
+                            setReferenceSelection({
+                              engagementId: e.id,
+                              viewerId: bootstrap.viewer.id,
+                              revision: e.revision,
+                              currentId: id,
+                            });
+                            setSection("review");
+                          }}
                           viewerId={bootstrap.viewer.id}
                           savedViewsEnabled={
                             bootstrap.capabilities.instructor_key_views === true
@@ -3083,14 +3272,19 @@ export default function App() {
         {action && (
           <ActionForm
             sourceContextStale={
-              !!e && action.sourceBasis !== undefined &&
+              !!e &&
+              action.sourceBasis !== undefined &&
               action.sourceBasis !==
-                draftSourceBasis(e.company_source_binding, e.evidence_acquisition)
+                draftSourceBasis(
+                  e.company_source_binding,
+                  e.evidence_acquisition,
+                )
             }
             onReviewSource={() => {
               if (!e) return;
               const basis = draftSourceBasis(
-                e.company_source_binding, e.evidence_acquisition,
+                e.company_source_binding,
+                e.evidence_acquisition,
               );
               setAction((current) =>
                 current
@@ -3266,9 +3460,24 @@ export default function App() {
             title={str(detail.row.title ?? detail.row.name ?? detail.row.id)}
             onClose={() => setDetail(null)}
           >
-            {savedViewsPanel}
-            {checkpointPanel}
-            {handoffsPanel}
+            {detail.kind === "workpaper" &&
+              deferredPaper(detail.row, detail.focusVersion) && (
+                <p role={detailRead.error ? "alert" : "status"}>
+                  {detailRead.key ===
+                    detailRequestKey(e, detail, bootstrap.viewer.id) &&
+                  detailRead.error
+                    ? detailRead.error
+                    : "Loading the exact retained workpaper version. Its text is not yet loaded."}
+                </p>
+              )}
+            {(detail.kind !== "workpaper" ||
+              !deferredPaper(detail.row, detail.focusVersion)) && (
+              <>
+                {savedViewsPanel}
+                {checkpointPanel}
+                {handoffsPanel}
+              </>
+            )}
             {detail.returnToBoundSource && (
               <button type="button" onClick={() => setDetail(null)}>
                 Back to bound source
@@ -3280,6 +3489,8 @@ export default function App() {
                 onClick={() => {
                   const back = detail.returnTo!;
                   const collections: Record<string, string> = {
+                    control: "controls",
+                    task: "tasks",
                     population: "populations",
                     selection: "selections",
                     artifact: "artifacts",
@@ -3294,8 +3505,17 @@ export default function App() {
                     ...(back.row.sha256 ? { sha256: back.row.sha256 } : {}),
                   };
                   const target = lineageReference(e, ref);
-                  if (target) setDetail({ ...back, row: target.row });
-                  else
+                  if (target) {
+                    setDetail({ ...back, row: target.row });
+                    requestAnimationFrame(() => {
+                      const dialog =
+                        document.querySelector<HTMLDialogElement>(
+                          "dialog[open]",
+                        );
+                      dialog?.focus({ preventScroll: true });
+                      if (dialog) dialog.scrollTop = 0;
+                    });
+                  } else
                     setError(
                       "The original inspection context is no longer available at its pinned version.",
                     );
@@ -3303,6 +3523,44 @@ export default function App() {
               >
                 Back to {detail.returnTo.kind} {detail.returnTo.row.id}
               </button>
+            )}
+            {["control", "task"].includes(detail.kind) && (
+              <RelatedWork
+                key={sourceContext + ":" + detail.kind + ":" + detail.row.id}
+                engagement={e}
+                kind={detail.kind as "control" | "task"}
+                objectId={detail.row.id}
+                navigation={
+                  detail.relatedNavigation ?? { query: "", limits: {} }
+                }
+                onNavigationChange={(value) =>
+                  setDetail({
+                    ...detail,
+                    relatedContext: sourceContext,
+                    relatedNavigation: value,
+                  })
+                }
+                onOpen={(reference) => {
+                  const target = resolveRelatedWork(e, reference);
+                  if (target)
+                    setDetail({
+                      kind: target.kind,
+                      row: target.row,
+                      returnTo: detail.returnTo ?? detail,
+                      relatedReference: reference,
+                      relatedContext: sourceContext,
+                      ...(reference.collection === "workpapers"
+                        ? { focusVersion: reference.version }
+                        : {}),
+                    });
+                  requestAnimationFrame(() => {
+                    const dialog =
+                      document.querySelector<HTMLDialogElement>("dialog[open]");
+                    dialog?.focus({ preventScroll: true });
+                    if (dialog) dialog.scrollTop = 0;
+                  });
+                }}
+              />
             )}
             {["population", "selection"].includes(detail.kind) && (
               <PopulationLineage
@@ -3393,48 +3651,96 @@ export default function App() {
                     (p) => p === "learn" || p === "instruct",
                   ) && (
                     <button
-                      disabled={busy}
-                      onClick={() => {
-                        const paper = detail.row;
-                        setDetail(null);
-                        edit(
-                          "Save a new workpaper version",
-                          "workpaper.update",
-                          [
-                            f("section", "Section", "text", false),
-                            f("objective", "Objective", "textarea"),
-                            f(
-                              "procedures",
-                              "Nature, timing and extent",
-                              "textarea",
-                            ),
-                            f(
-                              "text",
-                              "Work performed and explanation",
-                              "textarea",
-                              false,
-                            ),
-                            f(
-                              "artifact_id",
-                              "Retained original artifact ID",
-                              "text",
-                              false,
-                            ),
-                            f(
-                              "evidence_ids",
-                              "Evidence references",
-                              "text",
-                              false,
-                            ),
-                            f(
-                              "conclusion",
-                              "Conclusion and limitations",
-                              "textarea",
-                            ),
-                          ],
-                          newWorkpaperVersion(paper),
-                          "This creates a successor revision. Earlier versions and reviews remain available.",
+                      disabled={
+                        busy || deferredPaper(detail.row, detail.focusVersion)
+                      }
+                      onClick={async () => {
+                        const sourceKey = workspaceContext(
+                          e,
+                          bootstrap.viewer.id,
                         );
+                        const key = detailRequestKey(
+                          e,
+                          detail,
+                          bootstrap.viewer.id,
+                        );
+                        let paper = detail.row;
+                        try {
+                          if (deferredPaper(paper)) {
+                            setBusy(true);
+                            paper = await loadWorkspaceDetail(
+                              e,
+                              "workpapers",
+                              paper,
+                              Number(paperVersion(paper)?.version),
+                            );
+                          }
+                          if (
+                            detailRequestKey(
+                              detailCurrent.current.engagement,
+                              detailCurrent.current.detail,
+                              detailCurrent.current.viewer,
+                            ) !== key
+                          )
+                            return;
+                          setDetail(null);
+                          edit(
+                            "Save a new workpaper version",
+                            "workpaper.update",
+                            [
+                              f("section", "Section", "text", false),
+                              f("objective", "Objective", "textarea"),
+                              f(
+                                "procedures",
+                                "Nature, timing and extent",
+                                "textarea",
+                              ),
+                              f(
+                                "text",
+                                "Work performed and explanation",
+                                "textarea",
+                                false,
+                              ),
+                              f(
+                                "artifact_id",
+                                "Retained original artifact ID",
+                                "text",
+                                false,
+                              ),
+                              f(
+                                "evidence_ids",
+                                "Evidence references",
+                                "text",
+                                false,
+                              ),
+                              f(
+                                "conclusion",
+                                "Conclusion and limitations",
+                                "textarea",
+                              ),
+                            ],
+                            newWorkpaperVersion(paper),
+                            "This creates a successor revision. Earlier versions and reviews remain available.",
+                          );
+                        } catch (err) {
+                          if (
+                            detailRequestKey(
+                              detailCurrent.current.engagement,
+                              detailCurrent.current.detail,
+                              detailCurrent.current.viewer,
+                            ) === key
+                          )
+                            setError((err as Error).message);
+                        } finally {
+                          if (
+                            detailCurrent.current.engagement &&
+                            workspaceContext(
+                              detailCurrent.current.engagement,
+                              detailCurrent.current.viewer,
+                            ) === sourceKey
+                          )
+                            setBusy(false);
+                        }
                       }}
                     >
                       Save new version
@@ -3459,7 +3765,40 @@ export default function App() {
                       { key: "recorded_at", label: "Recorded at" },
                       { key: "objective", label: "Objective" },
                       { key: "procedures", label: "Procedures" },
-                      { key: "text", label: "Work performed" },
+                      {
+                        key: "text",
+                        label: "Work performed",
+                        render: (version) =>
+                          deferredPaper(detail.row, Number(version.version)) ? (
+                            <button
+                              disabled={busy}
+                              onClick={() =>
+                                setDetail({
+                                  ...detail,
+                                  focusVersion: Number(version.version),
+                                })
+                              }
+                            >
+                              Load full text of version{" "}
+                              {String(version.version)}
+                            </button>
+                          ) : str(version.text).length <= 100_000 ? (
+                            str(version.text)
+                          ) : (
+                            <details>
+                              <summary>
+                                Full retained work performed (
+                                {Array.from(
+                                  str(version.text),
+                                ).length.toLocaleString()}{" "}
+                                characters)
+                              </summary>
+                              <pre className="retained-workpaper-text">
+                                {str(version.text)}
+                              </pre>
+                            </details>
+                          ),
+                      },
                       {
                         key: "artifact_id",
                         label: "Original",
@@ -3478,19 +3817,32 @@ export default function App() {
                         key: "id",
                         label: "Independent review",
                         render: (version) =>
-                          canReviewWorkpaper(
-                            detail.row,
-                            bootstrap?.viewer.id,
-                            e.permissions,
-                            version,
-                          ) ? (
+                          deferredPaper(detail.row, Number(version.version)) ? (
+                            <button
+                              disabled={busy}
+                              onClick={() =>
+                                setDetail({
+                                  ...detail,
+                                  focusVersion: Number(version.version),
+                                })
+                              }
+                            >
+                              Load this version before review
+                            </button>
+                          ) : canReviewWorkpaper(
+                              detail.row,
+                              bootstrap?.viewer.id,
+                              e.permissions,
+                              version,
+                            ) ? (
                             <WorkpaperReviewAction
                               key={JSON.stringify([
                                 bootstrap.viewer.id,
                                 e.id,
                                 e.revision,
                                 e.permissions,
-                                version,
+                                version.version,
+                                version._workspace_version_sha256,
                               ])}
                               version={version}
                               supported={
@@ -3810,7 +4162,7 @@ export default function App() {
                     onResolveHuman={(payload) => {
                       setDetail(null);
                       edit(
-                        "Resolve human review",
+                        "Resolve recorded review",
                         "review.resolve",
                         [
                           f(
@@ -3820,7 +4172,7 @@ export default function App() {
                           ),
                         ],
                         payload,
-                        "This separate reviewer action resolves the human comment against the current retained workpaper version. It preserves earlier comments and responses; it does not accept any AI suggestion.",
+                        "This separate reviewer action resolves the recorded comment against the current retained workpaper version. It preserves its origin, earlier comments and responses; it does not assert professional acceptance or accept any AI suggestion.",
                       );
                     }}
                     onRespond={(payload) => {

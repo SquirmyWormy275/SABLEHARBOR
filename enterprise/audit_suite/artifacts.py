@@ -8,6 +8,7 @@ import html
 import io
 import os
 import re
+import stat
 import zipfile
 from pathlib import Path
 
@@ -374,6 +375,38 @@ class Artifacts:
         data = path.read_bytes()
         if hashlib.sha256(data).hexdigest() != content_hash or len(data) != manifest["bytes"]:
             raise DomainError("Artifact integrity failure")
+        return data
+
+    def read_bounded(self, manifest: dict, *, max_bytes: int) -> bytes:
+        """Read a pinned original through a physical byte limit for diagnostic paths."""
+        content_hash = manifest.get("sha256", "")
+        if not re.fullmatch("[0-9a-f]{64}", content_hash):
+            raise DomainError("Invalid artifact identity")
+        if type(max_bytes) is not int or not 0 <= max_bytes <= MAX_BYTES:
+            raise DomainError("Invalid bounded artifact read limit")
+        directory_fd = os.open(self.root, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW)
+        try:
+            fd = os.open(content_hash, os.O_RDONLY | os.O_NOFOLLOW, dir_fd=directory_fd)
+        finally:
+            os.close(directory_fd)
+        with os.fdopen(fd, "rb") as stream:
+            before = os.fstat(stream.fileno())
+            if (
+                not stat.S_ISREG(before.st_mode)
+                or before.st_nlink != 1
+                or before.st_size > max_bytes
+            ):
+                raise DomainError("Artifact exceeds bounded read or is not a regular original")
+            data = stream.read(max_bytes + 1)
+            after = os.fstat(stream.fileno())
+            if (
+                len(data) > max_bytes
+                or (before.st_dev, before.st_ino, before.st_size, before.st_mtime_ns)
+                != (after.st_dev, after.st_ino, after.st_size, after.st_mtime_ns)
+                or len(data) != manifest.get("bytes")
+                or hashlib.sha256(data).hexdigest() != content_hash
+            ):
+                raise DomainError("Artifact bounded read integrity failure")
         return data
 
     def bundle(self, manifests: list[dict], *, index: dict | None = None) -> bytes:

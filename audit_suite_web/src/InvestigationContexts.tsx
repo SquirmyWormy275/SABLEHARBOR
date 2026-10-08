@@ -1,3 +1,4 @@
+import { DeferredPanel } from "./DeferredPanel";
 import { useEffect, useRef, useState } from "react";
 import { ApiError, request } from "./api";
 import type { Engagement, Row } from "./api";
@@ -27,19 +28,20 @@ export function InvestigationContexts(props: {
     props.engagement.evidence_acquisition,
   ]);
   return (
-    <details className="panel">
-      <summary>Saved investigations</summary>
-      <ContextPanel key={key} {...props} />
-    </details>
+    <DeferredPanel context={key} summary="Saved investigations">
+      {(visible) => <ContextPanel key={key} {...props} visible={visible} />}
+    </DeferredPanel>
   );
 }
 function ContextPanel({
   engagement: e,
   onPreview,
+  visible,
 }: {
   engagement: Engagement;
   viewerId: string;
   onPreview: (kind: string, row: Row) => void;
+  visible: boolean;
 }) {
   const [saved, setSaved] = useState<SavedInvestigation[]>([]),
     [editing, setEditing] = useState<SavedInvestigation | null>(null);
@@ -55,7 +57,7 @@ function ContextPanel({
     [busy, setBusy] = useState(false),
     [conflict, setConflict] = useState(false);
   const [basisReviewed, setBasisReviewed] = useState(false);
-  const alive = useRef(true);
+  const alive = useRef(true), loadSequence = useRef(0);
   const pendingSave = useRef<{ signature: string; commandId: string } | null>(
     null,
   );
@@ -63,21 +65,27 @@ function ContextPanel({
     ["learn", "instruct", "review"].includes(p),
   );
   const load = async () => {
+    const token = ++loadSequence.current;
     const data = await request<{ contexts: SavedInvestigation[] }>(
       contextsPath(e.id),
     );
-    if (alive.current) setSaved(data.contexts);
+    if (alive.current && token === loadSequence.current) setSaved(data.contexts);
   };
   useEffect(() => {
     alive.current = true;
-    if (allowed)
-      void load().catch((err) => {
-        if (alive.current) setError(String(err.message));
-      });
     return () => {
       alive.current = false;
+      loadSequence.current++;
     };
-  }, [e.id, allowed, e.revision]);
+  }, []);
+  useEffect(() => {
+    if (!visible || !allowed) return;
+    const token = loadSequence.current + 1;
+    void load().catch((err) => {
+      if (alive.current && token === loadSequence.current) setError(String(err.message));
+    });
+    return () => { loadSequence.current++; };
+  }, [e.id, allowed, e.revision, visible]);
   const dirty =
     JSON.stringify(form) !==
     JSON.stringify(

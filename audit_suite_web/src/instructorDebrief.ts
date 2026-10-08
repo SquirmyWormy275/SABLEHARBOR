@@ -1,3 +1,7 @@
+import {
+  assertSelectedHistoryIntegrityReference,
+  type SelectedHistoryIntegrityReference,
+} from "./instructorAssessments";
 /** Compare JSON structure without recomputing server-owned canonical digests. */
 export function sameDebriefValue(a: unknown, b: unknown): boolean {
   if (a === b) return true;
@@ -176,7 +180,6 @@ export type DebriefSourceReference = {
   };
 };
 export type SelectedDebrief = {
-  schema: "SELECTED_INSTRUCTOR_DEBRIEF_V1";
   source_references: DebriefSourceReference[];
   title: string;
   version: number;
@@ -187,7 +190,6 @@ export type SelectedDebrief = {
     revision: number;
     state_sha256: string;
     event_sha256: string;
-    history_sha256: string;
     qualification: string;
     simulated_at?: string | null;
   };
@@ -210,7 +212,26 @@ export type SelectedDebrief = {
     annotations: DebriefAnnotation[];
   }[];
   qualification: string;
-};
+} & (
+  | { schema: "SELECTED_INSTRUCTOR_DEBRIEF_V1"; learner: { history_sha256: string; history_integrity_reference?: never } }
+  | { schema: "SELECTED_INSTRUCTOR_DEBRIEF_V2"; learner: { history_sha256?: never; history_integrity_reference: SelectedHistoryIntegrityReference } }
+);
+export function validSelectedDebriefHistory(doc: SelectedDebrief, engagementId: string): boolean {
+  const learner = doc?.learner;
+  if (!learner || typeof engagementId !== "string" || !engagementId ||
+      !Number.isSafeInteger(learner.revision) || learner.revision < 0 ||
+      ![learner.state_sha256, learner.event_sha256].every(debriefPin)) return false;
+  if (doc.schema === "SELECTED_INSTRUCTOR_DEBRIEF_V1")
+    return debriefPin(learner.history_sha256) &&
+      !Object.prototype.hasOwnProperty.call(learner, "history_integrity_reference");
+  if (doc.schema !== "SELECTED_INSTRUCTOR_DEBRIEF_V2" ||
+      Object.prototype.hasOwnProperty.call(learner, "history_sha256")) return false;
+  try {
+    assertSelectedHistoryIntegrityReference(learner.history_integrity_reference,
+      engagementId, learner.revision, learner.state_sha256, learner.event_sha256);
+    return true;
+  } catch { return false; }
+}
 export type DebriefPreview = {
   preview: {
     id: string;
@@ -252,16 +273,11 @@ export function debriefPreviewMatches(
     v.content.text === d.title &&
     v.content.pointers.length === 0 &&
     Date.parse(v.expires_at) > Date.now() &&
-    doc.schema === "SELECTED_INSTRUCTOR_DEBRIEF_V1" &&
+    validSelectedDebriefHistory(doc, eid) &&
     doc.title === d.title &&
     doc.key_manifest_sha256 === o.key_manifest_sha256 &&
     doc.learner.actor_id === d.recipient_id &&
     doc.learner.revision === d.learner_revision &&
-    [
-      doc.learner.state_sha256,
-      doc.learner.event_sha256,
-      doc.learner.history_sha256,
-    ].every(debriefPin) &&
     (doc.predecessor?.release_id ?? null) === d.predecessor_release_id &&
     validDebriefSourceReferences(doc) &&
     doc.sections.length === d.sections.length &&

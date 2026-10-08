@@ -1,0 +1,2021 @@
+{
+  "bound": {
+    "binding": {
+      "manifest_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "engagement_id": "OWN-76",
+      "bound_revision": 2,
+      "current_revision": 2,
+      "status": "MATCHING_REVISION"
+    },
+    "snapshot": {
+      "status": "BOUND_INSTRUCTOR_AUTHORED_UNVALIDATED",
+      "professional_validation": "UNVALIDATED",
+      "authored_status": "INSTRUCTOR_AUTHORED_INFERENCE",
+      "grading": "NOT_PERFORMED",
+      "engagement": {
+        "id": "OWN-76",
+        "revision": 2,
+        "scope": {
+          "boundaries": [
+            "corporate"
+          ],
+          "period_start": "2027-01-01",
+          "period_end": "2027-12-31"
+        },
+        "simulated_at": "2028-01-01"
+      },
+      "sources": [
+        {
+          "id": "S0",
+          "company": "OWN",
+          "branch": "OWN",
+          "system": "SYS",
+          "record": "R0",
+          "version": 1,
+          "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "event_at": "2027-01-01T00:00:00Z",
+          "available_at": "2027-01-02T00:00:00Z",
+          "imported_at": "2027-02-01T00:00:00Z",
+          "actor_granted_at_binding": true,
+          "actor_visibility_at_binding": "DISCOVERABLE_LATEST",
+          "retained_audit_artifact_ids": [],
+          "fact_verification": "Declared metadata, no operating credit"
+        },
+        {
+          "id": "S1",
+          "company": "OWN",
+          "branch": "OWN",
+          "system": "SYS",
+          "record": "R1",
+          "version": 1,
+          "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "event_at": "2027-01-01T00:00:00Z",
+          "available_at": "2027-01-02T00:00:00Z",
+          "imported_at": "2027-02-01T00:00:00Z",
+          "actor_granted_at_binding": true,
+          "actor_visibility_at_binding": "DISCOVERABLE_LATEST",
+          "retained_audit_artifact_ids": [],
+          "fact_verification": "Declared metadata, no operating credit"
+        },
+        {
+          "id": "S2",
+          "company": "OWN",
+          "branch": "OWN",
+          "system": "SYS",
+          "record": "R2",
+          "version": 1,
+          "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "event_at": "2027-01-01T00:00:00Z",
+          "available_at": "2027-01-02T00:00:00Z",
+          "imported_at": "2027-02-01T00:00:00Z",
+          "actor_granted_at_binding": true,
+          "actor_visibility_at_binding": "DISCOVERABLE_LATEST",
+          "retained_audit_artifact_ids": [],
+          "fact_verification": "Declared metadata, no operating credit"
+        },
+        {
+          "id": "S3",
+          "company": "OWN",
+          "branch": "OWN",
+          "system": "SYS",
+          "record": "R3",
+          "version": 1,
+          "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "event_at": "2027-01-01T00:00:00Z",
+          "available_at": "2027-01-02T00:00:00Z",
+          "imported_at": "2027-02-01T00:00:00Z",
+          "actor_granted_at_binding": true,
+          "actor_visibility_at_binding": "DISCOVERABLE_LATEST",
+          "retained_audit_artifact_ids": [],
+          "fact_verification": "Declared metadata, no operating credit"
+        },
+        {
+          "id": "S4",
+          "company": "OWN",
+          "branch": "OWN",
+          "system": "SYS",
+          "record": "R4",
+          "version": 1,
+          "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "event_at": "2027-01-01T00:00:00Z",
+          "available_at": "2027-01-02T00:00:00Z",
+          "imported_at": "2027-02-01T00:00:00Z",
+          "actor_granted_at_binding": true,
+          "actor_visibility_at_binding": "DISCOVERABLE_LATEST",
+          "retained_audit_artifact_ids": [],
+          "fact_verification": "Declared metadata, no operating credit"
+        },
+        {
+          "id": "S5",
+          "company": "OWN",
+          "branch": "OWN",
+          "system": "SYS",
+          "record": "R5",
+          "version": 1,
+          "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "event_at": "2027-01-01T00:00:00Z",
+          "available_at": "2027-01-02T00:00:00Z",
+          "imported_at": "2027-02-01T00:00:00Z",
+          "actor_granted_at_binding": true,
+          "actor_visibility_at_binding": "DISCOVERABLE_LATEST",
+          "retained_audit_artifact_ids": [],
+          "fact_verification": "Declared metadata, no operating credit"
+        },
+        {
+          "id": "S6",
+          "company": "OWN",
+          "branch": "OWN",
+          "system": "SYS",
+          "record": "R6",
+          "version": 1,
+          "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "event_at": "2027-01-01T00:00:00Z",
+          "available_at": "2027-01-02T00:00:00Z",
+          "imported_at": "2027-02-01T00:00:00Z",
+          "actor_granted_at_binding": true,
+          "actor_visibility_at_binding": "DISCOVERABLE_LATEST",
+          "retained_audit_artifact_ids": [],
+          "fact_verification": "Declared metadata, no operating credit"
+        },
+        {
+          "id": "S7",
+          "company": "OWN",
+          "branch": "OWN",
+          "system": "SYS",
+          "record": "R7",
+          "version": 1,
+          "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "event_at": "2027-01-01T00:00:00Z",
+          "available_at": "2027-01-02T00:00:00Z",
+          "imported_at": "2027-02-01T00:00:00Z",
+          "actor_granted_at_binding": true,
+          "actor_visibility_at_binding": "DISCOVERABLE_LATEST",
+          "retained_audit_artifact_ids": [],
+          "fact_verification": "Declared metadata, no operating credit"
+        },
+        {
+          "id": "S8",
+          "company": "OWN",
+          "branch": "OWN",
+          "system": "SYS",
+          "record": "R8",
+          "version": 1,
+          "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "event_at": "2027-01-01T00:00:00Z",
+          "available_at": "2027-01-02T00:00:00Z",
+          "imported_at": "2027-02-01T00:00:00Z",
+          "actor_granted_at_binding": true,
+          "actor_visibility_at_binding": "DISCOVERABLE_LATEST",
+          "retained_audit_artifact_ids": [],
+          "fact_verification": "Declared metadata, no operating credit"
+        },
+        {
+          "id": "S9",
+          "company": "OWN",
+          "branch": "OWN",
+          "system": "SYS",
+          "record": "R9",
+          "version": 1,
+          "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "event_at": "2027-01-01T00:00:00Z",
+          "available_at": "2027-01-02T00:00:00Z",
+          "imported_at": "2027-02-01T00:00:00Z",
+          "actor_granted_at_binding": true,
+          "actor_visibility_at_binding": "DISCOVERABLE_LATEST",
+          "retained_audit_artifact_ids": [],
+          "fact_verification": "Declared metadata, no operating credit"
+        },
+        {
+          "id": "S10",
+          "company": "OWN",
+          "branch": "OWN",
+          "system": "SYS",
+          "record": "R10",
+          "version": 1,
+          "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "event_at": "2027-01-01T00:00:00Z",
+          "available_at": "2027-01-02T00:00:00Z",
+          "imported_at": "2027-02-01T00:00:00Z",
+          "actor_granted_at_binding": true,
+          "actor_visibility_at_binding": "DISCOVERABLE_LATEST",
+          "retained_audit_artifact_ids": [],
+          "fact_verification": "Declared metadata, no operating credit"
+        },
+        {
+          "id": "S11",
+          "company": "OWN",
+          "branch": "OWN",
+          "system": "SYS",
+          "record": "R11",
+          "version": 1,
+          "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "event_at": "2027-01-01T00:00:00Z",
+          "available_at": "2027-01-02T00:00:00Z",
+          "imported_at": "2027-02-01T00:00:00Z",
+          "actor_granted_at_binding": true,
+          "actor_visibility_at_binding": "DISCOVERABLE_LATEST",
+          "retained_audit_artifact_ids": [],
+          "fact_verification": "Declared metadata, no operating credit"
+        }
+      ],
+      "authored": {
+        "issues": [
+          {
+            "id": "OWN-CARD-01",
+            "control_ids": [
+              "CONTROL-1"
+            ],
+            "source_ids": [
+              "S0",
+              "S4",
+              "S8"
+            ],
+            "claim": "Declared specific interpretation 1",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-02",
+            "control_ids": [
+              "CONTROL-2"
+            ],
+            "source_ids": [
+              "S1",
+              "S5",
+              "S9"
+            ],
+            "claim": "Declared specific interpretation 2",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-03",
+            "control_ids": [
+              "CONTROL-3"
+            ],
+            "source_ids": [
+              "S2",
+              "S6",
+              "S10"
+            ],
+            "claim": "Declared specific interpretation 3",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-04",
+            "control_ids": [
+              "CONTROL-4"
+            ],
+            "source_ids": [
+              "S3",
+              "S7",
+              "S11"
+            ],
+            "claim": "Declared specific interpretation 4",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-05",
+            "control_ids": [
+              "CONTROL-1"
+            ],
+            "source_ids": [
+              "S0",
+              "S4",
+              "S8"
+            ],
+            "claim": "Declared specific interpretation 5",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-06",
+            "control_ids": [
+              "CONTROL-2"
+            ],
+            "source_ids": [
+              "S1",
+              "S5",
+              "S9"
+            ],
+            "claim": "Declared specific interpretation 6",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-07",
+            "control_ids": [
+              "CONTROL-3"
+            ],
+            "source_ids": [
+              "S2",
+              "S6",
+              "S10"
+            ],
+            "claim": "Declared specific interpretation 7",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-08",
+            "control_ids": [
+              "CONTROL-4"
+            ],
+            "source_ids": [
+              "S3",
+              "S7",
+              "S11"
+            ],
+            "claim": "Declared specific interpretation 8",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-09",
+            "control_ids": [
+              "CONTROL-1"
+            ],
+            "source_ids": [
+              "S0",
+              "S4",
+              "S8"
+            ],
+            "claim": "Declared specific interpretation 9",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-10",
+            "control_ids": [
+              "CONTROL-2"
+            ],
+            "source_ids": [
+              "S1",
+              "S5",
+              "S9"
+            ],
+            "claim": "Declared specific interpretation 10",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-11",
+            "control_ids": [
+              "CONTROL-3"
+            ],
+            "source_ids": [
+              "S2",
+              "S6",
+              "S10"
+            ],
+            "claim": "Declared specific interpretation 11",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-12",
+            "control_ids": [
+              "CONTROL-4"
+            ],
+            "source_ids": [
+              "S3",
+              "S7",
+              "S11"
+            ],
+            "claim": "Declared specific interpretation 12",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-13",
+            "control_ids": [
+              "CONTROL-1"
+            ],
+            "source_ids": [
+              "S0",
+              "S4",
+              "S8"
+            ],
+            "claim": "Declared specific interpretation 13",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-14",
+            "control_ids": [
+              "CONTROL-2"
+            ],
+            "source_ids": [
+              "S1",
+              "S5",
+              "S9"
+            ],
+            "claim": "Declared specific interpretation 14",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-15",
+            "control_ids": [
+              "CONTROL-3"
+            ],
+            "source_ids": [
+              "S2",
+              "S6",
+              "S10"
+            ],
+            "claim": "Declared specific interpretation 15",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-16",
+            "control_ids": [
+              "CONTROL-4"
+            ],
+            "source_ids": [
+              "S3",
+              "S7",
+              "S11"
+            ],
+            "claim": "Declared specific interpretation 16",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-17",
+            "control_ids": [
+              "CONTROL-1"
+            ],
+            "source_ids": [
+              "S0",
+              "S4",
+              "S8"
+            ],
+            "claim": "Declared specific interpretation 17",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-18",
+            "control_ids": [
+              "CONTROL-2"
+            ],
+            "source_ids": [
+              "S1",
+              "S5",
+              "S9"
+            ],
+            "claim": "Declared specific interpretation 18",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-19",
+            "control_ids": [
+              "CONTROL-3"
+            ],
+            "source_ids": [
+              "S2",
+              "S6",
+              "S10"
+            ],
+            "claim": "Declared specific interpretation 19",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-20",
+            "control_ids": [
+              "CONTROL-4"
+            ],
+            "source_ids": [
+              "S3",
+              "S7",
+              "S11"
+            ],
+            "claim": "Declared specific interpretation 20",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-21",
+            "control_ids": [
+              "CONTROL-1"
+            ],
+            "source_ids": [
+              "S0",
+              "S4",
+              "S8"
+            ],
+            "claim": "Declared specific interpretation 21",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-22",
+            "control_ids": [
+              "CONTROL-2"
+            ],
+            "source_ids": [
+              "S1",
+              "S5",
+              "S9"
+            ],
+            "claim": "Declared specific interpretation 22",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-23",
+            "control_ids": [
+              "CONTROL-3"
+            ],
+            "source_ids": [
+              "S2",
+              "S6",
+              "S10"
+            ],
+            "claim": "Declared specific interpretation 23",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-24",
+            "control_ids": [
+              "CONTROL-4"
+            ],
+            "source_ids": [
+              "S3",
+              "S7",
+              "S11"
+            ],
+            "claim": "Declared specific interpretation 24",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-25",
+            "control_ids": [
+              "CONTROL-1"
+            ],
+            "source_ids": [
+              "S0",
+              "S4",
+              "S8"
+            ],
+            "claim": "Declared specific interpretation 25",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-26",
+            "control_ids": [
+              "CONTROL-2"
+            ],
+            "source_ids": [
+              "S1",
+              "S5",
+              "S9"
+            ],
+            "claim": "Declared specific interpretation 26",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-27",
+            "control_ids": [
+              "CONTROL-3"
+            ],
+            "source_ids": [
+              "S2",
+              "S6",
+              "S10"
+            ],
+            "claim": "Declared specific interpretation 27",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-28",
+            "control_ids": [
+              "CONTROL-4"
+            ],
+            "source_ids": [
+              "S3",
+              "S7",
+              "S11"
+            ],
+            "claim": "Declared specific interpretation 28",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-29",
+            "control_ids": [
+              "CONTROL-1"
+            ],
+            "source_ids": [
+              "S0",
+              "S4",
+              "S8"
+            ],
+            "claim": "Declared specific interpretation 29",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-30",
+            "control_ids": [
+              "CONTROL-2"
+            ],
+            "source_ids": [
+              "S1",
+              "S5",
+              "S9"
+            ],
+            "claim": "Declared specific interpretation 30",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-31",
+            "control_ids": [
+              "CONTROL-3"
+            ],
+            "source_ids": [
+              "S2",
+              "S6",
+              "S10"
+            ],
+            "claim": "Declared specific interpretation 31",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-32",
+            "control_ids": [
+              "CONTROL-4"
+            ],
+            "source_ids": [
+              "S3",
+              "S7",
+              "S11"
+            ],
+            "claim": "Declared specific interpretation 32",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-33",
+            "control_ids": [
+              "CONTROL-1"
+            ],
+            "source_ids": [
+              "S0",
+              "S4",
+              "S8"
+            ],
+            "claim": "Declared specific interpretation 33",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-34",
+            "control_ids": [
+              "CONTROL-2"
+            ],
+            "source_ids": [
+              "S1",
+              "S5",
+              "S9"
+            ],
+            "claim": "Declared specific interpretation 34",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-35",
+            "control_ids": [
+              "CONTROL-3"
+            ],
+            "source_ids": [
+              "S2",
+              "S6",
+              "S10"
+            ],
+            "claim": "Declared specific interpretation 35",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-36",
+            "control_ids": [
+              "CONTROL-4"
+            ],
+            "source_ids": [
+              "S3",
+              "S7",
+              "S11"
+            ],
+            "claim": "Declared specific interpretation 36",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-37",
+            "control_ids": [
+              "CONTROL-1"
+            ],
+            "source_ids": [
+              "S0",
+              "S4",
+              "S8"
+            ],
+            "claim": "Declared specific interpretation 37",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-38",
+            "control_ids": [
+              "CONTROL-2"
+            ],
+            "source_ids": [
+              "S1",
+              "S5",
+              "S9"
+            ],
+            "claim": "Declared specific interpretation 38",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-39",
+            "control_ids": [
+              "CONTROL-3"
+            ],
+            "source_ids": [
+              "S2",
+              "S6",
+              "S10"
+            ],
+            "claim": "Declared specific interpretation 39",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-40",
+            "control_ids": [
+              "CONTROL-4"
+            ],
+            "source_ids": [
+              "S3",
+              "S7",
+              "S11"
+            ],
+            "claim": "Declared specific interpretation 40",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-41",
+            "control_ids": [
+              "CONTROL-1"
+            ],
+            "source_ids": [
+              "S0",
+              "S4",
+              "S8"
+            ],
+            "claim": "Declared specific interpretation 41",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-42",
+            "control_ids": [
+              "CONTROL-2"
+            ],
+            "source_ids": [
+              "S1",
+              "S5",
+              "S9"
+            ],
+            "claim": "Declared specific interpretation 42",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-43",
+            "control_ids": [
+              "CONTROL-3"
+            ],
+            "source_ids": [
+              "S2",
+              "S6",
+              "S10"
+            ],
+            "claim": "Declared specific interpretation 43",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-44",
+            "control_ids": [
+              "CONTROL-4"
+            ],
+            "source_ids": [
+              "S3",
+              "S7",
+              "S11"
+            ],
+            "claim": "Declared specific interpretation 44",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-45",
+            "control_ids": [
+              "CONTROL-1"
+            ],
+            "source_ids": [
+              "S0",
+              "S4",
+              "S8"
+            ],
+            "claim": "Declared specific interpretation 45",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-46",
+            "control_ids": [
+              "CONTROL-2"
+            ],
+            "source_ids": [
+              "S1",
+              "S5",
+              "S9"
+            ],
+            "claim": "Declared specific interpretation 46",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-47",
+            "control_ids": [
+              "CONTROL-3"
+            ],
+            "source_ids": [
+              "S2",
+              "S6",
+              "S10"
+            ],
+            "claim": "Declared specific interpretation 47",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-48",
+            "control_ids": [
+              "CONTROL-4"
+            ],
+            "source_ids": [
+              "S3",
+              "S7",
+              "S11"
+            ],
+            "claim": "Declared specific interpretation 48",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-49",
+            "control_ids": [
+              "CONTROL-1"
+            ],
+            "source_ids": [
+              "S0",
+              "S4",
+              "S8"
+            ],
+            "claim": "Declared specific interpretation 49",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-50",
+            "control_ids": [
+              "CONTROL-2"
+            ],
+            "source_ids": [
+              "S1",
+              "S5",
+              "S9"
+            ],
+            "claim": "Declared specific interpretation 50",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-51",
+            "control_ids": [
+              "CONTROL-3"
+            ],
+            "source_ids": [
+              "S2",
+              "S6",
+              "S10"
+            ],
+            "claim": "Declared specific interpretation 51",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-52",
+            "control_ids": [
+              "CONTROL-4"
+            ],
+            "source_ids": [
+              "S3",
+              "S7",
+              "S11"
+            ],
+            "claim": "Declared specific interpretation 52",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-53",
+            "control_ids": [
+              "CONTROL-1"
+            ],
+            "source_ids": [
+              "S0",
+              "S4",
+              "S8"
+            ],
+            "claim": "Declared specific interpretation 53",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-54",
+            "control_ids": [
+              "CONTROL-2"
+            ],
+            "source_ids": [
+              "S1",
+              "S5",
+              "S9"
+            ],
+            "claim": "Declared specific interpretation 54",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-55",
+            "control_ids": [
+              "CONTROL-3"
+            ],
+            "source_ids": [
+              "S2",
+              "S6",
+              "S10"
+            ],
+            "claim": "Declared specific interpretation 55",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-56",
+            "control_ids": [
+              "CONTROL-4"
+            ],
+            "source_ids": [
+              "S3",
+              "S7",
+              "S11"
+            ],
+            "claim": "Declared specific interpretation 56",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-57",
+            "control_ids": [
+              "CONTROL-1"
+            ],
+            "source_ids": [
+              "S0",
+              "S4",
+              "S8"
+            ],
+            "claim": "Declared specific interpretation 57",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-58",
+            "control_ids": [
+              "CONTROL-2"
+            ],
+            "source_ids": [
+              "S1",
+              "S5",
+              "S9"
+            ],
+            "claim": "Declared specific interpretation 58",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-59",
+            "control_ids": [
+              "CONTROL-3"
+            ],
+            "source_ids": [
+              "S2",
+              "S6",
+              "S10"
+            ],
+            "claim": "Declared specific interpretation 59",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-60",
+            "control_ids": [
+              "CONTROL-4"
+            ],
+            "source_ids": [
+              "S3",
+              "S7",
+              "S11"
+            ],
+            "claim": "Declared specific interpretation 60",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-61",
+            "control_ids": [
+              "CONTROL-1"
+            ],
+            "source_ids": [
+              "S0",
+              "S4",
+              "S8"
+            ],
+            "claim": "Declared specific interpretation 61",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-62",
+            "control_ids": [
+              "CONTROL-2"
+            ],
+            "source_ids": [
+              "S1",
+              "S5",
+              "S9"
+            ],
+            "claim": "Declared specific interpretation 62",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-63",
+            "control_ids": [
+              "CONTROL-3"
+            ],
+            "source_ids": [
+              "S2",
+              "S6",
+              "S10"
+            ],
+            "claim": "Declared specific interpretation 63",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-64",
+            "control_ids": [
+              "CONTROL-4"
+            ],
+            "source_ids": [
+              "S3",
+              "S7",
+              "S11"
+            ],
+            "claim": "Declared specific interpretation 64",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-65",
+            "control_ids": [
+              "CONTROL-1"
+            ],
+            "source_ids": [
+              "S0",
+              "S4",
+              "S8"
+            ],
+            "claim": "Declared specific interpretation 65",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-66",
+            "control_ids": [
+              "CONTROL-2"
+            ],
+            "source_ids": [
+              "S1",
+              "S5",
+              "S9"
+            ],
+            "claim": "Declared specific interpretation 66",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-67",
+            "control_ids": [
+              "CONTROL-3"
+            ],
+            "source_ids": [
+              "S2",
+              "S6",
+              "S10"
+            ],
+            "claim": "Declared specific interpretation 67",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-68",
+            "control_ids": [
+              "CONTROL-4"
+            ],
+            "source_ids": [
+              "S3",
+              "S7",
+              "S11"
+            ],
+            "claim": "Declared specific interpretation 68",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-69",
+            "control_ids": [
+              "CONTROL-1"
+            ],
+            "source_ids": [
+              "S0",
+              "S4",
+              "S8"
+            ],
+            "claim": "Declared specific interpretation 69",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-70",
+            "control_ids": [
+              "CONTROL-2"
+            ],
+            "source_ids": [
+              "S1",
+              "S5",
+              "S9"
+            ],
+            "claim": "Declared specific interpretation 70",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-71",
+            "control_ids": [
+              "CONTROL-3"
+            ],
+            "source_ids": [
+              "S2",
+              "S6",
+              "S10"
+            ],
+            "claim": "Declared specific interpretation 71",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-72",
+            "control_ids": [
+              "CONTROL-4"
+            ],
+            "source_ids": [
+              "S3",
+              "S7",
+              "S11"
+            ],
+            "claim": "Declared specific interpretation 72",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-73",
+            "control_ids": [
+              "CONTROL-1"
+            ],
+            "source_ids": [
+              "S0",
+              "S4",
+              "S8"
+            ],
+            "claim": "Declared specific interpretation 73",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-74",
+            "control_ids": [
+              "CONTROL-2"
+            ],
+            "source_ids": [
+              "S1",
+              "S5",
+              "S9"
+            ],
+            "claim": "Declared specific interpretation 74",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-75",
+            "control_ids": [
+              "CONTROL-3"
+            ],
+            "source_ids": [
+              "S2",
+              "S6",
+              "S10"
+            ],
+            "claim": "Declared specific interpretation 75",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          },
+          {
+            "id": "OWN-CARD-76",
+            "control_ids": [
+              "CONTROL-4"
+            ],
+            "source_ids": [
+              "S3",
+              "S7",
+              "S11"
+            ],
+            "claim": "Declared specific interpretation 76",
+            "uncertainty": "No actual Key or whole-control acceptance"
+          }
+        ],
+        "expectations": [
+          {
+            "id": "EXPECT-1",
+            "issue_ids": [
+              "OWN-CARD-01"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-2",
+            "issue_ids": [
+              "OWN-CARD-02"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-3",
+            "issue_ids": [
+              "OWN-CARD-03"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-4",
+            "issue_ids": [
+              "OWN-CARD-04"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-5",
+            "issue_ids": [
+              "OWN-CARD-05"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-6",
+            "issue_ids": [
+              "OWN-CARD-06"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-7",
+            "issue_ids": [
+              "OWN-CARD-07"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-8",
+            "issue_ids": [
+              "OWN-CARD-08"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-9",
+            "issue_ids": [
+              "OWN-CARD-09"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-10",
+            "issue_ids": [
+              "OWN-CARD-10"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-11",
+            "issue_ids": [
+              "OWN-CARD-11"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-12",
+            "issue_ids": [
+              "OWN-CARD-12"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-13",
+            "issue_ids": [
+              "OWN-CARD-13"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-14",
+            "issue_ids": [
+              "OWN-CARD-14"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-15",
+            "issue_ids": [
+              "OWN-CARD-15"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-16",
+            "issue_ids": [
+              "OWN-CARD-16"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-17",
+            "issue_ids": [
+              "OWN-CARD-17"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-18",
+            "issue_ids": [
+              "OWN-CARD-18"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-19",
+            "issue_ids": [
+              "OWN-CARD-19"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-20",
+            "issue_ids": [
+              "OWN-CARD-20"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-21",
+            "issue_ids": [
+              "OWN-CARD-21"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-22",
+            "issue_ids": [
+              "OWN-CARD-22"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-23",
+            "issue_ids": [
+              "OWN-CARD-23"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-24",
+            "issue_ids": [
+              "OWN-CARD-24"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-25",
+            "issue_ids": [
+              "OWN-CARD-25"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-26",
+            "issue_ids": [
+              "OWN-CARD-26"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-27",
+            "issue_ids": [
+              "OWN-CARD-27"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-28",
+            "issue_ids": [
+              "OWN-CARD-28"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-29",
+            "issue_ids": [
+              "OWN-CARD-29"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-30",
+            "issue_ids": [
+              "OWN-CARD-30"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-31",
+            "issue_ids": [
+              "OWN-CARD-31"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-32",
+            "issue_ids": [
+              "OWN-CARD-32"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-33",
+            "issue_ids": [
+              "OWN-CARD-33"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-34",
+            "issue_ids": [
+              "OWN-CARD-34"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-35",
+            "issue_ids": [
+              "OWN-CARD-35"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-36",
+            "issue_ids": [
+              "OWN-CARD-36"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-37",
+            "issue_ids": [
+              "OWN-CARD-37"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-38",
+            "issue_ids": [
+              "OWN-CARD-38"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-39",
+            "issue_ids": [
+              "OWN-CARD-39"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-40",
+            "issue_ids": [
+              "OWN-CARD-40"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-41",
+            "issue_ids": [
+              "OWN-CARD-41"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-42",
+            "issue_ids": [
+              "OWN-CARD-42"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-43",
+            "issue_ids": [
+              "OWN-CARD-43"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-44",
+            "issue_ids": [
+              "OWN-CARD-44"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-45",
+            "issue_ids": [
+              "OWN-CARD-45"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-46",
+            "issue_ids": [
+              "OWN-CARD-46"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-47",
+            "issue_ids": [
+              "OWN-CARD-47"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-48",
+            "issue_ids": [
+              "OWN-CARD-48"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-49",
+            "issue_ids": [
+              "OWN-CARD-49"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-50",
+            "issue_ids": [
+              "OWN-CARD-50"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-51",
+            "issue_ids": [
+              "OWN-CARD-51"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-52",
+            "issue_ids": [
+              "OWN-CARD-52"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-53",
+            "issue_ids": [
+              "OWN-CARD-53"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-54",
+            "issue_ids": [
+              "OWN-CARD-54"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-55",
+            "issue_ids": [
+              "OWN-CARD-55"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-56",
+            "issue_ids": [
+              "OWN-CARD-56"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-57",
+            "issue_ids": [
+              "OWN-CARD-57"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-58",
+            "issue_ids": [
+              "OWN-CARD-58"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-59",
+            "issue_ids": [
+              "OWN-CARD-59"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-60",
+            "issue_ids": [
+              "OWN-CARD-60"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-61",
+            "issue_ids": [
+              "OWN-CARD-61"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-62",
+            "issue_ids": [
+              "OWN-CARD-62"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-63",
+            "issue_ids": [
+              "OWN-CARD-63"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-64",
+            "issue_ids": [
+              "OWN-CARD-64"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-65",
+            "issue_ids": [
+              "OWN-CARD-65"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-66",
+            "issue_ids": [
+              "OWN-CARD-66"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-67",
+            "issue_ids": [
+              "OWN-CARD-67"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-68",
+            "issue_ids": [
+              "OWN-CARD-68"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-69",
+            "issue_ids": [
+              "OWN-CARD-69"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-70",
+            "issue_ids": [
+              "OWN-CARD-70"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-71",
+            "issue_ids": [
+              "OWN-CARD-71"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-72",
+            "issue_ids": [
+              "OWN-CARD-72"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-73",
+            "issue_ids": [
+              "OWN-CARD-73"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-74",
+            "issue_ids": [
+              "OWN-CARD-74"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-75",
+            "issue_ids": [
+              "OWN-CARD-75"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          },
+          {
+            "id": "EXPECT-76",
+            "issue_ids": [
+              "OWN-CARD-76"
+            ],
+            "procedure": "Declared procedure only",
+            "acceptable_alternatives": [
+              "Supported alternative"
+            ]
+          }
+        ],
+        "uncertainty": [
+          "Unvalidated metadata"
+        ],
+        "source_pins": {}
+      },
+      "software_verified": [
+        "Declared metadata only"
+      ],
+      "limits": [
+        "No actual source or Key acceptance"
+      ]
+    }
+  },
+  "engagement": {
+    "id": "OWN-76",
+    "revision": 2,
+    "permissions": [
+      "instruct"
+    ],
+    "scope": {
+      "boundaries": [
+        "corporate"
+      ],
+      "period_start": "2027-01-01",
+      "period_end": "2027-12-31"
+    },
+    "artifacts": [],
+    "controls": [
+      {
+        "id": "CONTROL-1",
+        "title": "Declared control 1"
+      },
+      {
+        "id": "CONTROL-2",
+        "title": "Declared control 2"
+      },
+      {
+        "id": "CONTROL-3",
+        "title": "Declared control 3"
+      },
+      {
+        "id": "CONTROL-4",
+        "title": "Declared control 4"
+      }
+    ],
+    "tasks": []
+  }
+}

@@ -22,7 +22,11 @@ export function WorkpaperReviewAction({
   // Remount on exact version content, so stale selections cannot migrate between versions.
   return (
     <ReviewAction
-      key={JSON.stringify(version)}
+      key={
+        typeof version._workspace_version_sha256 === "string"
+          ? `${version.version}:${version._workspace_version_sha256}`
+          : JSON.stringify(version)
+      }
       version={version}
       supported={supported}
       disabled={disabled}

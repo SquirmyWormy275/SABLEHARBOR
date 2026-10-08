@@ -9,6 +9,7 @@ import copy
 import hashlib
 import json
 import os
+import re
 import stat
 import zipfile
 from collections import Counter
@@ -16,6 +17,226 @@ from pathlib import Path
 
 from .corpus import obligations, validate_variant
 from .store import DomainError, digest
+
+SEARCH_FIELDS = (
+    "title",
+    "mechanism",
+    "facts",
+    "actor_knowledge",
+    "artifacts",
+    "events",
+    "playable_paths",
+)
+MAX_SEARCH_TERMS = 32
+MAX_SEARCH_CHARACTERS = 128
+MAX_SEARCH_BYTES = 4 * 1024
+MAX_SEARCH_INDEX_BYTES = 8 * 1024 * 1024
+MAX_SEARCH_KEY_BYTES = 8 * 1024 * 1024
+MAX_COMPLETE_SEARCH_BYTES = 64 * 1024 * 1024
+MAX_SEARCH_QUERY_CHARACTERS = 1000
+MAX_SEARCH_RESULT_BYTES = 256 * 1024
+
+
+def semantic_search_query(value: str) -> str:
+    if not isinstance(value, str) or len(value) > MAX_SEARCH_QUERY_CHARACTERS:
+        raise DomainError("Bounded authored search query required")
+    try:
+        value.encode("utf-8")
+    except UnicodeError as error:
+        raise DomainError("Valid authored search Unicode required") from error
+    return value.strip().lower()
+
+
+def _authored_scalars(value):
+    if isinstance(value, dict):
+        for child in value.values():
+            yield from _authored_scalars(child)
+    elif isinstance(value, list):
+        for child in value:
+            yield from _authored_scalars(child)
+    elif value is None or type(value) in (str, int, float, bool):
+        yield value if isinstance(value, str) else json.dumps(value, allow_nan=False)
+
+
+def semantic_search_text(raw: bytes, entry: dict) -> str:
+    """Complete literal matching; display truncation never bounds this projection."""
+    semantic_search_projection(raw, entry)  # exact held source/Key binding
+    key = json.loads(raw)
+    review = entry["review"]
+    values = [
+        entry["id"],
+        entry["raw_sha256"],
+        entry["canonical_sha256"],
+        entry["key_sha256"],
+        review["professional"],
+        review["causal_validation"],
+        review["grading"],
+        *review["gaps"],
+    ]
+    for field in SEARCH_FIELDS:
+        values.extend(_authored_scalars(key["explanation"].get(field)))
+    return " ".join(values).lower()
+
+
+def semantic_search_matches(texts: dict[str, str], query: str) -> list[str]:
+    query = semantic_search_query(query)
+    return [identifier for identifier, text in texts.items() if query in text]
+
+
+def semantic_search_projection(raw: bytes, entry: dict) -> dict:
+    """Literal authored search terms, never inferred person/asset/audit metadata."""
+    if (
+        not isinstance(entry, dict)
+        or not isinstance(entry.get("id"), str)
+        or re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]{0,127}", entry["id"]) is None
+        or any(
+            not isinstance(entry.get(field), str)
+            or re.fullmatch(r"[a-f0-9]{64}", entry[field]) is None
+            for field in ("key_sha256", "raw_sha256", "canonical_sha256")
+        )
+    ):
+        raise DomainError("Semantic search identity/pins differ", status=503)
+    if len(raw) > MAX_SEARCH_KEY_BYTES or hashlib.sha256(raw).hexdigest() != entry["key_sha256"]:
+        raise DomainError("Semantic search key bytes differ", status=503)
+    key = json.loads(raw)
+    if (
+        key.get("schema") != "PRIVATE_INSTRUCTOR_KEY_V1"
+        or key.get("audience") != "INSTRUCTOR_ONLY"
+        or key.get("id") != entry["id"]
+        or key.get("source", {}).get("raw_sha256") != entry["raw_sha256"]
+        or key.get("source", {}).get("canonical_sha256") != entry["canonical_sha256"]
+        or digest(key.get("explanation")) != entry["canonical_sha256"]
+    ):
+        raise DomainError("Semantic search explanation binding differs", status=503)
+    terms, seen, truncated = [], 0, 0
+    term_bytes = 0
+    included = {field: 0 for field in SEARCH_FIELDS}
+    totals = {field: 0 for field in SEARCH_FIELDS}
+
+    def scalars(value, pointer):
+        if isinstance(value, dict):
+            for name, child in value.items():
+                # JSON pointers preserve literal field names; no role classification.
+                yield from scalars(
+                    child, pointer + "/" + name.replace("~", "~0").replace("/", "~1")
+                )
+        elif isinstance(value, list):
+            for number, child in enumerate(value):
+                yield from scalars(child, pointer + "/" + str(number))
+        elif value is None or type(value) in (str, int, float, bool):
+            yield pointer, value
+
+    # Title is first. Round-robin coverage prevents a large facts array from
+    # taking every slot before actor/artifact/event/path terms are considered.
+    readers = {
+        field: iter(scalars(key["explanation"].get(field), "/" + field)) for field in SEARCH_FIELDS
+    }
+    while readers:
+        for field in list(readers):
+            try:
+                pointer, value = next(readers[field])
+            except StopIteration:
+                del readers[field]
+                continue
+            seen += 1
+            totals[field] += 1
+            if len(terms) >= MAX_SEARCH_TERMS or len(pointer) > 256:
+                continue
+            text = value if isinstance(value, str) else json.dumps(value, allow_nan=False)
+            term = {"pointer": pointer, "text": text[:MAX_SEARCH_CHARACTERS]}
+            if len(text) > MAX_SEARCH_CHARACTERS:
+                term.update(truncated=True, full_characters=len(text), value_sha256=digest(value))
+            size = len(_json(term))
+            if term_bytes + size <= MAX_SEARCH_BYTES - 1536:
+                terms.append(term)
+                included[field] += 1
+                term_bytes += size
+                truncated += bool(term.get("truncated"))
+    result = {
+        "schema": "PRIVATE_AUTHORED_SEMANTIC_SEARCH_V1",
+        "basis": "LITERAL_AUTHORED_SCALARS_NOT_VERIFIED_PERSON_ASSET_PERIOD_OR_CAUSALITY",
+        "id": entry["id"],
+        "source_sha256": entry["raw_sha256"],
+        "canonical_sha256": entry["canonical_sha256"],
+        "key_sha256": entry["key_sha256"],
+        "coverage_fields": list(SEARCH_FIELDS),
+        "terms": terms,
+        "included_by_field": included,
+        "omitted_by_field": {field: totals[field] - included[field] for field in SEARCH_FIELDS},
+        "total_scalars": seen,
+        "omitted_scalars": seen - len(terms),
+        "truncated_values": truncated,
+    }
+    # Nested JSON indentation can be larger than individually measured terms.
+    # Trim display previews only; complete matching retains every scalar.
+    while terms and len(_json(result)) > MAX_SEARCH_BYTES:
+        removed = terms.pop()
+        field = removed["pointer"].split("/")[1]
+        result["included_by_field"][field] -= 1
+        result["omitted_by_field"][field] += 1
+        result["omitted_scalars"] += 1
+        result["truncated_values"] -= bool(removed.get("truncated"))
+    if len(_json(result)) > MAX_SEARCH_BYTES:
+        raise DomainError("Semantic search projection limit", status=503)
+    return result
+
+
+def semantic_search_index(root: Path, index: dict) -> dict:
+    """Enrich a verified index without changing any retained source/index/ZIP bytes."""
+    return semantic_search_bundle(root, index)[0]
+
+
+def semantic_search_bundle(root: Path, index: dict) -> tuple[dict, dict[str, str]]:
+    """Bounded immutable display and complete matching caches, never evidence outcomes."""
+    entries = []
+    texts = {}
+    complete_bytes = 0
+    for entry in index["entries"]:
+        path = Path(root) / entry["key"]
+        if (
+            not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]{0,127}", entry["id"])
+            or entry["key"] != "keys/" + entry["id"] + ".json"
+            or path.resolve() != path.absolute()
+        ):
+            raise DomainError("Semantic search key path differs", status=503)
+        before = path.stat()
+        if (
+            not stat.S_ISREG(before.st_mode)
+            or before.st_nlink != 1
+            or before.st_size > MAX_SEARCH_KEY_BYTES
+        ):
+            raise DomainError("Semantic search key input limit", status=503)
+        with path.open("rb") as stream:
+            raw = stream.read(MAX_SEARCH_KEY_BYTES + 1)
+        after = path.stat()
+        fields = (
+            "st_dev",
+            "st_ino",
+            "st_mode",
+            "st_nlink",
+            "st_size",
+            "st_mtime_ns",
+            "st_ctime_ns",
+        )
+        if any(getattr(before, field) != getattr(after, field) for field in fields):
+            raise DomainError("Semantic search key changed during read", status=503)
+        text = semantic_search_text(raw, entry)
+        complete_bytes += len(text.encode("utf-8"))
+        if entry["id"] in texts or complete_bytes > MAX_COMPLETE_SEARCH_BYTES:
+            raise DomainError("Complete authored search cache limit/duplicate identity", status=503)
+        texts[entry["id"]] = text
+        entries.append({**entry, "semantic_search": semantic_search_projection(raw, entry)})
+    result = {**index, "entries": entries}
+    result["semantic_matching"] = {
+        "schema": "PRIVATE_COMPLETE_AUTHORED_MATCHING_V1",
+        "coverage_fields": list(SEARCH_FIELDS),
+        "display_previews_only": True,
+        "complete_scalar_matching": True,
+        "query_max_characters": MAX_SEARCH_QUERY_CHARACTERS,
+    }
+    if len(_json(result)) > MAX_SEARCH_INDEX_BYTES:
+        raise DomainError("Semantic search index limit", status=503)
+    return result, texts
 
 
 def migrate_definition(raw: bytes, *, migration_version: int = 1) -> dict:

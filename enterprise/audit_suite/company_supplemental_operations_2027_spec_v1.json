@@ -1,0 +1,188 @@
+{
+  "as_of": "2026-10-01",
+  "base_commit": "56e09bb39af2edd49c2c19ceea4b59cbfe197003",
+  "canon_pins": {
+    "docs/canon/DECISION_REGISTER.md": "070dc6e6dad18b8e4c18fa530366b9fc8a396986371aee8a0e16ba732e6e1de4",
+    "docs/canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md": "1707ed7021576048ca5f1904ca5e94d484e8f7e2992da5c9e04965421f79a751",
+    "docs/canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md": "fd309a9bdf596ea96498b7207b60ea3bea70a35d8c418371aa96c06d928bb17b",
+    "docs/controls/CCF_CONTROL_OBJECTIVES_v0.1.md": "db7a189139b86fb51d684b6af3e681002b5e0f3f81c38c5bc15a61c20e4a59a3",
+    "docs/controls/CCF_POLICY_AND_ARTIFACT_INVENTORY_v0.1.md": "395198400d72211716f26f7376dd362993e538d0c081fdaaee3d148d642ea0dd",
+    "docs/controls/COMMON_CONTROL_CATALOG_v0.1.md": "6bc27636355eb21204471672bd04377ee12cf5530feadf9ec7049a5983015433",
+    "docs/governance/CORPORATE_DOCUMENT_STANDARD_v0.1.md": "0023bb32d4cac8739bc940a54714e46da936cb6ba30ce727556b219537129bbb",
+    "docs/governance/PEOPLE_AND_CULTURE_DOCTRINE.md": "9e8c8b6b3b3ce8500553adfc0e35e94956a8251d395fd8d39355f3d84c1dc5ee",
+    "docs/internal/development/audit-suite/FICTIONAL_2027_SCENARIO_DECISIONS_2026-09-29.md": "15198cd0bcc1de1c8872d4310ff7f1eef8fc89a5250d24af15f4ec19f8e78496",
+    "docs/organization/source/chartbook.json": "6ba4f1ed1a14581455a62c3e79a29ca59dbaf1270dfb0db850c0376c15507b49",
+    "docs/structured/enterprise_leadership_2026-09-13.json": "90ec45642cc50219544910e60e4bf6d28b810302c62f29c5936bf965501d673d",
+    "enterprise/audit_suite/DOCUMENTARY_283_ROUTE_RECONCILIATION_V17_2026-10-01.json": "43b33d7ca19e670eea704193fff947c268c2d1c736f0c8829420a556576e8bcb",
+    "enterprise/ccf/assurance/reference_data/soc2.json": "5470d51066710ee6e9700fc73a71dd18494fadd1987178c570c5596aa3b67ae1",
+    "enterprise/ccf/assurance/review_data/addressable_specifications.json": "8a7d8c5587b39f3c26ad4bd9bd1059d60ef220f9d920e13d0e1a9e753d2f1eef"
+  },
+  "licensed_reference": {
+    "edition": "2017 TSC / revised points of focus 2022",
+    "internally_reviewed_locators": [
+      "CC1.1",
+      "CC1.5",
+      "CC2.2",
+      "CC2.3",
+      "CC5.3",
+      "CC6.1"
+    ],
+    "path": "/home/kingoftheeast/Projects/Compliance-Atlas/references/publishers/aicpa-tsc-2017-pof-2022.pdf",
+    "redistribute_content": false,
+    "sha256": "23a099dd1dc273b7a45fda2351f376344c33fcb2911d586036c0e0d631b8ad69"
+  },
+  "predecessors": {
+    "addressable": {
+      "branches": {
+        "A": "ADDR-CLEAN",
+        "B": "ADDR-MESSY"
+      },
+      "pins": {
+        "enterprise/generated/audit-suite/company-addressable-docket-2026-09-29/run-v1/MANIFEST.json": "41f3b1c783c3c84217f86edd03febad42da00a25e22fcc38c41e6bf61aa910e1",
+        "enterprise/generated/audit-suite/company-addressable-docket-2026-09-29/run-v1/RECEIPT.json": "7ef4cb845b14259acd7ecfb015ff8d0626c3b0a4a9a3052b485764f6a164e0f0",
+        "enterprise/generated/audit-suite/company-addressable-docket-2026-09-29/run-v1/company.sqlite3": "50d9fe4f9a49c72b72537a8a3d7a5dbf0b9eb3e3171d8072ffd63748bc750305"
+      },
+      "root": "enterprise/generated/audit-suite/company-addressable-docket-2026-09-29/run-v1"
+    },
+    "conduct": {
+      "branches": {
+        "A": "ETH001-CLEAN",
+        "B": "ETH001-MESSY"
+      },
+      "pins": {
+        "enterprise/generated/audit-suite/company-eth001-conduct-2027-simulation-2026-09-30/independent-review-main-v1/REVIEW.json": "fbeae6830cfd479c2c354c22dad99adc5b8b89b9f57f99a014cbd15a1d73308d",
+        "enterprise/generated/audit-suite/company-eth001-conduct-2027-simulation-2026-09-30/main-run-v1/RUN-MANIFEST.json": "320aad65c8ee0bd0d79f89460c80da00f5b52062ac2e20a3964f28951de552bc",
+        "enterprise/generated/audit-suite/company-eth001-conduct-2027-simulation-2026-09-30/main-run-v1/SOURCE_RECEIPT.json": "876e78076e293a5432a34ec17a85497b9de91f20d27af6cf7d38bd9b3ad6ef5e",
+        "enterprise/generated/audit-suite/company-eth001-conduct-2027-simulation-2026-09-30/main-run-v1/company.sqlite3": "0ecf3e6fa6eaa2af01839fb5577188bf786e2669101729c71a2cf5cb4e47a3b8"
+      },
+      "root": "enterprise/generated/audit-suite/company-eth001-conduct-2027-simulation-2026-09-30/main-run-v1"
+    },
+    "integrity": {
+      "branches": {
+        "A": "INTEGRITY-CLEAN",
+        "B": "INTEGRITY-MESSY"
+      },
+      "pins": {
+        "enterprise/generated/audit-suite/company-integrity-chain-2026-09-29/independent-review-main-v1/REVIEW.json": "30dece8998714cf412acf618a0fea9b59c891fb64415e5124eb4c9d509756aee",
+        "enterprise/generated/audit-suite/company-integrity-chain-2026-09-29/run-v1/MANIFEST.json": "a653421101816ffbb76d8ca1950950415daa981db1464098fde74ed0859f978f",
+        "enterprise/generated/audit-suite/company-integrity-chain-2026-09-29/run-v1/RECEIPT.json": "1c7103abc21bb3c1e5cc955c751638417d6bea04c6ddf32e1c36fbaf2240efa0",
+        "enterprise/generated/audit-suite/company-integrity-chain-2026-09-29/run-v1/company.sqlite3": "ea3dcc5ac37fe1318d6df54d3c7469b3d895bbef2a1af77ff1e2d0738313c751"
+      },
+      "root": "enterprise/generated/audit-suite/company-integrity-chain-2026-09-29/run-v1"
+    },
+    "phi": {
+      "branches": {
+        "A": "PHI-CLEAN",
+        "B": "PHI-MESSY"
+      },
+      "pins": {
+        "enterprise/generated/audit-suite/company-phi-ba-2027-simulation-2026-09-29/independent-review-v1/REVIEW.json": "39bb9b071179ed672c5cf07c2867285d36b2f3e8cdce2106dc4472d17047911e",
+        "enterprise/generated/audit-suite/company-phi-ba-2027-simulation-2026-09-29/run-v1/MANIFEST.json": "8226ac2031cafe581289afb4c25088c8dfe603e75ac11fc1ababfe2590f2a5f2",
+        "enterprise/generated/audit-suite/company-phi-ba-2027-simulation-2026-09-29/run-v1/RECEIPT.json": "20e3762aabb45fcfa3107d695da37e7eeb677f6c5e98f1bb767fa463fe857d9d",
+        "enterprise/generated/audit-suite/company-phi-ba-2027-simulation-2026-09-29/run-v1/company.sqlite3": "ad252e8cb6b1309b238fbe50daac541d67b5fa89051a0b3d8eab7993d4010449"
+      },
+      "root": "enterprise/generated/audit-suite/company-phi-ba-2027-simulation-2026-09-29/run-v1"
+    },
+    "physical": {
+      "branches": {
+        "A": "PHYSICAL-CLEAN",
+        "B": "PHYSICAL-MESSY"
+      },
+      "pins": {
+        "enterprise/generated/audit-suite/company-physical-site-selected-2026-09-30/independent-review-main-v1/REVIEW.json": "1c7ccc1ce9abeab01f265238e63f84df4defa70948a46c99047d138a449fa0f3",
+        "enterprise/generated/audit-suite/company-physical-site-selected-2026-09-30/main-run-v1/MANIFEST.json": "5c8cf04de73f987d3555efe54f6d6fd238e005b0574bff61b90c251e46f2e7a5",
+        "enterprise/generated/audit-suite/company-physical-site-selected-2026-09-30/main-run-v1/RECEIPT.json": "fd82fbbfa3c5d03a35c935673fe9ec973ccb905d57e09df52fb943522ba6e485",
+        "enterprise/generated/audit-suite/company-physical-site-selected-2026-09-30/main-run-v1/company.sqlite3": "19a358a258a8da7054f9f1946cb9e49e98dfe4def3da06d33e635ff2fe6ca816"
+      },
+      "root": "enterprise/generated/audit-suite/company-physical-site-selected-2026-09-30/main-run-v1"
+    },
+    "policy": {
+      "branches": {
+        "A": "POLICY-CLEAN",
+        "B": "POLICY-MESSY"
+      },
+      "pins": {
+        "enterprise/generated/audit-suite/company-policy-exception-2026-09-29/independent-review-main-v1/REVIEW.json": "70150ae8307b0ef0ef503d3f4031a72b3c9e36ab8a77d7746c9846464b715087",
+        "enterprise/generated/audit-suite/company-policy-exception-2026-09-29/run-v1/MANIFEST.json": "e04fbe2c49d5dd0430f2f98f2180302504547c456fc979c9d494bd932eae2ec8",
+        "enterprise/generated/audit-suite/company-policy-exception-2026-09-29/run-v1/RECEIPT.json": "0e3a5c079b43acbf9dc2e24da7bfddf51ea9a1ea3dcc900ab01316abbdf8d1a1",
+        "enterprise/generated/audit-suite/company-policy-exception-2026-09-29/run-v1/company.sqlite3": "c9ddeec3ccb4d3aada560b07d4dccd68f35a8c713c12cdf95993f3e12ff24552"
+      },
+      "root": "enterprise/generated/audit-suite/company-policy-exception-2026-09-29/run-v1"
+    },
+    "procedure": {
+      "branches": {
+        "A": "POL004-PROCEDURE-CLEAN",
+        "B": "POL004-PROCEDURE-MESSY"
+      },
+      "pins": {
+        "enterprise/generated/audit-suite/company-pol004-procedure-trace-2027-09-30/independent-review-main-v1/REVIEW.json": "2c0e96babf915c42d7d056de9ec87c30bc8966ddab126343ec444a1bad715143",
+        "enterprise/generated/audit-suite/company-pol004-procedure-trace-2027-09-30/main-run-v1/RUN-MANIFEST.json": "2d81554213354d8dc76d167fcc624bb1fb98b7ee5c44c0a75d4990ddf8e4f266",
+        "enterprise/generated/audit-suite/company-pol004-procedure-trace-2027-09-30/main-run-v1/SOURCE_RECEIPT.json": "442ddf2a36185460df20b04e00d63f12f877a3ef751f5f55cd9858fb9502af54",
+        "enterprise/generated/audit-suite/company-pol004-procedure-trace-2027-09-30/main-run-v1/company.sqlite3": "62c71eca6b9186936e89c6569735a6ea74b8d4909d356d2fb794a9e437d2d4bb"
+      },
+      "root": "enterprise/generated/audit-suite/company-pol004-procedure-trace-2027-09-30/main-run-v1"
+    },
+    "retention": {
+      "branches": {
+        "A": "HOLD-CLEAN",
+        "B": "HOLD-MESSY"
+      },
+      "pins": {
+        "enterprise/generated/audit-suite/company-retention-hold-gate-2026-09-29/independent-review-main-v1/REVIEW.json": "468f2f56ec32fe61d3f6458471b5304f89f7e14c68bea91ed404eacfeb321499",
+        "enterprise/generated/audit-suite/company-retention-hold-gate-2026-09-29/run-v1/MANIFEST.json": "91f3f6900217042810d0d7b11f72ce566a4537253a44e3d90edf54b6af2f57e3",
+        "enterprise/generated/audit-suite/company-retention-hold-gate-2026-09-29/run-v1/RECEIPT.json": "13d0312ac10c0374f66f74e0be62d0e21f5485bf162994513ad04d93e8eff93b",
+        "enterprise/generated/audit-suite/company-retention-hold-gate-2026-09-29/run-v1/company.sqlite3": "a3ae653c0fd27c75047e34aeb5b4c391a2d4353ae6fbec15690c0ffe79984e70"
+      },
+      "root": "enterprise/generated/audit-suite/company-retention-hold-gate-2026-09-29/run-v1"
+    },
+    "rights": {
+      "branches": {
+        "A": "DAT002-RIGHTS-CLEAN",
+        "B": "DAT002-RIGHTS-MESSY"
+      },
+      "pins": {
+        "enterprise/generated/audit-suite/company-dat002-rights-scope-2027-2026-10-01/independent-review-main-v1/REVIEW.json": "7c244ae5938868b1caf97500682a8f4cad1402d59e29a45c08fb8110e388763e",
+        "enterprise/generated/audit-suite/company-dat002-rights-scope-2027-2026-10-01/main-run-v1/MANIFEST.json": "222b21ad5a90e05fb1c690951e7a94537148a682a69a39a661fbc0fd0ff2f91f",
+        "enterprise/generated/audit-suite/company-dat002-rights-scope-2027-2026-10-01/main-run-v1/RECEIPT.json": "55502c4210f1855e570352d4972c002ca8726c74db551691e1e89eb4230064ad",
+        "enterprise/generated/audit-suite/company-dat002-rights-scope-2027-2026-10-01/main-run-v1/company.sqlite3": "07deca8ba563281439167f5b274364942dab9a9fdc96b01209a722d3f13e1a44"
+      },
+      "root": "enterprise/generated/audit-suite/company-dat002-rights-scope-2027-2026-10-01/main-run-v1"
+    },
+    "transfer": {
+      "branches": {
+        "A": "SEC001-XFER-CLEAN",
+        "B": "SEC001-XFER-MESSY"
+      },
+      "pins": {
+        "enterprise/generated/audit-suite/company-sec001-selected-transfer-2027-09-30/independent-review-main-v1/REVIEW.json": "9cf4d438d7b191f227f87f3dcb5cf6d36bcb3e7e490415d16cff11e72a33c196",
+        "enterprise/generated/audit-suite/company-sec001-selected-transfer-2027-09-30/main-run-v1/RUN-MANIFEST.json": "d653285e748e7529557749445c0a3646b049237a1ff9888fed835f53fd185942",
+        "enterprise/generated/audit-suite/company-sec001-selected-transfer-2027-09-30/main-run-v1/SOURCE_RECEIPT.json": "73fa3ff1cb40f9e0e8196cd01bf18048c408427e0d10ade9003fd60d9c984d28",
+        "enterprise/generated/audit-suite/company-sec001-selected-transfer-2027-09-30/main-run-v1/company.sqlite3": "3841366d17e3f072ef2ae303ec3bf010ab644e474a778d59f62263c6a8c86e7d"
+      },
+      "root": "enterprise/generated/audit-suite/company-sec001-selected-transfer-2027-09-30/main-run-v1"
+    }
+  },
+  "primary_legal_basis": {
+    "edition_boundary": "2026 regulatory text is a fictional-training reference; no claim about amendments during future 2027",
+    "retrieval_date": "2026-10-01",
+    "urls": {
+      "160.316": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-160/subpart-C/section-160.316",
+      "304": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C/section-164.304",
+      "306": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C/section-164.306",
+      "308": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C/section-164.308",
+      "310": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C/section-164.310",
+      "312": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C/section-164.312",
+      "316": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C/section-164.316",
+      "502": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.502",
+      "504": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.504",
+      "530": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.530"
+    }
+  },
+  "schema": "SH_COMPANY_SUPPLEMENTAL_OPERATIONS_SPEC_V1",
+  "source_generation_authorization": {
+    "authorization_reference": "docs/internal/development/audit-suite/FICTIONAL_2027_SCENARIO_DECISIONS_2026-09-29.md",
+    "authorization_scope": "Later local company-source history for the approved fictional 2027 reference service; commissioned source task dated2026-10-01",
+    "not_before_utc": "2026-10-01T00:00:00+00:00",
+    "real_clock_separate_from_simulated_events": true
+  }
+}

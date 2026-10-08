@@ -1,0 +1,140 @@
+{
+  "as_of": "2027-12-31T09:00:00+00:00",
+  "excluded_task_ids": [
+    "TASK-SH-IAM-002-corporate-CHECK-SOC2:CC6.4"
+  ],
+  "schema": "SH_FRESH_IDENTITY_FAMILY_SPEC_V1",
+  "selected_task_ids": [
+    "TASK-SH-IAM-001-corporate-CHECK-SOC2:CC6.2",
+    "TASK-SH-IAM-001-corporate-IMPLEMENTATION",
+    "TASK-SH-IAM-001-corporate-TOD",
+    "TASK-SH-IAM-001-corporate-TOE",
+    "TASK-SH-IAM-002-corporate-CHECK-SOC2:CC6.1",
+    "TASK-SH-IAM-002-corporate-CHECK-SOC2:CC6.3",
+    "TASK-SH-IAM-002-corporate-IMPLEMENTATION",
+    "TASK-SH-IAM-002-corporate-TOD",
+    "TASK-SH-IAM-002-corporate-TOE",
+    "TASK-SH-IAM-003-corporate-CHECK-SOC2:CC6.3",
+    "TASK-SH-IAM-003-corporate-IMPLEMENTATION",
+    "TASK-SH-IAM-003-corporate-TOD",
+    "TASK-SH-IAM-003-corporate-TOE",
+    "TASK-SH-IAM-004-corporate-CHECK-SOC2:CC6.2",
+    "TASK-SH-IAM-004-corporate-IMPLEMENTATION",
+    "TASK-SH-IAM-004-corporate-TOD",
+    "TASK-SH-IAM-004-corporate-TOE",
+    "TASK-SH-IAM-005-corporate-ACTION-H-EMERGENCY",
+    "TASK-SH-IAM-005-corporate-CHECK-SOC2:CC6.1",
+    "TASK-SH-IAM-005-corporate-IMPLEMENTATION",
+    "TASK-SH-IAM-005-corporate-TOD",
+    "TASK-SH-IAM-005-corporate-TOE",
+    "TASK-SH-IAM-006-corporate-CHECK-SOC2:CC6.2",
+    "TASK-SH-IAM-006-corporate-IMPLEMENTATION",
+    "TASK-SH-IAM-006-corporate-TOD",
+    "TASK-SH-IAM-006-corporate-TOE",
+    "TASK-SH-IAM-007-corporate-CHECK-SOC2:CC6.3",
+    "TASK-SH-IAM-007-corporate-IMPLEMENTATION",
+    "TASK-SH-IAM-007-corporate-TOD",
+    "TASK-SH-IAM-007-corporate-TOE"
+  ],
+  "sources": {
+    "bcm": {
+      "branches": {
+        "A": "BCM-CLEAN",
+        "B": "BCM-MESSY"
+      },
+      "collection_scope": "EXACT_CITED_UPSTREAM_JOINS",
+      "company": "SABLE-HARBOR-REFERENCE",
+      "namespace": "IAMBCM",
+      "relative_database": "enterprise/generated/audit-suite/company-bcm-shared-runtime-2026-09-29/run-v2/company.sqlite3",
+      "sha256": "9227da660fb2bf910c877fa7abbe71f119a468040c0447092d0dee8b6da64b8e"
+    },
+    "emergency": {
+      "branches": {
+        "A": "IAM005-EMERGENCY-CLEAN",
+        "B": "IAM005-EMERGENCY-MESSY"
+      },
+      "collection_scope": "ENTIRE_VISIBLE_COMPONENT_HISTORY",
+      "company": "SABLE-HARBOR-REFERENCE",
+      "namespace": "IAMEMERGENCY",
+      "relative_database": "enterprise/generated/audit-suite/company-iam005-emergency-marker-2026-09-30/main-run-v1/company.sqlite3",
+      "sha256": "bd40f886ccd53def3b1cfe716f93422a5aa686e15162b2f90b48e3af5920d433"
+    },
+    "human": {
+      "branches": {
+        "A": "IAM005-TRACE-CLEAN",
+        "B": "IAM005-TRACE-MESSY"
+      },
+      "collection_scope": "ENTIRE_VISIBLE_COMPONENT_HISTORY",
+      "company": "SABLE-HARBOR-REFERENCE",
+      "namespace": "IAMHUMAN",
+      "relative_database": "enterprise/generated/audit-suite/company-iam005-local-trace-2026-09-29/run-v1/human/company.sqlite3",
+      "sha256": "6db57dc7695f8f9c3421c40fa94e3f535bb752bddd50f7af3ab6dc6b26adbb47"
+    },
+    "identity": {
+      "branches": {
+        "A": "year-clean",
+        "B": "year-messy"
+      },
+      "collection_scope": "ENTIRE_VISIBLE_COMPONENT_HISTORY",
+      "company": "SABLEHARBOR",
+      "namespace": "IAMIDENTITY",
+      "relative_database": "enterprise/generated/audit-suite/company-identity-period-2026-09-14/full-year-v1/company/company.sqlite3",
+      "sha256": "8183a47f82d0e76c0a785d12a0b0d8113f65d666c0ad5284c9a6e2dc92290357"
+    },
+    "lifecycle": {
+      "branches": {
+        "A": "lifecycle-a",
+        "B": "lifecycle-b"
+      },
+      "collection_scope": "ENTIRE_VISIBLE_COMPONENT_HISTORY",
+      "company": "SABLEHARBOR",
+      "namespace": "IAMLIFECYCLE",
+      "relative_database": "enterprise/generated/audit-suite/company-lifecycle-2026-09-14/v1/company.sqlite3",
+      "sha256": "5f2dd4c73b400801d85e941c21966c3d9ffc3cff05b7c4b89e698d19140f6b93"
+    },
+    "nonhuman": {
+      "branches": {
+        "A": "service-a",
+        "B": "service-b"
+      },
+      "collection_scope": "ENTIRE_VISIBLE_COMPONENT_HISTORY",
+      "company": "SH",
+      "namespace": "IAMNONHUMAN",
+      "relative_database": "enterprise/generated/audit-suite/company-nonhuman-identity-2026-09-14/v1/company.sqlite3",
+      "sha256": "b1c03493f83e2e6e90ec0152b0d966cc200ad64d6c15d920fe76fc59caac2c81"
+    },
+    "phi": {
+      "branches": {
+        "A": "PHI-CLEAN",
+        "B": "PHI-MESSY"
+      },
+      "collection_scope": "EXACT_CITED_UPSTREAM_JOINS",
+      "company": "SABLE-HARBOR-REFERENCE",
+      "namespace": "IAMPHI",
+      "relative_database": "enterprise/generated/audit-suite/company-phi-ba-2027-simulation-2026-09-29/run-v1/company.sqlite3",
+      "sha256": "ad252e8cb6b1309b238fbe50daac541d67b5fa89051a0b3d8eab7993d4010449"
+    },
+    "security": {
+      "branches": {
+        "A": "SEC005-OPERATED-CLEAN",
+        "B": "SEC005-OPERATED-MESSY"
+      },
+      "collection_scope": "EXACT_CITED_UPSTREAM_JOINS",
+      "company": "SABLE-HARBOR-REFERENCE",
+      "namespace": "IAMSECURITY",
+      "relative_database": "enterprise/generated/audit-suite/company-sec005-operated-2026-09-30/main-run-v1/company.sqlite3",
+      "sha256": "4c258e73de8084b20c65fcad24a96e7f0e3fbb771de431c6e079fc6500d7fd1f"
+    },
+    "service": {
+      "branches": {
+        "A": "IAM005-TRACE-CLEAN",
+        "B": "IAM005-TRACE-MESSY"
+      },
+      "collection_scope": "ENTIRE_VISIBLE_COMPONENT_HISTORY",
+      "company": "SABLE-HARBOR-REFERENCE",
+      "namespace": "IAMSERVICE",
+      "relative_database": "enterprise/generated/audit-suite/company-iam005-local-trace-2026-09-29/run-v1/service/company.sqlite3",
+      "sha256": "b2fdd1138f956e1f6c5ec307fdb2fd6de7fdd275a1401863d24601907f96b67a"
+    }
+  }
+}

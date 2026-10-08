@@ -1,0 +1,124 @@
+{
+  "2027_legal_text_verified": false,
+  "actual_phi": false,
+  "audit_task_credit": false,
+  "branches": {
+    "CLEAN": "LEGOV-CLEAN",
+    "MESSY": "LEGOV-MESSY"
+  },
+  "company": "SABLE-HARBOR-REFERENCE",
+  "counsel_person_id": "AS-P003",
+  "hhs_business_associate_url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/business-associates/index.html",
+  "hhs_vacatur_status_url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/phi-reproductive-health/index.html",
+  "outside_message_sent": false,
+  "predecessor_legal_reference_checked_as_of": "2026-09-29",
+  "provisions": [
+    {
+      "category": "AUTHORITY_CONTEXT",
+      "id": "45-CFR-160.101",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-160/subpart-A/section-160.101"
+    },
+    {
+      "category": "EFFECTIVE_DATE_DEPENDENCY",
+      "id": "45-CFR-160.104",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-160/subpart-A/section-160.104"
+    },
+    {
+      "category": "EFFECTIVE_DATE_DEPENDENCY",
+      "id": "45-CFR-160.105",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-160/subpart-A/section-160.105"
+    },
+    {
+      "category": "STATE_PREEMPTION_DEPENDENCY",
+      "id": "45-CFR-160.201",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-160/subpart-B/section-160.201"
+    },
+    {
+      "category": "STATE_PREEMPTION_DEPENDENCY",
+      "id": "45-CFR-160.202",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-160/subpart-B/section-160.202"
+    },
+    {
+      "category": "STATE_PREEMPTION_DEPENDENCY",
+      "id": "45-CFR-160.203",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-160/subpart-B/section-160.203"
+    },
+    {
+      "category": "STATE_PREEMPTION_DEPENDENCY",
+      "id": "45-CFR-160.204",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-160/subpart-B/section-160.204"
+    },
+    {
+      "category": "STATE_PREEMPTION_DEPENDENCY",
+      "id": "45-CFR-160.205",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-160/subpart-B/section-160.205"
+    },
+    {
+      "category": "AUTHORITY_CONTEXT",
+      "id": "45-CFR-164.102",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-A/section-164.102"
+    },
+    {
+      "category": "FUNCTION_SCOPE_DEPENDENCY",
+      "id": "45-CFR-164.103",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-A/section-164.103"
+    },
+    {
+      "category": "FUNCTION_SCOPE_DEPENDENCY",
+      "id": "45-CFR-164.106",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-A/section-164.106"
+    },
+    {
+      "category": "EFFECTIVE_DATE_DEPENDENCY",
+      "id": "45-CFR-164.318",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C/section-164.318"
+    },
+    {
+      "category": "EFFECTIVE_DATE_DEPENDENCY",
+      "id": "45-CFR-164.532",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.532"
+    },
+    {
+      "category": "EFFECTIVE_DATE_DEPENDENCY",
+      "id": "45-CFR-164.534",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.534"
+    },
+    {
+      "category": "LEGAL_STATUS_DEPENDENCY",
+      "id": "45-CFR-164.535",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.535"
+    },
+    {
+      "category": "ACTION_LEGAL_STATUS_DEPENDENCY",
+      "id": "45-CFR-164.502",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.502"
+    },
+    {
+      "category": "PUBLICATION_VACATUR_REVIEW_HOLD",
+      "id": "45-CFR-164.509",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.509"
+    },
+    {
+      "category": "ACTION_LEGAL_STATUS_DEPENDENCY",
+      "id": "45-CFR-164.520",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.520"
+    }
+  ],
+  "real_contract_executed": false,
+  "real_hipaa_applicability": "UNDETERMINED",
+  "schema": "SH_FICTIONAL_2027_LEG001_PROVISION_OVERLAY_SPEC_V1",
+  "selected_chain": {
+    "business_associate": "SHI",
+    "customer": "SIM-COVERED-CUSTOMER-01",
+    "service": "SIM-RESTRICTED-HOSTING-01",
+    "site_providers_are_not_assumed_ba_subcontractors": [
+      "CP-SWITCH",
+      "CP-IDACORE"
+    ],
+    "subcontractor": "SIM-RECOVERY-SUPPORT-01"
+  },
+  "simulated_event_day": "2027-12-31",
+  "source_complete": false,
+  "source_research_accessed": "2026-10-01",
+  "truth_class": "TRAINING_SCENARIO_ONLY"
+}

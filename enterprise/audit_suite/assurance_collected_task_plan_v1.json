@@ -1,0 +1,308 @@
+{
+  "schema": "SH_COLLECTED_ASSURANCE_B08_TASK_PLAN_V1",
+  "source_matrix_sha256": "249768769b0fc3c95cdb1b16f955fbc4afbb97b7ef907d677602b05b06089c8d",
+  "task_count": 23,
+  "tasks": [
+    {
+      "task_id": "TASK-SH-ASS-001-corporate-ACTION-S-ACCOUNTABILITY",
+      "control_id": "SH-ASS-001",
+      "kind": "ADDITIONAL_DUTY",
+      "clause_group": "ACTION-S-ACCOUNTABILITY",
+      "title": "Management performs periodic control-owner certification/self-assessment without labeling it independent assurance.",
+      "authored_instruction": "Trace critical duties to competence evidence and backups; inspect whether recurring execution failures led to appropriate workload, training or accountability action.",
+      "authored_procedure": "Quarterly, collect each owner's execution counts, exceptions and overdue actions; compare certifications with underlying records; label the result management self-assessment.",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "required_checks": "Recompute owner execution counts and exception/overdue links versus quarterly self-certification; label source as management assessment.",
+      "requirement_ids": [
+        "SOC2:CC1.4",
+        "SOC2:CC1.5"
+      ]
+    },
+    {
+      "task_id": "TASK-SH-ASS-001-corporate-CHECK-SOC2:CC4.1",
+      "control_id": "SH-ASS-001",
+      "kind": "ADDITIONAL_DUTY",
+      "clause_group": "CHECK-SOC2:CC4.1",
+      "title": "Management performs periodic control-owner certification/self-assessment without labeling it independent assurance.",
+      "authored_instruction": "Compare the evaluation plan with risk, change and evaluator objectivity; inspect an ongoing monitoring gap and an independently performed evaluation.",
+      "authored_procedure": "Quarterly, collect each owner's execution counts, exceptions and overdue actions; compare certifications with underlying records; label the result management self-assessment.",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "required_checks": "Recompute owner execution counts and exception/overdue links versus quarterly self-certification; label source as management assessment.",
+      "requirement_ids": [
+        "SOC2:CC4.1"
+      ]
+    },
+    {
+      "task_id": "TASK-SH-ASS-001-corporate-IMPLEMENTATION",
+      "control_id": "SH-ASS-001",
+      "kind": "IMPLEMENTATION",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "title": "Management performs periodic control-owner certification/self-assessment without labeling it independent assurance.",
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Certification; execution count reconciliation; exception links. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Quarterly, collect each owner's execution counts, exceptions and overdue actions; compare certifications with underlying records; label the result management self-assessment.",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "required_checks": "Recompute owner execution counts and exception/overdue links versus quarterly self-certification; label source as management assessment.",
+      "requirement_ids": []
+    },
+    {
+      "task_id": "TASK-SH-ASS-001-corporate-TOD",
+      "control_id": "SH-ASS-001",
+      "kind": "TOD",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "title": "Management performs periodic control-owner certification/self-assessment without labeling it independent assurance.",
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Certification; execution count reconciliation; exception links. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Quarterly, collect each owner's execution counts, exceptions and overdue actions; compare certifications with underlying records; label the result management self-assessment.",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "required_checks": "Recompute owner execution counts and exception/overdue links versus quarterly self-certification; label source as management assessment.",
+      "requirement_ids": []
+    },
+    {
+      "task_id": "TASK-SH-ASS-001-corporate-TOE",
+      "control_id": "SH-ASS-001",
+      "kind": "TOE",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "title": "Management performs periodic control-owner certification/self-assessment without labeling it independent assurance.",
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Certification; execution count reconciliation; exception links. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Quarterly, collect each owner's execution counts, exceptions and overdue actions; compare certifications with underlying records; label the result management self-assessment.",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "required_checks": "Recompute owner execution counts and exception/overdue links versus quarterly self-certification; label source as management assessment.",
+      "requirement_ids": []
+    },
+    {
+      "task_id": "TASK-SH-ASS-002-corporate-ACTION-H-EVALUATION",
+      "control_id": "SH-ASS-002",
+      "kind": "ADDITIONAL_DUTY",
+      "clause_group": "ACTION-H-EVALUATION",
+      "title": "Second-line compliance/control monitoring follows documented scope, criteria, evidence, results, and escalation.",
+      "authored_instruction": "Compare material environment changes and scheduled evaluations to completed work. Inspect a nontechnical safeguard and a technical configuration for evaluated effectiveness.",
+      "authored_procedure": "Select risk-based controls and sites; inspect source evidence separately from owner attestations; record scope limitations and escalate deviations.",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "required_checks": "Join risk-based monitoring scope and independent underlying records to second-line work, limitations and escalations without substituting owner attestation.",
+      "requirement_ids": [
+        "HIPAA:164.308"
+      ]
+    },
+    {
+      "task_id": "TASK-SH-ASS-002-corporate-CHECK-SOC2:CC4.1",
+      "control_id": "SH-ASS-002",
+      "kind": "ADDITIONAL_DUTY",
+      "clause_group": "CHECK-SOC2:CC4.1",
+      "title": "Second-line compliance/control monitoring follows documented scope, criteria, evidence, results, and escalation.",
+      "authored_instruction": "Compare the evaluation plan with risk, change and evaluator objectivity; inspect an ongoing monitoring gap and an independently performed evaluation.",
+      "authored_procedure": "Select risk-based controls and sites; inspect source evidence separately from owner attestations; record scope limitations and escalate deviations.",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "required_checks": "Join risk-based monitoring scope and independent underlying records to second-line work, limitations and escalations without substituting owner attestation.",
+      "requirement_ids": [
+        "SOC2:CC4.1"
+      ]
+    },
+    {
+      "task_id": "TASK-SH-ASS-002-corporate-IMPLEMENTATION",
+      "control_id": "SH-ASS-002",
+      "kind": "IMPLEMENTATION",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "title": "Second-line compliance/control monitoring follows documented scope, criteria, evidence, results, and escalation.",
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Monitoring plan; working papers; escalations. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Select risk-based controls and sites; inspect source evidence separately from owner attestations; record scope limitations and escalate deviations.",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "required_checks": "Join risk-based monitoring scope and independent underlying records to second-line work, limitations and escalations without substituting owner attestation.",
+      "requirement_ids": []
+    },
+    {
+      "task_id": "TASK-SH-ASS-002-corporate-TOD",
+      "control_id": "SH-ASS-002",
+      "kind": "TOD",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "title": "Second-line compliance/control monitoring follows documented scope, criteria, evidence, results, and escalation.",
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Monitoring plan; working papers; escalations. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Select risk-based controls and sites; inspect source evidence separately from owner attestations; record scope limitations and escalate deviations.",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "required_checks": "Join risk-based monitoring scope and independent underlying records to second-line work, limitations and escalations without substituting owner attestation.",
+      "requirement_ids": []
+    },
+    {
+      "task_id": "TASK-SH-ASS-002-corporate-TOE",
+      "control_id": "SH-ASS-002",
+      "kind": "TOE",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "title": "Second-line compliance/control monitoring follows documented scope, criteria, evidence, results, and escalation.",
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Monitoring plan; working papers; escalations. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Select risk-based controls and sites; inspect source evidence separately from owner attestations; record scope limitations and escalate deviations.",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "required_checks": "Join risk-based monitoring scope and independent underlying records to second-line work, limitations and escalations without substituting owner attestation.",
+      "requirement_ids": []
+    },
+    {
+      "task_id": "TASK-SH-ASS-003-corporate-ACTION-H-EVALUATION",
+      "control_id": "SH-ASS-003",
+      "kind": "ADDITIONAL_DUTY",
+      "clause_group": "ACTION-H-EVALUATION",
+      "title": "Independent assurance engagements maintain organizational independence, approved scope, evidence, findings, review, and direct escalation rights.",
+      "authored_instruction": "Compare material environment changes and scheduled evaluations to completed work. Inspect a nontechnical safeguard and a technical configuration for evaluated effectiveness.",
+      "authored_procedure": "Maintain a risk-based programme covering the selected management systems, services and sites. Define criteria, scope, methods and independence before each engagement. Provide access and direct escalation, retain tested populations and findings, report results to accountable management, and verify corrective actions without substituting owner certification for audit work.",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "required_checks": "Reconcile assurance schedule to actual completed work/authorized deferral, scope/criteria/method/independence/access/direct escalation and independent closure tests; no external auditor opinion fabricated.",
+      "requirement_ids": [
+        "HIPAA:164.308"
+      ]
+    },
+    {
+      "task_id": "TASK-SH-ASS-003-corporate-IMPLEMENTATION",
+      "control_id": "SH-ASS-003",
+      "kind": "IMPLEMENTATION",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "title": "Independent assurance engagements maintain organizational independence, approved scope, evidence, findings, review, and direct escalation rights.",
+      "authored_instruction": "Reconcile planned engagements to completed work or authorized deferrals; inspect scope exclusions, reviewer conflicts, evidence access and reporting. Trace findings to independent closure testing.",
+      "authored_procedure": "Maintain a risk-based programme covering the selected management systems, services and sites. Define criteria, scope, methods and independence before each engagement. Provide access and direct escalation, retain tested populations and findings, report results to accountable management, and verify corrective actions without substituting owner certification for audit work.",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "required_checks": "Reconcile assurance schedule to actual completed work/authorized deferral, scope/criteria/method/independence/access/direct escalation and independent closure tests; no external auditor opinion fabricated.",
+      "requirement_ids": []
+    },
+    {
+      "task_id": "TASK-SH-ASS-003-corporate-TOD",
+      "control_id": "SH-ASS-003",
+      "kind": "TOD",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "title": "Independent assurance engagements maintain organizational independence, approved scope, evidence, findings, review, and direct escalation rights.",
+      "authored_instruction": "Reconcile planned engagements to completed work or authorized deferrals; inspect scope exclusions, reviewer conflicts, evidence access and reporting. Trace findings to independent closure testing.",
+      "authored_procedure": "Maintain a risk-based programme covering the selected management systems, services and sites. Define criteria, scope, methods and independence before each engagement. Provide access and direct escalation, retain tested populations and findings, report results to accountable management, and verify corrective actions without substituting owner certification for audit work.",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "required_checks": "Reconcile assurance schedule to actual completed work/authorized deferral, scope/criteria/method/independence/access/direct escalation and independent closure tests; no external auditor opinion fabricated.",
+      "requirement_ids": []
+    },
+    {
+      "task_id": "TASK-SH-ASS-003-corporate-TOE",
+      "control_id": "SH-ASS-003",
+      "kind": "TOE",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "title": "Independent assurance engagements maintain organizational independence, approved scope, evidence, findings, review, and direct escalation rights.",
+      "authored_instruction": "Reconcile planned engagements to completed work or authorized deferrals; inspect scope exclusions, reviewer conflicts, evidence access and reporting. Trace findings to independent closure testing.",
+      "authored_procedure": "Maintain a risk-based programme covering the selected management systems, services and sites. Define criteria, scope, methods and independence before each engagement. Provide access and direct escalation, retain tested populations and findings, report results to accountable management, and verify corrective actions without substituting owner certification for audit work.",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "required_checks": "Reconcile assurance schedule to actual completed work/authorized deferral, scope/criteria/method/independence/access/direct escalation and independent closure tests; no external auditor opinion fabricated.",
+      "requirement_ids": []
+    },
+    {
+      "task_id": "TASK-SH-ASS-004-corporate-ACTION-S-DESCRIPTION",
+      "control_id": "SH-ASS-004",
+      "kind": "ADDITIONAL_DUTY",
+      "clause_group": "ACTION-S-DESCRIPTION",
+      "title": "Control testing defines the population/source, period, method, evidence, exceptions, and limitations before concluding.",
+      "authored_instruction": "Trace each description assertion to an authoritative record; independently compare incident/change/vendor populations to disclosures and investigate omitted relevant items.",
+      "authored_procedure": "Define the objective, boundary, period and independent population query before selection; record selection rationale; execute each attribute test and preserve failed and untested cases.",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "required_checks": "Inspect source query/period/objective before selection, selected IDs/attributes and actual failed/untested records against reviewed workpaper versions; audit method output is not company source.",
+      "requirement_ids": [
+        "SOC2:DC1",
+        "SOC2:DC2",
+        "SOC2:DC3",
+        "SOC2:DC4",
+        "SOC2:DC5",
+        "SOC2:DC6",
+        "SOC2:DC7",
+        "SOC2:DC8",
+        "SOC2:DC9"
+      ]
+    },
+    {
+      "task_id": "TASK-SH-ASS-004-corporate-CHECK-SOC2:CC4.1",
+      "control_id": "SH-ASS-004",
+      "kind": "ADDITIONAL_DUTY",
+      "clause_group": "CHECK-SOC2:CC4.1",
+      "title": "Control testing defines the population/source, period, method, evidence, exceptions, and limitations before concluding.",
+      "authored_instruction": "Compare the evaluation plan with risk, change and evaluator objectivity; inspect an ongoing monitoring gap and an independently performed evaluation.",
+      "authored_procedure": "Define the objective, boundary, period and independent population query before selection; record selection rationale; execute each attribute test and preserve failed and untested cases.",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "required_checks": "Inspect source query/period/objective before selection, selected IDs/attributes and actual failed/untested records against reviewed workpaper versions; audit method output is not company source.",
+      "requirement_ids": [
+        "SOC2:CC4.1"
+      ]
+    },
+    {
+      "task_id": "TASK-SH-ASS-004-corporate-IMPLEMENTATION",
+      "control_id": "SH-ASS-004",
+      "kind": "IMPLEMENTATION",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "title": "Control testing defines the population/source, period, method, evidence, exceptions, and limitations before concluding.",
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Population query; selected IDs; test record; review. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Define the objective, boundary, period and independent population query before selection; record selection rationale; execute each attribute test and preserve failed and untested cases.",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "required_checks": "Inspect source query/period/objective before selection, selected IDs/attributes and actual failed/untested records against reviewed workpaper versions; audit method output is not company source.",
+      "requirement_ids": []
+    },
+    {
+      "task_id": "TASK-SH-ASS-004-corporate-TOD",
+      "control_id": "SH-ASS-004",
+      "kind": "TOD",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "title": "Control testing defines the population/source, period, method, evidence, exceptions, and limitations before concluding.",
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Population query; selected IDs; test record; review. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Define the objective, boundary, period and independent population query before selection; record selection rationale; execute each attribute test and preserve failed and untested cases.",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "required_checks": "Inspect source query/period/objective before selection, selected IDs/attributes and actual failed/untested records against reviewed workpaper versions; audit method output is not company source.",
+      "requirement_ids": []
+    },
+    {
+      "task_id": "TASK-SH-ASS-004-corporate-TOE",
+      "control_id": "SH-ASS-004",
+      "kind": "TOE",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "title": "Control testing defines the population/source, period, method, evidence, exceptions, and limitations before concluding.",
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Population query; selected IDs; test record; review. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Define the objective, boundary, period and independent population query before selection; record selection rationale; execute each attribute test and preserve failed and untested cases.",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "required_checks": "Inspect source query/period/objective before selection, selected IDs/attributes and actual failed/untested records against reviewed workpaper versions; audit method output is not company source.",
+      "requirement_ids": []
+    },
+    {
+      "task_id": "TASK-SH-ASS-005-corporate-CHECK-SOC2:CC4.2",
+      "control_id": "SH-ASS-005",
+      "kind": "ADDITIONAL_DUTY",
+      "clause_group": "CHECK-SOC2:CC4.2",
+      "title": "Findings and remediation items maintain owner, severity, due date, action, validation, risk acceptance, and governance escalation.",
+      "authored_instruction": "Trace severity, notification, accountable action and overdue escalation; verify that closure evidence addresses the deficiency rather than only closing a ticket.",
+      "authored_procedure": "Assign severity, accountable role and due date when a finding opens; link corrective work and independent retest; escalate overdue items; retain original failures after closure.",
+      "task_kind_rule": "Perform this exact acceptance test and source clause in addition to any reused base attributes; no requirement credit from mapped control existence.",
+      "required_checks": "Trace finding history to severity/accountable owner/due date/corrective evidence/independent retest/risk acceptance/escalation; closure cannot erase original failure.",
+      "requirement_ids": [
+        "SOC2:CC4.2"
+      ]
+    },
+    {
+      "task_id": "TASK-SH-ASS-005-corporate-IMPLEMENTATION",
+      "control_id": "SH-ASS-005",
+      "kind": "IMPLEMENTATION",
+      "clause_group": "IMPLEMENTATION_EXACT_BASE_PROCEDURE",
+      "title": "Findings and remediation items maintain owner, severity, due date, action, validation, risk acceptance, and governance escalation.",
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Finding history; action evidence; retest; closure approval. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Assign severity, accountable role and due date when a finding opens; link corrective work and independent retest; escalate overdue items; retain original failures after closure.",
+      "task_kind_rule": "Walk one or more independently selected actual dated implementations through every authored step, linking actual grants/settings/actions and exceptions; approval alone is insufficient.",
+      "required_checks": "Trace finding history to severity/accountable owner/due date/corrective evidence/independent retest/risk acceptance/escalation; closure cannot erase original failure.",
+      "requirement_ids": []
+    },
+    {
+      "task_id": "TASK-SH-ASS-005-corporate-TOD",
+      "control_id": "SH-ASS-005",
+      "kind": "TOD",
+      "clause_group": "TOD_EXACT_BASE_PROCEDURE",
+      "title": "Findings and remediation items maintain owner, severity, due date, action, validation, risk acceptance, and governance escalation.",
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Finding history; action evidence; retest; closure approval. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Assign severity, accountable role and due date when a finding opens; link corrective work and independent retest; escalate overdue items; retain original failures after closure.",
+      "task_kind_rule": "Examine effective design, scoped authority, source-level conditions/exceptions, denominator/failure design; configuration or procedure existence alone is insufficient.",
+      "required_checks": "Trace finding history to severity/accountable owner/due date/corrective evidence/independent retest/risk acceptance/escalation; closure cannot erase original failure.",
+      "requirement_ids": []
+    },
+    {
+      "task_id": "TASK-SH-ASS-005-corporate-TOE",
+      "control_id": "SH-ASS-005",
+      "kind": "TOE",
+      "clause_group": "TOE_EXACT_BASE_PROCEDURE",
+      "title": "Findings and remediation items maintain owner, severity, due date, action, validation, risk acceptance, and governance escalation.",
+      "authored_instruction": "For independently selected occurrences, walk the authored procedure in order and trace each action to dated, scoped records. Inspect these control-specific outputs: Finding history; action evidence; retest; closure approval. Reperform the recorded decision or reconciliation and inspect a failure/exception path. Resolve exact source-level acceptance criteria before using this proposed test.",
+      "authored_procedure": "Assign severity, accountable role and due date when a finding opens; link corrective work and independent retest; escalate overdue items; retain original failures after closure.",
+      "task_kind_rule": "Reconcile due/triggered full-period population before selection; actually execute each attribute test across date-effective versions and retain failure/missing/untested separately.",
+      "required_checks": "Trace finding history to severity/accountable owner/due date/corrective evidence/independent retest/risk acceptance/escalation; closure cannot erase original failure.",
+      "requirement_ids": []
+    }
+  ]
+}

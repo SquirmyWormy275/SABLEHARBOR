@@ -1,6 +1,7 @@
 import { expect, it } from "vitest";
 import {
   createDraftStore,
+  WORKPAPER_DRAFT_BYTES,
   type DraftKey,
   type DraftScope,
 } from "./draftContext";
@@ -60,24 +61,34 @@ it("marks stale base without silently moving it; explicit rebase preserves prior
 it.each(["source", "acquisition"])(
   "quarantines source-linked drafts on %s change and requires explicit link re-selection",
   (change) => {
-    const s = setup(), original = scope();
+    const s = setup(),
+      original = scope();
     s.save(key(), {
-      objective: "Keep authored analysis", text: "Unsent finding",
-      evidence_ids: "OLD-ARTIFACT", artifact_id: "OLD-ARTIFACT",
+      objective: "Keep authored analysis",
+      text: "Unsent finding",
+      evidence_ids: "OLD-ARTIFACT",
+      artifact_id: "OLD-ARTIFACT",
       task_ids: ["OLD-TASK"],
     });
-    const next = change === "source"
-      ? { ...original, companySourceBinding: { company: "Sable Harbor", branch: "messy" } }
-      : { ...original, evidenceAcquisition: "RETAINED_COPY" };
+    const next =
+      change === "source"
+        ? {
+            ...original,
+            companySourceBinding: { company: "Sable Harbor", branch: "messy" },
+          }
+        : { ...original, evidenceAcquisition: "RETAINED_COPY" };
     s.activate(next);
     const stale = s.lookup(key());
     expect(stale.status).toBe("STALE_SOURCE");
     if (stale.status === "EMPTY") throw Error();
     expect(stale.draft.values.text).toBe("Unsent finding");
-    expect(() => s.save(key(), { text: "Silent carry", evidence_ids: "OLD-ARTIFACT" })).toThrow("source");
+    expect(() =>
+      s.save(key(), { text: "Silent carry", evidence_ids: "OLD-ARTIFACT" }),
+    ).toThrow("source");
     const reviewed = s.reviewSource(key());
     expect(reviewed.values).toEqual({
-      objective: "Keep authored analysis", text: "Unsent finding",
+      objective: "Keep authored analysis",
+      text: "Unsent finding",
     });
     expect(s.lookup(key()).status).toBe("CURRENT");
     s.activate({ ...next }); // Ordinary engagement revisions are not draft scope.
@@ -139,9 +150,9 @@ it("supports new notes with a stable NEW base and no arbitrary nested records", 
 it("does not silently evict drafts or replace them on oversize failure", () => {
   const s = setup();
   s.save(key(), { text: "keep" });
-  expect(() => s.save(key(), { text: "x".repeat(100001) })).toThrow(
-    "size limit",
-  );
+  expect(() =>
+    s.save(key(), { text: "x".repeat(WORKPAPER_DRAFT_BYTES) }),
+  ).toThrow("size limit");
   const found = s.lookup(key());
   expect(found.status !== "EMPTY" && found.draft.values.text).toBe("keep");
   for (let i = 1; i < 32; i++)
@@ -150,6 +161,23 @@ it("does not silently evict drafts or replace them on oversize failure", () => {
     s.save({ ...key(), objectId: "EXTRA" }, { text: "new" }),
   ).toThrow("limit");
   expect(s.lookup(key()).status).toBe("CURRENT");
+});
+it("retains a large exact workpaper draft while notes keep their existing limit", () => {
+  const s = setup();
+  const text = "Bounded original calculation 🧭\n".repeat(150000);
+  s.save(key(), { text, evidence_ids: "ART-1, ART-2" });
+  const found = s.lookup(key());
+  expect(found.status !== "EMPTY" && found.draft.values.text).toBe(text);
+  expect(() =>
+    s.save(
+      { ...key(), kind: "note.create", objectId: "new", baseVersion: "NEW" },
+      { text },
+    ),
+  ).toThrow("size limit");
+  expect(() =>
+    s.save(key(), { text: "🧭".repeat(WORKPAPER_DRAFT_BYTES / 4) }),
+  ).toThrow("size limit");
+  expect(s.lookup(key())).toEqual(found);
 });
 it("rejects retention when fetched permissions do not permit writing", () => {
   const s = setup();

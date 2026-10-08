@@ -15,8 +15,7 @@ def route_context(monkeypatch, tmp_path):
     principal = engine.store.provision("Route learner", ["learner"])
     engine.store.grant(state["id"], principal["id"], "learn")
     engine.company_store.grant(principal["id"], state["id"], "SH", "base", "different")
-    monkeypatch.setattr("enterprise.audit_suite.service.Engine", lambda *a, **k: engine)
-    app = create_app(tmp_path / "http", allowed_hosts=["testserver"])
+    app = create_app(engine.store.root, engine_factory=lambda: engine, allowed_hosts=["testserver"])
     client = TestClient(app, base_url="https://testserver")
     headers = {"authorization": "Bearer " + principal["credential"]}
     return engine, principal, state, command, client, headers

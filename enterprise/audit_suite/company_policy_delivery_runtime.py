@@ -41,6 +41,7 @@ def _code():
         "operating_source_bridge.py",
         "organization.py",
         "private_publication.py",
+        "source_library_audit.py",
     )
     pins = {n: sha(Path(__file__).with_name(n).read_bytes()) for n in names}
     pins["enterprise/ccf/registry.py"] = sha(
@@ -158,9 +159,47 @@ def _metadata(cfg, system, record, version, raw, at, imported):
     ref = _pin(cfg, system, record, version, raw)
     key = [ref[k] for k in FIELDS[:4]]
     provenance = _provenance(cfg)
+    provenance.update(
+        source_reference=cfg["plan"]["runtime_id"],
+        runtime_id=cfg["plan"]["runtime_id"],
+        name=record + ".json",
+        content_type="application/json",
+    )
+    native_document = (
+        next((d for d in cfg["documents"] if d["id"] == record and "source_pin" in d), None)
+        if system == "policy_document"
+        else None
+    )
+    if native_document:
+        provenance.update(
+            native_document_source=native_document["source_pin"],
+            original_native_header=native_document["source_header"],
+            copied_native_bytes_not_new_policy_approval=True,
+        )
+        original_provenance = decode(native_document["source_header"]["provenance"])
+        provenance.update(
+            name=original_provenance["name"], content_type=original_provenance["content_type"]
+        )
+    elif system == "policy_document":
+        document = next(d for d in cfg["documents"] if d["id"] == record)
+        path = Path(document["path"])
+        require(path.suffix in {".md", ".txt", ".json"}, "Known committed document format required")
+        provenance.update(
+            name=record + (".json" if path.suffix == ".json" else ".txt"),
+            content_type="application/json" if path.suffix == ".json" else "text/plain",
+            committed_document_path=document["path"],
+            original_committed_name=path.name,
+            name_scope="NEW_NATIVE_TRANSPORT_FILENAME_ORIGINAL_COMMITTED_PATH_RETAINED",
+        )
+    from .source_library_audit import ProcedureError, typed_content
+
+    try:
+        typed_content({"provenance": provenance, "content": raw, "sha256": sha(raw)})
+    except ProcedureError as error:
+        raise CompanyStoreError("Exact typed policy metadata/body required") from error
     origin = (
         "REPOSITORY_SYNTHETIC_DOCUMENT"
-        if system == "policy_document"
+        if system == "policy_document" and native_document is None
         else "AUTHORED_TRAINING_SOURCE"
     )
     return ref | {
@@ -231,6 +270,19 @@ def _config(root, expected):
         cfg.get("format") == "LOCAL_POLICY_DELIVERY_RUNTIME_V1" and cfg["code_pins"] == _code(),
         "Maintained runtime definition/code changed",
     )
+    if "document_admission" in cfg:
+        require(
+            cfg["document_admission"] == "EXPLICIT_NATIVE_POLICY_DOCUMENT_BYTES_V1",
+            "Unknown native document admission",
+        )
+        declarations = [
+            {k: d[k] for k in ("id", "source_root", "source_pin")} for d in cfg["documents"]
+        ]
+        current, _ = _native_documents(cfg["plan"], declarations)
+        require(
+            encoded(current) == encoded(cfg["documents"]),
+            "Original native document bytes/header changed",
+        )
     return cfg
 
 
@@ -246,8 +298,98 @@ def _initial(cfg):
     }
 
 
+def _native_documents(plan, documents):
+    """Exact native policy bytes, with original clock/provenance retained separately.
+
+    This admits a policy_document role only. A recipient timestamp, metadata row,
+    unrelated source role or a boolean assertion is never a document-byte basis.
+    """
+    require(
+        isinstance(documents, list) and 1 <= len(documents) <= 4,
+        "One to four exact native documents required",
+    )
+    result, originals = [], []
+    for declaration in documents:
+        _keys(declaration, "id source_root source_pin")
+        _id(declaration["id"])
+        exact_pin(declaration["source_pin"])
+        ref = declaration["source_pin"]
+        require(
+            (ref["company"], ref["branch"]) == (plan["company"], plan["branch"])
+            and ref["system"] in {"policy_document", "supplementalops.policy_document"},
+            "Exact same-branch native policy-document role",
+        )
+        root = private(Path(declaration["source_root"]), True)
+        with database(root) as db:
+            row = native(db, ref, plan["declared_at"])
+            require(
+                row["event_at"] is not None and len(row["content"]) <= LIMIT,
+                "Known dated bounded native document required",
+            )
+            raw = row["content"]
+            from .source_library_audit import ProcedureError, typed_content
+
+            try:
+                typed_content({**row, "provenance": decode(row["provenance"])})
+            except ProcedureError as error:
+                raise CompanyStoreError(
+                    "Exact typed native policy source metadata/body required"
+                ) from error
+            try:
+                raw.decode("utf-8")
+            except UnicodeError as error:
+                raise CompanyStoreError("Native policy text must be UTF-8") from error
+            header = {
+                k: row[k]
+                for k in (
+                    *FIELDS,
+                    "event_at",
+                    "available_at",
+                    "imported_at",
+                    "origin",
+                    "provenance",
+                )
+            }
+            require(
+                row["origin"]
+                in {
+                    "AUTHORED_TRAINING_SOURCE",
+                    "MIGRATED_SYNTHETIC_HISTORY",
+                    "REPOSITORY_SYNTHETIC_DOCUMENT",
+                },
+                "Explicit native synthetic document origin required",
+            )
+        result.append(
+            {
+                "id": declaration["id"],
+                "sha256": ref["sha256"],
+                "byte_count": len(raw),
+                "source_root": str(root),
+                "source_pin": ref,
+                "source_header": header,
+                "authority": "EXACT_NATIVE_DOCUMENT_BYTES_NOT_NEW_POLICY_APPROVAL",
+            }
+        )
+        originals.append(raw)
+    require(len({d["id"] for d in result}) == len(result), "Distinct native document IDs required")
+    return result, originals
+
+
 def initialize(destination, *, repository, plan, documents):
-    """Admit exact documentary originals and declare a local recipient inventory."""
+    """Unchanged default: admit committed repository documentary originals."""
+    return _initialize(
+        destination, repository=repository, plan=plan, documents=documents, native_documents=False
+    )
+
+
+def initialize_native(destination, *, repository, plan, documents):
+    """Opt-in exact native document-byte admission; no source/audit/grant writes."""
+    return _initialize(
+        destination, repository=repository, plan=plan, documents=documents, native_documents=True
+    )
+
+
+def _initialize(destination, *, repository, plan, documents, native_documents):
     destination, repository = Path(destination), Path(repository)
     private(destination.parent, True)
     require(
@@ -257,7 +399,12 @@ def initialize(destination, *, repository, plan, documents):
         "New canonical private runtime required",
     )
     plan = _plan(decode(encoded(plan)))
-    documents, originals = _documents(repository, decode(encoded(documents)))
+    original_declarations = decode(encoded(documents))
+    documents, originals = (
+        _native_documents(plan, original_declarations)
+        if native_documents
+        else _documents(repository, original_declarations)
+    )
     org = snapshot(repository, as_of=plan["declared_at"][:10])
     assignment = [a for a in org["control_assignments"] if a["control_id"] == "SH-POL-001"]
     require(
@@ -276,6 +423,8 @@ def initialize(destination, *, repository, plan, documents):
         "qualification": QUALIFICATION,
         "inventory_scope": "ONLY_DECLARED_PERSONA_MAILBOXES_NOT_WORKFORCE_COMPLETENESS",
     }
+    if native_documents:
+        cfg["document_admission"] = "EXPLICIT_NATIVE_POLICY_DOCUMENT_BYTES_V1"
     raw_cfg = encoded(cfg)
     require(len(raw_cfg) <= LIMIT, "Bounded runtime definition required")
     with tempfile.TemporaryDirectory(dir=destination.parent, prefix="policy-stage-") as folder:
@@ -332,11 +481,19 @@ def initialize(destination, *, repository, plan, documents):
             ),
             "Initialization source/code changed before publication",
         )
-        for d, original in zip(documents, originals, strict=True):
-            current, blob = _source(repository, d["path"])
+        if native_documents:
+            closing_documents, closing_raw = _native_documents(plan, original_declarations)
             require(
-                current == original and blob == d["git_blob"], "Document changed before publication"
+                encoded(closing_documents) == encoded(documents) and closing_raw == originals,
+                "Native document bytes/clock/identity changed before publication",
             )
+        else:
+            for d, original in zip(documents, originals, strict=True):
+                current, blob = _source(repository, d["path"])
+                require(
+                    current == original and blob == d["git_blob"],
+                    "Document changed before publication",
+                )
         publish(stage, destination)
     return {"runtime_sha256": sha(raw_cfg), "revision": 0, "qualification": QUALIFICATION}
 
@@ -909,5 +1066,52 @@ def inspect(root, *, expected_runtime_sha256, as_of):
         "state": state,
         "report": _report(cfg, state, at),
         "uncommitted_attempts": orphans,
+        "qualification": QUALIFICATION,
+    }
+
+
+def inspect_at(root, *, expected_runtime_sha256, as_of):
+    """Freshly derive an exact historical prefix of the verified native operations.
+
+    This does not relax inspect's current-state cutoff guard. All current
+    native originals, mailbox bytes, receipts and current state are reverified
+    before a past prefix is derived; cached observation text is never trusted.
+    """
+    require(type(as_of) is str, "Explicit historical policy cutoff required")
+    at = _stamp(as_of)
+    cfg = _config(root, expected_runtime_sha256)
+    require(at >= cfg["plan"]["declared_at"], "Policy runtime unavailable at cutoff")
+    with database(Path(root)) as db:
+        _, _, _, receipts = _history(root, db, cfg)
+        state = _initial(cfg)
+        prefix_revision = 0
+        for command, receipt in receipts.items():
+            if receipt["event_at"] > at:
+                break
+            after, observation = _apply(
+                cfg,
+                state,
+                receipt["request"],
+                prefix_revision,
+                command,
+                receipt["imported_at"],
+                receipt["file_fact"],
+            )
+            require(
+                sha(encoded(after)) == receipt["state_sha256"]
+                and encoded(observation) == encoded(receipt["observation"]),
+                "Recomputed historical native policy prefix differs",
+            )
+            state = after
+            prefix_revision += 1
+        native(db, _doc(cfg, state["selected_document_id"]), at)
+        require(
+            _config(root, expected_runtime_sha256) == cfg, "Runtime changed during prefix replay"
+        )
+    return {
+        "revision": prefix_revision,
+        "state": state,
+        "report": _report(cfg, state, at),
+        "state_basis": "FRESH_VERIFIED_NATIVE_OPERATION_PREFIX_AT_EXACT_CUTOFF",
         "qualification": QUALIFICATION,
     }

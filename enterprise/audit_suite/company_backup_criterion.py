@@ -337,6 +337,19 @@ def _proof_snapshot(db, cfg):
         }
         if "source_admission" in provenance and value["system"] == "source_dataset":
             expected["source_admission"] = provenance["source_admission"]
+        if "name" in provenance or "content_type" in provenance:
+            dataset_id = (
+                value["record"]
+                if value["system"] == "source_dataset"
+                else cfg["bindings"][value["record"]]["dataset_id"]
+                if value["system"] in {"backup_object", "restored_dataset"}
+                else None
+            )
+            json_native = dataset_id is None or cfg["datasets"][dataset_id] == "JSON_RECORDS"
+            expected.update(
+                name=value["record"] + (".json" if json_native else ".bin"),
+                content_type="application/json" if json_native else "application/octet-stream",
+            )
         require(encoded(provenance) == encoded(expected), "Native proof provenance differs")
         key = [value[k] for k in ["company", "branch", "system", "record"]]
         require(

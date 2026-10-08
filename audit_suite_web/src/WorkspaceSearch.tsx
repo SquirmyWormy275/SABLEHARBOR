@@ -1,18 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import type { Engagement, Row } from "./api";
-import type { WorkspaceSection } from "./navigation";
 import {
   searchWorkspace,
   resolveSearchHit,
   searchContext,
   searchKinds,
   type SearchKind,
+  type SearchHit,
 } from "./workspaceSearch";
 export type WorkspaceSearchProps = {
   engagement: Engagement;
   viewerId: string;
   onPreview: (kind: SearchKind, row: Row) => void;
-  onNavigate: (section: WorkspaceSection) => void;
+  onOpenRecord: (hit: SearchHit) => void;
 };
 /** Context-keyed local search. No new API, persistent storage, model or global index. */
 export default function WorkspaceSearch(props: WorkspaceSearchProps) {
@@ -26,7 +26,7 @@ export default function WorkspaceSearch(props: WorkspaceSearchProps) {
 function ScopedSearch({
   engagement: e,
   onPreview,
-  onNavigate,
+  onOpenRecord,
 }: WorkspaceSearchProps) {
   const [query, setQuery] = useState(""),
     [kind, setKind] = useState<SearchKind | "all">("all"),
@@ -142,8 +142,13 @@ function ScopedSearch({
                   >
                     Preview {hit.id}
                   </button>{" "}
-                  <button type="button" onClick={() => onNavigate(hit.section)}>
-                    Open {searchKinds[hit.kind].label.toLowerCase()} workspace
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (resolveSearchHit(e, hit)) onOpenRecord(hit);
+                    }}
+                  >
+                    Open record {hit.id}
                   </button>
                 </li>
               ))}

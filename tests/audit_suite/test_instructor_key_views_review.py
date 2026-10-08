@@ -44,6 +44,7 @@ def test_archive_option_must_belong_to_selected_selector():
     context = {
         "kind": "ARCHIVE",
         "error": None,
+        "authored_matching_texts": {"A.01.V1": "", "B.01.V1": ""},
         "data": {
             "entries": [
                 {"id": "A.01.V1", "review": {"professional": "UNVALIDATED", "gaps": []}},

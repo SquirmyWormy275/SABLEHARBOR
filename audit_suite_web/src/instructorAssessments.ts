@@ -75,13 +75,165 @@ export type AssessmentOptions = {
     acceptable_alternatives: string[];
   }[];
   references: AssessmentReference[];
+  reference_catalogue?: AssessmentReferenceCatalogue;
 };
+export type AssessmentReferenceCatalogue = {
+  schema: "ASSESSMENT_REFERENCE_CATALOGUE_V1";
+  count: number;
+  sha256: string;
+  context_sha256: string;
+};
+export type AssessmentReferenceSelector = {
+  query: string;
+  expectation_ids: string[];
+  reference_ids: string[];
+};
+export type AssessmentReferencePage = {
+  reference_catalogue: AssessmentReferenceCatalogue;
+  selector: AssessmentReferenceSelector;
+  offset: number;
+  total: number;
+  next_offset: number | null;
+  references: AssessmentReference[];
+};
+export type SelectedHistoryIntegrityReference = {
+  schema: "SH_SELECTED_HISTORY_INTEGRITY_REFERENCE_V1";
+  kind: "ROOT_ACCEPTED_BASE" | "MANAGED_STORE_CHECKPOINT";
+  algorithm: "SH_VERIFIED_EVENT_CHAIN_AND_CANONICAL_STATE_V1";
+  engagement_id: string;
+  revision: number;
+  selected_event_sha256: string;
+  selected_request_sha256: string;
+  selected_state_sha256: string;
+  selected_state_bytes: number;
+  accepted_base_sha256: string;
+  checkpoint_sha256: string;
+} & (
+  | { state_storage: "CANONICAL_CODEC_GRAPH"; selected_state_root_sha256: string }
+  | { state_storage: "RAW_CANONICAL_JSON"; selected_state_root_sha256: null }
+);
+export type ComparisonHistoryFields =
+  | { schema_version?: "1.0"; selected_history_sha256: string; selected_history_integrity_reference?: never }
+  | { schema_version: "2.0"; selected_history_sha256?: never; selected_history_integrity_reference: SelectedHistoryIntegrityReference };
 export type AssessmentHistoryPin = {
   revision: number;
   state_sha256: string;
-  history_sha256: string;
   event_sha256: string;
-};
+} & (
+  | { history_integrity_format?: never; history_sha256: string; history_integrity_reference?: never }
+  | { history_integrity_format: "SELECTED_HISTORY_INTEGRITY_REFERENCE_V2"; history_sha256?: never; history_integrity_reference: SelectedHistoryIntegrityReference }
+);
+const integrityReferenceKeys = [
+  "schema", "kind", "algorithm", "engagement_id", "revision",
+  "selected_event_sha256", "selected_request_sha256", "state_storage",
+  "selected_state_root_sha256", "selected_state_sha256", "selected_state_bytes",
+  "accepted_base_sha256", "checkpoint_sha256",
+].sort();
+export function assertSelectedHistoryIntegrityReference(
+  value: unknown, engagementId: string, revision: number, state: string, event: string,
+): SelectedHistoryIntegrityReference {
+  const r = value as SelectedHistoryIntegrityReference;
+  if (!r || typeof r !== "object" || Array.isArray(r) ||
+      Object.keys(r).sort().join("|") !== integrityReferenceKeys.join("|") ||
+      r.schema !== "SH_SELECTED_HISTORY_INTEGRITY_REFERENCE_V1" ||
+      !["ROOT_ACCEPTED_BASE", "MANAGED_STORE_CHECKPOINT"].includes(r.kind) ||
+      r.algorithm !== "SH_VERIFIED_EVENT_CHAIN_AND_CANONICAL_STATE_V1" ||
+      typeof engagementId !== "string" || !engagementId || r.engagement_id !== engagementId ||
+      !Number.isSafeInteger(revision) || revision < 0 || r.revision !== revision ||
+      !Number.isSafeInteger(r.selected_state_bytes) || r.selected_state_bytes < 1 ||
+      ![state, event, r.selected_state_sha256, r.selected_event_sha256,
+        r.selected_request_sha256, r.accepted_base_sha256, r.checkpoint_sha256].every(debriefPin) ||
+      r.selected_state_sha256 !== state || r.selected_event_sha256 !== event ||
+      !(r.state_storage === "CANONICAL_CODEC_GRAPH" ? debriefPin(r.selected_state_root_sha256) :
+        r.state_storage === "RAW_CANONICAL_JSON" && r.selected_state_root_sha256 === null) ||
+      (r.kind === "ROOT_ACCEPTED_BASE" && r.checkpoint_sha256 !== r.accepted_base_sha256))
+    throw Error("Selected history integrity reference does not match the protected context.");
+  return r;
+}
+function responseHistoryPin(
+  value: Record<string, unknown>, version: "1.0" | "2.0", engagementId: string, revision: number,
+): AssessmentHistoryPin {
+  const state = value.selected_state_sha256, event = value.selected_history_tip_sha256;
+  if (typeof engagementId !== "string" || !engagementId ||
+      !Number.isSafeInteger(revision) || revision < 0 || !debriefPin(state) || !debriefPin(event))
+    throw Error("Exact selected history context required.");
+  if (version === "2.0") {
+    if (Object.prototype.hasOwnProperty.call(value, "selected_history_sha256"))
+      throw Error("V2 integrity references must not be labelled as a legacy history digest.");
+    const reference = assertSelectedHistoryIntegrityReference(
+      value.selected_history_integrity_reference, engagementId, revision, state, event,
+    );
+    return { revision, state_sha256: state,
+      history_integrity_format: "SELECTED_HISTORY_INTEGRITY_REFERENCE_V2",
+      history_integrity_reference: reference, event_sha256: event };
+  }
+  if (!debriefPin(value.selected_history_sha256) ||
+      Object.prototype.hasOwnProperty.call(value, "selected_history_integrity_reference"))
+    throw Error("Exact legacy selected history digest required.");
+  return { revision, state_sha256: state, history_sha256: value.selected_history_sha256, event_sha256: event };
+}
+export function comparisonHistoryPin(value: Record<string, unknown>): AssessmentHistoryPin {
+  if (![undefined, "1.0", "2.0"].includes(value.schema_version as undefined | string))
+    throw Error("Selected comparison history format is unavailable.");
+  return responseHistoryPin(value, value.schema_version === "2.0" ? "2.0" : "1.0",
+    value.engagement_id as string, value.selected_history_revision as number);
+}
+export function validComparisonHistory(value: Record<string, unknown>): boolean {
+  try { comparisonHistoryPin(value); return true; } catch { return false; }
+}
+export function sameComparisonHistory(left: Record<string, unknown>, right: Record<string, unknown>): boolean {
+  try {
+    return left.engagement_id === right.engagement_id &&
+      sameDebriefValue(comparisonHistoryPin(left), comparisonHistoryPin(right));
+  } catch { return false; }
+}
+function validAssessmentHistoryPin(h: AssessmentHistoryPin): boolean {
+  if (!h || !Number.isSafeInteger(h.revision) || h.revision < 0 ||
+      !debriefPin(h.state_sha256) || !debriefPin(h.event_sha256)) return false;
+  if (h.history_integrity_format === "SELECTED_HISTORY_INTEGRITY_REFERENCE_V2") {
+    if (Object.prototype.hasOwnProperty.call(h, "history_sha256")) return false;
+    try {
+      assertSelectedHistoryIntegrityReference(h.history_integrity_reference,
+        h.history_integrity_reference?.engagement_id, h.revision, h.state_sha256, h.event_sha256);
+      return true;
+    } catch { return false; }
+  }
+  return h.history_integrity_format === undefined && debriefPin(h.history_sha256) &&
+    !Object.prototype.hasOwnProperty.call(h, "history_integrity_reference");
+}
+export function assessmentOptionsHistoryMatches(o: PinnedAssessmentOptions, h: AssessmentHistoryPin): boolean {
+  try {
+    if (!validAssessmentHistoryPin(h) ||
+        ![undefined, "SELECTED_HISTORY_INTEGRITY_REFERENCE_V2"].includes(o.history_integrity_format)) return false;
+    return sameDebriefValue(responseHistoryPin(o,
+      o.history_integrity_format === "SELECTED_HISTORY_INTEGRITY_REFERENCE_V2" ? "2.0" : "1.0",
+      o.engagement_id, o.learner_revision), h);
+  } catch { return false; }
+}
+export function assessmentDocumentHistoryMatches(
+  d: AssessmentDocument, h: AssessmentHistoryPin, engagementId: string,
+): boolean {
+  try {
+    return d.engagement_id === engagementId && validAssessmentHistoryPin(h) &&
+      ["INSTRUCTOR_AUTHORED_ASSESSMENT_V1", "INSTRUCTOR_AUTHORED_ASSESSMENT_V2"].includes(d.schema) &&
+      sameDebriefValue(responseHistoryPin(d.pins,
+        d.schema === "INSTRUCTOR_AUTHORED_ASSESSMENT_V2" ? "2.0" : "1.0",
+        d.engagement_id, d.pins.learner_revision), h);
+  } catch { return false; }
+}
+export function historyIntegrityRows(h: AssessmentHistoryPin): { label: string; value: string }[] {
+  if (!validAssessmentHistoryPin(h)) throw Error("Exact selected history context required.");
+  if (h.history_integrity_format === "SELECTED_HISTORY_INTEGRITY_REFERENCE_V2") {
+    const r = h.history_integrity_reference;
+    return [
+      { label: "History integrity reference", value: "Verified event chain and canonical state" },
+      { label: "Reference kind", value: r.kind === "ROOT_ACCEPTED_BASE" ? "Verified baseline" : "Verified recorded update" },
+      { label: "Accepted base", value: r.accepted_base_sha256 },
+      { label: "Selected checkpoint", value: r.checkpoint_sha256 },
+    ];
+  }
+  return [{ label: "History prefix", value: h.history_sha256 }];
+}
 export function assessmentContext(
   e: Engagement,
   actor: string,
@@ -223,7 +375,6 @@ export function validateAssessmentDraft(
   return structuredClone(d);
 }
 export type AssessmentDocument = {
-  schema: "INSTRUCTOR_AUTHORED_ASSESSMENT_V1";
   id: string;
   version: number;
   actor_id: string;
@@ -237,7 +388,6 @@ export type AssessmentDocument = {
     audited_actor_id: string;
     learner_revision: number;
     selected_state_sha256: string;
-    selected_history_sha256: string;
     selected_history_tip_sha256: string;
     bound_revision: number;
   };
@@ -246,7 +396,10 @@ export type AssessmentDocument = {
   selected_expectations: AssessmentOptions["expectations"];
   references: AssessmentReference[];
   qualification: string;
-};
+} & (
+  | { schema: "INSTRUCTOR_AUTHORED_ASSESSMENT_V1"; pins: { selected_history_sha256: string; selected_history_integrity_reference?: never } }
+  | { schema: "INSTRUCTOR_AUTHORED_ASSESSMENT_V2"; pins: { selected_history_sha256?: never; selected_history_integrity_reference: SelectedHistoryIntegrityReference } }
+);
 export type AssessmentRecord = {
   id: string;
   engagement_id: string;
@@ -265,11 +418,13 @@ export type AssessmentRecord = {
 };
 export type PinnedAssessmentOptions = AssessmentOptions & {
   selected_state_sha256: string;
-  selected_history_sha256: string;
   selected_history_tip_sha256: string;
   audited_actor_id: string;
   bound_revision: number;
-};
+} & (
+  | { history_integrity_format?: never; selected_history_sha256: string; selected_history_integrity_reference?: never }
+  | { history_integrity_format: "SELECTED_HISTORY_INTEGRITY_REFERENCE_V2"; selected_history_sha256?: never; selected_history_integrity_reference: SelectedHistoryIntegrityReference }
+);
 const assessmentRelations: Record<string, readonly string[]> = {
   artifact: ["EXACT_RETAINED_METADATA_LINK_NOT_BYTE_REREAD"],
   request: ["CONTROL_ASSOCIATION_ONLY"],
@@ -312,6 +467,123 @@ export function validAssessmentReference(r: AssessmentReference): boolean {
     new Set(r.expectation_ids).size === r.expectation_ids.length
   );
 }
+function validCatalogue(c: AssessmentReferenceCatalogue) {
+  return (
+    !!c &&
+    c.schema === "ASSESSMENT_REFERENCE_CATALOGUE_V1" &&
+    Number.isSafeInteger(c.count) &&
+    c.count >= 0 &&
+    debriefPin(c.sha256) &&
+    debriefPin(c.context_sha256)
+  );
+}
+export function assessmentReferencePageQuery(
+  o: PinnedAssessmentOptions,
+  offset: number,
+  selector: AssessmentReferenceSelector,
+) {
+  if (!o.reference_catalogue)
+    throw Error("No paginated reference catalogue selected.");
+  return new URLSearchParams({
+    revision: String(o.learner_revision),
+    offset: String(offset),
+    context_sha256: o.reference_catalogue.context_sha256,
+    catalogue_sha256: o.reference_catalogue.sha256,
+    query: selector.query,
+    expectation_ids: JSON.stringify(selector.expectation_ids),
+    reference_ids: JSON.stringify(selector.reference_ids),
+  }).toString();
+}
+export function assertAssessmentReferencePage(
+  page: AssessmentReferencePage,
+  o: PinnedAssessmentOptions,
+  offset: number,
+  selector: AssessmentReferenceSelector,
+) {
+  const end =
+    offset + (Array.isArray(page.references) ? page.references.length : 0);
+  if (
+    !o.reference_catalogue ||
+    !validCatalogue(page.reference_catalogue) ||
+    !sameDebriefValue(page.reference_catalogue, o.reference_catalogue) ||
+    !sameDebriefValue(page.selector, selector) ||
+    page.offset !== offset ||
+    !Number.isSafeInteger(offset) ||
+    offset < 0 ||
+    !Number.isSafeInteger(page.total) ||
+    (selector.reference_ids.length > 0 &&
+      page.total > selector.reference_ids.length) ||
+    page.total < end ||
+    page.total > o.reference_catalogue.count ||
+    page.next_offset !== (end < page.total ? end : null) ||
+    !Array.isArray(page.references) ||
+    page.references.length > 40 ||
+    (end < page.total && !page.references.length) ||
+    new Set(page.references.map((r) => r.id)).size !== page.references.length ||
+    page.references.some(
+      (r) =>
+        !validAssessmentReference(r) ||
+        r.expectation_ids.some(
+          (id) => !o.expectations.some((e) => e.id === id),
+        ) ||
+        (selector.reference_ids.length > 0 &&
+          !selector.reference_ids.includes(r.id)) ||
+        (selector.expectation_ids.length > 0 &&
+          !r.expectation_ids.some((id) =>
+            selector.expectation_ids.includes(id),
+          )),
+    )
+  )
+    throw Error(
+      "Reference page no longer matches the exact assessment catalogue.",
+    );
+  return page;
+}
+export function mergeAssessmentReferences(
+  o: PinnedAssessmentOptions,
+  rows: AssessmentReference[],
+  keep: string[],
+) {
+  const references = o.references.filter((r) => keep.includes(r.id));
+  for (const row of rows) {
+    const prior = o.references.find((r) => r.id === row.id);
+    if (prior && !sameDebriefValue(prior, row))
+      throw Error("Historical reference changed between catalogue pages.");
+    if (!references.some((r) => r.id === row.id)) references.push(row);
+  }
+  return { ...o, references };
+}
+export async function loadSelectedAssessmentReferences(
+  o: PinnedAssessmentOptions,
+  keep: string[],
+  fetchPage: (
+    offset: number,
+    selector: AssessmentReferenceSelector,
+  ) => Promise<AssessmentReferencePage>,
+) {
+  if (!o.reference_catalogue || !keep.length) return o;
+  if (keep.length > 32 || new Set(keep).size !== keep.length)
+    throw Error("Select no more than 32 distinct historical work references.");
+  const selector = { query: "", expectation_ids: [], reference_ids: keep };
+  let offset: number | null = 0;
+  const rows: AssessmentReference[] = [];
+  while (offset !== null) {
+    const page = assertAssessmentReferencePage(
+      await fetchPage(offset, selector),
+      o,
+      offset,
+      selector,
+    );
+    rows.push(...page.references);
+    offset = page.next_offset;
+  }
+  if (
+    rows.length !== keep.length ||
+    keep.some((id) => rows.filter((r) => r.id === id).length !== 1)
+  )
+    throw Error("Recorded references are unavailable in the selected history.");
+  return mergeAssessmentReferences(o, rows, keep);
+}
 export function assertAssessmentOptions(
   o: PinnedAssessmentOptions,
   e: Engagement,
@@ -328,9 +600,13 @@ export function assertAssessmentOptions(
     o.audited_actor_id !== actor ||
     o.bound_revision !== boundRevision ||
     o.selected_state_sha256 !== h.state_sha256 ||
-    o.selected_history_sha256 !== h.history_sha256 ||
+    !assessmentOptionsHistoryMatches(o, h) ||
     o.selected_history_tip_sha256 !== h.event_sha256 ||
     ![o.key_pin, o.rubric_sha256, o.inventory_sha256].every(debriefPin) ||
+    (o.reference_catalogue !== undefined &&
+      (!validCatalogue(o.reference_catalogue) ||
+        !Array.isArray(o.references) ||
+        o.references.length > o.reference_catalogue.count)) ||
     !Array.isArray(o.references) ||
     !Array.isArray(o.issues) ||
     !Array.isArray(o.expectations) ||
@@ -384,7 +660,7 @@ export function assertAssessmentRecord(
     if (
       !Array.isArray(d.references) ||
       d.references.some((r) => !validAssessmentReference(r)) ||
-      d.schema !== "INSTRUCTOR_AUTHORED_ASSESSMENT_V1" ||
+      !["INSTRUCTOR_AUTHORED_ASSESSMENT_V1", "INSTRUCTOR_AUTHORED_ASSESSMENT_V2"].includes(d.schema) ||
       d.id !== r.id ||
       d.version !== r.version ||
       d.engagement_id !== e.id ||
@@ -396,9 +672,11 @@ export function assertAssessmentRecord(
         d.pins.rubric_sha256,
         d.pins.inventory_sha256,
         d.pins.selected_state_sha256,
-        d.pins.selected_history_sha256,
         d.pins.selected_history_tip_sha256,
-      ].every(debriefPin)
+      ].every(debriefPin) ||
+      !assessmentDocumentHistoryMatches(d, responseHistoryPin(d.pins,
+        d.schema === "INSTRUCTOR_AUTHORED_ASSESSMENT_V2" ? "2.0" : "1.0",
+        d.engagement_id, d.pins.learner_revision), e.id)
     )
       throw Error("Assessment document pins differ from the protected record.");
   }

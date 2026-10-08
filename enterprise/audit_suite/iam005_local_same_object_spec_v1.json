@@ -1,0 +1,31 @@
+{
+  "schema": "SH_FICTIONAL_IAM005_LOCAL_SAME_OBJECT_SPEC_V1",
+  "truth_class": "FUTURE_NONPERSONAL_LOCAL_EXERCISE_ONLY",
+  "object": {
+    "id": "LOCAL-IAM005-TRACE-OBJECT",
+    "text": "Nonpersonal local IAM005 fixture: read-only example bytes.\n",
+    "sha256": "6e4a4c6199c48f07bcbe4464bfb17f8abc1dd030ae167219ee36ba2e3278232f",
+    "contains_personal_or_phi_data": false
+  },
+  "human": {
+    "principal_id": "SIM-LOCAL-HUMAN-01",
+    "right": "LOCAL_READ_ONLY",
+    "lease_expires_at": "2027-05-01T00:10:00+00:00"
+  },
+  "service": {
+    "identity_id": "EXERCISE-SVC-IAM005-01",
+    "purpose": "Read exactly the one selected local nonpersonal object",
+    "credential_kind": "INERT_INTEGER_VERSION_NO_USABLE_SECRET",
+    "initial_credential_version": 1
+  },
+  "contacts": {
+    "local_operator": "AS-P007",
+    "distinct_local_reviewer": "AS-P008"
+  },
+  "local_review_due_at": "2027-05-01T01:30:00+00:00",
+  "limits": [
+    "No real account, usable secret, corporate approval, production trust boundary, ePHI or emergency mode",
+    "Separate local human and service native ledgers; one object ID and byte SHA only",
+    "No enterprise population, qualified review, external communication or audit task credit"
+  ]
+}

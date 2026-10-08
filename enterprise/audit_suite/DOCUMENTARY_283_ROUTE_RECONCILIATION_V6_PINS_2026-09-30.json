@@ -1,0 +1,115 @@
+{
+  "as_of": "2026-09-30",
+  "base_commit": "e4f47efee47982f74c19790208bff78c24cb581b",
+  "inputs": {
+    "iam_db": {
+      "path": "enterprise/generated/audit-suite/company-iam005-emergency-marker-2026-09-30/main-run-v1/company.sqlite3",
+      "scope": "private",
+      "sha256": "bd40f886ccd53def3b1cfe716f93422a5aa686e15162b2f90b48e3af5920d433"
+    },
+    "iam_manifest": {
+      "path": "enterprise/generated/audit-suite/company-iam005-emergency-marker-2026-09-30/main-run-v1/MANIFEST.json",
+      "scope": "private",
+      "sha256": "d21c7aedd1d029ce596db7b158e4c23fd379bc225304c2959537ef8f4a9dba42"
+    },
+    "iam_receipt": {
+      "path": "enterprise/generated/audit-suite/company-iam005-emergency-marker-2026-09-30/main-run-v1/RECEIPT.json",
+      "scope": "private",
+      "sha256": "95dcda39d7965d285a585afacadf869b4d7349556452d15051c29433fe5f9185"
+    },
+    "iam_review": {
+      "path": "enterprise/generated/audit-suite/company-iam005-emergency-marker-2026-09-30/independent-review-main-v1/REVIEW.json",
+      "scope": "private",
+      "sha256": "2d1d0f413e26388dd6f7abff9835bc3a3e80376cd8056f855da7e0d51ba35674"
+    },
+    "sec_db": {
+      "path": "enterprise/generated/audit-suite/company-sec003-selected-vulnerability-2026-09-30/main-run-v1/company.sqlite3",
+      "scope": "private",
+      "sha256": "a94b9f0e2d18e06afd2c83ae2012cea8da72102f9bafcf0e3968959eb6f1539f"
+    },
+    "sec_manifest": {
+      "path": "enterprise/generated/audit-suite/company-sec003-selected-vulnerability-2026-09-30/main-run-v1/MANIFEST.json",
+      "scope": "private",
+      "sha256": "4ae2200e8735ea60e4a85f1158782926fdd50eda96238fc15031d5d9eda69af3"
+    },
+    "sec_receipt": {
+      "path": "enterprise/generated/audit-suite/company-sec003-selected-vulnerability-2026-09-30/main-run-v1/RECEIPT.json",
+      "scope": "private",
+      "sha256": "85233a1e785ffea73f32996bc3f410e9b5c381720b6cbe941ff8a2bbd5474ff8"
+    },
+    "sec_review": {
+      "path": "enterprise/generated/audit-suite/company-sec003-selected-vulnerability-2026-09-30/independent-review-main-v1/REVIEW.json",
+      "scope": "private",
+      "sha256": "f15bc7d94d04fa3599a0f852470e81ea53ce3dc1685d05d0fb15a65901013f36"
+    },
+    "v5_ledger": {
+      "path": "enterprise/audit_suite/DOCUMENTARY_283_ROUTE_RECONCILIATION_V5_2026-09-30.json",
+      "scope": "repo",
+      "sha256": "61d16ce933628b7c6bda4b90e5ee5292fd1634d1c9c9e2ac0201a46e02726a10"
+    },
+    "v5_review": {
+      "path": "enterprise/generated/audit-suite/documentary-283-route-reconciliation-v5-2026-09-30/independent-review-main-v1/REVIEW.json",
+      "scope": "private",
+      "sha256": "89d03c1b1b4a2450524c6093dbe5ab9c02452afde351da939c92e3f9c835497b"
+    },
+    "v6_candidate_a": {
+      "path": "enterprise/generated/audit-suite/company-source-portfolio-v6-2026-09-30/main-candidate-v1/A.json",
+      "scope": "private",
+      "sha256": "e5f2674b439a1162d13d241578b278e755dafbaa2780ac93027eb9c3c5331fe2"
+    },
+    "v6_candidate_b": {
+      "path": "enterprise/generated/audit-suite/company-source-portfolio-v6-2026-09-30/main-candidate-v1/B.json",
+      "scope": "private",
+      "sha256": "5eb9b7baa234539a17631a13c3cb92983029824b45c1cc377b5a30d1d7082610"
+    },
+    "v6_candidate_report": {
+      "path": "enterprise/generated/audit-suite/company-source-portfolio-v6-2026-09-30/main-candidate-v1/REPORT.json",
+      "scope": "private",
+      "sha256": "25cae84f070457f50db4e067c689c254326702ae1c211c0cf29f5017f44a9072"
+    },
+    "v6_portfolio": {
+      "path": "enterprise/generated/audit-suite/company-source-portfolio-v6-2026-09-30/main-run-v1/REPORT.json",
+      "scope": "private",
+      "sha256": "b2f9eb833c58751fba740836daf722ed480e2063540c09d28bc6064aec802967"
+    },
+    "v6_review": {
+      "path": "enterprise/generated/audit-suite/company-source-portfolio-v6-2026-09-30/independent-review-main-v1/REVIEW.json",
+      "scope": "private",
+      "sha256": "7f067b8070d124be30dc4abc1653164ed6702b5601d0a4f90c6066a5ad9fde0b"
+    },
+    "v7_candidate_a": {
+      "path": "enterprise/generated/audit-suite/company-source-portfolio-v7-2026-09-30/main-candidate-v1/A.json",
+      "scope": "private",
+      "sha256": "64a4a35ab535629752d257ed4f7e83c20ed30f512bf4ca9d11a8860f3f94e244"
+    },
+    "v7_candidate_b": {
+      "path": "enterprise/generated/audit-suite/company-source-portfolio-v7-2026-09-30/main-candidate-v1/B.json",
+      "scope": "private",
+      "sha256": "c0a9255defe093d94274b02891516f3fe4c323147b4a112c3edfb98fb61c0cd1"
+    },
+    "v7_candidate_report": {
+      "path": "enterprise/generated/audit-suite/company-source-portfolio-v7-2026-09-30/main-candidate-v1/REPORT.json",
+      "scope": "private",
+      "sha256": "3a3ce5354f78138863a13c4b42e2556a520b950f040546b3a54b976a75fcbbd5"
+    },
+    "v7_portfolio": {
+      "path": "enterprise/generated/audit-suite/company-source-portfolio-v7-2026-09-30/main-run-v1/REPORT.json",
+      "scope": "private",
+      "sha256": "179030de0a438f2f3e05937a3a660e1da5e2072f0293c53d0ffe131804945015"
+    },
+    "v7_review": {
+      "path": "enterprise/generated/audit-suite/company-source-portfolio-v7-2026-09-30/independent-review-main-v1/REVIEW.json",
+      "scope": "private",
+      "sha256": "f49dd7f61a6afdda28ffd7ad366dde1e13269df229b70524d889ab1d85a68ea6"
+    }
+  },
+  "limits": [
+    "Exact reviewed main-local source bytes; no task credit.",
+    "P1 inventory is frozen read-only across reconciliation."
+  ],
+  "p1_freeze": {
+    "file_count": 538,
+    "inventory_sha256": "f266ef682b502b3b093170f8a7b64fcf5cbab722d5c8ddf6715a63c0e535360f"
+  },
+  "schema": "SH_DOCUMENTARY_283_ROUTE_RECONCILIATION_V6_PINS_V1"
+}

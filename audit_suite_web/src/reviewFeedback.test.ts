@@ -96,3 +96,19 @@ it("resolution never targets AI, prepared, resolved, legacy-server or learner-on
   e.permissions = ["learn"];
   expect(humanResolutionTarget(e, "H", "LEARNER", true)).toBeNull();
 });
+it.each(["SCRIPTED_ENGINEERING", "SYNTHETIC_TECHNICAL"])(
+  "retains %s provenance while allowing independent recorded feedback",
+  (kind) => {
+    const e = fixture();
+    e.permissions = ["review"];
+    e.workpapers[0].prepared_by = "PREPARER";
+    e.reviews[0].kind = kind;
+    expect(reviewFeedbackTarget(e, "H", true).payload).toEqual({
+      review_id: "H",
+      response_workpaper_version: 2,
+    });
+    expect(humanResolutionTarget(e, "H", "REVIEWER", true)).not.toBeNull();
+    expect(humanResolutionTarget(e, "H", "PREPARER", true)).toBeNull();
+    expect(e.reviews[0].kind).toBe(kind);
+  },
+);

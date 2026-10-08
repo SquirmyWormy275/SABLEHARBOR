@@ -58,7 +58,7 @@ def _authored(value, source_ids, control_ids, repository, state=None):
             or not issue["uncertainty"].strip()
             or not _ids(issue["source_ids"])
             or not set(issue["source_ids"]) <= source_ids
-            or not _ids(issue["control_ids"])
+            or not (_ids(issue["control_ids"]) or issue["control_ids"] == [])
             or not set(issue["control_ids"]) <= control_ids
         ):
             raise DomainError(
@@ -66,6 +66,8 @@ def _authored(value, source_ids, control_ids, repository, state=None):
             )
         issue_ids.add(issue["id"])
     expectation_ids = set()
+    scope_issue_ids = {issue["id"] for issue in value["issues"] if issue["control_ids"] == []}
+    scope_linked_ids = set()
     for row in value["expectations"]:
         if (
             not isinstance(row, dict)
@@ -87,14 +89,21 @@ def _authored(value, source_ids, control_ids, repository, state=None):
             raise DomainError(
                 "Expectations require actual issues and explicit alternative procedures"
             )
+        related = [issue for issue in value["issues"] if issue["id"] in row["issue_ids"]]
+        scope_related = {issue["id"] for issue in related if issue["control_ids"] == []}
+        if scope_related:
+            if len(scope_related) != len(related) or not _ids(row.get("task_ids")):
+                raise DomainError("Scope issues require explicit scope-only procedure links")
+            scope_linked_ids.update(scope_related)
         if "task_ids" in row:
             from .expectation_links import validate_authored_tasks
 
-            related = [issue for issue in value["issues"] if issue["id"] in row["issue_ids"]]
             validate_authored_tasks(
                 state, {c for issue in related for c in issue["control_ids"]}, row["task_ids"]
             )
         expectation_ids.add(row["id"])
+    if scope_issue_ids - scope_linked_ids:
+        raise DomainError("Scope issues require an explicitly linked current scope procedure")
     for relative, expected in value["source_pins"].items():
         if (
             not isinstance(relative, str)

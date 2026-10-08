@@ -42,8 +42,7 @@ def context(tmp_path, monkeypatch):
         content=b"corrected company original\n",
         provenance={"source_reference": "attributed correction"},
     )
-    monkeypatch.setattr("enterprise.audit_suite.service.Engine", lambda *a, **k: engine)
-    app = create_app(tmp_path / "http", allowed_hosts=["testserver"])
+    app = create_app(engine.store.root, engine_factory=lambda: engine, allowed_hosts=["testserver"])
     client = TestClient(app, base_url="https://testserver")
     headers = {"authorization": "Bearer " + principal["credential"]}
     return engine, state, principal, artifact, client, headers

@@ -14,10 +14,12 @@ from datetime import UTC, datetime
 from pathlib import Path
 from urllib.parse import quote, urlsplit
 
+import anyio
 from fastapi import FastAPI, Request
 from fastapi.responses import FileResponse, JSONResponse, Response
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 
+from . import workspace_transport
 from .artifacts import MAX_BYTES
 from .company_native_rights import NativeRecordClosure
 from .company_rights_http import CompanyRightsHTTP
@@ -135,14 +137,24 @@ def create_app(
     company_registry: Path | None = None,
     company_profile: str | None = None,
     instructor_key_root: Path | None = None,
+    instructor_reference_crosswalk=None,
     instructor_bindings: Path | None = None,
     enable_instructor_writeback: bool = True,
+    instructor_artifact_option_limit: int = 2000,
     background_jobs: bool = False,
+    background_job_guard=None,
     workspace_contexts: bool = False,
     company_rights_factory: Callable[[Engine], CompanyRightsProducer] | None = None,
     company_native_rights_factory: Callable[[Engine, CompanyRightsProducer], NativeRecordClosure]
     | None = None,
+    engine_factory: Callable[[], Engine] | None = None,
+    request_guard: Callable[[Request], Callable[[], None] | None] | None = None,
 ) -> FastAPI:
+    if engine_factory is not None and any(
+        value is not None
+        for value in (company_root, company_bindings, company_registry, company_profile)
+    ):
+        raise DomainError("Trusted retained engine cannot combine company connection overrides")
     if company_native_rights_factory is not None and company_rights_factory is None:
         raise DomainError("Native company closure requires company rights", status=503)
     if company_bindings is not None and company_root is None and company_registry is None:
@@ -153,13 +165,16 @@ def create_app(
     bindings = load_company_bindings(company_bindings)
     key_pin = None
     key_files = None
+    key_search_index = None
+    key_search_texts = None
 
     def verified_keys():
+        nonlocal key_search_index, key_search_texts
         import hashlib
         import json
         import re
 
-        from .instructor_key import verify_archive
+        from .instructor_key import semantic_search_bundle, verify_archive
 
         if instructor_key_root is None:
             raise DomainError("Instructor reference library is not configured", status=503)
@@ -191,7 +206,10 @@ def create_app(
                 raise ValueError
             if key_files is None:
                 verify_archive(root)
-            return root, index, receipt, pin, fingerprints
+                key_search_index, key_search_texts = semantic_search_bundle(root, index)
+            if key_search_index is None:
+                raise ValueError
+            return root, key_search_index, receipt, pin, fingerprints
         except Exception as error:
             raise DomainError("Instructor reference integrity check failed", status=503) from error
 
@@ -199,18 +217,24 @@ def create_app(
         initial_keys = verified_keys()
         key_pin, key_files = initial_keys[3], initial_keys[4]
     limits = RequestLimits()
-    engine = Engine(
-        private_root,
-        inference_config=inference_config,
-        voice_config=voice_config,
-        corpus_root=corpus_root,
-        program_pack=program_pack,
-        company_root=company_root,
-        company_bindings=bindings,
-        company_registry=company_registry,
-        company_profile=company_profile,
-        **({"repository": repository} if repository else {}),
+    engine = (
+        engine_factory()
+        if engine_factory is not None
+        else Engine(
+            private_root,
+            inference_config=inference_config,
+            voice_config=voice_config,
+            corpus_root=corpus_root,
+            program_pack=program_pack,
+            company_root=company_root,
+            company_bindings=bindings,
+            company_registry=company_registry,
+            company_profile=company_profile,
+            **({"repository": repository} if repository else {}),
+        )
     )
+    if not isinstance(engine, Engine) or engine.store.root != Path(private_root).resolve():
+        raise DomainError("Trusted workroom engine must use the configured private root")
     company_rights = None
     company_native_rights = None
     if company_rights_factory is not None:
@@ -246,7 +270,9 @@ def create_app(
 
         job_root = engine.store.root / "background-jobs"
         job_root.mkdir(mode=0o700, exist_ok=True)
-        jobs = BackgroundJobs(job_root, engine, max_workers=2, max_pending=32)
+        jobs = BackgroundJobs(
+            job_root, engine, max_workers=2, max_pending=32, execution_guard=background_job_guard
+        )
     contexts = None
     personal_views = None
     visit_checkpoints = None
@@ -283,7 +309,12 @@ def create_app(
 
             release_root = engine.store.root / "instructor-releases"
             release_root.mkdir(mode=0o700, exist_ok=True)
-            releases = InstructorReleases(release_root, engine, protected_bindings)
+            releases = InstructorReleases(
+                release_root,
+                engine,
+                protected_bindings,
+                artifact_option_limit=instructor_artifact_option_limit,
+            )
             assessment_root = engine.store.root / "instructor-assessments"
             assessment_root.mkdir(mode=0o700, exist_ok=True)
             assessments = InstructorAssessments(assessment_root, engine, protected_bindings)
@@ -310,6 +341,76 @@ def create_app(
     app.add_middleware(
         TrustedHostMiddleware, allowed_hosts=allowed_hosts or ["localhost", "127.0.0.1", "[::1]"]
     )
+
+    if request_guard is not None:
+
+        class RetainedRequestBoundary:
+            def __init__(self, app):
+                self.app = app
+                self.lock = asyncio.Lock()
+
+            async def invoke(self, scope, receive, send):
+                from .request_integrity import begin, finish
+
+                proof, token = begin()
+                started = False
+                try:
+                    request = Request(scope, receive=receive)
+                    closing = await asyncio.to_thread(request_guard, request)
+
+                    async def validated_send(message):
+                        nonlocal started, closing
+                        if message["type"] == "http.response.start":
+                            if closing is not None:
+                                await asyncio.to_thread(closing)
+                                closing = None
+                            started = True
+                        await send(message)
+
+                    await self.app(scope, receive, validated_send)
+                except DomainError as exc:
+                    if started:
+                        raise
+                    await JSONResponse(
+                        {"error": str(exc), "code": exc.code}, status_code=exc.status
+                    )(scope, receive, send)
+                except (ValueError, OSError):
+                    if started:
+                        raise
+                    await JSONResponse(
+                        {
+                            "error": "Retained company workroom unavailable",
+                            "code": "SOURCE_UNAVAILABLE",
+                        },
+                        status_code=503,
+                    )(scope, receive, send)
+                finally:
+                    finish(proof, token)
+
+            async def __call__(self, scope, receive, send):
+                if scope["type"] != "http":
+                    return await self.app(scope, receive, send)
+                async with self.lock:
+                    # Own the entire downstream ASGI invocation. BaseHTTP's
+                    # call_next task group can otherwise cancel a handler while
+                    # its submitted executor worker is still using the journal.
+                    invocation = asyncio.create_task(self.invoke(scope, receive, send))
+                    try:
+                        return await asyncio.shield(invocation)
+                    except asyncio.CancelledError:
+                        # Keep the reservation and request proofs until every
+                        # guard/handler/closing worker has really settled.
+                        with anyio.CancelScope(shield=True):
+                            while not invocation.done():
+                                try:
+                                    await asyncio.shield(invocation)
+                                except asyncio.CancelledError:
+                                    continue
+                                except Exception:
+                                    break
+                        if not invocation.cancelled():
+                            invocation.exception()
+                        raise
 
     @app.middleware("http")
     async def protected_company_surface(request: Request, call_next):
@@ -375,7 +476,12 @@ def create_app(
         response.headers["Cache-Control"] = (
             "no-store, private"
             if (
-                "/company/rights/" in request.url.path
+                "private"
+                in {
+                    directive.strip().lower()
+                    for directive in response.headers.get("Cache-Control", "").split(",")
+                }
+                or "/company/rights/" in request.url.path
                 or (
                     "/instructor-key/" in request.url.path
                     and request.url.path.endswith("/original")
@@ -473,15 +579,74 @@ def create_app(
         actor(request)
         return app.openapi()
 
+    def workspace_view(request: Request) -> bool:
+        values = request.headers.getlist("X-Workspace-View")
+        if not values:
+            return False
+        if values != [workspace_transport.HEADER]:
+            raise DomainError("Unsupported workspace transport view")
+        return True
+
+    async def workspace_response(state: dict, compact: bool) -> dict:
+        return await asyncio.to_thread(workspace_transport.summary, state) if compact else state
+
+    def workspace_query(request: Request, *, original: bool = False) -> dict:
+        allowed = (
+            {"observed_revision", "source_epoch", "artifact_sha256"}
+            if original
+            else {"observed_revision", "source_epoch", "object_sha256", "version"}
+        )
+        pairs = list(request.query_params.multi_items())
+        values = dict(pairs)
+        if len(values) != len(pairs) or set(values) - allowed:
+            raise DomainError("Exact retained workspace query required")
+        revision = values.get("observed_revision", "")
+        if not re.fullmatch(r"0|[1-9][0-9]{0,15}", revision):
+            raise DomainError("Exact workspace revision required")
+        pins = {"revision": int(revision), "source_epoch": values.get("source_epoch", "")}
+        if original:
+            pins["artifact_sha256"] = values.get("artifact_sha256", "")
+        else:
+            pins["object_sha256"] = values.get("object_sha256", "")
+            version = values.get("version")
+            if version is not None:
+                if not re.fullmatch(r"[1-9][0-9]{0,15}", version):
+                    raise DomainError("Exact retained workpaper version required")
+                pins["version"] = int(version)
+        return pins
+
     @app.post("/api/engagements")
     async def create(request: Request):
         principal = actor(request, mutation=True)
+        compact = workspace_view(request)
         payload = await json_body(request)
-        return await asyncio.to_thread(engine.create, principal["id"], payload)
+        state = await asyncio.to_thread(engine.create, principal["id"], payload)
+        return await workspace_response(state, compact)
 
     @app.get("/api/engagements/{engagement_id}")
     async def get(engagement_id: str, request: Request):
-        return await asyncio.to_thread(engine.get, actor(request)["id"], engagement_id)
+        principal = actor(request)
+        compact = workspace_view(request)
+        state = await asyncio.to_thread(engine.get, principal["id"], engagement_id)
+        return await workspace_response(state, compact)
+
+    @app.get("/api/engagements/{engagement_id}/workspace/sample-original-context/{artifact_id}")
+    async def workspace_original(engagement_id: str, artifact_id: str, request: Request):
+        state = await asyncio.to_thread(engine.get, actor(request)["id"], engagement_id)
+        pins = workspace_query(request, original=True)
+        return await asyncio.to_thread(
+            workspace_transport.sample_original_context, state, artifact_id, **pins
+        )
+
+    @app.get("/api/engagements/{engagement_id}/workspace/{collection}/{object_id}")
+    async def workspace_detail(
+        engagement_id: str, collection: str, object_id: str, request: Request
+    ):
+        state = await asyncio.to_thread(engine.get, actor(request)["id"], engagement_id)
+        pins = workspace_query(request)
+        return await asyncio.to_thread(
+            workspace_transport.detail, state, collection, object_id, **pins
+        )
 
     @app.get("/api/engagements/{engagement_id}/work-status")
     async def work_status(engagement_id: str, request: Request):
@@ -489,13 +654,29 @@ def create_app(
 
         return await asyncio.to_thread(report, engine, actor(request)["id"], engagement_id)
 
-    def instructor_reference_value(principal, engagement_id, scenario_id=None):
+    @app.get("/api/engagements/{engagement_id}/procedure-original-integrity")
+    async def procedure_original_integrity(engagement_id: str, request: Request):
+        from .procedure_original_integrity import report
+
+        return await asyncio.to_thread(report, engine, actor(request)["id"], engagement_id)
+
+    def instructor_reference_value(principal, engagement_id, scenario_id=None, query=None):
         import hashlib
         import json
         import re
 
         if engine.store.membership(principal["id"], engagement_id) != "instruct":
             raise DomainError("Instructor membership required", status=403)
+        if query is not None:
+            from .instructor_key import (
+                MAX_SEARCH_RESULT_BYTES,
+                SEARCH_FIELDS,
+                _json,
+                semantic_search_matches,
+                semantic_search_query,
+            )
+
+            semantic_search_query(query)
         if scenario_id is not None and not re.fullmatch(
             r"[A-Za-z0-9][A-Za-z0-9_.-]{0,127}", scenario_id
         ):
@@ -506,7 +687,27 @@ def create_app(
             "binding": {"status": "NOT_BOUND", "engagement_id": engagement_id},
             "archive": {"sha256": receipt["archive_sha256"]},
         }
+        if instructor_reference_crosswalk is not None:
+            metadata["reference_crosswalk"] = instructor_reference_crosswalk(engagement_id)
         if scenario_id is None:
+            if query is not None:
+                matches = semantic_search_matches(key_search_texts, query)
+                result = {
+                    "schema": "PRIVATE_COMPLETE_AUTHORED_MATCH_RESULT_V1",
+                    "audience": "INSTRUCTOR_ONLY",
+                    "status": metadata["status"],
+                    "binding": metadata["binding"],
+                    "archive": metadata["archive"],
+                    "query": query,
+                    "coverage_fields": list(SEARCH_FIELDS),
+                    "complete_scalar_matching": True,
+                    "matching_entry_ids": matches,
+                    "matched_entries": len(matches),
+                    "total_entries": len(index["entries"]),
+                }
+                if len(_json(result)) > MAX_SEARCH_RESULT_BYTES:
+                    raise DomainError("Complete authored match result limit", status=503)
+                return result, None, None
             return {**index, **metadata}, None, None
         entry = next((entry for entry in index["entries"] if entry["id"] == scenario_id), None)
         if entry is None:
@@ -520,13 +721,13 @@ def create_app(
             raise DomainError("Instructor reference integrity check failed", status=503) from error
         return ({"key": key, **metadata}, entry["key_sha256"], key["source"]["raw_sha256"])
 
-    def instructor_reference(principal, engagement_id, scenario_id=None):
+    def instructor_reference(principal, engagement_id, scenario_id=None, query=None):
         from .instructor_access import InstructorAccessLog
 
         log = InstructorAccessLog(engine.store.root / "instructor-key-access")
         try:
             value, key_pin, source_pin = instructor_reference_value(
-                principal, engagement_id, scenario_id
+                principal, engagement_id, scenario_id, query
             )
         except Exception as error:
             status = error.status if isinstance(error, DomainError) else 500
@@ -684,14 +885,47 @@ def create_app(
         )
 
     @app.get("/api/engagements/{engagement_id}/instructor-comparison")
-    async def instructor_comparison(engagement_id: str, revision: int, request: Request):
-        from .instructor_comparison import compare
+    async def instructor_comparison(
+        engagement_id: str, revision: int, request: Request, view: str | None = None,
+        family: str | None = None, expectation_id: str | None = None,
+        source_id: str | None = None, record_id: str | None = None,
+        item_id: str | None = None, inventory_sha256: str | None = None,
+        target_sha256: str | None = None, offset: int = 0, limit: int = 20,
+    ):
+        from .instructor_comparison import compare, comparison_view
 
         principal = actor(request)
         limits.check("instructor-comparison", principal["id"], 60)
-        return await asyncio.to_thread(
+        allowed = {"revision"} if view is None else (
+            {"revision", "view"} if view == "summary-v1" else {
+                "revision", "view", "family", "expectation_id", "source_id", "record_id",
+                "item_id", "inventory_sha256", "target_sha256", "offset", "limit",
+            }
+        )
+        if set(request.query_params) - allowed or any(
+            len(request.query_params.getlist(k)) != 1 for k in request.query_params
+        ) or any(
+            k in request.query_params and not re.fullmatch(r"0|[1-9][0-9]{0,9}", request.query_params[k])
+            for k in ("offset", "limit")
+        ):
+            raise DomainError("Exact comparison query selectors required")
+        value = await asyncio.to_thread(
             compare, engine, principal, engagement_id, protected_bindings, revision=revision
         )
+        if view is not None:
+            value = await asyncio.to_thread(
+                comparison_view, value, view=view, family=family, expectation_id=expectation_id,
+                source_id=source_id, record_id=record_id, item_id=item_id,
+                inventory_sha256=inventory_sha256, target_sha256=target_sha256,
+                offset=offset, limit=limit,
+            )
+        return await private_view(value)
+
+    async def private_view(value):
+        # Only the opt-in sealed Store imposes this protected metadata budget.
+        # Ordinary workrooms and original-byte downloads retain their APIs.
+        check = getattr(engine.store, "check_private_view_budget", None)
+        return value if check is None else await asyncio.to_thread(check, value)
 
     def assessment_store(request: Request, *, mutation=False):
         principal = actor(request, mutation=mutation)
@@ -703,34 +937,67 @@ def create_app(
     @app.get("/api/engagements/{engagement_id}/instructor-assessments/options")
     async def assessment_options(engagement_id: str, revision: int, request: Request):
         principal, store = assessment_store(request)
+        query = request.query_params
+        catalogue = query.get("view") == "catalogue-v1"
         if (
-            set(request.query_params) != {"revision"}
-            or len(request.query_params.getlist("revision")) != 1
+            set(query) != ({"revision", "view"} if catalogue else {"revision"})
+            or any(len(query.getlist(k)) != 1 for k in query)
         ):
-            raise DomainError("Choose one recorded work revision")
-        return await asyncio.to_thread(store.options, principal, engagement_id, revision)
+            raise DomainError("Choose one recorded work revision and supported view")
+        return await private_view(
+            await asyncio.to_thread(
+                store.options_view, principal, engagement_id, revision, catalogue=catalogue
+            )
+        )
+
+    @app.get("/api/engagements/{engagement_id}/instructor-assessments/references")
+    async def assessment_references(
+        engagement_id: str, revision: int, offset: int, request: Request,
+    ):
+        import json
+
+        principal, store = assessment_store(request)
+        query = request.query_params
+        if (
+            set(query) != {"revision", "offset", "context_sha256", "catalogue_sha256", "query", "expectation_ids", "reference_ids"}
+            or any(len(query.getlist(k)) != 1 for k in query)
+            or len(query["expectation_ids"]) > 2048 or len(query["reference_ids"]) > 4096
+        ):
+            raise DomainError("Exact assessment catalogue page selector required")
+        try:
+            expectations = json.loads(query["expectation_ids"])
+            references = json.loads(query["reference_ids"])
+        except (ValueError, TypeError) as error:
+            raise DomainError("Exact expectation filter required") from error
+        return await private_view(await asyncio.to_thread(
+            store.reference_page, principal, engagement_id, revision,
+            context_sha256=query["context_sha256"], catalogue_sha256=query["catalogue_sha256"],
+            offset=offset, query=query["query"], expectation_ids=expectations, reference_ids=references,
+        ))
 
     @app.get("/api/engagements/{engagement_id}/instructor-assessments")
     async def assessment_history(engagement_id: str, request: Request):
         principal, store = assessment_store(request)
         if request.query_params:
             raise DomainError("Assessments use the current authenticated context")
-        return await asyncio.to_thread(store.listing, principal, engagement_id)
+        return await private_view(await asyncio.to_thread(store.listing, principal, engagement_id))
 
     @app.get("/api/engagements/{engagement_id}/instructor-assessments/{assessment_id}")
     async def assessment_read(engagement_id: str, assessment_id: str, request: Request):
         principal, store = assessment_store(request)
         if request.query_params:
             raise DomainError("Assessments use the current authenticated context")
-        return await asyncio.to_thread(store.read, principal, engagement_id, assessment_id)
+        return await private_view(
+            await asyncio.to_thread(store.read, principal, engagement_id, assessment_id)
+        )
 
     @app.post("/api/engagements/{engagement_id}/instructor-assessments")
     async def assessment_save(engagement_id: str, request: Request):
         principal, store = assessment_store(request, mutation=True)
         if request.query_params:
             raise DomainError("Assessments use the current authenticated context")
-        return await asyncio.to_thread(
-            store.save, principal, engagement_id, await json_body(request)
+        return await private_view(
+            await asyncio.to_thread(store.save, principal, engagement_id, await json_body(request))
         )
 
     def key_view_store(request: Request, *, mutation=False):
@@ -748,7 +1015,8 @@ def create_app(
             or len(request.query_params.getlist("kind")) != 1
         ):
             raise DomainError("Choose one saved Key view kind")
-        return await asyncio.to_thread(store.listing, principal, engagement_id, kind)
+        value = await asyncio.to_thread(store.listing, principal, engagement_id, kind)
+        return await private_view(value)
 
     @app.post("/api/engagements/{engagement_id}/instructor-key-views")
     async def key_view_save(engagement_id: str, request: Request):
@@ -780,37 +1048,45 @@ def create_app(
     @app.get("/api/engagements/{engagement_id}/instructor-releases")
     async def release_history(engagement_id: str, request: Request):
         principal, store = release_store(request)
-        return await asyncio.to_thread(store.history, principal, engagement_id)
+        return await private_view(await asyncio.to_thread(store.history, principal, engagement_id))
 
     @app.get("/api/engagements/{engagement_id}/instructor-releases/options")
     async def release_options(engagement_id: str, request: Request):
         principal, store = release_store(request)
-        return await asyncio.to_thread(store.options, principal, engagement_id)
+        return await private_view(await asyncio.to_thread(store.options, principal, engagement_id))
 
     @app.get("/api/engagements/{engagement_id}/instructor-releases/debrief-options")
     async def debrief_options(engagement_id: str, request: Request):
         principal, store = release_store(request)
-        return await asyncio.to_thread(store.debrief_options, principal, engagement_id)
+        return await private_view(
+            await asyncio.to_thread(store.debrief_options, principal, engagement_id)
+        )
 
     @app.post("/api/engagements/{engagement_id}/instructor-releases/debrief-preview")
     async def debrief_preview(engagement_id: str, request: Request):
         principal, store = release_store(request, mutation=True)
-        return await asyncio.to_thread(
-            store.debrief_preview, principal, engagement_id, await json_body(request)
+        return await private_view(
+            await asyncio.to_thread(
+                store.debrief_preview, principal, engagement_id, await json_body(request)
+            )
         )
 
     @app.post("/api/engagements/{engagement_id}/instructor-releases/preview")
     async def release_preview(engagement_id: str, request: Request):
         principal, store = release_store(request, mutation=True)
-        return await asyncio.to_thread(
-            store.preview, principal, engagement_id, await json_body(request)
+        return await private_view(
+            await asyncio.to_thread(
+                store.preview, principal, engagement_id, await json_body(request)
+            )
         )
 
     @app.post("/api/engagements/{engagement_id}/instructor-releases")
     async def release_confirm(engagement_id: str, request: Request):
         principal, store = release_store(request, mutation=True)
-        return await asyncio.to_thread(
-            store.confirm, principal, engagement_id, await json_body(request)
+        return await private_view(
+            await asyncio.to_thread(
+                store.confirm, principal, engagement_id, await json_body(request)
+            )
         )
 
     @app.post("/api/engagements/{engagement_id}/instructor-releases/{release_id}/revoke")
@@ -819,17 +1095,21 @@ def create_app(
         payload = await json_body(request)
         if payload.get("release_id") != release_id:
             raise DomainError("Exact release identity required")
-        return await asyncio.to_thread(store.revoke, principal, engagement_id, payload)
+        return await private_view(
+            await asyncio.to_thread(store.revoke, principal, engagement_id, payload)
+        )
 
     @app.get("/api/engagements/{engagement_id}/assistance")
     async def assistance_list(engagement_id: str, request: Request):
         principal, store = release_store(request)
-        return await asyncio.to_thread(store.list, principal, engagement_id)
+        return await private_view(await asyncio.to_thread(store.list, principal, engagement_id))
 
     @app.get("/api/engagements/{engagement_id}/assistance/{release_id}")
     async def assistance_read(engagement_id: str, release_id: str, request: Request):
         principal, store = release_store(request)
-        return await asyncio.to_thread(store.read, principal, engagement_id, release_id)
+        return await private_view(
+            await asyncio.to_thread(store.read, principal, engagement_id, release_id)
+        )
 
     @app.post("/api/engagements/{engagement_id}/assistance/{release_id}/acknowledge")
     async def assistance_acknowledge(engagement_id: str, release_id: str, request: Request):
@@ -837,14 +1117,18 @@ def create_app(
         payload = await json_body(request)
         if payload.get("release_id") != release_id:
             raise DomainError("Exact release identity required")
-        return await asyncio.to_thread(store.acknowledge, principal, engagement_id, payload)
+        return await private_view(
+            await asyncio.to_thread(store.acknowledge, principal, engagement_id, payload)
+        )
 
     @app.post("/api/engagements/{engagement_id}/assistance/{release_id}/export-preview")
     async def debrief_export_preview(engagement_id: str, release_id: str, request: Request):
         principal, store = release_store(request, mutation=True)
         limits.check("debrief-export", principal, 12)
-        return await asyncio.to_thread(
-            store.export_preview, principal, engagement_id, release_id, await json_body(request)
+        return await private_view(
+            await asyncio.to_thread(
+                store.export_preview, principal, engagement_id, release_id, await json_body(request)
+            )
         )
 
     @app.post("/api/engagements/{engagement_id}/assistance/{release_id}/export")
@@ -880,13 +1164,28 @@ def create_app(
     async def instructor_binding(engagement_id: str, request: Request):
         from .bound_instructor import read_binding
 
-        return await asyncio.to_thread(
+        value = await asyncio.to_thread(
             read_binding, engine, actor(request), engagement_id, protected_bindings
         )
+        if instructor_reference_crosswalk is not None:
+            value["reference_crosswalk"] = await asyncio.to_thread(
+                instructor_reference_crosswalk, engagement_id
+            )
+        return await private_view(value)
 
     @app.get("/api/engagements/{engagement_id}/instructor-key")
     async def instructor_key_index(engagement_id: str, request: Request):
-        return await asyncio.to_thread(instructor_reference, actor(request), engagement_id)
+        principal = actor(request)
+        if engine.store.membership(principal["id"], engagement_id) != "instruct":
+            return await asyncio.to_thread(instructor_reference, principal, engagement_id)
+        if request.query_params and (
+            set(request.query_params) != {"query"}
+            or len(request.query_params.getlist("query")) != 1
+        ):
+            raise DomainError("Exact authored search query field required")
+        return await asyncio.to_thread(
+            instructor_reference, principal, engagement_id, None, request.query_params.get("query")
+        )
 
     @app.get("/api/engagements/{engagement_id}/instructor-key/{scenario_id}")
     async def instructor_key_detail(engagement_id: str, scenario_id: str, request: Request):
@@ -1478,6 +1777,7 @@ def create_app(
     @app.post("/api/engagements/{engagement_id}/commands")
     async def command(engagement_id: str, request: Request):
         principal = actor(request, mutation=True)
+        compact = workspace_view(request)
         payload = await json_body(request)
         limits.check("commands", principal["id"], 240)
         if payload.get("kind") in {
@@ -1505,11 +1805,12 @@ def create_app(
                     app.state.generation_jobs.pop(engagement_id, None)
 
             app.state.generation_jobs[engagement_id] = asyncio.create_task(generate())
-        return state
+        return await workspace_response(state, compact)
 
     @app.post("/api/engagements/{engagement_id}/uploads")
     async def upload(engagement_id: str, request: Request):
         principal = actor(request, mutation=True)
+        compact = workspace_view(request)
         limits.check("uploads", principal["id"], 60)
         state = engine.get(principal["id"], engagement_id)
         if state["phase"] != "ACTIVE":
@@ -1678,7 +1979,8 @@ def create_app(
                 retain,
                 permissions={"learn", "instruct"},
             )
-            return engine._project(principal["id"], saved)
+            projected = engine._project(principal["id"], saved)
+            return await workspace_response(projected, compact)
 
     @app.get("/api/engagements/{engagement_id}/artifacts/{artifact_id}/download")
     async def download(engagement_id: str, artifact_id: str, request: Request):
@@ -1825,4 +2127,8 @@ def create_app(
                 candidate = web_root / "index.html"
             return FileResponse(candidate)
 
+    if request_guard is not None:
+        # Outermost user middleware: downstream BaseHTTP task groups belong to
+        # the owned invocation, so HTTP cancellation cannot detach their workers.
+        app.add_middleware(RetainedRequestBoundary)
     return app

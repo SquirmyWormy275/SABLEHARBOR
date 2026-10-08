@@ -1,5 +1,10 @@
-import { useRef, useState } from "react";
-import type { Engagement } from "./api";
+import { useEffect, useRef, useState } from "react";
+import type { Engagement, Row } from "./api";
+import {
+  deferredTrace,
+  loadSampleOriginalContext,
+  workspaceContext,
+} from "./workspaceDetail";
 import type { EvidenceContextReference } from "./evidenceContext";
 import {
   sampleOriginalContext,
@@ -20,7 +25,41 @@ export function SampleEvidenceContext({
     [page, setPage] = useState(0),
     current = useRef(e);
   current.current = e;
-  const context = sampleOriginalContext(e, artifactId),
+  const key = JSON.stringify([workspaceContext(e), artifactId]),
+    deferred =
+      Array.isArray(e.sample_executions) &&
+      e.sample_executions.some((t: Row) => deferredTrace(t));
+  const [loaded, setLoaded] = useState<{ key: string; traces: Row[] } | null>(
+      null,
+    ),
+    [error, setError] = useState("");
+  const live = useRef(key);
+  live.current = key;
+  useEffect(() => {
+    if (!deferred) return;
+    let cancelled = false;
+    setLoaded(null);
+    setError("");
+    setPage(0);
+    void loadSampleOriginalContext(e, artifactId)
+      .then((traces) => {
+        if (!cancelled && live.current === key) setLoaded({ key, traces });
+      })
+      .catch((err) => {
+        if (!cancelled && live.current === key)
+          setError((err as Error).message);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [key, deferred]);
+  const ready = !deferred || loaded?.key === key;
+  const context = ready
+      ? sampleOriginalContext(
+          deferred ? { ...e, sample_executions: loaded!.traces } : e,
+          artifactId,
+        )
+      : { rows: [], unavailable: false },
     matches = context.rows.filter((r) =>
       [
         r.traceId,
@@ -50,13 +89,19 @@ export function SampleEvidenceContext({
         passing results or independent review. Earlier revisions remain visible
         after correction.
       </p>
-      {context.unavailable && (
+      {!ready && (
+        <p role={error ? "alert" : "status"}>
+          {error ||
+            "Loading retained observations for this exact original. Unloaded items are not absent observations."}
+        </p>
+      )}
+      {ready && context.unavailable && (
         <p role="status">
           Some sample context is unavailable or exceeds the bounded index; no
           complete-history claim is made.
         </p>
       )}
-      {!context.rows.length && !context.unavailable && (
+      {ready && !context.rows.length && !context.unavailable && (
         <p>
           No recorded sample item cites this artifact ID and SHA-256. This does
           not establish whether testing was performed elsewhere.
