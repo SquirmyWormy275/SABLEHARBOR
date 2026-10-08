@@ -132,7 +132,9 @@ def test_invalid_native_offset_vectors_publish_no_nodes(db, monkeypatch, offsets
 
 def test_identifier_collision_cannot_substitute_different_literal(db, monkeypatch):
     monkeypatch.setattr(candidate, "node_id", lambda kind, payload, size: "0" * 64)
-    with pytest.raises(DomainError, match="identifier collision|Existing canonical fragment differs"):
+    with pytest.raises(
+        DomainError, match="identifier collision|Existing canonical fragment differs"
+    ):
         candidate.encode(db, {"a": "field" * 600, "b": "different field" * 600})
     assert db.execute("SELECT count(*) FROM state_nodes").fetchone()[0] == 0
 
