@@ -850,9 +850,7 @@ def test_complete_history_verification_streams_events_without_retaining_all_snap
         "SELECT rowid FROM events WHERE engagement=?",
         "SELECT rowid AS locator_rowid,* FROM events WHERE engagement=? ORDER BY revision",
         "SELECT rowid FROM events WHERE engagement=?",
-        "SELECT rowid AS locator_rowid,engagement,revision,command_id,request_hash,"
-        "actor,recorded_at,previous_hash,hash,CAST(state AS BLOB) AS state,"
-        "CAST(command AS BLOB) AS command FROM events WHERE engagement=? ORDER BY revision",
+        "SELECT rowid AS locator_rowid,* FROM events WHERE engagement=? ORDER BY revision",
     ]
 
 

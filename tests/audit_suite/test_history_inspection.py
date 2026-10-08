@@ -152,6 +152,9 @@ def test_legacy_noncanonical_json_preserves_exact_public_digest(workspace):
 
 def test_each_parsed_full_state_canonicalized_once(workspace, monkeypatch):
     from enterprise.audit_suite import history_inspection as module
+    from enterprise.audit_suite import serialized_json
+
+    monkeypatch.setattr(serialized_json, "_native", None)
 
     engine, args = workspace
     for _index in range(3):
@@ -169,6 +172,7 @@ def test_each_parsed_full_state_canonicalized_once(workspace, monkeypatch):
         return original(value)
 
     monkeypatch.setattr(module, "canonical", counted)
+    monkeypatch.setattr(serialized_json, "canonical", counted)
     result = module.inspect_history(
         engine.store, args["instructor_id"], args["engagement_id"], revisions=[0, len(expected) - 1]
     )

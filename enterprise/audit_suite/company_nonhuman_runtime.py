@@ -591,6 +591,9 @@ def _declaration(root, ref, at):
     )
     plan = _plan(body["plan"])
     provenance = {"source_reference": plan["period_id"], "qualification": PERIOD_QUALIFICATION}
+    actual_provenance = decode(row["provenance"])
+    if "name" in actual_provenance or "content_type" in actual_provenance:
+        provenance.update(name=plan["period_id"] + ".json", content_type="application/json")
     key = [row[k] for k in FIELDS[:4]]
     require(
         body.get("qualification") == PERIOD_QUALIFICATION

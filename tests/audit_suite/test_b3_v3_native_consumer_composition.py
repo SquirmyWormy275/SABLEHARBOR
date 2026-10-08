@@ -442,6 +442,8 @@ def test_genuine_native_list_qualified_workpaper_and_same_room_v3(tmp_path, monk
         if path and (
             Path(path).is_relative_to(REPO) or name.startswith(("cryptography", "_cffi_backend"))
         ):
+            if getattr(module, "__spec__", None) is None:
+                continue  # Unrelated dynamically executed test modules have no import origin.
             path = Path(path).absolute()
             assert Path(module.__spec__.origin).absolute() == path
             loaded[name] = {

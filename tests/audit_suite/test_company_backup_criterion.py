@@ -342,6 +342,22 @@ def successful(tmp_path):
     return rt
 
 
+@pytest.mark.parametrize("field,value", [("name", "forged.bin"), ("content_type", "text/plain")])
+def test_transport_metadata_must_match_native_producer(tmp_path, field, value):
+    rt = successful(tmp_path)
+    with backup.database(rt[0], True) as db:
+        db.execute("DROP TRIGGER no_version_update")
+        row = db.execute("SELECT provenance FROM versions WHERE system='source_dataset'").fetchone()
+        metadata = json.loads(row[0])
+        metadata[field] = value
+        db.execute(
+            "UPDATE versions SET provenance=? WHERE system='source_dataset'",
+            (encoded(metadata).decode(),),
+        )
+    with pytest.raises(CompanyStoreError, match="Native proof provenance differs"):
+        criterion.evaluate(rt[0], expected_runtime_sha256=rt[1], as_of="2028-10-02T08:30:00Z")
+
+
 def test_native_metadata_race_without_revision_change(tmp_path, monkeypatch):
     rt = successful(tmp_path)
     original = criterion.age_intervals

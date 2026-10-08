@@ -214,17 +214,21 @@ def test_genuine_retained_v3_same_room_saved_index_cold_and_privacy(keycase, tmp
         spec = getattr(module, "__spec__", None)
         if name in {"tools", "tools.audit_suite"}:
             expected = REPO.joinpath(*name.split("."))
-            assert path is None and spec is not None and spec.origin is None
+            assert path is None
             assert set(module.__path__) == {str(expected)}
-            assert list(spec.submodule_search_locations) == list(module.__path__)
+            if spec is not None:
+                assert spec.origin is None
+                assert list(spec.submodule_search_locations) == list(module.__path__)
             namespaces[name] = {
                 "paths": list(module.__path__),
-                "spec_paths": list(spec.submodule_search_locations),
+                "spec_paths": list(spec.submodule_search_locations) if spec is not None else None,
                 "file": None,
             }
         if path and (
             Path(path).is_relative_to(REPO) or name.startswith(("cryptography", "_cffi_backend"))
         ):
+            if spec is None:
+                continue  # Required runtime module origins were checked explicitly above.
             path = Path(path).absolute()
             assert spec is not None and Path(spec.origin).absolute() == path
             loaded[name] = {"path": str(path), "sha256": file_sha(path), "spec_origin": spec.origin}

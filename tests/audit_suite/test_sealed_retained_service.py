@@ -304,9 +304,10 @@ def test_fully_resealed_post_bound_tail_cannot_evade_typed_custody(keycase, chan
             assert _history(db)[case["engagement"]]["events"] == row["revision"] + 1
     assert client.get(url).status_code == 503
     learner, _ = login(app, case)
-    assert learner.get(
-        "/api/engagements/" + case["engagement"] + "/company/systems"
-    ).status_code == (404 if change == "identity" else 200)
+    assert (
+        learner.get("/api/engagements/" + case["engagement"] + "/company/systems").status_code
+        == 503
+    )
     assert file_sha(case["root"] / "engagements.sqlite3") == case["prefix_sha"]
 
 

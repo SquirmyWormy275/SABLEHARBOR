@@ -52,6 +52,7 @@ packages = ["src/sable_harbor"]
 testpaths = ["tests"]
 pythonpath = ["."]
 addopts = "-q"
+markers = ["private_replay: historical integration requiring preserved private run inputs"]
 
 [tool.ruff]
 line-length = 100

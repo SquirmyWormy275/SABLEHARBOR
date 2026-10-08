@@ -80,6 +80,19 @@ def prepared(tmp_path):
     return destination, receipt, kwargs, assignment
 
 
+@pytest.mark.parametrize("field,value", [("name", "forged.json"), ("content_type", "text/plain")])
+def test_period_document_transport_metadata_is_exact(prepared, tmp_path, field, value):
+    _, _, kwargs, _ = prepared
+    with database(kwargs["declaration_root"], True) as db:
+        db.execute("DROP TRIGGER no_version_update")
+        row = db.execute("SELECT provenance FROM versions").fetchone()
+        metadata = json.loads(row[0])
+        metadata[field] = value
+        db.execute("UPDATE versions SET provenance=?", (encoded(metadata).decode(),))
+    with pytest.raises(CompanyStoreError, match="Declaration native provenance"):
+        runtime.initialize(tmp_path / "refused-transport", **kwargs)
+
+
 def act(prepared, command, action, payload, at, reviewer=False):
     root, receipt, _, assignment = prepared
     state = runtime.inspect(root, expected_runtime_sha256=receipt["runtime_sha256"], as_of=at)

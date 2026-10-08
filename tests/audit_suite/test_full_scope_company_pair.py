@@ -108,6 +108,8 @@ def neutral_routes():
 
 @pytest.fixture
 def pair(tmp_path):
+    if not PACK.is_file():
+        pytest.skip("Exact private 409-task source-verified program pack is not installed")
     tmp_path.chmod(0o700)
     accepted = neutral_source(tmp_path / "accepted-neutral")
     return FullScopePair.initialize(

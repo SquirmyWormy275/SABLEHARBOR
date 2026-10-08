@@ -48,6 +48,15 @@ Set `SABLEHARBOR_HISTORICAL_PRODUCER` to an available preserved producer checkou
 to exercise that historical conversion. Current managed-history, authority,
 collection and Key checks run against owned fixtures in an ordinary checkout.
 
+Tests listed in `tests/audit_suite/private_replay_modules.json` reconstruct exact
+historical private authoring runs or the separately reviewed full-program pack.
+They are reported as skipped in ordinary checkouts. To run those historical
+integration checks with preserved inputs, set `SABLEHARBOR_RUN_PRIVATE_REPLAYS=1`
+and, where needed, `SABLEHARBOR_PRIVATE_REPLAY_ROOT` to their private source root.
+This does not grant audit credit or replace current company-original collection.
+CI builds both native helpers explicitly and runs the portable regressions across
+eight isolated shards, including their standard-library fallback cases.
+
 Retained histories admit exact runtime source bytes. The finite modules listed
 in `REVIEWED_RUNTIME_SOURCE_PINS.json` therefore retain their reviewed formatting;
 `scripts/check_audit_runtime_sources.py` checks their SHA-256 pins and Python

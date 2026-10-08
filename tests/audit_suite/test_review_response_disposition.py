@@ -191,7 +191,7 @@ def test_prepared_input_is_not_a_review_and_cannot_be_resolved(tmp_path):
     state = engine.store.create(author, state, "prepared-only-fixture")
     eid = state["id"]
     before = engine.store.get(author, eid)
-    with pytest.raises(DomainError, match="Only human comments"):
+    with pytest.raises(DomainError, match="Only recorded comments or AI suggestions"):
         engine.command(
             author,
             eid,
@@ -252,7 +252,7 @@ def test_resolution_requires_independence_even_with_current_review_permission(tm
     assert state["reviews"][0]["status"] == "RESOLVED"
     assert state["reviews"][0]["history"][-1]["response_workpaper_version"] == 2
     before = engine.store.get(reviewer, eid)
-    with pytest.raises(DomainError, match="Only an open human review"):
+    with pytest.raises(DomainError, match="Only an open recorded comment"):
         command(
             reviewer,
             "review.resolve",
