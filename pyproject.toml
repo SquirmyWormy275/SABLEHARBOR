@@ -20,7 +20,7 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
   "PyMuPDF==1.26.7",
-  "pypdf==6.16.1",
+  "pypdf==6.19.0",
   "markdown-it-py==4.2.0",
   "mypy>=1.11,<2",
   "openpyxl>=3.1,<4",
@@ -31,7 +31,7 @@ dev = [
 postgres = ["psycopg[binary]>=3.2,<4"]
 ccf-service = [
     "gunicorn>=26.2,<27 ; python_full_version >= '3.12'",
-    "pyjwt[crypto]>=2.12.2,<3",
+    "pyjwt[crypto]>=2.15.0,<3",
 ]
 audit-suite = [
     "fastapi>=0.115,<1",

@@ -18,18 +18,18 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
         "6fa8e6ba1e428762e1554a5e2779402889dbe48983b3362412536f7744995d66",
     ),
     # Tracked convenience catalog retained by GENERATED_RECORDS_LIFECYCLE.md.
-    # September 29 portal/main integration plus accepted legal and geographic
-    # successors, the portal rights handoff, the bounded Daedalus receipt,
-    # and the dated closeout navigation correction:
-    # 1,544 reader files, 148 publication pairs, 12 evidence packages.
+    # October 7 audit workspace integration adds its tracked guides and source
+    # development records: 1,672 reader files, 148 publication pairs and
+    # 12 evidence packages. All institutional/reader tables reproduce exactly;
+    # institutional objects, publication pairs and evidence counts are unchanged.
     # Logical catalog review found one receipt row each in reader_file,
     # reader_text, reader_search, and reader_format_review;
     # institutional objects, publication pairs, and evidence counts did not change.
     # Navigation correction updates one existing reader file/text/search row.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        13602816,
-        "0d769aae301830c81d121229513976c4760937b8d9f963ae911849383c068f9e",
+        15468544,
+        "c6274bde97aca5a12998a8841b8db99267b680e8b78928e590c3ba569e7c6d51",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.
