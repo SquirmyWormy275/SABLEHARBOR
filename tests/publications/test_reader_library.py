@@ -55,7 +55,10 @@ class ReaderLibraryTests(unittest.TestCase):
                 db.close()
             self.assertEqual(*snapshots)
             self.assertNotIn("docs/wiki/Library.md", library.inputs(root))
-            self.assertIn("unmapped", (root / "docs/wiki/library/technical.md").read_text())
+            entries = (root / "docs/wiki/library/technical.md").read_text().splitlines()
+            unpaired = next(line for line in entries if "../../unpaired.md" in line)
+            # An unpaired record stays discoverable without an invented PDF link.
+            self.assertEqual(unpaired.count("]("), 1)
 
     def test_missing_manifest_target_fails(self):
         with tempfile.TemporaryDirectory() as temporary:
