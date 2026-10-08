@@ -6,6 +6,7 @@ import unittest
 from pathlib import Path
 
 from tools.wiki.audit import audit_export
+from tools.wiki.freshness import compare
 
 SPEC = importlib.util.spec_from_file_location(
     "wiki_export", Path(__file__).resolve().parents[2] / "tools/wiki/export.py"
@@ -287,6 +288,59 @@ class WikiExportTests(unittest.TestCase):
             "File directory differs from the tracked repository inventory",
             audit_export(output, root=self.root)["errors"],
         )
+
+    def test_unrelated_bytes_keep_directory_current_but_membership_changes_do_not(self):
+        self.file_directory_fixture()
+        output = self.base / "output"
+        published = MODULE.Exporter(self.root, SHA).build(output)
+        (self.root / "data/deep/nested/record 250.csv").write_text("id,value\n1,3\n")
+        expected = MODULE.Exporter(self.root, SHA).build(self.base / "changed-bytes")
+        self.assertEqual(compare(expected, published, output)["state"], "current")
+        (self.root / "data/new.csv").write_text("id,value\n2,4\n")
+        subprocess.run(["git", "add", "data/new.csv"], cwd=self.root, check=True)
+        added = MODULE.Exporter(self.root, SHA).build(self.base / "added-file")
+        self.assertEqual(compare(added, published, output)["state"], "stale")
+        subprocess.run(
+            ["git", "rm", "--cached", "data/deep/nested/record 000.csv"],
+            cwd=self.root,
+            check=True,
+            capture_output=True,
+        )
+        removed = MODULE.Exporter(self.root, SHA).build(self.base / "removed-file")
+        self.assertEqual(compare(removed, added, self.base / "added-file")["state"], "stale")
+
+    def test_generated_downloads_cannot_replace_an_authored_article(self):
+        self.file_directory_fixture()
+        authored = self.home.parent / "Downloads.md"
+        authored.write_text("# My downloads\n\nPreserve this authored article.\n")
+        plan = self.root / "tools/wiki/downloads.json"
+        plan.parent.mkdir(parents=True)
+        plan.write_text(
+            json.dumps(
+                {
+                    "releases": [
+                        {
+                            "title": "Example release",
+                            "tag": "example",
+                            "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/example",
+                            "assets": [
+                                {
+                                    "name": "example.csv",
+                                    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/"
+                                    "example/example.csv",
+                                }
+                            ],
+                        }
+                    ]
+                }
+            )
+        )
+        subprocess.run(["git", "add", "."], cwd=self.root, check=True)
+        output = self.base / "output"
+        with self.assertRaisesRegex(ValueError, "Release directory collides"):
+            MODULE.Exporter(self.root, SHA).build(output)
+        self.assertFalse(output.exists())
+        self.assertIn("Preserve this authored article", authored.read_text())
 
 
 if __name__ == "__main__":

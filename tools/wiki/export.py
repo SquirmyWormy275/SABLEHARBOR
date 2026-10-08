@@ -379,6 +379,8 @@ class Exporter:
             content.update(directory)
             content["Files.md"] += "\n" + index
             downloads, download_urls = release_downloads(self.root)
+            if content.keys() & downloads.keys():
+                raise ValueError("Release directory collides with a Wiki page")
             content.update(downloads)
             if download_urls:
                 content["Files.md"] += (
@@ -386,9 +388,9 @@ class Exporter:
                     "[Release downloads](Downloads) links every published package and "
                     "companion asset in the October 7 release inventory.\n"
                 )
-            self.inputs.update(inventory)
-            # File additions and removals also change the published directory.
-            self.directories.add(self.root)
+            # Directory text depends on tracked paths, not unrelated file bytes.
+            # Membership changes alter its pages and are detected by freshness;
+            # ordinary article, source and image inputs keep their existing pins.
         sidebar = [
             "# Sable Harbor",
             "",
