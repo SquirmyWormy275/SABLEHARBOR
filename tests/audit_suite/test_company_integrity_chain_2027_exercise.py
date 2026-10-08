@@ -12,7 +12,7 @@ from enterprise.audit_suite import company_integrity_chain_2027_exercise as inte
 from enterprise.audit_suite.company_store import CompanyStoreError
 
 REPOSITORY = Path(__file__).resolve().parents[2]
-PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+PRIVATE = Path(__file__).resolve().parents[2]
 
 
 def _build(tmp_path: Path) -> Path:

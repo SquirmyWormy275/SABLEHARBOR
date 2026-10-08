@@ -156,10 +156,18 @@ export function DebriefDocument({
           Learner {document.learner.actor_id} · state SHA256{" "}
           {document.learner.state_sha256}
         </p>
-        <p>
-          History SHA256 {document.learner.history_sha256} · event SHA256{" "}
-          {document.learner.event_sha256}
-        </p>
+        {document.schema === "SELECTED_INSTRUCTOR_DEBRIEF_V2" ? (
+          <p>
+            History integrity reference · {document.learner.history_integrity_reference.kind === "ROOT_ACCEPTED_BASE" ? "Verified baseline" : "Verified recorded update"}
+            {" · checkpoint SHA256 "}{document.learner.history_integrity_reference.checkpoint_sha256}
+            {" · event SHA256 "}{document.learner.event_sha256}
+          </p>
+        ) : (
+          <p>
+            History SHA256 {document.learner.history_sha256} · event SHA256{" "}
+            {document.learner.event_sha256}
+          </p>
+        )}
         {document.predecessor && (
           <p>
             Predecessor {document.predecessor.release_id} · SHA256{" "}

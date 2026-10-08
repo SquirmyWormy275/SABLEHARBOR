@@ -10,7 +10,7 @@ from enterprise.audit_suite import fictional_2027_source_portfolio_v17 as portfo
 from enterprise.audit_suite.fictional_2027_source_portfolio import PortfolioVerificationError
 
 REPOSITORY = Path(__file__).resolve().parents[2]
-PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+PRIVATE = Path(__file__).resolve().parents[2]
 RUN = REPOSITORY / "enterprise/generated/audit-suite/company-source-portfolio-v17-2026-10-01"
 RUN_ROLE = "main" if REPOSITORY.resolve() == PRIVATE.resolve() else "isolated"
 SOURCE_RUN = RUN / f"{RUN_ROLE}-report-v1"

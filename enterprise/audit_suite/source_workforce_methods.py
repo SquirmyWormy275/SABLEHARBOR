@@ -12,6 +12,7 @@ from datetime import datetime
 from pathlib import Path
 
 from . import source_identity_methods as identity_methods
+from . import source_native_operating_methods as native_operating
 from .company_store import _time
 from .fresh_sec003_procedure import require
 from .inference import _json
@@ -21,7 +22,7 @@ from .store import digest
 CONTRACT_PATH = Path(__file__).with_name("source_workforce_method_contracts_v1.json")
 CONTRACT_SHA256 = "16cae845f9418b4c7b51d9933eaf0d332bb4c777469b9c671c6069cf67208bab"
 IDENTITY_METHOD_SHA256 = "502f2c229ff5dc709291dc0e244084572c658f78410bf7d43dc9ead58f7acd6d"
-retained_inputs = identity_methods.retained_inputs
+retained_inputs = native_operating.retained_inputs
 
 
 def authored_contracts():
@@ -1249,13 +1250,25 @@ def bounded_observations(observations):
     """Preserve complete calculations/custody within the reviewed 20-citation limit."""
     out = []
     for original in observations:
+        literal_id = original["id"]
+        if isinstance(literal_id, str) and len(literal_id) > 128:
+            require(
+                "original_observation_id" not in original["facts"]
+                or original["facts"]["original_observation_id"] == literal_id,
+                "Original observation identity fact must not be overwritten",
+            )
+            original = {
+                **original,
+                "id": "OBSERVATION-" + hashlib.sha256(literal_id.encode()).hexdigest(),
+                "facts": {**original["facts"], "original_observation_id": literal_id},
+            }
         evidence = original["evidence"]
         if len(evidence) <= 20:
             out.append(original)
             continue
         parts = [evidence[start : start + 20] for start in range(0, len(evidence), 20)]
         continuation_ids = [
-            "CUSTODY-" + hashlib.sha256(original["id"].encode()).hexdigest() + f"-{number}"
+            "CUSTODY-" + hashlib.sha256(literal_id.encode()).hexdigest() + f"-{number}"
             for number in range(2, len(parts) + 1)
         ]
         out.append(
@@ -1275,7 +1288,7 @@ def bounded_observations(observations):
             out.append(
                 {
                     "id": "CUSTODY-"
-                    + hashlib.sha256(original["id"].encode()).hexdigest()
+                    + hashlib.sha256(literal_id.encode()).hexdigest()
                     + f"-{number}",
                     "status": original["status"],
                     "evidence": part,
@@ -1292,6 +1305,32 @@ def bounded_observations(observations):
 
 def inspections(records, *, as_of, scratch_root=None):
     """Pure exact 52-task batch callback; no writes, source grants or old outcomes."""
+    legacy, native = native_operating.partition(records)
+    if native:
+        observations = native_operating.examine(records, as_of=as_of)
+        legacy = [
+            r
+            for r in legacy
+            if r["logical_family"] in identity_methods.COMPONENTS
+            # This exact documentary original supports native policy replay. It is
+            # not one of identity's declared text roles; other type errors still refuse.
+            and not (
+                r["source"]["system"] == "supplementalops.policy_document"
+                and r["content_type"] == "text/plain"
+            )
+        ]
+        if legacy:
+            outputs = inspections(legacy, as_of=as_of, scratch_root=scratch_root)
+        else:
+            value = authored_contracts()
+            tasks = {**identity_methods.authored_contracts()["tasks"], **value["tasks"]}
+            outputs = native_operating.unsupported_tasks(
+                [{"task_id": t, **tasks[t]} for t in value["selected_task_ids"]], task_contracts()
+            )
+        return native_operating.add_observations(
+            outputs, observations, {"IAM": {"SH-IAM-003", "SH-IAM-007"}, "PERIOD": {"SH-IAM-007"}},
+            contracts=task_contracts(),
+        )
     value = authored_contracts()
     contracts = task_contracts()
     history = History(records, as_of)

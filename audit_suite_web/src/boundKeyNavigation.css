@@ -8,7 +8,7 @@
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 0.5rem;
 }
-.bound-key-index button {
+.bound-key-index li > button {
   width: 100%;
   text-align: left;
   display: grid;
@@ -37,11 +37,24 @@
 .bound-source-list li {
   margin-bottom: 0.4rem;
 }
-.bound-key nav[aria-label="Bound source pages"] {
+.bound-key
+  nav:is(
+    [aria-label="Bound source pages"],
+    [aria-label="Authored issue pages"]
+  ) {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
   align-items: center;
+}
+.bound-key-index > label {
+  display: inline-flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin-right: 0.6rem;
+}
+.bound-key-index :is(input, select) {
+  max-width: 100%;
 }
 .bound-key details {
   margin-block: 0.6rem;

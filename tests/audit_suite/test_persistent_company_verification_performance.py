@@ -1,9 +1,12 @@
 """Warm parsing never replaces byte pins or fresh current-row verification."""
 
+import ast
 import os
 import sqlite3
+import sys
 from concurrent.futures import ThreadPoolExecutor
 from contextlib import closing
+from pathlib import Path
 from threading import Event
 
 import pytest
@@ -146,20 +149,32 @@ def test_verified_source_operation_still_checks_current_revocation_and_clock(wor
     with world.verified_sources():
         world.store.grant("NEUTRAL-AUDITOR", "NEUTRAL-ENGAGEMENT", *key, active=True)
         row = world.store.read_version(
-            "NEUTRAL-AUDITOR", "NEUTRAL-ENGAGEMENT", *key, "event-one",
-            version=1, as_of="2027-01-03T00:00:00Z",
+            "NEUTRAL-AUDITOR",
+            "NEUTRAL-ENGAGEMENT",
+            *key,
+            "event-one",
+            version=1,
+            as_of="2027-01-03T00:00:00Z",
         )
         assert row["version"] == 1
         with pytest.raises(CompanyStoreError):
             world.store.read_version(
-                "NEUTRAL-AUDITOR", "NEUTRAL-ENGAGEMENT", *key, "event-one",
-                version=1, as_of="2027-01-01T00:00:00Z",
+                "NEUTRAL-AUDITOR",
+                "NEUTRAL-ENGAGEMENT",
+                *key,
+                "event-one",
+                version=1,
+                as_of="2027-01-01T00:00:00Z",
             )
         world.store.grant("NEUTRAL-AUDITOR", "NEUTRAL-ENGAGEMENT", *key, active=False)
         with pytest.raises(CompanyStoreError):
             world.store.read_version(
-                "NEUTRAL-AUDITOR", "NEUTRAL-ENGAGEMENT", *key, "event-one",
-                version=1, as_of="2027-01-03T00:00:00Z",
+                "NEUTRAL-AUDITOR",
+                "NEUTRAL-ENGAGEMENT",
+                *key,
+                "event-one",
+                version=1,
+                as_of="2027-01-03T00:00:00Z",
             )
 
 
@@ -169,8 +184,12 @@ def test_verified_source_operation_blocks_other_managed_thread_until_fresh_exit(
     def grant():
         entered.set()
         world.store.grant(
-            "OTHER-NEUTRAL-AUDITOR", "OTHER-NEUTRAL-ENGAGEMENT",
-            "NEUTRAL-COMPANY", "ALPHA", "operations.events", active=True,
+            "OTHER-NEUTRAL-AUDITOR",
+            "OTHER-NEUTRAL-ENGAGEMENT",
+            "NEUTRAL-COMPANY",
+            "ALPHA",
+            "operations.events",
+            active=True,
         )
         finished.set()
 
@@ -181,3 +200,174 @@ def test_verified_source_operation_blocks_other_managed_thread_until_fresh_exit(
             assert not finished.wait(0.05)
         future.result(timeout=5)
     assert finished.is_set()
+
+
+# Deterministic one-shot TLS publication/cleanup cancellation boundaries.
+
+
+def method_ast():
+    tree = ast.parse(Path(runtime.__file__).read_text())
+    cls = next(
+        n for n in tree.body if isinstance(n, ast.ClassDef) and n.name == "PersistentCompany"
+    )
+    return next(
+        n for n in cls.body if isinstance(n, ast.FunctionDef) and n.name == "verified_sources"
+    )
+
+
+def flag_assignment(node, value):
+    return (
+        isinstance(node, ast.Assign)
+        and isinstance(node.value, ast.Constant)
+        and node.value.value is value
+        and len(node.targets) == 1
+        and isinstance(node.targets[0], ast.Attribute)
+        and node.targets[0].attr == "verified_sources"
+    )
+
+
+def publication_line(boundary):
+    method = method_ast()
+    for node in ast.walk(method):
+        if not hasattr(node, "body") or not isinstance(node.body, list):
+            continue
+        for index, member in enumerate(node.body):
+            if flag_assignment(member, True):
+                return (
+                    member.lineno if boundary == "token_published" else node.body[index + 1].lineno
+                )
+    raise AssertionError("Actual entry publication boundary not found")
+
+
+def interrupt_at(world, line, failure):
+    code = runtime.PersistentCompany.verified_sources.__wrapped__.__code__
+    seen = []
+
+    def trace(frame, event, arg):
+        if frame.f_code is code and event == "line" and frame.f_lineno == line:
+            seen.append(
+                (
+                    getattr(world._local, "verified_sources", False),
+                    getattr(world._local, "verified_source_binding", None),
+                    getattr(world._local, "depth", 0),
+                )
+            )
+            raise failure
+        return trace
+
+    return trace, seen
+
+
+@pytest.mark.parametrize("boundary", ["token_published", "flag_published"])
+def test_entry_publication_base_exception_clears_real_TLS_and_reverifies(
+    world,
+    monkeypatch,
+    boundary,
+):
+    calls = []
+    verify = world.verify
+
+    def observed():
+        calls.append(True)
+        return verify()
+
+    monkeypatch.setattr(world, "verify", observed)
+    failure = KeyboardInterrupt("neutral entry publication cancellation")
+    trace, seen = interrupt_at(world, publication_line(boundary), failure)
+    prior = sys.gettrace()
+    sys.settrace(trace)
+    try:
+        with pytest.raises(KeyboardInterrupt) as caught:
+            with world.verified_sources():
+                raise AssertionError("Cancelled entry must not yield its body")
+    finally:
+        sys.settrace(prior)
+    assert caught.value is failure
+    assert len(seen) == 1 and seen[0][1] is not None and seen[0][2] > 0
+    assert seen[0][0] is (boundary == "flag_published")
+    assert not getattr(world._local, "verified_sources", False)
+    assert getattr(world._local, "verified_source_binding", None) is None
+    assert getattr(world._local, "depth", 0) == 0
+    assert len(calls) == 2  # Actual opening plus full closing verification.
+    world.require_runtime()
+    assert len(calls) == 3  # Cancellation cannot enable later deferred checks.
+    with world.verified_sources():
+        world.require_runtime()
+    assert len(calls) == 5
+
+
+def test_exit_reset_interruption_clears_real_TLS_and_reverifies(world, monkeypatch):
+    """Separate diagnostic: cancellation before the first closing reset."""
+    resets = [n.lineno for n in ast.walk(method_ast()) if flag_assignment(n, False)]
+    if not resets:
+        resets = [
+            n.lineno
+            for n in ast.walk(method_ast())
+            if isinstance(n, ast.Expr)
+            and isinstance(n.value, ast.Call)
+            and isinstance(n.value.func, ast.Attribute)
+            and n.value.func.attr == "update"
+            and any(
+                k.arg == "verified_sources"
+                and isinstance(k.value, ast.Constant)
+                and k.value.value is False
+                for k in n.value.keywords
+            )
+        ]
+    assert len(resets) == 1
+    line = resets[0]
+    calls = []
+    verify = world.verify
+
+    def observed():
+        calls.append(True)
+        return verify()
+
+    monkeypatch.setattr(world, "verify", observed)
+    failure = KeyboardInterrupt("neutral closing reset cancellation")
+    trace, seen = interrupt_at(world, line, failure)
+    prior = sys.gettrace()
+    sys.settrace(trace)
+    try:
+        with pytest.raises(KeyboardInterrupt) as caught:
+            with world.verified_sources():
+                world.require_runtime()
+    finally:
+        sys.settrace(prior)
+    assert caught.value is failure and len(seen) == 1
+    assert seen[0][0] is True and seen[0][1] is not None
+    assert not getattr(world._local, "verified_sources", False)
+    assert getattr(world._local, "verified_source_binding", None) is None
+    assert len(calls) == 2
+    assert getattr(world._local, "depth", 0) == 0
+    closed_fd = world._local.fd
+    import os
+
+    with pytest.raises(OSError):
+        os.fstat(closed_fd)
+    world.require_runtime()
+    assert len(calls) == 3
+    with world.verified_sources():
+        world.require_runtime()
+    assert len(calls) == 5
+    # Repeat one independent fault while the lease begins inside an existing
+    # outer lock. A cancelled nested lease must end before the caller continues.
+    with world.locked():
+        trace, seen = interrupt_at(world, line, failure)
+        sys.settrace(trace)
+        try:
+            with pytest.raises(KeyboardInterrupt) as caught:
+                with world.verified_sources():
+                    world.require_runtime()
+        finally:
+            sys.settrace(prior)
+        assert caught.value is failure and len(seen) == 1
+        assert not getattr(world._local, "verified_sources", False)
+        assert getattr(world._local, "verified_source_binding", None) is None
+        assert world._local.depth == 1
+        assert len(calls) == 7
+        world.require_runtime()
+        assert len(calls) == 8
+    assert world._local.depth == 0
+    with pytest.raises(OSError):
+        os.fstat(world._local.fd)

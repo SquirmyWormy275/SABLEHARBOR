@@ -17,7 +17,7 @@ from . import source_workforce_methods as workforce
 from .fresh_sec003_procedure import require
 from .store import digest
 
-WORKFORCE_SHA256 = "5e7f77a5f4dbe7359a57d9bd5664b61674295169b4b09fbdec239c9cf4e05770"
+WORKFORCE_SHA256 = "00a078645cf8bb0ec948f615adf4fa520920b11ca0a9585c3058e323fe77b3b6"
 retained_inputs = workforce.retained_inputs
 
 CURRENT_FIELDS = {

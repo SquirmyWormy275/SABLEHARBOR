@@ -11,7 +11,7 @@ import pytest
 from enterprise.audit_suite import audit_readiness_gate_v1 as gate
 
 REPOSITORY = Path(__file__).resolve().parents[2]
-PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+PRIVATE = Path(__file__).resolve().parents[2]
 
 
 @pytest.fixture(scope="module")

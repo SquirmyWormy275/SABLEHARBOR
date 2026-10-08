@@ -23,7 +23,12 @@ from tests.audit_suite.test_full_scope_company_pair import acquire
 
 pytest_plugins = ["tests.audit_suite.test_full_scope_company_pair"]
 REPO = Path(__file__).resolve().parents[2]
-PRODUCER = Path("/home/kingoftheeast/Projects/SABLEHARBOR-retained-preexpiry-delegation-wt")
+PRODUCER = Path(
+    os.environ.get(
+        "SABLEHARBOR_HISTORICAL_PRODUCER",
+        "/home/kingoftheeast/Projects/SABLEHARBOR-retained-preexpiry-delegation-wt",
+    )
+)
 PRODUCER_CODE = r"""
 import hashlib, importlib, json, sys
 from pathlib import Path
@@ -47,6 +52,8 @@ print(json.dumps({'parent':parent,'delegation':choice,'consumed':delegation.cons
 
 @pytest.fixture
 def original(request, tmp_path, monkeypatch):
+    if not (PRODUCER / "enterprise/audit_suite/preexpiry_seal_delegation.py").is_file():
+        pytest.skip("Requires the preserved historical preexpiry producer source")
     credentials = {}
     real = Store.provision
 

@@ -4,9 +4,16 @@ import type { BoundResponse } from "./boundInstructorKey";
 import { sameDebriefValue } from "./instructorDebrief";
 import {
   assessmentContext,
+  assessmentReferencePageQuery,
+  assertAssessmentReferencePage,
+  mergeAssessmentReferences,
+  loadSelectedAssessmentReferences,
+  type AssessmentReferencePage,
+  type AssessmentReferenceSelector,
   assessmentSavePayload,
   assertAssessmentOptions,
   assertAssessmentRecord,
+  assessmentDocumentHistoryMatches,
   emptyAssessment,
   type AssessmentDraft,
   type AssessmentHistoryPin,
@@ -81,8 +88,8 @@ function References({
       )}
       {!readonly && (
         <p>
-          {rows.length} matches; at most 40 unselected results shown. Refine
-          search to choose another exact record.
+          {rows.length} loaded matches; at most 40 unselected results shown. Use
+          the reference catalogue search to load another exact record.
         </p>
       )}
       {(readonly ? options.filter((r) => selected.includes(r.id)) : shown).map(
@@ -152,6 +159,13 @@ function Panel({
     [error, setError] = useState(""),
     [notice, setNotice] = useState(""),
     [retry, setRetry] = useState(false);
+  const [referenceQuery, setReferenceQuery] = useState("");
+  const [referencePage, setReferencePage] = useState<{
+    query: string;
+    offset: number;
+    total: number;
+    next: number | null;
+  } | null>(null);
   const epoch = useRef(0),
     pending = useRef<ReturnType<typeof assessmentSavePayload> | null>(null);
   useEffect(() => {
@@ -179,20 +193,107 @@ function Panel({
     setError("");
     setOptions(null);
     setOpened(null);
+    setReferencePage(null);
     try {
       const o = await request<PinnedAssessmentOptions>(
-        base + `/options?revision=${history.revision}`,
+        base + `/options?revision=${history.revision}&view=catalogue-v1`,
       );
       if (n !== epoch.current) return;
+      const checked = assertAssessmentOptions(
+        o,
+        e,
+        key,
+        bound.snapshot.audited_actor_id,
+        bound.binding.bound_revision,
+        history,
+      );
+      const current = await loadSelectedAssessmentReferences(
+        checked,
+        selectedReferenceIds(draft),
+        (offset, selector) => fetchReferencePage(checked, offset, selector),
+      );
+      if (n !== epoch.current) return;
+      setOptions(current);
+    } catch (err) {
+      if (n === epoch.current) readFailure(err);
+    } finally {
+      if (n === epoch.current) setBusy(false);
+    }
+  }
+  const selectedReferenceIds = (d: AssessmentDraft) => [
+    ...new Set([
+      ...d.dimensions.flatMap((r) => r.reference_ids),
+      ...d.alternatives.flatMap((r) => r.reference_ids),
+      ...d.overrides.flatMap((r) => r.reference_ids),
+      ...d.defects.flatMap((r) => r.reference_ids),
+    ]),
+  ];
+  async function fetchReferencePage(
+    o: PinnedAssessmentOptions,
+    offset: number,
+    selector: AssessmentReferenceSelector,
+  ) {
+    const page = await request<AssessmentReferencePage>(
+      base + "/references?" + assessmentReferencePageQuery(o, offset, selector),
+    );
+    return assertAssessmentReferencePage(page, o, offset, selector);
+  }
+  async function loadReferences(offset = 0) {
+    if (!options?.reference_catalogue || busy || retry) return;
+    const n = epoch.current;
+    const query = offset ? referencePage!.query : referenceQuery;
+    setBusy(true);
+    setError("");
+    try {
+      const page = await fetchReferencePage(options, offset, {
+        query,
+        expectation_ids: [],
+        reference_ids: [],
+      });
+      if (n !== epoch.current) return;
       setOptions(
-        assertAssessmentOptions(
-          o,
-          e,
-          key,
-          bound.snapshot.audited_actor_id,
-          bound.binding.bound_revision,
-          history,
+        mergeAssessmentReferences(
+          options,
+          page.references,
+          selectedReferenceIds(draft),
         ),
+      );
+      setReferencePage({
+        query,
+        offset,
+        total: page.total,
+        next: page.next_offset,
+      });
+    } catch (err) {
+      if (n === epoch.current) readFailure(err);
+    } finally {
+      if (n === epoch.current) setBusy(false);
+    }
+  }
+  async function prepareCorrection() {
+    if (!opened?.document || !options || busy || retry) return;
+    const n = epoch.current;
+    const document = opened.document;
+    setBusy(true);
+    setError("");
+    try {
+      const keep = selectedReferenceIds({
+        ...document.authored,
+        predecessor: null,
+      });
+      const current = await loadSelectedAssessmentReferences(
+        options,
+        keep,
+        (offset, selector) => fetchReferencePage(options, offset, selector),
+      );
+      if (n !== epoch.current) return;
+      setOptions(current);
+      setDraft({
+        ...structuredClone(document.authored),
+        predecessor: { id: opened.id, sha256: opened.sha256 },
+      });
+      setNotice(
+        "Correction copied explicitly. References were checked against the selected historical inventory.",
       );
     } catch (err) {
       if (n === epoch.current) readFailure(err);
@@ -293,7 +394,7 @@ function Panel({
         r.document.pins.inventory_sha256 !== inventory_sha256 ||
         r.document.pins.audited_actor_id !== bound.snapshot.audited_actor_id ||
         r.document.pins.selected_state_sha256 !== history.state_sha256 ||
-        r.document.pins.selected_history_sha256 !== history.history_sha256 ||
+        !assessmentDocumentHistoryMatches(r.document, history, e.id) ||
         r.document.pins.selected_history_tip_sha256 !== history.event_sha256 ||
         r.learner_revision !== learner_revision
       )
@@ -443,6 +544,46 @@ function Panel({
                 uses selected history revision {history.revision}; its
                 predecessor remains immutable.
               </p>
+            )}
+            {options.reference_catalogue && (
+              <section aria-label="Historical reference catalogue">
+                <h4>Historical reference catalogue</h4>
+                <p>
+                  {options.reference_catalogue.count} exact references. Pages
+                  load on request; the full inventory remains the basis of every
+                  assessment.
+                </p>
+                <label>
+                  Search historical references
+                  <input
+                    type="search"
+                    maxLength={200}
+                    value={referenceQuery}
+                    onChange={(ev) => {
+                      setReferenceQuery(ev.target.value);
+                      setReferencePage(null);
+                    }}
+                  />
+                </label>
+                <button type="button" onClick={() => void loadReferences()}>
+                  Load reference page
+                </button>
+                {referencePage && (
+                  <p role="status">
+                    {referencePage.total} matches for “{referencePage.query}”.
+                    Showing page starting at{" "}
+                    {referencePage.offset + (referencePage.total ? 1 : 0)}.
+                    Selected references remain available across pages.
+                  </p>
+                )}
+                <button
+                  type="button"
+                  disabled={referencePage?.next == null}
+                  onClick={() => void loadReferences(referencePage!.next!)}
+                >
+                  Next reference page
+                </button>
+              </section>
             )}
             {draft.dimensions.map((d, i) => (
               <fieldset key={d.dimension}>
@@ -732,27 +873,32 @@ function Panel({
           <details>
             <summary>Exact assessment provenance</summary>
             <p>Assessment SHA256 {opened.sha256}</p>
-            {Object.entries(opened.document.pins).map(([field, value]) => (
-              <p key={field}>
-                {field}: {value}
-              </p>
-            ))}
+            {Object.entries(opened.document.pins).map(([field, value]) =>
+              field === "selected_history_integrity_reference" &&
+              opened.document!.schema === "INSTRUCTOR_AUTHORED_ASSESSMENT_V2" ? (
+                <section key={field} aria-label="Selected history integrity reference">
+                  <h4>Verified event chain and canonical state</h4>
+                  <dl>
+                    {Object.entries(opened.document!.pins.selected_history_integrity_reference).map(([name, entry]) => (
+                      <div key={name}>
+                        <dt>{name.replaceAll("_", " ")}</dt>
+                        <dd>{entry === null ? "Not applicable (raw canonical JSON)" : String(entry)}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                </section>
+              ) : (
+                <p key={field}>
+                  {field}: {value}
+                </p>
+              ),
+            )}
           </details>
           <button
             disabled={
               busy || retry || dirty || !options || !opened.correction_allowed
             }
-            onClick={() => {
-              if (opened.document && options) {
-                setDraft({
-                  ...structuredClone(opened.document.authored),
-                  predecessor: { id: opened.id, sha256: opened.sha256 },
-                });
-                setNotice(
-                  "Correction copied explicitly. Review references against the selected historical inventory before saving.",
-                );
-              }
-            }}
+            onClick={() => void prepareCorrection()}
           >
             Prepare correction using history revision {history.revision}
           </button>

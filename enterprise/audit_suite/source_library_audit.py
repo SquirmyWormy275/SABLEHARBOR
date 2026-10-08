@@ -195,11 +195,16 @@ class AcceptedLibrary:
             "Review must bind exact database, manifest and version boundary",
         )
         source_schema = manifest.get("schema")
-        require(
-            source_schema in {LIBRARY_MANIFEST_SCHEMA, SUCCESSOR_MANIFEST_SCHEMA}
-            and manifest.get("files", {}).get("company.sqlite3") == self.database_sha256,
-            "Manifest must bind the exact projected library database",
-        )
+        if manifest.get("source_edition_schema") == "LOSSLESS_COMPANY_NATIVE_SOURCE_EDITION_V1":
+            from .company_source_lifetime import verify_edition_library
+
+            verify_edition_library(self, manifest, review)
+        else:
+            require(
+                source_schema in {LIBRARY_MANIFEST_SCHEMA, SUCCESSOR_MANIFEST_SCHEMA}
+                and manifest.get("files", {}).get("company.sqlite3") == self.database_sha256,
+                "Manifest must bind the exact projected library database",
+            )
         if source_schema == SUCCESSOR_MANIFEST_SCHEMA:
             admission = review.get("source_schema_admission")
             require(

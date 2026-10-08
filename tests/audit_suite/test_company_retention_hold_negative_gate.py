@@ -13,7 +13,7 @@ from enterprise.audit_suite.company_retention_hold_negative_gate import _frozen_
 from enterprise.audit_suite.company_store import CompanyStoreError
 
 REPOSITORY = Path(__file__).resolve().parents[2]
-PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+PRIVATE = Path(__file__).resolve().parents[2]
 
 
 def _build(tmp_path):

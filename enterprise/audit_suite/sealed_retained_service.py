@@ -13,7 +13,6 @@ import time
 from .company_store import _time
 from .fresh_sec003_procedure import require
 from .history_inspection import _stamp, scan_validated_history
-from .persistent_company_journey import native_rows
 from .sealed_history_inspection import publish_prefix, scan_composed
 from .source_library_audit import EMPTY_WORKROOM, file_sha, private_file, quiescent_read
 from .store import digest
@@ -32,8 +31,7 @@ PROJECTION = (
 def _sources(room):
     from .persistent_company_service import time_to_iso
 
-    room.world.verify()
-    native = native_rows(room.world.database)
+    _checkpoint, native = room.world.verify(_return_native_rows=True)
     now = _time(time_to_iso())
     require(
         _time(room.world.initialization["initialized_at"]) <= now
@@ -58,10 +56,13 @@ def _validator(room, native, journal, files, custody, *, terminal=None):
         if prior_header is not None:
             require(
                 prior_header["scope_sha256"] == digest(room.binding["scope"])
-                and prior_header["company_binding_sha256"] in {digest(None), digest(room.selected)},
+                and prior_header["company_binding_sha256"]
+                in {digest(None), digest(room.selected)},
                 "Previously verified exact scope/source descriptor differs",
             )
-            state = {k: prior_header[k] for k in ("id", "mode", "simulated_at", "revision")} | {
+            state = {
+                k: prior_header[k] for k in ("id", "mode", "simulated_at", "revision")
+            } | {
                 "scope": room.binding["scope"],
                 "artifacts": [],
                 "company_source_binding": (
@@ -90,13 +91,21 @@ def _validator(room, native, journal, files, custody, *, terminal=None):
         )
         binding = state.get("company_source_binding")
         require(
-            binding is None or (type(binding) is dict and digest(binding) == digest(room.selected)),
+            binding is None
+            or (type(binding) is dict and digest(binding) == digest(room.selected)),
             "Historical exact native company binding differs",
         )
         if terminal is not None:
-            require(binding is not None, "Activated retained tail lost its company binding")
+            require(
+                binding is not None, "Activated retained tail lost its company binding"
+            )
         room.verify_artifacts(
-            state, native, verified=verified, journal=journal, files=files, custody=custody
+            state,
+            native,
+            verified=verified,
+            journal=journal,
+            files=files,
+            custody=custody,
         )
         previous_clock, previous_real = clock, real
 
@@ -109,14 +118,18 @@ def _birth(room, initial, db):
         initial["created_by"] == identities["operator"]
         and digest(initial["scope"]) == digest(room.binding["scope"])
         and initial["mode"] == room.binding["mode"]
-        and _time(initial["simulated_at"]) == _time(room.binding["initial_simulated_at"])
+        and _time(initial["simulated_at"])
+        == _time(room.binding["initial_simulated_at"])
         and type(room.binding["task_count"]) is int
         and room.binding["task_count"] == len(initial["tasks"]) > 0
         and room.binding["zero_workroom_counts"] == {k: 0 for k in EMPTY_WORKROOM}
-        and all(type(room.binding["zero_workroom_counts"][k]) is int for k in EMPTY_WORKROOM)
+        and all(
+            type(room.binding["zero_workroom_counts"][k]) is int for k in EMPTY_WORKROOM
+        )
         and all(type(initial[k]) is list and not initial[k] for k in EMPTY_WORKROOM)
         and all(
-            t["status"] == "NOT_STARTED" and t["conclusion"] == "NOT_RUN" for t in initial["tasks"]
+            t["status"] == "NOT_STARTED" and t["conclusion"] == "NOT_RUN"
+            for t in initial["tasks"]
         ),
         "Original fresh-workroom birth binding differs",
     )
@@ -148,7 +161,8 @@ def _close_sources(room, files):
 def _descriptors(files, custody):
     return {
         "files": {
-            str(p): {"sha256": sha, "bytes": size} for p, (_identity, sha, size) in files.items()
+            str(p): {"sha256": sha, "bytes": size}
+            for p, (_identity, sha, size) in files.items()
         },
         "custody": custody,
     }
@@ -157,6 +171,23 @@ def _descriptors(files, custody):
 def verify_sealed(room):
     """Complete cold original replay before any interactive memo is published."""
     store = room.sealed_store
+    choice = room.config.get("history_integrity")
+    managed = getattr(store, "_managed_history_integrity", None)
+    if choice is not None and not (managed is not None and managed.force_full):
+        from .managed_history_integrity import ManagedHistoryRuntime
+
+        require(managed is None, "Managed startup must use its exact new lifetime")
+        managed = ManagedHistoryRuntime(
+            room, choice, owned_writer_fd=getattr(room, "_owned_writer_lock_fd", None))
+        store._managed_history_integrity = managed
+        try:
+            managed.bootstrap()
+            room.check_pins()
+        except BaseException:
+            store._managed_history_integrity = None
+            raise
+        room._pending_managed_history_integrity = managed
+        return
     prefix_stamp, outside = store.check_prefix(), _stamp(store.db_path)
     # Reserve the ordinary tail writer throughout prefix/source/birth closure.
     # The immutable original is never initialized, chmodded or modified.
@@ -181,6 +212,7 @@ def verify_sealed(room):
                     revisions=[0],
                     row_validator=_validator(room, native, journal, files, custody),
                     projection_fields=PROJECTION,
+                    keep_metadata=store.compact_prefix is not None,
                 )
                 _birth(room, result["selected"][0]["state"], prefix)
                 _current(room, result["latest"]["state"])
@@ -199,11 +231,32 @@ def verify_sealed(room):
 
 def finish_startup(room):
     store = room.sealed_store
+    managed = getattr(room, "_pending_managed_history_integrity", None)
+    if managed is not None:
+        store._typed_composed_reader = lambda actor, revisions: managed.full_public_history(
+            actor, revisions)
+        try:
+            managed.selected(room.binding["identities"]["operator"], room.engagement,
+                             revisions=())
+            room.check_pins()
+            managed.complete_startup()
+        except BaseException:
+            store._managed_history_integrity = None
+            store._typed_composed_reader = None
+            del room._pending_managed_history_integrity
+            raise
+        del room._pending_managed_history_integrity
+        return
     candidate, stamp = room._pending_prefix
     publish_prefix(store, candidate, stamp)
     room._prefix_custody = room._pending_prefix_custody
     room._tail_integrity = None
-    store._typed_composed_reader = lambda actor, revisions: read_sealed(room, actor, revisions)
+    installed_managed = getattr(store, "_managed_history_integrity", None)
+    store._typed_composed_reader = (
+        (lambda actor, revisions: read_sealed(room, actor, revisions))
+        if installed_managed is None else
+        (lambda actor, revisions: installed_managed.full_public_history(actor, revisions))
+    )
     try:
         read_sealed(room, room.binding["identities"]["operator"], ())
     except BaseException:
@@ -215,6 +268,9 @@ def finish_startup(room):
 
 def read_sealed(room, actor, revisions):
     """Fresh original custody and complete small-tail replay per invocation."""
+    managed = getattr(room.sealed_store, "_managed_history_integrity", None)
+    if managed is not None and not managed.force_full:
+        return managed.selected(actor, room.engagement, revisions=revisions)
     with room._integrity_lock:
         room.check_pins()
         store = room.sealed_store
@@ -236,15 +292,17 @@ def read_sealed(room, actor, revisions):
                 files = room._verify_integrity_descriptors(base, native, journal)
                 custody = dict(base["custody"])
                 if previous is not None:
-                    files.update(room._verify_integrity_descriptors(previous, native, journal))
+                    files.update(
+                        room._verify_integrity_descriptors(previous, native, journal)
+                    )
                     custody.update(previous["custody"])
                 terminal = store._prefix_integrity["last_meta"] | {
                     "simulated_at": store._prefix_integrity["state_integrity"][
                         max(
                             store._prefix_integrity["state_integrity"],
-                            key=lambda key: store._prefix_integrity["state_integrity"][key][
-                                "header"
-                            ]["revision"],
+                            key=lambda key: store._prefix_integrity["state_integrity"][
+                                key
+                            ]["header"]["revision"],
                         )
                     ]["header"]["simulated_at"]
                 }
@@ -255,19 +313,27 @@ def read_sealed(room, actor, revisions):
                     row_validator=_validator(
                         room, native, journal, files, custody, terminal=terminal
                     ),
-                    previous_integrity=None if previous is None else previous["history"],
+                    previous_integrity=None
+                    if previous is None
+                    else previous["history"],
                 )
                 _current(room, history["latest"]["state"])
                 _close_sources(room, files)
             store._authorize(db, actor, room.engagement)
             room.check_pins()
             require(
-                store.check_prefix() == prefix_stamp and _stamp(store.db_path) == inside,
+                store.check_prefix() == prefix_stamp
+                and _stamp(store.db_path) == inside,
                 "Journal changed during complete native-tail validation",
             )
-        require(_stamp(store.db_path) == outside, "Tail changed during protected closure")
+        require(
+            _stamp(store.db_path) == outside, "Tail changed during protected closure"
+        )
         room.check_pins()
-        require(store.check_prefix() == prefix_stamp, "Original prefix changed before publication")
+        require(
+            store.check_prefix() == prefix_stamp,
+            "Original prefix changed before publication",
+        )
         room._tail_integrity = {
             "history": candidate,
             "stamp": outside,

@@ -29,6 +29,7 @@ from .store import DomainError, canonical
 HEAD_SCHEMA = "SH_RETAINED_LOCAL_AUTHORITY_HEAD_V1"
 DOMAIN = b"SH_RETAINED_LOCAL_AUTHORITY_V1\n"
 SESSION_DOMAIN = b"SH_RETAINED_SESSION_ISSUANCE_V1\n"
+HISTORY_CHECKPOINT_DOMAIN = b"SH_RETAINED_MANAGED_HISTORY_CHECKPOINT_V1\n"
 BACKEND_MODULES = (
     "cryptography",
     "cryptography.__about__",
@@ -181,6 +182,35 @@ class LocalAuthority:
             raise DomainError(
                 "Operator authority signature refused", code="INTEGRITY", status=503
             ) from None
+
+    def sign_history_checkpoint(self, fields):
+        """Internal managed-Store issuer, separate from role/head authority.
+
+        The runtime validates exact checkpoint fields and the genuinely
+        committed Store image before calling this protected local signer.
+        This method creates no identity, authority-event or head transition.
+        """
+        require(type(fields) is dict, "Exact managed checkpoint object required")
+        self.read_head()
+        secret = self.descriptor["private_signing_key"]
+        require(type(secret) is dict and set(secret) == {"path", "sha256"},
+                "Exact pinned operator signing-key input required")
+        raw_key = read_pin(secret["path"], secret["sha256"], 32)
+        key = Ed25519PrivateKey.from_private_bytes(raw_key)
+        require(key.public_key().public_bytes_raw().hex()
+                == self.descriptor["public_key_hex"],
+                "Managed checkpoint key differs from pinned public authority")
+        return key.sign(HISTORY_CHECKPOINT_DOMAIN + canonical(fields).encode()).hex()
+
+    def verify_history_checkpoint(self, fields, signature):
+        require(type(fields) is dict, "Exact managed checkpoint object required")
+        self.read_head()
+        try:
+            self.public.verify(bytes.fromhex(signature),
+                               HISTORY_CHECKPOINT_DOMAIN + canonical(fields).encode())
+        except (InvalidSignature, TypeError, ValueError):
+            raise DomainError("Managed history checkpoint signature refused",
+                              code="INTEGRITY", status=503) from None
 
     def read_head(self):
         require(

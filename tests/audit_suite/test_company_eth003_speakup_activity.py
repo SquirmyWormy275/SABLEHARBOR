@@ -17,7 +17,7 @@ from enterprise.audit_suite.company_eth003_speakup_activity import (
 from enterprise.audit_suite.company_store import CompanyStoreError
 
 REPOSITORY = Path(__file__).resolve().parents[2]
-PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+PRIVATE = Path(__file__).resolve().parents[2]
 
 
 def _source(tmp_path: Path) -> Path:

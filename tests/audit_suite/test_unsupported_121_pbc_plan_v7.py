@@ -10,7 +10,7 @@ from enterprise.audit_suite import unsupported_121_pbc_plan as pinned
 from enterprise.audit_suite import unsupported_121_pbc_plan_v7 as plan
 
 REPOSITORY = Path(__file__).resolve().parents[2]
-PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+PRIVATE = Path(__file__).resolve().parents[2]
 STEM = REPOSITORY / "enterprise/audit_suite/UNSUPPORTED_121_PBC_PLAN_V7_2026-09-30"
 V6 = REPOSITORY / "enterprise/audit_suite/UNSUPPORTED_121_PBC_PLAN_V6_2026-09-30.json"
 

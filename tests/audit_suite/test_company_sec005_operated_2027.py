@@ -10,7 +10,7 @@ from enterprise.audit_suite import company_sec005_operated_2027 as source
 from enterprise.audit_suite.company_store import CompanyStoreError
 
 REPOSITORY = Path(__file__).resolve().parents[2]
-PRIVATE_REPOSITORY = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+PRIVATE_REPOSITORY = Path(__file__).resolve().parents[2]
 TRANSITION = (
     PRIVATE_REPOSITORY
     / "enterprise/generated/audit-suite/company-runtime-transition-2026-09-29/run-v3"

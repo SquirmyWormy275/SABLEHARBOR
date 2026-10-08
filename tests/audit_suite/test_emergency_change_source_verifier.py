@@ -19,7 +19,7 @@ from enterprise.audit_suite.emergency_change_source_verifier import (
 )
 
 REPOSITORY = Path(__file__).resolve().parents[2]
-PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+PRIVATE = Path(__file__).resolve().parents[2]
 
 
 def _copy_private(tmp_path: Path) -> Path:

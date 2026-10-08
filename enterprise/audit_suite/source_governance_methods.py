@@ -15,6 +15,7 @@ from collections import Counter
 from datetime import UTC, date, datetime
 from pathlib import Path
 
+from . import source_native_operating_methods as native_operating
 from .company_store import _time
 from .fresh_sec003_procedure import CLOCK_ID, NATIVE_ID, require
 
@@ -2186,6 +2187,21 @@ def _task_focus(control, kind, clause, observations):
 
 
 def examine(records, *, as_of, scratch_root=None):
+    legacy, native = native_operating.partition(records)
+    if native:
+        observations = native_operating.examine(records, as_of=as_of)
+        legacy = [r for r in legacy if r["logical_family"] in FAMILIES]
+        outputs = (
+            examine(legacy, as_of=as_of, scratch_root=scratch_root)
+            if legacy
+            else native_operating.unsupported_tasks(task_plan(), contracts())
+        )
+        return native_operating.add_observations(
+            outputs,
+            observations,
+            {"POLICY": {"SH-POL-001", "SH-POL-004"}, "PERIOD": {"SH-POL-001", "SH-POL-004"}},
+            contracts=contracts(),
+        )
     del scratch_root
     history = History(records, as_of)
     terms, output = contracts(), []

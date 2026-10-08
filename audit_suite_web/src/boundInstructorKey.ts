@@ -1,4 +1,8 @@
 import type { Scope } from "./api";
+import {
+  validateReferenceCrosswalk,
+  type ReferenceCrosswalkValue,
+} from "./referenceCrosswalk";
 export type BoundSource = {
   id: string;
   company: string;
@@ -64,6 +68,7 @@ export type BoundSnapshot = {
   limits: string[];
 };
 export type BoundResponse = {
+  reference_crosswalk?: ReferenceCrosswalkValue;
   snapshot: BoundSnapshot;
   binding: {
     manifest_sha256: string;
@@ -74,8 +79,23 @@ export type BoundResponse = {
   };
 };
 export function validateBoundResponse(v: BoundResponse, engagementId: string) {
+  if (v.reference_crosswalk)
+    validateReferenceCrosswalk(v.reference_crosswalk, engagementId);
   const s = v.snapshot,
     b = v.binding;
+  if (
+    v.reference_crosswalk &&
+    (JSON.stringify(v.reference_crosswalk.current_cards.map((c) => c.id)) !==
+      JSON.stringify(s.authored.issues.map((i) => i.id)) ||
+      v.reference_crosswalk.current_cards.some(
+        (c, index) =>
+          JSON.stringify(c.control_ids) !==
+          JSON.stringify(s.authored.issues[index].control_ids),
+      ))
+  )
+    throw Error(
+      "Reference crosswalk current cards differ from this bound snapshot.",
+    );
   if (
     !s ||
     !b ||

@@ -11,7 +11,7 @@ from enterprise.audit_suite import company_emergency_replay_2027 as source
 from enterprise.audit_suite.company_store import CompanyStoreError
 
 REPOSITORY = Path(__file__).resolve().parents[2]
-PRIVATE_REPOSITORY = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+PRIVATE_REPOSITORY = Path(__file__).resolve().parents[2]
 
 
 def test_selected_replay_preserves_denials_and_upstream_open_gates(tmp_path):

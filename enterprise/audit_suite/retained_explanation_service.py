@@ -16,7 +16,7 @@ from .bound_instructor import load_bindings
 from .company_store import _time
 from .explanation_binding import _authored, verify_snapshot
 from .fresh_sec003_procedure import require
-from .history_inspection import inspect_history
+from .history_integrity_reference import inspect_selected_integrity
 from .persistent_company_journey import PersistentCompany
 from .persistent_company_service import RetainedEngine, RetainedWorkroom, absolute_path, pinned_json
 from .source_library_audit import file_sha, private_file, quiescent_read
@@ -24,6 +24,7 @@ from .store import DomainError, Store, digest
 
 SCHEMA = "SH_RETAINED_COMPANY_EXPLANATION_SERVICE_CONFIG_V1"
 ACTIVE_SCHEMA = "SH_RETAINED_COMPANY_EXPLANATION_SERVICE_CONFIG_V2"
+REFERENCE_SCHEMA = "SH_RETAINED_COMPANY_EXPLANATION_SERVICE_CONFIG_V3"
 MAX_SNAPSHOT_BYTES = 32 * 1024 * 1024
 MODULES = (
     "retained_explanation_service.py",
@@ -117,6 +118,15 @@ ACTIVE_MODULES = tuple(
         }
     )
 )
+REFERENCE_MODULES = tuple(
+    sorted(
+        set(ACTIVE_MODULES)
+        | {
+            "instructor_reference_crosswalk.py",
+            "instructor_original.py",
+        }
+    )
+)
 
 
 def _require_authority(condition, message, status):
@@ -181,6 +191,58 @@ def active_configuration(
     return value
 
 
+def reference_configuration(
+    workroom_path,
+    workroom_sha256,
+    bindings_path,
+    bindings_sha256,
+    *,
+    repository,
+    instructor_writeback,
+    background_jobs,
+    reference_archive,
+    reference_crosswalk,
+    artifact_option_limit=5000,
+):
+    """Explicit optional unbound archive; current bound Key remains primary.
+
+    Serializing operator choices neither accepts the crosswalk nor activates it.
+    Existing V1/V2 configurations and their exact source vectors are unchanged.
+    """
+    from .instructor_reference_crosswalk import ReferenceLibrary
+
+    value = active_configuration(
+        workroom_path,
+        workroom_sha256,
+        bindings_path,
+        bindings_sha256,
+        repository=repository,
+        instructor_writeback=instructor_writeback,
+        background_jobs=background_jobs,
+        artifact_option_limit=artifact_option_limit,
+    )
+    bindings = load_bindings(Path(bindings_path))
+    require(len(bindings) == 1, "Single current engagement reference configuration required")
+    binding = next(iter(bindings.values()))
+    manifest = pinned_json(binding["path"] / "manifest.json", binding["manifest_sha256"])
+    snapshot = pinned_json(
+        binding["path"] / "snapshot.json",
+        manifest["files"]["snapshot.json"],
+        max_bytes=MAX_SNAPSHOT_BYTES,
+    )
+    ReferenceLibrary(reference_archive, reference_crosswalk, snapshot)
+    value.update(
+        schema=REFERENCE_SCHEMA,
+        reference_archive=reference_archive,
+        reference_crosswalk=reference_crosswalk,
+        code_pins={
+            name: file_sha(Path(repository) / "enterprise/audit_suite" / name)
+            for name in REFERENCE_MODULES
+        },
+    )
+    return value
+
+
 def _reuse_retained_workroom(
     config_path, expected_sha256, *, private_root, repository, retained_workroom, **settings
 ):
@@ -192,9 +254,21 @@ def _reuse_retained_workroom(
     room = retained_workroom
     require(type(room) is RetainedWorkroom, "Exact initialized live RetainedWorkroom required")
     required = {
-        "path", "expected_sha256", "repository", "config", "root", "engine", "world",
-        "binding", "binding_path", "binding_sha256", "selected", "engagement", "sealed",
-        "sealed_store", "_integrity_lock",
+        "path",
+        "expected_sha256",
+        "repository",
+        "config",
+        "root",
+        "engine",
+        "world",
+        "binding",
+        "binding_path",
+        "binding_sha256",
+        "selected",
+        "engagement",
+        "sealed",
+        "sealed_store",
+        "_integrity_lock",
     }
     require(
         required <= vars(room).keys()
@@ -205,8 +279,10 @@ def _reuse_retained_workroom(
     root = absolute_path(str(private_root))
     repository = absolute_path(str(repository))
     require(
-        room.path == path and room.expected_sha256 == expected_sha256
-        and room.repository == repository and room.root == root
+        room.path == path
+        and room.expected_sha256 == expected_sha256
+        and room.repository == repository
+        and room.root == root
         and digest(room.config) == digest(pinned_json(path, expected_sha256))
         and type(room.engine) is RetainedEngine
         and type(room.world) is PersistentCompany
@@ -224,24 +300,41 @@ def _reuse_retained_workroom(
         actual = getattr(room.engine, key)
         require(
             (value is None and actual is None)
-            or (isinstance(value, (str, Path)) and isinstance(actual, (str, Path))
-                and Path(value).absolute() == Path(actual).absolute()),
+            or (
+                isinstance(value, (str, Path))
+                and isinstance(actual, (str, Path))
+                and Path(value).absolute() == Path(actual).absolute()
+            ),
             "Live engine settings differ",
         )
     if room.sealed:
         from .sealed_history_store import SealedHistoryStore
-
-        require(
-            type(room.sealed_store) is SealedHistoryStore
-            and room.engine.store is room.sealed_store
-            and isinstance(getattr(room.sealed_store, "_prefix_integrity", None), dict)
-            and isinstance(getattr(room, "_prefix_custody", None), dict)
-            and isinstance(getattr(room, "_tail_integrity", None), dict),
-            "Completed live sealed-prefix validation required",
-        )
+        managed = getattr(room.sealed_store, "_managed_history_integrity", None)
+        if managed is not None:
+            from .managed_history_integrity import ManagedHistoryRuntime
+            require(type(room.sealed_store) is SealedHistoryStore
+                and room.engine.store is room.sealed_store and type(managed) is ManagedHistoryRuntime
+                and managed.room is room and managed.store is room.sealed_store
+                and managed._startup_completed is True
+                and room.config.get("history_integrity")
+                == managed.choice,
+                "Completed exact configured managed history lifetime required")
+            managed.validate_current(room.binding["identities"]["operator"], room.engagement)
+            require(room.engine.store._retained_typed_stamp == room.integrity_stamp(),
+                    "Completed managed typed image closure differs")
+        else:
+            require(
+                type(room.sealed_store) is SealedHistoryStore
+                and room.engine.store is room.sealed_store
+                and isinstance(getattr(room.sealed_store, "_prefix_integrity", None), dict)
+                and isinstance(getattr(room, "_prefix_custody", None), dict)
+                and isinstance(getattr(room, "_tail_integrity", None), dict),
+                "Completed live sealed-prefix validation required",
+            )
     else:
         require(
-            room.sealed_store is None and type(room.engine.store) is Store
+            room.sealed_store is None
+            and type(room.engine.store) is Store
             and isinstance(getattr(room, "_retained_integrity", None), dict),
             "Completed live retained history validation required",
         )
@@ -259,19 +352,28 @@ def _reuse_retained_workroom(
 
 class ExplainedWorkroom:
     def __init__(
-        self, config_path, expected_sha256, *, private_root, repository,
-        retained_workroom=None, **settings
+        self,
+        config_path,
+        expected_sha256,
+        *,
+        private_root,
+        repository,
+        retained_workroom=None,
+        **settings,
     ):
         self.repository = Path(repository).absolute()
         self.path = absolute_path(str(config_path))
         self.pin = expected_sha256
         self.config = pinned_json(self.path, self.pin)
-        self.active = self.config.get("schema") == ACTIVE_SCHEMA
+        self.active = self.config.get("schema") in (ACTIVE_SCHEMA, REFERENCE_SCHEMA)
+        self.reference = None
+        self.has_reference = self.config.get("schema") == REFERENCE_SCHEMA
         require(
             set(self.config)
             == {"schema", "retained_workroom", "explanation_bindings", "code_pins"}
             | ({"features"} if self.active else set())
-            and self.config["schema"] in (SCHEMA, ACTIVE_SCHEMA),
+            | ({"reference_archive", "reference_crosswalk"} if self.has_reference else set())
+            and self.config["schema"] in (SCHEMA, ACTIVE_SCHEMA, REFERENCE_SCHEMA),
             "Exact retained explanation configuration required",
         )
         self.features = {
@@ -302,16 +404,35 @@ class ExplainedWorkroom:
         item = self.config["retained_workroom"]
         if retained_workroom is None:
             self.retained = RetainedWorkroom(
-                Path(item["path"]), item["sha256"],
-                private_root=private_root, repository=repository, **settings,
+                Path(item["path"]),
+                item["sha256"],
+                private_root=private_root,
+                repository=repository,
+                **settings,
             )
         else:
             self.retained = _reuse_retained_workroom(
-                Path(item["path"]), item["sha256"],
-                private_root=private_root, repository=repository,
-                retained_workroom=retained_workroom, **settings,
+                Path(item["path"]),
+                item["sha256"],
+                private_root=private_root,
+                repository=repository,
+                retained_workroom=retained_workroom,
+                **settings,
             )
         bindings = self.validate_explanation()
+        if self.has_reference:
+            from .instructor_reference_crosswalk import ReferenceLibrary
+
+            binding = bindings[self.retained.engagement]
+            manifest = pinned_json(binding["path"] / "manifest.json", binding["manifest_sha256"])
+            snapshot = pinned_json(
+                binding["path"] / "snapshot.json",
+                manifest["files"]["snapshot.json"],
+                max_bytes=MAX_SNAPSHOT_BYTES,
+            )
+            self.reference = ReferenceLibrary(
+                self.config["reference_archive"], self.config["reference_crosswalk"], snapshot
+            )
         if retained_workroom is not None:
             operator = self.retained.binding["identities"]["operator"]
             expected = self.retained.engine.store._retained_typed_stamp
@@ -337,7 +458,15 @@ class ExplainedWorkroom:
     def check_code(self):
         pins = self.config["code_pins"]
         require(
-            isinstance(pins, dict) and set(pins) == set(ACTIVE_MODULES if self.active else MODULES),
+            isinstance(pins, dict)
+            and set(pins)
+            == set(
+                REFERENCE_MODULES
+                if self.has_reference
+                else ACTIVE_MODULES
+                if self.active
+                else MODULES
+            ),
             "Exact explanation module pins required",
         )
         for name, pin in pins.items():
@@ -442,7 +571,7 @@ class ExplainedWorkroom:
         # stamp. Establish the same fresh typed boundary before inspection;
         # sealed graphs reuse only this invocation's verified node bytes.
         retained.refresh_integrity(identities["operator"])
-        history = inspect_history(
+        history = inspect_selected_integrity(
             retained.engine.store, identities["operator"], retained.engagement, revisions=[revision]
         )
         require(revision in history["selected"], "Explanation revision does not exist here")
@@ -639,6 +768,8 @@ class ExplainedWorkroom:
         retained = self.retained
         prefix = "/api/engagements/" + re.escape(retained.engagement)
         instructor_paths = r"instructor-binding|instructor-comparison|instructor-key-views"
+        if self.has_reference:
+            instructor_paths += r"|instructor-key"
         if self.features["instructor_writeback"]:
             instructor_paths += r"|instructor-assessments|instructor-releases"
         private = re.fullmatch(prefix + r"/(" + instructor_paths + r")(/.*)?", request.url.path)
@@ -684,6 +815,8 @@ class ExplainedWorkroom:
             )
         # A damaged private explanation must not stop ordinary learner fieldwork.
         bindings = self.validate_explanation()
+        if self.reference is not None:
+            self.reference.check()
         expected = retained.engine.store._retained_typed_stamp
 
         def close_private_read():
@@ -710,8 +843,17 @@ class ExplainedWorkroom:
                         file_sha(member) == sha256,
                         "Explanation member changed before response closure",
                     )
+            if self.reference is not None:
+                self.reference.check()
 
         return close_private_read
+
+    def reference_view(self, engagement_id):
+        require(
+            self.reference is not None and engagement_id == self.retained.engagement,
+            "Same-engagement configured reference required",
+        )
+        return self.reference.check()
 
 
 def create_explained_app(
@@ -730,6 +872,7 @@ def create_explained_app(
             "company_registry",
             "company_profile",
             "instructor_key_root",
+            "instructor_reference_crosswalk",
             "instructor_bindings",
             "enable_instructor_writeback",
             "instructor_artifact_option_limit",
@@ -761,6 +904,10 @@ def create_explained_app(
         engine_factory=lambda: explained.retained.engine,
         request_guard=explained.guard,
         instructor_bindings=Path(explained.config["explanation_bindings"]["path"]),
+        instructor_key_root=explained.reference.root if explained.reference is not None else None,
+        instructor_reference_crosswalk=explained.reference_view
+        if explained.reference is not None
+        else None,
         enable_instructor_writeback=explained.features["instructor_writeback"],
         instructor_artifact_option_limit=explained.features["artifact_option_limit"],
         background_job_guard=explained.background_guard if explained.active else None,

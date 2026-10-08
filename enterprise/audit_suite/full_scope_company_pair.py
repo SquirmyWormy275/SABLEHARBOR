@@ -11,7 +11,7 @@ import inspect
 import json
 import stat
 from dataclasses import asdict, dataclass
-from datetime import UTC, datetime
+from datetime import UTC, date, datetime
 from pathlib import Path
 
 from .company_store import _json, _time
@@ -173,7 +173,29 @@ def route_vector(routes_by_mode):
     }
 
 
-def require_pair_gate(gate, pins, routes_by_mode):
+def _pair_scope(fieldwork_start):
+    require(type(fieldwork_start) is str, "Explicit ISO fieldwork date required")
+    try:
+        fieldwork = date.fromisoformat(fieldwork_start)
+    except ValueError:
+        require(False, "Explicit ISO fieldwork date required")
+    require(
+        fieldwork.isoformat() == fieldwork_start
+        and fieldwork >= date.fromisoformat(SCOPE["period_start"])
+        and (fieldwork - date.fromisoformat(SCOPE["period_end"])).days <= 3660,
+        "Fieldwork date must preserve normal approved period chronology",
+    )
+    return {**json.loads(_json(SCOPE)), "fieldwork_start": fieldwork_start}
+
+
+def require_pair_gate(gate, pins, routes_by_mode, *, expected_scope=None):
+    selected = SCOPE if expected_scope is None else expected_scope
+    require(
+        type(selected) is dict
+        and set(selected) == set(SCOPE)
+        and _json(selected) == _json(_pair_scope(selected["fieldwork_start"])),
+        "Only the explicitly selected fieldwork date may change approved scope",
+    )
     review = gate.read()
     require(
         review.get("schema") == PAIR_SCHEMA
@@ -184,7 +206,7 @@ def require_pair_gate(gate, pins, routes_by_mode):
         and review.get("accepted_baseline_pins") == pins
         and review.get("program_pack_sha256") == PROGRAM_SHA
         and review.get("route_vector") == route_vector(routes_by_mode)
-        and review.get("scope") == SCOPE,
+        and _json(review.get("scope")) == _json(selected),
         "Independent full-pair acceptance with exact source/dependency pins required",
     )
 
@@ -494,7 +516,19 @@ class BoundWorkroom:
             and self.engine.company_bindings.get(self.engagement)
             == {"company": self.binding["company"], "branch": self.binding["branch"]}
             and state["mode"] == self.mode
-            and len(state["tasks"]) == 409,
+            and len(state["tasks"]) == 409
+            and _json(state["scope"]) == _json(self.binding["scope"])
+            and _json({k: state["scope"][k] for k in SCOPE})
+            == _json(
+                {
+                    **self.pair.expected_scope,
+                    "programs": sorted(self.pair.expected_scope["programs"]),
+                }
+            )
+            and _time(self.binding["initial_simulated_at"])[:10]
+            == self.pair.expected_scope["fieldwork_start"]
+            and _time(state["simulated_at"])
+            >= _time(self.binding["initial_simulated_at"]),
             "Actual shared-company workroom binding changed",
         )
         return state
@@ -1075,6 +1109,14 @@ class BoundWorkroom:
 class FullScopePair:
     """Company initialization precedes every workroom; neither inherits old work."""
 
+    def __init__(self, *, expected_fieldwork_start=SCOPE["fieldwork_start"]):
+        _pair_scope(expected_fieldwork_start)
+        self.expected_fieldwork_start = expected_fieldwork_start
+
+    @property
+    def expected_scope(self):
+        return _pair_scope(self.expected_fieldwork_start)
+
     @classmethod
     def initialize(
         cls,
@@ -1231,9 +1273,14 @@ class FullScopePair:
         return pair
 
     def check(self):
-        require(self.world.accepted.verify() == self.pins, "Accepted baseline changed")
+        require(self.world.verify_accepted_pins() == self.pins, "Accepted baseline changed")
         require(file_sha(self.program_pack) == PROGRAM_SHA, "Retained program pack changed")
         self.world.require_runtime()
         if not self.engineering_only:
             adapter_gate(self.adapter_review.path, self.adapter_review.sha256, self.pins)
-            require_pair_gate(self.pair_review, self.pins, self.routes_by_mode)
+            require_pair_gate(
+                self.pair_review,
+                self.pins,
+                self.routes_by_mode,
+                expected_scope=self.expected_scope,
+            )

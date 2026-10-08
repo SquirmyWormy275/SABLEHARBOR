@@ -23,7 +23,7 @@ from enterprise.audit_suite.documentary_283_route_reconciliation_v6 import _p1_i
 from enterprise.audit_suite.operating_source_bridge import encoded, sha
 
 REPOSITORY = Path(__file__).resolve().parents[2]
-PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+PRIVATE = Path(__file__).resolve().parents[2]
 
 
 def _source(tmp_path: Path) -> Path:

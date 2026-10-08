@@ -137,6 +137,7 @@ def create_app(
     company_registry: Path | None = None,
     company_profile: str | None = None,
     instructor_key_root: Path | None = None,
+    instructor_reference_crosswalk=None,
     instructor_bindings: Path | None = None,
     enable_instructor_writeback: bool = True,
     instructor_artifact_option_limit: int = 2000,
@@ -164,13 +165,16 @@ def create_app(
     bindings = load_company_bindings(company_bindings)
     key_pin = None
     key_files = None
+    key_search_index = None
+    key_search_texts = None
 
     def verified_keys():
+        nonlocal key_search_index, key_search_texts
         import hashlib
         import json
         import re
 
-        from .instructor_key import verify_archive
+        from .instructor_key import semantic_search_bundle, verify_archive
 
         if instructor_key_root is None:
             raise DomainError("Instructor reference library is not configured", status=503)
@@ -202,7 +206,10 @@ def create_app(
                 raise ValueError
             if key_files is None:
                 verify_archive(root)
-            return root, index, receipt, pin, fingerprints
+                key_search_index, key_search_texts = semantic_search_bundle(root, index)
+            if key_search_index is None:
+                raise ValueError
+            return root, key_search_index, receipt, pin, fingerprints
         except Exception as error:
             raise DomainError("Instructor reference integrity check failed", status=503) from error
 
@@ -469,7 +476,12 @@ def create_app(
         response.headers["Cache-Control"] = (
             "no-store, private"
             if (
-                "/company/rights/" in request.url.path
+                "private"
+                in {
+                    directive.strip().lower()
+                    for directive in response.headers.get("Cache-Control", "").split(",")
+                }
+                or "/company/rights/" in request.url.path
                 or (
                     "/instructor-key/" in request.url.path
                     and request.url.path.endswith("/original")
@@ -648,13 +660,23 @@ def create_app(
 
         return await asyncio.to_thread(report, engine, actor(request)["id"], engagement_id)
 
-    def instructor_reference_value(principal, engagement_id, scenario_id=None):
+    def instructor_reference_value(principal, engagement_id, scenario_id=None, query=None):
         import hashlib
         import json
         import re
 
         if engine.store.membership(principal["id"], engagement_id) != "instruct":
             raise DomainError("Instructor membership required", status=403)
+        if query is not None:
+            from .instructor_key import (
+                MAX_SEARCH_RESULT_BYTES,
+                SEARCH_FIELDS,
+                _json,
+                semantic_search_matches,
+                semantic_search_query,
+            )
+
+            semantic_search_query(query)
         if scenario_id is not None and not re.fullmatch(
             r"[A-Za-z0-9][A-Za-z0-9_.-]{0,127}", scenario_id
         ):
@@ -665,7 +687,27 @@ def create_app(
             "binding": {"status": "NOT_BOUND", "engagement_id": engagement_id},
             "archive": {"sha256": receipt["archive_sha256"]},
         }
+        if instructor_reference_crosswalk is not None:
+            metadata["reference_crosswalk"] = instructor_reference_crosswalk(engagement_id)
         if scenario_id is None:
+            if query is not None:
+                matches = semantic_search_matches(key_search_texts, query)
+                result = {
+                    "schema": "PRIVATE_COMPLETE_AUTHORED_MATCH_RESULT_V1",
+                    "audience": "INSTRUCTOR_ONLY",
+                    "status": metadata["status"],
+                    "binding": metadata["binding"],
+                    "archive": metadata["archive"],
+                    "query": query,
+                    "coverage_fields": list(SEARCH_FIELDS),
+                    "complete_scalar_matching": True,
+                    "matching_entry_ids": matches,
+                    "matched_entries": len(matches),
+                    "total_entries": len(index["entries"]),
+                }
+                if len(_json(result)) > MAX_SEARCH_RESULT_BYTES:
+                    raise DomainError("Complete authored match result limit", status=503)
+                return result, None, None
             return {**index, **metadata}, None, None
         entry = next((entry for entry in index["entries"] if entry["id"] == scenario_id), None)
         if entry is None:
@@ -679,13 +721,13 @@ def create_app(
             raise DomainError("Instructor reference integrity check failed", status=503) from error
         return ({"key": key, **metadata}, entry["key_sha256"], key["source"]["raw_sha256"])
 
-    def instructor_reference(principal, engagement_id, scenario_id=None):
+    def instructor_reference(principal, engagement_id, scenario_id=None, query=None):
         from .instructor_access import InstructorAccessLog
 
         log = InstructorAccessLog(engine.store.root / "instructor-key-access")
         try:
             value, key_pin, source_pin = instructor_reference_value(
-                principal, engagement_id, scenario_id
+                principal, engagement_id, scenario_id, query
             )
         except Exception as error:
             status = error.status if isinstance(error, DomainError) else 500
@@ -843,14 +885,40 @@ def create_app(
         )
 
     @app.get("/api/engagements/{engagement_id}/instructor-comparison")
-    async def instructor_comparison(engagement_id: str, revision: int, request: Request):
-        from .instructor_comparison import compare
+    async def instructor_comparison(
+        engagement_id: str, revision: int, request: Request, view: str | None = None,
+        family: str | None = None, expectation_id: str | None = None,
+        source_id: str | None = None, record_id: str | None = None,
+        item_id: str | None = None, inventory_sha256: str | None = None,
+        target_sha256: str | None = None, offset: int = 0, limit: int = 20,
+    ):
+        from .instructor_comparison import compare, comparison_view
 
         principal = actor(request)
         limits.check("instructor-comparison", principal["id"], 60)
+        allowed = {"revision"} if view is None else (
+            {"revision", "view"} if view == "summary-v1" else {
+                "revision", "view", "family", "expectation_id", "source_id", "record_id",
+                "item_id", "inventory_sha256", "target_sha256", "offset", "limit",
+            }
+        )
+        if set(request.query_params) - allowed or any(
+            len(request.query_params.getlist(k)) != 1 for k in request.query_params
+        ) or any(
+            k in request.query_params and not re.fullmatch(r"0|[1-9][0-9]{0,9}", request.query_params[k])
+            for k in ("offset", "limit")
+        ):
+            raise DomainError("Exact comparison query selectors required")
         value = await asyncio.to_thread(
             compare, engine, principal, engagement_id, protected_bindings, revision=revision
         )
+        if view is not None:
+            value = await asyncio.to_thread(
+                comparison_view, value, view=view, family=family, expectation_id=expectation_id,
+                source_id=source_id, record_id=record_id, item_id=item_id,
+                inventory_sha256=inventory_sha256, target_sha256=target_sha256,
+                offset=offset, limit=limit,
+            )
         return await private_view(value)
 
     async def private_view(value):
@@ -869,14 +937,43 @@ def create_app(
     @app.get("/api/engagements/{engagement_id}/instructor-assessments/options")
     async def assessment_options(engagement_id: str, revision: int, request: Request):
         principal, store = assessment_store(request)
+        query = request.query_params
+        catalogue = query.get("view") == "catalogue-v1"
         if (
-            set(request.query_params) != {"revision"}
-            or len(request.query_params.getlist("revision")) != 1
+            set(query) != ({"revision", "view"} if catalogue else {"revision"})
+            or any(len(query.getlist(k)) != 1 for k in query)
         ):
-            raise DomainError("Choose one recorded work revision")
+            raise DomainError("Choose one recorded work revision and supported view")
         return await private_view(
-            await asyncio.to_thread(store.options, principal, engagement_id, revision)
+            await asyncio.to_thread(
+                store.options_view, principal, engagement_id, revision, catalogue=catalogue
+            )
         )
+
+    @app.get("/api/engagements/{engagement_id}/instructor-assessments/references")
+    async def assessment_references(
+        engagement_id: str, revision: int, offset: int, request: Request,
+    ):
+        import json
+
+        principal, store = assessment_store(request)
+        query = request.query_params
+        if (
+            set(query) != {"revision", "offset", "context_sha256", "catalogue_sha256", "query", "expectation_ids", "reference_ids"}
+            or any(len(query.getlist(k)) != 1 for k in query)
+            or len(query["expectation_ids"]) > 2048 or len(query["reference_ids"]) > 4096
+        ):
+            raise DomainError("Exact assessment catalogue page selector required")
+        try:
+            expectations = json.loads(query["expectation_ids"])
+            references = json.loads(query["reference_ids"])
+        except (ValueError, TypeError) as error:
+            raise DomainError("Exact expectation filter required") from error
+        return await private_view(await asyncio.to_thread(
+            store.reference_page, principal, engagement_id, revision,
+            context_sha256=query["context_sha256"], catalogue_sha256=query["catalogue_sha256"],
+            offset=offset, query=query["query"], expectation_ids=expectations, reference_ids=references,
+        ))
 
     @app.get("/api/engagements/{engagement_id}/instructor-assessments")
     async def assessment_history(engagement_id: str, request: Request):
@@ -1070,11 +1167,25 @@ def create_app(
         value = await asyncio.to_thread(
             read_binding, engine, actor(request), engagement_id, protected_bindings
         )
+        if instructor_reference_crosswalk is not None:
+            value["reference_crosswalk"] = await asyncio.to_thread(
+                instructor_reference_crosswalk, engagement_id
+            )
         return await private_view(value)
 
     @app.get("/api/engagements/{engagement_id}/instructor-key")
     async def instructor_key_index(engagement_id: str, request: Request):
-        return await asyncio.to_thread(instructor_reference, actor(request), engagement_id)
+        principal = actor(request)
+        if engine.store.membership(principal["id"], engagement_id) != "instruct":
+            return await asyncio.to_thread(instructor_reference, principal, engagement_id)
+        if request.query_params and (
+            set(request.query_params) != {"query"}
+            or len(request.query_params.getlist("query")) != 1
+        ):
+            raise DomainError("Exact authored search query field required")
+        return await asyncio.to_thread(
+            instructor_reference, principal, engagement_id, None, request.query_params.get("query")
+        )
 
     @app.get("/api/engagements/{engagement_id}/instructor-key/{scenario_id}")
     async def instructor_key_detail(engagement_id: str, scenario_id: str, request: Request):

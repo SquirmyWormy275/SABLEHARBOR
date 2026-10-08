@@ -9,6 +9,14 @@ from sable_harbor.exports.safety import scan_generated_artifacts
 FORBIDDEN = ("ghp_", "github_pat_", "sk-proj-", "BEGIN PRIVATE KEY")
 MAX_BYTES = 10 * 1024 * 1024
 ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
+    # Audit workspace integration: exact 5,608-version projection recipe.
+    # Reviewed identities, hashes, source references and declared transformations;
+    # it contains no credentials, original record bodies or instructor Key payload.
+    # Private source databases and actual assessment snapshots remain outside Git.
+    Path("enterprise/audit_suite/company_operational_library_projection_registry_v3.json"): (
+        16164813,
+        "6fa8e6ba1e428762e1554a5e2779402889dbe48983b3362412536f7744995d66",
+    ),
     # Tracked convenience catalog retained by GENERATED_RECORDS_LIFECYCLE.md.
     # September 29 portal/main integration plus accepted legal and geographic
     # successors, the portal rights handoff, the bounded Daedalus receipt,
@@ -45,7 +53,9 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
         "2749c22b257be1519713b3e6d4011ad1f9b6a2483c509f152ae505b00739f688",
     ),
     # Byte-identical preservation copy of the already approved public database below.
-    Path("geospatial/sources/canon_snapshot/blackridge/data/public/databases/blackridge_m00_v0.1.0.sqlite3"): (
+    Path(
+        "geospatial/sources/canon_snapshot/blackridge/data/public/databases/blackridge_m00_v0.1.0.sqlite3"
+    ): (
         20 * 1024 * 1024,
         "2e6622d0e710f784c49cd6b773514820dbe247c4ec50a18f4c9cbbcf784587d5",
     ),

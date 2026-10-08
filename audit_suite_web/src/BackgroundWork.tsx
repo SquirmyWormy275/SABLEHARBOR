@@ -37,6 +37,9 @@ function WorkList({
   const [inspected, setInspected] = useState<Record<string, number>>({});
   const [inputs, setInputs] = useState<Record<string, BackgroundInput>>({});
   const alive = useRef(true);
+  const section = useRef<HTMLElement>(null);
+  const active = useRef(false);
+  const refresh = useRef<() => void>(() => {});
   const completed = useRef(new Set<string>());
   const callback = useRef(onCompleted);
   callback.current = onCompleted;
@@ -50,14 +53,21 @@ function WorkList({
         alive.current = false;
       };
     let stopped = false;
+    let running = false;
+    let generation = 0, refreshPending = false;
+    const panel = section.current?.closest("details.background-work-panel") as HTMLDetailsElement | null;
     let timer: ReturnType<typeof setTimeout>;
     const poll = async () => {
+      if (stopped || running) return;
+      running = true;
+      const observedGeneration = generation;
       try {
         const data = await request<{ jobs: BackgroundJob[] }>(
           jobsPath(engagement.id),
         );
-        if (stopped) return;
+        if (stopped || observedGeneration !== generation) return;
         setJobs(data.jobs);
+        active.current = data.jobs.some((job) => job.status === "PENDING" || job.status === "RUNNING");
         setError("");
         for (const job of data.jobs)
           if (job.status === "COMPLETED" && !completed.current.has(job.id)) {
@@ -65,6 +75,7 @@ function WorkList({
             callback.current();
           }
       } catch (e) {
+        if (stopped || observedGeneration !== generation) return;
         if (
           !stopped &&
           e instanceof ApiError &&
@@ -78,14 +89,33 @@ function WorkList({
           setError(
             e instanceof Error ? e.message : "Background status unavailable",
           );
+      } finally {
+        running = false;
+        if (!stopped && refreshPending) {
+          refreshPending = false;
+          void poll();
+        } else if (!stopped && (!panel || panel.open || active.current)) timer = setTimeout(poll, 2500);
       }
-      if (!stopped) timer = setTimeout(poll, 2500);
     };
+    const toggle = () => {
+      clearTimeout(timer);
+      if (panel?.open) void poll();
+      else if (active.current && !running) timer = setTimeout(poll, 2500);
+    };
+    refresh.current = () => {
+      generation++;
+      clearTimeout(timer);
+      if (running) refreshPending = true;
+      else void poll();
+    };
+    panel?.addEventListener("toggle", toggle);
     void poll();
     return () => {
       stopped = true;
       alive.current = false;
       clearTimeout(timer);
+      panel?.removeEventListener("toggle", toggle);
+      refresh.current = () => {};
     };
   }, [engagement.id, allowed]);
   if (!allowed) return null;
@@ -114,8 +144,13 @@ function WorkList({
         "POST",
         action === "retry" ? { observed_job_revision: job.job_revision } : {},
       );
-      if (alive.current)
+      if (alive.current) {
+        active.current = [value, ...jobs.filter((job) => job.id !== value.id)].some(
+          (job) => job.status === "PENDING" || job.status === "RUNNING",
+        );
         setJobs((old) => old.map((j) => (j.id === value.id ? value : j)));
+        refresh.current();
+      }
     } catch (e) {
       if (alive.current)
         setError(e instanceof Error ? e.message : "Action unavailable");
@@ -124,7 +159,7 @@ function WorkList({
     }
   }
   return (
-    <section aria-label="Background work">
+    <section ref={section} aria-label="Background work">
       <h2>Background work</h2>
       <p>
         Company responses and source census collections continue while you

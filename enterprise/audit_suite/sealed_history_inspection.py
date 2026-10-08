@@ -17,6 +17,14 @@ def publish_prefix(store, candidate, expected_stamp):
         and store.check_prefix() == expected_stamp,
         "Complete exact-prefix validation is required before memo publication",
     )
+    if store.compact_prefix is not None:
+        manifest = store.compact_prefix.mapping["history"]
+        _require(
+            candidate["count"] == manifest["count"]
+            and candidate["history_sha256"] == manifest["history_sha256"]
+            and candidate["last_meta"]["hash"] == manifest["tip"],
+            "Cold complete compact replay differs from storage mapping",
+        )
     # Digests, typed identity/clock descriptors, byte locators and hash state
     # only: never source bodies, event states, commands or examination outcomes.
     store._prefix_integrity = candidate
@@ -25,13 +33,20 @@ def publish_prefix(store, candidate, expected_stamp):
 def prefix_read(store, wanted):
     store.check_prefix()
     proof = store._prefix_integrity
+    if store.compact_prefix is not None:
+        _require(proof is not None, "Complete cold compact validation required")
+        with store.prefix_connection() as db:
+            result = store.compact_prefix.selected(db, wanted, proof)
+        store.check_prefix()
+        return result
     _require(
         proof is not None and proof["locations"] is not None,
         "Validated ordinary command locators required for interactive sealed history",
     )
     with store.prefix_connection() as db:
         current = db.execute(
-            "SELECT revision,state FROM engagements WHERE id=?", (store.prefix["engagement"],)
+            "SELECT revision,state FROM engagements WHERE id=?",
+            (store.prefix["engagement"],),
         ).fetchone()
         fd = os.open(store.prefix_path, os.O_RDONLY | os.O_NOFOLLOW)
         try:
@@ -40,7 +55,9 @@ def prefix_read(store, wanted):
                 (info.st_dev, info.st_ino) == store._prefix_stamp[0][0][:2],
                 "Sealed prefix inode changed during selected read",
             )
-            result = _memo_read(db, fd, store.prefix["engagement"], current, wanted, proof)
+            result = _memo_read(
+                db, fd, store.prefix["engagement"], current, wanted, proof
+            )
             result["_latest_canonical_bytes"] = canonical_bytes(current["state"])
         finally:
             os.close(fd)
@@ -71,7 +88,9 @@ def scan_composed(store, db, *, revisions, row_validator, previous_integrity=Non
             previous_integrity=previous_integrity,
             prefix=prefix,
         )
-        _require(_stamp(store.db_path) == identity, "Tail changed during codec validation")
+        _require(
+            _stamp(store.db_path) == identity, "Tail changed during codec validation"
+        )
     else:
         tail, candidate, identity = scan_validated_history(
             db,
@@ -120,7 +139,9 @@ def scan_composed(store, db, *, revisions, row_validator, previous_integrity=Non
 
 def inspect_composed(store, actor, engagement, *, revisions=()):
     """Selected public history remains original bytes; no new fact cache."""
-    _require(engagement == store.prefix["engagement"], "Exact retained engagement required")
+    _require(
+        engagement == store.prefix["engagement"], "Exact retained engagement required"
+    )
     reader = getattr(store, "_typed_composed_reader", None)
     _require(callable(reader), "Fresh complete native-tail validation required")
     result = reader(actor, revisions)

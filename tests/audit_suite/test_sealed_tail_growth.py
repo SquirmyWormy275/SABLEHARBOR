@@ -47,7 +47,10 @@ def test_one_and_one_hundred_ordinary_fullscope_notes_report_exact_tail_growth(
     assert len(acquire(room)) == 1
     prefix_sha = file_sha(room.engine.store.db_path)
     selected = prepare_tail(
-        room.engine.store, room.operator, room.engagement, tmp_path / "measured-tail",
+        room.engine.store,
+        room.operator,
+        room.engagement,
+        tmp_path / "measured-tail",
         state_codec=state_codec,
     )
     binding = room.root / "BINDING.json"
@@ -121,7 +124,8 @@ def test_one_and_one_hundred_ordinary_fullscope_notes_report_exact_tail_growth(
             "engineering_neutral_only": True,
             "actual_company_opened": False,
             "events_are_genuine_ordinary_note_commands": True,
-            "tail_codec": "EXACT_CANONICAL_FRAGMENT_STATE" if state_codec
+            "tail_codec": "EXACT_CANONICAL_FRAGMENT_STATE"
+            if state_codec
             else "ORIGINAL_FULL_CANONICAL_EVENT_STATE",
             "constructor_seconds": constructor,
             "command_seconds": command_seconds,

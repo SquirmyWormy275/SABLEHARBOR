@@ -12,7 +12,7 @@ from enterprise.audit_suite import company_policy_exception_2027_exercise as pol
 from enterprise.audit_suite.company_store import CompanyStoreError
 
 REPOSITORY = Path(__file__).resolve().parents[2]
-PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+PRIVATE = Path(__file__).resolve().parents[2]
 
 
 def _build(tmp_path: Path) -> Path:

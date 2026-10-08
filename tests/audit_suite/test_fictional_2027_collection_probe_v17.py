@@ -9,7 +9,7 @@ from enterprise.audit_suite.fictional_2027_candidate_registry import CandidateRe
 from enterprise.audit_suite.fictional_2027_candidate_registry_v17 import candidate_profiles
 
 REPOSITORY = Path(__file__).resolve().parents[2]
-PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+PRIVATE = Path(__file__).resolve().parents[2]
 ZERO = {"grants": 0, "collections": 0, "access_events": 0}
 
 

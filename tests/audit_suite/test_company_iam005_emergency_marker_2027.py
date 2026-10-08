@@ -9,7 +9,7 @@ from enterprise.audit_suite import company_iam005_emergency_marker_2027 as sourc
 from enterprise.audit_suite.company_store import CompanyStoreError
 
 REPOSITORY = Path(__file__).resolve().parents[2]
-PRIVATE_REPOSITORY = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+PRIVATE_REPOSITORY = Path(__file__).resolve().parents[2]
 
 
 def test_selected_source_joins_prior_company_history_and_keeps_messy_denials(tmp_path):

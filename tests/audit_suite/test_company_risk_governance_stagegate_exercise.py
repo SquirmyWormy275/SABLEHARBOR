@@ -12,7 +12,7 @@ from enterprise.audit_suite.company_risk_governance_stagegate_exercise import cr
 from enterprise.audit_suite.company_store import CompanyStoreError
 
 REPOSITORY = Path(__file__).resolve().parents[2]
-PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+PRIVATE = Path(__file__).resolve().parents[2]
 
 
 def _build(tmp_path):

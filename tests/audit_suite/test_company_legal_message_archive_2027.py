@@ -11,7 +11,7 @@ import pytest
 from enterprise.audit_suite import company_legal_message_archive_2027 as archive
 from enterprise.audit_suite.company_store import CompanyStoreError
 
-PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+PRIVATE = Path(__file__).resolve().parents[2]
 
 
 @pytest.fixture(scope="module")

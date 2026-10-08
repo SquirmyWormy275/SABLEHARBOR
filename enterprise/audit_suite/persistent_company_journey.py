@@ -265,18 +265,46 @@ class PersistentCompany:
         """Reentrant thread mutex plus advisory process lock, never delete sidecars."""
         with self._mutex:
             depth = getattr(self._local, "depth", 0)
-            if not depth:
-                private_file(self.root / "LOCK")
-                self._local.fd = os.open(self.root / "LOCK", os.O_RDWR | os.O_NOFOLLOW)
-                fcntl.flock(self._local.fd, fcntl.LOCK_EX)
-            self._local.depth = depth + 1
+            outer = not depth
+            fd = None
             try:
+                if outer:
+                    # A later outer lock cannot renew an interrupted lease.
+                    self._local.__dict__.update(
+                        verified_sources=False, verified_source_binding=None
+                    )
+                    private_file(self.root / "LOCK")
+                    fd = os.open(self.root / "LOCK", os.O_RDWR | os.O_NOFOLLOW)
+                    self._local.fd = fd
+                    fcntl.flock(fd, fcntl.LOCK_EX)
+                self._local.depth = depth + 1
                 yield
             finally:
-                self._local.depth -= 1
-                if not self._local.depth:
-                    fcntl.flock(self._local.fd, fcntl.LOCK_UN)
-                    os.close(self._local.fd)
+                try:
+                    binding = getattr(self._local, "verified_source_binding", None)
+                    closing_lease = (
+                        type(binding) is tuple and len(binding) == 4
+                        and binding[0] is self and type(binding[3]) is int
+                        and binding[3] == depth + 1
+                    )
+                    if outer or closing_lease:
+                        abandoned = getattr(self._local, "verified_sources", False) or (
+                            binding is not None
+                        )
+                        self._local.__dict__.update(
+                            verified_sources=False, verified_source_binding=None
+                        )
+                        if abandoned and getattr(self._local, "depth", 0) > depth:
+                            # Finish interrupted lease closure while this lock
+                            # remains held; verification uses the nested path.
+                            self.require_runtime()
+                finally:
+                    self._local.depth = depth
+                    if fd is not None:
+                        try:
+                            fcntl.flock(fd, fcntl.LOCK_UN)
+                        finally:
+                            os.close(fd)
 
     def _verified_baseline(self):
         """Reuse only immutable parsing after verify() checks every source byte.
@@ -299,9 +327,18 @@ class PersistentCompany:
             )
         return self._baseline_cache[1:]
 
-    def verify(self):
-        """Allow only pinned baseline rows plus specifically receipted new versions."""
+    def verify(self, *, _return_native_rows=False):
+        """Allow only pinned baseline rows plus specifically receipted new versions.
+
+        The private return option shares this call's freshly checked rows only
+        while the caller retains an outer Company lock. Nothing is cached.
+        """
+        require(type(_return_native_rows) is bool, "Exact private native-row return flag required")
         with self.locked():
+            require(
+                not _return_native_rows or self._local.depth > 1,
+                "Verified native rows require an already held Company lock",
+            )
             require(self.accepted.verify() == self.pins, "Accepted baseline pins changed")
             private_file(self.checkpoint)
             require(
@@ -468,7 +505,7 @@ class PersistentCompany:
                 "Unreceipted company change or source sequence gap",
             )
             self.initialization = initialization
-            return checkpoint
+            return (checkpoint, current) if _return_native_rows else checkpoint
 
     def accept_runtime(self, review, expected_sha256):
         private_file(review)
@@ -486,11 +523,40 @@ class PersistentCompany:
         )
         self.runtime_acceptance = {"path": str(review), "sha256": expected_sha256}
 
+    def verify_accepted_pins(self):
+        """Reuse opening baseline pins only within this exact locked source lease.
+
+        This retains no source bytes, current rows, grants or audit outcomes.
+        Full baseline verification remains fresh outside the lease and at both
+        of its boundaries. The opening world, accepted object and pins must stay
+        unchanged even while repeated full baseline scans are deferred.
+        """
+        binding = getattr(self._local, "verified_source_binding", None)
+        if not getattr(self._local, "verified_sources", False):
+            require(binding is None, "Verified source lease binding outlived its boundary")
+            return self.accepted.verify()
+        require(
+            type(binding) is tuple
+            and len(binding) == 4
+            and binding[0] is self
+            and binding[1] is self.accepted
+            and dict(binding[2]) == self.pins
+            and self.ready
+            and not self.writing
+            and type(binding[3]) is int
+            and 0 < binding[3] <= getattr(self._local, "depth", 0),
+            "Exact locked world, accepted object and source lease pins required",
+        )
+        return dict(binding[2])
+
     def require_runtime(self):
-        if getattr(self._local, "verified_sources", False):
+        if getattr(self._local, "verified_sources", False) or getattr(
+            self._local, "verified_source_binding", None
+        ) is not None:
             # Only the same thread inside a fully verified, process-locked
             # source operation may defer repeated whole-company scans. Native
             # APIs still check exact grants, clocks, original hashes and receipts.
+            self.verify_accepted_pins()
             return
         self.verify()
         if self.initialization["engineering_only"]:
@@ -521,12 +587,31 @@ class PersistentCompany:
                 "Distinct verified source operation required",
             )
             self.require_runtime()
-            self._local.verified_sources = True
+            entered = False
+            binding_error = None
             try:
+                self._local.verified_source_binding = (
+                    self, self.accepted, MappingProxyType(dict(self.pins)), self._local.depth
+                )
+                self._local.verified_sources = True
+                entered = True
                 yield
             finally:
-                self._local.verified_sources = False
-                self.require_runtime()
+                try:
+                    if entered:
+                        try:
+                            self.verify_accepted_pins()
+                        except BaseException as error:
+                            binding_error = error
+                finally:
+                    self._local.__dict__.update(
+                        verified_sources=False, verified_source_binding=None
+                    )
+                    try:
+                        self.require_runtime()
+                    finally:
+                        if binding_error is not None:
+                            raise binding_error
 
     def operation_approval(self, operation, operator_id, review, review_sha256):
         private_file(review)

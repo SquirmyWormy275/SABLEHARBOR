@@ -166,6 +166,20 @@ def _insert(db, config, system, record, raw, at, command_id, *, source_admission
         "declaration": config["declaration_ref"],
         "runtime_id": config["runtime_id"],
     }
+    dataset_id = (
+        record
+        if system == "source_dataset"
+        else (
+            config["bindings"][record]["dataset_id"]
+            if system in {"backup_object", "restored_dataset"}
+            else None
+        )
+    )
+    json_native = dataset_id is None or config["datasets"][dataset_id] == "JSON_RECORDS"
+    provenance.update(
+        name=record + (".json" if json_native else ".bin"),
+        content_type="application/json" if json_native else "application/octet-stream",
+    )
     if source_admission is not None:
         require(isinstance(source_admission, dict), "Typed source admission required")
         provenance["source_admission"] = source_admission
@@ -422,7 +436,8 @@ def initialize(
                 plan["period_id"],
                 raw,
                 plan["declared_at"],
-                "backup-runtime-definition",
+                "backup-runtime-definition-"
+                + sha(encoded([config["runtime_id"], declaration_ref])),
             )
         with database(source) as db:
             require(

@@ -14,6 +14,8 @@ from .history_inspection import inspect_history
 from .store import DomainError, canonical, digest, identifier
 
 SCHEMA = "SELECTED_INSTRUCTOR_DEBRIEF_V1"
+SCHEMA_V2 = "SELECTED_INSTRUCTOR_DEBRIEF_V2"
+from .history_integrity_reference import inspect_selected_integrity, validate_reference, validate_store_reference
 MAX_TOTAL = 16 * 1024 * 1024
 
 
@@ -84,7 +86,7 @@ def validate_document(document):
         ),
     )
     require(
-        document["schema"] == SCHEMA
+        document["schema"] in {SCHEMA, SCHEMA_V2}
         and type(document["version"]) is int
         and document["version"] > 0,
         "Invalid debrief schema/version",
@@ -104,7 +106,7 @@ def validate_document(document):
             "revision",
             "state_sha256",
             "event_sha256",
-            "history_sha256",
+            *( ("history_integrity_reference",) if document["schema"] == SCHEMA_V2 else ("history_sha256",) ),
             "simulated_at",
             "qualification",
         ),
@@ -118,8 +120,13 @@ def validate_document(document):
         learner["simulated_at"] is None or isinstance(learner["simulated_at"], str),
         "Historical clock differs",
     )
-    for name in ("state_sha256", "event_sha256", "history_sha256"):
+    for name in ("state_sha256", "event_sha256"):
         pin(learner[name])
+    if document["schema"] == SCHEMA_V2:
+        validate_reference(learner["history_integrity_reference"], revision=learner["revision"],
+            state_sha256=learner["state_sha256"], event_sha256=learner["event_sha256"])
+    else:
+        pin(learner["history_sha256"])
     require(
         learner["qualification"]
         == "SHARED_STATE_NOT_SUBMISSION_KEY_SUPPORT_MAY_POSTDATE_LEARNER_REVISION",
@@ -417,7 +424,9 @@ def package(value, attachments):
         ("Key manifest SHA256", document["key_manifest_sha256"]),
         ("Historical state SHA256", document["learner"]["state_sha256"]),
         ("Historical event SHA256", document["learner"]["event_sha256"]),
-        ("Historical history SHA256", document["learner"]["history_sha256"]),
+        ("Recorded revision integrity", document["learner"]["history_integrity_reference"]["selected_event_sha256"])
+            if document["schema"] == SCHEMA_V2 else
+            ("Historical history SHA256", document["learner"]["history_sha256"]),
     ):
         body.append(f"<p>{escape(label)}: <code>{escape(value)}</code></p>")
     if document["predecessor"]:
@@ -500,6 +509,9 @@ class DebriefMixin:
 
     def _debrief_check(self, state, content, verify_bytes=True, row_index=None):
         document = validate_document(content["document"])
+        if document["schema"] == SCHEMA_V2:
+            validate_reference(document["learner"]["history_integrity_reference"], engagement=state["id"])
+            validate_store_reference(self.engine.store, document["learner"]["history_integrity_reference"])
         require(
             self._source_references(state, document["sections"]) == document["source_references"],
             "Recorded source identity changed",
@@ -593,7 +605,7 @@ class DebriefMixin:
         text(p["title"], 200)
         key, snapshot = self._debrief_snapshot(instructor, eid)
         bound = snapshot["engagement"]
-        history = inspect_history(
+        history = inspect_selected_integrity(
             self.engine.store, instructor, eid, revisions=[bound["revision"], p["learner_revision"]]
         )
         require(
@@ -677,7 +689,7 @@ class DebriefMixin:
                 }
             )
         document = {
-            "schema": SCHEMA,
+            "schema": SCHEMA_V2 if "selected_integrity_reference" in history else SCHEMA,
             "title": p["title"],
             "version": 1,
             "predecessor": None,
@@ -688,7 +700,11 @@ class DebriefMixin:
                 "revision": selected["revision"],
                 "state_sha256": digest(selected["state"]),
                 "event_sha256": selected["hash"],
-                "history_sha256": history["prefix_sha256"][selected["revision"]],
+                **({"history_integrity_reference": validate_reference(
+                    history["selected_integrity_reference"][selected["revision"]], engagement=eid,
+                    revision=selected["revision"], state_sha256=digest(selected["state"]),
+                    event_sha256=selected["hash"])} if "selected_integrity_reference" in history else
+                   {"history_sha256": history["prefix_sha256"][selected["revision"]]}),
                 "qualification": "SHARED_STATE_NOT_SUBMISSION_KEY_SUPPORT_MAY_POSTDATE_LEARNER_REVISION",  # noqa: E501
             },
             "source_references": self._source_references(state, sections),

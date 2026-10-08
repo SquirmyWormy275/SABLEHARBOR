@@ -11,7 +11,7 @@ from enterprise.audit_suite.company_store import CompanyStoreError
 from enterprise.audit_suite.rec003_lineage_gap import _frozen, create, verify
 
 REPOSITORY = Path(__file__).resolve().parents[2]
-PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+PRIVATE = Path(__file__).resolve().parents[2]
 
 
 def test_exact_existing_lineage_and_no_credit(tmp_path):

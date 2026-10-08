@@ -16,6 +16,7 @@ import re
 import secrets
 import sqlite3
 import stat
+import sys
 import time
 from pathlib import Path
 
@@ -94,7 +95,8 @@ def _file_sha(path):
 def _private(path, *, directory=False):
     path = Path(path).absolute()
     _require(
-        path == path.resolve() and not any(p.is_symlink() for p in [path, *path.parents]),
+        path == path.resolve()
+        and not any(p.is_symlink() for p in [path, *path.parents]),
         "Unaliased sealed-history path required",
     )
     info = path.lstat()
@@ -141,30 +143,38 @@ class _SealedConnection(_ClosingConnection):
     def backup(self, *args, **kwargs):
         # sqlite3.Connection.backup copies only the main database, not the
         # attached original. Never emit a misleading tail-only recovery image.
-        raise DomainError("Sealed history requires a complete composed recovery export", status=403)
+        raise DomainError(
+            "Sealed history requires a complete composed recovery export", status=403
+        )
 
     def close(self):
+        managed_context = getattr(self, "_managed_connection_context", None)
         try:
-            super().close()
+            try:
+                super().close()
+            finally:
+                pending = getattr(self, "_request_graph_candidate", None)
+                if pending is not None:
+                    scope, key, outside, roots, graph = pending
+                    # Only ordinary quiescent SQLite lifecycle is reusable. The
+                    # earlier inside proof and this exact outside closure must
+                    # both succeed; changed or preexisting sidecars never qualify.
+                    if _stamp(self._sealed_owner.db_path) == outside:
+                        scope.put(key, outside, roots, graph)
+                    self._request_graph_candidate = None
+                invocation = getattr(self, "_codec_invocation", None)
+                if invocation is not None:
+                    invocation.close()
+                    self._codec_invocation = None
+                contents = getattr(self, "_codec_contents", None)
+                if contents is not None:
+                    contents.clear()
+                    self._codec_contents = None
+                self._sealed_owner.check_prefix()
         finally:
-            pending = getattr(self, "_request_graph_candidate", None)
-            if pending is not None:
-                scope, key, outside, roots, graph = pending
-                # Only ordinary quiescent SQLite lifecycle is reusable. The
-                # earlier inside proof and this exact outside closure must
-                # both succeed; changed or preexisting sidecars never qualify.
-                if _stamp(self._sealed_owner.db_path) == outside:
-                    scope.put(key, outside, roots, graph)
-                self._request_graph_candidate = None
-            invocation = getattr(self, "_codec_invocation", None)
-            if invocation is not None:
-                invocation.close()
-                self._codec_invocation = None
-            contents = getattr(self, "_codec_contents", None)
-            if contents is not None:
-                contents.clear()
-                self._codec_contents = None
-            self._sealed_owner.check_prefix()
+            if managed_context is not None:
+                self._managed_connection_context = None
+                managed_context.__exit__(*sys.exc_info())
 
 
 def prepare_tail(store, actor, engagement, destination, *, state_codec=False):
@@ -175,25 +185,36 @@ def prepare_tail(store, actor, engagement, destination, *, state_codec=False):
     source verification, under its fresh source lock, before publication.
     It never overwrites a path or copies old events into the tail.
     """
-    _require(not isinstance(store, SealedHistoryStore), "An ordinary original prefix is required")
-    _require(type(state_codec) is bool, "Exact optional canonical codec choice required")
+    _require(
+        not isinstance(store, SealedHistoryStore),
+        "An ordinary original prefix is required",
+    )
+    _require(
+        type(state_codec) is bool, "Exact optional canonical codec choice required"
+    )
     root = _private(store.root, directory=True)
     prefix = _private(store.db_path)
     outside = _stamp(prefix)
-    _require(not any(outside[0][1:]), "Sealed prefix requires quiescent absent sidecars")
+    _require(
+        not any(outside[0][1:]), "Sealed prefix requires quiescent absent sidecars"
+    )
     destination = Path(destination).absolute()
     _private(destination.parent, directory=True)
     destination.mkdir(mode=0o700)  # O_EXCL semantics: even an empty directory refuses.
     tail_path = destination / "tail.sqlite3"
     fd = os.open(tail_path, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
     os.close(fd)
-    with store.connect() as source, sqlite3.connect(tail_path, factory=_ClosingConnection) as tail:
+    with (
+        store.connect() as source,
+        sqlite3.connect(tail_path, factory=_ClosingConnection) as tail,
+    ):
         tail.row_factory = sqlite3.Row
         source.execute("BEGIN IMMEDIATE")
         source.execute("PRAGMA query_only=ON")
         store._authorize(source, actor, engagement, {"instruct"})
         _require(
-            {r[0] for r in source.execute("SELECT id FROM engagements")} == {engagement},
+            {r[0] for r in source.execute("SELECT id FROM engagements")}
+            == {engagement},
             "Exactly the existing selected engagement required",
         )
         _require(
@@ -201,9 +222,12 @@ def prepare_tail(store, actor, engagement, destination, *, state_codec=False):
             "Prefix SQLite integrity failed",
         )
         counts = _history(source)
-        current = source.execute("SELECT * FROM engagements WHERE id=?", (engagement,)).fetchone()
+        current = source.execute(
+            "SELECT * FROM engagements WHERE id=?", (engagement,)
+        ).fetchone()
         latest = source.execute(
-            "SELECT * FROM events WHERE engagement=? ORDER BY revision DESC LIMIT 1", (engagement,)
+            "SELECT * FROM events WHERE engagement=? ORDER BY revision DESC LIMIT 1",
+            (engagement,),
         ).fetchone()
         tail.executescript(
             TAIL_SQL.replace("event_tail", "event_frames") if state_codec else TAIL_SQL
@@ -219,16 +243,21 @@ def prepare_tail(store, actor, engagement, destination, *, state_codec=False):
                 "schema": NODE_SCHEMA,
                 "initial_root": initial_root,
                 "initial_state_bytes": size,
-                "initial_state_sha256": hashlib.sha256(current["state"].encode()).hexdigest(),
+                "initial_state_sha256": hashlib.sha256(
+                    current["state"].encode()
+                ).hexdigest(),
             }
         for table in ("principals", "engagements", "members", "sessions"):
             rows = source.execute(f"SELECT * FROM {table}")
             for row in rows:
                 tail.execute(
-                    f"INSERT INTO {table} VALUES ({','.join('?' for _ in row)})", tuple(row)
+                    f"INSERT INTO {table} VALUES ({','.join('?' for _ in row)})",
+                    tuple(row),
                 )
         initial_auth = {
-            table: digest([dict(r) for r in source.execute(f"SELECT * FROM {table} ORDER BY 1")])
+            table: digest(
+                [dict(r) for r in source.execute(f"SELECT * FROM {table} ORDER BY 1")]
+            )
             for table in ("principals", "members", "sessions")
         }
         _require(
@@ -243,14 +272,20 @@ def prepare_tail(store, actor, engagement, destination, *, state_codec=False):
             "engagement": engagement,
             "revision": current["revision"],
             "last_hash": latest["hash"],
-            "current_state_sha256": hashlib.sha256(current["state"].encode()).hexdigest(),
+            "current_state_sha256": hashlib.sha256(
+                current["state"].encode()
+            ).hexdigest(),
             "initial_auth_sha256": initial_auth,
         }
     _require(_stamp(prefix) == outside, "Original prefix changed during preparation")
     # Fresh physical bytes are externally pinned, including non-event pages.
     prefix_identity["sha256"] = _file_sha(prefix)
-    _require(_stamp(prefix) == outside, "Original prefix changed during full byte hashing")
-    _require(not any(_stamp(tail_path)[0][1:]), "Prepared tail did not close quiescently")
+    _require(
+        _stamp(prefix) == outside, "Original prefix changed during full byte hashing"
+    )
+    _require(
+        not any(_stamp(tail_path)[0][1:]), "Prepared tail did not close quiescently"
+    )
     authority_descriptor, initial_head = initialize(
         destination, prefix_identity["sha256"], engagement
     )
@@ -280,7 +315,14 @@ class SealedHistoryStore(Store):
     PRIVATE_VIEW_MAX_BYTES = 32 * 1024 * 1024
 
     def __init__(
-        self, root, manifest_path, manifest_sha256, *, authority_head=None, session_revocations=None
+        self,
+        root,
+        manifest_path,
+        manifest_sha256,
+        *,
+        authority_head=None,
+        session_revocations=None,
+        compact_prefix=None,
     ):
         self.root = _private(root, directory=True)
         self.manifest_path = _private(manifest_path)
@@ -304,7 +346,11 @@ class SealedHistoryStore(Store):
                 "session_authority",
                 "initial_authority_head",
             }
-            | ({"state_codec"} if self.manifest.get("schema") == CODEC_SCHEMA else set())
+            | (
+                {"state_codec"}
+                if self.manifest.get("schema") == CODEC_SCHEMA
+                else set()
+            )
             | (
                 {"storage_derivation"}
                 if "storage_derivation" in self.manifest
@@ -340,27 +386,43 @@ class SealedHistoryStore(Store):
             and self.prefix["bytes"] > 0,
             "Strict sealed-prefix metadata required",
         )
-        self.prefix_path = _private(self.prefix["path"])
+        # Original physical SHA/path remains the signed authority lineage.
+        # The explicit derivative mapping never rewrites that descriptor.
+        self.compact_prefix = None
+        original_path = Path(self.prefix["path"])
         _require(
-            self.prefix_path == self.root / "engagements.sqlite3",
-            "Original retained journal path required",
+            original_path == self.root / "engagements.sqlite3",
+            "Original retained journal lineage path required",
         )
+        if compact_prefix is None:
+            self.prefix_path = _private(original_path)
+        else:
+            from .compact_prefix_storage import CompactPrefix
+
+            self.compact_prefix = CompactPrefix(compact_prefix, self.prefix)
+            self.prefix_path = self.compact_prefix.database
         self.db_path = _private(self.manifest["tail_path"])
         _require(
-            self.db_path.parent == self.manifest_path.parent and self.db_path != self.prefix_path,
+            self.db_path.parent == self.manifest_path.parent
+            and self.db_path != self.prefix_path,
             "Separate ordinary tail required",
         )
         self._prefix_stamp = _stamp(self.prefix_path)
-        _require(not any(self._prefix_stamp[0][1:]), "Sealed prefix must have no sidecars")
         _require(
-            self.prefix_path.stat().st_size == self.prefix["bytes"]
-            and _file_sha(self.prefix_path) == self.prefix["sha256"],
-            "Fresh complete prefix byte pin differs",
+            not any(self._prefix_stamp[0][1:]), "Sealed prefix must have no sidecars"
         )
+        if self.compact_prefix is None:
+            _require(
+                self.prefix_path.stat().st_size == self.prefix["bytes"]
+                and _file_sha(self.prefix_path) == self.prefix["sha256"],
+                "Fresh complete prefix byte pin differs",
+            )
         self.check_prefix()
         self.authority = LocalAuthority(
             self.manifest["operator_authority"],
-            self.manifest["initial_authority_head"] if authority_head is None else authority_head,
+            self.manifest["initial_authority_head"]
+            if authority_head is None
+            else authority_head,
             directory=self.manifest_path.parent,
             prefix_sha256=self.prefix["sha256"],
             engagement=self.prefix["engagement"],
@@ -369,10 +431,13 @@ class SealedHistoryStore(Store):
             self.manifest["session_authority"], revocation_pins=session_revocations
         )
         _require(
-            self.session_authority.revocations == self.manifest_path.parent / "SESSION_REVOCATIONS",
+            self.session_authority.revocations
+            == self.manifest_path.parent / "SESSION_REVOCATIONS",
             "Original local session-revocation directory required",
         )
-        self._prefix_integrity = None  # Published only after full typed native verification.
+        self._prefix_integrity = (
+            None  # Published only after full typed native verification.
+        )
         self.check_prefix()
 
     @property
@@ -380,6 +445,9 @@ class SealedHistoryStore(Store):
         return "event_frames" if self.state_codec is not None else "event_tail"
 
     def verify_codec(self, db):
+        managed = getattr(self, "_managed_history_integrity", None)
+        if managed is not None and not managed.force_full:
+            return managed.verify_image(db)
         if self.state_codec is None:
             return None
         if not db.in_transaction:
@@ -421,13 +489,18 @@ class SealedHistoryStore(Store):
         key = (id(self), self.manifest_sha256, self.db_path)
         outside = db._request_outer_stamp
         reusable_image = not any(outside[0][1:]) and stamp[0][0] == outside[0][0]
-        cached = None if scope is None or not reusable_image else scope.get(key, outside, roots)
+        cached = (
+            None
+            if scope is None or not reusable_image
+            else scope.get(key, outside, roots)
+        )
         if cached is None:
             invocation = VerifiedInvocationGraph(db, roots)
             initial = decode(db, choice["initial_root"], invocation=invocation)
             _require(
                 len(initial) == choice["initial_state_bytes"]
-                and hashlib.sha256(initial).hexdigest() == choice["initial_state_sha256"],
+                and hashlib.sha256(initial).hexdigest()
+                == choice["initial_state_sha256"],
                 "Exact original current-state graph projection differs",
             )
             _require(_stamp(self.db_path) == stamp, "Graph changed during fresh proof")
@@ -435,7 +508,10 @@ class SealedHistoryStore(Store):
                 db._request_graph_candidate = (scope, key, outside, roots, invocation)
         else:
             invocation = VerifiedInvocationGraph.from_request_proof(db, cached)
-            _require(_stamp(self.db_path) == stamp, "Graph changed during request-local reuse")
+            _require(
+                _stamp(self.db_path) == stamp,
+                "Graph changed during request-local reuse",
+            )
         previous = getattr(db, "_codec_invocation", None)
         if previous is not None:
             previous.close()
@@ -464,6 +540,8 @@ class SealedHistoryStore(Store):
 
     def check_prefix(self):
         _private(self.prefix_path)
+        if self.compact_prefix is not None:
+            self.compact_prefix.check()
         _private(self.db_path)
         _private(self.manifest_path)
         _require(
@@ -489,33 +567,78 @@ class SealedHistoryStore(Store):
         # The immutable original is already externally byte-pinned and has no
         # sidecars. Closing stamp checks cover external mutation during reads.
         db = sqlite3.connect(
-            self.prefix_path.as_uri() + "?immutable=1", uri=True, factory=_ClosingConnection
+            self.prefix_path.as_uri() + "?immutable=1",
+            uri=True,
+            factory=_ClosingConnection,
         )
         db.row_factory = sqlite3.Row
-        db.execute("PRAGMA query_only=ON")
         db.execute("PRAGMA trusted_schema=OFF")
+        if self.compact_prefix is not None:
+            self.compact_prefix.install(db)
+        db.execute("PRAGMA query_only=ON")
         return db
 
     def connect(self):
+        managed = getattr(self, "_managed_history_integrity", None)
+        if managed is None:
+            return self._connect_unwrapped()
+        context = managed.locked()
+        db = None
+        try:
+            context.__enter__()
+            db = self._connect_unwrapped()
+            db._managed_connection_context = context
+            # Validate before inherited get/session/listing methods see rows.
+            # Roll back this read-only validation reservation so each ordinary
+            # caller retains its existing transaction/BEGIN semantics.
+            if not managed._issuing:
+                try:
+                    db.execute("BEGIN IMMEDIATE")
+                    managed.verify_image(db)
+                finally:
+                    db.rollback()
+            return db
+        except BaseException:
+            if db is not None:
+                db.close()
+            else:
+                context.__exit__(*sys.exc_info())
+            raise
+
+    def _connect_unwrapped(self):
         self.check_prefix()
         outside = _stamp(self.db_path)
-        db = sqlite3.connect(self.db_path, timeout=15, uri=True, factory=_SealedConnection)
+        db = sqlite3.connect(
+            self.db_path, timeout=15, uri=True, factory=_SealedConnection
+        )
         db._sealed_owner = self
         db._request_outer_stamp = outside
         db.row_factory = sqlite3.Row
         db.execute("PRAGMA foreign_keys=ON")
         _require(
-            _schema_hash(db) == self.manifest["tail_schema_sha256"], "Ordinary tail schema changed"
+            _schema_hash(db) == self.manifest["tail_schema_sha256"],
+            "Ordinary tail schema changed",
         )
         db.execute(
-            "ATTACH DATABASE ? AS sealed_prefix", (self.prefix_path.as_uri() + "?immutable=1",)
+            "ATTACH DATABASE ? AS sealed_prefix",
+            (self.prefix_path.as_uri() + "?immutable=1",),
         )
+        if self.compact_prefix is None:
+            db.execute(
+                "CREATE TEMP VIEW prefix_events AS SELECT * FROM sealed_prefix.events"
+            )
+        else:
+            self.compact_prefix.install(
+                db, schema="sealed_prefix", view="prefix_events"
+            )
         if self.state_codec is not None:
             from .canonical_state_codec import decode, encode
 
             def serialize_state(raw):
                 value = json.loads(raw)
-                _require(canonical(value) == raw, "Exact canonical state input required")
+                _require(
+                    canonical(value) == raw, "Exact canonical state input required"
+                )
                 root, size = encode(db, value)
                 return canonical(
                     {
@@ -553,17 +676,19 @@ class SealedHistoryStore(Store):
         columns = ",".join(EVENT_COLUMNS)
         tail_view = "event_tail" if self.state_codec is not None else "main.event_tail"
         encoded_state = (
-            "canonical_state_encode(NEW.state)" if self.state_codec is not None else "NEW.state"
+            "canonical_state_encode(NEW.state)"
+            if self.state_codec is not None
+            else "NEW.state"
         )
         db.execute(
-            f"CREATE TEMP VIEW events AS SELECT {columns} FROM sealed_prefix.events "
+            f"CREATE TEMP VIEW events AS SELECT {columns} FROM prefix_events "
             f"UNION ALL SELECT {columns} FROM {tail_view}"
         )
         db.executescript(f"""
         CREATE TEMP TRIGGER insert_retained_event INSTEAD OF INSERT ON events BEGIN
           SELECT CASE WHEN NEW.engagement != (SELECT id FROM main.engagements)
-            OR NEW.revision <= (SELECT MAX(revision) FROM sealed_prefix.events)
-            OR EXISTS(SELECT 1 FROM sealed_prefix.events WHERE engagement=NEW.engagement
+            OR NEW.revision <= (SELECT MAX(revision) FROM prefix_events)
+            OR EXISTS(SELECT 1 FROM prefix_events WHERE engagement=NEW.engagement
                        AND command_id=NEW.command_id)
           THEN RAISE(ABORT,'sealed prefix identity/revision/command cannot be replaced') END;
           INSERT INTO {self.event_table} VALUES(NEW.engagement,NEW.revision,NEW.command_id,
@@ -572,6 +697,98 @@ class SealedHistoryStore(Store):
         END;
         """)
         return db
+
+    def ordered_raw_queries(self):
+        """Literal indexed components; never sort the combined events view."""
+        prefix = (
+            "sealed_prefix.prefix_frames"
+            if self.compact_prefix is not None
+            else "sealed_prefix.events"
+        )
+        return (
+            f"SELECT * FROM {prefix} WHERE engagement=? ORDER BY revision",
+            f"SELECT * FROM main.{self.event_table} WHERE engagement=? ORDER BY revision",
+        )
+
+    def iter_raw_events(self, db, engagement):
+        """One exact raw event at a time under the caller's consistent lock.
+
+        This preserves original whitespace and decodes only the requested row.
+        It is storage traversal, not an alternative to typed/native replay.
+        """
+        _require(
+            getattr(db, "_sealed_owner", None) is self
+            and db.in_transaction
+            and type(engagement) is str
+            and engagement == self.prefix["engagement"],
+            "Exact transactional sealed raw reader required",
+        )
+        self.check_prefix()
+        current = db.execute(
+            "SELECT revision,state FROM main.engagements WHERE id=?", (engagement,)
+        ).fetchone()
+        _require(
+            current is not None
+            and type(current["revision"]) is int
+            and current["revision"] >= self.prefix["revision"]
+            and type(current["state"]) is str,
+            "Strict current raw traversal boundary required",
+        )
+        outside = _stamp(self.db_path)
+        count, previous, latest = 0, "", None
+        for component, query in enumerate(self.ordered_raw_queries()):
+            plans = db.execute("EXPLAIN QUERY PLAN " + query, (engagement,))
+            _require(
+                all("TEMP B-TREE" not in row["detail"].upper() for row in plans),
+                "Indexed separately ordered raw cursors required",
+            )
+            cursor = db.execute(query, (engagement,))
+            while (source := cursor.fetchone()) is not None:
+                row = {key: source[key] for key in EVENT_COLUMNS[:8]}
+                _require(
+                    row["engagement"] == engagement
+                    and type(row["revision"]) is int
+                    and row["revision"] == count
+                    and row["previous_hash"] == previous,
+                    "Complete ordered raw prefix/tail boundary differs",
+                )
+                if component == 0 and self.compact_prefix is not None:
+                    for kind in ("state", "command"):
+                        row[kind] = self.compact_prefix.decode(
+                            db,
+                            source[kind + "_root"],
+                            source[kind + "_bytes"],
+                            source[kind + "_sha256"],
+                            schema="sealed_prefix",
+                        )
+                else:
+                    row["command"] = source["command"]
+                    row["state"] = (
+                        db.execute(
+                            "SELECT canonical_state_decode(?)", (source["state"],)
+                        ).fetchone()[0]
+                        if component == 1 and self.state_codec is not None
+                        else source["state"]
+                    )
+                _require(
+                    type(row["state"]) is str and type(row["command"]) is str,
+                    "Exact original raw UTF-8 state and command required",
+                )
+                latest, previous, count = row["state"], row["hash"], count + 1
+                yield row
+            if component == 0:
+                _require(
+                    count == self.prefix["revision"] + 1
+                    and previous == self.prefix["last_hash"],
+                    "Complete immutable raw prefix differs",
+                )
+        _require(
+            count == current["revision"] + 1
+            and canonical(json.loads(latest)) == canonical(json.loads(current["state"]))
+            and _stamp(self.db_path) == outside,
+            "Complete raw tip/current or transactional identity differs",
+        )
+        self.check_prefix()
 
     def verify_projection(self, db):
         """Fresh exact original projection and signed current identity closure.
@@ -584,7 +801,9 @@ class SealedHistoryStore(Store):
         """
         prefix = self.prefix
         self.verify_codec(db)
-        row = db.execute("SELECT id,revision,state FROM sealed_prefix.engagements").fetchall()
+        row = db.execute(
+            "SELECT id,revision,state FROM sealed_prefix.engagements"
+        ).fetchall()
         _require(
             len(row) == 1
             and row[0]["id"] == prefix["engagement"]
@@ -596,7 +815,12 @@ class SealedHistoryStore(Store):
         )
         actual_auth = {
             table: digest(
-                [dict(r) for r in db.execute(f"SELECT * FROM sealed_prefix.{table} ORDER BY 1")]
+                [
+                    dict(r)
+                    for r in db.execute(
+                        f"SELECT * FROM sealed_prefix.{table} ORDER BY 1"
+                    )
+                ]
             )
             for table in ("principals", "members", "sessions")
         }
@@ -604,7 +828,9 @@ class SealedHistoryStore(Store):
             actual_auth == prefix["initial_auth_sha256"],
             "Externally pinned original authority projection differs",
         )
-        original_ids = {r[0] for r in db.execute("SELECT id FROM sealed_prefix.principals")}
+        original_ids = {
+            r[0] for r in db.execute("SELECT id FROM sealed_prefix.principals")
+        }
         _require(
             {r[0] for r in db.execute("SELECT id FROM main.principals")} == original_ids
             and {r[0] for r in db.execute("SELECT id FROM main.engagements")}
@@ -622,13 +848,20 @@ class SealedHistoryStore(Store):
             and not db.execute("SELECT 1 FROM main.issued_sessions LIMIT 1").fetchone()
             and not self.session_authority.known_revocations
             and all(
-                digest([dict(r) for r in db.execute(f"SELECT * FROM main.{table} ORDER BY 1")])
+                digest(
+                    [
+                        dict(r)
+                        for r in db.execute(f"SELECT * FROM main.{table} ORDER BY 1")
+                    ]
+                )
                 == actual_auth[table]
                 for table in ("principals", "members", "sessions")
             )
         )
         if no_changes:
-            current = db.execute("SELECT revision,state FROM main.engagements").fetchone()
+            current = db.execute(
+                "SELECT revision,state FROM main.engagements"
+            ).fetchone()
             _require(
                 current["revision"] == prefix["revision"]
                 and hashlib.sha256(current["state"].encode()).hexdigest()
@@ -645,7 +878,10 @@ class SealedHistoryStore(Store):
 
     def validate_credentials(self, db, principal_id):
         """Recompute current identity/member authority from signed transitions."""
-        expected = {r["id"]: dict(r) for r in db.execute("SELECT * FROM sealed_prefix.principals")}
+        expected = {
+            r["id"]: dict(r)
+            for r in db.execute("SELECT * FROM sealed_prefix.principals")
+        }
         members = {
             (r["engagement"], r["principal"]): r["permission"]
             for r in db.execute("SELECT * FROM sealed_prefix.members")
@@ -717,7 +953,9 @@ class SealedHistoryStore(Store):
                 _require(False, "Unknown signed operator transition")
             previous_clock = clock
         self.validate_issuance_history(db)
-        row = db.execute("SELECT * FROM principals WHERE id=?", (principal_id,)).fetchone()
+        row = db.execute(
+            "SELECT * FROM principals WHERE id=?", (principal_id,)
+        ).fetchone()
         original = expected.get(principal_id)
         _require(
             row is not None
@@ -732,16 +970,21 @@ class SealedHistoryStore(Store):
         )
         actual_members = {
             (r["engagement"], r["principal"]): r["permission"]
-            for r in db.execute("SELECT * FROM members WHERE principal=?", (principal_id,))
+            for r in db.execute(
+                "SELECT * FROM members WHERE principal=?", (principal_id,)
+            )
         }
         _require(
-            actual_members == {k: v for k, v in members.items() if k[1] == principal_id},
+            actual_members
+            == {k: v for k, v in members.items() if k[1] == principal_id},
             "Current membership differs from signed original-member history",
         )
         revoked = self.session_authority.check_revocations(
             self.prefix["sha256"], self.prefix["engagement"]
         )
-        for session in db.execute("SELECT * FROM sessions WHERE principal=?", (principal_id,)):
+        for session in db.execute(
+            "SELECT * FROM sessions WHERE principal=?", (principal_id,)
+        ):
             _require(
                 session["token_hash"] not in revoked,
                 "Signed logout permanently invalidated session",
@@ -753,7 +996,8 @@ class SealedHistoryStore(Store):
             ).fetchone()
             if original_session is not None:
                 _require(
-                    epochs[principal_id] == 0 and tuple(original_session) == tuple(session),
+                    epochs[principal_id] == 0
+                    and tuple(original_session) == tuple(session),
                     "Original session was invalidated or repaired",
                 )
             else:
@@ -777,7 +1021,11 @@ class SealedHistoryStore(Store):
                     "credential_token_hash": original["token_hash"],
                 }
                 _require(
-                    digest(self.session_authority.verify(issued["body"], issued["signature"]))
+                    digest(
+                        self.session_authority.verify(
+                            issued["body"], issued["signature"]
+                        )
+                    )
                     == digest(expected_issuance),
                     "Signed login issuance/session differs",
                 )
@@ -866,7 +1114,9 @@ class SealedHistoryStore(Store):
         return super()._principal(db, person_id)
 
     def create(self, *args, **kwargs):
-        raise DomainError("Retained sealed storage cannot create a new engagement", status=403)
+        raise DomainError(
+            "Retained sealed storage cannot create a new engagement", status=403
+        )
 
     def inspect_sealed_history(self, actor, engagement, *, revisions=()):
         from .sealed_history_inspection import inspect_composed
@@ -898,7 +1148,9 @@ class SealedHistoryStore(Store):
         not truncate a comparison, original, selected state or complete export.
         """
         size = 0
-        encoder = json.JSONEncoder(ensure_ascii=False, allow_nan=False, separators=(",", ":"))
+        encoder = json.JSONEncoder(
+            ensure_ascii=False, allow_nan=False, separators=(",", ":")
+        )
         for chunk in encoder.iterencode(value):
             size += len(chunk.encode("utf-8"))
             if size > self.PRIVATE_VIEW_MAX_BYTES:
@@ -911,13 +1163,31 @@ class SealedHistoryStore(Store):
         return value
 
     def provision(self, *args, **kwargs):
-        raise DomainError("Retained sealed storage preserves existing identities", status=403)
+        raise DomainError(
+            "Retained sealed storage preserves existing identities", status=403
+        )
+
+    def command(self, actor, engagement_id, command, reducer, *, permissions):
+        managed = getattr(self, "_managed_history_integrity", None)
+        operation = lambda: super(SealedHistoryStore, self).command(
+            actor, engagement_id, command, reducer, permissions=permissions)
+        if managed is None:
+            return operation()
+        return managed.mutate(operation, kind="AUDIT_APPEND", command=command)
 
     @property
     def authority_head(self):
         return dict(self.authority.head_choice)
 
     def _commit_operator_transition(self, kind, principal_id, change):
+        managed = getattr(self, "_managed_history_integrity", None)
+        if managed is None:
+            return self._commit_operator_transition_unwrapped(kind, principal_id, change)
+        return managed.mutate(
+            lambda: self._commit_operator_transition_unwrapped(kind, principal_id, change),
+            kind="AUTH_TRANSITION")
+
+    def _commit_operator_transition_unwrapped(self, kind, principal_id, change):
         new_head = None
         with self.connect() as db:
             db.execute("BEGIN IMMEDIATE")
@@ -946,7 +1216,9 @@ class SealedHistoryStore(Store):
 
         def change(db, expected):
             if expected["revoked"] != 0:
-                raise DomainError("Only an existing non-revoked principal can rotate", status=403)
+                raise DomainError(
+                    "Only an existing non-revoked principal can rotate", status=403
+                )
             now = time.time()
             payload = {
                 "old_token_hash": expected["token_hash"],
@@ -969,7 +1241,9 @@ class SealedHistoryStore(Store):
                 "recorded_at": now,
             }
 
-        return self._commit_operator_transition("credential.rotate", principal_id, change)
+        return self._commit_operator_transition(
+            "credential.rotate", principal_id, change
+        )
 
     def revoke(self, principal_id):
         def change(db, expected):
@@ -983,7 +1257,9 @@ class SealedHistoryStore(Store):
                 "recorded_at": time.time(),
             }
 
-        return self._commit_operator_transition("principal.revoke", principal_id, change)
+        return self._commit_operator_transition(
+            "principal.revoke", principal_id, change
+        )
 
     def grant(self, engagement_id, principal_id, permission):
         if engagement_id != self.prefix["engagement"] or permission not in {
@@ -1004,7 +1280,9 @@ class SealedHistoryStore(Store):
                 (engagement_id, principal_id),
             ).fetchone()
             if old is None:
-                raise DomainError("Retained storage cannot add a new member", status=403)
+                raise DomainError(
+                    "Retained storage cannot add a new member", status=403
+                )
             db.execute(
                 "UPDATE members SET permission=? WHERE engagement=? AND principal=?",
                 (permission, engagement_id, principal_id),
@@ -1013,20 +1291,35 @@ class SealedHistoryStore(Store):
                 "engagement": engagement_id,
                 "before": old["permission"],
                 "after": permission,
-            }, {"id": principal_id, "permission": permission, "recorded_at": time.time()}
+            }, {
+                "id": principal_id,
+                "permission": permission,
+                "recorded_at": time.time(),
+            }
 
-        return self._commit_operator_transition("membership.grant", principal_id, change)
+        return self._commit_operator_transition(
+            "membership.grant", principal_id, change
+        )
 
     def login(self, credential):
+        managed = getattr(self, "_managed_history_integrity", None)
+        if managed is None:
+            return self._login_unwrapped(credential)
+        return managed.mutate(lambda: self._login_unwrapped(credential), kind="AUTH_TRANSITION")
+
+    def _login_unwrapped(self, credential):
         """Authenticate and publish the session in one ordinary writer transaction."""
         token, csrf = secrets.token_urlsafe(32), secrets.token_urlsafe(32)
         with self.connect() as db:
             db.execute("BEGIN IMMEDIATE")
             row = db.execute(
-                "SELECT id FROM principals WHERE token_hash=?", (self._key_hash(credential),)
+                "SELECT id FROM principals WHERE token_hash=?",
+                (self._key_hash(credential),),
             ).fetchone()
             if row is None:
-                raise DomainError("Invalid credential", code="UNAUTHENTICATED", status=401)
+                raise DomainError(
+                    "Invalid credential", code="UNAUTHENTICATED", status=401
+                )
             person = self._principal(db, row["id"])
             now = time.time()
             db.execute(
@@ -1052,6 +1345,12 @@ class SealedHistoryStore(Store):
         return {"token": token, "csrf": csrf, "viewer": person}
 
     def logout(self, token):
+        managed = getattr(self, "_managed_history_integrity", None)
+        if managed is None:
+            return self._logout_unwrapped(token)
+        return managed.mutate(lambda: self._logout_unwrapped(token), kind="AUTH_TRANSITION")
+
+    def _logout_unwrapped(self, token):
         """Normal server logout, with a signed tombstone outside mutable tables."""
         token_hash = self._key_hash(token)
         with self.connect() as db:
@@ -1062,7 +1361,10 @@ class SealedHistoryStore(Store):
             if row is not None:
                 self._principal(db, row["principal"])
                 self.session_authority.logout(
-                    token_hash, row["principal"], self.prefix["sha256"], self.prefix["engagement"]
+                    token_hash,
+                    row["principal"],
+                    self.prefix["sha256"],
+                    self.prefix["engagement"],
                 )
                 db.execute("DELETE FROM sessions WHERE token_hash=?", (token_hash,))
             self.check_prefix()

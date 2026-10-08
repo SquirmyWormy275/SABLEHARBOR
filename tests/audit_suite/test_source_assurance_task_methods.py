@@ -451,13 +451,11 @@ def test_actual_utf8_plain_text_is_preserved_without_structured_assurance_credit
         }
     assert room.state() == before and not pair.rooms["MESSY"].state()["artifacts"]
     # The plain-text context has no typed assurance fields or native pointers.
-    without_text = examine(
-        [r for r in rows if r is not text_row], as_of=before["simulated_at"]
-    )
+    without_text = examine([r for r in rows if r is not text_row], as_of=before["simulated_at"])
     assert result == without_text
     changed = deepcopy(rows)
-    next(r for r in changed if r["logical_system"] == "workspace_object")[
-        "content_type"
-    ] = "text/plain; charset=latin-1"
+    next(r for r in changed if r["logical_system"] == "workspace_object")["content_type"] = (
+        "text/plain; charset=latin-1"
+    )
     with pytest.raises(ProcedureError, match="Typed retained original"):
         examine(changed, as_of=before["simulated_at"])

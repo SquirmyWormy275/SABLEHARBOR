@@ -12,7 +12,7 @@ import pytest
 from enterprise.audit_suite import unsupported_121_pbc_plan_v15 as plan
 
 REPOSITORY = Path(__file__).resolve().parents[2]
-PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+PRIVATE = Path(__file__).resolve().parents[2]
 STEM = REPOSITORY / "enterprise/audit_suite/UNSUPPORTED_121_PBC_PLAN_V15_2026-10-01"
 
 

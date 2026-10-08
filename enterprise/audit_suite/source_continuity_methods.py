@@ -15,6 +15,7 @@ import math
 from datetime import UTC, datetime
 from pathlib import Path
 
+from . import source_native_operating_methods as native_operating
 from .collected_byte_recovery_method import CollectionContext, examine_restore, reference
 from .company_store import _json, _time
 from .fresh_sec003_procedure import CLOCK_ID, NATIVE_ID, require
@@ -1103,6 +1104,31 @@ def _coverage(task, history, local_restore):
 
 
 def examine(records, *, as_of, scratch_root):
+    legacy, native = native_operating.partition(records)
+    if native:
+        observations = native_operating.examine(records, as_of=as_of)
+        legacy = [
+            r
+            for r in legacy
+            if r["logical_family"] in FAMILIES
+            # The exact native policy document remains available to native replay;
+            # all other declared continuity-family originals keep strict JSON admission.
+            and not (
+                r["source"]["system"] == "supplementalops.policy_document"
+                and r["content_type"] == "text/plain"
+            )
+        ]
+        outputs = (
+            examine(legacy, as_of=as_of, scratch_root=scratch_root)
+            if legacy
+            else native_operating.unsupported_tasks(task_plan(), contracts())
+        )
+        return native_operating.add_observations(
+            outputs,
+            observations,
+            {"RESTORE": {"SH-BCM-002", "SH-BCM-003"}, "PERIOD": {"SH-BCM-002", "SH-BCM-003"}},
+            contracts=contracts(),
+        )
     selected_tasks, task_contracts = task_plan(), contracts()
     history = History(records, as_of)
     bia, backup, restore = (

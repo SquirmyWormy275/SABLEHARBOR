@@ -12,7 +12,7 @@ from enterprise.audit_suite import company_iam005_local_trace_2027 as trace
 from enterprise.audit_suite.company_store import CompanyStoreError
 
 REPOSITORY = Path(__file__).resolve().parents[2]
-PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+PRIVATE = Path(__file__).resolve().parents[2]
 
 
 @pytest.fixture(scope="module")

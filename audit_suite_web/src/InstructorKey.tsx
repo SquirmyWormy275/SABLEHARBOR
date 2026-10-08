@@ -1,4 +1,5 @@
 import { InstructorKeyViews } from "./InstructorKeyViews";
+import { ReferenceCrosswalk } from "./ReferenceCrosswalk";
 import { InstructorRelationshipExplorer } from "./InstructorRelationshipExplorer";
 import { InstructorOriginalInspection } from "./InstructorOriginals";
 import {
@@ -10,12 +11,14 @@ import { request, type Engagement } from "./api";
 import {
   assertKeyContext,
   assertKeyDetail,
+  authoredMatchIds,
   filterKeys,
   keyOption,
   keySelector,
   type InstructorIndex,
   type InstructorDetail,
   type KeyEntry,
+  type AuthoredMatchResult,
 } from "./instructorKey";
 function Value({ value }: { value: unknown }) {
   if (value == null) return <span>Not authored</span>;
@@ -49,6 +52,8 @@ type InstructorKeyProps = {
   engagement: Engagement;
   viewerId?: string;
   savedViewsEnabled?: boolean;
+  referenceLegacy?: string;
+  onReferenceCurrent?: (id: string) => void;
 };
 export default function InstructorKey(props: InstructorKeyProps) {
   return (
@@ -70,10 +75,14 @@ function ArchiveExplorer({
   engagement,
   viewerId = "",
   savedViewsEnabled = false,
+  referenceLegacy,
+  onReferenceCurrent,
 }: {
   engagement: Engagement;
   viewerId?: string;
   savedViewsEnabled?: boolean;
+  referenceLegacy?: string;
+  onReferenceCurrent?: (id: string) => void;
 }) {
   const [index, setIndex] = useState<InstructorIndex | null>(null),
     [detail, setDetail] = useState<InstructorDetail | null>(null),
@@ -84,9 +93,95 @@ function ArchiveExplorer({
     [selector, setSelector] = useState("all"),
     [option, setOption] = useState("all"),
     [review, setReview] = useState("all"),
+    [reviewFacets, setReviewFacets] = useState<{
+      causal_validation: string | null;
+      grading: string | null;
+    }>({ causal_validation: null, grading: null }),
     [page, setPage] = useState(0);
   const sequence = useRef(0),
     allowed = (engagement.permissions ?? []).includes("instruct");
+  const searchSequence = useRef(0);
+  const searchFilters = useRef({
+    selector,
+    option,
+    review,
+    review_facets: reviewFacets,
+    page,
+  });
+  searchFilters.current = {
+    selector,
+    option,
+    review,
+    review_facets: reviewFacets,
+    page,
+  };
+  const [matchReceipt, setMatchReceipt] = useState<{
+      query: string;
+      archive: string;
+      ids: string[];
+    } | null>(null),
+    [searchError, setSearchError] = useState("");
+  const completeIds =
+    matchReceipt?.query === query &&
+    matchReceipt.archive === index?.archive.sha256
+      ? matchReceipt.ids
+      : undefined;
+  const searchPending = Boolean(
+    index?.semantic_matching &&
+    query.trim() &&
+    completeIds === undefined &&
+    !searchError,
+  );
+  useEffect(() => {
+    const current = ++searchSequence.current;
+    setMatchReceipt(null);
+    setSearchError("");
+    if (!allowed || !index?.semantic_matching || !query.trim()) return;
+    const timer = setTimeout(() => {
+      void request<AuthoredMatchResult>(
+        `/api/engagements/${encodeURIComponent(engagement.id)}/instructor-key?query=${encodeURIComponent(query)}`,
+      )
+        .then((value) => {
+          if (current !== searchSequence.current) return;
+          const ids = authoredMatchIds(value, index, query);
+          const currentFilters = searchFilters.current;
+          const count = filterKeys(index.entries, {
+            query,
+            ...currentFilters,
+            complete_match_ids: ids,
+          }).length;
+          if (currentFilters.page >= Math.max(1, Math.ceil(count / 25)))
+            throw Error(
+              "Saved archive page is outside the complete query results.",
+            );
+          setMatchReceipt({ query, archive: index.archive.sha256, ids });
+        })
+        .catch((error) => {
+          if (current === searchSequence.current) setSearchError(error.message);
+        });
+    }, 200);
+    return () => {
+      clearTimeout(timer);
+      ++searchSequence.current;
+    };
+  }, [index, query, allowed, engagement.id]);
+  useEffect(() => {
+    if (
+      referenceLegacy &&
+      index?.entries.some((x) => x.id === referenceLegacy)
+    ) {
+      sequence.current++;
+      setDetail(null);
+      setSelected("");
+      setLoading(false);
+      setQuery(referenceLegacy);
+      setSelector("all");
+      setOption("all");
+      setReview("all");
+      setReviewFacets({ causal_validation: null, grading: null });
+      setPage(0);
+    }
+  }, [referenceLegacy, index]);
   useEffect(() => {
     const current = ++sequence.current;
     setIndex(null);
@@ -97,6 +192,7 @@ function ArchiveExplorer({
     setSelector("all");
     setOption("all");
     setReview("all");
+    setReviewFacets({ causal_validation: null, grading: null });
     setPage(0);
     if (!allowed) {
       setLoading(false);
@@ -165,10 +261,20 @@ function ArchiveExplorer({
   if (index && index.binding.engagement_id !== engagement.id)
     return <p role="status">Loading protected context…</p>;
   const entries = index
-    ? filterKeys(index.entries, { query, selector, option, review })
+    ? index.semantic_matching && query.trim() && completeIds === undefined
+      ? []
+      : filterKeys(index.entries, {
+          query,
+          selector,
+          option,
+          review,
+          review_facets: reviewFacets,
+          complete_match_ids: completeIds,
+        })
     : [];
   return (
     <section
+      id="instructor-reference-library"
       className="instructor-key"
       aria-label="Protected instructor source archive"
     >
@@ -179,6 +285,14 @@ function ArchiveExplorer({
         learner comparison or grade is provided.
       </p>
       {loading && <p role="status">Loading protected source…</p>}
+      {searchPending && (
+        <p role="status">Matching complete authored content…</p>
+      )}
+      {searchError && (
+        <p role="alert">
+          {searchError} Clear the query or reopen the protected workspace.
+        </p>
+      )}
       {error && (
         <p role="alert">
           {error} Close and reopen this protected workspace to retry.
@@ -191,6 +305,27 @@ function ArchiveExplorer({
             Archive: <code>{index.archive.sha256}</code>. Migrated{" "}
             {index.migrated} / required {index.required}.
           </p>
+          {index.reference_crosswalk && (
+            <ReferenceCrosswalk
+              key={index.reference_crosswalk.sha256 + ":" + selected}
+              value={index.reference_crosswalk}
+              mode="ARCHIVE"
+              selected={selected}
+              onCurrent={onReferenceCurrent}
+              onLegacy={(id) => {
+                sequence.current++;
+                setDetail(null);
+                setSelected("");
+                setQuery(id);
+                setSelector("all");
+                setOption("all");
+                setReview("all");
+                setReviewFacets({ causal_validation: null, grading: null });
+                setPage(0);
+                setLoading(false);
+              }}
+            />
+          )}
           <InstructorKeyViews
             engagement={engagement}
             viewerId={viewerId}
@@ -202,6 +337,7 @@ function ArchiveExplorer({
               selector,
               option,
               review,
+              review_facets: reviewFacets,
               page,
               scenario:
                 selected && index.entries.find((x) => x.id === selected)
@@ -213,12 +349,23 @@ function ArchiveExplorer({
                   : null,
             }}
             validate={(value) =>
-              validateArchiveFilters(value as ArchiveKeyFilters, index)
+              validateArchiveFilters(
+                value as ArchiveKeyFilters,
+                index,
+                (value as ArchiveKeyFilters).query === query
+                  ? completeIds
+                  : undefined,
+                (value as ArchiveKeyFilters).query !== query,
+              )
             }
             onRestore={(value) => {
               const v = validateArchiveFilters(
                 value as ArchiveKeyFilters,
                 index,
+                (value as ArchiveKeyFilters).query === query
+                  ? completeIds
+                  : undefined,
+                (value as ArchiveKeyFilters).query !== query,
               );
               sequence.current++;
               setLoading(false);
@@ -227,21 +374,52 @@ function ArchiveExplorer({
               setSelector(v.selector);
               setOption(v.option);
               setReview(v.review);
+              setReviewFacets(
+                v.review_facets ?? { causal_validation: null, grading: null },
+              );
               setPage(v.page);
               setSelected(v.scenario?.id ?? "");
             }}
           />
           <div className="actions">
             <label>
-              Search source ID or review gap
+              Search archive IDs, hashes or literal authored terms
               <input
                 value={query}
+                maxLength={1000}
                 onChange={(e) => {
                   setQuery(e.target.value);
                   setPage(0);
                 }}
               />
             </label>
+            {(["causal_validation", "grading"] as const).map((field) => (
+              <label key={field}>
+                {field === "causal_validation"
+                  ? "Recorded causal validation"
+                  : "Recorded grading status"}
+                <select
+                  value={reviewFacets[field] ?? ""}
+                  onChange={(event) => {
+                    setReviewFacets({
+                      ...reviewFacets,
+                      [field]: event.target.value || null,
+                    });
+                    setPage(0);
+                  }}
+                >
+                  <option value="">All recorded states</option>
+                  {[...new Set(index.entries.map((row) => row.review[field]))]
+                    .filter(
+                      (value) => typeof value === "string" && value.length > 0,
+                    )
+                    .sort()
+                    .map((value) => (
+                      <option key={value}>{value}</option>
+                    ))}
+                </select>
+              </label>
+            ))}
             <label>
               Selector
               <select
@@ -309,6 +487,7 @@ function ArchiveExplorer({
                 setSelector("all");
                 setOption("all");
                 setReview("all");
+                setReviewFacets({ causal_validation: null, grading: null });
                 setPage(0);
               }}
             >
@@ -316,10 +495,19 @@ function ArchiveExplorer({
             </button>
           </div>
           <p>
+            {index.semantic_matching
+              ? "Search matches every authored scalar in title, mechanism, facts, actor-role, artifact, event and path fields. Display previews alone are shortened."
+              : "This older index supports metadata and bounded display-preview search only."}{" "}
+            These are authored terms, not verified person, asset, owner,
+            severity or calendar-period classifications. The full explanation
+            remains available for omitted or shortened content. Recorded
+            validation and grading labels do not create a new assessment.
+          </p>
+          <p>
             {entries.length} of {index.entries.length} archived explanations
             match these filters.
           </p>
-          {!entries.length && (
+          {!entries.length && !searchPending && !searchError && (
             <p>
               No matching archived explanations. Review or reset the active
               filters.
@@ -335,6 +523,30 @@ function ArchiveExplorer({
                   {e.id}
                 </button>{" "}
                 · {e.review.professional} · {e.review.gaps.length} recorded gaps
+                {e.semantic_search && (
+                  <>
+                    <p>
+                      Authored title:{" "}
+                      {e.semantic_search.terms.find(
+                        (t) => t.pointer === "/title",
+                      )?.text ?? "not included"}
+                    </p>
+                    <p>
+                      {e.semantic_search.terms.length} of{" "}
+                      {e.semantic_search.total_scalars} literal scalars
+                      displayed; {e.semantic_search.omitted_scalars} omitted
+                      from previews, {e.semantic_search.truncated_values}{" "}
+                      shortened. Field coverage:{" "}
+                      {e.semantic_search.coverage_fields
+                        .map(
+                          (f) =>
+                            `${f} ${e.semantic_search!.included_by_field[f]} included / ${e.semantic_search!.omitted_by_field[f]} omitted`,
+                        )
+                        .join("; ")}
+                      .
+                    </p>
+                  </>
+                )}
               </li>
             ))}
           </ul>

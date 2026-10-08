@@ -317,6 +317,13 @@ function detailRequestKey(
     : "";
 }
 export default function App() {
+  const [referenceSelection, setReferenceSelection] = useState<{
+    engagementId: string;
+    viewerId: string;
+    revision: number;
+    currentId?: string;
+    legacyId?: string;
+  } | null>(null);
   const [bootstrap, setBootstrap] = useState<Bootstrap | null>(null),
     [engagement, setEngagement] = useState<Engagement | null>(null),
     [section, setSection] = useState<Section>("kickoff"),
@@ -502,7 +509,8 @@ export default function App() {
     if (id !== currentEngagement.current) clearContext();
     try {
       const b = await request<Bootstrap>("/api/bootstrap");
-      if (epoch !== navigationEpoch.current) return;
+      if (epoch !== navigationEpoch.current || search !== location.search)
+        return;
       setCSRF(b.csrf_token);
       setBootstrap(b);
       setUnauthorized(false);
@@ -514,7 +522,8 @@ export default function App() {
             ),
           )
         : null;
-      if (epoch !== navigationEpoch.current) return;
+      if (epoch !== navigationEpoch.current || search !== location.search)
+        return;
       const resolved = parseWorkspaceLink(search, fetched);
       if (resolved.status !== "ready" || !fetched) {
         clearContext();
@@ -556,11 +565,12 @@ export default function App() {
         });
       }
       requestAnimationFrame(() => {
-        if (epoch === navigationEpoch.current)
+        if (epoch === navigationEpoch.current && search === location.search)
           window.scrollTo(0, saved.scrollTop);
       });
     } catch (e) {
-      if (epoch !== navigationEpoch.current) return;
+      if (epoch !== navigationEpoch.current || search !== location.search)
+        return;
       clearContext();
       if (e instanceof ApiError && e.status === 401) setUnauthorized(true);
       else setError((e as Error).message);
@@ -2921,6 +2931,22 @@ export default function App() {
                   {e.permissions?.includes("instruct") &&
                     bootstrap.capabilities.bound_instructor_keys && (
                       <BoundInstructorKey
+                        referenceCurrent={
+                          referenceSelection?.engagementId === e.id &&
+                          referenceSelection.viewerId === bootstrap.viewer.id &&
+                          referenceSelection.revision === e.revision
+                            ? referenceSelection.currentId
+                            : undefined
+                        }
+                        onReferenceLegacy={(id) => {
+                          setReferenceSelection({
+                            engagementId: e.id,
+                            viewerId: bootstrap.viewer.id,
+                            revision: e.revision,
+                            legacyId: id,
+                          });
+                          setSection("review");
+                        }}
                         assessmentsEnabled={
                           bootstrap.capabilities.instructor_assessments === true
                         }
@@ -2991,6 +3017,23 @@ export default function App() {
                         "instructor_reference_library",
                       ) && (
                         <InstructorKey
+                          referenceLegacy={
+                            referenceSelection?.engagementId === e.id &&
+                            referenceSelection.viewerId ===
+                              bootstrap.viewer.id &&
+                            referenceSelection.revision === e.revision
+                              ? referenceSelection.legacyId
+                              : undefined
+                          }
+                          onReferenceCurrent={(id) => {
+                            setReferenceSelection({
+                              engagementId: e.id,
+                              viewerId: bootstrap.viewer.id,
+                              revision: e.revision,
+                              currentId: id,
+                            });
+                            setSection("review");
+                          }}
                           viewerId={bootstrap.viewer.id}
                           savedViewsEnabled={
                             bootstrap.capabilities.instructor_key_views === true
@@ -3427,9 +3470,14 @@ export default function App() {
                     : "Loading the exact retained workpaper version. Its text is not yet loaded."}
                 </p>
               )}
-            {savedViewsPanel}
-            {checkpointPanel}
-            {handoffsPanel}
+            {(detail.kind !== "workpaper" ||
+              !deferredPaper(detail.row, detail.focusVersion)) && (
+              <>
+                {savedViewsPanel}
+                {checkpointPanel}
+                {handoffsPanel}
+              </>
+            )}
             {detail.returnToBoundSource && (
               <button type="button" onClick={() => setDetail(null)}>
                 Back to bound source

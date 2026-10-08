@@ -12,7 +12,7 @@ from enterprise.audit_suite import company_leg001_provision_overlay_2027 as sour
 from enterprise.audit_suite import leg001_66_candidate_gap as gap
 
 REPOSITORY = Path(__file__).resolve().parents[2]
-PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+PRIVATE = Path(__file__).resolve().parents[2]
 ROOT = REPOSITORY / "enterprise/generated/audit-suite/company-leg001-provision-overlay-2027-10-01"
 RUN = ROOT / ("main-run-v1" if REPOSITORY.resolve() == PRIVATE.resolve() else "isolated-run-v4")
 GAP_STEM = REPOSITORY / "enterprise/audit_suite/LEG001_66_CANDIDATE_GAP_2026-10-01"

@@ -11,7 +11,7 @@ from enterprise.audit_suite import documentary_283_route_reconciliation_v10 as r
 from enterprise.audit_suite.documentary_283_route_reconciliation_v10 import V10ReconciliationError
 
 REPOSITORY = Path(__file__).resolve().parents[2]
-PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+PRIVATE = Path(__file__).resolve().parents[2]
 STEM = REPOSITORY / "enterprise/audit_suite/DOCUMENTARY_283_ROUTE_RECONCILIATION_V10_2026-09-30"
 
 

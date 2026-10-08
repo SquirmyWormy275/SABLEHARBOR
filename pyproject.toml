@@ -66,3 +66,42 @@ select = ["E", "F", "I", "UP", "B"]
 python_version = "3.11"
 strict = true
 packages = ["sable_harbor"]
+
+# Retained audit histories admit these exact reviewed sources. CI verifies their
+# SHA-256 pins separately; do not rewrite them through automatic style cleanup.
+[tool.ruff.format]
+exclude = [
+  "enterprise/audit_suite/compact_prefix_storage.py",
+  "enterprise/audit_suite/company_source_edition.py",
+  "enterprise/audit_suite/fictional_2027_source_portfolio.py",
+  "enterprise/audit_suite/full_scope_company_pair.py",
+  "enterprise/audit_suite/history_integrity_reference.py",
+  "enterprise/audit_suite/instructor_assessments.py",
+  "enterprise/audit_suite/instructor_comparison.py",
+  "enterprise/audit_suite/instructor_debrief.py",
+  "enterprise/audit_suite/managed_history_integrity.py",
+  "enterprise/audit_suite/persistent_company_journey.py",
+  "enterprise/audit_suite/persistent_company_service.py",
+  "enterprise/audit_suite/retained_explanation_service.py",
+  "enterprise/audit_suite/sealed_history_authority.py",
+  "enterprise/audit_suite/sealed_history_inspection.py",
+  "enterprise/audit_suite/sealed_history_store.py",
+  "enterprise/audit_suite/sealed_retained_service.py",
+  "enterprise/audit_suite/service.py",
+  "enterprise/audit_suite/source_library_security_execution.py",
+  "enterprise/audit_suite/source_native_operating_methods.py",
+  "enterprise/audit_suite/source_workforce_efficient_methods.py",
+  "enterprise/audit_suite/source_workforce_methods.py"
+]
+
+[tool.ruff.lint.per-file-ignores]
+"enterprise/audit_suite/compact_prefix_storage.py" = ["B905", "E501", "E731"]
+"enterprise/audit_suite/company_source_edition.py" = ["B007", "E501", "I001"]
+"enterprise/audit_suite/history_integrity_reference.py" = ["E501"]
+"enterprise/audit_suite/instructor_assessments.py" = ["E501", "I001"]
+"enterprise/audit_suite/instructor_comparison.py" = ["E501"]
+"enterprise/audit_suite/instructor_debrief.py" = ["E402", "E501", "F401", "I001"]
+"enterprise/audit_suite/managed_history_integrity.py" = ["E501", "E701", "E702", "F401", "I001"]
+"enterprise/audit_suite/retained_explanation_service.py" = ["E501"]
+"enterprise/audit_suite/sealed_history_store.py" = ["E731"]
+"enterprise/audit_suite/service.py" = ["E501"]

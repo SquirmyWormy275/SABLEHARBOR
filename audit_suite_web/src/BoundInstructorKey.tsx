@@ -5,19 +5,26 @@ import {
 } from "./instructorKeyViews";
 import "./boundKeyNavigation.css";
 import {
+  boundIssuePage,
+  BOUND_ISSUE_PAGE_SIZE,
+  defaultIssueIndex,
+  type BoundIssueIndex,
   boundSourcePage,
   issueControlLabel,
   selectedIssueExpectations,
   scopedTimelineSources,
+  defaultSourceFilters,
+  type BoundSourceFilters,
+  boundRelationshipPage,
 } from "./boundKeyNavigation";
 import { boundRetainedArtifacts } from "./boundRetainedSources";
 import { InstructorComparison } from "./InstructorComparison";
+import { ReferenceCrosswalk } from "./ReferenceCrosswalk";
 import { useEffect, useState } from "react";
 import { request, type Engagement, type Row } from "./api";
 import {
   validateBoundResponse,
   sourceTimeline,
-  authoredRelationships,
   type BoundResponse,
 } from "./boundInstructorKey";
 export default function BoundInstructorKey(props: {
@@ -26,6 +33,8 @@ export default function BoundInstructorKey(props: {
   savedViewsEnabled?: boolean;
   assessmentsEnabled?: boolean;
   onPreview?: (artifact: Row) => void;
+  referenceCurrent?: string;
+  onReferenceLegacy?: (id: string) => void;
 }) {
   return (
     <BoundExplorer
@@ -48,20 +57,19 @@ function BoundExplorer({
   savedViewsEnabled = false,
   assessmentsEnabled = false,
   onPreview,
+  referenceCurrent,
+  onReferenceLegacy,
 }: {
   engagement: Engagement;
   viewerId: string;
   savedViewsEnabled?: boolean;
   assessmentsEnabled?: boolean;
   onPreview?: (artifact: Row) => void;
+  referenceCurrent?: string;
+  onReferenceLegacy?: (id: string) => void;
 }) {
   const [response, setResponse] = useState<BoundResponse | null>(null),
-    [error, setError] = useState(""),
-    [selected, setSelected] = useState(""),
-    [query, setQuery] = useState(""),
-    [issueId, setIssueId] = useState(""),
-    [scopeToIssue, setScopeToIssue] = useState(false),
-    [page, setPage] = useState(0);
+    [error, setError] = useState("");
   const allowed = e.permissions?.includes("instruct");
   useEffect(() => {
     let cancelled = false;
@@ -94,8 +102,63 @@ function BoundExplorer({
     );
   if (!response)
     return <p role="status">Loading protected engagement binding…</p>;
+  return (
+    <BoundWorkspace
+      key={response.binding.manifest_sha256}
+      response={response}
+      engagement={e}
+      viewerId={viewerId}
+      savedViewsEnabled={savedViewsEnabled}
+      assessmentsEnabled={assessmentsEnabled}
+      onPreview={onPreview}
+      referenceCurrent={referenceCurrent}
+      onReferenceLegacy={onReferenceLegacy}
+    />
+  );
+}
+function BoundWorkspace({
+  response,
+  engagement: e,
+  viewerId,
+  savedViewsEnabled,
+  assessmentsEnabled,
+  onPreview,
+  referenceCurrent,
+  onReferenceLegacy,
+}: {
+  response: BoundResponse;
+  engagement: Engagement;
+  viewerId: string;
+  savedViewsEnabled: boolean;
+  assessmentsEnabled: boolean;
+  onPreview?: (artifact: Row) => void;
+  referenceCurrent?: string;
+  onReferenceLegacy?: (id: string) => void;
+}) {
+  const [selected, setSelected] = useState(""),
+    [query, setQuery] = useState(""),
+    [issueId, setIssueId] = useState(""),
+    [scopeToIssue, setScopeToIssue] = useState(false),
+    [page, setPage] = useState(0),
+    [sourceFilters, setSourceFilters] =
+      useState<BoundSourceFilters>(defaultSourceFilters),
+    [relationshipPage, setRelationshipPage] = useState(0),
+    [relationshipExpectation, setRelationshipExpectation] = useState(""),
+    [issueIndex, setIssueIndex] = useState<BoundIssueIndex>(defaultIssueIndex);
+  useEffect(() => {
+    setRelationshipPage(0);
+  }, [issueId, selected, relationshipExpectation]);
+  useEffect(() => {
+    if (
+      referenceCurrent &&
+      response.snapshot.authored.issues.some((i) => i.id === referenceCurrent)
+    ) {
+      selectReferenceIssue(referenceCurrent);
+    }
+  }, [referenceCurrent, response]);
   const s = response.snapshot,
     b = response.binding,
+    issueRows = boundIssuePage(s, issueIndex),
     source = s.sources.find((row) => row.id === selected),
     issue = s.authored.issues.find((row) => row.id === issueId),
     expectations = selectedIssueExpectations(s, issueId),
@@ -103,7 +166,51 @@ function BoundExplorer({
       issueId: scopeToIssue ? issueId : "",
       query,
       page,
-    });
+      sourceFilters,
+    }),
+    relationships = boundRelationshipPage(
+      s,
+      issueId,
+      selected,
+      relationshipPage,
+      relationshipExpectation,
+    ),
+    selectedExpectation = s.authored.expectations.find(
+      (row) => row.id === relationshipExpectation,
+    );
+  function selectEndpoint(
+    kind: "issue" | "source" | "expectation",
+    id: string,
+  ) {
+    const rows =
+      kind === "issue"
+        ? s.authored.issues
+        : kind === "source"
+          ? s.sources
+          : s.authored.expectations;
+    if (rows.filter((row) => row.id === id).length !== 1) return;
+    if (kind === "issue") {
+      setIssueId(id);
+      setScopeToIssue(true);
+    }
+    if (kind === "source") setSelected(id);
+    if (kind === "expectation") setRelationshipExpectation(id);
+    setRelationshipPage(0);
+  }
+  function revealIssue(id: string) {
+    const position = s.authored.issues.findIndex((row) => row.id === id);
+    if (position >= 0)
+      setIssueIndex({
+        ...defaultIssueIndex(),
+        page: Math.floor(position / BOUND_ISSUE_PAGE_SIZE),
+      });
+  }
+  function selectReferenceIssue(id: string) {
+    setIssueId(id);
+    setScopeToIssue(true);
+    setPage(0);
+    revealIssue(id);
+  }
   function chooseIssue(id: string) {
     setIssueId(id);
     setScopeToIssue(true);
@@ -178,6 +285,8 @@ function BoundExplorer({
             ? { id: source.id, version: source.version, sha256: source.sha256 }
             : null,
           page: sources.page,
+          issue_index: { ...issueIndex, page: issueRows.page },
+          source_filters: sourceFilters,
         }}
         validate={(value) => validateBoundFilters(value as BoundKeyFilters, s)}
         onRestore={(value) => {
@@ -187,8 +296,23 @@ function BoundExplorer({
           setScopeToIssue(v.scope_to_issue);
           setSelected(v.source?.id ?? "");
           setPage(v.page);
+          setIssueIndex(v.issue_index ?? defaultIssueIndex());
+          setSourceFilters(v.source_filters ?? defaultSourceFilters());
+          setRelationshipExpectation("");
         }}
       />
+      {response.reference_crosswalk && (
+        <ReferenceCrosswalk
+          key={response.reference_crosswalk.sha256 + ":" + issueId}
+          value={response.reference_crosswalk}
+          mode="CURRENT"
+          selected={issueId}
+          onLegacy={onReferenceLegacy}
+          onCurrent={(id) => {
+            selectReferenceIssue(id);
+          }}
+        />
+      )}
       <InstructorComparison
         engagement={e}
         bound={response}
@@ -202,8 +326,60 @@ function BoundExplorer({
           expectations · {s.sources.length} unique bound originals. Select an
           issue to read its interpretation and linked expectations.
         </p>
-        <ul>
-          {s.authored.issues.map((row) => (
+        <p>
+          Search literal issue/control text, explicitly linked procedure and
+          alternative text, task IDs, and bound source identities. Owner and
+          severity facets are unsupported because this bound schema does not
+          supply them; no classification is inferred.
+        </p>
+        <label>
+          Find authored issue
+          <input
+            type="search"
+            value={issueIndex.query}
+            maxLength={1000}
+            onChange={(event) =>
+              setIssueIndex({
+                ...issueIndex,
+                query: event.target.value,
+                page: 0,
+              })
+            }
+          />
+        </label>
+        <label>
+          Issue control
+          <select
+            aria-label="Issue control"
+            value={issueIndex.control_id ?? ""}
+            onChange={(event) =>
+              setIssueIndex({
+                ...issueIndex,
+                control_id: event.target.value || null,
+                page: 0,
+              })
+            }
+          >
+            <option value="">All bound issue controls</option>
+            {issueRows.controls.map((id) => (
+              <option key={id} value={id}>
+                {id}
+              </option>
+            ))}
+          </select>
+        </label>
+        <button
+          type="button"
+          onClick={() => setIssueIndex(defaultIssueIndex())}
+        >
+          Clear issue filters
+        </button>
+        <p role="status">
+          {issueRows.filtered.length} of {issueRows.total} authored issues
+          match. Showing {issueRows.rows.length} on this page.
+        </p>
+        <ul aria-label="Matching authored issues">
+          {issueRows.rows.map((row) => (
             <li key={row.id}>
               <button
                 type="button"
@@ -220,6 +396,43 @@ function BoundExplorer({
             </li>
           ))}
         </ul>
+        {!issueRows.filtered.length && s.authored.issues.length > 0 && (
+          <p role="status">
+            No authored issues match. Clear the search or control filter.
+          </p>
+        )}
+        <nav aria-label="Authored issue pages">
+          <button
+            type="button"
+            disabled={issueRows.page === 0}
+            onClick={() =>
+              setIssueIndex({ ...issueIndex, page: issueRows.page - 1 })
+            }
+          >
+            Previous issues
+          </button>
+          <span role="status">
+            Issue page {issueRows.page + 1} of {issueRows.pages}
+          </span>
+          <button
+            type="button"
+            disabled={issueRows.page + 1 === issueRows.pages}
+            onClick={() =>
+              setIssueIndex({ ...issueIndex, page: issueRows.page + 1 })
+            }
+          >
+            Next issues
+          </button>
+        </nav>
+        {issue && !issueRows.rows.some((row) => row.id === issue.id) && (
+          <p>
+            Selected issue {issue.id} is outside this index page or filter; its
+            exact interpretation remains below.
+            <button type="button" onClick={() => revealIssue(issue.id)}>
+              Show selected issue {issue.id} in index
+            </button>
+          </p>
+        )}
         {!s.authored.issues.length && (
           <p>No authored issues are bound. Sources remain available below.</p>
         )}
@@ -286,6 +499,48 @@ function BoundExplorer({
               )}
             </select>
           </label>
+          {(["system", "visibility"] as const).map((field) => (
+            <label key={field}>
+              {field === "system"
+                ? "Physical source system"
+                : "Captured source visibility"}
+              <select
+                value={sourceFilters[field] ?? ""}
+                onChange={(event) => {
+                  setSourceFilters({
+                    ...sourceFilters,
+                    [field]: event.target.value || null,
+                  });
+                  setPage(0);
+                }}
+              >
+                <option value="">All captured values</option>
+                {[
+                  ...new Set(
+                    s.sources.map((row) =>
+                      field === "system"
+                        ? row.system
+                        : row.actor_visibility_at_binding,
+                    ),
+                  ),
+                ]
+                  .sort()
+                  .map((value) => (
+                    <option key={value}>{value}</option>
+                  ))}
+              </select>
+            </label>
+          ))}
+          <button
+            type="button"
+            onClick={() => {
+              setQuery("");
+              setSourceFilters(defaultSourceFilters());
+              setPage(0);
+            }}
+          >
+            Clear source filters
+          </button>
           <label>
             Find bound source
             <input
@@ -444,13 +699,110 @@ function BoundExplorer({
       </div>
       <details>
         <summary>Explicit authored relationships (not causal proof)</summary>
+        <p role="status">
+          {relationships.filtered} of {relationships.total} literal links relate
+          to the selected issue, original or expectation;{" "}
+          {relationships.rows.length} shown on this page. Selection never opens
+          hidden originals or changes formal work.
+        </p>
         <ul>
-          {authoredRelationships(s).map((edge, i) => (
+          {relationships.rows.map((edge, i) => (
             <li key={i}>
-              {edge.from} → {edge.to} · {edge.relation}
+              <button
+                type="button"
+                onClick={() =>
+                  selectEndpoint(
+                    edge.relation === "AUTHORED_SOURCE_REFERENCE"
+                      ? "issue"
+                      : "expectation",
+                    edge.from,
+                  )
+                }
+              >
+                {edge.relation === "AUTHORED_SOURCE_REFERENCE"
+                  ? "Select issue "
+                  : "Inspect expectation "}
+                {edge.from}
+              </button>
+              {" → "}
+              <button
+                type="button"
+                onClick={() =>
+                  selectEndpoint(
+                    edge.relation === "AUTHORED_SOURCE_REFERENCE"
+                      ? "source"
+                      : "issue",
+                    edge.to,
+                  )
+                }
+              >
+                {edge.relation === "AUTHORED_SOURCE_REFERENCE"
+                  ? "Select source "
+                  : "Select issue "}
+                {edge.to}
+              </button>
+              {" · "}
+              {edge.relation}
             </li>
           ))}
         </ul>
+        {!relationships.rows.length && (
+          <p>No literal relationship matches this selection.</p>
+        )}
+        <nav aria-label="Authored relationship pages">
+          <button
+            type="button"
+            disabled={relationships.page === 0}
+            onClick={() => setRelationshipPage(relationships.page - 1)}
+          >
+            Previous relationships
+          </button>
+          <span>
+            Page {relationships.page + 1} of {relationships.pages}
+          </span>
+          <button
+            type="button"
+            disabled={relationships.page + 1 === relationships.pages}
+            onClick={() => setRelationshipPage(relationships.page + 1)}
+          >
+            Next relationships
+          </button>
+        </nav>
+        <button
+          type="button"
+          onClick={() => {
+            setIssueId("");
+            setSelected("");
+            setRelationshipExpectation("");
+            setScopeToIssue(false);
+          }}
+        >
+          Clear relationship selection
+        </button>
+        {selectedExpectation && (
+          <article aria-label="Selected authored expectation">
+            <h4>{selectedExpectation.id}</h4>
+            <p>{selectedExpectation.procedure}</p>
+            <p>
+              Exact task IDs:{" "}
+              {selectedExpectation.task_ids?.join(", ") || "Unmapped"}
+            </p>
+            <ul>
+              {selectedExpectation.acceptable_alternatives.map((text, i) => (
+                <li key={i}>{text}</li>
+              ))}
+            </ul>
+            {selectedExpectation.issue_ids.map((id) => (
+              <button
+                key={id}
+                type="button"
+                onClick={() => selectEndpoint("issue", id)}
+              >
+                Select linked issue {id}
+              </button>
+            ))}
+          </article>
+        )}
       </details>
       <details>
         <summary>Unresolved interpretation limits</summary>

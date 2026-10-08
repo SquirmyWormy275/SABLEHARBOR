@@ -12,7 +12,7 @@ from enterprise.audit_suite import company_leg001_trigger_screening_2027 as sour
 from enterprise.audit_suite.company_store import CompanyStoreError
 
 REPO = Path(__file__).resolve().parents[2]
-PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+PRIVATE = Path(__file__).resolve().parents[2]
 
 
 @pytest.fixture(scope="module")

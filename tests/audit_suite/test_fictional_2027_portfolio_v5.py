@@ -10,7 +10,7 @@ from enterprise.audit_suite import fictional_2027_source_portfolio_v5 as portfol
 from enterprise.audit_suite.fictional_2027_source_portfolio import PortfolioVerificationError
 
 REPOSITORY = Path(__file__).resolve().parents[2]
-PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+PRIVATE = Path(__file__).resolve().parents[2]
 
 
 def test_exact_reviewed_roster_and_partial_limits():

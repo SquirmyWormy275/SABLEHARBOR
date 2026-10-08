@@ -11,7 +11,7 @@ from enterprise.audit_suite import fictional_2027_candidate_registry_v2 as candi
 from enterprise.audit_suite import fictional_2027_source_portfolio_v2 as portfolio
 
 REPOSITORY = Path(__file__).resolve().parents[2]
-PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+PRIVATE = Path(__file__).resolve().parents[2]
 
 
 def test_fifteen_reviewed_sources_keep_physical_branches_distinct():

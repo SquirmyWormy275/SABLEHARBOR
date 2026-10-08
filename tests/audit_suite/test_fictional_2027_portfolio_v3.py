@@ -11,7 +11,7 @@ from enterprise.audit_suite import fictional_2027_source_portfolio_v2 as previou
 from enterprise.audit_suite import fictional_2027_source_portfolio_v3 as portfolio
 
 REPOSITORY = Path(__file__).resolve().parents[2]
-PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+PRIVATE = Path(__file__).resolve().parents[2]
 
 
 def test_exact_reviewed_roster_preserves_v2_and_separate_iam_ledgers():

@@ -1,3 +1,4 @@
+import { DeferredPanel } from "./DeferredPanel";
 import { useEffect, useRef, useState } from "react";
 import { ApiError, request, type Engagement, type Row } from "./api";
 import { useTableMemory } from "./TableWorkspace";
@@ -40,13 +41,9 @@ export function SavedViews(props: SavedViewsProps) {
   )
     return null;
   return (
-    <details className="panel">
-      <summary>Personal saved views</summary>
-      <SavedViewsPanel
-        key={savedViewContext(props.engagement, props.viewerId)}
-        {...props}
-      />
-    </details>
+    <DeferredPanel context={savedViewContext(props.engagement, props.viewerId)} summary="Personal saved views">
+      {() => <SavedViewsPanel key={savedViewContext(props.engagement, props.viewerId)} {...props} />}
+    </DeferredPanel>
   );
 }
 function SavedViewsPanel({

@@ -11,6 +11,7 @@ import hashlib
 import importlib
 import json
 import math
+import os
 import re
 import sqlite3
 import stat
@@ -47,6 +48,7 @@ CODE_MODULES = (
     "artifacts.py",
     "company_collection.py",
     "company_store.py",
+    "company_source_lifetime.py",
     "draft_store.py",
     "engine.py",
     "history_inspection.py",
@@ -69,8 +71,14 @@ SEALED_CODE_MODULES = CODE_MODULES + (
     "sealed_history_authority.py",
     "sealed_history_inspection.py",
     "sealed_history_store.py",
+    "compact_prefix_storage.py",
     "sealed_retained_service.py",
 )
+MANAGED_HISTORY_CODE_MODULES = (
+    "history_integrity_reference.py",
+    "managed_history_integrity.py",
+)
+
 BINDING_FIELDS = {
     "schema",
     "company_root",
@@ -92,10 +100,14 @@ BINDING_FIELDS = {
 
 
 def absolute_path(value):
-    require(isinstance(value, str) and Path(value).is_absolute(), "Explicit absolute path required")
+    require(
+        isinstance(value, str) and Path(value).is_absolute(),
+        "Explicit absolute path required",
+    )
     path = Path(value)
     require(
-        path == path.resolve() and not any(p.is_symlink() for p in [path, *path.parents]),
+        path == path.resolve()
+        and not any(p.is_symlink() for p in [path, *path.parents]),
         "Unaliased operator path required",
     )
     return path
@@ -148,7 +160,10 @@ def configuration(world, binding_path, binding_sha256, *, repository):
     This is configuration serialization, not independent acceptance or activation.
     """
     world.require_runtime()
-    require(world.runtime_acceptance is not None, "Explicit accepted runtime review required")
+    require(
+        world.runtime_acceptance is not None,
+        "Explicit accepted runtime review required",
+    )
     pinned_json(Path(binding_path), binding_sha256)
     return {
         "schema": CONFIG_SCHEMA,
@@ -165,7 +180,10 @@ def configuration(world, binding_path, binding_sha256, *, repository):
             "runtime_review": world.runtime_acceptance["path"],
             "runtime_review_sha256": world.runtime_acceptance["sha256"],
         },
-        "workroom_binding": {"path": str(Path(binding_path).absolute()), "sha256": binding_sha256},
+        "workroom_binding": {
+            "path": str(Path(binding_path).absolute()),
+            "sha256": binding_sha256,
+        },
         "code_pins": {
             name: file_sha(Path(repository) / "enterprise/audit_suite" / name)
             for name in (*CODE_MODULES, *native_code_files())
@@ -182,30 +200,69 @@ def retained_native_files(*, sealed=False):
     return result
 
 
-def sealed_configuration(base, history, authority_head, *, repository, session_revocations=None):
+def sealed_configuration(
+    base,
+    history,
+    authority_head,
+    *,
+    repository,
+    session_revocations=None,
+    compact_prefix=None,
+    history_integrity=None,
+):
     """Serialize explicit opt-in authority; this grants no acceptance or migration."""
     from .sealed_history_authority import loaded_backend
 
-    require(base.get("schema") == CONFIG_SCHEMA, "Original explicit retained config required")
+    require(
+        base.get("schema") == CONFIG_SCHEMA,
+        "Original explicit retained config required",
+    )
     require(
         session_revocations is None or type(session_revocations) is dict,
         "Session-revocation pins must be an exact mapping",
     )
-    for item in (history, authority_head):
+    for item in (
+        (history, authority_head)
+        if compact_prefix is None
+        else (history, authority_head, compact_prefix)
+    ):
         require(
             type(item) is dict and set(item) == {"path", "sha256"},
             "Exact sealed operator pin required",
         )
         pinned_json(absolute_path(item["path"]), item["sha256"])
+    if history_integrity is not None:
+        require(type(history_integrity) is dict
+                and set(history_integrity) in ({"base", "ledger_directory"},
+                    {"base", "ledger_directory", "runtime_source_admission"}),
+                "Exact explicit managed history choice required")
+        accepted_base = history_integrity["base"]
+        require(type(accepted_base) is dict and set(accepted_base) == {"path", "sha256"},
+                "Exact Root-selected accepted history base pin required")
+        pinned_json(absolute_path(accepted_base["path"]), accepted_base["sha256"],
+                    max_bytes=32*1024*1024)
+        private_directory(absolute_path(history_integrity["ledger_directory"]))
+        if "runtime_source_admission" in history_integrity:
+            item = history_integrity["runtime_source_admission"]
+            require(type(item) is dict and set(item) == {"path", "sha256"},
+                    "Exact Root runtime Source-upgrade admission pin required")
+            pinned_json(absolute_path(item["path"]), item["sha256"])
     return json.loads(json.dumps(base)) | {
         "schema": SEALED_CONFIG_SCHEMA,
         "sealed_history": dict(history),
         "authority_head": dict(authority_head),
         "authority_backend": loaded_backend(),
-        "session_revocations": {} if session_revocations is None else dict(session_revocations),
+        "session_revocations": {}
+        if session_revocations is None
+        else dict(session_revocations),
+        **({} if compact_prefix is None else {"compact_prefix": dict(compact_prefix)}),
+        **({} if history_integrity is None
+           else {"history_integrity": json.loads(json.dumps(history_integrity))}),
         "code_pins": {
             name: file_sha(Path(repository) / "enterprise/audit_suite" / name)
-            for name in (*SEALED_CODE_MODULES, *retained_native_files(sealed=True))
+            for name in (*SEALED_CODE_MODULES,
+                         *(MANAGED_HISTORY_CODE_MODULES if history_integrity is not None else ()),
+                         *retained_native_files(sealed=True))
         },
     }
 
@@ -242,6 +299,7 @@ class RetainedWorkroom:
         repository,
         inference_config=None,
         voice_config=None,
+        owned_writer_lock_fd=None,
     ):
         self._integrity_lock = threading.RLock()
         self.path = absolute_path(str(config_path))
@@ -252,19 +310,55 @@ class RetainedWorkroom:
         self.sealed = self.config.get("schema") == SEALED_CONFIG_SCHEMA
         require(
             set(self.config)
-            == {"schema", "accepted_library", "company_lifetime", "workroom_binding", "code_pins"}
+            == {
+                "schema",
+                "accepted_library",
+                "company_lifetime",
+                "workroom_binding",
+                "code_pins",
+            }
             | (
-                {"sealed_history", "authority_head", "authority_backend", "session_revocations"}
+                {
+                    "sealed_history",
+                    "authority_head",
+                    "authority_backend",
+                    "session_revocations",
+                }
+                | ({"compact_prefix"} if "compact_prefix" in self.config else set())
+                | ({"history_integrity"} if "history_integrity" in self.config else set())
                 if self.sealed
                 else set()
             )
             and self.config["schema"] in {CONFIG_SCHEMA, SEALED_CONFIG_SCHEMA},
             "Exact retained-service schema required",
         )
+        require(owned_writer_lock_fd is None
+                or (self.sealed and "history_integrity" in self.config
+                    and type(owned_writer_lock_fd) is int and owned_writer_lock_fd >= 0
+                    and stat.S_ISREG(os.fstat(owned_writer_lock_fd).st_mode)),
+                "Managed lifetime requires an actual ordinary owned writer descriptor")
+        self._owned_writer_lock_fd = owned_writer_lock_fd
+        if "history_integrity" in self.config:
+            history_choice = self.config["history_integrity"]
+            require(type(history_choice) is dict
+                    and set(history_choice) in ({"base", "ledger_directory"},
+                        {"base", "ledger_directory", "runtime_source_admission"})
+                    and type(history_choice["base"]) is dict
+                    and set(history_choice["base"]) == {"path", "sha256"},
+                    "Exact operator-selected managed history configuration required")
+            pinned_json(absolute_path(history_choice["base"]["path"]),
+                        history_choice["base"]["sha256"], max_bytes=32*1024*1024)
+            private_directory(absolute_path(history_choice["ledger_directory"]))
+            if "runtime_source_admission" in history_choice:
+                item = history_choice["runtime_source_admission"]
+                require(type(item) is dict and set(item) == {"path", "sha256"},
+                        "Exact Root runtime Source-upgrade admission pin required")
+                pinned_json(absolute_path(item["path"]), item["sha256"])
         self.check_code()
         source = self.config["accepted_library"]
         require(
-            isinstance(source, dict) and set(source) == {f.name for f in fields(AcceptedLibrary)},
+            isinstance(source, dict)
+            and set(source) == {f.name for f in fields(AcceptedLibrary)},
             "Exact accepted-library configuration required",
         )
         source = dict(source)
@@ -299,14 +393,21 @@ class RetainedWorkroom:
             isinstance(choice, dict) and set(choice) == {"path", "sha256"},
             "Exact externally pinned workroom binding required",
         )
-        self.binding_path, self.binding_sha256 = absolute_path(choice["path"]), choice["sha256"]
+        self.binding_path, self.binding_sha256 = (
+            absolute_path(choice["path"]),
+            choice["sha256"],
+        )
         self.binding = pinned_json(self.binding_path, self.binding_sha256)
         require(
-            set(self.binding) == BINDING_FIELDS and self.binding["schema"] == BINDING_SCHEMA,
+            set(self.binding) == BINDING_FIELDS
+            and self.binding["schema"] == BINDING_SCHEMA,
             "Exact retained-workroom binding required",
         )
         self.root = absolute_path(self.binding["audit_root"])
-        require(self.root == Path(private_root).absolute(), "Selected existing workroom differs")
+        require(
+            self.root == Path(private_root).absolute(),
+            "Selected existing workroom differs",
+        )
         private_directory(self.root)
         private_directory(self.root / "artifacts")
         self.engagement = _id(self.binding["engagement_id"])
@@ -341,6 +442,7 @@ class RetainedWorkroom:
                 item["sha256"],
                 authority_head=self.config["authority_head"],
                 session_revocations=self.config["session_revocations"],
+                compact_prefix=self.config.get("compact_prefix"),
             )
             require(
                 self.sealed_store.prefix["engagement"] == self.engagement,
@@ -395,6 +497,217 @@ class RetainedWorkroom:
         del self._pending_history
         del self._pending_custody
 
+    @classmethod
+    def prepare_history_metadata_context(
+        cls, config_path, expected_sha256, *, private_root, repository,
+        prospective_code_pins, root_authorized=False, owned_writer_lock_fd=None,
+    ):
+        """Root-only exact setup prefix, no history/Engine/certificate publication.
+
+        The supplied baseline config remains byte-exact. The prospective map
+        closes only its two additional Source origins for later metadata/base
+        selection; it is not a new config, Main adoption or runtime admission.
+        """
+        require(root_authorized is True,
+                "Separate actual Root metadata-context authorization required")
+        self = cls.__new__(cls)
+        self._integrity_lock = threading.RLock()
+        self.path = absolute_path(str(config_path))
+        private_directory(self.path.parent)
+        self.expected_sha256 = expected_sha256
+        self.repository = Path(repository).absolute()
+        self.config = pinned_json(self.path, expected_sha256)
+        self.sealed = self.config.get("schema") == SEALED_CONFIG_SCHEMA
+        require(
+            set(self.config)
+            == {
+                "schema",
+                "accepted_library",
+                "company_lifetime",
+                "workroom_binding",
+                "code_pins",
+            }
+            | (
+                {
+                    "sealed_history",
+                    "authority_head",
+                    "authority_backend",
+                    "session_revocations",
+                }
+                | ({"compact_prefix"} if "compact_prefix" in self.config else set())
+                | ({"history_integrity"} if "history_integrity" in self.config else set())
+                if self.sealed
+                else set()
+            )
+            and self.config["schema"] in {CONFIG_SCHEMA, SEALED_CONFIG_SCHEMA},
+            "Exact retained-service schema required",
+        )
+        require(owned_writer_lock_fd is None
+                or (self.sealed
+                    and type(owned_writer_lock_fd) is int and owned_writer_lock_fd >= 0
+                    and stat.S_ISREG(os.fstat(owned_writer_lock_fd).st_mode)),
+                "Managed lifetime requires an actual ordinary owned writer descriptor")
+        self._owned_writer_lock_fd = owned_writer_lock_fd
+        if "history_integrity" in self.config:
+            history_choice = self.config["history_integrity"]
+            require(type(history_choice) is dict
+                    and set(history_choice) in ({"base", "ledger_directory"},
+                        {"base", "ledger_directory", "runtime_source_admission"})
+                    and type(history_choice["base"]) is dict
+                    and set(history_choice["base"]) == {"path", "sha256"},
+                    "Exact operator-selected managed history configuration required")
+            pinned_json(absolute_path(history_choice["base"]["path"]),
+                        history_choice["base"]["sha256"], max_bytes=32*1024*1024)
+            private_directory(absolute_path(history_choice["ledger_directory"]))
+            if "runtime_source_admission" in history_choice:
+                item = history_choice["runtime_source_admission"]
+                require(type(item) is dict and set(item) == {"path", "sha256"},
+                        "Exact Root runtime Source-upgrade admission pin required")
+                pinned_json(absolute_path(item["path"]), item["sha256"])
+        self.check_code()
+        source = self.config["accepted_library"]
+        require(
+            isinstance(source, dict)
+            and set(source) == {f.name for f in fields(AcceptedLibrary)},
+            "Exact accepted-library configuration required",
+        )
+        source = dict(source)
+        for key in ("database", "manifest", "review"):
+            source[key] = absolute_path(source[key])
+        accepted = AcceptedLibrary(**source)
+        lifetime = self.config["company_lifetime"]
+        require(
+            isinstance(lifetime, dict)
+            and set(lifetime)
+            == {
+                "root",
+                "checkpoint",
+                "checkpoint_sha256",
+                "runtime_review",
+                "runtime_review_sha256",
+            },
+            "Exact externally pinned company lifetime required",
+        )
+        self.world = PersistentCompany(
+            accepted,
+            absolute_path(lifetime["root"]),
+            absolute_path(lifetime["checkpoint"]),
+            lifetime["checkpoint_sha256"],
+        )
+        self.world.accept_runtime(
+            absolute_path(lifetime["runtime_review"]), lifetime["runtime_review_sha256"]
+        )
+        self.world.require_runtime()
+        choice = self.config["workroom_binding"]
+        require(
+            isinstance(choice, dict) and set(choice) == {"path", "sha256"},
+            "Exact externally pinned workroom binding required",
+        )
+        self.binding_path, self.binding_sha256 = (
+            absolute_path(choice["path"]),
+            choice["sha256"],
+        )
+        self.binding = pinned_json(self.binding_path, self.binding_sha256)
+        require(
+            set(self.binding) == BINDING_FIELDS
+            and self.binding["schema"] == BINDING_SCHEMA,
+            "Exact retained-workroom binding required",
+        )
+        self.root = absolute_path(self.binding["audit_root"])
+        require(
+            self.root == Path(private_root).absolute(),
+            "Selected existing workroom differs",
+        )
+        private_directory(self.root)
+        private_directory(self.root / "artifacts")
+        self.engagement = _id(self.binding["engagement_id"])
+        self.selected = {k: _id(self.binding[k]) for k in ("company", "branch")}
+        require(
+            self.binding["company_root"] == str(self.world.root)
+            and self.binding["company_initialization_sha256"]
+            == file_sha(self.world.root / "INITIALIZATION.json")
+            and self.binding["accepted_baseline_pins"] == self.world.pins
+            and self.binding["company_operator_id"] == self.world.operator.principal,
+            "Workroom binding differs from accepted company lifetime",
+        )
+        pack = self.binding["program_pack"]
+        require(
+            isinstance(pack, dict) and set(pack) == {"path", "sha256"},
+            "Pinned original instruction pack required",
+        )
+        self.pack_path = absolute_path(pack["path"])
+        pinned_json(self.pack_path, pack["sha256"], max_bytes=32 * 1024 * 1024)
+        self.sealed_store = None
+        if self.sealed:
+            from .sealed_history_store import SealedHistoryStore
+
+            item = self.config["sealed_history"]
+            require(
+                type(item) is dict and set(item) == {"path", "sha256"},
+                "Exact externally pinned sealed journal required",
+            )
+            self.sealed_store = SealedHistoryStore(
+                self.root,
+                absolute_path(item["path"]),
+                item["sha256"],
+                authority_head=self.config["authority_head"],
+                session_revocations=self.config["session_revocations"],
+                compact_prefix=self.config.get("compact_prefix"),
+            )
+            require(
+                self.sealed_store.prefix["engagement"] == self.engagement,
+                "Sealed original engagement differs",
+            )
+        require(self.sealed and "history_integrity" not in self.config,
+                "Unmanaged sealed baseline config required before initial base issuance")
+        if owned_writer_lock_fd is not None:
+            lock_path = absolute_path(str(self.root.parent / "room.lock"))
+            actual_lock = lock_path.stat()
+            held_lock = os.fstat(owned_writer_lock_fd)
+            require(stat.S_ISREG(actual_lock.st_mode) and actual_lock.st_nlink == 1
+                    and actual_lock.st_uid == os.getuid()
+                    and same_file_identity(held_lock, actual_lock)
+                    and held_lock.st_uid == actual_lock.st_uid
+                    and held_lock.st_gid == actual_lock.st_gid,
+                    "Root metadata held descriptor must match the actual owned room lock")
+        baseline = self.config["code_pins"]
+        require(type(prospective_code_pins) is dict
+                and set(prospective_code_pins) == set(baseline) | set(MANAGED_HISTORY_CODE_MODULES)
+                and not set(baseline) & set(MANAGED_HISTORY_CODE_MODULES)
+                and all(prospective_code_pins[name] == value for name, value in baseline.items()),
+                "Prospective Source map must preserve baseline and add exactly two modules")
+        self.history_metadata_source_map = json.loads(json.dumps(prospective_code_pins))
+        self.check_history_metadata_sources()
+        return self
+
+    def check_history_metadata_sources(self):
+        """Reclose only two explicitly selected metadata-only Source origins."""
+        selected = self.history_metadata_source_map
+        baseline = self.config["code_pins"]
+        require(type(selected) is dict
+                and set(selected) == set(baseline) | set(MANAGED_HISTORY_CODE_MODULES)
+                and not set(baseline) & set(MANAGED_HISTORY_CODE_MODULES)
+                and all(selected[name] == value for name, value in baseline.items()),
+                "Explicit prospective map differs from exact baseline plus two modules")
+        for name in MANAGED_HISTORY_CODE_MODULES:
+            expected = selected[name]
+            require(type(expected) is str and re.fullmatch(r"[a-f0-9]{64}", expected),
+                    "Exact prospective Source SHA256 required")
+            path = self.repository / "enterprise/audit_suite" / name
+            absolute_path(str(path))
+            opening = path.stat()
+            module_name = "enterprise.audit_suite." + name.removesuffix(".py")
+            loaded = sys.modules.get(module_name)
+            if loaded is None:
+                loaded = importlib.import_module(module_name)
+            origin = getattr(getattr(loaded, "__spec__", None), "origin", None)
+            require(path.is_file() and origin is not None
+                    and Path(origin).resolve() == path.resolve()
+                    and Path(loaded.__file__).resolve() == path.resolve()
+                    and file_sha(path) == expected
+                    and same_file_identity(path.stat(), opening),
+                    "Prospective metadata Source bytes/load origin changed")
+
     def check_code(self):
         """Bind file pins to loaded module origins in this ordinary local process.
 
@@ -406,6 +719,7 @@ class RetainedWorkroom:
             isinstance(pins, dict)
             and set(pins)
             == set(SEALED_CODE_MODULES if self.sealed else CODE_MODULES)
+            | set(MANAGED_HISTORY_CODE_MODULES if "history_integrity" in self.config else ())
             | set(retained_native_files(sealed=self.sealed)),
             "Exact retained service/engine/runtime module pins required",
         )
@@ -426,7 +740,10 @@ class RetainedWorkroom:
             loaded = sys.modules.get(module_name)
             if name == "__main__.py":
                 entry = sys.modules.get("__main__")
-                if getattr(getattr(entry, "__spec__", None), "name", None) == module_name:
+                if (
+                    getattr(getattr(entry, "__spec__", None), "name", None)
+                    == module_name
+                ):
                     loaded = entry
             if loaded is None:
                 loaded = importlib.import_module(module_name)
@@ -539,7 +856,8 @@ class RetainedWorkroom:
                 self.world.verify()
                 native = native_rows(self.world.database)
                 require(
-                    _time(self.world.initialization["initialized_at"]) <= _time(time_to_iso())
+                    _time(self.world.initialization["initialized_at"])
+                    <= _time(time_to_iso())
                     and all(
                         _time(value["imported_at"]) <= _time(time_to_iso())
                         for value in native.values()
@@ -549,12 +867,16 @@ class RetainedWorkroom:
                 with quiescent_read(self.world.database) as source_db:
                     journal = {
                         value["command_id"]: json.loads(value["receipt"])
-                        for value in source_db.execute("SELECT command_id,receipt FROM collections")
+                        for value in source_db.execute(
+                            "SELECT command_id,receipt FROM collections"
+                        )
                     }
                 verified, verified_files, custody = set(), {}, {}
                 if previous_proof is not None:
                     verified_files.update(
-                        self._verify_integrity_descriptors(previous_proof, native, journal)
+                        self._verify_integrity_descriptors(
+                            previous_proof, native, journal
+                        )
                     )
                     custody.update(previous_proof["custody"])
                 previous_clock, previous_real = None, 0
@@ -563,7 +885,8 @@ class RetainedWorkroom:
                     nonlocal previous_clock, previous_real
                     if prior_header is not None:
                         require(
-                            prior_header["scope_sha256"] == digest(self.binding["scope"]),
+                            prior_header["scope_sha256"]
+                            == digest(self.binding["scope"]),
                             "Previously verified retained scope descriptor differs",
                         )
                         require(
@@ -572,11 +895,13 @@ class RetainedWorkroom:
                             "Previously verified company binding descriptor differs",
                         )
                         state = {
-                            name: prior_header[name] for name in ("id", "mode", "simulated_at")
+                            name: prior_header[name]
+                            for name in ("id", "mode", "simulated_at")
                         } | {
                             "company_source_binding": (
                                 None
-                                if prior_header["company_binding_sha256"] == digest(None)
+                                if prior_header["company_binding_sha256"]
+                                == digest(None)
                                 else self.selected
                             ),
                             "artifacts": [],
@@ -592,7 +917,8 @@ class RetainedWorkroom:
                         "Workroom actual/simulated clock chronology changed",
                     )
                     require(
-                        state["id"] == self.engagement and state["mode"] == self.binding["mode"],
+                        state["id"] == self.engagement
+                        and state["mode"] == self.binding["mode"],
                         "Retained engagement identity/mode differs",
                     )
                     require(
@@ -643,12 +969,15 @@ class RetainedWorkroom:
                 initial["created_by"] == identities["operator"]
                 and digest(initial["scope"]) == digest(self.binding["scope"])
                 and initial["mode"] == self.binding["mode"]
-                and _time(initial["simulated_at"]) == _time(self.binding["initial_simulated_at"])
+                and _time(initial["simulated_at"])
+                == _time(self.binding["initial_simulated_at"])
                 and type(self.binding["task_count"]) is int
                 and self.binding["task_count"] == len(initial["tasks"]) > 0
-                and self.binding["zero_workroom_counts"] == {k: 0 for k in EMPTY_WORKROOM}
+                and self.binding["zero_workroom_counts"]
+                == {k: 0 for k in EMPTY_WORKROOM}
                 and all(
-                    type(self.binding["zero_workroom_counts"][k]) is int for k in EMPTY_WORKROOM
+                    type(self.binding["zero_workroom_counts"][k]) is int
+                    for k in EMPTY_WORKROOM
                 )
                 and all(isinstance(initial[k], list) for k in EMPTY_WORKROOM)
                 and not any(initial[k] for k in EMPTY_WORKROOM)
@@ -677,7 +1006,10 @@ class RetainedWorkroom:
         # file identities and its separately checked inner read transaction.
         # SQLite may create and remove its own empty WAL/SHM during connection
         # lifetime; preexisting/externally changed sidecars never get normalized.
-        require(journal_stamp(path) == outside_identity, "Journal changed during retained closure")
+        require(
+            journal_stamp(path) == outside_identity,
+            "Journal changed during retained closure",
+        )
 
     def verify_artifacts(
         self, state, native, *, verified=None, journal=None, files=None, custody=None
@@ -688,7 +1020,8 @@ class RetainedWorkroom:
                 continue
             path = self.root / "artifacts" / artifact["sha256"]
             require(
-                re.fullmatch(r"[a-f0-9]{64}", artifact["sha256"]), "Retained artifact hash differs"
+                re.fullmatch(r"[a-f0-9]{64}", artifact["sha256"]),
+                "Retained artifact hash differs",
             )
             require(
                 type(artifact["bytes"]) is int and artifact["bytes"] >= 0,
@@ -711,7 +1044,9 @@ class RetainedWorkroom:
                     "Retained artifact bytes changed",
                 )
             if files is not None:
-                files.setdefault(path, (path.stat(), artifact["sha256"], artifact["bytes"]))
+                files.setdefault(
+                    path, (path.stat(), artifact["sha256"], artifact["bytes"])
+                )
             if artifact["source"].get("kind") != "COLLECTED_COMPANY_SOURCE":
                 if verified is not None:
                     verified.add(representation)
@@ -762,7 +1097,10 @@ class RetainedWorkroom:
                     "native_metadata_sha256": digest(CompanyStore._metadata(row)),
                 }
                 previous = custody.setdefault(receipt["command_id"], descriptor)
-                require(previous == descriptor, "Historical collection custody descriptor differs")
+                require(
+                    previous == descriptor,
+                    "Historical collection custody descriptor differs",
+                )
             if verified is not None:
                 verified.add(representation)
 
@@ -794,7 +1132,8 @@ class RetainedWorkroom:
             require(
                 row is not None
                 and saved is not None
-                and digest(CompanyStore._metadata(row)) == descriptor["native_metadata_sha256"]
+                and digest(CompanyStore._metadata(row))
+                == descriptor["native_metadata_sha256"]
                 and digest(saved) == descriptor["receipt_sha256"],
                 "Historical native collection integrity descriptor differs",
             )
@@ -820,7 +1159,11 @@ class RetainedWorkroom:
         if self.sealed:
             from .sealed_retained_service import read_sealed
 
-            read_sealed(self, actor, ())
+            managed = getattr(self.sealed_store, "_managed_history_integrity", None)
+            if managed is not None and not managed.force_full:
+                managed.validate_current(actor, self.engagement)
+            else:
+                read_sealed(self, actor, ())
             return
         self.check_pins()
         proof = self._retained_integrity
@@ -833,7 +1176,10 @@ class RetainedWorkroom:
             published = publish_validated_history(
                 self.engine.store, actor, self.engagement, candidate, identity
             )
-            require(candidate is None or published, "Journal changed before integrity publication")
+            require(
+                candidate is None or published,
+                "Journal changed before integrity publication",
+            )
             self._retained_integrity = (
                 {"history": candidate, "stamp": identity, **self._pending_custody}
                 if published
@@ -878,7 +1224,9 @@ class RetainedWorkroom:
                 with quiescent_read(self.world.database) as source_db:
                     journal = {
                         value["command_id"]: json.loads(value["receipt"])
-                        for value in source_db.execute("SELECT command_id,receipt FROM collections")
+                        for value in source_db.execute(
+                            "SELECT command_id,receipt FROM collections"
+                        )
                     }
                 originals = self._verify_integrity_descriptors(proof, native, journal)
                 self.verify_artifacts(current, native, journal=journal, files=originals)
@@ -892,8 +1240,13 @@ class RetainedWorkroom:
                         "Historical original changed during protected validation",
                     )
             self.engine.store._authorize(db, actor, self.engagement)
-            require(journal_stamp(path) == inside, "Journal changed during protected validation")
-        require(journal_stamp(path) == outside, "Journal changed during protected closure")
+            require(
+                journal_stamp(path) == inside,
+                "Journal changed during protected validation",
+            )
+        require(
+            journal_stamp(path) == outside, "Journal changed during protected closure"
+        )
         self.check_pins()
 
     def close_protected_read(self, actor, expected_stamp):
@@ -914,7 +1267,9 @@ class RetainedWorkroom:
 
     def integrity_stamp(self):
         if self.sealed:
-            return self.sealed_store.check_prefix(), journal_stamp(self.sealed_store.db_path)
+            return self.sealed_store.check_prefix(), journal_stamp(
+                self.sealed_store.db_path
+            )
         return journal_stamp(self.engine.store.db_path)
 
     def check_pins(self):
@@ -945,7 +1300,9 @@ class RetainedWorkroom:
             "Accepted runtime review changed",
         )
         pinned_json(
-            self.pack_path, self.binding["program_pack"]["sha256"], max_bytes=32 * 1024 * 1024
+            self.pack_path,
+            self.binding["program_pack"]["sha256"],
+            max_bytes=32 * 1024 * 1024,
         )
         for path in (self.world.accepted.database, self.world.database):
             quiescent_database(path)
@@ -962,7 +1319,9 @@ class RetainedWorkroom:
             or "private-corpus" in path
         ):
             raise DomainError(
-                "Route unavailable in this retained workroom", code="FORBIDDEN", status=403
+                "Route unavailable in this retained workroom",
+                code="FORBIDDEN",
+                status=403,
             )
 
 
@@ -972,7 +1331,9 @@ def time_to_iso():
     return datetime.now(UTC).isoformat(timespec="microseconds")
 
 
-def create_retained_app(private_root, config_path, expected_sha256, *, repository, **options):
+def create_retained_app(
+    private_root, config_path, expected_sha256, *, repository, **options
+):
     """Use the existing local service/UI; never expose operator custody configuration."""
     from .service import create_app
 

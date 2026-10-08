@@ -54,7 +54,10 @@ def _source(tmp_path: Path, monkeypatch) -> tuple[Path, Path]:
         "SOURCES",
         (
             portfolio.Source(
-                "fake", "fake", "run-v1", "independent-review-v1/REVIEW.json",
+                "fake",
+                "fake",
+                "run-v1",
+                "independent-review-v1/REVIEW.json",
                 portfolio._digest(review),
             ),
         ),

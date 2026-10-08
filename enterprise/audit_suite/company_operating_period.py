@@ -222,7 +222,12 @@ def _create_period(store, *, repository, plan):
                 "qualification": QUALIFICATION,
             }
         ),
-        provenance={"source_reference": p["period_id"], "qualification": QUALIFICATION},
+        provenance={
+            "source_reference": p["period_id"],
+            "qualification": QUALIFICATION,
+            "name": p["period_id"] + ".json",
+            "content_type": "application/json",
+        },
     )
 
 
@@ -445,7 +450,12 @@ def _record_occurrence(
         event_at=when,
         available_at=when,
         content=encoded(body),
-        provenance={"source_reference": period_id, "qualification": QUALIFICATION},
+        provenance={
+            "source_reference": period_id,
+            "qualification": QUALIFICATION,
+            "name": occurrence_id + ".json",
+            "content_type": "application/json",
+        },
     )
 
 

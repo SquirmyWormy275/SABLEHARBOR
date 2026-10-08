@@ -25,7 +25,7 @@ from enterprise.audit_suite.fictional_2027_collection_probe_v6 import (
 )
 
 REPOSITORY = Path(__file__).resolve().parents[2]
-PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+PRIVATE = Path(__file__).resolve().parents[2]
 REC_DB = (
     PRIVATE
     / "enterprise/generated/audit-suite/company-rec003-native-snapshot-2026-09-29"

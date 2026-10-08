@@ -13,6 +13,7 @@ from .instructor_key_views import fields, integer, pin, require, text
 from .personal_views import PersonalViews
 from .store import DomainError, canonical, digest, identifier
 from .workspace_context import _basis
+from .history_integrity_reference import validate_reference, validate_store_reference
 
 DIMENSIONS = ("discovery", "evidence", "testing", "judgment", "documentation", "follow-through")
 QUALIFICATION = "INSTRUCTOR_AUTHORED_UNVALIDATED_NO_AGGREGATE_GRADE_SHARED_STATE_NOT_SUBMISSION"
@@ -41,6 +42,13 @@ PIN_FIELDS = (
     "selected_history_tip_sha256",
     "bound_revision",
 )
+PIN_FIELDS_V2 = tuple(k for k in PIN_FIELDS if k != "selected_history_sha256") + ("selected_history_integrity_reference",)
+
+
+def history_pin_fields(value):
+    return PIN_FIELDS_V2 if "selected_history_integrity_reference" in value else PIN_FIELDS
+
+
 AUTHORED_FIELDS = (
     "title",
     "issue_ids",
@@ -184,7 +192,6 @@ def references(inventory):
         ):
             for row in collection:
                 add(kind, row, relation, eid, row.get("version_sha256", row.get("record_sha256")))
-    require(len(result) <= 4096, "Assessment reference inventory limit")
     return list(result.values())
 
 
@@ -208,7 +215,7 @@ def validate_document(document):
         ),
     )
     require(
-        document["schema"] == "INSTRUCTOR_AUTHORED_ASSESSMENT_V1"
+        document["schema"] in {"INSTRUCTOR_AUTHORED_ASSESSMENT_V1", "INSTRUCTOR_AUTHORED_ASSESSMENT_V2"}
         and document["qualification"] == QUALIFICATION,
         "Assessment schema or qualification differs",
     )
@@ -220,9 +227,15 @@ def validate_document(document):
         and datetime.fromisoformat(document["recorded_at"]).tzinfo is not None,
         "Assessment version/time required",
     )
-    fields(document["pins"], PIN_FIELDS)
-    for key in PIN_FIELDS:
-        if key in {"learner_revision", "bound_revision"}:
+    pin_fields = PIN_FIELDS_V2 if document["schema"] == "INSTRUCTOR_AUTHORED_ASSESSMENT_V2" else PIN_FIELDS
+    fields(document["pins"], pin_fields)
+    for key in pin_fields:
+        if key == "selected_history_integrity_reference":
+            validate_reference(document["pins"][key], engagement=document["engagement_id"],
+                revision=document["pins"]["learner_revision"],
+                state_sha256=document["pins"]["selected_state_sha256"],
+                event_sha256=document["pins"]["selected_history_tip_sha256"])
+        elif key in {"learner_revision", "bound_revision"}:
             integer(document["pins"][key])
         elif key == "audited_actor_id":
             text(document["pins"][key], 128, True)
@@ -491,7 +504,7 @@ class InstructorAssessments:
             409,
         )
 
-    def options(self, actor, eid, revision):
+    def _options(self, actor, eid, revision, *, legacy_record=False):
         state = self._state(actor, eid)
         integer(revision)
         bound = read_binding(self.engine, {"id": actor}, eid, self.bindings)
@@ -502,6 +515,15 @@ class InstructorAssessments:
             "Assessment rubric limit",
         )
         inventory = compare(self.engine, {"id": actor}, eid, self.bindings, revision=revision)
+        if legacy_record and "selected_history_integrity_reference" in inventory:
+            # An explicit stored V1 read retains its exact original contract.
+            # Reuse only a genuinely known legacy array digest; an unknown one
+            # goes through the explicit original full algorithm for that V1
+            # record. Ordinary V2 options never take this compatibility path.
+            runtime = self.engine.store._managed_history_integrity
+            legacy_sha = runtime.legacy_prefix_sha256(actor, eid, revision)
+            inventory = {k: v for k, v in inventory.items() if k != "selected_history_integrity_reference"}
+            inventory.update(schema_version="1.0", selected_history_sha256=legacy_sha)
         require(
             inventory["status"] == "DETERMINISTIC_LINK_INVENTORY_ONLY",
             "Selected assessment context unavailable",
@@ -512,9 +534,6 @@ class InstructorAssessments:
             and inventory["current_revision"] == state["revision"],
             "Assessment context changed",
             409,
-        )
-        require(
-            len(canonical(inventory).encode()) <= 8 * 1024 * 1024, "Assessment inventory byte limit"
         )
         data = {
             "engagement_id": eid,
@@ -543,22 +562,121 @@ class InstructorAssessments:
                     "audited_actor_id",
                     "bound_revision",
                     "selected_state_sha256",
-                    "selected_history_sha256",
                     "selected_history_tip_sha256",
                 )
             }
         )
-        self._finish(
-            actor,
-            eid,
-            {
-                "state": state,
-                "key": data["key_pin"],
-                "error": None,
-                "basis": digest({"actor_id": actor, "engagement_id": eid, **_basis(state)}),
-            },
+        if "selected_history_integrity_reference" in inventory:
+            data["selected_history_integrity_reference"] = validate_reference(
+                inventory["selected_history_integrity_reference"], engagement=eid,
+                revision=revision, state_sha256=data["selected_state_sha256"],
+                event_sha256=data["selected_history_tip_sha256"])
+            data["history_integrity_format"] = "SELECTED_HISTORY_INTEGRITY_REFERENCE_V2"
+        else:
+            data["selected_history_sha256"] = inventory["selected_history_sha256"]
+        context = {
+            "state": state, "key": data["key_pin"], "error": None,
+            "basis": digest({"actor_id": actor, "engagement_id": eid, **_basis(state)}),
+        }
+        self._finish(actor, eid, context)
+        return data, context
+
+    def options(self, actor, eid, revision):
+        # Semantic validation always uses the complete inventory, independently
+        # of the HTTP transport budget. Save/read and reference IDs are unchanged.
+        return self._options(actor, eid, revision)[0]
+
+    @staticmethod
+    def _catalogue(actor, data, context):
+        # The transport descriptor names the complete ordered catalogue, not a page.
+        return {
+            "schema": "ASSESSMENT_REFERENCE_CATALOGUE_V1",
+            "count": len(data["references"]),
+            "sha256": digest(data["references"]),
+            "context_sha256": digest(
+                {"actor_id": actor, "basis_sha256": context["basis"],
+                 "current_state_sha256": digest(context["state"]), **{
+                    k: data[k] for k in (
+                        "engagement_id", "current_engagement_revision", "rubric_sha256", *history_pin_fields(data)
+                    )
+                }}
+            ),
+        }
+
+    @staticmethod
+    def _options_budget(data):
+        require(
+            len(canonical(data).encode()) <= 8 * 1024 * 1024, "Assessment options byte limit"
         )
         return data
+
+    def options_view(self, actor, eid, revision, *, catalogue=False):
+        data, context = self._options(actor, eid, revision)
+        if catalogue:
+            descriptor = self._catalogue(actor, data, context)
+            data = {**data, "references": [], "reference_catalogue": descriptor}
+        result = self._options_budget(data)
+        self._finish(actor, eid, context)
+        return result
+
+    def reference_page(
+        self, actor, eid, revision, *, context_sha256, catalogue_sha256,
+        offset=0, query="", expectation_ids=(), reference_ids=(),
+    ):
+        pin(context_sha256)
+        pin(catalogue_sha256)
+        integer(offset)
+        text(query, 200)
+        require(isinstance(expectation_ids, (list, tuple)), "Exact expectation filter required")
+        ids(list(expectation_ids), maximum=10)
+        require(isinstance(reference_ids, (list, tuple)), "Exact reference filter required")
+        ids(list(reference_ids), maximum=32)
+        data, context = self._options(actor, eid, revision)
+        catalogue = self._catalogue(actor, data, context)
+        require(
+            context_sha256 == catalogue["context_sha256"]
+            and catalogue_sha256 == catalogue["sha256"],
+            "Assessment catalogue context changed", 409,
+        )
+        require(
+            set(expectation_ids) <= {e["id"] for e in data["expectations"]},
+            "Selected rubric item unavailable",
+        )
+        require(
+            set(reference_ids) <= {r["id"] for r in data["references"]},
+            "Selected evidence reference unavailable", 404,
+        )
+        needle = query.casefold()
+        matches = [r for r in data["references"] if (
+            (not reference_ids or r["id"] in reference_ids)
+            and (not expectation_ids or set(r["expectation_ids"]) & set(expectation_ids))
+            and needle in " ".join(
+                str(r[k]) for k in ("id", "kind", "record_id", "relation")
+            ).casefold()
+        )]
+        require(offset <= len(matches), "Assessment reference page unavailable", 400)
+        result = {
+            "reference_catalogue": catalogue,
+            "selector": {
+                "query": query, "expectation_ids": list(expectation_ids),
+                "reference_ids": list(reference_ids),
+            },
+            "offset": offset, "total": len(matches), "next_offset": None,
+            "references": [],
+        }
+        # Adaptive contiguous pages preserve every reference. A single oversized
+        # row refuses explicitly instead of dropping it or returning a partial row.
+        for row in matches[offset:offset + 40]:
+            candidate = {**result, "references": [*result["references"], row]}
+            end = offset + len(candidate["references"])
+            candidate["next_offset"] = end if end < len(matches) else None
+            if len(canonical(candidate).encode()) > 8 * 1024 * 1024:
+                require(bool(result["references"]), "Assessment reference exceeds page byte limit", 413)
+                break
+            result = candidate
+        result = self._options_budget(result)
+        self._finish(actor, eid, context)
+        return result
 
     @staticmethod
     def _owned(db, actor, eid):
@@ -574,6 +692,9 @@ class InstructorAssessments:
         ]
 
     def _dto(self, body, context, *, detail=False, leaf=True):
+        document = body.get("document", body)
+        if document.get("schema") == "INSTRUCTOR_AUTHORED_ASSESSMENT_V2":
+            validate_store_reference(self.engine.store, document["pins"]["selected_history_integrity_reference"])
         doc = body["document"]
         status = context["error"] or (
             "KEY_CHANGED"
@@ -639,7 +760,9 @@ class InstructorAssessments:
                 ),
             )
             if result["personal_content_visible"]:
-                checked = self.options(actor, eid, row["document"]["pins"]["learner_revision"])
+                checked, _legacy_context = self._options(actor, eid,
+                    row["document"]["pins"]["learner_revision"],
+                    legacy_record=row["document"]["schema"] == "INSTRUCTOR_AUTHORED_ASSESSMENT_V1")
                 require(
                     all(checked[k] == v for k, v in row["document"]["pins"].items()),
                     "Historical assessment pins changed",
@@ -745,14 +868,14 @@ class InstructorAssessments:
                 )
                 version = parent["version"] + 1
             document = {
-                "schema": "INSTRUCTOR_AUTHORED_ASSESSMENT_V1",
+                "schema": "INSTRUCTOR_AUTHORED_ASSESSMENT_V2" if "selected_history_integrity_reference" in checked else "INSTRUCTOR_AUTHORED_ASSESSMENT_V1",
                 "id": identifier("ASSESSMENT"),
                 "version": version,
                 "actor_id": actor,
                 "engagement_id": eid,
                 "recorded_at": datetime.now(UTC).isoformat(),
                 "predecessor": p["predecessor"],
-                "pins": {k: checked[k] for k in PIN_FIELDS},
+                "pins": {k: checked[k] for k in history_pin_fields(checked)},
                 "authored": user,
                 "selected_issues": [issues[i] for i in user["issue_ids"]],
                 "selected_expectations": [expectations[i] for i in user["expectation_ids"]],

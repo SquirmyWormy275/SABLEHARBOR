@@ -17,7 +17,7 @@ from enterprise.audit_suite.operating_source_bridge import encoded, sha
 from enterprise.audit_suite.store import DomainError
 
 REPOSITORY = Path(__file__).resolve().parents[2]
-PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+PRIVATE = Path(__file__).resolve().parents[2]
 
 
 @pytest.fixture(scope="module")

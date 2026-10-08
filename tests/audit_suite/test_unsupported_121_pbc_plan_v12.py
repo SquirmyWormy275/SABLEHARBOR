@@ -9,7 +9,7 @@ import pytest
 from enterprise.audit_suite import unsupported_121_pbc_plan_v12 as plan
 
 REPOSITORY = Path(__file__).resolve().parents[2]
-PRIVATE = Path("/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite")
+PRIVATE = Path(__file__).resolve().parents[2]
 STEM = REPOSITORY / "enterprise/audit_suite/UNSUPPORTED_121_PBC_PLAN_V12_2026-09-30"
 
 
@@ -61,8 +61,7 @@ def test_exact_eng005_originals_route_and_one_draft_action(inputs, draft):
         assert row["v12_targeted_source_ids"] == route_row["targeted_integrated_source_ids"]
         assert row["v12_source_limits"] == {plan.SOURCE: plan.SOURCE_LIMIT}
         refs = [
-            {key: native[key] for key in plan.REF_FIELDS}
-            for native in receipt["records"][scenario]
+            {key: native[key] for key in plan.REF_FIELDS} for native in receipt["records"][scenario]
         ]
         assert row["v12_source_record_refs"] == {plan.SOURCE: refs}
         assert route_row["v14_source_record_refs"] == {plan.SOURCE: refs}
