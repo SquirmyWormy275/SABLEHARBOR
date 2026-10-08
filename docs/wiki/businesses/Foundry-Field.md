@@ -1,14 +1,12 @@
 # Foundry Field
 
-[Wiki home](../Home.md) · [Business directory](README.md) · [Department directory](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
+[Wiki home](../Home.md) · [All files](../Files.md) · [Business directory](README.md) · [Department directory](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
 
 <img src="../../../assets/brand/logos/foundry-field__reverse-horizontal.png" alt="Approved Foundry Field logo" width="360">
 
 Foundry Field is software for production tracking, maintenance, reconciliations and operating exceptions. Foundry supplies the underlying representation of records, relationships, provenance and authority. Foundry Field packages that capability for customer operating work.
 
-## Reading guide
-
-Start with the operating loop: record production, reconcile what happened and make exceptions visible to the responsible operator. Then trace the commercial and deployment records behind a customer engagement.
+<a id="reading-guide"></a>
 
 ## Start here
 
@@ -34,13 +32,17 @@ Foundry Field is recorded on the parent’s SHI books. Its team uses shared offi
 
 ## Finance and accounting practice
 
+<a id="what-remains-unknown"></a>
+
+The [September 13 billing decision](../../canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md) adopts the billing terms. FF-003 describes a January 2027 conditional forecast; the customer records show the transactions recorded for each case.
+
 Compare deployment acceptance with deployment revenue; then compare subscription service periods, advance billing, deferred revenue and collections. The unit package includes contracts, subscription events, invoices, renewal/churn and capacity evidence.
 
 1. Read the [business-finance release index](../../../docs/releases/BUSINESS_FINANCE_RELEASES.md) and download its indexed ZIP.
 2. Open `units/foundry-field/audit.xlsx` in the extracted release. Its `README.md` explains the unit scope. The matching CSV and SQLite extracts provide the same scoped evidence; SQL is optional.
 3. Read the [unit evidence guide](../../../docs/audit/UNIT_EXPORT_SPECIFICATION.md) before choosing samples. Select scenario and period together, and distinguish retained 2026 reconstruction from conditional 2027–2031 forecasts.
 
-The [finance successor guide](../../../enterprise/business/README.md) explains generation, reconciliation and limits. A workbook is scenario evidence, not an audited financial statement or observed bank record.
+The [finance successor guide](../../../enterprise/business/README.md) explains generation, reconciliation and limits. The workbook records the selected scenario and its assumptions.
 
 ## Places and plans
 
@@ -49,10 +51,6 @@ The [finance successor guide](../../../enterprise/business/README.md) explains g
 | [Proposed product floor](../../../geospatial/maps/facilities/SH-MAP-SAC-025.pdf) | Open the Sacramento product-engineering/deployment floor proposal. |
 
 Use the [complete facility artifact index](../../../geospatial/maps/facilities/ARTIFACT_INDEX.md) for independently saved maps and floor plans, or open the [interactive atlas](../../../geospatial/maps/index.html) locally in a browser. GitHub displays the linked Markdown and images directly; it does not execute the atlas HTML.
-
-## What remains unknown
-
-Conditional revenue and deployment scenarios do not prove executed customer terms. Billing proposal PR #138 remains unapproved. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
 
 ## Related reading
 

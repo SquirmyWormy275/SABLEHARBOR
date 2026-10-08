@@ -67,7 +67,7 @@ def run(export, output, executable=None):
                         if page.evaluate('document.documentElement.scrollWidth>innerWidth+1'):
                             problems.append('expanded contents overflow')
                         results.append({"page": name, "theme": theme, "width": width, "problems": problems})
-                        samples = ('Home.md', 'businesses--Willow.md', 'departments--finance.md', 'departments--contact.md', 'subjects--History.md', 'records--docs--reader--exercises--INVOICE.md', 'Start-Here.md', 'Open-Questions.md', 'Glossary.md', 'Reading--finance.md')
+                        samples = ('Home.md', 'businesses--Willow.md', 'departments--finance.md', 'departments--contact.md', 'subjects--History.md', 'records--docs--reader--exercises--INVOICE.md', 'Start-Here.md', 'Open-Questions.md', 'Glossary.md', 'Reading--finance.md', 'Audit.md', 'Files.md', 'Files--docs-audit-suite.md', 'departments--people-culture.md')
                         if name in {manifest.get('aliases', {}).get(sample, sample) for sample in samples}:
                             page.locator('details').evaluate_all('(nodes) => nodes.forEach(n => n.open=false)')
                             page.screenshot(path=str(output / f"{name}-{theme}-{width}-top.png"))

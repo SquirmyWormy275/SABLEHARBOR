@@ -1,10 +1,10 @@
 # Departments, institutions and shared capabilities
 
-**Last substantive review:** September 11, 2026. Secondary navigation to controlling repository records. Individual pages state canon and implementation limits.
+[Wiki home](../Home.md) · [All files](../Files.md) · [Audit practice](../Audit.md)
 
 The Board governs, the CEO directs and businesses operate. ESS administers shared services while professional officers retain their substantive authority. Internal Audit reports functionally to the Board Audit & Compliance Committee. J2 remains outside ESS.
 
-Pages below describe institutions, offices, capabilities and systems as identified; a directory entry does not create a department. Existing corporate and J2 artwork and charts are reused.
+Choose a function below to read about its work, responsibilities and supporting documents. The organization charts show how the offices and institutions relate to each other.
 
 - [Board and committees](board.md)
 - [Office of the CEO](executive.md)

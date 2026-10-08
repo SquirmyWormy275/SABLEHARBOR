@@ -1,14 +1,12 @@
 # American Resource Utility / BS&T
 
-[Wiki home](../Home.md) · [Business directory](README.md) · [Department directory](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
+[Wiki home](../Home.md) · [All files](../Files.md) · [Business directory](README.md) · [Department directory](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
 
 <img src="../../../assets/brand/industrial_sources/aru/aru_primary_centered_chat_asset.png" alt="Approved American Resource Utility / BS&T logo" width="280">
 
 American Resource Utility provides railway, terminal, trucking and warehouse services for industrial customers. Blood, Sweat & Tears Railway Company is its separately incorporated railway subsidiary. Taylor, Wamsutter and Rawlins records describe different parts of the operating network.
 
-## Reading guide
-
-Follow freight through railway, truck, terminal and warehouse services, then reconcile the service volumes and costs. Use the legal ownership chain when studying consolidation and the operating network when studying capacity.
+<a id="reading-guide"></a>
 
 ## Start here
 
@@ -44,9 +42,13 @@ Reconcile service volumes and allocated service manifests to revenue and capacit
 2. Open `units/american-resource-utility/audit.xlsx` in the extracted release. Its `README.md` explains the unit scope. The matching CSV and SQLite extracts provide the same scoped evidence; SQL is optional.
 3. Read the [unit evidence guide](../../../docs/audit/UNIT_EXPORT_SPECIFICATION.md) before choosing samples. Select scenario and period together, and distinguish retained 2026 reconstruction from conditional 2027–2031 forecasts.
 
-The [finance successor guide](../../../enterprise/business/README.md) explains generation, reconciliation and limits. A workbook is scenario evidence, not an audited financial statement or observed bank record.
+The [finance successor guide](../../../enterprise/business/README.md) explains generation, reconciliation and limits. The workbook records the selected scenario and its assumptions.
 
 ## Places and plans
+
+<a id="what-remains-unknown"></a>
+
+The network records distinguish selected alignments from detailed engineering. Uranium movements require the relevant custody qualification, and no Red Wash mine spur is authorized.
 
 | Open | What you will find |
 |---|---|
@@ -54,10 +56,6 @@ The [finance successor guide](../../../enterprise/business/README.md) explains g
 | [Industrial facility programs](../../../geospatial/facilities/INDUSTRIAL_FACILITIES.md) | Find Taylor, Rawlins and Wamsutter plan scope and structure limitations. |
 
 Use the [complete facility artifact index](../../../geospatial/maps/facilities/ARTIFACT_INDEX.md) for independently saved maps and floor plans, or open the [interactive atlas](../../../geospatial/maps/index.html) locally in a browser. GitHub displays the linked Markdown and images directly; it does not execute the atlas HTML.
-
-## What remains unknown
-
-Early railway alignments and detailed engineering remain incomplete. Service availability does not establish uranium custody qualification or authorize a mine spur. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
 
 ## Related reading
 

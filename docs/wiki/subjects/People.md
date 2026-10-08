@@ -1,6 +1,6 @@
 # Founders, early colleagues and later people
 
-The [Original Eight chart](../../organization/charts/people-original-eight.md) identifies the historical cohort and its source qualifications. It does not identify eight current employees. Rachel Kim left in 2024; Jon Bell left management in 2023 and is represented in his non-management role.
+The [Original Eight chart](../../organization/charts/people-original-eight.md) introduces the early colleagues and their recorded roles. Rachel Kim left in 2024; Jon Bell left management in 2023 and is represented in his non-management role.
 
 | Question | Open |
 |---|---|
@@ -13,18 +13,13 @@ The [Original Eight chart](../../organization/charts/people-original-eight.md) i
 
 Open the [original full-size cohort artwork](../../organization/assets/current/people-original-eight.png) or [complete PDF chart book](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf). These are the existing approved files.
 
-An incident establishing someone's presence does not establish their exact hire date. A plain chart title may still carry an unresolved appointment qualification. Repeated appearances in charts are not separate people, and authorized billets are not a named employee census. This route adds no appointments or biographies.
+The charts record names, roles and joining years where supported. Appointment records describe later changes in responsibility. Staffing plans show authorized positions, so use personnel records when counting employees at a particular date.
 
-[Subject directory](README.md) · [Business directory](../businesses/README.md) · [Department directory](../departments/README.md) · [Wiki home](../Home.md)
+[Subject directory](README.md) · [Business directory](../businesses/README.md) · [Department directory](../departments/README.md) · [Wiki home](../Home.md) · [All files](../Files.md)
 
-## Reading guide
+<a id="reading-guide"></a>
 
-Start with the historical cohort, then move to the current board, enterprise and business charts. Read each person’s recorded role and its qualifications before using a chart to reconstruct an earlier organization.
-
-
-## What remains unknown
-
-Joining years, appointment dates, board membership, employment and authorized billets are different facts. Remaining J2 occupants and appointment histories are open under issue #19. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+<a id="what-remains-unknown"></a>
 
 ## Related reading
 

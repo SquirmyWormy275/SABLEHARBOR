@@ -18,6 +18,7 @@ from markdown_it import MarkdownIt
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from tools.wiki.audit import Page
+from tools.wiki.files import build_directory, release_downloads, tracked_files
 
 REPOSITORY = "SquirmyWormy275/SABLEHARBOR"
 MANIFEST = "sable-harbor-wiki-manifest.json"
@@ -248,11 +249,21 @@ class Exporter:
                 f"[Reading room](https://github.com/{REPOSITORY}/wiki/Reading) · "
                 f"[Topic](https://github.com/{REPOSITORY}/wiki/Reading--{quote(group)}) · "
                 f"[Repository source]({self.source_link(source)})\n\n"
-                "**Reading edition:** Full source text from the published repository snapshot. "
-                "Original status, dates, historical limits and later supersession still apply.\n\n"
+                "Full text from the published repository snapshot. "
+                "The document retains its original date and status.\n\n"
             )
             result[self.names[source] + ".md"] = nav + self.rewrite(source)
-        index = ["# Reading room", "", "Read the accepted public records in full inside the Wiki. Business and department articles include their core operating text; these editions provide the supporting doctrine, rosters, history, finance, places and exercises.", "", "[Wiki home](Home) · [Businesses](businesses--README) · [Departments](departments--README) · [History](subjects--README)", "", "Source wording is preserved. Acceptance into the repository does not turn a provisional assumption, historical proposal, generated scenario or open decision into established fact. Pending legal publications and private evidence are outside this edition.", ""]
+        index = [
+            "# Reading room", "",
+            "Read the company documents in full, grouped by subject below. "
+            "For an introduction, start with a business or department article.", "",
+            "[Wiki home](Home) · "
+            + ("[All files](Files) · " if (self.wiki / "Files.md").exists() else "")
+            + "[Businesses](businesses--README) · [Departments](departments--README) · "
+            "[History](subjects--README)", "",
+            "Earlier documents retain their dates and status. "
+            "[Records and decisions](Records-and-Decisions) explains how later decisions relate to them.", "",
+        ]
         for group, sources in sorted(groups.items()):
             topic = topics.get(group, {"title": group.replace("-", " ").title(), "introduction": "Read the source status and qualifications alongside each record."})
             index.append(f"- [{topic['title']}](Reading--{group}) — {len(sources)} full records")
@@ -356,6 +367,30 @@ class Exporter:
         content = {self.names[p] + ".md": self.article(p) for p in self.pages}
         if self.records:
             content.update(self.reading_pages())
+        file_routes = {}
+        download_urls = []
+        if (self.wiki / "Files.md").exists():
+            inventory = tracked_files(self.root)
+            directory, file_routes, index = build_directory(
+                self.root, inventory, self.revision, self.names
+            )
+            if content.keys() & directory.keys():
+                raise ValueError("File directory collides with a Wiki page")
+            content.update(directory)
+            content["Files.md"] += "\n" + index
+            downloads, download_urls = release_downloads(self.root)
+            if content.keys() & downloads.keys():
+                raise ValueError("Release directory collides with a Wiki page")
+            content.update(downloads)
+            if download_urls:
+                content["Files.md"] += (
+                    "\n## Download packages\n\n"
+                    "[Release downloads](Downloads) links every published package and "
+                    "companion asset in the October 7 release inventory.\n"
+                )
+            # Directory text depends on tracked paths, not unrelated file bytes.
+            # Membership changes alter its pages and are detected by freshness;
+            # ordinary article, source and image inputs keep their existing pins.
         sidebar = [
             "# Sable Harbor",
             "",
@@ -367,6 +402,8 @@ class Exporter:
             "- [History and subjects](subjects--README)",
             "- [Locations and facilities](Locations)",
             "- [Document library](Library)",
+            *(["- [All files](Files)"] if file_routes else []),
+            *(["- [Audit practice](Audit)"] if (self.wiki / "Audit.md").exists() else []),
             "- [Records and decisions](Records-and-Decisions)",
             *(["- [Full-text reading room](Reading)"] if self.records else []),
             "",
@@ -389,7 +426,8 @@ class Exporter:
             content["_Footer.md"] = (
                 "Sable Harbor · A fictional enterprise archive · "
                 "[Start here](Start-Here) · [Reading room](Reading) · "
-                "[Records and decisions](Records-and-Decisions) · "
+                + ("[All files](Files) · " if file_routes else "")
+                + "[Records and decisions](Records-and-Decisions) · "
                 "[Open questions](Open-Questions)\n"
             ) if (self.wiki / "Start-Here.md").exists() else "[Wiki home](Home)\n"
         content, aliases = self.polish_titles(content)
@@ -416,6 +454,8 @@ class Exporter:
                 } for p in self.records
             },
             "expanded_articles": sorted(self.reading["articles"]),
+            **({"file_directory": file_routes} if file_routes else {}),
+            **({"release_downloads": download_urls} if download_urls else {}),
         }
         (output / MANIFEST).write_text(json.dumps(manifest, indent=2) + "\n")
         return manifest

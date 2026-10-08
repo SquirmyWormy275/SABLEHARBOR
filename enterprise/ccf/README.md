@@ -1,6 +1,10 @@
-# Native CCF preparation
+# CCF control register and testing examples
 
-This package normalizes the accepted CCF and local designs into a versioned, queryable preparation register, then executes public synthetic finance, identity and recovery examples. It implements the first preparatory tranche from the [September 11 audit](../../docs/internal/development/CCF_PREBUILD_REPOSITORY_AUDIT_2026-09-11.md). It is not a complete implemented CCF or an operating-effectiveness conclusion.
+[Audit practice](../../docs/wiki/Audit.md) · [Procedures](PROCEDURES.md) · [Assessment workbench](assurance/README.md) · [All files](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Files)
+
+This package lets you browse the Common Controls Framework and work through three control tests: finance close, employee access and runtime recovery. The examples follow the evidence, show failures and missing attachments, and retain remediation and independent retesting. The register connects common controls with the business and system designs that use them.
+
+Start with the [procedures](PROCEDURES.md) to read an example. Use the commands below to build a queryable register and reproduce its results. These fictional examples cover their stated records and conditions; a wider conclusion about operating effectiveness requires the relevant operating evidence.
 
 ## Source authority and contents
 
@@ -49,9 +53,11 @@ The index is a derived query tool, not an authenticated production record servic
 
 Each example has an independent expected population, a complete positive reference, a substantive negative reference, and a separate missing-attachment lifecycle. The latter produces NOT_RUN, an approved synthetic waiver, expiry/escalation, remediation submission, rejected self-review, and independent original-period re-performance. Restoring the original attachment can close that finding. The substantive failed case remains failed; this package does not rewrite late disablement or an unsuccessful restore into historical success. Review and closure retain original evidence identities. Waiver expiry remains visible while remediation awaits validation.
 
-These are three bounded examples, not live vendor integrations or the full 7,560-occurrence business exercise. The finance adapter reuses `enterprise.operations.controls.evaluate`; recovery reuses the runtime restore/tombstone function. Production source connectors, authenticated workflow storage, all-domain policy population, actual owner review, longitudinal assurance and exact external mappings are subsequent tranches.
+These are three bounded examples, not live vendor integrations or the full 7,560-occurrence business exercise. The finance adapter reuses `enterprise.operations.controls.evaluate`; recovery reuses the runtime restore/tombstone function. Production source connectors, authenticated workflow storage, all-domain policy population, actual owner review, longitudinal assurance and exact external mappings remain further implementation work.
 
-## Decisions and next tranche
+<a id="decisions-and-next-tranche"></a>
+
+## Assessment tools and further work
 
 The [assessment and delta workbench](assurance/README.md) adds a versioned companion schema, framework selection, evidence reuse, internal Excel/HTML views and reviewed-input validation. Its real-framework starter remains an incomplete discovery queue; the eight demonstrated adapter cases use fictional requirements. It does not populate this preparation schema's external mapping arrays or establish operating effectiveness.
 

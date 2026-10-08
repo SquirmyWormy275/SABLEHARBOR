@@ -1,48 +1,42 @@
-# Open questions and scope limits
+# Decisions and remaining work
 
-[Start here](Start-Here.md) · [Reading glossary](Glossary.md) · [Wiki home](Home.md)
+[Wiki home](Home.md) · [All files](Files.md) · [Records and decisions](Records-and-Decisions.md) · [Audit practice](Audit.md)
 
-The [company edition 1.2.0](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/sable-harbor-company-edition-v1.2.0) is accepted and published; its [register](../internal/company-closeout/REGISTER_v1.2.0.json) states the finite synthetic-company scope. Earlier editions [1.0.0](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/sable-harbor-company-edition-v1.0.0) and [1.1.0](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/sable-harbor-company-edition-v1.1.0) retain their original bytes. At the September 29, 2026 UTC check, the public SABLEHARBOR repository had **zero open issues and zero open PRs**. Consult the [live issues](https://github.com/SquirmyWormy275/SABLEHARBOR/issues) and [live PRs](https://github.com/SquirmyWormy275/SABLEHARBOR/pulls) for later changes. Earlier dated snapshots remain in Git history.
+This page brings together questions resolved by later company decisions and the work that falls outside those decisions. Older articles and released exercises retain their original dates; use the linked successor when checking the company’s current position.
 
-## Closed issues and surviving scope limits
+## Company editions
 
-| Issue | September 29 disposition | Evidence route |
-|---|---|---|
-| [#18](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/18) | Closed for the synthetic parent-tax history: corporate taxation from formation for the existing Delaware LLC. Real external filing and counsel execution are outside the fictional company edition. | [Owner directions](../canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md), [tax workpaper](../finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md) |
-| [#34](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/34) | Closed for the owner-selected bounded 34B scope after protected portal integration and an accepted-main genuine-model rehearsal. General multi-record Daedalus behavior and external deployment are not claimed. | [Runtime receipt](../internal/company-closeout/daedalus-rehearsal-2026-09-29/ACCEPTED_RUNTIME_RECEIPT.md) |
-| [#107](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/107) | Closed for the declared synthetic geographic evidence scope. Real survey, title, field design and construction remain unestablished. | [Geographic release receipt](../releases/GEOGRAPHIC_EVIDENCE_1_5_0_RECEIPT.md) |
-| [#108](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/108) | Closed after all original geographic carriers were dispositioned and the 1.5.0 package was published. Broader engineering/source-domain work is outside this completed company gate. | [Geographic release receipt](../releases/GEOGRAPHIC_EVIDENCE_1_5_0_RECEIPT.md) |
+[Company edition 1.2.0](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/sable-harbor-company-edition-v1.2.0) is accepted and published. Its [register](../internal/company-closeout/REGISTER_v1.2.0.json) describes the fictional records it covers. Editions [1.0.0](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/sable-harbor-company-edition-v1.0.0) and [1.1.0](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/sable-harbor-company-edition-v1.1.0) remain available with their original files.
 
-## Recently closed boundaries
+<a id="closed-issues-and-surviving-scope-limits"></a>
+<a id="recently-closed-boundaries"></a>
+<a id="accepted-successors-to-older-status-claims"></a>
 
-[#11](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/11) is closed after main protection, required checks, reviewed branch retirement and verified automatic merged-branch deletion. Unique and active unmerged branches remain intentionally retained. Issues [#19](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/19), [#21](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/21), [#22](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/22) and [#24](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/24) are closed at their documented workforce, portal-input, reference-authorization and restore scopes. Their receipts preserve external-deployment and broader runtime limits.
+## Resolved company questions
 
-The owner also adopted the exact fictional five-holder register and voluntary
-proportional contributions without new units. The [dated direction](../canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md)
-settles that choice; capital-account implementation is accepted and published in edition 1.0.0. The subsequently approved designation, ARU secured and host B terms have separate dated successors; the final successor completes expressly synthetic filing/title/fixture and old-facility-release administration. Real perfection/priority, historical rights outside the adopted schedule and live runtime limits remain explicit.
+| Subject | Current record |
+|---|---|
+| Parent tax treatment | The fictional Delaware LLC is taxed as a corporation from formation. The [tax workpaper](../finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md) and [September 15 directions](../canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md) record that decision. Real external filings and counsel execution require their own evidence. |
+| Ownership and contributions | The September 15 directions adopt the five-holder register and voluntary proportional contributions without new units. The [financial successor](../finance/evidence/company-closeout/README.md) records the capital-account implementation. |
+| Foundry Field billing | The [September 13 adoption](../canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md) settles the billing terms. FF-003 is a January 2027 conditional forecast. |
+| Geography and occupancy | The [geographic 1.5.0 receipt](../releases/GEOGRAPHIC_EVIDENCE_1_5_0_RECEIPT.md) records the completed fictional evidence package. The [location directory](Locations.md) describes current offices and sites. Real survey, title, engineering and construction need separate evidence. |
+| Workforce, source access and recovery | Issues [19](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/19), [21](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/21), [22](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/22) and [24](https://github.com/SquirmyWormy275/SABLEHARBOR/issues/24) were closed for their documented personnel, portal, authorization and restore work. Their receipts describe the scope of each implementation. |
+| Daedalus | The [runtime receipt](../internal/company-closeout/daedalus-rehearsal-2026-09-29/ACCEPTED_RUNTIME_RECEIPT.md) records protected portal integration and the accepted model rehearsal. Broader multi-record behavior and external deployment remain outside that result. |
 
-## Accepted successors to older status claims
+## Financial and legal evidence
 
-PR #164 dispositioned all **78,145 original carriers** in six batches over the
-reviewed 919-file boundary, with 79 dated events and 34 site/component dispositions.
-Issue #106 is closed at accepted precision. This does not close every engineering
-extension beyond the issues' accepted synthetic scope. Issues #107 and #108 were
-subsequently closed through the [geographic 1.5.0 release](../releases/GEOGRAPHIC_EVIDENCE_1_5_0_RECEIPT.md).
+The [company-closeout package](../finance/evidence/company-closeout/README.md) brings together the financial successors, including goodwill removal and billing tax. Older workbooks keep their original journal entries; use one edition consistently rather than combining predecessor and successor records as extra transactions.
 
-[PR #138 billing adoption](../canon/FOUNDRY_FIELD_BILLING_ADOPTION_2026-09-13.md) is
-accepted. FF-003 is a January 2027 base conditional forecast, not September 2026
-actual revenue. PR #145 merged September 15 as
-`c8d628aa84140d63f6b8da8e2cba173c26c9a3b1` after 16 successful validation contexts
-and two intentionally skipped publication jobs. [Its integration receipt](../internal/company-closeout/PR145_INTEGRATION.md)
-records the numerical/source reconciliation and preserved approved designs.
-Earlier unapproved-design notices retain their historical dates.
+The [treasury and investor guide](../finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md) distinguishes funding capacity, modeled receipts and shortfalls. The [transaction guide](../reader/transactions/README.md) identifies the agreements and execution evidence supplied for each case. The fictional filing, title and fixture records describe the adopted scenario; real priority, perfection and external rights need the relevant professional and legal work.
 
-The [financial successor](../finance/evidence/company-closeout/README.md) separately
-composes goodwill removal and billing tax. Immutable historical workbooks remain
-available; do not combine old and successor journals as additional transactions.
-The [treasury/investor route](../finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md)
-shows funding capacity, modeled receipts, shortfalls and evidence limits separately.
+## Audit and runtime work
 
-A company edition passes only when its declared population and material claims are
-substantiated. Software tests, retrospective fictional records and reference deployment
-are identified separately from real external evidence and professional conclusions.
+The [audit training workspace](../audit-suite/LOCAL_WORKSPACE.md) was delivered with separate CLEAN and MESSY histories, protected instructor assessments and actual company-record collection and download. The guide records the tested delivery and its limitations.
+
+The [CCF assessment workbench](../../enterprise/ccf/assurance/README.md) contains reference procedures and evidence requests alongside separately labeled synthetic examples. Reference plans still need the specified source interpretation, operating inputs, performed tests and independent review. Training results and software validation do not provide a professional assurance opinion.
+
+Runtime qualification applies to the systems and conditions documented by each receipt. Wider deployments, provider acceptance and broader model behavior require their own work and evidence.
+
+## Follow later work
+
+Use the [live issues](https://github.com/SquirmyWormy275/SABLEHARBOR/issues) and [pull requests](https://github.com/SquirmyWormy275/SABLEHARBOR/pulls) for current repository work. The [September 15 integration receipt](../internal/company-closeout/PR145_INTEGRATION.md) preserves that edition’s reconciliation and validation history. [Records and decisions](Records-and-Decisions.md) explains how dated successors relate to earlier sources.

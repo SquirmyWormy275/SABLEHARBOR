@@ -13,18 +13,13 @@ Blackridge is a separate case, not a Sable Harbor subsidiary. Its 2015 mine/ente
 
 Download the workbook to open it in a spreadsheet application. The full-profile database named in the [data manifest](../../../blackridge/data/public/manifests/DATA_MANIFEST.json) is not the committed m00 database. Use the documented generation/export commands for the full profile; do not treat a manifest path as a delivered download or replace it with the smaller database while claiming the same population.
 
-The workbook is a generated interface and the case database is its own structured source. A workbook row or preview is not an independently obtained mine record. Keep profile, seed, period and dataset version with any analysis. This page introduces no new distribution release and no new financial assumptions.
+The workbook is a generated interface and the case database is its own structured source. A workbook row or preview is not an independently obtained mine record. Keep profile, seed, period and dataset version with any analysis. The build guide and data manifest identify the available profiles and their assumptions.
 
-[Subject directory](README.md) · [Business directory](../businesses/README.md) · [Department directory](../departments/README.md) · [Wiki home](../Home.md)
+[Subject directory](README.md) · [Business directory](../businesses/README.md) · [Department directory](../departments/README.md) · [Wiki home](../Home.md) · [All files](../Files.md)
 
-## Reading guide
+<a id="reading-guide"></a>
 
-Read Blackridge as its own 2015 mine and enterprise case. Keep the workbook, database profile and dated access model together so that an analysis uses one consistent population and scenario.
-
-
-## What remains unknown
-
-Blackridge is not a Sable Harbor subsidiary. The committed m00 database is not the full-profile population, and generated previews are not independent mine evidence. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+<a id="what-remains-unknown"></a>
 
 ## Related reading
 

@@ -1,14 +1,12 @@
 # Willow
 
-[Wiki home](../Home.md) · [Business directory](README.md) · [Department directory](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
+[Wiki home](../Home.md) · [All files](../Files.md) · [Business directory](README.md) · [Department directory](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
 
 <img src="../../../assets/brand/logos/willow__reverse-horizontal.png" alt="Approved Willow logo" width="360">
 
 Willow builds and tests industrial prototypes, sensors, software and experimental processes at the Pittsburgh-area Fort. Its outputs include experiments, failed-test records, prototypes and qualified transfers to operating owners.
 
-## Reading guide
-
-Follow an experiment from its question and budget to a useful transfer or a recorded failure. The important handoff is to an operating owner who can qualify, maintain and use the result.
+<a id="reading-guide"></a>
 
 ## Start here
 
@@ -40,9 +38,13 @@ Follow an experiment from authorization through materials and equipment to a con
 2. Open `units/willow/audit.xlsx` in the extracted release. Its `README.md` explains the unit scope. The matching CSV and SQLite extracts provide the same scoped evidence; SQL is optional.
 3. Read the [unit evidence guide](../../../docs/audit/UNIT_EXPORT_SPECIFICATION.md) before choosing samples. Select scenario and period together, and distinguish retained 2026 reconstruction from conditional 2027–2031 forecasts.
 
-The [finance successor guide](../../../enterprise/business/README.md) explains generation, reconciliation and limits. A workbook is scenario evidence, not an audited financial statement or observed bank record.
+The [finance successor guide](../../../enterprise/business/README.md) explains generation, reconciliation and limits. The workbook records the selected scenario and its assumptions.
 
 ## Places and plans
+
+<a id="what-remains-unknown"></a>
+
+The [geographic decisions](../../canon/GEOGRAPHIC_COMPLETION_2026-09-13.md) and [Fort occupancy history](../../canon/KLEIN_FORT_OCCUPANCY_2026-09-13.md) record the selected location and staged move. The 24-person calibration is a planning population.
 
 | Open | What you will find |
 |---|---|
@@ -52,10 +54,6 @@ The [finance successor guide](../../../enterprise/business/README.md) explains g
 Use the [complete facility artifact index](../../../geospatial/maps/facilities/ARTIFACT_INDEX.md) for independently saved maps and floor plans, or open the [interactive atlas](../../../geospatial/maps/index.html) locally in a browser. GitHub displays the linked Markdown and images directly; it does not execute the atlas HTML.
 
 [Klein, Emberline and the Willow transition](../subjects/Research-History.md) · [Failed research projects](../subjects/Project-History.md)
-
-## What remains unknown
-
-Exact Fort parcels, measured floor areas and historical occupancy remain unresolved. The 24-person calibration is a model population, not an employee census. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
 
 ## Related reading
 

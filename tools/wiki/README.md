@@ -80,10 +80,11 @@ publication. Do not edit the live Wiki independently.
 
 ## Editorial presentation and historical addresses
 
-All 39 subject guides include a plain-language orientation, related reading and an
-explicit unknowns section. Start Here, the glossary and the open-questions register
-provide onboarding and a dated evidence boundary. Source text remains separately
-identified in the composed in-depth reading sections.
+Subject articles explain the company’s work and link related reading. Qualifications
+appear beside the facts they affect. Start Here and the glossary introduce the archive;
+Open Questions records accepted resolutions and further work. Earlier section addresses,
+including `what-remains-unknown`, remain as anchors for existing bookmarks. Original
+source text remains in the supporting-record sections.
 
 `titles.json` assigns readable published titles without renaming repository sources.
 The export rewrites navigation and retains every prior address as a compatibility page,
@@ -125,3 +126,19 @@ The Wiki sidebar and footer link to `Records-and-Decisions`; the sidebar also li
 to `Locations`. The former indexes existing authority and history records instead
 of creating a second decision register. Material operational and accounting limits
 stay in the articles. Source records are not rewritten to make them shorter.
+
+## Three-click access
+
+`Files` links collections of every Git-tracked file in the public checkout, including
+documents, data, images, code and configuration. Each collection links the original
+file at the published revision and, where available, its Wiki reading edition. Home,
+the README, the sidebar and the footer link directly to `Files`. The route is Home
+or README → Files → collection → original. `Downloads` links all public release assets recorded in `downloads.json`, so packages
+and their companion files also take three clicks. Refresh that inventory from the
+repository’s published releases when adding a release. Archive members remain listed
+in their package manifests.
+
+The export audit compares this inventory with Git, verifies every original-file link
+and measures the shortest visible route to each file and article. Closed supporting
+sections are excluded from that calculation. A missing file, a missing README
+entrance or a route requiring more than three clicks fails the publication audit.

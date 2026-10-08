@@ -1,6 +1,6 @@
 # Glasshouse, Wallaby and failed experiments
 
-These are historical projects and lessons, not additional current businesses or a request to invent sites.
+Glasshouse and Wallaby were unsuccessful projects whose lessons shaped later work.
 
 | Project | Recorded outcome | Controlling reading |
 |---|---|---|
@@ -9,18 +9,13 @@ These are historical projects and lessons, not additional current businesses or 
 
 A useful case question is which physical assumption invalidated the original design or sampling plan, what evidence revealed it, and which later procedure changed. Read the [Willow business page](../businesses/Willow.md) and [Cradle host interfaces](External-Hosts.md) for the surviving work.
 
-The [facility coverage matrix](../../../geospatial/facilities/coverage/COVERAGE_MATRIX.md) preserves geography/status dispositions; historical project names do not authorize occupied buildings or fabricated engineering detail. There are no independent Glasshouse or Wallaby logos introduced here. For other abandoned property opportunities, use [acquisition history](Historical-Opportunities.md).
+The [facility coverage matrix](../../../geospatial/facilities/coverage/COVERAGE_MATRIX.md) records the location evidence available for these projects. For abandoned property opportunities, see [acquisition history](Historical-Opportunities.md).
 
-[Subject directory](README.md) · [Business directory](../businesses/README.md) · [Department directory](../departments/README.md) · [Wiki home](../Home.md)
+[Subject directory](README.md) · [Business directory](../businesses/README.md) · [Department directory](../departments/README.md) · [Wiki home](../Home.md) · [All files](../Files.md)
 
-## Reading guide
+<a id="reading-guide"></a>
 
-Read the unsuccessful and changing projects as part of the company’s learning history. Their records distinguish an interesting experiment, a useful technical result and something an operating business can actually use.
-
-
-## What remains unknown
-
-A named project or incident does not establish a separate company, exact location or complete chronology. Source-level provisional and open details remain visible. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+<a id="what-remains-unknown"></a>
 
 ## Related reading
 

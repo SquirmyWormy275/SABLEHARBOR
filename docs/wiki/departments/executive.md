@@ -2,16 +2,20 @@
 
 <img src="../../../assets/brand/logos/sable-harbor__reverse-horizontal.png" alt="Sable Harbor approved identity" width="360">
 
-**Canon state:** LOCKED institutional scope; implementation detail varies by linked record.<br>
-**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
+[Wiki home](../Home.md) · [Departments](README.md) · [All files](../Files.md)
 
-The CEO directs the enterprise and its businesses within Board-reserved authority. The corporate center allocates surplus capital and supplies shared services; business presidents retain end-to-end operating responsibility.
+The CEO directs Sable Harbor within the authority reserved to the Board. The corporate center allocates surplus capital and provides shared services, while business presidents take responsibility for their operations. Executive coordination groups bring context and expertise to a decision; the accountable owner still makes it.
 
-## Reading guide
+<a id="reading-guide"></a>
+<a id="what-remains-unknown"></a>
 
-Start with the owner of a decision, then read the capital and planning rhythm around it. The executive coordination groups improve context and access to expertise without creating shared or ambiguous decision ownership.
+## Leading the enterprise
 
-## Read and use the records
+The capital and planning records explain how proposals reach the right decision-maker. Individual appointments and investment approvals appear in the relevant dated records.
+
+<a id="read-and-use-the-records"></a>
+
+## Documents
 
 - [Enterprise authority and executive rhythm](../../../docs/governance/ENTERPRISE_AUTHORITY_CAPITAL_AND_EXECUTIVE_RHYTHM.md) — Decision owners, capital allocation and executive coordination.
 - [Headquarters closeout](../../../docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md) — Sections 9–14 explain capital, planning, executive rings and business authority.
@@ -20,19 +24,13 @@ Start with the owner of a decision, then read the capital and planning rhythm ar
 - [Current named enterprise leadership](../../../docs/organization/charts/people-enterprise.md) — Read approved names, offices and company joining years.
 - [Controlled authority publication](../../../docs/governance/publications/SH-GOV-AUTH-002_v1.0.1.pdf) — Reader edition of enterprise authority and rhythm.
 
-## Organization and identity
+<a id="organization-and-identity"></a>
 
-[Organization chart, text roster and source qualifications](../../organization/charts/corporate-headquarters.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+## Organization
+
+[Organization chart and roster](../../organization/charts/corporate-headquarters.md) · [Complete chart book](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Office of the CEO — shared organization chart, first page](../../organization/assets/current/corporate-headquarters.png)](../../organization/assets/current/corporate-headquarters.png)
-
-The shared chart retains its original scope; it is not a new reporting chart for this page. The approved corporate mark above identifies the parent institution.
-
-[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
-
-## What remains unknown
-
-The executive architecture does not fill unnamed offices or approve every investment represented in a model. Reserved matters still require their own authority. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
 
 ## Related reading
 
@@ -40,3 +38,11 @@ The executive architecture does not fill unnamed offices or approve every invest
 - [Enterprise Support Services](ess.md)
 - [J2 — Judgment & Junction](j2.md)
 - [Finance](finance.md)
+
+<details>
+<summary>About this article</summary>
+
+**Canon state:** LOCKED institutional scope; implementation detail varies by linked record.
+**Reviewed:** October 7, 2026. Supporting documents retain their own dates and status.
+
+</details>

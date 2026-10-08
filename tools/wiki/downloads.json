@@ -1,0 +1,1513 @@
+{
+  "reviewed": "2026-10-07",
+  "releases": [
+    {
+      "assets": [
+        {
+          "bytes": 126287,
+          "name": "BLACKRIDGE_MASTER_TRACKER_v0.1.0.xlsx",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0/BLACKRIDGE_MASTER_TRACKER_v0.1.0.xlsx"
+        },
+        {
+          "bytes": 4403,
+          "name": "DATA_MANIFEST.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0/DATA_MANIFEST.json"
+        },
+        {
+          "bytes": 90,
+          "name": "RECONCILIATION_REPORT.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0/RECONCILIATION_REPORT.json"
+        },
+        {
+          "bytes": 4298,
+          "name": "VALIDATION_REPORT.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0/VALIDATION_REPORT.json"
+        },
+        {
+          "bytes": 308502528,
+          "name": "blackridge_public_v0.1.0.sqlite3",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0/blackridge_public_v0.1.0.sqlite3"
+        },
+        {
+          "bytes": 9659,
+          "name": "blackridge_query_cookbook_v0.1.0.sql",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0/blackridge_query_cookbook_v0.1.0.sql"
+        }
+      ],
+      "tag": "blackridge-data-v0.1.0",
+      "title": "Blackridge enterprise data foundation v0.1.0",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/blackridge-data-v0.1.0"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 126540,
+          "name": "BLACKRIDGE_MASTER_TRACKER_v0.1.0.xlsx",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted/BLACKRIDGE_MASTER_TRACKER_v0.1.0.xlsx"
+        },
+        {
+          "bytes": 3935,
+          "name": "CHECKSUMS.sha256",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted/CHECKSUMS.sha256"
+        },
+        {
+          "bytes": 685,
+          "name": "CORRUPTION_TEST_REPORT.md",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted/CORRUPTION_TEST_REPORT.md"
+        },
+        {
+          "bytes": 9999,
+          "name": "DATA_MANIFEST.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted/DATA_MANIFEST.json"
+        },
+        {
+          "bytes": 57563,
+          "name": "DATA_PROFILE.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted/DATA_PROFILE.json"
+        },
+        {
+          "bytes": 502,
+          "name": "POSTGRESQL_COMPATIBILITY_REPORT.md",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted/POSTGRESQL_COMPATIBILITY_REPORT.md"
+        },
+        {
+          "bytes": 90,
+          "name": "RECONCILIATION_REPORT.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted/RECONCILIATION_REPORT.json"
+        },
+        {
+          "bytes": 4799,
+          "name": "VALIDATION_REPORT.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted/VALIDATION_REPORT.json"
+        },
+        {
+          "bytes": 523,
+          "name": "WORKBOOK_QA_REPORT.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted/WORKBOOK_QA_REPORT.json"
+        },
+        {
+          "bytes": 721565765,
+          "name": "blackridge_case_cutoffs_v0.1.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted/blackridge_case_cutoffs_v0.1.0.zip"
+        },
+        {
+          "bytes": 130443,
+          "name": "blackridge_data_dictionary_v0.1.0.csv",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted/blackridge_data_dictionary_v0.1.0.csv"
+        },
+        {
+          "bytes": 14797826,
+          "name": "blackridge_domain_csv_extracts_v0.1.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted/blackridge_domain_csv_extracts_v0.1.0.zip"
+        },
+        {
+          "bytes": 77307,
+          "name": "blackridge_postgresql_v0.1.0.sql",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted/blackridge_postgresql_v0.1.0.sql"
+        },
+        {
+          "bytes": 550080512,
+          "name": "blackridge_public_v0.1.0.sqlite3",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted/blackridge_public_v0.1.0.sqlite3"
+        },
+        {
+          "bytes": 14109,
+          "name": "blackridge_query_cookbook_v0.1.0.sql",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted/blackridge_query_cookbook_v0.1.0.sql"
+        },
+        {
+          "bytes": 77347,
+          "name": "blackridge_schema_v0.1.0.sql",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted/blackridge_schema_v0.1.0.sql"
+        }
+      ],
+      "tag": "blackridge-data-v0.1.0-accepted",
+      "title": "Blackridge enterprise data foundation v0.1.0 \u2014 accepted Part I",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/blackridge-data-v0.1.0-accepted"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 126594,
+          "name": "BLACKRIDGE_MASTER_TRACKER_v0.1.0.xlsx",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted.1/BLACKRIDGE_MASTER_TRACKER_v0.1.0.xlsx"
+        },
+        {
+          "bytes": 4066,
+          "name": "CHECKSUMS.sha256",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted.1/CHECKSUMS.sha256"
+        },
+        {
+          "bytes": 685,
+          "name": "CORRUPTION_TEST_REPORT.md",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted.1/CORRUPTION_TEST_REPORT.md"
+        },
+        {
+          "bytes": 10229,
+          "name": "DATA_MANIFEST.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted.1/DATA_MANIFEST.json"
+        },
+        {
+          "bytes": 57567,
+          "name": "DATA_PROFILE.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted.1/DATA_PROFILE.json"
+        },
+        {
+          "bytes": 696,
+          "name": "FINANCIAL_RECONCILIATION_REPORT.md",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted.1/FINANCIAL_RECONCILIATION_REPORT.md"
+        },
+        {
+          "bytes": 502,
+          "name": "POSTGRESQL_COMPATIBILITY_REPORT.md",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted.1/POSTGRESQL_COMPATIBILITY_REPORT.md"
+        },
+        {
+          "bytes": 90,
+          "name": "RECONCILIATION_REPORT.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted.1/RECONCILIATION_REPORT.json"
+        },
+        {
+          "bytes": 4891,
+          "name": "VALIDATION_REPORT.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted.1/VALIDATION_REPORT.json"
+        },
+        {
+          "bytes": 523,
+          "name": "WORKBOOK_QA_REPORT.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted.1/WORKBOOK_QA_REPORT.json"
+        },
+        {
+          "bytes": 727995581,
+          "name": "blackridge_case_cutoffs_v0.1.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted.1/blackridge_case_cutoffs_v0.1.0.zip"
+        },
+        {
+          "bytes": 130443,
+          "name": "blackridge_data_dictionary_v0.1.0.csv",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted.1/blackridge_data_dictionary_v0.1.0.csv"
+        },
+        {
+          "bytes": 14797829,
+          "name": "blackridge_domain_csv_extracts_v0.1.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted.1/blackridge_domain_csv_extracts_v0.1.0.zip"
+        },
+        {
+          "bytes": 77307,
+          "name": "blackridge_postgresql_v0.1.0.sql",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted.1/blackridge_postgresql_v0.1.0.sql"
+        },
+        {
+          "bytes": 556929024,
+          "name": "blackridge_public_v0.1.0.sqlite3",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted.1/blackridge_public_v0.1.0.sqlite3"
+        },
+        {
+          "bytes": 14109,
+          "name": "blackridge_query_cookbook_v0.1.0.sql",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted.1/blackridge_query_cookbook_v0.1.0.sql"
+        },
+        {
+          "bytes": 77347,
+          "name": "blackridge_schema_v0.1.0.sql",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-accepted.1/blackridge_schema_v0.1.0.sql"
+        }
+      ],
+      "tag": "blackridge-data-v0.1.0-accepted.1",
+      "title": "Blackridge enterprise data foundation v0.1.0 \u2014 corrected accepted Part I",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/blackridge-data-v0.1.0-accepted.1"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 126287,
+          "name": "BLACKRIDGE_MASTER_TRACKER_v0.1.0.xlsx",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc2/BLACKRIDGE_MASTER_TRACKER_v0.1.0.xlsx"
+        },
+        {
+          "bytes": 9078,
+          "name": "DATA_MANIFEST.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc2/DATA_MANIFEST.json"
+        },
+        {
+          "bytes": 90,
+          "name": "RECONCILIATION_REPORT.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc2/RECONCILIATION_REPORT.json"
+        },
+        {
+          "bytes": 4298,
+          "name": "VALIDATION_REPORT.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc2/VALIDATION_REPORT.json"
+        },
+        {
+          "bytes": 523,
+          "name": "WORKBOOK_QA_REPORT.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc2/WORKBOOK_QA_REPORT.json"
+        },
+        {
+          "bytes": 380887239,
+          "name": "blackridge_case_cutoffs_v0.1.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc2/blackridge_case_cutoffs_v0.1.0.zip"
+        },
+        {
+          "bytes": 14797826,
+          "name": "blackridge_domain_csv_extracts_v0.1.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc2/blackridge_domain_csv_extracts_v0.1.0.zip"
+        },
+        {
+          "bytes": 308502528,
+          "name": "blackridge_public_v0.1.0.sqlite3",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc2/blackridge_public_v0.1.0.sqlite3"
+        }
+      ],
+      "tag": "blackridge-data-v0.1.0-rc2",
+      "title": "Blackridge enterprise data foundation v0.1.0 RC2",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/blackridge-data-v0.1.0-rc2"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 126545,
+          "name": "BLACKRIDGE_MASTER_TRACKER_v0.1.0.xlsx",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc3/BLACKRIDGE_MASTER_TRACKER_v0.1.0.xlsx"
+        },
+        {
+          "bytes": 2676,
+          "name": "CHECKSUMS.sha256",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc3/CHECKSUMS.sha256"
+        },
+        {
+          "bytes": 9943,
+          "name": "DATA_MANIFEST.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc3/DATA_MANIFEST.json"
+        },
+        {
+          "bytes": 57507,
+          "name": "DATA_PROFILE.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc3/DATA_PROFILE.json"
+        },
+        {
+          "bytes": 90,
+          "name": "RECONCILIATION_REPORT.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc3/RECONCILIATION_REPORT.json"
+        },
+        {
+          "bytes": 4743,
+          "name": "VALIDATION_REPORT.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc3/VALIDATION_REPORT.json"
+        },
+        {
+          "bytes": 523,
+          "name": "WORKBOOK_QA_REPORT.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc3/WORKBOOK_QA_REPORT.json"
+        },
+        {
+          "bytes": 380893715,
+          "name": "blackridge_case_cutoffs_v0.1.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc3/blackridge_case_cutoffs_v0.1.0.zip"
+        },
+        {
+          "bytes": 14797826,
+          "name": "blackridge_domain_csv_extracts_v0.1.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc3/blackridge_domain_csv_extracts_v0.1.0.zip"
+        },
+        {
+          "bytes": 336850944,
+          "name": "blackridge_public_v0.1.0.sqlite3",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc3/blackridge_public_v0.1.0.sqlite3"
+        },
+        {
+          "bytes": 14109,
+          "name": "blackridge_query_cookbook_v0.1.0.sql",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc3/blackridge_query_cookbook_v0.1.0.sql"
+        }
+      ],
+      "tag": "blackridge-data-v0.1.0-rc3",
+      "title": "Blackridge enterprise data foundation v0.1.0 RC3",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/blackridge-data-v0.1.0-rc3"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 126540,
+          "name": "BLACKRIDGE_MASTER_TRACKER_v0.1.0.xlsx",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc4/BLACKRIDGE_MASTER_TRACKER_v0.1.0.xlsx"
+        },
+        {
+          "bytes": 3935,
+          "name": "CHECKSUMS.sha256",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc4/CHECKSUMS.sha256"
+        },
+        {
+          "bytes": 685,
+          "name": "CORRUPTION_TEST_REPORT.md",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc4/CORRUPTION_TEST_REPORT.md"
+        },
+        {
+          "bytes": 9999,
+          "name": "DATA_MANIFEST.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc4/DATA_MANIFEST.json"
+        },
+        {
+          "bytes": 57563,
+          "name": "DATA_PROFILE.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc4/DATA_PROFILE.json"
+        },
+        {
+          "bytes": 502,
+          "name": "POSTGRESQL_COMPATIBILITY_REPORT.md",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc4/POSTGRESQL_COMPATIBILITY_REPORT.md"
+        },
+        {
+          "bytes": 90,
+          "name": "RECONCILIATION_REPORT.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc4/RECONCILIATION_REPORT.json"
+        },
+        {
+          "bytes": 4799,
+          "name": "VALIDATION_REPORT.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc4/VALIDATION_REPORT.json"
+        },
+        {
+          "bytes": 523,
+          "name": "WORKBOOK_QA_REPORT.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc4/WORKBOOK_QA_REPORT.json"
+        },
+        {
+          "bytes": 721565765,
+          "name": "blackridge_case_cutoffs_v0.1.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc4/blackridge_case_cutoffs_v0.1.0.zip"
+        },
+        {
+          "bytes": 14797826,
+          "name": "blackridge_domain_csv_extracts_v0.1.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc4/blackridge_domain_csv_extracts_v0.1.0.zip"
+        },
+        {
+          "bytes": 550080512,
+          "name": "blackridge_public_v0.1.0.sqlite3",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc4/blackridge_public_v0.1.0.sqlite3"
+        },
+        {
+          "bytes": 14109,
+          "name": "blackridge_query_cookbook_v0.1.0.sql",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/blackridge-data-v0.1.0-rc4/blackridge_query_cookbook_v0.1.0.sql"
+        }
+      ],
+      "tag": "blackridge-data-v0.1.0-rc4",
+      "title": "Blackridge enterprise data foundation v0.1.0 RC4",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/blackridge-data-v0.1.0-rc4"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 107,
+          "name": "SHA256SUMS.txt",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/business-finance-v1.0.0/SHA256SUMS.txt"
+        },
+        {
+          "bytes": 58300423,
+          "name": "sable-harbor-business-finance-v1.0.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/business-finance-v1.0.0/sable-harbor-business-finance-v1.0.0.zip"
+        }
+      ],
+      "tag": "business-finance-v1.0.0",
+      "title": "Business-driven enterprise finance v1.0.0",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/business-finance-v1.0.0"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 110,
+          "name": "SHA256SUMS.txt",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/business-operations-v1.0.0/SHA256SUMS.txt"
+        },
+        {
+          "bytes": 73713427,
+          "name": "sable-harbor-business-operations-v1.0.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/business-operations-v1.0.0/sable-harbor-business-operations-v1.0.0.zip"
+        }
+      ],
+      "tag": "business-operations-v1.0.0",
+      "title": "Business operations and financial evidence v1.0.0",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/business-operations-v1.0.0"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 359,
+          "name": "SHA256SUMS.txt",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/closeout-evidence-v1.0.0/SHA256SUMS.txt"
+        },
+        {
+          "bytes": 3305,
+          "name": "VALIDATION.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/closeout-evidence-v1.0.0/VALIDATION.json"
+        },
+        {
+          "bytes": 771385,
+          "name": "closeout-evidence.xlsx",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/closeout-evidence-v1.0.0/closeout-evidence.xlsx"
+        },
+        {
+          "bytes": 1785,
+          "name": "manifest.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/closeout-evidence-v1.0.0/manifest.json"
+        },
+        {
+          "bytes": 1318571,
+          "name": "sable-harbor-closeout-evidence-v1.0.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/closeout-evidence-v1.0.0/sable-harbor-closeout-evidence-v1.0.0.zip"
+        }
+      ],
+      "tag": "closeout-evidence-v1.0.0",
+      "title": "Closeout evidence 1.0.0 \u2014 executed reference cases and review workbook",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/closeout-evidence-v1.0.0"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 3428,
+          "name": "BROWSER_RESULTS.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/closeout-evidence-v1.1.0/BROWSER_RESULTS.json"
+        },
+        {
+          "bytes": 221612,
+          "name": "PREVIEW.png",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/closeout-evidence-v1.1.0/PREVIEW.png"
+        },
+        {
+          "bytes": 602,
+          "name": "SHA256SUMS.txt",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/closeout-evidence-v1.1.0/SHA256SUMS.txt"
+        },
+        {
+          "bytes": 7830,
+          "name": "VALIDATION.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/closeout-evidence-v1.1.0/VALIDATION.json"
+        },
+        {
+          "bytes": 771386,
+          "name": "closeout-evidence.xlsx",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/closeout-evidence-v1.1.0/closeout-evidence.xlsx"
+        },
+        {
+          "bytes": 20408,
+          "name": "manifest.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/closeout-evidence-v1.1.0/manifest.json"
+        },
+        {
+          "bytes": 5953628,
+          "name": "review.html",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/closeout-evidence-v1.1.0/review.html"
+        },
+        {
+          "bytes": 2703911,
+          "name": "sable-harbor-closeout-evidence-v1.1.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/closeout-evidence-v1.1.0/sable-harbor-closeout-evidence-v1.1.0.zip"
+        }
+      ],
+      "tag": "closeout-evidence-v1.1.0",
+      "title": "Evidence review 1.1.0 \u2014 offline workbench and source coverage",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/closeout-evidence-v1.1.0"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 7043,
+          "name": "FACILITY_ATLAS_R02_CLOSEOUT.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/facility-atlas-v0.2.0/FACILITY_ATLAS_R02_CLOSEOUT.json"
+        },
+        {
+          "bytes": 99,
+          "name": "FACILITY_ATLAS_R02_CLOSEOUT.sha256",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/facility-atlas-v0.2.0/FACILITY_ATLAS_R02_CLOSEOUT.sha256"
+        },
+        {
+          "bytes": 466193,
+          "name": "SABLE_HARBOR_Facility_Atlas_v0.2.0.manifest.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/facility-atlas-v0.2.0/SABLE_HARBOR_Facility_Atlas_v0.2.0.manifest.json"
+        },
+        {
+          "bytes": 105,
+          "name": "SABLE_HARBOR_Facility_Atlas_v0.2.0.sha256",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/facility-atlas-v0.2.0/SABLE_HARBOR_Facility_Atlas_v0.2.0.sha256"
+        },
+        {
+          "bytes": 200065596,
+          "name": "SABLE_HARBOR_Facility_Atlas_v0.2.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/facility-atlas-v0.2.0/SABLE_HARBOR_Facility_Atlas_v0.2.0.zip"
+        }
+      ],
+      "tag": "facility-atlas-v0.2.0",
+      "title": "Facility atlas v0.2.0 \u2014 approved R01 campus and runtime integration",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/facility-atlas-v0.2.0"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 576121,
+          "name": "SABLE_HARBOR_Facility_Spatial_v1.0.0.manifest.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/facility-spatial-v1.0.0/SABLE_HARBOR_Facility_Spatial_v1.0.0.manifest.json"
+        },
+        {
+          "bytes": 107,
+          "name": "SABLE_HARBOR_Facility_Spatial_v1.0.0.sha256",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/facility-spatial-v1.0.0/SABLE_HARBOR_Facility_Spatial_v1.0.0.sha256"
+        },
+        {
+          "bytes": 239529628,
+          "name": "SABLE_HARBOR_Facility_Spatial_v1.0.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/facility-spatial-v1.0.0/SABLE_HARBOR_Facility_Spatial_v1.0.0.zip"
+        },
+        {
+          "bytes": 9100,
+          "name": "SPATIAL_CLOSEOUT.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/facility-spatial-v1.0.0/SPATIAL_CLOSEOUT.json"
+        },
+        {
+          "bytes": 88,
+          "name": "SPATIAL_CLOSEOUT.sha256",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/facility-spatial-v1.0.0/SPATIAL_CLOSEOUT.sha256"
+        }
+      ],
+      "tag": "facility-spatial-v1.0.0",
+      "title": "Facility spatial review v1.0.0",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/facility-spatial-v1.0.0"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 477214,
+          "name": "SABLE_HARBOR_Facility_Workbench_v1.0.0.manifest.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/facility-workbench-v1.0.0/SABLE_HARBOR_Facility_Workbench_v1.0.0.manifest.json"
+        },
+        {
+          "bytes": 109,
+          "name": "SABLE_HARBOR_Facility_Workbench_v1.0.0.sha256",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/facility-workbench-v1.0.0/SABLE_HARBOR_Facility_Workbench_v1.0.0.sha256"
+        },
+        {
+          "bytes": 201616184,
+          "name": "SABLE_HARBOR_Facility_Workbench_v1.0.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/facility-workbench-v1.0.0/SABLE_HARBOR_Facility_Workbench_v1.0.0.zip"
+        },
+        {
+          "bytes": 6767,
+          "name": "WORKBENCH_CLOSEOUT.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/facility-workbench-v1.0.0/WORKBENCH_CLOSEOUT.json"
+        },
+        {
+          "bytes": 90,
+          "name": "WORKBENCH_CLOSEOUT.sha256",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/facility-workbench-v1.0.0/WORKBENCH_CLOSEOUT.sha256"
+        }
+      ],
+      "tag": "facility-workbench-v1.0.0",
+      "title": "Facility planning workbench v1.0.0",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/facility-workbench-v1.0.0"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 3753,
+          "name": "ACCEPTANCE.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.0.0/ACCEPTANCE.json"
+        },
+        {
+          "bytes": 41325,
+          "name": "BUILD.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.0.0/BUILD.json"
+        },
+        {
+          "bytes": 122869,
+          "name": "MAP_PREVIEW.png",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.0.0/MAP_PREVIEW.png"
+        },
+        {
+          "bytes": 33724,
+          "name": "NATIVE_QGIS.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.0.0/NATIVE_QGIS.json"
+        },
+        {
+          "bytes": 187480,
+          "name": "PACKAGE_MANIFEST.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.0.0/PACKAGE_MANIFEST.json"
+        },
+        {
+          "bytes": 604,
+          "name": "SHA256SUMS.txt",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.0.0/SHA256SUMS.txt"
+        },
+        {
+          "bytes": 7070,
+          "name": "VALIDATION.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.0.0/VALIDATION.json"
+        },
+        {
+          "bytes": 174589407,
+          "name": "sable-harbor-geographic-evidence-v1.0.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.0.0/sable-harbor-geographic-evidence-v1.0.0.zip"
+        }
+      ],
+      "tag": "geographic-evidence-v1.0.0",
+      "title": "Geographic evidence 1.0.0 \u2014 portable GIS and source review",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/geographic-evidence-v1.0.0"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 3762,
+          "name": "ACCEPTANCE.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.1.0/ACCEPTANCE.json"
+        },
+        {
+          "bytes": 2244,
+          "name": "BROWSER_RESULTS.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.1.0/BROWSER_RESULTS.json"
+        },
+        {
+          "bytes": 42922,
+          "name": "BUILD.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.1.0/BUILD.json"
+        },
+        {
+          "bytes": 18172,
+          "name": "EVENTS.csv",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.1.0/EVENTS.csv"
+        },
+        {
+          "bytes": 397219,
+          "name": "HISTORY.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.1.0/HISTORY.json"
+        },
+        {
+          "bytes": 161739,
+          "name": "HISTORY_PREVIEW.png",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.1.0/HISTORY_PREVIEW.png"
+        },
+        {
+          "bytes": 122869,
+          "name": "MAP_PREVIEW.png",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.1.0/MAP_PREVIEW.png"
+        },
+        {
+          "bytes": 35644,
+          "name": "NATIVE_QGIS.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.1.0/NATIVE_QGIS.json"
+        },
+        {
+          "bytes": 1481,
+          "name": "OPERATIONS_REVIEW.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.1.0/OPERATIONS_REVIEW.json"
+        },
+        {
+          "bytes": 190445,
+          "name": "PACKAGE_MANIFEST.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.1.0/PACKAGE_MANIFEST.json"
+        },
+        {
+          "bytes": 1101,
+          "name": "SHA256SUMS.txt",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.1.0/SHA256SUMS.txt"
+        },
+        {
+          "bytes": 7196,
+          "name": "VALIDATION.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.1.0/VALIDATION.json"
+        },
+        {
+          "bytes": 284558,
+          "name": "history.html",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.1.0/history.html"
+        },
+        {
+          "bytes": 176851406,
+          "name": "sable-harbor-geographic-evidence-v1.1.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.1.0/sable-harbor-geographic-evidence-v1.1.0.zip"
+        }
+      ],
+      "tag": "geographic-evidence-v1.1.0",
+      "title": "Geographic evidence 1.1.0 \u2014 interactive history edition",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/geographic-evidence-v1.1.0"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 6470,
+          "name": "ACCEPTANCE.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.2.0/ACCEPTANCE.json"
+        },
+        {
+          "bytes": 2547,
+          "name": "BROWSER_RESULTS.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.2.0/BROWSER_RESULTS.json"
+        },
+        {
+          "bytes": 42922,
+          "name": "BUILD.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.2.0/BUILD.json"
+        },
+        {
+          "bytes": 18542,
+          "name": "EVENTS.csv",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.2.0/EVENTS.csv"
+        },
+        {
+          "bytes": 428615,
+          "name": "HISTORY.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.2.0/HISTORY.json"
+        },
+        {
+          "bytes": 164039,
+          "name": "HISTORY_PREVIEW.png",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.2.0/HISTORY_PREVIEW.png"
+        },
+        {
+          "bytes": 4108,
+          "name": "KLEIN_FORT_OCCUPANCY_2026-09-13.md",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.2.0/KLEIN_FORT_OCCUPANCY_2026-09-13.md"
+        },
+        {
+          "bytes": 122869,
+          "name": "MAP_PREVIEW.png",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.2.0/MAP_PREVIEW.png"
+        },
+        {
+          "bytes": 35644,
+          "name": "NATIVE_QGIS.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.2.0/NATIVE_QGIS.json"
+        },
+        {
+          "bytes": 1481,
+          "name": "OPERATIONS_REVIEW.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.2.0/OPERATIONS_REVIEW.json"
+        },
+        {
+          "bytes": 190836,
+          "name": "PACKAGE_MANIFEST.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.2.0/PACKAGE_MANIFEST.json"
+        },
+        {
+          "bytes": 1202,
+          "name": "SHA256SUMS.txt",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.2.0/SHA256SUMS.txt"
+        },
+        {
+          "bytes": 7196,
+          "name": "VALIDATION.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.2.0/VALIDATION.json"
+        },
+        {
+          "bytes": 313163,
+          "name": "history.html",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.2.0/history.html"
+        },
+        {
+          "bytes": 176925444,
+          "name": "sable-harbor-geographic-evidence-v1.2.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.2.0/sable-harbor-geographic-evidence-v1.2.0.zip"
+        }
+      ],
+      "tag": "geographic-evidence-v1.2.0",
+      "title": "Geographic evidence v1.2.0 \u2014 accepted Klein/Fort history",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/geographic-evidence-v1.2.0"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 8960,
+          "name": "ACCEPTANCE.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.3.0/ACCEPTANCE.json"
+        },
+        {
+          "bytes": 6220,
+          "name": "ACCESS_TESTS.geojson",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.3.0/ACCESS_TESTS.geojson"
+        },
+        {
+          "bytes": 2547,
+          "name": "BROWSER_RESULTS.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.3.0/BROWSER_RESULTS.json"
+        },
+        {
+          "bytes": 47366,
+          "name": "BUILD.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.3.0/BUILD.json"
+        },
+        {
+          "bytes": 4255,
+          "name": "COMPLETION.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.3.0/COMPLETION.json"
+        },
+        {
+          "bytes": 18542,
+          "name": "EVENTS.csv",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.3.0/EVENTS.csv"
+        },
+        {
+          "bytes": 191975,
+          "name": "HIST-2024.png",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.3.0/HIST-2024.png"
+        },
+        {
+          "bytes": 2094823,
+          "name": "HISTORICAL_AND_SITE_ATLAS.pdf",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.3.0/HISTORICAL_AND_SITE_ATLAS.pdf"
+        },
+        {
+          "bytes": 428615,
+          "name": "HISTORY.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.3.0/HISTORY.json"
+        },
+        {
+          "bytes": 122869,
+          "name": "MAP_PREVIEW.png",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.3.0/MAP_PREVIEW.png"
+        },
+        {
+          "bytes": 38848,
+          "name": "NATIVE_QGIS.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.3.0/NATIVE_QGIS.json"
+        },
+        {
+          "bytes": 217016,
+          "name": "PACKAGE_MANIFEST.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.3.0/PACKAGE_MANIFEST.json"
+        },
+        {
+          "bytes": 365096,
+          "name": "RASTER_INVENTORY.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.3.0/RASTER_INVENTORY.json"
+        },
+        {
+          "bytes": 2583,
+          "name": "RESEARCH_BROWSER_RESULTS.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.3.0/RESEARCH_BROWSER_RESULTS.json"
+        },
+        {
+          "bytes": 271399,
+          "name": "SH-SITE-0001-OPTIONS.png",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.3.0/SH-SITE-0001-OPTIONS.png"
+        },
+        {
+          "bytes": 1722,
+          "name": "SHA256SUMS.txt",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.3.0/SHA256SUMS.txt"
+        },
+        {
+          "bytes": 119361,
+          "name": "SITE_DOCKET.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.3.0/SITE_DOCKET.json"
+        },
+        {
+          "bytes": 17773,
+          "name": "SITE_OPTIONS.geojson",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.3.0/SITE_OPTIONS.geojson"
+        },
+        {
+          "bytes": 1522,
+          "name": "SOURCE_REVIEW.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.3.0/SOURCE_REVIEW.json"
+        },
+        {
+          "bytes": 7370,
+          "name": "VALIDATION.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.3.0/VALIDATION.json"
+        },
+        {
+          "bytes": 194718483,
+          "name": "sable-harbor-geographic-evidence-v1.3.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.3.0/sable-harbor-geographic-evidence-v1.3.0.zip"
+        }
+      ],
+      "tag": "geographic-evidence-v1.3.0",
+      "title": "Geographic evidence v1.3.0 \u2014 Research atlas and site alternatives",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/geographic-evidence-v1.3.0"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 11108,
+          "name": "ACCEPTANCE.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/ACCEPTANCE.json"
+        },
+        {
+          "bytes": 1545045,
+          "name": "BEDFORD-F.png",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/BEDFORD-F.png"
+        },
+        {
+          "bytes": 2547,
+          "name": "BROWSER_RESULTS.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/BROWSER_RESULTS.json"
+        },
+        {
+          "bytes": 50944,
+          "name": "BUILD.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/BUILD.json"
+        },
+        {
+          "bytes": 4255,
+          "name": "COMPLETION.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/COMPLETION.json"
+        },
+        {
+          "bytes": 20986,
+          "name": "EVENTS.csv",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/EVENTS.csv"
+        },
+        {
+          "bytes": 3385,
+          "name": "FINALIZATION.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/FINALIZATION.json"
+        },
+        {
+          "bytes": 2580,
+          "name": "FINAL_BROWSER_RESULTS.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/FINAL_BROWSER_RESULTS.json"
+        },
+        {
+          "bytes": 1448677,
+          "name": "FORT-NORTH.png",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/FORT-NORTH.png"
+        },
+        {
+          "bytes": 23237,
+          "name": "GEOGRAPHIC_COMPLETION_2026-09-13.md",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/GEOGRAPHIC_COMPLETION_2026-09-13.md"
+        },
+        {
+          "bytes": 1441717,
+          "name": "Geographic-site-decisions.pdf",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/Geographic-site-decisions.pdf"
+        },
+        {
+          "bytes": 2097635,
+          "name": "HISTORICAL_AND_SITE_ATLAS.pdf",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/HISTORICAL_AND_SITE_ATLAS.pdf"
+        },
+        {
+          "bytes": 478716,
+          "name": "HISTORY.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/HISTORY.json"
+        },
+        {
+          "bytes": 1393032,
+          "name": "HQ-F.png",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/HQ-F.png"
+        },
+        {
+          "bytes": 122906,
+          "name": "MAP_PREVIEW.png",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/MAP_PREVIEW.png"
+        },
+        {
+          "bytes": 42135,
+          "name": "NATIVE_QGIS.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/NATIVE_QGIS.json"
+        },
+        {
+          "bytes": 233529,
+          "name": "PACKAGE_MANIFEST.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/PACKAGE_MANIFEST.json"
+        },
+        {
+          "bytes": 4670,
+          "name": "REJECTED_PROSPECTS.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/REJECTED_PROSPECTS.json"
+        },
+        {
+          "bytes": 1017,
+          "name": "RELEASE_VERIFICATION.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/RELEASE_VERIFICATION.json"
+        },
+        {
+          "bytes": 2583,
+          "name": "RESEARCH_BROWSER_RESULTS.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/RESEARCH_BROWSER_RESULTS.json"
+        },
+        {
+          "bytes": 2612,
+          "name": "SHA256SUMS.txt",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/SHA256SUMS.txt"
+        },
+        {
+          "bytes": 268245,
+          "name": "SITE_DECISIONS.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/SITE_DECISIONS.json"
+        },
+        {
+          "bytes": 12241,
+          "name": "SITE_SCREEN.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/SITE_SCREEN.json"
+        },
+        {
+          "bytes": 3195404,
+          "name": "SOURCE_ADJUDICATION.json.gz",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/SOURCE_ADJUDICATION.json.gz"
+        },
+        {
+          "bytes": 313473,
+          "name": "SOURCE_LEDGER.json.gz",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/SOURCE_LEDGER.json.gz"
+        },
+        {
+          "bytes": 673,
+          "name": "SOURCE_LEDGER_SUMMARY.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/SOURCE_LEDGER_SUMMARY.json"
+        },
+        {
+          "bytes": 1229,
+          "name": "SOURCE_REVIEW.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/SOURCE_REVIEW.json"
+        },
+        {
+          "bytes": 7727,
+          "name": "VALIDATION.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/VALIDATION.json"
+        },
+        {
+          "bytes": 280829,
+          "name": "VISUAL_REVIEW.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/VISUAL_REVIEW.json"
+        },
+        {
+          "bytes": 237264171,
+          "name": "sable-harbor-geographic-evidence-v1.4.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/sable-harbor-geographic-evidence-v1.4.0.zip"
+        },
+        {
+          "bytes": 5209,
+          "name": "verify-release.py",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.4.0/verify-release.py"
+        }
+      ],
+      "tag": "geographic-evidence-v1.4.0",
+      "title": "Geographic decisions and final source review \u00b7 1.4.0",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/geographic-evidence-v1.4.0"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 237428145,
+          "name": "sable-harbor-geographic-evidence-v1.5.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.5.0/sable-harbor-geographic-evidence-v1.5.0.zip"
+        }
+      ],
+      "tag": "geographic-evidence-v1.5.0",
+      "title": "Geographic evidence 1.5.0",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/geographic-evidence-v1.5.0"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 51867,
+          "name": "MANIFEST.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geospatial-v0.1.0-rc4/MANIFEST.json"
+        },
+        {
+          "bytes": 185,
+          "name": "SHA256SUMS.txt",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geospatial-v0.1.0-rc4/SHA256SUMS.txt"
+        },
+        {
+          "bytes": 56084346,
+          "name": "sable-harbor-geospatial-v0.1.0-rc4.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geospatial-v0.1.0-rc4/sable-harbor-geospatial-v0.1.0-rc4.zip"
+        }
+      ],
+      "tag": "geospatial-v0.1.0-rc4",
+      "title": "Sable Harbor geospatial v0.1.0-rc4",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/geospatial-v0.1.0-rc4"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 416,
+          "name": "red-wash-transaction-operating-record-v1.0.0-SHA256SUMS.txt",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/red-wash-transaction-operating-record-v1.0.0/red-wash-transaction-operating-record-v1.0.0-SHA256SUMS.txt"
+        },
+        {
+          "bytes": 7470630,
+          "name": "red-wash-transaction-operating-record-v1.0.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/red-wash-transaction-operating-record-v1.0.0/red-wash-transaction-operating-record-v1.0.0.zip"
+        },
+        {
+          "bytes": 24329,
+          "name": "red_wash_database_manifest.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/red-wash-transaction-operating-record-v1.0.0/red_wash_database_manifest.json"
+        },
+        {
+          "bytes": 1089536,
+          "name": "red_wash_transaction_operating_record_v1.sqlite3",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/red-wash-transaction-operating-record-v1.0.0/red_wash_transaction_operating_record_v1.sqlite3"
+        },
+        {
+          "bytes": 11965,
+          "name": "release_manifest.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/red-wash-transaction-operating-record-v1.0.0/release_manifest.json"
+        }
+      ],
+      "tag": "red-wash-transaction-operating-record-v1.0.0",
+      "title": "Red Wash transaction and operating record v1.0.0",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/red-wash-transaction-operating-record-v1.0.0"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 9539,
+          "name": "FINAL_CHECKS.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/runtime-estate-v1.0.0/FINAL_CHECKS.json"
+        },
+        {
+          "bytes": 26387,
+          "name": "QGIS_VALIDATION.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/runtime-estate-v1.0.0/QGIS_VALIDATION.json"
+        },
+        {
+          "bytes": 1483,
+          "name": "REPRODUCTION.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/runtime-estate-v1.0.0/REPRODUCTION.json"
+        },
+        {
+          "bytes": 360,
+          "name": "SHA256SUMS.txt",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/runtime-estate-v1.0.0/SHA256SUMS.txt"
+        },
+        {
+          "bytes": 148422704,
+          "name": "sable-harbor-runtime-estate-v1.0.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/runtime-estate-v1.0.0/sable-harbor-runtime-estate-v1.0.0.zip"
+        }
+      ],
+      "tag": "runtime-estate-v1.0.0",
+      "title": "Runtime estate design and enterprise financial successor v1.0.0",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/runtime-estate-v1.0.0"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 6014,
+          "name": "DELIVERY_COMPLETION_2026-09-22.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.0.0/DELIVERY_COMPLETION_2026-09-22.json"
+        },
+        {
+          "bytes": 102,
+          "name": "DELIVERY_COMPLETION_2026-09-22.sha256",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.0.0/DELIVERY_COMPLETION_2026-09-22.sha256"
+        },
+        {
+          "bytes": 13093,
+          "name": "PORTAL_EDITION_REHEARSAL.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.0.0/PORTAL_EDITION_REHEARSAL.json"
+        },
+        {
+          "bytes": 189175,
+          "name": "RELEASE_RECEIPT.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.0.0/RELEASE_RECEIPT.json"
+        },
+        {
+          "bytes": 42773,
+          "name": "SELECTED_REVIEW_EXPORT.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.0.0/SELECTED_REVIEW_EXPORT.zip"
+        },
+        {
+          "bytes": 554,
+          "name": "SHA256SUMS.txt",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.0.0/SHA256SUMS.txt"
+        },
+        {
+          "bytes": 17726,
+          "name": "VALIDATION.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.0.0/VALIDATION.json"
+        },
+        {
+          "bytes": 425528,
+          "name": "VALIDATION_EVIDENCE.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.0.0/VALIDATION_EVIDENCE.zip"
+        },
+        {
+          "bytes": 604049636,
+          "name": "sable-harbor-company-edition-v1.0.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.0.0/sable-harbor-company-edition-v1.0.0.zip"
+        }
+      ],
+      "tag": "sable-harbor-company-edition-v1.0.0",
+      "title": "Sable Harbor company edition 1.0.0 \u2014 scoped inspection release",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/sable-harbor-company-edition-v1.0.0"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 3075,
+          "name": "DELIVERY_COMPLETION_2026-09-22.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.1.0/DELIVERY_COMPLETION_2026-09-22.json"
+        },
+        {
+          "bytes": 102,
+          "name": "DELIVERY_COMPLETION_2026-09-22.json.sha256",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.1.0/DELIVERY_COMPLETION_2026-09-22.json.sha256"
+        },
+        {
+          "bytes": 17445,
+          "name": "PORTAL_EDITION_REHEARSAL.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.1.0/PORTAL_EDITION_REHEARSAL.json"
+        },
+        {
+          "bytes": 4306,
+          "name": "PUBLIC_COPY_DISPOSAL.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.1.0/PUBLIC_COPY_DISPOSAL.json"
+        },
+        {
+          "bytes": 204912,
+          "name": "RELEASE_RECEIPT.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.1.0/RELEASE_RECEIPT.json"
+        },
+        {
+          "bytes": 76788,
+          "name": "SELECTED_REVIEW_EXPORT.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.1.0/SELECTED_REVIEW_EXPORT.zip"
+        },
+        {
+          "bytes": 15444,
+          "name": "SELECTED_REVIEW_RECEIPT.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.1.0/SELECTED_REVIEW_RECEIPT.json"
+        },
+        {
+          "bytes": 854,
+          "name": "SHA256SUMS.txt",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.1.0/SHA256SUMS.txt"
+        },
+        {
+          "bytes": 5763,
+          "name": "VALIDATION.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.1.0/VALIDATION.json"
+        },
+        {
+          "bytes": 101223,
+          "name": "VALIDATION_EVIDENCE.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.1.0/VALIDATION_EVIDENCE.zip"
+        },
+        {
+          "bytes": 604651831,
+          "name": "sable-harbor-company-edition-v1.1.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.1.0/sable-harbor-company-edition-v1.1.0.zip"
+        },
+        {
+          "bytes": 106,
+          "name": "sable-harbor-company-edition-v1.1.0.zip.sha256",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.1.0/sable-harbor-company-edition-v1.1.0.zip.sha256"
+        }
+      ],
+      "tag": "sable-harbor-company-edition-v1.1.0",
+      "title": "Sable Harbor company edition 1.1.0",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/sable-harbor-company-edition-v1.1.0"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 9830,
+          "name": "DELIVERY_COMPLETION_2026-09-22.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.2.0/DELIVERY_COMPLETION_2026-09-22.json"
+        },
+        {
+          "bytes": 102,
+          "name": "DELIVERY_COMPLETION_2026-09-22.json.sha256",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.2.0/DELIVERY_COMPLETION_2026-09-22.json.sha256"
+        },
+        {
+          "bytes": 23324,
+          "name": "PORTAL_EDITION_REHEARSAL.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.2.0/PORTAL_EDITION_REHEARSAL.json"
+        },
+        {
+          "bytes": 4306,
+          "name": "PUBLIC_COPY_DISPOSAL.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.2.0/PUBLIC_COPY_DISPOSAL.json"
+        },
+        {
+          "bytes": 253333,
+          "name": "RELEASE_RECEIPT.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.2.0/RELEASE_RECEIPT.json"
+        },
+        {
+          "bytes": 1016,
+          "name": "RUNTIME_DEPENDENCY.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.2.0/RUNTIME_DEPENDENCY.json"
+        },
+        {
+          "bytes": 130549,
+          "name": "SELECTED_REVIEW_EXPORT.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.2.0/SELECTED_REVIEW_EXPORT.zip"
+        },
+        {
+          "bytes": 21093,
+          "name": "SELECTED_REVIEW_RECEIPT.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.2.0/SELECTED_REVIEW_RECEIPT.json"
+        },
+        {
+          "bytes": 1044,
+          "name": "SHA256SUMS.txt",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.2.0/SHA256SUMS.txt"
+        },
+        {
+          "bytes": 5352,
+          "name": "VALIDATION.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.2.0/VALIDATION.json"
+        },
+        {
+          "bytes": 257732,
+          "name": "VALIDATION_EVIDENCE.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.2.0/VALIDATION_EVIDENCE.zip"
+        },
+        {
+          "bytes": 6722,
+          "name": "WORKING_COPY_RESTORE_RECEIPT.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.2.0/WORKING_COPY_RESTORE_RECEIPT.json"
+        },
+        {
+          "bytes": 605511732,
+          "name": "sable-harbor-company-edition-v1.2.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.2.0/sable-harbor-company-edition-v1.2.0.zip"
+        },
+        {
+          "bytes": 106,
+          "name": "sable-harbor-company-edition-v1.2.0.zip.sha256",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-company-edition-v1.2.0/sable-harbor-company-edition-v1.2.0.zip.sha256"
+        }
+      ],
+      "tag": "sable-harbor-company-edition-v1.2.0",
+      "title": "Sable Harbor company edition 1.2.0",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/sable-harbor-company-edition-v1.2.0"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 216637,
+          "name": "sable-harbor-finance-business-unit-evidence-v0.1.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-finance-v0.1.0/sable-harbor-finance-business-unit-evidence-v0.1.0.zip"
+        },
+        {
+          "bytes": 364064,
+          "name": "sable-harbor-finance-public-demo-v0.1.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-finance-v0.1.0/sable-harbor-finance-public-demo-v0.1.0.zip"
+        },
+        {
+          "bytes": 231,
+          "name": "sable-harbor-finance-v0.1.0-SHA256SUMS.txt",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-finance-v0.1.0/sable-harbor-finance-v0.1.0-SHA256SUMS.txt"
+        }
+      ],
+      "tag": "sable-harbor-finance-v0.1.0",
+      "title": "Sable Harbor enterprise financial data platform v0.1.0",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/sable-harbor-finance-v0.1.0"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 113,
+          "name": "SHA256SUMS.txt",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-industrial-case-v1.0.0/SHA256SUMS.txt"
+        },
+        {
+          "bytes": 81508,
+          "name": "industrial_delivery_inventory.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-industrial-case-v1.0.0/industrial_delivery_inventory.json"
+        },
+        {
+          "bytes": 148105,
+          "name": "participant_manifest.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-industrial-case-v1.0.0/participant_manifest.json"
+        },
+        {
+          "bytes": 469,
+          "name": "release_SHA256SUMS.txt",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-industrial-case-v1.0.0/release_SHA256SUMS.txt"
+        },
+        {
+          "bytes": 12606089,
+          "name": "sable-harbor-industrial-participant-v1.0.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-industrial-case-v1.0.0/sable-harbor-industrial-participant-v1.0.0.zip"
+        },
+        {
+          "bytes": 458,
+          "name": "validation.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-industrial-case-v1.0.0/validation.json"
+        }
+      ],
+      "tag": "sable-harbor-industrial-case-v1.0.0",
+      "title": "Sable Harbor industrial case v1.0.0 \u2014 Pale Sun, Red Wash, ARU and BS&T",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/sable-harbor-industrial-case-v1.0.0"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 484,
+          "name": "SHA256SUMS.txt",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-industrial-case-v2.0.0/SHA256SUMS.txt"
+        },
+        {
+          "bytes": 181342208,
+          "name": "industrial_planning_case.sqlite3",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-industrial-case-v2.0.0/industrial_planning_case.sqlite3"
+        },
+        {
+          "bytes": 215398,
+          "name": "industrial_planning_delivery_inventory.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-industrial-case-v2.0.0/industrial_planning_delivery_inventory.json"
+        },
+        {
+          "bytes": 4122369,
+          "name": "industrial_planning_review.xlsx",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-industrial-case-v2.0.0/industrial_planning_review.xlsx"
+        },
+        {
+          "bytes": 281177,
+          "name": "participant_manifest.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-industrial-case-v2.0.0/participant_manifest.json"
+        },
+        {
+          "bytes": 675,
+          "name": "release_SHA256SUMS.txt",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-industrial-case-v2.0.0/release_SHA256SUMS.txt"
+        },
+        {
+          "bytes": 43776729,
+          "name": "sable-harbor-industrial-participant-v2.0.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-industrial-case-v2.0.0/sable-harbor-industrial-participant-v2.0.0.zip"
+        },
+        {
+          "bytes": 1667,
+          "name": "validation.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-industrial-case-v2.0.0/validation.json"
+        }
+      ],
+      "tag": "sable-harbor-industrial-case-v2.0.0",
+      "title": "Sable Harbor industrial planning and enterprise case v2.0.0",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/sable-harbor-industrial-case-v2.0.0"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 95412,
+          "name": "MANIFEST.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-legal-review-v0.4.0-review.3/MANIFEST.json"
+        },
+        {
+          "bytes": 47429,
+          "name": "SHA256SUMS.txt",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-legal-review-v0.4.0-review.3/SHA256SUMS.txt"
+        },
+        {
+          "bytes": 5796475,
+          "name": "sable-harbor-legal-review-v0.4.0-review.3.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/sable-harbor-legal-review-v0.4.0-review.3/sable-harbor-legal-review-v0.4.0-review.3.zip"
+        }
+      ],
+      "tag": "sable-harbor-legal-review-v0.4.0-review.3",
+      "title": "Accounting and legal review tools v0.4.0-review.3",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/sable-harbor-legal-review-v0.4.0-review.3"
+    }
+  ]
+}

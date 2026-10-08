@@ -2,16 +2,20 @@
 
 <img src="../../../assets/brand/logos/j2__primary-horizontal.png" alt="J2 approved identity" width="240">
 
-**Canon state:** LOCKED DIRECTION doctrine; LOCKED establishment and current leadership.<br>
-**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
+[Wiki home](../Home.md) · [Departments](README.md) · [All files](../Files.md)
 
-Contact obtains records, interviews, field observations and external research in response to intelligence requirements. It chooses lawful collection methods and records provenance; Judgment Officers retain ownership of the resulting investigations.
+Contact gathers records, interviews, field observations and external research for J2 investigations. It chooses lawful ways to obtain the information and records where it came from. The Judgment Officer then uses that evidence to investigate the problem.
 
-## Reading guide
+<a id="reading-guide"></a>
+<a id="what-remains-unknown"></a>
 
-Contact turns intelligence requirements into lawful collection and a traceable evidentiary handoff. It chooses collection methods; the resulting investigation remains with its Judgment Officer.
+## Collecting evidence
 
-## Read and use the records
+Collection disciplines describe the methods available to Contact. Source access follows the permissions of the relevant system; the [Alexandria guide](alexandria.md) explains the portal and its supported authorization scope.
+
+<a id="read-and-use-the-records"></a>
+
+## Documents
 
 - [Contact doctrine](../../../docs/j2/CONTACT.md) — Collection scope and boundaries.
 - [Collection management](../../../docs/j2/CONTACT_COLLECTION_MANAGEMENT.md) — Requirements, capacity allocation, methods and evidentiary handoff.
@@ -19,19 +23,13 @@ Contact turns intelligence requirements into lawful collection and a traceable e
 - [Establishment](../../../docs/j2/J2_ESTABLISHMENT.md) — 78 authorized Contact billets.
 - [Leadership appointments](../../../docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md) — Mara Hammer is Head of Contact; joined Sable Harbor in 2021.
 
-## Organization and identity
+<a id="organization-and-identity"></a>
 
-[Organization chart, text roster and source qualifications](../../organization/charts/corporate-contact-disciplines.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+## Organization
+
+[Organization chart and roster](../../organization/charts/corporate-contact-disciplines.md) · [Complete chart book](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Contact — shared organization chart, first page](../../organization/assets/current/corporate-contact-disciplines.png)](../../organization/assets/current/corporate-contact-disciplines.png)
-
-The shared chart retains its original scope; it is not a new reporting chart for this page. The approved J2 mark above identifies the parent institution.
-
-[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
-
-## What remains unknown
-
-Collection disciplines are capabilities, not additional staffed departments. Raw-source entitlements and integrated enforcement retain issue #22’s boundary. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
 
 ## Related reading
 
@@ -39,3 +37,11 @@ Collection disciplines are capabilities, not additional staffed departments. Raw
 - [Orientation](orientation.md)
 - [Alexandria institutional environment](alexandria.md)
 - [J2 Headquarters](j2-headquarters.md)
+
+<details>
+<summary>About this article</summary>
+
+**Canon state:** LOCKED DIRECTION doctrine; LOCKED establishment and current leadership.
+**Reviewed:** October 7, 2026. Supporting documents retain their own dates and status.
+
+</details>

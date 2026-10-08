@@ -1,6 +1,6 @@
 # Klein, Emberline and Willow
 
-Klein and Emberline have different histories. The [September 7 Klein decision](../../canon/KLEIN_NAME_AND_IDENTITY_2026-09-07.md) controls the historical name; older finance-pinned files retain the superseded editorial name rather than establishing a separate business.
+Klein was an engineering outpost near Pittsburgh. Emberline was a coal-facing commercial and field program centered in Charleston. Their work followed different paths, with Willow developing from the surviving experimental capability. The [name record](../../canon/KLEIN_NAME_AND_IDENTITY_2026-09-07.md) explains the earlier Klein name found in preserved finance files.
 
 | Subject | Historical scope | Read and inspect |
 |---|---|---|
@@ -10,20 +10,15 @@ Klein and Emberline have different histories. The [September 7 Klein decision](.
 
 The closeout supplies the specific 2018 instrumentation incident and the Sar-e-Sang governance history where earlier lore left detail open. Read it before inferring wrongdoing or a formal investigation from a near miss. Surviving Klein signs, prototypes and the Fort's Museum are historical objects, not a surviving shadow department or public museum operation.
 
-For financial review, open the [Willow/Klein finance model](../../finance/WILLOW_KLEIN_FINANCE_AND_CORPORATE_MODEL_2026-09-06.md). Do not invent an acquisition, goodwill or a second 2026 P&L for the internal transition. Emberline's enduring work passes into Foundry, Willow, field operations and Advisory; that does not create a new current subsidiary.
+For financial review, open the [Willow/Klein finance model](../../finance/WILLOW_KLEIN_FINANCE_AND_CORPORATE_MODEL_2026-09-06.md). The transition was internal and is recorded on the parent’s books. Emberline's enduring work passes into Foundry, Willow, field operations and Advisory; that does not create a new current subsidiary.
 
 [Existing research-history chart](../../organization/charts/research-history.md) · [Research artifacts](../../organization/charts/research-artifacts.md)
 
-[Subject directory](README.md) · [Business directory](../businesses/README.md) · [Department directory](../departments/README.md) · [Wiki home](../Home.md)
+[Subject directory](README.md) · [Business directory](../businesses/README.md) · [Department directory](../departments/README.md) · [Wiki home](../Home.md) · [All files](../Files.md)
 
-## Reading guide
+<a id="reading-guide"></a>
 
-Trace Klein, Emberline and Willow as distinct historical and institutional concepts. The transition is easier to follow when experiments, the physical outpost and the current parent-book program are kept separate.
-
-
-## What remains unknown
-
-Institutional founding and formalization dates do not establish parcel tenure or occupancy. Exact historical site linkage remains open under issue #106. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+<a id="what-remains-unknown"></a>
 
 ## Related reading
 

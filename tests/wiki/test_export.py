@@ -1,10 +1,12 @@
 import importlib.util
 import json
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
 
 from tools.wiki.audit import audit_export
+from tools.wiki.freshness import compare
 
 SPEC = importlib.util.spec_from_file_location(
     "wiki_export", Path(__file__).resolve().parents[2] / "tools/wiki/export.py"
@@ -212,6 +214,133 @@ class WikiExportTests(unittest.TestCase):
         (wiki / MODULE.MANIFEST).write_text(json.dumps({"files": {"../outside.md": "hash"}}))
         with self.assertRaises(ValueError):
             MODULE.sync(output, wiki)
+
+    def file_directory_fixture(self):
+        subprocess.run(["git", "init", "-q", str(self.root)], check=True)
+        self.home.write_text("# Home\n\n[All files](Files.md)\n")
+        (self.root / "README.md").write_text(
+            "# Repository\n\n[All files]"
+            "(https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Files)\n"
+        )
+        for name in (
+            "Files.md",
+            "Library.md",
+            "Locations.md",
+            "Records-and-Decisions.md",
+            "businesses/README.md",
+            "departments/README.md",
+            "subjects/README.md",
+        ):
+            path = self.home.parent / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text("# Directory\n")
+        data = self.root / "data/deep/nested"
+        data.mkdir(parents=True)
+        for i in range(251):
+            (data / f"record {i:03}.csv").write_text("id,value\n1,2\n")
+        (data / "untracked-private.txt").write_text("Never publish this file")
+        subprocess.run(["git", "add", "."], cwd=self.root, check=True)
+        subprocess.run(
+            ["git", "rm", "--cached", "data/deep/nested/untracked-private.txt"],
+            cwd=self.root,
+            check=True,
+            capture_output=True,
+        )
+
+    def test_every_tracked_format_has_a_visible_three_click_original(self):
+        self.file_directory_fixture()
+        output = self.base / "output"
+        manifest = MODULE.Exporter(self.root, SHA).build(output)
+        inventory = manifest["file_directory"]
+        self.assertIn("asset.png", inventory)
+        self.assertIn("data/deep/nested/record 250.csv", inventory)
+        self.assertNotIn("data/deep/nested/untracked-private.txt", inventory)
+        self.assertIn("Files--data-1.md", manifest["files"])
+        self.assertIn("Files--data-2.md", manifest["files"])
+        self.assertIn(
+            f"https://raw.githubusercontent.com/{MODULE.REPOSITORY}/{SHA}/"
+            "data/deep/nested/record%20250.csv",
+            (output / "Files--data-2.md").read_text(),
+        )
+        report = audit_export(output, root=self.root)
+        self.assertEqual(report["errors"], [])
+        self.assertEqual(report["maximum_file_clicks"], 3)
+        self.assertEqual(report["indexed_files"], len(inventory))
+        (self.root / "README.md").write_text("# Repository\n")
+        self.assertIn(
+            "README: missing direct All files link", audit_export(output, root=self.root)["errors"]
+        )
+
+    def test_hidden_file_link_and_added_file_fail_publication_audit(self):
+        self.file_directory_fixture()
+        output = self.base / "output"
+        manifest = MODULE.Exporter(self.root, SHA).build(output)
+        filename = manifest["file_directory"]["asset.png"]
+        path = output / filename
+        path.write_text(
+            "<details><summary>Hidden files</summary>\n\n" + path.read_text() + "\n</details>\n"
+        )
+        errors = "\n".join(audit_export(output, root=self.root)["errors"])
+        self.assertIn("asset.png: missing visible original-file link", errors)
+        (self.root / "new.txt").write_text("New public source")
+        subprocess.run(["git", "add", "new.txt"], cwd=self.root, check=True)
+        self.assertIn(
+            "File directory differs from the tracked repository inventory",
+            audit_export(output, root=self.root)["errors"],
+        )
+
+    def test_unrelated_bytes_keep_directory_current_but_membership_changes_do_not(self):
+        self.file_directory_fixture()
+        output = self.base / "output"
+        published = MODULE.Exporter(self.root, SHA).build(output)
+        (self.root / "data/deep/nested/record 250.csv").write_text("id,value\n1,3\n")
+        expected = MODULE.Exporter(self.root, SHA).build(self.base / "changed-bytes")
+        self.assertEqual(compare(expected, published, output)["state"], "current")
+        (self.root / "data/new.csv").write_text("id,value\n2,4\n")
+        subprocess.run(["git", "add", "data/new.csv"], cwd=self.root, check=True)
+        added = MODULE.Exporter(self.root, SHA).build(self.base / "added-file")
+        self.assertEqual(compare(added, published, output)["state"], "stale")
+        subprocess.run(
+            ["git", "rm", "--cached", "data/deep/nested/record 000.csv"],
+            cwd=self.root,
+            check=True,
+            capture_output=True,
+        )
+        removed = MODULE.Exporter(self.root, SHA).build(self.base / "removed-file")
+        self.assertEqual(compare(removed, added, self.base / "added-file")["state"], "stale")
+
+    def test_generated_downloads_cannot_replace_an_authored_article(self):
+        self.file_directory_fixture()
+        authored = self.home.parent / "Downloads.md"
+        authored.write_text("# My downloads\n\nPreserve this authored article.\n")
+        plan = self.root / "tools/wiki/downloads.json"
+        plan.parent.mkdir(parents=True)
+        plan.write_text(
+            json.dumps(
+                {
+                    "releases": [
+                        {
+                            "title": "Example release",
+                            "tag": "example",
+                            "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/example",
+                            "assets": [
+                                {
+                                    "name": "example.csv",
+                                    "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/"
+                                    "example/example.csv",
+                                }
+                            ],
+                        }
+                    ]
+                }
+            )
+        )
+        subprocess.run(["git", "add", "."], cwd=self.root, check=True)
+        output = self.base / "output"
+        with self.assertRaisesRegex(ValueError, "Release directory collides"):
+            MODULE.Exporter(self.root, SHA).build(output)
+        self.assertFalse(output.exists())
+        self.assertIn("Preserve this authored article", authored.read_text())
 
 
 if __name__ == "__main__":

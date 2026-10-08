@@ -2,16 +2,20 @@
 
 <img src="../../../assets/brand/logos/j2__primary-horizontal.png" alt="J2 approved identity" width="240">
 
-**Canon state:** LOCKED DIRECTION institutional environment; runtime design has separate accepted scope.<br>
-**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
+[Wiki home](../Home.md) · [Departments](README.md) · [All files](../Files.md)
 
-Alexandria preserves institutional records and their history and connects questions, evidence, judgments and decisions. Pinakes is the human catalog/portal; Daedalus assists the user within human-authorship and authority boundaries.
+Alexandria connects company records with the questions, investigations and decisions that used them. It keeps earlier versions available so a reader can follow both what changed and what was known at the time. Pinakes is the catalog and portal; Daedalus helps people examine the material. People remain responsible for the judgments and decisions they record.
 
-## Reading guide
+<a id="reading-guide"></a>
+<a id="what-remains-unknown"></a>
 
-Alexandria preserves records, provenance and the history of what the institution knew. Pinakes is the human entry point; Daedalus assists within disclosure and authorship limits rather than becoming the institution itself.
+## Records and institutional memory
 
-## Read and use the records
+The accepted portal, authorization and recovery implementations have specific documented scopes. The [runtime receipt](../../internal/company-closeout/daedalus-rehearsal-2026-09-29/ACCEPTED_RUNTIME_RECEIPT.md) describes the model rehearsal and the remaining work for broader use and external deployment.
+
+<a id="read-and-use-the-records"></a>
+
+## Documents
 
 - [Alexandria source library](../../../docs/j2/alexandria/README.md) — Start with the charter and navigate all foundation doctrines.
 - [Charter](../../../docs/j2/alexandria/ALEXANDRIA_CHARTER.md) — Temporal integrity, provenance and desktop-first access.
@@ -22,19 +26,13 @@ Alexandria preserves records, provenance and the history of what the institution
 - [Current runtime design](../../../enterprise/runtime/README.md) — Later accepted hosting and runtime implementation records.
 - [Controlled charter PDF](../../../docs/j2/publications/SH-J2-ALX-001_v1.0.1.pdf) — Reader edition.
 
-## Organization and identity
+<a id="organization-and-identity"></a>
 
-[Organization chart, text roster and source qualifications](../../organization/charts/corporate-alexandria.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+## Organization
+
+[Organization chart and roster](../../organization/charts/corporate-alexandria.md) · [Complete chart book](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Alexandria institutional environment — shared organization chart, first page](../../organization/assets/current/corporate-alexandria.png)](../../organization/assets/current/corporate-alexandria.png)
-
-The shared chart retains its original scope; it is not a new reporting chart for this page. The approved J2 mark above identifies the parent institution.
-
-[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
-
-## What remains unknown
-
-Runtime qualification, raw-source entitlements, retention/deletion schedules and Daedalus leakage enforcement remain open under issues #21, #22, #24 and #34. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
 
 ## Related reading
 
@@ -42,3 +40,11 @@ Runtime qualification, raw-source entitlements, retention/deletion schedules and
 - [Judgment](judgment.md)
 - [Enterprise Technology Services](technology.md)
 - [Enterprise security capability](security.md)
+
+<details>
+<summary>About this article</summary>
+
+**Canon state:** LOCKED DIRECTION institutional environment; runtime design has separate accepted scope.
+**Reviewed:** October 7, 2026. Supporting documents retain their own dates and status.
+
+</details>

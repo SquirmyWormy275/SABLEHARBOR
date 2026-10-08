@@ -2,16 +2,20 @@
 
 <img src="../../../assets/brand/logos/sable-harbor__reverse-horizontal.png" alt="Sable Harbor approved identity" width="360">
 
-**Canon state:** LOCKED institutional scope; implementation detail varies by linked record.<br>
-**Reviewed:** September 12, 2026. This is a reading guide; linked source records control.
+[Wiki home](../Home.md) · [Departments](README.md) · [All files](../Files.md)
 
-This ESS capability supports offices, workspaces and shared facilities. The facility archive connects source locations, planning populations, campus programs, buildings and individual floor assets.
+Facilities and workplace services supports the offices and shared spaces used across Sable Harbor. The [location directory](../Locations.md) describes working bases and operating sites. The visitor map introduces the Sacramento campus concept; the facility index links individual site, building and floor plans.
 
-## Reading guide
+<a id="reading-guide"></a>
+<a id="what-remains-unknown"></a>
 
-Use the visitor map to understand the campus concept, then the facility records to inspect specific sites, buildings and floors. Keep capacity assumptions, measured geometry and historical occupancy separate throughout the review.
+## Offices, workplaces and plans
 
-## Read and use the records
+Each drawing identifies its own edition and purpose. Planned capacity, measured geometry and recorded occupancy describe different aspects of a place; use the accompanying site record when checking one of those figures.
+
+<a id="read-and-use-the-records"></a>
+
+## Documents
 
 - [Selected Sacramento visitor map V08](../../../geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.png) — Owner-selected illustrative visitor view; [download PDF](../../../geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.pdf). Its [acceptance record](../../../geospatial/facilities/visitor/ACCEPTANCE.json) freezes the artwork, without adopting it as measured geometry.
 - [Headquarters physical doctrine](../../../docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md) — Section 15 states the Sacramento campus intent.
@@ -21,20 +25,13 @@ Use the visitor map to understand the campus concept, then the facility records 
 - [Spatial package](../../../geospatial/facilities/spatial/README.md) — Sections, elevations, roofs, room schedules and context references.
 - [Services and capacity](../../../enterprise/services/README.md) — Shared support and conditional capacity assumptions.
 
-## Organization and identity
+<a id="organization-and-identity"></a>
 
-[Organization chart, text roster and source qualifications](../../organization/charts/corporate-enterprise-support.md) · [Complete organization publication](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
+## Organization
+
+[Organization chart and roster](../../organization/charts/corporate-enterprise-support.md) · [Complete chart book](../../organization/assets/current/Sable-Harbor-Organization-Charts.pdf).
 
 [![Facilities and workplace services — shared organization chart, first page](../../organization/assets/current/corporate-enterprise-support.png)](../../organization/assets/current/corporate-enterprise-support.png)
-
-The shared chart retains its original scope; it is not a new reporting chart for this page. The approved corporate mark above identifies the parent institution.
-
-[Department and institution directory](README.md) · [Business directory](../businesses/README.md) · [Wiki home](../Home.md)
-[Continuity and crisis responsibilities across the existing institutions](../subjects/Continuity.md).
-
-## What remains unknown
-
-See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for current site and occupancy evidence limits.
 
 ## Related reading
 
@@ -42,3 +39,11 @@ See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR
 - [People & Culture](people-culture.md)
 - [Continuity and crisis responsibilities](../subjects/Continuity.md)
 - [Willow](../businesses/Willow.md)
+
+<details>
+<summary>About this article</summary>
+
+**Canon state:** LOCKED institutional scope; implementation detail varies by linked record.
+**Reviewed:** October 7, 2026. Supporting documents retain their own dates and status.
+
+</details>

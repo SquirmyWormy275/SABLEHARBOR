@@ -1,8 +1,8 @@
 # Controls, services and runtime
 
-[Library](../Library.md) · [Company index](../Home.md)
+[Library](../Library.md) · [All files](../Files.md) · [Company index](../Home.md)
 
-Generated file inventory. Includes current and historical records; open the source for its status. A folder or title does not establish approval. PDF companions below are verified through the controlled-publication manifest. Other files are listed independently; an absent companion link means unmapped, not proven nonexistent.
+Browse the documents below, grouped by folder. Earlier editions remain available alongside current records. Where a formatted PDF has been verified against its source, the two are linked together.
 
 ## `docs/controls`
 
@@ -26,7 +26,7 @@ Generated file inventory. Includes current and historical records; open the sour
 ## `enterprise/ccf`
 
 - [CCF preparation procedures](../../../enterprise/ccf/PROCEDURES.md) — MD
-- [Native CCF preparation](../../../enterprise/ccf/README.md) — MD
+- [CCF control register and testing examples](../../../enterprise/ccf/README.md) — MD
 
 ## `enterprise/ccf/assurance`
 

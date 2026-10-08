@@ -1,10 +1,10 @@
 # Other external and personal relationships
 
-Use the [historical/external boundary record](../../business-lines/HISTORICAL_AND_EXTERNAL_BOUNDARIES.md) before including these names in ownership, revenue or employee totals.
+Sable Harbor’s history includes former colleagues’ businesses, transaction counterparties, investors and suppliers. The relationships below explain how each connects to the company. The [relationship guide](../../business-lines/HISTORICAL_AND_EXTERNAL_BOUNDARIES.md) provides the supporting detail.
 
 | Subject | Relationship | Read and inspect |
 |---|---|---|
-| Quality Forest Communications | Eli Hoberg's earlier forestry-communications company; no automatic Sable Harbor acquisition, vendor relationship or opening balance. | [Willow/Klein history](../../canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md), [identity decision](../../canon/QUALITY_FOREST_COMMUNICATIONS_VISUAL_IDENTITY_2026-09-07.md), [approved logo](../../../assets/brand/logos/quality-forest-communications__primary-horizontal.png) |
+| Quality Forest Communications | Eli Hoberg’s earlier forestry-communications company, recorded as part of his history. | [Willow/Klein history](../../canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md), [identity decision](../../canon/QUALITY_FOREST_COMMUNICATIONS_VISUAL_IDENTITY_2026-09-07.md), [approved logo](../../../assets/brand/logos/quality-forest-communications__primary-horizontal.png) |
 | Northstar Minerals, Inc. | External Wyoming Red Wash seller led by Henry Norwood; separate from the ARU sale. | [R2 transaction source](../../canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md), [identity decision](../../canon/NORTHSTAR_MINERALS_VISUAL_IDENTITY_2026-09-07.md), [approved logo](../../../assets/brand/logos/northstar-minerals__primary-horizontal.png) |
 | Harrison Vale Partners and Wolf Ridge Holdings | External investors; financing and director relationships do not supply operational vetoes or privileged commercial access. | [Investor chart](../../organization/charts/external-investors.md), [Board/capital record](../../governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md) |
 | Gid's balloon activity | Personal biographical context, not corporate operations. | [Willow/Klein closeout](../../canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md), [boundary record](../../business-lines/HISTORICAL_AND_EXTERNAL_BOUNDARIES.md) |
@@ -14,16 +14,11 @@ For a transaction exercise, follow the [Red Wash transaction file](../../../indu
 
 Related: [Cradle hosts](External-Hosts.md), [abandoned acquisition opportunities](Historical-Opportunities.md), [Blackridge separate case](Blackridge.md).
 
-[Subject directory](README.md) · [Business directory](../businesses/README.md) · [Department directory](../departments/README.md) · [Wiki home](../Home.md)
+[Subject directory](README.md) · [Business directory](../businesses/README.md) · [Department directory](../departments/README.md) · [Wiki home](../Home.md) · [All files](../Files.md)
 
-## Reading guide
+<a id="reading-guide"></a>
 
-Use this page to separate investors, sellers, suppliers and personal relationships from the company’s operating businesses. A relationship can matter to the history without making the counterparty part of the organization.
-
-
-## What remains unknown
-
-Names and relationship charts do not establish executed supplier contracts, institutional employment or legal ownership beyond the controlling record. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+<a id="what-remains-unknown"></a>
 
 ## Related reading
 

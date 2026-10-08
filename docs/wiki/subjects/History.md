@@ -1,6 +1,6 @@
 # Company history and The Crossing
 
-**Scope:** historical reading route, not a new chronology source. Start with [current organizational lineage](../../organization/ORGANIZATIONAL_LINEAGE_2015_2026_v0.3.1.md), then use the dated decisions linked below where they supersede earlier lore.
+Sable Harbor began as a services-led mining-data and operating-consulting business. Its history follows the move to reusable software and, later, a broader portfolio of industrial and professional work. The [organizational history](../../organization/ORGANIZATIONAL_LINEAGE_2015_2026_v0.3.1.md) brings that development together.
 
 | Period | What changed | Read the evidence |
 |---|---|---|
@@ -13,18 +13,13 @@
 
 For a management case, compare one specific pre-Crossing dependency with the change in remote deployment, then identify which emergency exceptions should not become permanent authority. The archive's retrospective narrative is not a contemporaneous incident log or an audited historical financial series.
 
-Use the [dated canon library](../library/history.md) for detail and [source authority guide](../../reader/SOURCES_AND_FORMATS.md) for conflicts. Joining years, incorporation, office appointments and occupancy dates are different facts. Current named-person charts cannot reconstruct every historical employee population.
+Use the [dated canon library](../library/history.md) for detail and [source authority guide](../../reader/SOURCES_AND_FORMATS.md) for conflicts. The personnel and location records provide the joining years, appointments and occupancy dates available for a particular period.
 
-[Subject directory](README.md) · [Business directory](../businesses/README.md) · [Department directory](../departments/README.md) · [Wiki home](../Home.md)
+[Subject directory](README.md) · [Business directory](../businesses/README.md) · [Department directory](../departments/README.md) · [Wiki home](../Home.md) · [All files](../Files.md)
 
-## Reading guide
+<a id="reading-guide"></a>
 
-Follow the transition from a services-led company to reusable software and a broader operating portfolio. The Crossing is useful as a management case because it connects a practical deployment constraint to a lasting change in the way the company worked.
-
-
-## What remains unknown
-
-Retrospective narrative is not a contemporaneous incident log or audited financial series. Later dated decisions control the parts of earlier lore they supersede. See the [open questions register](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Open-Questions) for the evidence needed to resolve tracked gaps.
+<a id="what-remains-unknown"></a>
 
 ## Related reading
 
