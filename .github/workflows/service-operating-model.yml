@@ -46,9 +46,18 @@ jobs:
           git diff --check
       - name: Install repository test dependencies
         run: |
-          python -m pip install -e '.[dev]' -r tools/documents/requirements.txt -r tools/organization/requirements.txt
+          python -m pip install -e '.[dev,audit-suite,ccf-service,postgres]' -r tools/documents/requirements.txt -r tools/organization/requirements.txt
           sudo apt-get update
           sudo apt-get install -y poppler-utils texlive-latex-base texlive-latex-extra texlive-fonts-recommended
+      - name: Prepare the repository test helpers and parser sandbox
+        run: |
+          python tools/audit_suite/build_serialized_json.py
+          python tools/audit_suite/build_canonical_fragmenter.py
+          printf "TMPDIR=%s\n" "$RUNNER_TEMP" >> "$GITHUB_ENV"
+          sudo apt-get install -y bubblewrap apparmor-profiles apparmor-utils
+          sudo install -m 0644 /usr/share/apparmor/extra-profiles/bwrap-userns-restrict /etc/apparmor.d/bwrap-userns-restrict
+          sudo apparmor_parser -r /etc/apparmor.d/bwrap-userns-restrict
+          bwrap --unshare-all --die-with-parent --new-session --clearenv --ro-bind /usr /usr --ro-bind-try /lib /lib --ro-bind-try /lib64 /lib64 --proc /proc --dev /dev --tmpfs /tmp /usr/bin/true
       - name: Repository checks
         run: |
           python -m unittest discover -s enterprise/runtime/tests -v

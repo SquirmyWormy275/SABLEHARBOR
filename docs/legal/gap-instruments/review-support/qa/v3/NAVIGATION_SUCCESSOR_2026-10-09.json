@@ -1,0 +1,35 @@
+{
+  "record_id": "SH-LEGAL-V3-NAVIGATION-SUCCESSOR-2026-10-09",
+  "state": "AUTOMATED_NAVIGATION_REVIEW",
+  "historical_receipt_sha256": "177c3e64fa7dc00df005a42c29d1e1d9192cd31cb2db711dc3e6bbf8be7321e1",
+  "previous_successor_sha256": "21d8daf08d2a0091a561469084c0be79600d3f8629f1b8813d26de0346ec9345",
+  "reviewed_reader_revision": "81647377fd1189c6b52022f79c99f4ee87576cae",
+  "records": [
+    {
+      "path": "docs/wiki/Start-Here.md",
+      "historical_revision": "75a40fffc130616cea1fc768e978c2d22c65dbf8",
+      "historical_sha256": "e8b184d551f16de39514c4c360fa4cdd24148c57143108004157468ff50ed850",
+      "current_sha256": "91fc31149875f1f3218e8c10983c768d4810fa5d739ec44890ddec09f69e971a",
+      "scope": "Reader-copy and route replay only; original legal sources, workbooks and manual review remain unchanged."
+    },
+    {
+      "path": "tools/legal_gaps/validate_practical_work.py",
+      "historical_revision": "1d86f78944c95d3fdde72c4dcc31cd9b50c2ada9",
+      "historical_sha256": "9d8682a15cc655ae7ed124ff459d769a0547270f17d1316eb886e40fbb363861",
+      "current_sha256": "fe99c34921e73422e929ffaf8bee75df413b131bf1d3f3da182889eed115ff16",
+      "scope": "Reader-copy and route replay only; original legal sources, workbooks and manual review remain unchanged."
+    },
+    {
+      "path": "docs/reader/usability/RESULTS.json",
+      "historical_revision": "1d86f78944c95d3fdde72c4dcc31cd9b50c2ada9",
+      "historical_sha256": "db7f50a06446ebcef37c850092a4055bd699e9c969a367df9c0ba58d70116932",
+      "current_sha256": "bbc4e7de70d942687ce6c509f9f094f9297e9cf4f943184e6345c9085c6ddf1c",
+      "scope": "Reader-copy and route replay only; original legal sources, workbooks and manual review remain unchanged."
+    }
+  ],
+  "verification": {
+    "complete_document_routes": 6,
+    "method": "Replay the unchanged route definitions, links, PDF contents and workbook sheet promises; validate original legal-review evidence and each explicitly updated navigation hash.",
+    "limits": "Not a new legal-design review, human-user study or owner acceptance of draft legal instruments."
+  }
+}
