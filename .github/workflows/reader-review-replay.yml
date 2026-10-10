@@ -1,0 +1,131 @@
+# Isolated review helper; neither this file nor this branch is proposed for main.
+name: Reader navigation review replay
+on:
+  push:
+    branches: [ops/reader-validation-2026-10-09]
+    paths: [.github/workflows/reader-review-replay.yml]
+permissions:
+  contents: write
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d
+        with:
+          version: '0.12.4'
+          enable-cache: true
+      - run: uv sync --frozen --all-extras
+      - run: sudo apt-get update -qq && sudo apt-get install -y poppler-utils
+      - name: Add the current navigation review without replacing older evidence
+        run: |
+          mkdir -p "$RUNNER_TEMP/replay-review"
+          python - <<'PY'
+          import hashlib, json, os, subprocess
+          from pathlib import Path
+          base = '81647377fd1189c6b52022f79c99f4ee87576cae'
+          helper = '.github/workflows/reader-review-replay.yml'
+          assert subprocess.check_output(['git', 'diff', '--name-only', base, 'HEAD']).decode().splitlines() == [helper]
+          path = Path('tools/legal_gaps/validate_practical_work.py')
+          old = '    updates.update(refreshed)\n'
+          addition = '''    # Reader copy has its own review; original legal-design evidence stays fixed.
+              latest_path = BASE / "review-support/qa/v3/NAVIGATION_SUCCESSOR_2026-10-09.json"
+              latest = json.loads(latest_path.read_text())
+              assert latest["state"] == "AUTOMATED_NAVIGATION_REVIEW"
+              assert latest["historical_receipt_sha256"] == successor["historical_receipt_sha256"]
+              assert latest["previous_successor_sha256"] == sha(editorial_path)
+              current = {r["path"]: r for r in latest["records"]}
+              assert set(current) == {"docs/wiki/Start-Here.md", "tools/legal_gaps/validate_practical_work.py",
+                                      "docs/reader/usability/RESULTS.json"}
+              for relative, update in current.items():
+                  assert update["historical_sha256"] == receipt["input_hashes"][relative]
+              updates.update(current)
+          '''
+          # YAML removes ten spaces from this block; normalize the embedded code.
+          lines = addition.splitlines()
+          addition = lines[0] + '\n' + '\n'.join(line[10:] if line.startswith('          ') else line for line in lines[1:]).rstrip() + '\n'
+          text = path.read_text()
+          assert text.count(old) == 1
+          path.write_text(text.replace(old, old + addition))
+          compile(path.read_text(), str(path), 'exec')
+          subprocess.run(['git', 'rm', '-f', helper], check=True)
+          PY
+          uv run python tools/reader/usability.py
+          python - <<'PY'
+          import hashlib, json, os
+          from pathlib import Path
+          def sha(p):
+              return hashlib.sha256(p.read_bytes()).hexdigest()
+          directory = Path('docs/legal/gap-instruments/review-support/qa/v3')
+          previous = directory / 'NAVIGATION_SUCCESSOR_2026-10-07.json'
+          old = json.loads(previous.read_text())
+          selected = {'docs/wiki/Start-Here.md', 'tools/legal_gaps/validate_practical_work.py', 'docs/reader/usability/RESULTS.json'}
+          records = []
+          for row in old['records']:
+              if row['path'] in selected:
+                  records.append({**row, 'current_sha256': sha(Path(row['path'])), 'scope': 'Reader-copy and route replay only; original legal sources, workbooks and manual review remain unchanged.'})
+          routes = json.loads(Path('docs/reader/usability/RESULTS.json').read_text())
+          assert len(routes['tasks']) == 6 and all(r['result'] == 'PASS' for r in routes['tasks'])
+          report = {'record_id': 'SH-LEGAL-V3-NAVIGATION-SUCCESSOR-2026-10-09', 'state': 'AUTOMATED_NAVIGATION_REVIEW', 'historical_receipt_sha256': old['historical_receipt_sha256'], 'previous_successor_sha256': sha(previous), 'reviewed_reader_revision': '81647377fd1189c6b52022f79c99f4ee87576cae', 'records': records, 'verification': {'complete_document_routes': 6, 'method': 'Replay the unchanged route definitions, links, PDF contents and workbook sheet promises; validate original legal-review evidence and each explicitly updated navigation hash.', 'limits': 'Not a new legal-design review, human-user study or owner acceptance of draft legal instruments.'}}
+          (directory / 'NAVIGATION_SUCCESSOR_2026-10-09.json').write_text(json.dumps(report, indent=2) + '\n')
+          PY
+          git add -u
+          git add docs/legal/gap-instruments/review-support/qa/v3/NAVIGATION_SUCCESSOR_2026-10-09.json
+      - name: Validate the actual records and reading routes
+        run: |
+          set -euo pipefail
+          {
+            uv run python tools/legal_gaps/validate_practical_work.py
+            uv run python tools/reader/usability.py --check
+            uv run python -m pytest -q tests/publications/test_reader_usability.py --confcutdir=tests/publications
+            uv run python scripts/validate_reader_navigation.py --check-regeneration
+            uv run python tools/documents/approval_guard.py
+            uv run python scripts/check_public_safety.py
+            uv run ruff check tools/legal_gaps/validate_practical_work.py
+            git diff --check 81647377fd1189c6b52022f79c99f4ee87576cae
+            uv run python tools/wiki/export.py --revision 81647377fd1189c6b52022f79c99f4ee87576cae --output "$RUNNER_TEMP/replay-review/wiki-export"
+            uv run python -m tools.wiki.audit --export "$RUNNER_TEMP/replay-review/wiki-export"
+          } 2>&1 | tee "$RUNNER_TEMP/replay-review/validation.log"
+      - name: Create a candidate directly on the reviewed PR head
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import base64, json, os, shutil, subprocess, urllib.request
+          from pathlib import Path
+          base = '81647377fd1189c6b52022f79c99f4ee87576cae'
+          out = Path(os.environ['RUNNER_TEMP']) / 'replay-review'
+          expected = {'tools/legal_gaps/validate_practical_work.py', 'docs/reader/usability/RESULTS.json', 'docs/legal/gap-instruments/review-support/qa/v3/NAVIGATION_SUCCESSOR_2026-10-09.json'}
+          changed = set(subprocess.check_output(['git', 'diff', '--name-only', base]).decode().splitlines())
+          assert changed == expected, (changed, expected)
+          assert not Path('.github/workflows/reader-review-replay.yml').exists()
+          (out / 'candidate.diff').write_bytes(subprocess.check_output(['git', 'diff', base]))
+          def api(endpoint, data):
+              req = urllib.request.Request('https://api.github.com/repos/' + os.environ['GITHUB_REPOSITORY'] + endpoint, data=json.dumps(data).encode(), method='POST', headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'], 'Accept': 'application/vnd.github+json', 'Content-Type': 'application/json'})
+              with urllib.request.urlopen(req, timeout=90) as response:
+                  return json.load(response)
+          entries = []
+          for name in sorted(changed):
+              p = Path(name)
+              blob = api('/git/blobs', {'content': base64.b64encode(p.read_bytes()).decode(), 'encoding': 'base64'})['sha']
+              entries.append({'path': name, 'mode': '100644', 'type': 'blob', 'sha': blob})
+              target = out / 'changed-files' / name
+              target.parent.mkdir(parents=True, exist_ok=True)
+              shutil.copyfile(p, target)
+          tree = api('/git/trees', {'base_tree': subprocess.check_output(['git', 'rev-parse', base + '^{tree}']).decode().strip(), 'tree': entries})['sha']
+          commit = api('/git/commits', {'message': 'Replay reader routes and preserve the historical legal review', 'tree': tree, 'parents': [base]})
+          report = {'candidate_sha': commit['sha'], 'parent_sha': base, 'changed_files': sorted(changed)}
+          (out / 'candidate-commit.json').write_text(json.dumps(report, indent=2) + '\n')
+          print(json.dumps(report, indent=2))
+          PY
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: reader-route-replay
+          path: ${{ runner.temp }}/replay-review
+          if-no-files-found: error
+          retention-days: 3
