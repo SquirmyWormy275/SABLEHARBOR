@@ -1,4 +1,4 @@
-# Isolated review helper; neither this file nor this branch is proposed for main.
+# Isolated review helper; this file is never proposed for main.
 name: Reader navigation review replay
 on:
   push:
@@ -9,7 +9,7 @@ permissions:
 jobs:
   replay:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
@@ -21,42 +21,64 @@ jobs:
           enable-cache: true
       - run: uv sync --frozen --all-extras
       - run: sudo apt-get update -qq && sudo apt-get install -y poppler-utils
-      - name: Add the current navigation review without replacing older evidence
+      - name: Prepare the exact navigation changes and service test environment
         run: |
           mkdir -p "$RUNNER_TEMP/replay-review"
           python - <<'PY'
-          import hashlib, json, os, subprocess
+          import subprocess
           from pathlib import Path
           base = '81647377fd1189c6b52022f79c99f4ee87576cae'
           helper = '.github/workflows/reader-review-replay.yml'
           assert subprocess.check_output(['git', 'diff', '--name-only', base, 'HEAD']).decode().splitlines() == [helper]
           path = Path('tools/legal_gaps/validate_practical_work.py')
-          old = '    updates.update(refreshed)\n'
-          addition = '''    # Reader copy has its own review; original legal-design evidence stays fixed.
-              latest_path = BASE / "review-support/qa/v3/NAVIGATION_SUCCESSOR_2026-10-09.json"
-              latest = json.loads(latest_path.read_text())
-              assert latest["state"] == "AUTOMATED_NAVIGATION_REVIEW"
-              assert latest["historical_receipt_sha256"] == successor["historical_receipt_sha256"]
-              assert latest["previous_successor_sha256"] == sha(editorial_path)
-              current = {r["path"]: r for r in latest["records"]}
-              assert set(current) == {"docs/wiki/Start-Here.md", "tools/legal_gaps/validate_practical_work.py",
-                                      "docs/reader/usability/RESULTS.json"}
-              for relative, update in current.items():
-                  assert update["historical_sha256"] == receipt["input_hashes"][relative]
-              updates.update(current)
-          '''
-          # YAML removes ten spaces from this block; normalize the embedded code.
-          lines = addition.splitlines()
-          addition = lines[0] + '\n' + '\n'.join(line[10:] if line.startswith('          ') else line for line in lines[1:]).rstrip() + '\n'
+          needle = '    updates.update(refreshed)\n'
+          extra = '\n'.join([
+              '    # Preserve the original legal review and verify the current reading routes.',
+              '    latest_path = BASE / "review-support/qa/v3/NAVIGATION_SUCCESSOR_2026-10-09.json"',
+              '    latest = json.loads(latest_path.read_text())',
+              '    assert latest["state"] == "AUTOMATED_NAVIGATION_REVIEW"',
+              '    assert latest["historical_receipt_sha256"] == successor["historical_receipt_sha256"]',
+              '    assert latest["previous_successor_sha256"] == sha(editorial_path)',
+              '    current = {r["path"]: r for r in latest["records"]}',
+              '    assert set(current) == {',
+              '        "docs/wiki/Start-Here.md",',
+              '        "tools/legal_gaps/validate_practical_work.py",',
+              '        "docs/reader/usability/RESULTS.json",',
+              '    }',
+              '    for relative, update in current.items():',
+              '        assert update["historical_sha256"] == receipt["input_hashes"][relative]',
+              '    updates.update(current)',
+              '',
+          ])
           text = path.read_text()
+          assert text.count(needle) == 1
+          path.write_text(text.replace(needle, needle + extra))
+          workflow = Path('.github/workflows/service-operating-model.yml')
+          text = workflow.read_text()
+          old = "python -m pip install -e '.[dev]'"
           assert text.count(old) == 1
-          path.write_text(text.replace(old, old + addition))
-          compile(path.read_text(), str(path), 'exec')
+          text = text.replace(old, "python -m pip install -e '.[dev,audit-suite,ccf-service,postgres]'")
+          anchor = '      - name: Repository checks\n'
+          assert text.count(anchor) == 1
+          setup = '\n'.join([
+              '      - name: Prepare the repository test helpers and parser sandbox',
+              '        run: |',
+              '          python tools/audit_suite/build_serialized_json.py',
+              '          python tools/audit_suite/build_canonical_fragmenter.py',
+              '          printf "TMPDIR=%s\\n" "$RUNNER_TEMP" >> "$GITHUB_ENV"',
+              '          sudo apt-get install -y bubblewrap apparmor-profiles apparmor-utils',
+              '          sudo install -m 0644 /usr/share/apparmor/extra-profiles/bwrap-userns-restrict /etc/apparmor.d/bwrap-userns-restrict',
+              '          sudo apparmor_parser -r /etc/apparmor.d/bwrap-userns-restrict',
+              '          bwrap --unshare-all --die-with-parent --new-session --clearenv --ro-bind /usr /usr --ro-bind-try /lib /lib --ro-bind-try /lib64 /lib64 --proc /proc --dev /dev --tmpfs /tmp /usr/bin/true',
+              '',
+          ])
+          workflow.write_text(text.replace(anchor, setup + anchor))
           subprocess.run(['git', 'rm', '-f', helper], check=True)
           PY
+          uv run ruff format tools/legal_gaps/validate_practical_work.py
           uv run python tools/reader/usability.py
           python - <<'PY'
-          import hashlib, json, os
+          import hashlib, json
           from pathlib import Path
           def sha(p):
               return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -64,10 +86,7 @@ jobs:
           previous = directory / 'NAVIGATION_SUCCESSOR_2026-10-07.json'
           old = json.loads(previous.read_text())
           selected = {'docs/wiki/Start-Here.md', 'tools/legal_gaps/validate_practical_work.py', 'docs/reader/usability/RESULTS.json'}
-          records = []
-          for row in old['records']:
-              if row['path'] in selected:
-                  records.append({**row, 'current_sha256': sha(Path(row['path'])), 'scope': 'Reader-copy and route replay only; original legal sources, workbooks and manual review remain unchanged.'})
+          records = [{**r, 'current_sha256': sha(Path(r['path'])), 'scope': 'Reader-copy and route replay only; original legal sources, workbooks and manual review remain unchanged.'} for r in old['records'] if r['path'] in selected]
           routes = json.loads(Path('docs/reader/usability/RESULTS.json').read_text())
           assert len(routes['tasks']) == 6 and all(r['result'] == 'PASS' for r in routes['tasks'])
           report = {'record_id': 'SH-LEGAL-V3-NAVIGATION-SUCCESSOR-2026-10-09', 'state': 'AUTOMATED_NAVIGATION_REVIEW', 'historical_receipt_sha256': old['historical_receipt_sha256'], 'previous_successor_sha256': sha(previous), 'reviewed_reader_revision': '81647377fd1189c6b52022f79c99f4ee87576cae', 'records': records, 'verification': {'complete_document_routes': 6, 'method': 'Replay the unchanged route definitions, links, PDF contents and workbook sheet promises; validate original legal-review evidence and each explicitly updated navigation hash.', 'limits': 'Not a new legal-design review, human-user study or owner acceptance of draft legal instruments.'}}
@@ -75,7 +94,7 @@ jobs:
           PY
           git add -u
           git add docs/legal/gap-instruments/review-support/qa/v3/NAVIGATION_SUCCESSOR_2026-10-09.json
-      - name: Validate the actual records and reading routes
+      - name: Validate the records, routes and full test collection
         run: |
           set -euo pipefail
           {
@@ -87,6 +106,9 @@ jobs:
             uv run python scripts/check_public_safety.py
             uv run ruff check tools/legal_gaps/validate_practical_work.py
             git diff --check 81647377fd1189c6b52022f79c99f4ee87576cae
+            uv run python -m pytest --collect-only -q > "$RUNNER_TEMP/replay-review/test-collection.log"
+            uv run python -m unittest discover -s enterprise/services/tests -v
+            uv run python -m unittest discover -s enterprise/runtime/tests -v
             uv run python tools/wiki/export.py --revision 81647377fd1189c6b52022f79c99f4ee87576cae --output "$RUNNER_TEMP/replay-review/wiki-export"
             uv run python -m tools.wiki.audit --export "$RUNNER_TEMP/replay-review/wiki-export"
           } 2>&1 | tee "$RUNNER_TEMP/replay-review/validation.log"
@@ -99,7 +121,7 @@ jobs:
           from pathlib import Path
           base = '81647377fd1189c6b52022f79c99f4ee87576cae'
           out = Path(os.environ['RUNNER_TEMP']) / 'replay-review'
-          expected = {'tools/legal_gaps/validate_practical_work.py', 'docs/reader/usability/RESULTS.json', 'docs/legal/gap-instruments/review-support/qa/v3/NAVIGATION_SUCCESSOR_2026-10-09.json'}
+          expected = {'tools/legal_gaps/validate_practical_work.py', 'docs/reader/usability/RESULTS.json', 'docs/legal/gap-instruments/review-support/qa/v3/NAVIGATION_SUCCESSOR_2026-10-09.json', '.github/workflows/service-operating-model.yml'}
           changed = set(subprocess.check_output(['git', 'diff', '--name-only', base]).decode().splitlines())
           assert changed == expected, (changed, expected)
           assert not Path('.github/workflows/reader-review-replay.yml').exists()
@@ -117,7 +139,7 @@ jobs:
               target.parent.mkdir(parents=True, exist_ok=True)
               shutil.copyfile(p, target)
           tree = api('/git/trees', {'base_tree': subprocess.check_output(['git', 'rev-parse', base + '^{tree}']).decode().strip(), 'tree': entries})['sha']
-          commit = api('/git/commits', {'message': 'Replay reader routes and preserve the historical legal review', 'tree': tree, 'parents': [base]})
+          commit = api('/git/commits', {'message': 'Replay reader routes and repair the service test environment', 'tree': tree, 'parents': [base]})
           report = {'candidate_sha': commit['sha'], 'parent_sha': base, 'changed_files': sorted(changed)}
           (out / 'candidate-commit.json').write_text(json.dumps(report, indent=2) + '\n')
           print(json.dumps(report, indent=2))
