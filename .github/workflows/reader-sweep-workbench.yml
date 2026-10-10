@@ -39,6 +39,9 @@ jobs:
           db.close()
           result = runpy.run_path('tools/reader_sweep_followup.py')
           assert len(result['changed']) == 7
+          for name in ['docs/advisory/README.md', 'docs/governance/board-records/README.md']:
+              path = Path(name)
+              path.write_text(path.read_text().replace('  \n', '\n\n'))
           (out / 'edited-pages.json').write_text(json.dumps(sorted(result['changed']), indent=2))
           PY
           git rm -f .github/workflows/reader-sweep-workbench.yml tools/reader_sweep_followup.py
@@ -67,26 +70,32 @@ jobs:
           git add -u
       - name: Validate source integrity and reader navigation
         run: |
-          uv run python scripts/validate_governance_j2.py
-          uv run python scripts/validate_institutional_catalog.py
-          uv run python scripts/validate_organization_maps.py
-          uv run python scripts/validate_repository_hygiene.py
-          uv run python scripts/validate_reader_navigation.py --check-regeneration
-          uv run python scripts/check_public_safety.py
-          git diff --check HEAD
+          set -euo pipefail
+          {
+            uv run python scripts/validate_governance_j2.py
+            uv run python scripts/validate_institutional_catalog.py
+            uv run python scripts/validate_organization_maps.py
+            uv run python scripts/validate_repository_hygiene.py
+            uv run python scripts/validate_reader_navigation.py --check-regeneration
+            uv run python scripts/check_public_safety.py
+            git diff --check HEAD
+          } 2>&1 | tee "$RUNNER_TEMP/reader-review/source-checks.log"
       - name: Validate the complete Wiki
         run: |
-          uv run python -m unittest discover -s tests/wiki
-          uv run python tools/wiki/export.py --revision "$(git rev-parse HEAD)" --output "$RUNNER_TEMP/reader-review/wiki-export"
-          uv run python -m tools.wiki.audit --export "$RUNNER_TEMP/reader-review/wiki-export"
+          set -euo pipefail
+          {
+            uv run python -m unittest discover -s tests/wiki
+            uv run python tools/wiki/export.py --revision "$(git rev-parse HEAD)" --output "$RUNNER_TEMP/reader-review/wiki-export"
+            uv run python -m tools.wiki.audit --export "$RUNNER_TEMP/reader-review/wiki-export"
+          } 2>&1 | tee "$RUNNER_TEMP/reader-review/wiki-checks.log"
       - name: Check availability of the existing Wiki publication credential
         env:
           WIKI_TOKEN: ${{ secrets.WIKI_TOKEN }}
         run: |
           if [ -n "$WIKI_TOKEN" ]; then
-            echo 'Existing Wiki publication credential is configured.'
+            echo 'Existing Wiki publication credential is configured.' | tee "$RUNNER_TEMP/reader-review/publication-credential-status.txt"
           else
-            echo 'Existing Wiki publication credential is not configured.'
+            echo 'Existing Wiki publication credential is not configured.' | tee "$RUNNER_TEMP/reader-review/publication-credential-status.txt"
           fi
       - name: Create isolated review commit without moving any branch
         env:
@@ -126,8 +135,6 @@ jobs:
           result = {'candidate_sha': commit['sha'], 'parent_sha': parent, 'tree_sha': tree, 'changed_files': changed, 'url': commit['html_url']}
           (out / 'candidate-commit.json').write_text(json.dumps(result, indent=2) + '\n')
           print(json.dumps(result, indent=2))
-          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
-              summary.write('Candidate commit: `' + commit['sha'] + '`\n')
           PY
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         if: always()
