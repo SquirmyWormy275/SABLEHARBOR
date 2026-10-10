@@ -1,0 +1,28 @@
+# Temporary review helper; remove before merging the documentation sweep.
+name: Reader sweep workbench
+on:
+  push:
+    branches: [docs/reader-sweep-2026-10-09]
+    paths: [.github/workflows/reader-sweep-workbench.yml]
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Package only tracked public repository sources
+        run: |
+          git archive --format=tar HEAD | gzip > "$RUNNER_TEMP/reader-sources.tar.gz"
+          git rev-parse HEAD > "$RUNNER_TEMP/reader-source-revision.txt"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reader-source-snapshot
+          path: |
+            ${{ runner.temp }}/reader-sources.tar.gz
+            ${{ runner.temp }}/reader-source-revision.txt
+          retention-days: 3
+          if-no-files-found: error
