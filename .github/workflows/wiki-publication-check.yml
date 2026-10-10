@@ -1,5 +1,5 @@
-# One-off publication check; this helper is not proposed for main.
-name: Wiki publication access check
+# One-off publication job; this helper is not proposed for main.
+name: Publish merged reader sweep
 on:
   push:
     branches: [ops/wiki-publication-2026-10-09]
@@ -7,31 +7,48 @@ on:
 permissions:
   contents: write
 jobs:
-  access:
+  publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
-      - name: Check the existing credential against the Wiki remote
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Confirm the merged source revision
+        run: |
+          test "$(git rev-parse HEAD)" = '9b1b5dceca26524f4d357363f132c6c13dea9da7'
+          test -z "$(git status --porcelain)"
+          test ! -e .github/workflows/wiki-publication-check.yml
+      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d
+        with:
+          version: '0.12.4'
+          enable-cache: true
+      - run: uv sync --frozen --all-extras
+      - name: Publish accepted main and verify the remote copy
         env:
           GH_TOKEN: ${{ secrets.WIKI_TOKEN || github.token }}
         run: |
           set -euo pipefail
           gh auth setup-git
-          mkdir -p "$RUNNER_TEMP/wiki-access"
-          git clone --depth 1 "https://github.com/${GITHUB_REPOSITORY}.wiki.git" "$RUNNER_TEMP/wiki"
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          uv run python -m tools.wiki.publish 2>&1 | tee "$RUNNER_TEMP/wiki-publication.log"
           python - <<'PY'
-          import json, os, subprocess
+          import json
           from pathlib import Path
-          root = Path(os.environ['RUNNER_TEMP'])
-          result = subprocess.run(['git', 'push', '--dry-run', 'origin', 'HEAD'], cwd=root / 'wiki', text=True, capture_output=True)
-          report = {'dry_run_only': True, 'exit_code': result.returncode, 'stdout': result.stdout, 'stderr': result.stderr, 'write_access_verified': result.returncode == 0}
-          (root / 'wiki-access/result.json').write_text(json.dumps(report, indent=2) + '\n')
-          print(json.dumps(report, indent=2))
+          result = json.loads(Path('var/wiki-publication.json').read_text())
+          assert result['source_revision'] == '9b1b5dceca26524f4d357363f132c6c13dea9da7'
+          assert result['verified_pages'] == 641
+          print('Verified all published pages against the merged source revision.')
           PY
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         if: always()
         with:
-          name: wiki-access-result
-          path: ${{ runner.temp }}/wiki-access/result.json
-          if-no-files-found: error
-          retention-days: 3
+          name: merged-reader-wiki-publication
+          path: |
+            var/wiki-publication.json
+            ${{ runner.temp }}/wiki-publication.log
+          if-no-files-found: warn
+          retention-days: 7
