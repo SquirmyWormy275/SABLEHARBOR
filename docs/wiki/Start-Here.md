@@ -2,40 +2,42 @@
 
 [Wiki home](Home.md) · [All files](Files.md) · [Audit practice](Audit.md) · [Document library](Library.md)
 
-Sable Harbor is a fictional enterprise archive built for serious reading and practical exercises. You can explore how its businesses work, inspect the records behind a decision or work through an accounting or controls exercise. No software installation is needed to read the Wiki.
+Welcome. Sable Harbor is a fictional company with a working archive: people to meet, businesses to understand and records you can investigate. You can browse out of curiosity or use it to practise accounting, audit and business analysis. Reading the Wiki needs no installation or knowledge of how the repository was built.
 
 ## Explore the company
 
-Start with a [business](businesses/README.md). Read about its work, people, finances and places, then follow the linked documents for more detail. The [department directory](departments/README.md) explains the corporate functions and institutions that support or review that work.
+Choose a [business](businesses/README.md) that interests you. Its guide introduces the work and the people, then points to accounts, contracts and operating records. The [department directory](departments/README.md) explains who supports that work and who reviews it.
 
-For the longer story, read [company history](subjects/History.md), [the people](subjects/People.md) and [the research lineage](subjects/Research-History.md). Historical projects, external hosts and separate cases have their own pages so their relationships stay clear.
+For a sense of place, visit the [location guide](Locations.md) and its maps. For the longer story, read [company history](subjects/History.md), meet [the people](subjects/People.md) or follow [the research lineage](subjects/Research-History.md). You can follow a connection without reading every page in between.
 
 ## Complete a practical exercise
 
-| Exercise | What you work through | Starting point |
-|---|---|---|
-| Trace an invoice | Connect an invoice to its contract terms, dated movements and journal entries. | [Invoice exercise](../reader/exercises/INVOICE.md) |
-| Review an acquisition | Reconcile selected consideration and accounting evidence while recording missing support. | [Acquisition exercise](../reader/exercises/ACQUISITION.md) |
-| Review contract obligations | Compare an instrument with the available evidence of obligations and execution. | [Contract exercise](../reader/exercises/CONTRACTS.md) |
-| Work through an audit | Request evidence, collect originals, choose samples and prepare workpapers. | [Audit practice](Audit.md) |
-| Examine a control | Follow a synthetic population, procedure, result and independent re-performance. | [CCF procedures](../../enterprise/ccf/PROCEDURES.md) |
+Studying accounting or audit? Start with the invoice exercise. It gives you a specific question and a small set of records to follow before you move to larger cases.
 
-Each route states its records, steps and expected output. Keep the release, scenario, unit and period together; do not mix snapshots to make a reconciliation work. A missing document belongs in the conclusion as missing evidence.
+| Exercise | The question you investigate | Start here |
+|---|---|---|
+| Trace an invoice | How do contract terms and dated movements connect to the journal entries? | [Invoice exercise](../reader/exercises/INVOICE.md) |
+| Review an acquisition | Does the selected consideration reconcile to the accounting records, and what support is missing? | [Acquisition exercise](../reader/exercises/ACQUISITION.md) |
+| Review contract obligations | What does the contract require, and what shows whether those obligations were met? | [Contract exercise](../reader/exercises/CONTRACTS.md) |
+| Work through an audit | What evidence should you request, which items should you test and how will you document your conclusions? | [Audit practice](Audit.md) |
+| Examine a control | What was tested, what happened and what did an independent retest establish? | [CCF procedures](../../enterprise/ccf/PROCEDURES.md) |
+
+Each exercise explains what to open, the steps to take and what to produce. Keep its release, scenario, business unit and period together. When evidence is missing, record the gap rather than borrowing a convenient answer from a different scenario.
 
 ## Find the supporting record
 
-The [reading room](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Reading) contains full source editions grouped by topic. The [document library](Library.md) finds PDFs and workbooks by subject. [All files](Files.md) links every original repository file through a collection page, including datasets, images and programs. Reading editions retain the source's date, status and qualifications, with a link to the exact repository snapshot behind the publication.
+Use the [document library](Library.md) to browse publications by subject. The [reading room](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Reading) lets you read longer source documents in the Wiki. [All files](Files.md) takes you to every original through its collection, including datasets, maps, images and programs.
 
-Use **On this page** to move through a long article. Use **Related reading** to follow useful connections across the company. Those links do not establish additional reporting lines or ownership.
+Long articles have an **On this page** menu. **Related reading** suggests where to go next, while **Supporting records and decision history** keeps the detailed sources available at the end. You can leave that section closed until you need it.
 
 ## Know what a record establishes
 
-A fictional record can still distinguish a proposal, an accepted institutional decision, an execution record and a generated model. The [glossary](Glossary.md) explains the status labels used in the records; each article keeps relevant qualifications beside the subject it describes.
+A proposal, a forecast and a record of completed work tell you different things. Check the date and status when the distinction matters to your question. The [glossary](Glossary.md) explains unfamiliar terms; the [source and format guide](../reader/SOURCES_AND_FORMATS.md) helps when two documents disagree.
 
-The [decisions and remaining work guide](Open-Questions.md) records accepted resolutions and the work beyond their scope. The [source and format guide](../reader/SOURCES_AND_FORMATS.md) explains authority when records disagree.
+The company guides describe current facts. [Records and decisions](Records-and-Decisions.md) holds the route into their approval history, and [decisions and remaining work](Open-Questions.md) explains what has been completed and what comes next. You do not need to learn the decision codes before using the company records.
 
 ## Download and reproduce
 
-Read Markdown in the browser. Open PDFs for formatted publications and download spreadsheets for calculations. Complete exercise packages live in the indexed [release guides](../reader/USE_CASES.md#downloads-and-tools).
+Read Markdown in your browser, open PDFs for formatted documents and download spreadsheets to inspect their calculations. The [download guide](../reader/USE_CASES.md#downloads-and-tools) explains the complete exercise packages and local tools.
 
-Readers who want to build or query the archive can follow the [contribution guide](../../CONTRIBUTING.md). Source control, package manifests and reproducible checks support the reading experience; they are not prerequisites for exploring the company.
+To build a model, query the data or improve the archive, follow the [contribution guide](../../CONTRIBUTING.md). Those tools are there when you need them; they are not the entrance exam.
