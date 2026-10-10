@@ -1,0 +1,37 @@
+# One-off publication check; this helper is not proposed for main.
+name: Wiki publication access check
+on:
+  push:
+    branches: [ops/wiki-publication-2026-10-09]
+    paths: [.github/workflows/wiki-publication-check.yml]
+permissions:
+  contents: write
+jobs:
+  access:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check the existing credential against the Wiki remote
+        env:
+          GH_TOKEN: ${{ secrets.WIKI_TOKEN || github.token }}
+        run: |
+          set -euo pipefail
+          gh auth setup-git
+          mkdir -p "$RUNNER_TEMP/wiki-access"
+          git clone --depth 1 "https://github.com/${GITHUB_REPOSITORY}.wiki.git" "$RUNNER_TEMP/wiki"
+          python - <<'PY'
+          import json, os, subprocess
+          from pathlib import Path
+          root = Path(os.environ['RUNNER_TEMP'])
+          result = subprocess.run(['git', 'push', '--dry-run', 'origin', 'HEAD'], cwd=root / 'wiki', text=True, capture_output=True)
+          report = {'dry_run_only': True, 'exit_code': result.returncode, 'stdout': result.stdout, 'stderr': result.stderr, 'write_access_verified': result.returncode == 0}
+          (root / 'wiki-access/result.json').write_text(json.dumps(report, indent=2) + '\n')
+          print(json.dumps(report, indent=2))
+          PY
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: wiki-access-result
+          path: ${{ runner.temp }}/wiki-access/result.json
+          if-no-files-found: error
+          retention-days: 3
