@@ -25,8 +25,8 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # README and Wiki cleanup. Full catalog regeneration reproduces its tables.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        15462400,
-        "1a155c222e4d8653b81c0acf2b0224d9878ef8eabc81e8ce121a729cc16e0615",
+        15466496,
+        "4514eb174bdc754b5860796186f395527434fb07d2d36b19385f1db2c541ae8b",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.
