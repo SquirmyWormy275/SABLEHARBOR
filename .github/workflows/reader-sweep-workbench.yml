@@ -14,15 +14,34 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
-      - name: Package only tracked public repository sources
+      - name: Package tracked text and selected existing artwork
         run: |
-          git archive --format=tar HEAD | gzip > "$RUNNER_TEMP/reader-sources.tar.gz"
-          git rev-parse HEAD > "$RUNNER_TEMP/reader-source-revision.txt"
+          python - <<'PY'
+          import hashlib, json, os, subprocess, tarfile
+          from pathlib import Path
+          out = Path(os.environ['RUNNER_TEMP'])
+          names = subprocess.check_output(['git', 'ls-files', '-z']).decode().split('\0')
+          inventory = {}
+          text_ext = {'.md', '.py', '.json', '.yml', '.yaml', '.toml', '.txt', '.ini', '.css', '.js', '.html', '.sh', '.sql', '.svg', '.csv', '.lock'}
+          with tarfile.open(out / 'reader-sources.tar.gz', 'w:gz') as archive:
+              for name in filter(None, names):
+                  p = Path(name)
+                  data = p.read_bytes()
+                  inventory[name] = {'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest()}
+                  text = (p.suffix in text_ext or name in {'Makefile', '.gitignore', '.gitattributes', '.env.example'}) and len(data) < 5_000_000
+                  art = name.startswith('assets/brand/') or name == 'geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.png'
+                  if text or art:
+                      archive.add(p, arcname=name)
+          (out / 'reader-inventory.json').write_text(json.dumps(inventory, indent=2) + '\n')
+          (out / 'reader-source-revision.txt').write_text(subprocess.check_output(['git', 'rev-parse', 'HEAD']).decode())
+          print(f'Inventoried {len(inventory)} tracked files; text review package: {(out / "reader-sources.tar.gz").stat().st_size} bytes')
+          PY
       - uses: actions/upload-artifact@v4
         with:
           name: reader-source-snapshot
           path: |
             ${{ runner.temp }}/reader-sources.tar.gz
             ${{ runner.temp }}/reader-source-revision.txt
+            ${{ runner.temp }}/reader-inventory.json
           retention-days: 3
           if-no-files-found: error
