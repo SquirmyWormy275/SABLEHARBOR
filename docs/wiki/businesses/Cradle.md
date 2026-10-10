@@ -1,8 +1,8 @@
 # Project Cradle
 
-[Wiki home](../Home.md) · [All files](../Files.md) · [Business directory](README.md) · [Department directory](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
+[Wiki home](../Home.md) · [Businesses](README.md) · [All files](../Files.md)
 
-<img src="../../../assets/brand/logos/project-cradle__reverse-horizontal.png" alt="Approved Project Cradle logo" width="360">
+<img src="../../../assets/brand/logos/project-cradle__reverse-horizontal.png" alt="Project Cradle logo" width="360">
 
 Cradle recovers rare-earth materials from designated industrial side streams and mine water for specialist downstream sale. Its work connects external host deployments with the separate Bedford development, refurbishment, analytical and upgrading facility.
 
@@ -10,13 +10,13 @@ Cradle recovers rare-earth materials from designated industrial side streams and
 
 ## Start here
 
-[Current business dossier](../../../docs/business-lines/PROJECT_CRADLE.md) · [Letterhead dossier PDF](../../../docs/business-lines/publications/SH-BIZ-PROJECT-CRADLE-001_v1.1.0.pdf)
+[Business dossier](../../../docs/business-lines/PROJECT_CRADLE.md) · [Dossier PDF](../../../docs/business-lines/publications/SH-BIZ-PROJECT-CRADLE-001_v1.1.0.pdf)
 
 Cradle is an early commercial parent-book business. Kelly Gang Mining and Demotte Reclamation Services are external hosts, not subsidiaries. Bedford is a fictional Fairmont-area facility concept; it is not the Demotte treatment plant.
 
 ## Organization and people
 
-[![Project Cradle existing organization chart](../../../docs/organization/assets/current/project-cradle.png)](../../../docs/organization/charts/project-cradle.md)
+[![Project Cradle organization chart](../../../docs/organization/assets/current/project-cradle.png)](../../../docs/organization/charts/project-cradle.md)
 
 [Chart and text roster](../../../docs/organization/charts/project-cradle.md).
 
@@ -35,10 +35,10 @@ Cradle is an early commercial parent-book business. Kelly Gang Mining and Demott
 Compare feed measurements with recovered lots, assay and downstream acceptance, then follow inventory, invoices and host obligations. Keep mineral tonnes separate from water volume and dissolved concentration. Unsold recovered material is not cash.
 
 1. Read the [business-finance release index](../../../docs/releases/BUSINESS_FINANCE_RELEASES.md) and download its indexed ZIP.
-2. Open `units/project-cradle/audit.xlsx` in the extracted release. Its `README.md` explains the unit scope. The matching CSV and SQLite extracts provide the same scoped evidence; SQL is optional.
+2. Open `units/project-cradle/audit.xlsx` in the extracted release. Its `README.md` explains the unit scope. The matching CSV and SQLite extracts contain the same records; SQL is optional.
 3. Read the [unit evidence guide](../../../docs/audit/UNIT_EXPORT_SPECIFICATION.md) before choosing samples. Select scenario and period together, and distinguish retained 2026 reconstruction from conditional 2027–2031 forecasts.
 
-The [finance successor guide](../../../enterprise/business/README.md) explains generation, reconciliation and limits. The workbook records the selected scenario and its assumptions.
+The [finance model guide](../../../enterprise/business/README.md) explains generation, reconciliation and limits. The workbook records the selected scenario and its assumptions.
 
 ## Places and plans
 
@@ -61,3 +61,5 @@ Use the [complete facility artifact index](../../../geospatial/maps/facilities/A
 - [Safety and environmental governance](../departments/safety-environment.md)
 - [Quality and technical standards](../departments/quality-standards.md)
 - [Willow](Willow.md)
+
+[Departments](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)

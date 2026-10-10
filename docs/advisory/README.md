@@ -1,16 +1,12 @@
 # Sable Harbor Advisory
 
-**Status:** controlled professional-services operating system  
-**Primary canon:** [`SH-ADV-ATL-DR-003`](../canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md)  
-**Prior closeout:** [`SH-ADV-ATL-DR-002`](../canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md)
+Sable Harbor Advisory helps clients investigate business problems, build intelligence teams and improve operations. Its three practices draw on the same group of professionals: the question determines who joins the team.
 
-Sable Harbor Advisory is a client-facing professional-services business adjacent to, but institutionally separate from, J2. It uses Atlas Meridian as its AI-native professional substrate and client relationship system. Advisory is organized around consequential matters, one common professional bench, three market-facing practices, outcome/capability economics, durable transfer, elite professional career paths, and strict protection against using J2 as a commercial feeder.
-
-The practice is deliberately designed as a mature professional institution rather than a conventional labor pyramid.
+Atlas Meridian provides the software for investigations, client work and relationships. Advisory serves external clients; J2 serves Sable Harbor internally. The two remain institutionally separate, and Advisory may not solicit serving J2 personnel.
 
 ## Integrated firm manual
 
-The consolidated executive operating artifact is [`SABLE_HARBOR_ADVISORY_FIRM_MANUAL_2026-09-09.md`](SABLE_HARBOR_ADVISORY_FIRM_MANUAL_2026-09-09.md). Detailed controlled standards below govern where more specific.
+Start with the [firm manual](SABLE_HARBOR_ADVISORY_FIRM_MANUAL_2026-09-09.md) for an overview of the business. The standards below explain particular responsibilities and procedures in more detail.
 
 ## Practice architecture
 
@@ -20,7 +16,9 @@ The consolidated executive operating artifact is [`SABLE_HARBOR_ADVISORY_FIRM_MA
 
 All three practices draw from one common bench. The problem determines the team.
 
-## Controlled operating documents
+<a id="controlled-operating-documents"></a>
+
+## How the practice works
 
 | Document | Purpose |
 |---|---|
@@ -47,16 +45,21 @@ All three practices draw from one common bench. The problem determines the team.
 | [Executive memorandum](SABLE_HARBOR_ADVISORY_EXECUTIVE_MEMORANDUM_2026-09-08.md) | Partner-committee-level summary of the original operating-model closeout |
 | [Letterhead executive brief](SABLE_HARBOR_ADVISORY_EXECUTIVE_BRIEF_2026-09-08.svg) | US-Letter visual business artifact using the established Advisory letterhead system |
 
-## Controlled templates
+<a id="controlled-templates"></a>
+
+## Templates for client work
 
 | Template | Use |
 |---|---|
-| [`SH-ADV-TPL-001`](templates/MATTER_ACCEPTANCE_FORM.md) | Matter acceptance disposition |
-| [`SH-ADV-TPL-002`](templates/MATTER_CHARTER_TEMPLATE.md) | Matter charter / problem and authority definition |
-| [`SH-ADV-TPL-003`](templates/OUTCOME_SCHEDULE_TEMPLATE.md) | Measurable-value baseline, attribution and payout schedule |
-| [`SH-ADV-TPL-004`](templates/TRANSFER_CERTIFICATE_TEMPLATE.md) | Client capability/IP/data transfer certification |
-| [`SH-ADV-TPL-005`](templates/INDEPENDENT_REVIEW_MEMO_TEMPLATE.md) | Independent professional review and dissent record |
-| [`SH-ADV-TPL-006`](templates/PROPOSAL_TEMPLATE.md) | External client proposal skeleton for letterhead rendering |
+| [Matter acceptance form](templates/MATTER_ACCEPTANCE_FORM.md) | Matter acceptance disposition |
+| [Matter charter](templates/MATTER_CHARTER_TEMPLATE.md) | Matter charter / problem and authority definition |
+| [Outcome schedule](templates/OUTCOME_SCHEDULE_TEMPLATE.md) | Measurable-value baseline, attribution and payout schedule |
+| [Transfer certificate](templates/TRANSFER_CERTIFICATE_TEMPLATE.md) | Client capability/IP/data transfer certification |
+| [Independent review memorandum](templates/INDEPENDENT_REVIEW_MEMO_TEMPLATE.md) | Independent professional review and dissent record |
+| [Client proposal](templates/PROPOSAL_TEMPLATE.md) | External client proposal skeleton for letterhead rendering |
+
+<details>
+<summary>Professional principles</summary>
 
 ## Controlling principles
 
@@ -73,8 +76,23 @@ All three practices draw from one common bench. The problem determines the team.
 11. Atlas Product builds the machine; Advisory owns professional judgment.
 12. The firm would rather decline work than overload competence, compromise independence or sell a capability it cannot transfer honestly.
 
+</details>
+
 ## Current implementation state
 
-The operating/business-line name **Sable Harbor Advisory** is the accepted institutional name. Advisory remains a business line of the existing controlling Sable Harbor contracting entity unless a later approved transaction creates a separate entity. The individual President is an appointment decision, not an unresolved operating-model dependency.
+Sable Harbor Advisory operates as a business line of the existing Sable Harbor contracting entity, not a separately incorporated firm. The [business guide](../wiki/businesses/Advisory.md) connects its people, accounts and legal records.
 
-Qualified counsel, tax, insurance, privacy, security and trademark work are execution requirements before real external commercialization; the repository does not pretend those professional sign-offs have occurred merely because the operating design is complete.
+This is a fictional operating design. Real external commercialization would require the relevant legal, tax, insurance, privacy, security and trademark work; the design is not evidence that those professional sign-offs have occurred.
+
+<details>
+<summary>Design records and earlier editions</summary>
+
+**Status:** controlled professional-services operating system
+
+**Primary canon:** [`SH-ADV-ATL-DR-003`](../canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md)
+
+**Prior closeout:** [`SH-ADV-ATL-DR-002`](../canon/DECISION_REGISTER_ADDENDUM_2026-09-08_ADVISORY.md)
+
+These records preserve the choices behind the operating design. [Records and decisions](../wiki/Records-and-Decisions.md) connects them to the wider company history.
+
+</details>

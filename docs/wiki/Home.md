@@ -2,7 +2,9 @@
 
 <img src="../../assets/brand/logos/sable-harbor__reverse-horizontal.png" alt="Sable Harbor" width="360">
 
-Sable Harbor develops industrial software, operates resource businesses, and provides professional services. This Wiki introduces its businesses and corporate functions: who works there, what they do, how the finances work, and where operations take place. Each article explains the subject first. Supporting records are available at the end when you need to inspect them.
+Welcome to Sable Harbor. This fictional company develops industrial software, operates resource businesses and provides professional services. Meet its people, explore their workplaces and follow the records behind their work—from a customer invoice to an acquisition or a mine's operating plan.
+
+You can browse the company out of curiosity or use its records for accounting, audit and business exercises. Start with whatever interests you; you do not need to read the archive in order.
 
 [Start here](Start-Here.md) · [All files](Files.md) · [Audit practice](Audit.md) · [Document library](Library.md) · [Full-text reading room](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Reading)
 
@@ -10,15 +12,15 @@ Sable Harbor develops industrial software, operates resource businesses, and pro
 
 ## Start your reading
 
-Choose a business or department below, or open [All files](Files.md) to find a particular document, dataset, map or program. The file directory takes you from this page to any original in three clicks: directory, collection, file. Articles link the documents that explain their work; the [records guide](Records-and-Decisions.md) brings the decision history together.
+Choose a business or department below. Each guide introduces its work and points to useful records when you are ready to look closer. Looking for a particular document, dataset, map or program? [All files](Files.md) takes you there in three clicks: directory, collection, original.
 
-For practical work, try the [acquisition exercise](../reader/exercises/ACQUISITION.md), [invoice exercise](../reader/exercises/INVOICE.md), or [contract review exercise](../reader/exercises/CONTRACTS.md). You can read the instructions in the Wiki and download the linked Excel, PDF, or SQLite files as needed.
+For a first exercise, try [tracing an invoice](../reader/exercises/INVOICE.md). It connects contract terms, dated movements and journal entries. The [acquisition](../reader/exercises/ACQUISITION.md) and [contract review](../reader/exercises/CONTRACTS.md) exercises offer other ways in. Read the instructions here and download the linked records as you go.
 
 <a id="find-records-for-a-task"></a>
 
 ## Try an exercise
 
-The [audit practice guide](Audit.md) introduces the delivered audit workspace and the accounting and control exercises. The [three document exercises](../reader/exercises/README.md) cover acquisition accounting, invoice tracing and contract review.
+The [audit practice guide](Audit.md) introduces the audit workspace and the accounting and control exercises. The [three document exercises](../reader/exercises/README.md) cover acquisition accounting, invoice tracing and contract review.
 
 | I want to… | Open first | Then inspect |
 |---|---|---|
@@ -28,7 +30,7 @@ The [audit practice guide](Audit.md) introduces the delivered audit workspace an
 | Prepare a SOC-oriented evidence request or compare frameworks | [Assessment workbench](../../enterprise/ccf/assurance/README.md) | Excel/HTML workpapers for local use, a source inventory, and the review tasks needed to complete the assessment. |
 | Review a purchase or an operating investment | [Industrial case guide](../../industrial/CASE_GUIDE.md) | Transaction documents, operating constraints, and financial schedules for the selected scenario. |
 | Understand who decides and who reviews | [Department directory](departments/README.md) | Organization charts, authority documents, and dated Board records. |
-| Visit or inspect the campus concept | [Selected V08 visitor map](../../geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.png) | The [PDF](../../geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.pdf) for a visitor overview, or the [facility index](../../geospatial/maps/facilities/ARTIFACT_INDEX.md) for site, building, and floor plans. |
+| Visit or inspect the campus concept | [Sacramento visitor map](../../geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.png) | The [PDF](../../geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.pdf) for a visitor overview, or the [facility index](../../geospatial/maps/facilities/ARTIFACT_INDEX.md) for site, building, and floor plans. |
 
 The [full exercise guide](../reader/USE_CASES.md) includes more exercises and explains what to produce. Use the [document library](Library.md) to find files by subject or format.
 
@@ -65,6 +67,8 @@ These groups make the directory easier to browse; they are not an organization c
 
 ## Places, records, and history
 
+Take a look around the workplaces, follow a transaction or read how the company developed.
+
 - [Locations and facilities](Locations.md) — Offices, operating sites, shared accommodation, maps and floor plans.
 - [Organization charts](../organization/README.md) — Businesses, people, institutions, external parties, and historical relationships.
 - [Legal and transaction records](../reader/transactions/README.md) — Commercial, corporate, acquisition, and host-rights documents, with accounting links and missing evidence identified.
@@ -73,7 +77,7 @@ These groups make the directory easier to browse; they are not an organization c
 - [History and external subjects](subjects/README.md) — Nine guides to people, former programs, host relationships, and separate cases.
 - [Records and decisions](Records-and-Decisions.md) — Supporting sources, approval history and the decisions that replaced older records.
 - [Historical and external relationships](../business-lines/HISTORICAL_AND_EXTERNAL_BOUNDARIES.md) — How former programs, host operators, and counterparties differ from current businesses.
-- [Approved identity assets](../../assets/brand/README.md) — Current logos and the original artwork that must be preserved.
+- [Logos and brand artwork](../../assets/brand/README.md) — The company’s logos and original artwork.
 
 ## How to read
 
@@ -81,4 +85,4 @@ Read Markdown directly on GitHub. Open PDFs for formatted documents, and downloa
 
 The [library](Library.md) points to the original files rather than keeping separate copies. It includes historical material, so check each record's date and status before treating it as current. Some figures are conditional scenarios or reconstructions, not observed history. The [source guide](../reader/SOURCES_AND_FORMATS.md) explains these distinctions and why documents are maintained in three forms.
 
-For terminology, use the [glossary](Glossary.md). For accepted resolutions and further work, see [decisions and remaining work](Open-Questions.md).
+Unfamiliar term? Try the [glossary](Glossary.md). The detailed approval history lives in [Records and decisions](Records-and-Decisions.md), with [decisions and remaining work](Open-Questions.md) explaining what has been completed and what comes next. Supporting records stay available without interrupting the company guides.

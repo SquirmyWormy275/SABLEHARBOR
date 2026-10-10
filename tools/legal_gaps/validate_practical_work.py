@@ -21,8 +21,12 @@ def validate():
     successor = json.loads(successor_path.read_text())
     assert sha(BASE / "review-support/qa/v3/REVIEW.json") == successor["historical_receipt_sha256"]
     updates = {r["path"]: r for r in successor["records"]}
-    assert set(updates) == {"docs/reader/transactions/README.md", "docs/reader/transactions/build.py",
-                            "tools/legal_gaps/validate_practical_work.py", "docs/reader/usability/RESULTS.json"}
+    assert set(updates) == {
+        "docs/reader/transactions/README.md",
+        "docs/reader/transactions/build.py",
+        "tools/legal_gaps/validate_practical_work.py",
+        "docs/reader/usability/RESULTS.json",
+    }
     # The legal design review remains historical. Later editorial work has its
     # own exact navigation pins rather than rewriting the manual-review receipt.
     editorial_path = BASE / "review-support/qa/v3/NAVIGATION_SUCCESSOR_2026-10-07.json"
@@ -31,11 +35,30 @@ def validate():
     assert editorial["historical_receipt_sha256"] == successor["historical_receipt_sha256"]
     assert editorial["previous_successor_sha256"] == sha(successor_path)
     refreshed = {r["path"]: r for r in editorial["records"]}
-    assert set(refreshed) == {"docs/wiki/Start-Here.md", "tools/legal_gaps/validate_practical_work.py",
-                              "tools/reader/check_journeys.py", "docs/reader/usability/RESULTS.json"}
+    assert set(refreshed) == {
+        "docs/wiki/Start-Here.md",
+        "tools/legal_gaps/validate_practical_work.py",
+        "tools/reader/check_journeys.py",
+        "docs/reader/usability/RESULTS.json",
+    }
     for relative, update in refreshed.items():
         assert update["historical_sha256"] == receipt["input_hashes"][relative]
     updates.update(refreshed)
+    # Preserve the original legal review and verify the current reading routes.
+    latest_path = BASE / "review-support/qa/v3/NAVIGATION_SUCCESSOR_2026-10-09.json"
+    latest = json.loads(latest_path.read_text())
+    assert latest["state"] == "AUTOMATED_NAVIGATION_REVIEW"
+    assert latest["historical_receipt_sha256"] == successor["historical_receipt_sha256"]
+    assert latest["previous_successor_sha256"] == sha(editorial_path)
+    current = {r["path"]: r for r in latest["records"]}
+    assert set(current) == {
+        "docs/wiki/Start-Here.md",
+        "tools/legal_gaps/validate_practical_work.py",
+        "docs/reader/usability/RESULTS.json",
+    }
+    for relative, update in current.items():
+        assert update["historical_sha256"] == receipt["input_hashes"][relative]
+    updates.update(current)
     for group in ("input_hashes", "evidence_hashes"):
         assert receipt[group], "Empty review coverage"
         for relative, digest in receipt[group].items():
@@ -47,7 +70,10 @@ def validate():
                     ["git", "show", f"{update['historical_revision']}:{relative}"], cwd=ROOT
                 )
                 assert hashlib.sha256(original).hexdigest() == digest == update["historical_sha256"]
-                assert sha(path) == update["current_sha256"], ("Stale navigation successor", relative)
+                assert sha(path) == update["current_sha256"], (
+                    "Stale navigation successor",
+                    relative,
+                )
             else:
                 assert sha(path) == digest, ("Stale review", relative)
     walk = json.loads((BASE / "walkthroughs/qa/REVIEW.json").read_text())

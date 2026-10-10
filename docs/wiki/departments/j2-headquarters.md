@@ -11,7 +11,7 @@ J2 Headquarters coordinates intelligence priorities, professional standards, sta
 
 ## Coordinating J2
 
-The establishment provides 28 headquarters billets. The roster identifies recorded occupants; appointment histories are available through the dated personnel and leadership records.
+Jonathan Goldstryker leads J2, Amanda Chenahot is Deputy Head, and Miriam Solano is Chief of Staff. Miriam joined Sable Harbor in 2019. The headquarters establishment provides 28 billets; the [leadership guide](../../j2/README.md#current-leadership) introduces the current leaders and links their professional profiles and appointment records.
 
 <a id="read-and-use-the-records"></a>
 
@@ -20,7 +20,8 @@ The establishment provides 28 headquarters billets. The roster identifies record
 - [Headquarters doctrine](../../../docs/j2/J2_HEADQUARTERS.md) — Institutional responsibilities and support structure.
 - [Establishment](../../../docs/j2/J2_ESTABLISHMENT.md) — 28 headquarters billets within the 237-billet J2 total.
 - [Leadership appointments](../../../docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md) — Jonathan Goldstryker, Head of J2, joined 2020; Amanda Chenahot, Deputy Head, joined 2021.
-- [Controlled headquarters publication](../../../docs/j2/publications/SH-J2-HQ-001_v1.0.0.pdf) — Reader edition.
+- [Personnel profiles](../../../docs/canon/J2_PERSONNEL_COMPLETION_2026-09-22.md) — The completed ten-person leadership record, including the Chief of Staff and three deputies.
+- [Headquarters publication](../../../docs/j2/publications/SH-J2-HQ-001_v1.0.0.pdf) — Reader edition.
 
 <a id="organization-and-identity"></a>
 
@@ -41,6 +42,6 @@ The establishment provides 28 headquarters billets. The roster identifies record
 <summary>About this article</summary>
 
 **Canon state:** LOCKED institutional scope; implementation detail varies by linked record.
-**Reviewed:** October 7, 2026. Supporting documents retain their own dates and status.
+**Reviewed:** October 9, 2026. Supporting documents retain their own dates and status.
 
 </details>

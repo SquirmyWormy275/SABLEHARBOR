@@ -1,8 +1,14 @@
 # Sable Harbor industrial case
 
-Pale Sun, Red Wash, American Resource Utility (ARU), and Blood, Sweat & Tears Railway (BS&T) form one selected industrial case. Start with the [participant guide](CASE_GUIDE.md), [legal structure](corporate/LEGAL_STRUCTURE_AND_FORMATION.md), and [implementation decisions](IMPLEMENTATION_DECISIONS.md).
+Pale Sun, Red Wash, American Resource Utility (ARU), and Blood, Sweat & Tears Railway (BS&T) form one selected industrial case. Follow the [case guide](CASE_GUIDE.md) to explore their work together, or open the [legal structure](corporate/LEGAL_STRUCTURE_AND_FORMATION.md) to understand the companies involved.
 
 The case cutoff is **September 5, 2026, 23:59:59 America/Los_Angeles**. Historical-looking company records are synthetic reconstructions. Model approval, evidence provenance, and temporal availability are separate fields. September–December 2026 monthly results are forecasts; an earlier month in a synthetic calibration is still not an audited actual.
+
+## Explore the case
+
+Start with a practical question: how was an acquisition funded, how does mine production become inventory and sales, or what can the transport business actually carry? The [case guide](CASE_GUIDE.md) points to the transaction, operating and financial records for each part of the story.
+
+The [Red Wash guide](../red_wash/README.md) goes deeper into the mine. The [operations guide](operations/README.md) connects transport, facilities and customer work. Use the [release index](../docs/releases/INDUSTRIAL_CASE_RELEASES.md) for complete downloads.
 
 ## Build and verify
 
@@ -22,3 +28,5 @@ The [release index](../docs/releases/INDUSTRIAL_CASE_RELEASES.md) records the di
 The [finance bridge](../docs/finance/INDUSTRIAL_FINANCE_BRIDGE_v1.0.md) connects the selected industrial books and leaves the reproducible enterprise finance-platform v0.1 snapshot intact. This case includes the industrial acquisition/funding layer and operating elimination schedules. It does not invent a revised enterprise-wide revenue, headcount, or valuation for unrelated businesses.
 
 The original mine standalone calculation remains a named comparison. Its integrated successor includes the interface, rolled-forward ARO, incremental service costs and equity funding. The source models distinguish recurring operating costs, sustaining capital, catch-up capital, interface capital, acquisition consideration, retained debt and reserves. A balanced ledger is necessary; it does not establish engineering certification, economic attractiveness or regulatory approval.
+
+For model design choices and their rationale, see [implementation decisions](IMPLEMENTATION_DECISIONS.md).

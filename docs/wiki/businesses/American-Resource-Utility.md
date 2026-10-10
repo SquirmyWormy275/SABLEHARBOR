@@ -1,8 +1,8 @@
 # American Resource Utility / BS&T
 
-[Wiki home](../Home.md) · [All files](../Files.md) · [Business directory](README.md) · [Department directory](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
+[Wiki home](../Home.md) · [Businesses](README.md) · [All files](../Files.md)
 
-<img src="../../../assets/brand/industrial_sources/aru/aru_primary_centered_chat_asset.png" alt="Approved American Resource Utility / BS&T logo" width="280">
+<img src="../../../assets/brand/industrial_sources/aru/aru_primary_centered_chat_asset.png" alt="American Resource Utility / BS&T logo" width="280">
 
 American Resource Utility provides railway, terminal, trucking and warehouse services for industrial customers. Blood, Sweat & Tears Railway Company is its separately incorporated railway subsidiary. Taylor, Wamsutter and Rawlins records describe different parts of the operating network.
 
@@ -10,13 +10,13 @@ American Resource Utility provides railway, terminal, trucking and warehouse ser
 
 ## Start here
 
-[Current business dossier](../../../docs/business-lines/AMERICAN_RESOURCE_UTILITY.md) · [Letterhead dossier PDF](../../../docs/business-lines/publications/SH-BIZ-AMERICAN-RESOURCE-UTILITY-001_v1.1.0.pdf)
+[Business dossier](../../../docs/business-lines/AMERICAN_RESOURCE_UTILITY.md) · [Dossier PDF](../../../docs/business-lines/publications/SH-BIZ-AMERICAN-RESOURCE-UTILITY-001_v1.1.0.pdf)
 
 The legal chain is Sable Harbor → Sable Harbor Industrial Holdings → ARU → BS&T. Nonrail services are operating businesses within ARU, not additional subsidiaries. The accepted network has 40 unique route miles; route miles and track miles are different measures.
 
 ## Organization and people
 
-[![American Resource Utility / BS&T existing organization chart](../../../docs/organization/assets/current/aru-services.png)](../../../docs/organization/charts/aru-services.md)
+[![American Resource Utility / BS&T organization chart](../../../docs/organization/assets/current/aru-services.png)](../../../docs/organization/charts/aru-services.md)
 
 [Chart and text roster](../../../docs/organization/charts/aru-services.md).
 
@@ -39,10 +39,10 @@ The legal chain is Sable Harbor → Sable Harbor Industrial Holdings → ARU →
 Reconcile service volumes and allocated service manifests to revenue and capacity, then examine procurement, payroll, fixed assets and debt. Separate the acquisition enterprise value, stock price, refinancing and parent funding. Monthly reconstructed allocations are not individually observed waybills.
 
 1. Read the [business-finance release index](../../../docs/releases/BUSINESS_FINANCE_RELEASES.md) and download its indexed ZIP.
-2. Open `units/american-resource-utility/audit.xlsx` in the extracted release. Its `README.md` explains the unit scope. The matching CSV and SQLite extracts provide the same scoped evidence; SQL is optional.
+2. Open `units/american-resource-utility/audit.xlsx` in the extracted release. Its `README.md` explains the unit scope. The matching CSV and SQLite extracts contain the same records; SQL is optional.
 3. Read the [unit evidence guide](../../../docs/audit/UNIT_EXPORT_SPECIFICATION.md) before choosing samples. Select scenario and period together, and distinguish retained 2026 reconstruction from conditional 2027–2031 forecasts.
 
-The [finance successor guide](../../../enterprise/business/README.md) explains generation, reconciliation and limits. The workbook records the selected scenario and its assumptions.
+The [finance model guide](../../../enterprise/business/README.md) explains generation, reconciliation and limits. The workbook records the selected scenario and its assumptions.
 
 ## Places and plans
 
@@ -63,3 +63,5 @@ Use the [complete facility artifact index](../../../geospatial/maps/facilities/A
 - [Procurement and vendor support](../departments/procurement.md)
 - [Safety and environmental governance](../departments/safety-environment.md)
 - [Finance](../departments/finance.md)
+
+[Departments](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)

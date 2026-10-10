@@ -1,8 +1,8 @@
 # Atlas Meridian
 
-[Wiki home](../Home.md) · [All files](../Files.md) · [Business directory](README.md) · [Department directory](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
+[Wiki home](../Home.md) · [Businesses](README.md) · [All files](../Files.md)
 
-<img src="../../../assets/brand/logos/atlas-meridian__reverse-horizontal.png" alt="Approved Atlas Meridian logo" width="360">
+<img src="../../../assets/brand/logos/atlas-meridian__reverse-horizontal.png" alt="Atlas Meridian logo" width="360">
 
 Atlas Meridian is software for investigating operating data, reviewing evidence and managing client work. It provides client workspaces and supports Advisory delivery while retaining a dedicated product organization and separately contracted licenses.
 
@@ -10,13 +10,13 @@ Atlas Meridian is software for investigating operating data, reviewing evidence 
 
 ## Start here
 
-[Current business dossier](../../../docs/business-lines/ATLAS_MERIDIAN.md) · [Letterhead dossier PDF](../../../docs/business-lines/publications/SH-BIZ-ATLAS-MERIDIAN-001_v1.1.0.pdf)
+[Business dossier](../../../docs/business-lines/ATLAS_MERIDIAN.md) · [Dossier PDF](../../../docs/business-lines/publications/SH-BIZ-ATLAS-MERIDIAN-001_v1.1.0.pdf)
 
 Atlas is recorded on the parent’s books and remains distinct from Advisory, J2 and the geographic atlas. It uses shared accommodation in Tucson and Sacramento, with deployed work through the existing business teams. See the [location directory](../Locations.md).
 
 ## Organization and people
 
-[![Atlas Meridian existing organization chart](../../../docs/organization/assets/current/atlas-meridian.png)](../../../docs/organization/charts/atlas-meridian.md)
+[![Atlas Meridian organization chart](../../../docs/organization/assets/current/atlas-meridian.png)](../../../docs/organization/charts/atlas-meridian.md)
 
 [Chart and text roster](../../../docs/organization/charts/atlas-meridian.md).
 
@@ -39,10 +39,10 @@ Commercial models describe pricing and service assumptions. Use the contract and
 Inspect license contracts separately from Advisory matter fees. Compare invoices, service periods, product/support capacity and internal-use costs. Internal use creates no external revenue.
 
 1. Read the [business-finance release index](../../../docs/releases/BUSINESS_FINANCE_RELEASES.md) and download its indexed ZIP.
-2. Open `units/atlas-meridian/audit.xlsx` in the extracted release. Its `README.md` explains the unit scope. The matching CSV and SQLite extracts provide the same scoped evidence; SQL is optional.
+2. Open `units/atlas-meridian/audit.xlsx` in the extracted release. Its `README.md` explains the unit scope. The matching CSV and SQLite extracts contain the same records; SQL is optional.
 3. Read the [unit evidence guide](../../../docs/audit/UNIT_EXPORT_SPECIFICATION.md) before choosing samples. Select scenario and period together, and distinguish retained 2026 reconstruction from conditional 2027–2031 forecasts.
 
-The [finance successor guide](../../../enterprise/business/README.md) explains generation, reconciliation and limits. The workbook records the selected scenario and its assumptions.
+The [finance model guide](../../../enterprise/business/README.md) explains generation, reconciliation and limits. The workbook records the selected scenario and its assumptions.
 
 ## Places and plans
 
@@ -58,3 +58,5 @@ Use the [complete facility artifact index](../../../geospatial/maps/facilities/A
 - [Foundry Field](Foundry-Field.md)
 - [Judgment](../departments/judgment.md)
 - [Enterprise Technology Services](../departments/technology.md)
+
+[Departments](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)

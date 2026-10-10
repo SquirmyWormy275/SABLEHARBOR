@@ -1,8 +1,8 @@
 # Pale Sun / Red Wash
 
-[Wiki home](../Home.md) · [All files](../Files.md) · [Business directory](README.md) · [Department directory](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
+[Wiki home](../Home.md) · [Businesses](README.md) · [All files](../Files.md)
 
-<img src="../../../assets/brand/logos/pale_sun__canonical.png" alt="Approved Pale Sun / Red Wash logo" width="280">
+<img src="../../../assets/brand/logos/pale_sun__canonical.png" alt="Pale Sun / Red Wash logo" width="280">
 
 Pale Sun owns Red Wash Mining, LLC, which operates the Red Wash uranium mine in Sweetwater County, Wyoming. The archive includes acquisition records, mine and processing descriptions, operating evidence, financial models and logistics constraints.
 
@@ -10,13 +10,13 @@ Pale Sun owns Red Wash Mining, LLC, which operates the Red Wash uranium mine in 
 
 ## Start here
 
-[Current business dossier](../../../docs/business-lines/PALE_SUN.md) · [Letterhead dossier PDF](../../../docs/business-lines/publications/SH-BIZ-PALE-SUN-001_v1.1.0.pdf)
+[Business dossier](../../../docs/business-lines/PALE_SUN.md) · [Dossier PDF](../../../docs/business-lines/publications/SH-BIZ-PALE-SUN-001_v1.1.0.pdf)
 
 Pale Sun belongs to Sable Harbor Industrial Holdings and owns Red Wash Mining. Its mining operation is in the Great Divide Basin / Red Desert, north of Wamsutter in Sweetwater County, Wyoming. The [location directory](../Locations.md) distinguishes the operating sites from offices and proposed facilities. In the accounting records, RWH is the reporting code for Red Wash Mining.
 
 ## Organization and people
 
-[![Pale Sun / Red Wash existing organization chart](../../../docs/organization/assets/current/pale-sun-red-wash.png)](../../../docs/organization/charts/pale-sun-red-wash.md)
+[![Pale Sun / Red Wash organization chart](../../../docs/organization/assets/current/pale-sun-red-wash.png)](../../../docs/organization/charts/pale-sun-red-wash.md)
 
 [Chart and text roster](../../../docs/organization/charts/pale-sun-red-wash.md).
 
@@ -39,10 +39,10 @@ Pale Sun belongs to Sable Harbor Industrial Holdings and owns Red Wash Mining. I
 Work from the acquisition consideration into transaction accounting, then compare production and inventory with sales, sustaining capital and closure assumptions. Use the industrial case guide for historical reconstruction and the business successor for conditional forecasts; do not post copied reference populations twice.
 
 1. Read the [business-finance release index](../../../docs/releases/BUSINESS_FINANCE_RELEASES.md) and download its indexed ZIP.
-2. Open `units/pale-sun/audit.xlsx` in the extracted release. Its `README.md` explains the unit scope. The matching CSV and SQLite extracts provide the same scoped evidence; SQL is optional.
+2. Open `units/pale-sun/audit.xlsx` in the extracted release. Its `README.md` explains the unit scope. The matching CSV and SQLite extracts contain the same records; SQL is optional.
 3. Read the [unit evidence guide](../../../docs/audit/UNIT_EXPORT_SPECIFICATION.md) before choosing samples. Select scenario and period together, and distinguish retained 2026 reconstruction from conditional 2027–2031 forecasts.
 
-The [finance successor guide](../../../enterprise/business/README.md) explains generation, reconciliation and limits. The workbook records the selected scenario and its assumptions.
+The [finance model guide](../../../enterprise/business/README.md) explains generation, reconciliation and limits. The workbook records the selected scenario and its assumptions.
 
 ## Places and plans
 
@@ -65,3 +65,5 @@ Use the [complete facility artifact index](../../../geospatial/maps/facilities/A
 - [Abandoned acquisition opportunities](../subjects/Historical-Opportunities.md)
 - [Safety and environmental governance](../departments/safety-environment.md)
 - [Finance](../departments/finance.md)
+
+[Departments](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
