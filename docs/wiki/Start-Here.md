@@ -2,7 +2,7 @@
 
 [Wiki home](Home.md) · [All files](Files.md) · [Audit practice](Audit.md) · [Document library](Library.md)
 
-Welcome. Sable Harbor is a fictional company with a working archive: people to meet, businesses to understand and records you can investigate. You can browse out of curiosity or use it to practise accounting, audit and business analysis. Reading the Wiki needs no installation or knowledge of how the repository was built.
+Welcome. Sable Harbor is a fictional company with a working archive: people to meet, businesses to understand and records you can investigate. You can browse out of curiosity or use it to practice accounting, audit and business analysis. Reading the Wiki needs no installation or knowledge of how the repository was built.
 
 ## Explore the company
 

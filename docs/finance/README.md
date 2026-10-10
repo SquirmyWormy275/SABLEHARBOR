@@ -1,16 +1,29 @@
 # Sable Harbor finance platform
 
-The [business-driven enterprise successor](../../enterprise/business/README.md) now adds current Foundry, Atlas, Advisory, Willow and Cradle economics, integrates the preserved industrial model and exports all seven units. Its [design](BUSINESS_DRIVEN_SUCCESSOR_2026-09-09.md) and [release index](../releases/BUSINESS_FINANCE_RELEASES.md) define its 2027–2031 replacement boundary.
+Follow the money from a business question to the workbook and the records behind it. You can use the accounting exercises without running the financial platform.
 
-The current selected industrial successor is the [Pale Sun / Red Wash / ARU / BS&T case](../../industrial/README.md), with its [finance bridge](INDUSTRIAL_FINANCE_BRIDGE_v1.0.md). The platform described below remains the reproducible enterprise v0.1 snapshot; industrial legal names and current operating assumptions are controlled by that successor.
+## Start with a question
+
+| Work | Open first |
+|---|---|
+| Trace an invoice or investigate a balance | [Finance exercises](READER_EXERCISES.md) and the [invoice exercise](../reader/exercises/INVOICE.md). |
+| Inspect supporting accounting records | [Accounting evidence packages](evidence/coverage/README.md), with reconciliations and CSV/SQLite extracts. |
+| Compare the seven businesses | The [business finance model](../../enterprise/business/README.md) and [release guide](../releases/BUSINESS_FINANCE_RELEASES.md). Its 2027–2031 figures are conditional forecasts. |
+| Work through an industrial acquisition | The [Pale Sun, Red Wash, ARU and BS&T case](../../industrial/README.md) and [finance bridge](INDUSTRIAL_FINANCE_BRIDGE_v1.0.md). |
+
+Keep each exercise's period, scenario and source edition together. The [business model design](BUSINESS_DRIVEN_SUCCESSOR_2026-09-09.md) explains which later assumptions replace the earlier platform forecast and which historical records remain unchanged.
+
+## Reproduce the original v0.1 platform
+
+The instructions below describe the original, reproducible enterprise v0.1 edition—not the whole company's current financial or legal position.
 
 The platform is a Python/SQLAlchemy financial-data foundation with SQLite local execution and
-PostgreSQL migrations/CI. It currently implements deterministic identities, explicit canon/model
+PostgreSQL migrations/CI. It implements deterministic identities, explicit record and model
 states, balanced immutable journals, reversals, period close, trial balance, causal transaction
 slices, synthetic 2023–2026 monthly scenario/calibration generation, earlier calibration anchors,
 scenarios, named SQL queries, six workbook outputs with an explicit valuation limitation, scoped
 business-unit evidence packages, and an allowlisted public-demo release generator. Generated values
-are not observed company history or audited records. The current Alembic target is `0015`; final
+are not observed company history or audited records. The v0.1 acceptance target is `0015`; final
 SQLite/PostgreSQL and artifact acceptance passed for v0.1 and is recorded in
 `PLATFORM_ACCEPTANCE_v0.1.md`.
 
@@ -24,10 +37,7 @@ SHFIN_DATABASE_URL=sqlite:///var/standard.db uv run shfin workbooks --generation
 SHFIN_DATABASE_URL=sqlite:///var/standard.db uv run shfin package-release --generation-run-id "$RUN_ID"
 ```
 
-Read `KNOWN_LIMITATIONS.md` before interpreting any output. Quantitative values and proposed legal
-implementation details are not locked canon. The relationship shapes Sable Harbor → controlled ARU
-→ wholly owned BS&T and Sable Harbor → dedicated Red Wash operator are locked and are not optional
-entity scenarios.
+Read [the v0.1 limitations](KNOWN_LIMITATIONS.md) before interpreting this edition. Its generated values and proposed implementation details do not replace later company decisions. For the current industrial legal structure, use the [industrial case](../../industrial/README.md) and its linked legal records rather than treating this earlier snapshot as a current ownership chart.
 
 ## Current Willow / Klein model
 

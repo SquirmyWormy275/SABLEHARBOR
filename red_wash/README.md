@@ -1,13 +1,7 @@
 # Red Wash transaction and operating evidence
 
-**Record:** `SH-PS-RW-TOR-001` · **Version:** 1.1.0
-**Case cutoff:** September 5, 2026 · **Synthetic calibration:** through August 31, 2026
-**Classification:** `PUBLIC_SYNTHETIC_DIEGETIC`
-
 Red Wash Mining, LLC is the Wyoming mine operator, wholly owned by Pale Sun Inc.
-The controlling industrial structure, acquisitions, integrated financing and Taylor
-service case are in the [industrial package](../industrial/README.md). This directory
-supplies its detailed mine, diligence, operating and commercial evidence.
+Start with the [casebook](RED_WASH_CASEBOOK.md) to explore the mine, then follow its production, processing, contracts and accounts. The [industrial case](../industrial/README.md) connects the acquisition and financing with the Taylor transport service.
 
 The preserved standalone 2026 numerical baseline remains reproducible here. The
 industrial successor separately identifies additional interface costs, capital,
@@ -20,8 +14,6 @@ management forecast available at the publication cutoff.
 
 | Record | Source |
 |---|---|
-| Selected transaction and standalone baseline | [Canon 1.1](../docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md) |
-| Reconciled decisions | [Decision addendum 1.1](../docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH_R2.md) |
 | Full mine evidence narrative | [Casebook](RED_WASH_CASEBOOK.md) |
 | Operating archaeology and diligence | [Operating record](TRANSACTION_OPERATING_RECORD.md) |
 | Commercial instruments | [Transaction and contracts](agreements/TRANSACTION_AND_COMMERCIAL_INSTRUMENTS.md) |
@@ -69,3 +61,14 @@ ordinary industrial-input service starts July 7, 2026. That service does not con
 uranium custody. Qualified external carriers remain available permanently; there is
 no minimum-volume promise or mine rail spur. Nonpublic evaluation material remains
 in the separate private control repository and is excluded from these public sources.
+
+<details>
+<summary>Edition details and decision history</summary>
+
+**Record:** `SH-PS-RW-TOR-001` · **Version:** 1.1.0
+**Case cutoff:** September 5, 2026 · **Synthetic calibration:** through August 31, 2026
+**Classification:** `PUBLIC_SYNTHETIC_DIEGETIC`
+
+The [transaction and standalone baseline](../docs/canon/RED_WASH_TRANSACTION_OPERATING_RECORD_2026-09-05_R2.md) and [decision addendum](../docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-05_RED_WASH_R2.md) record the choices behind this edition. [Records and decisions](../docs/wiki/Records-and-Decisions.md) connects them to the wider company history.
+
+</details>

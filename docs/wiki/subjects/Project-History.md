@@ -2,10 +2,10 @@
 
 Glasshouse and Wallaby were unsuccessful projects whose lessons shaped later work.
 
-| Project | Recorded outcome | Controlling reading |
+| Project | Recorded outcome | Read more |
 |---|---|---|
 | Glasshouse | Underground machine vision works under controlled conditions but fails amid dust, moisture, condensation, glare and ordinary mine contamination. The project fails as designed. | [Corporate lore, section 8.2](../../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md) |
-| Wallaby | An investigated tailings/process-residue opportunity is abandoned. Maeve's material-genealogy insight changes the later search method; it does not rescue Wallaby. | [Corporate lore, section 11.5](../../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md), [Cradle closeout, section 4](../../canon/CRADLE_CLOSEOUT_2026-09-06.md) |
+| Wallaby | An investigated tailings/process-residue opportunity is abandoned. Maeve's material-genealogy insight changes the later search method; it does not rescue Wallaby. | [Corporate lore, section 11.5](../../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md), [Cradle history, section 4](../../canon/CRADLE_CLOSEOUT_2026-09-06.md) |
 
 A useful case question is which physical assumption invalidated the original design or sampling plan, what evidence revealed it, and which later procedure changed. Read the [Willow business page](../businesses/Willow.md) and [Cradle host interfaces](External-Hosts.md) for the surviving work.
 

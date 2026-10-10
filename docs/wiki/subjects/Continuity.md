@@ -2,12 +2,12 @@
 
 Continuity work brings together corporate governance, technology recovery, facilities and independent review. The Corporate Secretary coordinates the governance work within OGC and ESS; operating teams carry out their recovery responsibilities. The [headquarters record](../../canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md) describes those roles.
 
-| Question | Existing route |
+| Question | Start here |
 |---|---|
 | Who coordinates crisis governance and formal records? | [Corporate Secretary](../departments/corporate-secretary.md), [General Counsel](../departments/legal.md) |
 | Where are technology recovery responsibilities and dependencies documented? | [Technology](../departments/technology.md), [runtime estate](../../../enterprise/runtime/README.md), [assurance scope](../../../enterprise/runtime/docs/ASSURANCE_SCOPE.md) |
 | Where are workplace and physical-security dependencies? | [Facilities](../departments/facilities.md), [Security](../departments/security.md), [service dependencies](../../../enterprise/services/README.md) |
-| How can a reader examine a failed or incomplete recovery exercise? | [Native CCF procedures](../../../enterprise/ccf/PROCEDURES.md), [accepted assurance workbench scope](../../../enterprise/ccf/assurance/README.md) |
+| How can a reader examine a failed or incomplete recovery exercise? | [Control-testing procedures](../../../enterprise/ccf/PROCEDURES.md), [Assessment workbench](../../../enterprise/ccf/assurance/README.md) |
 | How is independent assurance kept separate from management? | [Internal Audit](../departments/internal-audit.md), [ESS/independence doctrine](../../governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md) |
 
 A useful exercise follows one service dependency, the stated recovery requirement, the evidence actually available, and the responsible review path. Record missing evidence separately from a test failure. A successful synthetic restore does not establish enterprise-wide operating effectiveness, and planning capacity does not prove that a provider contract or deployment exists.

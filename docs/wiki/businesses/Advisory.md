@@ -1,8 +1,8 @@
 # Sable Harbor Advisory
 
-[Wiki home](../Home.md) · [All files](../Files.md) · [Business directory](README.md) · [Department directory](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
+[Wiki home](../Home.md) · [Businesses](README.md) · [All files](../Files.md)
 
-<img src="../../../assets/brand/logos/advisory__reverse-horizontal.png" alt="Approved Sable Harbor Advisory logo" width="360">
+<img src="../../../assets/brand/logos/advisory__reverse-horizontal.png" alt="Sable Harbor Advisory logo" width="360">
 
 Sable Harbor Advisory investigates business problems, builds client intelligence capabilities and improves operations. Intelligence Advisory, Intelligence Capability and Operational Excellence draw from one common professional bench. Work is organized into client matters with defined acceptance, review and transfer obligations.
 
@@ -10,13 +10,13 @@ Sable Harbor Advisory investigates business problems, builds client intelligence
 
 ## Start here
 
-[Current business dossier](../../../docs/business-lines/ADVISORY.md) · [Letterhead dossier PDF](../../../docs/business-lines/publications/SH-BIZ-ADVISORY-001_v1.1.0.pdf)
+[Business dossier](../../../docs/business-lines/ADVISORY.md) · [Dossier PDF](../../../docs/business-lines/publications/SH-BIZ-ADVISORY-001_v1.1.0.pdf)
 
 Advisory remains a business line of the existing Sable Harbor contracting entity. It is institutionally separate from J2 and is not Junction Advisory Group. Atlas Meridian has its own product organization and licenses.
 
 ## Organization and people
 
-[![Sable Harbor Advisory existing organization chart](../../../docs/organization/assets/current/advisory.png)](../../../docs/organization/charts/advisory.md)
+[![Sable Harbor Advisory organization chart](../../../docs/organization/assets/current/advisory.png)](../../../docs/organization/charts/advisory.md)
 
 [Chart and text roster](../../../docs/organization/charts/advisory.md).
 
@@ -44,10 +44,10 @@ The [parent-tax workpaper](../../finance/evidence/company-closeout/ADOPTED_PAREN
 Follow one matter’s scope, staffing, baseline and acceptance through fees, rework, invoices and transfer. Compare matter cost with accepted revenue; hours measure cost and capacity rather than automatically creating billable revenue. Atlas licensing stays separate.
 
 1. Read the [business-finance release index](../../../docs/releases/BUSINESS_FINANCE_RELEASES.md) and download its indexed ZIP.
-2. Open `units/advisory/audit.xlsx` in the extracted release. Its `README.md` explains the unit scope. The matching CSV and SQLite extracts provide the same scoped evidence; SQL is optional.
+2. Open `units/advisory/audit.xlsx` in the extracted release. Its `README.md` explains the unit scope. The matching CSV and SQLite extracts contain the same records; SQL is optional.
 3. Read the [unit evidence guide](../../../docs/audit/UNIT_EXPORT_SPECIFICATION.md) before choosing samples. Select scenario and period together, and distinguish retained 2026 reconstruction from conditional 2027–2031 forecasts.
 
-The [finance successor guide](../../../enterprise/business/README.md) explains generation, reconciliation and limits. The workbook records the selected scenario and its assumptions.
+The [finance model guide](../../../enterprise/business/README.md) explains generation, reconciliation and limits. The workbook records the selected scenario and its assumptions.
 
 ## Places and plans
 
@@ -63,3 +63,5 @@ Use the [complete facility artifact index](../../../geospatial/maps/facilities/A
 - [Office of the General Counsel](../departments/legal.md)
 - [J2 Education](../departments/education.md)
 - [Finance](../departments/finance.md)
+
+[Departments](../departments/README.md) · [Business dossiers](../../business-lines/README.md) · [Company charts](../../organization/README.md)
