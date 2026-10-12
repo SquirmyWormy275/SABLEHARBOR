@@ -1,27 +1,40 @@
 // Public synthetic layout fixture: no hidden scenario truth or production data.
 import { chromium } from "@playwright/test";
 import { spawn } from "node:child_process";
+import { createServer } from "node:net";
 import { mkdir, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
+const port = await new Promise((done, reject) => {
+  const probe = createServer();
+  probe.once("error", reject);
+  probe.listen(0, "127.0.0.1", () => {
+    const selected = probe.address().port;
+    probe.close(() => done(selected));
+  });
+});
+const baseURL = `http://127.0.0.1:${port}`;
 const output = resolve("../enterprise/generated/audit-suite/build/visuals");
 await mkdir(output, { recursive: true });
 const server = spawn(
   process.execPath,
-  ["node_modules/vite/bin/vite.js", "--host", "127.0.0.1", "--port", "5193"],
+  [
+    "node_modules/vite/bin/vite.js",
+    "--host", "127.0.0.1", "--port", String(port), "--strictPort",
+  ],
   { stdio: "ignore" },
 );
 let browser;
 try {
   for (let i = 0; i < 50; i++) {
     try {
-      await fetch("http://127.0.0.1:5193");
+      await fetch(baseURL);
       break;
     } catch {
       await new Promise((r) => setTimeout(r, 100));
     }
   }
   browser = await chromium.launch({
-    executablePath: "/usr/bin/chromium",
+    executablePath: process.env.CHROMIUM_EXECUTABLE || undefined,
     headless: true,
     args: ["--no-sandbox"],
   });
@@ -374,7 +387,7 @@ try {
     "findings",
     "review",
   ]) {
-    await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=${view}`);
+    await page.goto(`${baseURL}/?engagement=${e.id}&view=${view}`);
     await page.locator(".workspace-footer").waitFor();
     await page.screenshot({
       path: `${output}/${view}-desktop.png`,
@@ -389,7 +402,7 @@ try {
   }
   // Current location must remain programmatic across a record deep link,
   // keyboard route change and browser-history return.
-  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=controls&kind=controls&object=CC-1`);
+  await page.goto(`${baseURL}/?engagement=${e.id}&view=controls&kind=controls&object=CC-1`);
   await page.getByRole("dialog").waitFor();
   const rail = page.getByRole("navigation", { name: "Engagement workspace" });
   const controlsNav = rail.getByRole("button", { name: /Controls & tracker/ });
@@ -409,7 +422,7 @@ try {
     throw Error("History return did not restore the deep-linked current section");
   await page.keyboard.press("Escape");
   // Table navigation retains only search/sort/page, never row data.
-  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=controls`);
+  await page.goto(`${baseURL}/?engagement=${e.id}&view=controls`);
   const controlTable = page
     .locator(".record-table")
     .filter({
@@ -454,7 +467,7 @@ try {
     .waitFor();
   await page.keyboard.press("Escape");
   // Personal draft endpoints are mocked here; full page reload clears all client memory.
-  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=notes`);
+  await page.goto(`${baseURL}/?engagement=${e.id}&view=notes`);
   await page
     .getByRole("button", { name: "Add observation", exact: true })
     .click();
@@ -706,7 +719,7 @@ try {
     throw Error("Explicit stale draft rebase lost text");
   await page.keyboard.press("Escape");
   // Search previews resolve actual current public records; no instructor fields enter search.
-  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=controls`);
+  await page.goto(`${baseURL}/?engagement=${e.id}&view=controls`);
   const search = page.getByRole("searchbox", {
     name: "Search this engagement",
   });
@@ -753,7 +766,7 @@ try {
       throw Error(`Missing ${id} preview identity`);
     await page.keyboard.press("Escape");
   }
-  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=review`);
+  await page.goto(`${baseURL}/?engagement=${e.id}&view=review`);
   const instructor = page.getByRole("region", {
     name: "Protected instructor source archive",
   });
@@ -793,7 +806,9 @@ try {
   await relationships.getByText("REQUEST · 0 business days from this trigger", { exact: true }).waitFor();
   await relationships.getByRole("button", { name: "path:P1", exact: true }).click();
   await selectedNode.getByText("No explicit links were authored for this node.", { exact: false }).waitFor();
-  await instructor.getByLabel("Search source ID or review gap").fill("absent");
+  await instructor
+    .getByLabel("Search archive IDs, hashes or literal authored terms")
+    .fill("absent");
   await instructor
     .getByText("No matching archived explanations.", { exact: false })
     .waitFor();
@@ -803,7 +818,7 @@ try {
   // Client absence check complements separate backend403 tests; mock does not establish server authorization.
   const priorInstructorRequests = instructorRequests;
   e.permissions = ["learn"];
-  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=review`);
+  await page.goto(`${baseURL}/?engagement=${e.id}&view=review`);
   await page.locator(".workspace-footer").waitFor();
   if (
     (await page
@@ -817,7 +832,7 @@ try {
   )
     throw Error("Learner DOM retained instructor fixture");
   e.permissions = ["instruct", "review", "learn"];
-  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=pbc`);
+  await page.goto(`${baseURL}/?engagement=${e.id}&view=pbc`);
   await page.locator(".workspace-footer").waitFor();
   await page
     .getByRole("button", { name: "New PBC request +", exact: true })
@@ -903,12 +918,12 @@ try {
   if (await page.getByLabel("Current engagement context").count())
     throw Error("Late engagement response reopened abandoned scope");
   await page.goto(
-    `http://127.0.0.1:5193/?engagement=${e.id}&view=pbc&kind=artifacts&object=unavailable-id`,
+    `${baseURL}/?engagement=${e.id}&view=pbc&kind=artifacts&object=unavailable-id`,
   );
   await page.getByRole("alert").waitFor();
   if (await page.getByLabel("Current engagement context").count())
     throw Error("Unavailable deep link exposed workspace");
-  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=pbc`);
+  await page.goto(`${baseURL}/?engagement=${e.id}&view=pbc`);
   await page.locator(".workspace-footer").waitFor();
   await page.addStyleTag({
     content:
@@ -919,7 +934,7 @@ try {
     fullPage: true,
   });
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=pbc`);
+  await page.goto(`${baseURL}/?engagement=${e.id}&view=pbc`);
   await page.locator(".workspace-footer").waitFor();
   await page.screenshot({ path: `${output}/pbc-narrow.png`, fullPage: true });
   if (
@@ -927,7 +942,7 @@ try {
   )
     throw Error("Narrow overflow");
   await page.setViewportSize({ width: 1440, height: 1050 });
-  await page.goto("http://127.0.0.1:5193");
+  await page.goto(baseURL);
   await page.getByRole("button", { name: /New engagement/i }).click();
   await page.getByRole("button", { name: /Messy Authored/ }).click();
   await page.getByRole("button", { name: /Continue/ }).click();
@@ -940,7 +955,7 @@ try {
   await page.route(`**/api/engagements/${e.id}/company/systems`,route=>route.fulfill({contentType:'application/json',body:JSON.stringify({systems:[{system:'owned:SYS',owner:'P-01'},{system:'other:SYS',owner:'P-02'}],registry_sha256:'c'.repeat(64)})}));
   await page.route(`**/api/engagements/${e.id}/company/systems/*/records?*`,route=>route.fulfill({contentType:'application/json',body:JSON.stringify({records:[1,2].map(n=>({company:'NEUTRAL',branch:'B',system:'SYS',record:'REC-'+n,version:n,sha256:String(n).repeat(64),registry_sha256:'c'.repeat(64),source_system_alias:'owned:SYS'})),registry_sha256:'c'.repeat(64),next_after_record:null})}));
   await page.setViewportSize({width:1440,height:1050});
-  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=controls`);
+  await page.goto(`${baseURL}/?engagement=${e.id}&view=controls`);
   await page.getByText('Company replies and background work',{exact:true}).click();
   let background=page.getByRole('region',{name:'Background work'});
   await background.getByText('RUNNING',{exact:true}).waitFor();
@@ -1025,7 +1040,7 @@ try {
   await page.getByRole('button',{name:'Send message',exact:true}).click();await page.waitForTimeout(150);
   if(JSON.stringify(lostEnvelope)!==JSON.stringify(retriedEnvelope))throw Error('Transport retry changed exact source envelope');
   e.capabilities.workspace_contexts=true;
-  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=controls`);
+  await page.goto(`${baseURL}/?engagement=${e.id}&view=controls`);
   await page.getByText('Saved investigations',{exact:true}).first().click();
   let investigations=page.getByRole('region',{name:'Saved investigations'});
   await investigations.getByLabel('Investigation title',{exact:true}).fill('Neutral explicit investigation');
@@ -1104,12 +1119,12 @@ try {
   releaseStatus();await page.waitForTimeout(120);
   if(await page.getByText(/32 scoped controls/).count())throw Error('Late status report reopened hidden controls');
   const originalPermissions=e.permissions;e.permissions=[];
-  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=controls`);
+  await page.goto(`${baseURL}/?engagement=${e.id}&view=controls`);
   await page.getByLabel('Current engagement context').waitFor();
   if(await page.locator('.work-status').count())throw Error('Work status displayed without current permissions');
   e.permissions=originalPermissions;
   e.capabilities.work_status=false;
-  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=controls`);
+  await page.goto(`${baseURL}/?engagement=${e.id}&view=controls`);
   await page.getByLabel('Current engagement context').waitFor();
   if(await page.locator('.work-status').count())throw Error('Unsupported work-status capability exposed panel');
   e.capabilities.work_status=true;
@@ -1138,9 +1153,16 @@ try {
   });
   // Newer shared version deliberately has no task link; the protected DTO keeps v1 only.
   e.workpapers.push({id:'WP-TASK-LINKED',title:'Neutral authored procedure work',versions:[{id:'TASK-WPV1',version:1,task_ids:['T-01'],evidence_ids:[],text:'Historical explicitly linked version'},{id:'TASK-WPV2',version:2,task_ids:[],evidence_ids:[],text:'Newer unlinked version must not substitute'}]});
-  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=review`);
-  await page.getByRole('region',{name:'Authored issue index',exact:true}).getByRole('button').first().click();
+  await page.goto(`${baseURL}/?engagement=${e.id}&view=review`);
+  await page.getByRole('list', {name: 'Matching authored issues'})
+    .getByRole('button')
+    .filter({has: page.getByText('I1', {exact: true})})
+    .click();
   await page.getByRole('region',{name:'Selected authored issue',exact:true}).getByText('E1',{exact:true}).click();
+  // This fixture intentionally links no originals to I1. Browse the retained
+  // portfolio explicitly rather than implying an authored issue/source link.
+  await page.getByRole('region', {name: 'Bound source browser'})
+    .getByLabel('Source scope').selectOption('all');
   await page.getByLabel('Find bound source',{exact:true}).fill('neutral:NATIVE_SYS');
   await page.getByText('1 of 1 originals match this scope and search',{exact:false}).waitFor();
   await page.getByRole('button',{name:'BOUND-S1 · NATIVE_RECORD · v3',exact:true}).click();
@@ -1182,11 +1204,11 @@ try {
   await comparison.getByRole('alert').waitFor();
   if(await comparison.getByText(/recorded commands by the audited actor/).count())throw Error('Changed manifest retained comparison');
   delete boundFixture.snapshot.sources[0].registry_sha256;
-  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=review`);await page.getByRole('alert').filter({hasText:'Protected source routing pins are incomplete.'}).waitFor();
+  await page.goto(`${baseURL}/?engagement=${e.id}&view=review`);await page.getByRole('alert').filter({hasText:'Protected source routing pins are incomplete.'}).waitFor();
   if(await page.getByRole('button',{name:'BOUND-S1 · NATIVE_RECORD · v3',exact:true}).count())throw Error('Incomplete portfolio route exposed bound source');
   boundFixture.snapshot.sources[0].registry_sha256='2'.repeat(64);
   e.permissions=['learn'];const protectedCalls=boundRouteCalls;
-  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=review`);await page.getByLabel('Current engagement context').waitFor();await page.waitForTimeout(100);
+  await page.goto(`${baseURL}/?engagement=${e.id}&view=review`);await page.getByLabel('Current engagement context').waitFor();await page.waitForTimeout(100);
   if(boundRouteCalls!==protectedCalls||await page.getByText('neutral-original-store',{exact:true}).count()||await page.locator('.instructor-comparison').count())throw Error('Learner exposed protected bound key route or DOM');
   e.permissions=['instruct','review','learn'];
 
@@ -1197,7 +1219,7 @@ try {
   await page.route(`**/api/engagements/${e.id}/company/systems/*/records?*`,route=>route.fulfill({contentType:'application/json',body:JSON.stringify({records:[{company:'ORIGINAL_COMPANY',branch:'ORIGINAL_BRANCH',system:'SOURCE_SYS',record:'NATIVE_RECORD',version:4,sha256:'a'.repeat(64),source_store_id:'documentary',source_system_alias:alias,registry_sha256:registry,provenance:{name:'/private/source-store/native-original.csv'},event_at:null,available_at:'2027-01-01T00:00:00Z'}],next_after_record:null,registry_sha256:portfolioPagePin??registry,snapshot_isolation:'ONE_SOURCE_PAGE_ONLY'})}));
   await page.route(`**/api/engagements/${e.id}/commands`,route=>{const c=route.request().postDataJSON();if(c.kind!=='company.collect')return route.fallback();portfolioCollected=c.payload;return route.fulfill({contentType:'application/json',body:JSON.stringify(e)});});
   const privateReadsBeforePbc=boundRouteCalls;
-  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=pbc`);
+  await page.goto(`${baseURL}/?engagement=${e.id}&view=pbc`);
   await page.getByText('Browse company source records',{exact:true}).click();
   await page.getByRole('status').filter({hasText:'Loading company source systems'}).waitFor();if(boundRouteCalls!==privateReadsBeforePbc)throw Error('Hidden unvisited bound key fetched private content');if(await page.getByLabel('Company system',{exact:true}).isEnabled())throw Error('Pending source selector enabled');if(await page.getByText('No company systems are available through this engagement connection.',{exact:true}).count())throw Error('Loading index reported an empty system census');if(!releaseSourceIndex)throw Error('No pending source index');releaseSourceIndex();
   await page.getByLabel('Company system',{exact:true}).selectOption(alias);
@@ -1227,7 +1249,7 @@ try {
     if(impactMode==='delayed')await new Promise(r=>{releaseImpact=r;});
     return route.fulfill({contentType:'application/json',body:JSON.stringify(report)});
   });
-  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=pbc`);
+  await page.goto(`${baseURL}/?engagement=${e.id}&view=pbc`);
   await page.getByText('Check collected sources for changes',{exact:true}).click();
   await page.getByRole('button',{name:'Check source changes',exact:true}).click();
   await page.getByText(/2 retained artifacts compared · 1 later source versions observed · 3 comparisons unavailable/).waitFor();
@@ -1240,7 +1262,7 @@ try {
   e.artifacts[0].status='AVAILABLE';e.artifacts[0].source={kind:'COLLECTED_COMPANY_SOURCE',receipt:{engagement_id:e.id,source:{system:'SYS',source_system_alias:'conversation:SYS',record:'SAVED-R',version:2,sha256:e.artifacts[0].sha256}}};
   e.meetings[0].messages.push({id:'SAVED-USER',role:'user',content:'Neutral saved source question',source_records:[{system_id:'conversation:SYS',record_id:'SAVED-R',version:2,sha256:e.artifacts[0].sha256}]});
   e.meetings[0].messages.push({id:'SAVED-REPLY',role:'assistant',content:'Neutral response with retained action receipt',source_refs:['SOURCE-SNAPSHOT-NEUTRAL'],action_receipts:[{kind:'pbc.followup',executed:true,status:'ACKNOWLEDGED',authority:'SCOPED_ENGINE_COMMAND',request_id:'PBC-01',reason:'Neutral recorded source follow-up'},{kind:'pbc.create',executed:false,status:'REJECTED',authority:'SCOPED_ENGINE_COMMAND',request_id:'MISSING'}]});
-  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=meetings`);
+  await page.goto(`${baseURL}/?engagement=${e.id}&view=meetings`);
   await page.getByRole('button',{name:/Infrastructure walkthrough/}).click();
   await page.getByText('Exact source records selected for this question (1)',{exact:true}).click();
   await page.getByText(/conversation:SYS \/ SAVED-R · Version 2/).waitFor();
@@ -1255,7 +1277,7 @@ try {
   await page.route(`**/api/engagements/${e.id}/jobs`,route=>{if(route.request().method()==='POST'){censusEnvelope=route.request().postDataJSON();return route.fulfill({contentType:'application/json',body:JSON.stringify(censusJob)});}return route.fulfill({contentType:'application/json',body:JSON.stringify({jobs:censusEnvelope?[censusJob]:[]})});});
   await page.route(`**/api/engagements/${e.id}/jobs/JOB-CENSUS/input`,route=>route.fulfill({contentType:'application/json',body:JSON.stringify(censusEnvelope)}));
   await page.route(`**/api/engagements/${e.id}/commands`,route=>{const c=route.request().postDataJSON();if(c.kind!=='population.import')return route.fallback();censusImport=c;return route.fulfill({contentType:'application/json',body:JSON.stringify(e)});});
-  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=populations`);await page.getByText('Collect a source-record census',{exact:true}).click();
+  await page.goto(`${baseURL}/?engagement=${e.id}&view=populations`);await page.getByText('Collect a source-record census',{exact:true}).click();
   await page.getByRole('button',{name:'Load census source systems',exact:true}).click();await page.getByLabel('Census source system',{exact:true}).selectOption('CENSUS:SYS');await page.getByLabel('Census version policy',{exact:true}).selectOption('LATEST_VISIBLE_PER_RECORD');await page.getByLabel('Census event window start',{exact:true}).fill('2027-01-01T00:00:00Z');await page.getByLabel('Census event window end',{exact:true}).fill('2028-01-01T00:00:00Z');await page.getByLabel('Census undated policy',{exact:true}).selectOption('INCLUDE_UNDATED_STRATUM');await page.getByLabel('Census evidence request',{exact:true}).selectOption('PBC-01');
   await page.getByRole('button',{name:/Notes/}).first().click();await page.getByRole('button',{name:/Populations & samples/}).click();if(await page.getByLabel('Census source system',{exact:true}).inputValue()!=='CENSUS:SYS')throw Error('Census query lost across navigation');
   await page.getByRole('button',{name:'Collect census and source manifest',exact:true}).click();await page.getByRole('status').filter({hasText:'Census submission accepted (initial status: pending)'}).waitFor();if(censusEnvelope?.kind!=='company.census.collect'||censusEnvelope.payload.system_id!=='CENSUS:SYS'||censusEnvelope.payload.query.unknown_event_policy!=='INCLUDE_UNDATED_STRATUM')throw Error('Wrong census envelope');if(censusImport)throw Error('Census automatically imported');
@@ -1267,7 +1289,7 @@ try {
   const lineagePop={id:'POP-LINEAGE',title:'Neutral exact source population',version:1,count:4,status:'PROVISIONAL',artifact_id:e.artifacts[0].id,immutable:{source_json:JSON.stringify({original_sha256:e.artifacts[0].sha256,query_manifest_artifact_id:'LINEAGE-MANIFEST',query_manifest_sha256:'b'.repeat(64)})}};
   e.populations.push(lineagePop);e.selections.push({id:'SEL-LINEAGE',population_id:'POP-LINEAGE',population_version:1,selected_ids:['R1'],method:'manual',purpose:'Neutral selected item inspection'},{id:'SEL-UNAVAILABLE',population_id:'POP-LINEAGE',population_version:99,selected_ids:['R1'],method:'manual',purpose:'Unavailable exact version'});
   e.workpapers.push({id:'WP-LINEAGE',title:'Neutral linked workpaper',versions:[{id:'LV1',version:1,actor:'OTHER',text:'Exact first-version work',evidence_ids:[e.artifacts[0].id]},{id:'LV2',version:2,actor:'OTHER',text:'Later version not explicitly linked',evidence_ids:[]}]});
-  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=meetings`);await page.getByLabel('Ask the owner').fill('Keep this investigation question while tracing evidence');await page.getByRole('button',{name:/Populations & samples/}).click();
+  await page.goto(`${baseURL}/?engagement=${e.id}&view=meetings`);await page.getByLabel('Ask the owner').fill('Keep this investigation question while tracing evidence');await page.getByRole('button',{name:/Populations & samples/}).click();
   const selectionsTable=page.locator('.record-table').filter({has:page.getByRole('button',{name:'Sort by Selection',exact:true})});await selectionsTable.getByRole('searchbox').fill('SEL-LINEAGE');await selectionsTable.getByRole('button',{name:'SEL-LINEAGE',exact:true}).click();
   let lineageDialog=page.getByRole('dialog');await lineageDialog.getByRole('button',{name:'Open population POP-LINEAGE version 1',exact:true}).click();await lineageDialog.getByRole('button',{name:'Open pinned query manifest LINEAGE-MANIFEST',exact:true}).click();await lineageDialog.getByRole('button',{name:'Back to population POP-LINEAGE',exact:true}).click();await lineageDialog.getByRole('button',{name:'Open workpaper WP-LINEAGE version 1',exact:true}).click();
   await lineageDialog.getByText('Showing explicitly linked workpaper version 1. Other versions are not substituted.',{exact:true}).waitFor();const versionsTable=lineageDialog.locator('.record-table');await versionsTable.getByText('Exact first-version work',{exact:true}).waitFor();if(await versionsTable.getByText('Later version not explicitly linked',{exact:true}).count())throw Error('Lineage substituted a newer workpaper version');
@@ -1277,7 +1299,7 @@ try {
   // on instructor/reviewer capabilities from the earlier fixture journey.
   viewer = { id: "learner-fixture", display_name: "Layout fixture learner", roles: ["learner"] };
   e.permissions = ["learn"];
-  await page.goto(`http://127.0.0.1:5193/?engagement=${e.id}&view=notes&kind=notes&object=N-01`);
+  await page.goto(`${baseURL}/?engagement=${e.id}&view=notes&kind=notes&object=N-01`);
   await page.getByRole("dialog").waitFor();
   const learnerRail = page.getByRole("navigation", { name: "Engagement workspace" });
   const notesNav = learnerRail.getByRole("button", { name: /Notes/ });
@@ -1358,6 +1380,15 @@ try {
   console.log(
     "10 sections, configuration, desktop/narrow: browser checks passed",
   );
+} catch (error) {
+  const failedPage = browser?.contexts()[0]?.pages()[0];
+  if (failedPage) {
+    await Promise.allSettled([
+      failedPage.screenshot({ path: resolve(output, "failure.png"), fullPage: true }),
+      failedPage.content().then(content => writeFile(resolve(output, "failure.html"), content)),
+    ]);
+  }
+  throw error;
 } finally {
   await browser?.close();
   server.kill();

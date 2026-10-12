@@ -1,0 +1,54 @@
+name: Audit workspace frontend
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - audit_suite_web/**
+      - .github/workflows/audit-workspace-web.yml
+  pull_request:
+    paths:
+      - audit_suite_web/**
+      - .github/workflows/audit-workspace-web.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: audit-workspace-web-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  frontend:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: audit_suite_web
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # repository pin
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: audit_suite_web/package-lock.json
+      - run: npm ci
+      - name: Frontend unit tests
+        run: npm test
+      - name: Type check and production build
+        run: npm run build
+      - name: Install managed Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Synthetic desktop and narrow-screen browser checks
+        run: npm run test:browser
+      - name: Retain browser screenshots and receipts
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # repository pin
+        with:
+          name: audit-workspace-browser
+          path: enterprise/generated/audit-suite/build/visuals/
+          if-no-files-found: warn
+          retention-days: 14
