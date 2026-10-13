@@ -18,15 +18,17 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
         "6fa8e6ba1e428762e1554a5e2779402889dbe48983b3362412536f7744995d66",
     ),
     # Tracked convenience catalog retained by GENERATED_RECORDS_LIFECYCLE.md.
-    # October 7 editorial refresh: 1,674 public reader files (two new guides).
+    # October 13 November-guide refresh: 1,677 public reader files (three new guides).
     # Exact logical comparison preserves all 148 institutional objects and
     # publication pairs, 294 relationships, 12 evidence packages, 237 evidence
     # artifacts and the existing evidence link. Reader text/search reflects the
-    # README and Wiki cleanup. Full catalog regeneration reproduces its tables.
+    # README and Wiki delivery links. All 384 counterpart-audit rows are unchanged;
+    # full catalog regeneration reproduces its tables. The 148 admitted source/PDF
+    # pairs retain their accepted manifest and exact bytes.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        15466496,
-        "4514eb174bdc754b5860796186f395527434fb07d2d36b19385f1db2c541ae8b",
+        15489024,
+        "5a80a4de83195ae20eeb48d12b5b574a6ec476b24eaa614965953283588c8d3a",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.

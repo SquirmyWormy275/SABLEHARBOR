@@ -6,6 +6,8 @@ The audit workspace lets learners work through an engagement: define scope, requ
 
 This directory contains the React/TypeScript browser application. Navigation is retained in the URL; the authenticated service holds engagement state, permissions, evidence and revisions. Credentials and instructor answers remain outside browser storage.
 
+The separate [November company-file delivery](../docs/audit-suite/demo-2026-11/SOURCE_DELIVERY.md) supplies selected records through files and a manifest. Its standalone Python reader verifies an authorized submission without installing this browser application or loading private workroom state. The [scope](../docs/audit-suite/demo-2026-11/SCOPE.md) and [completion summary](../docs/audit-suite/demo-2026-11/COMPLETION.md) identify the edition and its verified delivery boundary.
+
 ## Build and run
 
 Document inspection and review extraction require Linux with working unprivileged Bubblewrap (`bwrap`) namespaces and a writable temporary directory. The worker has no mounted private state or network access, and runs with memory, CPU, output and wall-time limits. If isolation is unavailable, files remain quarantined or require human review; the service does not fall back to parsing them in its own process. Install Bubblewrap through the host's package manager before running the local suite.

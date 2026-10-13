@@ -1,0 +1,30 @@
+{
+  "record_id": "SH-LEGAL-V3-NAVIGATION-SUCCESSOR-2026-10-13",
+  "state": "AUTOMATED_NAVIGATION_REVIEW",
+  "historical_receipt_sha256": "177c3e64fa7dc00df005a42c29d1e1d9192cd31cb2db711dc3e6bbf8be7321e1",
+  "previous_successor_sha256": "72cc6cb9597919cec7a27fecb88c8a68cd5a9576a3f79ee34de5c4432171382e",
+  "reviewed_reader_revision": "4f1b2d4b58cfd6d03baec2d0a3659f6308172001",
+  "records": [
+    {
+      "path": "tools/legal_gaps/validate_practical_work.py",
+      "historical_revision": "1d86f78944c95d3fdde72c4dcc31cd9b50c2ada9",
+      "historical_sha256": "9d8682a15cc655ae7ed124ff459d769a0547270f17d1316eb886e40fbb363861",
+      "previous_current_sha256": "fe99c34921e73422e929ffaf8bee75df413b131bf1d3f3da182889eed115ff16",
+      "current_sha256": "fa1e3e53e74fc67ec98ccdce41f80c32d9e9b4b8fa35c6b224512c8758eceda4",
+      "scope": "November README links and navigation receipt refresh; historical legal sources, workbooks and manual review remain unchanged."
+    },
+    {
+      "path": "docs/reader/usability/RESULTS.json",
+      "historical_revision": "1d86f78944c95d3fdde72c4dcc31cd9b50c2ada9",
+      "historical_sha256": "db7f50a06446ebcef37c850092a4055bd699e9c969a367df9c0ba58d70116932",
+      "previous_current_sha256": "bbc4e7de70d942687ce6c509f9f094f9297e9cf4f943184e6345c9085c6ddf1c",
+      "current_sha256": "fbd1aa6a1ddcbadf6f87cd5395b69306add5f99178a912f9bcd319dbe579a2aa",
+      "scope": "November README links and navigation receipt refresh; historical legal sources, workbooks and manual review remain unchanged."
+    }
+  ],
+  "verification": {
+    "complete_document_routes": 6,
+    "method": "Replay unchanged route definitions, links, PDF contents and workbook sheet promises; preserve and verify historical legal review and successive navigation pins.",
+    "limits": "Not a new legal-design review, human-user study or owner acceptance of draft legal instruments."
+  }
+}
