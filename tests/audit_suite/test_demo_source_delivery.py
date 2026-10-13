@@ -1,8 +1,6 @@
 """Portable publication boundaries and independent source calculations."""
 
 import copy
-import json
-from pathlib import Path
 
 import pytest
 
