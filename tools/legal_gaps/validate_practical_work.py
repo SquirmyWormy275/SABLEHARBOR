@@ -59,6 +59,23 @@ def validate():
     for relative, update in current.items():
         assert update["historical_sha256"] == receipt["input_hashes"][relative]
     updates.update(current)
+    # A README link update refreshes reader hashes without changing the legal
+    # review. Retain every earlier receipt and bind the navigation successor.
+    delivery_path = BASE / "review-support/qa/v3/NAVIGATION_SUCCESSOR_2026-10-13.json"
+    delivery = json.loads(delivery_path.read_text())
+    assert delivery["state"] == "AUTOMATED_NAVIGATION_REVIEW"
+    assert delivery["historical_receipt_sha256"] == successor["historical_receipt_sha256"]
+    assert delivery["previous_successor_sha256"] == sha(latest_path)
+    delivered = {r["path"]: r for r in delivery["records"]}
+    assert len(delivery["records"]) == len(delivered) == 2
+    assert set(delivered) == {
+        "tools/legal_gaps/validate_practical_work.py",
+        "docs/reader/usability/RESULTS.json",
+    }
+    for relative, update in delivered.items():
+        assert update["historical_sha256"] == receipt["input_hashes"][relative]
+        assert update["previous_current_sha256"] == current[relative]["current_sha256"]
+    updates.update(delivered)
     for group in ("input_hashes", "evidence_hashes"):
         assert receipt[group], "Empty review coverage"
         for relative, digest in receipt[group].items():
