@@ -64,3 +64,10 @@ syntax in required CI. Other source, tests and launcher tooling use the normal
 Ruff checks. Changing a listed runtime module requires an explicit source-pin
 successor and the applicable domain tests; automatic style cleanup must not
 silently change a retained history's runtime admission.
+
+## November company-source edition
+
+The separate [November source delivery](demo-2026-11/SOURCE_DELIVERY.md) supplies
+selected company records through verified files. Its [scope](demo-2026-11/SCOPE.md)
+describes the local records and dates. Preparing or replaying that isolated edition
+does not reset either workroom or require an auditor-product implementation.

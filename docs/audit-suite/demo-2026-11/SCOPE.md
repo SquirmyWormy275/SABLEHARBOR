@@ -1,0 +1,19 @@
+# Sable Harbor — records for the November demonstration
+
+This is a staged synthetic client edition authored in October 2026. Company event dates refer to fictional 2027 operations; the simulated closing correspondence takes place in January 2028. The selected period is 1 January–31 March 2027, with a final evidence availability cutoff of 15 January 2028 at 17:00 UTC. Each delivery has its own earlier cutoff in its manifest.
+
+The corporate boundary includes the declared local shared-service identity register and the named local configuration/recovery exercise. These are retained local simulations, with separate source histories. They do not describe the whole company estate, production infrastructure, physical access, a deployed Reno/Boise service, or real patient information.
+
+| Control | Selected records and procedure |
+|---|---|
+| SH-IAM-007 — periodic access review | Q1 registered-account review across directory, application, local account, remote access, API-token and application-session channels, plus the two retained mover application histories. Reconcile the registered denominator to source account history, subject decisions, authorized duties and recorded follow-up. The full registered population is retained. |
+| SH-CFG-002 — configuration baseline and drift | LOCAL-RECOVERY-CONFIG-A: compare actual 5 February settings with the locally approved 1 February package, retain the 6 February application and subsequent export. This is a retry-budget reference target governed by a local rule, not an enterprise security-hardening policy. |
+| SH-BCM-003 — restore testing | CONFIG-BYTES, backups B1/B2/B3 and restores R1/R2 during 5–6 February. Examine copy identity, checkpoint age, restoration and whether recovered settings were usable by the consuming application. Byte equality alone does not establish application use. |
+
+The identity service order is effective from 1 January 2027, with operating access ready at 03:15 UTC; the end boundary is 1 January 2028. Closing authority continues until 16 January 2028 without extending operating permissions. The entitlement catalogue is the local duty/rights rule. Configuration uses the peer-approved CONFIG-CORRECTED package and its local 120ms retry limit. Recovery uses the retained five-occurrence local plan; approved enterprise BIA, RPO and RTO targets are not supplied.
+
+Elliot Tran (AS-P007) is the accepted local identity provisioner and the recorded recovery operator. Dana West (AS-P008) is the local access approver and recorded recovery review contact. Rowan Price (AS-P009) is the local management quality reviewer for this identity service; that local delegation does not make his management review an auditor's independent procedure. These accepted service delegations do not establish employment appointments. Marcus Reed (P005) performed the configuration application and exports; Priya Raman (P002) approved the local corrected build. Their broader proposed titles are not upgraded by this edition.
+
+Review subjects, employees, contractors, service delegates, nonhuman identities, accounts and individual rights are different units. Stable subject_id, account_id, channel and review_anchor fields preserve their joins. The register defines eligibility independently of the review rows. Worker counts and company-wide account completeness are outside this scope.
+
+Native byte exports are marked original. JSON/CSV views with private routing headers removed are marked derivative; their manifest retains the original digest and an opaque source locator. Underlying migrated source headers may carry external producer hashes: those hashes are preserved as source declarations, not assertions that a newly rendered view is byte-identical. The company retains exact originals for hash checking. The supplied collection contexts identify each observation's target and time.
