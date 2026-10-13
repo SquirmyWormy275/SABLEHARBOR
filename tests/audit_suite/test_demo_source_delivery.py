@@ -207,3 +207,35 @@ def test_configuration_comparison_preserves_prior_condition():
     assert prior["timeout_ms"] * prior["attempts"] == 90
     assert delivery.configuration_differences(baseline, baseline) == []
     assert prior["timeout_ms"] == 30
+
+
+@pytest.mark.parametrize("kind", ["", "RSA ", "EC "])
+def test_private_key_detection_without_tracked_secret_marker(kind):
+    marker = "BEGIN " + kind + "PRIVATE " + "KEY"
+    with pytest.raises(ValueError, match="private key"):
+        delivery.safe_text(marker.encode())
+
+
+def test_concurrent_empty_destination_is_not_overwritten(tmp_path, monkeypatch):
+    descriptor, inputs, _ = edition(tmp_path)
+    original = delivery.rename_new
+    destination = tmp_path / "release"
+
+    def collision(source, target):
+        target.mkdir()
+        original(source, target)
+
+    monkeypatch.setattr(delivery, "rename_new", collision)
+    with pytest.raises(FileExistsError):
+        delivery.publish(descriptor, inputs, "initial", destination)
+    assert destination.is_dir()
+    assert not list(destination.iterdir())
+    assert not list(tmp_path.glob(".pending-*"))
+
+
+def test_missing_input_does_not_publish(tmp_path):
+    descriptor, inputs, _ = edition(tmp_path)
+    (inputs / "record.json").unlink()
+    with pytest.raises(ValueError, match="missing"):
+        delivery.publish(descriptor, inputs, "initial", tmp_path / "release")
+    assert not (tmp_path / "release").exists()

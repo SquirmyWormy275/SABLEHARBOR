@@ -8,6 +8,8 @@ only after every member has been verified; an existing destination is refused.
 from __future__ import annotations
 
 import argparse
+import ctypes
+import errno
 import hashlib
 import json
 import os
@@ -52,7 +54,6 @@ FORBIDDEN = (
     "expected_result",
     "instructor_key",
     "scenario_seed",
-    "BEGIN PRIVATE KEY",
 )
 
 
@@ -214,6 +215,19 @@ def verify(root: Path):
     return manifest
 
 
+def rename_new(source: Path, destination: Path):
+    """Linux atomic no-replacement publication; the reader is platform independent."""
+    libc = ctypes.CDLL(None, use_errno=True)
+    rename = getattr(libc, "renameat2", None)
+    if rename is None:
+        raise OSError(errno.ENOSYS, "Atomic no-replacement publication unavailable")
+    rename.argtypes = [ctypes.c_int, ctypes.c_char_p, ctypes.c_int, ctypes.c_char_p, ctypes.c_uint]
+    rename.restype = ctypes.c_int
+    if rename(-100, os.fsencode(source), -100, os.fsencode(destination), 1):
+        code = ctypes.get_errno()
+        raise OSError(code, os.strerror(code))
+
+
 def publish(descriptor: Path, input_root: Path, stage: str, destination: Path):
     descriptor, input_root, destination = (
         p.absolute() for p in (descriptor, input_root, destination)
@@ -264,10 +278,23 @@ def publish(descriptor: Path, input_root: Path, stage: str, destination: Path):
                 handle.write(data)
                 handle.flush()
                 os.fsync(handle.fileno())
-        (pending / "manifest.json").write_bytes(encode(manifest))
+        with (pending / "manifest.json").open("xb") as handle:
+            handle.write(encode(manifest))
+            handle.flush()
+            os.fsync(handle.fileno())
+        for directory in [p for p in pending.rglob("*") if p.is_dir()] + [pending]:
+            fd = os.open(directory, os.O_RDONLY | os.O_DIRECTORY)
+            try:
+                os.fsync(fd)
+            finally:
+                os.close(fd)
         verify(pending)
-        # A concurrent publisher cannot replace a completed nonempty directory.
-        pending.rename(destination)
+        rename_new(pending, destination)
+        fd = os.open(destination.parent, os.O_RDONLY | os.O_DIRECTORY)
+        try:
+            os.fsync(fd)
+        finally:
+            os.close(fd)
     except BaseException:
         shutil.rmtree(pending)
         raise
