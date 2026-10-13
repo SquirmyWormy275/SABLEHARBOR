@@ -30,6 +30,8 @@ For a broader view, download the [operating review workbook](enterprise/operatio
 
 The [audit workspace](docs/audit-suite/LOCAL_WORKSPACE.md) takes the next step: request company evidence, collect originals, select samples and prepare workpapers in separate CLEAN and MESSY cases. Its setup guide explains how to run it locally.
 
+For the November demonstration, the [company-record edition](docs/audit-suite/demo-2026-11/SCOPE.md) supplies access-review, configuration and restoration records for fictional Q1 2027. The [file delivery guide](docs/audit-suite/demo-2026-11/SOURCE_DELIVERY.md) explains how to read and verify an authorized client submission using ordinary files and a manifest. Evidence directories are supplied privately; this repository contains the scope, delivery tooling and [completion summary](docs/audit-suite/demo-2026-11/COMPLETION.md).
+
 Each [exercise guide](docs/reader/USE_CASES.md) tells you what to open, what to do and what to produce. Keep the release, scenario and period together; a missing record is something to investigate, not something to fill in by guesswork.
 
 ## Take a look around
