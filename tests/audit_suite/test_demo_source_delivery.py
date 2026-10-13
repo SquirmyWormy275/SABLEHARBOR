@@ -1,6 +1,8 @@
 """Portable publication boundaries and independent source calculations."""
 
 import copy
+import os
+from pathlib import Path
 
 import pytest
 
@@ -269,3 +271,175 @@ def test_error_after_rename_preserves_complete_destination(tmp_path, monkeypatch
         delivery.publish(descriptor, inputs, "initial", destination)
     assert delivery.verify(destination)
     assert not list(tmp_path.glob(".pending-*"))
+
+
+@pytest.mark.parametrize(
+    "media_type",
+    [
+        "application/json; charset=utf-8",
+        "Application/JSON",
+        "Text/Plain; charset=utf-8",
+        "application/vnd.company+json",
+    ],
+)
+@pytest.mark.parametrize(
+    "content", [b'{"route":"/home/private"}', b'{"password":"unwanted-value"}']
+)
+def test_normalized_text_media_scans_publisher_and_reader(tmp_path, media_type, content):
+    descriptor, inputs, config = edition(tmp_path)
+    spec = config["stages"]["initial"]["artifacts"][0]
+    spec["media_type"] = media_type
+    descriptor.write_bytes(delivery.encode(config))
+    release = tmp_path / "release"
+    delivery.publish(descriptor, inputs, "initial", release)
+    (inputs / "record.json").write_bytes(content)
+    spec.update(
+        bytes=len(content), sha256=delivery.digest(content), source_sha256=delivery.digest(content)
+    )
+    descriptor.write_bytes(delivery.encode(config))
+    with pytest.raises(ValueError, match="release"):
+        delivery.publish(descriptor, inputs, "initial", tmp_path / "denied")
+    assert not (tmp_path / "denied").exists()
+    assert not list(tmp_path.glob(".pending-*"))
+    manifest = delivery.read_json(release / "manifest.json")
+    manifest["artifacts"][0].update({k: spec[k] for k in delivery.ARTIFACT_FIELDS})
+    (release / "records/observation.json").write_bytes(content)
+    (release / "manifest.json").write_bytes(delivery.encode(manifest))
+    with pytest.raises(ValueError, match="release"):
+        delivery.verify(release)
+
+
+def test_reader_rejects_external_manifest_hard_link(tmp_path):
+    descriptor, inputs, _ = edition(tmp_path)
+    release = tmp_path / "release"
+    delivery.publish(descriptor, inputs, "initial", release)
+    os.link(release / "manifest.json", tmp_path / "external-manifest.json")
+    with pytest.raises(ValueError, match="unaliased manifest"):
+        delivery.verify(release)
+
+
+@pytest.mark.parametrize("relationship", ["derives_from", "supersedes"])
+@pytest.mark.parametrize("identity", ["", "bad/id", None, [], {}])
+def test_relationship_requires_resolvable_artifact_identity(tmp_path, relationship, identity):
+    descriptor, inputs, config = edition(tmp_path)
+    release = tmp_path / "release"
+    delivery.publish(descriptor, inputs, "initial", release)
+    spec = config["stages"]["initial"]["artifacts"][0]
+    spec[relationship] = [{"artifact_id": identity, "version": 1, "sha256": spec["sha256"]}]
+    descriptor.write_bytes(delivery.encode(config))
+    with pytest.raises(ValueError, match="relationship"):
+        delivery.publish(descriptor, inputs, "initial", tmp_path / "denied")
+    manifest = delivery.read_json(release / "manifest.json")
+    manifest["artifacts"][0][relationship] = spec[relationship]
+    (release / "manifest.json").write_bytes(delivery.encode(manifest))
+    with pytest.raises(ValueError, match="relationship"):
+        delivery.verify(release)
+
+
+@pytest.mark.parametrize("event", ["", False, 0, [], {}])
+def test_unknown_event_requires_explicit_null(tmp_path, event):
+    descriptor, inputs, config = edition(tmp_path)
+    spec = config["stages"]["initial"]["artifacts"][0]
+    spec["event_at"] = event
+    descriptor.write_bytes(delivery.encode(config))
+    with pytest.raises(ValueError, match="Timestamp"):
+        delivery.publish(descriptor, inputs, "initial", tmp_path / "denied")
+    spec["event_at"] = None
+    descriptor.write_bytes(delivery.encode(config))
+    assert delivery.publish(descriptor, inputs, "initial", tmp_path / "accepted")
+
+
+def test_configuration_distinguishes_absent_and_null():
+    assert delivery.configuration_differences({"optional": None}, {}) == [
+        {
+            "field": "optional",
+            "approved": None,
+            "observed": None,
+            "approved_present": True,
+            "observed_present": False,
+        }
+    ]
+    assert delivery.configuration_differences({}, {"optional": None}) == [
+        {
+            "field": "optional",
+            "approved": None,
+            "observed": None,
+            "approved_present": False,
+            "observed_present": True,
+        }
+    ]
+    assert delivery.configuration_differences({"optional": None}, {"optional": None}) == []
+
+
+def test_media_is_copied_and_hashed_without_whole_file_reads(tmp_path, monkeypatch):
+    descriptor, inputs, config = edition(tmp_path)
+    content = b"synthetic media " * 200000
+    (inputs / "clip.mp4").write_bytes(content)
+    spec = config["stages"]["initial"]["artifacts"][0]
+    spec.update(
+        input_path="clip.mp4",
+        path="walkthrough/clip.mp4",
+        media_type="video/mp4",
+        bytes=len(content),
+        sha256=delivery.digest(content),
+        source_sha256=delivery.digest(content),
+    )
+    descriptor.write_bytes(delivery.encode(config))
+    original = Path.read_bytes
+
+    def reject_media_read(path):
+        if path.suffix == ".mp4":
+            raise AssertionError("Media must be streamed")
+        return original(path)
+
+    monkeypatch.setattr(Path, "read_bytes", reject_media_read)
+    release = tmp_path / "release"
+    delivery.publish(descriptor, inputs, "initial", release)
+    assert delivery.verify(release)["artifacts"][0]["sha256"] == delivery.digest(content)
+    assert delivery.file_digest(release / "walkthrough/clip.mp4") == (
+        delivery.digest(content),
+        len(content),
+    )
+
+
+@pytest.mark.parametrize("side", ["input", "destination"])
+def test_normalized_roots_preserve_source_isolation(tmp_path, side):
+    descriptor, inputs, _ = edition(tmp_path)
+    (tmp_path / "intermediate").mkdir()
+    destination = inputs / "release"
+    if side == "input":
+        inputs = tmp_path / "intermediate/../inputs"
+    else:
+        destination = tmp_path / "intermediate/../inputs/release"
+    with pytest.raises(ValueError, match="outside input root"):
+        delivery.publish(descriptor, inputs, "initial", destination)
+    assert not (tmp_path / "inputs/release").exists()
+
+
+@pytest.mark.parametrize(
+    "path", ["RECORDS/OBSERVATION.JSON", "Records/other.json", "Manifest.JSON"]
+)
+def test_case_insensitive_paths_cannot_collide(tmp_path, path):
+    descriptor, inputs, config = edition(tmp_path)
+    spec = copy.deepcopy(config["stages"]["initial"]["artifacts"][0])
+    spec.update(artifact_id="OTHER", path=path)
+    config["stages"]["initial"]["artifacts"].append(spec)
+    descriptor.write_bytes(delivery.encode(config))
+    with pytest.raises(ValueError, match="[Cc]ollision|Duplicate"):
+        delivery.publish(descriptor, inputs, "initial", tmp_path / "release")
+    assert not (tmp_path / "release").exists()
+
+
+@pytest.mark.parametrize("rights", ["read", {"read": True}, None, [["read"]]])
+def test_population_requires_entitlement_list(rights):
+    population = {
+        "members": [
+            {
+                "subject_id": "S1",
+                "relationship_kind": "EMPLOYEE",
+                "accounts": [{"state": {"account_id": "A1", "subject_id": "S1", "rights": rights}}],
+            }
+        ]
+    }
+    with pytest.raises(ValueError, match="Entitlement list"):
+        delivery.flatten_population(population)

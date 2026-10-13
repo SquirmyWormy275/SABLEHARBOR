@@ -78,6 +78,8 @@ def read_json(path: Path):
 
 
 def timestamp(value):
+    if not isinstance(value, str) or not value:
+        raise ValueError("Timestamp string required")
     result = datetime.fromisoformat(value.replace("Z", "+00:00"))
     if result.tzinfo is None:
         raise ValueError("Explicit timestamp offset required")
@@ -116,6 +118,35 @@ def safe_text(content: bytes, extra=()):
         raise ValueError("Potential credential in release")
 
 
+def artifact_id(value):
+    return isinstance(value, str) and re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}", value)
+
+
+def text_media(value):
+    if not isinstance(value, str):
+        raise ValueError("Invalid media type")
+    normalized = value.partition(";")[0].strip().lower()
+    if not re.fullmatch(r"[a-z0-9!#$&^_.+-]+/[a-z0-9!#$&^_.+-]+", normalized):
+        raise ValueError("Invalid media type")
+    return (
+        normalized.startswith("text/")
+        or normalized == "application/json"
+        or normalized.endswith("+json")
+    )
+
+
+def file_digest(path: Path, output=None):
+    """Hash and optionally copy one file with bounded binary buffers."""
+    checksum, size = hashlib.sha256(), 0
+    with path.open("rb") as source:
+        for block in iter(lambda: source.read(1024 * 1024), b""):
+            checksum.update(block)
+            size += len(block)
+            if output is not None:
+                output.write(block)
+    return checksum.hexdigest(), size
+
+
 def validate_manifest(manifest):
     if set(manifest) != {"schema", "package", "artifacts"} or manifest["schema"] != SCHEMA:
         raise ValueError("Unsupported manifest")
@@ -132,23 +163,31 @@ def validate_manifest(manifest):
         raise ValueError("Invalid period")
     if not isinstance(manifest["artifacts"], list) or not manifest["artifacts"]:
         raise ValueError("Empty edition")
-    paths, identities = set(), set()
+    paths, identities, spellings = set(), set(), {}
     for artifact in manifest["artifacts"]:
         if set(artifact) != ARTIFACT_FIELDS:
             raise ValueError("Invalid artifact fields")
         if type(artifact["version"]) is not int or artifact["version"] < 1:
             raise ValueError("Invalid version")
         identity = (artifact["artifact_id"], artifact["version"])
-        if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}", identity[0]):
+        if not artifact_id(identity[0]):
             raise ValueError("Invalid artifact identity")
+        relative = artifact["path"]
+        member(Path("/delivery"), relative)
+        folded = relative.casefold()
         if (
             identity in identities
-            or artifact["path"] in paths
-            or artifact["path"] == "manifest.json"
+            or folded in paths
+            or PurePosixPath(relative).parts[0].casefold() == "manifest.json"
         ):
             raise ValueError("Duplicate identity/path")
+        for prefix in [PurePosixPath(relative), *PurePosixPath(relative).parents][:-1]:
+            spelling = str(prefix)
+            previous = spellings.setdefault(spelling.casefold(), spelling)
+            if previous != spelling:
+                raise ValueError("Case-insensitive path collision")
         identities.add(identity)
-        paths.add(artifact["path"])
+        paths.add(folded)
         if type(artifact["bytes"]) is not int or artifact["bytes"] < 1:
             raise ValueError("Invalid size")
         for key in ("sha256", "source_sha256"):
@@ -167,10 +206,9 @@ def validate_manifest(manifest):
             and artifact["sha256"] != artifact["source_sha256"]
         ):
             raise ValueError("Original hash mismatch")
-        if not isinstance(artifact["media_type"], str) or "/" not in artifact["media_type"]:
-            raise ValueError("Invalid media type")
+        text_media(artifact["media_type"])
         available = timestamp(artifact["available_at"])
-        event = timestamp(artifact["event_at"]) if artifact["event_at"] else None
+        event = timestamp(artifact["event_at"]) if artifact["event_at"] is not None else None
         if available > cutoff or (event and event > available):
             raise ValueError("Unavailable source or reversed dates")
         for key in ("derives_from", "supersedes"):
@@ -178,12 +216,16 @@ def validate_manifest(manifest):
                 raise ValueError("Invalid relationship list")
             for ref in artifact[key]:
                 if (
-                    set(ref) != {"artifact_id", "version", "sha256"}
+                    not isinstance(ref, dict)
+                    or set(ref) != {"artifact_id", "version", "sha256"}
+                    or not artifact_id(ref["artifact_id"])
                     or type(ref["version"]) is not int
                     or ref["version"] < 1
                 ):
                     raise ValueError("Invalid relationship")
-                if not re.fullmatch(r"[0-9a-f]{64}", ref["sha256"]):
+                if not isinstance(ref["sha256"], str) or not re.fullmatch(
+                    r"[0-9a-f]{64}", ref["sha256"]
+                ):
                     raise ValueError("Invalid relationship hash")
         if artifact["classification"] == "derivative" and not artifact["derives_from"]:
             raise ValueError("Derivative requires source relationship")
@@ -193,21 +235,22 @@ def validate_manifest(manifest):
 def verify(root: Path):
     root = root.absolute()
     no_alias(root)
-    manifest = read_json(member(root, "manifest.json"))
+    root = root.resolve()
+    manifest_path = member(root, "manifest.json")
+    if not manifest_path.is_file() or manifest_path.stat().st_nlink != 1:
+        raise ValueError("Regular unaliased manifest required")
+    manifest = read_json(manifest_path)
     validate_manifest(manifest)
     expected = {"manifest.json"}
     for artifact in manifest["artifacts"]:
         path = member(root, artifact["path"])
         if not path.is_file() or path.stat().st_nlink != 1:
             raise ValueError("Regular unaliased member required")
-        data = path.read_bytes()
-        if len(data) != artifact["bytes"] or digest(data) != artifact["sha256"]:
+        checksum, size = file_digest(path)
+        if size != artifact["bytes"] or checksum != artifact["sha256"]:
             raise ValueError("Artifact hash/size mismatch")
-        if (
-            artifact["media_type"].startswith("text/")
-            or artifact["media_type"] == "application/json"
-        ):
-            safe_text(data)
+        if text_media(artifact["media_type"]):
+            safe_text(path.read_bytes())
         expected.add(artifact["path"])
     actual = set()
     for path in root.rglob("*"):
@@ -240,6 +283,9 @@ def publish(descriptor: Path, input_root: Path, stage: str, destination: Path):
     )
     for path in (descriptor, input_root, destination):
         no_alias(path)
+    descriptor, input_root, destination = (
+        p.resolve() for p in (descriptor, input_root, destination)
+    )
     if (
         destination.exists()
         or destination.is_relative_to(input_root)
@@ -255,35 +301,35 @@ def publish(descriptor: Path, input_root: Path, stage: str, destination: Path):
     if set(selected) != {"package", "artifacts"}:
         raise ValueError("Invalid stage")
     artifacts = []
-    retained = []
     for spec in selected["artifacts"]:
         if set(spec) != ARTIFACT_FIELDS | {"input_path", "allowed"} or spec["allowed"] is not True:
             raise ValueError("Source denied or invalid")
         path = member(input_root, spec["input_path"])
         if not path.is_file() or path.stat().st_nlink != 1:
             raise ValueError("Source missing or aliased")
-        data = path.read_bytes()
-        if digest(data) != spec["sha256"] or len(data) != spec["bytes"]:
-            raise ValueError("Source changed")
         public = {k: spec[k] for k in ARTIFACT_FIELDS}
         member(destination, public["path"])
-        if public["media_type"].startswith("text/") or public["media_type"] == "application/json":
-            safe_text(data, config["deny_tokens"])
         artifacts.append(public)
-        retained.append(data)
     manifest = {"schema": SCHEMA, "package": selected["package"], "artifacts": artifacts}
     validate_manifest(manifest)
     safe_text(encode(manifest), config["deny_tokens"])
     destination.parent.mkdir(parents=True, exist_ok=True)
     pending = Path(tempfile.mkdtemp(prefix=".pending-", dir=destination.parent))
     try:
-        for artifact, data in zip(artifacts, retained, strict=True):
+        for artifact, spec in zip(artifacts, selected["artifacts"], strict=True):
+            source = member(input_root, spec["input_path"])
+            if not source.is_file() or source.stat().st_nlink != 1:
+                raise ValueError("Source missing or aliased")
             path = member(pending, artifact["path"])
             path.parent.mkdir(parents=True, exist_ok=True)
             with path.open("xb") as handle:
-                handle.write(data)
+                checksum, size = file_digest(source, handle)
                 handle.flush()
                 os.fsync(handle.fileno())
+            if checksum != artifact["sha256"] or size != artifact["bytes"]:
+                raise ValueError("Source changed")
+            if text_media(artifact["media_type"]):
+                safe_text(path.read_bytes(), config["deny_tokens"])
         with (pending / "manifest.json").open("xb") as handle:
             handle.write(encode(manifest))
             handle.flush()
@@ -325,6 +371,8 @@ def flatten_population(population):
                 raise ValueError("Duplicate account or mismatched join")
             accounts.add(aid)
             rights = state["rights"]
+            if not isinstance(rights, list) or any(not isinstance(r, str) for r in rights):
+                raise ValueError("Entitlement list of strings required")
             if len(rights) != len(set(rights)):
                 raise ValueError("Duplicate entitlement")
             rows.append(
@@ -335,9 +383,18 @@ def flatten_population(population):
 
 def configuration_differences(baseline, observed):
     return [
-        {"field": key, "approved": baseline.get(key), "observed": observed.get(key)}
+        {
+            "field": key,
+            "approved": baseline.get(key),
+            "observed": observed.get(key),
+            **(
+                {"approved_present": key in baseline, "observed_present": key in observed}
+                if key not in baseline or key not in observed
+                else {}
+            ),
+        }
         for key in sorted(set(baseline) | set(observed))
-        if baseline.get(key) != observed.get(key)
+        if key not in baseline or key not in observed or baseline[key] != observed[key]
     ]
 
 

@@ -50,7 +50,7 @@ python tools/audit_suite/demo_source_delivery.py publish \
   --destination NEW_CLIENT_DIRECTORY
 ```
 
-These names describe arguments, not workstation paths to provision. The controlling local operator report supplies the actual paths and release order. The descriptor must allow every selected source, pin its bytes, and provide a cutoff admitting its availability. The publisher validates all sources before writing, verifies the staged directory, and publishes by directory rename. Existing destinations are refused. An interrupted attempt cannot acquire a completed manifest at the final destination.
+These names describe arguments, not workstation paths to provision. The controlling local operator report supplies the actual paths and release order. The descriptor must allow every selected source, pin its bytes, and provide a cutoff admitting its availability. The publisher validates the selected metadata, copies and hash-checks each source into a temporary directory, verifies that directory, and publishes by directory rename. Existing destinations are refused. An interrupted attempt cannot acquire a completed manifest at the final destination.
 
 The private descriptor contains only the public manifest fields plus `input_path` and `allowed` per source, and its separately configured deny tokens. Unknown artifact or stage fields are rejected. Do not place operator files inside the client archive or grant access to a parent directory holding other stages.
 
