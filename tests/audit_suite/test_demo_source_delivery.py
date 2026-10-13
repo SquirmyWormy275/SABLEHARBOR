@@ -239,3 +239,33 @@ def test_missing_input_does_not_publish(tmp_path):
     with pytest.raises(ValueError, match="missing"):
         delivery.publish(descriptor, inputs, "initial", tmp_path / "release")
     assert not (tmp_path / "release").exists()
+
+
+@pytest.mark.parametrize(
+    "content",
+    [
+        b'{"password":"unwanted-value"}',
+        ("github_" + "pat_" + "x" * 30).encode(),
+        ("sk-" + "proj-" + "x" * 30).encode(),
+    ],
+)
+def test_credential_patterns_cover_json_and_current_prefixes(content):
+    with pytest.raises(ValueError, match="credential"):
+        delivery.safe_text(content)
+
+
+def test_error_after_rename_preserves_complete_destination(tmp_path, monkeypatch):
+    descriptor, inputs, _ = edition(tmp_path)
+    original = delivery.os.fsync
+
+    def interrupted(fd):
+        if delivery.os.fstat(fd).st_ino == tmp_path.stat().st_ino:
+            raise InterruptedError("parent directory durability interrupted")
+        original(fd)
+
+    monkeypatch.setattr(delivery.os, "fsync", interrupted)
+    destination = tmp_path / "release"
+    with pytest.raises(InterruptedError, match="durability"):
+        delivery.publish(descriptor, inputs, "initial", destination)
+    assert delivery.verify(destination)
+    assert not list(tmp_path.glob(".pending-*"))

@@ -108,7 +108,11 @@ def safe_text(content: bytes, extra=()):
         raise ValueError("Private routing or forbidden content in release")
     if re.search(r"BEGIN\s+(?:[A-Z0-9]+\s+)?PRIVATE\s+KEY", text):
         raise ValueError("Potential private key in release")
-    if re.search(r"(?:gh[pousr]_[A-Za-z0-9]{20,}|sk-[A-Za-z0-9]{20,}|password\s*[=:]\s*\S+)", text):
+    if re.search(
+        r"(?:gh[pousr]_[A-Za-z0-9]{20,}|github[_]pat[_][A-Za-z0-9_]{20,}|"
+        r"sk-(?:proj-)?[A-Za-z0-9_-]{20,}|[\"']?password[\"']?\s*[=:]\s*[\"']?\S+)",
+        text,
+    ):
         raise ValueError("Potential credential in release")
 
 
@@ -298,7 +302,10 @@ def publish(descriptor: Path, input_root: Path, stage: str, destination: Path):
         finally:
             os.close(fd)
     except BaseException:
-        shutil.rmtree(pending)
+        # After rename, the final directory is complete. Preserve the original
+        # durability/interruption error instead of masking it with missing staging.
+        if pending.exists():
+            shutil.rmtree(pending)
         raise
     return manifest
 
