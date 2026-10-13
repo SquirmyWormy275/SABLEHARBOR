@@ -6,7 +6,7 @@ This list helps maintainers check which source documents have formatted companio
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 435 |
+| COUNTERPART_REVIEW_REQUIRED | 438 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 102 |
@@ -26,6 +26,9 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Native operating-depth physical input roles](../../OPERATING_DEPTH_PHYSICAL_ROLE_CORRECTION.md) — Corporate document-format reconciliation
 - [Local audit workspace](../../audit-suite/LOCAL_WORKSPACE.md) — Corporate document-format reconciliation
 - [Separate modeled source edition](../../audit-suite/OPERATING_SOURCE_EDITION_DRIVER.md) — Corporate document-format reconciliation
+- [November company-source delivery](../../audit-suite/demo-2026-11/COMPLETION.md) — Corporate document-format reconciliation
+- [Sable Harbor — records for the November demonstration](../../audit-suite/demo-2026-11/SCOPE.md) — Corporate document-format reconciliation
+- [Read and deliver the company records](../../audit-suite/demo-2026-11/SOURCE_DELIVERY.md) — Corporate document-format reconciliation
 - [Branch and Pull Request Register](../../audit/BRANCH_AND_PR_REGISTER.md) — SH-FIN-HUMAN-001
 - [Repository completion batch — September 13, 2026](../../audit/COMPLETION_BATCH_2026-09-13.md) — SH-FIN-HUMAN-001
 - [Outstanding issue review — September 12, 2026](../../audit/ISSUE_CLOSEOUT_2026-09-12.md) — SH-FIN-HUMAN-001

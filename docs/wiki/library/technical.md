@@ -35,6 +35,12 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 - [Local audit workspace](../../audit-suite/LOCAL_WORKSPACE.md) — MD
 - [Separate modeled source edition](../../audit-suite/OPERATING_SOURCE_EDITION_DRIVER.md) — MD
 
+## `docs/audit-suite/demo-2026-11`
+
+- [November company-source delivery](../../audit-suite/demo-2026-11/COMPLETION.md) — MD
+- [Sable Harbor — records for the November demonstration](../../audit-suite/demo-2026-11/SCOPE.md) — MD
+- [Read and deliver the company records](../../audit-suite/demo-2026-11/SOURCE_DELIVERY.md) — MD
+
 ## `docs/commercialization`
 
 - [Customer evaluation guide](../../commercialization/CUSTOMER_EVALUATION_GUIDE.md) — MD
