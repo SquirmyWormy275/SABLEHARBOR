@@ -106,6 +106,8 @@ def safe_text(content: bytes, extra=()):
     text = content.decode("utf-8", errors="ignore")
     if any(token in text for token in (*FORBIDDEN, *extra)):
         raise ValueError("Private routing or forbidden content in release")
+    if re.search(r"BEGIN\s+(?:[A-Z0-9]+\s+)?PRIVATE\s+KEY", text):
+        raise ValueError("Potential private key in release")
     if re.search(r"(?:gh[pousr]_[A-Za-z0-9]{20,}|sk-[A-Za-z0-9]{20,}|password\s*[=:]\s*\S+)", text):
         raise ValueError("Potential credential in release")
 
