@@ -12,6 +12,11 @@ red_wash/history/v1.0.0/** -text whitespace=-blank-at-eol
 docs/legal/gap-instruments/period-close/*.csv -text whitespace=cr-at-eol
 docs/legal/gap-instruments/period-close/source/*.csv -text whitespace=cr-at-eol
 
+# Published company originals and client submissions retain their manifest bytes.
+docs/audit-suite/company-records/** -text
+docs/audit-suite/demo-2026-11/client-records/** -text
+docs/audit-suite/demo-2026-11/client-records/*/access/*.csv whitespace=cr-at-eol
+
 # Exact downloaded primary-authority snapshots retain original publisher whitespace.
 # These six files are byte-hash checked by the rail authority reperformer.
 enterprise/ccf/company_closeout/authority_snapshots/CFR-2025-title49-vol4-sec225-11.xml -text whitespace=-blank-at-eol

@@ -1,0 +1,143 @@
+{
+  "artifacts": [
+    {
+      "artifact_id": "CFG-SUMMARY",
+      "available_at": "2028-01-12T09:00:00+00:00",
+      "bytes": 525,
+      "classification": "authored-company-record",
+      "derives_from": [],
+      "event_at": "2028-01-12T09:00:00+00:00",
+      "media_type": "application/json",
+      "path": "configuration/summary-v2.json",
+      "sha256": "761c3231f68fd6ff2b264042583a4327237dee798b9854d16fb365df0e6180d6",
+      "source_locator": "sh-source:f14f02d323113500f339425f",
+      "source_sha256": "761c3231f68fd6ff2b264042583a4327237dee798b9854d16fb365df0e6180d6",
+      "supersedes": [
+        {
+          "artifact_id": "CFG-SUMMARY",
+          "sha256": "9238b0788e014250382c4d2967e2de826591f185c86dbbad313c0781e772e8f3",
+          "version": 1
+        }
+      ],
+      "version": 2
+    },
+    {
+      "artifact_id": "CLIENT-MESSAGE-CORRECTION",
+      "available_at": "2028-01-12T09:00:00+00:00",
+      "bytes": 617,
+      "classification": "authored-company-record",
+      "derives_from": [],
+      "event_at": "2028-01-12T09:00:00+00:00",
+      "media_type": "text/markdown",
+      "path": "response.md",
+      "sha256": "afc9cddbca4cbbda10a0ecdae04aec4bf30604d9e3c3b28bdc6d9add42783c21",
+      "source_locator": "sh-source:a899232ac4ab41a160d57ada",
+      "source_sha256": "afc9cddbca4cbbda10a0ecdae04aec4bf30604d9e3c3b28bdc6d9add42783c21",
+      "supersedes": [],
+      "version": 1
+    },
+    {
+      "artifact_id": "ADDENDUM-VIEW-1",
+      "available_at": "2028-01-12T10:00:00+00:00",
+      "bytes": 83116,
+      "classification": "derivative",
+      "derives_from": [
+        {
+          "artifact_id": "CFG-SUMMARY",
+          "sha256": "9238b0788e014250382c4d2967e2de826591f185c86dbbad313c0781e772e8f3",
+          "version": 1
+        }
+      ],
+      "event_at": "2028-01-12T10:00:00+00:00",
+      "media_type": "image/png",
+      "path": "walkthrough/views/addendum-1.png",
+      "sha256": "c603e12ea9403fd673d5a2db9f0a60ef2385d80991edafa81aa4504d898dfc4f",
+      "source_locator": "sh-source:191099f67d5ceaeacd98d905",
+      "source_sha256": "9238b0788e014250382c4d2967e2de826591f185c86dbbad313c0781e772e8f3",
+      "supersedes": [],
+      "version": 1
+    },
+    {
+      "artifact_id": "ADDENDUM-TRANSCRIPT",
+      "available_at": "2028-01-12T10:00:00+00:00",
+      "bytes": 997,
+      "classification": "authored-company-record",
+      "derives_from": [],
+      "event_at": "2028-01-12T10:00:00+00:00",
+      "media_type": "text/markdown",
+      "path": "walkthrough/addendum-transcript.md",
+      "sha256": "7ab070dd3466c189162583f2e2259e5b8f597688764d7fffd36fb0de97d44a8b",
+      "source_locator": "sh-source:03adddc1d575456b3fd2fed6",
+      "source_sha256": "7ab070dd3466c189162583f2e2259e5b8f597688764d7fffd36fb0de97d44a8b",
+      "supersedes": [],
+      "version": 1
+    },
+    {
+      "artifact_id": "ADDENDUM-VTT",
+      "available_at": "2028-01-12T10:00:00+00:00",
+      "bytes": 733,
+      "classification": "derivative",
+      "derives_from": [
+        {
+          "artifact_id": "ADDENDUM-TRANSCRIPT",
+          "sha256": "7ab070dd3466c189162583f2e2259e5b8f597688764d7fffd36fb0de97d44a8b",
+          "version": 1
+        }
+      ],
+      "event_at": "2028-01-12T10:00:00+00:00",
+      "media_type": "text/vtt",
+      "path": "walkthrough/addendum.vtt",
+      "sha256": "6fd94f499bb4130f3329193541e8b55a5467642996cfdb7ee5175327847b9d32",
+      "source_locator": "sh-source:801adc0b226d39b000c22f68",
+      "source_sha256": "7ab070dd3466c189162583f2e2259e5b8f597688764d7fffd36fb0de97d44a8b",
+      "supersedes": [],
+      "version": 1
+    },
+    {
+      "artifact_id": "ADDENDUM-CHAPTERS",
+      "available_at": "2028-01-12T10:00:00+00:00",
+      "bytes": 711,
+      "classification": "authored-company-record",
+      "derives_from": [],
+      "event_at": "2028-01-12T10:00:00+00:00",
+      "media_type": "application/json",
+      "path": "walkthrough/addendum-chapters.json",
+      "sha256": "0b1e3a35fbc2a4d41747831e6c5a68e5515d406eae615a7374e606041acc6863",
+      "source_locator": "sh-source:f3b38aa4fc4479d2ffdae41c",
+      "source_sha256": "0b1e3a35fbc2a4d41747831e6c5a68e5515d406eae615a7374e606041acc6863",
+      "supersedes": [],
+      "version": 1
+    },
+    {
+      "artifact_id": "ADDENDUM-VIDEO",
+      "available_at": "2028-01-12T10:00:00+00:00",
+      "bytes": 571624,
+      "classification": "derivative",
+      "derives_from": [
+        {
+          "artifact_id": "ADDENDUM-TRANSCRIPT",
+          "sha256": "7ab070dd3466c189162583f2e2259e5b8f597688764d7fffd36fb0de97d44a8b",
+          "version": 1
+        }
+      ],
+      "event_at": "2028-01-12T10:00:00+00:00",
+      "media_type": "video/mp4",
+      "path": "walkthrough/addendum.mp4",
+      "sha256": "1c17a60f078261c4b9e15b98e65d9a841ac0a9982e5aab50c82b574adc120e43",
+      "source_locator": "sh-source:f9b9290e17627f730624fc45",
+      "source_sha256": "7ab070dd3466c189162583f2e2259e5b8f597688764d7fffd36fb0de97d44a8b",
+      "supersedes": [],
+      "version": 1
+    }
+  ],
+  "package": {
+    "boundary": "Corporate local shared-service and configuration/recovery reference records",
+    "company": "Sable Harbor",
+    "cutoff": "2028-01-12T17:00:00+00:00",
+    "edition": "SH-NOV2026-2-v1",
+    "generated_at": "2026-10-13T06:59:53.458518+00:00",
+    "period_end": "2027-03-31",
+    "period_start": "2027-01-01"
+  },
+  "schema": "sableharbor.source-files.v1"
+}

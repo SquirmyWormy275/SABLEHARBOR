@@ -1,0 +1,119 @@
+{
+  "artifacts": [
+    {
+      "artifact_id": "REVIEW-POP-2027-Q1",
+      "available_at": "2027-04-01T01:00:00.000000+00:00",
+      "bytes": 306416,
+      "classification": "derivative",
+      "derives_from": [
+        {
+          "artifact_id": "0b7fd5ef2b0c1d486d2c9925",
+          "sha256": "7f0ced144b90def5752976b0bcf5bf1d4b85543aa71d59255eddd619c9cdb9d0",
+          "version": 1
+        }
+      ],
+      "event_at": "2027-04-01T01:00:00.000000+00:00",
+      "media_type": "application/json",
+      "path": "access/periodic_review_population-2027-Q1.json",
+      "sha256": "9c3e9715d586978e6e1f832b886b990a00e30797e8ab468bdb2d82e3b28d9a3f",
+      "source_locator": "sh-source:0b7fd5ef2b0c1d486d2c9925",
+      "source_sha256": "7f0ced144b90def5752976b0bcf5bf1d4b85543aa71d59255eddd619c9cdb9d0",
+      "supersedes": [],
+      "version": 1
+    },
+    {
+      "artifact_id": "REVIEW-DEC-2027-Q1",
+      "available_at": "2027-04-01T01:10:00.000000+00:00",
+      "bytes": 14435,
+      "classification": "derivative",
+      "derives_from": [
+        {
+          "artifact_id": "2178f9a7bbc264a77d3852c8",
+          "sha256": "08a908e9f1ba06b19a9c65944e2e28ffaef4d978f4890c72443b4dbf7bb4954e",
+          "version": 1
+        }
+      ],
+      "event_at": "2027-04-01T01:10:00.000000+00:00",
+      "media_type": "application/json",
+      "path": "access/periodic_review_decisions-2027-Q1.json",
+      "sha256": "96e0ffef247959cbf24870bf34306476d4a8e39f1d2d30d56a877f3cfdcdc77a",
+      "source_locator": "sh-source:2178f9a7bbc264a77d3852c8",
+      "source_sha256": "08a908e9f1ba06b19a9c65944e2e28ffaef4d978f4890c72443b4dbf7bb4954e",
+      "supersedes": [],
+      "version": 1
+    },
+    {
+      "artifact_id": "REVIEW-FOLLOWUP-2027-Q1",
+      "available_at": "2027-04-01T01:15:00.000000+00:00",
+      "bytes": 662,
+      "classification": "derivative",
+      "derives_from": [
+        {
+          "artifact_id": "f9c422f9c15c738e6a6f2c32",
+          "sha256": "66c84f18ad4935a4bf8be83be9aa961fc58bba29fc5f79335ad410fbfc927cd5",
+          "version": 1
+        }
+      ],
+      "event_at": "2027-04-01T01:15:00.000000+00:00",
+      "media_type": "application/json",
+      "path": "access/review_followup-2027-Q1.json",
+      "sha256": "9b5b2761d7968b73bd370982a239624b979249ae7a14ba7523ba4685cf52d61c",
+      "source_locator": "sh-source:f9c422f9c15c738e6a6f2c32",
+      "source_sha256": "66c84f18ad4935a4bf8be83be9aa961fc58bba29fc5f79335ad410fbfc927cd5",
+      "supersedes": [],
+      "version": 1
+    },
+    {
+      "artifact_id": "REVIEW-TABLE-2027-Q1",
+      "available_at": "2027-04-01T01:00:00.000000+00:00",
+      "bytes": 50240,
+      "classification": "derivative",
+      "derives_from": [
+        {
+          "artifact_id": "0b7fd5ef2b0c1d486d2c9925",
+          "sha256": "7f0ced144b90def5752976b0bcf5bf1d4b85543aa71d59255eddd619c9cdb9d0",
+          "version": 1
+        }
+      ],
+      "event_at": "2027-04-01T01:00:00.000000+00:00",
+      "media_type": "text/csv",
+      "path": "access/accounts-2027-Q1.csv",
+      "sha256": "6b8c0e303a95b676b597ca9541c9f9116786dc4e81de49a65c4280f61b09f46f",
+      "source_locator": "sh-source:0b7fd5ef2b0c1d486d2c9925",
+      "source_sha256": "7f0ced144b90def5752976b0bcf5bf1d4b85543aa71d59255eddd619c9cdb9d0",
+      "supersedes": [],
+      "version": 1
+    },
+    {
+      "artifact_id": "CLIENT-MESSAGE-FOLLOW-UP",
+      "available_at": "2028-01-11T09:00:00+00:00",
+      "bytes": 880,
+      "classification": "authored-company-record",
+      "derives_from": [],
+      "event_at": "2028-01-11T09:00:00+00:00",
+      "media_type": "text/markdown",
+      "path": "response.md",
+      "sha256": "983770ec9a6fb8be9b58f4c38db12f6612618220cfd989814a26cefbc22d8926",
+      "source_locator": "sh-source:4241f995c29d8ea73b3d1877",
+      "source_sha256": "983770ec9a6fb8be9b58f4c38db12f6612618220cfd989814a26cefbc22d8926",
+      "supersedes": [
+        {
+          "artifact_id": "CLIENT-MESSAGE-INITIAL",
+          "sha256": "f73806b5feb8e5e769efab8c8cb36051323bf81d3f77b8a16d5f76bf684a1e3e",
+          "version": 1
+        }
+      ],
+      "version": 1
+    }
+  ],
+  "package": {
+    "boundary": "Corporate local shared-service and configuration/recovery reference records",
+    "company": "Sable Harbor",
+    "cutoff": "2028-01-11T17:00:00+00:00",
+    "edition": "SH-NOV2026-1-v1",
+    "generated_at": "2026-10-13T06:59:53.458518+00:00",
+    "period_end": "2027-03-31",
+    "period_start": "2027-01-01"
+  },
+  "schema": "sableharbor.source-files.v1"
+}

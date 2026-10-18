@@ -1,0 +1,18 @@
+{
+  "assigned_to": "AS-P007",
+  "historical_reviews_replaced": false,
+  "person_mapping_work": [],
+  "population_sha256": "69def705ae0af9383e1420e5f20cbbb3cecd296edf21f70e69bf5e9af1468a9a",
+  "recorded_by": "AS-P009",
+  "removal_work": [],
+  "review": {
+    "available_at": "2027-04-01T01:10:00.000000+00:00",
+    "event_at": "2027-04-01T01:10:00.000000+00:00",
+    "record": "2027-Q1",
+    "sha256": "08a908e9f1ba06b19a9c65944e2e28ffaef4d978f4890c72443b4dbf7bb4954e",
+    "system": "person-access-history.periodic_review_decisions",
+    "version": 1
+  },
+  "schema": "SH_COMPANY_PERSON_ACCESS_RECORD_V1",
+  "status": "NO_ACTION_REQUIRED_FOR_REGISTERED_SCOPE"
+}

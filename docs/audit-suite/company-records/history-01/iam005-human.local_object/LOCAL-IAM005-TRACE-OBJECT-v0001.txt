@@ -1,0 +1,1 @@
+Nonpersonal local IAM005 fixture: read-only example bytes.

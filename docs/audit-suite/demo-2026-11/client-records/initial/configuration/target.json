@@ -1,0 +1,11 @@
+{
+  "approved_sha256": "94119c79191b24b1baca355c0856e96d1322a6389bc5d1a6faea5d1453434710",
+  "authority": "PINNED_LOCAL_EXERCISE_ONLY",
+  "baseline_sha256": "4e35f6ca116314f83efa976cbfa8242c5796c54f4bb468726e03295fc971e918",
+  "format": "LOCAL_CONFIGURATION_RUNTIME_V1",
+  "initialized_at": "2027-02-04T23:00:00.000000+00:00",
+  "operator_id": "P005",
+  "qualification": "PERSISTENT_LOCAL_DATA_ONLY_CONFIGURATION_NOT_ENTERPRISE_DEPLOYMENT",
+  "reviewer_id": "P002",
+  "target_id": "LOCAL-RECOVERY-CONFIG-A"
+}

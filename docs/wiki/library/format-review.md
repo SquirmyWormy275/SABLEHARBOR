@@ -6,11 +6,11 @@ This list helps maintainers check which source documents have formatted companio
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 438 |
+| COUNTERPART_REVIEW_REQUIRED | 448 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 102 |
-| READER_OR_MAINTENANCE_PAGE | 205 |
+| READER_OR_MAINTENANCE_PAGE | 207 |
 | UNRESOLVED_DOCUMENT_COUNTERPART | 218 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_DOCUMENT_PAIR | 148 |
@@ -24,11 +24,21 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Withdrawn visual source record](../../../assets/headquarters/CANONICAL_HEADQUARTERS_IMAGE_MANIFEST.md) — Corporate document-format reconciliation
 - [SABLE HARBOR CONTROLLED DOCUMENT INDEX](../../CONTROLLED_DOCUMENT_INDEX.md) — Corporate document-format reconciliation
 - [Native operating-depth physical input roles](../../OPERATING_DEPTH_PHYSICAL_ROLE_CORRECTION.md) — Corporate document-format reconciliation
+- [Read Sable Harbor company data from the repository](../../audit-suite/DATA_AVAILABILITY.md) — Corporate document-format reconciliation
 - [Local audit workspace](../../audit-suite/LOCAL_WORKSPACE.md) — Corporate document-format reconciliation
 - [Separate modeled source edition](../../audit-suite/OPERATING_SOURCE_EDITION_DRIVER.md) — Corporate document-format reconciliation
 - [November company-source delivery](../../audit-suite/demo-2026-11/COMPLETION.md) — Corporate document-format reconciliation
+- [November client-record publication decision](../../audit-suite/demo-2026-11/PUBLICATION_2026-10-18.md) — Corporate document-format reconciliation
 - [Sable Harbor — records for the November demonstration](../../audit-suite/demo-2026-11/SCOPE.md) — Corporate document-format reconciliation
 - [Read and deliver the company records](../../audit-suite/demo-2026-11/SOURCE_DELIVERY.md) — Corporate document-format reconciliation
+- [Configuration summary correction](../../audit-suite/demo-2026-11/client-records/correction/response.md) — Corporate document-format reconciliation
+- [Walkthrough addendum transcript](../../audit-suite/demo-2026-11/client-records/correction/walkthrough/addendum-transcript.md) — Corporate document-format reconciliation
+- [Review export replacement and recovery clarification](../../audit-suite/demo-2026-11/client-records/follow-up/response.md) — Corporate document-format reconciliation
+- [Sable Harbor — records for the November demonstration](../../audit-suite/demo-2026-11/client-records/initial/SCOPE.md) — Corporate document-format reconciliation
+- [Opening the company records](../../audit-suite/demo-2026-11/client-records/initial/SOURCE_DELIVERY.md) — Corporate document-format reconciliation
+- [Selected control design and local implementation context](../../audit-suite/demo-2026-11/client-records/initial/control-design.md) — Corporate document-format reconciliation
+- [Initial company response](../../audit-suite/demo-2026-11/client-records/initial/response.md) — Corporate document-format reconciliation
+- [Walkthrough transcript](../../audit-suite/demo-2026-11/client-records/initial/walkthrough/walkthrough-transcript.md) — Corporate document-format reconciliation
 - [Branch and Pull Request Register](../../audit/BRANCH_AND_PR_REGISTER.md) — SH-FIN-HUMAN-001
 - [Repository completion batch — September 13, 2026](../../audit/COMPLETION_BATCH_2026-09-13.md) — SH-FIN-HUMAN-001
 - [Outstanding issue review — September 12, 2026](../../audit/ISSUE_CLOSEOUT_2026-09-12.md) — SH-FIN-HUMAN-001

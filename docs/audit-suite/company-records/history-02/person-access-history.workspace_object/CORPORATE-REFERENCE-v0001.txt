@@ -1,0 +1,3 @@
+Sable Harbor corporate reference workspace
+Named shared-service inventory and records.
+Synthetic company information; no real customer data or PHI.

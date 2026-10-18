@@ -1,0 +1,215 @@
+{
+  "chapters": [
+    {
+      "end": "00:00:30.290",
+      "presentation": "STAGED_STILL_SOURCE_VIEW_NOT_LIVE_INTERACTION",
+      "source_artifacts": [
+        {
+          "artifact_id": "SCOPE",
+          "sha256": "c29f132cfd143b923f140cadd3e75dbb7736bac83e21a627152050cbb515d9e4",
+          "version": 1
+        }
+      ],
+      "speaker": "Elliot Tran",
+      "start": "00:00:00.000",
+      "title": "Welcome and boundary",
+      "view": {
+        "artifact_id": "WALKTHROUGH-VIEW-1",
+        "sha256": "9cfea87195c109bd51a54f262c74f2fbb6c077ae42184a64e54f7d2cba7f9d6f",
+        "version": 1
+      },
+      "view_path": "walkthrough/views/walkthrough-1.png"
+    },
+    {
+      "end": "00:00:57.089",
+      "presentation": "STAGED_STILL_SOURCE_VIEW_NOT_LIVE_INTERACTION",
+      "source_artifacts": [
+        {
+          "artifact_id": "DENOMINATOR",
+          "sha256": "2e37550b6a3201b960251579a2a33947a52bb479f59a653e552d689071a2b302",
+          "version": 1
+        },
+        {
+          "artifact_id": "CHANNELS",
+          "sha256": "3d9114f7a9c0d1aa8c89b10d82550b405c7f05219010b91cbbc017e58fb6125b",
+          "version": 1
+        },
+        {
+          "artifact_id": "SERVICE-ORDER",
+          "sha256": "b1d3c964eb54b229b4b124d882df45e51bb7ce31bc4bacbcc7deb5d15b57b356",
+          "version": 1
+        }
+      ],
+      "speaker": "Elliot Tran",
+      "start": "00:00:30.290",
+      "title": "Identity scope and denominator",
+      "view": {
+        "artifact_id": "WALKTHROUGH-VIEW-2",
+        "sha256": "0af250cfc89a9305d82314178d2f075e067932d3d6027e0d0430d99a3097680b",
+        "version": 1
+      },
+      "view_path": "walkthrough/views/walkthrough-2.png"
+    },
+    {
+      "end": "00:01:24.897",
+      "presentation": "STAGED_STILL_SOURCE_VIEW_NOT_LIVE_INTERACTION",
+      "source_artifacts": [
+        {
+          "artifact_id": "REVIEW-POP-2027-Q2",
+          "sha256": "07e440d62ef641bc36cc831ccf99902c113958dbc7bc1e62e525c48719da5d69",
+          "version": 1
+        },
+        {
+          "artifact_id": "REVIEW-DEC-2027-Q2",
+          "sha256": "6649583683fa027eab77dabedc7498413f6098ada5bb449c91d5ab57745d8f4f",
+          "version": 1
+        },
+        {
+          "artifact_id": "REVIEW-FOLLOWUP-2027-Q2",
+          "sha256": "f1fd348e6de3bc3b0e9c0a3e31ac9f82439f29e33dc1b4f9f4d4dddec016b82d",
+          "version": 1
+        }
+      ],
+      "speaker": "Rowan Price",
+      "start": "00:00:57.089",
+      "title": "Review decisions as supplied",
+      "view": {
+        "artifact_id": "WALKTHROUGH-VIEW-3",
+        "sha256": "bafae79f2e08926ee1849c16957a6bfafed96afd97b0172a63ba4dc52aa12b61",
+        "version": 1
+      },
+      "view_path": "walkthrough/views/walkthrough-3.png"
+    },
+    {
+      "end": "00:01:55.521",
+      "presentation": "STAGED_STILL_SOURCE_VIEW_NOT_LIVE_INTERACTION",
+      "source_artifacts": [
+        {
+          "artifact_id": "CFG-APPROVED",
+          "sha256": "9244daeef96d2bb24e537ab517a94420827fb52b297efce783b1d6e072e39c89",
+          "version": 1
+        },
+        {
+          "artifact_id": "CFG-APPROVAL",
+          "sha256": "875dc9439074db193b8af74f2cdff62b94b05f526c6fe113f0a5b975728a5601",
+          "version": 1
+        },
+        {
+          "artifact_id": "CFG-OBS-BEFORE",
+          "sha256": "4e35f6ca116314f83efa976cbfa8242c5796c54f4bb468726e03295fc971e918",
+          "version": 1
+        },
+        {
+          "artifact_id": "CFG-SUMMARY",
+          "sha256": "9238b0788e014250382c4d2967e2de826591f185c86dbbad313c0781e772e8f3",
+          "version": 1
+        }
+      ],
+      "speaker": "Marcus Reed",
+      "start": "00:01:24.897",
+      "title": "Approved configuration and opening observation",
+      "view": {
+        "artifact_id": "WALKTHROUGH-VIEW-4",
+        "sha256": "674e08a637ba4a20786bbba102af0925c197871976fd0fea0b6ff92711c3dc65",
+        "version": 1
+      },
+      "view_path": "walkthrough/views/walkthrough-4.png"
+    },
+    {
+      "end": "00:02:22.125",
+      "presentation": "STAGED_STILL_SOURCE_VIEW_NOT_LIVE_INTERACTION",
+      "source_artifacts": [
+        {
+          "artifact_id": "CFG-APPLICATION",
+          "sha256": "de104f38a6964018398c9de3f7450867e35135487f03eeab6976e6f5f9d3bcd8",
+          "version": 1
+        },
+        {
+          "artifact_id": "CFG-OBS-AFTER",
+          "sha256": "94119c79191b24b1baca355c0856e96d1322a6389bc5d1a6faea5d1453434710",
+          "version": 1
+        },
+        {
+          "artifact_id": "CFG-OBS-AFTER-CONTEXT",
+          "sha256": "d12bf58ad731109ad159e32f5e407be25cb5b8037a7302f77e1c5d5d6d0b1117",
+          "version": 1
+        }
+      ],
+      "speaker": "Marcus Reed",
+      "start": "00:01:55.521",
+      "title": "Application and later observation",
+      "view": {
+        "artifact_id": "WALKTHROUGH-VIEW-5",
+        "sha256": "f38be8fad7cbfb9ee3bf2b1635995752c900612cf8666e633e26ac4c7adade3e",
+        "version": 1
+      },
+      "view_path": "walkthrough/views/walkthrough-5.png"
+    },
+    {
+      "end": "00:02:54.870",
+      "presentation": "STAGED_STILL_SOURCE_VIEW_NOT_LIVE_INTERACTION",
+      "source_artifacts": [
+        {
+          "artifact_id": "RECOVERY-PLAN",
+          "sha256": "9e542cf866e6e551639d94b036676fd628a50a2bbbedb1d9395fc14c8b09e9a4",
+          "version": 1
+        },
+        {
+          "artifact_id": "RECOVERY-RESTORE_JOB-R1",
+          "sha256": "25591f5ea525bdc0f05c8e6ca264a4298023f1e9bf7ebd5681b607e49263f769",
+          "version": 1
+        },
+        {
+          "artifact_id": "RECOVERY-RESTORE_JOB-R2",
+          "sha256": "9167ad2bba8154968bd8fd06c46dd5c467858ce1bb61d79917d9ec141ceb5857",
+          "version": 1
+        },
+        {
+          "artifact_id": "RECOVERY-RESTORED_DATASET-R1",
+          "sha256": "4e35f6ca116314f83efa976cbfa8242c5796c54f4bb468726e03295fc971e918",
+          "version": 1
+        },
+        {
+          "artifact_id": "RECOVERY-RESTORED_DATASET-R2",
+          "sha256": "94119c79191b24b1baca355c0856e96d1322a6389bc5d1a6faea5d1453434710",
+          "version": 1
+        }
+      ],
+      "speaker": "Elliot Tran",
+      "start": "00:02:22.125",
+      "title": "Recovery jobs and copy identities",
+      "view": {
+        "artifact_id": "WALKTHROUGH-VIEW-6",
+        "sha256": "5d1faaaae1d1f83b789ad28122b21c1bec5b1198f046dbad848fe95d193c319c",
+        "version": 1
+      },
+      "view_path": "walkthrough/views/walkthrough-6.png"
+    },
+    {
+      "end": "00:03:28.254",
+      "presentation": "STAGED_STILL_SOURCE_VIEW_NOT_LIVE_INTERACTION",
+      "source_artifacts": [
+        {
+          "artifact_id": "RECOVERY-RESTORE_JOB-R1",
+          "sha256": "25591f5ea525bdc0f05c8e6ca264a4298023f1e9bf7ebd5681b607e49263f769",
+          "version": 1
+        },
+        {
+          "artifact_id": "RECOVERY-RESTORE_JOB-R2",
+          "sha256": "9167ad2bba8154968bd8fd06c46dd5c467858ce1bb61d79917d9ec141ceb5857",
+          "version": 1
+        }
+      ],
+      "speaker": "Elliot Tran",
+      "start": "00:02:54.870",
+      "title": "Owner explanation and records retained",
+      "view": {
+        "artifact_id": "WALKTHROUGH-VIEW-7",
+        "sha256": "1b6312c710facc4b65bfb5a890cd6235c3379d07f49a1c69123fd0788b6cd14d",
+        "version": 1
+      },
+      "view_path": "walkthrough/views/walkthrough-7.png"
+    }
+  ],
+  "duration_seconds": 208.25383219954648
+}

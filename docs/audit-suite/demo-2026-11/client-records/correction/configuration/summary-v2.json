@@ -1,0 +1,11 @@
+{
+  "approved_timeout_ms": 40,
+  "attempts": 3,
+  "basis": "Company readable summary of retained observations; exact export is supplied separately.",
+  "correction": "The approved total of 120ms was copied into the observed-total field. The retained opening observation is 30ms for three attempts; its total is 90ms. No target observation changed.",
+  "observation_at": "2027-02-05T00:00:00+00:00",
+  "observed_timeout_ms": 30,
+  "observed_total_wait_ms": 90,
+  "prepared_by": "P005",
+  "target": "LOCAL-RECOVERY-CONFIG-A"
+}

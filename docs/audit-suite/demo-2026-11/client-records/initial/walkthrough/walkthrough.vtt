@@ -1,0 +1,121 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.971
+Elliot Tran (synthetic): I am Elliot Tran, the local identity provisioner for this reference service
+
+00:00:05.221 --> 00:00:09.160
+Elliot Tran (synthetic): These are staged explanations of fictional company records
+
+00:00:09.410 --> 00:00:14.346
+Elliot Tran (synthetic): Our requested period is January through March 2027
+
+00:00:14.596 --> 00:00:21.254
+Elliot Tran (synthetic): We are showing the registered identity service and one local configuration and recovery exercise
+
+00:00:21.504 --> 00:00:25.681
+Elliot Tran (synthetic): The records have their own event dates and availability dates
+
+00:00:25.931 --> 00:00:29.040
+Elliot Tran (synthetic): They do not represent the whole company estate.
+
+00:00:30.290 --> 00:00:34.500
+Elliot Tran (synthetic): I start with the service order and the registered account channels
+
+00:00:34.750 --> 00:00:39.373
+Elliot Tran (synthetic): The March denominator has separate subject and account identities
+
+00:00:39.623 --> 00:00:46.321
+Elliot Tran (synthetic): We retain original channel history so you can compare this snapshot with the account states at quarter end
+
+00:00:46.571 --> 00:00:52.442
+Elliot Tran (synthetic): A service delegate is not automatically an employee, and a service identity is not a person
+
+00:00:52.692 --> 00:00:55.839
+Elliot Tran (synthetic): We have kept those relationships distinct.
+
+00:00:57.089 --> 00:01:02.650
+Rowan Price (synthetic): I am Rowan Price, delegated here to perform the local management quality review
+
+00:01:02.900 --> 00:01:06.162
+Rowan Price (synthetic): The campaign on screen runs from April through June
+
+00:01:06.412 --> 00:01:12.873
+Rowan Price (synthetic): I recorded a decision for each registered subject, with the observed rights and any removal work
+
+00:01:13.123 --> 00:01:17.991
+Rowan Price (synthetic): That management record does not stand in for an independent audit procedure
+
+00:01:18.241 --> 00:01:23.647
+Rowan Price (synthetic): The service register also preserves the earlier mover history and its limitations.
+
+00:01:24.897 --> 00:01:26.356
+Marcus Reed (synthetic): I am Marcus Reed
+
+00:01:26.606 --> 00:01:29.618
+Marcus Reed (synthetic): This target stores local retry settings
+
+00:01:29.868 --> 00:01:33.743
+Marcus Reed (synthetic): Priya approved the corrected build on the first of February
+
+00:01:33.993 --> 00:01:40.224
+Marcus Reed (synthetic): The exact opening export on the fifth shows a thirty millisecond timeout and three attempts
+
+00:01:40.474 --> 00:01:46.217
+Marcus Reed (synthetic): Our readable summary lists the observed total as one hundred and twenty milliseconds
+
+00:01:46.467 --> 00:01:50.151
+Marcus Reed (synthetic): The approved setting is forty milliseconds per attempt
+
+00:01:50.401 --> 00:01:54.271
+Marcus Reed (synthetic): The original exports are included separately from the summary.
+
+00:01:55.521 --> 00:02:03.264
+Marcus Reed (synthetic): The application record on the sixth preserves the earlier thirty millisecond value and the forty millisecond approved value
+
+00:02:03.514 --> 00:02:07.752
+Marcus Reed (synthetic): After applying the package, we exported the target again
+
+00:02:08.002 --> 00:02:12.282
+Marcus Reed (synthetic): The later bytes show forty milliseconds and three attempts
+
+00:02:12.532 --> 00:02:16.601
+Marcus Reed (synthetic): The application and exports are local file operations
+
+00:02:16.851 --> 00:02:20.875
+Marcus Reed (synthetic): They do not demonstrate that an enterprise service was deployed.
+
+00:02:22.125 --> 00:02:28.194
+Elliot Tran (synthetic): For recovery, the local plan names three backups and two restores of CONFIG BYTES
+
+00:02:28.444 --> 00:02:31.717
+Elliot Tran (synthetic): The first restore selected the older checkpoint
+
+00:02:31.967 --> 00:02:37.613
+Elliot Tran (synthetic): Its copied bytes matched that backup but differed from the changed current object
+
+00:02:37.863 --> 00:02:42.972
+Elliot Tran (synthetic): The second restore used the updated copy and matched the current object
+
+00:02:43.222 --> 00:02:47.407
+Elliot Tran (synthetic): The measured durations cover the local file copy and reread
+
+00:02:47.657 --> 00:02:53.620
+Elliot Tran (synthetic): Dana is recorded as the review contact; the jobs do not say that she performed a review.
+
+00:02:54.870 --> 00:03:00.100
+Elliot Tran (synthetic): The jobs establish the local copy identities and checkpoint timestamps
+
+00:03:00.350 --> 00:03:05.091
+Elliot Tran (synthetic): We did not record the consuming application loading these restored settings
+
+00:03:05.341 --> 00:03:10.510
+Elliot Tran (synthetic): There is no accepted expected-use contract for these historical restores
+
+00:03:10.760 --> 00:03:18.543
+Elliot Tran (synthetic): I can explain the copy comparison, but I cannot supply a historical application observation that we did not retain
+
+00:03:18.793 --> 00:03:22.267
+Elliot Tran (synthetic): A new application test would have its own later date
+
+00:03:22.517 --> 00:03:27.004
+Elliot Tran (synthetic): Please keep the existing records when considering our explanation.

@@ -1,0 +1,22 @@
+{
+  "authored_event_at": "2027-02-06T00:00:00.000000+00:00",
+  "authority": "PINNED_LOCAL_EXERCISE_ONLY",
+  "automatic_ticket_closure": false,
+  "bytes_match_approved": false,
+  "comparison_basis": "PRE_OPERATION_FILE_VS_PINNED_LOCAL_APPROVED_CONFIGURATION",
+  "current_sha256": "94119c79191b24b1baca355c0856e96d1322a6389bc5d1a6faea5d1453434710",
+  "elapsed_ns": 1815555,
+  "field_differences": [
+    {
+      "actual": 30,
+      "approved": 40,
+      "field": "timeout_ms"
+    }
+  ],
+  "operation": "APPLY",
+  "operator_id": "P005",
+  "prior_sha256": "4e35f6ca116314f83efa976cbfa8242c5796c54f4bb468726e03295fc971e918",
+  "qualification": "PERSISTENT_LOCAL_DATA_ONLY_CONFIGURATION_NOT_ENTERPRISE_DEPLOYMENT",
+  "rationale": "Apply exact preexisting locally approved configuration",
+  "runtime_sha256": "295fbccb6575545ffe0916e5b2418ce37937bf5bffc3b38dea869f8a83289f31"
+}

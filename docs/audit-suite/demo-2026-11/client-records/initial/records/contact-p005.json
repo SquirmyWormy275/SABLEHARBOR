@@ -1,0 +1,15 @@
+{
+  "employment_start_basis": "Not supplied by display/appointment years",
+  "name": "Marcus Reed",
+  "person_id": "P005",
+  "relationship_kind": "EMPLOYEE",
+  "service_effective_from": "2027-01-01T03:00:00Z",
+  "service_effective_to": "2028-01-01T00:00:00Z",
+  "source_status": "current_employee",
+  "source_titles": [
+    {
+      "status": "PROPOSED_PLAIN_TITLE",
+      "title": "Principal Engineer"
+    }
+  ]
+}
