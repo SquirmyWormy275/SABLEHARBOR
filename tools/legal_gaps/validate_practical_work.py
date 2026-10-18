@@ -76,6 +76,23 @@ def validate():
         assert update["historical_sha256"] == receipt["input_hashes"][relative]
         assert update["previous_current_sha256"] == current[relative]["current_sha256"]
     updates.update(delivered)
+    # Publishing retained company data updates the reading routes only. Keep
+    # prior navigation receipts and bind this refresh to their exact hashes.
+    publication_path = BASE / "review-support/qa/v3/NAVIGATION_SUCCESSOR_2026-10-18.json"
+    publication = json.loads(publication_path.read_text())
+    assert publication["state"] == "AUTOMATED_NAVIGATION_REVIEW"
+    assert publication["historical_receipt_sha256"] == successor["historical_receipt_sha256"]
+    assert publication["previous_successor_sha256"] == sha(delivery_path)
+    published = {r["path"]: r for r in publication["records"]}
+    assert len(publication["records"]) == len(published) == 2
+    assert set(published) == {
+        "tools/legal_gaps/validate_practical_work.py",
+        "docs/reader/usability/RESULTS.json",
+    }
+    for relative, update in published.items():
+        assert update["historical_sha256"] == receipt["input_hashes"][relative]
+        assert update["previous_current_sha256"] == delivered[relative]["current_sha256"]
+    updates.update(published)
     for group in ("input_hashes", "evidence_hashes"):
         assert receipt[group], "Empty review coverage"
         for relative, digest in receipt[group].items():
