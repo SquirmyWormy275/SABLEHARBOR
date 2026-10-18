@@ -271,6 +271,37 @@ class WikiExportTests(unittest.TestCase):
             "README: missing direct All files link", audit_export(output, root=self.root)["errors"]
         )
 
+    def test_collection_address_survives_crossing_page_size(self):
+        self.file_directory_fixture()
+        last_record = "data/deep/nested/record 250.csv"
+        subprocess.run(
+            ["git", "rm", "--cached", last_record], cwd=self.root, check=True, capture_output=True
+        )
+        self.home.write_text(
+            self.home.read_text()
+            + "\n[Existing collection](https://github.com/SquirmyWormy275/SABLEHARBOR/wiki/Files--data)\n"
+        )
+        before = self.base / "before"
+        original = MODULE.Exporter(self.root, SHA).build(before)
+        self.assertIn("Files--data.md", original["files"])
+        self.assertNotIn("Files--data-1.md", original["files"])
+        self.assertEqual(audit_export(before, root=self.root)["errors"], [])
+        wiki = self.base / "wiki"
+        wiki.mkdir()
+        MODULE.sync(before, wiki)
+
+        subprocess.run(["git", "add", last_record], cwd=self.root, check=True)
+        after = self.base / "after"
+        successor = MODULE.Exporter(self.root, SHA).build(after)
+        MODULE.sync(after, wiki)
+        landing = (wiki / "Files--data.md").read_text()
+        self.assertIn("[Part 1](Files--data-1)", landing)
+        self.assertIn("[Part 2](Files--data-2)", landing)
+        self.assertEqual(successor["file_directory"][last_record], "Files--data-2.md")
+        report = audit_export(wiki, root=self.root)
+        self.assertEqual(report["errors"], [])
+        self.assertEqual(report["maximum_file_clicks"], 3)
+
     def test_hidden_file_link_and_added_file_fail_publication_audit(self):
         self.file_directory_fixture()
         output = self.base / "output"
