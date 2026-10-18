@@ -1,6 +1,6 @@
 # November company-source delivery
 
-[Scope](SCOPE.md) · [Read and release instructions](SOURCE_DELIVERY.md)
+[Company records](client-records/README.md) · [Scope](SCOPE.md) · [Read and release instructions](SOURCE_DELIVERY.md)
 
 The source-delivery implementation publishes one allowlisted directory and verifies it with a standalone standard-library reader. The isolated November edition retains exact company originals, readable derivatives, company explanations, staged source-view media and version-specific source relationships. Selection and evaluator material are kept in a separate private local root; they are not public fixtures or client evidence.
 
@@ -8,7 +8,9 @@ The implementation was accepted through [PR #195](https://github.com/SquirmyWorm
 
 Both staged synthetic videos were decoded and played to the end in a native Wayland player with audio output and VTT captions. Desktop captures of all eight chapters were inspected for legibility. Exact source references remain available in the chapter maps when player captions overlap small footer labels. The retained private report holds the media hashes and playback receipts.
 
-The controlling local completion report holds the compact gap table, actual source/output locations, source pins, release sequence, independent calculations, test receipts and remaining limits. It accompanies the retained private edition. Generated client directories are supplied individually through the authorized local file boundary, not published as public GitHub assets. Public source and tooling changes follow the repository's pull-request process.
+The [18 October publication decision](PUBLICATION_2026-10-18.md) makes the actual [client records](client-records/README.md) available in this repository: 58 initial artifacts, five follow-up artifacts and seven correction artifacts, each with its original manifest. An ordinary clone includes all three submissions. Their bytes, source relationships and simulated availability dates are preserved. Later stages are publicly visible; restricted staged disclosure is no longer a property of this public edition.
+
+The controlling local completion report retains the private source locations, selection details, independent operator calculations and historical test receipts. It is not needed to read or verify the public client records. Evaluator material, credentials and the separate workspace databases remain private. The earlier local-only delivery restriction is superseded only for the three published client submissions.
 
 The period is fictional Q1 2027. Closing evidence availability is simulated January 2028, while actual authoring/import occurs in October 2026. The local source histories and their deployment/authority qualifications are preserved. The deliverable does not assert a whole-company control conclusion or completed auditor work.
 

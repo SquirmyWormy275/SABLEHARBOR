@@ -14,7 +14,8 @@ The archive offers accounting cases, control-testing examples and an interactive
 | Control testing | [Three CCF procedures](../../enterprise/ccf/PROCEDURES.md) | Test results and a record of exceptions, remediation and independent retesting. |
 | Assessment planning | [CCF assessment workbench](../../enterprise/ccf/assurance/README.md) | Evidence requests, test workpapers and a comparison of selected framework requirements. |
 | An audit engagement | [Audit workspace guide](../audit-suite/LOCAL_WORKSPACE.md) | Evidence requests, collected originals, samples, notes, findings and reviewed workpapers. |
-| Company records for the November demonstration | [Company-file delivery guide](../audit-suite/demo-2026-11/SOURCE_DELIVERY.md) | Read and verify a privately supplied access-review, configuration and restoration submission using files and a manifest. |
+| Company records for the November demonstration | [Published client submissions](../audit-suite/demo-2026-11/client-records/README.md) | Read and verify access-review, configuration and restoration records included in the repository. |
+| Complete accepted company source edition | [Company source library](../audit-suite/company-records/README.md) | Read all 5,714 retained record versions and their provenance without a local workspace. |
 
 The exercises identify their records and periods. Keep those together when choosing samples or reconciling figures. The assessment workbench includes reference test plans that have yet to be performed; the completed synthetic examples have their own results.
 

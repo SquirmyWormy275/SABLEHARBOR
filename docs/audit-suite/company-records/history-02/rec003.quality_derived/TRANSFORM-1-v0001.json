@@ -1,0 +1,1 @@
+{"query":{"end":"2027-06-02T00:00:00.000000+00:00","start":"2027-06-01T00:00:00.000000+00:00"},"records":[{"category":"GROUP-A","entity_id":"LOCAL-E1","observed_at":"2027-06-01T01:00:00.000000+00:00","record_id":"R1","source_index":0,"source_row_sha256":"378e1cb608cd4a08601a48b7113fd1233bab5907a45e24b38aa344b7be9d6e65","units":5}],"status":"PARTIAL_UNRELIABLE"}

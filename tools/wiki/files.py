@@ -90,14 +90,38 @@ def build_directory(root: Path, files: list[Path], revision: str, names: dict) -
     for key in sorted(groups, key=lambda k: (k != "repository", k)):
         sources = groups[key]
         label = LABELS.get(key, key.split("/")[-1].replace("_", " ").replace("-", " ").title())
+        slug = re.sub(r"[^a-zA-Z0-9-]", "-", key).strip("-")
+        collection_name = f"Files--{slug}"
+        if len(sources) > PAGE_SIZE:
+            # Keep the original collection address when its file list grows.
+            parts = [
+                f"| [Part {start // PAGE_SIZE + 1}]({collection_name}-{start // PAGE_SIZE + 1}) "
+                f"| {len(sources[start : start + PAGE_SIZE])} |"
+                for start in range(0, len(sources), PAGE_SIZE)
+            ]
+            pages[collection_name + ".md"] = "\n".join(
+                [
+                    f"# {label}",
+                    "",
+                    "[All files](Files) · [Wiki home](Home)",
+                    "",
+                    "This collection spans several pages. "
+                    "Choose a part to open or download its files.",
+                    "",
+                    "| Part | Files |",
+                    "|---|---:|",
+                    *parts,
+                    "",
+                ]
+            )
         for start in range(0, len(sources), PAGE_SIZE):
             batch = sources[start : start + PAGE_SIZE]
             part = start // PAGE_SIZE + 1
             suffix = f"-{part}" if len(sources) > PAGE_SIZE else ""
-            slug = re.sub(r"[^a-zA-Z0-9-]", "-", key).strip("-")
-            name = f"Files--{slug}{suffix}"
+            name = collection_name + suffix
             title = label + (f" — part {part}" if suffix else "")
-            index.append(f"| [{title}]({name}) | {len(batch)} |")
+            collection_link = f" · [All parts]({collection_name})" if suffix and part == 1 else ""
+            index.append(f"| [{title}]({name}){collection_link} | {len(batch)} |")
             rows = [
                 f"# {title}",
                 "",

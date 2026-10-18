@@ -1,0 +1,54 @@
+{
+  "actual_elapsed_seconds": 0.001813405,
+  "business_attempted_at": "2027-02-06T01:40:00.000000+00:00",
+  "byte_copy_matches_selected_backup": true,
+  "checkpoint_age_seconds": 5880.0,
+  "comparison_bytes_equal": true,
+  "comparison_source_pin": {
+    "available_at": "2027-02-06T00:02:00.000000+00:00",
+    "event_at": "2027-02-06T00:02:00.000000+00:00",
+    "record": "CONFIG-BYTES",
+    "sha256": "94119c79191b24b1baca355c0856e96d1322a6389bc5d1a6faea5d1453434710",
+    "system": "backup-runtime-history.source_dataset",
+    "version": 2
+  },
+  "copied_bytes": 49,
+  "dataset_id": "CONFIG-BYTES",
+  "duration_basis": "LOCAL_FILE_COPY_AND_REREAD_WALL_DURATION_SEPARATE_FROM_AUTHORED_TIME",
+  "error_code": null,
+  "lease_pin": {
+    "available_at": "2027-02-05T00:03:00.000000+00:00",
+    "event_at": "2027-02-05T00:03:00.000000+00:00",
+    "record": "RESTORE_READ",
+    "sha256": "8d8cfd3cc8800d837a408522fad5e1006534b5606f6b0e2f58ea2a046d27dadc",
+    "system": "backup-runtime-history.credential_event",
+    "version": 1
+  },
+  "object_pin": {
+    "available_at": "2027-02-06T01:40:00.000000+00:00",
+    "event_at": "2027-02-06T01:40:00.000000+00:00",
+    "record": "R2",
+    "sha256": "94119c79191b24b1baca355c0856e96d1322a6389bc5d1a6faea5d1453434710",
+    "system": "backup-runtime-history.restored_dataset",
+    "version": 1
+  },
+  "occurrence_id": "R2",
+  "operation": "RESTORE",
+  "performed_by": "AS-P007",
+  "prior_attempt_pin": null,
+  "qualification": "LOCAL_BYTE_BACKUP_RUNTIME_NOT_DEPLOYMENT_OR_BIA_ACCEPTANCE",
+  "rationale": "Retest explicitly selected corrected checkpoint",
+  "recorded_operating_review_contact": "AS-P008",
+  "recording_timeliness": "BY_DUE",
+  "review_performed": false,
+  "runtime_id": "BACKUP-815214ffa85d4e4db961b6d2742737aa",
+  "source_pin": {
+    "available_at": "2027-02-06T01:30:00.000000+00:00",
+    "event_at": "2027-02-06T01:30:00.000000+00:00",
+    "record": "B2",
+    "sha256": "94119c79191b24b1baca355c0856e96d1322a6389bc5d1a6faea5d1453434710",
+    "system": "backup-runtime-history.backup_object",
+    "version": 2
+  },
+  "status": "COMPLETED"
+}

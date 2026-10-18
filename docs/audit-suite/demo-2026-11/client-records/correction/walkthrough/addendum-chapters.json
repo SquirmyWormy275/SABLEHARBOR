@@ -1,0 +1,25 @@
+{
+  "chapters": [
+    {
+      "end": "00:00:29.632",
+      "presentation": "STAGED_STILL_SOURCE_VIEW_NOT_LIVE_INTERACTION",
+      "source_artifacts": [
+        {
+          "artifact_id": "CFG-SUMMARY",
+          "sha256": "9238b0788e014250382c4d2967e2de826591f185c86dbbad313c0781e772e8f3",
+          "version": 1
+        }
+      ],
+      "speaker": "Marcus Reed",
+      "start": "00:00:00.000",
+      "title": "Summary addendum",
+      "view": {
+        "artifact_id": "ADDENDUM-VIEW-1",
+        "sha256": "c603e12ea9403fd673d5a2db9f0a60ef2385d80991edafa81aa4504d898dfc4f",
+        "version": 1
+      },
+      "view_path": "walkthrough/views/addendum-1.png"
+    }
+  ],
+  "duration_seconds": 29.63233560090703
+}

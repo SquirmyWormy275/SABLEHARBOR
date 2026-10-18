@@ -1,0 +1,10 @@
+{
+  "approved_timeout_ms": 40,
+  "attempts": 3,
+  "basis": "Company readable summary of retained observations; exact export is supplied separately.",
+  "observation_at": "2027-02-05T00:00:00+00:00",
+  "observed_timeout_ms": 30,
+  "observed_total_wait_ms": 120,
+  "prepared_by": "P005",
+  "target": "LOCAL-RECOVERY-CONFIG-A"
+}

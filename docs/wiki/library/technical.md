@@ -32,14 +32,47 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 
 ## `docs/audit-suite`
 
+- [Read Sable Harbor company data from the repository](../../audit-suite/DATA_AVAILABILITY.md) — MD
 - [Local audit workspace](../../audit-suite/LOCAL_WORKSPACE.md) — MD
 - [Separate modeled source edition](../../audit-suite/OPERATING_SOURCE_EDITION_DRIVER.md) — MD
+
+## `docs/audit-suite/company-records`
+
+- [Complete retained company records](../../audit-suite/company-records/README.md) — MD
 
 ## `docs/audit-suite/demo-2026-11`
 
 - [November company-source delivery](../../audit-suite/demo-2026-11/COMPLETION.md) — MD
+- [November client-record publication decision](../../audit-suite/demo-2026-11/PUBLICATION_2026-10-18.md) — MD
 - [Sable Harbor — records for the November demonstration](../../audit-suite/demo-2026-11/SCOPE.md) — MD
 - [Read and deliver the company records](../../audit-suite/demo-2026-11/SOURCE_DELIVERY.md) — MD
+
+## `docs/audit-suite/demo-2026-11/client-records`
+
+- [November company records](../../audit-suite/demo-2026-11/client-records/README.md) — MD
+
+## `docs/audit-suite/demo-2026-11/client-records/correction`
+
+- [Configuration summary correction](../../audit-suite/demo-2026-11/client-records/correction/response.md) — MD
+
+## `docs/audit-suite/demo-2026-11/client-records/correction/walkthrough`
+
+- [Walkthrough addendum transcript](../../audit-suite/demo-2026-11/client-records/correction/walkthrough/addendum-transcript.md) — MD
+
+## `docs/audit-suite/demo-2026-11/client-records/follow-up`
+
+- [Review export replacement and recovery clarification](../../audit-suite/demo-2026-11/client-records/follow-up/response.md) — MD
+
+## `docs/audit-suite/demo-2026-11/client-records/initial`
+
+- [Sable Harbor — records for the November demonstration](../../audit-suite/demo-2026-11/client-records/initial/SCOPE.md) — MD
+- [Opening the company records](../../audit-suite/demo-2026-11/client-records/initial/SOURCE_DELIVERY.md) — MD
+- [Selected control design and local implementation context](../../audit-suite/demo-2026-11/client-records/initial/control-design.md) — MD
+- [Initial company response](../../audit-suite/demo-2026-11/client-records/initial/response.md) — MD
+
+## `docs/audit-suite/demo-2026-11/client-records/initial/walkthrough`
+
+- [Walkthrough transcript](../../audit-suite/demo-2026-11/client-records/initial/walkthrough/walkthrough-transcript.md) — MD
 
 ## `docs/commercialization`
 

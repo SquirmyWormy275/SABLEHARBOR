@@ -1,0 +1,74 @@
+{
+  "approved_by": "AS-P008",
+  "authority": {
+    "available_at": "2027-01-01T00:15:00.000000+00:00",
+    "event_at": "2027-01-01T00:15:00.000000+00:00",
+    "record": "SERVICE-ORDER-2027",
+    "sha256": "0a3ccd19bc93687fd8a54b96aca25e850d2136f31261f07b9112f28e525584d7",
+    "system": "person-access-history.company_authority",
+    "version": 1
+  },
+  "channels": [
+    "directory",
+    "application",
+    "local_account",
+    "remote_access",
+    "api_token",
+    "application_session"
+  ],
+  "conflicting_rights": [
+    [
+      "billing-admin",
+      "inventory-admin"
+    ],
+    [
+      "iam.approve",
+      "iam.provision"
+    ]
+  ],
+  "duties": {
+    "CONTRACTOR": [
+      "workspace.read"
+    ],
+    "EMPLOYEE": [
+      "workspace.read"
+    ],
+    "NONEMPLOYEE_DIRECTOR": [
+      "board.read"
+    ],
+    "NONHUMAN_SERVICE": [
+      "workspace.read"
+    ],
+    "SERVICE_DELEGATE": [
+      "workspace.read"
+    ]
+  },
+  "individual_duties": {
+    "AS-P003": [
+      "legal.record"
+    ],
+    "AS-P006": [
+      "affiliation.record"
+    ],
+    "AS-P007": [
+      "iam.provision"
+    ],
+    "AS-P008": [
+      "iam.approve"
+    ],
+    "AS-P009": [
+      "review.perform"
+    ],
+    "AS-P013": [
+      "contract.record"
+    ]
+  },
+  "local_mover_duties": {
+    "billing-admin": "Retained local application entitlement; original detailed business permission catalogue unavailable",
+    "inventory-admin": "Retained local application entitlement; original detailed business permission catalogue unavailable"
+  },
+  "mover_duty_is_job_title_change": false,
+  "physical_channel_scope": "Not established here",
+  "reviewed_by": "AS-P009",
+  "schema": "SH_COMPANY_PERSON_ACCESS_RECORD_V1"
+}

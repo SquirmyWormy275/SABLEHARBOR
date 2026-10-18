@@ -20,7 +20,7 @@
       "result": "PASS",
       "links_followed": 3,
       "input_hashes": {
-        "README.md": "f93932ff6ee5746e2113ac6fb1a20de682470530e776437a28f3bd5771a8a5fc",
+        "README.md": "209bc3dce3909bfd82571164199b927efa1e39b22463b0c8237d0e2a25b07335",
         "docs/reader/exercises/README.md": "1ec9914b454e24597d23cb1a50a06426230dbca320a602035bac8c73ff67a90b",
         "docs/reader/exercises/ACQUISITION.md": "dcaecdb7b9ee29ea717fbbe52bfbc23e26052741d70b375aeafd661d41b60a3d",
         "industrial/publications/SH-IND-ARU-CLOSE-001_v1.0.0.pdf": "2db8049ce4ee571d4a681505321b73af49739adb2cbd86d1fae78e92082d7883"
@@ -78,7 +78,7 @@
       "result": "PASS",
       "links_followed": 3,
       "input_hashes": {
-        "README.md": "f93932ff6ee5746e2113ac6fb1a20de682470530e776437a28f3bd5771a8a5fc",
+        "README.md": "209bc3dce3909bfd82571164199b927efa1e39b22463b0c8237d0e2a25b07335",
         "docs/reader/transactions/README.md": "c483271d91fb8cdaaf99ba9343073f982d377d5ea3fbf703cc900ba5bc2ec60c",
         "docs/legal/gap-instruments/REVIEW_WORKFLOW.md": "8b54945de408dbdf77e8c2cde4efa16fb2ff2c283ed930c8f952d1f057cf3494",
         "docs/legal/gap-instruments/review-support/decisions.xlsx": "36394a1a6b2c13f1e4a721d904f6b5a956015610302b284b3121d72e2dd6823a"
@@ -104,7 +104,7 @@
       "result": "PASS",
       "links_followed": 2,
       "input_hashes": {
-        "README.md": "f93932ff6ee5746e2113ac6fb1a20de682470530e776437a28f3bd5771a8a5fc",
+        "README.md": "209bc3dce3909bfd82571164199b927efa1e39b22463b0c8237d0e2a25b07335",
         "geospatial/maps/facilities/ARTIFACT_INDEX.md": "618cde92a53b3c7a825710afb6a2bf2b6847d4f434617a96abae936c276751f8",
         "geospatial/maps/facilities/SH-MAP-SAC-024.pdf": "49c2b36fb5c641f2ac757c3fd84024d684d397123fcf9c393309617c314f00e7"
       },
@@ -148,7 +148,7 @@
       "result": "PASS",
       "links_followed": 3,
       "input_hashes": {
-        "README.md": "f93932ff6ee5746e2113ac6fb1a20de682470530e776437a28f3bd5771a8a5fc",
+        "README.md": "209bc3dce3909bfd82571164199b927efa1e39b22463b0c8237d0e2a25b07335",
         "docs/reader/exercises/README.md": "1ec9914b454e24597d23cb1a50a06426230dbca320a602035bac8c73ff67a90b",
         "docs/reader/exercises/ACQUISITION.md": "dcaecdb7b9ee29ea717fbbe52bfbc23e26052741d70b375aeafd661d41b60a3d",
         "industrial/finance/TRANSACTION_ACCOUNTING.md": "d13f142968958585cfc56a7b06d54b5e95bccef6d434d11bb6bba93933a0aa58"

@@ -1,0 +1,10 @@
+{
+  "classification": "EXACT_PERSISTENT_LOCAL_TARGET_EXPORT_NOT_DEPLOYMENT_OR_APPROVAL",
+  "exported_at": "2027-02-06T00:01:00.000000+00:00",
+  "operator_id": "P005",
+  "prior_runtime_operation_at": "2027-02-06T00:00:00.000000+00:00",
+  "rationale": "Export changed current configuration bytes",
+  "runtime_revision_at_export": 2,
+  "target_id": "LOCAL-RECOVERY-CONFIG-A",
+  "target_sha256": "94119c79191b24b1baca355c0856e96d1322a6389bc5d1a6faea5d1453434710"
+}

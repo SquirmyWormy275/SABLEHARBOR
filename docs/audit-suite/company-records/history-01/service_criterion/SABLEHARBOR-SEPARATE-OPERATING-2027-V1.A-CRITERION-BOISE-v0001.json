@@ -1,0 +1,1 @@
+{"approved_at":"2027-11-01T07:01:00.000000+00:00","author_id":"AS-P007","dataset_id":"CONFIG-BYTES","max_age_seconds":7200,"max_restore_seconds":10,"min_record_count":1,"qualification":"LOCAL_SIMULATED_SERVICE_CRITERION_NOT_ENTERPRISE_BIA","reviewer_id":"AS-P008","schema":"SH_LOCAL_SERVICE_RETURN_CRITERION_V1","service_id":"SVC-compute"}

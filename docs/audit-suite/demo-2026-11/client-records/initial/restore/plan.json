@@ -1,0 +1,122 @@
+{
+  "bindings": {
+    "B1": {
+      "dataset_id": "CONFIG-BYTES",
+      "occurrence_id": "B1",
+      "operation": "BACKUP"
+    },
+    "B2": {
+      "dataset_id": "CONFIG-BYTES",
+      "occurrence_id": "B2",
+      "operation": "BACKUP"
+    },
+    "B3": {
+      "dataset_id": "CONFIG-BYTES",
+      "occurrence_id": "B3",
+      "operation": "BACKUP"
+    },
+    "R1": {
+      "dataset_id": "CONFIG-BYTES",
+      "occurrence_id": "R1",
+      "operation": "RESTORE"
+    },
+    "R2": {
+      "dataset_id": "CONFIG-BYTES",
+      "occurrence_id": "R2",
+      "operation": "RESTORE"
+    }
+  },
+  "datasets": {
+    "CONFIG-BYTES": "BYTES"
+  },
+  "declaration_original_sha256": "eb79360680fad956989f05432e803f64f6971e1dbe2fb78337c4569f372c0f97",
+  "declaration_ref": {
+    "record": "LOCAL-RECOVERY-FEB2027-A",
+    "sha256": "eb79360680fad956989f05432e803f64f6971e1dbe2fb78337c4569f372c0f97",
+    "system": "operating_period_ledger",
+    "version": 1
+  },
+  "deployment": "NOT_ESTABLISHED",
+  "operating_reviewer_id": "AS-P008",
+  "operator_id": "AS-P007",
+  "plan": {
+    "control_ids": [
+      "SH-BCM-002",
+      "SH-BCM-003"
+    ],
+    "declared_at": "2027-02-04T23:00:00.000000+00:00",
+    "inventory": [
+      {
+        "description": "Local configuration byte object; no deployed hosting relationship",
+        "id": "CONFIG-BYTES"
+      }
+    ],
+    "local_basis": "Five explicit local occurrences. No approved RPO, BIA, offsite recovery or enterprise completeness.",
+    "owner_id": "AS-P007",
+    "period_end_exclusive": "2027-02-07T00:00:00.000000+00:00",
+    "period_id": "LOCAL-RECOVERY-FEB2027-A",
+    "period_start": "2027-02-05T00:00:00.000000+00:00",
+    "schedule": [
+      {
+        "control_id": "SH-BCM-002",
+        "depends_on": [],
+        "due_at": "2027-02-05T01:00:00.000000+00:00",
+        "id": "B1",
+        "inventory_ids": [
+          "CONFIG-BYTES"
+        ],
+        "window_end_exclusive": "2027-02-06T00:00:00.000000+00:00",
+        "window_start": "2027-02-05T00:00:00.000000+00:00"
+      },
+      {
+        "control_id": "SH-BCM-002",
+        "depends_on": [],
+        "due_at": "2027-02-06T01:00:00.000000+00:00",
+        "id": "B2",
+        "inventory_ids": [
+          "CONFIG-BYTES"
+        ],
+        "window_end_exclusive": "2027-02-07T00:00:00.000000+00:00",
+        "window_start": "2027-02-06T00:00:00.000000+00:00"
+      },
+      {
+        "control_id": "SH-BCM-003",
+        "depends_on": [],
+        "due_at": "2027-02-06T01:10:00.000000+00:00",
+        "id": "R1",
+        "inventory_ids": [
+          "CONFIG-BYTES"
+        ],
+        "window_end_exclusive": "2027-02-07T00:00:00.000000+00:00",
+        "window_start": "2027-02-06T00:00:00.000000+00:00"
+      },
+      {
+        "control_id": "SH-BCM-003",
+        "depends_on": [],
+        "due_at": "2027-02-06T01:40:00.000000+00:00",
+        "id": "R2",
+        "inventory_ids": [
+          "CONFIG-BYTES"
+        ],
+        "window_end_exclusive": "2027-02-07T00:00:00.000000+00:00",
+        "window_start": "2027-02-06T00:00:00.000000+00:00"
+      },
+      {
+        "control_id": "SH-BCM-002",
+        "depends_on": [],
+        "due_at": "2027-02-06T02:00:00.000000+00:00",
+        "id": "B3",
+        "inventory_ids": [
+          "CONFIG-BYTES"
+        ],
+        "window_end_exclusive": "2027-02-07T00:00:00.000000+00:00",
+        "window_start": "2027-02-06T00:00:00.000000+00:00"
+      }
+    ]
+  },
+  "qualification": "LOCAL_BYTE_BACKUP_RUNTIME_NOT_DEPLOYMENT_OR_BIA_ACCEPTANCE",
+  "runtime_id": "BACKUP-815214ffa85d4e4db961b6d2742737aa",
+  "schema": "LOCAL_BACKUP_RUNTIME_V1",
+  "service_id": "SVC-compute",
+  "targets": "NOT_SUPPLIED_NO_APPROVED_BIA_OR_RPO_RTO_ASSERTED"
+}

@@ -1,5 +1,11 @@
 # Local audit workspace
 
+To read the actual company data from a cloud environment or ordinary repository
+clone, open the [5,714-version source library](company-records/README.md) or the
+[November client submissions](demo-2026-11/client-records/README.md). Neither
+requires this local workspace or an external drive. The instructions below are
+for running the separate auditor workrooms.
+
 Run `sableharbor-workspace start` and wait for `READY`. Open CLEAN at
 <http://127.0.0.1:8782> or MESSY at <http://127.0.0.1:8783>. The existing local
 launcher also supports `status`, `stop` and `restart`; stopping saves the current

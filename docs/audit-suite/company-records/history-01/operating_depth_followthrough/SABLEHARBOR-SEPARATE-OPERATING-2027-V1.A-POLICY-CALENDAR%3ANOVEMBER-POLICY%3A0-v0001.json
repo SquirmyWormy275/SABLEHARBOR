@@ -1,0 +1,413 @@
+{
+  "declaration_pin": {
+    "branch": "HARBOR-OPERATIONS-A",
+    "company": "SABLE-HARBOR-REFERENCE",
+    "record": "SABLEHARBOR-SEPARATE-OPERATING-2027-V1.A-POLICY-CALENDAR",
+    "sha256": "9d923121f29e5d24e4f511ae53556bdb8f507b855b27710b94c83da1ef002292",
+    "system": "operating_depth_definition",
+    "version": 1
+  },
+  "kind": "POLICY",
+  "observation": {
+    "all_recipients_delivered": true,
+    "all_recipients_read_return": true,
+    "human_acknowledgment": "NOT_ESTABLISHED",
+    "native_refs": [
+      {
+        "branch": "HARBOR-OPERATIONS-A",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "record": "SUP-OPERATING-POLICY-2027-V2",
+        "sha256": "4bd0694ea8a57a4ff7a2218705008a8b072b8b219053ec9f992b6f701fc86bf2",
+        "system": "policy_document",
+        "version": 1
+      },
+      {
+        "branch": "HARBOR-OPERATIONS-A",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "record": "OP-1",
+        "sha256": "922db18c0497bed14ab329d089169e1f3a729c2f9fb906d27d3db2fff63ea9f9",
+        "system": "policy_operation",
+        "version": 1
+      },
+      {
+        "branch": "HARBOR-OPERATIONS-A",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "record": "OP-2",
+        "sha256": "34c2c229cfb488e76e41fe97fc48906545c8182e3c841190ea26eb48776640d5",
+        "system": "policy_operation",
+        "version": 1
+      },
+      {
+        "branch": "HARBOR-OPERATIONS-A",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "record": "OP-3",
+        "sha256": "3e2d368fda5f9d8f39767b690cb416c74860309ec79b46d69014430887990738",
+        "system": "policy_operation",
+        "version": 1
+      },
+      {
+        "branch": "HARBOR-OPERATIONS-A",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "record": "OP-4",
+        "sha256": "a8a50302388bfa2c6202dca642270d0974f28f17f6b4387dc320bef656b6a03a",
+        "system": "policy_operation",
+        "version": 1
+      },
+      {
+        "branch": "HARBOR-OPERATIONS-A",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "record": "OP-5",
+        "sha256": "7ae4fd9a0471a44aa48e161567078deb6b0975006bd4946aaf96910d7e3704f6",
+        "system": "policy_operation",
+        "version": 1
+      },
+      {
+        "branch": "HARBOR-OPERATIONS-A",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "record": "OP-6",
+        "sha256": "55761b4c95b3d05d5de51de0510ad1b63e34bda9e54146d26b42d74df9bc2b8f",
+        "system": "policy_operation",
+        "version": 1
+      },
+      {
+        "branch": "HARBOR-OPERATIONS-A",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "record": "OP-7",
+        "sha256": "fd512ceff55c64eb556e6fd310d0f02e73a12c05c348e8bfdd896dedbbf4d5c7",
+        "system": "policy_operation",
+        "version": 1
+      },
+      {
+        "branch": "HARBOR-OPERATIONS-A",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "record": "OP-8",
+        "sha256": "0c2630f24784961baa567ee2f0e9c285935fd5be1264eb23487ff858955b5bda",
+        "system": "policy_operation",
+        "version": 1
+      },
+      {
+        "branch": "HARBOR-OPERATIONS-A",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "record": "OP-9",
+        "sha256": "190c17060b4ef3a2d8a03d121880bd446d42d2a3cd0ff8296ff08461da5ab29b",
+        "system": "policy_operation",
+        "version": 1
+      },
+      {
+        "branch": "HARBOR-OPERATIONS-A",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "record": "OP-10",
+        "sha256": "c294cf80234770729dbdf06bd8028f857a4010b04ab65f5ec77f9dd93548016f",
+        "system": "policy_operation",
+        "version": 1
+      },
+      {
+        "branch": "HARBOR-OPERATIONS-A",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "record": "OP-11",
+        "sha256": "aeda461ba7e7b7e432f1039b6daae0275da22aec2f9eb7e89deea32b8e047d80",
+        "system": "policy_operation",
+        "version": 1
+      },
+      {
+        "branch": "HARBOR-OPERATIONS-A",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "record": "OP-12",
+        "sha256": "c39c9d8104f04e04907cbdc19b01b6d2816c8bd6a23febba37aab58cd72aee33",
+        "system": "policy_operation",
+        "version": 1
+      },
+      {
+        "branch": "HARBOR-OPERATIONS-A",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "record": "OP-13",
+        "sha256": "f070553e25dc41c74a27687575695bba82aa2c26c1ae38d16d8a1918fa220c9f",
+        "system": "policy_operation",
+        "version": 1
+      },
+      {
+        "branch": "HARBOR-OPERATIONS-A",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "record": "OP-14",
+        "sha256": "5d42697cb48b5f1944731ccf0382c92129d48b78e7353212be741f65999673fe",
+        "system": "policy_operation",
+        "version": 1
+      },
+      {
+        "branch": "HARBOR-OPERATIONS-A",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "record": "OP-15",
+        "sha256": "26f7516513aa93802ca328d06bbcabf466d9eb32c92085065027b2e72f703be7",
+        "system": "policy_operation",
+        "version": 1
+      },
+      {
+        "branch": "HARBOR-OPERATIONS-A",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "record": "OP-16",
+        "sha256": "cf01c29bc5fd6dde010e4601cee7feb41e721186cf3b84ad0bc7b98b872611c2",
+        "system": "policy_operation",
+        "version": 1
+      }
+    ],
+    "performed_by": "AS-P005",
+    "policy_state_basis": "FRESH_VERIFIED_NATIVE_OPERATION_PREFIX_AT_EXACT_CUTOFF",
+    "recorded_policy_report": {
+      "as_of": "2027-11-02T00:00:00.000000+00:00",
+      "declared_recipient_count": 8,
+      "qualification": "LOCAL_MAILBOX_DELIVERY_AND_SIMULATED_ASSERTION_NOT_HUMAN_ACKNOWLEDGMENT",
+      "recipients": [
+        {
+          "delivery": {
+            "command_id": "A-NOVEMBER-0",
+            "document_id": "SUP-OPERATING-POLICY-2027-V2",
+            "document_pin": {
+              "branch": "HARBOR-OPERATIONS-A",
+              "company": "SABLE-HARBOR-REFERENCE",
+              "record": "SUP-OPERATING-POLICY-2027-V2",
+              "sha256": "4bd0694ea8a57a4ff7a2218705008a8b072b8b219053ec9f992b6f701fc86bf2",
+              "system": "policy_document",
+              "version": 1
+            },
+            "event_at": "2027-11-01T09:10:00.000000+00:00",
+            "file": {
+              "byte_count": 1970,
+              "device": 58,
+              "inode": 9744373,
+              "sha256": "4bd0694ea8a57a4ff7a2218705008a8b072b8b219053ec9f992b6f701fc86bf2"
+            },
+            "recipient_id": "AS-P003"
+          },
+          "delivery_status": "DELIVERED_CURRENT_VERSION",
+          "human_acknowledgment": "NOT_ESTABLISHED",
+          "late": false,
+          "read_return_current_delivery": true,
+          "recipient_id": "AS-P003",
+          "simulated_assertion_current_delivery": false
+        },
+        {
+          "delivery": {
+            "command_id": "A-NOVEMBER-2",
+            "document_id": "SUP-OPERATING-POLICY-2027-V2",
+            "document_pin": {
+              "branch": "HARBOR-OPERATIONS-A",
+              "company": "SABLE-HARBOR-REFERENCE",
+              "record": "SUP-OPERATING-POLICY-2027-V2",
+              "sha256": "4bd0694ea8a57a4ff7a2218705008a8b072b8b219053ec9f992b6f701fc86bf2",
+              "system": "policy_document",
+              "version": 1
+            },
+            "event_at": "2027-11-01T09:12:00.000000+00:00",
+            "file": {
+              "byte_count": 1970,
+              "device": 58,
+              "inode": 9744389,
+              "sha256": "4bd0694ea8a57a4ff7a2218705008a8b072b8b219053ec9f992b6f701fc86bf2"
+            },
+            "recipient_id": "AS-P005"
+          },
+          "delivery_status": "DELIVERED_CURRENT_VERSION",
+          "human_acknowledgment": "NOT_ESTABLISHED",
+          "late": false,
+          "read_return_current_delivery": true,
+          "recipient_id": "AS-P005",
+          "simulated_assertion_current_delivery": false
+        },
+        {
+          "delivery": {
+            "command_id": "A-NOVEMBER-4",
+            "document_id": "SUP-OPERATING-POLICY-2027-V2",
+            "document_pin": {
+              "branch": "HARBOR-OPERATIONS-A",
+              "company": "SABLE-HARBOR-REFERENCE",
+              "record": "SUP-OPERATING-POLICY-2027-V2",
+              "sha256": "4bd0694ea8a57a4ff7a2218705008a8b072b8b219053ec9f992b6f701fc86bf2",
+              "system": "policy_document",
+              "version": 1
+            },
+            "event_at": "2027-11-01T09:14:00.000000+00:00",
+            "file": {
+              "byte_count": 1970,
+              "device": 58,
+              "inode": 9744403,
+              "sha256": "4bd0694ea8a57a4ff7a2218705008a8b072b8b219053ec9f992b6f701fc86bf2"
+            },
+            "recipient_id": "AS-P006"
+          },
+          "delivery_status": "DELIVERED_CURRENT_VERSION",
+          "human_acknowledgment": "NOT_ESTABLISHED",
+          "late": false,
+          "read_return_current_delivery": true,
+          "recipient_id": "AS-P006",
+          "simulated_assertion_current_delivery": false
+        },
+        {
+          "delivery": {
+            "command_id": "A-NOVEMBER-6",
+            "document_id": "SUP-OPERATING-POLICY-2027-V2",
+            "document_pin": {
+              "branch": "HARBOR-OPERATIONS-A",
+              "company": "SABLE-HARBOR-REFERENCE",
+              "record": "SUP-OPERATING-POLICY-2027-V2",
+              "sha256": "4bd0694ea8a57a4ff7a2218705008a8b072b8b219053ec9f992b6f701fc86bf2",
+              "system": "policy_document",
+              "version": 1
+            },
+            "event_at": "2027-11-01T09:16:00.000000+00:00",
+            "file": {
+              "byte_count": 1970,
+              "device": 58,
+              "inode": 9744418,
+              "sha256": "4bd0694ea8a57a4ff7a2218705008a8b072b8b219053ec9f992b6f701fc86bf2"
+            },
+            "recipient_id": "AS-P007"
+          },
+          "delivery_status": "DELIVERED_CURRENT_VERSION",
+          "human_acknowledgment": "NOT_ESTABLISHED",
+          "late": false,
+          "read_return_current_delivery": true,
+          "recipient_id": "AS-P007",
+          "simulated_assertion_current_delivery": false
+        },
+        {
+          "delivery": {
+            "command_id": "A-NOVEMBER-8",
+            "document_id": "SUP-OPERATING-POLICY-2027-V2",
+            "document_pin": {
+              "branch": "HARBOR-OPERATIONS-A",
+              "company": "SABLE-HARBOR-REFERENCE",
+              "record": "SUP-OPERATING-POLICY-2027-V2",
+              "sha256": "4bd0694ea8a57a4ff7a2218705008a8b072b8b219053ec9f992b6f701fc86bf2",
+              "system": "policy_document",
+              "version": 1
+            },
+            "event_at": "2027-11-01T09:18:00.000000+00:00",
+            "file": {
+              "byte_count": 1970,
+              "device": 58,
+              "inode": 9744432,
+              "sha256": "4bd0694ea8a57a4ff7a2218705008a8b072b8b219053ec9f992b6f701fc86bf2"
+            },
+            "recipient_id": "AS-P008"
+          },
+          "delivery_status": "DELIVERED_CURRENT_VERSION",
+          "human_acknowledgment": "NOT_ESTABLISHED",
+          "late": false,
+          "read_return_current_delivery": true,
+          "recipient_id": "AS-P008",
+          "simulated_assertion_current_delivery": false
+        },
+        {
+          "delivery": {
+            "command_id": "A-NOVEMBER-10",
+            "document_id": "SUP-OPERATING-POLICY-2027-V2",
+            "document_pin": {
+              "branch": "HARBOR-OPERATIONS-A",
+              "company": "SABLE-HARBOR-REFERENCE",
+              "record": "SUP-OPERATING-POLICY-2027-V2",
+              "sha256": "4bd0694ea8a57a4ff7a2218705008a8b072b8b219053ec9f992b6f701fc86bf2",
+              "system": "policy_document",
+              "version": 1
+            },
+            "event_at": "2027-11-01T09:20:00.000000+00:00",
+            "file": {
+              "byte_count": 1970,
+              "device": 58,
+              "inode": 9744446,
+              "sha256": "4bd0694ea8a57a4ff7a2218705008a8b072b8b219053ec9f992b6f701fc86bf2"
+            },
+            "recipient_id": "AS-P012"
+          },
+          "delivery_status": "DELIVERED_CURRENT_VERSION",
+          "human_acknowledgment": "NOT_ESTABLISHED",
+          "late": false,
+          "read_return_current_delivery": true,
+          "recipient_id": "AS-P012",
+          "simulated_assertion_current_delivery": false
+        },
+        {
+          "delivery": {
+            "command_id": "A-NOVEMBER-12",
+            "document_id": "SUP-OPERATING-POLICY-2027-V2",
+            "document_pin": {
+              "branch": "HARBOR-OPERATIONS-A",
+              "company": "SABLE-HARBOR-REFERENCE",
+              "record": "SUP-OPERATING-POLICY-2027-V2",
+              "sha256": "4bd0694ea8a57a4ff7a2218705008a8b072b8b219053ec9f992b6f701fc86bf2",
+              "system": "policy_document",
+              "version": 1
+            },
+            "event_at": "2027-11-01T09:22:00.000000+00:00",
+            "file": {
+              "byte_count": 1970,
+              "device": 58,
+              "inode": 9744461,
+              "sha256": "4bd0694ea8a57a4ff7a2218705008a8b072b8b219053ec9f992b6f701fc86bf2"
+            },
+            "recipient_id": "AS-P013"
+          },
+          "delivery_status": "DELIVERED_CURRENT_VERSION",
+          "human_acknowledgment": "NOT_ESTABLISHED",
+          "late": false,
+          "read_return_current_delivery": true,
+          "recipient_id": "AS-P013",
+          "simulated_assertion_current_delivery": false
+        },
+        {
+          "delivery": {
+            "command_id": "A-NOVEMBER-14",
+            "document_id": "SUP-OPERATING-POLICY-2027-V2",
+            "document_pin": {
+              "branch": "HARBOR-OPERATIONS-A",
+              "company": "SABLE-HARBOR-REFERENCE",
+              "record": "SUP-OPERATING-POLICY-2027-V2",
+              "sha256": "4bd0694ea8a57a4ff7a2218705008a8b072b8b219053ec9f992b6f701fc86bf2",
+              "system": "policy_document",
+              "version": 1
+            },
+            "event_at": "2027-11-01T09:24:00.000000+00:00",
+            "file": {
+              "byte_count": 1970,
+              "device": 58,
+              "inode": 9744475,
+              "sha256": "4bd0694ea8a57a4ff7a2218705008a8b072b8b219053ec9f992b6f701fc86bf2"
+            },
+            "recipient_id": "AS-P014"
+          },
+          "delivery_status": "DELIVERED_CURRENT_VERSION",
+          "human_acknowledgment": "NOT_ESTABLISHED",
+          "late": false,
+          "read_return_current_delivery": true,
+          "recipient_id": "AS-P014",
+          "simulated_assertion_current_delivery": false
+        }
+      ],
+      "selected_document_pin": {
+        "branch": "HARBOR-OPERATIONS-A",
+        "company": "SABLE-HARBOR-REFERENCE",
+        "record": "SUP-OPERATING-POLICY-2027-V2",
+        "sha256": "4bd0694ea8a57a4ff7a2218705008a8b072b8b219053ec9f992b6f701fc86bf2",
+        "system": "policy_document",
+        "version": 1
+      },
+      "withdrawn": false
+    },
+    "runtime_root": "local-source:46505f6cdea307afe3cdd7869fbd511cc0368a30895e95bd1080e828b093705f",
+    "runtime_sha256": "09a222e182b76d8376c8fed394015427bcc613811b7cb866c070640c8d7b6fbc",
+    "status": "EXACT_LOCAL_DOCUMENT_DELIVERY_READ_RECEIPTS_BOUND"
+  },
+  "professional_acceptance": "NOT_ASSERTED",
+  "qualification": "FICTIONAL_DECLARED_NATIVE_OPERATIONS_NOT_ENTERPRISE_OR_PROFESSIONAL_ACCEPTANCE",
+  "recorded_at": "2027-11-02T00:00:00.000000+00:00",
+  "schema": "SH_NATIVE_OPERATING_DEPTH_OBSERVATION_V1",
+  "slot": {
+    "due_at": "2027-11-02T00:00:00.000000+00:00",
+    "exclusion": null,
+    "expected": true,
+    "item_id": "NOVEMBER-POLICY",
+    "kind": "POLICY",
+    "slot_id": "NOVEMBER-POLICY:0",
+    "window_end_exclusive": "2027-11-02T09:01:00.000000+00:00",
+    "window_start": "2027-11-01T09:01:00.000000+00:00"
+  }
+}
