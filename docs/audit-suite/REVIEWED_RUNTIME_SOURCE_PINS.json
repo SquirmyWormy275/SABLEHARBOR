@@ -9,7 +9,7 @@
     "enterprise/audit_suite/instructor_assessments.py": "31b0b3046dfc7202df5e7e92dfb0f16b02ae26349986b292f7eab3dbd50ac1bd",
     "enterprise/audit_suite/instructor_comparison.py": "1f655df430dbe1a8f5754a5abf9831c819fa46ef2763b854b9fb3c0b6bfadbbd",
     "enterprise/audit_suite/instructor_debrief.py": "73714145789c6dd4bbfb12a5628a464e3a5dd681c06c2678a04e9270e1204cf4",
-    "enterprise/audit_suite/managed_history_integrity.py": "8ff22f36fa5527133283a7d0b42182f2277651ebe3eecbc4cae55839a544a222",
+    "enterprise/audit_suite/managed_history_integrity.py": "19b05230e6dcc5907165854e8e599aa96c1af80c5e2cff186676b7bb24ad034a",
     "enterprise/audit_suite/persistent_company_journey.py": "fe139cefb162ffdebb66b21e7b2178f4141d66820bbdf409d7bd738fb6c7aaaa",
     "enterprise/audit_suite/persistent_company_service.py": "a30b0dca400f3ddace1054328f8cb7fb63a5da416f16fb0b957612663134892d",
     "enterprise/audit_suite/retained_explanation_service.py": "7bd3002343abd67931c18154cdbbad02a8fed43ad8bfef27d36d89228869a0b5",

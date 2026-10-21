@@ -344,14 +344,16 @@ class IntegrityCatalogue:
             sha(evidence["backup_archive_sha256"])
             require(self.sequence > 0 and self.authority_head is not None,
                     "A signed prior checkpoint is required for physical rebind")
+            changed_devices = []
             for name in ("prefix", "tail"):
                 before, after = self.images[name], body["images"][name]
                 require({k: v for k, v in before.items() if k != "metadata"}
                         == {k: v for k, v in after.items() if k != "metadata"}
-                        and before["metadata"]["st_dev"] != after["metadata"]["st_dev"]
                         and {k: v for k, v in before["metadata"].items() if k != "st_dev"}
                         == {k: v for k, v in after["metadata"].items() if k != "st_dev"},
                         "Physical rebind may change only the device number of exact images")
+                changed_devices.append(before["metadata"]["st_dev"] != after["metadata"]["st_dev"])
+            require(any(changed_devices), "Physical rebind requires a changed device number")
         else:
             require(body["images"]["prefix"] == self.images["prefix"],
                     "Immutable prefix changed in transition")

@@ -110,6 +110,18 @@ def test_signed_device_rebind_preserves_history_and_refuses_other_metadata():
     with pytest.raises(DomainError):
         catalogue.apply_checkpoint(signed(changed), "c" * 64, verify)
     assert catalogue.sequence == 1
+    unchanged = copy.deepcopy(candidate)
+    unchanged["images"] = copy.deepcopy(base["images"])
+    with pytest.raises(DomainError):
+        catalogue.apply_checkpoint(signed(unchanged), "c" * 64, verify)
+    assert catalogue.sequence == 1
+    one_device = copy.deepcopy(candidate)
+    one_device["images"]["prefix"] = copy.deepcopy(base["images"]["prefix"])
+    single_catalogue = IntegrityCatalogue(base, HASH)
+    single_catalogue.apply_checkpoint(prior, "b" * 64, verify)
+    single_catalogue.apply_checkpoint(signed(one_device), "c" * 64, verify)
+    assert single_catalogue.images["prefix"]["metadata"]["st_dev"] == 58
+    assert single_catalogue.images["tail"]["metadata"]["st_dev"] == 60
     catalogue.apply_checkpoint(signed(candidate), "c" * 64, verify)
     assert catalogue.sequence == 2
     assert catalogue.frames == [frame]
