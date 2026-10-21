@@ -18,17 +18,24 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
         "6fa8e6ba1e428762e1554a5e2779402889dbe48983b3362412536f7744995d66",
     ),
     # Tracked convenience catalog retained by GENERATED_RECORDS_LIFECYCLE.md.
-    # October 18 company-record publication: 1,689 public reader files.
+    # October 20 CLEAN/MESSY intake and recovery guides: 1,691 public reader
+    # files. Compared with the October 18 accepted catalog, the rebuilt database
+    # adds those two guides and refreshes the README, local workspace guide and
+    # company-record README. Institutional objects and controlled pairs are
+    # unchanged; SQLite quick_check and reader regeneration both pass.
     # Exact logical comparison preserves all 148 institutional objects and
     # publication pairs, 294 relationships, 12 evidence packages, 237 evidence
     # artifacts and the existing evidence link. Reader text/search reflects the
     # README, data guides and preserved client text. All 384 counterpart-audit rows are unchanged;
     # full catalog regeneration reproduces its tables. The 148 admitted source/PDF
     # pairs retain their accepted manifest and exact bytes.
+    # The documented verifier now runs as a module in both intake guides.
+    # Regeneration changed only those two reader-file/text rows and their FTS
+    # index entries; all institutional and evidence tables remain unchanged.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        15554560,
-        "48fc219527e2c472e30c94a39a6517e3a34a15ff73326841623b98fb97d41b3c",
+        15568896,
+        "3881e80c720742263299c7a0c707aacecb19053cae827a7a12ad154813a16428",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.

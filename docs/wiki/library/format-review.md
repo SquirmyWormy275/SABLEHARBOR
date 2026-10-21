@@ -6,7 +6,7 @@ This list helps maintainers check which source documents have formatted companio
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 448 |
+| COUNTERPART_REVIEW_REQUIRED | 450 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 102 |
@@ -24,7 +24,9 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Withdrawn visual source record](../../../assets/headquarters/CANONICAL_HEADQUARTERS_IMAGE_MANIFEST.md) — Corporate document-format reconciliation
 - [SABLE HARBOR CONTROLLED DOCUMENT INDEX](../../CONTROLLED_DOCUMENT_INDEX.md) — Corporate document-format reconciliation
 - [Native operating-depth physical input roles](../../OPERATING_DEPTH_PHYSICAL_ROLE_CORRECTION.md) — Corporate document-format reconciliation
+- [Use the CLEAN and MESSY company records in audit software](../../audit-suite/CLEAN_MESSY_INTAKE.md) — Corporate document-format reconciliation
 - [Read Sable Harbor company data from the repository](../../audit-suite/DATA_AVAILABILITY.md) — Corporate document-format reconciliation
+- [Local CLEAN/MESSY recovery, 20 October 2026](../../audit-suite/LOCAL_RECOVERY_2026-10-20.md) — Corporate document-format reconciliation
 - [Local audit workspace](../../audit-suite/LOCAL_WORKSPACE.md) — Corporate document-format reconciliation
 - [Separate modeled source edition](../../audit-suite/OPERATING_SOURCE_EDITION_DRIVER.md) — Corporate document-format reconciliation
 - [November company-source delivery](../../audit-suite/demo-2026-11/COMPLETION.md) — Corporate document-format reconciliation
