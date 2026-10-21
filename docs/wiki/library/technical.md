@@ -76,10 +76,6 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 
 - [Walkthrough transcript](../../audit-suite/demo-2026-11/client-records/initial/walkthrough/walkthrough-transcript.md) — MD
 
-## `docs/audit-suite/soc-program-pilot`
-
-- [Portable SOC 2 audit-program pilot](../../audit-suite/soc-program-pilot/README.md) — MD
-
 ## `docs/commercialization`
 
 - [Customer evaluation guide](../../commercialization/CUSTOMER_EVALUATION_GUIDE.md) — MD
