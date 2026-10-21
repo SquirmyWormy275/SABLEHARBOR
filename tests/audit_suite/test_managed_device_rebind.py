@@ -11,7 +11,6 @@ from enterprise.audit_suite.managed_history_integrity import (
 )
 from enterprise.audit_suite.store import DomainError, canonical
 
-
 HASH = "a" * 64
 
 
@@ -36,16 +35,27 @@ def image(name, device):
 
 def test_signed_device_rebind_preserves_history_and_refuses_other_metadata():
     frame = {
-        "engagement_id": "ENG", "revision": 0, "command_id": "CMD",
-        "request_sha256": HASH, "event_sha256": HASH,
-        "previous_event_sha256": "", "actor": "operator", "recorded_at": 1,
-        "command_kind": "start", "state_storage": "RAW_CANONICAL_JSON",
-        "state_root_sha256": None, "state_sha256": HASH, "state_bytes": 1,
+        "engagement_id": "ENG",
+        "revision": 0,
+        "command_id": "CMD",
+        "request_sha256": HASH,
+        "event_sha256": HASH,
+        "previous_event_sha256": "",
+        "actor": "operator",
+        "recorded_at": 1,
+        "command_kind": "start",
+        "state_storage": "RAW_CANONICAL_JSON",
+        "state_root_sha256": None,
+        "state_sha256": HASH,
+        "state_bytes": 1,
     }
     base = {
-        "engagement_id": "ENG", "base_revision": 0, "frames": [frame],
+        "engagement_id": "ENG",
+        "base_revision": 0,
+        "frames": [frame],
         "images": {name: image(name, 58) for name in ("prefix", "tail")},
-        "custody": {"files": {}, "custody": {}}, "known_prefix_sha256": {},
+        "custody": {"files": {}, "custody": {}},
+        "known_prefix_sha256": {},
         "node_inventory": {"sha256": HASH, "count": 1, "maximum_rowid": 1},
     }
     catalogue = IntegrityCatalogue(base, HASH)
@@ -58,15 +68,23 @@ def test_signed_device_rebind_preserves_history_and_refuses_other_metadata():
     def verify(body, signature):
         assert canonical(body) == signature
 
-    prior = signed({
-        "schema": CHECKPOINT_SCHEMA, "sequence": 1,
-        "accepted_base_sha256": HASH, "previous_checkpoint_sha256": HASH,
-        "engagement_id": "ENG", "kind": "AUTH_TRANSITION",
-        "frames_before": 1, "added_frames": [], "images": base["images"],
-        "custody": base["custody"],
-        "authority_head": {"path": "/private/head.json", "sha256": HASH},
-        "full_revocations": {}, "node_inventory": base["node_inventory"],
-    })
+    prior = signed(
+        {
+            "schema": CHECKPOINT_SCHEMA,
+            "sequence": 1,
+            "accepted_base_sha256": HASH,
+            "previous_checkpoint_sha256": HASH,
+            "engagement_id": "ENG",
+            "kind": "AUTH_TRANSITION",
+            "frames_before": 1,
+            "added_frames": [],
+            "images": base["images"],
+            "custody": base["custody"],
+            "authority_head": {"path": "/private/head.json", "sha256": HASH},
+            "full_revocations": {},
+            "node_inventory": base["node_inventory"],
+        }
+    )
     catalogue.apply_checkpoint(prior, "b" * 64, verify)
     candidate = {k: copy.deepcopy(v) for k, v in prior.items() if k != "signature"}
     candidate.update(
