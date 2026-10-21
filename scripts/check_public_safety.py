@@ -29,10 +29,13 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # README, data guides and preserved client text. All 384 counterpart-audit rows are unchanged;
     # full catalog regeneration reproduces its tables. The 148 admitted source/PDF
     # pairs retain their accepted manifest and exact bytes.
+    # The documented verifier now runs as a module in both intake guides.
+    # Regeneration changed only those two reader-file/text rows and their FTS
+    # index entries; all institutional and evidence tables remain unchanged.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
         15568896,
-        "cb12bca741e226e675184dd0c88b87844506cb256b43594f601076b35bcc080a",
+        "3881e80c720742263299c7a0c707aacecb19053cae827a7a12ad154813a16428",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.

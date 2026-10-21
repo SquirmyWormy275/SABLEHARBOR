@@ -20,7 +20,7 @@ counts do not form one company population.
 Pin the Git commit used for a test run. From the repository root, run:
 
 ```sh
-python tools/audit_suite/company_record_delivery.py verify --root docs/audit-suite/company-records
+python -m tools.audit_suite.company_record_delivery verify --root docs/audit-suite/company-records
 sha256sum docs/audit-suite/company-records/manifest.json
 ```
 

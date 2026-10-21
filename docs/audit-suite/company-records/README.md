@@ -22,7 +22,7 @@ These are fictional company records and local reference exercises. Their own pro
 From the repository root, verify the complete delivered population with standard Python:
 
 ```sh
-python tools/audit_suite/company_record_delivery.py verify --root docs/audit-suite/company-records
+python -m tools.audit_suite.company_record_delivery verify --root docs/audit-suite/company-records
 ```
 
 Verification checks every member, source/delivery relationship, provenance digest, system membership and count. It reports 5,714 versions, 922 systems, 5,709 originals and five derivatives. It does not need the original private database. The manifest is a checksum inventory, not an independent signature; retain the Git commit when citing this edition.
