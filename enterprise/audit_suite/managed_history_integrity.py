@@ -25,6 +25,7 @@ from .store import canonical, digest
 
 BASE_SCHEMA = "SH_ROOT_ACCEPTED_HISTORY_INTEGRITY_BASE_V1"
 CHECKPOINT_SCHEMA = "SH_MANAGED_STORE_HISTORY_INTEGRITY_CHECKPOINT_V1"
+DEVICE_REBIND_SCHEMA = "SH_MANAGED_STORE_DEVICE_REBIND_CHECKPOINT_V1"
 FIELDS = ("st_dev", "st_ino", "st_mode", "st_uid", "st_gid", "st_nlink",
           "st_size", "st_mtime_ns", "st_ctime_ns")
 MAX_CATALOGUE_BYTES = 16 * 1024**2
@@ -301,12 +302,17 @@ class IntegrityCatalogue:
         self.custody = base["custody"]
         self.known_prefixes = dict(base["known_prefix_sha256"])
         self.node_inventory = base["node_inventory"]
+        self.authority_head = None
+        self.full_revocations = None
 
     def apply_checkpoint(self, body, checkpoint_sha256, verify_signature):
         required = {"schema", "sequence", "accepted_base_sha256", "previous_checkpoint_sha256",
                     "engagement_id", "kind", "frames_before", "added_frames", "images",
                     "custody", "authority_head", "full_revocations", "node_inventory", "signature"}
-        require(type(body) is dict and set(body) == required and body["schema"] == CHECKPOINT_SCHEMA,
+        rebind = type(body) is dict and body.get("kind") == "DEVICE_REBIND"
+        require(type(body) is dict
+                and set(body) == (required | {"device_rebind"} if rebind else required)
+                and body["schema"] == (DEVICE_REBIND_SCHEMA if rebind else CHECKPOINT_SCHEMA),
                 "Exact managed Store checkpoint required")
         require(body["accepted_base_sha256"] == self.base_sha256
                 and body["previous_checkpoint_sha256"] == self.checkpoint_sha256
@@ -315,17 +321,42 @@ class IntegrityCatalogue:
                 and type(body["frames_before"]) is int and body["frames_before"] == len(self.frames),
                 "Foreign, missing, reordered or rolled-back managed checkpoint")
         integer(body["sequence"], positive=True)
-        require(body["kind"] in {"AUDIT_APPEND", "AUTH_TRANSITION"}, "Unrecognized managed transition")
+        require(body["kind"] in {"AUDIT_APPEND", "AUTH_TRANSITION", "DEVICE_REBIND"},
+                "Unrecognized managed transition")
         require(type(body["added_frames"]) is list
                 and len(body["added_frames"]) == (1 if body["kind"] == "AUDIT_APPEND" else 0),
                 "Only one genuine ordinary append or zero-frame auth transition may checkpoint")
         verify_signature({key: value for key, value in body.items() if key != "signature"}, body["signature"])
         frames = self.frames + body["added_frames"]
         validate_frames(frames, self.engagement)
-        require(type(body["images"]) is dict and set(body["images"]) == {"prefix", "tail"}
-                and body["images"]["prefix"] == self.images["prefix"], "Immutable prefix changed in transition")
+        require(type(body["images"]) is dict and set(body["images"]) == {"prefix", "tail"},
+                "Exact managed image pair required")
         for value in body["images"].values():
             validate_image_descriptor(value)
+        if rebind:
+            evidence = body["device_rebind"]
+            require(type(evidence) is dict and set(evidence) == {
+                        "reason", "boot_id", "backup_archive_sha256"}
+                    and evidence["reason"] == "POST_REBOOT_LINUX_DEVICE_RENUMBER"
+                    and type(evidence["boot_id"]) is str
+                    and len(evidence["boot_id"]) == 36,
+                    "Exact post-reboot device-rebind evidence required")
+            sha(evidence["backup_archive_sha256"])
+            require(self.sequence > 0 and self.authority_head is not None,
+                    "A signed prior checkpoint is required for physical rebind")
+            changed_devices = []
+            for name in ("prefix", "tail"):
+                before, after = self.images[name], body["images"][name]
+                require({k: v for k, v in before.items() if k != "metadata"}
+                        == {k: v for k, v in after.items() if k != "metadata"}
+                        and {k: v for k, v in before["metadata"].items() if k != "st_dev"}
+                        == {k: v for k, v in after["metadata"].items() if k != "st_dev"},
+                        "Physical rebind may change only the device number of exact images")
+                changed_devices.append(before["metadata"]["st_dev"] != after["metadata"]["st_dev"])
+            require(any(changed_devices), "Physical rebind requires a changed device number")
+        else:
+            require(body["images"]["prefix"] == self.images["prefix"],
+                    "Immutable prefix changed in transition")
         require(type(body["authority_head"]) is dict and set(body["authority_head"]) == {"path", "sha256"}
                 and type(body["authority_head"]["path"]) is str
                 and type(body["full_revocations"]) is dict,
@@ -337,6 +368,13 @@ class IntegrityCatalogue:
             sha(key[:-5])
             sha(value)
         validate_custody(body["custody"])
+        if rebind:
+            require(body["added_frames"] == []
+                    and body["authority_head"] == self.authority_head
+                    and body["full_revocations"] == self.full_revocations
+                    and body["custody"] == self.custody
+                    and body["node_inventory"] == self.node_inventory,
+                    "Device rebind cannot change history, authority, custody or node inventory")
         for group in ("files", "custody"):
             require(all(canonical(body["custody"][group].get(key)) == canonical(value) for key, value in self.custody[group].items()),
                     "Previously certified historical original/custody descriptor changed")
@@ -349,6 +387,8 @@ class IntegrityCatalogue:
         self.frames, self.images, self.custody = frames, body["images"], body["custody"]
         self.sequence, self.checkpoint_sha256 = body["sequence"], sha(checkpoint_sha256)
         self.node_inventory = body["node_inventory"]
+        self.authority_head = body["authority_head"]
+        self.full_revocations = body["full_revocations"]
 
     def reference(self, revision):
         integer(revision)
