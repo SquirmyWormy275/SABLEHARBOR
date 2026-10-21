@@ -32,7 +32,9 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 
 ## `docs/audit-suite`
 
+- [Use the CLEAN and MESSY company records in audit software](../../audit-suite/CLEAN_MESSY_INTAKE.md) — MD
 - [Read Sable Harbor company data from the repository](../../audit-suite/DATA_AVAILABILITY.md) — MD
+- [Local CLEAN/MESSY recovery, 20 October 2026](../../audit-suite/LOCAL_RECOVERY_2026-10-20.md) — MD
 - [Local audit workspace](../../audit-suite/LOCAL_WORKSPACE.md) — MD
 - [Separate modeled source edition](../../audit-suite/OPERATING_SOURCE_EDITION_DRIVER.md) — MD
 
