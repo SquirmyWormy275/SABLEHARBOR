@@ -37,11 +37,6 @@ importer should retain.
 
 The [audit workspace](docs/audit-suite/LOCAL_WORKSPACE.md) supports requesting company evidence, collecting originals, selecting samples and preparing workpapers in separate CLEAN and MESSY cases. Its setup guide explains that separate local workflow; it is not required to read the published company records.
 
-The [portable SOC 2 audit-program pilot](docs/audit-suite/soc-program-pilot/README.md)
-provides a frozen three-procedure test plan, source-bound submission CLI and
-private after-submission self grading through Alexandria Control. Both company
-histories and their exact originals are in this Git checkout.
-
 For the November demonstration, open the [actual company records](docs/audit-suite/demo-2026-11/client-records/README.md): 70 artifacts in three preserved client submissions, including access-review exports, configuration and restoration records, and narrated walkthroughs. They are included in this repository and available after an ordinary clone. The [scope](docs/audit-suite/demo-2026-11/SCOPE.md) defines the fictional Q1 2027 exercise; the [file delivery guide](docs/audit-suite/demo-2026-11/SOURCE_DELIVERY.md) explains how to verify each submission without a local workspace, credentials or generators.
 
 Each [exercise guide](docs/reader/USE_CASES.md) tells you what to open, what to do and what to produce. Keep the release, scenario and period together; a missing record is something to investigate, not something to fill in by guesswork.
