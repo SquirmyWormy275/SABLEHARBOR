@@ -93,6 +93,23 @@ def validate():
         assert update["historical_sha256"] == receipt["input_hashes"][relative]
         assert update["previous_current_sha256"] == delivered[relative]["current_sha256"]
     updates.update(published)
+    # The CLEAN/MESSY intake link changes the README-derived route receipt.
+    # Keep the previous publication pin and bind this dated navigation refresh.
+    intake_path = BASE / "review-support/qa/v3/NAVIGATION_SUCCESSOR_2026-10-20.json"
+    intake = json.loads(intake_path.read_text())
+    assert intake["state"] == "AUTOMATED_NAVIGATION_REVIEW"
+    assert intake["historical_receipt_sha256"] == successor["historical_receipt_sha256"]
+    assert intake["previous_successor_sha256"] == sha(publication_path)
+    intake_records = {r["path"]: r for r in intake["records"]}
+    assert len(intake["records"]) == len(intake_records) == 2
+    assert set(intake_records) == {
+        "tools/legal_gaps/validate_practical_work.py",
+        "docs/reader/usability/RESULTS.json",
+    }
+    for relative, update in intake_records.items():
+        assert update["historical_sha256"] == receipt["input_hashes"][relative]
+        assert update["previous_current_sha256"] == published[relative]["current_sha256"]
+    updates.update(intake_records)
     for group in ("input_hashes", "evidence_hashes"):
         assert receipt[group], "Empty review coverage"
         for relative, digest in receipt[group].items():
