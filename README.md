@@ -30,6 +30,11 @@ For a broader view, download the [operating review workbook](enterprise/operatio
 
 The [company source library](docs/audit-suite/company-records/README.md) contains all 5,714 retained record versions across 922 source systems in its accepted edition. The actual records are in Git and can be read by cloud tools without the author's computer or an external drive. The [data availability guide](docs/audit-suite/DATA_AVAILABILITY.md) distinguishes these company records, the November submissions and historical recovery backups.
 
+To test audit software against the separate CLEAN and MESSY company histories,
+use the [scenario intake guide](docs/audit-suite/CLEAN_MESSY_INTAKE.md). It maps
+each history to its verified files and explains which identities and dates an
+importer should retain.
+
 The [audit workspace](docs/audit-suite/LOCAL_WORKSPACE.md) supports requesting company evidence, collecting originals, selecting samples and preparing workpapers in separate CLEAN and MESSY cases. Its setup guide explains that separate local workflow; it is not required to read the published company records.
 
 For the November demonstration, open the [actual company records](docs/audit-suite/demo-2026-11/client-records/README.md): 70 artifacts in three preserved client submissions, including access-review exports, configuration and restoration records, and narrated walkthroughs. They are included in this repository and available after an ordinary clone. The [scope](docs/audit-suite/demo-2026-11/SCOPE.md) defines the fictional Q1 2027 exercise; the [file delivery guide](docs/audit-suite/demo-2026-11/SOURCE_DELIVERY.md) explains how to verify each submission without a local workspace, credentials or generators.

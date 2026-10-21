@@ -11,11 +11,18 @@ Run `sableharbor-workspace start` and wait for `READY`. Open CLEAN at
 launcher also supports `status`, `stop` and `restart`; stopping saves the current
 configuration and restarting retains both histories.
 
-The private role credentials and workflow guide are delivered in
-Downloads as `SABLEHARBOR_AUDIT_WORKSPACE_ACCESS_2026-10-07.json` and
-`SABLEHARBOR_AUDIT_WORKSPACE_GUIDE_2026-10-07.md`. Credentials are kept outside Git.
+The private role credentials and workflow guide are delivered separately on the
+configured workstation. Use the latest dated access file referenced by the
+private guide; credentials expire and are kept outside Git.
 `auditor` is the learner, `operator` is the instructor, and `reviewer` is the
 authorized review identity. Sign out before switching roles.
+
+The installed pair was [recovered on 20 October 2026](LOCAL_RECOVERY_2026-10-20.md)
+after an interrupted shutdown. Check `sableharbor-workspace status` before use.
+If it reports `RECONCILIATION_REQUIRED`, preserve and inspect the current
+session rather than resetting either history. For a repository-based audit
+software test that does not need these live workrooms, use the
+[verified CLEAN/MESSY company records](CLEAN_MESSY_INTAKE.md).
 
 The fictional scope covers corporate shared controls for 2027, SOC 2 Security,
 Availability and Confidentiality, and simulated HIPAA business-associate and
