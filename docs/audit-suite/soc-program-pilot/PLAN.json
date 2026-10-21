@@ -1,0 +1,58 @@
+{
+  "schema": "SH_SOC_PROGRAM_PILOT_FROZEN_PLAN_V1",
+  "source_manifest_sha256": "30cbdf23a68532e5026a87d0dddb06cd09242b87ea3a58d009b39aacddc629c7",
+  "source_edition": "public Git company-record delivery; separate history-01 and history-02",
+  "reporting_frame": {
+    "program": "SOC 2 training exercise",
+    "trust_services_criteria": "2017 criteria with revised 2022 points of focus",
+    "description_criteria": "2018 description criteria with 2022 guidance; system description not tested by this pilot",
+    "report_type_scenario": "Type 2",
+    "period_start": "2027-01-01",
+    "period_end": "2027-12-31",
+    "fieldwork_cutoff": "2028-01-03T09:00:00Z",
+    "boundary": "selected fictional corporate records only",
+    "candidate_categories": ["Security", "Availability", "Confidentiality"],
+    "professional_acceptance": "NOT_ASSERTED"
+  },
+  "selection_rule": "All records in the 31 requested security, vulnerability, continuity and transition systems where registered: 27 systems/39 versions in history-01 and 30 systems/55 versions in history-02. Absent requested systems remain explicit scope gaps. No cross-history pooling. The task-specific selected population is a census of the disclosed local-model subpopulation. It is not a full-year enterprise population.",
+  "procedures": {
+    "SEC003": {
+      "criterion": "SOC2:CC7.1 (candidate mapping)",
+      "control": "SH-SEC-003",
+      "task": "TASK-SH-SEC-003-corporate-CHECK-SOC2:CC7.1",
+      "frequency": "continuous (authored control; operating cadence unverified)",
+      "population": "four selected inventory assets, October census/baseline/schedule/scan, disclosed advisory and later correction/retest versions",
+      "sample": "all four selected assets plus a judgmental disclosed advisory trace",
+      "procedure": "Reconcile exact inventory, baseline, census, schedule and scan IDs and count claims; determine whether the disclosed advisory was available at the initial scan; trace detection, triage, approval, remediation and retest in event/availability order.",
+      "exception_rule": "Record missing scan coverage separately from a missed advisory on an observed asset; do not infer parser or scanner cause from a discrepancy.",
+      "required_evidence": ["selected inventory", "security baseline", "vulnerability inventory", "October scan", "advisory", "reconciliation", "correction and retest"],
+      "untested": ["full enterprise and year population", "actual scanner execution", "source-level SLA acceptance", "qualified independent review"]
+    },
+    "SEC005": {
+      "criterion": "SOC2:CC6.6 and CC6.8 (candidate mappings); SEC005 TOE task",
+      "control": "SH-SEC-005",
+      "task": "TASK-SH-SEC-005-corporate-TOE",
+      "frequency": "continuous (authored control; operating cadence unverified)",
+      "population": "six selected native publisher/probe versions and corresponding collector/review snapshots",
+      "sample": "all six selected publisher versions",
+      "procedure": "Check initial approvals before baseline application. Independently reconstruct publisher IDs available at each collector and company-review cutoff, compare received/reviewed IDs, and retain source model qualifiers.",
+      "exception_rule": "Do not credit a collector-based company review as independent publisher reconciliation or treat a later correction as an initial approval.",
+      "required_evidence": ["inventory", "baseline", "approvals", "application", "probes", "monitor", "review reconciliation"],
+      "untested": ["actual packets and executable enforcement", "complete endpoint and interface population", "installation restrictions", "separate logging procedure", "qualified independent review"]
+    },
+    "BCM003": {
+      "criterion": "SOC2:A1.3 (candidate mapping)",
+      "control": "SH-BCM-003",
+      "task": "TASK-SH-BCM-003-corporate-CHECK-SOC2:A1.3",
+      "frequency": "quarterly/annual risk-based (authored control; actual cadence unverified)",
+      "population": "all selected MARKER-RECOVERY exercise-result versions, joined to local BIA, technical objectives and authority",
+      "sample": "all selected exercise-result versions",
+      "procedure": "Recalculate each recorded start-to-finish duration, compare to the declared local RTO, retain RPO and data-usability assertions as company claims, and trace deviations and later versions.",
+      "exception_rule": "A later exercise version does not erase an earlier failure; recorded marker digest or usability is not an auditor-performed restore.",
+      "required_evidence": ["local BIA", "technical objectives", "authority", "each exercise result version"],
+      "untested": ["original backup and marker bytes", "isolated restore", "independent recovered-data age, integrity and usability", "accepted RTO/RPO authority", "qualified independent review"]
+    }
+  },
+  "review_rule": "A separate reviewer or the private scripted grader checks exact source SHA, history separation, population, sample, citations, exception disposition, retest limits and unperformed clauses. A scripted grade is engineering feedback, not professional sign-off.",
+  "overall_limit": "These three selected procedures do not complete the SOC 2 system description, full-period operating effectiveness, all mapped criteria, HIPAA or assurance opinion."
+}
