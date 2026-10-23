@@ -66,3 +66,5 @@ appointments.
 Install `tools/organization/requirements.txt`, then run `python scripts/build_organization_charts.py`. The exporter reproduces page artwork and supporting records from the approved vector PDF and validates every card against the display source. It leaves the visual master and historical publications unchanged. Changes to a chart require an updated visual master and matching sourced display data.
 
 The [September 13 delegated appointments](../canon/ENTERPRISE_APPOINTMENTS_2026-09-13.md) add fifteen dated occupants of existing functions. The successor has engineering review pending owner acceptance; the approved predecessor remains preserved in `history/v1.1.0/`. Current branch membership includes 59 employee identities and seven directors, not a payroll census.
+
+The [September 2 local-branch identity predecessor](../history/governance-j2-local-2026-09-02/README.md) retains two earlier J2 stationery source versions as historical evidence; it does not change the current chart or approved brand artwork.

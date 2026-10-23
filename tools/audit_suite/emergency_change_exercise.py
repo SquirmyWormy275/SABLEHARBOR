@@ -1,8 +1,12 @@
 """Trusted local operator entry point for a new private SH-ENG-005 source pair."""
 
+import sys
+
+if __name__ == "__main__" and sys.path:
+    sys.path.pop(0)  # Avoid shadowing the standard-library operator module.
+
 import argparse
 import json
-import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))

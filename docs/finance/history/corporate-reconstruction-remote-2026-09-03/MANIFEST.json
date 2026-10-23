@@ -1,0 +1,396 @@
+{
+  "accepted_public_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+  "entries": [
+    {
+      "authority": "historical_diagnostic_unaccepted",
+      "classification": "diagnostic_source",
+      "cleanup_clearance": false,
+      "completeness": "partial_diagnostic_not_current_company_authority",
+      "destination_paths": [
+        "docs/finance/history/corporate-reconstruction-remote-2026-09-03/originals/initial/docs/finance/ECONOMIC_MODEL_INPUTS.csv",
+        "docs/finance/history/corporate-reconstruction-remote-2026-09-03/originals/executable/docs/finance/ECONOMIC_MODEL_INPUTS.csv"
+      ],
+      "first_public_branch_commit_utc": "2026-09-04T05:51:48Z",
+      "import_date_pdt": "2026-10-23",
+      "original_ref_remains": true,
+      "scenario": "conditional_corporate_financial_reconstruction",
+      "source_branch_ref": "refs/heads/finance/corporate-financial-reconstruction-v0.1",
+      "source_bytes": 3432,
+      "source_commit": "a0cefc0f7588739e52ffa44aee1d5f606e44c16c",
+      "source_event_or_as_of_date": "2026-09-03",
+      "source_git_blob_oid": "b609288e1cc1b556b4bbb50c031fc87899c30f0b",
+      "source_path": "docs/finance/ECONOMIC_MODEL_INPUTS.csv",
+      "source_sha256": "a582b289bd233b21df1ed9466feb1feea6940047f3c6cba44400ac8bc81b3334",
+      "transformation": "byte_for_byte_copy_into_dated_history"
+    },
+    {
+      "authority": "historical_diagnostic_unaccepted",
+      "classification": "diagnostic_source",
+      "cleanup_clearance": false,
+      "completeness": "partial_diagnostic_not_current_company_authority",
+      "destination_paths": [
+        "docs/finance/history/corporate-reconstruction-remote-2026-09-03/originals/executable/docs/finance/README.md"
+      ],
+      "first_public_branch_commit_utc": "2026-09-04T05:58:11Z",
+      "import_date_pdt": "2026-10-23",
+      "original_ref_remains": true,
+      "scenario": "conditional_corporate_financial_reconstruction",
+      "source_branch_ref": "refs/heads/finance/corporate-financial-reconstruction-v0.1",
+      "source_bytes": 849,
+      "source_commit": "47a93d153124bc9b92136045b0da6692b5456882",
+      "source_event_or_as_of_date": "2026-09-03",
+      "source_git_blob_oid": "48759d87fa174f18aa8b45febd3d4b1ed5f23a67",
+      "source_path": "docs/finance/README.md",
+      "source_sha256": "aeed2aa6e3d500c6394646deb7000d87c8f29d0883120c5840816492d13455fc",
+      "transformation": "byte_for_byte_copy_into_dated_history"
+    },
+    {
+      "authority": "historical_diagnostic_unaccepted",
+      "classification": "diagnostic_source",
+      "cleanup_clearance": false,
+      "completeness": "partial_diagnostic_not_current_company_authority",
+      "destination_paths": [
+        "docs/finance/history/corporate-reconstruction-remote-2026-09-03/originals/initial/docs/finance/README.md"
+      ],
+      "first_public_branch_commit_utc": "2026-09-04T05:51:48Z",
+      "import_date_pdt": "2026-10-23",
+      "original_ref_remains": true,
+      "scenario": "conditional_corporate_financial_reconstruction",
+      "source_branch_ref": "refs/heads/finance/corporate-financial-reconstruction-v0.1",
+      "source_bytes": 622,
+      "source_commit": "a0cefc0f7588739e52ffa44aee1d5f606e44c16c",
+      "source_event_or_as_of_date": "2026-09-03",
+      "source_git_blob_oid": "ad832bf50f058207e1b66934ed980cfb2aeacf39",
+      "source_path": "docs/finance/README.md",
+      "source_sha256": "1180cdad9a676dd59888954ca8b3c2212d8eea1259a7765ca68b0c070fe2638f",
+      "transformation": "byte_for_byte_copy_into_dated_history"
+    },
+    {
+      "authority": "historical_diagnostic_unaccepted",
+      "classification": "diagnostic_source",
+      "cleanup_clearance": false,
+      "completeness": "partial_diagnostic_not_current_company_authority",
+      "destination_paths": [
+        "docs/finance/history/corporate-reconstruction-remote-2026-09-03/originals/initial/docs/finance/SABLE_HARBOR_FINANCIAL_RECONSTRUCTION_PHASE_0_1.md"
+      ],
+      "first_public_branch_commit_utc": "2026-09-04T05:51:48Z",
+      "import_date_pdt": "2026-10-23",
+      "original_ref_remains": true,
+      "scenario": "conditional_corporate_financial_reconstruction",
+      "source_branch_ref": "refs/heads/finance/corporate-financial-reconstruction-v0.1",
+      "source_bytes": 36059,
+      "source_commit": "a0cefc0f7588739e52ffa44aee1d5f606e44c16c",
+      "source_event_or_as_of_date": "2026-09-03",
+      "source_git_blob_oid": "394bf3ae84f40af2ec404a94a57b5083878fcfa8",
+      "source_path": "docs/finance/SABLE_HARBOR_FINANCIAL_RECONSTRUCTION_PHASE_0_1.md",
+      "source_sha256": "f1bdc9b60f594414f30a7adcd4ab5786879d69b91a85277624e5536e89d27544",
+      "transformation": "byte_for_byte_copy_into_dated_history"
+    },
+    {
+      "authority": "historical_diagnostic_unaccepted",
+      "classification": "diagnostic_source",
+      "cleanup_clearance": false,
+      "completeness": "partial_diagnostic_not_current_company_authority",
+      "destination_paths": [
+        "docs/finance/history/corporate-reconstruction-remote-2026-09-03/originals/executable/docs/finance/SABLE_HARBOR_FINANCIAL_RECONSTRUCTION_PHASE_0_1.md"
+      ],
+      "first_public_branch_commit_utc": "2026-09-04T05:58:11Z",
+      "import_date_pdt": "2026-10-23",
+      "original_ref_remains": true,
+      "scenario": "conditional_corporate_financial_reconstruction",
+      "source_branch_ref": "refs/heads/finance/corporate-financial-reconstruction-v0.1",
+      "source_bytes": 37153,
+      "source_commit": "47a93d153124bc9b92136045b0da6692b5456882",
+      "source_event_or_as_of_date": "2026-09-03",
+      "source_git_blob_oid": "5515cb750a91b39a5605f98fc6f3e2dc454586e3",
+      "source_path": "docs/finance/SABLE_HARBOR_FINANCIAL_RECONSTRUCTION_PHASE_0_1.md",
+      "source_sha256": "ae0a57cdef5693436cb3f253218053811fb9224b39aaf6a41fcbb2adff6870fd",
+      "transformation": "byte_for_byte_copy_into_dated_history"
+    },
+    {
+      "authority": "generated_lower_than_source",
+      "classification": "generated_model_output",
+      "cleanup_clearance": false,
+      "completeness": "partial_diagnostic_not_current_company_authority",
+      "destination_paths": [
+        "docs/finance/history/corporate-reconstruction-remote-2026-09-03/originals/executable/docs/finance/model_outputs/corporate_costs.csv"
+      ],
+      "first_public_branch_commit_utc": "2026-09-04T05:58:11Z",
+      "import_date_pdt": "2026-10-23",
+      "original_ref_remains": true,
+      "scenario": "conditional_corporate_financial_reconstruction",
+      "source_branch_ref": "refs/heads/finance/corporate-financial-reconstruction-v0.1",
+      "source_bytes": 2451,
+      "source_commit": "47a93d153124bc9b92136045b0da6692b5456882",
+      "source_event_or_as_of_date": "2026-09-03",
+      "source_git_blob_oid": "446db4c5659c374aa93356c89100c276185c8047",
+      "source_path": "docs/finance/model_outputs/corporate_costs.csv",
+      "source_sha256": "3c7e77f6ee4576b267bb30a2b457c966b429b61f2b92740556f9912a0105c516",
+      "transformation": "byte_for_byte_copy_into_dated_history"
+    },
+    {
+      "authority": "generated_lower_than_source",
+      "classification": "generated_model_output",
+      "cleanup_clearance": false,
+      "completeness": "partial_diagnostic_not_current_company_authority",
+      "destination_paths": [
+        "docs/finance/history/corporate-reconstruction-remote-2026-09-03/originals/executable/docs/finance/model_outputs/financial_statements.csv"
+      ],
+      "first_public_branch_commit_utc": "2026-09-04T05:58:11Z",
+      "import_date_pdt": "2026-10-23",
+      "original_ref_remains": true,
+      "scenario": "conditional_corporate_financial_reconstruction",
+      "source_branch_ref": "refs/heads/finance/corporate-financial-reconstruction-v0.1",
+      "source_bytes": 3064,
+      "source_commit": "47a93d153124bc9b92136045b0da6692b5456882",
+      "source_event_or_as_of_date": "2026-09-03",
+      "source_git_blob_oid": "7ae8e265d04c54fc74e2019f20c986e154175a8f",
+      "source_path": "docs/finance/model_outputs/financial_statements.csv",
+      "source_sha256": "5ac9a8900749e88deff9dc4a0e3a9e965e5b563f85a7b6522ba27f9ded9f0319",
+      "transformation": "byte_for_byte_copy_into_dated_history"
+    },
+    {
+      "authority": "generated_lower_than_source",
+      "classification": "generated_model_output",
+      "cleanup_clearance": false,
+      "completeness": "partial_diagnostic_not_current_company_authority",
+      "destination_paths": [
+        "docs/finance/history/corporate-reconstruction-remote-2026-09-03/originals/executable/docs/finance/model_outputs/loaded_labor.csv"
+      ],
+      "first_public_branch_commit_utc": "2026-09-04T05:58:11Z",
+      "import_date_pdt": "2026-10-23",
+      "original_ref_remains": true,
+      "scenario": "conditional_corporate_financial_reconstruction",
+      "source_branch_ref": "refs/heads/finance/corporate-financial-reconstruction-v0.1",
+      "source_bytes": 3212,
+      "source_commit": "47a93d153124bc9b92136045b0da6692b5456882",
+      "source_event_or_as_of_date": "2026-09-03",
+      "source_git_blob_oid": "c77fe08fd040ac5e2b1e7957cf1803dd640cdf66",
+      "source_path": "docs/finance/model_outputs/loaded_labor.csv",
+      "source_sha256": "fb945f4818344cdbe274f4ede547444be7c465dc75e594d505bcc8f18f265b15",
+      "transformation": "byte_for_byte_copy_into_dated_history"
+    },
+    {
+      "authority": "generated_lower_than_source",
+      "classification": "generated_model_output",
+      "cleanup_clearance": false,
+      "completeness": "partial_diagnostic_not_current_company_authority",
+      "destination_paths": [
+        "docs/finance/history/corporate-reconstruction-remote-2026-09-03/originals/executable/docs/finance/model_outputs/model_summary.json"
+      ],
+      "first_public_branch_commit_utc": "2026-09-04T05:58:11Z",
+      "import_date_pdt": "2026-10-23",
+      "original_ref_remains": true,
+      "scenario": "conditional_corporate_financial_reconstruction",
+      "source_branch_ref": "refs/heads/finance/corporate-financial-reconstruction-v0.1",
+      "source_bytes": 1048,
+      "source_commit": "47a93d153124bc9b92136045b0da6692b5456882",
+      "source_event_or_as_of_date": "2026-09-03",
+      "source_git_blob_oid": "2a6312fd012b8a9516b5bfb0055605579e56d7e0",
+      "source_path": "docs/finance/model_outputs/model_summary.json",
+      "source_sha256": "11b78358c1b80e2c4f916cb570c7d1d80ef11da612e3fee2ed446e9b3eb0b38e",
+      "transformation": "byte_for_byte_copy_into_dated_history"
+    },
+    {
+      "authority": "generated_lower_than_source",
+      "classification": "generated_model_output",
+      "cleanup_clearance": false,
+      "completeness": "partial_diagnostic_not_current_company_authority",
+      "destination_paths": [
+        "docs/finance/history/corporate-reconstruction-remote-2026-09-03/originals/executable/docs/finance/model_outputs/reality_tests.csv"
+      ],
+      "first_public_branch_commit_utc": "2026-09-04T05:58:11Z",
+      "import_date_pdt": "2026-10-23",
+      "original_ref_remains": true,
+      "scenario": "conditional_corporate_financial_reconstruction",
+      "source_branch_ref": "refs/heads/finance/corporate-financial-reconstruction-v0.1",
+      "source_bytes": 3365,
+      "source_commit": "47a93d153124bc9b92136045b0da6692b5456882",
+      "source_event_or_as_of_date": "2026-09-03",
+      "source_git_blob_oid": "c59867fa1970ed83e92a27b18b031b8951ffa0ff",
+      "source_path": "docs/finance/model_outputs/reality_tests.csv",
+      "source_sha256": "57e7d2300e1c7894370eb54fc7aec972a9be2d185d962782e5308bf285d345dd",
+      "transformation": "byte_for_byte_copy_into_dated_history"
+    },
+    {
+      "authority": "generated_lower_than_source",
+      "classification": "generated_model_output",
+      "cleanup_clearance": false,
+      "completeness": "partial_diagnostic_not_current_company_authority",
+      "destination_paths": [
+        "docs/finance/history/corporate-reconstruction-remote-2026-09-03/originals/executable/docs/finance/model_outputs/segment_economics.csv"
+      ],
+      "first_public_branch_commit_utc": "2026-09-04T05:58:11Z",
+      "import_date_pdt": "2026-10-23",
+      "original_ref_remains": true,
+      "scenario": "conditional_corporate_financial_reconstruction",
+      "source_branch_ref": "refs/heads/finance/corporate-financial-reconstruction-v0.1",
+      "source_bytes": 1903,
+      "source_commit": "47a93d153124bc9b92136045b0da6692b5456882",
+      "source_event_or_as_of_date": "2026-09-03",
+      "source_git_blob_oid": "39b259bd06889dbca95012e4bf720385e1e3597d",
+      "source_path": "docs/finance/model_outputs/segment_economics.csv",
+      "source_sha256": "28a117a3a94a12b9e2fac5c8ba6730d584488cd14ef7aeeea361bf6df9477b62",
+      "transformation": "byte_for_byte_copy_into_dated_history"
+    },
+    {
+      "authority": "generated_lower_than_source",
+      "classification": "generated_model_output",
+      "cleanup_clearance": false,
+      "completeness": "partial_diagnostic_not_current_company_authority",
+      "destination_paths": [
+        "docs/finance/history/corporate-reconstruction-remote-2026-09-03/originals/executable/docs/finance/model_outputs/technology_costs.csv"
+      ],
+      "first_public_branch_commit_utc": "2026-09-04T05:58:11Z",
+      "import_date_pdt": "2026-10-23",
+      "original_ref_remains": true,
+      "scenario": "conditional_corporate_financial_reconstruction",
+      "source_branch_ref": "refs/heads/finance/corporate-financial-reconstruction-v0.1",
+      "source_bytes": 1812,
+      "source_commit": "47a93d153124bc9b92136045b0da6692b5456882",
+      "source_event_or_as_of_date": "2026-09-03",
+      "source_git_blob_oid": "ab9f599210855f3f1ae45f4e4ad3d9657a1ddd83",
+      "source_path": "docs/finance/model_outputs/technology_costs.csv",
+      "source_sha256": "8ed4eb9d418de7657ddda594936196fda2bff3866eceb1e4e28d5d2845f6f120",
+      "transformation": "byte_for_byte_copy_into_dated_history"
+    },
+    {
+      "authority": "generated_lower_than_source",
+      "classification": "generated_model_output",
+      "cleanup_clearance": false,
+      "completeness": "partial_diagnostic_not_current_company_authority",
+      "destination_paths": [
+        "docs/finance/history/corporate-reconstruction-remote-2026-09-03/originals/executable/docs/finance/model_outputs/workforce_census.csv"
+      ],
+      "first_public_branch_commit_utc": "2026-09-04T05:58:11Z",
+      "import_date_pdt": "2026-10-23",
+      "original_ref_remains": true,
+      "scenario": "conditional_corporate_financial_reconstruction",
+      "source_branch_ref": "refs/heads/finance/corporate-financial-reconstruction-v0.1",
+      "source_bytes": 1570,
+      "source_commit": "47a93d153124bc9b92136045b0da6692b5456882",
+      "source_event_or_as_of_date": "2026-09-03",
+      "source_git_blob_oid": "c37c722218bd2e5a397abc331aaf01ee6e89c76d",
+      "source_path": "docs/finance/model_outputs/workforce_census.csv",
+      "source_sha256": "54a89dec29dd3297996c563b361a30ea44e1da0fd349f1d031ce1f991893d5c1",
+      "transformation": "byte_for_byte_copy_into_dated_history"
+    },
+    {
+      "authority": "historical_diagnostic_unaccepted",
+      "classification": "test_fixture_or_test_source",
+      "cleanup_clearance": false,
+      "completeness": "partial_diagnostic_not_current_company_authority",
+      "destination_paths": [
+        "docs/finance/history/corporate-reconstruction-remote-2026-09-03/originals/executable/tests/__init__.py"
+      ],
+      "first_public_branch_commit_utc": "2026-09-04T05:58:11Z",
+      "import_date_pdt": "2026-10-23",
+      "original_ref_remains": true,
+      "scenario": "conditional_corporate_financial_reconstruction",
+      "source_branch_ref": "refs/heads/finance/corporate-financial-reconstruction-v0.1",
+      "source_bytes": 41,
+      "source_commit": "47a93d153124bc9b92136045b0da6692b5456882",
+      "source_event_or_as_of_date": "2026-09-03",
+      "source_git_blob_oid": "f94cb3b9388d8577b72309309408633a51b7c17e",
+      "source_path": "tests/__init__.py",
+      "source_sha256": "9eabd55e1f5358c207b894f5a5ffebf8e8153ac547aecbeb143d751ba9bd7a79",
+      "transformation": "byte_for_byte_copy_into_dated_history"
+    },
+    {
+      "authority": "historical_diagnostic_unaccepted",
+      "classification": "test_fixture_or_test_source",
+      "cleanup_clearance": false,
+      "completeness": "partial_diagnostic_not_current_company_authority",
+      "destination_paths": [
+        "docs/finance/history/corporate-reconstruction-remote-2026-09-03/originals/executable/tests/finance/__init__.py"
+      ],
+      "first_public_branch_commit_utc": "2026-09-04T05:58:11Z",
+      "import_date_pdt": "2026-10-23",
+      "original_ref_remains": true,
+      "scenario": "conditional_corporate_financial_reconstruction",
+      "source_branch_ref": "refs/heads/finance/corporate-financial-reconstruction-v0.1",
+      "source_bytes": 38,
+      "source_commit": "47a93d153124bc9b92136045b0da6692b5456882",
+      "source_event_or_as_of_date": "2026-09-03",
+      "source_git_blob_oid": "f9d10fadcaef2ea9d9ec810f41014852e7377e68",
+      "source_path": "tests/finance/__init__.py",
+      "source_sha256": "3ad67a91d61d0d6ccf32a73d9ee80a27a56d121c59d1fd06f95d6b9f1c05b78a",
+      "transformation": "byte_for_byte_copy_into_dated_history"
+    },
+    {
+      "authority": "historical_diagnostic_unaccepted",
+      "classification": "test_fixture_or_test_source",
+      "cleanup_clearance": false,
+      "completeness": "partial_diagnostic_not_current_company_authority",
+      "destination_paths": [
+        "docs/finance/history/corporate-reconstruction-remote-2026-09-03/originals/executable/tests/finance/test_reconstruction_model.py"
+      ],
+      "first_public_branch_commit_utc": "2026-09-04T05:58:11Z",
+      "import_date_pdt": "2026-10-23",
+      "original_ref_remains": true,
+      "scenario": "conditional_corporate_financial_reconstruction",
+      "source_branch_ref": "refs/heads/finance/corporate-financial-reconstruction-v0.1",
+      "source_bytes": 3733,
+      "source_commit": "47a93d153124bc9b92136045b0da6692b5456882",
+      "source_event_or_as_of_date": "2026-09-03",
+      "source_git_blob_oid": "be42891b73400ea303b94f7ff5c33282b8365f98",
+      "source_path": "tests/finance/test_reconstruction_model.py",
+      "source_sha256": "7ba3c5015dbcf2d50675a704cd0712ac93e47a8d58f807e3651a6b469a21744a",
+      "transformation": "byte_for_byte_copy_into_dated_history"
+    },
+    {
+      "authority": "historical_diagnostic_unaccepted",
+      "classification": "diagnostic_source",
+      "cleanup_clearance": false,
+      "completeness": "partial_diagnostic_not_current_company_authority",
+      "destination_paths": [
+        "docs/finance/history/corporate-reconstruction-remote-2026-09-03/originals/executable/tools/finance/build_reconstruction_model.py"
+      ],
+      "first_public_branch_commit_utc": "2026-09-04T05:58:11Z",
+      "import_date_pdt": "2026-10-23",
+      "original_ref_remains": true,
+      "scenario": "conditional_corporate_financial_reconstruction",
+      "source_branch_ref": "refs/heads/finance/corporate-financial-reconstruction-v0.1",
+      "source_bytes": 13012,
+      "source_commit": "47a93d153124bc9b92136045b0da6692b5456882",
+      "source_event_or_as_of_date": "2026-09-03",
+      "source_git_blob_oid": "fc62d58cb663f8e68d63be34d26eb4eb48aea8ce",
+      "source_path": "tools/finance/build_reconstruction_model.py",
+      "source_sha256": "7ef1f6b5c2910f70f2744deb405bdf7de962efbecf7d525b0579b4c96783ebab",
+      "transformation": "byte_for_byte_copy_into_dated_history"
+    },
+    {
+      "authority": "historical_proposed_review_unaccepted",
+      "classification": "independent_review_receipt",
+      "cleanup_clearance": false,
+      "completeness": "partial_diagnostic_not_current_company_authority",
+      "destination_paths": [
+        "docs/internal/company-closeout/evidence/rail-source-consumer-2026-09-29/remote-branch-README.original.md"
+      ],
+      "first_public_branch_commit_utc": "2026-09-29T04:19:54Z",
+      "import_date_pdt": "2026-10-23",
+      "original_ref_remains": true,
+      "scenario": "geometry_only_rail_sensitivity",
+      "source_branch_ref": "refs/heads/review/rail-40-source-map-20260929",
+      "source_bytes": 7669,
+      "source_commit": "b051810d30fd5439e3cc838497c7eb06574c19aa",
+      "source_event_or_as_of_date": "2026-09-29",
+      "source_git_blob_oid": "54109fdb19950aa916f03b5a8bb04a23d21a10fc",
+      "source_path": "docs/internal/company-closeout/evidence/rail-source-consumer-2026-09-29/README.md",
+      "source_sha256": "c085404a0c4b2bd424a8456797ce178cbf4310ee3647043c2b8e63f4cd4a40db",
+      "transformation": "byte_for_byte_copy_into_dated_history"
+    }
+  ],
+  "preserved_file_count": 19,
+  "schema_version": 1,
+  "source_branches": {
+    "finance/corporate-financial-reconstruction-v0.1": {
+      "initial": "a0cefc0f7588739e52ffa44aee1d5f606e44c16c",
+      "tip": "47a93d153124bc9b92136045b0da6692b5456882"
+    },
+    "review/rail-40-source-map-20260929": {
+      "tip": "b051810d30fd5439e3cc838497c7eb06574c19aa"
+    }
+  },
+  "unique_git_blob_count": 18
+}

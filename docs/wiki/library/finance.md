@@ -205,6 +205,10 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 - [Parent tax history and filing boundaries](../../finance/evidence/company-closeout/TAX_HISTORY.md) — MD
 - [Treasury timing, debt/security and investor reading route](../../finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md) — MD
 
+## `docs/finance/evidence/company-closeout/history/local-worktree-2026-09-14-22`
+
+- [September 14–22 local finance closeout source history](../../finance/evidence/company-closeout/history/local-worktree-2026-09-14-22/README.md) — MD
+
 ## `docs/finance/evidence/coverage`
 
 - [Finance evidence: scope and source access](../../finance/evidence/coverage/README.md) — MD
@@ -254,6 +258,20 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 
 - [Historical financial build readiness analysis](../../finance/history/build-readiness-undated-2026-09/README.md) — MD
 - [Sable Harbor Financial Build Readiness Report](../../finance/history/build-readiness-undated-2026-09/Sable_Harbor_Financial_Build_Readiness_Report.pdf) — PDF
+
+## `docs/finance/history/corporate-reconstruction-remote-2026-09-03`
+
+- [September 2026 finance reconstruction branch: preserved diagnostic editions](../../finance/history/corporate-reconstruction-remote-2026-09-03/README.md) — MD
+
+## `docs/finance/history/corporate-reconstruction-remote-2026-09-03/originals/executable/docs/finance`
+
+- [Sable Harbor finance reconstruction](../../finance/history/corporate-reconstruction-remote-2026-09-03/originals/executable/docs/finance/README.md) — MD
+- [Sable Harbor financial reconstruction — Phase 0/1](../../finance/history/corporate-reconstruction-remote-2026-09-03/originals/executable/docs/finance/SABLE_HARBOR_FINANCIAL_RECONSTRUCTION_PHASE_0_1.md) — MD
+
+## `docs/finance/history/corporate-reconstruction-remote-2026-09-03/originals/initial/docs/finance`
+
+- [Sable Harbor finance reconstruction](../../finance/history/corporate-reconstruction-remote-2026-09-03/originals/initial/docs/finance/README.md) — MD
+- [Sable Harbor financial reconstruction — Phase 0/1](../../finance/history/corporate-reconstruction-remote-2026-09-03/originals/initial/docs/finance/SABLE_HARBOR_FINANCIAL_RECONSTRUCTION_PHASE_0_1.md) — MD
 
 ## `docs/finance/publications`
 
@@ -655,6 +673,10 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 - [Advisory matter operating histories](../../../enterprise/operations/docs/matters.md) — MD
 - [August Pale Sun legal-employer allocation](../../../enterprise/operations/docs/ps-legal-payroll-bridge.md) — MD
 - [Research, captured material and industrial operating detail](../../../enterprise/operations/docs/research.md) — MD
+
+## `enterprise/operations/docs/history`
+
+- [August 2026 people and operating reconstruction](../../../enterprise/operations/docs/history/completed-period-2026-10-03.original.md) — MD
 
 ## `enterprise/operations/portal_2027_common_boundary`
 

@@ -1,11 +1,15 @@
 """Export one authorized source census into a new private directory; no audit mutation."""
 
+import sys
+
+if __name__ == "__main__" and sys.path:
+    sys.path.pop(0)  # Avoid shadowing the standard-library operator module.
+
 import argparse
 import hashlib
 import json
 import os
 import shutil
-import sys
 import tempfile
 from pathlib import Path
 
