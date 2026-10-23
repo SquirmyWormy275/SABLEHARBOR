@@ -205,6 +205,10 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 - [Parent tax history and filing boundaries](../../finance/evidence/company-closeout/TAX_HISTORY.md) — MD
 - [Treasury timing, debt/security and investor reading route](../../finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md) — MD
 
+## `docs/finance/evidence/company-closeout/history/local-worktree-2026-09-14-22`
+
+- [September 14–22 local finance closeout source history](../../finance/evidence/company-closeout/history/local-worktree-2026-09-14-22/README.md) — MD
+
 ## `docs/finance/evidence/coverage`
 
 - [Finance evidence: scope and source access](../../finance/evidence/coverage/README.md) — MD
@@ -249,6 +253,11 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 - [Procurement, payables and Treasury](../../finance/evidence/treasury/draft/WORKING_PAPER.md) — MD
 - [working-paper](../../finance/evidence/treasury/draft/working-paper.pdf) — PDF
 - [working-papers](../../finance/evidence/treasury/draft/working-papers.xlsx) — XLSX
+
+## `docs/finance/history/build-readiness-undated-2026-09`
+
+- [Historical financial build readiness analysis](../../finance/history/build-readiness-undated-2026-09/README.md) — MD
+- [Sable Harbor Financial Build Readiness Report](../../finance/history/build-readiness-undated-2026-09/Sable_Harbor_Financial_Build_Readiness_Report.pdf) — PDF
 
 ## `docs/finance/publications`
 

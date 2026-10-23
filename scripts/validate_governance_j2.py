@@ -121,6 +121,26 @@ allowed_stale_context = {
     'docs/governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md',
     'docs/internal/CHAT_CANON_LEDGER_J2_ALEXANDRIA.md',
 }
+# The September 9 wording review is a byte-pinned proposal, not the current
+# personnel register. Keep its rejected rows intact while scanning every
+# current-facing page and every other historical page for accidental promotion.
+draft_rel = 'docs/organization/history/2026-09-09-draft/original/Sable-Harbor-Org-Chart-Wording-Review.md'
+draft_manifest = R / 'docs/organization/history/2026-09-09-draft/SOURCE_MANIFEST.json'
+draft_sha256 = '0ef1fd0f0ffeb91945f3364e36f95936d7d27217d8e718b52d49f3df4f060c6b'
+if draft_manifest.is_file() and (R / draft_rel).is_file():
+    draft_entry = next((row for row in json.loads(draft_manifest.read_text())['files']
+                        if row['name'] == Path(draft_rel).name), None)
+    draft_bytes = (R / draft_rel).read_bytes()
+    draft_is_pinned = (
+        draft_entry is not None
+        and draft_entry['bytes'] == len(draft_bytes)
+        and draft_entry['sha256'] == draft_sha256
+        and hashlib.sha256(draft_bytes).hexdigest() == draft_sha256
+        and b'Draft for approval' in draft_bytes[:200]
+    )
+    need(draft_is_pinned, 'September 9 historical wording draft changed or lost its proposal boundary')
+    if draft_is_pinned:
+        allowed_stale_context.add(draft_rel)
 md_paths = [p for p in (R / 'docs').rglob('*.md') if str(p.relative_to(R)) not in allowed_stale_context]
 all_current = '\n'.join(current_text(R, str(p.relative_to(R)), p.read_text(errors='ignore')) for p in md_paths)
 for old in ['Northline Growth Partners', 'Ironcliff Industrial Partners', 'Leah Moravec', 'Owen Rourke', 'Dr. Nadia Serrano', 'Richard Halden']:

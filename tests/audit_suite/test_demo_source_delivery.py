@@ -1,7 +1,10 @@
 """Portable publication boundaries and independent source calculations."""
 
 import copy
+import json
 import os
+import subprocess
+import sys
 from pathlib import Path
 
 import pytest
@@ -54,6 +57,31 @@ def edition(tmp_path):
     descriptor = tmp_path / "edition.json"
     descriptor.write_bytes(delivery.encode(config))
     return descriptor, inputs, config
+
+
+@pytest.mark.parametrize("interpreter_flags", [("-S",), ("-P", "-S")])
+def test_direct_cli_without_site_packages_or_sibling_shadowing(tmp_path, interpreter_flags):
+    descriptor, inputs, _ = edition(tmp_path)
+    received = tmp_path / "received"
+    delivery.publish(descriptor, inputs, "initial", received)
+    result = subprocess.run(
+        [
+            sys.executable,
+            *interpreter_flags,
+            str(Path(delivery.__file__).resolve()),
+            "verify",
+            str(received),
+        ],
+        cwd=tmp_path,
+        capture_output=True,
+        text=True,
+        check=True,
+    )
+    assert json.loads(result.stdout) == {
+        "status": "VERIFIED",
+        "edition": "test-v1",
+        "artifacts": 1,
+    }
 
 
 def test_repeatable_isolated_consumer_and_stage(tmp_path):

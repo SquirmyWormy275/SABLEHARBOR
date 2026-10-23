@@ -1,0 +1,252 @@
+{
+  "archive_bytes": 79328,
+  "archive_filename": "sableharbor-finance-closeout-local-history-2026-09-14-22.zip",
+  "archive_sha256": "10393bf2fcc520ffc1605755e36c64696c9dbcbc62958abe45e3eaacae16e853",
+  "authority": "HISTORICAL_UNACCEPTED_FINANCE_BRANCH; no current tax or closeout authority",
+  "capture_date_utc": "2026-10-23T14:46:51.549131+00:00",
+  "item_count": 9,
+  "items": [
+    {
+      "accepted_public_current_path_blob_oid": "b2fab61e65dd276ff63595c5494db851c0f6a2f2",
+      "accepted_public_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 5611,
+      "completeness": "filtered_unique_blobs_from_September_14_to_22_local_commits",
+      "document_header_date_hint": "2026-09-15",
+      "git_blob_oid": "0813307c96ac7e4b7090e9574e6ff0d744f88592",
+      "member": "sources/docs/finance/evidence/company-closeout/0813307c96ac/ADOPTED_PARENT_TAX.md",
+      "role": "historical_finance_closeout_source",
+      "scenario": "synthetic_finance_closeout_history",
+      "sha256": "d1ee33366832ab1087b7f0413103804836fcd0c9ef4ea47255cfedb0012ee64c",
+      "source_commit_dates": [
+        "2026-09-22"
+      ],
+      "source_commits": [
+        {
+          "commit": "65a0e94f6098fa8e89869b523334882c17ac589d",
+          "date": "2026-09-22",
+          "path": "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md",
+          "subject": "Clarify current tax memorandum dates and numerical prose"
+        }
+      ],
+      "source_path": "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md"
+    },
+    {
+      "accepted_public_current_path_blob_oid": "b2fab61e65dd276ff63595c5494db851c0f6a2f2",
+      "accepted_public_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 8391,
+      "completeness": "filtered_unique_blobs_from_September_14_to_22_local_commits",
+      "document_header_date_hint": "2026-09-15",
+      "git_blob_oid": "3317b23e8ba8ae95cb6711e885b00cb9c1318690",
+      "member": "sources/docs/finance/evidence/company-closeout/3317b23e8ba8/ADOPTED_PARENT_TAX.md",
+      "role": "historical_finance_closeout_source",
+      "scenario": "synthetic_finance_closeout_history",
+      "sha256": "c5ad941df0e0b0111bea189ee51968dcd68a6f97ef170a6cce358075d7949629",
+      "source_commit_dates": [
+        "2026-09-22"
+      ],
+      "source_commits": [
+        {
+          "commit": "ea6f01a9aa87f2f9d78d79dd6b72fd9a431f7330",
+          "date": "2026-09-22",
+          "path": "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md",
+          "subject": "Reconcile penalty presentation to continuing-operator installment method"
+        }
+      ],
+      "source_path": "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md"
+    },
+    {
+      "accepted_public_current_path_blob_oid": "b2fab61e65dd276ff63595c5494db851c0f6a2f2",
+      "accepted_public_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 6962,
+      "completeness": "filtered_unique_blobs_from_September_14_to_22_local_commits",
+      "document_header_date_hint": "2026-09-15",
+      "git_blob_oid": "aaec710996bfdf0dc5dfc5d737ef18dd8d47b597",
+      "member": "sources/docs/finance/evidence/company-closeout/aaec710996bf/ADOPTED_PARENT_TAX.md",
+      "role": "historical_finance_closeout_source",
+      "scenario": "synthetic_finance_closeout_history",
+      "sha256": "5653070c5dc3be7095fc732086405ed0172c68a888d4c89ebcdebd0e9ce98296",
+      "source_commit_dates": [
+        "2026-09-22"
+      ],
+      "source_commits": [
+        {
+          "commit": "71362263e971f4e760b2d37630dbf6ac64b4cec2",
+          "date": "2026-09-22",
+          "path": "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md",
+          "subject": "Document unpaid ROT failure and interest limitation treatment"
+        }
+      ],
+      "source_path": "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md"
+    },
+    {
+      "accepted_public_current_path_blob_oid": "b2fab61e65dd276ff63595c5494db851c0f6a2f2",
+      "accepted_public_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 7960,
+      "completeness": "filtered_unique_blobs_from_September_14_to_22_local_commits",
+      "document_header_date_hint": "2026-09-15",
+      "git_blob_oid": "b2385ce5e3ab4d87f6eee8e9226cda4d22a43034",
+      "member": "sources/docs/finance/evidence/company-closeout/b2385ce5e3ab/ADOPTED_PARENT_TAX.md",
+      "role": "historical_finance_closeout_source",
+      "scenario": "synthetic_finance_closeout_history",
+      "sha256": "e331159cf35c0f69c1e38416150b9b925705bc7ba8d29103622d6c3ed3e8b324",
+      "source_commit_dates": [
+        "2026-09-22"
+      ],
+      "source_commits": [
+        {
+          "commit": "76558961c63377845f6c4b6b4d3e7f5e3121a4c2",
+          "date": "2026-09-22",
+          "path": "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md",
+          "subject": "Compose current receipt penalties without reposting accrued ROT principal"
+        }
+      ],
+      "source_path": "docs/finance/evidence/company-closeout/ADOPTED_PARENT_TAX.md"
+    },
+    {
+      "accepted_public_current_path_blob_oid": "dbcc04ac7faaeef834521754ebb750342aa9ea2a",
+      "accepted_public_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 11153,
+      "completeness": "filtered_unique_blobs_from_September_14_to_22_local_commits",
+      "document_header_date_hint": null,
+      "git_blob_oid": "743cb567f73ec257b21c32983b1b7ae18ad0df51",
+      "member": "sources/docs/finance/evidence/company-closeout/743cb567f73e/README.md",
+      "role": "historical_finance_closeout_source",
+      "scenario": "synthetic_finance_closeout_history",
+      "sha256": "dc57b3ea78b6cbc4ed2db5b2a8b631cb9945157e7b7e9305ea7d5c57c4ed5e8e",
+      "source_commit_dates": [
+        "2026-09-14"
+      ],
+      "source_commits": [
+        {
+          "commit": "dd6994a512bd6be0e41905023c4f127cab48626c",
+          "date": "2026-09-14",
+          "path": "docs/finance/evidence/company-closeout/README.md",
+          "subject": "Record adopted exact ownership direction in current finance reading routes"
+        }
+      ],
+      "source_path": "docs/finance/evidence/company-closeout/README.md"
+    },
+    {
+      "accepted_public_current_path_blob_oid": "e469ae1f8d0ebf8a1c3e8056981b44464a98231a",
+      "accepted_public_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 10130,
+      "completeness": "filtered_unique_blobs_from_September_14_to_22_local_commits",
+      "document_header_date_hint": null,
+      "git_blob_oid": "f998f9c792a4e4c481779c4d860a658fa0e2b28e",
+      "member": "sources/docs/finance/evidence/company-closeout/f998f9c792a4/TREASURY_AND_INVESTOR_ROUTE.md",
+      "role": "historical_finance_closeout_source",
+      "scenario": "synthetic_finance_closeout_history",
+      "sha256": "5eb12b9f0acef065605b18eb70b9e7b1bf52641ca52a2140d5d9bb6398f13960",
+      "source_commit_dates": [
+        "2026-09-14"
+      ],
+      "source_commits": [
+        {
+          "commit": "dd6994a512bd6be0e41905023c4f127cab48626c",
+          "date": "2026-09-14",
+          "path": "docs/finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md",
+          "subject": "Record adopted exact ownership direction in current finance reading routes"
+        }
+      ],
+      "source_path": "docs/finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md"
+    },
+    {
+      "accepted_public_current_path_blob_oid": "b7f21002cac2cb38f448bb0161a4725f7a3eb0d5",
+      "accepted_public_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 12778,
+      "completeness": "filtered_unique_blobs_from_September_14_to_22_local_commits",
+      "document_header_date_hint": null,
+      "git_blob_oid": "805d01cc29710a662238f2cc1e0266a6fa6c74ed",
+      "member": "sources/enterprise/closeout/805d01cc2971/industrial_tax_assets.py",
+      "role": "historical_finance_closeout_code_or_test",
+      "scenario": "synthetic_finance_closeout_history",
+      "sha256": "90ce96e06e3bda443f69dd563ec92716da60fa4416fd13798f4ee17b071c919d",
+      "source_commit_dates": [
+        "2026-09-14"
+      ],
+      "source_commits": [
+        {
+          "commit": "9c4bb7da36725a5d6b5e97b993d21213ef1fe12e",
+          "date": "2026-09-14",
+          "path": "enterprise/closeout/industrial_tax_assets.py",
+          "subject": "Distinguish unserved tax CIP horizon from an actual service date"
+        }
+      ],
+      "source_path": "enterprise/closeout/industrial_tax_assets.py"
+    },
+    {
+      "accepted_public_current_path_blob_oid": "5fe3be3deab46735cdf0b94b1872631d6e2a4252",
+      "accepted_public_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 12994,
+      "completeness": "filtered_unique_blobs_from_September_14_to_22_local_commits",
+      "document_header_date_hint": null,
+      "git_blob_oid": "a16e51aa3356ec94357f067c7a09da0a8b8cbfba",
+      "member": "sources/enterprise/closeout/a16e51aa3356/statutory_deferred.py",
+      "role": "historical_finance_closeout_code_or_test",
+      "scenario": "synthetic_finance_closeout_history",
+      "sha256": "2d47513e1286cdbf2f6549bbd45d3bd71593a9f2ca31582c454d5accf5a5d7b1",
+      "source_commit_dates": [
+        "2026-09-21"
+      ],
+      "source_commits": [
+        {
+          "commit": "189e5a07a1ead7bbf1e24aab9b7806fe1876a3be",
+          "date": "2026-09-21",
+          "path": "enterprise/closeout/statutory_deferred.py",
+          "subject": "Reject incomplete deferred tax populations and reconcile year-end source books"
+        }
+      ],
+      "source_path": "enterprise/closeout/statutory_deferred.py"
+    },
+    {
+      "accepted_public_current_path_blob_oid": "4b7c021dc1e16f6c74dfb0518e9f78bb752ffbc7",
+      "accepted_public_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 1319,
+      "completeness": "filtered_unique_blobs_from_September_14_to_22_local_commits",
+      "document_header_date_hint": null,
+      "git_blob_oid": "b566e41032f72cf150d684e409ab31b462d3f4ec",
+      "member": "sources/tests/closeout/b566e41032f7/test_rwh_book.py",
+      "role": "historical_finance_closeout_code_or_test",
+      "scenario": "synthetic_finance_closeout_history",
+      "sha256": "b25e48daadf8580f902a95485b6286aa4e36f2f50450a8b5361c5c85106fe93b",
+      "source_commit_dates": [
+        "2026-09-14"
+      ],
+      "source_commits": [
+        {
+          "commit": "f1fb28afd6115fe19a0f23eae2e83ee46752b810",
+          "date": "2026-09-14",
+          "path": "tests/closeout/test_rwh_book.py",
+          "subject": "Absorb source-backed production support with legal and consolidated cost bridges"
+        }
+      ],
+      "source_path": "tests/closeout/test_rwh_book.py"
+    }
+  ],
+  "member_bytes": 77298,
+  "record_id": "SH-FINANCE-CLOSEOUT-LOCAL-HISTORY-2026-09-14-22",
+  "source_commit_date_span": [
+    "2026-09-14",
+    "2026-09-22"
+  ],
+  "source_commits": [
+    "189e5a07a1ead7bbf1e24aab9b7806fe1876a3be",
+    "65a0e94f6098fa8e89869b523334882c17ac589d",
+    "71362263e971f4e760b2d37630dbf6ac64b4cec2",
+    "76558961c63377845f6c4b6b4d3e7f5e3121a4c2",
+    "9c4bb7da36725a5d6b5e97b993d21213ef1fe12e",
+    "dd6994a512bd6be0e41905023c4f127cab48626c",
+    "ea6f01a9aa87f2f9d78d79dd6b72fd9a431f7330",
+    "f1fb28afd6115fe19a0f23eae2e83ee46752b810"
+  ],
+  "source_kind": "unaccepted_local_worktree_Git_blobs"
+}

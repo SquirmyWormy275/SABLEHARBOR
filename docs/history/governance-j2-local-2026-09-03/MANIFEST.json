@@ -1,0 +1,3196 @@
+{
+  "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+  "archive_bytes": 3426574,
+  "archive_filename": "sableharbor-governance-j2-local-history-2026-09-03.zip",
+  "archive_sha256": "4fe5db5ff13ab9fcbe395be54fac742962a040e418b6ea041aa86ce5b2e541eb",
+  "authority": "HISTORICAL_UNACCEPTED_BRANCH; no canon promotion",
+  "capture_date_utc": "2026-10-23T12:44:42.041141+00:00",
+  "item_count": 138,
+  "items": [
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 934,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "d92fb44eed67908e9988d14a24ddef20ea171148",
+      "member": "sources/.github/workflows/d92fb44eed67/validate-governance-j2.yml",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "6637ba6de4ab695c3e4b4cae2a6de55ec272431356dc0c27f76c4c8f8c052b2f",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": ".github/workflows/validate-governance-j2.yml",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": ".github/workflows/validate-governance-j2.yml"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 6619,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "1fe6d87d27255e6e5e8949bd9a91295bce27de55",
+      "member": "sources/1fe6d87d2725/README.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "49fcab111e2cef6864828f6fbd5dc4a00047bd9edf8abbe1cec782ae4beb1400",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "README.md",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "README.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 3228,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "1b51c5b340481800c230de729f3ac0ad4ec5ce80",
+      "member": "sources/docs/1b51c5b34048/CONTROLLED_DOCUMENT_INDEX.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "52efd2a95cd3f0afd7c8d72fd540adc0b09c1fd2b422691ce74002b3377cf2c5",
+      "source_commits": [
+        {
+          "commit": "c6ff7b017c3ec48029bf991abfc148281ae54b63",
+          "date": "2026-09-03",
+          "path": "docs/CONTROLLED_DOCUMENT_INDEX.md",
+          "subject": "Complete constitutional doctrine and Alexandria catalog"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/CONTROLLED_DOCUMENT_INDEX.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 2864,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "bafb8a7c43c838a397987cad1ab09e5fc6827166",
+      "member": "sources/docs/bafb8a7c43c8/CONTROLLED_DOCUMENT_INDEX.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "7eaef43a15587939ab214d75352609f283b67c636148f06d6bbe7633479676f1",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/CONTROLLED_DOCUMENT_INDEX.md",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/CONTROLLED_DOCUMENT_INDEX.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 2211,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "c6809e317a3fed5ff81e5f38893bf49f9b2655d0",
+      "member": "sources/docs/c6809e317a3f/CONTROLLED_DOCUMENT_INDEX.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "3bef729165766bcc95a7b0c05f48095c2806b12426a62249615fcbd2b9511e40",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/CONTROLLED_DOCUMENT_INDEX.md",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/CONTROLLED_DOCUMENT_INDEX.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 1859,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "1fff6f73af11e6a346e8bd90fdf3ea1d89033366",
+      "member": "sources/docs/governance/1fff6f73af11/ABSTENTION_AND_INFORMATION_DEFICIENCY.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "e184f82b6732c653e180aa4f5aea3ec1cc11e6d445f5a7f3f9d2c2f77837f511",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/governance/ABSTENTION_AND_INFORMATION_DEFICIENCY.md",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/ABSTENTION_AND_INFORMATION_DEFICIENCY.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 1028,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "2e401202e5f41f4df06dec44436231c80e50883b",
+      "member": "sources/docs/governance/2e401202e5f4/ASSUMPTION_OF_RISK_FORM.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "2a82611c913ac4343b0c4bf75b36a7a56d96108b2dd2a595e1c0338575cccfd1",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/governance/ASSUMPTION_OF_RISK_FORM.md",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/ASSUMPTION_OF_RISK_FORM.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 7206,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "14376649bfb706129494628ff818e96b939c6219",
+      "member": "sources/docs/governance/14376649bfb7/BOARD_AND_CAPITAL_GOVERNANCE.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "54f25bde66b8496fd6dc510f6d90239e5e214618a40d6db2057837e0c26df476",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE.md",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 7356,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "d66bde88e7a7666dea850dabe80cb545f4c994fc",
+      "member": "sources/docs/governance/d66bde88e7a7/BOARD_AND_CAPITAL_GOVERNANCE.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "40d04804259c66d13cd425c105fa86f0d9ad4dd98f7b23fa93ab8bbbda00ef43",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE.md",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 1815,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "7113e016b226f626516ce1e4d60430e54dc1ba9f",
+      "member": "sources/docs/governance/7113e016b226/CONFLICT_INTEGRITY_AND_FOUNDER_AUTHORITY.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "7f334c4a006aa76e5a4bb52ce57d229f90d84e0f88001d1f275006cba10ed8df",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/governance/CONFLICT_INTEGRITY_AND_FOUNDER_AUTHORITY.md",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/CONFLICT_INTEGRITY_AND_FOUNDER_AUTHORITY.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 2931,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "1e1aae4f490a3519222cd63c9343ac179ffb18bf",
+      "member": "sources/docs/governance/1e1aae4f490a/CONTROL_DISSENT_AND_RAPID_ADJUDICATION.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "dc71a5c8bef4f619786738ecd8dfbd50388e881f2830252afe27253ff345584a",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/governance/CONTROL_DISSENT_AND_RAPID_ADJUDICATION.md",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/CONTROL_DISSENT_AND_RAPID_ADJUDICATION.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 2498,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "f7b974b0a1d9517b48fc27a9f8cb15452e5bb0e3",
+      "member": "sources/docs/governance/f7b974b0a1d9/DECISION_QUALITY_AND_AFTER_ACTION_LEARNING.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "f789119239e5ae47474789dee330bc3b9b2a9a2ea10842d9058dd90ed7dedd76",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/governance/DECISION_QUALITY_AND_AFTER_ACTION_LEARNING.md",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/DECISION_QUALITY_AND_AFTER_ACTION_LEARNING.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 5949,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "9e7be907b7aab089ecef504f1e63d891b4b44fed",
+      "member": "sources/docs/governance/9e7be907b7aa/GOVERNANCE_CONSTITUTION.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "ad5a957351380bc89d8aeb71ca716c6cbe74a631a0e816aebbe3bb66361bcafb",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/governance/GOVERNANCE_CONSTITUTION.md",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/GOVERNANCE_CONSTITUTION.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 1373,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "2f3d01ec5d3c79baad13356b79d51982628cc4fe",
+      "member": "sources/docs/governance/2f3d01ec5d3c/README.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "ac452ee6654dc5be9632c469f9143cef1c4327917c71ef0ea20109fd70edb638",
+      "source_commits": [
+        {
+          "commit": "c6ff7b017c3ec48029bf991abfc148281ae54b63",
+          "date": "2026-09-03",
+          "path": "docs/governance/README.md",
+          "subject": "Complete constitutional doctrine and Alexandria catalog"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/README.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 1255,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "62a613f976ef2d8c2268152e6cbdb40293f717e7",
+      "member": "sources/docs/governance/62a613f976ef/README.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "08bc37be6d5defb5221ae150bf99ca775f08d99b3fdfe27d1e6b27e76e584050",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/governance/README.md",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/README.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 761,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "fa7fc6513529d4de48199e05609bdd971ac18f1f",
+      "member": "sources/docs/governance/fa7fc6513529/README.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "139bf199b22a6a707250c8bf1f34976698f0ec93204f0a1d7a21042d62d8f608",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/governance/README.md",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/README.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 3737,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "432f25c9bba3fb22cbc7a60eabe42006de9c0e1a",
+      "member": "sources/docs/governance/432f25c9bba3/RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "725713222b72f9a4ab75350af024d9c342f398dacabd0277c9bc2f7f33cc191a",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/governance/RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/RESERVED_MATTERS_AND_SUBSIDIARY_AUTONOMY.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 817,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "02ae274353d7108a4f348ecd9d28d32fabfbfc3c",
+      "member": "sources/docs/governance/committees/02ae274353d7/AUDIT_AND_COMPLIANCE_COMMITTEE_CHARTER.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "d564275a7d67eee4120149a0001a21614a6173a79bef1550da50474bd57074f4",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/governance/committees/AUDIT_AND_COMPLIANCE_COMMITTEE_CHARTER.md",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/committees/AUDIT_AND_COMPLIANCE_COMMITTEE_CHARTER.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 645,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "dc4dc718cb5f340abe7d73a7ce0fe81df401b907",
+      "member": "sources/docs/governance/committees/dc4dc718cb5f/COMPENSATION_AND_HUMAN_CAPITAL_COMMITTEE_CHARTER.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "d4d954212ef8375632cb754f6cb2c3b447c872978c926d4ee0c4e1e076b97199",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/governance/committees/COMPENSATION_AND_HUMAN_CAPITAL_COMMITTEE_CHARTER.md",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/committees/COMPENSATION_AND_HUMAN_CAPITAL_COMMITTEE_CHARTER.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 769,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "9e6c22950d4d0f55214c8a1c86861dc07e61a000",
+      "member": "sources/docs/governance/committees/9e6c22950d4d/FINANCE_AND_INVESTMENT_COMMITTEE_CHARTER.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "7e5aa45bb65b74f679627ded1214c1bbbb45bfe73b7644ace5273bef04be497a",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/governance/committees/FINANCE_AND_INVESTMENT_COMMITTEE_CHARTER.md",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/committees/FINANCE_AND_INVESTMENT_COMMITTEE_CHARTER.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 671,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "910b6418788a920d277809097287d5646df5ce05",
+      "member": "sources/docs/governance/committees/910b6418788a/GOVERNANCE_AND_NOMINATING_COMMITTEE_CHARTER.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "4d48eb809813e90ec307b71bfd8e39e86ef04b107144055892f72f52c68c5ba0",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/governance/committees/GOVERNANCE_AND_NOMINATING_COMMITTEE_CHARTER.md",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/committees/GOVERNANCE_AND_NOMINATING_COMMITTEE_CHARTER.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 745,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "c33607e7e0769a72e90125ac457e7ea64434285f",
+      "member": "sources/docs/governance/committees/c33607e7e076/TECHNOLOGY_AND_OPERATIONS_COMMITTEE_CHARTER.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "ad512a653693b84840539c7fcacc3ec20b24a699a6d91a9b0db0c69e637872c2",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/governance/committees/TECHNOLOGY_AND_OPERATIONS_COMMITTEE_CHARTER.md",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/committees/TECHNOLOGY_AND_OPERATIONS_COMMITTEE_CHARTER.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 13149,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "095ff6e46462440875d62ababc9a03a67709b7a1",
+      "member": "sources/docs/governance/095ff6e46462/publication_manifest.json",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "33a89c213eed15fbbb6cebb49b2202e6ac47375b7ba07a18b04424526476536c",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/governance/publication_manifest.json",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/publication_manifest.json"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 7814,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "373200c052a85696179625ff41cb5edec6c93d00",
+      "member": "sources/docs/governance/373200c052a8/publication_manifest.json",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "a87c193f01e9ec9a5d59fc2ddbedbf9521441bc58726dc99de4427450370ba46",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/governance/publication_manifest.json",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/publication_manifest.json"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 5852,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "8651061f9f295ee1b9984beca5acf762a5355b6c",
+      "member": "sources/docs/governance/8651061f9f29/publication_manifest.json",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "218208ed9f594d0d8028b730029fbf45f934029b1134c3b1b1aed0772489d222",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/governance/publication_manifest.json",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/publication_manifest.json"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 47256,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "92a9fff0cf94ec17e5221b4e6e441e3ad7a96760",
+      "member": "sources/docs/governance/publications/92a9fff0cf94/SH-GOV-ABSTAIN-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "b01c20138a6cbcc9c70eab9063691ad05c8143f09569077e8bb40fb05a6383fb",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/governance/publications/SH-GOV-ABSTAIN-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/publications/SH-GOV-ABSTAIN-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 52264,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "5012f51724acd080b589dd6c3550a7cce4c4967a",
+      "member": "sources/docs/governance/publications/5012f51724ac/SH-GOV-AUTH-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "e991dcad2cb8244bacdf97269910664c3f78f584bdd2403b3edb932161b86c16",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/governance/publications/SH-GOV-AUTH-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/publications/SH-GOV-AUTH-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 68529,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "4fa0e95bec664f7d5aabf65f61afda48cdd7feae",
+      "member": "sources/docs/governance/publications/4fa0e95bec66/SH-GOV-BOARD-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "07e324c78d190c987966948b46c0e478a722a63cc415095ce8185ad06881016a",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/governance/publications/SH-GOV-BOARD-001_v1.0.0.pdf",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/publications/SH-GOV-BOARD-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 67976,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "a46ee992fe0531f51e597d6cb494f83cc8bfd8df",
+      "member": "sources/docs/governance/publications/a46ee992fe05/SH-GOV-BOARD-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "6f2fb709a8f678c4fe7ed69498a61fb97e5b2f0bf2543eaff0e47aa524aaf2dd",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/governance/publications/SH-GOV-BOARD-001_v1.0.0.pdf",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/publications/SH-GOV-BOARD-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 68513,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "be778558cf2a5b35f32488137dfc9702f904db73",
+      "member": "sources/docs/governance/publications/be778558cf2a/SH-GOV-BOARD-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "7874f1f2442b97466801c416168ac4cdd9873f5222625ab1334ec0b191d4204b",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/governance/publications/SH-GOV-BOARD-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/publications/SH-GOV-BOARD-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 34024,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "72a47841ce104ac69ced11b0da6658ca4db2f121",
+      "member": "sources/docs/governance/publications/72a47841ce10/SH-GOV-COM-AUDIT-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "2cfc29f4a03b86ce85abc66bd100916379ac2f7457fc7c21812be72d5d2d8d0c",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/governance/publications/SH-GOV-COM-AUDIT-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/publications/SH-GOV-COM-AUDIT-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 33857,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "f26206aeb5e6e7e5d9461749cd4c1ec485d557be",
+      "member": "sources/docs/governance/publications/f26206aeb5e6/SH-GOV-COM-AUDIT-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "f9c7b38458f32d205e6979023beab67a788c73c5b97cd461029d413cbe5f816e",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/governance/publications/SH-GOV-COM-AUDIT-001_v1.0.0.pdf",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/publications/SH-GOV-COM-AUDIT-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 34103,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "0b3fa033c005812566bd73b4b9b33604e211aabe",
+      "member": "sources/docs/governance/publications/0b3fa033c005/SH-GOV-COM-COMP-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "999bd43d662a094b10f92ec70a428506dcc9522340e4cce7d73a4b61d8ed5de6",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/governance/publications/SH-GOV-COM-COMP-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/publications/SH-GOV-COM-COMP-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 33888,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "3e8693ba5bac51845e6f3c0c93bee4773197f440",
+      "member": "sources/docs/governance/publications/3e8693ba5bac/SH-GOV-COM-COMP-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "35778108971a3cf9f0d20a89268b03da8569d79d0a50202cca712e8407bd80d7",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/governance/publications/SH-GOV-COM-COMP-001_v1.0.0.pdf",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/publications/SH-GOV-COM-COMP-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 33878,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "36addfc7eb5ddd99af211ede22134199c6161a46",
+      "member": "sources/docs/governance/publications/36addfc7eb5d/SH-GOV-COM-FIN-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "6c42a5e700a41b240bc258d1486b6d0dd4d8d7244da60b3c715ffbb4b0320932",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/governance/publications/SH-GOV-COM-FIN-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/publications/SH-GOV-COM-FIN-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 33666,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "6b0a618c6895987133aa0c9e01780dc90cb8e359",
+      "member": "sources/docs/governance/publications/6b0a618c6895/SH-GOV-COM-FIN-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "96a45d47453d7c067411d002f9c1413f8f6558f9e207436091473e04fff6e740",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/governance/publications/SH-GOV-COM-FIN-001_v1.0.0.pdf",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/publications/SH-GOV-COM-FIN-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 32875,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "3452e69c0779a809d7a30a1b3de8abc60fce0dea",
+      "member": "sources/docs/governance/publications/3452e69c0779/SH-GOV-COM-GOVNOM-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "06174857946fee0c1a0d84c9207d5d3d125259a92b6d327693f805dd26e710e0",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/governance/publications/SH-GOV-COM-GOVNOM-001_v1.0.0.pdf",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/publications/SH-GOV-COM-GOVNOM-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 33081,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "b678afa43b661e8c64f5d28d5d152a6a5de3a18d",
+      "member": "sources/docs/governance/publications/b678afa43b66/SH-GOV-COM-GOVNOM-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "e4c9f9cc52b40212d8f2085c1d48aa6df620a06fe88ccdb1f7effd25e7620a24",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/governance/publications/SH-GOV-COM-GOVNOM-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/publications/SH-GOV-COM-GOVNOM-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 34367,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "1fddd60388f8e4da33a63987f6ef71e931c1dd75",
+      "member": "sources/docs/governance/publications/1fddd60388f8/SH-GOV-COM-TECHOPS-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "4be813e404b87fa22860beebbc7dc023037c512c23f7c30f79b57571d16a3759",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/governance/publications/SH-GOV-COM-TECHOPS-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/publications/SH-GOV-COM-TECHOPS-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 34190,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "e2c50cfecaaa54c2a8396733b84fa925cc87f17c",
+      "member": "sources/docs/governance/publications/e2c50cfecaaa/SH-GOV-COM-TECHOPS-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "359836e3160481c62b8a4f55445fe70c5434264053016e307ede8991dba2c364",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/governance/publications/SH-GOV-COM-TECHOPS-001_v1.0.0.pdf",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/publications/SH-GOV-COM-TECHOPS-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 36496,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "26cb97d3e8fcb9ad1ccde46360a9ec7ec1d193ad",
+      "member": "sources/docs/governance/publications/26cb97d3e8fc/SH-GOV-CONFLICT-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "8c4f8abc78a47049598c09d04bab01cbd17ca1485e8791ab848c2949b786a40e",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/governance/publications/SH-GOV-CONFLICT-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/publications/SH-GOV-CONFLICT-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 60134,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "0b7613ba6587b7ec6219557c21bb5b7d3ba373a1",
+      "member": "sources/docs/governance/publications/0b7613ba6587/SH-GOV-CONST-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "882d0668da5a29c9787b5e24e461a8ddbf8bdf383a2cafdf22a6bc21e5501355",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/governance/publications/SH-GOV-CONST-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/publications/SH-GOV-CONST-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 59515,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "5bd53196f20179ca77feb3b81cf5c9332bf6faba",
+      "member": "sources/docs/governance/publications/5bd53196f201/SH-GOV-CONST-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "c3b15896df8a703f591cd040cf276e616aa6d3e6575e65ded53542221d766def",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/governance/publications/SH-GOV-CONST-001_v1.0.0.pdf",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/publications/SH-GOV-CONST-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 59515,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "e78103518d374d26c6a7e03119f09540d6e8f736",
+      "member": "sources/docs/governance/publications/e78103518d37/SH-GOV-CONST-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "096e4d0a8bb9949f612ba58bbb0cab2d560495149b0a6755726cd688d638a735",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/governance/publications/SH-GOV-CONST-001_v1.0.0.pdf",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/publications/SH-GOV-CONST-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 50002,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "4bb91833c23ad0a3bfe9c912158a8a4f199be143",
+      "member": "sources/docs/governance/publications/4bb91833c23a/SH-GOV-DISSENT-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "d2548b84adfddcfbae696ee623562df4a27955bbffe8d36b19b2479178d58612",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/governance/publications/SH-GOV-DISSENT-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/publications/SH-GOV-DISSENT-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 47601,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "ec078d2acda1d101e54c55327fe6a17218bc8599",
+      "member": "sources/docs/governance/publications/ec078d2acda1/SH-GOV-LEARN-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "8c9ef1756bf00852e62b92a0fb5c1bdb7142cd0b8dd689f37c5747b5528027a0",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/governance/publications/SH-GOV-LEARN-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/publications/SH-GOV-LEARN-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 35768,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "918b292a132de5a016983a7c76bdd3282b51987e",
+      "member": "sources/docs/governance/publications/918b292a132d/SH-GOV-RISK-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "cd2d2255dcc540efc4c9b4a5bcff50f3a0a61ef5a03b19d82886e934727e226e",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/governance/publications/SH-GOV-RISK-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/publications/SH-GOV-RISK-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 35616,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "9f2bfc1bef206336df6c70b3ccb43540be67a60a",
+      "member": "sources/docs/governance/publications/9f2bfc1bef20/SH-GOV-RISK-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "30f7178efee22261b99b41e7bd0ba627ed56759d14d181e88415b97817e4d70d",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/governance/publications/SH-GOV-RISK-001_v1.0.0.pdf",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/publications/SH-GOV-RISK-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 35614,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "b80e50390eabbb64b02f43e605004a2de9dba2c1",
+      "member": "sources/docs/governance/publications/b80e50390eab/SH-GOV-RISK-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "04d5c45e9af2b4a0cfd78645b821fe30b64434628d9eb98e1182d812a9322800",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/governance/publications/SH-GOV-RISK-001_v1.0.0.pdf",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/governance/publications/SH-GOV-RISK-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 11714,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "cd405c3da4a16a205dd6e2c98f9522cac61cdf04",
+      "member": "sources/docs/internal/cd405c3da4a1/COVERAGE_AUDIT_PHASE2.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "9d5daa730f660c49351536f4e168ae6832f07627bd6766020713225b9424821f",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/internal/COVERAGE_AUDIT_PHASE2.md",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/internal/COVERAGE_AUDIT_PHASE2.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 78444,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "0d7e33934401823afe750a99806260cd55843e70",
+      "member": "sources/docs/internal/0d7e33934401/COVERAGE_AUDIT_PHASE2.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "c185dc76ef59902bb3ac4cc4ffa89b2f72e7512ea326dc2b9f162ca55429922e",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/internal/COVERAGE_AUDIT_PHASE2.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/internal/COVERAGE_AUDIT_PHASE2.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 1494,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "aae5d2b459b43fccf6c0d62fd82defece2dc6381",
+      "member": "sources/docs/j2/aae5d2b459b4/CONTACT.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "4fc00731a891b81dd24ab03cb1658f383e17b256884491f837fcd529deeb055e",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/CONTACT.md",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/CONTACT.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 3518,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "f877378bad62e5d251dfc205f65998cbfc152ade",
+      "member": "sources/docs/j2/f877378bad62/CONTACT_COLLECTION_MANAGEMENT.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "667e28dcd84904146cefa8969fe054b2b0f25f4c1a9ab0c18aedb524d17706d0",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/CONTACT_COLLECTION_MANAGEMENT.md",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/CONTACT_COLLECTION_MANAGEMENT.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 771,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "ea0a8dc260372a3c9a4543d31a96dcb14d613f78",
+      "member": "sources/docs/j2/ea0a8dc26037/EDUCATION.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "4d5f32525b1e75ec103c7abce86503cd3c779aa52f2c3de4b9b7cb3da19e0e83",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/EDUCATION.md",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/EDUCATION.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 989,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "14265fe1fa192ad533064b2ed5d566b3e923ffe8",
+      "member": "sources/docs/j2/14265fe1fa19/EIB_AND_ENTERPRISE_QUESTIONS.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "7331f27cc1a058b3a1e23fb1ac229d58d66b2729c9877a81b3b9bd586b42839e",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/EIB_AND_ENTERPRISE_QUESTIONS.md",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/EIB_AND_ENTERPRISE_QUESTIONS.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 821,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "e1b2a3d5e3c542d35d0dd7dc34e2c053866e2339",
+      "member": "sources/docs/j2/e1b2a3d5e3c5/INFORMATION_ACCESS_DOCTRINE.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "f827dc4c7d84b3559e4f72435e96e0678272bc96d948d6b69993efaf9d8ad085",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/INFORMATION_ACCESS_DOCTRINE.md",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/INFORMATION_ACCESS_DOCTRINE.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 1883,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "1fc59f6a0e3ee864435f2d5d299d080ed99c2b24",
+      "member": "sources/docs/j2/1fc59f6a0e3e/J2_CHARTER.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "5c4e1c5382cbe82da2a1bcfa0a0166de40d5c73e7cdd8f85a6dbaf6b5916e11f",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/J2_CHARTER.md",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/J2_CHARTER.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 1818,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "aa4a75cf4e3cedab53979df8fc068da0d6032efa",
+      "member": "sources/docs/j2/aa4a75cf4e3c/J2_HEADQUARTERS.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "5956bf075c362d6554657c6ecfab9634101c816e7d388028a1f5d7fc939cc28c",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/J2_HEADQUARTERS.md",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/J2_HEADQUARTERS.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 1934,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "f7b6f386c7cabbbc8216ebf87b6040b27e45a635",
+      "member": "sources/docs/j2/f7b6f386c7ca/J2_OPERATING_MODEL.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "c3ee5b32a2df72c8057e4b5abfe714d8c80a0fcb154475a93ee03b5c1fc36fb3",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/J2_OPERATING_MODEL.md",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/J2_OPERATING_MODEL.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 2025,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "7e8eab668a2cb37c0d5214ab7ff40c64f3cf3345",
+      "member": "sources/docs/j2/7e8eab668a2c/JUDGMENT.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "0ed72c8de41a762a631c1f5a9ccbb8a4fe6dd4beb539451379b21ac9d339cba3",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/JUDGMENT.md",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/JUDGMENT.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 3902,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "000f80d4715660c726f2b27bd02599e361736db7",
+      "member": "sources/docs/j2/000f80d47156/JUDGMENT_OFFICER_PROFESSION.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "cf910e76ebea361165cd094b7094fab6f9061bd0ee8abc2777975623f1bc3278",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/JUDGMENT_OFFICER_PROFESSION.md",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/JUDGMENT_OFFICER_PROFESSION.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 1635,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "8962bff3bd8819eff1e97244cba1f97f8c744ae0",
+      "member": "sources/docs/j2/8962bff3bd88/JUNCTION_ADVISORY_GROUP.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "dd196dea448ef4793e1756ec6ffd68e841061d73de1a04f8b97d99d4b540fdf1",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/JUNCTION_ADVISORY_GROUP.md",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/JUNCTION_ADVISORY_GROUP.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 3147,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "272536100d0092ea9b06558bee8409704e3793c3",
+      "member": "sources/docs/j2/272536100d00/ORIENTATION.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "f127f12d510cd6ad6cf3afeb9157c57521745dde0218ca815dcf138e360ac80c",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/ORIENTATION.md",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/ORIENTATION.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 4053,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "289135fb22038772a6d42eed10274584dc1875a7",
+      "member": "sources/docs/j2/289135fb2203/ORIENTATION_OFFICER_PROFESSION.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "f8093b3ce3108daddf16e14b157d9cc860a2d80a1d43b5499c5a04704c11286c",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/ORIENTATION_OFFICER_PROFESSION.md",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/ORIENTATION_OFFICER_PROFESSION.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 983,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "f7a1df86447fe482c3bf67dec454fa9979cd5979",
+      "member": "sources/docs/j2/f7a1df86447f/README.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "374310bc280216039bbf9fd82bc188adaabdd09c0214277b233e3bc95a44b1dd",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/README.md",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/README.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 2005,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "569524f4aacd6385054dc9885566437580cca6ee",
+      "member": "sources/docs/j2/alexandria/569524f4aacd/AI_AUTHORITY_AND_HUMAN_AUTHORSHIP.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "8188767f1bc7f2224b79233fce141c492eca0d5a4f9d2a2f8f52cacfe9eb0259",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/alexandria/AI_AUTHORITY_AND_HUMAN_AUTHORSHIP.md",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/alexandria/AI_AUTHORITY_AND_HUMAN_AUTHORSHIP.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 1745,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "a502e17b376e7b4311bf1e502b51efd6dc96c793",
+      "member": "sources/docs/j2/alexandria/a502e17b376e/ALEXANDRIA_CHARTER.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "6c84fb4d593f852b6b50f47db70946fa26eed702b3946d3a68145b00857c557f",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/alexandria/ALEXANDRIA_CHARTER.md",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/alexandria/ALEXANDRIA_CHARTER.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 751,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "cbfb585e161cacff35013e539ab2004c6a5688d3",
+      "member": "sources/docs/j2/alexandria/cbfb585e161c/CANON_INSTITUTIONAL_KNOWLEDGE.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "9f07703a24fa939b764bc9cae78c4c018026cf138087afc171403e8f56a41cda",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/alexandria/CANON_INSTITUTIONAL_KNOWLEDGE.md",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/alexandria/CANON_INSTITUTIONAL_KNOWLEDGE.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 2449,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "4feb3774e473d5312e92e82e54b1a8b7eebdbd87",
+      "member": "sources/docs/j2/alexandria/4feb3774e473/DAEDALUS_OPERATING_DOCTRINE.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "dd754b30c046fc7418d6a9b5f2d3e649143fa0984f4a8597c5ffebdbbc48d9e4",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/alexandria/DAEDALUS_OPERATING_DOCTRINE.md",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/alexandria/DAEDALUS_OPERATING_DOCTRINE.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 2417,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "27b58cc743bbf1a034e0b1bd16cf10f5def3e6c8",
+      "member": "sources/docs/j2/alexandria/27b58cc743bb/DAEDALUS_PERSONAL_INSTANCE_AND_WORKSPACE.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "aa2c05319a61fac7999a038b592a686b6962cb0de2339f32a001d49679b394a5",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/alexandria/DAEDALUS_PERSONAL_INSTANCE_AND_WORKSPACE.md",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/alexandria/DAEDALUS_PERSONAL_INSTANCE_AND_WORKSPACE.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 2255,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "f8bf5d5b36957b11654cddf9c7886a7a7c792776",
+      "member": "sources/docs/j2/alexandria/f8bf5d5b3695/INFORMATION_ACCESS_AND_DISCLOSURE.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "cb98f4d9351b29ae341738703314e08bbe4f47b8f071d08b452b7f3688ab5e74",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/alexandria/INFORMATION_ACCESS_AND_DISCLOSURE.md",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/alexandria/INFORMATION_ACCESS_AND_DISCLOSURE.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 1766,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "59fd3c3f090a7a92554f30d7e5b28fae702fb2ae",
+      "member": "sources/docs/j2/alexandria/59fd3c3f090a/PINAKES_PORTAL_AND_UX.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "e6fd565c0636f605ea82cc6b00bc89b007ae4be106422c61eee763df8f124393",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/alexandria/PINAKES_PORTAL_AND_UX.md",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/alexandria/PINAKES_PORTAL_AND_UX.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 2090,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "1287a56db9de836556823b29a33eb387da7dfff9",
+      "member": "sources/docs/j2/alexandria/1287a56db9de/PROVENANCE_AND_LINEAGE.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "cc1adc377b1eab2b8614aefd993658c3cc81df4eae65b514d86a56310a891fa3",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/alexandria/PROVENANCE_AND_LINEAGE.md",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/alexandria/PROVENANCE_AND_LINEAGE.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 775,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "4a26678fc4039e5adaf3694b59117269919fd53a",
+      "member": "sources/docs/j2/alexandria/4a26678fc403/README.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "0c46f040fa153c04763a45dd0562a0335c2c8d1cb82b61d82e6f2e821c9acd4b",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/alexandria/README.md",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/alexandria/README.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 1117,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "9f7a32bf9f469e5eaee623b1614260c9e94f40f2",
+      "member": "sources/docs/j2/alexandria/9f7a32bf9f46/README.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "4ec052d3b079f055ae3d156b91cab7bc586784ef4198b233304dce8afd645626",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/alexandria/README.md",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/alexandria/README.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 1342,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "669c72ba56c5a23ffe3fdf21aa0162bc7038fc36",
+      "member": "sources/docs/j2/alexandria/669c72ba56c5/SEMAPHORE_TRAFFIC_SYSTEM.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "5ede76739c70a5e330af91a2321e14de80cf5a31787f23317ac2b5856df7c8e9",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/alexandria/SEMAPHORE_TRAFFIC_SYSTEM.md",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/alexandria/SEMAPHORE_TRAFFIC_SYSTEM.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 1827,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "6ab881a8e0172ed746bf8b6e7f2fe159dae373f4",
+      "member": "sources/docs/j2/alexandria/6ab881a8e017/TEMPORAL_INTEGRITY.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "d80f2f771ac341cb1c4b78597c0810b331a82923666a2942659abbd19ecb0c32",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/alexandria/TEMPORAL_INTEGRITY.md",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/alexandria/TEMPORAL_INTEGRITY.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 34205,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "8b874a03ef27a25809a72ab73dc7a3a568d6ea7e",
+      "member": "sources/docs/j2/publications/8b874a03ef27/SH-J2-ACCESS-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "aace7c8cc1fdc2f14ddd729e67284c078aa0eb6362141b6889e899f53981371f",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-ACCESS-001_v1.0.0.pdf",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-ACCESS-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 34205,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "aba2e357a64ca2a8049ca16ce3024b5e789688ce",
+      "member": "sources/docs/j2/publications/aba2e357a64c/SH-J2-ACCESS-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "a1214720ed8f183f77947525acff13746c6d0ef30c6adde319d557588f29bd34",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-ACCESS-001_v1.0.0.pdf",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-ACCESS-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 34353,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "b5efe00498eb93fc2f11640c92c576f7dc9dc1b9",
+      "member": "sources/docs/j2/publications/b5efe00498eb/SH-J2-ACCESS-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "376bcbe5edd270a969a4481202228bc197bfc8884317a337400d37a311993853",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-ACCESS-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-ACCESS-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 46197,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "589bf51846758adedd32ddaacbba408866f9c3b3",
+      "member": "sources/docs/j2/publications/589bf5184675/SH-J2-ALX-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "7026f9e8c7955d2970d1929f4fbcd34559411a50e3054544d2a279a91423346b",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-ALX-001_v1.0.0.pdf",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-ALX-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 46395,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "7d6220840922a27010aa497811c55dc567121d6f",
+      "member": "sources/docs/j2/publications/7d6220840922/SH-J2-ALX-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "8a9326ba7297ad2e430fcc507f8012cb071316d6c60bb6491fdda54c3044e8e4",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-ALX-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-ALX-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 46196,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "a5eaedffc33fb22e9169257690c2f0c577bbc372",
+      "member": "sources/docs/j2/publications/a5eaedffc33f/SH-J2-ALX-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "7678f180152354b5d1236f8ccafcafc7f42e1333f668d7242d490be61a666e69",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-ALX-001_v1.0.0.pdf",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-ALX-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 39305,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "03f683a95f1780b157e11b4f0532057f3a025705",
+      "member": "sources/docs/j2/publications/03f683a95f17/SH-J2-ALX-AI-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "825793f9dc83da5984b6a96a61a6694c7dbf3288233d89f781ebe5af2fcd825a",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-ALX-AI-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-ALX-AI-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 37843,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "936774bf428cc8c18f2e770dcf29374bfb971211",
+      "member": "sources/docs/j2/publications/936774bf428c/SH-J2-ALX-DISCLOSE-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "3095e72d23ee7969cad57860e2ea8fbf2840f26e3100c08c71d147246aaba0ef",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-ALX-DISCLOSE-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-ALX-DISCLOSE-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 36612,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "54e806f43c183198a8d93403fef9989f814591c8",
+      "member": "sources/docs/j2/publications/54e806f43c18/SH-J2-ALX-PROV-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "1f467779961d18f317135c5ca69c082feb00a06e5d6ddc083d0547828c47ecf9",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-ALX-PROV-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-ALX-PROV-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 38717,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "3e207ffe1082394ca77e51b1106b44990bc46f36",
+      "member": "sources/docs/j2/publications/3e207ffe1082/SH-J2-ALX-TIME-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "868ec077921c9ebef8728fd7d4dd0bb2f7d7d86a08b633e067b0d7e5feac253d",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-ALX-TIME-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-ALX-TIME-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 34499,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "6444e3a27cf0fe2acedcd83c2aad0a1c67d90638",
+      "member": "sources/docs/j2/publications/6444e3a27cf0/SH-J2-CANON-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "e8ad4bf50fef73eee02dec2fe1129c60e8cb54dfc5fd386462056f3d660bd581",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-CANON-001_v1.0.0.pdf",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-CANON-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 34496,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "86adb14df36d67d233d7deb29effcfa681076a73",
+      "member": "sources/docs/j2/publications/86adb14df36d/SH-J2-CANON-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "00d84038ce98bc85cf417128685067f01b61892bf84b4b48d9fb1e9a4a10e823",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-CANON-001_v1.0.0.pdf",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-CANON-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 34688,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "9d41764997daafd09f454bb59c713d29d03540d7",
+      "member": "sources/docs/j2/publications/9d41764997da/SH-J2-CANON-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "ac2631809aa3718bd7eff880f348d895d115c706dc588a270c4ca1597a4bc11e",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-CANON-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-CANON-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 47302,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "6f7575d45a562c9f4419b50ddc1b9eb2d99cb892",
+      "member": "sources/docs/j2/publications/6f7575d45a56/SH-J2-CHARTER-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "d6109f4ad728f7cf55dfcba0e48494feff3f1d2e68bbfe4fad0ac90b81066538",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-CHARTER-001_v1.0.0.pdf",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-CHARTER-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 47302,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "7f1f8f4036646fb2a8c545fe6de8dc30fe718e08",
+      "member": "sources/docs/j2/publications/7f1f8f403664/SH-J2-CHARTER-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "baab2ab36f4dcff66ef50414a4464c1189a3f20da9403ff22446ed0a9bb954f7",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-CHARTER-001_v1.0.0.pdf",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-CHARTER-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 47660,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "daeced05037915acfdfc5b9ab29e1e1d2d404570",
+      "member": "sources/docs/j2/publications/daeced050379/SH-J2-CHARTER-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "84be4cd76837b78cb9434925b01442780605d0f8095d3f4cc565f8e1ca0fdff9",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-CHARTER-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-CHARTER-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 49641,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "41b998eaa240b8f60297f23e2976f01af42238a7",
+      "member": "sources/docs/j2/publications/41b998eaa240/SH-J2-COLLECT-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "e16a6967ab23929009a55690d85e81b6348e0c2d8e0569e0130f879480f5d467",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-COLLECT-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-COLLECT-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 35609,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "0df65783825120d95fdcda2f9ad67d2708da0778",
+      "member": "sources/docs/j2/publications/0df657838251/SH-J2-CONTACT-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "d5789e91983b871114f5daacf2a7ccedb5eb7a735d04ff36f6c30c3c2ddd6d15",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-CONTACT-001_v1.0.0.pdf",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-CONTACT-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 35608,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "939e6f876c59847f7795492226ea7ef387fb4bd9",
+      "member": "sources/docs/j2/publications/939e6f876c59/SH-J2-CONTACT-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "2265e65270272d6aa3791a8ca932ca8f0757274ec27aece4877de8f6144b8ffd",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-CONTACT-001_v1.0.0.pdf",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-CONTACT-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 35916,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "9d1d5d7e63ddb5b653810770b7bf6b4ce51b517a",
+      "member": "sources/docs/j2/publications/9d1d5d7e63dd/SH-J2-CONTACT-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "738b1b53185ec2249aa6a9b7087f20afcbc851350d6ae0fcc46df50f0a7c6bd4",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-CONTACT-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-CONTACT-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 47976,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "229daa4c196899b13851abd3ea28930b0406b245",
+      "member": "sources/docs/j2/publications/229daa4c1968/SH-J2-DAEDALUS-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "641a39b6656efa96de3344eda7e9f3e15b347ef74eb18450b70c9aa666121784",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-DAEDALUS-001_v1.0.0.pdf",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-DAEDALUS-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 47977,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "264485f05a7a17d354555f05d1ef45c7f5dd36e2",
+      "member": "sources/docs/j2/publications/264485f05a7a/SH-J2-DAEDALUS-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "fde5141a8a5104b4cfbd873fad322dcfb603990e73a002a9f2f811e6c87d7c07",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-DAEDALUS-001_v1.0.0.pdf",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-DAEDALUS-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 48398,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "49d28654b83c42b4f581ca3f245b734ecbb081f6",
+      "member": "sources/docs/j2/publications/49d28654b83c/SH-J2-DAEDALUS-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "be2eea34bb1bebb133a385bfa24b8b925b9ab8291320a2df7c315414f0409cf1",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-DAEDALUS-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-DAEDALUS-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 46906,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "696963283d87dbf1ea1d395813d58ca425910d63",
+      "member": "sources/docs/j2/publications/696963283d87/SH-J2-DAEDALUS-PERSONAL-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "bddc9a8a68653dda64d1375573113e444493fca2dcc3a0abb62c2a0a4fe6b1d4",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-DAEDALUS-PERSONAL-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-DAEDALUS-PERSONAL-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 31911,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "3c7dc471f3839028dd6429e0507a092f939153c0",
+      "member": "sources/docs/j2/publications/3c7dc471f383/SH-J2-EDU-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "5fd0c3e868e86a313adc08c18b03d2a2fdffb504b465534f45c0dd3b380a7b64",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-EDU-001_v1.0.0.pdf",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-EDU-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 32045,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "af4074981565f00321c8d6b4422e8592fa583701",
+      "member": "sources/docs/j2/publications/af4074981565/SH-J2-EDU-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "15fb65b8b00281b5cc2a36862583ae2d14f0445f1df6774698f3fb0a20082e6e",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-EDU-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-EDU-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 31912,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "ef657a15c7570cd9d4ab2a25606d1a7d8f45ae06",
+      "member": "sources/docs/j2/publications/ef657a15c757/SH-J2-EDU-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "1a4e1c9087eb05bfdb5094597324758ac63473c87a1af360623d33bcd17d8665",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-EDU-001_v1.0.0.pdf",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-EDU-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 36529,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "30880af06f5605fdc8e2f078b35ad71dac13bfa1",
+      "member": "sources/docs/j2/publications/30880af06f56/SH-J2-EIB-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "84cf748fe3ee45baaed99d0e5c8da55108d771feda0b1cc86a84b007e3e7fa1d",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-EIB-001_v1.0.0.pdf",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-EIB-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 36716,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "a0bb13c6731f2a9e4bf0578de6386475a37775af",
+      "member": "sources/docs/j2/publications/a0bb13c6731f/SH-J2-EIB-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "c3389ff44a96a28eb415df70264cda5abd90546b8f8ef4abd6e7b2eb55221186",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-EIB-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-EIB-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 36528,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "f86159693eae8d5092444c78e2a446befe1ceb86",
+      "member": "sources/docs/j2/publications/f86159693eae/SH-J2-EIB-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "5073eb2d028a1df666bc8b58701014f93cfcbd725d673d882194519f885e5de0",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-EIB-001_v1.0.0.pdf",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-EIB-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 35504,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "721f1be2e6d0d68af3dd0d6f7a0432e9d149a1a5",
+      "member": "sources/docs/j2/publications/721f1be2e6d0/SH-J2-HQ-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "d50e0a150adeab4b93bcc3016f465107d3b4ecf7912eb3973df93ecd0cab6b0a",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-HQ-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-HQ-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 37236,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "3c1ed3d876be1a2866d06b61c778ea82fd749dd1",
+      "member": "sources/docs/j2/publications/3c1ed3d876be/SH-J2-JAG-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "54bf9d25658dbf9e18cab27c65feb25e26e3c9cc50e10c90c4b1d819a0f8a7be",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-JAG-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-JAG-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 37002,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "5e3f3883ed18972fa9dc0bbc99dd4efda8f93c7b",
+      "member": "sources/docs/j2/publications/5e3f3883ed18/SH-J2-JAG-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "19190a5e66e026045012b9ea0c2e9c9d12d80f641dc8d0c76382ed4af6b3b606",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-JAG-001_v1.0.0.pdf",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-JAG-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 37003,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "d25e3aba7fb1ce3b164ebe5ff35cc4ec6dff3348",
+      "member": "sources/docs/j2/publications/d25e3aba7fb1/SH-J2-JAG-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "707492b94f0a97864be629d6c021cf836ebd5ee011721c55343cd556c21b5434",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-JAG-001_v1.0.0.pdf",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-JAG-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 52565,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "22473a601cb54e7084113476b85fcc242208e0a7",
+      "member": "sources/docs/j2/publications/22473a601cb5/SH-J2-JO-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "51109b6ca35b3635b952dd37e630e68b092e82cf78387f2c8efdd82f5c25d130",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-JO-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-JO-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 37588,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "18db03b57b3e6877929313dbb52c9958d617fee7",
+      "member": "sources/docs/j2/publications/18db03b57b3e/SH-J2-JUDGMENT-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "5112bf6c02e665c610fc1ff5bf93f2664e9991d12d6e79f9883a1873eaf0b9cd",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-JUDGMENT-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-JUDGMENT-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 37257,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "55d594a323db1cca2abc65d134ad27a2f5a7ecda",
+      "member": "sources/docs/j2/publications/55d594a323db/SH-J2-JUDGMENT-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "174efbd9c14a4dc65609ccbd6a4e6745e12cb257e8d8307bf12f31edc873c89a",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-JUDGMENT-001_v1.0.0.pdf",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-JUDGMENT-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 37259,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "666db90240672939cf60932b37c403135386c9cf",
+      "member": "sources/docs/j2/publications/666db9024067/SH-J2-JUDGMENT-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "85fd825e6c4195073c0bddbafb93a03bf0e1b1802449f6f23bcedbc661094886",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-JUDGMENT-001_v1.0.0.pdf",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-JUDGMENT-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 50353,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "eab7b98778b07fd1da01b07c8c2d2cc95387b1e0",
+      "member": "sources/docs/j2/publications/eab7b98778b0/SH-J2-OO-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "7f2d220b1c4d04f041c8213d3166791476197d7002ae56cc8ecb53d797033d04",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-OO-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-OO-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 41583,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "11d94c3ac2af63e5848d685ca9d3d33df1df2769",
+      "member": "sources/docs/j2/publications/11d94c3ac2af/SH-J2-OPS-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "3f2426f40b0da46789db73c6786e4d98414227304e8cfb00c0e623ed9f797524",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-OPS-001_v1.0.0.pdf",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-OPS-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 41582,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "2003142197ea908fc673951f78bef548703f4fbb",
+      "member": "sources/docs/j2/publications/2003142197ea/SH-J2-OPS-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "524b2bfbfb74ef6dbbbb87a90f78efbb43be2dc882d596105b31f242b7c937ab",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-OPS-001_v1.0.0.pdf",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-OPS-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 41813,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "27ffa8a747abf3003dc48b2e26c615bd38d0ca95",
+      "member": "sources/docs/j2/publications/27ffa8a747ab/SH-J2-OPS-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "764abbb92e2af40f9e6a477f2ec14403236d7475a05e4478e1aa8812b9b96552",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-OPS-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-OPS-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 46585,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "69684b8067fe979c2f1e4cc19cbca1e3fc3df28a",
+      "member": "sources/docs/j2/publications/69684b8067fe/SH-J2-ORIENT-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "8c4a2f1f76826c853761c9ddb0bbf5085c38e2f5f229b5132f8d25934e49c567",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-ORIENT-001_v1.0.0.pdf",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-ORIENT-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 46231,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "96a291687947bc230d31fe8ad62e0c60e299c328",
+      "member": "sources/docs/j2/publications/96a291687947/SH-J2-ORIENT-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "0a6ec2db14d5ee338d5d8d8a749bf0f59e3f8cf92d103ef451a2867094cf7cb1",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-ORIENT-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-ORIENT-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 46586,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "ff94e855b5c800bb55f683f3078d07e39390ba79",
+      "member": "sources/docs/j2/publications/ff94e855b5c8/SH-J2-ORIENT-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "169c4851c9c22a68e31dc3a7061de699555865b49d555b1c8206ddfabc429959",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-ORIENT-001_v1.0.0.pdf",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-ORIENT-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 47424,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "183e530417b2cf6a578ac3dda839a21e715482e8",
+      "member": "sources/docs/j2/publications/183e530417b2/SH-J2-PINAKES-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "6ad1db9f2ac49140e99254c788c47eb46fb9b2413f7c06827016f5cdcd63b1dd",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-PINAKES-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-PINAKES-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 47191,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "5d99f9f8c93fc4d3169524fd2de7ef1c22cc85f1",
+      "member": "sources/docs/j2/publications/5d99f9f8c93f/SH-J2-PINAKES-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "30f287abdd6bb240cd7fa5f0b12fe3d4d2e109ed0a3a8884d8602f2e7bf1c8b0",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-PINAKES-001_v1.0.0.pdf",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-PINAKES-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 47192,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "ca58b6bb2165ea3a9f80338f517227f33c9185db",
+      "member": "sources/docs/j2/publications/ca58b6bb2165/SH-J2-PINAKES-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "8af5f95968e8e4c6e400d68b510f5d751fa504bbb03afa90eafc70c90169a2ef",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-PINAKES-001_v1.0.0.pdf",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-PINAKES-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 34262,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "410ed503f3b9a9d9b4cf7026423b197a35f55b0f",
+      "member": "sources/docs/j2/publications/410ed503f3b9/SH-J2-SEMAPHORE-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "28720a83a81ee09df4ccef259993288bc317f0fd5bb83ca83a1b609076fd5ef8",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-SEMAPHORE-001_v1.0.0.pdf",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-SEMAPHORE-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 34417,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "53b7d1347b6f98e41e485c12516e5c477fafa65f",
+      "member": "sources/docs/j2/publications/53b7d1347b6f/SH-J2-SEMAPHORE-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "eaf24fb7a6196872fd3e491bed9206ececdb6dfae986b89c99eee3c6afa7de6e",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-SEMAPHORE-001_v1.0.0.pdf",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-SEMAPHORE-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 34276,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "d8f95c39c1130e6c7f8be42988f5cc3c7f39f38b",
+      "member": "sources/docs/j2/publications/d8f95c39c113/SH-J2-SEMAPHORE-001_v1.0.0.pdf",
+      "role": "generated_publication",
+      "scenario": "synthetic_company_history",
+      "sha256": "57e180b3d403d52c48e033d4a568ef0489866785096c71d4deabbe11bb6010ed",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "docs/j2/publications/SH-J2-SEMAPHORE-001_v1.0.0.pdf",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/publications/SH-J2-SEMAPHORE-001_v1.0.0.pdf"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 4791,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "2115c437a33ce3295bc7f5b806ef90261deb44b5",
+      "member": "sources/docs/j2/structured/2115c437a33c/pinakes_portals.json",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "d4f4d5ca34f20024fa7ce4aefda40d392e3757271cc1ffbb5fb4b2fda4177b0e",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/j2/structured/pinakes_portals.json",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/j2/structured/pinakes_portals.json"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 1411,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "c5e2b2ff9a4d4f0834b5b0757ffd4e720a2bd126",
+      "member": "sources/docs/organization/c5e2b2ff9a4d/J2_ORGANIZATION.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "9230bb298ae27fff0ae9c0e3ade8db2bf0feeddad003391cf9f35e2c63b35af6",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/organization/J2_ORGANIZATION.md",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/organization/J2_ORGANIZATION.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 3345,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "94555df476cb1a1f0a3266b439efef7fb2fa967c",
+      "member": "sources/docs/organization/94555df476cb/README.md",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "ad112124578da1a585012b862ca7c2992b7a2acd810d95649222859da93fddb2",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "docs/organization/README.md",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "docs/organization/README.md"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 4663,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "01673f76f4407e67a291c9720863a21aaec7a8eb",
+      "member": "sources/scripts/01673f76f440/validate_governance_j2.py",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "587a9a27c541c5b24019b8008f113f7d420c525b0a7d68de714b25cd532d72bb",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "scripts/validate_governance_j2.py",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "scripts/validate_governance_j2.py"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 5419,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "a21c189a1f06e849525a4fa3007fe1f18e230d8f",
+      "member": "sources/scripts/a21c189a1f06/validate_governance_j2.py",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "2bbbba03894ee1b094311999ece80834786892e3f85aa3d149ee25189d79fcf9",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "scripts/validate_governance_j2.py",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "scripts/validate_governance_j2.py"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 3309,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "dad1e1c698fbd419228237a2061bbd389416941c",
+      "member": "sources/scripts/dad1e1c698fb/validate_governance_j2.py",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "1e6cdd63422f5938bbfe6d1228e44f23485565f2e523712f2f4eaa37c1c0b474",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "scripts/validate_governance_j2.py",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "scripts/validate_governance_j2.py"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 2249,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "719014553fe7f5ee84c51b0bcb66b2fe97422772",
+      "member": "sources/scripts/719014553fe7/validate_repository_hygiene.py",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "ef6bf32856787d5d43c1031ee3c7dc02031c558f2cd403549ba859d05a860112",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "scripts/validate_repository_hygiene.py",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "scripts/validate_repository_hygiene.py"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 5949,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "43f4344db93ecb7a2122935d7e24d56cd1dc76cc",
+      "member": "sources/tools/documents/43f4344db93e/build_controlled_publications.py",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "1df326bd9f58b03895a4e7c1f15db7342fdb2bd478e39eea0f2008b15fe771b6",
+      "source_commits": [
+        {
+          "commit": "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+          "date": "2026-09-03",
+          "path": "tools/documents/build_controlled_publications.py",
+          "subject": "Integrate governance J2 and Alexandria canon"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "tools/documents/build_controlled_publications.py"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 6721,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "8e0deae62fe55e86d905c39711ef50983d6dab38",
+      "member": "sources/tools/documents/8e0deae62fe5/build_controlled_publications.py",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "f2bed39932b1762e6d63245420e70ea8d47eeb251b3ca9a70200ea6dadc22b8c",
+      "source_commits": [
+        {
+          "commit": "626db32ae72c6058de5f84eb02cc292574388cec",
+          "date": "2026-09-03",
+          "path": "tools/documents/build_controlled_publications.py",
+          "subject": "Complete governance publication and repository hygiene"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "tools/documents/build_controlled_publications.py"
+    },
+    {
+      "accepted_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 8547,
+      "completeness": "filtered_unique_blobs_from_four_September_3_commits",
+      "current_path_blob_oid": null,
+      "current_path_exists": false,
+      "git_blob_oid": "d34e627384f6f472d83099d7030b7798c2de1bac",
+      "member": "sources/tools/documents/d34e627384f6/build_controlled_publications.py",
+      "role": "historical_source_or_tool",
+      "scenario": "synthetic_company_history",
+      "sha256": "4c519d85c27c77ec036cafdb38e4d915e55deb50e7712ad8fb2619161b917445",
+      "source_commits": [
+        {
+          "commit": "a1113da8add1aad755dde578723026b06bde25f4",
+          "date": "2026-09-03",
+          "path": "tools/documents/build_controlled_publications.py",
+          "subject": "Expand Phase 2 governance and J2 doctrine coverage"
+        }
+      ],
+      "source_date": "2026-09-03",
+      "source_path": "tools/documents/build_controlled_publications.py"
+    }
+  ],
+  "member_bytes": 3397444,
+  "record_id": "SH-GOV-J2-LOCAL-HISTORY-2026-09-03",
+  "sensitivity_review": "Text and pdftotext scan for email, credential, private contact and answer-key terms returned no matches; still historical and not current authority.",
+  "source_commits": [
+    "626db32ae72c6058de5f84eb02cc292574388cec",
+    "89cc0a2f1711839d115f6b18a0c1a2659ac42533",
+    "a1113da8add1aad755dde578723026b06bde25f4",
+    "c6ff7b017c3ec48029bf991abfc148281ae54b63"
+  ],
+  "source_date": "2026-09-03",
+  "source_kind": "four_unaccepted_local_worktree_commits"
+}
