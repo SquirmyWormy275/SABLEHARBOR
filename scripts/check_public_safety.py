@@ -54,7 +54,7 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # evidence packages, 237 artifacts and one evidence link are exact-equal.
     # Both databases pass SQLite quick_check and foreign-key verification.
     # The historical finance readiness intake adds one original PDF and one
-    # historical guide: 1,700 -> 1,701 reader files against accepted cdb33b6.
+    # historical guide: 1,699 -> 1,701 reader files against accepted cdb33b6.
     # The 148 institutional objects/publication pairs, 294 relationships,
     # 384 counterpart rows, 12 evidence packages and 237 artifacts are
     # unchanged; SQLite quick_check and foreign keys pass. No controlled
