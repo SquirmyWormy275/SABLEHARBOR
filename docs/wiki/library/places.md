@@ -89,6 +89,10 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 
 - [Facility coverage matrix](../../../geospatial/facilities/coverage/COVERAGE_MATRIX.md) — MD
 
+## `geospatial/facilities/history/staged-workline-2026-09-11`
+
+- [September 11 staged facility workline — historical recovery](../../../geospatial/facilities/history/staged-workline-2026-09-11/README.md) — MD
+
 ## `geospatial/facilities/population`
 
 - [Headcount, occupancy and space bridge](../../../geospatial/facilities/population/BRIDGE.md) — MD

@@ -53,10 +53,15 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # 148 publication pairs, 294 relationships, 384 counterpart rows, 12
     # evidence packages, 237 artifacts and one evidence link are exact-equal.
     # Both databases pass SQLite quick_check and foreign-key verification.
+    # The historical staged facilities workline then adds one reader README
+    # (1,699 -> 1,700) on accepted main cdb33b6c. All 148 institutional
+    # objects/publication pairs, 294 relationships, 384 counterpart rows,
+    # 12 evidence packages, 237 artifacts and the evidence link remain
+    # logically exact-equal; SQLite quick_check and foreign keys pass.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        15599616,
-        "fa19d1a9e36cbabe91d7516726eebebb2cdd382f98210e7d3a7004d23ba27f94",
+        15611904,
+        "93825f97b636449f829d54d1f7ebc13524fbfb140dcb09a4c2c462334e70315b",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.
