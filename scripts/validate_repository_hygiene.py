@@ -47,6 +47,20 @@ if ingestion.is_file():
             fail(f'ingested handoff checksum drift: {artifact["repository_path"]}')
         if artifact['classification'] == 'EDITORIAL_HANDOFF_PROVENANCE':
             editorial_sources.add(artifact['repository_path'])
+# The September 9 organization proposal preserves wording later removed
+# from current company charts. Its exact originals remain dated drafts.
+org_draft_root = 'docs/organization/history/2026-09-09-draft'
+org_draft_manifest = R / org_draft_root / 'SOURCE_MANIFEST.json'
+if org_draft_manifest.is_file():
+    for artifact in json.loads(org_draft_manifest.read_text())['files']:
+        rel = f"{org_draft_root}/original/{artifact['name']}"
+        path = R / rel
+        if not path.resolve().is_relative_to((R / org_draft_root / 'original').resolve()):
+            fail(f'organization draft member outside historical scope: {rel}')
+            continue
+        if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != artifact['sha256']:
+            fail(f'organization draft checksum drift: {rel}')
+        editorial_sources.add(rel)
 # The September 11 estate ZIP is an exact historical draft. Its original
 # README links to three companion files that the recovery manifest expressly
 # marks missing; changing those bytes would destroy the source receipt.

@@ -72,10 +72,14 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # reader rows (1,707 -> 1,709) on the R1 predecessor. All seven
     # non-reader tables remain exact-equal; SQLite integrity and foreign keys
     # pass. This does not approve modeled budgets or alter current services.
+    # The September 9 proposed organization history adds four reader rows
+    # (1,709 -> 1,713, including two PDFs). The seven non-reader tables
+    # remain exact-equal; SQLite integrity and foreign keys pass. The
+    # proposal does not revise the accepted current organization chart.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        15882240,
-        "5144871885a342c6053055f00a4eb82979b8e6d3ef30c9ddbf78d13ec23176c3",
+        16005120,
+        "9be16ec91d3b49957cb6e24d2dd5f4f1be1e5097948cb7a7d5f9f6d5d9daad4a",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.

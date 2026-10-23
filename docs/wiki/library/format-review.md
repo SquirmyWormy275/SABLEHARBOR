@@ -6,11 +6,11 @@ This list helps maintainers check which source documents have formatted companio
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 457 |
+| COUNTERPART_REVIEW_REQUIRED | 458 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 101 |
-| READER_OR_MAINTENANCE_PAGE | 215 |
+| READER_OR_MAINTENANCE_PAGE | 216 |
 | UNRESOLVED_DOCUMENT_COUNTERPART | 218 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_DOCUMENT_PAIR | 148 |
@@ -272,6 +272,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Research artifacts](../../organization/charts/research-artifacts.md) — Corporate document-format reconciliation
 - [Research history](../../organization/charts/research-history.md) — Corporate document-format reconciliation
 - [Willow and the Fort](../../organization/charts/willow-fort.md) — Corporate document-format reconciliation
+- [Sable Harbor organization chart review](../../organization/history/2026-09-09-draft/original/Sable-Harbor-Org-Chart-Wording-Review.md) — Corporate document-format reconciliation
 - [Closeout evidence releases](../../releases/CLOSEOUT_EVIDENCE_RELEASES.md) — Corporate document-format reconciliation
 - [Company edition releases](../../releases/COMPANY_EDITION_RELEASES.md) — Corporate document-format reconciliation
 - [Facility atlas controlled releases](../../releases/FACILITY_ATLAS_RELEASES.md) — Corporate document-format reconciliation
