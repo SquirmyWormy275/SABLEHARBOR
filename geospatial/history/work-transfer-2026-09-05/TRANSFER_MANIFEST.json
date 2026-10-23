@@ -1,0 +1,39 @@
+{
+  "package": "SABLE HARBOR unified Work handover",
+  "source_handover_date": "2026-09-05",
+  "prompt": "SABLE_HARBOR_Unified_Work_Super_Prompt.md",
+  "original_program_sections": 49,
+  "added_transfer_context_section": 0,
+  "original_program_body_verification": "Exact match after removing the added transfer section and title suffix; original code-fence wrappers excluded; shared historical-railroad-maps bullet at the section 15 split retained once in its completed form.",
+  "source_files": [
+    {
+      "filename": "Pasted markdown(2).md",
+      "sha256": "6a19d5fd39614e7d142a4c3b5b8e3a0a5f2dde082fbac0dbc891af81652f4ab2",
+      "bytes": 20652
+    },
+    {
+      "filename": "Pasted text (2).txt",
+      "sha256": "656f29ce220d4d508195fd19cd9f903a889e93d75022c6e3bc2bf273a13b6ff9",
+      "bytes": 51185
+    }
+  ],
+  "files": [
+    {
+      "path": "SABLE_HARBOR_Unified_Work_Super_Prompt.md",
+      "sha256": "d49a4f30625aae0220b6d252c9f75c4e746099273c5a2dee2800caf934a1f991",
+      "bytes": 78334
+    },
+    {
+      "path": "source_assets/red_wash__site_overview.png",
+      "sha256": "8dbb0053c4a563d57d5a24be4f4687dc11e2e00e2b1e62c279d9be945f68d77a",
+      "bytes": 3230867
+    },
+    {
+      "path": "source_assets/red_wash__underground_plan.png",
+      "sha256": "0658de3b7c63ecc9757b545f29895eab51801b2148cb3862935620b6049a7dda",
+      "bytes": 2401412
+    }
+  ],
+  "repository_execution_performed": false,
+  "geographic_conflict_resolution_performed": false
+}

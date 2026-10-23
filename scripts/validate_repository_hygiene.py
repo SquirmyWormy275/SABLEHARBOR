@@ -25,6 +25,16 @@ for manifest_path, key, path_key in [
         if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != artifact['sha256']:
             fail(f'historical source checksum drift: {artifact[path_key]}')
         historical_context[artifact[path_key]] = R / artifact['original_path']
+geo_preview_manifest = R / 'geospatial/history/v1.5.0-previews-2026-10-03/SOURCE_MANIFEST.json'
+if geo_preview_manifest.is_file():
+    for relative, artifact in json.loads(geo_preview_manifest.read_text())['tracked_originals'].items():
+        rel = 'geospatial/history/v1.5.0-previews-2026-10-03/' + relative
+        path = R / rel
+        if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != artifact['sha256']:
+            fail(f'historical geographic preview checksum drift: {rel}')
+        source_member = artifact['source_member']
+        if source_member.startswith('supplement/'):
+            historical_context[rel] = R / source_member.removeprefix('supplement/')
 editorial_sources = set()
 geo_preservation = R / 'geospatial/history/PRESERVATION_MANIFEST.json'
 if geo_preservation.is_file():
@@ -76,6 +86,28 @@ if office_manifest.is_file():
         if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != artifact['sha256']:
             fail(f'office historical source checksum drift: {rel}')
         editorial_sources.add(rel)
+# The completed-period predecessor keeps its original relative-link context.
+# Verify this exact two-member intake before resolving historical source links;
+# current guides and all unmanifested Markdown remain fully checked.
+operations_history = R / 'docs/internal/repository-history/local-worktree-2026-10-01-03/MANIFEST.json'
+operations_context = {
+    'docs/internal/repository-history/local-worktree-2026-10-01-03/gitignore.original.txt': '.gitignore',
+    'enterprise/operations/docs/history/completed-period-2026-10-03.original.md': 'enterprise/operations/docs/completed-period.md',
+}
+if operations_history.is_file():
+    items = json.loads(operations_history.read_text())['items']
+    if len(items) != 2 or {item['destination'] for item in items} != set(operations_context):
+        fail('operations historical source membership drift')
+    for item in items:
+        rel = item['destination']
+        if operations_context.get(rel) != item['source_path']:
+            fail(f'operations historical source context drift: {rel}')
+            continue
+        path = R / rel
+        if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != item['sha256']:
+            fail(f'operations historical source checksum drift: {rel}')
+            continue
+        historical_context[rel] = R / item['source_path']
 for rel in tracked:
     p=R/rel
     if not p.exists(): continue
