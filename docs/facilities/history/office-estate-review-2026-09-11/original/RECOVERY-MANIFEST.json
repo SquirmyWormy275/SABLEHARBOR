@@ -1,0 +1,65 @@
+{
+  "recovered_at_utc": "2026-09-11T16:43:15.312791+00:00",
+  "base_sha": "2b52933132e028bf5d9c9a8c151bb45cb0f19597",
+  "source_path": "/workspace/scratch/d96093f0ceb0/SABLEHARBOR-estate/docs/internal/development/estate-2026-09-11",
+  "local_branch": "planning/enterprise-estate-2026-09-11",
+  "git_status": "?? docs/internal/development/estate-2026-09-11/\n",
+  "source_hashes_verified": 113,
+  "missing_draft_companions": [
+    "SOURCES.md",
+    "IMPLEMENTATION.md",
+    "VALIDATION.md"
+  ],
+  "original_files": [
+    {
+      "path": "recovered-draft/README.md",
+      "bytes": 24436,
+      "sha256": "24da0bd3a4ec4b3199ba2614f4b10c402a47534ec0dfbc082842f4d55d8895f4"
+    },
+    {
+      "path": "recovered-draft/build_review.py",
+      "bytes": 14457,
+      "sha256": "8dd31552ff175469d978bb8b48ed7f2bd6a6dca113f05309129b763da39df4b0"
+    },
+    {
+      "path": "recovered-draft/capacity-cost-bridge.csv",
+      "bytes": 817,
+      "sha256": "56034a30c89d87eeb8615254f8a4ef36c994dbe52ae642783db8d0193d81892a"
+    },
+    {
+      "path": "recovered-draft/capacity-cost-bridge.json",
+      "bytes": 18491,
+      "sha256": "6378abddeee0ee77a4606f3739900151c389d40b7b3217f5f6fff464255ae2f0"
+    },
+    {
+      "path": "recovered-draft/estate-proposal.json",
+      "bytes": 47259,
+      "sha256": "244e148fe63c3eec805011a5ace9025c0dc071414e8fd05d7f889cf3904d9bc8"
+    },
+    {
+      "path": "recovered-draft/gap-inventory.csv",
+      "bytes": 183224,
+      "sha256": "55c0741d4d3f23d8b6cf4d58a0daf8f8db49975b49885646e6b34d0ec81669f7"
+    },
+    {
+      "path": "recovered-draft/gap-inventory.json",
+      "bytes": 932673,
+      "sha256": "cd1a42a5f3f8f1ec1054b809c422cba30cafd0a2f5abf497b9cd5c7d4001faa0"
+    },
+    {
+      "path": "recovered-draft/office-remit-register.json",
+      "bytes": 149744,
+      "sha256": "6c641a7e7834fa0e88e07771fb26d069d2029df1593a8ec0624800375c121827"
+    },
+    {
+      "path": "recovered-draft/review-summary.json",
+      "bytes": 753,
+      "sha256": "ae565756a951409df4cd270648037c99956d5602deb8b022b282697c416f98a8"
+    },
+    {
+      "path": "recovered-draft/source-review.json",
+      "bytes": 401898,
+      "sha256": "a2873f62834bfaa53c426a569cc6a7c692f28aa1e58a3e392bb11a46d8a46821"
+    }
+  ]
+}

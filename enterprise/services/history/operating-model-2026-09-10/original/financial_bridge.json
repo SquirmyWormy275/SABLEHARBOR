@@ -1,0 +1,518 @@
+{
+  "approved_offsets": {
+    "facility_overlap_approved_usd": null,
+    "product_compute_overlap_approved_usd": null,
+    "reusable_labor_approved_fte": null,
+    "vendor_overlap_approved_usd": null
+  },
+  "approved_successor_net_incremental_usd": null,
+  "baseline": {
+    "corporate_facilities_annual_usd": 1140000,
+    "ess_annual_payroll_usd": 6720000,
+    "generic_vendor_annual_usd": 216000
+  },
+  "cost_mapping": [
+    {
+      "scope": "Enterprise SaaS/tooling",
+      "treatment": "Replacement candidate for mapped generic vendor allowance; no automatic full 216000 credit."
+    },
+    {
+      "scope": "Shared technology labor",
+      "treatment": "Reallocate documented existing payroll first; only evidenced residual need becomes proposed hiring."
+    },
+    {
+      "scope": "Data-center hardware/facility/recovery",
+      "treatment": "Separate capital and operating costs; existing 95000/month corporate allowance stays assigned to offices until proven overlap."
+    },
+    {
+      "scope": "Product compute",
+      "treatment": "Bridge from actual generated business-engine cost rows by unit and period; input exposure is not deducted as a booked expense."
+    },
+    {
+      "scope": "ARU service to Red Wash",
+      "treatment": "Allocate internal service once and eliminate intercompany charges at consolidation."
+    }
+  ],
+  "dedicated_unshared_positions_year1": 39,
+  "frozen_releases_edited": false,
+  "net_status": "BLOCKED_UNTIL_COST_OVERLAP_AND_STAFF_REUSE_ARE_EVIDENCED",
+  "nominal_product_compute_exposure": {
+    "rows": [
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-001",
+        "nominal_compute_input_usd": "28800.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-002",
+        "nominal_compute_input_usd": "36000.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-003",
+        "nominal_compute_input_usd": "43200.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-004",
+        "nominal_compute_input_usd": "21600.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-005",
+        "nominal_compute_input_usd": "28800.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-006",
+        "nominal_compute_input_usd": "36000.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-007",
+        "nominal_compute_input_usd": "43200.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-008",
+        "nominal_compute_input_usd": "21600.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-009",
+        "nominal_compute_input_usd": "28800.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-010",
+        "nominal_compute_input_usd": "36000.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-011",
+        "nominal_compute_input_usd": "43200.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-012",
+        "nominal_compute_input_usd": "21600.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-013",
+        "nominal_compute_input_usd": "28800.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-014",
+        "nominal_compute_input_usd": "36000.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-015",
+        "nominal_compute_input_usd": "43200.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-016",
+        "nominal_compute_input_usd": "21600.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-017",
+        "nominal_compute_input_usd": "28800.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-018",
+        "nominal_compute_input_usd": "36000.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-019",
+        "nominal_compute_input_usd": "43200.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-020",
+        "nominal_compute_input_usd": "21600.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-021",
+        "nominal_compute_input_usd": "28800.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-022",
+        "nominal_compute_input_usd": "36000.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-023",
+        "nominal_compute_input_usd": "43200.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-024",
+        "nominal_compute_input_usd": "21600.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-025",
+        "nominal_compute_input_usd": "28800.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-026",
+        "nominal_compute_input_usd": "36000.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-027",
+        "nominal_compute_input_usd": "43200.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-028",
+        "nominal_compute_input_usd": "21600.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-029",
+        "nominal_compute_input_usd": "28800.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-030",
+        "nominal_compute_input_usd": "36000.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-031",
+        "nominal_compute_input_usd": "43200.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-032",
+        "nominal_compute_input_usd": "21600.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-033",
+        "nominal_compute_input_usd": "28800.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-034",
+        "nominal_compute_input_usd": "36000.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-035",
+        "nominal_compute_input_usd": "43200.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "FF-036",
+        "nominal_compute_input_usd": "21600.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 6,
+        "contract_id": "FF-037",
+        "nominal_compute_input_usd": "14400.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 5,
+        "contract_id": "FF-038",
+        "nominal_compute_input_usd": "15000.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 4,
+        "contract_id": "FF-039",
+        "nominal_compute_input_usd": "14400.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 3,
+        "contract_id": "FF-040",
+        "nominal_compute_input_usd": "5400.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 2,
+        "contract_id": "FF-041",
+        "nominal_compute_input_usd": "4800.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 1,
+        "contract_id": "FF-042",
+        "nominal_compute_input_usd": "3000.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 0,
+        "contract_id": "FF-043",
+        "nominal_compute_input_usd": "0.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 0,
+        "contract_id": "FF-044",
+        "nominal_compute_input_usd": "0.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 0,
+        "contract_id": "FF-045",
+        "nominal_compute_input_usd": "0.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 0,
+        "contract_id": "FF-046",
+        "nominal_compute_input_usd": "0.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 0,
+        "contract_id": "FF-047",
+        "nominal_compute_input_usd": "0.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 0,
+        "contract_id": "FF-048",
+        "nominal_compute_input_usd": "0.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 0,
+        "contract_id": "FF-049",
+        "nominal_compute_input_usd": "0.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 0,
+        "contract_id": "FF-050",
+        "nominal_compute_input_usd": "0.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 0,
+        "contract_id": "FF-051",
+        "nominal_compute_input_usd": "0.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 0,
+        "contract_id": "FF-052",
+        "nominal_compute_input_usd": "0.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 0,
+        "contract_id": "FF-053",
+        "nominal_compute_input_usd": "0.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 0,
+        "contract_id": "FF-054",
+        "nominal_compute_input_usd": "0.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 0,
+        "contract_id": "FF-055",
+        "nominal_compute_input_usd": "0.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 0,
+        "contract_id": "FF-056",
+        "nominal_compute_input_usd": "0.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 0,
+        "contract_id": "FF-057",
+        "nominal_compute_input_usd": "0.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 0,
+        "contract_id": "FF-058",
+        "nominal_compute_input_usd": "0.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 0,
+        "contract_id": "FF-059",
+        "nominal_compute_input_usd": "0.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 0,
+        "contract_id": "FF-060",
+        "nominal_compute_input_usd": "0.00",
+        "unit": "foundry-field"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "ATL-LIC-001",
+        "nominal_compute_input_usd": "16800.00",
+        "unit": "atlas-meridian"
+      },
+      {
+        "active_input_months_year1": 11,
+        "contract_id": "ATL-LIC-002",
+        "nominal_compute_input_usd": "17600.00",
+        "unit": "atlas-meridian"
+      },
+      {
+        "active_input_months_year1": 10,
+        "contract_id": "ATL-LIC-003",
+        "nominal_compute_input_usd": "18000.00",
+        "unit": "atlas-meridian"
+      },
+      {
+        "active_input_months_year1": 9,
+        "contract_id": "ATL-LIC-004",
+        "nominal_compute_input_usd": "10800.00",
+        "unit": "atlas-meridian"
+      },
+      {
+        "active_input_months_year1": 8,
+        "contract_id": "ATL-LIC-005",
+        "nominal_compute_input_usd": "11200.00",
+        "unit": "atlas-meridian"
+      },
+      {
+        "active_input_months_year1": 7,
+        "contract_id": "ATL-LIC-006",
+        "nominal_compute_input_usd": "11200.00",
+        "unit": "atlas-meridian"
+      },
+      {
+        "active_input_months_year1": 6,
+        "contract_id": "ATL-LIC-007",
+        "nominal_compute_input_usd": "10800.00",
+        "unit": "atlas-meridian"
+      },
+      {
+        "active_input_months_year1": 5,
+        "contract_id": "ATL-LIC-008",
+        "nominal_compute_input_usd": "6000.00",
+        "unit": "atlas-meridian"
+      },
+      {
+        "active_input_months_year1": 4,
+        "contract_id": "ATL-LIC-009",
+        "nominal_compute_input_usd": "5600.00",
+        "unit": "atlas-meridian"
+      },
+      {
+        "active_input_months_year1": 3,
+        "contract_id": "ATL-LIC-010",
+        "nominal_compute_input_usd": "4800.00",
+        "unit": "atlas-meridian"
+      },
+      {
+        "active_input_months_year1": 2,
+        "contract_id": "ATL-LIC-011",
+        "nominal_compute_input_usd": "3600.00",
+        "unit": "atlas-meridian"
+      },
+      {
+        "active_input_months_year1": 1,
+        "contract_id": "ATL-LIC-012",
+        "nominal_compute_input_usd": "1200.00",
+        "unit": "atlas-meridian"
+      },
+      {
+        "active_input_months_year1": 12,
+        "contract_id": "ATL-LIC-013",
+        "nominal_compute_input_usd": "16800.00",
+        "unit": "atlas-meridian"
+      },
+      {
+        "active_input_months_year1": 11,
+        "contract_id": "ATL-LIC-014",
+        "nominal_compute_input_usd": "17600.00",
+        "unit": "atlas-meridian"
+      },
+      {
+        "active_input_months_year1": 10,
+        "contract_id": "ATL-LIC-015",
+        "nominal_compute_input_usd": "18000.00",
+        "unit": "atlas-meridian"
+      }
+    ],
+    "state": "NOMINAL_INPUT_EXPOSURE_BEFORE_CHURN_RENEWAL_AND_ENGINE_ADJUSTMENTS_NOT_BOOKED_COST",
+    "total_usd": "1393400.00"
+  },
+  "original_assets_edited": false,
+  "original_policy_edited": false,
+  "reuse_sensitivity": [
+    {
+      "hypothetical_reuse_fte": 0,
+      "illustrative_additional_capacity_fte": "34.1539",
+      "lower_bound_positions_if_fully_cross_qualified": 35,
+      "state": "SCENARIO_NOT_OCCUPIED_OR_APPROVED"
+    },
+    {
+      "hypothetical_reuse_fte": 8,
+      "illustrative_additional_capacity_fte": "26.1539",
+      "lower_bound_positions_if_fully_cross_qualified": 27,
+      "state": "SCENARIO_NOT_OCCUPIED_OR_APPROVED"
+    },
+    {
+      "hypothetical_reuse_fte": 16,
+      "illustrative_additional_capacity_fte": "18.1539",
+      "lower_bound_positions_if_fully_cross_qualified": 19,
+      "state": "SCENARIO_NOT_OCCUPIED_OR_APPROVED"
+    }
+  ],
+  "source_state": "CONDITIONAL_FORECAST"
+}

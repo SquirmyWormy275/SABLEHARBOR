@@ -264,6 +264,16 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 - [Research history](../../organization/charts/research-history.md) — MD
 - [Willow and the Fort](../../organization/charts/willow-fort.md) — MD
 
+## `docs/organization/history/2026-09-09-draft`
+
+- [September 9 organization chart draft package](../../organization/history/2026-09-09-draft/README.md) — MD
+
+## `docs/organization/history/2026-09-09-draft/original`
+
+- [Sable-Harbor-Org-Chart-Mockups](../../organization/history/2026-09-09-draft/original/Sable-Harbor-Org-Chart-Mockups.pdf) — PDF
+- [Sable Harbor organization chart review](../../organization/history/2026-09-09-draft/original/Sable-Harbor-Org-Chart-Wording-Review.md) — MD
+- [Sable-Harbor-Org-Chart-Wording-Review](../../organization/history/2026-09-09-draft/original/Sable-Harbor-Org-Chart-Wording-Review.pdf) — PDF
+
 ## `docs/organization/history/v0.3.0`
 
 - [SABLE HARBOR — LEADERSHIP & AUTHORITY](../../organization/history/v0.3.0/2026_LEADERSHIP_AND_AUTHORITY_MAP.md) — MD

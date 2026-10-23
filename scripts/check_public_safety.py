@@ -53,16 +53,37 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # 148 publication pairs, 294 relationships, 384 counterpart rows, 12
     # evidence packages, 237 artifacts and one evidence link are exact-equal.
     # Both databases pass SQLite quick_check and foreign-key verification.
-    # The unadopted October 2 encoder experiment adds two historical README
-    # reader rows (1,699 -> 1,701) on accepted main cdb33b6c. The original
-    # Python source is preserved but not a current execution route. All 148
-    # institutional objects/publication pairs, 294 relationships, 384
-    # counterpart rows, 12 evidence packages, 237 artifacts and the evidence
-    # link remain logically exact-equal. SQLite quick_check and foreign keys
-    # pass. Exact bytes only; later drift requires another hash review.
+    # The historical staged facilities workline then adds one reader README
+    # (1,699 -> 1,700) on accepted main cdb33b6c. All 148 institutional
+    # objects/publication pairs, 294 relationships, 384 counterpart rows,
+    # 12 evidence packages, 237 artifacts and the evidence link remain
+    # logically exact-equal; SQLite quick_check and foreign keys pass.
+    # The recovered September 11 office-estate draft adds four historical
+    # Markdown source/guide rows (1,700 -> 1,704) against accepted main
+    # 53720c58. All 148 institutional objects/publication pairs, 294
+    # relationships, 384 counterpart rows, 12 evidence packages, 237
+    # artifacts and the evidence link remain logically exact-equal. SQLite
+    # quick_check and foreign keys pass. No publication was generated.
+    # The historical September 5 industrial R1 handoff adds three reader
+    # Markdown rows (1,704 -> 1,707) against accepted main 115763b0. All
+    # seven non-reader catalog tables remain exact-equal; SQLite integrity
+    # and foreign-key checks pass. Current industrial authority is unchanged.
+    # The September 10 service operating-model history adds two Markdown
+    # reader rows (1,707 -> 1,709) on the R1 predecessor. All seven
+    # non-reader tables remain exact-equal; SQLite integrity and foreign keys
+    # pass. This does not approve modeled budgets or alter current services.
+    # The September 9 proposed organization history adds four reader rows
+    # (1,709 -> 1,713, including two PDFs). The seven non-reader tables
+    # remain exact-equal; SQLite integrity and foreign keys pass. The
+    # proposal does not revise the accepted current organization chart.
+    # The October 2 unadopted encoder experiment adds two historical
+    # Markdown reader rows (1,713 -> 1,715). The seven non-reader tables
+    # remain exact-equal; SQLite integrity and foreign keys pass. This does
+    # not change the accepted canonical codec or signed workroom histories.
+    # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        15605760,
-        "fdce39b7d31d32ad03bacfdbcb227dc98dc48d6a02ae758f5d973d3bd1ec30d2",
+        16011264,
+        "c59adc27cdc68fcd2d57d1b5b05b37a402420412b290d844487a6646a35cb8ff",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.
