@@ -47,10 +47,16 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # are exact-equal. One historical README is added to reader inventory
     # (1,694 -> 1,695); four changed guide/source rows refresh. SQLite
     # quick_check and foreign keys pass. No controlled publication changes.
+    # The Advisory proposal adds two historical READMEs and two byte-distinct
+    # original PDFs to the reader inventory (1,695 -> 1,699). Against the
+    # accepted geospatial predecessor catalog at ce8df6c2, all 148 objects,
+    # 148 publication pairs, 294 relationships, 384 counterpart rows, 12
+    # evidence packages, 237 artifacts and one evidence link are exact-equal.
+    # Both databases pass SQLite quick_check and foreign-key verification.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        15583232,
-        "68b8f4c3ae96aa3402c8f709934edfda8cdddf94434bfd4cd8024bca931a54e6",
+        15599616,
+        "fa19d1a9e36cbabe91d7516726eebebb2cdd382f98210e7d3a7004d23ba27f94",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.
