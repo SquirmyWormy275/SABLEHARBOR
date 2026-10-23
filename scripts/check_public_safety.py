@@ -53,10 +53,15 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # 148 publication pairs, 294 relationships, 384 counterpart rows, 12
     # evidence packages, 237 artifacts and one evidence link are exact-equal.
     # Both databases pass SQLite quick_check and foreign-key verification.
-    # Exact bytes only; later drift requires another hash review.
+    # The four exact September 14–15 company closeout/voice originals and
+    # their guide add five historical Markdown reader files: 1,699 -> 1,704.
+    # The 148 institutional objects/publication pairs, 294 relationships,
+    # 384 counterpart rows, 12 evidence packages and 237 artifacts remain.
+    # No controlled publication was generated. SQLite quick_check and foreign
+    # keys pass. Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        15599616,
-        "fa19d1a9e36cbabe91d7516726eebebb2cdd382f98210e7d3a7004d23ba27f94",
+        15876096,
+        "61b8529bd1024cfe10cd6e0f6e5ba5bc094d31f170f3d8c17334a4f2399a04f2",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.

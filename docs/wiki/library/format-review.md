@@ -6,11 +6,11 @@ This list helps maintainers check which source documents have formatted companio
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 451 |
+| COUNTERPART_REVIEW_REQUIRED | 455 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 102 |
-| READER_OR_MAINTENANCE_PAGE | 210 |
+| READER_OR_MAINTENANCE_PAGE | 211 |
 | UNRESOLVED_DOCUMENT_COUNTERPART | 218 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_DOCUMENT_PAIR | 148 |
@@ -99,6 +99,10 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Synthetic payroll-release review note](../../internal/company-closeout/daedalus-rehearsal-2026-09-29/LOWER_TRUST_NOTICE.md) — Corporate document-format reconciliation
 - [Selected payroll-release IAM-007 case view](../../internal/company-closeout/daedalus-rehearsal-2026-09-29/SELECTED_IAM_CASE.md) — Corporate document-format reconciliation
 - [Committed portal runtime review — 2026-09-22](../../internal/company-closeout/evidence/newruntime/5344bf76/REVIEW.md) — Corporate document-format reconciliation
+- [SABLE HARBOR — Codex company closeout execution handover](../../internal/company-closeout/history/voice-and-readiness-2026-09-14-15/codex_company_closeout_handover_2026-09-15.md) — Corporate document-format reconciliation
+- [SABLE HARBOR — company readiness and closeout review](../../internal/company-closeout/history/voice-and-readiness-2026-09-14-15/company_readiness_closeout_2026-09-14.md) — Corporate document-format reconciliation
+- [SABLE HARBOR — three-decision voice-session handover](../../internal/company-closeout/history/voice-and-readiness-2026-09-14-15/three_decisions_voice_handover_2026-09-15.md) — Corporate document-format reconciliation
+- [SABLE HARBOR — Three Decisions: Voice Outcomes and Return Handover](../../internal/company-closeout/history/voice-and-readiness-2026-09-14-15/three_decisions_voice_outcomes_2026-09-14.md) — Corporate document-format reconciliation
 - [HOST-R01 — precise prospective terms for decision](../../internal/company-closeout/host-residual-successor/TERMS_PROPOSAL.md) — Corporate document-format reconciliation
 - [Pending implementation text — recommended current-rights bundle](../../internal/company-closeout/residual-finance-2026-09-22/PENDING_INSTRUMENT.md) — Corporate document-format reconciliation
 - [Actionable CCF procedure deltas](../../internal/development/CCF_ACTIONABLE_CONTROL_DELTAS_2026-09-12.md) — Corporate document-format reconciliation
