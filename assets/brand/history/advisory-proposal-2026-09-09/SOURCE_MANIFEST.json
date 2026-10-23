@@ -1,0 +1,18 @@
+{
+  "Sable-Harbor-Advisory-Logo.png": {
+    "bytes": 318583,
+    "sha256": "68d90efc5fe05fc7956b3d5b7e8acaf1f501cf6d6ca4d8d6d7f92d17e9775467"
+  },
+  "Sable-Harbor-Advisory-Letterhead.docx": {
+    "bytes": 339625,
+    "sha256": "807d498c0abfefb168949590b5475702cdadc7cba62c5be39b8617a32a108ed5"
+  },
+  "Sable-Harbor-Advisory-Letterhead-Print.pdf": {
+    "bytes": 380136,
+    "sha256": "2e14ecd8e89a51885eb7c8f5e6acd6bdbc47f778744a8c8a77ec57f1244512d1"
+  },
+  "README.md": {
+    "bytes": 2093,
+    "sha256": "e1a30c8526adfb064be33a575d113d8de946821dca0f104a0df1335960be0968"
+  }
+}

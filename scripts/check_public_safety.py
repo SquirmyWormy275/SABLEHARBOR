@@ -47,15 +47,21 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # are exact-equal. One historical README is added to reader inventory
     # (1,694 -> 1,695); four changed guide/source rows refresh. SQLite
     # quick_check and foreign keys pass. No controlled publication changes.
-    # October 23 historical facility staged-workline index adds one reader
-    # README (1,695 -> 1,696). Against accepted main ce8df6c2, all 148
-    # institutional objects/publication pairs, 294 relationships, 384
-    # counterpart rows, 12 evidence packages, 237 artifacts and one evidence
-    # link are exact-equal. SQLite quick_check and foreign keys pass.
+    # The Advisory proposal adds two historical READMEs and two byte-distinct
+    # original PDFs to the reader inventory (1,695 -> 1,699). Against the
+    # accepted geospatial predecessor catalog at ce8df6c2, all 148 objects,
+    # 148 publication pairs, 294 relationships, 384 counterpart rows, 12
+    # evidence packages, 237 artifacts and one evidence link are exact-equal.
+    # Both databases pass SQLite quick_check and foreign-key verification.
+    # The historical staged facilities workline then adds one reader README
+    # (1,699 -> 1,700) on accepted main cdb33b6c. All 148 institutional
+    # objects/publication pairs, 294 relationships, 384 counterpart rows,
+    # 12 evidence packages, 237 artifacts and the evidence link remain
+    # logically exact-equal; SQLite quick_check and foreign keys pass.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        15595520,
-        "200b9a7202f762ea88897229ecead960439dd308db8c02b0d364c417553869a2",
+        15611904,
+        "93825f97b636449f829d54d1f7ebc13524fbfb140dcb09a4c2c462334e70315b",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.

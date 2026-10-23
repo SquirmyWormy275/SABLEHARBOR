@@ -39,6 +39,13 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 - [sable-harbor-report-cover-a4](../../../assets/brand/collateral/report/sable-harbor-report-cover-a4.pdf) — PDF
 - [sable-harbor-report-cover-us-letter](../../../assets/brand/collateral/report/sable-harbor-report-cover-us-letter.pdf) — PDF
 
+## `assets/brand/history/advisory-proposal-2026-09-09`
+
+- [Advisory visual and letterhead proposal, September 9, 2026](../../../assets/brand/history/advisory-proposal-2026-09-09/README.md) — MD
+- [Sable Harbor Advisory logo and letterhead](../../../assets/brand/history/advisory-proposal-2026-09-09/SOURCE_README.md) — MD
+- [Sable-Harbor-Advisory-Letterhead-Print-Packaged](../../../assets/brand/history/advisory-proposal-2026-09-09/Sable-Harbor-Advisory-Letterhead-Print-Packaged.pdf) — PDF
+- [Sable-Harbor-Advisory-Letterhead-Print-Standalone](../../../assets/brand/history/advisory-proposal-2026-09-09/Sable-Harbor-Advisory-Letterhead-Print-Standalone.pdf) — PDF
+
 ## `assets/brand/history/emberline/2026-09-07`
 
 - [Emberline — superseded artwork](../../../assets/brand/history/emberline/2026-09-07/README.md) — MD
