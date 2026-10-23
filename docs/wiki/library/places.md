@@ -230,6 +230,10 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 
 - [Preserved Geo history](../../../geospatial/history/README.md) — MD
 
+## `geospatial/history/foundation-addendum-2026-09-05`
+
+- [September 5 geographic foundation and addendum packages](../../../geospatial/history/foundation-addendum-2026-09-05/README.md) — MD
+
 ## `geospatial/history/rc3`
 
 - [Governing addendum implementation summary](../../../geospatial/history/rc3/docs__ARU_BST_GEOGRAPHY_ADDENDUM_IMPLEMENTATION_SUMMARY.md) — MD

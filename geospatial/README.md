@@ -11,6 +11,7 @@ Start with the [Sacramento visitor map](facilities/visitor/v08/artifacts/visitor
 | [Facility atlas v0.2.0 / R02](../docs/releases/FACILITY_ATLAS_RELEASES.md) | Published September 11, 2026. It preserves the approved four-building, ten-floor Sacramento baseline and connects site, building and floor plans with the runtime locations. |
 | [Geographic evidence v1.5.0](../docs/releases/GEOGRAPHIC_EVIDENCE_1_5_0_RECEIPT.md) | Published September 29, 2026. The complete declared synthetic geographic edition, including its preserved earlier package and supplement. |
 | [Geographic framework v0.1.0-rc4](maps/SABLE_HARBOR_Geographic_Framework_Atlas_v0.1.0-rc4.pdf) | The earlier eleven-sheet context atlas. Its [GeoPackage](master/sable_harbor_master_v0.1.gpkg), [QGIS project](qgis/sable_harbor_master.qgz) and [closeout matrix](docs/PROGRAM_CLOSEOUT_MATRIX.md) retain that edition's dates and limitations. |
+| [September 5 foundation and addendum predecessors](history/foundation-addendum-2026-09-05/README.md) | Exact historical distributions recovered from Downloads. The foundation was a conflict-review draft; the addendum superseded its Red Wash location. Later accepted geographic editions govern current use. |
 
 A published plan is not a completed building, a survey or a property conveyance. Use the [locations guide](../docs/wiki/Locations.md) to distinguish offices, operating sites, shared accommodation and proposed facilities. The 1898/1954 rail alignments remain unlocated; later illustrative history does not establish their real positions.
 

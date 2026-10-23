@@ -40,4 +40,8 @@ The [facility index](../../geospatial/maps/facilities/ARTIFACT_INDEX.md) links t
 
 Some older chart and map editions predate the current location decisions. A known city or operating site should not be read as unknown merely because a street address, historical lease date or standalone office was never specified. The [location notes and decision history](Records-and-Decisions.md#locations) identify those distinctions, including the difference between Red Wash's established mine location and Pale Sun's separately unrecorded office.
 
+The [September 5 geographic foundation and addendum](../../geospatial/history/foundation-addendum-2026-09-05/README.md)
+retain the earlier map conflict and its subsequent correction as historical
+source packages. They do not replace the current locations above.
+
 Sable Harbor and its sites are fictional. Real towns and geographic references provide the setting; the company maps do not establish real property rights.
