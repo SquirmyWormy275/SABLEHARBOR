@@ -14,11 +14,11 @@ Browse company documents by subject, including Markdown records, PDFs and Excel 
 | [Identity and collateral](library/identity.md) | 19 |
 | [Canon, history and decisions](library/history.md) | 56 |
 | [Reader guides and subject pages](library/reader.md) | 81 |
-| [Implementation, source guides and delivery evidence](library/technical.md) | 365 |
+| [Implementation, source guides and delivery evidence](library/technical.md) | 367 |
 
 ## Format coverage
 
-The inventory contains 1193 Markdown files, 456 PDFs and 50 Excel workbooks. The existing publication manifest verifies 148 Markdown/PDF pairs.
+The inventory contains 1195 Markdown files, 456 PDFs and 50 Excel workbooks. The existing publication manifest verifies 148 Markdown/PDF pairs.
 
 ## Published formats
 

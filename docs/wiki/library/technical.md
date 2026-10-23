@@ -461,6 +461,14 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 - [Local package inventory, rule scans and rescans](../../../enterprise/audit_suite/VULNERABILITY_RUNTIME.md) — MD
 - [Private reasoned work guidance](../../../enterprise/audit_suite/WORK_GUIDANCE.md) — MD
 
+## `enterprise/audit_suite/history`
+
+- [Audit-suite source history](../../../enterprise/audit_suite/history/README.md) — MD
+
+## `enterprise/audit_suite/history/canonical-encoder-experiment-2026-10-02`
+
+- [Unadopted canonical encoder experiment — October 2](../../../enterprise/audit_suite/history/canonical-encoder-experiment-2026-10-02/README.md) — MD
+
 ## `enterprise/closeout`
 
 - [Conditional mine utility ROT continuation](../../../enterprise/closeout/INDUSTRIAL_TAX_FUTURE.md) — MD

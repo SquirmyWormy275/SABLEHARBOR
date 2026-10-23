@@ -53,10 +53,16 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # 148 publication pairs, 294 relationships, 384 counterpart rows, 12
     # evidence packages, 237 artifacts and one evidence link are exact-equal.
     # Both databases pass SQLite quick_check and foreign-key verification.
-    # Exact bytes only; later drift requires another hash review.
+    # The unadopted October 2 encoder experiment adds two historical README
+    # reader rows (1,699 -> 1,701) on accepted main cdb33b6c. The original
+    # Python source is preserved but not a current execution route. All 148
+    # institutional objects/publication pairs, 294 relationships, 384
+    # counterpart rows, 12 evidence packages, 237 artifacts and the evidence
+    # link remain logically exact-equal. SQLite quick_check and foreign keys
+    # pass. Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        15599616,
-        "fa19d1a9e36cbabe91d7516726eebebb2cdd382f98210e7d3a7004d23ba27f94",
+        15605760,
+        "fdce39b7d31d32ad03bacfdbcb227dc98dc48d6a02ae758f5d973d3bd1ec30d2",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.
