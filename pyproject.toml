@@ -14,13 +14,13 @@ dependencies = [
   "PyYAML>=6,<7",
   "sqlalchemy>=2.0,<3",
   "typer>=0.12,<1",
-  "xlsxwriter>=3.2,<4"
+  "xlsxwriter==3.2.9"
 ]
 
 [project.optional-dependencies]
 dev = [
   "PyMuPDF==1.26.7",
-  "pypdf==6.19.0",
+  "pypdf==6.21.1",
   "markdown-it-py==4.2.0",
   "mypy>=1.11,<2",
   "openpyxl>=3.1,<4",
