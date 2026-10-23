@@ -58,10 +58,13 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # objects/publication pairs, 294 relationships, 384 counterpart rows,
     # 12 evidence packages, 237 artifacts and the evidence link remain
     # logically exact-equal; SQLite quick_check and foreign keys pass.
+    # The October 3 unaccepted geographic preview history adds three reader
+    # Markdown originals (1,700 -> 1,703). The seven non-reader catalog
+    # tables remain exact-equal; SQLite quick_check and foreign keys pass.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        15611904,
-        "93825f97b636449f829d54d1f7ebc13524fbfb140dcb09a4c2c462334e70315b",
+        15628288,
+        "e07fe447f3b57510a4a113a31960ee745c951946a52c0cddd13b5ca82fb8fa27",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.

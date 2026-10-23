@@ -261,6 +261,18 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 - [Open geographic questions v0.1](../../../geospatial/history/rc3/reports__OPEN_CONFLICTS.md) — MD
 - [rc3 visual inspection](../../../geospatial/history/rc3/reports__VISUAL_QA.md) — MD
 
+## `geospatial/history/v1.5.0-previews-2026-10-03`
+
+- [Geographic evidence v1.5.0 preview stages](../../../geospatial/history/v1.5.0-previews-2026-10-03/README.md) — MD
+
+## `geospatial/history/v1.5.0-previews-2026-10-03/original/initial/supplement/docs/releases`
+
+- [Geographic evidence releases](../../../geospatial/history/v1.5.0-previews-2026-10-03/original/initial/supplement/docs/releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) — MD
+
+## `geospatial/history/v1.5.0-previews-2026-10-03/original/initial/supplement/geospatial/successor_20260929_final`
+
+- [Final accepted PR #185 geographic source delta](../../../geospatial/history/v1.5.0-previews-2026-10-03/original/initial/supplement/geospatial/successor_20260929_final/README.md) — MD
+
 ## `geospatial/maps`
 
 - [SABLE HARBOR Facility Atlas v0.1.0](../../../geospatial/maps/SABLE_HARBOR_Facility_Atlas_v0.1.0.pdf) — PDF

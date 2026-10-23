@@ -25,6 +25,16 @@ for manifest_path, key, path_key in [
         if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != artifact['sha256']:
             fail(f'historical source checksum drift: {artifact[path_key]}')
         historical_context[artifact[path_key]] = R / artifact['original_path']
+geo_preview_manifest = R / 'geospatial/history/v1.5.0-previews-2026-10-03/SOURCE_MANIFEST.json'
+if geo_preview_manifest.is_file():
+    for relative, artifact in json.loads(geo_preview_manifest.read_text())['tracked_originals'].items():
+        rel = 'geospatial/history/v1.5.0-previews-2026-10-03/' + relative
+        path = R / rel
+        if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != artifact['sha256']:
+            fail(f'historical geographic preview checksum drift: {rel}')
+        source_member = artifact['source_member']
+        if source_member.startswith('supplement/'):
+            historical_context[rel] = R / source_member.removeprefix('supplement/')
 editorial_sources = set()
 geo_preservation = R / 'geospatial/history/PRESERVATION_MANIFEST.json'
 if geo_preservation.is_file():

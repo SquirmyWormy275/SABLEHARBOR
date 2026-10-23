@@ -6,11 +6,11 @@ This list helps maintainers check which source documents have formatted companio
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 451 |
+| COUNTERPART_REVIEW_REQUIRED | 452 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 102 |
-| READER_OR_MAINTENANCE_PAGE | 211 |
+| READER_OR_MAINTENANCE_PAGE | 213 |
 | UNRESOLVED_DOCUMENT_COUNTERPART | 218 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_DOCUMENT_PAIR | 148 |
@@ -452,6 +452,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Headcount, occupancy and space bridge](../../../geospatial/facilities/population/BRIDGE.md) — Corporate document-format reconciliation
 - [Geographic completion authority — September 13, 2026](../../../geospatial/finalization/AUTHORIZATION.md) — Corporate document-format reconciliation
 - [Source interpretation and geographic crosswalk](../../../geospatial/finalization/SOURCE_REVIEW.md) — Corporate document-format reconciliation
+- [Geographic evidence releases](../../../geospatial/history/v1.5.0-previews-2026-10-03/original/initial/supplement/docs/releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) — Corporate document-format reconciliation
 - [Geographic decision register v0.1](../../../geospatial/registers/GEOGRAPHIC_DECISION_REGISTER_v0.1.md) — Corporate document-format reconciliation
 - [Open geographic questions v0.1](../../../geospatial/registers/OPEN_GEOGRAPHIC_QUESTIONS_v0.1.md) — Corporate document-format reconciliation
 - [Provenance register](../../../geospatial/registers/PROVENANCE_REGISTER.md) — Corporate document-format reconciliation
