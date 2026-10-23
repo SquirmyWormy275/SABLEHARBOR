@@ -1,5 +1,7 @@
 # Rail source-consumer and geometry-only sensitivity receipt
 
+The [original README on the unaccepted September 29 remote review branch](remote-branch-README.original.md) is preserved byte for byte with its [source manifest and verifier](../../../../finance/history/corporate-reconstruction-remote-2026-09-03/README.md). It is a historical review edition; this accepted route remains the reader entry point.
+
 **Record ID:** SH-RAIL-SOURCE-CONSUMER-2026-09-29
 
 **Basis:** accepted `main` `64513f27446a34ffc710138a05639173822f1075` and proposed PR #178 candidate `e4fd1ea0`

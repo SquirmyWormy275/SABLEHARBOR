@@ -1,0 +1,37 @@
+{
+  "model_status": "NOT_CANON",
+  "cases": {
+    "minimum_survival": {
+      "headcount": 47000,
+      "revenue_usd_m": 15500,
+      "people_enabled_cost_usd_m": 8055.776,
+      "cash_comp_benefits_usd_m": 6620.881,
+      "free_cash_flow_usd_m": -450,
+      "balance_sheet_check_usd_m": 0
+    },
+    "healthy": {
+      "headcount": 47000,
+      "revenue_usd_m": 22000,
+      "people_enabled_cost_usd_m": 8055.776,
+      "cash_comp_benefits_usd_m": 6620.881,
+      "free_cash_flow_usd_m": 450,
+      "balance_sheet_check_usd_m": 0
+    },
+    "high_performance": {
+      "headcount": 47000,
+      "revenue_usd_m": 30000,
+      "people_enabled_cost_usd_m": 8055.776,
+      "cash_comp_benefits_usd_m": 6620.881,
+      "free_cash_flow_usd_m": 2350,
+      "balance_sheet_check_usd_m": 0
+    },
+    "canon_congruent_reference": {
+      "headcount": 5000,
+      "revenue_usd_m": 2300,
+      "people_enabled_cost_usd_m": 959.826,
+      "cash_comp_benefits_usd_m": 792.831,
+      "free_cash_flow_usd_m": 35,
+      "balance_sheet_check_usd_m": 0
+    }
+  }
+}
