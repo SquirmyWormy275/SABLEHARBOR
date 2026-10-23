@@ -33,8 +33,12 @@ def copied(tmp_path):
 
 def test_historical_input_matches_complete_successor_chain(copied):
     root, record, patched = copied
-    manifest = json.loads((ROOT / "docs/legal/gap-instruments/manifest.json").read_text())
-    item = next(item for item in manifest["inputs"] if item["path"] == module.DEPENDENCY)
+    manifest = json.loads(
+        (ROOT / "docs/legal/gap-instruments/manifest.json").read_text()
+    )
+    item = next(
+        item for item in manifest["inputs"] if item["path"] == module.DEPENDENCY
+    )
     assert item["sha256"] == record["before_sha256"]
     assert module.historical_toolchain_successor(root, item) == patched["id"]
 
@@ -87,12 +91,16 @@ def test_patched_successor_evidence_drift_fails_closed(copied, evidence, operati
     assert module.historical_toolchain_successor(root, item) is None
 
 
-@pytest.mark.parametrize("change", ["wrong_path", "wrong_original_hash", "current_hash"])
+@pytest.mark.parametrize(
+    "change", ["wrong_path", "wrong_original_hash", "current_hash"]
+)
 def test_other_inputs_or_resealed_pin_not_accepted(copied, change):
     root, record, patched = copied
     item = {"path": module.DEPENDENCY, "sha256": record["before_sha256"]}
     if change == "wrong_path":
         item["path"] = "tools/legal_gaps/build.py"
     else:
-        item["sha256"] = record["after_sha256"] if change == "current_hash" else "0" * 64
+        item["sha256"] = (
+            record["after_sha256"] if change == "current_hash" else "0" * 64
+        )
     assert module.historical_toolchain_successor(root, item) is None
