@@ -1,0 +1,24 @@
+{
+  "after_sha256": "91ba95167f70a38aa09ec4d9d1e1b65f88212f2039952f546fc815c069fe9b33",
+  "baseline_snapshot": "docs/legal/gap-instruments/dependency-successors/requirements-before-PR211.txt",
+  "before_sha256": "8b55f12cf9fe58244f0e39841521eb781d298837e7e004bf95ceff0915561c32",
+  "changes": {
+    "Pillow": [
+      "12.3.0",
+      "13.0.0"
+    ]
+  },
+  "id": "SH-LEGAL-TOOLCHAIN-SUCCESSOR-2026-10-23",
+  "limitations": [
+    "Historical generated legal files remain pinned at their original bytes.",
+    "Current Pillow 13.0.0 is not claimed as their historical generator.",
+    "Hosted validation and publication drift review remain required before merge."
+  ],
+  "path": "tools/legal_gaps/requirements.txt",
+  "prior_successor_id": "SH-LEGAL-TOOLCHAIN-SUCCESSOR-2026-09-22",
+  "reason": "Dependency advisory audit on PR #211 reported known vulnerabilities in Pillow 12.3.0; current toolchain requires a patched version.",
+  "scope": "Current reviewed toolchain only; original legal manifest and publication bytes remain source-locked and are not attributed to Pillow 13.0.0.",
+  "source_commit_before": "ccc549ec5597b3452067af964ac258cf9d7ccd74",
+  "source_date": "2026-10-23",
+  "state": "PROPOSED_IN_PR_211"
+}
