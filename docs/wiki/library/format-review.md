@@ -6,11 +6,11 @@ This list helps maintainers check which source documents have formatted companio
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 465 |
+| COUNTERPART_REVIEW_REQUIRED | 466 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 101 |
-| READER_OR_MAINTENANCE_PAGE | 226 |
+| READER_OR_MAINTENANCE_PAGE | 227 |
 | UNRESOLVED_DOCUMENT_COUNTERPART | 218 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_DOCUMENT_PAIR | 148 |
@@ -454,6 +454,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Conditional mine utility ROT continuation](../../../enterprise/closeout/INDUSTRIAL_TAX_FUTURE.md) — Corporate document-format reconciliation
 - [State receipt apportionment — company closeout](../../../enterprise/closeout/STATE_APPORTIONMENT.md) — Corporate document-format reconciliation
 - [August 2026 people and operating reconstruction](../../../enterprise/operations/docs/completed-period.md) — SH-FIN-HUMAN-001
+- [August 2026 people and operating reconstruction](../../../enterprise/operations/docs/history/completed-period-2026-10-03.original.md) — SH-FIN-HUMAN-001
 - [August Pale Sun legal-employer allocation](../../../enterprise/operations/docs/ps-legal-payroll-bridge.md) — SH-FIN-HUMAN-001
 - [Service operating-model comparison](../../../enterprise/services/history/operating-model-2026-09-10/original/REPORT.md) — Corporate document-format reconciliation
 - [Klein shop and Fort continuity — proposed decision](../../../geospatial/chronology/CONTINUITY_PROPOSAL.md) — Corporate document-format reconciliation

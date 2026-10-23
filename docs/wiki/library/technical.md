@@ -283,6 +283,10 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 - [Audit workspace UX professionalization](../../internal/development/audit-suite/UX_PROFESSIONALIZATION_WORKFLOW.md) — MD
 - [Explicit personal visit checkpoints](../../internal/development/audit-suite/VISIT_CHECKPOINTS.md) — MD
 
+## `docs/internal/repository-history/local-worktree-2026-10-01-03`
+
+- [October 1–3 local operations and repository-source predecessors](../../internal/repository-history/local-worktree-2026-10-01-03/README.md) — MD
+
 ## `docs/internal/validation`
 
 - [September 6 canon closeout - validation and delivery evidence](../../internal/validation/CANON_CLOSEOUT_2026-09-06.md) — MD

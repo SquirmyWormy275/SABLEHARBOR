@@ -660,6 +660,10 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 - [August Pale Sun legal-employer allocation](../../../enterprise/operations/docs/ps-legal-payroll-bridge.md) — MD
 - [Research, captured material and industrial operating detail](../../../enterprise/operations/docs/research.md) — MD
 
+## `enterprise/operations/docs/history`
+
+- [August 2026 people and operating reconstruction](../../../enterprise/operations/docs/history/completed-period-2026-10-03.original.md) — MD
+
 ## `enterprise/operations/portal_2027_common_boundary`
 
 - [Prospective 2027 common company boundary](../../../enterprise/operations/portal_2027_common_boundary/README.md) — MD
