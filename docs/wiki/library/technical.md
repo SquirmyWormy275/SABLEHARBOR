@@ -311,6 +311,7 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 - [Geographic evidence 1.5.0 — accepted delivery receipt](../../releases/GEOGRAPHIC_EVIDENCE_1_5_0_RECEIPT.md) — MD
 - [Geographic evidence releases](../../releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) — MD
 - [Industrial case releases](../../releases/INDUSTRIAL_CASE_RELEASES.md) — MD
+- [Local worktree history releases](../../releases/LOCAL_WORKTREE_HISTORY_RELEASES.md) — MD
 - [Runtime estate releases](../../releases/RUNTIME_ESTATE_RELEASES.md) — MD
 
 ## `docs/technology`

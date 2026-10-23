@@ -98,8 +98,8 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # preview changes the accepted v1.5.0 release or current site decisions.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        16326656,
-        "17099d392f4b3d2ecdb06ec89e5779ab1136f57c6e29bc6074bc2ee2c45f6e6a",
+        16343040,
+        "7f868fbddd4d8569ccd8b6bca5133ca48cbee571536893b7ec77c0b66385abc5",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.

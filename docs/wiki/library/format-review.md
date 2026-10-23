@@ -6,11 +6,11 @@ This list helps maintainers check which source documents have formatted companio
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 463 |
+| COUNTERPART_REVIEW_REQUIRED | 464 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 101 |
-| READER_OR_MAINTENANCE_PAGE | 223 |
+| READER_OR_MAINTENANCE_PAGE | 225 |
 | UNRESOLVED_DOCUMENT_COUNTERPART | 218 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_DOCUMENT_PAIR | 148 |
@@ -283,6 +283,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Geographic evidence 1.5.0 — accepted delivery receipt](../../releases/GEOGRAPHIC_EVIDENCE_1_5_0_RECEIPT.md) — Corporate document-format reconciliation
 - [Geographic evidence releases](../../releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) — Corporate document-format reconciliation
 - [Industrial case releases](../../releases/INDUSTRIAL_CASE_RELEASES.md) — Corporate document-format reconciliation
+- [Local worktree history releases](../../releases/LOCAL_WORKTREE_HISTORY_RELEASES.md) — Corporate document-format reconciliation
 - [Local access-remediation continuation](../../../enterprise/audit_suite/ACCESS_REMEDIATION_ACTIVITY.md) — Corporate document-format reconciliation
 - [Declared-subject access review continuation](../../../enterprise/audit_suite/ACCESS_REVIEW_CONTINUATION.md) — Corporate document-format reconciliation
 - [Adjacent declared-subject access review](../../../enterprise/audit_suite/ACCESS_REVIEW_SUCCESSOR.md) — Corporate document-format reconciliation
