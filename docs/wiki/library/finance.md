@@ -205,6 +205,10 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 - [Parent tax history and filing boundaries](../../finance/evidence/company-closeout/TAX_HISTORY.md) — MD
 - [Treasury timing, debt/security and investor reading route](../../finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md) — MD
 
+## `docs/finance/evidence/company-closeout/history/local-worktree-2026-09-14-22`
+
+- [September 14–22 local finance closeout source history](../../finance/evidence/company-closeout/history/local-worktree-2026-09-14-22/README.md) — MD
+
 ## `docs/finance/evidence/coverage`
 
 - [Finance evidence: scope and source access](../../finance/evidence/coverage/README.md) — MD
@@ -249,6 +253,11 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 - [Procurement, payables and Treasury](../../finance/evidence/treasury/draft/WORKING_PAPER.md) — MD
 - [working-paper](../../finance/evidence/treasury/draft/working-paper.pdf) — PDF
 - [working-papers](../../finance/evidence/treasury/draft/working-papers.xlsx) — XLSX
+
+## `docs/finance/history/build-readiness-undated-2026-09`
+
+- [Historical financial build readiness analysis](../../finance/history/build-readiness-undated-2026-09/README.md) — MD
+- [Sable Harbor Financial Build Readiness Report](../../finance/history/build-readiness-undated-2026-09/Sable_Harbor_Financial_Build_Readiness_Report.pdf) — PDF
 
 ## `docs/finance/publications`
 
@@ -650,6 +659,10 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 - [Advisory matter operating histories](../../../enterprise/operations/docs/matters.md) — MD
 - [August Pale Sun legal-employer allocation](../../../enterprise/operations/docs/ps-legal-payroll-bridge.md) — MD
 - [Research, captured material and industrial operating detail](../../../enterprise/operations/docs/research.md) — MD
+
+## `enterprise/operations/docs/history`
+
+- [August 2026 people and operating reconstruction](../../../enterprise/operations/docs/history/completed-period-2026-10-03.original.md) — MD
 
 ## `enterprise/operations/portal_2027_common_boundary`
 

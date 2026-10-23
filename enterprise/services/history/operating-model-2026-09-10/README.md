@@ -1,0 +1,11 @@
+# September 10 service operating model — historical package
+
+**Status:** Historical synthetic planning output. The source manifest says `OWNER_APPROVED_PENDING_ACCEPTANCE` for the work; the report itself says the figures are not approved budgets, vendor quotes or proven recovery. It does not establish a deployed service, funded facility, staffing availability, RTO/RPO or an audit conclusion.
+
+The original `SABLE_HARBOR_Service_Operating_Model_4c83886.zip` is 94,541 bytes, SHA-256 `fc3136cddba21f51425dc5de7c001ef6e9b311a435e51e280497bee94b9cef2c`. Its 25 regular members are preserved byte for byte under [`original/`](original/). The [source manifest](SOURCE_MANIFEST.json) records each member's size, SHA-256, CRC, Git blob ID and any exact accepted-Git match. The original ZIP belongs in the dated historical Release `service-operating-model-historical-2026-09-10` after source acceptance. Run `python verify.py /path/to/SABLE_HARBOR_Service_Operating_Model_4c83886.zip --repo /path/to/accepted/clone` to check the ZIP, 23 internally declared hashes, all tracked originals and the historical SQLite database without running the model.
+
+The original `manifest.json` did not list `services.sqlite3`; this recovery's source manifest and archive hash cover that byte-distinct database, and the verifier also runs SQLite `quick_check` read-only.
+
+The package's file dates and source commit `4c83886d1cdabc02b07669c549c0816fcea0d1e1` place this comparison at September 10, 2026. It was imported October 23. It models 57 services, 49 support components/dependencies, four source-named external parties and six workload classes across 2027–2031. The cash, capacity and staffing alternatives are illustrative. Only two of 25 ZIP members match an object in accepted main history; one of those remains at a current path. The other generated outputs and historical SQLite bytes have their own source identity here.
+
+The [current enterprise services source and gates](../../README.md) and later [runtime estate](../../../runtime/README.md) control where this old package differs. In particular, the later runtime/provider and facilities decisions cannot be inferred from this earlier alternative-cost package. No original or accepted source-locked release is rewritten, and no local copy is cleared for deletion by this historical delivery.

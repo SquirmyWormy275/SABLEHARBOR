@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+enterprise/audit_suite/_serialized_json_native*.so
+*.py[cod]
+.pytest_cache/
+
+# Local deterministic brand builds
+.brand-build/
+
+# Local finance environments, caches, and generated evidence
+.env
+.env.*
+!.env.example
+.venv/
+*.egg-info/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+build/
+dist/
+/red_wash/generated/
+/red_wash/dist/
+/industrial/generated/
+/industrial/dist/
+var/*
+!var/.gitkeep
+data/generated/
+workbooks/outputs/*.xlsx
+workbooks/outputs/workbook-suite-manifest.json
+workbooks/outputs/SHA256SUMS.txt
+workbooks/outputs/.sable-harbor-generated.json
+reports/*.xlsx
+releases/generated/
+
+/enterprise/generated/
+/enterprise/dist/

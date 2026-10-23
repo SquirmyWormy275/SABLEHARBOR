@@ -21,3 +21,6 @@ Board approval records:
 Generated U.S.-Letter editions are in [`publications/`](publications/README.md); structured records and checksummed source/publication lineage are in [`structured/`](structured/board_and_committees.json) and [`publication_manifest.json`](publication_manifest.json). Generated publications and validation are not independent sources of approval; they reconcile to the source doctrine and board records.
 
 Files whose titles describe earlier proposals or models carry explicit SUPERSEDED status at the top. They remain for institutional history and are not current authority.
+
+The [September 3 local-branch source package](../history/governance-j2-local-2026-09-03/README.md) preserves exact earlier governance and J2 document and publication bytes with their Git-object provenance. It is historical evidence, not a new board approval or a replacement for the controlling sources above.
+The separate [September 2 predecessor](../history/governance-j2-local-2026-09-02/README.md) retains earlier governance, controls, organization and J2 identity source stages under the same historical boundary.

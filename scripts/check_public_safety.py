@@ -68,10 +68,38 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # Markdown rows (1,704 -> 1,707) against accepted main 115763b0. All
     # seven non-reader catalog tables remain exact-equal; SQLite integrity
     # and foreign-key checks pass. Current industrial authority is unchanged.
+    # The September 10 service operating-model history adds two Markdown
+    # reader rows (1,707 -> 1,709) on the R1 predecessor. All seven
+    # non-reader tables remain exact-equal; SQLite integrity and foreign keys
+    # pass. This does not approve modeled budgets or alter current services.
+    # The September 9 proposed organization history adds four reader rows
+    # (1,709 -> 1,713, including two PDFs). The seven non-reader tables
+    # remain exact-equal; SQLite integrity and foreign keys pass. The
+    # proposal does not revise the accepted current organization chart.
+    # The October 2 unadopted encoder experiment adds two historical
+    # Markdown reader rows (1,713 -> 1,715). The seven non-reader tables
+    # remain exact-equal; SQLite integrity and foreign keys pass. This does
+    # not change the accepted canonical codec or signed workroom histories.
+    # The September finance build-readiness note adds its dated Markdown
+    # source and historical PDF (1,715 -> 1,717 reader rows). Seven non-reader
+    # tables remain exact-equal; SQLite integrity and foreign keys pass.
+    # Planning language does not become a financing or board approval.
+    # The September 14-15 closeout and voice provenance adds five dated
+    # Markdown reader rows (1,717 -> 1,722). The seven non-reader tables
+    # remain exact-equal; SQLite integrity and foreign keys pass. Source
+    # notes do not establish a completed closeout or new current authority.
+    # The historical geographic transfer manifest adds one reader guide
+    # (1,722 -> 1,723). Its three payloads already match accepted Git
+    # history; seven non-reader tables remain exact-equal, with SQLite
+    # integrity and foreign keys passing. No new geographic claim is made.
+    # The unaccepted v1.5.0 geographic preview stages add three historical
+    # Markdown reader rows (1,723 -> 1,726). The seven non-reader tables
+    # remain exact-equal; SQLite integrity and foreign keys pass. Neither
+    # preview changes the accepted v1.5.0 release or current site decisions.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        15872000,
-        "80aea5b12c73011f112d65e40bbdbfbf10f92a18f092bae2769dfbc5af649b19",
+        16386048,
+        "e90eb805c506cb2f4a7b121295e329412f65f06c977c6f59218e806757af14fb",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.

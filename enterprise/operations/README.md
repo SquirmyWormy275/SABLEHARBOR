@@ -18,6 +18,10 @@ pending composite financial reconciliation and repository acceptance. Its
 September 15 authorship is separate from August effective dates and does not
 change the forecast population or earlier release bytes.
 
+An [October 3 local source predecessor](../../docs/internal/repository-history/local-worktree-2026-10-01-03/README.md)
+is preserved at exact bytes with its unaccepted status and distinct availability
+date. Use the current document above for the operating source route.
+
 ## Run and review
 
 ```bash
