@@ -6,11 +6,11 @@ This list helps maintainers check which source documents have formatted companio
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 450 |
+| COUNTERPART_REVIEW_REQUIRED | 451 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 102 |
-| READER_OR_MAINTENANCE_PAGE | 209 |
+| READER_OR_MAINTENANCE_PAGE | 210 |
 | UNRESOLVED_DOCUMENT_COUNTERPART | 218 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_DOCUMENT_PAIR | 148 |
@@ -21,6 +21,7 @@ This list helps maintainers check which source documents have formatted companio
 Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENCE_COMPLETION.md). Other corporate records require scoped format review before any batch rendering. Existing approved visuals are retained; this queue does not authorize automatic publication.
 
 - [Contributing to Sable Harbor](../../../CONTRIBUTING.md) — Corporate document-format reconciliation
+- [Sable Harbor Advisory logo and letterhead](../../../assets/brand/history/advisory-proposal-2026-09-09/SOURCE_README.md) — Corporate document-format reconciliation
 - [Withdrawn visual source record](../../../assets/headquarters/CANONICAL_HEADQUARTERS_IMAGE_MANIFEST.md) — Corporate document-format reconciliation
 - [SABLE HARBOR CONTROLLED DOCUMENT INDEX](../../CONTROLLED_DOCUMENT_INDEX.md) — Corporate document-format reconciliation
 - [Native operating-depth physical input roles](../../OPERATING_DEPTH_PHYSICAL_ROLE_CORRECTION.md) — Corporate document-format reconciliation
