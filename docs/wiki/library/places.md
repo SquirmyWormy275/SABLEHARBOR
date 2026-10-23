@@ -13,6 +13,12 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 - [Northern Nevada Data Center — Layout and Space Program](../../facilities/NORTHERN_NEVADA_DATA_CENTER_LAYOUT_PROGRAM_2026-09-11.md) — MD · [formatted PDF](../../../enterprise/runtime/publications/SH-RT-LAYOUT-001_v1.0.0.pdf)
 - [SABLE HARBOR Northern Nevada Data Center — Master Plan](../../facilities/NORTHERN_NEVADA_DATA_CENTER_MASTER_PLAN_2026-09-11.md) — MD · [formatted PDF](../../../enterprise/runtime/publications/SH-RT-FACILITY-001_v1.0.0.pdf)
 
+## `docs/facilities/references/runtime-hosting-research-2026-09-11`
+
+- [Recovered runtime capacity and owned-site research](../../facilities/references/runtime-hosting-research-2026-09-11/README.md) — MD
+- [SABLE HARBOR Compute Power Demand Reassessment](../../facilities/references/runtime-hosting-research-2026-09-11/SABLE_HARBOR_Compute_Power_Demand_Reassessment.xlsx) — XLSX
+- [SABLE HARBOR Owned Data Center Feasibility Model](../../facilities/references/runtime-hosting-research-2026-09-11/SABLE_HARBOR_Owned_Data_Center_Feasibility_Model.xlsx) — XLSX
+
 ## `docs/facilities/references/sacramento-hq/r01-approved`
 
 - [CODEX ADDENDUM — APPROVED SACRAMENTO VISUAL BASELINE R01](../../facilities/references/sacramento-hq/r01-approved/CODEX_ADDENDUM_APPROVED_SACRAMENTO_VISUAL_BASELINE_R01.md) — MD
