@@ -177,6 +177,14 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 
 - [Final company completion evidence — September 22, 2026](../../internal/company-closeout/final-completion-2026-09-22/README.md) — MD
 
+## `docs/internal/company-closeout/history/voice-and-readiness-2026-09-14-15`
+
+- [September 14–15 company closeout and owner-decision source chain](../../internal/company-closeout/history/voice-and-readiness-2026-09-14-15/README.md) — MD
+- [SABLE HARBOR — Codex company closeout execution handover](../../internal/company-closeout/history/voice-and-readiness-2026-09-14-15/codex_company_closeout_handover_2026-09-15.md) — MD
+- [SABLE HARBOR — company readiness and closeout review](../../internal/company-closeout/history/voice-and-readiness-2026-09-14-15/company_readiness_closeout_2026-09-14.md) — MD
+- [SABLE HARBOR — three-decision voice-session handover](../../internal/company-closeout/history/voice-and-readiness-2026-09-14-15/three_decisions_voice_handover_2026-09-15.md) — MD
+- [SABLE HARBOR — Three Decisions: Voice Outcomes and Return Handover](../../internal/company-closeout/history/voice-and-readiness-2026-09-14-15/three_decisions_voice_outcomes_2026-09-14.md) — MD
+
 ## `docs/internal/company-closeout/host-residual-successor`
 
 - [Host rights and escrow residual successor](../../internal/company-closeout/host-residual-successor/README.md) — MD
@@ -466,6 +474,14 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 - [Selected SEC001 source leads for the unsupported PBC plan V9](../../../enterprise/audit_suite/UNSUPPORTED_121_PBC_PLAN_V9_PROPOSAL.md) — MD
 - [Local package inventory, rule scans and rescans](../../../enterprise/audit_suite/VULNERABILITY_RUNTIME.md) — MD
 - [Private reasoned work guidance](../../../enterprise/audit_suite/WORK_GUIDANCE.md) — MD
+
+## `enterprise/audit_suite/history`
+
+- [Audit-suite source history](../../../enterprise/audit_suite/history/README.md) — MD
+
+## `enterprise/audit_suite/history/canonical-encoder-experiment-2026-10-02`
+
+- [Unadopted canonical encoder experiment — October 2](../../../enterprise/audit_suite/history/canonical-encoder-experiment-2026-10-02/README.md) — MD
 
 ## `enterprise/closeout`
 

@@ -1,0 +1,159 @@
+{
+  "base_member_count": 1907,
+  "base_sha256": "f106e164a7578d64c32ba1bcc9444b3a96d89881d7c7b92b51bb97cf2bef6df4",
+  "base_source_revision": "78d4fcdf1df5b8ffc0775b9af22cae1002d456d7",
+  "base_version": "1.4.0",
+  "files": {
+    "base/sable-harbor-geographic-evidence-v1.4.0.zip": {
+      "bytes": 237264171,
+      "sha256": "f106e164a7578d64c32ba1bcc9444b3a96d89881d7c7b92b51bb97cf2bef6df4"
+    },
+    "index.html": {
+      "bytes": 947,
+      "sha256": "3bdfa7d5d778ca6b7a750f6228d02a43cf6a8b8d38caa0993dd109f686137311"
+    },
+    "supplement/docs/canon/GEOGRAPHIC_SYNTHETIC_SCOPE_DISPOSITION_2026-09-29.md": {
+      "bytes": 6026,
+      "sha256": "a543ee8d12ed265ed3757deba74d37d34cda59961ceda4de3ca8598540ae652f"
+    },
+    "supplement/geospatial/docs/NEXT_CHAT_HANDOFF.md": {
+      "bytes": 1755,
+      "sha256": "0bc0da8f4ffe2d0f0d540cb6defa8fc7a26024ddc08669478707ecf02d80080e"
+    },
+    "supplement/geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md": {
+      "bytes": 19335,
+      "sha256": "b889167d56300ec58a7f63ffa241bcd3ec450e556b776c649e6337edb28a8c74"
+    },
+    "supplement/geospatial/engineering_review/COMPENSATED_40_MILE_CANDIDATE.geojson": {
+      "bytes": 130501,
+      "sha256": "2d3358d9dd7d117954b7d36879626659117cb9387b1350b4541abccb726228ad"
+    },
+    "supplement/geospatial/engineering_review/COMPENSATED_40_MILE_CANDIDATE.json": {
+      "bytes": 175760,
+      "sha256": "7592f356a9d13878a61960d735fba61924119c8efac226544c133f85d59b4750"
+    },
+    "supplement/geospatial/engineering_review/interface_successor_20260929/README.md": {
+      "bytes": 4100,
+      "sha256": "08dd582daa2be310d4551d7b602ff55f0c4debca34efb5bdec4a9406bee44125"
+    },
+    "supplement/geospatial/engineering_review/interface_successor_20260929/build.py": {
+      "bytes": 19260,
+      "sha256": "9aefce12723a055682cad6a20463c620f82846ae4ced9e83ffbf91846ed514a4"
+    },
+    "supplement/geospatial/engineering_review/interface_successor_20260929/register.json": {
+      "bytes": 44464,
+      "sha256": "2366257f96d0ffc4281133b3790abf62203951d7c2e38c90bdeda5e519be8192"
+    },
+    "supplement/geospatial/engineering_review/interface_successor_20260929/source.json": {
+      "bytes": 1824,
+      "sha256": "e7bf07658cafc6854edbed6e7881edf5af8c0221d4ee603e669bd0469decac0b"
+    },
+    "supplement/geospatial/successor_20260929/README.md": {
+      "bytes": 2278,
+      "sha256": "ec978cae88ccb071c4e0b8fff1def7c97b8d336c5eda5275bd925d36efd7b77b"
+    },
+    "supplement/geospatial/successor_20260929/SOURCE_DELTA.json.gz": {
+      "bytes": 10352,
+      "sha256": "b40eed79b68d9776683ce8abeed33f4d84ad51df0d90901ec8f179b834641e43"
+    },
+    "supplement/geospatial/successor_20260929/SUMMARY.json": {
+      "bytes": 397,
+      "sha256": "18226fe65a69db1ef5153b4b28aa54dd3f501c6d5b02ec5db1ae006f579a6832"
+    },
+    "supplement/geospatial/successor_20260929/source_delta.py": {
+      "bytes": 8583,
+      "sha256": "dee8ab98e57b01aa69b32b1acacf6e0f984e0034b06cec8adae76fab4f900906"
+    },
+    "supplement/geospatial/successor_20260929_final/README.md": {
+      "bytes": 5185,
+      "sha256": "f0a9e9acc5c78ede76b70b2d647ccc8dd5e30efb37ef74aee2e20c1f0995a322"
+    },
+    "supplement/geospatial/successor_20260929_final/SOURCE_DELTA.json.gz": {
+      "bytes": 3655,
+      "sha256": "2792d3361724fdfa91437e18e629383a254c908d0da97c7a4fbf1025fe612471"
+    },
+    "supplement/geospatial/successor_20260929_final/SUMMARY.json": {
+      "bytes": 306,
+      "sha256": "d31d6333a425290ce6b1614177b73e3a0ea093f70c763183e4df9dce3549515d"
+    },
+    "supplement/geospatial/successor_20260929_final/package.py": {
+      "bytes": 7541,
+      "sha256": "78ae8a864c62d4aec187c67c5fb9ee0da30b0846bc16ee5242c1975f089d3aff"
+    },
+    "supplement/geospatial/successor_20260929_final/source_delta.py": {
+      "bytes": 8582,
+      "sha256": "f2be9f55f4354d66f2bdd8e65cc610b9bb96155c266aede85702fb00d1a1815d"
+    },
+    "supplement/geospatial/successor_20260929_final/verify_package.py": {
+      "bytes": 7801,
+      "sha256": "72dfe36250716d032194cee38996c186f3c01dc7481746006342b03897ee4c31"
+    },
+    "supplement/geospatial/successors/RAIL_GEO_107_108_DISPOSITION_2026-09-29.md": {
+      "bytes": 6871,
+      "sha256": "3458310f9627e779756ea47674b96363257f3d90f8257480c3e2a6f7e3c8d17b"
+    },
+    "supplement/geospatial/successors/rail_history_2026_09_29/ATTRIBUTION_CORRECTION_2026-09-29.md": {
+      "bytes": 1505,
+      "sha256": "4e2d1ab3c67548e55416604af0aaee1799e48757bd448cb0440ea769e06d335e"
+    },
+    "supplement/geospatial/successors/rail_history_2026_09_29/README.md": {
+      "bytes": 3165,
+      "sha256": "5fa442c9691d8a45a0944177d06871eb8f9c21c3f686fb444faea29c102422a7"
+    },
+    "supplement/geospatial/successors/rail_history_2026_09_29/build.py": {
+      "bytes": 12966,
+      "sha256": "1a517b5b78af7553fffe174f9b320ec0f878c7e650927dc94382ed0413bca6fc"
+    },
+    "supplement/geospatial/successors/rail_history_2026_09_29/case.geojson": {
+      "bytes": 2097,
+      "sha256": "f9fd76a38ffc93272ffc99cbfd2881f2103ae334219e11a4a3a5b0437102cfa3"
+    },
+    "supplement/geospatial/successors/rail_history_2026_09_29/case.svg": {
+      "bytes": 2799,
+      "sha256": "2e143c71d51fe4d4a72302dd4e9540ebba936b9206ba4ac4bf398e7cb11d6f50"
+    },
+    "supplement/geospatial/successors/rail_history_2026_09_29/report.json": {
+      "bytes": 3176,
+      "sha256": "de1399118ee9598f6a411845cd1fa9fbfbf5602aaee0e54b709f8755717c2817"
+    },
+    "supplement/geospatial/successors/rail_history_2026_09_29/source.json": {
+      "bytes": 2906,
+      "sha256": "a869bae143c4216663dc11e8364ef5ce5ada0e2d7b0e946b6e5920a0eb2c81a4"
+    },
+    "supplement/industrial/successors/rail_2026_09_29/README.md": {
+      "bytes": 7116,
+      "sha256": "c04e4420f923b7e6db26e771c9115c3ed5293e58e14aed0f39dfe88fb3409a07"
+    },
+    "supplement/industrial/successors/rail_2026_09_29/build.py": {
+      "bytes": 18476,
+      "sha256": "97ba6bea431fd985c797d4ea23a81de7c2432ccc3f44a5c99399926bc5ad48a7"
+    },
+    "supplement/industrial/successors/rail_2026_09_29/reconcile.py": {
+      "bytes": 5217,
+      "sha256": "755d3657bd9b99b0450735ca3f210237925755ac1f66e33b389366c2bf3b138a"
+    },
+    "supplement/industrial/successors/rail_2026_09_29/reperform-result.json": {
+      "bytes": 3245,
+      "sha256": "868ea3f17d063021b3a574a33b8ddc019a657e6521e3431a4963db5a8379a5c4"
+    },
+    "supplement/industrial/successors/rail_2026_09_29/source.json": {
+      "bytes": 1765,
+      "sha256": "3aa95c1764a144dc3611acca29f2982c59b44863766810532c6ef42faa3c1b80"
+    },
+    "supplement/industrial/successors/rail_2026_09_29/test_successor.py": {
+      "bytes": 3689,
+      "sha256": "ec015390fb1b069f3d1800f63a74d460bc07716d8a4fcaa47c5e6f05d38bfe42"
+    }
+  },
+  "limits": [
+    "The nested 1.4 archive is byte-identical to its accepted release.",
+    "The 1954 case is newly authored fiction, not a recovered survey or real right.",
+    "External parcels, field certification, real title and proposed-lead service remain unestablished.",
+    "Source acceptance and GitHub publication are distinct from a preview package."
+  ],
+  "scope": "Finite synthetic company geographic edition at planning precision",
+  "source_revision": "b1659db1c4adbf476251f906dda40cfe530604de",
+  "status": "PREVIEW_UNACCEPTED",
+  "supplement_entries": 33,
+  "version": "1.5.0"
+}

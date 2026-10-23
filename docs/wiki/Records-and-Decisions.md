@@ -13,6 +13,7 @@ Use this page to check where a company fact came from, what changed, and which r
 | Subject | Where to inspect it |
 |---|---|
 | Company decisions and their history | [Decision register](../canon/DECISION_REGISTER_v0.3.1.md), followed by the dated successors in the [history index](library/history.md). The register is a baseline, not a replacement for later decisions. |
+| September 14–15 company closeout choices | [Accepted owner directions](../canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md) and the [four recovered review, voice and execution originals](../internal/company-closeout/history/voice-and-readiness-2026-09-14-15/README.md). The originals preserve the decision chain; later company records control implementation status. |
 | Who can approve what | [Board and capital governance](../governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md) and [Board records](../governance/board-records/README.md). |
 | Corporate departments and headquarters | [Headquarters decisions](../canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md), with later location changes described below. |
 | Pale Sun, Red Wash and ARU | [Industrial decisions](../canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md) and [legal structure](../../industrial/corporate/LEGAL_STRUCTURE_AND_FORMATION.md). |

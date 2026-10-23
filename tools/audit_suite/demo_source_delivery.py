@@ -7,6 +7,12 @@ only after every member has been verified; an existing destination is refused.
 
 from __future__ import annotations
 
+import sys
+
+# Direct execution must not expose sibling operator.py as the stdlib operator.
+if __name__ == "__main__" and not __package__ and not sys.flags.safe_path:
+    sys.path.pop(0)
+
 import argparse
 import ctypes
 import errno

@@ -20,7 +20,7 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
   "PyMuPDF==1.26.7",
-  "pypdf==6.19.0",
+  "pypdf==6.21.2",
   "markdown-it-py==4.2.0",
   "mypy>=1.11,<2",
   "openpyxl>=3.1,<4",
@@ -59,7 +59,13 @@ markers = ["private_replay: historical integration requiring preserved private r
 line-length = 100
 target-version = "py311"
 include = ["src/**/*.py", "tests/**/*.py", "enterprise/audit_suite/**/*.py", "tools/audit_suite/**/*.py"]
-extend-exclude = ["blackridge", "geospatial"]
+# The archived experiment is an exact historical original, verified by its own
+# source manifest. Style tools apply to its verifier, not the preserved bytes.
+extend-exclude = [
+  "blackridge",
+  "geospatial",
+  "enterprise/audit_suite/history/canonical-encoder-experiment-2026-10-02/original/canonical_encoder_experiment.py",
+]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
