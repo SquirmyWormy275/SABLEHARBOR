@@ -1307,7 +1307,7 @@ requires-dist = [
     { name = "typer", specifier = ">=0.12,<1" },
     { name = "types-pyyaml", marker = "extra == 'dev'", specifier = ">=6,<7" },
     { name = "uvicorn", marker = "extra == 'audit-suite'", specifier = ">=0.30,<1" },
-    { name = "xlsxwriter", specifier = ">=3.2,<4" },
+    { name = "xlsxwriter", specifier = "==3.2.9" },
 ]
 provides-extras = ["dev", "postgres", "ccf-service", "audit-suite"]
 
