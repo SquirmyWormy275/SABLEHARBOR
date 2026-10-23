@@ -17,25 +17,39 @@ SPEC.loader.exec_module(module)
 @pytest.fixture
 def copied(tmp_path):
     record = json.loads((ROOT / module.RECORD).read_text())
-    for path in (module.RECORD, module.DEPENDENCY, record["baseline_snapshot"]):
+    patched = json.loads((ROOT / module.PATCHED_RECORD).read_text())
+    for path in (
+        module.RECORD,
+        module.DEPENDENCY,
+        record["baseline_snapshot"],
+        module.PATCHED_RECORD,
+        patched["baseline_snapshot"],
+    ):
         target = tmp_path / path
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes((ROOT / path).read_bytes())
-    return tmp_path, record
+    return tmp_path, record, patched
 
 
-def test_historical_input_matches_original_snapshot(copied):
-    root, record = copied
+def test_historical_input_matches_complete_successor_chain(copied):
+    root, record, patched = copied
     manifest = json.loads((ROOT / "docs/legal/gap-instruments/manifest.json").read_text())
     item = next(item for item in manifest["inputs"] if item["path"] == module.DEPENDENCY)
     assert item["sha256"] == record["before_sha256"]
+    assert module.historical_toolchain_successor(root, item) == patched["id"]
+
+
+def test_prior_successor_still_verifies_at_its_original_bytes(copied):
+    root, record, patched = copied
+    (root / module.DEPENDENCY).write_bytes((root / patched["baseline_snapshot"]).read_bytes())
+    item = {"path": module.DEPENDENCY, "sha256": record["before_sha256"]}
     assert module.historical_toolchain_successor(root, item) == record["id"]
 
 
 @pytest.mark.parametrize("evidence", ["record", "baseline", "current"])
 @pytest.mark.parametrize("operation", ["delete", "change"])
 def test_evidence_drift_fails_closed(copied, evidence, operation):
-    root, record = copied
+    root, record, patched = copied
     path = (
         root
         / {
@@ -56,9 +70,22 @@ def test_evidence_drift_fails_closed(copied, evidence, operation):
     )
 
 
+@pytest.mark.parametrize("evidence", ["record", "baseline"])
+@pytest.mark.parametrize("operation", ["delete", "change"])
+def test_patched_successor_evidence_drift_fails_closed(copied, evidence, operation):
+    root, record, patched = copied
+    path = root / (module.PATCHED_RECORD if evidence == "record" else patched["baseline_snapshot"])
+    if operation == "delete":
+        path.unlink()
+    else:
+        path.write_bytes(path.read_bytes() + b"\n")
+    item = {"path": module.DEPENDENCY, "sha256": record["before_sha256"]}
+    assert module.historical_toolchain_successor(root, item) is None
+
+
 @pytest.mark.parametrize("change", ["wrong_path", "wrong_original_hash", "current_hash"])
 def test_other_inputs_or_resealed_pin_not_accepted(copied, change):
-    root, record = copied
+    root, record, patched = copied
     item = {"path": module.DEPENDENCY, "sha256": record["before_sha256"]}
     if change == "wrong_path":
         item["path"] = "tools/legal_gaps/build.py"
