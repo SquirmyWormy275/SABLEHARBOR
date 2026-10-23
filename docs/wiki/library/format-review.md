@@ -6,11 +6,11 @@ This list helps maintainers check which source documents have formatted companio
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 451 |
+| COUNTERPART_REVIEW_REQUIRED | 453 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 102 |
-| READER_OR_MAINTENANCE_PAGE | 211 |
+| READER_OR_MAINTENANCE_PAGE | 213 |
 | UNRESOLVED_DOCUMENT_COUNTERPART | 218 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_DOCUMENT_PAIR | 148 |
@@ -52,6 +52,8 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Geographic closeout — synthetic edition scope](../../canon/GEOGRAPHIC_SYNTHETIC_SCOPE_DISPOSITION_2026-09-29.md) — Corporate document-format reconciliation
 - [Headquarters exterior visual withdrawn](../../canon/HEADQUARTERS_VISUAL_WITHDRAWAL_2026-09-22.md) — Corporate document-format reconciliation
 - [Klein shop and Fort occupancy continuity](../../canon/KLEIN_FORT_OCCUPANCY_2026-09-13.md) — Corporate document-format reconciliation
+- [SABLE HARBOR — Recovered office and estate work](../../facilities/history/office-estate-review-2026-09-11/original/START_HERE_Recovery_Status.md) — Corporate document-format reconciliation
+- [SABLE HARBOR — Offices, Facilities, and Locations Handover](../../facilities/history/office-estate-review-2026-09-11/original/context/SABLE_HARBOR_Offices_and_Locations_Handover_2026-09-11.md) — Corporate document-format reconciliation
 - [Accounting, finance and audit practice](../../finance/READER_EXERCISES.md) — SH-FIN-HUMAN-001
 - [Current disposition of the Foundry Field billing proposal](../../finance/evidence/billing-proposal/CURRENT.md) — SH-FIN-HUMAN-001
 - [Invoice](../../finance/evidence/billing/FF-003-v1/INVOICE.md) — SH-FIN-HUMAN-001
