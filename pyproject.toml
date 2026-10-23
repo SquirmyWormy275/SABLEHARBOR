@@ -14,7 +14,7 @@ dependencies = [
   "PyYAML>=6,<7",
   "sqlalchemy>=2.0,<3",
   "typer>=0.12,<1",
-  "xlsxwriter>=3.2,<4"
+  "xlsxwriter==3.2.9"
 ]
 
 [project.optional-dependencies]
