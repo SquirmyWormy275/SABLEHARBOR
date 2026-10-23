@@ -68,10 +68,14 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # Markdown rows (1,704 -> 1,707) against accepted main 115763b0. All
     # seven non-reader catalog tables remain exact-equal; SQLite integrity
     # and foreign-key checks pass. Current industrial authority is unchanged.
+    # The September 10 service operating-model history adds two Markdown
+    # reader rows (1,707 -> 1,709) on the R1 predecessor. All seven
+    # non-reader tables remain exact-equal; SQLite integrity and foreign keys
+    # pass. This does not approve modeled budgets or alter current services.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        15872000,
-        "80aea5b12c73011f112d65e40bbdbfbf10f92a18f092bae2769dfbc5af649b19",
+        15882240,
+        "5144871885a342c6053055f00a4eb82979b8e6d3ef30c9ddbf78d13ec23176c3",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.
