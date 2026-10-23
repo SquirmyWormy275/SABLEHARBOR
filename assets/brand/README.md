@@ -94,6 +94,10 @@ and has an explicit `DO_NOT_DISTRIBUTE` state: it predates the September 5 appro
 sources and contains J2 stationery that is no longer in the current collateral tree.
 Use the live repository assets and their applicable manifests instead.
 
+The [September 9 Advisory logo and letterhead proposal](history/advisory-proposal-2026-09-09/README.md)
+is preserved as a dated, unadopted visual candidate. It does not replace the
+current Advisory logo or production stationery.
+
 ## Manifest and validation
 
 - `manifest.json` records production logo assets, dimensions, status, and SHA-256 digests.
