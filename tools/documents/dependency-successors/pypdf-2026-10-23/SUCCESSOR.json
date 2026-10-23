@@ -1,0 +1,44 @@
+{
+  "advisories": [
+    "https://github.com/py-pdf/pypdf/security/advisories/GHSA-6c7f-9265-g8fw",
+    "https://github.com/py-pdf/pypdf/security/advisories/GHSA-jr96-gvgh-j3r4",
+    "https://github.com/py-pdf/pypdf/security/advisories/GHSA-gmh7-3g9r-mjh5"
+  ],
+  "id": "SH-PYPDF-TOOLCHAIN-SUCCESSOR-2026-10-23",
+  "limitations": [
+    "Historical publication and release bytes, their manifests and source pins remain unchanged.",
+    "pypdf 6.21.2 is not attributed to any historical publication.",
+    "The before snapshots preserve exact current requirement bytes as of source_commit_before."
+  ],
+  "package": {
+    "after": "6.21.2",
+    "before": "6.21.1",
+    "name": "pypdf"
+  },
+  "paths": [
+    {
+      "after_sha256": "d30b092c36bb63e0b83d1e2232d5f4c725fd68d8e75de591cbd00a3fdd69aa70",
+      "before_sha256": "f540b2dbb708cbea1bc27b07ebb740cf420890935af2d2c81e3e4f2ba4da1126",
+      "before_snapshot": "tools/documents/dependency-successors/pypdf-2026-10-23/pyproject.toml.before.txt",
+      "path": "pyproject.toml"
+    },
+    {
+      "after_sha256": "0a6a0f57d93580b5b019cbf48726a1bec1624949c163aa048076f4fa481dcf27",
+      "before_sha256": "ba2d8e101f0fa8129c89fd3c2c429e9436e9c61df03554529295837dbebacf64",
+      "before_snapshot": "tools/documents/dependency-successors/pypdf-2026-10-23/tools_documents_requirements.txt.before.txt",
+      "path": "tools/documents/requirements.txt"
+    },
+    {
+      "after_sha256": "f64ddec60c0a69dbc8fb01e9d0b321466971aaa5b4a86ddad564ed07bf0b5b02",
+      "before_sha256": "e3fd8cfe41eb109ac4ff536d3577b5a52b269f15861766cf2debcb2e73dec142",
+      "before_snapshot": "tools/documents/dependency-successors/pypdf-2026-10-23/geospatial_requirements.txt.before.txt",
+      "path": "geospatial/requirements.txt"
+    }
+  ],
+  "reason": "PR213 dependency advisory audit run 40029392603 reports three pypdf 6.21.1 runtime-denial vulnerabilities; 6.21.2 patches them.",
+  "schema": "SH_CURRENT_TOOLCHAIN_SUCCESSOR_V1",
+  "scope": "Current developer, publication-normalizer and geospatial toolchains only. uv.lock is regenerated from the current pyproject.",
+  "source_commit_before": "2276b7817300706d9b09ac4e7587693927095f67",
+  "state": "PROPOSED_PENDING_ACCEPTANCE",
+  "upstream_release": "https://github.com/py-pdf/pypdf/releases/tag/6.21.2"
+}
