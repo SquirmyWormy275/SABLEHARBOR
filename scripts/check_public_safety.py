@@ -76,10 +76,30 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # (1,709 -> 1,713, including two PDFs). The seven non-reader tables
     # remain exact-equal; SQLite integrity and foreign keys pass. The
     # proposal does not revise the accepted current organization chart.
+    # The October 2 unadopted encoder experiment adds two historical
+    # Markdown reader rows (1,713 -> 1,715). The seven non-reader tables
+    # remain exact-equal; SQLite integrity and foreign keys pass. This does
+    # not change the accepted canonical codec or signed workroom histories.
+    # The September finance build-readiness note adds its dated Markdown
+    # source and historical PDF (1,715 -> 1,717 reader rows). Seven non-reader
+    # tables remain exact-equal; SQLite integrity and foreign keys pass.
+    # Planning language does not become a financing or board approval.
+    # The September 14-15 closeout and voice provenance adds five dated
+    # Markdown reader rows (1,717 -> 1,722). The seven non-reader tables
+    # remain exact-equal; SQLite integrity and foreign keys pass. Source
+    # notes do not establish a completed closeout or new current authority.
+    # The historical geographic transfer manifest adds one reader guide
+    # (1,722 -> 1,723). Its three payloads already match accepted Git
+    # history; seven non-reader tables remain exact-equal, with SQLite
+    # integrity and foreign keys passing. No new geographic claim is made.
+    # The unaccepted v1.5.0 geographic preview stages add three historical
+    # Markdown reader rows (1,723 -> 1,726). The seven non-reader tables
+    # remain exact-equal; SQLite integrity and foreign keys pass. Neither
+    # preview changes the accepted v1.5.0 release or current site decisions.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        16005120,
-        "9be16ec91d3b49957cb6e24d2dd5f4f1be1e5097948cb7a7d5f9f6d5d9daad4a",
+        16517120,
+        "b654e4234f8bbe9ee5f2e72a47c28909c9d55ea29cd1c4a947751cae92d063ee",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.

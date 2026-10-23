@@ -6,11 +6,11 @@ This list helps maintainers check which source documents have formatted companio
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 458 |
+| COUNTERPART_REVIEW_REQUIRED | 469 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 101 |
-| READER_OR_MAINTENANCE_PAGE | 216 |
+| READER_OR_MAINTENANCE_PAGE | 230 |
 | UNRESOLVED_DOCUMENT_COUNTERPART | 218 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_DOCUMENT_PAIR | 148 |
@@ -75,6 +75,8 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Current industrial transaction and tax support](../../finance/evidence/tax-transaction/TRANSACTION_SUPPORT.md) — SH-FIN-HUMAN-001
 - [Transaction cash and conditional tax support](../../finance/evidence/tax-transaction/draft/WORKING_PAPER.md) — SH-FIN-HUMAN-001
 - [Procurement, payables and Treasury](../../finance/evidence/treasury/draft/WORKING_PAPER.md) — SH-FIN-HUMAN-001
+- [Sable Harbor financial reconstruction — Phase 0/1](../../finance/history/corporate-reconstruction-remote-2026-09-03/originals/executable/docs/finance/SABLE_HARBOR_FINANCIAL_RECONSTRUCTION_PHASE_0_1.md) — SH-FIN-HUMAN-001
+- [Sable Harbor financial reconstruction — Phase 0/1](../../finance/history/corporate-reconstruction-remote-2026-09-03/originals/initial/docs/finance/SABLE_HARBOR_FINANCIAL_RECONSTRUCTION_PHASE_0_1.md) — SH-FIN-HUMAN-001
 - [Finance and accounting: human evidence completion handoff](../../handoffs/FINANCE_HUMAN_EVIDENCE_COMPLETION.md) — Corporate document-format reconciliation
 - [ARU / Red Wash / Pale Sun handoff R1 — historical predecessor](../../handoffs/industrial_r1/INDEX.md) — Corporate document-format reconciliation
 - [SABLE HARBOR — FULL-STATE CODEX IMPLEMENTATION HANDOFF](../../handoffs/industrial_r1/SABLE_HARBOR_ARU_RED_WASH_PALE_SUN_CODEX_HANDOFF_FULL_STATE.md) — Corporate document-format reconciliation
@@ -103,6 +105,11 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Synthetic payroll-release review note](../../internal/company-closeout/daedalus-rehearsal-2026-09-29/LOWER_TRUST_NOTICE.md) — Corporate document-format reconciliation
 - [Selected payroll-release IAM-007 case view](../../internal/company-closeout/daedalus-rehearsal-2026-09-29/SELECTED_IAM_CASE.md) — Corporate document-format reconciliation
 - [Committed portal runtime review — 2026-09-22](../../internal/company-closeout/evidence/newruntime/5344bf76/REVIEW.md) — Corporate document-format reconciliation
+- [Rail source-consumer and geometry-only sensitivity receipt](../../internal/company-closeout/evidence/rail-source-consumer-2026-09-29/remote-branch-README.original.md) — Corporate document-format reconciliation
+- [SABLE HARBOR — Codex company closeout execution handover](../../internal/company-closeout/history/voice-and-readiness-2026-09-14-15/codex_company_closeout_handover_2026-09-15.md) — Corporate document-format reconciliation
+- [SABLE HARBOR — company readiness and closeout review](../../internal/company-closeout/history/voice-and-readiness-2026-09-14-15/company_readiness_closeout_2026-09-14.md) — Corporate document-format reconciliation
+- [SABLE HARBOR — three-decision voice-session handover](../../internal/company-closeout/history/voice-and-readiness-2026-09-14-15/three_decisions_voice_handover_2026-09-15.md) — Corporate document-format reconciliation
+- [SABLE HARBOR — Three Decisions: Voice Outcomes and Return Handover](../../internal/company-closeout/history/voice-and-readiness-2026-09-14-15/three_decisions_voice_outcomes_2026-09-14.md) — Corporate document-format reconciliation
 - [HOST-R01 — precise prospective terms for decision](../../internal/company-closeout/host-residual-successor/TERMS_PROPOSAL.md) — Corporate document-format reconciliation
 - [Pending implementation text — recommended current-rights bundle](../../internal/company-closeout/residual-finance-2026-09-22/PENDING_INSTRUMENT.md) — Corporate document-format reconciliation
 - [Actionable CCF procedure deltas](../../internal/development/CCF_ACTIONABLE_CONTROL_DELTAS_2026-09-12.md) — Corporate document-format reconciliation
@@ -276,9 +283,11 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Closeout evidence releases](../../releases/CLOSEOUT_EVIDENCE_RELEASES.md) — Corporate document-format reconciliation
 - [Company edition releases](../../releases/COMPANY_EDITION_RELEASES.md) — Corporate document-format reconciliation
 - [Facility atlas controlled releases](../../releases/FACILITY_ATLAS_RELEASES.md) — Corporate document-format reconciliation
+- [Finance closeout local history releases](../../releases/FINANCE_CLOSEOUT_HISTORY_RELEASES.md) — Corporate document-format reconciliation
 - [Geographic evidence 1.5.0 — accepted delivery receipt](../../releases/GEOGRAPHIC_EVIDENCE_1_5_0_RECEIPT.md) — Corporate document-format reconciliation
 - [Geographic evidence releases](../../releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) — Corporate document-format reconciliation
 - [Industrial case releases](../../releases/INDUSTRIAL_CASE_RELEASES.md) — Corporate document-format reconciliation
+- [Local worktree history releases](../../releases/LOCAL_WORKTREE_HISTORY_RELEASES.md) — Corporate document-format reconciliation
 - [Local access-remediation continuation](../../../enterprise/audit_suite/ACCESS_REMEDIATION_ACTIVITY.md) — Corporate document-format reconciliation
 - [Declared-subject access review continuation](../../../enterprise/audit_suite/ACCESS_REVIEW_CONTINUATION.md) — Corporate document-format reconciliation
 - [Adjacent declared-subject access review](../../../enterprise/audit_suite/ACCESS_REVIEW_SUCCESSOR.md) — Corporate document-format reconciliation
@@ -448,6 +457,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Conditional mine utility ROT continuation](../../../enterprise/closeout/INDUSTRIAL_TAX_FUTURE.md) — Corporate document-format reconciliation
 - [State receipt apportionment — company closeout](../../../enterprise/closeout/STATE_APPORTIONMENT.md) — Corporate document-format reconciliation
 - [August 2026 people and operating reconstruction](../../../enterprise/operations/docs/completed-period.md) — SH-FIN-HUMAN-001
+- [August 2026 people and operating reconstruction](../../../enterprise/operations/docs/history/completed-period-2026-10-03.original.md) — SH-FIN-HUMAN-001
 - [August Pale Sun legal-employer allocation](../../../enterprise/operations/docs/ps-legal-payroll-bridge.md) — SH-FIN-HUMAN-001
 - [Service operating-model comparison](../../../enterprise/services/history/operating-model-2026-09-10/original/REPORT.md) — Corporate document-format reconciliation
 - [Klein shop and Fort continuity — proposed decision](../../../geospatial/chronology/CONTINUITY_PROPOSAL.md) — Corporate document-format reconciliation
@@ -459,6 +469,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Headcount, occupancy and space bridge](../../../geospatial/facilities/population/BRIDGE.md) — Corporate document-format reconciliation
 - [Geographic completion authority — September 13, 2026](../../../geospatial/finalization/AUTHORIZATION.md) — Corporate document-format reconciliation
 - [Source interpretation and geographic crosswalk](../../../geospatial/finalization/SOURCE_REVIEW.md) — Corporate document-format reconciliation
+- [Geographic evidence releases](../../../geospatial/history/v1.5.0-previews-2026-10-03/original/initial/supplement/docs/releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) — Corporate document-format reconciliation
 - [Geographic decision register v0.1](../../../geospatial/registers/GEOGRAPHIC_DECISION_REGISTER_v0.1.md) — Corporate document-format reconciliation
 - [Open geographic questions v0.1](../../../geospatial/registers/OPEN_GEOGRAPHIC_QUESTIONS_v0.1.md) — Corporate document-format reconciliation
 - [Provenance register](../../../geospatial/registers/PROVENANCE_REGISTER.md) — Corporate document-format reconciliation

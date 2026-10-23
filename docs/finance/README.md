@@ -13,6 +13,13 @@ Follow the money from a business question to the workbook and the records behind
 
 Keep each exercise's period, scenario and source edition together. The [business model design](BUSINESS_DRIVEN_SUCCESSOR_2026-09-09.md) explains which later assumptions replace the earlier platform forecast and which historical records remain unchanged.
 
+The [undated September financial build readiness report](history/build-readiness-undated-2026-09/README.md)
+is a historical planning predecessor. Its workforce, revenue and capital
+ranges were scenarios reviewed before PR #9 merged, not observed company
+results or current canon.
+
+The [September 3 diagnostic reconstruction branch](history/corporate-reconstruction-remote-2026-09-03/README.md) preserves two unaccepted source stages and their conditional model outputs at exact bytes. It does not establish a company census or supersede the current finance sources.
+
 ## Reproduce the original v0.1 platform
 
 The instructions below describe the original, reproducible enterprise v0.1 edition—not the whole company's current financial or legal position.
@@ -42,3 +49,7 @@ Read [the v0.1 limitations](KNOWN_LIMITATIONS.md) before interpreting this editi
 ## Current Willow / Klein model
 
 The [Willow/Klein finance and corporate model](WILLOW_KLEIN_FINANCE_AND_CORPORATE_MODEL_2026-09-06.md) uses the owner-selected historical name under the [September 7 decision](../canon/KLEIN_NAME_AND_IDENTITY_2026-09-07.md). Klein is a closed historical program, not a new current reporting segment. All prior finance source-lock files and release inputs remain unchanged.
+
+## Historical closeout source stages
+
+The [September 14–22 local worktree history](evidence/company-closeout/history/local-worktree-2026-09-14-22/README.md) and its [release index](../releases/FINANCE_CLOSEOUT_HISTORY_RELEASES.md) preserve exact predecessor tax, treasury and closeout implementation bytes. They carry their own commit/availability dates and do not revise the current [company closeout source](evidence/company-closeout/README.md) or any source-locked finance release.
