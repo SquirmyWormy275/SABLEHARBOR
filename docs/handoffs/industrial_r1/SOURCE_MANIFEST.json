@@ -1,0 +1,136 @@
+{
+  "accepted_main_compared": "ce8df6c21d7d89447cf7008e237698009f60cac9",
+  "authority": "R1 permitted local implementation but imposed a second PR/push/merge authorization checkpoint. R2 explicitly corrected that instruction. The current industrial case and later accepted canon control; neither handoff is a professional audit opinion.",
+  "entries": [
+    {
+      "bytes": 124149,
+      "git_blob_oid": "2dc2e4df8bd313d5c2fac61ea7781ba2f0fa40af",
+      "member": "SABLE_HARBOR_ARU_RED_WASH_PALE_SUN_CODEX_HANDOFF_FULL_STATE.md",
+      "relationship": "PRESERVED_R1_ORIGINAL",
+      "repository_path": "docs/handoffs/industrial_r1/SABLE_HARBOR_ARU_RED_WASH_PALE_SUN_CODEX_HANDOFF_FULL_STATE.md",
+      "sha256": "da8fb6924d999d9ad2df59cb815fd0550459861301d962fcbd79fdf9447da827",
+      "zip_member": "SABLE_HARBOR_ARU_RED_WASH_PALE_SUN_CODEX_HANDOFF_2026-09-05/SABLE_HARBOR_ARU_RED_WASH_PALE_SUN_CODEX_HANDOFF_FULL_STATE.md"
+    },
+    {
+      "bytes": 8244,
+      "git_blob_oid": "53b9bb807cb413f2a66afbc6ab75aa8d289345b9",
+      "member": "DECISION_LEDGER_FULL.json",
+      "relationship": "PRESERVED_R1_ORIGINAL",
+      "repository_path": "docs/handoffs/industrial_r1/DECISION_LEDGER_FULL.json",
+      "sha256": "99b1adbeb758c8d47e3815dd0f91f285337e4662fcc667d40daa719b02635ddc",
+      "zip_member": "SABLE_HARBOR_ARU_RED_WASH_PALE_SUN_CODEX_HANDOFF_2026-09-05/DECISION_LEDGER_FULL.json"
+    },
+    {
+      "bytes": 1331,
+      "git_blob_oid": "363f396ed07bcea82bb727919d9e2cc093bba5ca",
+      "member": "CHECKSUMS.sha256",
+      "relationship": "PRESERVED_R1_ORIGINAL",
+      "repository_path": "docs/handoffs/industrial_r1/CHECKSUMS.sha256",
+      "sha256": "0f950cfddacba8616ae8c7d91cd23fdaf8df2552b00c293952cf5710f2a6ff58",
+      "zip_member": "SABLE_HARBOR_ARU_RED_WASH_PALE_SUN_CODEX_HANDOFF_2026-09-05/CHECKSUMS.sha256"
+    },
+    {
+      "bytes": 572,
+      "git_blob_oid": "43e0f6df2ceb6c86ba984108ec37e95b43f5fbd7",
+      "member": "README.md",
+      "relationship": "PRESERVED_R1_ORIGINAL",
+      "repository_path": "docs/handoffs/industrial_r1/README.md",
+      "sha256": "7c7f89447c4e58bcccef9b09288ae670c5fafc1effb244b4e6ee2e1acbec8cec",
+      "zip_member": "SABLE_HARBOR_ARU_RED_WASH_PALE_SUN_CODEX_HANDOFF_2026-09-05/README.md"
+    },
+    {
+      "bytes": 4092,
+      "git_blob_oid": "087ebc9727049f21876ff26bdc80d902a403dc0a",
+      "member": "ASSET_MANIFEST.json",
+      "relationship": "PRESERVED_R1_ORIGINAL",
+      "repository_path": "docs/handoffs/industrial_r1/ASSET_MANIFEST.json",
+      "sha256": "1ca5466b52835a36255488033e7a14bd32fc23a0a136bfea55ea140ade78dc1b",
+      "zip_member": "SABLE_HARBOR_ARU_RED_WASH_PALE_SUN_CODEX_HANDOFF_2026-09-05/ASSET_MANIFEST.json"
+    },
+    {
+      "bytes": 874990,
+      "git_blob_oid": "c089db62339eedaf46e7302d09fa8fb3e941dbad",
+      "member": "assets/aru/aru_alternate_chat_asset.png",
+      "relationship": "EXACT_R2_ACCEPTED_GIT",
+      "repository_path": "assets/brand/industrial_sources/aru/aru_alternate_chat_asset.png",
+      "sha256": "0bc5f917298db93bf48b3052f65e40a88e978ea8e2f01b7d99042ed1c28fa839",
+      "zip_member": "SABLE_HARBOR_ARU_RED_WASH_PALE_SUN_CODEX_HANDOFF_2026-09-05/assets/aru/aru_alternate_chat_asset.png"
+    },
+    {
+      "bytes": 1071679,
+      "git_blob_oid": "a1cb0150947a88e58c85b9816c2b4a7223c1e565",
+      "member": "assets/aru/aru_primary_centered_chat_asset.png",
+      "relationship": "EXACT_R2_ACCEPTED_GIT",
+      "repository_path": "assets/brand/industrial_sources/aru/aru_primary_centered_chat_asset.png",
+      "sha256": "5892792a95e7fbc2a16171fea38b96d2aee5becf0603b68687f0d48e1bd9fc46",
+      "zip_member": "SABLE_HARBOR_ARU_RED_WASH_PALE_SUN_CODEX_HANDOFF_2026-09-05/assets/aru/aru_primary_centered_chat_asset.png"
+    },
+    {
+      "bytes": 1923281,
+      "git_blob_oid": "5f3873d4c0e970f0cd33742bf71f5edde98e10a5",
+      "member": "assets/aru/aru_brand_board_chat_asset.png",
+      "relationship": "EXACT_R2_ACCEPTED_GIT",
+      "repository_path": "assets/brand/industrial_sources/aru/aru_brand_board_chat_asset.png",
+      "sha256": "05204f15c6a86c10de70c3dfc17996326063a06c0d382147d90ce12834b85888",
+      "zip_member": "SABLE_HARBOR_ARU_RED_WASH_PALE_SUN_CODEX_HANDOFF_2026-09-05/assets/aru/aru_brand_board_chat_asset.png"
+    },
+    {
+      "bytes": 808700,
+      "git_blob_oid": "a42e0c5bcf694e0982b85a97ea96bebfd8586210",
+      "member": "assets/bst/bst_bulk_storage_transport_candidate.png",
+      "relationship": "EXACT_R2_ACCEPTED_GIT",
+      "repository_path": "assets/brand/industrial_sources/bst/bst_bulk_storage_transport_candidate.png",
+      "sha256": "60c642acb956ae908aafa3abea9ad21705ca0cd95258232926fbca2894eb4e92",
+      "zip_member": "SABLE_HARBOR_ARU_RED_WASH_PALE_SUN_CODEX_HANDOFF_2026-09-05/assets/bst/bst_bulk_storage_transport_candidate.png"
+    },
+    {
+      "bytes": 839885,
+      "git_blob_oid": "fa296827f1c0aac697d75168c2881ad555740eb9",
+      "member": "assets/bst/bst_railway_primary_chat_asset.png",
+      "relationship": "EXACT_R2_ACCEPTED_GIT",
+      "repository_path": "assets/brand/industrial_sources/bst/bst_railway_primary_chat_asset.png",
+      "sha256": "9af275b2f65ff5a82bca760609ab166ecd055c7a266d171bbf558b05c7e37a05",
+      "zip_member": "SABLE_HARBOR_ARU_RED_WASH_PALE_SUN_CODEX_HANDOFF_2026-09-05/assets/bst/bst_railway_primary_chat_asset.png"
+    },
+    {
+      "bytes": 26283,
+      "git_blob_oid": "4e16e605faf7780ff48c4fa91cbb85d759351eb5",
+      "member": "source_reconciliation/ARU_BST_RECONCILIATION_REPORT_v1.0.md",
+      "relationship": "EXACT_R2_ACCEPTED_GIT",
+      "repository_path": "docs/handoffs/industrial_r2/source_reconciliation/ARU_BST_RECONCILIATION_REPORT_v1.0.md",
+      "sha256": "0cf06a619bbf6c6e7113c05d0472c70dd9026cb59344cb3058cef806ebfad89c",
+      "zip_member": "SABLE_HARBOR_ARU_RED_WASH_PALE_SUN_CODEX_HANDOFF_2026-09-05/source_reconciliation/ARU_BST_RECONCILIATION_REPORT_v1.0.md"
+    },
+    {
+      "bytes": 23958,
+      "git_blob_oid": "22f0fe675642bf53ed274af6152d551a876d080d",
+      "member": "source_reconciliation/ARU_BST_RECONCILIATION_REPORT_2026-09-05.md",
+      "relationship": "EXACT_R2_ACCEPTED_GIT",
+      "repository_path": "docs/handoffs/industrial_r2/source_reconciliation/ARU_BST_RECONCILIATION_REPORT_2026-09-05.md",
+      "sha256": "ca4be35149e33ef5b1336ebde2ada7b98fb64ebaa2b434ae5d8a12c6d8d7d677",
+      "zip_member": "SABLE_HARBOR_ARU_RED_WASH_PALE_SUN_CODEX_HANDOFF_2026-09-05/source_reconciliation/ARU_BST_RECONCILIATION_REPORT_2026-09-05.md"
+    },
+    {
+      "bytes": 4455,
+      "git_blob_oid": "acf9d0bdaddb1850eabb41629cbe5d11aefbdbf6",
+      "member": "source_reconciliation/aru_bst_reconciled_decision_ledger_v1.0.json",
+      "relationship": "EXACT_R2_ACCEPTED_GIT",
+      "repository_path": "docs/handoffs/industrial_r2/source_reconciliation/aru_bst_reconciled_decision_ledger_v1.0.json",
+      "sha256": "16aa2f3238291b960d7b4245a09b17eef00eabf68456596edd9d6ce298cb7c5c",
+      "zip_member": "SABLE_HARBOR_ARU_RED_WASH_PALE_SUN_CODEX_HANDOFF_2026-09-05/source_reconciliation/aru_bst_reconciled_decision_ledger_v1.0.json"
+    }
+  ],
+  "exact_accepted_r2_member_count": 8,
+  "import_date": "2026-10-23",
+  "internal_checksums_verified": 12,
+  "member_count": 13,
+  "original_archive": "SABLE_HARBOR_ARU_RED_WASH_PALE_SUN_CODEX_HANDOFF_2026-09-05.zip",
+  "original_archive_bytes": 5358035,
+  "original_archive_sha256": "1d162c10f829658a0ff7fa880fea0f581118a4fe3c953c85391a701fbbf98efd",
+  "release_tag": "industrial-handoff-r1-historical-2026-09-05",
+  "schema": "sableharbor-industrial-r1-historical-intake-v1",
+  "source_date": "2026-09-05",
+  "status": "HISTORICAL_R1_SUPERSEDED_BY_R2",
+  "unique_r1_member_count": 5,
+  "zip_crc": "PASS"
+}

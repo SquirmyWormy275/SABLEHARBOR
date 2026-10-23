@@ -1,0 +1,5 @@
+id,name,kind,identity_status,source,contract_status,scope
+CP-KGM,Kelly Gang Mining,EXTERNAL_HOST,SYNTHETIC_SOURCE_NAMED,assessment,DEFINED_HOST_RELATIONSHIP_TERMS_NOT_REPLICATED,"Cradle host stream, rights, title and settlement boundary; host retains production."
+CP-DEMOTTE,Demotte Reclamation Services,EXTERNAL_HOST,SYNTHETIC_SOURCE_NAMED,assessment,DEFINED_HOST_RELATIONSHIP_TERMS_NOT_REPLICATED,Treatment host; ordinary compliance and stop/bypass authority retained.
+CP-NORTHSTAR,Northstar Minerals,HISTORICAL_SELLER,SYNTHETIC_SOURCE_NAMED,assessment,HISTORICAL_TRANSITION_NOT_CURRENT,"Red Wash seller; historical up-to-six-month transition from July 18, 2025 is not ongoing service."
+CP-UP,Union Pacific,EXTERNAL_NETWORK_INTERFACE,REAL_NAME_IN_SYNTHETIC_MODEL,assessment,NO_REAL_WORLD_CONTRACT_ASSERTED,Class I linehaul/interface in the fictional industrial model only.

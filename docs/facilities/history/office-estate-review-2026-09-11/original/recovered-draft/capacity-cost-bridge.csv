@@ -1,0 +1,8 @@
+estate_id,part,usable_sqft,gross_sqft,fitout_low_usd,fitout_high_usd,annual_premises_low_usd,annual_premises_high_usd,annual_property_services_low_usd,annual_property_services_high_usd
+E-01,Corporate/product/Audit building,55000,68750,7700000,12650000,1980000,2750000,550000,880000
+E-02,J2 institutional building,36000,45000,6480000,10800000,1296000,1800000,360000,576000
+E-03,Education teaching and residence,48000,60000,9600000,15360000,1536000,2304000,480000,768000
+E-05,Optional Reno field hub,4000,5000,320000,560000,96000,144000,32000,48000
+E-06,Fort gross reuse program,40000,50000,3200000,7200000,480000,880000,320000,560000
+E-06,Bedford gross reuse program,26000,32500,3900000,7800000,312000,572000,260000,468000
+E-07,Conditional Pale Sun office annex,3000,3750,240000,420000,54000,84000,24000,36000

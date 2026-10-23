@@ -15,6 +15,10 @@ Open the [original full-size cohort artwork](../../organization/assets/current/p
 
 The charts record names, roles and joining years where supported. Appointment records describe later changes in responsibility. Staffing plans show authorized positions, so use personnel records when counting employees at a particular date.
 
+The [September 9 chart mockups and wording review](../../organization/history/2026-09-09-draft/README.md)
+are preserved as a draft for approval. They do not override the later chart
+editions or supply the missing personnel facts.
+
 [Subject directory](README.md) · [Business directory](../businesses/README.md) · [Department directory](../departments/README.md) · [Wiki home](../Home.md) · [All files](../Files.md)
 
 <a id="reading-guide"></a>
