@@ -14,6 +14,10 @@ Sable Harbor Advisory investigates business problems, builds client intelligence
 
 Advisory remains a business line of the existing Sable Harbor contracting entity. It is institutionally separate from J2 and is not Junction Advisory Group. Atlas Meridian has its own product organization and licenses.
 
+The [September 9 logo and letterhead proposal](../../../assets/brand/history/advisory-proposal-2026-09-09/README.md)
+is retained for visual history. Its proposal status does not replace the
+current Advisory identity shown above.
+
 ## Organization and people
 
 [![Sable Harbor Advisory organization chart](../../../docs/organization/assets/current/advisory.png)](../../../docs/organization/charts/advisory.md)
