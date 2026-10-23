@@ -1,0 +1,996 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "SH-ESTATE-PROPOSAL-20260911",
+  "base": "2b52933132e028bf5d9c9a8c151bb45cb0f19597",
+  "state": "DRAFT_OWNER_DECISIONS_PENDING",
+  "authority": "Office/location handover supplied September 11; research/draft/branch/PR authorized; new substantive decisions not approved",
+  "required_reading": [
+    "MAINTAINERS.md",
+    "docs/governance/REPOSITORY_DELIVERY_AND_PACKAGING_POLICY.md",
+    "docs/internal/OPEN_CANON_AND_HYGIENE_ISSUE_INDEX.md",
+    "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+    "docs/structured/corporate_headquarters_closeout_2026-09-03.json",
+    "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+    "docs/governance/ENTERPRISE_TECHNOLOGY_SERVICES_DOCTRINE.md",
+    "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+    "docs/structured/j2_leadership_2026-09-10.json",
+    "docs/j2/J2_CHARTER.md",
+    "docs/j2/J2_ESTABLISHMENT.md",
+    "docs/j2/J2_HEADQUARTERS.md",
+    "docs/j2/EDUCATION.md",
+    "docs/organization/README.md",
+    "docs/organization/CHART_GOVERNANCE.md",
+    "docs/organization/DISPLAY_INVENTORY.md",
+    "docs/organization/UNRESOLVED_AND_EXCLUDED.md",
+    "docs/organization/CANON_TRACEABILITY_MATRIX.md",
+    "docs/organization/SOURCE_LOCK_EXCEPTIONS.md",
+    "docs/organization/source/chartbook.json",
+    "docs/organization/ORGANIZATION_MAP_REGISTER.json",
+    "geospatial/README.md",
+    "geospatial/sources/catalog.json",
+    "geospatial/registers/SITE_REGISTER.csv",
+    "geospatial/registers/GEOGRAPHIC_DECISION_REGISTER.md",
+    "geospatial/registers/GEOGRAPHIC_CONFLICTS.md",
+    "geospatial/registers/OPEN_GEOGRAPHIC_QUESTIONS_v0.1.md",
+    "geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md",
+    "geospatial/docs/SITE_SELECTION_EVIDENCE.md",
+    "geospatial/docs/CANON_CONFLICT_EVIDENCE.md",
+    "docs/canon/THIRD_PARTY_SERVICES_SOURCING_DECISIONS_2026-09-09.md",
+    "docs/canon/THIRD_PARTY_SERVICES_IMPLEMENTATION_SCOPE_2026-09-09.md",
+    "docs/internal/development/THIRD_PARTY_SERVICES_RECONCILIATION_2026-09-09.md",
+    "docs/internal/development/THIRD_PARTY_SERVICES_IMPLEMENTATION_2026-09-09.md",
+    "industrial/source/entities.json",
+    "industrial/source/operations.json",
+    "industrial/source/geography/network.geojson",
+    "enterprise/operations/README.md",
+    "enterprise/operations/source/workforce.json",
+    "enterprise/operations/source/management.json",
+    "enterprise/operations/docs/management.md",
+    "enterprise/business/source/assets.json",
+    "enterprise/services/source/services.json",
+    "enterprise/services/source/components.json",
+    "enterprise/services/source/counterparties.json",
+    "enterprise/services/source/workloads.json",
+    "enterprise/services/source/economics.json",
+    "enterprise/services/source/provenance.json",
+    "enterprise/services/README.md",
+    "enterprise/services/docs/OPERATING_ASSUMPTIONS_AND_GATES.md",
+    "enterprise/services/generated/REPORT.md",
+    "enterprise/business/source/policy.json"
+  ],
+  "estate": [
+    {
+      "id": "E-01",
+      "name": "Sacramento shared headquarters",
+      "existing_ids": [
+        "SH-SITE-0001",
+        "CORP-CENTER",
+        "CORP-ESS",
+        "CORP-AUDIT",
+        "SHI",
+        "SHIH"
+      ],
+      "decision_status": "PROPOSAL_NOT_APPROVED",
+      "approval_date": null,
+      "modeled_opening_date": null,
+      "historical_occupancy_date": null,
+      "implementation_status": "PLANNING_ONLY",
+      "purpose": "Executive decisions, treasury and financial reporting, legal and people services, product collaboration and client meetings. Independent Audit has its own secured suite.",
+      "contracting_or_owning_entity_proposed": "SHI; Facilities accountable for premises; each substantive officer retains authority",
+      "region_proposed": "Sacramento Railyards / River District seam; exact parcel unresolved",
+      "tenure_proposed": "Reuse and adapt compatible existing accommodation first; enduring owned campus or long ground lease is a later capital choice",
+      "population_and_capacity": {
+        "conditional_home_groups": {
+          "foundry-field": 160,
+          "atlas-meridian": 36,
+          "advisory": 32,
+          "ess": 48,
+          "internal-audit": 8
+        },
+        "initial_fitted_desks": 200,
+        "normal_concurrent_people_range": [
+          125,
+          180
+        ],
+        "event_peak_range": [
+          240,
+          300
+        ],
+        "person_assignment_not_yet_approved": true
+      },
+      "space_brief": "55,000 USF / 68,750 GSF model: 27,000 team work; 12,000 collaboration/client rooms; 4,000 board/executive; 3,000 secured Audit; 9,000 reception, welfare, circulation within usable program and support. 200 desks include 20 shared visitor/swing places.",
+      "site_requirements": [
+        "Preserve exact approved architecture reference; source image still missing under #88",
+        "Shared board/issue rooms, 12–16 small meeting rooms, eight project rooms, client rooms separated from restricted material",
+        "Separate Audit access and records; J2 is in a separate building/precinct",
+        "Two independently routed carrier entries where feasible, protected local network closets, filtered outdoor air and operationally sized standby power",
+        "Flood/drainage, contamination, noise, rail/stadium access, utility and emergency-route studies before parcel selection; 8–15 acres remains inherited study scale"
+      ],
+      "transition_sequence": "0–3 months after decision: room and attendance audit; 3–12 months: reversible restacking/leased transition; 12–36+ months: campus implementation only after property, design and funding acceptance. These are durations, not opening dates.",
+      "alternatives_and_tradeoffs": [
+        "Separate offices for each function would multiply shared support and weaken routine collaboration.",
+        "Long institutional lease can preserve quality while reducing initial capital; compare against ownership after tenure evidence."
+      ],
+      "sources": [
+        "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+        "geospatial/sources/catalog.json",
+        "enterprise/business/source/policy.json"
+      ],
+      "space_cost_parts": [
+        {
+          "part": "Corporate/product/Audit building",
+          "usable_sqft": 55000,
+          "usable_to_gross": 0.8,
+          "fitout_usd_per_usf": [
+            140,
+            230
+          ],
+          "annual_premises_usd_per_usf": [
+            36,
+            50
+          ],
+          "annual_services_usd_per_usf": [
+            10,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E-02",
+      "name": "J2 institutional building and deployment base",
+      "existing_ids": [
+        "SH-SITE-0015",
+        "J2-HQ",
+        "J2-CONTACT",
+        "J2-JUDGMENT",
+        "J2-ORIENTATION",
+        "J2-JAG"
+      ],
+      "decision_status": "PROPOSAL_NOT_APPROVED",
+      "approval_date": null,
+      "modeled_opening_date": null,
+      "historical_occupancy_date": null,
+      "implementation_status": "PLANNING_ONLY",
+      "purpose": "Evidence intake, interviews, investigation, brief preparation, professional support and field-team handover. No enterprise operating command.",
+      "contracting_or_owning_entity_proposed": "SHI; Head of J2 controls institutional accommodation and disclosure; Facilities supplies building services",
+      "region_proposed": "Distinct building or independently accessed precinct on the Sacramento campus",
+      "tenure_proposed": "Use same estate infrastructure with genuinely separate J2 accommodation",
+      "population_and_capacity": {
+        "authorized_billets_total": 237,
+        "education_included": 35,
+        "noneducation_authorized": 202,
+        "fixed_nonJAG_nonEducation": 172,
+        "JAG_deployed_billets": 30,
+        "initial_fitted_desks": 130,
+        "expandable_desks": 190,
+        "normal_concurrent_people_range": [
+          95,
+          125
+        ],
+        "planning_peak_people": 180,
+        "occupied_by_arm": "Unknown; do not allocate the 180-person conditional J2 scenario by invented arm ratios"
+      },
+      "space_brief": "36,000 USF / 45,000 GSF: 20,000 investigation/workspace; 6,000 interview, intake and secure project rooms; 4,000 briefing/exercises; 6,000 support and internal circulation. Expand desk fit-out only as occupancy supports it.",
+      "site_requirements": [
+        "Independent access from ESS; protected interview rooms and evidence storage",
+        "Judgment Watch remains within Judgment, co-working at Contact intake rather than a new department",
+        "JAG return capacity reserved inside J2; no assumption that all 30 deployed staff occupy fixed desks daily",
+        "Dedicated admin workstations and protected video rooms; compute runtime is in E-08",
+        "Approved six leaders unchanged; no added billets or payroll"
+      ],
+      "transition_sequence": "Define access and room boundaries with the HQ brief; initial occupancy can be leased separately before campus construction.",
+      "alternatives_and_tradeoffs": [
+        "Separate Sacramento property if meaningful physical independence cannot be achieved on campus.",
+        "Remote-only J2 would underserve intake, interviews and professional formation."
+      ],
+      "sources": [
+        "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+        "docs/j2/J2_ESTABLISHMENT.md",
+        "docs/j2/J2_HEADQUARTERS.md",
+        "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md"
+      ],
+      "space_cost_parts": [
+        {
+          "part": "J2 institutional building",
+          "usable_sqft": 36000,
+          "usable_to_gross": 0.8,
+          "fitout_usd_per_usf": [
+            180,
+            300
+          ],
+          "annual_premises_usd_per_usf": [
+            36,
+            50
+          ],
+          "annual_services_usd_per_usf": [
+            10,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E-03",
+      "name": "Education residential precinct",
+      "existing_ids": [
+        "SH-SITE-0014",
+        "J2-EDU",
+        "FAC-EDUCATION"
+      ],
+      "decision_status": "PROPOSAL_NOT_APPROVED",
+      "approval_date": null,
+      "modeled_opening_date": null,
+      "historical_occupancy_date": null,
+      "implementation_status": "PLANNING_ONLY",
+      "purpose": "Residential formation, case teaching, executive and Board simulations, professional courses and enterprise convening.",
+      "contracting_or_owning_entity_proposed": "SHI; Head of Education owns pedagogy and program; Facilities owns property services",
+      "region_proposed": "Quiet, independently operated Sacramento campus precinct preferred; separate nearby Sacramento-area site is alternative",
+      "tenure_proposed": "Permanent institutional accommodation; use contracted residential venues as transition",
+      "population_and_capacity": {
+        "education_authorized_billets_in_J2": 35,
+        "initial_fitted_desks": 32,
+        "residential_rooms": 60,
+        "cohorts": 2,
+        "learners_per_cohort": 24,
+        "faculty_visitor_rooms": 12,
+        "daytime_learner_capacity": 120,
+        "peak_people_including_staff_and_visitors": 170,
+        "residential_room_nights_example": 8640,
+        "room_night_example_basis": "60 rooms × 4 nights × 36 teaching weeks; planning scenario, not utilization evidence"
+      },
+      "space_brief": "48,000 USF / 60,000 GSF: 25,000 residential/support; 14,000 teaching, simulation and case rooms; 5,000 faculty/program offices; 4,000 dining/common support. Two 24-person classrooms, one divisible 120-person convening room, six breakout/case rooms, mock boardroom, interview suite and control/debrief rooms.",
+      "site_requirements": [
+        "Separate daily rhythm and entrance from corporate work; teaching space never becomes permanent office overflow",
+        "Required-content owners remain Legal/Safety/P&C/Compliance; Education owns instruction",
+        "Hospitality is additional service demand; 35 Education billets are already inside 237 and are not hotel staffing",
+        "Reliable classroom AV, exercise network isolated from production, accessible rooms and overnight support",
+        "Permanent residence and public hotel operation are not proposed"
+      ],
+      "transition_sequence": "Teach at rented conference/residential facilities while the long-term precinct is designed; stage lodging after sustained cohort demand.",
+      "alternatives_and_tradeoffs": [
+        "Separate Davis-area residential site offers greater separation, but adds a property, transport and support burden; no property availability claim.",
+        "Foothill retreat is not preferred without travel, emergency access and hazard analysis."
+      ],
+      "sources": [
+        "docs/j2/EDUCATION.md",
+        "docs/j2/J2_ESTABLISHMENT.md",
+        "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md"
+      ],
+      "space_cost_parts": [
+        {
+          "part": "Education teaching and residence",
+          "usable_sqft": 48000,
+          "usable_to_gross": 0.8,
+          "fitout_usd_per_usf": [
+            200,
+            320
+          ],
+          "annual_premises_usd_per_usf": [
+            32,
+            48
+          ],
+          "annual_services_usd_per_usf": [
+            10,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E-04",
+      "name": "Shared product and Advisory workplaces",
+      "existing_ids": [
+        "SH-SITE-0017",
+        "SH-SITE-0018",
+        "SH-SITE-0019",
+        "foundry-field",
+        "atlas-meridian",
+        "advisory"
+      ],
+      "decision_status": "PROPOSAL_NOT_APPROVED",
+      "approval_date": null,
+      "modeled_opening_date": null,
+      "historical_occupancy_date": null,
+      "implementation_status": "PLANNING_ONLY",
+      "purpose": "Product development, customer implementation, professional client matters and practical collaboration with industrial teams.",
+      "contracting_or_owning_entity_proposed": "SHI; product leaders and Advisory President retain separate work ownership",
+      "region_proposed": "Sacramento main working base; Fort and Bedford touchdown seats; client deployment locations",
+      "tenure_proposed": "Share E-01 rooms; reserve eastern touchdown space rather than lease an immediate separate Advisory office",
+      "population_and_capacity": {
+        "conditional_workforce": {
+          "foundry-field": 160,
+          "atlas-meridian": 36,
+          "advisory": 32
+        },
+        "HQ_desks_included_in_E01": {
+          "foundry-field": 80,
+          "atlas-meridian": 32,
+          "advisory": 20
+        },
+        "eastern_touchdown_seats_shared": 8,
+        "new_occupied_roles": null
+      },
+      "space_brief": "Product/client rooms and workspaces included in E-01; six to eight east-coast touchdown seats are within the Fort/Bedford reuse briefs, not additional campus area.",
+      "site_requirements": [
+        "One Advisory bench across three practices; Value Office uses protected review rooms and independent certification",
+        "Atlas remains a dedicated product team; client and professional data planes are environments, not buildings",
+        "Foundry foundation and Field applications do not each receive offices",
+        "Home base is not a mandatory attendance quota or proof of employee relocation"
+      ],
+      "transition_sequence": "Record a base model first; validate actual home population and client demand before named individual relocation.",
+      "alternatives_and_tradeoffs": [
+        "Reno can be a later field deployment hub; separate Bay Area or Chicago office is not justified by the current source brief."
+      ],
+      "sources": [
+        "enterprise/business/source/policy.json",
+        "docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md",
+        "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md",
+        "docs/organization/FOUNDRY_AND_FOUNDRY_FIELD.md"
+      ],
+      "space_cost_parts": []
+    },
+    {
+      "id": "E-05",
+      "name": "Western field coverage and provisional offices",
+      "existing_ids": [
+        "SH-SITE-0011",
+        "SH-SITE-0012",
+        "SH-SITE-0013"
+      ],
+      "decision_status": "PROPOSAL_NOT_APPROVED",
+      "approval_date": null,
+      "modeled_opening_date": null,
+      "historical_occupancy_date": null,
+      "implementation_status": "PLANNING_ONLY",
+      "purpose": "Equip and convene western customer deployment teams without creating three duplicate regional headquarters.",
+      "contracting_or_owning_entity_proposed": "SHI / Foundry Field delivery owner, with shared Advisory booking",
+      "region_proposed": "Reno preferred first optional leased field hub; Elko and Tucson use client space/bookable rooms initially",
+      "tenure_proposed": "Reno 12-month pilot only if workload trigger is met; other two remain unactivated proposals",
+      "population_and_capacity": {
+        "optional_Reno_desks": 18,
+        "optional_Reno_peak_people": 24,
+        "Elko_Tucson_dedicated_desks": 0,
+        "activation_trigger": "At least 12 regular locally based users or recurring funded deployments supporting 120 team-days/month for two quarters"
+      },
+      "space_brief": "Optional Reno 4,000 USF with 18 desks, deployment-kit bench, secure lockers, two project rooms and vehicle loading. No laboratory or owned data center.",
+      "site_requirements": [
+        "Actual customer locations, drive times, air routes and recruitment need must be evidenced before activation",
+        "Pilot can be exited; no forced Reno assignment of all mining talent",
+        "No live property availability, lease or market quote claimed"
+      ],
+      "transition_sequence": "Collect demand alongside HQ audit; approve pilot only against trigger; no opening date.",
+      "alternatives_and_tradeoffs": [
+        "Elko-first if measured mine visits dominate the workload; Tucson-first only if actual copper-engineering commitments justify it."
+      ],
+      "sources": [
+        "geospatial/sources/catalog.json",
+        "docs/canon/SABLE_HARBOR_CANONICAL_ARCHITECTURE_HANDOVER.md"
+      ],
+      "space_cost_parts": [
+        {
+          "part": "Optional Reno field hub",
+          "usable_sqft": 4000,
+          "usable_to_gross": 0.8,
+          "fitout_usd_per_usf": [
+            80,
+            140
+          ],
+          "annual_premises_usd_per_usf": [
+            24,
+            36
+          ],
+          "annual_services_usd_per_usf": [
+            8,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E-06",
+      "name": "Eastern research and recovery estate",
+      "existing_ids": [
+        "SH-SITE-0003",
+        "SH-SITE-0005",
+        "SH-FAC-FORT-BIG",
+        "SH-FAC-FORT-SMALL",
+        "SH-FAC-FORT-WHITE",
+        "SH-FAC-FORT-MUSEUM"
+      ],
+      "decision_status": "PROPOSAL_NOT_APPROVED",
+      "approval_date": null,
+      "modeled_opening_date": null,
+      "historical_occupancy_date": null,
+      "implementation_status": "PLANNING_ONLY",
+      "purpose": "Fort experiments and prototypes; Bedford recovery-unit development, maintenance, analytical work and intermediate upgrading.",
+      "contracting_or_owning_entity_proposed": "SHI operating business facilities; Gid Voss leads Willow; Kenji Arakawa leads Cradle",
+      "region_proposed": "Pittsburgh/Hazelwood study district and Fairmont area respectively; existing regions preserved",
+      "tenure_proposed": "Retain accepted sites; adapt compatible industrial buildings before adding permanent structures",
+      "population_and_capacity": {
+        "Willow_conditional_occupied": 24,
+        "Cradle_conditional_occupied": 18,
+        "Fort_day_peak_people": 40,
+        "Fort_temporary_lodging_rooms": 8,
+        "Bedford_day_peak_people": 30,
+        "Bedford_core_onsite_planning_range": [
+          12,
+          16
+        ],
+        "field_Cradle_rotation_within_same_18": true
+      },
+      "space_brief": "Fort model: Big Shed 22,000 USF, Small Shed 8,000 including eight temporary rooms, White Shed 10,000; 40,000 USF total within 10–20 acres. Bedford: 26,000 USF initially within 15–20 acres: 6,000 lab/process, 10,000 assembly/refurbishment, 6,000 controlled receipt/storage/upgrading and 4,000 office/support. Process throughput must be separately qualified.",
+      "site_requirements": [
+        "Fort: three-phase power, loading, lifting and segregation; unusual samples quarantined in White Shed before Big Shed intake",
+        "Preserve spare gravel yard/Museum; not a public attraction",
+        "Bedford: chemistry-compatible utilities, containment, controlled drainage, exhaust, wash-down, lot custody and host logistics; no assumed rail/barge requirement",
+        "Hazelwood Green is real occupied/planned research context, not a vacant site awarded to Willow",
+        "Bedford analytical/refurbishment equipment may overlap existing model assets; preserve asset IDs and disclose credits before net capex"
+      ],
+      "transition_sequence": "Room/utility inventory and brownfield screen precede parcel geometry; stage laboratory fit-out and receipt bays around current operations.",
+      "alternatives_and_tradeoffs": [
+        "A generic Pittsburgh office cannot replace Fort workshops.",
+        "A larger Bedford separation plant is a new investment thesis, not this site brief."
+      ],
+      "sources": [
+        "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+        "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+        "enterprise/business/source/policy.json",
+        "enterprise/business/source/assets.json",
+        "geospatial/sources/catalog.json"
+      ],
+      "space_cost_parts": [
+        {
+          "part": "Fort gross reuse program",
+          "usable_sqft": 40000,
+          "usable_to_gross": 0.8,
+          "fitout_usd_per_usf": [
+            80,
+            180
+          ],
+          "annual_premises_usd_per_usf": [
+            12,
+            22
+          ],
+          "annual_services_usd_per_usf": [
+            8,
+            14
+          ]
+        },
+        {
+          "part": "Bedford gross reuse program",
+          "usable_sqft": 26000,
+          "usable_to_gross": 0.8,
+          "fitout_usd_per_usf": [
+            150,
+            300
+          ],
+          "annual_premises_usd_per_usf": [
+            12,
+            22
+          ],
+          "annual_services_usd_per_usf": [
+            10,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E-07",
+      "name": "Pale Sun and Wyoming operating estate",
+      "existing_ids": [
+        "PS",
+        "RWH",
+        "ARU",
+        "BST",
+        "FAC-ARU-OFFICE",
+        "SH-SITE-0006",
+        "SH-SITE-0007",
+        "SH-SITE-0020"
+      ],
+      "decision_status": "PROPOSAL_NOT_APPROVED",
+      "approval_date": null,
+      "modeled_opening_date": null,
+      "historical_occupancy_date": null,
+      "implementation_status": "PLANNING_ONLY",
+      "purpose": "Keep mine, railway, terminals, warehouses, trucking and dispatch at their accepted operating sites; place the Pale Sun business office close to Wyoming operations.",
+      "contracting_or_owning_entity_proposed": "PS business office; RWH mine; ARU and BST retain entity and operating authority",
+      "region_proposed": "Taylor preferred Pale Sun administrative base with Sacramento touchdown; mine at accepted Sweetwater anchor; Rawlins/Wamsutter unchanged",
+      "tenure_proposed": "Assess spare Taylor office accommodation first; small independent Taylor annex only if no capacity exists",
+      "population_and_capacity": {
+        "Pale_Sun_platform": 12,
+        "Red_Wash_site": 128,
+        "ARU_including_BST": 131,
+        "BST_included_in_ARU": 58,
+        "Taylor_ARU_office_existing_assigned_fte": 10,
+        "Pale_Sun_proposed_desks": 12,
+        "Pale_Sun_peak_people": 16,
+        "shared_Mari_role_counted_once": true
+      },
+      "space_brief": "Pale Sun potential 3,000 USF office/technical-review suite. Existing 12 industrial facilities remain source-controlled; no new warehouse, railway branch or redundant mine campus is added. Office assigned FTE is not available spare space.",
+      "site_requirements": [
+        "Evan and Mari retain their offices; physical base decision is not a personnel change",
+        "Site Superintendent remains at Red Wash; operating operators retain qualified local control",
+        "Red Wash receiving six FTE remain within 128, not added to ARU",
+        "No Red Wash rail spur; nine-mile truck-only model retained; Rawlins is not a BS&T branch",
+        "Industrial geometry, title and access proof remain distinct; use facility_capacity_bridge rather than guessing dispatch/terminal expansion"
+      ],
+      "transition_sequence": "Measure Taylor rooms and schedule; approve sharing or annex only with intercompany service and cost attribution.",
+      "alternatives_and_tradeoffs": [
+        "Sacramento Pale Sun base with Wyoming rotations reduces a separate office but distances routine mine/platform coordination."
+      ],
+      "sources": [
+        "industrial/source/entities.json",
+        "industrial/source/operations.json",
+        "industrial/operations/GEOGRAPHY_AND_ENGINEERING.md",
+        "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md"
+      ],
+      "space_cost_parts": [
+        {
+          "part": "Conditional Pale Sun office annex",
+          "usable_sqft": 3000,
+          "usable_to_gross": 0.8,
+          "fitout_usd_per_usf": [
+            80,
+            140
+          ],
+          "annual_premises_usd_per_usf": [
+            18,
+            28
+          ],
+          "annual_services_usd_per_usf": [
+            8,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E-08",
+      "name": "Owned computing in independent colocation domains",
+      "existing_ids": [
+        "FAC-PRIMARY",
+        "FAC-RECOVERY",
+        "SH-SITE-0016",
+        "ENV-PROD",
+        "ENV-RESTRICTED",
+        "ENV-DEV",
+        "ENV-RECOVERY",
+        "ENV-BACKUP"
+      ],
+      "decision_status": "PROPOSAL_NOT_APPROVED",
+      "approval_date": null,
+      "modeled_opening_date": null,
+      "historical_occupancy_date": null,
+      "implementation_status": "PLANNING_ONLY",
+      "purpose": "Run production, restricted institutional systems, owned development baseline and separately recoverable services on Sable Harbor equipment.",
+      "contracting_or_owning_entity_proposed": "SHI equipment/service contracts; Technology operates; CISO and institutional/product owners retain their respective authority",
+      "region_proposed": "Sacramento-area primary; Columbus, Ohio recovery candidate; no provider selected",
+      "tenure_proposed": "Professional colocation: physically segregated restricted cage and separate recovery operator; cloud burst/transition retained",
+      "population_and_capacity": {
+        "daily_resident_Sable_staff_required": 0,
+        "service_year1_fractional_FTE": 34.15,
+        "existing_staff_reuse_verified": null,
+        "first_year_source_model_racks": {
+          "primary": 3,
+          "recovery": 2
+        },
+        "first_year_source_model_IT_kW": {
+          "primary": 20.9,
+          "recovery": 9.0
+        },
+        "procurement_rack_count": null
+      },
+      "space_brief": "Source model requires 88U primary and 52U recovery before extra cage segregation. Primary restricted subset 32U/8.9kW before its own network pair; evaluate two restricted cabinets and two general cabinets. Recovery separation can require three cabinets despite aggregate two-rack model. These are quote-design scenarios, not installed or approved rack counts.",
+      "site_requirements": [
+        "NTT CA2 is a researched Sacramento capability example; Cologix COL3 is a researched Columbus example, never a selected supplier",
+        "Different power interconnections, providers, administration, carrier paths and recovery credentials; verify actual paths/substations and dependencies",
+        "Columbus published 5kW/cabinet design may prevent packing the restricted recovery subset plus dedicated equipment in one cabinet; procure to measured density",
+        "No sole dependency on Sacramento identity, DNS, keys, artifacts or personnel to restore Columbus",
+        "100% protected durable storage at recovery with reduced compute; immutable online and offline backup remain separate",
+        "No default public-cloud restricted runtime; proposed RTO/RPO still require owner acceptance and timed tests"
+      ],
+      "transition_sequence": "BIA and benchmark → rack/cage/density quotes → recovery and key bootstrap → migration proof → expansion; office opening does not gate colocation pilot.",
+      "alternatives_and_tradeoffs": [
+        "Portland/Reno is closer but remains a western regional/grid concentration; requires stronger evidence to substitute for eastern recovery.",
+        "Owned data-center building stays comparator; same campus/same operator second room is not independent recovery."
+      ],
+      "sources": [
+        "docs/canon/THIRD_PARTY_SERVICES_SOURCING_DECISIONS_2026-09-09.md",
+        "enterprise/services/docs/OPERATING_ASSUMPTIONS_AND_GATES.md",
+        "enterprise/services/source/workloads.json",
+        "enterprise/services/source/economics.json",
+        "enterprise/services/generated/REPORT.md"
+      ],
+      "space_cost_parts": []
+    },
+    {
+      "id": "E-09",
+      "name": "Site systems and corporate/teaching technology",
+      "existing_ids": [
+        "ENV-SITE",
+        "ENV-CORPORATE",
+        "FAC-HQ",
+        "FAC-FORT",
+        "FAC-BEDFORD",
+        "FAC-REDWASH",
+        "FAC-TAYLOR"
+      ],
+      "decision_status": "PROPOSAL_NOT_APPROVED",
+      "approval_date": null,
+      "modeled_opening_date": null,
+      "historical_occupancy_date": null,
+      "implementation_status": "PLANNING_ONLY",
+      "purpose": "Keep each industrial site safe and usable during WAN interruption; supply ordinary workplace and teaching technology with internal administration.",
+      "contracting_or_owning_entity_proposed": "Existing site operators and Technology; Education owns teaching systems",
+      "region_proposed": "Local equipment at existing named operating sites and proposed campuses; field cabinets under host agreement",
+      "tenure_proposed": "Owned local cabinets/endpoints; purchased commodity services; shared regional spares and qualified local support",
+      "population_and_capacity": {
+        "source_SITE_aggregate_vcpu": 80,
+        "source_SITE_memory_GiB": 320,
+        "source_SITE_storage_TiB": 20,
+        "source_CORPORATE_vcpu": 16,
+        "source_CORPORATE_memory_GiB": 64,
+        "source_CORPORATE_storage_TiB": 5,
+        "per_site_capacity_unresolved": true
+      },
+      "space_brief": "Separate plant/control and business networks; UPS and essential spares sized per site. A single aggregate source-model local rack is a costing pool, not one real rack serving every site.",
+      "site_requirements": [
+        "Site circuits, local redundancy and safety qualification excluded from existing technology comparison require explicit successor lines",
+        "Ordinary IT restore targets do not authorize safety downtime",
+        "Bought HR/ERP/collaboration region and export obligations are vendor-contract decisions, not replication of SaaS into own racks"
+      ],
+      "transition_sequence": "Inventory → operating-criticality assessment → local fail-safe test → configuration/backup/spares → acceptance by each site.",
+      "alternatives_and_tradeoffs": [
+        "Cellular or satellite may supplement a qualified link, but route and service evidence must precede any reliability claim."
+      ],
+      "sources": [
+        "docs/canon/THIRD_PARTY_SERVICES_SOURCING_DECISIONS_2026-09-09.md",
+        "enterprise/services/source/components.json",
+        "enterprise/services/source/workloads.json"
+      ],
+      "space_cost_parts": []
+    },
+    {
+      "id": "E-10",
+      "name": "External hosts and mobile field work",
+      "existing_ids": [
+        "SH-SITE-0023",
+        "SH-SITE-0027",
+        "SH-SITE-0021",
+        "SH-SITE-0025"
+      ],
+      "decision_status": "PROPOSAL_NOT_APPROVED",
+      "approval_date": null,
+      "modeled_opening_date": null,
+      "historical_occupancy_date": null,
+      "implementation_status": "PLANNING_ONLY",
+      "purpose": "Deploy bounded recovery modules and customer teams while hosts retain their plant, land, process and environmental authority.",
+      "contracting_or_owning_entity_proposed": "SHI recovery equipment; KGM and Demotte own/operate external hosts; qualified carriers/refiners retain external functions",
+      "region_proposed": "KGM in Tasmania; Demotte in north-central WV; other client/converter locations remain qualified case requirements",
+      "tenure_proposed": "Host license/access and equipment pad; temporary lodging/vehicles; no new Australian headquarters",
+      "population_and_capacity": {
+        "field_team_per_active_deployment_planning_range": [
+          2,
+          4
+        ],
+        "contractors_and_visitors_not_occupied_employees": true,
+        "Cradle_rotations_within_existing_population": true
+      },
+      "space_brief": "Define equipment-pad boundary, bypass, isolation, storage, sample dispatch and one small field work area per host. No specific parcel or building footprint proposed before process/rights brief.",
+      "site_requirements": [
+        "External site population never consolidated as Sable employees",
+        "No automatic KGM site near Mole Creek/Deloraine merely because those are travel-history locations",
+        "No conversion plant acquisition or uranium-transport qualification inferred",
+        "Document baseline, host consent, right-of-access, interface and offboarding; modeled pad/instrumentation changes are separate from host ownership"
+      ],
+      "transition_sequence": "Accepted host regions persist; exact synthetic pads and parcel context follow host operating brief and genealogy model.",
+      "alternatives_and_tradeoffs": [
+        "Use booked accommodation near actual host; permanent local office requires sustained demand."
+      ],
+      "sources": [
+        "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+        "industrial/source/operations.json",
+        "geospatial/sources/catalog.json",
+        "enterprise/services/source/counterparties.json"
+      ],
+      "space_cost_parts": []
+    },
+    {
+      "id": "E-11",
+      "name": "Historical, external and nonphysical geography",
+      "existing_ids": [
+        "SH-SITE-0002",
+        "SH-SITE-0004",
+        "SH-SITE-0009",
+        "SH-SITE-0010",
+        "SH-SITE-0022",
+        "SH-SITE-0024",
+        "SH-SITE-0026"
+      ],
+      "decision_status": "PROPOSAL_NOT_APPROVED",
+      "approval_date": null,
+      "modeled_opening_date": null,
+      "historical_occupancy_date": null,
+      "implementation_status": "PLANNING_ONLY",
+      "purpose": "Preserve the historical record and separate it from the current owned estate.",
+      "contracting_or_owning_entity_proposed": "Source-specific historical/external owners; no acquisition or new current operator",
+      "region_proposed": "Existing regional constraints only; unspecified locations remain unlocated",
+      "tenure_proposed": "No current premises commitment",
+      "population_and_capacity": {
+        "incremental_current_headcount": 0,
+        "incremental_current_premises_commitment": 0
+      },
+      "space_brief": "Blackridge remains external Nevada case geography; no county/parcel chosen without geological/historical brief. Wallaby, Glasshouse and Lantern require scenario-specific histories, not new offices. Former HQ and Klein shop require separate occupancy events.",
+      "site_requirements": [
+        "Recommended Klein continuity hypothesis: preserve original leased shop as distinct, then transition to larger Fort later; exact date remains a proposed narrative decision",
+        "Do not turn a 2022 recharter into an invented lease or physical move",
+        "Preserve Emberline Charleston history, abandoned acquisitions, external investors, QFC and personal balloon business outside current estate",
+        "Prototype present custody is asset-inventory work; source images are not installations"
+      ],
+      "transition_sequence": "Keep exact historical points null; develop a dated history proposal after current working-base decisions, without blocking current estate plan.",
+      "alternatives_and_tradeoffs": [
+        "Same-site Klein/Fort continuity is credible only if later evidence or an explicit approved fictional history supports it."
+      ],
+      "sources": [
+        "geospatial/sources/catalog.json",
+        "docs/canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md",
+        "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+        "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+        "geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md"
+      ],
+      "space_cost_parts": []
+    },
+    {
+      "id": "E-12",
+      "name": "Organizational offices and legal addresses",
+      "existing_ids": [
+        "ROLE-27",
+        "ROLE-28",
+        "ROLE-29",
+        "ROLE-30",
+        "ROLE-34",
+        "ROLE-35",
+        "ROLE-39"
+      ],
+      "decision_status": "PROPOSAL_NOT_APPROVED",
+      "approval_date": null,
+      "modeled_opening_date": null,
+      "historical_occupancy_date": null,
+      "implementation_status": "PLANNING_ONLY",
+      "purpose": "Map remits and existing officeholders to workplaces without creating new functions or naming unsupported employees.",
+      "contracting_or_owning_entity_proposed": "SHI and existing legal entities; OGC administers entity records; each substantive officer retains remit",
+      "region_proposed": "Proposed Sacramento base for corporate offices; J2/Education precincts; existing industrial locations",
+      "tenure_proposed": "Shared workplace assignment; statutory registered offices remain separate records",
+      "population_and_capacity": {
+        "new_named_people": 0,
+        "approved_J2_leaders_unchanged": 6,
+        "duplicate_salary_or_billet_additions": 0
+      },
+      "space_brief": "CFO/Finance, OGC/Secretary, P&C, Risk, CISO, Technology, Facilities and Procurement share E-01 with role-specific confidential rooms. Audit suite independent. Head/Deputy J2 in E-02; Head Education in E-03. Board committees use shared meeting facilities, not permanent separate departments.",
+      "site_requirements": [
+        "Rachel Kim is former; not appointed CFO. Rachel Sloane has a source-supported Sacramento seam; Gid stays in Pittsburgh",
+        "Unnamed corporate heads and J2 Chief of Staff do not require a naming exercise to plan rooms",
+        "Delaware/Wyoming incorporation is not an employee office or serviced-office commitment",
+        "Keep registered-agent identity/address and executed foreign qualification open where not source-established",
+        "Finance staff and pooled ESS support reused by scope; specific spare staff not presumed"
+      ],
+      "transition_sequence": "Adopt a workplace model; person-level assignments and registry fields are completed only with evidence/approved decisions.",
+      "alternatives_and_tradeoffs": [
+        "Separate downtown statutory or executive office has no demonstrated need in current canon."
+      ],
+      "sources": [
+        "docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md",
+        "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+        "docs/organization/source/chartbook.json",
+        "industrial/source/entities.json",
+        "docs/structured/j2_leadership_2026-09-10.json"
+      ],
+      "space_cost_parts": []
+    }
+  ],
+  "decision_queue": [
+    {
+      "id": "D-01",
+      "question": "Shared Sacramento campus occupancy",
+      "recommendation": "Adopt E-01/E-02 as shared enterprise and physically distinct J2 accommodation; include product/Advisory home bases. This approves an operating-base model, not a budget or property.",
+      "estate_ids": [
+        "E-01",
+        "E-02",
+        "E-04",
+        "E-12"
+      ],
+      "status": "AWAITING_OWNER",
+      "accepted_answer": null,
+      "approval_date": null,
+      "implementation_commit": null
+    },
+    {
+      "id": "D-02",
+      "question": "Residential Education relationship",
+      "recommendation": "Adopt E-03 as an independently operated residential precinct on the Sacramento estate, with a separate nearby site as fallback.",
+      "estate_ids": [
+        "E-03"
+      ],
+      "status": "NOT_YET_PUT_TO_OWNER",
+      "accepted_answer": null,
+      "approval_date": null,
+      "implementation_commit": null
+    },
+    {
+      "id": "D-03",
+      "question": "Regional product and client coverage",
+      "recommendation": "Use Sacramento main base and eastern touchdown space; defer permanent Reno/Elko/Tucson until workload trigger.",
+      "estate_ids": [
+        "E-04",
+        "E-05"
+      ],
+      "status": "NOT_YET_PUT_TO_OWNER",
+      "accepted_answer": null,
+      "approval_date": null,
+      "implementation_commit": null
+    },
+    {
+      "id": "D-04",
+      "question": "Pale Sun working base",
+      "recommendation": "Use Taylor near the operating estate, subject to a real room-capacity check and separate intercompany scope.",
+      "estate_ids": [
+        "E-07"
+      ],
+      "status": "NOT_YET_PUT_TO_OWNER",
+      "accepted_answer": null,
+      "approval_date": null,
+      "implementation_commit": null
+    },
+    {
+      "id": "D-05",
+      "question": "Primary and recovery geography",
+      "recommendation": "Shortlist Sacramento primary and Columbus recovery with different operators; do not select vendors yet.",
+      "estate_ids": [
+        "E-08"
+      ],
+      "status": "NOT_YET_PUT_TO_OWNER",
+      "accepted_answer": null,
+      "approval_date": null,
+      "implementation_commit": null
+    },
+    {
+      "id": "D-06",
+      "question": "Restricted isolation and recovery service",
+      "recommendation": "Separate restricted cages and administration at both sites; use the six-class source model as benchmark envelope, not SLA.",
+      "estate_ids": [
+        "E-08",
+        "E-09"
+      ],
+      "status": "NOT_YET_PUT_TO_OWNER",
+      "accepted_answer": null,
+      "approval_date": null,
+      "implementation_commit": null
+    },
+    {
+      "id": "D-07",
+      "question": "Capacity, tenure and capital appetite",
+      "recommendation": "Approve mature program envelope only after room/workforce inventory; compare reuse/lease with owned new build and fund the verified incremental portion.",
+      "estate_ids": [
+        "E-01",
+        "E-02",
+        "E-03",
+        "E-06",
+        "E-07"
+      ],
+      "status": "NOT_YET_PUT_TO_OWNER",
+      "accepted_answer": null,
+      "approval_date": null,
+      "implementation_commit": null
+    },
+    {
+      "id": "D-08",
+      "question": "Fort and Bedford physical implementation",
+      "recommendation": "Keep accepted regional anchors, acreage and shed/process roles; authorize staged exact-site fictional design after utility/host brief.",
+      "estate_ids": [
+        "E-06",
+        "E-10"
+      ],
+      "status": "NOT_YET_PUT_TO_OWNER",
+      "accepted_answer": null,
+      "approval_date": null,
+      "implementation_commit": null
+    },
+    {
+      "id": "D-09",
+      "question": "Historical occupancy model",
+      "recommendation": "Decide Klein/Fort same-site versus relocation after review; proposed separate original shop until a dated transition is approved.",
+      "estate_ids": [
+        "E-11"
+      ],
+      "status": "NOT_YET_PUT_TO_OWNER",
+      "accepted_answer": null,
+      "approval_date": null,
+      "implementation_commit": null
+    },
+    {
+      "id": "D-10",
+      "question": "Residual historic/external geography",
+      "recommendation": "Keep Blackridge, Wallaby, Glasshouse, former offices and converter coordinates explicitly unresolved until each source/story brief is mature.",
+      "estate_ids": [
+        "E-10",
+        "E-11"
+      ],
+      "status": "NOT_YET_PUT_TO_OWNER",
+      "accepted_answer": null,
+      "approval_date": null,
+      "implementation_commit": null
+    }
+  ],
+  "financial_bridge": {
+    "currency": "USD",
+    "price_state": "ANALYST_SYNTHETIC_ASSUMPTIONS_NOT_MARKET_QUOTES",
+    "existing_annual_corporate_facility_allowance_usd": 1140000,
+    "existing_annual_ESS_payroll_usd": 6720000,
+    "existing_annual_vendor_allowance_usd": 216000,
+    "verified_reuse_or_overlap_usd": null,
+    "new_build_campus_comparator_gsf": 173750,
+    "new_build_usd_per_gsf_range": [
+      400,
+      650
+    ],
+    "new_build_land_site_soft_contingency_range_usd": [
+      15000000,
+      35000000
+    ],
+    "reuse_site_utility_transition_allowance_range_usd": [
+      3000000,
+      6000000
+    ],
+    "campus_facility_internal_FTE_requirement": 4,
+    "campus_facility_loaded_usd_per_FTE_range": [
+      110000,
+      140000
+    ],
+    "internal_continuous_security_posts": 1,
+    "security_FTE_per_post": 5.615384615384615,
+    "security_loaded_usd_per_FTE_range": [
+      95000,
+      115000
+    ],
+    "hospitality_nonfaculty_annual_range_usd": [
+      600000,
+      1000000
+    ],
+    "hospitality_scope": "Service allowance includes cleaning/food/event labor outside property services; no faculty payroll; room food demand to be scoped; security separate",
+    "campus_property_services_scope": "Property maintenance/utilities/grounds allowance; excludes full hospitality and internal security/facilities payroll",
+    "other_site_support_requirement": "Fort/Bedford/industrial local facilities and guard coverage unverified; source operating expense retained. Extra continuous post is 5.615 FTE before rounding, not one hire.",
+    "office_AV_network_equipment_refresh_years": 5,
+    "building_fitout_life_years": [
+      10,
+      15
+    ],
+    "building_comparator_life_years": 40,
+    "land_depreciated": false,
+    "refresh_cash_not_also_annual_expense": true,
+    "optional_Reno_extra_annual_admin_support_range_usd": [
+      40000,
+      80000
+    ],
+    "Fort_Bedford_gross_program_excludes": "Specialist process equipment, land remediation, host intervention capex and existing forecast assets; these are not zero and require source bridge.",
+    "local_circuits_quote_scenario": {
+      "sites": 8,
+      "annual_per_site_range_usd": [
+        12000,
+        30000
+      ],
+      "scope": "HQ/J2/Education treated as one campus circuit contract, Fort, Bedford, Red Wash, Taylor, Rawlins, KGM deployment, Demotte deployment; existing costs not mapped",
+      "net_incremental_usd": null
+    },
+    "successor_posting_rule": "Replace only evidenced overlap at unit/period/asset level. Do not alter prior releases or silently post facility allocations as new intercompany cash."
+  },
+  "implementation_record": {
+    "new_accepted_decisions": [],
+    "accepted_answer_log": [],
+    "deferred_decisions": [],
+    "branch_is_not_canon": true
+  }
+}

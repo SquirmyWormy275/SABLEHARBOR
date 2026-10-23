@@ -1,0 +1,36 @@
+{
+  "base": "2b52933132e028bf5d9c9a8c151bb45cb0f19597",
+  "inventory_counts": {
+    "display": 154,
+    "person": 54,
+    "register": 269,
+    "geo": 175,
+    "component": 49,
+    "service": 57,
+    "industrial": 12
+  },
+  "total_review_rows": 770,
+  "unrecorded_display_locations": 99,
+  "unrecorded_by_estate": {
+    "E-04": 19,
+    "E-07": 1,
+    "E-01": 28,
+    "E-08": 17,
+    "E-02": 14,
+    "E-03": 6,
+    "E-11": 14
+  },
+  "categories": {
+    "5": 26,
+    "3": 116,
+    "4": 24,
+    "1": 61,
+    "2": 132,
+    "6": 411
+  },
+  "required_or_linked_source_files": 113,
+  "tracked_files_screened_or_dispositioned": 1538,
+  "text_files_with_hits": 345,
+  "coverage_assertions": "PASS",
+  "source_state": "PENDING_BRANCH_REVIEW_NOT_MAIN_ACCEPTANCE"
+}
