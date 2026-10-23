@@ -32,10 +32,19 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # The documented verifier now runs as a module in both intake guides.
     # Regeneration changed only those two reader-file/text rows and their FTS
     # index entries; all institutional and evidence tables remain unchanged.
+    # October 23 historical facilities research intake: compared the rebuilt
+    # database with accepted main at 934f1dce. All 148 institutional objects,
+    # 148 publication pairs, 294 relationships, 384 counterpart-audit rows,
+    # 12 evidence packages, 237 evidence artifacts and the evidence link are
+    # unchanged. Reader inventory grows from 1,691 to 1,694 entries for the
+    # research README and two historical XLSX models; one existing Wiki source
+    # changes, and its reader hash/text/search rows refresh. The DOCX originals
+    # are linked from the README but are not reader-index input types. Catalog
+    # regeneration, reader navigation and SQLite integrity verification pass.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        15568896,
-        "3881e80c720742263299c7a0c707aacecb19053cae827a7a12ad154813a16428",
+        15577088,
+        "9193c2cb525eddba69c672c65b940bfc519572f2e8aba06ab727487998963ecf",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.
