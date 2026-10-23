@@ -3,9 +3,16 @@
     "bytes": 237428145,
     "release_tag": "geographic-evidence-v1.5.0",
     "sha256": "16a728d9b7f635b507e991ff92f6bbb7293c9723286e622b0cc9228740b8d7da",
-    "source_revision": "d190c4907673a18d31dba8c17ce5b3c87106eb0c"
+    "source_revision": "d190c4907673a18d31dba8c17ce5b3c87106eb0c",
+    "source_revision_git_committed_at": "2026-09-29T09:11:39-07:00"
   },
   "classification": "historical PREVIEW_UNACCEPTED engineering packages; not current company authority",
+  "intake": {
+    "cache_archive_date": "2026-10-03",
+    "import_date": "2026-10-23",
+    "in_universe_event_date": null,
+    "package_creation_time": "not independently established"
+  },
   "previews": {
     "b165": {
       "accepted_member_comparison": {
@@ -208,6 +215,7 @@
       "outer_member_path": "TREE/var/geographic/sable-harbor-geographic-evidence-v1.5.0-b165-preview.zip",
       "sha256": "32e420efdc25ea82d53f50427a745451145d2ba9fdee5974892b1842af59f865",
       "source_revision": "b1659db1c4adbf476251f906dda40cfe530604de",
+      "source_revision_git_committed_at": "2026-09-29T08:55:50-07:00",
       "status": "PREVIEW_UNACCEPTED"
     },
     "finalhead": {
@@ -411,6 +419,7 @@
       "outer_member_path": "TREE/var/geographic/sable-harbor-geographic-evidence-v1.5.0-finalhead-preview.zip",
       "sha256": "fe54998aafec8abed5f09369b8640331c6f6b5aa00a00ab706431308eebf4948",
       "source_revision": "bcdf3ade1d83d04774da9a914deb269442ee52f6",
+      "source_revision_git_committed_at": "2026-09-29T08:22:18-07:00",
       "status": "PREVIEW_UNACCEPTED"
     },
     "initial": {
@@ -628,6 +637,7 @@
       "outer_member_path": "TREE/var/geographic/sable-harbor-geographic-evidence-v1.5.0-preview.zip",
       "sha256": "420a509f84f822277b4bd7d504ba2316353b6e442d241eefddcc27612ee64f6a",
       "source_revision": "bcdf3ade1d83d04774da9a914deb269442ee52f6",
+      "source_revision_git_committed_at": "2026-09-29T08:22:18-07:00",
       "status": "PREVIEW_UNACCEPTED"
     }
   },

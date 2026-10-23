@@ -4,6 +4,8 @@
 
 The three original ZIPs were found as members of the October 3 `C18-cache-repository-geo-scope-107-108-20261003.tar.zst` recovery archive (1,801,741,745 bytes; SHA-256 `d137f44dc1437a0924ecf3b1eb2360f3b477a6b6a3e8092a88cea5bd9c37d1fc`). They were imported on October 23. The ZIPs' embedded manifests cite earlier source revisions; an archive date is not a new in-universe event date. [SOURCE_MANIFEST.json](SOURCE_MANIFEST.json) pins each outer member, ZIP byte hash, internal member hash and CRC, and the exact historical files tracked here under `original/`.
 
+The referenced Git revisions were committed September 29 at 08:22 PDT (`bcdf3ade`), 08:55 PDT (`b1659db1`), and 09:11 PDT (accepted `d190c490`). The ZIP creation times were not independently established. The October 3 cache is a preserved availability checkpoint, and the October 23 intake date records this recovery only.
+
 | Stage | Source revision | ZIP SHA-256 | Relationship to accepted v1.5.0 |
 |---|---|---|---|
 | Initial preview | `bcdf3ade1d83d04774da9a914deb269442ee52f6` | `420a509f84f822277b4bd7d504ba2316353b6e442d241eefddcc27612ee64f6a` | 29 identical file members; eight changed members and one extra release-index member. The original rail-history source/report and package code are preserved here. |
