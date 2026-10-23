@@ -24,6 +24,7 @@ Each drawing identifies its own edition and purpose. Planned capacity, measured 
 - [Atlas entry](../../../geospatial/maps/index.html) — Interactive location-to-building-to-floor navigation; open locally or through the published atlas host.
 - [Spatial package](../../../geospatial/facilities/spatial/README.md) — Sections, elevations, roofs, room schedules and context references.
 - [Services and capacity](../../../enterprise/services/README.md) — Shared support and conditional capacity assumptions.
+- [Runtime hosting decision](../../canon/RUNTIME_HOSTING_AND_DATA_CENTER_DECISIONS_2026-09-11.md) and [recovered planning research](../../facilities/references/runtime-hosting-research-2026-09-11/README.md) — Read the accepted Reno/Boise/owned-site direction first, then the historical study and model inputs.
 
 <a id="organization-and-identity"></a>
 
@@ -44,6 +45,6 @@ Each drawing identifies its own edition and purpose. Planned capacity, measured 
 <summary>About this article</summary>
 
 **Canon state:** LOCKED institutional scope; implementation detail varies by linked record.
-**Reviewed:** October 7, 2026. Supporting documents retain their own dates and status.
+**Reviewed:** October 23, 2026. Supporting documents retain their own dates and status.
 
 </details>
