@@ -1,0 +1,122 @@
+{
+  "authority": "HISTORICAL_UNACCEPTED_LOCAL_BRANCH; no current source promotion",
+  "capture_date_utc": "2026-10-23T14:51:16.476635+00:00",
+  "item_count": 2,
+  "items": [
+    {
+      "accepted_public_current_path_blob_oid": "eecdd7c6d8f75293fa735474f05711681bf5c960",
+      "accepted_public_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 669,
+      "completeness": "exact_historical_blob_not_full_commit_tree",
+      "destination": "docs/internal/repository-history/local-worktree-2026-10-01-03/gitignore.original.txt",
+      "git_blob_oid": "e1a325dee265211cfc4ea054161b96c23a5a2e53",
+      "independent_seagate_member_copies": [
+        {
+          "archive_disposition_at_intake": "PENDING_PRIVATE_PR_20_RELEASE_AND_FRESH_RETRIEVAL",
+          "archive_path": "/run/media/kingoftheeast/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_COMPRESSED_BACKUPS_20261004/C01-SABLEHARBOR-retained-one-pass-integrity-wt-COMPLETE-CHECKOUT-20261003.tar.zst",
+          "archive_sha256": "1bf67544253f73f2e4b6c6669a7bd6d8e8e17b83da700e14755759f83f5a0efc",
+          "basis": "stream_verified_exact_tree_manifest",
+          "member_path": ".gitignore"
+        },
+        {
+          "archive_disposition_at_intake": "PENDING_PRIVATE_PR_20_RELEASE_AND_FRESH_RETRIEVAL",
+          "archive_path": "/run/media/kingoftheeast/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_COMPRESSED_BACKUPS_20261004/C02-SABLEHARBOR-retained-one-pass-store-safe-wt-COMPLETE-CHECKOUT-20261003.tar.zst",
+          "archive_sha256": "a26883de1f32076e7572f311a98ad60277e8885658c59e097a3f449c6d3f630e",
+          "basis": "stream_verified_exact_tree_manifest",
+          "member_path": ".gitignore"
+        },
+        {
+          "archive_disposition_at_intake": "PENDING_PRIVATE_PR_20_RELEASE_AND_FRESH_RETRIEVAL",
+          "archive_path": "/run/media/kingoftheeast/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_COMPRESSED_BACKUPS_20261004/C03-SABLEHARBOR-retained-integrity-digest-wt-COMPLETE-CHECKOUT-20261003.tar.zst",
+          "archive_sha256": "ec900bf14add229968efd7cfc769dde89028cdf28b8b7209b5165db9de159feb",
+          "basis": "stream_verified_exact_tree_manifest",
+          "member_path": ".gitignore"
+        },
+        {
+          "archive_disposition_at_intake": "PENDING_PRIVATE_PR_20_RELEASE_AND_FRESH_RETRIEVAL",
+          "archive_path": "/run/media/kingoftheeast/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_COMPRESSED_BACKUPS_20261004/C04-SABLEHARBOR-retained-canonical-projection-wt-COMPLETE-CHECKOUT-20261003.tar.zst",
+          "archive_sha256": "3d1b7b4248e692357d6ab594cb01078980312ad70fc3818c187532009c91ec57",
+          "basis": "stream_verified_exact_tree_manifest",
+          "member_path": ".gitignore"
+        },
+        {
+          "archive_disposition_at_intake": "PENDING_PRIVATE_PR_20_RELEASE_AND_FRESH_RETRIEVAL",
+          "archive_path": "/run/media/kingoftheeast/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_COMPRESSED_BACKUPS_20261004/C01-SABLEHARBOR-retained-one-pass-integrity-wt-COMPLETE-CHECKOUT-20261003.tar.zst",
+          "archive_sha256": "1bf67544253f73f2e4b6c6669a7bd6d8e8e17b83da700e14755759f83f5a0efc",
+          "basis": "stream_verified_member_or_declared_hash",
+          "member_path": ".gitignore"
+        }
+      ],
+      "scenario": "repository_build_configuration_history",
+      "sha256": "cf0cce1ef3d086a4c2ea533bba66ba8d7d2234cb408b6a77f7ab6321fc761712",
+      "source_commits": [
+        {
+          "commit": "90141bf6e22a652d927e9aea1b0f6120ba78d7bd",
+          "date": "2026-10-01",
+          "path": ".gitignore",
+          "subject": "Verify serialized journal bytes with original-read integrity locators"
+        }
+      ],
+      "source_path": ".gitignore"
+    },
+    {
+      "accepted_public_current_path_blob_oid": "50128db5a063d39cfc70b5c3b316701bfa44dbbe",
+      "accepted_public_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 23776,
+      "completeness": "exact_historical_blob_not_full_commit_tree",
+      "destination": "enterprise/operations/docs/history/completed-period-2026-10-03.original.md",
+      "git_blob_oid": "4d18ef8ba9f9181327d0add02eb772861430b875",
+      "independent_seagate_member_copies": [
+        {
+          "archive_disposition_at_intake": "UNRESOLVED_GIT_COMMON_HISTORY_AND_WORKTREE_METADATA",
+          "archive_path": "/run/media/kingoftheeast/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_COMPRESSED_BACKUPS_20261004/CURRENT-COMMON-GIT-AFTER-1d3e2b6f-b3e905d5-SUCCESSOR-20261003.tar.zst",
+          "archive_sha256": "9ee0a3a6657caf0c6d3ce0a34cf0db46b2776c3a713fd84b122513526f28665f",
+          "basis": "stream_verified_exact_tree_manifest",
+          "member_path": "rr-cache/337e0618ee04e1d40bc44aab3c214c94ad81319c/postimage"
+        },
+        {
+          "archive_disposition_at_intake": "UNRESOLVED_GIT_COMMON_HISTORY_AND_WORKTREE_METADATA",
+          "archive_path": "/run/media/kingoftheeast/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_COMPRESSED_BACKUPS_20261004/SABLEHARBOR-COMMON-GIT-FULL-QUIESCENT-20261003.tar.zst",
+          "archive_sha256": "a61e6a2d2fc7fe61fc48bafb8c68c032175dcad3c70ca703b1594de9d6ee7080",
+          "basis": "stream_verified_exact_tree_manifest",
+          "member_path": "rr-cache/337e0618ee04e1d40bc44aab3c214c94ad81319c/postimage"
+        },
+        {
+          "archive_disposition_at_intake": "UNRESOLVED_GIT_FINAL_CANONICAL_ARCHIVE_UNIQUE_REFS_AND_WORKTREE_METADATA",
+          "archive_path": "/run/media/kingoftheeast/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_FINAL_PRESERVATION_20261004/FINAL_MAIN_CANONICAL_GIT_20261007.tar.zst",
+          "archive_sha256": "7d548a8093391fb22aacdc1c3b0765a256038fc639694948d95513f9e57d7e9a",
+          "basis": "stream_verified_exact_tree_manifest",
+          "member_path": "rr-cache/337e0618ee04e1d40bc44aab3c214c94ad81319c/postimage"
+        },
+        {
+          "archive_disposition_at_intake": "UNRESOLVED_GIT_COMMON_HISTORY_AND_WORKTREE_METADATA",
+          "archive_path": "/run/media/kingoftheeast/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_COMPRESSED_BACKUPS_20261004/CURRENT-COMMON-GIT-AFTER-1d3e2b6f-b3e905d5-SUCCESSOR-20261003.tar.zst",
+          "archive_sha256": "9ee0a3a6657caf0c6d3ce0a34cf0db46b2776c3a713fd84b122513526f28665f",
+          "basis": "stream_verified_member_or_declared_hash",
+          "member_path": "rr-cache/337e0618ee04e1d40bc44aab3c214c94ad81319c/postimage"
+        },
+        {
+          "archive_disposition_at_intake": "UNRESOLVED_GIT_COMMON_HISTORY_AND_WORKTREE_METADATA",
+          "archive_path": "/run/media/kingoftheeast/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_COMPRESSED_BACKUPS_20261004/SABLEHARBOR-COMMON-GIT-FULL-QUIESCENT-20261003.tar.zst",
+          "archive_sha256": "a61e6a2d2fc7fe61fc48bafb8c68c032175dcad3c70ca703b1594de9d6ee7080",
+          "basis": "stream_verified_member_or_declared_hash",
+          "member_path": "rr-cache/337e0618ee04e1d40bc44aab3c214c94ad81319c/postimage"
+        }
+      ],
+      "scenario": "synthetic_company_operations_history",
+      "sha256": "c0fb0db61e8320d4997f205da45e48b0e2e303bede659a698e2e6cc3d6d8522c",
+      "source_commits": [
+        {
+          "commit": "3fc6d99414ac1ac95c59f2d9e0872b4a13484e27",
+          "date": "2026-09-14",
+          "path": "enterprise/operations/docs/completed-period.md",
+          "subject": "Reconcile RWH opening invoices to June and July source sale populations"
+        }
+      ],
+      "source_path": "enterprise/operations/docs/completed-period.md"
+    }
+  ],
+  "record_id": "SH-OPERATIONS-REPO-WORKTREE-OVERLAP-2026-10-01-03"
+}
