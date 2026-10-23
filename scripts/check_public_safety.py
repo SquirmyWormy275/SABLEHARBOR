@@ -53,10 +53,15 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # 148 publication pairs, 294 relationships, 384 counterpart rows, 12
     # evidence packages, 237 artifacts and one evidence link are exact-equal.
     # Both databases pass SQLite quick_check and foreign-key verification.
-    # Exact bytes only; later drift requires another hash review.
+    # The September 5 Work-transfer provenance adds one historical reader
+    # guide: 1,699 -> 1,700 files. Its original JSON manifest is not a reader
+    # document. All 148 institutional objects/publication pairs, 294
+    # relationships, 384 counterpart rows, 12 evidence packages and 237
+    # artifacts remain. SQLite quick_check and foreign keys pass; no
+    # publication was generated. Exact bytes require review after later drift.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        15599616,
-        "fa19d1a9e36cbabe91d7516726eebebb2cdd382f98210e7d3a7004d23ba27f94",
+        15607808,
+        "38495dfe2ba01be2a18952b357aa0aa225448587750f88d93ac030f78f1e7670",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.

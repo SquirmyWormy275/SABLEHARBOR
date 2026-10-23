@@ -257,6 +257,10 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 - [Open geographic questions v0.1](../../../geospatial/history/rc3/reports__OPEN_CONFLICTS.md) — MD
 - [rc3 visual inspection](../../../geospatial/history/rc3/reports__VISUAL_QA.md) — MD
 
+## `geospatial/history/work-transfer-2026-09-05`
+
+- [September 5 unified Work transfer provenance](../../../geospatial/history/work-transfer-2026-09-05/README.md) — MD
+
 ## `geospatial/maps`
 
 - [SABLE HARBOR Facility Atlas v0.1.0](../../../geospatial/maps/SABLE_HARBOR_Facility_Atlas_v0.1.0.pdf) — PDF
