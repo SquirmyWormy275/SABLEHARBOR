@@ -53,10 +53,17 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # 148 publication pairs, 294 relationships, 384 counterpart rows, 12
     # evidence packages, 237 artifacts and one evidence link are exact-equal.
     # Both databases pass SQLite quick_check and foreign-key verification.
+    # The superseded R1 handoff adds three historical reader Markdown rows
+    # (1,699 -> 1,702) and changes the Industrial release guide on accepted
+    # main cdb33b6c. All 148 institutional objects and publication pairs,
+    # 294 relationships, 12 evidence packages, 237 artifacts and the evidence
+    # link remain exact-equal. The changed release guide is correctly excluded
+    # from its prior dated counterpart audit until it is reviewed again:
+    # 384 -> 383 applied rows. SQLite quick_check and foreign keys pass.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        15599616,
-        "fa19d1a9e36cbabe91d7516726eebebb2cdd382f98210e7d3a7004d23ba27f94",
+        15773696,
+        "40cd1ac794a2803631ce494857d73e8bddd0d35e42ad618a046d593c4e9c896a",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.
