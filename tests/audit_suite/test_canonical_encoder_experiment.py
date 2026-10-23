@@ -7,6 +7,13 @@ from enterprise.audit_suite import canonical_state_codec as candidate
 from enterprise.audit_suite import canonical_state_codec as reference
 from enterprise.audit_suite.store import DomainError, canonical
 
+# The native helper is optional. Its ABI, offset and buffered-write contracts
+# apply only when that helper is installed; fallback behavior is exercised by
+# test_optional_helper_absence_preserves_structural_codec below.
+requires_native = pytest.mark.skipif(
+    candidate._fragmenter is None, reason="optional native fragmenter is not installed"
+)
+
 
 @pytest.fixture
 def db(tmp_path):
@@ -99,6 +106,7 @@ def test_binding_limit_is_observed(db):
     assert reference.decode(db, root) == canonical(value).encode()
 
 
+@requires_native
 def test_native_boundary_interface_refuses_nonbytes():
     for raw in ["", bytearray(b"[]"), memoryview(b"[]"), True]:
         with pytest.raises(TypeError):
@@ -114,6 +122,7 @@ def test_optional_helper_absence_preserves_structural_codec(db, monkeypatch):
     assert candidate.native_code_files() == {}
 
 
+@requires_native
 def test_helper_origins_are_explicit_and_wrong_abi_refuses(monkeypatch):
     origins = candidate.native_code_files()
     assert len(origins) == 2
@@ -123,6 +132,7 @@ def test_helper_origins_are_explicit_and_wrong_abi_refuses(monkeypatch):
 
 
 @pytest.mark.parametrize("offsets", [[True], [0], [1000000], [], [1, 1]])
+@requires_native
 def test_invalid_native_offset_vectors_publish_no_nodes(db, monkeypatch, offsets):
     monkeypatch.setattr(candidate._fragmenter, "boundaries", lambda raw: offsets)
     with pytest.raises(DomainError):
@@ -130,6 +140,7 @@ def test_invalid_native_offset_vectors_publish_no_nodes(db, monkeypatch, offsets
     assert db.execute("SELECT count(*) FROM state_nodes").fetchone()[0] == 0
 
 
+@requires_native
 def test_identifier_collision_cannot_substitute_different_literal(db, monkeypatch):
     monkeypatch.setattr(candidate, "node_id", lambda kind, payload, size: "0" * 64)
     with pytest.raises(
