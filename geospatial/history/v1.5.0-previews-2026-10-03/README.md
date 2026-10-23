@@ -1,0 +1,15 @@
+# Geographic evidence v1.5.0 preview stages
+
+**Status:** historical `PREVIEW_UNACCEPTED`. These are packaging and source-review stages before the accepted [v1.5.0 geographic release](../../../docs/releases/GEOGRAPHIC_EVIDENCE_RELEASES.md). They do not change current site, rail, property, or operating authority.
+
+The three original ZIPs were found as members of the October 3 `C18-cache-repository-geo-scope-107-108-20261003.tar.zst` recovery archive (1,801,741,745 bytes; SHA-256 `d137f44dc1437a0924ecf3b1eb2360f3b477a6b6a3e8092a88cea5bd9c37d1fc`). They were imported on October 23. The ZIPs' embedded manifests cite earlier source revisions; an archive date is not a new in-universe event date. [SOURCE_MANIFEST.json](SOURCE_MANIFEST.json) pins each outer member, ZIP byte hash, internal member hash and CRC, and the exact historical files tracked here under `original/`.
+
+| Stage | Source revision | ZIP SHA-256 | Relationship to accepted v1.5.0 |
+|---|---|---|---|
+| Initial preview | `bcdf3ade1d83d04774da9a914deb269442ee52f6` | `420a509f84f822277b4bd7d504ba2316353b6e442d241eefddcc27612ee64f6a` | 29 identical file members; eight changed members and one extra release-index member. The original rail-history source/report and package code are preserved here. |
+| `b165` preview | `b1659db1c4adbf476251f906dda40cfe530604de` | `32e420efdc25ea82d53f50427a745451145d2ba9fdee5974892b1842af59f865` | All 36 non-manifest members match accepted bytes; its original `MANIFEST.json` records the preview stage. |
+| Final-head preview | `bcdf3ade1d83d04774da9a914deb269442ee52f6` | `fe54998aafec8abed5f09369b8640331c6f6b5aa00a00ab706431308eebf4948` | All 36 non-manifest members match accepted bytes; its original `MANIFEST.json` records the preview stage. |
+
+The later accepted v1.5.0 package has SHA-256 `16a728d9b7f635b507e991ff92f6bbb7293c9723286e622b0cc9228740b8d7da` and source revision `d190c4907673a18d31dba8c17ce5b3c87106eb0c`. It remains the controlling delivery. The initial preview lacks later explicit rail-history prior-source fields and a publication-builder drift note; this is a correction stage, not an alternative accepted geography. The three original preview ZIPs are delivered as assets of the [dated historical preview release](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/geographic-evidence-v1.5.0-previews-history-2026-10-03), separate from the source-locked accepted v1.5.0 release.
+
+Run `python verify.py --asset-dir /path/to/downloads --accepted-package /path/to/sable-harbor-geographic-evidence-v1.5.0.zip` to verify a fresh download against every member and the accepted release. Running `python verify.py` checks all Git-tracked original preview files. The outer C18 cache has additional generated validation and repository-cache content; this preview intake does not dispose of that archive or clear any local copy for deletion.

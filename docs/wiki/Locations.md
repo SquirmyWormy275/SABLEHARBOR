@@ -44,4 +44,6 @@ The [September 5 geographic foundation and addendum](../../geospatial/history/fo
 retain the earlier map conflict and its subsequent correction as historical
 source packages. They do not replace the current locations above.
 
+The [v1.5.0 preview-stage index](../../geospatial/history/v1.5.0-previews-2026-10-03/README.md) preserves later unaccepted geographic package and rail-history corrections. The accepted v1.5.0 release and current location decisions remain controlling.
+
 Sable Harbor and its sites are fictional. Real towns and geographic references provide the setting; the company maps do not establish real property rights.

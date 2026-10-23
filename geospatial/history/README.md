@@ -2,6 +2,8 @@
 
 This directory is historical evidence, not current build authority. `rc3/` preserves prior explanatory records and the prior catalog. `superseded_mine_connector.geojson` and the historical Belle envelope retain rejected/superseded geography with explicit status.
 
+The [geographic evidence v1.5.0 previews](v1.5.0-previews-2026-10-03/README.md) preserve three October 3 cache packages as `PREVIEW_UNACCEPTED` historical stages. Their original manifests and the initial preview's changed rail-history source and package code are tracked there; the exact ZIPs have a separate historical release. The accepted v1.5.0 delivery remains controlling.
+
 The [September 5 foundation and addendum packages](foundation-addendum-2026-09-05/README.md)
 preserve two earlier complete ZIP distributions, their member hashes and the
 different draft/approved authority of each stage. Their GeoPackages are dated

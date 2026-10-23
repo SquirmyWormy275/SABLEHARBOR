@@ -1,0 +1,710 @@
+{
+  "accepted_package": {
+    "bytes": 237428145,
+    "release_tag": "geographic-evidence-v1.5.0",
+    "sha256": "16a728d9b7f635b507e991ff92f6bbb7293c9723286e622b0cc9228740b8d7da",
+    "source_revision": "d190c4907673a18d31dba8c17ce5b3c87106eb0c"
+  },
+  "classification": "historical PREVIEW_UNACCEPTED engineering packages; not current company authority",
+  "previews": {
+    "b165": {
+      "accepted_member_comparison": {
+        "differing": [
+          "MANIFEST.json"
+        ],
+        "equal_count": 36,
+        "extra": [],
+        "missing": []
+      },
+      "asset": "sable-harbor-geographic-evidence-v1.5.0-b165-preview.zip",
+      "bytes": 237428120,
+      "members": {
+        "CHECKSUMS.sha256": {
+          "bytes": 4577,
+          "crc32": "89331e3f",
+          "sha256": "5bc0e269bfa3df9560fd3f000062d75ce1fdeec934d1e3d3715db9508f5c0548"
+        },
+        "MANIFEST.json": {
+          "bytes": 7306,
+          "crc32": "8a5a654d",
+          "sha256": "1477bb5f0303ae6878476a5c1eef8c3c903723eb63aac61d353926e27b93e0d3"
+        },
+        "base/sable-harbor-geographic-evidence-v1.4.0.zip": {
+          "bytes": 237264171,
+          "crc32": "0230ba95",
+          "sha256": "f106e164a7578d64c32ba1bcc9444b3a96d89881d7c7b92b51bb97cf2bef6df4"
+        },
+        "index.html": {
+          "bytes": 947,
+          "crc32": "e2673de9",
+          "sha256": "3bdfa7d5d778ca6b7a750f6228d02a43cf6a8b8d38caa0993dd109f686137311"
+        },
+        "supplement/docs/canon/GEOGRAPHIC_SYNTHETIC_SCOPE_DISPOSITION_2026-09-29.md": {
+          "bytes": 6026,
+          "crc32": "2a103bbc",
+          "sha256": "a543ee8d12ed265ed3757deba74d37d34cda59961ceda4de3ca8598540ae652f"
+        },
+        "supplement/geospatial/docs/NEXT_CHAT_HANDOFF.md": {
+          "bytes": 1755,
+          "crc32": "fbac8108",
+          "sha256": "0bc0da8f4ffe2d0f0d540cb6defa8fc7a26024ddc08669478707ecf02d80080e"
+        },
+        "supplement/geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md": {
+          "bytes": 19335,
+          "crc32": "6e5eb45c",
+          "sha256": "b889167d56300ec58a7f63ffa241bcd3ec450e556b776c649e6337edb28a8c74"
+        },
+        "supplement/geospatial/engineering_review/COMPENSATED_40_MILE_CANDIDATE.geojson": {
+          "bytes": 130501,
+          "crc32": "e098d8b8",
+          "sha256": "2d3358d9dd7d117954b7d36879626659117cb9387b1350b4541abccb726228ad"
+        },
+        "supplement/geospatial/engineering_review/COMPENSATED_40_MILE_CANDIDATE.json": {
+          "bytes": 175760,
+          "crc32": "c9cbc680",
+          "sha256": "7592f356a9d13878a61960d735fba61924119c8efac226544c133f85d59b4750"
+        },
+        "supplement/geospatial/engineering_review/interface_successor_20260929/README.md": {
+          "bytes": 4100,
+          "crc32": "d69335de",
+          "sha256": "08dd582daa2be310d4551d7b602ff55f0c4debca34efb5bdec4a9406bee44125"
+        },
+        "supplement/geospatial/engineering_review/interface_successor_20260929/build.py": {
+          "bytes": 19260,
+          "crc32": "b13b0d2f",
+          "sha256": "9aefce12723a055682cad6a20463c620f82846ae4ced9e83ffbf91846ed514a4"
+        },
+        "supplement/geospatial/engineering_review/interface_successor_20260929/register.json": {
+          "bytes": 44464,
+          "crc32": "d9e9de3d",
+          "sha256": "2366257f96d0ffc4281133b3790abf62203951d7c2e38c90bdeda5e519be8192"
+        },
+        "supplement/geospatial/engineering_review/interface_successor_20260929/source.json": {
+          "bytes": 1824,
+          "crc32": "7f077259",
+          "sha256": "e7bf07658cafc6854edbed6e7881edf5af8c0221d4ee603e669bd0469decac0b"
+        },
+        "supplement/geospatial/successor_20260929/README.md": {
+          "bytes": 2278,
+          "crc32": "033e6cbe",
+          "sha256": "ec978cae88ccb071c4e0b8fff1def7c97b8d336c5eda5275bd925d36efd7b77b"
+        },
+        "supplement/geospatial/successor_20260929/SOURCE_DELTA.json.gz": {
+          "bytes": 10352,
+          "crc32": "2ceee1c9",
+          "sha256": "b40eed79b68d9776683ce8abeed33f4d84ad51df0d90901ec8f179b834641e43"
+        },
+        "supplement/geospatial/successor_20260929/SUMMARY.json": {
+          "bytes": 397,
+          "crc32": "6c368ebe",
+          "sha256": "18226fe65a69db1ef5153b4b28aa54dd3f501c6d5b02ec5db1ae006f579a6832"
+        },
+        "supplement/geospatial/successor_20260929/source_delta.py": {
+          "bytes": 8583,
+          "crc32": "e2aab7b0",
+          "sha256": "dee8ab98e57b01aa69b32b1acacf6e0f984e0034b06cec8adae76fab4f900906"
+        },
+        "supplement/geospatial/successor_20260929_final/README.md": {
+          "bytes": 5185,
+          "crc32": "408699ac",
+          "sha256": "f0a9e9acc5c78ede76b70b2d647ccc8dd5e30efb37ef74aee2e20c1f0995a322"
+        },
+        "supplement/geospatial/successor_20260929_final/SOURCE_DELTA.json.gz": {
+          "bytes": 3655,
+          "crc32": "e42daeff",
+          "sha256": "2792d3361724fdfa91437e18e629383a254c908d0da97c7a4fbf1025fe612471"
+        },
+        "supplement/geospatial/successor_20260929_final/SUMMARY.json": {
+          "bytes": 306,
+          "crc32": "895026f5",
+          "sha256": "d31d6333a425290ce6b1614177b73e3a0ea093f70c763183e4df9dce3549515d"
+        },
+        "supplement/geospatial/successor_20260929_final/package.py": {
+          "bytes": 7541,
+          "crc32": "04d77f3e",
+          "sha256": "78ae8a864c62d4aec187c67c5fb9ee0da30b0846bc16ee5242c1975f089d3aff"
+        },
+        "supplement/geospatial/successor_20260929_final/source_delta.py": {
+          "bytes": 8582,
+          "crc32": "12afb42b",
+          "sha256": "f2be9f55f4354d66f2bdd8e65cc610b9bb96155c266aede85702fb00d1a1815d"
+        },
+        "supplement/geospatial/successor_20260929_final/verify_package.py": {
+          "bytes": 7801,
+          "crc32": "871280ee",
+          "sha256": "72dfe36250716d032194cee38996c186f3c01dc7481746006342b03897ee4c31"
+        },
+        "supplement/geospatial/successors/RAIL_GEO_107_108_DISPOSITION_2026-09-29.md": {
+          "bytes": 6871,
+          "crc32": "0f899158",
+          "sha256": "3458310f9627e779756ea47674b96363257f3d90f8257480c3e2a6f7e3c8d17b"
+        },
+        "supplement/geospatial/successors/rail_history_2026_09_29/ATTRIBUTION_CORRECTION_2026-09-29.md": {
+          "bytes": 1505,
+          "crc32": "e0a99ef4",
+          "sha256": "4e2d1ab3c67548e55416604af0aaee1799e48757bd448cb0440ea769e06d335e"
+        },
+        "supplement/geospatial/successors/rail_history_2026_09_29/README.md": {
+          "bytes": 3165,
+          "crc32": "15c2301c",
+          "sha256": "5fa442c9691d8a45a0944177d06871eb8f9c21c3f686fb444faea29c102422a7"
+        },
+        "supplement/geospatial/successors/rail_history_2026_09_29/build.py": {
+          "bytes": 12966,
+          "crc32": "71691242",
+          "sha256": "1a517b5b78af7553fffe174f9b320ec0f878c7e650927dc94382ed0413bca6fc"
+        },
+        "supplement/geospatial/successors/rail_history_2026_09_29/case.geojson": {
+          "bytes": 2097,
+          "crc32": "5bf386ca",
+          "sha256": "f9fd76a38ffc93272ffc99cbfd2881f2103ae334219e11a4a3a5b0437102cfa3"
+        },
+        "supplement/geospatial/successors/rail_history_2026_09_29/case.svg": {
+          "bytes": 2799,
+          "crc32": "f1ff9c45",
+          "sha256": "2e143c71d51fe4d4a72302dd4e9540ebba936b9206ba4ac4bf398e7cb11d6f50"
+        },
+        "supplement/geospatial/successors/rail_history_2026_09_29/report.json": {
+          "bytes": 3176,
+          "crc32": "fb93bd74",
+          "sha256": "de1399118ee9598f6a411845cd1fa9fbfbf5602aaee0e54b709f8755717c2817"
+        },
+        "supplement/geospatial/successors/rail_history_2026_09_29/source.json": {
+          "bytes": 2906,
+          "crc32": "54695587",
+          "sha256": "a869bae143c4216663dc11e8364ef5ce5ada0e2d7b0e946b6e5920a0eb2c81a4"
+        },
+        "supplement/industrial/successors/rail_2026_09_29/README.md": {
+          "bytes": 7116,
+          "crc32": "e481b304",
+          "sha256": "c04e4420f923b7e6db26e771c9115c3ed5293e58e14aed0f39dfe88fb3409a07"
+        },
+        "supplement/industrial/successors/rail_2026_09_29/build.py": {
+          "bytes": 18476,
+          "crc32": "c6ce921a",
+          "sha256": "97ba6bea431fd985c797d4ea23a81de7c2432ccc3f44a5c99399926bc5ad48a7"
+        },
+        "supplement/industrial/successors/rail_2026_09_29/reconcile.py": {
+          "bytes": 5217,
+          "crc32": "062ddafd",
+          "sha256": "755d3657bd9b99b0450735ca3f210237925755ac1f66e33b389366c2bf3b138a"
+        },
+        "supplement/industrial/successors/rail_2026_09_29/reperform-result.json": {
+          "bytes": 3245,
+          "crc32": "b21125ab",
+          "sha256": "868ea3f17d063021b3a574a33b8ddc019a657e6521e3431a4963db5a8379a5c4"
+        },
+        "supplement/industrial/successors/rail_2026_09_29/source.json": {
+          "bytes": 1765,
+          "crc32": "57b889ec",
+          "sha256": "3aa95c1764a144dc3611acca29f2982c59b44863766810532c6ef42faa3c1b80"
+        },
+        "supplement/industrial/successors/rail_2026_09_29/test_successor.py": {
+          "bytes": 3689,
+          "crc32": "64ab87b3",
+          "sha256": "ec015390fb1b069f3d1800f63a74d460bc07716d8a4fcaa47c5e6f05d38bfe42"
+        }
+      },
+      "outer_member_path": "TREE/var/geographic/sable-harbor-geographic-evidence-v1.5.0-b165-preview.zip",
+      "sha256": "32e420efdc25ea82d53f50427a745451145d2ba9fdee5974892b1842af59f865",
+      "source_revision": "b1659db1c4adbf476251f906dda40cfe530604de",
+      "status": "PREVIEW_UNACCEPTED"
+    },
+    "finalhead": {
+      "accepted_member_comparison": {
+        "differing": [
+          "MANIFEST.json"
+        ],
+        "equal_count": 36,
+        "extra": [],
+        "missing": []
+      },
+      "asset": "sable-harbor-geographic-evidence-v1.5.0-finalhead-preview.zip",
+      "bytes": 237428120,
+      "members": {
+        "CHECKSUMS.sha256": {
+          "bytes": 4577,
+          "crc32": "89331e3f",
+          "sha256": "5bc0e269bfa3df9560fd3f000062d75ce1fdeec934d1e3d3715db9508f5c0548"
+        },
+        "MANIFEST.json": {
+          "bytes": 7306,
+          "crc32": "49864e1e",
+          "sha256": "2007c173c9a390127e973b47851425e0dd14e8bf10419ff50a71e467cef06444"
+        },
+        "base/sable-harbor-geographic-evidence-v1.4.0.zip": {
+          "bytes": 237264171,
+          "crc32": "0230ba95",
+          "sha256": "f106e164a7578d64c32ba1bcc9444b3a96d89881d7c7b92b51bb97cf2bef6df4"
+        },
+        "index.html": {
+          "bytes": 947,
+          "crc32": "e2673de9",
+          "sha256": "3bdfa7d5d778ca6b7a750f6228d02a43cf6a8b8d38caa0993dd109f686137311"
+        },
+        "supplement/docs/canon/GEOGRAPHIC_SYNTHETIC_SCOPE_DISPOSITION_2026-09-29.md": {
+          "bytes": 6026,
+          "crc32": "2a103bbc",
+          "sha256": "a543ee8d12ed265ed3757deba74d37d34cda59961ceda4de3ca8598540ae652f"
+        },
+        "supplement/geospatial/docs/NEXT_CHAT_HANDOFF.md": {
+          "bytes": 1755,
+          "crc32": "fbac8108",
+          "sha256": "0bc0da8f4ffe2d0f0d540cb6defa8fc7a26024ddc08669478707ecf02d80080e"
+        },
+        "supplement/geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md": {
+          "bytes": 19335,
+          "crc32": "6e5eb45c",
+          "sha256": "b889167d56300ec58a7f63ffa241bcd3ec450e556b776c649e6337edb28a8c74"
+        },
+        "supplement/geospatial/engineering_review/COMPENSATED_40_MILE_CANDIDATE.geojson": {
+          "bytes": 130501,
+          "crc32": "e098d8b8",
+          "sha256": "2d3358d9dd7d117954b7d36879626659117cb9387b1350b4541abccb726228ad"
+        },
+        "supplement/geospatial/engineering_review/COMPENSATED_40_MILE_CANDIDATE.json": {
+          "bytes": 175760,
+          "crc32": "c9cbc680",
+          "sha256": "7592f356a9d13878a61960d735fba61924119c8efac226544c133f85d59b4750"
+        },
+        "supplement/geospatial/engineering_review/interface_successor_20260929/README.md": {
+          "bytes": 4100,
+          "crc32": "d69335de",
+          "sha256": "08dd582daa2be310d4551d7b602ff55f0c4debca34efb5bdec4a9406bee44125"
+        },
+        "supplement/geospatial/engineering_review/interface_successor_20260929/build.py": {
+          "bytes": 19260,
+          "crc32": "b13b0d2f",
+          "sha256": "9aefce12723a055682cad6a20463c620f82846ae4ced9e83ffbf91846ed514a4"
+        },
+        "supplement/geospatial/engineering_review/interface_successor_20260929/register.json": {
+          "bytes": 44464,
+          "crc32": "d9e9de3d",
+          "sha256": "2366257f96d0ffc4281133b3790abf62203951d7c2e38c90bdeda5e519be8192"
+        },
+        "supplement/geospatial/engineering_review/interface_successor_20260929/source.json": {
+          "bytes": 1824,
+          "crc32": "7f077259",
+          "sha256": "e7bf07658cafc6854edbed6e7881edf5af8c0221d4ee603e669bd0469decac0b"
+        },
+        "supplement/geospatial/successor_20260929/README.md": {
+          "bytes": 2278,
+          "crc32": "033e6cbe",
+          "sha256": "ec978cae88ccb071c4e0b8fff1def7c97b8d336c5eda5275bd925d36efd7b77b"
+        },
+        "supplement/geospatial/successor_20260929/SOURCE_DELTA.json.gz": {
+          "bytes": 10352,
+          "crc32": "2ceee1c9",
+          "sha256": "b40eed79b68d9776683ce8abeed33f4d84ad51df0d90901ec8f179b834641e43"
+        },
+        "supplement/geospatial/successor_20260929/SUMMARY.json": {
+          "bytes": 397,
+          "crc32": "6c368ebe",
+          "sha256": "18226fe65a69db1ef5153b4b28aa54dd3f501c6d5b02ec5db1ae006f579a6832"
+        },
+        "supplement/geospatial/successor_20260929/source_delta.py": {
+          "bytes": 8583,
+          "crc32": "e2aab7b0",
+          "sha256": "dee8ab98e57b01aa69b32b1acacf6e0f984e0034b06cec8adae76fab4f900906"
+        },
+        "supplement/geospatial/successor_20260929_final/README.md": {
+          "bytes": 5185,
+          "crc32": "408699ac",
+          "sha256": "f0a9e9acc5c78ede76b70b2d647ccc8dd5e30efb37ef74aee2e20c1f0995a322"
+        },
+        "supplement/geospatial/successor_20260929_final/SOURCE_DELTA.json.gz": {
+          "bytes": 3655,
+          "crc32": "e42daeff",
+          "sha256": "2792d3361724fdfa91437e18e629383a254c908d0da97c7a4fbf1025fe612471"
+        },
+        "supplement/geospatial/successor_20260929_final/SUMMARY.json": {
+          "bytes": 306,
+          "crc32": "895026f5",
+          "sha256": "d31d6333a425290ce6b1614177b73e3a0ea093f70c763183e4df9dce3549515d"
+        },
+        "supplement/geospatial/successor_20260929_final/package.py": {
+          "bytes": 7541,
+          "crc32": "04d77f3e",
+          "sha256": "78ae8a864c62d4aec187c67c5fb9ee0da30b0846bc16ee5242c1975f089d3aff"
+        },
+        "supplement/geospatial/successor_20260929_final/source_delta.py": {
+          "bytes": 8582,
+          "crc32": "12afb42b",
+          "sha256": "f2be9f55f4354d66f2bdd8e65cc610b9bb96155c266aede85702fb00d1a1815d"
+        },
+        "supplement/geospatial/successor_20260929_final/verify_package.py": {
+          "bytes": 7801,
+          "crc32": "871280ee",
+          "sha256": "72dfe36250716d032194cee38996c186f3c01dc7481746006342b03897ee4c31"
+        },
+        "supplement/geospatial/successors/RAIL_GEO_107_108_DISPOSITION_2026-09-29.md": {
+          "bytes": 6871,
+          "crc32": "0f899158",
+          "sha256": "3458310f9627e779756ea47674b96363257f3d90f8257480c3e2a6f7e3c8d17b"
+        },
+        "supplement/geospatial/successors/rail_history_2026_09_29/ATTRIBUTION_CORRECTION_2026-09-29.md": {
+          "bytes": 1505,
+          "crc32": "e0a99ef4",
+          "sha256": "4e2d1ab3c67548e55416604af0aaee1799e48757bd448cb0440ea769e06d335e"
+        },
+        "supplement/geospatial/successors/rail_history_2026_09_29/README.md": {
+          "bytes": 3165,
+          "crc32": "15c2301c",
+          "sha256": "5fa442c9691d8a45a0944177d06871eb8f9c21c3f686fb444faea29c102422a7"
+        },
+        "supplement/geospatial/successors/rail_history_2026_09_29/build.py": {
+          "bytes": 12966,
+          "crc32": "71691242",
+          "sha256": "1a517b5b78af7553fffe174f9b320ec0f878c7e650927dc94382ed0413bca6fc"
+        },
+        "supplement/geospatial/successors/rail_history_2026_09_29/case.geojson": {
+          "bytes": 2097,
+          "crc32": "5bf386ca",
+          "sha256": "f9fd76a38ffc93272ffc99cbfd2881f2103ae334219e11a4a3a5b0437102cfa3"
+        },
+        "supplement/geospatial/successors/rail_history_2026_09_29/case.svg": {
+          "bytes": 2799,
+          "crc32": "f1ff9c45",
+          "sha256": "2e143c71d51fe4d4a72302dd4e9540ebba936b9206ba4ac4bf398e7cb11d6f50"
+        },
+        "supplement/geospatial/successors/rail_history_2026_09_29/report.json": {
+          "bytes": 3176,
+          "crc32": "fb93bd74",
+          "sha256": "de1399118ee9598f6a411845cd1fa9fbfbf5602aaee0e54b709f8755717c2817"
+        },
+        "supplement/geospatial/successors/rail_history_2026_09_29/source.json": {
+          "bytes": 2906,
+          "crc32": "54695587",
+          "sha256": "a869bae143c4216663dc11e8364ef5ce5ada0e2d7b0e946b6e5920a0eb2c81a4"
+        },
+        "supplement/industrial/successors/rail_2026_09_29/README.md": {
+          "bytes": 7116,
+          "crc32": "e481b304",
+          "sha256": "c04e4420f923b7e6db26e771c9115c3ed5293e58e14aed0f39dfe88fb3409a07"
+        },
+        "supplement/industrial/successors/rail_2026_09_29/build.py": {
+          "bytes": 18476,
+          "crc32": "c6ce921a",
+          "sha256": "97ba6bea431fd985c797d4ea23a81de7c2432ccc3f44a5c99399926bc5ad48a7"
+        },
+        "supplement/industrial/successors/rail_2026_09_29/reconcile.py": {
+          "bytes": 5217,
+          "crc32": "062ddafd",
+          "sha256": "755d3657bd9b99b0450735ca3f210237925755ac1f66e33b389366c2bf3b138a"
+        },
+        "supplement/industrial/successors/rail_2026_09_29/reperform-result.json": {
+          "bytes": 3245,
+          "crc32": "b21125ab",
+          "sha256": "868ea3f17d063021b3a574a33b8ddc019a657e6521e3431a4963db5a8379a5c4"
+        },
+        "supplement/industrial/successors/rail_2026_09_29/source.json": {
+          "bytes": 1765,
+          "crc32": "57b889ec",
+          "sha256": "3aa95c1764a144dc3611acca29f2982c59b44863766810532c6ef42faa3c1b80"
+        },
+        "supplement/industrial/successors/rail_2026_09_29/test_successor.py": {
+          "bytes": 3689,
+          "crc32": "64ab87b3",
+          "sha256": "ec015390fb1b069f3d1800f63a74d460bc07716d8a4fcaa47c5e6f05d38bfe42"
+        }
+      },
+      "outer_member_path": "TREE/var/geographic/sable-harbor-geographic-evidence-v1.5.0-finalhead-preview.zip",
+      "sha256": "fe54998aafec8abed5f09369b8640331c6f6b5aa00a00ab706431308eebf4948",
+      "source_revision": "bcdf3ade1d83d04774da9a914deb269442ee52f6",
+      "status": "PREVIEW_UNACCEPTED"
+    },
+    "initial": {
+      "accepted_member_comparison": {
+        "differing": [
+          "CHECKSUMS.sha256",
+          "MANIFEST.json",
+          "supplement/geospatial/successor_20260929_final/README.md",
+          "supplement/geospatial/successor_20260929_final/package.py",
+          "supplement/geospatial/successor_20260929_final/verify_package.py",
+          "supplement/geospatial/successors/rail_history_2026_09_29/build.py",
+          "supplement/geospatial/successors/rail_history_2026_09_29/report.json",
+          "supplement/geospatial/successors/rail_history_2026_09_29/source.json"
+        ],
+        "equal_count": 29,
+        "extra": [
+          "supplement/docs/releases/GEOGRAPHIC_EVIDENCE_RELEASES.md"
+        ],
+        "missing": []
+      },
+      "asset": "sable-harbor-geographic-evidence-v1.5.0-preview.zip",
+      "bytes": 237429017,
+      "members": {
+        "CHECKSUMS.sha256": {
+          "bytes": 4700,
+          "crc32": "cccb7c79",
+          "sha256": "e2e66315ffa55ae3f158e52b00cc0e421e974f647b26a4e664987a8a782acc50"
+        },
+        "MANIFEST.json": {
+          "bytes": 7483,
+          "crc32": "b2c7bd35",
+          "sha256": "b22caccef32015ca724b240f8782f778169e86fecad31d6678622519fd243230"
+        },
+        "base/sable-harbor-geographic-evidence-v1.4.0.zip": {
+          "bytes": 237264171,
+          "crc32": "0230ba95",
+          "sha256": "f106e164a7578d64c32ba1bcc9444b3a96d89881d7c7b92b51bb97cf2bef6df4"
+        },
+        "index.html": {
+          "bytes": 947,
+          "crc32": "e2673de9",
+          "sha256": "3bdfa7d5d778ca6b7a750f6228d02a43cf6a8b8d38caa0993dd109f686137311"
+        },
+        "supplement/docs/canon/GEOGRAPHIC_SYNTHETIC_SCOPE_DISPOSITION_2026-09-29.md": {
+          "bytes": 6026,
+          "crc32": "2a103bbc",
+          "sha256": "a543ee8d12ed265ed3757deba74d37d34cda59961ceda4de3ca8598540ae652f"
+        },
+        "supplement/docs/releases/GEOGRAPHIC_EVIDENCE_RELEASES.md": {
+          "bytes": 2124,
+          "crc32": "685bad22",
+          "sha256": "de98af59c67cfb15993f427f8b7856f6a376d71eeb2ca0a180d91cfb3acfe1db"
+        },
+        "supplement/geospatial/docs/NEXT_CHAT_HANDOFF.md": {
+          "bytes": 1755,
+          "crc32": "fbac8108",
+          "sha256": "0bc0da8f4ffe2d0f0d540cb6defa8fc7a26024ddc08669478707ecf02d80080e"
+        },
+        "supplement/geospatial/docs/PROGRAM_CLOSEOUT_MATRIX.md": {
+          "bytes": 19335,
+          "crc32": "6e5eb45c",
+          "sha256": "b889167d56300ec58a7f63ffa241bcd3ec450e556b776c649e6337edb28a8c74"
+        },
+        "supplement/geospatial/engineering_review/COMPENSATED_40_MILE_CANDIDATE.geojson": {
+          "bytes": 130501,
+          "crc32": "e098d8b8",
+          "sha256": "2d3358d9dd7d117954b7d36879626659117cb9387b1350b4541abccb726228ad"
+        },
+        "supplement/geospatial/engineering_review/COMPENSATED_40_MILE_CANDIDATE.json": {
+          "bytes": 175760,
+          "crc32": "c9cbc680",
+          "sha256": "7592f356a9d13878a61960d735fba61924119c8efac226544c133f85d59b4750"
+        },
+        "supplement/geospatial/engineering_review/interface_successor_20260929/README.md": {
+          "bytes": 4100,
+          "crc32": "d69335de",
+          "sha256": "08dd582daa2be310d4551d7b602ff55f0c4debca34efb5bdec4a9406bee44125"
+        },
+        "supplement/geospatial/engineering_review/interface_successor_20260929/build.py": {
+          "bytes": 19260,
+          "crc32": "b13b0d2f",
+          "sha256": "9aefce12723a055682cad6a20463c620f82846ae4ced9e83ffbf91846ed514a4"
+        },
+        "supplement/geospatial/engineering_review/interface_successor_20260929/register.json": {
+          "bytes": 44464,
+          "crc32": "d9e9de3d",
+          "sha256": "2366257f96d0ffc4281133b3790abf62203951d7c2e38c90bdeda5e519be8192"
+        },
+        "supplement/geospatial/engineering_review/interface_successor_20260929/source.json": {
+          "bytes": 1824,
+          "crc32": "7f077259",
+          "sha256": "e7bf07658cafc6854edbed6e7881edf5af8c0221d4ee603e669bd0469decac0b"
+        },
+        "supplement/geospatial/successor_20260929/README.md": {
+          "bytes": 2278,
+          "crc32": "033e6cbe",
+          "sha256": "ec978cae88ccb071c4e0b8fff1def7c97b8d336c5eda5275bd925d36efd7b77b"
+        },
+        "supplement/geospatial/successor_20260929/SOURCE_DELTA.json.gz": {
+          "bytes": 10352,
+          "crc32": "2ceee1c9",
+          "sha256": "b40eed79b68d9776683ce8abeed33f4d84ad51df0d90901ec8f179b834641e43"
+        },
+        "supplement/geospatial/successor_20260929/SUMMARY.json": {
+          "bytes": 397,
+          "crc32": "6c368ebe",
+          "sha256": "18226fe65a69db1ef5153b4b28aa54dd3f501c6d5b02ec5db1ae006f579a6832"
+        },
+        "supplement/geospatial/successor_20260929/source_delta.py": {
+          "bytes": 8583,
+          "crc32": "e2aab7b0",
+          "sha256": "dee8ab98e57b01aa69b32b1acacf6e0f984e0034b06cec8adae76fab4f900906"
+        },
+        "supplement/geospatial/successor_20260929_final/README.md": {
+          "bytes": 4588,
+          "crc32": "8a5a4754",
+          "sha256": "00869e605c5710bf6942169a860c93d0936f8b3b1fb5852c086fdfd1b31bd1f1"
+        },
+        "supplement/geospatial/successor_20260929_final/SOURCE_DELTA.json.gz": {
+          "bytes": 3655,
+          "crc32": "e42daeff",
+          "sha256": "2792d3361724fdfa91437e18e629383a254c908d0da97c7a4fbf1025fe612471"
+        },
+        "supplement/geospatial/successor_20260929_final/SUMMARY.json": {
+          "bytes": 306,
+          "crc32": "895026f5",
+          "sha256": "d31d6333a425290ce6b1614177b73e3a0ea093f70c763183e4df9dce3549515d"
+        },
+        "supplement/geospatial/successor_20260929_final/package.py": {
+          "bytes": 7299,
+          "crc32": "e89c3ac5",
+          "sha256": "d9a0784d339e65e977da2a0fc7913668b518d7d5af0b9d029221a6c56ffe4a5b"
+        },
+        "supplement/geospatial/successor_20260929_final/source_delta.py": {
+          "bytes": 8582,
+          "crc32": "12afb42b",
+          "sha256": "f2be9f55f4354d66f2bdd8e65cc610b9bb96155c266aede85702fb00d1a1815d"
+        },
+        "supplement/geospatial/successor_20260929_final/verify_package.py": {
+          "bytes": 7675,
+          "crc32": "026aee47",
+          "sha256": "56b7a971851717f597ec23df4190e518dd5470f4389c7020347978171cb8cd07"
+        },
+        "supplement/geospatial/successors/RAIL_GEO_107_108_DISPOSITION_2026-09-29.md": {
+          "bytes": 6871,
+          "crc32": "0f899158",
+          "sha256": "3458310f9627e779756ea47674b96363257f3d90f8257480c3e2a6f7e3c8d17b"
+        },
+        "supplement/geospatial/successors/rail_history_2026_09_29/ATTRIBUTION_CORRECTION_2026-09-29.md": {
+          "bytes": 1505,
+          "crc32": "e0a99ef4",
+          "sha256": "4e2d1ab3c67548e55416604af0aaee1799e48757bd448cb0440ea769e06d335e"
+        },
+        "supplement/geospatial/successors/rail_history_2026_09_29/README.md": {
+          "bytes": 3165,
+          "crc32": "15c2301c",
+          "sha256": "5fa442c9691d8a45a0944177d06871eb8f9c21c3f686fb444faea29c102422a7"
+        },
+        "supplement/geospatial/successors/rail_history_2026_09_29/build.py": {
+          "bytes": 12576,
+          "crc32": "4ecd90a5",
+          "sha256": "86d303aa9d10d977945ab900cdadb5f0027979d614363f32eaebd4cdc07a03d5"
+        },
+        "supplement/geospatial/successors/rail_history_2026_09_29/case.geojson": {
+          "bytes": 2097,
+          "crc32": "5bf386ca",
+          "sha256": "f9fd76a38ffc93272ffc99cbfd2881f2103ae334219e11a4a3a5b0437102cfa3"
+        },
+        "supplement/geospatial/successors/rail_history_2026_09_29/case.svg": {
+          "bytes": 2799,
+          "crc32": "f1ff9c45",
+          "sha256": "2e143c71d51fe4d4a72302dd4e9540ebba936b9206ba4ac4bf398e7cb11d6f50"
+        },
+        "supplement/geospatial/successors/rail_history_2026_09_29/report.json": {
+          "bytes": 3028,
+          "crc32": "6707b4eb",
+          "sha256": "1ecec898ffbc2c2aa2ef49f24265f2c1b643bec17aa9b90f5b06fc89e3daf85c"
+        },
+        "supplement/geospatial/successors/rail_history_2026_09_29/source.json": {
+          "bytes": 2758,
+          "crc32": "0e662506",
+          "sha256": "c76aba3e70c7fa58f35e1909d54138ad6e6f5719e5f406c395eed5c781d3850f"
+        },
+        "supplement/industrial/successors/rail_2026_09_29/README.md": {
+          "bytes": 7116,
+          "crc32": "e481b304",
+          "sha256": "c04e4420f923b7e6db26e771c9115c3ed5293e58e14aed0f39dfe88fb3409a07"
+        },
+        "supplement/industrial/successors/rail_2026_09_29/build.py": {
+          "bytes": 18476,
+          "crc32": "c6ce921a",
+          "sha256": "97ba6bea431fd985c797d4ea23a81de7c2432ccc3f44a5c99399926bc5ad48a7"
+        },
+        "supplement/industrial/successors/rail_2026_09_29/reconcile.py": {
+          "bytes": 5217,
+          "crc32": "062ddafd",
+          "sha256": "755d3657bd9b99b0450735ca3f210237925755ac1f66e33b389366c2bf3b138a"
+        },
+        "supplement/industrial/successors/rail_2026_09_29/reperform-result.json": {
+          "bytes": 3245,
+          "crc32": "b21125ab",
+          "sha256": "868ea3f17d063021b3a574a33b8ddc019a657e6521e3431a4963db5a8379a5c4"
+        },
+        "supplement/industrial/successors/rail_2026_09_29/source.json": {
+          "bytes": 1765,
+          "crc32": "57b889ec",
+          "sha256": "3aa95c1764a144dc3611acca29f2982c59b44863766810532c6ef42faa3c1b80"
+        },
+        "supplement/industrial/successors/rail_2026_09_29/test_successor.py": {
+          "bytes": 3689,
+          "crc32": "64ab87b3",
+          "sha256": "ec015390fb1b069f3d1800f63a74d460bc07716d8a4fcaa47c5e6f05d38bfe42"
+        }
+      },
+      "outer_member_path": "TREE/var/geographic/sable-harbor-geographic-evidence-v1.5.0-preview.zip",
+      "sha256": "420a509f84f822277b4bd7d504ba2316353b6e442d241eefddcc27612ee64f6a",
+      "source_revision": "bcdf3ade1d83d04774da9a914deb269442ee52f6",
+      "status": "PREVIEW_UNACCEPTED"
+    }
+  },
+  "schema": "sableharbor_geographic_v150_historical_previews_v1",
+  "source_archive": {
+    "bytes": 1801741745,
+    "family": "PLAIN_COMPRESSED_BACKUPS_20261004",
+    "name": "C18-cache-repository-geo-scope-107-108-20261003.tar.zst",
+    "observed_archive_date": "2026-10-03",
+    "sha256": "d137f44dc1437a0924ecf3b1eb2360f3b477a6b6a3e8092a88cea5bd9c37d1fc"
+  },
+  "tracked_originals": {
+    "original/b165/MANIFEST.json": {
+      "bytes": 7306,
+      "sha256": "1477bb5f0303ae6878476a5c1eef8c3c903723eb63aac61d353926e27b93e0d3",
+      "source_member": "MANIFEST.json",
+      "source_preview": "b165"
+    },
+    "original/finalhead/MANIFEST.json": {
+      "bytes": 7306,
+      "sha256": "2007c173c9a390127e973b47851425e0dd14e8bf10419ff50a71e467cef06444",
+      "source_member": "MANIFEST.json",
+      "source_preview": "finalhead"
+    },
+    "original/initial/CHECKSUMS.sha256": {
+      "bytes": 4700,
+      "sha256": "e2e66315ffa55ae3f158e52b00cc0e421e974f647b26a4e664987a8a782acc50",
+      "source_member": "CHECKSUMS.sha256",
+      "source_preview": "initial"
+    },
+    "original/initial/MANIFEST.json": {
+      "bytes": 7483,
+      "sha256": "b22caccef32015ca724b240f8782f778169e86fecad31d6678622519fd243230",
+      "source_member": "MANIFEST.json",
+      "source_preview": "initial"
+    },
+    "original/initial/supplement/docs/releases/GEOGRAPHIC_EVIDENCE_RELEASES.md": {
+      "bytes": 2124,
+      "sha256": "de98af59c67cfb15993f427f8b7856f6a376d71eeb2ca0a180d91cfb3acfe1db",
+      "source_member": "supplement/docs/releases/GEOGRAPHIC_EVIDENCE_RELEASES.md",
+      "source_preview": "initial"
+    },
+    "original/initial/supplement/geospatial/successor_20260929_final/README.md": {
+      "bytes": 4588,
+      "sha256": "00869e605c5710bf6942169a860c93d0936f8b3b1fb5852c086fdfd1b31bd1f1",
+      "source_member": "supplement/geospatial/successor_20260929_final/README.md",
+      "source_preview": "initial"
+    },
+    "original/initial/supplement/geospatial/successor_20260929_final/package.py": {
+      "bytes": 7299,
+      "sha256": "d9a0784d339e65e977da2a0fc7913668b518d7d5af0b9d029221a6c56ffe4a5b",
+      "source_member": "supplement/geospatial/successor_20260929_final/package.py",
+      "source_preview": "initial"
+    },
+    "original/initial/supplement/geospatial/successor_20260929_final/verify_package.py": {
+      "bytes": 7675,
+      "sha256": "56b7a971851717f597ec23df4190e518dd5470f4389c7020347978171cb8cd07",
+      "source_member": "supplement/geospatial/successor_20260929_final/verify_package.py",
+      "source_preview": "initial"
+    },
+    "original/initial/supplement/geospatial/successors/rail_history_2026_09_29/build.py": {
+      "bytes": 12576,
+      "sha256": "86d303aa9d10d977945ab900cdadb5f0027979d614363f32eaebd4cdc07a03d5",
+      "source_member": "supplement/geospatial/successors/rail_history_2026_09_29/build.py",
+      "source_preview": "initial"
+    },
+    "original/initial/supplement/geospatial/successors/rail_history_2026_09_29/report.json": {
+      "bytes": 3028,
+      "sha256": "1ecec898ffbc2c2aa2ef49f24265f2c1b643bec17aa9b90f5b06fc89e3daf85c",
+      "source_member": "supplement/geospatial/successors/rail_history_2026_09_29/report.json",
+      "source_preview": "initial"
+    },
+    "original/initial/supplement/geospatial/successors/rail_history_2026_09_29/source.json": {
+      "bytes": 2758,
+      "sha256": "c76aba3e70c7fa58f35e1909d54138ad6e6f5719e5f406c395eed5c781d3850f",
+      "source_member": "supplement/geospatial/successors/rail_history_2026_09_29/source.json",
+      "source_preview": "initial"
+    }
+  }
+}
