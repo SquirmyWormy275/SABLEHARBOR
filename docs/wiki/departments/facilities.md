@@ -20,6 +20,7 @@ Each drawing identifies its own edition and purpose. Planned capacity, measured 
 - [Selected Sacramento visitor map V08](../../../geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.png) — Owner-selected illustrative visitor view; [download PDF](../../../geospatial/facilities/visitor/v08/artifacts/visitor-map-v08.pdf). Its [acceptance record](../../../geospatial/facilities/visitor/ACCEPTANCE.json) freezes the artwork, without adopting it as measured geometry.
 - [Headquarters physical doctrine](../../../docs/canon/CORPORATE_HEADQUARTERS_CLOSEOUT_2026-09-03.md) — Section 15 states the Sacramento campus intent.
 - [Facility package guide](../../../geospatial/facilities/README.md) — Find coverage, population/space assumptions and generated plans.
+- [Historical September 11 staged workline](../../../geospatial/facilities/history/staged-workline-2026-09-11/README.md) — Exact unaccepted 90-sheet recovery checkpoint; use the corrected R02 guide above for current plans.
 - [Geographic archive](../../../geospatial/README.md) — Read location authority, geometry and temporal distinctions.
 - [Atlas entry](../../../geospatial/maps/index.html) — Interactive location-to-building-to-floor navigation; open locally or through the published atlas host.
 - [Spatial package](../../../geospatial/facilities/spatial/README.md) — Sections, elevations, roofs, room schedules and context references.

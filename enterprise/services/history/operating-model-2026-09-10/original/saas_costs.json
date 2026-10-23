@@ -1,0 +1,110 @@
+[
+  {
+    "annual_usd": "177816.00",
+    "dependency": "DEP-collaboration",
+    "seats": 506,
+    "state": "ILLUSTRATIVE_NOT_QUOTED"
+  },
+  {
+    "annual_usd": "74592.00",
+    "dependency": "DEP-identity",
+    "seats": 777,
+    "state": "ILLUSTRATIVE_NOT_QUOTED"
+  },
+  {
+    "annual_usd": "83916.00",
+    "dependency": "DEP-endpoint",
+    "seats": 777,
+    "state": "ILLUSTRATIVE_NOT_QUOTED"
+  },
+  {
+    "annual_usd": "111888.00",
+    "dependency": "DEP-edr",
+    "seats": 777,
+    "state": "ILLUSTRATIVE_NOT_QUOTED"
+  },
+  {
+    "annual_usd": "149184.00",
+    "dependency": "DEP-hr-payroll",
+    "seats": 777,
+    "state": "ILLUSTRATIVE_NOT_QUOTED"
+  },
+  {
+    "annual_usd": "120000.00",
+    "dependency": "DEP-erp",
+    "seats": 0,
+    "state": "ILLUSTRATIVE_NOT_QUOTED"
+  },
+  {
+    "annual_usd": "48360.00",
+    "dependency": "DEP-travel-expense",
+    "seats": 506,
+    "state": "ILLUSTRATIVE_NOT_QUOTED"
+  },
+  {
+    "annual_usd": "71440.00",
+    "dependency": "DEP-crm-signature",
+    "seats": 64,
+    "state": "ILLUSTRATIVE_NOT_QUOTED"
+  },
+  {
+    "annual_usd": "25920.00",
+    "dependency": "DEP-ticketing",
+    "seats": 24,
+    "state": "ILLUSTRATIVE_NOT_QUOTED"
+  },
+  {
+    "annual_usd": "30000.00",
+    "dependency": "DEP-privacy-records",
+    "seats": 0,
+    "state": "ILLUSTRATIVE_NOT_QUOTED"
+  },
+  {
+    "annual_usd": "12000.00",
+    "dependency": "DEP-entity-tools",
+    "seats": 0,
+    "state": "ILLUSTRATIVE_NOT_QUOTED"
+  },
+  {
+    "annual_usd": "144000.00",
+    "dependency": "DEP-security-monitoring",
+    "seats": 0,
+    "state": "ILLUSTRATIVE_NOT_QUOTED"
+  },
+  {
+    "annual_usd": "36000.00",
+    "dependency": "DEP-security-tools",
+    "seats": 0,
+    "state": "ILLUSTRATIVE_NOT_QUOTED"
+  },
+  {
+    "annual_usd": "60000.00",
+    "dependency": "DEP-incident-retainer",
+    "seats": 0,
+    "state": "ILLUSTRATIVE_NOT_QUOTED"
+  },
+  {
+    "annual_usd": "60000.00",
+    "dependency": "DEP-security-assessment",
+    "seats": 0,
+    "state": "ILLUSTRATIVE_NOT_QUOTED"
+  },
+  {
+    "annual_usd": "36000.00",
+    "dependency": "DEP-developer",
+    "seats": 0,
+    "state": "ILLUSTRATIVE_NOT_QUOTED"
+  },
+  {
+    "annual_usd": "12000.00",
+    "dependency": "DEP-dns-certificates",
+    "seats": 0,
+    "state": "ILLUSTRATIVE_NOT_QUOTED"
+  },
+  {
+    "annual_usd": "8000.00",
+    "dependency": "DEP-screening",
+    "seats": 0,
+    "state": "ILLUSTRATIVE_NOT_QUOTED"
+  }
+]

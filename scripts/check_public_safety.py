@@ -53,16 +53,33 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # 148 publication pairs, 294 relationships, 384 counterpart rows, 12
     # evidence packages, 237 artifacts and one evidence link are exact-equal.
     # Both databases pass SQLite quick_check and foreign-key verification.
-    # The September 9 draft organization originals add four reader entries
-    # (historical README, wording Markdown and two PDFs: 1,699 -> 1,703),
-    # refreshing the current chart index and People Wiki link on accepted
-    # main cdb33b6c. All 148 institutional objects/publication pairs, 294
+    # The historical staged facilities workline then adds one reader README
+    # (1,699 -> 1,700) on accepted main cdb33b6c. All 148 institutional
+    # objects/publication pairs, 294 relationships, 384 counterpart rows,
+    # 12 evidence packages, 237 artifacts and the evidence link remain
+    # logically exact-equal; SQLite quick_check and foreign keys pass.
+    # The recovered September 11 office-estate draft adds four historical
+    # Markdown source/guide rows (1,700 -> 1,704) against accepted main
+    # 53720c58. All 148 institutional objects/publication pairs, 294
     # relationships, 384 counterpart rows, 12 evidence packages, 237
-    # artifacts and the evidence link remain logically exact-equal.
-    # SQLite quick_check and foreign keys pass. Exact bytes only.
+    # artifacts and the evidence link remain logically exact-equal. SQLite
+    # quick_check and foreign keys pass. No publication was generated.
+    # The historical September 5 industrial R1 handoff adds three reader
+    # Markdown rows (1,704 -> 1,707) against accepted main 115763b0. All
+    # seven non-reader catalog tables remain exact-equal; SQLite integrity
+    # and foreign-key checks pass. Current industrial authority is unchanged.
+    # The September 10 service operating-model history adds two Markdown
+    # reader rows (1,707 -> 1,709) on the R1 predecessor. All seven
+    # non-reader tables remain exact-equal; SQLite integrity and foreign keys
+    # pass. This does not approve modeled budgets or alter current services.
+    # The September 9 proposed organization history adds four reader rows
+    # (1,709 -> 1,713, including two PDFs). The seven non-reader tables
+    # remain exact-equal; SQLite integrity and foreign keys pass. The
+    # proposal does not revise the accepted current organization chart.
+    # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        15722496,
-        "d37224ea4b53befa0c5b1ea9a4fdbc555c9bee83ab77122e5e6ec22c605b4ea4",
+        16005120,
+        "9be16ec91d3b49957cb6e24d2dd5f4f1be1e5097948cb7a7d5f9f6d5d9daad4a",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.

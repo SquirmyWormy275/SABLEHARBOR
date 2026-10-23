@@ -2,6 +2,8 @@
 
 Authoritative base: `786fc9a5311a04dde92ee6dbb08ac3b77a380200`. Review: September 11, 2026. This ledger records recovery decisions; it does not grant pending branches canonical authority.
 
+**October 23 recovery extension:** The separately supplied [90-sheet staged-workline checkpoint](../history/staged-workline-2026-09-11/README.md) is now indexed with original outer/inner ZIP hashes, 483 staged-overlay member identities and a streaming verifier. It is historical, unaccepted source evidence. The approved R01 originals and accepted R02 implementation below retain their stated authority.
+
 Reviewed **58 remote work branches**, **44 PRs**, all issue metadata and **651 workflow artifacts**. Nine relevant artifact families were downloaded and their members inspected. No independent campus/building/floor package was found in those archives. The local stash is empty. [Machine-readable evidence](RECOVERY_LEDGER.json) includes every candidate commit, changed path, current/candidate blob comparison, PR state, local package members and inspected artifact members. [Workflow metadata](WORKFLOW_ARTIFACT_INVENTORY.json) preserves the complete API inventory.
 
 ## Approved R01 package recovered after initial archaeology

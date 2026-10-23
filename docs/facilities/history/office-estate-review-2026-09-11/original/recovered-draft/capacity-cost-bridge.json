@@ -1,0 +1,664 @@
+{
+  "state": "SYNTHETIC_GROSS_PLANNING_NOT_FUNDING",
+  "source_workforce": {
+    "foundry-field": {
+      "occupied": 160,
+      "authorized": 170,
+      "annual_loaded_usd": 145000
+    },
+    "atlas-meridian": {
+      "occupied": 36,
+      "authorized": 40,
+      "annual_loaded_usd": 175000
+    },
+    "advisory": {
+      "occupied": 32,
+      "authorized": 36,
+      "annual_loaded_usd": 155000
+    },
+    "willow": {
+      "occupied": 24,
+      "authorized": 24,
+      "annual_loaded_usd": 150000
+    },
+    "project-cradle": {
+      "occupied": 18,
+      "authorized": 20,
+      "annual_loaded_usd": 125000
+    },
+    "ess": {
+      "occupied": 48,
+      "authorized": 54,
+      "annual_loaded_usd": 140000
+    },
+    "internal-audit": {
+      "occupied": 8,
+      "authorized": 10,
+      "annual_loaded_usd": 150000
+    },
+    "j2": {
+      "occupied": 180,
+      "authorized": 237,
+      "annual_loaded_usd": 145000
+    }
+  },
+  "core_occupied": 506,
+  "core_authorized": 591,
+  "industrial_hold_flat_license_scenario": 271,
+  "modeled_users": 777,
+  "j2_authorized": 237,
+  "education_included_in_j2": 35,
+  "service_footprint_base": {
+    "assets": {
+      "PROD:cpu": {
+        "quantity": 13,
+        "unit_price": "18000",
+        "life_months": 48,
+        "location": "primary"
+      },
+      "PROD:shelf": {
+        "quantity": 2,
+        "unit_price": "15000",
+        "life_months": 48,
+        "location": "primary"
+      },
+      "RESTRICTED:cpu": {
+        "quantity": 4,
+        "unit_price": "18000",
+        "life_months": 48,
+        "location": "primary"
+      },
+      "RESTRICTED:shelf": {
+        "quantity": 4,
+        "unit_price": "15000",
+        "life_months": 48,
+        "location": "primary"
+      },
+      "RESTRICTED:gpu": {
+        "quantity": 8,
+        "unit_price": "30000",
+        "life_months": 48,
+        "location": "primary"
+      },
+      "RESTRICTED:gpu_host": {
+        "quantity": 2,
+        "unit_price": "20000",
+        "life_months": 48,
+        "location": "primary"
+      },
+      "DEV:cpu": {
+        "quantity": 4,
+        "unit_price": "18000",
+        "life_months": 48,
+        "location": "primary"
+      },
+      "DEV:shelf": {
+        "quantity": 1,
+        "unit_price": "15000",
+        "life_months": 48,
+        "location": "primary"
+      },
+      "DEV:gpu": {
+        "quantity": 4,
+        "unit_price": "30000",
+        "life_months": 48,
+        "location": "primary"
+      },
+      "DEV:gpu_host": {
+        "quantity": 1,
+        "unit_price": "20000",
+        "life_months": 48,
+        "location": "primary"
+      },
+      "SITE:cpu": {
+        "quantity": 3,
+        "unit_price": "18000",
+        "life_months": 48,
+        "location": "local"
+      },
+      "SITE:shelf": {
+        "quantity": 1,
+        "unit_price": "15000",
+        "life_months": 48,
+        "location": "local"
+      },
+      "CORPORATE:cpu": {
+        "quantity": 2,
+        "unit_price": "18000",
+        "life_months": 48,
+        "location": "local"
+      },
+      "CORPORATE:shelf": {
+        "quantity": 1,
+        "unit_price": "15000",
+        "life_months": 48,
+        "location": "local"
+      },
+      "RECOVERY_PROD:cpu": {
+        "quantity": 6,
+        "unit_price": "18000",
+        "life_months": 48,
+        "location": "recovery"
+      },
+      "RECOVERY_PROD:shelf": {
+        "quantity": 2,
+        "unit_price": "15000",
+        "life_months": 48,
+        "location": "recovery"
+      },
+      "RECOVERY_RESTRICTED:cpu": {
+        "quantity": 3,
+        "unit_price": "18000",
+        "life_months": 48,
+        "location": "recovery"
+      },
+      "RECOVERY_RESTRICTED:shelf": {
+        "quantity": 4,
+        "unit_price": "15000",
+        "life_months": 48,
+        "location": "recovery"
+      },
+      "RECOVERY_RESTRICTED:gpu": {
+        "quantity": 4,
+        "unit_price": "30000",
+        "life_months": 48,
+        "location": "recovery"
+      },
+      "RECOVERY_RESTRICTED:gpu_host": {
+        "quantity": 1,
+        "unit_price": "20000",
+        "life_months": 48,
+        "location": "recovery"
+      },
+      "primary:network_pair_per_site": {
+        "quantity": 1,
+        "unit_price": "40000",
+        "life_months": 48,
+        "location": "primary"
+      },
+      "primary:hsm_pair_per_site": {
+        "quantity": 1,
+        "unit_price": "45000",
+        "life_months": 48,
+        "location": "primary"
+      },
+      "recovery:network_pair_per_site": {
+        "quantity": 1,
+        "unit_price": "40000",
+        "life_months": 48,
+        "location": "recovery"
+      },
+      "recovery:hsm_pair_per_site": {
+        "quantity": 1,
+        "unit_price": "45000",
+        "life_months": 48,
+        "location": "recovery"
+      },
+      "local:network_pair_per_site": {
+        "quantity": 1,
+        "unit_price": "40000",
+        "life_months": 48,
+        "location": "local"
+      },
+      "local:hsm_pair_per_site": {
+        "quantity": 1,
+        "unit_price": "45000",
+        "life_months": 48,
+        "location": "local"
+      }
+    },
+    "owned": [
+      {
+        "domain": "PROD",
+        "location": "primary",
+        "cpu_nodes": 13,
+        "storage_shelves": 2,
+        "gpu_units": 0,
+        "gpu_hosts": 0,
+        "usable_storage_tib": "50",
+        "required_storage_tib": "50",
+        "required_vcpu": "512",
+        "required_memory_gib": "2048",
+        "n_minus_1_usable_vcpu": "537.60",
+        "n_minus_1_usable_memory_gib": "4300.80",
+        "gpu_n_plus_1_proven": false
+      },
+      {
+        "domain": "RESTRICTED",
+        "location": "primary",
+        "cpu_nodes": 4,
+        "storage_shelves": 4,
+        "gpu_units": 8,
+        "gpu_hosts": 2,
+        "usable_storage_tib": "100",
+        "required_storage_tib": "100",
+        "required_vcpu": "128",
+        "required_memory_gib": "1024",
+        "n_minus_1_usable_vcpu": "134.40",
+        "n_minus_1_usable_memory_gib": "1075.20",
+        "gpu_n_plus_1_proven": false
+      },
+      {
+        "domain": "DEV",
+        "location": "primary",
+        "cpu_nodes": 4,
+        "storage_shelves": 1,
+        "gpu_units": 4,
+        "gpu_hosts": 1,
+        "usable_storage_tib": "25",
+        "required_storage_tib": "20",
+        "required_vcpu": "128",
+        "required_memory_gib": "512",
+        "n_minus_1_usable_vcpu": "134.40",
+        "n_minus_1_usable_memory_gib": "1075.20",
+        "gpu_n_plus_1_proven": false
+      },
+      {
+        "domain": "SITE",
+        "location": "local",
+        "cpu_nodes": 3,
+        "storage_shelves": 1,
+        "gpu_units": 0,
+        "gpu_hosts": 0,
+        "usable_storage_tib": "25",
+        "required_storage_tib": "20",
+        "required_vcpu": "80",
+        "required_memory_gib": "320",
+        "n_minus_1_usable_vcpu": "89.60",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "gpu_n_plus_1_proven": false
+      },
+      {
+        "domain": "CORPORATE",
+        "location": "local",
+        "cpu_nodes": 2,
+        "storage_shelves": 1,
+        "gpu_units": 0,
+        "gpu_hosts": 0,
+        "usable_storage_tib": "25",
+        "required_storage_tib": "5",
+        "required_vcpu": "16",
+        "required_memory_gib": "64",
+        "n_minus_1_usable_vcpu": "44.80",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "gpu_n_plus_1_proven": false
+      },
+      {
+        "domain": "RECOVERY_PROD",
+        "location": "recovery",
+        "cpu_nodes": 6,
+        "storage_shelves": 2,
+        "gpu_units": 0,
+        "gpu_hosts": 0,
+        "usable_storage_tib": "50",
+        "required_storage_tib": "50",
+        "required_vcpu": "204.80",
+        "required_memory_gib": "819.20",
+        "n_minus_1_usable_vcpu": "224.00",
+        "n_minus_1_usable_memory_gib": "1792.00",
+        "gpu_n_plus_1_proven": false
+      },
+      {
+        "domain": "RECOVERY_RESTRICTED",
+        "location": "recovery",
+        "cpu_nodes": 3,
+        "storage_shelves": 4,
+        "gpu_units": 4,
+        "gpu_hosts": 1,
+        "usable_storage_tib": "100",
+        "required_storage_tib": "100",
+        "required_vcpu": "64.00",
+        "required_memory_gib": "512.00",
+        "n_minus_1_usable_vcpu": "89.60",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "gpu_n_plus_1_proven": false
+      }
+    ],
+    "cloud": {
+      "vcpu": "0.00",
+      "memory_gib": "0.00",
+      "usable_storage_tib": "0",
+      "gpu_units": "0.00",
+      "egress_tib_month": "0.00"
+    },
+    "locations": {
+      "primary": {
+        "u": "88",
+        "kw": "20.90",
+        "racks": 3
+      },
+      "recovery": {
+        "u": "52",
+        "kw": "9.00",
+        "racks": 2
+      },
+      "local": {
+        "u": "24",
+        "kw": "3.25",
+        "racks": 1
+      }
+    },
+    "backup_tib": "390.0",
+    "demands": {
+      "PROD": {
+        "vcpu": "512",
+        "memory_gib": "2048",
+        "usable_storage_tib": "50",
+        "gpu_units": "0",
+        "egress_tib_month": "30"
+      },
+      "RESTRICTED": {
+        "vcpu": "128",
+        "memory_gib": "1024",
+        "usable_storage_tib": "100",
+        "gpu_units": "8",
+        "egress_tib_month": "2"
+      },
+      "DEV": {
+        "vcpu": "128",
+        "memory_gib": "512",
+        "usable_storage_tib": "20",
+        "gpu_units": "4",
+        "egress_tib_month": "10"
+      },
+      "SITE": {
+        "vcpu": "80",
+        "memory_gib": "320",
+        "usable_storage_tib": "20",
+        "gpu_units": "0",
+        "egress_tib_month": "2"
+      },
+      "CORPORATE": {
+        "vcpu": "16",
+        "memory_gib": "64",
+        "usable_storage_tib": "5",
+        "gpu_units": "0",
+        "egress_tib_month": "2"
+      },
+      "RECOVERY_PROD": {
+        "vcpu": "204.80",
+        "memory_gib": "819.20",
+        "usable_storage_tib": "50",
+        "gpu_units": "0.00",
+        "egress_tib_month": "12.00"
+      },
+      "RECOVERY_RESTRICTED": {
+        "vcpu": "64.00",
+        "memory_gib": "512.00",
+        "usable_storage_tib": "100",
+        "gpu_units": "4.00",
+        "egress_tib_month": "1.00"
+      }
+    }
+  },
+  "service_license_rows": [
+    {
+      "dependency": "DEP-collaboration",
+      "seats": 506,
+      "annual_usd": "177816.00",
+      "state": "ILLUSTRATIVE_NOT_QUOTED"
+    },
+    {
+      "dependency": "DEP-identity",
+      "seats": 777,
+      "annual_usd": "74592.00",
+      "state": "ILLUSTRATIVE_NOT_QUOTED"
+    },
+    {
+      "dependency": "DEP-endpoint",
+      "seats": 777,
+      "annual_usd": "83916.00",
+      "state": "ILLUSTRATIVE_NOT_QUOTED"
+    },
+    {
+      "dependency": "DEP-edr",
+      "seats": 777,
+      "annual_usd": "111888.00",
+      "state": "ILLUSTRATIVE_NOT_QUOTED"
+    },
+    {
+      "dependency": "DEP-hr-payroll",
+      "seats": 777,
+      "annual_usd": "149184.00",
+      "state": "ILLUSTRATIVE_NOT_QUOTED"
+    },
+    {
+      "dependency": "DEP-erp",
+      "seats": 0,
+      "annual_usd": "120000.00",
+      "state": "ILLUSTRATIVE_NOT_QUOTED"
+    },
+    {
+      "dependency": "DEP-travel-expense",
+      "seats": 506,
+      "annual_usd": "48360.00",
+      "state": "ILLUSTRATIVE_NOT_QUOTED"
+    },
+    {
+      "dependency": "DEP-crm-signature",
+      "seats": 64,
+      "annual_usd": "71440.00",
+      "state": "ILLUSTRATIVE_NOT_QUOTED"
+    },
+    {
+      "dependency": "DEP-ticketing",
+      "seats": 24,
+      "annual_usd": "25920.00",
+      "state": "ILLUSTRATIVE_NOT_QUOTED"
+    },
+    {
+      "dependency": "DEP-privacy-records",
+      "seats": 0,
+      "annual_usd": "30000.00",
+      "state": "ILLUSTRATIVE_NOT_QUOTED"
+    },
+    {
+      "dependency": "DEP-entity-tools",
+      "seats": 0,
+      "annual_usd": "12000.00",
+      "state": "ILLUSTRATIVE_NOT_QUOTED"
+    },
+    {
+      "dependency": "DEP-security-monitoring",
+      "seats": 0,
+      "annual_usd": "144000.00",
+      "state": "ILLUSTRATIVE_NOT_QUOTED"
+    },
+    {
+      "dependency": "DEP-security-tools",
+      "seats": 0,
+      "annual_usd": "36000.00",
+      "state": "ILLUSTRATIVE_NOT_QUOTED"
+    },
+    {
+      "dependency": "DEP-incident-retainer",
+      "seats": 0,
+      "annual_usd": "60000.00",
+      "state": "ILLUSTRATIVE_NOT_QUOTED"
+    },
+    {
+      "dependency": "DEP-security-assessment",
+      "seats": 0,
+      "annual_usd": "60000.00",
+      "state": "ILLUSTRATIVE_NOT_QUOTED"
+    },
+    {
+      "dependency": "DEP-developer",
+      "seats": 0,
+      "annual_usd": "36000.00",
+      "state": "ILLUSTRATIVE_NOT_QUOTED"
+    },
+    {
+      "dependency": "DEP-dns-certificates",
+      "seats": 0,
+      "annual_usd": "12000.00",
+      "state": "ILLUSTRATIVE_NOT_QUOTED"
+    },
+    {
+      "dependency": "DEP-screening",
+      "seats": 0,
+      "annual_usd": "8000.00",
+      "state": "ILLUSTRATIVE_NOT_QUOTED"
+    }
+  ],
+  "facility_cost_parts": [
+    {
+      "estate_id": "E-01",
+      "part": "Corporate/product/Audit building",
+      "usable_sqft": 55000,
+      "gross_sqft": 68750,
+      "fitout_low_usd": 7700000,
+      "fitout_high_usd": 12650000,
+      "annual_premises_low_usd": 1980000,
+      "annual_premises_high_usd": 2750000,
+      "annual_property_services_low_usd": 550000,
+      "annual_property_services_high_usd": 880000
+    },
+    {
+      "estate_id": "E-02",
+      "part": "J2 institutional building",
+      "usable_sqft": 36000,
+      "gross_sqft": 45000,
+      "fitout_low_usd": 6480000,
+      "fitout_high_usd": 10800000,
+      "annual_premises_low_usd": 1296000,
+      "annual_premises_high_usd": 1800000,
+      "annual_property_services_low_usd": 360000,
+      "annual_property_services_high_usd": 576000
+    },
+    {
+      "estate_id": "E-03",
+      "part": "Education teaching and residence",
+      "usable_sqft": 48000,
+      "gross_sqft": 60000,
+      "fitout_low_usd": 9600000,
+      "fitout_high_usd": 15360000,
+      "annual_premises_low_usd": 1536000,
+      "annual_premises_high_usd": 2304000,
+      "annual_property_services_low_usd": 480000,
+      "annual_property_services_high_usd": 768000
+    },
+    {
+      "estate_id": "E-05",
+      "part": "Optional Reno field hub",
+      "usable_sqft": 4000,
+      "gross_sqft": 5000,
+      "fitout_low_usd": 320000,
+      "fitout_high_usd": 560000,
+      "annual_premises_low_usd": 96000,
+      "annual_premises_high_usd": 144000,
+      "annual_property_services_low_usd": 32000,
+      "annual_property_services_high_usd": 48000
+    },
+    {
+      "estate_id": "E-06",
+      "part": "Fort gross reuse program",
+      "usable_sqft": 40000,
+      "gross_sqft": 50000,
+      "fitout_low_usd": 3200000,
+      "fitout_high_usd": 7200000,
+      "annual_premises_low_usd": 480000,
+      "annual_premises_high_usd": 880000,
+      "annual_property_services_low_usd": 320000,
+      "annual_property_services_high_usd": 560000
+    },
+    {
+      "estate_id": "E-06",
+      "part": "Bedford gross reuse program",
+      "usable_sqft": 26000,
+      "gross_sqft": 32500,
+      "fitout_low_usd": 3900000,
+      "fitout_high_usd": 7800000,
+      "annual_premises_low_usd": 312000,
+      "annual_premises_high_usd": 572000,
+      "annual_property_services_low_usd": 260000,
+      "annual_property_services_high_usd": 468000
+    },
+    {
+      "estate_id": "E-07",
+      "part": "Conditional Pale Sun office annex",
+      "usable_sqft": 3000,
+      "gross_sqft": 3750,
+      "fitout_low_usd": 240000,
+      "fitout_high_usd": 420000,
+      "annual_premises_low_usd": 54000,
+      "annual_premises_high_usd": 84000,
+      "annual_property_services_low_usd": 24000,
+      "annual_property_services_high_usd": 36000
+    }
+  ],
+  "campus_subtotals": {
+    "usable_sqft": 139000,
+    "gross_sqft": 173750,
+    "fitout_low_usd": 23780000,
+    "fitout_high_usd": 38810000,
+    "annual_premises_low_usd": 4812000,
+    "annual_premises_high_usd": 6854000,
+    "annual_property_services_low_usd": 1390000,
+    "annual_property_services_high_usd": 2224000
+  },
+  "site_overlay": {
+    "currency": "USD",
+    "price_state": "ANALYST_SYNTHETIC_ASSUMPTIONS_NOT_MARKET_QUOTES",
+    "existing_annual_corporate_facility_allowance_usd": 1140000,
+    "existing_annual_ESS_payroll_usd": 6720000,
+    "existing_annual_vendor_allowance_usd": 216000,
+    "verified_reuse_or_overlap_usd": null,
+    "new_build_campus_comparator_gsf": 173750,
+    "new_build_usd_per_gsf_range": [
+      400,
+      650
+    ],
+    "new_build_land_site_soft_contingency_range_usd": [
+      15000000,
+      35000000
+    ],
+    "reuse_site_utility_transition_allowance_range_usd": [
+      3000000,
+      6000000
+    ],
+    "campus_facility_internal_FTE_requirement": 4,
+    "campus_facility_loaded_usd_per_FTE_range": [
+      110000,
+      140000
+    ],
+    "internal_continuous_security_posts": 1,
+    "security_FTE_per_post": 5.615384615384615,
+    "security_loaded_usd_per_FTE_range": [
+      95000,
+      115000
+    ],
+    "hospitality_nonfaculty_annual_range_usd": [
+      600000,
+      1000000
+    ],
+    "hospitality_scope": "Service allowance includes cleaning/food/event labor outside property services; no faculty payroll; room food demand to be scoped; security separate",
+    "campus_property_services_scope": "Property maintenance/utilities/grounds allowance; excludes full hospitality and internal security/facilities payroll",
+    "other_site_support_requirement": "Fort/Bedford/industrial local facilities and guard coverage unverified; source operating expense retained. Extra continuous post is 5.615 FTE before rounding, not one hire.",
+    "office_AV_network_equipment_refresh_years": 5,
+    "building_fitout_life_years": [
+      10,
+      15
+    ],
+    "building_comparator_life_years": 40,
+    "land_depreciated": false,
+    "refresh_cash_not_also_annual_expense": true,
+    "optional_Reno_extra_annual_admin_support_range_usd": [
+      40000,
+      80000
+    ],
+    "Fort_Bedford_gross_program_excludes": "Specialist process equipment, land remediation, host intervention capex and existing forecast assets; these are not zero and require source bridge.",
+    "local_circuits_quote_scenario": {
+      "sites": 8,
+      "annual_per_site_range_usd": [
+        12000,
+        30000
+      ],
+      "scope": "HQ/J2/Education treated as one campus circuit contract, Fort, Bedford, Red Wash, Taylor, Rawlins, KGM deployment, Demotte deployment; existing costs not mapped",
+      "net_incremental_usd": null
+    },
+    "successor_posting_rule": "Replace only evidenced overlap at unit/period/asset level. Do not alter prior releases or silently post facility allocations as new intercompany cash."
+  },
+  "approved_net_incremental_usd": null,
+  "dates": "No construction, lease, opening or procurement date approved."
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "contract_status": "DEFINED_HOST_RELATIONSHIP_TERMS_NOT_REPLICATED",
+    "id": "CP-KGM",
+    "identity_status": "SYNTHETIC_SOURCE_NAMED",
+    "kind": "EXTERNAL_HOST",
+    "name": "Kelly Gang Mining",
+    "scope": "Cradle host stream, rights, title and settlement boundary; host retains production.",
+    "source": "assessment"
+  },
+  {
+    "contract_status": "DEFINED_HOST_RELATIONSHIP_TERMS_NOT_REPLICATED",
+    "id": "CP-DEMOTTE",
+    "identity_status": "SYNTHETIC_SOURCE_NAMED",
+    "kind": "EXTERNAL_HOST",
+    "name": "Demotte Reclamation Services",
+    "scope": "Treatment host; ordinary compliance and stop/bypass authority retained.",
+    "source": "assessment"
+  },
+  {
+    "contract_status": "HISTORICAL_TRANSITION_NOT_CURRENT",
+    "id": "CP-NORTHSTAR",
+    "identity_status": "SYNTHETIC_SOURCE_NAMED",
+    "kind": "HISTORICAL_SELLER",
+    "name": "Northstar Minerals",
+    "scope": "Red Wash seller; historical up-to-six-month transition from July 18, 2025 is not ongoing service.",
+    "source": "assessment"
+  },
+  {
+    "contract_status": "NO_REAL_WORLD_CONTRACT_ASSERTED",
+    "id": "CP-UP",
+    "identity_status": "REAL_NAME_IN_SYNTHETIC_MODEL",
+    "kind": "EXTERNAL_NETWORK_INTERFACE",
+    "name": "Union Pacific",
+    "scope": "Class I linehaul/interface in the fictional industrial model only.",
+    "source": "assessment"
+  }
+]
