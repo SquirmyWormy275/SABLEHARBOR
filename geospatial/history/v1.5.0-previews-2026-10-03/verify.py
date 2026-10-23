@@ -59,7 +59,61 @@ def main() -> None:
         if sha256_file(path) != expected["sha256"]:
             raise ValueError(f"tracked original hash mismatch: {relative}")
 
-    result: dict[str, object] = {"tracked_originals": len(source["tracked_originals"])}
+    equivalence = json.loads((ROOT / "CACHE_EQUIVALENCE.json").read_text())
+    for name, expected in source["cache_archives"].items():
+        path = ROOT / expected["tracked_path"]
+        if (
+            path.stat().st_size != expected["manifest_bytes"]
+            or sha256_file(path) != expected["manifest_sha256"]
+        ):
+            raise ValueError(f"cache provenance manifest hash mismatch: {name}")
+        manifest = json.loads(path.read_text())
+        counts = {kind: 0 for kind in ("file", "directory", "symlink")}
+        members_by_path = {}
+        file_bytes = 0
+        for member in manifest["members"]:
+            counts[member["kind"]] += 1
+            members_by_path[member["path"]] = member
+            if member["kind"] == "file":
+                file_bytes += member["size"]
+            if member["kind"] == "symlink" and not member["path"].startswith(".venv/"):
+                raise ValueError(f"cache has non-environment symlink: {name}")
+        if (
+            len(manifest["members"]) != expected["member_count"]
+            or counts["file"] != expected["file_count"]
+            or counts["directory"] != expected["directory_count"]
+            or counts["symlink"] != expected["symlink_count"]
+            or file_bytes != expected["logical_file_bytes"]
+        ):
+            raise ValueError(f"cache member manifest count mismatch: {name}")
+        family = equivalence["families"][name]
+        if (
+            family["manifest_sha256"] != expected["manifest_sha256"]
+            or family["archive_sha256"] != expected["archive_sha256"]
+            or sum(family["disposition_counts"].values()) != counts["file"]
+            or family["unresolved_file_members"] != 0
+        ):
+            raise ValueError(f"cache equivalence receipt mismatch: {name}")
+        if name == "C18":
+            for preview in source["previews"].values():
+                outer_path = preview["outer_member_path"].removeprefix("TREE/")
+                member = members_by_path[outer_path]
+                if member["sha256"] != preview["sha256"] or member["size"] != preview["bytes"]:
+                    raise ValueError("C18 preview archive member mismatch")
+        else:
+            accepted = source["accepted_package"]
+            for outer_path in (
+                "var/geographic/sable-harbor-geographic-evidence-v1.5.0.zip",
+                "var/geographic/retrieval-check/sable-harbor-geographic-evidence-v1.5.0.zip",
+            ):
+                member = members_by_path[outer_path]
+                if member["sha256"] != accepted["sha256"] or member["size"] != accepted["bytes"]:
+                    raise ValueError("C19 accepted release member mismatch")
+
+    result: dict[str, object] = {
+        "tracked_originals": len(source["tracked_originals"]),
+        "cache_manifests": len(source["cache_archives"]),
+    }
     if args.asset_dir:
         accepted = None
         if args.accepted_package:

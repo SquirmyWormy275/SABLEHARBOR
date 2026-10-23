@@ -4,6 +4,7 @@ docs/handoffs/industrial_r2/** -text whitespace=-blank-at-eol
 docs/organization/history/v0.3.0/** -text whitespace=-blank-at-eol
 red_wash/history/v1.0.0/** -text whitespace=-blank-at-eol
 geospatial/history/v1.5.0-previews-2026-10-03/original/** -text whitespace=-blank-at-eol
+geospatial/history/v1.5.0-previews-2026-10-03/provenance/** -text whitespace=-blank-at-eol
 
 # PDF publications are binary even with ASCII-encoded streams.
 *.pdf binary

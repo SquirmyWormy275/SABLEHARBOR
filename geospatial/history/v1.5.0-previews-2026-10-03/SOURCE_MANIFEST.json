@@ -6,6 +6,36 @@
     "source_revision": "d190c4907673a18d31dba8c17ce5b3c87106eb0c",
     "source_revision_git_committed_at": "2026-09-29T09:11:39-07:00"
   },
+  "cache_archives": {
+    "C18": {
+      "archive": "C18-cache-repository-geo-scope-107-108-20261003.tar.zst",
+      "archive_bytes": 1801741745,
+      "archive_sha256": "d137f44dc1437a0924ecf3b1eb2360f3b477a6b6a3e8092a88cea5bd9c37d1fc",
+      "directory_count": 1389,
+      "file_count": 16903,
+      "logical_file_bytes": 2997545734,
+      "manifest_bytes": 6342424,
+      "manifest_member": "MANIFEST.json",
+      "manifest_sha256": "12dd56e2e2b77f6e4b725849178f195d9c5fc8e56d6720e4584ba4f40ea2ef1d",
+      "member_count": 18296,
+      "symlink_count": 4,
+      "tracked_path": "provenance/C18-MANIFEST.json"
+    },
+    "C19": {
+      "archive": "C19-cache-repository-geo-release-150-20261003.tar.zst",
+      "archive_bytes": 1310484208,
+      "archive_sha256": "3d34afe203f663d4fb562e57fe3898041948e20020108d282ed71ac0ac3002e2",
+      "directory_count": 865,
+      "file_count": 10817,
+      "logical_file_bytes": 2128495330,
+      "manifest_bytes": 3982631,
+      "manifest_member": "MANIFEST.json",
+      "manifest_sha256": "3b5789ef0a5850020abb9c7dc1152c8e1497159ffc93bd8f5c17b37775fa42d2",
+      "member_count": 11686,
+      "symlink_count": 4,
+      "tracked_path": "provenance/C19-MANIFEST.json"
+    }
+  },
   "classification": "historical PREVIEW_UNACCEPTED engineering packages; not current company authority",
   "intake": {
     "cache_archive_date": "2026-10-03",

@@ -61,10 +61,11 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # The October 3 unaccepted geographic preview history adds three reader
     # Markdown originals (1,700 -> 1,703). The seven non-reader catalog
     # tables remain exact-equal; SQLite quick_check and foreign keys pass.
+    # Exact archive-manifest provenance refreshes the preview README row.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        15628288,
-        "e07fe447f3b57510a4a113a31960ee745c951946a52c0cddd13b5ca82fb8fa27",
+        15632384,
+        "36c8581da047c000ce515a27f56a49660de11bc73db4cff032842e73d9800e59",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.
