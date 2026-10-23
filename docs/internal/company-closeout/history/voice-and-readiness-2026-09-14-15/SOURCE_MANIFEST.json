@@ -1,0 +1,42 @@
+{
+  "authority": "The originals are a provenance chain; their proposals, source-snapshot claims and implementation checklists do not by themselves make a completed company record, tax filing, posted correction or executed funding. Preserve all dates and correction stages.",
+  "controlling_successor": "docs/canon/COMPANY_CLOSEOUT_DIRECTIONS_2026-09-15.md plus later accepted company closeout sources",
+  "files": [
+    {
+      "bytes": 44550,
+      "file": "company_readiness_closeout_2026-09-14.md",
+      "original_download": "SABLE_HARBOR_Company_Readiness_Closeout_2026-09-14 (1).md",
+      "sha256": "4219f8d74de099dfa1d1a176f4a01a2699704e6917ca8a553020498ae46b95a4",
+      "source_date": "14 September 2026 (declared in source)",
+      "stage": "Evidence-backed readiness review; no canon change or PR acceptance."
+    },
+    {
+      "bytes": 32659,
+      "file": "three_decisions_voice_handover_2026-09-15.md",
+      "original_download": "SABLE_HARBOR_Three_Decisions_Voice_Handover_2026-09-15.md",
+      "sha256": "81b4b99eeb084fff7ea9a132d4c8fed2d3629f414baeafdd8ebeb2d0a82db603",
+      "source_date": "15 September 2026 (declared in source)",
+      "stage": "Preparation packet for owner-level tax, goodwill and capital decisions."
+    },
+    {
+      "bytes": 57972,
+      "file": "three_decisions_voice_outcomes_2026-09-14.md",
+      "original_download": "SABLE_HARBOR_Three_Decisions_Voice_Outcomes_2026-09-14.md",
+      "sha256": "2322c1b5bf3692d5593c0eb9d5bd2f302f0dd87ac191470d13498117d80ade87",
+      "source_date": "14 September 2026 (declared in source)",
+      "stage": "September 14 owner outcome handover; implementation pending in source."
+    },
+    {
+      "bytes": 57388,
+      "file": "codex_company_closeout_handover_2026-09-15.md",
+      "original_download": "SABLE_HARBOR_Codex_Company_Closeout_Handover_2026-09-15.md",
+      "sha256": "e36910cf5df8860365afa0de40ae070672baec5d3943929f5805042a7e76188a",
+      "source_date": "15 September 2026 (declared in source)",
+      "stage": "September 15 execution assignment incorporating owner outcomes."
+    }
+  ],
+  "import_date": "2026-10-23",
+  "kind": "HISTORICAL_ORIGINATING_CLOSEOUT_AND_VOICE_RECORDS",
+  "observed_local_date": "2026-10-19",
+  "transformation": "Original Markdown bytes copied unchanged; repository filenames normalized only."
+}

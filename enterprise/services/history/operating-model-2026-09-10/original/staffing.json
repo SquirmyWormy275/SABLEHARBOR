@@ -1,0 +1,1085 @@
+[
+  {
+    "allocated_costs": {
+      "DEV": "115534.62",
+      "PROD": "423626.92",
+      "RECOVERY": "115534.62",
+      "RESTRICTED": "115534.62"
+    },
+    "annual_gross_loaded_usd": "770230.77",
+    "component_id": "TEAM-platform",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 5,
+    "incremental_fte": null,
+    "mode": "cloud_transition",
+    "required_fte": "4.0538",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "25892.31",
+      "PROD": "90623.08",
+      "RECOVERY": "51784.62",
+      "RESTRICTED": "51784.62",
+      "SITE": "38838.46"
+    },
+    "annual_gross_loaded_usd": "258923.08",
+    "component_id": "TEAM-network",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "cloud_transition",
+    "required_fte": "1.4385",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "PROD": "157250.00",
+      "RECOVERY": "78625.00",
+      "RESTRICTED": "78625.00"
+    },
+    "annual_gross_loaded_usd": "314500.00",
+    "component_id": "TEAM-database",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "cloud_transition",
+    "required_fte": "1.7000",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "60480.77",
+      "PROD": "272163.46",
+      "RECOVERY": "211682.69",
+      "RESTRICTED": "60480.77"
+    },
+    "annual_gross_loaded_usd": "604807.69",
+    "component_id": "TEAM-reliability",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 4,
+    "incremental_fte": null,
+    "mode": "cloud_transition",
+    "required_fte": "3.2692",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "354461.54",
+      "PROD": "88615.38"
+    },
+    "annual_gross_loaded_usd": "443076.92",
+    "component_id": "TEAM-developer",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 3,
+    "incremental_fte": null,
+    "mode": "cloud_transition",
+    "required_fte": "2.4615",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "CORPORATE": "379500.00",
+      "PROD": "58384.62",
+      "RESTRICTED": "87576.92",
+      "SITE": "58384.62"
+    },
+    "annual_gross_loaded_usd": "583846.15",
+    "component_id": "TEAM-identity",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 4,
+    "incremental_fte": null,
+    "mode": "cloud_transition",
+    "required_fte": "3.5385",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "CORPORATE": "39846.15",
+      "DEV": "79692.31",
+      "PROD": "239076.92",
+      "RECOVERY": "119538.46",
+      "RESTRICTED": "239076.92",
+      "SITE": "79692.31"
+    },
+    "annual_gross_loaded_usd": "796923.08",
+    "component_id": "TEAM-security",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 5,
+    "incremental_fte": null,
+    "mode": "cloud_transition",
+    "required_fte": "4.3077",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "PROD": "93538.46",
+      "RECOVERY": "46769.23",
+      "RESTRICTED": "93538.46"
+    },
+    "annual_gross_loaded_usd": "233846.15",
+    "component_id": "TEAM-keys",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "cloud_transition",
+    "required_fte": "1.2308",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "136500.00",
+      "RESTRICTED": "253500.00"
+    },
+    "annual_gross_loaded_usd": "390000.00",
+    "component_id": "TEAM-ai",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "cloud_transition",
+    "required_fte": "2.0000",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "CORPORATE": "405384.62"
+    },
+    "annual_gross_loaded_usd": "405384.62",
+    "component_id": "TEAM-applications",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 3,
+    "incremental_fte": null,
+    "mode": "cloud_transition",
+    "required_fte": "2.6154",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "SITE": "330000.00"
+    },
+    "annual_gross_loaded_usd": "330000.00",
+    "component_id": "TEAM-ot",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "cloud_transition",
+    "required_fte": "2.0000",
+    "verified_reusable_fte": null,
+    "workforce_pool": "site-allocation"
+  },
+  {
+    "allocated_costs": {
+      "CORPORATE": "27692.31",
+      "PROD": "64615.38",
+      "RECOVERY": "46153.85",
+      "RESTRICTED": "46153.85"
+    },
+    "annual_gross_loaded_usd": "184615.38",
+    "component_id": "TEAM-vendor",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "cloud_transition",
+    "required_fte": "1.2308",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "86153.85",
+      "PROD": "129230.77",
+      "RESTRICTED": "215384.62"
+    },
+    "annual_gross_loaded_usd": "430769.23",
+    "component_id": "TEAM-data",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 3,
+    "incremental_fte": null,
+    "mode": "cloud_transition",
+    "required_fte": "2.4615",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "135923.08",
+      "PROD": "498384.62",
+      "RECOVERY": "135923.08",
+      "RESTRICTED": "135923.08"
+    },
+    "annual_gross_loaded_usd": "906153.85",
+    "component_id": "TEAM-platform",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 5,
+    "incremental_fte": null,
+    "mode": "hybrid_transition",
+    "required_fte": "4.7692",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "30461.54",
+      "PROD": "106615.38",
+      "RECOVERY": "60923.08",
+      "RESTRICTED": "60923.08",
+      "SITE": "45692.31"
+    },
+    "annual_gross_loaded_usd": "304615.38",
+    "component_id": "TEAM-network",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "hybrid_transition",
+    "required_fte": "1.6923",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "PROD": "185000.00",
+      "RECOVERY": "92500.00",
+      "RESTRICTED": "92500.00"
+    },
+    "annual_gross_loaded_usd": "370000.00",
+    "component_id": "TEAM-database",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "hybrid_transition",
+    "required_fte": "2.0000",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "71153.85",
+      "PROD": "320192.31",
+      "RECOVERY": "249038.46",
+      "RESTRICTED": "71153.85"
+    },
+    "annual_gross_loaded_usd": "711538.46",
+    "component_id": "TEAM-reliability",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 4,
+    "incremental_fte": null,
+    "mode": "hybrid_transition",
+    "required_fte": "3.8462",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "354461.54",
+      "PROD": "88615.38"
+    },
+    "annual_gross_loaded_usd": "443076.92",
+    "component_id": "TEAM-developer",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 3,
+    "incremental_fte": null,
+    "mode": "hybrid_transition",
+    "required_fte": "2.4615",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "CORPORATE": "379500.00",
+      "PROD": "58384.62",
+      "RESTRICTED": "87576.92",
+      "SITE": "58384.62"
+    },
+    "annual_gross_loaded_usd": "583846.15",
+    "component_id": "TEAM-identity",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 4,
+    "incremental_fte": null,
+    "mode": "hybrid_transition",
+    "required_fte": "3.5385",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "CORPORATE": "39846.15",
+      "DEV": "79692.31",
+      "PROD": "239076.92",
+      "RECOVERY": "119538.46",
+      "RESTRICTED": "239076.92",
+      "SITE": "79692.31"
+    },
+    "annual_gross_loaded_usd": "796923.08",
+    "component_id": "TEAM-security",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 5,
+    "incremental_fte": null,
+    "mode": "hybrid_transition",
+    "required_fte": "4.3077",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "PROD": "93538.46",
+      "RECOVERY": "46769.23",
+      "RESTRICTED": "93538.46"
+    },
+    "annual_gross_loaded_usd": "233846.15",
+    "component_id": "TEAM-keys",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "hybrid_transition",
+    "required_fte": "1.2308",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "136500.00",
+      "RESTRICTED": "253500.00"
+    },
+    "annual_gross_loaded_usd": "390000.00",
+    "component_id": "TEAM-ai",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "hybrid_transition",
+    "required_fte": "2.0000",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "CORPORATE": "405384.62"
+    },
+    "annual_gross_loaded_usd": "405384.62",
+    "component_id": "TEAM-applications",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 3,
+    "incremental_fte": null,
+    "mode": "hybrid_transition",
+    "required_fte": "2.6154",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "SITE": "330000.00"
+    },
+    "annual_gross_loaded_usd": "330000.00",
+    "component_id": "TEAM-ot",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "hybrid_transition",
+    "required_fte": "2.0000",
+    "verified_reusable_fte": null,
+    "workforce_pool": "site-allocation"
+  },
+  {
+    "allocated_costs": {
+      "CORPORATE": "27692.31",
+      "PROD": "64615.38",
+      "RECOVERY": "46153.85",
+      "RESTRICTED": "46153.85"
+    },
+    "annual_gross_loaded_usd": "184615.38",
+    "component_id": "TEAM-vendor",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "hybrid_transition",
+    "required_fte": "1.2308",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "86153.85",
+      "PROD": "129230.77",
+      "RESTRICTED": "215384.62"
+    },
+    "annual_gross_loaded_usd": "430769.23",
+    "component_id": "TEAM-data",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 3,
+    "incremental_fte": null,
+    "mode": "hybrid_transition",
+    "required_fte": "2.4615",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "135923.08",
+      "PROD": "498384.62",
+      "RECOVERY": "135923.08",
+      "RESTRICTED": "135923.08"
+    },
+    "annual_gross_loaded_usd": "906153.85",
+    "component_id": "TEAM-platform",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 5,
+    "incremental_fte": null,
+    "mode": "owned_colo",
+    "required_fte": "4.7692",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "30461.54",
+      "PROD": "106615.38",
+      "RECOVERY": "60923.08",
+      "RESTRICTED": "60923.08",
+      "SITE": "45692.31"
+    },
+    "annual_gross_loaded_usd": "304615.38",
+    "component_id": "TEAM-network",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "owned_colo",
+    "required_fte": "1.6923",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "PROD": "185000.00",
+      "RECOVERY": "92500.00",
+      "RESTRICTED": "92500.00"
+    },
+    "annual_gross_loaded_usd": "370000.00",
+    "component_id": "TEAM-database",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "owned_colo",
+    "required_fte": "2.0000",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "71153.85",
+      "PROD": "320192.31",
+      "RECOVERY": "249038.46",
+      "RESTRICTED": "71153.85"
+    },
+    "annual_gross_loaded_usd": "711538.46",
+    "component_id": "TEAM-reliability",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 4,
+    "incremental_fte": null,
+    "mode": "owned_colo",
+    "required_fte": "3.8462",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "354461.54",
+      "PROD": "88615.38"
+    },
+    "annual_gross_loaded_usd": "443076.92",
+    "component_id": "TEAM-developer",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 3,
+    "incremental_fte": null,
+    "mode": "owned_colo",
+    "required_fte": "2.4615",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "CORPORATE": "379500.00",
+      "PROD": "58384.62",
+      "RESTRICTED": "87576.92",
+      "SITE": "58384.62"
+    },
+    "annual_gross_loaded_usd": "583846.15",
+    "component_id": "TEAM-identity",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 4,
+    "incremental_fte": null,
+    "mode": "owned_colo",
+    "required_fte": "3.5385",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "CORPORATE": "39846.15",
+      "DEV": "79692.31",
+      "PROD": "239076.92",
+      "RECOVERY": "119538.46",
+      "RESTRICTED": "239076.92",
+      "SITE": "79692.31"
+    },
+    "annual_gross_loaded_usd": "796923.08",
+    "component_id": "TEAM-security",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 5,
+    "incremental_fte": null,
+    "mode": "owned_colo",
+    "required_fte": "4.3077",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "PROD": "93538.46",
+      "RECOVERY": "46769.23",
+      "RESTRICTED": "93538.46"
+    },
+    "annual_gross_loaded_usd": "233846.15",
+    "component_id": "TEAM-keys",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "owned_colo",
+    "required_fte": "1.2308",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "136500.00",
+      "RESTRICTED": "253500.00"
+    },
+    "annual_gross_loaded_usd": "390000.00",
+    "component_id": "TEAM-ai",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "owned_colo",
+    "required_fte": "2.0000",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "CORPORATE": "405384.62"
+    },
+    "annual_gross_loaded_usd": "405384.62",
+    "component_id": "TEAM-applications",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 3,
+    "incremental_fte": null,
+    "mode": "owned_colo",
+    "required_fte": "2.6154",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "SITE": "330000.00"
+    },
+    "annual_gross_loaded_usd": "330000.00",
+    "component_id": "TEAM-ot",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "owned_colo",
+    "required_fte": "2.0000",
+    "verified_reusable_fte": null,
+    "workforce_pool": "site-allocation"
+  },
+  {
+    "allocated_costs": {
+      "CORPORATE": "27692.31",
+      "PROD": "64615.38",
+      "RECOVERY": "46153.85",
+      "RESTRICTED": "46153.85"
+    },
+    "annual_gross_loaded_usd": "184615.38",
+    "component_id": "TEAM-vendor",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "owned_colo",
+    "required_fte": "1.2308",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "86153.85",
+      "PROD": "129230.77",
+      "RESTRICTED": "215384.62"
+    },
+    "annual_gross_loaded_usd": "430769.23",
+    "component_id": "TEAM-data",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 3,
+    "incremental_fte": null,
+    "mode": "owned_colo",
+    "required_fte": "2.4615",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "135923.08",
+      "PROD": "498384.62",
+      "RECOVERY": "135923.08",
+      "RESTRICTED": "135923.08"
+    },
+    "annual_gross_loaded_usd": "906153.85",
+    "component_id": "TEAM-platform",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 5,
+    "incremental_fte": null,
+    "mode": "owned_facility",
+    "required_fte": "4.7692",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "30461.54",
+      "PROD": "106615.38",
+      "RECOVERY": "60923.08",
+      "RESTRICTED": "60923.08",
+      "SITE": "45692.31"
+    },
+    "annual_gross_loaded_usd": "304615.38",
+    "component_id": "TEAM-network",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "owned_facility",
+    "required_fte": "1.6923",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "PROD": "185000.00",
+      "RECOVERY": "92500.00",
+      "RESTRICTED": "92500.00"
+    },
+    "annual_gross_loaded_usd": "370000.00",
+    "component_id": "TEAM-database",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "owned_facility",
+    "required_fte": "2.0000",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "71153.85",
+      "PROD": "320192.31",
+      "RECOVERY": "249038.46",
+      "RESTRICTED": "71153.85"
+    },
+    "annual_gross_loaded_usd": "711538.46",
+    "component_id": "TEAM-reliability",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 4,
+    "incremental_fte": null,
+    "mode": "owned_facility",
+    "required_fte": "3.8462",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "354461.54",
+      "PROD": "88615.38"
+    },
+    "annual_gross_loaded_usd": "443076.92",
+    "component_id": "TEAM-developer",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 3,
+    "incremental_fte": null,
+    "mode": "owned_facility",
+    "required_fte": "2.4615",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "CORPORATE": "379500.00",
+      "PROD": "58384.62",
+      "RESTRICTED": "87576.92",
+      "SITE": "58384.62"
+    },
+    "annual_gross_loaded_usd": "583846.15",
+    "component_id": "TEAM-identity",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 4,
+    "incremental_fte": null,
+    "mode": "owned_facility",
+    "required_fte": "3.5385",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "CORPORATE": "39846.15",
+      "DEV": "79692.31",
+      "PROD": "239076.92",
+      "RECOVERY": "119538.46",
+      "RESTRICTED": "239076.92",
+      "SITE": "79692.31"
+    },
+    "annual_gross_loaded_usd": "796923.08",
+    "component_id": "TEAM-security",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 5,
+    "incremental_fte": null,
+    "mode": "owned_facility",
+    "required_fte": "4.3077",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "PROD": "93538.46",
+      "RECOVERY": "46769.23",
+      "RESTRICTED": "93538.46"
+    },
+    "annual_gross_loaded_usd": "233846.15",
+    "component_id": "TEAM-keys",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "owned_facility",
+    "required_fte": "1.2308",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "136500.00",
+      "RESTRICTED": "253500.00"
+    },
+    "annual_gross_loaded_usd": "390000.00",
+    "component_id": "TEAM-ai",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "owned_facility",
+    "required_fte": "2.0000",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "CORPORATE": "405384.62"
+    },
+    "annual_gross_loaded_usd": "405384.62",
+    "component_id": "TEAM-applications",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 3,
+    "incremental_fte": null,
+    "mode": "owned_facility",
+    "required_fte": "2.6154",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "SITE": "330000.00"
+    },
+    "annual_gross_loaded_usd": "330000.00",
+    "component_id": "TEAM-ot",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "owned_facility",
+    "required_fte": "2.0000",
+    "verified_reusable_fte": null,
+    "workforce_pool": "site-allocation"
+  },
+  {
+    "allocated_costs": {
+      "CORPORATE": "27692.31",
+      "PROD": "64615.38",
+      "RECOVERY": "46153.85",
+      "RESTRICTED": "46153.85"
+    },
+    "annual_gross_loaded_usd": "184615.38",
+    "component_id": "TEAM-vendor",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "owned_facility",
+    "required_fte": "1.2308",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "86153.85",
+      "PROD": "129230.77",
+      "RESTRICTED": "215384.62"
+    },
+    "annual_gross_loaded_usd": "430769.23",
+    "component_id": "TEAM-data",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 3,
+    "incremental_fte": null,
+    "mode": "owned_facility",
+    "required_fte": "2.4615",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "PROD": "588000.00"
+    },
+    "annual_gross_loaded_usd": "588000.00",
+    "component_id": "OWNED-physical-coverage",
+    "coverage": "PROPOSED_CONTINUOUS_STAFFED_SEAT",
+    "funded_positions_if_dedicated": 6,
+    "incremental_fte": null,
+    "mode": "owned_facility",
+    "required_fte": "5.6000",
+    "verified_reusable_fte": null,
+    "workforce_pool": "unapproved-owned-facility"
+  },
+  {
+    "allocated_costs": {
+      "PROD": "310000.00"
+    },
+    "annual_gross_loaded_usd": "310000.00",
+    "component_id": "OWNED-facilities-engineering",
+    "coverage": "BUSINESS_HOURS_PLUS_ON_CALL_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "owned_facility",
+    "required_fte": "2.0000",
+    "verified_reusable_fte": null,
+    "workforce_pool": "unapproved-owned-facility"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "135923.08",
+      "PROD": "498384.62",
+      "RECOVERY": "135923.08",
+      "RESTRICTED": "135923.08"
+    },
+    "annual_gross_loaded_usd": "906153.85",
+    "component_id": "TEAM-platform",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 5,
+    "incremental_fte": null,
+    "mode": "phased_ownership",
+    "required_fte": "4.7692",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "30461.54",
+      "PROD": "106615.38",
+      "RECOVERY": "60923.08",
+      "RESTRICTED": "60923.08",
+      "SITE": "45692.31"
+    },
+    "annual_gross_loaded_usd": "304615.38",
+    "component_id": "TEAM-network",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "phased_ownership",
+    "required_fte": "1.6923",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "PROD": "185000.00",
+      "RECOVERY": "92500.00",
+      "RESTRICTED": "92500.00"
+    },
+    "annual_gross_loaded_usd": "370000.00",
+    "component_id": "TEAM-database",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "phased_ownership",
+    "required_fte": "2.0000",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "71153.85",
+      "PROD": "320192.31",
+      "RECOVERY": "249038.46",
+      "RESTRICTED": "71153.85"
+    },
+    "annual_gross_loaded_usd": "711538.46",
+    "component_id": "TEAM-reliability",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 4,
+    "incremental_fte": null,
+    "mode": "phased_ownership",
+    "required_fte": "3.8462",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "354461.54",
+      "PROD": "88615.38"
+    },
+    "annual_gross_loaded_usd": "443076.92",
+    "component_id": "TEAM-developer",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 3,
+    "incremental_fte": null,
+    "mode": "phased_ownership",
+    "required_fte": "2.4615",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "CORPORATE": "379500.00",
+      "PROD": "58384.62",
+      "RESTRICTED": "87576.92",
+      "SITE": "58384.62"
+    },
+    "annual_gross_loaded_usd": "583846.15",
+    "component_id": "TEAM-identity",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 4,
+    "incremental_fte": null,
+    "mode": "phased_ownership",
+    "required_fte": "3.5385",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "CORPORATE": "39846.15",
+      "DEV": "79692.31",
+      "PROD": "239076.92",
+      "RECOVERY": "119538.46",
+      "RESTRICTED": "239076.92",
+      "SITE": "79692.31"
+    },
+    "annual_gross_loaded_usd": "796923.08",
+    "component_id": "TEAM-security",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 5,
+    "incremental_fte": null,
+    "mode": "phased_ownership",
+    "required_fte": "4.3077",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "PROD": "93538.46",
+      "RECOVERY": "46769.23",
+      "RESTRICTED": "93538.46"
+    },
+    "annual_gross_loaded_usd": "233846.15",
+    "component_id": "TEAM-keys",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "phased_ownership",
+    "required_fte": "1.2308",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "136500.00",
+      "RESTRICTED": "253500.00"
+    },
+    "annual_gross_loaded_usd": "390000.00",
+    "component_id": "TEAM-ai",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "phased_ownership",
+    "required_fte": "2.0000",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "CORPORATE": "405384.62"
+    },
+    "annual_gross_loaded_usd": "405384.62",
+    "component_id": "TEAM-applications",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 3,
+    "incremental_fte": null,
+    "mode": "phased_ownership",
+    "required_fte": "2.6154",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "SITE": "330000.00"
+    },
+    "annual_gross_loaded_usd": "330000.00",
+    "component_id": "TEAM-ot",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "phased_ownership",
+    "required_fte": "2.0000",
+    "verified_reusable_fte": null,
+    "workforce_pool": "site-allocation"
+  },
+  {
+    "allocated_costs": {
+      "CORPORATE": "27692.31",
+      "PROD": "64615.38",
+      "RECOVERY": "46153.85",
+      "RESTRICTED": "46153.85"
+    },
+    "annual_gross_loaded_usd": "184615.38",
+    "component_id": "TEAM-vendor",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 2,
+    "incremental_fte": null,
+    "mode": "phased_ownership",
+    "required_fte": "1.2308",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  },
+  {
+    "allocated_costs": {
+      "DEV": "86153.85",
+      "PROD": "129230.77",
+      "RESTRICTED": "215384.62"
+    },
+    "annual_gross_loaded_usd": "430769.23",
+    "component_id": "TEAM-data",
+    "coverage": "BUSINESS_HOURS_PLUS_ROTA_NOT_CONTINUOUS_SEAT",
+    "funded_positions_if_dedicated": 3,
+    "incremental_fte": null,
+    "mode": "phased_ownership",
+    "required_fte": "2.4615",
+    "verified_reusable_fte": null,
+    "workforce_pool": "ess"
+  }
+]

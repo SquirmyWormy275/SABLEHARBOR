@@ -46,4 +46,9 @@ source packages. They do not replace the current locations above.
 
 The [v1.5.0 preview-stage index](../../geospatial/history/v1.5.0-previews-2026-10-03/README.md) preserves later unaccepted geographic package and rail-history corrections. The accepted v1.5.0 release and current location decisions remain controlling.
 
+The [September 11 office estate review](../facilities/history/office-estate-review-2026-09-11/README.md)
+is an earlier recovered planning draft. Its proposed accommodations, capacity
+cases and ten queued decisions remain historical; the three missing companion
+files are listed in its source manifest. It does not amend the current locations.
+
 Sable Harbor and its sites are fictional. Real towns and geographic references provide the setting; the company maps do not establish real property rights.

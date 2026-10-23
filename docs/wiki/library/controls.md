@@ -139,3 +139,11 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 ## `enterprise/services/generated`
 
 - [Service operating-model comparison](../../../enterprise/services/generated/REPORT.md) — MD
+
+## `enterprise/services/history/operating-model-2026-09-10`
+
+- [September 10 service operating model — historical package](../../../enterprise/services/history/operating-model-2026-09-10/README.md) — MD
+
+## `enterprise/services/history/operating-model-2026-09-10/original`
+
+- [Service operating-model comparison](../../../enterprise/services/history/operating-model-2026-09-10/original/REPORT.md) — MD

@@ -1,0 +1,62 @@
+{
+  "accepted_main_history_exact_blob_matches": 0,
+  "authored_date_precision": "September 9 source cutoff; individual original author timestamps not established",
+  "exact_local_duplicate_file_count": 6,
+  "files": [
+    {
+      "bytes": 256008,
+      "duplicate_local_basename": "Sable-Harbor-Org-Chart-1 (1).png",
+      "duplicate_sha256_verified": true,
+      "git_blob_oid": "76b6a4d2dcc4454983e7075a525fa29f2c3dbc2b",
+      "name": "Sable-Harbor-Org-Chart-1.png",
+      "sha256": "e30915c1ebdb58e5c5ea9f3bac08f2b09001f1cada17adfc7942aae5fc189ea2"
+    },
+    {
+      "bytes": 115301,
+      "duplicate_local_basename": "Sable-Harbor-Org-Chart-2 (1).png",
+      "duplicate_sha256_verified": true,
+      "git_blob_oid": "9075b7a76b9bf23444f568392ae0e9ef24468e37",
+      "name": "Sable-Harbor-Org-Chart-2.png",
+      "sha256": "b5257080b57d36033b509fe45b9351d76168f5452e922cc3963c688146c33362"
+    },
+    {
+      "bytes": 221456,
+      "duplicate_local_basename": "Sable-Harbor-Org-Chart-3 (1).png",
+      "duplicate_sha256_verified": true,
+      "git_blob_oid": "a9b7eb2dc76d4710fd61719727c7bb3a38ffed05",
+      "name": "Sable-Harbor-Org-Chart-3.png",
+      "sha256": "25193fd1b12948384ef67085a29af24cac594e868547edc8401635f2ee26d462"
+    },
+    {
+      "bytes": 4963727,
+      "duplicate_local_basename": "Sable-Harbor-Org-Chart-Mockups (1).pdf",
+      "duplicate_sha256_verified": true,
+      "git_blob_oid": "6457c06fe48d3b00babfbb5b40962e2f867ddf31",
+      "name": "Sable-Harbor-Org-Chart-Mockups.pdf",
+      "sha256": "b160e8a77711bbf8a23768a3a989c3959edc3a8361eb4766d790f176000eeabd"
+    },
+    {
+      "bytes": 90393,
+      "duplicate_local_basename": "Sable-Harbor-Org-Chart-Wording-Review (1).md",
+      "duplicate_sha256_verified": true,
+      "git_blob_oid": "37cea7acbf96b9e8e8965444a4b86f214375184d",
+      "name": "Sable-Harbor-Org-Chart-Wording-Review.md",
+      "sha256": "0ef1fd0f0ffeb91945f3364e36f95936d7d27217d8e718b52d49f3df4f060c6b"
+    },
+    {
+      "bytes": 192693,
+      "duplicate_local_basename": "Sable-Harbor-Org-Chart-Wording-Review (1).pdf",
+      "duplicate_sha256_verified": true,
+      "git_blob_oid": "2fc13870c6ba72b8d921acea155e9c1ae4c8e531",
+      "name": "Sable-Harbor-Org-Chart-Wording-Review.pdf",
+      "sha256": "3abbfd5039de5062da0f5699b8fcc67e8ccf6da08e262891e4dbefc8765307c8"
+    }
+  ],
+  "import_date": "2026-10-23",
+  "local_observed_date": "2026-10-19",
+  "original_file_count": 6,
+  "schema": "sableharbor-organization-september9-draft-intake-v1",
+  "source_commit": "7988f4740f39afa4a3db92e9efe1e0d737840d6d",
+  "source_cutoff": "2026-09-09",
+  "status": "DRAFT_FOR_APPROVAL_HISTORICAL_PREDECESSOR_NOT_CURRENT_CHART"
+}

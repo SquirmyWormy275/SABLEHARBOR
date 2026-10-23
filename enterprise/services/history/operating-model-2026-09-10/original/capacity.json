@@ -1,0 +1,3458 @@
+[
+  {
+    "active_mode": "cloud_transition",
+    "backup_tib": "390.0",
+    "cloud": {
+      "egress_tib_month": "52.00",
+      "gpu_units": "4.00",
+      "memory_gib": "3379.20",
+      "usable_storage_tib": "120",
+      "vcpu": "844.80"
+    },
+    "locations": {
+      "local": {
+        "kw": "3.25",
+        "racks": 1,
+        "u": "24"
+      },
+      "primary": {
+        "kw": "9.50",
+        "racks": 2,
+        "u": "38"
+      },
+      "recovery": {
+        "kw": "5.90",
+        "racks": 1,
+        "u": "32"
+      }
+    },
+    "mode": "cloud_transition",
+    "month": 1,
+    "owned": [
+      {
+        "cpu_nodes": 4,
+        "domain": "RESTRICTED",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 8,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1075.20",
+        "n_minus_1_usable_vcpu": "134.40",
+        "required_memory_gib": "1024",
+        "required_storage_tib": "100",
+        "required_vcpu": "128",
+        "storage_shelves": 4,
+        "usable_storage_tib": "100"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "SITE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320",
+        "required_storage_tib": "20",
+        "required_vcpu": "80",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 2,
+        "domain": "CORPORATE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "n_minus_1_usable_vcpu": "44.80",
+        "required_memory_gib": "64",
+        "required_storage_tib": "5",
+        "required_vcpu": "16",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "RECOVERY_RESTRICTED",
+        "gpu_hosts": 1,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 4,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "512.00",
+        "required_storage_tib": "100",
+        "required_vcpu": "64.00",
+        "storage_shelves": 4,
+        "usable_storage_tib": "100"
+      }
+    ],
+    "year": 2027
+  },
+  {
+    "active_mode": "cloud_transition",
+    "backup_tib": "475.000",
+    "cloud": {
+      "egress_tib_month": "65.0000",
+      "gpu_units": "5.0000",
+      "memory_gib": "4224.0000",
+      "usable_storage_tib": "150.00",
+      "vcpu": "1056.0000"
+    },
+    "locations": {
+      "local": {
+        "kw": "3.25",
+        "racks": 1,
+        "u": "24"
+      },
+      "primary": {
+        "kw": "11.90",
+        "racks": 2,
+        "u": "48"
+      },
+      "recovery": {
+        "kw": "7.15",
+        "racks": 2,
+        "u": "40"
+      }
+    },
+    "mode": "cloud_transition",
+    "month": 13,
+    "owned": [
+      {
+        "cpu_nodes": 5,
+        "domain": "RESTRICTED",
+        "gpu_hosts": 3,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 10,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1433.60",
+        "n_minus_1_usable_vcpu": "179.20",
+        "required_memory_gib": "1280.00",
+        "required_storage_tib": "125.00",
+        "required_vcpu": "160.00",
+        "storage_shelves": 5,
+        "usable_storage_tib": "125"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "SITE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320.0",
+        "required_storage_tib": "20.0",
+        "required_vcpu": "80.0",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 2,
+        "domain": "CORPORATE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "n_minus_1_usable_vcpu": "44.80",
+        "required_memory_gib": "64.0",
+        "required_storage_tib": "5.0",
+        "required_vcpu": "16.0",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "RECOVERY_RESTRICTED",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 5,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "640.0000",
+        "required_storage_tib": "125.00",
+        "required_vcpu": "80.0000",
+        "storage_shelves": 5,
+        "usable_storage_tib": "125"
+      }
+    ],
+    "year": 2028
+  },
+  {
+    "active_mode": "cloud_transition",
+    "backup_tib": "581.25000",
+    "cloud": {
+      "egress_tib_month": "81.250000",
+      "gpu_units": "6.250000",
+      "memory_gib": "5280.000000",
+      "usable_storage_tib": "187.5000",
+      "vcpu": "1320.000000"
+    },
+    "locations": {
+      "local": {
+        "kw": "3.25",
+        "racks": 1,
+        "u": "24"
+      },
+      "primary": {
+        "kw": "15.20",
+        "racks": 2,
+        "u": "62"
+      },
+      "recovery": {
+        "kw": "9.40",
+        "racks": 2,
+        "u": "50"
+      }
+    },
+    "mode": "cloud_transition",
+    "month": 25,
+    "owned": [
+      {
+        "cpu_nodes": 6,
+        "domain": "RESTRICTED",
+        "gpu_hosts": 4,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 13,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1792.00",
+        "n_minus_1_usable_vcpu": "224.00",
+        "required_memory_gib": "1600.0000",
+        "required_storage_tib": "156.2500",
+        "required_vcpu": "200.0000",
+        "storage_shelves": 7,
+        "usable_storage_tib": "175"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "SITE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320.00",
+        "required_storage_tib": "20.00",
+        "required_vcpu": "80.00",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 2,
+        "domain": "CORPORATE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "n_minus_1_usable_vcpu": "44.80",
+        "required_memory_gib": "64.00",
+        "required_storage_tib": "5.00",
+        "required_vcpu": "16.00",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 4,
+        "domain": "RECOVERY_RESTRICTED",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 7,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "1075.20",
+        "n_minus_1_usable_vcpu": "134.40",
+        "required_memory_gib": "800.000000",
+        "required_storage_tib": "156.2500",
+        "required_vcpu": "100.000000",
+        "storage_shelves": 7,
+        "usable_storage_tib": "175"
+      }
+    ],
+    "year": 2029
+  },
+  {
+    "active_mode": "cloud_transition",
+    "backup_tib": "714.0625000",
+    "cloud": {
+      "egress_tib_month": "101.56250000",
+      "gpu_units": "7.81250000",
+      "memory_gib": "6600.00000000",
+      "usable_storage_tib": "234.375000",
+      "vcpu": "1650.00000000"
+    },
+    "locations": {
+      "local": {
+        "kw": "3.25",
+        "racks": 1,
+        "u": "24"
+      },
+      "primary": {
+        "kw": "17.95",
+        "racks": 3,
+        "u": "68"
+      },
+      "recovery": {
+        "kw": "10.30",
+        "racks": 2,
+        "u": "54"
+      }
+    },
+    "mode": "cloud_transition",
+    "month": 37,
+    "owned": [
+      {
+        "cpu_nodes": 7,
+        "domain": "RESTRICTED",
+        "gpu_hosts": 4,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 16,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "2150.40",
+        "n_minus_1_usable_vcpu": "268.80",
+        "required_memory_gib": "2000.000000",
+        "required_storage_tib": "195.312500",
+        "required_vcpu": "250.000000",
+        "storage_shelves": 8,
+        "usable_storage_tib": "200"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "SITE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320.000",
+        "required_storage_tib": "20.000",
+        "required_vcpu": "80.000",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 2,
+        "domain": "CORPORATE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "n_minus_1_usable_vcpu": "44.80",
+        "required_memory_gib": "64.000",
+        "required_storage_tib": "5.000",
+        "required_vcpu": "16.000",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 4,
+        "domain": "RECOVERY_RESTRICTED",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 8,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "1075.20",
+        "n_minus_1_usable_vcpu": "134.40",
+        "required_memory_gib": "1000.00000000",
+        "required_storage_tib": "195.312500",
+        "required_vcpu": "125.00000000",
+        "storage_shelves": 8,
+        "usable_storage_tib": "200"
+      }
+    ],
+    "year": 2030
+  },
+  {
+    "active_mode": "cloud_transition",
+    "backup_tib": "880.078125000",
+    "cloud": {
+      "egress_tib_month": "126.9531250000",
+      "gpu_units": "9.7656250000",
+      "memory_gib": "8250.0000000000",
+      "usable_storage_tib": "292.96875000",
+      "vcpu": "2062.5000000000"
+    },
+    "locations": {
+      "local": {
+        "kw": "3.25",
+        "racks": 1,
+        "u": "24"
+      },
+      "primary": {
+        "kw": "21.95",
+        "racks": 3,
+        "u": "82"
+      },
+      "recovery": {
+        "kw": "12.90",
+        "racks": 3,
+        "u": "68"
+      }
+    },
+    "mode": "cloud_transition",
+    "month": 49,
+    "owned": [
+      {
+        "cpu_nodes": 8,
+        "domain": "RESTRICTED",
+        "gpu_hosts": 5,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 20,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "2508.80",
+        "n_minus_1_usable_vcpu": "313.60",
+        "required_memory_gib": "2500.00000000",
+        "required_storage_tib": "244.14062500",
+        "required_vcpu": "312.50000000",
+        "storage_shelves": 10,
+        "usable_storage_tib": "250"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "SITE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320.0000",
+        "required_storage_tib": "20.0000",
+        "required_vcpu": "80.0000",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 2,
+        "domain": "CORPORATE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "n_minus_1_usable_vcpu": "44.80",
+        "required_memory_gib": "64.0000",
+        "required_storage_tib": "5.0000",
+        "required_vcpu": "16.0000",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 5,
+        "domain": "RECOVERY_RESTRICTED",
+        "gpu_hosts": 3,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 10,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "1433.60",
+        "n_minus_1_usable_vcpu": "179.20",
+        "required_memory_gib": "1250.0000000000",
+        "required_storage_tib": "244.14062500",
+        "required_vcpu": "156.2500000000",
+        "storage_shelves": 10,
+        "usable_storage_tib": "250"
+      }
+    ],
+    "year": 2031
+  },
+  {
+    "active_mode": "hybrid_transition",
+    "backup_tib": "390.0",
+    "cloud": {
+      "egress_tib_month": "21.8000",
+      "gpu_units": "2.0000",
+      "memory_gib": "1402.8800",
+      "usable_storage_tib": "50.00",
+      "vcpu": "350.7200"
+    },
+    "locations": {
+      "local": {
+        "kw": "3.25",
+        "racks": 1,
+        "u": "24"
+      },
+      "primary": {
+        "kw": "16.80",
+        "racks": 3,
+        "u": "76"
+      },
+      "recovery": {
+        "kw": "8.10",
+        "racks": 2,
+        "u": "48"
+      }
+    },
+    "mode": "hybrid_transition",
+    "month": 1,
+    "owned": [
+      {
+        "cpu_nodes": 8,
+        "domain": "PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "2508.80",
+        "n_minus_1_usable_vcpu": "313.60",
+        "required_memory_gib": "1228.80",
+        "required_storage_tib": "30.00",
+        "required_vcpu": "307.20",
+        "storage_shelves": 2,
+        "usable_storage_tib": "50"
+      },
+      {
+        "cpu_nodes": 4,
+        "domain": "RESTRICTED",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 8,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1075.20",
+        "n_minus_1_usable_vcpu": "134.40",
+        "required_memory_gib": "1024",
+        "required_storage_tib": "100",
+        "required_vcpu": "128",
+        "storage_shelves": 4,
+        "usable_storage_tib": "100"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "DEV",
+        "gpu_hosts": 1,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 2,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "256.00",
+        "required_storage_tib": "10.00",
+        "required_vcpu": "64.00",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "SITE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320",
+        "required_storage_tib": "20",
+        "required_vcpu": "80",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 2,
+        "domain": "CORPORATE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "n_minus_1_usable_vcpu": "44.80",
+        "required_memory_gib": "64",
+        "required_storage_tib": "5",
+        "required_vcpu": "16",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 4,
+        "domain": "RECOVERY_PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "1075.20",
+        "n_minus_1_usable_vcpu": "134.40",
+        "required_memory_gib": "491.5200",
+        "required_storage_tib": "30.00",
+        "required_vcpu": "122.8800",
+        "storage_shelves": 2,
+        "usable_storage_tib": "50"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "RECOVERY_RESTRICTED",
+        "gpu_hosts": 1,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 4,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "512.00",
+        "required_storage_tib": "100",
+        "required_vcpu": "64.00",
+        "storage_shelves": 4,
+        "usable_storage_tib": "100"
+      }
+    ],
+    "year": 2027
+  },
+  {
+    "active_mode": "hybrid_transition",
+    "backup_tib": "475.000",
+    "cloud": {
+      "egress_tib_month": "27.250000",
+      "gpu_units": "2.500000",
+      "memory_gib": "1753.600000",
+      "usable_storage_tib": "62.5000",
+      "vcpu": "438.400000"
+    },
+    "locations": {
+      "local": {
+        "kw": "3.25",
+        "racks": 1,
+        "u": "24"
+      },
+      "primary": {
+        "kw": "20.80",
+        "racks": 3,
+        "u": "90"
+      },
+      "recovery": {
+        "kw": "9.80",
+        "racks": 2,
+        "u": "58"
+      }
+    },
+    "mode": "hybrid_transition",
+    "month": 13,
+    "owned": [
+      {
+        "cpu_nodes": 10,
+        "domain": "PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "3225.60",
+        "n_minus_1_usable_vcpu": "403.20",
+        "required_memory_gib": "1536.0000",
+        "required_storage_tib": "37.5000",
+        "required_vcpu": "384.0000",
+        "storage_shelves": 2,
+        "usable_storage_tib": "50"
+      },
+      {
+        "cpu_nodes": 5,
+        "domain": "RESTRICTED",
+        "gpu_hosts": 3,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 10,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1433.60",
+        "n_minus_1_usable_vcpu": "179.20",
+        "required_memory_gib": "1280.00",
+        "required_storage_tib": "125.00",
+        "required_vcpu": "160.00",
+        "storage_shelves": 5,
+        "usable_storage_tib": "125"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "DEV",
+        "gpu_hosts": 1,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 3,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320.0000",
+        "required_storage_tib": "12.5000",
+        "required_vcpu": "80.0000",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "SITE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320.0",
+        "required_storage_tib": "20.0",
+        "required_vcpu": "80.0",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 2,
+        "domain": "CORPORATE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "n_minus_1_usable_vcpu": "44.80",
+        "required_memory_gib": "64.0",
+        "required_storage_tib": "5.0",
+        "required_vcpu": "16.0",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 5,
+        "domain": "RECOVERY_PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "1433.60",
+        "n_minus_1_usable_vcpu": "179.20",
+        "required_memory_gib": "614.400000",
+        "required_storage_tib": "37.5000",
+        "required_vcpu": "153.600000",
+        "storage_shelves": 2,
+        "usable_storage_tib": "50"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "RECOVERY_RESTRICTED",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 5,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "640.0000",
+        "required_storage_tib": "125.00",
+        "required_vcpu": "80.0000",
+        "storage_shelves": 5,
+        "usable_storage_tib": "125"
+      }
+    ],
+    "year": 2028
+  },
+  {
+    "active_mode": "hybrid_transition",
+    "backup_tib": "581.25000",
+    "cloud": {
+      "egress_tib_month": "34.06250000",
+      "gpu_units": "3.12500000",
+      "memory_gib": "2192.00000000",
+      "usable_storage_tib": "78.125000",
+      "vcpu": "548.00000000"
+    },
+    "locations": {
+      "local": {
+        "kw": "3.25",
+        "racks": 1,
+        "u": "24"
+      },
+      "primary": {
+        "kw": "26.15",
+        "racks": 4,
+        "u": "110"
+      },
+      "recovery": {
+        "kw": "12.50",
+        "racks": 3,
+        "u": "70"
+      }
+    },
+    "mode": "hybrid_transition",
+    "month": 25,
+    "owned": [
+      {
+        "cpu_nodes": 12,
+        "domain": "PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "3942.40",
+        "n_minus_1_usable_vcpu": "492.80",
+        "required_memory_gib": "1920.000000",
+        "required_storage_tib": "46.875000",
+        "required_vcpu": "480.000000",
+        "storage_shelves": 2,
+        "usable_storage_tib": "50"
+      },
+      {
+        "cpu_nodes": 6,
+        "domain": "RESTRICTED",
+        "gpu_hosts": 4,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 13,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1792.00",
+        "n_minus_1_usable_vcpu": "224.00",
+        "required_memory_gib": "1600.0000",
+        "required_storage_tib": "156.2500",
+        "required_vcpu": "200.0000",
+        "storage_shelves": 7,
+        "usable_storage_tib": "175"
+      },
+      {
+        "cpu_nodes": 4,
+        "domain": "DEV",
+        "gpu_hosts": 1,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 4,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1075.20",
+        "n_minus_1_usable_vcpu": "134.40",
+        "required_memory_gib": "400.000000",
+        "required_storage_tib": "15.625000",
+        "required_vcpu": "100.000000",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "SITE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320.00",
+        "required_storage_tib": "20.00",
+        "required_vcpu": "80.00",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 2,
+        "domain": "CORPORATE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "n_minus_1_usable_vcpu": "44.80",
+        "required_memory_gib": "64.00",
+        "required_storage_tib": "5.00",
+        "required_vcpu": "16.00",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 6,
+        "domain": "RECOVERY_PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "1792.00",
+        "n_minus_1_usable_vcpu": "224.00",
+        "required_memory_gib": "768.00000000",
+        "required_storage_tib": "46.875000",
+        "required_vcpu": "192.00000000",
+        "storage_shelves": 2,
+        "usable_storage_tib": "50"
+      },
+      {
+        "cpu_nodes": 4,
+        "domain": "RECOVERY_RESTRICTED",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 7,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "1075.20",
+        "n_minus_1_usable_vcpu": "134.40",
+        "required_memory_gib": "800.000000",
+        "required_storage_tib": "156.2500",
+        "required_vcpu": "100.000000",
+        "storage_shelves": 7,
+        "usable_storage_tib": "175"
+      }
+    ],
+    "year": 2029
+  },
+  {
+    "active_mode": "hybrid_transition",
+    "backup_tib": "714.0625000",
+    "cloud": {
+      "egress_tib_month": "42.5781250000",
+      "gpu_units": "3.9062500000",
+      "memory_gib": "2740.0000000000",
+      "usable_storage_tib": "97.65625000",
+      "vcpu": "685.0000000000"
+    },
+    "locations": {
+      "local": {
+        "kw": "3.25",
+        "racks": 1,
+        "u": "24"
+      },
+      "primary": {
+        "kw": "30.45",
+        "racks": 4,
+        "u": "126"
+      },
+      "recovery": {
+        "kw": "14.05",
+        "racks": 3,
+        "u": "80"
+      }
+    },
+    "mode": "hybrid_transition",
+    "month": 37,
+    "owned": [
+      {
+        "cpu_nodes": 15,
+        "domain": "PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "5017.60",
+        "n_minus_1_usable_vcpu": "627.20",
+        "required_memory_gib": "2400.00000000",
+        "required_storage_tib": "58.59375000",
+        "required_vcpu": "600.00000000",
+        "storage_shelves": 3,
+        "usable_storage_tib": "75"
+      },
+      {
+        "cpu_nodes": 7,
+        "domain": "RESTRICTED",
+        "gpu_hosts": 4,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 16,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "2150.40",
+        "n_minus_1_usable_vcpu": "268.80",
+        "required_memory_gib": "2000.000000",
+        "required_storage_tib": "195.312500",
+        "required_vcpu": "250.000000",
+        "storage_shelves": 8,
+        "usable_storage_tib": "200"
+      },
+      {
+        "cpu_nodes": 4,
+        "domain": "DEV",
+        "gpu_hosts": 1,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 4,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1075.20",
+        "n_minus_1_usable_vcpu": "134.40",
+        "required_memory_gib": "500.00000000",
+        "required_storage_tib": "19.53125000",
+        "required_vcpu": "125.00000000",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "SITE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320.000",
+        "required_storage_tib": "20.000",
+        "required_vcpu": "80.000",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 2,
+        "domain": "CORPORATE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "n_minus_1_usable_vcpu": "44.80",
+        "required_memory_gib": "64.000",
+        "required_storage_tib": "5.000",
+        "required_vcpu": "16.000",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 7,
+        "domain": "RECOVERY_PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "2150.40",
+        "n_minus_1_usable_vcpu": "268.80",
+        "required_memory_gib": "960.0000000000",
+        "required_storage_tib": "58.59375000",
+        "required_vcpu": "240.0000000000",
+        "storage_shelves": 3,
+        "usable_storage_tib": "75"
+      },
+      {
+        "cpu_nodes": 4,
+        "domain": "RECOVERY_RESTRICTED",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 8,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "1075.20",
+        "n_minus_1_usable_vcpu": "134.40",
+        "required_memory_gib": "1000.00000000",
+        "required_storage_tib": "195.312500",
+        "required_vcpu": "125.00000000",
+        "storage_shelves": 8,
+        "usable_storage_tib": "200"
+      }
+    ],
+    "year": 2030
+  },
+  {
+    "active_mode": "hybrid_transition",
+    "backup_tib": "880.078125000",
+    "cloud": {
+      "egress_tib_month": "53.222656250000",
+      "gpu_units": "4.882812500000",
+      "memory_gib": "3425.000000000000",
+      "usable_storage_tib": "122.0703125000",
+      "vcpu": "856.250000000000"
+    },
+    "locations": {
+      "local": {
+        "kw": "3.25",
+        "racks": 1,
+        "u": "24"
+      },
+      "primary": {
+        "kw": "37.30",
+        "racks": 5,
+        "u": "152"
+      },
+      "recovery": {
+        "kw": "17.10",
+        "racks": 3,
+        "u": "96"
+      }
+    },
+    "mode": "hybrid_transition",
+    "month": 49,
+    "owned": [
+      {
+        "cpu_nodes": 18,
+        "domain": "PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "6092.80",
+        "n_minus_1_usable_vcpu": "761.60",
+        "required_memory_gib": "3000.0000000000",
+        "required_storage_tib": "73.2421875000",
+        "required_vcpu": "750.0000000000",
+        "storage_shelves": 3,
+        "usable_storage_tib": "75"
+      },
+      {
+        "cpu_nodes": 8,
+        "domain": "RESTRICTED",
+        "gpu_hosts": 5,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 20,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "2508.80",
+        "n_minus_1_usable_vcpu": "313.60",
+        "required_memory_gib": "2500.00000000",
+        "required_storage_tib": "244.14062500",
+        "required_vcpu": "312.50000000",
+        "storage_shelves": 10,
+        "usable_storage_tib": "250"
+      },
+      {
+        "cpu_nodes": 5,
+        "domain": "DEV",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 5,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1433.60",
+        "n_minus_1_usable_vcpu": "179.20",
+        "required_memory_gib": "625.0000000000",
+        "required_storage_tib": "24.4140625000",
+        "required_vcpu": "156.2500000000",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "SITE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320.0000",
+        "required_storage_tib": "20.0000",
+        "required_vcpu": "80.0000",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 2,
+        "domain": "CORPORATE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "n_minus_1_usable_vcpu": "44.80",
+        "required_memory_gib": "64.0000",
+        "required_storage_tib": "5.0000",
+        "required_vcpu": "16.0000",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 8,
+        "domain": "RECOVERY_PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "2508.80",
+        "n_minus_1_usable_vcpu": "313.60",
+        "required_memory_gib": "1200.000000000000",
+        "required_storage_tib": "73.2421875000",
+        "required_vcpu": "300.000000000000",
+        "storage_shelves": 3,
+        "usable_storage_tib": "75"
+      },
+      {
+        "cpu_nodes": 5,
+        "domain": "RECOVERY_RESTRICTED",
+        "gpu_hosts": 3,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 10,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "1433.60",
+        "n_minus_1_usable_vcpu": "179.20",
+        "required_memory_gib": "1250.0000000000",
+        "required_storage_tib": "244.14062500",
+        "required_vcpu": "156.2500000000",
+        "storage_shelves": 10,
+        "usable_storage_tib": "250"
+      }
+    ],
+    "year": 2031
+  },
+  {
+    "active_mode": "owned_colo",
+    "backup_tib": "390.0",
+    "cloud": {
+      "egress_tib_month": "0.00",
+      "gpu_units": "0.00",
+      "memory_gib": "0.00",
+      "usable_storage_tib": "0",
+      "vcpu": "0.00"
+    },
+    "locations": {
+      "local": {
+        "kw": "3.25",
+        "racks": 1,
+        "u": "24"
+      },
+      "primary": {
+        "kw": "20.90",
+        "racks": 3,
+        "u": "88"
+      },
+      "recovery": {
+        "kw": "9.00",
+        "racks": 2,
+        "u": "52"
+      }
+    },
+    "mode": "owned_colo",
+    "month": 1,
+    "owned": [
+      {
+        "cpu_nodes": 13,
+        "domain": "PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "4300.80",
+        "n_minus_1_usable_vcpu": "537.60",
+        "required_memory_gib": "2048",
+        "required_storage_tib": "50",
+        "required_vcpu": "512",
+        "storage_shelves": 2,
+        "usable_storage_tib": "50"
+      },
+      {
+        "cpu_nodes": 4,
+        "domain": "RESTRICTED",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 8,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1075.20",
+        "n_minus_1_usable_vcpu": "134.40",
+        "required_memory_gib": "1024",
+        "required_storage_tib": "100",
+        "required_vcpu": "128",
+        "storage_shelves": 4,
+        "usable_storage_tib": "100"
+      },
+      {
+        "cpu_nodes": 4,
+        "domain": "DEV",
+        "gpu_hosts": 1,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 4,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1075.20",
+        "n_minus_1_usable_vcpu": "134.40",
+        "required_memory_gib": "512",
+        "required_storage_tib": "20",
+        "required_vcpu": "128",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "SITE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320",
+        "required_storage_tib": "20",
+        "required_vcpu": "80",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 2,
+        "domain": "CORPORATE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "n_minus_1_usable_vcpu": "44.80",
+        "required_memory_gib": "64",
+        "required_storage_tib": "5",
+        "required_vcpu": "16",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 6,
+        "domain": "RECOVERY_PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "1792.00",
+        "n_minus_1_usable_vcpu": "224.00",
+        "required_memory_gib": "819.20",
+        "required_storage_tib": "50",
+        "required_vcpu": "204.80",
+        "storage_shelves": 2,
+        "usable_storage_tib": "50"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "RECOVERY_RESTRICTED",
+        "gpu_hosts": 1,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 4,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "512.00",
+        "required_storage_tib": "100",
+        "required_vcpu": "64.00",
+        "storage_shelves": 4,
+        "usable_storage_tib": "100"
+      }
+    ],
+    "year": 2027
+  },
+  {
+    "active_mode": "owned_colo",
+    "backup_tib": "475.000",
+    "cloud": {
+      "egress_tib_month": "0.0000",
+      "gpu_units": "0.0000",
+      "memory_gib": "0.0000",
+      "usable_storage_tib": "0.00",
+      "vcpu": "0.0000"
+    },
+    "locations": {
+      "local": {
+        "kw": "3.25",
+        "racks": 1,
+        "u": "24"
+      },
+      "primary": {
+        "kw": "26.35",
+        "racks": 4,
+        "u": "114"
+      },
+      "recovery": {
+        "kw": "10.90",
+        "racks": 3,
+        "u": "66"
+      }
+    },
+    "mode": "owned_colo",
+    "month": 13,
+    "owned": [
+      {
+        "cpu_nodes": 16,
+        "domain": "PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "5376.00",
+        "n_minus_1_usable_vcpu": "672.00",
+        "required_memory_gib": "2560.00",
+        "required_storage_tib": "62.50",
+        "required_vcpu": "640.00",
+        "storage_shelves": 3,
+        "usable_storage_tib": "75"
+      },
+      {
+        "cpu_nodes": 5,
+        "domain": "RESTRICTED",
+        "gpu_hosts": 3,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 10,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1433.60",
+        "n_minus_1_usable_vcpu": "179.20",
+        "required_memory_gib": "1280.00",
+        "required_storage_tib": "125.00",
+        "required_vcpu": "160.00",
+        "storage_shelves": 5,
+        "usable_storage_tib": "125"
+      },
+      {
+        "cpu_nodes": 5,
+        "domain": "DEV",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 5,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1433.60",
+        "n_minus_1_usable_vcpu": "179.20",
+        "required_memory_gib": "640.00",
+        "required_storage_tib": "25.00",
+        "required_vcpu": "160.00",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "SITE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320.0",
+        "required_storage_tib": "20.0",
+        "required_vcpu": "80.0",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 2,
+        "domain": "CORPORATE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "n_minus_1_usable_vcpu": "44.80",
+        "required_memory_gib": "64.0",
+        "required_storage_tib": "5.0",
+        "required_vcpu": "16.0",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 7,
+        "domain": "RECOVERY_PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "2150.40",
+        "n_minus_1_usable_vcpu": "268.80",
+        "required_memory_gib": "1024.0000",
+        "required_storage_tib": "62.50",
+        "required_vcpu": "256.0000",
+        "storage_shelves": 3,
+        "usable_storage_tib": "75"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "RECOVERY_RESTRICTED",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 5,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "640.0000",
+        "required_storage_tib": "125.00",
+        "required_vcpu": "80.0000",
+        "storage_shelves": 5,
+        "usable_storage_tib": "125"
+      }
+    ],
+    "year": 2028
+  },
+  {
+    "active_mode": "owned_colo",
+    "backup_tib": "581.25000",
+    "cloud": {
+      "egress_tib_month": "0.000000",
+      "gpu_units": "0.000000",
+      "memory_gib": "0.000000",
+      "usable_storage_tib": "0.0000",
+      "vcpu": "0.000000"
+    },
+    "locations": {
+      "local": {
+        "kw": "3.25",
+        "racks": 1,
+        "u": "24"
+      },
+      "primary": {
+        "kw": "33.25",
+        "racks": 5,
+        "u": "144"
+      },
+      "recovery": {
+        "kw": "14.25",
+        "racks": 3,
+        "u": "84"
+      }
+    },
+    "mode": "owned_colo",
+    "month": 25,
+    "owned": [
+      {
+        "cpu_nodes": 19,
+        "domain": "PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "6451.20",
+        "n_minus_1_usable_vcpu": "806.40",
+        "required_memory_gib": "3200.0000",
+        "required_storage_tib": "78.1250",
+        "required_vcpu": "800.0000",
+        "storage_shelves": 4,
+        "usable_storage_tib": "100"
+      },
+      {
+        "cpu_nodes": 6,
+        "domain": "RESTRICTED",
+        "gpu_hosts": 4,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 13,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1792.00",
+        "n_minus_1_usable_vcpu": "224.00",
+        "required_memory_gib": "1600.0000",
+        "required_storage_tib": "156.2500",
+        "required_vcpu": "200.0000",
+        "storage_shelves": 7,
+        "usable_storage_tib": "175"
+      },
+      {
+        "cpu_nodes": 6,
+        "domain": "DEV",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 7,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1792.00",
+        "n_minus_1_usable_vcpu": "224.00",
+        "required_memory_gib": "800.0000",
+        "required_storage_tib": "31.2500",
+        "required_vcpu": "200.0000",
+        "storage_shelves": 2,
+        "usable_storage_tib": "50"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "SITE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320.00",
+        "required_storage_tib": "20.00",
+        "required_vcpu": "80.00",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 2,
+        "domain": "CORPORATE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "n_minus_1_usable_vcpu": "44.80",
+        "required_memory_gib": "64.00",
+        "required_storage_tib": "5.00",
+        "required_vcpu": "16.00",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 9,
+        "domain": "RECOVERY_PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "2867.20",
+        "n_minus_1_usable_vcpu": "358.40",
+        "required_memory_gib": "1280.000000",
+        "required_storage_tib": "78.1250",
+        "required_vcpu": "320.000000",
+        "storage_shelves": 4,
+        "usable_storage_tib": "100"
+      },
+      {
+        "cpu_nodes": 4,
+        "domain": "RECOVERY_RESTRICTED",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 7,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "1075.20",
+        "n_minus_1_usable_vcpu": "134.40",
+        "required_memory_gib": "800.000000",
+        "required_storage_tib": "156.2500",
+        "required_vcpu": "100.000000",
+        "storage_shelves": 7,
+        "usable_storage_tib": "175"
+      }
+    ],
+    "year": 2029
+  },
+  {
+    "active_mode": "owned_colo",
+    "backup_tib": "714.0625000",
+    "cloud": {
+      "egress_tib_month": "0E-8",
+      "gpu_units": "0E-8",
+      "memory_gib": "0E-8",
+      "usable_storage_tib": "0.000000",
+      "vcpu": "0E-8"
+    },
+    "locations": {
+      "local": {
+        "kw": "3.25",
+        "racks": 1,
+        "u": "24"
+      },
+      "primary": {
+        "kw": "39.40",
+        "racks": 6,
+        "u": "162"
+      },
+      "recovery": {
+        "kw": "15.60",
+        "racks": 3,
+        "u": "90"
+      }
+    },
+    "mode": "owned_colo",
+    "month": 37,
+    "owned": [
+      {
+        "cpu_nodes": 24,
+        "domain": "PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "8243.20",
+        "n_minus_1_usable_vcpu": "1030.40",
+        "required_memory_gib": "4000.000000",
+        "required_storage_tib": "97.656250",
+        "required_vcpu": "1000.000000",
+        "storage_shelves": 4,
+        "usable_storage_tib": "100"
+      },
+      {
+        "cpu_nodes": 7,
+        "domain": "RESTRICTED",
+        "gpu_hosts": 4,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 16,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "2150.40",
+        "n_minus_1_usable_vcpu": "268.80",
+        "required_memory_gib": "2000.000000",
+        "required_storage_tib": "195.312500",
+        "required_vcpu": "250.000000",
+        "storage_shelves": 8,
+        "usable_storage_tib": "200"
+      },
+      {
+        "cpu_nodes": 7,
+        "domain": "DEV",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 8,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "2150.40",
+        "n_minus_1_usable_vcpu": "268.80",
+        "required_memory_gib": "1000.000000",
+        "required_storage_tib": "39.062500",
+        "required_vcpu": "250.000000",
+        "storage_shelves": 2,
+        "usable_storage_tib": "50"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "SITE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320.000",
+        "required_storage_tib": "20.000",
+        "required_vcpu": "80.000",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 2,
+        "domain": "CORPORATE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "n_minus_1_usable_vcpu": "44.80",
+        "required_memory_gib": "64.000",
+        "required_storage_tib": "5.000",
+        "required_vcpu": "16.000",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 10,
+        "domain": "RECOVERY_PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "3225.60",
+        "n_minus_1_usable_vcpu": "403.20",
+        "required_memory_gib": "1600.00000000",
+        "required_storage_tib": "97.656250",
+        "required_vcpu": "400.00000000",
+        "storage_shelves": 4,
+        "usable_storage_tib": "100"
+      },
+      {
+        "cpu_nodes": 4,
+        "domain": "RECOVERY_RESTRICTED",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 8,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "1075.20",
+        "n_minus_1_usable_vcpu": "134.40",
+        "required_memory_gib": "1000.00000000",
+        "required_storage_tib": "195.312500",
+        "required_vcpu": "125.00000000",
+        "storage_shelves": 8,
+        "usable_storage_tib": "200"
+      }
+    ],
+    "year": 2030
+  },
+  {
+    "active_mode": "owned_colo",
+    "backup_tib": "880.078125000",
+    "cloud": {
+      "egress_tib_month": "0E-10",
+      "gpu_units": "0E-10",
+      "memory_gib": "0E-10",
+      "usable_storage_tib": "0E-8",
+      "vcpu": "0E-10"
+    },
+    "locations": {
+      "local": {
+        "kw": "3.25",
+        "racks": 1,
+        "u": "24"
+      },
+      "primary": {
+        "kw": "48.05",
+        "racks": 7,
+        "u": "196"
+      },
+      "recovery": {
+        "kw": "19.75",
+        "racks": 4,
+        "u": "114"
+      }
+    },
+    "mode": "owned_colo",
+    "month": 49,
+    "owned": [
+      {
+        "cpu_nodes": 29,
+        "domain": "PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "10035.20",
+        "n_minus_1_usable_vcpu": "1254.40",
+        "required_memory_gib": "5000.00000000",
+        "required_storage_tib": "122.07031250",
+        "required_vcpu": "1250.00000000",
+        "storage_shelves": 5,
+        "usable_storage_tib": "125"
+      },
+      {
+        "cpu_nodes": 8,
+        "domain": "RESTRICTED",
+        "gpu_hosts": 5,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 20,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "2508.80",
+        "n_minus_1_usable_vcpu": "313.60",
+        "required_memory_gib": "2500.00000000",
+        "required_storage_tib": "244.14062500",
+        "required_vcpu": "312.50000000",
+        "storage_shelves": 10,
+        "usable_storage_tib": "250"
+      },
+      {
+        "cpu_nodes": 8,
+        "domain": "DEV",
+        "gpu_hosts": 3,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 10,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "2508.80",
+        "n_minus_1_usable_vcpu": "313.60",
+        "required_memory_gib": "1250.00000000",
+        "required_storage_tib": "48.82812500",
+        "required_vcpu": "312.50000000",
+        "storage_shelves": 2,
+        "usable_storage_tib": "50"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "SITE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320.0000",
+        "required_storage_tib": "20.0000",
+        "required_vcpu": "80.0000",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 2,
+        "domain": "CORPORATE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "n_minus_1_usable_vcpu": "44.80",
+        "required_memory_gib": "64.0000",
+        "required_storage_tib": "5.0000",
+        "required_vcpu": "16.0000",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 13,
+        "domain": "RECOVERY_PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "4300.80",
+        "n_minus_1_usable_vcpu": "537.60",
+        "required_memory_gib": "2000.0000000000",
+        "required_storage_tib": "122.07031250",
+        "required_vcpu": "500.0000000000",
+        "storage_shelves": 5,
+        "usable_storage_tib": "125"
+      },
+      {
+        "cpu_nodes": 5,
+        "domain": "RECOVERY_RESTRICTED",
+        "gpu_hosts": 3,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 10,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "1433.60",
+        "n_minus_1_usable_vcpu": "179.20",
+        "required_memory_gib": "1250.0000000000",
+        "required_storage_tib": "244.14062500",
+        "required_vcpu": "156.2500000000",
+        "storage_shelves": 10,
+        "usable_storage_tib": "250"
+      }
+    ],
+    "year": 2031
+  },
+  {
+    "active_mode": "owned_facility",
+    "backup_tib": "390.0",
+    "cloud": {
+      "egress_tib_month": "0.00",
+      "gpu_units": "0.00",
+      "memory_gib": "0.00",
+      "usable_storage_tib": "0",
+      "vcpu": "0.00"
+    },
+    "locations": {
+      "local": {
+        "kw": "3.25",
+        "racks": 1,
+        "u": "24"
+      },
+      "primary": {
+        "kw": "20.90",
+        "racks": 3,
+        "u": "88"
+      },
+      "recovery": {
+        "kw": "9.00",
+        "racks": 2,
+        "u": "52"
+      }
+    },
+    "mode": "owned_facility",
+    "month": 1,
+    "owned": [
+      {
+        "cpu_nodes": 13,
+        "domain": "PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "4300.80",
+        "n_minus_1_usable_vcpu": "537.60",
+        "required_memory_gib": "2048",
+        "required_storage_tib": "50",
+        "required_vcpu": "512",
+        "storage_shelves": 2,
+        "usable_storage_tib": "50"
+      },
+      {
+        "cpu_nodes": 4,
+        "domain": "RESTRICTED",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 8,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1075.20",
+        "n_minus_1_usable_vcpu": "134.40",
+        "required_memory_gib": "1024",
+        "required_storage_tib": "100",
+        "required_vcpu": "128",
+        "storage_shelves": 4,
+        "usable_storage_tib": "100"
+      },
+      {
+        "cpu_nodes": 4,
+        "domain": "DEV",
+        "gpu_hosts": 1,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 4,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1075.20",
+        "n_minus_1_usable_vcpu": "134.40",
+        "required_memory_gib": "512",
+        "required_storage_tib": "20",
+        "required_vcpu": "128",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "SITE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320",
+        "required_storage_tib": "20",
+        "required_vcpu": "80",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 2,
+        "domain": "CORPORATE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "n_minus_1_usable_vcpu": "44.80",
+        "required_memory_gib": "64",
+        "required_storage_tib": "5",
+        "required_vcpu": "16",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 6,
+        "domain": "RECOVERY_PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "1792.00",
+        "n_minus_1_usable_vcpu": "224.00",
+        "required_memory_gib": "819.20",
+        "required_storage_tib": "50",
+        "required_vcpu": "204.80",
+        "storage_shelves": 2,
+        "usable_storage_tib": "50"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "RECOVERY_RESTRICTED",
+        "gpu_hosts": 1,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 4,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "512.00",
+        "required_storage_tib": "100",
+        "required_vcpu": "64.00",
+        "storage_shelves": 4,
+        "usable_storage_tib": "100"
+      }
+    ],
+    "year": 2027
+  },
+  {
+    "active_mode": "owned_facility",
+    "backup_tib": "475.000",
+    "cloud": {
+      "egress_tib_month": "0.0000",
+      "gpu_units": "0.0000",
+      "memory_gib": "0.0000",
+      "usable_storage_tib": "0.00",
+      "vcpu": "0.0000"
+    },
+    "locations": {
+      "local": {
+        "kw": "3.25",
+        "racks": 1,
+        "u": "24"
+      },
+      "primary": {
+        "kw": "26.35",
+        "racks": 4,
+        "u": "114"
+      },
+      "recovery": {
+        "kw": "10.90",
+        "racks": 3,
+        "u": "66"
+      }
+    },
+    "mode": "owned_facility",
+    "month": 13,
+    "owned": [
+      {
+        "cpu_nodes": 16,
+        "domain": "PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "5376.00",
+        "n_minus_1_usable_vcpu": "672.00",
+        "required_memory_gib": "2560.00",
+        "required_storage_tib": "62.50",
+        "required_vcpu": "640.00",
+        "storage_shelves": 3,
+        "usable_storage_tib": "75"
+      },
+      {
+        "cpu_nodes": 5,
+        "domain": "RESTRICTED",
+        "gpu_hosts": 3,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 10,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1433.60",
+        "n_minus_1_usable_vcpu": "179.20",
+        "required_memory_gib": "1280.00",
+        "required_storage_tib": "125.00",
+        "required_vcpu": "160.00",
+        "storage_shelves": 5,
+        "usable_storage_tib": "125"
+      },
+      {
+        "cpu_nodes": 5,
+        "domain": "DEV",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 5,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1433.60",
+        "n_minus_1_usable_vcpu": "179.20",
+        "required_memory_gib": "640.00",
+        "required_storage_tib": "25.00",
+        "required_vcpu": "160.00",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "SITE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320.0",
+        "required_storage_tib": "20.0",
+        "required_vcpu": "80.0",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 2,
+        "domain": "CORPORATE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "n_minus_1_usable_vcpu": "44.80",
+        "required_memory_gib": "64.0",
+        "required_storage_tib": "5.0",
+        "required_vcpu": "16.0",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 7,
+        "domain": "RECOVERY_PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "2150.40",
+        "n_minus_1_usable_vcpu": "268.80",
+        "required_memory_gib": "1024.0000",
+        "required_storage_tib": "62.50",
+        "required_vcpu": "256.0000",
+        "storage_shelves": 3,
+        "usable_storage_tib": "75"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "RECOVERY_RESTRICTED",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 5,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "640.0000",
+        "required_storage_tib": "125.00",
+        "required_vcpu": "80.0000",
+        "storage_shelves": 5,
+        "usable_storage_tib": "125"
+      }
+    ],
+    "year": 2028
+  },
+  {
+    "active_mode": "owned_facility",
+    "backup_tib": "581.25000",
+    "cloud": {
+      "egress_tib_month": "0.000000",
+      "gpu_units": "0.000000",
+      "memory_gib": "0.000000",
+      "usable_storage_tib": "0.0000",
+      "vcpu": "0.000000"
+    },
+    "locations": {
+      "local": {
+        "kw": "3.25",
+        "racks": 1,
+        "u": "24"
+      },
+      "primary": {
+        "kw": "33.25",
+        "racks": 5,
+        "u": "144"
+      },
+      "recovery": {
+        "kw": "14.25",
+        "racks": 3,
+        "u": "84"
+      }
+    },
+    "mode": "owned_facility",
+    "month": 25,
+    "owned": [
+      {
+        "cpu_nodes": 19,
+        "domain": "PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "6451.20",
+        "n_minus_1_usable_vcpu": "806.40",
+        "required_memory_gib": "3200.0000",
+        "required_storage_tib": "78.1250",
+        "required_vcpu": "800.0000",
+        "storage_shelves": 4,
+        "usable_storage_tib": "100"
+      },
+      {
+        "cpu_nodes": 6,
+        "domain": "RESTRICTED",
+        "gpu_hosts": 4,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 13,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1792.00",
+        "n_minus_1_usable_vcpu": "224.00",
+        "required_memory_gib": "1600.0000",
+        "required_storage_tib": "156.2500",
+        "required_vcpu": "200.0000",
+        "storage_shelves": 7,
+        "usable_storage_tib": "175"
+      },
+      {
+        "cpu_nodes": 6,
+        "domain": "DEV",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 7,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1792.00",
+        "n_minus_1_usable_vcpu": "224.00",
+        "required_memory_gib": "800.0000",
+        "required_storage_tib": "31.2500",
+        "required_vcpu": "200.0000",
+        "storage_shelves": 2,
+        "usable_storage_tib": "50"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "SITE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320.00",
+        "required_storage_tib": "20.00",
+        "required_vcpu": "80.00",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 2,
+        "domain": "CORPORATE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "n_minus_1_usable_vcpu": "44.80",
+        "required_memory_gib": "64.00",
+        "required_storage_tib": "5.00",
+        "required_vcpu": "16.00",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 9,
+        "domain": "RECOVERY_PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "2867.20",
+        "n_minus_1_usable_vcpu": "358.40",
+        "required_memory_gib": "1280.000000",
+        "required_storage_tib": "78.1250",
+        "required_vcpu": "320.000000",
+        "storage_shelves": 4,
+        "usable_storage_tib": "100"
+      },
+      {
+        "cpu_nodes": 4,
+        "domain": "RECOVERY_RESTRICTED",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 7,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "1075.20",
+        "n_minus_1_usable_vcpu": "134.40",
+        "required_memory_gib": "800.000000",
+        "required_storage_tib": "156.2500",
+        "required_vcpu": "100.000000",
+        "storage_shelves": 7,
+        "usable_storage_tib": "175"
+      }
+    ],
+    "year": 2029
+  },
+  {
+    "active_mode": "owned_facility",
+    "backup_tib": "714.0625000",
+    "cloud": {
+      "egress_tib_month": "0E-8",
+      "gpu_units": "0E-8",
+      "memory_gib": "0E-8",
+      "usable_storage_tib": "0.000000",
+      "vcpu": "0E-8"
+    },
+    "locations": {
+      "local": {
+        "kw": "3.25",
+        "racks": 1,
+        "u": "24"
+      },
+      "primary": {
+        "kw": "39.40",
+        "racks": 6,
+        "u": "162"
+      },
+      "recovery": {
+        "kw": "15.60",
+        "racks": 3,
+        "u": "90"
+      }
+    },
+    "mode": "owned_facility",
+    "month": 37,
+    "owned": [
+      {
+        "cpu_nodes": 24,
+        "domain": "PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "8243.20",
+        "n_minus_1_usable_vcpu": "1030.40",
+        "required_memory_gib": "4000.000000",
+        "required_storage_tib": "97.656250",
+        "required_vcpu": "1000.000000",
+        "storage_shelves": 4,
+        "usable_storage_tib": "100"
+      },
+      {
+        "cpu_nodes": 7,
+        "domain": "RESTRICTED",
+        "gpu_hosts": 4,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 16,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "2150.40",
+        "n_minus_1_usable_vcpu": "268.80",
+        "required_memory_gib": "2000.000000",
+        "required_storage_tib": "195.312500",
+        "required_vcpu": "250.000000",
+        "storage_shelves": 8,
+        "usable_storage_tib": "200"
+      },
+      {
+        "cpu_nodes": 7,
+        "domain": "DEV",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 8,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "2150.40",
+        "n_minus_1_usable_vcpu": "268.80",
+        "required_memory_gib": "1000.000000",
+        "required_storage_tib": "39.062500",
+        "required_vcpu": "250.000000",
+        "storage_shelves": 2,
+        "usable_storage_tib": "50"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "SITE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320.000",
+        "required_storage_tib": "20.000",
+        "required_vcpu": "80.000",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 2,
+        "domain": "CORPORATE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "n_minus_1_usable_vcpu": "44.80",
+        "required_memory_gib": "64.000",
+        "required_storage_tib": "5.000",
+        "required_vcpu": "16.000",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 10,
+        "domain": "RECOVERY_PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "3225.60",
+        "n_minus_1_usable_vcpu": "403.20",
+        "required_memory_gib": "1600.00000000",
+        "required_storage_tib": "97.656250",
+        "required_vcpu": "400.00000000",
+        "storage_shelves": 4,
+        "usable_storage_tib": "100"
+      },
+      {
+        "cpu_nodes": 4,
+        "domain": "RECOVERY_RESTRICTED",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 8,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "1075.20",
+        "n_minus_1_usable_vcpu": "134.40",
+        "required_memory_gib": "1000.00000000",
+        "required_storage_tib": "195.312500",
+        "required_vcpu": "125.00000000",
+        "storage_shelves": 8,
+        "usable_storage_tib": "200"
+      }
+    ],
+    "year": 2030
+  },
+  {
+    "active_mode": "owned_facility",
+    "backup_tib": "880.078125000",
+    "cloud": {
+      "egress_tib_month": "0E-10",
+      "gpu_units": "0E-10",
+      "memory_gib": "0E-10",
+      "usable_storage_tib": "0E-8",
+      "vcpu": "0E-10"
+    },
+    "locations": {
+      "local": {
+        "kw": "3.25",
+        "racks": 1,
+        "u": "24"
+      },
+      "primary": {
+        "kw": "48.05",
+        "racks": 7,
+        "u": "196"
+      },
+      "recovery": {
+        "kw": "19.75",
+        "racks": 4,
+        "u": "114"
+      }
+    },
+    "mode": "owned_facility",
+    "month": 49,
+    "owned": [
+      {
+        "cpu_nodes": 29,
+        "domain": "PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "10035.20",
+        "n_minus_1_usable_vcpu": "1254.40",
+        "required_memory_gib": "5000.00000000",
+        "required_storage_tib": "122.07031250",
+        "required_vcpu": "1250.00000000",
+        "storage_shelves": 5,
+        "usable_storage_tib": "125"
+      },
+      {
+        "cpu_nodes": 8,
+        "domain": "RESTRICTED",
+        "gpu_hosts": 5,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 20,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "2508.80",
+        "n_minus_1_usable_vcpu": "313.60",
+        "required_memory_gib": "2500.00000000",
+        "required_storage_tib": "244.14062500",
+        "required_vcpu": "312.50000000",
+        "storage_shelves": 10,
+        "usable_storage_tib": "250"
+      },
+      {
+        "cpu_nodes": 8,
+        "domain": "DEV",
+        "gpu_hosts": 3,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 10,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "2508.80",
+        "n_minus_1_usable_vcpu": "313.60",
+        "required_memory_gib": "1250.00000000",
+        "required_storage_tib": "48.82812500",
+        "required_vcpu": "312.50000000",
+        "storage_shelves": 2,
+        "usable_storage_tib": "50"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "SITE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320.0000",
+        "required_storage_tib": "20.0000",
+        "required_vcpu": "80.0000",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 2,
+        "domain": "CORPORATE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "n_minus_1_usable_vcpu": "44.80",
+        "required_memory_gib": "64.0000",
+        "required_storage_tib": "5.0000",
+        "required_vcpu": "16.0000",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 13,
+        "domain": "RECOVERY_PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "4300.80",
+        "n_minus_1_usable_vcpu": "537.60",
+        "required_memory_gib": "2000.0000000000",
+        "required_storage_tib": "122.07031250",
+        "required_vcpu": "500.0000000000",
+        "storage_shelves": 5,
+        "usable_storage_tib": "125"
+      },
+      {
+        "cpu_nodes": 5,
+        "domain": "RECOVERY_RESTRICTED",
+        "gpu_hosts": 3,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 10,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "1433.60",
+        "n_minus_1_usable_vcpu": "179.20",
+        "required_memory_gib": "1250.0000000000",
+        "required_storage_tib": "244.14062500",
+        "required_vcpu": "156.2500000000",
+        "storage_shelves": 10,
+        "usable_storage_tib": "250"
+      }
+    ],
+    "year": 2031
+  },
+  {
+    "active_mode": "cloud_transition",
+    "backup_tib": "390.0",
+    "cloud": {
+      "egress_tib_month": "52.00",
+      "gpu_units": "4.00",
+      "memory_gib": "3379.20",
+      "usable_storage_tib": "120",
+      "vcpu": "844.80"
+    },
+    "locations": {
+      "local": {
+        "kw": "3.25",
+        "racks": 1,
+        "u": "24"
+      },
+      "primary": {
+        "kw": "9.50",
+        "racks": 2,
+        "u": "38"
+      },
+      "recovery": {
+        "kw": "5.90",
+        "racks": 1,
+        "u": "32"
+      }
+    },
+    "mode": "phased_ownership",
+    "month": 1,
+    "owned": [
+      {
+        "cpu_nodes": 4,
+        "domain": "RESTRICTED",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 8,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1075.20",
+        "n_minus_1_usable_vcpu": "134.40",
+        "required_memory_gib": "1024",
+        "required_storage_tib": "100",
+        "required_vcpu": "128",
+        "storage_shelves": 4,
+        "usable_storage_tib": "100"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "SITE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320",
+        "required_storage_tib": "20",
+        "required_vcpu": "80",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 2,
+        "domain": "CORPORATE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "n_minus_1_usable_vcpu": "44.80",
+        "required_memory_gib": "64",
+        "required_storage_tib": "5",
+        "required_vcpu": "16",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "RECOVERY_RESTRICTED",
+        "gpu_hosts": 1,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 4,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "512.00",
+        "required_storage_tib": "100",
+        "required_vcpu": "64.00",
+        "storage_shelves": 4,
+        "usable_storage_tib": "100"
+      }
+    ],
+    "year": 2027
+  },
+  {
+    "active_mode": "hybrid_transition",
+    "backup_tib": "390.0",
+    "cloud": {
+      "egress_tib_month": "21.8000",
+      "gpu_units": "2.0000",
+      "memory_gib": "1402.8800",
+      "usable_storage_tib": "50.00",
+      "vcpu": "350.7200"
+    },
+    "locations": {
+      "local": {
+        "kw": "3.25",
+        "racks": 1,
+        "u": "24"
+      },
+      "primary": {
+        "kw": "16.80",
+        "racks": 3,
+        "u": "76"
+      },
+      "recovery": {
+        "kw": "8.10",
+        "racks": 2,
+        "u": "48"
+      }
+    },
+    "mode": "phased_ownership",
+    "month": 7,
+    "owned": [
+      {
+        "cpu_nodes": 8,
+        "domain": "PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "2508.80",
+        "n_minus_1_usable_vcpu": "313.60",
+        "required_memory_gib": "1228.80",
+        "required_storage_tib": "30.00",
+        "required_vcpu": "307.20",
+        "storage_shelves": 2,
+        "usable_storage_tib": "50"
+      },
+      {
+        "cpu_nodes": 4,
+        "domain": "RESTRICTED",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 8,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1075.20",
+        "n_minus_1_usable_vcpu": "134.40",
+        "required_memory_gib": "1024",
+        "required_storage_tib": "100",
+        "required_vcpu": "128",
+        "storage_shelves": 4,
+        "usable_storage_tib": "100"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "DEV",
+        "gpu_hosts": 1,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 2,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "256.00",
+        "required_storage_tib": "10.00",
+        "required_vcpu": "64.00",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "SITE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320",
+        "required_storage_tib": "20",
+        "required_vcpu": "80",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 2,
+        "domain": "CORPORATE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "n_minus_1_usable_vcpu": "44.80",
+        "required_memory_gib": "64",
+        "required_storage_tib": "5",
+        "required_vcpu": "16",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 4,
+        "domain": "RECOVERY_PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "1075.20",
+        "n_minus_1_usable_vcpu": "134.40",
+        "required_memory_gib": "491.5200",
+        "required_storage_tib": "30.00",
+        "required_vcpu": "122.8800",
+        "storage_shelves": 2,
+        "usable_storage_tib": "50"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "RECOVERY_RESTRICTED",
+        "gpu_hosts": 1,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 4,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "512.00",
+        "required_storage_tib": "100",
+        "required_vcpu": "64.00",
+        "storage_shelves": 4,
+        "usable_storage_tib": "100"
+      }
+    ],
+    "year": 2027
+  },
+  {
+    "active_mode": "hybrid_transition",
+    "backup_tib": "475.000",
+    "cloud": {
+      "egress_tib_month": "27.250000",
+      "gpu_units": "2.500000",
+      "memory_gib": "1753.600000",
+      "usable_storage_tib": "62.5000",
+      "vcpu": "438.400000"
+    },
+    "locations": {
+      "local": {
+        "kw": "3.25",
+        "racks": 1,
+        "u": "24"
+      },
+      "primary": {
+        "kw": "20.80",
+        "racks": 3,
+        "u": "90"
+      },
+      "recovery": {
+        "kw": "9.80",
+        "racks": 2,
+        "u": "58"
+      }
+    },
+    "mode": "phased_ownership",
+    "month": 13,
+    "owned": [
+      {
+        "cpu_nodes": 10,
+        "domain": "PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "3225.60",
+        "n_minus_1_usable_vcpu": "403.20",
+        "required_memory_gib": "1536.0000",
+        "required_storage_tib": "37.5000",
+        "required_vcpu": "384.0000",
+        "storage_shelves": 2,
+        "usable_storage_tib": "50"
+      },
+      {
+        "cpu_nodes": 5,
+        "domain": "RESTRICTED",
+        "gpu_hosts": 3,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 10,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1433.60",
+        "n_minus_1_usable_vcpu": "179.20",
+        "required_memory_gib": "1280.00",
+        "required_storage_tib": "125.00",
+        "required_vcpu": "160.00",
+        "storage_shelves": 5,
+        "usable_storage_tib": "125"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "DEV",
+        "gpu_hosts": 1,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 3,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320.0000",
+        "required_storage_tib": "12.5000",
+        "required_vcpu": "80.0000",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "SITE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320.0",
+        "required_storage_tib": "20.0",
+        "required_vcpu": "80.0",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 2,
+        "domain": "CORPORATE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "n_minus_1_usable_vcpu": "44.80",
+        "required_memory_gib": "64.0",
+        "required_storage_tib": "5.0",
+        "required_vcpu": "16.0",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 5,
+        "domain": "RECOVERY_PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "1433.60",
+        "n_minus_1_usable_vcpu": "179.20",
+        "required_memory_gib": "614.400000",
+        "required_storage_tib": "37.5000",
+        "required_vcpu": "153.600000",
+        "storage_shelves": 2,
+        "usable_storage_tib": "50"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "RECOVERY_RESTRICTED",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 5,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "640.0000",
+        "required_storage_tib": "125.00",
+        "required_vcpu": "80.0000",
+        "storage_shelves": 5,
+        "usable_storage_tib": "125"
+      }
+    ],
+    "year": 2028
+  },
+  {
+    "active_mode": "owned_colo",
+    "backup_tib": "475.000",
+    "cloud": {
+      "egress_tib_month": "0.0000",
+      "gpu_units": "0.0000",
+      "memory_gib": "0.0000",
+      "usable_storage_tib": "0.00",
+      "vcpu": "0.0000"
+    },
+    "locations": {
+      "local": {
+        "kw": "3.25",
+        "racks": 1,
+        "u": "24"
+      },
+      "primary": {
+        "kw": "26.35",
+        "racks": 4,
+        "u": "114"
+      },
+      "recovery": {
+        "kw": "10.90",
+        "racks": 3,
+        "u": "66"
+      }
+    },
+    "mode": "phased_ownership",
+    "month": 19,
+    "owned": [
+      {
+        "cpu_nodes": 16,
+        "domain": "PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "5376.00",
+        "n_minus_1_usable_vcpu": "672.00",
+        "required_memory_gib": "2560.00",
+        "required_storage_tib": "62.50",
+        "required_vcpu": "640.00",
+        "storage_shelves": 3,
+        "usable_storage_tib": "75"
+      },
+      {
+        "cpu_nodes": 5,
+        "domain": "RESTRICTED",
+        "gpu_hosts": 3,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 10,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1433.60",
+        "n_minus_1_usable_vcpu": "179.20",
+        "required_memory_gib": "1280.00",
+        "required_storage_tib": "125.00",
+        "required_vcpu": "160.00",
+        "storage_shelves": 5,
+        "usable_storage_tib": "125"
+      },
+      {
+        "cpu_nodes": 5,
+        "domain": "DEV",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 5,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1433.60",
+        "n_minus_1_usable_vcpu": "179.20",
+        "required_memory_gib": "640.00",
+        "required_storage_tib": "25.00",
+        "required_vcpu": "160.00",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "SITE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320.0",
+        "required_storage_tib": "20.0",
+        "required_vcpu": "80.0",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 2,
+        "domain": "CORPORATE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "n_minus_1_usable_vcpu": "44.80",
+        "required_memory_gib": "64.0",
+        "required_storage_tib": "5.0",
+        "required_vcpu": "16.0",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 7,
+        "domain": "RECOVERY_PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "2150.40",
+        "n_minus_1_usable_vcpu": "268.80",
+        "required_memory_gib": "1024.0000",
+        "required_storage_tib": "62.50",
+        "required_vcpu": "256.0000",
+        "storage_shelves": 3,
+        "usable_storage_tib": "75"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "RECOVERY_RESTRICTED",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 5,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "640.0000",
+        "required_storage_tib": "125.00",
+        "required_vcpu": "80.0000",
+        "storage_shelves": 5,
+        "usable_storage_tib": "125"
+      }
+    ],
+    "year": 2028
+  },
+  {
+    "active_mode": "owned_colo",
+    "backup_tib": "581.25000",
+    "cloud": {
+      "egress_tib_month": "0.000000",
+      "gpu_units": "0.000000",
+      "memory_gib": "0.000000",
+      "usable_storage_tib": "0.0000",
+      "vcpu": "0.000000"
+    },
+    "locations": {
+      "local": {
+        "kw": "3.25",
+        "racks": 1,
+        "u": "24"
+      },
+      "primary": {
+        "kw": "33.25",
+        "racks": 5,
+        "u": "144"
+      },
+      "recovery": {
+        "kw": "14.25",
+        "racks": 3,
+        "u": "84"
+      }
+    },
+    "mode": "phased_ownership",
+    "month": 25,
+    "owned": [
+      {
+        "cpu_nodes": 19,
+        "domain": "PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "6451.20",
+        "n_minus_1_usable_vcpu": "806.40",
+        "required_memory_gib": "3200.0000",
+        "required_storage_tib": "78.1250",
+        "required_vcpu": "800.0000",
+        "storage_shelves": 4,
+        "usable_storage_tib": "100"
+      },
+      {
+        "cpu_nodes": 6,
+        "domain": "RESTRICTED",
+        "gpu_hosts": 4,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 13,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1792.00",
+        "n_minus_1_usable_vcpu": "224.00",
+        "required_memory_gib": "1600.0000",
+        "required_storage_tib": "156.2500",
+        "required_vcpu": "200.0000",
+        "storage_shelves": 7,
+        "usable_storage_tib": "175"
+      },
+      {
+        "cpu_nodes": 6,
+        "domain": "DEV",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 7,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "1792.00",
+        "n_minus_1_usable_vcpu": "224.00",
+        "required_memory_gib": "800.0000",
+        "required_storage_tib": "31.2500",
+        "required_vcpu": "200.0000",
+        "storage_shelves": 2,
+        "usable_storage_tib": "50"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "SITE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320.00",
+        "required_storage_tib": "20.00",
+        "required_vcpu": "80.00",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 2,
+        "domain": "CORPORATE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "n_minus_1_usable_vcpu": "44.80",
+        "required_memory_gib": "64.00",
+        "required_storage_tib": "5.00",
+        "required_vcpu": "16.00",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 9,
+        "domain": "RECOVERY_PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "2867.20",
+        "n_minus_1_usable_vcpu": "358.40",
+        "required_memory_gib": "1280.000000",
+        "required_storage_tib": "78.1250",
+        "required_vcpu": "320.000000",
+        "storage_shelves": 4,
+        "usable_storage_tib": "100"
+      },
+      {
+        "cpu_nodes": 4,
+        "domain": "RECOVERY_RESTRICTED",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 7,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "1075.20",
+        "n_minus_1_usable_vcpu": "134.40",
+        "required_memory_gib": "800.000000",
+        "required_storage_tib": "156.2500",
+        "required_vcpu": "100.000000",
+        "storage_shelves": 7,
+        "usable_storage_tib": "175"
+      }
+    ],
+    "year": 2029
+  },
+  {
+    "active_mode": "owned_colo",
+    "backup_tib": "714.0625000",
+    "cloud": {
+      "egress_tib_month": "0E-8",
+      "gpu_units": "0E-8",
+      "memory_gib": "0E-8",
+      "usable_storage_tib": "0.000000",
+      "vcpu": "0E-8"
+    },
+    "locations": {
+      "local": {
+        "kw": "3.25",
+        "racks": 1,
+        "u": "24"
+      },
+      "primary": {
+        "kw": "39.40",
+        "racks": 6,
+        "u": "162"
+      },
+      "recovery": {
+        "kw": "15.60",
+        "racks": 3,
+        "u": "90"
+      }
+    },
+    "mode": "phased_ownership",
+    "month": 37,
+    "owned": [
+      {
+        "cpu_nodes": 24,
+        "domain": "PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "8243.20",
+        "n_minus_1_usable_vcpu": "1030.40",
+        "required_memory_gib": "4000.000000",
+        "required_storage_tib": "97.656250",
+        "required_vcpu": "1000.000000",
+        "storage_shelves": 4,
+        "usable_storage_tib": "100"
+      },
+      {
+        "cpu_nodes": 7,
+        "domain": "RESTRICTED",
+        "gpu_hosts": 4,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 16,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "2150.40",
+        "n_minus_1_usable_vcpu": "268.80",
+        "required_memory_gib": "2000.000000",
+        "required_storage_tib": "195.312500",
+        "required_vcpu": "250.000000",
+        "storage_shelves": 8,
+        "usable_storage_tib": "200"
+      },
+      {
+        "cpu_nodes": 7,
+        "domain": "DEV",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 8,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "2150.40",
+        "n_minus_1_usable_vcpu": "268.80",
+        "required_memory_gib": "1000.000000",
+        "required_storage_tib": "39.062500",
+        "required_vcpu": "250.000000",
+        "storage_shelves": 2,
+        "usable_storage_tib": "50"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "SITE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320.000",
+        "required_storage_tib": "20.000",
+        "required_vcpu": "80.000",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 2,
+        "domain": "CORPORATE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "n_minus_1_usable_vcpu": "44.80",
+        "required_memory_gib": "64.000",
+        "required_storage_tib": "5.000",
+        "required_vcpu": "16.000",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 10,
+        "domain": "RECOVERY_PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "3225.60",
+        "n_minus_1_usable_vcpu": "403.20",
+        "required_memory_gib": "1600.00000000",
+        "required_storage_tib": "97.656250",
+        "required_vcpu": "400.00000000",
+        "storage_shelves": 4,
+        "usable_storage_tib": "100"
+      },
+      {
+        "cpu_nodes": 4,
+        "domain": "RECOVERY_RESTRICTED",
+        "gpu_hosts": 2,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 8,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "1075.20",
+        "n_minus_1_usable_vcpu": "134.40",
+        "required_memory_gib": "1000.00000000",
+        "required_storage_tib": "195.312500",
+        "required_vcpu": "125.00000000",
+        "storage_shelves": 8,
+        "usable_storage_tib": "200"
+      }
+    ],
+    "year": 2030
+  },
+  {
+    "active_mode": "owned_colo",
+    "backup_tib": "880.078125000",
+    "cloud": {
+      "egress_tib_month": "0E-10",
+      "gpu_units": "0E-10",
+      "memory_gib": "0E-10",
+      "usable_storage_tib": "0E-8",
+      "vcpu": "0E-10"
+    },
+    "locations": {
+      "local": {
+        "kw": "3.25",
+        "racks": 1,
+        "u": "24"
+      },
+      "primary": {
+        "kw": "48.05",
+        "racks": 7,
+        "u": "196"
+      },
+      "recovery": {
+        "kw": "19.75",
+        "racks": 4,
+        "u": "114"
+      }
+    },
+    "mode": "phased_ownership",
+    "month": 49,
+    "owned": [
+      {
+        "cpu_nodes": 29,
+        "domain": "PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "10035.20",
+        "n_minus_1_usable_vcpu": "1254.40",
+        "required_memory_gib": "5000.00000000",
+        "required_storage_tib": "122.07031250",
+        "required_vcpu": "1250.00000000",
+        "storage_shelves": 5,
+        "usable_storage_tib": "125"
+      },
+      {
+        "cpu_nodes": 8,
+        "domain": "RESTRICTED",
+        "gpu_hosts": 5,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 20,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "2508.80",
+        "n_minus_1_usable_vcpu": "313.60",
+        "required_memory_gib": "2500.00000000",
+        "required_storage_tib": "244.14062500",
+        "required_vcpu": "312.50000000",
+        "storage_shelves": 10,
+        "usable_storage_tib": "250"
+      },
+      {
+        "cpu_nodes": 8,
+        "domain": "DEV",
+        "gpu_hosts": 3,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 10,
+        "location": "primary",
+        "n_minus_1_usable_memory_gib": "2508.80",
+        "n_minus_1_usable_vcpu": "313.60",
+        "required_memory_gib": "1250.00000000",
+        "required_storage_tib": "48.82812500",
+        "required_vcpu": "312.50000000",
+        "storage_shelves": 2,
+        "usable_storage_tib": "50"
+      },
+      {
+        "cpu_nodes": 3,
+        "domain": "SITE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "716.80",
+        "n_minus_1_usable_vcpu": "89.60",
+        "required_memory_gib": "320.0000",
+        "required_storage_tib": "20.0000",
+        "required_vcpu": "80.0000",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 2,
+        "domain": "CORPORATE",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "local",
+        "n_minus_1_usable_memory_gib": "358.40",
+        "n_minus_1_usable_vcpu": "44.80",
+        "required_memory_gib": "64.0000",
+        "required_storage_tib": "5.0000",
+        "required_vcpu": "16.0000",
+        "storage_shelves": 1,
+        "usable_storage_tib": "25"
+      },
+      {
+        "cpu_nodes": 13,
+        "domain": "RECOVERY_PROD",
+        "gpu_hosts": 0,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 0,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "4300.80",
+        "n_minus_1_usable_vcpu": "537.60",
+        "required_memory_gib": "2000.0000000000",
+        "required_storage_tib": "122.07031250",
+        "required_vcpu": "500.0000000000",
+        "storage_shelves": 5,
+        "usable_storage_tib": "125"
+      },
+      {
+        "cpu_nodes": 5,
+        "domain": "RECOVERY_RESTRICTED",
+        "gpu_hosts": 3,
+        "gpu_n_plus_1_proven": false,
+        "gpu_units": 10,
+        "location": "recovery",
+        "n_minus_1_usable_memory_gib": "1433.60",
+        "n_minus_1_usable_vcpu": "179.20",
+        "required_memory_gib": "1250.0000000000",
+        "required_storage_tib": "244.14062500",
+        "required_vcpu": "156.2500000000",
+        "storage_shelves": 10,
+        "usable_storage_tib": "250"
+      }
+    ],
+    "year": 2031
+  }
+]
