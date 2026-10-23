@@ -1,0 +1,47 @@
+{
+  "schema": "SH_HISTORICAL_ADVISORY_VISUAL_RECOVERY_V1",
+  "source_date": "2026-09-09",
+  "import_date": "2026-10-23",
+  "status": "PROPOSED_HISTORICAL_VISUAL_NOT_LOCKED_IDENTITY",
+  "source_repo_commit_referenced": "7988f47",
+  "package_source_download_name": "Sable-Harbor-Advisory-Identity-Package.zip",
+  "release_tag": "advisory-visual-proposal-historical-2026-09-09",
+  "package_bytes": 950630,
+  "package_sha256": "bb1f144e842d7790736eb6f49dedd537681c48f521207268b8459584d407322f",
+  "package_crc_pass": true,
+  "source_assets": [
+    {
+      "repo_path": "SOURCE_MANIFEST.json",
+      "bytes": 579,
+      "sha256": "10e36f669fbbdaa5e449a94c5cd965803cfb6b3f3357f1368e97faf899bcf778"
+    },
+    {
+      "repo_path": "SOURCE_README.md",
+      "bytes": 2093,
+      "sha256": "e1a30c8526adfb064be33a575d113d8de946821dca0f104a0df1335960be0968"
+    },
+    {
+      "repo_path": "Sable-Harbor-Advisory-Letterhead-Print-Packaged.pdf",
+      "bytes": 380136,
+      "sha256": "2e14ecd8e89a51885eb7c8f5e6acd6bdbc47f778744a8c8a77ec57f1244512d1"
+    },
+    {
+      "repo_path": "Sable-Harbor-Advisory-Letterhead-Print-Standalone.pdf",
+      "bytes": 405111,
+      "sha256": "c624c896cbe4f316b5ee49598bddff4b04852397e4a14826afcb7e4e69f4c850"
+    },
+    {
+      "repo_path": "Sable-Harbor-Advisory-Letterhead.docx",
+      "bytes": 339625,
+      "sha256": "807d498c0abfefb168949590b5475702cdadc7cba62c5be39b8617a32a108ed5"
+    },
+    {
+      "repo_path": "Sable-Harbor-Advisory-Logo.png",
+      "bytes": 318583,
+      "sha256": "68d90efc5fe05fc7956b3d5b7e8acaf1f501cf6d6ca4d8d6d7f92d17e9775467"
+    }
+  ],
+  "standalone_pdf_source_download_name": "Sable-Harbor-Advisory-Letterhead-Print.pdf",
+  "standalone_pdf_relation": "different exact bytes from packaged PDF; Poppler rasterizations match at 1200 px with zero changed pixels; retain both editions",
+  "standalone_logo_and_docx_relation": "standalone Download logo and DOCX exact SHA-256 matches packaged members"
+}
