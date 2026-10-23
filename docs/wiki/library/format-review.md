@@ -6,11 +6,11 @@ This list helps maintainers check which source documents have formatted companio
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 452 |
+| COUNTERPART_REVIEW_REQUIRED | 457 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
-| READER_MAINTENANCE_NO_LETTERHEAD | 102 |
-| READER_OR_MAINTENANCE_PAGE | 211 |
+| READER_MAINTENANCE_NO_LETTERHEAD | 101 |
+| READER_OR_MAINTENANCE_PAGE | 215 |
 | UNRESOLVED_DOCUMENT_COUNTERPART | 218 |
 | VERIFIED_ACCEPTED_EVIDENCE_PACKET | 1 |
 | VERIFIED_DOCUMENT_PAIR | 148 |
@@ -52,6 +52,8 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Geographic closeout — synthetic edition scope](../../canon/GEOGRAPHIC_SYNTHETIC_SCOPE_DISPOSITION_2026-09-29.md) — Corporate document-format reconciliation
 - [Headquarters exterior visual withdrawn](../../canon/HEADQUARTERS_VISUAL_WITHDRAWAL_2026-09-22.md) — Corporate document-format reconciliation
 - [Klein shop and Fort occupancy continuity](../../canon/KLEIN_FORT_OCCUPANCY_2026-09-13.md) — Corporate document-format reconciliation
+- [SABLE HARBOR — Recovered office and estate work](../../facilities/history/office-estate-review-2026-09-11/original/START_HERE_Recovery_Status.md) — Corporate document-format reconciliation
+- [SABLE HARBOR — Offices, Facilities, and Locations Handover](../../facilities/history/office-estate-review-2026-09-11/original/context/SABLE_HARBOR_Offices_and_Locations_Handover_2026-09-11.md) — Corporate document-format reconciliation
 - [Accounting, finance and audit practice](../../finance/READER_EXERCISES.md) — SH-FIN-HUMAN-001
 - [Current disposition of the Foundry Field billing proposal](../../finance/evidence/billing-proposal/CURRENT.md) — SH-FIN-HUMAN-001
 - [Invoice](../../finance/evidence/billing/FF-003-v1/INVOICE.md) — SH-FIN-HUMAN-001
@@ -74,6 +76,8 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Transaction cash and conditional tax support](../../finance/evidence/tax-transaction/draft/WORKING_PAPER.md) — SH-FIN-HUMAN-001
 - [Procurement, payables and Treasury](../../finance/evidence/treasury/draft/WORKING_PAPER.md) — SH-FIN-HUMAN-001
 - [Finance and accounting: human evidence completion handoff](../../handoffs/FINANCE_HUMAN_EVIDENCE_COMPLETION.md) — Corporate document-format reconciliation
+- [ARU / Red Wash / Pale Sun handoff R1 — historical predecessor](../../handoffs/industrial_r1/INDEX.md) — Corporate document-format reconciliation
+- [SABLE HARBOR — FULL-STATE CODEX IMPLEMENTATION HANDOFF](../../handoffs/industrial_r1/SABLE_HARBOR_ARU_RED_WASH_PALE_SUN_CODEX_HANDOFF_FULL_STATE.md) — Corporate document-format reconciliation
 - [Daedalus local-model boundary receipt — September 28, 2026](../../internal/DAEDALUS_MODEL_BOUNDARY_RECEIPT_2026-09-28.md) — Corporate document-format reconciliation
 - [Open Canon and Post-Merge Hygiene Issue Index](../../internal/OPEN_CANON_AND_HYGIENE_ISSUE_INDEX.md) — Corporate document-format reconciliation
 - [Independent capital export and selected-review route](../../internal/company-closeout/CAPITAL_EXPORT_REVIEW_2026-09-22.md) — Corporate document-format reconciliation
@@ -273,6 +277,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Facility atlas controlled releases](../../releases/FACILITY_ATLAS_RELEASES.md) — Corporate document-format reconciliation
 - [Geographic evidence 1.5.0 — accepted delivery receipt](../../releases/GEOGRAPHIC_EVIDENCE_1_5_0_RECEIPT.md) — Corporate document-format reconciliation
 - [Geographic evidence releases](../../releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) — Corporate document-format reconciliation
+- [Industrial case releases](../../releases/INDUSTRIAL_CASE_RELEASES.md) — Corporate document-format reconciliation
 - [Local access-remediation continuation](../../../enterprise/audit_suite/ACCESS_REMEDIATION_ACTIVITY.md) — Corporate document-format reconciliation
 - [Declared-subject access review continuation](../../../enterprise/audit_suite/ACCESS_REVIEW_CONTINUATION.md) — Corporate document-format reconciliation
 - [Adjacent declared-subject access review](../../../enterprise/audit_suite/ACCESS_REVIEW_SUCCESSOR.md) — Corporate document-format reconciliation

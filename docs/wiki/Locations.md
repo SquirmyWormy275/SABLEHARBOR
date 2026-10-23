@@ -44,4 +44,9 @@ The [September 5 geographic foundation and addendum](../../geospatial/history/fo
 retain the earlier map conflict and its subsequent correction as historical
 source packages. They do not replace the current locations above.
 
+The [September 11 office estate review](../facilities/history/office-estate-review-2026-09-11/README.md)
+is an earlier recovered planning draft. Its proposed accommodations, capacity
+cases and ten queued decisions remain historical; the three missing companion
+files are listed in its source manifest. It does not amend the current locations.
+
 Sable Harbor and its sites are fictional. Real towns and geographic references provide the setting; the company maps do not establish real property rights.
