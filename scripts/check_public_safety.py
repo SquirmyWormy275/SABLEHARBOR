@@ -53,10 +53,16 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # 148 publication pairs, 294 relationships, 384 counterpart rows, 12
     # evidence packages, 237 artifacts and one evidence link are exact-equal.
     # Both databases pass SQLite quick_check and foreign-key verification.
+    # The recovered September 11 office-estate draft adds four historical
+    # Markdown source/guide rows (1,699 -> 1,703) and refreshes the Locations
+    # Wiki reader entry on accepted main cdb33b6c. All 148 institutional
+    # objects and publication pairs, 294 relationships, 384 counterpart rows,
+    # 12 evidence packages, 237 artifacts and one evidence link remain
+    # logically exact-equal. SQLite quick_check and foreign keys pass.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        15599616,
-        "fa19d1a9e36cbabe91d7516726eebebb2cdd382f98210e7d3a7004d23ba27f94",
+        15687680,
+        "3486272ffed0ace7871166834cfa328133d08fdaf503eae58cab2ec1c55fd439",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.
