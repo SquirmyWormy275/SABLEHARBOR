@@ -13,6 +13,11 @@ Follow the money from a business question to the workbook and the records behind
 
 Keep each exercise's period, scenario and source edition together. The [business model design](BUSINESS_DRIVEN_SUCCESSOR_2026-09-09.md) explains which later assumptions replace the earlier platform forecast and which historical records remain unchanged.
 
+The [undated September financial build readiness report](history/build-readiness-undated-2026-09/README.md)
+is a historical planning predecessor. Its workforce, revenue and capital
+ranges were scenarios reviewed before PR #9 merged, not observed company
+results or current canon.
+
 ## Reproduce the original v0.1 platform
 
 The instructions below describe the original, reproducible enterprise v0.1 edition—not the whole company's current financial or legal position.

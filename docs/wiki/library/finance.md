@@ -250,6 +250,11 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 - [working-paper](../../finance/evidence/treasury/draft/working-paper.pdf) — PDF
 - [working-papers](../../finance/evidence/treasury/draft/working-papers.xlsx) — XLSX
 
+## `docs/finance/history/build-readiness-undated-2026-09`
+
+- [Historical financial build readiness analysis](../../finance/history/build-readiness-undated-2026-09/README.md) — MD
+- [Sable Harbor Financial Build Readiness Report](../../finance/history/build-readiness-undated-2026-09/Sable_Harbor_Financial_Build_Readiness_Report.pdf) — PDF
+
 ## `docs/finance/publications`
 
 - [ARU secured financing successor — September 22, 2026 — SH-ARU-SECURED-20260922_v1.0.0](../../finance/publications/SH-ARU-SECURED-20260922_v1.0.0.pdf) — PDF

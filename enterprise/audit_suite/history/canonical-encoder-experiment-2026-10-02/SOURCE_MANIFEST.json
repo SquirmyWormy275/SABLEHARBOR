@@ -1,0 +1,19 @@
+{
+  "accepted_main_history_exact_blob_match": false,
+  "bytes": 3394,
+  "git_blob_oid": "f4a92ee03f17677dd506f324cd4d9ab20eaa9579",
+  "import_date": "2026-10-23",
+  "original_file": "original/canonical_encoder_experiment.py",
+  "related_compiled_binary": {
+    "bytes": 16400,
+    "disposition": "UNRESOLVED_GENERATED_BINARY_EXACT_SEAGATE_MEMBER_AND_LOCAL_COPY",
+    "sha256": "aa9bc2d4438abbb6c3d415d31569d10ba94a6ab52dbeb6aec7388ff6eb225033",
+    "source_relative_path": "enterprise/audit_suite/_canonical_fragmenter_native.cpython-312-x86_64-linux-gnu.so"
+  },
+  "schema": "sableharbor-canonical-encoder-experiment-history-v1",
+  "sha256": "102b1f195d4a82f7bcd7f655eb50dc8ffc3328643f6961ce6574543633d60af9",
+  "source_file_mtime_local": "2026-10-02T12:00:50-07:00",
+  "source_relative_path": "enterprise/audit_suite/canonical_encoder_experiment.py",
+  "source_worktree_head": "a07039ad4a361b5d45eb250565e9ad8827b6c0a0",
+  "status": "UNTRACKED_UNADOPTED_ENCODER_EXPERIMENT_NOT_CURRENT_CODEC"
+}
