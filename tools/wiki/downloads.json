@@ -1,6 +1,22 @@
 {
-  "reviewed": "2026-10-07",
   "releases": [
+    {
+      "assets": [
+        {
+          "bytes": 1961,
+          "name": "RECOVERY_MANIFEST.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/advisory-visual-proposal-historical-2026-09-09/RECOVERY_MANIFEST.json"
+        },
+        {
+          "bytes": 950630,
+          "name": "Sable-Harbor-Advisory-Identity-Package.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/advisory-visual-proposal-historical-2026-09-09/Sable-Harbor-Advisory-Identity-Package.zip"
+        }
+      ],
+      "tag": "advisory-visual-proposal-historical-2026-09-09",
+      "title": "Advisory visual proposal \u2014 historical 2026-09-09",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/advisory-visual-proposal-historical-2026-09-09"
+    },
     {
       "assets": [
         {
@@ -610,6 +626,50 @@
     {
       "assets": [
         {
+          "bytes": 88672423,
+          "name": "SABLE_HARBOR_COMPLETE_CODEX_HANDOVER_AND_RECOVERY_2026-09-11.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/facility-workline-staged-history-2026-09-11/SABLE_HARBOR_COMPLETE_CODEX_HANDOVER_AND_RECOVERY_2026-09-11.zip"
+        },
+        {
+          "bytes": 85188887,
+          "name": "SABLE_HARBOR_FACILITIES_RECOVERY_2026-09-11.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/facility-workline-staged-history-2026-09-11/SABLE_HARBOR_FACILITIES_RECOVERY_2026-09-11.zip"
+        },
+        {
+          "bytes": 304593,
+          "name": "SOURCE_MANIFEST.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/facility-workline-staged-history-2026-09-11/SOURCE_MANIFEST.json"
+        }
+      ],
+      "tag": "facility-workline-staged-history-2026-09-11",
+      "title": "Historical staged facility workline, 11 September 2026",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/facility-workline-staged-history-2026-09-11"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 207,
+          "name": "CHECKSUMS.sha256",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/finance-closeout-local-history-2026-09-14-22/CHECKSUMS.sha256"
+        },
+        {
+          "bytes": 11880,
+          "name": "MANIFEST.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/finance-closeout-local-history-2026-09-14-22/MANIFEST.json"
+        },
+        {
+          "bytes": 79328,
+          "name": "sableharbor-finance-closeout-local-history-2026-09-14-22.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/finance-closeout-local-history-2026-09-14-22/sableharbor-finance-closeout-local-history-2026-09-14-22.zip"
+        }
+      ],
+      "tag": "finance-closeout-local-history-2026-09-14-22",
+      "title": "Historical local finance closeout correction stages, September 14\u201322",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/finance-closeout-local-history-2026-09-14-22"
+    },
+    {
+      "assets": [
+        {
           "bytes": 3753,
           "name": "ACCEPTANCE.json",
           "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.0.0/ACCEPTANCE.json"
@@ -1102,6 +1162,60 @@
     {
       "assets": [
         {
+          "bytes": 33774,
+          "name": "SOURCE_MANIFEST.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.5.0-previews-history-2026-10-03/SOURCE_MANIFEST.json"
+        },
+        {
+          "bytes": 237428120,
+          "name": "sable-harbor-geographic-evidence-v1.5.0-b165-preview.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.5.0-previews-history-2026-10-03/sable-harbor-geographic-evidence-v1.5.0-b165-preview.zip"
+        },
+        {
+          "bytes": 237428120,
+          "name": "sable-harbor-geographic-evidence-v1.5.0-finalhead-preview.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.5.0-previews-history-2026-10-03/sable-harbor-geographic-evidence-v1.5.0-finalhead-preview.zip"
+        },
+        {
+          "bytes": 237429017,
+          "name": "sable-harbor-geographic-evidence-v1.5.0-preview.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.5.0-previews-history-2026-10-03/sable-harbor-geographic-evidence-v1.5.0-preview.zip"
+        },
+        {
+          "bytes": 1862,
+          "name": "sableharbor-geo-preview-fresh-retrieval-20261023.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geographic-evidence-v1.5.0-previews-history-2026-10-03/sableharbor-geo-preview-fresh-retrieval-20261023.json"
+        }
+      ],
+      "tag": "geographic-evidence-v1.5.0-previews-history-2026-10-03",
+      "title": "Geographic evidence v1.5.0 unaccepted previews",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/geographic-evidence-v1.5.0-previews-history-2026-10-03"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 101321708,
+          "name": "SABLE_HARBOR_Geospatial_Addendum_v0.2.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geospatial-foundation-addendum-historical-2026-09-05/SABLE_HARBOR_Geospatial_Addendum_v0.2.0.zip"
+        },
+        {
+          "bytes": 11983745,
+          "name": "SABLE_HARBOR_Geospatial_Foundation_v0.1.0.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geospatial-foundation-addendum-historical-2026-09-05/SABLE_HARBOR_Geospatial_Foundation_v0.1.0.zip"
+        },
+        {
+          "bytes": 106569,
+          "name": "SOURCE_MANIFEST.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geospatial-foundation-addendum-historical-2026-09-05/SOURCE_MANIFEST.json"
+        }
+      ],
+      "tag": "geospatial-foundation-addendum-historical-2026-09-05",
+      "title": "Historical geographic foundation and addendum \u2014 September 5, 2026",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/geospatial-foundation-addendum-historical-2026-09-05"
+    },
+    {
+      "assets": [
+        {
           "bytes": 51867,
           "name": "MANIFEST.json",
           "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/geospatial-v0.1.0-rc4/MANIFEST.json"
@@ -1120,6 +1234,84 @@
       "tag": "geospatial-v0.1.0-rc4",
       "title": "Sable Harbor geospatial v0.1.0-rc4",
       "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/geospatial-v0.1.0-rc4"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 201,
+          "name": "CHECKSUMS.sha256",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/governance-j2-local-history-2026-09-02/CHECKSUMS.sha256"
+        },
+        {
+          "bytes": 15157,
+          "name": "MANIFEST.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/governance-j2-local-history-2026-09-02/MANIFEST.json"
+        },
+        {
+          "bytes": 73631,
+          "name": "sableharbor-governance-j2-local-history-2026-09-02.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/governance-j2-local-history-2026-09-02/sableharbor-governance-j2-local-history-2026-09-02.zip"
+        }
+      ],
+      "tag": "governance-j2-local-history-2026-09-02",
+      "title": "Historical local governance and J2 source stages, September 2",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/governance-j2-local-history-2026-09-02"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 201,
+          "name": "CHECKSUMS.sha256",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/governance-j2-local-history-2026-09-03/CHECKSUMS.sha256"
+        },
+        {
+          "bytes": 144766,
+          "name": "MANIFEST.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/governance-j2-local-history-2026-09-03/MANIFEST.json"
+        },
+        {
+          "bytes": 3426574,
+          "name": "sableharbor-governance-j2-local-history-2026-09-03.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/governance-j2-local-history-2026-09-03/sableharbor-governance-j2-local-history-2026-09-03.zip"
+        }
+      ],
+      "tag": "governance-j2-local-history-2026-09-03",
+      "title": "Historical local governance, J2 and Alexandria source stages, September 3",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/governance-j2-local-history-2026-09-03"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 5358035,
+          "name": "SABLE_HARBOR_ARU_RED_WASH_PALE_SUN_CODEX_HANDOFF_2026-09-05.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/industrial-handoff-r1-historical-2026-09-05/SABLE_HARBOR_ARU_RED_WASH_PALE_SUN_CODEX_HANDOFF_2026-09-05.zip"
+        },
+        {
+          "bytes": 7679,
+          "name": "SOURCE_MANIFEST.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/industrial-handoff-r1-historical-2026-09-05/SOURCE_MANIFEST.json"
+        }
+      ],
+      "tag": "industrial-handoff-r1-historical-2026-09-05",
+      "title": "Historical September 5 industrial R1 handoff",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/industrial-handoff-r1-historical-2026-09-05"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 219212,
+          "name": "SABLE_HARBOR_Office_Work_Recovery_2026-09-11.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/office-estate-review-draft-history-2026-09-11/SABLE_HARBOR_Office_Work_Recovery_2026-09-11.zip"
+        },
+        {
+          "bytes": 4309,
+          "name": "SOURCE_MANIFEST.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/office-estate-review-draft-history-2026-09-11/SOURCE_MANIFEST.json"
+        }
+      ],
+      "tag": "office-estate-review-draft-history-2026-09-11",
+      "title": "September 11 office estate review \u2014 recovered draft",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/office-estate-review-draft-history-2026-09-11"
     },
     {
       "assets": [
@@ -1508,6 +1700,24 @@
       "tag": "sable-harbor-legal-review-v0.4.0-review.3",
       "title": "Accounting and legal review tools v0.4.0-review.3",
       "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/sable-harbor-legal-review-v0.4.0-review.3"
+    },
+    {
+      "assets": [
+        {
+          "bytes": 94541,
+          "name": "SABLE_HARBOR_Service_Operating_Model_4c83886.zip",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/service-operating-model-historical-2026-09-10/SABLE_HARBOR_Service_Operating_Model_4c83886.zip"
+        },
+        {
+          "bytes": 9209,
+          "name": "SOURCE_MANIFEST.json",
+          "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/service-operating-model-historical-2026-09-10/SOURCE_MANIFEST.json"
+        }
+      ],
+      "tag": "service-operating-model-historical-2026-09-10",
+      "title": "Historical September 10 service operating model",
+      "url": "https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/service-operating-model-historical-2026-09-10"
     }
-  ]
+  ],
+  "reviewed": "2026-10-23"
 }

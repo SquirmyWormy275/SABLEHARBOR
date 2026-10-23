@@ -259,6 +259,20 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 - [Historical financial build readiness analysis](../../finance/history/build-readiness-undated-2026-09/README.md) — MD
 - [Sable Harbor Financial Build Readiness Report](../../finance/history/build-readiness-undated-2026-09/Sable_Harbor_Financial_Build_Readiness_Report.pdf) — PDF
 
+## `docs/finance/history/corporate-reconstruction-remote-2026-09-03`
+
+- [September 2026 finance reconstruction branch: preserved diagnostic editions](../../finance/history/corporate-reconstruction-remote-2026-09-03/README.md) — MD
+
+## `docs/finance/history/corporate-reconstruction-remote-2026-09-03/originals/executable/docs/finance`
+
+- [Sable Harbor finance reconstruction](../../finance/history/corporate-reconstruction-remote-2026-09-03/originals/executable/docs/finance/README.md) — MD
+- [Sable Harbor financial reconstruction — Phase 0/1](../../finance/history/corporate-reconstruction-remote-2026-09-03/originals/executable/docs/finance/SABLE_HARBOR_FINANCIAL_RECONSTRUCTION_PHASE_0_1.md) — MD
+
+## `docs/finance/history/corporate-reconstruction-remote-2026-09-03/originals/initial/docs/finance`
+
+- [Sable Harbor finance reconstruction](../../finance/history/corporate-reconstruction-remote-2026-09-03/originals/initial/docs/finance/README.md) — MD
+- [Sable Harbor financial reconstruction — Phase 0/1](../../finance/history/corporate-reconstruction-remote-2026-09-03/originals/initial/docs/finance/SABLE_HARBOR_FINANCIAL_RECONSTRUCTION_PHASE_0_1.md) — MD
+
 ## `docs/finance/publications`
 
 - [ARU secured financing successor — September 22, 2026 — SH-ARU-SECURED-20260922_v1.0.0](../../finance/publications/SH-ARU-SECURED-20260922_v1.0.0.pdf) — PDF
