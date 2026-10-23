@@ -49,3 +49,15 @@ host classifications directly from the current register. Source-impact reporting
 must continue to show the whole-register change; this disposition does not hide
 that change or authorize source-impact baseline refreshes by itself. The successor review bundle includes this audit for current-main compatibility.
 Earlier bundles and their original snapshot pins remain unchanged.
+
+## October 23 current toolchain successor
+
+The [PR #211 Pillow successor](PR211-toolchain.json) preserves the exact
+[previous reviewed requirements](requirements-before-PR211.txt) and admits
+only the `Pillow==12.3.0` to `Pillow==13.0.0` current-toolchain change.
+`tools/legal_gaps/toolchain_successor.py` verifies both the earlier PR #168
+transition and this dated transition by pinned bytes and SHA-256. The legal
+manifest, its original build input, and every source-locked publication remain
+unchanged. Pillow 13.0.0 is not represented as the historical generator.
+The successor stays provisional until the final PR head passes hosted legal,
+source-integrity and publication checks.
