@@ -1,0 +1,11 @@
+# September 11 office estate review — recovered draft
+
+**Status:** Historical DRAFT. Owner decisions were pending. No proposed office, campus, lease, budget, headcount base or funding in this edition is accepted merely because it appears here.
+
+The original recovery ZIP is `SABLE_HARBOR_Office_Work_Recovery_2026-09-11.zip`, SHA-256 `14f9e802d106fa0023285291ce7254603262f8a070cc2160c93953d378e4fe8a` (219,212 bytes). Its 13 regular members are preserved byte for byte under [`original/`](original/). The [source manifest](SOURCE_MANIFEST.json) gives every member's size, CRC and SHA-256, as well as the source commit, branch and recovery date. Run `python verify.py /path/to/SABLE_HARBOR_Office_Work_Recovery_2026-09-11.zip` to compare the archive and tracked originals. The unchanged ZIP is intended for the dated historical Release after this source is accepted.
+
+The draft used public source commit `2b52933132e028bf5d9c9a8c151bb45cb0f19597` and was recovered September 11 at 16:43 UTC. This Git preservation was imported October 23. It is a planning predecessor to the accepted [locations guide](../../../wiki/Locations.md), [geospatial facilities source](../../../../geospatial/facilities/README.md), and later runtime/organization records. Those current sources control where the draft differs. The draft's 770 gap rows are overlapping review records, not 770 real facilities. Its capacity figures are synthetic planning cases, not observed payroll or approved spend.
+
+The recovery manifest explicitly names three absent companion files: `SOURCES.md`, `IMPLEMENTATION.md`, and `VALIDATION.md`. Its earlier claim of 113 checked source hashes has not been independently reperformed here. This intake verified the 13 ZIP members and the ten original draft files declared by the recovery manifest; it cannot establish the missing work or a completed estate decision. The original `recovered-draft/README.md`, `START_HERE_Recovery_Status.md`, and context handover retain the authoring caveats and proposed decisions.
+
+No source-locked later facility release is changed. Other Seagate and workstation recovery families remain in the reconciliation register. No local copy is cleared for deletion by this edition.

@@ -1,0 +1,114 @@
+{
+  "archive_regular_members": 13,
+  "declared_original_draft_files": 10,
+  "entries": [
+    {
+      "bytes": 13124,
+      "crc32": "5f897d7b",
+      "member": "START_HERE_Recovery_Status.md",
+      "role": "recovery_context_or_manifest",
+      "sha256": "09be7ba666abf131febc48795f381fe8b68afa30fef3f2c183729ba7b6b346d8"
+    },
+    {
+      "bytes": 2232,
+      "crc32": "45e8efc2",
+      "member": "RECOVERY-MANIFEST.json",
+      "role": "recovery_context_or_manifest",
+      "sha256": "91eedf59f176d6a3ee64ac631a476b7ba8251f441cbb2a0db41444df7b873165"
+    },
+    {
+      "bytes": 24436,
+      "crc32": "b3673dd5",
+      "member": "recovered-draft/README.md",
+      "role": "manifest_declared_draft",
+      "sha256": "24da0bd3a4ec4b3199ba2614f4b10c402a47534ec0dfbc082842f4d55d8895f4"
+    },
+    {
+      "bytes": 14457,
+      "crc32": "48de8845",
+      "member": "recovered-draft/build_review.py",
+      "role": "manifest_declared_draft",
+      "sha256": "8dd31552ff175469d978bb8b48ed7f2bd6a6dca113f05309129b763da39df4b0"
+    },
+    {
+      "bytes": 817,
+      "crc32": "9cd80331",
+      "member": "recovered-draft/capacity-cost-bridge.csv",
+      "role": "manifest_declared_draft",
+      "sha256": "56034a30c89d87eeb8615254f8a4ef36c994dbe52ae642783db8d0193d81892a"
+    },
+    {
+      "bytes": 18491,
+      "crc32": "e4b33ffe",
+      "member": "recovered-draft/capacity-cost-bridge.json",
+      "role": "manifest_declared_draft",
+      "sha256": "6378abddeee0ee77a4606f3739900151c389d40b7b3217f5f6fff464255ae2f0"
+    },
+    {
+      "bytes": 47259,
+      "crc32": "cbc992a0",
+      "member": "recovered-draft/estate-proposal.json",
+      "role": "manifest_declared_draft",
+      "sha256": "244e148fe63c3eec805011a5ace9025c0dc071414e8fd05d7f889cf3904d9bc8"
+    },
+    {
+      "bytes": 183224,
+      "crc32": "6290f0bf",
+      "member": "recovered-draft/gap-inventory.csv",
+      "role": "manifest_declared_draft",
+      "sha256": "55c0741d4d3f23d8b6cf4d58a0daf8f8db49975b49885646e6b34d0ec81669f7"
+    },
+    {
+      "bytes": 932673,
+      "crc32": "5614f3a0",
+      "member": "recovered-draft/gap-inventory.json",
+      "role": "manifest_declared_draft",
+      "sha256": "cd1a42a5f3f8f1ec1054b809c422cba30cafd0a2f5abf497b9cd5c7d4001faa0"
+    },
+    {
+      "bytes": 149744,
+      "crc32": "a0086354",
+      "member": "recovered-draft/office-remit-register.json",
+      "role": "manifest_declared_draft",
+      "sha256": "6c641a7e7834fa0e88e07771fb26d069d2029df1593a8ec0624800375c121827"
+    },
+    {
+      "bytes": 753,
+      "crc32": "a36d3b1e",
+      "member": "recovered-draft/review-summary.json",
+      "role": "manifest_declared_draft",
+      "sha256": "ae565756a951409df4cd270648037c99956d5602deb8b022b282697c416f98a8"
+    },
+    {
+      "bytes": 401898,
+      "crc32": "c80cecc9",
+      "member": "recovered-draft/source-review.json",
+      "role": "manifest_declared_draft",
+      "sha256": "a2873f62834bfaa53c426a569cc6a7c692f28aa1e58a3e392bb11a46d8a46821"
+    },
+    {
+      "bytes": 16591,
+      "crc32": "286fcca1",
+      "member": "context/SABLE_HARBOR_Offices_and_Locations_Handover_2026-09-11.md",
+      "role": "recovery_context_or_manifest",
+      "sha256": "32f99257ddd696213873447e2ac4db6688a358178c0f11263b4af1860f4f4fc4"
+    }
+  ],
+  "import_date": "2026-10-23",
+  "independently_verified_original_draft_files": 10,
+  "missing_companions": [
+    "SOURCES.md",
+    "IMPLEMENTATION.md",
+    "VALIDATION.md"
+  ],
+  "original_archive": "SABLE_HARBOR_Office_Work_Recovery_2026-09-11.zip",
+  "original_archive_bytes": 219212,
+  "original_archive_sha256": "14f9e802d106fa0023285291ce7254603262f8a070cc2160c93953d378e4fe8a",
+  "proposed_release_tag": "office-estate-review-draft-history-2026-09-11",
+  "schema": "sableharbor-office-work-recovery-history-v1",
+  "source_base_commit": "2b52933132e028bf5d9c9a8c151bb45cb0f19597",
+  "source_local_branch": "planning/enterprise-estate-2026-09-11",
+  "source_recovered_at_utc": "2026-09-11T16:43:15.312791+00:00",
+  "source_status": "DRAFT_OWNER_DECISIONS_PENDING_NOT_CANON",
+  "status_limit": "The source recovery manifest asserts 113 source hashes checked in its earlier process; this intake independently verifies only the ten recovered original-file bytes and all 13 ZIP members/CRC. It does not establish completed estate or facility decisions."
+}

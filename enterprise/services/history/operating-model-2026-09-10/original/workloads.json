@@ -1,0 +1,182 @@
+[
+  {
+    "annual_growth": "1.25",
+    "approved_rpo_hours": null,
+    "approved_rto_hours": null,
+    "decision_section": "5.1",
+    "id": "PROD",
+    "name": "Primary production",
+    "notes": "Prioritized customer transaction/workspace services, restore plus reconciliation; degraded features allowed only by product acceptance.",
+    "owner": "TEAM-platform",
+    "physical_site_id": null,
+    "proposed_rpo_hours": "0.25",
+    "proposed_rto_hours": "4",
+    "recovery_acceptance_evidence": null,
+    "required_evidence": [
+      "Workload benchmark and storage-growth telemetry",
+      "Business impact and recovery priority approval",
+      "Dependency restoration and timed failover/failback test",
+      "Access, key and data-integrity reconciliation"
+    ],
+    "service_hours": "24x7 service; business-hours engineering plus qualified on-call",
+    "source": "decision",
+    "state": "PROPOSED_SIZING_AND_RECOVERY_ASSUMPTIONS",
+    "year1": {
+      "egress_tib_month": 30,
+      "gpu_units": 0,
+      "memory_gib": 2048,
+      "usable_storage_tib": 50,
+      "vcpu": 512
+    }
+  },
+  {
+    "annual_growth": "1.25",
+    "approved_rpo_hours": null,
+    "approved_rto_hours": null,
+    "decision_section": "5.3",
+    "id": "RESTRICTED",
+    "name": "Restricted institutional / Alexandria",
+    "notes": "Same classification/authority at recovery; no default frontier/public-cloud disclosure; retention and entitlement policy remain OPEN.",
+    "owner": "TEAM-j2",
+    "physical_site_id": null,
+    "proposed_rpo_hours": "1",
+    "proposed_rto_hours": "8",
+    "recovery_acceptance_evidence": null,
+    "required_evidence": [
+      "Workload benchmark and storage-growth telemetry",
+      "Business impact and recovery priority approval",
+      "Dependency restoration and timed failover/failback test",
+      "Access, key and data-integrity reconciliation"
+    ],
+    "service_hours": "Institutional service with on-call restoration",
+    "source": "decision",
+    "state": "PROPOSED_SIZING_AND_RECOVERY_ASSUMPTIONS",
+    "year1": {
+      "egress_tib_month": 2,
+      "gpu_units": 8,
+      "memory_gib": 1024,
+      "usable_storage_tib": 100,
+      "vcpu": 128
+    }
+  },
+  {
+    "annual_growth": "1.25",
+    "approved_rpo_hours": null,
+    "approved_rto_hours": null,
+    "decision_section": "5.4",
+    "id": "DEV",
+    "name": "Development and evaluation",
+    "notes": "Rebuild disposable runners from controlled code; source and signed release artifacts have stricter recovery overlays.",
+    "owner": "TEAM-developer",
+    "physical_site_id": null,
+    "proposed_rpo_hours": "24",
+    "proposed_rto_hours": "24",
+    "recovery_acceptance_evidence": null,
+    "required_evidence": [
+      "Workload benchmark and storage-growth telemetry",
+      "Business impact and recovery priority approval",
+      "Dependency restoration and timed failover/failback test",
+      "Access, key and data-integrity reconciliation"
+    ],
+    "service_hours": "Business hours; planned unattended builds",
+    "source": "decision",
+    "state": "PROPOSED_SIZING_AND_RECOVERY_ASSUMPTIONS",
+    "year1": {
+      "egress_tib_month": 10,
+      "gpu_units": 4,
+      "memory_gib": 512,
+      "usable_storage_tib": 20,
+      "vcpu": 128
+    }
+  },
+  {
+    "annual_growth": "1.0",
+    "approved_rpo_hours": null,
+    "approved_rto_hours": null,
+    "decision_section": "5.5",
+    "id": "SITE",
+    "name": "Industrial/site installations",
+    "notes": "Local qualified control and safe shutdown independent of WAN; 8h is business-compute restore, never a safety-system downtime allowance.",
+    "owner": "TEAM-ot",
+    "physical_site_id": null,
+    "proposed_rpo_hours": "1",
+    "proposed_rto_hours": "8",
+    "recovery_acceptance_evidence": null,
+    "required_evidence": [
+      "Workload benchmark and storage-growth telemetry",
+      "Business impact and recovery priority approval",
+      "Dependency restoration and timed failover/failback test",
+      "Access, key and data-integrity reconciliation"
+    ],
+    "service_hours": "Site schedule and local operating authority",
+    "source": "decision",
+    "state": "PROPOSED_SIZING_AND_RECOVERY_ASSUMPTIONS",
+    "year1": {
+      "egress_tib_month": 2,
+      "gpu_units": 0,
+      "memory_gib": 320,
+      "usable_storage_tib": 20,
+      "vcpu": 80
+    }
+  },
+  {
+    "annual_growth": "1.0",
+    "approved_rpo_hours": null,
+    "approved_rto_hours": null,
+    "decision_section": "5.6",
+    "id": "CORPORATE",
+    "name": "Corporate and teaching",
+    "notes": "Provider availability/export constraints require verification; no replication of a vendor SaaS runtime is assumed.",
+    "owner": "TEAM-applications",
+    "physical_site_id": null,
+    "proposed_rpo_hours": "24",
+    "proposed_rto_hours": "24",
+    "recovery_acceptance_evidence": null,
+    "required_evidence": [
+      "Workload benchmark and storage-growth telemetry",
+      "Business impact and recovery priority approval",
+      "Dependency restoration and timed failover/failback test",
+      "Access, key and data-integrity reconciliation"
+    ],
+    "service_hours": "Employee/teaching schedule; priority exceptions",
+    "source": "decision",
+    "state": "PROPOSED_SIZING_AND_RECOVERY_ASSUMPTIONS",
+    "year1": {
+      "egress_tib_month": 2,
+      "gpu_units": 0,
+      "memory_gib": 64,
+      "usable_storage_tib": 5,
+      "vcpu": 16
+    }
+  },
+  {
+    "annual_growth": "1.0",
+    "approved_rpo_hours": null,
+    "approved_rto_hours": null,
+    "decision_section": "5.2",
+    "id": "RECOVERY",
+    "name": "Independent recovery",
+    "notes": "Capacity is derived from protected services; do not independently add another full production footprint.",
+    "owner": "TEAM-reliability",
+    "physical_site_id": null,
+    "proposed_rpo_hours": "0.25",
+    "proposed_rto_hours": "4",
+    "recovery_acceptance_evidence": null,
+    "required_evidence": [
+      "Workload benchmark and storage-growth telemetry",
+      "Business impact and recovery priority approval",
+      "Dependency restoration and timed failover/failback test",
+      "Access, key and data-integrity reconciliation"
+    ],
+    "service_hours": "On-call activation and scheduled exercises",
+    "source": "decision",
+    "state": "PROPOSED_SIZING_AND_RECOVERY_ASSUMPTIONS",
+    "year1": {
+      "egress_tib_month": 0,
+      "gpu_units": 0,
+      "memory_gib": 0,
+      "usable_storage_tib": 0,
+      "vcpu": 0
+    }
+  }
+]

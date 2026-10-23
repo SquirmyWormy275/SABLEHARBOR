@@ -1,0 +1,46 @@
+mode,label,demand_factor,price_factor,cash_60_month_usd,capex_60_month_usd,cash_opex_60_month_usd,pnl_cost_60_month_usd,depreciation_60_month_usd,discounted_cash_60_month_usd,closing_net_book_usd,year1_cash_usd,year1_required_fte,approved_incremental_fte,investment_authorized,rto_rpo_proven
+cloud_transition,Cloud-heavy transition with owned restricted estate,0.60,0.70,41539076.58,1667877.96,39871198.60,40829050.13,957851.65,32457062.65,710026.44,7396879.55,29.7589,,False,False
+hybrid_transition,"Hybrid transition: 60% owned production, 50% owned dev",0.60,0.70,42587189.89,2344013.74,40243176.15,41593347.51,1350171.47,33354165.34,993842.31,7852225.57,31.4594,,False,False
+owned_colo,Owned baseline in professional colocation; cloud burst,0.60,0.70,41712227.45,2695540.54,39016686.90,40558188.01,1541501.11,32711969.79,1154039.50,7837556.32,31.4594,,False,False
+owned_facility,Future owned primary plant; independent recovery still colo,0.60,0.70,51865763.81,6895540.54,44970223.27,47544224.30,2574001.11,41594120.14,4321539.50,13295911.13,39.0594,,False,False
+phased_ownership,Illustrative staged ownership: cloud to hybrid to owned colo,0.60,0.70,41918852.91,2594315.53,39324537.39,40797666.53,1473129.21,32879823.40,1121186.33,7813956.79,31.4594,,False,False
+cloud_transition,Cloud-heavy transition with owned restricted estate,0.60,1.00,46325824.57,2382682.82,43943141.75,45311501.08,1368359.43,36187141.24,1014323.48,8298310.09,29.7589,,False,False
+hybrid_transition,"Hybrid transition: 60% owned production, 50% owned dev",0.60,1.00,47044381.69,3348591.06,43695790.63,45624606.95,1928816.43,36859627.95,1419774.72,8813067.39,31.4594,,False,False
+owned_colo,Owned baseline in professional colocation; cloud burst,0.60,1.00,45794435.52,3850772.20,41943663.32,44145807.66,2202144.33,35942205.76,1648627.86,8792111.32,31.4594,,False,False
+owned_facility,Future owned primary plant; independent recovery still colo,0.60,1.00,58256228.59,9850772.20,48405456.39,52082600.61,3677144.33,47021174.58,6173627.86,16204903.89,39.0594,,False,False
+phased_ownership,Illustrative staged ownership: cloud to hybrid to owned colo,0.60,1.00,46157483.15,3706165.05,42451318.11,44555788.40,2104470.30,36248010.48,1601694.75,8826266.21,31.4594,,False,False
+cloud_transition,Cloud-heavy transition with owned restricted estate,0.60,1.40,52708155.25,3335755.94,49372399.31,51288102.38,1915703.06,41160579.35,1420052.88,9500217.43,29.7589,,False,False
+hybrid_transition,"Hybrid transition: 60% owned production, 50% owned dev",0.60,1.40,52987304.11,4688027.48,48299276.63,50999619.52,2700342.81,41533578.11,1987684.61,10094189.79,31.4594,,False,False
+owned_colo,Owned baseline in professional colocation; cloud burst,0.60,1.40,51237379.52,5391081.08,45846298.43,48929300.43,3083002.10,40249187.07,2308079.00,10064851.40,31.4594,,False,False
+owned_facility,Future owned primary plant; independent recovery still colo,0.60,1.40,66776848.14,13791081.08,52985767.06,58133769.09,5148002.10,54257247.03,8643079.00,20083560.93,39.0594,,False,False
+phased_ownership,Illustrative staged ownership: cloud to hybrid to owned colo,0.60,1.40,51808989.98,5188631.04,46620358.91,49566617.34,2946258.41,40738926.64,2242372.65,10176012.07,31.4594,,False,False
+cloud_transition,Cloud-heavy transition with owned restricted estate,1.00,0.70,47981067.15,2252203.10,45728864.06,47033849.53,1304985.71,37405028.04,947217.50,8304918.68,32.3077,,False,False
+hybrid_transition,"Hybrid transition: 60% owned production, 50% owned dev",1.00,0.70,48324323.92,3209174.79,45115149.12,46971565.90,1856416.84,37784333.65,1352757.97,8725734.00,34.1539,,False,False
+owned_colo,Owned baseline in professional colocation; cloud burst,1.00,0.70,46888388.58,3802437.48,43085951.10,45286445.59,2200494.72,36730115.47,1601942.88,8648360.68,34.1539,,False,False
+owned_facility,Future owned primary plant; independent recovery still colo,1.00,0.70,56917062.64,8002437.48,48914625.17,52147619.75,3232994.72,45520065.72,4769442.88,14104495.03,41.7539,,False,False
+phased_ownership,Illustrative staged ownership: cloud to hybrid to owned colo,1.00,0.70,47253294.53,3645998.82,43607295.71,45704186.60,2096891.08,37047265.94,1549107.86,8740000.06,34.1539,,False,False
+cloud_transition,Cloud-heavy transition with owned restricted estate,1.00,1.00,54214488.97,3217433.00,50997055.99,52861321.10,1864265.05,42241962.72,1353167.86,9401202.48,32.3077,,False,False
+hybrid_transition,"Hybrid transition: 60% owned production, 50% owned dev",1.00,1.00,53847479.03,4584535.42,49262943.61,51914967.71,2652024.19,42114088.28,1932511.38,9855004.55,34.1539,,False,False
+owned_colo,Owned baseline in professional colocation; cloud burst,1.00,1.00,51796142.94,5432053.54,46364089.40,49507653.05,3143563.76,40608062.20,2288489.83,9744471.28,34.1539,,False,False
+owned_facility,Future owned primary plant; independent recovery still colo,1.00,1.00,64079561.36,11432053.54,52647507.82,57266071.49,4618563.76,51555316.66,6813489.83,17154091.84,41.7539,,False,False
+phased_ownership,Illustrative staged ownership: cloud to hybrid to owned colo,1.00,1.00,52391118.38,5208569.74,47182548.64,50178107.17,2995558.48,41132802.27,2213011.23,9949065.96,34.1539,,False,False
+cloud_transition,Cloud-heavy transition with owned restricted estate,1.00,1.40,62525718.16,4504406.19,58021311.98,60631283.13,2609971.18,48691209.01,1894435.01,10862914.24,32.3077,,False,False
+hybrid_transition,"Hybrid transition: 60% owned production, 50% owned dev",1.00,1.40,61211685.96,6418349.60,54793336.36,58506169.91,3712833.56,47887094.53,2705515.94,11360698.70,34.1539,,False,False
+owned_colo,Owned baseline in professional colocation; cloud burst,1.00,1.40,58339815.23,7604874.96,50734940.27,55135929.48,4400989.08,45778657.96,3203885.77,11205952.04,34.1539,,False,False
+owned_facility,Future owned primary plant; independent recovery still colo,1.00,1.40,73629559.38,16004874.96,57624684.42,64090673.77,6465989.08,59602317.86,9538885.77,21220220.83,41.7539,,False,False
+phased_ownership,Illustrative staged ownership: cloud to hybrid to owned colo,1.00,1.40,59241550.11,7291997.64,51949552.46,56143334.39,4193781.86,46580184.02,3098215.72,11561153.90,34.1539,,False,False
+cloud_transition,Cloud-heavy transition with owned restricted estate,1.50,0.70,55452488.97,3144953.05,52307535.93,54105211.43,1797675.40,43140843.22,1347277.60,9426368.66,34.8490,,False,False
+hybrid_transition,"Hybrid transition: 60% owned production, 50% owned dev",1.50,0.70,55058294.72,4547032.05,50511262.67,53102495.70,2591233.02,42979005.33,1955798.98,9833716.59,36.8404,,False,False
+owned_colo,Owned baseline in professional colocation; cloud burst,1.50,0.70,52876742.00,5442804.38,47433937.62,50534674.82,3100737.09,41377409.59,2342067.22,9753342.52,36.8404,,False,False
+owned_facility,Future owned primary plant; independent recovery still colo,1.50,0.70,62731234.68,9642804.38,53088430.30,57221667.42,4133237.09,50034224.39,5509567.22,15178914.43,44.4404,,False,False
+phased_ownership,Illustrative staged ownership: cloud to hybrid to owned colo,1.50,0.70,53379899.60,5172104.15,48207795.45,51148684.09,2940888.54,41830451.11,2231215.56,9908778.20,36.8404,,False,False
+cloud_transition,Cloud-heavy transition with owned restricted estate,1.50,1.00,63577608.76,4492790.07,59084818.69,61652926.41,2568107.78,49425245.20,1924682.29,10809535.26,34.8490,,False,False
+hybrid_transition,"Hybrid transition: 60% owned production, 50% owned dev",1.50,1.00,62078697.78,6495760.08,55582937.71,59284699.30,3701761.49,48463834.64,2793998.54,11232506.51,36.8404,,False,False
+owned_colo,Owned baseline in professional colocation; cloud burst,1.50,1.00,58962193.79,7775434.83,51186758.96,55616383.56,4429624.48,46175840.76,3345810.31,11117686.48,36.8404,,False,False
+owned_facility,Future owned primary plant; independent recovery still colo,1.50,1.00,70996781.66,13775434.83,57221346.83,63125971.40,5904624.48,56932901.69,7870810.31,18483646.30,44.4404,,False,False
+phased_ownership,Illustrative staged ownership: cloud to hybrid to owned colo,1.50,1.00,59760467.52,7388720.22,52371747.30,56573016.80,4201269.49,46900348.27,3187450.79,11419214.56,36.8404,,False,False
+cloud_transition,Cloud-heavy transition with owned restricted estate,1.50,1.40,74411101.55,6289906.09,68121195.45,71716546.40,3595350.92,57804447.90,2694555.20,12653757.28,34.8490,,False,False
+hybrid_transition,"Hybrid transition: 60% owned production, 50% owned dev",1.50,1.40,71439235.06,9094064.10,62345170.94,67527637.18,5182466.15,55776940.54,3911597.95,13097559.70,36.8404,,False,False
+owned_colo,Owned baseline in professional colocation; cloud burst,1.50,1.40,67076129.68,10885608.76,56190520.92,62391995.21,6201474.30,52573749.05,4684134.44,12936811.64,36.8404,,False,False
+owned_facility,Future owned primary plant; independent recovery still colo,1.50,1.40,82017511.15,19285608.76,62731902.40,70998376.63,8266474.30,66131138.07,11019134.44,22889955.45,44.4404,,False,False
+phased_ownership,Illustrative staged ownership: cloud to hybrid to owned colo,1.50,1.40,68267891.56,10344208.31,57923683.25,63805460.47,5881777.08,53660211.20,4462431.11,13433129.64,36.8404,,False,False

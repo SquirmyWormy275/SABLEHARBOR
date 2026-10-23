@@ -1,0 +1,6 @@
+mode,label,demand_factor,price_factor,cash_60_month_usd,capex_60_month_usd,cash_opex_60_month_usd,pnl_cost_60_month_usd,depreciation_60_month_usd,discounted_cash_60_month_usd,closing_net_book_usd,year1_cash_usd,year1_required_fte,approved_incremental_fte,investment_authorized,rto_rpo_proven
+cloud_transition,Cloud-heavy transition with owned restricted estate,1,1,54214488.97,3217433.00,50997055.99,52861321.10,1864265.05,42241962.72,1353167.86,9401202.48,32.3077,,False,False
+hybrid_transition,"Hybrid transition: 60% owned production, 50% owned dev",1,1,53847479.03,4584535.42,49262943.61,51914967.71,2652024.19,42114088.28,1932511.38,9855004.55,34.1539,,False,False
+owned_colo,Owned baseline in professional colocation; cloud burst,1,1,51796142.94,5432053.54,46364089.40,49507653.05,3143563.76,40608062.20,2288489.83,9744471.28,34.1539,,False,False
+owned_facility,Future owned primary plant; independent recovery still colo,1,1,64079561.36,11432053.54,52647507.82,57266071.49,4618563.76,51555316.66,6813489.83,17154091.84,41.7539,,False,False
+phased_ownership,Illustrative staged ownership: cloud to hybrid to owned colo,1,1,52391118.38,5208569.74,47182548.64,50178107.17,2995558.48,41132802.27,2213011.23,9949065.96,34.1539,,False,False

@@ -1,0 +1,2193 @@
+{
+  "state": "DRAFT_WORKPLACE_MAPPING_NOT_NEW_OFFICES",
+  "base": "2b52933132e028bf5d9c9a8c151bb45cb0f19597",
+  "authority": "Existing role evidence controls; proposed working bases require owner decisions.",
+  "legal_location_dimensions": {
+    "legal_domicile": "Corporate jurisdiction is not an operating workplace; registered address/title rights remain separate.",
+    "executive_headquarters": "Sacramento accepted for SHI; not evidence of each officer's occupied office.",
+    "employee_working_base": "Team/individual assignment with hybrid, field and travel qualifiers.",
+    "service_territory": "Customers and deployments do not establish company premises.",
+    "host_site": "External property and host operating authority remain distinct from owned recovery equipment.",
+    "data_hosting_region": "Independent physical and control-plane placement; does not relocate the software team."
+  },
+  "rows": [
+    {
+      "office_review_id": "OFF-ROLE-27",
+      "existing_id": "ROLE-27",
+      "office_or_role": "Chief of ESS",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "Coordinates shared administration, budget mechanics, facilities, staffing support and service quality.",
+      "reporting_and_independence": "Administrative head of ESS; no substantive superiority over other corporate officers.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "Existing ESS professions; within 48 occupied / 54 authorized scenario.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento HQ; office/support rooms within E-01.",
+      "estate_id": "E-12",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+          "line": 29,
+          "evidence": "The **Chief of ESS** is the administrative head of the umbrella, not the substantive superior of every corporate officer housed within it. The role coordinates shared administration, budget mechanics, facilities, staffing support, service quality, and cross-functional coherence."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-28",
+      "existing_id": "ROLE-28",
+      "office_or_role": "Chief Financial Officer",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "Authoritative financial truth and enterprise financial standards.",
+      "reporting_and_independence": "Retains direct CEO/Board standing where responsibilities require; does not take general operating command.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "Existing Finance; no separate controller/treasury department created here.",
+      "current_working_base": null,
+      "proposed_working_base": "Sacramento HQ with secure financial records and confidential meeting rooms.",
+      "estate_id": "E-12",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+          "line": 31,
+          "evidence": "Membership in ESS does **not** imply that the CFO, General Counsel, senior People & Culture leader, technology leader, CISO, or other substantive officer loses direct standing with the CEO or Board where the office's responsibilities require it. The Chief of ESS cannot convert administrative coordination into generalized approval authority."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-29",
+      "existing_id": "ROLE-29",
+      "office_or_role": "General Counsel",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "Legal advice and lawful paths; OGC owns Corporate Secretary mechanics.",
+      "reporting_and_independence": "Direct professional standing with CEO/Board; legal advice is not a replacement management chain.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "Existing OGC; external matter specialists under existing sourcing decisions.",
+      "current_working_base": null,
+      "proposed_working_base": "Sacramento HQ with confidential interview and document rooms.",
+      "estate_id": "E-12",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+          "line": 35,
+          "evidence": "The General Counsel has direct standing with the Chief Executive Officer and Board when professional duties require it. OGC owns legal advice and Corporate Secretary mechanics; it does not become a substitute management chain."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-30",
+      "existing_id": "ROLE-30",
+      "office_or_role": "Corporate Secretary",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "Board/governance records and Corporate Secretary mechanics; standing continuity coordination with ESS.",
+      "reporting_and_independence": "Within OGC professional mechanics; Board access according to existing duties.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "Reuse OGC and ESS; no separate resilience department.",
+      "current_working_base": null,
+      "proposed_working_base": "Sacramento HQ near shared Board meeting and protected records rooms.",
+      "estate_id": "E-12",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+          "line": 13,
+          "evidence": "- Office of the General Counsel, including Corporate Secretary;"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-31",
+      "existing_id": "ROLE-31",
+      "office_or_role": "Head of Risk & Compliance",
+      "source_state": "PROPOSED_ROLE_LABEL; function exists, exact office title unresolved",
+      "remit_source_or_summary": "Compliance architecture, risk visibility, control coordination, CCF stewardship and escalation.",
+      "reporting_and_independence": "Management owns risk and controls; this function challenges and coordinates. Exact office title remains proposed.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "Existing Risk & Compliance within ESS.",
+      "current_working_base": null,
+      "proposed_working_base": "Sacramento HQ with normal cross-business travel.",
+      "estate_id": "E-12",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+          "line": 14,
+          "evidence": "- Risk & Compliance;"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-32",
+      "existing_id": "ROLE-32",
+      "office_or_role": "Head of People & Culture",
+      "source_state": "PROPOSED_ROLE_LABEL; function exists, exact office title unresolved",
+      "remit_source_or_summary": "Enterprise people-system profession and employee experience.",
+      "reporting_and_independence": "Does not own every manager's responsibilities; senior officer standing preserved. Exact title remains proposed.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "Existing People & Culture; payroll/HR tools follow service inventory.",
+      "current_working_base": null,
+      "proposed_working_base": "Sacramento HQ; confidential employee rooms and remote support.",
+      "estate_id": "E-12",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+          "line": 16,
+          "evidence": "- People & Culture;"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-33",
+      "existing_id": "ROLE-33",
+      "office_or_role": "Head of Enterprise Technology Services",
+      "source_state": "PROPOSED_ROLE_LABEL; function exists, exact office title unresolved",
+      "remit_source_or_summary": "Shared technology capabilities and enterprise platforms.",
+      "reporting_and_independence": "Product/business engineering remains with businesses. Exact office title remains proposed.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "Existing Technology Services; modeled delivery skill pools are requirements, not confirmed hires.",
+      "current_working_base": null,
+      "proposed_working_base": "Sacramento HQ technical workspace; provider and site access for operational work.",
+      "estate_id": "E-12",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+          "line": 17,
+          "evidence": "- Enterprise Technology Services;"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-34",
+      "existing_id": "ROLE-34",
+      "office_or_role": "Chief Information Security Officer",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "Enterprise security authority proportionate to material security obligations.",
+      "reporting_and_independence": "Independent security boundary; no generalized veto over business decisions.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "Existing security/CISO capability; operations and specialist services per accepted sourcing.",
+      "current_working_base": null,
+      "proposed_working_base": "Sacramento HQ protected workspace; independent technical access boundaries.",
+      "estate_id": "E-12",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+          "line": 45,
+          "evidence": "The CISO maintains an independent security authority boundary proportionate to material security obligations and does not become a generalized veto office."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-35",
+      "existing_id": "ROLE-35",
+      "office_or_role": "Head of Internal Audit",
+      "source_state": "PROPOSED_ROLE_LABEL; function exists, exact office title unresolved",
+      "remit_source_or_summary": "Independent evaluation of governance and controls; owns audit methods, scope, findings and communications.",
+      "reporting_and_independence": "Functional accountability to Board Audit & Compliance Committee; protected from ESS/CEO interference. Exact title remains proposed.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "Existing Audit, 8 occupied / 10 authorized scenario; ESS administrative support only.",
+      "current_working_base": null,
+      "proposed_working_base": "Separate secured Sacramento suite/floor; direct protected committee communications.",
+      "estate_id": "E-12",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/governance/ENTERPRISE_SUPPORT_SERVICES_AND_INDEPENDENCE.md",
+          "line": 49,
+          "evidence": "Internal Audit is structurally separate from OGC, Risk & Compliance, Finance, Technology Services, J2, and management control ownership. Internal Audit reports **functionally to the Board Audit & Compliance Committee**. Administrative matters may flow through the CEO/ESS environment only where they do not impair audit independence."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-36",
+      "existing_id": "ROLE-36",
+      "office_or_role": "President of Sable Harbor Advisory",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "Advisory is an operating business led by a President of Sable Harbor Advisory. The President owns the business line, subject to Sable Harbor's existing corporate governance, delegated authority, reserved matters, legal structure, and Board/CEO authority. The individual is `OPEN`.",
+      "reporting_and_independence": "Accepted common bench and professional hierarchy; rank, engagement role and forum are not necessarily distinct posts. Value Office/independent review remain independent of originating engagement work.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 1,
+      "existing_staff_support": "One Advisory occupied scenario of 32; reuse professional bench and ESS, not a team per role.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento collaboration base, client sites and eight eastern touchdown seats included in E-06; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/canon/ADVISORY_ATLAS_MERIDIAN_CLOSEOUT_2026-09-08.md",
+          "line": 51,
+          "evidence": "Advisory is an operating business led by a President of Sable Harbor Advisory. The President owns the business line, subject to Sable Harbor's existing corporate governance, delegated authority, reserved matters, legal structure, and Board/CEO authority. The individual is `OPEN`."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-39",
+      "existing_id": "ROLE-39",
+      "office_or_role": "Chief of Staff",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "- Chief of Staff",
+      "reporting_and_independence": "Within the existing J2 charter, arm and establishment; J2 remains outside ESS. Source counts are authorized billets, not confirmed occupied staff.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 1,
+      "existing_staff_support": "Existing J2 establishment, 237 total including Education 35 and JAG 30; ESS administration does not supervise J2.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed separate Sacramento J2 building; field/JAG deployments retain operating-site work.",
+      "estate_id": "E-02",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/j2/J2_HEADQUARTERS.md",
+          "line": 20,
+          "evidence": "- Chief of Staff"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-41",
+      "existing_id": "ROLE-41",
+      "office_or_role": "Deputy Head of Contact",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "| Contact | 78 | 1 Head, 1 Deputy, 6 Collection Directors, 8 Collection Managers, 20 Human Contact Officers, 16 Digital/Data Collectors, 14 Field/Technical Collectors, 10 External-Source Collectors, 2 Collection Methods Officers |",
+      "reporting_and_independence": "Within the existing J2 charter, arm and establishment; J2 remains outside ESS. Source counts are authorized billets, not confirmed occupied staff.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 1,
+      "existing_staff_support": "Existing J2 establishment, 237 total including Education 35 and JAG 30; ESS administration does not supervise J2.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed separate Sacramento J2 building; field/JAG deployments retain operating-site work.",
+      "estate_id": "E-02",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/j2/J2_ESTABLISHMENT.md",
+          "line": 12,
+          "evidence": "| Contact | 78 | 1 Head, 1 Deputy, 6 Collection Directors, 8 Collection Managers, 20 Human Contact Officers, 16 Digital/Data Collectors, 14 Field/Technical Collectors, 10 External-Source Collectors, 2 Collection Methods Officers |"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-42",
+      "existing_id": "ROLE-42",
+      "office_or_role": "Collection Director",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "| Contact | 78 | 1 Head, 1 Deputy, 6 Collection Directors, 8 Collection Managers, 20 Human Contact Officers, 16 Digital/Data Collectors, 14 Field/Technical Collectors, 10 External-Source Collectors, 2 Collection Methods Officers |",
+      "reporting_and_independence": "Within the existing J2 charter, arm and establishment; J2 remains outside ESS. Source counts are authorized billets, not confirmed occupied staff.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 6,
+      "existing_staff_support": "Existing J2 establishment, 237 total including Education 35 and JAG 30; ESS administration does not supervise J2.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed separate Sacramento J2 building; field/JAG deployments retain operating-site work.",
+      "estate_id": "E-02",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/j2/J2_ESTABLISHMENT.md",
+          "line": 12,
+          "evidence": "| Contact | 78 | 1 Head, 1 Deputy, 6 Collection Directors, 8 Collection Managers, 20 Human Contact Officers, 16 Digital/Data Collectors, 14 Field/Technical Collectors, 10 External-Source Collectors, 2 Collection Methods Officers |"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-43",
+      "existing_id": "ROLE-43",
+      "office_or_role": "Collection Manager",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "| Contact | 78 | 1 Head, 1 Deputy, 6 Collection Directors, 8 Collection Managers, 20 Human Contact Officers, 16 Digital/Data Collectors, 14 Field/Technical Collectors, 10 External-Source Collectors, 2 Collection Methods Officers |",
+      "reporting_and_independence": "Within the existing J2 charter, arm and establishment; J2 remains outside ESS. Source counts are authorized billets, not confirmed occupied staff.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 8,
+      "existing_staff_support": "Existing J2 establishment, 237 total including Education 35 and JAG 30; ESS administration does not supervise J2.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed separate Sacramento J2 building; field/JAG deployments retain operating-site work.",
+      "estate_id": "E-02",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/j2/J2_ESTABLISHMENT.md",
+          "line": 12,
+          "evidence": "| Contact | 78 | 1 Head, 1 Deputy, 6 Collection Directors, 8 Collection Managers, 20 Human Contact Officers, 16 Digital/Data Collectors, 14 Field/Technical Collectors, 10 External-Source Collectors, 2 Collection Methods Officers |"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-44",
+      "existing_id": "ROLE-44",
+      "office_or_role": "Human Contact Officer",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "| Contact | 78 | 1 Head, 1 Deputy, 6 Collection Directors, 8 Collection Managers, 20 Human Contact Officers, 16 Digital/Data Collectors, 14 Field/Technical Collectors, 10 External-Source Collectors, 2 Collection Methods Officers |",
+      "reporting_and_independence": "Within the existing J2 charter, arm and establishment; J2 remains outside ESS. Source counts are authorized billets, not confirmed occupied staff.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 20,
+      "existing_staff_support": "Existing J2 establishment, 237 total including Education 35 and JAG 30; ESS administration does not supervise J2.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed separate Sacramento J2 building; field/JAG deployments retain operating-site work.",
+      "estate_id": "E-02",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/j2/J2_ESTABLISHMENT.md",
+          "line": 12,
+          "evidence": "| Contact | 78 | 1 Head, 1 Deputy, 6 Collection Directors, 8 Collection Managers, 20 Human Contact Officers, 16 Digital/Data Collectors, 14 Field/Technical Collectors, 10 External-Source Collectors, 2 Collection Methods Officers |"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-45",
+      "existing_id": "ROLE-45",
+      "office_or_role": "Digital / Data Collector",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "| Contact | 78 | 1 Head, 1 Deputy, 6 Collection Directors, 8 Collection Managers, 20 Human Contact Officers, 16 Digital/Data Collectors, 14 Field/Technical Collectors, 10 External-Source Collectors, 2 Collection Methods Officers |",
+      "reporting_and_independence": "Within the existing J2 charter, arm and establishment; J2 remains outside ESS. Source counts are authorized billets, not confirmed occupied staff.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 16,
+      "existing_staff_support": "Existing J2 establishment, 237 total including Education 35 and JAG 30; ESS administration does not supervise J2.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed separate Sacramento J2 building; field/JAG deployments retain operating-site work.",
+      "estate_id": "E-02",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/j2/J2_ESTABLISHMENT.md",
+          "line": 12,
+          "evidence": "| Contact | 78 | 1 Head, 1 Deputy, 6 Collection Directors, 8 Collection Managers, 20 Human Contact Officers, 16 Digital/Data Collectors, 14 Field/Technical Collectors, 10 External-Source Collectors, 2 Collection Methods Officers |"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-46",
+      "existing_id": "ROLE-46",
+      "office_or_role": "Field / Technical Collector",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "| Contact | 78 | 1 Head, 1 Deputy, 6 Collection Directors, 8 Collection Managers, 20 Human Contact Officers, 16 Digital/Data Collectors, 14 Field/Technical Collectors, 10 External-Source Collectors, 2 Collection Methods Officers |",
+      "reporting_and_independence": "Within the existing J2 charter, arm and establishment; J2 remains outside ESS. Source counts are authorized billets, not confirmed occupied staff.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 14,
+      "existing_staff_support": "Existing J2 establishment, 237 total including Education 35 and JAG 30; ESS administration does not supervise J2.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed separate Sacramento J2 building; field/JAG deployments retain operating-site work.",
+      "estate_id": "E-02",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/j2/J2_ESTABLISHMENT.md",
+          "line": 12,
+          "evidence": "| Contact | 78 | 1 Head, 1 Deputy, 6 Collection Directors, 8 Collection Managers, 20 Human Contact Officers, 16 Digital/Data Collectors, 14 Field/Technical Collectors, 10 External-Source Collectors, 2 Collection Methods Officers |"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-47",
+      "existing_id": "ROLE-47",
+      "office_or_role": "External-Source Collector",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "| Contact | 78 | 1 Head, 1 Deputy, 6 Collection Directors, 8 Collection Managers, 20 Human Contact Officers, 16 Digital/Data Collectors, 14 Field/Technical Collectors, 10 External-Source Collectors, 2 Collection Methods Officers |",
+      "reporting_and_independence": "Within the existing J2 charter, arm and establishment; J2 remains outside ESS. Source counts are authorized billets, not confirmed occupied staff.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 10,
+      "existing_staff_support": "Existing J2 establishment, 237 total including Education 35 and JAG 30; ESS administration does not supervise J2.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed separate Sacramento J2 building; field/JAG deployments retain operating-site work.",
+      "estate_id": "E-02",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/j2/J2_ESTABLISHMENT.md",
+          "line": 12,
+          "evidence": "| Contact | 78 | 1 Head, 1 Deputy, 6 Collection Directors, 8 Collection Managers, 20 Human Contact Officers, 16 Digital/Data Collectors, 14 Field/Technical Collectors, 10 External-Source Collectors, 2 Collection Methods Officers |"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-48",
+      "existing_id": "ROLE-48",
+      "office_or_role": "Collection Methods Officer",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "| Contact | 78 | 1 Head, 1 Deputy, 6 Collection Directors, 8 Collection Managers, 20 Human Contact Officers, 16 Digital/Data Collectors, 14 Field/Technical Collectors, 10 External-Source Collectors, 2 Collection Methods Officers |",
+      "reporting_and_independence": "Within the existing J2 charter, arm and establishment; J2 remains outside ESS. Source counts are authorized billets, not confirmed occupied staff.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 2,
+      "existing_staff_support": "Existing J2 establishment, 237 total including Education 35 and JAG 30; ESS administration does not supervise J2.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed separate Sacramento J2 building; field/JAG deployments retain operating-site work.",
+      "estate_id": "E-02",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/j2/J2_ESTABLISHMENT.md",
+          "line": 12,
+          "evidence": "| Contact | 78 | 1 Head, 1 Deputy, 6 Collection Directors, 8 Collection Managers, 20 Human Contact Officers, 16 Digital/Data Collectors, 14 Field/Technical Collectors, 10 External-Source Collectors, 2 Collection Methods Officers |"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-50",
+      "existing_id": "ROLE-50",
+      "office_or_role": "Deputy Head of Judgment",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "| Judgment | 42 | 1 Head, 1 Deputy, 6 Senior Judgment Directors, 28 Judgment Officers, 6 Judgment Watch Officers |",
+      "reporting_and_independence": "Within the existing J2 charter, arm and establishment; J2 remains outside ESS. Source counts are authorized billets, not confirmed occupied staff.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 1,
+      "existing_staff_support": "Existing J2 establishment, 237 total including Education 35 and JAG 30; ESS administration does not supervise J2.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed separate Sacramento J2 building; field/JAG deployments retain operating-site work.",
+      "estate_id": "E-02",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/j2/J2_ESTABLISHMENT.md",
+          "line": 13,
+          "evidence": "| Judgment | 42 | 1 Head, 1 Deputy, 6 Senior Judgment Directors, 28 Judgment Officers, 6 Judgment Watch Officers |"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-51",
+      "existing_id": "ROLE-51",
+      "office_or_role": "Senior Judgment Director",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "| Judgment | 42 | 1 Head, 1 Deputy, 6 Senior Judgment Directors, 28 Judgment Officers, 6 Judgment Watch Officers |",
+      "reporting_and_independence": "Within the existing J2 charter, arm and establishment; J2 remains outside ESS. Source counts are authorized billets, not confirmed occupied staff.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 6,
+      "existing_staff_support": "Existing J2 establishment, 237 total including Education 35 and JAG 30; ESS administration does not supervise J2.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed separate Sacramento J2 building; field/JAG deployments retain operating-site work.",
+      "estate_id": "E-02",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/j2/J2_ESTABLISHMENT.md",
+          "line": 13,
+          "evidence": "| Judgment | 42 | 1 Head, 1 Deputy, 6 Senior Judgment Directors, 28 Judgment Officers, 6 Judgment Watch Officers |"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-52",
+      "existing_id": "ROLE-52",
+      "office_or_role": "Judgment Officer",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "| Judgment | 42 | 1 Head, 1 Deputy, 6 Senior Judgment Directors, 28 Judgment Officers, 6 Judgment Watch Officers |",
+      "reporting_and_independence": "Within the existing J2 charter, arm and establishment; J2 remains outside ESS. Source counts are authorized billets, not confirmed occupied staff.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 28,
+      "existing_staff_support": "Existing J2 establishment, 237 total including Education 35 and JAG 30; ESS administration does not supervise J2.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed separate Sacramento J2 building; field/JAG deployments retain operating-site work.",
+      "estate_id": "E-02",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/j2/J2_ESTABLISHMENT.md",
+          "line": 13,
+          "evidence": "| Judgment | 42 | 1 Head, 1 Deputy, 6 Senior Judgment Directors, 28 Judgment Officers, 6 Judgment Watch Officers |"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-53",
+      "existing_id": "ROLE-53",
+      "office_or_role": "Judgment Watch Officer",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "| Judgment | 42 | 1 Head, 1 Deputy, 6 Senior Judgment Directors, 28 Judgment Officers, 6 Judgment Watch Officers |",
+      "reporting_and_independence": "Within the existing J2 charter, arm and establishment; J2 remains outside ESS. Source counts are authorized billets, not confirmed occupied staff.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 6,
+      "existing_staff_support": "Existing J2 establishment, 237 total including Education 35 and JAG 30; ESS administration does not supervise J2.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed separate Sacramento J2 building; field/JAG deployments retain operating-site work.",
+      "estate_id": "E-02",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/j2/J2_ESTABLISHMENT.md",
+          "line": 13,
+          "evidence": "| Judgment | 42 | 1 Head, 1 Deputy, 6 Senior Judgment Directors, 28 Judgment Officers, 6 Judgment Watch Officers |"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-55",
+      "existing_id": "ROLE-55",
+      "office_or_role": "Deputy Head of Orientation",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "| Orientation | 24 | 1 Head, 1 Deputy, 4 Senior Orientation Officers, 18 Orientation Officers |",
+      "reporting_and_independence": "Within the existing J2 charter, arm and establishment; J2 remains outside ESS. Source counts are authorized billets, not confirmed occupied staff.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 1,
+      "existing_staff_support": "Existing J2 establishment, 237 total including Education 35 and JAG 30; ESS administration does not supervise J2.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed separate Sacramento J2 building; field/JAG deployments retain operating-site work.",
+      "estate_id": "E-02",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/j2/J2_ESTABLISHMENT.md",
+          "line": 14,
+          "evidence": "| Orientation | 24 | 1 Head, 1 Deputy, 4 Senior Orientation Officers, 18 Orientation Officers |"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-56",
+      "existing_id": "ROLE-56",
+      "office_or_role": "Senior Orientation Officer",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "| Orientation | 24 | 1 Head, 1 Deputy, 4 Senior Orientation Officers, 18 Orientation Officers |",
+      "reporting_and_independence": "Within the existing J2 charter, arm and establishment; J2 remains outside ESS. Source counts are authorized billets, not confirmed occupied staff.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 4,
+      "existing_staff_support": "Existing J2 establishment, 237 total including Education 35 and JAG 30; ESS administration does not supervise J2.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed separate Sacramento J2 building; field/JAG deployments retain operating-site work.",
+      "estate_id": "E-02",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/j2/J2_ESTABLISHMENT.md",
+          "line": 14,
+          "evidence": "| Orientation | 24 | 1 Head, 1 Deputy, 4 Senior Orientation Officers, 18 Orientation Officers |"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-57",
+      "existing_id": "ROLE-57",
+      "office_or_role": "Orientation Officer",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "| Orientation | 24 | 1 Head, 1 Deputy, 4 Senior Orientation Officers, 18 Orientation Officers |",
+      "reporting_and_independence": "Within the existing J2 charter, arm and establishment; J2 remains outside ESS. Source counts are authorized billets, not confirmed occupied staff.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 18,
+      "existing_staff_support": "Existing J2 establishment, 237 total including Education 35 and JAG 30; ESS administration does not supervise J2.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed separate Sacramento J2 building; field/JAG deployments retain operating-site work.",
+      "estate_id": "E-02",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/j2/J2_ESTABLISHMENT.md",
+          "line": 14,
+          "evidence": "| Orientation | 24 | 1 Head, 1 Deputy, 4 Senior Orientation Officers, 18 Orientation Officers |"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-59",
+      "existing_id": "ROLE-59",
+      "office_or_role": "Education faculty and program staff",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "The permanent Education establishment is approximately **35 billets**. The permanent core includes the Head of Education, deputy leadership, senior faculty, instructors, exercise and case designers, program/registrar staff, learning operations, and campus/program support.",
+      "reporting_and_independence": "Within the existing J2 charter, arm and establishment; J2 remains outside ESS. Source counts are authorized billets, not confirmed occupied staff.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "Existing J2 establishment, 237 total including Education 35 and JAG 30; ESS administration does not supervise J2.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed residential Education precinct",
+      "estate_id": "E-03",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/j2/EDUCATION.md",
+          "line": 47,
+          "evidence": "The permanent Education establishment is approximately **35 billets**. The permanent core includes the Head of Education, deputy leadership, senior faculty, instructors, exercise and case designers, program/registrar staff, learning operations, and campus/program support."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-60",
+      "existing_id": "ROLE-60",
+      "office_or_role": "JAG team members",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "| Junction Advisory Group | 30 | 6 active five-person teams |",
+      "reporting_and_independence": "Within the existing J2 charter, arm and establishment; J2 remains outside ESS. Source counts are authorized billets, not confirmed occupied staff.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 30,
+      "existing_staff_support": "Existing J2 establishment, 237 total including Education 35 and JAG 30; ESS administration does not supervise J2.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed separate Sacramento J2 building; field/JAG deployments retain operating-site work.",
+      "estate_id": "E-02",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/j2/J2_ESTABLISHMENT.md",
+          "line": 15,
+          "evidence": "| Junction Advisory Group | 30 | 6 active five-person teams |"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-61",
+      "existing_id": "ROLE-61",
+      "office_or_role": "Commercial director",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "The 12-person platform is the existing platform envelope reclassified to legal employer PS; 128 employees remain at RWH. Mari is counted once in the platform and carries a dual officer title. Cole occupies the single site general-management billet. These changes do not add people to the total 140. Platform billets: President; COO/mining executive; commercial director; contract administrator; federal/downstream partnerships manager; controller; accounting/treasury analyst; development engineer; resource/technical assurance specialist; supply-chain coordinator; people/records officer; executive operations coordinator.",
+      "reporting_and_independence": "Existing Pale Sun executive structure; platform responsibilities do not absorb Red Wash site management.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 1,
+      "existing_staff_support": "Within the established 12-person platform; Mari counted once across dual offices; reuse enterprise professional support.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed Taylor-area base with Red Wash and Sacramento travel; rooms subject to occupancy audit.",
+      "estate_id": "E-07",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+          "line": 14,
+          "evidence": "The 12-person platform is the existing platform envelope reclassified to legal employer PS; 128 employees remain at RWH. Mari is counted once in the platform and carries a dual officer title. Cole occupies the single site general-management billet. These changes do not add people to the total 140. Platform billets: President; COO/mining executive; commercial director; contract administrator; federal/downstream partnerships manager; controller; accounting/treasury analyst; development engineer; resource/technical assurance specialist; supply-chain coordinator; people/records officer; executive operations coordinator."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-62",
+      "existing_id": "ROLE-62",
+      "office_or_role": "Contract administrator",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "The 12-person platform is the existing platform envelope reclassified to legal employer PS; 128 employees remain at RWH. Mari is counted once in the platform and carries a dual officer title. Cole occupies the single site general-management billet. These changes do not add people to the total 140. Platform billets: President; COO/mining executive; commercial director; contract administrator; federal/downstream partnerships manager; controller; accounting/treasury analyst; development engineer; resource/technical assurance specialist; supply-chain coordinator; people/records officer; executive operations coordinator.",
+      "reporting_and_independence": "Existing Pale Sun executive structure; platform responsibilities do not absorb Red Wash site management.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 1,
+      "existing_staff_support": "Within the established 12-person platform; Mari counted once across dual offices; reuse enterprise professional support.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed Taylor-area base with Red Wash and Sacramento travel; rooms subject to occupancy audit.",
+      "estate_id": "E-07",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+          "line": 14,
+          "evidence": "The 12-person platform is the existing platform envelope reclassified to legal employer PS; 128 employees remain at RWH. Mari is counted once in the platform and carries a dual officer title. Cole occupies the single site general-management billet. These changes do not add people to the total 140. Platform billets: President; COO/mining executive; commercial director; contract administrator; federal/downstream partnerships manager; controller; accounting/treasury analyst; development engineer; resource/technical assurance specialist; supply-chain coordinator; people/records officer; executive operations coordinator."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-63",
+      "existing_id": "ROLE-63",
+      "office_or_role": "Federal/downstream partnerships manager",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "The 12-person platform is the existing platform envelope reclassified to legal employer PS; 128 employees remain at RWH. Mari is counted once in the platform and carries a dual officer title. Cole occupies the single site general-management billet. These changes do not add people to the total 140. Platform billets: President; COO/mining executive; commercial director; contract administrator; federal/downstream partnerships manager; controller; accounting/treasury analyst; development engineer; resource/technical assurance specialist; supply-chain coordinator; people/records officer; executive operations coordinator.",
+      "reporting_and_independence": "Existing Pale Sun executive structure; platform responsibilities do not absorb Red Wash site management.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 1,
+      "existing_staff_support": "Within the established 12-person platform; Mari counted once across dual offices; reuse enterprise professional support.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed Taylor-area base with Red Wash and Sacramento travel; rooms subject to occupancy audit.",
+      "estate_id": "E-07",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+          "line": 14,
+          "evidence": "The 12-person platform is the existing platform envelope reclassified to legal employer PS; 128 employees remain at RWH. Mari is counted once in the platform and carries a dual officer title. Cole occupies the single site general-management billet. These changes do not add people to the total 140. Platform billets: President; COO/mining executive; commercial director; contract administrator; federal/downstream partnerships manager; controller; accounting/treasury analyst; development engineer; resource/technical assurance specialist; supply-chain coordinator; people/records officer; executive operations coordinator."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-64",
+      "existing_id": "ROLE-64",
+      "office_or_role": "Controller",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "The 12-person platform is the existing platform envelope reclassified to legal employer PS; 128 employees remain at RWH. Mari is counted once in the platform and carries a dual officer title. Cole occupies the single site general-management billet. These changes do not add people to the total 140. Platform billets: President; COO/mining executive; commercial director; contract administrator; federal/downstream partnerships manager; controller; accounting/treasury analyst; development engineer; resource/technical assurance specialist; supply-chain coordinator; people/records officer; executive operations coordinator.",
+      "reporting_and_independence": "Existing Pale Sun executive structure; platform responsibilities do not absorb Red Wash site management.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 1,
+      "existing_staff_support": "Within the established 12-person platform; Mari counted once across dual offices; reuse enterprise professional support.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed Taylor-area base with Red Wash and Sacramento travel; rooms subject to occupancy audit.",
+      "estate_id": "E-07",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+          "line": 14,
+          "evidence": "The 12-person platform is the existing platform envelope reclassified to legal employer PS; 128 employees remain at RWH. Mari is counted once in the platform and carries a dual officer title. Cole occupies the single site general-management billet. These changes do not add people to the total 140. Platform billets: President; COO/mining executive; commercial director; contract administrator; federal/downstream partnerships manager; controller; accounting/treasury analyst; development engineer; resource/technical assurance specialist; supply-chain coordinator; people/records officer; executive operations coordinator."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-65",
+      "existing_id": "ROLE-65",
+      "office_or_role": "Accounting/treasury analyst",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "The 12-person platform is the existing platform envelope reclassified to legal employer PS; 128 employees remain at RWH. Mari is counted once in the platform and carries a dual officer title. Cole occupies the single site general-management billet. These changes do not add people to the total 140. Platform billets: President; COO/mining executive; commercial director; contract administrator; federal/downstream partnerships manager; controller; accounting/treasury analyst; development engineer; resource/technical assurance specialist; supply-chain coordinator; people/records officer; executive operations coordinator.",
+      "reporting_and_independence": "Existing Pale Sun executive structure; platform responsibilities do not absorb Red Wash site management.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 1,
+      "existing_staff_support": "Within the established 12-person platform; Mari counted once across dual offices; reuse enterprise professional support.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed Taylor-area base with Red Wash and Sacramento travel; rooms subject to occupancy audit.",
+      "estate_id": "E-07",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+          "line": 14,
+          "evidence": "The 12-person platform is the existing platform envelope reclassified to legal employer PS; 128 employees remain at RWH. Mari is counted once in the platform and carries a dual officer title. Cole occupies the single site general-management billet. These changes do not add people to the total 140. Platform billets: President; COO/mining executive; commercial director; contract administrator; federal/downstream partnerships manager; controller; accounting/treasury analyst; development engineer; resource/technical assurance specialist; supply-chain coordinator; people/records officer; executive operations coordinator."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-66",
+      "existing_id": "ROLE-66",
+      "office_or_role": "Development engineer",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "The 12-person platform is the existing platform envelope reclassified to legal employer PS; 128 employees remain at RWH. Mari is counted once in the platform and carries a dual officer title. Cole occupies the single site general-management billet. These changes do not add people to the total 140. Platform billets: President; COO/mining executive; commercial director; contract administrator; federal/downstream partnerships manager; controller; accounting/treasury analyst; development engineer; resource/technical assurance specialist; supply-chain coordinator; people/records officer; executive operations coordinator.",
+      "reporting_and_independence": "Existing Pale Sun executive structure; platform responsibilities do not absorb Red Wash site management.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 1,
+      "existing_staff_support": "Within the established 12-person platform; Mari counted once across dual offices; reuse enterprise professional support.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed Taylor-area base with Red Wash and Sacramento travel; rooms subject to occupancy audit.",
+      "estate_id": "E-07",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+          "line": 14,
+          "evidence": "The 12-person platform is the existing platform envelope reclassified to legal employer PS; 128 employees remain at RWH. Mari is counted once in the platform and carries a dual officer title. Cole occupies the single site general-management billet. These changes do not add people to the total 140. Platform billets: President; COO/mining executive; commercial director; contract administrator; federal/downstream partnerships manager; controller; accounting/treasury analyst; development engineer; resource/technical assurance specialist; supply-chain coordinator; people/records officer; executive operations coordinator."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-67",
+      "existing_id": "ROLE-67",
+      "office_or_role": "Resource/technical assurance specialist",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "The 12-person platform is the existing platform envelope reclassified to legal employer PS; 128 employees remain at RWH. Mari is counted once in the platform and carries a dual officer title. Cole occupies the single site general-management billet. These changes do not add people to the total 140. Platform billets: President; COO/mining executive; commercial director; contract administrator; federal/downstream partnerships manager; controller; accounting/treasury analyst; development engineer; resource/technical assurance specialist; supply-chain coordinator; people/records officer; executive operations coordinator.",
+      "reporting_and_independence": "Existing Pale Sun executive structure; platform responsibilities do not absorb Red Wash site management.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 1,
+      "existing_staff_support": "Within the established 12-person platform; Mari counted once across dual offices; reuse enterprise professional support.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed Taylor-area base with Red Wash and Sacramento travel; rooms subject to occupancy audit.",
+      "estate_id": "E-07",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+          "line": 14,
+          "evidence": "The 12-person platform is the existing platform envelope reclassified to legal employer PS; 128 employees remain at RWH. Mari is counted once in the platform and carries a dual officer title. Cole occupies the single site general-management billet. These changes do not add people to the total 140. Platform billets: President; COO/mining executive; commercial director; contract administrator; federal/downstream partnerships manager; controller; accounting/treasury analyst; development engineer; resource/technical assurance specialist; supply-chain coordinator; people/records officer; executive operations coordinator."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-68",
+      "existing_id": "ROLE-68",
+      "office_or_role": "Supply-chain coordinator",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "The 12-person platform is the existing platform envelope reclassified to legal employer PS; 128 employees remain at RWH. Mari is counted once in the platform and carries a dual officer title. Cole occupies the single site general-management billet. These changes do not add people to the total 140. Platform billets: President; COO/mining executive; commercial director; contract administrator; federal/downstream partnerships manager; controller; accounting/treasury analyst; development engineer; resource/technical assurance specialist; supply-chain coordinator; people/records officer; executive operations coordinator.",
+      "reporting_and_independence": "Existing Pale Sun executive structure; platform responsibilities do not absorb Red Wash site management.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 1,
+      "existing_staff_support": "Within the established 12-person platform; Mari counted once across dual offices; reuse enterprise professional support.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed Taylor-area base with Red Wash and Sacramento travel; rooms subject to occupancy audit.",
+      "estate_id": "E-07",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+          "line": 14,
+          "evidence": "The 12-person platform is the existing platform envelope reclassified to legal employer PS; 128 employees remain at RWH. Mari is counted once in the platform and carries a dual officer title. Cole occupies the single site general-management billet. These changes do not add people to the total 140. Platform billets: President; COO/mining executive; commercial director; contract administrator; federal/downstream partnerships manager; controller; accounting/treasury analyst; development engineer; resource/technical assurance specialist; supply-chain coordinator; people/records officer; executive operations coordinator."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-69",
+      "existing_id": "ROLE-69",
+      "office_or_role": "People/records officer",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "The 12-person platform is the existing platform envelope reclassified to legal employer PS; 128 employees remain at RWH. Mari is counted once in the platform and carries a dual officer title. Cole occupies the single site general-management billet. These changes do not add people to the total 140. Platform billets: President; COO/mining executive; commercial director; contract administrator; federal/downstream partnerships manager; controller; accounting/treasury analyst; development engineer; resource/technical assurance specialist; supply-chain coordinator; people/records officer; executive operations coordinator.",
+      "reporting_and_independence": "Existing Pale Sun executive structure; platform responsibilities do not absorb Red Wash site management.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 1,
+      "existing_staff_support": "Within the established 12-person platform; Mari counted once across dual offices; reuse enterprise professional support.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed Taylor-area base with Red Wash and Sacramento travel; rooms subject to occupancy audit.",
+      "estate_id": "E-07",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+          "line": 14,
+          "evidence": "The 12-person platform is the existing platform envelope reclassified to legal employer PS; 128 employees remain at RWH. Mari is counted once in the platform and carries a dual officer title. Cole occupies the single site general-management billet. These changes do not add people to the total 140. Platform billets: President; COO/mining executive; commercial director; contract administrator; federal/downstream partnerships manager; controller; accounting/treasury analyst; development engineer; resource/technical assurance specialist; supply-chain coordinator; people/records officer; executive operations coordinator."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-70",
+      "existing_id": "ROLE-70",
+      "office_or_role": "Executive operations coordinator",
+      "source_state": "SOURCE_SUPPORTED_OFFICE_OR_PROFESSION",
+      "remit_source_or_summary": "The 12-person platform is the existing platform envelope reclassified to legal employer PS; 128 employees remain at RWH. Mari is counted once in the platform and carries a dual officer title. Cole occupies the single site general-management billet. These changes do not add people to the total 140. Platform billets: President; COO/mining executive; commercial director; contract administrator; federal/downstream partnerships manager; controller; accounting/treasury analyst; development engineer; resource/technical assurance specialist; supply-chain coordinator; people/records officer; executive operations coordinator.",
+      "reporting_and_independence": "Existing Pale Sun executive structure; platform responsibilities do not absorb Red Wash site management.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 1,
+      "existing_staff_support": "Within the established 12-person platform; Mari counted once across dual offices; reuse enterprise professional support.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed Taylor-area base with Red Wash and Sacramento travel; rooms subject to occupancy audit.",
+      "estate_id": "E-07",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+          "line": 14,
+          "evidence": "The 12-person platform is the existing platform envelope reclassified to legal employer PS; 128 employees remain at RWH. Mari is counted once in the platform and carries a dual officer title. Cole occupies the single site general-management billet. These changes do not add people to the total 140. Platform billets: President; COO/mining executive; commercial director; contract administrator; federal/downstream partnerships manager; controller; accounting/treasury analyst; development engineer; resource/technical assurance specialist; supply-chain coordinator; people/records officer; executive operations coordinator."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-71",
+      "existing_id": "ROLE-71",
+      "office_or_role": "Matter Principal",
+      "source_state": "ENGAGEMENT_ROLE_OR_FUNCTION; not necessarily a separate employee",
+      "remit_source_or_summary": "## 3. Matter Principal One Matter Principal owns the professional promise. The Matter Principal is accountable for: Origination credit and Matter Principal authority are separate.",
+      "reporting_and_independence": "Accepted common bench and professional hierarchy; rank, engagement role and forum are not necessarily distinct posts. Value Office/independent review remain independent of originating engagement work.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "One Advisory occupied scenario of 32; reuse professional bench and ESS, not a team per role.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento collaboration base, client sites and eight eastern touchdown seats included in E-06; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/advisory/MATTER_GOVERNANCE_AND_ECONOMICS.md",
+          "line": 37,
+          "evidence": "## 3. Matter Principal"
+        },
+        {
+          "path": "docs/advisory/MATTER_GOVERNANCE_AND_ECONOMICS.md",
+          "line": 39,
+          "evidence": "One Matter Principal owns the professional promise."
+        },
+        {
+          "path": "docs/advisory/MATTER_GOVERNANCE_AND_ECONOMICS.md",
+          "line": 41,
+          "evidence": "The Matter Principal is accountable for:"
+        },
+        {
+          "path": "docs/advisory/MATTER_GOVERNANCE_AND_ECONOMICS.md",
+          "line": 52,
+          "evidence": "Origination credit and Matter Principal authority are separate."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-72",
+      "existing_id": "ROLE-72",
+      "office_or_role": "Acceptance Principal",
+      "source_state": "ENGAGEMENT_ROLE_OR_FUNCTION; not necessarily a separate employee",
+      "remit_source_or_summary": "A matter may not begin substantive delivery until an Acceptance Principal records a matter-acceptance disposition. The Acceptance Principal, Independent Reviewer and Value Office each have separate duties against these failure modes.",
+      "reporting_and_independence": "Accepted common bench and professional hierarchy; rank, engagement role and forum are not necessarily distinct posts. Value Office/independent review remain independent of originating engagement work.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "One Advisory occupied scenario of 32; reuse professional bench and ESS, not a team per role.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento collaboration base, client sites and eight eastern touchdown seats included in E-06; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/advisory/MATTER_GOVERNANCE_AND_ECONOMICS.md",
+          "line": 16,
+          "evidence": "A matter may not begin substantive delivery until an Acceptance Principal records a matter-acceptance disposition."
+        },
+        {
+          "path": "docs/advisory/MATTER_GOVERNANCE_AND_ECONOMICS.md",
+          "line": 283,
+          "evidence": "The Acceptance Principal, Independent Reviewer and Value Office each have separate duties against these failure modes."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-73",
+      "existing_id": "ROLE-73",
+      "office_or_role": "Independent Reviewer",
+      "source_state": "ENGAGEMENT_ROLE_OR_FUNCTION; not necessarily a separate employee",
+      "remit_source_or_summary": "A consequential matter receives an Independent Reviewer based on risk, novelty, outcome economics, regulatory exposure, public consequence or professional judgment. The Acceptance Principal, Independent Reviewer and Value Office each have separate duties against these failure modes.",
+      "reporting_and_independence": "Accepted common bench and professional hierarchy; rank, engagement role and forum are not necessarily distinct posts. Value Office/independent review remain independent of originating engagement work.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "One Advisory occupied scenario of 32; reuse professional bench and ESS, not a team per role.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento collaboration base, client sites and eight eastern touchdown seats included in E-06; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/advisory/MATTER_GOVERNANCE_AND_ECONOMICS.md",
+          "line": 56,
+          "evidence": "A consequential matter receives an Independent Reviewer based on risk, novelty, outcome economics, regulatory exposure, public consequence or professional judgment."
+        },
+        {
+          "path": "docs/advisory/MATTER_GOVERNANCE_AND_ECONOMICS.md",
+          "line": 283,
+          "evidence": "The Acceptance Principal, Independent Reviewer and Value Office each have separate duties against these failure modes."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-74",
+      "existing_id": "ROLE-74",
+      "office_or_role": "Value Office",
+      "source_state": "ENGAGEMENT_ROLE_OR_FUNCTION; not necessarily a separate employee",
+      "remit_source_or_summary": "## 5. Value Office The Advisory Value Office is a small independent capability that exists because outcome pricing is not credible if the team earning the fee grades its own result. ### Value Office responsibilities The Value Office does not decide whether the professional recommendation was aesthetically good. It certifies the agreed measurement system.",
+      "reporting_and_independence": "Accepted common bench and professional hierarchy; rank, engagement role and forum are not necessarily distinct posts. Value Office/independent review remain independent of originating engagement work.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "One Advisory occupied scenario of 32; reuse professional bench and ESS, not a team per role.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento collaboration base, client sites and eight eastern touchdown seats included in E-06; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/advisory/MATTER_GOVERNANCE_AND_ECONOMICS.md",
+          "line": 72,
+          "evidence": "## 5. Value Office"
+        },
+        {
+          "path": "docs/advisory/MATTER_GOVERNANCE_AND_ECONOMICS.md",
+          "line": 74,
+          "evidence": "The Advisory Value Office is a small independent capability that exists because outcome pricing is not credible if the team earning the fee grades its own result."
+        },
+        {
+          "path": "docs/advisory/MATTER_GOVERNANCE_AND_ECONOMICS.md",
+          "line": 76,
+          "evidence": "### Value Office responsibilities"
+        },
+        {
+          "path": "docs/advisory/MATTER_GOVERNANCE_AND_ECONOMICS.md",
+          "line": 102,
+          "evidence": "The Value Office does not decide whether the professional recommendation was aesthetically good. It certifies the agreed measurement system."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-75",
+      "existing_id": "ROLE-75",
+      "office_or_role": "Team Lead",
+      "source_state": "SOURCE_SUPPORTED_ROLE; six teams, one role per team",
+      "remit_source_or_summary": "Each standard JAG team has exactly five billets: senior management-track **Team Lead**, quantitative **Data Scientist**, software/systems-heavy **Technical Systems Advisor**, line/field **Operational Advisor**, and human-factors/culture/incentives **Human Systems Advisor**. Research is everyone's job; no generic research-analyst seat is added.",
+      "reporting_and_independence": "Within the existing J2 charter, arm and establishment; J2 remains outside ESS. Source counts are authorized billets, not confirmed occupied staff.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 6,
+      "existing_staff_support": "Existing J2 establishment, 237 total including Education 35 and JAG 30; ESS administration does not supervise J2.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed separate Sacramento J2 building; field/JAG deployments retain operating-site work.",
+      "estate_id": "E-02",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/j2/JUNCTION_ADVISORY_GROUP.md",
+          "line": 6,
+          "evidence": "Each standard JAG team has exactly five billets: senior management-track **Team Lead**, quantitative **Data Scientist**, software/systems-heavy **Technical Systems Advisor**, line/field **Operational Advisor**, and human-factors/culture/incentives **Human Systems Advisor**. Research is everyone's job; no generic research-analyst seat is added."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-76",
+      "existing_id": "ROLE-76",
+      "office_or_role": "Data Scientist",
+      "source_state": "SOURCE_SUPPORTED_ROLE; six teams, one role per team",
+      "remit_source_or_summary": "Each standard JAG team has exactly five billets: senior management-track **Team Lead**, quantitative **Data Scientist**, software/systems-heavy **Technical Systems Advisor**, line/field **Operational Advisor**, and human-factors/culture/incentives **Human Systems Advisor**. Research is everyone's job; no generic research-analyst seat is added.",
+      "reporting_and_independence": "Within the existing J2 charter, arm and establishment; J2 remains outside ESS. Source counts are authorized billets, not confirmed occupied staff.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 6,
+      "existing_staff_support": "Existing J2 establishment, 237 total including Education 35 and JAG 30; ESS administration does not supervise J2.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed separate Sacramento J2 building; field/JAG deployments retain operating-site work.",
+      "estate_id": "E-02",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/j2/JUNCTION_ADVISORY_GROUP.md",
+          "line": 6,
+          "evidence": "Each standard JAG team has exactly five billets: senior management-track **Team Lead**, quantitative **Data Scientist**, software/systems-heavy **Technical Systems Advisor**, line/field **Operational Advisor**, and human-factors/culture/incentives **Human Systems Advisor**. Research is everyone's job; no generic research-analyst seat is added."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-77",
+      "existing_id": "ROLE-77",
+      "office_or_role": "Technical Systems Advisor",
+      "source_state": "SOURCE_SUPPORTED_ROLE; six teams, one role per team",
+      "remit_source_or_summary": "Each standard JAG team has exactly five billets: senior management-track **Team Lead**, quantitative **Data Scientist**, software/systems-heavy **Technical Systems Advisor**, line/field **Operational Advisor**, and human-factors/culture/incentives **Human Systems Advisor**. Research is everyone's job; no generic research-analyst seat is added.",
+      "reporting_and_independence": "Within the existing J2 charter, arm and establishment; J2 remains outside ESS. Source counts are authorized billets, not confirmed occupied staff.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 6,
+      "existing_staff_support": "Existing J2 establishment, 237 total including Education 35 and JAG 30; ESS administration does not supervise J2.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed separate Sacramento J2 building; field/JAG deployments retain operating-site work.",
+      "estate_id": "E-02",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/j2/JUNCTION_ADVISORY_GROUP.md",
+          "line": 6,
+          "evidence": "Each standard JAG team has exactly five billets: senior management-track **Team Lead**, quantitative **Data Scientist**, software/systems-heavy **Technical Systems Advisor**, line/field **Operational Advisor**, and human-factors/culture/incentives **Human Systems Advisor**. Research is everyone's job; no generic research-analyst seat is added."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-78",
+      "existing_id": "ROLE-78",
+      "office_or_role": "Operational Advisor",
+      "source_state": "SOURCE_SUPPORTED_ROLE; six teams, one role per team",
+      "remit_source_or_summary": "Each standard JAG team has exactly five billets: senior management-track **Team Lead**, quantitative **Data Scientist**, software/systems-heavy **Technical Systems Advisor**, line/field **Operational Advisor**, and human-factors/culture/incentives **Human Systems Advisor**. Research is everyone's job; no generic research-analyst seat is added.",
+      "reporting_and_independence": "Within the existing J2 charter, arm and establishment; J2 remains outside ESS. Source counts are authorized billets, not confirmed occupied staff.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 6,
+      "existing_staff_support": "Existing J2 establishment, 237 total including Education 35 and JAG 30; ESS administration does not supervise J2.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed separate Sacramento J2 building; field/JAG deployments retain operating-site work.",
+      "estate_id": "E-02",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/j2/JUNCTION_ADVISORY_GROUP.md",
+          "line": 6,
+          "evidence": "Each standard JAG team has exactly five billets: senior management-track **Team Lead**, quantitative **Data Scientist**, software/systems-heavy **Technical Systems Advisor**, line/field **Operational Advisor**, and human-factors/culture/incentives **Human Systems Advisor**. Research is everyone's job; no generic research-analyst seat is added."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ROLE-79",
+      "existing_id": "ROLE-79",
+      "office_or_role": "Human Systems Advisor",
+      "source_state": "SOURCE_SUPPORTED_ROLE; six teams, one role per team",
+      "remit_source_or_summary": "Each standard JAG team has exactly five billets: senior management-track **Team Lead**, quantitative **Data Scientist**, software/systems-heavy **Technical Systems Advisor**, line/field **Operational Advisor**, and human-factors/culture/incentives **Human Systems Advisor**. Research is everyone's job; no generic research-analyst seat is added.",
+      "reporting_and_independence": "Within the existing J2 charter, arm and establishment; J2 remains outside ESS. Source counts are authorized billets, not confirmed occupied staff.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": 6,
+      "existing_staff_support": "Existing J2 establishment, 237 total including Education 35 and JAG 30; ESS administration does not supervise J2.",
+      "current_working_base": null,
+      "proposed_working_base": "Proposed separate Sacramento J2 building; field/JAG deployments retain operating-site work.",
+      "estate_id": "E-02",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/j2/JUNCTION_ADVISORY_GROUP.md",
+          "line": 6,
+          "evidence": "Each standard JAG team has exactly five billets: senior management-track **Team Lead**, quantitative **Data Scientist**, software/systems-heavy **Technical Systems Advisor**, line/field **Operational Advisor**, and human-factors/culture/incentives **Human Systems Advisor**. Research is everyone's job; no generic research-analyst seat is added."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ADV-ROLE-1",
+      "existing_id": "ADV-ROLE-1",
+      "office_or_role": "President — Advisory",
+      "source_state": "ROLE_RANK_OR_FORUM",
+      "remit_source_or_summary": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "reporting_and_independence": "Accepted common bench and professional hierarchy; rank, engagement role and forum are not necessarily distinct posts. Value Office/independent review remain independent of originating engagement work.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "One Advisory occupied scenario of 32; reuse professional bench and ESS, not a team per role.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento collaboration base, client sites and eight eastern touchdown seats included in E-06; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ADV-ROLE-2",
+      "existing_id": "ADV-ROLE-2",
+      "office_or_role": "Managing Director — Advisory",
+      "source_state": "ROLE_RANK_OR_FORUM",
+      "remit_source_or_summary": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "reporting_and_independence": "Accepted common bench and professional hierarchy; rank, engagement role and forum are not necessarily distinct posts. Value Office/independent review remain independent of originating engagement work.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "One Advisory occupied scenario of 32; reuse professional bench and ESS, not a team per role.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento collaboration base, client sites and eight eastern touchdown seats included in E-06; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ADV-ROLE-3",
+      "existing_id": "ADV-ROLE-3",
+      "office_or_role": "Director — Advisory",
+      "source_state": "ROLE_RANK_OR_FORUM",
+      "remit_source_or_summary": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "reporting_and_independence": "Accepted common bench and professional hierarchy; rank, engagement role and forum are not necessarily distinct posts. Value Office/independent review remain independent of originating engagement work.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "One Advisory occupied scenario of 32; reuse professional bench and ESS, not a team per role.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento collaboration base, client sites and eight eastern touchdown seats included in E-06; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ADV-ROLE-4",
+      "existing_id": "ADV-ROLE-4",
+      "office_or_role": "Manager — Advisory",
+      "source_state": "ROLE_RANK_OR_FORUM",
+      "remit_source_or_summary": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "reporting_and_independence": "Accepted common bench and professional hierarchy; rank, engagement role and forum are not necessarily distinct posts. Value Office/independent review remain independent of originating engagement work.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "One Advisory occupied scenario of 32; reuse professional bench and ESS, not a team per role.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento collaboration base, client sites and eight eastern touchdown seats included in E-06; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ADV-ROLE-5",
+      "existing_id": "ADV-ROLE-5",
+      "office_or_role": "Distinguished Principal — Advisory",
+      "source_state": "ROLE_RANK_OR_FORUM",
+      "remit_source_or_summary": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "reporting_and_independence": "Accepted common bench and professional hierarchy; rank, engagement role and forum are not necessarily distinct posts. Value Office/independent review remain independent of originating engagement work.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "One Advisory occupied scenario of 32; reuse professional bench and ESS, not a team per role.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento collaboration base, client sites and eight eastern touchdown seats included in E-06; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ADV-ROLE-6",
+      "existing_id": "ADV-ROLE-6",
+      "office_or_role": "Senior Principal — Advisory",
+      "source_state": "ROLE_RANK_OR_FORUM",
+      "remit_source_or_summary": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "reporting_and_independence": "Accepted common bench and professional hierarchy; rank, engagement role and forum are not necessarily distinct posts. Value Office/independent review remain independent of originating engagement work.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "One Advisory occupied scenario of 32; reuse professional bench and ESS, not a team per role.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento collaboration base, client sites and eight eastern touchdown seats included in E-06; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ADV-ROLE-7",
+      "existing_id": "ADV-ROLE-7",
+      "office_or_role": "Principal — Advisory",
+      "source_state": "ROLE_RANK_OR_FORUM",
+      "remit_source_or_summary": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "reporting_and_independence": "Accepted common bench and professional hierarchy; rank, engagement role and forum are not necessarily distinct posts. Value Office/independent review remain independent of originating engagement work.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "One Advisory occupied scenario of 32; reuse professional bench and ESS, not a team per role.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento collaboration base, client sites and eight eastern touchdown seats included in E-06; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ADV-ROLE-8",
+      "existing_id": "ADV-ROLE-8",
+      "office_or_role": "Senior Professional — Advisory",
+      "source_state": "ROLE_RANK_OR_FORUM",
+      "remit_source_or_summary": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "reporting_and_independence": "Accepted common bench and professional hierarchy; rank, engagement role and forum are not necessarily distinct posts. Value Office/independent review remain independent of originating engagement work.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "One Advisory occupied scenario of 32; reuse professional bench and ESS, not a team per role.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento collaboration base, client sites and eight eastern touchdown seats included in E-06; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ADV-ROLE-9",
+      "existing_id": "ADV-ROLE-9",
+      "office_or_role": "Professional — Advisory",
+      "source_state": "ROLE_RANK_OR_FORUM",
+      "remit_source_or_summary": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "reporting_and_independence": "Accepted common bench and professional hierarchy; rank, engagement role and forum are not necessarily distinct posts. Value Office/independent review remain independent of originating engagement work.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "One Advisory occupied scenario of 32; reuse professional bench and ESS, not a team per role.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento collaboration base, client sites and eight eastern touchdown seats included in E-06; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ADV-ROLE-10",
+      "existing_id": "ADV-ROLE-10",
+      "office_or_role": "Associate Professional — Advisory",
+      "source_state": "ROLE_RANK_OR_FORUM",
+      "remit_source_or_summary": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "reporting_and_independence": "Accepted common bench and professional hierarchy; rank, engagement role and forum are not necessarily distinct posts. Value Office/independent review remain independent of originating engagement work.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "One Advisory occupied scenario of 32; reuse professional bench and ESS, not a team per role.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento collaboration base, client sites and eight eastern touchdown seats included in E-06; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ADV-ROLE-11",
+      "existing_id": "ADV-ROLE-11",
+      "office_or_role": "Practice Leader — Advisory",
+      "source_state": "ROLE_RANK_OR_FORUM",
+      "remit_source_or_summary": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "reporting_and_independence": "Accepted common bench and professional hierarchy; rank, engagement role and forum are not necessarily distinct posts. Value Office/independent review remain independent of originating engagement work.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "One Advisory occupied scenario of 32; reuse professional bench and ESS, not a team per role.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento collaboration base, client sites and eight eastern touchdown seats included in E-06; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ADV-ROLE-12",
+      "existing_id": "ADV-ROLE-12",
+      "office_or_role": "Relationship Principal — Advisory",
+      "source_state": "ROLE_RANK_OR_FORUM",
+      "remit_source_or_summary": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "reporting_and_independence": "Accepted common bench and professional hierarchy; rank, engagement role and forum are not necessarily distinct posts. Value Office/independent review remain independent of originating engagement work.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "One Advisory occupied scenario of 32; reuse professional bench and ESS, not a team per role.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento collaboration base, client sites and eight eastern touchdown seats included in E-06; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ADV-ROLE-13",
+      "existing_id": "ADV-ROLE-13",
+      "office_or_role": "Matter Principal — Advisory",
+      "source_state": "ROLE_RANK_OR_FORUM",
+      "remit_source_or_summary": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "reporting_and_independence": "Accepted common bench and professional hierarchy; rank, engagement role and forum are not necessarily distinct posts. Value Office/independent review remain independent of originating engagement work.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "One Advisory occupied scenario of 32; reuse professional bench and ESS, not a team per role.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento collaboration base, client sites and eight eastern touchdown seats included in E-06; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ADV-ROLE-14",
+      "existing_id": "ADV-ROLE-14",
+      "office_or_role": "Acceptance Principal — Advisory",
+      "source_state": "ROLE_RANK_OR_FORUM",
+      "remit_source_or_summary": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "reporting_and_independence": "Accepted common bench and professional hierarchy; rank, engagement role and forum are not necessarily distinct posts. Value Office/independent review remain independent of originating engagement work.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "One Advisory occupied scenario of 32; reuse professional bench and ESS, not a team per role.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento collaboration base, client sites and eight eastern touchdown seats included in E-06; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ADV-ROLE-15",
+      "existing_id": "ADV-ROLE-15",
+      "office_or_role": "Independent Reviewer — Advisory",
+      "source_state": "ROLE_RANK_OR_FORUM",
+      "remit_source_or_summary": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "reporting_and_independence": "Accepted common bench and professional hierarchy; rank, engagement role and forum are not necessarily distinct posts. Value Office/independent review remain independent of originating engagement work.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "One Advisory occupied scenario of 32; reuse professional bench and ESS, not a team per role.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento collaboration base, client sites and eight eastern touchdown seats included in E-06; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ADV-ROLE-16",
+      "existing_id": "ADV-ROLE-16",
+      "office_or_role": "Value Office Lead — Advisory",
+      "source_state": "ROLE_RANK_OR_FORUM",
+      "remit_source_or_summary": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "reporting_and_independence": "Accepted common bench and professional hierarchy; rank, engagement role and forum are not necessarily distinct posts. Value Office/independent review remain independent of originating engagement work.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "One Advisory occupied scenario of 32; reuse professional bench and ESS, not a team per role.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento collaboration base, client sites and eight eastern touchdown seats included in E-06; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ADV-ROLE-17",
+      "existing_id": "ADV-ROLE-17",
+      "office_or_role": "Transfer Owner — Advisory",
+      "source_state": "ROLE_RANK_OR_FORUM",
+      "remit_source_or_summary": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "reporting_and_independence": "Accepted common bench and professional hierarchy; rank, engagement role and forum are not necessarily distinct posts. Value Office/independent review remain independent of originating engagement work.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "One Advisory occupied scenario of 32; reuse professional bench and ESS, not a team per role.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento collaboration base, client sites and eight eastern touchdown seats included in E-06; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ADV-ROLE-18",
+      "existing_id": "ADV-ROLE-18",
+      "office_or_role": "Atlas Matter Steward — Advisory",
+      "source_state": "ROLE_RANK_OR_FORUM",
+      "remit_source_or_summary": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "reporting_and_independence": "Accepted common bench and professional hierarchy; rank, engagement role and forum are not necessarily distinct posts. Value Office/independent review remain independent of originating engagement work.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "One Advisory occupied scenario of 32; reuse professional bench and ESS, not a team per role.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento collaboration base, client sites and eight eastern touchdown seats included in E-06; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ADV-ROLE-19",
+      "existing_id": "ADV-ROLE-19",
+      "office_or_role": "Executive Operating Review — Advisory",
+      "source_state": "ROLE_RANK_OR_FORUM",
+      "remit_source_or_summary": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "reporting_and_independence": "Accepted common bench and professional hierarchy; rank, engagement role and forum are not necessarily distinct posts. Value Office/independent review remain independent of originating engagement work.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "One Advisory occupied scenario of 32; reuse professional bench and ESS, not a team per role.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento collaboration base, client sites and eight eastern touchdown seats included in E-06; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ADV-ROLE-20",
+      "existing_id": "ADV-ROLE-20",
+      "office_or_role": "Professional Quality Review — Advisory",
+      "source_state": "ROLE_RANK_OR_FORUM",
+      "remit_source_or_summary": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "reporting_and_independence": "Accepted common bench and professional hierarchy; rank, engagement role and forum are not necessarily distinct posts. Value Office/independent review remain independent of originating engagement work.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "One Advisory occupied scenario of 32; reuse professional bench and ESS, not a team per role.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento collaboration base, client sites and eight eastern touchdown seats included in E-06; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ADV-ROLE-21",
+      "existing_id": "ADV-ROLE-21",
+      "office_or_role": "Carry Allocation Review — Advisory",
+      "source_state": "ROLE_RANK_OR_FORUM",
+      "remit_source_or_summary": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "reporting_and_independence": "Accepted common bench and professional hierarchy; rank, engagement role and forum are not necessarily distinct posts. Value Office/independent review remain independent of originating engagement work.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "One Advisory occupied scenario of 32; reuse professional bench and ESS, not a team per role.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento collaboration base, client sites and eight eastern touchdown seats included in E-06; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-ADV-ROLE-22",
+      "existing_id": "ADV-ROLE-22",
+      "office_or_role": "Reserved Matter Room — Advisory",
+      "source_state": "ROLE_RANK_OR_FORUM",
+      "remit_source_or_summary": "Accepted Advisory role, professional rank or governance forum. No named occupant is established; the common bench is not divided into staffing silos.",
+      "reporting_and_independence": "Accepted common bench and professional hierarchy; rank, engagement role and forum are not necessarily distinct posts. Value Office/independent review remain independent of originating engagement work.",
+      "named_occupant": null,
+      "occupant_status": "No named occupant established in this source; does not prove vacancy or create a hiring requirement.",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "One Advisory occupied scenario of 32; reuse professional bench and ESS, not a team per role.",
+      "current_working_base": null,
+      "proposed_working_base": "Shared Sacramento collaboration base, client sites and eight eastern touchdown seats included in E-06; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Accept the relevant working-base decision; preserve any unresolved exact title. Person naming is outside this estate tranche.",
+      "sources": [
+        {
+          "path": "docs/advisory/FIRM_GOVERNANCE_AND_PROFESSIONAL_HIERARCHY.md"
+        },
+        {
+          "path": "docs/canon/DECISION_REGISTER_ADDENDUM_2026-09-09_ADVISORY_TIER1.md"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-P001",
+      "existing_id": "P001",
+      "office_or_role": "Chief Executive Officer",
+      "source_state": "current_employee",
+      "remit_source_or_summary": "CEO office; executive decisions and enterprise coordination.",
+      "reporting_and_independence": "CEO authority and Board accountability preserved.",
+      "named_occupant": "Daniel Mercer",
+      "company_joining_year": 2016,
+      "occupant_status": "current_employee",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "Existing corporate/ESS support; no added executive staff.",
+      "current_working_base": "See source evidence; proposed entries below are not current facts.",
+      "proposed_working_base": "Shared Sacramento HQ.",
+      "estate_id": "E-01",
+      "substantive_residual": "Working-base assignment/precision only where proposed; no appointment or joining-year change.",
+      "sources": [
+        {
+          "path": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
+          "line": 21,
+          "evidence": "| Daniel Mercer | Founder, CEO, director; former Chair | 2016 | Enterprise coherence and founder conviction without sovereignty |"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-P029",
+      "existing_id": "P029",
+      "office_or_role": "President & Chief Operating Officer",
+      "source_state": "current_employee",
+      "remit_source_or_summary": "ARU corporate and operating leadership.",
+      "reporting_and_independence": "Existing ARU/BST operating structure.",
+      "named_occupant": "Nora Ashcombe",
+      "company_joining_year": 1998,
+      "occupant_status": "current_employee",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "ARU 131 includes BS&T 58; shared office already has 10 assigned FTE.",
+      "current_working_base": "See source evidence; proposed entries below are not current facts.",
+      "proposed_working_base": "Taylor, Wyoming; exact personal room assignment not inferred.",
+      "estate_id": "E-07",
+      "substantive_residual": "Working-base assignment/precision only where proposed; no appointment or joining-year change.",
+      "sources": [
+        {
+          "path": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+          "line": 22,
+          "evidence": "| Nora Ashcombe — President/COO, ARU | Age 52; joined in 1998 as terminal commercial coordinator, became multi-site operations manager in 2012 and deputy operating lead in 2020. Learned customer promises by owning missed handoffs, not by acquiring a central staff | Day-one operating successor to Fred; accountable to SHIH. Gareth provides ordinary operations cover; capital remains subject to delegated authority |"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-P020",
+      "existing_id": "P020",
+      "office_or_role": "Atlas Meridian Product Lead",
+      "source_state": "current_employee",
+      "remit_source_or_summary": "Leads the dedicated Atlas Meridian product organization.",
+      "reporting_and_independence": "Atlas product accountability preserved.",
+      "named_occupant": "Simone Vale",
+      "company_joining_year": null,
+      "occupant_status": "current_employee",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "Atlas 36 occupied / 40 authorized scenario; shared ESS support.",
+      "current_working_base": "See source evidence; proposed entries below are not current facts.",
+      "proposed_working_base": "Shared Sacramento product base; proposed.",
+      "estate_id": "E-04",
+      "substantive_residual": "Working-base assignment/precision only where proposed; no appointment or joining-year change.",
+      "sources": [
+        {
+          "path": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+          "line": 980,
+          "evidence": "**Simone Vale** is brought in as a transition or product leader. Her first instinct is to stop adding capability and prove what can be repeated. Owen finds this frustrating. Gid supports her."
+        },
+        {
+          "path": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+          "line": 1529,
+          "evidence": "- Simone Vale leads or helps lead the Atlas transition into a repeatable product."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-P035",
+      "existing_id": "P035",
+      "office_or_role": "General Manager",
+      "source_state": "current_employee",
+      "remit_source_or_summary": "BS&T railway management.",
+      "reporting_and_independence": "Existing railway authority and industrial safety boundaries.",
+      "named_occupant": "Seth Kettering",
+      "company_joining_year": 1992,
+      "occupant_status": "current_employee",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "BS&T 58 already within ARU 131.",
+      "current_working_base": "See source evidence; proposed entries below are not current facts.",
+      "proposed_working_base": "Taylor operating base and accepted railway territory.",
+      "estate_id": "E-07",
+      "substantive_residual": "Working-base assignment/precision only where proposed; no appointment or joining-year change.",
+      "sources": [
+        {
+          "path": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+          "line": 28,
+          "evidence": "| Seth Kettering — BS&T General Manager | Age 56; joined railway service in 1992, progressed through train/engine and operations, GM since 2013. Retains practical customer/interchange knowledge | Railway operating authority; Anika develops operating relief. Sold his entire 10% ARU interest but retains no shareholder veto |"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-P025",
+      "existing_id": "P025",
+      "office_or_role": "Head of Cradle",
+      "source_state": "current_employee",
+      "remit_source_or_summary": "Leads Cradle recovery development and host deployments.",
+      "reporting_and_independence": "Existing Cradle project accountability; host retains operating authority.",
+      "named_occupant": "Kenji Arakawa",
+      "company_joining_year": null,
+      "occupant_status": "current_employee",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "Cradle 18 occupied / 20 authorized scenario across Bedford and deployments.",
+      "current_working_base": "See source evidence; proposed entries below are not current facts.",
+      "proposed_working_base": "Bedford/Fairmont and external-host deployments; established region.",
+      "estate_id": "E-06",
+      "substantive_residual": "Working-base assignment/precision only where proposed; no appointment or joining-year change.",
+      "sources": [
+        {
+          "path": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+          "line": 1306,
+          "evidence": "- **Kenji Arakawa** — extractive metallurgy and program lead;"
+        },
+        {
+          "path": "docs/canon/CRADLE_CLOSEOUT_2026-09-06.md",
+          "line": 166,
+          "evidence": "Kenji Arakawa remains Cradle leader. Tessa Quinn, Luis Ortega and Maeve Donnelly retain the founding roles already established in canon. This closeout does not manufacture a large department chart or new named executives merely to make the business look mature."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-P002",
+      "existing_id": "P002",
+      "office_or_role": "Head of Product",
+      "source_state": "current_employee",
+      "remit_source_or_summary": "Product leadership for the accepted business/product organization.",
+      "reporting_and_independence": "Product engineering remains with the businesses.",
+      "named_occupant": "Priya Raman",
+      "company_joining_year": 2016,
+      "occupant_status": "current_employee",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "Existing product teams; no transfer of dedicated Atlas staff to a general bench.",
+      "current_working_base": "See source evidence; proposed entries below are not current facts.",
+      "proposed_working_base": "Shared Sacramento product base; hybrid and customer work continue.",
+      "estate_id": "E-04",
+      "substantive_residual": "Working-base assignment/precision only where proposed; no appointment or joining-year change.",
+      "sources": [
+        {
+          "path": "docs/governance/BOARD_AND_CAPITAL_GOVERNANCE_v1.0.1.md",
+          "line": 22,
+          "evidence": "| Priya Raman | Founder, director | 2016 | Product and technical substrate |"
+        },
+        {
+          "path": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+          "line": 1522,
+          "evidence": "- Priya owns the product and technical substrate."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-P011",
+      "existing_id": "P011",
+      "office_or_role": "Director of Advanced Programs",
+      "source_state": "current_employee",
+      "remit_source_or_summary": "Advanced Programs institutional interface and coordination.",
+      "reporting_and_independence": "Existing remit; physical location does not make this a second Willow command chain.",
+      "named_occupant": "Rachel Sloane",
+      "company_joining_year": null,
+      "occupant_status": "current_employee",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "Existing assigned population and shared institutional support; no additional headcount.",
+      "current_working_base": "See source evidence; proposed entries below are not current facts.",
+      "proposed_working_base": "Sacramento institutional seam supported by source; no exact address inferred.",
+      "estate_id": "E-01",
+      "substantive_residual": "Working-base assignment/precision only where proposed; no appointment or joining-year change.",
+      "sources": [
+        {
+          "path": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+          "line": 710,
+          "evidence": "After 2022, Willow also gains an institutional seam in Sacramento through **Rachel Sloane**, Director of Advanced Programs or an equivalent role."
+        },
+        {
+          "path": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+          "line": 712,
+          "evidence": "Rachel Sloane is not Gid’s boss. She translates budget, legal, security, product, and executive concerns into constraints the laboratory can live with, and translates Willow’s strange but valuable work back into language the company can govern."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-P021",
+      "existing_id": "P021",
+      "office_or_role": "President",
+      "source_state": "current_employee",
+      "remit_source_or_summary": "Pale Sun platform leadership and commercial development.",
+      "reporting_and_independence": "Existing Pale Sun structure; no ownership change to operating sites.",
+      "named_occupant": "Evan Vilander",
+      "company_joining_year": 2021,
+      "occupant_status": "current_employee",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "Pale Sun 12 platform population, not additional to 140 PS/Red Wash.",
+      "current_working_base": "See source evidence; proposed entries below are not current facts.",
+      "proposed_working_base": "Proposed Taylor working base; travel to Sacramento and customers.",
+      "estate_id": "E-07",
+      "substantive_residual": "Working-base assignment/precision only where proposed; no appointment or joining-year change.",
+      "sources": [
+        {
+          "path": "industrial/pale_sun/01_VILANDER_BIOGRAPHY.md",
+          "line": 14,
+          "evidence": "By 2021 he was a plausible future operator of BTC, rather than an already installed CEO. Sable Harbor's offer for a Judgment Officer position exceeded what he expected to earn running BTC. That comparison is a locked narrative fact; no currency conversion, exact salary or guaranteed BTC succession is manufactured. He accepted on April 12 and joined J2 on May 3, 2021, after more than thirteen years at BTC."
+        },
+        {
+          "path": "docs/canon/INDUSTRIAL_CLOSEOUT_2026-09-05.md",
+          "line": 35,
+          "evidence": "| IND-004 | Evan Vilander is Pale Sun President from 2025-11-03; Mari Varela is PS COO and RWH CEO; Cole remains site superintendent with temporary stop authority | [Leadership and authority](../../industrial/corporate/LEADERSHIP_AND_AUTHORITY.md). Cole's surname remains unestablished. Walt Sutter remains external; Martin Shaw is transaction lead and Henry Norwood is NMI seller principal |"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-P022",
+      "existing_id": "P022",
+      "office_or_role": "Chief Operating Officer, Pale Sun; Chief Executive Officer, Red Wash",
+      "source_state": "current_employee",
+      "remit_source_or_summary": "Pale Sun operations and Red Wash executive responsibility.",
+      "reporting_and_independence": "Dual office retained; one person, not two FTE.",
+      "named_occupant": "Mari Varela",
+      "company_joining_year": null,
+      "occupant_status": "current_employee",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "Pale Sun/Red Wash existing population and local site management.",
+      "current_working_base": "See source evidence; proposed entries below are not current facts.",
+      "proposed_working_base": "Proposed Taylor platform base with Red Wash operational presence.",
+      "estate_id": "E-07",
+      "substantive_residual": "Working-base assignment/precision only where proposed; no appointment or joining-year change.",
+      "sources": [
+        {
+          "path": "industrial/corporate/LEADERSHIP_AND_AUTHORITY.md",
+          "line": 12,
+          "evidence": "Evan Vilander is President of Pale Sun. Mari Varela is COO of Pale Sun and CEO of Red Wash Mining, LLC. Evan owns platform strategy, capital cases, federal/downstream relationships and company-building. Mari owns mining/technical operations, mine protection and the right to reject unqualified operating changes. Martin Shaw is the Red Wash transaction lead; Henry Norwood is the NMI seller principal. Cole remains site superintendent with temporary stop authority; his surname remains unestablished. Walt Sutter is an external retired geological source, not an employee."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-P010",
+      "existing_id": "P010",
+      "office_or_role": "Head of Willow",
+      "source_state": "current_employee",
+      "remit_source_or_summary": "Leads Willow research and experimental engineering.",
+      "reporting_and_independence": "Existing Willow leadership; ESS supplies administration.",
+      "named_occupant": "Gid Voss",
+      "company_joining_year": 2018,
+      "occupant_status": "current_employee",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "Willow 24 occupied/authorized scenario; Fort facilities.",
+      "current_working_base": "See source evidence; proposed entries below are not current facts.",
+      "proposed_working_base": "Fort, Pittsburgh area; established at regional precision.",
+      "estate_id": "E-06",
+      "substantive_residual": "Working-base assignment/precision only where proposed; no appointment or joining-year change.",
+      "sources": [
+        {
+          "path": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+          "line": 534,
+          "evidence": "Gid Voss joins in late 2018."
+        },
+        {
+          "path": "docs/canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md",
+          "line": 1527,
+          "evidence": "- Gid runs Willow from Pittsburgh and cannot unilaterally put experiments into production operations."
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-P063",
+      "existing_id": "P063",
+      "office_or_role": "Head of J2",
+      "source_state": "current_employee",
+      "remit_source_or_summary": "Leads J2 enterprise intelligence institution.",
+      "reporting_and_independence": "CEO administrative relationship and protected Board access; no ESS supervision.",
+      "named_occupant": "Jonathan Goldstryker",
+      "company_joining_year": 2020,
+      "occupant_status": "current_employee",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "Existing 28-authorized HQ establishment; whole J2 237.",
+      "current_working_base": "See source evidence; proposed entries below are not current facts.",
+      "proposed_working_base": "Proposed separate Sacramento J2 building.",
+      "estate_id": "E-02",
+      "substantive_residual": "Working-base assignment/precision only where proposed; no appointment or joining-year change.",
+      "sources": [
+        {
+          "path": "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+          "section": "Approved roster",
+          "evidence": "| Jonathan Goldstryker | Head of J2 | 2020 |"
+        },
+        {
+          "path": "docs/j2/J2_HEADQUARTERS.md",
+          "line": 18,
+          "evidence": "- Head of J2"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-P064",
+      "existing_id": "P064",
+      "office_or_role": "Deputy Head of J2",
+      "source_state": "current_employee",
+      "remit_source_or_summary": "Deputy institutional leadership and J2 coordination.",
+      "reporting_and_independence": "Existing J2 Head/Deputy structure; protected independence.",
+      "named_occupant": "Amanda Chenahot",
+      "company_joining_year": 2021,
+      "occupant_status": "current_employee",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "Existing HQ establishment; no new deputy billet.",
+      "current_working_base": "See source evidence; proposed entries below are not current facts.",
+      "proposed_working_base": "Proposed separate Sacramento J2 building.",
+      "estate_id": "E-02",
+      "substantive_residual": "Working-base assignment/precision only where proposed; no appointment or joining-year change.",
+      "sources": [
+        {
+          "path": "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+          "section": "Approved roster",
+          "evidence": "| Amanda Chenahot | Deputy Head of J2 | 2021 |"
+        },
+        {
+          "path": "docs/j2/J2_HEADQUARTERS.md",
+          "line": 19,
+          "evidence": "- Deputy Head of J2"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-P065",
+      "existing_id": "P065",
+      "office_or_role": "Head of Contact",
+      "source_state": "current_employee",
+      "remit_source_or_summary": "Leads Contact collection, evidence and exploitation.",
+      "reporting_and_independence": "Existing Head of J2 line; collection authority bounded by charter.",
+      "named_occupant": "Mara Hammer",
+      "company_joining_year": 2021,
+      "occupant_status": "current_employee",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "Contact 78 authorized, field deployments included.",
+      "current_working_base": "See source evidence; proposed entries below are not current facts.",
+      "proposed_working_base": "Proposed Sacramento J2 home base with field work.",
+      "estate_id": "E-02",
+      "substantive_residual": "Working-base assignment/precision only where proposed; no appointment or joining-year change.",
+      "sources": [
+        {
+          "path": "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+          "section": "Approved roster",
+          "evidence": "| Mara Hammer | Head of Contact | 2021 |"
+        },
+        {
+          "path": "docs/j2/J2_ESTABLISHMENT.md",
+          "line": 12,
+          "evidence": "| Contact | 78 | 1 Head, 1 Deputy, 6 Collection Directors, 8 Collection Managers, 20 Human Contact Officers, 16 Digital/Data Collectors, 14 Field/Technical Collectors, 10 External-Source Collectors, 2 Collection Methods Officers |"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-P066",
+      "existing_id": "P066",
+      "office_or_role": "Head of Judgment",
+      "source_state": "current_employee",
+      "remit_source_or_summary": "Leads Judgment analysis, assessments and Watch.",
+      "reporting_and_independence": "Existing Head of J2 line; independent analytical duties preserved.",
+      "named_occupant": "Anika Trish",
+      "company_joining_year": 2021,
+      "occupant_status": "current_employee",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "Judgment 42 authorized, including Watch.",
+      "current_working_base": "See source evidence; proposed entries below are not current facts.",
+      "proposed_working_base": "Proposed Sacramento J2 building.",
+      "estate_id": "E-02",
+      "substantive_residual": "Working-base assignment/precision only where proposed; no appointment or joining-year change.",
+      "sources": [
+        {
+          "path": "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+          "section": "Approved roster",
+          "evidence": "| Anika Trish | Head of Judgment | 2021 |"
+        },
+        {
+          "path": "docs/j2/J2_ESTABLISHMENT.md",
+          "line": 13,
+          "evidence": "| Judgment | 42 | 1 Head, 1 Deputy, 6 Senior Judgment Directors, 28 Judgment Officers, 6 Judgment Watch Officers |"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-P067",
+      "existing_id": "P067",
+      "office_or_role": "Head of Orientation",
+      "source_state": "current_employee",
+      "remit_source_or_summary": "Leads Orientation briefings and decision support.",
+      "reporting_and_independence": "Existing Head of J2 line; decision support does not take management authority.",
+      "named_occupant": "Grant Kohrs",
+      "company_joining_year": 2020,
+      "occupant_status": "current_employee",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "Orientation 24 authorized.",
+      "current_working_base": "See source evidence; proposed entries below are not current facts.",
+      "proposed_working_base": "Proposed Sacramento J2 building with executive/client travel.",
+      "estate_id": "E-02",
+      "substantive_residual": "Working-base assignment/precision only where proposed; no appointment or joining-year change.",
+      "sources": [
+        {
+          "path": "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+          "section": "Approved roster",
+          "evidence": "| Grant Kohrs | Head of Orientation | 2020 |"
+        },
+        {
+          "path": "docs/j2/J2_ESTABLISHMENT.md",
+          "line": 14,
+          "evidence": "| Orientation | 24 | 1 Head, 1 Deputy, 4 Senior Orientation Officers, 18 Orientation Officers |"
+        }
+      ],
+      "counts_are_not_additive": true
+    },
+    {
+      "office_review_id": "OFF-P068",
+      "existing_id": "P068",
+      "office_or_role": "Head of Education",
+      "source_state": "current_employee",
+      "remit_source_or_summary": "Leads Education formation, programs, faculty and convenings.",
+      "reporting_and_independence": "Existing Head of J2 line; Education remains a distinct physical institution.",
+      "named_occupant": "Brett Calder",
+      "company_joining_year": 2021,
+      "occupant_status": "current_employee",
+      "source_authorized_role_count": null,
+      "existing_staff_support": "Education 35 authorized already included in J2 237; hospitality is separate demand.",
+      "current_working_base": "See source evidence; proposed entries below are not current facts.",
+      "proposed_working_base": "Proposed Sacramento residential Education precinct; D-02 pending.",
+      "estate_id": "E-03",
+      "substantive_residual": "Working-base assignment/precision only where proposed; no appointment or joining-year change.",
+      "sources": [
+        {
+          "path": "docs/canon/J2_LEADERSHIP_APPOINTMENTS_2026-09-10.md",
+          "section": "Approved roster",
+          "evidence": "| Brett Calder | Head of Education | 2021 |"
+        },
+        {
+          "path": "docs/j2/EDUCATION.md",
+          "line": 47,
+          "evidence": "The permanent Education establishment is approximately **35 billets**. The permanent core includes the Head of Education, deputy leadership, senior faculty, instructors, exercise and case designers, program/registrar staff, learning operations, and campus/program support."
+        }
+      ],
+      "counts_are_not_additive": true
+    }
+  ]
+}

@@ -13,6 +13,22 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 - [Northern Nevada Data Center — Layout and Space Program](../../facilities/NORTHERN_NEVADA_DATA_CENTER_LAYOUT_PROGRAM_2026-09-11.md) — MD · [formatted PDF](../../../enterprise/runtime/publications/SH-RT-LAYOUT-001_v1.0.0.pdf)
 - [SABLE HARBOR Northern Nevada Data Center — Master Plan](../../facilities/NORTHERN_NEVADA_DATA_CENTER_MASTER_PLAN_2026-09-11.md) — MD · [formatted PDF](../../../enterprise/runtime/publications/SH-RT-FACILITY-001_v1.0.0.pdf)
 
+## `docs/facilities/history/office-estate-review-2026-09-11`
+
+- [September 11 office estate review — recovered draft](../../facilities/history/office-estate-review-2026-09-11/README.md) — MD
+
+## `docs/facilities/history/office-estate-review-2026-09-11/original`
+
+- [SABLE HARBOR — Recovered office and estate work](../../facilities/history/office-estate-review-2026-09-11/original/START_HERE_Recovery_Status.md) — MD
+
+## `docs/facilities/history/office-estate-review-2026-09-11/original/context`
+
+- [SABLE HARBOR — Offices, Facilities, and Locations Handover](../../facilities/history/office-estate-review-2026-09-11/original/context/SABLE_HARBOR_Offices_and_Locations_Handover_2026-09-11.md) — MD
+
+## `docs/facilities/history/office-estate-review-2026-09-11/original/recovered-draft`
+
+- [Enterprise estate review — September 11, 2026](../../facilities/history/office-estate-review-2026-09-11/original/recovered-draft/README.md) — MD
+
 ## `docs/facilities/references/runtime-hosting-research-2026-09-11`
 
 - [Recovered runtime capacity and owned-site research](../../facilities/references/runtime-hosting-research-2026-09-11/README.md) — MD
@@ -88,6 +104,10 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 ## `geospatial/facilities/coverage`
 
 - [Facility coverage matrix](../../../geospatial/facilities/coverage/COVERAGE_MATRIX.md) — MD
+
+## `geospatial/facilities/history/staged-workline-2026-09-11`
+
+- [September 11 staged facility workline — historical recovery](../../../geospatial/facilities/history/staged-workline-2026-09-11/README.md) — MD
 
 ## `geospatial/facilities/population`
 
@@ -256,6 +276,22 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 - [Geospatial validation report](../../../geospatial/history/rc3/reports__GEOSPATIAL_VALIDATION_REPORT.md) — MD
 - [Open geographic questions v0.1](../../../geospatial/history/rc3/reports__OPEN_CONFLICTS.md) — MD
 - [rc3 visual inspection](../../../geospatial/history/rc3/reports__VISUAL_QA.md) — MD
+
+## `geospatial/history/v1.5.0-previews-2026-10-03`
+
+- [Geographic evidence v1.5.0 preview stages](../../../geospatial/history/v1.5.0-previews-2026-10-03/README.md) — MD
+
+## `geospatial/history/v1.5.0-previews-2026-10-03/original/initial/supplement/docs/releases`
+
+- [Geographic evidence releases](../../../geospatial/history/v1.5.0-previews-2026-10-03/original/initial/supplement/docs/releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) — MD
+
+## `geospatial/history/v1.5.0-previews-2026-10-03/original/initial/supplement/geospatial/successor_20260929_final`
+
+- [Final accepted PR #185 geographic source delta](../../../geospatial/history/v1.5.0-previews-2026-10-03/original/initial/supplement/geospatial/successor_20260929_final/README.md) — MD
+
+## `geospatial/history/work-transfer-2026-09-05`
+
+- [September 5 unified Work transfer provenance](../../../geospatial/history/work-transfer-2026-09-05/README.md) — MD
 
 ## `geospatial/maps`
 

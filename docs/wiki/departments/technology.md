@@ -20,6 +20,7 @@ The runtime records describe the accepted design and its implementation dependen
 - [Technology doctrine](../../../docs/governance/ENTERPRISE_TECHNOLOGY_SERVICES_DOCTRINE.md) — Read the seven technology capability areas and autonomy/security boundaries.
 - [Controlled technology publication](../../../docs/governance/publications/SH-ITS-001_v1.0.0.pdf) — Reader edition.
 - [Service register and requirements](../../../enterprise/services/README.md) — Services, workload requirements, dependencies and cost comparison.
+- [September 10 operating-model package](../../../enterprise/services/history/operating-model-2026-09-10/README.md) — Exact historical synthetic comparison and source ZIP; later runtime decisions control.
 - [Runtime estate](../../../enterprise/runtime/README.md) — Accepted synthetic runtime design, hosting, finance and recovery records.
 - [Architecture and procedures](../../../enterprise/runtime/docs/ARCHITECTURE_AND_RUNBOOKS.md) — Runtime design and operational reference procedures.
 
@@ -42,6 +43,6 @@ The runtime records describe the accepted design and its implementation dependen
 <summary>About this article</summary>
 
 **Canon state:** LOCKED institutional scope; implementation detail varies by linked record.
-**Reviewed:** October 7, 2026. Supporting documents retain their own dates and status.
+**Reviewed:** October 23, 2026 for the historical source link. Supporting documents retain their own dates and status.
 
 </details>
