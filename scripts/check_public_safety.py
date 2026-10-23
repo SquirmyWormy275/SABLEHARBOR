@@ -53,17 +53,25 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # 148 publication pairs, 294 relationships, 384 counterpart rows, 12
     # evidence packages, 237 artifacts and one evidence link are exact-equal.
     # Both databases pass SQLite quick_check and foreign-key verification.
-    # The superseded R1 handoff adds three historical reader Markdown rows
-    # (1,699 -> 1,702) and changes the Industrial release guide on accepted
-    # main cdb33b6c. All 148 institutional objects and publication pairs,
-    # 294 relationships, 12 evidence packages, 237 artifacts and the evidence
-    # link remain exact-equal. The changed release guide is correctly excluded
-    # from its prior dated counterpart audit until it is reviewed again:
-    # 384 -> 383 applied rows. SQLite quick_check and foreign keys pass.
+    # The historical staged facilities workline then adds one reader README
+    # (1,699 -> 1,700) on accepted main cdb33b6c. All 148 institutional
+    # objects/publication pairs, 294 relationships, 384 counterpart rows,
+    # 12 evidence packages, 237 artifacts and the evidence link remain
+    # logically exact-equal; SQLite quick_check and foreign keys pass.
+    # The recovered September 11 office-estate draft adds four historical
+    # Markdown source/guide rows (1,700 -> 1,704) against accepted main
+    # 53720c58. All 148 institutional objects/publication pairs, 294
+    # relationships, 384 counterpart rows, 12 evidence packages, 237
+    # artifacts and the evidence link remain logically exact-equal. SQLite
+    # quick_check and foreign keys pass. No publication was generated.
+    # The historical September 5 industrial R1 handoff adds three reader
+    # Markdown rows (1,704 -> 1,707) against accepted main 115763b0. All
+    # seven non-reader catalog tables remain exact-equal; SQLite integrity
+    # and foreign-key checks pass. Current industrial authority is unchanged.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        15773696,
-        "40cd1ac794a2803631ce494857d73e8bddd0d35e42ad618a046d593c4e9c896a",
+        15872000,
+        "80aea5b12c73011f112d65e40bbdbfbf10f92a18f092bae2769dfbc5af649b19",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.
