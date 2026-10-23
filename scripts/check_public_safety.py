@@ -53,10 +53,16 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # 148 publication pairs, 294 relationships, 384 counterpart rows, 12
     # evidence packages, 237 artifacts and one evidence link are exact-equal.
     # Both databases pass SQLite quick_check and foreign-key verification.
-    # Exact bytes only; later drift requires another hash review.
+    # The September 10 synthetic service-model history adds two Markdown
+    # reader rows (1,699 -> 1,701) and refreshes the Technology Wiki source
+    # on accepted main cdb33b6c. The source-locked enterprise services README
+    # stays byte-exact. All 148 institutional objects/publication pairs,
+    # 294 relationships, 384 counterpart rows, 12 evidence packages, 237
+    # artifacts and the evidence link remain logically exact-equal.
+    # SQLite quick_check and foreign keys pass. Exact bytes only.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        15599616,
-        "fa19d1a9e36cbabe91d7516726eebebb2cdd382f98210e7d3a7004d23ba27f94",
+        15611904,
+        "3cd4027e585a4534e18e316d1c8ea8780e6dc8ca27a2cb454eafe3b33f0432be",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.
