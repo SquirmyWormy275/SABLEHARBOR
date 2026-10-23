@@ -64,10 +64,14 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # relationships, 384 counterpart rows, 12 evidence packages, 237
     # artifacts and the evidence link remain logically exact-equal. SQLite
     # quick_check and foreign keys pass. No publication was generated.
+    # The historical September 5 industrial R1 handoff adds three reader
+    # Markdown rows (1,704 -> 1,707) against accepted main 115763b0. All
+    # seven non-reader catalog tables remain exact-equal; SQLite integrity
+    # and foreign-key checks pass. Current industrial authority is unchanged.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        15699968,
-        "05553db4a1fa726a11622d78d2a989162b74ac5fdafda7430ea8a3052bbe8a15",
+        15872000,
+        "80aea5b12c73011f112d65e40bbdbfbf10f92a18f092bae2769dfbc5af649b19",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.
