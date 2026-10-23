@@ -1,0 +1,314 @@
+{
+  "archive_bytes": 73631,
+  "archive_filename": "sableharbor-governance-j2-local-history-2026-09-02.zip",
+  "archive_sha256": "4a3adeb2c5f185ee38274b26747bc0ebbcbc3a3995f2047bdc1cb5488037c876",
+  "authority": "HISTORICAL_UNACCEPTED_BRANCH; no canon or brand identity promotion",
+  "capture_date_utc": "2026-10-23T14:45:01.939196+00:00",
+  "item_count": 13,
+  "items": [
+    {
+      "accepted_public_current_path_blob_oid": "8f1d2838f14b243420c2944fffc2cf310a422445",
+      "accepted_public_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 4831,
+      "completeness": "filtered_unique_blobs_from_September_2_local_commits",
+      "git_blob_oid": "4df11b7087a10bfa525bfdc828aa92d9baf55d49",
+      "member": "sources/assets/brand/4df11b7087a1/README.md",
+      "role": "historical_brand_identity_source",
+      "scenario": "synthetic_company_history",
+      "sha256": "3dc9cf5234b012fdd86d4a0e6ce5d5d6eb8c98f4d844b6f62807a83e125ff4b9",
+      "source_commits": [
+        {
+          "commit": "d097b45685228d5683dcbf0779a6ab5705233d33",
+          "date": "2026-09-02",
+          "path": "assets/brand/README.md",
+          "subject": "Register J2 identity in brand system"
+        }
+      ],
+      "source_date": "2026-09-02",
+      "source_path": "assets/brand/README.md"
+    },
+    {
+      "accepted_public_current_path_blob_oid": null,
+      "accepted_public_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 1706,
+      "completeness": "filtered_unique_blobs_from_September_2_local_commits",
+      "git_blob_oid": "a0c745cc0e2e1c68bc73f399498b7bea3b813b4c",
+      "member": "sources/assets/brand/collateral/letterhead/j2/a0c745cc0e2e/j2-letterhead-a4.svg",
+      "role": "historical_brand_identity_source",
+      "scenario": "synthetic_company_history",
+      "sha256": "d020393742eb8066a59154711f8ca70119b7859439b5ae6f585fb9a4c5f78e19",
+      "source_commits": [
+        {
+          "commit": "b14342bf556e3444f9e56a6e72789f3085c39ce2",
+          "date": "2026-09-02",
+          "path": "assets/brand/collateral/letterhead/j2/j2-letterhead-a4.svg",
+          "subject": "Add J2 A4 letterhead"
+        }
+      ],
+      "source_date": "2026-09-02",
+      "source_path": "assets/brand/collateral/letterhead/j2/j2-letterhead-a4.svg"
+    },
+    {
+      "accepted_public_current_path_blob_oid": null,
+      "accepted_public_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 4129,
+      "completeness": "filtered_unique_blobs_from_September_2_local_commits",
+      "git_blob_oid": "28784625b3a5b438fd42f15837ac8a461821b295",
+      "member": "sources/assets/brand/collateral/letterhead/j2/28784625b3a5/j2-letterhead-us-letter.svg",
+      "role": "historical_brand_identity_source",
+      "scenario": "synthetic_company_history",
+      "sha256": "aec053ec041c52f5cfc18fcd37257a6e76860ee1fe4061b7b09e5a93b3bd12c7",
+      "source_commits": [
+        {
+          "commit": "571172f444d74c8d716bf2b5e3c9f4611915d4dd",
+          "date": "2026-09-02",
+          "path": "assets/brand/collateral/letterhead/j2/j2-letterhead-us-letter.svg",
+          "subject": "Add J2 US Letter letterhead"
+        }
+      ],
+      "source_date": "2026-09-02",
+      "source_path": "assets/brand/collateral/letterhead/j2/j2-letterhead-us-letter.svg"
+    },
+    {
+      "accepted_public_current_path_blob_oid": "5691f1dd1b61ca9aff478477bb634eaab8cf8186",
+      "accepted_public_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 7156,
+      "completeness": "filtered_unique_blobs_from_September_2_local_commits",
+      "git_blob_oid": "460b18ca3266aafd04a16ddff45feb45980c1eec",
+      "member": "sources/assets/brand/logos/460b18ca3266/j2__mark.png",
+      "role": "historical_brand_identity_source",
+      "scenario": "synthetic_company_history",
+      "sha256": "10abe606ad711a29dec0efff1b176aa83fd80259e73e429fbafc27e02e87517e",
+      "source_commits": [
+        {
+          "commit": "c1babd7cb93b178bd21246822cb9c91445766ec0",
+          "date": "2026-09-02",
+          "path": "assets/brand/logos/j2__mark.png",
+          "subject": "Add official J2 PNG logo assets"
+        }
+      ],
+      "source_date": "2026-09-02",
+      "source_path": "assets/brand/logos/j2__mark.png"
+    },
+    {
+      "accepted_public_current_path_blob_oid": "aa49041a11c27256f8c5a03ce28ab8ec81f756f3",
+      "accepted_public_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 6723,
+      "completeness": "filtered_unique_blobs_from_September_2_local_commits",
+      "git_blob_oid": "4abacba9a1adf70703d5faca1dbc42f8708d6785",
+      "member": "sources/assets/brand/logos/4abacba9a1ad/j2__primary-horizontal.png",
+      "role": "historical_brand_identity_source",
+      "scenario": "synthetic_company_history",
+      "sha256": "56e445aa20430950b487ee4f2536c0aa35f8234c7e17ed72a318d5e9a519a1d8",
+      "source_commits": [
+        {
+          "commit": "c1babd7cb93b178bd21246822cb9c91445766ec0",
+          "date": "2026-09-02",
+          "path": "assets/brand/logos/j2__primary-horizontal.png",
+          "subject": "Add official J2 PNG logo assets"
+        }
+      ],
+      "source_date": "2026-09-02",
+      "source_path": "assets/brand/logos/j2__primary-horizontal.png"
+    },
+    {
+      "accepted_public_current_path_blob_oid": "ce07d3220fd657b2f9e0d3e6fd80b27ebf072019",
+      "accepted_public_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 5046,
+      "completeness": "filtered_unique_blobs_from_September_2_local_commits",
+      "git_blob_oid": "3123181bd3bf254e1c8344d328667b7b5cca2d74",
+      "member": "sources/docs/controls/3123181bd3bf/CCF_FOUNDATION_BUILD_INDEX_v0.1.md",
+      "role": "historical_governance_organization_source",
+      "scenario": "synthetic_company_history",
+      "sha256": "1d3f99b27f171ca81233803b232f19e5e81bcc39a0eaa6d3983b2c0a03e5a5f5",
+      "source_commits": [
+        {
+          "commit": "0577ccb5232c299d06648187d32fc7965723e1d9",
+          "date": "2026-09-02",
+          "path": "docs/controls/CCF_FOUNDATION_BUILD_INDEX_v0.1.md",
+          "subject": "Add CCF foundation build index and status"
+        }
+      ],
+      "source_date": "2026-09-02",
+      "source_path": "docs/controls/CCF_FOUNDATION_BUILD_INDEX_v0.1.md"
+    },
+    {
+      "accepted_public_current_path_blob_oid": "eade2c92095df65586747beea7613b52363176ef",
+      "accepted_public_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 9453,
+      "completeness": "filtered_unique_blobs_from_September_2_local_commits",
+      "git_blob_oid": "3251751d87cd83e865e97c3bee25cf94bc8b9884",
+      "member": "sources/docs/controls/3251751d87cd/CCF_POLICY_AND_ARTIFACT_INVENTORY_v0.1.md",
+      "role": "historical_governance_organization_source",
+      "scenario": "synthetic_company_history",
+      "sha256": "01b7991b45e13184a10a791d45835e99f83553d5243d679021b4cbf6099a5ed5",
+      "source_commits": [
+        {
+          "commit": "e50ddc62c330d441b9be29c7bfa69937b1e87876",
+          "date": "2026-09-02",
+          "path": "docs/controls/CCF_POLICY_AND_ARTIFACT_INVENTORY_v0.1.md",
+          "subject": "Define CCF policy and governance artifact inventory"
+        }
+      ],
+      "source_date": "2026-09-02",
+      "source_path": "docs/controls/CCF_POLICY_AND_ARTIFACT_INVENTORY_v0.1.md"
+    },
+    {
+      "accepted_public_current_path_blob_oid": "78bdfc5eb0963166feb3c6511d38c696011d936d",
+      "accepted_public_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 8271,
+      "completeness": "filtered_unique_blobs_from_September_2_local_commits",
+      "git_blob_oid": "46f000abb3cfdfdf47f8dd550de7e82fb412e51b",
+      "member": "sources/docs/governance/46f000abb3cf/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md",
+      "role": "historical_governance_organization_source",
+      "scenario": "synthetic_company_history",
+      "sha256": "9f7ee6f9015284b3ae9c43192df96087d96912444b3a994e5fc1aa351044216f",
+      "source_commits": [
+        {
+          "commit": "672d5d394e790813f117a3201868a409fcd7c3e4",
+          "date": "2026-09-02",
+          "path": "docs/governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md",
+          "subject": "Develop financing rounds and investor director profiles"
+        }
+      ],
+      "source_date": "2026-09-02",
+      "source_path": "docs/governance/2021_2022_FINANCING_AND_INVESTOR_DIRECTOR_PROPOSAL.md"
+    },
+    {
+      "accepted_public_current_path_blob_oid": "1cb28062d5b4124b25f65edcfec8d1fe4537a1d4",
+      "accepted_public_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 6762,
+      "completeness": "filtered_unique_blobs_from_September_2_local_commits",
+      "git_blob_oid": "b21d9c378661572812d098e9fbcb41e8e10e170f",
+      "member": "sources/docs/governance/b21d9c378661/2026_BOARD_COMPOSITION_AND_FINANCING_MODEL.md",
+      "role": "historical_governance_organization_source",
+      "scenario": "synthetic_company_history",
+      "sha256": "10d543fc9d2904da8d67e218def9be4b4dc89aef2e5a0d290e302eb5afbea4ca",
+      "source_commits": [
+        {
+          "commit": "c7b294d76ef85db3da56bff678db7349bb1c5106",
+          "date": "2026-09-02",
+          "path": "docs/governance/2026_BOARD_COMPOSITION_AND_FINANCING_MODEL.md",
+          "subject": "Develop board composition and financing model"
+        }
+      ],
+      "source_date": "2026-09-02",
+      "source_path": "docs/governance/2026_BOARD_COMPOSITION_AND_FINANCING_MODEL.md"
+    },
+    {
+      "accepted_public_current_path_blob_oid": "9df8c48e2ac12fa543810c3f06b67c671cb8de2a",
+      "accepted_public_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 3888,
+      "completeness": "filtered_unique_blobs_from_September_2_local_commits",
+      "git_blob_oid": "bd3e4fbc73dfcc670f83dcb213f0efee406a344c",
+      "member": "sources/docs/governance/bd3e4fbc73df/2026_CAPITAL_AND_ASSURANCE_MODEL.md",
+      "role": "historical_governance_organization_source",
+      "scenario": "synthetic_company_history",
+      "sha256": "b8612cea60f8a33ba66b2f8804d74bddfea8ea3942c3d379ab1da6dd2d3b8a8c",
+      "source_commits": [
+        {
+          "commit": "584e2889f846a320d71602d1dc81a111b93ed47b",
+          "date": "2026-09-02",
+          "path": "docs/governance/2026_CAPITAL_AND_ASSURANCE_MODEL.md",
+          "subject": "Define capital delegation and assurance maturity model"
+        }
+      ],
+      "source_date": "2026-09-02",
+      "source_path": "docs/governance/2026_CAPITAL_AND_ASSURANCE_MODEL.md"
+    },
+    {
+      "accepted_public_current_path_blob_oid": "0e56b881d22eba157d6efeb9511f133f3d871b33",
+      "accepted_public_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 7688,
+      "completeness": "filtered_unique_blobs_from_September_2_local_commits",
+      "git_blob_oid": "5418723700999f89a8b172d0ab69f3ad46c4ded9",
+      "member": "sources/docs/governance/541872370099/2026_ENTITY_AND_BOARD_GOVERNANCE_DECISIONS.md",
+      "role": "historical_governance_organization_source",
+      "scenario": "synthetic_company_history",
+      "sha256": "7cc42ef208eeee653115e008c922a385f708a705cef25f7e4eefeb1797fede77",
+      "source_commits": [
+        {
+          "commit": "fa4b99f889c016e0064f2bd053e7dd9d34ad9cc9",
+          "date": "2026-09-02",
+          "path": "docs/governance/2026_ENTITY_AND_BOARD_GOVERNANCE_DECISIONS.md",
+          "subject": "Lock entity and board governance decisions"
+        }
+      ],
+      "source_date": "2026-09-02",
+      "source_path": "docs/governance/2026_ENTITY_AND_BOARD_GOVERNANCE_DECISIONS.md"
+    },
+    {
+      "accepted_public_current_path_blob_oid": "4e0ae34e304468479ce06b1cd5131cc993db0c93",
+      "accepted_public_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 2429,
+      "completeness": "filtered_unique_blobs_from_September_2_local_commits",
+      "git_blob_oid": "8191ee294a96e68e677e27b719095f254110051d",
+      "member": "sources/docs/organization/8191ee294a96/J2_IDENTITY_AND_STATIONERY.md",
+      "role": "historical_governance_organization_source",
+      "scenario": "synthetic_company_history",
+      "sha256": "9b0166f319efcd6745390b6f1c2f4e4ce29c5db355cd5dc215444ff77e371701",
+      "source_commits": [
+        {
+          "commit": "ecae0c9704dd7734bb5acfeb5a6631c9020068b4",
+          "date": "2026-09-02",
+          "path": "docs/organization/J2_IDENTITY_AND_STATIONERY.md",
+          "subject": "Lock J2 identity and stationery"
+        }
+      ],
+      "source_date": "2026-09-02",
+      "source_path": "docs/organization/J2_IDENTITY_AND_STATIONERY.md"
+    },
+    {
+      "accepted_public_current_path_blob_oid": "4e0ae34e304468479ce06b1cd5131cc993db0c93",
+      "accepted_public_main_at_intake": "afcd6bcd14df68b5f734f34f37ee281d64f03a27",
+      "authority": "UNACCEPTED_HISTORICAL_LOCAL_BRANCH",
+      "bytes": 2673,
+      "completeness": "filtered_unique_blobs_from_September_2_local_commits",
+      "git_blob_oid": "f405f9aacddc7a946d945fbab3dde8830843415d",
+      "member": "sources/docs/organization/f405f9aacddc/J2_IDENTITY_AND_STATIONERY.md",
+      "role": "historical_governance_organization_source",
+      "scenario": "synthetic_company_history",
+      "sha256": "913f55da421a8b4963f32c6fab24014d74393bc7fa61ac3b2355c47fbd5c9952",
+      "source_commits": [
+        {
+          "commit": "e49e83bdd72454251ee3e09a431c7602271b72a7",
+          "date": "2026-09-02",
+          "path": "docs/organization/J2_IDENTITY_AND_STATIONERY.md",
+          "subject": "Register J2 PNG logo variants"
+        }
+      ],
+      "source_date": "2026-09-02",
+      "source_path": "docs/organization/J2_IDENTITY_AND_STATIONERY.md"
+    }
+  ],
+  "member_bytes": 70755,
+  "record_id": "SH-GOV-J2-LOCAL-HISTORY-2026-09-02",
+  "source_commits": [
+    "0577ccb5232c299d06648187d32fc7965723e1d9",
+    "571172f444d74c8d716bf2b5e3c9f4611915d4dd",
+    "584e2889f846a320d71602d1dc81a111b93ed47b",
+    "672d5d394e790813f117a3201868a409fcd7c3e4",
+    "b14342bf556e3444f9e56a6e72789f3085c39ce2",
+    "c1babd7cb93b178bd21246822cb9c91445766ec0",
+    "c7b294d76ef85db3da56bff678db7349bb1c5106",
+    "d097b45685228d5683dcbf0779a6ab5705233d33",
+    "e49e83bdd72454251ee3e09a431c7602271b72a7",
+    "e50ddc62c330d441b9be29c7bfa69937b1e87876",
+    "ecae0c9704dd7734bb5acfeb5a6631c9020068b4",
+    "fa4b99f889c016e0064f2bd053e7dd9d34ad9cc9"
+  ],
+  "source_date": "2026-09-02",
+  "source_kind": "unaccepted_local_worktree_Git_blobs"
+}

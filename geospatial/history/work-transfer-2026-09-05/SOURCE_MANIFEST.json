@@ -1,0 +1,38 @@
+{
+  "accepted_payload_members": [
+    {
+      "accepted_path": "geospatial/sources/MASTER_EXECUTION_MANDATE.md",
+      "bytes": 78334,
+      "member": "SABLE_HARBOR_Unified_Work_Super_Prompt.md",
+      "sha256": "d49a4f30625aae0220b6d252c9f75c4e746099273c5a2dee2800caf934a1f991"
+    },
+    {
+      "accepted_path": "assets/brand/maps/red_wash__site_overview.png",
+      "bytes": 3230867,
+      "member": "source_assets/red_wash__site_overview.png",
+      "sha256": "8dbb0053c4a563d57d5a24be4f4687dc11e2e00e2b1e62c279d9be945f68d77a"
+    },
+    {
+      "accepted_path": "assets/brand/maps/red_wash__underground_plan.png",
+      "bytes": 2401412,
+      "member": "source_assets/red_wash__underground_plan.png",
+      "sha256": "0658de3b7c63ecc9757b545f29895eab51801b2148cb3862935620b6049a7dda"
+    }
+  ],
+  "accepted_public_commit_compared": "cdb33b6c3f2bedd8e8fe3a1d77a2c1679d0d0c0a",
+  "additional_raw_source_paths": [
+    "repository/geospatial/history/mandates/Pasted markdown(2).md",
+    "repository/geospatial/history/mandates/Pasted text (2).txt"
+  ],
+  "additional_raw_source_release": "geospatial-foundation-addendum-historical-2026-09-05",
+  "authority": "Historical transfer provenance only. Original transfer says no repository execution or geographic conflict resolution performed; accepted geospatial and brand sources control current work.",
+  "disposition": "Three payload member bytes already accepted in public Git; two referenced generic raw sources are exact in accepted historical geospatial Release. This unique transfer manifest is now preserved in Git; outer ZIP wrapper is redundant packaging pending final fresh retrieval and cleanup gate.",
+  "import_date": "2026-10-23",
+  "source_date": "2026-09-05",
+  "source_manifest_bytes": 1474,
+  "source_manifest_member": "TRANSFER_MANIFEST.json",
+  "source_manifest_sha256": "e99eb16d74d44342ead069e873fcc45bffed2eebdb05a8faef1e64f44c0f6231",
+  "source_zip": "Downloads/SABLE_HARBOR_Work_Transfer_Prompt_and_Maps.zip",
+  "source_zip_bytes": 5452525,
+  "source_zip_sha256": "c9223a49d98c8d3b5c26730b1186b4b50a8864d43e3c10c5d03581744d857425"
+}

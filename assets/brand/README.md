@@ -11,6 +11,7 @@ Business-line names and status are grounded in `docs/canon/SABLE_HARBOR_CORPORAT
 - One logo per file.
 - No contact sheets or composite logo boards are stored in the production logo directory.
 - The approved J2 PNG files are controlling source artwork. Existing J2 SVG files are vector derivatives and must not supersede or alter the PNG artwork.
+- The [September 2 local-branch J2 identity source](../../docs/history/governance-j2-local-2026-09-02/README.md) preserves exact earlier PNG, SVG and stationery bytes for history; it does not approve a new mark or replace the controlling artwork here.
 - For identities without a later approved override, SVG is the production source of truth; PNG and office-document renders are convenience/generated forms where supplied.
 - The four owner-approved Pale Sun/Red Wash raster sources listed in `red_wash_visual_manifest.json` are later byte-exact overrides. They must not be regenerated, recompressed, or replaced by legacy SVG/PNG variants.
 - Reverse variants use a dark background; all other raster convenience variants preserve transparency.

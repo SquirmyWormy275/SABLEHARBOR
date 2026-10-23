@@ -62,3 +62,11 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 - [SABLE HARBOR — THIRD-PARTY SERVICES AND INTERNAL OPERATIONS SOURCING DECISIONS](../../canon/THIRD_PARTY_SERVICES_SOURCING_DECISIONS_2026-09-09.md) — MD
 - [Superseded filename](../../canon/WILLOW_EVALON_CLOSEOUT_2026-09-06.md) — MD
 - [Willow / Klein closeout](../../canon/WILLOW_KLEIN_CLOSEOUT_2026-09-06.md) — MD
+
+## `docs/history/governance-j2-local-2026-09-02`
+
+- [September 2 governance, J2 identity and controls local-branch history](../../history/governance-j2-local-2026-09-02/README.md) — MD
+
+## `docs/history/governance-j2-local-2026-09-03`
+
+- [September 3 governance and J2 local-branch history](../../history/governance-j2-local-2026-09-03/README.md) — MD
