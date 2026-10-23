@@ -41,10 +41,16 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # changes, and its reader hash/text/search rows refresh. The DOCX originals
     # are linked from the README but are not reader-index input types. Catalog
     # regeneration, reader navigation and SQLite integrity verification pass.
+    # October 23 historical geographic package index: compared with accepted
+    # main b978875e, the same 148 objects/pairs, 294 relationships, 384
+    # counterpart rows, 12 evidence packages, 237 artifacts and evidence link
+    # are exact-equal. One historical README is added to reader inventory
+    # (1,694 -> 1,695); four changed guide/source rows refresh. SQLite
+    # quick_check and foreign keys pass. No controlled publication changes.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        15577088,
-        "9193c2cb525eddba69c672c65b940bfc519572f2e8aba06ab727487998963ecf",
+        15583232,
+        "68b8f4c3ae96aa3402c8f709934edfda8cdddf94434bfd4cd8024bca931a54e6",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.

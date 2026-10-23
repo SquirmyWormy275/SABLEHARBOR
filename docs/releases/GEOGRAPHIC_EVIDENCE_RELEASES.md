@@ -12,3 +12,8 @@ The [package guide](../../geospatial/closeout/README.md) describes opening, rebu
 | 1.0.0 | [Geographic evidence release](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/geographic-evidence-v1.0.0) | Accepted spatial layers, native QGIS project, site/source/occurrence/OCR review tables, exact archived sources and preserved offline atlas/review interfaces. No inferred occupancy, real property rights or issue closure. |
 
 The release notes and manifests identify the packaged source commit, accepted PR, native QGIS validation, full-dataset comparisons and checksums. The 1.5 receipt records publication and independent retrieval. The [accepted-state addendum](../canon/GEOGRAPHIC_SYNTHETIC_SCOPE_ACCEPTANCE_2026-09-29.md) resolves the original scope decision's historical pre-merge wording. Previous geospatial, facility-atlas and evidence releases remain immutable.
+
+The separate [September 5 foundation and addendum recovery](../../geospatial/history/foundation-addendum-2026-09-05/README.md)
+preserves exact earlier package bytes and member hashes. It is a historical
+predecessor delivery, not another current geographic decision or a rebuild of
+the accepted evidence releases above.

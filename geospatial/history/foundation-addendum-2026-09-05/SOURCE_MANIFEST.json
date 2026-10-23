@@ -1,0 +1,2377 @@
+{
+  "schema": "SH_HISTORICAL_GEOGRAPHIC_PACKAGE_INDEX_V1",
+  "import_date": "2026-10-23",
+  "accepted_main_compared": "934f1dce68402a79b433851d44307e040be60549",
+  "release_tag": "geospatial-foundation-addendum-historical-2026-09-05",
+  "current_authority": "geographic-evidence-v1.5.0 and later accepted canon; these packages preserve dated predecessors",
+  "packages": [
+    {
+      "asset_name": "SABLE_HARBOR_Geospatial_Foundation_v0.1.0.zip",
+      "source_download_name": "SABLE_HARBOR_Geospatial_Foundation_v0.1.0.zip",
+      "sha256": "31d3aadb4ef241484cb62d5a9db51e64aa38f5458e2fd0286cc71cb297c245ee",
+      "bytes": 11983745,
+      "source_date": "2026-09-05",
+      "source_commit_referenced": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+      "authority_status": "ENGINEERED_DRAFT_CONFLICT_REVIEW",
+      "internal_manifest_member": "geospatial/releases/MANIFEST.json",
+      "internal_manifest_sha256": "d4a7d2f7c13107f9f67c2507b078593b07b341382e05e51547e5b5d5047a88b5",
+      "internal_manifest_declared_files_verified": 66,
+      "zip_crc_pass": true,
+      "members": [
+        {
+          "path": "geospatial/LICENSES.md",
+          "bytes": 1332,
+          "sha256": "0c5d3f4a1683adf55e0f01a6ae73aba9e234c597fb7808e5b20ffba32874c7b5",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/README.md",
+          "bytes": 2306,
+          "sha256": "9caf13f15f4a360e2e684c9fbc999b8bb95a3bfe07e1c70a5cbe81af6bd71430",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/data/HANDOVER_SOURCE_EXTRACTS.md",
+          "bytes": 2656,
+          "sha256": "ee8696a83f8c87c98b1b6f072c030f088599a1910da6388eec11444457394307",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/data/constraints.json",
+          "bytes": 5151,
+          "sha256": "8d27830c4f4c18380615882cc8bb2cf0f020bc168a10df6ce6077b44da86fbb9",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/data/objects.json",
+          "bytes": 39762,
+          "sha256": "8e184573471739c9e65fe8e68cb8bdc03d6bd9bc874f16f3c23d46ad8dc69535",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/data/reference_land.geojson",
+          "bytes": 21005,
+          "sha256": "d281e7d74996e9c206dc64535861ca8c4f7c3954a0cf8b651309eaed937dbb2a",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/data/sources.json",
+          "bytes": 12164,
+          "sha256": "00cd45c02867cd4c968469e944c8f4264aed8d2e71b113f4ba8a89cb71000195",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/docs/CANON_AND_PROVENANCE_POLICY.md",
+          "bytes": 1546,
+          "sha256": "29fcfa0396011e8f6882452fe6f7d943c3e179779b9229d8f243f4c4bd337416",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/docs/CANON_SOURCE_HIERARCHY.md",
+          "bytes": 1879,
+          "sha256": "938f5a4b457d30e6b459a91452be25b8962604882ae4096626582e9a751a2498",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/docs/CARTOGRAPHIC_STANDARD.md",
+          "bytes": 1176,
+          "sha256": "88870bdce5e1a9248145f84a9e4b90fd5eceee88286839871388efba21b46141",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/docs/GEOSPATIAL_DATA_MODEL.md",
+          "bytes": 2925,
+          "sha256": "a87a3f18aba9a1211be66eddc2e4091719573a7d692b7d2353eb34c8c05bf617",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/docs/KNOWN_LIMITATIONS.md",
+          "bytes": 1581,
+          "sha256": "66fa17f8e6b85075e900649585d559b004b069cbd744e41beeb7bf4445f39166",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/docs/RED_WASH_MAP_RECOVERY.md",
+          "bytes": 2545,
+          "sha256": "58a688148d6dad6601b49ae051e18ca0f413c2c43990317bdb94846f8e18fbc0",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/docs/TEMPORAL_GIS_MODEL.md",
+          "bytes": 1341,
+          "sha256": "f0b1c64e0568d48ef0bff657de194e71da388cb0b36b96a292925a9e0ee4be08",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/evidence/originals/red_wash__site_overview.png",
+          "bytes": 3230867,
+          "sha256": "8dbb0053c4a563d57d5a24be4f4687dc11e2e00e2b1e62c279d9be945f68d77a",
+          "accepted_main_exact_paths": [
+            "assets/brand/maps/red_wash__site_overview.png",
+            "geospatial/sources/canon_snapshot/assets/brand/maps/red_wash__site_overview.png"
+          ],
+          "disposition": "accepted_main_exact_bytes"
+        },
+        {
+          "path": "geospatial/evidence/originals/red_wash__underground_plan.png",
+          "bytes": 2401412,
+          "sha256": "0658de3b7c63ecc9757b545f29895eab51801b2148cb3862935620b6049a7dda",
+          "accepted_main_exact_paths": [
+            "assets/brand/maps/red_wash__underground_plan.png",
+            "geospatial/sources/canon_snapshot/assets/brand/maps/red_wash__underground_plan.png"
+          ],
+          "disposition": "accepted_main_exact_bytes"
+        },
+        {
+          "path": "geospatial/evidence/red_wash_visual_manifest.json",
+          "bytes": 2356,
+          "sha256": "6c14b6aa28e9763046b0819e29cc8e7e850edde8e9e1339179bb2786cfb0d7b1",
+          "accepted_main_exact_paths": [
+            "assets/brand/red_wash_visual_manifest.json"
+          ],
+          "disposition": "accepted_main_exact_bytes"
+        },
+        {
+          "path": "geospatial/geojson/conflicting_location_claims.geojson",
+          "bytes": 1024,
+          "sha256": "700e3c1379468be2f1c2652da956397cc1df00dbd72f48b805fac5b07aab5651",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/geojson/event_points.geojson",
+          "bytes": 78,
+          "sha256": "232ac511c7ea1a5d9dd774f4b2a847642ad6ce23a6f6aa82485088071e3e99b2",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/geojson/facility_footprints.geojson",
+          "bytes": 85,
+          "sha256": "a242e7e19e5a8ffb2d0b31f24e8b341f50ee7f5d56c4826e6f33f7b498e8b596",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/geojson/facility_points.geojson",
+          "bytes": 81,
+          "sha256": "54c309040ad2ba9de6f5ac9bd3c6856138f688f32dfb1c6d06f7d42bfb8c48a9",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/geojson/locked_search_areas.geojson",
+          "bytes": 7619,
+          "sha256": "d14c862a893251f48e27a5a5ea0408077c2727466a2c406c1197b523f2abe0a3",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/geojson/operating_territories.geojson",
+          "bytes": 87,
+          "sha256": "e8fa49722e535ec98ed51350e9d48249624e2a69477833e5b37b41b60798be59",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/geojson/rail_nodes.geojson",
+          "bytes": 76,
+          "sha256": "fddadc739b86619e2d4e6dfffc049859b4d81d8d62a6a774825e3f9ebb83db3a",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/geojson/rail_segments.geojson",
+          "bytes": 79,
+          "sha256": "1d5f0ba675db7f8cef1e7f61e3dfd185f1941a2fbdcb5c09880f182624a68a2d",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/geojson/reference_points.geojson",
+          "bytes": 1014,
+          "sha256": "4947b63109dc5afbd42ce70234892755d0ed2b861ac8a8babbeefe933027f2cf",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/geojson/resource_areas.geojson",
+          "bytes": 80,
+          "sha256": "874743aadcae5b1e55724d746fb6cbc9b9e58a7446d12eec48b4acd57797930b",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/geojson/spatial_asset_footprints.geojson",
+          "bytes": 90,
+          "sha256": "86fd1982a7486e072d1b1451d2003b677b631b14701879f10a457418e18ff806",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/geojson/spatial_asset_points.geojson",
+          "bytes": 86,
+          "sha256": "3dac514ba2222fdc93cf7ffdfb20c510c0164f8e92c9948b0cd52961d6e38e43",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/maps/RED_WASH_SOURCE_EVIDENCE.pdf",
+          "bytes": 7022112,
+          "sha256": "cd117f3667967af0ac9cb4ecb61f2629d271f1222fa2c04552aefa53e567c440",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/maps/SH-MAP-ENT-001_locked-geographic-framework.json",
+          "bytes": 692,
+          "sha256": "f067e38c05dc5fe1c1ec96e03ca61112e88081d5cfaf0b4b0d1e50c10a338f0c",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/maps/SH-MAP-ENT-001_locked-geographic-framework.pdf",
+          "bytes": 21590,
+          "sha256": "58efa5a0695b1845fc7a3e8d5fd8eab5c9cf3c111bea3e14d3e8a7b3a082eaac",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/maps/SH-MAP-ENT-001_locked-geographic-framework.png",
+          "bytes": 250498,
+          "sha256": "cc949419af09f158d08e1336998e5e2487098718ba052d83fd16aa47bee6393e",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/maps/SH-MAP-ENT-001_locked-geographic-framework.svg",
+          "bytes": 129571,
+          "sha256": "d186512cebd37760cbb3259c6219e83c4cf3badc1919f377c44f160dd03df52a",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/maps/SH-MAP-RWM-001_location-conflict.json",
+          "bytes": 664,
+          "sha256": "4693c294c4e28ba3e5eb056606df2bb0c0db623ff0576e069e3c6a1e06bb1eb5",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/maps/SH-MAP-RWM-001_location-conflict.pdf",
+          "bytes": 11498,
+          "sha256": "7a13878f9c28a9f26dcf4cd3c7a21453214f81c270f9f918754b7e288ff8726e",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/maps/SH-MAP-RWM-001_location-conflict.png",
+          "bytes": 196632,
+          "sha256": "9337f26fcc1e86f6a3f4646fe56282442f8cefdaf4d0cd9128763d0cdbb1703e",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/maps/SH-MAP-RWM-001_location-conflict.svg",
+          "bytes": 69497,
+          "sha256": "5182fb9cf195c4059322291364e08bca000d099b760668bc3fd3493846b233ba",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/master/sable_harbor_master_v0.1.gpkg",
+          "bytes": 499712,
+          "sha256": "ab9984a6733dd507788bb6a3340ef1ccb5b9c00a89934fab7cf44cefba82525e",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/qgis/sable_harbor_master.qgs",
+          "bytes": 10491,
+          "sha256": "2453da15eb2d19bbd3d5dcd5f58c2efd1df42afefe068944e540f9b22ffd472c",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/qgis/sable_harbor_master.qgz",
+          "bytes": 1649,
+          "sha256": "6e21218058415241f6779ca281bd1230e38ada21b92c1d937a12f15ea905fe64",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/registers/GEOGRAPHIC_CENSUS_v0.1.csv",
+          "bytes": 21673,
+          "sha256": "b530cf070418fb9a1b8b1b02c1341ae25422293cc0ce5a9da11e205922dea762",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/registers/GEOGRAPHIC_DECISION_REGISTER_v0.1.md",
+          "bytes": 11062,
+          "sha256": "8c87dcd6ea24754a3efd90e8b2a41ce67c41a09ca768a733c9242e957cdd4eba",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/registers/MAP_IMAGE_AND_BINARY_REGISTER.csv",
+          "bytes": 66423,
+          "sha256": "5c591e72302d80d9fe22b145f91547a4ec9f8116a950dfa73cee234c29304325",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/registers/OPEN_GEOGRAPHIC_QUESTIONS_v0.1.md",
+          "bytes": 1647,
+          "sha256": "0dc45ccb8f64fbae1292aafd652b68c5e7aafb1e010eb844ab6d1f14e8a72c40",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/registers/PROVENANCE_REGISTER.csv",
+          "bytes": 7683,
+          "sha256": "7adb7fc5e996f38a37712fc9ef8cc9b9241361eafaffde9f5f1aa04293352fe2",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/registers/SITE_REGISTER.csv",
+          "bytes": 18559,
+          "sha256": "36cef311eb2055e3e64e7014a1559fc18ab93f38184aacec5c7f01466e46e77d",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/reports/CENSUS_MANIFEST.json",
+          "bytes": 439,
+          "sha256": "ac6a3311e738225ae44ade7c00b04d1ef29e8def561e07407bfe93aeb354c451",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/reports/GEOGRAPHIC_CANDIDATE_OCCURRENCES.csv",
+          "bytes": 929476,
+          "sha256": "43d6d7ce937ce8c037712eb6659420e6b1caa35b8b00c2ceac0995f0371b0221",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/reports/GEOMETRY_VALIDATION.json",
+          "bytes": 37681,
+          "sha256": "5c161e2dbcc5d56a20c311e9e75d7293b95177205f9417e6b6095744ce7e1564",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/reports/GEOSPATIAL_VALIDATION_REPORT.md",
+          "bytes": 386,
+          "sha256": "a7875bea7d8fe63b25ddfd76893a433004cc9d7984d55f6b40bf81aefbd2aae3",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/reports/LOCATION_COMPARISON.json",
+          "bytes": 358,
+          "sha256": "1ce7661d6a934f513accd7d52aff7f985320a42e3a94b1dd665b2857fbb9867c",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/reports/OPEN_CONFLICTS.md",
+          "bytes": 1647,
+          "sha256": "0dc45ccb8f64fbae1292aafd652b68c5e7aafb1e010eb844ab6d1f14e8a72c40",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/reports/PROVENANCE_COVERAGE.csv",
+          "bytes": 373,
+          "sha256": "9a2d2fcef6666166a67386d737d86515265890802d63267458b03be365da8d5e",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/reports/REBUILD_VALIDATION.json",
+          "bytes": 602,
+          "sha256": "745ad8d7ec78ae70a0079c141ea2da6f83cf729619b94cee8664032cc024b21b",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/reports/REPOSITORY_INTEGRATION.md",
+          "bytes": 973,
+          "sha256": "a877bc806ab5c73176cc695b06e630fc01984a506bfe517a333bad7426362707",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/reports/SOURCE_COVERAGE.csv",
+          "bytes": 120169,
+          "sha256": "50062649b01e8e5235729543d86bf74fbd1b96482d98f3a88a3b86b6e4b74885",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/requirements.txt",
+          "bytes": 90,
+          "sha256": "f61b1a3576fb7f531552810079370f279608ba91ad9848b93d62a1f4ebbe5e32",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/schema/geospatial_schema.sql",
+          "bytes": 5050,
+          "sha256": "9361acb50734cb3c9ec53872bdf6b2c3d829c9ea53abb2c6ce619f9bcf18737e",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/scripts/build_geopackage.py",
+          "bytes": 14506,
+          "sha256": "5038184b639999eb63bc6209c3aedb895b216c05ef47c9cfb3e356fc58c4d61c",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/scripts/census_repository.py",
+          "bytes": 2670,
+          "sha256": "990e4bcb4809185404488af7c45c833dda3d4a3923a169cea576ffa31c347c21",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/scripts/package_release.py",
+          "bytes": 2175,
+          "sha256": "26d1a5bbb1048aa232fe9f2e01048c425cc6de38fd9d1c74e6f4792e055a9350",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/scripts/render_maps.py",
+          "bytes": 12409,
+          "sha256": "49211e4b652b19f8aae62b083f1783feb7b4bda0dfe1c8849f1a4ccd7a4b08c7",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/scripts/validate_geospatial.py",
+          "bytes": 7873,
+          "sha256": "d776519ea05f501977025f404483f241e2da99fafb6d984cbccb966996244aca",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/scripts/validate_qgis.py",
+          "bytes": 853,
+          "sha256": "697f802477735386f8522b553621829ac094185f287e2f7d78da03c1d5bb9635",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/tests/test_foundation.py",
+          "bytes": 2403,
+          "sha256": "ff816471310995db1886fbd2d60eef1c1f910045f44feca065241df48cc859d1",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/releases/MANIFEST.json",
+          "bytes": 11251,
+          "sha256": "d4a7d2f7c13107f9f67c2507b078593b07b341382e05e51547e5b5d5047a88b5",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/releases/CHECKSUMS.sha256",
+          "bytes": 6564,
+          "sha256": "993a3afceb2d14a401aaff15f036c7686e0dc4d8a9310c0b15d4622c3f8fe6f4",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "geospatial/releases/RELEASE_NOTES.md",
+          "bytes": 581,
+          "sha256": "b6cd3ecb2e2b62cf2915268dc29030071574752c45e9cd9dc81d4040027b8f6a",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        }
+      ]
+    },
+    {
+      "asset_name": "SABLE_HARBOR_Geospatial_Addendum_v0.2.0.zip",
+      "source_download_name": "SABLE_HARBOR_Geospatial_Addendum_v0.2.0 (1).zip",
+      "sha256": "aadb4ab9c1dc2ed6be99d6898243014dc5361a26640ea3a234da2cf79e13598e",
+      "bytes": 101321708,
+      "source_date": "2026-09-05",
+      "source_commit_referenced": "8d20e51a7cf0068729e3296840ccb5ba1ac1d7bd",
+      "authority_status": "HISTORICAL_APPROVED_ADDENDUM_SUPERSEDED_BY_LATER_EDITION",
+      "internal_manifest_member": "repository/geospatial/MANIFEST.json",
+      "internal_manifest_sha256": "8556da4e3e18a46d5246c664d496096d4fec0a26a019b31b9e8176b3a30fd0b6",
+      "internal_manifest_declared_files_verified": 252,
+      "zip_crc_pass": true,
+      "members": [
+        {
+          "path": "START_HERE.md",
+          "bytes": 1109,
+          "sha256": "b263ad1b4f0ed13edd1ae1f2a03455b30f96c593709087c555a97edb2cf8e358",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/assets/brand/README.md",
+          "bytes": 7102,
+          "sha256": "d16124cc3097fd364f4b94cfb72ba71fa7451678a20fdd4af635bb11dd44611e",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/assets/brand/logos/pale_sun__canonical.png",
+          "bytes": 837461,
+          "sha256": "eedcabfca73460e8ff5ad72864c9f669ba2375097b05daa2912f30c9ff35c025",
+          "accepted_main_exact_paths": [
+            "assets/brand/logos/pale_sun__canonical.png"
+          ],
+          "disposition": "accepted_main_exact_bytes"
+        },
+        {
+          "path": "repository/assets/brand/logos/red_wash__canonical.png",
+          "bytes": 738834,
+          "sha256": "7c26b8afd7954045d9dd4b5c691ba820cdce2e3ccb8e41ac6873b103f0c59720",
+          "accepted_main_exact_paths": [
+            "assets/brand/logos/red_wash__canonical.png"
+          ],
+          "disposition": "accepted_main_exact_bytes"
+        },
+        {
+          "path": "repository/assets/brand/maps/README.md",
+          "bytes": 547,
+          "sha256": "4bf9601d9c45b2be1df88a267767a010ddbbbafd1b5edae7ab64203ac44e75bd",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/assets/brand/maps/red_wash__site_overview.png",
+          "bytes": 3230867,
+          "sha256": "8dbb0053c4a563d57d5a24be4f4687dc11e2e00e2b1e62c279d9be945f68d77a",
+          "accepted_main_exact_paths": [
+            "assets/brand/maps/red_wash__site_overview.png",
+            "geospatial/sources/canon_snapshot/assets/brand/maps/red_wash__site_overview.png"
+          ],
+          "disposition": "accepted_main_exact_bytes"
+        },
+        {
+          "path": "repository/assets/brand/maps/red_wash__underground_plan.png",
+          "bytes": 2401412,
+          "sha256": "0658de3b7c63ecc9757b545f29895eab51801b2148cb3862935620b6049a7dda",
+          "accepted_main_exact_paths": [
+            "assets/brand/maps/red_wash__underground_plan.png",
+            "geospatial/sources/canon_snapshot/assets/brand/maps/red_wash__underground_plan.png"
+          ],
+          "disposition": "accepted_main_exact_bytes"
+        },
+        {
+          "path": "repository/assets/brand/red_wash_visual_manifest.json",
+          "bytes": 3340,
+          "sha256": "28824a6f9eca5fcf765858e7260e089b73ba99f0f0da79848184d3ccbc76c310",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/LICENSES.md",
+          "bytes": 1332,
+          "sha256": "0c5d3f4a1683adf55e0f01a6ae73aba9e234c597fb7808e5b20ffba32874c7b5",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/README.md",
+          "bytes": 2132,
+          "sha256": "b3746723527fbbb053c13418b50c4c6232cfd6b2844591870c579e081ebc6ed2",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/README_REBUILD.md",
+          "bytes": 1198,
+          "sha256": "6c0e6be3f91c8bd60c3730eac22d33d5f231c3f20cd1d31f83b32caec1ecbd87",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/RELEASE_NOTES.md",
+          "bytes": 960,
+          "sha256": "3cc25b447515240cd9bfc80f77ff0ceb351a2be3a4086190b02ebb51e658ca5b",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/GOVERNING_GEOGRAPHIC_ADDENDUM_2026-09-05.md",
+          "bytes": 15583,
+          "sha256": "5ec4448308e0e19fdf11dc5307b24380b19e6ab51482e11bd41883aff703f150",
+          "accepted_main_exact_paths": [
+            "geospatial/sources/GOVERNING_CANON_ADDENDUM_2026-09-05.md"
+          ],
+          "disposition": "accepted_main_exact_bytes"
+        },
+        {
+          "path": "repository/geospatial/data/HANDOVER_SOURCE_EXTRACTS.md",
+          "bytes": 2949,
+          "sha256": "5a740ba91947be5c922a1aa0a4ab9cbb514e4937c6a63e0c2a4f0191bf5a469a",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/constraints.json",
+          "bytes": 5203,
+          "sha256": "9b6a2ac99f0cd02f13977669382fb2beacb9c3f7e0c050f271d7f80550519fe8",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/current_feature_manifest.json",
+          "bytes": 587,
+          "sha256": "1de521addec635fa9370e9b669b15d0a554d2e461569b0b707b432117dc30e4a",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/decisions.json",
+          "bytes": 2360,
+          "sha256": "6bbf1b9b7397e1b1e45b00a87d2f67dc4b607bd302d658e3de82f2b261598e51",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/engineered/alignment_alternatives.geojson",
+          "bytes": 63788,
+          "sha256": "c4e4d9603deff94a017cdb793e922755a8c94e9b284b8192c2b9994b16e5f822",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/engineered/alignment_metrics.json",
+          "bytes": 3166,
+          "sha256": "2f29709859c577406435616288d55510d5288e39a412d6e7a9120beea971e5dc",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/engineered/ground_profiles.csv",
+          "bytes": 76385,
+          "sha256": "525d19c000847403688375f42193ba1f2aa62777cc8ad3cf9d1cadf5c6280d04",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/engineered/nodes.geojson",
+          "bytes": 1064,
+          "sha256": "0f661ca3ae93213d608fca63d0ee1b1666a3130c010319856fcf84f7fe9ff35a",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/engineered/site_envelopes.geojson",
+          "bytes": 2894,
+          "sha256": "d4ea4097615890501a8447cf1faa2e5b93858a1d7162f9520db2b23871d10047",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/engineered/site_screen.json",
+          "bytes": 1051,
+          "sha256": "d7bd7f947123d50344ed28b33c7e5150221a1658da356a4da5860c0f2ce620bc",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/objects.json",
+          "bytes": 39797,
+          "sha256": "925baf303529cde08e293c6c7c056e308f17addae8dfc028b86fe5e5d40eda64",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/red_wash_location_status.json",
+          "bytes": 398,
+          "sha256": "ddd2109f5757b8220f5f3e8d1e78c6057a1ac5068e3ee6f0c438110141c19fb5",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/reference/CONSTRAINT_ACQUISITION.json",
+          "bytes": 190367,
+          "sha256": "5e6df013e63a4add56ee4924b93c3299673159cf15b90df5655a21bec2b47386",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/reference/SOURCE_ACQUISITION.json",
+          "bytes": 3525,
+          "sha256": "0a893723c762a25ea360458dada4065e8d593ad078c3ebfa10ee8e8fd9bc40da",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/reference/WATERBODY_ACQUISITION.json",
+          "bytes": 6519,
+          "sha256": "287bcbb0ac43a17da7e96c4a45a3d78de911fe32fc88d8a3440a68dfe39fb404",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/reference/census_county_metadata.json",
+          "bytes": 7463,
+          "sha256": "2d3d122db59e0f4171d4ac8972dff969b42567bc7239f90a67412fd3616a1b59",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/reference/drainage.geojson",
+          "bytes": 3289711,
+          "sha256": "c44bfdd26838d7c85cbb7f698a1fe4eb15e8ebce5b88c311df5f59562627c34d",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/reference/drainage_metadata.json",
+          "bytes": 114310,
+          "sha256": "bbcf7516afa22a33e65e2a821e0cabfbec58778d7a10a5c4e312d462142d8757",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/reference/fra_narn_metadata.json",
+          "bytes": 32543,
+          "sha256": "6b734a564ceb46e09d31f57f377a712ddbdd42722e99cb895badf144d5685e80",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/reference/interstate.geojson",
+          "bytes": 44088,
+          "sha256": "2fa8e727e940c0aa8d8ebf8a1d14f4c8eed9480bf1a5e13c070c2fdb2e38710a",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/reference/interstate_metadata.json",
+          "bytes": 8638,
+          "sha256": "f24e6d3bb1ca0bc6f7c8d0fc6d80f3beda43a0f824b1258333e59b10cf304a47",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/reference/local_roads.geojson",
+          "bytes": 3219129,
+          "sha256": "123f8b0f3294f2de9fb7d325792bef43fb8c84172875c31de9116e0306a47358",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/reference/local_roads_metadata.json",
+          "bytes": 21093,
+          "sha256": "b8427ac4e246440cda1f37f991deea64c4f860deb31ee5bf5312e09d8d38437a",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/reference/surface_management.geojson",
+          "bytes": 29394783,
+          "sha256": "a1a03994d1982b3bab905240b5c319cb94adfb1000dab135399ae6bb469ed073",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/reference/surface_management_metadata.json",
+          "bytes": 6935,
+          "sha256": "823719cf35a10c17158a6d465f4c1958a29d66786d83890b6668d98b376024c9",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/reference/usgs_3dep_metadata.json",
+          "bytes": 12981,
+          "sha256": "a300a739a6e47627d1cd6921fca368004d88a8ac62d6d32c64571c669e4349bb",
+          "accepted_main_exact_paths": [
+            "geospatial/facilities/spatial/context_sources/usgs_elevation_service.json",
+            "geospatial/sources/wyoming_dem_service.json",
+            "industrial/source/geography/wyoming_dem_service.json"
+          ],
+          "disposition": "accepted_main_exact_bytes"
+        },
+        {
+          "path": "repository/geospatial/data/reference/wamsutter_host_rail.geojson",
+          "bytes": 52614,
+          "sha256": "4b7a571b7ab86b9ff57770715a8e7b1de3fed69f14becf4902ad65c8f634d03b",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/reference/waterbodies.geojson",
+          "bytes": 461680,
+          "sha256": "00fcddd186526641c454a0c464d47826114529f4b9831a1446e2717ee46e8d8b",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/reference/waterbody_metadata.json",
+          "bytes": 41618,
+          "sha256": "ae49fed761071f0e94bec516700bf4c27dba023e80a4a2968c537bdbc9a30714",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/reference/wyoming_counties.geojson",
+          "bytes": 158904,
+          "sha256": "58336ad7746c14893c91936156b3efc5da21b6b9a2085d06a98403f2eca6558a",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/reference/wyoming_screening_dem.tif",
+          "bytes": 4720289,
+          "sha256": "72e3786f0892c40c72deb438dbcce4195019b1275fcb8d80c6e9e1865eadb79c",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/reference_land.geojson",
+          "bytes": 21005,
+          "sha256": "d281e7d74996e9c206dc64535861ca8c4f7c3954a0cf8b651309eaed937dbb2a",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/sources.json",
+          "bytes": 12913,
+          "sha256": "64d10c3163c5b13771596ab340e3610a8742bc6dc838df6d08ac003ec7ee5d51",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/data/sources_current.json",
+          "bytes": 19175,
+          "sha256": "86935df4e777730eb08e0d422f0f81425ce5ed1794fdc5ea94a7cc066876d306",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/docs/ARU_BST_GEOGRAPHY_ADDENDUM_IMPLEMENTATION_SUMMARY.md",
+          "bytes": 4587,
+          "sha256": "d32d16dd9c9ccf44459c3a154445a3ff6d8eaa7305b20457ab10a0e2cfdaabf0",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/docs/BST_ROUTE_ENGINEERING_NOTE.md",
+          "bytes": 2908,
+          "sha256": "695392955e3bd531496b2929fdd2c33c53d438a8d894186021161f99c58a220d",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/docs/CANON_AND_PROVENANCE_POLICY.md",
+          "bytes": 1546,
+          "sha256": "29fcfa0396011e8f6882452fe6f7d943c3e179779b9229d8f243f4c4bd337416",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/docs/CANON_SOURCE_HIERARCHY.md",
+          "bytes": 677,
+          "sha256": "925cfcefb10b8bb661b098907cea7196fb7fd98fe942b79f27e3c97294013356",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/docs/CARTOGRAPHIC_STANDARD.md",
+          "bytes": 1176,
+          "sha256": "88870bdce5e1a9248145f84a9e4b90fd5eceee88286839871388efba21b46141",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/docs/GEOSPATIAL_DATA_MODEL.md",
+          "bytes": 2828,
+          "sha256": "7c14fc39ec5670a01df0ef48cb73ac410327432d835a25004fe1be1f949ee56f",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/docs/KNOWN_LIMITATIONS.md",
+          "bytes": 1199,
+          "sha256": "afb27045f4c3c0de82554dad2664ada89c949e869edbac0131c3229bfdc4e034",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/docs/RED_WASH_LOCATION_SUPERSESSION_NOTE.md",
+          "bytes": 1928,
+          "sha256": "c82b5d6e6f4dbd93727fb13bd36d3808f58f656a6edd87303c570088b13292a5",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/docs/RED_WASH_MAP_RECOVERY.md",
+          "bytes": 282,
+          "sha256": "6c27d5e6938558373a423fe962c6bbae3f06d04a7cbf78c6394279629bd06144",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/docs/TEMPORAL_GIS_MODEL.md",
+          "bytes": 1341,
+          "sha256": "f0b1c64e0568d48ef0bff657de194e71da388cb0b36b96a292925a9e0ee4be08",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/evidence/README.md",
+          "bytes": 295,
+          "sha256": "326e7e9d5427b228134ad2be7791ac937296f3a6b96a294d86d4386b2fb84ebf",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/evidence/originals/red_wash__site_overview.png",
+          "bytes": 3230867,
+          "sha256": "8dbb0053c4a563d57d5a24be4f4687dc11e2e00e2b1e62c279d9be945f68d77a",
+          "accepted_main_exact_paths": [
+            "assets/brand/maps/red_wash__site_overview.png",
+            "geospatial/sources/canon_snapshot/assets/brand/maps/red_wash__site_overview.png"
+          ],
+          "disposition": "accepted_main_exact_bytes"
+        },
+        {
+          "path": "repository/geospatial/evidence/originals/red_wash__underground_plan.png",
+          "bytes": 2401412,
+          "sha256": "0658de3b7c63ecc9757b545f29895eab51801b2148cb3862935620b6049a7dda",
+          "accepted_main_exact_paths": [
+            "assets/brand/maps/red_wash__underground_plan.png",
+            "geospatial/sources/canon_snapshot/assets/brand/maps/red_wash__underground_plan.png"
+          ],
+          "disposition": "accepted_main_exact_bytes"
+        },
+        {
+          "path": "repository/geospatial/evidence/red_wash_visual_manifest.json",
+          "bytes": 3340,
+          "sha256": "28824a6f9eca5fcf765858e7260e089b73ba99f0f0da79848184d3ccbc76c310",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/evidence/superseded/red_wash__site_overview_SUPERSEDED.png",
+          "bytes": 2904164,
+          "sha256": "844f093b15ff5658a9c1a4cdb5a81c112f52c35a676d61e60fbdc2f7c0d83f24",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/evidence/superseded/red_wash__underground_plan_SUPERSEDED.png",
+          "bytes": 2203228,
+          "sha256": "0468dff9a7a501d62464d9a0fee59f566d9ff4b1437d03cec93562901ac8d55c",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/geojson/access_roads.geojson",
+          "bytes": 1363,
+          "sha256": "9c57348b8003caeb51edb7af1474e9779e55ba1b5f96bd8046ab657f3b72c8a4",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/geojson/bst_alignment_current.geojson",
+          "bytes": 39241,
+          "sha256": "4f6280115610cf1be2510c239ca462b1cbc1125c754a69b3ec7b3a9f322d47bc",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/geojson/facility_footprints.geojson",
+          "bytes": 12384,
+          "sha256": "b8ef9705bc141b4980407adbe39768998f43d326e7368ac22a8fc63527500518",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/geojson/facility_lines.geojson",
+          "bytes": 4996,
+          "sha256": "b52ed0af304aec70995dee112c9b6fc931585299015937cbf0489659a41549c0",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/geojson/locked_search_areas.geojson",
+          "bytes": 8768,
+          "sha256": "6c41e3196b428839a91d024efd3d89674a54d2392d8aae081880281e5ba55798",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/geojson/rail_alignment_alternatives.geojson",
+          "bytes": 68467,
+          "sha256": "ff2dbd5700a8f3da49e20a57dee1bdf220c406ff2e97959ee0fe1dedfe4f3919",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/geojson/rail_nodes.geojson",
+          "bytes": 3495,
+          "sha256": "55d7a93dd3e3cc6d4bba9b38c840964be6b3c9d1c7c7d99316c07169ba0f196c",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/geojson/rail_segments.geojson",
+          "bytes": 39233,
+          "sha256": "615a5966eb51298f748e96d3f5259a1bac02dfbe756445647f60f52133a7a2e7",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/geojson/red_wash_anchor.geojson",
+          "bytes": 1099,
+          "sha256": "eb628b87dea9decd4c05aa94f80ea84767489fee90d628b6dc21985e153a97c9",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/geojson/reference_counties.geojson",
+          "bytes": 547173,
+          "sha256": "7b03487ff3f75efc2ecbf4dbbdcde91da6dea9fe688a62eb43084979da8afc2a",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/geojson/reference_drainage.geojson",
+          "bytes": 10093903,
+          "sha256": "3589ff677602c61b377c43cde203819020701e2e87bb58d1988f2d45aa6658c9",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/geojson/reference_points.geojson",
+          "bytes": 1062,
+          "sha256": "505139590db52eaae46b5d16c0d7a634ef5dcff494562311bf992e5fd99a9cc8",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/geojson/reference_rail.geojson",
+          "bytes": 112443,
+          "sha256": "1bef08c17adf550a0d3d29475f3cb5898405058f70804925c1152505876820f7",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/geojson/reference_roads.geojson",
+          "bytes": 8134107,
+          "sha256": "faf925d4dca7bb72236e072944f2073537bc107857ac488e8f039ae1eafda821",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/geojson/reference_water.geojson",
+          "bytes": 1545277,
+          "sha256": "21ef5598d1b08444c27ae1f3c12ae15a70b0405de093af95f9ad10ce37c81733",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/geojson/spatial_asset_footprints.geojson",
+          "bytes": 3468,
+          "sha256": "80925d7bb953d2d028414c989962a3cd1a9855938eddec6b1f9ba87b0c159419",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/geojson/spatial_asset_points.geojson",
+          "bytes": 2217,
+          "sha256": "de2f0a342b632ac711b5d300fa0987eb43f30e800d37513671f39c678742822b",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/geojson/superseded_location_claims.geojson",
+          "bytes": 1128,
+          "sha256": "4028c9bd7a01b3cd8c8500c7c3c997b31811f7eb2a8657ecae79197c0954b416",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/geojson/taylor_hub.geojson",
+          "bytes": 1191,
+          "sha256": "d4047fd57cb6cc95780353ffa6550ea16b4cc11af7aac308448abf121f8b4c06",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/README.md",
+          "bytes": 424,
+          "sha256": "9e259efe6762fa52008a866db55f4ee8cdd5a66e8ac66e5a8e05ceecf6c5fcb5",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/mandates/Pasted markdown(2).md",
+          "bytes": 20652,
+          "sha256": "6a19d5fd39614e7d142a4c3b5b8e3a0a5f2dde082fbac0dbc891af81652f4ab2",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/mandates/Pasted text (2).txt",
+          "bytes": 51185,
+          "sha256": "656f29ce220d4d508195fd19cd9f903a889e93d75022c6e3bc2bf273a13b6ff9",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/mandates/README.md",
+          "bytes": 248,
+          "sha256": "d51a17a77e6582687eecafbff3983a12702707e79f6702f943018860e613670e",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/mandates/SABLE_HARBOR_Unified_Work_Super_Prompt.md",
+          "bytes": 78334,
+          "sha256": "d49a4f30625aae0220b6d252c9f75c4e746099273c5a2dee2800caf934a1f991",
+          "accepted_main_exact_paths": [
+            "geospatial/sources/MASTER_EXECUTION_MANDATE.md"
+          ],
+          "disposition": "accepted_main_exact_bytes"
+        },
+        {
+          "path": "repository/geospatial/history/pre-addendum-source/assets/brand/README.md",
+          "bytes": 6764,
+          "sha256": "c0539f3c4969fc7be33b94df072211d728575a553859e4bfdaa07aad7096ef17",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/pre-addendum-source/assets/brand/logos/pale_sun__canonical.png",
+          "bytes": 837461,
+          "sha256": "eedcabfca73460e8ff5ad72864c9f669ba2375097b05daa2912f30c9ff35c025",
+          "accepted_main_exact_paths": [
+            "assets/brand/logos/pale_sun__canonical.png"
+          ],
+          "disposition": "accepted_main_exact_bytes"
+        },
+        {
+          "path": "repository/geospatial/history/pre-addendum-source/assets/brand/logos/red_wash__canonical.png",
+          "bytes": 738834,
+          "sha256": "7c26b8afd7954045d9dd4b5c691ba820cdce2e3ccb8e41ac6873b103f0c59720",
+          "accepted_main_exact_paths": [
+            "assets/brand/logos/red_wash__canonical.png"
+          ],
+          "disposition": "accepted_main_exact_bytes"
+        },
+        {
+          "path": "repository/geospatial/history/pre-addendum-source/assets/brand/maps/red_wash__site_overview.png",
+          "bytes": 3230867,
+          "sha256": "8dbb0053c4a563d57d5a24be4f4687dc11e2e00e2b1e62c279d9be945f68d77a",
+          "accepted_main_exact_paths": [
+            "assets/brand/maps/red_wash__site_overview.png",
+            "geospatial/sources/canon_snapshot/assets/brand/maps/red_wash__site_overview.png"
+          ],
+          "disposition": "accepted_main_exact_bytes"
+        },
+        {
+          "path": "repository/geospatial/history/pre-addendum-source/assets/brand/maps/red_wash__underground_plan.png",
+          "bytes": 2401412,
+          "sha256": "0658de3b7c63ecc9757b545f29895eab51801b2148cb3862935620b6049a7dda",
+          "accepted_main_exact_paths": [
+            "assets/brand/maps/red_wash__underground_plan.png",
+            "geospatial/sources/canon_snapshot/assets/brand/maps/red_wash__underground_plan.png"
+          ],
+          "disposition": "accepted_main_exact_bytes"
+        },
+        {
+          "path": "repository/geospatial/history/pre-addendum-source/assets/brand/red_wash_visual_manifest.json",
+          "bytes": 2356,
+          "sha256": "6c14b6aa28e9763046b0819e29cc8e7e850edde8e9e1339179bb2786cfb0d7b1",
+          "accepted_main_exact_paths": [
+            "assets/brand/red_wash_visual_manifest.json"
+          ],
+          "disposition": "accepted_main_exact_bytes"
+        },
+        {
+          "path": "repository/geospatial/history/pre-addendum-source/red_wash/README.md",
+          "bytes": 5831,
+          "sha256": "f8cc00768c5678caaa987a410c6d922879342a594be4842d875835e1d3867c1e",
+          "accepted_main_exact_paths": [
+            "red_wash/history/v1.0.0/documents/README.md"
+          ],
+          "disposition": "accepted_main_exact_bytes"
+        },
+        {
+          "path": "repository/geospatial/history/pre-addendum-source/red_wash/RED_WASH_CASEBOOK.md",
+          "bytes": 26058,
+          "sha256": "6d1901527eddf25c89373e8def91a2ade152ef6047d8749dd513cf8d7325c5d7",
+          "accepted_main_exact_paths": [
+            "red_wash/history/v1.0.0/documents/RED_WASH_CASEBOOK.md"
+          ],
+          "disposition": "accepted_main_exact_bytes"
+        },
+        {
+          "path": "repository/geospatial/history/pre-addendum-source/red_wash/TRANSACTION_OPERATING_RECORD.md",
+          "bytes": 28357,
+          "sha256": "f1645067f4b06447258342e4de92dae2d587656734de7c86bbddd29f19cb8506",
+          "accepted_main_exact_paths": [
+            "red_wash/history/v1.0.0/documents/TRANSACTION_OPERATING_RECORD.md"
+          ],
+          "disposition": "accepted_main_exact_bytes"
+        },
+        {
+          "path": "repository/geospatial/history/pre-addendum-source/red_wash/docs/02_GEOLOGICAL_TECHNICAL_REPORT.md",
+          "bytes": 3483,
+          "sha256": "9a00c2bd344227c1cf06701cba3ec2477f1384643df59628627f0321909b6b23",
+          "accepted_main_exact_paths": [
+            "geospatial/sources/canon_snapshot/red_wash/docs/02_GEOLOGICAL_TECHNICAL_REPORT.md",
+            "red_wash/history/v1.0.0/documents/docs/02_GEOLOGICAL_TECHNICAL_REPORT.md"
+          ],
+          "disposition": "accepted_main_exact_bytes"
+        },
+        {
+          "path": "repository/geospatial/history/pre-addendum-source/red_wash/source/core_operating_data.json",
+          "bytes": 21631,
+          "sha256": "f826075eddf28ded3301756d078d952e38e1cc39f4e1a0b9aecd9e07eb9e9480",
+          "accepted_main_exact_paths": [
+            "red_wash/history/v1.0.0/source/core_operating_data.json"
+          ],
+          "disposition": "accepted_main_exact_bytes"
+        },
+        {
+          "path": "repository/geospatial/history/prior-deliverables/Red_Wash_Location_Conflict.pdf",
+          "bytes": 11498,
+          "sha256": "7a13878f9c28a9f26dcf4cd3c7a21453214f81c270f9f918754b7e288ff8726e",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/prior-deliverables/Red_Wash_Recovered_Approved_Maps.pdf",
+          "bytes": 7022112,
+          "sha256": "cd117f3667967af0ac9cb4ecb61f2629d271f1222fa2c04552aefa53e567c440",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/prior-deliverables/SABLE_HARBOR_Geospatial_Foundation_v0.1.0.zip",
+          "bytes": 11983745,
+          "sha256": "31d3aadb4ef241484cb62d5a9db51e64aa38f5458e2fd0286cc71cb297c245ee",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/prior-deliverables/Sable_Harbor_Geographic_Framework.pdf",
+          "bytes": 21590,
+          "sha256": "58efa5a0695b1845fc7a3e8d5fd8eab5c9cf3c111bea3e14d3e8a7b3a082eaac",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/prior-deliverables/sable_harbor_master_v0.1.gpkg",
+          "bytes": 499712,
+          "sha256": "ab9984a6733dd507788bb6a3340ef1ccb5b9c00a89934fab7cf44cefba82525e",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/LICENSES.md",
+          "bytes": 1332,
+          "sha256": "0c5d3f4a1683adf55e0f01a6ae73aba9e234c597fb7808e5b20ffba32874c7b5",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/README.md",
+          "bytes": 2306,
+          "sha256": "9caf13f15f4a360e2e684c9fbc999b8bb95a3bfe07e1c70a5cbe81af6bd71430",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/data/HANDOVER_SOURCE_EXTRACTS.md",
+          "bytes": 2656,
+          "sha256": "ee8696a83f8c87c98b1b6f072c030f088599a1910da6388eec11444457394307",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/data/constraints.json",
+          "bytes": 5151,
+          "sha256": "8d27830c4f4c18380615882cc8bb2cf0f020bc168a10df6ce6077b44da86fbb9",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/data/objects.json",
+          "bytes": 39762,
+          "sha256": "8e184573471739c9e65fe8e68cb8bdc03d6bd9bc874f16f3c23d46ad8dc69535",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/data/reference_land.geojson",
+          "bytes": 21005,
+          "sha256": "d281e7d74996e9c206dc64535861ca8c4f7c3954a0cf8b651309eaed937dbb2a",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/data/sources.json",
+          "bytes": 12164,
+          "sha256": "00cd45c02867cd4c968469e944c8f4264aed8d2e71b113f4ba8a89cb71000195",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/docs/CANON_AND_PROVENANCE_POLICY.md",
+          "bytes": 1546,
+          "sha256": "29fcfa0396011e8f6882452fe6f7d943c3e179779b9229d8f243f4c4bd337416",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/docs/CANON_SOURCE_HIERARCHY.md",
+          "bytes": 1879,
+          "sha256": "938f5a4b457d30e6b459a91452be25b8962604882ae4096626582e9a751a2498",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/docs/CARTOGRAPHIC_STANDARD.md",
+          "bytes": 1176,
+          "sha256": "88870bdce5e1a9248145f84a9e4b90fd5eceee88286839871388efba21b46141",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/docs/GEOSPATIAL_DATA_MODEL.md",
+          "bytes": 2925,
+          "sha256": "a87a3f18aba9a1211be66eddc2e4091719573a7d692b7d2353eb34c8c05bf617",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/docs/KNOWN_LIMITATIONS.md",
+          "bytes": 1581,
+          "sha256": "66fa17f8e6b85075e900649585d559b004b069cbd744e41beeb7bf4445f39166",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/docs/RED_WASH_MAP_RECOVERY.md",
+          "bytes": 2545,
+          "sha256": "58a688148d6dad6601b49ae051e18ca0f413c2c43990317bdb94846f8e18fbc0",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/docs/TEMPORAL_GIS_MODEL.md",
+          "bytes": 1341,
+          "sha256": "f0b1c64e0568d48ef0bff657de194e71da388cb0b36b96a292925a9e0ee4be08",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/evidence/originals/red_wash__site_overview.png",
+          "bytes": 3230867,
+          "sha256": "8dbb0053c4a563d57d5a24be4f4687dc11e2e00e2b1e62c279d9be945f68d77a",
+          "accepted_main_exact_paths": [
+            "assets/brand/maps/red_wash__site_overview.png",
+            "geospatial/sources/canon_snapshot/assets/brand/maps/red_wash__site_overview.png"
+          ],
+          "disposition": "accepted_main_exact_bytes"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/evidence/originals/red_wash__underground_plan.png",
+          "bytes": 2401412,
+          "sha256": "0658de3b7c63ecc9757b545f29895eab51801b2148cb3862935620b6049a7dda",
+          "accepted_main_exact_paths": [
+            "assets/brand/maps/red_wash__underground_plan.png",
+            "geospatial/sources/canon_snapshot/assets/brand/maps/red_wash__underground_plan.png"
+          ],
+          "disposition": "accepted_main_exact_bytes"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/evidence/red_wash_visual_manifest.json",
+          "bytes": 2356,
+          "sha256": "6c14b6aa28e9763046b0819e29cc8e7e850edde8e9e1339179bb2786cfb0d7b1",
+          "accepted_main_exact_paths": [
+            "assets/brand/red_wash_visual_manifest.json"
+          ],
+          "disposition": "accepted_main_exact_bytes"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/geojson/conflicting_location_claims.geojson",
+          "bytes": 1024,
+          "sha256": "700e3c1379468be2f1c2652da956397cc1df00dbd72f48b805fac5b07aab5651",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/geojson/event_points.geojson",
+          "bytes": 78,
+          "sha256": "232ac511c7ea1a5d9dd774f4b2a847642ad6ce23a6f6aa82485088071e3e99b2",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/geojson/facility_footprints.geojson",
+          "bytes": 85,
+          "sha256": "a242e7e19e5a8ffb2d0b31f24e8b341f50ee7f5d56c4826e6f33f7b498e8b596",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/geojson/facility_points.geojson",
+          "bytes": 81,
+          "sha256": "54c309040ad2ba9de6f5ac9bd3c6856138f688f32dfb1c6d06f7d42bfb8c48a9",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/geojson/locked_search_areas.geojson",
+          "bytes": 7619,
+          "sha256": "d14c862a893251f48e27a5a5ea0408077c2727466a2c406c1197b523f2abe0a3",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/geojson/operating_territories.geojson",
+          "bytes": 87,
+          "sha256": "e8fa49722e535ec98ed51350e9d48249624e2a69477833e5b37b41b60798be59",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/geojson/rail_nodes.geojson",
+          "bytes": 76,
+          "sha256": "fddadc739b86619e2d4e6dfffc049859b4d81d8d62a6a774825e3f9ebb83db3a",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/geojson/rail_segments.geojson",
+          "bytes": 79,
+          "sha256": "1d5f0ba675db7f8cef1e7f61e3dfd185f1941a2fbdcb5c09880f182624a68a2d",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/geojson/reference_points.geojson",
+          "bytes": 1014,
+          "sha256": "4947b63109dc5afbd42ce70234892755d0ed2b861ac8a8babbeefe933027f2cf",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/geojson/resource_areas.geojson",
+          "bytes": 80,
+          "sha256": "874743aadcae5b1e55724d746fb6cbc9b9e58a7446d12eec48b4acd57797930b",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/geojson/spatial_asset_footprints.geojson",
+          "bytes": 90,
+          "sha256": "86fd1982a7486e072d1b1451d2003b677b631b14701879f10a457418e18ff806",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/geojson/spatial_asset_points.geojson",
+          "bytes": 86,
+          "sha256": "3dac514ba2222fdc93cf7ffdfb20c510c0164f8e92c9948b0cd52961d6e38e43",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/maps/RED_WASH_SOURCE_EVIDENCE.pdf",
+          "bytes": 7022112,
+          "sha256": "cd117f3667967af0ac9cb4ecb61f2629d271f1222fa2c04552aefa53e567c440",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/maps/SH-MAP-ENT-001_locked-geographic-framework.json",
+          "bytes": 692,
+          "sha256": "f067e38c05dc5fe1c1ec96e03ca61112e88081d5cfaf0b4b0d1e50c10a338f0c",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/maps/SH-MAP-ENT-001_locked-geographic-framework.pdf",
+          "bytes": 21590,
+          "sha256": "58efa5a0695b1845fc7a3e8d5fd8eab5c9cf3c111bea3e14d3e8a7b3a082eaac",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/maps/SH-MAP-ENT-001_locked-geographic-framework.png",
+          "bytes": 250498,
+          "sha256": "cc949419af09f158d08e1336998e5e2487098718ba052d83fd16aa47bee6393e",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/maps/SH-MAP-ENT-001_locked-geographic-framework.svg",
+          "bytes": 129571,
+          "sha256": "d186512cebd37760cbb3259c6219e83c4cf3badc1919f377c44f160dd03df52a",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/maps/SH-MAP-RWM-001_location-conflict.json",
+          "bytes": 664,
+          "sha256": "4693c294c4e28ba3e5eb056606df2bb0c0db623ff0576e069e3c6a1e06bb1eb5",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/maps/SH-MAP-RWM-001_location-conflict.pdf",
+          "bytes": 11498,
+          "sha256": "7a13878f9c28a9f26dcf4cd3c7a21453214f81c270f9f918754b7e288ff8726e",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/maps/SH-MAP-RWM-001_location-conflict.png",
+          "bytes": 196632,
+          "sha256": "9337f26fcc1e86f6a3f4646fe56282442f8cefdaf4d0cd9128763d0cdbb1703e",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/maps/SH-MAP-RWM-001_location-conflict.svg",
+          "bytes": 69497,
+          "sha256": "5182fb9cf195c4059322291364e08bca000d099b760668bc3fd3493846b233ba",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/master/sable_harbor_master_v0.1.gpkg",
+          "bytes": 499712,
+          "sha256": "ab9984a6733dd507788bb6a3340ef1ccb5b9c00a89934fab7cf44cefba82525e",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/qgis/sable_harbor_master.qgs",
+          "bytes": 10491,
+          "sha256": "2453da15eb2d19bbd3d5dcd5f58c2efd1df42afefe068944e540f9b22ffd472c",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/qgis/sable_harbor_master.qgz",
+          "bytes": 1649,
+          "sha256": "6e21218058415241f6779ca281bd1230e38ada21b92c1d937a12f15ea905fe64",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/registers/GEOGRAPHIC_CENSUS_v0.1.csv",
+          "bytes": 21673,
+          "sha256": "b530cf070418fb9a1b8b1b02c1341ae25422293cc0ce5a9da11e205922dea762",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/registers/GEOGRAPHIC_DECISION_REGISTER_v0.1.md",
+          "bytes": 11062,
+          "sha256": "8c87dcd6ea24754a3efd90e8b2a41ce67c41a09ca768a733c9242e957cdd4eba",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/registers/MAP_IMAGE_AND_BINARY_REGISTER.csv",
+          "bytes": 66423,
+          "sha256": "5c591e72302d80d9fe22b145f91547a4ec9f8116a950dfa73cee234c29304325",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/registers/OPEN_GEOGRAPHIC_QUESTIONS_v0.1.md",
+          "bytes": 1647,
+          "sha256": "0dc45ccb8f64fbae1292aafd652b68c5e7aafb1e010eb844ab6d1f14e8a72c40",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/registers/PROVENANCE_REGISTER.csv",
+          "bytes": 7683,
+          "sha256": "7adb7fc5e996f38a37712fc9ef8cc9b9241361eafaffde9f5f1aa04293352fe2",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/registers/SITE_REGISTER.csv",
+          "bytes": 18559,
+          "sha256": "36cef311eb2055e3e64e7014a1559fc18ab93f38184aacec5c7f01466e46e77d",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/releases/RELEASE_NOTES.md",
+          "bytes": 581,
+          "sha256": "b6cd3ecb2e2b62cf2915268dc29030071574752c45e9cd9dc81d4040027b8f6a",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/reports/CENSUS_MANIFEST.json",
+          "bytes": 439,
+          "sha256": "ac6a3311e738225ae44ade7c00b04d1ef29e8def561e07407bfe93aeb354c451",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/reports/GEOGRAPHIC_CANDIDATE_OCCURRENCES.csv",
+          "bytes": 929476,
+          "sha256": "43d6d7ce937ce8c037712eb6659420e6b1caa35b8b00c2ceac0995f0371b0221",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/reports/GEOMETRY_VALIDATION.json",
+          "bytes": 37681,
+          "sha256": "5c161e2dbcc5d56a20c311e9e75d7293b95177205f9417e6b6095744ce7e1564",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/reports/GEOSPATIAL_VALIDATION_REPORT.md",
+          "bytes": 386,
+          "sha256": "a7875bea7d8fe63b25ddfd76893a433004cc9d7984d55f6b40bf81aefbd2aae3",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/reports/LOCATION_COMPARISON.json",
+          "bytes": 358,
+          "sha256": "1ce7661d6a934f513accd7d52aff7f985320a42e3a94b1dd665b2857fbb9867c",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/reports/OPEN_CONFLICTS.md",
+          "bytes": 1647,
+          "sha256": "0dc45ccb8f64fbae1292aafd652b68c5e7aafb1e010eb844ab6d1f14e8a72c40",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/reports/PROVENANCE_COVERAGE.csv",
+          "bytes": 373,
+          "sha256": "9a2d2fcef6666166a67386d737d86515265890802d63267458b03be365da8d5e",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/reports/REBUILD_VALIDATION.json",
+          "bytes": 602,
+          "sha256": "745ad8d7ec78ae70a0079c141ea2da6f83cf729619b94cee8664032cc024b21b",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/reports/REPOSITORY_INTEGRATION.md",
+          "bytes": 973,
+          "sha256": "a877bc806ab5c73176cc695b06e630fc01984a506bfe517a333bad7426362707",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/reports/SOURCE_COVERAGE.csv",
+          "bytes": 120169,
+          "sha256": "50062649b01e8e5235729543d86bf74fbd1b96482d98f3a88a3b86b6e4b74885",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/requirements.txt",
+          "bytes": 90,
+          "sha256": "f61b1a3576fb7f531552810079370f279608ba91ad9848b93d62a1f4ebbe5e32",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/schema/geospatial_schema.sql",
+          "bytes": 5050,
+          "sha256": "9361acb50734cb3c9ec53872bdf6b2c3d829c9ea53abb2c6ce619f9bcf18737e",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/scripts/build_geopackage.py",
+          "bytes": 14506,
+          "sha256": "5038184b639999eb63bc6209c3aedb895b216c05ef47c9cfb3e356fc58c4d61c",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/scripts/census_repository.py",
+          "bytes": 2670,
+          "sha256": "990e4bcb4809185404488af7c45c833dda3d4a3923a169cea576ffa31c347c21",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/scripts/package_release.py",
+          "bytes": 2175,
+          "sha256": "26d1a5bbb1048aa232fe9f2e01048c425cc6de38fd9d1c74e6f4792e055a9350",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/scripts/render_maps.py",
+          "bytes": 12409,
+          "sha256": "49211e4b652b19f8aae62b083f1783feb7b4bda0dfe1c8849f1a4ccd7a4b08c7",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/scripts/validate_geospatial.py",
+          "bytes": 7873,
+          "sha256": "d776519ea05f501977025f404483f241e2da99fafb6d984cbccb966996244aca",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/scripts/validate_qgis.py",
+          "bytes": 853,
+          "sha256": "697f802477735386f8522b553621829ac094185f287e2f7d78da03c1d5bb9635",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/history/v0.1.0-foundation/tests/test_foundation.py",
+          "bytes": 2403,
+          "sha256": "ff816471310995db1886fbd2d60eef1c1f910045f44feca065241df48cc859d1",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-ARU-001_aru-bst-footprint.json",
+          "bytes": 714,
+          "sha256": "088a413b7c66ccd3e994be92ddc291ec70fad75c90d4e392a798e95be4300693",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-ARU-001_aru-bst-footprint.pdf",
+          "bytes": 1019575,
+          "sha256": "8122a19a8c0d483d34f11da85798ee02f84698450294e17ccf67cfdf9e7fc209",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-ARU-001_aru-bst-footprint.png",
+          "bytes": 1467779,
+          "sha256": "6f6e2ee47d53f8309cdab791a77428ae4d9456613017cec20cb4c4d0ee753b34",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-ARU-001_aru-bst-footprint.svg",
+          "bytes": 3598507,
+          "sha256": "e90e13a1a22135118942fbebb478c71f7a3c83cfaea58bded55e4296375ecaed",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-BST-001_bst-pre-acquisition-system.json",
+          "bytes": 719,
+          "sha256": "3ec435801f88747447d1c8cc68d2bfc04cdc3731d5be42daef4acf66d08e36c2",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-BST-001_bst-pre-acquisition-system.pdf",
+          "bytes": 1108405,
+          "sha256": "cc6c82959045493ae6270a3ad15285371b8cc7b9a75005f82b048df2b91cea09",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-BST-001_bst-pre-acquisition-system.png",
+          "bytes": 1451870,
+          "sha256": "30a3cb8e5aab73418d1767d2a0315b9defa0be6fbe1b30ece3873ef8a5e564e5",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-BST-001_bst-pre-acquisition-system.svg",
+          "bytes": 3914684,
+          "sha256": "42f345b08d36e94af251399ed9c357b91556375e79236d7f45ab532dbbf8340c",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-BST-002_bst-engineering-alignment.json",
+          "bytes": 710,
+          "sha256": "4f747da9689ef6eae4cee9cb9a0e0e8f73ed03e3c5a3630f4f58241049f74325",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-BST-002_bst-engineering-alignment.pdf",
+          "bytes": 1108395,
+          "sha256": "0decd0914c5add95ea107db86d49d2382aa65f9d23fc6f6374ddf14856016598",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-BST-002_bst-engineering-alignment.png",
+          "bytes": 1473123,
+          "sha256": "ee021c9af0ea20ea9bbeeca1b53ce3e2bd717fa9c10a13b07861ab5e530ffdd6",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-BST-002_bst-engineering-alignment.svg",
+          "bytes": 3922428,
+          "sha256": "1f54ceec28f20ad8fe74056340cfcea6b9d0b2908037b04776221f228bc0c75e",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-BST-003_taylor-hub.json",
+          "bytes": 722,
+          "sha256": "65f9db091596cacbc78110d03a227652ca8b5307589543bd7cad4079bc7bc16d",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-BST-003_taylor-hub.pdf",
+          "bytes": 39215,
+          "sha256": "8c5ef91e69b4dc20f0b50c9dbddddb8d86cd74a8decfbd170581a46ca09cc563",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-BST-003_taylor-hub.png",
+          "bytes": 400849,
+          "sha256": "196385c4b7adf3fd29b659cd8288890757b17574229231fe9dabbde8cf47e145",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-BST-003_taylor-hub.svg",
+          "bytes": 154231,
+          "sha256": "bcfc7f42bda98a39fda3da3dc9c5114b91d84c11a0d003cec65965cb0e142b93",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-BST-004_ground-elevation-profile.json",
+          "bytes": 704,
+          "sha256": "a6d4ca88bf023b8baada5013a7bd9cc3f562e20892df46358c671c210dc4d34c",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-BST-004_ground-elevation-profile.pdf",
+          "bytes": 37343,
+          "sha256": "6bf5e94dc6fe3359ec40b9284f1791cd67c7963cbb064377f2a32fd3968b0ba4",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-BST-004_ground-elevation-profile.png",
+          "bytes": 396579,
+          "sha256": "953dc85a18d8390d2ec4cfc54cdaf1b7d3724d27cabd750a53530ef8bb638dd4",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-BST-004_ground-elevation-profile.svg",
+          "bytes": 147201,
+          "sha256": "cceda2bdf09d115b33447fabe7ea4dc00855882d49ee64aebba6b92280143141",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-ENT-001_locked-geographic-framework.json",
+          "bytes": 739,
+          "sha256": "3893e0ded3112017116d3b32dbe44593d4fa6913000281d9daf2a6527f5ff914",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-ENT-001_locked-geographic-framework.pdf",
+          "bytes": 42963,
+          "sha256": "27f4e391d8bb87d0dc021f7e9865d61c1ee386b1bf8773c43308983964b55c52",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-ENT-001_locked-geographic-framework.png",
+          "bytes": 459699,
+          "sha256": "44eaa0f3e43f4317fb4d15848301a2846bd431f37d6727e177f95eef45cc88b8",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-ENT-001_locked-geographic-framework.svg",
+          "bytes": 169888,
+          "sha256": "bb32790624803ebf0183e42831b9cd06d23cbcdb04a413c9b4ea21d0369a039a",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-RWM-001_red-wash-context.json",
+          "bytes": 719,
+          "sha256": "959b4aad31037d16c633bf4c54b2558fb4c8bfd4da308dd6d38fabff8513693d",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-RWM-001_red-wash-context.pdf",
+          "bytes": 1106725,
+          "sha256": "1b37b6ce80c5faffdc03c56f26ddf2e95d9d68b4b7b4e27e1cba47df9a8791b8",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-RWM-001_red-wash-context.png",
+          "bytes": 1449305,
+          "sha256": "0b01f46bfd0329531fde022c4060a9d96fbfb274e49f74e6ac60068378c9cf3f",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-RWM-001_red-wash-context.svg",
+          "bytes": 3909796,
+          "sha256": "452d4550efe6626fa0bbcd6ba39ab4e437cc5c0b311c19b23a713bdcc649c9e7",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-RWM-002_red-wash-site.json",
+          "bytes": 712,
+          "sha256": "b4d279c12ae71b428be93c9e32917cf9b409c2da3233683c8dddf9b262c778c2",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-RWM-002_red-wash-site.pdf",
+          "bytes": 43181,
+          "sha256": "9bc791633a636fc7fb4c76a9f754dc4a4798e733c6e1047fdc5c2fc0bd20c745",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-RWM-002_red-wash-site.png",
+          "bytes": 496428,
+          "sha256": "0df9538503d54f1c1d7276c03bf931ad79253bf3e5ef8725ade4db981358b6c7",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-RWM-002_red-wash-site.svg",
+          "bytes": 181062,
+          "sha256": "b578062ca7c4ea43758cd522c8806feadc9a17b3de379b2f45937438d37e018e",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-RWM-H01_location-supersession.json",
+          "bytes": 711,
+          "sha256": "ccd0914705eab3fc053e2cba215bc5eef839aa9a5bd7e15b8c1827fff8c4fe13",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-RWM-H01_location-supersession.pdf",
+          "bytes": 918266,
+          "sha256": "cd4cbd68f64d1bf69758aa2cea06ee035f5dffcf0cd5591c0cbe52f073f7616c",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-RWM-H01_location-supersession.png",
+          "bytes": 897829,
+          "sha256": "e64d9f07194df6c32ea98ce3c9a96c23c58d89539c33ffdc5f4b8795f3417218",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-RWM-H01_location-supersession.svg",
+          "bytes": 3511730,
+          "sha256": "3cb82ea8af21cfee4d73e9dbba02a302e31a721815d122548e1a8173afd51df9",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/maps/SH-MAP-RWM-H02_superseded-source-evidence.pdf",
+          "bytes": 7021931,
+          "sha256": "f32046bfef33ab2be6bce219f02a36b6d5965fccc67db6fff0f4c29938d5e8b4",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/master/sable_harbor_master.gpkg",
+          "bytes": 17063936,
+          "sha256": "006157d99b0edf595e7fcab9b5d0958a84447260e0ef54c9a15db1a4e92c1ed7",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/qgis/sable_harbor_master.qgs",
+          "bytes": 6991,
+          "sha256": "38c74a8866b2bcf21b90672844bfff84ee5da7350102e68f6331aa5f80e2c0d1",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/qgis/sable_harbor_master.qgz",
+          "bytes": 956,
+          "sha256": "e4ae3d1f792d6855d3f65026ac1b22ac5c94ba5295689512498c02d0a92265e4",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/registers/GEOGRAPHIC_CENSUS_v0.2.csv",
+          "bytes": 21736,
+          "sha256": "36c1dd705028281d83d1d363158752ab02e4c0fada5dedf78a779832b00807de",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/registers/GEOGRAPHIC_CONFLICTS.md",
+          "bytes": 1881,
+          "sha256": "3cd2a10812553e8a4968700f392fedde38e14acf1f22c48ae0836b80385bee1d",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/registers/GEOGRAPHIC_DECISION_REGISTER.md",
+          "bytes": 8375,
+          "sha256": "9437ba4e0ab6c3707f2df459692c47c40c7ec8da3dfdd297e7a38308f463c598",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/registers/GEOGRAPHIC_DECISION_REGISTER_v0.1.md",
+          "bytes": 182,
+          "sha256": "88fdd5ca80c26f2a2541f07a2fc083e831ef7b8bd7a7d52b5cad9334b2973e27",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/registers/MAP_IMAGE_AND_BINARY_REGISTER.csv",
+          "bytes": 66423,
+          "sha256": "5c591e72302d80d9fe22b145f91547a4ec9f8116a950dfa73cee234c29304325",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/registers/MAP_PRODUCT_MANIFEST.json",
+          "bytes": 6768,
+          "sha256": "efcbb3a7943721c1d31463d8bc43b225278bc6023b9b1a0d762735b957183637",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/registers/OPEN_GEOGRAPHIC_QUESTIONS_v0.1.md",
+          "bytes": 125,
+          "sha256": "deee449f1e60d3bbb4130d4e8ead17dcb2f5333a253e29c80d3b2485fcce5f10",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/registers/PROVENANCE_REGISTER.csv",
+          "bytes": 12927,
+          "sha256": "bd6d8dd761ae4ceba09112d4bcedc0b16e56e132caf5da92d817b06e01c6414b",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/registers/REGENERATED_OUTPUTS.json",
+          "bytes": 5992,
+          "sha256": "38965911e235cf7ea7cf5ee8c9cc6c4ec9f37d6e35a90334335c4c440a6544d7",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/registers/REGENERATED_OUTPUTS.md",
+          "bytes": 1946,
+          "sha256": "279ac2290ddff62a0b061ab9317a6c0536023aa979be1aa38d6908678ee89311",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/registers/SITE_REGISTER.csv",
+          "bytes": 21736,
+          "sha256": "36c1dd705028281d83d1d363158752ab02e4c0fada5dedf78a779832b00807de",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/registers/SOURCE_CORRECTION_MANIFEST.json",
+          "bytes": 2691,
+          "sha256": "c417ae043618201ac5337278ca1f5d97a18e2b84f7d8d61f38583874949f45ad",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/reports/BST_ALIGNMENT_COMPARISON.csv",
+          "bytes": 1324,
+          "sha256": "df619ed9d48890b8a1a490b11662067b11d9e0161f52d79fedbda8a42d00812f",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/reports/CAPACITY_PLAUSIBILITY.json",
+          "bytes": 1432,
+          "sha256": "8169d965b38a38fa30bc0dbad58663253c96dd2cb16373156acdad1ae3b21bf3",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/reports/CENSUS_MANIFEST.json",
+          "bytes": 439,
+          "sha256": "ac6a3311e738225ae44ade7c00b04d1ef29e8def561e07407bfe93aeb354c451",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/reports/FOUNDATION_EXECUTION_RECORD.md",
+          "bytes": 256,
+          "sha256": "1e5a92066c58ee448c2aeb39836e592bda97b95e76234a4b013d79391a572c58",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/reports/GEOGRAPHIC_CANDIDATE_OCCURRENCES.csv",
+          "bytes": 929476,
+          "sha256": "43d6d7ce937ce8c037712eb6659420e6b1caa35b8b00c2ceac0995f0371b0221",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/reports/GEOMETRY_VALIDATION.json",
+          "bytes": 3930282,
+          "sha256": "4f3d6728a6356ab6880372a42fcf29c0a9fabd14f4b62470e4cf556b1f640747",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/reports/GEOSPATIAL_VALIDATION_REPORT.md",
+          "bytes": 486,
+          "sha256": "82a9471816b66352c419c6325f2036bf1e0fce8bff3b3e6fe7628c11c044d2aa",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/reports/OPEN_CONFLICTS.md",
+          "bytes": 1881,
+          "sha256": "3cd2a10812553e8a4968700f392fedde38e14acf1f22c48ae0836b80385bee1d",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/reports/PDF_TEXT_BOUNDARY_CHECK.json",
+          "bytes": 57,
+          "sha256": "917a5ce07726c28c6b63ee21f69277c3a9e0a51f943ae95d665979399bac0a36",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/reports/PORTABLE_EXTRACT_REBUILD.json",
+          "bytes": 473,
+          "sha256": "587902487050c9967a60bd77fca82efeab00405f6e3902c9beb8323115df6042",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/reports/REPOSITORY_INTEGRATION.json",
+          "bytes": 760,
+          "sha256": "29d4291a6acf0560ec7e6f1d4085efd9a8c119dfa2ba076bd0a8ab6add8d6dfe",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/reports/REPOSITORY_PUBLICATION_TEXT_SCREEN.json",
+          "bytes": 153,
+          "sha256": "6966364fbd0587265415bb3618e7260f3c6a55839987d532bac475a77d6f8cae",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/reports/REPRODUCIBILITY.json",
+          "bytes": 341,
+          "sha256": "f9b4eac257c402b9a7d84ff67700d08e5967ec7212a95d773fa4857b840595d9",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/reports/SOURCE_COVERAGE.csv",
+          "bytes": 120169,
+          "sha256": "50062649b01e8e5235729543d86bf74fbd1b96482d98f3a88a3b86b6e4b74885",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/reports/TEST_EXECUTION.json",
+          "bytes": 526,
+          "sha256": "4180ba6e40367543c31dc172174a6a6959e24e027e29f7a047e420a8f34a5904",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/requirements.txt",
+          "bytes": 173,
+          "sha256": "27283b0c9354c36f540af947c488689e6751f8b7d74c3ab52674f0029d2769ec",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/schema/current_geopackage_schema.sql",
+          "bytes": 53306,
+          "sha256": "79a4a23475b116c4f43cfc8140070af36b72226ad668e45b3cca575f2ad8bd8a",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/schema/geospatial_schema.sql",
+          "bytes": 5143,
+          "sha256": "164e934fa9d04806afc68f2b0cce45002dd4fde95ee27c82ccdfd87d25555859",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/scripts/apply_addendum.py",
+          "bytes": 9845,
+          "sha256": "9a1c46baec90b82a70dbf1a425bbc58abb8ab52ab933daea457d24cf929352ef",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/scripts/apply_repository_addendum.py",
+          "bytes": 7251,
+          "sha256": "035a664bdacb0c8717b1fcb14691610d0e7efb6393d28e3974dc91e16a878cd9",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/scripts/build_current.py",
+          "bytes": 21196,
+          "sha256": "2309e171bc73d1af8c005197181ea0bc19c29c4e4781341d6717d5f90dc02868",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/scripts/build_search_areas.py",
+          "bytes": 1847,
+          "sha256": "ef41ac61fd27eb0fc8bfb01f6be2076d4c05488c211200da8fcd6bd9450c8992",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/scripts/engineer_alignment.py",
+          "bytes": 8925,
+          "sha256": "7acac625f82acced508746113ad170eda288ffc907afbd8758e31f429dd8c243",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/scripts/render_current.py",
+          "bytes": 20814,
+          "sha256": "7c9bd0af854bf0fc24ec16afbcd60a7d9b6fc5fedc32e92479604a50e4334c53",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/scripts/validate_current.py",
+          "bytes": 6863,
+          "sha256": "b50b22be317fc3c46cabf5f655b4c959d19392753f73066676c98b46c277bbbc",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/tests/test_addendum.py",
+          "bytes": 2443,
+          "sha256": "4874a6f35b44fe935226817b384c0124dea744d2721da62a5551b923b9323409",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/red_wash/README.md",
+          "bytes": 6169,
+          "sha256": "6093f28866d15f8318ef107bcb9f3363d0362b43e9615f78cc3bb574480b244c",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/red_wash/RED_WASH_CASEBOOK.md",
+          "bytes": 26472,
+          "sha256": "ad35d15fe7c0dc1afb85470cb4b87024ccbcd05e72d3b056c97258a055bab6cd",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/red_wash/TRANSACTION_OPERATING_RECORD.md",
+          "bytes": 28455,
+          "sha256": "6b2dda68d5f8aee2739abced8e281c298ae346ac49c008f1fbf30f0dd5185892",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/red_wash/docs/02_GEOLOGICAL_TECHNICAL_REPORT.md",
+          "bytes": 3763,
+          "sha256": "6d0b65f816cea9e2a4dd72b0e1c7fa768677394f97ba185a1ea9db90718528a4",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/red_wash/source/core_operating_data.json",
+          "bytes": 24754,
+          "sha256": "06775645e2d7390c5045255ed762e897d859198e4ae54c412e2bdee4a95840aa",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/MANIFEST.json",
+          "bytes": 51707,
+          "sha256": "8556da4e3e18a46d5246c664d496096d4fec0a26a019b31b9e8176b3a30fd0b6",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "repository/geospatial/CHECKSUMS.sha256",
+          "bytes": 33454,
+          "sha256": "989d5fdbe8ad2c98d9b95e4453ecec8a6e77afbd9fb7286a88aa5109e3d23330",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        },
+        {
+          "path": "SABLE_HARBOR_Geospatial_Addendum_Atlas_v0.2.pdf",
+          "bytes": 4828913,
+          "sha256": "3000727e089c6355ff5e1f2cd169ca031257eb76696075c2d166c957a4d164fb",
+          "accepted_main_exact_paths": [],
+          "disposition": "historical_release_member"
+        }
+      ]
+    }
+  ]
+}
