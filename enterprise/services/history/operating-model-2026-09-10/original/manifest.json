@@ -1,0 +1,39 @@
+{
+  "decision_state": "OWNER_APPROVED_PENDING_ACCEPTANCE",
+  "files": {
+    "REPORT.md": "6c1a9bfc89f5e091831a71ad2cfd5587a287fff8c92b7bbdd77d1ad1284305b8",
+    "capacity.json": "452be8a445f90732543b46f7c194750a97667529c233ff4ceba3894e43c7397d",
+    "comparison.csv": "73c0b9b5d794dd27f6064ad4b833c0060ae6a5a32f8d7b1b06fcf3cd248cf221",
+    "comparison.json": "d70485161bbff4bf39ce942534831f6b02d3de84c5cc037e6c0aad4ec4536bc8",
+    "components.csv": "e7d7002e78dea7268e2235a42e08d588c4cc56255133a51cae25a7a60cc9f994",
+    "components.json": "5961af2d602887e0c781d712a2af53a61440989a033677f808f4d6f536917773",
+    "counterparties.csv": "54f3f69718819b551d6b0f3fe9e714c39b727b9ee8f99608ba0e2787506b3348",
+    "counterparties.json": "14c695b55fb5816452519a0fdf56efc6416c95afc385f439f2bab21c39a66528",
+    "dependencies.csv": "666d1df42b3be27b5896d86f963d7299110acddab122ce055cdd7195cc7800d1",
+    "dependencies.json": "5cfb5a5c2262620b07e53e66956128fc5971ac84bf5d1858ffcd373aa47c2bcb",
+    "financial_bridge.json": "88b4a005d67b919d482f5e48fc05cbc424136905732347460b58ac72dd9d4c36",
+    "monthly_costs.csv": "fa491cf88c744927d26b482d56be954dccf51d0ebb0f9c58e0fd398189d6982b",
+    "monthly_costs.json": "ca1f971076bee2596ed98c0eaba9ab9c28caf042b9a9aeab35c177c5b386c9e3",
+    "saas_costs.csv": "458906a664927b446c74ae2bf808f5c3d1bb3f1916042028b2264d92ca7b775c",
+    "saas_costs.json": "c8505812781966660464ebffbcb0fac16ed411b8bb0698d5099f2c963abf2d85",
+    "sensitivity.csv": "ae362616d2bf9c5826d810c56c7b8c9d2ee14ed45b85d060e807f5c4161c3613",
+    "services.csv": "3b0eab8baf0bb11affaf433f93edae161daf1914e785071530cc39b0c5d9ddfd",
+    "services.json": "aa7e08fa1a7dfea654a684d2b9dd6fe973c7c4d56a58c8626f11c2228703efc4",
+    "staffing.csv": "1ab91be15398a54e96ceb55a7ab49fb9349d2f2f9300597b1468d0bef190373f",
+    "staffing.json": "ef2c79ae9dcf2dd59a4775bac8949ae424fecf10415c3186c8e7b92b6eb79e95",
+    "validation.json": "bf3d5bc3f562117503206d4d8dfc2922241c8371f0fc8d29361fcc0ca908920b",
+    "workloads.csv": "72f40d60eba6ef0d0c3c3c53ee3a3d27a4d995bffb3e94dfb5fa6596efa87203",
+    "workloads.json": "b695528091583dffb7bf63eca7a176d3d9f502bdbd8df6c49e0e5c7e88f8950d"
+  },
+  "generator": "enterprise/services/model.py",
+  "model_state": "ILLUSTRATIVE_NOT_OPERATIONAL",
+  "schema_version": "1.0.0",
+  "source_sha256": {
+    "components.json": "39910e5a46dfe7b26eb5cbefd5bfcf16a06a9c398140fd903ddd660560542896",
+    "counterparties.json": "6f1c51025d72bda164214f0a08ab1ec935e9a81ae636bf3ff0cbd65168e1582d",
+    "economics.json": "5507f3d12aafeff2022bf642259fa75a61ff5b3c657d084e9655d24b0323b438",
+    "provenance.json": "674bb517fa3e550db784db51582e5a71e08d56a5bebb05051e7f16d51995062f",
+    "services.json": "b5536a0aaffce8f34369bcd16cc6f57b6c804eb9f0800d72596acce5c2130938",
+    "workloads.json": "1c5972b3b95acc265af5d9ac104ef89187081be95a35e652c087957c588e83a4"
+  }
+}

@@ -1,5 +1,9 @@
 # Facility atlas controlled releases
 
+## September 11 staged workline — historical recovery only
+
+The [historical source index](../../geospatial/facilities/history/staged-workline-2026-09-11/README.md) preserves the unaccepted 90-sheet/93-page recovery checkpoint separately from the accepted R02 program. The [versioned historical release](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/tag/facility-workline-staged-history-2026-09-11) holds the original 88,672,423-byte outer handover ZIP (`ece5f7183c1bc54f460830bf6ed7d72c9b178ef21dcf51664dc545895a1c90f7`), its byte-identical nested 85,188,887-byte recovery ZIP (`029a2c83240b53e2f54f7cfe43d833a8def935c806ff0f00b6f828e85e288354`) as a separate asset, and the tracked member manifest. The 483 staged overlay paths are verified against the source's own hashes and Git IDs; the older overlay is not merged into current source. Release receipt and fresh-download verification follow acceptance of the historical index.
+
 ## v0.2.0 / R02 — accepted and published
 
 Acceptance vehicle: [PR #121](https://github.com/SquirmyWormy275/SABLEHARBOR/pull/121). Complete R02/runtime visual QA and two byte-identical generator rebuilds pass. PR #121 merged as `7bc9879fb94dbf999066b8072cc66ec8e05fda0a` after final-head CI passed. The release was published on September 11, 2026 at 22:10:17 UTC. The [published acceptance record](https://github.com/SquirmyWormy275/SABLEHARBOR/releases/download/facility-atlas-v0.2.0/FACILITY_ATLAS_R02_CLOSEOUT.json) records download verification; this index correction does not rebuild or replace released bytes.

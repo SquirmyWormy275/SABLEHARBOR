@@ -1,0 +1,1779 @@
+[
+  {
+    "accountable_owner": "TEAM-applications",
+    "components": [
+      "TEAM-identity",
+      "ENV-CORPORATE"
+    ],
+    "controls": [
+      "SH-IAM-001",
+      "SH-DAT-003"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-collaboration"
+    ],
+    "id": "SVC-email",
+    "name": "Email, calendars and collaboration",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "BUY",
+    "work": "Managed employee communication, meetings and shared documents.",
+    "workloads": [
+      "CORPORATE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-identity",
+    "components": [
+      "TEAM-security",
+      "ENV-CORPORATE",
+      "ENV-PROD",
+      "ENV-RESTRICTED"
+    ],
+    "controls": [
+      "SH-IAM-001",
+      "SH-IAM-005",
+      "SH-IAM-006"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-identity"
+    ],
+    "id": "SVC-identity",
+    "name": "Identity and access",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "BUY",
+    "work": "Manage workforce and service identities, access lifecycle and recovery.",
+    "workloads": [
+      "CORPORATE",
+      "PROD",
+      "RESTRICTED"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-identity",
+    "components": [
+      "TEAM-applications",
+      "ENV-CORPORATE",
+      "ENV-SITE"
+    ],
+    "controls": [
+      "SH-CFG-001",
+      "SH-CFG-003",
+      "SH-SEC-005"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-endpoint"
+    ],
+    "id": "SVC-endpoint",
+    "name": "Endpoint management",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "BUY",
+    "work": "Configure, patch, inventory and support employee devices.",
+    "workloads": [
+      "CORPORATE",
+      "SITE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-security",
+    "components": [
+      "TEAM-identity",
+      "ENV-CORPORATE",
+      "ENV-SITE"
+    ],
+    "controls": [
+      "SH-SEC-005",
+      "SH-SEC-006"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-edr"
+    ],
+    "id": "SVC-edr",
+    "name": "Endpoint security",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "BUY",
+    "work": "Detect and contain endpoint threats using purchased tools.",
+    "workloads": [
+      "CORPORATE",
+      "SITE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-reliability",
+    "components": [
+      "TEAM-keys",
+      "TEAM-platform",
+      "ENV-RECOVERY"
+    ],
+    "controls": [
+      "SH-BCM-001",
+      "SH-BCM-002",
+      "SH-BCM-003"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-backup",
+      "DEP-colo-recovery"
+    ],
+    "id": "SVC-backup",
+    "name": "Backup and disaster recovery",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "HYBRID",
+    "work": "Back up, restore and exercise prioritized services under internal recovery authority.",
+    "workloads": [
+      "RECOVERY"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-security",
+    "components": [
+      "TEAM-reliability",
+      "ENV-PROD",
+      "ENV-RESTRICTED"
+    ],
+    "controls": [
+      "SH-SEC-002",
+      "SH-SEC-006"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-security-monitoring"
+    ],
+    "id": "SVC-siem",
+    "name": "Security monitoring",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "HYBRID",
+    "work": "Collect security events, engineer detections and command incident response.",
+    "workloads": [
+      "PROD",
+      "RESTRICTED"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-people",
+    "components": [
+      "TEAM-applications",
+      "TEAM-finance",
+      "ENV-CORPORATE"
+    ],
+    "controls": [
+      "SH-PPL-003",
+      "SH-PAY-001",
+      "SH-PAY-002",
+      "SH-PAY-003"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-hr-payroll"
+    ],
+    "id": "SVC-hr-payroll",
+    "name": "HR and payroll processing",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "BUY",
+    "work": "Maintain employment records and reconcile approved pay and benefit changes.",
+    "workloads": [
+      "CORPORATE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-finance",
+    "components": [
+      "TEAM-procurement",
+      "TEAM-applications",
+      "ENV-CORPORATE"
+    ],
+    "controls": [
+      "SH-PRC-002",
+      "SH-PRC-003",
+      "SH-PRC-005"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-erp",
+      "DEP-travel-expense"
+    ],
+    "id": "SVC-finance-systems",
+    "name": "Accounting, procurement and expense systems",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "BUY",
+    "work": "Run enterprise books, purchase workflows, travel and expense processing.",
+    "workloads": [
+      "CORPORATE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-legal",
+    "components": [
+      "TEAM-applications",
+      "ENV-CORPORATE"
+    ],
+    "controls": [
+      "SH-LEG-001",
+      "SH-LEG-002"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-counsel"
+    ],
+    "id": "SVC-legal",
+    "name": "Legal services",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "HYBRID",
+    "work": "Provide internal legal advice and oversee limited outside legal work.",
+    "workloads": [
+      "CORPORATE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-finance",
+    "components": [
+      "TEAM-legal",
+      "ENV-CORPORATE"
+    ],
+    "controls": [
+      "SH-ASS-003",
+      "SH-ASS-006",
+      "SH-REC-002"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-assurance"
+    ],
+    "id": "SVC-external-assurance",
+    "name": "External audit and SOC examinations",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "EXTERNAL",
+    "work": "Obtain independent examinations; management supplies evidence and remediation.",
+    "workloads": [
+      "CORPORATE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-platform",
+    "components": [
+      "TEAM-network",
+      "TEAM-database",
+      "TEAM-reliability",
+      "TEAM-security",
+      "ENV-PROD"
+    ],
+    "controls": [
+      "SH-OPS-001",
+      "SH-OPS-002",
+      "SH-CFG-001"
+    ],
+    "decision_section": "5.1",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-cloud",
+      "DEP-colo-primary",
+      "DEP-hardware",
+      "DEP-support"
+    ],
+    "id": "SVC-compute",
+    "name": "Production compute, databases and storage",
+    "recipients": [
+      "foundry-field",
+      "atlas-meridian"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "HYBRID",
+    "work": "Operate the product platform and retained infrastructure layers.",
+    "workloads": [
+      "PROD"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-developer",
+    "components": [
+      "TEAM-platform",
+      "TEAM-security",
+      "ENV-DEV"
+    ],
+    "controls": [
+      "SH-ENG-002",
+      "SH-ENG-003",
+      "SH-ENG-004"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-developer",
+      "DEP-support"
+    ],
+    "id": "SVC-developer",
+    "name": "Developer platform and engineering systems",
+    "recipients": [
+      "foundry-field",
+      "atlas-meridian",
+      "willow"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "INTERNAL",
+    "work": "Operate delivery pipelines, supported source control, build runners and artifacts.",
+    "workloads": [
+      "DEV"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-commercial",
+    "components": [
+      "TEAM-applications",
+      "ENV-CORPORATE"
+    ],
+    "controls": [
+      "SH-LEG-003",
+      "SH-DAT-001"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-crm-signature"
+    ],
+    "id": "SVC-crm",
+    "name": "CRM, electronic signatures and marketing systems",
+    "recipients": [
+      "foundry-field",
+      "atlas-meridian",
+      "advisory"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "BUY",
+    "work": "Run customer, sales, signature and routine campaign workflows.",
+    "workloads": [
+      "CORPORATE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-finance",
+    "components": [
+      "TEAM-legal",
+      "ENV-CORPORATE"
+    ],
+    "controls": [
+      "SH-TRY-001",
+      "SH-TRY-002",
+      "SH-TRY-003"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-banking"
+    ],
+    "id": "SVC-banking",
+    "name": "Banking and payments",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "EXTERNAL",
+    "work": "Use external accounts and payment rails; internal Treasury approves and reconciles.",
+    "workloads": [
+      "CORPORATE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-finance",
+    "components": [
+      "TEAM-people",
+      "TEAM-legal",
+      "ENV-CORPORATE"
+    ],
+    "controls": [
+      "SH-ERM-003",
+      "SH-LEG-002"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-insurance"
+    ],
+    "id": "SVC-insurance",
+    "name": "Insurance and benefit coverage",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "EXTERNAL",
+    "work": "Purchase risk transfer and employee coverage; retain claims and renewal ownership.",
+    "workloads": [
+      "CORPORATE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-finance",
+    "components": [
+      "TEAM-legal",
+      "ENV-CORPORATE"
+    ],
+    "controls": [
+      "SH-TAX-001",
+      "SH-TAX-002"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-tax"
+    ],
+    "id": "SVC-tax",
+    "name": "Tax compliance and advice",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "HYBRID",
+    "work": "Prepare and govern tax positions using narrowly needed external expertise.",
+    "workloads": [
+      "CORPORATE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-people",
+    "components": [
+      "TEAM-education",
+      "ENV-CORPORATE"
+    ],
+    "controls": [
+      "SH-PPL-001",
+      "SH-PPL-005"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-search"
+    ],
+    "id": "SVC-recruiting",
+    "name": "Recruiting and talent acquisition",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "INTERNAL",
+    "work": "Run the existing internal talent process, with exceptional search support.",
+    "workloads": [
+      "CORPORATE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-people",
+    "components": [
+      "TEAM-security",
+      "ENV-CORPORATE"
+    ],
+    "controls": [
+      "SH-PPL-002"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-screening"
+    ],
+    "id": "SVC-screening",
+    "name": "Employment screening",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "BUY",
+    "work": "Obtain role-appropriate screening; keep adjudication and hiring internal.",
+    "workloads": [
+      "CORPORATE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-education",
+    "components": [
+      "TEAM-applications",
+      "TEAM-facilities",
+      "ENV-CORPORATE",
+      "ENV-RESTRICTED"
+    ],
+    "controls": [
+      "SH-TRN-001",
+      "SH-TRN-002",
+      "SH-TRN-003"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-content",
+      "DEP-facilities-trades"
+    ],
+    "id": "SVC-education",
+    "name": "J2 and enterprise education",
+    "recipients": [
+      "enterprise",
+      "j2"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "INTERNAL",
+    "work": "Design and deliver education, cases, exercises and professional formation.",
+    "workloads": [
+      "CORPORATE",
+      "RESTRICTED"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-physical",
+    "components": [
+      "TEAM-facilities",
+      "ENV-SITE",
+      "ENV-CORPORATE"
+    ],
+    "controls": [
+      "SH-CFG-001",
+      "SH-ERM-003"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-hardware",
+      "DEP-facilities-trades"
+    ],
+    "id": "SVC-physical-security",
+    "name": "Physical security",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "INTERNAL",
+    "work": "Operate Sable Harbor physical security and site access under internal command.",
+    "workloads": [
+      "SITE",
+      "CORPORATE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-facilities",
+    "components": [
+      "TEAM-procurement",
+      "ENV-CORPORATE",
+      "ENV-SITE"
+    ],
+    "controls": [
+      "SH-CFG-001",
+      "SH-PRC-003"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-facilities-trades"
+    ],
+    "id": "SVC-facilities",
+    "name": "Workplace and facilities operations",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "INTERNAL",
+    "work": "Own site maintenance, work orders and contractor supervision.",
+    "workloads": [
+      "CORPORATE",
+      "SITE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-safety",
+    "components": [
+      "TEAM-redwash",
+      "TEAM-aru",
+      "TEAM-willow",
+      "TEAM-cradle",
+      "ENV-SITE"
+    ],
+    "controls": [
+      "SH-PSN-003",
+      "SH-TRN-003"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-medical-waste",
+      "DEP-assays"
+    ],
+    "id": "SVC-ehs",
+    "name": "Safety, environment and occupational health",
+    "recipients": [
+      "willow",
+      "project-cradle",
+      "pale-sun",
+      "american-resource-utility"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "HYBRID",
+    "work": "Operate site safety and environmental programs with specialist testing and medical support.",
+    "workloads": [
+      "SITE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-security",
+    "components": [
+      "TEAM-reliability",
+      "TEAM-legal",
+      "ENV-PROD",
+      "ENV-RESTRICTED",
+      "ENV-RECOVERY"
+    ],
+    "controls": [
+      "SH-SEC-006",
+      "SH-INC-001",
+      "SH-INC-002"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-incident-retainer"
+    ],
+    "id": "SVC-incident",
+    "name": "Cybersecurity incident response",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "HYBRID",
+    "work": "Command and perform response internally; use specialist surge and forensics retainers.",
+    "workloads": [
+      "PROD",
+      "RESTRICTED",
+      "RECOVERY"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-security",
+    "components": [
+      "TEAM-developer",
+      "ENV-DEV",
+      "ENV-PROD"
+    ],
+    "controls": [
+      "SH-SEC-003",
+      "SH-ENG-003"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-security-assessment"
+    ],
+    "id": "SVC-security-testing",
+    "name": "Security testing, red teaming and independent assessment",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "HYBRID",
+    "work": "Run internal testing and commission independent work where required.",
+    "workloads": [
+      "DEV",
+      "PROD"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-security",
+    "components": [
+      "TEAM-identity",
+      "TEAM-platform",
+      "ENV-PROD",
+      "ENV-RESTRICTED",
+      "ENV-DEV",
+      "ENV-SITE"
+    ],
+    "controls": [
+      "SH-SEC-003",
+      "SH-SEC-004"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-security-tools"
+    ],
+    "id": "SVC-vulnerability",
+    "name": "Vulnerability management",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "INTERNAL",
+    "work": "Identify, prioritize, remediate and track technology weaknesses.",
+    "workloads": [
+      "PROD",
+      "RESTRICTED",
+      "DEV",
+      "SITE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-keys",
+    "components": [
+      "TEAM-security",
+      "TEAM-reliability",
+      "ENV-PROD",
+      "ENV-RESTRICTED",
+      "ENV-RECOVERY"
+    ],
+    "controls": [
+      "SH-IAM-005",
+      "SH-IAM-006",
+      "SH-CFG-004"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-hardware",
+      "DEP-support"
+    ],
+    "id": "SVC-keys",
+    "name": "Secrets and cryptographic key management",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "INTERNAL",
+    "work": "Operate mature key-management components, controlled custody and recovery.",
+    "workloads": [
+      "PROD",
+      "RESTRICTED",
+      "RECOVERY"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-platform",
+    "components": [
+      "TEAM-reliability",
+      "TEAM-security",
+      "ENV-PROD",
+      "ENV-RESTRICTED",
+      "ENV-DEV"
+    ],
+    "controls": [
+      "SH-CFG-002",
+      "SH-OPS-001"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-support"
+    ],
+    "id": "SVC-orchestration",
+    "name": "Container orchestration and platform operations",
+    "recipients": [
+      "foundry-field",
+      "atlas-meridian",
+      "j2"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "INTERNAL",
+    "work": "Operate mature orchestration and runtime components; do not build a new orchestrator.",
+    "workloads": [
+      "PROD",
+      "RESTRICTED",
+      "DEV"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-platform",
+    "components": [
+      "TEAM-developer",
+      "ENV-PROD",
+      "ENV-DEV",
+      "ENV-RESTRICTED",
+      "ENV-RECOVERY"
+    ],
+    "controls": [
+      "SH-CFG-002",
+      "SH-ENG-002"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-support"
+    ],
+    "id": "SVC-automation",
+    "name": "Infrastructure automation and configuration",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "INTERNAL",
+    "work": "Maintain controlled infrastructure code, desired state and drift detection.",
+    "workloads": [
+      "PROD",
+      "DEV",
+      "RESTRICTED",
+      "RECOVERY"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-reliability",
+    "components": [
+      "TEAM-platform",
+      "ENV-PROD",
+      "ENV-RESTRICTED",
+      "ENV-DEV"
+    ],
+    "controls": [
+      "SH-OPS-001",
+      "SH-OPS-002",
+      "SH-SEC-002"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-support"
+    ],
+    "id": "SVC-observability",
+    "name": "Operational observability",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "INTERNAL",
+    "work": "Operate metrics, logs, traces and alerts under Sable Harbor data control.",
+    "workloads": [
+      "PROD",
+      "RESTRICTED",
+      "DEV"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-platform",
+    "components": [
+      "TEAM-procurement",
+      "ENV-PROD",
+      "ENV-RESTRICTED",
+      "ENV-DEV"
+    ],
+    "controls": [
+      "SH-TPR-003",
+      "SH-CFG-003"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-support"
+    ],
+    "id": "SVC-oss-support",
+    "name": "Open-source support",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "HYBRID",
+    "work": "Purchase support for selected critical components while retaining operation.",
+    "workloads": [
+      "PROD",
+      "RESTRICTED",
+      "DEV"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-platform",
+    "components": [
+      "TEAM-foundry",
+      "TEAM-atlas",
+      "TEAM-cradle",
+      "TEAM-redwash",
+      "TEAM-aru",
+      "ENV-SITE",
+      "ENV-DEV"
+    ],
+    "controls": [
+      "SH-TRN-003",
+      "SH-TRN-004"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-specialist-engineering"
+    ],
+    "id": "SVC-engineering",
+    "name": "Shared technology architecture and specialist coordination",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "INTERNAL",
+    "work": "Retain shared technology architecture internally; business engineering stays with its existing product/site owner. Outside specialists are narrowly scoped.",
+    "workloads": [
+      "SITE",
+      "DEV"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-legal",
+    "components": [
+      "TEAM-willow",
+      "TEAM-foundry",
+      "TEAM-atlas",
+      "ENV-CORPORATE"
+    ],
+    "controls": [
+      "SH-LEG-001",
+      "SH-LEG-002"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-counsel"
+    ],
+    "id": "SVC-ip",
+    "name": "IP strategy and patent/trademark services",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "HYBRID",
+    "work": "Own IP strategy and records; use specialist counsel for prosecution.",
+    "workloads": [
+      "CORPORATE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-legal",
+    "components": [
+      "TEAM-risk",
+      "ENV-CORPORATE"
+    ],
+    "controls": [
+      "SH-LEG-001"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-counsel"
+    ],
+    "id": "SVC-regulatory-counsel",
+    "name": "Regulatory and government relations counsel",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "HYBRID",
+    "work": "Keep strategy and relationships internal with limited specialist representation.",
+    "workloads": [
+      "CORPORATE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-legal",
+    "components": [
+      "TEAM-finance",
+      "ENV-CORPORATE"
+    ],
+    "controls": [
+      "SH-LEG-004"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-counsel"
+    ],
+    "id": "SVC-litigation",
+    "name": "Litigation and disputes",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "HYBRID",
+    "work": "Control case strategy internally and engage external litigation counsel.",
+    "workloads": [
+      "CORPORATE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-risk",
+    "components": [
+      "TEAM-safety",
+      "TEAM-finance",
+      "ENV-CORPORATE",
+      "ENV-SITE"
+    ],
+    "controls": [
+      "SH-DAT-004",
+      "SH-REC-001"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-specialist-engineering"
+    ],
+    "id": "SVC-sustainability",
+    "name": "Sustainability reporting",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "HYBRID",
+    "work": "Own reporting and underlying evidence with selective specialist input.",
+    "workloads": [
+      "CORPORATE",
+      "SITE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-finance",
+    "components": [
+      "TEAM-legal",
+      "TEAM-risk",
+      "ENV-CORPORATE"
+    ],
+    "controls": [
+      "SH-MNA-001",
+      "SH-MNA-002"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-transaction-support"
+    ],
+    "id": "SVC-mna",
+    "name": "M&A due diligence",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "HYBRID",
+    "work": "Lead diligence and investment judgment; obtain narrow specialist support.",
+    "workloads": [
+      "CORPORATE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-finance",
+    "components": [
+      "TEAM-risk",
+      "ENV-CORPORATE"
+    ],
+    "controls": [
+      "SH-TRY-005",
+      "SH-TRY-006"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-transaction-support"
+    ],
+    "id": "SVC-valuation",
+    "name": "Valuation and transaction advisory",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "HYBRID",
+    "work": "Maintain internal valuation capability; use independent valuations as needed.",
+    "workloads": [
+      "CORPORATE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-finance",
+    "components": [
+      "TEAM-risk",
+      "ENV-RESTRICTED"
+    ],
+    "controls": [
+      "SH-ERM-001",
+      "SH-DAT-004"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-data"
+    ],
+    "id": "SVC-actuarial",
+    "name": "Actuarial and specialized financial risk",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "INTERNAL",
+    "work": "Perform financial-risk modeling and judgment internally.",
+    "workloads": [
+      "RESTRICTED"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-finance",
+    "components": [
+      "TEAM-risk",
+      "ENV-RESTRICTED"
+    ],
+    "controls": [
+      "SH-ERM-001",
+      "SH-TRY-004"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-data"
+    ],
+    "id": "SVC-counterparty-risk",
+    "name": "Credit and counterparty risk",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "INTERNAL",
+    "work": "Build internal models and make decisions; use external ratings as inputs.",
+    "workloads": [
+      "RESTRICTED"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-risk",
+    "components": [
+      "TEAM-applications",
+      "ENV-RESTRICTED"
+    ],
+    "controls": [
+      "SH-ERM-001",
+      "SH-ERM-003"
+    ],
+    "decision_section": "3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-support"
+    ],
+    "id": "SVC-risk",
+    "name": "Enterprise risk systems",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "INTERNAL",
+    "work": "Operate internal risk models, records and management challenge.",
+    "workloads": [
+      "RESTRICTED"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-data",
+    "components": [
+      "TEAM-ai",
+      "TEAM-database",
+      "TEAM-finance",
+      "ENV-RESTRICTED",
+      "TEAM-j2"
+    ],
+    "controls": [
+      "SH-DAT-001",
+      "SH-DAT-004",
+      "SH-DAT-005"
+    ],
+    "decision_section": "4",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-data",
+      "DEP-content"
+    ],
+    "id": "SVC-analytics",
+    "name": "Analytics and source information",
+    "recipients": [
+      "enterprise",
+      "j2"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "INTERNAL",
+    "work": "Operate analytical platforms and data engineering internally; Finance, businesses and J2 retain their respective analysis, source and disclosure authority.",
+    "workloads": [
+      "RESTRICTED"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-network",
+    "components": [
+      "TEAM-keys",
+      "TEAM-procurement",
+      "ENV-PROD",
+      "ENV-RECOVERY",
+      "ENV-RESTRICTED",
+      "ENV-SITE",
+      "ENV-CORPORATE"
+    ],
+    "controls": [
+      "SH-CFG-004",
+      "SH-TPR-004",
+      "SH-OPS-001"
+    ],
+    "decision_section": "6",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-carrier",
+      "DEP-dns-certificates"
+    ],
+    "id": "SVC-connectivity",
+    "name": "Connectivity, DNS, domains and certificates",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "EXTERNAL",
+    "work": "Buy external network and public trust services; retain internal architecture and administration.",
+    "workloads": [
+      "PROD",
+      "RECOVERY",
+      "RESTRICTED",
+      "SITE",
+      "CORPORATE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-foundry",
+    "components": [
+      "TEAM-platform",
+      "TEAM-developer",
+      "TEAM-commercial",
+      "ENV-PROD",
+      "ENV-DEV",
+      "ENV-SITE"
+    ],
+    "controls": [
+      "SH-PRD-001",
+      "SH-ENG-004"
+    ],
+    "decision_section": "2",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-specialist-engineering"
+    ],
+    "id": "SVC-foundry-product",
+    "name": "Foundry Field delivery",
+    "recipients": [
+      "foundry-field"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "INTERNAL",
+    "work": "Develop, deploy and support Foundry Field products and integrations.",
+    "workloads": [
+      "PROD",
+      "DEV",
+      "SITE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-atlas",
+    "components": [
+      "TEAM-platform",
+      "TEAM-developer",
+      "ENV-PROD",
+      "ENV-DEV"
+    ],
+    "controls": [
+      "SH-PRD-001",
+      "SH-DAT-005"
+    ],
+    "decision_section": "2",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-models"
+    ],
+    "id": "SVC-atlas-product",
+    "name": "Atlas Meridian delivery",
+    "recipients": [
+      "atlas-meridian",
+      "advisory"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "INTERNAL",
+    "work": "Develop and operate product and client workspaces with dedicated staffing.",
+    "workloads": [
+      "PROD",
+      "DEV"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-advisory",
+    "components": [
+      "TEAM-atlas",
+      "TEAM-commercial",
+      "ENV-PROD",
+      "ENV-CORPORATE"
+    ],
+    "controls": [
+      "SH-ADV-001",
+      "SH-ADV-002",
+      "SH-ADV-003"
+    ],
+    "decision_section": "2",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-specialist-engineering"
+    ],
+    "id": "SVC-advisory-delivery",
+    "name": "Advisory professional delivery",
+    "recipients": [
+      "advisory"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "INTERNAL",
+    "work": "Lead matters, professional review and outcome measurement.",
+    "workloads": [
+      "PROD",
+      "CORPORATE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-j2",
+    "components": [
+      "TEAM-ai",
+      "TEAM-database",
+      "TEAM-platform",
+      "ENV-RESTRICTED"
+    ],
+    "controls": [
+      "SH-DAT-001",
+      "SH-DAT-005",
+      "SH-REC-001"
+    ],
+    "decision_section": "5.3",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-data",
+      "DEP-content"
+    ],
+    "id": "SVC-institutional",
+    "name": "J2 / Alexandria institutional services",
+    "recipients": [
+      "j2"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "INTERNAL",
+    "work": "Perform collection, analysis, records and controlled institutional disclosure.",
+    "workloads": [
+      "RESTRICTED"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-willow",
+    "components": [
+      "TEAM-ot",
+      "TEAM-safety",
+      "ENV-SITE",
+      "ENV-DEV"
+    ],
+    "controls": [
+      "SH-TRN-004",
+      "SH-AST-001"
+    ],
+    "decision_section": "6",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-fabrication"
+    ],
+    "id": "SVC-willow-lab",
+    "name": "Willow research and qualification",
+    "recipients": [
+      "willow"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "INTERNAL",
+    "work": "Run experiments and prototypes; obtain specialist fabrication and calibration.",
+    "workloads": [
+      "SITE",
+      "DEV"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-cradle",
+    "components": [
+      "TEAM-ot",
+      "TEAM-safety",
+      "TEAM-finance",
+      "ENV-SITE"
+    ],
+    "controls": [
+      "SH-CRD-001",
+      "SH-CRD-002",
+      "SH-CRD-004"
+    ],
+    "decision_section": "6",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-kgm-host",
+      "DEP-demotte-host",
+      "DEP-refining",
+      "DEP-assays"
+    ],
+    "id": "SVC-cradle-recovery",
+    "name": "Cradle recovery operations",
+    "recipients": [
+      "project-cradle"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "INTERNAL",
+    "work": "Operate Sable Harbor equipment and Bedford upgrading within external host boundaries.",
+    "workloads": [
+      "SITE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-redwash",
+    "components": [
+      "TEAM-ot",
+      "TEAM-safety",
+      "TEAM-finance",
+      "ENV-SITE"
+    ],
+    "controls": [
+      "SH-PSN-001",
+      "SH-PSN-002",
+      "SH-PSN-003"
+    ],
+    "decision_section": "6",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-uranium-carrier",
+      "DEP-conversion",
+      "DEP-assays"
+    ],
+    "id": "SVC-mine",
+    "name": "Pale Sun / Red Wash operation",
+    "recipients": [
+      "pale-sun"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "INTERNAL",
+    "work": "Operate mine and mill, environmental systems and shipment release.",
+    "workloads": [
+      "SITE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-aru",
+    "components": [
+      "TEAM-ot",
+      "TEAM-safety",
+      "TEAM-finance",
+      "ENV-SITE"
+    ],
+    "controls": [
+      "SH-ARU-001",
+      "SH-ARU-002",
+      "SH-ARU-003"
+    ],
+    "decision_section": "6",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-class-i",
+      "DEP-off-network",
+      "DEP-major-repairs",
+      "DEP-revenue-cars"
+    ],
+    "id": "SVC-logistics",
+    "name": "ARU / BS&T operations",
+    "recipients": [
+      "american-resource-utility"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "INTERNAL",
+    "work": "Operate qualified rail, terminal, trucking, warehousing and routine maintenance.",
+    "workloads": [
+      "SITE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-commercial",
+    "components": [
+      "TEAM-applications",
+      "ENV-CORPORATE",
+      "ENV-PROD"
+    ],
+    "controls": [
+      "SH-PRD-001",
+      "SH-OPS-001"
+    ],
+    "decision_section": "supplement",
+    "decision_source": "supplement",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-ticketing"
+    ],
+    "id": "SVC-support",
+    "name": "Customer support systems",
+    "recipients": [
+      "foundry-field",
+      "atlas-meridian",
+      "advisory"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "BUY",
+    "work": "Use purchased ticketing and communication tools; retain customer support ownership.",
+    "workloads": [
+      "CORPORATE",
+      "PROD"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-legal",
+    "components": [
+      "TEAM-risk",
+      "TEAM-applications",
+      "ENV-CORPORATE"
+    ],
+    "controls": [
+      "SH-DAT-002",
+      "SH-DAT-003"
+    ],
+    "decision_section": "supplement",
+    "decision_source": "supplement",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-privacy-records"
+    ],
+    "id": "SVC-privacy",
+    "name": "Privacy operations",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "BUY",
+    "work": "Use supported tooling; retain purpose, authority and compliance accountability.",
+    "workloads": [
+      "CORPORATE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-legal",
+    "components": [
+      "TEAM-applications",
+      "TEAM-j2",
+      "ENV-CORPORATE",
+      "ENV-RESTRICTED"
+    ],
+    "controls": [
+      "SH-LEG-004",
+      "SH-REC-004"
+    ],
+    "decision_section": "supplement",
+    "decision_source": "supplement",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-privacy-records"
+    ],
+    "id": "SVC-records",
+    "name": "Records, retention and e-discovery",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "BUY",
+    "work": "Use supported tools for controlled records and legal holds without outsourcing policy.",
+    "workloads": [
+      "CORPORATE",
+      "RESTRICTED"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-legal",
+    "components": [
+      "TEAM-applications",
+      "ENV-CORPORATE"
+    ],
+    "controls": [
+      "SH-GOV-001",
+      "SH-GOV-005"
+    ],
+    "decision_section": "supplement",
+    "decision_source": "supplement",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-entity-tools"
+    ],
+    "id": "SVC-corporate-secretary",
+    "name": "Entity management and corporate secretarial tooling",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "BUY",
+    "work": "Buy routine tooling; retain internal legal authority and corporate records.",
+    "workloads": [
+      "CORPORATE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-education",
+    "components": [
+      "TEAM-security",
+      "ENV-CORPORATE"
+    ],
+    "controls": [
+      "SH-TRN-001",
+      "SH-TRN-002"
+    ],
+    "decision_section": "supplement",
+    "decision_source": "supplement",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-content",
+      "DEP-security-tools"
+    ],
+    "id": "SVC-awareness",
+    "name": "Security awareness and simulation",
+    "recipients": [
+      "enterprise"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "INTERNAL",
+    "work": "J2 Education delivers instruction with Security-approved technical content.",
+    "workloads": [
+      "CORPORATE"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-data",
+    "components": [
+      "TEAM-ai",
+      "ENV-RESTRICTED"
+    ],
+    "controls": [
+      "SH-DAT-002",
+      "SH-DAT-005"
+    ],
+    "decision_section": "supplement",
+    "decision_source": "supplement",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-support"
+    ],
+    "id": "SVC-labeling",
+    "name": "Data labeling and annotation",
+    "recipients": [
+      "enterprise",
+      "j2"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "INTERNAL",
+    "work": "Keep annotation work and sensitive source material internal.",
+    "workloads": [
+      "RESTRICTED"
+    ]
+  },
+  {
+    "accountable_owner": "TEAM-ai",
+    "components": [
+      "TEAM-platform",
+      "TEAM-security",
+      "ENV-RESTRICTED",
+      "ENV-DEV"
+    ],
+    "controls": [
+      "SH-DAT-005",
+      "SH-IAM-006"
+    ],
+    "decision_section": "2",
+    "decision_source": "decision",
+    "delivery_state": "NOT_VERIFIED",
+    "dependencies": [
+      "DEP-models",
+      "DEP-hardware",
+      "DEP-support"
+    ],
+    "id": "SVC-private-ai",
+    "name": "Private AI inference and evaluation",
+    "recipients": [
+      "enterprise",
+      "j2"
+    ],
+    "requirement_state": "PROPOSED_NOT_SLA",
+    "sourcing": "INTERNAL",
+    "work": "Operate selected models internally; buy approved external capability without disclosing restricted data by default.",
+    "workloads": [
+      "RESTRICTED",
+      "DEV"
+    ]
+  }
+]

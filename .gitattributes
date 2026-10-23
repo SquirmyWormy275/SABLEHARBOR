@@ -1,8 +1,13 @@
 # Preserved evidence is hashed byte for byte, including original Markdown hard
 # line breaks. Suppress only end-of-line whitespace checks for these archives.
+docs/handoffs/industrial_r1/** -text whitespace=-blank-at-eol
 docs/handoffs/industrial_r2/** -text whitespace=-blank-at-eol
+enterprise/audit_suite/history/canonical-encoder-experiment-2026-10-02/original/** -text whitespace=-blank-at-eol
+enterprise/services/history/operating-model-2026-09-10/original/** -text whitespace=-blank-at-eol
 docs/organization/history/v0.3.0/** -text whitespace=-blank-at-eol
+docs/organization/history/2026-09-09-draft/original/** -text whitespace=-blank-at-eol
 red_wash/history/v1.0.0/** -text whitespace=-blank-at-eol
+docs/facilities/history/office-estate-review-2026-09-11/original/** -text whitespace=-blank-at-eol
 
 # PDF publications are binary even with ASCII-encoded streams.
 *.pdf binary
