@@ -205,6 +205,10 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 - [Parent tax history and filing boundaries](../../finance/evidence/company-closeout/TAX_HISTORY.md) — MD
 - [Treasury timing, debt/security and investor reading route](../../finance/evidence/company-closeout/TREASURY_AND_INVESTOR_ROUTE.md) — MD
 
+## `docs/finance/evidence/company-closeout/history/local-worktree-2026-09-14-22`
+
+- [September 14–22 local finance closeout source history](../../finance/evidence/company-closeout/history/local-worktree-2026-09-14-22/README.md) — MD
+
 ## `docs/finance/evidence/coverage`
 
 - [Finance evidence: scope and source access](../../finance/evidence/coverage/README.md) — MD

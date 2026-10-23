@@ -308,6 +308,7 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 - [Facility atlas controlled releases](../../releases/FACILITY_ATLAS_RELEASES.md) — MD
 - [Facility spatial releases](../../releases/FACILITY_SPATIAL_RELEASES.md) — MD
 - [Facility planning workbench releases](../../releases/FACILITY_WORKBENCH_RELEASES.md) — MD
+- [Finance closeout local history releases](../../releases/FINANCE_CLOSEOUT_HISTORY_RELEASES.md) — MD
 - [Geographic evidence 1.5.0 — accepted delivery receipt](../../releases/GEOGRAPHIC_EVIDENCE_1_5_0_RECEIPT.md) — MD
 - [Geographic evidence releases](../../releases/GEOGRAPHIC_EVIDENCE_RELEASES.md) — MD
 - [Industrial case releases](../../releases/INDUSTRIAL_CASE_RELEASES.md) — MD
