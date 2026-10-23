@@ -20,7 +20,7 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
   "PyMuPDF==1.26.7",
-  "pypdf==6.21.1",
+  "pypdf==6.21.2",
   "markdown-it-py==4.2.0",
   "mypy>=1.11,<2",
   "openpyxl>=3.1,<4",
