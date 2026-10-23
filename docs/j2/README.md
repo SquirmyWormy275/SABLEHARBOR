@@ -43,5 +43,6 @@ The [September 10 leadership record](../canon/J2_LEADERSHIP_APPOINTMENTS_2026-09
 For the broader design, see [corporate history](../canon/SABLE_HARBOR_CORPORATE_LORE_CANON_v0.3.1.md), [governance](../governance/), the [source coverage review](../internal/COVERAGE_AUDIT_PHASE2.md), the [Pinakes register](structured/pinakes_portals.json) and [Daedalus policy](structured/daedalus_policy.json). Original J2 artwork remains in the [brand library](../../assets/brand/).
 
 The [September 3 local-branch history](../history/governance-j2-local-2026-09-03/README.md) retains earlier J2, governance, and Alexandria source versions and generated publications. Those unaccepted branch bytes do not revise the current leadership or doctrine above.
+The [September 2 identity predecessor](../history/governance-j2-local-2026-09-02/README.md) keeps earlier artwork and stationery versions separate from the approved current PNGs.
 
 </details>
