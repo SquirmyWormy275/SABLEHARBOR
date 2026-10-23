@@ -1,6 +1,6 @@
 # Historical financial build readiness analysis
 
-The [original 19-page PDF](Sable%20Harbor%20Financial%20Build%20Readiness%20Report.pdf)
+The [original 19-page PDF](Sable_Harbor_Financial_Build_Readiness_Report.pdf)
 is preserved at exact bytes. Its text reviews September 2–3, 2026 company
 sources while PR #9 was still unaccepted; PR #9 subsequently merged on
 September 5. The PDF itself has no declared authoring date. It was observed
