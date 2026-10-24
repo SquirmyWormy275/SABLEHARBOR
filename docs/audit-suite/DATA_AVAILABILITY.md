@@ -54,6 +54,13 @@ matched. The three November submissions also passed their original verifier.
 Those checks establish the availability of the published records. They do not
 claim to reverify every older recovery archive while the drive is disconnected.
 
+The [24 October Seagate disposition record](SEAGATE_RECOVERY_DISPOSITION_2026-10-24.md)
+now accounts for all 133 archive families with hashes, accepted source-catalog
+references and private retrieval evidence. It supersedes the disconnected-drive
+verification limitation above for those individually recorded archive dispositions.
+Laptop source reconciliation remains open; the company library and the three
+November submission stages retain their separate identities and authority.
+
 The raw historical recovery archives and live auditor databases are not this
 public company-data interface. Reading the company records above does not require
 restoring them or recreating the original workstation.

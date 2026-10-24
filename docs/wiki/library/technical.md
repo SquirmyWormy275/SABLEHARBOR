@@ -37,6 +37,7 @@ Browse the documents below, grouped by folder. Earlier editions remain available
 - [Local CLEAN/MESSY recovery, 20 October 2026](../../audit-suite/LOCAL_RECOVERY_2026-10-20.md) — MD
 - [Local audit workspace](../../audit-suite/LOCAL_WORKSPACE.md) — MD
 - [Separate modeled source edition](../../audit-suite/OPERATING_SOURCE_EDITION_DRIVER.md) — MD
+- [Seagate recovery disposition, 24 October 2026](../../audit-suite/SEAGATE_RECOVERY_DISPOSITION_2026-10-24.md) — MD
 
 ## `docs/audit-suite/company-records`
 

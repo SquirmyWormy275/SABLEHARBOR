@@ -6,7 +6,7 @@ This list helps maintainers check which source documents have formatted companio
 
 | State | Records |
 |---|---:|
-| COUNTERPART_REVIEW_REQUIRED | 469 |
+| COUNTERPART_REVIEW_REQUIRED | 470 |
 | HISTORICAL_COUNTERPART_UNRESOLVED | 57 |
 | NAVIGATION_ALIAS_NO_PUBLICATION | 3 |
 | READER_MAINTENANCE_NO_LETTERHEAD | 101 |
@@ -30,6 +30,7 @@ Finance records route to [SH-FIN-HUMAN-001](../../handoffs/FINANCE_HUMAN_EVIDENC
 - [Local CLEAN/MESSY recovery, 20 October 2026](../../audit-suite/LOCAL_RECOVERY_2026-10-20.md) — Corporate document-format reconciliation
 - [Local audit workspace](../../audit-suite/LOCAL_WORKSPACE.md) — Corporate document-format reconciliation
 - [Separate modeled source edition](../../audit-suite/OPERATING_SOURCE_EDITION_DRIVER.md) — Corporate document-format reconciliation
+- [Seagate recovery disposition, 24 October 2026](../../audit-suite/SEAGATE_RECOVERY_DISPOSITION_2026-10-24.md) — Corporate document-format reconciliation
 - [November company-source delivery](../../audit-suite/demo-2026-11/COMPLETION.md) — Corporate document-format reconciliation
 - [November client-record publication decision](../../audit-suite/demo-2026-11/PUBLICATION_2026-10-18.md) — Corporate document-format reconciliation
 - [Sable Harbor — records for the November demonstration](../../audit-suite/demo-2026-11/SCOPE.md) — Corporate document-format reconciliation
