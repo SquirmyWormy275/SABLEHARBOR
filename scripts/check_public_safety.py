@@ -96,10 +96,15 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # Markdown reader rows (1,723 -> 1,726). The seven non-reader tables
     # remain exact-equal; SQLite integrity and foreign keys pass. Neither
     # preview changes the accepted v1.5.0 release or current site decisions.
+    # October 24 Seagate disposition index: against accepted 250344a4,
+    # reader inventory grows 1,739 -> 1,740 for one recovery guide and refreshes
+    # DATA_AVAILABILITY. All seven institutional/publication/evidence tables
+    # remain exact-equal; SQLite quick_check and foreign keys pass. The index
+    # records delivery metadata and grants no company or cleanup authority.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        16517120,
-        "b654e4234f8bbe9ee5f2e72a47c28909c9d55ea29cd1c4a947751cae92d063ee",
+        16527360,
+        "05039ab9db4d0bdc46cb17c4f54dbfbfe4a784548042c626e93f9e9f7bd1d8f2",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.
