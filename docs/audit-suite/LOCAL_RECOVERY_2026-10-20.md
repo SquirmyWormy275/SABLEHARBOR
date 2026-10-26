@@ -34,3 +34,7 @@ inspect session and process receipts before changing any pointer or database.
 Do not reset a room, fabricate a normal stop, or substitute the public company
 files for its retained audit history. The public [CLEAN/MESSY intake guide](CLEAN_MESSY_INTAKE.md)
 remains usable independently of this local service.
+
+The [23 October operational successor](LOCAL_RECOVERY_2026-10-23.md) records later
+recovery, collection revisions and private GitHub preservation. It extends this
+dated receipt; it does not replace the interrupted-shutdown history above.

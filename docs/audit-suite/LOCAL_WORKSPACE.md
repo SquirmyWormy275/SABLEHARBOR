@@ -18,7 +18,10 @@ private guide; credentials expire and are kept outside Git.
 authorized review identity. Sign out before switching roles.
 
 The installed pair was [recovered on 20 October 2026](LOCAL_RECOVERY_2026-10-20.md)
-after an interrupted shutdown. Check `sableharbor-workspace status` before use.
+after an interrupted shutdown. The [23 October successor](LOCAL_RECOVERY_2026-10-23.md)
+records the later separate histories at CLEAN 6012 and MESSY 6857, the actual
+stop/restart and download evidence, and the remaining operational limits.
+Check `sableharbor-workspace status` before use.
 If it reports `RECONCILIATION_REQUIRED`, preserve and inspect the current
 session rather than resetting either history. For a repository-based audit
 software test that does not need these live workrooms, use the
@@ -38,13 +41,14 @@ download. The learners have scoped access to their respective company branches.
 Historic instructor snapshots retain the permissions and evidence present when
 they were captured.
 
-The delivered implementation passed the paired browser walkthrough, 114 read-only
+The earlier delivery passed the paired browser walkthrough, 114 read-only
 navigation checks across both roles and desktop/mobile sizes, protected instructor
 Key and offline debrief ZIP checks, and actual company-record collection and
 download in both branches. Full physical comparison preserved 5,714 native versions,
 business checkpoints and prior receipts while admitting exactly two new collection
-receipts. Current delivery revisions are CLEAN 6011 and MESSY 6856; historic Key
-revisions 6008 and 6853 are preserved.
+receipts. That delivery recorded CLEAN 6011 and MESSY 6856; historic Key
+revisions 6008 and 6853 are preserved. The later revision and backup evidence is
+recorded in the dated successor above.
 
 Framework comparisons propose delta controls and procedures. Software validation
 does not establish an audit opinion, certification, whole-estate evidence
