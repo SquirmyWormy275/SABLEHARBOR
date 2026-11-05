@@ -1782,33 +1782,35 @@ def generate_standard(
             source_type="intercompany_service",
             generation_run_id=intercompany_run_id,
         )
-    if cons_period is None:
-        cons_period = FiscalPeriod(
-            id=stable_id("period", f"{cons_book.id}:{ic_period}"),
-            book_id=cons_book.id,
-            code=ic_period,
-            starts_on=date(2026, 12, 1),
-            ends_on=date(2026, 12, 31),
+        # Eliminate only intercompany activity that was actually booked; without
+        # both 2026-12 legs there is nothing to eliminate in the consolidated book.
+        if cons_period is None:
+            cons_period = FiscalPeriod(
+                id=stable_id("period", f"{cons_book.id}:{ic_period}"),
+                book_id=cons_book.id,
+                code=ic_period,
+                starts_on=date(2026, 12, 1),
+                ends_on=date(2026, 12, 31),
+            )
+            session.add(cons_period)
+            session.flush()
+        key = f"{intercompany_marker}:CONS:IC_ELIM"
+        _post(
+            session,
+            cons_book.id,
+            cons_period.id,
+            key,
+            "Eliminate BS&T and Red Wash intercompany freight",
+            [
+                _line(key, 1, "4090", debit=ic, segment="ELIMINATION", counterparty="BST"),
+                _line(key, 2, "6400", credit=ic, segment="ELIMINATION", counterparty="RWH"),
+                _line(key, 3, "2000", debit=ic, segment="ELIMINATION", counterparty="RWH"),
+                _line(key, 4, "1100", credit=ic, segment="ELIMINATION", counterparty="BST"),
+            ],
+            entry_date=cons_period.ends_on,
+            source_type="consolidation_elimination",
+            generation_run_id=intercompany_run_id,
         )
-        session.add(cons_period)
-        session.flush()
-    key = f"{intercompany_marker}:CONS:IC_ELIM"
-    _post(
-        session,
-        cons_book.id,
-        cons_period.id,
-        key,
-        "Eliminate BS&T and Red Wash intercompany freight",
-        [
-            _line(key, 1, "4090", debit=ic, segment="ELIMINATION", counterparty="BST"),
-            _line(key, 2, "6400", credit=ic, segment="ELIMINATION", counterparty="RWH"),
-            _line(key, 3, "2000", debit=ic, segment="ELIMINATION", counterparty="RWH"),
-            _line(key, 4, "1100", credit=ic, segment="ELIMINATION", counterparty="BST"),
-        ],
-        entry_date=cons_period.ends_on,
-        source_type="consolidation_elimination",
-        generation_run_id=intercompany_run_id,
-    )
     session.add(
         ScenarioValue(
             id=marker_id,
