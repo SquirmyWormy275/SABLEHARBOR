@@ -699,6 +699,8 @@ class RetainedWorkroom:
             module_name = "enterprise.audit_suite." + name.removesuffix(".py")
             loaded = sys.modules.get(module_name)
             if loaded is None:
+                require(not path.is_symlink() and path.is_file() and file_sha(path) == expected,
+                        "Prospective metadata Source bytes changed before import")
                 loaded = importlib.import_module(module_name)
             origin = getattr(getattr(loaded, "__spec__", None), "origin", None)
             require(path.is_file() and origin is not None
@@ -746,6 +748,10 @@ class RetainedWorkroom:
                 ):
                     loaded = entry
             if loaded is None:
+                require(
+                    not path.is_symlink() and path.is_file() and file_sha(path) == expected,
+                    "Pinned retained service/runtime code changed before import",
+                )
                 loaded = importlib.import_module(module_name)
             origin = getattr(getattr(loaded, "__spec__", None), "origin", None)
             require(

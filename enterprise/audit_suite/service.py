@@ -527,12 +527,20 @@ def create_app(
 
     @app.post("/api/session")
     async def login(request: Request):
-        limits.check("login", request.client.host if request.client else "local", 30)
         body = await json_body(request)
         credential = body.get("credential")
         if not isinstance(credential, str) or len(credential) > 512:
             raise DomainError("Credential required", status=401)
-        session = await asyncio.to_thread(engine.store.login, credential)
+        # Every client of this loopback-only service is 127.0.0.1, so an address
+        # key let one local process lock every role out. Credentials are 256-bit
+        # random keys: bound repeats per credential fingerprint, and bound only
+        # failed attempts globally so a valid credential is never locked out.
+        limits.check("login", hashlib.sha256(credential.encode()).hexdigest(), 30)
+        try:
+            session = await asyncio.to_thread(engine.store.login, credential)
+        except DomainError:
+            limits.check("login-failed", "*", 600)
+            raise
         response = JSONResponse({"viewer": session["viewer"], "csrf_token": session["csrf"]})
         response.set_cookie(
             session_cookie_name,
@@ -1982,6 +1990,13 @@ def create_app(
             projected = engine._project(principal["id"], saved)
             return await workspace_response(projected, compact)
 
+    def quarantine_gate(principal_id: str, engagement_id: str, manifest: dict) -> None:
+        """Quarantined originals stay retained attachments for review roles only."""
+        if manifest.get("status") != "AVAILABLE" and engine.store.membership(
+            principal_id, engagement_id
+        ) not in {"review", "instruct"}:
+            raise DomainError("Quarantined original is retained for review", status=403)
+
     @app.get("/api/engagements/{engagement_id}/artifacts/{artifact_id}/download")
     async def download(engagement_id: str, artifact_id: str, request: Request):
         if company_rights is not None:
@@ -1993,6 +2008,7 @@ def create_app(
                 principal_id = session["principal_id"]
                 state = engine.get(principal_id, engagement_id)
                 manifest = find(state, "artifacts", artifact_id)
+                quarantine_gate(principal_id, engagement_id, manifest)
                 data = engine.artifacts.read(manifest)
                 filename = manifest["name"]
                 source = manifest.get("source")
@@ -2054,8 +2070,10 @@ def create_app(
             except Exception as exc:  # noqa: BLE001 - mask all protected artifact existence.
                 raise DomainError("Company artifact unavailable", status=403) from exc
         else:
-            state = engine.get(actor(request)["id"], engagement_id)
+            principal_id = actor(request)["id"]
+            state = engine.get(principal_id, engagement_id)
             manifest = find(state, "artifacts", artifact_id)
+            quarantine_gate(principal_id, engagement_id, manifest)
             data = engine.artifacts.read(manifest)
             filename = manifest["name"]
         return Response(

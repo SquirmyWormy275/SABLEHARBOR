@@ -326,13 +326,17 @@ class SealedHistoryStore(Store):
     ):
         self.root = _private(root, directory=True)
         self.manifest_path = _private(manifest_path)
+        # Hash and parse one read so the parsed bytes are the pinned bytes.
+        _require(self.manifest_path.stat().st_size <= 1024 * 1024,
+                 "Externally pinned sealed-history manifest required")
+        with self.manifest_path.open("rb") as stream:
+            raw = stream.read(1024 * 1024 + 1)
         _require(
-            self.manifest_path.stat().st_size <= 1024 * 1024
-            and _file_sha(self.manifest_path) == manifest_sha256,
+            len(raw) <= 1024 * 1024 and hashlib.sha256(raw).hexdigest() == manifest_sha256,
             "Externally pinned sealed-history manifest required",
         )
         self.manifest_sha256 = manifest_sha256
-        self.manifest = json.loads(self.manifest_path.read_text())
+        self.manifest = json.loads(raw)
         _require(
             set(self.manifest)
             == {

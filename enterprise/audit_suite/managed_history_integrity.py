@@ -18,7 +18,7 @@ import stat
 import threading
 
 from .history_integrity_reference import (
-    FRAME_FIELDS, MAX_SAFE_INTEGER, identity, integer, reference_for_frame,
+    identity, integer, reference_for_frame,
     require, sha, validate_frame, validate_reference,
 )
 from .store import canonical, digest

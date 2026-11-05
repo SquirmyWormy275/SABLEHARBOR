@@ -10,6 +10,7 @@ from __future__ import annotations
 import hashlib
 import importlib
 import re
+import sys
 from pathlib import Path
 
 from .bound_instructor import load_bindings
@@ -471,7 +472,15 @@ class ExplainedWorkroom:
         )
         for name, pin in pins.items():
             path = self.repository / "enterprise/audit_suite" / name
-            module = importlib.import_module("enterprise.audit_suite." + name.removesuffix(".py"))
+            module_name = "enterprise.audit_suite." + name.removesuffix(".py")
+            if module_name not in sys.modules:
+                require(
+                    not any(p.is_symlink() for p in [path, *path.parents])
+                    and path.is_file()
+                    and file_sha(path) == pin,
+                    "Explanation code pin differs before import",
+                )
+            module = importlib.import_module(module_name)
             require(
                 not any(p.is_symlink() for p in [path, *path.parents])
                 and Path(module.__file__).resolve() == path.resolve()

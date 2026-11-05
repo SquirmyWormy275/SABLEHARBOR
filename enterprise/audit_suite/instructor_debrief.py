@@ -10,7 +10,6 @@ from copy import deepcopy
 from datetime import UTC, datetime, timedelta
 
 from .explanation_binding import verify_snapshot
-from .history_inspection import inspect_history
 from .store import DomainError, canonical, digest, identifier
 
 SCHEMA = "SELECTED_INSTRUCTOR_DEBRIEF_V1"

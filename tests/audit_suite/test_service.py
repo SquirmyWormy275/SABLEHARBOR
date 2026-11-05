@@ -218,10 +218,78 @@ def test_declared_body_limit_login_rate_and_wrong_origin_scheme(setup):
         client.post("/api/logout", headers={**headers, "Origin": "http://testserver"}).status_code
         == 403
     )
-    for _ in range(29):
+    for _ in range(30):
         assert client.post("/api/session", json={"credential": "invalid"}).status_code == 401
     assert client.post("/api/session", json={"credential": "invalid"}).status_code == 429
     assert client.get("/api/bootstrap").status_code == 200
+
+
+def test_login_flood_from_one_local_address_does_not_lock_out_valid_roles(setup):
+    app, client, learner, other, headers = setup
+    # Every request below comes from the same client address as the valid logins.
+    for _ in range(30):
+        client.post("/api/session", json={"credential": "repeated-guess"})
+    assert client.post("/api/session", json={"credential": "repeated-guess"}).status_code == 429
+    assert client.post("/api/session", json={"credential": other["credential"]}).status_code == 200
+    # The 30 failed repeats above count toward the 600 global failed attempts.
+    for n in range(600 - 30):
+        assert client.post("/api/session", json={"credential": f"guess-{n}"}).status_code == 401
+    assert client.post("/api/session", json={"credential": "guess-final"}).status_code == 429
+    for _ in range(3):
+        assert (
+            client.post("/api/session", json={"credential": learner["credential"]}).status_code
+            == 200
+        )
+
+
+def test_quarantined_original_download_is_limited_to_review_roles(setup):
+    from enterprise.audit_suite.engine import COLLECTIONS
+    from enterprise.audit_suite.store import digest
+
+    app, client, learner, other, headers = setup
+    engine = app.state.engine
+    instructor = engine.store.provision("Trainer", ["instructor"])
+    reviewer = engine.store.provision("Reviewer", ["reviewer"])
+    eid = "ENG-" + digest([instructor["id"], "quarantine-fixture"])[:24]
+    quarantined = engine.artifacts.retain(
+        eid,
+        "page.html",
+        b"<html><script>x()</script></html>",
+        source={},
+        coverage={},
+        generated=False,
+    )
+    available = engine.artifacts.retain(
+        eid, "notes.txt", b"Plain retained text", source={}, coverage={}, generated=False
+    )
+    assert quarantined["status"] == "QUARANTINED"
+    assert available["status"] == "AVAILABLE"
+    state = {k: [] for k in COLLECTIONS}
+    state.update(
+        title="Quarantine fixture",
+        phase="ACTIVE",
+        scope={},
+        simulated_at="2028-01-01T09:00:00Z",
+        artifacts=[quarantined, available],
+    )
+    state = engine.store.create(instructor["id"], state, "quarantine-fixture")
+    assert state["id"] == eid
+    engine.store.grant(eid, learner["id"], "learn")
+    engine.store.grant(eid, reviewer["id"], "review")
+    base = f"/api/engagements/{eid}/artifacts/"
+    assert client.get(base + available["id"] + "/download").status_code == 200
+    denied = client.get(base + quarantined["id"] + "/download")
+    assert denied.status_code == 403
+    assert b"<script>" not in denied.content
+    for role in (instructor, reviewer):
+        response = client.get(
+            base + quarantined["id"] + "/download",
+            headers={"Authorization": "Bearer " + role["credential"]},
+        )
+        assert response.status_code == 200, response.text
+        assert response.content == b"<html><script>x()</script></html>"
+        assert response.headers["content-type"] == "application/octet-stream"
+        assert response.headers["content-disposition"].startswith("attachment;")
 
 
 def test_expired_session_fails_and_fresh_login_recovers(setup):
