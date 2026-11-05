@@ -4,18 +4,23 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   integrity:
     name: Source integrity / required
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4, resolved 2026-09-15
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
           fetch-depth: 0
       - name: Check patch whitespace
-        run: git diff --check "${{ github.event.pull_request.base.sha || 'HEAD' }}" HEAD
-      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1, existing repository pin
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || 'HEAD' }}
+        run: git diff --check "$BASE_SHA" HEAD
+      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
         with:
           version: '0.12.4'
       - run: uv sync --frozen --all-extras

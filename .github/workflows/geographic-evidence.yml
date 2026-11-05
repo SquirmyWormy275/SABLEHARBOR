@@ -22,10 +22,14 @@ on:
         type: string
 permissions:
   contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 jobs:
   package:
     name: Geographic package / source and native QGIS
     runs-on: ubuntu-latest
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -74,6 +78,7 @@ jobs:
     needs: package
     if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && inputs.release_tag != ''
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     permissions:
       contents: write
       actions: read
