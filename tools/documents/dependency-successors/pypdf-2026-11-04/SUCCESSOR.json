@@ -1,0 +1,50 @@
+{
+  "advisories": [
+    "https://github.com/py-pdf/pypdf/security/advisories/GHSA-62m5-6wh8-28x7",
+    "https://github.com/py-pdf/pypdf/security/advisories/GHSA-42gh-23hr-vphw",
+    "https://github.com/py-pdf/pypdf/security/advisories/GHSA-x3rh-gjgm-fmqc",
+    "https://github.com/py-pdf/pypdf/security/advisories/GHSA-4vqv-7265-gm2w",
+    "https://github.com/py-pdf/pypdf/security/advisories/GHSA-5849-834g-hvw5",
+    "https://github.com/py-pdf/pypdf/security/advisories/GHSA-mfr5-77xh-9j7h",
+    "https://github.com/py-pdf/pypdf/security/advisories/GHSA-cggf-277g-3q54"
+  ],
+  "id": "SH-PYPDF-TOOLCHAIN-SUCCESSOR-2026-11-04",
+  "limitations": [
+    "Historical publication and release bytes, their manifests and source pins remain unchanged.",
+    "pypdf 6.21.4 is not attributed to any historical publication.",
+    "The before snapshots preserve exact current requirement bytes as of source_commit_before.",
+    "The pyproject.toml after hash also includes the requires-python >=3.11.4 change made on the same branch."
+  ],
+  "package": {
+    "after": "6.21.4",
+    "before": "6.21.2",
+    "name": "pypdf"
+  },
+  "paths": [
+    {
+      "after_sha256": "c9697fd2cd4732a83de6d9f6d94b323d30a0d36514a1e0a4e858df0fb34f2f8e",
+      "before_sha256": "c1c42eb08c623ba891655e76ca31467b90cf7b6232f42fb272e7e7eb9f3e100b",
+      "before_snapshot": "tools/documents/dependency-successors/pypdf-2026-11-04/pyproject.toml.before.txt",
+      "path": "pyproject.toml"
+    },
+    {
+      "after_sha256": "307d24c3e238d2934a91cd51a926ea4392b9cc3e41bcbb3f438aa16a437691ff",
+      "before_sha256": "0a6a0f57d93580b5b019cbf48726a1bec1624949c163aa048076f4fa481dcf27",
+      "before_snapshot": "tools/documents/dependency-successors/pypdf-2026-11-04/tools_documents_requirements.txt.before.txt",
+      "path": "tools/documents/requirements.txt"
+    },
+    {
+      "after_sha256": "863f82b6b6292f9e01215d3cb5913be8898a317e319683781994341d2ad6ba8f",
+      "before_sha256": "f64ddec60c0a69dbc8fb01e9d0b321466971aaa5b4a86ddad564ed07bf0b5b02",
+      "before_snapshot": "tools/documents/dependency-successors/pypdf-2026-11-04/geospatial_requirements.txt.before.txt",
+      "path": "geospatial/requirements.txt"
+    }
+  ],
+  "predecessor": "tools/documents/dependency-successors/pypdf-2026-10-23/SUCCESSOR.json",
+  "reason": "Dependency advisory audit on PR232 (2026-11-04) reports seven pypdf 6.21.2 advisories; 6.21.3 and 6.21.4 patch them.",
+  "schema": "SH_CURRENT_TOOLCHAIN_SUCCESSOR_V1",
+  "scope": "Current developer, publication-normalizer and geospatial toolchains only. uv.lock is regenerated from the current pyproject.",
+  "source_commit_before": "4a313f3086d5c9dbfb28cb04633a72ca606ae3df",
+  "state": "PROPOSED_PENDING_ACCEPTANCE",
+  "upstream_release": "https://github.com/py-pdf/pypdf/releases/tag/6.21.4"
+}
