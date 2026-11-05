@@ -14,7 +14,7 @@ concurrency:
 jobs:
   validate:
     name: Geospatial CI / validate
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # pinned: ubuntu-26.04 lacks Playwright and bwrap AppArmor support
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
@@ -36,7 +36,7 @@ jobs:
         run: git diff --exit-code -- geospatial/sources/catalog.json geospatial/geojson geospatial/qgis
   native-qgis:
     name: Geospatial CI / native qgis
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # pinned: ubuntu-26.04 lacks Playwright and bwrap AppArmor support
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0

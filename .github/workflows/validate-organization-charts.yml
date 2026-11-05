@@ -49,7 +49,7 @@ concurrency:
 jobs:
   validate:
     name: Validate Organization Charts / validate
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # pinned: ubuntu-26.04 lacks Playwright and bwrap AppArmor support
     timeout-minutes: 30
     steps:
       - name: Check out repository

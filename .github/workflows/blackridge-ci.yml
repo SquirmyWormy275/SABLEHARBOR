@@ -13,7 +13,7 @@ concurrency:
 jobs:
   validate:
     name: Blackridge CI / validate
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # pinned: ubuntu-26.04 lacks Playwright and bwrap AppArmor support
     timeout-minutes: 60
     services:
       postgres:

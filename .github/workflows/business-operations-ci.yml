@@ -60,7 +60,7 @@ concurrency:
 jobs:
   tests:
     name: Business operations / tests
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # pinned: ubuntu-26.04 lacks Playwright and bwrap AppArmor support
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -75,7 +75,7 @@ jobs:
 
   build:
     name: Business operations / independent build ${{ matrix.copy }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # pinned: ubuntu-26.04 lacks Playwright and bwrap AppArmor support
     timeout-minutes: 45
     strategy:
       fail-fast: false
@@ -101,7 +101,7 @@ jobs:
   reconcile:
     name: Business Operations CI / reconcile
     needs: [tests, build]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # pinned: ubuntu-26.04 lacks Playwright and bwrap AppArmor support
     timeout-minutes: 20
     permissions:
       contents: read
@@ -126,7 +126,7 @@ jobs:
     name: Business Operations CI / publish
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: reconcile
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # pinned: ubuntu-26.04 lacks Playwright and bwrap AppArmor support
     timeout-minutes: 15
     permissions:
       contents: write
