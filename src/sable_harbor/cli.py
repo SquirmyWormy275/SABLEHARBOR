@@ -104,15 +104,16 @@ def seed_canon() -> None:
 def generate(profile: str = "smoke", scenario: str = "base", seed: int = 20260831) -> None:
     engine = build_engine()
     require_migrated_schema(engine)
+    try:
+        identity = RunIdentity.build(profile=profile, scenario=scenario, seed=seed)
+    except ValueError as error:
+        raise typer.BadParameter(str(error)) from error
+    profile, scenario = identity.profile, identity.scenario
     with session_for(engine) as session:
-        profile, effective_scenario = (
-            RunIdentity.build(profile=profile, scenario=scenario, seed=seed).profile,
-            RunIdentity.build(profile=profile, scenario=scenario, seed=seed).scenario,
-        )
         run = record_generation_run(
             session,
             profile=profile,
-            scenario_code=effective_scenario,
+            scenario_code=scenario,
             seed=seed,
             git_commit=repository_head(),
         )
@@ -120,13 +121,10 @@ def generate(profile: str = "smoke", scenario: str = "base", seed: int = 2026083
             result: object = {"book": seed_smoke(session)}
         elif profile in {"baseline", "full"}:
             result = generate_baseline_run(session, seed=seed, scenario=scenario)
-        elif profile == "standard":
+        elif profile in {"standard", "stress"}:
             result = generate_standard(session, seed=seed, scenario=scenario)
         elif profile == "full_history":
             result = generate_full_history(session, seed=seed, scenario=scenario)
-        elif profile == "stress":
-            scenario = effective_scenario
-            result = generate_standard(session, seed=seed, scenario=scenario)
         else:
             raise typer.BadParameter(
                 "Profile must be smoke, baseline, standard, full_history, stress, or full"
