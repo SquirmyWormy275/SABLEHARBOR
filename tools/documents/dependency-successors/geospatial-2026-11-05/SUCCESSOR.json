@@ -1,0 +1,65 @@
+{
+  "held": [
+    {
+      "name": "scipy",
+      "version": "1.17.1",
+      "why": "Changes the committed engineering-review derivatives (build_compensated stale-derivative check). Ignored in .github/dependabot.yml pending a deliberate regeneration."
+    }
+  ],
+  "id": "SH-GEOSPATIAL-TOOLCHAIN-SUCCESSOR-2026-11-05",
+  "limitations": [
+    "Historical publication and release bytes, their manifests and source pins remain unchanged.",
+    "None of these versions is attributed to any historical publication.",
+    "The before snapshot preserves exact requirement bytes as of source_commit_before."
+  ],
+  "packages": [
+    {
+      "after": "3.11.2",
+      "before": "3.10.8",
+      "name": "matplotlib",
+      "pr": 248
+    },
+    {
+      "after": "9.2.0",
+      "before": "9.0.3",
+      "name": "pytest",
+      "pr": 248
+    },
+    {
+      "after": "2.4.6",
+      "before": "2.3.5",
+      "name": "numpy",
+      "pr": 261
+    },
+    {
+      "after": "2.2.0",
+      "before": "2.1.2",
+      "name": "shapely",
+      "pr": 261
+    },
+    {
+      "after": "1.4.4",
+      "before": "1.4.3",
+      "name": "rasterio",
+      "pr": 261
+    }
+  ],
+  "paths": [
+    {
+      "after_sha256": "2d84afe41cb745aac577789909e5207107a1a57544066854aa24d155b51a4859",
+      "before_sha256": "863f82b6b6292f9e01215d3cb5913be8898a317e319683781994341d2ad6ba8f",
+      "before_snapshot": "tools/documents/dependency-successors/geospatial-2026-11-05/geospatial_requirements.txt.before.txt",
+      "path": "geospatial/requirements.txt"
+    }
+  ],
+  "predecessor": "tools/documents/dependency-successors/pypdf-2026-11-04/SUCCESSOR.json",
+  "reason": "Routine Dependabot version updates merged in PR248 (matplotlib, pytest) and PR261 (numpy, shapely, rasterio) changed geospatial/requirements.txt without the successor record this convention requires; this record supplies it retroactively.",
+  "schema": "SH_CURRENT_TOOLCHAIN_SUCCESSOR_V1",
+  "scope": "Current geospatial toolchain only (Python 3.12 CI and local).",
+  "source_commit_before": "6b4da8d5b49bd89475d679b7d5441bd8fa90fc61",
+  "state": "PROPOSED_PENDING_ACCEPTANCE",
+  "verification": [
+    "Geospatial CI / validate passed on PR248 and PR261 heads.",
+    "Locally on Python 3.12 with the after requirements: sync_industrial, sync_runtime, finalization.sync, build_geopackage, validate_geospatial and geospatial/tests passed, and git diff of geospatial/sources/catalog.json, geospatial/geojson and geospatial/qgis was empty."
+  ]
+}
