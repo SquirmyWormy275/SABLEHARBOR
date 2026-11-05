@@ -204,6 +204,19 @@ def test_authenticated_workflow_scoping_and_revocation(signing, plans, tmp_path,
     assert (
         request(app, token(sub="admin"), "/v1/revoke", {"subject": "DEMO-PREPARER"})[0] == "200 OK"
     )
+    # A repeated revocation is a clean conflict, not a database-error 500.
+    monkeypatch.setattr(store, "now", lambda: "2026-09-10T10:02:00+00:00")
+    assert request(app, token(sub="admin"), "/v1/revoke", {"subject": "DEMO-PREPARER"})[:2] == (
+        "409 Conflict",
+        {"error": "Principal already revoked"},
+    )
+    db = store.connect(path)
+    try:
+        assert [tuple(row) for row in db.execute("SELECT principal_id, at FROM revocation")] == [
+            ("DEMO-PREPARER", "2026-09-10T10:01:00+00:00")
+        ]
+    finally:
+        db.close()
     assert request(app, token())[0] != "200 OK"
     assert "CASE" in request(app, token(sub="reviewer"))[1]["cases"]
 

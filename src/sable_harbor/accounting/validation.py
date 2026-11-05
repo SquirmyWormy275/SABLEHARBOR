@@ -3,6 +3,7 @@ from decimal import Decimal
 from typing import Any
 
 from sqlalchemy import func, inspect, select, text
+from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import Session, selectinload
 
 from sable_harbor.core.database import required_schema_head
@@ -10,6 +11,10 @@ from sable_harbor.provenance.models import GenerationRun
 from sable_harbor.provenance.service import run_context
 
 from .models import AccountingBook, EntryState, FiscalPeriod, JournalEntry
+
+# Single tolerance for zero-difference reconciliation controls, shared by the
+# validation service and the workbook checks so both agree on PASS/FAIL.
+ZERO_DIFFERENCE_TOLERANCE = Decimal("0.0001")
 
 
 class FinancialIntegrityError(ValueError):
@@ -233,9 +238,12 @@ def validate_financial_integrity(session: Session, generation_run_id: str) -> Va
     query_failures: list[str] = []
     query_names = single_run_named_queries()
     for query_name in query_names:
+        # Each query runs in a savepoint so that one backend failure (which aborts
+        # the whole transaction on PostgreSQL) does not poison later controls.
         try:
-            run_named_query(session, query_name, generation_run_id)
-        except Exception as error:  # pragma: no cover - backend-specific diagnostic path
+            with session.begin_nested():
+                run_named_query(session, query_name, generation_run_id)
+        except SQLAlchemyError as error:  # pragma: no cover - backend-specific diagnostic path
             query_failures.append(f"{query_name}: {error}")
     controls.append(
         ControlResult(
@@ -253,7 +261,7 @@ def validate_financial_integrity(session: Session, generation_run_id: str) -> Va
     exposure_failures = [
         str(row["ledger"])
         for row in exposure
-        if abs(Decimal(row["reconciliation_difference"])) > Decimal("0.0001")
+        if abs(Decimal(row["reconciliation_difference"])) > ZERO_DIFFERENCE_TOLERANCE
     ]
     controls.append(
         ControlResult(
@@ -276,7 +284,7 @@ def validate_financial_integrity(session: Session, generation_run_id: str) -> Va
     intercompany_failures = [
         f"{row['entity_a']}/{row['entity_b']}/{row['period']}"
         for row in intercompany
-        if abs(Decimal(row["total_mismatch"])) > Decimal("0.0001")
+        if abs(Decimal(row["total_mismatch"])) > ZERO_DIFFERENCE_TOLERANCE
     ]
     controls.append(
         ControlResult(
@@ -314,10 +322,10 @@ def validate_financial_integrity(session: Session, generation_run_id: str) -> Va
     statement_failures = [
         str(row["period"])
         for row in monthly
-        if abs(Decimal(row["balance_sheet_difference"])) > Decimal("0.0001")
+        if abs(Decimal(row["balance_sheet_difference"])) > ZERO_DIFFERENCE_TOLERANCE
     ]
     final_difference = abs(Decimal(snapshot["balance_sheet_difference"]))
-    statements_pass = final_difference <= Decimal("0.0001") and not statement_failures
+    statements_pass = final_difference <= ZERO_DIFFERENCE_TOLERANCE and not statement_failures
     controls.append(
         ControlResult(
             "STATEMENTS_BALANCE",

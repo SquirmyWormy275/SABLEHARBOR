@@ -4,7 +4,7 @@ SCENARIO ?= base
 SEED ?= 20260831
 RUN_ID ?= $(shell uv run shfin run-id $(PROFILE) --scenario $(SCENARIO) --seed $(SEED))
 
-.PHONY: bootstrap db-up db-down migrate seed-canon generate post close validate reports report workbooks package package-units test lint typecheck ci
+.PHONY: bootstrap db-up db-down migrate seed-canon generate post close validate reports report workbooks package package-units smoke test lint typecheck ci
 bootstrap:
 	uv sync --frozen --all-extras
 
@@ -46,6 +46,24 @@ package:
 package-units:
 	uv run shfin package-business-units --generation-run-id $(RUN_ID)
 
+# End-to-end CLI smoke test against a scratch SQLite database under the
+# git-ignored var/ directory. The file is truncated to an empty database first,
+# and var/sable_harbor.db or an exported SHFIN_DATABASE_URL is never touched.
+SMOKE_PROFILE ?= smoke
+SMOKE_DB ?= $(CURDIR)/var/smoke.sqlite
+smoke:
+	@set -eu; \
+	mkdir -p "$(dir $(SMOKE_DB))"; \
+	: > "$(SMOKE_DB)"; \
+	export SHFIN_DATABASE_URL="sqlite:///$(SMOKE_DB)"; \
+	run_id=$$(uv run shfin run-id $(SMOKE_PROFILE) --scenario base --seed $(SEED)); \
+	uv run shfin migrate; \
+	uv run shfin seed-canon; \
+	uv run shfin generate --profile $(SMOKE_PROFILE) --scenario base --seed $(SEED); \
+	uv run shfin post --generation-run-id "$$run_id"; \
+	uv run shfin validate --generation-run-id "$$run_id"; \
+	echo "smoke OK generation_run_id=$$run_id db=$(SMOKE_DB)"
+
 test:
 	uv run pytest
 
@@ -62,6 +80,7 @@ ci: lint typecheck test
 help:
 	@echo 'make bootstrap         Install locked development dependencies'
 	@echo 'make check-fast        Lint, types, Wiki links and focused Wiki tests'
+	@echo 'make smoke             Migrate, seed, generate, post and validate in a scratch SQLite DB'
 	@echo 'make check-wiki        Wiki navigation, accessibility and exporter checks'
 	@echo 'make wiki-visual       Browser checks (install Chromium once; see tools/ci/README.md)'
 	@echo 'make check-geo-review  Reproduce geographic review batches and their tests'

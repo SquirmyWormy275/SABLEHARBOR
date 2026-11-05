@@ -2,12 +2,13 @@
 import assert from "node:assert/strict";
 import { existsSync } from "node:fs";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
-import { join, resolve } from "node:path";
+import { isAbsolute, join, resolve, sep } from "node:path";
+import { homedir } from "node:os";
 import { build } from "esbuild";
 import { chromium } from "@playwright/test";
 const repo = resolve(import.meta.dirname, "..");
 const out = process.env.BOUND_ISSUE_INDEX_BROWSER_OUTPUT;
-assert.ok(out?.startsWith("/home/kingoftheeast/"));
+assert.ok(out && isAbsolute(out) && resolve(out).startsWith(homedir() + sep));
 await mkdir(out, { mode: 0o700 });
 const fixture = JSON.parse(
   await readFile(

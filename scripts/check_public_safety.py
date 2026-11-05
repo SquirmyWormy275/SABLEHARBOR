@@ -102,10 +102,16 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # DATA_AVAILABILITY. All seven institutional/publication/evidence tables
     # remain exact-equal; SQLite quick_check and foreign keys pass. The index
     # records delivery metadata and grants no company or cleanup authority.
+    # November 4 reader regeneration: against accepted main 4a313f30, reader
+    # inventory grows 1,740 -> 1,741 for LOCAL_RECOVERY_2026-10-23.md (added by
+    # #227 without a catalog rebuild) and refreshes the stale LOCAL_RECOVERY
+    # 2026-10-20 and LOCAL_WORKSPACE rows. All institutional, publication,
+    # relationship, counterpart and evidence tables remain exact-equal; SQLite
+    # quick_check and foreign keys pass.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        16527360,
-        "05039ab9db4d0bdc46cb17c4f54dbfbfe4a784548042c626e93f9e9f7bd1d8f2",
+        16539648,
+        "b8fb53281b2c8d954483939490cec439d72f27dd7062e108da80156dff73ab39",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.

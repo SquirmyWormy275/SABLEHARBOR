@@ -1,5 +1,6 @@
 import os
 import tempfile
+from decimal import Decimal
 from pathlib import Path
 
 import xlsxwriter  # type: ignore[import-untyped]
@@ -24,7 +25,7 @@ EXCEL_MAX_ROWS = 1_048_576
 PREVIEW_DATA_START_ROW = 1
 
 
-def financial_rows(session: Session, generation_run_id: str) -> list[tuple[str, str, str, float]]:
+def financial_rows(session: Session, generation_run_id: str) -> list[tuple[str, str, str, Decimal]]:
     context = run_context(session, generation_run_id)
     stmt = (
         select(
@@ -43,7 +44,7 @@ def financial_rows(session: Session, generation_run_id: str) -> list[tuple[str, 
         .order_by(Account.code)
     )
     return [
-        (code, name, cls, float(amount or 0)) for code, name, cls, amount in session.execute(stmt)
+        (code, name, cls, Decimal(amount or 0)) for code, name, cls, amount in session.execute(stmt)
     ]
 
 
@@ -134,7 +135,7 @@ def build_workbook(session: Session, destination: Path, generation_run_id: str) 
     tb.write_row(0, 0, ["Account", "Name", "Class", "Debit less credit"], header)
     for row_index, row in enumerate(data, 1):
         tb.write_row(row_index, 0, row[:3])
-        tb.write_number(row_index, 3, row[3], money)
+        tb.write_number(row_index, 3, float(row[3]), money)
     tb.autofilter(0, 0, len(data), 3)
     tb.freeze_panes(1, 0)
     tb.set_column("A:A", 12)
@@ -144,12 +145,15 @@ def build_workbook(session: Session, destination: Path, generation_run_id: str) 
 
     income = workbook.add_worksheet("Income Statement")
     income.write_row(0, 0, [f"{period_start} through {period_end} consolidated", "USD"], header)
-    revenue = -sum(amount for _, _, cls, amount in data if cls == "REVENUE")
-    expense = sum(amount for _, _, cls, amount in data if cls in {"EXPENSE", "OTHER_EXPENSE"})
+    revenue = -sum((amount for _, _, cls, amount in data if cls == "REVENUE"), Decimal(0))
+    expense = sum(
+        (amount for _, _, cls, amount in data if cls in {"EXPENSE", "OTHER_EXPENSE"}),
+        Decimal(0),
+    )
     income.write("A2", "Revenue")
-    income.write_number("B2", revenue, money)
+    income.write_number("B2", float(revenue), money)
     income.write("A3", "Operating costs and expenses")
-    income.write_number("B3", expense, money)
+    income.write_number("B3", float(expense), money)
     income.write("A4", "Operating income (loss)")
     income.write_formula("B4", "=B2-B3", money)
     income.set_column("A:A", 36)
@@ -157,18 +161,20 @@ def build_workbook(session: Session, destination: Path, generation_run_id: str) 
 
     balance = workbook.add_worksheet("Balance Sheet")
     balance.write_row(0, 0, [f"Through {period_end}", "USD"], header)
-    assets = sum(amount for _, _, cls, amount in data if cls == "ASSET")
-    liabilities = -sum(amount for _, _, cls, amount in data if cls == "LIABILITY")
-    equity_before_income = -sum(amount for _, _, cls, amount in data if cls == "EQUITY")
+    assets = sum((amount for _, _, cls, amount in data if cls == "ASSET"), Decimal(0))
+    liabilities = -sum((amount for _, _, cls, amount in data if cls == "LIABILITY"), Decimal(0))
+    equity_before_income = -sum(
+        (amount for _, _, cls, amount in data if cls == "EQUITY"), Decimal(0)
+    )
     net_income = revenue - expense
     balance.write("A2", "Assets")
-    balance.write_number("B2", assets, money)
+    balance.write_number("B2", float(assets), money)
     balance.write("A3", "Liabilities")
-    balance.write_number("B3", liabilities, money)
+    balance.write_number("B3", float(liabilities), money)
     balance.write("A4", "Equity before current-year income")
-    balance.write_number("B4", equity_before_income, money)
+    balance.write_number("B4", float(equity_before_income), money)
     balance.write("A5", "Cumulative scenario income (loss)")
-    balance.write_number("B5", net_income, money)
+    balance.write_number("B5", float(net_income), money)
     balance.write("A6", "Liabilities and equity")
     balance.write_formula("B6", "=SUM(B3:B5)", money)
     balance.write("A8", "Reconciliation difference")
@@ -178,9 +184,9 @@ def build_workbook(session: Session, destination: Path, generation_run_id: str) 
 
     cashflow = workbook.add_worksheet("Cash Flow Bridge")
     cashflow.write_row(0, 0, [f"{period_start} through {period_end} cash bridge", "USD"], header)
-    cash = next((amount for code, _, _, amount in data if code == "1000"), 0.0)
+    cash = next((amount for code, _, _, amount in data if code == "1000"), Decimal(0))
     cashflow.write("A2", "Ending cash per ledger")
-    cashflow.write_number("B2", cash, money)
+    cashflow.write_number("B2", float(cash), money)
     cashflow.write("A4", "Model note", note)
     cashflow.write(
         "B4",

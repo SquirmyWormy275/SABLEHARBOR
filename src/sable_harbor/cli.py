@@ -1,18 +1,23 @@
 import json
+import re
 from pathlib import Path
 
 import typer
 from alembic import command
-from alembic.config import Config
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from sable_harbor import schema as schema  # noqa: F401
 from sable_harbor.accounting.ledger import close_period, post_draft_entries
-from sable_harbor.accounting.models import FiscalPeriod, JournalEntry
+from sable_harbor.accounting.models import EntryState, FiscalPeriod, JournalEntry
 from sable_harbor.accounting.seed import seed_smoke
 from sable_harbor.accounting.validation import validate_financial_integrity
-from sable_harbor.core.database import build_engine, require_migrated_schema, session_for
+from sable_harbor.core.database import (
+    alembic_config,
+    build_engine,
+    require_migrated_schema,
+    session_for,
+)
 from sable_harbor.exports.metadata import public_profile
 from sable_harbor.exports.release import package_public_demo
 from sable_harbor.exports.units import package_business_units
@@ -39,6 +44,16 @@ from sable_harbor.workbooks.suite import generate_workbook_suite
 
 app = typer.Typer(no_args_is_help=True)
 INTERNAL_INSPECTION_CLASSIFICATION = "INTERNAL_SYNTHETIC_INSPECTION_NOT_RELEASE_ARTIFACT"
+FISCAL_PERIOD_CODE = re.compile(r"^[0-9]{4}-(0[1-9]|1[0-2])$")
+
+
+def _fiscal_period_code(value: str) -> str:
+    """Validate a zero-padded YYYY-MM period code; codes are compared as strings."""
+    if not FISCAL_PERIOD_CODE.fullmatch(value):
+        raise typer.BadParameter(
+            f"{value!r} is not a fiscal period; expected zero-padded YYYY-MM such as 2026-08"
+        )
+    return value
 
 
 def _inspection_envelope(
@@ -76,13 +91,13 @@ def run_id(profile: str, scenario: str = "base", seed: int = 20260831) -> None:
 
 @app.command("init-db")
 def init_db() -> None:
-    command.upgrade(Config("alembic.ini"), "head")
+    command.upgrade(alembic_config(), "head")
     typer.echo("Database migrated to head")
 
 
 @app.command("migrate")
 def migrate() -> None:
-    command.upgrade(Config("alembic.ini"), "head")
+    command.upgrade(alembic_config(), "head")
     typer.echo("Database migrated to head")
 
 
@@ -100,15 +115,16 @@ def seed_canon() -> None:
 def generate(profile: str = "smoke", scenario: str = "base", seed: int = 20260831) -> None:
     engine = build_engine()
     require_migrated_schema(engine)
+    try:
+        identity = RunIdentity.build(profile=profile, scenario=scenario, seed=seed)
+    except ValueError as error:
+        raise typer.BadParameter(str(error)) from error
+    profile, scenario = identity.profile, identity.scenario
     with session_for(engine) as session:
-        profile, effective_scenario = (
-            RunIdentity.build(profile=profile, scenario=scenario, seed=seed).profile,
-            RunIdentity.build(profile=profile, scenario=scenario, seed=seed).scenario,
-        )
         run = record_generation_run(
             session,
             profile=profile,
-            scenario_code=effective_scenario,
+            scenario_code=scenario,
             seed=seed,
             git_commit=repository_head(),
         )
@@ -116,13 +132,10 @@ def generate(profile: str = "smoke", scenario: str = "base", seed: int = 2026083
             result: object = {"book": seed_smoke(session)}
         elif profile in {"baseline", "full"}:
             result = generate_baseline_run(session, seed=seed, scenario=scenario)
-        elif profile == "standard":
+        elif profile in {"standard", "stress"}:
             result = generate_standard(session, seed=seed, scenario=scenario)
         elif profile == "full_history":
             result = generate_full_history(session, seed=seed, scenario=scenario)
-        elif profile == "stress":
-            scenario = effective_scenario
-            result = generate_standard(session, seed=seed, scenario=scenario)
         else:
             raise typer.BadParameter(
                 "Profile must be smoke, baseline, standard, full_history, stress, or full"
@@ -140,7 +153,33 @@ def generate(profile: str = "smoke", scenario: str = "base", seed: int = 2026083
 @app.command("post")
 def post(generation_run_id: str = typer.Option(...)) -> None:
     engine = build_engine()
+    require_migrated_schema(engine)
     with session_for(engine) as session:
+        run = session.get(GenerationRun, generation_run_id)
+        if run is None:
+            typer.echo(f"Unknown generation run {generation_run_id!r}", err=True)
+            raise typer.Exit(code=1)
+        if run.status == "COMPLETED":
+            # `shfin generate` posts every journal it creates and then completes
+            # the run, so a completed run with no drafts has nothing left to post.
+            draft_count = session.scalar(
+                select(func.count(JournalEntry.id)).where(
+                    JournalEntry.generation_run_id == run.id,
+                    JournalEntry.state == EntryState.DRAFT,
+                )
+            )
+            if draft_count:
+                typer.echo(
+                    f"Completed generation run {generation_run_id} has {draft_count} draft "
+                    "entries; completed runs are immutable, use a new adjustment run",
+                    err=True,
+                )
+                raise typer.Exit(code=1)
+            typer.echo(
+                f"Generation run {generation_run_id} is already completed with all entries "
+                "posted; nothing to post"
+            )
+            return
         posted_count = post_draft_entries(session, generation_run_id)
         session.commit()
     typer.echo(f"Posted {posted_count} draft entries for generation run {generation_run_id}")
@@ -148,10 +187,13 @@ def post(generation_run_id: str = typer.Option(...)) -> None:
 
 @app.command("close")
 def close(
-    through: str = typer.Option(..., help="Close periods through YYYY-MM"),
+    through: str = typer.Option(
+        ..., help="Close periods through YYYY-MM", callback=_fiscal_period_code
+    ),
     generation_run_id: str = typer.Option(...),
 ) -> None:
     engine = build_engine()
+    require_migrated_schema(engine)
     with session_for(engine) as session:
         context = run_context(session, generation_run_id)
         periods = list(
@@ -294,6 +336,7 @@ def statements(generation_run_id: str = typer.Option(...)) -> None:
 @app.command("explain-lineage")
 def explain_lineage(record_id: str, generation_run_id: str = typer.Option(...)) -> None:
     engine = build_engine()
+    require_migrated_schema(engine)
     with session_for(engine) as session:
         rows = lineage_for(session, record_id, generation_run_id)
         if not rows:

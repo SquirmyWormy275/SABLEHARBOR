@@ -2,13 +2,14 @@
 import assert from "node:assert/strict";
 import { createRequire } from "node:module";
 import { mkdir, writeFile } from "node:fs/promises";
-import { join, resolve } from "node:path";
+import { isAbsolute, join, resolve, sep } from "node:path";
+import { homedir } from "node:os";
 const repo = resolve(import.meta.dirname, "..");
 const require = createRequire(join(repo, "package.json"));
 const { build } = require("esbuild");
 const { chromium } = require("@playwright/test");
 const out = process.env.CURRENT_INDEX_BROWSER_OUTPUT;
-assert.ok(out?.startsWith("/home/kingoftheeast/"));
+assert.ok(out && isAbsolute(out) && resolve(out).startsWith(homedir() + sep));
 await mkdir(out, { mode: 0o700 });
 const source = `import React from 'react';import {createRoot} from 'react-dom/client';
 import {ReferenceCrosswalk} from '${repo}/src/ReferenceCrosswalk.tsx';
