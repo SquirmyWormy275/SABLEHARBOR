@@ -57,7 +57,7 @@ jobs:
           diff -qr "$RUNNER_TEMP/ccf-first" "$RUNNER_TEMP/ccf-second"
           uv run python -m enterprise.ccf verify --output "$RUNNER_TEMP/ccf-first"
           git diff --exit-code
-      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: ccf-preparation-v0.1.0
           path: ${{ runner.temp }}/ccf-first
@@ -71,12 +71,12 @@ jobs:
           uv run python -m enterprise.ccf.assurance starter --output "$RUNNER_TEMP/assurance-starter"
           uv run python -m enterprise.ccf.assurance verify --output "$RUNNER_TEMP/assurance-starter"
           git diff --exit-code
-      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: ccf-assurance-synthetic-v0.2.0
           path: ${{ runner.temp }}/assurance-first
           if-no-files-found: error
-      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: ccf-assurance-source-queue-v0.2.0
           path: ${{ runner.temp }}/assurance-starter

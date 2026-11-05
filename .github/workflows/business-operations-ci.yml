@@ -92,7 +92,7 @@ jobs:
       - run: uv sync --frozen --all-extras
       - name: Build operating and financial evidence
         run: time uv run python -m enterprise.operations.build
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: business-operations-build-${{ matrix.copy }}
           path: enterprise/dist/operations-v1.0.0/
@@ -116,7 +116,7 @@ jobs:
           (cd /tmp/operations-first && sha256sum --check SHA256SUMS.txt)
           (cd /tmp/operations-second && sha256sum --check SHA256SUMS.txt)
           diff -qr /tmp/operations-first /tmp/operations-second
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: business-operations-v1-review
           path: /tmp/operations-first/
