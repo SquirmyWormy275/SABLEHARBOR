@@ -1,7 +1,24 @@
 version: 2
+
+# Scope: live, installed manifests only.
+#
+# Preserved dependency evidence is never updated in place. The before-snapshots
+# under */dependency-successors/ record exact earlier requirement bytes and are
+# SHA-256 pinned by their successor records (SUCCESSOR.json, PR*-toolchain.json)
+# and release manifests; they are excluded below. A change to a current
+# requirement file that has a successor convention (tools/documents,
+# geospatial, tools/legal_gaps) needs a new dated successor record with
+# *.before.txt snapshots in the same PR.
+#
+# Standalone tool requirement files are audited weekly by
+# .github/workflows/dependency-audit.yml (pip-audit) rather than opened as
+# version-update PRs.
+
 updates:
   # Workflow actions are pinned to full commit SHAs with # vX.Y.Z comments;
-  # Dependabot updates both the SHA and the comment.
+  # Dependabot updates both the SHA and the comment. All action updates are
+  # grouped into one PR because one action appears in many workflows and
+  # separate PRs touch adjacent lines and conflict with each other.
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
@@ -9,8 +26,12 @@ updates:
     open-pull-requests-limit: 5
     commit-message:
       prefix: "ci"
+    groups:
+      github-actions:
+        patterns: ["*"]
 
-  # Root project: pyproject.toml + uv.lock.
+  # Root project: pyproject.toml + uv.lock. Minor and patch updates are grouped;
+  # major updates arrive as individual PRs.
   - package-ecosystem: "uv"
     directory: "/"
     schedule:
@@ -18,3 +39,21 @@ updates:
     open-pull-requests-limit: 5
     commit-message:
       prefix: "deps"
+    exclude-paths:
+      - "docs/legal/gap-instruments/dependency-successors/**"
+      - "tools/documents/dependency-successors/**"
+    groups:
+      python-minor-and-patch:
+        update-types: ["minor", "patch"]
+
+  # Audit workspace frontend (React/Vite), checked by audit-workspace-web.yml.
+  - package-ecosystem: "npm"
+    directory: "/audit_suite_web"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "deps(web)"
+    groups:
+      web-minor-and-patch:
+        update-types: ["minor", "patch"]
