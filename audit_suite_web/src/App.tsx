@@ -111,6 +111,7 @@ import ParentSupport from "./ParentSupport";
 import TemporalCoverage from "./TemporalCoverage";
 import ReviewDialog from "./ReviewDialog";
 import { VoiceInput, SpeakButton } from "./Voice";
+import { requestBoundaryFields } from "./requestBoundary";
 const sections = [
   ["kickoff", "Kickoff & scope"],
   ["controls", "Controls & tracker"],
@@ -2270,6 +2271,7 @@ export default function App() {
                         onClick={() =>
                           edit("Issue evidence request", "pbc.create", [
                             f("title", "Requested item"),
+                            ...requestBoundaryFields(e.scope.boundaries),
                             linked("control_id", "Control", e.controls),
                             linked("person_id", "Evidence owner", e.people),
                             f(

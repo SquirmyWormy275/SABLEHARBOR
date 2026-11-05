@@ -87,6 +87,10 @@ help:
 	@echo 'make check-operations Run business/operations/planning tests without full packaging'
 	@echo 'make ci               Full root test suite, lint and types'
 	@echo 'make wiki-publish     Publish clean accepted main using existing Git authentication'
+	@echo 'make audit-workspace-web    Build the audit workroom browser app (npm ci, npm run build)'
+	@echo 'make audit-workspace-setup  Import CLEAN/MESSY company records and provision local roles'
+	@echo 'make audit-workspace-start  Run CLEAN on 127.0.0.1:8782 and MESSY on 127.0.0.1:8783'
+	@echo '    (also audit-workspace-status, -stop, -restart, -credentials; see docs/audit-suite/LOCAL_WORKSPACE.md)'
 
 check-fast: lint typecheck check-wiki
 
@@ -112,3 +116,30 @@ wiki-publish:
 .PHONY: wiki-freshness
 wiki-freshness: ## Compare the published Wiki with current reading inputs
 	uv run python -m tools.wiki.freshness
+
+# Local CLEAN/MESSY audit workrooms built from the Git company records. State,
+# logs and role credentials go to the Git-ignored var/audit-workspace unless
+# SABLEHARBOR_WORKSPACE_ROOT names another private directory.
+AUDIT_WORKSPACE = uv run python -m tools.audit_suite.workspace_launcher
+.PHONY: audit-workspace-web audit-workspace-setup audit-workspace-start audit-workspace-status
+.PHONY: audit-workspace-stop audit-workspace-restart audit-workspace-credentials
+audit-workspace-web:
+	cd audit_suite_web && npm ci && npm run build
+
+audit-workspace-setup:
+	$(AUDIT_WORKSPACE) setup
+
+audit-workspace-start:
+	$(AUDIT_WORKSPACE) start
+
+audit-workspace-status:
+	$(AUDIT_WORKSPACE) status
+
+audit-workspace-stop:
+	$(AUDIT_WORKSPACE) stop
+
+audit-workspace-restart:
+	$(AUDIT_WORKSPACE) restart
+
+audit-workspace-credentials:
+	$(AUDIT_WORKSPACE) credentials
