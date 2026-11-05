@@ -71,6 +71,8 @@ jobs:
       - run: uv run ruff format --check .
       - run: uv run ruff check .
       - run: uv run mypy src
+      - name: CLI smoke (migrate, seed, generate, post, validate)
+        run: make smoke
       - run: uv run pytest -q docs/finance/evidence/coverage/test_extracts.py
       - run: echo "SHFIN_DATABASE_URL=sqlite:///var/ci-standard.db" >> "$GITHUB_ENV"
       - run: uv run alembic upgrade head
