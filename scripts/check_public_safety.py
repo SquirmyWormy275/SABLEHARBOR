@@ -110,8 +110,8 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # quick_check and foreign keys pass.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        16539648,
-        "b8fb53281b2c8d954483939490cec439d72f27dd7062e108da80156dff73ab39",
+        16541696,
+        "5e156f964e9e73de5afebe7a474ef31fa818cd826034f23f28149e638aceb90d",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.
