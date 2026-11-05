@@ -2216,7 +2216,7 @@
       "native_kind_recovery_2026_10_05": {
         "checkpoint_utc": "2026-10-05T04:40:00Z",
         "root_source_gate": {
-          "path": "/home/kingoftheeast/SABLEHARBOR-root-native-kind-recovery-source-review-20261005/ROOT_SOURCE_SELECTION.json",
+          "path": "<local-checkout>/SABLEHARBOR-root-native-kind-recovery-source-review-20261005/ROOT_SOURCE_SELECTION.json",
           "sha256": "169adca8a93e39c2348dc0a2b300a9a0ee11ec81823d1a750214c111b75cd62b"
         },
         "independent_reader_status": "PASS_QUALIFIED_SOURCE_ONLY_PERIOD_MAPPING_CORRECTION",
@@ -2262,7 +2262,7 @@
         },
         "historical_reader_rejection_sha256": "855df59cfab3ab1ddc245fea305288846204189c1690037436d575ac1d9e542c",
         "Root_follow_on_source_selection": {
-          "path": "/home/kingoftheeast/SABLEHARBOR-root-reviewed-follow-on-source-selection-20261005/ROOT_SOURCE_SELECTION.json",
+          "path": "<local-checkout>/SABLEHARBOR-root-reviewed-follow-on-source-selection-20261005/ROOT_SOURCE_SELECTION.json",
           "sha256": "09792f13a0fb6cc8d72c48db7cc166b4ffa7f7adf654bc6ec03fc1a48174c039"
         },
         "corrected_Main_adopter_independent_source_review_sha256": "7214d4aac9ca8028b7131b3c63671a317af8f136997c47b6f0058c258960afa0",
@@ -2270,7 +2270,7 @@
         "corrected_Main_adopter_source_sha256": "2eaea9b18978c6285f50ca9b493be2ecf69701fca42689964cacc90eaabd8ad5",
         "corrected_Main_import_probe_source_sha256": "d080c4d29075dc5ee0fdd0486d624dc640c89a44fd920cea2193cede04921830",
         "readonly_diagnostic_actual_failure_settlement": {
-          "path": "/home/kingoftheeast/SABLEHARBOR-root-eight-retained-source-readiness-20261005/READONLY_FAILURE_PROCESS_SETTLEMENT.json",
+          "path": "<local-checkout>/SABLEHARBOR-root-eight-retained-source-readiness-20261005/READONLY_FAILURE_PROCESS_SETTLEMENT.json",
           "sha256": "2090737ba9fb13059a85b971a84e56da82083253c4ad63133e28fb0fe659534a"
         },
         "readonly_diagnostic_failure_cause": {
@@ -2284,7 +2284,7 @@
         "recovery_binder_independent_source_review_sha256": "f7479b16d9ba93588eca8f53c42f35079f37bb3dc4c93dce295193624be83542",
         "Root_recovery_binder_source_selection_sha256": "0a844801beae3042a4d37d31a4f7b7b91be65c53fd22ab98e1562d9f16e6063f",
         "actual_partial_preflight_once_resume_eligibility": {
-          "path": "/home/kingoftheeast/SABLEHARBOR-root-native-kind-recovery-once-run-20261005/ROOT_CURRENT_NATIVE_RESUME_ELIGIBILITY.json",
+          "path": "<local-checkout>/SABLEHARBOR-root-native-kind-recovery-once-run-20261005/ROOT_CURRENT_NATIVE_RESUME_ELIGIBILITY.json",
           "sha256": "8a1cc2c60615e1d98dc6109e8c7162cc105a58b70dc9f76127b6534d2776e846"
         },
         "complete_readonly_preflight_PASS_asserted": false,
@@ -2533,7 +2533,7 @@
       "final_fieldwork_input_preparation_sha256": "34fac279f00392657b01b565d66fa6811fb74b8307e99121b00f40c5f2c2b59d",
       "key_binding_input_preparation_sha256": "a6e792872fb46888e62d30a192c5d3b132e17fe5a919e8c81efb309a58eecc49",
       "storage_status": "CAPACITY_RECOVERED_ENCRYPTED_BACKUPS_VERIFIED_ORIGINAL_PATHS_PRESERVED_B05_FULL50_FINISHED",
-      "storage_archive_root": "/home/kingoftheeast/SABLEHARBOR-preserved-neutral-archives-20261002/b01-unaccepted-v4",
+      "storage_archive_root": "<local-checkout>/SABLEHARBOR-preserved-neutral-archives-20261002/b01-unaccepted-v4",
       "storage_archive_sha256": "a26ad126343b08a5923b0199ee78d7bf2ae86fcdd8b9159cda80861e3cfd43a6",
       "storage_root_independent_verification_sha256": "4ca85db2985fb6b50ab5b34109df650728fb33cdb64c377a66d6ca84064ab5b4",
       "storage_exact_cleanup_receipt_sha256": "a68fda1fce76775a162e4a8f6e28c9853d656eb78a352ed6a4721431fd76f3dc",
@@ -2567,7 +2567,7 @@
       "storage_recovery_closeout_sha256": "e48bbaf3bdc359418e06a6dcd21b5b51a35188cb23384341d4bfcc4b56a70936",
       "storage_free_bytes_at_capacity_recovered_b05_launch": 145042059264,
       "storage_new_cleanup_or_file_relocation": false,
-      "encrypted_external_backup_root": "/run/media/kingoftheeast/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002",
+      "encrypted_external_backup_root": "<external-drive>/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002",
       "encrypted_external_backup_recovery_key_requires_separate_preservation": false,
       "historical_source_reproduction_procedure_review_sha256": "94c69073ca9e2ae1f3f2e6800df74e75aa223a0b39baa9ccda3fd2783190939f",
       "sealed_prefix_tail_original_candidate_status": "CHANGES_REQUIRED_NORMAL_SIGNED_LOGIN_LOGOUT_REOPEN_DEFECT_PRESERVED_60A83A14",
@@ -2830,7 +2830,7 @@
         "owned_journal_events": 51,
         "owned_native_originals": 4,
         "clause_ledger": {
-          "path": "/home/kingoftheeast/SABLEHARBOR-per-clause-closeout-ledger-preparation-20261003/CLOSEOUT_LEDGER.json",
+          "path": "<local-checkout>/SABLEHARBOR-per-clause-closeout-ledger-preparation-20261003/CLOSEOUT_LEDGER.json",
           "sha256": "5aad1a6dcebf47e87b7ac48edbab76009bc75de91b1b5f9c55ec495dfc194016",
           "jobs": 28,
           "clauses": 116,
@@ -2858,11 +2858,11 @@
         "original_grants_consumed_once_before_deadline": true,
         "consumption_receipts": {
           "CLEAN": {
-            "path": "/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite/enterprise/generated/audit-suite/full-scope-company-audit-2026-10-01/main-run-v1/PREEXPIRY_OPERATOR_DELEGATIONS_V1/CLEAN/CONSUMED.json",
+            "path": "<local-checkout>/Projects/SABLEHARBOR-audit-suite/enterprise/generated/audit-suite/full-scope-company-audit-2026-10-01/main-run-v1/PREEXPIRY_OPERATOR_DELEGATIONS_V1/CLEAN/CONSUMED.json",
             "sha256": "45f4385363377048574c377cbaed8222a269422ae5fe788c111b87dd12a115d9"
           },
           "MESSY": {
-            "path": "/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite/enterprise/generated/audit-suite/full-scope-company-audit-2026-10-01/main-run-v1/PREEXPIRY_OPERATOR_DELEGATIONS_V1/MESSY/CONSUMED.json",
+            "path": "<local-checkout>/Projects/SABLEHARBOR-audit-suite/enterprise/generated/audit-suite/full-scope-company-audit-2026-10-01/main-run-v1/PREEXPIRY_OPERATOR_DELEGATIONS_V1/MESSY/CONSUMED.json",
             "sha256": "7dc77a7d80b429136dc83cccb399c21e9667507da8c00c3afb514323331b69d6"
           }
         },
@@ -2875,11 +2875,11 @@
         "coordinator_returncode": 0,
         "coordinator_pid_absent": true,
         "complete_receipt": {
-          "path": "/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite/enterprise/generated/audit-suite/full-scope-company-audit-2026-10-01/main-run-v1/ORIGINAL_DELEGATED_PRISTINE_PARENTS_V1/ROOT_PARENT_PREPARATION_RECEIPT.json",
+          "path": "<local-checkout>/Projects/SABLEHARBOR-audit-suite/enterprise/generated/audit-suite/full-scope-company-audit-2026-10-01/main-run-v1/ORIGINAL_DELEGATED_PRISTINE_PARENTS_V1/ROOT_PARENT_PREPARATION_RECEIPT.json",
           "sha256": "06af0282d5c0f68fb6f788e52284d38c2e7bfdca5d9f7dbb1502e61329831bf9"
         },
         "messy_execution_tuple": {
-          "path": "/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite/enterprise/generated/audit-suite/full-scope-company-audit-2026-10-01/main-run-v1/ORIGINAL_DELEGATED_PRISTINE_PARENTS_V1/MESSY-EXECUTION-TUPLE.json",
+          "path": "<local-checkout>/Projects/SABLEHARBOR-audit-suite/enterprise/generated/audit-suite/full-scope-company-audit-2026-10-01/main-run-v1/ORIGINAL_DELEGATED_PRISTINE_PARENTS_V1/MESSY-EXECUTION-TUPLE.json",
           "sha256": "3c2b63f11a00787360ff2472d91b7674fbf911a424e3db9f891cdec16e00e105"
         }
       },
@@ -2925,7 +2925,7 @@
         "local_commit": "f7fe02298c69cb5595981754e8f468bf3f330fd0",
         "adoption_receipt_sha256": "621e82f619c676586ebbc5a1d754efa75e07125e9747eeb4605836820d99dd7c",
         "fresh_main_review": {
-          "path": "/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite/enterprise/generated/audit-suite/full-scope-company-audit-2026-10-01/main-run-v1/FINAL_ACTUAL_MAIN_VECTOR_V3/REVIEW.json",
+          "path": "<local-checkout>/Projects/SABLEHARBOR-audit-suite/enterprise/generated/audit-suite/full-scope-company-audit-2026-10-01/main-run-v1/FINAL_ACTUAL_MAIN_VECTOR_V3/REVIEW.json",
           "sha256": "6f5038ccf16822929071a8c202c1714042b04eccddec07a1d69ad84f8e2be4a0"
         },
         "selected_python_origins": 88,
@@ -2939,7 +2939,7 @@
         "frontend_build": "PASS",
         "fresh_frontend_receipt_sha256": "414a559a21786f3a9aa85b6c7ec41fcc96e361c7fa7847b14627a9b5a9e23c30",
         "final_filler_program": {
-          "path": "/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite/enterprise/generated/audit-suite/ROOT_PRIVATE_SCRIPTS_2026-10-02/FILL_FINAL_POST_KEY_AUTHORIZATIONS_V2.py",
+          "path": "<local-checkout>/Projects/SABLEHARBOR-audit-suite/enterprise/generated/audit-suite/ROOT_PRIVATE_SCRIPTS_2026-10-02/FILL_FINAL_POST_KEY_AUTHORIZATIONS_V2.py",
           "sha256": "2d8379b47f79b263a83a1b43bdf7a0158ad4cc6e88bf0334d09ff6a5090bddb0"
         }
       },
@@ -2951,7 +2951,7 @@
         "full_prefix_derivative": "ISOLATED_AUTHOR_DRAFT_WITH_OWN_FIXTURES_NOT_ADMITTED_OR_INSTALLED",
         "independent_storage_review": "IN_PROGRESS_NO_ACTUAL_MIGRATION_ACCEPTANCE",
         "retention_plan": {
-          "path": "/home/kingoftheeast/SABLEHARBOR-retention-cleanup-plan-preparation-20261003/HANDOFF.json",
+          "path": "<local-checkout>/SABLEHARBOR-retention-cleanup-plan-preparation-20261003/HANDOFF.json",
           "sha256": "7bf36b454dbf04e8c93916ed77b17368e21fa20f1a464cb8d8dcf3ba9e7a7c99"
         },
         "retention_plan_files_freshly_closed": 6,
@@ -3565,10 +3565,10 @@
       "new_native_runtime_review_preparation_checkpoint_2026_10_03": {
         "checked_at_UTC": "2026-10-03 23:37 UTC",
         "status": "EXACT_EXISTING_SCHEMA_NEW5714_RUNTIME_REVIEW_PREPARED_AND_INDEPENDENTLY_CHECKED_NO_LIFETIME_OR_BIRTH",
-        "selected_repository": "/home/kingoftheeast/Projects/SABLEHARBOR-next-native-short-prefix-codec-integration-wt",
+        "selected_repository": "<local-checkout>/Projects/SABLEHARBOR-next-native-short-prefix-codec-integration-wt",
         "selected_commit": "b3e905d5d123e9b2170292a71a3b65abde56daca",
         "runtime_review": {
-          "path": "/home/kingoftheeast/SABLEHARBOR-next-native-runtime-review-field-preparation-20261003/ROOT_NEXT_NATIVE_RUNTIME_REVIEW.json",
+          "path": "<local-checkout>/SABLEHARBOR-next-native-runtime-review-field-preparation-20261003/ROOT_NEXT_NATIVE_RUNTIME_REVIEW.json",
           "sha256": "adcd007a7a7094c57535bfac2b450392f8cc0e96437b568b4146f659bd315c5d"
         },
         "Root_qualified_preparation_receipt_sha256": "73573a8d5cbe4f5cce7c83dec384aff5a54d385fc23856a4bcf2ec283276b079",
@@ -3634,7 +3634,7 @@
         ],
         "actual_criterion_sufficiency_or_collection_grants_from_header_presence": false,
         "genuine_gap": "Selected existing methods cannot yet interpret flat native operating-depth observations, policy operations and followthrough; custody/ordinary collection already supported.",
-        "new_isolated_implementation_repository": "/home/kingoftheeast/Projects/SABLEHARBOR-native-operating-method-consumers-wt",
+        "new_isolated_implementation_repository": "<local-checkout>/Projects/SABLEHARBOR-native-operating-method-consumers-wt",
         "implementation_parent_commit": "b3e905d5d123e9b2170292a71a3b65abde56daca",
         "current_Main_b3_original_holder_or_source_business_records_changed": false,
         "targeted_consumer_implementation_scope": "Pure retained-native helper, workforce/governance/continuity callback supplements and identity convenience reader, with meaningful tiny OWN semantic/custody tests; no source/Engine/collection API change.",
@@ -3680,7 +3680,7 @@
             "verified_events": 19,
             "all_52_legacy_workforce_result_fields_and_prior_observations_preserved": true
           },
-          "combined_reference_consumer_stage": "/home/kingoftheeast/Projects/SABLEHARBOR-b3-v3-native-consumer-composition-wt",
+          "combined_reference_consumer_stage": "<local-checkout>/Projects/SABLEHARBOR-b3-v3-native-consumer-composition-wt",
           "combined_stage_review": "PENDING"
         },
         "collection_and_documentary_path": {
@@ -3709,7 +3709,7 @@
       "original_Key_success_and_holder_failure_checkpoint_2026_10_04": {
         "checkpoint_utc": "2026-10-04 02:02 UTC",
         "paired_actual_Key_receipt": {
-          "path": "/home/kingoftheeast/Projects/SABLEHARBOR-audit-suite/enterprise/generated/audit-suite/full-scope-company-audit-2026-10-01/main-run-v1/ACTUAL_COMPANY_NATIVE_INSTRUCTOR_KEYS_V2_RUNTIME_REVIEW/ROOT_KEY_BINDING_RECEIPT.json",
+          "path": "<local-checkout>/Projects/SABLEHARBOR-audit-suite/enterprise/generated/audit-suite/full-scope-company-audit-2026-10-01/main-run-v1/ACTUAL_COMPANY_NATIVE_INSTRUCTOR_KEYS_V2_RUNTIME_REVIEW/ROOT_KEY_BINDING_RECEIPT.json",
           "sha256": "026ee7a6b8ddb67a3dbc6daacaf53febf92010dcd62436c30e426b4508698f7d"
         },
         "original_Key_binding_completed": true,
@@ -4075,7 +4075,7 @@
           "actual_current_gates_and_invocation": "UNFILLED_PENDING_ORIGINAL_CUTOVER_AND_ROOT_ELIGIBILITY"
         },
         "Main_source_integration_preflight": {
-          "path": "/home/kingoftheeast/SABLEHARBOR-final-Main-source-integration-preflight-20261004/PREFLIGHT.json",
+          "path": "<local-checkout>/SABLEHARBOR-final-Main-source-integration-preflight-20261004/PREFLIGHT.json",
           "sha256": "882f1992dad43066efc657a9513646553a75add3ccbb445095e8b472bbcf62b0",
           "tracked_targets": 65,
           "dist_targets": 6,
@@ -4177,7 +4177,7 @@
         "checkpoint_utc": "2026-10-04T09:09:51.867625+00:00",
         "status": "PLAIN27_RECOVERY_COMPLETE_CLEAN_CONVERSION_COMPLETE_MESSY_RUNNING_ACTUAL_PAIRED_CUTOVER_PENDING",
         "plain_backup_recovery": {
-          "Root_receipt_path": "/home/kingoftheeast/SABLEHARBOR-plain-compressed-backup-recovery-20261004/ROOT_RECOVERY_CLOSEOUT.json",
+          "Root_receipt_path": "<local-checkout>/SABLEHARBOR-plain-compressed-backup-recovery-20261004/ROOT_RECOVERY_CLOSEOUT.json",
           "Root_receipt_sha256": "45fccd0cb03a63a710878120f1987ce2c5c41ca94d2e4bf302155cff07116925",
           "archive_count": 27,
           "plain_compressed_bytes": 20783300538,
@@ -4222,15 +4222,15 @@
         "status": "CORRECTED_PRIVATE_AUTHOR_UI_SOURCE_AND_PLAIN_FINAL_TRANSPORT_SELECTED_ACTUAL_PIPELINE_PENDING",
         "selected_sources": {
           "authoring": {
-            "path": "/home/kingoftheeast/SABLEHARBOR-next5714-private-instructor-authoring-input-bound-correction-20261004/ROOT_SELECTED_AUTHORING_SOURCE.json",
+            "path": "<local-checkout>/SABLEHARBOR-next5714-private-instructor-authoring-input-bound-correction-20261004/ROOT_SELECTED_AUTHORING_SOURCE.json",
             "sha256": "80ffd1e099efaadc2a992c03485f9c12faf203ac5e8f22d9acfd7e7334f6bd9e"
           },
           "browser_source": {
-            "path": "/home/kingoftheeast/SABLEHARBOR-next5714-ui-served-repository-correction-20261004/ROOT_SELECTED_BROWSER_SOURCE.json",
+            "path": "<local-checkout>/SABLEHARBOR-next5714-ui-served-repository-correction-20261004/ROOT_SELECTED_BROWSER_SOURCE.json",
             "sha256": "db0f2edf6bda9ebaa06136610559d6e4e536ef1d2bc8bcd5f30608fb9872bc98"
           },
           "plain_preservation": {
-            "path": "/home/kingoftheeast/SABLEHARBOR-plain-streamed-final-preservation-preparation-20261004/ROOT_SELECTED_PLAIN_PRESERVATION_TRANSPORT.json",
+            "path": "<local-checkout>/SABLEHARBOR-plain-streamed-final-preservation-preparation-20261004/ROOT_SELECTED_PLAIN_PRESERVATION_TRANSPORT.json",
             "sha256": "e80a7f5d416d3d1e7cf64bbbc526df1ba47df92dacf30911e671b105161b7530"
           }
         },
@@ -4258,7 +4258,7 @@
         "checkpoint_utc": "2026-10-04T10:58:00+00:00",
         "status": "COMPILED_PRIVATE_UNBOUND_INDEPENDENT_SOURCE_SEMANTICS_PENDING",
         "result": {
-          "path": "/home/kingoftheeast/SABLEHARBOR-next5714-source-only-compilation-20261004/RESULT.json",
+          "path": "<local-checkout>/SABLEHARBOR-next5714-source-only-compilation-20261004/RESULT.json",
           "sha256": "d021937e2d1f33f25ab7509c05a3eebe18b4688d4dd7c8ee6f5666d1d456849c"
         },
         "author_source_sha256": "f849317e7dadeb94e18b6ecc7cd579fc224efc2e03deb2b6224002bf64add7cb",
@@ -4284,7 +4284,7 @@
         "Root_source_semantic_selection_sha256": "14976fea8a7727756460b274921104f189477ca74fa7243dbd6cb95e36697065",
         "independent_parallel_dependency_review_sha256": "2ce738dc95e11ef84f3eda4c3c3f2740293c7cb268dcfa449a701bee0fe8d332",
         "Root_parallel_scheduling_selection": {
-          "path": "/home/kingoftheeast/SABLEHARBOR-root-parallel-next5714-selection-20261004/ROOT_PARALLEL_SELECTION.json",
+          "path": "<local-checkout>/SABLEHARBOR-root-parallel-next5714-selection-20261004/ROOT_PARALLEL_SELECTION.json",
           "sha256": "db64816b68cce35577b0e0bd1a582b58e68f4d47685768164b393fe097c3006b"
         },
         "original_cutover_accepted": false,
@@ -4698,7 +4698,7 @@
         "original_QA_600S_root_once_selection_sha256": "bf9118d694ef88fd1e0065e13b9274fa5caf73a3104f925ddc3b71afa946141d",
         "original_QA_600S_filled_plan_sha256": "298ede4f2b8cf285fbd9cc7bd1f409efd7a5f06efa30f6668f5ff258e5acd2d6",
         "original_QA_600S_source_sha256": "b322c5e31b99a004cfea94320d40b884a89287834f912e6e7f13253723afa332",
-        "original_QA_600S_actual_output": "/home/kingoftheeast/SABLEHARBOR-original-cold-actual-UI-20261004/QA_600S_UNFILLED_V1",
+        "original_QA_600S_actual_output": "<local-checkout>/SABLEHARBOR-original-cold-actual-UI-20261004/QA_600S_UNFILLED_V1",
         "original_QA_600S_actual_exit_code": null,
         "original_QA_600S_actual_UI_accepted": false
       },
@@ -4883,7 +4883,7 @@
     "catalogue_source_only_preparation_2026_10_05": {
       "root_checkpoint_utc": "2026-10-05T10:14:25+00:00",
       "source_selection": {
-        "path": "/home/kingoftheeast/SABLEHARBOR-root-catalogue-successor-and-cold-candidate-source-selection-20261005/ROOT_PREPARATION_SELECTION.json",
+        "path": "<local-checkout>/SABLEHARBOR-root-catalogue-successor-and-cold-candidate-source-selection-20261005/ROOT_PREPARATION_SELECTION.json",
         "sha256": "9ff46eb93764f1d8dfa60b61b7229a4ed3a9a5ff238e9e59107c6a075604399d"
       },
       "V3_normal_configure_cold_candidate_handoff_sha256": "1af5ec7d758c3eb4b7e2be139153e5f21e6e351ed2d44b50e888253b80648d37",
@@ -4898,7 +4898,7 @@
         3
       ],
       "expected_Main287_not_yet_adopted": {
-        "path": "/home/kingoftheeast/SABLEHARBOR-final-Main-assessment-catalogue-adoption-successor-20261005/EXPECTED_MAIN_CODE_FILES_287_CATALOGUE_NOT_YET_ADOPTED.json",
+        "path": "<local-checkout>/SABLEHARBOR-final-Main-assessment-catalogue-adoption-successor-20261005/EXPECTED_MAIN_CODE_FILES_287_CATALOGUE_NOT_YET_ADOPTED.json",
         "sha256": "4c43cf79185b8787e9321d37a9bf4e4b1d70a9c5ee3fc6ea7b2613300e966517",
         "changed_origin": "enterprise.audit_suite.instructor_assessments",
         "changed_origin_sha256": "173b9a87ddbd7bc660fb6122d74100a05badde9ad7d624c4c8f4d6c0df06e328"
@@ -4910,7 +4910,7 @@
         "origins": 287
       },
       "QA_source_approval": {
-        "path": "/home/kingoftheeast/SABLEHARBOR-root-qa-assessment-options-source-approval-20261005/ROOT_SOURCE_APPROVAL.json",
+        "path": "<local-checkout>/SABLEHARBOR-root-qa-assessment-options-source-approval-20261005/ROOT_SOURCE_APPROVAL.json",
         "sha256": "5097afc41d45fa6198cbc9255e504880f2e2753d1bc835ea4eae09ab3b5438ea"
       },
       "QA_source_sha256": "05c04aa3b97e15d97a4a508889e0d7ae43d6c844a67971a7f45a2e4dbaedac49",
@@ -4944,51 +4944,51 @@
       "large_packet_members_independently_compared": false,
       "paired_result_and_actual_exit_lock_settlement": null,
       "source_only_preservation_plan": {
-        "path": "/home/kingoftheeast/SABLEHARBOR-final-Original-plain-tree-plan-post-catalogue-root-additions-20261005/ORIGINAL_ONLY_PLAIN_TREE_PLAN_UNFILLED.json",
+        "path": "<local-checkout>/SABLEHARBOR-final-Original-plain-tree-plan-post-catalogue-root-additions-20261005/ORIGINAL_ONLY_PLAIN_TREE_PLAN_UNFILLED.json",
         "sha256": "1181fb132d705d63be3570939341d6a106df38c43b387fa6825509869771f0d5",
         "roots": 30,
         "scattered_entries": 534
       },
       "Root_plan_source_approval": {
-        "path": "/home/kingoftheeast/SABLEHARBOR-root-catalogue-successor-and-cold-candidate-source-selection-20261005/ROOT_PRESERVATION_PLAN_SOURCE_APPROVAL.json",
+        "path": "<local-checkout>/SABLEHARBOR-root-catalogue-successor-and-cold-candidate-source-selection-20261005/ROOT_PRESERVATION_PLAN_SOURCE_APPROVAL.json",
         "sha256": "3aba247e10784a18a2ee2c47f3ae5832117a8434d443d94d7012a4dd3ae7b0a6"
       },
       "E3_and_new_plan_handoff_inverse_addendum_source_proofs_final_selection": null,
       "actual_backup_or_deletion_authorized": false,
       "first_a84_CLI": {
         "Root_selection": {
-          "path": "/home/kingoftheeast/SABLEHARBOR-root-original-CLEAN-offline-mechanism-overlap-20261005/ROOT_ACTUAL_ONCE_SELECTION.json",
+          "path": "<local-checkout>/SABLEHARBOR-root-original-CLEAN-offline-mechanism-overlap-20261005/ROOT_ACTUAL_ONCE_SELECTION.json",
           "sha256": "e7a72526510bf0f806863b5dd7660d1d1f049536651241b238104e39fec80963"
         },
         "actual_exit_code": 1,
         "before_world_or_packet_body_reads": true,
         "cause": "Authority JSON noncanonical",
         "preserved_settlement": {
-          "path": "/home/kingoftheeast/SABLEHARBOR-root-original-CLEAN-offline-mechanism-overlap-20261005/RUN_ONCE/PROCESS_SETTLEMENT.json",
+          "path": "<local-checkout>/SABLEHARBOR-root-original-CLEAN-offline-mechanism-overlap-20261005/RUN_ONCE/PROCESS_SETTLEMENT.json",
           "sha256": "29f9e82addda8cae5121a8cb655d71a42b80017e27a5ddc020f506bad0de4726"
         },
         "preserved_stderr": {
-          "path": "/home/kingoftheeast/SABLEHARBOR-root-original-CLEAN-offline-mechanism-overlap-20261005/RUN_ONCE/stderr.log",
+          "path": "<local-checkout>/SABLEHARBOR-root-original-CLEAN-offline-mechanism-overlap-20261005/RUN_ONCE/stderr.log",
           "sha256": "c5581a91602d9fd0811fe5bd0ec813f292ad736dfd1c2bfae8ed1e94686fb206"
         },
         "automatic_retry": false
       },
       "canonical_authority_preparation": {
         "CLEAN": {
-          "path": "/home/kingoftheeast/SABLEHARBOR-root-original-offline-prefix-authorities-20261005/CLEAN_OFFLINE_PREFIX_AUTHORITY_CANONICAL.json",
+          "path": "<local-checkout>/SABLEHARBOR-root-original-offline-prefix-authorities-20261005/CLEAN_OFFLINE_PREFIX_AUTHORITY_CANONICAL.json",
           "sha256": "9ee6ea5338042abb8be5d83e011a0c3979f1280daaab103174b98f0eae3f5599"
         },
         "MESSY": {
-          "path": "/home/kingoftheeast/SABLEHARBOR-root-original-offline-prefix-authorities-20261005/MESSY_OFFLINE_PREFIX_AUTHORITY_CANONICAL.json",
+          "path": "<local-checkout>/SABLEHARBOR-root-original-offline-prefix-authorities-20261005/MESSY_OFFLINE_PREFIX_AUTHORITY_CANONICAL.json",
           "sha256": "7cd41a50348d2f857688060157d02b77d06c8038f7b85aa0a16c2731eb977b84"
         },
         "values_and_types_identical_to_predecessors": true,
         "repair_receipt": {
-          "path": "/home/kingoftheeast/SABLEHARBOR-root-original-offline-prefix-authorities-20261005/CANONICAL_ENCODING_REPAIR_RECEIPT.json",
+          "path": "<local-checkout>/SABLEHARBOR-root-original-offline-prefix-authorities-20261005/CANONICAL_ENCODING_REPAIR_RECEIPT.json",
           "sha256": "e29abaa85e04786ddc2485449575fed37955ddb3d901013b2aa51341d2ed801f"
         },
         "Root_source_selection": {
-          "path": "/home/kingoftheeast/SABLEHARBOR-root-original-CLEAN-offline-mechanism-overlap-20261005/ROOT_CANONICAL_ACTUAL_ONCE_SELECTION.json",
+          "path": "<local-checkout>/SABLEHARBOR-root-original-CLEAN-offline-mechanism-overlap-20261005/ROOT_CANONICAL_ACTUAL_ONCE_SELECTION.json",
           "sha256": "170b6e6229d854b25b6267d377e26d73249423843a13a17308acb3c32ca2f5f6"
         }
       },
