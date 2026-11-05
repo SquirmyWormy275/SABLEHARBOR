@@ -3,12 +3,12 @@ from pathlib import Path
 
 import typer
 from alembic import command
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from sable_harbor import schema as schema  # noqa: F401
 from sable_harbor.accounting.ledger import close_period, post_draft_entries
-from sable_harbor.accounting.models import FiscalPeriod, JournalEntry
+from sable_harbor.accounting.models import EntryState, FiscalPeriod, JournalEntry
 from sable_harbor.accounting.seed import seed_smoke
 from sable_harbor.accounting.validation import validate_financial_integrity
 from sable_harbor.core.database import (
@@ -144,6 +144,31 @@ def post(generation_run_id: str = typer.Option(...)) -> None:
     engine = build_engine()
     require_migrated_schema(engine)
     with session_for(engine) as session:
+        run = session.get(GenerationRun, generation_run_id)
+        if run is None:
+            typer.echo(f"Unknown generation run {generation_run_id!r}", err=True)
+            raise typer.Exit(code=1)
+        if run.status == "COMPLETED":
+            # `shfin generate` posts every journal it creates and then completes
+            # the run, so a completed run with no drafts has nothing left to post.
+            draft_count = session.scalar(
+                select(func.count(JournalEntry.id)).where(
+                    JournalEntry.generation_run_id == run.id,
+                    JournalEntry.state == EntryState.DRAFT,
+                )
+            )
+            if draft_count:
+                typer.echo(
+                    f"Completed generation run {generation_run_id} has {draft_count} draft "
+                    "entries; completed runs are immutable, use a new adjustment run",
+                    err=True,
+                )
+                raise typer.Exit(code=1)
+            typer.echo(
+                f"Generation run {generation_run_id} is already completed with all entries "
+                "posted; nothing to post"
+            )
+            return
         posted_count = post_draft_entries(session, generation_run_id)
         session.commit()
     typer.echo(f"Posted {posted_count} draft entries for generation run {generation_run_id}")
