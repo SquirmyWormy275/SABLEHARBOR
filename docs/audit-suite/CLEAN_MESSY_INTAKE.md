@@ -17,24 +17,43 @@ counts do not form one company population.
 
 ## Verify the files before import
 
-Pin the Git commit used for a test run. From the repository root, run:
+Pin the Git commit used for a test run. The verifier needs only Python 3.11 or
+newer and its standard library; no project dependencies are needed. From the
+repository root, run:
 
 ```sh
-python -m tools.audit_suite.company_record_delivery verify --root docs/audit-suite/company-records
-sha256sum docs/audit-suite/company-records/manifest.json
+python3 -m tools.audit_suite.company_record_delivery verify --root docs/audit-suite/company-records
 ```
 
-For the accepted 18 October 2026 edition, the manifest SHA-256 is
-`30cbdf23a68532e5026a87d0dddb06cd09242b87ea3a58d009b39aacddc629c7`.
-The verifier checks all 5,714 versions, their provenance and membership, and the
-5,709 exact-byte originals versus five documented routing-metadata derivatives.
+It prints one JSON line and exits with a non-zero status if anything differs.
+For the accepted 18 October 2026 edition, its `manifest_sha256` is
+`30cbdf23a68532e5026a87d0dddb06cd09242b87ea3a58d009b39aacddc629c7`, with
+`verified_source_versions` 5,714, `verified_source_systems` 922, `originals`
+5,709 and `derivatives` 5. The verifier checks every version, its provenance and
+membership, and the exact-byte originals versus the five documented
+routing-metadata derivatives.
 If a later accepted commit changes the manifest, use its own hash and verification
 result rather than silently treating it as this edition.
 
 ## Import one scenario
 
-Read `company-records/manifest.json`. For CLEAN, select records whose
-`history_id` is `history-01`; for MESSY, select `history-02`. Resolve each
+To get one scenario's records, verify and select in one step. Write the output
+outside `company-records/`, because any extra file there fails verification:
+
+```sh
+python3 -m tools.audit_suite.company_record_delivery select --root docs/audit-suite/company-records --scenario CLEAN --output clean-records.jsonl
+python3 -m tools.audit_suite.company_record_delivery select --root docs/audit-suite/company-records --scenario MESSY --output messy-records.jsonl
+```
+
+Each output line is one unchanged manifest record. The command refuses to write
+if the delivery fails verification or the output file already exists. It prints a
+summary to standard error: CLEAN is `history-01` with 2,793 records across 447
+systems, and MESSY is `history-02` with 2,921 records across 475 systems. Without
+`--output`, the records go to standard output.
+
+The selection is a convenience over the manifest. To read the manifest directly,
+open `company-records/manifest.json`. For CLEAN, select records whose
+`history_id` is `history-01`; for MESSY, select `history-02`. Either way, resolve each
 manifest `path` below `company-records/` and ingest the file's exact bytes with
 its `media_type`. Carry `company`, `branch`, `system`, `record` and `version` as
 the source identity. Carry `event_at`, `available_at` and `imported_at` as

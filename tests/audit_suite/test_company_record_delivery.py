@@ -69,3 +69,52 @@ def test_modified_delivery_is_rejected(tmp_path, mutation):
         manifest_path.write_text('{"schema":"ignored",' + manifest_path.read_text()[1:])
     with pytest.raises(ValueError):
         delivery.verify(consumer)
+
+
+@pytest.mark.parametrize(
+    ("scenario", "history_id", "branch", "records", "systems"),
+    [
+        ("CLEAN", "history-01", "HARBOR-OPERATIONS-A", 2793, 447),
+        ("MESSY", "history-02", "HARBOR-OPERATIONS-B", 2921, 475),
+    ],
+)
+def test_scenario_selection_returns_one_verified_history(
+    scenario, history_id, branch, records, systems
+):
+    summary, rows = delivery.select(PUBLIC, scenario)
+    assert summary == {
+        "scenario": scenario,
+        "history_id": history_id,
+        "branch": branch,
+        "records": records,
+        "systems": systems,
+        "provenance": f"{history_id}/provenance.jsonl",
+        "manifest_sha256": "30cbdf23a68532e5026a87d0dddb06cd09242b87ea3a58d009b39aacddc629c7",
+    }
+    manifest = json.loads((PUBLIC / "manifest.json").read_text())
+    assert rows == [row for row in manifest["records"] if row["history_id"] == history_id]
+
+
+def test_standalone_scenario_selection_writes_json_lines(tmp_path):
+    consumer = tmp_path / "company-records"
+    shutil.copytree(PUBLIC, consumer)
+    tool = tmp_path / "verify.py"
+    shutil.copy2(Path(delivery.__file__), tool)
+    output = tmp_path / "messy.jsonl"
+    command = [sys.executable, "-I", str(tool), "select", "--root", str(consumer)]
+    completed = subprocess.run(
+        [*command, "--scenario", "MESSY", "--output", str(output)],
+        cwd=tmp_path,
+        capture_output=True,
+        text=True,
+        check=True,
+    )
+    assert json.loads(completed.stderr)["records"] == 2921
+    rows = [json.loads(line) for line in output.read_text().splitlines()]
+    assert len(rows) == 2921 and {row["history_id"] for row in rows} == {"history-02"}
+    (consumer / "unexpected.json").write_text("{}")
+    refused = subprocess.run(
+        [*command, "--scenario", "CLEAN"], cwd=tmp_path, capture_output=True, text=True
+    )
+    assert refused.returncode != 0 and refused.stdout == ""
+    assert "Delivery membership differs" in refused.stderr
