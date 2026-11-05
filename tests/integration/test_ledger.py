@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import UTC, date, datetime, time
 from decimal import Decimal
 
 import pytest
@@ -9,6 +9,7 @@ from sable_harbor.accounting.ledger import (
     LedgerError,
     close_period,
     post_entry,
+    posting_timestamp,
     reverse_entry,
     trial_balance,
 )
@@ -154,6 +155,19 @@ def test_posted_entry_is_immutable_and_reversal_nets_to_zero() -> None:
         balances = trial_balance(session, book_id)
         assert sum(row[1] - row[2] for row in balances) == Decimal("0.0000")
         assert all(row[1] == row[2] for row in balances)
+
+
+def test_posted_at_is_derived_from_entry_date_not_wall_clock() -> None:
+    engine = create_engine("sqlite:///:memory:")
+    Base.metadata.create_all(engine)
+    with Session(engine) as session:
+        seed_smoke(session)
+        session.commit()
+        entry = session.query(JournalEntry).one()
+        assert entry.state is EntryState.POSTED
+        assert entry.posted_at is not None
+        assert entry.posted_at.replace(tzinfo=None) == datetime.combine(entry.entry_date, time.min)
+        assert posting_timestamp(date(2026, 8, 1)) == datetime(2026, 8, 1, tzinfo=UTC)
 
 
 def test_closed_period_rejects_new_posting() -> None:

@@ -88,7 +88,7 @@ def test_six_workbooks_reopen_have_required_sheets_and_clean_links(tmp_path: Pat
         ]
         assert formulas
         assert all("#REF!" not in formula for formula in formulas)
-        assert any("ABS(" in formula and "<=0.01" in formula for formula in formulas)
+        assert any("ABS(" in formula and "<=0.0001" in formula for formula in formulas)
         for sheet_name, headers in expected_headers.items():
             if sheet_name not in workbook.sheetnames:
                 continue

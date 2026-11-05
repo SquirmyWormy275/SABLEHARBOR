@@ -106,33 +106,32 @@ def monthly_statements(session: Session, generation_run_id: str) -> list[Monthly
         period_ends[period] = max(period_ends.get(period, entry_date), entry_date)
 
     balances: dict[str, Decimal] = defaultdict(Decimal)
+    account_classes: dict[str, str] = {}
     prior_cash = Decimal(0)
     output: list[MonthlyStatement] = []
+
+    def class_total(*classes: str) -> Decimal:
+        return sum(
+            (amount for code, amount in balances.items() if account_classes.get(code) in classes),
+            Decimal(0),
+        )
+
     for period in sorted(monthly_activity):
         period_revenue = Decimal(0)
         period_expenses = Decimal(0)
         for code, account_class, amount in monthly_activity[period]:
             balances[code] += amount
+            account_classes[code] = account_class
             if account_class == "REVENUE":
                 period_revenue -= amount
             elif account_class in {"EXPENSE", "OTHER_EXPENSE"}:
                 period_expenses += amount
-        assets = sum(
-            (amount for code, amount in balances.items() if code.startswith("1")), Decimal(0)
-        )
-        liabilities = -sum(
-            (amount for code, amount in balances.items() if code.startswith("2")), Decimal(0)
-        )
-        contributed_equity = -sum(
-            (amount for code, amount in balances.items() if code.startswith("3")), Decimal(0)
-        )
-        cumulative_revenue = -sum(
-            (amount for code, amount in balances.items() if code.startswith("4")), Decimal(0)
-        )
-        cumulative_expenses = sum(
-            (amount for code, amount in balances.items() if code.startswith(("5", "6", "7"))),
-            Decimal(0),
-        )
+        # Classify balances by account_class, exactly as statement_snapshot does.
+        assets = class_total("ASSET")
+        liabilities = -class_total("LIABILITY")
+        contributed_equity = -class_total("EQUITY")
+        cumulative_revenue = -class_total("REVENUE")
+        cumulative_expenses = class_total("EXPENSE", "OTHER_EXPENSE")
         equity = contributed_equity + cumulative_revenue - cumulative_expenses
         cash = balances["1000"]
         output.append(
