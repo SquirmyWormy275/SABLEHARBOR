@@ -107,11 +107,13 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # #227 without a catalog rebuild) and refreshes the stale LOCAL_RECOVERY
     # 2026-10-20 and LOCAL_WORKSPACE rows. All institutional, publication,
     # relationship, counterpart and evidence tables remain exact-equal; SQLite
-    # quick_check and foreign keys pass.
+    # quick_check and foreign keys pass. November 5: rebuilt after merging the
+    # intake-path catalog with the checkout workspace guide (LOCAL_WORKSPACE.md,
+    # audit_suite_web/README.md) row refresh.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        16541696,
-        "5e156f964e9e73de5afebe7a474ef31fa818cd826034f23f28149e638aceb90d",
+        16547840,
+        "3552357bbc9c3709c99eaa83929640a06edf7f06576c9e42368da4b28330704f",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.
