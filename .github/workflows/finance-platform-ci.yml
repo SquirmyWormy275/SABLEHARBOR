@@ -11,7 +11,7 @@ permissions:
 jobs:
   tests:
     name: Finance tests / shard ${{ matrix.shard }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # ubuntu-26.04 apparmor-profiles drops extra-profiles/bwrap-userns-restrict
     strategy:
       fail-fast: false
       matrix:
