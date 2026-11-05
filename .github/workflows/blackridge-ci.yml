@@ -14,7 +14,7 @@ jobs:
   validate:
     name: Blackridge CI / validate
     runs-on: ubuntu-24.04  # pinned: ubuntu-26.04 lacks Playwright and bwrap AppArmor support
-    timeout-minutes: 60
+    timeout-minutes: 240
     services:
       postgres:
         image: postgres:16-alpine

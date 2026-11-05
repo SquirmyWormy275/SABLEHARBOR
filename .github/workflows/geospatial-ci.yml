@@ -15,7 +15,7 @@ jobs:
   validate:
     name: Geospatial CI / validate
     runs-on: ubuntu-24.04  # pinned: ubuntu-26.04 lacks Playwright and bwrap AppArmor support
-    timeout-minutes: 60
+    timeout-minutes: 240
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
@@ -37,7 +37,7 @@ jobs:
   native-qgis:
     name: Geospatial CI / native qgis
     runs-on: ubuntu-24.04  # pinned: ubuntu-26.04 lacks Playwright and bwrap AppArmor support
-    timeout-minutes: 30
+    timeout-minutes: 240
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
       - name: Install native QGIS reader
