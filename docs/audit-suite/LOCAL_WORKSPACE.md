@@ -39,8 +39,9 @@ use another private directory):
   credentials in `var/audit-workspace/credentials/<mode>-<role>.json`, for example
   `clean-auditor.json`. Paste the file's `credential` value into the sign-in form,
   or send it as `Authorization: Bearer <credential>` to the HTTP API. Credentials
-  last 30 days; `make audit-workspace-credentials` revokes them and issues new ones
-  with the same access.
+  last 30 days; `make audit-workspace-credentials` replaces each credential on the
+  same role identity, so access, saved drafts and history are kept. The previous
+  credentials and their sign-in sessions stop working immediately.
 
 `make audit-workspace-status`, `make audit-workspace-stop` and
 `make audit-workspace-restart` manage the two servers. Stopping and restarting

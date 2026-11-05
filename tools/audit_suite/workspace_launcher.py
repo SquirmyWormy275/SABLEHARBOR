@@ -240,27 +240,54 @@ def setup_mode(root: Path, mode: str, lifetime_hours: int) -> dict:
     return summary
 
 
+def rotate_credential(store, principal_id: str, lifetime: int) -> str:
+    """Replace one principal's credential in place, keeping its identity.
+
+    Drafts, memberships and company grants are keyed by principal ID, so the
+    identity must survive renewal. The previous credential and every session
+    it opened stop working immediately.
+    """
+    import secrets
+
+    if not 60 <= lifetime <= 86400 * 30:
+        raise LauncherError("Credential lifetime outside permitted range")
+    key = secrets.token_urlsafe(32)
+    with store.connect() as db:
+        updated = db.execute(
+            "UPDATE principals SET token_hash=?, expires=?, revoked=0 WHERE id=?",
+            (store._key_hash(key), time.time() + lifetime, principal_id),
+        ).rowcount
+        if updated != 1:
+            raise LauncherError(f"Principal {principal_id} is missing; run setup again")
+        db.execute("DELETE FROM sessions WHERE principal=?", (principal_id,))
+    return key
+
+
 def reissue_credentials(root: Path, lifetime_hours: int) -> dict:
-    """Revoke the previous role principals and issue new ones with the same grants."""
+    """Rotate each role's credential on its existing principal identity."""
     from enterprise.audit_suite.engine import Engine
 
     issued = {}
+    credentials = private_directory(root / "credentials")
     for mode in MODES:
         paths = mode_paths(root, mode)
         if not paths["workspace"].exists():
             raise LauncherError(f"Run setup first; {paths['workspace']} is missing")
         summary = json.loads(paths["workspace"].read_text())
         engine = Engine(paths["state"], company_root=paths["company"])
-        systems = [s["system"] for s in history_records(summary["history"])[1]]
-        bound = {"company": summary["company"], "branch": summary["branch"]}
-        for principal in summary["principals"].values():
-            engine.store.revoke(principal)
-        principals = issue_principals(
-            engine, root, mode, lifetime_hours * 3600, summary["engagement_id"], systems, bound
-        )
-        summary["principals"] = {name: value["id"] for name, value in principals.items()}
-        write_private_json(paths["workspace"], summary)
-        issued[mode] = sorted(principals)
+        for name, principal_id in summary["principals"].items():
+            role = ROLES[name][0]
+            key = rotate_credential(engine.store, principal_id, lifetime_hours * 3600)
+            write_private_json(
+                credentials / f"{mode.lower()}-{name}.json",
+                {
+                    "id": principal_id,
+                    "name": f"{mode.title()} {name}",
+                    "roles": [role],
+                    "credential": key,
+                },
+            )
+        issued[mode] = sorted(summary["principals"])
     return issued
 
 

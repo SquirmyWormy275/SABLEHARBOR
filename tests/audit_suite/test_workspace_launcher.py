@@ -136,8 +136,16 @@ def test_reissued_credentials_revoke_previous_roles(tmp_path, small_history):
     launcher.private_directory(root)
     summary = launcher.setup_mode(root, "CLEAN", 1)
     paths = launcher.mode_paths(root, "CLEAN")
-    previous = json.loads((root / "credentials/clean-auditor.json").read_text())["credential"]
+    before = json.loads((root / "credentials/clean-auditor.json").read_text())
+    previous = before["credential"]
+    old_client, old_login = client_for(root, "auditor", paths)
+    assert old_login.status_code == 200
     assert launcher.reissue_credentials(root, 1) == {"CLEAN": sorted(launcher.ROLES)}
+    after = json.loads((root / "credentials/clean-auditor.json").read_text())
+    # Renewal keeps the identity that drafts, memberships and grants are keyed by.
+    assert after["id"] == before["id"] == summary["principals"]["auditor"]
+    assert after["credential"] != previous
+    assert old_client.get("/api/bootstrap").status_code == 401
     client, login = client_for(root, "auditor", paths)
     assert login.status_code == 200
     listing = client.get("/api/bootstrap").json()["engagements"]
