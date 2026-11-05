@@ -26,7 +26,7 @@ concurrency:
 jobs:
   validate:
     name: Service Operating Model / validate
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # ubuntu-26.04 apparmor-profiles drops extra-profiles/bwrap-userns-restrict
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
