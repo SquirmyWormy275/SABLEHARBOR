@@ -13,9 +13,10 @@ from enterprise.audit_suite.source_library_audit import typed_content
 from tests.audit_suite import test_company_operating_depth_runtime as prior_depth
 from tests.audit_suite import test_company_operating_source_edition as prior_edition
 
-OLD_ROWS = Path(
-    "/home/kingoftheeast/SABLEHARBOR-source-edition-publication-integration-review-20261003/"
-    "depth-observation-filename-counter-v1/EXACT_NATIVE_OBSERVATION_ROWS.json"
+OLD_ROWS = (
+    Path.home()
+    / "SABLEHARBOR-source-edition-publication-integration-review-20261003"
+    / "depth-observation-filename-counter-v1/EXACT_NATIVE_OBSERVATION_ROWS.json"
 )
 OLD_ROWS_SHA = "9e523ad063dfef3bbe1fc69bf338972be37f81aaed031163cc058542320ef437"
 

@@ -1,13 +1,14 @@
 // One bounded navigation mechanism: declared metadata, no source/Key inputs.
 import { mkdir, writeFile } from "node:fs/promises";
-import { resolve, join } from "node:path";
+import { isAbsolute, join, resolve, sep } from "node:path";
+import { homedir } from "node:os";
 import { build } from "esbuild";
 import { chromium } from "@playwright/test";
 import assert from "node:assert/strict";
 
 const out = process.env.CROSSWALK_BROWSER_OUTPUT;
 const expectReset = process.env.CROSSWALK_CONTEXT_EXPECT === "reset";
-assert.ok(out?.startsWith("/home/kingoftheeast/"));
+assert.ok(out && isAbsolute(out) && resolve(out).startsWith(homedir() + sep));
 await mkdir(out, { mode: 0o700 });
 const repo = resolve(import.meta.dirname, "..");
 const code = `import React from 'react';import {createRoot} from 'react-dom/client';

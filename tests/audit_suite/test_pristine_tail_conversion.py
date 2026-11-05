@@ -26,7 +26,7 @@ REPO = Path(__file__).resolve().parents[2]
 PRODUCER = Path(
     os.environ.get(
         "SABLEHARBOR_HISTORICAL_PRODUCER",
-        "/home/kingoftheeast/Projects/SABLEHARBOR-retained-preexpiry-delegation-wt",
+        str(Path.home() / "Projects/SABLEHARBOR-retained-preexpiry-delegation-wt"),
     )
 )
 PRODUCER_CODE = r"""
