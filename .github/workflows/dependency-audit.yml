@@ -6,6 +6,9 @@ on:
       - uv.lock
       - '**/*requirements*.txt'
       - .github/workflows/dependency-audit.yml
+  schedule:
+    # Weekly, Monday 06:23 UTC: catch advisories published against unchanged locks.
+    - cron: "23 6 * * 1"
   workflow_dispatch:
 permissions:
   contents: read
