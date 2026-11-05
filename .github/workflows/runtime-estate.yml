@@ -14,16 +14,19 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   reconcile:
     name: Runtime Estate / reconcile
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # pinned: ubuntu-26.04 lacks Playwright and bwrap AppArmor support
     timeout-minutes: 45
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
           fetch-depth: 0
-      - uses: astral-sh/setup-uv@v6
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6.8.0
         with:
           version: '0.12.4'
           python-version: '3.12'
@@ -39,7 +42,7 @@ jobs:
           cp enterprise/generated/runtime-v1/manifest.json /tmp/runtime-first-manifest.json
           uv run python -m enterprise.runtime.build_finance
           diff -u /tmp/runtime-first-manifest.json enterprise/generated/runtime-v1/manifest.json
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: runtime-estate-financial-evidence
           path: |

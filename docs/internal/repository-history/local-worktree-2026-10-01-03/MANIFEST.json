@@ -14,35 +14,35 @@
       "independent_seagate_member_copies": [
         {
           "archive_disposition_at_intake": "PENDING_PRIVATE_PR_20_RELEASE_AND_FRESH_RETRIEVAL",
-          "archive_path": "/run/media/kingoftheeast/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_COMPRESSED_BACKUPS_20261004/C01-SABLEHARBOR-retained-one-pass-integrity-wt-COMPLETE-CHECKOUT-20261003.tar.zst",
+          "archive_path": "<external-drive>/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_COMPRESSED_BACKUPS_20261004/C01-SABLEHARBOR-retained-one-pass-integrity-wt-COMPLETE-CHECKOUT-20261003.tar.zst",
           "archive_sha256": "1bf67544253f73f2e4b6c6669a7bd6d8e8e17b83da700e14755759f83f5a0efc",
           "basis": "stream_verified_exact_tree_manifest",
           "member_path": ".gitignore"
         },
         {
           "archive_disposition_at_intake": "PENDING_PRIVATE_PR_20_RELEASE_AND_FRESH_RETRIEVAL",
-          "archive_path": "/run/media/kingoftheeast/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_COMPRESSED_BACKUPS_20261004/C02-SABLEHARBOR-retained-one-pass-store-safe-wt-COMPLETE-CHECKOUT-20261003.tar.zst",
+          "archive_path": "<external-drive>/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_COMPRESSED_BACKUPS_20261004/C02-SABLEHARBOR-retained-one-pass-store-safe-wt-COMPLETE-CHECKOUT-20261003.tar.zst",
           "archive_sha256": "a26883de1f32076e7572f311a98ad60277e8885658c59e097a3f449c6d3f630e",
           "basis": "stream_verified_exact_tree_manifest",
           "member_path": ".gitignore"
         },
         {
           "archive_disposition_at_intake": "PENDING_PRIVATE_PR_20_RELEASE_AND_FRESH_RETRIEVAL",
-          "archive_path": "/run/media/kingoftheeast/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_COMPRESSED_BACKUPS_20261004/C03-SABLEHARBOR-retained-integrity-digest-wt-COMPLETE-CHECKOUT-20261003.tar.zst",
+          "archive_path": "<external-drive>/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_COMPRESSED_BACKUPS_20261004/C03-SABLEHARBOR-retained-integrity-digest-wt-COMPLETE-CHECKOUT-20261003.tar.zst",
           "archive_sha256": "ec900bf14add229968efd7cfc769dde89028cdf28b8b7209b5165db9de159feb",
           "basis": "stream_verified_exact_tree_manifest",
           "member_path": ".gitignore"
         },
         {
           "archive_disposition_at_intake": "PENDING_PRIVATE_PR_20_RELEASE_AND_FRESH_RETRIEVAL",
-          "archive_path": "/run/media/kingoftheeast/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_COMPRESSED_BACKUPS_20261004/C04-SABLEHARBOR-retained-canonical-projection-wt-COMPLETE-CHECKOUT-20261003.tar.zst",
+          "archive_path": "<external-drive>/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_COMPRESSED_BACKUPS_20261004/C04-SABLEHARBOR-retained-canonical-projection-wt-COMPLETE-CHECKOUT-20261003.tar.zst",
           "archive_sha256": "3d1b7b4248e692357d6ab594cb01078980312ad70fc3818c187532009c91ec57",
           "basis": "stream_verified_exact_tree_manifest",
           "member_path": ".gitignore"
         },
         {
           "archive_disposition_at_intake": "PENDING_PRIVATE_PR_20_RELEASE_AND_FRESH_RETRIEVAL",
-          "archive_path": "/run/media/kingoftheeast/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_COMPRESSED_BACKUPS_20261004/C01-SABLEHARBOR-retained-one-pass-integrity-wt-COMPLETE-CHECKOUT-20261003.tar.zst",
+          "archive_path": "<external-drive>/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_COMPRESSED_BACKUPS_20261004/C01-SABLEHARBOR-retained-one-pass-integrity-wt-COMPLETE-CHECKOUT-20261003.tar.zst",
           "archive_sha256": "1bf67544253f73f2e4b6c6669a7bd6d8e8e17b83da700e14755759f83f5a0efc",
           "basis": "stream_verified_member_or_declared_hash",
           "member_path": ".gitignore"
@@ -71,35 +71,35 @@
       "independent_seagate_member_copies": [
         {
           "archive_disposition_at_intake": "UNRESOLVED_GIT_COMMON_HISTORY_AND_WORKTREE_METADATA",
-          "archive_path": "/run/media/kingoftheeast/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_COMPRESSED_BACKUPS_20261004/CURRENT-COMMON-GIT-AFTER-1d3e2b6f-b3e905d5-SUCCESSOR-20261003.tar.zst",
+          "archive_path": "<external-drive>/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_COMPRESSED_BACKUPS_20261004/CURRENT-COMMON-GIT-AFTER-1d3e2b6f-b3e905d5-SUCCESSOR-20261003.tar.zst",
           "archive_sha256": "9ee0a3a6657caf0c6d3ce0a34cf0db46b2776c3a713fd84b122513526f28665f",
           "basis": "stream_verified_exact_tree_manifest",
           "member_path": "rr-cache/337e0618ee04e1d40bc44aab3c214c94ad81319c/postimage"
         },
         {
           "archive_disposition_at_intake": "UNRESOLVED_GIT_COMMON_HISTORY_AND_WORKTREE_METADATA",
-          "archive_path": "/run/media/kingoftheeast/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_COMPRESSED_BACKUPS_20261004/SABLEHARBOR-COMMON-GIT-FULL-QUIESCENT-20261003.tar.zst",
+          "archive_path": "<external-drive>/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_COMPRESSED_BACKUPS_20261004/SABLEHARBOR-COMMON-GIT-FULL-QUIESCENT-20261003.tar.zst",
           "archive_sha256": "a61e6a2d2fc7fe61fc48bafb8c68c032175dcad3c70ca703b1594de9d6ee7080",
           "basis": "stream_verified_exact_tree_manifest",
           "member_path": "rr-cache/337e0618ee04e1d40bc44aab3c214c94ad81319c/postimage"
         },
         {
           "archive_disposition_at_intake": "UNRESOLVED_GIT_FINAL_CANONICAL_ARCHIVE_UNIQUE_REFS_AND_WORKTREE_METADATA",
-          "archive_path": "/run/media/kingoftheeast/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_FINAL_PRESERVATION_20261004/FINAL_MAIN_CANONICAL_GIT_20261007.tar.zst",
+          "archive_path": "<external-drive>/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_FINAL_PRESERVATION_20261004/FINAL_MAIN_CANONICAL_GIT_20261007.tar.zst",
           "archive_sha256": "7d548a8093391fb22aacdc1c3b0765a256038fc639694948d95513f9e57d7e9a",
           "basis": "stream_verified_exact_tree_manifest",
           "member_path": "rr-cache/337e0618ee04e1d40bc44aab3c214c94ad81319c/postimage"
         },
         {
           "archive_disposition_at_intake": "UNRESOLVED_GIT_COMMON_HISTORY_AND_WORKTREE_METADATA",
-          "archive_path": "/run/media/kingoftheeast/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_COMPRESSED_BACKUPS_20261004/CURRENT-COMMON-GIT-AFTER-1d3e2b6f-b3e905d5-SUCCESSOR-20261003.tar.zst",
+          "archive_path": "<external-drive>/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_COMPRESSED_BACKUPS_20261004/CURRENT-COMMON-GIT-AFTER-1d3e2b6f-b3e905d5-SUCCESSOR-20261003.tar.zst",
           "archive_sha256": "9ee0a3a6657caf0c6d3ce0a34cf0db46b2776c3a713fd84b122513526f28665f",
           "basis": "stream_verified_member_or_declared_hash",
           "member_path": "rr-cache/337e0618ee04e1d40bc44aab3c214c94ad81319c/postimage"
         },
         {
           "archive_disposition_at_intake": "UNRESOLVED_GIT_COMMON_HISTORY_AND_WORKTREE_METADATA",
-          "archive_path": "/run/media/kingoftheeast/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_COMPRESSED_BACKUPS_20261004/SABLEHARBOR-COMMON-GIT-FULL-QUIESCENT-20261003.tar.zst",
+          "archive_path": "<external-drive>/Seagate Portable Drive/SABLEHARBOR-verified-recovery-20261002/PLAIN_COMPRESSED_BACKUPS_20261004/SABLEHARBOR-COMMON-GIT-FULL-QUIESCENT-20261003.tar.zst",
           "archive_sha256": "a61e6a2d2fc7fe61fc48bafb8c68c032175dcad3c70ca703b1594de9d6ee7080",
           "basis": "stream_verified_member_or_declared_hash",
           "member_path": "rr-cache/337e0618ee04e1d40bc44aab3c214c94ad81319c/postimage"

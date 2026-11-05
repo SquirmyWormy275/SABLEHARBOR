@@ -30,13 +30,18 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   validate:
     name: CCF preparation / validate
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # pinned: ubuntu-26.04 lacks Playwright and bwrap AppArmor support
+    timeout-minutes: 240
     steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4, resolved 2026-09-22
-      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6, resolved 2026-09-22
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6.8.0
         with:
           version: '0.7.13'
       - run: uv sync --frozen --all-extras
@@ -52,7 +57,7 @@ jobs:
           diff -qr "$RUNNER_TEMP/ccf-first" "$RUNNER_TEMP/ccf-second"
           uv run python -m enterprise.ccf verify --output "$RUNNER_TEMP/ccf-first"
           git diff --exit-code
-      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4, resolved 2026-09-22
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: ccf-preparation-v0.1.0
           path: ${{ runner.temp }}/ccf-first
@@ -66,12 +71,12 @@ jobs:
           uv run python -m enterprise.ccf.assurance starter --output "$RUNNER_TEMP/assurance-starter"
           uv run python -m enterprise.ccf.assurance verify --output "$RUNNER_TEMP/assurance-starter"
           git diff --exit-code
-      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4, resolved 2026-09-22
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: ccf-assurance-synthetic-v0.2.0
           path: ${{ runner.temp }}/assurance-first
           if-no-files-found: error
-      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4, resolved 2026-09-22
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: ccf-assurance-source-queue-v0.2.0
           path: ${{ runner.temp }}/assurance-starter

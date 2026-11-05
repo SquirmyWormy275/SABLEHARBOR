@@ -53,15 +53,20 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
   tests:
     name: Business operations / tests
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # pinned: ubuntu-26.04 lacks Playwright and bwrap AppArmor support
+    timeout-minutes: 240
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
-      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d
+      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
         with:
           version: "0.12.4"
           python-version: "3.12"
@@ -70,24 +75,24 @@ jobs:
 
   build:
     name: Business operations / independent build ${{ matrix.copy }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # pinned: ubuntu-26.04 lacks Playwright and bwrap AppArmor support
     timeout-minutes: 45
     strategy:
       fail-fast: false
       matrix:
         copy: [1, 2]
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
-      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d
+      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
         with:
           version: "0.12.4"
           python-version: "3.12"
       - run: uv sync --frozen --all-extras
       - name: Build operating and financial evidence
         run: time uv run python -m enterprise.operations.build
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: business-operations-build-${{ matrix.copy }}
           path: enterprise/dist/operations-v1.0.0/
@@ -96,7 +101,8 @@ jobs:
   reconcile:
     name: Business Operations CI / reconcile
     needs: [tests, build]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # pinned: ubuntu-26.04 lacks Playwright and bwrap AppArmor support
+    timeout-minutes: 240
     permissions:
       contents: read
       actions: read
@@ -110,7 +116,7 @@ jobs:
           (cd /tmp/operations-first && sha256sum --check SHA256SUMS.txt)
           (cd /tmp/operations-second && sha256sum --check SHA256SUMS.txt)
           diff -qr /tmp/operations-first /tmp/operations-second
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: business-operations-v1-review
           path: /tmp/operations-first/
@@ -120,12 +126,13 @@ jobs:
     name: Business Operations CI / publish
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: reconcile
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # pinned: ubuntu-26.04 lacks Playwright and bwrap AppArmor support
+    timeout-minutes: 240
     permissions:
       contents: write
       actions: read
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Download exact checked artifact
         env:
           GH_TOKEN: ${{ github.token }}
