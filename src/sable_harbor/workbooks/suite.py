@@ -523,7 +523,9 @@ def _build_workbook_suite(
             JournalEntry.generation_run_id.in_(context.included_run_ids),
         )
     ).one()
-    controls = [
+    # Values are SQL scalars (Decimal sums, integer counts); SQLAlchemy 2.1 types
+    # session.scalar() precisely, so the mixed list would otherwise infer object.
+    controls: list[tuple[str, Any, bool]] = [
         ("Journal debit-credit difference", (debit or Decimal(0)) - (credit or Decimal(0)), True),
         (
             "Accounts loaded",

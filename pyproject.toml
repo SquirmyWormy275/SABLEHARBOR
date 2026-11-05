@@ -22,7 +22,7 @@ dev = [
   "PyMuPDF==1.26.7",
   "pypdf==6.21.4",
   "markdown-it-py==4.2.0",
-  "mypy>=1.11,<2",
+  "mypy>=1.11,<3",
   "openpyxl>=3.1,<4",
   "pytest>=9.0.3,<10",
   "ruff>=0.6,<1",
