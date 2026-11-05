@@ -29,4 +29,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           GEO_TAG=$(python -c "import json; print(json.load(open('geospatial/releases/version.json'))['tag'])")
-          gh release create "$GEO_TAG" --target "$GITHUB_SHA" --prerelease --title "Sable Harbor geospatial v0.1.0-rc4" --notes-file geospatial/releases/RELEASE_NOTES_rc4.md geospatial/dist/sable-harbor-geospatial-v0.1.0-rc4.zip geospatial/dist/MANIFEST.json geospatial/dist/SHA256SUMS.txt
+          GEO_VERSION=$(python -c "import json; print(json.load(open('geospatial/releases/version.json'))['version'])")
+          GEO_ZIP="geospatial/dist/sable-harbor-geospatial-v${GEO_VERSION}.zip"
+          GEO_NOTES="geospatial/releases/RELEASE_NOTES_${GEO_VERSION#*-}.md"
+          test -f "$GEO_ZIP" || { echo "::error::missing release archive $GEO_ZIP"; exit 1; }
+          test -f "$GEO_NOTES" || { echo "::error::missing release notes $GEO_NOTES"; exit 1; }
+          gh release create "$GEO_TAG" --target "$GITHUB_SHA" --prerelease --title "Sable Harbor geospatial v${GEO_VERSION}" --notes-file "$GEO_NOTES" "$GEO_ZIP" geospatial/dist/MANIFEST.json geospatial/dist/SHA256SUMS.txt
