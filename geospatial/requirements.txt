@@ -7,6 +7,6 @@ numpy==2.3.5
 pypdf==6.21.4
 Pillow==13.0.0
 pytest==9.0.3
-scipy==1.17.0
+scipy==1.17.1
 rasterio==1.4.3
 jsonschema==4.26.0
