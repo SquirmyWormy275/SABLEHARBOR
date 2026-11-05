@@ -17,7 +17,10 @@ from sable_harbor.accounting.models import (
     JournalLine,
     ScenarioValue,
 )
-from sable_harbor.accounting.validation import validate_financial_integrity
+from sable_harbor.accounting.validation import (
+    ZERO_DIFFERENCE_TOLERANCE,
+    validate_financial_integrity,
+)
 from sable_harbor.exports.metadata import (
     REPOSITORY_ROOT,
     file_sha256,
@@ -521,7 +524,7 @@ def _build_workbook_suite(
         )
     ).one()
     controls = [
-        ("Journal debit-credit difference", float((debit or 0) - (credit or 0)), True),
+        ("Journal debit-credit difference", (debit or Decimal(0)) - (credit or Decimal(0)), True),
         (
             "Accounts loaded",
             session.scalar(
@@ -606,12 +609,15 @@ def _build_workbook_suite(
                 for row_index, (control_name, value, zero_tolerance) in enumerate(
                     controls, start=8
                 ):
-                    passed = abs(float(value)) <= 0.01 if zero_tolerance else float(value) > 0
+                    amount = Decimal(value)
+                    passed = (
+                        abs(amount) <= ZERO_DIFFERENCE_TOLERANCE if zero_tolerance else amount > 0
+                    )
                     sheet.write(row_index, 0, control_name)
-                    sheet.write_number(row_index, 1, float(value), money)
+                    sheet.write_number(row_index, 1, float(amount), money)
                     excel_row = row_index + 1
                     formula = (
-                        f'=IF(ABS(B{excel_row})<=0.01,"PASS","FAIL")'
+                        f'=IF(ABS(B{excel_row})<={ZERO_DIFFERENCE_TOLERANCE},"PASS","FAIL")'
                         if zero_tolerance
                         else f'=IF(B{excel_row}>0,"PASS","FAIL")'
                     )
