@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import hashlib
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -147,6 +148,108 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
 }
 
 
+# Local workstation paths (``/home/<name>/``, ``/media/<name>/``,
+# ``/run/media/<name>/``, ``/Users/<name>/``, ``C:\\Users\\``) must not leak
+# into public files. Neutral placeholders such as ``<local-checkout>/`` are
+# preferred; the generic account names below are accepted as placeholders.
+LOCAL_PATH_PATTERN = re.compile(
+    r"(?<![\w.\-])(?:/run)?/media/(?P<media>\w[\w.\-]*)/"
+    r"|(?<![\w.\-])/(?:home|Users)/(?P<home>\w[\w.\-]*)/"
+    r"|[A-Za-z]:\\{1,2}Users\\{1,2}"
+)
+LOCAL_PATH_PLACEHOLDER_NAMES = frozenset(
+    {
+        "operator",  # documentation placeholder
+        "runner",  # GitHub Actions hosted runner home
+        "user",
+        "username",
+        "example",
+        "private",  # synthetic leak fixture in tests/integration/test_release_package.py
+    }
+)
+LOCAL_PATH_ALLOWLIST = frozenset(
+    {
+        # Hash-pinned preserved evidence. Each file's exact SHA-256 is recorded
+        # in another manifest, receipt, register or the institutional catalog,
+        # so editing it would break those integrity chains. Do not add new
+        # entries for editable files; scrub the path instead.
+        "docs/audit/ISSUE_CLOSEOUT_2026-09-12.md",
+        "docs/internal/company-closeout/evidence/dependency-remediation-2026-09-22/pytest.txt",
+        "docs/internal/company-closeout/evidence/integration-f5e919e7/company-reperformance-f5e919e7.json",
+        "docs/internal/company-closeout/evidence/integration-f5e919e7/pytest-f5e919e7.txt",
+        "docs/internal/company-closeout/evidence/portal-edition-f5e919e7/RECEIPT.json",
+        "docs/internal/company-closeout/evidence/portal-edition-f5e919e7/SELECTED_REVIEW_PLAN.json",
+        "docs/internal/company-closeout/evidence/portal-edition-f5e919e7/SELECTED_REVIEW_RECEIPT.json",
+        "docs/internal/company-closeout/evidence/portal-neutral-2026-09-22/pytest.log",
+        "docs/internal/company-closeout/evidence/portal-neutral-2026-09-22/receipt.json",
+        "docs/internal/company-closeout/evidence/portal-selected-fixture-2026-09-22/RECEIPT.json",
+        "docs/internal/company-closeout/evidence/portal-selected-fixture-2026-09-22/initial-incomplete-snapshot.log",
+        "docs/internal/company-closeout/validation/pytest-working-693b20ec.txt",
+        "docs/internal/development/audit-suite/COMPANY_OPERATIONAL_PROJECTION_2026-10-01.md",
+        "docs/internal/institutional_catalog.sqlite3",
+        "docs/legal/gap-instruments/case-briefs/qa/cold-start/evidence-proposal/PROPOSAL.original.txt",
+        "docs/legal/gap-instruments/case-briefs/qa/cold-start/history-before-context-refresh/evidence-proposal/PROPOSAL.original.txt",
+        "docs/legal/gap-instruments/case-briefs/qa/cold-start/history-before-context-refresh/manifest.json",
+        "docs/legal/gap-instruments/case-briefs/qa/cold-start/history-before-context-refresh/manifest.original.json",
+        "docs/legal/gap-instruments/case-briefs/qa/cold-start/manifest.json",
+        "docs/legal/gap-instruments/case-briefs/qa/cold-start/manifest.original.json",
+        "docs/legal/gap-instruments/qa/REVIEW_FACILITIES.txt",
+        "docs/legal/gap-instruments/review-support/qa/v4.2/full-pytest.log",
+        "docs/legal/gap-instruments/review-support/qa/v4.3/full-pytest.log",
+        "docs/legal/gap-instruments/review-support/qa/v4.3/integrated-pre-fix-tests.log",
+        "docs/legal/gap-instruments/review-support/qa/v4/full-pytest.log",
+        "enterprise/audit_suite/COMPANY_SUPPLEMENTAL_OPERATIONS_2027_2026-10-01.md",
+        "enterprise/audit_suite/FICTIONAL_2027_ASSURANCE_OPERATIONS.md",
+        "enterprise/audit_suite/FICTIONAL_2027_DAT002_PRIVACY_OPERATIONS.md",
+        "enterprise/audit_suite/FICTIONAL_2027_PARTIAL_PORTFOLIO_V2.md",
+        "enterprise/audit_suite/FICTIONAL_2027_SOURCE_PORTFOLIO_DIAGNOSTIC.md",
+        "enterprise/audit_suite/FRESH_SEC003_EXECUTION_2026-10-01.md",
+        "enterprise/audit_suite/LEG001_TRIGGER_SCREENING_2027_IMPLEMENTATION.md",
+        "geospatial/facilities/qa/repo-validation/build-results.json",
+        "geospatial/facilities/qa/repo-validation/extra-results.json",
+        "geospatial/facilities/qa/repo-validation/final-gate-results.json",
+        "geospatial/facilities/qa/repo-validation/finance-build-results.json",
+        "geospatial/facilities/qa/repo-validation/geo-build-results.json",
+        "geospatial/facilities/qa/repo-validation/industrial-validation.log",
+        "geospatial/facilities/qa/repo-validation/r02-current-main/clean-test-results.json",
+        "geospatial/facilities/qa/repo-validation/r02-current-main/current-validator-results.json",
+        "geospatial/facilities/qa/repo-validation/r02-current-main/domain-test-results.json",
+        "geospatial/facilities/qa/repo-validation/r02-current-main/root-tests.log",
+        "geospatial/facilities/qa/repo-validation/r02/results.json",
+        "geospatial/facilities/qa/repo-validation/results.json",
+        "geospatial/facilities/qa/repo-validation/root-pytest.log",
+        "geospatial/facilities/qa/spatial-integration/PARENT_HTML_QA.json",
+        "geospatial/facilities/qa/spatial-integration/REVIEW.json",
+        "geospatial/facilities/qa/spatial-integration/baseline-logs/root-pytest.log",
+        "geospatial/facilities/qa/workbench/VALIDATION.json",
+        "geospatial/facilities/qa/workbench/root-tests.log",
+        "geospatial/facilities/visitor/v06/SOURCE.json",
+        "geospatial/facilities/visitor/v07/SOURCE.json",
+        "geospatial/facilities/visitor/v08/SOURCE.json",
+        "geospatial/history/v1.5.0-previews-2026-10-03/provenance/C18-MANIFEST.json",
+        "geospatial/history/v1.5.0-previews-2026-10-03/provenance/C19-MANIFEST.json",
+        # Pending scrub on fix/audit-suite-audit; remove after that branch merges.
+        "audit_suite_web/tests/bound-issue-index.mjs",
+        "audit_suite_web/tests/reference-crosswalk-context.mjs",
+        "audit_suite_web/tests/reference-current-index.mjs",
+        "enterprise/audit_suite/company_supplemental_operations_2027_spec_v1.json",
+        "tests/audit_suite/test_native_observation_filename.py",
+        "tests/audit_suite/test_pristine_tail_conversion.py",
+    }
+)
+
+
+def local_path_leak(text: str) -> str | None:
+    for match in LOCAL_PATH_PATTERN.finditer(text):
+        name = match.group("media") or match.group("home")
+        if name is None:
+            return match.group(0)
+        if name.lower() in LOCAL_PATH_PLACEHOLDER_NAMES:
+            continue
+        return match.group(0)
+    return None
+
+
 def review_files() -> list[Path]:
     output = subprocess.run(
         ["git", "ls-files", "--cached", "--others", "--exclude-standard", "-z"],
@@ -177,10 +280,16 @@ def main() -> None:
                 failures.append(f"unapproved large file exceeds 10 MiB: {path}")
         if path.suffix.lower() in {".png", ".pdf", ".pptx", ".zip", ".xlsx"}:
             continue
-        text = path.read_text(errors="ignore")
+        payload = path.read_bytes()
+        text = payload.decode(errors="ignore")
         for marker in FORBIDDEN:
             if marker in text:
                 failures.append(f"possible credential marker {marker!r}: {path}")
+        if b"\0" in payload[:8192] or path.as_posix() in LOCAL_PATH_ALLOWLIST:
+            continue
+        leak = local_path_leak(text)
+        if leak is not None:
+            failures.append(f"local workstation path {leak!r}: {path}")
     if failures:
         raise SystemExit("\n".join(failures))
     for argument in sys.argv[1:]:
@@ -189,7 +298,7 @@ def main() -> None:
         raise SystemExit("\n".join(failures))
     print(
         "PASS: no tracked/untracked reviewable private benchmark paths, credential markers, "
-        "or unapproved >10 MiB files"
+        "local workstation paths, or unapproved >10 MiB files"
     )
 
 
