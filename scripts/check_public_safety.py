@@ -102,10 +102,16 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # DATA_AVAILABILITY. All seven institutional/publication/evidence tables
     # remain exact-equal; SQLite quick_check and foreign keys pass. The index
     # records delivery metadata and grants no company or cleanup authority.
+    # November 4 reader reconciliation: against 4a313f30, reader inventory
+    # grows 1,740 -> 1,741 for the October 23 workroom recovery guide (#227)
+    # and refreshes the two edited audit-suite guides. Only reader_file,
+    # reader_format_review, reader_text and reader_search rows change; all
+    # institutional/publication/evidence tables remain exact-equal; SQLite
+    # quick_check and foreign keys pass.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        16527360,
-        "05039ab9db4d0bdc46cb17c4f54dbfbfe4a784548042c626e93f9e9f7bd1d8f2",
+        16539648,
+        "b8fb53281b2c8d954483939490cec439d72f27dd7062e108da80156dff73ab39",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.
