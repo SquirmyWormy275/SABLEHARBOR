@@ -6,6 +6,7 @@ import json
 import re
 import sqlite3
 import stat
+import sys
 from collections import Counter
 from pathlib import Path, PurePosixPath
 from urllib.parse import quote
@@ -25,6 +26,9 @@ EXTENSIONS = {
     "text/plain; charset=utf-8": ".txt",
 }
 REDACTION_KEYS = {"source_root", "runtime_root"}
+# Audit-software test labels for the two native histories, as documented in
+# docs/audit-suite/CLEAN_MESSY_INTAKE.md. The labels never enter delivered bytes.
+SCENARIOS = {"CLEAN": "HARBOR-OPERATIONS-A", "MESSY": "HARBOR-OPERATIONS-B"}
 
 
 def sha(content):
@@ -426,6 +430,33 @@ def verify(root):
     }
 
 
+def select(root, scenario):
+    """Verify the delivery, then return one scenario's unchanged manifest records."""
+    root = Path(root).absolute()
+    result = verify(root)
+    require(scenario in SCENARIOS, "Unknown scenario")
+    manifest_bytes = (root / "manifest.json").read_bytes()
+    require(sha(manifest_bytes) == result["manifest_sha256"], "Manifest changed after verification")
+    manifest = json.loads(manifest_bytes)
+    branch = SCENARIOS[scenario]
+    histories = [row for row in manifest["histories"] if row["source_branch"] == branch]
+    require(len(histories) == 1, "Scenario history not delivered")
+    history = histories[0]
+    records = [row for row in manifest["records"] if row["history_id"] == history["id"]]
+    require(len(records) == history["version_count"], "Scenario population differs")
+    provenance = [row for row in manifest["provenance_files"] if row["history_id"] == history["id"]]
+    summary = {
+        "scenario": scenario,
+        "history_id": history["id"],
+        "branch": branch,
+        "records": len(records),
+        "systems": len({row["system"] for row in records}),
+        "provenance": provenance[0]["path"],
+        "manifest_sha256": result["manifest_sha256"],
+    }
+    return summary, records
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -434,10 +465,34 @@ def main():
     export.add_argument("--destination", type=Path, required=True)
     check = subparsers.add_parser("verify")
     check.add_argument("--root", type=Path, required=True)
-    args = parser.parse_args()
-    result = (
-        build(args.database, args.destination) if args.command == "build" else verify(args.root)
+    choose = subparsers.add_parser(
+        "select",
+        help="verify, then write one scenario's manifest records as JSON Lines",
     )
+    choose.add_argument("--root", type=Path, required=True)
+    choose.add_argument("--scenario", choices=sorted(SCENARIOS), required=True)
+    choose.add_argument(
+        "--output",
+        type=Path,
+        help="JSON Lines destination (default: standard output); the summary goes to stderr",
+    )
+    args = parser.parse_args()
+    try:
+        if args.command == "select":
+            summary, records = select(args.root, args.scenario)
+            lines = "".join(json.dumps(row, sort_keys=True) + "\n" for row in records)
+            if args.output is None:
+                sys.stdout.write(lines)
+            else:
+                require(not args.output.exists(), "Output already exists")
+                args.output.write_text(lines, encoding="utf-8")
+            print(json.dumps(summary, sort_keys=True), file=sys.stderr)
+            return
+        result = (
+            build(args.database, args.destination) if args.command == "build" else verify(args.root)
+        )
+    except ValueError as error:
+        raise SystemExit(f"Company record delivery failed: {error}") from None
     print(json.dumps(result, sort_keys=True))
 
 
