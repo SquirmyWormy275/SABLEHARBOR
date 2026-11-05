@@ -23,6 +23,10 @@ def object_pairs(pairs):
     return result
 
 
+class RevocationConflict(Exception):
+    """A revocation was requested for a principal that is already revoked."""
+
+
 class Application:
     def __init__(self, database, identity, public_origin, *, allow_loopback_http=False):
         parsed = urlsplit(public_origin)
@@ -99,7 +103,11 @@ class Application:
                     elif path == "/v1/revoke":
                         if set(body) != {"subject"} or not isinstance(body["subject"], str):
                             raise ValueError("Invalid revocation")
-                        store.revoke_as(db, actor, body["subject"])
+                        try:
+                            store.revoke_as(db, actor, body["subject"])
+                        except sqlite3.IntegrityError as exc:
+                            # The revocation table keys on principal_id; a repeat is a conflict.
+                            raise RevocationConflict from exc
                         result = {"revoked": True}
                     else:
                         if (
@@ -117,6 +125,8 @@ class Application:
                     db.close()
         except AuthenticationError:
             status, result = "401 Unauthorized", {"error": "Invalid access token"}
+        except RevocationConflict:
+            status, result = "409 Conflict", {"error": "Principal already revoked"}
         except (ValueError, KeyError, TypeError, UnicodeError, OverflowError, RecursionError):
             # Do not echo database details, submitted records, tokens or identity claims.
             status, result = (
