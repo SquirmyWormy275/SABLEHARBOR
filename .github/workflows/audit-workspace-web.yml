@@ -27,10 +27,10 @@ jobs:
       run:
         working-directory: audit_suite_web
     steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # repository pin
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
           persist-credentials: false
-      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
         with:
           node-version: '22'
           cache: npm
@@ -46,7 +46,7 @@ jobs:
         run: npm run test:browser
       - name: Retain browser screenshots and receipts
         if: always()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # repository pin
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: audit-workspace-browser
           path: enterprise/generated/audit-suite/build/visuals/

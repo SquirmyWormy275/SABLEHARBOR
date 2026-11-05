@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 .pytest_cache/
+.tox/
 
 # Local deterministic brand builds
 .brand-build/
@@ -38,3 +39,9 @@ releases/generated/
 
 /enterprise/audit_suite/_serialized_json_native*.so
 /enterprise/audit_suite/_canonical_fragmenter_native*.so
+
+# Editor and OS clutter
+.DS_Store
+.idea/
+.vscode/
+*.swp
