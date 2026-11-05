@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "sable-harbor-finance"
 version = "0.1.0"
 description = "Sable Harbor enterprise financial data platform"
-requires-python = ">=3.11"
+requires-python = ">=3.11.4"  # tarfile extractall(filter="data") needs 3.11.4+
 dependencies = [
   "alembic>=1.13,<2",
   "jsonschema>=4.23,<5",
@@ -20,7 +20,7 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
   "PyMuPDF==1.26.7",
-  "pypdf==6.21.2",
+  "pypdf==6.21.4",
   "markdown-it-py==4.2.0",
   "mypy>=1.11,<2",
   "openpyxl>=3.1,<4",
@@ -46,6 +46,10 @@ audit-suite = [
 [project.scripts]
 shfin = "sable_harbor.cli:app"
 
+# The wheel contains only the Python package. Runtime inputs resolved from the
+# repository root (alembic.ini, db/migrations, config/, docs/finance, uv.lock)
+# are not packaged, so the shfin CLI is supported only from a source checkout
+# (`uv sync` editable install), not from a standalone built wheel.
 [tool.hatch.build.targets.wheel]
 packages = ["src/sable_harbor"]
 

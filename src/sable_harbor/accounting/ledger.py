@@ -1,4 +1,4 @@
-from datetime import UTC, date, datetime
+from datetime import UTC, date, datetime, time
 from decimal import Decimal
 
 from sqlalchemy import event, func, inspect, select
@@ -17,6 +17,11 @@ from .models import (
 )
 
 GENERATION_RUN_SESSION_KEY = "generation_run_id"
+
+
+def posting_timestamp(entry_date: date) -> datetime:
+    """Return the deterministic posting timestamp (UTC midnight of the entry date)."""
+    return datetime.combine(entry_date, time.min, tzinfo=UTC)
 
 
 class LedgerError(ValueError):
@@ -91,7 +96,10 @@ def post_entry(session: Session, entry: JournalEntry) -> None:
     entry.posted_at = None
     session.flush()
     entry.state = EntryState.POSTED
-    entry.posted_at = datetime.now(UTC)
+    # Generated ledgers are exported in public packages, so the posting
+    # timestamp is derived from the entry itself rather than the wall clock:
+    # rebuilding the same run must yield byte-identical journal evidence.
+    entry.posted_at = posting_timestamp(entry.entry_date)
     session.flush()
 
 

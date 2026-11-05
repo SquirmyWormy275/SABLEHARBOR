@@ -1,8 +1,10 @@
 from logging.config import fileConfig
 import os
+from pathlib import Path
 
 from alembic import context
 from sqlalchemy import engine_from_config, pool
+from sqlalchemy.engine import make_url
 
 from sable_harbor.accounting.models import Base
 from sable_harbor import schema as _schema  # noqa: F401
@@ -21,6 +23,19 @@ if config.config_file_name:
 target_metadata = Base.metadata
 
 
+def _ensure_sqlite_parent(url: str | None) -> None:
+    """Create the parent directory of a file-backed SQLite database."""
+    if not url:
+        return
+    parsed = make_url(url)
+    if not parsed.drivername.startswith("sqlite"):
+        return
+    database = parsed.database
+    if not database or database == ":memory:" or database.startswith("file:"):
+        return
+    Path(database).parent.mkdir(parents=True, exist_ok=True)
+
+
 def run_migrations_offline() -> None:
     context.configure(
         url=config.get_main_option("sqlalchemy.url"),
@@ -33,6 +48,7 @@ def run_migrations_offline() -> None:
 
 
 def run_migrations_online() -> None:
+    _ensure_sqlite_parent(config.get_main_option("sqlalchemy.url"))
     connectable = engine_from_config(
         config.get_section(config.config_ini_section, {}),
         prefix="sqlalchemy.",
