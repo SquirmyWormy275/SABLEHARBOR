@@ -228,13 +228,9 @@ LOCAL_PATH_ALLOWLIST = frozenset(
         "geospatial/facilities/visitor/v08/SOURCE.json",
         "geospatial/history/v1.5.0-previews-2026-10-03/provenance/C18-MANIFEST.json",
         "geospatial/history/v1.5.0-previews-2026-10-03/provenance/C19-MANIFEST.json",
-        # Pending scrub on fix/audit-suite-audit; remove after that branch merges.
-        "audit_suite_web/tests/bound-issue-index.mjs",
-        "audit_suite_web/tests/reference-crosswalk-context.mjs",
-        "audit_suite_web/tests/reference-current-index.mjs",
+        # SHA-256 recorded in company_supplemental_operations_2027.py, which the
+        # operational library projection registries pin in turn.
         "enterprise/audit_suite/company_supplemental_operations_2027_spec_v1.json",
-        "tests/audit_suite/test_native_observation_filename.py",
-        "tests/audit_suite/test_pristine_tail_conversion.py",
     }
 )
 
