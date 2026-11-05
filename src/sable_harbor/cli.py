@@ -1,4 +1,5 @@
 import json
+import re
 from pathlib import Path
 
 import typer
@@ -43,6 +44,16 @@ from sable_harbor.workbooks.suite import generate_workbook_suite
 
 app = typer.Typer(no_args_is_help=True)
 INTERNAL_INSPECTION_CLASSIFICATION = "INTERNAL_SYNTHETIC_INSPECTION_NOT_RELEASE_ARTIFACT"
+FISCAL_PERIOD_CODE = re.compile(r"^[0-9]{4}-(0[1-9]|1[0-2])$")
+
+
+def _fiscal_period_code(value: str) -> str:
+    """Validate a zero-padded YYYY-MM period code; codes are compared as strings."""
+    if not FISCAL_PERIOD_CODE.fullmatch(value):
+        raise typer.BadParameter(
+            f"{value!r} is not a fiscal period; expected zero-padded YYYY-MM such as 2026-08"
+        )
+    return value
 
 
 def _inspection_envelope(
@@ -176,7 +187,9 @@ def post(generation_run_id: str = typer.Option(...)) -> None:
 
 @app.command("close")
 def close(
-    through: str = typer.Option(..., help="Close periods through YYYY-MM"),
+    through: str = typer.Option(
+        ..., help="Close periods through YYYY-MM", callback=_fiscal_period_code
+    ),
     generation_run_id: str = typer.Option(...),
 ) -> None:
     engine = build_engine()
