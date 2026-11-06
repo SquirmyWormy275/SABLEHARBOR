@@ -7,8 +7,8 @@ company generator. Use one history per audit-software test run:
 
 | Scenario | Company history | Native branch | Source versions | Systems |
 | --- | --- | --- | ---: | ---: |
-| CLEAN | [history-01](company-records/history-01/) | `HARBOR-OPERATIONS-A` | 6,498 | 824 |
-| MESSY | [history-02](company-records/history-02/) | `HARBOR-OPERATIONS-B` | 6,575 | 855 |
+| CLEAN | [history-01](company-records/history-01/) | `HARBOR-OPERATIONS-A` | 8,174 | 875 |
+| MESSY | [history-02](company-records/history-02/) | `HARBOR-OPERATIONS-B` | 8,281 | 909 |
 
 These names describe the delivered local workroom bindings. The Git files are
 company-side source records, not copies of learner workpapers, instructor answers
@@ -29,9 +29,9 @@ It prints one JSON line and exits with a non-zero status if anything differs.
 For the current edition, which appends the authored extensions listed in the
 [company records guide](company-records/README.md) to the accepted 18 October 2026 edition, its
 `manifest_sha256` is
-`90a4db5bdc635d1bfdc6a96b251eed0060add055cada96af35982991681b8e13`, with
-`verified_source_versions` 13,073, `verified_source_systems` 1,679, `originals`
-13,068 and `derivatives` 5. The 18 October 2026 edition's `manifest_sha256` was
+`e747cb80e4ee8306ed4e65e43b4d692bde98ce116c2ad699fdffaf904ec385b0`, with
+`verified_source_versions` 16,455, `verified_source_systems` 1,784, `originals`
+16,450 and `derivatives` 5. The 18 October 2026 edition's `manifest_sha256` was
 `30cbdf23a68532e5026a87d0dddb06cd09242b87ea3a58d009b39aacddc629c7` (5,714
 versions, 922 systems); the current manifest records it as the extended edition. The verifier checks every version, its provenance and
 membership, and the exact-byte originals versus the five documented
@@ -51,8 +51,8 @@ python3 -m tools.audit_suite.company_record_delivery select --root docs/audit-su
 
 Each output line is one unchanged manifest record. The command refuses to write
 if the delivery fails verification or the output file already exists. It prints a
-summary to standard error: CLEAN is `history-01` with 6,498 records across 824
-systems, and MESSY is `history-02` with 6,575 records across 855 systems. Without
+summary to standard error: CLEAN is `history-01` with 8,174 records across 875
+systems, and MESSY is `history-02` with 8,281 records across 909 systems. Without
 `--output`, the records go to standard output.
 
 The selection is a convenience over the manifest. To read the manifest directly,

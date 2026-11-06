@@ -17,17 +17,17 @@ PUBLIC = ROOT / "docs/audit-suite/company-records"
 def test_actual_complete_company_source_delivery():
     result = delivery.verify(PUBLIC)
     assert result["manifest_sha256"] == (
-        "90a4db5bdc635d1bfdc6a96b251eed0060add055cada96af35982991681b8e13"
+        "e747cb80e4ee8306ed4e65e43b4d692bde98ce116c2ad699fdffaf904ec385b0"
     )
-    assert result["verified_source_versions"] == 13073
-    assert result["verified_source_systems"] == 1679
-    assert result["originals"] == 13068
+    assert result["verified_source_versions"] == 16455
+    assert result["verified_source_systems"] == 1784
+    assert result["originals"] == 16450
     assert result["derivatives"] == 5
-    assert result["source_content_bytes"] == 37127869
+    assert result["source_content_bytes"] == 45490051
     manifest = json.loads((PUBLIC / "manifest.json").read_text())
     assert {row["source_branch"]: row["version_count"] for row in manifest["histories"]} == {
-        "HARBOR-OPERATIONS-A": 6498,
-        "HARBOR-OPERATIONS-B": 6575,
+        "HARBOR-OPERATIONS-A": 8174,
+        "HARBOR-OPERATIONS-B": 8281,
     }
     assert manifest["snapshot"]["omitted_metadata"] == []
     assert len(manifest["provenance_files"]) == 2
@@ -39,8 +39,8 @@ def test_actual_complete_company_source_delivery():
         "30cbdf23a68532e5026a87d0dddb06cd09242b87ea3a58d009b39aacddc629c7"
     )
     assert extension["version_count"] == 39 and extension["new_system_count"] == 6
-    assert len(base["authored_extensions"]) == 16
-    assert sum(e["version_count"] for e in base["authored_extensions"]) == 13073 - 5714
+    assert len(base["authored_extensions"]) == 23
+    assert sum(e["version_count"] for e in base["authored_extensions"]) == 16455 - 5714
 
 
 def test_isolated_consumer_needs_only_delivered_files_and_standard_python(tmp_path):
@@ -56,8 +56,8 @@ def test_isolated_consumer_needs_only_delivered_files_and_standard_python(tmp_pa
         check=True,
     )
     result = json.loads(completed.stdout)
-    assert result["verified_source_versions"] == 13073
-    assert result["originals"] == 13068 and result["derivatives"] == 5
+    assert result["verified_source_versions"] == 16455
+    assert result["originals"] == 16450 and result["derivatives"] == 5
 
 
 @pytest.mark.parametrize(
@@ -88,8 +88,8 @@ def test_modified_delivery_is_rejected(tmp_path, mutation):
 @pytest.mark.parametrize(
     ("scenario", "history_id", "branch", "records", "systems"),
     [
-        ("CLEAN", "history-01", "HARBOR-OPERATIONS-A", 6498, 824),
-        ("MESSY", "history-02", "HARBOR-OPERATIONS-B", 6575, 855),
+        ("CLEAN", "history-01", "HARBOR-OPERATIONS-A", 8174, 875),
+        ("MESSY", "history-02", "HARBOR-OPERATIONS-B", 8281, 909),
     ],
 )
 def test_scenario_selection_returns_one_verified_history(
@@ -103,7 +103,7 @@ def test_scenario_selection_returns_one_verified_history(
         "records": records,
         "systems": systems,
         "provenance": f"{history_id}/provenance.jsonl",
-        "manifest_sha256": "90a4db5bdc635d1bfdc6a96b251eed0060add055cada96af35982991681b8e13",
+        "manifest_sha256": "e747cb80e4ee8306ed4e65e43b4d692bde98ce116c2ad699fdffaf904ec385b0",
     }
     manifest = json.loads((PUBLIC / "manifest.json").read_text())
     assert rows == [row for row in manifest["records"] if row["history_id"] == history_id]
@@ -123,9 +123,9 @@ def test_standalone_scenario_selection_writes_json_lines(tmp_path):
         text=True,
         check=True,
     )
-    assert json.loads(completed.stderr)["records"] == 6575
+    assert json.loads(completed.stderr)["records"] == 8281
     rows = [json.loads(line) for line in output.read_text().splitlines()]
-    assert len(rows) == 6575 and {row["history_id"] for row in rows} == {"history-02"}
+    assert len(rows) == 8281 and {row["history_id"] for row in rows} == {"history-02"}
     (consumer / "unexpected.json").write_text("{}")
     refused = subprocess.run(
         [*command, "--scenario", "CLEAN"], cwd=tmp_path, capture_output=True, text=True
