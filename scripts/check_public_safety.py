@@ -113,11 +113,20 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # workplace-capacity company-record edition count updates (README.md,
     # CONTROLLED_DOCUMENT_INDEX.md, CLEAN_MESSY_INTAKE.md, DATA_AVAILABILITY.md,
     # LOCAL_WORKSPACE.md, company-records/README.md, wiki/Audit.md); inventory
-    # stays 1,741 files and the rebuild reproduces exactly.
+    # stays 1,741 files and the rebuild reproduces exactly. November 6 (later):
+    # rebuilt for the 2027 operating-record bundle count updates; inventory stays
+    # 1,741 files.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        16551936,
-        "fdcb82202ac4f9fbdd854fb030b624ce48f0c1d1f00dafcc23c1bf283e02c027",
+        16553984,
+        "cdafb52d1b4e701b79ce09d73eb083de1099d47f359827a739ce6d0459814fb8",
+    ),
+    # November 6 company-record edition: the delivery manifest grows past 10 MiB
+    # with eleven declared authored extensions (11,198 versions). The delivery
+    # verifier checks every member against it. Exact bytes only.
+    Path("docs/audit-suite/company-records/manifest.json"): (
+        11187384,
+        "b78c95a71a05e7e782d5cdb8d5784328ae6c024e01e2c1dee171696c754c4289",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.

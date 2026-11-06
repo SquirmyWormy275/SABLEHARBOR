@@ -28,7 +28,7 @@ For a first visit, try [tracing an invoice](docs/reader/exercises/INVOICE.md). I
 
 For a broader view, download the [operating review workbook](enterprise/operations/publications/operating-review-v1.0.0.xlsx). Start with **Results** or **Cash obligations**, then use the [finance guide](docs/finance/READER_EXERCISES.md) to follow the supporting transactions. The [accounting evidence packages](docs/finance/evidence/coverage/README.md) provide source records, reconciliations and CSV/SQLite extracts.
 
-The [company source library](docs/audit-suite/company-records/README.md) contains all 5,753 retained record versions across 928 source systems in its current edition (the 5,714-version recovered snapshot plus declared authored additions). The actual records are in Git and can be read by cloud tools without the author's computer or an external drive. The [data availability guide](docs/audit-suite/DATA_AVAILABILITY.md) distinguishes these company records, the November submissions and historical recovery backups.
+The [company source library](docs/audit-suite/company-records/README.md) contains every retained record version of both company histories: the recovered 5,714-version snapshot plus declared authored additions, with current counts in its guide. The actual records are in Git and can be read by cloud tools without the author's computer or an external drive. The [data availability guide](docs/audit-suite/DATA_AVAILABILITY.md) distinguishes these company records, the November submissions and historical recovery backups.
 
 To test audit software against the separate CLEAN and MESSY company histories,
 use the [scenario intake guide](docs/audit-suite/CLEAN_MESSY_INTAKE.md). It maps
