@@ -6,7 +6,7 @@ a running Sable Harbor workspace.
 
 | Collection | Records | Where to start |
 |---|---:|---|
-| Accepted company source library | 13,073 record versions across 1,679 source systems and both retained histories (the 5,714-version recovered snapshot plus declared authored extensions) | [Company records](company-records/README.md) |
+| Accepted company source library | 16,455 record versions across 1,784 source systems and both retained histories (the 5,714-version recovered snapshot plus declared authored extensions) | [Company records](company-records/README.md) |
 | November client submissions | 70 artifacts and three original manifests | [Initial, follow-up and correction submissions](demo-2026-11/client-records/README.md) |
 | Existing finance evidence | Billing, close, treasury, tax, customer and supporting schedules | [Finance evidence](../finance/evidence/) |
 

@@ -120,14 +120,14 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
         16558080,
-        "dbc03f3cec61b3bd70b81c1ba26069f00602f77444b5e874c6fc7d6519a3ccb6",
+        "b2b4721624d6c20d055b36da20df76b6510edf33bacabc0e49c0c68da12b6c49",
     ),
     # November 6 company-record edition: the delivery manifest grows past 10 MiB
-    # with declared authored extensions (13,073 versions across sixteen). The delivery
+    # with declared authored extensions (16,455 versions across twenty-three). The delivery
     # verifier checks every member against it. Exact bytes only.
     Path("docs/audit-suite/company-records/manifest.json"): (
-        13066463,
-        "90a4db5bdc635d1bfdc6a96b251eed0060add055cada96af35982991681b8e13",
+        16384081,
+        "e747cb80e4ee8306ed4e65e43b4d692bde98ce116c2ad699fdffaf904ec385b0",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.
