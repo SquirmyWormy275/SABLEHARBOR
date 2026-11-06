@@ -51,13 +51,14 @@ updates:
     #   (build_compensated.py "Prior worldbuilding candidate derivative is stale").
     # - xlsxwriter 3.3.1 changes generated publication workbook bytes
     #   ("Generated artifact drift blank.xlsx" in test_legal_period_close).
-    # Only these exact versions are ignored; later releases still open PRs so
-    # each can be evaluated again.
+    # xlsxwriter 3.3.0 drifts the same way (test_reproducible_and_saved_integrity),
+    # so both holds are ranges. Remove a hold in the PR that regenerates the
+    # affected outputs and adds the successor record.
     ignore:
       - dependency-name: "scipy"
-        versions: ["1.17.1"]
+        versions: [">=1.17.1"]
       - dependency-name: "xlsxwriter"
-        versions: ["3.3.1"]
+        versions: [">=3.3.0"]
 
   # Audit workspace frontend (React/Vite), checked by audit-workspace-web.yml.
   - package-ecosystem: "npm"
