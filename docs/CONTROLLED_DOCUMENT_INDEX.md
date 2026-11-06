@@ -18,8 +18,8 @@ The repository contains the accepted company-source edition's 5,714 record versi
 across 922 source systems, plus all 70 artifacts and three original manifests from the
 initial, follow-up and correction submissions. These synthetic company records
 cover SH-IAM-007, SH-CFG-002 and SH-BCM-003 and can be read from a repository clone.
-Later editions append declared authored versions; the current library holds 5,753
-versions across 928 systems.
+Later editions append declared authored versions; the library guide states the current
+counts.
 The dated publication decision supersedes the earlier local-only delivery rule
 for these exact submissions; source identities and company event dates are preserved.
 

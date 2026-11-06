@@ -7,8 +7,8 @@ company generator. Use one history per audit-software test run:
 
 | Scenario | Company history | Native branch | Source versions | Systems |
 | --- | --- | --- | ---: | ---: |
-| CLEAN | [history-01](company-records/history-01/) | `HARBOR-OPERATIONS-A` | 2,816 | 450 |
-| MESSY | [history-02](company-records/history-02/) | `HARBOR-OPERATIONS-B` | 2,937 | 478 |
+| CLEAN | [history-01](company-records/history-01/) | `HARBOR-OPERATIONS-A` | 5,556 | 698 |
+| MESSY | [history-02](company-records/history-02/) | `HARBOR-OPERATIONS-B` | 5,642 | 726 |
 
 These names describe the delivered local workroom bindings. The Git files are
 company-side source records, not copies of learner workpapers, instructor answers
@@ -26,12 +26,12 @@ python3 -m tools.audit_suite.company_record_delivery verify --root docs/audit-su
 ```
 
 It prints one JSON line and exits with a non-zero status if anything differs.
-For the current edition, which appends the authored workplace-capacity records
-(`WORKPLACE-CAPACITY-2027-V1`) to the accepted 18 October 2026 edition, its
+For the current edition, which appends the authored extensions listed in the
+[company records guide](company-records/README.md) to the accepted 18 October 2026 edition, its
 `manifest_sha256` is
-`98fe97f4689c1912d53477b844aec02cefb0737e3e003c04fa8cbf777f6b4cd8`, with
-`verified_source_versions` 5,753, `verified_source_systems` 928, `originals`
-5,748 and `derivatives` 5. The 18 October 2026 edition's `manifest_sha256` was
+`b78c95a71a05e7e782d5cdb8d5784328ae6c024e01e2c1dee171696c754c4289`, with
+`verified_source_versions` 11,198, `verified_source_systems` 1,424, `originals`
+11,193 and `derivatives` 5. The 18 October 2026 edition's `manifest_sha256` was
 `30cbdf23a68532e5026a87d0dddb06cd09242b87ea3a58d009b39aacddc629c7` (5,714
 versions, 922 systems); the current manifest records it as the extended edition. The verifier checks every version, its provenance and
 membership, and the exact-byte originals versus the five documented
@@ -51,8 +51,8 @@ python3 -m tools.audit_suite.company_record_delivery select --root docs/audit-su
 
 Each output line is one unchanged manifest record. The command refuses to write
 if the delivery fails verification or the output file already exists. It prints a
-summary to standard error: CLEAN is `history-01` with 2,816 records across 450
-systems, and MESSY is `history-02` with 2,937 records across 478 systems. Without
+summary to standard error: CLEAN is `history-01` with 5,556 records across 698
+systems, and MESSY is `history-02` with 5,642 records across 726 systems. Without
 `--output`, the records go to standard output.
 
 The selection is a convenience over the manifest. To read the manifest directly,
