@@ -45,6 +45,20 @@ updates:
     groups:
       python-minor-and-patch:
         update-types: ["minor", "patch"]
+    # Held: these versions change committed generated outputs, so taking them
+    # is a deliberate regeneration (with a successor record), not a routine bump.
+    # - scipy 1.17.1 changes the geospatial engineering-review derivatives
+    #   (build_compensated.py "Prior worldbuilding candidate derivative is stale").
+    # - xlsxwriter 3.3.1 changes generated publication workbook bytes
+    #   ("Generated artifact drift blank.xlsx" in test_legal_period_close).
+    # xlsxwriter 3.3.0 drifts the same way (test_reproducible_and_saved_integrity),
+    # so both holds are ranges. Remove a hold in the PR that regenerates the
+    # affected outputs and adds the successor record.
+    ignore:
+      - dependency-name: "scipy"
+        versions: [">=1.17.1"]
+      - dependency-name: "xlsxwriter"
+        versions: [">=3.3.0"]
 
   # Audit workspace frontend (React/Vite), checked by audit-workspace-web.yml.
   - package-ecosystem: "npm"
