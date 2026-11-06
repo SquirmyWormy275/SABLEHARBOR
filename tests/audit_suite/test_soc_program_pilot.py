@@ -37,3 +37,28 @@ def test_submission_rejects_tampered_inventory_and_unfinished_answers():
     tampered["source_inventory"]["history-01"][0]["sha256"] = "0" * 64
     with pytest.raises(ValueError, match="inventory changed"):
         pilot.validate_submission(tampered, selected)
+
+
+def test_extended_edition_cannot_carry_a_changed_selected_record(tmp_path):
+    import hashlib
+    import json
+    import shutil
+
+    from tools.audit_suite import company_record_delivery as delivery
+
+    consumer = tmp_path / "company-records"
+    shutil.copytree(pilot.SOURCE_ROOT, consumer)
+    manifest_path = consumer / "manifest.json"
+    manifest = json.loads(manifest_path.read_text())
+    assert manifest["snapshot"]["authored_extensions"]
+    _, selected = pilot.load_source(consumer)
+    row = next(r for r in manifest["records"] if r["path"] == sorted(selected)[0])
+    member = consumer / row["path"]
+    content = member.read_bytes().replace(b"{", b'{"changed":true,', 1)
+    member.write_bytes(content)
+    digest = hashlib.sha256(content).hexdigest()
+    row.update(bytes=len(content), source_bytes=len(content), sha256=digest, source_sha256=digest)
+    manifest_path.write_bytes(delivery.encoded(manifest))
+    delivery.verify(consumer)
+    with pytest.raises(ValueError, match="differ from the pinned edition"):
+        pilot.load_source(consumer)

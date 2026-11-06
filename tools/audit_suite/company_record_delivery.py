@@ -401,6 +401,38 @@ def verify(root):
         counts[relationship] += 1
         branches[row["branch"]] += 1
     require(set(source_metadata) == identities, "Source provenance identity population differs")
+    extensions = snapshot.get("authored_extensions", [])
+    if extensions:
+        # Versions appended after the recovered snapshot must be declared, in import order,
+        # with an unbroken chain back to the base edition's manifest.
+        require(
+            snapshot["base_source_version_count"] + sum(e["version_count"] for e in extensions)
+            == len(records),
+            "Authored extension version count differs",
+        )
+        declared = {(e["imported_at"], path) for e in extensions for path in e["systems"]}
+        appended = [
+            row
+            for row in records
+            if (row["imported_at"], row["history_id"] + "/" + row["system"]) in declared
+        ]
+        require(
+            len(appended) == len(records) - snapshot["base_source_version_count"],
+            "Authored extension membership differs",
+        )
+        require(
+            all(
+                row["origin"] == e["origin"]
+                for e in extensions
+                for row in appended
+                if row["imported_at"] == e["imported_at"]
+            ),
+            "Authored extension origin differs",
+        )
+        require(
+            len({e["prior_manifest_sha256"] for e in extensions}) == len(extensions),
+            "Authored extension chain differs",
+        )
     for history in manifest["histories"]:
         require(
             branches[history["source_branch"]] == history["version_count"], "History count differs"

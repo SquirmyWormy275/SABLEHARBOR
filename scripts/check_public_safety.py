@@ -109,11 +109,15 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # relationship, counterpart and evidence tables remain exact-equal; SQLite
     # quick_check and foreign keys pass. November 5: rebuilt after merging the
     # intake-path catalog with the checkout workspace guide (LOCAL_WORKSPACE.md,
-    # audit_suite_web/README.md) row refresh.
+    # audit_suite_web/README.md) row refresh. November 6: rebuilt for the
+    # workplace-capacity company-record edition count updates (README.md,
+    # CONTROLLED_DOCUMENT_INDEX.md, CLEAN_MESSY_INTAKE.md, DATA_AVAILABILITY.md,
+    # LOCAL_WORKSPACE.md, company-records/README.md, wiki/Audit.md); inventory
+    # stays 1,741 files and the rebuild reproduces exactly.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
-        16547840,
-        "3552357bbc9c3709c99eaa83929640a06edf7f06576c9e42368da4b28330704f",
+        16551936,
+        "fdcb82202ac4f9fbdd854fb030b624ce48f0c1d1f00dafcc23c1bf283e02c027",
     ),
     # September 13 locally reviewed organization-chart successor; owner visual
     # acceptance remains separate. Preserve the previous version in history.

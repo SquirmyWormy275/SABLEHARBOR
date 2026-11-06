@@ -110,6 +110,23 @@ def validate():
         assert update["historical_sha256"] == receipt["input_hashes"][relative]
         assert update["previous_current_sha256"] == published[relative]["current_sha256"]
     updates.update(intake_records)
+    # The company-record edition count in README.md changes the README-derived route
+    # receipt again. Keep the intake pin and bind this dated navigation refresh.
+    edition_path = BASE / "review-support/qa/v3/NAVIGATION_SUCCESSOR_2026-11-06.json"
+    edition = json.loads(edition_path.read_text())
+    assert edition["state"] == "AUTOMATED_NAVIGATION_REVIEW"
+    assert edition["historical_receipt_sha256"] == successor["historical_receipt_sha256"]
+    assert edition["previous_successor_sha256"] == sha(intake_path)
+    edition_records = {r["path"]: r for r in edition["records"]}
+    assert len(edition["records"]) == len(edition_records) == 2
+    assert set(edition_records) == {
+        "tools/legal_gaps/validate_practical_work.py",
+        "docs/reader/usability/RESULTS.json",
+    }
+    for relative, update in edition_records.items():
+        assert update["historical_sha256"] == receipt["input_hashes"][relative]
+        assert update["previous_current_sha256"] == intake_records[relative]["current_sha256"]
+    updates.update(edition_records)
     for group in ("input_hashes", "evidence_hashes"):
         assert receipt[group], "Empty review coverage"
         for relative, digest in receipt[group].items():

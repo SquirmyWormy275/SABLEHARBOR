@@ -14,6 +14,8 @@ ROOT = Path(__file__).resolve().parents[2]
 SOURCE_ROOT = ROOT / "docs/audit-suite/company-records"
 PLAN = ROOT / "docs/audit-suite/soc-program-pilot/PLAN.json"
 MANIFEST_SHA256 = "30cbdf23a68532e5026a87d0dddb06cd09242b87ea3a58d009b39aacddc629c7"
+# SHA-256 of the pinned edition's 94 selected manifest rows (sorted by path, canonical JSON).
+SELECTED_ROWS_SHA256 = "a8f4fbae70a51fe06d2e1e246eb10b35e864ba4e5e508c97b471e64456d9e056"
 SCHEMA = "SH_SOC_PROGRAM_PILOT_SUBMISSION_V1"
 HISTORIES = ("history-01", "history-02")
 TASKS = ("SEC003", "SEC005", "BCM003")
@@ -91,13 +93,24 @@ def load_source(root: Path = SOURCE_ROOT) -> tuple[dict, dict[str, dict]]:
     """Verify the entire Git delivery before admitting selected source versions."""
     root = Path(root).resolve()
     raw = (root / "manifest.json").read_bytes()
-    if sha(raw) != MANIFEST_SHA256:
-        raise ValueError("Pilot requires the exact accepted company-record manifest")
-    verify_delivery(root)
     manifest = json.loads(raw)
     selected_systems = {
         f"{family}.{system}" for family, names in SYSTEMS.items() for system in names
     }
+    extensions = manifest["snapshot"].get("authored_extensions", [])
+    # A later edition is admitted only when it appends to the pinned edition, declares no
+    # selected system and carries the pinned edition's selected manifest rows unchanged.
+    if sha(raw) != MANIFEST_SHA256 and not (
+        extensions
+        and extensions[0]["prior_manifest_sha256"] == MANIFEST_SHA256
+        and not any(
+            path.split("/", 1)[1] in selected_systems
+            for extension in extensions
+            for path in extension["systems"]
+        )
+    ):
+        raise ValueError("Pilot requires the exact accepted company-record manifest")
+    verify_delivery(root)
     selected = {
         row["path"]: row for row in manifest["records"] if row["system"] in selected_systems
     }
@@ -108,6 +121,10 @@ def load_source(root: Path = SOURCE_ROOT) -> tuple[dict, dict[str, dict]]:
         raise ValueError("Selected source population changed")
     if any(row["relationship"] != "original" for row in selected.values()):
         raise ValueError("Selected audit originals include a derivative")
+    rows = [selected[path] for path in sorted(selected)]
+    canonical = json.dumps(rows, sort_keys=True, separators=(",", ":")).encode()
+    if sha(canonical) != SELECTED_ROWS_SHA256:
+        raise ValueError("Selected source rows differ from the pinned edition")
     return manifest, selected
 
 
