@@ -27,9 +27,9 @@ Git-ignored `var/audit-workspace` directory (set `SABLEHARBOR_WORKSPACE_ROOT` to
 use another private directory):
 
 - CLEAN imports company [history 01](company-records/history-01/) (branch
-  `HARBOR-OPERATIONS-A`, 5,556 versions in 698 systems). MESSY imports
-  [history 02](company-records/history-02/) (branch `HARBOR-OPERATIONS-B`, 5,642
-  versions in 726 systems). Each keeps the native company, branch, system,
+  `HARBOR-OPERATIONS-A`, 6,498 versions in 824 systems). MESSY imports
+  [history 02](company-records/history-02/) (branch `HARBOR-OPERATIONS-B`, 6,575
+  versions in 855 systems). Each keeps the native company, branch, system,
   record, version, owner, business-event and availability times and provenance
   in its own company store.
 - Each mode has its own engagement history and one SOC 2 Type 2 engagement for
