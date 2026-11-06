@@ -1,7 +1,7 @@
 # Local audit workspace
 
 To read the actual company data from a cloud environment or ordinary repository
-clone, open the [5,714-version source library](company-records/README.md) or the
+clone, open the [5,753-version source library](company-records/README.md) or the
 [November client submissions](demo-2026-11/client-records/README.md). Neither
 requires this local workspace or an external drive. The instructions below are
 for running the separate auditor workrooms.
@@ -27,9 +27,9 @@ Git-ignored `var/audit-workspace` directory (set `SABLEHARBOR_WORKSPACE_ROOT` to
 use another private directory):
 
 - CLEAN imports company [history 01](company-records/history-01/) (branch
-  `HARBOR-OPERATIONS-A`, 2,793 versions in 447 systems). MESSY imports
-  [history 02](company-records/history-02/) (branch `HARBOR-OPERATIONS-B`, 2,921
-  versions in 475 systems). Each keeps the native company, branch, system,
+  `HARBOR-OPERATIONS-A`, 2,816 versions in 450 systems). MESSY imports
+  [history 02](company-records/history-02/) (branch `HARBOR-OPERATIONS-B`, 2,937
+  versions in 478 systems). Each keeps the native company, branch, system,
   record, version, owner, business-event and availability times and provenance
   in its own company store.
 - Each mode has its own engagement history and one SOC 2 Type 2 engagement for

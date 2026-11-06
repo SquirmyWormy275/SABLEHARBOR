@@ -7,7 +7,7 @@ Facility delivery: [controlled release, source commit and checksums](releases/FA
 
 ## Company data and November demonstration records — October 18 publication
 
-[Read the 5,714-version company library](audit-suite/company-records/README.md) ·
+[Read the company source library](audit-suite/company-records/README.md) ·
 [Data availability and publication authority](audit-suite/DATA_AVAILABILITY.md) ·
 [Read the actual client records](audit-suite/demo-2026-11/client-records/README.md) ·
 [Scope](audit-suite/demo-2026-11/SCOPE.md) ·
@@ -18,6 +18,8 @@ The repository contains the accepted company-source edition's 5,714 record versi
 across 922 source systems, plus all 70 artifacts and three original manifests from the
 initial, follow-up and correction submissions. These synthetic company records
 cover SH-IAM-007, SH-CFG-002 and SH-BCM-003 and can be read from a repository clone.
+Later editions append declared authored versions; the current library holds 5,753
+versions across 928 systems.
 The dated publication decision supersedes the earlier local-only delivery rule
 for these exact submissions; source identities and company event dates are preserved.
 

@@ -91,13 +91,24 @@ def load_source(root: Path = SOURCE_ROOT) -> tuple[dict, dict[str, dict]]:
     """Verify the entire Git delivery before admitting selected source versions."""
     root = Path(root).resolve()
     raw = (root / "manifest.json").read_bytes()
-    if sha(raw) != MANIFEST_SHA256:
-        raise ValueError("Pilot requires the exact accepted company-record manifest")
-    verify_delivery(root)
     manifest = json.loads(raw)
     selected_systems = {
         f"{family}.{system}" for family, names in SYSTEMS.items() for system in names
     }
+    extensions = manifest["snapshot"].get("authored_extensions", [])
+    # A later edition is admitted only when it appends to the pinned edition and leaves every
+    # selected system untouched; the source inventory check below still binds each selected byte.
+    if sha(raw) != MANIFEST_SHA256 and not (
+        extensions
+        and extensions[0]["prior_manifest_sha256"] == MANIFEST_SHA256
+        and not any(
+            path.split("/", 1)[1] in selected_systems
+            for extension in extensions
+            for path in extension["systems"]
+        )
+    ):
+        raise ValueError("Pilot requires the exact accepted company-record manifest")
+    verify_delivery(root)
     selected = {
         row["path"]: row for row in manifest["records"] if row["system"] in selected_systems
     }
