@@ -9,12 +9,17 @@ normalization uses qpdf when available. The owner-approved compatibility path us
 It is a separate dependency from the finance application.
 
 ```bash
-python tools/documents/build_controlled_publications.py --normalizer pypdf
+python -m tools.company_closeout.publications --normalizer pypdf
 python tools/documents/build_institutional_catalog.py
 python -m unittest discover -s tests/publications
 python scripts/validate_governance_j2.py
 python scripts/validate_institutional_catalog.py
 ```
+
+Run the dated successor `tools.company_closeout.publications`, not the predecessor script.
+The predecessor's bytes are pinned by finance evidence and list only the original 131
+sources; the successor adds the 17 dated company sources and accepts the same options, so a
+clean-main run retains all 148 manifest entries without drift.
 
 `--normalizer auto` is the default: prefer qpdf, otherwise require pypdf. Explicitly selecting
 an unavailable qpdf fails; it does not silently change the selected backend. The pypdf path
