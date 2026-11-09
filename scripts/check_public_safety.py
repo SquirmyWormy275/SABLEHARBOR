@@ -118,11 +118,11 @@ ALLOWED_LARGE_PUBLIC_ARTIFACTS = {
     # 1,741 files. Later on November 6: rebuilt again for the texture-bundle
     # edition counts (sixteen extensions, 13,073 versions). November 9: rebuilt
     # for the publication successor entry point in MAINTAINERS.md and
-    # tools/documents/README.md (#204); same 1,741 files and 148 verified pairs.
+    # tools/documents/README.md (#204) and the README navigation successor.
     # Exact bytes only; later drift requires another hash review.
     Path("docs/internal/institutional_catalog.sqlite3"): (
         16558080,
-        "d71810cc555a0e3030eb259b562d7a310bb0445a56def9810788a6c460dada73",
+        "a796c8894b08267d5e3944b167077f621dc22360cf21ce7f0304f4ce6fd29b82",
     ),
     # November 6 company-record edition: the delivery manifest grows past 10 MiB
     # with declared authored extensions (16,455 versions across twenty-three). The delivery

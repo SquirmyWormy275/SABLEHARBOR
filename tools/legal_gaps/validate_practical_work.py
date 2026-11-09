@@ -143,6 +143,23 @@ def validate():
         assert update["historical_sha256"] == receipt["input_hashes"][relative]
         assert update["previous_current_sha256"] == edition_records[relative]["current_sha256"]
     updates.update(bundle_records)
+    # The 9 November README rewrite for employer and portal readers changes the
+    # README-derived route receipt again; routes and promised contents are unchanged.
+    audience_path = BASE / "review-support/qa/v3/NAVIGATION_SUCCESSOR_2026-11-09.json"
+    audience = json.loads(audience_path.read_text())
+    assert audience["state"] == "AUTOMATED_NAVIGATION_REVIEW"
+    assert audience["historical_receipt_sha256"] == successor["historical_receipt_sha256"]
+    assert audience["previous_successor_sha256"] == sha(bundle_path)
+    audience_records = {r["path"]: r for r in audience["records"]}
+    assert len(audience["records"]) == len(audience_records) == 2
+    assert set(audience_records) == {
+        "tools/legal_gaps/validate_practical_work.py",
+        "docs/reader/usability/RESULTS.json",
+    }
+    for relative, update in audience_records.items():
+        assert update["historical_sha256"] == receipt["input_hashes"][relative]
+        assert update["previous_current_sha256"] == bundle_records[relative]["current_sha256"]
+    updates.update(audience_records)
     for group in ("input_hashes", "evidence_hashes"):
         assert receipt[group], "Empty review coverage"
         for relative, digest in receipt[group].items():
