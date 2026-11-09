@@ -99,10 +99,17 @@ git diff --check
 For publication or catalog changes, also run:
 
 ```bash
-python tools/documents/build_controlled_publications.py
+python -m tools.company_closeout.publications
 python tools/documents/build_institutional_catalog.py
 git status --short
 ```
+
+`tools.company_closeout.publications` is the current publication entry point. It runs the
+preserved renderer in `tools/documents/build_controlled_publications.py` over that module's
+131 original sources plus the 17 dated company sources, matching all 148 entries in
+`docs/governance/publication_manifest.json`. The predecessor's bytes are pinned by finance
+evidence, so do not edit it or run it directly for a manifest rebuild: on its own it rewrites
+the manifest without the 17 company entries (#204).
 
 Any generated drift must be explained and committed or the source/generator must be corrected.
 
